@@ -57,7 +57,7 @@ cd DanhengServer
 ```
 ##### Linux （Ubuntu20.04）
 ```shell
-# 添加 Microsoft 包存储库添加 Microsoft 包存储库
+# 添加 Microsoft 包存储库
 wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 rm packages-microsoft-prod.deb
@@ -71,7 +71,7 @@ sudo apt-get update && \
 ```shell
 git clone --recurse-submodules https://github.com/StopWuyu/DanhengServer.git
 cd DanhengServer
-.\dotnet build # コンパイル
+.\dotnet build # 编译
 ./Gameserver
 ```
 **向 Microsoft 显示其他系统版本**
