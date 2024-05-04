@@ -55,6 +55,27 @@ git clone --recurse-submodules https://github.com/StopWuyu/DanhengServer.git
 cd DanhengServer
 .\dotnet build # 编译
 ```
+##### Linux （Ubuntu20.04）
+```shell
+# 添加 Microsoft 包存储库添加 Microsoft 包存储库
+wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+rm packages-microsoft-prod.deb
+
+# 安装SDK
+sudo apt-get update && \
+  sudo apt-get install -y dotnet-sdk-8.0
+```
+
+- 编译并运行环境
+```shell
+git clone --recurse-submodules https://github.com/StopWuyu/DanhengServer.git
+cd DanhengServer
+.\dotnet build # コンパイル
+./Gameserver
+```
+**向 Microsoft 显示其他系统版本**
+- [微软教程](https://dotnet.microsoft.com/zh-cn/download/dotnet/thank-you/sdk-8.0.204-linux-x64-binaries)
 
 ## ❓帮助
 
