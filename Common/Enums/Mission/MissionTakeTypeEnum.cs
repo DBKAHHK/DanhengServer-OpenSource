@@ -11,4 +11,11 @@
         MuseumPhaseRenewPointReach = 6,
         HeliobusPhaseReach = 7,
     }
+    public enum SubMissionTakeTypeEnum
+    {
+        AnySequence = 0,
+        Auto = 1,
+        CustomValue = 2,
+        MultiSequence = 3,
+    }
 }

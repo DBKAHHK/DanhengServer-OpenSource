@@ -1,5 +1,6 @@
 ﻿using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Server.Packet.Send.Mission;
+using Microsoft.EntityFrameworkCore;
 
 namespace EggLink.DanhengServer.Server.Packet.Recv.Mission
 {
@@ -16,6 +17,11 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Mission
                 player.MissionManager!.FinishSubMission(missionId);
             } catch
             {
+            }
+
+            if (req.CustomValueList != null && req.CustomValueList.Count > 0)
+            {
+                player.MissionManager!.HandleCustomValue((int)(req.CustomValueList[0].Index + 1), (int)req.CustomValueList[0].MBFHEFKNIHB, (int)req.SubMissionId);
             }
 
             connection.SendPacket(new PacketFinishTalkMissionScRsp(req.TalkStr));

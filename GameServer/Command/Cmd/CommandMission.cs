@@ -64,7 +64,7 @@ namespace EggLink.DanhengServer.Command.Cmd
             }
 
             arg.SendMsg("Running missions:");
-            Dictionary<int, List<int>> map = [];
+            SortedDictionary<int, List<int>> map = [];
 
             foreach (var m in runningMissions)
             {
@@ -80,8 +80,13 @@ namespace EggLink.DanhengServer.Command.Cmd
             var possibleStuckIds = new List<int>();
             var morePossibleStuckIds = new List<int>();
 
+            var count = 0;
             foreach (var list in map)
             {
+                if (count >= 6)
+                {
+                    break;
+                }
                 arg.SendMsg($"Main mission {list.Key}:");
                 var sb = new StringBuilder();
                 foreach (var id in list.Value)
@@ -103,6 +108,8 @@ namespace EggLink.DanhengServer.Command.Cmd
                 sb.Remove(sb.Length - 2, 2);
 
                 arg.SendMsg(sb.ToString());
+
+                count++;
             }
 
             if (morePossibleStuckIds.Count > 0)

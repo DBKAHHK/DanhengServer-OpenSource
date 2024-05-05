@@ -213,7 +213,10 @@ namespace EggLink.DanhengServer.Game.Player
 
         public void SendPacket(BasePacket packet)
         {
-            Connection?.SendPacket(packet);
+            if (Connection?.IsOnline == true)
+            {
+                Connection?.SendPacket(packet);
+            }
         }
         #endregion
 
@@ -596,12 +599,15 @@ namespace EggLink.DanhengServer.Game.Player
             else
             {
                 EnterScene(OldEntryId, 0, true);
+                MoveTo(LastPos!, LastRot!);
             }
 
             SendPacket(new PacketRaidInfoNotify((uint)CurRaidId, RaidStatus.Finish));
 
             CurRaidId = 0;
             OldEntryId = 0;
+            LastPos = null;
+            LastRot = null;
         }
 
         #endregion

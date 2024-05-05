@@ -20,6 +20,9 @@ namespace EggLink.DanhengServer.Data.Config
         public int ID { get; set; }
         public int MainMissionID { get; set; }
         public string MissionJsonPath { get; set; } = "";
+
+        [JsonConverter(typeof(StringEnumConverter))]
+        public SubMissionTakeTypeEnum TakeType { get; set; }
         public List<int> TakeParamIntList { get; set; } = [];  // the mission's prerequisites
         [JsonConverter(typeof(StringEnumConverter))]
         public MissionFinishTypeEnum FinishType { get; set; }

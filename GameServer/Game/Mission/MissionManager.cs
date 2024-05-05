@@ -6,6 +6,7 @@ using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Game.Mission.FinishAction;
 using EggLink.DanhengServer.Game.Mission.FinishType;
 using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.Server.Packet.Send.Avatar;
 using EggLink.DanhengServer.Server.Packet.Send.Mission;
 using EggLink.DanhengServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.Server.Packet.Send.Scene;
@@ -21,6 +22,8 @@ namespace EggLink.DanhengServer.Game.Mission
         public MissionData Data;
         public Dictionary<FinishActionTypeEnum, MissionFinishActionHandler> ActionHandlers = [];
         public Dictionary<MissionFinishTypeEnum, MissionFinishTypeHandler> FinishTypeHandlers = [];
+
+        public readonly List<int> SkipSubMissionList = [101030104]; // bug
 
         public MissionManager(PlayerInstance player) : base(player)
         {
@@ -80,7 +83,7 @@ namespace EggLink.DanhengServer.Game.Mission
         public List<Proto.MissionSync?> ReAcceptMainMission(int missionId, bool sendPacket = true)
         {
             if (!ConfigManager.Config.ServerOption.EnableMission) return [];
-            if (!Data.MissionInfo.TryGetValue(missionId, out _)) return [];
+            //if (!Data.MissionInfo.TryGetValue(missionId, out _)) return [];
 
             Data.MissionInfo.Remove(missionId);
             Data.MainMissionInfo.Remove(missionId);
@@ -128,6 +131,12 @@ namespace EggLink.DanhengServer.Game.Mission
                 if (doFinishTypeAction)
                     handler?.HandleFinishType(Player, mission.SubMissionInfo, null);
             }
+
+            if (SkipSubMissionList.Contains(missionId))
+            {
+                FinishSubMission(missionId);
+            }
+
             return sync;
         }
 
@@ -185,12 +194,12 @@ namespace EggLink.DanhengServer.Game.Mission
             GameData.RaidConfigData.TryGetValue(Player.CurRaidId, out var raidConfig);
             if (raidConfig != null)
             {
-                bool leave = true;
+                bool leave = false;
                 foreach (var id in raidConfig.MainMissionIDList)
                 {
-                    if (GetMainMissionStatus(id) != MissionPhaseEnum.Finish)
+                    if (GetMainMissionStatus(id) == MissionPhaseEnum.Finish)
                     {
-                        leave = false;
+                        leave = true;
                     }
                 }
                 if (leave)
@@ -284,6 +293,7 @@ namespace EggLink.DanhengServer.Game.Mission
                     Player.AvatarManager!.GetHero()!.HeroId += 2;
                     DatabaseHelper.Instance?.UpdateInstance(Player.AvatarManager!.AvatarData);
                     Player.SendPacket(new PacketPlayerSyncScNotify(Player.AvatarManager!.GetHero()!));
+                    Player.SendPacket(new PacketHeroBasicTypeChangedNotify(Player.AvatarManager!.GetHero()!.HeroId));
                 }
             }
 
@@ -354,6 +364,27 @@ namespace EggLink.DanhengServer.Game.Mission
             }
         }
 
+        public void HandleCustomValue(int index, int cValue, int missionId)
+        {
+            if (!ConfigManager.Config.ServerOption.EnableMission) return;
+
+            GameData.SubMissionData.TryGetValue(missionId, out var subMission);
+            if (subMission == null) return;
+            var mainMissionId = subMission.MainMissionID;
+            GameData.MainMissionData.TryGetValue(mainMissionId, out var mainMission);
+
+            foreach (var mission in mainMission?.MissionInfo?.SubMissionList ?? [])
+            {
+                if (mission.TakeType == SubMissionTakeTypeEnum.CustomValue)
+                {
+                    if (mission.TakeParamIntList[index] == cValue)
+                    {
+                        AcceptSubMission(mission.ID);
+                    }
+                }
+            }
+        }
+
         #endregion
 
         #region Mission Status
@@ -380,9 +411,15 @@ namespace EggLink.DanhengServer.Game.Mission
             {
                 if (info.TryGetValue(missionId, out var mission))
                 {
+                    if (SkipSubMissionList.Contains(missionId))
+                    {
+                        FinishSubMission(missionId);
+                        mission.Status = MissionPhaseEnum.Finish;
+                    }
                     return mission.Status;
                 }
             }
+
             return MissionPhaseEnum.None;
         }
 

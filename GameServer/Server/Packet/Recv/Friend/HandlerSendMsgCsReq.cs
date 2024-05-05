@@ -19,6 +19,8 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Friend
         {
             var req = SendMsgCsReq.Parser.ParseFrom(data);
 
+            connection.SendPacket(CmdIds.SendMsgScRsp);
+
             if (req.MessageType == MsgType.CustomText)
             {
                 connection.Player!.FriendManager!.SendMessage(connection.Player!.Uid, (int)req.TargetList[0], req.MessageText);
@@ -27,8 +29,6 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Friend
             {
                 connection.Player!.FriendManager!.SendMessage(connection.Player!.Uid, (int)req.TargetList[0], null, (int)req.ExtraId);
             }
-
-            connection.SendPacket(CmdIds.SendMsgScRsp);
         }
     }
 }
