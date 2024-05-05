@@ -18,6 +18,8 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Others
             {
                 BeginTime = Extensions.GetUnixSec(),
                 EndTime = Extensions.GetUnixSec() + 3600,
+                ConfigId = 1,
+                MPACCIEDACN = ConfigManager.Config.ServerOption.ServerAnnounce,
             });
 
             SetData(proto);
