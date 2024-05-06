@@ -8,6 +8,7 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Tutorial
     {
         public override void OnHandle(Connection connection, byte[] header, byte[] data)
         {
+
             if (ConfigManager.Config.ServerOption.EnableMission)  // If missions are enabled
                 connection.SendPacket(new PacketGetTutorialGuideScRsp(connection.Player!));  // some bug
         }

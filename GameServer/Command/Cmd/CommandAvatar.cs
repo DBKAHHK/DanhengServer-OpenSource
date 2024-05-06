@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace EggLink.DanhengServer.Command.Cmd
 {
-    [CommandInfo("avatar", "Manage the player's avatar", "/avatar <talent [id/-1] [level]>/<get [id]>/<rank [id/-1] [rank]>/level [id/-1] [level]")]
+    [CommandInfo("avatar", "设定玩家已有角色的属性", "/avatar <talent [id/-1] [level]>/<get [id]>/<rank [id/-1] [rank]>/level [id/-1] [level]")]
     public class CommandAvatar : ICommand
     {
         [CommandMethod("talent")]
@@ -18,12 +18,12 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("Player not found");
+                arg.SendMsg("玩家不存在");
                 return;
             }
             if (arg.BasicArgs.Count < 2)
             {
-                arg.SendMsg("Invalid arguments");
+                arg.SendMsg("参数无效");
                 return;
             }
             var Player = arg.Target.Player!;
@@ -32,7 +32,7 @@ namespace EggLink.DanhengServer.Command.Cmd
             var level = arg.GetInt(1);
             if (level < 0 || level > 10)
             {
-                arg.SendMsg("Invalid talent level");
+                arg.SendMsg("无效行迹等级");
                 return;
             }
             var player = arg.Target.Player!;
@@ -57,7 +57,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                         });
                     }
                 });
-                arg.SendMsg($"Player has set all avatars' talents to level {level}");
+                arg.SendMsg($"已将全部角色行迹等级设置为 {level}");
 
                 // save
                 DatabaseHelper.Instance?.UpdateInstance(player.AvatarManager.AvatarData);
@@ -70,7 +70,7 @@ namespace EggLink.DanhengServer.Command.Cmd
             var avatar = player.AvatarManager!.GetAvatar(avatarId);
             if (avatar == null)
             {
-                arg.SendMsg("Avatar not found");
+                arg.SendMsg("角色不存在");
                 return;
             }
             avatar.Excel?.SkillTree.ForEach(talent =>
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Command.Cmd
             // sync
             player.SendPacket(new PacketPlayerSyncScNotify(avatar));
 
-            arg.SendMsg($"Player has set {avatarId} talents to level {level}");
+            arg.SendMsg($"已将 {avatarId} 的行迹等级设置为 {level}");
         }
 
         [CommandMethod("get")]
@@ -92,18 +92,18 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("Player not found");
+                arg.SendMsg("玩家不存在");
                 return;
             }
 
             if (arg.BasicArgs.Count < 1)
             {
-                arg.SendMsg("Invalid arguments");
+                arg.SendMsg("参数无效");
             }
 
             var id = arg.GetInt(0);
             arg.Target.Player!.AvatarManager!.AddAvatar(id);
-            arg.SendMsg($"Player has gained avatar {id}");
+            arg.SendMsg($"已给予角色 {id}");
         }
 
         [CommandMethod("rank")]
@@ -111,20 +111,20 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("Player not found");
+                arg.SendMsg("玩家不存在");
                 return;
             }
 
             if (arg.BasicArgs.Count < 2)
             {
-                arg.SendMsg("Invalid arguments");
+                arg.SendMsg("参数无效");
             }
 
             var id = arg.GetInt(0);
             var rank = arg.GetInt(1);
             if (rank < 0 || rank > 6)
             {
-                arg.SendMsg("Invalid rank");
+                arg.SendMsg("无效命座");
                 return;
             }
             if (id == -1)
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                 {
                     avatar.Rank = Math.Min(rank, 6);
                 });
-                arg.SendMsg($"Player has set all avatars' rank to {rank}");
+                arg.SendMsg($"已将全部角色命座设置为 {rank}");
 
                 // save
                 DatabaseHelper.Instance?.UpdateInstance(arg.Target.Player!.AvatarManager.AvatarData);
@@ -146,7 +146,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                 var avatar = arg.Target.Player!.AvatarManager!.GetAvatar(id);
                 if (avatar == null)
                 {
-                    arg.SendMsg("Avatar not found");
+                    arg.SendMsg("角色不存在");
                     return;
                 }
                 avatar.Rank = Math.Min(rank, 6);
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                 // sync
                 arg.Target.SendPacket(new PacketPlayerSyncScNotify(avatar));
 
-                arg.SendMsg($"Player has set avatar {id} rank to {rank}");
+                arg.SendMsg($"已将角色 {id} 命座设置为 {rank}");
             }
         }
 
@@ -166,20 +166,20 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("Player not found");
+                arg.SendMsg("玩家不存在");
                 return;
             }
 
             if (arg.BasicArgs.Count < 2)
             {
-                arg.SendMsg("Invalid arguments");
+                arg.SendMsg("参数无效");
             }
 
             var id = arg.GetInt(0);
             var level = arg.GetInt(1);
             if (level < 1 || level > 80)
             {
-                arg.SendMsg("Invalid level");
+                arg.SendMsg("无效角色等级");
                 return;
             }
 
@@ -190,7 +190,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                     avatar.Level = Math.Min(level, 80);
                     avatar.Promotion = GameData.GetMinPromotionForLevel(avatar.Level);
                 });
-                arg.SendMsg($"Player has set all avatars' level to {level}");
+                arg.SendMsg($"已将全部角色等级设置为 {level}");
 
                 // save
                 DatabaseHelper.Instance?.UpdateInstance(arg.Target.Player!.AvatarManager.AvatarData);
@@ -203,7 +203,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                 var avatar = arg.Target.Player!.AvatarManager!.GetAvatar(id);
                 if (avatar == null)
                 {
-                    arg.SendMsg("Avatar not found");
+                    arg.SendMsg("角色不存在");
                     return;
                 }
                 avatar.Level = Math.Min(level, 80);
@@ -215,7 +215,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                 // sync
                 arg.Target.SendPacket(new PacketPlayerSyncScNotify(avatar));
 
-                arg.SendMsg($"Player has set avatar {id} level to {level}");
+                arg.SendMsg($"已将 {id} 等级设置为 {level}");
             }
         }
     }

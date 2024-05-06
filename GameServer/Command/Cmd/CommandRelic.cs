@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace EggLink.DanhengServer.Command.Cmd
 {
-    [CommandInfo("relic", "Give the player relics", "/relic <artId> <mainAffixId> <subId1:level1> <subId2:level2> <subId3:level3> <subId4:level4> l<level> x<amount>")]
+    [CommandInfo("relic", "给予玩家指定词条的遗器", "/relic <遗器ID> <主词条ID> <小词条ID1:小词条等级> <小词条ID2:小词条等级> <小词条ID3:小词条等级> <小词条ID4:小词条等级> l<等级> x<数量>")]
     public class CommandRelic : ICommand
     {
         [CommandDefault]
@@ -17,20 +17,20 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("Target not found.");
+                arg.SendMsg("未指定玩家");
                 return;
             }
 
             var player = arg.Target.Player;
             if (player == null)
             {
-                arg.SendMsg("Target not found.");
+                arg.SendMsg("玩家不存在");
                 return;
             }
 
             if (arg.BasicArgs.Count < 3)
             {
-                arg.SendMsg("Invalid arguments.");
+                arg.SendMsg("无效选项");
                 return;
             }
 
@@ -40,14 +40,14 @@ namespace EggLink.DanhengServer.Command.Cmd
             levelStr ??= "1";
             if (!int.TryParse(str, out var amount) || !int.TryParse(levelStr, out var level))
             {
-                arg.SendMsg("Invalid arguments.");
+                arg.SendMsg("参数无效");
                 return;
             }
 
             GameData.RelicConfigData.TryGetValue(int.Parse(arg.BasicArgs[0]), out var itemConfig);
             if (itemConfig == null)
             {
-                arg.SendMsg("Item not found.");
+                arg.SendMsg("找不到物品");
                 return;
             }
 
@@ -55,21 +55,23 @@ namespace EggLink.DanhengServer.Command.Cmd
             GameData.RelicMainAffixData.TryGetValue(itemConfig.MainAffixGroup, out var mainAffixConfig);
             if (subAffixConfig == null || mainAffixConfig == null)
             {
-                arg.SendMsg("Invalid item.");
+                arg.SendMsg("物品无效");
                 return;
             }
+
             int startIndex = 1;
             int mainAffixId;
             if (arg.BasicArgs[1].Contains(':'))
             {
-                // random main affix
+                // 随机主词条
                 mainAffixId = mainAffixConfig.Keys.ToList().RandomElement();
-            } else
+            }
+            else
             {
                 mainAffixId = int.Parse(arg.BasicArgs[1]);
                 if (!mainAffixConfig.ContainsKey(mainAffixId))
                 {
-                    arg.SendMsg("Invalid main affix id.");
+                    arg.SendMsg("主词条ID无效");
                     return;
                 }
                 startIndex++;
@@ -82,12 +84,12 @@ namespace EggLink.DanhengServer.Command.Cmd
                 var subAffix = arg.BasicArgs[i].Split(':');
                 if (subAffix.Length != 2 || !int.TryParse(subAffix[0], out var subId) || !int.TryParse(subAffix[1], out var subLevel))
                 {
-                    arg.SendMsg("Invalid arguments.");
+                    arg.SendMsg("参数无效");
                     return;
                 }
                 if (!subAffixConfig.ContainsKey(subId))
                 {
-                    arg.SendMsg("Invalid sub affix id.");
+                    arg.SendMsg("副词条ID无效");
                     return;
                 }
                 subAffixes.Add((subId, subLevel));
@@ -95,7 +97,7 @@ namespace EggLink.DanhengServer.Command.Cmd
             }
             if (subAffixes.Count < 4)
             {
-                // random sub affix
+                // 随机副词条
                 var subAffixGroup = itemConfig.SubAffixGroup;
                 var subAffixGroupConfig = GameData.RelicSubAffixData[subAffixGroup];
                 var subAffixGroupKeys = subAffixGroupConfig.Keys.ToList();
@@ -109,7 +111,8 @@ namespace EggLink.DanhengServer.Command.Cmd
                     if (remainLevel <= 0)
                     {
                         subAffixes.Add((subId, 1));
-                    } else
+                    }
+                    else
                     {
                         var subLevel = Random.Shared.Next(1, Math.Min(remainLevel + 1, 5)) + 1;
                         subAffixes.Add((subId, subLevel));
@@ -117,7 +120,6 @@ namespace EggLink.DanhengServer.Command.Cmd
                     }
                 }
             }
-
 
             var itemData = new ItemData()
             {
@@ -144,8 +146,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                 player.InventoryManager!.AddItem(itemData);
             }
 
-
-            arg.SendMsg($"Give @{player.Uid} {amount} relics of {mainAffixId}");
+            arg.SendMsg($"给予 @{player.Uid} {amount} 件遗器，所选主词条为 {mainAffixId}");
         }
     }
 }

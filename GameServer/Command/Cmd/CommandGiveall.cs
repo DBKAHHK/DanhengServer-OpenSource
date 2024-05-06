@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace EggLink.DanhengServer.Command.Cmd
 {
-    [CommandInfo("giveall", "Give all items in the category to player", "giveall <avatar/equipment> r<rank> l<level> x<amount>")]
+    [CommandInfo("giveall", "给予玩家全部物品", "giveall <avatar/equipment/relic/unlock> r<rank> l<level> x<amount>")]
     public class CommandGiveall : ICommand
     {
         [CommandMethod("0 avatar")]
@@ -137,6 +137,49 @@ namespace EggLink.DanhengServer.Command.Cmd
             DatabaseHelper.Instance?.UpdateInstance(player.InventoryManager!.Data);
 
             arg.SendMsg($"Give all materials to {player.Uid}");
+        }
+
+        [CommandMethod("0 relic")]
+        public void GiveAllRelic(CommandArg arg)
+        {
+            if (arg.Target == null)
+            {
+                arg.SendMsg("目标未找到。");
+                return;
+            }
+
+            var player = arg.Target.Player;
+            if (player == null)
+            {
+                arg.SendMsg("目标未找到。");
+                return;
+            }
+
+            arg.CharacterArgs.TryGetValue("l", out var levelStr);
+            levelStr ??= "1";
+            if (!int.TryParse(levelStr, out var level))
+            {
+                arg.SendMsg("无效的参数。");
+                return;
+            }
+
+            arg.CharacterArgs.TryGetValue("x", out var amountStr);
+            amountStr ??= "1";
+            if (!int.TryParse(amountStr, out var amount))
+            {
+                arg.SendMsg("无效的参数。");
+                return;
+            }
+
+            var relicList = GameData.RelicConfigData.Values;
+            foreach (var relic in relicList)
+            {
+                player.InventoryManager!.AddItem(relic.ID, amount, true, true, 1, Math.Max(Math.Min(level, relic.MaxLevel), 1));
+            }
+
+            DatabaseHelper.Instance?.UpdateInstance(player.InventoryManager!.Data);
+
+            arg.SendMsg($"已给予所有遗器到 {player.Uid}");
         }
 
         [CommandMethod("0 unlock")]

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EggLink.DanhengServer.Command.Cmd
 {
-    [CommandInfo("reload", "Reload the banners", "/reload", permission:"egglink.manage")]
+    [CommandInfo("reload", "重载服务器卡池", "/reload", permission:"egglink.manage")]
     public class CommandReload : ICommand
     {
         [CommandDefault]
@@ -16,7 +16,7 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             // Reload the banners
             GameData.BannersConfig = ResourceManager.LoadCustomFile<BannersConfig>("Banner", "Banners") ?? new();
-            arg.SendMsg("Banners reloaded");
+            arg.SendMsg("已重新载入卡池数据");
         }
     }
 }
