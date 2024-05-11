@@ -8,18 +8,17 @@ using EggLink.DanhengServer.Server.Packet;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using EggLink.DanhengServer.Command;
-using System.Runtime.InteropServices;
 using EggLink.DanhengServer.Handbook;
 
 namespace EggLink.DanhengServer.Program
 {
     public partial class EntryPoint
     {
-        private static Logger logger = new("Program");
-        public static DatabaseHelper DatabaseHelper = new();
-        public static Listener Listener = new();
-        public static HandlerManager HandlerManager = new();
-        public static CommandManager CommandManager = new();
+        private readonly static Logger logger = new("Program");
+        public readonly static DatabaseHelper DatabaseHelper = new();
+        public readonly static Listener Listener = new();
+        public readonly static HandlerManager HandlerManager = new();
+        public readonly static CommandManager CommandManager = new();
 
         public static void Main(string[] args)
         {
@@ -79,6 +78,16 @@ namespace EggLink.DanhengServer.Program
             try
             {
                 DatabaseHelper.Initialize();
+
+                if (args.Contains("--upgrade-database"))
+                {
+                    DatabaseHelper.UpgradeDatabase();
+                }
+
+                if (args.Contains("--move"))
+                {
+                    DatabaseHelper.MoveFromSqlite();
+                }
             } catch (Exception e)
             {
                 logger.Error("Failed to initialize database", e);
@@ -86,6 +95,7 @@ namespace EggLink.DanhengServer.Program
                 return;
             }
 
+            // Register the command handlers
             try
             {
                 CommandManager.RegisterCommand();

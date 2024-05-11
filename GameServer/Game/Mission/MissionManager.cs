@@ -19,7 +19,7 @@ namespace EggLink.DanhengServer.Game.Mission
     {
         #region Initializer & Properties
 
-        public MissionData Data;
+        public MissionData Data { get; set; }
         public Dictionary<FinishActionTypeEnum, MissionFinishActionHandler> ActionHandlers = [];
         public Dictionary<MissionFinishTypeEnum, MissionFinishTypeHandler> FinishTypeHandlers = [];
 
@@ -54,13 +54,12 @@ namespace EggLink.DanhengServer.Game.Mission
         public List<Proto.MissionSync?> AcceptMainMission(int missionId, bool sendPacket = true)
         {
             if (!ConfigManager.Config.ServerOption.EnableMission) return [];
-            if (Data.MissionInfo.ContainsKey(missionId)) return [];
+            if (Data.GetMainMissionStatus(missionId) != MissionPhaseEnum.None) return [];  // already accepted
             // Get entry sub mission
             GameData.MainMissionData.TryGetValue(missionId, out var mission);
             if (mission == null) return [];
 
-            Data.MissionInfo.Add(missionId, []);
-            Data.MainMissionInfo.Add(missionId, MissionPhaseEnum.Doing);
+            Data.SetMainMissionStatus(missionId, MissionPhaseEnum.Doing);
 
             var list = new List<Proto.MissionSync?>();
             mission.MissionInfo?.StartSubMissionList.ForEach(i => list.Add(AcceptSubMission(i, sendPacket)));
@@ -85,8 +84,14 @@ namespace EggLink.DanhengServer.Game.Mission
             if (!ConfigManager.Config.ServerOption.EnableMission) return [];
             //if (!Data.MissionInfo.TryGetValue(missionId, out _)) return [];
 
-            Data.MissionInfo.Remove(missionId);
-            Data.MainMissionInfo.Remove(missionId);
+            GameData.MainMissionData.TryGetValue(missionId, out var mission);
+            if (mission == null) return [];
+            foreach (var subMission in mission.SubMissionIds)
+            { 
+                Data.SetSubMissionStatus(subMission, MissionPhaseEnum.None);  // reset
+            }
+
+            Data.SetMainMissionStatus(missionId, MissionPhaseEnum.None);  // reset
 
             return AcceptMainMission(missionId, sendPacket);
         }
@@ -100,20 +105,12 @@ namespace EggLink.DanhengServer.Game.Mission
         public Proto.MissionSync? AcceptSubMission(int missionId, bool sendPacket, bool doFinishTypeAction = true)
         {
             if (!ConfigManager.Config.ServerOption.EnableMission) return null;
-            GameData.SubMissionData.TryGetValue(missionId, out var subMission);
-            if (subMission == null) return null;
-            var mainMissionId = subMission.MainMissionID;
-            if (!Data.MissionInfo.TryGetValue(mainMissionId, out Dictionary<int, MissionInfo>? value)) return null;
-            if (value == null || value.ContainsKey(missionId)) return null;
-            // Get entry sub mission
             GameData.SubMissionData.TryGetValue(missionId, out var mission);
             if (mission == null) return null;
+            if (Data.GetSubMissionStatus(missionId) != MissionPhaseEnum.None) return null;  // already accepted
 
-            value.Add(missionId, new MissionInfo()
-            {
-                Status = MissionPhaseEnum.Doing,
-                MissionId = missionId,
-            });
+            Data.SetSubMissionStatus(missionId, MissionPhaseEnum.Doing);
+
             var sync = new Proto.MissionSync();
             sync.MissionList.Add(new Proto.Mission()
             {
@@ -143,10 +140,9 @@ namespace EggLink.DanhengServer.Game.Mission
         public void FinishMainMission(int missionId)
         {
             if (!ConfigManager.Config.ServerOption.EnableMission) return;
-            if (!Data.MainMissionInfo.TryGetValue(missionId, out var value)) return;
             if (!GameData.MainMissionData.TryGetValue(missionId, out var mainMission)) return;
-            if (value != MissionPhaseEnum.Doing) return;
-            Data.MainMissionInfo[missionId] = MissionPhaseEnum.Finish;
+            if (Data.GetMainMissionStatus(missionId) != MissionPhaseEnum.Doing) return;
+            Data.SetMainMissionStatus(missionId, MissionPhaseEnum.Finish);
             var sync = new Proto.MissionSync();
             sync.MainMissionIdList.Add((uint)missionId);
             // get next main mission
@@ -154,14 +150,9 @@ namespace EggLink.DanhengServer.Game.Mission
             {
                 if (GetSubMissionStatus(mission) != MissionPhaseEnum.Finish)
                 {
-                    Data.MissionInfo.TryGetValue(missionId, out var info);
-                    if (info != null)
+                    if (Data.GetSubMissionStatus(mission) != MissionPhaseEnum.Finish)
                     {
-                        info[mission] = new()
-                        {
-                            MissionId = mission,
-                            Status = MissionPhaseEnum.Cancel
-                        };
+                        Data.SetSubMissionStatus(mission, MissionPhaseEnum.Finish);
                         sync.MissionList.Add(new Proto.Mission()
                         {
                             Id = (uint)mission,
@@ -174,6 +165,7 @@ namespace EggLink.DanhengServer.Game.Mission
             foreach (var nextMission in GameData.MainMissionData.Values)
             {
                 if (!nextMission.IsEqual(Data)) continue;
+                if (Data.GetMainMissionStatus(nextMission.MainMissionID) != MissionPhaseEnum.None) continue;  // already accepted
                 var res = AcceptMainMission(nextMission.MainMissionID, false);
                 foreach (var subMission in res)
                 {
@@ -215,12 +207,11 @@ namespace EggLink.DanhengServer.Game.Mission
             GameData.SubMissionData.TryGetValue(missionId, out var subMission);
             if (subMission == null) return;
             var mainMissionId = subMission.MainMissionID;
-            if (!Data.MissionInfo.TryGetValue(mainMissionId, out var value)) return;
-            GameData.MainMissionData.TryGetValue(mainMissionId, out var mainMission);
+            if (Data.GetSubMissionStatus(missionId) != MissionPhaseEnum.Doing) return;  // not accepted
+            GameData.MainMissionData.TryGetValue(mainMissionId, out var mainMission);  // get main mission
             if (mainMission == null) return;
-            if (value == null || !value.TryGetValue(missionId, out var mission)) return;
-            if (mission.Status != MissionPhaseEnum.Doing) return;
-            mission.Status = MissionPhaseEnum.Finish;
+            Data.SetSubMissionStatus(missionId, MissionPhaseEnum.Finish);  // set finish
+
             var sync = new Proto.MissionSync();
             sync.MissionList.Add(new Proto.Mission()
             {
@@ -232,12 +223,19 @@ namespace EggLink.DanhengServer.Game.Mission
             // get next sub mission
             foreach (var nextMission in mainMission.MissionInfo?.SubMissionList ?? [])
             {
-                bool canAccept = true;
+                if (nextMission.TakeType != SubMissionTakeTypeEnum.AnySequence && nextMission.TakeType != SubMissionTakeTypeEnum.MultiSequence) continue;
+                bool canAccept = nextMission.TakeType == SubMissionTakeTypeEnum.MultiSequence;  // mean and operation
                 foreach (var id in nextMission.TakeParamIntList)
                 {
-                    if (GetSubMissionStatus(id) != MissionPhaseEnum.Finish)
+                    if (GetSubMissionStatus(id) != MissionPhaseEnum.Finish && nextMission.TakeType == SubMissionTakeTypeEnum.MultiSequence)
                     {
                         canAccept = false;
+                        break;
+                    }
+                    else if (GetSubMissionStatus(id) == MissionPhaseEnum.Finish && nextMission.TakeType == SubMissionTakeTypeEnum.AnySequence)  // or operation
+                    {
+                        canAccept = true;
+                        break;
                     }
                 }
                 if (canAccept)
@@ -393,34 +391,14 @@ namespace EggLink.DanhengServer.Game.Mission
         {
             if (!ConfigManager.Config.ServerOption.EnableMission) return MissionPhaseEnum.Finish;
 
-            if (Data.MainMissionInfo.TryGetValue(missionId, out var info))
-            {
-                return info!;
-            }
-            return MissionPhaseEnum.None;
+            return Data.GetMainMissionStatus(missionId);
         }
 
         public MissionPhaseEnum GetSubMissionStatus(int missionId)
         {
             if (!ConfigManager.Config.ServerOption.EnableMission) return MissionPhaseEnum.Finish;
 
-            GameData.SubMissionData.TryGetValue(missionId, out var subMission);
-            if (subMission == null) return MissionPhaseEnum.None;
-            var mainMissionId = subMission.MainMissionID;
-            if (Data.MissionInfo.TryGetValue(mainMissionId, out var info))
-            {
-                if (info.TryGetValue(missionId, out var mission))
-                {
-                    if (SkipSubMissionList.Contains(missionId))
-                    {
-                        FinishSubMission(missionId);
-                        mission.Status = MissionPhaseEnum.Finish;
-                    }
-                    return mission.Status;
-                }
-            }
-
-            return MissionPhaseEnum.None;
+            return Data.GetSubMissionStatus(missionId);
         }
 
         public Data.Config.SubMissionInfo? GetSubMissionInfo(int missionId)
@@ -435,15 +413,9 @@ namespace EggLink.DanhengServer.Game.Mission
             if (!ConfigManager.Config.ServerOption.EnableMission) return [];
 
             var list = new List<int>();
-            foreach (var mainMission in Data.MissionInfo.Values)
+            foreach (var id in Data.RunningSubMissionIds)
             {
-                foreach (var subMission in mainMission.Values)
-                {
-                    if (subMission.Status == MissionPhaseEnum.Doing)
-                    {
-                        list.Add(subMission.MissionId);
-                    }
-                }
+                list.Add(id);
             }
             return list;
         }
@@ -453,18 +425,12 @@ namespace EggLink.DanhengServer.Game.Mission
             if (!ConfigManager.Config.ServerOption.EnableMission) return [];
 
             var list = new List<Data.Config.SubMissionInfo>();
-            foreach (var mainMission in Data.MissionInfo.Values)
+            foreach (var id in Data.RunningSubMissionIds)
             {
-                foreach (var subMission in mainMission.Values)
+                GameData.SubMissionData.TryGetValue(id, out var mission);
+                if (mission != null && mission.SubMissionInfo != null)
                 {
-                    if (subMission.Status == MissionPhaseEnum.Doing)
-                    {
-                        GameData.SubMissionData.TryGetValue(subMission.MissionId, out var mission);
-                        if (mission != null && mission.SubMissionInfo != null)
-                        {
-                            list.Add(mission.SubMissionInfo);
-                        }
-                    }
+                    list.Add(mission.SubMissionInfo);
                 }
             }
             return list;

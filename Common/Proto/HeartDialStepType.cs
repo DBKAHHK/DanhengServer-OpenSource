@@ -24,12 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static HeartDialStepTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdIZWFydERpYWxTdGVwVHlwZS5wcm90byq1AQoRSGVhcnREaWFsU3RlcFR5",
+            "ChdIZWFydERpYWxTdGVwVHlwZS5wcm90byrXAQoRSGVhcnREaWFsU3RlcFR5",
             "cGUSIAocSEVBUlRfRElBTF9TVEVQX1RZUEVfTUlTU0lORxAAEh0KGUhFQVJU",
             "X0RJQUxfU1RFUF9UWVBFX0ZVTEwQARIdChlIRUFSVF9ESUFMX1NURVBfVFlQ",
             "RV9MT0NLEAISHwobSEVBUlRfRElBTF9TVEVQX1RZUEVfVU5MT0NLEAMSHwob",
-            "SEVBUlRfRElBTF9TVEVQX1RZUEVfTk9STUFMEARCHqoCG0VnZ0xpbmsuRGFu",
-            "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "SEVBUlRfRElBTF9TVEVQX1RZUEVfTk9STUFMEAQSIAocSEVBUlRfRElBTF9T",
+            "VEVQX1RZUEVfQ09OVFJPTBAFQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.HeartDialStepType), }, null, null));
@@ -44,6 +45,7 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("HEART_DIAL_STEP_TYPE_LOCK")] Lock = 2,
     [pbr::OriginalName("HEART_DIAL_STEP_TYPE_UNLOCK")] Unlock = 3,
     [pbr::OriginalName("HEART_DIAL_STEP_TYPE_NORMAL")] Normal = 4,
+    [pbr::OriginalName("HEART_DIAL_STEP_TYPE_CONTROL")] Control = 5,
   }
 
   #endregion

@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVUcmF2ZWxCcm9jaHVyZUdldFBhc3RlclNjTm90aWZ5LnByb3RvIkMKH1Ry",
-            "YXZlbEJyb2NodXJlR2V0UGFzdGVyU2NOb3RpZnkSEwoLSktORU9FTk9OQkMY",
-            "DyABKA0SCwoDbnVtGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "YXZlbEJyb2NodXJlR2V0UGFzdGVyU2NOb3RpZnkSEwoLREpIT0RET0hNTkIY",
+            "DiABKA0SCwoDbnVtGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TravelBrochureGetPasterScNotify), global::EggLink.DanhengServer.Proto.TravelBrochureGetPasterScNotify.Parser, new[]{ "JKNEOENONBC", "Num" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TravelBrochureGetPasterScNotify), global::EggLink.DanhengServer.Proto.TravelBrochureGetPasterScNotify.Parser, new[]{ "DJHODDOHMNB", "Num" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TravelBrochureGetPasterScNotify(TravelBrochureGetPasterScNotify other) : this() {
-      jKNEOENONBC_ = other.jKNEOENONBC_;
+      dJHODDOHMNB_ = other.dJHODDOHMNB_;
       num_ = other.num_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,15 +84,15 @@ namespace EggLink.DanhengServer.Proto {
       return new TravelBrochureGetPasterScNotify(this);
     }
 
-    /// <summary>Field number for the "JKNEOENONBC" field.</summary>
-    public const int JKNEOENONBCFieldNumber = 15;
-    private uint jKNEOENONBC_;
+    /// <summary>Field number for the "DJHODDOHMNB" field.</summary>
+    public const int DJHODDOHMNBFieldNumber = 14;
+    private uint dJHODDOHMNB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint JKNEOENONBC {
-      get { return jKNEOENONBC_; }
+    public uint DJHODDOHMNB {
+      get { return dJHODDOHMNB_; }
       set {
-        jKNEOENONBC_ = value;
+        dJHODDOHMNB_ = value;
       }
     }
 
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (JKNEOENONBC != other.JKNEOENONBC) return false;
+      if (DJHODDOHMNB != other.DJHODDOHMNB) return false;
       if (Num != other.Num) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -132,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (JKNEOENONBC != 0) hash ^= JKNEOENONBC.GetHashCode();
+      if (DJHODDOHMNB != 0) hash ^= DJHODDOHMNB.GetHashCode();
       if (Num != 0) hash ^= Num.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -156,9 +156,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(104);
         output.WriteUInt32(Num);
       }
-      if (JKNEOENONBC != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(JKNEOENONBC);
+      if (DJHODDOHMNB != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(DJHODDOHMNB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -174,9 +174,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(104);
         output.WriteUInt32(Num);
       }
-      if (JKNEOENONBC != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(JKNEOENONBC);
+      if (DJHODDOHMNB != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(DJHODDOHMNB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,8 +188,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (JKNEOENONBC != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JKNEOENONBC);
+      if (DJHODDOHMNB != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DJHODDOHMNB);
       }
       if (Num != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Num);
@@ -206,8 +206,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.JKNEOENONBC != 0) {
-        JKNEOENONBC = other.JKNEOENONBC;
+      if (other.DJHODDOHMNB != 0) {
+        DJHODDOHMNB = other.DJHODDOHMNB;
       }
       if (other.Num != 0) {
         Num = other.Num;
@@ -231,8 +231,8 @@ namespace EggLink.DanhengServer.Proto {
             Num = input.ReadUInt32();
             break;
           }
-          case 120: {
-            JKNEOENONBC = input.ReadUInt32();
+          case 112: {
+            DJHODDOHMNB = input.ReadUInt32();
             break;
           }
         }
@@ -254,8 +254,8 @@ namespace EggLink.DanhengServer.Proto {
             Num = input.ReadUInt32();
             break;
           }
-          case 120: {
-            JKNEOENONBC = input.ReadUInt32();
+          case 112: {
+            DJHODDOHMNB = input.ReadUInt32();
             break;
           }
         }

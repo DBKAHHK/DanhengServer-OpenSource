@@ -24,7 +24,7 @@ namespace EggLink.DanhengServer.Proto {
     static MonopolyActionResultSourceTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiRNb25vcG9seUFjdGlvblJlc3VsdFNvdXJjZVR5cGUucHJvdG8qrAMKHk1v",
+            "CiRNb25vcG9seUFjdGlvblJlc3VsdFNvdXJjZVR5cGUucHJvdG8qxwQKHk1v",
             "bm9wb2x5QWN0aW9uUmVzdWx0U291cmNlVHlwZRIrCidNT05PUE9MWV9BQ1RJ",
             "T05fUkVTVUxUX1NPVVJDRV9UWVBFX05PTkUQABItCilNT05PUE9MWV9BQ1RJ",
             "T05fUkVTVUxUX1NPVVJDRV9UWVBFX0VGRkVDVBABEjIKLk1PTk9QT0xZX0FD",
@@ -34,8 +34,11 @@ namespace EggLink.DanhengServer.Proto {
             "UkFERRAEEjIKLk1PTk9QT0xZX0FDVElPTl9SRVNVTFRfU09VUkNFX1RZUEVf",
             "R0FNRV9TRVRUTEUQBRIwCixNT05PUE9MWV9BQ1RJT05fUkVTVUxUX1NPVVJD",
             "RV9UWVBFX0JVWV9HT09EUxAGEiwKKE1PTk9QT0xZX0FDVElPTl9SRVNVTFRf",
-            "U09VUkNFX1RZUEVfQ0xJQ0sQB0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
-            "LlByb3RvYgZwcm90bzM="));
+            "U09VUkNFX1RZUEVfQ0xJQ0sQBxIzCi9NT05PUE9MWV9BQ1RJT05fUkVTVUxU",
+            "X1NPVVJDRV9UWVBFX1NPQ0lBTF9FVkVOVBAIEisKJ01PTk9QT0xZX0FDVElP",
+            "Tl9SRVNVTFRfU09VUkNFX1RZUEVfTElLRRAJEjcKM01PTk9QT0xZX0FDVElP",
+            "Tl9SRVNVTFRfU09VUkNFX1RZUEVfUVVJWl9HQU1FX1NFVFRMRRAKQh6qAhtF",
+            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.MonopolyActionResultSourceType), }, null, null));
@@ -53,6 +56,9 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("MONOPOLY_ACTION_RESULT_SOURCE_TYPE_GAME_SETTLE")] GameSettle = 5,
     [pbr::OriginalName("MONOPOLY_ACTION_RESULT_SOURCE_TYPE_BUY_GOODS")] BuyGoods = 6,
     [pbr::OriginalName("MONOPOLY_ACTION_RESULT_SOURCE_TYPE_CLICK")] Click = 7,
+    [pbr::OriginalName("MONOPOLY_ACTION_RESULT_SOURCE_TYPE_SOCIAL_EVENT")] SocialEvent = 8,
+    [pbr::OriginalName("MONOPOLY_ACTION_RESULT_SOURCE_TYPE_LIKE")] Like = 9,
+    [pbr::OriginalName("MONOPOLY_ACTION_RESULT_SOURCE_TYPE_QUIZ_GAME_SETTLE")] QuizGameSettle = 10,
   }
 
   #endregion

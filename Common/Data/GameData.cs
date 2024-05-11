@@ -159,48 +159,6 @@ namespace EggLink.DanhengServer.Data
         {
             FloorInfoData.TryGetValue("P" + planeId + "_F" + floorId, out outer!);
         }
-
-        public static MapEntranceExcel? GetMapEntrance(int floorId, MissionData mission)
-        {
-            var data = MapEntranceData.Values.ToList().FindAll(item => item.FloorID == floorId);
-            if (data.Count == 0) return null;
-            MapEntranceExcel? result = null;
-            foreach (var item in data)
-            {
-                if (item.FinishSubMissionList.Count > 0)
-                {
-                    foreach (var subMissionId in item.FinishSubMissionList)
-                    {
-                        SubMissionData.TryGetValue(subMissionId, out var subMission);
-                        if (subMission == null) return null;
-                        var mainMissionId = subMission.MainMissionID;
-                        if (mission.MissionInfo.TryGetValue(mainMissionId, out var mainMission))
-                        {
-                            if (mainMission.Values.ToList().Find(i => i.Status == Enums.MissionPhaseEnum.Doing && i.MissionId == subMissionId) != null)
-                            {
-                                result = item;
-                            }
-                        }
-                    }
-                }
-                else if (item.FinishMainMissionList.Count > 0)
-                {
-                    foreach (var mainMissionId in item.FinishMainMissionList)
-                    {
-                        if (mission.MainMissionInfo.TryGetValue(mainMissionId, out var mainMission))
-                        {
-                            if (mainMission == Enums.MissionPhaseEnum.Doing)
-                            {
-                                result = item;
-                            }
-                        }
-                    }
-                }
-            }
-
-            return result;
-        }
-
         public static int GetAvatarExpRequired(int group, int level)
         {
             ExpTypeData.TryGetValue((group * 100) + level, out var expType);

@@ -24,16 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static RelicReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgtSZWxpYy5wcm90bxoQUmVsaWNBZmZpeC5wcm90byLDAQoFUmVsaWMSFAoM",
-            "aXNfZGlzY2FyZGVkGAcgASgIEhQKDGlzX3Byb3RlY3RlZBgBIAEoCBILCgN0",
-            "aWQYCiABKA0SEQoJdW5pcXVlX2lkGA0gASgNEhYKDmJhc2VfYXZhdGFyX2lk",
-            "GAYgASgNEiMKDnN1Yl9hZmZpeF9saXN0GAkgAygLMgsuUmVsaWNBZmZpeBIN",
-            "CgVsZXZlbBgIIAEoDRILCgNleHAYDyABKA0SFQoNbWFpbl9hZmZpeF9pZBgC",
-            "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "CgtSZWxpYy5wcm90bxoQUmVsaWNBZmZpeC5wcm90byLcAQoFUmVsaWMSFgoO",
+            "YmFzZV9hdmF0YXJfaWQYCiABKA0SDQoFbGV2ZWwYCCABKA0SFAoMaXNfcHJv",
+            "dGVjdGVkGAQgASgIEgsKA2V4cBgJIAEoDRIUCgxpc19kaXNjYXJkZWQYASAB",
+            "KAgSCwoDdGlkGA0gASgNEhUKDW1haW5fYWZmaXhfaWQYDyABKA0SFwoPZHJl",
+            "c3NfYXZhdGFyX2lkGA4gASgNEhEKCXVuaXF1ZV9pZBgCIAEoDRIjCg5zdWJf",
+            "YWZmaXhfbGlzdBgMIAMoCzILLlJlbGljQWZmaXhCHqoCG0VnZ0xpbmsuRGFu",
+            "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RelicAffixReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Relic), global::EggLink.DanhengServer.Proto.Relic.Parser, new[]{ "IsDiscarded", "IsProtected", "Tid", "UniqueId", "BaseAvatarId", "SubAffixList", "Level", "Exp", "MainAffixId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Relic), global::EggLink.DanhengServer.Proto.Relic.Parser, new[]{ "BaseAvatarId", "Level", "IsProtected", "Exp", "IsDiscarded", "Tid", "MainAffixId", "DressAvatarId", "UniqueId", "SubAffixList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,15 +76,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Relic(Relic other) : this() {
-      isDiscarded_ = other.isDiscarded_;
-      isProtected_ = other.isProtected_;
-      tid_ = other.tid_;
-      uniqueId_ = other.uniqueId_;
       baseAvatarId_ = other.baseAvatarId_;
-      subAffixList_ = other.subAffixList_.Clone();
       level_ = other.level_;
+      isProtected_ = other.isProtected_;
       exp_ = other.exp_;
+      isDiscarded_ = other.isDiscarded_;
+      tid_ = other.tid_;
       mainAffixId_ = other.mainAffixId_;
+      dressAvatarId_ = other.dressAvatarId_;
+      uniqueId_ = other.uniqueId_;
+      subAffixList_ = other.subAffixList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -93,56 +95,8 @@ namespace EggLink.DanhengServer.Proto {
       return new Relic(this);
     }
 
-    /// <summary>Field number for the "is_discarded" field.</summary>
-    public const int IsDiscardedFieldNumber = 7;
-    private bool isDiscarded_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsDiscarded {
-      get { return isDiscarded_; }
-      set {
-        isDiscarded_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "is_protected" field.</summary>
-    public const int IsProtectedFieldNumber = 1;
-    private bool isProtected_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsProtected {
-      get { return isProtected_; }
-      set {
-        isProtected_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "tid" field.</summary>
-    public const int TidFieldNumber = 10;
-    private uint tid_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Tid {
-      get { return tid_; }
-      set {
-        tid_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "unique_id" field.</summary>
-    public const int UniqueIdFieldNumber = 13;
-    private uint uniqueId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint UniqueId {
-      get { return uniqueId_; }
-      set {
-        uniqueId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "base_avatar_id" field.</summary>
-    public const int BaseAvatarIdFieldNumber = 6;
+    public const int BaseAvatarIdFieldNumber = 10;
     private uint baseAvatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,17 +105,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         baseAvatarId_ = value;
       }
-    }
-
-    /// <summary>Field number for the "sub_affix_list" field.</summary>
-    public const int SubAffixListFieldNumber = 9;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RelicAffix> _repeated_subAffixList_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.RelicAffix.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RelicAffix> subAffixList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RelicAffix>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RelicAffix> SubAffixList {
-      get { return subAffixList_; }
     }
 
     /// <summary>Field number for the "level" field.</summary>
@@ -176,8 +119,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "is_protected" field.</summary>
+    public const int IsProtectedFieldNumber = 4;
+    private bool isProtected_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsProtected {
+      get { return isProtected_; }
+      set {
+        isProtected_ = value;
+      }
+    }
+
     /// <summary>Field number for the "exp" field.</summary>
-    public const int ExpFieldNumber = 15;
+    public const int ExpFieldNumber = 9;
     private uint exp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -188,8 +143,32 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "is_discarded" field.</summary>
+    public const int IsDiscardedFieldNumber = 1;
+    private bool isDiscarded_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsDiscarded {
+      get { return isDiscarded_; }
+      set {
+        isDiscarded_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "tid" field.</summary>
+    public const int TidFieldNumber = 13;
+    private uint tid_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Tid {
+      get { return tid_; }
+      set {
+        tid_ = value;
+      }
+    }
+
     /// <summary>Field number for the "main_affix_id" field.</summary>
-    public const int MainAffixIdFieldNumber = 2;
+    public const int MainAffixIdFieldNumber = 15;
     private uint mainAffixId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -198,6 +177,41 @@ namespace EggLink.DanhengServer.Proto {
       set {
         mainAffixId_ = value;
       }
+    }
+
+    /// <summary>Field number for the "dress_avatar_id" field.</summary>
+    public const int DressAvatarIdFieldNumber = 14;
+    private uint dressAvatarId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DressAvatarId {
+      get { return dressAvatarId_; }
+      set {
+        dressAvatarId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "unique_id" field.</summary>
+    public const int UniqueIdFieldNumber = 2;
+    private uint uniqueId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint UniqueId {
+      get { return uniqueId_; }
+      set {
+        uniqueId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sub_affix_list" field.</summary>
+    public const int SubAffixListFieldNumber = 12;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RelicAffix> _repeated_subAffixList_codec
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.RelicAffix.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RelicAffix> subAffixList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RelicAffix>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RelicAffix> SubAffixList {
+      get { return subAffixList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -215,15 +229,16 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsDiscarded != other.IsDiscarded) return false;
-      if (IsProtected != other.IsProtected) return false;
-      if (Tid != other.Tid) return false;
-      if (UniqueId != other.UniqueId) return false;
       if (BaseAvatarId != other.BaseAvatarId) return false;
-      if(!subAffixList_.Equals(other.subAffixList_)) return false;
       if (Level != other.Level) return false;
+      if (IsProtected != other.IsProtected) return false;
       if (Exp != other.Exp) return false;
+      if (IsDiscarded != other.IsDiscarded) return false;
+      if (Tid != other.Tid) return false;
       if (MainAffixId != other.MainAffixId) return false;
+      if (DressAvatarId != other.DressAvatarId) return false;
+      if (UniqueId != other.UniqueId) return false;
+      if(!subAffixList_.Equals(other.subAffixList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -231,15 +246,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsDiscarded != false) hash ^= IsDiscarded.GetHashCode();
-      if (IsProtected != false) hash ^= IsProtected.GetHashCode();
-      if (Tid != 0) hash ^= Tid.GetHashCode();
-      if (UniqueId != 0) hash ^= UniqueId.GetHashCode();
       if (BaseAvatarId != 0) hash ^= BaseAvatarId.GetHashCode();
-      hash ^= subAffixList_.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
+      if (IsProtected != false) hash ^= IsProtected.GetHashCode();
       if (Exp != 0) hash ^= Exp.GetHashCode();
+      if (IsDiscarded != false) hash ^= IsDiscarded.GetHashCode();
+      if (Tid != 0) hash ^= Tid.GetHashCode();
       if (MainAffixId != 0) hash ^= MainAffixId.GetHashCode();
+      if (DressAvatarId != 0) hash ^= DressAvatarId.GetHashCode();
+      if (UniqueId != 0) hash ^= UniqueId.GetHashCode();
+      hash ^= subAffixList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -258,38 +274,42 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsProtected != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(IsProtected);
-      }
-      if (MainAffixId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(MainAffixId);
-      }
-      if (BaseAvatarId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(BaseAvatarId);
-      }
       if (IsDiscarded != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(8);
         output.WriteBool(IsDiscarded);
+      }
+      if (UniqueId != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(UniqueId);
+      }
+      if (IsProtected != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IsProtected);
       }
       if (Level != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(Level);
       }
+      if (Exp != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(Exp);
+      }
+      if (BaseAvatarId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(BaseAvatarId);
+      }
       subAffixList_.WriteTo(output, _repeated_subAffixList_codec);
       if (Tid != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(104);
         output.WriteUInt32(Tid);
       }
-      if (UniqueId != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(UniqueId);
+      if (DressAvatarId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(DressAvatarId);
       }
-      if (Exp != 0) {
+      if (MainAffixId != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(Exp);
+        output.WriteUInt32(MainAffixId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -301,38 +321,42 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsProtected != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(IsProtected);
-      }
-      if (MainAffixId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(MainAffixId);
-      }
-      if (BaseAvatarId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(BaseAvatarId);
-      }
       if (IsDiscarded != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(8);
         output.WriteBool(IsDiscarded);
+      }
+      if (UniqueId != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(UniqueId);
+      }
+      if (IsProtected != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IsProtected);
       }
       if (Level != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(Level);
       }
+      if (Exp != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(Exp);
+      }
+      if (BaseAvatarId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(BaseAvatarId);
+      }
       subAffixList_.WriteTo(ref output, _repeated_subAffixList_codec);
       if (Tid != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(104);
         output.WriteUInt32(Tid);
       }
-      if (UniqueId != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(UniqueId);
+      if (DressAvatarId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(DressAvatarId);
       }
-      if (Exp != 0) {
+      if (MainAffixId != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(Exp);
+        output.WriteUInt32(MainAffixId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -344,31 +368,34 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsDiscarded != false) {
-        size += 1 + 1;
+      if (BaseAvatarId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BaseAvatarId);
+      }
+      if (Level != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
       }
       if (IsProtected != false) {
+        size += 1 + 1;
+      }
+      if (Exp != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Exp);
+      }
+      if (IsDiscarded != false) {
         size += 1 + 1;
       }
       if (Tid != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Tid);
       }
-      if (UniqueId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UniqueId);
-      }
-      if (BaseAvatarId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BaseAvatarId);
-      }
-      size += subAffixList_.CalculateSize(_repeated_subAffixList_codec);
-      if (Level != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
-      }
-      if (Exp != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Exp);
-      }
       if (MainAffixId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MainAffixId);
       }
+      if (DressAvatarId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DressAvatarId);
+      }
+      if (UniqueId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UniqueId);
+      }
+      size += subAffixList_.CalculateSize(_repeated_subAffixList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -381,31 +408,34 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsDiscarded != false) {
-        IsDiscarded = other.IsDiscarded;
+      if (other.BaseAvatarId != 0) {
+        BaseAvatarId = other.BaseAvatarId;
+      }
+      if (other.Level != 0) {
+        Level = other.Level;
       }
       if (other.IsProtected != false) {
         IsProtected = other.IsProtected;
       }
-      if (other.Tid != 0) {
-        Tid = other.Tid;
-      }
-      if (other.UniqueId != 0) {
-        UniqueId = other.UniqueId;
-      }
-      if (other.BaseAvatarId != 0) {
-        BaseAvatarId = other.BaseAvatarId;
-      }
-      subAffixList_.Add(other.subAffixList_);
-      if (other.Level != 0) {
-        Level = other.Level;
-      }
       if (other.Exp != 0) {
         Exp = other.Exp;
+      }
+      if (other.IsDiscarded != false) {
+        IsDiscarded = other.IsDiscarded;
+      }
+      if (other.Tid != 0) {
+        Tid = other.Tid;
       }
       if (other.MainAffixId != 0) {
         MainAffixId = other.MainAffixId;
       }
+      if (other.DressAvatarId != 0) {
+        DressAvatarId = other.DressAvatarId;
+      }
+      if (other.UniqueId != 0) {
+        UniqueId = other.UniqueId;
+      }
+      subAffixList_.Add(other.subAffixList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -422,39 +452,43 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            IsProtected = input.ReadBool();
+            IsDiscarded = input.ReadBool();
             break;
           }
           case 16: {
-            MainAffixId = input.ReadUInt32();
+            UniqueId = input.ReadUInt32();
             break;
           }
-          case 48: {
-            BaseAvatarId = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            IsDiscarded = input.ReadBool();
+          case 32: {
+            IsProtected = input.ReadBool();
             break;
           }
           case 64: {
             Level = input.ReadUInt32();
             break;
           }
-          case 74: {
-            subAffixList_.AddEntriesFrom(input, _repeated_subAffixList_codec);
+          case 72: {
+            Exp = input.ReadUInt32();
             break;
           }
           case 80: {
-            Tid = input.ReadUInt32();
+            BaseAvatarId = input.ReadUInt32();
+            break;
+          }
+          case 98: {
+            subAffixList_.AddEntriesFrom(input, _repeated_subAffixList_codec);
             break;
           }
           case 104: {
-            UniqueId = input.ReadUInt32();
+            Tid = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            DressAvatarId = input.ReadUInt32();
             break;
           }
           case 120: {
-            Exp = input.ReadUInt32();
+            MainAffixId = input.ReadUInt32();
             break;
           }
         }
@@ -473,39 +507,43 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            IsProtected = input.ReadBool();
+            IsDiscarded = input.ReadBool();
             break;
           }
           case 16: {
-            MainAffixId = input.ReadUInt32();
+            UniqueId = input.ReadUInt32();
             break;
           }
-          case 48: {
-            BaseAvatarId = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            IsDiscarded = input.ReadBool();
+          case 32: {
+            IsProtected = input.ReadBool();
             break;
           }
           case 64: {
             Level = input.ReadUInt32();
             break;
           }
-          case 74: {
-            subAffixList_.AddEntriesFrom(ref input, _repeated_subAffixList_codec);
+          case 72: {
+            Exp = input.ReadUInt32();
             break;
           }
           case 80: {
-            Tid = input.ReadUInt32();
+            BaseAvatarId = input.ReadUInt32();
+            break;
+          }
+          case 98: {
+            subAffixList_.AddEntriesFrom(ref input, _repeated_subAffixList_codec);
             break;
           }
           case 104: {
-            UniqueId = input.ReadUInt32();
+            Tid = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            DressAvatarId = input.ReadUInt32();
             break;
           }
           case 120: {
-            Exp = input.ReadUInt32();
+            MainAffixId = input.ReadUInt32();
             break;
           }
         }

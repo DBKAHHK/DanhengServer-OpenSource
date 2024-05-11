@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CipUcmF2ZWxCcm9jaHVyZVNldFBhZ2VEZXNjU3RhdHVzQ3NSZXEucHJvdG8a",
-            "IlRyYXZlbEJyb2NodXJlUGFnZURlc2NTdGF0dXMucHJvdG8ibwokVHJhdmVs",
-            "QnJvY2h1cmVTZXRQYWdlRGVzY1N0YXR1c0NzUmVxEhMKC05BR01BRklNT0xP",
-            "GAkgASgNEjIKC01FQ0VNQUZMQ0FFGAMgASgOMh0uVHJhdmVsQnJvY2h1cmVQ",
-            "YWdlRGVzY1N0YXR1c0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
-            "YgZwcm90bzM="));
+            "IlRyYXZlbEJyb2NodXJlUGFnZURlc2NTdGF0dXMucHJvdG8ibAokVHJhdmVs",
+            "QnJvY2h1cmVTZXRQYWdlRGVzY1N0YXR1c0NzUmVxEjIKC0RJSUZFS01KSUFC",
+            "GAwgASgOMh0uVHJhdmVsQnJvY2h1cmVQYWdlRGVzY1N0YXR1cxIQCghkaWFy",
+            "eV9pZBgHIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TravelBrochurePageDescStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TravelBrochureSetPageDescStatusCsReq), global::EggLink.DanhengServer.Proto.TravelBrochureSetPageDescStatusCsReq.Parser, new[]{ "NAGMAFIMOLO", "MECEMAFLCAE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TravelBrochureSetPageDescStatusCsReq), global::EggLink.DanhengServer.Proto.TravelBrochureSetPageDescStatusCsReq.Parser, new[]{ "DIIFEKMJIAB", "DiaryId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,8 +75,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TravelBrochureSetPageDescStatusCsReq(TravelBrochureSetPageDescStatusCsReq other) : this() {
-      nAGMAFIMOLO_ = other.nAGMAFIMOLO_;
-      mECEMAFLCAE_ = other.mECEMAFLCAE_;
+      dIIFEKMJIAB_ = other.dIIFEKMJIAB_;
+      diaryId_ = other.diaryId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,27 +86,27 @@ namespace EggLink.DanhengServer.Proto {
       return new TravelBrochureSetPageDescStatusCsReq(this);
     }
 
-    /// <summary>Field number for the "NAGMAFIMOLO" field.</summary>
-    public const int NAGMAFIMOLOFieldNumber = 9;
-    private uint nAGMAFIMOLO_;
+    /// <summary>Field number for the "DIIFEKMJIAB" field.</summary>
+    public const int DIIFEKMJIABFieldNumber = 12;
+    private global::EggLink.DanhengServer.Proto.TravelBrochurePageDescStatus dIIFEKMJIAB_ = global::EggLink.DanhengServer.Proto.TravelBrochurePageDescStatus.PageDescNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NAGMAFIMOLO {
-      get { return nAGMAFIMOLO_; }
+    public global::EggLink.DanhengServer.Proto.TravelBrochurePageDescStatus DIIFEKMJIAB {
+      get { return dIIFEKMJIAB_; }
       set {
-        nAGMAFIMOLO_ = value;
+        dIIFEKMJIAB_ = value;
       }
     }
 
-    /// <summary>Field number for the "MECEMAFLCAE" field.</summary>
-    public const int MECEMAFLCAEFieldNumber = 3;
-    private global::EggLink.DanhengServer.Proto.TravelBrochurePageDescStatus mECEMAFLCAE_ = global::EggLink.DanhengServer.Proto.TravelBrochurePageDescStatus.PageDescNone;
+    /// <summary>Field number for the "diary_id" field.</summary>
+    public const int DiaryIdFieldNumber = 7;
+    private uint diaryId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.TravelBrochurePageDescStatus MECEMAFLCAE {
-      get { return mECEMAFLCAE_; }
+    public uint DiaryId {
+      get { return diaryId_; }
       set {
-        mECEMAFLCAE_ = value;
+        diaryId_ = value;
       }
     }
 
@@ -125,8 +125,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (NAGMAFIMOLO != other.NAGMAFIMOLO) return false;
-      if (MECEMAFLCAE != other.MECEMAFLCAE) return false;
+      if (DIIFEKMJIAB != other.DIIFEKMJIAB) return false;
+      if (DiaryId != other.DiaryId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -134,8 +134,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (NAGMAFIMOLO != 0) hash ^= NAGMAFIMOLO.GetHashCode();
-      if (MECEMAFLCAE != global::EggLink.DanhengServer.Proto.TravelBrochurePageDescStatus.PageDescNone) hash ^= MECEMAFLCAE.GetHashCode();
+      if (DIIFEKMJIAB != global::EggLink.DanhengServer.Proto.TravelBrochurePageDescStatus.PageDescNone) hash ^= DIIFEKMJIAB.GetHashCode();
+      if (DiaryId != 0) hash ^= DiaryId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -154,13 +154,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MECEMAFLCAE != global::EggLink.DanhengServer.Proto.TravelBrochurePageDescStatus.PageDescNone) {
-        output.WriteRawTag(24);
-        output.WriteEnum((int) MECEMAFLCAE);
+      if (DiaryId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(DiaryId);
       }
-      if (NAGMAFIMOLO != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(NAGMAFIMOLO);
+      if (DIIFEKMJIAB != global::EggLink.DanhengServer.Proto.TravelBrochurePageDescStatus.PageDescNone) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) DIIFEKMJIAB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -172,13 +172,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MECEMAFLCAE != global::EggLink.DanhengServer.Proto.TravelBrochurePageDescStatus.PageDescNone) {
-        output.WriteRawTag(24);
-        output.WriteEnum((int) MECEMAFLCAE);
+      if (DiaryId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(DiaryId);
       }
-      if (NAGMAFIMOLO != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(NAGMAFIMOLO);
+      if (DIIFEKMJIAB != global::EggLink.DanhengServer.Proto.TravelBrochurePageDescStatus.PageDescNone) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) DIIFEKMJIAB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -190,11 +190,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (NAGMAFIMOLO != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NAGMAFIMOLO);
+      if (DIIFEKMJIAB != global::EggLink.DanhengServer.Proto.TravelBrochurePageDescStatus.PageDescNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DIIFEKMJIAB);
       }
-      if (MECEMAFLCAE != global::EggLink.DanhengServer.Proto.TravelBrochurePageDescStatus.PageDescNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MECEMAFLCAE);
+      if (DiaryId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DiaryId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -208,11 +208,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.NAGMAFIMOLO != 0) {
-        NAGMAFIMOLO = other.NAGMAFIMOLO;
+      if (other.DIIFEKMJIAB != global::EggLink.DanhengServer.Proto.TravelBrochurePageDescStatus.PageDescNone) {
+        DIIFEKMJIAB = other.DIIFEKMJIAB;
       }
-      if (other.MECEMAFLCAE != global::EggLink.DanhengServer.Proto.TravelBrochurePageDescStatus.PageDescNone) {
-        MECEMAFLCAE = other.MECEMAFLCAE;
+      if (other.DiaryId != 0) {
+        DiaryId = other.DiaryId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -229,12 +229,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            MECEMAFLCAE = (global::EggLink.DanhengServer.Proto.TravelBrochurePageDescStatus) input.ReadEnum();
+          case 56: {
+            DiaryId = input.ReadUInt32();
             break;
           }
-          case 72: {
-            NAGMAFIMOLO = input.ReadUInt32();
+          case 96: {
+            DIIFEKMJIAB = (global::EggLink.DanhengServer.Proto.TravelBrochurePageDescStatus) input.ReadEnum();
             break;
           }
         }
@@ -252,12 +252,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            MECEMAFLCAE = (global::EggLink.DanhengServer.Proto.TravelBrochurePageDescStatus) input.ReadEnum();
+          case 56: {
+            DiaryId = input.ReadUInt32();
             break;
           }
-          case 72: {
-            NAGMAFIMOLO = input.ReadUInt32();
+          case 96: {
+            DIIFEKMJIAB = (global::EggLink.DanhengServer.Proto.TravelBrochurePageDescStatus) input.ReadEnum();
             break;
           }
         }

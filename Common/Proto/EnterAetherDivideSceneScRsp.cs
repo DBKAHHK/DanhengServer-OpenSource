@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static EnterAetherDivideSceneScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFFbnRlckFldGhlckRpdmlkZVNjZW5lU2NSc3AucHJvdG8iQwobRW50ZXJB",
-            "ZXRoZXJEaXZpZGVTY2VuZVNjUnNwEg8KB3JldGNvZGUYBiABKA0SEwoLTExE",
-            "Q0xLT0hFQU4YByABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
-            "b2IGcHJvdG8z"));
+            "CiFFbnRlckFldGhlckRpdmlkZVNjZW5lU2NSc3AucHJvdG8iTgobRW50ZXJB",
+            "ZXRoZXJEaXZpZGVTY2VuZVNjUnNwEh4KFmFldGhlcl9iYXR0bGVfc2NlbmVf",
+            "aWQYBSABKA0SDwoHcmV0Y29kZRgNIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EnterAetherDivideSceneScRsp), global::EggLink.DanhengServer.Proto.EnterAetherDivideSceneScRsp.Parser, new[]{ "Retcode", "LLDCLKOHEAN" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EnterAetherDivideSceneScRsp), global::EggLink.DanhengServer.Proto.EnterAetherDivideSceneScRsp.Parser, new[]{ "AetherBattleSceneId", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EnterAetherDivideSceneScRsp(EnterAetherDivideSceneScRsp other) : this() {
+      aetherBattleSceneId_ = other.aetherBattleSceneId_;
       retcode_ = other.retcode_;
-      lLDCLKOHEAN_ = other.lLDCLKOHEAN_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,8 +84,20 @@ namespace EggLink.DanhengServer.Proto {
       return new EnterAetherDivideSceneScRsp(this);
     }
 
+    /// <summary>Field number for the "aether_battle_scene_id" field.</summary>
+    public const int AetherBattleSceneIdFieldNumber = 5;
+    private uint aetherBattleSceneId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint AetherBattleSceneId {
+      get { return aetherBattleSceneId_; }
+      set {
+        aetherBattleSceneId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 6;
+    public const int RetcodeFieldNumber = 13;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -93,18 +105,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "LLDCLKOHEAN" field.</summary>
-    public const int LLDCLKOHEANFieldNumber = 7;
-    private uint lLDCLKOHEAN_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LLDCLKOHEAN {
-      get { return lLDCLKOHEAN_; }
-      set {
-        lLDCLKOHEAN_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (AetherBattleSceneId != other.AetherBattleSceneId) return false;
       if (Retcode != other.Retcode) return false;
-      if (LLDCLKOHEAN != other.LLDCLKOHEAN) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (AetherBattleSceneId != 0) hash ^= AetherBattleSceneId.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (LLDCLKOHEAN != 0) hash ^= LLDCLKOHEAN.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(Retcode);
+      if (AetherBattleSceneId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(AetherBattleSceneId);
       }
-      if (LLDCLKOHEAN != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(LLDCLKOHEAN);
+      if (Retcode != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(Retcode);
+      if (AetherBattleSceneId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(AetherBattleSceneId);
       }
-      if (LLDCLKOHEAN != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(LLDCLKOHEAN);
+      if (Retcode != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (AetherBattleSceneId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AetherBattleSceneId);
+      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
-      if (LLDCLKOHEAN != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LLDCLKOHEAN);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.AetherBattleSceneId != 0) {
+        AetherBattleSceneId = other.AetherBattleSceneId;
+      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
-      }
-      if (other.LLDCLKOHEAN != 0) {
-        LLDCLKOHEAN = other.LLDCLKOHEAN;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            Retcode = input.ReadUInt32();
+          case 40: {
+            AetherBattleSceneId = input.ReadUInt32();
             break;
           }
-          case 56: {
-            LLDCLKOHEAN = input.ReadUInt32();
+          case 104: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            Retcode = input.ReadUInt32();
+          case 40: {
+            AetherBattleSceneId = input.ReadUInt32();
             break;
           }
-          case 56: {
-            LLDCLKOHEAN = input.ReadUInt32();
+          case 104: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static TakeChapterRewardCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxUYWtlQ2hhcHRlclJld2FyZENzUmVxLnByb3RvIkcKFlRha2VDaGFwdGVy",
-            "UmV3YXJkQ3NSZXESGQoRY2hhcHRlcl9yZXdhcmRfaWQYByABKA0SEgoKY2hh",
-            "cHRlcl9pZBgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
-            "YgZwcm90bzM="));
+            "ChxUYWtlQ2hhcHRlclJld2FyZENzUmVxLnByb3RvIkIKFlRha2VDaGFwdGVy",
+            "UmV3YXJkQ3NSZXESEwoLTEpQR0RQSE5KUE0YASABKA0SEwoLQUVNSUhBRExE",
+            "TkwYCCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeChapterRewardCsReq), global::EggLink.DanhengServer.Proto.TakeChapterRewardCsReq.Parser, new[]{ "ChapterRewardId", "ChapterId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeChapterRewardCsReq), global::EggLink.DanhengServer.Proto.TakeChapterRewardCsReq.Parser, new[]{ "LJPGDPHNJPM", "AEMIHADLDNL" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TakeChapterRewardCsReq(TakeChapterRewardCsReq other) : this() {
-      chapterRewardId_ = other.chapterRewardId_;
-      chapterId_ = other.chapterId_;
+      lJPGDPHNJPM_ = other.lJPGDPHNJPM_;
+      aEMIHADLDNL_ = other.aEMIHADLDNL_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,27 +84,27 @@ namespace EggLink.DanhengServer.Proto {
       return new TakeChapterRewardCsReq(this);
     }
 
-    /// <summary>Field number for the "chapter_reward_id" field.</summary>
-    public const int ChapterRewardIdFieldNumber = 7;
-    private uint chapterRewardId_;
+    /// <summary>Field number for the "LJPGDPHNJPM" field.</summary>
+    public const int LJPGDPHNJPMFieldNumber = 1;
+    private uint lJPGDPHNJPM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ChapterRewardId {
-      get { return chapterRewardId_; }
+    public uint LJPGDPHNJPM {
+      get { return lJPGDPHNJPM_; }
       set {
-        chapterRewardId_ = value;
+        lJPGDPHNJPM_ = value;
       }
     }
 
-    /// <summary>Field number for the "chapter_id" field.</summary>
-    public const int ChapterIdFieldNumber = 9;
-    private uint chapterId_;
+    /// <summary>Field number for the "AEMIHADLDNL" field.</summary>
+    public const int AEMIHADLDNLFieldNumber = 8;
+    private uint aEMIHADLDNL_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ChapterId {
-      get { return chapterId_; }
+    public uint AEMIHADLDNL {
+      get { return aEMIHADLDNL_; }
       set {
-        chapterId_ = value;
+        aEMIHADLDNL_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ChapterRewardId != other.ChapterRewardId) return false;
-      if (ChapterId != other.ChapterId) return false;
+      if (LJPGDPHNJPM != other.LJPGDPHNJPM) return false;
+      if (AEMIHADLDNL != other.AEMIHADLDNL) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ChapterRewardId != 0) hash ^= ChapterRewardId.GetHashCode();
-      if (ChapterId != 0) hash ^= ChapterId.GetHashCode();
+      if (LJPGDPHNJPM != 0) hash ^= LJPGDPHNJPM.GetHashCode();
+      if (AEMIHADLDNL != 0) hash ^= AEMIHADLDNL.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ChapterRewardId != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(ChapterRewardId);
+      if (LJPGDPHNJPM != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(LJPGDPHNJPM);
       }
-      if (ChapterId != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(ChapterId);
+      if (AEMIHADLDNL != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(AEMIHADLDNL);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ChapterRewardId != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(ChapterRewardId);
+      if (LJPGDPHNJPM != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(LJPGDPHNJPM);
       }
-      if (ChapterId != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(ChapterId);
+      if (AEMIHADLDNL != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(AEMIHADLDNL);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ChapterRewardId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChapterRewardId);
+      if (LJPGDPHNJPM != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LJPGDPHNJPM);
       }
-      if (ChapterId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChapterId);
+      if (AEMIHADLDNL != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AEMIHADLDNL);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ChapterRewardId != 0) {
-        ChapterRewardId = other.ChapterRewardId;
+      if (other.LJPGDPHNJPM != 0) {
+        LJPGDPHNJPM = other.LJPGDPHNJPM;
       }
-      if (other.ChapterId != 0) {
-        ChapterId = other.ChapterId;
+      if (other.AEMIHADLDNL != 0) {
+        AEMIHADLDNL = other.AEMIHADLDNL;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            ChapterRewardId = input.ReadUInt32();
+          case 8: {
+            LJPGDPHNJPM = input.ReadUInt32();
             break;
           }
-          case 72: {
-            ChapterId = input.ReadUInt32();
+          case 64: {
+            AEMIHADLDNL = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            ChapterRewardId = input.ReadUInt32();
+          case 8: {
+            LJPGDPHNJPM = input.ReadUInt32();
             break;
           }
-          case 72: {
-            ChapterId = input.ReadUInt32();
+          case 64: {
+            AEMIHADLDNL = input.ReadUInt32();
             break;
           }
         }

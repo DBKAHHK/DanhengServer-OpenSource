@@ -195,7 +195,7 @@ namespace EggLink.DanhengServer.Game.Rogue
             };
         }
 
-        public static RogueVirtualItemInfo ToVirtualItemProto()
+        public static RogueGetVirtualItemInfo ToVirtualItemProto()
         {
             return new()
             {
@@ -209,7 +209,7 @@ namespace EggLink.DanhengServer.Game.Rogue
 
             foreach (var talent in GameData.RogueTalentData)
             {
-                proto.RogueTalent.Add(new RogueTalent()
+                proto.RogueTalentList.Add(new RogueTalent()
                 {
                     TalentId = (uint)talent.Key,
                     Status = RogueTalentStatus.Enable,

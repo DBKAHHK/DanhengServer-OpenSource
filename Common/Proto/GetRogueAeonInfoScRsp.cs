@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GetRogueAeonInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtHZXRSb2d1ZUFlb25JbmZvU2NSc3AucHJvdG8aD1JvZ3VlQWVvbi5wcm90",
-            "byJNChVHZXRSb2d1ZUFlb25JbmZvU2NSc3ASIwoPcm9ndWVfYWVvbl9saXN0",
-            "GAIgAygLMgouUm9ndWVBZW9uEg8KB3JldGNvZGUYCSABKA1CHqoCG0VnZ0xp",
+            "ChtHZXRSb2d1ZUFlb25JbmZvU2NSc3AucHJvdG8aEUpKSUhHT1BOTUROLnBy",
+            "b3RvIksKFUdldFJvZ3VlQWVvbkluZm9TY1JzcBIhCgtDR0lGQUxEUEJGRRgD",
+            "IAMoCzIMLkpKSUhHT1BOTUROEg8KB3JldGNvZGUYBSABKA1CHqoCG0VnZ0xp",
             "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueAeonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JJIHGOPNMDNReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRogueAeonInfoScRsp), global::EggLink.DanhengServer.Proto.GetRogueAeonInfoScRsp.Parser, new[]{ "RogueAeonList", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRogueAeonInfoScRsp), global::EggLink.DanhengServer.Proto.GetRogueAeonInfoScRsp.Parser, new[]{ "CGIFALDPBFE", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetRogueAeonInfoScRsp(GetRogueAeonInfoScRsp other) : this() {
-      rogueAeonList_ = other.rogueAeonList_.Clone();
+      cGIFALDPBFE_ = other.cGIFALDPBFE_.Clone();
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,19 +84,19 @@ namespace EggLink.DanhengServer.Proto {
       return new GetRogueAeonInfoScRsp(this);
     }
 
-    /// <summary>Field number for the "rogue_aeon_list" field.</summary>
-    public const int RogueAeonListFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueAeon> _repeated_rogueAeonList_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.RogueAeon.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueAeon> rogueAeonList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueAeon>();
+    /// <summary>Field number for the "CGIFALDPBFE" field.</summary>
+    public const int CGIFALDPBFEFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.JJIHGOPNMDN> _repeated_cGIFALDPBFE_codec
+        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.JJIHGOPNMDN.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.JJIHGOPNMDN> cGIFALDPBFE_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.JJIHGOPNMDN>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueAeon> RogueAeonList {
-      get { return rogueAeonList_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.JJIHGOPNMDN> CGIFALDPBFE {
+      get { return cGIFALDPBFE_; }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 9;
+    public const int RetcodeFieldNumber = 5;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!rogueAeonList_.Equals(other.rogueAeonList_)) return false;
+      if(!cGIFALDPBFE_.Equals(other.cGIFALDPBFE_)) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -131,7 +131,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= rogueAeonList_.GetHashCode();
+      hash ^= cGIFALDPBFE_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -151,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      rogueAeonList_.WriteTo(output, _repeated_rogueAeonList_codec);
+      cGIFALDPBFE_.WriteTo(output, _repeated_cGIFALDPBFE_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -166,9 +166,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      rogueAeonList_.WriteTo(ref output, _repeated_rogueAeonList_codec);
+      cGIFALDPBFE_.WriteTo(ref output, _repeated_cGIFALDPBFE_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -181,7 +181,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += rogueAeonList_.CalculateSize(_repeated_rogueAeonList_codec);
+      size += cGIFALDPBFE_.CalculateSize(_repeated_cGIFALDPBFE_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      rogueAeonList_.Add(other.rogueAeonList_);
+      cGIFALDPBFE_.Add(other.cGIFALDPBFE_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
@@ -216,11 +216,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
-            rogueAeonList_.AddEntriesFrom(input, _repeated_rogueAeonList_codec);
+          case 26: {
+            cGIFALDPBFE_.AddEntriesFrom(input, _repeated_cGIFALDPBFE_codec);
             break;
           }
-          case 72: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -239,11 +239,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
-            rogueAeonList_.AddEntriesFrom(ref input, _repeated_rogueAeonList_codec);
+          case 26: {
+            cGIFALDPBFE_.AddEntriesFrom(ref input, _repeated_cGIFALDPBFE_codec);
             break;
           }
-          case 72: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }

@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiZDaGVzc1JvZ3VlU2tpcFRlYWNoaW5nTGV2ZWxTY1JzcC5wcm90bxoOSXRl",
             "bUxpc3QucHJvdG8iWAogQ2hlc3NSb2d1ZVNraXBUZWFjaGluZ0xldmVsU2NS",
-            "c3ASDwoHcmV0Y29kZRgNIAEoDRIjChBza2lwX3Jld2FyZF9saXN0GAogASgL",
+            "c3ASDwoHcmV0Y29kZRgCIAEoDRIjChBza2lwX3Jld2FyZF9saXN0GAkgASgL",
             "MgkuSXRlbUxpc3RCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 13;
+    public const int RetcodeFieldNumber = 2;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "skip_reward_list" field.</summary>
-    public const int SkipRewardListFieldNumber = 10;
+    public const int SkipRewardListFieldNumber = 9;
     private global::EggLink.DanhengServer.Proto.ItemList skipRewardList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (skipRewardList_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(SkipRewardList);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
+      }
+      if (skipRewardList_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(SkipRewardList);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (skipRewardList_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(SkipRewardList);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
+      }
+      if (skipRewardList_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(SkipRewardList);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 82: {
+          case 16: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 74: {
             if (skipRewardList_ == null) {
               SkipRewardList = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(SkipRewardList);
-            break;
-          }
-          case 104: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 82: {
+          case 16: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 74: {
             if (skipRewardList_ == null) {
               SkipRewardList = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(SkipRewardList);
-            break;
-          }
-          case 104: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }

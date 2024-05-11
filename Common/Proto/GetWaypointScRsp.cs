@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZHZXRXYXlwb2ludFNjUnNwLnByb3RvGg1DaGFwdGVyLnByb3RvIlcKEEdl",
-            "dFdheXBvaW50U2NSc3ASFwoPY3VyX3dheXBvaW50X2lkGA4gASgNEg8KB3Jl",
-            "dGNvZGUYBCABKA0SGQoHY2hhcHRlchgMIAEoCzIILkNoYXB0ZXJCHqoCG0Vn",
+            "dFdheXBvaW50U2NSc3ASEwoLTUNDRkJMQVBOTEMYDiABKA0SDwoHcmV0Y29k",
+            "ZRgDIAEoDRIdCgtLQ09QUEhNQUVQSxgGIAEoCzIILkNoYXB0ZXJCHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChapterReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetWaypointScRsp), global::EggLink.DanhengServer.Proto.GetWaypointScRsp.Parser, new[]{ "CurWaypointId", "Retcode", "Chapter" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetWaypointScRsp), global::EggLink.DanhengServer.Proto.GetWaypointScRsp.Parser, new[]{ "MCCFBLAPNLC", "Retcode", "KCOPPHMAEPK" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetWaypointScRsp(GetWaypointScRsp other) : this() {
-      curWaypointId_ = other.curWaypointId_;
+      mCCFBLAPNLC_ = other.mCCFBLAPNLC_;
       retcode_ = other.retcode_;
-      chapter_ = other.chapter_ != null ? other.chapter_.Clone() : null;
+      kCOPPHMAEPK_ = other.kCOPPHMAEPK_ != null ? other.kCOPPHMAEPK_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,20 @@ namespace EggLink.DanhengServer.Proto {
       return new GetWaypointScRsp(this);
     }
 
-    /// <summary>Field number for the "cur_waypoint_id" field.</summary>
-    public const int CurWaypointIdFieldNumber = 14;
-    private uint curWaypointId_;
+    /// <summary>Field number for the "MCCFBLAPNLC" field.</summary>
+    public const int MCCFBLAPNLCFieldNumber = 14;
+    private uint mCCFBLAPNLC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CurWaypointId {
-      get { return curWaypointId_; }
+    public uint MCCFBLAPNLC {
+      get { return mCCFBLAPNLC_; }
       set {
-        curWaypointId_ = value;
+        mCCFBLAPNLC_ = value;
       }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 4;
+    public const int RetcodeFieldNumber = 3;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,15 +109,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "chapter" field.</summary>
-    public const int ChapterFieldNumber = 12;
-    private global::EggLink.DanhengServer.Proto.Chapter chapter_;
+    /// <summary>Field number for the "KCOPPHMAEPK" field.</summary>
+    public const int KCOPPHMAEPKFieldNumber = 6;
+    private global::EggLink.DanhengServer.Proto.Chapter kCOPPHMAEPK_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.Chapter Chapter {
-      get { return chapter_; }
+    public global::EggLink.DanhengServer.Proto.Chapter KCOPPHMAEPK {
+      get { return kCOPPHMAEPK_; }
       set {
-        chapter_ = value;
+        kCOPPHMAEPK_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CurWaypointId != other.CurWaypointId) return false;
+      if (MCCFBLAPNLC != other.MCCFBLAPNLC) return false;
       if (Retcode != other.Retcode) return false;
-      if (!object.Equals(Chapter, other.Chapter)) return false;
+      if (!object.Equals(KCOPPHMAEPK, other.KCOPPHMAEPK)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CurWaypointId != 0) hash ^= CurWaypointId.GetHashCode();
+      if (MCCFBLAPNLC != 0) hash ^= MCCFBLAPNLC.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (chapter_ != null) hash ^= Chapter.GetHashCode();
+      if (kCOPPHMAEPK_ != null) hash ^= KCOPPHMAEPK.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,16 +168,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
-      if (chapter_ != null) {
-        output.WriteRawTag(98);
-        output.WriteMessage(Chapter);
+      if (kCOPPHMAEPK_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(KCOPPHMAEPK);
       }
-      if (CurWaypointId != 0) {
+      if (MCCFBLAPNLC != 0) {
         output.WriteRawTag(112);
-        output.WriteUInt32(CurWaypointId);
+        output.WriteUInt32(MCCFBLAPNLC);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,16 +190,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
-      if (chapter_ != null) {
-        output.WriteRawTag(98);
-        output.WriteMessage(Chapter);
+      if (kCOPPHMAEPK_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(KCOPPHMAEPK);
       }
-      if (CurWaypointId != 0) {
+      if (MCCFBLAPNLC != 0) {
         output.WriteRawTag(112);
-        output.WriteUInt32(CurWaypointId);
+        output.WriteUInt32(MCCFBLAPNLC);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,14 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CurWaypointId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurWaypointId);
+      if (MCCFBLAPNLC != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MCCFBLAPNLC);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (chapter_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Chapter);
+      if (kCOPPHMAEPK_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(KCOPPHMAEPK);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,17 +232,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.CurWaypointId != 0) {
-        CurWaypointId = other.CurWaypointId;
+      if (other.MCCFBLAPNLC != 0) {
+        MCCFBLAPNLC = other.MCCFBLAPNLC;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.chapter_ != null) {
-        if (chapter_ == null) {
-          Chapter = new global::EggLink.DanhengServer.Proto.Chapter();
+      if (other.kCOPPHMAEPK_ != null) {
+        if (kCOPPHMAEPK_ == null) {
+          KCOPPHMAEPK = new global::EggLink.DanhengServer.Proto.Chapter();
         }
-        Chapter.MergeFrom(other.Chapter);
+        KCOPPHMAEPK.MergeFrom(other.KCOPPHMAEPK);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -259,19 +259,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 24: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 98: {
-            if (chapter_ == null) {
-              Chapter = new global::EggLink.DanhengServer.Proto.Chapter();
+          case 50: {
+            if (kCOPPHMAEPK_ == null) {
+              KCOPPHMAEPK = new global::EggLink.DanhengServer.Proto.Chapter();
             }
-            input.ReadMessage(Chapter);
+            input.ReadMessage(KCOPPHMAEPK);
             break;
           }
           case 112: {
-            CurWaypointId = input.ReadUInt32();
+            MCCFBLAPNLC = input.ReadUInt32();
             break;
           }
         }
@@ -289,19 +289,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 24: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 98: {
-            if (chapter_ == null) {
-              Chapter = new global::EggLink.DanhengServer.Proto.Chapter();
+          case 50: {
+            if (kCOPPHMAEPK_ == null) {
+              KCOPPHMAEPK = new global::EggLink.DanhengServer.Proto.Chapter();
             }
-            input.ReadMessage(Chapter);
+            input.ReadMessage(KCOPPHMAEPK);
             break;
           }
           case 112: {
-            CurWaypointId = input.ReadUInt32();
+            MCCFBLAPNLC = input.ReadUInt32();
             break;
           }
         }

@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxTY2VuZUVudGl0eVJlZnJlc2hJbmZvLnByb3RvGhVTY2VuZUVudGl0eUlu",
-            "Zm8ucHJvdG8iZwoWU2NlbmVFbnRpdHlSZWZyZXNoSW5mbxIkCgphZGRfZW50",
-            "aXR5GAggASgLMhAuU2NlbmVFbnRpdHlJbmZvEhIKCmRlbF9lbnRpdHkYDSAB",
-            "KA0SEwoLSkpLS09ORUdKT1AYDyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
-            "cnZlci5Qcm90b2IGcHJvdG8z"));
+            "Zm8ucHJvdG8ifwoWU2NlbmVFbnRpdHlSZWZyZXNoSW5mbxImCgphZGRfZW50",
+            "aXR5GAMgASgLMhAuU2NlbmVFbnRpdHlJbmZvSAASFwoNZGVsZXRlX2VudGl0",
+            "eRgIIAEoDUgAEhUKC0ZJTUFMTFBCT0JLGAsgASgNSABCDQoLRkpQQkFCSkNC",
+            "R01CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneEntityInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo), global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo.Parser, new[]{ "AddEntity", "DelEntity", "JJKKONEGJOP" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo), global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo.Parser, new[]{ "AddEntity", "DeleteEntity", "FIMALLPBOBK" }, new[]{ "FJPBABJCBGM" }, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SceneEntityRefreshInfo(SceneEntityRefreshInfo other) : this() {
-      addEntity_ = other.addEntity_ != null ? other.addEntity_.Clone() : null;
-      delEntity_ = other.delEntity_;
-      jJKKONEGJOP_ = other.jJKKONEGJOP_;
+      switch (other.FJPBABJCBGMCase) {
+        case FJPBABJCBGMOneofCase.AddEntity:
+          AddEntity = other.AddEntity.Clone();
+          break;
+        case FJPBABJCBGMOneofCase.DeleteEntity:
+          DeleteEntity = other.DeleteEntity;
+          break;
+        case FJPBABJCBGMOneofCase.FIMALLPBOBK:
+          FIMALLPBOBK = other.FIMALLPBOBK;
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,39 +96,89 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "add_entity" field.</summary>
-    public const int AddEntityFieldNumber = 8;
-    private global::EggLink.DanhengServer.Proto.SceneEntityInfo addEntity_;
+    public const int AddEntityFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.SceneEntityInfo AddEntity {
-      get { return addEntity_; }
+      get { return fJPBABJCBGMCase_ == FJPBABJCBGMOneofCase.AddEntity ? (global::EggLink.DanhengServer.Proto.SceneEntityInfo) fJPBABJCBGM_ : null; }
       set {
-        addEntity_ = value;
+        fJPBABJCBGM_ = value;
+        fJPBABJCBGMCase_ = value == null ? FJPBABJCBGMOneofCase.None : FJPBABJCBGMOneofCase.AddEntity;
       }
     }
 
-    /// <summary>Field number for the "del_entity" field.</summary>
-    public const int DelEntityFieldNumber = 13;
-    private uint delEntity_;
+    /// <summary>Field number for the "delete_entity" field.</summary>
+    public const int DeleteEntityFieldNumber = 8;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DelEntity {
-      get { return delEntity_; }
+    public uint DeleteEntity {
+      get { return HasDeleteEntity ? (uint) fJPBABJCBGM_ : 0; }
       set {
-        delEntity_ = value;
+        fJPBABJCBGM_ = value;
+        fJPBABJCBGMCase_ = FJPBABJCBGMOneofCase.DeleteEntity;
+      }
+    }
+    /// <summary>Gets whether the "delete_entity" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDeleteEntity {
+      get { return fJPBABJCBGMCase_ == FJPBABJCBGMOneofCase.DeleteEntity; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "delete_entity" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDeleteEntity() {
+      if (HasDeleteEntity) {
+        ClearFJPBABJCBGM();
       }
     }
 
-    /// <summary>Field number for the "JJKKONEGJOP" field.</summary>
-    public const int JJKKONEGJOPFieldNumber = 15;
-    private uint jJKKONEGJOP_;
+    /// <summary>Field number for the "FIMALLPBOBK" field.</summary>
+    public const int FIMALLPBOBKFieldNumber = 11;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint JJKKONEGJOP {
-      get { return jJKKONEGJOP_; }
+    public uint FIMALLPBOBK {
+      get { return HasFIMALLPBOBK ? (uint) fJPBABJCBGM_ : 0; }
       set {
-        jJKKONEGJOP_ = value;
+        fJPBABJCBGM_ = value;
+        fJPBABJCBGMCase_ = FJPBABJCBGMOneofCase.FIMALLPBOBK;
       }
+    }
+    /// <summary>Gets whether the "FIMALLPBOBK" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFIMALLPBOBK {
+      get { return fJPBABJCBGMCase_ == FJPBABJCBGMOneofCase.FIMALLPBOBK; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "FIMALLPBOBK" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFIMALLPBOBK() {
+      if (HasFIMALLPBOBK) {
+        ClearFJPBABJCBGM();
+      }
+    }
+
+    private object fJPBABJCBGM_;
+    /// <summary>Enum of possible cases for the "FJPBABJCBGM" oneof.</summary>
+    public enum FJPBABJCBGMOneofCase {
+      None = 0,
+      AddEntity = 3,
+      DeleteEntity = 8,
+      FIMALLPBOBK = 11,
+    }
+    private FJPBABJCBGMOneofCase fJPBABJCBGMCase_ = FJPBABJCBGMOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FJPBABJCBGMOneofCase FJPBABJCBGMCase {
+      get { return fJPBABJCBGMCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFJPBABJCBGM() {
+      fJPBABJCBGMCase_ = FJPBABJCBGMOneofCase.None;
+      fJPBABJCBGM_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -138,8 +197,9 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(AddEntity, other.AddEntity)) return false;
-      if (DelEntity != other.DelEntity) return false;
-      if (JJKKONEGJOP != other.JJKKONEGJOP) return false;
+      if (DeleteEntity != other.DeleteEntity) return false;
+      if (FIMALLPBOBK != other.FIMALLPBOBK) return false;
+      if (FJPBABJCBGMCase != other.FJPBABJCBGMCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,9 +207,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (addEntity_ != null) hash ^= AddEntity.GetHashCode();
-      if (DelEntity != 0) hash ^= DelEntity.GetHashCode();
-      if (JJKKONEGJOP != 0) hash ^= JJKKONEGJOP.GetHashCode();
+      if (fJPBABJCBGMCase_ == FJPBABJCBGMOneofCase.AddEntity) hash ^= AddEntity.GetHashCode();
+      if (HasDeleteEntity) hash ^= DeleteEntity.GetHashCode();
+      if (HasFIMALLPBOBK) hash ^= FIMALLPBOBK.GetHashCode();
+      hash ^= (int) fJPBABJCBGMCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,17 +229,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (addEntity_ != null) {
-        output.WriteRawTag(66);
+      if (fJPBABJCBGMCase_ == FJPBABJCBGMOneofCase.AddEntity) {
+        output.WriteRawTag(26);
         output.WriteMessage(AddEntity);
       }
-      if (DelEntity != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(DelEntity);
+      if (HasDeleteEntity) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(DeleteEntity);
       }
-      if (JJKKONEGJOP != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(JJKKONEGJOP);
+      if (HasFIMALLPBOBK) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(FIMALLPBOBK);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,17 +251,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (addEntity_ != null) {
-        output.WriteRawTag(66);
+      if (fJPBABJCBGMCase_ == FJPBABJCBGMOneofCase.AddEntity) {
+        output.WriteRawTag(26);
         output.WriteMessage(AddEntity);
       }
-      if (DelEntity != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(DelEntity);
+      if (HasDeleteEntity) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(DeleteEntity);
       }
-      if (JJKKONEGJOP != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(JJKKONEGJOP);
+      if (HasFIMALLPBOBK) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(FIMALLPBOBK);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -212,14 +273,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (addEntity_ != null) {
+      if (fJPBABJCBGMCase_ == FJPBABJCBGMOneofCase.AddEntity) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AddEntity);
       }
-      if (DelEntity != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DelEntity);
+      if (HasDeleteEntity) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DeleteEntity);
       }
-      if (JJKKONEGJOP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JJKKONEGJOP);
+      if (HasFIMALLPBOBK) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FIMALLPBOBK);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -233,18 +294,21 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.addEntity_ != null) {
-        if (addEntity_ == null) {
-          AddEntity = new global::EggLink.DanhengServer.Proto.SceneEntityInfo();
-        }
-        AddEntity.MergeFrom(other.AddEntity);
+      switch (other.FJPBABJCBGMCase) {
+        case FJPBABJCBGMOneofCase.AddEntity:
+          if (AddEntity == null) {
+            AddEntity = new global::EggLink.DanhengServer.Proto.SceneEntityInfo();
+          }
+          AddEntity.MergeFrom(other.AddEntity);
+          break;
+        case FJPBABJCBGMOneofCase.DeleteEntity:
+          DeleteEntity = other.DeleteEntity;
+          break;
+        case FJPBABJCBGMOneofCase.FIMALLPBOBK:
+          FIMALLPBOBK = other.FIMALLPBOBK;
+          break;
       }
-      if (other.DelEntity != 0) {
-        DelEntity = other.DelEntity;
-      }
-      if (other.JJKKONEGJOP != 0) {
-        JJKKONEGJOP = other.JJKKONEGJOP;
-      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -260,19 +324,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66: {
-            if (addEntity_ == null) {
-              AddEntity = new global::EggLink.DanhengServer.Proto.SceneEntityInfo();
+          case 26: {
+            global::EggLink.DanhengServer.Proto.SceneEntityInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneEntityInfo();
+            if (fJPBABJCBGMCase_ == FJPBABJCBGMOneofCase.AddEntity) {
+              subBuilder.MergeFrom(AddEntity);
             }
-            input.ReadMessage(AddEntity);
+            input.ReadMessage(subBuilder);
+            AddEntity = subBuilder;
             break;
           }
-          case 104: {
-            DelEntity = input.ReadUInt32();
+          case 64: {
+            DeleteEntity = input.ReadUInt32();
             break;
           }
-          case 120: {
-            JJKKONEGJOP = input.ReadUInt32();
+          case 88: {
+            FIMALLPBOBK = input.ReadUInt32();
             break;
           }
         }
@@ -290,19 +356,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66: {
-            if (addEntity_ == null) {
-              AddEntity = new global::EggLink.DanhengServer.Proto.SceneEntityInfo();
+          case 26: {
+            global::EggLink.DanhengServer.Proto.SceneEntityInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneEntityInfo();
+            if (fJPBABJCBGMCase_ == FJPBABJCBGMOneofCase.AddEntity) {
+              subBuilder.MergeFrom(AddEntity);
             }
-            input.ReadMessage(AddEntity);
+            input.ReadMessage(subBuilder);
+            AddEntity = subBuilder;
             break;
           }
-          case 104: {
-            DelEntity = input.ReadUInt32();
+          case 64: {
+            DeleteEntity = input.ReadUInt32();
             break;
           }
-          case 120: {
-            JJKKONEGJOP = input.ReadUInt32();
+          case 88: {
+            FIMALLPBOBK = input.ReadUInt32();
             break;
           }
         }

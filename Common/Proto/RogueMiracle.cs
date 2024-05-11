@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static RogueMiracleReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJSb2d1ZU1pcmFjbGUucHJvdG8iyAEKDFJvZ3VlTWlyYWNsZRISCgpkdXJh",
-            "YmlsaXR5GAIgASgNEjMKC09HSUFCREJEQ0ZIGAsgAygLMh4uUm9ndWVNaXJh",
-            "Y2xlLk9HSUFCREJEQ0ZIRW50cnkSEwoLTk9HTVBBSU9GSkgYBSABKA0SEgoK",
-            "dXNlZF90aW1lcxgJIAEoDRISCgptaXJhY2xlX2lkGAcgASgNGjIKEE9HSUFC",
-            "REJEQ0ZIRW50cnkSCwoDa2V5GAEgASgNEg0KBXZhbHVlGAIgASgNOgI4AUIe",
+            "ChJSb2d1ZU1pcmFjbGUucHJvdG8iyAEKDFJvZ3VlTWlyYWNsZRITCgtEQ0xB",
+            "QlBBTkJKRxgMIAEoDRIzCgtLT05BR0NESEtLSBgPIAMoCzIeLlJvZ3VlTWly",
+            "YWNsZS5LT05BR0NESEtLSEVudHJ5EhIKCmR1cmFiaWxpdHkYCCABKA0SEgoK",
+            "dXNlZF90aW1lcxgLIAEoDRISCgptaXJhY2xlX2lkGAcgASgNGjIKEEtPTkFH",
+            "Q0RIS0tIRW50cnkSCwoDa2V5GAEgASgNEg0KBXZhbHVlGAIgASgNOgI4AUIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMiracle), global::EggLink.DanhengServer.Proto.RogueMiracle.Parser, new[]{ "Durability", "OGIABDBDCFH", "NOGMPAIOFJH", "UsedTimes", "MiracleId" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMiracle), global::EggLink.DanhengServer.Proto.RogueMiracle.Parser, new[]{ "DCLABPANBJG", "KONAGCDHKKH", "Durability", "UsedTimes", "MiracleId" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -75,9 +75,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueMiracle(RogueMiracle other) : this() {
+      dCLABPANBJG_ = other.dCLABPANBJG_;
+      kONAGCDHKKH_ = other.kONAGCDHKKH_.Clone();
       durability_ = other.durability_;
-      oGIABDBDCFH_ = other.oGIABDBDCFH_.Clone();
-      nOGMPAIOFJH_ = other.nOGMPAIOFJH_;
       usedTimes_ = other.usedTimes_;
       miracleId_ = other.miracleId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -89,8 +89,31 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueMiracle(this);
     }
 
+    /// <summary>Field number for the "DCLABPANBJG" field.</summary>
+    public const int DCLABPANBJGFieldNumber = 12;
+    private uint dCLABPANBJG_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DCLABPANBJG {
+      get { return dCLABPANBJG_; }
+      set {
+        dCLABPANBJG_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "KONAGCDHKKH" field.</summary>
+    public const int KONAGCDHKKHFieldNumber = 15;
+    private static readonly pbc::MapField<uint, uint>.Codec _map_kONAGCDHKKH_codec
+        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 122);
+    private readonly pbc::MapField<uint, uint> kONAGCDHKKH_ = new pbc::MapField<uint, uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<uint, uint> KONAGCDHKKH {
+      get { return kONAGCDHKKH_; }
+    }
+
     /// <summary>Field number for the "durability" field.</summary>
-    public const int DurabilityFieldNumber = 2;
+    public const int DurabilityFieldNumber = 8;
     private uint durability_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -101,31 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "OGIABDBDCFH" field.</summary>
-    public const int OGIABDBDCFHFieldNumber = 11;
-    private static readonly pbc::MapField<uint, uint>.Codec _map_oGIABDBDCFH_codec
-        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 90);
-    private readonly pbc::MapField<uint, uint> oGIABDBDCFH_ = new pbc::MapField<uint, uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<uint, uint> OGIABDBDCFH {
-      get { return oGIABDBDCFH_; }
-    }
-
-    /// <summary>Field number for the "NOGMPAIOFJH" field.</summary>
-    public const int NOGMPAIOFJHFieldNumber = 5;
-    private uint nOGMPAIOFJH_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NOGMPAIOFJH {
-      get { return nOGMPAIOFJH_; }
-      set {
-        nOGMPAIOFJH_ = value;
-      }
-    }
-
     /// <summary>Field number for the "used_times" field.</summary>
-    public const int UsedTimesFieldNumber = 9;
+    public const int UsedTimesFieldNumber = 11;
     private uint usedTimes_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -163,9 +163,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (DCLABPANBJG != other.DCLABPANBJG) return false;
+      if (!KONAGCDHKKH.Equals(other.KONAGCDHKKH)) return false;
       if (Durability != other.Durability) return false;
-      if (!OGIABDBDCFH.Equals(other.OGIABDBDCFH)) return false;
-      if (NOGMPAIOFJH != other.NOGMPAIOFJH) return false;
       if (UsedTimes != other.UsedTimes) return false;
       if (MiracleId != other.MiracleId) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -175,9 +175,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (DCLABPANBJG != 0) hash ^= DCLABPANBJG.GetHashCode();
+      hash ^= KONAGCDHKKH.GetHashCode();
       if (Durability != 0) hash ^= Durability.GetHashCode();
-      hash ^= OGIABDBDCFH.GetHashCode();
-      if (NOGMPAIOFJH != 0) hash ^= NOGMPAIOFJH.GetHashCode();
       if (UsedTimes != 0) hash ^= UsedTimes.GetHashCode();
       if (MiracleId != 0) hash ^= MiracleId.GetHashCode();
       if (_unknownFields != null) {
@@ -198,23 +198,23 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Durability != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(Durability);
-      }
-      if (NOGMPAIOFJH != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(NOGMPAIOFJH);
-      }
       if (MiracleId != 0) {
         output.WriteRawTag(56);
         output.WriteUInt32(MiracleId);
       }
+      if (Durability != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Durability);
+      }
       if (UsedTimes != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(88);
         output.WriteUInt32(UsedTimes);
       }
-      oGIABDBDCFH_.WriteTo(output, _map_oGIABDBDCFH_codec);
+      if (DCLABPANBJG != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(DCLABPANBJG);
+      }
+      kONAGCDHKKH_.WriteTo(output, _map_kONAGCDHKKH_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -225,23 +225,23 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Durability != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(Durability);
-      }
-      if (NOGMPAIOFJH != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(NOGMPAIOFJH);
-      }
       if (MiracleId != 0) {
         output.WriteRawTag(56);
         output.WriteUInt32(MiracleId);
       }
+      if (Durability != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Durability);
+      }
       if (UsedTimes != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(88);
         output.WriteUInt32(UsedTimes);
       }
-      oGIABDBDCFH_.WriteTo(ref output, _map_oGIABDBDCFH_codec);
+      if (DCLABPANBJG != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(DCLABPANBJG);
+      }
+      kONAGCDHKKH_.WriteTo(ref output, _map_kONAGCDHKKH_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -252,12 +252,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (DCLABPANBJG != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DCLABPANBJG);
+      }
+      size += kONAGCDHKKH_.CalculateSize(_map_kONAGCDHKKH_codec);
       if (Durability != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Durability);
-      }
-      size += oGIABDBDCFH_.CalculateSize(_map_oGIABDBDCFH_codec);
-      if (NOGMPAIOFJH != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NOGMPAIOFJH);
       }
       if (UsedTimes != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UsedTimes);
@@ -277,12 +277,12 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.DCLABPANBJG != 0) {
+        DCLABPANBJG = other.DCLABPANBJG;
+      }
+      kONAGCDHKKH_.MergeFrom(other.kONAGCDHKKH_);
       if (other.Durability != 0) {
         Durability = other.Durability;
-      }
-      oGIABDBDCFH_.MergeFrom(other.oGIABDBDCFH_);
-      if (other.NOGMPAIOFJH != 0) {
-        NOGMPAIOFJH = other.NOGMPAIOFJH;
       }
       if (other.UsedTimes != 0) {
         UsedTimes = other.UsedTimes;
@@ -305,24 +305,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            Durability = input.ReadUInt32();
-            break;
-          }
-          case 40: {
-            NOGMPAIOFJH = input.ReadUInt32();
-            break;
-          }
           case 56: {
             MiracleId = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 64: {
+            Durability = input.ReadUInt32();
+            break;
+          }
+          case 88: {
             UsedTimes = input.ReadUInt32();
             break;
           }
-          case 90: {
-            oGIABDBDCFH_.AddEntriesFrom(input, _map_oGIABDBDCFH_codec);
+          case 96: {
+            DCLABPANBJG = input.ReadUInt32();
+            break;
+          }
+          case 122: {
+            kONAGCDHKKH_.AddEntriesFrom(input, _map_kONAGCDHKKH_codec);
             break;
           }
         }
@@ -340,24 +340,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            Durability = input.ReadUInt32();
-            break;
-          }
-          case 40: {
-            NOGMPAIOFJH = input.ReadUInt32();
-            break;
-          }
           case 56: {
             MiracleId = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 64: {
+            Durability = input.ReadUInt32();
+            break;
+          }
+          case 88: {
             UsedTimes = input.ReadUInt32();
             break;
           }
-          case 90: {
-            oGIABDBDCFH_.AddEntriesFrom(ref input, _map_oGIABDBDCFH_codec);
+          case 96: {
+            DCLABPANBJG = input.ReadUInt32();
+            break;
+          }
+          case 122: {
+            kONAGCDHKKH_.AddEntriesFrom(ref input, _map_kONAGCDHKKH_codec);
             break;
           }
         }

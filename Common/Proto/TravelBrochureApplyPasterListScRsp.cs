@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static TravelBrochureApplyPasterListScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CihUcmF2ZWxCcm9jaHVyZUFwcGx5UGFzdGVyTGlzdFNjUnNwLnByb3RvGhFQ",
-            "TU9CUEVKQ0dBTC5wcm90byJYCiJUcmF2ZWxCcm9jaHVyZUFwcGx5UGFzdGVy",
-            "TGlzdFNjUnNwEiEKC0tPS0lLRk1DS0tJGAYgASgLMgwuUE1PQlBFSkNHQUwS",
-            "DwoHcmV0Y29kZRgHIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "CihUcmF2ZWxCcm9jaHVyZUFwcGx5UGFzdGVyTGlzdFNjUnNwLnByb3RvGhFC",
+            "QkpFSkFMRkhFTi5wcm90byJYCiJUcmF2ZWxCcm9jaHVyZUFwcGx5UGFzdGVy",
+            "TGlzdFNjUnNwEg8KB3JldGNvZGUYBiABKA0SIQoLQ0RJQlBLTUhEQ08YByAB",
+            "KAsyDC5CQkpFSkFMRkhFTkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PMOBPEJCGALReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BBJEJALFHENReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TravelBrochureApplyPasterListScRsp), global::EggLink.DanhengServer.Proto.TravelBrochureApplyPasterListScRsp.Parser, new[]{ "KOKIKFMCKKI", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TravelBrochureApplyPasterListScRsp), global::EggLink.DanhengServer.Proto.TravelBrochureApplyPasterListScRsp.Parser, new[]{ "Retcode", "CDIBPKMHDCO" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TravelBrochureApplyPasterListScRsp(TravelBrochureApplyPasterListScRsp other) : this() {
-      kOKIKFMCKKI_ = other.kOKIKFMCKKI_ != null ? other.kOKIKFMCKKI_.Clone() : null;
       retcode_ = other.retcode_;
+      cDIBPKMHDCO_ = other.cDIBPKMHDCO_ != null ? other.cDIBPKMHDCO_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new TravelBrochureApplyPasterListScRsp(this);
     }
 
-    /// <summary>Field number for the "KOKIKFMCKKI" field.</summary>
-    public const int KOKIKFMCKKIFieldNumber = 6;
-    private global::EggLink.DanhengServer.Proto.PMOBPEJCGAL kOKIKFMCKKI_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.PMOBPEJCGAL KOKIKFMCKKI {
-      get { return kOKIKFMCKKI_; }
-      set {
-        kOKIKFMCKKI_ = value;
-      }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 7;
+    public const int RetcodeFieldNumber = 6;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,6 +94,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "CDIBPKMHDCO" field.</summary>
+    public const int CDIBPKMHDCOFieldNumber = 7;
+    private global::EggLink.DanhengServer.Proto.BBJEJALFHEN cDIBPKMHDCO_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.BBJEJALFHEN CDIBPKMHDCO {
+      get { return cDIBPKMHDCO_; }
+      set {
+        cDIBPKMHDCO_ = value;
       }
     }
 
@@ -124,8 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(KOKIKFMCKKI, other.KOKIKFMCKKI)) return false;
       if (Retcode != other.Retcode) return false;
+      if (!object.Equals(CDIBPKMHDCO, other.CDIBPKMHDCO)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (kOKIKFMCKKI_ != null) hash ^= KOKIKFMCKKI.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (cDIBPKMHDCO_ != null) hash ^= CDIBPKMHDCO.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (kOKIKFMCKKI_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(KOKIKFMCKKI);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
+      }
+      if (cDIBPKMHDCO_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(CDIBPKMHDCO);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (kOKIKFMCKKI_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(KOKIKFMCKKI);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
+      }
+      if (cDIBPKMHDCO_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(CDIBPKMHDCO);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -189,11 +189,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (kOKIKFMCKKI_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(KOKIKFMCKKI);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (cDIBPKMHDCO_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CDIBPKMHDCO);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -207,14 +207,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.kOKIKFMCKKI_ != null) {
-        if (kOKIKFMCKKI_ == null) {
-          KOKIKFMCKKI = new global::EggLink.DanhengServer.Proto.PMOBPEJCGAL();
-        }
-        KOKIKFMCKKI.MergeFrom(other.KOKIKFMCKKI);
-      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
+      }
+      if (other.cDIBPKMHDCO_ != null) {
+        if (cDIBPKMHDCO_ == null) {
+          CDIBPKMHDCO = new global::EggLink.DanhengServer.Proto.BBJEJALFHEN();
+        }
+        CDIBPKMHDCO.MergeFrom(other.CDIBPKMHDCO);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
-            if (kOKIKFMCKKI_ == null) {
-              KOKIKFMCKKI = new global::EggLink.DanhengServer.Proto.PMOBPEJCGAL();
-            }
-            input.ReadMessage(KOKIKFMCKKI);
+          case 48: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 56: {
-            Retcode = input.ReadUInt32();
+          case 58: {
+            if (cDIBPKMHDCO_ == null) {
+              CDIBPKMHDCO = new global::EggLink.DanhengServer.Proto.BBJEJALFHEN();
+            }
+            input.ReadMessage(CDIBPKMHDCO);
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
-            if (kOKIKFMCKKI_ == null) {
-              KOKIKFMCKKI = new global::EggLink.DanhengServer.Proto.PMOBPEJCGAL();
-            }
-            input.ReadMessage(KOKIKFMCKKI);
+          case 48: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 56: {
-            Retcode = input.ReadUInt32();
+          case 58: {
+            if (cDIBPKMHDCO_ == null) {
+              CDIBPKMHDCO = new global::EggLink.DanhengServer.Proto.BBJEJALFHEN();
+            }
+            input.ReadMessage(CDIBPKMHDCO);
             break;
           }
         }

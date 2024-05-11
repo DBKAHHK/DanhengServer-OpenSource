@@ -24,16 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static FinishTalkMissionScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxGaW5pc2hUYWxrTWlzc2lvblNjUnNwLnByb3RvGhxNaXNzaW9uQ3VzdG9t",
-            "VmFsdWVEYXRhLnByb3RvIocBChZGaW5pc2hUYWxrTWlzc2lvblNjUnNwEjIK",
-            "EWN1c3RvbV92YWx1ZV9saXN0GAMgAygLMhcuTWlzc2lvbkN1c3RvbVZhbHVl",
-            "RGF0YRIWCg5zdWJfbWlzc2lvbl9pZBgEIAEoDRIQCgh0YWxrX3N0chgMIAEo",
-            "CRIPCgdyZXRjb2RlGAIgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
-            "UHJvdG9iBnByb3RvMw=="));
+            "ChxGaW5pc2hUYWxrTWlzc2lvblNjUnNwLnByb3RvGhFBSEpNSUtMQk9FSy5w",
+            "cm90byJ8ChZGaW5pc2hUYWxrTWlzc2lvblNjUnNwEicKEWN1c3RvbV92YWx1",
+            "ZV9saXN0GAQgAygLMgwuQUhKTUlLTEJPRUsSDwoHcmV0Y29kZRgPIAEoDRIQ",
+            "Cgh0YWxrX3N0chgGIAEoCRIWCg5zdWJfbWlzc2lvbl9pZBgLIAEoDUIeqgIb",
+            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MissionCustomValueDataReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AHJMIKLBOEKReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FinishTalkMissionScRsp), global::EggLink.DanhengServer.Proto.FinishTalkMissionScRsp.Parser, new[]{ "CustomValueList", "SubMissionId", "TalkStr", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FinishTalkMissionScRsp), global::EggLink.DanhengServer.Proto.FinishTalkMissionScRsp.Parser, new[]{ "CustomValueList", "Retcode", "TalkStr", "SubMissionId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,9 +75,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FinishTalkMissionScRsp(FinishTalkMissionScRsp other) : this() {
       customValueList_ = other.customValueList_.Clone();
-      subMissionId_ = other.subMissionId_;
-      talkStr_ = other.talkStr_;
       retcode_ = other.retcode_;
+      talkStr_ = other.talkStr_;
+      subMissionId_ = other.subMissionId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -89,30 +88,30 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "custom_value_list" field.</summary>
-    public const int CustomValueListFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MissionCustomValueData> _repeated_customValueList_codec
-        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.MissionCustomValueData.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MissionCustomValueData> customValueList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MissionCustomValueData>();
+    public const int CustomValueListFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.AHJMIKLBOEK> _repeated_customValueList_codec
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.AHJMIKLBOEK.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AHJMIKLBOEK> customValueList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AHJMIKLBOEK>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MissionCustomValueData> CustomValueList {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AHJMIKLBOEK> CustomValueList {
       get { return customValueList_; }
     }
 
-    /// <summary>Field number for the "sub_mission_id" field.</summary>
-    public const int SubMissionIdFieldNumber = 4;
-    private uint subMissionId_;
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 15;
+    private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SubMissionId {
-      get { return subMissionId_; }
+    public uint Retcode {
+      get { return retcode_; }
       set {
-        subMissionId_ = value;
+        retcode_ = value;
       }
     }
 
     /// <summary>Field number for the "talk_str" field.</summary>
-    public const int TalkStrFieldNumber = 12;
+    public const int TalkStrFieldNumber = 6;
     private string talkStr_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,15 +122,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 2;
-    private uint retcode_;
+    /// <summary>Field number for the "sub_mission_id" field.</summary>
+    public const int SubMissionIdFieldNumber = 11;
+    private uint subMissionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
+    public uint SubMissionId {
+      get { return subMissionId_; }
       set {
-        retcode_ = value;
+        subMissionId_ = value;
       }
     }
 
@@ -151,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!customValueList_.Equals(other.customValueList_)) return false;
-      if (SubMissionId != other.SubMissionId) return false;
-      if (TalkStr != other.TalkStr) return false;
       if (Retcode != other.Retcode) return false;
+      if (TalkStr != other.TalkStr) return false;
+      if (SubMissionId != other.SubMissionId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -162,9 +161,9 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= customValueList_.GetHashCode();
-      if (SubMissionId != 0) hash ^= SubMissionId.GetHashCode();
-      if (TalkStr.Length != 0) hash ^= TalkStr.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (TalkStr.Length != 0) hash ^= TalkStr.GetHashCode();
+      if (SubMissionId != 0) hash ^= SubMissionId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,18 +182,18 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(Retcode);
-      }
       customValueList_.WriteTo(output, _repeated_customValueList_codec);
+      if (TalkStr.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(TalkStr);
+      }
       if (SubMissionId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(88);
         output.WriteUInt32(SubMissionId);
       }
-      if (TalkStr.Length != 0) {
-        output.WriteRawTag(98);
-        output.WriteString(TalkStr);
+      if (Retcode != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -206,18 +205,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(Retcode);
-      }
       customValueList_.WriteTo(ref output, _repeated_customValueList_codec);
+      if (TalkStr.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(TalkStr);
+      }
       if (SubMissionId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(88);
         output.WriteUInt32(SubMissionId);
       }
-      if (TalkStr.Length != 0) {
-        output.WriteRawTag(98);
-        output.WriteString(TalkStr);
+      if (Retcode != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -230,14 +229,14 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += customValueList_.CalculateSize(_repeated_customValueList_codec);
-      if (SubMissionId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SubMissionId);
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (TalkStr.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TalkStr);
       }
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      if (SubMissionId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SubMissionId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -252,14 +251,14 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       customValueList_.Add(other.customValueList_);
-      if (other.SubMissionId != 0) {
-        SubMissionId = other.SubMissionId;
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       if (other.TalkStr.Length != 0) {
         TalkStr = other.TalkStr;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
+      if (other.SubMissionId != 0) {
+        SubMissionId = other.SubMissionId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -276,20 +275,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 26: {
+          case 34: {
             customValueList_.AddEntriesFrom(input, _repeated_customValueList_codec);
             break;
           }
-          case 32: {
+          case 50: {
+            TalkStr = input.ReadString();
+            break;
+          }
+          case 88: {
             SubMissionId = input.ReadUInt32();
             break;
           }
-          case 98: {
-            TalkStr = input.ReadString();
+          case 120: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -307,20 +306,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 26: {
+          case 34: {
             customValueList_.AddEntriesFrom(ref input, _repeated_customValueList_codec);
             break;
           }
-          case 32: {
+          case 50: {
+            TalkStr = input.ReadString();
+            break;
+          }
+          case 88: {
             SubMissionId = input.ReadUInt32();
             break;
           }
-          case 98: {
-            TalkStr = input.ReadString();
+          case 120: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

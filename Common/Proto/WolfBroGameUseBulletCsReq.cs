@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9Xb2xmQnJvR2FtZVVzZUJ1bGxldENzUmVxLnByb3RvGgxWZWN0b3IucHJv",
-            "dG8iYAoZV29sZkJyb0dhbWVVc2VCdWxsZXRDc1JlcRIlCh1hc3Npc3RfbW9u",
-            "c3Rlcl9lbnRpdHlfaWRfbGlzdBgIIAMoDRIcCgtERUlMQkZGQVBFRxgPIAEo",
-            "CzIHLlZlY3RvckIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "dG8iXAoZV29sZkJyb0dhbWVVc2VCdWxsZXRDc1JlcRIcCgtLS0dBSkZGRU5C",
+            "TBgDIAEoCzIHLlZlY3RvchIhChloaXRfdGFyZ2V0X2VudGl0eV9pZF9saXN0",
+            "GAggAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.VectorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.WolfBroGameUseBulletCsReq), global::EggLink.DanhengServer.Proto.WolfBroGameUseBulletCsReq.Parser, new[]{ "AssistMonsterEntityIdList", "DEILBFFAPEG" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.WolfBroGameUseBulletCsReq), global::EggLink.DanhengServer.Proto.WolfBroGameUseBulletCsReq.Parser, new[]{ "KKGAJFFENBL", "HitTargetEntityIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WolfBroGameUseBulletCsReq(WolfBroGameUseBulletCsReq other) : this() {
-      assistMonsterEntityIdList_ = other.assistMonsterEntityIdList_.Clone();
-      dEILBFFAPEG_ = other.dEILBFFAPEG_ != null ? other.dEILBFFAPEG_.Clone() : null;
+      kKGAJFFENBL_ = other.kKGAJFFENBL_ != null ? other.kKGAJFFENBL_.Clone() : null;
+      hitTargetEntityIdList_ = other.hitTargetEntityIdList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,27 +85,27 @@ namespace EggLink.DanhengServer.Proto {
       return new WolfBroGameUseBulletCsReq(this);
     }
 
-    /// <summary>Field number for the "assist_monster_entity_id_list" field.</summary>
-    public const int AssistMonsterEntityIdListFieldNumber = 8;
-    private static readonly pb::FieldCodec<uint> _repeated_assistMonsterEntityIdList_codec
-        = pb::FieldCodec.ForUInt32(66);
-    private readonly pbc::RepeatedField<uint> assistMonsterEntityIdList_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "KKGAJFFENBL" field.</summary>
+    public const int KKGAJFFENBLFieldNumber = 3;
+    private global::EggLink.DanhengServer.Proto.Vector kKGAJFFENBL_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> AssistMonsterEntityIdList {
-      get { return assistMonsterEntityIdList_; }
+    public global::EggLink.DanhengServer.Proto.Vector KKGAJFFENBL {
+      get { return kKGAJFFENBL_; }
+      set {
+        kKGAJFFENBL_ = value;
+      }
     }
 
-    /// <summary>Field number for the "DEILBFFAPEG" field.</summary>
-    public const int DEILBFFAPEGFieldNumber = 15;
-    private global::EggLink.DanhengServer.Proto.Vector dEILBFFAPEG_;
+    /// <summary>Field number for the "hit_target_entity_id_list" field.</summary>
+    public const int HitTargetEntityIdListFieldNumber = 8;
+    private static readonly pb::FieldCodec<uint> _repeated_hitTargetEntityIdList_codec
+        = pb::FieldCodec.ForUInt32(66);
+    private readonly pbc::RepeatedField<uint> hitTargetEntityIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.Vector DEILBFFAPEG {
-      get { return dEILBFFAPEG_; }
-      set {
-        dEILBFFAPEG_ = value;
-      }
+    public pbc::RepeatedField<uint> HitTargetEntityIdList {
+      get { return hitTargetEntityIdList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!assistMonsterEntityIdList_.Equals(other.assistMonsterEntityIdList_)) return false;
-      if (!object.Equals(DEILBFFAPEG, other.DEILBFFAPEG)) return false;
+      if (!object.Equals(KKGAJFFENBL, other.KKGAJFFENBL)) return false;
+      if(!hitTargetEntityIdList_.Equals(other.hitTargetEntityIdList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= assistMonsterEntityIdList_.GetHashCode();
-      if (dEILBFFAPEG_ != null) hash ^= DEILBFFAPEG.GetHashCode();
+      if (kKGAJFFENBL_ != null) hash ^= KKGAJFFENBL.GetHashCode();
+      hash ^= hitTargetEntityIdList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      assistMonsterEntityIdList_.WriteTo(output, _repeated_assistMonsterEntityIdList_codec);
-      if (dEILBFFAPEG_ != null) {
-        output.WriteRawTag(122);
-        output.WriteMessage(DEILBFFAPEG);
+      if (kKGAJFFENBL_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(KKGAJFFENBL);
       }
+      hitTargetEntityIdList_.WriteTo(output, _repeated_hitTargetEntityIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      assistMonsterEntityIdList_.WriteTo(ref output, _repeated_assistMonsterEntityIdList_codec);
-      if (dEILBFFAPEG_ != null) {
-        output.WriteRawTag(122);
-        output.WriteMessage(DEILBFFAPEG);
+      if (kKGAJFFENBL_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(KKGAJFFENBL);
       }
+      hitTargetEntityIdList_.WriteTo(ref output, _repeated_hitTargetEntityIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -182,10 +182,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += assistMonsterEntityIdList_.CalculateSize(_repeated_assistMonsterEntityIdList_codec);
-      if (dEILBFFAPEG_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DEILBFFAPEG);
+      if (kKGAJFFENBL_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(KKGAJFFENBL);
       }
+      size += hitTargetEntityIdList_.CalculateSize(_repeated_hitTargetEntityIdList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -198,13 +198,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      assistMonsterEntityIdList_.Add(other.assistMonsterEntityIdList_);
-      if (other.dEILBFFAPEG_ != null) {
-        if (dEILBFFAPEG_ == null) {
-          DEILBFFAPEG = new global::EggLink.DanhengServer.Proto.Vector();
+      if (other.kKGAJFFENBL_ != null) {
+        if (kKGAJFFENBL_ == null) {
+          KKGAJFFENBL = new global::EggLink.DanhengServer.Proto.Vector();
         }
-        DEILBFFAPEG.MergeFrom(other.DEILBFFAPEG);
+        KKGAJFFENBL.MergeFrom(other.KKGAJFFENBL);
       }
+      hitTargetEntityIdList_.Add(other.hitTargetEntityIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -220,16 +220,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66:
-          case 64: {
-            assistMonsterEntityIdList_.AddEntriesFrom(input, _repeated_assistMonsterEntityIdList_codec);
+          case 26: {
+            if (kKGAJFFENBL_ == null) {
+              KKGAJFFENBL = new global::EggLink.DanhengServer.Proto.Vector();
+            }
+            input.ReadMessage(KKGAJFFENBL);
             break;
           }
-          case 122: {
-            if (dEILBFFAPEG_ == null) {
-              DEILBFFAPEG = new global::EggLink.DanhengServer.Proto.Vector();
-            }
-            input.ReadMessage(DEILBFFAPEG);
+          case 66:
+          case 64: {
+            hitTargetEntityIdList_.AddEntriesFrom(input, _repeated_hitTargetEntityIdList_codec);
             break;
           }
         }
@@ -247,16 +247,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66:
-          case 64: {
-            assistMonsterEntityIdList_.AddEntriesFrom(ref input, _repeated_assistMonsterEntityIdList_codec);
+          case 26: {
+            if (kKGAJFFENBL_ == null) {
+              KKGAJFFENBL = new global::EggLink.DanhengServer.Proto.Vector();
+            }
+            input.ReadMessage(KKGAJFFENBL);
             break;
           }
-          case 122: {
-            if (dEILBFFAPEG_ == null) {
-              DEILBFFAPEG = new global::EggLink.DanhengServer.Proto.Vector();
-            }
-            input.ReadMessage(DEILBFFAPEG);
+          case 66:
+          case 64: {
+            hitTargetEntityIdList_.AddEntriesFrom(ref input, _repeated_hitTargetEntityIdList_codec);
             break;
           }
         }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace EggLink.DanhengServer.Database.ChessRogue
 {
     [SugarTable("ChessRogueNous")]
-    public class ChessRogueNousData : BaseDatabaseData
+    public class ChessRogueNousData : BaseDatabaseDataHelper
     {
         [SugarColumn(IsJson = true)]
         public Dictionary<int, ChessRogueNousDiceData> RogueDiceData { get; set; } = [];
@@ -28,8 +28,8 @@ namespace EggLink.DanhengServer.Database.ChessRogue
             {
                 BranchId = (uint)BranchId,
                 SurfaceList = { Surfaces.Select(x => new ChessRogueDiceSurfaceInfo() { Index = (uint)x.Key, SurfaceId = (uint)x.Value }) },
-                AreaId = (uint)AreaId,
-                DifficultyLevel = (uint)DifficultyLevel,
+                //AreaId = (uint)AreaId,
+                //DifficultyLevel = (uint)DifficultyLevel,
             };
         }
     }

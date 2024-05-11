@@ -2,11 +2,12 @@
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
+using Newtonsoft.Json;
 using SqlSugar;
 
 namespace EggLink.DanhengServer.Database.Inventory
 {
-    public class InventoryData : BaseDatabaseData
+    public class InventoryData : BaseDatabaseDataHelper
     {
         [SugarColumn(IsJson = true)]
         public List<ItemData> MaterialItems { get; set; } = [];

@@ -37,7 +37,6 @@ namespace EggLink.DanhengServer.Game.Rogue.Scene.Entity
                     {
                         RoomId = (uint)NextRoomID,
                         SiteId = (uint)NextSiteID,
-                        CanUseCount = (uint)ChestCanUseTimes,
                     }
                 };
             }

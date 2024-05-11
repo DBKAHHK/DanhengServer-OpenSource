@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZNZWNoYW5pc21CYXJJbmZvLnByb3RvIjsKEE1lY2hhbmlzbUJhckluZm8S",
-            "GAoQbWVjaGFpbnNtX2Jhcl9pZBgIIAEoDRINCgV2YWx1ZRgNIAEoDUIeqgIb",
+            "DQoFdmFsdWUYDCABKA0SGAoQbWVjaGFpbnNtX2Jhcl9pZBgCIAEoDUIeqgIb",
             "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MechanismBarInfo), global::EggLink.DanhengServer.Proto.MechanismBarInfo.Parser, new[]{ "MechainsmBarId", "Value" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MechanismBarInfo), global::EggLink.DanhengServer.Proto.MechanismBarInfo.Parser, new[]{ "Value", "MechainsmBarId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MechanismBarInfo(MechanismBarInfo other) : this() {
-      mechainsmBarId_ = other.mechainsmBarId_;
       value_ = other.value_;
+      mechainsmBarId_ = other.mechainsmBarId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,20 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new MechanismBarInfo(this);
     }
 
-    /// <summary>Field number for the "mechainsm_bar_id" field.</summary>
-    public const int MechainsmBarIdFieldNumber = 8;
-    private uint mechainsmBarId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MechainsmBarId {
-      get { return mechainsmBarId_; }
-      set {
-        mechainsmBarId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "value" field.</summary>
-    public const int ValueFieldNumber = 13;
+    public const int ValueFieldNumber = 12;
     private uint value_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,6 +92,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return value_; }
       set {
         value_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "mechainsm_bar_id" field.</summary>
+    public const int MechainsmBarIdFieldNumber = 2;
+    private uint mechainsmBarId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint MechainsmBarId {
+      get { return mechainsmBarId_; }
+      set {
+        mechainsmBarId_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MechainsmBarId != other.MechainsmBarId) return false;
       if (Value != other.Value) return false;
+      if (MechainsmBarId != other.MechainsmBarId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MechainsmBarId != 0) hash ^= MechainsmBarId.GetHashCode();
       if (Value != 0) hash ^= Value.GetHashCode();
+      if (MechainsmBarId != 0) hash ^= MechainsmBarId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (MechainsmBarId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(16);
         output.WriteUInt32(MechainsmBarId);
       }
       if (Value != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(96);
         output.WriteUInt32(Value);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MechainsmBarId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(16);
         output.WriteUInt32(MechainsmBarId);
       }
       if (Value != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(96);
         output.WriteUInt32(Value);
       }
       if (_unknownFields != null) {
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MechainsmBarId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MechainsmBarId);
-      }
       if (Value != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Value);
+      }
+      if (MechainsmBarId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MechainsmBarId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MechainsmBarId != 0) {
-        MechainsmBarId = other.MechainsmBarId;
-      }
       if (other.Value != 0) {
         Value = other.Value;
+      }
+      if (other.MechainsmBarId != 0) {
+        MechainsmBarId = other.MechainsmBarId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
+          case 16: {
             MechainsmBarId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 96: {
             Value = input.ReadUInt32();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
+          case 16: {
             MechainsmBarId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 96: {
             Value = input.ReadUInt32();
             break;
           }

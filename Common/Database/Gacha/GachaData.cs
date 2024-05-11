@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace EggLink.DanhengServer.Database.Gacha
 {
     [SugarTable("Gacha")]
-    public class GachaData : BaseDatabaseData
+    public class GachaData : BaseDatabaseDataHelper
     {
         [SugarColumn(IsJson = true)]
         public List<GachaInfo> GachaHistory { get; set; } = [];

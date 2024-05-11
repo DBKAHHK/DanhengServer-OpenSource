@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtTZWxlY3RQaG9uZVRoZW1lU2NSc3AucHJvdG8iVgoVU2VsZWN0UGhvbmVU",
-            "aGVtZVNjUnNwEg8KB3JldGNvZGUYDyABKA0SEwoLUExJQ1BMTkZCRFAYCyAB",
-            "KA0SFwoPY3VyX3Bob25lX3RoZW1lGAEgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "aGVtZVNjUnNwEg8KB3JldGNvZGUYByABKA0SEwoLSU5IRE5DTEtNSkcYAiAB",
+            "KA0SFwoPY3VyX3Bob25lX3RoZW1lGAsgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SelectPhoneThemeScRsp), global::EggLink.DanhengServer.Proto.SelectPhoneThemeScRsp.Parser, new[]{ "Retcode", "PLICPLNFBDP", "CurPhoneTheme" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SelectPhoneThemeScRsp), global::EggLink.DanhengServer.Proto.SelectPhoneThemeScRsp.Parser, new[]{ "Retcode", "INHDNCLKMJG", "CurPhoneTheme" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SelectPhoneThemeScRsp(SelectPhoneThemeScRsp other) : this() {
       retcode_ = other.retcode_;
-      pLICPLNFBDP_ = other.pLICPLNFBDP_;
+      iNHDNCLKMJG_ = other.iNHDNCLKMJG_;
       curPhoneTheme_ = other.curPhoneTheme_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 15;
+    public const int RetcodeFieldNumber = 7;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,20 +97,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "PLICPLNFBDP" field.</summary>
-    public const int PLICPLNFBDPFieldNumber = 11;
-    private uint pLICPLNFBDP_;
+    /// <summary>Field number for the "INHDNCLKMJG" field.</summary>
+    public const int INHDNCLKMJGFieldNumber = 2;
+    private uint iNHDNCLKMJG_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PLICPLNFBDP {
-      get { return pLICPLNFBDP_; }
+    public uint INHDNCLKMJG {
+      get { return iNHDNCLKMJG_; }
       set {
-        pLICPLNFBDP_ = value;
+        iNHDNCLKMJG_ = value;
       }
     }
 
     /// <summary>Field number for the "cur_phone_theme" field.</summary>
-    public const int CurPhoneThemeFieldNumber = 1;
+    public const int CurPhoneThemeFieldNumber = 11;
     private uint curPhoneTheme_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Retcode != other.Retcode) return false;
-      if (PLICPLNFBDP != other.PLICPLNFBDP) return false;
+      if (INHDNCLKMJG != other.INHDNCLKMJG) return false;
       if (CurPhoneTheme != other.CurPhoneTheme) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -147,7 +147,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (PLICPLNFBDP != 0) hash ^= PLICPLNFBDP.GetHashCode();
+      if (INHDNCLKMJG != 0) hash ^= INHDNCLKMJG.GetHashCode();
       if (CurPhoneTheme != 0) hash ^= CurPhoneTheme.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CurPhoneTheme != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(CurPhoneTheme);
-      }
-      if (PLICPLNFBDP != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(PLICPLNFBDP);
+      if (INHDNCLKMJG != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(INHDNCLKMJG);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
+      }
+      if (CurPhoneTheme != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(CurPhoneTheme);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CurPhoneTheme != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(CurPhoneTheme);
-      }
-      if (PLICPLNFBDP != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(PLICPLNFBDP);
+      if (INHDNCLKMJG != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(INHDNCLKMJG);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
+      }
+      if (CurPhoneTheme != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(CurPhoneTheme);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -214,8 +214,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (PLICPLNFBDP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PLICPLNFBDP);
+      if (INHDNCLKMJG != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(INHDNCLKMJG);
       }
       if (CurPhoneTheme != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurPhoneTheme);
@@ -235,8 +235,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.PLICPLNFBDP != 0) {
-        PLICPLNFBDP = other.PLICPLNFBDP;
+      if (other.INHDNCLKMJG != 0) {
+        INHDNCLKMJG = other.INHDNCLKMJG;
       }
       if (other.CurPhoneTheme != 0) {
         CurPhoneTheme = other.CurPhoneTheme;
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            CurPhoneTheme = input.ReadUInt32();
+          case 16: {
+            INHDNCLKMJG = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            Retcode = input.ReadUInt32();
             break;
           }
           case 88: {
-            PLICPLNFBDP = input.ReadUInt32();
-            break;
-          }
-          case 120: {
-            Retcode = input.ReadUInt32();
+            CurPhoneTheme = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            CurPhoneTheme = input.ReadUInt32();
+          case 16: {
+            INHDNCLKMJG = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            Retcode = input.ReadUInt32();
             break;
           }
           case 88: {
-            PLICPLNFBDP = input.ReadUInt32();
-            break;
-          }
-          case 120: {
-            Retcode = input.ReadUInt32();
+            CurPhoneTheme = input.ReadUInt32();
             break;
           }
         }

@@ -21,7 +21,7 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Mission
 
             if (req.CustomValueList != null && req.CustomValueList.Count > 0)
             {
-                player.MissionManager!.HandleCustomValue((int)(req.CustomValueList[0].Index + 1), (int)req.CustomValueList[0].MBFHEFKNIHB, (int)req.SubMissionId);
+                player.MissionManager!.HandleCustomValue((int)(req.CustomValueList[0].Index + 1), (int)req.CustomValueList[0].IMPHEIDIPGC, (int)req.SubMissionId);
             }
 
             connection.SendPacket(new PacketFinishTalkMissionScRsp(req.TalkStr));

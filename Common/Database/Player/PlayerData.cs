@@ -9,7 +9,7 @@ using SqlSugar;
 namespace EggLink.DanhengServer.Database.Player
 {
     [SugarTable("Player")]
-    public class PlayerData : BaseDatabaseData
+    public class PlayerData : BaseDatabaseDataHelper
     {
         public string? Name { get; set; } = "无名客";
         public string? Signature { get; set; } = "";
@@ -94,7 +94,7 @@ namespace EggLink.DanhengServer.Database.Player
             foreach (var assist in AvatarInfo.AssistAvatars)
             {
                 var avatar = AvatarInfo.Avatars.Find(x => x.AvatarId == assist)!;
-                info.AssistInfo.Add(new AssistSimpleInfo()
+                info.AssistSimpleList.Add(new AssistSimpleInfo()
                 {
                     AvatarId = (uint)avatar.AvatarId,
                     Level = (uint)avatar.Level,

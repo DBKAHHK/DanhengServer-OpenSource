@@ -24,18 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static GetBasicInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdHZXRCYXNpY0luZm9TY1JzcC5wcm90bxoXUGxheWVyU2V0dGluZ0luZm8u",
-            "cHJvdG8i+AEKEUdldEJhc2ljSW5mb1NjUnNwEhYKDmV4Y2hhbmdlX3RpbWVz",
-            "GA4gASgNEh4KFmxhc3Rfc2V0X25pY2tuYW1lX3RpbWUYByABKAMSDwoHY3Vy",
-            "X2RheRgEIAEoDRIZChFuZXh0X3JlY292ZXJfdGltZRgGIAEoAxIiChp3ZWVr",
-            "X2NvY29vbl9maW5pc2hlZF9jb3VudBgDIAEoDRIPCgdyZXRjb2RlGAsgASgN",
-            "EhkKEWdhbWVwbGF5X2JpcnRoZGF5GAUgASgNEi8KE3BsYXllcl9zZXR0aW5n",
-            "X2luZm8YDyABKAsyEi5QbGF5ZXJTZXR0aW5nSW5mb0IeqgIbRWdnTGluay5E",
-            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChdHZXRCYXNpY0luZm9TY1JzcC5wcm90bxoRUFBFR0FDQ0hHR08ucHJvdG8i",
+            "8gEKEUdldEJhc2ljSW5mb1NjUnNwEhkKEW5leHRfcmVjb3Zlcl90aW1lGA8g",
+            "ASgDEg8KB2N1cl9kYXkYAyABKA0SHgoWbGFzdF9zZXRfbmlja25hbWVfdGlt",
+            "ZRgKIAEoAxIpChNwbGF5ZXJfc2V0dGluZ19pbmZvGAwgASgLMgwuUFBFR0FD",
+            "Q0hHR08SIgoad2Vla19jb2Nvb25fZmluaXNoZWRfY291bnQYCyABKA0SFgoO",
+            "ZXhjaGFuZ2VfdGltZXMYCCABKA0SDwoHcmV0Y29kZRgHIAEoDRIZChFnYW1l",
+            "cGxheV9iaXJ0aGRheRgCIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlayerSettingInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PPEGACCHGGOReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetBasicInfoScRsp), global::EggLink.DanhengServer.Proto.GetBasicInfoScRsp.Parser, new[]{ "ExchangeTimes", "LastSetNicknameTime", "CurDay", "NextRecoverTime", "WeekCocoonFinishedCount", "Retcode", "GameplayBirthday", "PlayerSettingInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetBasicInfoScRsp), global::EggLink.DanhengServer.Proto.GetBasicInfoScRsp.Parser, new[]{ "NextRecoverTime", "CurDay", "LastSetNicknameTime", "PlayerSettingInfo", "WeekCocoonFinishedCount", "ExchangeTimes", "Retcode", "GameplayBirthday" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,14 +77,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetBasicInfoScRsp(GetBasicInfoScRsp other) : this() {
-      exchangeTimes_ = other.exchangeTimes_;
-      lastSetNicknameTime_ = other.lastSetNicknameTime_;
-      curDay_ = other.curDay_;
       nextRecoverTime_ = other.nextRecoverTime_;
+      curDay_ = other.curDay_;
+      lastSetNicknameTime_ = other.lastSetNicknameTime_;
+      playerSettingInfo_ = other.playerSettingInfo_ != null ? other.playerSettingInfo_.Clone() : null;
       weekCocoonFinishedCount_ = other.weekCocoonFinishedCount_;
+      exchangeTimes_ = other.exchangeTimes_;
       retcode_ = other.retcode_;
       gameplayBirthday_ = other.gameplayBirthday_;
-      playerSettingInfo_ = other.playerSettingInfo_ != null ? other.playerSettingInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -94,44 +94,8 @@ namespace EggLink.DanhengServer.Proto {
       return new GetBasicInfoScRsp(this);
     }
 
-    /// <summary>Field number for the "exchange_times" field.</summary>
-    public const int ExchangeTimesFieldNumber = 14;
-    private uint exchangeTimes_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ExchangeTimes {
-      get { return exchangeTimes_; }
-      set {
-        exchangeTimes_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "last_set_nickname_time" field.</summary>
-    public const int LastSetNicknameTimeFieldNumber = 7;
-    private long lastSetNicknameTime_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long LastSetNicknameTime {
-      get { return lastSetNicknameTime_; }
-      set {
-        lastSetNicknameTime_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "cur_day" field.</summary>
-    public const int CurDayFieldNumber = 4;
-    private uint curDay_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CurDay {
-      get { return curDay_; }
-      set {
-        curDay_ = value;
-      }
-    }
-
     /// <summary>Field number for the "next_recover_time" field.</summary>
-    public const int NextRecoverTimeFieldNumber = 6;
+    public const int NextRecoverTimeFieldNumber = 15;
     private long nextRecoverTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -142,8 +106,44 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "cur_day" field.</summary>
+    public const int CurDayFieldNumber = 3;
+    private uint curDay_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CurDay {
+      get { return curDay_; }
+      set {
+        curDay_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "last_set_nickname_time" field.</summary>
+    public const int LastSetNicknameTimeFieldNumber = 10;
+    private long lastSetNicknameTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long LastSetNicknameTime {
+      get { return lastSetNicknameTime_; }
+      set {
+        lastSetNicknameTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "player_setting_info" field.</summary>
+    public const int PlayerSettingInfoFieldNumber = 12;
+    private global::EggLink.DanhengServer.Proto.PPEGACCHGGO playerSettingInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.PPEGACCHGGO PlayerSettingInfo {
+      get { return playerSettingInfo_; }
+      set {
+        playerSettingInfo_ = value;
+      }
+    }
+
     /// <summary>Field number for the "week_cocoon_finished_count" field.</summary>
-    public const int WeekCocoonFinishedCountFieldNumber = 3;
+    public const int WeekCocoonFinishedCountFieldNumber = 11;
     private uint weekCocoonFinishedCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -154,8 +154,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "exchange_times" field.</summary>
+    public const int ExchangeTimesFieldNumber = 8;
+    private uint exchangeTimes_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ExchangeTimes {
+      get { return exchangeTimes_; }
+      set {
+        exchangeTimes_ = value;
+      }
+    }
+
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 11;
+    public const int RetcodeFieldNumber = 7;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,7 +179,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "gameplay_birthday" field.</summary>
-    public const int GameplayBirthdayFieldNumber = 5;
+    public const int GameplayBirthdayFieldNumber = 2;
     private uint gameplayBirthday_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -175,18 +187,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return gameplayBirthday_; }
       set {
         gameplayBirthday_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "player_setting_info" field.</summary>
-    public const int PlayerSettingInfoFieldNumber = 15;
-    private global::EggLink.DanhengServer.Proto.PlayerSettingInfo playerSettingInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.PlayerSettingInfo PlayerSettingInfo {
-      get { return playerSettingInfo_; }
-      set {
-        playerSettingInfo_ = value;
       }
     }
 
@@ -205,14 +205,14 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ExchangeTimes != other.ExchangeTimes) return false;
-      if (LastSetNicknameTime != other.LastSetNicknameTime) return false;
-      if (CurDay != other.CurDay) return false;
       if (NextRecoverTime != other.NextRecoverTime) return false;
+      if (CurDay != other.CurDay) return false;
+      if (LastSetNicknameTime != other.LastSetNicknameTime) return false;
+      if (!object.Equals(PlayerSettingInfo, other.PlayerSettingInfo)) return false;
       if (WeekCocoonFinishedCount != other.WeekCocoonFinishedCount) return false;
+      if (ExchangeTimes != other.ExchangeTimes) return false;
       if (Retcode != other.Retcode) return false;
       if (GameplayBirthday != other.GameplayBirthday) return false;
-      if (!object.Equals(PlayerSettingInfo, other.PlayerSettingInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -220,14 +220,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ExchangeTimes != 0) hash ^= ExchangeTimes.GetHashCode();
-      if (LastSetNicknameTime != 0L) hash ^= LastSetNicknameTime.GetHashCode();
-      if (CurDay != 0) hash ^= CurDay.GetHashCode();
       if (NextRecoverTime != 0L) hash ^= NextRecoverTime.GetHashCode();
+      if (CurDay != 0) hash ^= CurDay.GetHashCode();
+      if (LastSetNicknameTime != 0L) hash ^= LastSetNicknameTime.GetHashCode();
+      if (playerSettingInfo_ != null) hash ^= PlayerSettingInfo.GetHashCode();
       if (WeekCocoonFinishedCount != 0) hash ^= WeekCocoonFinishedCount.GetHashCode();
+      if (ExchangeTimes != 0) hash ^= ExchangeTimes.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (GameplayBirthday != 0) hash ^= GameplayBirthday.GetHashCode();
-      if (playerSettingInfo_ != null) hash ^= PlayerSettingInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -246,37 +246,37 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (WeekCocoonFinishedCount != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(WeekCocoonFinishedCount);
-      }
-      if (CurDay != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(CurDay);
-      }
       if (GameplayBirthday != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(16);
         output.WriteUInt32(GameplayBirthday);
       }
-      if (NextRecoverTime != 0L) {
-        output.WriteRawTag(48);
-        output.WriteInt64(NextRecoverTime);
-      }
-      if (LastSetNicknameTime != 0L) {
-        output.WriteRawTag(56);
-        output.WriteInt64(LastSetNicknameTime);
+      if (CurDay != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(CurDay);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
       if (ExchangeTimes != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(64);
         output.WriteUInt32(ExchangeTimes);
       }
+      if (LastSetNicknameTime != 0L) {
+        output.WriteRawTag(80);
+        output.WriteInt64(LastSetNicknameTime);
+      }
+      if (WeekCocoonFinishedCount != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(WeekCocoonFinishedCount);
+      }
       if (playerSettingInfo_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(98);
         output.WriteMessage(PlayerSettingInfo);
+      }
+      if (NextRecoverTime != 0L) {
+        output.WriteRawTag(120);
+        output.WriteInt64(NextRecoverTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -288,37 +288,37 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (WeekCocoonFinishedCount != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(WeekCocoonFinishedCount);
-      }
-      if (CurDay != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(CurDay);
-      }
       if (GameplayBirthday != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(16);
         output.WriteUInt32(GameplayBirthday);
       }
-      if (NextRecoverTime != 0L) {
-        output.WriteRawTag(48);
-        output.WriteInt64(NextRecoverTime);
-      }
-      if (LastSetNicknameTime != 0L) {
-        output.WriteRawTag(56);
-        output.WriteInt64(LastSetNicknameTime);
+      if (CurDay != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(CurDay);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
       if (ExchangeTimes != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(64);
         output.WriteUInt32(ExchangeTimes);
       }
+      if (LastSetNicknameTime != 0L) {
+        output.WriteRawTag(80);
+        output.WriteInt64(LastSetNicknameTime);
+      }
+      if (WeekCocoonFinishedCount != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(WeekCocoonFinishedCount);
+      }
       if (playerSettingInfo_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(98);
         output.WriteMessage(PlayerSettingInfo);
+      }
+      if (NextRecoverTime != 0L) {
+        output.WriteRawTag(120);
+        output.WriteInt64(NextRecoverTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -330,29 +330,29 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ExchangeTimes != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ExchangeTimes);
-      }
-      if (LastSetNicknameTime != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(LastSetNicknameTime);
+      if (NextRecoverTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(NextRecoverTime);
       }
       if (CurDay != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurDay);
       }
-      if (NextRecoverTime != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(NextRecoverTime);
+      if (LastSetNicknameTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(LastSetNicknameTime);
+      }
+      if (playerSettingInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PlayerSettingInfo);
       }
       if (WeekCocoonFinishedCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WeekCocoonFinishedCount);
+      }
+      if (ExchangeTimes != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ExchangeTimes);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (GameplayBirthday != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GameplayBirthday);
-      }
-      if (playerSettingInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PlayerSettingInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -366,32 +366,32 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ExchangeTimes != 0) {
-        ExchangeTimes = other.ExchangeTimes;
-      }
-      if (other.LastSetNicknameTime != 0L) {
-        LastSetNicknameTime = other.LastSetNicknameTime;
+      if (other.NextRecoverTime != 0L) {
+        NextRecoverTime = other.NextRecoverTime;
       }
       if (other.CurDay != 0) {
         CurDay = other.CurDay;
       }
-      if (other.NextRecoverTime != 0L) {
-        NextRecoverTime = other.NextRecoverTime;
+      if (other.LastSetNicknameTime != 0L) {
+        LastSetNicknameTime = other.LastSetNicknameTime;
+      }
+      if (other.playerSettingInfo_ != null) {
+        if (playerSettingInfo_ == null) {
+          PlayerSettingInfo = new global::EggLink.DanhengServer.Proto.PPEGACCHGGO();
+        }
+        PlayerSettingInfo.MergeFrom(other.PlayerSettingInfo);
       }
       if (other.WeekCocoonFinishedCount != 0) {
         WeekCocoonFinishedCount = other.WeekCocoonFinishedCount;
+      }
+      if (other.ExchangeTimes != 0) {
+        ExchangeTimes = other.ExchangeTimes;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
       if (other.GameplayBirthday != 0) {
         GameplayBirthday = other.GameplayBirthday;
-      }
-      if (other.playerSettingInfo_ != null) {
-        if (playerSettingInfo_ == null) {
-          PlayerSettingInfo = new global::EggLink.DanhengServer.Proto.PlayerSettingInfo();
-        }
-        PlayerSettingInfo.MergeFrom(other.PlayerSettingInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -408,39 +408,39 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            WeekCocoonFinishedCount = input.ReadUInt32();
-            break;
-          }
-          case 32: {
-            CurDay = input.ReadUInt32();
-            break;
-          }
-          case 40: {
+          case 16: {
             GameplayBirthday = input.ReadUInt32();
             break;
           }
-          case 48: {
-            NextRecoverTime = input.ReadInt64();
+          case 24: {
+            CurDay = input.ReadUInt32();
             break;
           }
           case 56: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            ExchangeTimes = input.ReadUInt32();
+            break;
+          }
+          case 80: {
             LastSetNicknameTime = input.ReadInt64();
             break;
           }
           case 88: {
-            Retcode = input.ReadUInt32();
+            WeekCocoonFinishedCount = input.ReadUInt32();
             break;
           }
-          case 112: {
-            ExchangeTimes = input.ReadUInt32();
-            break;
-          }
-          case 122: {
+          case 98: {
             if (playerSettingInfo_ == null) {
-              PlayerSettingInfo = new global::EggLink.DanhengServer.Proto.PlayerSettingInfo();
+              PlayerSettingInfo = new global::EggLink.DanhengServer.Proto.PPEGACCHGGO();
             }
             input.ReadMessage(PlayerSettingInfo);
+            break;
+          }
+          case 120: {
+            NextRecoverTime = input.ReadInt64();
             break;
           }
         }
@@ -458,39 +458,39 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            WeekCocoonFinishedCount = input.ReadUInt32();
-            break;
-          }
-          case 32: {
-            CurDay = input.ReadUInt32();
-            break;
-          }
-          case 40: {
+          case 16: {
             GameplayBirthday = input.ReadUInt32();
             break;
           }
-          case 48: {
-            NextRecoverTime = input.ReadInt64();
+          case 24: {
+            CurDay = input.ReadUInt32();
             break;
           }
           case 56: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            ExchangeTimes = input.ReadUInt32();
+            break;
+          }
+          case 80: {
             LastSetNicknameTime = input.ReadInt64();
             break;
           }
           case 88: {
-            Retcode = input.ReadUInt32();
+            WeekCocoonFinishedCount = input.ReadUInt32();
             break;
           }
-          case 112: {
-            ExchangeTimes = input.ReadUInt32();
-            break;
-          }
-          case 122: {
+          case 98: {
             if (playerSettingInfo_ == null) {
-              PlayerSettingInfo = new global::EggLink.DanhengServer.Proto.PlayerSettingInfo();
+              PlayerSettingInfo = new global::EggLink.DanhengServer.Proto.PPEGACCHGGO();
             }
             input.ReadMessage(PlayerSettingInfo);
+            break;
+          }
+          case 120: {
+            NextRecoverTime = input.ReadInt64();
             break;
           }
         }

@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtEYWlseVRhc2tEYXRhU2NOb3RpZnkucHJvdG8aD0RhaWx5VGFzay5wcm90",
-            "byJSChVEYWlseVRhc2tEYXRhU2NOb3RpZnkSIwoPZGFpbHlfdGFza19saXN0",
-            "GA4gAygLMgouRGFpbHlUYXNrEhQKDGZpbmlzaGVkX251bRgMIAEoDUIeqgIb",
+            "byJSChVEYWlseVRhc2tEYXRhU2NOb3RpZnkSFAoMZmluaXNoZWRfbnVtGAkg",
+            "ASgNEiMKD2RhaWx5X3Rhc2tfbGlzdBgOIAMoCzIKLkRhaWx5VGFza0IeqgIb",
             "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DailyTaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DailyTaskDataScNotify), global::EggLink.DanhengServer.Proto.DailyTaskDataScNotify.Parser, new[]{ "DailyTaskList", "FinishedNum" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DailyTaskDataScNotify), global::EggLink.DanhengServer.Proto.DailyTaskDataScNotify.Parser, new[]{ "FinishedNum", "DailyTaskList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DailyTaskDataScNotify(DailyTaskDataScNotify other) : this() {
-      dailyTaskList_ = other.dailyTaskList_.Clone();
       finishedNum_ = other.finishedNum_;
+      dailyTaskList_ = other.dailyTaskList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,6 +82,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DailyTaskDataScNotify Clone() {
       return new DailyTaskDataScNotify(this);
+    }
+
+    /// <summary>Field number for the "finished_num" field.</summary>
+    public const int FinishedNumFieldNumber = 9;
+    private uint finishedNum_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint FinishedNum {
+      get { return finishedNum_; }
+      set {
+        finishedNum_ = value;
+      }
     }
 
     /// <summary>Field number for the "daily_task_list" field.</summary>
@@ -93,18 +105,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DailyTask> DailyTaskList {
       get { return dailyTaskList_; }
-    }
-
-    /// <summary>Field number for the "finished_num" field.</summary>
-    public const int FinishedNumFieldNumber = 12;
-    private uint finishedNum_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FinishedNum {
-      get { return finishedNum_; }
-      set {
-        finishedNum_ = value;
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!dailyTaskList_.Equals(other.dailyTaskList_)) return false;
       if (FinishedNum != other.FinishedNum) return false;
+      if(!dailyTaskList_.Equals(other.dailyTaskList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= dailyTaskList_.GetHashCode();
       if (FinishedNum != 0) hash ^= FinishedNum.GetHashCode();
+      hash ^= dailyTaskList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (FinishedNum != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(72);
         output.WriteUInt32(FinishedNum);
       }
       dailyTaskList_.WriteTo(output, _repeated_dailyTaskList_codec);
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (FinishedNum != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(72);
         output.WriteUInt32(FinishedNum);
       }
       dailyTaskList_.WriteTo(ref output, _repeated_dailyTaskList_codec);
@@ -181,10 +181,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += dailyTaskList_.CalculateSize(_repeated_dailyTaskList_codec);
       if (FinishedNum != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FinishedNum);
       }
+      size += dailyTaskList_.CalculateSize(_repeated_dailyTaskList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -197,10 +197,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      dailyTaskList_.Add(other.dailyTaskList_);
       if (other.FinishedNum != 0) {
         FinishedNum = other.FinishedNum;
       }
+      dailyTaskList_.Add(other.dailyTaskList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 96: {
+          case 72: {
             FinishedNum = input.ReadUInt32();
             break;
           }
@@ -239,7 +239,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 96: {
+          case 72: {
             FinishedNum = input.ReadUInt32();
             break;
           }

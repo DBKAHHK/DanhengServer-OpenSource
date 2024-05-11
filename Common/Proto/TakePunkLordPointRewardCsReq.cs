@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static TakePunkLordPointRewardCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiJUYWtlUHVua0xvcmRQb2ludFJld2FyZENzUmVxLnByb3RvIksKHFRha2VQ",
-            "dW5rTG9yZFBvaW50UmV3YXJkQ3NSZXESHAoUaXNfb3Zlcl9ib251c19yZXdh",
-            "cmQYCCABKAgSDQoFbGV2ZWwYASABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
-            "cnZlci5Qcm90b2IGcHJvdG8z"));
+            "CiJUYWtlUHVua0xvcmRQb2ludFJld2FyZENzUmVxLnByb3RvIkIKHFRha2VQ",
+            "dW5rTG9yZFBvaW50UmV3YXJkQ3NSZXESDQoFbGV2ZWwYDSABKA0SEwoLQUtI",
+            "Q0dGSE1ERUYYDCABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakePunkLordPointRewardCsReq), global::EggLink.DanhengServer.Proto.TakePunkLordPointRewardCsReq.Parser, new[]{ "IsOverBonusReward", "Level" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakePunkLordPointRewardCsReq), global::EggLink.DanhengServer.Proto.TakePunkLordPointRewardCsReq.Parser, new[]{ "Level", "AKHCGFHMDEF" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TakePunkLordPointRewardCsReq(TakePunkLordPointRewardCsReq other) : this() {
-      isOverBonusReward_ = other.isOverBonusReward_;
       level_ = other.level_;
+      aKHCGFHMDEF_ = other.aKHCGFHMDEF_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new TakePunkLordPointRewardCsReq(this);
     }
 
-    /// <summary>Field number for the "is_over_bonus_reward" field.</summary>
-    public const int IsOverBonusRewardFieldNumber = 8;
-    private bool isOverBonusReward_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsOverBonusReward {
-      get { return isOverBonusReward_; }
-      set {
-        isOverBonusReward_ = value;
-      }
-    }
-
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 1;
+    public const int LevelFieldNumber = 13;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return level_; }
       set {
         level_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "AKHCGFHMDEF" field.</summary>
+    public const int AKHCGFHMDEFFieldNumber = 12;
+    private bool aKHCGFHMDEF_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AKHCGFHMDEF {
+      get { return aKHCGFHMDEF_; }
+      set {
+        aKHCGFHMDEF_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsOverBonusReward != other.IsOverBonusReward) return false;
       if (Level != other.Level) return false;
+      if (AKHCGFHMDEF != other.AKHCGFHMDEF) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsOverBonusReward != false) hash ^= IsOverBonusReward.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
+      if (AKHCGFHMDEF != false) hash ^= AKHCGFHMDEF.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Level != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Level);
+      if (AKHCGFHMDEF != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(AKHCGFHMDEF);
       }
-      if (IsOverBonusReward != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(IsOverBonusReward);
+      if (Level != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(Level);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Level != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Level);
+      if (AKHCGFHMDEF != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(AKHCGFHMDEF);
       }
-      if (IsOverBonusReward != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(IsOverBonusReward);
+      if (Level != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(Level);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsOverBonusReward != false) {
-        size += 1 + 1;
-      }
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
+      }
+      if (AKHCGFHMDEF != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsOverBonusReward != false) {
-        IsOverBonusReward = other.IsOverBonusReward;
-      }
       if (other.Level != 0) {
         Level = other.Level;
+      }
+      if (other.AKHCGFHMDEF != false) {
+        AKHCGFHMDEF = other.AKHCGFHMDEF;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Level = input.ReadUInt32();
+          case 96: {
+            AKHCGFHMDEF = input.ReadBool();
             break;
           }
-          case 64: {
-            IsOverBonusReward = input.ReadBool();
+          case 104: {
+            Level = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Level = input.ReadUInt32();
+          case 96: {
+            AKHCGFHMDEF = input.ReadBool();
             break;
           }
-          case 64: {
-            IsOverBonusReward = input.ReadBool();
+          case 104: {
+            Level = input.ReadUInt32();
             break;
           }
         }

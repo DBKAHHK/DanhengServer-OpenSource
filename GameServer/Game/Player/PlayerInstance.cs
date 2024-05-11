@@ -156,7 +156,7 @@ namespace EggLink.DanhengServer.Game.Player
 
         public T? InitializeDatabase<T>() where T : class, new()
         {
-            if (new T() is BaseDatabaseData database)
+            if (new T() is BaseDatabaseDataHelper database)
             {
                 var instance = DatabaseHelper.Instance?.GetInstance<T>(Uid);
                 if (instance == null)

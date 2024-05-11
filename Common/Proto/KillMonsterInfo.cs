@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChVLaWxsTW9uc3RlckluZm8ucHJvdG8iNwoPS2lsbE1vbnN0ZXJJbmZvEhAK",
-            "CGtpbGxfbnVtGAYgASgNEhIKCm1vbnN0ZXJfaWQYByABKA1CHqoCG0VnZ0xp",
+            "CGtpbGxfbnVtGAYgASgNEhIKCm1vbnN0ZXJfaWQYDCABKA1CHqoCG0VnZ0xp",
             "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "monster_id" field.</summary>
-    public const int MonsterIdFieldNumber = 7;
+    public const int MonsterIdFieldNumber = 12;
     private uint monsterId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -156,7 +156,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(KillNum);
       }
       if (MonsterId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(96);
         output.WriteUInt32(MonsterId);
       }
       if (_unknownFields != null) {
@@ -174,7 +174,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(KillNum);
       }
       if (MonsterId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(96);
         output.WriteUInt32(MonsterId);
       }
       if (_unknownFields != null) {
@@ -230,7 +230,7 @@ namespace EggLink.DanhengServer.Proto {
             KillNum = input.ReadUInt32();
             break;
           }
-          case 56: {
+          case 96: {
             MonsterId = input.ReadUInt32();
             break;
           }
@@ -253,7 +253,7 @@ namespace EggLink.DanhengServer.Proto {
             KillNum = input.ReadUInt32();
             break;
           }
-          case 56: {
+          case 96: {
             MonsterId = input.ReadUInt32();
             break;
           }

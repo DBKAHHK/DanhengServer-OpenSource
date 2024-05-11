@@ -3,7 +3,7 @@
 namespace EggLink.DanhengServer.Database.Player
 {
     [SugarTable("UnlockData")]
-    public class PlayerUnlockData : BaseDatabaseData
+    public class PlayerUnlockData : BaseDatabaseDataHelper
     {
         [SugarColumn(IsJson = true)]
         public List<int> HeadIcons { get; set; } = [];

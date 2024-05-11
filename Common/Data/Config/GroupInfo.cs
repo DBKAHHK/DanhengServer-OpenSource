@@ -54,11 +54,11 @@ namespace EggLink.DanhengServer.Data.Config
             {
                 if (condition.Type == ConditionTypeEnum.MainMission)
                 {
-                    if (!mission.MainMissionInfo.TryGetValue(condition.ID, out var info))
-                    {
-                        info = MissionPhaseEnum.None;
-                    }
+                    var info = mission.GetMainMissionStatus(condition.ID);
                     if (!ConfigManager.Config.ServerOption.EnableMission) info = MissionPhaseEnum.Finish;
+                    
+                    condition.Phase = condition.Phase == MissionPhaseEnum.Cancel ? MissionPhaseEnum.Finish : condition.Phase;
+
                     if (info != condition.Phase)
                     {
                         if (Operation == OperationEnum.And)
@@ -75,49 +75,27 @@ namespace EggLink.DanhengServer.Data.Config
                             break;
                         }
                     }
-                } else
+                }
+                else
                 {
                     // sub mission
-                    GameData.SubMissionData.TryGetValue(condition.ID, out var subMission);
-                    if (subMission == null) continue;
-                    var mainMissionId = subMission.MainMissionID;
-                    mission.MissionInfo.TryGetValue(mainMissionId, out var info);
-                    if (!ConfigManager.Config.ServerOption.EnableMission) info = new(){ { condition.ID, new() { Status = MissionPhaseEnum.Finish } } };
-                    if (info?.TryGetValue(condition.ID, out var missionInfo) == true)
+                    var status = mission.GetSubMissionStatus(condition.ID);
+                    if (!ConfigManager.Config.ServerOption.EnableMission) status = MissionPhaseEnum.Finish;
+                    condition.Phase = condition.Phase == MissionPhaseEnum.Cancel ? MissionPhaseEnum.Finish : condition.Phase;
+                    if (status != condition.Phase)
                     {
-                        if (missionInfo.Status != condition.Phase)
+                        if (Operation == OperationEnum.And)
                         {
-                            if (Operation == OperationEnum.And)
-                            {
-                                canLoad = false;
-                                break;
-                            }
+                            canLoad = false;
+                            break;
                         }
-                        else
-                        {
-                            if (Operation == OperationEnum.Or)
-                            {
-                                canLoad = true;
-                                break;
-                            }
-                        }
-                    } else
+                    }
+                    else
                     {
-                        if (condition.Phase != MissionPhaseEnum.None)
+                        if (Operation == OperationEnum.Or)
                         {
-                            if (Operation == OperationEnum.And)
-                            {
-                                canLoad = false;
-                                break;
-                            }
-                        }
-                        else
-                        {
-                            if (Operation == OperationEnum.Or)
-                            {
-                                canLoad = true;
-                                break;
-                            }
+                            canLoad = true;
+                            break;
                         }
                     }
                 }

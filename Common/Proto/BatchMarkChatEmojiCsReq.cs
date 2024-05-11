@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static BatchMarkChatEmojiCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1CYXRjaE1hcmtDaGF0RW1vamlDc1JlcS5wcm90byI3ChdCYXRjaE1hcmtD",
-            "aGF0RW1vamlDc1JlcRIcChRtYXJrZWRfZW1vamlfaWRfbGlzdBgKIAMoDUIe",
-            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Ch1CYXRjaE1hcmtDaGF0RW1vamlDc1JlcS5wcm90byIuChdCYXRjaE1hcmtD",
+            "aGF0RW1vamlDc1JlcRITCgtFS0VJSUlORUZGQhgCIAMoDUIeqgIbRWdnTGlu",
+            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BatchMarkChatEmojiCsReq), global::EggLink.DanhengServer.Proto.BatchMarkChatEmojiCsReq.Parser, new[]{ "MarkedEmojiIdList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BatchMarkChatEmojiCsReq), global::EggLink.DanhengServer.Proto.BatchMarkChatEmojiCsReq.Parser, new[]{ "EKEIIINEFFB" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchMarkChatEmojiCsReq(BatchMarkChatEmojiCsReq other) : this() {
-      markedEmojiIdList_ = other.markedEmojiIdList_.Clone();
+      eKEIIINEFFB_ = other.eKEIIINEFFB_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new BatchMarkChatEmojiCsReq(this);
     }
 
-    /// <summary>Field number for the "marked_emoji_id_list" field.</summary>
-    public const int MarkedEmojiIdListFieldNumber = 10;
-    private static readonly pb::FieldCodec<uint> _repeated_markedEmojiIdList_codec
-        = pb::FieldCodec.ForUInt32(82);
-    private readonly pbc::RepeatedField<uint> markedEmojiIdList_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "EKEIIINEFFB" field.</summary>
+    public const int EKEIIINEFFBFieldNumber = 2;
+    private static readonly pb::FieldCodec<uint> _repeated_eKEIIINEFFB_codec
+        = pb::FieldCodec.ForUInt32(18);
+    private readonly pbc::RepeatedField<uint> eKEIIINEFFB_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> MarkedEmojiIdList {
-      get { return markedEmojiIdList_; }
+    public pbc::RepeatedField<uint> EKEIIINEFFB {
+      get { return eKEIIINEFFB_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -108,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!markedEmojiIdList_.Equals(other.markedEmojiIdList_)) return false;
+      if(!eKEIIINEFFB_.Equals(other.eKEIIINEFFB_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -116,7 +116,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= markedEmojiIdList_.GetHashCode();
+      hash ^= eKEIIINEFFB_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -135,7 +135,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      markedEmojiIdList_.WriteTo(output, _repeated_markedEmojiIdList_codec);
+      eKEIIINEFFB_.WriteTo(output, _repeated_eKEIIINEFFB_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -146,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      markedEmojiIdList_.WriteTo(ref output, _repeated_markedEmojiIdList_codec);
+      eKEIIINEFFB_.WriteTo(ref output, _repeated_eKEIIINEFFB_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += markedEmojiIdList_.CalculateSize(_repeated_markedEmojiIdList_codec);
+      size += eKEIIINEFFB_.CalculateSize(_repeated_eKEIIINEFFB_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -170,7 +170,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      markedEmojiIdList_.Add(other.markedEmojiIdList_);
+      eKEIIINEFFB_.Add(other.eKEIIINEFFB_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -186,9 +186,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 82:
-          case 80: {
-            markedEmojiIdList_.AddEntriesFrom(input, _repeated_markedEmojiIdList_codec);
+          case 18:
+          case 16: {
+            eKEIIINEFFB_.AddEntriesFrom(input, _repeated_eKEIIINEFFB_codec);
             break;
           }
         }
@@ -206,9 +206,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 82:
-          case 80: {
-            markedEmojiIdList_.AddEntriesFrom(ref input, _repeated_markedEmojiIdList_codec);
+          case 18:
+          case 16: {
+            eKEIIINEFFB_.AddEntriesFrom(ref input, _repeated_eKEIIINEFFB_codec);
             break;
           }
         }

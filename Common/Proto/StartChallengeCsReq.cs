@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static StartChallengeCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlTdGFydENoYWxsZW5nZUNzUmVxLnByb3RvGhFPREpJQktEQkRORy5wcm90",
-            "byJOChNTdGFydENoYWxsZW5nZUNzUmVxEiEKC3BsYXllcl9pbmZvGA4gASgL",
-            "MgwuT0RKSUJLREJETkcSFAoMY2hhbGxlbmdlX2lkGAggASgNQh6qAhtFZ2dM",
+            "ChlTdGFydENoYWxsZW5nZUNzUmVxLnByb3RvGhFET05LTlBQT01KQy5wcm90",
+            "byJOChNTdGFydENoYWxsZW5nZUNzUmVxEiEKC3BsYXllcl9pbmZvGAkgASgL",
+            "MgwuRE9OS05QUE9NSkMSFAoMY2hhbGxlbmdlX2lkGAYgASgNQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ODJIBKDBDNGReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DONKNPPOMJCReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StartChallengeCsReq), global::EggLink.DanhengServer.Proto.StartChallengeCsReq.Parser, new[]{ "PlayerInfo", "ChallengeId" }, null, null, null, null)
           }));
@@ -85,11 +85,11 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "player_info" field.</summary>
-    public const int PlayerInfoFieldNumber = 14;
-    private global::EggLink.DanhengServer.Proto.ODJIBKDBDNG playerInfo_;
+    public const int PlayerInfoFieldNumber = 9;
+    private global::EggLink.DanhengServer.Proto.DONKNPPOMJC playerInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ODJIBKDBDNG PlayerInfo {
+    public global::EggLink.DanhengServer.Proto.DONKNPPOMJC PlayerInfo {
       get { return playerInfo_; }
       set {
         playerInfo_ = value;
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "challenge_id" field.</summary>
-    public const int ChallengeIdFieldNumber = 8;
+    public const int ChallengeIdFieldNumber = 6;
     private uint challengeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (ChallengeId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(48);
         output.WriteUInt32(ChallengeId);
       }
       if (playerInfo_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(74);
         output.WriteMessage(PlayerInfo);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ChallengeId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(48);
         output.WriteUInt32(ChallengeId);
       }
       if (playerInfo_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(74);
         output.WriteMessage(PlayerInfo);
       }
       if (_unknownFields != null) {
@@ -208,7 +208,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.playerInfo_ != null) {
         if (playerInfo_ == null) {
-          PlayerInfo = new global::EggLink.DanhengServer.Proto.ODJIBKDBDNG();
+          PlayerInfo = new global::EggLink.DanhengServer.Proto.DONKNPPOMJC();
         }
         PlayerInfo.MergeFrom(other.PlayerInfo);
       }
@@ -230,13 +230,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
+          case 48: {
             ChallengeId = input.ReadUInt32();
             break;
           }
-          case 114: {
+          case 74: {
             if (playerInfo_ == null) {
-              PlayerInfo = new global::EggLink.DanhengServer.Proto.ODJIBKDBDNG();
+              PlayerInfo = new global::EggLink.DanhengServer.Proto.DONKNPPOMJC();
             }
             input.ReadMessage(PlayerInfo);
             break;
@@ -256,13 +256,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
+          case 48: {
             ChallengeId = input.ReadUInt32();
             break;
           }
-          case 114: {
+          case 74: {
             if (playerInfo_ == null) {
-              PlayerInfo = new global::EggLink.DanhengServer.Proto.ODJIBKDBDNG();
+              PlayerInfo = new global::EggLink.DanhengServer.Proto.DONKNPPOMJC();
             }
             input.ReadMessage(PlayerInfo);
             break;

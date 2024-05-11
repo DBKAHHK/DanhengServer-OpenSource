@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpTYXZlUG9pbnRzSW5mb05vdGlmeS5wcm90byJBChRTYXZlUG9pbnRzSW5m",
-            "b05vdGlmeRITCgt2YWxpZF90aW1lcxgKIAEoDRIUCgxyZWZyZXNoX3RpbWUY",
-            "DSABKANCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "b05vdGlmeRIUCgxyZWZyZXNoX3RpbWUYDSABKAMSEwoLdmFsaWRfdGltZXMY",
+            "CSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SavePointsInfoNotify), global::EggLink.DanhengServer.Proto.SavePointsInfoNotify.Parser, new[]{ "ValidTimes", "RefreshTime" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SavePointsInfoNotify), global::EggLink.DanhengServer.Proto.SavePointsInfoNotify.Parser, new[]{ "RefreshTime", "ValidTimes" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SavePointsInfoNotify(SavePointsInfoNotify other) : this() {
-      validTimes_ = other.validTimes_;
       refreshTime_ = other.refreshTime_;
+      validTimes_ = other.validTimes_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -81,18 +81,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SavePointsInfoNotify Clone() {
       return new SavePointsInfoNotify(this);
-    }
-
-    /// <summary>Field number for the "valid_times" field.</summary>
-    public const int ValidTimesFieldNumber = 10;
-    private uint validTimes_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ValidTimes {
-      get { return validTimes_; }
-      set {
-        validTimes_ = value;
-      }
     }
 
     /// <summary>Field number for the "refresh_time" field.</summary>
@@ -104,6 +92,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return refreshTime_; }
       set {
         refreshTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "valid_times" field.</summary>
+    public const int ValidTimesFieldNumber = 9;
+    private uint validTimes_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ValidTimes {
+      get { return validTimes_; }
+      set {
+        validTimes_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ValidTimes != other.ValidTimes) return false;
       if (RefreshTime != other.RefreshTime) return false;
+      if (ValidTimes != other.ValidTimes) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ValidTimes != 0) hash ^= ValidTimes.GetHashCode();
       if (RefreshTime != 0L) hash ^= RefreshTime.GetHashCode();
+      if (ValidTimes != 0) hash ^= ValidTimes.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (ValidTimes != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(72);
         output.WriteUInt32(ValidTimes);
       }
       if (RefreshTime != 0L) {
@@ -170,7 +170,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ValidTimes != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(72);
         output.WriteUInt32(ValidTimes);
       }
       if (RefreshTime != 0L) {
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ValidTimes != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ValidTimes);
-      }
       if (RefreshTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(RefreshTime);
+      }
+      if (ValidTimes != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ValidTimes);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ValidTimes != 0) {
-        ValidTimes = other.ValidTimes;
-      }
       if (other.RefreshTime != 0L) {
         RefreshTime = other.RefreshTime;
+      }
+      if (other.ValidTimes != 0) {
+        ValidTimes = other.ValidTimes;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,7 +226,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 80: {
+          case 72: {
             ValidTimes = input.ReadUInt32();
             break;
           }
@@ -249,7 +249,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 80: {
+          case 72: {
             ValidTimes = input.ReadUInt32();
             break;
           }

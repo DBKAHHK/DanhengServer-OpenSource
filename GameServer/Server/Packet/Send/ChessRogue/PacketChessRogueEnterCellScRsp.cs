@@ -17,7 +17,7 @@ namespace EggLink.DanhengServer.Server.Packet.Send.ChessRogue
                 CellId = cellId,
                 Info = rogue.ToProto(),
                 PlayerInfo = rogue.ToPlayerProto(),
-                RogueGameInfo = rogue.ToRogueGameInfo(),
+                RogueCurrentInfo = rogue.ToRogueGameInfo(),
             };
 
             SetData(proto);

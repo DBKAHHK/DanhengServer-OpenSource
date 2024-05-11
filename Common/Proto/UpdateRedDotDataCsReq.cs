@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static UpdateRedDotDataCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtVcGRhdGVSZWREb3REYXRhQ3NSZXEucHJvdG8aEUNBT0dFSEhETkxJLnBy",
-            "b3RvIogBChVVcGRhdGVSZWREb3REYXRhQ3NSZXESEAoIZ3JvdXBfaWQYCCAB",
-            "KA0SEwoLc3dpdGNoX2xpc3QYASADKA0SIQoLQ1BPR05ITkFHQUYYCiABKA4y",
-            "DC5DQU9HRUhIRE5MSRITCgtMRkFLSEJMSU1MSRgFIAEoDRIQCghwYW5lbF9p",
-            "ZBgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "ChtVcGRhdGVSZWREb3REYXRhQ3NSZXEucHJvdG8aEUdFRUtMQVBKQkhNLnBy",
+            "b3RvIogBChVVcGRhdGVSZWREb3REYXRhQ3NSZXESEAoIZ3JvdXBfaWQYCiAB",
+            "KA0SEAoIcGFuZWxfaWQYBSABKA0SEwoLUE1JSEpGRkVPUEMYDiABKA0SEwoL",
+            "c3dpdGNoX2xpc3QYDyADKA0SIQoLQkhITEpFUEdKRkYYDSABKA4yDC5HRUVL",
+            "TEFQSkJITUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CAOGEHHDNLIReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GEEKLAPJBHMReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdateRedDotDataCsReq), global::EggLink.DanhengServer.Proto.UpdateRedDotDataCsReq.Parser, new[]{ "GroupId", "SwitchList", "CPOGNHNAGAF", "LFAKHBLIMLI", "PanelId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdateRedDotDataCsReq), global::EggLink.DanhengServer.Proto.UpdateRedDotDataCsReq.Parser, new[]{ "GroupId", "PanelId", "PMIHJFFEOPC", "SwitchList", "BHHLJEPGJFF" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,10 +76,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateRedDotDataCsReq(UpdateRedDotDataCsReq other) : this() {
       groupId_ = other.groupId_;
-      switchList_ = other.switchList_.Clone();
-      cPOGNHNAGAF_ = other.cPOGNHNAGAF_;
-      lFAKHBLIMLI_ = other.lFAKHBLIMLI_;
       panelId_ = other.panelId_;
+      pMIHJFFEOPC_ = other.pMIHJFFEOPC_;
+      switchList_ = other.switchList_.Clone();
+      bHHLJEPGJFF_ = other.bHHLJEPGJFF_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -90,7 +90,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 8;
+    public const int GroupIdFieldNumber = 10;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -101,43 +101,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "switch_list" field.</summary>
-    public const int SwitchListFieldNumber = 1;
-    private static readonly pb::FieldCodec<uint> _repeated_switchList_codec
-        = pb::FieldCodec.ForUInt32(10);
-    private readonly pbc::RepeatedField<uint> switchList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> SwitchList {
-      get { return switchList_; }
-    }
-
-    /// <summary>Field number for the "CPOGNHNAGAF" field.</summary>
-    public const int CPOGNHNAGAFFieldNumber = 10;
-    private global::EggLink.DanhengServer.Proto.CAOGEHHDNLI cPOGNHNAGAF_ = global::EggLink.DanhengServer.Proto.CAOGEHHDNLI.UpdateReddotNone;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.CAOGEHHDNLI CPOGNHNAGAF {
-      get { return cPOGNHNAGAF_; }
-      set {
-        cPOGNHNAGAF_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "LFAKHBLIMLI" field.</summary>
-    public const int LFAKHBLIMLIFieldNumber = 5;
-    private uint lFAKHBLIMLI_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LFAKHBLIMLI {
-      get { return lFAKHBLIMLI_; }
-      set {
-        lFAKHBLIMLI_ = value;
-      }
-    }
-
     /// <summary>Field number for the "panel_id" field.</summary>
-    public const int PanelIdFieldNumber = 3;
+    public const int PanelIdFieldNumber = 5;
     private uint panelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -145,6 +110,41 @@ namespace EggLink.DanhengServer.Proto {
       get { return panelId_; }
       set {
         panelId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PMIHJFFEOPC" field.</summary>
+    public const int PMIHJFFEOPCFieldNumber = 14;
+    private uint pMIHJFFEOPC_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PMIHJFFEOPC {
+      get { return pMIHJFFEOPC_; }
+      set {
+        pMIHJFFEOPC_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "switch_list" field.</summary>
+    public const int SwitchListFieldNumber = 15;
+    private static readonly pb::FieldCodec<uint> _repeated_switchList_codec
+        = pb::FieldCodec.ForUInt32(122);
+    private readonly pbc::RepeatedField<uint> switchList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> SwitchList {
+      get { return switchList_; }
+    }
+
+    /// <summary>Field number for the "BHHLJEPGJFF" field.</summary>
+    public const int BHHLJEPGJFFFieldNumber = 13;
+    private global::EggLink.DanhengServer.Proto.GEEKLAPJBHM bHHLJEPGJFF_ = global::EggLink.DanhengServer.Proto.GEEKLAPJBHM.UpdateReddotNone;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.GEEKLAPJBHM BHHLJEPGJFF {
+      get { return bHHLJEPGJFF_; }
+      set {
+        bHHLJEPGJFF_ = value;
       }
     }
 
@@ -164,10 +164,10 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (GroupId != other.GroupId) return false;
-      if(!switchList_.Equals(other.switchList_)) return false;
-      if (CPOGNHNAGAF != other.CPOGNHNAGAF) return false;
-      if (LFAKHBLIMLI != other.LFAKHBLIMLI) return false;
       if (PanelId != other.PanelId) return false;
+      if (PMIHJFFEOPC != other.PMIHJFFEOPC) return false;
+      if(!switchList_.Equals(other.switchList_)) return false;
+      if (BHHLJEPGJFF != other.BHHLJEPGJFF) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -176,10 +176,10 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (GroupId != 0) hash ^= GroupId.GetHashCode();
-      hash ^= switchList_.GetHashCode();
-      if (CPOGNHNAGAF != global::EggLink.DanhengServer.Proto.CAOGEHHDNLI.UpdateReddotNone) hash ^= CPOGNHNAGAF.GetHashCode();
-      if (LFAKHBLIMLI != 0) hash ^= LFAKHBLIMLI.GetHashCode();
       if (PanelId != 0) hash ^= PanelId.GetHashCode();
+      if (PMIHJFFEOPC != 0) hash ^= PMIHJFFEOPC.GetHashCode();
+      hash ^= switchList_.GetHashCode();
+      if (BHHLJEPGJFF != global::EggLink.DanhengServer.Proto.GEEKLAPJBHM.UpdateReddotNone) hash ^= BHHLJEPGJFF.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -198,23 +198,23 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      switchList_.WriteTo(output, _repeated_switchList_codec);
       if (PanelId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(40);
         output.WriteUInt32(PanelId);
       }
-      if (LFAKHBLIMLI != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(LFAKHBLIMLI);
-      }
       if (GroupId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(80);
         output.WriteUInt32(GroupId);
       }
-      if (CPOGNHNAGAF != global::EggLink.DanhengServer.Proto.CAOGEHHDNLI.UpdateReddotNone) {
-        output.WriteRawTag(80);
-        output.WriteEnum((int) CPOGNHNAGAF);
+      if (BHHLJEPGJFF != global::EggLink.DanhengServer.Proto.GEEKLAPJBHM.UpdateReddotNone) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) BHHLJEPGJFF);
       }
+      if (PMIHJFFEOPC != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(PMIHJFFEOPC);
+      }
+      switchList_.WriteTo(output, _repeated_switchList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -225,23 +225,23 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      switchList_.WriteTo(ref output, _repeated_switchList_codec);
       if (PanelId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(40);
         output.WriteUInt32(PanelId);
       }
-      if (LFAKHBLIMLI != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(LFAKHBLIMLI);
-      }
       if (GroupId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(80);
         output.WriteUInt32(GroupId);
       }
-      if (CPOGNHNAGAF != global::EggLink.DanhengServer.Proto.CAOGEHHDNLI.UpdateReddotNone) {
-        output.WriteRawTag(80);
-        output.WriteEnum((int) CPOGNHNAGAF);
+      if (BHHLJEPGJFF != global::EggLink.DanhengServer.Proto.GEEKLAPJBHM.UpdateReddotNone) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) BHHLJEPGJFF);
       }
+      if (PMIHJFFEOPC != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(PMIHJFFEOPC);
+      }
+      switchList_.WriteTo(ref output, _repeated_switchList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -255,15 +255,15 @@ namespace EggLink.DanhengServer.Proto {
       if (GroupId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
       }
-      size += switchList_.CalculateSize(_repeated_switchList_codec);
-      if (CPOGNHNAGAF != global::EggLink.DanhengServer.Proto.CAOGEHHDNLI.UpdateReddotNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CPOGNHNAGAF);
-      }
-      if (LFAKHBLIMLI != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LFAKHBLIMLI);
-      }
       if (PanelId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PanelId);
+      }
+      if (PMIHJFFEOPC != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PMIHJFFEOPC);
+      }
+      size += switchList_.CalculateSize(_repeated_switchList_codec);
+      if (BHHLJEPGJFF != global::EggLink.DanhengServer.Proto.GEEKLAPJBHM.UpdateReddotNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BHHLJEPGJFF);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -280,15 +280,15 @@ namespace EggLink.DanhengServer.Proto {
       if (other.GroupId != 0) {
         GroupId = other.GroupId;
       }
-      switchList_.Add(other.switchList_);
-      if (other.CPOGNHNAGAF != global::EggLink.DanhengServer.Proto.CAOGEHHDNLI.UpdateReddotNone) {
-        CPOGNHNAGAF = other.CPOGNHNAGAF;
-      }
-      if (other.LFAKHBLIMLI != 0) {
-        LFAKHBLIMLI = other.LFAKHBLIMLI;
-      }
       if (other.PanelId != 0) {
         PanelId = other.PanelId;
+      }
+      if (other.PMIHJFFEOPC != 0) {
+        PMIHJFFEOPC = other.PMIHJFFEOPC;
+      }
+      switchList_.Add(other.switchList_);
+      if (other.BHHLJEPGJFF != global::EggLink.DanhengServer.Proto.GEEKLAPJBHM.UpdateReddotNone) {
+        BHHLJEPGJFF = other.BHHLJEPGJFF;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -305,25 +305,25 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10:
-          case 8: {
-            switchList_.AddEntriesFrom(input, _repeated_switchList_codec);
-            break;
-          }
-          case 24: {
+          case 40: {
             PanelId = input.ReadUInt32();
             break;
           }
-          case 40: {
-            LFAKHBLIMLI = input.ReadUInt32();
-            break;
-          }
-          case 64: {
+          case 80: {
             GroupId = input.ReadUInt32();
             break;
           }
-          case 80: {
-            CPOGNHNAGAF = (global::EggLink.DanhengServer.Proto.CAOGEHHDNLI) input.ReadEnum();
+          case 104: {
+            BHHLJEPGJFF = (global::EggLink.DanhengServer.Proto.GEEKLAPJBHM) input.ReadEnum();
+            break;
+          }
+          case 112: {
+            PMIHJFFEOPC = input.ReadUInt32();
+            break;
+          }
+          case 122:
+          case 120: {
+            switchList_.AddEntriesFrom(input, _repeated_switchList_codec);
             break;
           }
         }
@@ -341,25 +341,25 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10:
-          case 8: {
-            switchList_.AddEntriesFrom(ref input, _repeated_switchList_codec);
-            break;
-          }
-          case 24: {
+          case 40: {
             PanelId = input.ReadUInt32();
             break;
           }
-          case 40: {
-            LFAKHBLIMLI = input.ReadUInt32();
-            break;
-          }
-          case 64: {
+          case 80: {
             GroupId = input.ReadUInt32();
             break;
           }
-          case 80: {
-            CPOGNHNAGAF = (global::EggLink.DanhengServer.Proto.CAOGEHHDNLI) input.ReadEnum();
+          case 104: {
+            BHHLJEPGJFF = (global::EggLink.DanhengServer.Proto.GEEKLAPJBHM) input.ReadEnum();
+            break;
+          }
+          case 112: {
+            PMIHJFFEOPC = input.ReadUInt32();
+            break;
+          }
+          case 122:
+          case 120: {
+            switchList_.AddEntriesFrom(ref input, _repeated_switchList_codec);
             break;
           }
         }

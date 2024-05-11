@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRNYWtlRHJpbmtTY1JzcC5wcm90byJICg5NYWtlRHJpbmtTY1JzcBIPCgdp",
-            "c19zdWNjGAcgASgIEg8KB3JldGNvZGUYDSABKA0SFAoMbmV4dF9jaGF0X2lk",
-            "GAogASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "c19zdWNjGA4gASgIEg8KB3JldGNvZGUYCSABKA0SFAoMbmV4dF9jaGF0X2lk",
+            "GAMgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_succ" field.</summary>
-    public const int IsSuccFieldNumber = 7;
+    public const int IsSuccFieldNumber = 14;
     private bool isSucc_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 13;
+    public const int RetcodeFieldNumber = 9;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "next_chat_id" field.</summary>
-    public const int NextChatIdFieldNumber = 10;
+    public const int NextChatIdFieldNumber = 3;
     private uint nextChatId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsSucc != false) {
-        output.WriteRawTag(56);
-        output.WriteBool(IsSucc);
-      }
       if (NextChatId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(24);
         output.WriteUInt32(NextChatId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
+      }
+      if (IsSucc != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(IsSucc);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsSucc != false) {
-        output.WriteRawTag(56);
-        output.WriteBool(IsSucc);
-      }
       if (NextChatId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(24);
         output.WriteUInt32(NextChatId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
+      }
+      if (IsSucc != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(IsSucc);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            IsSucc = input.ReadBool();
-            break;
-          }
-          case 80: {
+          case 24: {
             NextChatId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 72: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            IsSucc = input.ReadBool();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            IsSucc = input.ReadBool();
-            break;
-          }
-          case 80: {
+          case 24: {
             NextChatId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 72: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            IsSucc = input.ReadBool();
             break;
           }
         }

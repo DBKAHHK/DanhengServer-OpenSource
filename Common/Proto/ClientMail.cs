@@ -24,18 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static ClientMailReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChBDbGllbnRNYWlsLnByb3RvGg5NYWlsVHlwZS5wcm90bxoOSXRlbUxpc3Qu",
-            "cHJvdG8i4QEKCkNsaWVudE1haWwSEwoLdGVtcGxhdGVfaWQYDCABKA0SEwoL",
-            "ZXhwaXJlX3RpbWUYBCABKAMSDAoEdGltZRgCIAEoAxIKCgJpZBgDIAEoDRIc",
-            "CgltYWlsX3R5cGUYCCABKA4yCS5NYWlsVHlwZRIPCgdjb250ZW50GAogASgJ",
-            "Eh0KCmF0dGFjaG1lbnQYDyABKAsyCS5JdGVtTGlzdBINCgV0aXRsZRgBIAEo",
-            "CRIRCglwYXJhX2xpc3QYBiADKAkSDgoGc2VuZGVyGAcgASgJEg8KB2lzX3Jl",
-            "YWQYDiABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "ChBDbGllbnRNYWlsLnByb3RvGg5JdGVtTGlzdC5wcm90bxoOTWFpbFR5cGUu",
+            "cHJvdG8i4QEKCkNsaWVudE1haWwSDwoHaXNfcmVhZBgGIAEoCBITCgtleHBp",
+            "cmVfdGltZRgHIAEoAxIMCgR0aW1lGAkgASgDEg0KBXRpdGxlGA4gASgJEg4K",
+            "BnNlbmRlchgFIAEoCRIdCgphdHRhY2htZW50GAIgASgLMgkuSXRlbUxpc3QS",
+            "EwoLdGVtcGxhdGVfaWQYDyABKA0SEQoJcGFyYV9saXN0GAEgAygJEhwKCW1h",
+            "aWxfdHlwZRgKIAEoDjIJLk1haWxUeXBlEg8KB2NvbnRlbnQYCyABKAkSCgoC",
+            "aWQYBCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MailTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.MailTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ClientMail), global::EggLink.DanhengServer.Proto.ClientMail.Parser, new[]{ "TemplateId", "ExpireTime", "Time", "Id", "MailType", "Content", "Attachment", "Title", "ParaList", "Sender", "IsRead" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ClientMail), global::EggLink.DanhengServer.Proto.ClientMail.Parser, new[]{ "IsRead", "ExpireTime", "Time", "Title", "Sender", "Attachment", "TemplateId", "ParaList", "MailType", "Content", "Id" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,17 +77,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ClientMail(ClientMail other) : this() {
-      templateId_ = other.templateId_;
+      isRead_ = other.isRead_;
       expireTime_ = other.expireTime_;
       time_ = other.time_;
-      id_ = other.id_;
+      title_ = other.title_;
+      sender_ = other.sender_;
+      attachment_ = other.attachment_ != null ? other.attachment_.Clone() : null;
+      templateId_ = other.templateId_;
+      paraList_ = other.paraList_.Clone();
       mailType_ = other.mailType_;
       content_ = other.content_;
-      attachment_ = other.attachment_ != null ? other.attachment_.Clone() : null;
-      title_ = other.title_;
-      paraList_ = other.paraList_.Clone();
-      sender_ = other.sender_;
-      isRead_ = other.isRead_;
+      id_ = other.id_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -97,20 +97,20 @@ namespace EggLink.DanhengServer.Proto {
       return new ClientMail(this);
     }
 
-    /// <summary>Field number for the "template_id" field.</summary>
-    public const int TemplateIdFieldNumber = 12;
-    private uint templateId_;
+    /// <summary>Field number for the "is_read" field.</summary>
+    public const int IsReadFieldNumber = 6;
+    private bool isRead_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TemplateId {
-      get { return templateId_; }
+    public bool IsRead {
+      get { return isRead_; }
       set {
-        templateId_ = value;
+        isRead_ = value;
       }
     }
 
     /// <summary>Field number for the "expire_time" field.</summary>
-    public const int ExpireTimeFieldNumber = 4;
+    public const int ExpireTimeFieldNumber = 7;
     private long expireTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "time" field.</summary>
-    public const int TimeFieldNumber = 2;
+    public const int TimeFieldNumber = 9;
     private long time_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -133,20 +133,67 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 3;
-    private uint id_;
+    /// <summary>Field number for the "title" field.</summary>
+    public const int TitleFieldNumber = 14;
+    private string title_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Id {
-      get { return id_; }
+    public string Title {
+      get { return title_; }
       set {
-        id_ = value;
+        title_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
+    /// <summary>Field number for the "sender" field.</summary>
+    public const int SenderFieldNumber = 5;
+    private string sender_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Sender {
+      get { return sender_; }
+      set {
+        sender_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "attachment" field.</summary>
+    public const int AttachmentFieldNumber = 2;
+    private global::EggLink.DanhengServer.Proto.ItemList attachment_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ItemList Attachment {
+      get { return attachment_; }
+      set {
+        attachment_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "template_id" field.</summary>
+    public const int TemplateIdFieldNumber = 15;
+    private uint templateId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint TemplateId {
+      get { return templateId_; }
+      set {
+        templateId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "para_list" field.</summary>
+    public const int ParaListFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_paraList_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> paraList_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ParaList {
+      get { return paraList_; }
+    }
+
     /// <summary>Field number for the "mail_type" field.</summary>
-    public const int MailTypeFieldNumber = 8;
+    public const int MailTypeFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.MailType mailType_ = global::EggLink.DanhengServer.Proto.MailType.Normal;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -158,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "content" field.</summary>
-    public const int ContentFieldNumber = 10;
+    public const int ContentFieldNumber = 11;
     private string content_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -169,62 +216,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "attachment" field.</summary>
-    public const int AttachmentFieldNumber = 15;
-    private global::EggLink.DanhengServer.Proto.ItemList attachment_;
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 4;
+    private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ItemList Attachment {
-      get { return attachment_; }
+    public uint Id {
+      get { return id_; }
       set {
-        attachment_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "title" field.</summary>
-    public const int TitleFieldNumber = 1;
-    private string title_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Title {
-      get { return title_; }
-      set {
-        title_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "para_list" field.</summary>
-    public const int ParaListFieldNumber = 6;
-    private static readonly pb::FieldCodec<string> _repeated_paraList_codec
-        = pb::FieldCodec.ForString(50);
-    private readonly pbc::RepeatedField<string> paraList_ = new pbc::RepeatedField<string>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> ParaList {
-      get { return paraList_; }
-    }
-
-    /// <summary>Field number for the "sender" field.</summary>
-    public const int SenderFieldNumber = 7;
-    private string sender_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Sender {
-      get { return sender_; }
-      set {
-        sender_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "is_read" field.</summary>
-    public const int IsReadFieldNumber = 14;
-    private bool isRead_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsRead {
-      get { return isRead_; }
-      set {
-        isRead_ = value;
+        id_ = value;
       }
     }
 
@@ -243,17 +243,17 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (TemplateId != other.TemplateId) return false;
+      if (IsRead != other.IsRead) return false;
       if (ExpireTime != other.ExpireTime) return false;
       if (Time != other.Time) return false;
-      if (Id != other.Id) return false;
+      if (Title != other.Title) return false;
+      if (Sender != other.Sender) return false;
+      if (!object.Equals(Attachment, other.Attachment)) return false;
+      if (TemplateId != other.TemplateId) return false;
+      if(!paraList_.Equals(other.paraList_)) return false;
       if (MailType != other.MailType) return false;
       if (Content != other.Content) return false;
-      if (!object.Equals(Attachment, other.Attachment)) return false;
-      if (Title != other.Title) return false;
-      if(!paraList_.Equals(other.paraList_)) return false;
-      if (Sender != other.Sender) return false;
-      if (IsRead != other.IsRead) return false;
+      if (Id != other.Id) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -261,17 +261,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (TemplateId != 0) hash ^= TemplateId.GetHashCode();
+      if (IsRead != false) hash ^= IsRead.GetHashCode();
       if (ExpireTime != 0L) hash ^= ExpireTime.GetHashCode();
       if (Time != 0L) hash ^= Time.GetHashCode();
-      if (Id != 0) hash ^= Id.GetHashCode();
+      if (Title.Length != 0) hash ^= Title.GetHashCode();
+      if (Sender.Length != 0) hash ^= Sender.GetHashCode();
+      if (attachment_ != null) hash ^= Attachment.GetHashCode();
+      if (TemplateId != 0) hash ^= TemplateId.GetHashCode();
+      hash ^= paraList_.GetHashCode();
       if (MailType != global::EggLink.DanhengServer.Proto.MailType.Normal) hash ^= MailType.GetHashCode();
       if (Content.Length != 0) hash ^= Content.GetHashCode();
-      if (attachment_ != null) hash ^= Attachment.GetHashCode();
-      if (Title.Length != 0) hash ^= Title.GetHashCode();
-      hash ^= paraList_.GetHashCode();
-      if (Sender.Length != 0) hash ^= Sender.GetHashCode();
-      if (IsRead != false) hash ^= IsRead.GetHashCode();
+      if (Id != 0) hash ^= Id.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -290,46 +290,46 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Title.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Title);
-      }
-      if (Time != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(Time);
+      paraList_.WriteTo(output, _repeated_paraList_codec);
+      if (attachment_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Attachment);
       }
       if (Id != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteUInt32(Id);
       }
-      if (ExpireTime != 0L) {
-        output.WriteRawTag(32);
-        output.WriteInt64(ExpireTime);
-      }
-      paraList_.WriteTo(output, _repeated_paraList_codec);
       if (Sender.Length != 0) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(42);
         output.WriteString(Sender);
       }
+      if (IsRead != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(IsRead);
+      }
+      if (ExpireTime != 0L) {
+        output.WriteRawTag(56);
+        output.WriteInt64(ExpireTime);
+      }
+      if (Time != 0L) {
+        output.WriteRawTag(72);
+        output.WriteInt64(Time);
+      }
       if (MailType != global::EggLink.DanhengServer.Proto.MailType.Normal) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(80);
         output.WriteEnum((int) MailType);
       }
       if (Content.Length != 0) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(90);
         output.WriteString(Content);
       }
+      if (Title.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(Title);
+      }
       if (TemplateId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(120);
         output.WriteUInt32(TemplateId);
-      }
-      if (IsRead != false) {
-        output.WriteRawTag(112);
-        output.WriteBool(IsRead);
-      }
-      if (attachment_ != null) {
-        output.WriteRawTag(122);
-        output.WriteMessage(Attachment);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -341,46 +341,46 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Title.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Title);
-      }
-      if (Time != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(Time);
+      paraList_.WriteTo(ref output, _repeated_paraList_codec);
+      if (attachment_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Attachment);
       }
       if (Id != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteUInt32(Id);
       }
-      if (ExpireTime != 0L) {
-        output.WriteRawTag(32);
-        output.WriteInt64(ExpireTime);
-      }
-      paraList_.WriteTo(ref output, _repeated_paraList_codec);
       if (Sender.Length != 0) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(42);
         output.WriteString(Sender);
       }
+      if (IsRead != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(IsRead);
+      }
+      if (ExpireTime != 0L) {
+        output.WriteRawTag(56);
+        output.WriteInt64(ExpireTime);
+      }
+      if (Time != 0L) {
+        output.WriteRawTag(72);
+        output.WriteInt64(Time);
+      }
       if (MailType != global::EggLink.DanhengServer.Proto.MailType.Normal) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(80);
         output.WriteEnum((int) MailType);
       }
       if (Content.Length != 0) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(90);
         output.WriteString(Content);
       }
+      if (Title.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(Title);
+      }
       if (TemplateId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(120);
         output.WriteUInt32(TemplateId);
-      }
-      if (IsRead != false) {
-        output.WriteRawTag(112);
-        output.WriteBool(IsRead);
-      }
-      if (attachment_ != null) {
-        output.WriteRawTag(122);
-        output.WriteMessage(Attachment);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -392,8 +392,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (TemplateId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TemplateId);
+      if (IsRead != false) {
+        size += 1 + 1;
       }
       if (ExpireTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(ExpireTime);
@@ -401,27 +401,27 @@ namespace EggLink.DanhengServer.Proto {
       if (Time != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Time);
       }
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
+      if (Title.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Title);
       }
+      if (Sender.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Sender);
+      }
+      if (attachment_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Attachment);
+      }
+      if (TemplateId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TemplateId);
+      }
+      size += paraList_.CalculateSize(_repeated_paraList_codec);
       if (MailType != global::EggLink.DanhengServer.Proto.MailType.Normal) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MailType);
       }
       if (Content.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Content);
       }
-      if (attachment_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Attachment);
-      }
-      if (Title.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Title);
-      }
-      size += paraList_.CalculateSize(_repeated_paraList_codec);
-      if (Sender.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Sender);
-      }
-      if (IsRead != false) {
-        size += 1 + 1;
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -435,8 +435,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.TemplateId != 0) {
-        TemplateId = other.TemplateId;
+      if (other.IsRead != false) {
+        IsRead = other.IsRead;
       }
       if (other.ExpireTime != 0L) {
         ExpireTime = other.ExpireTime;
@@ -444,14 +444,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Time != 0L) {
         Time = other.Time;
       }
-      if (other.Id != 0) {
-        Id = other.Id;
+      if (other.Title.Length != 0) {
+        Title = other.Title;
       }
-      if (other.MailType != global::EggLink.DanhengServer.Proto.MailType.Normal) {
-        MailType = other.MailType;
-      }
-      if (other.Content.Length != 0) {
-        Content = other.Content;
+      if (other.Sender.Length != 0) {
+        Sender = other.Sender;
       }
       if (other.attachment_ != null) {
         if (attachment_ == null) {
@@ -459,15 +456,18 @@ namespace EggLink.DanhengServer.Proto {
         }
         Attachment.MergeFrom(other.Attachment);
       }
-      if (other.Title.Length != 0) {
-        Title = other.Title;
+      if (other.TemplateId != 0) {
+        TemplateId = other.TemplateId;
       }
       paraList_.Add(other.paraList_);
-      if (other.Sender.Length != 0) {
-        Sender = other.Sender;
+      if (other.MailType != global::EggLink.DanhengServer.Proto.MailType.Normal) {
+        MailType = other.MailType;
       }
-      if (other.IsRead != false) {
-        IsRead = other.IsRead;
+      if (other.Content.Length != 0) {
+        Content = other.Content;
+      }
+      if (other.Id != 0) {
+        Id = other.Id;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -485,50 +485,50 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Title = input.ReadString();
-            break;
-          }
-          case 16: {
-            Time = input.ReadInt64();
-            break;
-          }
-          case 24: {
-            Id = input.ReadUInt32();
-            break;
-          }
-          case 32: {
-            ExpireTime = input.ReadInt64();
-            break;
-          }
-          case 50: {
             paraList_.AddEntriesFrom(input, _repeated_paraList_codec);
             break;
           }
-          case 58: {
-            Sender = input.ReadString();
-            break;
-          }
-          case 64: {
-            MailType = (global::EggLink.DanhengServer.Proto.MailType) input.ReadEnum();
-            break;
-          }
-          case 82: {
-            Content = input.ReadString();
-            break;
-          }
-          case 96: {
-            TemplateId = input.ReadUInt32();
-            break;
-          }
-          case 112: {
-            IsRead = input.ReadBool();
-            break;
-          }
-          case 122: {
+          case 18: {
             if (attachment_ == null) {
               Attachment = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Attachment);
+            break;
+          }
+          case 32: {
+            Id = input.ReadUInt32();
+            break;
+          }
+          case 42: {
+            Sender = input.ReadString();
+            break;
+          }
+          case 48: {
+            IsRead = input.ReadBool();
+            break;
+          }
+          case 56: {
+            ExpireTime = input.ReadInt64();
+            break;
+          }
+          case 72: {
+            Time = input.ReadInt64();
+            break;
+          }
+          case 80: {
+            MailType = (global::EggLink.DanhengServer.Proto.MailType) input.ReadEnum();
+            break;
+          }
+          case 90: {
+            Content = input.ReadString();
+            break;
+          }
+          case 114: {
+            Title = input.ReadString();
+            break;
+          }
+          case 120: {
+            TemplateId = input.ReadUInt32();
             break;
           }
         }
@@ -547,50 +547,50 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            Title = input.ReadString();
-            break;
-          }
-          case 16: {
-            Time = input.ReadInt64();
-            break;
-          }
-          case 24: {
-            Id = input.ReadUInt32();
-            break;
-          }
-          case 32: {
-            ExpireTime = input.ReadInt64();
-            break;
-          }
-          case 50: {
             paraList_.AddEntriesFrom(ref input, _repeated_paraList_codec);
             break;
           }
-          case 58: {
-            Sender = input.ReadString();
-            break;
-          }
-          case 64: {
-            MailType = (global::EggLink.DanhengServer.Proto.MailType) input.ReadEnum();
-            break;
-          }
-          case 82: {
-            Content = input.ReadString();
-            break;
-          }
-          case 96: {
-            TemplateId = input.ReadUInt32();
-            break;
-          }
-          case 112: {
-            IsRead = input.ReadBool();
-            break;
-          }
-          case 122: {
+          case 18: {
             if (attachment_ == null) {
               Attachment = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Attachment);
+            break;
+          }
+          case 32: {
+            Id = input.ReadUInt32();
+            break;
+          }
+          case 42: {
+            Sender = input.ReadString();
+            break;
+          }
+          case 48: {
+            IsRead = input.ReadBool();
+            break;
+          }
+          case 56: {
+            ExpireTime = input.ReadInt64();
+            break;
+          }
+          case 72: {
+            Time = input.ReadInt64();
+            break;
+          }
+          case 80: {
+            MailType = (global::EggLink.DanhengServer.Proto.MailType) input.ReadEnum();
+            break;
+          }
+          case 90: {
+            Content = input.ReadString();
+            break;
+          }
+          case 114: {
+            Title = input.ReadString();
+            break;
+          }
+          case 120: {
+            TemplateId = input.ReadUInt32();
             break;
           }
         }

@@ -92,7 +92,7 @@ namespace EggLink.DanhengServer.Data.Excel
             {
                 case MissionTakeTypeEnum.MultiSequence:
 
-                    data.MainMissionInfo.TryGetValue(Value, out var value);
+                    var value = data.GetMainMissionStatus(Value);
                     return value == MissionPhaseEnum.Finish;
                 default:
                     return false;

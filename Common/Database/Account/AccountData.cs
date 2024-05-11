@@ -5,7 +5,7 @@ using SqlSugar;
 namespace EggLink.DanhengServer.Database.Account
 {
     [SugarTable("Account")]
-    public class AccountData() : BaseDatabaseData
+    public class AccountData() : BaseDatabaseDataHelper
     {
         public string? Username { get; set; }
 

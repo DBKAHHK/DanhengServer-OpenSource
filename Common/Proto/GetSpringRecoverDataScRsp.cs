@@ -27,8 +27,8 @@ namespace EggLink.DanhengServer.Proto {
             "Ch9HZXRTcHJpbmdSZWNvdmVyRGF0YVNjUnNwLnByb3RvGhJIZWFsUG9vbElu",
             "Zm8ucHJvdG8aGVNwcmluZ1JlY292ZXJDb25maWcucHJvdG8iiAEKGUdldFNw",
             "cmluZ1JlY292ZXJEYXRhU2NSc3ASMwoVc3ByaW5nX3JlY292ZXJfY29uZmln",
-            "GAQgASgLMhQuU3ByaW5nUmVjb3ZlckNvbmZpZxIPCgdyZXRjb2RlGAkgASgN",
-            "EiUKDmhlYWxfcG9vbF9pbmZvGAUgASgLMg0uSGVhbFBvb2xJbmZvQh6qAhtF",
+            "GAMgASgLMhQuU3ByaW5nUmVjb3ZlckNvbmZpZxIPCgdyZXRjb2RlGA8gASgN",
+            "EiUKDmhlYWxfcG9vbF9pbmZvGAYgASgLMg0uSGVhbFBvb2xJbmZvQh6qAhtF",
             "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HealPoolInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SpringRecoverConfigReflection.Descriptor, },
@@ -88,7 +88,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "spring_recover_config" field.</summary>
-    public const int SpringRecoverConfigFieldNumber = 4;
+    public const int SpringRecoverConfigFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.SpringRecoverConfig springRecoverConfig_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,7 +100,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 9;
+    public const int RetcodeFieldNumber = 15;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "heal_pool_info" field.</summary>
-    public const int HealPoolInfoFieldNumber = 5;
+    public const int HealPoolInfoFieldNumber = 6;
     private global::EggLink.DanhengServer.Proto.HealPoolInfo healPoolInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -170,15 +170,15 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (springRecoverConfig_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(26);
         output.WriteMessage(SpringRecoverConfig);
       }
       if (healPoolInfo_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(50);
         output.WriteMessage(HealPoolInfo);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(120);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -192,15 +192,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (springRecoverConfig_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(26);
         output.WriteMessage(SpringRecoverConfig);
       }
       if (healPoolInfo_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(50);
         output.WriteMessage(HealPoolInfo);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(120);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -264,21 +264,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
+          case 26: {
             if (springRecoverConfig_ == null) {
               SpringRecoverConfig = new global::EggLink.DanhengServer.Proto.SpringRecoverConfig();
             }
             input.ReadMessage(SpringRecoverConfig);
             break;
           }
-          case 42: {
+          case 50: {
             if (healPoolInfo_ == null) {
               HealPoolInfo = new global::EggLink.DanhengServer.Proto.HealPoolInfo();
             }
             input.ReadMessage(HealPoolInfo);
             break;
           }
-          case 72: {
+          case 120: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -297,21 +297,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
+          case 26: {
             if (springRecoverConfig_ == null) {
               SpringRecoverConfig = new global::EggLink.DanhengServer.Proto.SpringRecoverConfig();
             }
             input.ReadMessage(SpringRecoverConfig);
             break;
           }
-          case 42: {
+          case 50: {
             if (healPoolInfo_ == null) {
               HealPoolInfo = new global::EggLink.DanhengServer.Proto.HealPoolInfo();
             }
             input.ReadMessage(HealPoolInfo);
             break;
           }
-          case 72: {
+          case 120: {
             Retcode = input.ReadUInt32();
             break;
           }

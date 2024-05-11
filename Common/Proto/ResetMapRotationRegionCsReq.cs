@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static ResetMapRotationRegionCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFSZXNldE1hcFJvdGF0aW9uUmVnaW9uQ3NSZXEucHJvdG8aEU5DUENPS0NJ",
-            "Qk9GLnByb3RvGhBNb3Rpb25JbmZvLnByb3RvIloKG1Jlc2V0TWFwUm90YXRp",
-            "b25SZWdpb25Dc1JlcRIeCghtYXBfaW5mbxgJIAEoCzIMLk5DUENPS0NJQk9G",
-            "EhsKBm1vdGlvbhgHIAEoCzILLk1vdGlvbkluZm9CHqoCG0VnZ0xpbmsuRGFu",
+            "CiFSZXNldE1hcFJvdGF0aW9uUmVnaW9uQ3NSZXEucHJvdG8aEE1vdGlvbklu",
+            "Zm8ucHJvdG8aEU9DTkxCQUdKT05QLnByb3RvIloKG1Jlc2V0TWFwUm90YXRp",
+            "b25SZWdpb25Dc1JlcRIeCghtYXBfaW5mbxgLIAEoCzIMLk9DTkxCQUdKT05Q",
+            "EhsKBm1vdGlvbhgKIAEoCzILLk1vdGlvbkluZm9CHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NCPCOKCIBOFReflection.Descriptor, global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.OCNLBAGJONPReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ResetMapRotationRegionCsReq), global::EggLink.DanhengServer.Proto.ResetMapRotationRegionCsReq.Parser, new[]{ "MapInfo", "Motion" }, null, null, null, null)
           }));
@@ -86,11 +86,11 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "map_info" field.</summary>
-    public const int MapInfoFieldNumber = 9;
-    private global::EggLink.DanhengServer.Proto.NCPCOKCIBOF mapInfo_;
+    public const int MapInfoFieldNumber = 11;
+    private global::EggLink.DanhengServer.Proto.OCNLBAGJONP mapInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.NCPCOKCIBOF MapInfo {
+    public global::EggLink.DanhengServer.Proto.OCNLBAGJONP MapInfo {
       get { return mapInfo_; }
       set {
         mapInfo_ = value;
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "motion" field.</summary>
-    public const int MotionFieldNumber = 7;
+    public const int MotionFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.MotionInfo motion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -154,11 +154,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (motion_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(82);
         output.WriteMessage(Motion);
       }
       if (mapInfo_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(90);
         output.WriteMessage(MapInfo);
       }
       if (_unknownFields != null) {
@@ -172,11 +172,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (motion_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(82);
         output.WriteMessage(Motion);
       }
       if (mapInfo_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(90);
         output.WriteMessage(MapInfo);
       }
       if (_unknownFields != null) {
@@ -209,7 +209,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.mapInfo_ != null) {
         if (mapInfo_ == null) {
-          MapInfo = new global::EggLink.DanhengServer.Proto.NCPCOKCIBOF();
+          MapInfo = new global::EggLink.DanhengServer.Proto.OCNLBAGJONP();
         }
         MapInfo.MergeFrom(other.MapInfo);
       }
@@ -234,16 +234,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58: {
+          case 82: {
             if (motion_ == null) {
               Motion = new global::EggLink.DanhengServer.Proto.MotionInfo();
             }
             input.ReadMessage(Motion);
             break;
           }
-          case 74: {
+          case 90: {
             if (mapInfo_ == null) {
-              MapInfo = new global::EggLink.DanhengServer.Proto.NCPCOKCIBOF();
+              MapInfo = new global::EggLink.DanhengServer.Proto.OCNLBAGJONP();
             }
             input.ReadMessage(MapInfo);
             break;
@@ -263,16 +263,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58: {
+          case 82: {
             if (motion_ == null) {
               Motion = new global::EggLink.DanhengServer.Proto.MotionInfo();
             }
             input.ReadMessage(Motion);
             break;
           }
-          case 74: {
+          case 90: {
             if (mapInfo_ == null) {
-              MapInfo = new global::EggLink.DanhengServer.Proto.NCPCOKCIBOF();
+              MapInfo = new global::EggLink.DanhengServer.Proto.OCNLBAGJONP();
             }
             input.ReadMessage(MapInfo);
             break;

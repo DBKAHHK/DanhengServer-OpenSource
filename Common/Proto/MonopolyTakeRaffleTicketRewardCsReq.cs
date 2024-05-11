@@ -26,12 +26,12 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CilNb25vcG9seVRha2VSYWZmbGVUaWNrZXRSZXdhcmRDc1JlcS5wcm90byJL",
             "CiNNb25vcG9seVRha2VSYWZmbGVUaWNrZXRSZXdhcmRDc1JlcRIPCgdwb29s",
-            "X2lkGAUgASgNEhMKC0NJS0dMUEhNSUVFGAggASgEQh6qAhtFZ2dMaW5rLkRh",
+            "X2lkGAQgASgNEhMKC0RMR0JFTkpDTUlBGAkgASgEQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonopolyTakeRaffleTicketRewardCsReq), global::EggLink.DanhengServer.Proto.MonopolyTakeRaffleTicketRewardCsReq.Parser, new[]{ "PoolId", "CIKGLPHMIEE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonopolyTakeRaffleTicketRewardCsReq), global::EggLink.DanhengServer.Proto.MonopolyTakeRaffleTicketRewardCsReq.Parser, new[]{ "PoolId", "DLGBENJCMIA" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MonopolyTakeRaffleTicketRewardCsReq(MonopolyTakeRaffleTicketRewardCsReq other) : this() {
       poolId_ = other.poolId_;
-      cIKGLPHMIEE_ = other.cIKGLPHMIEE_;
+      dLGBENJCMIA_ = other.dLGBENJCMIA_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "pool_id" field.</summary>
-    public const int PoolIdFieldNumber = 5;
+    public const int PoolIdFieldNumber = 4;
     private uint poolId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CIKGLPHMIEE" field.</summary>
-    public const int CIKGLPHMIEEFieldNumber = 8;
-    private ulong cIKGLPHMIEE_;
+    /// <summary>Field number for the "DLGBENJCMIA" field.</summary>
+    public const int DLGBENJCMIAFieldNumber = 9;
+    private ulong dLGBENJCMIA_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong CIKGLPHMIEE {
-      get { return cIKGLPHMIEE_; }
+    public ulong DLGBENJCMIA {
+      get { return dLGBENJCMIA_; }
       set {
-        cIKGLPHMIEE_ = value;
+        dLGBENJCMIA_ = value;
       }
     }
 
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (PoolId != other.PoolId) return false;
-      if (CIKGLPHMIEE != other.CIKGLPHMIEE) return false;
+      if (DLGBENJCMIA != other.DLGBENJCMIA) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (PoolId != 0) hash ^= PoolId.GetHashCode();
-      if (CIKGLPHMIEE != 0UL) hash ^= CIKGLPHMIEE.GetHashCode();
+      if (DLGBENJCMIA != 0UL) hash ^= DLGBENJCMIA.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,12 +153,12 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (PoolId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteUInt32(PoolId);
       }
-      if (CIKGLPHMIEE != 0UL) {
-        output.WriteRawTag(64);
-        output.WriteUInt64(CIKGLPHMIEE);
+      if (DLGBENJCMIA != 0UL) {
+        output.WriteRawTag(72);
+        output.WriteUInt64(DLGBENJCMIA);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,12 +171,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PoolId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteUInt32(PoolId);
       }
-      if (CIKGLPHMIEE != 0UL) {
-        output.WriteRawTag(64);
-        output.WriteUInt64(CIKGLPHMIEE);
+      if (DLGBENJCMIA != 0UL) {
+        output.WriteRawTag(72);
+        output.WriteUInt64(DLGBENJCMIA);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -191,8 +191,8 @@ namespace EggLink.DanhengServer.Proto {
       if (PoolId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PoolId);
       }
-      if (CIKGLPHMIEE != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(CIKGLPHMIEE);
+      if (DLGBENJCMIA != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(DLGBENJCMIA);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -209,8 +209,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.PoolId != 0) {
         PoolId = other.PoolId;
       }
-      if (other.CIKGLPHMIEE != 0UL) {
-        CIKGLPHMIEE = other.CIKGLPHMIEE;
+      if (other.DLGBENJCMIA != 0UL) {
+        DLGBENJCMIA = other.DLGBENJCMIA;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 32: {
             PoolId = input.ReadUInt32();
             break;
           }
-          case 64: {
-            CIKGLPHMIEE = input.ReadUInt64();
+          case 72: {
+            DLGBENJCMIA = input.ReadUInt64();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 32: {
             PoolId = input.ReadUInt32();
             break;
           }
-          case 64: {
-            CIKGLPHMIEE = input.ReadUInt64();
+          case 72: {
+            DLGBENJCMIA = input.ReadUInt64();
             break;
           }
         }

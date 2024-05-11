@@ -24,13 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static ChessRogueNousSubStoryInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiBDaGVzc1JvZ3VlTm91c1N1YlN0b3J5SW5mby5wcm90byIyChpDaGVzc1Jv",
-            "Z3VlTm91c1N1YlN0b3J5SW5mbxIUCgxzdWJfc3RvcnlfaWQYCCABKA1CHqoC",
-            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "CiBDaGVzc1JvZ3VlTm91c1N1YlN0b3J5SW5mby5wcm90byI+ChpDaGVzc1Jv",
+            "Z3VlTm91c1N1YlN0b3J5SW5mbxIgChhjaGVzc19yb2d1ZV9zdWJfc3Rvcnlf",
+            "aWQYBSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueNousSubStoryInfo), global::EggLink.DanhengServer.Proto.ChessRogueNousSubStoryInfo.Parser, new[]{ "SubStoryId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueNousSubStoryInfo), global::EggLink.DanhengServer.Proto.ChessRogueNousSubStoryInfo.Parser, new[]{ "ChessRogueSubStoryId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueNousSubStoryInfo(ChessRogueNousSubStoryInfo other) : this() {
-      subStoryId_ = other.subStoryId_;
+      chessRogueSubStoryId_ = other.chessRogueSubStoryId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new ChessRogueNousSubStoryInfo(this);
     }
 
-    /// <summary>Field number for the "sub_story_id" field.</summary>
-    public const int SubStoryIdFieldNumber = 8;
-    private uint subStoryId_;
+    /// <summary>Field number for the "chess_rogue_sub_story_id" field.</summary>
+    public const int ChessRogueSubStoryIdFieldNumber = 5;
+    private uint chessRogueSubStoryId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SubStoryId {
-      get { return subStoryId_; }
+    public uint ChessRogueSubStoryId {
+      get { return chessRogueSubStoryId_; }
       set {
-        subStoryId_ = value;
+        chessRogueSubStoryId_ = value;
       }
     }
 
@@ -109,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (SubStoryId != other.SubStoryId) return false;
+      if (ChessRogueSubStoryId != other.ChessRogueSubStoryId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +118,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (SubStoryId != 0) hash ^= SubStoryId.GetHashCode();
+      if (ChessRogueSubStoryId != 0) hash ^= ChessRogueSubStoryId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (SubStoryId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(SubStoryId);
+      if (ChessRogueSubStoryId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(ChessRogueSubStoryId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -150,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (SubStoryId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(SubStoryId);
+      if (ChessRogueSubStoryId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(ChessRogueSubStoryId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -164,8 +165,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (SubStoryId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SubStoryId);
+      if (ChessRogueSubStoryId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChessRogueSubStoryId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -179,8 +180,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.SubStoryId != 0) {
-        SubStoryId = other.SubStoryId;
+      if (other.ChessRogueSubStoryId != 0) {
+        ChessRogueSubStoryId = other.ChessRogueSubStoryId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -197,8 +198,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
-            SubStoryId = input.ReadUInt32();
+          case 40: {
+            ChessRogueSubStoryId = input.ReadUInt32();
             break;
           }
         }
@@ -216,8 +217,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
-            SubStoryId = input.ReadUInt32();
+          case 40: {
+            ChessRogueSubStoryId = input.ReadUInt32();
             break;
           }
         }

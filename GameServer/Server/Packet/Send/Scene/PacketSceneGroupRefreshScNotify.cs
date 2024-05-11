@@ -38,7 +38,7 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Scene
                 };
                 group.RefreshEntity.Add(new SceneEntityRefreshInfo()
                 {
-                    DelEntity = (uint)e.EntityID
+                    DeleteEntity = (uint)e.EntityID
                 });
 
                 if (refreshInfo.TryGetValue(e.GroupID, out GroupRefreshInfo? value))

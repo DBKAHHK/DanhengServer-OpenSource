@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiRHZXRTb2NpYWxFdmVudFNlcnZlckNhY2hlU2NSc3AucHJvdG8aHFNvY2lh",
             "bEV2ZW50U2VydmVyQ2FjaGUucHJvdG8ibQoeR2V0U29jaWFsRXZlbnRTZXJ2",
-            "ZXJDYWNoZVNjUnNwEjoKGXNvY2lhbF9ldmVudF9zZXJ2ZXJfY2FjaGUYBSAD",
-            "KAsyFy5Tb2NpYWxFdmVudFNlcnZlckNhY2hlEg8KB3JldGNvZGUYDCABKA1C",
+            "ZXJDYWNoZVNjUnNwEg8KB3JldGNvZGUYCCABKA0SOgoZc29jaWFsX2V2ZW50",
+            "X3NlcnZlcl9jYWNoZRgBIAMoCzIXLlNvY2lhbEV2ZW50U2VydmVyQ2FjaGVC",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SocialEventServerCacheReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetSocialEventServerCacheScRsp), global::EggLink.DanhengServer.Proto.GetSocialEventServerCacheScRsp.Parser, new[]{ "SocialEventServerCache", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetSocialEventServerCacheScRsp), global::EggLink.DanhengServer.Proto.GetSocialEventServerCacheScRsp.Parser, new[]{ "Retcode", "SocialEventServerCache" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetSocialEventServerCacheScRsp(GetSocialEventServerCacheScRsp other) : this() {
-      socialEventServerCache_ = other.socialEventServerCache_.Clone();
       retcode_ = other.retcode_;
+      socialEventServerCache_ = other.socialEventServerCache_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,19 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new GetSocialEventServerCacheScRsp(this);
     }
 
-    /// <summary>Field number for the "social_event_server_cache" field.</summary>
-    public const int SocialEventServerCacheFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.SocialEventServerCache> _repeated_socialEventServerCache_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.SocialEventServerCache.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SocialEventServerCache> socialEventServerCache_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SocialEventServerCache>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SocialEventServerCache> SocialEventServerCache {
-      get { return socialEventServerCache_; }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 12;
+    public const int RetcodeFieldNumber = 8;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,6 +95,17 @@ namespace EggLink.DanhengServer.Proto {
       set {
         retcode_ = value;
       }
+    }
+
+    /// <summary>Field number for the "social_event_server_cache" field.</summary>
+    public const int SocialEventServerCacheFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.SocialEventServerCache> _repeated_socialEventServerCache_codec
+        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.SocialEventServerCache.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SocialEventServerCache> socialEventServerCache_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SocialEventServerCache>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SocialEventServerCache> SocialEventServerCache {
+      get { return socialEventServerCache_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!socialEventServerCache_.Equals(other.socialEventServerCache_)) return false;
       if (Retcode != other.Retcode) return false;
+      if(!socialEventServerCache_.Equals(other.socialEventServerCache_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= socialEventServerCache_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      hash ^= socialEventServerCache_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -154,7 +154,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       socialEventServerCache_.WriteTo(output, _repeated_socialEventServerCache_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -169,7 +169,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       socialEventServerCache_.WriteTo(ref output, _repeated_socialEventServerCache_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -182,10 +182,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += socialEventServerCache_.CalculateSize(_repeated_socialEventServerCache_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
+      size += socialEventServerCache_.CalculateSize(_repeated_socialEventServerCache_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -198,10 +198,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      socialEventServerCache_.Add(other.socialEventServerCache_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
+      socialEventServerCache_.Add(other.socialEventServerCache_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -217,11 +217,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
+          case 10: {
             socialEventServerCache_.AddEntriesFrom(input, _repeated_socialEventServerCache_codec);
             break;
           }
-          case 96: {
+          case 64: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -240,11 +240,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
+          case 10: {
             socialEventServerCache_.AddEntriesFrom(ref input, _repeated_socialEventServerCache_codec);
             break;
           }
-          case 96: {
+          case 64: {
             Retcode = input.ReadUInt32();
             break;
           }

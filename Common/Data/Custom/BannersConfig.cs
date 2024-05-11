@@ -148,9 +148,9 @@ namespace EggLink.DanhengServer.Data.Custom
                 info.PrizeItemList.AddRange(purpleAvatar.Select(id => (uint)id));
                 info.PrizeItemList.AddRange(goldWeapon.Select(id => (uint)id));
                 info.PrizeItemList.AddRange(purpleWeapon.Select(id => (uint)id));
-                info.GFKJABKCLEL = new()
+                info.KEPNKIIHNNN = new()
                 {
-                    IsClaimed = true  // TODO: Implement this
+                    IFABBNPKEOM = true  // TODO: Implement this
                 };
             } 
             else

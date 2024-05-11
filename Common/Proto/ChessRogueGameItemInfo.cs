@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxDaGVzc1JvZ3VlR2FtZUl0ZW1JbmZvLnByb3RvIoABChZDaGVzc1JvZ3Vl",
-            "R2FtZUl0ZW1JbmZvEjYKCGl0ZW1fbWFwGA0gAygLMiQuQ2hlc3NSb2d1ZUdh",
+            "R2FtZUl0ZW1JbmZvEjYKCGl0ZW1fbWFwGAQgAygLMiQuQ2hlc3NSb2d1ZUdh",
             "bWVJdGVtSW5mby5JdGVtTWFwRW50cnkaLgoMSXRlbU1hcEVudHJ5EgsKA2tl",
             "eRgBIAEoDRINCgV2YWx1ZRgCIAEoDToCOAFCHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "item_map" field.</summary>
-    public const int ItemMapFieldNumber = 13;
+    public const int ItemMapFieldNumber = 4;
     private static readonly pbc::MapField<uint, uint>.Codec _map_itemMap_codec
-        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 106);
+        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 34);
     private readonly pbc::MapField<uint, uint> itemMap_ = new pbc::MapField<uint, uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 106: {
+          case 34: {
             itemMap_.AddEntriesFrom(input, _map_itemMap_codec);
             break;
           }
@@ -207,7 +207,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 106: {
+          case 34: {
             itemMap_.AddEntriesFrom(ref input, _map_itemMap_codec);
             break;
           }

@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static MaterialReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg5NYXRlcmlhbC5wcm90byI5CghNYXRlcmlhbBILCgN0aWQYAiABKA0SCwoD",
-            "bnVtGAYgASgNEhMKC2V4cGlyZV90aW1lGAogASgEQh6qAhtFZ2dMaW5rLkRh",
+            "Cg5NYXRlcmlhbC5wcm90byI5CghNYXRlcmlhbBILCgN0aWQYDCABKA0SCwoD",
+            "bnVtGA8gASgNEhMKC2V4cGlyZV90aW1lGAUgASgEQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "tid" field.</summary>
-    public const int TidFieldNumber = 2;
+    public const int TidFieldNumber = 12;
     private uint tid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "num" field.</summary>
-    public const int NumFieldNumber = 6;
+    public const int NumFieldNumber = 15;
     private uint num_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "expire_time" field.</summary>
-    public const int ExpireTimeFieldNumber = 10;
+    public const int ExpireTimeFieldNumber = 5;
     private ulong expireTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,17 +166,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (ExpireTime != 0UL) {
+        output.WriteRawTag(40);
+        output.WriteUInt64(ExpireTime);
+      }
       if (Tid != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(96);
         output.WriteUInt32(Tid);
       }
       if (Num != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(120);
         output.WriteUInt32(Num);
-      }
-      if (ExpireTime != 0UL) {
-        output.WriteRawTag(80);
-        output.WriteUInt64(ExpireTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -188,17 +188,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ExpireTime != 0UL) {
+        output.WriteRawTag(40);
+        output.WriteUInt64(ExpireTime);
+      }
       if (Tid != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(96);
         output.WriteUInt32(Tid);
       }
       if (Num != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(120);
         output.WriteUInt32(Num);
-      }
-      if (ExpireTime != 0UL) {
-        output.WriteRawTag(80);
-        output.WriteUInt64(ExpireTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 40: {
+            ExpireTime = input.ReadUInt64();
+            break;
+          }
+          case 96: {
             Tid = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 120: {
             Num = input.ReadUInt32();
-            break;
-          }
-          case 80: {
-            ExpireTime = input.ReadUInt64();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 40: {
+            ExpireTime = input.ReadUInt64();
+            break;
+          }
+          case 96: {
             Tid = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 120: {
             Num = input.ReadUInt32();
-            break;
-          }
-          case 80: {
-            ExpireTime = input.ReadUInt64();
             break;
           }
         }

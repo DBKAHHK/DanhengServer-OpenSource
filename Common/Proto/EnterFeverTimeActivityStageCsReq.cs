@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static EnterFeverTimeActivityStageCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiZFbnRlckZldmVyVGltZUFjdGl2aXR5U3RhZ2VDc1JlcS5wcm90bxoRTkdL",
-            "QkpNRE9KR1AucHJvdG8ikAEKIEVudGVyRmV2ZXJUaW1lQWN0aXZpdHlTdGFn",
-            "ZUNzUmVxEh4KFmZldmVyX3RpbWVfc2Vjb25kX2J1ZmYYDSABKA0SIQoLYXZh",
-            "dGFyX2xpc3QYCSADKAsyDC5OR0tCSk1ET0pHUBIdChVmZXZlcl90aW1lX2Zp",
-            "cnN0X2J1ZmYYBCABKA0SCgoCaWQYCiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "CiZFbnRlckZldmVyVGltZUFjdGl2aXR5U3RhZ2VDc1JlcS5wcm90bxoRRkdP",
+            "SktOS0NQSVAucHJvdG8ikAEKIEVudGVyRmV2ZXJUaW1lQWN0aXZpdHlTdGFn",
+            "ZUNzUmVxEiEKC2F2YXRhcl9saXN0GAYgAygLMgwuRkdPSktOS0NQSVASCgoC",
+            "aWQYDiABKA0SHgoWZmV2ZXJfdGltZV9zZWNvbmRfYnVmZhgCIAEoDRIdChVm",
+            "ZXZlcl90aW1lX2ZpcnN0X2J1ZmYYDyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NGKBJMDOJGPReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FGOJKNKCPIPReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EnterFeverTimeActivityStageCsReq), global::EggLink.DanhengServer.Proto.EnterFeverTimeActivityStageCsReq.Parser, new[]{ "FeverTimeSecondBuff", "AvatarList", "FeverTimeFirstBuff", "Id" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EnterFeverTimeActivityStageCsReq), global::EggLink.DanhengServer.Proto.EnterFeverTimeActivityStageCsReq.Parser, new[]{ "AvatarList", "Id", "FeverTimeSecondBuff", "FeverTimeFirstBuff" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,10 +75,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EnterFeverTimeActivityStageCsReq(EnterFeverTimeActivityStageCsReq other) : this() {
-      feverTimeSecondBuff_ = other.feverTimeSecondBuff_;
       avatarList_ = other.avatarList_.Clone();
-      feverTimeFirstBuff_ = other.feverTimeFirstBuff_;
       id_ = other.id_;
+      feverTimeSecondBuff_ = other.feverTimeSecondBuff_;
+      feverTimeFirstBuff_ = other.feverTimeFirstBuff_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,8 +88,31 @@ namespace EggLink.DanhengServer.Proto {
       return new EnterFeverTimeActivityStageCsReq(this);
     }
 
+    /// <summary>Field number for the "avatar_list" field.</summary>
+    public const int AvatarListFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.FGOJKNKCPIP> _repeated_avatarList_codec
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.FGOJKNKCPIP.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FGOJKNKCPIP> avatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FGOJKNKCPIP>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FGOJKNKCPIP> AvatarList {
+      get { return avatarList_; }
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 14;
+    private uint id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Id {
+      get { return id_; }
+      set {
+        id_ = value;
+      }
+    }
+
     /// <summary>Field number for the "fever_time_second_buff" field.</summary>
-    public const int FeverTimeSecondBuffFieldNumber = 13;
+    public const int FeverTimeSecondBuffFieldNumber = 2;
     private uint feverTimeSecondBuff_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,19 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "avatar_list" field.</summary>
-    public const int AvatarListFieldNumber = 9;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.NGKBJMDOJGP> _repeated_avatarList_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.NGKBJMDOJGP.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NGKBJMDOJGP> avatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NGKBJMDOJGP>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NGKBJMDOJGP> AvatarList {
-      get { return avatarList_; }
-    }
-
     /// <summary>Field number for the "fever_time_first_buff" field.</summary>
-    public const int FeverTimeFirstBuffFieldNumber = 4;
+    public const int FeverTimeFirstBuffFieldNumber = 15;
     private uint feverTimeFirstBuff_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -120,18 +132,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return feverTimeFirstBuff_; }
       set {
         feverTimeFirstBuff_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 10;
-    private uint id_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Id {
-      get { return id_; }
-      set {
-        id_ = value;
       }
     }
 
@@ -150,10 +150,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FeverTimeSecondBuff != other.FeverTimeSecondBuff) return false;
       if(!avatarList_.Equals(other.avatarList_)) return false;
-      if (FeverTimeFirstBuff != other.FeverTimeFirstBuff) return false;
       if (Id != other.Id) return false;
+      if (FeverTimeSecondBuff != other.FeverTimeSecondBuff) return false;
+      if (FeverTimeFirstBuff != other.FeverTimeFirstBuff) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,10 +161,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (FeverTimeSecondBuff != 0) hash ^= FeverTimeSecondBuff.GetHashCode();
       hash ^= avatarList_.GetHashCode();
-      if (FeverTimeFirstBuff != 0) hash ^= FeverTimeFirstBuff.GetHashCode();
       if (Id != 0) hash ^= Id.GetHashCode();
+      if (FeverTimeSecondBuff != 0) hash ^= FeverTimeSecondBuff.GetHashCode();
+      if (FeverTimeFirstBuff != 0) hash ^= FeverTimeFirstBuff.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,18 +183,18 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FeverTimeFirstBuff != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(FeverTimeFirstBuff);
+      if (FeverTimeSecondBuff != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(FeverTimeSecondBuff);
       }
       avatarList_.WriteTo(output, _repeated_avatarList_codec);
       if (Id != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(112);
         output.WriteUInt32(Id);
       }
-      if (FeverTimeSecondBuff != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(FeverTimeSecondBuff);
+      if (FeverTimeFirstBuff != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(FeverTimeFirstBuff);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -206,18 +206,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FeverTimeFirstBuff != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(FeverTimeFirstBuff);
+      if (FeverTimeSecondBuff != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(FeverTimeSecondBuff);
       }
       avatarList_.WriteTo(ref output, _repeated_avatarList_codec);
       if (Id != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(112);
         output.WriteUInt32(Id);
       }
-      if (FeverTimeSecondBuff != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(FeverTimeSecondBuff);
+      if (FeverTimeFirstBuff != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(FeverTimeFirstBuff);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -229,15 +229,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += avatarList_.CalculateSize(_repeated_avatarList_codec);
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
+      }
       if (FeverTimeSecondBuff != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FeverTimeSecondBuff);
       }
-      size += avatarList_.CalculateSize(_repeated_avatarList_codec);
       if (FeverTimeFirstBuff != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FeverTimeFirstBuff);
-      }
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -251,15 +251,15 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      avatarList_.Add(other.avatarList_);
+      if (other.Id != 0) {
+        Id = other.Id;
+      }
       if (other.FeverTimeSecondBuff != 0) {
         FeverTimeSecondBuff = other.FeverTimeSecondBuff;
       }
-      avatarList_.Add(other.avatarList_);
       if (other.FeverTimeFirstBuff != 0) {
         FeverTimeFirstBuff = other.FeverTimeFirstBuff;
-      }
-      if (other.Id != 0) {
-        Id = other.Id;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -276,20 +276,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            FeverTimeFirstBuff = input.ReadUInt32();
+          case 16: {
+            FeverTimeSecondBuff = input.ReadUInt32();
             break;
           }
-          case 74: {
+          case 50: {
             avatarList_.AddEntriesFrom(input, _repeated_avatarList_codec);
             break;
           }
-          case 80: {
+          case 112: {
             Id = input.ReadUInt32();
             break;
           }
-          case 104: {
-            FeverTimeSecondBuff = input.ReadUInt32();
+          case 120: {
+            FeverTimeFirstBuff = input.ReadUInt32();
             break;
           }
         }
@@ -307,20 +307,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            FeverTimeFirstBuff = input.ReadUInt32();
+          case 16: {
+            FeverTimeSecondBuff = input.ReadUInt32();
             break;
           }
-          case 74: {
+          case 50: {
             avatarList_.AddEntriesFrom(ref input, _repeated_avatarList_codec);
             break;
           }
-          case 80: {
+          case 112: {
             Id = input.ReadUInt32();
             break;
           }
-          case 104: {
-            FeverTimeSecondBuff = input.ReadUInt32();
+          case 120: {
+            FeverTimeFirstBuff = input.ReadUInt32();
             break;
           }
         }

@@ -24,13 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static FriendApplySourceReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdGcmllbmRBcHBseVNvdXJjZS5wcm90byriAQoRRnJpZW5kQXBwbHlTb3Vy",
+            "ChdGcmllbmRBcHBseVNvdXJjZS5wcm90byqJAgoRRnJpZW5kQXBwbHlTb3Vy",
             "Y2USHAoYRlJJRU5EX0FQUExZX1NPVVJDRV9OT05FEAASHgoaRlJJRU5EX0FQ",
             "UExZX1NPVVJDRV9TRUFSQ0gQARIhCh1GUklFTkRfQVBQTFlfU09VUkNFX1JF",
             "Q09NTUVORBACEh4KGkZSSUVORF9BUFBMWV9TT1VSQ0VfQVNTSVNUEAMSKAok",
             "RlJJRU5EX0FQUExZX1NPVVJDRV9SRUNPTU1FTkRfQVNTSVNUEAQSIgoeRlJJ",
-            "RU5EX0FQUExZX1NPVVJDRV9QU05fRlJJRU5EEAVCHqoCG0VnZ0xpbmsuRGFu",
-            "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "RU5EX0FQUExZX1NPVVJDRV9QU05fRlJJRU5EEAUSJQohRlJJRU5EX0FQUExZ",
+            "X1NPVVJDRV9BU1NJU1RfUkVXQVJEEAZCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.FriendApplySource), }, null, null));
@@ -46,6 +47,7 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("FRIEND_APPLY_SOURCE_ASSIST")] Assist = 3,
     [pbr::OriginalName("FRIEND_APPLY_SOURCE_RECOMMEND_ASSIST")] RecommendAssist = 4,
     [pbr::OriginalName("FRIEND_APPLY_SOURCE_PSN_FRIEND")] PsnFriend = 5,
+    [pbr::OriginalName("FRIEND_APPLY_SOURCE_ASSIST_REWARD")] AssistReward = 6,
   }
 
   #endregion

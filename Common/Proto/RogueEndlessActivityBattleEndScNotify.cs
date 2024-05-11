@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CitSb2d1ZUVuZGxlc3NBY3Rpdml0eUJhdHRsZUVuZFNjTm90aWZ5LnByb3Rv",
-            "GhtSb2d1ZUVuZGxlc3NMYXllckluZm8ucHJvdG8iUwolUm9ndWVFbmRsZXNz",
-            "QWN0aXZpdHlCYXR0bGVFbmRTY05vdGlmeRIqCgpsYXllcl9pbmZvGAEgASgL",
-            "MhYuUm9ndWVFbmRsZXNzTGF5ZXJJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
-            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "GhtSb2d1ZUVuZGxlc3NMYXllckluZm8ucHJvdG8iVAolUm9ndWVFbmRsZXNz",
+            "QWN0aXZpdHlCYXR0bGVFbmRTY05vdGlmeRIrCgtDRU9HTUNQRERBTRgHIAEo",
+            "CzIWLlJvZ3VlRW5kbGVzc0xheWVySW5mb0IeqgIbRWdnTGluay5EYW5oZW5n",
+            "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueEndlessLayerInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueEndlessActivityBattleEndScNotify), global::EggLink.DanhengServer.Proto.RogueEndlessActivityBattleEndScNotify.Parser, new[]{ "LayerInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueEndlessActivityBattleEndScNotify), global::EggLink.DanhengServer.Proto.RogueEndlessActivityBattleEndScNotify.Parser, new[]{ "CEOGMCPDDAM" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueEndlessActivityBattleEndScNotify(RogueEndlessActivityBattleEndScNotify other) : this() {
-      layerInfo_ = other.layerInfo_ != null ? other.layerInfo_.Clone() : null;
+      cEOGMCPDDAM_ = other.cEOGMCPDDAM_ != null ? other.cEOGMCPDDAM_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,15 +84,15 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueEndlessActivityBattleEndScNotify(this);
     }
 
-    /// <summary>Field number for the "layer_info" field.</summary>
-    public const int LayerInfoFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.RogueEndlessLayerInfo layerInfo_;
+    /// <summary>Field number for the "CEOGMCPDDAM" field.</summary>
+    public const int CEOGMCPDDAMFieldNumber = 7;
+    private global::EggLink.DanhengServer.Proto.RogueEndlessLayerInfo cEOGMCPDDAM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueEndlessLayerInfo LayerInfo {
-      get { return layerInfo_; }
+    public global::EggLink.DanhengServer.Proto.RogueEndlessLayerInfo CEOGMCPDDAM {
+      get { return cEOGMCPDDAM_; }
       set {
-        layerInfo_ = value;
+        cEOGMCPDDAM_ = value;
       }
     }
 
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(LayerInfo, other.LayerInfo)) return false;
+      if (!object.Equals(CEOGMCPDDAM, other.CEOGMCPDDAM)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -119,7 +119,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (layerInfo_ != null) hash ^= LayerInfo.GetHashCode();
+      if (cEOGMCPDDAM_ != null) hash ^= CEOGMCPDDAM.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -138,9 +138,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (layerInfo_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(LayerInfo);
+      if (cEOGMCPDDAM_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(CEOGMCPDDAM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -152,9 +152,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (layerInfo_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(LayerInfo);
+      if (cEOGMCPDDAM_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(CEOGMCPDDAM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -166,8 +166,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (layerInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LayerInfo);
+      if (cEOGMCPDDAM_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CEOGMCPDDAM);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -181,11 +181,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.layerInfo_ != null) {
-        if (layerInfo_ == null) {
-          LayerInfo = new global::EggLink.DanhengServer.Proto.RogueEndlessLayerInfo();
+      if (other.cEOGMCPDDAM_ != null) {
+        if (cEOGMCPDDAM_ == null) {
+          CEOGMCPDDAM = new global::EggLink.DanhengServer.Proto.RogueEndlessLayerInfo();
         }
-        LayerInfo.MergeFrom(other.LayerInfo);
+        CEOGMCPDDAM.MergeFrom(other.CEOGMCPDDAM);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -202,11 +202,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            if (layerInfo_ == null) {
-              LayerInfo = new global::EggLink.DanhengServer.Proto.RogueEndlessLayerInfo();
+          case 58: {
+            if (cEOGMCPDDAM_ == null) {
+              CEOGMCPDDAM = new global::EggLink.DanhengServer.Proto.RogueEndlessLayerInfo();
             }
-            input.ReadMessage(LayerInfo);
+            input.ReadMessage(CEOGMCPDDAM);
             break;
           }
         }
@@ -224,11 +224,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            if (layerInfo_ == null) {
-              LayerInfo = new global::EggLink.DanhengServer.Proto.RogueEndlessLayerInfo();
+          case 58: {
+            if (cEOGMCPDDAM_ == null) {
+              CEOGMCPDDAM = new global::EggLink.DanhengServer.Proto.RogueEndlessLayerInfo();
             }
-            input.ReadMessage(LayerInfo);
+            input.ReadMessage(CEOGMCPDDAM);
             break;
           }
         }

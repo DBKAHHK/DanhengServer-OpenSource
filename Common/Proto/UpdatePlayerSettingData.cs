@@ -24,14 +24,19 @@ namespace EggLink.DanhengServer.Proto {
     static UpdatePlayerSettingDataReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1VcGRhdGVQbGF5ZXJTZXR0aW5nRGF0YS5wcm90byJYChdVcGRhdGVQbGF5",
-            "ZXJTZXR0aW5nRGF0YRITCgtMSU5NSkVIQ0VBQhgIIAEoCBITCgtBQ0RJQ0xG",
-            "S01LSxgCIAEoCBITCgtHTUZFS09JRk5IRxgGIAEoCEIeqgIbRWdnTGluay5E",
-            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Ch1VcGRhdGVQbGF5ZXJTZXR0aW5nRGF0YS5wcm90bxoaRGlzcGxheUNoYWxs",
+            "ZW5nZUluZm8ucHJvdG8ijgIKF1VwZGF0ZVBsYXllclNldHRpbmdEYXRhEhUK",
+            "C09NQUNFSkNOS0VIGAYgASgISAASFQoLQ0dFSE9NSkxKSEUYCCABKAhIABIV",
+            "CgtBT0VOR1BESE1NRBgOIAEoCEgAEhUKC09PQUpPTkxOT0tDGAwgASgISAAS",
+            "FQoLS0FNSUZKSkVISk8YAiABKAhIABIVCgtBQ0VPSU9BQ0lKTxgHIAEoCEgA",
+            "EiwKC05FTkZISkRBREpBGAUgASgOMhUuRGlzcGxheUNoYWxsZW5nZUluZm9I",
+            "ABIVCgtCS0ZLRUFPS0pJQxgDIAEoCEgAEhUKC0RBREpPR0hIRURFGAsgASgI",
+            "SABCDQoLSEZDS0NLT0VESlBCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DisplayChallengeInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdatePlayerSettingData), global::EggLink.DanhengServer.Proto.UpdatePlayerSettingData.Parser, new[]{ "LINMJEHCEAB", "ACDICLFKMKK", "GMFEKOIFNHG" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdatePlayerSettingData), global::EggLink.DanhengServer.Proto.UpdatePlayerSettingData.Parser, new[]{ "OMACEJCNKEH", "CGEHOMJLJHE", "AOENGPDHMMD", "OOAJONLNOKC", "KAMIFJJEHJO", "ACEOIOACIJO", "NENFHJDADJA", "BKFKEAOKJIC", "DADJOGHHEDE" }, new[]{ "HFCKCKOEDJP" }, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +78,36 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdatePlayerSettingData(UpdatePlayerSettingData other) : this() {
-      lINMJEHCEAB_ = other.lINMJEHCEAB_;
-      aCDICLFKMKK_ = other.aCDICLFKMKK_;
-      gMFEKOIFNHG_ = other.gMFEKOIFNHG_;
+      switch (other.HFCKCKOEDJPCase) {
+        case HFCKCKOEDJPOneofCase.OMACEJCNKEH:
+          OMACEJCNKEH = other.OMACEJCNKEH;
+          break;
+        case HFCKCKOEDJPOneofCase.CGEHOMJLJHE:
+          CGEHOMJLJHE = other.CGEHOMJLJHE;
+          break;
+        case HFCKCKOEDJPOneofCase.AOENGPDHMMD:
+          AOENGPDHMMD = other.AOENGPDHMMD;
+          break;
+        case HFCKCKOEDJPOneofCase.OOAJONLNOKC:
+          OOAJONLNOKC = other.OOAJONLNOKC;
+          break;
+        case HFCKCKOEDJPOneofCase.KAMIFJJEHJO:
+          KAMIFJJEHJO = other.KAMIFJJEHJO;
+          break;
+        case HFCKCKOEDJPOneofCase.ACEOIOACIJO:
+          ACEOIOACIJO = other.ACEOIOACIJO;
+          break;
+        case HFCKCKOEDJPOneofCase.NENFHJDADJA:
+          NENFHJDADJA = other.NENFHJDADJA;
+          break;
+        case HFCKCKOEDJPOneofCase.BKFKEAOKJIC:
+          BKFKEAOKJIC = other.BKFKEAOKJIC;
+          break;
+        case HFCKCKOEDJPOneofCase.DADJOGHHEDE:
+          DADJOGHHEDE = other.DADJOGHHEDE;
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,40 +117,266 @@ namespace EggLink.DanhengServer.Proto {
       return new UpdatePlayerSettingData(this);
     }
 
-    /// <summary>Field number for the "LINMJEHCEAB" field.</summary>
-    public const int LINMJEHCEABFieldNumber = 8;
-    private bool lINMJEHCEAB_;
+    /// <summary>Field number for the "OMACEJCNKEH" field.</summary>
+    public const int OMACEJCNKEHFieldNumber = 6;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool LINMJEHCEAB {
-      get { return lINMJEHCEAB_; }
+    public bool OMACEJCNKEH {
+      get { return HasOMACEJCNKEH ? (bool) hFCKCKOEDJP_ : false; }
       set {
-        lINMJEHCEAB_ = value;
+        hFCKCKOEDJP_ = value;
+        hFCKCKOEDJPCase_ = HFCKCKOEDJPOneofCase.OMACEJCNKEH;
+      }
+    }
+    /// <summary>Gets whether the "OMACEJCNKEH" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOMACEJCNKEH {
+      get { return hFCKCKOEDJPCase_ == HFCKCKOEDJPOneofCase.OMACEJCNKEH; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "OMACEJCNKEH" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOMACEJCNKEH() {
+      if (HasOMACEJCNKEH) {
+        ClearHFCKCKOEDJP();
       }
     }
 
-    /// <summary>Field number for the "ACDICLFKMKK" field.</summary>
-    public const int ACDICLFKMKKFieldNumber = 2;
-    private bool aCDICLFKMKK_;
+    /// <summary>Field number for the "CGEHOMJLJHE" field.</summary>
+    public const int CGEHOMJLJHEFieldNumber = 8;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool ACDICLFKMKK {
-      get { return aCDICLFKMKK_; }
+    public bool CGEHOMJLJHE {
+      get { return HasCGEHOMJLJHE ? (bool) hFCKCKOEDJP_ : false; }
       set {
-        aCDICLFKMKK_ = value;
+        hFCKCKOEDJP_ = value;
+        hFCKCKOEDJPCase_ = HFCKCKOEDJPOneofCase.CGEHOMJLJHE;
+      }
+    }
+    /// <summary>Gets whether the "CGEHOMJLJHE" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCGEHOMJLJHE {
+      get { return hFCKCKOEDJPCase_ == HFCKCKOEDJPOneofCase.CGEHOMJLJHE; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "CGEHOMJLJHE" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCGEHOMJLJHE() {
+      if (HasCGEHOMJLJHE) {
+        ClearHFCKCKOEDJP();
       }
     }
 
-    /// <summary>Field number for the "GMFEKOIFNHG" field.</summary>
-    public const int GMFEKOIFNHGFieldNumber = 6;
-    private bool gMFEKOIFNHG_;
+    /// <summary>Field number for the "AOENGPDHMMD" field.</summary>
+    public const int AOENGPDHMMDFieldNumber = 14;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool GMFEKOIFNHG {
-      get { return gMFEKOIFNHG_; }
+    public bool AOENGPDHMMD {
+      get { return HasAOENGPDHMMD ? (bool) hFCKCKOEDJP_ : false; }
       set {
-        gMFEKOIFNHG_ = value;
+        hFCKCKOEDJP_ = value;
+        hFCKCKOEDJPCase_ = HFCKCKOEDJPOneofCase.AOENGPDHMMD;
       }
+    }
+    /// <summary>Gets whether the "AOENGPDHMMD" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAOENGPDHMMD {
+      get { return hFCKCKOEDJPCase_ == HFCKCKOEDJPOneofCase.AOENGPDHMMD; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "AOENGPDHMMD" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAOENGPDHMMD() {
+      if (HasAOENGPDHMMD) {
+        ClearHFCKCKOEDJP();
+      }
+    }
+
+    /// <summary>Field number for the "OOAJONLNOKC" field.</summary>
+    public const int OOAJONLNOKCFieldNumber = 12;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool OOAJONLNOKC {
+      get { return HasOOAJONLNOKC ? (bool) hFCKCKOEDJP_ : false; }
+      set {
+        hFCKCKOEDJP_ = value;
+        hFCKCKOEDJPCase_ = HFCKCKOEDJPOneofCase.OOAJONLNOKC;
+      }
+    }
+    /// <summary>Gets whether the "OOAJONLNOKC" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOOAJONLNOKC {
+      get { return hFCKCKOEDJPCase_ == HFCKCKOEDJPOneofCase.OOAJONLNOKC; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "OOAJONLNOKC" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOOAJONLNOKC() {
+      if (HasOOAJONLNOKC) {
+        ClearHFCKCKOEDJP();
+      }
+    }
+
+    /// <summary>Field number for the "KAMIFJJEHJO" field.</summary>
+    public const int KAMIFJJEHJOFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool KAMIFJJEHJO {
+      get { return HasKAMIFJJEHJO ? (bool) hFCKCKOEDJP_ : false; }
+      set {
+        hFCKCKOEDJP_ = value;
+        hFCKCKOEDJPCase_ = HFCKCKOEDJPOneofCase.KAMIFJJEHJO;
+      }
+    }
+    /// <summary>Gets whether the "KAMIFJJEHJO" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasKAMIFJJEHJO {
+      get { return hFCKCKOEDJPCase_ == HFCKCKOEDJPOneofCase.KAMIFJJEHJO; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "KAMIFJJEHJO" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearKAMIFJJEHJO() {
+      if (HasKAMIFJJEHJO) {
+        ClearHFCKCKOEDJP();
+      }
+    }
+
+    /// <summary>Field number for the "ACEOIOACIJO" field.</summary>
+    public const int ACEOIOACIJOFieldNumber = 7;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ACEOIOACIJO {
+      get { return HasACEOIOACIJO ? (bool) hFCKCKOEDJP_ : false; }
+      set {
+        hFCKCKOEDJP_ = value;
+        hFCKCKOEDJPCase_ = HFCKCKOEDJPOneofCase.ACEOIOACIJO;
+      }
+    }
+    /// <summary>Gets whether the "ACEOIOACIJO" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasACEOIOACIJO {
+      get { return hFCKCKOEDJPCase_ == HFCKCKOEDJPOneofCase.ACEOIOACIJO; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "ACEOIOACIJO" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearACEOIOACIJO() {
+      if (HasACEOIOACIJO) {
+        ClearHFCKCKOEDJP();
+      }
+    }
+
+    /// <summary>Field number for the "NENFHJDADJA" field.</summary>
+    public const int NENFHJDADJAFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.DisplayChallengeInfo NENFHJDADJA {
+      get { return HasNENFHJDADJA ? (global::EggLink.DanhengServer.Proto.DisplayChallengeInfo) hFCKCKOEDJP_ : global::EggLink.DanhengServer.Proto.DisplayChallengeInfo.BattleRecordNone; }
+      set {
+        hFCKCKOEDJP_ = value;
+        hFCKCKOEDJPCase_ = HFCKCKOEDJPOneofCase.NENFHJDADJA;
+      }
+    }
+    /// <summary>Gets whether the "NENFHJDADJA" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNENFHJDADJA {
+      get { return hFCKCKOEDJPCase_ == HFCKCKOEDJPOneofCase.NENFHJDADJA; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "NENFHJDADJA" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNENFHJDADJA() {
+      if (HasNENFHJDADJA) {
+        ClearHFCKCKOEDJP();
+      }
+    }
+
+    /// <summary>Field number for the "BKFKEAOKJIC" field.</summary>
+    public const int BKFKEAOKJICFieldNumber = 3;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool BKFKEAOKJIC {
+      get { return HasBKFKEAOKJIC ? (bool) hFCKCKOEDJP_ : false; }
+      set {
+        hFCKCKOEDJP_ = value;
+        hFCKCKOEDJPCase_ = HFCKCKOEDJPOneofCase.BKFKEAOKJIC;
+      }
+    }
+    /// <summary>Gets whether the "BKFKEAOKJIC" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBKFKEAOKJIC {
+      get { return hFCKCKOEDJPCase_ == HFCKCKOEDJPOneofCase.BKFKEAOKJIC; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "BKFKEAOKJIC" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBKFKEAOKJIC() {
+      if (HasBKFKEAOKJIC) {
+        ClearHFCKCKOEDJP();
+      }
+    }
+
+    /// <summary>Field number for the "DADJOGHHEDE" field.</summary>
+    public const int DADJOGHHEDEFieldNumber = 11;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool DADJOGHHEDE {
+      get { return HasDADJOGHHEDE ? (bool) hFCKCKOEDJP_ : false; }
+      set {
+        hFCKCKOEDJP_ = value;
+        hFCKCKOEDJPCase_ = HFCKCKOEDJPOneofCase.DADJOGHHEDE;
+      }
+    }
+    /// <summary>Gets whether the "DADJOGHHEDE" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDADJOGHHEDE {
+      get { return hFCKCKOEDJPCase_ == HFCKCKOEDJPOneofCase.DADJOGHHEDE; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "DADJOGHHEDE" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDADJOGHHEDE() {
+      if (HasDADJOGHHEDE) {
+        ClearHFCKCKOEDJP();
+      }
+    }
+
+    private object hFCKCKOEDJP_;
+    /// <summary>Enum of possible cases for the "HFCKCKOEDJP" oneof.</summary>
+    public enum HFCKCKOEDJPOneofCase {
+      None = 0,
+      OMACEJCNKEH = 6,
+      CGEHOMJLJHE = 8,
+      AOENGPDHMMD = 14,
+      OOAJONLNOKC = 12,
+      KAMIFJJEHJO = 2,
+      ACEOIOACIJO = 7,
+      NENFHJDADJA = 5,
+      BKFKEAOKJIC = 3,
+      DADJOGHHEDE = 11,
+    }
+    private HFCKCKOEDJPOneofCase hFCKCKOEDJPCase_ = HFCKCKOEDJPOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public HFCKCKOEDJPOneofCase HFCKCKOEDJPCase {
+      get { return hFCKCKOEDJPCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearHFCKCKOEDJP() {
+      hFCKCKOEDJPCase_ = HFCKCKOEDJPOneofCase.None;
+      hFCKCKOEDJP_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -136,9 +394,16 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (LINMJEHCEAB != other.LINMJEHCEAB) return false;
-      if (ACDICLFKMKK != other.ACDICLFKMKK) return false;
-      if (GMFEKOIFNHG != other.GMFEKOIFNHG) return false;
+      if (OMACEJCNKEH != other.OMACEJCNKEH) return false;
+      if (CGEHOMJLJHE != other.CGEHOMJLJHE) return false;
+      if (AOENGPDHMMD != other.AOENGPDHMMD) return false;
+      if (OOAJONLNOKC != other.OOAJONLNOKC) return false;
+      if (KAMIFJJEHJO != other.KAMIFJJEHJO) return false;
+      if (ACEOIOACIJO != other.ACEOIOACIJO) return false;
+      if (NENFHJDADJA != other.NENFHJDADJA) return false;
+      if (BKFKEAOKJIC != other.BKFKEAOKJIC) return false;
+      if (DADJOGHHEDE != other.DADJOGHHEDE) return false;
+      if (HFCKCKOEDJPCase != other.HFCKCKOEDJPCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +411,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (LINMJEHCEAB != false) hash ^= LINMJEHCEAB.GetHashCode();
-      if (ACDICLFKMKK != false) hash ^= ACDICLFKMKK.GetHashCode();
-      if (GMFEKOIFNHG != false) hash ^= GMFEKOIFNHG.GetHashCode();
+      if (HasOMACEJCNKEH) hash ^= OMACEJCNKEH.GetHashCode();
+      if (HasCGEHOMJLJHE) hash ^= CGEHOMJLJHE.GetHashCode();
+      if (HasAOENGPDHMMD) hash ^= AOENGPDHMMD.GetHashCode();
+      if (HasOOAJONLNOKC) hash ^= OOAJONLNOKC.GetHashCode();
+      if (HasKAMIFJJEHJO) hash ^= KAMIFJJEHJO.GetHashCode();
+      if (HasACEOIOACIJO) hash ^= ACEOIOACIJO.GetHashCode();
+      if (HasNENFHJDADJA) hash ^= NENFHJDADJA.GetHashCode();
+      if (HasBKFKEAOKJIC) hash ^= BKFKEAOKJIC.GetHashCode();
+      if (HasDADJOGHHEDE) hash ^= DADJOGHHEDE.GetHashCode();
+      hash ^= (int) hFCKCKOEDJPCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,17 +439,41 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ACDICLFKMKK != false) {
+      if (HasKAMIFJJEHJO) {
         output.WriteRawTag(16);
-        output.WriteBool(ACDICLFKMKK);
+        output.WriteBool(KAMIFJJEHJO);
       }
-      if (GMFEKOIFNHG != false) {
+      if (HasBKFKEAOKJIC) {
+        output.WriteRawTag(24);
+        output.WriteBool(BKFKEAOKJIC);
+      }
+      if (HasNENFHJDADJA) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) NENFHJDADJA);
+      }
+      if (HasOMACEJCNKEH) {
         output.WriteRawTag(48);
-        output.WriteBool(GMFEKOIFNHG);
+        output.WriteBool(OMACEJCNKEH);
       }
-      if (LINMJEHCEAB != false) {
+      if (HasACEOIOACIJO) {
+        output.WriteRawTag(56);
+        output.WriteBool(ACEOIOACIJO);
+      }
+      if (HasCGEHOMJLJHE) {
         output.WriteRawTag(64);
-        output.WriteBool(LINMJEHCEAB);
+        output.WriteBool(CGEHOMJLJHE);
+      }
+      if (HasDADJOGHHEDE) {
+        output.WriteRawTag(88);
+        output.WriteBool(DADJOGHHEDE);
+      }
+      if (HasOOAJONLNOKC) {
+        output.WriteRawTag(96);
+        output.WriteBool(OOAJONLNOKC);
+      }
+      if (HasAOENGPDHMMD) {
+        output.WriteRawTag(112);
+        output.WriteBool(AOENGPDHMMD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +485,41 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ACDICLFKMKK != false) {
+      if (HasKAMIFJJEHJO) {
         output.WriteRawTag(16);
-        output.WriteBool(ACDICLFKMKK);
+        output.WriteBool(KAMIFJJEHJO);
       }
-      if (GMFEKOIFNHG != false) {
+      if (HasBKFKEAOKJIC) {
+        output.WriteRawTag(24);
+        output.WriteBool(BKFKEAOKJIC);
+      }
+      if (HasNENFHJDADJA) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) NENFHJDADJA);
+      }
+      if (HasOMACEJCNKEH) {
         output.WriteRawTag(48);
-        output.WriteBool(GMFEKOIFNHG);
+        output.WriteBool(OMACEJCNKEH);
       }
-      if (LINMJEHCEAB != false) {
+      if (HasACEOIOACIJO) {
+        output.WriteRawTag(56);
+        output.WriteBool(ACEOIOACIJO);
+      }
+      if (HasCGEHOMJLJHE) {
         output.WriteRawTag(64);
-        output.WriteBool(LINMJEHCEAB);
+        output.WriteBool(CGEHOMJLJHE);
+      }
+      if (HasDADJOGHHEDE) {
+        output.WriteRawTag(88);
+        output.WriteBool(DADJOGHHEDE);
+      }
+      if (HasOOAJONLNOKC) {
+        output.WriteRawTag(96);
+        output.WriteBool(OOAJONLNOKC);
+      }
+      if (HasAOENGPDHMMD) {
+        output.WriteRawTag(112);
+        output.WriteBool(AOENGPDHMMD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,13 +531,31 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (LINMJEHCEAB != false) {
+      if (HasOMACEJCNKEH) {
         size += 1 + 1;
       }
-      if (ACDICLFKMKK != false) {
+      if (HasCGEHOMJLJHE) {
         size += 1 + 1;
       }
-      if (GMFEKOIFNHG != false) {
+      if (HasAOENGPDHMMD) {
+        size += 1 + 1;
+      }
+      if (HasOOAJONLNOKC) {
+        size += 1 + 1;
+      }
+      if (HasKAMIFJJEHJO) {
+        size += 1 + 1;
+      }
+      if (HasACEOIOACIJO) {
+        size += 1 + 1;
+      }
+      if (HasNENFHJDADJA) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) NENFHJDADJA);
+      }
+      if (HasBKFKEAOKJIC) {
+        size += 1 + 1;
+      }
+      if (HasDADJOGHHEDE) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -232,15 +570,36 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.LINMJEHCEAB != false) {
-        LINMJEHCEAB = other.LINMJEHCEAB;
+      switch (other.HFCKCKOEDJPCase) {
+        case HFCKCKOEDJPOneofCase.OMACEJCNKEH:
+          OMACEJCNKEH = other.OMACEJCNKEH;
+          break;
+        case HFCKCKOEDJPOneofCase.CGEHOMJLJHE:
+          CGEHOMJLJHE = other.CGEHOMJLJHE;
+          break;
+        case HFCKCKOEDJPOneofCase.AOENGPDHMMD:
+          AOENGPDHMMD = other.AOENGPDHMMD;
+          break;
+        case HFCKCKOEDJPOneofCase.OOAJONLNOKC:
+          OOAJONLNOKC = other.OOAJONLNOKC;
+          break;
+        case HFCKCKOEDJPOneofCase.KAMIFJJEHJO:
+          KAMIFJJEHJO = other.KAMIFJJEHJO;
+          break;
+        case HFCKCKOEDJPOneofCase.ACEOIOACIJO:
+          ACEOIOACIJO = other.ACEOIOACIJO;
+          break;
+        case HFCKCKOEDJPOneofCase.NENFHJDADJA:
+          NENFHJDADJA = other.NENFHJDADJA;
+          break;
+        case HFCKCKOEDJPOneofCase.BKFKEAOKJIC:
+          BKFKEAOKJIC = other.BKFKEAOKJIC;
+          break;
+        case HFCKCKOEDJPOneofCase.DADJOGHHEDE:
+          DADJOGHHEDE = other.DADJOGHHEDE;
+          break;
       }
-      if (other.ACDICLFKMKK != false) {
-        ACDICLFKMKK = other.ACDICLFKMKK;
-      }
-      if (other.GMFEKOIFNHG != false) {
-        GMFEKOIFNHG = other.GMFEKOIFNHG;
-      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -257,15 +616,40 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 16: {
-            ACDICLFKMKK = input.ReadBool();
+            KAMIFJJEHJO = input.ReadBool();
+            break;
+          }
+          case 24: {
+            BKFKEAOKJIC = input.ReadBool();
+            break;
+          }
+          case 40: {
+            hFCKCKOEDJP_ = input.ReadEnum();
+            hFCKCKOEDJPCase_ = HFCKCKOEDJPOneofCase.NENFHJDADJA;
             break;
           }
           case 48: {
-            GMFEKOIFNHG = input.ReadBool();
+            OMACEJCNKEH = input.ReadBool();
+            break;
+          }
+          case 56: {
+            ACEOIOACIJO = input.ReadBool();
             break;
           }
           case 64: {
-            LINMJEHCEAB = input.ReadBool();
+            CGEHOMJLJHE = input.ReadBool();
+            break;
+          }
+          case 88: {
+            DADJOGHHEDE = input.ReadBool();
+            break;
+          }
+          case 96: {
+            OOAJONLNOKC = input.ReadBool();
+            break;
+          }
+          case 112: {
+            AOENGPDHMMD = input.ReadBool();
             break;
           }
         }
@@ -284,15 +668,40 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 16: {
-            ACDICLFKMKK = input.ReadBool();
+            KAMIFJJEHJO = input.ReadBool();
+            break;
+          }
+          case 24: {
+            BKFKEAOKJIC = input.ReadBool();
+            break;
+          }
+          case 40: {
+            hFCKCKOEDJP_ = input.ReadEnum();
+            hFCKCKOEDJPCase_ = HFCKCKOEDJPOneofCase.NENFHJDADJA;
             break;
           }
           case 48: {
-            GMFEKOIFNHG = input.ReadBool();
+            OMACEJCNKEH = input.ReadBool();
+            break;
+          }
+          case 56: {
+            ACEOIOACIJO = input.ReadBool();
             break;
           }
           case 64: {
-            LINMJEHCEAB = input.ReadBool();
+            CGEHOMJLJHE = input.ReadBool();
+            break;
+          }
+          case 88: {
+            DADJOGHHEDE = input.ReadBool();
+            break;
+          }
+          case 96: {
+            OOAJONLNOKC = input.ReadBool();
+            break;
+          }
+          case 112: {
+            AOENGPDHMMD = input.ReadBool();
             break;
           }
         }

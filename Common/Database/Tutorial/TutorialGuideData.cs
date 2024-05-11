@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace EggLink.DanhengServer.Database.Tutorial
 {
     [SugarTable("TutorialGuide")]
-    public class TutorialGuideData : BaseDatabaseData
+    public class TutorialGuideData : BaseDatabaseDataHelper
     {
         [SugarColumn(IsJson = true)]
         public Dictionary<int, TutorialStatus> Tutorials { get; set; } = [];

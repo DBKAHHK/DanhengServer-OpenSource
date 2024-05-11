@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhDaGVzc1JvZ3VlQnVmZkluZm8ucHJvdG8aFENoZXNzUm9ndWVCdWZmLnBy",
-            "b3RvIjgKEkNoZXNzUm9ndWVCdWZmSW5mbxIiCglidWZmX2luZm8YByABKAsy",
+            "b3RvIjgKEkNoZXNzUm9ndWVCdWZmSW5mbxIiCglidWZmX2luZm8YDCABKAsy",
             "Dy5DaGVzc1JvZ3VlQnVmZkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "buff_info" field.</summary>
-    public const int BuffInfoFieldNumber = 7;
+    public const int BuffInfoFieldNumber = 12;
     private global::EggLink.DanhengServer.Proto.ChessRogueBuff buffInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (buffInfo_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(98);
         output.WriteMessage(BuffInfo);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (buffInfo_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(98);
         output.WriteMessage(BuffInfo);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58: {
+          case 98: {
             if (buffInfo_ == null) {
               BuffInfo = new global::EggLink.DanhengServer.Proto.ChessRogueBuff();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58: {
+          case 98: {
             if (buffInfo_ == null) {
               BuffInfo = new global::EggLink.DanhengServer.Proto.ChessRogueBuff();
             }

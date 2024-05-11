@@ -15,7 +15,7 @@ namespace EggLink.DanhengServer.Server.Packet.Send.ChessRogue
             var proto = new ChessRogueEnterNextLayerScRsp()
             {
                 PlayerInfo = rogue.ToPlayerProto(),
-                RogueGameInfo = rogue.ToRogueGameInfo(),
+                RogueCurrentInfo = rogue.ToRogueGameInfo(),
                 RogueInfo = rogue.ToProto(),
             };
 

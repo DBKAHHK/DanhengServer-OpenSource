@@ -27,7 +27,7 @@ namespace EggLink.DanhengServer.Proto {
             "CidNb25vcG9seVNvY2lhbEV2ZW50RWZmZWN0U2NOb3RpZnkucHJvdG8aHFNv",
             "Y2lhbEV2ZW50U2VydmVyQ2FjaGUucHJvdG8iXwohTW9ub3BvbHlTb2NpYWxF",
             "dmVudEVmZmVjdFNjTm90aWZ5EjoKGXNvY2lhbF9ldmVudF9zZXJ2ZXJfY2Fj",
-            "aGUYASADKAsyFy5Tb2NpYWxFdmVudFNlcnZlckNhY2hlQh6qAhtFZ2dMaW5r",
+            "aGUYDSADKAsyFy5Tb2NpYWxFdmVudFNlcnZlckNhY2hlQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SocialEventServerCacheReflection.Descriptor, },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "social_event_server_cache" field.</summary>
-    public const int SocialEventServerCacheFieldNumber = 1;
+    public const int SocialEventServerCacheFieldNumber = 13;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.SocialEventServerCache> _repeated_socialEventServerCache_codec
-        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.SocialEventServerCache.Parser);
+        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.SocialEventServerCache.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SocialEventServerCache> socialEventServerCache_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SocialEventServerCache>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 106: {
             socialEventServerCache_.AddEntriesFrom(input, _repeated_socialEventServerCache_codec);
             break;
           }
@@ -207,7 +207,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 106: {
             socialEventServerCache_.AddEntriesFrom(ref input, _repeated_socialEventServerCache_codec);
             break;
           }

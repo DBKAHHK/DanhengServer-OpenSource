@@ -31,7 +31,7 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Friend
                 IsAccept = isAccept,
                 FriendInfo = new()
                 {
-                    IsRemarked = false,
+                    IsMarked = false,
                     RemarkName = "",
                     PlayerInfo = playerData.ToSimpleProto(status)
                 }

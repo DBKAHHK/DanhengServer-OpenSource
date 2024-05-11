@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZNb25vcG9seUJ1ZmZJbmZvLnByb3RvGhJNb25vcG9seUJ1ZmYucHJvdG8i",
-            "NAoQTW9ub3BvbHlCdWZmSW5mbxIgCglidWZmX2xpc3QYByADKAsyDS5Nb25v",
+            "NAoQTW9ub3BvbHlCdWZmSW5mbxIgCglidWZmX2xpc3QYCiADKAsyDS5Nb25v",
             "cG9seUJ1ZmZCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "buff_list" field.</summary>
-    public const int BuffListFieldNumber = 7;
+    public const int BuffListFieldNumber = 10;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MonopolyBuff> _repeated_buffList_codec
-        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.MonopolyBuff.Parser);
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.MonopolyBuff.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MonopolyBuff> buffList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MonopolyBuff>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58: {
+          case 82: {
             buffList_.AddEntriesFrom(input, _repeated_buffList_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58: {
+          case 82: {
             buffList_.AddEntriesFrom(ref input, _repeated_buffList_codec);
             break;
           }

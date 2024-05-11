@@ -6,8 +6,8 @@ namespace EggLink.DanhengServer.Enums
     {
         Doing = 0,
         Finish = 1,
-        Cancel = 2,
         None = 3,
+        Cancel = 4,
     }
 
     public static class MissionStatusExtensions

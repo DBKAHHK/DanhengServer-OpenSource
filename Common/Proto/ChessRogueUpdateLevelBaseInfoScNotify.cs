@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CitDaGVzc1JvZ3VlVXBkYXRlTGV2ZWxCYXNlSW5mb1NjTm90aWZ5LnByb3Rv",
-            "GhFMSkpQSURLREVHRi5wcm90bxofQ2hlc3NSb2d1ZUxldmVsU3RhdHVzVHlw",
+            "GhFQREdOREZFT0pJRi5wcm90bxofQ2hlc3NSb2d1ZUxldmVsU3RhdHVzVHlw",
             "ZS5wcm90byJ3CiVDaGVzc1JvZ3VlVXBkYXRlTGV2ZWxCYXNlSW5mb1NjTm90",
-            "aWZ5EhwKBnJlYXNvbhgDIAEoDjIMLkxKSlBJREtERUdGEjAKDGxldmVsX3N0",
-            "YXR1cxgJIAEoDjIaLkNoZXNzUm9ndWVMZXZlbFN0YXR1c1R5cGVCHqoCG0Vn",
+            "aWZ5EhwKBnJlYXNvbhgCIAEoDjIMLlBER05ERkVPSklGEjAKDGxldmVsX3N0",
+            "YXR1cxgDIAEoDjIaLkNoZXNzUm9ndWVMZXZlbFN0YXR1c1R5cGVCHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LJJPIDKDEGFReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueLevelStatusTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PDGNDFEOJIFReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueLevelStatusTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueUpdateLevelBaseInfoScNotify), global::EggLink.DanhengServer.Proto.ChessRogueUpdateLevelBaseInfoScNotify.Parser, new[]{ "Reason", "LevelStatus" }, null, null, null, null)
           }));
@@ -87,11 +87,11 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "reason" field.</summary>
-    public const int ReasonFieldNumber = 3;
-    private global::EggLink.DanhengServer.Proto.LJJPIDKDEGF reason_ = global::EggLink.DanhengServer.Proto.LJJPIDKDEGF.ChessRogueUpdateLevelStatusByNone;
+    public const int ReasonFieldNumber = 2;
+    private global::EggLink.DanhengServer.Proto.PDGNDFEOJIF reason_ = global::EggLink.DanhengServer.Proto.PDGNDFEOJIF.ChessRogueUpdateLevelStatusByNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.LJJPIDKDEGF Reason {
+    public global::EggLink.DanhengServer.Proto.PDGNDFEOJIF Reason {
       get { return reason_; }
       set {
         reason_ = value;
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level_status" field.</summary>
-    public const int LevelStatusFieldNumber = 9;
+    public const int LevelStatusFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.ChessRogueLevelStatusType levelStatus_ = global::EggLink.DanhengServer.Proto.ChessRogueLevelStatusType.ChessRogueLevelIdle;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -134,7 +134,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Reason != global::EggLink.DanhengServer.Proto.LJJPIDKDEGF.ChessRogueUpdateLevelStatusByNone) hash ^= Reason.GetHashCode();
+      if (Reason != global::EggLink.DanhengServer.Proto.PDGNDFEOJIF.ChessRogueUpdateLevelStatusByNone) hash ^= Reason.GetHashCode();
       if (LevelStatus != global::EggLink.DanhengServer.Proto.ChessRogueLevelStatusType.ChessRogueLevelIdle) hash ^= LevelStatus.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -154,12 +154,12 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Reason != global::EggLink.DanhengServer.Proto.LJJPIDKDEGF.ChessRogueUpdateLevelStatusByNone) {
-        output.WriteRawTag(24);
+      if (Reason != global::EggLink.DanhengServer.Proto.PDGNDFEOJIF.ChessRogueUpdateLevelStatusByNone) {
+        output.WriteRawTag(16);
         output.WriteEnum((int) Reason);
       }
       if (LevelStatus != global::EggLink.DanhengServer.Proto.ChessRogueLevelStatusType.ChessRogueLevelIdle) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(24);
         output.WriteEnum((int) LevelStatus);
       }
       if (_unknownFields != null) {
@@ -172,12 +172,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Reason != global::EggLink.DanhengServer.Proto.LJJPIDKDEGF.ChessRogueUpdateLevelStatusByNone) {
-        output.WriteRawTag(24);
+      if (Reason != global::EggLink.DanhengServer.Proto.PDGNDFEOJIF.ChessRogueUpdateLevelStatusByNone) {
+        output.WriteRawTag(16);
         output.WriteEnum((int) Reason);
       }
       if (LevelStatus != global::EggLink.DanhengServer.Proto.ChessRogueLevelStatusType.ChessRogueLevelIdle) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(24);
         output.WriteEnum((int) LevelStatus);
       }
       if (_unknownFields != null) {
@@ -190,7 +190,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Reason != global::EggLink.DanhengServer.Proto.LJJPIDKDEGF.ChessRogueUpdateLevelStatusByNone) {
+      if (Reason != global::EggLink.DanhengServer.Proto.PDGNDFEOJIF.ChessRogueUpdateLevelStatusByNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Reason);
       }
       if (LevelStatus != global::EggLink.DanhengServer.Proto.ChessRogueLevelStatusType.ChessRogueLevelIdle) {
@@ -208,7 +208,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Reason != global::EggLink.DanhengServer.Proto.LJJPIDKDEGF.ChessRogueUpdateLevelStatusByNone) {
+      if (other.Reason != global::EggLink.DanhengServer.Proto.PDGNDFEOJIF.ChessRogueUpdateLevelStatusByNone) {
         Reason = other.Reason;
       }
       if (other.LevelStatus != global::EggLink.DanhengServer.Proto.ChessRogueLevelStatusType.ChessRogueLevelIdle) {
@@ -229,11 +229,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            Reason = (global::EggLink.DanhengServer.Proto.LJJPIDKDEGF) input.ReadEnum();
+          case 16: {
+            Reason = (global::EggLink.DanhengServer.Proto.PDGNDFEOJIF) input.ReadEnum();
             break;
           }
-          case 72: {
+          case 24: {
             LevelStatus = (global::EggLink.DanhengServer.Proto.ChessRogueLevelStatusType) input.ReadEnum();
             break;
           }
@@ -252,11 +252,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            Reason = (global::EggLink.DanhengServer.Proto.LJJPIDKDEGF) input.ReadEnum();
+          case 16: {
+            Reason = (global::EggLink.DanhengServer.Proto.PDGNDFEOJIF) input.ReadEnum();
             break;
           }
-          case 72: {
+          case 24: {
             LevelStatus = (global::EggLink.DanhengServer.Proto.ChessRogueLevelStatusType) input.ReadEnum();
             break;
           }

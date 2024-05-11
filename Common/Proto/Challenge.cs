@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static ChallengeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg9DaGFsbGVuZ2UucHJvdG8iiAEKCUNoYWxsZW5nZRIUCgx0YWtlbl9yZXdh",
-            "cmQYByABKA0SFAoMY2hhbGxlbmdlX2lkGAogASgNEhMKC0xOUE9OR0JMQk1D",
-            "GA8gASgNEhMKC0JIRk5KREVHSU9DGAsgASgNEhMKC0VMTENDQ0VIQU1GGA0g",
-            "ASgNEhAKCHNjb3JlX2lkGAkgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
-            "ZXIuUHJvdG9iBnByb3RvMw=="));
+            "Cg9DaGFsbGVuZ2UucHJvdG8ifwoJQ2hhbGxlbmdlEgwKBHN0YXIYCCABKA0S",
+            "FAoMdGFrZW5fcmV3YXJkGA0gASgNEhQKDGNoYWxsZW5nZV9pZBgBIAEoDRIR",
+            "CglzY29yZV90d28YDCABKA0SEAoIc2NvcmVfaWQYByABKA0SEwoLR0VIR0VH",
+            "T0ZERE0YBSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Challenge), global::EggLink.DanhengServer.Proto.Challenge.Parser, new[]{ "TakenReward", "ChallengeId", "LNPONGBLBMC", "BHFNJDEGIOC", "ELLCCCEHAMF", "ScoreId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Challenge), global::EggLink.DanhengServer.Proto.Challenge.Parser, new[]{ "Star", "TakenReward", "ChallengeId", "ScoreTwo", "ScoreId", "GEHGEGOFDDM" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,12 +74,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Challenge(Challenge other) : this() {
+      star_ = other.star_;
       takenReward_ = other.takenReward_;
       challengeId_ = other.challengeId_;
-      lNPONGBLBMC_ = other.lNPONGBLBMC_;
-      bHFNJDEGIOC_ = other.bHFNJDEGIOC_;
-      eLLCCCEHAMF_ = other.eLLCCCEHAMF_;
+      scoreTwo_ = other.scoreTwo_;
       scoreId_ = other.scoreId_;
+      gEHGEGOFDDM_ = other.gEHGEGOFDDM_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -89,8 +89,20 @@ namespace EggLink.DanhengServer.Proto {
       return new Challenge(this);
     }
 
+    /// <summary>Field number for the "star" field.</summary>
+    public const int StarFieldNumber = 8;
+    private uint star_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Star {
+      get { return star_; }
+      set {
+        star_ = value;
+      }
+    }
+
     /// <summary>Field number for the "taken_reward" field.</summary>
-    public const int TakenRewardFieldNumber = 7;
+    public const int TakenRewardFieldNumber = 13;
     private uint takenReward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -102,7 +114,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "challenge_id" field.</summary>
-    public const int ChallengeIdFieldNumber = 10;
+    public const int ChallengeIdFieldNumber = 1;
     private uint challengeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -113,44 +125,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "LNPONGBLBMC" field.</summary>
-    public const int LNPONGBLBMCFieldNumber = 15;
-    private uint lNPONGBLBMC_;
+    /// <summary>Field number for the "score_two" field.</summary>
+    public const int ScoreTwoFieldNumber = 12;
+    private uint scoreTwo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LNPONGBLBMC {
-      get { return lNPONGBLBMC_; }
+    public uint ScoreTwo {
+      get { return scoreTwo_; }
       set {
-        lNPONGBLBMC_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "BHFNJDEGIOC" field.</summary>
-    public const int BHFNJDEGIOCFieldNumber = 11;
-    private uint bHFNJDEGIOC_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BHFNJDEGIOC {
-      get { return bHFNJDEGIOC_; }
-      set {
-        bHFNJDEGIOC_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "ELLCCCEHAMF" field.</summary>
-    public const int ELLCCCEHAMFFieldNumber = 13;
-    private uint eLLCCCEHAMF_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ELLCCCEHAMF {
-      get { return eLLCCCEHAMF_; }
-      set {
-        eLLCCCEHAMF_ = value;
+        scoreTwo_ = value;
       }
     }
 
     /// <summary>Field number for the "score_id" field.</summary>
-    public const int ScoreIdFieldNumber = 9;
+    public const int ScoreIdFieldNumber = 7;
     private uint scoreId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -158,6 +146,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return scoreId_; }
       set {
         scoreId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "GEHGEGOFDDM" field.</summary>
+    public const int GEHGEGOFDDMFieldNumber = 5;
+    private uint gEHGEGOFDDM_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint GEHGEGOFDDM {
+      get { return gEHGEGOFDDM_; }
+      set {
+        gEHGEGOFDDM_ = value;
       }
     }
 
@@ -176,12 +176,12 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Star != other.Star) return false;
       if (TakenReward != other.TakenReward) return false;
       if (ChallengeId != other.ChallengeId) return false;
-      if (LNPONGBLBMC != other.LNPONGBLBMC) return false;
-      if (BHFNJDEGIOC != other.BHFNJDEGIOC) return false;
-      if (ELLCCCEHAMF != other.ELLCCCEHAMF) return false;
+      if (ScoreTwo != other.ScoreTwo) return false;
       if (ScoreId != other.ScoreId) return false;
+      if (GEHGEGOFDDM != other.GEHGEGOFDDM) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -189,12 +189,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (Star != 0) hash ^= Star.GetHashCode();
       if (TakenReward != 0) hash ^= TakenReward.GetHashCode();
       if (ChallengeId != 0) hash ^= ChallengeId.GetHashCode();
-      if (LNPONGBLBMC != 0) hash ^= LNPONGBLBMC.GetHashCode();
-      if (BHFNJDEGIOC != 0) hash ^= BHFNJDEGIOC.GetHashCode();
-      if (ELLCCCEHAMF != 0) hash ^= ELLCCCEHAMF.GetHashCode();
+      if (ScoreTwo != 0) hash ^= ScoreTwo.GetHashCode();
       if (ScoreId != 0) hash ^= ScoreId.GetHashCode();
+      if (GEHGEGOFDDM != 0) hash ^= GEHGEGOFDDM.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -213,29 +213,29 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (TakenReward != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(TakenReward);
-      }
-      if (ScoreId != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(ScoreId);
-      }
       if (ChallengeId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(8);
         output.WriteUInt32(ChallengeId);
       }
-      if (BHFNJDEGIOC != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(BHFNJDEGIOC);
+      if (GEHGEGOFDDM != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(GEHGEGOFDDM);
       }
-      if (ELLCCCEHAMF != 0) {
+      if (ScoreId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(ScoreId);
+      }
+      if (Star != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Star);
+      }
+      if (ScoreTwo != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(ScoreTwo);
+      }
+      if (TakenReward != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(ELLCCCEHAMF);
-      }
-      if (LNPONGBLBMC != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(LNPONGBLBMC);
+        output.WriteUInt32(TakenReward);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -247,29 +247,29 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TakenReward != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(TakenReward);
-      }
-      if (ScoreId != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(ScoreId);
-      }
       if (ChallengeId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(8);
         output.WriteUInt32(ChallengeId);
       }
-      if (BHFNJDEGIOC != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(BHFNJDEGIOC);
+      if (GEHGEGOFDDM != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(GEHGEGOFDDM);
       }
-      if (ELLCCCEHAMF != 0) {
+      if (ScoreId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(ScoreId);
+      }
+      if (Star != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Star);
+      }
+      if (ScoreTwo != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(ScoreTwo);
+      }
+      if (TakenReward != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(ELLCCCEHAMF);
-      }
-      if (LNPONGBLBMC != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(LNPONGBLBMC);
+        output.WriteUInt32(TakenReward);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -281,23 +281,23 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (Star != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Star);
+      }
       if (TakenReward != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TakenReward);
       }
       if (ChallengeId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChallengeId);
       }
-      if (LNPONGBLBMC != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LNPONGBLBMC);
-      }
-      if (BHFNJDEGIOC != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BHFNJDEGIOC);
-      }
-      if (ELLCCCEHAMF != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ELLCCCEHAMF);
+      if (ScoreTwo != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScoreTwo);
       }
       if (ScoreId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScoreId);
+      }
+      if (GEHGEGOFDDM != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GEHGEGOFDDM);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -311,23 +311,23 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.Star != 0) {
+        Star = other.Star;
+      }
       if (other.TakenReward != 0) {
         TakenReward = other.TakenReward;
       }
       if (other.ChallengeId != 0) {
         ChallengeId = other.ChallengeId;
       }
-      if (other.LNPONGBLBMC != 0) {
-        LNPONGBLBMC = other.LNPONGBLBMC;
-      }
-      if (other.BHFNJDEGIOC != 0) {
-        BHFNJDEGIOC = other.BHFNJDEGIOC;
-      }
-      if (other.ELLCCCEHAMF != 0) {
-        ELLCCCEHAMF = other.ELLCCCEHAMF;
+      if (other.ScoreTwo != 0) {
+        ScoreTwo = other.ScoreTwo;
       }
       if (other.ScoreId != 0) {
         ScoreId = other.ScoreId;
+      }
+      if (other.GEHGEGOFDDM != 0) {
+        GEHGEGOFDDM = other.GEHGEGOFDDM;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -344,28 +344,28 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            TakenReward = input.ReadUInt32();
-            break;
-          }
-          case 72: {
-            ScoreId = input.ReadUInt32();
-            break;
-          }
-          case 80: {
+          case 8: {
             ChallengeId = input.ReadUInt32();
             break;
           }
-          case 88: {
-            BHFNJDEGIOC = input.ReadUInt32();
+          case 40: {
+            GEHGEGOFDDM = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            ScoreId = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            Star = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            ScoreTwo = input.ReadUInt32();
             break;
           }
           case 104: {
-            ELLCCCEHAMF = input.ReadUInt32();
-            break;
-          }
-          case 120: {
-            LNPONGBLBMC = input.ReadUInt32();
+            TakenReward = input.ReadUInt32();
             break;
           }
         }
@@ -383,28 +383,28 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            TakenReward = input.ReadUInt32();
-            break;
-          }
-          case 72: {
-            ScoreId = input.ReadUInt32();
-            break;
-          }
-          case 80: {
+          case 8: {
             ChallengeId = input.ReadUInt32();
             break;
           }
-          case 88: {
-            BHFNJDEGIOC = input.ReadUInt32();
+          case 40: {
+            GEHGEGOFDDM = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            ScoreId = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            Star = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            ScoreTwo = input.ReadUInt32();
             break;
           }
           case 104: {
-            ELLCCCEHAMF = input.ReadUInt32();
-            break;
-          }
-          case 120: {
-            LNPONGBLBMC = input.ReadUInt32();
+            TakenReward = input.ReadUInt32();
             break;
           }
         }

@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch1Sb2d1ZUNvbW1vbkFjdGlvblJlc3VsdC5wcm90bxohUm9ndWVDb21tb25B",
             "Y3Rpb25SZXN1bHREYXRhLnByb3RvGhdSb2d1ZUFjdGlvblNvdXJjZS5wcm90",
-            "byJxChdSb2d1ZUNvbW1vbkFjdGlvblJlc3VsdBIiCgZzb3VyY2UYCyABKA4y",
-            "Ei5Sb2d1ZUFjdGlvblNvdXJjZRIyCgxyb2d1ZV9hY3Rpb24YDyABKAsyHC5S",
+            "byJxChdSb2d1ZUNvbW1vbkFjdGlvblJlc3VsdBIiCgZzb3VyY2UYCiABKA4y",
+            "Ei5Sb2d1ZUFjdGlvblNvdXJjZRIyCgxyb2d1ZV9hY3Rpb24YBSABKAsyHC5S",
             "b2d1ZUNvbW1vbkFjdGlvblJlc3VsdERhdGFCHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "source" field.</summary>
-    public const int SourceFieldNumber = 11;
+    public const int SourceFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.RogueActionSource source_ = global::EggLink.DanhengServer.Proto.RogueActionSource.RogueCommonActionResultSourceTypeNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_action" field.</summary>
-    public const int RogueActionFieldNumber = 15;
+    public const int RogueActionFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.RogueCommonActionResultData rogueAction_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -154,13 +154,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Source != global::EggLink.DanhengServer.Proto.RogueActionSource.RogueCommonActionResultSourceTypeNone) {
-        output.WriteRawTag(88);
-        output.WriteEnum((int) Source);
-      }
       if (rogueAction_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(42);
         output.WriteMessage(RogueAction);
+      }
+      if (Source != global::EggLink.DanhengServer.Proto.RogueActionSource.RogueCommonActionResultSourceTypeNone) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) Source);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -172,13 +172,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Source != global::EggLink.DanhengServer.Proto.RogueActionSource.RogueCommonActionResultSourceTypeNone) {
-        output.WriteRawTag(88);
-        output.WriteEnum((int) Source);
-      }
       if (rogueAction_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(42);
         output.WriteMessage(RogueAction);
+      }
+      if (Source != global::EggLink.DanhengServer.Proto.RogueActionSource.RogueCommonActionResultSourceTypeNone) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) Source);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -232,15 +232,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 88: {
-            Source = (global::EggLink.DanhengServer.Proto.RogueActionSource) input.ReadEnum();
-            break;
-          }
-          case 122: {
+          case 42: {
             if (rogueAction_ == null) {
               RogueAction = new global::EggLink.DanhengServer.Proto.RogueCommonActionResultData();
             }
             input.ReadMessage(RogueAction);
+            break;
+          }
+          case 80: {
+            Source = (global::EggLink.DanhengServer.Proto.RogueActionSource) input.ReadEnum();
             break;
           }
         }
@@ -258,15 +258,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 88: {
-            Source = (global::EggLink.DanhengServer.Proto.RogueActionSource) input.ReadEnum();
-            break;
-          }
-          case 122: {
+          case 42: {
             if (rogueAction_ == null) {
               RogueAction = new global::EggLink.DanhengServer.Proto.RogueCommonActionResultData();
             }
             input.ReadMessage(RogueAction);
+            break;
+          }
+          case 80: {
+            Source = (global::EggLink.DanhengServer.Proto.RogueActionSource) input.ReadEnum();
             break;
           }
         }

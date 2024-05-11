@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpEaXNwbGF5RXF1aXBtZW50SW5mby5wcm90byJgChREaXNwbGF5RXF1aXBt",
-            "ZW50SW5mbxILCgN0aWQYCSABKA0SEQoJcHJvbW90aW9uGA8gASgNEgwKBHJh",
-            "bmsYBCABKA0SDQoFbGV2ZWwYByABKA0SCwoDZXhwGA0gASgNQh6qAhtFZ2dM",
+            "ZW50SW5mbxIMCgRyYW5rGAIgASgNEhEKCXByb21vdGlvbhgBIAEoDRINCgVs",
+            "ZXZlbBgMIAEoDRILCgN0aWQYCCABKA0SCwoDZXhwGA0gASgNQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DisplayEquipmentInfo), global::EggLink.DanhengServer.Proto.DisplayEquipmentInfo.Parser, new[]{ "Tid", "Promotion", "Rank", "Level", "Exp" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DisplayEquipmentInfo), global::EggLink.DanhengServer.Proto.DisplayEquipmentInfo.Parser, new[]{ "Rank", "Promotion", "Level", "Tid", "Exp" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,10 +73,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DisplayEquipmentInfo(DisplayEquipmentInfo other) : this() {
-      tid_ = other.tid_;
-      promotion_ = other.promotion_;
       rank_ = other.rank_;
+      promotion_ = other.promotion_;
       level_ = other.level_;
+      tid_ = other.tid_;
       exp_ = other.exp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -87,32 +87,8 @@ namespace EggLink.DanhengServer.Proto {
       return new DisplayEquipmentInfo(this);
     }
 
-    /// <summary>Field number for the "tid" field.</summary>
-    public const int TidFieldNumber = 9;
-    private uint tid_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Tid {
-      get { return tid_; }
-      set {
-        tid_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "promotion" field.</summary>
-    public const int PromotionFieldNumber = 15;
-    private uint promotion_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Promotion {
-      get { return promotion_; }
-      set {
-        promotion_ = value;
-      }
-    }
-
     /// <summary>Field number for the "rank" field.</summary>
-    public const int RankFieldNumber = 4;
+    public const int RankFieldNumber = 2;
     private uint rank_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,8 +99,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "promotion" field.</summary>
+    public const int PromotionFieldNumber = 1;
+    private uint promotion_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Promotion {
+      get { return promotion_; }
+      set {
+        promotion_ = value;
+      }
+    }
+
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 7;
+    public const int LevelFieldNumber = 12;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -132,6 +120,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return level_; }
       set {
         level_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "tid" field.</summary>
+    public const int TidFieldNumber = 8;
+    private uint tid_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Tid {
+      get { return tid_; }
+      set {
+        tid_ = value;
       }
     }
 
@@ -162,10 +162,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Tid != other.Tid) return false;
-      if (Promotion != other.Promotion) return false;
       if (Rank != other.Rank) return false;
+      if (Promotion != other.Promotion) return false;
       if (Level != other.Level) return false;
+      if (Tid != other.Tid) return false;
       if (Exp != other.Exp) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -174,10 +174,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Tid != 0) hash ^= Tid.GetHashCode();
-      if (Promotion != 0) hash ^= Promotion.GetHashCode();
       if (Rank != 0) hash ^= Rank.GetHashCode();
+      if (Promotion != 0) hash ^= Promotion.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
+      if (Tid != 0) hash ^= Tid.GetHashCode();
       if (Exp != 0) hash ^= Exp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -197,25 +197,25 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (Promotion != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(Promotion);
+      }
       if (Rank != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(16);
         output.WriteUInt32(Rank);
       }
-      if (Level != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(Level);
-      }
       if (Tid != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(64);
         output.WriteUInt32(Tid);
+      }
+      if (Level != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Level);
       }
       if (Exp != 0) {
         output.WriteRawTag(104);
         output.WriteUInt32(Exp);
-      }
-      if (Promotion != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(Promotion);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -227,25 +227,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Promotion != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(Promotion);
+      }
       if (Rank != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(16);
         output.WriteUInt32(Rank);
       }
-      if (Level != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(Level);
-      }
       if (Tid != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(64);
         output.WriteUInt32(Tid);
+      }
+      if (Level != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Level);
       }
       if (Exp != 0) {
         output.WriteRawTag(104);
         output.WriteUInt32(Exp);
-      }
-      if (Promotion != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(Promotion);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -257,17 +257,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Tid != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Tid);
+      if (Rank != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Rank);
       }
       if (Promotion != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Promotion);
       }
-      if (Rank != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Rank);
-      }
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
+      }
+      if (Tid != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Tid);
       }
       if (Exp != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Exp);
@@ -284,17 +284,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Tid != 0) {
-        Tid = other.Tid;
+      if (other.Rank != 0) {
+        Rank = other.Rank;
       }
       if (other.Promotion != 0) {
         Promotion = other.Promotion;
       }
-      if (other.Rank != 0) {
-        Rank = other.Rank;
-      }
       if (other.Level != 0) {
         Level = other.Level;
+      }
+      if (other.Tid != 0) {
+        Tid = other.Tid;
       }
       if (other.Exp != 0) {
         Exp = other.Exp;
@@ -314,24 +314,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 8: {
+            Promotion = input.ReadUInt32();
+            break;
+          }
+          case 16: {
             Rank = input.ReadUInt32();
             break;
           }
-          case 56: {
-            Level = input.ReadUInt32();
+          case 64: {
+            Tid = input.ReadUInt32();
             break;
           }
-          case 72: {
-            Tid = input.ReadUInt32();
+          case 96: {
+            Level = input.ReadUInt32();
             break;
           }
           case 104: {
             Exp = input.ReadUInt32();
-            break;
-          }
-          case 120: {
-            Promotion = input.ReadUInt32();
             break;
           }
         }
@@ -349,24 +349,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 8: {
+            Promotion = input.ReadUInt32();
+            break;
+          }
+          case 16: {
             Rank = input.ReadUInt32();
             break;
           }
-          case 56: {
-            Level = input.ReadUInt32();
+          case 64: {
+            Tid = input.ReadUInt32();
             break;
           }
-          case 72: {
-            Tid = input.ReadUInt32();
+          case 96: {
+            Level = input.ReadUInt32();
             break;
           }
           case 104: {
             Exp = input.ReadUInt32();
-            break;
-          }
-          case 120: {
-            Promotion = input.ReadUInt32();
             break;
           }
         }

@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlTZXRDdXJXYXlwb2ludENzUmVxLnByb3RvIioKE1NldEN1cldheXBvaW50",
-            "Q3NSZXESEwoLd2F5cG9pbnRfaWQYBiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "Q3NSZXESEwoLS0dOR0VLR1BBS0sYByABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetCurWaypointCsReq), global::EggLink.DanhengServer.Proto.SetCurWaypointCsReq.Parser, new[]{ "WaypointId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetCurWaypointCsReq), global::EggLink.DanhengServer.Proto.SetCurWaypointCsReq.Parser, new[]{ "KGNGEKGPAKK" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SetCurWaypointCsReq(SetCurWaypointCsReq other) : this() {
-      waypointId_ = other.waypointId_;
+      kGNGEKGPAKK_ = other.kGNGEKGPAKK_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new SetCurWaypointCsReq(this);
     }
 
-    /// <summary>Field number for the "waypoint_id" field.</summary>
-    public const int WaypointIdFieldNumber = 6;
-    private uint waypointId_;
+    /// <summary>Field number for the "KGNGEKGPAKK" field.</summary>
+    public const int KGNGEKGPAKKFieldNumber = 7;
+    private uint kGNGEKGPAKK_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint WaypointId {
-      get { return waypointId_; }
+    public uint KGNGEKGPAKK {
+      get { return kGNGEKGPAKK_; }
       set {
-        waypointId_ = value;
+        kGNGEKGPAKK_ = value;
       }
     }
 
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (WaypointId != other.WaypointId) return false;
+      if (KGNGEKGPAKK != other.KGNGEKGPAKK) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (WaypointId != 0) hash ^= WaypointId.GetHashCode();
+      if (KGNGEKGPAKK != 0) hash ^= KGNGEKGPAKK.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (WaypointId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(WaypointId);
+      if (KGNGEKGPAKK != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(KGNGEKGPAKK);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (WaypointId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(WaypointId);
+      if (KGNGEKGPAKK != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(KGNGEKGPAKK);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -164,8 +164,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (WaypointId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WaypointId);
+      if (KGNGEKGPAKK != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KGNGEKGPAKK);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -179,8 +179,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.WaypointId != 0) {
-        WaypointId = other.WaypointId;
+      if (other.KGNGEKGPAKK != 0) {
+        KGNGEKGPAKK = other.KGNGEKGPAKK;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -197,8 +197,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            WaypointId = input.ReadUInt32();
+          case 56: {
+            KGNGEKGPAKK = input.ReadUInt32();
             break;
           }
         }
@@ -216,8 +216,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            WaypointId = input.ReadUInt32();
+          case 56: {
+            KGNGEKGPAKK = input.ReadUInt32();
             break;
           }
         }

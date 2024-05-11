@@ -16,18 +16,18 @@ namespace EggLink.DanhengServer.Server.Packet.Send.ChessRogue
 
             foreach (var item in GameData.RogueNousMainStoryData.Values)
             {
-                proto.MainStoryList.Add(new ChessRogueNousMainStoryInfo
+                proto.ChessRogueMainStoryInfo.Add(new ChessRogueNousMainStoryInfo
                 {
-                    MainStoryId = (uint)item.StoryID,
-                    Status = ChessRogueNousStoryStatus.ChessRogueNousMainStoryStatusFinish
+                    ChessRogueMainStoryId = (uint)item.StoryID,
+                    Status = ChessRogueNousMainStoryStatus.Finish
                 });
             }
 
             foreach (var item in GameData.RogueNousSubStoryData.Values)
             {
-                proto.SubStoryList.Add(new ChessRogueNousSubStoryInfo
+                proto.ChessRogueSubStoryInfo.Add(new ChessRogueNousSubStoryInfo
                 {
-                    SubStoryId = (uint)item.StoryID,
+                    ChessRogueSubStoryId = (uint)item.StoryID,
                 });
             }
 

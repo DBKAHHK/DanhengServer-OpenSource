@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5DaGFuZ2VTY3JpcHRFbW90aW9uQ3NSZXEucHJvdG8aGkhlYXJ0RGlhbEVt",
-            "b3Rpb25UeXBlLnByb3RvInAKGENoYW5nZVNjcmlwdEVtb3Rpb25Dc1JlcRIT",
-            "CgtITE9DS0VMRkZGShgOIAEoDRITCgtOSUROR1BPTEhORRgLIAEoDRIqCgtJ",
-            "Qk5ITU9DQ0dKThgHIAEoDjIVLkhlYXJ0RGlhbEVtb3Rpb25UeXBlQh6qAhtF",
+            "b3Rpb25UeXBlLnByb3RvInAKGENoYW5nZVNjcmlwdEVtb3Rpb25Dc1JlcRIq",
+            "CgtNUE1KR0lOS09NQhgKIAEoDjIVLkhlYXJ0RGlhbEVtb3Rpb25UeXBlEhMK",
+            "C0JQREtPUE1LSk1NGA8gASgNEhMKC0dCTEdEUFBJRlBFGAggASgNQh6qAhtF",
             "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeartDialEmotionTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChangeScriptEmotionCsReq), global::EggLink.DanhengServer.Proto.ChangeScriptEmotionCsReq.Parser, new[]{ "HLOCKELFFFJ", "NIDNGPOLHNE", "IBNHMOCCGJN" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChangeScriptEmotionCsReq), global::EggLink.DanhengServer.Proto.ChangeScriptEmotionCsReq.Parser, new[]{ "MPMJGINKOMB", "BPDKOPMKJMM", "GBLGDPPIFPE" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChangeScriptEmotionCsReq(ChangeScriptEmotionCsReq other) : this() {
-      hLOCKELFFFJ_ = other.hLOCKELFFFJ_;
-      nIDNGPOLHNE_ = other.nIDNGPOLHNE_;
-      iBNHMOCCGJN_ = other.iBNHMOCCGJN_;
+      mPMJGINKOMB_ = other.mPMJGINKOMB_;
+      bPDKOPMKJMM_ = other.bPDKOPMKJMM_;
+      gBLGDPPIFPE_ = other.gBLGDPPIFPE_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,39 +86,39 @@ namespace EggLink.DanhengServer.Proto {
       return new ChangeScriptEmotionCsReq(this);
     }
 
-    /// <summary>Field number for the "HLOCKELFFFJ" field.</summary>
-    public const int HLOCKELFFFJFieldNumber = 14;
-    private uint hLOCKELFFFJ_;
+    /// <summary>Field number for the "MPMJGINKOMB" field.</summary>
+    public const int MPMJGINKOMBFieldNumber = 10;
+    private global::EggLink.DanhengServer.Proto.HeartDialEmotionType mPMJGINKOMB_ = global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint HLOCKELFFFJ {
-      get { return hLOCKELFFFJ_; }
+    public global::EggLink.DanhengServer.Proto.HeartDialEmotionType MPMJGINKOMB {
+      get { return mPMJGINKOMB_; }
       set {
-        hLOCKELFFFJ_ = value;
+        mPMJGINKOMB_ = value;
       }
     }
 
-    /// <summary>Field number for the "NIDNGPOLHNE" field.</summary>
-    public const int NIDNGPOLHNEFieldNumber = 11;
-    private uint nIDNGPOLHNE_;
+    /// <summary>Field number for the "BPDKOPMKJMM" field.</summary>
+    public const int BPDKOPMKJMMFieldNumber = 15;
+    private uint bPDKOPMKJMM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NIDNGPOLHNE {
-      get { return nIDNGPOLHNE_; }
+    public uint BPDKOPMKJMM {
+      get { return bPDKOPMKJMM_; }
       set {
-        nIDNGPOLHNE_ = value;
+        bPDKOPMKJMM_ = value;
       }
     }
 
-    /// <summary>Field number for the "IBNHMOCCGJN" field.</summary>
-    public const int IBNHMOCCGJNFieldNumber = 7;
-    private global::EggLink.DanhengServer.Proto.HeartDialEmotionType iBNHMOCCGJN_ = global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace;
+    /// <summary>Field number for the "GBLGDPPIFPE" field.</summary>
+    public const int GBLGDPPIFPEFieldNumber = 8;
+    private uint gBLGDPPIFPE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.HeartDialEmotionType IBNHMOCCGJN {
-      get { return iBNHMOCCGJN_; }
+    public uint GBLGDPPIFPE {
+      get { return gBLGDPPIFPE_; }
       set {
-        iBNHMOCCGJN_ = value;
+        gBLGDPPIFPE_ = value;
       }
     }
 
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (HLOCKELFFFJ != other.HLOCKELFFFJ) return false;
-      if (NIDNGPOLHNE != other.NIDNGPOLHNE) return false;
-      if (IBNHMOCCGJN != other.IBNHMOCCGJN) return false;
+      if (MPMJGINKOMB != other.MPMJGINKOMB) return false;
+      if (BPDKOPMKJMM != other.BPDKOPMKJMM) return false;
+      if (GBLGDPPIFPE != other.GBLGDPPIFPE) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,9 +147,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (HLOCKELFFFJ != 0) hash ^= HLOCKELFFFJ.GetHashCode();
-      if (NIDNGPOLHNE != 0) hash ^= NIDNGPOLHNE.GetHashCode();
-      if (IBNHMOCCGJN != global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace) hash ^= IBNHMOCCGJN.GetHashCode();
+      if (MPMJGINKOMB != global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace) hash ^= MPMJGINKOMB.GetHashCode();
+      if (BPDKOPMKJMM != 0) hash ^= BPDKOPMKJMM.GetHashCode();
+      if (GBLGDPPIFPE != 0) hash ^= GBLGDPPIFPE.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,17 +168,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IBNHMOCCGJN != global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace) {
-        output.WriteRawTag(56);
-        output.WriteEnum((int) IBNHMOCCGJN);
+      if (GBLGDPPIFPE != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(GBLGDPPIFPE);
       }
-      if (NIDNGPOLHNE != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(NIDNGPOLHNE);
+      if (MPMJGINKOMB != global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) MPMJGINKOMB);
       }
-      if (HLOCKELFFFJ != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(HLOCKELFFFJ);
+      if (BPDKOPMKJMM != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(BPDKOPMKJMM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,17 +190,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IBNHMOCCGJN != global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace) {
-        output.WriteRawTag(56);
-        output.WriteEnum((int) IBNHMOCCGJN);
+      if (GBLGDPPIFPE != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(GBLGDPPIFPE);
       }
-      if (NIDNGPOLHNE != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(NIDNGPOLHNE);
+      if (MPMJGINKOMB != global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) MPMJGINKOMB);
       }
-      if (HLOCKELFFFJ != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(HLOCKELFFFJ);
+      if (BPDKOPMKJMM != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(BPDKOPMKJMM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -212,14 +212,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (HLOCKELFFFJ != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HLOCKELFFFJ);
+      if (MPMJGINKOMB != global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MPMJGINKOMB);
       }
-      if (NIDNGPOLHNE != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NIDNGPOLHNE);
+      if (BPDKOPMKJMM != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BPDKOPMKJMM);
       }
-      if (IBNHMOCCGJN != global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IBNHMOCCGJN);
+      if (GBLGDPPIFPE != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GBLGDPPIFPE);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -233,14 +233,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.HLOCKELFFFJ != 0) {
-        HLOCKELFFFJ = other.HLOCKELFFFJ;
+      if (other.MPMJGINKOMB != global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace) {
+        MPMJGINKOMB = other.MPMJGINKOMB;
       }
-      if (other.NIDNGPOLHNE != 0) {
-        NIDNGPOLHNE = other.NIDNGPOLHNE;
+      if (other.BPDKOPMKJMM != 0) {
+        BPDKOPMKJMM = other.BPDKOPMKJMM;
       }
-      if (other.IBNHMOCCGJN != global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace) {
-        IBNHMOCCGJN = other.IBNHMOCCGJN;
+      if (other.GBLGDPPIFPE != 0) {
+        GBLGDPPIFPE = other.GBLGDPPIFPE;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -257,16 +257,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            IBNHMOCCGJN = (global::EggLink.DanhengServer.Proto.HeartDialEmotionType) input.ReadEnum();
+          case 64: {
+            GBLGDPPIFPE = input.ReadUInt32();
             break;
           }
-          case 88: {
-            NIDNGPOLHNE = input.ReadUInt32();
+          case 80: {
+            MPMJGINKOMB = (global::EggLink.DanhengServer.Proto.HeartDialEmotionType) input.ReadEnum();
             break;
           }
-          case 112: {
-            HLOCKELFFFJ = input.ReadUInt32();
+          case 120: {
+            BPDKOPMKJMM = input.ReadUInt32();
             break;
           }
         }
@@ -284,16 +284,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            IBNHMOCCGJN = (global::EggLink.DanhengServer.Proto.HeartDialEmotionType) input.ReadEnum();
+          case 64: {
+            GBLGDPPIFPE = input.ReadUInt32();
             break;
           }
-          case 88: {
-            NIDNGPOLHNE = input.ReadUInt32();
+          case 80: {
+            MPMJGINKOMB = (global::EggLink.DanhengServer.Proto.HeartDialEmotionType) input.ReadEnum();
             break;
           }
-          case 112: {
-            HLOCKELFFFJ = input.ReadUInt32();
+          case 120: {
+            BPDKOPMKJMM = input.ReadUInt32();
             break;
           }
         }

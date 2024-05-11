@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static TakeExpeditionRewardCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9UYWtlRXhwZWRpdGlvblJld2FyZENzUmVxLnByb3RvIjIKGVRha2VFeHBl",
-            "ZGl0aW9uUmV3YXJkQ3NSZXESFQoNZXhwZWRpdGlvbl9pZBgMIAEoDUIeqgIb",
-            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Ch9UYWtlRXhwZWRpdGlvblJld2FyZENzUmVxLnByb3RvIjAKGVRha2VFeHBl",
+            "ZGl0aW9uUmV3YXJkQ3NSZXESEwoLT0VEQ0JJRE9FSkMYAiABKA1CHqoCG0Vn",
+            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeExpeditionRewardCsReq), global::EggLink.DanhengServer.Proto.TakeExpeditionRewardCsReq.Parser, new[]{ "ExpeditionId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeExpeditionRewardCsReq), global::EggLink.DanhengServer.Proto.TakeExpeditionRewardCsReq.Parser, new[]{ "OEDCBIDOEJC" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TakeExpeditionRewardCsReq(TakeExpeditionRewardCsReq other) : this() {
-      expeditionId_ = other.expeditionId_;
+      oEDCBIDOEJC_ = other.oEDCBIDOEJC_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new TakeExpeditionRewardCsReq(this);
     }
 
-    /// <summary>Field number for the "expedition_id" field.</summary>
-    public const int ExpeditionIdFieldNumber = 12;
-    private uint expeditionId_;
+    /// <summary>Field number for the "OEDCBIDOEJC" field.</summary>
+    public const int OEDCBIDOEJCFieldNumber = 2;
+    private uint oEDCBIDOEJC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ExpeditionId {
-      get { return expeditionId_; }
+    public uint OEDCBIDOEJC {
+      get { return oEDCBIDOEJC_; }
       set {
-        expeditionId_ = value;
+        oEDCBIDOEJC_ = value;
       }
     }
 
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ExpeditionId != other.ExpeditionId) return false;
+      if (OEDCBIDOEJC != other.OEDCBIDOEJC) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ExpeditionId != 0) hash ^= ExpeditionId.GetHashCode();
+      if (OEDCBIDOEJC != 0) hash ^= OEDCBIDOEJC.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ExpeditionId != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(ExpeditionId);
+      if (OEDCBIDOEJC != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(OEDCBIDOEJC);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ExpeditionId != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(ExpeditionId);
+      if (OEDCBIDOEJC != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(OEDCBIDOEJC);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -164,8 +164,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ExpeditionId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ExpeditionId);
+      if (OEDCBIDOEJC != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OEDCBIDOEJC);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -179,8 +179,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ExpeditionId != 0) {
-        ExpeditionId = other.ExpeditionId;
+      if (other.OEDCBIDOEJC != 0) {
+        OEDCBIDOEJC = other.OEDCBIDOEJC;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -197,8 +197,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 96: {
-            ExpeditionId = input.ReadUInt32();
+          case 16: {
+            OEDCBIDOEJC = input.ReadUInt32();
             break;
           }
         }
@@ -216,8 +216,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 96: {
-            ExpeditionId = input.ReadUInt32();
+          case 16: {
+            OEDCBIDOEJC = input.ReadUInt32();
             break;
           }
         }

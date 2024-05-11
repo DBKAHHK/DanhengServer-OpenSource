@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhQcm9wQ2hlc3NSb2d1ZUluZm8ucHJvdG8iQwoSUHJvcENoZXNzUm9ndWVJ",
-            "bmZvEhMKC0VFQ01PT0ZEQ1BGGA8gASgIEhgKEGVudGVyX25leHRfbGF5ZXIY",
-            "DSABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "bmZvEhMKC0VMRkdITUZBT1BIGAEgASgIEhgKEGVudGVyX25leHRfbGF5ZXIY",
+            "AiABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PropChessRogueInfo), global::EggLink.DanhengServer.Proto.PropChessRogueInfo.Parser, new[]{ "EECMOOFDCPF", "EnterNextLayer" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PropChessRogueInfo), global::EggLink.DanhengServer.Proto.PropChessRogueInfo.Parser, new[]{ "ELFGHMFAOPH", "EnterNextLayer" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PropChessRogueInfo(PropChessRogueInfo other) : this() {
-      eECMOOFDCPF_ = other.eECMOOFDCPF_;
+      eLFGHMFAOPH_ = other.eLFGHMFAOPH_;
       enterNextLayer_ = other.enterNextLayer_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -83,20 +83,20 @@ namespace EggLink.DanhengServer.Proto {
       return new PropChessRogueInfo(this);
     }
 
-    /// <summary>Field number for the "EECMOOFDCPF" field.</summary>
-    public const int EECMOOFDCPFFieldNumber = 15;
-    private bool eECMOOFDCPF_;
+    /// <summary>Field number for the "ELFGHMFAOPH" field.</summary>
+    public const int ELFGHMFAOPHFieldNumber = 1;
+    private bool eLFGHMFAOPH_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool EECMOOFDCPF {
-      get { return eECMOOFDCPF_; }
+    public bool ELFGHMFAOPH {
+      get { return eLFGHMFAOPH_; }
       set {
-        eECMOOFDCPF_ = value;
+        eLFGHMFAOPH_ = value;
       }
     }
 
     /// <summary>Field number for the "enter_next_layer" field.</summary>
-    public const int EnterNextLayerFieldNumber = 13;
+    public const int EnterNextLayerFieldNumber = 2;
     private bool enterNextLayer_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (EECMOOFDCPF != other.EECMOOFDCPF) return false;
+      if (ELFGHMFAOPH != other.ELFGHMFAOPH) return false;
       if (EnterNextLayer != other.EnterNextLayer) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -131,7 +131,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (EECMOOFDCPF != false) hash ^= EECMOOFDCPF.GetHashCode();
+      if (ELFGHMFAOPH != false) hash ^= ELFGHMFAOPH.GetHashCode();
       if (EnterNextLayer != false) hash ^= EnterNextLayer.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (EnterNextLayer != false) {
-        output.WriteRawTag(104);
-        output.WriteBool(EnterNextLayer);
+      if (ELFGHMFAOPH != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(ELFGHMFAOPH);
       }
-      if (EECMOOFDCPF != false) {
-        output.WriteRawTag(120);
-        output.WriteBool(EECMOOFDCPF);
+      if (EnterNextLayer != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(EnterNextLayer);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (EnterNextLayer != false) {
-        output.WriteRawTag(104);
-        output.WriteBool(EnterNextLayer);
+      if (ELFGHMFAOPH != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(ELFGHMFAOPH);
       }
-      if (EECMOOFDCPF != false) {
-        output.WriteRawTag(120);
-        output.WriteBool(EECMOOFDCPF);
+      if (EnterNextLayer != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(EnterNextLayer);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (EECMOOFDCPF != false) {
+      if (ELFGHMFAOPH != false) {
         size += 1 + 1;
       }
       if (EnterNextLayer != false) {
@@ -205,8 +205,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.EECMOOFDCPF != false) {
-        EECMOOFDCPF = other.EECMOOFDCPF;
+      if (other.ELFGHMFAOPH != false) {
+        ELFGHMFAOPH = other.ELFGHMFAOPH;
       }
       if (other.EnterNextLayer != false) {
         EnterNextLayer = other.EnterNextLayer;
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 104: {
-            EnterNextLayer = input.ReadBool();
+          case 8: {
+            ELFGHMFAOPH = input.ReadBool();
             break;
           }
-          case 120: {
-            EECMOOFDCPF = input.ReadBool();
+          case 16: {
+            EnterNextLayer = input.ReadBool();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 104: {
-            EnterNextLayer = input.ReadBool();
+          case 8: {
+            ELFGHMFAOPH = input.ReadBool();
             break;
           }
-          case 120: {
-            EECMOOFDCPF = input.ReadBool();
+          case 16: {
+            EnterNextLayer = input.ReadBool();
             break;
           }
         }

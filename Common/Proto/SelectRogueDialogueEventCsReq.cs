@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNTZWxlY3RSb2d1ZURpYWxvZ3VlRXZlbnRDc1JlcS5wcm90byJOCh1TZWxl",
             "Y3RSb2d1ZURpYWxvZ3VlRXZlbnRDc1JlcRIZChFkaWFsb2d1ZV9ldmVudF9p",
-            "ZBgGIAEoDRISCgptb25zdGVyX2lkGA4gASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "ZBgNIAEoDRISCgptb25zdGVyX2lkGAYgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "dialogue_event_id" field.</summary>
-    public const int DialogueEventIdFieldNumber = 6;
+    public const int DialogueEventIdFieldNumber = 13;
     private uint dialogueEventId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "monster_id" field.</summary>
-    public const int MonsterIdFieldNumber = 14;
+    public const int MonsterIdFieldNumber = 6;
     private uint monsterId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (DialogueEventId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(DialogueEventId);
-      }
       if (MonsterId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(48);
         output.WriteUInt32(MonsterId);
+      }
+      if (DialogueEventId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(DialogueEventId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (DialogueEventId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(DialogueEventId);
-      }
       if (MonsterId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(48);
         output.WriteUInt32(MonsterId);
+      }
+      if (DialogueEventId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(DialogueEventId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -228,11 +228,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 48: {
-            DialogueEventId = input.ReadUInt32();
+            MonsterId = input.ReadUInt32();
             break;
           }
-          case 112: {
-            MonsterId = input.ReadUInt32();
+          case 104: {
+            DialogueEventId = input.ReadUInt32();
             break;
           }
         }
@@ -251,11 +251,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 48: {
-            DialogueEventId = input.ReadUInt32();
+            MonsterId = input.ReadUInt32();
             break;
           }
-          case 112: {
-            MonsterId = input.ReadUInt32();
+          case 104: {
+            DialogueEventId = input.ReadUInt32();
             break;
           }
         }

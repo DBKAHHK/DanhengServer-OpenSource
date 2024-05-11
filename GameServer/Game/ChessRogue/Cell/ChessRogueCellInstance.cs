@@ -196,18 +196,18 @@ namespace EggLink.DanhengServer.Game.ChessRogue.Cell
             return groupList;
         }
 
-        public CellInfo ToProto()
+        public ChessRogueCell ToProto()
         {
-            var info = new CellInfo()
+            var info = new ChessRogueCell()
             {
                 CellStatus = CellStatus,
-                Column = (uint)Column,
+                //Column = (uint)Column,
                 Id = (uint)GetCellId(),
-                CellType = (uint)CellType,
-                IsValid = true,
+                //CellType = (uint)CellType,
+                //IsValid = true,
                 RoomId = (uint)RoomId,
-                DGBFIGKHAPN = true,
-                Row = (uint)GetRow(),
+                //DGBFIGKHAPN = true,
+                //Row = (uint)GetRow(),
             };
 
             if (CellAdvanceInfo.Count > 0)

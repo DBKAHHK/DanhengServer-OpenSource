@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CipUZWxldmlzaW9uQWN0aXZpdHlEYXRhQ2hhbmdlU2NOb3RpZnkucHJvdG8a",
-            "HFRlbGV2aXNpb25BY3Rpdml0eURhdGEucHJvdG8iYQokVGVsZXZpc2lvbkFj",
-            "dGl2aXR5RGF0YUNoYW5nZVNjTm90aWZ5EjkKGHRlbGV2aXNpb25fYWN0aXZp",
-            "dHlfZGF0YRgJIAMoCzIXLlRlbGV2aXNpb25BY3Rpdml0eURhdGFCHqoCG0Vn",
-            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "HFRlbGV2aXNpb25BY3Rpdml0eURhdGEucHJvdG8iVAokVGVsZXZpc2lvbkFj",
+            "dGl2aXR5RGF0YUNoYW5nZVNjTm90aWZ5EiwKC0xDT09ESUJPSE9QGA0gAygL",
+            "MhcuVGVsZXZpc2lvbkFjdGl2aXR5RGF0YUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TelevisionActivityDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TelevisionActivityDataChangeScNotify), global::EggLink.DanhengServer.Proto.TelevisionActivityDataChangeScNotify.Parser, new[]{ "TelevisionActivityData" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TelevisionActivityDataChangeScNotify), global::EggLink.DanhengServer.Proto.TelevisionActivityDataChangeScNotify.Parser, new[]{ "LCOODIBOHOP" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TelevisionActivityDataChangeScNotify(TelevisionActivityDataChangeScNotify other) : this() {
-      televisionActivityData_ = other.televisionActivityData_.Clone();
+      lCOODIBOHOP_ = other.lCOODIBOHOP_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,15 +84,15 @@ namespace EggLink.DanhengServer.Proto {
       return new TelevisionActivityDataChangeScNotify(this);
     }
 
-    /// <summary>Field number for the "television_activity_data" field.</summary>
-    public const int TelevisionActivityDataFieldNumber = 9;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.TelevisionActivityData> _repeated_televisionActivityData_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.TelevisionActivityData.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TelevisionActivityData> televisionActivityData_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TelevisionActivityData>();
+    /// <summary>Field number for the "LCOODIBOHOP" field.</summary>
+    public const int LCOODIBOHOPFieldNumber = 13;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.TelevisionActivityData> _repeated_lCOODIBOHOP_codec
+        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.TelevisionActivityData.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TelevisionActivityData> lCOODIBOHOP_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TelevisionActivityData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TelevisionActivityData> TelevisionActivityData {
-      get { return televisionActivityData_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TelevisionActivityData> LCOODIBOHOP {
+      get { return lCOODIBOHOP_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!televisionActivityData_.Equals(other.televisionActivityData_)) return false;
+      if(!lCOODIBOHOP_.Equals(other.lCOODIBOHOP_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -118,7 +118,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= televisionActivityData_.GetHashCode();
+      hash ^= lCOODIBOHOP_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      televisionActivityData_.WriteTo(output, _repeated_televisionActivityData_codec);
+      lCOODIBOHOP_.WriteTo(output, _repeated_lCOODIBOHOP_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -148,7 +148,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      televisionActivityData_.WriteTo(ref output, _repeated_televisionActivityData_codec);
+      lCOODIBOHOP_.WriteTo(ref output, _repeated_lCOODIBOHOP_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -159,7 +159,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += televisionActivityData_.CalculateSize(_repeated_televisionActivityData_codec);
+      size += lCOODIBOHOP_.CalculateSize(_repeated_lCOODIBOHOP_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -172,7 +172,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      televisionActivityData_.Add(other.televisionActivityData_);
+      lCOODIBOHOP_.Add(other.lCOODIBOHOP_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -188,8 +188,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 74: {
-            televisionActivityData_.AddEntriesFrom(input, _repeated_televisionActivityData_codec);
+          case 106: {
+            lCOODIBOHOP_.AddEntriesFrom(input, _repeated_lCOODIBOHOP_codec);
             break;
           }
         }
@@ -207,8 +207,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 74: {
-            televisionActivityData_.AddEntriesFrom(ref input, _repeated_televisionActivityData_codec);
+          case 106: {
+            lCOODIBOHOP_.AddEntriesFrom(ref input, _repeated_lCOODIBOHOP_codec);
             break;
           }
         }

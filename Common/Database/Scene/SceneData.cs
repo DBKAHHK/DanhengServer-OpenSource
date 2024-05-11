@@ -4,7 +4,7 @@ using SqlSugar;
 namespace EggLink.DanhengServer.Database.Scene
 {
     [SugarTable("Scene")]
-    public class SceneData : BaseDatabaseData
+    public class SceneData : BaseDatabaseDataHelper
     {
         [SugarColumn(IsJson = true)]
         public Dictionary<int, Dictionary<int, List<ScenePropData>>> ScenePropData { get; set; } = [];  // Dictionary<FloorId, Dictionary<GroupId, ScenePropData>>

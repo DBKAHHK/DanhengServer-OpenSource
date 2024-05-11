@@ -274,7 +274,7 @@ namespace EggLink.DanhengServer.Game.Scene
             {
                 foreach (var customData in data)
                 {
-                    sceneInfo.CustomSaveData.Add(new CustomSaveData()
+                    sceneInfo.SaveDataList.Add(new CustomSaveData()
                     {
                         GroupId = (uint)customData.Key,
                         SaveData = customData.Value

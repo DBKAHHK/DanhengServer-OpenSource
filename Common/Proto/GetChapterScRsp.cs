@@ -24,15 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GetChapterScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVHZXRDaGFwdGVyU2NSc3AucHJvdG8aEkNoYXB0ZXJCcmllZi5wcm90byJg",
-            "Cg9HZXRDaGFwdGVyU2NSc3ASFwoPY3VyX3dheXBvaW50X2lkGAIgASgNEg8K",
-            "B3JldGNvZGUYByABKA0SIwoMY2hhcHRlcl9saXN0GA0gAygLMg0uQ2hhcHRl",
-            "ckJyaWVmQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
-            "Mw=="));
+            "ChVHZXRDaGFwdGVyU2NSc3AucHJvdG8aEkNoYXB0ZXJCcmllZi5wcm90byJb",
+            "Cg9HZXRDaGFwdGVyU2NSc3ASEwoLTUNDRkJMQVBOTEMYDiABKA0SDwoHcmV0",
+            "Y29kZRgIIAEoDRIiCgtCR0pMREhHQlBKQhgEIAMoCzINLkNoYXB0ZXJCcmll",
+            "ZkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChapterBriefReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetChapterScRsp), global::EggLink.DanhengServer.Proto.GetChapterScRsp.Parser, new[]{ "CurWaypointId", "Retcode", "ChapterList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetChapterScRsp), global::EggLink.DanhengServer.Proto.GetChapterScRsp.Parser, new[]{ "MCCFBLAPNLC", "Retcode", "BGJLDHGBPJB" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetChapterScRsp(GetChapterScRsp other) : this() {
-      curWaypointId_ = other.curWaypointId_;
+      mCCFBLAPNLC_ = other.mCCFBLAPNLC_;
       retcode_ = other.retcode_;
-      chapterList_ = other.chapterList_.Clone();
+      bGJLDHGBPJB_ = other.bGJLDHGBPJB_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,20 +85,20 @@ namespace EggLink.DanhengServer.Proto {
       return new GetChapterScRsp(this);
     }
 
-    /// <summary>Field number for the "cur_waypoint_id" field.</summary>
-    public const int CurWaypointIdFieldNumber = 2;
-    private uint curWaypointId_;
+    /// <summary>Field number for the "MCCFBLAPNLC" field.</summary>
+    public const int MCCFBLAPNLCFieldNumber = 14;
+    private uint mCCFBLAPNLC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CurWaypointId {
-      get { return curWaypointId_; }
+    public uint MCCFBLAPNLC {
+      get { return mCCFBLAPNLC_; }
       set {
-        curWaypointId_ = value;
+        mCCFBLAPNLC_ = value;
       }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 7;
+    public const int RetcodeFieldNumber = 8;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,15 +109,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "chapter_list" field.</summary>
-    public const int ChapterListFieldNumber = 13;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChapterBrief> _repeated_chapterList_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.ChapterBrief.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChapterBrief> chapterList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChapterBrief>();
+    /// <summary>Field number for the "BGJLDHGBPJB" field.</summary>
+    public const int BGJLDHGBPJBFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChapterBrief> _repeated_bGJLDHGBPJB_codec
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.ChapterBrief.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChapterBrief> bGJLDHGBPJB_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChapterBrief>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChapterBrief> ChapterList {
-      get { return chapterList_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChapterBrief> BGJLDHGBPJB {
+      get { return bGJLDHGBPJB_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -136,9 +135,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CurWaypointId != other.CurWaypointId) return false;
+      if (MCCFBLAPNLC != other.MCCFBLAPNLC) return false;
       if (Retcode != other.Retcode) return false;
-      if(!chapterList_.Equals(other.chapterList_)) return false;
+      if(!bGJLDHGBPJB_.Equals(other.bGJLDHGBPJB_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +145,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CurWaypointId != 0) hash ^= CurWaypointId.GetHashCode();
+      if (MCCFBLAPNLC != 0) hash ^= MCCFBLAPNLC.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      hash ^= chapterList_.GetHashCode();
+      hash ^= bGJLDHGBPJB_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,15 +166,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CurWaypointId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(CurWaypointId);
-      }
+      bGJLDHGBPJB_.WriteTo(output, _repeated_bGJLDHGBPJB_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
-      chapterList_.WriteTo(output, _repeated_chapterList_codec);
+      if (MCCFBLAPNLC != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(MCCFBLAPNLC);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -186,15 +185,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CurWaypointId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(CurWaypointId);
-      }
+      bGJLDHGBPJB_.WriteTo(ref output, _repeated_bGJLDHGBPJB_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
-      chapterList_.WriteTo(ref output, _repeated_chapterList_codec);
+      if (MCCFBLAPNLC != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(MCCFBLAPNLC);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -205,13 +204,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CurWaypointId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurWaypointId);
+      if (MCCFBLAPNLC != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MCCFBLAPNLC);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += chapterList_.CalculateSize(_repeated_chapterList_codec);
+      size += bGJLDHGBPJB_.CalculateSize(_repeated_bGJLDHGBPJB_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -224,13 +223,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.CurWaypointId != 0) {
-        CurWaypointId = other.CurWaypointId;
+      if (other.MCCFBLAPNLC != 0) {
+        MCCFBLAPNLC = other.MCCFBLAPNLC;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      chapterList_.Add(other.chapterList_);
+      bGJLDHGBPJB_.Add(other.bGJLDHGBPJB_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -246,16 +245,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            CurWaypointId = input.ReadUInt32();
+          case 34: {
+            bGJLDHGBPJB_.AddEntriesFrom(input, _repeated_bGJLDHGBPJB_codec);
             break;
           }
-          case 56: {
+          case 64: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 106: {
-            chapterList_.AddEntriesFrom(input, _repeated_chapterList_codec);
+          case 112: {
+            MCCFBLAPNLC = input.ReadUInt32();
             break;
           }
         }
@@ -273,16 +272,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            CurWaypointId = input.ReadUInt32();
+          case 34: {
+            bGJLDHGBPJB_.AddEntriesFrom(ref input, _repeated_bGJLDHGBPJB_codec);
             break;
           }
-          case 56: {
+          case 64: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 106: {
-            chapterList_.AddEntriesFrom(ref input, _repeated_chapterList_codec);
+          case 112: {
+            MCCFBLAPNLC = input.ReadUInt32();
             break;
           }
         }

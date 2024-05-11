@@ -11,7 +11,7 @@ namespace EggLink.DanhengServer.Server.Packet.Send.ChessRogue
             {
                 PlayerInfo = player.ChessRogueManager!.RogueInstance!.ToPlayerProto(),
                 Info = player.ChessRogueManager!.RogueInstance!.ToProto(),
-                RogueGameInfo = player.ChessRogueManager!.RogueInstance!.ToRogueGameInfo()
+                RogueCurrentInfo = player.ChessRogueManager!.RogueInstance!.ToRogueGameInfo()
             };
 
             SetData(proto);

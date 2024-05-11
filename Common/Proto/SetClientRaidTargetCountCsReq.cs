@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNTZXRDbGllbnRSYWlkVGFyZ2V0Q291bnRDc1JlcS5wcm90byJGCh1TZXRD",
-            "bGllbnRSYWlkVGFyZ2V0Q291bnRDc1JlcRIQCghwcm9ncmVzcxgHIAEoDRIT",
-            "CgtOREZHRktIQU1MQxgPIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "bGllbnRSYWlkVGFyZ2V0Q291bnRDc1JlcRITCgtESExHTExPR0pMTRgNIAEo",
+            "DRIQCghwcm9ncmVzcxgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetClientRaidTargetCountCsReq), global::EggLink.DanhengServer.Proto.SetClientRaidTargetCountCsReq.Parser, new[]{ "Progress", "NDFGFKHAMLC" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetClientRaidTargetCountCsReq), global::EggLink.DanhengServer.Proto.SetClientRaidTargetCountCsReq.Parser, new[]{ "DHLGLLOGJLM", "Progress" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SetClientRaidTargetCountCsReq(SetClientRaidTargetCountCsReq other) : this() {
+      dHLGLLOGJLM_ = other.dHLGLLOGJLM_;
       progress_ = other.progress_;
-      nDFGFKHAMLC_ = other.nDFGFKHAMLC_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,8 +84,20 @@ namespace EggLink.DanhengServer.Proto {
       return new SetClientRaidTargetCountCsReq(this);
     }
 
+    /// <summary>Field number for the "DHLGLLOGJLM" field.</summary>
+    public const int DHLGLLOGJLMFieldNumber = 13;
+    private uint dHLGLLOGJLM_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DHLGLLOGJLM {
+      get { return dHLGLLOGJLM_; }
+      set {
+        dHLGLLOGJLM_ = value;
+      }
+    }
+
     /// <summary>Field number for the "progress" field.</summary>
-    public const int ProgressFieldNumber = 7;
+    public const int ProgressFieldNumber = 9;
     private uint progress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -93,18 +105,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return progress_; }
       set {
         progress_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "NDFGFKHAMLC" field.</summary>
-    public const int NDFGFKHAMLCFieldNumber = 15;
-    private uint nDFGFKHAMLC_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NDFGFKHAMLC {
-      get { return nDFGFKHAMLC_; }
-      set {
-        nDFGFKHAMLC_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (DHLGLLOGJLM != other.DHLGLLOGJLM) return false;
       if (Progress != other.Progress) return false;
-      if (NDFGFKHAMLC != other.NDFGFKHAMLC) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (DHLGLLOGJLM != 0) hash ^= DHLGLLOGJLM.GetHashCode();
       if (Progress != 0) hash ^= Progress.GetHashCode();
-      if (NDFGFKHAMLC != 0) hash ^= NDFGFKHAMLC.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,12 +153,12 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Progress != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(72);
         output.WriteUInt32(Progress);
       }
-      if (NDFGFKHAMLC != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(NDFGFKHAMLC);
+      if (DHLGLLOGJLM != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(DHLGLLOGJLM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,12 +171,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Progress != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(72);
         output.WriteUInt32(Progress);
       }
-      if (NDFGFKHAMLC != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(NDFGFKHAMLC);
+      if (DHLGLLOGJLM != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(DHLGLLOGJLM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (DHLGLLOGJLM != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DHLGLLOGJLM);
+      }
       if (Progress != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Progress);
-      }
-      if (NDFGFKHAMLC != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NDFGFKHAMLC);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.DHLGLLOGJLM != 0) {
+        DHLGLLOGJLM = other.DHLGLLOGJLM;
+      }
       if (other.Progress != 0) {
         Progress = other.Progress;
-      }
-      if (other.NDFGFKHAMLC != 0) {
-        NDFGFKHAMLC = other.NDFGFKHAMLC;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
+          case 72: {
             Progress = input.ReadUInt32();
             break;
           }
-          case 120: {
-            NDFGFKHAMLC = input.ReadUInt32();
+          case 104: {
+            DHLGLLOGJLM = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
+          case 72: {
             Progress = input.ReadUInt32();
             break;
           }
-          case 120: {
-            NDFGFKHAMLC = input.ReadUInt32();
+          case 104: {
+            DHLGLLOGJLM = input.ReadUInt32();
             break;
           }
         }

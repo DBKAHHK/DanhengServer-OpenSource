@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CidEZWxldGVTb2NpYWxFdmVudFNlcnZlckNhY2hlQ3NSZXEucHJvdG8iOAoh",
-            "RGVsZXRlU29jaWFsRXZlbnRTZXJ2ZXJDYWNoZUNzUmVxEhMKC0pJT0RCSk9N",
-            "SUJEGA8gAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "RGVsZXRlU29jaWFsRXZlbnRTZXJ2ZXJDYWNoZUNzUmVxEhMKC0FHQUFOTkpH",
+            "RUZCGAkgAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DeleteSocialEventServerCacheCsReq), global::EggLink.DanhengServer.Proto.DeleteSocialEventServerCacheCsReq.Parser, new[]{ "JIODBJOMIBD" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DeleteSocialEventServerCacheCsReq), global::EggLink.DanhengServer.Proto.DeleteSocialEventServerCacheCsReq.Parser, new[]{ "AGAANNJGEFB" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteSocialEventServerCacheCsReq(DeleteSocialEventServerCacheCsReq other) : this() {
-      jIODBJOMIBD_ = other.jIODBJOMIBD_.Clone();
+      aGAANNJGEFB_ = other.aGAANNJGEFB_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new DeleteSocialEventServerCacheCsReq(this);
     }
 
-    /// <summary>Field number for the "JIODBJOMIBD" field.</summary>
-    public const int JIODBJOMIBDFieldNumber = 15;
-    private static readonly pb::FieldCodec<uint> _repeated_jIODBJOMIBD_codec
-        = pb::FieldCodec.ForUInt32(122);
-    private readonly pbc::RepeatedField<uint> jIODBJOMIBD_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "AGAANNJGEFB" field.</summary>
+    public const int AGAANNJGEFBFieldNumber = 9;
+    private static readonly pb::FieldCodec<uint> _repeated_aGAANNJGEFB_codec
+        = pb::FieldCodec.ForUInt32(74);
+    private readonly pbc::RepeatedField<uint> aGAANNJGEFB_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> JIODBJOMIBD {
-      get { return jIODBJOMIBD_; }
+    public pbc::RepeatedField<uint> AGAANNJGEFB {
+      get { return aGAANNJGEFB_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!jIODBJOMIBD_.Equals(other.jIODBJOMIBD_)) return false;
+      if(!aGAANNJGEFB_.Equals(other.aGAANNJGEFB_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= jIODBJOMIBD_.GetHashCode();
+      hash ^= aGAANNJGEFB_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      jIODBJOMIBD_.WriteTo(output, _repeated_jIODBJOMIBD_codec);
+      aGAANNJGEFB_.WriteTo(output, _repeated_aGAANNJGEFB_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -147,7 +147,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      jIODBJOMIBD_.WriteTo(ref output, _repeated_jIODBJOMIBD_codec);
+      aGAANNJGEFB_.WriteTo(ref output, _repeated_aGAANNJGEFB_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -158,7 +158,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += jIODBJOMIBD_.CalculateSize(_repeated_jIODBJOMIBD_codec);
+      size += aGAANNJGEFB_.CalculateSize(_repeated_aGAANNJGEFB_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -171,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      jIODBJOMIBD_.Add(other.jIODBJOMIBD_);
+      aGAANNJGEFB_.Add(other.aGAANNJGEFB_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -187,9 +187,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 122:
-          case 120: {
-            jIODBJOMIBD_.AddEntriesFrom(input, _repeated_jIODBJOMIBD_codec);
+          case 74:
+          case 72: {
+            aGAANNJGEFB_.AddEntriesFrom(input, _repeated_aGAANNJGEFB_codec);
             break;
           }
         }
@@ -207,9 +207,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 122:
-          case 120: {
-            jIODBJOMIBD_.AddEntriesFrom(ref input, _repeated_jIODBJOMIBD_codec);
+          case 74:
+          case 72: {
+            aGAANNJGEFB_.AddEntriesFrom(ref input, _repeated_aGAANNJGEFB_codec);
             break;
           }
         }

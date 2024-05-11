@@ -18,7 +18,7 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Mission
             {
                 var contact = instance.MessageManager!.GetMessageGroup((int)contactId);
 
-                proto.MessageGroup.AddRange(contact);
+                proto.MessageGroupList.AddRange(contact);
             }
 
             SetData(proto);

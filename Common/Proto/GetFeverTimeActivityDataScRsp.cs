@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNHZXRGZXZlclRpbWVBY3Rpdml0eURhdGFTY1JzcC5wcm90bxobRmV2ZXJU",
             "aW1lQWN0aXZpdHlEYXRhLnByb3RvIm8KHUdldEZldmVyVGltZUFjdGl2aXR5",
-            "RGF0YVNjUnNwEg8KB3JldGNvZGUYASABKA0SPQodZmV2ZXJfdGltZV9hY3Rp",
-            "dml0eV9kYXRhX2xpc3QYCiADKAsyFi5GZXZlclRpbWVBY3Rpdml0eURhdGFC",
+            "RGF0YVNjUnNwEg8KB3JldGNvZGUYAyABKA0SPQodZmV2ZXJfdGltZV9hY3Rp",
+            "dml0eV9kYXRhX2xpc3QYDyADKAsyFi5GZXZlclRpbWVBY3Rpdml0eURhdGFC",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FeverTimeActivityDataReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 1;
+    public const int RetcodeFieldNumber = 3;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "fever_time_activity_data_list" field.</summary>
-    public const int FeverTimeActivityDataListFieldNumber = 10;
+    public const int FeverTimeActivityDataListFieldNumber = 15;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.FeverTimeActivityData> _repeated_feverTimeActivityDataList_codec
-        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.FeverTimeActivityData.Parser);
+        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.FeverTimeActivityData.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FeverTimeActivityData> feverTimeActivityDataList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FeverTimeActivityData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
       feverTimeActivityDataList_.WriteTo(output, _repeated_feverTimeActivityDataList_codec);
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
       feverTimeActivityDataList_.WriteTo(ref output, _repeated_feverTimeActivityDataList_codec);
@@ -217,11 +217,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 24: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 82: {
+          case 122: {
             feverTimeActivityDataList_.AddEntriesFrom(input, _repeated_feverTimeActivityDataList_codec);
             break;
           }
@@ -240,11 +240,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 24: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 82: {
+          case 122: {
             feverTimeActivityDataList_.AddEntriesFrom(ref input, _repeated_feverTimeActivityDataList_codec);
             break;
           }

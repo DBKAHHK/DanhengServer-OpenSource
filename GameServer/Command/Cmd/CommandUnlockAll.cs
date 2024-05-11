@@ -1,5 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database;
+using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Game.Scene.Entity;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Server.Packet.Send.Player;
@@ -22,22 +23,12 @@ namespace EggLink.DanhengServer.Command.Cmd
 
             foreach (var mission in GameData.SubMissionData.Values)
             {
-                if (!missionManager.Data.MissionInfo.TryGetValue(mission.MainMissionID, out Dictionary<int, Database.Mission.MissionInfo>? value))
-                {
-                    value = ([]);
-                    missionManager.Data.MissionInfo[mission.MainMissionID] = value;
-                }
-
-                value[mission.SubMissionID] = new Database.Mission.MissionInfo()
-                {
-                    Status = Enums.MissionPhaseEnum.Finish,
-                    MissionId = mission.SubMissionID,
-                };
+                missionManager.Data.SetSubMissionStatus(mission.SubMissionID, MissionPhaseEnum.Finish);
             }
 
             foreach (var mission in GameData.MainMissionData.Values)
             {
-                missionManager.Data.MainMissionInfo[mission.MainMissionID] = Enums.MissionPhaseEnum.Finish;
+                missionManager.Data.SetMainMissionStatus(mission.MainMissionID, MissionPhaseEnum.Finish);
             }
 
             if (player.Data.CurrentGender == Gender.Man)
@@ -54,26 +45,6 @@ namespace EggLink.DanhengServer.Command.Cmd
             arg.SendMsg("All missions unlocked!");
             arg.Target!.Player!.SendPacket(new PacketPlayerKickOutScNotify());
             arg.Target!.Stop();
-        }
-
-        [CommandMethod("0 scene")]
-        public void UnlockAllScenes(CommandArg arg)
-        {
-            if (arg.Target == null)
-            {
-                arg.SendMsg("Player not found!");
-                return;
-            }
-            var player = arg.Target!.Player!;
-            var scene = player.SceneInstance!;
-            foreach (var prop in scene.Entities)
-            {
-                if (prop.Value is EntityProp propInstance)
-                {
-                    player.InteractProp(propInstance.EntityID, 1010);
-                }
-            }
-            arg.SendMsg("The props in current scene are unlocked!");
         }
     }
 }

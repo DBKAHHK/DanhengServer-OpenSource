@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpHZXRFbnRlcmVkU2NlbmVTY1JzcC5wcm90bxoSRW50ZXJlZFNjZW5lLnBy",
-            "b3RvIlIKFEdldEVudGVyZWRTY2VuZVNjUnNwEg8KB3JldGNvZGUYAiABKA0S",
-            "KQoSZW50ZXJlZF9zY2VuZV9saXN0GAQgAygLMg0uRW50ZXJlZFNjZW5lQh6q",
+            "b3RvIlIKFEdldEVudGVyZWRTY2VuZVNjUnNwEg8KB3JldGNvZGUYBiABKA0S",
+            "KQoSZW50ZXJlZF9zY2VuZV9saXN0GA0gAygLMg0uRW50ZXJlZFNjZW5lQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EnteredSceneReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 2;
+    public const int RetcodeFieldNumber = 6;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,9 +97,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "entered_scene_list" field.</summary>
-    public const int EnteredSceneListFieldNumber = 4;
+    public const int EnteredSceneListFieldNumber = 13;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EnteredScene> _repeated_enteredSceneList_codec
-        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.EnteredScene.Parser);
+        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.EnteredScene.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EnteredScene> enteredSceneList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EnteredScene>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
       enteredSceneList_.WriteTo(output, _repeated_enteredSceneList_codec);
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
       enteredSceneList_.WriteTo(ref output, _repeated_enteredSceneList_codec);
@@ -216,11 +216,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 48: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 34: {
+          case 106: {
             enteredSceneList_.AddEntriesFrom(input, _repeated_enteredSceneList_codec);
             break;
           }
@@ -239,11 +239,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 48: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 34: {
+          case 106: {
             enteredSceneList_.AddEntriesFrom(ref input, _repeated_enteredSceneList_codec);
             break;
           }

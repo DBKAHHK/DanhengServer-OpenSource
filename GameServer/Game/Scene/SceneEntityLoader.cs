@@ -58,7 +58,7 @@ namespace EggLink.DanhengServer.Game.Scene
 
                 if (oldGroupId.Contains(group.Id))  // check if it should be unloaded
                 {
-                    if (group.UnloadCondition.IsTrue(Scene.Player.MissionManager!.Data, false) || group.ForceUnloadCondition.IsTrue(Scene.Player.MissionManager!.Data, false))
+                    if (group.ForceUnloadCondition.IsTrue(Scene.Player.MissionManager!.Data, false))
                     {
                         foreach (var entity in Scene.Entities.Values)
                         {

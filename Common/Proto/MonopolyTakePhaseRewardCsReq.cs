@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static MonopolyTakePhaseRewardCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiJNb25vcG9seVRha2VQaGFzZVJld2FyZENzUmVxLnByb3RvIjEKHE1vbm9w",
-            "b2x5VGFrZVBoYXNlUmV3YXJkQ3NSZXESEQoJcmV3YXJkX2lkGAQgAygNQh6q",
-            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "CiJNb25vcG9seVRha2VQaGFzZVJld2FyZENzUmVxLnByb3RvIjMKHE1vbm9w",
+            "b2x5VGFrZVBoYXNlUmV3YXJkQ3NSZXESEwoLSkdERENQUEtNSksYBSADKA1C",
+            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonopolyTakePhaseRewardCsReq), global::EggLink.DanhengServer.Proto.MonopolyTakePhaseRewardCsReq.Parser, new[]{ "RewardId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonopolyTakePhaseRewardCsReq), global::EggLink.DanhengServer.Proto.MonopolyTakePhaseRewardCsReq.Parser, new[]{ "JGDDCPPKMJK" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MonopolyTakePhaseRewardCsReq(MonopolyTakePhaseRewardCsReq other) : this() {
-      rewardId_ = other.rewardId_.Clone();
+      jGDDCPPKMJK_ = other.jGDDCPPKMJK_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new MonopolyTakePhaseRewardCsReq(this);
     }
 
-    /// <summary>Field number for the "reward_id" field.</summary>
-    public const int RewardIdFieldNumber = 4;
-    private static readonly pb::FieldCodec<uint> _repeated_rewardId_codec
-        = pb::FieldCodec.ForUInt32(34);
-    private readonly pbc::RepeatedField<uint> rewardId_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "JGDDCPPKMJK" field.</summary>
+    public const int JGDDCPPKMJKFieldNumber = 5;
+    private static readonly pb::FieldCodec<uint> _repeated_jGDDCPPKMJK_codec
+        = pb::FieldCodec.ForUInt32(42);
+    private readonly pbc::RepeatedField<uint> jGDDCPPKMJK_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> RewardId {
-      get { return rewardId_; }
+    public pbc::RepeatedField<uint> JGDDCPPKMJK {
+      get { return jGDDCPPKMJK_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -108,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!rewardId_.Equals(other.rewardId_)) return false;
+      if(!jGDDCPPKMJK_.Equals(other.jGDDCPPKMJK_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -116,7 +116,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= rewardId_.GetHashCode();
+      hash ^= jGDDCPPKMJK_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -135,7 +135,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      rewardId_.WriteTo(output, _repeated_rewardId_codec);
+      jGDDCPPKMJK_.WriteTo(output, _repeated_jGDDCPPKMJK_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -146,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      rewardId_.WriteTo(ref output, _repeated_rewardId_codec);
+      jGDDCPPKMJK_.WriteTo(ref output, _repeated_jGDDCPPKMJK_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += rewardId_.CalculateSize(_repeated_rewardId_codec);
+      size += jGDDCPPKMJK_.CalculateSize(_repeated_jGDDCPPKMJK_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -170,7 +170,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      rewardId_.Add(other.rewardId_);
+      jGDDCPPKMJK_.Add(other.jGDDCPPKMJK_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -186,9 +186,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34:
-          case 32: {
-            rewardId_.AddEntriesFrom(input, _repeated_rewardId_codec);
+          case 42:
+          case 40: {
+            jGDDCPPKMJK_.AddEntriesFrom(input, _repeated_jGDDCPPKMJK_codec);
             break;
           }
         }
@@ -206,9 +206,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34:
-          case 32: {
-            rewardId_.AddEntriesFrom(ref input, _repeated_rewardId_codec);
+          case 42:
+          case 40: {
+            jGDDCPPKMJK_.AddEntriesFrom(ref input, _repeated_jGDDCPPKMJK_codec);
             break;
           }
         }

@@ -25,13 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFNb25vcG9seURhaWx5U2V0dGxlU2NOb3RpZnkucHJvdG8aFE1vbm9wb2x5",
-            "UmVwb3J0LnByb3RvIj4KG01vbm9wb2x5RGFpbHlTZXR0bGVTY05vdGlmeRIf",
-            "CgZyZXBvcnQYCyABKAsyDy5Nb25vcG9seVJlcG9ydEIeqgIbRWdnTGluay5E",
-            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "UmVwb3J0LnByb3RvIlMKG01vbm9wb2x5RGFpbHlTZXR0bGVTY05vdGlmeRIT",
+            "CgtESEtPQ0FDQUZCRBgCIAEoDRIfCgZyZXBvcnQYCCABKAsyDy5Nb25vcG9s",
+            "eVJlcG9ydEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MonopolyReportReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonopolyDailySettleScNotify), global::EggLink.DanhengServer.Proto.MonopolyDailySettleScNotify.Parser, new[]{ "Report" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonopolyDailySettleScNotify), global::EggLink.DanhengServer.Proto.MonopolyDailySettleScNotify.Parser, new[]{ "DHKOCACAFBD", "Report" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,6 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MonopolyDailySettleScNotify(MonopolyDailySettleScNotify other) : this() {
+      dHKOCACAFBD_ = other.dHKOCACAFBD_;
       report_ = other.report_ != null ? other.report_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -83,8 +85,20 @@ namespace EggLink.DanhengServer.Proto {
       return new MonopolyDailySettleScNotify(this);
     }
 
+    /// <summary>Field number for the "DHKOCACAFBD" field.</summary>
+    public const int DHKOCACAFBDFieldNumber = 2;
+    private uint dHKOCACAFBD_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DHKOCACAFBD {
+      get { return dHKOCACAFBD_; }
+      set {
+        dHKOCACAFBD_ = value;
+      }
+    }
+
     /// <summary>Field number for the "report" field.</summary>
-    public const int ReportFieldNumber = 11;
+    public const int ReportFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.MonopolyReport report_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,6 +124,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (DHKOCACAFBD != other.DHKOCACAFBD) return false;
       if (!object.Equals(Report, other.Report)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -118,6 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (DHKOCACAFBD != 0) hash ^= DHKOCACAFBD.GetHashCode();
       if (report_ != null) hash ^= Report.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -137,8 +153,12 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (DHKOCACAFBD != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(DHKOCACAFBD);
+      }
       if (report_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(66);
         output.WriteMessage(Report);
       }
       if (_unknownFields != null) {
@@ -151,8 +171,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DHKOCACAFBD != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(DHKOCACAFBD);
+      }
       if (report_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(66);
         output.WriteMessage(Report);
       }
       if (_unknownFields != null) {
@@ -165,6 +189,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (DHKOCACAFBD != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DHKOCACAFBD);
+      }
       if (report_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Report);
       }
@@ -179,6 +206,9 @@ namespace EggLink.DanhengServer.Proto {
     public void MergeFrom(MonopolyDailySettleScNotify other) {
       if (other == null) {
         return;
+      }
+      if (other.DHKOCACAFBD != 0) {
+        DHKOCACAFBD = other.DHKOCACAFBD;
       }
       if (other.report_ != null) {
         if (report_ == null) {
@@ -201,7 +231,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 90: {
+          case 16: {
+            DHKOCACAFBD = input.ReadUInt32();
+            break;
+          }
+          case 66: {
             if (report_ == null) {
               Report = new global::EggLink.DanhengServer.Proto.MonopolyReport();
             }
@@ -223,7 +257,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 90: {
+          case 16: {
+            DHKOCACAFBD = input.ReadUInt32();
+            break;
+          }
+          case 66: {
             if (report_ == null) {
               Report = new global::EggLink.DanhengServer.Proto.MonopolyReport();
             }

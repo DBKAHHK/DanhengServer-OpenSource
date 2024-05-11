@@ -334,7 +334,7 @@ namespace EggLink.DanhengServer.Game.Friend
                     Platform = PlatformType.Pc,
                     Signature = serverProfile.Signature,
                 },
-                IsRemarked = false, // IsMarked
+                IsMarked = false, // IsMarked
                 RemarkName = ""
             });
 
@@ -344,7 +344,7 @@ namespace EggLink.DanhengServer.Game.Friend
                 proto.FriendList.Add(new FriendSimpleInfo()
                 {
                     PlayerInfo = player.ToSimpleProto(status),
-                    IsRemarked = false, // IsMarked
+                    IsMarked = false, // IsMarked
                     RemarkName = ""
                 });
             }

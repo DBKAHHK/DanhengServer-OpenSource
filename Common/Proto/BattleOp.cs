@@ -28,12 +28,12 @@ namespace EggLink.DanhengServer.Proto {
             "GAEgASgNEg0KBXN0YXRlGAIgASgNEhgKEGFjdGlvbl9lbnRpdHlfaWQYAyAB",
             "KA0SGAoQdGFyZ2V0X2VudGl0eV9pZBgEIAEoDRIPCgdvcF90eXBlGAUgASgN",
             "EhMKC3NraWxsX2luZGV4GAYgASgNEhkKEW9wZXJhdGlvbl9jb3VudGVyGAcg",
-            "ASgNEhMKC0ZLS0ZHTEVPTUlBGAggASgJQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ASgNEhMKC1BBTkFLTkRGSEtNGAggASgJQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BattleOp), global::EggLink.DanhengServer.Proto.BattleOp.Parser, new[]{ "TurnCounter", "State", "ActionEntityId", "TargetEntityId", "OpType", "SkillIndex", "OperationCounter", "FKKFGLEOMIA" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BattleOp), global::EggLink.DanhengServer.Proto.BattleOp.Parser, new[]{ "TurnCounter", "State", "ActionEntityId", "TargetEntityId", "OpType", "SkillIndex", "OperationCounter", "PANAKNDFHKM" }, null, null, null, null)
           }));
     }
     #endregion
@@ -82,7 +82,7 @@ namespace EggLink.DanhengServer.Proto {
       opType_ = other.opType_;
       skillIndex_ = other.skillIndex_;
       operationCounter_ = other.operationCounter_;
-      fKKFGLEOMIA_ = other.fKKFGLEOMIA_;
+      pANAKNDFHKM_ = other.pANAKNDFHKM_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -176,15 +176,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "FKKFGLEOMIA" field.</summary>
-    public const int FKKFGLEOMIAFieldNumber = 8;
-    private string fKKFGLEOMIA_ = "";
+    /// <summary>Field number for the "PANAKNDFHKM" field.</summary>
+    public const int PANAKNDFHKMFieldNumber = 8;
+    private string pANAKNDFHKM_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string FKKFGLEOMIA {
-      get { return fKKFGLEOMIA_; }
+    public string PANAKNDFHKM {
+      get { return pANAKNDFHKM_; }
       set {
-        fKKFGLEOMIA_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        pANAKNDFHKM_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -210,7 +210,7 @@ namespace EggLink.DanhengServer.Proto {
       if (OpType != other.OpType) return false;
       if (SkillIndex != other.SkillIndex) return false;
       if (OperationCounter != other.OperationCounter) return false;
-      if (FKKFGLEOMIA != other.FKKFGLEOMIA) return false;
+      if (PANAKNDFHKM != other.PANAKNDFHKM) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -225,7 +225,7 @@ namespace EggLink.DanhengServer.Proto {
       if (OpType != 0) hash ^= OpType.GetHashCode();
       if (SkillIndex != 0) hash ^= SkillIndex.GetHashCode();
       if (OperationCounter != 0) hash ^= OperationCounter.GetHashCode();
-      if (FKKFGLEOMIA.Length != 0) hash ^= FKKFGLEOMIA.GetHashCode();
+      if (PANAKNDFHKM.Length != 0) hash ^= PANAKNDFHKM.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -272,9 +272,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(56);
         output.WriteUInt32(OperationCounter);
       }
-      if (FKKFGLEOMIA.Length != 0) {
+      if (PANAKNDFHKM.Length != 0) {
         output.WriteRawTag(66);
-        output.WriteString(FKKFGLEOMIA);
+        output.WriteString(PANAKNDFHKM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -314,9 +314,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(56);
         output.WriteUInt32(OperationCounter);
       }
-      if (FKKFGLEOMIA.Length != 0) {
+      if (PANAKNDFHKM.Length != 0) {
         output.WriteRawTag(66);
-        output.WriteString(FKKFGLEOMIA);
+        output.WriteString(PANAKNDFHKM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -349,8 +349,8 @@ namespace EggLink.DanhengServer.Proto {
       if (OperationCounter != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OperationCounter);
       }
-      if (FKKFGLEOMIA.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FKKFGLEOMIA);
+      if (PANAKNDFHKM.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PANAKNDFHKM);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -385,8 +385,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.OperationCounter != 0) {
         OperationCounter = other.OperationCounter;
       }
-      if (other.FKKFGLEOMIA.Length != 0) {
-        FKKFGLEOMIA = other.FKKFGLEOMIA;
+      if (other.PANAKNDFHKM.Length != 0) {
+        PANAKNDFHKM = other.PANAKNDFHKM;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -432,7 +432,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 66: {
-            FKKFGLEOMIA = input.ReadString();
+            PANAKNDFHKM = input.ReadString();
             break;
           }
         }
@@ -479,7 +479,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 66: {
-            FKKFGLEOMIA = input.ReadString();
+            PANAKNDFHKM = input.ReadString();
             break;
           }
         }

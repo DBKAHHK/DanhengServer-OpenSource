@@ -37,12 +37,15 @@ namespace EggLink.DanhengServer.Game.Battle
                     }
                 }
 
-                foreach (var entity in req.AssistMonsterEntityIdList)
+                foreach (var info in req.AssistMonsterEntityInfo)
                 {
-                    Player.SceneInstance!.Entities.TryGetValue((int)entity, out var entityInstance);
-                    if (entityInstance is EntityMonster monster)
+                    foreach (var entity in info.EntityIdList)
                     {
-                        targetList.Add(monster);
+                        Player.SceneInstance!.Entities.TryGetValue((int)entity, out var entityInstance);
+                        if (entityInstance is EntityMonster monster)
+                        {
+                            targetList.Add(monster);
+                        }
                     }
                 }
             } else

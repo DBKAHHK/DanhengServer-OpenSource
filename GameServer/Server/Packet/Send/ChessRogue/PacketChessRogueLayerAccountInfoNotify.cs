@@ -15,7 +15,7 @@ namespace EggLink.DanhengServer.Server.Packet.Send.ChessRogue
             var proto = new ChessRogueLayerAccountInfoNotify()
             {
                 FinishInfo = rogue.ToFinishInfo(),
-                LayerId = (uint)rogue.CurLayer,
+                //LayerId = (uint)rogue.CurLayer,
             };
 
             SetData(proto);

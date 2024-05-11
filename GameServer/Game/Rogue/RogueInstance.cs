@@ -309,7 +309,7 @@ namespace EggLink.DanhengServer.Game.Rogue
 
             proto.ReviveInfo = new()
             {
-                ReviveCost = new()
+                RogueReviveCost = new()
                 {
                     ItemList = {
                         new ItemCost() {
@@ -394,16 +394,16 @@ namespace EggLink.DanhengServer.Game.Rogue
             return new()
             {
                 ScoreId = (uint)score,
-                TotalScore = (uint)score,
+                //TotalScore = (uint)score,
                 PrevRewardInfo = prev,
                 NextRewardInfo = next,
                 AreaId = (uint)AreaExcel.RogueAreaID,
-                FinishedRoomCount = (uint)CurReachedRoom,
-                ReachedRoomCount = (uint)CurReachedRoom,
-                RecordInfo = new()
-                {
-                    Id = 2
-                }
+                //FinishedRoomCount = (uint)CurReachedRoom,
+                //ReachedRoomCount = (uint)CurReachedRoom,
+                //RecordInfo = new()
+                //{
+                //    Id = 2
+                //}
             };
         }
 

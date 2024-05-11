@@ -177,7 +177,6 @@ namespace EggLink.DanhengServer.Game.ChessRogue
                 RogueAeonInfo = ToRogueAeonInfo(),
                 RogueDiceInfo = ToRogueDiceInfo(),
                 RogueDifficultyInfo = new(),
-                LEHDEMMDOIM = new(),
                 GameMiracleInfo = new() { MiracleInfo = new() },  // needed for avoiding null reference exception （below 4 lines）
                 RogueBuffInfo = new() { BuffInfo = new() },
                 PendingAction = new(),
@@ -185,7 +184,7 @@ namespace EggLink.DanhengServer.Game.ChessRogue
                 RogueVirtualItem = new(),
             };
 
-            info.RogueGameInfo.AddRange(ToGameInfo());
+            info.RogueCurrentInfo.AddRange(ToGameInfo());
 
             return info;
         }
@@ -221,7 +220,7 @@ namespace EggLink.DanhengServer.Game.ChessRogue
                 AreaInfo = new()
                 {
                     Cell = new(),
-                    GHIBONBOIMF = new(),
+                    DOKMJNIHNOO = new(),
                 }
             };
 
@@ -286,9 +285,9 @@ namespace EggLink.DanhengServer.Game.ChessRogue
 
             for (var i = 1; i < 7; i++)
             {
-                proto.MBIPCPCFIHL.Add((uint)i, i % 3 == 0);
+                proto.LAHGNGJAOFH.Add((uint)i, i % 3 == 0);
             }
-            proto.MBIPCPCFIHL[5] = true;
+            proto.LAHGNGJAOFH[5] = true;
 
             return proto;
         }
@@ -297,7 +296,7 @@ namespace EggLink.DanhengServer.Game.ChessRogue
         {
             var proto = new ChessRogueDiceInfo()
             {
-                IsValid = true,
+                //IsValid = true,
             };
 
             return proto;
@@ -340,7 +339,7 @@ namespace EggLink.DanhengServer.Game.ChessRogue
 
             foreach (var talent in GameData.RogueNousTalentData.Values)
             {
-                talentInfo.RogueTalent.Add(new RogueTalent()
+                talentInfo.RogueTalentList.Add(new RogueTalent()
                 {
                     TalentId = (uint)talent.TalentID,
                     Status = RogueTalentStatus.Enable
@@ -361,7 +360,7 @@ namespace EggLink.DanhengServer.Game.ChessRogue
             {
                 ReviveInfo = new()
                 {
-                    ReviveCost = new()
+                    RogueReviveCost = new()
                 }
             };
 

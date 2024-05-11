@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhGaWdodEFjdGl2aXR5R3JvdXAucHJvdG8ikQEKEkZpZ2h0QWN0aXZpdHlH",
-            "cm91cBIYChBlbmRsZXNzX21heF93YXZlGAIgASgNEiMKG3Bhc3NlZF9tYXhf",
-            "ZGlmZmljdWx0eV9sZXZlbBgKIAEoDRIQCghncm91cF9pZBgMIAEoDRIqCiJ0",
-            "YWtlbl9kaWZmaWN1bHR5X2xldmVsX3Jld2FyZF9saXN0GA8gAygNQh6qAhtF",
+            "cm91cBIQCghncm91cF9pZBgCIAEoDRIjChtwYXNzZWRfbWF4X2RpZmZpY3Vs",
+            "dHlfbGV2ZWwYCSABKA0SKgoidGFrZW5fZGlmZmljdWx0eV9sZXZlbF9yZXdh",
+            "cmRfbGlzdBgPIAMoDRIYChBlbmRsZXNzX21heF93YXZlGAYgASgNQh6qAhtF",
             "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightActivityGroup), global::EggLink.DanhengServer.Proto.FightActivityGroup.Parser, new[]{ "EndlessMaxWave", "PassedMaxDifficultyLevel", "GroupId", "TakenDifficultyLevelRewardList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightActivityGroup), global::EggLink.DanhengServer.Proto.FightActivityGroup.Parser, new[]{ "GroupId", "PassedMaxDifficultyLevel", "TakenDifficultyLevelRewardList", "EndlessMaxWave" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FightActivityGroup(FightActivityGroup other) : this() {
-      endlessMaxWave_ = other.endlessMaxWave_;
-      passedMaxDifficultyLevel_ = other.passedMaxDifficultyLevel_;
       groupId_ = other.groupId_;
+      passedMaxDifficultyLevel_ = other.passedMaxDifficultyLevel_;
       takenDifficultyLevelRewardList_ = other.takenDifficultyLevelRewardList_.Clone();
+      endlessMaxWave_ = other.endlessMaxWave_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,32 +87,8 @@ namespace EggLink.DanhengServer.Proto {
       return new FightActivityGroup(this);
     }
 
-    /// <summary>Field number for the "endless_max_wave" field.</summary>
-    public const int EndlessMaxWaveFieldNumber = 2;
-    private uint endlessMaxWave_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint EndlessMaxWave {
-      get { return endlessMaxWave_; }
-      set {
-        endlessMaxWave_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "passed_max_difficulty_level" field.</summary>
-    public const int PassedMaxDifficultyLevelFieldNumber = 10;
-    private uint passedMaxDifficultyLevel_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PassedMaxDifficultyLevel {
-      get { return passedMaxDifficultyLevel_; }
-      set {
-        passedMaxDifficultyLevel_ = value;
-      }
-    }
-
     /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 12;
+    public const int GroupIdFieldNumber = 2;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -120,6 +96,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return groupId_; }
       set {
         groupId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "passed_max_difficulty_level" field.</summary>
+    public const int PassedMaxDifficultyLevelFieldNumber = 9;
+    private uint passedMaxDifficultyLevel_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PassedMaxDifficultyLevel {
+      get { return passedMaxDifficultyLevel_; }
+      set {
+        passedMaxDifficultyLevel_ = value;
       }
     }
 
@@ -132,6 +120,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<uint> TakenDifficultyLevelRewardList {
       get { return takenDifficultyLevelRewardList_; }
+    }
+
+    /// <summary>Field number for the "endless_max_wave" field.</summary>
+    public const int EndlessMaxWaveFieldNumber = 6;
+    private uint endlessMaxWave_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint EndlessMaxWave {
+      get { return endlessMaxWave_; }
+      set {
+        endlessMaxWave_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -149,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (EndlessMaxWave != other.EndlessMaxWave) return false;
-      if (PassedMaxDifficultyLevel != other.PassedMaxDifficultyLevel) return false;
       if (GroupId != other.GroupId) return false;
+      if (PassedMaxDifficultyLevel != other.PassedMaxDifficultyLevel) return false;
       if(!takenDifficultyLevelRewardList_.Equals(other.takenDifficultyLevelRewardList_)) return false;
+      if (EndlessMaxWave != other.EndlessMaxWave) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (EndlessMaxWave != 0) hash ^= EndlessMaxWave.GetHashCode();
-      if (PassedMaxDifficultyLevel != 0) hash ^= PassedMaxDifficultyLevel.GetHashCode();
       if (GroupId != 0) hash ^= GroupId.GetHashCode();
+      if (PassedMaxDifficultyLevel != 0) hash ^= PassedMaxDifficultyLevel.GetHashCode();
       hash ^= takenDifficultyLevelRewardList_.GetHashCode();
+      if (EndlessMaxWave != 0) hash ^= EndlessMaxWave.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,17 +182,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (EndlessMaxWave != 0) {
+      if (GroupId != 0) {
         output.WriteRawTag(16);
+        output.WriteUInt32(GroupId);
+      }
+      if (EndlessMaxWave != 0) {
+        output.WriteRawTag(48);
         output.WriteUInt32(EndlessMaxWave);
       }
       if (PassedMaxDifficultyLevel != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(72);
         output.WriteUInt32(PassedMaxDifficultyLevel);
-      }
-      if (GroupId != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(GroupId);
       }
       takenDifficultyLevelRewardList_.WriteTo(output, _repeated_takenDifficultyLevelRewardList_codec);
       if (_unknownFields != null) {
@@ -205,17 +205,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (EndlessMaxWave != 0) {
+      if (GroupId != 0) {
         output.WriteRawTag(16);
+        output.WriteUInt32(GroupId);
+      }
+      if (EndlessMaxWave != 0) {
+        output.WriteRawTag(48);
         output.WriteUInt32(EndlessMaxWave);
       }
       if (PassedMaxDifficultyLevel != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(72);
         output.WriteUInt32(PassedMaxDifficultyLevel);
-      }
-      if (GroupId != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(GroupId);
       }
       takenDifficultyLevelRewardList_.WriteTo(ref output, _repeated_takenDifficultyLevelRewardList_codec);
       if (_unknownFields != null) {
@@ -228,16 +228,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (EndlessMaxWave != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EndlessMaxWave);
+      if (GroupId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
       }
       if (PassedMaxDifficultyLevel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PassedMaxDifficultyLevel);
       }
-      if (GroupId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
-      }
       size += takenDifficultyLevelRewardList_.CalculateSize(_repeated_takenDifficultyLevelRewardList_codec);
+      if (EndlessMaxWave != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EndlessMaxWave);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -250,16 +250,16 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.EndlessMaxWave != 0) {
-        EndlessMaxWave = other.EndlessMaxWave;
+      if (other.GroupId != 0) {
+        GroupId = other.GroupId;
       }
       if (other.PassedMaxDifficultyLevel != 0) {
         PassedMaxDifficultyLevel = other.PassedMaxDifficultyLevel;
       }
-      if (other.GroupId != 0) {
-        GroupId = other.GroupId;
-      }
       takenDifficultyLevelRewardList_.Add(other.takenDifficultyLevelRewardList_);
+      if (other.EndlessMaxWave != 0) {
+        EndlessMaxWave = other.EndlessMaxWave;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -276,15 +276,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 16: {
+            GroupId = input.ReadUInt32();
+            break;
+          }
+          case 48: {
             EndlessMaxWave = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 72: {
             PassedMaxDifficultyLevel = input.ReadUInt32();
-            break;
-          }
-          case 96: {
-            GroupId = input.ReadUInt32();
             break;
           }
           case 122:
@@ -308,15 +308,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 16: {
+            GroupId = input.ReadUInt32();
+            break;
+          }
+          case 48: {
             EndlessMaxWave = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 72: {
             PassedMaxDifficultyLevel = input.ReadUInt32();
-            break;
-          }
-          case 96: {
-            GroupId = input.ReadUInt32();
             break;
           }
           case 122:

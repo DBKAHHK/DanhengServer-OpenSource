@@ -18,14 +18,14 @@ namespace EggLink.DanhengServer.Game.Mission.FinishType.Handler
             foreach (var missionId in info.ParamIntList)
             {
                 var status = player.MissionManager!.GetSubMissionStatus(missionId);
-                if (status != MissionPhaseEnum.Finish && status != MissionPhaseEnum.Cancel)
+                if (status != MissionPhaseEnum.Finish)
                 {
                     if (info.Operation == OperationEnum.And)
                     {
                         finish = false;
                         break;
                     }
-                } else
+                } else if (status == MissionPhaseEnum.Finish)
                 {
                     if (info.Operation == OperationEnum.Or)
                     {

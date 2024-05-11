@@ -10,7 +10,7 @@ using SqlSugar;
 namespace EggLink.DanhengServer.Database.Avatar
 {
     [SugarTable("Avatar")]
-    public class AvatarData : BaseDatabaseData
+    public class AvatarData : BaseDatabaseDataHelper
     {
         [SugarColumn(IsJson = true)]
         public List<AvatarInfo> Avatars { get; set; } = [];

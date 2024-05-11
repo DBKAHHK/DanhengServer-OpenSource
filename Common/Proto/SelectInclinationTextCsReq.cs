@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static SelectInclinationTextCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiBTZWxlY3RJbmNsaW5hdGlvblRleHRDc1JlcS5wcm90byI2ChpTZWxlY3RJ",
-            "bmNsaW5hdGlvblRleHRDc1JlcRIYChB0YWxrX3NlbnRlbmNlX2lkGAggASgN",
-            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "CiBTZWxlY3RJbmNsaW5hdGlvblRleHRDc1JlcS5wcm90byIxChpTZWxlY3RJ",
+            "bmNsaW5hdGlvblRleHRDc1JlcRITCgtPSEpESEVMTk9NRhgLIAEoDUIeqgIb",
+            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SelectInclinationTextCsReq), global::EggLink.DanhengServer.Proto.SelectInclinationTextCsReq.Parser, new[]{ "TalkSentenceId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SelectInclinationTextCsReq), global::EggLink.DanhengServer.Proto.SelectInclinationTextCsReq.Parser, new[]{ "OHJDHELNOMF" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SelectInclinationTextCsReq(SelectInclinationTextCsReq other) : this() {
-      talkSentenceId_ = other.talkSentenceId_;
+      oHJDHELNOMF_ = other.oHJDHELNOMF_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new SelectInclinationTextCsReq(this);
     }
 
-    /// <summary>Field number for the "talk_sentence_id" field.</summary>
-    public const int TalkSentenceIdFieldNumber = 8;
-    private uint talkSentenceId_;
+    /// <summary>Field number for the "OHJDHELNOMF" field.</summary>
+    public const int OHJDHELNOMFFieldNumber = 11;
+    private uint oHJDHELNOMF_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TalkSentenceId {
-      get { return talkSentenceId_; }
+    public uint OHJDHELNOMF {
+      get { return oHJDHELNOMF_; }
       set {
-        talkSentenceId_ = value;
+        oHJDHELNOMF_ = value;
       }
     }
 
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (TalkSentenceId != other.TalkSentenceId) return false;
+      if (OHJDHELNOMF != other.OHJDHELNOMF) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (TalkSentenceId != 0) hash ^= TalkSentenceId.GetHashCode();
+      if (OHJDHELNOMF != 0) hash ^= OHJDHELNOMF.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (TalkSentenceId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(TalkSentenceId);
+      if (OHJDHELNOMF != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(OHJDHELNOMF);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TalkSentenceId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(TalkSentenceId);
+      if (OHJDHELNOMF != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(OHJDHELNOMF);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -164,8 +164,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (TalkSentenceId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TalkSentenceId);
+      if (OHJDHELNOMF != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OHJDHELNOMF);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -179,8 +179,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.TalkSentenceId != 0) {
-        TalkSentenceId = other.TalkSentenceId;
+      if (other.OHJDHELNOMF != 0) {
+        OHJDHELNOMF = other.OHJDHELNOMF;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -197,8 +197,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
-            TalkSentenceId = input.ReadUInt32();
+          case 88: {
+            OHJDHELNOMF = input.ReadUInt32();
             break;
           }
         }
@@ -216,8 +216,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
-            TalkSentenceId = input.ReadUInt32();
+          case 88: {
+            OHJDHELNOMF = input.ReadUInt32();
             break;
           }
         }

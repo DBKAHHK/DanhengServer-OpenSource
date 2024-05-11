@@ -24,16 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static GetRaidInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZHZXRSYWlkSW5mb1NjUnNwLnByb3RvGhFFQUJFQUtETkZCSy5wcm90bxoR",
-            "REpOR0pDQkVJRU0ucHJvdG8ipQEKEEdldFJhaWRJbmZvU2NSc3ASKQoTY2hh",
-            "bGxlbmdlX3JhaWRfbGlzdBgJIAMoCzIMLkVBQkVBS0RORkJLEg8KB3JldGNv",
-            "ZGUYCyABKA0SJgoeY2hhbGxlbmdlX3Rha2VuX3Jld2FyZF9pZF9saXN0GAYg",
-            "AygNEi0KF2ZpbmlzaGVkX3JhaWRfaW5mb19saXN0GAEgAygLMgwuREpOR0pD",
-            "QkVJRU1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChZHZXRSYWlkSW5mb1NjUnNwLnByb3RvGhNDaGFsbGVuZ2VSYWlkLnByb3Rv",
+            "GhZGaW5pc2hlZFJhaWRJbmZvLnByb3RvIqwBChBHZXRSYWlkSW5mb1NjUnNw",
+            "EiYKHmNoYWxsZW5nZV90YWtlbl9yZXdhcmRfaWRfbGlzdBgLIAMoDRIrChNj",
+            "aGFsbGVuZ2VfcmFpZF9saXN0GAYgAygLMg4uQ2hhbGxlbmdlUmFpZBIyChdm",
+            "aW5pc2hlZF9yYWlkX2luZm9fbGlzdBgKIAMoCzIRLkZpbmlzaGVkUmFpZElu",
+            "Zm8SDwoHcmV0Y29kZRgIIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EABEAKDNFBKReflection.Descriptor, global::EggLink.DanhengServer.Proto.DJNGJCBEIEMReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeRaidReflection.Descriptor, global::EggLink.DanhengServer.Proto.FinishedRaidInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRaidInfoScRsp), global::EggLink.DanhengServer.Proto.GetRaidInfoScRsp.Parser, new[]{ "ChallengeRaidList", "Retcode", "ChallengeTakenRewardIdList", "FinishedRaidInfoList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRaidInfoScRsp), global::EggLink.DanhengServer.Proto.GetRaidInfoScRsp.Parser, new[]{ "ChallengeTakenRewardIdList", "ChallengeRaidList", "FinishedRaidInfoList", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,10 +76,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetRaidInfoScRsp(GetRaidInfoScRsp other) : this() {
-      challengeRaidList_ = other.challengeRaidList_.Clone();
-      retcode_ = other.retcode_;
       challengeTakenRewardIdList_ = other.challengeTakenRewardIdList_.Clone();
+      challengeRaidList_ = other.challengeRaidList_.Clone();
       finishedRaidInfoList_ = other.finishedRaidInfoList_.Clone();
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,19 +89,41 @@ namespace EggLink.DanhengServer.Proto {
       return new GetRaidInfoScRsp(this);
     }
 
-    /// <summary>Field number for the "challenge_raid_list" field.</summary>
-    public const int ChallengeRaidListFieldNumber = 9;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EABEAKDNFBK> _repeated_challengeRaidList_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.EABEAKDNFBK.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EABEAKDNFBK> challengeRaidList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EABEAKDNFBK>();
+    /// <summary>Field number for the "challenge_taken_reward_id_list" field.</summary>
+    public const int ChallengeTakenRewardIdListFieldNumber = 11;
+    private static readonly pb::FieldCodec<uint> _repeated_challengeTakenRewardIdList_codec
+        = pb::FieldCodec.ForUInt32(90);
+    private readonly pbc::RepeatedField<uint> challengeTakenRewardIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EABEAKDNFBK> ChallengeRaidList {
+    public pbc::RepeatedField<uint> ChallengeTakenRewardIdList {
+      get { return challengeTakenRewardIdList_; }
+    }
+
+    /// <summary>Field number for the "challenge_raid_list" field.</summary>
+    public const int ChallengeRaidListFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChallengeRaid> _repeated_challengeRaidList_codec
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.ChallengeRaid.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengeRaid> challengeRaidList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengeRaid>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengeRaid> ChallengeRaidList {
       get { return challengeRaidList_; }
     }
 
+    /// <summary>Field number for the "finished_raid_info_list" field.</summary>
+    public const int FinishedRaidInfoListFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.FinishedRaidInfo> _repeated_finishedRaidInfoList_codec
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.FinishedRaidInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FinishedRaidInfo> finishedRaidInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FinishedRaidInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FinishedRaidInfo> FinishedRaidInfoList {
+      get { return finishedRaidInfoList_; }
+    }
+
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 11;
+    public const int RetcodeFieldNumber = 8;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,28 +132,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         retcode_ = value;
       }
-    }
-
-    /// <summary>Field number for the "challenge_taken_reward_id_list" field.</summary>
-    public const int ChallengeTakenRewardIdListFieldNumber = 6;
-    private static readonly pb::FieldCodec<uint> _repeated_challengeTakenRewardIdList_codec
-        = pb::FieldCodec.ForUInt32(50);
-    private readonly pbc::RepeatedField<uint> challengeTakenRewardIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> ChallengeTakenRewardIdList {
-      get { return challengeTakenRewardIdList_; }
-    }
-
-    /// <summary>Field number for the "finished_raid_info_list" field.</summary>
-    public const int FinishedRaidInfoListFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DJNGJCBEIEM> _repeated_finishedRaidInfoList_codec
-        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.DJNGJCBEIEM.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DJNGJCBEIEM> finishedRaidInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DJNGJCBEIEM>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DJNGJCBEIEM> FinishedRaidInfoList {
-      get { return finishedRaidInfoList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -148,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!challengeRaidList_.Equals(other.challengeRaidList_)) return false;
-      if (Retcode != other.Retcode) return false;
       if(!challengeTakenRewardIdList_.Equals(other.challengeTakenRewardIdList_)) return false;
+      if(!challengeRaidList_.Equals(other.challengeRaidList_)) return false;
       if(!finishedRaidInfoList_.Equals(other.finishedRaidInfoList_)) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -159,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= challengeRaidList_.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       hash ^= challengeTakenRewardIdList_.GetHashCode();
+      hash ^= challengeRaidList_.GetHashCode();
       hash ^= finishedRaidInfoList_.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -181,13 +182,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      finishedRaidInfoList_.WriteTo(output, _repeated_finishedRaidInfoList_codec);
-      challengeTakenRewardIdList_.WriteTo(output, _repeated_challengeTakenRewardIdList_codec);
       challengeRaidList_.WriteTo(output, _repeated_challengeRaidList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
+      finishedRaidInfoList_.WriteTo(output, _repeated_finishedRaidInfoList_codec);
+      challengeTakenRewardIdList_.WriteTo(output, _repeated_challengeTakenRewardIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -198,13 +199,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      finishedRaidInfoList_.WriteTo(ref output, _repeated_finishedRaidInfoList_codec);
-      challengeTakenRewardIdList_.WriteTo(ref output, _repeated_challengeTakenRewardIdList_codec);
       challengeRaidList_.WriteTo(ref output, _repeated_challengeRaidList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
+      finishedRaidInfoList_.WriteTo(ref output, _repeated_finishedRaidInfoList_codec);
+      challengeTakenRewardIdList_.WriteTo(ref output, _repeated_challengeTakenRewardIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -215,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += challengeTakenRewardIdList_.CalculateSize(_repeated_challengeTakenRewardIdList_codec);
       size += challengeRaidList_.CalculateSize(_repeated_challengeRaidList_codec);
+      size += finishedRaidInfoList_.CalculateSize(_repeated_finishedRaidInfoList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += challengeTakenRewardIdList_.CalculateSize(_repeated_challengeTakenRewardIdList_codec);
-      size += finishedRaidInfoList_.CalculateSize(_repeated_finishedRaidInfoList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -233,12 +234,12 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      challengeTakenRewardIdList_.Add(other.challengeTakenRewardIdList_);
       challengeRaidList_.Add(other.challengeRaidList_);
+      finishedRaidInfoList_.Add(other.finishedRaidInfoList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      challengeTakenRewardIdList_.Add(other.challengeTakenRewardIdList_);
-      finishedRaidInfoList_.Add(other.finishedRaidInfoList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -254,21 +255,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            finishedRaidInfoList_.AddEntriesFrom(input, _repeated_finishedRaidInfoList_codec);
-            break;
-          }
-          case 50:
-          case 48: {
-            challengeTakenRewardIdList_.AddEntriesFrom(input, _repeated_challengeTakenRewardIdList_codec);
-            break;
-          }
-          case 74: {
+          case 50: {
             challengeRaidList_.AddEntriesFrom(input, _repeated_challengeRaidList_codec);
             break;
           }
-          case 88: {
+          case 64: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 82: {
+            finishedRaidInfoList_.AddEntriesFrom(input, _repeated_finishedRaidInfoList_codec);
+            break;
+          }
+          case 90:
+          case 88: {
+            challengeTakenRewardIdList_.AddEntriesFrom(input, _repeated_challengeTakenRewardIdList_codec);
             break;
           }
         }
@@ -286,21 +287,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            finishedRaidInfoList_.AddEntriesFrom(ref input, _repeated_finishedRaidInfoList_codec);
-            break;
-          }
-          case 50:
-          case 48: {
-            challengeTakenRewardIdList_.AddEntriesFrom(ref input, _repeated_challengeTakenRewardIdList_codec);
-            break;
-          }
-          case 74: {
+          case 50: {
             challengeRaidList_.AddEntriesFrom(ref input, _repeated_challengeRaidList_codec);
             break;
           }
-          case 88: {
+          case 64: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 82: {
+            finishedRaidInfoList_.AddEntriesFrom(ref input, _repeated_finishedRaidInfoList_codec);
+            break;
+          }
+          case 90:
+          case 88: {
+            challengeTakenRewardIdList_.AddEntriesFrom(ref input, _repeated_challengeTakenRewardIdList_codec);
             break;
           }
         }

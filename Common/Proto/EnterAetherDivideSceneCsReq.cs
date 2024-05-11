@@ -24,13 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static EnterAetherDivideSceneCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFFbnRlckFldGhlckRpdmlkZVNjZW5lQ3NSZXEucHJvdG8iMgobRW50ZXJB",
-            "ZXRoZXJEaXZpZGVTY2VuZUNzUmVxEhMKC0xMRENMS09IRUFOGAQgASgNQh6q",
-            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "CiFFbnRlckFldGhlckRpdmlkZVNjZW5lQ3NSZXEucHJvdG8iPQobRW50ZXJB",
+            "ZXRoZXJEaXZpZGVTY2VuZUNzUmVxEh4KFmFldGhlcl9iYXR0bGVfc2NlbmVf",
+            "aWQYCCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EnterAetherDivideSceneCsReq), global::EggLink.DanhengServer.Proto.EnterAetherDivideSceneCsReq.Parser, new[]{ "LLDCLKOHEAN" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EnterAetherDivideSceneCsReq), global::EggLink.DanhengServer.Proto.EnterAetherDivideSceneCsReq.Parser, new[]{ "AetherBattleSceneId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EnterAetherDivideSceneCsReq(EnterAetherDivideSceneCsReq other) : this() {
-      lLDCLKOHEAN_ = other.lLDCLKOHEAN_;
+      aetherBattleSceneId_ = other.aetherBattleSceneId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new EnterAetherDivideSceneCsReq(this);
     }
 
-    /// <summary>Field number for the "LLDCLKOHEAN" field.</summary>
-    public const int LLDCLKOHEANFieldNumber = 4;
-    private uint lLDCLKOHEAN_;
+    /// <summary>Field number for the "aether_battle_scene_id" field.</summary>
+    public const int AetherBattleSceneIdFieldNumber = 8;
+    private uint aetherBattleSceneId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LLDCLKOHEAN {
-      get { return lLDCLKOHEAN_; }
+    public uint AetherBattleSceneId {
+      get { return aetherBattleSceneId_; }
       set {
-        lLDCLKOHEAN_ = value;
+        aetherBattleSceneId_ = value;
       }
     }
 
@@ -109,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (LLDCLKOHEAN != other.LLDCLKOHEAN) return false;
+      if (AetherBattleSceneId != other.AetherBattleSceneId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +118,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (LLDCLKOHEAN != 0) hash ^= LLDCLKOHEAN.GetHashCode();
+      if (AetherBattleSceneId != 0) hash ^= AetherBattleSceneId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (LLDCLKOHEAN != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(LLDCLKOHEAN);
+      if (AetherBattleSceneId != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(AetherBattleSceneId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -150,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (LLDCLKOHEAN != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(LLDCLKOHEAN);
+      if (AetherBattleSceneId != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(AetherBattleSceneId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -164,8 +165,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (LLDCLKOHEAN != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LLDCLKOHEAN);
+      if (AetherBattleSceneId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AetherBattleSceneId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -179,8 +180,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.LLDCLKOHEAN != 0) {
-        LLDCLKOHEAN = other.LLDCLKOHEAN;
+      if (other.AetherBattleSceneId != 0) {
+        AetherBattleSceneId = other.AetherBattleSceneId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -197,8 +198,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            LLDCLKOHEAN = input.ReadUInt32();
+          case 64: {
+            AetherBattleSceneId = input.ReadUInt32();
             break;
           }
         }
@@ -216,8 +217,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            LLDCLKOHEAN = input.ReadUInt32();
+          case 64: {
+            AetherBattleSceneId = input.ReadUInt32();
             break;
           }
         }

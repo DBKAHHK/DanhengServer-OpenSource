@@ -25,17 +25,16 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFTdHJvbmdDaGFsbGVuZ2VBY3Rpdml0eUluZm8ucHJvdG8aIVN0cm9uZ0No",
-            "YWxsZW5nZUFjdGl2aXR5RGF0YS5wcm90byLmAQobU3Ryb25nQ2hhbGxlbmdl",
-            "QWN0aXZpdHlJbmZvEmUKHnN0cm9uZ19jaGFsbGVuZ2VfYWN0aXZpdHlfbGlz",
-            "dBgNIAMoCzI9LlN0cm9uZ0NoYWxsZW5nZUFjdGl2aXR5SW5mby5TdHJvbmdD",
-            "aGFsbGVuZ2VBY3Rpdml0eUxpc3RFbnRyeRpgCiBTdHJvbmdDaGFsbGVuZ2VB",
-            "Y3Rpdml0eUxpc3RFbnRyeRILCgNrZXkYASABKA0SKwoFdmFsdWUYAiABKAsy",
-            "HC5TdHJvbmdDaGFsbGVuZ2VBY3Rpdml0eURhdGE6AjgBQh6qAhtFZ2dMaW5r",
-            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "YWxsZW5nZUFjdGl2aXR5RGF0YS5wcm90byKzAQobU3Ryb25nQ2hhbGxlbmdl",
+            "QWN0aXZpdHlJbmZvEkIKC0NETVBKREROSEZCGAYgAygLMi0uU3Ryb25nQ2hh",
+            "bGxlbmdlQWN0aXZpdHlJbmZvLkNETVBKREROSEZCRW50cnkaUAoQQ0RNUEpE",
+            "RE5IRkJFbnRyeRILCgNrZXkYASABKA0SKwoFdmFsdWUYAiABKAsyHC5TdHJv",
+            "bmdDaGFsbGVuZ2VBY3Rpdml0eURhdGE6AjgBQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.StrongChallengeActivityDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StrongChallengeActivityInfo), global::EggLink.DanhengServer.Proto.StrongChallengeActivityInfo.Parser, new[]{ "StrongChallengeActivityList" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StrongChallengeActivityInfo), global::EggLink.DanhengServer.Proto.StrongChallengeActivityInfo.Parser, new[]{ "CDMPJDDNHFB" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -77,7 +76,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StrongChallengeActivityInfo(StrongChallengeActivityInfo other) : this() {
-      strongChallengeActivityList_ = other.strongChallengeActivityList_.Clone();
+      cDMPJDDNHFB_ = other.cDMPJDDNHFB_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,15 +86,15 @@ namespace EggLink.DanhengServer.Proto {
       return new StrongChallengeActivityInfo(this);
     }
 
-    /// <summary>Field number for the "strong_challenge_activity_list" field.</summary>
-    public const int StrongChallengeActivityListFieldNumber = 13;
-    private static readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.StrongChallengeActivityData>.Codec _map_strongChallengeActivityList_codec
-        = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.StrongChallengeActivityData>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.StrongChallengeActivityData.Parser), 106);
-    private readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.StrongChallengeActivityData> strongChallengeActivityList_ = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.StrongChallengeActivityData>();
+    /// <summary>Field number for the "CDMPJDDNHFB" field.</summary>
+    public const int CDMPJDDNHFBFieldNumber = 6;
+    private static readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.StrongChallengeActivityData>.Codec _map_cDMPJDDNHFB_codec
+        = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.StrongChallengeActivityData>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.StrongChallengeActivityData.Parser), 50);
+    private readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.StrongChallengeActivityData> cDMPJDDNHFB_ = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.StrongChallengeActivityData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<uint, global::EggLink.DanhengServer.Proto.StrongChallengeActivityData> StrongChallengeActivityList {
-      get { return strongChallengeActivityList_; }
+    public pbc::MapField<uint, global::EggLink.DanhengServer.Proto.StrongChallengeActivityData> CDMPJDDNHFB {
+      get { return cDMPJDDNHFB_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -113,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!StrongChallengeActivityList.Equals(other.StrongChallengeActivityList)) return false;
+      if (!CDMPJDDNHFB.Equals(other.CDMPJDDNHFB)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -121,7 +120,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= StrongChallengeActivityList.GetHashCode();
+      hash ^= CDMPJDDNHFB.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -140,7 +139,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      strongChallengeActivityList_.WriteTo(output, _map_strongChallengeActivityList_codec);
+      cDMPJDDNHFB_.WriteTo(output, _map_cDMPJDDNHFB_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -151,7 +150,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      strongChallengeActivityList_.WriteTo(ref output, _map_strongChallengeActivityList_codec);
+      cDMPJDDNHFB_.WriteTo(ref output, _map_cDMPJDDNHFB_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -162,7 +161,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += strongChallengeActivityList_.CalculateSize(_map_strongChallengeActivityList_codec);
+      size += cDMPJDDNHFB_.CalculateSize(_map_cDMPJDDNHFB_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -175,7 +174,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      strongChallengeActivityList_.MergeFrom(other.strongChallengeActivityList_);
+      cDMPJDDNHFB_.MergeFrom(other.cDMPJDDNHFB_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -191,8 +190,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 106: {
-            strongChallengeActivityList_.AddEntriesFrom(input, _map_strongChallengeActivityList_codec);
+          case 50: {
+            cDMPJDDNHFB_.AddEntriesFrom(input, _map_cDMPJDDNHFB_codec);
             break;
           }
         }
@@ -210,8 +209,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 106: {
-            strongChallengeActivityList_.AddEntriesFrom(ref input, _map_strongChallengeActivityList_codec);
+          case 50: {
+            cDMPJDDNHFB_.AddEntriesFrom(ref input, _map_cDMPJDDNHFB_codec);
             break;
           }
         }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace EggLink.DanhengServer.Database.Message
 {
     [SugarTable("Message")]
-    public class MessageData : BaseDatabaseData
+    public class MessageData : BaseDatabaseDataHelper
     {
         [SugarColumn(IsJson = true)]
         public Dictionary<int, MessageGroupData> Groups { get; set; } = [];

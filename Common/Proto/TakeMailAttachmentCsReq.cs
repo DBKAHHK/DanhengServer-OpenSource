@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static TakeMailAttachmentCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1UYWtlTWFpbEF0dGFjaG1lbnRDc1JlcS5wcm90byJLChdUYWtlTWFpbEF0",
-            "dGFjaG1lbnRDc1JlcRIUCgxtYWlsX2lkX2xpc3QYDSADKA0SGgoSb3B0aW9u",
-            "YWxfcmV3YXJkX2lkGA8gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
-            "UHJvdG9iBnByb3RvMw=="));
+            "Ch1UYWtlTWFpbEF0dGFjaG1lbnRDc1JlcS5wcm90byJKChdUYWtlTWFpbEF0",
+            "dGFjaG1lbnRDc1JlcRITCgtBTkZLUEpMREZQUBgOIAMoDRIaChJvcHRpb25h",
+            "bF9yZXdhcmRfaWQYBiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeMailAttachmentCsReq), global::EggLink.DanhengServer.Proto.TakeMailAttachmentCsReq.Parser, new[]{ "MailIdList", "OptionalRewardId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeMailAttachmentCsReq), global::EggLink.DanhengServer.Proto.TakeMailAttachmentCsReq.Parser, new[]{ "ANFKPJLDFPP", "OptionalRewardId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TakeMailAttachmentCsReq(TakeMailAttachmentCsReq other) : this() {
-      mailIdList_ = other.mailIdList_.Clone();
+      aNFKPJLDFPP_ = other.aNFKPJLDFPP_.Clone();
       optionalRewardId_ = other.optionalRewardId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,19 +84,19 @@ namespace EggLink.DanhengServer.Proto {
       return new TakeMailAttachmentCsReq(this);
     }
 
-    /// <summary>Field number for the "mail_id_list" field.</summary>
-    public const int MailIdListFieldNumber = 13;
-    private static readonly pb::FieldCodec<uint> _repeated_mailIdList_codec
-        = pb::FieldCodec.ForUInt32(106);
-    private readonly pbc::RepeatedField<uint> mailIdList_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "ANFKPJLDFPP" field.</summary>
+    public const int ANFKPJLDFPPFieldNumber = 14;
+    private static readonly pb::FieldCodec<uint> _repeated_aNFKPJLDFPP_codec
+        = pb::FieldCodec.ForUInt32(114);
+    private readonly pbc::RepeatedField<uint> aNFKPJLDFPP_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> MailIdList {
-      get { return mailIdList_; }
+    public pbc::RepeatedField<uint> ANFKPJLDFPP {
+      get { return aNFKPJLDFPP_; }
     }
 
     /// <summary>Field number for the "optional_reward_id" field.</summary>
-    public const int OptionalRewardIdFieldNumber = 15;
+    public const int OptionalRewardIdFieldNumber = 6;
     private uint optionalRewardId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!mailIdList_.Equals(other.mailIdList_)) return false;
+      if(!aNFKPJLDFPP_.Equals(other.aNFKPJLDFPP_)) return false;
       if (OptionalRewardId != other.OptionalRewardId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -131,7 +131,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= mailIdList_.GetHashCode();
+      hash ^= aNFKPJLDFPP_.GetHashCode();
       if (OptionalRewardId != 0) hash ^= OptionalRewardId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      mailIdList_.WriteTo(output, _repeated_mailIdList_codec);
       if (OptionalRewardId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(48);
         output.WriteUInt32(OptionalRewardId);
       }
+      aNFKPJLDFPP_.WriteTo(output, _repeated_aNFKPJLDFPP_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      mailIdList_.WriteTo(ref output, _repeated_mailIdList_codec);
       if (OptionalRewardId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(48);
         output.WriteUInt32(OptionalRewardId);
       }
+      aNFKPJLDFPP_.WriteTo(ref output, _repeated_aNFKPJLDFPP_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -181,7 +181,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += mailIdList_.CalculateSize(_repeated_mailIdList_codec);
+      size += aNFKPJLDFPP_.CalculateSize(_repeated_aNFKPJLDFPP_codec);
       if (OptionalRewardId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OptionalRewardId);
       }
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      mailIdList_.Add(other.mailIdList_);
+      aNFKPJLDFPP_.Add(other.aNFKPJLDFPP_);
       if (other.OptionalRewardId != 0) {
         OptionalRewardId = other.OptionalRewardId;
       }
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 106:
-          case 104: {
-            mailIdList_.AddEntriesFrom(input, _repeated_mailIdList_codec);
+          case 48: {
+            OptionalRewardId = input.ReadUInt32();
             break;
           }
-          case 120: {
-            OptionalRewardId = input.ReadUInt32();
+          case 114:
+          case 112: {
+            aNFKPJLDFPP_.AddEntriesFrom(input, _repeated_aNFKPJLDFPP_codec);
             break;
           }
         }
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 106:
-          case 104: {
-            mailIdList_.AddEntriesFrom(ref input, _repeated_mailIdList_codec);
+          case 48: {
+            OptionalRewardId = input.ReadUInt32();
             break;
           }
-          case 120: {
-            OptionalRewardId = input.ReadUInt32();
+          case 114:
+          case 112: {
+            aNFKPJLDFPP_.AddEntriesFrom(ref input, _repeated_aNFKPJLDFPP_codec);
             break;
           }
         }

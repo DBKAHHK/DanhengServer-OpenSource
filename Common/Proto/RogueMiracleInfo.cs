@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZSb2d1ZU1pcmFjbGVJbmZvLnByb3RvGhJSb2d1ZU1pcmFjbGUucHJvdG8i",
-            "bAoQUm9ndWVNaXJhY2xlSW5mbxIjCgxtaXJhY2xlX2xpc3QYDiADKAsyDS5S",
-            "b2d1ZU1pcmFjbGUSGAoQdG90YWxfc2xvdF9jb3VudBgDIAEoDRIZChF1bmxv",
-            "Y2tfc2xvdF9jb3VudBgKIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
-            "LlByb3RvYgZwcm90bzM="));
+            "YQoQUm9ndWVNaXJhY2xlSW5mbxITCgtETUpMSk5ERk9HUBgMIAEoDRIjCgxt",
+            "aXJhY2xlX2xpc3QYAiADKAsyDS5Sb2d1ZU1pcmFjbGUSEwoLS0hCRElLRERJ",
+            "SUIYDyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMiracleReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMiracleInfo), global::EggLink.DanhengServer.Proto.RogueMiracleInfo.Parser, new[]{ "MiracleList", "TotalSlotCount", "UnlockSlotCount" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMiracleInfo), global::EggLink.DanhengServer.Proto.RogueMiracleInfo.Parser, new[]{ "DMJLJNDFOGP", "MiracleList", "KHBDIKDDIIB" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueMiracleInfo(RogueMiracleInfo other) : this() {
+      dMJLJNDFOGP_ = other.dMJLJNDFOGP_;
       miracleList_ = other.miracleList_.Clone();
-      totalSlotCount_ = other.totalSlotCount_;
-      unlockSlotCount_ = other.unlockSlotCount_;
+      kHBDIKDDIIB_ = other.kHBDIKDDIIB_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,10 +86,22 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueMiracleInfo(this);
     }
 
+    /// <summary>Field number for the "DMJLJNDFOGP" field.</summary>
+    public const int DMJLJNDFOGPFieldNumber = 12;
+    private uint dMJLJNDFOGP_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DMJLJNDFOGP {
+      get { return dMJLJNDFOGP_; }
+      set {
+        dMJLJNDFOGP_ = value;
+      }
+    }
+
     /// <summary>Field number for the "miracle_list" field.</summary>
-    public const int MiracleListFieldNumber = 14;
+    public const int MiracleListFieldNumber = 2;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueMiracle> _repeated_miracleList_codec
-        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.RogueMiracle.Parser);
+        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.RogueMiracle.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMiracle> miracleList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMiracle>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,27 +109,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return miracleList_; }
     }
 
-    /// <summary>Field number for the "total_slot_count" field.</summary>
-    public const int TotalSlotCountFieldNumber = 3;
-    private uint totalSlotCount_;
+    /// <summary>Field number for the "KHBDIKDDIIB" field.</summary>
+    public const int KHBDIKDDIIBFieldNumber = 15;
+    private uint kHBDIKDDIIB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TotalSlotCount {
-      get { return totalSlotCount_; }
+    public uint KHBDIKDDIIB {
+      get { return kHBDIKDDIIB_; }
       set {
-        totalSlotCount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "unlock_slot_count" field.</summary>
-    public const int UnlockSlotCountFieldNumber = 10;
-    private uint unlockSlotCount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint UnlockSlotCount {
-      get { return unlockSlotCount_; }
-      set {
-        unlockSlotCount_ = value;
+        kHBDIKDDIIB_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (DMJLJNDFOGP != other.DMJLJNDFOGP) return false;
       if(!miracleList_.Equals(other.miracleList_)) return false;
-      if (TotalSlotCount != other.TotalSlotCount) return false;
-      if (UnlockSlotCount != other.UnlockSlotCount) return false;
+      if (KHBDIKDDIIB != other.KHBDIKDDIIB) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (DMJLJNDFOGP != 0) hash ^= DMJLJNDFOGP.GetHashCode();
       hash ^= miracleList_.GetHashCode();
-      if (TotalSlotCount != 0) hash ^= TotalSlotCount.GetHashCode();
-      if (UnlockSlotCount != 0) hash ^= UnlockSlotCount.GetHashCode();
+      if (KHBDIKDDIIB != 0) hash ^= KHBDIKDDIIB.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,15 +167,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (TotalSlotCount != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(TotalSlotCount);
-      }
-      if (UnlockSlotCount != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(UnlockSlotCount);
-      }
       miracleList_.WriteTo(output, _repeated_miracleList_codec);
+      if (DMJLJNDFOGP != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(DMJLJNDFOGP);
+      }
+      if (KHBDIKDDIIB != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(KHBDIKDDIIB);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -186,15 +186,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TotalSlotCount != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(TotalSlotCount);
-      }
-      if (UnlockSlotCount != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(UnlockSlotCount);
-      }
       miracleList_.WriteTo(ref output, _repeated_miracleList_codec);
+      if (DMJLJNDFOGP != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(DMJLJNDFOGP);
+      }
+      if (KHBDIKDDIIB != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(KHBDIKDDIIB);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -205,12 +205,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += miracleList_.CalculateSize(_repeated_miracleList_codec);
-      if (TotalSlotCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TotalSlotCount);
+      if (DMJLJNDFOGP != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DMJLJNDFOGP);
       }
-      if (UnlockSlotCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UnlockSlotCount);
+      size += miracleList_.CalculateSize(_repeated_miracleList_codec);
+      if (KHBDIKDDIIB != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KHBDIKDDIIB);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -224,12 +224,12 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      miracleList_.Add(other.miracleList_);
-      if (other.TotalSlotCount != 0) {
-        TotalSlotCount = other.TotalSlotCount;
+      if (other.DMJLJNDFOGP != 0) {
+        DMJLJNDFOGP = other.DMJLJNDFOGP;
       }
-      if (other.UnlockSlotCount != 0) {
-        UnlockSlotCount = other.UnlockSlotCount;
+      miracleList_.Add(other.miracleList_);
+      if (other.KHBDIKDDIIB != 0) {
+        KHBDIKDDIIB = other.KHBDIKDDIIB;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -246,16 +246,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            TotalSlotCount = input.ReadUInt32();
-            break;
-          }
-          case 80: {
-            UnlockSlotCount = input.ReadUInt32();
-            break;
-          }
-          case 114: {
+          case 18: {
             miracleList_.AddEntriesFrom(input, _repeated_miracleList_codec);
+            break;
+          }
+          case 96: {
+            DMJLJNDFOGP = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            KHBDIKDDIIB = input.ReadUInt32();
             break;
           }
         }
@@ -273,16 +273,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            TotalSlotCount = input.ReadUInt32();
-            break;
-          }
-          case 80: {
-            UnlockSlotCount = input.ReadUInt32();
-            break;
-          }
-          case 114: {
+          case 18: {
             miracleList_.AddEntriesFrom(ref input, _repeated_miracleList_codec);
+            break;
+          }
+          case 96: {
+            DMJLJNDFOGP = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            KHBDIKDDIIB = input.ReadUInt32();
             break;
           }
         }

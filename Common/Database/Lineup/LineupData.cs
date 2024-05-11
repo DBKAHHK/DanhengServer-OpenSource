@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 namespace EggLink.DanhengServer.Database.Lineup
 {
     [SugarTable("Lineup")]
-    public class LineupData : BaseDatabaseData
+    public class LineupData : BaseDatabaseDataHelper
     {
         public int CurLineup { get; set; }  // index of current lineup
         public int CurExtraLineup { get; set; } = -1;  // index of current extra lineup
@@ -139,7 +139,6 @@ namespace EggLink.DanhengServer.Database.Lineup
                         if (specialAvatar != null)
                         {
                             info.AvatarList.Add(specialAvatar.ToAvatarData(LineupData!.Uid).ToLineupInfo(BaseAvatars.IndexOf(avatar), this, AvatarType.AvatarTrialType));
-                            info.TrialAvatarIdList.Add((uint)avatar.BaseAvatarId);
                         }
                     } else  // normal avatar
                     {

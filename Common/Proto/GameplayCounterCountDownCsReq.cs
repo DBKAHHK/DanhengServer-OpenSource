@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNHYW1lcGxheUNvdW50ZXJDb3VudERvd25Dc1JlcS5wcm90byJICh1HYW1l",
-            "cGxheUNvdW50ZXJDb3VudERvd25Dc1JlcRISCgp1c2VkX3RpbWVzGA4gASgN",
-            "EhMKC0tPUE5GRklDQkNJGAcgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "cGxheUNvdW50ZXJDb3VudERvd25Dc1JlcRITCgtCQU9LQUdORk5BQhgHIAEo",
+            "DRISCgp1c2VkX3RpbWVzGAsgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GameplayCounterCountDownCsReq), global::EggLink.DanhengServer.Proto.GameplayCounterCountDownCsReq.Parser, new[]{ "UsedTimes", "KOPNFFICBCI" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GameplayCounterCountDownCsReq), global::EggLink.DanhengServer.Proto.GameplayCounterCountDownCsReq.Parser, new[]{ "BAOKAGNFNAB", "UsedTimes" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GameplayCounterCountDownCsReq(GameplayCounterCountDownCsReq other) : this() {
+      bAOKAGNFNAB_ = other.bAOKAGNFNAB_;
       usedTimes_ = other.usedTimes_;
-      kOPNFFICBCI_ = other.kOPNFFICBCI_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,8 +84,20 @@ namespace EggLink.DanhengServer.Proto {
       return new GameplayCounterCountDownCsReq(this);
     }
 
+    /// <summary>Field number for the "BAOKAGNFNAB" field.</summary>
+    public const int BAOKAGNFNABFieldNumber = 7;
+    private uint bAOKAGNFNAB_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint BAOKAGNFNAB {
+      get { return bAOKAGNFNAB_; }
+      set {
+        bAOKAGNFNAB_ = value;
+      }
+    }
+
     /// <summary>Field number for the "used_times" field.</summary>
-    public const int UsedTimesFieldNumber = 14;
+    public const int UsedTimesFieldNumber = 11;
     private uint usedTimes_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -93,18 +105,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return usedTimes_; }
       set {
         usedTimes_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "KOPNFFICBCI" field.</summary>
-    public const int KOPNFFICBCIFieldNumber = 7;
-    private uint kOPNFFICBCI_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint KOPNFFICBCI {
-      get { return kOPNFFICBCI_; }
-      set {
-        kOPNFFICBCI_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (BAOKAGNFNAB != other.BAOKAGNFNAB) return false;
       if (UsedTimes != other.UsedTimes) return false;
-      if (KOPNFFICBCI != other.KOPNFFICBCI) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (BAOKAGNFNAB != 0) hash ^= BAOKAGNFNAB.GetHashCode();
       if (UsedTimes != 0) hash ^= UsedTimes.GetHashCode();
-      if (KOPNFFICBCI != 0) hash ^= KOPNFFICBCI.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,12 +152,12 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (KOPNFFICBCI != 0) {
+      if (BAOKAGNFNAB != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(KOPNFFICBCI);
+        output.WriteUInt32(BAOKAGNFNAB);
       }
       if (UsedTimes != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(88);
         output.WriteUInt32(UsedTimes);
       }
       if (_unknownFields != null) {
@@ -170,12 +170,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (KOPNFFICBCI != 0) {
+      if (BAOKAGNFNAB != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(KOPNFFICBCI);
+        output.WriteUInt32(BAOKAGNFNAB);
       }
       if (UsedTimes != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(88);
         output.WriteUInt32(UsedTimes);
       }
       if (_unknownFields != null) {
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (BAOKAGNFNAB != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BAOKAGNFNAB);
+      }
       if (UsedTimes != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UsedTimes);
-      }
-      if (KOPNFFICBCI != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KOPNFFICBCI);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.BAOKAGNFNAB != 0) {
+        BAOKAGNFNAB = other.BAOKAGNFNAB;
+      }
       if (other.UsedTimes != 0) {
         UsedTimes = other.UsedTimes;
-      }
-      if (other.KOPNFFICBCI != 0) {
-        KOPNFFICBCI = other.KOPNFFICBCI;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -228,10 +228,10 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 56: {
-            KOPNFFICBCI = input.ReadUInt32();
+            BAOKAGNFNAB = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 88: {
             UsedTimes = input.ReadUInt32();
             break;
           }
@@ -251,10 +251,10 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 56: {
-            KOPNFFICBCI = input.ReadUInt32();
+            BAOKAGNFNAB = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 88: {
             UsedTimes = input.ReadUInt32();
             break;
           }

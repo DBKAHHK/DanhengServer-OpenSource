@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static MonopolyMoveScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdNb25vcG9seU1vdmVTY1JzcC5wcm90bxoRR0RKQkFOSUZIREEucHJvdG8a",
-            "FU1vbm9wb2x5TWFwSW5mby5wcm90byJrChFNb25vcG9seU1vdmVTY1JzcBIP",
-            "CgdyZXRjb2RlGAwgASgNEiEKC0lNSEpDRFBNT0pFGA0gAygLMgwuR0RKQkFO",
-            "SUZIREESIgoIbWFwX2luZm8YCCABKAsyEC5Nb25vcG9seU1hcEluZm9CHqoC",
+            "ChdNb25vcG9seU1vdmVTY1JzcC5wcm90bxoRTkxBTE9NS05FR0YucHJvdG8a",
+            "FU1vbm9wb2x5TWFwSW5mby5wcm90byJrChFNb25vcG9seU1vdmVTY1JzcBIi",
+            "CghtYXBfaW5mbxgCIAEoCzIQLk1vbm9wb2x5TWFwSW5mbxIPCgdyZXRjb2Rl",
+            "GAkgASgNEiEKC0FMS0VHT0tJQUdIGAwgAygLMgwuTkxBTE9NS05FR0ZCHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GDJBANIFHDAReflection.Descriptor, global::EggLink.DanhengServer.Proto.MonopolyMapInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NLALOMKNEGFReflection.Descriptor, global::EggLink.DanhengServer.Proto.MonopolyMapInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonopolyMoveScRsp), global::EggLink.DanhengServer.Proto.MonopolyMoveScRsp.Parser, new[]{ "Retcode", "IMHJCDPMOJE", "MapInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonopolyMoveScRsp), global::EggLink.DanhengServer.Proto.MonopolyMoveScRsp.Parser, new[]{ "MapInfo", "Retcode", "ALKEGOKIAGH" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MonopolyMoveScRsp(MonopolyMoveScRsp other) : this() {
-      retcode_ = other.retcode_;
-      iMHJCDPMOJE_ = other.iMHJCDPMOJE_.Clone();
       mapInfo_ = other.mapInfo_ != null ? other.mapInfo_.Clone() : null;
+      retcode_ = other.retcode_;
+      aLKEGOKIAGH_ = other.aLKEGOKIAGH_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,8 +86,20 @@ namespace EggLink.DanhengServer.Proto {
       return new MonopolyMoveScRsp(this);
     }
 
+    /// <summary>Field number for the "map_info" field.</summary>
+    public const int MapInfoFieldNumber = 2;
+    private global::EggLink.DanhengServer.Proto.MonopolyMapInfo mapInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.MonopolyMapInfo MapInfo {
+      get { return mapInfo_; }
+      set {
+        mapInfo_ = value;
+      }
+    }
+
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 12;
+    public const int RetcodeFieldNumber = 9;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,27 +110,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "IMHJCDPMOJE" field.</summary>
-    public const int IMHJCDPMOJEFieldNumber = 13;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GDJBANIFHDA> _repeated_iMHJCDPMOJE_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.GDJBANIFHDA.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GDJBANIFHDA> iMHJCDPMOJE_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GDJBANIFHDA>();
+    /// <summary>Field number for the "ALKEGOKIAGH" field.</summary>
+    public const int ALKEGOKIAGHFieldNumber = 12;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.NLALOMKNEGF> _repeated_aLKEGOKIAGH_codec
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.NLALOMKNEGF.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NLALOMKNEGF> aLKEGOKIAGH_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NLALOMKNEGF>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GDJBANIFHDA> IMHJCDPMOJE {
-      get { return iMHJCDPMOJE_; }
-    }
-
-    /// <summary>Field number for the "map_info" field.</summary>
-    public const int MapInfoFieldNumber = 8;
-    private global::EggLink.DanhengServer.Proto.MonopolyMapInfo mapInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MonopolyMapInfo MapInfo {
-      get { return mapInfo_; }
-      set {
-        mapInfo_ = value;
-      }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NLALOMKNEGF> ALKEGOKIAGH {
+      get { return aLKEGOKIAGH_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
-      if(!iMHJCDPMOJE_.Equals(other.iMHJCDPMOJE_)) return false;
       if (!object.Equals(MapInfo, other.MapInfo)) return false;
+      if (Retcode != other.Retcode) return false;
+      if(!aLKEGOKIAGH_.Equals(other.aLKEGOKIAGH_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      hash ^= iMHJCDPMOJE_.GetHashCode();
       if (mapInfo_ != null) hash ^= MapInfo.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      hash ^= aLKEGOKIAGH_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,14 +168,14 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (mapInfo_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(18);
         output.WriteMessage(MapInfo);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
       }
-      iMHJCDPMOJE_.WriteTo(output, _repeated_iMHJCDPMOJE_codec);
+      aLKEGOKIAGH_.WriteTo(output, _repeated_aLKEGOKIAGH_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -187,14 +187,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (mapInfo_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(18);
         output.WriteMessage(MapInfo);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
       }
-      iMHJCDPMOJE_.WriteTo(ref output, _repeated_iMHJCDPMOJE_codec);
+      aLKEGOKIAGH_.WriteTo(ref output, _repeated_aLKEGOKIAGH_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -205,13 +205,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
-      size += iMHJCDPMOJE_.CalculateSize(_repeated_iMHJCDPMOJE_codec);
       if (mapInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MapInfo);
       }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      size += aLKEGOKIAGH_.CalculateSize(_repeated_aLKEGOKIAGH_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -224,16 +224,16 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
-      iMHJCDPMOJE_.Add(other.iMHJCDPMOJE_);
       if (other.mapInfo_ != null) {
         if (mapInfo_ == null) {
           MapInfo = new global::EggLink.DanhengServer.Proto.MonopolyMapInfo();
         }
         MapInfo.MergeFrom(other.MapInfo);
       }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
+      aLKEGOKIAGH_.Add(other.aLKEGOKIAGH_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -249,19 +249,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66: {
+          case 18: {
             if (mapInfo_ == null) {
               MapInfo = new global::EggLink.DanhengServer.Proto.MonopolyMapInfo();
             }
             input.ReadMessage(MapInfo);
             break;
           }
-          case 96: {
+          case 72: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 106: {
-            iMHJCDPMOJE_.AddEntriesFrom(input, _repeated_iMHJCDPMOJE_codec);
+          case 98: {
+            aLKEGOKIAGH_.AddEntriesFrom(input, _repeated_aLKEGOKIAGH_codec);
             break;
           }
         }
@@ -279,19 +279,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66: {
+          case 18: {
             if (mapInfo_ == null) {
               MapInfo = new global::EggLink.DanhengServer.Proto.MonopolyMapInfo();
             }
             input.ReadMessage(MapInfo);
             break;
           }
-          case 96: {
+          case 72: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 106: {
-            iMHJCDPMOJE_.AddEntriesFrom(ref input, _repeated_iMHJCDPMOJE_codec);
+          case 98: {
+            aLKEGOKIAGH_.AddEntriesFrom(ref input, _repeated_aLKEGOKIAGH_codec);
             break;
           }
         }

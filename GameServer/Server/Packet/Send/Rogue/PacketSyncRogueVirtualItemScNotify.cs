@@ -16,7 +16,7 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Rogue
             {
                 RogueVirtualItemInfo = new()
                 {
-                    RogueMoney = (uint)instance.CurMoney,
+                    //RogueMoney = (uint)instance.CurMoney,
                 }
             };
 
