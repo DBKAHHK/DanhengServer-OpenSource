@@ -16,7 +16,7 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Avatar
 
             foreach (var param in req.SwitchList)
             {
-                connection.Player!.InventoryManager!.EquipRelic((int)req.BaseAvatarId, (int)param.RelicUniqueId, (int) param.RelicType);
+                connection.Player!.InventoryManager!.EquipRelic((int)req.DressAvatarId, (int)param.RelicUniqueId, (int) param.RelicType);
             }
 
             connection.SendPacket(CmdIds.DressRelicAvatarScRsp);

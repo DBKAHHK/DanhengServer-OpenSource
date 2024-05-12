@@ -114,7 +114,7 @@ namespace EggLink.DanhengServer.Database.Inventory
                 IsProtected = Locked,
                 Exp = (uint)Exp,
                 IsDiscarded = Discarded,
-                BaseAvatarId = (uint)EquipAvatar,
+                DressAvatarId = (uint)EquipAvatar,
                 MainAffixId = (uint)MainAffix,
             };
             if (SubAffixes.Count >= 1)
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Database.Inventory
                 IsProtected = Locked,
                 Promotion = (uint)Promotion,
                 Rank = (uint)Rank,
-                BaseAvatarId = (uint)EquipAvatar
+                DressAvatarId = (uint)EquipAvatar
             };
         }
 

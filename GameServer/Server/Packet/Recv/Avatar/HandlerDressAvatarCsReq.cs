@@ -15,7 +15,7 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Avatar
             var req = DressAvatarCsReq.Parser.ParseFrom(data);
             var player = connection.Player!;
 
-            player.InventoryManager!.EquipAvatar((int)req.BaseAvatarId, (int)req.EquipmentUniqueId);
+            player.InventoryManager!.EquipAvatar((int)req.DressAvatarId, (int)req.EquipmentUniqueId);
 
             connection.SendPacket(CmdIds.DressAvatarScRsp);
         }
