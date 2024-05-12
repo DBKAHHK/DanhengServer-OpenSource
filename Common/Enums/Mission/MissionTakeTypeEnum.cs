@@ -13,9 +13,10 @@
     }
     public enum SubMissionTakeTypeEnum
     {
-        AnySequence = 0,
+        Unknown = 0,
+        AnySequence = 2,
         Auto = 1,
-        CustomValue = 2,
+        CustomValue = 4,
         MultiSequence = 3,
     }
 }

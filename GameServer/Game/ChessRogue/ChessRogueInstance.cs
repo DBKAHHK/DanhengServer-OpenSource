@@ -721,15 +721,15 @@ namespace EggLink.DanhengServer.Game.ChessRogue
 
             var proto = new ChessRogueLevelInfo()
             {
-                LevelStatus = (uint)CurLevelStatus,
+                LevelStatus = CurLevelStatus,
                 ActionPoint = ActionPoint,
                 Id = (uint)AreaExcel.AreaID,
-                //LayerId = (uint)CurLayer,
+                LayerId = (uint)CurLayer,
                 AreaInfo = new()
                 {
                     LayerStatus = ChessRogueBoardCellStatus.Processing,
-                    //CurId = (uint)CurCell!.GetCellId(),
-                    //BoardId = (uint)CurLayerData![-1][0],
+                    CurId = (uint)CurCell!.GetCellId(),
+                    BoardId = (uint)CurLayerData![-1][0],
                     Cell = new()
                     {
                         CellList = { RogueCells.Select(x => x.Value.ToProto()).ToList() }
@@ -746,11 +746,10 @@ namespace EggLink.DanhengServer.Game.ChessRogue
         {
             var info = new ChessRogueFinishInfo()
             {
-                //AreaId = (uint)AreaExcel.AreaID,
-                //CurLayerId = (uint)CurLayer,
+                AreaId = (uint)AreaExcel.AreaID,
+                CurLayerId = (uint)CurLayer,
                 CurLineup = CurLineup!.ToProto(),
-                //FinishedRoomCount = (uint)HistoryCell.Count,
-                //ReachedRoomCount = (uint)HistoryCell.Count,
+                DifficultyLevel = uint.Parse(AreaExcel.AreaID.ToString().Substring(AreaExcel.AreaID.ToString().Length - 1, 1)),
                 RogueVersionId = (uint)RogueVersionId,
                 RogueBuffInfo = new()
                 {

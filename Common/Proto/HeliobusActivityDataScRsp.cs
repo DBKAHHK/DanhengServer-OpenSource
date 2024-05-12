@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9IZWxpb2J1c0FjdGl2aXR5RGF0YVNjUnNwLnByb3RvGh1IZWxpb2J1c0No",
-            "YWxsZW5nZUxpbmV1cC5wcm90bxoRUEZFUEhMUEVPRUEucHJvdG8aEU5MTUtL",
-            "S0tMUENCLnByb3RvGhFMS0lLSkVJT0VJSC5wcm90byKjAgoZSGVsaW9idXNB",
+            "YWxsZW5nZUxpbmV1cC5wcm90bxoRTEtJS0pFSU9FSUgucHJvdG8aEVBGRVBI",
+            "TFBFT0VBLnByb3RvGhFOTE1LS0tLTFBDQi5wcm90byKjAgoZSGVsaW9idXNB",
             "Y3Rpdml0eURhdGFTY1JzcBIPCgdyZXRjb2RlGA8gASgNEg0KBXBoYXNlGA4g",
             "ASgNEhMKC0ROSUFCREhEQ0FKGAwgASgNEg0KBWxldmVsGA0gASgNEhMKC0tI",
             "TEFEQkRDTUNNGAkgASgNEiEKC05GQlBDT0lOTE5PGAogAygLMgwuTkxNS0tL",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "TUpCQhgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeliobusChallengeLineupReflection.Descriptor, global::EggLink.DanhengServer.Proto.PFEPHLPEOEAReflection.Descriptor, global::EggLink.DanhengServer.Proto.NLMKKKKLPCBReflection.Descriptor, global::EggLink.DanhengServer.Proto.LKIKJEIOEIHReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeliobusChallengeLineupReflection.Descriptor, global::EggLink.DanhengServer.Proto.LKIKJEIOEIHReflection.Descriptor, global::EggLink.DanhengServer.Proto.PFEPHLPEOEAReflection.Descriptor, global::EggLink.DanhengServer.Proto.NLMKKKKLPCBReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeliobusActivityDataScRsp), global::EggLink.DanhengServer.Proto.HeliobusActivityDataScRsp.Parser, new[]{ "Retcode", "Phase", "DNIABDHDCAJ", "Level", "KHLADBDCMCM", "NFBPCOINLNO", "FJEJOELOCBD", "SkillInfo", "ChallengeList", "BGIIEPJMJBB" }, null, null, null, null)
           }));

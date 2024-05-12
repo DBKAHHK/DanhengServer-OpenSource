@@ -296,7 +296,7 @@ namespace EggLink.DanhengServer.Game.ChessRogue
         {
             var proto = new ChessRogueDiceInfo()
             {
-                //IsValid = true,
+                IsValid = true,
             };
 
             return proto;

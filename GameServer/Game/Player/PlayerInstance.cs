@@ -498,14 +498,16 @@ namespace EggLink.DanhengServer.Game.Player
                 Data.PlaneId = planeId;
                 Data.FloorId = floorId;
                 Data.EntryId = entryId;
-                DatabaseHelper.Instance?.UpdateInstance(Data);
             }
             SceneInstance = instance;
 
             if (sendPacket)
             {
+                Connection?.SendPacket(CmdIds.SyncServerSceneChangeNotify);
                 SendPacket(new PacketEnterSceneByServerScNotify(instance));
             }
+
+            MissionManager?.OnPlayerChangeScene();
         }
 
         public ScenePropData? GetScenePropData(int floorId, int groupId, int propId)
@@ -552,7 +554,6 @@ namespace EggLink.DanhengServer.Game.Player
                 {
                     propData.State = state;
                 }
-                DatabaseHelper.Instance?.UpdateInstance(SceneData);
             }
         }
 
@@ -569,7 +570,6 @@ namespace EggLink.DanhengServer.Game.Player
                 {
                     SceneData.UnlockSectionIdList[SceneInstance.FloorId].Add(sectionId);
                 }
-                DatabaseHelper.Instance?.UpdateInstance(SceneData);
             }
         }
 
@@ -583,7 +583,6 @@ namespace EggLink.DanhengServer.Game.Player
                     SceneData.CustomSaveData.Add(entryId, entryData);
                 }
                 entryData[groupId] = data;
-                DatabaseHelper.Instance?.UpdateInstance(SceneData);
             }
         }
 

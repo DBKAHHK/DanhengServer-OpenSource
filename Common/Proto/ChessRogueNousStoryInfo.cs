@@ -24,17 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static ChessRogueNousStoryInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1DaGVzc1JvZ3VlTm91c1N0b3J5SW5mby5wcm90byLcAQoXQ2hlc3NSb2d1",
+            "Ch1DaGVzc1JvZ3VlTm91c1N0b3J5SW5mby5wcm90byLjAQoXQ2hlc3NSb2d1",
             "ZU5vdXNTdG9yeUluZm8SIQoZY2hlc3Nfcm9ndWVfbWFpbl9zdG9yeV9pZBgN",
-            "IAEoDRITCgtERUlNSU5GRlBKTRgKIAMoDRITCgtBRkpNQUZHS1BKRBgHIAMo",
-            "DRITCgtCQU5NQ0xOTkhNRxgDIAEoCBITCgtNRlBMS0ZOSkFKQRgFIAEoDRIT",
-            "CgtHRE1MTEhOR0FDTxgLIAMoDRITCgtKT0NFS0hLSkpITBgJIAEoCBIgChhj",
-            "aGVzc19yb2d1ZV9zdWJfc3RvcnlfaWQYBiABKA1CHqoCG0VnZ0xpbmsuRGFu",
-            "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "IAEoDRITCgtERUlNSU5GRlBKTRgKIAMoDRIaChJwZW5kaW5nX3N0b3J5X2xp",
+            "c3QYByADKA0SEwoLQkFOTUNMTk5ITUcYAyABKAgSEwoLTUZQTEtGTkpBSkEY",
+            "BSABKA0SEwoLR0RNTExITkdBQ08YCyADKA0SEwoLSk9DRUtIS0pKSEwYCSAB",
+            "KAgSIAoYY2hlc3Nfcm9ndWVfc3ViX3N0b3J5X2lkGAYgASgNQh6qAhtFZ2dM",
+            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueNousStoryInfo), global::EggLink.DanhengServer.Proto.ChessRogueNousStoryInfo.Parser, new[]{ "ChessRogueMainStoryId", "DEIMINFFPJM", "AFJMAFGKPJD", "BANMCLNNHMG", "MFPLKFNJAJA", "GDMLLHNGACO", "JOCEKHKJJHL", "ChessRogueSubStoryId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueNousStoryInfo), global::EggLink.DanhengServer.Proto.ChessRogueNousStoryInfo.Parser, new[]{ "ChessRogueMainStoryId", "DEIMINFFPJM", "PendingStoryList", "BANMCLNNHMG", "MFPLKFNJAJA", "GDMLLHNGACO", "JOCEKHKJJHL", "ChessRogueSubStoryId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,7 +78,7 @@ namespace EggLink.DanhengServer.Proto {
     public ChessRogueNousStoryInfo(ChessRogueNousStoryInfo other) : this() {
       chessRogueMainStoryId_ = other.chessRogueMainStoryId_;
       dEIMINFFPJM_ = other.dEIMINFFPJM_.Clone();
-      aFJMAFGKPJD_ = other.aFJMAFGKPJD_.Clone();
+      pendingStoryList_ = other.pendingStoryList_.Clone();
       bANMCLNNHMG_ = other.bANMCLNNHMG_;
       mFPLKFNJAJA_ = other.mFPLKFNJAJA_;
       gDMLLHNGACO_ = other.gDMLLHNGACO_.Clone();
@@ -116,15 +116,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return dEIMINFFPJM_; }
     }
 
-    /// <summary>Field number for the "AFJMAFGKPJD" field.</summary>
-    public const int AFJMAFGKPJDFieldNumber = 7;
-    private static readonly pb::FieldCodec<uint> _repeated_aFJMAFGKPJD_codec
+    /// <summary>Field number for the "pending_story_list" field.</summary>
+    public const int PendingStoryListFieldNumber = 7;
+    private static readonly pb::FieldCodec<uint> _repeated_pendingStoryList_codec
         = pb::FieldCodec.ForUInt32(58);
-    private readonly pbc::RepeatedField<uint> aFJMAFGKPJD_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> pendingStoryList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> AFJMAFGKPJD {
-      get { return aFJMAFGKPJD_; }
+    public pbc::RepeatedField<uint> PendingStoryList {
+      get { return pendingStoryList_; }
     }
 
     /// <summary>Field number for the "BANMCLNNHMG" field.</summary>
@@ -203,7 +203,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (ChessRogueMainStoryId != other.ChessRogueMainStoryId) return false;
       if(!dEIMINFFPJM_.Equals(other.dEIMINFFPJM_)) return false;
-      if(!aFJMAFGKPJD_.Equals(other.aFJMAFGKPJD_)) return false;
+      if(!pendingStoryList_.Equals(other.pendingStoryList_)) return false;
       if (BANMCLNNHMG != other.BANMCLNNHMG) return false;
       if (MFPLKFNJAJA != other.MFPLKFNJAJA) return false;
       if(!gDMLLHNGACO_.Equals(other.gDMLLHNGACO_)) return false;
@@ -218,7 +218,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (ChessRogueMainStoryId != 0) hash ^= ChessRogueMainStoryId.GetHashCode();
       hash ^= dEIMINFFPJM_.GetHashCode();
-      hash ^= aFJMAFGKPJD_.GetHashCode();
+      hash ^= pendingStoryList_.GetHashCode();
       if (BANMCLNNHMG != false) hash ^= BANMCLNNHMG.GetHashCode();
       if (MFPLKFNJAJA != 0) hash ^= MFPLKFNJAJA.GetHashCode();
       hash ^= gDMLLHNGACO_.GetHashCode();
@@ -254,7 +254,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteUInt32(ChessRogueSubStoryId);
       }
-      aFJMAFGKPJD_.WriteTo(output, _repeated_aFJMAFGKPJD_codec);
+      pendingStoryList_.WriteTo(output, _repeated_pendingStoryList_codec);
       if (JOCEKHKJJHL != false) {
         output.WriteRawTag(72);
         output.WriteBool(JOCEKHKJJHL);
@@ -287,7 +287,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteUInt32(ChessRogueSubStoryId);
       }
-      aFJMAFGKPJD_.WriteTo(ref output, _repeated_aFJMAFGKPJD_codec);
+      pendingStoryList_.WriteTo(ref output, _repeated_pendingStoryList_codec);
       if (JOCEKHKJJHL != false) {
         output.WriteRawTag(72);
         output.WriteBool(JOCEKHKJJHL);
@@ -312,7 +312,7 @@ namespace EggLink.DanhengServer.Proto {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChessRogueMainStoryId);
       }
       size += dEIMINFFPJM_.CalculateSize(_repeated_dEIMINFFPJM_codec);
-      size += aFJMAFGKPJD_.CalculateSize(_repeated_aFJMAFGKPJD_codec);
+      size += pendingStoryList_.CalculateSize(_repeated_pendingStoryList_codec);
       if (BANMCLNNHMG != false) {
         size += 1 + 1;
       }
@@ -342,7 +342,7 @@ namespace EggLink.DanhengServer.Proto {
         ChessRogueMainStoryId = other.ChessRogueMainStoryId;
       }
       dEIMINFFPJM_.Add(other.dEIMINFFPJM_);
-      aFJMAFGKPJD_.Add(other.aFJMAFGKPJD_);
+      pendingStoryList_.Add(other.pendingStoryList_);
       if (other.BANMCLNNHMG != false) {
         BANMCLNNHMG = other.BANMCLNNHMG;
       }
@@ -385,7 +385,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 58:
           case 56: {
-            aFJMAFGKPJD_.AddEntriesFrom(input, _repeated_aFJMAFGKPJD_codec);
+            pendingStoryList_.AddEntriesFrom(input, _repeated_pendingStoryList_codec);
             break;
           }
           case 72: {
@@ -435,7 +435,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 58:
           case 56: {
-            aFJMAFGKPJD_.AddEntriesFrom(ref input, _repeated_aFJMAFGKPJD_codec);
+            pendingStoryList_.AddEntriesFrom(ref input, _repeated_pendingStoryList_codec);
             break;
           }
           case 72: {

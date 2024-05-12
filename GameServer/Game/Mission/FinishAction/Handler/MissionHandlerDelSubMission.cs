@@ -11,7 +11,7 @@ namespace EggLink.DanhengServer.Game.Mission.FinishAction.Handler
     [MissionFinishAction(FinishActionTypeEnum.delSubMission)]
     public class MissionHandlerDelSubMission : MissionFinishActionHandler
     {
-        public override void OnHandle(List<int> Params, PlayerInstance Player)
+        public override void OnHandle(List<int> Params, List<string> ParamString, PlayerInstance Player)
         {
             if (Params.Count < 1) return;
             var subMissionId = Params[0];

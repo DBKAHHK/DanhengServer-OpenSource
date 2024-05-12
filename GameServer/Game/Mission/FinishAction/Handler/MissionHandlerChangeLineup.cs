@@ -10,7 +10,7 @@ namespace EggLink.DanhengServer.Game.Mission.FinishAction.Handler
     public class MissionHandlerChangeLineup : MissionFinishActionHandler
     {
 
-        public override void OnHandle(List<int> Params, PlayerInstance Player)
+        public override void OnHandle(List<int> Params, List<string> ParamString, PlayerInstance Player)
         {
             Player.LineupManager!.GetCurLineup()!.BaseAvatars!.Clear();
             var count = 0;

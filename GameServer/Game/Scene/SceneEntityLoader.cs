@@ -64,7 +64,7 @@ namespace EggLink.DanhengServer.Game.Scene
                         {
                             if (entity.GroupID == group.Id)
                             {
-                                Scene.RemoveEntity(entity);
+                                Scene.RemoveEntity(entity, false);
                                 removeList.Add(entity);
                                 refreshed = true;
                             }
@@ -126,6 +126,44 @@ namespace EggLink.DanhengServer.Game.Scene
             }
 
             return entityList;
+        }
+
+        public virtual List<IGameEntity>? LoadGroup(int groupId, bool sendPacket = true)
+        {
+            var group = Scene.FloorInfo?.Groups.TryGetValue(groupId, out GroupInfo? v1) == true ? v1 : null;
+            if (group == null) { return null; }
+            var entities = LoadGroup(group);
+
+            if (sendPacket && entities != null && entities.Count > 0)
+            {
+                Scene.Player.SendPacket(new PacketSceneGroupRefreshScNotify(addEntity: entities));
+            }
+
+            return entities;
+        }
+
+        public virtual void UnloadGroup(int groupId)
+        {
+            var group = Scene.FloorInfo?.Groups.TryGetValue(groupId, out GroupInfo? v1) == true ? v1 : null;
+            if (group == null) return;
+
+            var removeList = new List<IGameEntity>();
+            bool refreshed = false;
+
+            foreach (var entity in Scene.Entities.Values)
+            {
+                if (entity.GroupID == group.Id)
+                {
+                    Scene.RemoveEntity(entity, false);
+                    removeList.Add(entity);
+                    refreshed = true;
+                }
+            }
+
+            if (refreshed)
+            {
+                Scene.Player.SendPacket(new PacketSceneGroupRefreshScNotify(removeEntity:removeList));
+            }
         }
 
         public virtual EntityNpc? LoadNpc(NpcInfo info, GroupInfo group, bool sendPacket = false)
@@ -211,11 +249,11 @@ namespace EggLink.DanhengServer.Game.Scene
             var propData = Scene.Player.GetScenePropData(Scene.FloorId, group.Id, info.ID);
             if (propData != null)
             {
-                prop.SetState(propData.State);
+                prop.State = propData.State;
             } 
             else
             {
-                prop.SetState(info.State);
+                prop.State = info.State;
                 //if (excel.PropStateList.Contains(PropStateEnum.Closed) && info.State == PropStateEnum.Locked)
                 //{
                 //    prop.SetState(PropStateEnum.Closed);

@@ -394,16 +394,25 @@ namespace EggLink.DanhengServer.Game.Rogue
             return new()
             {
                 ScoreId = (uint)score,
-                //TotalScore = (uint)score,
+                TotalScore = (uint)score,
                 PrevRewardInfo = prev,
                 NextRewardInfo = next,
                 AreaId = (uint)AreaExcel.RogueAreaID,
-                //FinishedRoomCount = (uint)CurReachedRoom,
-                //ReachedRoomCount = (uint)CurReachedRoom,
-                //RecordInfo = new()
-                //{
-                //    Id = 2
-                //}
+                FinishedRoomCount = (uint)CurReachedRoom,
+                ReachedRoomCount = (uint)CurReachedRoom,
+                IsWin = IsWin,
+                Record = new()
+                {
+                    AvatarList = { CurLineup!.BaseAvatars!.Select(avatar => new RogueRecordAvatar()
+                    {
+                        Id = (uint)avatar.BaseAvatarId,
+                        AvatarType = AvatarType.AvatarFormalType,
+                        Level = (uint)(Player.AvatarManager!.GetAvatar(avatar.BaseAvatarId)?.Level ?? 0),
+                        Slot = (uint)CurLineup!.BaseAvatars!.IndexOf(avatar),
+                    }) },
+                    BuffList = { RogueBuffs.Select(buff => buff.ToProto()) },
+                    MiracleList = { RogueMiracles.Values.Select(miracle => (uint)miracle.MiracleId) },
+                }
             };
         }
 

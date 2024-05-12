@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static ChessRogueEnterCellScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5DaGVzc1JvZ3VlRW50ZXJDZWxsU2NSc3AucHJvdG8aHUNoZXNzUm9ndWVR",
-            "dWVyeUdhbWVJbmZvLnByb3RvGhpDaGVzc1JvZ3VlUGxheWVySW5mby5wcm90",
-            "bxobQ2hlc3NSb2d1ZUN1cnJlbnRJbmZvLnByb3RvIsQBChhDaGVzc1JvZ3Vl",
+            "Ch5DaGVzc1JvZ3VlRW50ZXJDZWxsU2NSc3AucHJvdG8aGkNoZXNzUm9ndWVQ",
+            "bGF5ZXJJbmZvLnByb3RvGhtDaGVzc1JvZ3VlQ3VycmVudEluZm8ucHJvdG8a",
+            "HUNoZXNzUm9ndWVRdWVyeUdhbWVJbmZvLnByb3RvIsQBChhDaGVzc1JvZ3Vl",
             "RW50ZXJDZWxsU2NSc3ASJAoEaW5mbxgBIAEoCzIWLkNoZXNzUm9ndWVDdXJy",
             "ZW50SW5mbxIPCgdyZXRjb2RlGAggASgNEjQKEnJvZ3VlX2N1cnJlbnRfaW5m",
             "bxgEIAEoCzIYLkNoZXNzUm9ndWVRdWVyeUdhbWVJbmZvEg8KB2NlbGxfaWQY",
             "AyABKA0SKgoLcGxheWVyX2luZm8YDyABKAsyFS5DaGVzc1JvZ3VlUGxheWVy",
             "SW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueQueryGameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRoguePlayerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueCurrentInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRoguePlayerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueCurrentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueQueryGameInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueEnterCellScRsp), global::EggLink.DanhengServer.Proto.ChessRogueEnterCellScRsp.Parser, new[]{ "Info", "Retcode", "RogueCurrentInfo", "CellId", "PlayerInfo" }, null, null, null, null)
           }));

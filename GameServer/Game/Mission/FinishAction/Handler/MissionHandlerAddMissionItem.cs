@@ -11,7 +11,7 @@ namespace EggLink.DanhengServer.Game.Mission.FinishAction.Handler
     [MissionFinishAction(FinishActionTypeEnum.addMissionItem)]
     public class MissionHandlerAddMissionItem : MissionFinishActionHandler
     {
-        public override void OnHandle(List<int> Params, PlayerInstance Player)
+        public override void OnHandle(List<int> Params, List<string> ParamString, PlayerInstance Player)
         {
             if (Params.Count < 2) return;
             var itemId = Params[0];

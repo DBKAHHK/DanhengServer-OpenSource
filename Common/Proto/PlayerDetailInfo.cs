@@ -26,22 +26,22 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChZQbGF5ZXJEZXRhaWxJbmZvLnByb3RvGhFGR0ZITkZLRkpBSC5wcm90bxoS",
             "UGxhdGZvcm1UeXBlLnByb3RvGhdEaXNwbGF5UmVjb3JkSW5mby5wcm90bxod",
-            "RGlzcGxheUF2YXRhckRldGFpbEluZm8ucHJvdG8i0wMKEFBsYXllckRldGFp",
+            "RGlzcGxheUF2YXRhckRldGFpbEluZm8ucHJvdG8izgMKEFBsYXllckRldGFp",
             "bEluZm8SNgoTZGlzcGxheV9hdmF0YXJfbGlzdBipAyADKAsyGC5EaXNwbGF5",
-            "QXZhdGFyRGV0YWlsSW5mbxIhCgtMSEZIQUVPTENPRRgHIAEoCzIMLkZHRkhO",
-            "RktGSkFIEhMKC0FJTElOQU5HSk5FGAggASgJEhMKC3dvcmxkX2xldmVsGAkg",
-            "ASgNEgsKA3VpZBgFIAEoDRITCgtFRk5IQ09FS0RDThgOIAEoCBI0ChJhc3Np",
-            "c3RfYXZhdGFyX2xpc3QYDSADKAsyGC5EaXNwbGF5QXZhdGFyRGV0YWlsSW5m",
-            "bxINCgVsZXZlbBgKIAEoDRIRCglpc19iYW5uZWQYCyABKAgSEwoLTUFQSkRB",
-            "RFBLT0wYDCABKA0SEQoJaGVhZF9pY29uGAYgASgNEh8KCHBsYXRmb3JtGA8g",
-            "ASgOMg0uUGxhdGZvcm1UeXBlEhMKC0FLRlBGTUdJTEFPGAEgASgNEigKC3Jl",
-            "Y29yZF9pbmZvGPUFIAEoCzISLkRpc3BsYXlSZWNvcmRJbmZvEhMKC0xERklP",
-            "RkpISkpBGAIgASgJEhEKCXNpZ25hdHVyZRgDIAEoCRIQCghuaWNrbmFtZRgE",
-            "IAEoCUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "QXZhdGFyRGV0YWlsSW5mbxIcCgZyZWNvcmQYByABKAsyDC5GR0ZITkZLRkpB",
+            "SBITCgtBSUxJTkFOR0pORRgIIAEoCRITCgt3b3JsZF9sZXZlbBgJIAEoDRIL",
+            "CgN1aWQYBSABKA0SEwoLRUZOSENPRUtEQ04YDiABKAgSNAoSYXNzaXN0X2F2",
+            "YXRhcl9saXN0GA0gAygLMhguRGlzcGxheUF2YXRhckRldGFpbEluZm8SDQoF",
+            "bGV2ZWwYCiABKA0SEQoJaXNfYmFubmVkGAsgASgIEhMKC01BUEpEQURQS09M",
+            "GAwgASgNEhEKCWhlYWRfaWNvbhgGIAEoDRIfCghwbGF0Zm9ybRgPIAEoDjIN",
+            "LlBsYXRmb3JtVHlwZRITCgtBS0ZQRk1HSUxBTxgBIAEoDRIoCgtyZWNvcmRf",
+            "aW5mbxj1BSABKAsyEi5EaXNwbGF5UmVjb3JkSW5mbxITCgtMREZJT0ZKSEpK",
+            "QRgCIAEoCRIRCglzaWduYXR1cmUYAyABKAkSEAoIbmlja25hbWUYBCABKAlC",
+            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FGFHNFKFJAHReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayRecordInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerDetailInfo), global::EggLink.DanhengServer.Proto.PlayerDetailInfo.Parser, new[]{ "DisplayAvatarList", "LHFHAEOLCOE", "AILINANGJNE", "WorldLevel", "Uid", "EFNHCOEKDCN", "AssistAvatarList", "Level", "IsBanned", "MAPJDADPKOL", "HeadIcon", "Platform", "AKFPFMGILAO", "RecordInfo", "LDFIOFJHJJA", "Signature", "Nickname" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerDetailInfo), global::EggLink.DanhengServer.Proto.PlayerDetailInfo.Parser, new[]{ "DisplayAvatarList", "Record", "AILINANGJNE", "WorldLevel", "Uid", "EFNHCOEKDCN", "AssistAvatarList", "Level", "IsBanned", "MAPJDADPKOL", "HeadIcon", "Platform", "AKFPFMGILAO", "RecordInfo", "LDFIOFJHJJA", "Signature", "Nickname" }, null, null, null, null)
           }));
     }
     #endregion
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PlayerDetailInfo(PlayerDetailInfo other) : this() {
       displayAvatarList_ = other.displayAvatarList_.Clone();
-      lHFHAEOLCOE_ = other.lHFHAEOLCOE_ != null ? other.lHFHAEOLCOE_.Clone() : null;
+      record_ = other.record_ != null ? other.record_.Clone() : null;
       aILINANGJNE_ = other.aILINANGJNE_;
       worldLevel_ = other.worldLevel_;
       uid_ = other.uid_;
@@ -120,15 +120,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return displayAvatarList_; }
     }
 
-    /// <summary>Field number for the "LHFHAEOLCOE" field.</summary>
-    public const int LHFHAEOLCOEFieldNumber = 7;
-    private global::EggLink.DanhengServer.Proto.FGFHNFKFJAH lHFHAEOLCOE_;
+    /// <summary>Field number for the "record" field.</summary>
+    public const int RecordFieldNumber = 7;
+    private global::EggLink.DanhengServer.Proto.FGFHNFKFJAH record_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.FGFHNFKFJAH LHFHAEOLCOE {
-      get { return lHFHAEOLCOE_; }
+    public global::EggLink.DanhengServer.Proto.FGFHNFKFJAH Record {
+      get { return record_; }
       set {
-        lHFHAEOLCOE_ = value;
+        record_ = value;
       }
     }
 
@@ -327,7 +327,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!displayAvatarList_.Equals(other.displayAvatarList_)) return false;
-      if (!object.Equals(LHFHAEOLCOE, other.LHFHAEOLCOE)) return false;
+      if (!object.Equals(Record, other.Record)) return false;
       if (AILINANGJNE != other.AILINANGJNE) return false;
       if (WorldLevel != other.WorldLevel) return false;
       if (Uid != other.Uid) return false;
@@ -351,7 +351,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= displayAvatarList_.GetHashCode();
-      if (lHFHAEOLCOE_ != null) hash ^= LHFHAEOLCOE.GetHashCode();
+      if (record_ != null) hash ^= Record.GetHashCode();
       if (AILINANGJNE.Length != 0) hash ^= AILINANGJNE.GetHashCode();
       if (WorldLevel != 0) hash ^= WorldLevel.GetHashCode();
       if (Uid != 0) hash ^= Uid.GetHashCode();
@@ -409,9 +409,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteUInt32(HeadIcon);
       }
-      if (lHFHAEOLCOE_ != null) {
+      if (record_ != null) {
         output.WriteRawTag(58);
-        output.WriteMessage(LHFHAEOLCOE);
+        output.WriteMessage(Record);
       }
       if (AILINANGJNE.Length != 0) {
         output.WriteRawTag(66);
@@ -481,9 +481,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteUInt32(HeadIcon);
       }
-      if (lHFHAEOLCOE_ != null) {
+      if (record_ != null) {
         output.WriteRawTag(58);
-        output.WriteMessage(LHFHAEOLCOE);
+        output.WriteMessage(Record);
       }
       if (AILINANGJNE.Length != 0) {
         output.WriteRawTag(66);
@@ -530,8 +530,8 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += displayAvatarList_.CalculateSize(_repeated_displayAvatarList_codec);
-      if (lHFHAEOLCOE_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LHFHAEOLCOE);
+      if (record_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Record);
       }
       if (AILINANGJNE.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AILINANGJNE);
@@ -589,11 +589,11 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       displayAvatarList_.Add(other.displayAvatarList_);
-      if (other.lHFHAEOLCOE_ != null) {
-        if (lHFHAEOLCOE_ == null) {
-          LHFHAEOLCOE = new global::EggLink.DanhengServer.Proto.FGFHNFKFJAH();
+      if (other.record_ != null) {
+        if (record_ == null) {
+          Record = new global::EggLink.DanhengServer.Proto.FGFHNFKFJAH();
         }
-        LHFHAEOLCOE.MergeFrom(other.LHFHAEOLCOE);
+        Record.MergeFrom(other.Record);
       }
       if (other.AILINANGJNE.Length != 0) {
         AILINANGJNE = other.AILINANGJNE;
@@ -681,10 +681,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 58: {
-            if (lHFHAEOLCOE_ == null) {
-              LHFHAEOLCOE = new global::EggLink.DanhengServer.Proto.FGFHNFKFJAH();
+            if (record_ == null) {
+              Record = new global::EggLink.DanhengServer.Proto.FGFHNFKFJAH();
             }
-            input.ReadMessage(LHFHAEOLCOE);
+            input.ReadMessage(Record);
             break;
           }
           case 66: {
@@ -770,10 +770,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 58: {
-            if (lHFHAEOLCOE_ == null) {
-              LHFHAEOLCOE = new global::EggLink.DanhengServer.Proto.FGFHNFKFJAH();
+            if (record_ == null) {
+              Record = new global::EggLink.DanhengServer.Proto.FGFHNFKFJAH();
             }
-            input.ReadMessage(LHFHAEOLCOE);
+            input.ReadMessage(Record);
             break;
           }
           case 66: {

@@ -15,7 +15,7 @@ namespace EggLink.DanhengServer.Game.Scene.Entity
         public Position Position { get; set; } = prop.ToPositionProto();
         public Position Rotation { get; set; } = prop.ToRotationProto();
         public SceneInstance Scene { get; set; } = scene;
-        public PropStateEnum State { get; private set; } = PropStateEnum.Closed;
+        public PropStateEnum State { get; set; } = PropStateEnum.Closed;
         public int InstId { get; set; } = prop.ID;
         public MazePropExcel Excel { get; set; } = excel;
         public PropInfo PropInfo { get; set; } = prop;

@@ -9,9 +9,9 @@ namespace EggLink.DanhengServer.WebServer.Controllers
         [HttpPost("/sdk/dataUpload")]
         [HttpPost("/crashdump/dataUpload")]
         [HttpPost("/apm/dataUpload")]
-        public JsonResult LogUpload() => new("{\"code\":0}");
+        public ContentResult LogUpload() => new() { Content = "{\"code\":0}", ContentType = "application/json" };
 
         [HttpPost("/common/h5log/log/batch")]
-        public JsonResult BatchUpload() => new("{\"retcode\":0,\"message\":\"success\",\"data\":null}");
+        public ContentResult BatchUpload() => new() { Content = "{\"retcode\":0,\"message\":\"success\",\"data\":null}", ContentType = "application/json" };
     }
 }

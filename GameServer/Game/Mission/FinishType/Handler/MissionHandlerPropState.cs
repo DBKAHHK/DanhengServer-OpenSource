@@ -47,7 +47,8 @@ namespace EggLink.DanhengServer.Game.Mission.FinishType.Handler
 
         public override void HandleFinishType(PlayerInstance player, SubMissionInfo info, object? arg)
         {
-            var prop = player.SceneInstance!.GetEntitiesInGroup<EntityProp>(info.ParamInt1);
+            if (player.SceneInstance?.FloorId != info.LevelFloorID) return;  // not a same scene
+            var prop = player.SceneInstance.GetEntitiesInGroup<EntityProp>(info.ParamInt1);
             if (prop == null) return;
 
             foreach (var p in prop)

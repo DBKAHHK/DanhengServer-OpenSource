@@ -11,6 +11,7 @@ using EggLink.DanhengServer.Server.Packet.Send.Mission;
 using EggLink.DanhengServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Util;
+using System.Numerics;
 using System.Reflection;
 
 namespace EggLink.DanhengServer.Game.Mission
@@ -134,6 +135,31 @@ namespace EggLink.DanhengServer.Game.Mission
                 FinishSubMission(missionId);
             }
 
+            if (mission.SubMissionInfo?.LevelFloorID == Player.SceneInstance?.FloorId)
+            {
+                if (mission.SubMissionInfo?.GroupIDList != null)
+                {
+                    foreach (var group in mission.SubMissionInfo.GroupIDList)
+                    {
+                        Player.SceneInstance?.EntityLoader?.LoadGroup(group);
+                    }
+                }
+            }
+
+            if (missionId == 103280217)
+            {
+                if (Player.CurRaidId == 0)  // set old info when not in raid
+                {
+                    Player.OldEntryId = Player.Data.EntryId;
+                    Player.LastPos = Player.Data.Pos;
+                    Player.LastRot = Player.Data.Rot;
+                }
+                Player.CurRaidId = 43321;
+
+                Player.SendPacket(new PacketRaidInfoNotify(43321));
+                Player.EnterScene(43321001, 0, true);
+            }
+
             return sync;
         }
 
@@ -220,12 +246,21 @@ namespace EggLink.DanhengServer.Game.Mission
                 Progress = (uint)(subMission.SubMissionInfo?.Progress ?? 1)
             });
 
+            var subMissionInfo = subMission?.SubMissionInfo;
+            if (subMissionInfo?.LevelFloorID == Player.SceneInstance?.FloorId && subMissionInfo?.GroupIDList != null)
+            {
+                foreach (var groupId in subMissionInfo.GroupIDList)
+                {
+                    Player.SceneInstance?.EntityLoader?.UnloadGroup(groupId);
+                }
+            }
+
             // get next sub mission
             foreach (var nextMission in mainMission.MissionInfo?.SubMissionList ?? [])
             {
                 if (nextMission.TakeType != SubMissionTakeTypeEnum.AnySequence && nextMission.TakeType != SubMissionTakeTypeEnum.MultiSequence) continue;
                 bool canAccept = nextMission.TakeType == SubMissionTakeTypeEnum.MultiSequence;  // mean and operation
-                foreach (var id in nextMission.TakeParamIntList)
+                foreach (var id in nextMission.TakeParamIntList ?? [])
                 {
                     if (GetSubMissionStatus(id) != MissionPhaseEnum.Finish && nextMission.TakeType == SubMissionTakeTypeEnum.MultiSequence)
                     {
@@ -253,6 +288,7 @@ namespace EggLink.DanhengServer.Game.Mission
             }
             if (mainMission.MissionInfo != null)
                 HandleFinishAction(mainMission.MissionInfo, missionId);
+
             Player.SendPacket(new PacketPlayerSyncScNotify(sync));
             Player.SendPacket(new PacketStartFinishSubMissionScNotify(missionId));
 
@@ -306,7 +342,7 @@ namespace EggLink.DanhengServer.Game.Mission
             var subMission = info.SubMissionList.Find(x => x.ID == subMissionId);
             if (subMission == null) return;
 
-            foreach (var action in subMission.FinishActionList)
+            foreach (var action in subMission.FinishActionList ?? [])
             {
                 HandleFinishAction(action);
             }
@@ -315,7 +351,7 @@ namespace EggLink.DanhengServer.Game.Mission
         public void HandleFinishAction(Data.Config.FinishActionInfo actionInfo)
         {
             ActionHandlers.TryGetValue(actionInfo.FinishActionType, out var handler);
-            handler?.OnHandle(actionInfo.FinishActionPara, Player);
+            handler?.OnHandle(actionInfo.FinishActionPara, actionInfo.FinishActionParaString, Player);
         }
 
         public void HandleMissionReward(int mainMissionId)
@@ -375,7 +411,7 @@ namespace EggLink.DanhengServer.Game.Mission
             {
                 if (mission.TakeType == SubMissionTakeTypeEnum.CustomValue)
                 {
-                    if (mission.TakeParamIntList[index] == cValue)
+                    if (mission?.TakeParamIntList?[index] == cValue)
                     {
                         AcceptSubMission(mission.ID);
                     }
@@ -482,6 +518,24 @@ namespace EggLink.DanhengServer.Game.Mission
                 {
                     FinishTypeHandlers.TryGetValue(MissionFinishTypeEnum.PropState, out var handler);
                     handler?.HandleFinishType(Player, GetSubMissionInfo(id)!, null);
+                }
+            }
+        }
+        
+        public void OnPlayerChangeScene()
+        {
+            foreach (var id in GetRunningSubMissionIdList())
+            {
+                var info = GetSubMissionInfo(id);
+                if (info == null) continue;
+
+                if (info.LevelFloorID == Player.SceneInstance?.FloorId)
+                {
+                    if (info.GroupIDList == null) continue;
+                    foreach (var group in info.GroupIDList)
+                    {
+                        Player.SceneInstance.EntityLoader!.LoadGroup(group);
+                    }
                 }
             }
         }

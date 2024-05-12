@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static GetMapRotationDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1HZXRNYXBSb3RhdGlvbkRhdGFTY1JzcC5wcm90bxoRTkhQUEFOTE1FT0su",
-            "cHJvdG8aEUFIT09KTEhHQUlDLnByb3RvGhFPQ05MQkFHSk9OUC5wcm90bxoR",
-            "Q2hhcmdlckluZm8ucHJvdG8i8gEKF0dldE1hcFJvdGF0aW9uRGF0YVNjUnNw",
+            "Ch1HZXRNYXBSb3RhdGlvbkRhdGFTY1JzcC5wcm90bxoRQ2hhcmdlckluZm8u",
+            "cHJvdG8aEU9DTkxCQUdKT05QLnByb3RvGhFOSFBQQU5MTUVPSy5wcm90bxoR",
+            "QUhPT0pMSEdBSUMucHJvdG8i8gEKF0dldE1hcFJvdGF0aW9uRGF0YVNjUnNw",
             "EiEKC0hQUEdGREZKR0JDGAsgASgLMgwuTkhQUEFOTE1FT0sSIQoLTEREQkxC",
             "Rk9CSUwYAiADKAsyDC5BSE9PSkxIR0FJQxIeCghtYXBfaW5mbxgDIAEoCzIM",
             "Lk9DTkxCQUdKT05QEhMKC0JJQUlIQ0xHS0dNGAEgASgFEhMKC0tGS0RKSEtE",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "EwoLTU5OSFBKR0xPS00YCSABKA0SDwoHcmV0Y29kZRgKIAEoDUIeqgIbRWdn",
             "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NHPPANLMEOKReflection.Descriptor, global::EggLink.DanhengServer.Proto.AHOOJLHGAICReflection.Descriptor, global::EggLink.DanhengServer.Proto.OCNLBAGJONPReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.OCNLBAGJONPReflection.Descriptor, global::EggLink.DanhengServer.Proto.NHPPANLMEOKReflection.Descriptor, global::EggLink.DanhengServer.Proto.AHOOJLHGAICReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMapRotationDataScRsp), global::EggLink.DanhengServer.Proto.GetMapRotationDataScRsp.Parser, new[]{ "HPPGFDFJGBC", "LDDBLBFOBIL", "MapInfo", "BIAIHCLGKGM", "KFKDJHKDBMD", "GHGECCKMFGK", "MNNHPJGLOKM", "Retcode" }, null, null, null, null)
           }));

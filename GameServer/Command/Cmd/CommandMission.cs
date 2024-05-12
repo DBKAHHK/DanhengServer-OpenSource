@@ -63,13 +63,13 @@ namespace EggLink.DanhengServer.Command.Cmd
             }
 
             arg.SendMsg("正在进行的任务：");
-            Dictionary<int, List<int>> missionMap = new Dictionary<int, List<int>>();
+            Dictionary<int, List<int>> missionMap = [];
 
             foreach (var m in runningMissions)
             {
                 if (!missionMap.TryGetValue(m.MainMissionID, out List<int>? value))
                 {
-                    value = new List<int>();
+                    value = [];
                     missionMap[m.MainMissionID] = value;
                 }
 
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                     }
                 }
 
-                sb.Remove(sb.Length - 2, 2);
+                sb.Remove(sb.Length - 1, 1);
 
                 arg.SendMsg(sb.ToString());
             }
@@ -114,7 +114,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                     sb.Append($"{id}、");
                 }
 
-                sb.Remove(sb.Length - 2, 2);
+                sb.Remove(sb.Length - 1, 1);
 
                 arg.SendMsg(sb.ToString());
             }
@@ -128,7 +128,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                     sb.Append($"{id}、");
                 }
 
-                sb.Remove(sb.Length - 2, 2);
+                sb.Remove(sb.Length - 1, 1);
 
                 arg.SendMsg(sb.ToString());
             }
