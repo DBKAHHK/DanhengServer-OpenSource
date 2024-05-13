@@ -67,9 +67,15 @@ namespace EggLink.DanhengServer.Configuration
         public bool AutoLightSection { get; set; } = true;
         public string Language { get; set; } = "EN";
         public List<string> DefaultPermissions { get; set; } = ["*"];
-        public string ServerAnnounce { get; set; } = "Welcome to danhengserver!";
+        public ServerAnnounce ServerAnnounce { get; set; } = new ServerAnnounce();
         public ServerProfile ServerProfile { get; set; } = new ServerProfile();
         public bool AutoCreateUser { get; set; } = true;
+    }
+
+    public class ServerAnnounce
+    {
+        public bool EnableAnnounce { get; set; } = true;
+        public string AnnounceContent { get; set; } = "Welcome to danhengserver!";
     }
 
     public class ServerProfile

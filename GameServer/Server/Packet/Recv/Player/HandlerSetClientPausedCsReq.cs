@@ -15,7 +15,8 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Player
             var req = SetClientPausedCsReq.Parser.ParseFrom(data);
             var paused = req.Paused;
             connection.SendPacket(new PacketSetClientPausedScRsp(paused));
-            connection.SendPacket(new PacketServerAnnounceNotify());
+            if (ConfigManager.Config.ServerOption.ServerAnnounce.EnableAnnounce)
+                connection.SendPacket(new PacketServerAnnounceNotify());
         }
     }
 }
