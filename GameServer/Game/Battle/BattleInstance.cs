@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Game.Battle
                 var avatarType = AvatarType.AvatarFormalType;
                 if (avatar.AssistUid != 0)
                 {
-                    var player = DatabaseHelper.GetInstance<AvatarData>(avatar.AssistUid);
+                    var player = DatabaseHelper.Instance!.GetInstance<AvatarData>(avatar.AssistUid);
                     if (player != null)
                     {
                         avatarInstance = player.Avatars!.Find(item => item.GetAvatarId() == avatar.BaseAvatarId);

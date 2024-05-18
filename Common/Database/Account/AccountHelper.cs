@@ -31,7 +31,7 @@ namespace EggLink.DanhengServer.Database.Account
                 Username = username, 
                 Permissions = perStr
             };
-            DatabaseHelper.Instance?.SaveInstance(account);
+            DatabaseHelper.SaveInstance(account);
         }
     }
 }

@@ -42,7 +42,7 @@ namespace EggLink.DanhengServer.Command
 
         public bool HasPermission(string permission)
         {
-            var account = DatabaseHelper.GetInstance<AccountData>(Player.Uid)!;
+            var account = DatabaseHelper.Instance!.GetInstance<AccountData>(Player.Uid)!;
             return account.Permissions!.Contains(permission);
         }
     }

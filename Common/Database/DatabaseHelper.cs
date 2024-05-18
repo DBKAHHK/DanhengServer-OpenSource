@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Database
             }
         }
 
-        public static void MoveFromSqlite()
+        public void MoveFromSqlite()
         {
             logger.Info("Moving from sqlite...");
 
@@ -199,7 +199,7 @@ namespace EggLink.DanhengServer.Database
             }
         }
 
-        public static T? GetInstance<T>(int uid) where T : class, new()
+        public T? GetInstance<T>(int uid) where T : class, new()
         {
             try
             {
@@ -273,7 +273,7 @@ namespace EggLink.DanhengServer.Database
             SaveDatabase();
         }
 
-        public static void SaveDatabase()  // per 5 min
+        public void SaveDatabase()  // per 5 min
         {
             try
             {
@@ -318,7 +318,7 @@ namespace EggLink.DanhengServer.Database
             }
         }
 
-        public static void DeleteInstance<T>(T instance) where T : class, new()
+        public void DeleteInstance<T>(T instance) where T : class, new()
         {
             sqlSugarScope?.Deleteable(instance).ExecuteCommand();
             UidInstanceMap[(instance as BaseDatabaseDataHelper)!.Uid].Remove((instance as BaseDatabaseDataHelper)!);  // remove from the map

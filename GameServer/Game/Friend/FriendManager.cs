@@ -18,7 +18,7 @@ namespace EggLink.DanhengServer.Game.Friend
 
         public void AddFriend(int targetUid)
         {
-            var target = DatabaseHelper.GetInstance<FriendData>(targetUid);
+            var target = DatabaseHelper.Instance!.GetInstance<FriendData>(targetUid);
             if (target == null)
             {
                 return;
@@ -58,7 +58,7 @@ namespace EggLink.DanhengServer.Game.Friend
 
         public PlayerData? ConfirmAddFriend(int targetUid)
         {
-            var target = DatabaseHelper.GetInstance<FriendData>(targetUid);
+            var target = DatabaseHelper.Instance!.GetInstance<FriendData>(targetUid);
             if (target == null)
             {
                 return null;
@@ -100,7 +100,7 @@ namespace EggLink.DanhengServer.Game.Friend
 
         public void RefuseAddFriend(int targetUid)
         {
-            var target = DatabaseHelper.GetInstance<FriendData>(targetUid);
+            var target = DatabaseHelper.Instance!.GetInstance<FriendData>(targetUid);
             if (target == null)
             {
                 return;
@@ -174,7 +174,7 @@ namespace EggLink.DanhengServer.Game.Friend
             } else
             {
                 // offline
-                var friendData = DatabaseHelper.GetInstance<FriendData>(recvUid);
+                var friendData = DatabaseHelper.Instance!.GetInstance<FriendData>(recvUid);
                 if (friendData == null) return;  // not exist maybe server profile
                 if (!friendData.ChatHistory.TryGetValue(sendUid, out FriendChatHistory? history))
                 {

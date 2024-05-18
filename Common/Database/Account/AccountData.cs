@@ -21,7 +21,7 @@ namespace EggLink.DanhengServer.Database.Account
         public static AccountData? GetAccountByUserName(string username)
         {
             AccountData? result = null;
-            DatabaseHelper.Instance?.GetAllInstance<AccountData>()?.ForEach((account) =>
+            DatabaseHelper.GetAllInstance<AccountData>()?.ForEach((account) =>
             {
                 if (account.Username == username)
                 {

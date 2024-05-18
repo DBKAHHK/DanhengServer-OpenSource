@@ -69,7 +69,7 @@ namespace EggLink.DanhengServer.Database.Player
 
         public PlayerSimpleInfo ToSimpleProto(FriendOnlineStatus status)
         {
-            var AvatarInfo = DatabaseHelper.GetInstance<AvatarData>(Uid)!;
+            var AvatarInfo = DatabaseHelper.Instance!.GetInstance<AvatarData>(Uid)!;
 
             foreach (var avatar in AvatarInfo.Avatars)
             {
@@ -120,7 +120,7 @@ namespace EggLink.DanhengServer.Database.Player
                 RecordInfo = new(),
             };
 
-            var AvatarInfo = DatabaseHelper.GetInstance<AvatarData>(Uid);
+            var AvatarInfo = DatabaseHelper.Instance!.GetInstance<AvatarData>(Uid);
 
             if (AvatarInfo != null)
             {

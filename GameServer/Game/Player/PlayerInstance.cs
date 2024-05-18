@@ -80,7 +80,7 @@ namespace EggLink.DanhengServer.Game.Player
             Data.NextStaminaRecover = Extensions.GetUnixSec() + GameConstants.STAMINA_RESERVE_RECOVERY_TIME;
             Data.Level = ConfigManager.Config.ServerOption.StartTrailblazerLevel;
 
-            DatabaseHelper.Instance?.SaveInstance(Data);
+            DatabaseHelper.SaveInstance(Data);
 
             InitialPlayerManager();
 
@@ -154,20 +154,10 @@ namespace EggLink.DanhengServer.Game.Player
             }
         }
 
-        public T? InitializeDatabase<T>() where T : class, new()
+        public T InitializeDatabase<T>() where T : class, new()
         {
-            if (new T() is BaseDatabaseDataHelper database)
-            {
-                var instance = DatabaseHelper.Instance?.GetInstance<T>(Uid);
-                if (instance == null)
-                {
-                    database.Uid = Uid;
-                    DatabaseHelper.Instance?.SaveInstance<T>((database as T)!);
-                    instance = DatabaseHelper.Instance?.GetInstance<T>(Uid);
-                }
-                return instance!;
-            }
-            return null;
+            var instance = DatabaseHelper.Instance?.GetInstanceOrCreateNew<T>(Uid);
+            return instance!;
         }
 
         #endregion
@@ -190,24 +180,6 @@ namespace EggLink.DanhengServer.Game.Player
             {
                 EnterScene(OldEntryId, 0, false);
                 MoveTo(LastPos!, LastRot!);
-            }
-
-            try
-            {
-                DatabaseHelper.Instance?.UpdateInstance(LineupManager!.LineupData);
-                DatabaseHelper.Instance?.UpdateInstance(InventoryManager!.Data);
-                DatabaseHelper.Instance?.UpdateInstance(MissionManager!.Data);
-                DatabaseHelper.Instance?.UpdateInstance(AvatarManager!.AvatarData!);
-                DatabaseHelper.Instance?.UpdateInstance(FriendManager!.FriendData!);
-                DatabaseHelper.Instance?.UpdateInstance(MessageManager!.Data!);
-                DatabaseHelper.Instance?.UpdateInstance(ChessRogueManager!.ChessRogueNousData!);
-                DatabaseHelper.Instance?.UpdateInstance(GachaManager!.GachaData!);
-                DatabaseHelper.Instance?.UpdateInstance(Data);
-                DatabaseHelper.Instance?.UpdateInstance(PlayerUnlockData!);
-                DatabaseHelper.Instance?.UpdateInstance(SceneData!);
-                DatabaseHelper.Instance?.UpdateInstance(TutorialData!);
-            } catch
-            {
             }
         }
 
