@@ -1,20 +1,19 @@
-﻿using EggLink.DanhengServer.Configuration;
-using EggLink.DanhengServer.Database.Account;
-using EggLink.DanhengServer.Database.Inventory;
+﻿using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Database.Mission;
 using EggLink.DanhengServer.Util;
-using Microsoft.Data.Sqlite;
 using SqlSugar;
-using System.Reflection;
 
 namespace EggLink.DanhengServer.Database
 {
     public class DatabaseHelper
     {
-        public Logger logger = new("Database");
+        public static Logger logger = new("Database");
         public static SqlSugarScope? sqlSugarScope;
         public static DatabaseHelper? Instance;
-        private static readonly Dictionary<int, object> _lock = [];
+        public readonly static Dictionary<int, List<BaseDatabaseDataHelper>> UidInstanceMap = [];
+        public readonly static List<int> ToSaveUidList = [];
+        public static long LastSaveTick = DateTime.UtcNow.Ticks;
+        public static Thread? SaveThread;
 
         public DatabaseHelper()
         {
@@ -56,6 +55,7 @@ namespace EggLink.DanhengServer.Database
                     SerializeService = new CustomSerializeService()
                 }
             });
+
             switch (config.Database.DatabaseType)
             {
                 case "sqlite":
@@ -67,6 +67,44 @@ namespace EggLink.DanhengServer.Database
                 default:
                     logger.Error("Unsupported database type");
                     break;
+            }
+
+            var baseType = typeof(BaseDatabaseDataHelper);
+            var assembly = typeof(BaseDatabaseDataHelper).Assembly;
+            var types = assembly.GetTypes().Where(t => t.IsSubclassOf(baseType));
+            foreach (var t in types)
+            {
+                typeof(DatabaseHelper).GetMethod("InitializeTable")?.MakeGenericMethod(t).Invoke(null, null);  // cache the data
+            }
+
+            LastSaveTick = DateTime.UtcNow.Ticks;
+
+            SaveThread = new(() =>
+            {
+                while (true)
+                {
+                    CalcSaveDatabase();
+                }
+            });
+            SaveThread.Start();
+        }
+
+        public static void InitializeTable<T>() where T : class, new()
+        {
+            var list = sqlSugarScope?.Queryable<T>()
+                .Select(x => x)
+                .ToList();
+
+            foreach (var instance in list!)
+            {
+                var inst = (instance as BaseDatabaseDataHelper)!;
+                if (!UidInstanceMap.TryGetValue(inst.Uid, out List<BaseDatabaseDataHelper>? value))
+                {
+                    value = [];
+                    UidInstanceMap[inst.Uid] = value;
+                }
+
+                value.Add(inst);  // add to the map
             }
         }
 
@@ -85,7 +123,7 @@ namespace EggLink.DanhengServer.Database
             }
         }
 
-        public void MoveFromSqlite()
+        public static void MoveFromSqlite()
         {
             logger.Info("Moving from sqlite...");
 
@@ -130,16 +168,6 @@ namespace EggLink.DanhengServer.Database
             }
         }
 
-        public object GetLock(int uid)
-        {
-            if (!_lock.TryGetValue(uid, out object? value))
-            {
-                value = new();
-                _lock[uid] = value;
-            }
-            return value;
-        }
-
         public static void InitializeSqlite()
         {
             var baseType = typeof(BaseDatabaseDataHelper);
@@ -150,7 +178,7 @@ namespace EggLink.DanhengServer.Database
                 typeof(DatabaseHelper).GetMethod("InitializeSqliteTable")?.MakeGenericMethod(type).Invoke(null, null);
             }
         }
-        
+
         public static void InitializeMysql()
         {
             sqlSugarScope?.DbMaintenance.CreateDatabase();
@@ -161,21 +189,35 @@ namespace EggLink.DanhengServer.Database
         {
             try
             {
-                sqlSugarScope?.Queryable<T>().ToList();
-            } catch
+                sqlSugarScope?.Queryable<T>()
+                    .Select(x => x)
+                    .ToList();
+            }
+            catch
             {
                 sqlSugarScope?.CodeFirst.InitTables<T>();
             }
         }
 
-        public T? GetInstance<T>(long uid) where T : class, new()
+        public static T? GetInstance<T>(int uid) where T : class, new()
         {
             try
             {
-                lock (GetLock((int)uid))
+                if (!UidInstanceMap.TryGetValue(uid, out List<BaseDatabaseDataHelper>? value))
                 {
-                    return sqlSugarScope?.Queryable<T>().Where(it => (it as BaseDatabaseDataHelper)!.Uid == uid).First();
+                    value = [];
+                    UidInstanceMap[uid] = value;
                 }
+
+                foreach (var instance in value)
+                {
+                    if (instance is T)
+                    {
+                        return instance as T;  // found
+                    }
+                }
+
+                return null;  // not found
             }
             catch (Exception e)
             {
@@ -196,40 +238,91 @@ namespace EggLink.DanhengServer.Database
             return instance;
         }
 
-        public List<T>? GetAllInstance<T>() where T : class, new()
+        public static List<T>? GetAllInstance<T>() where T : class, new()
         {
             try
             {
-                return sqlSugarScope?.Queryable<T>().ToList();
-            } catch(Exception e)
+                return sqlSugarScope?.Queryable<T>()
+                    .Select(x => x)
+                    .ToList();
+            }
+            catch (Exception e)
             {
                 logger.Error("Unsupported type", e);
                 return null;
             }
         }
 
-        public void SaveInstance<T>(T instance) where T : class, new()
+        public static void SaveInstance<T>(T instance) where T : class, new()
         {
-            lock (GetLock((instance as BaseDatabaseDataHelper)!.Uid))
-            {
-                sqlSugarScope?.Insertable(instance).ExecuteCommand();
-            }
+            sqlSugarScope?.Insertable(instance).ExecuteCommand();
+            UidInstanceMap[(instance as BaseDatabaseDataHelper)!.Uid].Add((instance as BaseDatabaseDataHelper)!);  // add to the map
         }
 
         public void UpdateInstance<T>(T instance) where T : class, new()
         {
-            lock (GetLock((instance as BaseDatabaseDataHelper)!.Uid))
+            //lock (GetLock((instance as BaseDatabaseDataHelper)!.Uid))
+            //{
+            //    sqlSugarScope?.Updateable(instance).ExecuteCommand();
+            //}
+        }
+
+        public void CalcSaveDatabase()  // per 5 min
+        {
+            if (LastSaveTick + TimeSpan.TicksPerMinute * 5 > DateTime.UtcNow.Ticks) return;
+            SaveDatabase();
+        }
+
+        public static void SaveDatabase()  // per 5 min
+        {
+            try
+            {
+                var prev = DateTime.Now;
+                foreach (var uid in ToSaveUidList)
+                {
+                    var value = UidInstanceMap[uid];
+                    var baseType = typeof(BaseDatabaseDataHelper);
+                    var assembly = typeof(BaseDatabaseDataHelper).Assembly;
+                    var types = assembly.GetTypes().Where(t => t.IsSubclassOf(baseType));
+                    foreach (var type in types)
+                    {
+                        var instance = value.Find(x => x.GetType() == type);
+                        if (instance != null)
+                        {
+                            typeof(DatabaseHelper).GetMethod("SaveDatabaseType")?.MakeGenericMethod(type).Invoke(null, [instance]);
+                        }
+                    }
+                }
+
+                logger.Info($"Save database. Using {(DateTime.Now - prev).TotalSeconds.ToString()[..4]} seconds.");
+
+                ToSaveUidList.Clear();
+            }
+            catch (Exception e)
+            {
+                logger.Error("An error occurred while saving the database", e);
+            }
+
+            LastSaveTick = DateTime.UtcNow.Ticks;
+        }
+
+        public static void SaveDatabaseType<T>(T instance) where T : class, new()
+        {
+            try
             {
                 sqlSugarScope?.Updateable(instance).ExecuteCommand();
             }
+            catch (Exception e)
+            {
+                logger.Error("An error occurred while saving the database", e);
+            }
         }
 
-        public void DeleteInstance<T>(T instance) where T : class, new()
+        public static void DeleteInstance<T>(T instance) where T : class, new()
         {
-            lock (GetLock((instance as BaseDatabaseDataHelper)!.Uid))
-            {
-                sqlSugarScope?.Deleteable(instance).ExecuteCommand();
-            }
+            sqlSugarScope?.Deleteable(instance).ExecuteCommand();
+            UidInstanceMap[(instance as BaseDatabaseDataHelper)!.Uid].Remove((instance as BaseDatabaseDataHelper)!);  // remove from the map
+            ToSaveUidList.Remove((instance as BaseDatabaseDataHelper)!.Uid);  // remove from the save list
         }
     }
 }

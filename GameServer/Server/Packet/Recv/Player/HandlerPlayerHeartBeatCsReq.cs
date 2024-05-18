@@ -18,6 +18,8 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Player
             {
                 connection.SendPacket(new PacketPlayerHeartBeatScRsp((long)req.ClientTimeMs));
             }
+
+            connection.Player?.OnHeartBeat();
         }
     }
 }

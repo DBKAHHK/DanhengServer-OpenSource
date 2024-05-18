@@ -30,6 +30,7 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Battle
                 Unk1 = new(),
                 Unk2 = new(),
                 Unk3 = new(),
+                EventId = (uint)battle.EventId,
             };
 
             SetData(proto);

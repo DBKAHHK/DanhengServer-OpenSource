@@ -77,7 +77,7 @@ namespace EggLink.DanhengServer.Data.Excel
                 CurrentHp = hp == 0 ? 10000 : hp,
                 CurrentSp = sp,
                 InternalEntityId = Id,
-                PlayerData = DatabaseHelper.Instance!.GetInstance<PlayerData>(uid),
+                PlayerData = DatabaseHelper.GetInstance<PlayerData>(uid),
             };
         }
     }

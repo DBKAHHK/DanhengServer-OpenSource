@@ -393,7 +393,7 @@ namespace EggLink.DanhengServer.Database.Avatar
                 Pos = (uint)pos,
             };
 
-            var inventory = DatabaseHelper.Instance!.GetInstance<InventoryData>(PlayerData!.Uid)!;
+            var inventory = DatabaseHelper.GetInstance<InventoryData>(PlayerData!.Uid)!;
             foreach (var item in Relic)
             {
                 var relic = inventory.RelicItems.Find(x => x.UniqueId == item.Value)!;

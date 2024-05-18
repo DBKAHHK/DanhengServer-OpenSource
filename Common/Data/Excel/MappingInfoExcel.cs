@@ -17,6 +17,8 @@ namespace EggLink.DanhengServer.Data.Excel
 
         [JsonIgnore]
         public List<MappingInfoItem> DropItemList { get; set; } = [];
+        [JsonIgnore]
+        public List<MappingInfoItem> DropRelicItemList { get; set; } = [];
 
         public override int GetId()
         {
@@ -182,7 +184,7 @@ namespace EggLink.DanhengServer.Data.Excel
                             if (amount > 0)
                             {
                                 drop.ItemNum = (int)amount;
-                                DropItemList.Add(drop);
+                                DropRelicItemList.Add(drop);
                             }
                         }
                     }

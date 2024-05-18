@@ -58,7 +58,7 @@ namespace EggLink.DanhengServer.Game.Scene
 
                 if (oldGroupId.Contains(group.Id))  // check if it should be unloaded
                 {
-                    if (group.ForceUnloadCondition.IsTrue(Scene.Player.MissionManager!.Data, false))
+                    if (group.ForceUnloadCondition.IsTrue(Scene.Player.MissionManager!.Data, false) || group.UnloadCondition.IsTrue(Scene.Player.MissionManager!.Data, false))
                     {
                         foreach (var entity in Scene.Entities.Values)
                         {
@@ -83,13 +83,19 @@ namespace EggLink.DanhengServer.Game.Scene
             }
         }
 
-        public virtual List<IGameEntity>? LoadGroup(GroupInfo info)
+        public virtual List<IGameEntity>? LoadGroup(GroupInfo info, bool forceLoad = false)
         {
             var missionData = Scene.Player.MissionManager!.Data;
-            if (!info.LoadCondition.IsTrue(missionData) || info.UnloadCondition.IsTrue(missionData, false) || info.ForceUnloadCondition.IsTrue(missionData, false))
+            if ((!info.LoadCondition.IsTrue(missionData) || info.UnloadCondition.IsTrue(missionData, false) || info.ForceUnloadCondition.IsTrue(missionData, false)) && !forceLoad)
             {
                 return null;
             }
+
+            if (Scene.Entities.Values.ToList().FindIndex(x => x.GroupID == info.Id) != -1)  // check if group is already loaded
+            {
+                return null;
+            }
+
             var entityList = new List<IGameEntity>();
             foreach (var npc in info.NPCList)
             {
@@ -132,7 +138,7 @@ namespace EggLink.DanhengServer.Game.Scene
         {
             var group = Scene.FloorInfo?.Groups.TryGetValue(groupId, out GroupInfo? v1) == true ? v1 : null;
             if (group == null) { return null; }
-            var entities = LoadGroup(group);
+            var entities = LoadGroup(group, true);
 
             if (sendPacket && entities != null && entities.Count > 0)
             {

@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Game.Rogue.Scene
             Scene.IsLoaded = true;
         }
 
-        public override List<IGameEntity>? LoadGroup(GroupInfo info)
+        public override List<IGameEntity>? LoadGroup(GroupInfo info, bool forceLoad = false)
         {
             var entityList = new List<IGameEntity>();
             foreach (var npc in info.NPCList)

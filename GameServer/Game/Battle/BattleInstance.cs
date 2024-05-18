@@ -20,6 +20,7 @@ namespace EggLink.DanhengServer.Game.Battle
         public int MappingInfoId { get; set; }
         public int RoundLimit { get; set; }
         public int StageId { get; set; } = stages.Count > 0 ? stages[0].StageID : 0;  // Set to 0 when hit monster
+        public int EventId { get; set; }
         public int CustomLevel { get; set; }
         public BattleEndStatus BattleEndStatus { get; set; }
 
@@ -49,6 +50,7 @@ namespace EggLink.DanhengServer.Game.Battle
 
         public ItemList GetDropItemList()
         {
+            if (BattleEndStatus != BattleEndStatus.BattleEndWin) return new();
             var list = new ItemList();
 
             foreach (var item in MonsterDropItems)
@@ -56,52 +58,9 @@ namespace EggLink.DanhengServer.Game.Battle
                 list.ItemList_.Add(item.ToProto());
             }
 
-            // calculate drops
-            GameData.MappingInfoData.TryGetValue(MappingInfoId * 10 + WorldLevel, out var mapping);
-            if (mapping != null)
+            foreach (var item in Player.InventoryManager!.HandleMappingInfo(MappingInfoId, WorldLevel))
             {
-                List<ItemData> items = [];
-                foreach (var item in mapping.DropItemList)
-                {
-                    var random = Random.Shared.Next(0, 101);
-                    if (random <= item.Chance)
-                    {
-                        var amount = item.ItemNum > 0 ? item.ItemNum : Random.Shared.Next(item.MinCount, item.MaxCount + 1);
-
-                        GameData.ItemConfigData.TryGetValue(item.ItemID, out var itemData);
-                        if (itemData == null) continue;
-
-                        if (itemData.ItemMainType == ItemMainTypeEnum.Relic || itemData.ItemMainType == ItemMainTypeEnum.Equipment)
-                        {
-                            for (int i = 0; i < amount; i++)
-                            {
-                                items.Add(new ItemData()
-                                {
-                                    ItemId = item.ItemID,
-                                    Count = 1,
-                                });
-                            }
-                        }
-                        else
-                        {
-                            items.Add(new ItemData()
-                            {
-                                ItemId = item.ItemID,
-                                Count = amount,
-                            });
-                        }
-                    }
-                }
-
-
-                foreach (var item in items)
-                {
-                    var i = Player.InventoryManager!.AddItem(item.ItemId, item.Count, false, false)!;
-                    i.Count = item.Count;  // return the all thing
-                    list.ItemList_.Add(i.ToProto());
-                }
-
-                DatabaseHelper.Instance!.UpdateInstance(Player.InventoryManager!.Data);
+                list.ItemList_.Add(item.ToProto());
             }
 
             return list;
@@ -137,7 +96,7 @@ namespace EggLink.DanhengServer.Game.Battle
                 var avatarType = AvatarType.AvatarFormalType;
                 if (avatar.AssistUid != 0)
                 {
-                    var player = DatabaseHelper.Instance!.GetInstance<AvatarData>(avatar.AssistUid);
+                    var player = DatabaseHelper.GetInstance<AvatarData>(avatar.AssistUid);
                     if (player != null)
                     {
                         avatarInstance = player.Avatars!.Find(item => item.GetAvatarId() == avatar.BaseAvatarId);

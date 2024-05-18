@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Data.Excel
         [JsonConverter(typeof(StringEnumConverter))]
         public ItemUseMethodEnum UseMethod { get; set; }
 
-        //public List<ItemParam> ReturnItemIDList{ get; set; }
+        public List<MappingInfoItem> ReturnItemIDList { get; set; } = [];
 
         [JsonIgnore]
         public int Exp { get; set; }

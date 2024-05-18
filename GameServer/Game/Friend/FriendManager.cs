@@ -18,7 +18,7 @@ namespace EggLink.DanhengServer.Game.Friend
 
         public void AddFriend(int targetUid)
         {
-            var target = DatabaseHelper.Instance!.GetInstance<FriendData>(targetUid);
+            var target = DatabaseHelper.GetInstance<FriendData>(targetUid);
             if (target == null)
             {
                 return;
@@ -50,6 +50,7 @@ namespace EggLink.DanhengServer.Game.Friend
             var targetPlayer = Listener.GetActiveConnection(targetUid);
             targetPlayer?.SendPacket(new PacketSyncApplyFriendScNotify(Player.Data));
             targetPlayer?.Player!.FriendManager!.FriendData.ReceiveApplyList.Add(Player.Uid);
+            DatabaseHelper.ToSaveUidList.Add(targetUid);
 
             DatabaseHelper.Instance!.UpdateInstance(FriendData);
             DatabaseHelper.Instance!.UpdateInstance(target);
@@ -57,7 +58,7 @@ namespace EggLink.DanhengServer.Game.Friend
 
         public PlayerData? ConfirmAddFriend(int targetUid)
         {
-            var target = DatabaseHelper.Instance!.GetInstance<FriendData>(targetUid);
+            var target = DatabaseHelper.GetInstance<FriendData>(targetUid);
             if (target == null)
             {
                 return null;
@@ -99,7 +100,7 @@ namespace EggLink.DanhengServer.Game.Friend
 
         public void RefuseAddFriend(int targetUid)
         {
-            var target = DatabaseHelper.Instance!.GetInstance<FriendData>(targetUid);
+            var target = DatabaseHelper.GetInstance<FriendData>(targetUid);
             if (target == null)
             {
                 return;
@@ -115,6 +116,7 @@ namespace EggLink.DanhengServer.Game.Friend
 
             var targetPlayer = Listener.GetActiveConnection(targetUid);
             targetPlayer?.Player!.FriendManager!.FriendData.SendApplyList.Remove(Player.Uid);
+            DatabaseHelper.ToSaveUidList.Add(targetUid);
 
             DatabaseHelper.Instance!.UpdateInstance(FriendData);
             DatabaseHelper.Instance!.UpdateInstance(target);
@@ -164,8 +166,6 @@ namespace EggLink.DanhengServer.Game.Friend
                 }
             }
 
-            DatabaseHelper.Instance!.UpdateInstance(FriendData);
-
             // receive message
             var recvPlayer = Listener.GetActiveConnection(recvUid)?.Player!;
             if (recvPlayer != null)
@@ -174,7 +174,7 @@ namespace EggLink.DanhengServer.Game.Friend
             } else
             {
                 // offline
-                var friendData = DatabaseHelper.Instance!.GetInstance<FriendData>(recvUid);
+                var friendData = DatabaseHelper.GetInstance<FriendData>(recvUid);
                 if (friendData == null) return;  // not exist maybe server profile
                 if (!friendData.ChatHistory.TryGetValue(sendUid, out FriendChatHistory? history))
                 {
@@ -183,7 +183,7 @@ namespace EggLink.DanhengServer.Game.Friend
                 }
                 history.MessageList.Add(data);
 
-                DatabaseHelper.Instance!.UpdateInstance(friendData);
+                DatabaseHelper.ToSaveUidList.Add(recvUid);
             }
         }
 
@@ -216,8 +216,6 @@ namespace EggLink.DanhengServer.Game.Friend
             }
 
             Player.SendPacket(proto);
-
-            DatabaseHelper.Instance!.UpdateInstance(FriendData);
         }
 
         public List<ChatMessageData> GetHistoryInfo(int uid)

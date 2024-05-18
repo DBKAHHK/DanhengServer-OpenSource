@@ -44,6 +44,7 @@ namespace EggLink.DanhengServer.Game.Battle
                         Player.SceneInstance!.Entities.TryGetValue((int)entity, out var entityInstance);
                         if (entityInstance is EntityMonster monster)
                         {
+                            if (targetList.Contains(monster)) continue;  // avoid adding the same monster twice
                             targetList.Add(monster);
                         }
                     }
@@ -86,16 +87,15 @@ namespace EggLink.DanhengServer.Game.Battle
                 {
                     Player.LineupManager!.GetCurLineup()!.Heal(2000, false);
                     Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
+                } else
+                {
+                    Player.InventoryManager!.HandlePlaneEvent(prop.PropInfo.EventID);
                 }
                 Player.RogueManager!.GetRogueInstance()?.OnPropDestruct(prop);
             }
 
             if (targetList.Count > 0)
             {
-                if (castAvatar != null && req.SkillIndex > 0)
-                {
-                    skill.OnCast(castAvatar);
-                }
                 // Skill handle
                 if (!skill.TriggerBattle)
                 {
@@ -106,6 +106,7 @@ namespace EggLink.DanhengServer.Game.Battle
                 if (castAvatar != null)
                 {
                     skill.OnAttack(Player.SceneInstance!.AvatarInfo[(int)req.AttackedByEntityId], targetList);
+                    skill.OnCast(castAvatar);
                 }
 
                 var triggerBattle = false;
@@ -187,6 +188,7 @@ namespace EggLink.DanhengServer.Game.Battle
             BattleInstance battleInstance = new(Player, Player.LineupManager!.GetCurLineup()!, [stageConfig])
             {
                 WorldLevel = Player.Data.WorldLevel,
+                EventId = eventId,
             };
 
             var avatarList = new List<AvatarSceneInfo>();
@@ -305,6 +307,7 @@ namespace EggLink.DanhengServer.Game.Battle
                     break;
                 default:
                     teleportToAnchor = true;
+                    if (battle.CocoonWave > 0) teleportToAnchor = false;
                     updateStatus = false;
                     break;
             }

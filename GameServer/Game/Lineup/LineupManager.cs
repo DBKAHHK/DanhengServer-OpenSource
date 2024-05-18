@@ -323,6 +323,7 @@ namespace EggLink.DanhengServer.Game.Lineup
 
         public void GainMp(int count, bool sendPacket = true)
         {
+            count = Math.Min(Math.Max(0, count), 2);
             var curLineup = GetCurLineup()!;
             curLineup.Mp += count;
             curLineup.Mp = Math.Min(Math.Max(0, curLineup.Mp), 5);

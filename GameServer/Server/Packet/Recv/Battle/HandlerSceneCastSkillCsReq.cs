@@ -31,6 +31,10 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Battle
                 if (req.HitTargetEntityIdList.Count == 0)
                 {
                     // didnt hit any target
+                    if (info != null && req.SkillIndex > 0)
+                    {
+                        mazeSkill.OnCast(info);
+                    }
                     connection.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId));
                 }
                 else

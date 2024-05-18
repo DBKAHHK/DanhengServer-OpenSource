@@ -299,6 +299,13 @@ namespace EggLink.DanhengServer.Game.Player
             }
         }
 
+        public void OnHeartBeat()
+        {
+            OnStaminaRecover();
+
+            DatabaseHelper.ToSaveUidList.SafeAdd(Uid);
+        }
+
         #endregion
 
         #region Scene Actions
@@ -319,8 +326,6 @@ namespace EggLink.DanhengServer.Game.Player
                     }
                 }
             }
-
-            OnStaminaRecover();
         }
 
         public EntityProp? InteractProp(int propEntityId, int interactId)

@@ -135,6 +135,9 @@ namespace EggLink.DanhengServer.Program
         private static void PerformCleanup()
         {
             Listener.Connections.Values.ToList().ForEach(x => x.Stop());
+
+            DatabaseHelper.SaveThread?.Interrupt();
+            DatabaseHelper.SaveDatabase();
         }
     }
 }

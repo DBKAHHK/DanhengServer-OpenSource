@@ -53,6 +53,9 @@ namespace EggLink.DanhengServer.Game.Scene.Entity
                 }
                 instance.Buffs.Add(new MazeBuff(buff));
             }
+            Scene.Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, BuffList));
+
+            BuffList.Clear();
         }
 
         public int GetStageId()

@@ -318,6 +318,7 @@ namespace EggLink.DanhengServer.Game.Scene
         public List<SceneBuff> BuffList = [];
         public void AddBuff(SceneBuff buff)
         {
+            if (BuffList.FindIndex(x => x.BuffID == buff.BuffID) != -1) return;  // already have buff
             BuffList.Add(buff);
             Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, buff));
         }
@@ -332,6 +333,9 @@ namespace EggLink.DanhengServer.Game.Scene
                 }
                 instance.Buffs.Add(new MazeBuff(buff));
             }
+            Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, BuffList));
+
+            BuffList.Clear();
         }
 
         public SceneEntityInfo ToProto()

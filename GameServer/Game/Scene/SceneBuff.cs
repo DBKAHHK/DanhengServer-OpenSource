@@ -14,13 +14,13 @@ namespace EggLink.DanhengServer.Game.Scene
         public int BuffLevel { get; private set; } = buffLevel;
         public int OwnerAvatarId { get; private set; } = owner;
 
-        public int Duration { get; private set; } = duration * 1000;  // in milliseconds
+        public int Duration { get; set; } = duration * 1000;  // in milliseconds
         public long CreatedTime { get; private set; } = Extensions.GetUnixMs();
         public Dictionary<string, float> DynamicValues = [];
 
         public bool IsExpired()
         {
-            if (Duration == -1)
+            if (Duration < 0)
                 return false;  // Permanent buff
             return Extensions.GetUnixMs() - CreatedTime >= Duration;
         }

@@ -15,7 +15,7 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Player
         {
             var req = PlayerGetTokenCsReq.Parser.ParseFrom(data);
 
-            var account = DatabaseHelper.Instance?.GetInstance<AccountData>(long.Parse(req.AccountUid));
+            var account = DatabaseHelper.Instance?.GetInstance<AccountData>(int.Parse(req.AccountUid));
             if (account == null)
             {
                 connection.SendPacket(new PacketPlayerGetTokenScRsp());
@@ -31,7 +31,7 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Player
             }
 
             connection.State = SessionState.WAITING_FOR_LOGIN;
-            var pd = DatabaseHelper.Instance?.GetInstance<PlayerData>(long.Parse(req.AccountUid));
+            var pd = DatabaseHelper.Instance?.GetInstance<PlayerData>(int.Parse(req.AccountUid));
             if (pd == null)
                 connection.Player = new PlayerInstance(int.Parse(req.AccountUid));
             else

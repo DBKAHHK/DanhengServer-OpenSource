@@ -486,25 +486,6 @@ namespace EggLink.DanhengServer.Game.Mission
                     if (req.StageId.ToString().StartsWith(subMission.ParamInt1.ToString()))
                     {
                         FinishSubMission(mission);
-                    } else
-                    {
-                        // may be a boss stage
-                        foreach (var id in subMission.StageList)
-                        {
-                            if (req.StageId.ToString().StartsWith(id.ToString()))
-                            {
-                                var nextStageId = subMission.StageList.Find(x => x > id);
-                                if (nextStageId == 0)
-                                {
-                                    FinishSubMission(mission);
-                                } else
-                                {
-                                    Player.BattleManager!.StartStage(nextStageId);  // need to improve
-                                }
-
-                                break;
-                            }
-                        }
                     }
                 }
             }

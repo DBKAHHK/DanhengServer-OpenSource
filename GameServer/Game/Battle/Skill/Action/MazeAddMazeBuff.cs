@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Game.Battle.Skill.Action
 
         public void OnCast(AvatarSceneInfo avatar)
         {
-            avatar.BuffList.Add(new SceneBuff(BuffId, 1, avatar.AvatarInfo.AvatarId, duration));
+            avatar.AddBuff(new SceneBuff(BuffId, 1, avatar.AvatarInfo.AvatarId, duration));
         }
 
         public void OnHitTarget(AvatarSceneInfo avatar, List<EntityMonster> entities)
         {
             foreach (var entity in entities)
             {
-                entity.BuffList.Add(new SceneBuff(BuffId, 1, avatar.AvatarInfo.AvatarId, duration));
+                entity.AddBuff(new SceneBuff(BuffId, 1, avatar.AvatarInfo.AvatarId, duration));
             }
         }
     }

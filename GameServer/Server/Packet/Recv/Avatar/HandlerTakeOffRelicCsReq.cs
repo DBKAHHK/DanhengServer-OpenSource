@@ -10,7 +10,7 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Avatar
             var req = TakeOffRelicCsReq.Parser.ParseFrom(data);
             foreach (var param in req.RelicTypeList)
             {
-                connection.Player!.InventoryManager!.UnequipRelic((int)req.BaseAvatarId, (int)param);
+                connection.Player!.InventoryManager!.UnequipRelic((int)req.DressAvatarId, (int)param);
             }
             connection.SendPacket(CmdIds.TakeOffRelicScRsp);
         }

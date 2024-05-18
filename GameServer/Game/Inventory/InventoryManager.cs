@@ -8,6 +8,7 @@ using EggLink.DanhengServer.Server.Packet.Send.Avatar;
 using EggLink.DanhengServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Util;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 namespace EggLink.DanhengServer.Game.Inventory
@@ -142,20 +143,22 @@ namespace EggLink.DanhengServer.Game.Inventory
                     break;
             }
 
+            ItemData? clone = null;
             if (itemData != null)
             {
+                clone = itemData.Clone();
                 Player.SendPacket(new PacketPlayerSyncScNotify(itemData));
+                clone.Count = count;
                 if (notify)
                 {
-                    itemData.Count = count;  // only notify the increase count
-                    Player.SendPacket(new PacketScenePlaneEventScNotify(itemData));
+                    Player.SendPacket(new PacketScenePlaneEventScNotify(clone));
                 }
             }
 
             if (save)
                 DatabaseHelper.Instance?.UpdateInstance(Data);
 
-            return itemData;
+            return clone ?? itemData;
         }
 
         public ItemData PutItem(int itemId, int count, int rank = 0, int promotion = 0, int level = 0, int exp = 0, int totalExp = 0, int mainAffix = 0, List<ItemSubAffix>? subAffixes = null, int uniqueId = 0)
@@ -322,8 +325,88 @@ namespace EggLink.DanhengServer.Game.Inventory
             GameData.PlaneEventData.TryGetValue(eventId * 10 + Player.Data.WorldLevel, out var planeEvent);
             if (planeEvent == null) return;
             GameData.RewardDataData.TryGetValue(planeEvent.Reward, out var rewardData);
-            if (rewardData == null) return;
-            rewardData.GetItems().ForEach(x => AddItem(x.Item1, x.Item2));
+            rewardData?.GetItems().ForEach(x => AddItem(x.Item1, x.Item2));
+
+            foreach (var id in planeEvent.DropList)
+            {
+                GameData.RewardDataData.TryGetValue(id, out var reward);
+                reward?.GetItems().ForEach(x => AddItem(x.Item1, x.Item2));
+            }
+        }
+
+        public List<ItemData> HandleMappingInfo(int mappingId, int worldLevel)
+        {
+            // calculate drops
+            List<ItemData> items = [];
+            GameData.MappingInfoData.TryGetValue(mappingId * 10 + worldLevel, out var mapping);
+            if (mapping != null)
+            {
+                foreach (var item in mapping.DropItemList)
+                {
+                    var random = Random.Shared.Next(0, 101);
+
+                    if (random <= item.Chance)
+                    {
+                        var amount = item.ItemNum > 0 ? item.ItemNum : Random.Shared.Next(item.MinCount, item.MaxCount + 1);
+
+                        GameData.ItemConfigData.TryGetValue(item.ItemID, out var itemData);
+                        if (itemData == null) continue;
+
+                        items.Add(new ItemData()
+                        {
+                            ItemId = item.ItemID,
+                            Count = amount,
+                        });
+                    }
+                }
+
+                // randomize the order of the relics
+                var relics = mapping.DropRelicItemList.OrderBy(x => Random.Shared.Next()).ToList();
+
+                var relic5Count = Random.Shared.Next(worldLevel - 4, worldLevel - 2);
+                var relic4Count = worldLevel - 2;
+                foreach (var relic in relics)
+                {
+                    var random = Random.Shared.Next(0, 101);
+
+                    if (random <= relic.Chance)
+                    {
+                        var amount = relic.ItemNum > 0 ? relic.ItemNum : Random.Shared.Next(relic.MinCount, relic.MaxCount + 1);
+
+                        GameData.ItemConfigData.TryGetValue(relic.ItemID, out var itemData);
+                        if (itemData == null) continue;
+
+                        if (itemData.Rarity == ItemRarityEnum.SuperRare && relic5Count > 0)
+                        {
+                            relic5Count--;
+                        }
+                        else if (itemData.Rarity == ItemRarityEnum.VeryRare && relic4Count > 0)
+                        {
+                            relic4Count--;
+                        }
+                        else
+                        {
+                            continue;
+                        }
+
+                        items.Add(new ItemData()
+                        {
+                            ItemId = relic.ItemID,
+                            Count = 1,
+                        });
+                    }
+                }
+
+                foreach (var item in items)
+                {
+                    var i = Player.InventoryManager!.AddItem(item.ItemId, item.Count, false, false)!;
+                    i.Count = item.Count;  // return the all thing
+                }
+
+                DatabaseHelper.Instance!.UpdateInstance(Player.InventoryManager!.Data);
+            }
+
+            return items;
         }
 
         public ItemData? ComposeItem(int composeId, int count)
@@ -338,6 +421,63 @@ namespace EggLink.DanhengServer.Game.Inventory
             RemoveItem(2, composeConfig.CoinCost * count);
 
             return AddItem(composeConfig.ItemID, count, false);
+        }
+
+        public List<ItemData> SellItem(ItemCostData costData)
+        {
+            List<ItemData> items = [];
+            Dictionary<int, int> ItemMap = [];
+            foreach (var cost in costData.ItemList)
+            {
+                if (cost.EquipmentUniqueId != 0)  // equipment
+                {
+                    var itemData = Data.EquipmentItems.Find(x => x.UniqueId == cost.EquipmentUniqueId);
+                    if (itemData == null) continue;
+                    RemoveItem(itemData.ItemId, 1, (int)cost.EquipmentUniqueId);
+                    GameData.ItemConfigData.TryGetValue(itemData.ItemId, out var itemConfig);
+                    if (itemConfig == null) continue;
+                    foreach (var returnItem in itemConfig.ReturnItemIDList)  // return items
+                    {
+                        if (!ItemMap.ContainsKey(returnItem.ItemID))
+                        {
+                            ItemMap[returnItem.ItemID] = 0;
+                        }
+                        ItemMap[returnItem.ItemID] += returnItem.ItemNum;
+                    }
+                }
+                else if (cost.RelicUniqueId != 0)  // relic
+                {
+                    var itemData = Data.RelicItems.Find(x => x.UniqueId == cost.RelicUniqueId);
+                    if (itemData == null) continue;
+                    RemoveItem(itemData.ItemId, 1, (int)cost.RelicUniqueId);
+                    GameData.ItemConfigData.TryGetValue(itemData.ItemId, out var itemConfig);
+                    if (itemConfig == null) continue;
+                    foreach (var returnItem in itemConfig.ReturnItemIDList)  // return items
+                    {
+                        if (!ItemMap.ContainsKey(returnItem.ItemID))
+                        {
+                            ItemMap[returnItem.ItemID] = 0;
+                        }
+                        ItemMap[returnItem.ItemID] += returnItem.ItemNum;
+                    }
+                }
+                else
+                {
+                    RemoveItem((int)cost.PileItem.ItemId, (int)cost.PileItem.ItemNum);
+                }
+            }
+
+            foreach (var itemInfo in ItemMap)
+            {
+                var item = AddItem(itemInfo.Key, itemInfo.Value, false, false);
+
+                if (item != null)
+                {
+                    items.Add(item);
+                }
+            }
+
+            return items;
         }
 
         #region Equip
@@ -415,6 +555,19 @@ namespace EggLink.DanhengServer.Game.Inventory
             if (itemData == null) return;
             avatarData.Relic.Remove(slot);
             itemData.EquipAvatar = 0;
+            DatabaseHelper.Instance!.UpdateInstance(Data);
+            DatabaseHelper.Instance!.UpdateInstance(Player.AvatarManager.AvatarData!);
+            Player.SendPacket(new PacketPlayerSyncScNotify(avatarData, itemData));
+        }
+
+        public void UnequipEquipment(int baseAvatarId)
+        {
+            var avatarData = Player.AvatarManager!.GetAvatar(baseAvatarId);
+            if (avatarData == null) return;
+            var itemData = Data.EquipmentItems.Find(x => x.UniqueId == avatarData.EquipId);
+            if (itemData == null) return;
+            itemData.EquipAvatar = 0;
+            avatarData.EquipId = 0;
             DatabaseHelper.Instance!.UpdateInstance(Data);
             DatabaseHelper.Instance!.UpdateInstance(Player.AvatarManager.AvatarData!);
             Player.SendPacket(new PacketPlayerSyncScNotify(avatarData, itemData));

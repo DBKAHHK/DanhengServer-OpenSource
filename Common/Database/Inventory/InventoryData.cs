@@ -198,6 +198,26 @@ namespace EggLink.DanhengServer.Database.Inventory
             return relic;
         }
 
+        public ItemData Clone()
+        {
+            return new()
+            {
+                UniqueId = UniqueId,
+                ItemId = ItemId,
+                Count = Count,
+                Level = Level,
+                Exp = Exp,
+                TotalExp = TotalExp,
+                Promotion = Promotion,
+                Rank = Rank,
+                Locked = Locked,
+                Discarded = Discarded,
+                MainAffix = MainAffix,
+                SubAffixes = SubAffixes.Select(x => x.Clone()).ToList(),
+                EquipAvatar = EquipAvatar
+            };
+        }
+
         #endregion
     }
 
@@ -236,5 +256,15 @@ namespace EggLink.DanhengServer.Database.Inventory
             Cnt = (uint)Count,
             Step = (uint)Step
         };
+
+        public ItemSubAffix Clone()
+        {
+            return new()
+            {
+                Id = Id,
+                Count = Count,
+                Step = Step
+            };
+        }
     }
 }
