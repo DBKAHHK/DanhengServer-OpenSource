@@ -27,6 +27,8 @@ using EggLink.DanhengServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Util;
+using EggLink.DanhengServer.Enums.Avatar;
+using EggLink.DanhengServer.Server.Packet.Send.Avatar;
 
 namespace EggLink.DanhengServer.Game.Player
 {
@@ -193,6 +195,15 @@ namespace EggLink.DanhengServer.Game.Player
         #endregion
 
         #region Actions
+
+        public void ChangeHeroBasicType(HeroBasicTypeEnum type)
+        {
+            var id = (int)((int)type + Data.CurrentGender - 1);
+            if (Data.CurBasicType == id) return;
+            Data.CurBasicType = id;
+            AvatarManager!.GetHero()!.HeroId = id;
+            SendPacket(new PacketHeroBasicTypeChangedNotify(id));
+        }
 
         public void AddAvatar(int avatarId)
         {

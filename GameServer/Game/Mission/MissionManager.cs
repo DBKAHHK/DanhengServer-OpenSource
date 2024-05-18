@@ -319,16 +319,8 @@ namespace EggLink.DanhengServer.Game.Mission
             // Hotfix  for mission 101140201
             if (missionId == 101140201)
             {
-                // change basic type
-                if (Player.Data.CurBasicType <= 8002)  // prevent npe
-                {
-                    Player.Data.CurBasicType += 2;
-                    DatabaseHelper.Instance?.UpdateInstance(Player.Data);
-                    Player.AvatarManager!.GetHero()!.HeroId += 2;
-                    DatabaseHelper.Instance?.UpdateInstance(Player.AvatarManager!.AvatarData);
-                    Player.SendPacket(new PacketPlayerSyncScNotify(Player.AvatarManager!.GetHero()!));
-                    Player.SendPacket(new PacketHeroBasicTypeChangedNotify(Player.AvatarManager!.GetHero()!.HeroId));
-                }
+                Player.ChangeHeroBasicType(Enums.Avatar.HeroBasicTypeEnum.Knight);
+                Player.SendPacket(new PacketPlayerSyncScNotify(Player.AvatarManager!.GetHero()!));
             }
 
             if (missionId == 100040117 || missionId == 100040118)
