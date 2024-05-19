@@ -1,5 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database;
+using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Server.Packet.Send.Player;
 using System;
 using System.Collections.Generic;
@@ -42,7 +43,7 @@ namespace EggLink.DanhengServer.Command.Cmd
             {
                 if (player.AvatarManager!.GetAvatar(avatar.AvatarID) == null)
                 {
-                    player.InventoryManager!.AddItem(avatar.AvatarID, 1, false, false);
+                    player.InventoryManager!.AddItem(avatar.AvatarID, 1, false, sync:false);
                     player.AvatarManager!.GetAvatar(avatar.AvatarID)!.Level = Math.Max(Math.Min(level, 80), 0);
                     player.AvatarManager!.GetAvatar(avatar.AvatarID)!.Promotion = GameData.GetMinPromotionForLevel(Math.Max(Math.Min(level, 80), 0));
                     player.AvatarManager!.GetAvatar(avatar.AvatarID)!.Rank = Math.Max(Math.Min(rank, 6), 0);
@@ -89,15 +90,17 @@ namespace EggLink.DanhengServer.Command.Cmd
             }
 
             var lightconeList = GameData.EquipmentConfigData.Values;
-            var isLast = false;
+            var items = new List<ItemData>();
             foreach (var lightcone in lightconeList)
             {
-                if (lightconeList.Last().EquipmentID == lightcone.EquipmentID)
-                {
-                    isLast = true;
-                }
-                player.InventoryManager!.AddItem(lightcone.EquipmentID, 1, false, isLast, Math.Max(Math.Min(rank, 5), 0), Math.Max(Math.Min(level, 80), 0));
+                var item = player.InventoryManager!.AddItem(lightcone.EquipmentID, 1, false, Math.Max(Math.Min(rank, 5), 0), Math.Max(Math.Min(level, 80), 0), sync:false);
+
+                if (item != null)
+                    items.Add(item);
             }
+
+            player.SendPacket(new PacketPlayerSyncScNotify(items));
+
             arg.SendMsg($"Give all lightcones to {player.Uid}");
         }
 
@@ -126,15 +129,20 @@ namespace EggLink.DanhengServer.Command.Cmd
             }
 
             var materialList = GameData.ItemConfigData.Values;
+            var items = new List<ItemData>();
             foreach (var material in materialList)
             {
                 if (material.ItemMainType == Enums.Item.ItemMainTypeEnum.Material)
                 {
-                    player.InventoryManager!.AddItem(material.ID, amount, false, false);
+                    items.Add(new()
+                    {
+                        ItemId = material.ID,
+                        Count = amount
+                    });
                 }
             }
 
-            DatabaseHelper.Instance?.UpdateInstance(player.InventoryManager!.Data);
+            player.InventoryManager!.AddItems(items, false);
 
             arg.SendMsg($"Give all materials to {player.Uid}");
         }
@@ -172,12 +180,16 @@ namespace EggLink.DanhengServer.Command.Cmd
             }
 
             var relicList = GameData.RelicConfigData.Values;
+            var items = new List<ItemData>();
             foreach (var relic in relicList)
             {
-                player.InventoryManager!.AddItem(relic.ID, amount, true, true, 1, Math.Max(Math.Min(level, relic.MaxLevel), 1));
+                var item = player.InventoryManager!.AddItem(relic.ID, amount, true, 1, Math.Max(Math.Min(level, relic.MaxLevel), 1), sync: false);
+
+                if (item != null)
+                    items.Add(item);
             }
 
-            DatabaseHelper.Instance?.UpdateInstance(player.InventoryManager!.Data);
+            player.SendPacket(new PacketPlayerSyncScNotify(items));
 
             arg.SendMsg($"已给予所有遗器到 {player.Uid}");
         }
@@ -205,14 +217,12 @@ namespace EggLink.DanhengServer.Command.Cmd
                 {
                     if (material.ItemSubType == Enums.Item.ItemSubTypeEnum.HeadIcon || material.ItemSubType == Enums.Item.ItemSubTypeEnum.PhoneTheme || material.ItemSubType == Enums.Item.ItemSubTypeEnum.ChatBubble)
                     {
-                        player.InventoryManager!.AddItem(material.ID, 1, false, false);
+                        player.InventoryManager!.AddItem(material.ID, 1, false);
                     }
                 }
             }
 
-            DatabaseHelper.Instance?.UpdateInstance(player.InventoryManager!.Data);
-
-            arg.SendMsg($"Give all materials to {player.Uid}");
+            arg.SendMsg($"Give all unlocks to {player.Uid}");
         }
     }
 }

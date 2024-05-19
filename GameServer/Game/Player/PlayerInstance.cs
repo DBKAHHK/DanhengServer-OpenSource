@@ -205,9 +205,9 @@ namespace EggLink.DanhengServer.Game.Player
             SendPacket(new PacketHeroBasicTypeChangedNotify(id));
         }
 
-        public void AddAvatar(int avatarId)
+        public void AddAvatar(int avatarId, bool sync = true)
         {
-            AvatarManager?.AddAvatar(avatarId);
+            AvatarManager?.AddAvatar(avatarId, sync);
         }
 
         public void SpendStamina(int staminaCost)

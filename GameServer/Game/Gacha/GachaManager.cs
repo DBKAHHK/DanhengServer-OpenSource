@@ -228,7 +228,7 @@ namespace EggLink.DanhengServer.Game.Gacha
                 {
                     dirt += 20;
                 }
-                Player.InventoryManager?.AddItem(item, 1, false, false);
+                Player.InventoryManager?.AddItem(item, 1, false);
                 gachaItem.GachaItem_ = new()
                 {
                     ItemId = (uint)item,
@@ -240,7 +240,7 @@ namespace EggLink.DanhengServer.Game.Gacha
                 var tokenItem = new ItemList();
                 if (dirt > 0)
                 {
-                    Player.InventoryManager?.AddItem(251, dirt, false, false);
+                    Player.InventoryManager?.AddItem(251, dirt, false);
                     tokenItem.ItemList_.Add(new Item()
                     {
                         ItemId = 251,
@@ -250,7 +250,7 @@ namespace EggLink.DanhengServer.Game.Gacha
 
                 if (star > 0)
                 {
-                    Player.InventoryManager?.AddItem(252, star, false, false);
+                    Player.InventoryManager?.AddItem(252, star, false);
                     tokenItem.ItemList_.Add(new Item()
                     {
                         ItemId = 252,

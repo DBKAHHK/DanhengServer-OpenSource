@@ -31,7 +31,7 @@ namespace EggLink.DanhengServer.Game.Shop
             {
                 for (int i = 0; i < count; i++)
                 {
-                    var item = Player.InventoryManager!.AddItem(itemConfig.ID, 1, false, false);
+                    var item = Player.InventoryManager!.AddItem(itemConfig.ID, 1, false);
                     if (item != null)
                     {
                         items.Add(item);
@@ -40,14 +40,12 @@ namespace EggLink.DanhengServer.Game.Shop
             }
             else
             {
-                var item = Player.InventoryManager!.AddItem(itemConfig.ID, count, false, false);
+                var item = Player.InventoryManager!.AddItem(itemConfig.ID, count, false);
                 if (item != null)
                 {
                     items.Add(item);
                 }
             }
-
-            DatabaseHelper.Instance?.UpdateInstance(Player.InventoryManager!.Data);
 
             return items;
         }

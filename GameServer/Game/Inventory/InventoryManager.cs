@@ -37,8 +37,9 @@ namespace EggLink.DanhengServer.Game.Inventory
         {
             foreach (var item in items)
             {
-                AddItem(item.ItemId, items.Count, false, false);
+                AddItem(item.ItemId, items.Count, false, sync:false);
             }
+            Player.SendPacket(new PacketPlayerSyncScNotify(items));
             if (notify)
             {
                 Player.SendPacket(new PacketScenePlaneEventScNotify(items));
@@ -47,7 +48,7 @@ namespace EggLink.DanhengServer.Game.Inventory
             DatabaseHelper.Instance?.UpdateInstance(Data);
         }
 
-        public ItemData? AddItem(int itemId, int count, bool notify = true, bool save = true, int rank = 1, int level = 1)
+        public ItemData? AddItem(int itemId, int count, bool notify = true, int rank = 1, int level = 1, bool sync = true)
         {
             GameData.ItemConfigData.TryGetValue(itemId, out var itemConfig);
             if (itemConfig == null) return null;
@@ -134,8 +135,7 @@ namespace EggLink.DanhengServer.Game.Inventory
                     }
                     else
                     {
-                        Player.AddAvatar(itemId);
-                        Player.SendPacket(new PacketAddAvatarScNotify(itemId));
+                        Player.AddAvatar(itemId, sync);
                     }
                     break;
                 default:
@@ -147,16 +147,14 @@ namespace EggLink.DanhengServer.Game.Inventory
             if (itemData != null)
             {
                 clone = itemData.Clone();
-                Player.SendPacket(new PacketPlayerSyncScNotify(itemData));
+                if (sync)
+                    Player.SendPacket(new PacketPlayerSyncScNotify(itemData));
                 clone.Count = count;
                 if (notify)
                 {
                     Player.SendPacket(new PacketScenePlaneEventScNotify(clone));
                 }
             }
-
-            if (save)
-                DatabaseHelper.Instance?.UpdateInstance(Data);
 
             return clone ?? itemData;
         }
@@ -399,7 +397,7 @@ namespace EggLink.DanhengServer.Game.Inventory
 
                 foreach (var item in items)
                 {
-                    var i = Player.InventoryManager!.AddItem(item.ItemId, item.Count, false, false)!;
+                    var i = Player.InventoryManager!.AddItem(item.ItemId, item.Count, false)!;
                     i.Count = item.Count;  // return the all thing
                 }
 
@@ -469,7 +467,7 @@ namespace EggLink.DanhengServer.Game.Inventory
 
             foreach (var itemInfo in ItemMap)
             {
-                var item = AddItem(itemInfo.Key, itemInfo.Value, false, false);
+                var item = AddItem(itemInfo.Key, itemInfo.Value, false);
 
                 if (item != null)
                 {

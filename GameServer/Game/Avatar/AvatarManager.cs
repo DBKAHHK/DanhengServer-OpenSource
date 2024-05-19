@@ -22,7 +22,7 @@ namespace EggLink.DanhengServer.Game.Avatar
             }
         }
 
-        public void AddAvatar(int avatarId)
+        public void AddAvatar(int avatarId, bool sync = true)
         {
             GameData.AvatarConfigData.TryGetValue(avatarId, out AvatarConfigExcel? avatarExcel);
             if (avatarExcel == null)
@@ -49,7 +49,8 @@ namespace EggLink.DanhengServer.Game.Avatar
             AvatarData.Avatars.Add(avatar);
             DatabaseHelper.Instance?.UpdateInstance(AvatarData);
 
-            Player.SendPacket(new PacketPlayerSyncScNotify(avatar));
+            if (sync)
+                Player.SendPacket(new PacketPlayerSyncScNotify(avatar));
         }
 
         public AvatarInfo? GetAvatar(int baseAvatarId)

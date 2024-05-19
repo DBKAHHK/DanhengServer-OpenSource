@@ -11,7 +11,7 @@ namespace EggLink.DanhengServer.Database.Player
     [SugarTable("Player")]
     public class PlayerData : BaseDatabaseDataHelper
     {
-        public string? Name { get; set; } = "无名客";
+        public string? Name { get; set; } = "";
         public string? Signature { get; set; } = "";
         public int Birthday { get; set; } = 0;
         public int CurBasicType { get; set; } = 8001;

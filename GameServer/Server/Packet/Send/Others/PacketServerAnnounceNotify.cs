@@ -22,7 +22,10 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Others
                 CHJOJJLOBEI = ConfigManager.Config.ServerOption.ServerAnnounce.AnnounceContent,
             });
 
-            SetData(proto);
+            if (ConfigManager.Config.ServerOption.ServerAnnounce.EnableAnnounce)
+            {
+                SetData(proto);
+            }
         }
     }
 }
