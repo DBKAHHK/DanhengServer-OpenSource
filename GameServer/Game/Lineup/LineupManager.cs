@@ -296,6 +296,10 @@ namespace EggLink.DanhengServer.Game.Lineup
             if (req.ExtraLineupType != Proto.ExtraLineupType.LineupNone)
             {
                 LineupData.CurExtraLineup = (int)req.ExtraLineupType + 10;
+                if (!LineupData.Lineups.ContainsKey(LineupData.CurExtraLineup))
+                {
+                    SetExtraLineup(req.ExtraLineupType, []);
+                }
             }
 
             LineupInfo lineup;

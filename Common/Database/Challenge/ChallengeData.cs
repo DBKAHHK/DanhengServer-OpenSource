@@ -76,7 +76,7 @@ namespace EggLink.DanhengServer.Database.Challenge
         public int Stars { get; set; }
         public int ScoreStage1 { get; set; }
         public int ScoreStage2 { get; set; }
-        public List<int>? StoryBuffs { get; set; }
-        public List<int>? BossBuffs { get; set; }
+        public List<int> StoryBuffs { get; set; } = [];
+        public List<int> BossBuffs { get; set; } = [];
     }
 }

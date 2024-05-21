@@ -19,7 +19,7 @@
             if (GameData.ChallengeConfigData.ContainsKey(ID))
             {
                 var challengeExcel = GameData.ChallengeConfigData[ID];
-                challengeExcel.StoryExcel = this;
+                challengeExcel.SetStoryExcel(this);
             }
         }
     }

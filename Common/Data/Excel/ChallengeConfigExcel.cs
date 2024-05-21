@@ -43,6 +43,12 @@ namespace EggLink.DanhengServer.Data.Excel
             return StoryExcel != null;
         }
 
+        public void SetStoryExcel(ChallengeStoryExtraExcel storyExcel)
+        {
+            StoryExcel = storyExcel;
+            ChallengeCountDown = storyExcel.TurnLimit;
+        }
+
         public override void Loaded()
         {
             // Cache challenge monsters

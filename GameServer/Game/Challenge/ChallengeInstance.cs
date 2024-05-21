@@ -36,8 +36,8 @@ namespace EggLink.DanhengServer.Game.Challenge
         [JsonIgnore]
         ChallengeConfigExcel Excel { get; set; }
 
-        public List<int>? StoryBuffs { get; set; }
-        public List<int>? BossBuffs { get; set; }
+        public List<int> StoryBuffs { get; set; } = [];
+        public List<int> BossBuffs { get; set; } = [];
 
         public ChallengeInstance(PlayerInstance player, ChallengeConfigExcel excel)
         {
@@ -120,27 +120,6 @@ namespace EggLink.DanhengServer.Game.Challenge
 
         #region Management
 
-        public void AddStoryBuff(int storyBuff)
-        {
-            // Add story buffs
-            if (StoryBuffs == null)
-            {
-                StoryBuffs = new List<int>();
-            }
-
-            StoryBuffs.Add(storyBuff);
-        }
-
-        public void AddBossBuff(int bossBuff)
-        {
-            if (BossBuffs == null)
-            {
-                BossBuffs = new List<int>();
-            }
-
-            BossBuffs.Add(bossBuff);
-        }
-
         public void OnBattleStart(BattleInstance battle)
         {
             battle.RoundLimit = RoundsLeft;
@@ -200,7 +179,11 @@ namespace EggLink.DanhengServer.Game.Challenge
                 ExtraLineupType = (ExtraLineupType)CurrentExtraLineup
             };
 
-            // TODO: story buffs
+            if (StoryBuffs != null && StoryBuffs.Count >= (CurrentStage - 1))
+            {
+                proto.PlayerInfo = new ChallengeStoryInfo() { CurStoryBuff = new ChallengeStoryBuffInfo() { } };
+                proto.PlayerInfo.CurStoryBuff.BuffList.Add((uint)StoryBuffs[CurrentStage - 1]);
+            }
 
             return proto;
         }

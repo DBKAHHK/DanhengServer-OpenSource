@@ -101,8 +101,8 @@ namespace EggLink.DanhengServer.Game.Challenge
 
             if (Excel.IsStory() && storyBuffs != null)
             {
-                instance.AddStoryBuff((int)storyBuffs.AKEOMNPOJCE);
-                instance.AddStoryBuff((int)storyBuffs.GPPEGLNNGNJ);
+                instance.StoryBuffs.Add((int)storyBuffs.GPPEGLNNGNJ); // StoryBuffOne
+                instance.StoryBuffs.Add((int)storyBuffs.AKEOMNPOJCE); // StoryBuffTwo
             }
 
             // Early implementation for 2.3
