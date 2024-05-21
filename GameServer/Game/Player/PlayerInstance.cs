@@ -29,6 +29,7 @@ using EggLink.DanhengServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Util;
 using EggLink.DanhengServer.Enums.Avatar;
 using EggLink.DanhengServer.Server.Packet.Send.Avatar;
+using EggLink.DanhengServer.Game.Challenge;
 
 namespace EggLink.DanhengServer.Game.Player
 {
@@ -50,6 +51,7 @@ namespace EggLink.DanhengServer.Game.Player
         public RogueManager? RogueManager { get; private set; }
         public ChessRogueManager? ChessRogueManager { get; private set; }
         public ShopService? ShopService { get; private set; }
+        public ChallengeManager? ChallengeManager { get; private set; }
 
         #endregion
 
@@ -61,6 +63,7 @@ namespace EggLink.DanhengServer.Game.Player
         public TutorialData? TutorialData { get; private set; }
         public TutorialGuideData? TutorialGuideData { get; private set; }
         public SceneInstance? SceneInstance { get; private set; }
+        public ChallengeInstance? ChallengeInstance { get; set; }
         public ushort Uid { get; set; }
         public Connection? Connection { get; set; }
         public bool Initialized { get; set; } = false;
@@ -118,6 +121,7 @@ namespace EggLink.DanhengServer.Game.Player
             RogueManager = new(this);
             ShopService = new(this);
             ChessRogueManager = new(this);
+            ChallengeManager = new(this);
 
             PlayerUnlockData = InitializeDatabase<PlayerUnlockData>();
             SceneData = InitializeDatabase<SceneData>();

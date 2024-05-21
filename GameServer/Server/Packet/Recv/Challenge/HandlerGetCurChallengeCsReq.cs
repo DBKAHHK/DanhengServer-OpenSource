@@ -1,0 +1,23 @@
+﻿using EggLink.DanhengServer.Server.Packet.Send.Battle;
+
+namespace EggLink.DanhengServer.Server.Packet.Recv.Battle
+{
+    [Opcode(CmdIds.GetCurChallengeCsReq)]
+    public class HandlerGetCurChallengeCsReq : Handler
+    {
+        public override void OnHandle(Connection connection, byte[] header, byte[] data)
+        {
+            // Resurrect old instance
+            connection.Player!.ChallengeManager!.ResurrectInstance();
+
+            // Send packet first
+            connection.SendPacket(new PacketGetCurChallengeScRsp(connection.Player!));
+
+            // Update data
+            if (connection.Player!.ChallengeInstance != null)
+            {
+                connection.Player.ChallengeInstance.OnUpdate();
+            }
+        }
+    }
+}

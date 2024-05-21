@@ -30,6 +30,13 @@ namespace EggLink.DanhengServer.Game.Lineup
             return lineup;
         }
 
+        public LineupInfo? GetExtraLineup(Proto.ExtraLineupType type)
+        {
+            var index = (int)type + 10;
+            LineupData.Lineups.TryGetValue(index, out var lineup);
+            return lineup;
+        }
+
         public LineupInfo? GetCurLineup()
         {
             return GetLineup(LineupData.GetCurLineupIndex());
@@ -286,6 +293,11 @@ namespace EggLink.DanhengServer.Game.Lineup
 
         public void ReplaceLineup(Proto.ReplaceLineupCsReq req)
         {
+            if (req.ExtraLineupType != Proto.ExtraLineupType.LineupNone)
+            {
+                LineupData.CurExtraLineup = (int)req.ExtraLineupType + 10;
+            }
+
             LineupInfo lineup;
             if (LineupData.CurExtraLineup != -1)
             {

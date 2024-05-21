@@ -3,7 +3,6 @@ using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Inventory;
-using EggLink.DanhengServer.Enums.Item;
 using EggLink.DanhengServer.Game.Player;
 using EggLink.DanhengServer.Game.Scene;
 using EggLink.DanhengServer.Game.Scene.Entity;
@@ -32,6 +31,7 @@ namespace EggLink.DanhengServer.Game.Battle
         public List<AvatarSceneInfo> AvatarInfo { get; set; } = [];
         public List<MazeBuff> Buffs { get; set; } = [];
         public Dictionary<int, BattleEventInstance> BattleEvents { get; set; } = [];
+        public List<BattleTarget> BattleTargets { get; set; } = [];
 
         public BattleInstance(PlayerInstance player, Database.Lineup.LineupInfo lineup, List<EntityMonster> monsters) : this(player, lineup, new List<StageConfigExcel>())
         {
@@ -132,6 +132,23 @@ namespace EggLink.DanhengServer.Game.Battle
             foreach (var eventInstance in BattleEvents.Values)
             {
                 proto.BattleEvent.Add(eventInstance.ToProto());
+            }
+
+            if (BattleTargets != null)
+            {
+                for (int i = 1; i <= 5; i++)
+                {
+                    var battleTargetList = BattleTargets[i];
+                    var battleTargetEntry = new BattleTargetList { };
+
+                    // Maybe?
+                    if (BattleTargets.Count >= i)
+                    {
+                        battleTargetEntry.BGNPEBHGELB.Add(battleTargetList);
+                    }
+
+                    proto.BattleTargetInfo.Add((uint)i, battleTargetEntry);
+                }
             }
 
             proto.BuffList.AddRange(Buffs.Select(buff => buff.ToProto(this)));
