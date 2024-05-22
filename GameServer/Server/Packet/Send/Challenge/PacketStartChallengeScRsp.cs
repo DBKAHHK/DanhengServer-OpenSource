@@ -19,9 +19,9 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Challenge
         {
             StartChallengeScRsp proto = new StartChallengeScRsp() { };
 
-            if (player.ChallengeInstance != null)
+            if (player.ChallengeManager!.ChallengeInstance != null)
             {
-                proto.CurChallenge = player.ChallengeInstance!.ToProto();
+                proto.CurChallenge = player.ChallengeManager.ChallengeInstance.ToProto();
                 proto.Lineup = player.LineupManager!.GetExtraLineup(ExtraLineupType.LineupChallenge)!.ToProto();
             }
             else

@@ -161,6 +161,7 @@ namespace EggLink.DanhengServer.Game.Battle
 
                 // call battle start
                 Player.RogueManager!.GetRogueInstance()?.OnBattleStart(battleInstance);
+                Player.ChallengeManager!.ChallengeInstance?.OnBattleStart(battleInstance);
 
                 Player.BattleInstance = battleInstance;
                 Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, battleInstance));
@@ -206,6 +207,7 @@ namespace EggLink.DanhengServer.Game.Battle
 
             // call battle start
             Player.RogueManager!.GetRogueInstance()?.OnBattleStart(battleInstance);
+            Player.ChallengeManager!.ChallengeInstance?.OnBattleStart(battleInstance);
 
             Player.BattleInstance = battleInstance;
 

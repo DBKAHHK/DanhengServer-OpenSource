@@ -19,7 +19,7 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Challenge
                 player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupChallenge, []);
                 player.LineupManager.SetExtraLineup(ExtraLineupType.LineupChallenge2, []);
 
-                player.ChallengeInstance = null;
+                player.ChallengeManager!.ChallengeInstance = null;
                 player.ChallengeManager!.ClearInstance();
 
                 // Leave scene

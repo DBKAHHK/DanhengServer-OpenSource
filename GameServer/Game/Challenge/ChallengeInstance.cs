@@ -128,19 +128,21 @@ namespace EggLink.DanhengServer.Game.Challenge
             {
                 battle.Buffs.Add(new MazeBuff(Excel.MazeBuffID, -1, -1));
 
-                if (StoryBuffs.Contains(CurrentStage - 1))
+                if (StoryBuffs.Count >= CurrentStage)
                 {
-                    battle.Buffs.Add(new MazeBuff((CurrentStage - 1), -1, -1));
+                    int buffId = CurrentStage - 1;
+                    battle.Buffs.Add(new MazeBuff(buffId, -1, -1));
                 }
             }
 
             if (Excel.StoryExcel != null)
             {
-                battle.AddBattleTarget(1, 10001, GetTotalScore(), 0);
+                battle.AddBattleTarget(1, 10001, GetTotalScore());
 
                 foreach (var id in Excel.StoryExcel.BattleTargetID!)
                 {
-                    battle.AddBattleTarget(5, id, GetTotalScore(), 0);
+                    Console.WriteLine(id);
+                    battle.AddBattleTarget(5, id, GetTotalScore());
                 }
             }
         }
@@ -150,7 +152,7 @@ namespace EggLink.DanhengServer.Game.Challenge
             // End challenge if its done
             if (Status != (int)ChallengeStatus.ChallengeDoing)
             {
-                Player.ChallengeInstance = null;
+                Player.ChallengeManager!.ChallengeInstance = null;
             }
         }
 

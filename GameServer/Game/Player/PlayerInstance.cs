@@ -63,7 +63,6 @@ namespace EggLink.DanhengServer.Game.Player
         public TutorialData? TutorialData { get; private set; }
         public TutorialGuideData? TutorialGuideData { get; private set; }
         public SceneInstance? SceneInstance { get; private set; }
-        public ChallengeInstance? ChallengeInstance { get; set; }
         public ushort Uid { get; set; }
         public Connection? Connection { get; set; }
         public bool Initialized { get; set; } = false;

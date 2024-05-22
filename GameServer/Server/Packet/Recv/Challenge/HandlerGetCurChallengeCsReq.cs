@@ -14,9 +14,9 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Battle
             connection.SendPacket(new PacketGetCurChallengeScRsp(connection.Player!));
 
             // Update data
-            if (connection.Player!.ChallengeInstance != null)
+            if (connection.Player!.ChallengeManager.ChallengeInstance != null)
             {
-                connection.Player.ChallengeInstance.OnUpdate();
+                connection.Player.ChallengeManager.ChallengeInstance.OnUpdate();
             }
         }
     }

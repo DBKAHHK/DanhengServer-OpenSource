@@ -10,7 +10,12 @@ namespace EggLink.DanhengServer.Game.Challenge
 {
     public class ChallengeManager(PlayerInstance player) : BasePlayerManager(player)
     {
+        #region Properties
+
+        public ChallengeInstance? ChallengeInstance { get; set; }
         public ChallengeData ChallengeData { get; private set; } = DatabaseHelper.Instance!.GetInstanceOrCreateNew<ChallengeData>(player.Uid);
+
+        #endregion
 
         #region Management
 
@@ -73,7 +78,7 @@ namespace EggLink.DanhengServer.Game.Challenge
 
             // Set challenge data for player
             ChallengeInstance instance = new ChallengeInstance(Player, Excel);
-            Player.ChallengeInstance = instance;
+            this.ChallengeInstance = instance;
 
             // Set first lineup before we enter scenes
             Player.LineupManager!.SetCurLineup(instance.CurrentExtraLineup);
@@ -86,7 +91,7 @@ namespace EggLink.DanhengServer.Game.Challenge
             catch
             {
                 // Reset lineup/instance if entering scene failed
-                Player.ChallengeInstance = null;
+                this.ChallengeInstance = null;
 
                 // Send error packet
                 Player.SendPacket(new PacketStartChallengeScRsp(2801));
@@ -133,14 +138,11 @@ namespace EggLink.DanhengServer.Game.Challenge
             ChallengeData.Instance.ScoreStage2 = instance.ScoreStage2;
             ChallengeData.Instance.StoryBuffs = instance.StoryBuffs;
             ChallengeData.Instance.BossBuffs = instance.BossBuffs;
-
-            DatabaseHelper.Instance?.UpdateInstance(ChallengeData);
         }
 
         public void ClearInstance()
         {
             ChallengeData.Instance.ChallengeId = 0;
-            DatabaseHelper.Instance?.UpdateInstance(ChallengeData);
         }
 
         public void ResurrectInstance()
@@ -152,7 +154,7 @@ namespace EggLink.DanhengServer.Game.Challenge
                 {
                     ChallengeConfigExcel Excel = GameData.ChallengeConfigData[ChallengeId];
                     ChallengeInstance instance = new ChallengeInstance(Player, Excel, ChallengeData.Instance);
-                    Player.ChallengeInstance = instance;
+                    this.ChallengeInstance = instance;
                 }
             }
         }

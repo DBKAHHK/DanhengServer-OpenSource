@@ -67,7 +67,7 @@ namespace EggLink.DanhengServer.Game.Battle
             return list;
         }
 
-        public void AddBattleTarget(int key, int targetId, int progress, int totalProgress)
+        public void AddBattleTarget(int key, int targetId, int progress, int totalProgress = 0)
         {
             if (!BattleTargets.ContainsKey(key))
             {

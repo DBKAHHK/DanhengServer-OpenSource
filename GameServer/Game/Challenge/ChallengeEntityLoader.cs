@@ -17,8 +17,8 @@ namespace EggLink.DanhengServer.Game.Challenge
             if (Scene.IsLoaded) return;
 
             // Get challenge instance
-            if (Player.ChallengeInstance == null) return;
-            ChallengeInstance instance = Player.ChallengeInstance;
+            if (Player.ChallengeManager!.ChallengeInstance == null) return;
+            ChallengeInstance instance = Player.ChallengeManager.ChallengeInstance;
 
             // Setup first stage
             var excel = instance.Excel;
@@ -52,12 +52,10 @@ namespace EggLink.DanhengServer.Game.Challenge
             {
                 return null;
             }
-            Console.WriteLine(0);
 
             // Get challenge instance
-            if (Player.ChallengeInstance == null) return null;
-            ChallengeInstance instance = Player.ChallengeInstance;
-            Console.WriteLine(1);
+            if (Player.ChallengeManager!.ChallengeInstance == null) return null;
+            ChallengeInstance instance = Player.ChallengeManager.ChallengeInstance;
 
             // Get current stage monster infos
             Dictionary<int, ChallengeConfigExcel.ChallengeMonsterInfo> challengeMonsters;
@@ -73,17 +71,14 @@ namespace EggLink.DanhengServer.Game.Challenge
             {
                 return null;
             }
-            Console.WriteLine(2);
 
             // Get challenge monster info
             if (!challengeMonsters.ContainsKey(info.ID)) return null;
             var challengeMonsterInfo = challengeMonsters[info.ID];
-            Console.WriteLine(3);
 
             // Get excels from game data
             if (!GameData.NpcMonsterDataData.ContainsKey(challengeMonsterInfo.NpcMonsterId)) return null;
             NPCMonsterDataExcel npcMonsterExcel = GameData.NpcMonsterDataData[challengeMonsterInfo.NpcMonsterId];
-            Console.WriteLine(4);
 
             // Create monster from group monster info
             EntityMonster entity = new EntityMonster(scene, info.ToPositionProto(), info.ToRotationProto(), group.Id, info.ID, npcMonsterExcel, info);
