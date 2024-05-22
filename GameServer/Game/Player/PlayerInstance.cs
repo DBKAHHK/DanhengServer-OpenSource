@@ -30,6 +30,7 @@ using EggLink.DanhengServer.Util;
 using EggLink.DanhengServer.Enums.Avatar;
 using EggLink.DanhengServer.Server.Packet.Send.Avatar;
 using EggLink.DanhengServer.Game.Challenge;
+using EggLink.DanhengServer.Game.Drop;
 
 namespace EggLink.DanhengServer.Game.Player
 {
@@ -335,7 +336,9 @@ namespace EggLink.DanhengServer.Game.Player
                         case PropTypeEnum.PROP_TREASURE_CHEST:
                             if (oldState == PropStateEnum.ChestClosed && newState == PropStateEnum.ChestUsed)
                             {
-                                // TODO: Add treasure chest handling
+                                // TODO: Filter treasure chest
+                                var items = DropService.CalculateDropsFromProp();
+                                SceneInstance.Player.InventoryManager!.AddItems(items);
                             }
                             break;
                         case PropTypeEnum.PROP_DESTRUCT:
