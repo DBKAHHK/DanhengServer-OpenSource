@@ -23,5 +23,6 @@
         public const int STAMINA_RESERVE_RECOVERY_TIME = 1080;  // 18 minutes
 
         public const int CHALLENGE_ENTRANCE = 100000103;
+        public const int CHALLENGE_STORY_ENTRANCE = 102020107;
     }
 }

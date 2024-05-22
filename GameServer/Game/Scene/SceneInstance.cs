@@ -4,6 +4,7 @@ using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Game.Battle;
+using EggLink.DanhengServer.Game.Challenge;
 using EggLink.DanhengServer.Game.ChessRogue.Cell;
 using EggLink.DanhengServer.Game.Player;
 using EggLink.DanhengServer.Game.Rogue.Scene;
@@ -27,6 +28,7 @@ namespace EggLink.DanhengServer.Game.Scene
         public int PlaneId;
         public int EntryId;
 
+        public int LeaveEntityId;
         public int LastEntityId;
         public bool IsLoaded = false;
 
@@ -46,6 +48,7 @@ namespace EggLink.DanhengServer.Game.Scene
             PlaneId = excel.PlaneID;
             FloorId = floorId;
             EntryId = entryId;
+            LeaveEntityId = 0;
 
             SyncLineup(true, true);
 
@@ -63,6 +66,9 @@ namespace EggLink.DanhengServer.Game.Scene
                     {
                         EntityLoader = new RogueEntityLoader(this, Player);
                     }
+                    break;
+                case Enums.Scene.PlaneTypeEnum.Challenge:
+                    EntityLoader = new ChallengeEntityLoader(this, Player);
                     break;
                 default:
                     EntityLoader = new(this);

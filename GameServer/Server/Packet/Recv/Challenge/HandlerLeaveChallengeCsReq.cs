@@ -24,7 +24,10 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Challenge
 
                 // Leave scene
                 player.LineupManager.SetCurLineup(0);
-                player.EnterScene(GameConstants.CHALLENGE_ENTRANCE, 0, true);
+
+                int leaveEntryId = GameConstants.CHALLENGE_ENTRANCE;
+                if (player.SceneInstance.LeaveEntityId != 0) leaveEntryId = player.SceneInstance.LeaveEntityId;
+                player.EnterScene(leaveEntryId, 0, true);
             }
 
             connection.SendPacket(CmdIds.LeaveChallengeScRsp);

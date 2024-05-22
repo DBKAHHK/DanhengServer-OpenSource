@@ -140,7 +140,7 @@ namespace EggLink.DanhengServer.Game.Challenge
 
                 foreach (var id in Excel.StoryExcel.BattleTargetID!)
                 {
-                    battle.AddBattleTarget(1, id, GetTotalScore(), 0);
+                    battle.AddBattleTarget(5, id, GetTotalScore(), 0);
                 }
             }
         }

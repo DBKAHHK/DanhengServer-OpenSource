@@ -76,7 +76,6 @@ namespace EggLink.DanhengServer.Game.Challenge
             Player.ChallengeInstance = instance;
 
             // Set first lineup before we enter scenes
-            instance.SetCurrentExtraLineup(ExtraLineupType.LineupChallenge);
             Player.LineupManager!.SetCurLineup(instance.CurrentExtraLineup);
 
             // Enter scene
