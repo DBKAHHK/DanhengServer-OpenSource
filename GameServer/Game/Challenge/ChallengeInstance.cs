@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Game.Challenge
         [JsonIgnore]
         PlayerInstance Player { get; set; }
         [JsonIgnore]
-        ChallengeConfigExcel Excel { get; set; }
+        public ChallengeConfigExcel Excel { get; set; }
 
         public List<int> StoryBuffs { get; set; } = [];
         public List<int> BossBuffs { get; set; } = [];
@@ -136,20 +136,11 @@ namespace EggLink.DanhengServer.Game.Challenge
 
             if (Excel.StoryExcel != null)
             {
-                battle.BattleTargets.Add(new BattleTarget() {
-                    Id = 1,
-                    Progress = 10001,
-                    TotalProgress = (uint)GetTotalScore(),
-                });
+                battle.AddBattleTarget(1, 10001, GetTotalScore(), 0);
 
                 foreach (var id in Excel.StoryExcel.BattleTargetID!)
                 {
-                    battle.BattleTargets.Add(new BattleTarget()
-                    {
-                        Id = 5,
-                        Progress = (uint)id,
-                        TotalProgress = (uint)GetTotalScore(),
-                    });
+                    battle.AddBattleTarget(1, id, GetTotalScore(), 0);
                 }
             }
         }
@@ -179,7 +170,7 @@ namespace EggLink.DanhengServer.Game.Challenge
                 ExtraLineupType = (ExtraLineupType)CurrentExtraLineup
             };
 
-            if (StoryBuffs != null && StoryBuffs.Count >= (CurrentStage - 1))
+            if (StoryBuffs != null && StoryBuffs.Count >= CurrentStage)
             {
                 proto.PlayerInfo = new ChallengeStoryInfo() { CurStoryBuff = new ChallengeStoryBuffInfo() { } };
                 proto.PlayerInfo.CurStoryBuff.BuffList.Add((uint)StoryBuffs[CurrentStage - 1]);

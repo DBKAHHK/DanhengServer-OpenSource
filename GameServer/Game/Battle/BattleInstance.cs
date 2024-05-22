@@ -7,6 +7,7 @@ using EggLink.DanhengServer.Game.Player;
 using EggLink.DanhengServer.Game.Scene;
 using EggLink.DanhengServer.Game.Scene.Entity;
 using EggLink.DanhengServer.Proto;
+using Google.Protobuf;
 
 namespace EggLink.DanhengServer.Game.Battle
 {
@@ -31,7 +32,7 @@ namespace EggLink.DanhengServer.Game.Battle
         public List<AvatarSceneInfo> AvatarInfo { get; set; } = [];
         public List<MazeBuff> Buffs { get; set; } = [];
         public Dictionary<int, BattleEventInstance> BattleEvents { get; set; } = [];
-        public List<BattleTarget> BattleTargets { get; set; } = [];
+        public Dictionary<int, BattleTargetList> BattleTargets { get; set; } = [];
 
         public BattleInstance(PlayerInstance player, Database.Lineup.LineupInfo lineup, List<EntityMonster> monsters) : this(player, lineup, new List<StageConfigExcel>())
         {
@@ -64,6 +65,23 @@ namespace EggLink.DanhengServer.Game.Battle
             }
 
             return list;
+        }
+
+        public void AddBattleTarget(int key, int targetId, int progress, int totalProgress)
+        {
+            if (!BattleTargets.ContainsKey(key))
+            {
+                BattleTargets.Add(key, new BattleTargetList());
+            }
+
+            var battleTarget = new BattleTarget()
+            {
+                Id = (uint)targetId,
+                Progress = (uint)progress,
+                TotalProgress = (uint)totalProgress
+            };
+
+            BattleTargets[key].BGNPEBHGELB.Add(battleTarget);
         }
 
         public SceneBattleInfo ToProto()
@@ -138,13 +156,12 @@ namespace EggLink.DanhengServer.Game.Battle
             {
                 for (int i = 1; i <= 5; i++)
                 {
-                    var battleTargetList = BattleTargets[i];
-                    var battleTargetEntry = new BattleTargetList { };
+                    var battleTargetEntry = new BattleTargetList();
 
-                    // Maybe?
-                    if (BattleTargets.Count >= i)
+                    if (BattleTargets.ContainsKey(i))
                     {
-                        battleTargetEntry.BGNPEBHGELB.Add(battleTargetList);
+                        var battleTargetList = BattleTargets[i];
+                        battleTargetEntry.BGNPEBHGELB.AddRange(battleTargetList.BGNPEBHGELB);
                     }
 
                     proto.BattleTargetInfo.Add((uint)i, battleTargetEntry);
