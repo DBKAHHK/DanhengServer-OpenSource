@@ -293,7 +293,7 @@ namespace EggLink.DanhengServer.Game.Lineup
 
         public void ReplaceLineup(Proto.ReplaceLineupCsReq req)
         {
-            if (req.ExtraLineupType != Proto.ExtraLineupType.LineupNone)
+            if (req.ExtraLineupType == Proto.ExtraLineupType.LineupChallenge || req.ExtraLineupType == Proto.ExtraLineupType.LineupChallenge2)
             {
                 LineupData.CurExtraLineup = (int)req.ExtraLineupType + 10;
                 if (!LineupData.Lineups.ContainsKey(LineupData.CurExtraLineup))
