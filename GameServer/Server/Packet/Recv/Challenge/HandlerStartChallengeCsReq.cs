@@ -9,13 +9,40 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Battle
         {
             var req = StartChallengeCsReq.Parser.ParseFrom(data);
 
-            HDLDGEPFMGL? buffInfo = null;
-            if (req.PlayerInfo != null && req.PlayerInfo.GGIAHBJHKGE != null)
+            StartChallengeStoryBuffInfo? storyBuffInfo = null;
+            if (req.PlayerInfo != null && req.PlayerInfo.StoryBuffInfo != null)
             {
-                buffInfo = req.PlayerInfo.GGIAHBJHKGE;
+                storyBuffInfo = req.PlayerInfo.StoryBuffInfo;
             };
 
-            connection.Player!.ChallengeManager!.StartChallenge((int)req.ChallengeId, buffInfo);
+            // Early implementation for 2.3
+            /* StartChallengeBossBuffInfo? bossBuffInfo = null;
+            if (req.PlayerInfo != null && req.PlayerInfo.BossBuffInfo != null)
+            {
+                bossBuffInfo = req.PlayerInfo.BossBuffInfo;
+            };
+            
+            if (req.TeamOne.Count > 0)
+            {
+                List<int> team = new();
+                for (int id in req.TeamOne)
+                {
+                    team.Add(id);
+                };
+                connection.Player!.LineupManager!.ReplaceLineup(0, team, ExtraLineupType.LineupChallenge);
+            }
+
+            if (req.TeamTwo.Count > 0)
+            {
+                List<int> team = new();
+                for (int id in req.TeamTwo)
+                {
+                    team.Add(id);
+                };
+                connection.Player!.LineupManager!.ReplaceLineup(0, team, ExtraLineupType.LineupChallenge2);
+            } */
+
+            connection.Player!.ChallengeManager!.StartChallenge((int)req.ChallengeId, storyBuffInfo/*, bossBuffInfo*/);
         }
     }
 }

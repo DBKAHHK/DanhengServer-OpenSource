@@ -19,12 +19,12 @@ namespace EggLink.DanhengServer.Game.Challenge
 
         #region Management
 
-        public void StartChallenge(int challengeId, HDLDGEPFMGL? /*StartChallengeStoryBuffInfo*/ storyBuffs)
+        public void StartChallenge(int challengeId, StartChallengeStoryBuffInfo? storyBuffs)
         {
             // Get challenge excel
             if (!GameData.ChallengeConfigData.ContainsKey(challengeId))
             {
-                Player.SendPacket(new PacketStartChallengeScRsp(2801 /*CHALLENGE_NOT_EXIST*/));
+                Player.SendPacket(new PacketStartChallengeScRsp((uint)Retcode.RetChallengeNotExist));
                 return;
             }
             ChallengeConfigExcel Excel = GameData.ChallengeConfigData[challengeId];
@@ -38,7 +38,7 @@ namespace EggLink.DanhengServer.Game.Challenge
                 // Make sure this lineup has avatars set
                 if (Lineup.AvatarData!.Avatars.Count == 0)
                 {
-                    Player.SendPacket(new PacketStartChallengeScRsp(2805));
+                    Player.SendPacket(new PacketStartChallengeScRsp((uint)Retcode.RetChallengeLineupEmpty));
                     return;
                 }
 
@@ -61,7 +61,7 @@ namespace EggLink.DanhengServer.Game.Challenge
                 // Make sure this lineup has avatars set
                 if (Lineup.AvatarData!.Avatars.Count == 0)
                 {
-                    Player.SendPacket(new PacketStartChallengeScRsp(2805));
+                    Player.SendPacket(new PacketStartChallengeScRsp((uint)Retcode.RetChallengeLineupEmpty));
                     return;
                 }
 
@@ -78,7 +78,7 @@ namespace EggLink.DanhengServer.Game.Challenge
 
             // Set challenge data for player
             ChallengeInstance instance = new ChallengeInstance(Player, Excel);
-            this.ChallengeInstance = instance;
+            ChallengeInstance = instance;
 
             // Set first lineup before we enter scenes
             Player.LineupManager!.SetCurLineup(instance.CurrentExtraLineup);
@@ -94,7 +94,7 @@ namespace EggLink.DanhengServer.Game.Challenge
                 this.ChallengeInstance = null;
 
                 // Send error packet
-                Player.SendPacket(new PacketStartChallengeScRsp(2801));
+                Player.SendPacket(new PacketStartChallengeScRsp((uint)Retcode.RetChallengeNotExist));
                 return;
             }
 
@@ -105,15 +105,15 @@ namespace EggLink.DanhengServer.Game.Challenge
 
             if (Excel.IsStory() && storyBuffs != null)
             {
-                instance.StoryBuffs.Add((int)storyBuffs.GPPEGLNNGNJ); // StoryBuffOne
-                instance.StoryBuffs.Add((int)storyBuffs.AKEOMNPOJCE); // StoryBuffTwo
+                instance.StoryBuffs.Add((int)storyBuffs.StoryBuffOne);
+                instance.StoryBuffs.Add((int)storyBuffs.StoryBuffTwo);
             }
 
             // Early implementation for 2.3
             /* if (BossBuffs != null)
             {
-                instance.AddBossBuff((int)BossBuffs.AKEOMNPOJCE);
-                instance.AddBossBuff((int)BossBuffs.GPPEGLNNGNJ);
+                instance.AddBossBuff((int)BossBuffs.BossBuffOne);
+                instance.AddBossBuff((int)BossBuffs.BossBuffTwo);
             } */
 
             // Send packet

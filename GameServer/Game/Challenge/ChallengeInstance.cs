@@ -1,12 +1,10 @@
 ﻿using EggLink.DanhengServer.Data.Excel;
-using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Challenge;
 using EggLink.DanhengServer.Game.Battle;
 using EggLink.DanhengServer.Game.Player;
 using EggLink.DanhengServer.Game.Scene;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
-using Spectre.Console;
 using System.Text.Json.Serialization;
 
 namespace EggLink.DanhengServer.Game.Challenge
@@ -169,14 +167,20 @@ namespace EggLink.DanhengServer.Game.Challenge
                 ScoreId = (uint)ScoreStage1,
                 ScoreTwo = (uint)ScoreStage2,
                 RoundCount = (uint)GetRoundsElapsed(),
-                ExtraLineupType = (ExtraLineupType)CurrentExtraLineup
-            };
+                ExtraLineupType = (ExtraLineupType)CurrentExtraLineup,
+                PlayerInfo = new ChallengeStoryInfo() { CurStoryBuff = new ChallengeStoryBuffInfo() }
+        };
 
             if (StoryBuffs != null && StoryBuffs.Count >= CurrentStage)
             {
-                proto.PlayerInfo = new ChallengeStoryInfo() { CurStoryBuff = new ChallengeStoryBuffInfo() { } };
                 proto.PlayerInfo.CurStoryBuff.BuffList.Add((uint)StoryBuffs[CurrentStage - 1]);
             }
+
+            // Early implementation for 2.3
+            /* if (StoryBuffs != null && StoryBuffs.Count >= CurrentStage)
+            {
+                proto.PlayerInfo.CurBossBuff.BuffList.Add((uint)BossBuffs[CurrentStage - 1]);
+            } */
 
             return proto;
         }

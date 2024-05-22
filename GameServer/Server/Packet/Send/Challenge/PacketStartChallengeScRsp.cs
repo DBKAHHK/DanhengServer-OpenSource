@@ -5,11 +5,11 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Challenge
 {
     public class PacketStartChallengeScRsp : BasePacket
     {
-        public PacketStartChallengeScRsp(int Retcode) : base(CmdIds.StartChallengeScRsp)
+        public PacketStartChallengeScRsp(uint Retcode) : base(CmdIds.StartChallengeScRsp)
         {
             StartChallengeScRsp proto = new StartChallengeScRsp
             {
-                Retcode = (uint)Retcode,
+                Retcode = Retcode,
             };
 
             SetData(proto);
@@ -22,7 +22,11 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Challenge
             if (player.ChallengeManager!.ChallengeInstance != null)
             {
                 proto.CurChallenge = player.ChallengeManager.ChallengeInstance.ToProto();
-                proto.Lineup = player.LineupManager!.GetExtraLineup(ExtraLineupType.LineupChallenge)!.ToProto();
+                proto.Lineup = player.LineupManager!.GetExtraLineup(ExtraLineupType.LineupChallenge)!.ToProto(); // Deprecated in 2.3
+                
+                // Early implementation for 2.3
+                /* proto.LineupList.Add(player.LineupManager!.GetExtraLineup(ExtraLineupType.LineupChallenge)!.ToProto());
+                proto.Lineup.Add(player.LineupManager!.GetExtraLineup(ExtraLineupType.LineupChallenge2)!.ToProto()); */
             }
             else
             {

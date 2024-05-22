@@ -322,7 +322,7 @@ namespace EggLink.DanhengServer.Game.Friend
             {
                 PlayerInfo = new PlayerSimpleInfo()
                 {
-                    Uid = (uint)serverProfile.Uid, // TODO: UID is always 0 now
+                    Uid = (uint)serverProfile.Uid,
                     HeadIcon = (uint)serverProfile.HeadIcon,
                     IsBanned = false,
                     Level = (uint)serverProfile.Level,
@@ -332,7 +332,7 @@ namespace EggLink.DanhengServer.Game.Friend
                     Platform = PlatformType.Pc,
                     Signature = serverProfile.Signature,
                 },
-                IsMarked = false, // IsMarked
+                IsMarked = false,
                 RemarkName = ""
             });
 
@@ -342,7 +342,7 @@ namespace EggLink.DanhengServer.Game.Friend
                 proto.FriendList.Add(new FriendSimpleInfo()
                 {
                     PlayerInfo = player.ToSimpleProto(status),
-                    IsMarked = false, // IsMarked
+                    IsMarked = false,
                     RemarkName = ""
                 });
             }

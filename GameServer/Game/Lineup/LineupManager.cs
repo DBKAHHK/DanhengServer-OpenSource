@@ -3,8 +3,10 @@ using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Lineup;
 using EggLink.DanhengServer.Game.Player;
 using EggLink.DanhengServer.Game.Scene;
+using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.Util;
+using LineupInfo = EggLink.DanhengServer.Database.Lineup.LineupInfo;
 
 namespace EggLink.DanhengServer.Game.Lineup
 {
@@ -288,6 +290,44 @@ namespace EggLink.DanhengServer.Game.Lineup
             LineupData.Lineups[LineupData.GetCurLineupIndex()] = lineup;
             DatabaseHelper.Instance?.UpdateInstance(LineupData);
             Player.SceneInstance?.SyncLineup();
+            Player.SendPacket(new PacketSyncLineupNotify(lineup));
+        }
+
+        public void ReplaceLineup(int lineupIndex, List<int> lineupSlotList, ExtraLineupType extraLineupType = ExtraLineupType.LineupNone)
+        {
+            if (extraLineupType != ExtraLineupType.LineupNone)
+            {
+                LineupData.CurExtraLineup = (int)extraLineupType + 10;
+                if (!LineupData.Lineups.ContainsKey(LineupData.CurExtraLineup))
+                {
+                    SetExtraLineup(extraLineupType, []);
+                }
+            }
+
+            LineupInfo lineup;
+            if (LineupData.CurExtraLineup != -1)
+            {
+                lineup = LineupData.Lineups[LineupData.CurExtraLineup];  // Extra lineup
+            }
+            else if (lineupIndex < 0 || !LineupData.Lineups.ContainsKey(lineupIndex))
+            {
+                return;
+            }
+            else
+            {
+                lineup = LineupData.Lineups[lineupIndex];
+            }
+            lineup.BaseAvatars = [];
+            var index = lineup.LineupType == 0 ? lineupIndex : LineupData.GetCurLineupIndex();
+            foreach (var avatar in lineupSlotList)
+            {
+                AddAvatar(index, avatar, false);
+            }
+            DatabaseHelper.Instance?.UpdateInstance(LineupData);
+            if (index == LineupData.GetCurLineupIndex())
+            {
+                Player.SceneInstance?.SyncLineup();
+            }
             Player.SendPacket(new PacketSyncLineupNotify(lineup));
         }
 

@@ -130,6 +130,7 @@ namespace EggLink.DanhengServer.Game.Player
             Data.LastActiveTime = Extensions.GetUnixSec();
             DatabaseHelper.Instance?.UpdateInstance(Data);
 
+            ChallengeManager.ResurrectInstance();
             LoadScene(Data.PlaneId, Data.FloorId, Data.EntryId, Data.Pos!, Data.Rot!, false);
             if (SceneInstance == null)
             {
