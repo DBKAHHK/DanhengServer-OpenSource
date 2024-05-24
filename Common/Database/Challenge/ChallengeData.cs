@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.Util;
+﻿using EggLink.DanhengServer.Proto;
+using EggLink.DanhengServer.Util;
 using SqlSugar;
 
 namespace EggLink.DanhengServer.Database.Challenge
@@ -10,6 +11,8 @@ namespace EggLink.DanhengServer.Database.Challenge
         public Dictionary<int, ChallengeHistoryData> History { get; set; } = new();
         [SugarColumn(IsJson = true)]
         public ChallengeInstanceData Instance { get; set; } = new();
+        [SugarColumn(IsJson = true)]
+        public Dictionary<int, ChallengeGroupReward> TakenRewards { get; set; } = new();
 
         public void delete(int ChallengeId)
         {
@@ -40,11 +43,6 @@ namespace EggLink.DanhengServer.Database.Challenge
                 total += (Stars & (1 << i)) != 0 ? 1 : 0;
             }
             return total;
-        }
-
-        public void setScore(int score)
-        {
-            Score = score;
         }
 
         public Proto.Challenge ToProto()
@@ -78,5 +76,33 @@ namespace EggLink.DanhengServer.Database.Challenge
         public int ScoreStage2 { get; set; }
         public List<int> StoryBuffs { get; set; } = [];
         public List<int> BossBuffs { get; set; } = [];
+    }
+
+    public class ChallengeGroupReward(int uid, int groupId)
+    {
+        public int OwnerUid = uid;
+        public int GroupId { get; set; } = groupId;
+        public long TakenStars { get; set; }
+
+        public bool HasTakenReward(int starCount)
+        {
+            return (TakenStars & (1L << starCount)) != 0;
+        }
+
+        public void SetTakenReward(int starCount)
+        {
+            TakenStars |= 1L << starCount;
+        }
+
+        public ChallengeGroup ToProto()
+        {
+            var proto = new ChallengeGroup()
+            {
+                GroupId = (uint)GroupId,
+                TakenStarsCountReward = (ulong)TakenStars
+            };
+
+            return proto;
+        }
     }
 }

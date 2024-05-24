@@ -26,6 +26,8 @@ namespace EggLink.DanhengServer.Data
 
         public static Dictionary<int, ChallengeConfigExcel> ChallengeConfigData { get; private set; } = [];
         public static Dictionary<int, ChallengeTargetExcel> ChallengeTargetData { get; private set; } = [];
+        public static Dictionary<int, ChallengeGroupExcel> ChallengeGroupData { get; private set; } = [];
+        public static Dictionary<int, List<ChallengeRewardExcel>> ChallengeRewardData { get; private set; } = [];
 
         #endregion
 

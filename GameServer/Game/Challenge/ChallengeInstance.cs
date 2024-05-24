@@ -10,6 +10,7 @@ using EggLink.DanhengServer.Server.Packet.Send.Challenge;
 using EggLink.DanhengServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.Util;
 using System.Text.Json.Serialization;
+using System.Text.RegularExpressions;
 
 namespace EggLink.DanhengServer.Game.Challenge
 {
@@ -229,7 +230,7 @@ namespace EggLink.DanhengServer.Game.Challenge
                 Stars = CalculateStars();
 
                 // Save history
-                // TODO: Add history
+                Player.ChallengeManager!.AddHistory(ChallengeId, Stars, GetTotalScore());
 
                 // Send challenge result data
                 Player.SendPacket(new PacketChallengeSettleNotify(this)); // Deprecated in 2.3
@@ -249,7 +250,7 @@ namespace EggLink.DanhengServer.Game.Challenge
                 CurrentStage++;
 
                 // Load scene group for stage 2
-                Player.SceneInstance!.LoadGroup(Excel.MazeGroupID2);
+                Player.SceneInstance!.EntityLoader!.LoadGroup(Excel.MazeGroupID2);
 
                 // Change player line up
                 SetCurrentExtraLineup(ExtraLineupType.LineupChallenge2);

@@ -32,6 +32,11 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Battle
                 }
             }
 
+            foreach (var reward in player.ChallengeManager.ChallengeData.TakenRewards.Values)
+            {
+                proto.ChallengeGroupList.Add(reward.ToProto());
+            }
+
             SetData(proto);
         }
     }

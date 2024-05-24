@@ -6,6 +6,7 @@ using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Server.Packet.Send.Challenge;
 using EggLink.DanhengServer.Database.Lineup;
+using EggLink.DanhengServer.Database.Inventory;
 
 namespace EggLink.DanhengServer.Game.Challenge
 {
@@ -122,6 +123,110 @@ namespace EggLink.DanhengServer.Game.Challenge
 
             // Save instance
             SaveInstance(instance);
+        }
+
+        public void AddHistory(int challengeId, int stars, int score)
+        {
+            if (stars <= 0) return;
+
+            if (!ChallengeData.History.ContainsKey(challengeId))
+            {
+                ChallengeData.History[challengeId] = new ChallengeHistoryData(Player.Uid, challengeId);
+            }
+            var info = ChallengeData.History[challengeId];
+
+            // Set
+            info.SetStars(stars);
+            info.Score = score;
+        }
+
+        public List<TakenChallengeRewardInfo>? TakeRewards(int groupId)
+        {
+            // Get excels
+            if (!GameData.ChallengeGroupData.ContainsKey(groupId)) return null;
+            var challengeGroup = GameData.ChallengeGroupData[groupId];
+
+            if (!GameData.ChallengeRewardData.ContainsKey(challengeGroup.RewardLineGroupID)) return null;
+            var challengeRewardLine = GameData.ChallengeRewardData[challengeGroup.RewardLineGroupID];
+
+            // Get total stars
+            int totalStars = 0;
+            foreach (ChallengeHistoryData ch in ChallengeData.History.Values)
+            {
+                // Legacy compatibility
+                if (ch.GroupId == 0)
+                {
+                    if (!GameData.ChallengeConfigData.ContainsKey(ch.ChallengeId)) continue;
+                    var challengeExcel = GameData.ChallengeConfigData[ch.ChallengeId];
+
+                    ch.GroupId = challengeExcel.GroupID;
+                }
+
+                // Add total stars
+                if (ch.GroupId == groupId)
+                {
+                    totalStars += ch.GetTotalStars();
+                }
+            }
+
+            // Rewards
+            List<TakenChallengeRewardInfo> rewardInfos = new List<TakenChallengeRewardInfo>();
+            List<ItemData> data = new List<ItemData>();
+
+            // Get challenge rewards
+            foreach (var challengeReward in challengeRewardLine)
+            {
+                // Check if we have enough stars to take this reward
+                if (totalStars < challengeReward.StarCount)
+                {
+                    continue;
+                }
+
+                // Get reward info
+                if (!ChallengeData.TakenRewards.ContainsKey(groupId))
+                {
+                    ChallengeData.TakenRewards[groupId] = new ChallengeGroupReward(Player.Uid, groupId);
+                }
+                var reward = ChallengeData.TakenRewards[groupId];
+
+                // Check if reward has been taken
+                if (reward.HasTakenReward(challengeReward.StarCount))
+                {
+                    continue;
+                }
+
+                // Set reward as taken
+                reward.SetTakenReward(challengeReward.StarCount);
+
+                // Get reward excel
+                if (!GameData.RewardDataData.ContainsKey(challengeReward.RewardID)) continue;
+                var rewardExcel = GameData.RewardDataData[challengeReward.RewardID];
+
+                // Add rewards
+                var proto = new TakenChallengeRewardInfo()
+                {
+                    StarCount = (uint)challengeReward.StarCount,
+                    Reward = new ItemList()
+                };
+
+                foreach (var item in rewardExcel.GetItems())
+                {
+                    var itemData = new ItemData()
+                    {
+                        ItemId = item.Item1,
+                        Count = item.Item2
+                    };
+
+                    proto.Reward.ItemList_.Add(itemData.ToProto());
+                    data.Add(itemData);
+                }
+
+                rewardInfos.Add(proto);
+            }
+
+            // Add items to inventory
+            Player.InventoryManager!.AddItems(data);
+            return rewardInfos;
         }
 
         public void SaveInstance(ChallengeInstance instance)
