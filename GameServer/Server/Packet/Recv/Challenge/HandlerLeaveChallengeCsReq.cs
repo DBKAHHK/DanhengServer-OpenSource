@@ -13,7 +13,8 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Challenge
             // TODO: check for plane type
             if (player.SceneInstance != null)
             {
-                // TODO: force quit battle
+                // As of 1.5.0, the server now has to handle the player leaving battle too
+                player.ForceQuitBattle();
 
                 // Reset lineup
                 player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupChallenge, []);
@@ -24,6 +25,11 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Challenge
 
                 // Leave scene
                 player.LineupManager.SetCurLineup(0);
+                // Heal avatars (temproary solution)
+                foreach (var avatar in player.LineupManager.GetCurLineup()!.AvatarData!.Avatars)
+                {
+                    avatar.CurrentHp = 10000;
+                }
 
                 int leaveEntryId = GameConstants.CHALLENGE_ENTRANCE;
                 if (player.SceneInstance.LeaveEntityId != 0) leaveEntryId = player.SceneInstance.LeaveEntityId;

@@ -581,6 +581,15 @@ namespace EggLink.DanhengServer.Game.Player
             }
         }
 
+        public void ForceQuitBattle()
+        {
+            if (BattleInstance != null)
+            {
+                BattleInstance = null;
+                Connection!.SendPacket(CmdIds.QuitBattleScNotify);
+            }
+        }
+
         public void LeaveRaid()
         {
             if (CurRaidId == 0) return;

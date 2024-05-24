@@ -361,6 +361,7 @@ namespace EggLink.DanhengServer.Game.Battle
 
             Player.MissionManager!.OnBattleFinish(req);
             Player.RogueManager!.GetRogueInstance()?.OnBattleEnd(battle, req);
+            Player.ChallengeManager!.ChallengeInstance?.OnBattleEnd(battle, req);
 
             Player.SendPacket(new PacketPVEBattleResultScRsp(req, Player, battle));
         }

@@ -13,6 +13,7 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Battle
             if (player.ChallengeManager!.ChallengeInstance != null)
             {
                 proto.CurChallenge = player.ChallengeManager.ChallengeInstance.ToProto();
+                player.LineupManager!.SetCurLineup(player.ChallengeManager.ChallengeInstance.CurrentExtraLineup + 10);
             }
             else
             {

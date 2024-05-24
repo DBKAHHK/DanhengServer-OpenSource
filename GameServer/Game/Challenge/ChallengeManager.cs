@@ -5,6 +5,7 @@ using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Server.Packet.Send.Challenge;
+using EggLink.DanhengServer.Database.Lineup;
 
 namespace EggLink.DanhengServer.Game.Challenge
 {
@@ -81,7 +82,7 @@ namespace EggLink.DanhengServer.Game.Challenge
             ChallengeInstance = instance;
 
             // Set first lineup before we enter scenes
-            Player.LineupManager!.SetCurLineup(instance.CurrentExtraLineup);
+            Player.LineupManager!.SetCurLineup(instance.CurrentExtraLineup + 10);
 
             // Enter scene
             try
@@ -91,7 +92,7 @@ namespace EggLink.DanhengServer.Game.Challenge
             catch
             {
                 // Reset lineup/instance if entering scene failed
-                this.ChallengeInstance = null;
+                ChallengeInstance = null;
 
                 // Send error packet
                 Player.SendPacket(new PacketStartChallengeScRsp((uint)Retcode.RetChallengeNotExist));
@@ -99,8 +100,8 @@ namespace EggLink.DanhengServer.Game.Challenge
             }
 
             // Save start positions
-            instance.StartPos = Player.LastPos!;
-            instance.StartRot = Player.LastRot!;
+            instance.StartPos = Player.Data.Pos!;
+            instance.StartRot = Player.Data.Rot!;
             instance.SavedMp = Player.LineupManager.GetCurLineup()!.Mp;
 
             if (Excel.IsStory() && storyBuffs != null)
@@ -126,6 +127,7 @@ namespace EggLink.DanhengServer.Game.Challenge
         public void SaveInstance(ChallengeInstance instance)
         {
             ChallengeData.Instance.StartPos = instance.StartPos;
+            ChallengeData.Instance.StartRot = instance.StartRot;
             ChallengeData.Instance.ChallengeId = instance.ChallengeId;
             ChallengeData.Instance.CurrentStage = instance.CurrentStage;
             ChallengeData.Instance.CurrentExtraLineup = instance.CurrentExtraLineup;
@@ -154,7 +156,7 @@ namespace EggLink.DanhengServer.Game.Challenge
                 {
                     ChallengeConfigExcel Excel = GameData.ChallengeConfigData[ChallengeId];
                     ChallengeInstance instance = new ChallengeInstance(Player, Excel, ChallengeData.Instance);
-                    this.ChallengeInstance = instance;
+                    ChallengeInstance = instance;
                 }
             }
         }

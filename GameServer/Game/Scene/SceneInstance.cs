@@ -207,6 +207,18 @@ namespace EggLink.DanhengServer.Game.Scene
             }
         }
 
+        public void LoadGroup(int groupId)
+        {
+            if (!FloorInfo!.Groups.ContainsKey(groupId)) return;
+
+            FloorInfo!.Groups.TryGetValue(groupId, out var groupData);
+            if (groupData != null)
+            {
+
+                EntityLoader!.LoadGroup(groupData);
+            };
+        }
+
         public List<T> GetEntitiesInGroup<T>(int groupID)
         {
             List<T> entities = [];

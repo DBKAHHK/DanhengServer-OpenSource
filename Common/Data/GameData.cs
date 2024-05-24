@@ -25,6 +25,7 @@ namespace EggLink.DanhengServer.Data
         #region Challenge
 
         public static Dictionary<int, ChallengeConfigExcel> ChallengeConfigData { get; private set; } = [];
+        public static Dictionary<int, ChallengeTargetExcel> ChallengeTargetData { get; private set; } = [];
 
         #endregion
 

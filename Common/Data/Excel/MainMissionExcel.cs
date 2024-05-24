@@ -90,8 +90,11 @@ namespace EggLink.DanhengServer.Data.Excel
         {
             switch (Type)
             {
+                case MissionTakeTypeEnum.Auto:
+                    return true;
+                case MissionTakeTypeEnum.WorldLevel:
+                case MissionTakeTypeEnum.PlayerLevel:
                 case MissionTakeTypeEnum.MultiSequence:
-
                     var value = data.GetMainMissionStatus(Value);
                     return value == MissionPhaseEnum.Finish;
                 default:

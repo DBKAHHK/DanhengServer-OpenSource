@@ -32,7 +32,7 @@ namespace EggLink.DanhengServer.Game.Lineup
             return lineup;
         }
 
-        public LineupInfo? GetExtraLineup(Proto.ExtraLineupType type)
+        public LineupInfo? GetExtraLineup(ExtraLineupType type)
         {
             var index = (int)type + 10;
             LineupData.Lineups.TryGetValue(index, out var lineup);
@@ -144,9 +144,9 @@ namespace EggLink.DanhengServer.Game.Lineup
             return true;
         }
 
-        public void SetExtraLineup(Proto.ExtraLineupType type, List<int> baseAvatarIds)
+        public void SetExtraLineup(ExtraLineupType type, List<int> baseAvatarIds)
         {
-            if (type == Proto.ExtraLineupType.LineupNone)
+            if (type == ExtraLineupType.LineupNone)
             {
                 // reset lineup
                 LineupData.CurExtraLineup = -1;
@@ -331,9 +331,9 @@ namespace EggLink.DanhengServer.Game.Lineup
             Player.SendPacket(new PacketSyncLineupNotify(lineup));
         }
 
-        public void ReplaceLineup(Proto.ReplaceLineupCsReq req)
+        public void ReplaceLineup(ReplaceLineupCsReq req)
         {
-            if (req.ExtraLineupType != Proto.ExtraLineupType.LineupNone)
+            if (req.ExtraLineupType != ExtraLineupType.LineupNone)
             {
                 LineupData.CurExtraLineup = (int)req.ExtraLineupType + 10;
                 if (!LineupData.Lineups.ContainsKey(LineupData.CurExtraLineup))

@@ -1,9 +1,13 @@
-﻿using EggLink.DanhengServer.Data.Excel;
+﻿using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Challenge;
 using EggLink.DanhengServer.Game.Battle;
 using EggLink.DanhengServer.Game.Player;
 using EggLink.DanhengServer.Game.Scene;
+using EggLink.DanhengServer.Game.Scene.Entity;
 using EggLink.DanhengServer.Proto;
+using EggLink.DanhengServer.Server.Packet.Send.Challenge;
+using EggLink.DanhengServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.Util;
 using System.Text.Json.Serialization;
 
@@ -11,8 +15,8 @@ namespace EggLink.DanhengServer.Game.Challenge
 {
     public class ChallengeInstance
     {
-        public Position StartPos { get; set; } = new();
-        public Position StartRot { get; set; } = new();
+        public Position StartPos { get; set; }
+        public Position StartRot { get; set; }
         public int ChallengeId { get; set; }
         public int CurrentStage { get; set; }
         public int CurrentExtraLineup { get; set; }
@@ -56,6 +60,7 @@ namespace EggLink.DanhengServer.Game.Challenge
             Excel = excel;
 
             StartPos = data.StartPos;
+            StartRot = data.StartRot;
             ChallengeId = data.ChallengeId;
             CurrentStage = data.CurrentStage;
             CurrentExtraLineup = data.CurrentExtraLineup;
@@ -124,12 +129,12 @@ namespace EggLink.DanhengServer.Game.Challenge
             
             if (StoryBuffs != null)
             {
-                battle.Buffs.Add(new MazeBuff(Excel.MazeBuffID, -1, -1));
+                battle.Buffs.Add(new MazeBuff(Excel.MazeBuffID, 1, -1));
 
                 if (StoryBuffs.Count >= CurrentStage)
                 {
-                    int buffId = CurrentStage - 1;
-                    battle.Buffs.Add(new MazeBuff(buffId, -1, -1));
+                    int buffId = StoryBuffs[CurrentStage - 1];
+                    battle.Buffs.Add(new MazeBuff(buffId, 1, -1));
                 }
             }
 
@@ -139,9 +144,121 @@ namespace EggLink.DanhengServer.Game.Challenge
 
                 foreach (var id in Excel.StoryExcel.BattleTargetID!)
                 {
-                    Console.WriteLine(id);
                     battle.AddBattleTarget(5, id, GetTotalScore());
                 }
+            }
+        }
+
+        public virtual void OnBattleEnd(BattleInstance battle, PVEBattleResultCsReq req)
+        {
+            if (IsStory())
+            {
+                // Calculate score for current stage
+                int stageScore = (int)req.Stt.ChallengeScore - GetTotalScore();
+
+                // Set score
+                if (CurrentStage == 1)
+                {
+                    ScoreStage1 = stageScore;
+                } else
+                {
+                    ScoreStage2 = stageScore;
+                }
+            }
+
+            switch (req.EndStatus)
+            {
+                case BattleEndStatus.BattleEndWin:
+                    // Check if any avatar in the lineup has died
+                    foreach (var avatar in battle.Lineup.AvatarData!.Avatars)
+                    {
+                        if (avatar.CurrentHp <= 0)
+                        {
+                            HasAvatarDied = true;
+                        }
+                    }
+
+                    // Get monster count in stage
+                    long monsters = Player.SceneInstance!.Entities.Values.OfType<EntityMonster>().Count();
+
+                    if (monsters == 0)
+                    {
+                        AdvanceStage();
+                    }
+
+                    // Calculate rounds left
+                    if (IsStory())
+                    {
+                        RoundsLeft = (int)Math.Min(Math.Max(RoundsLeft - req.Stt.RoundCnt, 1), RoundsLeft);
+                    }
+
+                    // Set saved technique points (This will be restored if the player resets the challenge)
+                    SavedMp = Player.LineupManager!.GetCurLineup()!.Mp;
+                    break;
+                case BattleEndStatus.BattleEndQuit:
+                    // Reset technique points and move back to start position
+                    var lineup = Player.LineupManager!.GetCurLineup()!;
+                    lineup.Mp = SavedMp;
+                    Player.MoveTo(StartPos, StartRot);
+                    Player.SendPacket(new PacketSyncLineupNotify(lineup));
+                    break;
+                default:
+                    // Determine challenge result
+                    if ((IsStory()/* || IsBoss()*/) && req.Stt.EndReason == BattleEndReason.TurnLimit)
+                    {
+                        AdvanceStage();
+                    }
+                    else
+                    {
+                        // Fail challenge
+                        Status = (int)ChallengeStatus.ChallengeFailed;
+
+                        // Send challenge result data
+                        Player.SendPacket(new PacketChallengeSettleNotify(this));
+                    }
+                    break;
+            }
+        }
+
+        private void AdvanceStage()
+        {
+            if (CurrentStage >= Excel.StageNum)
+            {
+                // Last stage
+                Status = (int)ChallengeStatus.ChallengeFinish;
+                Stars = CalculateStars();
+
+                // Save history
+                // TODO: Add history
+
+                // Send challenge result data
+                Player.SendPacket(new PacketChallengeSettleNotify(this)); // Deprecated in 2.3
+                // Early implementation for 2.3
+                /* if (IsBoss())
+                {
+                    Player.SendPacket(new PacketChallengeBossPhaseSettleNotify(this));
+                }
+                else
+                {
+                    Player.SendPacket(new PacketChallengeSettleNotify(this));
+                } */
+            }
+            else
+            {
+                // Increment and reset stage
+                CurrentStage++;
+
+                // Load scene group for stage 2
+                Player.SceneInstance!.LoadGroup(Excel.MazeGroupID2);
+
+                // Change player line up
+                SetCurrentExtraLineup(ExtraLineupType.LineupChallenge2);
+                Player.LineupManager!.SetCurLineup(CurrentExtraLineup + 10);
+                Player.SendPacket(new PacketChallengeLineupNotify((ExtraLineupType)CurrentExtraLineup));
+                SavedMp = Player.LineupManager.GetCurLineup()!.Mp;
+
+                // Move player
+                Player.MoveTo(StartPos, StartRot);
             }
         }
 
@@ -152,6 +269,45 @@ namespace EggLink.DanhengServer.Game.Challenge
             {
                 Player.ChallengeManager!.ChallengeInstance = null;
             }
+        }
+
+        public int CalculateStars()
+        {
+            List<int> targets = Excel.ChallengeTargetID!;
+            int stars = 0;
+
+            for (int i = 0; i < targets.Count; i++)
+            {
+                if (!GameData.ChallengeTargetData.ContainsKey(targets[i])) continue;
+
+                var target = GameData.ChallengeTargetData[targets[i]];
+
+                switch (target.ChallengeTargetType)
+                {
+                    case ChallengeTargetExcel.ChallengeType.ROUNDS_LEFT:
+                        if (RoundsLeft >= target.ChallengeTargetParam1)
+                        {
+                            stars += (1 << i);
+                        }
+                        break;
+                    case ChallengeTargetExcel.ChallengeType.DEAD_AVATAR:
+                        if (!HasAvatarDied)
+                        {
+                            stars += (1 << i);
+                        }
+                        break;
+                    case ChallengeTargetExcel.ChallengeType.TOTAL_SCORE:
+                        if (GetTotalScore() >= target.ChallengeTargetParam1)
+                        {
+                            stars += (1 << i);
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            return Math.Min(stars, 7);
         }
 
         #endregion
@@ -169,7 +325,7 @@ namespace EggLink.DanhengServer.Game.Challenge
                 RoundCount = (uint)GetRoundsElapsed(),
                 ExtraLineupType = (ExtraLineupType)CurrentExtraLineup,
                 PlayerInfo = new ChallengeStoryInfo() { CurStoryBuff = new ChallengeStoryBuffInfo() }
-        };
+            };
 
             if (StoryBuffs != null && StoryBuffs.Count >= CurrentStage)
             {
