@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Battle
 
                 if (info != null)  // cast by player
                 {
-                    mazeSkill = MazeSkillManager.GetSkill(info.AvatarInfo.AvatarId, (int)req.SkillIndex);
+                    mazeSkill = MazeSkillManager.GetSkill(info.AvatarInfo.GetAvatarId(), (int)req.SkillIndex);
                 }
 
                 if (req.HitTargetEntityIdList.Count == 0)

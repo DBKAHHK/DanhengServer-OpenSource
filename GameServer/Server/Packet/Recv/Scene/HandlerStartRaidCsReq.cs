@@ -1,5 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Proto;
+using EggLink.DanhengServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.Server.Packet.Send.Scene;
 using System;
 using System.Collections.Generic;
@@ -36,8 +37,43 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Scene
                     entranceId = 2013301;
                 } else
                 {
-                    entranceId = raidConfig.RaidID;
+                    if (GameData.RaidConfigData.ContainsKey(raidConfig.RaidID))
+                    {
+                        entranceId = raidConfig.RaidID;
+                    }
+                    else
+                    {
+                        entranceId = raidConfig.RaidID * 100 + 1;
+                        GameData.MapEntranceData.TryGetValue(entranceId, out var entrance);
+                        if (entrance != null)
+                        {
+                            // set
+                            var firstMission = raidConfig.MainMissionIDList[0];
+                            var subMissionId = GameData.MainMissionData[firstMission].MissionInfo!.StartSubMissionList[0];
+                            var subMission = GameData.SubMissionData[subMissionId];
+                            if (entrance.FloorID != subMission.SubMissionInfo!.LevelFloorID)
+                            {
+                                entranceId = raidConfig.RaidID * 100 + 2;
+                            }
+                            else
+                            {
+                                entranceId = raidConfig.RaidID * 100 + 1;
+                            }
+                        }
+                        else
+                        {
+                            entranceId = raidConfig.RaidID * 100 + 1;
+                        }
+                    }
                 }
+
+                if (raidConfig.TeamType == Enums.Scene.RaidTeamTypeEnum.TrialOnly)
+                {
+                    // set lineup
+                    player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupHeliobus, raidConfig.TrialAvatarList);
+                    player.SendPacket(new PacketSyncLineupNotify(player.LineupManager!.GetCurLineup()!));
+                }
+
                 player.EnterScene(entranceId, 0, true);
                 connection.SendPacket(new PacketRaidInfoNotify((uint)raidConfig.RaidID));
             }

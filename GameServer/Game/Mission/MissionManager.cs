@@ -24,7 +24,7 @@ namespace EggLink.DanhengServer.Game.Mission
         public Dictionary<FinishActionTypeEnum, MissionFinishActionHandler> ActionHandlers = [];
         public Dictionary<MissionFinishTypeEnum, MissionFinishTypeHandler> FinishTypeHandlers = [];
 
-        public readonly List<int> SkipSubMissionList = [101030104]; // bug
+        public readonly List<int> SkipSubMissionList = [101030104, 101050116]; // bug
 
         public MissionManager(PlayerInstance player) : base(player)
         {
@@ -207,17 +207,15 @@ namespace EggLink.DanhengServer.Game.Mission
             HandleMissionReward(missionId);
             HandleFinishType(MissionFinishTypeEnum.FinishMission);
 
-            DatabaseHelper.Instance?.UpdateInstance(Data);
-
-            GameData.RaidConfigData.TryGetValue(Player.CurRaidId, out var raidConfig);
+            GameData.RaidConfigData.TryGetValue(Player.CurRaidId * 100 + 0, out var raidConfig);
             if (raidConfig != null)
             {
-                bool leave = false;
+                bool leave = true;
                 foreach (var id in raidConfig.MainMissionIDList)
                 {
-                    if (GetMainMissionStatus(id) == MissionPhaseEnum.Finish)
+                    if (GetMainMissionStatus(id) != MissionPhaseEnum.Finish)
                     {
-                        leave = true;
+                        leave = false;
                     }
                 }
                 if (leave)
@@ -320,7 +318,6 @@ namespace EggLink.DanhengServer.Game.Mission
             if (missionId == 101140201)
             {
                 Player.ChangeHeroBasicType(Enums.Avatar.HeroBasicTypeEnum.Knight);
-                Player.SendPacket(new PacketPlayerSyncScNotify(Player.AvatarManager!.GetHero()!));
             }
 
             if (missionId == 100040117 || missionId == 100040118)

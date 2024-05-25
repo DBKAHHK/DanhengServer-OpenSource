@@ -78,23 +78,6 @@ namespace EggLink.DanhengServer.Database.Avatar
             SkillTree = [];
             if (AvatarId == 8001)
             {
-                //bool isMan = HeroId % 2 != 0;
-                //SkillTreeExtra.Add(isMan ? 8001: 8002, []);
-                //SkillTreeExtra.Add(isMan ? 8003 : 8004, []);
-
-                //var warriorExcel = GameData.AvatarConfigData[8001];
-                //var defenseExcel = GameData.AvatarConfigData[8003];
-
-                //warriorExcel.DefaultSkillTree.ForEach(skill =>
-                //{
-                //    SkillTreeExtra[isMan ? 8001 : 8002].Add(skill.PointID, skill.Level);
-                //});
-
-                //defenseExcel.DefaultSkillTree.ForEach(skill =>
-                //{
-                //    SkillTreeExtra[isMan ? 8003 : 8004].Add(skill.PointID, skill.Level);
-                //});
-                // create them in GetSkillTree
             }
             else
             {
@@ -102,6 +85,30 @@ namespace EggLink.DanhengServer.Database.Avatar
                 {
                     SkillTree.Add(skill.PointID, skill.Level);
                 });
+            }
+        }
+
+        public void ValidateHero()
+        {
+            if (HeroId == 0)
+            {
+                return;
+            }
+
+            var isWoman = HeroId % 2 == 0;
+
+            var shouldRemove = new List<int>();
+            foreach (var skill in SkillTreeExtra.Keys)
+            {
+                if (skill % 2 == 0 != isWoman)  // remove
+                {
+                    shouldRemove.Add(skill);
+                }
+            }
+
+            foreach (var skill in shouldRemove)
+            {
+                SkillTreeExtra.Remove(skill);
             }
         }
 
@@ -215,16 +222,13 @@ namespace EggLink.DanhengServer.Database.Avatar
                 proto.EquipmentUniqueId = (uint)EquipId;
             }
 
-            if (HeroId == 0)
+            foreach (var skill in GetSkillTree())
             {
-                foreach (var skill in SkillTree)
+                proto.SkilltreeList.Add(new AvatarSkillTree()
                 {
-                    proto.SkilltreeList.Add(new AvatarSkillTree()
-                    {
-                        PointId = (uint)skill.Key,
-                        Level = (uint)skill.Value
-                    });
-                }
+                    PointId = (uint)skill.Key,
+                    Level = (uint)skill.Value
+                });
             }
 
             for (int i = 0; i < Promotion; i++)
@@ -260,7 +264,7 @@ namespace EggLink.DanhengServer.Database.Avatar
         {
             return new()
             {
-                Id = (uint)GetSpecialAvatarId(),
+                Id = (uint)GetUniqueAvatarId(),
                 Slot = (uint)slot,
                 AvatarType = avatarType,
                 Hp = info.IsExtraLineup() ? (uint)ExtraLineupHp : (uint)CurrentHp,
@@ -281,7 +285,7 @@ namespace EggLink.DanhengServer.Database.Avatar
                 Level = (uint)Level,
                 Promotion = (uint)Promotion,
                 Rank = (uint)Rank,
-                Index = (uint)lineup.GetSlot(GetAvatarId()),
+                Index = (uint)lineup.GetSlot(GetBaseAvatarId()),
                 Hp = (uint)GetCurHp(lineup.LineupType != 0),
                 SpBar = new()
                 {

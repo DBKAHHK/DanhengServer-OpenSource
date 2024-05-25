@@ -170,12 +170,18 @@ namespace EggLink.DanhengServer.Game.Lineup
 
             foreach (var avatarId in baseAvatarIds)
             {
-                lineup.BaseAvatars!.Add(new() { BaseAvatarId = avatarId });
+                GameData.SpecialAvatarData.TryGetValue(avatarId * 10 + Player.Data.WorldLevel, out var specialAvatar);
+                if (specialAvatar != null)
+                {
+                    lineup.BaseAvatars!.Add(new() { BaseAvatarId = specialAvatar.AvatarID, SpecialAvatarId = specialAvatar.GetId() });
+                } else
+                {
+                    lineup.BaseAvatars!.Add(new() { BaseAvatarId = avatarId });
+                }
             }
 
             LineupData.Lineups.Add(index, lineup);
             LineupData.CurExtraLineup = index;
-            DatabaseHelper.Instance?.UpdateInstance(LineupData);
         }
 
         public void AddAvatar(int lineupIndex, int avatarId, bool sendPacket = true)

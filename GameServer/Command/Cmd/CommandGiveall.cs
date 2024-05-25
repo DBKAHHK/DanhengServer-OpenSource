@@ -183,7 +183,7 @@ namespace EggLink.DanhengServer.Command.Cmd
             var items = new List<ItemData>();
             foreach (var relic in relicList)
             {
-                var item = player.InventoryManager!.AddItem(relic.ID, amount, true, 1, Math.Max(Math.Min(level, relic.MaxLevel), 1), sync: false);
+                var item = player.InventoryManager!.AddItem(relic.ID, amount, false, 1, Math.Max(Math.Min(level, relic.MaxLevel), 1), sync: false);
 
                 if (item != null)
                     items.Add(item);
