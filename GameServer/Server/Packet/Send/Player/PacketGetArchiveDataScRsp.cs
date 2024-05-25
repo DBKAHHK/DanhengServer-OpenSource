@@ -25,10 +25,7 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Player
                 });
             });
 
-            GameData.AvatarConfigData.Values.ToList().ForEach(avatar =>
-            {
-                info.ArchiveAvatarIdList.Add((uint)avatar.GetId());
-            });
+            info.ArchiveAvatarIdList.Add(23027);
 
             GameData.EquipmentConfigData.Values.ToList().ForEach(equipment =>
             {

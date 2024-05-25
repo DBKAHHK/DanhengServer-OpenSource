@@ -172,7 +172,11 @@ namespace EggLink.DanhengServer.Game.Battle
 
         public void StartStage(int eventId)
         {
-            if (Player.BattleInstance != null) return;
+            if (Player.BattleInstance != null)
+            {
+                Player.SendPacket(new PacketSceneEnterStageScRsp(Player.BattleInstance));
+                return;
+            }
 
             GameData.StageConfigData.TryGetValue(eventId, out var stageConfig);
             if (stageConfig == null)

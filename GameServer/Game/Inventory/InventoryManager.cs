@@ -35,11 +35,16 @@ namespace EggLink.DanhengServer.Game.Inventory
 
         public void AddItems(List<ItemData> items, bool notify = true)
         {
+            var syncItems = new List<ItemData>();
             foreach (var item in items)
             {
-                AddItem(item.ItemId, items.Count, false, sync:false);
+                var i = AddItem(item.ItemId, items.Count, false, sync:false, returnRaw:true);
+                if (i != null)
+                {
+                    syncItems.Add(i);
+                }
             }
-            Player.SendPacket(new PacketPlayerSyncScNotify(items));
+            Player.SendPacket(new PacketPlayerSyncScNotify(syncItems));
             if (notify)
             {
                 Player.SendPacket(new PacketScenePlaneEventScNotify(items));
@@ -48,7 +53,7 @@ namespace EggLink.DanhengServer.Game.Inventory
             DatabaseHelper.Instance?.UpdateInstance(Data);
         }
 
-        public ItemData? AddItem(int itemId, int count, bool notify = true, int rank = 1, int level = 1, bool sync = true)
+        public ItemData? AddItem(int itemId, int count, bool notify = true, int rank = 1, int level = 1, bool sync = true, bool returnRaw = false)
         {
             GameData.ItemConfigData.TryGetValue(itemId, out var itemConfig);
             if (itemConfig == null) return null;
@@ -136,6 +141,7 @@ namespace EggLink.DanhengServer.Game.Inventory
                     else
                     {
                         Player.AddAvatar(itemId, sync);
+                        AddItem(itemId + 200000, 1);
                     }
                     break;
                 default:
@@ -156,7 +162,7 @@ namespace EggLink.DanhengServer.Game.Inventory
                 }
             }
 
-            return clone ?? itemData;
+            return returnRaw ? itemData : clone ?? itemData;
         }
 
         public ItemData PutItem(int itemId, int count, int rank = 0, int promotion = 0, int level = 0, int exp = 0, int totalExp = 0, int mainAffix = 0, List<ItemSubAffix>? subAffixes = null, int uniqueId = 0)
@@ -493,7 +499,7 @@ namespace EggLink.DanhengServer.Game.Inventory
                 {
                     // switch
                     equipAvatar.EquipId = oldItem.UniqueId;
-                    oldItem.EquipAvatar = equipAvatar.GetBaseAvatarId();
+                    oldItem.EquipAvatar = equipAvatar.GetAvatarId();
                     Player.SendPacket(new PacketPlayerSyncScNotify(equipAvatar, oldItem));
                 }
             } else
@@ -501,13 +507,11 @@ namespace EggLink.DanhengServer.Game.Inventory
                 if (oldItem != null)
                 {
                     oldItem.EquipAvatar = 0;
+                    Player.SendPacket(new PacketPlayerSyncScNotify(oldItem));
                 }
             }
-            itemData.EquipAvatar = avatarData.GetBaseAvatarId();
+            itemData.EquipAvatar = avatarData.GetAvatarId();
             avatarData.EquipId = itemData.UniqueId;
-            // save
-            DatabaseHelper.Instance!.UpdateInstance(Data);
-            DatabaseHelper.Instance!.UpdateInstance(Player.AvatarManager.AvatarData!);
             Player.SendPacket(new PacketPlayerSyncScNotify(avatarData, itemData));
         }
 
@@ -526,7 +530,7 @@ namespace EggLink.DanhengServer.Game.Inventory
                 {
                     // switch
                     equipAvatar.Relic[slot] = oldItem.UniqueId;
-                    oldItem.EquipAvatar = equipAvatar.GetBaseAvatarId();
+                    oldItem.EquipAvatar = equipAvatar.GetAvatarId();
                     Player.SendPacket(new PacketPlayerSyncScNotify(equipAvatar, oldItem));
                 }
             } else
@@ -534,9 +538,10 @@ namespace EggLink.DanhengServer.Game.Inventory
                 if (oldItem != null)
                 {
                     oldItem.EquipAvatar = 0;
+                    Player.SendPacket(new PacketPlayerSyncScNotify(oldItem));
                 }
             }
-            itemData.EquipAvatar = avatarData.GetBaseAvatarId();
+            itemData.EquipAvatar = avatarData.GetAvatarId();
             avatarData.Relic[slot] = itemData.UniqueId;
             // save
             DatabaseHelper.Instance!.UpdateInstance(Data);
@@ -553,8 +558,6 @@ namespace EggLink.DanhengServer.Game.Inventory
             if (itemData == null) return;
             avatarData.Relic.Remove(slot);
             itemData.EquipAvatar = 0;
-            DatabaseHelper.Instance!.UpdateInstance(Data);
-            DatabaseHelper.Instance!.UpdateInstance(Player.AvatarManager.AvatarData!);
             Player.SendPacket(new PacketPlayerSyncScNotify(avatarData, itemData));
         }
 
@@ -566,8 +569,6 @@ namespace EggLink.DanhengServer.Game.Inventory
             if (itemData == null) return;
             itemData.EquipAvatar = 0;
             avatarData.EquipId = 0;
-            DatabaseHelper.Instance!.UpdateInstance(Data);
-            DatabaseHelper.Instance!.UpdateInstance(Player.AvatarManager.AvatarData!);
             Player.SendPacket(new PacketPlayerSyncScNotify(avatarData, itemData));
         }
 

@@ -25,10 +25,9 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Player
             }
 
             avatar.HeroId = (int)req.BasicType;
-            DatabaseHelper.Instance!.UpdateInstance(player.AvatarManager.AvatarData!);
             player.Data.CurBasicType = (int)req.BasicType;
-            DatabaseHelper.Instance!.UpdateInstance(player.Data);
 
+            connection.SendPacket(new PacketPlayerSyncScNotify(avatar));
             connection.SendPacket(new PacketSetHeroBasicTypeScRsp((uint)req.BasicType));
         }
     }

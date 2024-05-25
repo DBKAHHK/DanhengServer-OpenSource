@@ -14,8 +14,10 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Avatar
 
             player.AvatarManager?.AvatarData?.Avatars?.ForEach(avatar =>
             {
-                proto.AvatarList.Add(avatar.ToProto());
+                if (avatar.GetBaseAvatarId() != 8001)
+                    proto.AvatarList.Add(avatar.ToProto());
             });
+            proto.AvatarList.Add(player.AvatarManager!.GetHero()!.ToProto());
 
             SetData(proto);
         }

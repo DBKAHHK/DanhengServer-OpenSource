@@ -29,6 +29,7 @@ using EggLink.DanhengServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Util;
 using EggLink.DanhengServer.Enums.Avatar;
 using EggLink.DanhengServer.Server.Packet.Send.Avatar;
+using System.Numerics;
 
 namespace EggLink.DanhengServer.Game.Player
 {
@@ -202,7 +203,9 @@ namespace EggLink.DanhengServer.Game.Player
             if (Data.CurBasicType == id) return;
             Data.CurBasicType = id;
             AvatarManager!.GetHero()!.HeroId = id;
+            AvatarManager!.GetHero()!.ValidateHero();
             SendPacket(new PacketHeroBasicTypeChangedNotify(id));
+            SendPacket(new PacketPlayerSyncScNotify(AvatarManager!.GetHero()!));
         }
 
         public void AddAvatar(int avatarId, bool sync = true)
@@ -332,6 +335,7 @@ namespace EggLink.DanhengServer.Game.Player
                             if (oldState == PropStateEnum.ChestClosed && newState == PropStateEnum.ChestUsed)
                             {
                                 // TODO: Add treasure chest handling
+                                InventoryManager!.HandlePlaneEvent(prop.PropInfo.EventID);
                             }
                             break;
                         case PropTypeEnum.PROP_DESTRUCT:
@@ -577,8 +581,15 @@ namespace EggLink.DanhengServer.Game.Player
         public void LeaveRaid()
         {
             if (CurRaidId == 0) return;
-            GameData.RaidConfigData.TryGetValue(CurRaidId, out var config);
+            GameData.RaidConfigData.TryGetValue(CurRaidId * 100 + 0, out var config);
             if (config == null) return;
+
+            if (config.TeamType == RaidTeamTypeEnum.TrialOnly)
+            {
+                LineupManager!.SetExtraLineup(ExtraLineupType.LineupNone, []);
+                SendPacket(new PacketSyncLineupNotify(LineupManager!.GetCurLineup()!));
+            }
+
             if (config.FinishEntranceID > 0)
             {
                 EnterScene(config.FinishEntranceID, 0, true);

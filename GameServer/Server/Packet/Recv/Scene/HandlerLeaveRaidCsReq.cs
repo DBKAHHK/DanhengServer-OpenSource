@@ -1,4 +1,7 @@
-﻿using EggLink.DanhengServer.Proto;
+﻿using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Enums.Scene;
+using EggLink.DanhengServer.Game.Lineup;
+using EggLink.DanhengServer.Proto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +20,18 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Scene
             {
                 connection.SendPacket(CmdIds.LeaveRaidScRsp);
                 return;
+            }
+
+            GameData.RaidConfigData.TryGetValue(player.CurRaidId * 100 + 0, out var config);
+            if (config == null)
+            {
+                connection.SendPacket(CmdIds.LeaveRaidScRsp);
+                return;
+            }
+
+            if (config.TeamType == RaidTeamTypeEnum.TrialOnly)
+            {
+                player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupNone, []);
             }
 
             player.CurRaidId = 0;

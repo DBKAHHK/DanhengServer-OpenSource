@@ -1,4 +1,7 @@
-﻿using System;
+﻿using EggLink.DanhengServer.Enums.Scene;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +17,9 @@ namespace EggLink.DanhengServer.Data.Excel
 
         public int FinishEntranceID { get; set; }
 
+        [JsonConverter(typeof(StringEnumConverter))]
+        public RaidTeamTypeEnum TeamType { get; set; }
+        public List<int> TrialAvatarList { get; set; } = [];
         public List<int> MainMissionIDList { get; set; } = [];
 
         public override int GetId()

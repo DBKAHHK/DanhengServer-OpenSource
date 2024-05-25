@@ -52,7 +52,7 @@ namespace EggLink.DanhengServer.Database.Lineup
             {
                 foreach (var avatar in BaseAvatars)
                 {
-                    var avatarInfo = AvatarData?.Avatars?.Find(item => item.GetAvatarId() == avatar.BaseAvatarId);
+                    var avatarInfo = AvatarData?.Avatars?.Find(item => item.GetBaseAvatarId() == avatar.BaseAvatarId);
                     if (avatarInfo != null)
                     {
                         if (avatarInfo.GetCurHp(IsExtraLineup()) <= 0 && !allowRevive)

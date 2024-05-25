@@ -15,7 +15,6 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Player
             player.Data.Name = req.Nickname;
             if (req.Gender == Gender.None)
             {
-                DatabaseHelper.Instance?.UpdateInstance(player.Data);
                 connection.SendPacket(new PacketSetPlayerInfoScRsp(player, req.IsModify));
                 return;
             }
