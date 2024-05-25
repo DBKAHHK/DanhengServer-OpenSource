@@ -30,6 +30,8 @@ using EggLink.DanhengServer.Util;
 using EggLink.DanhengServer.Enums.Avatar;
 using EggLink.DanhengServer.Server.Packet.Send.Avatar;
 using System.Numerics;
+using EggLink.DanhengServer.Game.Challenge;
+using EggLink.DanhengServer.Game.Drop;
 
 namespace EggLink.DanhengServer.Game.Player
 {
@@ -51,6 +53,7 @@ namespace EggLink.DanhengServer.Game.Player
         public RogueManager? RogueManager { get; private set; }
         public ChessRogueManager? ChessRogueManager { get; private set; }
         public ShopService? ShopService { get; private set; }
+        public ChallengeManager? ChallengeManager { get; private set; }
 
         #endregion
 
@@ -119,6 +122,7 @@ namespace EggLink.DanhengServer.Game.Player
             RogueManager = new(this);
             ShopService = new(this);
             ChessRogueManager = new(this);
+            ChallengeManager = new(this);
 
             PlayerUnlockData = InitializeDatabase<PlayerUnlockData>();
             SceneData = InitializeDatabase<SceneData>();
@@ -128,6 +132,7 @@ namespace EggLink.DanhengServer.Game.Player
             Data.LastActiveTime = Extensions.GetUnixSec();
             DatabaseHelper.Instance?.UpdateInstance(Data);
 
+            ChallengeManager.ResurrectInstance();
             LoadScene(Data.PlaneId, Data.FloorId, Data.EntryId, Data.Pos!, Data.Rot!, false);
             if (SceneInstance == null)
             {
@@ -334,8 +339,9 @@ namespace EggLink.DanhengServer.Game.Player
                         case PropTypeEnum.PROP_TREASURE_CHEST:
                             if (oldState == PropStateEnum.ChestClosed && newState == PropStateEnum.ChestUsed)
                             {
-                                // TODO: Add treasure chest handling
-                                InventoryManager!.HandlePlaneEvent(prop.PropInfo.EventID);
+                                // TODO: Filter treasure chest
+                                var items = DropService.CalculateDropsFromProp();
+                                SceneInstance.Player.InventoryManager!.AddItems(items);
                             }
                             break;
                         case PropTypeEnum.PROP_DESTRUCT:
@@ -575,6 +581,15 @@ namespace EggLink.DanhengServer.Game.Player
                     SceneData.CustomSaveData.Add(entryId, entryData);
                 }
                 entryData[groupId] = data;
+            }
+        }
+
+        public void ForceQuitBattle()
+        {
+            if (BattleInstance != null)
+            {
+                BattleInstance = null;
+                Connection!.SendPacket(CmdIds.QuitBattleScNotify);
             }
         }
 

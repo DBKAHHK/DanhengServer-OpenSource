@@ -1,7 +1,6 @@
 ﻿using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Data.Excel;
-using EggLink.DanhengServer.Database.Mission;
 
 namespace EggLink.DanhengServer.Data
 {
@@ -20,6 +19,15 @@ namespace EggLink.DanhengServer.Data
         public static Dictionary<int, AvatarExpItemConfigExcel> AvatarExpItemConfigData { get; private set; } = [];
         public static Dictionary<int, AvatarSkillTreeConfigExcel> AvatarSkillTreeConfigData { get; private set; } = [];
         public static Dictionary<int, ExpTypeExcel> ExpTypeData { get; private set; } = [];
+
+        #endregion
+
+        #region Challenge
+
+        public static Dictionary<int, ChallengeConfigExcel> ChallengeConfigData { get; private set; } = [];
+        public static Dictionary<int, ChallengeTargetExcel> ChallengeTargetData { get; private set; } = [];
+        public static Dictionary<int, ChallengeGroupExcel> ChallengeGroupData { get; private set; } = [];
+        public static Dictionary<int, List<ChallengeRewardExcel>> ChallengeRewardData { get; private set; } = [];
 
         #endregion
 

@@ -24,12 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static StartChallengeCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlTdGFydENoYWxsZW5nZUNzUmVxLnByb3RvGhFET05LTlBQT01KQy5wcm90",
-            "byJOChNTdGFydENoYWxsZW5nZUNzUmVxEiEKC3BsYXllcl9pbmZvGAkgASgL",
-            "MgwuRE9OS05QUE9NSkMSFAoMY2hhbGxlbmdlX2lkGAYgASgNQh6qAhtFZ2dM",
-            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChlTdGFydENoYWxsZW5nZUNzUmVxLnByb3RvGh1TdGFydENoYWxsZW5nZVN0",
+            "b3J5SW5mby5wcm90byJaChNTdGFydENoYWxsZW5nZUNzUmVxEi0KC3BsYXll",
+            "cl9pbmZvGAkgASgLMhguU3RhcnRDaGFsbGVuZ2VTdG9yeUluZm8SFAoMY2hh",
+            "bGxlbmdlX2lkGAYgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
+            "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DONKNPPOMJCReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.StartChallengeStoryInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StartChallengeCsReq), global::EggLink.DanhengServer.Proto.StartChallengeCsReq.Parser, new[]{ "PlayerInfo", "ChallengeId" }, null, null, null, null)
           }));
@@ -86,10 +87,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "player_info" field.</summary>
     public const int PlayerInfoFieldNumber = 9;
-    private global::EggLink.DanhengServer.Proto.DONKNPPOMJC playerInfo_;
+    private global::EggLink.DanhengServer.Proto.StartChallengeStoryInfo playerInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.DONKNPPOMJC PlayerInfo {
+    public global::EggLink.DanhengServer.Proto.StartChallengeStoryInfo PlayerInfo {
       get { return playerInfo_; }
       set {
         playerInfo_ = value;
@@ -208,7 +209,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.playerInfo_ != null) {
         if (playerInfo_ == null) {
-          PlayerInfo = new global::EggLink.DanhengServer.Proto.DONKNPPOMJC();
+          PlayerInfo = new global::EggLink.DanhengServer.Proto.StartChallengeStoryInfo();
         }
         PlayerInfo.MergeFrom(other.PlayerInfo);
       }
@@ -236,7 +237,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 74: {
             if (playerInfo_ == null) {
-              PlayerInfo = new global::EggLink.DanhengServer.Proto.DONKNPPOMJC();
+              PlayerInfo = new global::EggLink.DanhengServer.Proto.StartChallengeStoryInfo();
             }
             input.ReadMessage(PlayerInfo);
             break;
@@ -262,7 +263,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 74: {
             if (playerInfo_ == null) {
-              PlayerInfo = new global::EggLink.DanhengServer.Proto.DONKNPPOMJC();
+              PlayerInfo = new global::EggLink.DanhengServer.Proto.StartChallengeStoryInfo();
             }
             input.ReadMessage(PlayerInfo);
             break;
