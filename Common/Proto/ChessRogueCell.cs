@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static ChessRogueCellReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRDaGVzc1JvZ3VlQ2VsbC5wcm90bxoVQ2VsbEFkdmFuY2VJbmZvLnByb3Rv",
-            "Gh9DaGVzc1JvZ3VlQ2VsbFNwZWNpYWxUeXBlLnByb3RvGh9DaGVzc1JvZ3Vl",
-            "Qm9hcmRDZWxsU3RhdHVzLnByb3RvIrcCCg5DaGVzc1JvZ3VlQ2VsbBIRCglj",
+            "ChRDaGVzc1JvZ3VlQ2VsbC5wcm90bxofQ2hlc3NSb2d1ZUJvYXJkQ2VsbFN0",
+            "YXR1cy5wcm90bxoVQ2VsbEFkdmFuY2VJbmZvLnByb3RvGh9DaGVzc1JvZ3Vl",
+            "Q2VsbFNwZWNpYWxUeXBlLnByb3RvIrcCCg5DaGVzc1JvZ3VlQ2VsbBIRCglj",
             "ZWxsX3R5cGUYDyABKA0SDgoGY29sdW1uGA4gASgNEhMKC0tKTURCQ0tHRkFN",
             "GAogASgIEi8KC2NlbGxfc3RhdHVzGAcgASgOMhouQ2hlc3NSb2d1ZUJvYXJk",
             "Q2VsbFN0YXR1cxIQCghpc192YWxpZBgBIAEoCBImCgxhZHZhbmNlX2luZm8Y",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "EwoLT09MTklCUEZKTkIYCCADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CellAdvanceInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.CellAdvanceInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueCell), global::EggLink.DanhengServer.Proto.ChessRogueCell.Parser, new[]{ "CellType", "Column", "KJMDBCKGFAM", "CellStatus", "IsValid", "AdvanceInfo", "Row", "MarkType", "Id", "RoomId", "SpecialType", "OOLNIBPFJNB" }, null, null, null, null)
           }));

@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Game.Player
             if (ConfigManager.Config.ServerOption.EnableMission)
             {
                 LineupManager?.AddSpecialAvatarToCurTeam(10010050);
-                MissionManager!.AcceptMainMission(1000101);
+                MissionManager!.AcceptMainMissionByCondition();
             } else
             {
                 LineupManager?.AddAvatarToCurTeam(8001);

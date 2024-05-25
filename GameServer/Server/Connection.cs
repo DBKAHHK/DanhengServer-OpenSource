@@ -28,6 +28,7 @@ public partial class Connection
     private static readonly Logger Logger = new("GameServer");
 #if DEBUG
     public static readonly Dictionary<string, string> LogMap = [];
+    public static readonly List<int> IgnoreLog = [CmdIds.PlayerHeartBeatCsReq, CmdIds.PlayerHeartBeatScRsp, CmdIds.SceneEntityMoveCsReq, CmdIds.SceneEntityMoveScRsp, CmdIds.GetShopListCsReq, CmdIds.GetShopListScRsp];
 #endif
     public Connection(KcpConversation conversation, IPEndPoint remote)
     {
@@ -63,7 +64,7 @@ public partial class Connection
         try
         {
             //Logger.DebugWriteLine($"{sendOrRecv}: {Enum.GetName(typeof(OpCode), opcode)}({opcode})\r\n{Convert.ToHexString(payload)}");
-            if (opcode == CmdIds.PlayerHeartBeatCsReq || opcode == CmdIds.PlayerHeartBeatScRsp || opcode == CmdIds.SceneEntityMoveCsReq || opcode == CmdIds.SceneEntityMoveScRsp)
+            if (IgnoreLog.Contains(opcode))
             {
                 return;
             }
@@ -231,9 +232,15 @@ public partial class Connection
         // Header
         byte[] packetBytes = packet.BuildPacket();
 
+        try
+        {
 #pragma warning disable CA2012
-        _ = Conversation.SendAsync(packetBytes, CancelToken.Token);
+            _ = Conversation.SendAsync(packetBytes, CancelToken.Token);
 #pragma warning restore CA2012
+        } catch
+        {
+            // ignore
+        }
     }
 
     public void SendPacket(int cmdId)

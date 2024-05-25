@@ -14,6 +14,9 @@ namespace EggLink.DanhengServer.Database.Scene
 
         [SugarColumn(IsJson = true)]
         public Dictionary<int, Dictionary<int, string>> CustomSaveData { get; set; } = [];  // Dictionary<EntryId, Dictionary<GroupId, SaveData>>
+
+        [SugarColumn(IsJson = true)]
+        public Dictionary<int, Dictionary<string, int>> FloorSavedData { get; set; } = [];  // Dictionary<FloorId, Dictionary<SaveDataKey, SaveDataValue>>
     }
 
     public class ScenePropData

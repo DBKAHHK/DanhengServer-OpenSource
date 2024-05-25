@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChVSb2d1ZUZpbmlzaEluZm8ucHJvdG8aGlJvZ3VlU2NvcmVSZXdhcmRJbmZv",
-            "LnByb3RvGg5JdGVtTGlzdC5wcm90bxobUm9ndWVFeHBsb3JlU2NvcmVJbmZv",
-            "LnByb3RvGhFJTEtOTE9IQ0JKQS5wcm90bxoVUm9ndWVSZWNvcmRJbmZvLnBy",
+            "LnByb3RvGhVSb2d1ZVJlY29yZEluZm8ucHJvdG8aEUlMS05MT0hDQkpBLnBy",
+            "b3RvGg5JdGVtTGlzdC5wcm90bxobUm9ndWVFeHBsb3JlU2NvcmVJbmZvLnBy",
             "b3RvIoYECg9Sb2d1ZUZpbmlzaEluZm8SGwoTZmluaXNoZWRfcm9vbV9jb3Vu",
             "dBgGIAEoDRITCgt0b3RhbF9zY29yZRgDIAEoDRITCgtQSUVORUNHTE5QTRgI",
             "IAEoCBIhCgtJTURBQ01HRUZDTBgBIAEoCzIMLklMS05MT0hDQkpBEioKCnNj",
@@ -41,7 +41,7 @@ namespace EggLink.DanhengServer.Proto {
             "C0JITE9DREFCRkxMGA8gASgLMgkuSXRlbUxpc3RCHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueScoreRewardInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueExploreScoreInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ILKNLOHCBJAReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueRecordInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueScoreRewardInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueRecordInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ILKNLOHCBJAReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueExploreScoreInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueFinishInfo), global::EggLink.DanhengServer.Proto.RogueFinishInfo.Parser, new[]{ "FinishedRoomCount", "TotalScore", "PIENECGLNPM", "IMDACMGEFCL", "ScoreInfo", "Record", "BDIBIICAHAC", "ScoreId", "BIBMJCEMCFA", "AreaId", "KPLGPNDGEAE", "ReachedRoomCount", "PrevRewardInfo", "NextRewardInfo", "PCMFBEEEMBM", "IsWin", "BHLOCDABFLL" }, null, null, null, null)
           }));

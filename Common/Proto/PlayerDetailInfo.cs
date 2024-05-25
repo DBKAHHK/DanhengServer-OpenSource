@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static PlayerDetailInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZQbGF5ZXJEZXRhaWxJbmZvLnByb3RvGhFGR0ZITkZLRkpBSC5wcm90bxoS",
-            "UGxhdGZvcm1UeXBlLnByb3RvGhdEaXNwbGF5UmVjb3JkSW5mby5wcm90bxod",
-            "RGlzcGxheUF2YXRhckRldGFpbEluZm8ucHJvdG8izgMKEFBsYXllckRldGFp",
+            "ChZQbGF5ZXJEZXRhaWxJbmZvLnByb3RvGhdEaXNwbGF5UmVjb3JkSW5mby5w",
+            "cm90bxoSUGxhdGZvcm1UeXBlLnByb3RvGh1EaXNwbGF5QXZhdGFyRGV0YWls",
+            "SW5mby5wcm90bxoRRkdGSE5GS0ZKQUgucHJvdG8izgMKEFBsYXllckRldGFp",
             "bEluZm8SNgoTZGlzcGxheV9hdmF0YXJfbGlzdBipAyADKAsyGC5EaXNwbGF5",
             "QXZhdGFyRGV0YWlsSW5mbxIcCgZyZWNvcmQYByABKAsyDC5GR0ZITkZLRkpB",
             "SBITCgtBSUxJTkFOR0pORRgIIAEoCRITCgt3b3JsZF9sZXZlbBgJIAEoDRIL",
@@ -39,7 +39,7 @@ namespace EggLink.DanhengServer.Proto {
             "QRgCIAEoCRIRCglzaWduYXR1cmUYAyABKAkSEAoIbmlja25hbWUYBCABKAlC",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FGFHNFKFJAHReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayRecordInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DisplayRecordInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.FGFHNFKFJAHReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerDetailInfo), global::EggLink.DanhengServer.Proto.PlayerDetailInfo.Parser, new[]{ "DisplayAvatarList", "Record", "AILINANGJNE", "WorldLevel", "Uid", "EFNHCOEKDCN", "AssistAvatarList", "Level", "IsBanned", "MAPJDADPKOL", "HeadIcon", "Platform", "AKFPFMGILAO", "RecordInfo", "LDFIOFJHJJA", "Signature", "Nickname" }, null, null, null, null)
           }));

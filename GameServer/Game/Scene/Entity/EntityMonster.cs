@@ -64,7 +64,11 @@ namespace EggLink.DanhengServer.Game.Scene.Entity
             {
                 return CustomStageID;
             }
-            return Info.EventID * 10 + Scene.Player.Data.WorldLevel;
+            var id = Info.EventID * 10 + Scene.Player.Data.WorldLevel;
+            if (GameData.StageConfigData.ContainsKey(id))
+                return id;
+            else
+                return Info.EventID;
         }
 
         public List<ItemData> Kill(bool sendPacket = true)

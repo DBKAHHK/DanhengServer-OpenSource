@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Data.Config
         [JsonIgnore()]
         public List<int> UnlockDoorID { get; set; } = [];
 
-        public void Load()
+        public void Load(GroupInfo info)
         {
             if (ValueSource != null)
             {
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Data.Config
                     {
                         if (v["Value"] != null && v["Key"] != null)
                         {
-                            if (v["Key"]?.ToString().Contains("Door") == true || v["Key"]?.ToString().Contains("Bridge") == true)
+                            if (v["Key"]?.ToString().Contains("Door") == true || v["Key"]?.ToString().Contains("Bridge") == true || v["Key"]?.ToString().Contains("UnlockTarget") == true)
                             {
                                 try
                                 {

@@ -30,7 +30,7 @@ namespace EggLink.DanhengServer.Data.Config
         {
             foreach (var prop in PropList)
             {
-                prop.Load();
+                prop.Load(this);
             }
         }
     }

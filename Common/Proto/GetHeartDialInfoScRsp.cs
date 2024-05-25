@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static GetHeartDialInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtHZXRIZWFydERpYWxJbmZvU2NSc3AucHJvdG8aG0hlYXJ0RGlhbFVubG9j",
-            "a1N0YXR1cy5wcm90bxoRR05ITURIQ0ZBRkwucHJvdG8aEUJQR01CQUpITkhB",
-            "LnByb3RvGhFJSVBCTkpNTkZITC5wcm90byK+AQoVR2V0SGVhcnREaWFsSW5m",
+            "ChtHZXRIZWFydERpYWxJbmZvU2NSc3AucHJvdG8aEUlJUEJOSk1ORkhMLnBy",
+            "b3RvGhtIZWFydERpYWxVbmxvY2tTdGF0dXMucHJvdG8aEUdOSE1ESENGQUZM",
+            "LnByb3RvGhFCUEdNQkFKSE5IQS5wcm90byK+AQoVR2V0SGVhcnREaWFsSW5m",
             "b1NjUnNwEg8KB3JldGNvZGUYCCABKA0SKwoLUEpKR1BISUNBTEgYDyABKA4y",
             "Fi5IZWFydERpYWxVbmxvY2tTdGF0dXMSIQoLT0ZLTFBIRkhHSUoYByADKAsy",
             "DC5JSVBCTkpNTkZITBIhCgtFSUZOTU1OQUxGSxgCIAMoCzIMLkdOSE1ESENG",
             "QUZMEiEKC0RQTk5HTEtDSENGGA4gAygLMgwuQlBHTUJBSkhOSEFCHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeartDialUnlockStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.GNHMDHCFAFLReflection.Descriptor, global::EggLink.DanhengServer.Proto.BPGMBAJHNHAReflection.Descriptor, global::EggLink.DanhengServer.Proto.IIPBNJMNFHLReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IIPBNJMNFHLReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialUnlockStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.GNHMDHCFAFLReflection.Descriptor, global::EggLink.DanhengServer.Proto.BPGMBAJHNHAReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetHeartDialInfoScRsp), global::EggLink.DanhengServer.Proto.GetHeartDialInfoScRsp.Parser, new[]{ "Retcode", "PJJGPHICALH", "OFKLPHFHGIJ", "EIFNMMNALFK", "DPNNGLKCHCF" }, null, null, null, null)
           }));

@@ -114,5 +114,18 @@ namespace EggLink.DanhengServer.Command.Cmd
             var player = arg.Target!.Player!;
             player.EnterScene(arg.GetInt(0), 0, true);
         }
+
+        [CommandMethod("0 reload")]
+        public void ReloadScene(CommandArg arg)
+        {
+            if (arg.Target == null)
+            {
+                arg.SendMsg("Player not found");
+                return;
+            }
+
+            var player = arg.Target!.Player!;
+            player.EnterScene(player.Data.EntryId, 0, true);
+        }
     }
 }

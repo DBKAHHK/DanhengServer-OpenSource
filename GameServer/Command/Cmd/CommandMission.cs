@@ -159,5 +159,31 @@ namespace EggLink.DanhengServer.Command.Cmd
             mission.ReAcceptMainMission(missionId);
             arg.SendMsg($"已重新接取ID为 {missionId} 的任务");
         }
+
+        [CommandMethod("0 finishmain")]
+        public void FinishMainMission(CommandArg arg)
+        {
+            if (arg.Target == null)
+            {
+                arg.SendMsg("玩家不存在");
+                return;
+            }
+
+            if (arg.BasicArgs.Count < 1)
+            {
+                arg.SendMsg("请输入主任务ID");
+                return;
+            }
+
+            if (!int.TryParse(arg.BasicArgs[0], out var missionId))
+            {
+                arg.SendMsg("无效的任务ID");
+                return;
+            }
+
+            var mission = arg.Target!.Player!.MissionManager!;
+            mission.FinishMainMission(missionId);
+            arg.SendMsg($"已完成ID为 {missionId} 的任务");
+        }
     }
 }

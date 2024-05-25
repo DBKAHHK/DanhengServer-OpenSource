@@ -1,6 +1,7 @@
 ﻿using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.Server.Packet.Send.Player;
 
 namespace EggLink.DanhengServer.Game.Mission.FinishType.Handler
 {
@@ -15,18 +16,19 @@ namespace EggLink.DanhengServer.Game.Mission.FinishType.Handler
         public override void HandleFinishType(PlayerInstance player, SubMissionInfo info, object? arg)
         {
             var finish = info.Operation == OperationEnum.And;
+            var finishCount = 0;
             foreach (var missionId in info.ParamIntList ?? [])
             {
                 var status = player.MissionManager!.GetSubMissionStatus(missionId);
-                if (status != MissionPhaseEnum.Finish && status != MissionPhaseEnum.None && status != MissionPhaseEnum.Cancel)
+                if (status != MissionPhaseEnum.Finish && status != MissionPhaseEnum.Cancel)
                 {
                     if (info.Operation == OperationEnum.And)
                     {
                         finish = false;
-                        break;
                     }
-                } else if (status == MissionPhaseEnum.Finish || status == MissionPhaseEnum.None || status == MissionPhaseEnum.Cancel)
+                } else if (status == MissionPhaseEnum.Finish || status == MissionPhaseEnum.Cancel)
                 {
+                    finishCount++;
                     if (info.Operation == OperationEnum.Or)
                     {
                         finish = true;
@@ -37,6 +39,25 @@ namespace EggLink.DanhengServer.Game.Mission.FinishType.Handler
             if (finish)
             {
                 player.MissionManager!.FinishSubMission(info.ID);
+            } else
+            {
+                if (finishCount > 0)
+                {
+                    var sync = new Proto.MissionSync()
+                    {
+                        MissionList =
+                    {
+                        new Proto.Mission()
+                        {
+                            Id = (uint)info.ID,
+                            Status = Proto.MissionStatus.MissionDoing,
+                            Progress = (uint)finishCount
+                        }
+                    }
+                    };
+
+                    player.SendPacket(new PacketPlayerSyncScNotify(sync));
+                }
             }
         }
     }

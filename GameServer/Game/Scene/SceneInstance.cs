@@ -233,7 +233,9 @@ namespace EggLink.DanhengServer.Game.Scene
                 PlaneId = (uint)PlaneId,
                 FloorId = (uint)FloorId,
                 EntryId = (uint)EntryId,
+                SceneMissionInfo = new(),
             };
+
             var playerGroupInfo = new SceneEntityGroupInfo();  // avatar group
             foreach (var avatar in AvatarInfo)
             {
@@ -273,7 +275,7 @@ namespace EggLink.DanhengServer.Game.Scene
                 sceneInfo.EntityGroupList.Add(group);
             }
 
-            // custom save data
+            // custom save data and floor saved data
             Player.SceneData!.CustomSaveData.TryGetValue(EntryId, out var data);
 
             if (data != null)
@@ -287,6 +289,19 @@ namespace EggLink.DanhengServer.Game.Scene
                     });
                 }
             }
+
+            Player.SceneData!.FloorSavedData.TryGetValue(FloorId, out var floorData);
+
+            if (floorData != null)
+            {
+                foreach (var floor in floorData)
+                {
+                    sceneInfo.FloorSavedData.Add(floor.Key, floor.Value);
+                }
+            }
+
+            // mission
+            Player.MissionManager!.OnLoadScene(sceneInfo);
 
             // unlock section
             if (!ConfigManager.Config.ServerOption.AutoLightSection)

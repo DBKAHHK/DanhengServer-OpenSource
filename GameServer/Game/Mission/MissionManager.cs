@@ -80,19 +80,53 @@ namespace EggLink.DanhengServer.Game.Mission
             return list;
         }
 
+        public Proto.MissionSync AcceptMainMissionByCondition(bool sendPacket = true)
+        {
+            var sync = new Proto.MissionSync();
+            foreach (var nextMission in GameData.MainMissionData.Values)
+            {
+                if (!nextMission.IsEqual(Data)) continue;
+                if (Data.GetMainMissionStatus(nextMission.MainMissionID) != MissionPhaseEnum.None) continue;  // already accepted
+                var res = AcceptMainMission(nextMission.MainMissionID, sendPacket);
+                foreach (var subMission in res)
+                {
+                    if (subMission != null)
+                    {
+                        sync.MissionList.AddRange(subMission.MissionList);
+                    }
+                }
+            }
+
+            return sync;
+        }
+
         public List<Proto.MissionSync?> ReAcceptMainMission(int missionId, bool sendPacket = true)
         {
             if (!ConfigManager.Config.ServerOption.EnableMission) return [];
-            //if (!Data.MissionInfo.TryGetValue(missionId, out _)) return [];
 
             GameData.MainMissionData.TryGetValue(missionId, out var mission);
             if (mission == null) return [];
+            Proto.MissionSync sync = new();
+
+            foreach (var subMission in mission.SubMissionIds)
+            {
+                if (Data.GetSubMissionStatus(subMission) == MissionPhaseEnum.Finish || Data.GetSubMissionStatus(subMission) == MissionPhaseEnum.Doing)
+                {
+                    sync.MissionList.Add(new Proto.Mission()
+                    {
+                        Id = (uint)subMission,
+                        Status = Proto.MissionStatus.MissionNone,
+                    });
+                }
+            }
+
             foreach (var subMission in mission.SubMissionIds)
             { 
                 Data.SetSubMissionStatus(subMission, MissionPhaseEnum.None);  // reset
             }
 
             Data.SetMainMissionStatus(missionId, MissionPhaseEnum.None);  // reset
+            Player.SendPacket(new PacketPlayerSyncScNotify(sync));
 
             return AcceptMainMission(missionId, sendPacket);
         }
@@ -146,20 +180,6 @@ namespace EggLink.DanhengServer.Game.Mission
                 }
             }
 
-            if (missionId == 103280217)
-            {
-                if (Player.CurRaidId == 0)  // set old info when not in raid
-                {
-                    Player.OldEntryId = Player.Data.EntryId;
-                    Player.LastPos = Player.Data.Pos;
-                    Player.LastRot = Player.Data.Rot;
-                }
-                Player.CurRaidId = 43321;
-
-                Player.SendPacket(new PacketRaidInfoNotify(43321));
-                Player.EnterScene(43321001, 0, true);
-            }
-
             return sync;
         }
 
@@ -188,19 +208,8 @@ namespace EggLink.DanhengServer.Game.Mission
                 }
             }
 
-            foreach (var nextMission in GameData.MainMissionData.Values)
-            {
-                if (!nextMission.IsEqual(Data)) continue;
-                if (Data.GetMainMissionStatus(nextMission.MainMissionID) != MissionPhaseEnum.None) continue;  // already accepted
-                var res = AcceptMainMission(nextMission.MainMissionID, false);
-                foreach (var subMission in res)
-                {
-                    if (subMission != null)
-                    {
-                        sync.MissionList.AddRange(subMission.MissionList);
-                    }
-                }
-            }
+            var mainSync = AcceptMainMissionByCondition(false);
+            sync.MissionList.AddRange(mainSync.MissionList);
 
             Player.SendPacket(new PacketPlayerSyncScNotify(sync));
             Player.SendPacket(new PacketStartFinishMainMissionScNotify(missionId));
@@ -505,6 +514,39 @@ namespace EggLink.DanhengServer.Game.Mission
                     foreach (var group in info.GroupIDList)
                     {
                         Player.SceneInstance.EntityLoader!.LoadGroup(group);
+                    }
+                }
+            }
+        }
+
+        public void OnLoadScene(Proto.SceneInfo info)
+        {
+            foreach (var mainMission in GameData.MainMissionData.Values)
+            {
+                foreach (var subMission in mainMission.MissionInfo?.SubMissionList ?? [])
+                {
+                    if (subMission.LevelFloorID == info.FloorId)
+                    {
+                        info.SceneMissionInfo.FinishedMainMissionIdList.Add(new Proto.Mission()
+                        {
+                            Id = (uint)subMission.ID,
+                            Status = GetSubMissionStatus(subMission.ID).ToProto(),
+                        });
+                    }
+                }
+
+                foreach (var subMission in mainMission.MissionInfo?.SubMissionList ?? [])
+                {
+                    if (subMission.LevelFloorID == info.FloorId)
+                    {
+                        if (GetMainMissionStatus(mainMission.MainMissionID) == MissionPhaseEnum.Finish)
+                        {
+                            info.SceneMissionInfo.MainMissionIdList.Add((uint)mainMission.MainMissionID);
+                        } else if (GetMainMissionStatus(mainMission.MainMissionID) == MissionPhaseEnum.Doing)
+                        {
+                            info.SceneMissionInfo.LCNEHKCKFFO.Add((uint)mainMission.MainMissionID);
+                        }
+                        break;  // only one
                     }
                 }
             }
