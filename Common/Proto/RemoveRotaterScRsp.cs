@@ -24,15 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static RemoveRotaterScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhSZW1vdmVSb3RhdGVyU2NSc3AucHJvdG8aEUFIT09KTEhHQUlDLnByb3Rv",
-            "GhFOSFBQQU5MTUVPSy5wcm90byJrChJSZW1vdmVSb3RhdGVyU2NSc3ASIQoL",
-            "SFBQR0ZERkpHQkMYBiABKAsyDC5OSFBQQU5MTUVPSxIhCgtOSUtHSURQTU9M",
-            "TRgCIAEoCzIMLkFIT09KTEhHQUlDEg8KB3JldGNvZGUYCCABKA1CHqoCG0Vn",
-            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChhSZW1vdmVSb3RhdGVyU2NSc3AucHJvdG8aF1JvdGF0b3JFbmVyZ3lJbmZv",
+            "LnByb3RvGhFSb3RhdGVyRGF0YS5wcm90byJyChJSZW1vdmVSb3RhdGVyU2NS",
+            "c3ASJwoLZW5lcmd5X2luZm8YBiABKAsyEi5Sb3RhdG9yRW5lcmd5SW5mbxIi",
+            "Cgxyb3RhdGVyX2RhdGEYAiABKAsyDC5Sb3RhdGVyRGF0YRIPCgdyZXRjb2Rl",
+            "GAggASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AHOOJLHGAICReflection.Descriptor, global::EggLink.DanhengServer.Proto.NHPPANLMEOKReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RotatorEnergyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RemoveRotaterScRsp), global::EggLink.DanhengServer.Proto.RemoveRotaterScRsp.Parser, new[]{ "HPPGFDFJGBC", "NIKGIDPMOLM", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RemoveRotaterScRsp), global::EggLink.DanhengServer.Proto.RemoveRotaterScRsp.Parser, new[]{ "EnergyInfo", "RotaterData", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +75,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RemoveRotaterScRsp(RemoveRotaterScRsp other) : this() {
-      hPPGFDFJGBC_ = other.hPPGFDFJGBC_ != null ? other.hPPGFDFJGBC_.Clone() : null;
-      nIKGIDPMOLM_ = other.nIKGIDPMOLM_ != null ? other.nIKGIDPMOLM_.Clone() : null;
+      energyInfo_ = other.energyInfo_ != null ? other.energyInfo_.Clone() : null;
+      rotaterData_ = other.rotaterData_ != null ? other.rotaterData_.Clone() : null;
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -86,27 +87,27 @@ namespace EggLink.DanhengServer.Proto {
       return new RemoveRotaterScRsp(this);
     }
 
-    /// <summary>Field number for the "HPPGFDFJGBC" field.</summary>
-    public const int HPPGFDFJGBCFieldNumber = 6;
-    private global::EggLink.DanhengServer.Proto.NHPPANLMEOK hPPGFDFJGBC_;
+    /// <summary>Field number for the "energy_info" field.</summary>
+    public const int EnergyInfoFieldNumber = 6;
+    private global::EggLink.DanhengServer.Proto.RotatorEnergyInfo energyInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.NHPPANLMEOK HPPGFDFJGBC {
-      get { return hPPGFDFJGBC_; }
+    public global::EggLink.DanhengServer.Proto.RotatorEnergyInfo EnergyInfo {
+      get { return energyInfo_; }
       set {
-        hPPGFDFJGBC_ = value;
+        energyInfo_ = value;
       }
     }
 
-    /// <summary>Field number for the "NIKGIDPMOLM" field.</summary>
-    public const int NIKGIDPMOLMFieldNumber = 2;
-    private global::EggLink.DanhengServer.Proto.AHOOJLHGAIC nIKGIDPMOLM_;
+    /// <summary>Field number for the "rotater_data" field.</summary>
+    public const int RotaterDataFieldNumber = 2;
+    private global::EggLink.DanhengServer.Proto.RotaterData rotaterData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.AHOOJLHGAIC NIKGIDPMOLM {
-      get { return nIKGIDPMOLM_; }
+    public global::EggLink.DanhengServer.Proto.RotaterData RotaterData {
+      get { return rotaterData_; }
       set {
-        nIKGIDPMOLM_ = value;
+        rotaterData_ = value;
       }
     }
 
@@ -137,8 +138,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(HPPGFDFJGBC, other.HPPGFDFJGBC)) return false;
-      if (!object.Equals(NIKGIDPMOLM, other.NIKGIDPMOLM)) return false;
+      if (!object.Equals(EnergyInfo, other.EnergyInfo)) return false;
+      if (!object.Equals(RotaterData, other.RotaterData)) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -147,8 +148,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (hPPGFDFJGBC_ != null) hash ^= HPPGFDFJGBC.GetHashCode();
-      if (nIKGIDPMOLM_ != null) hash ^= NIKGIDPMOLM.GetHashCode();
+      if (energyInfo_ != null) hash ^= EnergyInfo.GetHashCode();
+      if (rotaterData_ != null) hash ^= RotaterData.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -168,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (nIKGIDPMOLM_ != null) {
+      if (rotaterData_ != null) {
         output.WriteRawTag(18);
-        output.WriteMessage(NIKGIDPMOLM);
+        output.WriteMessage(RotaterData);
       }
-      if (hPPGFDFJGBC_ != null) {
+      if (energyInfo_ != null) {
         output.WriteRawTag(50);
-        output.WriteMessage(HPPGFDFJGBC);
+        output.WriteMessage(EnergyInfo);
       }
       if (Retcode != 0) {
         output.WriteRawTag(64);
@@ -190,13 +191,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (nIKGIDPMOLM_ != null) {
+      if (rotaterData_ != null) {
         output.WriteRawTag(18);
-        output.WriteMessage(NIKGIDPMOLM);
+        output.WriteMessage(RotaterData);
       }
-      if (hPPGFDFJGBC_ != null) {
+      if (energyInfo_ != null) {
         output.WriteRawTag(50);
-        output.WriteMessage(HPPGFDFJGBC);
+        output.WriteMessage(EnergyInfo);
       }
       if (Retcode != 0) {
         output.WriteRawTag(64);
@@ -212,11 +213,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (hPPGFDFJGBC_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(HPPGFDFJGBC);
+      if (energyInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EnergyInfo);
       }
-      if (nIKGIDPMOLM_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NIKGIDPMOLM);
+      if (rotaterData_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RotaterData);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
@@ -233,17 +234,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.hPPGFDFJGBC_ != null) {
-        if (hPPGFDFJGBC_ == null) {
-          HPPGFDFJGBC = new global::EggLink.DanhengServer.Proto.NHPPANLMEOK();
+      if (other.energyInfo_ != null) {
+        if (energyInfo_ == null) {
+          EnergyInfo = new global::EggLink.DanhengServer.Proto.RotatorEnergyInfo();
         }
-        HPPGFDFJGBC.MergeFrom(other.HPPGFDFJGBC);
+        EnergyInfo.MergeFrom(other.EnergyInfo);
       }
-      if (other.nIKGIDPMOLM_ != null) {
-        if (nIKGIDPMOLM_ == null) {
-          NIKGIDPMOLM = new global::EggLink.DanhengServer.Proto.AHOOJLHGAIC();
+      if (other.rotaterData_ != null) {
+        if (rotaterData_ == null) {
+          RotaterData = new global::EggLink.DanhengServer.Proto.RotaterData();
         }
-        NIKGIDPMOLM.MergeFrom(other.NIKGIDPMOLM);
+        RotaterData.MergeFrom(other.RotaterData);
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
@@ -264,17 +265,17 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 18: {
-            if (nIKGIDPMOLM_ == null) {
-              NIKGIDPMOLM = new global::EggLink.DanhengServer.Proto.AHOOJLHGAIC();
+            if (rotaterData_ == null) {
+              RotaterData = new global::EggLink.DanhengServer.Proto.RotaterData();
             }
-            input.ReadMessage(NIKGIDPMOLM);
+            input.ReadMessage(RotaterData);
             break;
           }
           case 50: {
-            if (hPPGFDFJGBC_ == null) {
-              HPPGFDFJGBC = new global::EggLink.DanhengServer.Proto.NHPPANLMEOK();
+            if (energyInfo_ == null) {
+              EnergyInfo = new global::EggLink.DanhengServer.Proto.RotatorEnergyInfo();
             }
-            input.ReadMessage(HPPGFDFJGBC);
+            input.ReadMessage(EnergyInfo);
             break;
           }
           case 64: {
@@ -297,17 +298,17 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 18: {
-            if (nIKGIDPMOLM_ == null) {
-              NIKGIDPMOLM = new global::EggLink.DanhengServer.Proto.AHOOJLHGAIC();
+            if (rotaterData_ == null) {
+              RotaterData = new global::EggLink.DanhengServer.Proto.RotaterData();
             }
-            input.ReadMessage(NIKGIDPMOLM);
+            input.ReadMessage(RotaterData);
             break;
           }
           case 50: {
-            if (hPPGFDFJGBC_ == null) {
-              HPPGFDFJGBC = new global::EggLink.DanhengServer.Proto.NHPPANLMEOK();
+            if (energyInfo_ == null) {
+              EnergyInfo = new global::EggLink.DanhengServer.Proto.RotatorEnergyInfo();
             }
-            input.ReadMessage(HPPGFDFJGBC);
+            input.ReadMessage(EnergyInfo);
             break;
           }
           case 64: {
