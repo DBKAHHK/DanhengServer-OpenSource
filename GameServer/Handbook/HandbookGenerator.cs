@@ -95,6 +95,11 @@ namespace EggLink.DanhengServer.Handbook
             {
                 var name = map.TryGetValue(item.ItemName.Hash, out var value) ? value : $"[{item.ItemName.Hash}]";
                 builder.AppendLine(item.ID + ": " + name);
+
+                if (name != $"[{item.ItemName.Hash}]")
+                {
+                    item.Name = name;
+                }
             }
         }
 
@@ -104,6 +109,11 @@ namespace EggLink.DanhengServer.Handbook
             {
                 var name = map.TryGetValue(avatar.AvatarName.Hash, out var value) ? value : $"[{avatar.AvatarName.Hash}]";
                 builder.AppendLine(avatar.AvatarID + ": " + name);
+
+                if (name != $"[{avatar.AvatarName.Hash}]")
+                {
+                    avatar.Name = name;
+                }
             }
         }
 
@@ -131,6 +141,11 @@ namespace EggLink.DanhengServer.Handbook
             {
                 var name = map.TryGetValue(buff.Value.BuffName.Hash, out var value) ? value : $"[{buff.Value.BuffName.Hash}]";
                 builder.AppendLine(buff.Key + ": " + name + " --- Level:" + buff.Value.Lv);
+
+                if (name != $"[{buff.Value.BuffName.Hash}]")
+                {
+                    buff.Value.Name = name;
+                }
             }
         }
 
@@ -140,6 +155,11 @@ namespace EggLink.DanhengServer.Handbook
             {
                 var name = map.TryGetValue(display.MiracleName.Hash, out var value) ? value : $"[{display.MiracleName.Hash}]";
                 builder.AppendLine(display.MiracleID + ": " + name);
+
+                if (name != $"[{display.MiracleName.Hash}]")
+                {
+                    display.Name = name;
+                }
             }
         }
 

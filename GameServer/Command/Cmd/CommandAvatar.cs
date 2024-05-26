@@ -1,5 +1,7 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database;
+using EggLink.DanhengServer.Internationalization;
+using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Server.Packet.Send.Player;
 using System;
 using System.Collections.Generic;
@@ -10,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace EggLink.DanhengServer.Command.Cmd
 {
-    [CommandInfo("avatar", "设定玩家已有角色的属性", "/avatar <talent [id/-1] [level]>/<get [id]>/<rank [id/-1] [rank]>/level [id/-1] [level]")]
+    [CommandInfo("avatar", "Game.Command.Avatar.Desc", "Game.Command.Avatar.Usage")]
     public class CommandAvatar : ICommand
     {
         [CommandMethod("talent")]
@@ -18,12 +20,12 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("玩家不存在");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
                 return;
             }
             if (arg.BasicArgs.Count < 2)
             {
-                arg.SendMsg("参数无效");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.InvalidArguments"));
                 return;
             }
             var Player = arg.Target.Player!;
@@ -32,7 +34,7 @@ namespace EggLink.DanhengServer.Command.Cmd
             var level = arg.GetInt(1);
             if (level < 0 || level > 10)
             {
-                arg.SendMsg("无效行迹等级");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.InvalidLevel", I18nManager.Translate("Word.Talent")));
                 return;
             }
             var player = arg.Target.Player!;
@@ -57,10 +59,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                         });
                     }
                 });
-                arg.SendMsg($"已将全部角色行迹等级设置为 {level}");
-
-                // save
-                DatabaseHelper.Instance?.UpdateInstance(player.AvatarManager.AvatarData);
+                arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AllAvatarsLevelSet", I18nManager.Translate("Word.Talent"), level.ToString()));
 
                 // sync
                 player.SendPacket(new PacketPlayerSyncScNotify(player.AvatarManager.AvatarData.Avatars));
@@ -70,21 +69,18 @@ namespace EggLink.DanhengServer.Command.Cmd
             var avatar = player.AvatarManager!.GetAvatar(avatarId);
             if (avatar == null)
             {
-                arg.SendMsg("角色不存在");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AvatarNotFound"));
                 return;
             }
             avatar.Excel?.SkillTree.ForEach(talent =>
             {
                 avatar.SkillTree![talent.PointID] = Math.Min(level, talent.MaxLevel);
             });
-            
-            // save
-            DatabaseHelper.Instance?.UpdateInstance(player.AvatarManager.AvatarData);
 
             // sync
             player.SendPacket(new PacketPlayerSyncScNotify(avatar));
 
-            arg.SendMsg($"已将 {avatarId} 的行迹等级设置为 {level}");
+            arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AvatarLevelSet", avatar.Excel?.Name ?? avatarId.ToString(), I18nManager.Translate("Word.Talent"), level.ToString()));
         }
 
         [CommandMethod("get")]
@@ -92,18 +88,24 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("玩家不存在");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
                 return;
             }
 
             if (arg.BasicArgs.Count < 1)
             {
-                arg.SendMsg("参数无效");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.InvalidArguments"));
             }
 
             var id = arg.GetInt(0);
-            arg.Target.Player!.AvatarManager!.AddAvatar(id);
-            arg.SendMsg($"已给予角色 {id}");
+            var excel = arg.Target.Player!.AvatarManager!.AddAvatar(id);
+
+            if (excel == null)
+            {
+                arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AvatarFailedGet", id.ToString()));
+                return;
+            }
+            arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AvatarGet", excel.Name ?? id.ToString()));
         }
 
         [CommandMethod("rank")]
@@ -111,20 +113,20 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("玩家不存在");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
                 return;
             }
 
             if (arg.BasicArgs.Count < 2)
             {
-                arg.SendMsg("参数无效");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.InvalidArguments"));
             }
 
             var id = arg.GetInt(0);
             var rank = arg.GetInt(1);
             if (rank < 0 || rank > 6)
             {
-                arg.SendMsg("无效命座");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.InvalidLevel", I18nManager.Translate("Word.Rank")));
                 return;
             }
             if (id == -1)
@@ -133,10 +135,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                 {
                     avatar.Rank = Math.Min(rank, 6);
                 });
-                arg.SendMsg($"已将全部角色命座设置为 {rank}");
-
-                // save
-                DatabaseHelper.Instance?.UpdateInstance(arg.Target.Player!.AvatarManager.AvatarData);
+                arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AllAvatarsLevelSet", I18nManager.Translate("Word.Rank"), rank.ToString()));
 
                 // sync
                 arg.Target.SendPacket(new PacketPlayerSyncScNotify(arg.Target.Player!.AvatarManager.AvatarData.Avatars));
@@ -146,18 +145,15 @@ namespace EggLink.DanhengServer.Command.Cmd
                 var avatar = arg.Target.Player!.AvatarManager!.GetAvatar(id);
                 if (avatar == null)
                 {
-                    arg.SendMsg("角色不存在");
+                    arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AvatarNotFound"));
                     return;
                 }
                 avatar.Rank = Math.Min(rank, 6);
 
-                // save
-                DatabaseHelper.Instance?.UpdateInstance(arg.Target.Player!.AvatarManager.AvatarData);
-
                 // sync
                 arg.Target.SendPacket(new PacketPlayerSyncScNotify(avatar));
 
-                arg.SendMsg($"已将角色 {id} 命座设置为 {rank}");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AvatarLevelSet", avatar.Excel?.Name ?? id.ToString(), I18nManager.Translate("Word.Rank"), rank.ToString()));
             }
         }
 
@@ -166,20 +162,21 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("玩家不存在");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
                 return;
             }
 
             if (arg.BasicArgs.Count < 2)
             {
-                arg.SendMsg("参数无效");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.InvalidArguments"));
+                return;
             }
 
             var id = arg.GetInt(0);
             var level = arg.GetInt(1);
             if (level < 1 || level > 80)
             {
-                arg.SendMsg("无效角色等级");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.InvalidLevel", I18nManager.Translate("Word.Level")));
                 return;
             }
 
@@ -190,10 +187,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                     avatar.Level = Math.Min(level, 80);
                     avatar.Promotion = GameData.GetMinPromotionForLevel(avatar.Level);
                 });
-                arg.SendMsg($"已将全部角色等级设置为 {level}");
-
-                // save
-                DatabaseHelper.Instance?.UpdateInstance(arg.Target.Player!.AvatarManager.AvatarData);
+                arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AllAvatarsLevelSet", I18nManager.Translate("Word.Level"), level.ToString()));
 
                 // sync
                 arg.Target.SendPacket(new PacketPlayerSyncScNotify(arg.Target.Player!.AvatarManager.AvatarData.Avatars));
@@ -203,19 +197,16 @@ namespace EggLink.DanhengServer.Command.Cmd
                 var avatar = arg.Target.Player!.AvatarManager!.GetAvatar(id);
                 if (avatar == null)
                 {
-                    arg.SendMsg("角色不存在");
+                    arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AvatarNotFound"));
                     return;
                 }
                 avatar.Level = Math.Min(level, 80);
                 avatar.Promotion = GameData.GetMinPromotionForLevel(avatar.Level);
 
-                // save
-                DatabaseHelper.Instance?.UpdateInstance(arg.Target.Player!.AvatarManager.AvatarData);
-
                 // sync
                 arg.Target.SendPacket(new PacketPlayerSyncScNotify(avatar));
 
-                arg.SendMsg($"已将 {id} 等级设置为 {level}");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AvatarLevelSet", avatar.Excel?.Name ?? id.ToString(), I18nManager.Translate("Word.Level"), level.ToString()));
             }
         }
     }

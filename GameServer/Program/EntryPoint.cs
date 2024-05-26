@@ -9,6 +9,7 @@ using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using EggLink.DanhengServer.Command;
 using EggLink.DanhengServer.Handbook;
+using EggLink.DanhengServer.Internationalization;
 
 namespace EggLink.DanhengServer.Program
 {
@@ -58,6 +59,18 @@ namespace EggLink.DanhengServer.Program
             } catch (Exception e)
             {
                 logger.Error("Failed to load config", e);
+                Console.ReadLine();
+                return;
+            }
+
+            // Load the language
+            logger.Info("Loading language...");
+            try
+            {
+                I18nManager.LoadLanguage();
+            } catch (Exception e)
+            {
+                logger.Error("Failed to load language", e);
                 Console.ReadLine();
                 return;
             }

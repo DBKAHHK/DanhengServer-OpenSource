@@ -17,6 +17,9 @@ namespace EggLink.DanhengServer.Data.Excel
         [JsonIgnore]
         public HashName MiracleName { get; set; } = new();
 
+        [JsonIgnore]
+        public string? Name { get; set; }
+
         public override int GetId()
         {
             return MiracleID;

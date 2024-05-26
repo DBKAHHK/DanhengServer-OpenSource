@@ -6,12 +6,10 @@ using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Game.Mission.FinishAction;
 using EggLink.DanhengServer.Game.Mission.FinishType;
 using EggLink.DanhengServer.Game.Player;
-using EggLink.DanhengServer.Server.Packet.Send.Avatar;
 using EggLink.DanhengServer.Server.Packet.Send.Mission;
 using EggLink.DanhengServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Util;
-using System.Numerics;
 using System.Reflection;
 
 namespace EggLink.DanhengServer.Game.Mission
@@ -232,6 +230,11 @@ namespace EggLink.DanhengServer.Game.Mission
                     Player.LeaveRaid();
                 }
             }
+
+            if (missionId == 1021301)
+            {
+                Player.LineupManager!.SetExtraLineup(Proto.ExtraLineupType.LineupHeliobus, [1021213]);
+            }
         }
 
         public void FinishSubMission(int missionId)
@@ -332,6 +335,11 @@ namespace EggLink.DanhengServer.Game.Mission
             if (missionId == 100040117 || missionId == 100040118)
             {
                 FinishSubMission(100040119);
+            }
+
+            if (missionId == 102130113)
+            {
+                Player.LineupManager!.SetExtraLineup(Proto.ExtraLineupType.LineupHeliobus, [1021213, 1021205]);
             }
         }
 
@@ -527,7 +535,7 @@ namespace EggLink.DanhengServer.Game.Mission
                 {
                     if (subMission.LevelFloorID == info.FloorId)
                     {
-                        info.SceneMissionInfo.FinishedMainMissionIdList.Add(new Proto.Mission()
+                        info.SceneMissionInfo.MissionList.Add(new Proto.Mission()
                         {
                             Id = (uint)subMission.ID,
                             Status = GetSubMissionStatus(subMission.ID).ToProto(),
@@ -541,10 +549,10 @@ namespace EggLink.DanhengServer.Game.Mission
                     {
                         if (GetMainMissionStatus(mainMission.MainMissionID) == MissionPhaseEnum.Finish)
                         {
-                            info.SceneMissionInfo.MainMissionIdList.Add((uint)mainMission.MainMissionID);
+                            info.SceneMissionInfo.FinishedMainMissionIdList.Add((uint)mainMission.MainMissionID);
                         } else if (GetMainMissionStatus(mainMission.MainMissionID) == MissionPhaseEnum.Doing)
                         {
-                            info.SceneMissionInfo.LCNEHKCKFFO.Add((uint)mainMission.MainMissionID);
+                            info.SceneMissionInfo.RunningMainMissionIdList.Add((uint)mainMission.MainMissionID);
                         }
                         break;  // only one
                     }

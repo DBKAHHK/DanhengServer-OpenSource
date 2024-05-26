@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static RogueTalentReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFSb2d1ZVRhbGVudC5wcm90bxoZUm9ndWVVbmxvY2tQcm9ncmVzcy5wcm90",
-            "bxoXUm9ndWVUYWxlbnRTdGF0dXMucHJvdG8ifgoLUm9ndWVUYWxlbnQSOAoa",
+            "ChFSb2d1ZVRhbGVudC5wcm90bxoXUm9ndWVUYWxlbnRTdGF0dXMucHJvdG8a",
+            "GVJvZ3VlVW5sb2NrUHJvZ3Jlc3MucHJvdG8ifgoLUm9ndWVUYWxlbnQSOAoa",
             "cm9ndWVfdW5sb2NrX3Byb2dyZXNzX2xpc3QYDSADKAsyFC5Sb2d1ZVVubG9j",
             "a1Byb2dyZXNzEiIKBnN0YXR1cxgPIAEoDjISLlJvZ3VlVGFsZW50U3RhdHVz",
             "EhEKCXRhbGVudF9pZBgMIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueUnlockProgressReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTalentStatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTalentStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueUnlockProgressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTalent), global::EggLink.DanhengServer.Proto.RogueTalent.Parser, new[]{ "RogueUnlockProgressList", "Status", "TalentId" }, null, null, null, null)
           }));

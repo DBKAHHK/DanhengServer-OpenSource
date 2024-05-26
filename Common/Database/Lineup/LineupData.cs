@@ -112,7 +112,7 @@ namespace EggLink.DanhengServer.Database.Lineup
             };
             if (LineupType != (int)ExtraLineupType.LineupNone)
             {
-                info.Index = 0;
+                info.Index = (uint)(LineupType + 10);
             }
             if (BaseAvatars?.Find(item => item.BaseAvatarId == LeaderAvatarId) != null)  // find leader,if not exist,set to 0
             {

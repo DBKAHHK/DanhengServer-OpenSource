@@ -34,6 +34,9 @@ namespace EggLink.DanhengServer.Data.Excel
         [JsonIgnore()]
         public string NameKey { get; set; } = "";
 
+        [JsonIgnore]
+        public string? Name;
+
         [JsonIgnore()]
         public AbilityInfo? MazeSkill { get; set; }
         [JsonIgnore()]

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpHZXRTY2VuZU1hcEluZm9TY1JzcC5wcm90bxoTTWF6ZVByb3BTdGF0ZS5w",
-            "cm90bxoSU2NlbmVNYXBJbmZvLnByb3RvGg9NYXplR3JvdXAucHJvdG8aD0No",
-            "ZXN0SW5mby5wcm90byLNAgoUR2V0U2NlbmVNYXBJbmZvU2NSc3ASEAoIZW50",
+            "cm90bxoSU2NlbmVNYXBJbmZvLnByb3RvGg9DaGVzdEluZm8ucHJvdG8aD01h",
+            "emVHcm91cC5wcm90byLNAgoUR2V0U2NlbmVNYXBJbmZvU2NSc3ASEAoIZW50",
             "cnlfaWQYBiABKA0SHAoUdW5sb2NrX3RlbGVwb3J0X2xpc3QYAyADKA0SJgoO",
             "bWF6ZV9wcm9wX2xpc3QYCCADKAsyDi5NYXplUHJvcFN0YXRlEhgKEGN1cl9t",
             "YXBfZW50cnlfaWQYCiABKA0SHgoKY2hlc3RfbGlzdBgOIAMoCzIKLkNoZXN0",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "SkZBTU9KRkhIREwYBCABKA0SDwoHcmV0Y29kZRgBIAEoDUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MazePropStateReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneMapInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazeGroupReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChestInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MazePropStateReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneMapInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChestInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazeGroupReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetSceneMapInfoScRsp), global::EggLink.DanhengServer.Proto.GetSceneMapInfoScRsp.Parser, new[]{ "EntryId", "UnlockTeleportList", "MazePropList", "CurMapEntryId", "ChestList", "LightenSectionList", "MazeGroupList", "SceneMapInfo", "DHDOICCKIFL", "JFAMOJFHHDL", "Retcode" }, null, null, null, null)
           }));

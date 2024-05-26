@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChdDaGVzc1JvZ3VlR2V0SW5mby5wcm90bxoiQ2hlc3NSb2d1ZVF1ZXJ5RGlm",
             "ZmN1bHR5SW5mby5wcm90bxoaQ2hlc3NSb2d1ZVRhbGVudEluZm8ucHJvdG8a",
-            "HUNoZXNzUm9ndWVRdWVyeUFlb25JbmZvLnByb3RvGh1DaGVzc1JvZ3VlUXVl",
-            "cnlEaWNlSW5mby5wcm90byKSAgoRQ2hlc3NSb2d1ZUdldEluZm8SKwoJYWVv",
+            "HUNoZXNzUm9ndWVRdWVyeURpY2VJbmZvLnByb3RvGh1DaGVzc1JvZ3VlUXVl",
+            "cnlBZW9uSW5mby5wcm90byKSAgoRQ2hlc3NSb2d1ZUdldEluZm8SKwoJYWVv",
             "bl9pbmZvGA0gASgLMhguQ2hlc3NSb2d1ZVF1ZXJ5QWVvbkluZm8SMAoRcm9n",
             "dWVfdGFsZW50X2luZm8YByABKAsyFS5DaGVzc1JvZ3VlVGFsZW50SW5mbxI8",
             "ChVyb2d1ZV9kaWZmaWN1bHR5X2luZm8YBiABKAsyHS5DaGVzc1JvZ3VlUXVl",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "Q2hlc3NSb2d1ZVF1ZXJ5RGljZUluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueQueryDiffcultyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueTalentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueQueryAeonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueQueryDiceInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueQueryDiffcultyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueTalentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueQueryDiceInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueQueryAeonInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueGetInfo), global::EggLink.DanhengServer.Proto.ChessRogueGetInfo.Parser, new[]{ "AeonInfo", "RogueTalentInfo", "RogueDifficultyInfo", "ExploredAreaIdList", "AreaIdList", "DiceInfo" }, null, null, null, null)
           }));

@@ -25,11 +25,6 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Scene
                 player.LastPos = player.Data.Pos;
                 player.LastRot = player.Data.Rot;
 
-                raidConfig.MainMissionIDList.ForEach(missionId =>
-                {
-                    player.MissionManager!.ReAcceptMainMission(missionId);
-                });
-
                 var entranceId = 0;
                 if (raidConfig.RaidID == 1)
                 {
@@ -65,6 +60,12 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Scene
                     player.EnterScene(entranceId, 0, true);
                     connection.SendPacket(new PacketRaidInfoNotify((uint)raidConfig.RaidID));
                 }
+
+                raidConfig.MainMissionIDList.ForEach(missionId =>
+                {
+                    player.MissionManager!.ReAcceptMainMission(missionId);
+                });
+
                 connection.SendPacket(CmdIds.StartRaidScRsp);
             }
         }

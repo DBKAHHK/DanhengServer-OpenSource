@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using EggLink.DanhengServer.Internationalization;
+using System.Collections.Generic;
 using System.Text;
 
 namespace EggLink.DanhengServer.Command.Cmd
 {
-    [CommandInfo("mission", "获取正在进行的任务或完成任务", "/mission <finish [submissionId]>/<running>/<reaccept [missionId]>")]
+    [CommandInfo("mission", "Game.Command.Mission.Desc", "Game.Command.Mission.Usage")]
     public class CommandMission : ICommand
     {
         [CommandMethod("0 pass")]
@@ -11,12 +12,13 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("未找到玩家。");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
                 return;
             }
             var mission = arg.Target!.Player!.MissionManager!;
+            var count = mission.GetRunningSubMissionIdList().Count;
             mission.GetRunningSubMissionIdList().ForEach(mission.FinishSubMission);
-            arg.SendMsg("已完成所有正在进行的任务");
+            arg.SendMsg(I18nManager.Translate("Game.Command.Mission.AllRunningMissionsFinished", count.ToString()));
         }
 
         [CommandMethod("0 finish")]
@@ -24,25 +26,25 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("未找到玩家。");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
                 return;
             }
 
             if (arg.BasicArgs.Count < 1)
             {
-                arg.SendMsg("请输入任务ID");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.InvalidArguments"));
                 return;
             }
 
             if (!int.TryParse(arg.BasicArgs[0], out var missionId))
             {
-                arg.SendMsg("无效的任务ID");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Mission.InvalidMissionId"));
                 return;
             }
 
             var mission = arg.Target!.Player!.MissionManager!;
             mission.FinishSubMission(missionId);
-            arg.SendMsg("任务已完成");
+            arg.SendMsg(I18nManager.Translate("Game.Command.Mission.MissionFinished", missionId.ToString()));
         }
 
         [CommandMethod("0 running")]
@@ -50,7 +52,7 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("未找到玩家");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
                 return;
             }
 
@@ -58,11 +60,11 @@ namespace EggLink.DanhengServer.Command.Cmd
             var runningMissions = mission.GetRunningSubMissionList();
             if (runningMissions.Count == 0)
             {
-                arg.SendMsg("没有正在进行的任务");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Mission.NoRunningMissions"));
                 return;
             }
 
-            arg.SendMsg("正在进行的任务：");
+            arg.SendMsg(I18nManager.Translate("Game.Command.Mission.RunningMissions"));
             Dictionary<int, List<int>> missionMap = [];
 
             foreach (var m in runningMissions)
@@ -81,7 +83,7 @@ namespace EggLink.DanhengServer.Command.Cmd
 
             foreach (var list in missionMap)
             {
-                arg.SendMsg($"主任务 {list.Key}：");
+                arg.SendMsg($"{I18nManager.Translate("Game.Command.Mission.MainMission")} {list.Key}：");
                 var sb = new StringBuilder();
                 foreach (var id in list.Value)
                 {
@@ -106,7 +108,7 @@ namespace EggLink.DanhengServer.Command.Cmd
 
             if (morePossibleStuckIds.Count > 0)
             {
-                arg.SendMsg("可能被卡住的任务ID如下：");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Mission.PossibleStuckMissions"));
 
                 var sb = new StringBuilder();
                 foreach (var id in morePossibleStuckIds)
@@ -120,7 +122,7 @@ namespace EggLink.DanhengServer.Command.Cmd
             }
             else if (possibleStuckIds.Count > 0)
             {
-                arg.SendMsg("可能被卡住的任务ID如下：");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Mission.PossibleStuckMissions"));
 
                 var sb = new StringBuilder();
                 foreach (var id in possibleStuckIds)
@@ -139,25 +141,25 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("玩家不存在");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
                 return;
             }
 
             if (arg.BasicArgs.Count < 1)
             {
-                arg.SendMsg("请输入主任务ID");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.InvalidArguments"));
                 return;
             }
 
             if (!int.TryParse(arg.BasicArgs[0], out var missionId))
             {
-                arg.SendMsg("无效的任务ID");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Mission.InvalidMissionId"));
                 return;
             }
 
             var mission = arg.Target!.Player!.MissionManager!;
             mission.ReAcceptMainMission(missionId);
-            arg.SendMsg($"已重新接取ID为 {missionId} 的任务");
+            arg.SendMsg(I18nManager.Translate("Game.Command.Mission.MissionReAccepted", missionId.ToString()));
         }
 
         [CommandMethod("0 finishmain")]
@@ -165,25 +167,25 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("玩家不存在");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
                 return;
             }
 
             if (arg.BasicArgs.Count < 1)
             {
-                arg.SendMsg("请输入主任务ID");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.InvalidArguments"));
                 return;
             }
 
             if (!int.TryParse(arg.BasicArgs[0], out var missionId))
             {
-                arg.SendMsg("无效的任务ID");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Mission.InvalidMissionId"));
                 return;
             }
 
             var mission = arg.Target!.Player!.MissionManager!;
             mission.FinishMainMission(missionId);
-            arg.SendMsg($"已完成ID为 {missionId} 的任务");
+            arg.SendMsg(I18nManager.Translate("Game.Command.Mission.MissionFinished", missionId.ToString()));
         }
     }
 }

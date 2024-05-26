@@ -25,16 +25,16 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFFbnRlck1hcFJvdGF0aW9uUmVnaW9uU2NSc3AucHJvdG8aEU5IUFBBTkxN",
-            "RU9LLnByb3RvGhBNb3Rpb25JbmZvLnByb3RvIrQBChtFbnRlck1hcFJvdGF0",
+            "RU9LLnByb3RvGhBNb3Rpb25JbmZvLnByb3RvIrEBChtFbnRlck1hcFJvdGF0",
             "aW9uUmVnaW9uU2NSc3ASGwoGbW90aW9uGAQgASgLMgsuTW90aW9uSW5mbxIP",
-            "CgdyZXRjb2RlGAUgASgNEhMKC0JJQUlIQ0xHS0dNGAggASgNEhMKC01OTkhQ",
-            "SkdMT0tNGAkgASgNEiEKC0hQUEdGREZKR0JDGAwgASgLMgwuTkhQUEFOTE1F",
-            "T0sSGgoSY2xpZW50X3Bvc192ZXJzaW9uGA4gASgNQh6qAhtFZ2dMaW5rLkRh",
-            "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "CgdyZXRjb2RlGAUgASgNEhAKCHJvdGF0aW9uGAggASgNEhMKC01OTkhQSkdM",
+            "T0tNGAkgASgNEiEKC0hQUEdGREZKR0JDGAwgASgLMgwuTkhQUEFOTE1FT0sS",
+            "GgoSY2xpZW50X3Bvc192ZXJzaW9uGA4gASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NHPPANLMEOKReflection.Descriptor, global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EnterMapRotationRegionScRsp), global::EggLink.DanhengServer.Proto.EnterMapRotationRegionScRsp.Parser, new[]{ "Motion", "Retcode", "BIAIHCLGKGM", "MNNHPJGLOKM", "HPPGFDFJGBC", "ClientPosVersion" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EnterMapRotationRegionScRsp), global::EggLink.DanhengServer.Proto.EnterMapRotationRegionScRsp.Parser, new[]{ "Motion", "Retcode", "Rotation", "MNNHPJGLOKM", "HPPGFDFJGBC", "ClientPosVersion" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,7 +78,7 @@ namespace EggLink.DanhengServer.Proto {
     public EnterMapRotationRegionScRsp(EnterMapRotationRegionScRsp other) : this() {
       motion_ = other.motion_ != null ? other.motion_.Clone() : null;
       retcode_ = other.retcode_;
-      bIAIHCLGKGM_ = other.bIAIHCLGKGM_;
+      rotation_ = other.rotation_;
       mNNHPJGLOKM_ = other.mNNHPJGLOKM_;
       hPPGFDFJGBC_ = other.hPPGFDFJGBC_ != null ? other.hPPGFDFJGBC_.Clone() : null;
       clientPosVersion_ = other.clientPosVersion_;
@@ -115,15 +115,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "BIAIHCLGKGM" field.</summary>
-    public const int BIAIHCLGKGMFieldNumber = 8;
-    private uint bIAIHCLGKGM_;
+    /// <summary>Field number for the "rotation" field.</summary>
+    public const int RotationFieldNumber = 8;
+    private uint rotation_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BIAIHCLGKGM {
-      get { return bIAIHCLGKGM_; }
+    public uint Rotation {
+      get { return rotation_; }
       set {
-        bIAIHCLGKGM_ = value;
+        rotation_ = value;
       }
     }
 
@@ -180,7 +180,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (!object.Equals(Motion, other.Motion)) return false;
       if (Retcode != other.Retcode) return false;
-      if (BIAIHCLGKGM != other.BIAIHCLGKGM) return false;
+      if (Rotation != other.Rotation) return false;
       if (MNNHPJGLOKM != other.MNNHPJGLOKM) return false;
       if (!object.Equals(HPPGFDFJGBC, other.HPPGFDFJGBC)) return false;
       if (ClientPosVersion != other.ClientPosVersion) return false;
@@ -193,7 +193,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (motion_ != null) hash ^= Motion.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (BIAIHCLGKGM != 0) hash ^= BIAIHCLGKGM.GetHashCode();
+      if (Rotation != 0) hash ^= Rotation.GetHashCode();
       if (MNNHPJGLOKM != 0) hash ^= MNNHPJGLOKM.GetHashCode();
       if (hPPGFDFJGBC_ != null) hash ^= HPPGFDFJGBC.GetHashCode();
       if (ClientPosVersion != 0) hash ^= ClientPosVersion.GetHashCode();
@@ -223,9 +223,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
-      if (BIAIHCLGKGM != 0) {
+      if (Rotation != 0) {
         output.WriteRawTag(64);
-        output.WriteUInt32(BIAIHCLGKGM);
+        output.WriteUInt32(Rotation);
       }
       if (MNNHPJGLOKM != 0) {
         output.WriteRawTag(72);
@@ -257,9 +257,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
-      if (BIAIHCLGKGM != 0) {
+      if (Rotation != 0) {
         output.WriteRawTag(64);
-        output.WriteUInt32(BIAIHCLGKGM);
+        output.WriteUInt32(Rotation);
       }
       if (MNNHPJGLOKM != 0) {
         output.WriteRawTag(72);
@@ -289,8 +289,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (BIAIHCLGKGM != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BIAIHCLGKGM);
+      if (Rotation != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Rotation);
       }
       if (MNNHPJGLOKM != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MNNHPJGLOKM);
@@ -322,8 +322,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.BIAIHCLGKGM != 0) {
-        BIAIHCLGKGM = other.BIAIHCLGKGM;
+      if (other.Rotation != 0) {
+        Rotation = other.Rotation;
       }
       if (other.MNNHPJGLOKM != 0) {
         MNNHPJGLOKM = other.MNNHPJGLOKM;
@@ -364,7 +364,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 64: {
-            BIAIHCLGKGM = input.ReadUInt32();
+            Rotation = input.ReadUInt32();
             break;
           }
           case 72: {
@@ -409,7 +409,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 64: {
-            BIAIHCLGKGM = input.ReadUInt32();
+            Rotation = input.ReadUInt32();
             break;
           }
           case 72: {

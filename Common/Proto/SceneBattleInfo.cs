@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static SceneBattleInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVTY2VuZUJhdHRsZUluZm8ucHJvdG8aFkJhdHRsZVRhcmdldExpc3QucHJv",
-            "dG8aEEJhdHRsZUJ1ZmYucHJvdG8aEkJhdHRsZUF2YXRhci5wcm90bxoWU2Nl",
-            "bmVNb25zdGVyV2F2ZS5wcm90bxobQmF0dGxlRXZlbnRCYXR0bGVJbmZvLnBy",
-            "b3RvGhFQTEpLUElDSEFKUC5wcm90bxobRXZvbHZlQnVpbGRCYXR0bGVJbmZv",
+            "ChVTY2VuZUJhdHRsZUluZm8ucHJvdG8aFlNjZW5lTW9uc3RlcldhdmUucHJv",
+            "dG8aEVBMSktQSUNIQUpQLnByb3RvGhZCYXR0bGVUYXJnZXRMaXN0LnByb3Rv",
+            "GhtFdm9sdmVCdWlsZEJhdHRsZUluZm8ucHJvdG8aG0JhdHRsZUV2ZW50QmF0",
+            "dGxlSW5mby5wcm90bxoQQmF0dGxlQnVmZi5wcm90bxoSQmF0dGxlQXZhdGFy",
             "LnByb3RvIrEECg9TY2VuZUJhdHRsZUluZm8SEwoLSEtMRUtHSUJFQ0gYCyAB",
             "KA0SEQoJYmF0dGxlX2lkGAMgASgNEi0KDGJhdHRsZV9ldmVudBibCSADKAsy",
             "Fi5CYXR0bGVFdmVudEJhdHRsZUluZm8SKQoSYmF0dGxlX2F2YXRhcl9saXN0",
@@ -43,7 +43,7 @@ namespace EggLink.DanhengServer.Proto {
             "ZRgCIAEoCzIRLkJhdHRsZVRhcmdldExpc3Q6AjgBQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BattleTargetListReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleBuffReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleAvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneMonsterWaveReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleEventBattleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PLJKPICHAJPReflection.Descriptor, global::EggLink.DanhengServer.Proto.EvolveBuildBattleInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneMonsterWaveReflection.Descriptor, global::EggLink.DanhengServer.Proto.PLJKPICHAJPReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleTargetListReflection.Descriptor, global::EggLink.DanhengServer.Proto.EvolveBuildBattleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleEventBattleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleBuffReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleAvatarReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneBattleInfo), global::EggLink.DanhengServer.Proto.SceneBattleInfo.Parser, new[]{ "HKLEKGIBECH", "BattleId", "BattleEvent", "BattleAvatarList", "FEMLOIIPHOP", "IFDMECJOGPJ", "BuffList", "IKIJNJOPMOB", "LogicRandomSeed", "RoundsLimit", "MonsterWaveList", "StageId", "WorldLevel", "BattleTargetInfo" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));

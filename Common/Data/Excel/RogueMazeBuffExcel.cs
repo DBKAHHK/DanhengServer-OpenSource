@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,9 @@ namespace EggLink.DanhengServer.Data.Excel
         public int Lv { get; set; }
         public int LvMax { get; set; }
         public HashName BuffName { get; set; } = new();
+
+        [JsonIgnore]
+        public string? Name;
 
         public override int GetId()
         {

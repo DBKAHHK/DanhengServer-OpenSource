@@ -2,12 +2,13 @@
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Game.Scene.Entity;
+using EggLink.DanhengServer.Internationalization;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Server.Packet.Send.Player;
 
 namespace EggLink.DanhengServer.Command.Cmd
 {
-    [CommandInfo("unlockall", "Unlock all the things in that category", "/unlockall <mission/scene>")]
+    [CommandInfo("unlockall", "Game.Command.UnlockAll.Desc", "Game.Command.UnlockAll.Usage")]
     public class CommandUnlockAll : ICommand
     {
         [CommandMethod("0 mission")]
@@ -15,7 +16,7 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("Player not found!");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
                 return;
             }
             var player = arg.Target!.Player!;
@@ -42,7 +43,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                 player.AvatarManager!.GetHero()!.HeroId = 8002;
             }
 
-            arg.SendMsg("All missions unlocked!");
+            arg.SendMsg(I18nManager.Translate("Game.Command.UnlockAll.AllMissionsUnlocked"));
             arg.Target!.Player!.SendPacket(new PacketPlayerKickOutScNotify());
             arg.Target!.Stop();
         }

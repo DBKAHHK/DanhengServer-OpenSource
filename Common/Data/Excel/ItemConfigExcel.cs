@@ -30,6 +30,9 @@ namespace EggLink.DanhengServer.Data.Excel
         [JsonIgnore]
         public int Exp { get; set; }
 
+        [JsonIgnore]
+        public string? Name { get; set; }
+
         public override int GetId()
         {
             return ID;

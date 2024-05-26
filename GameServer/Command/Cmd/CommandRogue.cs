@@ -1,6 +1,7 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Game.Rogue.Scene.Entity;
+using EggLink.DanhengServer.Internationalization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace EggLink.DanhengServer.Command.Cmd
 {
-    [CommandInfo("rogue", "Manage the resource in rogue", "/rogue <money [money]>/<buff [id/-1]>/<miracle [id]>/<enhance [id/-1]>/<unstuck>")]
+    [CommandInfo("rogue", "Game.Command.Rogue.Desc", "Game.Command.Rogue.Usage")]
     public class CommandRogue : ICommand
     {
         [CommandMethod("0 money")]
@@ -17,12 +18,12 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("Player not found");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
                 return;
             }
             var count = arg.GetInt(0);
             arg.Target.Player!.RogueManager!.GetRogueInstance()?.GainMoney(count);
-            arg.SendMsg($"Player has gained {count} money");
+            arg.SendMsg(I18nManager.Translate("Game.Command.Rogue.PlayerGainedMoney", count.ToString()));
         }
 
         [CommandMethod("0 buff")]
@@ -30,10 +31,11 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("Player not found");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
                 return;
             }
             var id = arg.GetInt(0);
+
             if (id == -1)
             {
                 var buffList = new List<RogueBuffExcel>();
@@ -43,12 +45,20 @@ namespace EggLink.DanhengServer.Command.Cmd
                     buffList.Add(buff);
                 }
                 arg.Target.Player!.RogueManager!.GetRogueInstance()?.AddBuffList(buffList);
-                arg.SendMsg("Player has gained all buffs");
+
+                arg.SendMsg(I18nManager.Translate("Game.Command.Rogue.PlayerGainedAllItems", I18nManager.Translate("Word.Buff")));
             }
             else
             {
-                arg.Target.Player!.RogueManager!.GetRogueInstance()?.AddBuff(id);
-                arg.SendMsg($"Player has gained buff {id}");
+                GameData.RogueMazeBuffData.TryGetValue(id, out var buff);
+                if (buff == null)
+                {
+                    arg.SendMsg(I18nManager.Translate("Game.Command.Rogue.ItemNotFound", I18nManager.Translate("Word.Buff")));
+                    return;
+                }
+                arg.Target.Player!.RogueManager!.GetRogueInstance()?.AddBuff(buff.ID, buff.Lv);
+
+                arg.SendMsg(I18nManager.Translate("Game.Command.Rogue.PlayerGainedItem", I18nManager.Translate("Word.Buff"), buff.Name ?? id.ToString()));
             }
         }
 
@@ -57,14 +67,19 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("Player not found");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
                 return;
             }
             var id = arg.GetInt(0);
-            
+
+            GameData.RogueMiracleData.TryGetValue(id, out var miracle);
+            if (miracle == null)
+            {
+                arg.SendMsg(I18nManager.Translate("Game.Command.Rogue.ItemNotFound", I18nManager.Translate("Word.Miracle")));
+                return;
+            }
             arg.Target.Player!.RogueManager!.GetRogueInstance()?.AddMiracle(id);
-            arg.SendMsg($"Player has gained miracle {id}");
-            
+            arg.SendMsg(I18nManager.Translate("Game.Command.Rogue.PlayerGainedItem", I18nManager.Translate("Word.Miracle"), miracle.Name ?? id.ToString()));
         }
 
         [CommandMethod("0 enhance")]
@@ -72,7 +87,7 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("Player not found");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
                 return;
             }
             var id = arg.GetInt(0);
@@ -82,12 +97,18 @@ namespace EggLink.DanhengServer.Command.Cmd
                 {
                     arg.Target.Player!.RogueManager!.GetRogueInstance()?.EnhanceBuff(enhance.MazeBuffID);
                 }
-                arg.SendMsg("Player has gained all enhances");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Rogue.PlayerEnhancedAllBuffs"));
             }
             else
             {
-                arg.Target.Player!.RogueManager!.GetRogueInstance()?.EnhanceBuff(id);
-                arg.SendMsg($"Player has gained enhance {id}");
+                GameData.RogueMazeBuffData.TryGetValue(id, out var buff);
+                if (buff == null)
+                {
+                    arg.SendMsg(I18nManager.Translate("Game.Command.Rogue.ItemNotFound", I18nManager.Translate("Word.Buff")));
+                    return;
+                }
+                arg.Target.Player!.RogueManager!.GetRogueInstance()?.EnhanceBuff(buff.ID);
+                arg.SendMsg(I18nManager.Translate("Game.Command.Rogue.PlayerEnhancedBuff", buff.Name ?? id.ToString()));
             }
         }
 
@@ -96,7 +117,7 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("Player not found");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
                 return;
             }
 
@@ -112,7 +133,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                 }
             }
 
-            arg.SendMsg("Player has been unstuck");
+            arg.SendMsg(I18nManager.Translate("Game.Command.Rogue.PlayerUnstuck"));
         }
     }
 }

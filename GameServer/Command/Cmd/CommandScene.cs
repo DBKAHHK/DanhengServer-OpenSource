@@ -1,5 +1,6 @@
 ﻿using EggLink.DanhengServer.Enums.Scene;
 using EggLink.DanhengServer.Game.Scene.Entity;
+using EggLink.DanhengServer.Internationalization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace EggLink.DanhengServer.Command.Cmd
 {
-    [CommandInfo("scene", "", "")]
+    [CommandInfo("scene", "Game.Command.Scene.Desc", "Game.Command.Scene.Usage")]
     public class CommandScene : ICommand
     {
         [CommandMethod("0 group")]
@@ -16,7 +17,7 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("Player not found");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
                 return;
             }
             var scene = arg.Target!.Player!.SceneInstance!;
@@ -28,7 +29,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                     loadedGroup.Add(group.Value.GroupID);
                 }
             }
-            arg.SendMsg($"Loaded groups: {string.Join(", ", loadedGroup)}");
+            arg.SendMsg(I18nManager.Translate("Game.Command.Scene.LoadedGroups", string.Join(", ", loadedGroup)));
         }
 
         [CommandMethod("0 prop")]
@@ -36,7 +37,7 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("Player not found");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
                 return;
             }
             var scene = arg.Target!.Player!.SceneInstance!;
@@ -51,11 +52,11 @@ namespace EggLink.DanhengServer.Command.Cmd
             }
             if (prop == null)
             {
-                arg.SendMsg("Prop not found");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Scene.PropNotFound"));
                 return;
             }
             prop.SetState((PropStateEnum)arg.GetInt(2));
-            arg.SendMsg($"Prop: {prop.EntityID} has been set to {(PropStateEnum)arg.GetInt(2)}");
+            arg.SendMsg(I18nManager.Translate("Game.Command.Scene.PropStateChanged", prop.PropInfo.ID.ToString(), prop.State.ToString()));
         }
 
         [CommandMethod("0 remove")]
@@ -63,18 +64,18 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("Player not found");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
                 return;
             }
             var scene = arg.Target!.Player!.SceneInstance!;
             scene.Entities.TryGetValue(arg.GetInt(0), out var entity);
             if (entity == null)
             {
-                arg.SendMsg("Entity not found");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Scene.EntityNotFound"));
                 return;
             }
             scene.RemoveEntity(entity);
-            arg.SendMsg($"Entity {entity.EntityID} has been removed");
+            arg.SendMsg(I18nManager.Translate("Game.Command.Scene.EntityRemoved", entity.EntityID.ToString()));
         }
 
         [CommandMethod("0 unlockall")]
@@ -82,7 +83,7 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("Player not found");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
                 return;
             }
             var scene = arg.Target!.Player!.SceneInstance!;
@@ -94,25 +95,26 @@ namespace EggLink.DanhengServer.Command.Cmd
                         prop.SetState(PropStateEnum.Open);
                 }
             }
-            arg.SendMsg("All props have been unlocked");
+            arg.SendMsg(I18nManager.Translate("Game.Command.Scene.AllPropsUnlocked"));
         }
 
-        [CommandMethod("0 move")]
+        [CommandMethod("0 change")]
         public void ChangeScene(CommandArg arg)
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("Player not found");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
                 return;
             }
             if (arg.GetInt(0) == 0)
             {
-                arg.SendMsg("Invalid scene ID");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.InvalidArguments"));
                 return;
             }
 
             var player = arg.Target!.Player!;
             player.EnterScene(arg.GetInt(0), 0, true);
+            arg.SendMsg(I18nManager.Translate("Game.Command.Scene.SceneChanged", arg.GetInt(0).ToString()));
         }
 
         [CommandMethod("0 reload")]
@@ -120,12 +122,13 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("Player not found");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
                 return;
             }
 
             var player = arg.Target!.Player!;
             player.EnterScene(player.Data.EntryId, 0, true);
+            arg.SendMsg(I18nManager.Translate("Game.Command.Scene.SceneReloaded"));
         }
     }
 }

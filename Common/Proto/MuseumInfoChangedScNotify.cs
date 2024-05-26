@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9NdXNldW1JbmZvQ2hhbmdlZFNjTm90aWZ5LnByb3RvGhFOT0ZKUEdNTklF",
-            "Ty5wcm90bxoRS01IQkNES05KS04ucHJvdG8aEURFSE5ISkZETENELnByb3Rv",
+            "Ty5wcm90bxoRREVITkhKRkRMQ0QucHJvdG8aEUtNSEJDREtOSktOLnByb3Rv",
             "GhFCTENLTUhDT05LUC5wcm90byLWAgoZTXVzZXVtSW5mb0NoYW5nZWRTY05v",
             "dGlmeRITCgtLREZNSEJKTEZPShgJIAEoDRILCgNleHAYByABKA0SIQoLRFBG",
             "Q0dHQ0pFQ0IYCCABKAsyDC5CTENLTUhDT05LUBINCgVsZXZlbBgPIAEoDRIT",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "QUVJQ09DRUMYCyADKA0SIQoLUE5ORUxQSU5CUEYYAiADKAsyDC5OT0ZKUEdN",
             "TklFT0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NOFJPGMNIEOReflection.Descriptor, global::EggLink.DanhengServer.Proto.KMHBCDKNJKNReflection.Descriptor, global::EggLink.DanhengServer.Proto.DEHNHJFDLCDReflection.Descriptor, global::EggLink.DanhengServer.Proto.BLCKMHCONKPReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NOFJPGMNIEOReflection.Descriptor, global::EggLink.DanhengServer.Proto.DEHNHJFDLCDReflection.Descriptor, global::EggLink.DanhengServer.Proto.KMHBCDKNJKNReflection.Descriptor, global::EggLink.DanhengServer.Proto.BLCKMHCONKPReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MuseumInfoChangedScNotify), global::EggLink.DanhengServer.Proto.MuseumInfoChangedScNotify.Parser, new[]{ "KDFMHBJLFOJ", "Exp", "DPFCGGCJECB", "Level", "BEPLHBPBLIO", "DPIJBDHHOLO", "HNPCPKFPHGB", "EOHMKDPIENI", "OEDMKNLGBCP", "JGAOMNEKGDK", "ODBGLPNINJM", "HGEAEICOCEC", "PNNELPINBPF" }, null, null, null, null)
           }));

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9Sb2d1ZUNvbW1vbkJ1ZmZTZWxlY3RJbmZvLnByb3RvGhVSb2d1ZUNvbW1v",
-            "bkJ1ZmYucHJvdG8aEkl0ZW1Db3N0RGF0YS5wcm90bxolUm9ndWVDb21tb25C",
-            "dWZmU2VsZWN0U291cmNlVHlwZS5wcm90byKiAwoZUm9ndWVDb21tb25CdWZm",
+            "bkJ1ZmYucHJvdG8aJVJvZ3VlQ29tbW9uQnVmZlNlbGVjdFNvdXJjZVR5cGUu",
+            "cHJvdG8aEkl0ZW1Db3N0RGF0YS5wcm90byKiAwoZUm9ndWVDb21tb25CdWZm",
             "U2VsZWN0SW5mbxIqChNyb2xsX2J1ZmZfY29zdF9kYXRhGA4gASgLMg0uSXRl",
             "bUNvc3REYXRhEhYKDnNvdXJjZV9oaW50X2lkGAogASgNEhgKEHNvdXJjZV9j",
             "dXJfY291bnQYByABKA0SGwoTcm9sbF9idWZmX21heF9jb3VudBgCIAEoDRIa",
@@ -38,7 +38,7 @@ namespace EggLink.DanhengServer.Proto {
             "eXBlEiQKHGhhbmRib29rX3VubG9ja19idWZmX2lkX2xpc3QYCCADKA1CHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonBuffReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonBuffReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectInfo), global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectInfo.Parser, new[]{ "RollBuffCostData", "SourceHintId", "SourceCurCount", "RollBuffMaxCount", "SourceTotalCount", "CanRoll", "FirstBuffTypeList", "RollBuffCount", "RollBuffFreeCount", "SelectBuffList", "SourceType", "HandbookUnlockBuffIdList" }, null, null, null, null)
           }));

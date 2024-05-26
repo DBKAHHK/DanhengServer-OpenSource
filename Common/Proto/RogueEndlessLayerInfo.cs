@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static RogueEndlessLayerInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtSb2d1ZUVuZGxlc3NMYXllckluZm8ucHJvdG8ivQEKFVJvZ3VlRW5kbGVz",
-            "c0xheWVySW5mbxITCgtGQklCTU5NQ0pERBgIIAEoCBITCgtOQ0xGRkpPTU5P",
-            "QhgPIAEoDRITCgtNRkpBTkNQTkNLThgKIAEoDRITCgtNT0hMT0VBS05NTBgC",
-            "IAEoDRITCgtBQkFOS0lPRUtDSRgMIAEoDRIRCgliYXR0bGVfaWQYBSABKA0S",
-            "EwoLQkJNQ1BPTUNKT00YCSABKA0SEwoLRkNKUE1HTk9IR0UYBCABKA1CHqoC",
-            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChtSb2d1ZUVuZGxlc3NMYXllckluZm8ucHJvdG8iuwEKFVJvZ3VlRW5kbGVz",
+            "c0xheWVySW5mbxIRCglpc19yb3RhdGUYCCABKAgSEwoLTkNMRkZKT01OT0IY",
+            "DyABKA0SEwoLTUZKQU5DUE5DS04YCiABKA0SEwoLTU9ITE9FQUtOTUwYAiAB",
+            "KA0SEwoLQUJBTktJT0VLQ0kYDCABKA0SEQoJYmF0dGxlX2lkGAUgASgNEhMK",
+            "C0JCTUNQT01DSk9NGAkgASgNEhMKC0ZDSlBNR05PSEdFGAQgASgNQh6qAhtF",
+            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueEndlessLayerInfo), global::EggLink.DanhengServer.Proto.RogueEndlessLayerInfo.Parser, new[]{ "FBIBMNMCJDD", "NCLFFJOMNOB", "MFJANCPNCKN", "MOHLOEAKNML", "ABANKIOEKCI", "BattleId", "BBMCPOMCJOM", "FCJPMGNOHGE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueEndlessLayerInfo), global::EggLink.DanhengServer.Proto.RogueEndlessLayerInfo.Parser, new[]{ "IsRotate", "NCLFFJOMNOB", "MFJANCPNCKN", "MOHLOEAKNML", "ABANKIOEKCI", "BattleId", "BBMCPOMCJOM", "FCJPMGNOHGE" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueEndlessLayerInfo(RogueEndlessLayerInfo other) : this() {
-      fBIBMNMCJDD_ = other.fBIBMNMCJDD_;
+      isRotate_ = other.isRotate_;
       nCLFFJOMNOB_ = other.nCLFFJOMNOB_;
       mFJANCPNCKN_ = other.mFJANCPNCKN_;
       mOHLOEAKNML_ = other.mOHLOEAKNML_;
@@ -92,15 +92,15 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueEndlessLayerInfo(this);
     }
 
-    /// <summary>Field number for the "FBIBMNMCJDD" field.</summary>
-    public const int FBIBMNMCJDDFieldNumber = 8;
-    private bool fBIBMNMCJDD_;
+    /// <summary>Field number for the "is_rotate" field.</summary>
+    public const int IsRotateFieldNumber = 8;
+    private bool isRotate_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool FBIBMNMCJDD {
-      get { return fBIBMNMCJDD_; }
+    public bool IsRotate {
+      get { return isRotate_; }
       set {
-        fBIBMNMCJDD_ = value;
+        isRotate_ = value;
       }
     }
 
@@ -203,7 +203,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FBIBMNMCJDD != other.FBIBMNMCJDD) return false;
+      if (IsRotate != other.IsRotate) return false;
       if (NCLFFJOMNOB != other.NCLFFJOMNOB) return false;
       if (MFJANCPNCKN != other.MFJANCPNCKN) return false;
       if (MOHLOEAKNML != other.MOHLOEAKNML) return false;
@@ -218,7 +218,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (FBIBMNMCJDD != false) hash ^= FBIBMNMCJDD.GetHashCode();
+      if (IsRotate != false) hash ^= IsRotate.GetHashCode();
       if (NCLFFJOMNOB != 0) hash ^= NCLFFJOMNOB.GetHashCode();
       if (MFJANCPNCKN != 0) hash ^= MFJANCPNCKN.GetHashCode();
       if (MOHLOEAKNML != 0) hash ^= MOHLOEAKNML.GetHashCode();
@@ -256,9 +256,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteUInt32(BattleId);
       }
-      if (FBIBMNMCJDD != false) {
+      if (IsRotate != false) {
         output.WriteRawTag(64);
-        output.WriteBool(FBIBMNMCJDD);
+        output.WriteBool(IsRotate);
       }
       if (BBMCPOMCJOM != 0) {
         output.WriteRawTag(72);
@@ -298,9 +298,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteUInt32(BattleId);
       }
-      if (FBIBMNMCJDD != false) {
+      if (IsRotate != false) {
         output.WriteRawTag(64);
-        output.WriteBool(FBIBMNMCJDD);
+        output.WriteBool(IsRotate);
       }
       if (BBMCPOMCJOM != 0) {
         output.WriteRawTag(72);
@@ -328,7 +328,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (FBIBMNMCJDD != false) {
+      if (IsRotate != false) {
         size += 1 + 1;
       }
       if (NCLFFJOMNOB != 0) {
@@ -364,8 +364,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.FBIBMNMCJDD != false) {
-        FBIBMNMCJDD = other.FBIBMNMCJDD;
+      if (other.IsRotate != false) {
+        IsRotate = other.IsRotate;
       }
       if (other.NCLFFJOMNOB != 0) {
         NCLFFJOMNOB = other.NCLFFJOMNOB;
@@ -416,7 +416,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 64: {
-            FBIBMNMCJDD = input.ReadBool();
+            IsRotate = input.ReadBool();
             break;
           }
           case 72: {
@@ -463,7 +463,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 64: {
-            FBIBMNMCJDD = input.ReadBool();
+            IsRotate = input.ReadBool();
             break;
           }
           case 72: {

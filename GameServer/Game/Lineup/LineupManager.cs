@@ -248,10 +248,14 @@ namespace EggLink.DanhengServer.Game.Lineup
                 LineupData.Lineups.Add(LineupData.GetCurLineupIndex(), lineup);
             } else
             {
+                if (lineup.BaseAvatars!.Count >= 4)
+                {
+                    lineup.BaseAvatars!.RemoveAt(3);  // remove last avatar
+                }
                 lineup.BaseAvatars?.Add(new() { BaseAvatarId = specialAvatar.AvatarID, SpecialAvatarId = specialAvatarId });
                 LineupData.Lineups[LineupData.GetCurLineupIndex()] = lineup;
             }
-            DatabaseHelper.Instance?.UpdateInstance(LineupData);
+
             if (sendPacket)
             {
                 Player.SceneInstance?.SyncLineup();

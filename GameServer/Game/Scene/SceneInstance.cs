@@ -339,7 +339,22 @@ namespace EggLink.DanhengServer.Game.Scene
         public List<SceneBuff> BuffList = [];
         public void AddBuff(SceneBuff buff)
         {
-            if (BuffList.FindIndex(x => x.BuffID == buff.BuffID) != -1) return;  // already have buff
+            var oldBuff = BuffList.Find(x => x.BuffID == buff.BuffID);
+            if (oldBuff != null)
+            {
+                if (oldBuff.IsExpired())
+                {
+                    BuffList.Remove(oldBuff);
+                    BuffList.Add(buff);
+                } else
+                {
+                    oldBuff.CreatedTime = Extensions.GetUnixMs();
+                    oldBuff.Duration = buff.Duration;
+
+                    Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, oldBuff));
+                    return;
+                }
+            }
             BuffList.Add(buff);
             Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, buff));
         }

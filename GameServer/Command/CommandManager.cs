@@ -1,5 +1,7 @@
 ﻿using EggLink.DanhengServer.Database;
+using EggLink.DanhengServer.Internationalization;
 using EggLink.DanhengServer.Program;
+using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Server;
 using EggLink.DanhengServer.Util;
 using Spectre.Console;
@@ -52,7 +54,7 @@ namespace EggLink.DanhengServer.Command
                 }
                 catch
                 {
-                    Logger.Error($"An error happened when execute command");
+                    Logger.Error(I18nManager.Translate("Game.Command.Notice.InternalError"));
                 }
             }
         }
@@ -73,12 +75,12 @@ namespace EggLink.DanhengServer.Command
                         if (con != null)
                         {
                             Target = con;
-                            sender.SendMsg($"Online player {target}({con.Player!.Data.Name}) is found, the next command will target it by default.");
+                            sender.SendMsg(I18nManager.Translate("Game.Command.Notice.TargetFound", target, con.Player!.Data.Name!));
                         }
                         else
                         {
                             // offline or not exist
-                            sender.SendMsg($"Target {target} is offline or not found.");
+                            sender.SendMsg(I18nManager.Translate("Game.Command.Notice.TargetNotFound", target));
                         }
                         return;
                     }
@@ -90,7 +92,7 @@ namespace EggLink.DanhengServer.Command
 
                 if (tempTarget != null && !tempTarget.IsOnline)
                 {
-                    sender.SendMsg($"Target {tempTarget.Player!.Uid}({tempTarget.Player!.Data.Name}) is offline.");
+                    sender.SendMsg(I18nManager.Translate("Game.Command.Notice.TargetOffline", tempTarget.Player!.Uid.ToString(), tempTarget.Player!.Data.Name!));
                     tempTarget = null;
                 }
 
@@ -106,7 +108,7 @@ namespace EggLink.DanhengServer.Command
 
                     if (!sender.HasPermission(info.Permission))
                     {
-                        sender.SendMsg("You don't have permission to execute this command.");
+                        sender.SendMsg(I18nManager.Translate("Game.Command.Notice.NoPermission"));
                         return;
                     }
 
@@ -154,23 +156,23 @@ namespace EggLink.DanhengServer.Command
                         {
                             if (info != null)
                             {
-                                sender.SendMsg($"Usage: {info.Usage}");
+                                sender.SendMsg(I18nManager.Translate("Game.Command.Help.CommandUsage") + I18nManager.Translate(info.Usage));
                             }
                             else
                             {
-                                sender.SendMsg($"Command \"{cmd}\" not found.");
+                                sender.SendMsg(I18nManager.Translate("Game.Command.Notice.CommandNotFound"));
                             }
                         }
                     }
                 }
                 else
                 {
-                    sender.SendMsg($"Command \"{cmd}\" not found.");
+                    sender.SendMsg(I18nManager.Translate("Game.Command.Notice.CommandNotFound"));
                 }
             }
             catch
             {
-                sender.SendMsg($"An error happened when execute command");
+                sender.SendMsg(I18nManager.Translate("Game.Command.Notice.InternalError"));
             }
         }
     }

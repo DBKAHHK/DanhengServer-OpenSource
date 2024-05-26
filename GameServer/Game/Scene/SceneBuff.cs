@@ -14,8 +14,8 @@ namespace EggLink.DanhengServer.Game.Scene
         public int BuffLevel { get; private set; } = buffLevel;
         public int OwnerAvatarId { get; private set; } = owner;
 
-        public int Duration { get; set; } = duration * 1000;  // in milliseconds
-        public long CreatedTime { get; private set; } = Extensions.GetUnixMs();
+        public int Duration { get; set; } = duration;
+        public long CreatedTime { get; set; } = Extensions.GetUnixMs();
         public Dictionary<string, float> DynamicValues = [];
 
         public bool IsExpired()

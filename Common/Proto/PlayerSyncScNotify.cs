@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static PlayerSyncScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhQbGF5ZXJTeW5jU2NOb3RpZnkucHJvdG8aG1BsYXllckJvYXJkTW9kdWxl",
-            "U3luYy5wcm90bxoWTWlzc2lvbkV2ZW50U3luYy5wcm90bxoOTWF0ZXJpYWwu",
-            "cHJvdG8aEUZISEJKTEpDSEVBLnByb3RvGhFHcm91cFN0YXR1cy5wcm90bxoL",
-            "UXVlc3QucHJvdG8aEU1pc3Npb25TeW5jLnByb3RvGhBBdmF0YXJTeW5jLnBy",
-            "b3RvGh1QbGF5ZXJIZXJvQmFzaWNUeXBlSW5mby5wcm90bxoTU2VjdGlvblN0",
-            "YXR1cy5wcm90bxoVUGxheWVyQmFzaWNJbmZvLnByb3RvGg9FcXVpcG1lbnQu",
-            "cHJvdG8aDkl0ZW1MaXN0LnByb3RvGhFCYXNpY01vZHVsZS5wcm90bxoLUmVs",
-            "aWMucHJvdG8aFVdhaXREZWxSZXNvdXJjZS5wcm90byL9BQoSUGxheWVyU3lu",
+            "ChhQbGF5ZXJTeW5jU2NOb3RpZnkucHJvdG8aC1F1ZXN0LnByb3RvGhFNaXNz",
+            "aW9uU3luYy5wcm90bxodUGxheWVySGVyb0Jhc2ljVHlwZUluZm8ucHJvdG8a",
+            "Dkl0ZW1MaXN0LnByb3RvGhtQbGF5ZXJCb2FyZE1vZHVsZVN5bmMucHJvdG8a",
+            "Fk1pc3Npb25FdmVudFN5bmMucHJvdG8aEUdyb3VwU3RhdHVzLnByb3RvGhNT",
+            "ZWN0aW9uU3RhdHVzLnByb3RvGhVXYWl0RGVsUmVzb3VyY2UucHJvdG8aDk1h",
+            "dGVyaWFsLnByb3RvGgtSZWxpYy5wcm90bxoQQXZhdGFyU3luYy5wcm90bxoR",
+            "RkhIQkpMSkNIRUEucHJvdG8aFVBsYXllckJhc2ljSW5mby5wcm90bxoPRXF1",
+            "aXBtZW50LnByb3RvGhFCYXNpY01vZHVsZS5wcm90byL9BQoSUGxheWVyU3lu",
             "Y1NjTm90aWZ5EjAKFndhaXRfZGVsX3Jlc291cmNlX2xpc3QYCSADKAsyEC5X",
             "YWl0RGVsUmVzb3VyY2USIAoLYXZhdGFyX3N5bmMYAyABKAsyCy5BdmF0YXJT",
             "eW5jEhoKCnF1ZXN0X2xpc3QYDyADKAsyBi5RdWVzdBI2ChRiYXNpY190eXBl",
@@ -51,7 +51,7 @@ namespace EggLink.DanhengServer.Proto {
             "GAIgAygNEhoKEmRlbF9lcXVpcG1lbnRfbGlzdBgNIAMoDUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlayerBoardModuleSyncReflection.Descriptor, global::EggLink.DanhengServer.Proto.MissionEventSyncReflection.Descriptor, global::EggLink.DanhengServer.Proto.MaterialReflection.Descriptor, global::EggLink.DanhengServer.Proto.FHHBJLJCHEAReflection.Descriptor, global::EggLink.DanhengServer.Proto.GroupStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.QuestReflection.Descriptor, global::EggLink.DanhengServer.Proto.MissionSyncReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarSyncReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerHeroBasicTypeInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SectionStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerBasicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipmentReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.BasicModuleReflection.Descriptor, global::EggLink.DanhengServer.Proto.RelicReflection.Descriptor, global::EggLink.DanhengServer.Proto.WaitDelResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.QuestReflection.Descriptor, global::EggLink.DanhengServer.Proto.MissionSyncReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerHeroBasicTypeInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerBoardModuleSyncReflection.Descriptor, global::EggLink.DanhengServer.Proto.MissionEventSyncReflection.Descriptor, global::EggLink.DanhengServer.Proto.GroupStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.SectionStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.WaitDelResourceReflection.Descriptor, global::EggLink.DanhengServer.Proto.MaterialReflection.Descriptor, global::EggLink.DanhengServer.Proto.RelicReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarSyncReflection.Descriptor, global::EggLink.DanhengServer.Proto.FHHBJLJCHEAReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerBasicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipmentReflection.Descriptor, global::EggLink.DanhengServer.Proto.BasicModuleReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerSyncScNotify), global::EggLink.DanhengServer.Proto.PlayerSyncScNotify.Parser, new[]{ "WaitDelResourceList", "AvatarSync", "QuestList", "BasicTypeInfoList", "RelicList", "MaterialList", "DPJKDHNFLFF", "FKLPPHOMJEJ", "DMKPCEMHCGA", "EquipmentList", "MissionSync", "HODALNHHJHH", "FCMMDCPAGJC", "INBDJHCMKMG", "HBHEEFPMCCI", "MessageGroupStatus", "CNGNEJKLKIF", "SectionStatus", "BasicInfo", "DelRelicList", "DelEquipmentList" }, null, null, null, null)
           }));

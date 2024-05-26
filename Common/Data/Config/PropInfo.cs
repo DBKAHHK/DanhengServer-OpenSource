@@ -24,7 +24,7 @@ namespace EggLink.DanhengServer.Data.Config
         public PropStateEnum State { get; set; } = PropStateEnum.Closed;
 
         [JsonIgnore()]
-        public List<int> UnlockDoorID { get; set; } = [];
+        public Dictionary<int, List<int>> UnlockDoorID { get; set; } = [];
 
         public void Load(GroupInfo info)
         {
@@ -34,13 +34,23 @@ namespace EggLink.DanhengServer.Data.Config
                 {
                     try
                     {
-                        if (v["Value"] != null && v["Key"] != null)
+                        var key = v["Key"];
+                        var value = v["Value"];
+                        if (value != null && key != null)
                         {
-                            if (v["Key"]?.ToString().Contains("Door") == true || v["Key"]?.ToString().Contains("Bridge") == true || v["Key"]?.ToString().Contains("UnlockTarget") == true)
+                            if (key.ToString().Contains("Door") || 
+                                key.ToString().Contains("Bridge") || 
+                                key.ToString().Contains("UnlockTarget") ||
+                                key.ToString().Contains("Rootcontamination") ||
+                                key.ToString().Contains("Portal"))
                             {
                                 try
                                 {
-                                    UnlockDoorID.Add(int.Parse(v["Value"]!.ToString().Split(",")[1]));
+                                    if (UnlockDoorID.ContainsKey(int.Parse(value.ToString().Split(",")[0])) == false)
+                                    {
+                                        UnlockDoorID.Add(int.Parse(value.ToString().Split(",")[0]), []);
+                                    }
+                                    UnlockDoorID[int.Parse(value.ToString().Split(",")[0])].Add(int.Parse(value.ToString().Split(",")[1]));
                                 }
                                 catch
                                 {

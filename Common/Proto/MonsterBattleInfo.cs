@@ -24,11 +24,11 @@ namespace EggLink.DanhengServer.Proto {
     static MonsterBattleInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdNb25zdGVyQmF0dGxlSW5mby5wcm90bxoWU2tpbGxVc2VQcm9wZXJ0eS5w",
-            "cm90bxoRRGVhdGhTb3VyY2UucHJvdG8aEUtJTE9DR0JPREhGLnByb3RvGhFI",
-            "RkRQSU9DSk1MSC5wcm90bxoVTW9uc3RlclBoYXNlU3R0LnByb3RvGhpBdHRh",
-            "Y2tEYW1hZ2VQcm9wZXJ0eS5wcm90bxoRRkVCQVBLQk9ESkcucHJvdG8aFU1v",
-            "bnN0ZXJQcm9wZXJ0eS5wcm90byLMBgoRTW9uc3RlckJhdHRsZUluZm8SEQoJ",
+            "ChdNb25zdGVyQmF0dGxlSW5mby5wcm90bxoaQXR0YWNrRGFtYWdlUHJvcGVy",
+            "dHkucHJvdG8aFlNraWxsVXNlUHJvcGVydHkucHJvdG8aFU1vbnN0ZXJQcm9w",
+            "ZXJ0eS5wcm90bxoRRkVCQVBLQk9ESkcucHJvdG8aEUtJTE9DR0JPREhGLnBy",
+            "b3RvGhVNb25zdGVyUGhhc2VTdHQucHJvdG8aEUhGRFBJT0NKTUxILnByb3Rv",
+            "GhFEZWF0aFNvdXJjZS5wcm90byLMBgoRTW9uc3RlckJhdHRsZUluZm8SEQoJ",
             "ZW50aXR5X2lkGAEgASgNEhIKCm1vbnN0ZXJfaWQYAiABKA0SGwoTbW9uc3Rl",
             "cl90ZW1wbGF0ZV9pZBgDIAEoDRIVCg1tb25zdGVyX2xldmVsGAQgASgNEigK",
             "Dm1vbnN0ZXJfc3RhdHVzGAUgASgLMhAuTW9uc3RlclByb3BlcnR5EhMKC3Rv",
@@ -50,7 +50,7 @@ namespace EggLink.DanhengServer.Proto {
             "RkVCQVBLQk9ESkdCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SkillUsePropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.DeathSourceReflection.Descriptor, global::EggLink.DanhengServer.Proto.KILOCGBODHFReflection.Descriptor, global::EggLink.DanhengServer.Proto.HFDPIOCJMLHReflection.Descriptor, global::EggLink.DanhengServer.Proto.MonsterPhaseSttReflection.Descriptor, global::EggLink.DanhengServer.Proto.AttackDamagePropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.FEBAPKBODJGReflection.Descriptor, global::EggLink.DanhengServer.Proto.MonsterPropertyReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AttackDamagePropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.SkillUsePropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.MonsterPropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.FEBAPKBODJGReflection.Descriptor, global::EggLink.DanhengServer.Proto.KILOCGBODHFReflection.Descriptor, global::EggLink.DanhengServer.Proto.MonsterPhaseSttReflection.Descriptor, global::EggLink.DanhengServer.Proto.HFDPIOCJMLHReflection.Descriptor, global::EggLink.DanhengServer.Proto.DeathSourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonsterBattleInfo), global::EggLink.DanhengServer.Proto.MonsterBattleInfo.Parser, new[]{ "EntityId", "MonsterId", "MonsterTemplateId", "MonsterLevel", "MonsterStatus", "TotalTurns", "TotalDamage", "TotalHeal", "TotalDamageTaken", "TotalStanceDamageTaken", "TotalHpRecover", "StageId", "BattleId", "MonsterType", "AttackTypeDamage", "SkillTimes", "StageType", "TotalBreakDamageTaken", "DelayCumulate", "DeathSource", "Wave", "IndexInWave", "Phase", "MaxPhase", "BattleTag", "SkillInfo", "DALDMJNOGOI", "OOCEAPLCEJN", "OLOIAJDKKJA", "JBIOLEGJDLL", "OKCABHBJLLD" }, null, null, null, null)
           }));

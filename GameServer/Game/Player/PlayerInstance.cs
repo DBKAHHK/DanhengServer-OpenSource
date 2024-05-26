@@ -150,6 +150,14 @@ namespace EggLink.DanhengServer.Game.Player
                     }
                 }
 
+                foreach (var lineup in LineupManager.LineupData.Lineups)
+                {
+                    if (lineup.Value.BaseAvatars!.Count >= 5)
+                    {
+                        lineup.Value.BaseAvatars = lineup.Value.BaseAvatars.GetRange(0, 4);
+                    }
+                }
+
                 foreach (var avatar in LineupManager.GetCurLineup()!.BaseAvatars!)
                 {
                     var avatarData = AvatarManager.GetAvatar(avatar.BaseAvatarId);
@@ -378,9 +386,9 @@ namespace EggLink.DanhengServer.Game.Player
                     {
                         foreach (var id in prop.PropInfo.UnlockDoorID)
                         {
-                            foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupID))
+                            foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(id.Key))
                             {
-                                if (id == p.PropInfo.ID)
+                                if (id.Value.Contains(p.PropInfo.ID))
                                 {
                                     p.SetState(PropStateEnum.Open);
                                     MissionManager!.OnPlayerInteractWithProp();

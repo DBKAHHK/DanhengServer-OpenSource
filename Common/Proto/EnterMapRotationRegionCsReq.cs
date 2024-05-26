@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFFbnRlck1hcFJvdGF0aW9uUmVnaW9uQ3NSZXEucHJvdG8aEE1vdGlvbklu",
-            "Zm8ucHJvdG8iZAobRW50ZXJNYXBSb3RhdGlvblJlZ2lvbkNzUmVxEhMKC01O",
+            "Zm8ucHJvdG8iYQobRW50ZXJNYXBSb3RhdGlvblJlZ2lvbkNzUmVxEhMKC01O",
             "TkhQSkdMT0tNGAwgASgNEhsKBm1vdGlvbhgHIAEoCzILLk1vdGlvbkluZm8S",
-            "EwoLQklBSUhDTEdLR00YDSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
-            "ci5Qcm90b2IGcHJvdG8z"));
+            "EAoIcm90YXRpb24YDSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EnterMapRotationRegionCsReq), global::EggLink.DanhengServer.Proto.EnterMapRotationRegionCsReq.Parser, new[]{ "MNNHPJGLOKM", "Motion", "BIAIHCLGKGM" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EnterMapRotationRegionCsReq), global::EggLink.DanhengServer.Proto.EnterMapRotationRegionCsReq.Parser, new[]{ "MNNHPJGLOKM", "Motion", "Rotation" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,7 +76,7 @@ namespace EggLink.DanhengServer.Proto {
     public EnterMapRotationRegionCsReq(EnterMapRotationRegionCsReq other) : this() {
       mNNHPJGLOKM_ = other.mNNHPJGLOKM_;
       motion_ = other.motion_ != null ? other.motion_.Clone() : null;
-      bIAIHCLGKGM_ = other.bIAIHCLGKGM_;
+      rotation_ = other.rotation_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -110,15 +110,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "BIAIHCLGKGM" field.</summary>
-    public const int BIAIHCLGKGMFieldNumber = 13;
-    private uint bIAIHCLGKGM_;
+    /// <summary>Field number for the "rotation" field.</summary>
+    public const int RotationFieldNumber = 13;
+    private uint rotation_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BIAIHCLGKGM {
-      get { return bIAIHCLGKGM_; }
+    public uint Rotation {
+      get { return rotation_; }
       set {
-        bIAIHCLGKGM_ = value;
+        rotation_ = value;
       }
     }
 
@@ -139,7 +139,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (MNNHPJGLOKM != other.MNNHPJGLOKM) return false;
       if (!object.Equals(Motion, other.Motion)) return false;
-      if (BIAIHCLGKGM != other.BIAIHCLGKGM) return false;
+      if (Rotation != other.Rotation) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -149,7 +149,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (MNNHPJGLOKM != 0) hash ^= MNNHPJGLOKM.GetHashCode();
       if (motion_ != null) hash ^= Motion.GetHashCode();
-      if (BIAIHCLGKGM != 0) hash ^= BIAIHCLGKGM.GetHashCode();
+      if (Rotation != 0) hash ^= Rotation.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -176,9 +176,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(96);
         output.WriteUInt32(MNNHPJGLOKM);
       }
-      if (BIAIHCLGKGM != 0) {
+      if (Rotation != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(BIAIHCLGKGM);
+        output.WriteUInt32(Rotation);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -198,9 +198,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(96);
         output.WriteUInt32(MNNHPJGLOKM);
       }
-      if (BIAIHCLGKGM != 0) {
+      if (Rotation != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(BIAIHCLGKGM);
+        output.WriteUInt32(Rotation);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -218,8 +218,8 @@ namespace EggLink.DanhengServer.Proto {
       if (motion_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Motion);
       }
-      if (BIAIHCLGKGM != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BIAIHCLGKGM);
+      if (Rotation != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Rotation);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -242,8 +242,8 @@ namespace EggLink.DanhengServer.Proto {
         }
         Motion.MergeFrom(other.Motion);
       }
-      if (other.BIAIHCLGKGM != 0) {
-        BIAIHCLGKGM = other.BIAIHCLGKGM;
+      if (other.Rotation != 0) {
+        Rotation = other.Rotation;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -272,7 +272,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 104: {
-            BIAIHCLGKGM = input.ReadUInt32();
+            Rotation = input.ReadUInt32();
             break;
           }
         }
@@ -302,7 +302,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 104: {
-            BIAIHCLGKGM = input.ReadUInt32();
+            Rotation = input.ReadUInt32();
             break;
           }
         }

@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.Server.Packet.Send.Player;
+﻿using EggLink.DanhengServer.Internationalization;
+using EggLink.DanhengServer.Server.Packet.Send.Player;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EggLink.DanhengServer.Command.Cmd
 {
-    [CommandInfo("kick", "Kick the player from server", "/kick")]
+    [CommandInfo("kick", "Game.Command.Kick.Desc", "Game.Command.Kick.Usage", permission: "egglink.manage")]
     public class CommandKick : ICommand
     {
         [CommandDefault]
@@ -15,11 +16,11 @@ namespace EggLink.DanhengServer.Command.Cmd
         {
             if (arg.Target == null)
             {
-                arg.SendMsg("Player not found");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
                 return;
             }
             arg.Target.SendPacket(new PacketPlayerKickOutScNotify());
-            arg.SendMsg($"Player {arg.Target.Player!.Data.Name} has been kicked");
+            arg.SendMsg(I18nManager.Translate("Game.Command.Kick.PlayerKicked", arg.Target.Player!.Data.Name!));
             arg.Target.Stop();
         }
     }

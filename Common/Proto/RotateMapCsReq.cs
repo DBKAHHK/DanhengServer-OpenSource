@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static RotateMapCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRSb3RhdGVNYXBDc1JlcS5wcm90bxoRT0NOTEJBR0pPTlAucHJvdG8aEE1v",
-            "dGlvbkluZm8ucHJvdG8idAoOUm90YXRlTWFwQ3NSZXESEAoIZ3JvdXBfaWQY",
-            "BSABKA0SGwoGbW90aW9uGAwgASgLMgsuTW90aW9uSW5mbxIeCghtYXBfaW5m",
-            "bxgGIAEoCzIMLk9DTkxCQUdKT05QEhMKC1BPS0lFUExGQ09LGAcgASgNQh6q",
-            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChRSb3RhdGVNYXBDc1JlcS5wcm90bxoTUm90YXRlTWFwSW5mby5wcm90bxoQ",
+            "TW90aW9uSW5mby5wcm90byJ2Cg5Sb3RhdGVNYXBDc1JlcRIQCghncm91cF9p",
+            "ZBgFIAEoDRIbCgZtb3Rpb24YDCABKAsyCy5Nb3Rpb25JbmZvEiAKCG1hcF9p",
+            "bmZvGAYgASgLMg4uUm90YXRlTWFwSW5mbxITCgtQT0tJRVBMRkNPSxgHIAEo",
+            "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OCNLBAGJONPReflection.Descriptor, global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RotateMapInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RotateMapCsReq), global::EggLink.DanhengServer.Proto.RotateMapCsReq.Parser, new[]{ "GroupId", "Motion", "MapInfo", "POKIEPLFCOK" }, null, null, null, null)
           }));
@@ -113,10 +113,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "map_info" field.</summary>
     public const int MapInfoFieldNumber = 6;
-    private global::EggLink.DanhengServer.Proto.OCNLBAGJONP mapInfo_;
+    private global::EggLink.DanhengServer.Proto.RotateMapInfo mapInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.OCNLBAGJONP MapInfo {
+    public global::EggLink.DanhengServer.Proto.RotateMapInfo MapInfo {
       get { return mapInfo_; }
       set {
         mapInfo_ = value;
@@ -270,7 +270,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.mapInfo_ != null) {
         if (mapInfo_ == null) {
-          MapInfo = new global::EggLink.DanhengServer.Proto.OCNLBAGJONP();
+          MapInfo = new global::EggLink.DanhengServer.Proto.RotateMapInfo();
         }
         MapInfo.MergeFrom(other.MapInfo);
       }
@@ -298,7 +298,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 50: {
             if (mapInfo_ == null) {
-              MapInfo = new global::EggLink.DanhengServer.Proto.OCNLBAGJONP();
+              MapInfo = new global::EggLink.DanhengServer.Proto.RotateMapInfo();
             }
             input.ReadMessage(MapInfo);
             break;
@@ -335,7 +335,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 50: {
             if (mapInfo_ == null) {
-              MapInfo = new global::EggLink.DanhengServer.Proto.OCNLBAGJONP();
+              MapInfo = new global::EggLink.DanhengServer.Proto.RotateMapInfo();
             }
             input.ReadMessage(MapInfo);
             break;

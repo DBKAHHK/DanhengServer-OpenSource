@@ -23,7 +23,7 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Mission
                 return;
             }
 
-            mission.ParamItemList.ForEach(param =>
+            mission.ParamItemList?.ForEach(param =>
             {
                 player.InventoryManager?.RemoveItem(param.ItemID, param.ItemNum);
             });

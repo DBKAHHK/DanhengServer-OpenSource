@@ -22,12 +22,12 @@ namespace EggLink.DanhengServer.Game.Avatar
             }
         }
 
-        public void AddAvatar(int avatarId, bool sync = true)
+        public AvatarConfigExcel? AddAvatar(int avatarId, bool sync = true)
         {
             GameData.AvatarConfigData.TryGetValue(avatarId, out AvatarConfigExcel? avatarExcel);
             if (avatarExcel == null)
             {
-                return;
+                return null;
             }
 
             var avatar = new AvatarInfo(avatarExcel)
@@ -41,16 +41,17 @@ namespace EggLink.DanhengServer.Game.Avatar
 
             if (avatarId >= 8001)
             {
-                if (GetHero() != null) return;  // Only one hero
+                if (GetHero() != null) return null;  // Only one hero
                 avatar.HeroId = avatarId;
             }
 
             avatar.PlayerData = Player.Data;
             AvatarData.Avatars.Add(avatar);
-            DatabaseHelper.Instance?.UpdateInstance(AvatarData);
 
             if (sync)
                 Player.SendPacket(new PacketPlayerSyncScNotify(avatar));
+
+            return avatarExcel;
         }
 
         public AvatarInfo? GetAvatar(int baseAvatarId)

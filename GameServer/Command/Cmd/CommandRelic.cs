@@ -1,5 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database.Inventory;
+using EggLink.DanhengServer.Internationalization;
 using EggLink.DanhengServer.Util;
 using System;
 using System.Collections.Generic;
@@ -9,28 +10,22 @@ using System.Threading.Tasks;
 
 namespace EggLink.DanhengServer.Command.Cmd
 {
-    [CommandInfo("relic", "给予玩家指定词条的遗器", "/relic <遗器ID> <主词条ID> <小词条ID1:小词条等级> <小词条ID2:小词条等级> <小词条ID3:小词条等级> <小词条ID4:小词条等级> l<等级> x<数量>")]
+    [CommandInfo("relic", "Game.Command.Relic.Desc", "Game.Command.Relic.Usage")]
     public class CommandRelic : ICommand
     {
         [CommandDefault]
         public void GiveRelic(CommandArg arg)
         {
-            if (arg.Target == null)
-            {
-                arg.SendMsg("未指定玩家");
-                return;
-            }
-
-            var player = arg.Target.Player;
+            var player = arg.Target?.Player;
             if (player == null)
             {
-                arg.SendMsg("玩家不存在");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
                 return;
             }
 
             if (arg.BasicArgs.Count < 3)
             {
-                arg.SendMsg("无效选项");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.InvalidArguments"));
                 return;
             }
 
@@ -40,14 +35,14 @@ namespace EggLink.DanhengServer.Command.Cmd
             levelStr ??= "1";
             if (!int.TryParse(str, out var amount) || !int.TryParse(levelStr, out var level))
             {
-                arg.SendMsg("参数无效");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Notice.InvalidArguments"));
                 return;
             }
 
             GameData.RelicConfigData.TryGetValue(int.Parse(arg.BasicArgs[0]), out var itemConfig);
             if (itemConfig == null)
             {
-                arg.SendMsg("找不到物品");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Relic.RelicNotFound"));
                 return;
             }
 
@@ -55,7 +50,7 @@ namespace EggLink.DanhengServer.Command.Cmd
             GameData.RelicMainAffixData.TryGetValue(itemConfig.MainAffixGroup, out var mainAffixConfig);
             if (subAffixConfig == null || mainAffixConfig == null)
             {
-                arg.SendMsg("物品无效");
+                arg.SendMsg(I18nManager.Translate("Game.Command.Relic.RelicNotFound"));
                 return;
             }
 
@@ -71,7 +66,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                 mainAffixId = int.Parse(arg.BasicArgs[1]);
                 if (!mainAffixConfig.ContainsKey(mainAffixId))
                 {
-                    arg.SendMsg("主词条ID无效");
+                    arg.SendMsg(I18nManager.Translate("Game.Command.Relic.InvalidMainAffixId"));
                     return;
                 }
                 startIndex++;
@@ -84,12 +79,12 @@ namespace EggLink.DanhengServer.Command.Cmd
                 var subAffix = arg.BasicArgs[i].Split(':');
                 if (subAffix.Length != 2 || !int.TryParse(subAffix[0], out var subId) || !int.TryParse(subAffix[1], out var subLevel))
                 {
-                    arg.SendMsg("参数无效");
+                    arg.SendMsg(I18nManager.Translate("Game.Command.Notice.InvalidArguments"));
                     return;
                 }
                 if (!subAffixConfig.ContainsKey(subId))
                 {
-                    arg.SendMsg("副词条ID无效");
+                    arg.SendMsg(I18nManager.Translate("Game.Command.Relic.InvalidSubAffixId"));
                     return;
                 }
                 subAffixes.Add((subId, subLevel));
@@ -146,7 +141,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                 player.InventoryManager!.AddItem(itemData);
             }
 
-            arg.SendMsg($"给予 @{player.Uid} {amount} 件遗器，所选主词条为 {mainAffixId}");
+            arg.SendMsg(I18nManager.Translate("Game.Command.Relic.RelicGiven", player.Uid.ToString(), amount.ToString(), itemData.ItemId.ToString(), itemData.MainAffix.ToString()));
         }
     }
 }
