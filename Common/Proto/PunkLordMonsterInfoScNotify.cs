@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static PunkLordMonsterInfoScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFQdW5rTG9yZE1vbnN0ZXJJbmZvU2NOb3RpZnkucHJvdG8aGlB1bmtMb3Jk",
-            "QmF0dGxlUmVjb3JkLnByb3RvGhFDTERKTUhERUxITi5wcm90bxolUHVua0xv",
-            "cmRNb25zdGVySW5mb05vdGlmeVJlYXNvbi5wcm90byKyAQobUHVua0xvcmRN",
+            "CiFQdW5rTG9yZE1vbnN0ZXJJbmZvU2NOb3RpZnkucHJvdG8aJVB1bmtMb3Jk",
+            "TW9uc3RlckluZm9Ob3RpZnlSZWFzb24ucHJvdG8aGlB1bmtMb3JkQmF0dGxl",
+            "UmVjb3JkLnByb3RvGhFDTERKTUhERUxITi5wcm90byKyAQobUHVua0xvcmRN",
             "b25zdGVySW5mb1NjTm90aWZ5EhMKC0xDSk9NT05DT0JJGAwgAygNEioKC01E",
             "TkxNTUFNRUpEGAsgASgLMhUuUHVua0xvcmRCYXR0bGVSZWNvcmQSMAoGcmVh",
             "c29uGA0gASgOMiAuUHVua0xvcmRNb25zdGVySW5mb05vdGlmeVJlYXNvbhIg",
             "CgpiYXNpY19pbmZvGA8gASgLMgwuQ0xESk1IREVMSE5CHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PunkLordBattleRecordReflection.Descriptor, global::EggLink.DanhengServer.Proto.CLDJMHDELHNReflection.Descriptor, global::EggLink.DanhengServer.Proto.PunkLordMonsterInfoNotifyReasonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PunkLordMonsterInfoNotifyReasonReflection.Descriptor, global::EggLink.DanhengServer.Proto.PunkLordBattleRecordReflection.Descriptor, global::EggLink.DanhengServer.Proto.CLDJMHDELHNReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PunkLordMonsterInfoScNotify), global::EggLink.DanhengServer.Proto.PunkLordMonsterInfoScNotify.Parser, new[]{ "LCJOMONCOBI", "MDNLMMAMEJD", "Reason", "BasicInfo" }, null, null, null, null)
           }));

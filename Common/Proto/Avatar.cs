@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static AvatarReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgxBdmF0YXIucHJvdG8aEEVxdWlwUmVsaWMucHJvdG8aFUF2YXRhclNraWxs",
-            "VHJlZS5wcm90byK6AgoGQXZhdGFyEhYKDmJhc2VfYXZhdGFyX2lkGA4gASgN",
+            "CgxBdmF0YXIucHJvdG8aFUF2YXRhclNraWxsVHJlZS5wcm90bxoQRXF1aXBS",
+            "ZWxpYy5wcm90byK6AgoGQXZhdGFyEhYKDmJhc2VfYXZhdGFyX2lkGA4gASgN",
             "EhsKE2VxdWlwbWVudF91bmlxdWVfaWQYBiABKA0SKAoOc2tpbGx0cmVlX2xp",
             "c3QYAyADKAsyEC5BdmF0YXJTa2lsbFRyZWUSCwoDZXhwGAkgASgNEgwKBHJh",
             "bmsYDyABKA0SEQoJaXNfbWFya2VkGAogASgIEhMKC1BQSENNRE1ITlBBGAEg",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "ZF9saXN0GAggAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EquipRelicReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipRelicReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Avatar), global::EggLink.DanhengServer.Proto.Avatar.Parser, new[]{ "BaseAvatarId", "EquipmentUniqueId", "SkilltreeList", "Exp", "Rank", "IsMarked", "PPHCMDMHNPA", "Promotion", "FirstMetTimeStamp", "Level", "EquipRelicList", "HasTakenPromotionRewardList" }, null, null, null, null)
           }));

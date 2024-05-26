@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static SceneMapInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJTY2VuZU1hcEluZm8ucHJvdG8aEUtCQkVPRU1DREhJLnByb3RvGg9DaGVz",
-            "dEluZm8ucHJvdG8aD01hemVHcm91cC5wcm90bxoTTWF6ZVByb3BTdGF0ZS5w",
+            "ChJTY2VuZU1hcEluZm8ucHJvdG8aD01hemVHcm91cC5wcm90bxoPQ2hlc3RJ",
+            "bmZvLnByb3RvGhFLQkJFT0VNQ0RISS5wcm90bxoTTWF6ZVByb3BTdGF0ZS5w",
             "cm90byKsAgoMU2NlbmVNYXBJbmZvEhwKFHVubG9ja190ZWxlcG9ydF9saXN0",
             "GA0gAygNEiEKC0FFQ0hOSEtMUEtQGAsgAygLMgwuS0JCRU9FTUNESEkSJgoO",
             "bWF6ZV9wcm9wX2xpc3QYDyADKAsyDi5NYXplUHJvcFN0YXRlEh4KCmNoZXN0",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "SBgHIAEoDRIcChRsaWdodGVuX3NlY3Rpb25fbGlzdBgKIAMoDUIeqgIbRWdn",
             "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KBBEOEMCDHIReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChestInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazeGroupReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazePropStateReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MazeGroupReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChestInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KBBEOEMCDHIReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazePropStateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneMapInfo), global::EggLink.DanhengServer.Proto.SceneMapInfo.Parser, new[]{ "UnlockTeleportList", "AECHNHKLPKP", "MazePropList", "ChestList", "Retcode", "MazeGroupList", "EntryId", "CurMapEntryId", "CNGAKKCMONH", "LightenSectionList" }, null, null, null, null)
           }));
