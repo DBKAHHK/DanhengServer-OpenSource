@@ -9,7 +9,7 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Player
 {
     public class PacketUpdateEnergyScNotify : BasePacket
     {
-        public PacketUpdateEnergyScNotify(int maxNum, int curNum) : base(CmdIds.UpdateEnergyScNotify)
+        public PacketUpdateEnergyScNotify(int curNum, int maxNum) : base(CmdIds.UpdateEnergyScNotify)
         {
             var proto = new UpdateEnergyScNotify()
             {
