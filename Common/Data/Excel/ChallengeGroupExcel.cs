@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EggLink.DanhengServer.Data.Excel
 {
-    [ResourceEntity("ChallengeGroupConfig.json,ChallengeStoryGroupConfig.json,ChallengeBossGroupConfig.json",
+    [ResourceEntity("ChallengeGroupConfig.json,ChallengeStoryGroupConfig.json",
         isMultifile: true)]
     public class ChallengeGroupExcel : ExcelResource
     {

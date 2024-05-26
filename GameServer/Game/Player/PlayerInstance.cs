@@ -72,6 +72,7 @@ namespace EggLink.DanhengServer.Game.Player
         public int NextBattleId { get; set; } = 0;
         public int CurRaidId { get; set; } = 0;
         public int OldEntryId { get; set; } = 0;
+        public int ChargerNum { get; set; } = 0;
         public Position? LastPos { get; set; }
         public Position? LastRot { get; set; }
 

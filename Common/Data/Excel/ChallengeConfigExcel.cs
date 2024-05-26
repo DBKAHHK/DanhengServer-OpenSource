@@ -2,7 +2,7 @@
 
 namespace EggLink.DanhengServer.Data.Excel
 {
-    [ResourceEntity("ChallengeMazeConfig.json,ChallengeStoryMazeConfig.json,ChallengeBossMazeConfig.json",
+    [ResourceEntity("ChallengeMazeConfig.json,ChallengeStoryMazeConfig.json",
         isMultifile: true)]
     public class ChallengeConfigExcel : ExcelResource
     {

@@ -1,4 +1,5 @@
 ﻿using EggLink.DanhengServer.Program;
+using EggLink.DanhengServer.Server.Packet.Send.Lineup;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                 avatar.CurrentHp = 10000;
             }
             player.SceneInstance!.SyncLineup();
+            player.SendPacket(new PacketSyncLineupNotify(player.LineupManager.GetCurLineup()!));
             arg.SendMsg("Successfully healed all avatars on current team");
         }
     }

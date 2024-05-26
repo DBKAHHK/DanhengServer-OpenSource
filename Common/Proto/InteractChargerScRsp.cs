@@ -24,15 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static InteractChargerScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpJbnRlcmFjdENoYXJnZXJTY1JzcC5wcm90bxoRTkhQUEFOTE1FT0sucHJv",
-            "dG8aEUNoYXJnZXJJbmZvLnByb3RvIm4KFEludGVyYWN0Q2hhcmdlclNjUnNw",
-            "EiEKC0hQUEdGREZKR0JDGAUgASgLMgwuTkhQUEFOTE1FT0sSDwoHcmV0Y29k",
-            "ZRgCIAEoDRIiCgxjaGFyZ2VyX2luZm8YCyABKAsyDC5DaGFyZ2VySW5mb0Ie",
-            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChpJbnRlcmFjdENoYXJnZXJTY1JzcC5wcm90bxoRQ2hhcmdlckluZm8ucHJv",
+            "dG8aF1JvdGF0b3JFbmVyZ3lJbmZvLnByb3RvInQKFEludGVyYWN0Q2hhcmdl",
+            "clNjUnNwEicKC2VuZXJneV9pbmZvGAUgASgLMhIuUm90YXRvckVuZXJneUlu",
+            "Zm8SDwoHcmV0Y29kZRgCIAEoDRIiCgxjaGFyZ2VyX2luZm8YCyABKAsyDC5D",
+            "aGFyZ2VySW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NHPPANLMEOKReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotatorEnergyInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.InteractChargerScRsp), global::EggLink.DanhengServer.Proto.InteractChargerScRsp.Parser, new[]{ "HPPGFDFJGBC", "Retcode", "ChargerInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.InteractChargerScRsp), global::EggLink.DanhengServer.Proto.InteractChargerScRsp.Parser, new[]{ "EnergyInfo", "Retcode", "ChargerInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InteractChargerScRsp(InteractChargerScRsp other) : this() {
-      hPPGFDFJGBC_ = other.hPPGFDFJGBC_ != null ? other.hPPGFDFJGBC_.Clone() : null;
+      energyInfo_ = other.energyInfo_ != null ? other.energyInfo_.Clone() : null;
       retcode_ = other.retcode_;
       chargerInfo_ = other.chargerInfo_ != null ? other.chargerInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -86,15 +87,15 @@ namespace EggLink.DanhengServer.Proto {
       return new InteractChargerScRsp(this);
     }
 
-    /// <summary>Field number for the "HPPGFDFJGBC" field.</summary>
-    public const int HPPGFDFJGBCFieldNumber = 5;
-    private global::EggLink.DanhengServer.Proto.NHPPANLMEOK hPPGFDFJGBC_;
+    /// <summary>Field number for the "energy_info" field.</summary>
+    public const int EnergyInfoFieldNumber = 5;
+    private global::EggLink.DanhengServer.Proto.RotatorEnergyInfo energyInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.NHPPANLMEOK HPPGFDFJGBC {
-      get { return hPPGFDFJGBC_; }
+    public global::EggLink.DanhengServer.Proto.RotatorEnergyInfo EnergyInfo {
+      get { return energyInfo_; }
       set {
-        hPPGFDFJGBC_ = value;
+        energyInfo_ = value;
       }
     }
 
@@ -137,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(HPPGFDFJGBC, other.HPPGFDFJGBC)) return false;
+      if (!object.Equals(EnergyInfo, other.EnergyInfo)) return false;
       if (Retcode != other.Retcode) return false;
       if (!object.Equals(ChargerInfo, other.ChargerInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -147,7 +148,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (hPPGFDFJGBC_ != null) hash ^= HPPGFDFJGBC.GetHashCode();
+      if (energyInfo_ != null) hash ^= EnergyInfo.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (chargerInfo_ != null) hash ^= ChargerInfo.GetHashCode();
       if (_unknownFields != null) {
@@ -172,9 +173,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
       }
-      if (hPPGFDFJGBC_ != null) {
+      if (energyInfo_ != null) {
         output.WriteRawTag(42);
-        output.WriteMessage(HPPGFDFJGBC);
+        output.WriteMessage(EnergyInfo);
       }
       if (chargerInfo_ != null) {
         output.WriteRawTag(90);
@@ -194,9 +195,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
       }
-      if (hPPGFDFJGBC_ != null) {
+      if (energyInfo_ != null) {
         output.WriteRawTag(42);
-        output.WriteMessage(HPPGFDFJGBC);
+        output.WriteMessage(EnergyInfo);
       }
       if (chargerInfo_ != null) {
         output.WriteRawTag(90);
@@ -212,8 +213,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (hPPGFDFJGBC_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(HPPGFDFJGBC);
+      if (energyInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EnergyInfo);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
@@ -233,11 +234,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.hPPGFDFJGBC_ != null) {
-        if (hPPGFDFJGBC_ == null) {
-          HPPGFDFJGBC = new global::EggLink.DanhengServer.Proto.NHPPANLMEOK();
+      if (other.energyInfo_ != null) {
+        if (energyInfo_ == null) {
+          EnergyInfo = new global::EggLink.DanhengServer.Proto.RotatorEnergyInfo();
         }
-        HPPGFDFJGBC.MergeFrom(other.HPPGFDFJGBC);
+        EnergyInfo.MergeFrom(other.EnergyInfo);
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
@@ -268,10 +269,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 42: {
-            if (hPPGFDFJGBC_ == null) {
-              HPPGFDFJGBC = new global::EggLink.DanhengServer.Proto.NHPPANLMEOK();
+            if (energyInfo_ == null) {
+              EnergyInfo = new global::EggLink.DanhengServer.Proto.RotatorEnergyInfo();
             }
-            input.ReadMessage(HPPGFDFJGBC);
+            input.ReadMessage(EnergyInfo);
             break;
           }
           case 90: {
@@ -301,10 +302,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 42: {
-            if (hPPGFDFJGBC_ == null) {
-              HPPGFDFJGBC = new global::EggLink.DanhengServer.Proto.NHPPANLMEOK();
+            if (energyInfo_ == null) {
+              EnergyInfo = new global::EggLink.DanhengServer.Proto.RotatorEnergyInfo();
             }
-            input.ReadMessage(HPPGFDFJGBC);
+            input.ReadMessage(EnergyInfo);
             break;
           }
           case 90: {
