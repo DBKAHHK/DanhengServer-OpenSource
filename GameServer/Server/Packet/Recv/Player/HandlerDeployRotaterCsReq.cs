@@ -16,7 +16,7 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Player
             var req = DeployRotaterCsReq.Parser.ParseFrom(data);
 
             connection.Player!.ChargerNum--;
-            connection.SendPacket(new PacketDeployRotaterScRsp(req.NIKGIDPMOLM, connection.Player!.ChargerNum, 5));
+            connection.SendPacket(new PacketDeployRotaterScRsp(req.RotaterData, connection.Player!.ChargerNum, 5));
         }
     }
 }

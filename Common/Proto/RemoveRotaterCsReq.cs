@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhSZW1vdmVSb3RhdGVyQ3NSZXEucHJvdG8aEVJvdGF0ZXJEYXRhLnByb3Rv",
-            "IjcKElJlbW92ZVJvdGF0ZXJDc1JlcRIhCgtOSUtHSURQTU9MTRgHIAEoCzIM",
-            "LlJvdGF0ZXJEYXRhQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
-            "BnByb3RvMw=="));
+            "IjgKElJlbW92ZVJvdGF0ZXJDc1JlcRIiCgxyb3RhdGVyX2RhdGEYByABKAsy",
+            "DC5Sb3RhdGVyRGF0YUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RemoveRotaterCsReq), global::EggLink.DanhengServer.Proto.RemoveRotaterCsReq.Parser, new[]{ "NIKGIDPMOLM" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RemoveRotaterCsReq), global::EggLink.DanhengServer.Proto.RemoveRotaterCsReq.Parser, new[]{ "RotaterData" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RemoveRotaterCsReq(RemoveRotaterCsReq other) : this() {
-      nIKGIDPMOLM_ = other.nIKGIDPMOLM_ != null ? other.nIKGIDPMOLM_.Clone() : null;
+      rotaterData_ = other.rotaterData_ != null ? other.rotaterData_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new RemoveRotaterCsReq(this);
     }
 
-    /// <summary>Field number for the "NIKGIDPMOLM" field.</summary>
-    public const int NIKGIDPMOLMFieldNumber = 7;
-    private global::EggLink.DanhengServer.Proto.RotaterData nIKGIDPMOLM_;
+    /// <summary>Field number for the "rotater_data" field.</summary>
+    public const int RotaterDataFieldNumber = 7;
+    private global::EggLink.DanhengServer.Proto.RotaterData rotaterData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RotaterData NIKGIDPMOLM {
-      get { return nIKGIDPMOLM_; }
+    public global::EggLink.DanhengServer.Proto.RotaterData RotaterData {
+      get { return rotaterData_; }
       set {
-        nIKGIDPMOLM_ = value;
+        rotaterData_ = value;
       }
     }
 
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(NIKGIDPMOLM, other.NIKGIDPMOLM)) return false;
+      if (!object.Equals(RotaterData, other.RotaterData)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -118,7 +118,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (nIKGIDPMOLM_ != null) hash ^= NIKGIDPMOLM.GetHashCode();
+      if (rotaterData_ != null) hash ^= RotaterData.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (nIKGIDPMOLM_ != null) {
+      if (rotaterData_ != null) {
         output.WriteRawTag(58);
-        output.WriteMessage(NIKGIDPMOLM);
+        output.WriteMessage(RotaterData);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -151,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (nIKGIDPMOLM_ != null) {
+      if (rotaterData_ != null) {
         output.WriteRawTag(58);
-        output.WriteMessage(NIKGIDPMOLM);
+        output.WriteMessage(RotaterData);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -165,8 +165,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (nIKGIDPMOLM_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NIKGIDPMOLM);
+      if (rotaterData_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RotaterData);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -180,11 +180,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.nIKGIDPMOLM_ != null) {
-        if (nIKGIDPMOLM_ == null) {
-          NIKGIDPMOLM = new global::EggLink.DanhengServer.Proto.RotaterData();
+      if (other.rotaterData_ != null) {
+        if (rotaterData_ == null) {
+          RotaterData = new global::EggLink.DanhengServer.Proto.RotaterData();
         }
-        NIKGIDPMOLM.MergeFrom(other.NIKGIDPMOLM);
+        RotaterData.MergeFrom(other.RotaterData);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -202,10 +202,10 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 58: {
-            if (nIKGIDPMOLM_ == null) {
-              NIKGIDPMOLM = new global::EggLink.DanhengServer.Proto.RotaterData();
+            if (rotaterData_ == null) {
+              RotaterData = new global::EggLink.DanhengServer.Proto.RotaterData();
             }
-            input.ReadMessage(NIKGIDPMOLM);
+            input.ReadMessage(RotaterData);
             break;
           }
         }
@@ -224,10 +224,10 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 58: {
-            if (nIKGIDPMOLM_ == null) {
-              NIKGIDPMOLM = new global::EggLink.DanhengServer.Proto.RotaterData();
+            if (rotaterData_ == null) {
+              RotaterData = new global::EggLink.DanhengServer.Proto.RotaterData();
             }
-            input.ReadMessage(NIKGIDPMOLM);
+            input.ReadMessage(RotaterData);
             break;
           }
         }

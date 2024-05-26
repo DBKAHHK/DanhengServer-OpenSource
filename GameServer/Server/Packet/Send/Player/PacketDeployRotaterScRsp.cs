@@ -18,7 +18,7 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Player
                     MaxNum = (uint)maxNum,
                     CurNum = (uint)curNum,
                 },
-                NIKGIDPMOLM = rotaterData
+                RotaterData = rotaterData
             };
 
             SetData(proto);
