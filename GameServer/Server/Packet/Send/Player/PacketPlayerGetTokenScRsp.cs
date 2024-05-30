@@ -9,7 +9,7 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Player
             var rsp = new PlayerGetTokenScRsp()
             {
                 BlackInfo = new(),
-                Uid = connection.Player?.Uid ?? 0,
+                Uid = (uint)(connection.Player?.Uid ?? 0),
             };
 
             SetData(rsp);

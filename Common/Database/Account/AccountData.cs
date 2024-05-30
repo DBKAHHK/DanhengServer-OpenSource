@@ -31,9 +31,9 @@ namespace EggLink.DanhengServer.Database.Account
             return result;
         }
 
-        public static AccountData? GetAccountByUid(long uid)
+        public static AccountData? GetAccountByUid(int uid)
         {
-            AccountData? result = DatabaseHelper.Instance?.GetInstance<AccountData>((int)uid);
+            AccountData? result = DatabaseHelper.Instance?.GetInstance<AccountData>(uid);
             return result;
         }
 

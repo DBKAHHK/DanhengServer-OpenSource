@@ -9,7 +9,7 @@ namespace EggLink.DanhengServer.WebServer.Handler
     {
         public JsonResult Handle(string uid, string token)
         {
-            AccountData? account = AccountData.GetAccountByUid(long.Parse(uid));
+            AccountData? account = AccountData.GetAccountByUid(int.Parse(uid));
             var res = new LoginResJson();
             if (account == null || !account?.DispatchToken?.Equals(token) == true)
             {

@@ -89,7 +89,7 @@ namespace EggLink.DanhengServer.Game.Friend
 
             var targetData = PlayerData.GetPlayerByUid(targetUid)!;
             var targetPlayer = Listener.GetActiveConnection(targetUid);
-            targetPlayer?.SendPacket(new PacketSyncHandleFriendScNotify(Player.Uid, true, Player.Data));
+            targetPlayer?.SendPacket(new PacketSyncHandleFriendScNotify((uint)Player.Uid, true, Player.Data));
             targetPlayer?.Player!.FriendManager!.FriendData.SendApplyList.Remove(Player.Uid);
             targetPlayer?.Player!.FriendManager!.FriendData.FriendList.Add(Player.Uid);
 

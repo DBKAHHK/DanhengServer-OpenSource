@@ -65,7 +65,7 @@ namespace EggLink.DanhengServer.Game.Player
         public TutorialData? TutorialData { get; private set; }
         public TutorialGuideData? TutorialGuideData { get; private set; }
         public SceneInstance? SceneInstance { get; private set; }
-        public ushort Uid { get; set; }
+        public int Uid { get; set; }
         public Connection? Connection { get; set; }
         public bool Initialized { get; set; } = false;
         public bool IsNewPlayer { get; set; } = false;
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Game.Player
 
         private void InitialPlayerManager()
         {
-            Uid = (ushort)Data.Uid;
+            Uid = Data.Uid;
             ActivityManager = new(this);
             AvatarManager = new(this);
             LineupManager = new(this);
