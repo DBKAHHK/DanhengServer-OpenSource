@@ -4,7 +4,7 @@ namespace EggLink.DanhengServer.Data
 {
 
     [AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
-    internal class ResourceEntity : Attribute
+    public class ResourceEntity : Attribute
     {
         public List<string> FileName { get; private set; }
 

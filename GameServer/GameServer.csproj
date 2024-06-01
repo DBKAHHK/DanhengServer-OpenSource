@@ -8,6 +8,7 @@
     <RootNamespace>EggLink.DanhengServer</RootNamespace>
     <StartupObject>EggLink.DanhengServer.Program.EntryPoint</StartupObject>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AssemblyName>DanhengServer</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

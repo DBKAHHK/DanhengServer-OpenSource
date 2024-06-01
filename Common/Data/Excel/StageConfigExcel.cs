@@ -9,6 +9,7 @@ namespace EggLink.DanhengServer.Data.Excel
         public int StageID { get; set; } = 0;
         public HashName StageName { get; set; } = new HashName();
         public List<StageMonsterList> MonsterList { get; set; } = [];
+        public List<int> TrialAvatarList { get; set; } = [];
 
 
         public override int GetId()

@@ -32,6 +32,8 @@ using EggLink.DanhengServer.Server.Packet.Send.Avatar;
 using System.Numerics;
 using EggLink.DanhengServer.Game.Challenge;
 using EggLink.DanhengServer.Game.Drop;
+using static EggLink.DanhengServer.Plugin.Event.PluginEvent;
+using EggLink.DanhengServer.Plugin.Event;
 
 namespace EggLink.DanhengServer.Game.Player
 {
@@ -189,6 +191,7 @@ namespace EggLink.DanhengServer.Game.Player
             
             SendPacket(new PacketStaminaInfoScNotify(this));
 
+            InvokeOnPlayerLogin(this);
         }
 
         public void OnLogoutAsync()
@@ -198,6 +201,8 @@ namespace EggLink.DanhengServer.Game.Player
                 EnterScene(OldEntryId, 0, false);
                 MoveTo(LastPos!, LastRot!);
             }
+
+            InvokeOnPlayerLogout(this);
         }
 
         public void SendPacket(BasePacket packet)
@@ -303,6 +308,8 @@ namespace EggLink.DanhengServer.Game.Player
         {
             OnStaminaRecover();
 
+            InvokeOnPlayerHeartBeat(this);
+
             DatabaseHelper.ToSaveUidList.SafeAdd(Uid);
         }
 
@@ -403,6 +410,9 @@ namespace EggLink.DanhengServer.Game.Player
 
                     // plane event
                     InventoryManager!.HandlePlaneEvent(prop.PropInfo.EventID);
+
+                    // handle plugin event
+                    InvokeOnPlayerInteract(this, prop);
 
                     return prop;
                 }

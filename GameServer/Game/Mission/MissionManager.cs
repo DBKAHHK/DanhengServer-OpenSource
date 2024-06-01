@@ -6,6 +6,8 @@ using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Game.Mission.FinishAction;
 using EggLink.DanhengServer.Game.Mission.FinishType;
 using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.Plugin.Event;
+using EggLink.DanhengServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.Server.Packet.Send.Mission;
 using EggLink.DanhengServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.Server.Packet.Send.Scene;
@@ -129,6 +131,29 @@ namespace EggLink.DanhengServer.Game.Mission
             return AcceptMainMission(missionId, sendPacket);
         }
 
+        public void RemoveMainMission(int missionId)
+        {
+            if (!ConfigManager.Config.ServerOption.EnableMission) return;
+            Data.SetMainMissionStatus(missionId, MissionPhaseEnum.None);
+
+            GameData.MainMissionData.TryGetValue(missionId, out var mission);
+            if (mission == null) return;
+
+            Proto.MissionSync sync = new();
+
+            foreach (var subMission in mission.SubMissionIds)
+            {
+                Data.SetSubMissionStatus(subMission, MissionPhaseEnum.None);
+                sync.MissionList.Add(new Proto.Mission()
+                {
+                    Id = (uint)subMission,
+                    Status = Proto.MissionStatus.MissionNone,
+                });
+            }
+
+            Player.SendPacket(new PacketPlayerSyncScNotify(sync));
+        }
+
         public void AcceptSubMission(int missionId)
         {
             if (!ConfigManager.Config.ServerOption.EnableMission) return;
@@ -156,10 +181,15 @@ namespace EggLink.DanhengServer.Game.Mission
             Player.SceneInstance!.SyncGroupInfo();
             if (mission.SubMissionInfo != null)
             {
-                FinishTypeHandlers.TryGetValue(mission.SubMissionInfo.FinishType, out var handler);
-                handler?.Init(Player, mission.SubMissionInfo, null);
-                if (doFinishTypeAction)
-                    handler?.HandleFinishType(Player, mission.SubMissionInfo, null);
+                try
+                {
+                    FinishTypeHandlers.TryGetValue(mission.SubMissionInfo.FinishType, out var handler);
+                    handler?.Init(Player, mission.SubMissionInfo, null);
+                    if (doFinishTypeAction)
+                        handler?.HandleFinishType(Player, mission.SubMissionInfo, null);
+                } catch
+                {
+                }
             }
 
             if (SkipSubMissionList.Contains(missionId))
@@ -234,7 +264,11 @@ namespace EggLink.DanhengServer.Game.Mission
             if (missionId == 1021301)
             {
                 Player.LineupManager!.SetExtraLineup(Proto.ExtraLineupType.LineupHeliobus, [1021213]);
+                Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
+                Player.SceneInstance!.SyncLineup();
             }
+
+            PluginEvent.InvokeOnPlayerFinishMainMission(Player, missionId);
         }
 
         public void FinishSubMission(int missionId)
@@ -337,10 +371,7 @@ namespace EggLink.DanhengServer.Game.Mission
                 FinishSubMission(100040119);
             }
 
-            if (missionId == 102130113)
-            {
-                Player.LineupManager!.SetExtraLineup(Proto.ExtraLineupType.LineupHeliobus, [1021213, 1021205]);
-            }
+            PluginEvent.InvokeOnPlayerFinishSubMission(Player, missionId);
         }
 
         public void HandleFinishAction(Data.Config.MissionInfo info, int subMissionId)

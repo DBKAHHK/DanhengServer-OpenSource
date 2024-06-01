@@ -10,6 +10,7 @@ using Newtonsoft.Json;
 using EggLink.DanhengServer.Command;
 using EggLink.DanhengServer.Handbook;
 using EggLink.DanhengServer.Internationalization;
+using EggLink.DanhengServer.Plugin;
 
 namespace EggLink.DanhengServer.Program
 {
@@ -71,6 +72,18 @@ namespace EggLink.DanhengServer.Program
             } catch (Exception e)
             {
                 logger.Error("Failed to load language", e);
+                Console.ReadLine();
+                return;
+            }
+
+            // Load the plugins
+            logger.Info("Loading plugins...");
+            try
+            {
+                PluginManager.LoadPlugins();
+            } catch (Exception e)
+            {
+                logger.Error("Failed to load plugins", e);
                 Console.ReadLine();
                 return;
             }
@@ -147,6 +160,7 @@ namespace EggLink.DanhengServer.Program
 
         private static void PerformCleanup()
         {
+            PluginManager.UnloadPlugins();
             Listener.Connections.Values.ToList().ForEach(x => x.Stop());
 
             DatabaseHelper.SaveThread?.Interrupt();

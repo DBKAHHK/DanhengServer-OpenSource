@@ -26,23 +26,23 @@ namespace EggLink.DanhengServer.Server.Http.Handler
                 B5 = true,
             };
 
-            if (urlData.AssetBundleUrl != null)
+            if (urlData.AssetBundleUrl != null && urlData.AssetBundleUrl.Length > 0)
             {
                 gateServer.AssetBundleUrl = urlData.AssetBundleUrl;
             }
 
-            if (urlData.ExResourceUrl != null)
+            if (urlData.ExResourceUrl != null && urlData.ExResourceUrl.Length > 0)
             {
                 gateServer.ExResourceUrl = urlData.ExResourceUrl;
             }
 
-            if (urlData.LuaUrl != null)
+            if (urlData.LuaUrl != null && urlData.LuaUrl.Length > 0)
             {
                 gateServer.LuaUrl = urlData.LuaUrl;
                 gateServer.MdkResVersion = urlData.LuaUrl.Split('/')[^1].Split('_')[1];
             }
             
-            if (urlData.IfixUrl != null)
+            if (urlData.IfixUrl != null && urlData.IfixUrl.Length > 0)
             {
                 gateServer.IfixUrl = urlData.IfixUrl;
                 gateServer.IfixVersion = urlData.IfixUrl.Split('/')[^1].Split('_')[1];

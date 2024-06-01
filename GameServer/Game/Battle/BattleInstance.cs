@@ -84,6 +84,101 @@ namespace EggLink.DanhengServer.Game.Battle
             BattleTargets[key].BGNPEBHGELB.Add(battleTarget);
         }
 
+        public Dictionary<AvatarInfo, AvatarType> GetBattleAvatars()
+        {
+            var excel = GameData.StageConfigData[StageId];
+            if (excel.TrialAvatarList.Count > 0)
+            {
+                var list = new List<int>();
+                list.AddRange(excel.TrialAvatarList);
+
+                if (Player.Data.CurrentGender == Gender.Man)
+                {
+                    foreach (var avatar in excel.TrialAvatarList)
+                    {
+                        if (avatar.ToString().EndsWith("8002"))
+                        {
+                            list.Remove(avatar);
+                        }
+                        if (avatar.ToString().EndsWith("8004"))
+                        {
+                            list.Remove(avatar);
+                        }
+                        if (avatar.ToString().EndsWith("8006"))
+                        {
+                            list.Remove(avatar);
+                        }
+                    }
+                } else
+                {
+                    foreach (var avatar in excel.TrialAvatarList)
+                    {
+                        if (avatar.ToString().EndsWith("8001"))
+                        {
+                            list.Remove(avatar);
+                        }
+                        if (avatar.ToString().EndsWith("8003"))
+                        {
+                            list.Remove(avatar);
+                        }
+                        if (avatar.ToString().EndsWith("8005"))
+                        {
+                            list.Remove(avatar);
+                        }
+                    }
+                }
+
+                Dictionary<AvatarInfo, AvatarType> dict = [];
+                foreach (var avatar in list)
+                {
+                    GameData.SpecialAvatarData.TryGetValue(avatar * 10 + Player.Data.WorldLevel, out var specialAvatar);
+                    if (specialAvatar != null)
+                    {
+                        dict.Add(specialAvatar.ToAvatarData(Player.Uid), AvatarType.AvatarTrialType);
+                    }
+                }
+
+                return dict;
+            } 
+            else
+            {
+                Dictionary<AvatarInfo, AvatarType> dict = [];
+                foreach (var avatar in Lineup.BaseAvatars!)
+                {
+                    AvatarInfo? avatarInstance = null;
+                    AvatarType avatarType = AvatarType.AvatarFormalType;
+
+                    if (avatar.AssistUid != 0)
+                    {
+                        var player = DatabaseHelper.Instance!.GetInstance<AvatarData>(avatar.AssistUid);
+                        if (player != null)
+                        {
+                            avatarInstance = player.Avatars!.Find(item => item.GetAvatarId() == avatar.BaseAvatarId);
+                            avatarType = AvatarType.AvatarAssistType;
+                        }
+                    }
+                    else if (avatar.SpecialAvatarId != 0)
+                    {
+                        GameData.SpecialAvatarData.TryGetValue(avatar.SpecialAvatarId, out var specialAvatar);
+                        if (specialAvatar != null)
+                        {
+                            avatarInstance = specialAvatar.ToAvatarData(Player.Uid);
+                            avatarType = AvatarType.AvatarTrialType;
+                        }
+                    }
+                    else
+                    {
+                        avatarInstance = Player.AvatarManager!.GetAvatar(avatar.BaseAvatarId);
+                    }
+                    if (avatarInstance == null) continue;
+
+                    dict.Add(avatarInstance, avatarType);
+                }
+
+                return dict;
+            }
+        }
+
         public SceneBattleInfo ToProto()
         {
             var proto = new SceneBattleInfo()
@@ -108,33 +203,9 @@ namespace EggLink.DanhengServer.Game.Battle
                 proto.MonsterWaveList.AddRange(protoWave);
             }
 
-            foreach (var avatar in Lineup.BaseAvatars!)
+            foreach (var avatar in GetBattleAvatars())
             {
-                AvatarInfo? avatarInstance = null;
-                var avatarType = AvatarType.AvatarFormalType;
-                if (avatar.AssistUid != 0)
-                {
-                    var player = DatabaseHelper.Instance!.GetInstance<AvatarData>(avatar.AssistUid);
-                    if (player != null)
-                    {
-                        avatarInstance = player.Avatars!.Find(item => item.GetAvatarId() == avatar.BaseAvatarId);
-                        avatarType = AvatarType.AvatarAssistType;
-                    }
-                } else if (avatar.SpecialAvatarId != 0)
-                {
-                    GameData.SpecialAvatarData.TryGetValue(avatar.SpecialAvatarId, out var specialAvatar);
-                    if (specialAvatar != null)
-                    {
-                        avatarInstance = specialAvatar.ToAvatarData(Player.Uid);
-                        avatarType = AvatarType.AvatarTrialType;
-                    }
-                } else
-                {
-                    avatarInstance = Player.AvatarManager!.GetAvatar(avatar.BaseAvatarId);
-                }
-                if (avatarInstance == null) continue;
-
-                proto.BattleAvatarList.Add(avatarInstance.ToBattleProto(Player.LineupManager!.GetCurLineup()!, Player.InventoryManager!.Data, avatarType));
+                proto.BattleAvatarList.Add(avatar.Key.ToBattleProto(Player.LineupManager!.GetCurLineup()!, Player.InventoryManager!.Data, avatar.Value));
             }
 
             foreach (var monster in EntityMonsters)

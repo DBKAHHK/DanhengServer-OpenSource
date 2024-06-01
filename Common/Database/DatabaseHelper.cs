@@ -278,7 +278,8 @@ namespace EggLink.DanhengServer.Database
             try
             {
                 var prev = DateTime.Now;
-                foreach (var uid in ToSaveUidList)
+                var list = ToSaveUidList.ToList();  // copy the list to avoid the exception
+                foreach (var uid in list)
                 {
                     var value = UidInstanceMap[uid];
                     var baseType = typeof(BaseDatabaseDataHelper);

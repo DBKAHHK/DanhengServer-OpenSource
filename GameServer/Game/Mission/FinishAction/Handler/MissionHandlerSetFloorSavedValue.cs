@@ -13,7 +13,15 @@ namespace EggLink.DanhengServer.Game.Mission.FinishAction.Handler
     {
         public override void OnHandle(List<int> Params, List<string> ParamString, PlayerInstance Player)
         {
-            // TODO
+            _ = int.TryParse(ParamString[1], out var floor);
+            Player.SceneData!.FloorSavedData.TryGetValue(floor, out var value);
+            if (value == null)
+            {
+                value = [];
+                Player.SceneData.FloorSavedData[floor] = value;
+            }
+
+            value[ParamString[2]] = Params[3];  // ParamString[2] is the key
         }
     }
 }

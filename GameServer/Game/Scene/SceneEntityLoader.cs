@@ -253,17 +253,13 @@ namespace EggLink.DanhengServer.Game.Scene
 
             // load from database
             var propData = Scene.Player.GetScenePropData(Scene.FloorId, group.Id, info.ID);
-            if (propData != null)
+            if (propData != null && Scene.Excel.PlaneType != PlaneTypeEnum.Raid)  // raid is not saved
             {
                 prop.State = propData.State;
             } 
             else
             {
                 prop.State = info.State;
-                //if (excel.PropStateList.Contains(PropStateEnum.Closed) && info.State == PropStateEnum.Locked)
-                //{
-                //    prop.SetState(PropStateEnum.Closed);
-                //}
             }
             return prop;
         }

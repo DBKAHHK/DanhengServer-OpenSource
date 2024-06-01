@@ -46,6 +46,7 @@ namespace EggLink.DanhengServer.Configuration
         public string ConfigPath { get; set; } = "Config";
         public string DatabasePath { get; set; } = "Config/Database";
         public string LogPath { get; set; } = "Logs";
+        public string PluginPath { get; set; } = "Plugins";
     }
 
     public class DatabaseConfig

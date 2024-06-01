@@ -63,8 +63,10 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Scene
 
                 raidConfig.MainMissionIDList.ForEach(missionId =>
                 {
-                    player.MissionManager!.ReAcceptMainMission(missionId);
+                    player.MissionManager!.RemoveMainMission(missionId);
                 });
+
+                player.MissionManager!.AcceptMainMission(raidConfig.MainMissionIDList[0]);
 
                 connection.SendPacket(CmdIds.StartRaidScRsp);
             }

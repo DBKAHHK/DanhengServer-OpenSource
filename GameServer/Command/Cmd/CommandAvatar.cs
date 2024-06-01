@@ -176,7 +176,7 @@ namespace EggLink.DanhengServer.Command.Cmd
             var level = arg.GetInt(1);
             if (level < 1 || level > 80)
             {
-                arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.InvalidLevel", I18nManager.Translate("Word.Level")));
+                arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.InvalidLevel", I18nManager.Translate("Word.Avatar")));
                 return;
             }
 
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                     avatar.Level = Math.Min(level, 80);
                     avatar.Promotion = GameData.GetMinPromotionForLevel(avatar.Level);
                 });
-                arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AllAvatarsLevelSet", I18nManager.Translate("Word.Level"), level.ToString()));
+                arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AllAvatarsLevelSet", I18nManager.Translate("Word.Avatar"), level.ToString()));
 
                 // sync
                 arg.Target.SendPacket(new PacketPlayerSyncScNotify(arg.Target.Player!.AvatarManager.AvatarData.Avatars));
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                 // sync
                 arg.Target.SendPacket(new PacketPlayerSyncScNotify(avatar));
 
-                arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AvatarLevelSet", avatar.Excel?.Name ?? id.ToString(), I18nManager.Translate("Word.Level"), level.ToString()));
+                arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AvatarLevelSet", avatar.Excel?.Name ?? id.ToString(), I18nManager.Translate("Word.Avatar"), level.ToString()));
             }
         }
     }
