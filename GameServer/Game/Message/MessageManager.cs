@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Game.Message
             }
         }
 
-        public void AddMessageItem(int itemId)
+        public void AddMessageItem(int itemId, bool sendPacket = true)
         {
             GameData.MessageItemConfigData.TryGetValue(itemId, out var itemConfig);
             if (itemConfig == null) return;
@@ -126,7 +126,7 @@ namespace EggLink.DanhengServer.Game.Message
                 group.CurrentSectionId = sectionId;
                 group.RefreshTime = Extensions.GetUnixSec();
                 group.Status = MessageGroupStatus.MessageGroupDoing;
-                if (!group.Sections.Any(m => m.SectionId == sectionId))
+                if (!group.Sections.Any(m => m.SectionId == sectionId))  // new section
                 {
                     group.Sections.Add(new MessageSectionData
                     {
@@ -134,21 +134,27 @@ namespace EggLink.DanhengServer.Game.Message
                         Status = MessageSectionStatus.MessageSectionDoing,
                         ToChooseItemId = itemConfig.NextItemIDList,
                     });
+
+                    if (itemConfig.NextItemIDList.Count == 1)
+                    {
+                        FinishMessageItem(itemConfig.NextItemIDList[0], false);
+                    }
                 }
-                else
+                else  // old
                 {
                     group.Sections.First(m => m.SectionId == sectionId).Status = MessageSectionStatus.MessageSectionDoing;
                 }
             }
 
-            DatabaseHelper.Instance!.UpdateInstance(Data);
-
             // sync
-            var notify = new PacketPlayerSyncScNotify(group, group.Sections.First(m => m.SectionId == sectionId));
-            Player.SendPacket(notify);
+            if (sendPacket)
+            {
+                var notify = new PacketPlayerSyncScNotify(group, group.Sections.First(m => m.SectionId == sectionId));
+                Player.SendPacket(notify);
+            }
         }
 
-        public void FinishSection(int sectionId)
+        public void FinishSection(int sectionId, bool sendPacket = true)
         {
             GameData.MessageSectionConfigData.TryGetValue(sectionId, out var sectionConfig);
             if (sectionConfig == null) return;
@@ -161,18 +167,20 @@ namespace EggLink.DanhengServer.Game.Message
             {
                 group.Status = MessageGroupStatus.MessageGroupFinish;
             }
-            DatabaseHelper.Instance!.UpdateInstance(Data);
 
             // sync
-            var notify = new PacketPlayerSyncScNotify(group, section);
-            Player.SendPacket(notify);
+            if (sendPacket)
+            {
+                var notify = new PacketPlayerSyncScNotify(group, section);
+                Player.SendPacket(notify);
+            }
 
             // broadcast to mission system
             Player.MissionManager!.HandleFinishType(Enums.MissionFinishTypeEnum.MessagePerformSectionFinish);
             Player.MissionManager!.HandleFinishType(Enums.MissionFinishTypeEnum.MessageSectionFinish);
         }
 
-        public void FinishMessageItem(int itemId)
+        public void FinishMessageItem(int itemId, bool sendPacket = true)
         {
             GameData.MessageItemConfigData.TryGetValue(itemId, out var itemConfig);
             if (itemConfig == null) return;
@@ -181,7 +189,7 @@ namespace EggLink.DanhengServer.Game.Message
             if (!Data.Groups.TryGetValue(groupId, out var group)) return;
             var section = group.Sections.First(m => m.SectionId == sectionId);
             if (section.Status != MessageSectionStatus.MessageSectionDoing) return;
-            //if (!section.ToChooseItemId.Contains(itemId)) return;
+            if (!section.ToChooseItemId.Contains(itemId)) return;
             section.ToChooseItemId.Clear();
             section.Items.Add(new MessageItemData
             {
@@ -191,10 +199,17 @@ namespace EggLink.DanhengServer.Game.Message
 
             group.RefreshTime = Extensions.GetUnixSec();
 
-            DatabaseHelper.Instance!.UpdateInstance(Data);
-            // sync
-            var notify = new PacketPlayerSyncScNotify(group, section);
-            Player.SendPacket(notify);
+            if (section.ToChooseItemId.Count == 1)  // if only one item, auto finish
+            {
+                FinishMessageItem(section.ToChooseItemId[0], false);
+            }
+
+            if (sendPacket)
+            {
+                // sync
+                var notify = new PacketPlayerSyncScNotify(group, section);
+                Player.SendPacket(notify);
+            }
         }
 
         #endregion
