@@ -189,13 +189,10 @@ namespace EggLink.DanhengServer.Database
         {
             try
             {
-                sqlSugarScope?.Queryable<T>()
-                    .Select(x => x)
-                    .ToList();
+                sqlSugarScope?.CodeFirst.InitTables<T>();
             }
             catch
             {
-                sqlSugarScope?.CodeFirst.InitTables<T>();
             }
         }
 
