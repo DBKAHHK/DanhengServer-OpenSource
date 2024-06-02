@@ -31,7 +31,6 @@ namespace EggLink.DanhengServer.Program
             Console.CancelKeyPress += (sender, eventArgs) => {
                 Console.WriteLine("Cancel key pressed. Shutting down...");
                 eventArgs.Cancel = true;
-                PerformCleanup();
                 Environment.Exit(0);
             };
             var time = DateTime.Now;

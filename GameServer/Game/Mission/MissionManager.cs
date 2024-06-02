@@ -208,6 +208,10 @@ namespace EggLink.DanhengServer.Game.Mission
                 }
             }
 
+            // performance
+
+            Player.PerformanceTrigger!.TriggerPerformance(missionId);
+
             return sync;
         }
 
@@ -236,6 +240,12 @@ namespace EggLink.DanhengServer.Game.Mission
                 }
             }
 
+            if (missionId == 1021301)
+            {
+                Player.LineupManager!.SetExtraLineup(Proto.ExtraLineupType.LineupHeliobus, [1021213]);
+                Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
+            }
+
             var mainSync = AcceptMainMissionByCondition(false);
             sync.MissionList.AddRange(mainSync.MissionList);
 
@@ -258,14 +268,9 @@ namespace EggLink.DanhengServer.Game.Mission
                 if (leave)
                 {
                     Player.LeaveRaid();
+                    // finish
+                    HandleFinishType(MissionFinishTypeEnum.RaidFinishCnt, raidConfig.RaidID);
                 }
-            }
-
-            if (missionId == 1021301)
-            {
-                Player.LineupManager!.SetExtraLineup(Proto.ExtraLineupType.LineupHeliobus, [1021213]);
-                Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
-                Player.SceneInstance!.SyncLineup();
             }
 
             PluginEvent.InvokeOnPlayerFinishMainMission(Player, missionId);
@@ -358,8 +363,6 @@ namespace EggLink.DanhengServer.Game.Mission
                 FinishMainMission(mainMissionId);
             }
 
-            DatabaseHelper.Instance?.UpdateInstance(Data);
-
             // Hotfix  for mission 101140201
             if (missionId == 101140201)
             {
@@ -370,6 +373,9 @@ namespace EggLink.DanhengServer.Game.Mission
             {
                 FinishSubMission(100040119);
             }
+
+            // handle reward
+            HandleSubMissionReward(missionId);
 
             PluginEvent.InvokeOnPlayerFinishSubMission(Player, missionId);
         }
@@ -420,6 +426,25 @@ namespace EggLink.DanhengServer.Game.Mission
             });
 
             Player.SendPacket(new PacketMissionRewardScNotify(mainMissionId, 0, ItemList));
+            Player.SendPacket(new PacketScenePlaneEventScNotify(ItemList));
+        }
+
+        public void HandleSubMissionReward(int subMissionId)
+        {
+            GameData.SubMissionData.TryGetValue(subMissionId, out var subMission);
+            if (subMission == null) return;
+            GameData.RewardDataData.TryGetValue(subMission.SubMissionInfo?.SubRewardID ?? 0, out var reward);
+            var ItemList = new Proto.ItemList();
+            reward?.GetItems().ForEach(i =>
+            {
+                var res = Player.InventoryManager!.AddItem(i.Item1, i.Item2, false);
+                if (res != null)
+                {
+                    ItemList.ItemList_.Add(res.ToProto());
+                }
+            });
+
+            Player.SendPacket(new PacketMissionRewardScNotify(0, subMissionId, ItemList));
             Player.SendPacket(new PacketScenePlaneEventScNotify(ItemList));
         }
 

@@ -34,6 +34,7 @@ using EggLink.DanhengServer.Game.Challenge;
 using EggLink.DanhengServer.Game.Drop;
 using static EggLink.DanhengServer.Plugin.Event.PluginEvent;
 using EggLink.DanhengServer.Plugin.Event;
+using EggLink.DanhengServer.Game.Task;
 
 namespace EggLink.DanhengServer.Game.Player
 {
@@ -56,6 +57,8 @@ namespace EggLink.DanhengServer.Game.Player
         public ChessRogueManager? ChessRogueManager { get; private set; }
         public ShopService? ShopService { get; private set; }
         public ChallengeManager? ChallengeManager { get; private set; }
+
+        public PerformanceTrigger? PerformanceTrigger { get; private set; }
 
         #endregion
 
@@ -126,6 +129,7 @@ namespace EggLink.DanhengServer.Game.Player
             ShopService = new(this);
             ChessRogueManager = new(this);
             ChallengeManager = new(this);
+            PerformanceTrigger = new(this);
 
             PlayerUnlockData = InitializeDatabase<PlayerUnlockData>();
             SceneData = InitializeDatabase<SceneData>();
@@ -525,6 +529,8 @@ namespace EggLink.DanhengServer.Game.Player
             }
 
             MissionManager?.OnPlayerChangeScene();
+            MissionManager?.HandleFinishType(MissionFinishTypeEnum.EnterFloor);
+            MissionManager?.HandleFinishType(MissionFinishTypeEnum.NotInFloor);
         }
 
         public ScenePropData? GetScenePropData(int floorId, int groupId, int propId)
@@ -618,7 +624,7 @@ namespace EggLink.DanhengServer.Game.Player
             GameData.RaidConfigData.TryGetValue(CurRaidId * 100 + 0, out var config);
             if (config == null) return;
 
-            if (config.TeamType == RaidTeamTypeEnum.TrialOnly)
+            if (LineupManager!.GetCurLineup()!.IsExtraLineup())
             {
                 LineupManager!.SetExtraLineup(ExtraLineupType.LineupNone, []);
                 SendPacket(new PacketSyncLineupNotify(LineupManager!.GetCurLineup()!));

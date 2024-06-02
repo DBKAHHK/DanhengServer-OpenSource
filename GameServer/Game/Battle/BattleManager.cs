@@ -333,6 +333,8 @@ namespace EggLink.DanhengServer.Game.Battle
                         if (specialAvatar == null) continue;
                         specialAvatar.CurHp[Player.Uid] = curHp;
                         specialAvatar.CurSp[Player.Uid] = curSp;
+                        avatarInstance.SetCurHp(curHp, lineup.LineupType != 0);
+                        avatarInstance.SetCurSp(curSp, lineup.LineupType != 0);
                     } else
                     {
                         avatarInstance.SetCurHp(curHp, lineup.LineupType != 0);

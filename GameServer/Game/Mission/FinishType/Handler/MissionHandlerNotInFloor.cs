@@ -9,17 +9,16 @@ using System.Threading.Tasks;
 
 namespace EggLink.DanhengServer.Game.Mission.FinishType.Handler
 {
-    [MissionFinishType(MissionFinishTypeEnum.EnterFloor)]
-    public class MissionHandlerEnterFloor : MissionFinishTypeHandler
+    [MissionFinishType(MissionFinishTypeEnum.NotInFloor)]
+    public class MissionHandlerNotInFloor : MissionFinishTypeHandler
     {
         public override void Init(PlayerInstance player, SubMissionInfo info, object? arg)
         {
-            player.EnterMissionScene(info.MapEntranceID, info.AnchorGroupID, info.AnchorID, true);
         }
 
         public override void HandleFinishType(PlayerInstance player, SubMissionInfo info, object? arg)
         {
-            if (player.Data.FloorId == info.ParamInt2)
+            if (player.Data.FloorId != info.ParamInt1)
             {
                 player.MissionManager!.FinishSubMission(info.ID);
             }

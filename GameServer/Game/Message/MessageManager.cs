@@ -181,7 +181,7 @@ namespace EggLink.DanhengServer.Game.Message
             if (!Data.Groups.TryGetValue(groupId, out var group)) return;
             var section = group.Sections.First(m => m.SectionId == sectionId);
             if (section.Status != MessageSectionStatus.MessageSectionDoing) return;
-            if (!section.ToChooseItemId.Contains(itemId)) return;
+            //if (!section.ToChooseItemId.Contains(itemId)) return;
             section.ToChooseItemId.Clear();
             section.Items.Add(new MessageItemData
             {

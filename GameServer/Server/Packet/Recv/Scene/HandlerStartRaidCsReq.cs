@@ -50,6 +50,12 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Scene
                         }
                     }
 
+                    if (req.AvatarList.Count > 0)
+                    {
+                        player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupHeliobus, req.AvatarList.Select(x => (int)x).ToList());
+                        player.SendPacket(new PacketSyncLineupNotify(player.LineupManager!.GetCurLineup()!));
+                    }
+
                     if (raidConfig.TeamType == Enums.Scene.RaidTeamTypeEnum.TrialOnly)
                     {
                         // set lineup

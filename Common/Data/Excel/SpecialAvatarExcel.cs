@@ -19,6 +19,7 @@ namespace EggLink.DanhengServer.Data.Excel
         public int SpecialAvatarID { get; set; }
         public int WorldLevel { get; set; }
         public int AvatarID { get; set; }
+        public int PlayerID { get; set; }
 
         [JsonConverter(typeof(StringEnumConverter))]
         public SpecialAvatarTypeEnum Type { get; set; }
@@ -60,7 +61,10 @@ namespace EggLink.DanhengServer.Data.Excel
             CurHp.TryGetValue(uid, out var hp);
             CurSp.TryGetValue(uid, out var sp);
             EntityId.TryGetValue(uid, out var Id);
-            return new()
+
+            GameData.AvatarConfigData.TryGetValue(PlayerID, out var avatarConfig);
+
+            var instance = new AvatarInfo()
             {
                 AvatarId = AvatarID,
                 SpecialBaseAvatarId = SpecialAvatarID,
@@ -79,6 +83,16 @@ namespace EggLink.DanhengServer.Data.Excel
                 InternalEntityId = Id,
                 PlayerData = DatabaseHelper.Instance!.GetInstance<PlayerData>(uid),
             };
+
+            if (avatarConfig != null)
+            {
+                foreach (var skill in avatarConfig.DefaultSkillTree)
+                {
+                    instance.SkillTree.Add(skill.PointID, skill.Level);
+                }
+            }
+
+            return instance;
         }
     }
 }

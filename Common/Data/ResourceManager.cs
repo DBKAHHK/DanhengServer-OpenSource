@@ -21,6 +21,7 @@ namespace EggLink.DanhengServer.Data
             LoadMissionInfo();
             LoadMazeSkill();
             LoadDialogueInfo();
+            LoadPerformanceInfo();
             GameData.ActivityConfig = LoadCustomFile<ActivityConfig>("Activity", "ActivityConfig") ?? new();
             GameData.BannersConfig = LoadCustomFile<BannersConfig>("Banner", "Banners") ?? new();
             GameData.RogueMapGenData = LoadCustomFile<Dictionary<int, List<int>>>("Rogue Map", "RogueMapGen") ?? [];
@@ -375,6 +376,48 @@ namespace EggLink.DanhengServer.Data
             }
 
             Logger.Info("Loaded " + count + " dialogue infos.");
+        }
+
+        public static void LoadPerformanceInfo()
+        {
+            var count = 0;
+            foreach (var performance in GameData.PerformanceEData.Values)
+            {
+                if (performance.PerformancePath == "")
+                {
+                    count++;
+                    continue;
+                }
+
+                var path = ConfigManager.Config.Path.ResourcePath + "/" + performance.PerformancePath;
+                var file = new FileInfo(path);
+                if (!file.Exists) continue;
+                try
+                {
+                    using var reader = file.OpenRead();
+                    using StreamReader reader2 = new(reader);
+                    var text = reader2.ReadToEnd().Replace("$type", "Type");
+                    var act = JsonConvert.DeserializeObject<MissionActInfo>(text);
+                    if (act != null)
+                    {
+                        performance.ActInfo = act;
+                        count++;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Logger.Error("Error in reading " + file.Name, ex);
+                }
+
+            }
+
+            if (count < GameData.PerformanceEData.Count)
+            {
+                // looks like many dont exist
+                //Logger.Warn("Performance infos are missing, please check your resources folder: " + ConfigManager.Config.Path.ResourcePath + "/Config/Level/Mission/*/Act. Performances may not work!");
+            }
+
+            Logger.Info("Loaded " + count + " performance infos.");
         }
     }
 }

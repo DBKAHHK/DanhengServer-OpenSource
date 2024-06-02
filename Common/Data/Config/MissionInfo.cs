@@ -36,6 +36,7 @@ namespace EggLink.DanhengServer.Data.Config
         public List<FinishActionInfo>? FinishActionList { get; set; } = [];
         public int Progress { get; set; }
         public List<int>? GroupIDList { get; set; } = [];
+        public int SubRewardID { get; set; }
 
         [JsonIgnore]
         public OperationEnum Operation { get; set; } = OperationEnum.And;
@@ -84,14 +85,9 @@ namespace EggLink.DanhengServer.Data.Config
                         AnchorGroupID = Task.OnInitSequece[0].TaskList[0].GroupID;
                         AnchorID = Task.OnInitSequece[0].TaskList[0].AnchorID;
                     }
-                    if (MapEntranceID == 0)
-                    {
-                        MapEntranceID = int.Parse(ParamInt2.ToString().Replace("00", "0"));  // a hacky way to get the MapEntranceID
-                    }
                 }
                 catch
                 {
-                    MapEntranceID = int.Parse(ParamInt2.ToString().Replace("00", "0"));  // a hacky way to get the MapEntranceID
                 }
             } else if (type == 2)
             {
