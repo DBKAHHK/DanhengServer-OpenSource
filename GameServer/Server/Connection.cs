@@ -25,10 +25,12 @@ public partial class Connection
     public static readonly List<int> BANNED_PACKETS = [];
     public bool IsOnline = true;
     private static readonly Logger Logger = new("GameServer");
-#if DEBUG
     public static readonly Dictionary<string, string> LogMap = [];
     public static readonly List<int> IgnoreLog = [CmdIds.PlayerHeartBeatCsReq, CmdIds.PlayerHeartBeatScRsp, CmdIds.SceneEntityMoveCsReq, CmdIds.SceneEntityMoveScRsp, CmdIds.GetShopListCsReq, CmdIds.GetShopListScRsp];
-#endif
+
+    public string DebugFile = "";
+    public StreamWriter? writer = null;
+
     public Connection(KcpConversation conversation, IPEndPoint remote)
     {
         Conversation = conversation;
@@ -57,8 +59,7 @@ public partial class Connection
         IsOnline = false;
     }
 
-#if DEBUG
-    public static void LogPacket(string sendOrRecv, ushort opcode, byte[] payload)
+    public void LogPacket(string sendOrRecv, ushort opcode, byte[] payload)
     {
         try
         {
@@ -75,14 +76,46 @@ public partial class Connection
 #pragma warning restore CS8600
             JsonFormatter? formatter = JsonFormatter.Default;
             string? asJson = formatter.Format(packet);
-            Logger.Debug($"{sendOrRecv}: {LogMap[opcode.ToString()]}({opcode})\r\n{asJson}");
-        } catch
+            var output = $"{sendOrRecv}: {LogMap[opcode.ToString()]}({opcode})\r\n{asJson}";
+#if DEBUG
+            Logger.Debug(output);
+#endif
+            if (DebugFile != "" && ConfigManager.Config.ServerOption.SavePersonalDebugFile)
+            {
+                StreamWriter? sw = GetWriter();
+                sw.WriteLine($"[{DateTime.Now:HH:mm:ss}] [GameServer] [DEBUG] " + output);
+                sw.Flush();
+            }
+        }
+        catch
         {
-            Logger.Debug($"{sendOrRecv}: {LogMap[opcode.ToString()]}({opcode})");
+            var output = $"{sendOrRecv}: {LogMap[opcode.ToString()]}({opcode})";
+#if DEBUG
+            Logger.Debug(output);
+#endif
+            if (DebugFile != "" && ConfigManager.Config.ServerOption.SavePersonalDebugFile)
+            {
+                StreamWriter? sw = GetWriter();
+                sw.WriteLine($"[{DateTime.Now:HH:mm:ss}] [GameServer] [DEBUG] " + output);
+                sw.Flush();
+            }
         }
     }
 
-#endif
+    private StreamWriter GetWriter()
+    {
+        // Create the file if it doesn't exist
+        var file = new FileInfo(DebugFile);
+        if (!file.Exists)
+        {
+            Directory.CreateDirectory(file.DirectoryName!);
+            File.Create(DebugFile).Dispose();
+        }
+
+        writer ??= new StreamWriter(DebugFile, true);
+        return writer;
+    }
+
     private async Task ReceiveLoop()
     {
         while (!CancelToken.IsCancellationRequested)

@@ -153,9 +153,8 @@ namespace EggLink.DanhengServer.Program
             var elapsed = DateTime.Now - time;
             logger.Info($"Done in {elapsed.TotalSeconds.ToString()[..4]}s! Type '/help' to get help of commands.");
 
-#if DEBUG
             GenerateLogMap();
-#endif
+
             if (GetConfig().ServerOption.EnableMission)
             {
                 logger.Warn("Mission system is enabled. This is a feature that is still in development and may not work as expected. If you encounter any issues, please report them to the developers.");
@@ -177,8 +176,6 @@ namespace EggLink.DanhengServer.Program
             DatabaseHelper.SaveDatabase();
         }
 
-#if DEBUG
-
         private static void GenerateLogMap()
         {
             // get opcode from CmdIds
@@ -190,7 +187,5 @@ namespace EggLink.DanhengServer.Program
                 Connection.LogMap.Add(value.ToString(), name);
             }
         }
-
-#endif
     }
 }

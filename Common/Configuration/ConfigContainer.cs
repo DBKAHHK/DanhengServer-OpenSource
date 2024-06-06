@@ -73,6 +73,7 @@ namespace EggLink.DanhengServer.Configuration
         public ServerAnnounce ServerAnnounce { get; set; } = new ServerAnnounce();
         public ServerProfile ServerProfile { get; set; } = new ServerProfile();
         public bool AutoCreateUser { get; set; } = true;
+        public bool SavePersonalDebugFile { get; set; } = false;
     }
 
     public class ServerAnnounce
@@ -103,6 +104,6 @@ namespace EggLink.DanhengServer.Configuration
 
     public class MuipServerConfig
     {
-        public string AdminKey { get; set; } = "";
+        public string AdminKey { get; set; } = "None";
     }
 }

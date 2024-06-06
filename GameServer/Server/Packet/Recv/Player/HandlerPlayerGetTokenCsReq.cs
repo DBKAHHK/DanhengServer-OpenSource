@@ -5,6 +5,8 @@ using EggLink.DanhengServer.Database.Player;
 using EggLink.DanhengServer.Game.Player;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Server.Packet.Send.Player;
+using EggLink.DanhengServer.Util;
+using Microsoft.EntityFrameworkCore;
 
 namespace EggLink.DanhengServer.Server.Packet.Recv.Player
 {
@@ -36,6 +38,7 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Player
                 connection.Player = new PlayerInstance(int.Parse(req.AccountUid));
             else
                 connection.Player = new PlayerInstance(pd);
+            connection.DebugFile = Path.Combine(ConfigManager.Config.Path.LogPath, "Debug/", $"{req.AccountUid}/", $"Debug-{DateTime.Now:yyyy-MM-dd HH-mm-ss}.log");
             connection.Player.OnLogin();
             connection.Player.Connection = connection;
             connection.SendPacket(new PacketPlayerGetTokenScRsp(connection));
