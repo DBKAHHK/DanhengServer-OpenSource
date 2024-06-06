@@ -190,9 +190,7 @@ public partial class Connection
                 uint payloadLength = br.ReadUInt32BE();
                 byte[] header = br.ReadBytes(headerLength);
                 byte[] payload = br.ReadBytes((int)payloadLength);
-#if DEBUG
                 LogPacket("Recv", opcode, payload);
-#endif
                 HandlePacket(opcode, header, payload);
             }
 
@@ -258,9 +256,7 @@ public partial class Connection
         {
             return;
         }
-#if DEBUG
         LogPacket("Send", packet.CmdId, packet.Data);
-#endif
         // Header
         byte[] packetBytes = packet.BuildPacket();
 
