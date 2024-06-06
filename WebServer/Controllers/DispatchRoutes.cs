@@ -37,6 +37,8 @@ namespace EggLink.DanhengServer.WebServer.Controllers
         // === AUTHENTICATION ===
         [HttpPost("/hkrpg_global/mdk/shield/api/login")]
         public JsonResult Login([FromBody] LoginReqJson req) => new UsernameLoginHandler().Handle(req.account!, req.password!, req.is_crypto);
+        [HttpPost("/hkrpg_global/account/ma-passport/api/appLoginByPassword")]
+        public JsonResult Login([FromBody] NewLoginReqJson req) => new NewUsernameLoginHandler().Handle(req.account!, req.password!);
         [HttpPost("/hkrpg_global/mdk/shield/api/verify")]
         public JsonResult Verify([FromBody] VerifyReqJson req) => new TokenLoginHandler().Handle(req.uid!, req.token!);
         [HttpPost("/hkrpg_global/combo/granter/login/v2/login")]

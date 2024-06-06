@@ -6,6 +6,11 @@
         public string? password { get; set; }
         public bool is_crypto { get; set; }
     }
+    public class NewLoginReqJson
+    {
+        public string? account { get; set; }
+        public string? password { get; set; }
+    }
 
     public class VerifyReqJson
     {
