@@ -1,5 +1,4 @@
 ﻿using EggLink.DanhengServer.Internationalization;
-using EggLink.DanhengServer.Program;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,8 +13,12 @@ namespace EggLink.DanhengServer.Command.Cmd
         [CommandDefault]
         public void Help(CommandArg arg)
         {
-            var commands = EntryPoint.CommandManager.CommandInfo.Values;
+            var commands = CommandManager.Instance?.CommandInfo.Values;
             arg.SendMsg(I18nManager.Translate("Game.Command.Help.Commands"));
+            if (commands == null)
+            {
+                return;
+            }
             foreach (var command in commands)
             {
                 arg.SendMsg($"/{command.Name} - {I18nManager.Translate(command.Description)}\n{I18nManager.Translate("Game.Command.Help.CommandUsage")} {I18nManager.Translate(command.Usage)}");

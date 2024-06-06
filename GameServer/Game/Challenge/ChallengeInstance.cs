@@ -330,7 +330,7 @@ namespace EggLink.DanhengServer.Game.Challenge
 
             if (StoryBuffs != null && StoryBuffs.Count >= CurrentStage)
             {
-                proto.PlayerInfo.CurStoryBuff.BuffList.Add((uint)StoryBuffs[CurrentStage - 1]);
+                proto.PlayerInfo.CurStoryBuff.BuffList.Add(StoryBuffs.Select(x => (uint)x));
             }
 
             // Early implementation for 2.3

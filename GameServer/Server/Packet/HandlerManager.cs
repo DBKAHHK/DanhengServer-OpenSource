@@ -2,11 +2,11 @@
 
 namespace EggLink.DanhengServer.Server.Packet
 {
-    public class HandlerManager
+    public static class HandlerManager
     {
-        public Dictionary<int, Handler> handlers = [];
+        public static Dictionary<int, Handler> handlers = [];
 
-        public HandlerManager()
+        public static void Init()
         {
             var classes = Assembly.GetExecutingAssembly().GetTypes();  // Get all classes in the assembly
             foreach (var cls in classes)
@@ -20,7 +20,7 @@ namespace EggLink.DanhengServer.Server.Packet
             }
         }
 
-        public Handler? GetHandler(int cmdId)
+        public static Handler? GetHandler(int cmdId)
         {
             try
             {

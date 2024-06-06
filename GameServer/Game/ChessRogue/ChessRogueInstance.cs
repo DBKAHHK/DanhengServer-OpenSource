@@ -48,6 +48,14 @@ namespace EggLink.DanhengServer.Game.ChessRogue
             CurLayer = Layers.First();
             EventManager = new(player, this);
 
+            if (rogueVersionId == 202)
+            {
+                RogueType = 160;
+            } else
+            {
+                RogueType = 130;
+            }
+
             foreach (var difficulty in areaExcel.DifficultyID)
             {
                 if (GameData.RogueDLCDifficultyData.TryGetValue(difficulty, out var diff))

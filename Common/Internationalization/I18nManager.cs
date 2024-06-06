@@ -21,7 +21,9 @@ namespace EggLink.DanhengServer.Internationalization
             var languageType = Type.GetType(languageStr);
             if (languageType == null)
             {
-                throw new Exception("Language not found");
+                Logger.Error("Language not found, fallback to EN");
+                // fallback to English
+                languageType = Type.GetType("EggLink.DanhengServer.Internationalization.Message.LanguageEN")!;
             }
             var language = Activator.CreateInstance(languageType) ?? throw new Exception("Language not found");
             Language = language;

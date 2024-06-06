@@ -6,12 +6,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>EggLink.DanhengServer.WebServer</RootNamespace>
     <OutputType>Library</OutputType>
+    <AssemblyName>DanhengWebServer</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Google.Protobuf" Version="3.25.3" />
     <PackageReference Include="Google.Protobuf.Tools" Version="3.25.3" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
     <PackageReference Include="Spectre.Console" Version="0.48.0" />
     <PackageReference Include="SQLitePCLRaw.core" Version="2.1.8" />
     <PackageReference Include="SQLitePCLRaw.provider.e_sqlite3" Version="2.1.8" />

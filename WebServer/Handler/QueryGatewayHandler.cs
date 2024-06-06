@@ -2,7 +2,7 @@
 using EggLink.DanhengServer.Util;
 using Google.Protobuf;
 
-namespace EggLink.DanhengServer.Server.Http.Handler
+namespace EggLink.DanhengServer.WebServer.Handler
 {
     internal class QueryGatewayHandler
     {
@@ -14,7 +14,8 @@ namespace EggLink.DanhengServer.Server.Http.Handler
             var urlData = config.DownloadUrl;
 
             // build gateway proto
-            var gateServer = new GateServer() {
+            var gateServer = new GateServer()
+            {
                 RegionName = config.GameServer.GameServerId,
                 Ip = config.GameServer.PublicAddress,
                 Port = config.GameServer.PublicPort,
@@ -41,7 +42,7 @@ namespace EggLink.DanhengServer.Server.Http.Handler
                 gateServer.LuaUrl = urlData.LuaUrl;
                 gateServer.MdkResVersion = urlData.LuaUrl.Split('/')[^1].Split('_')[1];
             }
-            
+
             if (urlData.IfixUrl != null && urlData.IfixUrl.Length > 0)
             {
                 gateServer.IfixUrl = urlData.IfixUrl;

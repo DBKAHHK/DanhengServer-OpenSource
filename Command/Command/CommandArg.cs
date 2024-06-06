@@ -11,6 +11,7 @@ namespace EggLink.DanhengServer.Command
     public class CommandArg
     {
         public string Raw { get; }
+        public List<string> Args { get; } = [];
         public List<string> BasicArgs { get; } = [];
         public Dictionary<string, string> CharacterArgs { get; } = [];
         public Connection? Target { get; set; }
@@ -33,14 +34,17 @@ namespace EggLink.DanhengServer.Command
                     try
                     {
                         CharacterArgs.Add(arg[..1], arg[1..]);
+                        Args.Add(arg);
                     } catch
                     {
                         BasicArgs.Add(arg);
+                        Args.Add(arg);
                     }
                 }
                 else
                 {
                     BasicArgs.Add(arg);
+                    Args.Add(arg);
                 }
             }
             if (con != null)

@@ -80,7 +80,7 @@ namespace EggLink.DanhengServer.Command.Cmd
             // sync
             player.SendPacket(new PacketPlayerSyncScNotify(avatar));
 
-            arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AvatarLevelSet", avatar.Excel?.Name ?? avatarId.ToString(), I18nManager.Translate("Word.Talent"), level.ToString()));
+            arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AvatarLevelSet", avatar.Excel?.Name?.Replace("{NICKNAME}", player.Data.Name) ?? avatarId.ToString(), I18nManager.Translate("Word.Talent"), level.ToString()));
         }
 
         [CommandMethod("get")]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                 // sync
                 arg.Target.SendPacket(new PacketPlayerSyncScNotify(avatar));
 
-                arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AvatarLevelSet", avatar.Excel?.Name ?? id.ToString(), I18nManager.Translate("Word.Rank"), rank.ToString()));
+                arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AvatarLevelSet", avatar.Excel?.Name?.Replace("{NICKNAME}", arg.Target.Player!.Data.Name) ?? id.ToString(), I18nManager.Translate("Word.Rank"), rank.ToString()));
             }
         }
 
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                 // sync
                 arg.Target.SendPacket(new PacketPlayerSyncScNotify(avatar));
 
-                arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AvatarLevelSet", avatar.Excel?.Name ?? id.ToString(), I18nManager.Translate("Word.Avatar"), level.ToString()));
+                arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AvatarLevelSet", avatar.Excel?.Name?.Replace("{NICKNAME}", arg.Target.Player!.Data.Name) ?? id.ToString(), I18nManager.Translate("Word.Avatar"), level.ToString()));
             }
         }
     }

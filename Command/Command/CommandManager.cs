@@ -1,6 +1,6 @@
 ﻿using EggLink.DanhengServer.Database;
+using EggLink.DanhengServer.GameServer.Command;
 using EggLink.DanhengServer.Internationalization;
-using EggLink.DanhengServer.Program;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Server;
 using EggLink.DanhengServer.Util;
@@ -16,6 +16,7 @@ namespace EggLink.DanhengServer.Command
 {
     public class CommandManager
     {
+        public static CommandManager? Instance { get; private set; }
         public Dictionary<string, ICommand> Commands { get; } = [];
         public Dictionary<string, CommandInfo> CommandInfo { get; } = [];
         public Logger Logger { get; } = new Logger("CommandManager");
@@ -23,6 +24,7 @@ namespace EggLink.DanhengServer.Command
 
         public void RegisterCommand()
         {
+            Instance = this;
             foreach (var type in Assembly.GetExecutingAssembly().GetTypes())
             {
                 var attr = type.GetCustomAttribute<CommandInfo>();
@@ -84,10 +86,15 @@ namespace EggLink.DanhengServer.Command
                         }
                         return;
                     }
-                } else if (sender is PlayerCommandSender player)
+                } else
                 {
                     // player
-                    tempTarget = player.Player.Connection;
+                    tempTarget = Listener.GetActiveConnection(sender.GetSender());
+                    if (tempTarget == null)
+                    {
+                        sender.SendMsg(I18nManager.Translate("Game.Command.Notice.TargetNotFound", sender.GetSender().ToString()));
+                        return;
+                    }
                 }
 
                 if (tempTarget != null && !tempTarget.IsOnline)

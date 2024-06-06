@@ -14,6 +14,8 @@ namespace EggLink.DanhengServer.Util
             {
                 logger.Warn("Config file not found, creating a new one");
                 Config = new ConfigContainer();
+                Config.MuipServer.AdminKey = Guid.NewGuid().ToString();
+                logger.Info("Muipserver Admin key: " + Config.MuipServer.AdminKey);
                 SaveConfig();
             }
             using (var reader = new StreamReader(file.OpenRead()))

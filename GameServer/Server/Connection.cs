@@ -5,7 +5,6 @@ using System.Reflection;
 using EggLink.DanhengServer.Common.Enums;
 using EggLink.DanhengServer.Game.Player;
 using EggLink.DanhengServer.KcpSharp;
-using EggLink.DanhengServer.Program;
 using EggLink.DanhengServer.Server.Packet;
 using EggLink.DanhengServer.Util;
 using Google.Protobuf;
@@ -70,7 +69,7 @@ public partial class Connection
             }
 #pragma warning disable CS8600
             Type? typ = AppDomain.CurrentDomain.GetAssemblies().
-           SingleOrDefault(assembly => assembly.GetName().Name == "Common")!.GetTypes().First(t => t.Name == $"{LogMap[opcode.ToString()]}"); //get the type using the packet name
+           SingleOrDefault(assembly => assembly.GetName().Name == "DanhengCommon")!.GetTypes().First(t => t.Name == $"{LogMap[opcode.ToString()]}"); //get the type using the packet name
             MessageDescriptor? descriptor = (MessageDescriptor)typ.GetProperty("Descriptor", BindingFlags.Public | BindingFlags.Static)!.GetValue(null, null); // get the static property Descriptor
             IMessage? packet = descriptor!.Parser.ParseFrom(payload);
 #pragma warning restore CS8600
@@ -178,7 +177,7 @@ public partial class Connection
     private bool HandlePacket(ushort opcode, byte[] header, byte[] payload)
     {
         // Find the Handler for this opcode
-        Handler? handler = EntryPoint.HandlerManager.GetHandler(opcode);
+        Handler? handler = HandlerManager.GetHandler(opcode);
         if (handler != null)
         {
             // Handle

@@ -61,7 +61,7 @@ namespace EggLink.DanhengServer.Game.Scene
                     if (Player.ChessRogueManager!.RogueInstance != null)
                     {
                         EntityLoader = new ChessRogueEntityLoader(this);
-                        CustomGameModeId = 16;
+                        CustomGameModeId = 16;  // ChessRogue
                     } else
                     {
                         EntityLoader = new RogueEntityLoader(this, Player);

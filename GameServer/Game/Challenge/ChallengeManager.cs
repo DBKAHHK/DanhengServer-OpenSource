@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Game.Challenge
         public void StartChallenge(int challengeId, StartChallengeStoryBuffInfo? storyBuffs)
         {
             // Get challenge excel
-            if (!GameData.ChallengeConfigData.ContainsKey(challengeId))
+            if (!GameData.ChallengeConfigData.TryGetValue(challengeId, out ChallengeConfigExcel? value))
             {
                 Player.SendPacket(new PacketStartChallengeScRsp((uint)Retcode.RetChallengeNotExist));
                 return;
             }
-            ChallengeConfigExcel Excel = GameData.ChallengeConfigData[challengeId];
+            ChallengeConfigExcel Excel = value;
 
             // Sanity check lineups
             if (Excel.StageNum > 0)
@@ -79,7 +79,7 @@ namespace EggLink.DanhengServer.Game.Challenge
             }
 
             // Set challenge data for player
-            ChallengeInstance instance = new ChallengeInstance(Player, Excel);
+            ChallengeInstance instance = new(Player, Excel);
             ChallengeInstance = instance;
 
             // Set first lineup before we enter scenes
@@ -88,7 +88,7 @@ namespace EggLink.DanhengServer.Game.Challenge
             // Enter scene
             try
             {
-                Player.EnterScene(Excel.MapEntranceID, 0, true);
+                Player.EnterScene(Excel.MapEntranceID, 0, false);
             }
             catch
             {
@@ -257,9 +257,9 @@ namespace EggLink.DanhengServer.Game.Challenge
             if (ChallengeData.Instance != null && ChallengeData.Instance.ChallengeId != 0)
             {
                 int ChallengeId = ChallengeData.Instance.ChallengeId;
-                if (GameData.ChallengeConfigData.ContainsKey(ChallengeId))
+                if (GameData.ChallengeConfigData.TryGetValue(ChallengeId, out ChallengeConfigExcel? value))
                 {
-                    ChallengeConfigExcel Excel = GameData.ChallengeConfigData[ChallengeId];
+                    ChallengeConfigExcel Excel = value;
                     ChallengeInstance instance = new ChallengeInstance(Player, Excel, ChallengeData.Instance);
                     ChallengeInstance = instance;
                 }

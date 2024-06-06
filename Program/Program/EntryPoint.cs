@@ -4,13 +4,15 @@ using EggLink.DanhengServer.Configuration;
 using EggLink.DanhengServer.WebServer;
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Server;
-using EggLink.DanhengServer.Server.Packet;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
-using EggLink.DanhengServer.Command;
 using EggLink.DanhengServer.Handbook;
 using EggLink.DanhengServer.Internationalization;
 using EggLink.DanhengServer.Plugin;
+using EggLink.DanhengServer.Command;
+using EggLink.DanhengServer.Server.Packet;
+using EggLink.DanhengServer.GameServer.Command;
+using EggLink.DanhengServer.WebServer.Server;
 
 namespace EggLink.DanhengServer.Program
 {
@@ -19,7 +21,6 @@ namespace EggLink.DanhengServer.Program
         private readonly static Logger logger = new("Program");
         public readonly static DatabaseHelper DatabaseHelper = new();
         public readonly static Listener Listener = new();
-        public readonly static HandlerManager HandlerManager = new();
         public readonly static CommandManager CommandManager = new();
 
         public static void Main(string[] args)
@@ -75,18 +76,6 @@ namespace EggLink.DanhengServer.Program
                 return;
             }
 
-            // Load the plugins
-            logger.Info("Loading plugins...");
-            try
-            {
-                PluginManager.LoadPlugins();
-            } catch (Exception e)
-            {
-                logger.Error("Failed to load plugins", e);
-                Console.ReadLine();
-                return;
-            }
-
             // Load the game data
             logger.Info("Loading game data...");
             try
@@ -130,9 +119,31 @@ namespace EggLink.DanhengServer.Program
                 Console.ReadLine();
                 return;
             }
-            
+
+            // Load the plugins
+            logger.Info("Loading plugins...");
+            try
+            {
+                PluginManager.LoadPlugins();
+            }
+            catch (Exception e)
+            {
+                logger.Error("Failed to load plugins", e);
+                Console.ReadLine();
+                return;
+            }
+
+            CommandExecutor.OnRunCommand += (sender, e) =>
+            {
+                CommandManager.HandleCommand(e, sender);
+            };
+
+            MuipManager.OnExecuteCommand += CommandManager.HandleCommand;
+
             // generate the handbook
             HandbookGenerator.Generate();
+
+            HandlerManager.Init();
 
             WebProgram.Main([], GetConfig().HttpServer.PublicPort, GetConfig().HttpServer.GetDisplayAddress());
             logger.Info($"Dispatch Server is running on {GetConfig().HttpServer.GetDisplayAddress()}");
@@ -143,7 +154,7 @@ namespace EggLink.DanhengServer.Program
             logger.Info($"Done in {elapsed.TotalSeconds.ToString()[..4]}s! Type '/help' to get help of commands.");
 
 #if DEBUG
-            JsonConvert.DeserializeObject<JObject>(File.ReadAllText("LogMap.json"))!.Properties().ToList().ForEach(x => Connection.LogMap.Add(x.Name, x.Value.ToString()));
+            GenerateLogMap();
 #endif
             if (GetConfig().ServerOption.EnableMission)
             {
@@ -165,5 +176,21 @@ namespace EggLink.DanhengServer.Program
             DatabaseHelper.SaveThread?.Interrupt();
             DatabaseHelper.SaveDatabase();
         }
+
+#if DEBUG
+
+        private static void GenerateLogMap()
+        {
+            // get opcode from CmdIds
+            var opcodes = typeof(CmdIds).GetFields().Where(x => x.FieldType == typeof(int)).ToList();
+            foreach (var opcode in opcodes)
+            {
+                var name = opcode.Name;
+                var value = (int)opcode.GetValue(null)!;
+                Connection.LogMap.Add(value.ToString(), name);
+            }
+        }
+
+#endif
     }
 }

@@ -79,6 +79,7 @@ namespace EggLink.DanhengServer.Internationalization.Message
         public RogueTextCHS Rogue { get; } = new();
         public SceneTextCHS Scene { get; } = new();
         public UnlockAllTextCHS UnlockAll { get; } = new();
+        public MailTextCHS Mail { get; } = new();
     }
 
     #endregion
@@ -280,6 +281,17 @@ namespace EggLink.DanhengServer.Internationalization.Message
         public string AllPropsUnlocked { get; } = "所有道具已解锁!";
         public string SceneChanged { get; } = "已进入场景 {0}";
         public string SceneReloaded { get; } = "场景已重新加载!";
+    }
+
+    /// <summary>
+    /// path: Game.Command.Mail
+    /// </summary>
+    public class MailTextCHS
+    {
+        public string Desc { get; } = "管理玩家的邮件";
+        public string Usage { get; } = "/mail <send [发送名称] [标题] [内容] [模板ID] [过期天数] - 发送邮件>/<send [发送者] [标题] [内容] [模板ID] [过期天数] [附件] - 发送带附件的邮件>";
+        public string MailSent { get; } = "邮件已发送!";
+        public string MailSentWithAttachment { get; } = "带附件的邮件已发送!";
     }
 
     #endregion

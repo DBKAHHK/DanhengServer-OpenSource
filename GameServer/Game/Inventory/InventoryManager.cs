@@ -38,7 +38,7 @@ namespace EggLink.DanhengServer.Game.Inventory
             var syncItems = new List<ItemData>();
             foreach (var item in items)
             {
-                var i = AddItem(item.ItemId, items.Count, false, sync:false, returnRaw:true);
+                var i = AddItem(item.ItemId, item.Count, false, sync:false, returnRaw:true);
                 if (i != null)
                 {
                     syncItems.Add(i);

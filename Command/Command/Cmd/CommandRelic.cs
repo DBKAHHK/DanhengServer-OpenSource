@@ -40,7 +40,8 @@ namespace EggLink.DanhengServer.Command.Cmd
             }
 
             GameData.RelicConfigData.TryGetValue(int.Parse(arg.BasicArgs[0]), out var itemConfig);
-            if (itemConfig == null)
+            GameData.ItemConfigData.TryGetValue(int.Parse(arg.BasicArgs[0]), out var itemConfigExcel);
+            if (itemConfig == null || itemConfigExcel == null)
             {
                 arg.SendMsg(I18nManager.Translate("Game.Command.Relic.RelicNotFound"));
                 return;
@@ -141,7 +142,7 @@ namespace EggLink.DanhengServer.Command.Cmd
                 player.InventoryManager!.AddItem(itemData);
             }
 
-            arg.SendMsg(I18nManager.Translate("Game.Command.Relic.RelicGiven", player.Uid.ToString(), amount.ToString(), itemData.ItemId.ToString(), itemData.MainAffix.ToString()));
+            arg.SendMsg(I18nManager.Translate("Game.Command.Relic.RelicGiven", player.Uid.ToString(), amount.ToString(), itemConfigExcel.Name ?? itemData.ItemId.ToString(), itemData.MainAffix.ToString()));
         }
     }
 }

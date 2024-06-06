@@ -1,5 +1,4 @@
 ﻿using EggLink.DanhengServer.Command;
-using EggLink.DanhengServer.Program;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Server.Packet.Send.Friend;
 using EggLink.DanhengServer.Server.Packet.Send.Gacha;

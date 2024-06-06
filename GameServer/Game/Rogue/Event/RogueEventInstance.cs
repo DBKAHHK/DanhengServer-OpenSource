@@ -51,7 +51,7 @@ namespace EggLink.DanhengServer.Game.Rogue.Event
             var proto = new DialogueEvent()
             {
                 EventId = (uint)EventId,
-                GameModeType = (uint)EventEntity.Scene.Excel.PlaneType,
+                GameModeType = (uint)(EventEntity.Scene.CustomGameModeId > 0 ? EventEntity.Scene.CustomGameModeId : (int)EventEntity.Scene.Excel.PlaneType),
                 EventUniqueId = (uint)EventUniqueId,
             };
 

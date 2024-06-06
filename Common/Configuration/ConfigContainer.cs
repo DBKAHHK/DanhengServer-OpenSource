@@ -11,6 +11,7 @@ namespace EggLink.DanhengServer.Configuration
         public DatabaseConfig Database { get; set; } = new DatabaseConfig();
         public ServerOption ServerOption { get; set; } = new ServerOption();
         public DownloadUrlConfig DownloadUrl { get; set; } = new DownloadUrlConfig();
+        public MuipServerConfig MuipServer { get; set; } = new MuipServerConfig();
     }
 
     public class HttpServerConfig
@@ -47,6 +48,7 @@ namespace EggLink.DanhengServer.Configuration
         public string DatabasePath { get; set; } = "Config/Database";
         public string LogPath { get; set; } = "Logs";
         public string PluginPath { get; set; } = "Plugins";
+        public string PluginConfigPath { get; set; } = "Plugins/Config";
     }
 
     public class DatabaseConfig
@@ -97,5 +99,10 @@ namespace EggLink.DanhengServer.Configuration
         public string? ExResourceUrl { get; set; } = null;
         public string? LuaUrl { get; set; } = null;
         public string? IfixUrl { get; set; } = null;
+    }
+
+    public class MuipServerConfig
+    {
+        public string AdminKey { get; set; } = "";
     }
 }

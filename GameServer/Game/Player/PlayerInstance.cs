@@ -35,6 +35,7 @@ using EggLink.DanhengServer.Game.Drop;
 using static EggLink.DanhengServer.Plugin.Event.PluginEvent;
 using EggLink.DanhengServer.Plugin.Event;
 using EggLink.DanhengServer.Game.Task;
+using EggLink.DanhengServer.GameServer.Game.Mail;
 
 namespace EggLink.DanhengServer.Game.Player
 {
@@ -51,6 +52,7 @@ namespace EggLink.DanhengServer.Game.Player
         public MissionManager? MissionManager { get; private set; }
         public GachaManager? GachaManager { get; private set; }
         public MessageManager? MessageManager { get; private set; }
+        public MailManager? MailManager { get; private set; }
 
         public FriendManager? FriendManager { get; private set; }
         public RogueManager? RogueManager { get; private set; }
@@ -124,6 +126,7 @@ namespace EggLink.DanhengServer.Game.Player
             MissionManager = new(this);
             GachaManager = new(this);
             MessageManager = new(this);
+            MailManager = new(this);
             FriendManager = new(this);
             RogueManager = new(this);
             ShopService = new(this);
@@ -507,6 +510,10 @@ namespace EggLink.DanhengServer.Game.Player
             } else if (plane.PlaneType == PlaneTypeEnum.Raid && CurRaidId == 0)
             {
                 EnterScene(OldEntryId > 0 ? OldEntryId : 2000101, 0, sendPacket);
+                return;
+            } else if (plane.PlaneType == PlaneTypeEnum.Challenge && ChallengeManager!.ChallengeInstance == null)
+            {
+                EnterScene(100000103, 0, sendPacket);
                 return;
             }
 

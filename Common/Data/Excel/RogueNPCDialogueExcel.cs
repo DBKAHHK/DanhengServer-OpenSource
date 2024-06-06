@@ -29,10 +29,10 @@ namespace EggLink.DanhengServer.Data.Excel
             GameData.RogueNPCDialogueData.Add(GetId(), this);
         }
 
-        public bool CanUseInCommon()
+        public bool CanUseInVer(int version)
         {
             GameData.RogueHandBookEventData.TryGetValue(HandbookEventID, out var handbookEvent);
-            return DialogueInfo != null && handbookEvent != null && handbookEvent.EventTypeList.Contains(100);
+            return DialogueInfo != null && handbookEvent != null && handbookEvent.EventTypeList.Contains(version);
         }
     }
 }

@@ -4,7 +4,7 @@ using EggLink.DanhengServer.Database.Friend;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Database.Player;
 using EggLink.DanhengServer.Game.Player;
-using EggLink.DanhengServer.Program;
+using EggLink.DanhengServer.GameServer.Command;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Server;
 using EggLink.DanhengServer.Server.Packet.Send.Friend;
@@ -162,7 +162,7 @@ namespace EggLink.DanhengServer.Game.Friend
                 if (message?.StartsWith('/') == true)
                 {
                     var cmd = message[1..];
-                    EntryPoint.CommandManager.HandleCommand(cmd, new PlayerCommandSender(Player));
+                    CommandExecutor.ExecuteCommand(new PlayerCommandSender(Player), cmd);
                 }
             }
 

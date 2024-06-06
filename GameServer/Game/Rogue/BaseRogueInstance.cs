@@ -19,6 +19,7 @@ namespace EggLink.DanhengServer.Game.Rogue
         public PlayerInstance Player { get; set; } = player;
         public Database.Lineup.LineupInfo? CurLineup { get; set; }
         public int RogueVersionId { get; set; } = rogueVersionId;
+        public int RogueType { get; set; } = 100;
         public int CurReviveCost { get; set; } = 80;
         public int CurRerollCost { get; set; } = 30;
         public int BaseRerollCount { get; set; } = 1;
@@ -406,7 +407,7 @@ namespace EggLink.DanhengServer.Game.Rogue
             do
             {
                 dialogue = GameData.RogueNPCDialogueData.Values.ToList().RandomElement();
-            } while (dialogue == null || !dialogue.CanUseInCommon());
+            } while (dialogue == null || !dialogue.CanUseInVer(RogueType));
 
             var instance = new RogueEventInstance(dialogue, npc, CurEventUniqueID++);
             EventManager?.AddEvent(instance);
