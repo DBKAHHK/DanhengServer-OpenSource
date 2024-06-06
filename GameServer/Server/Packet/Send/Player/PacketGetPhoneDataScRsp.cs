@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.Game.Player;
+﻿using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Game.Player;
 using EggLink.DanhengServer.Proto;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,11 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Player
     {
         public PacketGetPhoneDataScRsp(PlayerInstance player) : base(CmdIds.GetPhoneDataScRsp)
         {
+            if (!GameData.ChatBubbleConfigData.ContainsKey(player.Data.ChatBubble))  // to avoid npe
+            {
+                player.Data.ChatBubble = 220000;
+            }
+
             var proto = new GetPhoneDataScRsp
             {
                 CurChatBubble = (uint)player.Data.ChatBubble,

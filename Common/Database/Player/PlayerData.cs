@@ -17,7 +17,7 @@ namespace EggLink.DanhengServer.Database.Player
         public int CurBasicType { get; set; } = 8001;
         public int HeadIcon { get; set; } = 208001;
         public int PhoneTheme { get; set; } = 221000;
-        public int ChatBubble { get; set; } = 222000;
+        public int ChatBubble { get; set; } = 220000;
         public int CurrentBgm { get; set; } = 210007;
         public Gender CurrentGender { get; set; } = Gender.Man;
         public int Level { get; set; } = 1;
@@ -69,6 +69,11 @@ namespace EggLink.DanhengServer.Database.Player
 
         public PlayerSimpleInfo ToSimpleProto(FriendOnlineStatus status)
         {
+            if (!GameData.ChatBubbleConfigData.ContainsKey(ChatBubble))  // to avoid npe
+            {
+                ChatBubble = 220000;
+            }
+
             var AvatarInfo = DatabaseHelper.Instance!.GetInstance<AvatarData>(Uid)!;
 
             foreach (var avatar in AvatarInfo.Avatars)
