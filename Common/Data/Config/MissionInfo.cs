@@ -13,6 +13,7 @@ namespace EggLink.DanhengServer.Data.Config
         public List<int> StartSubMissionList { get; set; } = [];
         public List<int> FinishSubMissionList { get; set; } = [];
         public List<SubMissionInfo> SubMissionList { get; set; } = [];
+        public List<CustomValueInfo> MissionCustomValueList { get; set; } = [];
     }
 
     public class SubMissionInfo
@@ -129,6 +130,13 @@ namespace EggLink.DanhengServer.Data.Config
                 }
             }
         }
+    }
+
+
+    public class CustomValueInfo
+    {
+        public int Index { get; set; }
+        public List<int> ValidValueParamList { get; set; } = [];
     }
 
     public class FinishActionInfo

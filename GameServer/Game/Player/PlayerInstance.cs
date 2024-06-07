@@ -529,13 +529,14 @@ namespace EggLink.DanhengServer.Game.Player
             }
             SceneInstance = instance;
 
+            MissionManager?.OnPlayerChangeScene();
+
             if (sendPacket)
             {
                 Connection?.SendPacket(CmdIds.SyncServerSceneChangeNotify);
                 SendPacket(new PacketEnterSceneByServerScNotify(instance));
             }
 
-            MissionManager?.OnPlayerChangeScene();
             MissionManager?.HandleFinishType(MissionFinishTypeEnum.EnterFloor);
             MissionManager?.HandleFinishType(MissionFinishTypeEnum.NotInFloor);
         }

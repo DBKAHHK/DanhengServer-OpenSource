@@ -13,7 +13,10 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Scene
         {
             var proto = new EnterMapRotationRegionScRsp
             {
-                Motion = motion
+                Motion = motion,
+                EnergyInfo = new()
+                {
+                },
             };
 
             SetData(proto);

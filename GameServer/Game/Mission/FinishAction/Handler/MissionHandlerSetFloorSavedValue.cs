@@ -21,7 +21,7 @@ namespace EggLink.DanhengServer.Game.Mission.FinishAction.Handler
                 Player.SceneData.FloorSavedData[floor] = value;
             }
 
-            value[ParamString[2]] = Params[3];  // ParamString[2] is the key
+            value[ParamString[2]] = int.Parse(ParamString[3]);  // ParamString[2] is the key
         }
     }
 }

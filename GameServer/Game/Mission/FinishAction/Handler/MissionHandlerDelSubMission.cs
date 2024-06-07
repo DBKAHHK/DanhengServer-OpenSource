@@ -14,9 +14,12 @@ namespace EggLink.DanhengServer.Game.Mission.FinishAction.Handler
         public override void OnHandle(List<int> Params, List<string> ParamString, PlayerInstance Player)
         {
             if (Params.Count < 1) return;
-            var subMissionId = Params[0];
-            Player.MissionManager?.AcceptSubMission(subMissionId);
-            Player.MissionManager?.FinishSubMission(subMissionId);
+
+            foreach (var subMissionId in Params)
+            {
+                Player.MissionManager?.AcceptSubMission(subMissionId);
+                Player.MissionManager?.FinishSubMission(subMissionId);
+            }
         }
     }
 }

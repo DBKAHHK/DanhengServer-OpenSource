@@ -9,8 +9,8 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Player
         {
             connection.SendPacket(CmdIds.PlayerLoginFinishScRsp);
             connection.SendPacket(CmdIds.GetArchiveDataScRsp);
-            var list = connection.Player!.MissionManager!.GetRunningSubMissionIdList();
-            connection.SendPacket(new PacketMissionAcceptScNotify(list));
+            //var list = connection.Player!.MissionManager!.GetRunningSubMissionIdList();
+            //connection.SendPacket(new PacketMissionAcceptScNotify(list));
         }
     }
 }

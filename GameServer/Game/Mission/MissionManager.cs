@@ -460,7 +460,7 @@ namespace EggLink.DanhengServer.Game.Mission
             }
         }
 
-        public void HandleCustomValue(int index, int cValue, int missionId)
+        public void HandleCustomValue(int index, int missionId)
         {
             if (!ConfigManager.Config.ServerOption.EnableMission) return;
 
@@ -468,14 +468,20 @@ namespace EggLink.DanhengServer.Game.Mission
             if (subMission == null) return;
             var mainMissionId = subMission.MainMissionID;
             GameData.MainMissionData.TryGetValue(mainMissionId, out var mainMission);
+            if (mainMission == null) return;
+            var value = mainMission.MissionInfo?.MissionCustomValueList.Find(x => x.Index == index);
+            if (value == null) return;
 
             foreach (var mission in mainMission?.MissionInfo?.SubMissionList ?? [])
             {
                 if (mission.TakeType == SubMissionTakeTypeEnum.CustomValue)
                 {
-                    if (mission?.TakeParamIntList?[index] == cValue)
+                    for (var i = 0; i < value.ValidValueParamList.Count; i += 2)
                     {
-                        AcceptSubMission(mission.ID);
+                        if (mission?.TakeParamIntList?[value.ValidValueParamList[i]] == value.ValidValueParamList[i + 1])
+                        {
+                            AcceptSubMission(mission.ID);
+                        }
                     }
                 }
             }
@@ -577,7 +583,7 @@ namespace EggLink.DanhengServer.Game.Mission
                     if (info.GroupIDList == null) continue;
                     foreach (var group in info.GroupIDList)
                     {
-                        Player.SceneInstance.EntityLoader!.LoadGroup(group);
+                        Player.SceneInstance.EntityLoader!.LoadGroup(group, false);
                     }
                 }
             }

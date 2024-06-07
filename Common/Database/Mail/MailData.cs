@@ -1,5 +1,6 @@
 ﻿using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Proto;
+using SqlSugar;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +9,13 @@ using System.Threading.Tasks;
 
 namespace EggLink.DanhengServer.Database.Mail
 {
+    [SugarTable("Mail")]
     public class MailData : BaseDatabaseDataHelper
     {
+        [SugarColumn(IsJson = true)]
         public List<MailInfo> MailList { get; set; } = [];
+
+        [SugarColumn(IsJson = true)]
         public List<MailInfo> NoticeMailList { get; set; } = [];
 
         public int NextMailId { get; set; } = 1;
