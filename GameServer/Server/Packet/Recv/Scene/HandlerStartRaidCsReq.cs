@@ -62,10 +62,9 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Scene
                         player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupHeliobus, raidConfig.TrialAvatarList);
                         player.SendPacket(new PacketSyncLineupNotify(player.LineupManager!.GetCurLineup()!));
                     }
-
-                    player.EnterScene(entranceId, 0, true);
-                    connection.SendPacket(new PacketRaidInfoNotify((uint)raidConfig.RaidID));
                 }
+                player.EnterScene(entranceId, 0, true);
+                connection.SendPacket(new PacketRaidInfoNotify((uint)raidConfig.RaidID));
 
                 raidConfig.MainMissionIDList.ForEach(missionId =>
                 {
