@@ -230,6 +230,7 @@ namespace EggLink.DanhengServer.Game.Player
             Data.CurBasicType = id;
             AvatarManager!.GetHero()!.HeroId = id;
             AvatarManager!.GetHero()!.ValidateHero();
+            AvatarManager!.GetHero()!.SetCurSp(0, LineupManager!.GetCurLineup()!.IsExtraLineup());
             SendPacket(new PacketHeroBasicTypeChangedNotify(id));
             SendPacket(new PacketPlayerSyncScNotify(AvatarManager!.GetHero()!));
         }
