@@ -1,5 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database;
+using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Enums.Item;
 using EggLink.DanhengServer.Game.Player;
@@ -756,6 +757,32 @@ namespace EggLink.DanhengServer.Game.Inventory
             }
             Player.SendPacket(new PacketPlayerSyncScNotify(itemData));
             return list;
+        }
+
+        public Boolean promoteAvatar(int avatarId) {
+            // Get avatar
+            AvatarInfo avatarData = Player.AvatarManager!.GetAvatar(avatarId)!;
+            if (avatarData == null || avatarData.Excel == null || avatarData.Promotion >= avatarData.Excel.MaxPromotion) return false;
+            
+            // Get promotion data
+            Data.Excel.AvatarPromotionConfigExcel promotion = GameData.AvatarPromotionConfigData.Values.FirstOrDefault(x => x.AvatarID == avatarId && x.Promotion == avatarData.Promotion + 1)!;
+
+            // Sanity check
+            if ((promotion == null) || avatarData.Level < promotion.MaxLevel || Player.Data.Level < promotion.PlayerLevelRequire || Player.Data.WorldLevel < promotion.WorldLevelRequire) {
+                return false;
+            }
+
+            // Pay items
+            foreach (var cost in promotion.PromotionCostList) {
+                Player.InventoryManager!.RemoveItem(cost.ItemID, cost.ItemNum);
+            }
+
+            // Promote
+            avatarData.Promotion = avatarData.Promotion + 1;
+
+            // Send packets
+            Player.SendPacket(new PacketPlayerSyncScNotify(avatarData));
+            return true;
         }
 
         public List<ItemData> LevelUpRelic(int uniqueId, ItemCostData costData)
