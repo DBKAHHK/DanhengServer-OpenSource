@@ -9,7 +9,12 @@
     <StartupObject></StartupObject>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <AssemblyName>DanhengGameServer</AssemblyName>
+    <ApplicationIcon>Danheng.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+	  <Content Include="Danheng.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj" />
