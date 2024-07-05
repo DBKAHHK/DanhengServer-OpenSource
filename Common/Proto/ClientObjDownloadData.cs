@@ -25,13 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtDbGllbnRPYmpEb3dubG9hZERhdGEucHJvdG8aGENsaWVudERvd25sb2Fk",
-            "RGF0YS5wcm90byJLChVDbGllbnRPYmpEb3dubG9hZERhdGESCwoDb2JqGAEg",
-            "ASgMEiUKCG9ial9kYXRhGAIgASgLMhMuQ2xpZW50RG93bmxvYWREYXRhQh6q",
-            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "RGF0YS5wcm90byJWChVDbGllbnRPYmpEb3dubG9hZERhdGESEwoLR05CREtG",
+            "SE5IT04YASABKAwSKAoLR0JGQ0ZLT0xHREMYAiABKAsyEy5DbGllbnREb3du",
+            "bG9hZERhdGFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ClientDownloadDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ClientObjDownloadData), global::EggLink.DanhengServer.Proto.ClientObjDownloadData.Parser, new[]{ "Obj", "ObjData" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ClientObjDownloadData), global::EggLink.DanhengServer.Proto.ClientObjDownloadData.Parser, new[]{ "GNBDKFHNHON", "GBFCFKOLGDC" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ClientObjDownloadData(ClientObjDownloadData other) : this() {
-      obj_ = other.obj_;
-      objData_ = other.objData_ != null ? other.objData_.Clone() : null;
+      gNBDKFHNHON_ = other.gNBDKFHNHON_;
+      gBFCFKOLGDC_ = other.gBFCFKOLGDC_ != null ? other.gBFCFKOLGDC_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,27 +85,27 @@ namespace EggLink.DanhengServer.Proto {
       return new ClientObjDownloadData(this);
     }
 
-    /// <summary>Field number for the "obj" field.</summary>
-    public const int ObjFieldNumber = 1;
-    private pb::ByteString obj_ = pb::ByteString.Empty;
+    /// <summary>Field number for the "GNBDKFHNHON" field.</summary>
+    public const int GNBDKFHNHONFieldNumber = 1;
+    private pb::ByteString gNBDKFHNHON_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pb::ByteString Obj {
-      get { return obj_; }
+    public pb::ByteString GNBDKFHNHON {
+      get { return gNBDKFHNHON_; }
       set {
-        obj_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        gNBDKFHNHON_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "obj_data" field.</summary>
-    public const int ObjDataFieldNumber = 2;
-    private global::EggLink.DanhengServer.Proto.ClientDownloadData objData_;
+    /// <summary>Field number for the "GBFCFKOLGDC" field.</summary>
+    public const int GBFCFKOLGDCFieldNumber = 2;
+    private global::EggLink.DanhengServer.Proto.ClientDownloadData gBFCFKOLGDC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ClientDownloadData ObjData {
-      get { return objData_; }
+    public global::EggLink.DanhengServer.Proto.ClientDownloadData GBFCFKOLGDC {
+      get { return gBFCFKOLGDC_; }
       set {
-        objData_ = value;
+        gBFCFKOLGDC_ = value;
       }
     }
 
@@ -123,8 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Obj != other.Obj) return false;
-      if (!object.Equals(ObjData, other.ObjData)) return false;
+      if (GNBDKFHNHON != other.GNBDKFHNHON) return false;
+      if (!object.Equals(GBFCFKOLGDC, other.GBFCFKOLGDC)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Obj.Length != 0) hash ^= Obj.GetHashCode();
-      if (objData_ != null) hash ^= ObjData.GetHashCode();
+      if (GNBDKFHNHON.Length != 0) hash ^= GNBDKFHNHON.GetHashCode();
+      if (gBFCFKOLGDC_ != null) hash ^= GBFCFKOLGDC.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Obj.Length != 0) {
+      if (GNBDKFHNHON.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteBytes(Obj);
+        output.WriteBytes(GNBDKFHNHON);
       }
-      if (objData_ != null) {
+      if (gBFCFKOLGDC_ != null) {
         output.WriteRawTag(18);
-        output.WriteMessage(ObjData);
+        output.WriteMessage(GBFCFKOLGDC);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Obj.Length != 0) {
+      if (GNBDKFHNHON.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteBytes(Obj);
+        output.WriteBytes(GNBDKFHNHON);
       }
-      if (objData_ != null) {
+      if (gBFCFKOLGDC_ != null) {
         output.WriteRawTag(18);
-        output.WriteMessage(ObjData);
+        output.WriteMessage(GBFCFKOLGDC);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +189,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Obj.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Obj);
+      if (GNBDKFHNHON.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(GNBDKFHNHON);
       }
-      if (objData_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ObjData);
+      if (gBFCFKOLGDC_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GBFCFKOLGDC);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,14 +207,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Obj.Length != 0) {
-        Obj = other.Obj;
+      if (other.GNBDKFHNHON.Length != 0) {
+        GNBDKFHNHON = other.GNBDKFHNHON;
       }
-      if (other.objData_ != null) {
-        if (objData_ == null) {
-          ObjData = new global::EggLink.DanhengServer.Proto.ClientDownloadData();
+      if (other.gBFCFKOLGDC_ != null) {
+        if (gBFCFKOLGDC_ == null) {
+          GBFCFKOLGDC = new global::EggLink.DanhengServer.Proto.ClientDownloadData();
         }
-        ObjData.MergeFrom(other.ObjData);
+        GBFCFKOLGDC.MergeFrom(other.GBFCFKOLGDC);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,14 +232,14 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Obj = input.ReadBytes();
+            GNBDKFHNHON = input.ReadBytes();
             break;
           }
           case 18: {
-            if (objData_ == null) {
-              ObjData = new global::EggLink.DanhengServer.Proto.ClientDownloadData();
+            if (gBFCFKOLGDC_ == null) {
+              GBFCFKOLGDC = new global::EggLink.DanhengServer.Proto.ClientDownloadData();
             }
-            input.ReadMessage(ObjData);
+            input.ReadMessage(GBFCFKOLGDC);
             break;
           }
         }
@@ -257,14 +258,14 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            Obj = input.ReadBytes();
+            GNBDKFHNHON = input.ReadBytes();
             break;
           }
           case 18: {
-            if (objData_ == null) {
-              ObjData = new global::EggLink.DanhengServer.Proto.ClientDownloadData();
+            if (gBFCFKOLGDC_ == null) {
+              GBFCFKOLGDC = new global::EggLink.DanhengServer.Proto.ClientDownloadData();
             }
-            input.ReadMessage(ObjData);
+            input.ReadMessage(GBFCFKOLGDC);
             break;
           }
         }

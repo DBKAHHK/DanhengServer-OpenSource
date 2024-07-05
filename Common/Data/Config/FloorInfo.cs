@@ -7,10 +7,10 @@ namespace EggLink.DanhengServer.Data.Config
     public class FloorInfo
     {
         public int FloorID { get; set; }
-        public int StartGroupID { get; set; }
+        public int StartGroupIndex { get; set; }
         public int StartAnchorID { get; set; }
 
-        public List<FloorGroupInfo> GroupList { get; set; } = [];
+        public List<FloorGroupInfo> GroupInstanceList { get; set; } = [];
 
         [JsonIgnore]
         public bool Loaded = false;
@@ -22,17 +22,22 @@ namespace EggLink.DanhengServer.Data.Config
         [JsonIgnore]
         public List<PropInfo> UnlockedCheckpoints = [];
 
+        [JsonIgnore]
+        public int StartGroupID { get; set; }
+
         public AnchorInfo? GetAnchorInfo(int groupId, int anchorId)
         {
             Groups.TryGetValue(groupId, out GroupInfo? group);
             if (group == null) return null;
 
-            return group.AnchorList.Find(info => info.ID == anchorId );
+            return group.AnchorList.Find(info => info.ID == anchorId);
         }
 
         public void OnLoad()
         {
             if (Loaded) return;
+
+            StartGroupID = GroupInstanceList[StartGroupIndex].ID;
 
             // Cache anchors
             foreach (var group in Groups.Values)

@@ -30,7 +30,7 @@ namespace EggLink.DanhengServer.Database.Mission
             }
             if (RunningMainMissionIds.Contains(missionId))
             {
-                return MissionPhaseEnum.Doing;
+                return MissionPhaseEnum.Accept;
             }
             return MissionPhaseEnum.None;
         }
@@ -43,7 +43,7 @@ namespace EggLink.DanhengServer.Database.Mission
             }
             if (RunningSubMissionIds.Contains(missionId))
             {
-                return MissionPhaseEnum.Doing;
+                return MissionPhaseEnum.Accept;
             }
             return MissionPhaseEnum.None;
         }
@@ -55,7 +55,7 @@ namespace EggLink.DanhengServer.Database.Mission
                 FinishedMainMissionIds.SafeAdd(missionId);
                 RunningMainMissionIds.Remove(missionId);
             }
-            else if (phase == MissionPhaseEnum.Doing)
+            else if (phase == MissionPhaseEnum.Accept)
             {
                 FinishedMainMissionIds.Remove(missionId);
                 RunningMainMissionIds.SafeAdd(missionId);
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Database.Mission
                 FinishedSubMissionIds.SafeAdd(missionId);
                 RunningSubMissionIds.Remove(missionId);
             }
-            else if (phase == MissionPhaseEnum.Doing)
+            else if (phase == MissionPhaseEnum.Accept)
             {
                 FinishedSubMissionIds.Remove(missionId);
                 RunningSubMissionIds.SafeAdd(missionId);
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Database.Mission
                     {
                         FinishedSubMissionIds.SafeAdd(sub.Key);
                     }
-                    else if (sub.Value.Status == MissionPhaseEnum.Doing)
+                    else if (sub.Value.Status == MissionPhaseEnum.Accept)
                     {
                         RunningSubMissionIds.SafeAdd(sub.Key);
                     }
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Database.Mission
                 {
                     FinishedMainMissionIds.SafeAdd(main.Key);
                 }
-                else if (main.Value == MissionPhaseEnum.Doing)
+                else if (main.Value == MissionPhaseEnum.Accept)
                 {
                     RunningMainMissionIds.SafeAdd(main.Key);
                 }

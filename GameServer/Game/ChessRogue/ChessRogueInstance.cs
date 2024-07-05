@@ -203,8 +203,8 @@ namespace EggLink.DanhengServer.Game.ChessRogue
                 {
                     var cell = new ChessRogueCellInstance(this)
                     {
-                        Column = column.Key,
-                        Row = row,
+                        PosY = column.Key,
+                        PosX = row,
                     };
                     RogueCells.Add(column.Key * 100 + row, cell);
 
@@ -521,7 +521,7 @@ namespace EggLink.DanhengServer.Game.ChessRogue
                 GameMiracleInfo = ToMiracleInfo(),
                 RogueBuffInfo = ToBuffInfo(),
                 RogueAeonInfo = ToAeonInfo(),
-                RogueVersionId = (uint)RogueVersionId,
+                RogueSubMode = (uint)RogueVersionId,
                 RogueDiceInfo = DiceInstance.ToProto(),
                 RogueLineupInfo = ToLineupInfo(),
                 RogueDifficultyInfo = ToDifficultyInfo(),
@@ -537,7 +537,7 @@ namespace EggLink.DanhengServer.Game.ChessRogue
                 proto.PendingAction = new();
             }
 
-            proto.RogueCurrentInfo.AddRange(ToGameInfo());
+            proto.RogueCurrentGameInfo.AddRange(ToGameInfo());
 
             return proto;
         }
@@ -557,10 +557,10 @@ namespace EggLink.DanhengServer.Game.ChessRogue
         {
             var proto = new ChessRogueQueryGameInfo()
             {
-                RogueVersionId = (uint)RogueVersionId,
+                RogueSubMode = (uint)RogueVersionId,
             };
 
-            proto.RogueCurrentInfo.AddRange(ToGameInfo());
+            proto.RogueCurrentGameInfo.AddRange(ToGameInfo());
 
             return proto;
         }
@@ -577,14 +577,14 @@ namespace EggLink.DanhengServer.Game.ChessRogue
             return proto;
         }
 
-        public ChessRogueBuffInfo ToBuffInfo()
+        public RogueDLCBuffInfo ToBuffInfo()
         {
-            var proto = new ChessRogueBuffInfo()
+            var proto = new RogueDLCBuffInfo()
             {
-                BuffInfo = new()
+                RogueDlcMazeBuffInfo = new()
             };
 
-            proto.BuffInfo.BuffList.AddRange(RogueBuffs.Select(x => x.ToCommonProto()).ToList());
+            proto.RogueDlcMazeBuffInfo.BuffList.AddRange(RogueBuffs.Select(x => x.ToCommonProto()).ToList());
 
             return proto;
         }
@@ -615,7 +615,7 @@ namespace EggLink.DanhengServer.Game.ChessRogue
             {
                 ReviveInfo = new()
                 {
-                    RogueReviveCost = new()
+                    GameItemInfo = new()
                     {
                         ItemList = { new ItemCost()
                         {
@@ -631,7 +631,7 @@ namespace EggLink.DanhengServer.Game.ChessRogue
 
             foreach (var avatar in CurLineup!.BaseAvatars!)
             {
-                proto.AvatarList.Add(new ChessRogueLineupAvatarInfo()
+                proto.ChessAvatarList.Add(new ChessRogueLineupAvatarInfo()
                 {
                     AvatarId = (uint)avatar.BaseAvatarId,
                 });
@@ -640,18 +640,18 @@ namespace EggLink.DanhengServer.Game.ChessRogue
             return proto;
         }
 
-        public ChessRogueGameItemInfo ToGameItemInfo()
+        public RogueGameItemInfo ToGameItemInfo()
         {
-            var proto = new ChessRogueGameItemInfo();
+            var proto = new RogueGameItemInfo();
 
-            proto.ItemMap.Add(31, (uint)CurMoney);
+            proto.VirtualItem.Add(31, (uint)CurMoney);
 
             return proto;
         }
 
-        public List<ChessRogueGameInfo> ToGameInfo()
+        public List<RogueGameInfo> ToGameInfo()
         {
-            var proto = new List<ChessRogueGameInfo>
+            var proto = new List<RogueGameInfo>
             {
                 new()
                 {
@@ -663,7 +663,7 @@ namespace EggLink.DanhengServer.Game.ChessRogue
                 },
                 new()
                 {
-                    GameItemInfo = ToGameItemInfo()
+
                 },
                 new()
                 {
@@ -684,19 +684,19 @@ namespace EggLink.DanhengServer.Game.ChessRogue
 
             foreach (var level in DifficultyLevel)
             {
-                proto.DifficultyId.Add((uint)level.DifficultyID);
+                proto.ChessDifficultyId.Add((uint)level.DifficultyID);
             }
 
             return proto;
         }
 
-        public ChessRogueDifficultyLevelInfo ToDifficultyLevelInfo()
+        public RogueDifficultyLevelInfo ToDifficultyLevelInfo()
         {
-            var proto = new ChessRogueDifficultyLevelInfo();
+            var proto = new RogueDifficultyLevelInfo();
 
             foreach (var level in DifficultyLevel)
             {
-                proto.DifficultyId.Add((uint)level.DifficultyID);
+                proto.ChessDifficultyId.Add((uint)level.DifficultyID);
             }
 
             return proto;
@@ -717,9 +717,9 @@ namespace EggLink.DanhengServer.Game.ChessRogue
             {
                 if (cell.Value.CellStatus == ChessRogueBoardCellStatus.Idle)
                 {
-                    if (cell.Value.Column == CurCell!.Column - 1 || cell.Value.Column == CurCell!.Column || cell.Value.Column == CurCell!.Column + 1)
+                    if (cell.Value.PosY == CurCell!.PosY - 1 || cell.Value.PosY == CurCell!.PosY || cell.Value.PosY == CurCell!.PosY + 1)
                     {
-                        if (cell.Value.Row == CurCell!.Row || cell.Value.Row == CurCell!.Row + 1)
+                        if (cell.Value.PosX == CurCell!.PosX || cell.Value.PosX == CurCell!.PosX + 1)
                         {
                             canSelected.Add((uint)cell.Value.GetCellId());
                         }
@@ -737,7 +737,7 @@ namespace EggLink.DanhengServer.Game.ChessRogue
                 {
                     LayerStatus = ChessRogueBoardCellStatus.Processing,
                     CurId = (uint)CurCell!.GetCellId(),
-                    BoardId = (uint)CurLayerData![-1][0],
+                    CurBoardId = (uint)CurLayerData![-1][0],
                     Cell = new()
                     {
                         CellList = { RogueCells.Select(x => x.Value.ToProto()).ToList() }
@@ -754,11 +754,11 @@ namespace EggLink.DanhengServer.Game.ChessRogue
         {
             var info = new ChessRogueFinishInfo()
             {
-                AreaId = (uint)AreaExcel.AreaID,
+                EndAreaId = (uint)AreaExcel.AreaID,
                 CurLayerId = (uint)CurLayer,
                 CurLineup = CurLineup!.ToProto(),
-                DifficultyLevel = uint.Parse(AreaExcel.AreaID.ToString().Substring(AreaExcel.AreaID.ToString().Length - 1, 1)),
-                RogueVersionId = (uint)RogueVersionId,
+                AreaDifficultyLevel = uint.Parse(AreaExcel.AreaID.ToString().Substring(AreaExcel.AreaID.ToString().Length - 1, 1)),
+                RogueSubMode = (uint)RogueVersionId,
                 RogueBuffInfo = new()
                 {
                     BuffList = { RogueBuffs.Select(x => x.ToCommonProto()) }

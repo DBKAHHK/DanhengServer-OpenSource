@@ -13,7 +13,7 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Mission
             
             foreach (var mission in GameData.MainMissionData.Keys)
             {
-                if (player.MissionManager!.GetMainMissionStatus(mission) == MissionPhaseEnum.Doing)
+                if (player.MissionManager!.GetMainMissionStatus(mission) == MissionPhaseEnum.Accept)
                 {
                     proto.MissionDataList.Add(new MissionData()
                     {
@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Mission
 
             foreach (var mission in GameData.SubMissionData.Keys)
             {
-                if (player.MissionManager!.GetSubMissionStatus(mission) == MissionPhaseEnum.Doing)
+                if (player.MissionManager!.GetSubMissionStatus(mission) == MissionPhaseEnum.Accept)
                 {
                     proto.MissionList.Add(new Proto.Mission()
                     {

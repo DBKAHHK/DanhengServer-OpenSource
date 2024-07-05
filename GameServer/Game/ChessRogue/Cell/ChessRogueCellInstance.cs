@@ -14,8 +14,8 @@ namespace EggLink.DanhengServer.Game.ChessRogue.Cell
     public class ChessRogueCellInstance
     {
         public int CellType { get; set; }
-        public int Column { get; set; }
-        public int Row { get; set; }
+        public int PosY { get; set; }
+        public int PosX { get; set; }
         public int RoomId { get; set; }
         public int Layer { get; set; } = 1;
         public int MapId { get; set; }
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Game.ChessRogue.Cell
             return null;
         }
 
-        public int GetCellId() => Column * 100 + Row;
+        public int GetCellId() => PosY * 100 + PosX;
 
         public int GetEntryId()
         {
@@ -172,15 +172,15 @@ namespace EggLink.DanhengServer.Game.ChessRogue.Cell
 
         public int GetRow()
         {
-            if (Column == 0 || Column == 4 || Column == 2)
+            if (PosY == 0 || PosY == 4 || PosY == 2)
             {
-                return Row * 2;
+                return PosX * 2;
             }
-            else if (Column == 1 || Column == 3)
+            else if (PosY == 1 || PosY == 3)
             {
-                return Row * 2 + 1;
+                return PosX * 2 + 1;
             }
-            return Row;
+            return PosX;
         }
 
         public List<int> GetLoadGroupList()
@@ -201,18 +201,18 @@ namespace EggLink.DanhengServer.Game.ChessRogue.Cell
             var info = new ChessRogueCell()
             {
                 CellStatus = CellStatus,
-                Column = (uint)Column,
+                PosY = (uint)PosY,
                 Id = (uint)GetCellId(),
                 CellType = (uint)CellType,
-                IsValid = true,
+                IsUnlock = true,
                 RoomId = (uint)RoomId,
-                KJMDBCKGFAM = true,
-                Row = (uint)GetRow(),
+                MGEHIHCCHHO = true,
+                PosX = (uint)GetRow(),
             };
 
             if (CellAdvanceInfo.Count > 0)
             {
-                info.AdvanceInfo = new()
+                info.PlayerInfo = new()
                 {
                     BossInfo = new()
                     {
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Game.ChessRogue.Cell
 
                 if (SelectedDecayId.Count > 0)
                 {
-                    info.AdvanceInfo.SelectBossInfo = new()
+                    info.PlayerInfo.SelectBossInfo = new()
                     {
                         SelectDecayId = { SelectedDecayId.Select(x => (uint)x).ToList() }
                     };

@@ -110,6 +110,6 @@ namespace EggLink.DanhengServer.Data.Config
         public ConditionTypeEnum Type { get; set; } = ConditionTypeEnum.MainMission;
         public int ID { get; set; }
         [JsonConverter(typeof(StringEnumConverter))]
-        public MissionPhaseEnum Phase { get; set; } = MissionPhaseEnum.Doing;
+        public MissionPhaseEnum Phase { get; set; } = MissionPhaseEnum.Accept;
     }
 }

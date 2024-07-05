@@ -1,4 +1,5 @@
 ﻿using EggLink.DanhengServer.Common.Enums;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Server.Packet.Send.Player;
 
 namespace EggLink.DanhengServer.Server.Packet.Recv.Player
@@ -10,6 +11,7 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Player
         {
             connection.State = SessionState.ACTIVE;
             connection.SendPacket(new PacketPlayerLoginScRsp(connection));
+            connection.SendPacket(new PacketContentPackageSyncDataScNotify());
         }
     }
 }

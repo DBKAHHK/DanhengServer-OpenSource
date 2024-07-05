@@ -81,7 +81,7 @@ namespace EggLink.DanhengServer.Game.Battle
                 TotalProgress = (uint)totalProgress
             };
 
-            BattleTargets[key].BGNPEBHGELB.Add(battleTarget);
+            BattleTargets[key].BattleTargetList_.Add(battleTarget);
         }
 
         public Dictionary<AvatarInfo, AvatarType> GetBattleAvatars()
@@ -204,7 +204,7 @@ namespace EggLink.DanhengServer.Game.Battle
 
             foreach (var avatar in GetBattleAvatars())
             {
-                proto.BattleAvatarList.Add(avatar.Key.ToBattleProto(Player.LineupManager!.GetCurLineup()!, Player.InventoryManager!.Data, avatar.Value));
+                proto.AvatarBattleList.Add(avatar.Key.ToBattleProto(Player.LineupManager!.GetCurLineup()!, Player.InventoryManager!.Data, avatar.Value));
             }
 
             foreach (var monster in EntityMonsters)
@@ -231,7 +231,7 @@ namespace EggLink.DanhengServer.Game.Battle
                     if (BattleTargets.ContainsKey(i))
                     {
                         var battleTargetList = BattleTargets[i];
-                        battleTargetEntry.BGNPEBHGELB.AddRange(battleTargetList.BGNPEBHGELB);
+                        battleTargetEntry.BattleTargetList_.AddRange(battleTargetList.BattleTargetList_);
                     }
 
                     proto.BattleTargetInfo.Add((uint)i, battleTargetEntry);

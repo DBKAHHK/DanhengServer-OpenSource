@@ -124,12 +124,12 @@ namespace EggLink.DanhengServer.Data
         public static void LoadFloorInfo()
         {
             Logger.Info("Loading floor files...");
-            DirectoryInfo directory = new(ConfigManager.Config.Path.ResourcePath + "/Config/LevelOutput/Floor/");
+            DirectoryInfo directory = new(ConfigManager.Config.Path.ResourcePath + "/Config/LevelOutput/RuntimeFloor/");
             bool missingGroupInfos = false;
 
             if (!directory.Exists)
             {
-                Logger.Warn($"Floor infos are missing, please check your resources folder: {ConfigManager.Config.Path.ResourcePath}/Config/LevelOutput/Floor. Teleports and natural world spawns may not work!");
+                Logger.Warn($"Floor infos are missing, please check your resources folder: {ConfigManager.Config.Path.ResourcePath}/Config/LevelOutput/RuntimeFloor. Teleports and natural world spawns may not work!");
                 return;
             }
             // Load floor infos
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Data
 
             foreach (var info in GameData.FloorInfoData.Values)
             {
-                foreach (var groupInfo in info.GroupList)
+                foreach (var groupInfo in info.GroupInstanceList)
                 {
                     if (groupInfo.IsDelete) { continue; }
                     FileInfo file = new(ConfigManager.Config.Path.ResourcePath + "/" + groupInfo.GroupPath);
@@ -165,7 +165,8 @@ namespace EggLink.DanhengServer.Data
                         if (group != null)
                         {
                             group.Id = groupInfo.ID;
-                            info.Groups.Add(groupInfo.ID, group);
+                            if (!info.Groups.ContainsKey(groupInfo.ID))
+                                info.Groups.Add(groupInfo.ID, group);
                             group.Load();
                         }
                     } catch (Exception ex)
@@ -180,7 +181,7 @@ namespace EggLink.DanhengServer.Data
                 info.OnLoad();
             }
             if (missingGroupInfos)
-                Logger.Warn($"Group infos are missing, please check your resources folder: {ConfigManager.Config.Path.ResourcePath}/Config/LevelOutput/Group. Teleports, monster battles, and natural world spawns may not work!");
+                Logger.Warn($"Group infos are missing, please check your resources folder: {ConfigManager.Config.Path.ResourcePath}/Config/LevelOutput/SharedRuntimeGroup. Teleports, monster battles, and natural world spawns may not work!");
 
             Logger.Info("Loaded " + GameData.FloorInfoData.Count + " floor infos.");
         }
