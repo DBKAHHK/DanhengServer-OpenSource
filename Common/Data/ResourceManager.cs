@@ -314,9 +314,11 @@ namespace EggLink.DanhengServer.Data
         public static void LoadMazeSkill()
         {
             var count = 0;
-            foreach (var avatar in GameData.AvatarConfigData.Values)
+            foreach (var adventure in GameData.AdventurePlayerData.Values)
             {
-                var path = ConfigManager.Config.Path.ResourcePath + "/Config/ConfigAdventureAbility/LocalPlayer/LocalPlayer_" + avatar.NameKey + "_Ability.json";
+                var avatar = GameData.AvatarConfigData[adventure.AvatarID];
+                var adventurePath = adventure.PlayerJsonPath.Replace("_Config.json", "_Ability.json").Replace("ConfigCharacter", "ConfigAdventureAbility");
+                var path = ConfigManager.Config.Path.ResourcePath + "/" + adventurePath;
                 var file = new FileInfo(path);
                 if (!file.Exists) continue;
                 try
@@ -327,12 +329,13 @@ namespace EggLink.DanhengServer.Data
                     var skillAbilityInfo = JsonConvert.DeserializeObject<SkillAbilityInfo>(text);
                     skillAbilityInfo?.Loaded(avatar);
                     count += skillAbilityInfo == null ? 0 : 1;
-                } catch (Exception ex)
+                }
+                catch (Exception ex)
                 {
                     Logger.Error("Error in reading " + file.Name, ex);
                 }
             }
-            if (count < GameData.AvatarConfigData.Count)
+            if (count < GameData.AdventurePlayerData.Count)
             {
                 Logger.Warn("Maze skill infos are missing, please check your resources folder: " + ConfigManager.Config.Path.ResourcePath + "/Config/ConfigAdventureAbility/LocalPlayer. Maze skills may not work!");
             }

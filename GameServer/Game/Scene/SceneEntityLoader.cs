@@ -70,6 +70,18 @@ namespace EggLink.DanhengServer.Game.Scene
                             }
                         }
                     }
+                    else if (group.OwnerMainMissionID != 0 && Scene.Player.MissionManager!.GetMainMissionStatus(group.OwnerMainMissionID) != Enums.MissionPhaseEnum.Accept)
+                    {
+                        foreach (var entity in Scene.Entities.Values)
+                        {
+                            if (entity.GroupID == group.Id)
+                            {
+                                Scene.RemoveEntity(entity, false);
+                                removeList.Add(entity);
+                                refreshed = true;
+                            }
+                        }
+                    }
                 } else  // check if it should be loaded
                 {
                     var groupList = LoadGroup(group);
@@ -86,6 +98,12 @@ namespace EggLink.DanhengServer.Game.Scene
         public virtual List<IGameEntity>? LoadGroup(GroupInfo info, bool forceLoad = false)
         {
             var missionData = Scene.Player.MissionManager!.Data;
+
+            if (!(info.OwnerMainMissionID == 0 || Scene.Player.MissionManager!.GetMainMissionStatus(info.OwnerMainMissionID) == Enums.MissionPhaseEnum.Accept))
+            {
+                return null;
+            }
+
             if ((!info.LoadCondition.IsTrue(missionData) || info.UnloadCondition.IsTrue(missionData, false) || info.ForceUnloadCondition.IsTrue(missionData, false)) && !forceLoad)
             {
                 return null;

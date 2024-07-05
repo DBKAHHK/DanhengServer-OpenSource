@@ -19,6 +19,8 @@ namespace EggLink.DanhengServer.Data
         public static Dictionary<int, AvatarExpItemConfigExcel> AvatarExpItemConfigData { get; private set; } = [];
         public static Dictionary<int, AvatarSkillTreeConfigExcel> AvatarSkillTreeConfigData { get; private set; } = [];
         public static Dictionary<int, ExpTypeExcel> ExpTypeData { get; private set; } = [];
+        public static Dictionary<int, AdventurePlayerExcel> AdventurePlayerData { get; private set; } = [];
+        public static Dictionary<int, SummonUnitExcel> SummonUnitData { get; private set; } = [];
 
         #endregion
 

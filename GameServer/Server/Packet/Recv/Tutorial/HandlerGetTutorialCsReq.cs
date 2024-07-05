@@ -28,7 +28,20 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Tutorial
                 connection.SendPacket(new PacketClientDownloadDataScNotify(fileBytes));
             }
 
-            connection.SendPacket(new PacketClientDownloadDataScNotify(Convert.FromBase64String("bG9jYWwgZnVuY3Rpb24gb25EaWFsb2dDbG9zZWQoKQogICAgLS0g5omT5byA5oyH5a6a55qEVVJMCiAgICBDUy5Vbml0eUVuZ2luZS5BcHBsaWNhdGlvbi5PcGVuVVJMKCJodHRwczovL3NyLm1paG95by5jb20vIikKZW5kCgpsb2NhbCBmdW5jdGlvbiBzaG93X2hpbnQoKQogICAgQ1MuUlBHLkNsaWVudC5Db25maXJtRGlhbG9nVXRpbC5TaG93Q3VzdG9tT2tDYW5jZWxIaW50KAogICAgICAgICLmrKLov47kvb/nlKhEYW5oZW5nIFNlcnZlciEgV2VsY29tZSEgXG7kuLnmgZLCt+W0qeWdjzrmmJ/nqbnpk4HpgZNcblRISVMgU0VSVkVSIElTIFRPVEFMTFkgRlJFRSEgSUYgWU9VIFBBWSBGT1IgSVQsIFlPVSBIQVZFIEJFRU4gU0NBTU1FRO+8gVxuVGhpcyBzZXJ2ZXIgaXMgb25seSBmb3IgY29tbXVuaWNhdGluZywgcGxlYXNlIGdvIGZvciBvcmlnaW5hbCBlZGl0aW9uXG7mnKzmnI3liqHlmajlrozlhajlhY3otLnvvIzlpoLmnpzmgqjmmK/otK3kubDlvpfliLDnmoQs6YKj5LmI5oKo5bey57uP6KKr6aqX5LqG77yBXG7mraTmnI3liqHnq6/ku4XnlKjkvZzlrabkuaDkuqTmtYHvvIzor7fmlK/mjIHmraPniYgiLAogICAgICAgIG9uRGlhbG9nQ2xvc2VkCiAgICApCmVuZAoKc2hvd19oaW50KCkK")));
+            // DO NOT REMOVE THIS CODE
+            // This code is responsible for sending the client data to the player
+            switch (ConfigManager.Config.ServerOption.Language)
+            {
+                case "CHS":
+                    connection.SendPacket(new PacketClientDownloadDataScNotify(Convert.FromBase64String("bG9jYWwgZnVuY3Rpb24gb25EaWFsb2dDbG9zZWQoKQogICAgQ1MuVW5pdHlFbmdpbmUuQXBwbGljYXRpb24uT3BlblVSTCgiaHR0cHM6Ly9zci5taWhveW8uY29tLyIpCmVuZAoKbG9jYWwgZnVuY3Rpb24gc2hvd19oaW50KCkKICAgIGxvY2FsIHRleHQgPSAi5qyi6L+O5L2/55SoRGFuaGVuZ1NlcnZlcu+8gVxuIgogICAgdGV4dCA9IHRleHQgLi4gIuacrOacjeWKoeWZqOWujOWFqOWFjei0ue+8jOWmguaenOaCqOaYr+i0reS5sOW+l+WIsOeahO+8jOmCo+S5iOaCqOW3sue7j+iiq+mql+S6hu+8gVxuIgogICAgdGV4dCA9IHRleHQgLi4gIuatpOacjeWKoeerr+S7heeUqOS9nOWtpuS5oOS6pOa1ge+8jOivt+aUr+aMgeato+eJiFxuIgogICAgQ1MuUlBHLkNsaWVudC5Db25maXJtRGlhbG9nVXRpbC5TaG93Q3VzdG9tT2tDYW5jZWxIaW50KHRleHQsIG9uRGlhbG9nQ2xvc2VkKQplbmQKCnNob3dfaGludCgp")));
+                    break;
+                case "CHT":
+                    connection.SendPacket(new PacketClientDownloadDataScNotify(Convert.FromBase64String("bG9jYWwgZnVuY3Rpb24gb25EaWFsb2dDbG9zZWQoKQogICAgQ1MuVW5pdHlFbmdpbmUuQXBwbGljYXRpb24uT3BlblVSTCgiaHR0cHM6Ly9oc3IuaG95b3ZlcnNlLmNvbS8iKQplbmQKCmxvY2FsIGZ1bmN0aW9uIHNob3dfaGludCgpCiAgICBsb2NhbCB0ZXh0ID0gIuatoei/juS9v+eUqERhbmhlbmdTZXJ2ZXLvvIFcbiIKICAgIHRleHQgPSB0ZXh0IC4uICLmnKzkvLrmnI3lmajlrozlhajlhY3osrvvvIzlpoLmnpzmgqjmmK/os7zosrflvpfliLDnmoTjgILpgqPpurzmgqjlt7LntpPooqvpqJnkuobvvIFcbiIKICAgIHRleHQgPSB0ZXh0IC4uICLmraTkvLrmnI3lmajou5/pq5Tlg4Xkvpvlrbjnv5LkuqTmtYHkvb/nlKjvvIzoq4vmlK/mjIHmraPniYhcbiIKICAgIENTLlJQRy5DbGllbnQuQ29uZmlybURpYWxvZ1V0aWwuU2hvd0N1c3RvbU9rQ2FuY2VsSGludCh0ZXh0LCBvbkRpYWxvZ0Nsb3NlZCkKZW5kCgpzaG93X2hpbnQoKQ==")));
+                    break;
+                default:
+                    connection.SendPacket(new PacketClientDownloadDataScNotify(Convert.FromBase64String("bG9jYWwgZnVuY3Rpb24gb25EaWFsb2dDbG9zZWQoKQogICAgQ1MuVW5pdHlFbmdpbmUuQXBwbGljYXRpb24uT3BlblVSTCgiaHR0cHM6Ly9oc3IuaG95b3ZlcnNlLmNvbS8iKQplbmQKCmxvY2FsIGZ1bmN0aW9uIHNob3dfaGludCgpCiAgICBsb2NhbCB0ZXh0ID0gIldlbGNvbWUgdG8gRGFuaGVuZ1NlcnZlciFcbiIKICAgIHRleHQgPSB0ZXh0IC4uICJUaGlzIHNlcnZlciBzb2Z0d2FyZSBpcyB0b3RhbGx5IGZyZWUuXG4iCiAgICB0ZXh0ID0gdGV4dCAuLiAiSWYgeW91IHBheSBmb3IgaXQsIHlvdSBoYXZlIGJlZW4gc2NhbW1lZC5cbiIKICAgIHRleHQgPSB0ZXh0IC4uICJFZHVjYXRpb25hbCBwdXJwb3NlIG9ubHksIHBsZWFzZSBzdXBwb3J0IHRoZSBnZW51aW5lIGdhbWUuIgogICAgQ1MuUlBHLkNsaWVudC5Db25maXJtRGlhbG9nVXRpbC5TaG93Q3VzdG9tT2tDYW5jZWxIaW50KHRleHQsIG9uRGlhbG9nQ2xvc2VkKQplbmQKCnNob3dfaGludCgp")));
+                    break;
+            }
         }
     }
 }
