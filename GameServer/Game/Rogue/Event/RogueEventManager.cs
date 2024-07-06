@@ -121,6 +121,7 @@ namespace EggLink.DanhengServer.Game.Rogue.Event
                 Player.SendPacket(new PacketSelectRogueCommonDialogueOptionScRsp());
                 return;
             }
+            option.IsSelected = true;
 
             List<int> Param = dialogueEvent.RogueEffectParamList;
             if (option.ArgId > 0)

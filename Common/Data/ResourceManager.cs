@@ -8,6 +8,7 @@ using EggLink.DanhengServer.Util;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using EggLink.DanhengServer.Data.Custom;
+using EggLink.DanhengServer.Data.Excel;
 
 namespace EggLink.DanhengServer.Data
 {
@@ -22,6 +23,7 @@ namespace EggLink.DanhengServer.Data
             LoadMazeSkill();
             LoadDialogueInfo();
             LoadPerformanceInfo();
+            LoadRogueChestMapInfo();
             GameData.ActivityConfig = LoadCustomFile<ActivityConfig>("Activity", "ActivityConfig") ?? new();
             GameData.BannersConfig = LoadCustomFile<BannersConfig>("Banner", "Banners") ?? new();
             GameData.RogueMapGenData = LoadCustomFile<Dictionary<int, List<int>>>("Rogue Map", "RogueMapGen") ?? [];
@@ -422,6 +424,58 @@ namespace EggLink.DanhengServer.Data
             }
 
             Logger.Info("Loaded " + count + " performance infos.");
+        }
+
+        public static void LoadRogueChestMapInfo()
+        {
+            var count = 0;
+            var boardList = new List<RogueDLCChessBoardExcel>();
+            foreach (var nousMap in GameData.RogueNousChessBoardData.Values)
+            {
+                boardList.AddRange(nousMap);
+            }
+
+            foreach (var nousMap in GameData.RogueSwarmChessBoardData.Values)
+            {
+                boardList.AddRange(nousMap);
+            }
+
+            foreach (var board in boardList)
+            {
+                if (board.ChessBoardConfiguration == "")
+                {
+                    count++;
+                    continue;
+                }
+
+                var path = ConfigManager.Config.Path.ResourcePath + "/" + board.ChessBoardConfiguration;
+
+                var file = new FileInfo(path);
+                if (!file.Exists) continue;
+                try
+                {
+                    using var reader = file.OpenRead();
+                    using StreamReader reader2 = new(reader);
+                    var text = reader2.ReadToEnd();
+                    var map = JsonConvert.DeserializeObject<RogueChestMapInfo>(text);
+                    if (map != null)
+                    {
+                        board.MapInfo = map;
+                        count++;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Logger.Error("Error in reading " + file.Name, ex);
+                }
+            }
+
+            if (count < boardList.Count)
+            {
+                Logger.Warn("Chess board infos are missing, please check your resources folder: " + ConfigManager.Config.Path.ResourcePath + "/Config/Gameplays/RogueDLC. Chess rogue may not work!");
+            }
+
+            Logger.Info("Loaded " + count + " board infos.");
         }
     }
 }

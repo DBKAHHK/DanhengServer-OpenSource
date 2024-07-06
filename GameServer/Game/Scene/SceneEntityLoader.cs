@@ -91,7 +91,8 @@ namespace EggLink.DanhengServer.Game.Scene
             }
             if (refreshed)
             {
-                Scene.Player.SendPacket(new PacketSceneGroupRefreshScNotify(addList, removeList));
+                Scene.Player.SendPacket(new PacketSceneGroupRefreshScNotify(null, removeList));
+                Scene.Player.SendPacket(new PacketSceneGroupRefreshScNotify(addList, null));
             }
         }
 

@@ -64,6 +64,8 @@ namespace EggLink.DanhengServer.Data
         public static Dictionary<int, RogueNousMainStoryExcel> RogueNousMainStoryData { get; private set; } = [];
         public static Dictionary<int, RogueNousSubStoryExcel> RogueNousSubStoryData { get; private set; } = [];
         public static Dictionary<int, RogueNousTalentExcel> RogueNousTalentData { get; private set; } = [];
+        public static Dictionary<int, List<RogueDLCChessBoardExcel>> RogueSwarmChessBoardData { get; private set; } = [];
+        public static Dictionary<int, List<RogueDLCChessBoardExcel>> RogueNousChessBoardData { get; private set; } = [];
 
         #endregion
 

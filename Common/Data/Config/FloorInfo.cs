@@ -11,6 +11,8 @@ namespace EggLink.DanhengServer.Data.Config
         public int StartAnchorID { get; set; }
 
         public List<FloorGroupInfo> GroupInstanceList { get; set; } = [];
+        public List<FloorSavedValueInfo> SavedValues { get; set; } = [];
+        public List<FloorCustomValueInfo> CustomValues { get; set; } = [];
 
         [JsonIgnore]
         public bool Loaded = false;
@@ -86,4 +88,18 @@ namespace EggLink.DanhengServer.Data.Config
         public int ID { get; set; }
     }
 
+
+    public class FloorSavedValueInfo
+    {
+        public int ID { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public int DefaultValue { get; set; }
+    }
+
+    public class FloorCustomValueInfo
+    {
+        public int ID { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string DefaultValue { get; set; } = string.Empty;
+    }
 }

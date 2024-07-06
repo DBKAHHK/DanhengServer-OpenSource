@@ -2,6 +2,7 @@
 using EggLink.DanhengServer.Game.Battle.Skill;
 using EggLink.DanhengServer.Game.Battle.Skill.Action;
 using EggLink.DanhengServer.Game.Scene;
+using EggLink.DanhengServer.Game.Scene.Entity;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Server.Packet.Send.Battle;
 using System;
@@ -20,15 +21,36 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Battle
             var req = SceneCastSkillCsReq.Parser.ParseFrom(data);
             if (req != null)
             {
-                connection.Player!.SceneInstance!.AvatarInfo.TryGetValue((int)req.AttackedByEntityId, out var info);
+                var scene = connection.Player!.SceneInstance!;
+                scene.AvatarInfo.TryGetValue((int)req.AttackedByEntityId, out var info);
                 MazeSkill mazeSkill = new([]);
 
+                bool triggerBattle = true;
                 if (info != null)  // cast by player
                 {
                     mazeSkill = MazeSkillManager.GetSkill(info.AvatarInfo.GetAvatarId(), (int)req.SkillIndex);
+                } else
+                {
+                    // monster
+                    foreach (var id in req.AssistMonsterEntityIdList)
+                    {
+                        if (scene.Entities.TryGetValue((int)id, out var entity))
+                        {
+                            if (entity is EntityMonster || entity is EntityProp)  // avoid monster hit monster
+                            {
+                                triggerBattle = false;
+                                break;
+                            } 
+                        }
+                    }
                 }
 
-                if (req.HitTargetEntityIdList.Count == 0)
+                if (req.AssistMonsterEntityIdList.Count == 0)
+                {
+                    triggerBattle = false;
+                }
+
+                if (triggerBattle)
                 {
                     // didnt hit any target
                     if (info != null && req.SkillIndex > 0)

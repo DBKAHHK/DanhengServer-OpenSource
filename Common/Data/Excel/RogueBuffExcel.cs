@@ -12,7 +12,7 @@ namespace EggLink.DanhengServer.Data.Excel
         public int MazeBuffLevel { get; set; }
         public int RogueBuffType { get; set; }
         [JsonConverter(typeof(StringEnumConverter))]
-        public RogueBuffCategory RogueBuffRarity { get; set; }
+        public RogueBuffCategory RogueBuffCategory { get; set; }
         public int RogueBuffTag { get; set; }
         public int AeonID { get; set; }
 
