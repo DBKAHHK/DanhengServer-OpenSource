@@ -9,7 +9,7 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Player
     {
         public override void OnHandle(Connection connection, byte[] header, byte[] data)
         {
-            connection.State = SessionState.ACTIVE;
+            connection.State = SessionStateEnum.ACTIVE;
             connection.SendPacket(new PacketPlayerLoginScRsp(connection));
             connection.SendPacket(new PacketContentPackageSyncDataScNotify());
         }

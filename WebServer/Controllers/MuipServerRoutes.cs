@@ -17,7 +17,7 @@ namespace EggLink.DanhengServer.WebServer.Controllers
             var data = MuipManager.AuthAdminAndCreateSession(req.admin_key, req.key_type);
             if (data == null)
             {
-                return new JsonResult(new AuthAdminKeyResponse(1, "Admin key is invalid!", null));
+                return new JsonResult(new AuthAdminKeyResponse(1, "Admin key is invalid or the function is not enabled!", null));
             }
             return new JsonResult(new AuthAdminKeyResponse(0, "Authorized admin key successfully!", data));
         }

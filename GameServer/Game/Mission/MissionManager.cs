@@ -254,24 +254,7 @@ namespace EggLink.DanhengServer.Game.Mission
             HandleMissionReward(missionId);
             HandleFinishType(MissionFinishTypeEnum.FinishMission);
 
-            GameData.RaidConfigData.TryGetValue(Player.CurRaidId * 100 + 0, out var raidConfig);
-            if (raidConfig != null)
-            {
-                bool leave = true;
-                foreach (var id in raidConfig.MainMissionIDList)
-                {
-                    if (GetMainMissionStatus(id) != MissionPhaseEnum.Finish)
-                    {
-                        leave = false;
-                    }
-                }
-                if (leave)
-                {
-                    Player.LeaveRaid();
-                    // finish
-                    HandleFinishType(MissionFinishTypeEnum.RaidFinishCnt, raidConfig.RaidID);
-                }
-            }
+            Player.RaidManager!.CheckIfLeaveRaid();
 
             PluginEvent.InvokeOnPlayerFinishMainMission(Player, missionId);
         }

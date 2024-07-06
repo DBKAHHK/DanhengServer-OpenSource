@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.Proto;
+﻿using EggLink.DanhengServer.Database.Scene;
+using EggLink.DanhengServer.Proto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +10,14 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Scene
 {
     public class PacketRaidInfoNotify : BasePacket
     {
-        public PacketRaidInfoNotify(uint raidId, RaidStatus status = RaidStatus.Doing) : base(CmdIds.RaidInfoNotify)
+        public PacketRaidInfoNotify(RaidRecord record) : base(CmdIds.RaidInfoNotify)
         {
             var proto = new RaidInfoNotify()
             {
-                RaidId = raidId,
-                Status = status
+                RaidId = (uint)record.RaidId,
+                Status = record.Status,
+                WorldLevel = (uint)record.WorldLevel,
+                ItemList = new(),
             };
 
             SetData(proto);

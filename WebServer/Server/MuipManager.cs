@@ -22,7 +22,7 @@ namespace EggLink.DanhengServer.WebServer.Server
 
         public static AuthAdminKeyData? AuthAdminAndCreateSession(string key, string key_type)
         {
-            if (ConfigManager.Config.MuipServer.AdminKey != key)
+            if (ConfigManager.Config.MuipServer.AdminKey == "" || ConfigManager.Config.MuipServer.AdminKey != key)
             {
                 return null;
             }

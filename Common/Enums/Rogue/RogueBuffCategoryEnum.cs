@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EggLink.DanhengServer.Enums.Rogue
 {
-    public enum RogueBuffCategory
+    public enum RogueBuffCategoryEnum
     {
         None = 0,
         Common = 1,

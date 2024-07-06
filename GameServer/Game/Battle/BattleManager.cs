@@ -138,12 +138,16 @@ namespace EggLink.DanhengServer.Game.Battle
                     }
                 }
 
-                MazeBuff mazeBuff;
+                MazeBuff? mazeBuff = null;
                 if (castAvatar != null)
                 {
                     var index = battleInstance.Lineup.BaseAvatars!.FindIndex(x => x.BaseAvatarId == castAvatar.AvatarInfo.AvatarId);
-                    mazeBuff = new((int?)castAvatar.AvatarInfo.Excel?.DamageType ?? 0, 1, index);
-                    mazeBuff.DynamicValues.Add("SkillIndex", skill.IsMazeSkill ? 2 : 1);
+                    GameData.AvatarConfigData.TryGetValue(castAvatar.AvatarInfo.GetAvatarId(), out var avatarExcel);
+                    if (avatarExcel != null)
+                    {
+                        mazeBuff = new((int)avatarExcel.DamageType, 1, index);
+                        mazeBuff.DynamicValues.Add("SkillIndex", skill.IsMazeSkill ? 2 : 1);
+                    }
                 } else
                 {
                     mazeBuff = new(GameConstants.AMBUSH_BUFF_ID, 1, -1)
@@ -152,7 +156,7 @@ namespace EggLink.DanhengServer.Game.Battle
                     };
                 }
 
-                if (mazeBuff.BuffID != 0)  // avoid adding a buff with ID 0
+                if (mazeBuff != null && mazeBuff.BuffID != 0)  // avoid adding a buff with ID 0
                 {
                     battleInstance.Buffs.Add(mazeBuff);
                 }
@@ -333,8 +337,8 @@ namespace EggLink.DanhengServer.Game.Battle
                         if (specialAvatar == null) continue;
                         specialAvatar.CurHp[Player.Uid] = curHp;
                         specialAvatar.CurSp[Player.Uid] = curSp;
-                        avatarInstance.SetCurHp(curHp, lineup.LineupType != 0);
-                        avatarInstance.SetCurSp(curSp, lineup.LineupType != 0);
+                        avatarInstance?.SetCurHp(curHp, lineup.LineupType != 0);
+                        avatarInstance?.SetCurSp(curSp, lineup.LineupType != 0);
                     } else
                     {
                         avatarInstance.SetCurHp(curHp, lineup.LineupType != 0);

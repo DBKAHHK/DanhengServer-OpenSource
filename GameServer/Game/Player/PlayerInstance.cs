@@ -36,6 +36,7 @@ using static EggLink.DanhengServer.Plugin.Event.PluginEvent;
 using EggLink.DanhengServer.Plugin.Event;
 using EggLink.DanhengServer.Game.Task;
 using EggLink.DanhengServer.GameServer.Game.Mail;
+using EggLink.DanhengServer.GameServer.Game.Raid;
 
 namespace EggLink.DanhengServer.Game.Player
 {
@@ -53,6 +54,8 @@ namespace EggLink.DanhengServer.Game.Player
         public GachaManager? GachaManager { get; private set; }
         public MessageManager? MessageManager { get; private set; }
         public MailManager? MailManager { get; private set; }
+
+        public RaidManager? RaidManager { get; private set; }
 
         public FriendManager? FriendManager { get; private set; }
         public RogueManager? RogueManager { get; private set; }
@@ -77,11 +80,7 @@ namespace EggLink.DanhengServer.Game.Player
         public bool Initialized { get; set; } = false;
         public bool IsNewPlayer { get; set; } = false;
         public int NextBattleId { get; set; } = 0;
-        public int CurRaidId { get; set; } = 0;
-        public int OldEntryId { get; set; } = 0;
         public int ChargerNum { get; set; } = 0;
-        public Position? LastPos { get; set; }
-        public Position? LastRot { get; set; }
 
         #endregion
 
@@ -133,6 +132,7 @@ namespace EggLink.DanhengServer.Game.Player
             ChessRogueManager = new(this);
             ChallengeManager = new(this);
             PerformanceTrigger = new(this);
+            RaidManager = new(this);
 
             PlayerUnlockData = InitializeDatabase<PlayerUnlockData>();
             SceneData = InitializeDatabase<SceneData>();
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Game.Player
 
             if (LineupManager!.GetCurLineup() != null)  // null -> ignore(new player)
             {
-                if (LineupManager!.GetCurLineup()!.IsExtraLineup())  // do not use extra lineup when login
+                if (LineupManager!.GetCurLineup()!.IsExtraLineup() && RaidManager!.RaidData.CurRaidId == 0)  // do not use extra lineup when login
                 {
                     LineupManager!.SetExtraLineup(ExtraLineupType.LineupNone, []);
                     if (LineupManager!.GetCurLineup()!.IsExtraLineup())
@@ -203,12 +203,6 @@ namespace EggLink.DanhengServer.Game.Player
 
         public void OnLogoutAsync()
         {
-            if (CurRaidId > 0)
-            {
-                EnterScene(OldEntryId, 0, false);
-                MoveTo(LastPos!, LastRot!);
-            }
-
             InvokeOnPlayerLogout(this);
         }
 
@@ -508,9 +502,9 @@ namespace EggLink.DanhengServer.Game.Player
             {
                 EnterScene(801120102, 0, sendPacket);
                 return;
-            } else if (plane.PlaneType == PlaneTypeEnum.Raid && CurRaidId == 0)
+            } else if (plane.PlaneType == PlaneTypeEnum.Raid && RaidManager!.RaidData.CurRaidId == 0)
             {
-                EnterScene(OldEntryId > 0 ? OldEntryId : 2000101, 0, sendPacket);
+                EnterScene(2000101, 0, sendPacket);
                 return;
             } else if (plane.PlaneType == PlaneTypeEnum.Challenge && ChallengeManager!.ChallengeInstance == null)
             {
@@ -625,36 +619,6 @@ namespace EggLink.DanhengServer.Game.Player
                 BattleInstance = null;
                 Connection!.SendPacket(CmdIds.QuitBattleScNotify);
             }
-        }
-
-        public void LeaveRaid()
-        {
-            if (CurRaidId == 0) return;
-            GameData.RaidConfigData.TryGetValue(CurRaidId * 100 + 0, out var config);
-            if (config == null) return;
-
-            if (LineupManager!.GetCurLineup()!.IsExtraLineup())
-            {
-                LineupManager!.SetExtraLineup(ExtraLineupType.LineupNone, []);
-                SendPacket(new PacketSyncLineupNotify(LineupManager!.GetCurLineup()!));
-            }
-
-            if (config.FinishEntranceID > 0)
-            {
-                EnterScene(config.FinishEntranceID, 0, true);
-            }
-            else
-            {
-                EnterScene(OldEntryId, 0, true);
-                MoveTo(LastPos!, LastRot!);
-            }
-
-            SendPacket(new PacketRaidInfoNotify((uint)CurRaidId, RaidStatus.Finish));
-
-            CurRaidId = 0;
-            OldEntryId = 0;
-            LastPos = null;
-            LastRot = null;
         }
 
         #endregion

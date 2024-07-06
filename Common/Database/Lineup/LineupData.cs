@@ -31,7 +31,7 @@ namespace EggLink.DanhengServer.Database.Lineup
         public string? Name { get; set; }
         public int LineupType { get; set; }
         public int LeaderAvatarId { get; set; }
-        public List<AvatarInfo>? BaseAvatars { get; set; }
+        public List<LineupAvatarInfo>? BaseAvatars { get; set; }
         public int Mp { get; set; } = 5;
 
         [JsonIgnore()]
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Database.Lineup
         }
     }
 
-    public class AvatarInfo
+    public class LineupAvatarInfo
     {
         public int BaseAvatarId { get; set; }
         public int AssistUid { get; set; }
