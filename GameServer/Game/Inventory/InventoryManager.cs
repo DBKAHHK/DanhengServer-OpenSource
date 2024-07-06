@@ -141,8 +141,8 @@ namespace EggLink.DanhengServer.Game.Inventory
                     }
                     else
                     {
-                        Player.AddAvatar(itemId, sync);
-                        AddItem(itemId + 200000, 1);
+                        Player.AddAvatar(itemId, sync, notify);
+                        AddItem(itemId + 200000, 1, false);
                     }
                     break;
                 default:

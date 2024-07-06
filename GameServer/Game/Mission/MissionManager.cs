@@ -611,11 +611,15 @@ namespace EggLink.DanhengServer.Game.Mission
                     {
                         if (GetMainMissionStatus(mainMission.MainMissionID) == MissionPhaseEnum.Finish)
                         {
-                            info.SceneMissionInfo.AcceptMainMissionIdList.Add((uint)mainMission.MainMissionID);
+                            info.SceneMissionInfo.MainMissionIdList.Add((uint)mainMission.MainMissionID);
                         } else if (GetMainMissionStatus(mainMission.MainMissionID) == MissionPhaseEnum.Accept)
                         {
-                            info.SceneMissionInfo.MainMissionIdList.Add((uint)mainMission.MainMissionID);
+                            info.SceneMissionInfo.AcceptMainMissionIdList.Add((uint)mainMission.MainMissionID);
                         }
+                        info.SceneMissionInfo.COLDABMKNDH.Add(new Proto.GBGPCCLIIEA()
+                        {
+                            MainMissionId = (uint)mainMission.MainMissionID,
+                        });
                         break;  // only one
                     }
                 }

@@ -50,7 +50,7 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Battle
                     triggerBattle = false;
                 }
 
-                if (triggerBattle)
+                if (!triggerBattle)
                 {
                     // didnt hit any target
                     if (info != null && req.SkillIndex > 0)
