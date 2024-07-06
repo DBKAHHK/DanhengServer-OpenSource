@@ -15,7 +15,7 @@ namespace EggLink.DanhengServer.Game.Battle
 {
     public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
     {
-        public void StartBattle(SceneCastSkillCsReq req, MazeSkill skill, List<uint> hitTargetEntityIdList)
+        public void StartBattle(SceneCastSkillCsReq req, MazeSkill skill)
         {
             if (Player.BattleInstance != null) return;
             var targetList = new List<EntityMonster>();
@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Game.Battle
 
             if (Player.SceneInstance!.AvatarInfo.ContainsKey((int)req.AttackedByEntityId))
             {
-                foreach (var entity in hitTargetEntityIdList)
+                foreach (var entity in req.HitTargetEntityIdList)
                 {
                     Player.SceneInstance!.Entities.TryGetValue((int)entity, out var entityInstance);
                     if (entityInstance is EntityMonster monster)
@@ -52,7 +52,7 @@ namespace EggLink.DanhengServer.Game.Battle
             } else
             {
                 bool isAmbushed = false;
-                foreach (var entity in hitTargetEntityIdList)
+                foreach (var entity in req.HitTargetEntityIdList)
                 {
                     if (Player.SceneInstance!.AvatarInfo.ContainsKey((int)entity)) 
                     {

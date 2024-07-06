@@ -43,23 +43,8 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Battle
 
             if (req.AssistMonsterEntityIdList.Count > 0)
             {
-                List<uint> hitTargetEntityIdList = new List<uint>();
-                if (req.HitTargetEntityIdList.Count > 0)
-                {
-                    foreach (uint id in req.HitTargetEntityIdList)
-                    {
-                        hitTargetEntityIdList.Add(id);
-                    }
-                }
-                else
-                {
-                    foreach (uint id in req.AssistMonsterEntityIdList)
-                    {
-                        hitTargetEntityIdList.Add(id);
-                    }
-                }
                 // Start battle
-                connection.Player!.BattleManager!.StartBattle(req, mazeSkill!, [.. hitTargetEntityIdList]);
+                connection.Player!.BattleManager!.StartBattle(req, mazeSkill!);
             }
             else
             {
