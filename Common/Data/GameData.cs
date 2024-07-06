@@ -51,7 +51,6 @@ namespace EggLink.DanhengServer.Data
         public static Dictionary<int, ActionPointOverdrawExcel> ActionPointOverdrawData { get; private set; } = [];
         public static Dictionary<int, List<int>> ChessRogueContentGenData { get; set; } = [];
         public static Dictionary<int, ChessRogueCellConfig> ChessRogueCellGenData { get; set; } = [];
-        public static Dictionary<int, Dictionary<int, List<int>>> ChessRogueLayerGenData { get; set; } = [];
         public static Dictionary<int, ChessRogueRoomConfig> ChessRogueRoomGenData { get; set; } = [];
         public static Dictionary<int, RogueDLCAreaExcel> RogueDLCAreaData { get; private set; } = [];
         public static Dictionary<int, RogueDLCBossDecayExcel> RogueDLCBossDecayData { get; private set; } = [];

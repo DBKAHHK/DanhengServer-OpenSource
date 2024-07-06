@@ -28,8 +28,8 @@ namespace EggLink.DanhengServer.Game.ChessRogue
         public int StartCell { get; set; } = 0;
 
         public List<int> Layers { get; set; } = [];
-        public Dictionary<int, List<int>>? CurLayerData { get; set; }
         public int CurLayer { get; set; } = 0;
+        public RogueDLCChessBoardExcel? CurBoardExcel { get; set; }
         public ChessRogueLevelStatusType CurLevelStatus { get; set; } = ChessRogueLevelStatusType.ChessRogueLevelProcessing;
 
         public int ActionPoint { get; set; } = 15;
@@ -182,55 +182,33 @@ namespace EggLink.DanhengServer.Game.ChessRogue
 
         public void GenerateLayer()
         {
-            GameData.ChessRogueLayerGenData.TryGetValue(CurLayer, out var layerGenData);
-            if (layerGenData == null)
+            var level = Layers.IndexOf(CurLayer) + 1;
+            if (RogueVersionId == 201)
             {
-                return;
+                CurBoardExcel = GameData.RogueSwarmChessBoardData[level].RandomElement();
+            } else
+            {
+                CurBoardExcel = GameData.RogueNousChessBoardData[level].RandomElement();
             }
-
-            CurLayerData = layerGenData;
 
             RogueCells.Clear();
             CurCell = null;
 
-            foreach (var column in layerGenData)
+            StartCell = CurBoardExcel.MapInfo!.StartGridItemID;
+
+            foreach (var item in CurBoardExcel.MapInfo!.RogueChestGridItemMap)
             {
-                if (column.Key == -1)
+                var cell = new ChessRogueCellInstance(this, item.Value)
                 {
-                    continue;
-                }
-                foreach (var row in column.Value)
+                    PosY = item.Value.PosY,
+                    PosX = item.Value.PosX,
+                    CellId = item.Key,
+                };
+                RogueCells.Add(item.Key, cell);
+
+                if (cell.GetCellId() == CurBoardExcel.MapInfo!.EndGridItemID)  // last cell
                 {
-                    var cell = new ChessRogueCellInstance(this)
-                    {
-                        PosY = column.Key,
-                        PosX = row,
-                    };
-                    RogueCells.Add(column.Key * 100 + row, cell);
-
-                    if (column.Key == 2 && column.Value.IndexOf(row) == 0)
-                    {
-                        if (Layers.IndexOf(CurLayer) == 0)
-                        {
-                            cell.CellType = 3;
-                        } else
-                        {
-                            cell.CellType = 2;
-                        }
-                        StartCell = column.Key * 100 + row;
-                    }
-
-                    if (column.Key == 2 && column.Value.IndexOf(row) == column.Value.Count - 1)  // last cell
-                    {
-                        if (Layers.IndexOf(CurLayer) == Layers.Count - 1)
-                        {
-                            cell.CellType = 15;
-                        } else
-                        {
-                            cell.CellType = 11;
-                        }
-                        cell.Init();
-                    }
+                    cell.Init();
                 }
             }
         }
@@ -285,7 +263,7 @@ namespace EggLink.DanhengServer.Game.ChessRogue
 
             cell.CellStatus = ChessRogueBoardCellStatus.Selected;
 
-            Player.SendPacket(new PacketChessRogueCellUpdateNotify(cell, CurLayerData![-1][0]));
+            Player.SendPacket(new PacketChessRogueCellUpdateNotify(cell, CurBoardExcel?.ChessBoardID ?? 0));
             CostActionPoint(1);
 
             Player.SendPacket(new PacketChessRogueSelectCellScRsp(cellId));
@@ -717,9 +695,16 @@ namespace EggLink.DanhengServer.Game.ChessRogue
             {
                 if (cell.Value.CellStatus == ChessRogueBoardCellStatus.Idle)
                 {
-                    if (cell.Value.PosY == CurCell!.PosY - 1 || cell.Value.PosY == CurCell!.PosY || cell.Value.PosY == CurCell!.PosY + 1)
+                    if (cell.Value.PosY == CurCell!.PosY - 1 || cell.Value.PosY == CurCell!.PosY + 1)
                     {
                         if (cell.Value.PosX == CurCell!.PosX || cell.Value.PosX == CurCell!.PosX + 1)
+                        {
+                            canSelected.Add((uint)cell.Value.GetCellId());
+                        }
+                    }
+                    if (cell.Value.PosY == CurCell!.PosY)
+                    {
+                        if (cell.Value.PosX == CurCell!.PosX + 2)
                         {
                             canSelected.Add((uint)cell.Value.GetCellId());
                         }
@@ -737,7 +722,7 @@ namespace EggLink.DanhengServer.Game.ChessRogue
                 {
                     LayerStatus = ChessRogueBoardCellStatus.Processing,
                     CurId = (uint)CurCell!.GetCellId(),
-                    CurBoardId = (uint)CurLayerData![-1][0],
+                    CurBoardId = (uint)(CurBoardExcel?.ChessBoardID ?? 0),
                     Cell = new()
                     {
                         CellList = { RogueCells.Select(x => x.Value.ToProto()).ToList() }

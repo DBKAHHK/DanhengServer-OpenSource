@@ -1,6 +1,8 @@
 ﻿using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Data.Excel;
+using EggLink.DanhengServer.Enums.Rogue;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 using System;
@@ -16,6 +18,7 @@ namespace EggLink.DanhengServer.Game.ChessRogue.Cell
         public int CellType { get; set; }
         public int PosY { get; set; }
         public int PosX { get; set; }
+        public int CellId { get; set; }
         public int RoomId { get; set; }
         public int Layer { get; set; } = 1;
         public int MapId { get; set; }
@@ -29,19 +32,25 @@ namespace EggLink.DanhengServer.Game.ChessRogue.Cell
 
         public List<ChessRogueCellAdvanceInfo> CellAdvanceInfo { get; set; } = [];
         
-        public ChessRogueCellInstance(ChessRogueInstance instance)
+        public ChessRogueCellInstance(ChessRogueInstance instance, RogueChestGridItem item)
         {
             Instance = instance;
             Layer = instance.Layers.IndexOf(instance.CurLayer) + 1;
-
             var list = new RandomList<int>();
-            list.Add(3, 8);
-            list.Add(7, 4);
-            list.Add(8, 6);
-            list.Add(17, 4);
-            list.Add(16, 2);
+            list.Add((int)RogueDLCBlockTypeEnum.MonsterNormal, 8);
+            list.Add((int)RogueDLCBlockTypeEnum.Reward, 4);
+            list.Add((int)RogueDLCBlockTypeEnum.Event, 6);
+            list.Add((int)RogueDLCBlockTypeEnum.NousSpecialEvent, 4);
+            list.Add((int)RogueDLCBlockTypeEnum.NousEvent, 2);
 
-            CellType = list.GetRandom();
+            if (item.BlockTypeList.Count > 0)
+            {
+                CellType = (int)item.BlockTypeList.RandomElement();
+            }
+            else
+            {
+                CellType = list.GetRandom();
+            }
         }
 
         public void Init()
@@ -138,7 +147,7 @@ namespace EggLink.DanhengServer.Game.ChessRogue.Cell
             return null;
         }
 
-        public int GetCellId() => PosY * 100 + PosX;
+        public int GetCellId() => CellId;
 
         public int GetEntryId()
         {
@@ -172,14 +181,6 @@ namespace EggLink.DanhengServer.Game.ChessRogue.Cell
 
         public int GetRow()
         {
-            if (PosY == 0 || PosY == 4 || PosY == 2)
-            {
-                return PosX * 2;
-            }
-            else if (PosY == 1 || PosY == 3)
-            {
-                return PosX * 2 + 1;
-            }
             return PosX;
         }
 

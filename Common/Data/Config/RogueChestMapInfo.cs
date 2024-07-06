@@ -19,8 +19,8 @@ namespace EggLink.DanhengServer.Data.Config
         public int Height { get; set; }
         public int StartGridItemID { get; set; }
         public int EndGridItemID { get; set; }
-        public Dictionary<uint, RogueChestGridItem> RogueChestGridItemMap { get; set; } = [];
-        public Dictionary<uint, RogueChestModifierEvent> RogueChestEventMap { get; set; } = [];
+        public Dictionary<int, RogueChestGridItem> RogueChestGridItemMap { get; set; } = [];
+        public Dictionary<int, RogueChestModifierEvent> RogueChestEventMap { get; set; } = [];
         public List<RogueBlockCreateGroup> RogueBlockCreateGroupList { get; set; } = [];
     }
 
