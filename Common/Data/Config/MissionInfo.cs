@@ -40,9 +40,6 @@ namespace EggLink.DanhengServer.Data.Config
         public int SubRewardID { get; set; }
 
         [JsonIgnore]
-        public OperationEnum Operation { get; set; } = OperationEnum.And;
-
-        [JsonIgnore]
         public SubMissionTask<EnterFloorTaskInfo> Task { get; set; } = new();
         [JsonIgnore]
         public SubMissionTask<PropStateTaskInfo> PropTask { get; set; } = new();
@@ -65,11 +62,6 @@ namespace EggLink.DanhengServer.Data.Config
 
         public void Loaded(int type)  // 1 for EnterFloor, 2 for PropState
         {
-            if (MainMissionID == 1000400)
-            {
-                Operation = OperationEnum.Or;  // hacky way to get the Operation
-            }
-
             if (type == 1)
             {
                 try
