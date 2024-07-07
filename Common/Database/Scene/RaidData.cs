@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace EggLink.DanhengServer.Database.Scene
 {
+    [SugarTable("RaidData")]
     public class RaidData : BaseDatabaseDataHelper
     {
         [SugarColumn(IsJson = true)]
