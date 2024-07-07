@@ -1,0 +1,162 @@
+﻿using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Database;
+using EggLink.DanhengServer.Database.Mission;
+using EggLink.DanhengServer.Game;
+using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Mission;
+using EggLink.DanhengServer.Proto;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EggLink.DanhengServer.GameServer.Game.Mission
+{
+    public class StoryLineManager : BasePlayerManager
+    {
+        public StoryLineData StoryLineData { get; set; }
+
+        public StoryLineManager(PlayerInstance player) : base(player)
+        {
+            StoryLineData = DatabaseHelper.Instance!.GetInstanceOrCreateNew<StoryLineData>(player.Uid);
+            OnLogin();
+        }
+
+        public void InitStoryLine(int storyLineId, int entryId = 0, int anchorGroupId = 0, int anchorId = 0)
+        {
+            GameData.StoryLineData.TryGetValue(storyLineId, out var storyExcel);
+            GameData.StroyLineTrialAvatarDataData.TryGetValue(storyLineId, out var storyAvatarExcel);
+            if (storyExcel == null || storyAvatarExcel == null) return;
+            StoryLineData.OldEntryId = Player.Data.EntryId;
+            StoryLineData.OldFloorId = Player.Data.FloorId;
+            StoryLineData.OldPlaneId = Player.Data.PlaneId;
+            StoryLineData.OldPos = Player.Data.Pos!;
+            StoryLineData.OldRot = Player.Data.Rot!;
+            Player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupHeliobus, storyAvatarExcel.InitTrialAvatarList);
+
+            if (entryId > 0)
+            {
+                Player.EnterMissionScene(entryId, anchorGroupId, anchorId, true, EnterSceneReasonStatus.EnterSceneReasonChangeStoryline);
+            } 
+            else
+            {
+                Player.EnterMissionScene(storyExcel.InitEntranceID, storyExcel.InitGroupID, storyExcel.InitAnchorID, true, EnterSceneReasonStatus.EnterSceneReasonChangeStoryline);
+            }
+
+            var record = new StoryLineInfo()
+            {
+                Lineup = Player.LineupManager!.GetCurLineup()!.BaseAvatars!,
+                SavedEntryId = Player.Data.EntryId,
+                SavedFloorId = Player.Data.FloorId,
+                SavedPlaneId = Player.Data.PlaneId,
+                SavedPos = Player.Data.Pos!,
+                SavedRot = Player.Data.Rot!,
+                StoryLineId = storyExcel.StoryLineID
+            };
+
+            StoryLineData.RunningStoryLines[storyExcel.StoryLineID] = record;
+            StoryLineData.CurStoryLineId = storyExcel.StoryLineID;
+            Player.SendPacket(new PacketStoryLineInfoScNotify(Player));
+        }
+
+        public void EnterStoryLine(int storyLineId)
+        {
+            if (StoryLineData.CurStoryLineId != 0) return;
+
+            StoryLineData.RunningStoryLines.TryGetValue(storyLineId, out var lineInfo);
+            if (lineInfo == null) return;
+
+            StoryLineData.OldEntryId = Player.Data.EntryId;
+            StoryLineData.OldFloorId = Player.Data.FloorId;
+            StoryLineData.OldPlaneId = Player.Data.PlaneId;
+            StoryLineData.OldPos = Player.Data.Pos!;
+            StoryLineData.OldRot = Player.Data.Rot!;
+
+            Player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupHeliobus, lineInfo.Lineup.Select(x => x.SpecialAvatarId > 0 ? x.SpecialAvatarId : x.BaseAvatarId).ToList());
+            Player.LoadScene(lineInfo.SavedPlaneId, lineInfo.SavedFloorId, lineInfo.SavedEntryId, lineInfo.SavedPos, lineInfo.SavedRot, true, EnterSceneReasonStatus.EnterSceneReasonChangeStoryline);
+
+            StoryLineData.CurStoryLineId = lineInfo.StoryLineId;
+            Player.SendPacket(new PacketStoryLineInfoScNotify(Player));
+        }
+
+        public void LeaveStoryLine()
+        {
+            if (StoryLineData.CurStoryLineId == 0) return;
+
+            GameData.StoryLineData.TryGetValue(StoryLineData.CurStoryLineId, out var storyExcel);
+            if (storyExcel == null) return;
+
+            var record = new StoryLineInfo()
+            {
+                Lineup = Player.LineupManager!.GetCurLineup()!.BaseAvatars!,
+                SavedEntryId = Player.Data.EntryId,
+                SavedFloorId = Player.Data.FloorId,
+                SavedPlaneId = Player.Data.PlaneId,
+                SavedPos = Player.Data.Pos!,
+                SavedRot = Player.Data.Rot!,
+                StoryLineId = storyExcel.StoryLineID
+            };
+
+            // reset
+            Player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupNone, []);
+            Player.LoadScene(StoryLineData.OldPlaneId, StoryLineData.OldFloorId, StoryLineData.OldEntryId, StoryLineData.OldPos, StoryLineData.OldRot, true, EnterSceneReasonStatus.EnterSceneReasonChangeStoryline);
+
+            // save
+            StoryLineData.RunningStoryLines[storyExcel.StoryLineID] = record;
+            StoryLineData.CurStoryLineId = 0;
+
+            StoryLineData.OldPlaneId = 0;
+            StoryLineData.OldEntryId = 0;
+            StoryLineData.OldFloorId = 0;
+            StoryLineData.OldPos = new();
+            StoryLineData.OldRot = new();
+
+            Player.SendPacket(new PacketStoryLineInfoScNotify(Player));
+        }
+
+        public void CheckIfFinishStoryLine()  // seems like a story line end with another ChangeStoryLine finish action that Params[0] = 0
+        {
+            if (StoryLineData.CurStoryLineId == 0) return;
+            GameData.StoryLineData.TryGetValue(StoryLineData.CurStoryLineId, out var storyExcel);
+            if (storyExcel == null) return;
+
+            if (Player.MissionManager!.GetSubMissionStatus(storyExcel.EndCondition.Param) == Enums.MissionPhaseEnum.Finish)
+            {
+                FinishStoryLine();
+            }
+        }
+
+        public void FinishStoryLine(int entryId = 0, int anchorGroupId = 0, int anchorId = 0)
+        {
+            if (StoryLineData.CurStoryLineId == 0) return;
+            if (entryId > 0)
+            {
+                Player.EnterMissionScene(entryId, anchorGroupId, anchorId, true, EnterSceneReasonStatus.EnterSceneReasonChangeStoryline);
+            } 
+            else
+            {
+                Player.LoadScene(StoryLineData.OldPlaneId, StoryLineData.OldFloorId, StoryLineData.OldEntryId, StoryLineData.OldPos, StoryLineData.OldRot, true, EnterSceneReasonStatus.EnterSceneReasonChangeStoryline);
+            }
+
+            // delete old & reset
+            StoryLineData.RunningStoryLines.Remove(StoryLineData.CurStoryLineId);
+            StoryLineData.CurStoryLineId = 0;
+
+            StoryLineData.OldPlaneId = 0;
+            StoryLineData.OldEntryId = 0;
+            StoryLineData.OldFloorId = 0;
+            StoryLineData.OldPos = new();
+            StoryLineData.OldRot = new();
+
+            Player.SendPacket(new PacketStoryLineInfoScNotify(Player));
+        }
+
+        public void OnLogin()
+        {
+            if (StoryLineData.CurStoryLineId == 0) return;
+
+            Player.SendPacket(new PacketStoryLineInfoScNotify(Player));
+        }
+    }
+}

@@ -121,6 +121,8 @@ namespace EggLink.DanhengServer.Data
         public static Dictionary<int, MessageContactsConfigExcel> MessageContactsConfigData { get; private set; } = [];
         public static Dictionary<int, MessageItemConfigExcel> MessageItemConfigData { get; private set; } = [];
         public static Dictionary<int, PerformanceEExcel> PerformanceEData { get; private set; } = [];
+        public static Dictionary<int, StoryLineExcel> StoryLineData { get; private set; } = [];
+        public static Dictionary<int, StroyLineTrialAvatarDataExcel> StroyLineTrialAvatarDataData { get; private set; } = [];
 
         #endregion
 

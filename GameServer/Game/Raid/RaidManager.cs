@@ -30,6 +30,8 @@ namespace EggLink.DanhengServer.GameServer.Game.Raid
             OnLogin();
         }
 
+        #region Player Action
+
         public void EnterRaid(int raidId, int worldLevel, List<int>? avatarList = null, bool enterSaved = false)
         {
             if (RaidData.CurRaidId != 0) return;
@@ -237,12 +239,20 @@ namespace EggLink.DanhengServer.GameServer.Game.Raid
             Player.SendPacket(new PacketDelSaveRaidScNotify(raidId, worldLevel));
         }
 
+        #endregion
+
+        #region Information
+
         public RaidStatus GetRaidStatus(int raidId, int worldLevel = 0)
         {
             if (!RaidData.RaidRecordDatas.TryGetValue(raidId, out var dict)) return RaidStatus.None;
             if (!dict.TryGetValue(worldLevel, out var record)) return RaidStatus.None;
             return record.Status;
         }
+
+        #endregion
+
+        #region Player Handler
 
         public void OnLogin()
         {
@@ -264,5 +274,7 @@ namespace EggLink.DanhengServer.GameServer.Game.Raid
                 RaidData.CurRaidWorldLevel = 0;
             }
         }
+
+        #endregion
     }
 }

@@ -359,6 +359,7 @@ namespace EggLink.DanhengServer.Game.Mission
 
             // handle reward
             HandleSubMissionReward(missionId);
+            //Player.StoryLineManager!.CheckIfFinishStoryLine();
 
             PluginEvent.InvokeOnPlayerFinishSubMission(Player, missionId);
         }

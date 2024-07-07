@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static EPFPBIMMGPGReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFFUEZQQklNTUdQRy5wcm90bxoRSUZOT0VGTkVDREIucHJvdG8aEUFJR0VO",
-            "TEJQT0NELnByb3RvGhFFRUVJRU1QUElQTC5wcm90bxoRT0VBREhBT0FBQkou",
-            "cHJvdG8aEUFFTU1CSE5QQ0VELnByb3RvIrwBCgtFUEZQQklNTUdQRxIhCgtD",
+            "ChFFUEZQQklNTUdQRy5wcm90bxoRQUVNTUJITlBDRUQucHJvdG8aEUVFRUlF",
+            "TVBQSVBMLnByb3RvGhFJRk5PRUZORUNEQi5wcm90bxoRT0VBREhBT0FBQkou",
+            "cHJvdG8aEUFJR0VOTEJQT0NELnByb3RvIrwBCgtFUEZQQklNTUdQRxIhCgtD",
             "SExDT0VIS0lCTRgNIAEoCzIMLklGTk9FRk5FQ0RCEiEKC0ZMS0pCUEpETlBD",
             "GAsgASgLMgwuT0VBREhBT0FBQkoSIQoLQ0xLTENQREJJQ0kYByABKAsyDC5B",
             "RU1NQkhOUENFRBIhCgtFSVBOUENMT0hETRgJIAEoCzIMLkVFRUlFTVBQSVBM",
             "EiEKC1BQR0tFQUlJQUxOGAogASgLMgwuQUlHRU5MQlBPQ0RCHqoCG0VnZ0xp",
             "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IFNOEFNECDBReflection.Descriptor, global::EggLink.DanhengServer.Proto.AIGENLBPOCDReflection.Descriptor, global::EggLink.DanhengServer.Proto.EEEIEMPPIPLReflection.Descriptor, global::EggLink.DanhengServer.Proto.OEADHAOAABJReflection.Descriptor, global::EggLink.DanhengServer.Proto.AEMMBHNPCEDReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AEMMBHNPCEDReflection.Descriptor, global::EggLink.DanhengServer.Proto.EEEIEMPPIPLReflection.Descriptor, global::EggLink.DanhengServer.Proto.IFNOEFNECDBReflection.Descriptor, global::EggLink.DanhengServer.Proto.OEADHAOAABJReflection.Descriptor, global::EggLink.DanhengServer.Proto.AIGENLBPOCDReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EPFPBIMMGPG), global::EggLink.DanhengServer.Proto.EPFPBIMMGPG.Parser, new[]{ "CHLCOEHKIBM", "FLKJBPJDNPC", "CLKLCPDBICI", "EIPNPCLOHDM", "PPGKEAIIALN" }, null, null, null, null)
           }));
