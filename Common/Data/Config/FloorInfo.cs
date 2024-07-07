@@ -1,6 +1,7 @@
 ﻿using EggLink.DanhengServer.Enums.Scene;
 using EggLink.DanhengServer.Util;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace EggLink.DanhengServer.Data.Config
 {
@@ -86,6 +87,7 @@ namespace EggLink.DanhengServer.Data.Config
         public string GroupPath { get; set; } = "";
         public bool IsDelete { get; set; }
         public int ID { get; set; }
+        public string Name { get; set; } = "";
     }
 
 

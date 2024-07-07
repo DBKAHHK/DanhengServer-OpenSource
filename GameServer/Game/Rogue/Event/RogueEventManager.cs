@@ -1,6 +1,7 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Enums.Rogue;
 using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Rogue;
 using EggLink.DanhengServer.Server.Packet.Send.Rogue;
 using Google.Protobuf.WellKnownTypes;
 using System;
@@ -156,6 +157,7 @@ namespace EggLink.DanhengServer.Game.Rogue.Event
             }
 
             // send rsp
+            Player.SendPacket(new PacketSyncRogueCommonDialogueOptionFinishScNotify(eventInstance));
             Player.SendPacket(new PacketSelectRogueCommonDialogueOptionScRsp(eventInstance));
         }
     }

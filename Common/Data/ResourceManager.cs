@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Data.Excel;
+using EggLink.DanhengServer.Enums.Rogue;
 
 namespace EggLink.DanhengServer.Data
 {
@@ -29,9 +30,7 @@ namespace EggLink.DanhengServer.Data
             GameData.RogueMapGenData = LoadCustomFile<Dictionary<int, List<int>>>("Rogue Map", "RogueMapGen") ?? [];
             GameData.RogueMiracleGroupData = LoadCustomFile<Dictionary<int, List<int>>>("Rogue Miracle Group", "RogueMiracleGroup") ?? [];
             GameData.RogueMiracleEffectData = LoadCustomFile<RogueMiracleEffectConfig>("Rogue Miracle Effect", "RogueMiracleEffectGen") ?? new();
-            GameData.ChessRogueRoomGenData = LoadCustomFile<Dictionary<int, ChessRogueRoomConfig>>("Chess Rogue Map", "ChessRogueMapGen") ?? [];
-            GameData.ChessRogueContentGenData = LoadCustomFile<Dictionary<int, List<int>>>("Chess Rogue Content", "ChessRogueContentGen") ?? [];
-            GameData.ChessRogueCellGenData = LoadCustomFile<Dictionary<int, ChessRogueCellConfig>>("Chess Rogue Cell", "ChessRogueRoomGen") ?? [];
+            LoadChessRogueRoomData();
         }
 
         public static void LoadExcel()
@@ -475,6 +474,83 @@ namespace EggLink.DanhengServer.Data
             }
 
             Logger.Info("Loaded " + count + " board infos.");
+        }
+
+        public static void LoadChessRogueRoomData()
+        {
+            var count = 0;
+
+            FileInfo file = new(ConfigManager.Config.Path.ConfigPath + $"/ChessRogueRoomGen.json");
+            List<ChessRogueRoomConfig>? customFile = default;
+            if (!file.Exists)
+            {
+                Logger.Warn($"Banner infos are missing, please check your resources folder: {ConfigManager.Config.Path.ConfigPath}/ChessRogueRoomGen.json. Chess Rogue may not work!");
+                return;
+            }
+            try
+            {
+                using var reader = file.OpenRead();
+                using StreamReader reader2 = new(reader);
+                var text = reader2.ReadToEnd();
+                var json = JsonConvert.DeserializeObject<List<ChessRogueRoomConfig>>(text);
+                customFile = json;
+
+                foreach (var room in customFile!)
+                {
+                    if (room.BlockType == RogueDLCBlockTypeEnum.MonsterNormal)
+                    {
+                        AddRoomToGameData(RogueDLCBlockTypeEnum.MonsterNormal, room);
+                        AddRoomToGameData(RogueDLCBlockTypeEnum.MonsterSwarm, room);
+                        count += 2;
+                    }
+                    else if (room.BlockType == RogueDLCBlockTypeEnum.MonsterBoss)
+                    {
+                        AddRoomToGameData(RogueDLCBlockTypeEnum.MonsterBoss, room);
+                        AddRoomToGameData(RogueDLCBlockTypeEnum.MonsterNousBoss, room);
+                        AddRoomToGameData(RogueDLCBlockTypeEnum.MonsterSwarmBoss, room);
+                        count += 3;
+                    }
+                    else if (room.BlockType == RogueDLCBlockTypeEnum.Event)
+                    {
+                        AddRoomToGameData(RogueDLCBlockTypeEnum.Event, room);
+                        AddRoomToGameData(RogueDLCBlockTypeEnum.Reward, room);
+                        AddRoomToGameData(RogueDLCBlockTypeEnum.Adventure, room);  // adventure is not this type
+                        AddRoomToGameData(RogueDLCBlockTypeEnum.NousSpecialEvent, room);
+                        AddRoomToGameData(RogueDLCBlockTypeEnum.SwarmEvent, room);
+                        AddRoomToGameData(RogueDLCBlockTypeEnum.NousEvent, room);
+                        count += 6;
+                    }
+                    else if (room.BlockType == RogueDLCBlockTypeEnum.Trade)
+                    {
+                        AddRoomToGameData(RogueDLCBlockTypeEnum.Trade, room);
+                        AddRoomToGameData(RogueDLCBlockTypeEnum.BlackMarket, room);
+                        count += 2;
+                    }
+                    else
+                    {
+                        AddRoomToGameData(room.BlockType, room);
+                        count++;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error("Error in reading " + file.Name, ex);
+            }
+
+            Logger.Info("Loaded " + count + " room infos.");
+        }
+
+        public static void AddRoomToGameData(RogueDLCBlockTypeEnum type, ChessRogueRoomConfig room)
+        {
+            if (GameData.ChessRogueRoomData.TryGetValue(type, out var list))
+            {
+                list.Add(room);
+            }
+            else
+            {
+                GameData.ChessRogueRoomData.Add(type, [room]);
+            }
         }
     }
 }

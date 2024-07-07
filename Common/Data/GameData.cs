@@ -1,6 +1,7 @@
 ﻿using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Data.Excel;
+using EggLink.DanhengServer.Enums.Rogue;
 
 namespace EggLink.DanhengServer.Data
 {
@@ -49,9 +50,7 @@ namespace EggLink.DanhengServer.Data
         #region ChessRogue
 
         public static Dictionary<int, ActionPointOverdrawExcel> ActionPointOverdrawData { get; private set; } = [];
-        public static Dictionary<int, List<int>> ChessRogueContentGenData { get; set; } = [];
-        public static Dictionary<int, ChessRogueCellConfig> ChessRogueCellGenData { get; set; } = [];
-        public static Dictionary<int, ChessRogueRoomConfig> ChessRogueRoomGenData { get; set; } = [];
+        public static Dictionary<RogueDLCBlockTypeEnum, List<ChessRogueRoomConfig>> ChessRogueRoomData { get; private set; } = [];
         public static Dictionary<int, RogueDLCAreaExcel> RogueDLCAreaData { get; private set; } = [];
         public static Dictionary<int, RogueDLCBossDecayExcel> RogueDLCBossDecayData { get; private set; } = [];
         public static Dictionary<int, RogueDLCBossBpExcel> RogueDLCBossBpData { get; private set; } = [];

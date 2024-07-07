@@ -1,5 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Excel;
+using EggLink.DanhengServer.Enums.Rogue;
 using EggLink.DanhengServer.Game.Battle;
 using EggLink.DanhengServer.Game.ChessRogue.Cell;
 using EggLink.DanhengServer.Game.ChessRogue.Dice;
@@ -31,6 +32,9 @@ namespace EggLink.DanhengServer.Game.ChessRogue
         public int CurLayer { get; set; } = 0;
         public RogueDLCChessBoardExcel? CurBoardExcel { get; set; }
         public ChessRogueLevelStatusType CurLevelStatus { get; set; } = ChessRogueLevelStatusType.ChessRogueLevelProcessing;
+
+        public bool FirstEnterBattle { get; set; } = true;
+        public int LayerMap { get; set; } = 0;
 
         public int ActionPoint { get; set; } = 15;
 
@@ -78,7 +82,7 @@ namespace EggLink.DanhengServer.Game.ChessRogue
 
         public override void RollBuff(int amount)
         {
-            if (CurCell!.CellType == 11)
+            if (CurCell!.CellType == RogueDLCBlockTypeEnum.MonsterBoss)
             {
                 RollBuff(amount, 100003, 2);  // boss room
                 RollMiracle(1);
@@ -183,6 +187,10 @@ namespace EggLink.DanhengServer.Game.ChessRogue
         public void GenerateLayer()
         {
             var level = Layers.IndexOf(CurLayer) + 1;
+            FirstEnterBattle = true;
+
+            LayerMap = GameConstants.AllowedChessRogueEntranceId.RandomElement();
+
             if (RogueVersionId == 201)
             {
                 CurBoardExcel = GameData.RogueSwarmChessBoardData[level].RandomElement();
@@ -235,15 +243,7 @@ namespace EggLink.DanhengServer.Game.ChessRogue
                 CurCell = cell;
                 cell.CellStatus = ChessRogueBoardCellStatus.Finish;
 
-                Player.EnterScene(cell.GetEntryId(), 0, false);
-                Player.MoveTo(new EntityMotion()
-                {
-                    Motion = new()
-                    {
-                        Rot = cell.CellConfig!.ToRotation().ToProto(),
-                        Pos = cell.CellConfig!.ToPosition().ToProto(),
-                    }
-                });
+                Player.EnterMissionScene(cell.GetEntryId(), cell.RoomConfig!.AnchorGroup, cell.RoomConfig!.AnchorId, false);
 
                 HistoryCell.Add(cell);
 
@@ -380,12 +380,12 @@ namespace EggLink.DanhengServer.Game.ChessRogue
 
             CalculateDifficulty(battle);
 
-            if (CurCell!.CellType == 15)
+            if (CurCell!.CellType == RogueDLCBlockTypeEnum.MonsterNousBoss || CurCell!.CellType == RogueDLCBlockTypeEnum.MonsterSwarmBoss)
             {
                 var buffList = new List<int>();
                 foreach (var buff in BossBuff)
                 {
-                    if (buff.EffectType == Enums.Rogue.BossDecayEffectTypeEnum.AddMazeBuffList)
+                    if (buff.EffectType == BossDecayEffectTypeEnum.AddMazeBuffList)
                     {
                         buffList.SafeAddRange(buff.EffectParamList);  // add buff
                     } else
@@ -478,11 +478,11 @@ namespace EggLink.DanhengServer.Game.ChessRogue
 
             RollBuff(battle.Stages.Count);
 
-            if (CurCell!.CellType == 11)
+            if (CurCell!.CellType == RogueDLCBlockTypeEnum.MonsterBoss)
             {
                 Player.SendPacket(new PacketChessRogueLayerAccountInfoNotify(this));
             }
-            else if (CurCell!.CellType == 15)
+            else if (CurCell!.CellType == RogueDLCBlockTypeEnum.MonsterNousBoss || CurCell!.CellType == RogueDLCBlockTypeEnum.MonsterSwarmBoss)
             {
                 CurLevelStatus = ChessRogueLevelStatusType.ChessRogueLevelFinish;
                 Player.SendPacket(new PacketChessRogueLayerAccountInfoNotify(this));

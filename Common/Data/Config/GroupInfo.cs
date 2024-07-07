@@ -13,6 +13,8 @@ namespace EggLink.DanhengServer.Data.Config
         public int Id;
         [JsonConverter(typeof(StringEnumConverter))]
         public GroupLoadSideEnum LoadSide { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public GroupCategoryEnum Category { get; set; }
         public bool LoadOnInitial { get; set; }
         public string GroupName { get; set; } = "";
         public LoadCondition LoadCondition { get; set; } = new();
