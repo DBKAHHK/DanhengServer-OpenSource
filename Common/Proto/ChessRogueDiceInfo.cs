@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhDaGVzc1JvZ3VlRGljZUluZm8ucHJvdG8aEUtFR1BBSUVKQkdFLnByb3Rv",
-            "GhFMTk9QTVBQQUJLSi5wcm90bxoUQ2hlc3NSb2d1ZURpY2UucHJvdG8aGkNo",
-            "ZXNzUm9ndWVEaWNlU3RhdHVzLnByb3RvGhhDaGVzc1JvZ3VlRGljZVR5cGUu",
+            "GhhDaGVzc1JvZ3VlRGljZVR5cGUucHJvdG8aEUxOT1BNUFBBQktKLnByb3Rv",
+            "GhRDaGVzc1JvZ3VlRGljZS5wcm90bxoaQ2hlc3NSb2d1ZURpY2VTdGF0dXMu",
             "cHJvdG8i3QMKEkNoZXNzUm9ndWVEaWNlSW5mbxIUCgxyZXJvbGxfdGltZXMY",
             "BiABKA0SEwoLT1BJSUJGRUpGSEQYDSABKAgSEwoLTk5MR0ZHRktHQkUYDCAB",
             "KA0SIgoLSVBGQ0xCQ05HQUEY6QogASgLMgwuTE5PUE1QUEFCS0oSHgoEZGlj",
@@ -40,7 +40,7 @@ namespace EggLink.DanhengServer.Proto {
             "dWVEaWNlU3RhdHVzEhUKDWN1cl9icmFuY2hfaWQYCiABKA1CHqoCG0VnZ0xp",
             "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KEGPAIEJBGEReflection.Descriptor, global::EggLink.DanhengServer.Proto.LNOPMPPABKJReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueDiceReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueDiceStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueDiceTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KEGPAIEJBGEReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueDiceTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LNOPMPPABKJReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueDiceReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueDiceStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueDiceInfo), global::EggLink.DanhengServer.Proto.ChessRogueDiceInfo.Parser, new[]{ "RerollTimes", "OPIIBFEJFHD", "NNLGFGFKGBE", "IPFCLBCNGAA", "Dice", "CurSurfaceIndex", "CanRerollDice", "CurSurfaceId", "CheatTimes", "AKMEEDBBDNI", "BranchId", "BDMBIDHFKJF", "DiceType", "OJJHKDAKBGP", "FLFAGDFGPMC", "DiceStatus", "CurBranchId" }, null, null, null, null)
           }));

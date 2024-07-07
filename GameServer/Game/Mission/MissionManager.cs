@@ -443,7 +443,7 @@ namespace EggLink.DanhengServer.Game.Mission
             }
         }
 
-        public void HandleCustomValue(int index, int missionId)
+        public void HandleCustomValue(List<Proto.MissionCustomValue> values, int missionId)
         {
             if (!ConfigManager.Config.ServerOption.EnableMission) return;
 
@@ -452,19 +452,28 @@ namespace EggLink.DanhengServer.Game.Mission
             var mainMissionId = subMission.MainMissionID;
             GameData.MainMissionData.TryGetValue(mainMissionId, out var mainMission);
             if (mainMission == null) return;
-            var value = mainMission.MissionInfo?.MissionCustomValueList.Find(x => x.Index == index);
-            if (value == null) return;
 
             foreach (var mission in mainMission?.MissionInfo?.SubMissionList ?? [])
             {
                 if (mission.TakeType == SubMissionTakeTypeEnum.CustomValue)
                 {
-                    for (var i = 0; i < value.ValidValueParamList.Count; i += 2)
+                    int index = 0;
+                    bool accept = true;
+                    foreach (var customValue in mission.TakeParamIntList ?? [])
                     {
-                        if (mission?.TakeParamIntList?[value.ValidValueParamList[i]] == value.ValidValueParamList[i + 1])
+                        if (customValue == 0 && index == 0) continue;  // skip 0
+                        var valueInst = values.Find(x => x.Index == index);
+                        if (valueInst == null) continue;
+                        if (valueInst.CustomValue != customValue)
                         {
-                            AcceptSubMission(mission.ID);
+                            accept = false;
+                            break;
                         }
+                    }
+
+                    if (accept)
+                    {
+                        AcceptSubMission(mission.ID);
                     }
                 }
             }

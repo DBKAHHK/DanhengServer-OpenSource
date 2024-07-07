@@ -25,19 +25,19 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBUcmF2ZWxCcm9jaHVyZUdldERhdGFTY1JzcC5wcm90bxoRR05BUEtHTEFF",
-            "TkYucHJvdG8ivgIKGlRyYXZlbEJyb2NodXJlR2V0RGF0YVNjUnNwEkEKC0hE",
+            "TkYucHJvdG8ivwIKGlRyYXZlbEJyb2NodXJlR2V0RGF0YVNjUnNwEkEKC0hE",
             "T05QQkxLTktFGAEgAygLMiwuVHJhdmVsQnJvY2h1cmVHZXREYXRhU2NSc3Au",
             "SERPTlBCTEtOS0VFbnRyeRJBCgtLTEVMQklNSlBJSBgEIAMoCzIsLlRyYXZl",
-            "bEJyb2NodXJlR2V0RGF0YVNjUnNwLktMRUxCSU1KUElIRW50cnkSEwoLS0VK",
-            "R01BTUNJSEIYCiABKA0SDwoHcmV0Y29kZRgMIAEoDRpAChBIRE9OUEJMS05L",
-            "RUVudHJ5EgsKA2tleRgBIAEoDRIbCgV2YWx1ZRgCIAEoCzIMLkdOQVBLR0xB",
-            "RU5GOgI4ARoyChBLTEVMQklNSlBJSEVudHJ5EgsKA2tleRgBIAEoDRINCgV2",
-            "YWx1ZRgCIAEoDToCOAFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
-            "b2IGcHJvdG8z"));
+            "bEJyb2NodXJlR2V0RGF0YVNjUnNwLktMRUxCSU1KUElIRW50cnkSFAoMY3Vz",
+            "dG9tX3ZhbHVlGAogASgNEg8KB3JldGNvZGUYDCABKA0aQAoQSERPTlBCTEtO",
+            "S0VFbnRyeRILCgNrZXkYASABKA0SGwoFdmFsdWUYAiABKAsyDC5HTkFQS0dM",
+            "QUVORjoCOAEaMgoQS0xFTEJJTUpQSUhFbnRyeRILCgNrZXkYASABKA0SDQoF",
+            "dmFsdWUYAiABKA06AjgBQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
+            "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GNAPKGLAENFReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TravelBrochureGetDataScRsp), global::EggLink.DanhengServer.Proto.TravelBrochureGetDataScRsp.Parser, new[]{ "HDONPBLKNKE", "KLELBIMJPIH", "KEJGMAMCIHB", "Retcode" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TravelBrochureGetDataScRsp), global::EggLink.DanhengServer.Proto.TravelBrochureGetDataScRsp.Parser, new[]{ "HDONPBLKNKE", "KLELBIMJPIH", "CustomValue", "Retcode" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -81,7 +81,7 @@ namespace EggLink.DanhengServer.Proto {
     public TravelBrochureGetDataScRsp(TravelBrochureGetDataScRsp other) : this() {
       hDONPBLKNKE_ = other.hDONPBLKNKE_.Clone();
       kLELBIMJPIH_ = other.kLELBIMJPIH_.Clone();
-      kEJGMAMCIHB_ = other.kEJGMAMCIHB_;
+      customValue_ = other.customValue_;
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -114,15 +114,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return kLELBIMJPIH_; }
     }
 
-    /// <summary>Field number for the "KEJGMAMCIHB" field.</summary>
-    public const int KEJGMAMCIHBFieldNumber = 10;
-    private uint kEJGMAMCIHB_;
+    /// <summary>Field number for the "custom_value" field.</summary>
+    public const int CustomValueFieldNumber = 10;
+    private uint customValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint KEJGMAMCIHB {
-      get { return kEJGMAMCIHB_; }
+    public uint CustomValue {
+      get { return customValue_; }
       set {
-        kEJGMAMCIHB_ = value;
+        customValue_ = value;
       }
     }
 
@@ -155,7 +155,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (!HDONPBLKNKE.Equals(other.HDONPBLKNKE)) return false;
       if (!KLELBIMJPIH.Equals(other.KLELBIMJPIH)) return false;
-      if (KEJGMAMCIHB != other.KEJGMAMCIHB) return false;
+      if (CustomValue != other.CustomValue) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -166,7 +166,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       hash ^= HDONPBLKNKE.GetHashCode();
       hash ^= KLELBIMJPIH.GetHashCode();
-      if (KEJGMAMCIHB != 0) hash ^= KEJGMAMCIHB.GetHashCode();
+      if (CustomValue != 0) hash ^= CustomValue.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -188,9 +188,9 @@ namespace EggLink.DanhengServer.Proto {
     #else
       hDONPBLKNKE_.WriteTo(output, _map_hDONPBLKNKE_codec);
       kLELBIMJPIH_.WriteTo(output, _map_kLELBIMJPIH_codec);
-      if (KEJGMAMCIHB != 0) {
+      if (CustomValue != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(KEJGMAMCIHB);
+        output.WriteUInt32(CustomValue);
       }
       if (Retcode != 0) {
         output.WriteRawTag(96);
@@ -208,9 +208,9 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       hDONPBLKNKE_.WriteTo(ref output, _map_hDONPBLKNKE_codec);
       kLELBIMJPIH_.WriteTo(ref output, _map_kLELBIMJPIH_codec);
-      if (KEJGMAMCIHB != 0) {
+      if (CustomValue != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(KEJGMAMCIHB);
+        output.WriteUInt32(CustomValue);
       }
       if (Retcode != 0) {
         output.WriteRawTag(96);
@@ -228,8 +228,8 @@ namespace EggLink.DanhengServer.Proto {
       int size = 0;
       size += hDONPBLKNKE_.CalculateSize(_map_hDONPBLKNKE_codec);
       size += kLELBIMJPIH_.CalculateSize(_map_kLELBIMJPIH_codec);
-      if (KEJGMAMCIHB != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KEJGMAMCIHB);
+      if (CustomValue != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CustomValue);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
@@ -248,8 +248,8 @@ namespace EggLink.DanhengServer.Proto {
       }
       hDONPBLKNKE_.MergeFrom(other.hDONPBLKNKE_);
       kLELBIMJPIH_.MergeFrom(other.kLELBIMJPIH_);
-      if (other.KEJGMAMCIHB != 0) {
-        KEJGMAMCIHB = other.KEJGMAMCIHB;
+      if (other.CustomValue != 0) {
+        CustomValue = other.CustomValue;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
@@ -278,7 +278,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 80: {
-            KEJGMAMCIHB = input.ReadUInt32();
+            CustomValue = input.ReadUInt32();
             break;
           }
           case 96: {
@@ -309,7 +309,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 80: {
-            KEJGMAMCIHB = input.ReadUInt32();
+            CustomValue = input.ReadUInt32();
             break;
           }
           case 96: {

@@ -24,11 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static PCMPPAHLDIMReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFQQ01QUEFITERJTS5wcm90bxoRRkxOT05PSklQT0IucHJvdG8iNgoLUENN",
-            "UFBBSExESU0SJwoRY3VzdG9tX3ZhbHVlX2xpc3QYByADKAsyDC5GTE5PTk9K",
-            "SVBPQkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFQQ01QUEFITERJTS5wcm90bxoYTWlzc2lvbkN1c3RvbVZhbHVlLnByb3Rv",
+            "Ij0KC1BDTVBQQUhMRElNEi4KEWN1c3RvbV92YWx1ZV9saXN0GAcgAygLMhMu",
+            "TWlzc2lvbkN1c3RvbVZhbHVlQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FLNONOJIPOBReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MissionCustomValueReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PCMPPAHLDIM), global::EggLink.DanhengServer.Proto.PCMPPAHLDIM.Parser, new[]{ "CustomValueList" }, null, null, null, null)
           }));
@@ -84,12 +85,12 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "custom_value_list" field.</summary>
     public const int CustomValueListFieldNumber = 7;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.FLNONOJIPOB> _repeated_customValueList_codec
-        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.FLNONOJIPOB.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FLNONOJIPOB> customValueList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FLNONOJIPOB>();
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MissionCustomValue> _repeated_customValueList_codec
+        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.MissionCustomValue.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MissionCustomValue> customValueList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MissionCustomValue>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FLNONOJIPOB> CustomValueList {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MissionCustomValue> CustomValueList {
       get { return customValueList_; }
     }
 

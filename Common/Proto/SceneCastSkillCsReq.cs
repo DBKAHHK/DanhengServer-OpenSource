@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlTY2VuZUNhc3RTa2lsbENzUmVxLnByb3RvGhFNSU5KTkNIR0FERy5wcm90",
-            "bxoQTW90aW9uSW5mby5wcm90bxoTU2tpbGxFeHRyYVRhZy5wcm90bxodQXNz",
-            "aXN0TW9uc3RlckVudGl0eUluZm8ucHJvdG8i8gIKE1NjZW5lQ2FzdFNraWxs",
+            "bxodQXNzaXN0TW9uc3RlckVudGl0eUluZm8ucHJvdG8aE1NraWxsRXh0cmFU",
+            "YWcucHJvdG8aEE1vdGlvbkluZm8ucHJvdG8i8gIKE1NjZW5lQ2FzdFNraWxs",
             "Q3NSZXESHQoVYXR0YWNrZWRfYnlfZW50aXR5X2lkGA0gASgNEjwKGmFzc2lz",
             "dF9tb25zdGVyX2VudGl0eV9pbmZvGAEgAygLMhguQXNzaXN0TW9uc3RlckVu",
             "dGl0eUluZm8SEwoLUEdDS05LRklGTkUYDyABKA0SJAoOZHluYW1pY192YWx1",
@@ -37,7 +37,7 @@ namespace EggLink.DanhengServer.Proto {
             "dGl0eV9pZF9saXN0GAcgAygNEhMKC3NraWxsX2luZGV4GAkgASgNQh6qAhtF",
             "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MINJNCHGADGReflection.Descriptor, global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SkillExtraTagReflection.Descriptor, global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MINJNCHGADGReflection.Descriptor, global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SkillExtraTagReflection.Descriptor, global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneCastSkillCsReq), global::EggLink.DanhengServer.Proto.SceneCastSkillCsReq.Parser, new[]{ "AttackedByEntityId", "AssistMonsterEntityInfo", "PGCKNKFIFNE", "DynamicValues", "AssistMonsterEntityIdList", "TargetMotion", "CastEntityId", "SkillExtraTags", "HitTargetEntityIdList", "SkillIndex" }, null, null, null, null)
           }));

@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static MissionDataReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFNaXNzaW9uRGF0YS5wcm90bxoRRkxOT05PSklQT0IucHJvdG8aE01pc3Np",
-            "b25TdGF0dXMucHJvdG8iYgoLTWlzc2lvbkRhdGESCgoCaWQYAyABKA0SJwoR",
-            "Y3VzdG9tX3ZhbHVlX2xpc3QYAiADKAsyDC5GTE5PTk9KSVBPQhIeCgZzdGF0",
-            "dXMYCiABKA4yDi5NaXNzaW9uU3RhdHVzQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
-            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChFNaXNzaW9uRGF0YS5wcm90bxoTTWlzc2lvblN0YXR1cy5wcm90bxoYTWlz",
+            "c2lvbkN1c3RvbVZhbHVlLnByb3RvImkKC01pc3Npb25EYXRhEgoKAmlkGAMg",
+            "ASgNEi4KEWN1c3RvbV92YWx1ZV9saXN0GAIgAygLMhMuTWlzc2lvbkN1c3Rv",
+            "bVZhbHVlEh4KBnN0YXR1cxgKIAEoDjIOLk1pc3Npb25TdGF0dXNCHqoCG0Vn",
+            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FLNONOJIPOBReflection.Descriptor, global::EggLink.DanhengServer.Proto.MissionStatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MissionStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.MissionCustomValueReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MissionData), global::EggLink.DanhengServer.Proto.MissionData.Parser, new[]{ "Id", "CustomValueList", "Status" }, null, null, null, null)
           }));
@@ -100,12 +100,12 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "custom_value_list" field.</summary>
     public const int CustomValueListFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.FLNONOJIPOB> _repeated_customValueList_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.FLNONOJIPOB.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FLNONOJIPOB> customValueList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FLNONOJIPOB>();
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MissionCustomValue> _repeated_customValueList_codec
+        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.MissionCustomValue.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MissionCustomValue> customValueList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MissionCustomValue>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FLNONOJIPOB> CustomValueList {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MissionCustomValue> CustomValueList {
       get { return customValueList_; }
     }
 
