@@ -13,6 +13,10 @@ namespace EggLink.DanhengServer.Database.Scene
     public class RaidData : BaseDatabaseDataHelper
     {
         [SugarColumn(IsJson = true)]
+        public Dictionary<int, Dictionary<int, RaidRecord>> RaidRecordDatas { get; set; } = [];
+
+        [SugarColumn(IsJson = true)]
+        [Obsolete("Using RaidRecordDatas")]
         public Dictionary<int, RaidRecord> RaidRecordData { get; set; } = [];
 
         //[SugarColumn(IsJson = true, IsNullable = true)]
@@ -23,6 +27,7 @@ namespace EggLink.DanhengServer.Database.Scene
 
         //public int OldEntryId { get; set; }
         public int CurRaidId { get; set; }
+        public int CurRaidWorldLevel { get; set; }
     }
 
     public class RaidRecord
@@ -31,6 +36,7 @@ namespace EggLink.DanhengServer.Database.Scene
         public int RaidId { get; set; }
         public int WorldLevel { get; set; }
         public RaidStatus Status { get; set; }
+        public long FinishTimeStamp { get; set; }
 
         // Lineup Info
         public List<LineupAvatarInfo> Lineup { get; set; } = [];

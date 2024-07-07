@@ -135,7 +135,7 @@ namespace EggLink.DanhengServer.Data.Custom
             }
         }
 
-        public GachaInfo ToInfo(List<int> goldAvatar, List<int> purpleAvatar, List<int> purpleWeapon, List<int> goldWeapon)
+        public GachaInfo ToInfo(List<int> goldAvatar)
         {
             var info = new GachaInfo()
             {
@@ -151,11 +151,17 @@ namespace EggLink.DanhengServer.Data.Custom
             }
             if (GachaId == 1001)
             {
-                info.PrizeItemList.AddRange(goldAvatar.Select(id => (uint)id));
-                info.ItemDetailList.AddRange(goldAvatar.Select(id => (uint)id));
-                info.ItemDetailList.AddRange(purpleAvatar.Select(id => (uint)id));
-                info.ItemDetailList.AddRange(goldWeapon.Select(id => (uint)id));
-                info.ItemDetailList.AddRange(purpleWeapon.Select(id => (uint)id));
+                if (RateUpItems4.Count > 0)
+                {
+                    info.ItemDetailList.AddRange(RateUpItems4.Select(id => (uint)id));
+                }
+
+                if (RateUpItems5.Count > 0)
+                {
+                    info.PrizeItemList.AddRange(RateUpItems5.Select(id => (uint)id));
+                    info.ItemDetailList.AddRange(RateUpItems5.Select(id => (uint)id));
+                }
+
                 info.GachaCeiling = new()
                 {
                     IsClaimed = true,  // TODO: Implement this

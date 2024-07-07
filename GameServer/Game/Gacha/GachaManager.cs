@@ -250,7 +250,15 @@ namespace EggLink.DanhengServer.Game.Gacha
                     var it = Player.InventoryManager?.AddItem(251, dirt, false, sync: false, returnRaw: true);
                     if (it != null)
                     {
-                        syncItems.Add(it);
+                        var oldItem = syncItems.Find(x => x.ItemId == 251);
+                        if (oldItem == null)
+                        {
+                            syncItems.Add(it);
+                        }
+                        else
+                        {
+                            oldItem.Count = it.Count;
+                        }
                     }
                     tokenItem.ItemList_.Add(new Item()
                     {
@@ -264,7 +272,15 @@ namespace EggLink.DanhengServer.Game.Gacha
                     var it = Player.InventoryManager?.AddItem(252, star, false, sync: false, returnRaw: true);
                     if (it != null)
                     {
-                        syncItems.Add(it);
+                        var oldItem = syncItems.Find(x => x.ItemId == 252);
+                        if (oldItem == null)
+                        {
+                            syncItems.Add(it);
+                        }
+                        else
+                        {
+                            oldItem.Count = it.Count;
+                        }
                     }
                     tokenItem.ItemList_.Add(new Item()
                     {
@@ -283,8 +299,6 @@ namespace EggLink.DanhengServer.Game.Gacha
                 GachaNum = (uint)times,
             };
             proto.GachaItemList.AddRange(gachaItems);
-            DatabaseHelper.Instance?.UpdateInstance(GachaData);
-            DatabaseHelper.Instance?.UpdateInstance(Player.InventoryManager!.Data);
 
             return proto;
         }
@@ -297,7 +311,7 @@ namespace EggLink.DanhengServer.Game.Gacha
             };
             foreach (var banner in GameData.BannersConfig.Banners)
             {
-                proto.GachaInfoList.Add(banner.ToInfo(GetGoldAvatars(), GetPurpleAvatars(), GetPurpleWeapons(), GetGoldWeapons()));
+                proto.GachaInfoList.Add(banner.ToInfo(GetGoldAvatars()));
             }
             return proto;
         }

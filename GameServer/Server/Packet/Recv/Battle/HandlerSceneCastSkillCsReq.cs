@@ -43,17 +43,17 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Battle
 
             if (req.AssistMonsterEntityIdList.Count > 0)
             {
-                List<uint> hitTargetEntityIdList = new List<uint>();
-                if (req.HitTargetEntityIdList.Count > 0)
+                List<uint> hitTargetEntityIdList = [];
+                if (req.AssistMonsterEntityIdList.Count > 0)
                 {
-                    foreach (uint id in req.HitTargetEntityIdList)
+                    foreach (uint id in req.AssistMonsterEntityIdList)
                     {
                         hitTargetEntityIdList.Add(id);
                     }
                 }
                 else
                 {
-                    foreach (uint id in req.AssistMonsterEntityIdList)
+                    foreach (uint id in req.HitTargetEntityIdList)
                     {
                         hitTargetEntityIdList.Add(id);
                     }

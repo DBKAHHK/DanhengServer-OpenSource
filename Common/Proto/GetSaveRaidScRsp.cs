@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static GetSaveRaidScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZHZXRTYXZlUmFpZFNjUnNwLnByb3RvGhFDRElPSEZPSURMTS5wcm90byKB",
-            "AQoQR2V0U2F2ZVJhaWRTY1JzcBIPCgdyZXRjb2RlGA0gASgNEg8KB3JhaWRf",
-            "aWQYBiABKA0SEwoLd29ybGRfbGV2ZWwYBCABKA0SEwoLSkVNTlBJTEJOR0sY",
-            "CiABKAgSIQoLREFLSEdQSEFGUFAYCCADKAsyDC5DRElPSEZPSURMTUIeqgIb",
-            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChZHZXRTYXZlUmFpZFNjUnNwLnByb3RvGhRSYWlkVGFyZ2V0SW5mby5wcm90",
+            "byKAAQoQR2V0U2F2ZVJhaWRTY1JzcBIPCgdyZXRjb2RlGA0gASgNEg8KB3Jh",
+            "aWRfaWQYBiABKA0SEwoLd29ybGRfbGV2ZWwYBCABKA0SDwoHaXNfc2F2ZRgK",
+            "IAEoCBIkCgt0YXJnZXRfaW5mbxgIIAMoCzIPLlJhaWRUYXJnZXRJbmZvQh6q",
+            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CDIOHFOIDLMReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RaidTargetInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetSaveRaidScRsp), global::EggLink.DanhengServer.Proto.GetSaveRaidScRsp.Parser, new[]{ "Retcode", "RaidId", "WorldLevel", "JEMNPILBNGK", "DAKHGPHAFPP" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetSaveRaidScRsp), global::EggLink.DanhengServer.Proto.GetSaveRaidScRsp.Parser, new[]{ "Retcode", "RaidId", "WorldLevel", "IsSave", "TargetInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,8 +77,8 @@ namespace EggLink.DanhengServer.Proto {
       retcode_ = other.retcode_;
       raidId_ = other.raidId_;
       worldLevel_ = other.worldLevel_;
-      jEMNPILBNGK_ = other.jEMNPILBNGK_;
-      dAKHGPHAFPP_ = other.dAKHGPHAFPP_.Clone();
+      isSave_ = other.isSave_;
+      targetInfo_ = other.targetInfo_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -124,27 +124,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "JEMNPILBNGK" field.</summary>
-    public const int JEMNPILBNGKFieldNumber = 10;
-    private bool jEMNPILBNGK_;
+    /// <summary>Field number for the "is_save" field.</summary>
+    public const int IsSaveFieldNumber = 10;
+    private bool isSave_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool JEMNPILBNGK {
-      get { return jEMNPILBNGK_; }
+    public bool IsSave {
+      get { return isSave_; }
       set {
-        jEMNPILBNGK_ = value;
+        isSave_ = value;
       }
     }
 
-    /// <summary>Field number for the "DAKHGPHAFPP" field.</summary>
-    public const int DAKHGPHAFPPFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.CDIOHFOIDLM> _repeated_dAKHGPHAFPP_codec
-        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.CDIOHFOIDLM.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CDIOHFOIDLM> dAKHGPHAFPP_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CDIOHFOIDLM>();
+    /// <summary>Field number for the "target_info" field.</summary>
+    public const int TargetInfoFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RaidTargetInfo> _repeated_targetInfo_codec
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.RaidTargetInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RaidTargetInfo> targetInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RaidTargetInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CDIOHFOIDLM> DAKHGPHAFPP {
-      get { return dAKHGPHAFPP_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RaidTargetInfo> TargetInfo {
+      get { return targetInfo_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -165,8 +165,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != other.Retcode) return false;
       if (RaidId != other.RaidId) return false;
       if (WorldLevel != other.WorldLevel) return false;
-      if (JEMNPILBNGK != other.JEMNPILBNGK) return false;
-      if(!dAKHGPHAFPP_.Equals(other.dAKHGPHAFPP_)) return false;
+      if (IsSave != other.IsSave) return false;
+      if(!targetInfo_.Equals(other.targetInfo_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -177,8 +177,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (RaidId != 0) hash ^= RaidId.GetHashCode();
       if (WorldLevel != 0) hash ^= WorldLevel.GetHashCode();
-      if (JEMNPILBNGK != false) hash ^= JEMNPILBNGK.GetHashCode();
-      hash ^= dAKHGPHAFPP_.GetHashCode();
+      if (IsSave != false) hash ^= IsSave.GetHashCode();
+      hash ^= targetInfo_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -205,10 +205,10 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteUInt32(RaidId);
       }
-      dAKHGPHAFPP_.WriteTo(output, _repeated_dAKHGPHAFPP_codec);
-      if (JEMNPILBNGK != false) {
+      targetInfo_.WriteTo(output, _repeated_targetInfo_codec);
+      if (IsSave != false) {
         output.WriteRawTag(80);
-        output.WriteBool(JEMNPILBNGK);
+        output.WriteBool(IsSave);
       }
       if (Retcode != 0) {
         output.WriteRawTag(104);
@@ -232,10 +232,10 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteUInt32(RaidId);
       }
-      dAKHGPHAFPP_.WriteTo(ref output, _repeated_dAKHGPHAFPP_codec);
-      if (JEMNPILBNGK != false) {
+      targetInfo_.WriteTo(ref output, _repeated_targetInfo_codec);
+      if (IsSave != false) {
         output.WriteRawTag(80);
-        output.WriteBool(JEMNPILBNGK);
+        output.WriteBool(IsSave);
       }
       if (Retcode != 0) {
         output.WriteRawTag(104);
@@ -260,10 +260,10 @@ namespace EggLink.DanhengServer.Proto {
       if (WorldLevel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorldLevel);
       }
-      if (JEMNPILBNGK != false) {
+      if (IsSave != false) {
         size += 1 + 1;
       }
-      size += dAKHGPHAFPP_.CalculateSize(_repeated_dAKHGPHAFPP_codec);
+      size += targetInfo_.CalculateSize(_repeated_targetInfo_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -285,10 +285,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other.WorldLevel != 0) {
         WorldLevel = other.WorldLevel;
       }
-      if (other.JEMNPILBNGK != false) {
-        JEMNPILBNGK = other.JEMNPILBNGK;
+      if (other.IsSave != false) {
+        IsSave = other.IsSave;
       }
-      dAKHGPHAFPP_.Add(other.dAKHGPHAFPP_);
+      targetInfo_.Add(other.targetInfo_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -313,11 +313,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 66: {
-            dAKHGPHAFPP_.AddEntriesFrom(input, _repeated_dAKHGPHAFPP_codec);
+            targetInfo_.AddEntriesFrom(input, _repeated_targetInfo_codec);
             break;
           }
           case 80: {
-            JEMNPILBNGK = input.ReadBool();
+            IsSave = input.ReadBool();
             break;
           }
           case 104: {
@@ -348,11 +348,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 66: {
-            dAKHGPHAFPP_.AddEntriesFrom(ref input, _repeated_dAKHGPHAFPP_codec);
+            targetInfo_.AddEntriesFrom(ref input, _repeated_targetInfo_codec);
             break;
           }
           case 80: {
-            JEMNPILBNGK = input.ReadBool();
+            IsSave = input.ReadBool();
             break;
           }
           case 104: {

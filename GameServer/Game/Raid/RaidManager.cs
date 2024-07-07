@@ -6,6 +6,7 @@ using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Game;
 using EggLink.DanhengServer.Game.Lineup;
 using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Raid;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.Server.Packet.Send.Scene;
@@ -29,17 +30,24 @@ namespace EggLink.DanhengServer.GameServer.Game.Raid
             OnLogin();
         }
 
-        public void EnterRaid(int raidId, int worldLevel, List<int>? avatarList = null)
+        public void EnterRaid(int raidId, int worldLevel, List<int>? avatarList = null, bool enterSaved = false)
         {
             if (RaidData.CurRaidId != 0) return;
 
             GameData.RaidConfigData.TryGetValue(raidId * 100 + worldLevel, out var excel);
             if (excel == null) return;  // not exist
 
-
-            RaidData.RaidRecordData.TryGetValue(raidId, out var record);
+            RaidData.RaidRecordDatas.TryGetValue(raidId, out var dict);
+            dict ??= [];
+            if (dict.ContainsKey(worldLevel) && !enterSaved)
+            {
+                // clear old record
+                ClearRaid(raidId, worldLevel);
+            }
+            dict.TryGetValue(worldLevel, out var record);
 
             RaidData.CurRaidId = excel.RaidID;
+            RaidData.CurRaidWorldLevel = worldLevel;
 
             if (record == null)
             {
@@ -96,7 +104,14 @@ namespace EggLink.DanhengServer.GameServer.Game.Raid
                     OldRot = oldRot!
                 };
 
-                RaidData.RaidRecordData[raidId] = record;
+                if (RaidData.RaidRecordDatas.TryGetValue(raidId, out Dictionary<int, RaidRecord>? value))
+                {
+                    value[worldLevel] = record;
+                }
+                else
+                {
+                    RaidData.RaidRecordDatas[raidId] = new Dictionary<int, RaidRecord>() { { worldLevel, record } };
+                }
 
                 Player.MissionManager!.AcceptMainMission(firstMission);
             }
@@ -104,6 +119,7 @@ namespace EggLink.DanhengServer.GameServer.Game.Raid
             {
                 // just resume
                 record.Status = RaidStatus.Doing;
+                Player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupHeliobus, record.Lineup.Select(x => x.SpecialAvatarId > 0 ? x.SpecialAvatarId : x.BaseAvatarId).ToList());
                 Player.LoadScene(record.PlaneId, record.FloorId, record.EntryId, record.Pos, record.Rot, true);
             }
 
@@ -114,7 +130,7 @@ namespace EggLink.DanhengServer.GameServer.Game.Raid
         {
             if (RaidData.CurRaidId == 0) return;
 
-            var record = RaidData.RaidRecordData[RaidData.CurRaidId];
+            var record = RaidData.RaidRecordDatas[RaidData.CurRaidId][RaidData.CurRaidWorldLevel];
 
             GameData.RaidConfigData.TryGetValue(RaidData.CurRaidId * 100 + record.WorldLevel, out var excel);
             if (excel == null) return;
@@ -139,7 +155,7 @@ namespace EggLink.DanhengServer.GameServer.Game.Raid
         {
             if (RaidData.CurRaidId == 0) return;
 
-            var record = RaidData.RaidRecordData[RaidData.CurRaidId];
+            var record = RaidData.RaidRecordDatas[RaidData.CurRaidId][RaidData.CurRaidWorldLevel];
             GameData.RaidConfigData.TryGetValue(RaidData.CurRaidId * 100 + record.WorldLevel, out var config);
             if (config == null) return;
 
@@ -164,13 +180,14 @@ namespace EggLink.DanhengServer.GameServer.Game.Raid
 
             // reset raid info
             RaidData.CurRaidId = 0;
+            RaidData.CurRaidWorldLevel = 0;
         }
 
-        public void LeaveRaid()
+        public void LeaveRaid(bool save)
         {
             if (RaidData.CurRaidId == 0) return;
 
-            var record = RaidData.RaidRecordData[RaidData.CurRaidId];
+            var record = RaidData.RaidRecordDatas[RaidData.CurRaidId][RaidData.CurRaidWorldLevel];
             GameData.RaidConfigData.TryGetValue(RaidData.CurRaidId * 100 + record.WorldLevel, out var config);
             if (config == null) return;
 
@@ -189,13 +206,20 @@ namespace EggLink.DanhengServer.GameServer.Game.Raid
             Player.SendPacket(new PacketRaidInfoNotify(record));
 
             RaidData.CurRaidId = 0;
+            RaidData.CurRaidWorldLevel = 0;
+
+            if (!save)
+            {
+                ClearRaid(record.RaidId, record.WorldLevel);
+            }
         }
 
-        public void ClearRaid(int raidId)
+        public void ClearRaid(int raidId, int worldLevel)
         {
-            if (!RaidData.RaidRecordData.TryGetValue(raidId, out var record)) return;
+            if (!RaidData.RaidRecordDatas.TryGetValue(raidId, out var dict)) return;
+            if (!dict.TryGetValue(worldLevel, out var record)) return;
 
-            GameData.RaidConfigData.TryGetValue(RaidData.CurRaidId * 100 + record.WorldLevel, out var config);
+            GameData.RaidConfigData.TryGetValue(raidId * 100 + worldLevel, out var config);
             if (config == null) return;
 
             config.MainMissionIDList.ForEach(missionId =>
@@ -203,21 +227,41 @@ namespace EggLink.DanhengServer.GameServer.Game.Raid
                 Player.MissionManager!.RemoveMainMission(missionId);
             });
 
-            RaidData.RaidRecordData.Remove(raidId);
+            dict.Remove(worldLevel);
+
+            if (dict.Count == 0)
+            {
+                RaidData.RaidRecordDatas.Remove(raidId);
+            }
+
+            Player.SendPacket(new PacketDelSaveRaidScNotify(raidId, worldLevel));
         }
 
-        public RaidStatus GetRaidStatus(int raidId)
+        public RaidStatus GetRaidStatus(int raidId, int worldLevel = 0)
         {
-            if (!RaidData.RaidRecordData.TryGetValue(raidId, out var record)) return RaidStatus.None;
+            if (!RaidData.RaidRecordDatas.TryGetValue(raidId, out var dict)) return RaidStatus.None;
+            if (!dict.TryGetValue(worldLevel, out var record)) return RaidStatus.None;
             return record.Status;
         }
 
         public void OnLogin()
         {
             // try resume
-            if (RaidData.CurRaidId > 0)
+            if (RaidData.CurRaidId > 0 && RaidData.RaidRecordDatas.TryGetValue(RaidData.CurRaidId, out Dictionary<int, RaidRecord>? value))
             {
-                Player.SendPacket(new PacketRaidInfoNotify(RaidData.RaidRecordData[RaidData.CurRaidId]));
+                if (value.TryGetValue(RaidData.CurRaidWorldLevel, out var record))
+                {
+                    Player.SendPacket(new PacketRaidInfoNotify(record));
+                }
+                else
+                {
+                    RaidData.CurRaidId = 0;
+                    RaidData.CurRaidWorldLevel = 0;
+                }
+            } else
+            {
+                RaidData.CurRaidId = 0;
+                RaidData.CurRaidWorldLevel = 0;
             }
         }
     }

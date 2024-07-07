@@ -1,12 +1,13 @@
 ﻿using EggLink.DanhengServer.Database.Scene;
 using EggLink.DanhengServer.Proto;
+using EggLink.DanhengServer.Server.Packet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Scene
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Raid
 {
     public class PacketRaidInfoNotify : BasePacket
     {
@@ -17,6 +18,8 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Scene
                 RaidId = (uint)record.RaidId,
                 Status = record.Status,
                 WorldLevel = (uint)record.WorldLevel,
+                RaidFinishTime = (ulong)record.FinishTimeStamp,
+                TargetInfo = { },
                 ItemList = new(),
             };
 

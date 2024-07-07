@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static RogueCommonDialogueInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1Sb2d1ZUNvbW1vbkRpYWxvZ3VlSW5mby5wcm90bxoiUm9ndWVDb21tb25E",
-            "aWFsb2d1ZUJhc2ljSW5mby5wcm90bxoRRUJNUElOSkNIRkIucHJvdG8aEUFC",
-            "Q01IR05HRkdMLnByb3RvGhFORENLRE1PTUxGSy5wcm90byK+AQoXUm9ndWVD",
+            "Ch1Sb2d1ZUNvbW1vbkRpYWxvZ3VlSW5mby5wcm90bxoRRUJNUElOSkNIRkIu",
+            "cHJvdG8aEU5EQ0tETU9NTEZLLnByb3RvGhFBQkNNSEdOR0ZHTC5wcm90bxoi",
+            "Um9ndWVDb21tb25EaWFsb2d1ZUJhc2ljSW5mby5wcm90byK+AQoXUm9ndWVD",
             "b21tb25EaWFsb2d1ZUluZm8SOgoTZGlhbG9ndWVfYmFzaWNfaW5mbxgMIAEo",
             "CzIdLlJvZ3VlQ29tbW9uRGlhbG9ndWVCYXNpY0luZm8SIQoLR0dHSkFDUE5K",
             "TlAYAiABKAsyDC5FQk1QSU5KQ0hGQhIhCgtJUEtOSUpORUZJShgNIAEoCzIM",
             "Lk5EQ0tETU9NTEZLEiEKC0xDS0NCQktNRE5JGAMgASgLMgwuQUJDTUhHTkdG",
             "R0xCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonDialogueBasicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.EBMPINJCHFBReflection.Descriptor, global::EggLink.DanhengServer.Proto.ABCMHGNGFGLReflection.Descriptor, global::EggLink.DanhengServer.Proto.NDCKDMOMLFKReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EBMPINJCHFBReflection.Descriptor, global::EggLink.DanhengServer.Proto.NDCKDMOMLFKReflection.Descriptor, global::EggLink.DanhengServer.Proto.ABCMHGNGFGLReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonDialogueBasicInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonDialogueInfo), global::EggLink.DanhengServer.Proto.RogueCommonDialogueInfo.Parser, new[]{ "DialogueBasicInfo", "GGGJACPNJNP", "IPKNIJNEFIJ", "LCKCBBKMDNI" }, null, null, null, null)
           }));

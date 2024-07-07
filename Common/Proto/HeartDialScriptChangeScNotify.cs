@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static HeartDialScriptChangeScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNIZWFydERpYWxTY3JpcHRDaGFuZ2VTY05vdGlmeS5wcm90bxoRTktFT0xN",
-            "SVBHTEEucHJvdG8aEUJQQUZDRVBOT0FJLnByb3RvGhFDQ09PRU9FRENGTi5w",
-            "cm90bxoRTUxER09MR0NIRUkucHJvdG8iqwEKHUhlYXJ0RGlhbFNjcmlwdENo",
+            "CiNIZWFydERpYWxTY3JpcHRDaGFuZ2VTY05vdGlmeS5wcm90bxoRTUxER09M",
+            "R0NIRUkucHJvdG8aEU5LRU9MTUlQR0xBLnByb3RvGhFCUEFGQ0VQTk9BSS5w",
+            "cm90bxoRQ0NPT0VPRURDRk4ucHJvdG8iqwEKHUhlYXJ0RGlhbFNjcmlwdENo",
             "YW5nZVNjTm90aWZ5EiEKC09IUEVOS0hLTElJGAcgAygLMgwuTUxER09MR0NI",
             "RUkSIQoLRk5MUEpOTEJITkEYCCADKAsyDC5DQ09PRU9FRENGThIhCgtNQ05G",
             "T0NNSlBCSxgMIAEoDjIMLkJQQUZDRVBOT0FJEiEKC0tIRk9MRUxFR0hJGAYg",
             "AygLMgwuTktFT0xNSVBHTEFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
             "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NKEOLMIPGLAReflection.Descriptor, global::EggLink.DanhengServer.Proto.BPAFCEPNOAIReflection.Descriptor, global::EggLink.DanhengServer.Proto.CCOOEOEDCFNReflection.Descriptor, global::EggLink.DanhengServer.Proto.MLDGOLGCHEIReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MLDGOLGCHEIReflection.Descriptor, global::EggLink.DanhengServer.Proto.NKEOLMIPGLAReflection.Descriptor, global::EggLink.DanhengServer.Proto.BPAFCEPNOAIReflection.Descriptor, global::EggLink.DanhengServer.Proto.CCOOEOEDCFNReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeartDialScriptChangeScNotify), global::EggLink.DanhengServer.Proto.HeartDialScriptChangeScNotify.Parser, new[]{ "OHPENKHKLII", "FNLPJNLBHNA", "MCNFOCMJPBK", "KHFOLELEGHI" }, null, null, null, null)
           }));

@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Raid;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Server;
 using EggLink.DanhengServer.Server.Packet;
@@ -8,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Scene
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Raid
 {
     [Opcode(CmdIds.GetSaveRaidCsReq)]
     public class HandlerGetSaveRaidCsReq : Handler
@@ -17,7 +18,7 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Scene
         {
             var req = GetSaveRaidCsReq.Parser.ParseFrom(data);
 
-            connection.SendPacket(new PacketGetSaveRaidScRsp(connection.Player!, (int)req.RaidId));
+            connection.SendPacket(new PacketGetSaveRaidScRsp(connection.Player!, (int)req.RaidId, (int)req.WorldLevel));
         }
     }
 }
