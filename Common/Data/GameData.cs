@@ -128,6 +128,8 @@ namespace EggLink.DanhengServer.Data
         #region Item Exchange
 
         public static Dictionary<int, ShopConfigExcel> ShopConfigData { get; private set; } = [];
+        public static Dictionary<int, RollShopConfigExcel> RollShopConfigData { get; private set; } = [];
+        public static Dictionary<int, RollShopRewardExcel> RollShopRewardData { get; private set; } = [];
         public static Dictionary<int, ItemComposeConfigExcel> ItemComposeConfigData { get; private set; } = [];
 
         #endregion
