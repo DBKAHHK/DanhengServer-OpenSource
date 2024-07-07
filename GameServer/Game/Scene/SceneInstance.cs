@@ -296,11 +296,11 @@ namespace EggLink.DanhengServer.Game.Scene
             {
                 if (floorData != null && floorData.TryGetValue(value.Name, out int v))
                 {
-                    sceneInfo.FloorSavedData.Add(value.Name, v);
+                    sceneInfo.FloorSavedData[value.Name] = v;
                 }
                 else
                 {
-                    sceneInfo.FloorSavedData.Add(value.Name, value.DefaultValue);
+                    sceneInfo.FloorSavedData[value.Name] = value.DefaultValue;
                 }
             }
 
@@ -308,12 +308,12 @@ namespace EggLink.DanhengServer.Game.Scene
             {
                 if (floorData != null && floorData.TryGetValue(value.Name, out int v))
                 {
-                    sceneInfo.FloorSavedData.Add(value.Name, v);
+                    sceneInfo.FloorSavedData[value.Name] = v;
                 }
                 else
                 {
                     _ = int.TryParse(value.DefaultValue, out int x);
-                    sceneInfo.FloorSavedData.Add(value.Name, x);
+                    sceneInfo.FloorSavedData[value.Name] = x;
                 }
             }
 
