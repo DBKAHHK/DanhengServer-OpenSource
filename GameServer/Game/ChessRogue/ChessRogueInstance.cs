@@ -214,10 +214,10 @@ namespace EggLink.DanhengServer.Game.ChessRogue
                 };
                 RogueCells.Add(item.Key, cell);
 
-                if (cell.GetCellId() == CurBoardExcel.MapInfo!.EndGridItemID)  // last cell
-                {
+                //if (cell.GetCellId() == CurBoardExcel.MapInfo!.EndGridItemID)  // last cell
+                //{
                     cell.Init();
-                }
+                //}
             }
         }
 

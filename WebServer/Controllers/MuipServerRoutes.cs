@@ -29,5 +29,19 @@ namespace EggLink.DanhengServer.WebServer.Controllers
             var resp = MuipManager.ExecuteCommand(req.SessionId, req.Command, req.TargetUid);
             return new JsonResult(resp);
         }
+
+        [HttpGet("/muip/server_information")]
+        public IActionResult GetServerInformation([FromBody] ServerInformationRequest req)
+        {
+            var resp = MuipManager.GetInformation(req.SessionId);
+            return new JsonResult(resp);
+        }
+
+        [HttpGet("/muip/player_information")]
+        public IActionResult GetPlayerInformation([FromBody] PlayerInformationRequest req)
+        {
+            var resp = MuipManager.GetPlayerInformation(req.SessionId, req.Uid);
+            return new JsonResult(resp);
+        }
     }
 }
