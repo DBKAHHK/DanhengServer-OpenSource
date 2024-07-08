@@ -346,10 +346,12 @@ namespace EggLink.DanhengServer.Game.Mission
                 FinishMainMission(mainMissionId);
             }
 
-            // Hotfix  for mission 101140201
             if (missionId == 101140201)
             {
-                Player.ChangeHeroBasicType(Enums.Avatar.HeroBasicTypeEnum.Knight);
+                //Player.ChangeHeroBasicType(Enums.Avatar.HeroBasicTypeEnum.Knight);
+                var list = Player.LineupManager!.GetCurLineup()!.BaseAvatars!.Select(x => x.SpecialAvatarId > 0 ? x.SpecialAvatarId / 10 : x.BaseAvatarId).ToList();
+                list[list.IndexOf(8001)] = Player.Data.CurrentGender == Proto.Gender.Man ? 1008003 : 1008004;
+                Player.LineupManager!.SetExtraLineup(Proto.ExtraLineupType.LineupHeliobus, list);
             }
 
             if (missionId == 100040117 || missionId == 100040118)

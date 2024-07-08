@@ -24,14 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static UpdateTrackMainMissionIdScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNVcGRhdGVUcmFja01haW5NaXNzaW9uSWRTY1JzcC5wcm90byJaCh1VcGRh",
-            "dGVUcmFja01haW5NaXNzaW9uSWRTY1JzcBIPCgdyZXRjb2RlGAwgASgNEhMK",
-            "C1BNTUlPRk1IR1BMGAsgASgNEhMKC0dPQk5GQURBSUxNGAIgASgNQh6qAhtF",
-            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "CiNVcGRhdGVUcmFja01haW5NaXNzaW9uSWRTY1JzcC5wcm90byJpCh1VcGRh",
+            "dGVUcmFja01haW5NaXNzaW9uSWRTY1JzcBIPCgdyZXRjb2RlGAwgASgNEh0K",
+            "FXByZXZfdHJhY2tfbWlzc2lvbl9pZBgLIAEoDRIYChB0cmFja19taXNzaW9u",
+            "X2lkGAIgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdateTrackMainMissionIdScRsp), global::EggLink.DanhengServer.Proto.UpdateTrackMainMissionIdScRsp.Parser, new[]{ "Retcode", "PMMIOFMHGPL", "GOBNFADAILM" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdateTrackMainMissionIdScRsp), global::EggLink.DanhengServer.Proto.UpdateTrackMainMissionIdScRsp.Parser, new[]{ "Retcode", "PrevTrackMissionId", "TrackMissionId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +75,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateTrackMainMissionIdScRsp(UpdateTrackMainMissionIdScRsp other) : this() {
       retcode_ = other.retcode_;
-      pMMIOFMHGPL_ = other.pMMIOFMHGPL_;
-      gOBNFADAILM_ = other.gOBNFADAILM_;
+      prevTrackMissionId_ = other.prevTrackMissionId_;
+      trackMissionId_ = other.trackMissionId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -97,27 +98,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "PMMIOFMHGPL" field.</summary>
-    public const int PMMIOFMHGPLFieldNumber = 11;
-    private uint pMMIOFMHGPL_;
+    /// <summary>Field number for the "prev_track_mission_id" field.</summary>
+    public const int PrevTrackMissionIdFieldNumber = 11;
+    private uint prevTrackMissionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PMMIOFMHGPL {
-      get { return pMMIOFMHGPL_; }
+    public uint PrevTrackMissionId {
+      get { return prevTrackMissionId_; }
       set {
-        pMMIOFMHGPL_ = value;
+        prevTrackMissionId_ = value;
       }
     }
 
-    /// <summary>Field number for the "GOBNFADAILM" field.</summary>
-    public const int GOBNFADAILMFieldNumber = 2;
-    private uint gOBNFADAILM_;
+    /// <summary>Field number for the "track_mission_id" field.</summary>
+    public const int TrackMissionIdFieldNumber = 2;
+    private uint trackMissionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GOBNFADAILM {
-      get { return gOBNFADAILM_; }
+    public uint TrackMissionId {
+      get { return trackMissionId_; }
       set {
-        gOBNFADAILM_ = value;
+        trackMissionId_ = value;
       }
     }
 
@@ -137,8 +138,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Retcode != other.Retcode) return false;
-      if (PMMIOFMHGPL != other.PMMIOFMHGPL) return false;
-      if (GOBNFADAILM != other.GOBNFADAILM) return false;
+      if (PrevTrackMissionId != other.PrevTrackMissionId) return false;
+      if (TrackMissionId != other.TrackMissionId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,8 +148,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (PMMIOFMHGPL != 0) hash ^= PMMIOFMHGPL.GetHashCode();
-      if (GOBNFADAILM != 0) hash ^= GOBNFADAILM.GetHashCode();
+      if (PrevTrackMissionId != 0) hash ^= PrevTrackMissionId.GetHashCode();
+      if (TrackMissionId != 0) hash ^= TrackMissionId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,13 +168,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (GOBNFADAILM != 0) {
+      if (TrackMissionId != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(GOBNFADAILM);
+        output.WriteUInt32(TrackMissionId);
       }
-      if (PMMIOFMHGPL != 0) {
+      if (PrevTrackMissionId != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(PMMIOFMHGPL);
+        output.WriteUInt32(PrevTrackMissionId);
       }
       if (Retcode != 0) {
         output.WriteRawTag(96);
@@ -189,13 +190,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (GOBNFADAILM != 0) {
+      if (TrackMissionId != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(GOBNFADAILM);
+        output.WriteUInt32(TrackMissionId);
       }
-      if (PMMIOFMHGPL != 0) {
+      if (PrevTrackMissionId != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(PMMIOFMHGPL);
+        output.WriteUInt32(PrevTrackMissionId);
       }
       if (Retcode != 0) {
         output.WriteRawTag(96);
@@ -214,11 +215,11 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (PMMIOFMHGPL != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PMMIOFMHGPL);
+      if (PrevTrackMissionId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PrevTrackMissionId);
       }
-      if (GOBNFADAILM != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GOBNFADAILM);
+      if (TrackMissionId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TrackMissionId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -235,11 +236,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.PMMIOFMHGPL != 0) {
-        PMMIOFMHGPL = other.PMMIOFMHGPL;
+      if (other.PrevTrackMissionId != 0) {
+        PrevTrackMissionId = other.PrevTrackMissionId;
       }
-      if (other.GOBNFADAILM != 0) {
-        GOBNFADAILM = other.GOBNFADAILM;
+      if (other.TrackMissionId != 0) {
+        TrackMissionId = other.TrackMissionId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -257,11 +258,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 16: {
-            GOBNFADAILM = input.ReadUInt32();
+            TrackMissionId = input.ReadUInt32();
             break;
           }
           case 88: {
-            PMMIOFMHGPL = input.ReadUInt32();
+            PrevTrackMissionId = input.ReadUInt32();
             break;
           }
           case 96: {
@@ -284,11 +285,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 16: {
-            GOBNFADAILM = input.ReadUInt32();
+            TrackMissionId = input.ReadUInt32();
             break;
           }
           case 88: {
-            PMMIOFMHGPL = input.ReadUInt32();
+            PrevTrackMissionId = input.ReadUInt32();
             break;
           }
           case 96: {

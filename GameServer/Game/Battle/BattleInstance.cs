@@ -69,9 +69,10 @@ namespace EggLink.DanhengServer.Game.Battle
 
         public void AddBattleTarget(int key, int targetId, int progress, int totalProgress = 0)
         {
-            if (!BattleTargets.ContainsKey(key))
+            if (!BattleTargets.TryGetValue(key, out BattleTargetList? value))
             {
-                BattleTargets.Add(key, new BattleTargetList());
+                value = new BattleTargetList();
+                BattleTargets.Add(key, value);
             }
 
             var battleTarget = new BattleTarget()
@@ -80,22 +81,13 @@ namespace EggLink.DanhengServer.Game.Battle
                 Progress = (uint)progress,
                 TotalProgress = (uint)totalProgress
             };
-
-            BattleTargets[key].BattleTargetList_.Add(battleTarget);
+            value.BattleTargetList_.Add(battleTarget);
         }
 
         public Dictionary<AvatarInfo, AvatarType> GetBattleAvatars()
         {
             var excel = GameData.StageConfigData[StageId];
-            List<int> list = new List<int>();
-
-            foreach (var avatar in excel.TrialAvatarList)
-            {
-                if (GameData.SpecialAvatarData.ContainsKey(avatar))
-                {
-                    list.Add(avatar);
-                }
-            }
+            List<int> list = [.. excel.TrialAvatarList];
 
             if (list.Count == 0)
             {
@@ -103,11 +95,14 @@ namespace EggLink.DanhengServer.Game.Battle
                 {
                     foreach (var avatar in excel.TrialAvatarList)
                     {
-                        if (avatar.ToString().EndsWith("8002") ||
-                            avatar.ToString().EndsWith("8004") ||
-                            avatar.ToString().EndsWith("8006"))
+                        if (avatar > 10000)  // else is Base Avatar
                         {
-                            list.Remove(avatar);
+                            if (avatar.ToString().EndsWith("8002") ||
+                                avatar.ToString().EndsWith("8004") ||
+                                avatar.ToString().EndsWith("8006"))
+                            {
+                                list.Remove(avatar);
+                            }
                         }
                     }
                 }
@@ -115,11 +110,14 @@ namespace EggLink.DanhengServer.Game.Battle
                 {
                     foreach (var avatar in excel.TrialAvatarList)
                     {
-                        if (avatar.ToString().EndsWith("8001") ||
-                            avatar.ToString().EndsWith("8003") ||
-                            avatar.ToString().EndsWith("8005"))
+                        if (avatar > 10000)  // else is Base Avatar
                         {
-                            list.Remove(avatar);
+                            if (avatar.ToString().EndsWith("8001") ||
+                                avatar.ToString().EndsWith("8003") ||
+                                avatar.ToString().EndsWith("8005"))
+                            {
+                                list.Remove(avatar);
+                            }
                         }
                     }
                 }
@@ -127,13 +125,21 @@ namespace EggLink.DanhengServer.Game.Battle
 
             if (list.Count > 0)
             {
-                Dictionary<AvatarInfo, AvatarType> dict = new Dictionary<AvatarInfo, AvatarType>();
+                Dictionary<AvatarInfo, AvatarType> dict = [];
                 foreach (var avatar in list)
                 {
                     GameData.SpecialAvatarData.TryGetValue(avatar * 10 + Player.Data.WorldLevel, out var specialAvatar);
                     if (specialAvatar != null)
                     {
                         dict.Add(specialAvatar.ToAvatarData(Player.Uid), AvatarType.AvatarTrialType);
+                    } 
+                    else
+                    {
+                        var avatarInfo = Player.AvatarManager!.GetAvatar(avatar);
+                        if (avatarInfo != null)
+                        {
+                            dict.Add(avatarInfo, AvatarType.AvatarFormalType);
+                        }
                     }
                 }
 
@@ -141,7 +147,7 @@ namespace EggLink.DanhengServer.Game.Battle
             }
             else
             {
-                Dictionary<AvatarInfo, AvatarType> dict = new Dictionary<AvatarInfo, AvatarType>();
+                Dictionary<AvatarInfo, AvatarType> dict = [];
                 foreach (var avatar in Lineup.BaseAvatars!)
                 {
                     AvatarInfo? avatarInstance = null;

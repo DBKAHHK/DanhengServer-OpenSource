@@ -38,6 +38,8 @@ using EggLink.DanhengServer.Game.Task;
 using EggLink.DanhengServer.GameServer.Game.Mail;
 using EggLink.DanhengServer.GameServer.Game.Raid;
 using EggLink.DanhengServer.GameServer.Game.Mission;
+using SqlSugar;
+using EggLink.DanhengServer.Database.Lineup;
 
 namespace EggLink.DanhengServer.Game.Player
 {
@@ -170,6 +172,19 @@ namespace EggLink.DanhengServer.Game.Player
                     if (lineup.Value.BaseAvatars!.Count >= 5)
                     {
                         lineup.Value.BaseAvatars = lineup.Value.BaseAvatars.GetRange(0, 4);
+                    }
+
+                    foreach (var avatar in lineup.Value.BaseAvatars!)
+                    {
+                        if (avatar.BaseAvatarId > 10000)
+                        {
+                            GameData.SpecialAvatarData.TryGetValue(avatar.BaseAvatarId, out var special);
+                            if (special != null)
+                            {
+                                avatar.SpecialAvatarId = special.GetId();
+                                avatar.BaseAvatarId = special.AvatarID;
+                            }
+                        }
                     }
                 }
 

@@ -81,12 +81,14 @@ namespace EggLink.DanhengServer.GameServer.Game.Raid
                 {
                     // set cur lineup
                     var lineup = Player.LineupManager!.GetCurLineup()!;
-                    Player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupHeliobus, lineup.BaseAvatars!.Select(x => x.SpecialAvatarId > 0 ? x.SpecialAvatarId : x.BaseAvatarId).ToList());
+                    Player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupHeliobus, lineup.BaseAvatars!.Select(x => x.SpecialAvatarId > 0 ? x.SpecialAvatarId / 10 : x.BaseAvatarId).ToList());
                     Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
                 }
                 var oldEntryId = Player.Data.EntryId;
                 var oldPos = Player.Data.Pos;
                 var oldRot = Player.Data.Rot;
+
+                Player.MissionManager!.AcceptMainMission(firstMission);
 
                 Player.EnterScene(entranceId, 0, true);
 
@@ -114,14 +116,12 @@ namespace EggLink.DanhengServer.GameServer.Game.Raid
                 {
                     RaidData.RaidRecordDatas[raidId] = new Dictionary<int, RaidRecord>() { { worldLevel, record } };
                 }
-
-                Player.MissionManager!.AcceptMainMission(firstMission);
             }
             else
             {
                 // just resume
                 record.Status = RaidStatus.Doing;
-                Player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupHeliobus, record.Lineup.Select(x => x.SpecialAvatarId > 0 ? x.SpecialAvatarId : x.BaseAvatarId).ToList());
+                Player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupHeliobus, record.Lineup.Select(x => x.SpecialAvatarId > 0 ? x.SpecialAvatarId / 10 : x.BaseAvatarId).ToList());
                 Player.LoadScene(record.PlaneId, record.FloorId, record.EntryId, record.Pos, record.Rot, true);
             }
 
@@ -198,6 +198,12 @@ namespace EggLink.DanhengServer.GameServer.Game.Raid
             record.EntryId = Player.Data.EntryId;
             record.Pos = Player.Data.Pos!;
             record.Rot = Player.Data.Rot!;
+
+            if (Player.LineupManager!.GetCurLineup()!.IsExtraLineup())
+            {
+                Player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupNone, []);
+                Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
+            }
 
             Player.EnterScene(record.OldEntryId, 0, true);
             Player.MoveTo(record.OldPos, record.OldRot);

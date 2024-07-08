@@ -9,7 +9,10 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Mission
     {
         public PacketGetMissionDataScRsp(PlayerInstance player) : base(CmdIds.GetMissionDataScRsp)
         {
-            var proto = new GetMissionDataScRsp();
+            var proto = new GetMissionDataScRsp()
+            {
+                TrackMissionId = (uint)player.MissionManager!.Data.TrackingMainMissionId,
+            };
             
             foreach (var mission in GameData.MainMissionData.Keys)
             {
