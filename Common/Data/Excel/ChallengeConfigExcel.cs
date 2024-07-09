@@ -32,6 +32,7 @@ namespace EggLink.DanhengServer.Data.Excel
         public Dictionary<int, ChallengeMonsterInfo> ChallengeMonsters2 { get; set; } = new();
         [JsonIgnore]
         public ChallengeStoryExtraExcel? StoryExcel;
+        [JsonIgnore]
         public ChallengeBossExtraExcel? BossExcel;
 
         public override int GetId()
@@ -46,7 +47,7 @@ namespace EggLink.DanhengServer.Data.Excel
 
         public bool IsBoss()
         {
-            return StoryExcel != null;
+            return BossExcel != null;
         }
 
         public void SetStoryExcel(ChallengeStoryExtraExcel storyExcel)

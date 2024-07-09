@@ -91,7 +91,7 @@ namespace EggLink.DanhengServer.Game.Challenge
         {
             return Excel.IsStory();
         }
-
+        
         public bool IsBoss()
         {
             return Excel.IsBoss();
@@ -232,6 +232,7 @@ namespace EggLink.DanhengServer.Game.Challenge
                 // Save history
                 Player.ChallengeManager!.AddHistory(ChallengeId, Stars, GetTotalScore());
 
+                // Send challenge result data
                 if (IsBoss())
                 {
                     Player.SendPacket(new PacketChallengeBossPhaseSettleNotify(this));
@@ -322,7 +323,11 @@ namespace EggLink.DanhengServer.Game.Challenge
                 ScoreTwo = (uint)ScoreStage2,
                 RoundCount = (uint)GetRoundsElapsed(),
                 ExtraLineupType = (ExtraLineupType)CurrentExtraLineup,
-                PlayerInfo = new ChallengeStoryInfo() { CurStoryBuff = new ChallengeStoryBuffInfo() }
+                PlayerInfo = new ChallengeStoryInfo()
+                {
+                    CurStoryBuff = new ChallengeStoryBuffInfo(),
+                    CurBossBuff = new ChallengeBossBuffInfo(),
+                }
             };
 
             if (StoryBuffs != null && StoryBuffs.Count >= CurrentStage)
@@ -330,9 +335,9 @@ namespace EggLink.DanhengServer.Game.Challenge
                 proto.PlayerInfo.CurStoryBuff.BuffList.Add(StoryBuffs.Select(x => (uint)x));
             }
 
-            if (StoryBuffs != null && StoryBuffs.Count >= CurrentStage)
+            if (BossBuffs != null && BossBuffs.Count >= CurrentStage)
             {
-                proto.PlayerInfo.CurBossBuff.BuffList.Add((uint)BossBuffs[CurrentStage - 1]);
+                proto.PlayerInfo.CurBossBuff.BuffList.Add(BossBuffs.Select(x => (uint)x));
             }
 
             return proto;
