@@ -279,13 +279,6 @@ namespace EggLink.DanhengServer.Game.Mission
             });
 
             var subMissionInfo = subMission?.SubMissionInfo;
-            if (subMissionInfo?.LevelFloorID == Player.SceneInstance?.FloorId && subMissionInfo?.GroupIDList != null)
-            {
-                foreach (var groupId in subMissionInfo.GroupIDList)
-                {
-                    Player.SceneInstance?.EntityLoader?.UnloadGroup(groupId);
-                }
-            }
 
             // get next sub mission
             foreach (var nextMission in mainMission.MissionInfo?.SubMissionList ?? [])
@@ -318,11 +311,11 @@ namespace EggLink.DanhengServer.Game.Mission
                     }
                 }
             }
-            if (mainMission.MissionInfo != null)
-                HandleFinishAction(mainMission.MissionInfo, missionId);
-
             Player.SendPacket(new PacketPlayerSyncScNotify(sync));
             Player.SendPacket(new PacketStartFinishSubMissionScNotify(missionId));
+
+            if (mainMission.MissionInfo != null)
+                HandleFinishAction(mainMission.MissionInfo, missionId);
 
             // Get if it should finish main mission
             // get current main mission
@@ -361,7 +354,7 @@ namespace EggLink.DanhengServer.Game.Mission
 
             // handle reward
             HandleSubMissionReward(missionId);
-            Player.StoryLineManager!.CheckIfEnterStoryLine();
+            //Player.StoryLineManager!.CheckIfEnterStoryLine();
             //Player.StoryLineManager!.CheckIfFinishStoryLine();
 
             PluginEvent.InvokeOnPlayerFinishSubMission(Player, missionId);

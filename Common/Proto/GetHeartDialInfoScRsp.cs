@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static GetHeartDialInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtHZXRIZWFydERpYWxJbmZvU2NSc3AucHJvdG8aEU1MREdPTEdDSEVJLnBy",
-            "b3RvGhFCUEFGQ0VQTk9BSS5wcm90bxoRQ0NPT0VPRURDRk4ucHJvdG8aEU5L",
-            "RU9MTUlQR0xBLnByb3RvIrQBChVHZXRIZWFydERpYWxJbmZvU2NSc3ASDwoH",
+            "ChtHZXRIZWFydERpYWxJbmZvU2NSc3AucHJvdG8aEU5LRU9MTUlQR0xBLnBy",
+            "b3RvGhFNTERHT0xHQ0hFSS5wcm90bxoRQ0NPT0VPRURDRk4ucHJvdG8aEUJQ",
+            "QUZDRVBOT0FJLnByb3RvIrQBChVHZXRIZWFydERpYWxJbmZvU2NSc3ASDwoH",
             "cmV0Y29kZRgKIAEoDRIhCgtBTE9ERE5IQkFFTxgFIAMoCzIMLk5LRU9MTUlQ",
             "R0xBEiEKC05ISEZHQk1FTUtBGAkgAygLMgwuTUxER09MR0NIRUkSIQoLRk5M",
             "UEpOTEJITkEYAiADKAsyDC5DQ09PRU9FRENGThIhCgtNQ05GT0NNSlBCSxgI",
             "IAEoDjIMLkJQQUZDRVBOT0FJQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MLDGOLGCHEIReflection.Descriptor, global::EggLink.DanhengServer.Proto.BPAFCEPNOAIReflection.Descriptor, global::EggLink.DanhengServer.Proto.CCOOEOEDCFNReflection.Descriptor, global::EggLink.DanhengServer.Proto.NKEOLMIPGLAReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NKEOLMIPGLAReflection.Descriptor, global::EggLink.DanhengServer.Proto.MLDGOLGCHEIReflection.Descriptor, global::EggLink.DanhengServer.Proto.CCOOEOEDCFNReflection.Descriptor, global::EggLink.DanhengServer.Proto.BPAFCEPNOAIReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetHeartDialInfoScRsp), global::EggLink.DanhengServer.Proto.GetHeartDialInfoScRsp.Parser, new[]{ "Retcode", "ALODDNHBAEO", "NHHFGBMEMKA", "FNLPJNLBHNA", "MCNFOCMJPBK" }, null, null, null, null)
           }));

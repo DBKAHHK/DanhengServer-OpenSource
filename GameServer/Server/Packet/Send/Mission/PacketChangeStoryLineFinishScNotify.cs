@@ -14,8 +14,8 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Mission
         {
             var proto = new ChangeStoryLineFinishScNotify
             {
-                ActionType = ChangeStoryLineAction.FinishAction,
-                CurStoryLineId = (uint)curId
+                ActionType = ChangeStoryLineAction.Client,
+                CurStoryLineId = (uint)curId,
             };
 
             SetData(proto);

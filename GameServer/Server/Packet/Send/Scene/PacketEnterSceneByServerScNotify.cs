@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.Game.Scene;
+﻿using EggLink.DanhengServer.Enums.Mission;
+using EggLink.DanhengServer.Game.Scene;
 using EggLink.DanhengServer.Proto;
 
 namespace EggLink.DanhengServer.Server.Packet.Send.Scene
@@ -11,9 +12,14 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Scene
             var notify = new EnterSceneByServerScNotify()
             {
                 Scene = sceneInfo,
-                Reason = reason,
+                //Reason = reason,
                 Lineup = scene.Player.LineupManager!.GetCurLineup()!.ToProto(),
             };
+
+            if (reason == EnterSceneReasonStatus.EnterSceneReasonChangeStoryline)
+            {
+                notify.Scene.BONACBOIIBE = 0;
+            }
 
             SetData(notify);
         }

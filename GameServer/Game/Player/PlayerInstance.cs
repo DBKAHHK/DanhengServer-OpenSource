@@ -149,11 +149,6 @@ namespace EggLink.DanhengServer.Game.Player
 
             ChallengeManager.ResurrectInstance();
             StoryLineManager.OnLogin();
-            LoadScene(Data.PlaneId, Data.FloorId, Data.EntryId, Data.Pos!, Data.Rot!, false);
-            if (SceneInstance == null)
-            {
-                EnterScene(2000101, 0, false);
-            }
 
             if (LineupManager!.GetCurLineup() != null)  // null -> ignore(new player)
             {
@@ -207,6 +202,13 @@ namespace EggLink.DanhengServer.Game.Player
                         avatarData.CurrentHp = 2000;
                     }
                 }
+            }
+
+
+            LoadScene(Data.PlaneId, Data.FloorId, Data.EntryId, Data.Pos!, Data.Rot!, false);
+            if (SceneInstance == null)
+            {
+                EnterScene(2000101, 0, false);
             }
         }
 
@@ -452,8 +454,13 @@ namespace EggLink.DanhengServer.Game.Player
             return null;
         }
 
-        public void EnterScene(int entryId, int teleportId, bool sendPacket, EnterSceneReasonStatus reason = EnterSceneReasonStatus.EnterSceneReasonNone)
+        public void EnterScene(int entryId, int teleportId, bool sendPacket, EnterSceneReasonStatus reason = EnterSceneReasonStatus.EnterSceneReasonNone, int storyLineId = 0)
         {
+            if (storyLineId != StoryLineManager!.StoryLineData.CurStoryLineId)
+            {
+                StoryLineManager!.EnterStoryLine(storyLineId);
+            }
+
             GameData.MapEntranceData.TryGetValue(entryId, out var entrance);
             if (entrance == null) return;
 
@@ -562,14 +569,14 @@ namespace EggLink.DanhengServer.Game.Player
             MissionManager?.OnPlayerChangeScene();
 
             Connection?.SendPacket(CmdIds.SyncServerSceneChangeNotify);
-            if (sendPacket && sendMove)
-            {
+            //if (sendPacket && sendMove)
+            //{
                 SendPacket(new PacketEnterSceneByServerScNotify(instance, reason));
-            }
-            else if (!sendMove)
-            {
-                SendPacket(new PacketSceneEntityMoveScNotify(this));
-            }
+            //}
+            //else if (!sendMove)
+            //{
+                //SendPacket(new PacketSceneEntityMoveScNotify(this));
+            //}
 
             MissionManager?.HandleFinishType(MissionFinishTypeEnum.EnterFloor);
             MissionManager?.HandleFinishType(MissionFinishTypeEnum.NotInFloor);

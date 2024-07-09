@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static ChessRogueStartCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpDaGVzc1JvZ3VlU3RhcnRDc1JlcS5wcm90byKyAQoUQ2hlc3NSb2d1ZVN0",
+            "ChpDaGVzc1JvZ3VlU3RhcnRDc1JlcS5wcm90byK7AQoUQ2hlc3NSb2d1ZVN0",
             "YXJ0Q3NSZXESCgoCaWQYAyABKA0SGgoSZGlmZmljdWx0eV9pZF9saXN0GAsg",
             "AygNEg8KB2Flb25faWQYDiABKA0SGwoTYmFzZV9hdmF0YXJfaWRfbGlzdBgJ",
-            "IAMoDRIcChRkaXNhYmxlX2Flb25faWRfbGlzdBgMIAMoDRITCgtDR0lGUExL",
-            "SkJQSRgPIAMoDRIRCglicmFuY2hfaWQYBSABKA1CHqoCG0VnZ0xpbmsuRGFu",
-            "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "IAMoDRIcChRkaXNhYmxlX2Flb25faWRfbGlzdBgMIAMoDRIcChR0cmlhbF9h",
+            "dmF0YXJfaWRfbGlzdBgPIAMoDRIRCglicmFuY2hfaWQYBSABKA1CHqoCG0Vn",
+            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueStartCsReq), global::EggLink.DanhengServer.Proto.ChessRogueStartCsReq.Parser, new[]{ "Id", "DifficultyIdList", "AeonId", "BaseAvatarIdList", "DisableAeonIdList", "CGIFPLKJBPI", "BranchId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueStartCsReq), global::EggLink.DanhengServer.Proto.ChessRogueStartCsReq.Parser, new[]{ "Id", "DifficultyIdList", "AeonId", "BaseAvatarIdList", "DisableAeonIdList", "TrialAvatarIdList", "BranchId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -80,7 +80,7 @@ namespace EggLink.DanhengServer.Proto {
       aeonId_ = other.aeonId_;
       baseAvatarIdList_ = other.baseAvatarIdList_.Clone();
       disableAeonIdList_ = other.disableAeonIdList_.Clone();
-      cGIFPLKJBPI_ = other.cGIFPLKJBPI_.Clone();
+      trialAvatarIdList_ = other.trialAvatarIdList_.Clone();
       branchId_ = other.branchId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -148,15 +148,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return disableAeonIdList_; }
     }
 
-    /// <summary>Field number for the "CGIFPLKJBPI" field.</summary>
-    public const int CGIFPLKJBPIFieldNumber = 15;
-    private static readonly pb::FieldCodec<uint> _repeated_cGIFPLKJBPI_codec
+    /// <summary>Field number for the "trial_avatar_id_list" field.</summary>
+    public const int TrialAvatarIdListFieldNumber = 15;
+    private static readonly pb::FieldCodec<uint> _repeated_trialAvatarIdList_codec
         = pb::FieldCodec.ForUInt32(122);
-    private readonly pbc::RepeatedField<uint> cGIFPLKJBPI_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> trialAvatarIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> CGIFPLKJBPI {
-      get { return cGIFPLKJBPI_; }
+    public pbc::RepeatedField<uint> TrialAvatarIdList {
+      get { return trialAvatarIdList_; }
     }
 
     /// <summary>Field number for the "branch_id" field.</summary>
@@ -191,7 +191,7 @@ namespace EggLink.DanhengServer.Proto {
       if (AeonId != other.AeonId) return false;
       if(!baseAvatarIdList_.Equals(other.baseAvatarIdList_)) return false;
       if(!disableAeonIdList_.Equals(other.disableAeonIdList_)) return false;
-      if(!cGIFPLKJBPI_.Equals(other.cGIFPLKJBPI_)) return false;
+      if(!trialAvatarIdList_.Equals(other.trialAvatarIdList_)) return false;
       if (BranchId != other.BranchId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
       if (AeonId != 0) hash ^= AeonId.GetHashCode();
       hash ^= baseAvatarIdList_.GetHashCode();
       hash ^= disableAeonIdList_.GetHashCode();
-      hash ^= cGIFPLKJBPI_.GetHashCode();
+      hash ^= trialAvatarIdList_.GetHashCode();
       if (BranchId != 0) hash ^= BranchId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -240,7 +240,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(112);
         output.WriteUInt32(AeonId);
       }
-      cGIFPLKJBPI_.WriteTo(output, _repeated_cGIFPLKJBPI_codec);
+      trialAvatarIdList_.WriteTo(output, _repeated_trialAvatarIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -266,7 +266,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(112);
         output.WriteUInt32(AeonId);
       }
-      cGIFPLKJBPI_.WriteTo(ref output, _repeated_cGIFPLKJBPI_codec);
+      trialAvatarIdList_.WriteTo(ref output, _repeated_trialAvatarIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -286,7 +286,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       size += baseAvatarIdList_.CalculateSize(_repeated_baseAvatarIdList_codec);
       size += disableAeonIdList_.CalculateSize(_repeated_disableAeonIdList_codec);
-      size += cGIFPLKJBPI_.CalculateSize(_repeated_cGIFPLKJBPI_codec);
+      size += trialAvatarIdList_.CalculateSize(_repeated_trialAvatarIdList_codec);
       if (BranchId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BranchId);
       }
@@ -311,7 +311,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       baseAvatarIdList_.Add(other.baseAvatarIdList_);
       disableAeonIdList_.Add(other.disableAeonIdList_);
-      cGIFPLKJBPI_.Add(other.cGIFPLKJBPI_);
+      trialAvatarIdList_.Add(other.trialAvatarIdList_);
       if (other.BranchId != 0) {
         BranchId = other.BranchId;
       }
@@ -359,7 +359,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 122:
           case 120: {
-            cGIFPLKJBPI_.AddEntriesFrom(input, _repeated_cGIFPLKJBPI_codec);
+            trialAvatarIdList_.AddEntriesFrom(input, _repeated_trialAvatarIdList_codec);
             break;
           }
         }
@@ -406,7 +406,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 122:
           case 120: {
-            cGIFPLKJBPI_.AddEntriesFrom(ref input, _repeated_cGIFPLKJBPI_codec);
+            trialAvatarIdList_.AddEntriesFrom(ref input, _repeated_trialAvatarIdList_codec);
             break;
           }
         }

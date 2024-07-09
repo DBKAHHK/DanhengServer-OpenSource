@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static GetHeroBasicTypeInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9HZXRIZXJvQmFzaWNUeXBlSW5mb1NjUnNwLnByb3RvGgxHZW5kZXIucHJv",
-            "dG8aHVBsYXllckhlcm9CYXNpY1R5cGVJbmZvLnByb3RvGhNIZXJvQmFzaWNU",
-            "eXBlLnByb3RvIusBChlHZXRIZXJvQmFzaWNUeXBlSW5mb1NjUnNwEg8KB3Jl",
+            "Ch9HZXRIZXJvQmFzaWNUeXBlSW5mb1NjUnNwLnByb3RvGh1QbGF5ZXJIZXJv",
+            "QmFzaWNUeXBlSW5mby5wcm90bxoTSGVyb0Jhc2ljVHlwZS5wcm90bxoMR2Vu",
+            "ZGVyLnByb3RvIusBChlHZXRIZXJvQmFzaWNUeXBlSW5mb1NjUnNwEg8KB3Jl",
             "dGNvZGUYAiABKA0SEwoLS0dES0pGR0dMSEIYBSABKAgSEwoLQUlNRVBBS0VL",
             "TUYYCCADKA0SNgoUYmFzaWNfdHlwZV9pbmZvX2xpc3QYDyADKAsyGC5QbGF5",
             "ZXJIZXJvQmFzaWNUeXBlSW5mbxIaChJpc19nZW5kZXJfbW9kaWZpZWQYCiAB",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "GAMgASgOMg4uSGVyb0Jhc2ljVHlwZUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GenderReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerHeroBasicTypeInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeroBasicTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlayerHeroBasicTypeInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeroBasicTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.GenderReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetHeroBasicTypeInfoScRsp), global::EggLink.DanhengServer.Proto.GetHeroBasicTypeInfoScRsp.Parser, new[]{ "Retcode", "KGDKJFGGLHB", "AIMEPAKEKMF", "BasicTypeInfoList", "IsGenderModified", "Gender", "CurBasicType" }, null, null, null, null)
           }));

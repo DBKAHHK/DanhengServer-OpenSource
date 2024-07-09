@@ -1,5 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database.Avatar;
+using EggLink.DanhengServer.Database.Mission;
 using EggLink.DanhengServer.Database.Player;
 using EggLink.DanhengServer.Proto;
 using Newtonsoft.Json;
@@ -110,10 +111,12 @@ namespace EggLink.DanhengServer.Database.Lineup
                 ExtraLineupType = (ExtraLineupType)LineupType,
                 Index = (uint)(LineupData?.Lineups?.Values.ToList().IndexOf(this) ?? 0),
             };
+
             if (LineupType != (int)ExtraLineupType.LineupNone)
             {
                 info.Index = (uint)(LineupType + 10);
             }
+
             if (BaseAvatars?.Find(item => item.BaseAvatarId == LeaderAvatarId) != null)  // find leader,if not exist,set to 0
             {
                 info.LeaderSlot = (uint)BaseAvatars.IndexOf(BaseAvatars.Find(item => item.BaseAvatarId == LeaderAvatarId)!);
@@ -145,6 +148,19 @@ namespace EggLink.DanhengServer.Database.Lineup
                         info.AvatarList.Add(AvatarData?.Avatars?.Find(item => item.AvatarId == avatar.BaseAvatarId)?.ToLineupInfo(BaseAvatars.IndexOf(avatar), this));
                     }
                 }
+            }
+
+            var storyId = DatabaseHelper.Instance!.GetInstance<StoryLineData>(AvatarData!.Uid)?.CurStoryLineId;
+            if (storyId != null && storyId != 0)
+            {
+                info.GameStoryLineId = (uint)storyId;
+                BaseAvatars?.ForEach(item =>
+                {
+                    if (item.SpecialAvatarId != 0)
+                    {
+                        info.StoryLineBaseAvatarIdList.Add((uint)item.BaseAvatarId);
+                    }
+                });
             }
 
             return info;
