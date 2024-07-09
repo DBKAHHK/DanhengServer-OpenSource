@@ -20,11 +20,28 @@ namespace EggLink.DanhengServer.GameServer.Game.Mission
         public StoryLineManager(PlayerInstance player) : base(player)
         {
             StoryLineData = DatabaseHelper.Instance!.GetInstanceOrCreateNew<StoryLineData>(player.Uid);
-            OnLogin();
+        }
+
+        public void CheckIfEnterStoryLine()
+        {
+            if (StoryLineData.CurStoryLineId != 0) return;
+
+            foreach (var storyLine in GameData.StoryLineData.Values)
+            {
+                if (Player.MissionManager!.GetSubMissionStatus(storyLine.BeginCondition.Param) == Enums.MissionPhaseEnum.Finish)
+                {
+                    InitStoryLine(storyLine.StoryLineID);
+                    return;
+                }
+            }
         }
 
         public void InitStoryLine(int storyLineId, int entryId = 0, int anchorGroupId = 0, int anchorId = 0)
         {
+            if (StoryLineData.CurStoryLineId != 0)
+            {
+                FinishStoryLine(entryId, anchorGroupId, anchorId, false);
+            }
             GameData.StoryLineData.TryGetValue(storyLineId, out var storyExcel);
             GameData.StroyLineTrialAvatarDataData.TryGetValue(storyLineId, out var storyAvatarExcel);
             if (storyExcel == null || storyAvatarExcel == null) return;
@@ -58,6 +75,7 @@ namespace EggLink.DanhengServer.GameServer.Game.Mission
             StoryLineData.RunningStoryLines[storyExcel.StoryLineID] = record;
             StoryLineData.CurStoryLineId = storyExcel.StoryLineID;
             Player.SendPacket(new PacketStoryLineInfoScNotify(Player));
+            Player.SendPacket(new PacketChangeStoryLineFinishScNotify(storyExcel.StoryLineID));
         }
 
         public void EnterStoryLine(int storyLineId)
@@ -78,6 +96,7 @@ namespace EggLink.DanhengServer.GameServer.Game.Mission
 
             StoryLineData.CurStoryLineId = lineInfo.StoryLineId;
             Player.SendPacket(new PacketStoryLineInfoScNotify(Player));
+            Player.SendPacket(new PacketChangeStoryLineFinishScNotify(StoryLineData.CurStoryLineId));
         }
 
         public void LeaveStoryLine()
@@ -113,6 +132,7 @@ namespace EggLink.DanhengServer.GameServer.Game.Mission
             StoryLineData.OldRot = new();
 
             Player.SendPacket(new PacketStoryLineInfoScNotify(Player));
+            Player.SendPacket(new PacketChangeStoryLineFinishScNotify(0));
         }
 
         public void CheckIfFinishStoryLine()  // seems like a story line end with another ChangeStoryLine finish action that Params[0] = 0
@@ -127,16 +147,19 @@ namespace EggLink.DanhengServer.GameServer.Game.Mission
             }
         }
 
-        public void FinishStoryLine(int entryId = 0, int anchorGroupId = 0, int anchorId = 0)
+        public void FinishStoryLine(int entryId = 0, int anchorGroupId = 0, int anchorId = 0, bool tp = true)
         {
             if (StoryLineData.CurStoryLineId == 0) return;
-            if (entryId > 0)
+            if (tp)
             {
-                Player.EnterMissionScene(entryId, anchorGroupId, anchorId, true, EnterSceneReasonStatus.EnterSceneReasonChangeStoryline);
-            } 
-            else
-            {
-                Player.LoadScene(StoryLineData.OldPlaneId, StoryLineData.OldFloorId, StoryLineData.OldEntryId, StoryLineData.OldPos, StoryLineData.OldRot, true, EnterSceneReasonStatus.EnterSceneReasonChangeStoryline);
+                if (entryId > 0)
+                {
+                    Player.EnterMissionScene(entryId, anchorGroupId, anchorId, true, EnterSceneReasonStatus.EnterSceneReasonChangeStoryline);
+                }
+                else
+                {
+                    Player.LoadScene(StoryLineData.OldPlaneId, StoryLineData.OldFloorId, StoryLineData.OldEntryId, StoryLineData.OldPos, StoryLineData.OldRot, true, EnterSceneReasonStatus.EnterSceneReasonChangeStoryline);
+                }
             }
 
             // delete old & reset
@@ -150,6 +173,7 @@ namespace EggLink.DanhengServer.GameServer.Game.Mission
             StoryLineData.OldRot = new();
 
             Player.SendPacket(new PacketStoryLineInfoScNotify(Player));
+            Player.SendPacket(new PacketChangeStoryLineFinishScNotify(0));
         }
 
         public void OnLogin()
@@ -157,6 +181,7 @@ namespace EggLink.DanhengServer.GameServer.Game.Mission
             if (StoryLineData.CurStoryLineId == 0) return;
 
             Player.SendPacket(new PacketStoryLineInfoScNotify(Player));
+            Player.SendPacket(new PacketChangeStoryLineFinishScNotify(StoryLineData.CurStoryLineId));
         }
     }
 }

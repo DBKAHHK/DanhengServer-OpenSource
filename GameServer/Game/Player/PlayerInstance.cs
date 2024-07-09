@@ -148,6 +148,7 @@ namespace EggLink.DanhengServer.Game.Player
             DatabaseHelper.Instance?.UpdateInstance(Data);
 
             ChallengeManager.ResurrectInstance();
+            StoryLineManager.OnLogin();
             LoadScene(Data.PlaneId, Data.FloorId, Data.EntryId, Data.Pos!, Data.Rot!, false);
             if (SceneInstance == null)
             {
@@ -183,6 +184,15 @@ namespace EggLink.DanhengServer.Game.Player
                             {
                                 avatar.SpecialAvatarId = special.GetId();
                                 avatar.BaseAvatarId = special.AvatarID;
+                            } 
+                            else
+                            {
+                                GameData.SpecialAvatarData.TryGetValue(avatar.BaseAvatarId * 10 + Data.WorldLevel, out special);
+                                if (special != null)
+                                {
+                                    avatar.SpecialAvatarId = special.GetId();
+                                    avatar.BaseAvatarId = special.AvatarID;
+                                }
                             }
                         }
                     }
@@ -535,6 +545,7 @@ namespace EggLink.DanhengServer.Game.Player
             // TODO: Sanify check
             Data.Pos = pos;
             Data.Rot = rot;
+            var sendMove = true;
             SceneInstance instance = new(this, plane, floorId, entryId);
             if (planeId != Data.PlaneId || floorId != Data.FloorId || entryId != Data.EntryId)
             {
@@ -542,14 +553,22 @@ namespace EggLink.DanhengServer.Game.Player
                 Data.FloorId = floorId;
                 Data.EntryId = entryId;
             }
+            else
+            {
+                sendMove = false;
+            }
             SceneInstance = instance;
 
             MissionManager?.OnPlayerChangeScene();
 
             Connection?.SendPacket(CmdIds.SyncServerSceneChangeNotify);
-            if (sendPacket)
+            if (sendPacket && sendMove)
             {
                 SendPacket(new PacketEnterSceneByServerScNotify(instance, reason));
+            }
+            else if (!sendMove)
+            {
+                SendPacket(new PacketSceneEntityMoveScNotify(this));
             }
 
             MissionManager?.HandleFinishType(MissionFinishTypeEnum.EnterFloor);

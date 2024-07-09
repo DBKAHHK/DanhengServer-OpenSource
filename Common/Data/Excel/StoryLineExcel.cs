@@ -13,6 +13,7 @@ namespace EggLink.DanhengServer.Data.Excel
     public class StoryLineExcel : ExcelResource
     {
         public int StoryLineID { get; set; }
+        public StoryLineCondition BeginCondition { get; set; } = new();
         public StoryLineCondition EndCondition { get; set; } = new();
         public int InitEntranceID { get; set; }
         public int InitGroupID { get; set; }
