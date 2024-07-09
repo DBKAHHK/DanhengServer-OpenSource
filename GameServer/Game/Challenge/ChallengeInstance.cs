@@ -5,6 +5,7 @@ using EggLink.DanhengServer.Game.Battle;
 using EggLink.DanhengServer.Game.Player;
 using EggLink.DanhengServer.Game.Scene;
 using EggLink.DanhengServer.Game.Scene.Entity;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Challenge;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Server.Packet.Send.Challenge;
 using EggLink.DanhengServer.Server.Packet.Send.Lineup;
@@ -91,11 +92,10 @@ namespace EggLink.DanhengServer.Game.Challenge
             return Excel.IsStory();
         }
 
-        // Early implementation for 2.3
-        /* public bool IsBoss()
+        public bool IsBoss()
         {
             return Excel.IsBoss();
-        } */
+        }
 
         public void SetStatus(ChallengeStatus status)
         {
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Game.Challenge
                     break;
                 default:
                     // Determine challenge result
-                    if ((IsStory()/* || IsBoss()*/) && req.Stt.EndReason == BattleEndReason.TurnLimit)
+                    if ((IsStory() || IsBoss()) && req.Stt.EndReason == BattleEndReason.TurnLimit)
                     {
                         AdvanceStage();
                     }
@@ -232,17 +232,14 @@ namespace EggLink.DanhengServer.Game.Challenge
                 // Save history
                 Player.ChallengeManager!.AddHistory(ChallengeId, Stars, GetTotalScore());
 
-                // Send challenge result data
-                Player.SendPacket(new PacketChallengeSettleNotify(this)); // Deprecated in 2.3
-                // Early implementation for 2.3
-                /* if (IsBoss())
+                if (IsBoss())
                 {
                     Player.SendPacket(new PacketChallengeBossPhaseSettleNotify(this));
                 }
                 else
                 {
                     Player.SendPacket(new PacketChallengeSettleNotify(this));
-                } */
+                }
             }
             else
             {
@@ -333,11 +330,10 @@ namespace EggLink.DanhengServer.Game.Challenge
                 proto.PlayerInfo.CurStoryBuff.BuffList.Add(StoryBuffs.Select(x => (uint)x));
             }
 
-            // Early implementation for 2.3
-            /* if (StoryBuffs != null && StoryBuffs.Count >= CurrentStage)
+            if (StoryBuffs != null && StoryBuffs.Count >= CurrentStage)
             {
                 proto.PlayerInfo.CurBossBuff.BuffList.Add((uint)BossBuffs[CurrentStage - 1]);
-            } */
+            }
 
             return proto;
         }
