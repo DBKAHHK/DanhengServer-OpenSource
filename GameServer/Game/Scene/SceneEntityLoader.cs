@@ -253,17 +253,6 @@ namespace EggLink.DanhengServer.Game.Scene
 
             var prop = new EntityProp(Scene, excel, group, info);
 
-            if (prop.PropInfo.PropID == 1003)
-            {
-                if (prop.PropInfo.MappingInfoID == 2220)
-                {
-                    prop.SetState(PropStateEnum.Open);
-                    Scene.AddEntity(prop, sendPacket);
-                }
-            } else
-            {
-                Scene.AddEntity(prop, sendPacket);
-            }
             if (excel.PropType == PropTypeEnum.PROP_SPRING)
             {
                 Scene.HealingSprings.Add(prop);
@@ -278,8 +267,37 @@ namespace EggLink.DanhengServer.Game.Scene
             } 
             else
             {
-                prop.State = info.State;
+                if (Scene.Excel.PlaneType == PlaneTypeEnum.Raid)
+                {
+                    prop.State = info.State;
+                } 
+                else
+                {
+                    // elevator
+                    if (prop.Excel.PropType == PropTypeEnum.PROP_ELEVATOR)
+                    {
+                        prop.State = PropStateEnum.Elevator1;
+                    } 
+                    else
+                    {
+                        prop.State = info.State;
+                    }
+                }
             }
+
+            if (prop.PropInfo.PropID == 1003)
+            {
+                if (prop.PropInfo.MappingInfoID == 2220)
+                {
+                    prop.SetState(PropStateEnum.Open);
+                    Scene.AddEntity(prop, sendPacket);
+                }
+            }
+            else
+            {
+                Scene.AddEntity(prop, sendPacket);
+            }
+
             return prop;
         }
     }

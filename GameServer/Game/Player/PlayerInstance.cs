@@ -585,7 +585,9 @@ namespace EggLink.DanhengServer.Game.Player
             }
 
             MissionManager?.HandleFinishType(MissionFinishTypeEnum.EnterFloor);
+            MissionManager?.HandleFinishType(MissionFinishTypeEnum.EnterPlane);
             MissionManager?.HandleFinishType(MissionFinishTypeEnum.NotInFloor);
+            MissionManager?.HandleFinishType(MissionFinishTypeEnum.NotInPlane);
         }
 
         public ScenePropData? GetScenePropData(int floorId, int groupId, int propId)

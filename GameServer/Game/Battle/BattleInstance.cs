@@ -89,7 +89,7 @@ namespace EggLink.DanhengServer.Game.Battle
             var excel = GameData.StageConfigData[StageId];
             List<int> list = [.. excel.TrialAvatarList];
 
-            if (list.Count == 0)
+            if (list.Count > 0)
             {
                 if (Player.Data.CurrentGender == Gender.Man)
                 {

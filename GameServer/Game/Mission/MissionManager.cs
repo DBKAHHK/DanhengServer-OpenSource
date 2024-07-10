@@ -440,6 +440,22 @@ namespace EggLink.DanhengServer.Game.Mission
             }
         }
 
+        public void HandleTalkStr(string talkString)
+        {
+            if (!ConfigManager.Config.ServerOption.EnableMission) return;
+
+            foreach (var mission in GetRunningSubMissionList())
+            {
+                if (mission.FinishType == MissionFinishTypeEnum.Talk)
+                {
+                    if (mission.ParamStr1 == talkString)
+                    {
+                        FinishSubMission(mission.ID);
+                    }
+                }
+            }
+        }
+
         public void HandleCustomValue(List<Proto.MissionCustomValue> values, int missionId)
         {
             if (!ConfigManager.Config.ServerOption.EnableMission) return;

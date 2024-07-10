@@ -11,17 +11,8 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Mission
         {
             var req = FinishTalkMissionCsReq.Parser.ParseFrom(data);
             var player = connection.Player!;
-            try
-            {
-                var missionId = int.Parse(req.TalkStr.Split('_')[1]);  // may send 0 instead of missionId (in talking)
-                if (player.MissionManager!.GetSubMissionStatus(missionId) != Enums.MissionPhaseEnum.Accept)
-                {
-                    player.MissionManager!.AcceptSubMission(missionId);
-                }
-                player.MissionManager!.FinishSubMission(missionId);
-            } catch
-            {
-            }
+            
+            player.MissionManager!.HandleTalkStr(req.TalkStr);
 
             if (req.CustomValueList != null && req.CustomValueList.Count > 0)
             {

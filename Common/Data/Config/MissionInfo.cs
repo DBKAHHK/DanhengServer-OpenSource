@@ -32,6 +32,7 @@ namespace EggLink.DanhengServer.Data.Config
         public int ParamInt1 { get; set; }
         public int ParamInt2 { get; set; }
         public int ParamInt3 { get; set; }
+        public string ParamStr1 { get; set; } = "";
         public List<int>? ParamIntList { get; set; } = [];
         public List<MaterialItem>? ParamItemList { get; set; } = [];
         public List<FinishActionInfo>? FinishActionList { get; set; } = [];
