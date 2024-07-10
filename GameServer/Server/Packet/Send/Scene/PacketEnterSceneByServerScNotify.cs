@@ -6,20 +6,16 @@ namespace EggLink.DanhengServer.Server.Packet.Send.Scene
 {
     public class PacketEnterSceneByServerScNotify : BasePacket
     {
-        public PacketEnterSceneByServerScNotify(SceneInstance scene, EnterSceneReasonStatus reason = EnterSceneReasonStatus.EnterSceneReasonNone) : base(CmdIds.EnterSceneByServerScNotify)
+        public PacketEnterSceneByServerScNotify(SceneInstance scene, ChangeStoryLineAction storyLineAction = ChangeStoryLineAction.None) : base(CmdIds.EnterSceneByServerScNotify)
         {
             var sceneInfo = scene.ToProto();
             var notify = new EnterSceneByServerScNotify()
             {
                 Scene = sceneInfo,
-                //Reason = reason,
                 Lineup = scene.Player.LineupManager!.GetCurLineup()!.ToProto(),
             };
 
-            if (reason == EnterSceneReasonStatus.EnterSceneReasonChangeStoryline)
-            {
-                notify.Scene.BONACBOIIBE = 0;
-            }
+            notify.Scene.BONACBOIIBE = (uint) storyLineAction;
 
             SetData(notify);
         }

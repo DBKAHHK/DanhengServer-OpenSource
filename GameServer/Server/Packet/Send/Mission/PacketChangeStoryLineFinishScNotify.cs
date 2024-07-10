@@ -10,11 +10,11 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Mission
 {
     public class PacketChangeStoryLineFinishScNotify : BasePacket
     {
-        public PacketChangeStoryLineFinishScNotify(int curId) : base(CmdIds.ChangeStoryLineFinishScNotify)
+        public PacketChangeStoryLineFinishScNotify(int curId, ChangeStoryLineAction reason) : base(CmdIds.ChangeStoryLineFinishScNotify)
         {
             var proto = new ChangeStoryLineFinishScNotify
             {
-                ActionType = ChangeStoryLineAction.Client,
+                ActionType = reason,
                 CurStoryLineId = (uint)curId,
             };
 

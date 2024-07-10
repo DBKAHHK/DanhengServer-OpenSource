@@ -454,18 +454,18 @@ namespace EggLink.DanhengServer.Game.Player
             return null;
         }
 
-        public void EnterScene(int entryId, int teleportId, bool sendPacket, EnterSceneReasonStatus reason = EnterSceneReasonStatus.EnterSceneReasonNone, int storyLineId = 0)
+        public bool EnterScene(int entryId, int teleportId, bool sendPacket, ChangeStoryLineAction storyLineAction = ChangeStoryLineAction.None, int storyLineId = 0)
         {
-            if (storyLineId != StoryLineManager!.StoryLineData.CurStoryLineId)
+            if (storyLineId != StoryLineManager?.StoryLineData.CurStoryLineId)
             {
-                StoryLineManager!.EnterStoryLine(storyLineId);
+                StoryLineManager?.EnterStoryLine(storyLineId, entryId == 0);  // entryId == 0 -> teleport
             }
 
             GameData.MapEntranceData.TryGetValue(entryId, out var entrance);
-            if (entrance == null) return;
+            if (entrance == null) return false;
 
             GameData.GetFloorInfo(entrance.PlaneID, entrance.FloorID, out var floorInfo);
-            if (floorInfo == null) return;
+            if (floorInfo == null) return false;
 
             int StartGroup = entrance.StartGroupID;
             int StartAnchor = entrance.StartAnchorID;
@@ -487,10 +487,16 @@ namespace EggLink.DanhengServer.Game.Player
 
             MissionManager?.HandleFinishType(MissionFinishTypeEnum.EnterMapByEntrance, entryId);
 
-            LoadScene(entrance.PlaneID, entrance.FloorID, entryId, anchor!.ToPositionProto(), anchor.ToRotationProto(), sendPacket, reason);
+            var beforeEntryId = Data.EntryId;
+
+            LoadScene(entrance.PlaneID, entrance.FloorID, entryId, anchor!.ToPositionProto(), anchor.ToRotationProto(), sendPacket, storyLineAction);
+
+            var afterEntryId = Data.EntryId;
+
+            return beforeEntryId != afterEntryId;  // return true if entryId changed
         }
 
-        public void EnterMissionScene(int entranceId, int anchorGroupId, int anchorId, bool sendPacket, EnterSceneReasonStatus reason = EnterSceneReasonStatus.EnterSceneReasonNone)
+        public void EnterMissionScene(int entranceId, int anchorGroupId, int anchorId, bool sendPacket, ChangeStoryLineAction storyLineAction = ChangeStoryLineAction.None)
         {
             GameData.MapEntranceData.TryGetValue(entranceId, out var entrance);
             if (entrance == null) return;
@@ -508,7 +514,7 @@ namespace EggLink.DanhengServer.Game.Player
             }
             AnchorInfo? anchor = floorInfo.GetAnchorInfo(StartGroup, StartAnchor);
 
-            LoadScene(entrance.PlaneID, entrance.FloorID, entranceId, anchor!.ToPositionProto(), anchor.ToRotationProto(), sendPacket, reason);
+            LoadScene(entrance.PlaneID, entrance.FloorID, entranceId, anchor!.ToPositionProto(), anchor.ToRotationProto(), sendPacket, storyLineAction);
         }
 
         public void MoveTo(Position position)
@@ -530,7 +536,7 @@ namespace EggLink.DanhengServer.Game.Player
             SendPacket(new PacketSceneEntityMoveScNotify(this));
         }
 
-        public void LoadScene(int planeId, int floorId, int entryId, Position pos, Position rot, bool sendPacket, EnterSceneReasonStatus reason = EnterSceneReasonStatus.EnterSceneReasonNone)
+        public void LoadScene(int planeId, int floorId, int entryId, Position pos, Position rot, bool sendPacket, ChangeStoryLineAction storyLineAction = ChangeStoryLineAction.None)
         {
             GameData.MazePlaneData.TryGetValue(planeId, out var plane);
             if (plane == null) return;
@@ -552,7 +558,7 @@ namespace EggLink.DanhengServer.Game.Player
             // TODO: Sanify check
             Data.Pos = pos;
             Data.Rot = rot;
-            var sendMove = true;
+            var notSendMove = true;
             SceneInstance instance = new(this, plane, floorId, entryId);
             if (planeId != Data.PlaneId || floorId != Data.FloorId || entryId != Data.EntryId)
             {
@@ -560,23 +566,23 @@ namespace EggLink.DanhengServer.Game.Player
                 Data.FloorId = floorId;
                 Data.EntryId = entryId;
             }
-            else
+            else if (StoryLineManager?.StoryLineData.CurStoryLineId == 0)
             {
-                sendMove = false;
+                notSendMove = false;
             }
             SceneInstance = instance;
 
             MissionManager?.OnPlayerChangeScene();
 
             Connection?.SendPacket(CmdIds.SyncServerSceneChangeNotify);
-            //if (sendPacket && sendMove)
-            //{
-                SendPacket(new PacketEnterSceneByServerScNotify(instance, reason));
-            //}
-            //else if (!sendMove)
-            //{
-                //SendPacket(new PacketSceneEntityMoveScNotify(this));
-            //}
+            if (sendPacket && notSendMove)
+            {
+                SendPacket(new PacketEnterSceneByServerScNotify(instance, storyLineAction));
+            }
+            else if (!notSendMove)
+            {
+                SendPacket(new PacketSceneEntityMoveScNotify(this));
+            }
 
             MissionManager?.HandleFinishType(MissionFinishTypeEnum.EnterFloor);
             MissionManager?.HandleFinishType(MissionFinishTypeEnum.NotInFloor);

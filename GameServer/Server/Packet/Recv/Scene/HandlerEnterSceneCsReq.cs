@@ -14,9 +14,9 @@ namespace EggLink.DanhengServer.Server.Packet.Recv.Scene
         public override void OnHandle(Connection connection, byte[] header, byte[] data)
         {
             var req = EnterSceneCsReq.Parser.ParseFrom(data);
-            connection.Player?.EnterScene((int)req.EntryId, (int)req.TeleportId, true, EnterSceneReasonStatus.EnterSceneReasonNone, (int) req.GameStoryLineId);
+            var overMapTp = connection.Player?.EnterScene((int)req.EntryId, (int)req.TeleportId, true, storyLineId:(int) req.GameStoryLineId);
 
-            connection.SendPacket(new PacketEnterSceneScRsp(true, req.MapTp, (int)req.GameStoryLineId));
+            connection.SendPacket(new PacketEnterSceneScRsp(overMapTp == true, req.MapTp, (int)req.GameStoryLineId));
         }
     }
 }

@@ -64,15 +64,15 @@ namespace EggLink.DanhengServer.GameServer.Game.Mission
             StoryLineData.CurStoryLineId = storyExcel.StoryLineID;
             Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
             Player.SendPacket(new PacketStoryLineInfoScNotify(Player));
-            Player.SendPacket(new PacketChangeStoryLineFinishScNotify(storyExcel.StoryLineID));
+            Player.SendPacket(new PacketChangeStoryLineFinishScNotify(storyExcel.StoryLineID, ChangeStoryLineAction.FinishAction));
 
             if (entryId > 0)
             {
-                Player.EnterMissionScene(entryId, anchorGroupId, anchorId, true, EnterSceneReasonStatus.EnterSceneReasonChangeStoryline);
+                Player.EnterMissionScene(entryId, anchorGroupId, anchorId, true, ChangeStoryLineAction.FinishAction);
             }
             else
             {
-                Player.EnterMissionScene(storyExcel.InitEntranceID, storyExcel.InitGroupID, storyExcel.InitAnchorID, true, EnterSceneReasonStatus.EnterSceneReasonChangeStoryline);
+                Player.EnterMissionScene(storyExcel.InitEntranceID, storyExcel.InitGroupID, storyExcel.InitAnchorID, true, ChangeStoryLineAction.FinishAction);
             }
 
             var record = new StoryLineInfo()
@@ -89,13 +89,13 @@ namespace EggLink.DanhengServer.GameServer.Game.Mission
             StoryLineData.RunningStoryLines[storyExcel.StoryLineID] = record;
         }
 
-        public void EnterStoryLine(int storyLineId)
+        public void EnterStoryLine(int storyLineId, bool tp = true)
         {
             if (StoryLineData.CurStoryLineId == storyLineId) return;  // already in this story line
 
             if (storyLineId == 0)  // leave story line
             {
-                LeaveStoryLine(true);
+                LeaveStoryLine(tp);
                 return;
             }
 
@@ -120,8 +120,12 @@ namespace EggLink.DanhengServer.GameServer.Game.Mission
             StoryLineData.CurStoryLineId = lineInfo.StoryLineId;
             Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
             Player.SendPacket(new PacketStoryLineInfoScNotify(Player));
-            Player.SendPacket(new PacketChangeStoryLineFinishScNotify(StoryLineData.CurStoryLineId));
-            Player.LoadScene(lineInfo.SavedPlaneId, lineInfo.SavedFloorId, lineInfo.SavedEntryId, lineInfo.SavedPos, lineInfo.SavedRot, true, EnterSceneReasonStatus.EnterSceneReasonChangeStoryline);
+            Player.SendPacket(new PacketChangeStoryLineFinishScNotify(StoryLineData.CurStoryLineId, ChangeStoryLineAction.Client));
+
+            if (tp)
+            {
+                Player.LoadScene(lineInfo.SavedPlaneId, lineInfo.SavedFloorId, lineInfo.SavedEntryId, lineInfo.SavedPos, lineInfo.SavedRot, true, ChangeStoryLineAction.Client);
+            }
         }
 
         public void LeaveStoryLine(bool tp)
@@ -151,11 +155,11 @@ namespace EggLink.DanhengServer.GameServer.Game.Mission
 
             Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
             Player.SendPacket(new PacketStoryLineInfoScNotify(Player));
-            Player.SendPacket(new PacketChangeStoryLineFinishScNotify(0));
+            Player.SendPacket(new PacketChangeStoryLineFinishScNotify(0, ChangeStoryLineAction.None));
 
             if (tp)
             {
-                Player.LoadScene(StoryLineData.OldPlaneId, StoryLineData.OldFloorId, StoryLineData.OldEntryId, StoryLineData.OldPos, StoryLineData.OldRot, true, EnterSceneReasonStatus.EnterSceneReasonChangeStoryline);
+                Player.LoadScene(StoryLineData.OldPlaneId, StoryLineData.OldFloorId, StoryLineData.OldEntryId, StoryLineData.OldPos, StoryLineData.OldRot, true, ChangeStoryLineAction.None);
 
                 StoryLineData.OldPlaneId = 0;
                 StoryLineData.OldEntryId = 0;
@@ -195,17 +199,17 @@ namespace EggLink.DanhengServer.GameServer.Game.Mission
 
             Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
             Player.SendPacket(new PacketStoryLineInfoScNotify(Player));
-            Player.SendPacket(new PacketChangeStoryLineFinishScNotify(0));
+            Player.SendPacket(new PacketChangeStoryLineFinishScNotify(0, ChangeStoryLineAction.None));
 
             if (tp)
             {
                 if (entryId > 0)
                 {
-                    Player.EnterMissionScene(entryId, anchorGroupId, anchorId, true, EnterSceneReasonStatus.EnterSceneReasonChangeStoryline);
+                    Player.EnterMissionScene(entryId, anchorGroupId, anchorId, true, ChangeStoryLineAction.None);
                 }
                 else
                 {
-                    Player.LoadScene(StoryLineData.OldPlaneId, StoryLineData.OldFloorId, StoryLineData.OldEntryId, StoryLineData.OldPos, StoryLineData.OldRot, true, EnterSceneReasonStatus.EnterSceneReasonChangeStoryline);
+                    Player.LoadScene(StoryLineData.OldPlaneId, StoryLineData.OldFloorId, StoryLineData.OldEntryId, StoryLineData.OldPos, StoryLineData.OldRot, true, ChangeStoryLineAction.FinishAction);
                 }
             }
         }

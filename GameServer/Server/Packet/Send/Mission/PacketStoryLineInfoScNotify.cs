@@ -15,12 +15,12 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Mission
     {
         public PacketStoryLineInfoScNotify(PlayerInstance player) : base(CmdIds.StoryLineInfoScNotify)
         {
-            var storyLineIdList = player.StoryLineManager!.StoryLineData.RunningStoryLines.Keys.Select(x => (uint)x).ToList();
-            storyLineIdList.Insert(0, 0);
+            var storyLineIdList = player.StoryLineManager?.StoryLineData.RunningStoryLines.Keys.Select(x => (uint)x).ToList();
+            storyLineIdList?.Insert(0, 0);
 
             var proto = new StoryLineInfoScNotify
             {
-                CurStoryLineId = (uint)player.StoryLineManager!.StoryLineData.CurStoryLineId,
+                CurStoryLineId = (uint)(player.StoryLineManager?.StoryLineData.CurStoryLineId ?? 0),
                 RunningStoryLineIdList = { storyLineIdList },
             };
 
