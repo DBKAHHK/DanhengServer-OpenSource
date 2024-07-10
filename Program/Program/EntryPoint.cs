@@ -150,8 +150,9 @@ namespace EggLink.DanhengServer.Program
                     }
                 }
             };
-            MuipManager.OnGetPlayerStatus += (int uid, out PlayerStatusEnum status) =>
+            MuipManager.OnGetPlayerStatus += (int uid, out PlayerStatusEnum status, out PlayerSubStatusEnum subStatus) =>
             {
+                subStatus = PlayerSubStatusEnum.None;
                 foreach (var con in Listener.Connections.Values)
                 {
                     if (con.Player != null && con.Player.Uid == uid)
@@ -159,15 +160,45 @@ namespace EggLink.DanhengServer.Program
                         if (con.Player.RogueManager?.GetRogueInstance() != null)
                         {
                             status = PlayerStatusEnum.Rogue;
+                            if (con.Player.ChessRogueManager?.RogueInstance?.AreaExcel.RogueVersionId == 202)
+                            {
+                                status = PlayerStatusEnum.ChessRogueNous;
+                            } 
+                            else if (con.Player.ChessRogueManager?.RogueInstance?.AreaExcel.RogueVersionId == 201)
+                            {
+                                status = PlayerStatusEnum.ChessRogue;
+                            }
                         }
                         else if (con.Player.ChallengeManager?.ChallengeInstance != null)
                         {
                             status = PlayerStatusEnum.Challenge;
+                            if (con.Player.ChallengeManager.ChallengeInstance.Excel.StoryExcel != null)
+                            {
+                                status = PlayerStatusEnum.ChallengeStory;
+                            }
+                            else if (con.Player.ChallengeManager.ChallengeInstance.Excel.BossExcel != null)
+                            {
+                                status = PlayerStatusEnum.ChallengeBoss;
+                            }
+                        } 
+                        else if (con.Player.RaidManager?.RaidData.CurRaidId != 0)
+                        {
+                            status = PlayerStatusEnum.Raid;
+                        } 
+                        else if (con.Player.StoryLineManager?.StoryLineData.CurStoryLineId != 0)
+                        {
+                            status = PlayerStatusEnum.StoryLine;
                         }
                         else
                         {
                             status = PlayerStatusEnum.Explore;
                         }
+
+                        if (con.Player.BattleInstance != null)
+                        {
+                            subStatus = PlayerSubStatusEnum.Battle;
+                        }
+
                         return;
                     }
                 }
