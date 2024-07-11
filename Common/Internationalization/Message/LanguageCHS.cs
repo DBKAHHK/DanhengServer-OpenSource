@@ -113,6 +113,7 @@ namespace EggLink.DanhengServer.Internationalization.Message
         public SceneTextCHS Scene { get; } = new();
         public UnlockAllTextCHS UnlockAll { get; } = new();
         public MailTextCHS Mail { get; } = new();
+        public RaidTextCHS Raid { get; } = new();
     }
 
     #endregion
@@ -350,6 +351,16 @@ namespace EggLink.DanhengServer.Internationalization.Message
         public string Usage { get; } = "/mail <send [发送名称] [标题] [内容] [模板ID] [过期天数] - 发送邮件>/<send [发送者] [标题] [内容] [模板ID] [过期天数] [附件] - 发送带附件的邮件>";
         public string MailSent { get; } = "邮件已发送!";
         public string MailSentWithAttachment { get; } = "带附件的邮件已发送!";
+    }
+
+    /// <summary>
+    /// path: Game.Command.Raid
+    /// </summary>
+    public class RaidTextCHS
+    {
+        public string Desc { get; } = "管理玩家的任务临时场景";
+        public string Usage { get; } = "/raid <leave - 离开临时场景>";
+        public string Leaved { get; } = "已离开临时场景!";
     }
 
     #endregion
