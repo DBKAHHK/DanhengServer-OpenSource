@@ -579,7 +579,7 @@ namespace EggLink.DanhengServer.Game.Player
             {
                 SendPacket(new PacketEnterSceneByServerScNotify(instance, storyLineAction));
             }
-            else if (!notSendMove)
+            else if (sendPacket && !notSendMove)  // send move packet
             {
                 SendPacket(new PacketSceneEntityMoveScNotify(this));
             }
