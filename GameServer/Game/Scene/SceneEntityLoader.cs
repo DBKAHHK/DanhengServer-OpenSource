@@ -216,10 +216,17 @@ namespace EggLink.DanhengServer.Game.Scene
             {
                 return null;
             }
+
+            if (group.Id == 117)
+            {
+                GameData.GetAvatarExpRequired(0, 0);
+            }
+
             if (!GameData.NpcDataData.ContainsKey(info.NPCID))
             {
                 return null;
             }
+
             bool hasDuplicateNpcId = false;
             foreach (IGameEntity entity in Scene.Entities.Values)
             {
@@ -229,10 +236,12 @@ namespace EggLink.DanhengServer.Game.Scene
                     break;
                 }
             }
+
             if (hasDuplicateNpcId)
             {
-                return null;
+                //return null;
             }
+
             EntityNpc npc = new(Scene, group, info);
             Scene.AddEntity(npc, sendPacket);
 
