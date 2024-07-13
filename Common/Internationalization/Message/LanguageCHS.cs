@@ -340,6 +340,7 @@ namespace EggLink.DanhengServer.Internationalization.Message
         public string AllPropsUnlocked { get; } = "所有道具已解锁!";
         public string SceneChanged { get; } = "已进入场景 {0}";
         public string SceneReloaded { get; } = "场景已重新加载!";
+        public string SceneReset { get; } = "已重置场景 {0} 中所有道具状态！";
     }
 
     /// <summary>
