@@ -8,11 +8,11 @@ namespace EggLink.DanhengServer.Internationalization.Message
 {
     #region Root
 
-    public class LanguageCHS
+    public class LanguageCHT
     {
-        public GameTextCHS Game { get; } = new();
-        public ServerTextCHS Server { get; } = new();
-        public WordTextCHS Word { get; } = new();  // a placeholder for the actual word text
+        public GameTextCHT Game { get; } = new();
+        public ServerTextCHT Server { get; } = new();
+        public WordTextCHT Word { get; } = new();  // a placeholder for the actual word text
     }
 
     #endregion
@@ -22,24 +22,24 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// <summary>
     /// path: Game
     /// </summary>
-    public class GameTextCHS
+    public class GameTextCHT
     {
-        public CommandTextCHS Command { get; } = new();
+        public CommandTextCHT Command { get; } = new();
     }
 
     /// <summary>
     /// path: Server
     /// </summary>
-    public class ServerTextCHS
+    public class ServerTextCHT
     {
-        public WebTextCHS Web { get; } = new();
-        public ServerInfoTextCHS ServerInfo { get; } = new();
+        public WebTextCHT Web { get; } = new();
+        public ServerInfoTextCHT ServerInfo { get; } = new();
     }
 
     /// <summary>
     /// path: Word
     /// </summary>
-    public class WordTextCHS
+    public class WordTextCHT
     {
         public string Rank { get; } = "星魂";
         public string Avatar { get; } = "角色";
@@ -95,25 +95,25 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// <summary>
     /// path: Game.Command
     /// </summary>
-    public class CommandTextCHS
+    public class CommandTextCHT
     {
-        public NoticeTextCHS Notice { get; } = new();
+        public NoticeTextCHT Notice { get; } = new();
 
-        public HeroTextCHS Hero { get; } = new();
-        public AvatarTextCHS Avatar { get; } = new();
-        public GiveTextCHS Give { get; } = new();
-        public GiveAllTextCHS GiveAll { get; } = new();
-        public LineupTextCHS Lineup { get; } = new();
-        public HelpTextCHS Help { get; } = new();
-        public KickTextCHS Kick { get; } = new();
-        public MissionTextCHS Mission { get; } = new();
-        public RelicTextCHS Relic { get; } = new();
-        public ReloadTextCHS Reload { get; } = new();
-        public RogueTextCHS Rogue { get; } = new();
-        public SceneTextCHS Scene { get; } = new();
-        public UnlockAllTextCHS UnlockAll { get; } = new();
-        public MailTextCHS Mail { get; } = new();
-        public RaidTextCHS Raid { get; } = new();
+        public HeroTextCHT Hero { get; } = new();
+        public AvatarTextCHT Avatar { get; } = new();
+        public GiveTextCHT Give { get; } = new();
+        public GiveAllTextCHT GiveAll { get; } = new();
+        public LineupTextCHT Lineup { get; } = new();
+        public HelpTextCHT Help { get; } = new();
+        public KickTextCHT Kick { get; } = new();
+        public MissionTextCHT Mission { get; } = new();
+        public RelicTextCHT Relic { get; } = new();
+        public ReloadTextCHT Reload { get; } = new();
+        public RogueTextCHT Rogue { get; } = new();
+        public SceneTextCHT Scene { get; } = new();
+        public UnlockAllTextCHT UnlockAll { get; } = new();
+        public MailTextCHT Mail { get; } = new();
+        public RaidTextCHT Raid { get; } = new();
     }
 
     #endregion
@@ -123,14 +123,14 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// <summary>
     /// path: Server.Web
     /// </summary>
-    public class WebTextCHS
+    public class WebTextCHT
     {
     }
 
     /// <summary>
     /// path: Server.ServerInfo
     /// </summary>
-    public class ServerInfoTextCHS
+    public class ServerInfoTextCHT
     {
         public string Shutdown { get; } = "關閉中…";
         public string CancelKeyPressed { get; } = "已按下取消鍵 (Ctrl + C)，服務器即將關閉…";
@@ -163,7 +163,7 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// <summary>
     /// path: Game.Command.Notice
     /// </summary>
-    public class NoticeTextCHS
+    public class NoticeTextCHT
     {
         public string PlayerNotFound { get; } = "未找到玩家!";
         public string InvalidArguments { get; } = "無效的參數!";
@@ -178,7 +178,7 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// <summary>
     /// path: Game.Command.Hero
     /// </summary>
-    public class HeroTextCHS
+    public class HeroTextCHT
     {
         public string Desc { get; } = "切換主角的性別/形態";
         public string Usage { get; } = "/hero <gender [1/2 - 1為男性,2為女性]>/<type [8001/8003/8005 - 分別為 毀滅 存護 同諧]>";
@@ -191,7 +191,7 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// <summary>
     /// path: Game.Command.UnlockAll
     /// </summary>
-    public class UnlockAllTextCHS
+    public class UnlockAllTextCHT
     {
         public string Desc { get; } = "解鎖所有在類別內的對象";
         public string Usage { get; } = "/unlockall <mission - mission為任務>";
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// <summary>
     /// path: Game.Command.Avatar
     /// </summary>
-    public class AvatarTextCHS
+    public class AvatarTextCHT
     {
         public string Desc { get; } = "設定玩家已有角色的屬性";
         public string Usage { get; } = "/avatar <talent [角色ID/-1] [行跡等級] - 設置行跡等級 角色ID為-1意為所有擁有角色>/<get [角色ID] - 獲取角色>/<rank [角色ID/-1] [星魂]>/<level [角色ID/-1] [角色等級]>";
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// <summary>
     /// path: Game.Command.Give
     /// </summary>
-    public class GiveTextCHS
+    public class GiveTextCHT
     {
         public string Desc { get; } = "給予玩家物品";
         public string Usage { get; } = "/give <物品ID> l<等級> x<數量> r<疊影>";
@@ -227,7 +227,7 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// <summary>
     /// path: Game.Command.GiveAll
     /// </summary>
-    public class GiveAllTextCHS
+    public class GiveAllTextCHT
     {
         public string Desc { get; } = "給予玩家全部指定類型的物品";
         public string Usage { get; } = "/giveall <avatar - 角色/equipment - 光錐/relic - 遺器/unlock - 氣泡等奢侈品> r<疊影> l<等級> x<數量>";
@@ -237,7 +237,7 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// <summary>
     /// path: Game.Command.Lineup
     /// </summary>
-    public class LineupTextCHS
+    public class LineupTextCHT
     {
         public string Desc { get; } = "管理玩家的隊伍";
         public string Usage { get; } = "/lineup <mp [秘技點數量 - 最高兩個]>/<heal - 治癒>";
@@ -248,7 +248,7 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// <summary>
     /// path: Game.Command.Help
     /// </summary>
-    public class HelpTextCHS
+    public class HelpTextCHT
     {
         public string Desc { get; } = "顯示幫助信息";
         public string Usage { get; } = "/help";
@@ -259,7 +259,7 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// <summary>
     /// path: Game.Command.Kick
     /// </summary>
-    public class KickTextCHS
+    public class KickTextCHT
     {
         public string Desc { get; } = "踢出玩家";
         public string Usage { get; } = "/kick";
@@ -269,7 +269,7 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// <summary>
     /// path: Game.Command.Mission
     /// </summary>
-    public class MissionTextCHS
+    public class MissionTextCHT
     {
         public string Desc { get; } = "管理玩家的任務";
         public string Usage { get; } = "/mission <unlockall - 完成所有任務>/<pass - 完成所有正在進行的任務>/<finish [副任務ID] - 完成指定任務>/<running - 獲取正在進行的任務以及可能卡住的任務>/<reaccept [主任務ID] - 重新進行指定主任務>";
@@ -289,7 +289,7 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// <summary>
     /// path: Game.Command.Relic
     /// </summary>
-    public class RelicTextCHS
+    public class RelicTextCHT
     {
         public string Desc { get; } = "管理玩家的遺器";
         public string Usage { get; } = "/relic <遺器ID> <主詞條ID> <小詞條ID1:小詞條等級> <小詞條ID2:小詞條等級> <小詞條ID3:小詞條等級> <小詞條ID4:小詞條等級> l<等級> x<數量>";
@@ -302,7 +302,7 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// <summary>
     /// path: Game.Command.Reload
     /// </summary>
-    public class ReloadTextCHS
+    public class ReloadTextCHT
     {
         public string Desc { get; } = "重新加載指定的配置";
         public string Usage { get; } = "/reload <配置名>(banner - 卡池, activity - 活動)";
@@ -312,7 +312,7 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// <summary>
     /// path: Game.Command.Rogue
     /// </summary>
-    public class RogueTextCHS
+    public class RogueTextCHT
     {
         public string Desc { get; } = "管理玩家模擬宇宙中的數據";
         public string Usage { get; } = "/rogue <money [宇宙碎片數量]>/<buff [祝福ID/-1 (-1 - 全部祝福)]>/<miracle [奇物ID]>/<enhance [祝福ID/-1]>/<unstuck - 脫離事件>";
@@ -328,7 +328,7 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// <summary>
     /// path: Game.Command.Scene
     /// </summary>
-    public class SceneTextCHS
+    public class SceneTextCHT
     {
         public string Desc { get; } = "管理玩家場景";
         public string Usage { get; } = "/scene <prop [組ID] [道具ID] [狀態] - 設置道具狀態>/<remove [實體ID] - 移除實體>/<unlockall - 解鎖所有道具>/<change [場景entranceId] - 進入指定場景>/<reload - 重新進入場景>";
@@ -346,7 +346,7 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// <summary>
     /// path: Game.Command.Mail
     /// </summary>
-    public class MailTextCHS
+    public class MailTextCHT
     {
         public string Desc { get; } = "管理玩家的郵件";
         public string Usage { get; } = "/mail <send [發送名稱] [標題] [內容] [模板ID] [過期天數] - 發送郵件>/<send [發送者] [標題] [內容] [模板ID] [過期天數] [附件] - 發送帶附件的郵件>";
@@ -357,7 +357,7 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// <summary>
     /// path: Game.Command.Raid
     /// </summary>
-    public class RaidTextCHS
+    public class RaidTextCHT
     {
         public string Desc { get; } = "管理玩家的任務臨時場景";
         public string Usage { get; } = "/raid <leave - 離開臨時場景>";
