@@ -114,6 +114,7 @@ namespace EggLink.DanhengServer.Internationalization.Message
         public UnlockAllTextCHS UnlockAll { get; } = new();
         public MailTextCHS Mail { get; } = new();
         public RaidTextCHS Raid { get; } = new();
+        public AccountTextCHS Account { get; } = new();
     }
 
     #endregion
@@ -363,7 +364,20 @@ namespace EggLink.DanhengServer.Internationalization.Message
         public string Usage { get; } = "/raid <leave - 离开临时场景>";
         public string Leaved { get; } = "已离开临时场景!";
     }
-
+    /// <summary>
+    /// path: Game.Command.Account
+    /// </summary>
+    public class AccountTextCHS
+    {
+        public string Desc { get; } = "创建账号";
+        public string Usage { get; } = "/account create  <用户名>";
+        public string InvalidUid { get; } = "无效UID参数！ ";
+        public string CreateError { get; } = "出现内部错误 {0} ";
+        public string CreateSuccess { get; } = "新账号 {0} 创建成功!";
+        public string DuplicateAccount { get; } = "账号 {0} 已存在!";
+        public string DuplicateUID { get; } = "UID {0} 已存在!";
+        public string DataError { get; } = "新账号获取失败! {0}!";
+    }
     #endregion
 
     #endregion
