@@ -30,7 +30,7 @@ namespace EggLink.DanhengServer.Command.Cmd
             {
                 if (!int.TryParse(arg.Args[2], out uid))
                 {
-                    arg.SendMsg(I18nManager.Translate("Game.Command.Notice.InvalidUid"));
+                    arg.SendMsg(I18nManager.Translate("Game.Command.Account.InvalidUid"));
                     return;
                 }
             }
