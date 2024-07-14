@@ -89,7 +89,7 @@ namespace EggLink.DanhengServer.WebServer
 
             app.UseRouting();
 
-            
+            // Enable CORS globally
             app.UseCors("AllowAll");
 
             app.UseAuthorization();
