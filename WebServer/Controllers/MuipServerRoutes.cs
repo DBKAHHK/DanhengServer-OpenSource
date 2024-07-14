@@ -4,9 +4,11 @@ using EggLink.DanhengServer.WebServer.Response;
 using EggLink.DanhengServer.WebServer.Server;
 using Microsoft.AspNetCore.Mvc;
 
+using Microsoft.AspNetCore.Cors; 
 namespace EggLink.DanhengServer.WebServer.Controllers
 {
     [ApiController]
+    [EnableCors("AllowAll")]
     [Route("/")]
     public class MuipServerRoutes
     {

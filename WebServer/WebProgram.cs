@@ -1,9 +1,12 @@
 using EggLink.DanhengServer.Util;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
+using System.IO;
 using System.Net;
-using System.Diagnostics;
 
 namespace EggLink.DanhengServer.WebServer
 {
@@ -11,12 +14,12 @@ namespace EggLink.DanhengServer.WebServer
     {
         public static void Main(string[] args, int port, string address)
         {
-            BuildWebHost(args, port, address).Start();
+            BuildWebHost(args, port, address).Run();
         }
 
         public static IWebHost BuildWebHost(string[] args, int port, string address)
         {
-            var b = WebHost.CreateDefaultBuilder(args)
+            var builder = WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .ConfigureLogging((hostingContext, logging) =>
                 {
@@ -26,19 +29,19 @@ namespace EggLink.DanhengServer.WebServer
 
             if (ConfigManager.Config.HttpServer.UseSSL)
             {
-                b.UseKestrel(options =>
-                 {
-                     options.Listen(IPAddress.Any, port, listenOptions =>
-                     {
-                         listenOptions.UseHttps(
-                             ConfigManager.Config.KeyStore.KeyStorePath,
-                             ConfigManager.Config.KeyStore.KeyStorePassword
-                         );
-                     });
-                 });
+                builder.UseKestrel(options =>
+                {
+                    options.Listen(IPAddress.Any, port, listenOptions =>
+                    {
+                        listenOptions.UseHttps(
+                            ConfigManager.Config.KeyStore.KeyStorePath,
+                            ConfigManager.Config.KeyStore.KeyStorePassword
+                        );
+                    });
+                });
             }
 
-            return b.Build();
+            return builder.Build();
         }
     }
 
@@ -47,6 +50,16 @@ namespace EggLink.DanhengServer.WebServer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            // Configure CORS
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll",
+                    builder => builder
+                        .AllowAnyOrigin()   // Allow any origin
+                        .AllowAnyMethod()   // Allow any method (GET, POST, PUT, DELETE, etc.)
+                        .AllowAnyHeader()); // Allow any headers
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -75,6 +88,9 @@ namespace EggLink.DanhengServer.WebServer
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            
+            app.UseCors("AllowAll");
 
             app.UseAuthorization();
 
