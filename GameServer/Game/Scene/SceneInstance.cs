@@ -14,6 +14,7 @@ using EggLink.DanhengServer.Server.Packet;
 using EggLink.DanhengServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Util;
+using System.Numerics;
 
 namespace EggLink.DanhengServer.Game.Scene
 {
@@ -77,6 +78,8 @@ namespace EggLink.DanhengServer.Game.Scene
             }
 
             EntityLoader.LoadEntity();
+
+            Player.TaskManager?.SceneTaskTrigger.TriggerFloor(PlaneId, FloorId);
         }
 
         #endregion

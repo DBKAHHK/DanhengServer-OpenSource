@@ -26,6 +26,9 @@ namespace EggLink.DanhengServer.Data.Config
         [JsonIgnore()]
         public Dictionary<int, List<int>> UnlockDoorID { get; set; } = [];
 
+        [JsonIgnore()]
+        public Dictionary<int, List<int>> UnlockControllerID { get; set; } = [];
+
         public void Load(GroupInfo info)
         {
             if (ValueSource != null)
@@ -51,6 +54,20 @@ namespace EggLink.DanhengServer.Data.Config
                                         UnlockDoorID.Add(int.Parse(value.ToString().Split(",")[0]), []);
                                     }
                                     UnlockDoorID[int.Parse(value.ToString().Split(",")[0])].Add(int.Parse(value.ToString().Split(",")[1]));
+                                }
+                                catch
+                                {
+                                }
+                            } 
+                            else if (key.ToString().Contains("Controller"))
+                            {
+                                try
+                                {
+                                    if (UnlockControllerID.ContainsKey(int.Parse(value.ToString().Split(",")[0])) == false)
+                                    {
+                                        UnlockControllerID.Add(int.Parse(value.ToString().Split(",")[0]), []);
+                                    }
+                                    UnlockControllerID[int.Parse(value.ToString().Split(",")[0])].Add(int.Parse(value.ToString().Split(",")[1]));
                                 }
                                 catch
                                 {

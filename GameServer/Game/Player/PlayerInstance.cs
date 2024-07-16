@@ -36,6 +36,7 @@ using EggLink.DanhengServer.Game.Task;
 using EggLink.DanhengServer.GameServer.Game.Mail;
 using EggLink.DanhengServer.GameServer.Game.Raid;
 using EggLink.DanhengServer.GameServer.Game.Mission;
+using EggLink.DanhengServer.GameServer.Game.Task;
 
 namespace EggLink.DanhengServer.Game.Player
 {
@@ -63,7 +64,7 @@ namespace EggLink.DanhengServer.Game.Player
         public ShopService? ShopService { get; private set; }
         public ChallengeManager? ChallengeManager { get; private set; }
 
-        public PerformanceTrigger? PerformanceTrigger { get; private set; }
+        public TaskManager? TaskManager { get; private set; }
 
         #endregion
 
@@ -131,7 +132,7 @@ namespace EggLink.DanhengServer.Game.Player
             ShopService = new(this);
             ChessRogueManager = new(this);
             ChallengeManager = new(this);
-            PerformanceTrigger = new(this);
+            TaskManager = new(this);
             RaidManager = new(this);
             StoryLineManager = new(this);
 

@@ -3,6 +3,7 @@ using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Database.Mission;
 using EggLink.DanhengServer.Enums;
+using EggLink.DanhengServer.Enums.Item;
 using EggLink.DanhengServer.Game.Mission.FinishAction;
 using EggLink.DanhengServer.Game.Mission.FinishType;
 using EggLink.DanhengServer.Game.Player;
@@ -24,7 +25,7 @@ namespace EggLink.DanhengServer.Game.Mission
         public Dictionary<FinishActionTypeEnum, MissionFinishActionHandler> ActionHandlers = [];
         public Dictionary<MissionFinishTypeEnum, MissionFinishTypeHandler> FinishTypeHandlers = [];
 
-        public readonly List<int> SkipSubMissionList = [101030104, 101050116]; // bug
+        public readonly List<int> SkipSubMissionList = []; // bug
 
         public MissionManager(PlayerInstance player) : base(player)
         {
@@ -144,6 +145,7 @@ namespace EggLink.DanhengServer.Game.Mission
             foreach (var subMission in mission.SubMissionIds)
             {
                 Data.SetSubMissionStatus(subMission, MissionPhaseEnum.None);
+                SetMissionProgress(subMission, 0);
                 sync.MissionList.Add(new Proto.Mission()
                 {
                     Id = (uint)subMission,
@@ -194,7 +196,7 @@ namespace EggLink.DanhengServer.Game.Mission
 
             if (SkipSubMissionList.Contains(missionId))
             {
-                FinishSubMission(missionId);
+                //FinishSubMission(missionId);
             }
 
             if (mission.SubMissionInfo?.LevelFloorID == Player.SceneInstance?.FloorId)
@@ -208,9 +210,8 @@ namespace EggLink.DanhengServer.Game.Mission
                 }
             }
 
-            // performance
-
-            Player.PerformanceTrigger!.TriggerPerformance(missionId);
+            // TODO: Mission Task
+            Player.TaskManager?.MissionTaskTrigger?.TriggerMissionTask(missionId);
 
             return sync;
         }
@@ -240,12 +241,6 @@ namespace EggLink.DanhengServer.Game.Mission
                 }
             }
 
-            if (missionId == 1021301)
-            {
-                Player.LineupManager!.SetExtraLineup(Proto.ExtraLineupType.LineupHeliobus, [1021213]);
-                Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
-            }
-
             var mainSync = AcceptMainMissionByCondition(false);
             sync.MissionList.AddRange(mainSync.MissionList);
 
@@ -269,6 +264,8 @@ namespace EggLink.DanhengServer.Game.Mission
             GameData.MainMissionData.TryGetValue(mainMissionId, out var mainMission);  // get main mission
             if (mainMission == null) return;
             Data.SetSubMissionStatus(missionId, MissionPhaseEnum.Finish);  // set finish
+
+            SetMissionProgress(missionId, subMission.SubMissionInfo?.Progress ?? 1);
 
             var sync = new Proto.MissionSync();
             sync.MissionList.Add(new Proto.Mission()
@@ -347,11 +344,6 @@ namespace EggLink.DanhengServer.Game.Mission
                 Player.LineupManager!.SetExtraLineup(Proto.ExtraLineupType.LineupHeliobus, list);
             }
 
-            if (missionId == 100040117 || missionId == 100040118)
-            {
-                FinishSubMission(100040119);
-            }
-
             // handle reward
             HandleSubMissionReward(missionId);
             //Player.StoryLineManager!.CheckIfEnterStoryLine();
@@ -385,7 +377,8 @@ namespace EggLink.DanhengServer.Game.Mission
             var ItemList = new Proto.ItemList();
             reward?.GetItems().ForEach(i =>
             {
-                var res = Player.InventoryManager!.AddItem(i.Item1, i.Item2, false);
+                GameData.ItemConfigData.TryGetValue(i.Item1, out var item);
+                var res = Player.InventoryManager!.AddItem(i.Item1, i.Item2, item?.ItemMainType == ItemMainTypeEnum.AvatarCard);
                 if (res != null)
                 {
                     ItemList.ItemList_.Add(res.ToProto());
@@ -397,7 +390,8 @@ namespace EggLink.DanhengServer.Game.Mission
                 GameData.RewardDataData.TryGetValue(i, out var reward);
                 reward?.GetItems().ForEach(j =>
                 {
-                    var res = Player.InventoryManager!.AddItem(j.Item1, j.Item2, false);
+                    GameData.ItemConfigData.TryGetValue(j.Item1, out var item);
+                    var res = Player.InventoryManager!.AddItem(j.Item1, j.Item2, item?.ItemMainType == ItemMainTypeEnum.AvatarCard);
                     if (res != null)
                     {
                         ItemList.ItemList_.Add(res.ToProto());
@@ -492,6 +486,53 @@ namespace EggLink.DanhengServer.Game.Mission
             }
         }
 
+        public void AddMissionProgress(int missionId, int progress)
+        {
+            if (!ConfigManager.Config.ServerOption.EnableMission) return;
+
+            Data.SubMissionProgressDict.TryGetValue(missionId, out var currentProgress);
+            Data.SubMissionProgressDict[missionId] = currentProgress + progress;
+            GameData.SubMissionData.TryGetValue(missionId, out var subMission);
+            if (subMission == null) return;
+
+            if ((currentProgress + progress) >= (subMission.SubMissionInfo?.Progress ?? 1))
+            {
+                return;
+            }
+
+            var sync = new Proto.MissionSync();
+            sync.MissionList.Add(new Proto.Mission()
+            {
+                Id = (uint)missionId,
+                Progress = (uint)(currentProgress + progress),
+            });
+
+            Player.SendPacket(new PacketPlayerSyncScNotify(sync));
+        }
+
+        public void SetMissionProgress(int missionId, int progress)
+        {
+            if (!ConfigManager.Config.ServerOption.EnableMission) return;
+
+            Data.SubMissionProgressDict[missionId] = progress;
+            GameData.SubMissionData.TryGetValue(missionId, out var subMission);
+            if (subMission == null) return;
+
+            if (progress >= (subMission.SubMissionInfo?.Progress ?? 1))
+            {
+                return;
+            }
+
+            var sync = new Proto.MissionSync();
+            sync.MissionList.Add(new Proto.Mission()
+            {
+                Id = (uint)missionId,
+                Progress = (uint)progress,
+            });
+
+            Player.SendPacket(new PacketPlayerSyncScNotify(sync));
+        }
+
         #endregion
 
         #region Mission Status
@@ -543,6 +584,15 @@ namespace EggLink.DanhengServer.Game.Mission
                 }
             }
             return list;
+        }
+
+        public int GetMissionProgress(int missionId)
+        {
+            GameData.SubMissionData.TryGetValue(missionId, out var subMission);
+            if (!ConfigManager.Config.ServerOption.EnableMission) return subMission?.SubMissionInfo?.Progress ?? 0;
+
+            Data.SubMissionProgressDict.TryGetValue(missionId, out var progress);
+            return progress;
         }
 
         #endregion
@@ -606,6 +656,7 @@ namespace EggLink.DanhengServer.Game.Mission
                         {
                             Id = (uint)subMission.ID,
                             Status = GetSubMissionStatus(subMission.ID).ToProto(),
+                            Progress = (uint)GetMissionProgress(subMission.ID),
                         });
                     }
                 }
@@ -621,10 +672,6 @@ namespace EggLink.DanhengServer.Game.Mission
                         {
                             info.SceneMissionInfo.AcceptMainMissionIdList.Add((uint)mainMission.MainMissionID);
                         }
-                        info.SceneMissionInfo.COLDABMKNDH.Add(new Proto.GBGPCCLIIEA()
-                        {
-                            MainMissionId = (uint)mainMission.MainMissionID,
-                        });
                         break;  // only one
                     }
                 }

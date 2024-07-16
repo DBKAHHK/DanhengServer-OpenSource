@@ -74,6 +74,8 @@ namespace EggLink.DanhengServer.Internationalization.Message
         public string FloorGroupMissingResult { get; } = "传送、怪物战斗与世界生成";
         public string Mission { get; } = "任务";
         public string MissionInfo { get; } = "任务文件";
+        public string SubMission { get; } = "子任务";
+        public string SubMissionInfo { get; } = "子任务文件";
         public string MazeSkill { get; } = "角色秘技";
         public string MazeSkillInfo { get; } = "角色秘技文件";
         public string Dialogue { get; } = "模拟宇宙事件";

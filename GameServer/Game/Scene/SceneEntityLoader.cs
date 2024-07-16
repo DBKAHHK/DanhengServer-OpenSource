@@ -320,6 +320,12 @@ namespace EggLink.DanhengServer.Game.Scene
                     prop.SetState(PropStateEnum.Open);
                     Scene.AddEntity(prop, sendPacket);
                 }
+
+                if (group.GroupName.Contains("Machine"))
+                {
+                    prop.SetState(PropStateEnum.Open);
+                    Scene.AddEntity(prop, sendPacket);
+                }
             }
             else
             {
