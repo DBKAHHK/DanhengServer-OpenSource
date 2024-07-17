@@ -101,8 +101,14 @@ namespace EggLink.DanhengServer.GameServer.Game.Task
         {
             if (act is TriggerPerformance triggerPerformance)
             {
-                if (triggerPerformance.PerformanceType != ELevelPerformanceTypeEnum.E) return;
-                Player.TaskManager?.PerformanceTrigger.TriggerPerformance(triggerPerformance.PerformanceID, subMission);
+                if (triggerPerformance.PerformanceType == ELevelPerformanceTypeEnum.E)
+                {
+                    Player.TaskManager?.PerformanceTrigger.TriggerPerformanceE(triggerPerformance.PerformanceID, subMission);
+                }
+                else if (triggerPerformance.PerformanceType == ELevelPerformanceTypeEnum.D)
+                {
+                    Player.TaskManager?.PerformanceTrigger.TriggerPerformanceD(triggerPerformance.PerformanceID, subMission);
+                }
             }
         }
 

@@ -398,10 +398,39 @@ namespace EggLink.DanhengServer.Data
                 {
                     Logger.Error(I18nManager.Translate("Server.ServerInfo.FailedToReadItem", file.Name, I18nManager.Translate("Word.Error")), ex);
                 }
-
             }
 
-            if (count < GameData.PerformanceEData.Count)
+            foreach (var performance in GameData.PerformanceDData.Values)
+            {
+                if (performance.PerformancePath == "")
+                {
+                    count++;
+                    continue;
+                }
+
+                var path = ConfigManager.Config.Path.ResourcePath + "/" + performance.PerformancePath;
+                var file = new FileInfo(path);
+                if (!file.Exists) continue;
+                try
+                {
+                    using var reader = file.OpenRead();
+                    using StreamReader reader2 = new(reader);
+                    var text = reader2.ReadToEnd().Replace("$type", "Type");
+                    var obj = JObject.Parse(text);
+                    if (obj != null)
+                    {
+                        LevelGraphConfigInfo info = LevelGraphConfigInfo.LoadFromJsonObject(obj);
+                        performance.ActInfo = info;
+                        count++;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Logger.Error(I18nManager.Translate("Server.ServerInfo.FailedToReadItem", file.Name, I18nManager.Translate("Word.Error")), ex);
+                }
+            }
+
+            if (count < GameData.PerformanceEData.Count + GameData.PerformanceDData.Count)
             {
                 // looks like many dont exist
                 //Logger.Warn("Performance infos are missing, please check your resources folder: " + ConfigManager.Config.Path.ResourcePath + "/Config/Level/Mission/*/Act. Performances may not work!");

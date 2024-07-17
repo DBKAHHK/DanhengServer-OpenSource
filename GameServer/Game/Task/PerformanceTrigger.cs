@@ -15,16 +15,39 @@ namespace EggLink.DanhengServer.Game.Task
     {
         public PlayerInstance Player { get; } = player;
 
-        public void TriggerPerformance(int performanceId, SubMissionExcel subMission)
+        public void TriggerPerformanceE(int performanceEId, SubMissionExcel subMission)
         {
-            GameData.PerformanceEData.TryGetValue(performanceId, out var excel);
+            GameData.PerformanceEData.TryGetValue(performanceEId, out var excel);
             if (excel != null)
             {
-                TriggerPerformance(excel, subMission);
+                TriggerPerformanceE(excel, subMission);
             }
         }
 
-        public void TriggerPerformance(PerformanceEExcel excel, SubMissionExcel subMission)
+        public void TriggerPerformanceE(PerformanceEExcel excel, SubMissionExcel subMission)
+        {
+            if (excel.ActInfo == null) return;
+            foreach (var act in excel.ActInfo.OnInitSequece)
+            {
+                Player.TaskManager?.LevelTask.TriggerInitAct(act, subMission);
+            }
+
+            foreach (var act in excel.ActInfo.OnStartSequece)
+            {
+                Player.TaskManager?.LevelTask.TriggerStartAct(act, subMission);
+            }
+        }
+
+        public void TriggerPerformanceD(int performanceDId, SubMissionExcel subMission)
+        {
+            GameData.PerformanceDData.TryGetValue(performanceDId, out var excel);
+            if (excel != null)
+            {
+                TriggerPerformanceD(excel, subMission);
+            }
+        }
+
+        public void TriggerPerformanceD(PerformanceDExcel excel, SubMissionExcel subMission)
         {
             if (excel.ActInfo == null) return;
             foreach (var act in excel.ActInfo.OnInitSequece)
