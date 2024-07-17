@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static AAFHGGHCNLOReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFBQUZIR0dIQ05MTy5wcm90bxoXUm9ndWVUb3VybkN1ckluZm8ucHJvdG8a",
-            "EExpbmV1cEluZm8ucHJvdG8aEUVKRkxGS0ZKQkpDLnByb3RvGhFGR09JQU5I",
-            "UEpISC5wcm90bxoRSUJQTklNTE5QTEkucHJvdG8i0AEKC0FBRkhHR0hDTkxP",
+            "ChFBQUZIR0dIQ05MTy5wcm90bxoQTGluZXVwSW5mby5wcm90bxoXUm9ndWVU",
+            "b3VybkN1ckluZm8ucHJvdG8aEUZHT0lBTkhQSkhILnByb3RvGhFJQlBOSU1M",
+            "TlBMSS5wcm90bxoRRUpGTEZLRkpCSkMucHJvdG8i0AEKC0FBRkhHR0hDTkxP",
             "EiEKC0dDTkNLRkNGT0lEGA8gASgLMgwuRkdPSUFOSFBKSEgSIQoLRUNDSk1G",
             "RkxNTUcYAiABKAsyDC5JQlBOSU1MTlBMSRIhCgtESFBLUExPSklPRBgKIAEo",
             "CzIMLkVKRkxGS0ZKQkpDEiYKEXJvZ3VlX2xpbmV1cF9pbmZvGAQgASgLMgsu",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "Z3VlVG91cm5DdXJJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
             "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTournCurInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.EJFLFKFJBJCReflection.Descriptor, global::EggLink.DanhengServer.Proto.FGOIANHPJHHReflection.Descriptor, global::EggLink.DanhengServer.Proto.IBPNIMLNPLIReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournCurInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.FGOIANHPJHHReflection.Descriptor, global::EggLink.DanhengServer.Proto.IBPNIMLNPLIReflection.Descriptor, global::EggLink.DanhengServer.Proto.EJFLFKFJBJCReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AAFHGGHCNLO), global::EggLink.DanhengServer.Proto.AAFHGGHCNLO.Parser, new[]{ "GCNCKFCFOID", "ECCJMFFLMMG", "DHPKPLOJIOD", "RogueLineupInfo", "RogueTournCurInfo" }, null, null, null, null)
           }));

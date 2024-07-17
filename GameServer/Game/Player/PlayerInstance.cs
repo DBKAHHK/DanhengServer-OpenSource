@@ -37,6 +37,7 @@ using EggLink.DanhengServer.GameServer.Game.Mail;
 using EggLink.DanhengServer.GameServer.Game.Raid;
 using EggLink.DanhengServer.GameServer.Game.Mission;
 using EggLink.DanhengServer.GameServer.Game.Task;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 
 namespace EggLink.DanhengServer.Game.Player
 {
@@ -444,6 +445,27 @@ namespace EggLink.DanhengServer.Game.Player
                     // handle plugin event
                     InvokeOnPlayerInteract(this, prop);
 
+                    var floorSavedKey = prop.PropInfo.Name.Replace("Controller_", "");
+                    var key = $"FSV_ML{floorSavedKey}{(config.TargetState == PropStateEnum.Open ? "Started":"Complete")}";
+                    if (SceneInstance?.FloorInfo?.SavedValues.Find(x => x.Name == key) != null)
+                    {
+                        // should save
+                        var plane = SceneInstance.PlaneId;
+                        var floor = SceneInstance.FloorId;
+                        SceneData!.FloorSavedData.TryGetValue(floor, out var value);
+                        if (value == null)
+                        {
+                            value = [];
+                            SceneData.FloorSavedData[floor] = value;
+                        }
+
+                        value[key] = 1;  // ParamString[2] is the key
+                        SendPacket(new PacketUpdateFloorSavedValueNotify(key, 1));
+
+                        TaskManager?.SceneTaskTrigger.TriggerFloor(plane, floor);
+                        MissionManager?.HandleFinishType(MissionFinishTypeEnum.FloorSavedValue);
+                    }
+
                     return prop;
                 }
             }
@@ -455,6 +477,7 @@ namespace EggLink.DanhengServer.Game.Player
             if (storyLineId != StoryLineManager?.StoryLineData.CurStoryLineId)
             {
                 StoryLineManager?.EnterStoryLine(storyLineId, entryId == 0);  // entryId == 0 -> teleport
+                mapTp = false;  // do not use mapTp when enter story line
             }
 
             GameData.MapEntranceData.TryGetValue(entryId, out var entrance);

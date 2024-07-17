@@ -31,7 +31,7 @@ namespace EggLink.DanhengServer.Game.Scene
             Scene.IsLoaded = true;
         }
 
-        public void SyncEntity()
+        public virtual void SyncEntity()
         {
             if (Scene.Excel.PlaneType == PlaneTypeEnum.Raid) return;
 
@@ -313,15 +313,21 @@ namespace EggLink.DanhengServer.Game.Scene
                 }
             }
 
+            if (group.GroupName.Contains("Machine"))
+            {
+                prop.SetState(PropStateEnum.Open);
+                Scene.AddEntity(prop, sendPacket);
+                return prop;
+            }
+
+            if (prop.PropInfo.Name.Contains("Case") && prop.PropInfo.State == PropStateEnum.Open)
+            {
+                prop.SetState(PropStateEnum.Closed);
+            }
+
             if (prop.PropInfo.PropID == 1003)
             {
                 if (prop.PropInfo.MappingInfoID == 2220)
-                {
-                    prop.SetState(PropStateEnum.Open);
-                    Scene.AddEntity(prop, sendPacket);
-                }
-
-                if (group.GroupName.Contains("Machine"))
                 {
                     prop.SetState(PropStateEnum.Open);
                     Scene.AddEntity(prop, sendPacket);

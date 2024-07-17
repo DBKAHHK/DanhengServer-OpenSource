@@ -7,6 +7,7 @@ using EggLink.DanhengServer.Enums.Item;
 using EggLink.DanhengServer.Game.Mission.FinishAction;
 using EggLink.DanhengServer.Game.Mission.FinishType;
 using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.HeartDial;
 using EggLink.DanhengServer.Plugin.Event;
 using EggLink.DanhengServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.Server.Packet.Send.Mission;
@@ -342,6 +343,16 @@ namespace EggLink.DanhengServer.Game.Mission
                 var list = Player.LineupManager!.GetCurLineup()!.BaseAvatars!.Select(x => x.SpecialAvatarId > 0 ? x.SpecialAvatarId / 10 : x.BaseAvatarId).ToList();
                 list[list.IndexOf(8001)] = Player.Data.CurrentGender == Proto.Gender.Man ? 1008003 : 1008004;
                 Player.LineupManager!.SetExtraLineup(Proto.ExtraLineupType.LineupHeliobus, list);
+            }
+
+            if (missionId == 103040103)
+            {
+                Player.SendPacket(new PacketHeartDialScriptChangeScNotify(Proto.HeartDialUnlockStatus.UnlockSingle));
+            }
+
+            if (missionId == 103040104)
+            {
+                Player.SendPacket(new PacketHeartDialScriptChangeScNotify(Proto.HeartDialUnlockStatus.UnlockAll));
             }
 
             // handle reward
