@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static HeartDialScriptInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlIZWFydERpYWxTY3JpcHRJbmZvLnByb3RvGhpIZWFydERpYWxFbW90aW9u",
-            "VHlwZS5wcm90bxoRS0FCQ0hQQkVKS0sucHJvdG8inwEKE0hlYXJ0RGlhbFNj",
-            "cmlwdEluZm8SEwoLRUtPQkZCRFBQTEcYASABKAgSEwoLR0xLRU1OREFIRUcY",
-            "BiABKAgSGgoEc3RlcBgMIAEoDjIMLktBQkNIUEJFSktLEhEKCXNjcmlwdF9p",
-            "ZBgEIAEoDRIvChBjdXJfZW1vdGlvbl90eXBlGA4gASgOMhUuSGVhcnREaWFs",
-            "RW1vdGlvblR5cGVCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
-            "cHJvdG8z"));
+            "ChlIZWFydERpYWxTY3JpcHRJbmZvLnByb3RvGhdIZWFydERpYWxTdGVwVHlw",
+            "ZS5wcm90bxoaSGVhcnREaWFsRW1vdGlvblR5cGUucHJvdG8ipQEKE0hlYXJ0",
+            "RGlhbFNjcmlwdEluZm8SEwoLRUtPQkZCRFBQTEcYASABKAgSEwoLR0xLRU1O",
+            "REFIRUcYBiABKAgSIAoEc3RlcBgMIAEoDjISLkhlYXJ0RGlhbFN0ZXBUeXBl",
+            "EhEKCXNjcmlwdF9pZBgEIAEoDRIvChBjdXJfZW1vdGlvbl90eXBlGA4gASgO",
+            "MhUuSGVhcnREaWFsRW1vdGlvblR5cGVCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeartDialEmotionTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.KABCHPBEJKKReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeartDialStepTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialEmotionTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeartDialScriptInfo), global::EggLink.DanhengServer.Proto.HeartDialScriptInfo.Parser, new[]{ "EKOBFBDPPLG", "GLKEMNDAHEG", "Step", "ScriptId", "CurEmotionType" }, null, null, null, null)
           }));
@@ -116,10 +116,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "step" field.</summary>
     public const int StepFieldNumber = 12;
-    private global::EggLink.DanhengServer.Proto.KABCHPBEJKK step_ = global::EggLink.DanhengServer.Proto.KABCHPBEJKK.HeartDialStepTypeMissing;
+    private global::EggLink.DanhengServer.Proto.HeartDialStepType step_ = global::EggLink.DanhengServer.Proto.HeartDialStepType.Missing;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.KABCHPBEJKK Step {
+    public global::EggLink.DanhengServer.Proto.HeartDialStepType Step {
       get { return step_; }
       set {
         step_ = value;
@@ -179,7 +179,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (EKOBFBDPPLG != false) hash ^= EKOBFBDPPLG.GetHashCode();
       if (GLKEMNDAHEG != false) hash ^= GLKEMNDAHEG.GetHashCode();
-      if (Step != global::EggLink.DanhengServer.Proto.KABCHPBEJKK.HeartDialStepTypeMissing) hash ^= Step.GetHashCode();
+      if (Step != global::EggLink.DanhengServer.Proto.HeartDialStepType.Missing) hash ^= Step.GetHashCode();
       if (ScriptId != 0) hash ^= ScriptId.GetHashCode();
       if (CurEmotionType != global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace) hash ^= CurEmotionType.GetHashCode();
       if (_unknownFields != null) {
@@ -212,7 +212,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteBool(GLKEMNDAHEG);
       }
-      if (Step != global::EggLink.DanhengServer.Proto.KABCHPBEJKK.HeartDialStepTypeMissing) {
+      if (Step != global::EggLink.DanhengServer.Proto.HeartDialStepType.Missing) {
         output.WriteRawTag(96);
         output.WriteEnum((int) Step);
       }
@@ -242,7 +242,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteBool(GLKEMNDAHEG);
       }
-      if (Step != global::EggLink.DanhengServer.Proto.KABCHPBEJKK.HeartDialStepTypeMissing) {
+      if (Step != global::EggLink.DanhengServer.Proto.HeartDialStepType.Missing) {
         output.WriteRawTag(96);
         output.WriteEnum((int) Step);
       }
@@ -266,7 +266,7 @@ namespace EggLink.DanhengServer.Proto {
       if (GLKEMNDAHEG != false) {
         size += 1 + 1;
       }
-      if (Step != global::EggLink.DanhengServer.Proto.KABCHPBEJKK.HeartDialStepTypeMissing) {
+      if (Step != global::EggLink.DanhengServer.Proto.HeartDialStepType.Missing) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Step);
       }
       if (ScriptId != 0) {
@@ -293,7 +293,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.GLKEMNDAHEG != false) {
         GLKEMNDAHEG = other.GLKEMNDAHEG;
       }
-      if (other.Step != global::EggLink.DanhengServer.Proto.KABCHPBEJKK.HeartDialStepTypeMissing) {
+      if (other.Step != global::EggLink.DanhengServer.Proto.HeartDialStepType.Missing) {
         Step = other.Step;
       }
       if (other.ScriptId != 0) {
@@ -330,7 +330,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 96: {
-            Step = (global::EggLink.DanhengServer.Proto.KABCHPBEJKK) input.ReadEnum();
+            Step = (global::EggLink.DanhengServer.Proto.HeartDialStepType) input.ReadEnum();
             break;
           }
           case 112: {
@@ -365,7 +365,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 96: {
-            Step = (global::EggLink.DanhengServer.Proto.KABCHPBEJKK) input.ReadEnum();
+            Step = (global::EggLink.DanhengServer.Proto.HeartDialStepType) input.ReadEnum();
             break;
           }
           case 112: {

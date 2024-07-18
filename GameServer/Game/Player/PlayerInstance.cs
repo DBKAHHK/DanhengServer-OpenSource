@@ -74,6 +74,7 @@ namespace EggLink.DanhengServer.Game.Player
         public PlayerData Data { get; set; } = data;
         public PlayerUnlockData? PlayerUnlockData { get; private set; }
         public SceneData? SceneData { get; private set; }
+        public HeartDialData? HeartDialData { get; private set; }
         public TutorialData? TutorialData { get; private set; }
         public TutorialGuideData? TutorialGuideData { get; private set; }
         public SceneInstance? SceneInstance { get; private set; }
@@ -139,6 +140,7 @@ namespace EggLink.DanhengServer.Game.Player
 
             PlayerUnlockData = InitializeDatabase<PlayerUnlockData>();
             SceneData = InitializeDatabase<SceneData>();
+            HeartDialData = InitializeDatabase<HeartDialData>();
             TutorialData = InitializeDatabase<TutorialData>();
             TutorialGuideData = InitializeDatabase<TutorialGuideData>();
 

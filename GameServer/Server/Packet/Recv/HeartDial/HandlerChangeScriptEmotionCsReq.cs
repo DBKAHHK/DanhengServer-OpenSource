@@ -17,6 +17,8 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.HeartDial
         {
             var req = ChangeScriptEmotionCsReq.Parser.ParseFrom(data);
 
+            connection.Player!.HeartDialData!.ChangeScriptEmotion((int)req.ScriptId, (Enums.Mission.HeartDialEmoTypeEnum)req.TargetEmotionType);
+
             connection.SendPacket(new PacketChangeScriptEmotionScRsp(req.ScriptId, req.TargetEmotionType));
         }
     }

@@ -32,6 +32,9 @@ namespace EggLink.DanhengServer.Data.Config
         [JsonIgnore]
         public LevelGraphConfigInfo? LevelGraphConfig { get; set; }
 
+        [JsonIgnore]
+        public Dictionary<string, List<int>> PropTriggerCustomString { get; set; } = [];
+
         public void Load()
         {
             foreach (var prop in PropList)

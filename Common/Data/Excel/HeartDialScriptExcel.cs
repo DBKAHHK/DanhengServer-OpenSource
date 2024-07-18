@@ -16,6 +16,12 @@ namespace EggLink.DanhengServer.Data.Excel
         [JsonConverter(typeof(StringEnumConverter))]
         public HeartDialEmoTypeEnum DefaultEmoType { get; set; } = HeartDialEmoTypeEnum.Peace;
 
+        [JsonProperty(ItemConverterType = typeof(StringEnumConverter))]
+        public List<HeartDialStepTypeEnum> StepList { get; set; } = [];
+
+        [JsonProperty(ItemConverterType = typeof(StringEnumConverter))]
+        public List<HeartDialEmoTypeEnum> MissingEmoList { get; set; } = [];
+
         public override int GetId()
         {
             return ScriptID;

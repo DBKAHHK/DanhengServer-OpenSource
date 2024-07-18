@@ -81,6 +81,31 @@ namespace EggLink.DanhengServer.GameServer.Game.Task
             }
         }
 
+        public void TriggerCustomString(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
+        {
+            if (act is TriggerCustomString triggerCustomString)
+            {
+                foreach (var groupInfo in Player.SceneInstance?.FloorInfo?.Groups ?? [])
+                {
+                    if (groupInfo.Value.PropTriggerCustomString.TryGetValue(triggerCustomString.CustomString.Value, out var list))
+                    {
+                        foreach (var id in list)
+                        {
+                            foreach (var entity in Player.SceneInstance?.Entities.Values.ToList() ?? [])
+                            {
+                                if (entity is EntityProp prop && prop.GroupID == groupInfo.Key && prop.InstId == id)
+                                {
+                                    prop.SetState(PropStateEnum.Closed);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                Player.MissionManager?.HandleFinishType(MissionFinishTypeEnum.PropState);
+            }
+        }
+
         public void EnterMap(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
         {
             if (act is EnterMap enterMap)

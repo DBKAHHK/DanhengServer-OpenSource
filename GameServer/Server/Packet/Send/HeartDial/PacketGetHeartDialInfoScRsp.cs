@@ -29,14 +29,28 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.HeartDial
                 proto.UnlockStatus = HeartDialUnlockStatus.UnlockAll;
             }
 
+            var heartDialData = player.HeartDialData!;
+
             foreach (var script in GameData.HeartDialScriptData.Values)
             {
-                proto.ScriptInfoList.Add(new HeartDialScriptInfo()
+                if (heartDialData.DialList.TryGetValue(script.ScriptID, out var info))
                 {
-                    ScriptId = (uint)script.ScriptID,
-                    CurEmotionType = (HeartDialEmotionType)script.DefaultEmoType,
-                    Step = KABCHPBEJKK.HeartDialStepTypeNormal
-                });
+                    proto.ScriptInfoList.Add(new HeartDialScriptInfo()
+                    {
+                        ScriptId = (uint)script.ScriptID,
+                        CurEmotionType = (HeartDialEmotionType)info.EmoType,
+                        Step = (HeartDialStepType)info.StepType
+                    });
+                } 
+                else
+                {
+                    proto.ScriptInfoList.Add(new HeartDialScriptInfo()
+                    {
+                        ScriptId = (uint)script.ScriptID,
+                        CurEmotionType = (HeartDialEmotionType)script.DefaultEmoType,
+                        Step = (HeartDialStepType)script.StepList.First()
+                    });
+                }
 
             }
             foreach (var id in GameData.HeartDialDialogueData.Keys)
