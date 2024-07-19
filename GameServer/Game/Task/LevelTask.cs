@@ -222,13 +222,15 @@ namespace EggLink.DanhengServer.GameServer.Game.Task
         {
             if (subMission.SubMissionInfo?.FinishType == MissionFinishTypeEnum.GetTrialAvatar)
             {
-                Player.LineupManager!.GetCurLineup()?.BaseAvatars?.ForEach(x => Player.LineupManager!.RemoveAvatarFromCurTeam(x.BaseAvatarId, false));
+                var ids = Player.LineupManager!.GetCurLineup()?.BaseAvatars?.ToList() ?? [];
+                ids.ForEach(x => Player.LineupManager!.RemoveAvatarFromCurTeam(x.BaseAvatarId, false));
                 Player.LineupManager!.AddAvatarToCurTeam(subMission.SubMissionInfo.ParamInt1);
             }
 
             if (subMission.SubMissionInfo?.FinishType == MissionFinishTypeEnum.GetTrialAvatarList)
             {
-                Player.LineupManager!.GetCurLineup()?.BaseAvatars?.ForEach(x => Player.LineupManager!.RemoveAvatarFromCurTeam(x.BaseAvatarId, false));
+                var ids = Player.LineupManager!.GetCurLineup()?.BaseAvatars?.ToList() ?? [];
+                ids.ForEach(x => Player.LineupManager!.RemoveAvatarFromCurTeam(x.BaseAvatarId, false));
                 subMission.SubMissionInfo.ParamIntList?.ForEach(x => Player.LineupManager!.AddAvatarToCurTeam(x));
             }
         }
@@ -242,13 +244,15 @@ namespace EggLink.DanhengServer.GameServer.Game.Task
 
             if (subMission.SubMissionInfo?.FinishType == MissionFinishTypeEnum.GetTrialAvatar)
             {
-                Player.LineupManager!.GetCurLineup()?.BaseAvatars?.ForEach(x => Player.LineupManager!.RemoveAvatarFromCurTeam(x.BaseAvatarId, false));
+                var ids = Player.LineupManager!.GetCurLineup()?.BaseAvatars?.ToList() ?? [];
+                ids.ForEach(x => Player.LineupManager!.RemoveAvatarFromCurTeam(x.BaseAvatarId, false)); ;
                 Player.LineupManager!.AddAvatarToCurTeam(subMission.SubMissionInfo.ParamInt1);
             }
 
             if (subMission.SubMissionInfo?.FinishType == MissionFinishTypeEnum.GetTrialAvatarList)
             {
-                Player.LineupManager!.GetCurLineup()?.BaseAvatars?.ForEach(x => Player.LineupManager!.RemoveAvatarFromCurTeam(x.BaseAvatarId, false));
+                var ids = Player.LineupManager!.GetCurLineup()?.BaseAvatars?.ToList() ?? [];
+                ids.ForEach(x => Player.LineupManager!.RemoveAvatarFromCurTeam(x.BaseAvatarId, false));
                 subMission.SubMissionInfo.ParamIntList?.ForEach(x => Player.LineupManager!.AddAvatarToCurTeam(x));
             }
         }
