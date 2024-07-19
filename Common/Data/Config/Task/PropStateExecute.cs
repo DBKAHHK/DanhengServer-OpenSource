@@ -14,7 +14,7 @@ namespace EggLink.DanhengServer.Data.Config.Task
     {
         public TargetEvaluator TargetType { get; set; } = new();
         [JsonConverter(typeof(StringEnumConverter))]
-        public PropStateEnum PropState { get; set; } = PropStateEnum.Closed;
+        public PropStateEnum State { get; set; } = PropStateEnum.Closed;
         public List<TaskConfigInfo> Execute { get; set; } = [];
 
         public static new TaskConfigInfo LoadFromJsonObject(JObject obj)
@@ -30,9 +30,9 @@ namespace EggLink.DanhengServer.Data.Config.Task
                 info.TargetType = (targetType!.ToObject(classType!) as TargetEvaluator)!;
             }
 
-            if (obj.ContainsKey(nameof(PropState)))
+            if (obj.ContainsKey(nameof(State)))
             {
-                info.PropState = obj[nameof(PropState)]?.ToObject<PropStateEnum>() ?? PropStateEnum.Closed;
+                info.State = obj[nameof(State)]?.ToObject<PropStateEnum>() ?? PropStateEnum.Closed;
             }
 
             foreach (var item in obj[nameof(Execute)]?.Select(x => TaskConfigInfo.LoadFromJsonObject((x as JObject)!)) ?? [])

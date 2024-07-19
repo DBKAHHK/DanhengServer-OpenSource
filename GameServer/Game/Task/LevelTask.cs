@@ -392,7 +392,7 @@ namespace EggLink.DanhengServer.GameServer.Game.Task
                     var resp = method.Invoke(this, [propStateExecute.TargetType, subMission, group]);
                     if (resp is EntityProp result && result != null)
                     {
-                        result.SetState(propStateExecute.PropState);
+                        result.SetState(propStateExecute.State);
                     }
                 }
             }
