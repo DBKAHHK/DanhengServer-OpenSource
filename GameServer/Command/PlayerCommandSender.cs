@@ -18,7 +18,7 @@ namespace EggLink.DanhengServer.GameServer.Command
 
         public void SendMsg(string msg)
         {
-            Player.SendPacket(new PacketRevcMsgScNotify(toUid: (uint)Player.Uid, fromUid: (uint)ConfigManager.Config.ServerOption.ServerProfile.Uid, msg));
+            Player.SendPacket(new PacketRevcMsgScNotify(toUid: (uint)Player.Uid, fromUid: (uint)ConfigManager.Config.ServerOption.ServerProfile.Uid, msg.Replace("\n", "    ")));
         }
 
         public bool HasPermission(string permission)

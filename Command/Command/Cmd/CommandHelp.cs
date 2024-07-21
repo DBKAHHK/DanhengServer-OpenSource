@@ -19,9 +19,15 @@ namespace EggLink.DanhengServer.Command.Cmd
             {
                 return;
             }
+
             foreach (var command in commands)
             {
-                arg.SendMsg($"/{command.Name} - {I18nManager.Translate(command.Description)}\n{I18nManager.Translate("Game.Command.Help.CommandUsage")} {I18nManager.Translate(command.Usage)}");
+                var msg = $"/{command.Name} - {I18nManager.Translate(command.Description)}\n\n{I18nManager.Translate(command.Usage)}";
+                if (command.Permission != "")
+                {
+                    msg += $"\n\n{I18nManager.Translate("Game.Command.Help.CommandPermission")} {command.Permission}";
+                }
+                arg.SendMsg(msg);
             }
         }
     }

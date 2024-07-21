@@ -89,7 +89,7 @@ namespace EggLink.DanhengServer.Command
                     }
                 } else
                 {
-                    // player
+                    // player 
                     tempTarget = Listener.GetActiveConnection(sender.GetSender());
                     if (tempTarget == null)
                     {
@@ -110,6 +110,13 @@ namespace EggLink.DanhengServer.Command
                     split.RemoveAt(0);
 
                     var arg = new CommandArg(split.JoinFormat(" ", ""), sender, tempTarget);
+
+                    // judge permission
+                    if (arg.Target?.Player?.Uid != sender.GetSender() && !sender.HasPermission("command.others"))
+                    {
+                        sender.SendMsg(I18nManager.Translate("Game.Command.Notice.NoPermission"));
+                        return;
+                    }
                     // find the proper method with attribute CommandMethod
                     var isFound = false;
                     CommandInfo info = CommandInfo[cmd];
@@ -164,7 +171,7 @@ namespace EggLink.DanhengServer.Command
                         {
                             if (info != null)
                             {
-                                sender.SendMsg(I18nManager.Translate("Game.Command.Help.CommandUsage") + I18nManager.Translate(info.Usage));
+                                sender.SendMsg(I18nManager.Translate(info.Usage));
                             }
                             else
                             {

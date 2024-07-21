@@ -4,6 +4,7 @@ using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Enums.Item;
 using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Others;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Server.Packet.Send.Avatar;
 using EggLink.DanhengServer.Server.Packet.Send.Player;
@@ -64,6 +65,11 @@ namespace EggLink.DanhengServer.Game.Inventory
             switch (itemConfig.ItemMainType)
             {
                 case ItemMainTypeEnum.Equipment:
+                    if (Data.RelicItems.Count + 1 > GameConstants.INVENTORY_MAX_EQUIPMENT)  // get the max equipment
+                    {
+                        Player.SendPacket(new PacketRetcodeNotify(Retcode.RetEquipmentExceedLimit));
+                        break;
+                    }
                     itemData = PutItem(itemId, 1, rank: rank, level: level, uniqueId: ++Data.NextUniqueId);
                     break;
                 case ItemMainTypeEnum.Usable:
@@ -90,6 +96,11 @@ namespace EggLink.DanhengServer.Game.Inventory
                     };
                     break;
                 case ItemMainTypeEnum.Relic:
+                    if (Data.RelicItems.Count + 1 > GameConstants.INVENTORY_MAX_RELIC)  // get the max relic, i dont think one player can have more than max count of relic until i see a player get 50000 relic and the client crashed :(
+                    {
+                        Player.SendPacket(new PacketRetcodeNotify(Retcode.RetRelicExceedLimit));
+                        break;
+                    }
                     var item = PutItem(itemId, 1, rank: 1, level: 0, uniqueId: ++Data.NextUniqueId);
                     item.AddRandomRelicMainAffix();
                     item.AddRandomRelicSubAffix(3);
@@ -217,9 +228,19 @@ namespace EggLink.DanhengServer.Game.Inventory
                     Data.MaterialItems.Add(item);
                     break;
                 case ItemMainTypeEnum.Equipment:
+                    if (Data.RelicItems.Count + 1 > GameConstants.INVENTORY_MAX_EQUIPMENT)
+                    {
+                        Player.SendPacket(new PacketRetcodeNotify(Retcode.RetEquipmentExceedLimit));
+                        return item;
+                    }
                     Data.EquipmentItems.Add(item);
                     break;
                 case ItemMainTypeEnum.Relic:
+                    if (Data.RelicItems.Count + 1 > GameConstants.INVENTORY_MAX_RELIC)
+                    {
+                        Player.SendPacket(new PacketRetcodeNotify(Retcode.RetRelicExceedLimit));
+                        return item;
+                    }
                     Data.RelicItems.Add(item);
                     break;
             }

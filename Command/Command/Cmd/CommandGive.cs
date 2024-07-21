@@ -8,7 +8,7 @@ using Org.BouncyCastle.Ocsp;
 
 namespace EggLink.DanhengServer.Command.Cmd
 {
-    [CommandInfo("give", "Give item to player", "give <item> l<level> x<amount> r<rank>")]
+    [CommandInfo("give", "Game.Command.Give.Desc", "Game.Command.Give.Usage")]
     public class CommandGive : ICommand
     {
         [CommandDefault]

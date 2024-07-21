@@ -34,6 +34,9 @@ namespace EggLink.DanhengServer.Handbook
 
             var builder = new StringBuilder();
             builder.AppendLine("Handbook generated in " + DateTime.Now.ToString("yyyy/MM/dd HH:mm"));
+            builder.AppendLine();
+            builder.AppendLine("#Command");
+            builder.AppendLine();
             GenerateCmd(builder);
 
             builder.AppendLine();
@@ -83,10 +86,9 @@ namespace EggLink.DanhengServer.Handbook
         {
             foreach (var cmd in EntryPoint.CommandManager.CommandInfo)
             {
-                builder.Append("Command: " + cmd.Key);
-                builder.Append(" --- Description: " + I18nManager.Translate(cmd.Value.Description));
-                builder.Append(" --- Usage: " + I18nManager.Translate(cmd.Value.Usage));
-                builder.AppendLine();
+                builder.Append("\t" + cmd.Key);
+                var desc = I18nManager.Translate(cmd.Value.Description).Replace("\n", "\n\t\t");
+                builder.AppendLine(": " + desc);
             }
         }
 

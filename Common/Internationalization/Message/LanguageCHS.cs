@@ -183,8 +183,8 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// </summary>
     public class HeroTextCHS
     {
-        public string Desc { get; } = "切换主角的性别/形态";
-        public string Usage { get; } = "/hero <gender [1/2 - 1为男性,2为女性]>/<type [8001/8003/8005 - 分别为 毁灭 存护 同谐]>";
+        public string Desc { get; } = "切换主角的性别/形态\n当切换性别时，genderId为1代表男性，2代表女性\n当切换形态时，8001代表毁灭命途，8003代表存护命途，8005代表同谐命途。\n注意，切换性别时会清空所有可选命途以及行迹，为不可逆操作！";
+        public string Usage { get; } = "用法：/hero gender [genderId]\n\n用法：/hero type [typeId]";
         public string GenderNotSpecified { get; } = "性别不存在!";
         public string HeroTypeNotSpecified { get; } = "主角类型不存在!";
         public string GenderChanged { get; } = "性别已更改!";
@@ -196,8 +196,9 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// </summary>
     public class UnlockAllTextCHS
     {
-        public string Desc { get; } = "解锁所有在类别内的对象";
-        public string Usage { get; } = "/unlockall <mission - mission为任务>";
+        public string Desc { get; } = "解锁所有在类别内的对象\n" +
+            "使用 /unlockall mission 以完成所有任务，使用后会被踢出，重新登录后可能会被教程卡住，请谨慎使用";
+        public string Usage { get; } = "用法：/unlockall mission";
         public string AllMissionsUnlocked { get; } = "所有任务已解锁!";
     }
 
@@ -206,9 +207,9 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// </summary>
     public class AvatarTextCHS
     {
-        public string Desc { get; } = "设定玩家已有角色的属性";
-        public string Usage { get; } = "/avatar <talent [角色ID/-1] [行迹等级] - 设置行迹等级 角色ID为-1意为所有拥有角色>/<get [角色ID] - 获取角色>/<rank [角色ID/-1] [星魂]>/<level [角色ID/-1] [角色等级]>";
-        public string InvalidLevel { get; } = "无效 {0}等级";
+        public string Desc { get; } = "设定玩家已有角色的属性\n设置行迹等级时，设置X级即设置所有行迹节点至X级，若大于此节点允许的最高等级，设置为最高等级\n注意：-1意为所有已拥有角色";
+        public string Usage { get; } = "用法：/avatar talent [角色ID/-1] [行迹等级]\n\n用法：/avatar get [角色ID]\n\n用法：/avatar rank [角色ID/-1] [星魂]\n\n用法：/avatar level [角色ID/-1] [角色等级]";
+        public string InvalidLevel { get; } = "{0}等级无效";
         public string AllAvatarsLevelSet { get; } = "已将全部角色 {0}等级设置为 {1}";
         public string AvatarLevelSet { get; } = "已将 {0} 角色 {1}等级设置为 {2}";
         public string AvatarNotFound { get; } = "角色不存在!";
@@ -221,8 +222,8 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// </summary>
     public class GiveTextCHS
     {
-        public string Desc { get; } = "给予玩家物品";
-        public string Usage { get; } = "/give <物品ID> l<等级> x<数量> r<叠影>";
+        public string Desc { get; } = "给予玩家物品，此处可输入角色ID，但无法设置行迹、等级及星魂";
+        public string Usage { get; } = "用法：/give <物品ID> l<等级> x<数量> r<叠影>";
         public string ItemNotFound { get; } = "未找到物品!";
         public string GiveItem { get; } = "给予 @{0} {1} 个物品 {2}";
     }
@@ -232,8 +233,8 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// </summary>
     public class GiveAllTextCHS
     {
-        public string Desc { get; } = "给予玩家全部指定类型的物品";
-        public string Usage { get; } = "/giveall <avatar - 角色/equipment - 光锥/relic - 遗器/unlock - 气泡等奢侈品> r<叠影> l<等级> x<数量>";
+        public string Desc { get; } = "给予玩家全部指定类型的物品\navatar意为角色，equipment意为光锥，relic意为遗器，unlock意为气泡、手机壁纸、头像";
+        public string Usage { get; } = "用法：/giveall avatar r<星魂> l<等级>\n\n用法：/giveall equipment r<叠影> l<等级> x<数量>\n\n用法：/giveall relic l<等级> x<数量>\n\n用法：/giveall unlock";
         public string GiveAllItems { get; } = "已给予所有 {0}, 各 {1} 个";
     }
 
@@ -242,8 +243,8 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// </summary>
     public class LineupTextCHS
     {
-        public string Desc { get; } = "管理玩家的队伍";
-        public string Usage { get; } = "/lineup <mp [秘技点数量 - 最高两个]>/<heal - 治愈>";
+        public string Desc { get; } = "管理玩家的队伍\n秘技点一次性只能获得两个";
+        public string Usage { get; } = "用法：/lineup mp [秘技点数量]\n\n用法：/lineup heal";
         public string PlayerGainedMp { get; } = "玩家已获得 {0} 秘技点";
         public string HealedAllAvatars { get; } = "成功治愈当前队伍中的所有角色";
     }
@@ -254,9 +255,9 @@ namespace EggLink.DanhengServer.Internationalization.Message
     public class HelpTextCHS
     {
         public string Desc { get; } = "显示帮助信息";
-        public string Usage { get; } = "/help";
+        public string Usage { get; } = "用法：/help";
         public string Commands { get; } = "命令:";
-        public string CommandUsage { get; } = "用法: ";
+        public string CommandPermission { get; } = "所需权限: ";
     }
 
     /// <summary>
@@ -265,7 +266,7 @@ namespace EggLink.DanhengServer.Internationalization.Message
     public class KickTextCHS
     {
         public string Desc { get; } = "踢出玩家";
-        public string Usage { get; } = "/kick";
+        public string Usage { get; } = "用法：/kick";
         public string PlayerKicked { get; } = "玩家 {0} 已被踢出!";
     }
 
@@ -274,8 +275,11 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// </summary>
     public class MissionTextCHS
     {
-        public string Desc { get; } = "管理玩家的任务";
-        public string Usage { get; } = "/mission <unlockall - 完成所有任务>/<pass - 完成所有正在进行的任务>/<finish [副任务ID] - 完成指定任务>/<running - 获取正在进行的任务以及可能卡住的任务>/<reaccept [主任务ID] - 重新进行指定主任务>";
+        public string Desc { get; } = "管理玩家的任务\n" +
+            "使用 pass 完成当前正在进行的所有任务，此命令易造成严重卡顿，请尽量使用 /mission finish 替代\n" +
+            "使用 running 获取正在进行的任务以及可能卡住的任务，使用后可能会出现较长任务列表，请注意甄别\n" +
+            "使用 reaccept 可重新进行指定主任务，请浏览 handbook 来获取主任务ID";
+        public string Usage { get; } = "用法：/mission pass\n\n用法：/mission finish [子任务ID]\n\n用法：/mission running\n\n用法：/mission reaccept [主任务ID]";
         public string AllMissionsFinished { get; } = "所有任务已完成!";
         public string AllRunningMissionsFinished { get; } = "共 {0} 个进行中的任务已完成!";
         public string MissionFinished { get; } = "任务 {0} 已完成!";
@@ -294,8 +298,8 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// </summary>
     public class RelicTextCHS
     {
-        public string Desc { get; } = "管理玩家的遗器";
-        public string Usage { get; } = "/relic <遗器ID> <主词条ID> <小词条ID1:小词条等级> <小词条ID2:小词条等级> <小词条ID3:小词条等级> <小词条ID4:小词条等级> l<等级> x<数量>";
+        public string Desc { get; } = "管理玩家的遗器\n主词条可选，副词条可选，但至少存在其中之一\n等级限制：1≤等级≤9999";
+        public string Usage { get; } = "用法：/relic <遗器ID> <主词条ID> <小词条ID1:小词条等级> <小词条ID2:小词条等级> <小词条ID3:小词条等级> <小词条ID4:小词条等级> l<等级> x<数量>";
         public string RelicNotFound { get; } = "遗器不存在!";
         public string InvalidMainAffixId { get; } = "主词条ID无效";
         public string InvalidSubAffixId { get; } = "副词条ID无效";
@@ -307,8 +311,8 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// </summary>
     public class ReloadTextCHS
     {
-        public string Desc { get; } = "重新加载指定的配置";
-        public string Usage { get; } = "/reload <配置名>(banner - 卡池, activity - 活动)";
+        public string Desc { get; } = "重新加载指定的配置\n配置名：banner - 卡池, activity - 活动";
+        public string Usage { get; } = "用法：/reload <配置名>";
         public string ConfigReloaded { get; } = "配置 {0} 已重新加载!";
     }
 
@@ -317,8 +321,8 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// </summary>
     public class RogueTextCHS
     {
-        public string Desc { get; } = "管理玩家模拟宇宙中的数据";
-        public string Usage { get; } = "/rogue <money [宇宙碎片数量]>/<buff [祝福ID/-1 (-1 - 全部祝福)]>/<miracle [奇物ID]>/<enhance [祝福ID/-1]>/<unstuck - 脱离事件>";
+        public string Desc { get; } = "管理玩家模拟宇宙中的数据\n-1意为所有祝福（已拥有祝福）\n使用 buff 来获取祝福\n使用 enhance 来强化祝福";
+        public string Usage { get; } = "用法：/rogue money [宇宙碎片数量]\n\n用法：/rogue buff [祝福ID/-1]\n\n用法：/rogue miracle [奇物ID]\n\n用法：/rogue enhance [祝福ID/-1]\n\n用法：/rogue unstuck - 脱离事件";
         public string PlayerGainedMoney { get; } = "玩家已获得 {0} 宇宙碎片";
         public string PlayerGainedAllItems { get; } = "玩家已获得所有{0}";
         public string PlayerGainedItem { get; } = "玩家已获得{0} {1}";
@@ -333,8 +337,14 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// </summary>
     public class SceneTextCHS
     {
-        public string Desc { get; } = "管理玩家场景";
-        public string Usage { get; } = "/scene <prop [组ID] [道具ID] [状态] - 设置道具状态>/<remove [实体ID] - 移除实体>/<unlockall - 解锁所有道具>/<change [场景entranceId] - 进入指定场景>/<reload - 重新进入场景>";
+        public string Desc { get; } = "管理玩家场景\n" +
+            "提示：此组大多为调试使用，使用命令前，请确保你清楚你在做什么！\n" +
+            "使用 prop 来设置道具状态，在Common/Enums/Scene/PropStateEnum.cs获取状态列表\n" + 
+            "使用 unlockall 来解锁场景内所有道具（即将所有能设置为open状态的道具设置为open状态），此命令有较大可能会导致游戏加载卡条约90%，使用 /scene reset <floorId> 来解决问题\n" + 
+            "使用 change 来进入指定场景，要获取EntryId，请访问 Resources/MapEntrance.json\n" + 
+            "使用 reload 来重新加载当前场景，并回到初始位置\n" +
+            "使用 reset 来重置指定场景所有道具状态，要获取当前FloorId，请访问数据库 Player 表";
+        public string Usage { get; } = "用法：/scene prop [组ID] [道具ID] [状态]\n\n用法：/scene remove [实体ID]\n\n用法：/scene unlockall\n\n用法：/scene change [entryId]\n\n用法：/scene reload\n\n用法：/scene reset <floorId>";
         public string LoadedGroups { get; } = "已加载组: {0}";
         public string PropStateChanged { get; } = "道具: {0} 的状态已设置为 {1}";
         public string PropNotFound { get; } = "未找到道具!";
@@ -352,7 +362,7 @@ namespace EggLink.DanhengServer.Internationalization.Message
     public class MailTextCHS
     {
         public string Desc { get; } = "管理玩家的邮件";
-        public string Usage { get; } = "/mail <send [发送名称] [标题] [内容] [模板ID] [过期天数] - 发送邮件>/<send [发送者] [标题] [内容] [模板ID] [过期天数] [附件] - 发送带附件的邮件>";
+        public string Usage { get; } = "用法：/mail send [发送名称] [标题] [内容] [模板ID] [过期天数]";
         public string MailSent { get; } = "邮件已发送!";
         public string MailSentWithAttachment { get; } = "带附件的邮件已发送!";
     }
@@ -363,7 +373,7 @@ namespace EggLink.DanhengServer.Internationalization.Message
     public class RaidTextCHS
     {
         public string Desc { get; } = "管理玩家的任务临时场景";
-        public string Usage { get; } = "/raid <leave - 离开临时场景>";
+        public string Usage { get; } = "用法：/raid leave - 离开临时场景";
         public string Leaved { get; } = "已离开临时场景!";
     }
     /// <summary>
@@ -371,9 +381,9 @@ namespace EggLink.DanhengServer.Internationalization.Message
     /// </summary>
     public class AccountTextCHS
     {
-        public string Desc { get; } = "创建账号";
-        public string Usage { get; } = "/account create  <用户名>";
-        public string InvalidUid { get; } = "无效UID参数！ ";
+        public string Desc { get; } = "创建账号\n注意：此命令未经测试，请谨慎使用！";
+        public string Usage { get; } = "用法：/account create <用户名>";
+        public string InvalidUid { get; } = "无效UID参数！";
         public string CreateError { get; } = "出现内部错误 {0} ";
         public string CreateSuccess { get; } = "新账号 {0} 创建成功!";
         public string DuplicateAccount { get; } = "账号 {0} 已存在!";

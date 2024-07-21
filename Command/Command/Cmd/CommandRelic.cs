@@ -59,7 +59,7 @@ namespace EggLink.DanhengServer.Command.Cmd
             int mainAffixId;
             if (arg.BasicArgs[1].Contains(':'))
             {
-                // 随机主词条
+                // random main affix
                 mainAffixId = mainAffixConfig.Keys.ToList().RandomElement();
             }
             else
@@ -91,9 +91,10 @@ namespace EggLink.DanhengServer.Command.Cmd
                 subAffixes.Add((subId, subLevel));
                 remainLevel -= subLevel - 1;
             }
+
             if (subAffixes.Count < 4)
             {
-                // 随机副词条
+                // random sub affix
                 var subAffixGroup = itemConfig.SubAffixGroup;
                 var subAffixGroupConfig = GameData.RelicSubAffixData[subAffixGroup];
                 var subAffixGroupKeys = subAffixGroupConfig.Keys.ToList();
