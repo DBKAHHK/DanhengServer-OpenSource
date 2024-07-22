@@ -1,13 +1,12 @@
 ﻿using EggLink.DanhengServer.Server.Packet.Send.Scene;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Scene
+namespace EggLink.DanhengServer.Server.Packet.Recv.Scene;
+
+[Opcode(CmdIds.GetEnteredSceneCsReq)]
+public class HandlerGetEnteredSceneCsReq : Handler
 {
-    [Opcode(CmdIds.GetEnteredSceneCsReq)]
-    public class HandlerGetEnteredSceneCsReq : Handler
+    public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
-        public override void OnHandle(Connection connection, byte[] header, byte[] data)
-        {
-            connection.SendPacket(new PacketGetEnteredSceneScRsp());
-        }
+        await connection.SendPacket(new PacketGetEnteredSceneScRsp());
     }
 }

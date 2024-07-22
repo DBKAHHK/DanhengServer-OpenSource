@@ -1,31 +1,22 @@
 ﻿using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Others
+namespace EggLink.DanhengServer.Server.Packet.Send.Others;
+
+public class PacketServerAnnounceNotify : BasePacket
 {
-    public class PacketServerAnnounceNotify : BasePacket
+    public PacketServerAnnounceNotify() : base(CmdIds.ServerAnnounceNotify)
     {
-        public PacketServerAnnounceNotify() : base(CmdIds.ServerAnnounceNotify)
+        var proto = new ServerAnnounceNotify();
+
+        proto.AnnounceDataList.Add(new AnnounceData
         {
-            var proto = new ServerAnnounceNotify();
+            BeginTime = Extensions.GetUnixSec(),
+            EndTime = Extensions.GetUnixSec() + 3600,
+            ConfigId = 1,
+            CHJPFPLHJBJ = ConfigManager.Config.ServerOption.ServerAnnounce.AnnounceContent
+        });
 
-            proto.AnnounceDataList.Add(new AnnounceData()
-            {
-                BeginTime = Extensions.GetUnixSec(),
-                EndTime = Extensions.GetUnixSec() + 3600,
-                ConfigId = 1,
-                CHJPFPLHJBJ = ConfigManager.Config.ServerOption.ServerAnnounce.AnnounceContent,
-            });
-
-            if (ConfigManager.Config.ServerOption.ServerAnnounce.EnableAnnounce)
-            {
-                SetData(proto);
-            }
-        }
+        if (ConfigManager.Config.ServerOption.ServerAnnounce.EnableAnnounce) SetData(proto);
     }
 }

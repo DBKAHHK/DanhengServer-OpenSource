@@ -1,18 +1,12 @@
 ﻿using EggLink.DanhengServer.Server.Packet.Send.Player;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Player
+namespace EggLink.DanhengServer.Server.Packet.Recv.Player;
+
+[Opcode(CmdIds.GetJukeboxDataCsReq)]
+public class HandlerGetJukeboxDataCsReq : Handler
 {
-    [Opcode(CmdIds.GetJukeboxDataCsReq)]
-    public class HandlerGetJukeboxDataCsReq : Handler
-    { 
-        public override void OnHandle(Connection connection, byte[] header, byte[] data)
-        {
-            connection.SendPacket(new PacketGetJukeboxDataScRsp(connection.Player!));
-        }
+    public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
+    {
+        await connection.SendPacket(new PacketGetJukeboxDataScRsp(connection.Player!));
     }
 }

@@ -1,22 +1,20 @@
 ﻿using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Scene
+namespace EggLink.DanhengServer.Server.Packet.Send.Scene;
+
+public class PacketGetFirstTalkByPerformanceNpcScRsp : BasePacket
 {
-    public class PacketGetFirstTalkByPerformanceNpcScRsp : BasePacket
-    { 
-        public PacketGetFirstTalkByPerformanceNpcScRsp(GetFirstTalkByPerformanceNpcCsReq req) : base(CmdIds.GetFirstTalkByPerformanceNpcScRsp)
-        {
-            var rsp = new GetFirstTalkByPerformanceNpcScRsp();
+    public PacketGetFirstTalkByPerformanceNpcScRsp(GetFirstTalkByPerformanceNpcCsReq req) : base(
+        CmdIds.GetFirstTalkByPerformanceNpcScRsp)
+    {
+        var rsp = new GetFirstTalkByPerformanceNpcScRsp();
 
-            foreach (var id in req.FirstTalkIdList)
+        foreach (var id in req.FirstTalkIdList)
+            rsp.NpcMeetStatusList.Add(new NpcMeetStatusInfo
             {
-                rsp.NpcMeetStatusList.Add(new NpcMeetStatusInfo
-                {
-                    MeetId = id,
-                });
-            }
+                MeetId = id
+            });
 
-            SetData(rsp);
-        }
+        SetData(rsp);
     }
 }

@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace EggLink.DanhengServer.Server.Packet.Recv.Player;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Player
+[Opcode(CmdIds.PlayerLogoutCsReq)]
+public class HandlerPlayerLogoutCsReq : Handler
 {
-    [Opcode(CmdIds.PlayerLogoutCsReq)]
-    public class HandlerPlayerLogoutCsReq : Handler
+    public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
-        public override void OnHandle(Connection connection, byte[] header, byte[] data)
-        {
-            connection.SendPacket(CmdIds.PlayerLogoutScRsp);
-            connection.Stop();
-        }
+        await connection.SendPacket(CmdIds.PlayerLogoutScRsp);
+        connection.Stop();
     }
 }

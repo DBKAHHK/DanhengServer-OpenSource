@@ -1,8 +1,7 @@
-﻿namespace EggLink.DanhengServer.KcpSharp
+﻿namespace EggLink.DanhengServer.KcpSharp;
+
+internal interface IKcpConversationUpdateNotificationSource
 {
-    internal interface IKcpConversationUpdateNotificationSource
-    {
-        ReadOnlyMemory<byte> Packet { get; }
-        void Release();
-    }
+    ReadOnlyMemory<byte> Packet { get; }
+    void Release();
 }

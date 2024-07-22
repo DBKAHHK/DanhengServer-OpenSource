@@ -1,21 +1,15 @@
 ﻿using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Server.Packet.Send.Shop;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Shop
+namespace EggLink.DanhengServer.Server.Packet.Recv.Shop;
+
+[Opcode(CmdIds.GetRollShopInfoCsReq)]
+public class HandlerGetRollShopInfoCsReq : Handler
 {
-    [Opcode(CmdIds.GetRollShopInfoCsReq)]
-    public class HandlerGetRollShopInfoCsReq : Handler
+    public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
-        public override void OnHandle(Connection connection, byte[] header, byte[] data)
-        {
-            var req = GetRollShopInfoCsReq.Parser.ParseFrom(data);
+        var req = GetRollShopInfoCsReq.Parser.ParseFrom(data);
 
-            connection.SendPacket(new PacketGetRollShopInfoScRsp(req.RollShopId));
-        }
+        await connection.SendPacket(new PacketGetRollShopInfoScRsp(req.RollShopId));
     }
 }

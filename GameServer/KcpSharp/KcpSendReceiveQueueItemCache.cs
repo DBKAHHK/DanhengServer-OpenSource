@@ -1,84 +1,75 @@
-﻿
-#if NEED_LINKEDLIST_SHIM
+﻿#if NEED_LINKEDLIST_SHIM
 using LinkedListOfQueueItem = KcpSharp.NetstandardShim.LinkedList<(KcpSharp.KcpBuffer Data, byte Fragment)>;
 using LinkedListNodeOfQueueItem = KcpSharp.NetstandardShim.LinkedListNode<(KcpSharp.KcpBuffer Data, byte Fragment)>;
 #else
-using LinkedListNodeOfQueueItem = System.Collections.Generic.LinkedListNode<(EggLink.DanhengServer.KcpSharp.KcpBuffer Data, byte Fragment)>;
-using LinkedListOfQueueItem = System.Collections.Generic.LinkedList<(EggLink.DanhengServer.KcpSharp.KcpBuffer Data, byte Fragment)>;
+using LinkedListNodeOfQueueItem =
+    System.Collections.Generic.LinkedListNode<(EggLink.DanhengServer.KcpSharp.KcpBuffer Data, byte Fragment)>;
+using LinkedListOfQueueItem =
+    System.Collections.Generic.LinkedList<(EggLink.DanhengServer.KcpSharp.KcpBuffer Data, byte Fragment)>;
 #endif
 
-namespace EggLink.DanhengServer.KcpSharp
+namespace EggLink.DanhengServer.KcpSharp;
+
+internal sealed class KcpSendReceiveQueueItemCache
 {
-    internal sealed class KcpSendReceiveQueueItemCache
+    private readonly LinkedListOfQueueItem _list = new();
+    private SpinLock _lock;
+
+    public LinkedListNodeOfQueueItem Rent(in KcpBuffer buffer, byte fragment)
     {
-        private LinkedListOfQueueItem _list = new();
-        private SpinLock _lock;
-
-        public LinkedListNodeOfQueueItem Rent(in KcpBuffer buffer, byte fragment)
+        var lockTaken = false;
+        try
         {
-            bool lockTaken = false;
-            try
-            {
-                _lock.Enter(ref lockTaken);
+            _lock.Enter(ref lockTaken);
 
-                LinkedListNodeOfQueueItem? node = _list.First;
-                if (node is null)
-                {
-                    node = new LinkedListNodeOfQueueItem((buffer, fragment));
-                }
-                else
-                {
-                    node.ValueRef = (buffer, fragment);
-                    _list.RemoveFirst();
-                }
-
-                return node;
-            }
-            finally
+            var node = _list.First;
+            if (node is null)
             {
-                if (lockTaken)
-                {
-                    _lock.Exit();
-                }
+                node = new LinkedListNodeOfQueueItem((buffer, fragment));
             }
+            else
+            {
+                node.ValueRef = (buffer, fragment);
+                _list.RemoveFirst();
+            }
+
+            return node;
         }
-
-        public void Return(LinkedListNodeOfQueueItem node)
+        finally
         {
-            node.ValueRef = default;
-
-            bool lockTaken = false;
-            try
-            {
-                _lock.Enter(ref lockTaken);
-
-                _list.AddLast(node);
-            }
-            finally
-            {
-                if (lockTaken)
-                {
-                    _lock.Exit();
-                }
-            }
+            if (lockTaken) _lock.Exit();
         }
+    }
 
-        public void Clear()
+    public void Return(LinkedListNodeOfQueueItem node)
+    {
+        node.ValueRef = default;
+
+        var lockTaken = false;
+        try
         {
-            bool lockTaken = false;
-            try
-            {
-                _lock.Enter(ref lockTaken);
+            _lock.Enter(ref lockTaken);
 
-                _list.Clear();
-            }
-            finally
-            {
-                if (lockTaken)
-                {
-                    _lock.Exit();
-                }
-            }
+            _list.AddLast(node);
+        }
+        finally
+        {
+            if (lockTaken) _lock.Exit();
+        }
+    }
+
+    public void Clear()
+    {
+        var lockTaken = false;
+        try
+        {
+            _lock.Enter(ref lockTaken);
+
+            _list.Clear();
+        }
+        finally
+        {
+            if (lockTaken) _lock.Exit();
         }
     }
 }

@@ -2,25 +2,15 @@
 using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Game.Mission.FinishType;
 using EggLink.DanhengServer.Game.Player;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EggLink.DanhengServer.GameServer.Game.Mission.FinishType.Handler
+namespace EggLink.DanhengServer.GameServer.Game.Mission.FinishType.Handler;
+
+[MissionFinishType(MissionFinishTypeEnum.EnterPlane)]
+public class MissionHandlerEnterPlane : MissionFinishTypeHandler
 {
-    [MissionFinishType(MissionFinishTypeEnum.EnterPlane)]
-    public class MissionHandlerEnterPlane : MissionFinishTypeHandler
+    public override async ValueTask HandleFinishType(PlayerInstance player, SubMissionInfo info, object? arg)
     {
-        public override void Init(PlayerInstance player, SubMissionInfo info, object? arg)
-        {
-        }
-
-        public override void HandleFinishType(PlayerInstance player, SubMissionInfo info, object? arg)
-        {
-            if (player.Data.PlaneId != info.ParamInt1) return;  // not a same scene
-            player.MissionManager!.FinishSubMission(info.ID);
-        }
+        if (player.Data.PlaneId != info.ParamInt1) return; // not a same scene
+        await player.MissionManager!.FinishSubMission(info.ID);
     }
 }

@@ -1,5 +1,4 @@
 ﻿#if NEED_SOCKET_SHIM
-
 using System;
 using System.Net.Sockets;
 using System.Threading.Tasks;
@@ -9,7 +8,8 @@ namespace KcpSharp
 {
     internal class AwaitableSocketAsyncEventArgs : SocketAsyncEventArgs, IValueTaskSource
     {
-        private ManualResetValueTaskSourceCore<bool> _mrvtsc = new ManualResetValueTaskSourceCore<bool> { RunContinuationsAsynchronously = true };
+        private ManualResetValueTaskSourceCore<bool> _mrvtsc =
+ new ManualResetValueTaskSourceCore<bool> { RunContinuationsAsynchronously = true };
 
         void IValueTaskSource.GetResult(short token) => _mrvtsc.GetResult(token);
         ValueTaskSourceStatus IValueTaskSource.GetStatus(short token) => _mrvtsc.GetStatus(token);

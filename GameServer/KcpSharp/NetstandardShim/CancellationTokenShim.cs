@@ -1,5 +1,4 @@
 ﻿#if NEED_CANCELLATIONTOKEN_SHIM
-
 namespace System.Threading
 {
     internal static class CancellationTokenShim

@@ -1,8 +1,7 @@
-﻿namespace EggLink.DanhengServer.Enums
+﻿namespace EggLink.DanhengServer.Enums;
+
+public enum ConditionTypeEnum
 {
-    public enum ConditionTypeEnum
-    {
-        MainMission = 0,
-        SubMission = 1,
-    }
+    MainMission = 0,
+    SubMission = 1
 }

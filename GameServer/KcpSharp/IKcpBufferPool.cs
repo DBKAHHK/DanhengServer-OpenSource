@@ -1,15 +1,14 @@
-﻿namespace EggLink.DanhengServer.KcpSharp
+﻿namespace EggLink.DanhengServer.KcpSharp;
+
+/// <summary>
+///     The buffer pool to rent buffers from.
+/// </summary>
+public interface IKcpBufferPool
 {
     /// <summary>
-    /// The buffer pool to rent buffers from.
+    ///     Rent a buffer using the specified options.
     /// </summary>
-    public interface IKcpBufferPool
-    {
-        /// <summary>
-        /// Rent a buffer using the specified options.
-        /// </summary>
-        /// <param name="options">The options used to rent this buffer.</param>
-        /// <returns></returns>
-        KcpRentedBuffer Rent(KcpBufferPoolRentOptions options);
-    }
+    /// <param name="options">The options used to rent this buffer.</param>
+    /// <returns></returns>
+    KcpRentedBuffer Rent(KcpBufferPoolRentOptions options);
 }

@@ -1,22 +1,16 @@
 ﻿using EggLink.DanhengServer.Proto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Friend
+namespace EggLink.DanhengServer.Server.Packet.Send.Friend;
+
+public class PacketApplyFriendScRsp : BasePacket
 {
-    public class PacketApplyFriendScRsp : BasePacket
+    public PacketApplyFriendScRsp(uint uid) : base(CmdIds.ApplyFriendScRsp)
     {
-        public PacketApplyFriendScRsp(uint uid) : base(CmdIds.ApplyFriendScRsp)
+        var proto = new ApplyFriendScRsp
         {
-            var proto = new ApplyFriendScRsp
-            {
-                Uid = uid,
-            };
+            Uid = uid
+        };
 
-            SetData(proto);
-        }
+        SetData(proto);
     }
 }

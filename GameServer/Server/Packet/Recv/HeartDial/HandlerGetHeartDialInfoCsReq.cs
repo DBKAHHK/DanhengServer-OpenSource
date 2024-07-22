@@ -1,20 +1,14 @@
 ﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.HeartDial;
 using EggLink.DanhengServer.Server;
 using EggLink.DanhengServer.Server.Packet;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.HeartDial
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.HeartDial;
+
+[Opcode(CmdIds.GetHeartDialInfoCsReq)]
+public class HandlerGetHeartDialInfoCsReq : Handler
 {
-    [Opcode(CmdIds.GetHeartDialInfoCsReq)]
-    public class HandlerGetHeartDialInfoCsReq : Handler
+    public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
-        public override void OnHandle(Connection connection, byte[] header, byte[] data)
-        {
-            connection.SendPacket(new PacketGetHeartDialInfoScRsp(connection.Player!));
-        }
+        await connection.SendPacket(new PacketGetHeartDialInfoScRsp(connection.Player!));
     }
 }

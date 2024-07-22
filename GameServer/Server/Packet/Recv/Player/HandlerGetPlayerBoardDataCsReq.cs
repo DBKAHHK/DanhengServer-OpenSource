@@ -1,13 +1,12 @@
 ﻿using EggLink.DanhengServer.Server.Packet.Send.Player;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Player
+namespace EggLink.DanhengServer.Server.Packet.Recv.Player;
+
+[Opcode(CmdIds.GetPlayerBoardDataCsReq)]
+public class HandlerGetPlayerBoardDataCsReq : Handler
 {
-    [Opcode(CmdIds.GetPlayerBoardDataCsReq)]
-    public class HandlerGetPlayerBoardDataCsReq : Handler
+    public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
-        public override void OnHandle(Connection connection, byte[] header, byte[] data)
-        {
-            connection.SendPacket(new PacketGetPlayerBoardDataScRsp(connection.Player!));
-        }
+        await connection.SendPacket(new PacketGetPlayerBoardDataScRsp(connection.Player!));
     }
 }

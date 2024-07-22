@@ -1,25 +1,17 @@
-﻿using EggLink.DanhengServer.Database;
-using EggLink.DanhengServer.Proto;
+﻿using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Server.Packet.Send.Player;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Player
+namespace EggLink.DanhengServer.Server.Packet.Recv.Player;
+
+[Opcode(CmdIds.SetSignatureCsReq)]
+public class HandlerSetSignatureCsReq : Handler
 {
-    [Opcode(CmdIds.SetSignatureCsReq)]
-    public class HandlerSetSignatureCsReq : Handler
+    public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
-        public override void OnHandle(Connection connection, byte[] header, byte[] data)
-        {
-            var req = SetSignatureCsReq.Parser.ParseFrom(data);
+        var req = SetSignatureCsReq.Parser.ParseFrom(data);
 
-            connection.Player!.Data.Signature = req.Signature;
-            DatabaseHelper.Instance!.UpdateInstance(connection.Player!.Data);
+        connection.Player!.Data.Signature = req.Signature;
 
-            connection.SendPacket(new PacketSetSignatureScRsp(req.Signature));
-        }
+        await connection.SendPacket(new PacketSetSignatureScRsp(req.Signature));
     }
 }

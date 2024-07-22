@@ -1,20 +1,14 @@
 ﻿using EggLink.DanhengServer.Proto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Player
+namespace EggLink.DanhengServer.Server.Packet.Recv.Player;
+
+[Opcode(CmdIds.UseItemCsReq)]
+public class HandlerUseItemCsReq : Handler
 {
-    [Opcode(CmdIds.UseItemCsReq)]
-    public class HandlerUseItemCsReq : Handler
+    public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
-        public override void OnHandle(Connection connection, byte[] header, byte[] data)
-        {
-            var req = UseItemCsReq.Parser.ParseFrom(data);
+        var req = UseItemCsReq.Parser.ParseFrom(data);
 
-            connection.SendPacket(CmdIds.UseItemScRsp);
-        }
+        await connection.SendPacket(CmdIds.UseItemScRsp);
     }
 }

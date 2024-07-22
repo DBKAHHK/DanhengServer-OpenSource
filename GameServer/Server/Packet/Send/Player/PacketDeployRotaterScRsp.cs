@@ -1,27 +1,21 @@
 ﻿using EggLink.DanhengServer.Proto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Player
+namespace EggLink.DanhengServer.Server.Packet.Send.Player;
+
+public class PacketDeployRotaterScRsp : BasePacket
 {
-    public class PacketDeployRotaterScRsp : BasePacket
+    public PacketDeployRotaterScRsp(RotaterData rotaterData, int curNum, int maxNum) : base(CmdIds.DeployRotaterScRsp)
     {
-        public PacketDeployRotaterScRsp(RotaterData rotaterData, int curNum, int maxNum) : base(CmdIds.DeployRotaterScRsp)
+        var proto = new DeployRotaterScRsp
         {
-            var proto = new DeployRotaterScRsp()
+            EnergyInfo = new RotatorEnergyInfo
             {
-                EnergyInfo = new RotatorEnergyInfo()
-                {
-                    MaxNum = (uint)maxNum,
-                    CurNum = (uint)curNum,
-                },
-                RotaterData = rotaterData
-            };
+                MaxNum = (uint)maxNum,
+                CurNum = (uint)curNum
+            },
+            RotaterData = rotaterData
+        };
 
-            SetData(proto);
-        }
+        SetData(proto);
     }
 }

@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace EggLink.DanhengServer.Server.Packet.Recv.Friend;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Friend
+[Opcode(CmdIds.GetChatFriendHistoryCsReq)]
+public class HandlerGetChatFriendHistoryCsReq : Handler
 {
-    [Opcode(CmdIds.GetChatFriendHistoryCsReq)]
-    public class HandlerGetChatFriendHistoryCsReq : Handler
+    public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
-        public override void OnHandle(Connection connection, byte[] header, byte[] data)
-        {
-            connection.SendPacket(CmdIds.GetChatFriendHistoryScRsp);
-        }
+        await connection.SendPacket(CmdIds.GetChatFriendHistoryScRsp);
     }
 }

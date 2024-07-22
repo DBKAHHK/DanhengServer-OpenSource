@@ -1,22 +1,18 @@
 ﻿using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Mission
+namespace EggLink.DanhengServer.Server.Packet.Send.Mission;
+
+public class PacketMissionAcceptScNotify : BasePacket
 {
-    public class PacketMissionAcceptScNotify : BasePacket
+    public PacketMissionAcceptScNotify(int missionId) : this([missionId])
     {
-        public PacketMissionAcceptScNotify(int missionId) : this([missionId])
-        {
-        }
+    }
 
-        public PacketMissionAcceptScNotify(List<int> missionIds) : base(CmdIds.MissionAcceptScNotify)
-        {
-            var proto = new MissionAcceptScNotify();
-            foreach (var missionId in missionIds)
-            {
-                proto.SubMissionIdList.Add((uint)missionId);
-            }
+    public PacketMissionAcceptScNotify(List<int> missionIds) : base(CmdIds.MissionAcceptScNotify)
+    {
+        var proto = new MissionAcceptScNotify();
+        foreach (var missionId in missionIds) proto.SubMissionIdList.Add((uint)missionId);
 
-            SetData(proto);
-        }
+        SetData(proto);
     }
 }

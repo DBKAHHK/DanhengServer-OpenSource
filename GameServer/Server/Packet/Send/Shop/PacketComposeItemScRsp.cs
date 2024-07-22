@@ -1,38 +1,32 @@
 ﻿using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Proto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Shop
+namespace EggLink.DanhengServer.Server.Packet.Send.Shop;
+
+public class PacketComposeItemScRsp : BasePacket
 {
-    public class PacketComposeItemScRsp : BasePacket
+    public PacketComposeItemScRsp() : base(CmdIds.ComposeItemScRsp)
     {
-        public PacketComposeItemScRsp() : base(CmdIds.ComposeItemScRsp)
+        var proto = new ComposeItemScRsp
         {
-            var proto = new ComposeItemScRsp()
-            {
-                Retcode = 1
-            };
+            Retcode = 1
+        };
 
-            SetData(proto);
-        }
+        SetData(proto);
+    }
 
-        public PacketComposeItemScRsp(uint composeId, uint count,ItemData item) : base(CmdIds.ComposeItemScRsp)
+    public PacketComposeItemScRsp(uint composeId, uint count, ItemData item) : base(CmdIds.ComposeItemScRsp)
+    {
+        var proto = new ComposeItemScRsp
         {
-            var proto = new ComposeItemScRsp()
+            ReturnItemList = new ItemList
             {
-                ReturnItemList = new()
-                {
-                    ItemList_ = { item.ToProto() }
-                },
-                ComposeId = composeId,
-                Count = count,
-            };
+                ItemList_ = { item.ToProto() }
+            },
+            ComposeId = composeId,
+            Count = count
+        };
 
-            SetData(proto);
-        }
+        SetData(proto);
     }
 }

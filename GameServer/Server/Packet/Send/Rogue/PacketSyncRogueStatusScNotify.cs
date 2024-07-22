@@ -1,22 +1,16 @@
 ﻿using EggLink.DanhengServer.Proto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Rogue
+namespace EggLink.DanhengServer.Server.Packet.Send.Rogue;
+
+public class PacketSyncRogueStatusScNotify : BasePacket
 {
-    public class PacketSyncRogueStatusScNotify : BasePacket
+    public PacketSyncRogueStatusScNotify(RogueStatus status) : base(CmdIds.SyncRogueStatusScNotify)
     {
-        public PacketSyncRogueStatusScNotify(RogueStatus status) : base(CmdIds.SyncRogueStatusScNotify)
+        var proto = new SyncRogueStatusScNotify
         {
-            var proto = new SyncRogueStatusScNotify()
-            {
-                Status = status,
-            };
+            Status = status
+        };
 
-            SetData(proto);
-        }
+        SetData(proto);
     }
 }

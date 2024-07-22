@@ -1,8 +1,7 @@
-﻿namespace EggLink.DanhengServer.Enums
+﻿namespace EggLink.DanhengServer.Enums;
+
+public enum OperationEnum
 {
-    public enum OperationEnum
-    {
-        And = 0,
-        Or = 1,
-    }
+    And = 0,
+    Or = 1
 }

@@ -1,27 +1,21 @@
 ﻿using EggLink.DanhengServer.Proto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Scene
+namespace EggLink.DanhengServer.Server.Packet.Send.Scene;
+
+public class PacketEnterMapRotationRegionScRsp : BasePacket
 {
-    public class PacketEnterMapRotationRegionScRsp : BasePacket
+    public PacketEnterMapRotationRegionScRsp(MotionInfo motion) : base(CmdIds.EnterMapRotationRegionScRsp)
     {
-        public PacketEnterMapRotationRegionScRsp(MotionInfo motion) : base(CmdIds.EnterMapRotationRegionScRsp)
+        var proto = new EnterMapRotationRegionScRsp
         {
-            var proto = new EnterMapRotationRegionScRsp
+            Motion = motion,
+            EnergyInfo = new RotatorEnergyInfo
             {
-                Motion = motion,
-                EnergyInfo = new()
-                {
-                    CurNum = 5,
-                    MaxNum = 5,
-                },
-            };
+                CurNum = 5,
+                MaxNum = 5
+            }
+        };
 
-            SetData(proto);
-        }
+        SetData(proto);
     }
 }

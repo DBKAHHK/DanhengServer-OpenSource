@@ -1,23 +1,17 @@
 ﻿using EggLink.DanhengServer.Proto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Avatar
+namespace EggLink.DanhengServer.Server.Packet.Recv.Avatar;
+
+[Opcode(CmdIds.DressAvatarCsReq)]
+public class HandlerDressAvatarCsReq : Handler
 {
-    [Opcode(CmdIds.DressAvatarCsReq)]
-    public class HandlerDressAvatarCsReq : Handler
+    public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
-        public override void OnHandle(Connection connection, byte[] header, byte[] data)
-        {
-            var req = DressAvatarCsReq.Parser.ParseFrom(data);
-            var player = connection.Player!;
+        var req = DressAvatarCsReq.Parser.ParseFrom(data);
+        var player = connection.Player!;
 
-            player.InventoryManager!.EquipAvatar((int)req.DressAvatarId, (int)req.EquipmentUniqueId);
+        await player.InventoryManager!.EquipAvatar((int)req.DressAvatarId, (int)req.EquipmentUniqueId);
 
-            connection.SendPacket(CmdIds.DressAvatarScRsp);
-        }
+        await connection.SendPacket(CmdIds.DressAvatarScRsp);
     }
 }
