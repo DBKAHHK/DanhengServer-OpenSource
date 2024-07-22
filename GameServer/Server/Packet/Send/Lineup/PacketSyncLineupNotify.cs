@@ -1,18 +1,19 @@
 ﻿using EggLink.DanhengServer.Proto;
+using LineupInfo = EggLink.DanhengServer.Database.Lineup.LineupInfo;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Lineup
+namespace EggLink.DanhengServer.Server.Packet.Send.Lineup;
+
+public class PacketSyncLineupNotify : BasePacket
 {
-    public class PacketSyncLineupNotify : BasePacket
+    public PacketSyncLineupNotify(LineupInfo info, SyncLineupReason reason = SyncLineupReason.SyncReasonNone) : base(
+        CmdIds.SyncLineupNotify)
     {
-        public PacketSyncLineupNotify(Database.Lineup.LineupInfo info, SyncLineupReason reason = SyncLineupReason.SyncReasonNone) : base(CmdIds.SyncLineupNotify)
+        var proto = new SyncLineupNotify
         {
-            var proto = new SyncLineupNotify()
-            {
-                Lineup = info.ToProto(),
-                ReasonList = { reason }
-            };
+            Lineup = info.ToProto(),
+            ReasonList = { reason }
+        };
 
-            SetData(proto);
-        }
+        SetData(proto);
     }
 }

@@ -1,20 +1,15 @@
 ﻿using EggLink.DanhengServer.Proto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Rogue
+namespace EggLink.DanhengServer.Server.Packet.Recv.Rogue;
+
+[Opcode(CmdIds.ChessRogueSelectCellCsReq)]
+public class HandlerChessRogueSelectCellCsReq : Handler
 {
-    [Opcode(CmdIds.ChessRogueSelectCellCsReq)]
-    public class HandlerChessRogueSelectCellCsReq : Handler
+    public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
-        public override void OnHandle(Connection connection, byte[] header, byte[] data)
-        {
-            var req = ChessRogueSelectCellCsReq.Parser.ParseFrom(data);
+        var req = ChessRogueSelectCellCsReq.Parser.ParseFrom(data);
 
-            connection.Player!.ChessRogueManager!.RogueInstance?.SelectCell((int)req.CellId);
-        }
+        if (connection.Player!.ChessRogueManager?.RogueInstance == null) return;
+        await connection.Player!.ChessRogueManager!.RogueInstance.SelectCell((int)req.CellId);
     }
 }

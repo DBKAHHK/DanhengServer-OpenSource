@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace EggLink.DanhengServer.Server.Packet.Recv.ChessRogue;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.ChessRogue
+[Opcode(CmdIds.ChessRogueConfirmRollCsReq)]
+public class HandlerChessRogueConfirmRollCsReq : Handler
 {
-    [Opcode(CmdIds.ChessRogueConfirmRollCsReq)]
-    public class HandlerChessRogueConfirmRollCsReq : Handler
+    public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
-        public override void OnHandle(Connection connection, byte[] header, byte[] data)
-        {
-            connection.Player!.ChessRogueManager!.RogueInstance?.ConfirmRoll();
-        }
+        await connection.Player!.ChessRogueManager!.RogueInstance!.ConfirmRoll();
     }
 }

@@ -1,11 +1,10 @@
-﻿namespace EggLink.DanhengServer.Common.Enums
+﻿namespace EggLink.DanhengServer.Common.Enums;
+
+public enum SessionStateEnum
 {
-    public enum SessionStateEnum
-    {
-        INACTIVE,
-        WAITING_FOR_TOKEN,
-        WAITING_FOR_LOGIN,
-        PICKING_CHARACTER,
-        ACTIVE
-    }
+    INACTIVE,
+    WAITING_FOR_TOKEN,
+    WAITING_FOR_LOGIN,
+    PICKING_CHARACTER,
+    ACTIVE
 }

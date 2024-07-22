@@ -1,13 +1,12 @@
 ﻿using EggLink.DanhengServer.Server.Packet.Send.Battle;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Battle
+namespace EggLink.DanhengServer.Server.Packet.Recv.Battle;
+
+[Opcode(CmdIds.GetChallengeCsReq)]
+public class HandlerGetChallengeCsReq : Handler
 {
-    [Opcode(CmdIds.GetChallengeCsReq)]
-    public class HandlerGetChallengeCsReq : Handler
+    public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
-        public override void OnHandle(Connection connection, byte[] header, byte[] data)
-        {
-            connection.SendPacket(new PacketGetChallengeScRsp(connection.Player!));
-        }
+        await connection.SendPacket(new PacketGetChallengeScRsp(connection.Player!));
     }
 }

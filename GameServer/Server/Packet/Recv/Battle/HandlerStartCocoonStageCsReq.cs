@@ -1,19 +1,13 @@
 ﻿using EggLink.DanhengServer.Proto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Battle
+namespace EggLink.DanhengServer.Server.Packet.Recv.Battle;
+
+[Opcode(CmdIds.StartCocoonStageCsReq)]
+public class HandlerStartCocoonStageCsReq : Handler
 {
-    [Opcode(CmdIds.StartCocoonStageCsReq)]
-    public class HandlerStartCocoonStageCsReq : Handler
+    public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
-        public override void OnHandle(Connection connection, byte[] header, byte[] data)
-        {
-            var req = StartCocoonStageCsReq.Parser.ParseFrom(data);
-            connection.Player?.BattleManager?.StartCocoonStage((int)req.CocoonId, (int)req.Wave, (int)req.WorldLevel);
-        }
+        var req = StartCocoonStageCsReq.Parser.ParseFrom(data);
+        await connection.Player!.BattleManager!.StartCocoonStage((int)req.CocoonId, (int)req.Wave, (int)req.WorldLevel);
     }
 }

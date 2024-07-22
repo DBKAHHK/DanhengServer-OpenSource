@@ -1,22 +1,16 @@
 ﻿using EggLink.DanhengServer.Proto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Rogue
+namespace EggLink.DanhengServer.Server.Packet.Send.Rogue;
+
+public class PacketSyncRogueFinishScNotify : BasePacket
 {
-    public class PacketSyncRogueFinishScNotify : BasePacket
+    public PacketSyncRogueFinishScNotify(RogueFinishInfo info) : base(CmdIds.SyncRogueFinishScNotify)
     {
-        public PacketSyncRogueFinishScNotify(RogueFinishInfo info) : base(CmdIds.SyncRogueFinishScNotify)
+        var proto = new SyncRogueFinishScNotify
         {
-            var proto = new SyncRogueFinishScNotify
-            {
-                FinishInfo = info
-            };
+            FinishInfo = info
+        };
 
-            SetData(proto);
-        }
+        SetData(proto);
     }
 }

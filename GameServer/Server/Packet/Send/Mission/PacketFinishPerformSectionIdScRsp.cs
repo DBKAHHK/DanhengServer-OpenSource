@@ -1,22 +1,16 @@
 ﻿using EggLink.DanhengServer.Proto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Mission
+namespace EggLink.DanhengServer.Server.Packet.Send.Mission;
+
+public class PacketFinishPerformSectionIdScRsp : BasePacket
 {
-    public class PacketFinishPerformSectionIdScRsp : BasePacket
+    public PacketFinishPerformSectionIdScRsp(uint sectionId) : base(CmdIds.FinishPerformSectionIdScRsp)
     {
-        public PacketFinishPerformSectionIdScRsp(uint sectionId) : base(CmdIds.FinishPerformSectionIdScRsp)
+        var proto = new FinishPerformSectionIdScRsp
         {
-            var proto = new FinishPerformSectionIdScRsp
-            {
-                SectionId = sectionId
-            };
+            SectionId = sectionId
+        };
 
-            SetData(proto);
-        }
+        SetData(proto);
     }
 }

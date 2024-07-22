@@ -1,18 +1,14 @@
 ﻿using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Server.Packet.Send.Mission;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Mission
+namespace EggLink.DanhengServer.Server.Packet.Recv.Mission;
+
+[Opcode(CmdIds.GetMissionStatusCsReq)]
+public class HandlerGetMissionStatusCsReq : Handler
 {
-    [Opcode(CmdIds.GetMissionStatusCsReq)]
-    public class HandlerGetMissionStatusCsReq : Handler
+    public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
-        public override void OnHandle(Connection connection, byte[] header, byte[] data)
-        {
-            var req = GetMissionStatusCsReq.Parser.ParseFrom(data);
-            if (req != null)
-            {
-                connection.SendPacket(new PacketGetMissionStatusScRsp(req, connection.Player!));
-            }
-        }
+        var req = GetMissionStatusCsReq.Parser.ParseFrom(data);
+        if (req != null) await connection.SendPacket(new PacketGetMissionStatusScRsp(req, connection.Player!));
     }
 }

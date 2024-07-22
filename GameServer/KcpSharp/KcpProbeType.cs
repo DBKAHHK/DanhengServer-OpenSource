@@ -1,10 +1,9 @@
-﻿namespace EggLink.DanhengServer.KcpSharp
+﻿namespace EggLink.DanhengServer.KcpSharp;
+
+[Flags]
+internal enum KcpProbeType
 {
-    [Flags]
-    internal enum KcpProbeType
-    {
-        None = 0,
-        AskSend = 1,
-        AskTell = 2,
-    }
+    None = 0,
+    AskSend = 1,
+    AskTell = 2
 }

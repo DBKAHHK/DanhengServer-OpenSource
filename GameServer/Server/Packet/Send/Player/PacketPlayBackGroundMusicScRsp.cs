@@ -1,23 +1,17 @@
 ﻿using EggLink.DanhengServer.Proto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Player
+namespace EggLink.DanhengServer.Server.Packet.Send.Player;
+
+public class PacketPlayBackGroundMusicScRsp : BasePacket
 {
-    public class PacketPlayBackGroundMusicScRsp : BasePacket
+    public PacketPlayBackGroundMusicScRsp(uint musicId) : base(CmdIds.PlayBackGroundMusicScRsp)
     {
-        public PacketPlayBackGroundMusicScRsp(uint musicId) : base(CmdIds.PlayBackGroundMusicScRsp)
+        var proto = new PlayBackGroundMusicScRsp
         {
-            var proto = new PlayBackGroundMusicScRsp
-            {
-                PlayMusicId = musicId,
-                CurrentMusicId = musicId
-            };
+            PlayMusicId = musicId,
+            CurrentMusicId = musicId
+        };
 
-            SetData(proto);
-        }
+        SetData(proto);
     }
 }

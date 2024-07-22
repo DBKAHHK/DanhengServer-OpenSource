@@ -1,13 +1,12 @@
 ﻿using EggLink.DanhengServer.Server.Packet.Send.Others;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Others
+namespace EggLink.DanhengServer.Server.Packet.Recv.Others;
+
+[Opcode(CmdIds.GetSecretKeyInfoCsReq)]
+public class HandlerGetSecretKeyInfoCsReq : Handler
 {
-    [Opcode(CmdIds.GetSecretKeyInfoCsReq)]
-    public class HandlerGetSecretKeyInfoCsReq : Handler
+    public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
-        public override void OnHandle(Connection connection, byte[] header, byte[] data)
-        {
-            connection.SendPacket(new PacketGetSecretKeyInfoScRsp());
-        }
+        await connection.SendPacket(new PacketGetSecretKeyInfoScRsp());
     }
 }

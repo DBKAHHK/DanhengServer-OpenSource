@@ -1,23 +1,17 @@
 ﻿using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Server.Packet.Send.Mission;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Mission
+namespace EggLink.DanhengServer.Server.Packet.Recv.Mission;
+
+[Opcode(CmdIds.FinishSectionIdCsReq)]
+public class HandlerFinishSectionIdCsReq : Handler
 {
-    [Opcode(CmdIds.FinishSectionIdCsReq)]
-    public class HandlerFinishSectionIdCsReq : Handler
+    public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
-        public override void OnHandle(Connection connection, byte[] header, byte[] data)
-        {
-            var req = FinishSectionIdCsReq.Parser.ParseFrom(data);
+        var req = FinishSectionIdCsReq.Parser.ParseFrom(data);
 
-            connection.Player!.MessageManager!.FinishSection((int)req.SectionId);
+        await connection.Player!.MessageManager!.FinishSection((int)req.SectionId);
 
-            connection.SendPacket(new PacketFinishSectionIdScRsp(req.SectionId));
-        }
+        await connection.SendPacket(new PacketFinishSectionIdScRsp(req.SectionId));
     }
 }

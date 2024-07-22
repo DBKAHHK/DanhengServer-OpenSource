@@ -1,18 +1,12 @@
 ﻿using EggLink.DanhengServer.Server.Packet.Send.Activity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Activity
+namespace EggLink.DanhengServer.Server.Packet.Recv.Activity;
+
+[Opcode(CmdIds.GetActivityScheduleConfigCsReq)]
+public class HandlerGetActivityScheduleConfigCsReq : Handler
 {
-    [Opcode(CmdIds.GetActivityScheduleConfigCsReq)]
-    public class HandlerGetActivityScheduleConfigCsReq : Handler
+    public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
-        public override void OnHandle(Connection connection, byte[] header, byte[] data)
-        {
-            connection.SendPacket(new PacketGetActivityScheduleConfigScRsp(connection.Player!));
-        }
+        await connection.SendPacket(new PacketGetActivityScheduleConfigScRsp(connection.Player!));
     }
 }

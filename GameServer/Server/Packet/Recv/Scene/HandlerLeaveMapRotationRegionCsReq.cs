@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace EggLink.DanhengServer.Server.Packet.Recv.Scene;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Scene
+[Opcode(CmdIds.LeaveMapRotationRegionCsReq)]
+public class HandlerLeaveMapRotationRegionCsReq : Handler
 {
-    [Opcode(CmdIds.LeaveMapRotationRegionCsReq)]
-    public class HandlerLeaveMapRotationRegionCsReq : Handler
+    public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
-        public override void OnHandle(Connection connection, byte[] header, byte[] data)
-        {
-            connection.SendPacket(CmdIds.LeaveMapRotationRegionScRsp);
-        }
+        await connection.SendPacket(CmdIds.LeaveMapRotationRegionScRsp);
     }
 }

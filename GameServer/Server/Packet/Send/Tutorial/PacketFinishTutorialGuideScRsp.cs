@@ -1,33 +1,27 @@
 ﻿using EggLink.DanhengServer.Proto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Tutorial
+namespace EggLink.DanhengServer.Server.Packet.Send.Tutorial;
+
+public class PacketFinishTutorialGuideScRsp : BasePacket
 {
-    public class PacketFinishTutorialGuideScRsp : BasePacket
+    public PacketFinishTutorialGuideScRsp(uint tutorialId) : base(CmdIds.FinishTutorialGuideScRsp)
     {
-        public PacketFinishTutorialGuideScRsp(uint tutorialId) : base(CmdIds.FinishTutorialGuideScRsp)
+        var rsp = new FinishTutorialGuideScRsp
         {
-            var rsp = new FinishTutorialGuideScRsp
+            TutorialGuide = new TutorialGuide
             {
-                TutorialGuide = new ()
-                {
-                    Id = tutorialId,
-                    Status = TutorialStatus.TutorialFinish,
-                },
-                Reward = new (),
-            };
+                Id = tutorialId,
+                Status = TutorialStatus.TutorialFinish
+            },
+            Reward = new ItemList()
+        };
 
-            rsp.Reward.ItemList_.Add(new Item
-            {
-                ItemId = 1,
-                Num = 1,
-            });
+        rsp.Reward.ItemList_.Add(new Item
+        {
+            ItemId = 1,
+            Num = 1
+        });
 
-            SetData(rsp);
-        }
+        SetData(rsp);
     }
 }

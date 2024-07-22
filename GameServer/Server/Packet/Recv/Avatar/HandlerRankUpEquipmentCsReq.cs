@@ -1,20 +1,14 @@
 ﻿using EggLink.DanhengServer.Proto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Avatar
+namespace EggLink.DanhengServer.Server.Packet.Recv.Avatar;
+
+[Opcode(CmdIds.RankUpEquipmentCsReq)]
+public class HandlerRankUpEquipmentCsReq : Handler
 {
-    [Opcode(CmdIds.RankUpEquipmentCsReq)]
-    public class HandlerRankUpEquipmentCsReq : Handler
+    public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
-        public override void OnHandle(Connection connection, byte[] header, byte[] data)
-        {
-            var req = RankUpEquipmentCsReq.Parser.ParseFrom(data);
-            connection.Player!.InventoryManager?.RankUpEquipment((int)req.EquipmentUniqueId, req.CostData);
-            connection.SendPacket(CmdIds.RankUpEquipmentScRsp);
-        }
+        var req = RankUpEquipmentCsReq.Parser.ParseFrom(data);
+        await connection.Player!.InventoryManager!.RankUpEquipment((int)req.EquipmentUniqueId, req.CostData);
+        await connection.SendPacket(CmdIds.RankUpEquipmentScRsp);
     }
 }

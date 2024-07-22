@@ -1,5 +1,4 @@
 ﻿#if NEED_LINKEDLIST_SHIM
-
 using System;
 using System.Diagnostics;
 

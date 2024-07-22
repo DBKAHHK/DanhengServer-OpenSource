@@ -1,13 +1,12 @@
 ﻿using EggLink.DanhengServer.Server.Packet.Send.Avatar;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Avatar
+namespace EggLink.DanhengServer.Server.Packet.Recv.Avatar;
+
+[Opcode(CmdIds.GetHeroBasicTypeInfoCsReq)]
+public class HandlerGetHeroBasicTypeInfoCsReq : Handler
 {
-    [Opcode(CmdIds.GetHeroBasicTypeInfoCsReq)]
-    public class HandlerGetHeroBasicTypeInfoCsReq : Handler
+    public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
-        public override void OnHandle(Connection connection, byte[] header, byte[] data)
-        {
-            connection.SendPacket(new PacketGetHeroBasicTypeInfoScRsp(connection.Player!));
-        }
+        await connection.SendPacket(new PacketGetHeroBasicTypeInfoScRsp(connection.Player!));
     }
 }

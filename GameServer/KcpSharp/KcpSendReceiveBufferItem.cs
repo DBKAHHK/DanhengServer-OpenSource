@@ -1,9 +1,8 @@
-﻿namespace EggLink.DanhengServer.KcpSharp
+﻿namespace EggLink.DanhengServer.KcpSharp;
+
+internal struct KcpSendReceiveBufferItem
 {
-    internal struct KcpSendReceiveBufferItem
-    {
-        public KcpBuffer Data;
-        public KcpPacketHeader Segment;
-        public KcpSendSegmentStats Stats;
-    }
+    public KcpBuffer Data;
+    public KcpPacketHeader Segment;
+    public KcpSendSegmentStats Stats;
 }
