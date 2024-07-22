@@ -222,6 +222,7 @@ namespace EggLink.DanhengServer.GameServer.Game.Raid
 
             if (record.Status == RaidStatus.Finish)
             {
+                Player.SendPacket(new PacketRaidInfoNotify());
                 if (config.FinishEntranceID > 0)
                 {
                     Player.EnterScene(config.FinishEntranceID, 0, true);
@@ -238,9 +239,8 @@ namespace EggLink.DanhengServer.GameServer.Game.Raid
                 Player.MoveTo(record.OldPos, record.OldRot);
 
                 // reset raid info
-                record.Status = RaidStatus.Doing;
 
-                Player.SendPacket(new PacketRaidInfoNotify(record));
+                Player.SendPacket(new PacketRaidInfoNotify());
 
                 if (!save)
                 {

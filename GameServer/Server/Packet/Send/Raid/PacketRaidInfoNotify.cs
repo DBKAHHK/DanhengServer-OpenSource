@@ -25,5 +25,16 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Raid
 
             SetData(proto);
         }
+
+        public PacketRaidInfoNotify() : base(CmdIds.RaidInfoNotify)
+        {
+            var proto = new RaidInfoNotify()
+            {
+                TargetInfo = { },
+                ItemList = new(),
+            };
+
+            SetData(proto);
+        }
     }
 }
