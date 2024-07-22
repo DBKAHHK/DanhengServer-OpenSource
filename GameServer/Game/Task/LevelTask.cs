@@ -88,7 +88,7 @@ public class LevelTask(PlayerInstance player)
                         if (entity is EntityProp prop && prop.GroupID == groupInfo.Key && prop.InstId == id)
                             await prop.SetState(PropStateEnum.Closed);
 
-            Player.MissionManager?.HandleFinishType(MissionFinishTypeEnum.PropState);
+            await Player.MissionManager!.HandleFinishType(MissionFinishTypeEnum.PropState);
         }
     }
 
@@ -296,8 +296,8 @@ public class LevelTask(PlayerInstance player)
 
     public async ValueTask PropSetupUITrigger(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
     {
-        if (act is PropSetupUITrigger propSetupUITrigger)
-            foreach (var task in propSetupUITrigger.ButtonCallback)
+        if (act is PropSetupUITrigger propSetupUiTrigger)
+            foreach (var task in propSetupUiTrigger.ButtonCallback)
                 TriggerTask(task, subMission, group);
 
         await System.Threading.Tasks.Task.CompletedTask;
@@ -314,7 +314,7 @@ public class LevelTask(PlayerInstance player)
             if (method != null)
             {
                 var resp = method.Invoke(this, [propStateExecute.TargetType, subMission, group]);
-                if (resp is EntityProp result && result != null) await result.SetState(propStateExecute.State);
+                if (resp is EntityProp result) await result.SetState(propStateExecute.State);
             }
         }
     }
