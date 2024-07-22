@@ -11,11 +11,8 @@ public class MissionHandlerItemNum : MissionFinishTypeHandler
     public override async ValueTask HandleFinishType(PlayerInstance player, SubMissionInfo info, object? arg)
     {
         var count = 0;
-        foreach (var itemId in info.ParamIntList ?? [])
-        {
-            var item = player.InventoryManager?.GetItem(itemId);
-            if (item != null) count += item.Count;
-        }
+        var item = player.InventoryManager?.GetItem(info.ParamInt1);
+        if (item != null) count += item.Count;
 
         if (count == info.Progress)
         {
