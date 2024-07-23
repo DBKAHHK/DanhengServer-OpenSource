@@ -1,11 +1,11 @@
 ﻿using System.Net;
 using System.Net.Sockets;
-using EggLink.DanhengServer.Common.Enums;
+using EggLink.DanhengServer.Enums;
+using EggLink.DanhengServer.GameServer.KcpSharp;
 using EggLink.DanhengServer.Internationalization;
-using EggLink.DanhengServer.KcpSharp;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Server;
+namespace EggLink.DanhengServer.GameServer.Server;
 
 public class Listener
 {

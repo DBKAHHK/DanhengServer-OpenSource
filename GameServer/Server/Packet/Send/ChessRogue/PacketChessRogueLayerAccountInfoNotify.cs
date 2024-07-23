@@ -1,7 +1,7 @@
-﻿using EggLink.DanhengServer.Game.ChessRogue;
+﻿using EggLink.DanhengServer.GameServer.Game.ChessRogue;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.ChessRogue;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.ChessRogue;
 
 public class PacketChessRogueLayerAccountInfoNotify : BasePacket
 {

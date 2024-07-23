@@ -1,8 +1,8 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Excel;
-using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Game.Player;
 
-namespace EggLink.DanhengServer.Game.Task;
+namespace EggLink.DanhengServer.GameServer.Game.Task;
 
 public class PerformanceTrigger(PlayerInstance player)
 {

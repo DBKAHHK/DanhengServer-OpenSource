@@ -3,12 +3,12 @@ using LinkedListOfBufferItem = KcpSharp.NetstandardShim.LinkedList<KcpSharp.KcpS
 using LinkedListNodeOfBufferItem = KcpSharp.NetstandardShim.LinkedListNode<KcpSharp.KcpSendReceiveBufferItem>;
 #else
 using LinkedListNodeOfBufferItem =
-    System.Collections.Generic.LinkedListNode<EggLink.DanhengServer.KcpSharp.KcpSendReceiveBufferItem>;
+    System.Collections.Generic.LinkedListNode<EggLink.DanhengServer.GameServer.KcpSharp.KcpSendReceiveBufferItem>;
 using LinkedListOfBufferItem =
-    System.Collections.Generic.LinkedList<EggLink.DanhengServer.KcpSharp.KcpSendReceiveBufferItem>;
+    System.Collections.Generic.LinkedList<EggLink.DanhengServer.GameServer.KcpSharp.KcpSendReceiveBufferItem>;
 #endif
 
-namespace EggLink.DanhengServer.KcpSharp;
+namespace EggLink.DanhengServer.GameServer.KcpSharp;
 
 internal struct KcpSendReceiveBufferItemCache
 {

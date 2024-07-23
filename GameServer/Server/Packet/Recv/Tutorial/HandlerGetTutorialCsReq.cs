@@ -1,8 +1,8 @@
-﻿using EggLink.DanhengServer.Server.Packet.Send.Others;
-using EggLink.DanhengServer.Server.Packet.Send.Tutorial;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Others;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Tutorial;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Tutorial;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Tutorial;
 
 [Opcode(CmdIds.GetTutorialCsReq)]
 public class HandlerGetTutorialCsReq : Handler

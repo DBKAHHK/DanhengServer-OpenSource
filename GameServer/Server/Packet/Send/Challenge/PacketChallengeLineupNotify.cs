@@ -1,6 +1,6 @@
 ﻿using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Challenge;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Challenge;
 
 public class PacketChallengeLineupNotify : BasePacket
 {

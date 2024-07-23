@@ -1,7 +1,7 @@
-﻿using EggLink.DanhengServer.Game.Challenge;
+﻿using EggLink.DanhengServer.GameServer.Game.Challenge;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Challenge;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Challenge;
 
 public class PacketChallengeSettleNotify : BasePacket
 {

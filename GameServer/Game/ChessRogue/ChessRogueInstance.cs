@@ -1,18 +1,18 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Enums.Rogue;
-using EggLink.DanhengServer.Game.Battle;
-using EggLink.DanhengServer.Game.ChessRogue.Cell;
-using EggLink.DanhengServer.Game.ChessRogue.Dice;
-using EggLink.DanhengServer.Game.Player;
-using EggLink.DanhengServer.Game.Rogue;
-using EggLink.DanhengServer.Game.Rogue.Buff;
-using EggLink.DanhengServer.Game.Rogue.Event;
+using EggLink.DanhengServer.GameServer.Game.Battle;
+using EggLink.DanhengServer.GameServer.Game.ChessRogue.Cell;
+using EggLink.DanhengServer.GameServer.Game.ChessRogue.Dice;
+using EggLink.DanhengServer.GameServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Game.Rogue;
+using EggLink.DanhengServer.GameServer.Game.Rogue.Buff;
+using EggLink.DanhengServer.GameServer.Game.Rogue.Event;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.ChessRogue;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.ChessRogue;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Game.ChessRogue;
+namespace EggLink.DanhengServer.GameServer.Game.ChessRogue;
 
 public class ChessRogueInstance : BaseRogueInstance
 {

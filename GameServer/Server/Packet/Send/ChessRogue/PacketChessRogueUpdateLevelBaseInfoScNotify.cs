@@ -1,6 +1,6 @@
 ﻿using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.ChessRogue;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.ChessRogue;
 
 public class PacketChessRogueUpdateLevelBaseInfoScNotify : BasePacket
 {

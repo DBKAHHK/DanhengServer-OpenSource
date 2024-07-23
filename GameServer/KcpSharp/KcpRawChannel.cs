@@ -1,9 +1,8 @@
 ﻿using System.Buffers.Binary;
 using System.Net;
 using System.Net.Sockets;
-using KcpSharp;
 
-namespace EggLink.DanhengServer.KcpSharp;
+namespace EggLink.DanhengServer.GameServer.KcpSharp;
 
 /// <summary>
 ///     An unreliable channel with a conversation ID.

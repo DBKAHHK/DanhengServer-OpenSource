@@ -1,6 +1,6 @@
 ﻿using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Friend;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Friend;
 
 [Opcode(CmdIds.SendMsgCsReq)]
 public class HandlerSendMsgCsReq : Handler

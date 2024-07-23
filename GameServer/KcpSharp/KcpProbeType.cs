@@ -1,4 +1,4 @@
-﻿namespace EggLink.DanhengServer.KcpSharp;
+﻿namespace EggLink.DanhengServer.GameServer.KcpSharp;
 
 [Flags]
 internal enum KcpProbeType

@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Threading.Tasks.Sources;
 
-namespace EggLink.DanhengServer.KcpSharp;
+namespace EggLink.DanhengServer.GameServer.KcpSharp;
 
 internal class AsyncAutoResetEvent<T> : IValueTaskSource<T>
 {

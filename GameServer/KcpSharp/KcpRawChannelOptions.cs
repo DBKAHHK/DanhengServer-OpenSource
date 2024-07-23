@@ -1,4 +1,4 @@
-﻿namespace EggLink.DanhengServer.KcpSharp;
+﻿namespace EggLink.DanhengServer.GameServer.KcpSharp;
 
 /// <summary>
 ///     Options used to control the behaviors of <see cref="KcpRawChannelOptions" />.

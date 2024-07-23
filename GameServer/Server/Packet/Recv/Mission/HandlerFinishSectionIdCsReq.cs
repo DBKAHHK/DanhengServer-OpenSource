@@ -1,7 +1,7 @@
-﻿using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.Mission;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Mission;
+using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Mission;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Mission;
 
 [Opcode(CmdIds.FinishSectionIdCsReq)]
 public class HandlerFinishSectionIdCsReq : Handler

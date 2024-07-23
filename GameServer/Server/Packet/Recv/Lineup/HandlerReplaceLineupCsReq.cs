@@ -1,6 +1,6 @@
 ﻿using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Lineup;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Lineup;
 
 [Opcode(CmdIds.ReplaceLineupCsReq)]
 public class HandlerReplaceLineupCsReq : Handler

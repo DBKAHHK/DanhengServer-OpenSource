@@ -1,7 +1,7 @@
 ﻿using EggLink.DanhengServer.Enums.Scene;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Scene;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 
 public class PacketGroupStateChangeScNotify : BasePacket
 {

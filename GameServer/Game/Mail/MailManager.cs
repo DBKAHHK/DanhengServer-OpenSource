@@ -1,8 +1,7 @@
 ﻿using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Database.Mail;
-using EggLink.DanhengServer.Game;
-using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Mail;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;

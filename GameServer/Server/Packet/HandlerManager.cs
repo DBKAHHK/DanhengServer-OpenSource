@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace EggLink.DanhengServer.Server.Packet;
+namespace EggLink.DanhengServer.GameServer.Server.Packet;
 
 public static class HandlerManager
 {

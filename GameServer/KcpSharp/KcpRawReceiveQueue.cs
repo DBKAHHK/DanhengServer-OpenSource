@@ -2,13 +2,13 @@
 using LinkedListOfQueueItem = KcpSharp.NetstandardShim.LinkedList<KcpSharp.KcpBuffer>;
 using LinkedListNodeOfQueueItem = KcpSharp.NetstandardShim.LinkedListNode<KcpSharp.KcpBuffer>;
 #else
-using LinkedListOfQueueItem = System.Collections.Generic.LinkedList<EggLink.DanhengServer.KcpSharp.KcpBuffer>;
-using LinkedListNodeOfQueueItem = System.Collections.Generic.LinkedListNode<EggLink.DanhengServer.KcpSharp.KcpBuffer>;
+using LinkedListOfQueueItem = System.Collections.Generic.LinkedList<EggLink.DanhengServer.GameServer.KcpSharp.KcpBuffer>;
+using LinkedListNodeOfQueueItem = System.Collections.Generic.LinkedListNode<EggLink.DanhengServer.GameServer.KcpSharp.KcpBuffer>;
 #endif
 using System.Diagnostics;
 using System.Threading.Tasks.Sources;
 
-namespace EggLink.DanhengServer.KcpSharp;
+namespace EggLink.DanhengServer.GameServer.KcpSharp;
 
 internal sealed class KcpRawReceiveQueue : IValueTaskSource<KcpConversationReceiveResult>, IDisposable
 {

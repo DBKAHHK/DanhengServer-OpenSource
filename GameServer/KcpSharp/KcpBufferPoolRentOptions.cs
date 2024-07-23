@@ -1,4 +1,4 @@
-﻿namespace EggLink.DanhengServer.KcpSharp;
+﻿namespace EggLink.DanhengServer.GameServer.KcpSharp;
 
 /// <summary>
 ///     The options to use when renting buffers from the pool.

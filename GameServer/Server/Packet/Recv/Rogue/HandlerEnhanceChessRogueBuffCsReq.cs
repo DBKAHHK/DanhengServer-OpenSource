@@ -1,7 +1,7 @@
-﻿using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.ChessRogue;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.ChessRogue;
+using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Rogue;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Rogue;
 
 [Opcode(CmdIds.EnhanceChessRogueBuffCsReq)]
 public class HandlerEnhanceChessRogueBuffCsReq : Handler

@@ -1,6 +1,6 @@
 ﻿using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Avatar;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Avatar;
 
 [Opcode(CmdIds.PromoteEquipmentCsReq)]
 public class HandlerPromoteEquipmentCsReq : Handler

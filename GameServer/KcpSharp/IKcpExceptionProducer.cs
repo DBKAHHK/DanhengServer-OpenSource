@@ -1,4 +1,4 @@
-﻿namespace EggLink.DanhengServer.KcpSharp;
+﻿namespace EggLink.DanhengServer.GameServer.KcpSharp;
 
 /// <summary>
 ///     An instance that can produce exceptions in background jobs.

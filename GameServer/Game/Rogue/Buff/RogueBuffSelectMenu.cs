@@ -2,7 +2,7 @@
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Game.Rogue.Buff;
+namespace EggLink.DanhengServer.GameServer.Game.Rogue.Buff;
 
 public class RogueBuffSelectMenu(BaseRogueInstance rogue)
 {

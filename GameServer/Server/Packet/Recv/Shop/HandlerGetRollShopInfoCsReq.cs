@@ -1,7 +1,7 @@
-﻿using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.Shop;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Shop;
+using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Shop;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Shop;
 
 [Opcode(CmdIds.GetRollShopInfoCsReq)]
 public class HandlerGetRollShopInfoCsReq : Handler

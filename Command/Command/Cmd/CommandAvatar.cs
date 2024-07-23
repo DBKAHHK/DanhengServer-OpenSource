@@ -1,8 +1,8 @@
 ﻿using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.Internationalization;
-using EggLink.DanhengServer.Server.Packet.Send.Player;
 
-namespace EggLink.DanhengServer.Command.Cmd;
+namespace EggLink.DanhengServer.Command.Command.Cmd;
 
 [CommandInfo("avatar", "Game.Command.Avatar.Desc", "Game.Command.Avatar.Usage")]
 public class CommandAvatar : ICommand

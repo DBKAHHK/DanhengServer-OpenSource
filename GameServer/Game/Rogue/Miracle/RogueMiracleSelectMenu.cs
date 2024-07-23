@@ -1,7 +1,7 @@
 ﻿using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Game.Rogue.Miracle;
+namespace EggLink.DanhengServer.GameServer.Game.Rogue.Miracle;
 
 public class RogueMiracleSelectMenu(BaseRogueInstance instance)
 {

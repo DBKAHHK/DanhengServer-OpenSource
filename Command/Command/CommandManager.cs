@@ -1,10 +1,10 @@
 ﻿using System.Reflection;
+using EggLink.DanhengServer.GameServer.Server;
 using EggLink.DanhengServer.Internationalization;
-using EggLink.DanhengServer.Server;
 using EggLink.DanhengServer.Util;
 using Spectre.Console;
 
-namespace EggLink.DanhengServer.Command;
+namespace EggLink.DanhengServer.Command.Command;
 
 public class CommandManager
 {

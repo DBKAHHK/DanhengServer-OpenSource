@@ -1,7 +1,7 @@
 ﻿using EggLink.DanhengServer.Proto;
 using LineupInfo = EggLink.DanhengServer.Database.Lineup.LineupInfo;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Lineup;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 
 public class PacketSyncLineupNotify : BasePacket
 {

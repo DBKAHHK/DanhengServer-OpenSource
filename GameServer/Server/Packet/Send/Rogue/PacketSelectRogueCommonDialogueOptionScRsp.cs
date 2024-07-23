@@ -1,7 +1,7 @@
-﻿using EggLink.DanhengServer.Game.Rogue.Event;
+﻿using EggLink.DanhengServer.GameServer.Game.Rogue.Event;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Rogue;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Rogue;
 
 public class PacketSelectRogueCommonDialogueOptionScRsp : BasePacket
 {

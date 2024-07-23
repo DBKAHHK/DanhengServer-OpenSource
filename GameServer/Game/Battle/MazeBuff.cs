@@ -1,7 +1,7 @@
-﻿using EggLink.DanhengServer.Game.Scene;
+﻿using EggLink.DanhengServer.GameServer.Game.Scene;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Game.Battle;
+namespace EggLink.DanhengServer.GameServer.Game.Battle;
 
 public class MazeBuff(int buffID, int buffLevel, int owner)
 {

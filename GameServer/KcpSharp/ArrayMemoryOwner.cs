@@ -2,7 +2,7 @@
 
 using System.Buffers;
 
-namespace EggLink.DanhengServer.KcpSharp;
+namespace EggLink.DanhengServer.GameServer.KcpSharp;
 
 internal sealed class ArrayMemoryOwner : IMemoryOwner<byte>
 {

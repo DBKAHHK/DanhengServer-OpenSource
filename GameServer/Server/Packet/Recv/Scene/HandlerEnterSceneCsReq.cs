@@ -1,7 +1,7 @@
 ﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Scene;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Scene;
 
 [Opcode(CmdIds.EnterSceneCsReq)]
 public class HandlerEnterSceneCsReq : Handler

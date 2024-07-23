@@ -1,6 +1,6 @@
 ﻿using EggLink.DanhengServer.Enums.Rogue;
 
-namespace EggLink.DanhengServer.Game.Rogue.Event.EffectHandler;
+namespace EggLink.DanhengServer.GameServer.Game.Rogue.Event.EffectHandler;
 
 [RogueEvent(DialogueEventTypeEnum.TriggerRogueMiracleSelect)]
 public class EventHandlerTriggerRogueMiracleSelect : RogueEventEffectHandler

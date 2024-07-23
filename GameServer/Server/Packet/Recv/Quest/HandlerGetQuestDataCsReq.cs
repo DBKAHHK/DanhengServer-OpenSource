@@ -1,6 +1,6 @@
-﻿using EggLink.DanhengServer.Server.Packet.Send.Quest;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Quest;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Quest;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Quest;
 
 [Opcode(CmdIds.GetQuestDataCsReq)]
 public class HandlerGetQuestDataCsReq : Handler

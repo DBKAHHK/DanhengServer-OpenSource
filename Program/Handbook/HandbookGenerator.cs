@@ -1,11 +1,11 @@
 ﻿using System.Text;
 using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Internationalization;
-using EggLink.DanhengServer.Program;
+using EggLink.DanhengServer.Program.Program;
 using EggLink.DanhengServer.Util;
 using Newtonsoft.Json;
 
-namespace EggLink.DanhengServer.Handbook;
+namespace EggLink.DanhengServer.Program.Handbook;
 
 public static class HandbookGenerator
 {

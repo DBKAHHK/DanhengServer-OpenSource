@@ -1,7 +1,7 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Internationalization;
 
-namespace EggLink.DanhengServer.Command.Cmd;
+namespace EggLink.DanhengServer.Command.Command.Cmd;
 
 [CommandInfo("give", "Game.Command.Give.Desc", "Game.Command.Give.Usage")]
 public class CommandGive : ICommand

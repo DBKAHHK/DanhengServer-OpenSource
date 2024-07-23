@@ -3,18 +3,17 @@ using LinkedListOfBufferItem = KcpSharp.NetstandardShim.LinkedList<KcpSharp.KcpS
 using LinkedListNodeOfBufferItem = KcpSharp.NetstandardShim.LinkedListNode<KcpSharp.KcpSendReceiveBufferItem>;
 #else
 using LinkedListOfBufferItem =
-    System.Collections.Generic.LinkedList<EggLink.DanhengServer.KcpSharp.KcpSendReceiveBufferItem>;
+    System.Collections.Generic.LinkedList<EggLink.DanhengServer.GameServer.KcpSharp.KcpSendReceiveBufferItem>;
 using LinkedListNodeOfBufferItem =
-    System.Collections.Generic.LinkedListNode<EggLink.DanhengServer.KcpSharp.KcpSendReceiveBufferItem>;
+    System.Collections.Generic.LinkedListNode<EggLink.DanhengServer.GameServer.KcpSharp.KcpSendReceiveBufferItem>;
 #endif
 using System.Buffers.Binary;
 using System.Net;
 using System.Net.Sockets;
 using System.Runtime.CompilerServices;
-using EggLink.DanhengServer.KcpSharp;
 using EggLink.DanhengServer.Util;
 
-namespace KcpSharp;
+namespace EggLink.DanhengServer.GameServer.KcpSharp;
 
 /// <summary>
 ///     A reliable channel over an unreliable transport implemented in KCP protocol.

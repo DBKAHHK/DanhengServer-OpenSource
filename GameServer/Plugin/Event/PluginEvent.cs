@@ -1,7 +1,7 @@
-﻿using EggLink.DanhengServer.Game.Player;
-using EggLink.DanhengServer.Game.Scene.Entity;
+﻿using EggLink.DanhengServer.GameServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 
-namespace EggLink.DanhengServer.Plugin.Event;
+namespace EggLink.DanhengServer.GameServer.Plugin.Event;
 
 public static class PluginEvent
 {

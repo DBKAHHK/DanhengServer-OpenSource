@@ -1,6 +1,4 @@
-﻿using EggLink.DanhengServer.Game;
-using EggLink.DanhengServer.Game.Player;
-using EggLink.DanhengServer.Game.Task;
+﻿using EggLink.DanhengServer.GameServer.Game.Player;
 
 namespace EggLink.DanhengServer.GameServer.Game.Task;
 

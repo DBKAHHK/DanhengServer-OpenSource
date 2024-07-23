@@ -1,7 +1,7 @@
-﻿using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.Challenge;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Challenge;
+using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Challenge;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Challenge;
 
 [Opcode(CmdIds.TakeChallengeRewardCsReq)]
 public class HandlerTakeChallengeRewardCsReq : Handler

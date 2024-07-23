@@ -1,6 +1,4 @@
 ﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.HeartDial;
-using EggLink.DanhengServer.Server;
-using EggLink.DanhengServer.Server.Packet;
 
 namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.HeartDial;
 

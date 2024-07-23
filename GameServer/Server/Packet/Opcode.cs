@@ -1,4 +1,4 @@
-﻿namespace EggLink.DanhengServer.Server.Packet;
+﻿namespace EggLink.DanhengServer.GameServer.Server.Packet;
 
 [AttributeUsage(AttributeTargets.Class)]
 public class Opcode(int cmdId) : Attribute

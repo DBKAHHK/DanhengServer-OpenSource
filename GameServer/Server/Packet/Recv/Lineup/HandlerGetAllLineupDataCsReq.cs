@@ -1,6 +1,6 @@
-﻿using EggLink.DanhengServer.Server.Packet.Send.Lineup;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Lineup;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Lineup;
 
 [Opcode(CmdIds.GetAllLineupDataCsReq)]
 public class HandlerGetAllLineupDataCsReq : Handler

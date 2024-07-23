@@ -1,7 +1,8 @@
 ﻿using EggLink.DanhengServer.Enums;
-using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.Enums.Mission;
+using EggLink.DanhengServer.GameServer.Game.Player;
 
-namespace EggLink.DanhengServer.Game.Mission.FinishAction.Handler;
+namespace EggLink.DanhengServer.GameServer.Game.Mission.FinishAction.Handler;
 
 [MissionFinishAction(FinishActionTypeEnum.delSubMission)]
 public class MissionHandlerDelSubMission : MissionFinishActionHandler

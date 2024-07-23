@@ -1,6 +1,7 @@
 ﻿using EggLink.DanhengServer.Enums;
+using EggLink.DanhengServer.Enums.Mission;
 
-namespace EggLink.DanhengServer.Game.Mission.FinishType;
+namespace EggLink.DanhengServer.GameServer.Game.Mission.FinishType;
 
 public class MissionFinishTypeAttribute(MissionFinishTypeEnum finishType) : Attribute
 {

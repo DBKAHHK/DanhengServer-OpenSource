@@ -2,7 +2,7 @@
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Game.ChessRogue.Dice;
+namespace EggLink.DanhengServer.GameServer.Game.ChessRogue.Dice;
 
 public class ChessRogueDiceInstance(ChessRogueInstance instance, ChessRogueNousDiceData diceData)
 {

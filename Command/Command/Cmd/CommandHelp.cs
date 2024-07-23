@@ -1,6 +1,6 @@
 ﻿using EggLink.DanhengServer.Internationalization;
 
-namespace EggLink.DanhengServer.Command.Cmd;
+namespace EggLink.DanhengServer.Command.Command.Cmd;
 
 [CommandInfo("help", "Game.Command.Help.Desc", "Game.Command.Help.Usage")]
 public class CommandHelp : ICommand

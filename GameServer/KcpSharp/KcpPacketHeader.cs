@@ -1,7 +1,7 @@
 ﻿using System.Buffers.Binary;
 using System.Diagnostics;
 
-namespace EggLink.DanhengServer.KcpSharp;
+namespace EggLink.DanhengServer.GameServer.KcpSharp;
 
 internal readonly struct KcpPacketHeader : IEquatable<KcpPacketHeader>
 {

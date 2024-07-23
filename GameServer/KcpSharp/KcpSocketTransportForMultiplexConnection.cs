@@ -1,6 +1,6 @@
 ﻿using System.Net.Sockets;
 
-namespace EggLink.DanhengServer.KcpSharp;
+namespace EggLink.DanhengServer.GameServer.KcpSharp;
 
 internal sealed class KcpSocketTransportForMultiplexConnection<T> : KcpSocketTransport<KcpMultiplexConnection<T>>,
     IKcpTransport<IKcpMultiplexConnection<T>>

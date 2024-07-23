@@ -1,7 +1,7 @@
 ﻿using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Challenge;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Challenge;
 
 [Opcode(CmdIds.LeaveChallengeCsReq)]
 public class HandlerLeaveChallengeCsReq : Handler

@@ -1,6 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 
-namespace EggLink.DanhengServer.Game.Battle.Skill;
+namespace EggLink.DanhengServer.GameServer.Game.Battle.Skill;
 
 public static class MazeSkillManager
 {

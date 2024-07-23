@@ -1,8 +1,8 @@
 ﻿using EggLink.DanhengServer.Enums.Scene;
-using EggLink.DanhengServer.Game.Scene.Entity;
+using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.Internationalization;
 
-namespace EggLink.DanhengServer.Command.Cmd;
+namespace EggLink.DanhengServer.Command.Command.Cmd;
 
 [CommandInfo("scene", "Game.Command.Scene.Desc", "Game.Command.Scene.Usage")]
 public class CommandScene : ICommand

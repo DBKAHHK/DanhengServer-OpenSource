@@ -1,7 +1,7 @@
-﻿using EggLink.DanhengServer.Game.Scene;
+﻿using EggLink.DanhengServer.GameServer.Game.Scene;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Scene;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 
 public class PacketEnterSceneByServerScNotify : BasePacket
 {

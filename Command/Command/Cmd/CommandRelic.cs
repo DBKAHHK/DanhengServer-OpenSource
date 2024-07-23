@@ -3,7 +3,7 @@ using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Internationalization;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Command.Cmd;
+namespace EggLink.DanhengServer.Command.Command.Cmd;
 
 [CommandInfo("relic", "Game.Command.Relic.Desc", "Game.Command.Relic.Usage")]
 public class CommandRelic : ICommand

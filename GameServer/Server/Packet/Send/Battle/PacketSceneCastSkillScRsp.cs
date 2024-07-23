@@ -1,7 +1,7 @@
-﻿using EggLink.DanhengServer.Game.Battle;
+﻿using EggLink.DanhengServer.GameServer.Game.Battle;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Battle;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Battle;
 
 public class PacketSceneCastSkillScRsp : BasePacket
 {

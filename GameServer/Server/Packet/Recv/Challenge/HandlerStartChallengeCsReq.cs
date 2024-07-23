@@ -1,6 +1,6 @@
 ﻿using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Battle;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Challenge;
 
 [Opcode(CmdIds.StartChallengeCsReq)]
 public class HandlerStartChallengeCsReq : Handler

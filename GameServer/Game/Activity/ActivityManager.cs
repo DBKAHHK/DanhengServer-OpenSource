@@ -1,8 +1,8 @@
 ﻿using EggLink.DanhengServer.Data;
-using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Game.Activity;
+namespace EggLink.DanhengServer.GameServer.Game.Activity;
 
 public class ActivityManager(PlayerInstance player) : BasePlayerManager(player)
 {

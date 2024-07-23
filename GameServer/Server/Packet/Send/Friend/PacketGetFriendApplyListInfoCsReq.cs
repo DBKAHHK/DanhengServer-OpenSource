@@ -1,4 +1,4 @@
-﻿namespace EggLink.DanhengServer.Server.Packet.Send.Gacha;
+﻿namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Friend;
 
 public class PacketGetFriendApplyListInfoCsReq : BasePacket
 {

@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace EggLink.DanhengServer.KcpSharp;
+namespace EggLink.DanhengServer.GameServer.KcpSharp;
 
 internal readonly struct KcpBuffer
 {

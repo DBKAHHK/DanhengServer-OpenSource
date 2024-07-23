@@ -1,8 +1,8 @@
 ﻿using EggLink.DanhengServer.Enums.Avatar;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.Player;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Player;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Player;
 
 [Opcode(CmdIds.SetPlayerInfoCsReq)]
 public class HandlerSetPlayerInfoCsReq : Handler

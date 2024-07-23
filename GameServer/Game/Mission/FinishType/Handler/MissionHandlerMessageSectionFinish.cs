@@ -1,9 +1,10 @@
 ﻿using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Enums;
-using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.Enums.Mission;
+using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Game.Mission.FinishType.Handler;
+namespace EggLink.DanhengServer.GameServer.Game.Mission.FinishType.Handler;
 
 [MissionFinishType(MissionFinishTypeEnum.MessageSectionFinish)]
 public class MissionHandlerMessageSectionFinish : MissionFinishTypeHandler

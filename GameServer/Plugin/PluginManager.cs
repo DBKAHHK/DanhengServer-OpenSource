@@ -1,10 +1,10 @@
 ﻿using System.Reflection;
+using EggLink.DanhengServer.GameServer.Plugin.Constructor;
 using EggLink.DanhengServer.Internationalization;
-using EggLink.DanhengServer.Plugin.Constructor;
 using EggLink.DanhengServer.Util;
 using McMaster.NETCore.Plugins;
 
-namespace EggLink.DanhengServer.Plugin;
+namespace EggLink.DanhengServer.GameServer.Plugin;
 
 public class PluginManager
 {

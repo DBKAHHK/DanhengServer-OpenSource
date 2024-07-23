@@ -1,8 +1,9 @@
 ﻿using System.Text;
 using EggLink.DanhengServer.Enums;
+using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.Internationalization;
 
-namespace EggLink.DanhengServer.Command.Cmd;
+namespace EggLink.DanhengServer.Command.Command.Cmd;
 
 [CommandInfo("mission", "Game.Command.Mission.Desc", "Game.Command.Mission.Usage")]
 public class CommandMission : ICommand

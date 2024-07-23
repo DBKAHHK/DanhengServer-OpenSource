@@ -1,6 +1,6 @@
 ﻿using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Gacha;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Gacha;
 
 public class PacketDoGachaScRsp : BasePacket
 {

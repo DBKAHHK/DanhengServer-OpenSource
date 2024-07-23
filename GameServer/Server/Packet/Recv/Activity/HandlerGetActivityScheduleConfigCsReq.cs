@@ -1,6 +1,6 @@
-﻿using EggLink.DanhengServer.Server.Packet.Send.Activity;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Activity;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Activity;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Activity;
 
 [Opcode(CmdIds.GetActivityScheduleConfigCsReq)]
 public class HandlerGetActivityScheduleConfigCsReq : Handler

@@ -1,6 +1,6 @@
-﻿using EggLink.DanhengServer.Server.Packet.Send.Battle;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Challenge;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Battle;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Challenge;
 
 [Opcode(CmdIds.GetCurChallengeCsReq)]
 public class HandlerGetCurChallengeCsReq : Handler

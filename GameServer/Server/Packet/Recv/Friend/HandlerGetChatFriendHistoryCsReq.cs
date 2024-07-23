@@ -1,4 +1,4 @@
-﻿namespace EggLink.DanhengServer.Server.Packet.Recv.Friend;
+﻿namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Friend;
 
 [Opcode(CmdIds.GetChatFriendHistoryCsReq)]
 public class HandlerGetChatFriendHistoryCsReq : Handler

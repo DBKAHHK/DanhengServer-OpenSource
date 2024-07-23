@@ -2,7 +2,7 @@
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Friend;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Friend;
 
 public class PacketSyncApplyFriendScNotify : BasePacket
 {

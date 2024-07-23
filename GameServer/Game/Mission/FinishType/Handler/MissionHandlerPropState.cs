@@ -1,10 +1,11 @@
 ﻿using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Enums;
+using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.Enums.Scene;
-using EggLink.DanhengServer.Game.Player;
-using EggLink.DanhengServer.Game.Scene.Entity;
+using EggLink.DanhengServer.GameServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 
-namespace EggLink.DanhengServer.Game.Mission.FinishType.Handler;
+namespace EggLink.DanhengServer.GameServer.Game.Mission.FinishType.Handler;
 
 [MissionFinishType(MissionFinishTypeEnum.PropState)]
 public class MissionHandlerPropState : MissionFinishTypeHandler

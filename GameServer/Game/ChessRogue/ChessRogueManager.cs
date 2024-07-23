@@ -1,12 +1,12 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.ChessRogue;
-using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.ChessRogue;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.ChessRogue;
-using EggLink.DanhengServer.Server.Packet.Send.Lineup;
 
-namespace EggLink.DanhengServer.Game.ChessRogue;
+namespace EggLink.DanhengServer.GameServer.Game.ChessRogue;
 
 public class ChessRogueManager(PlayerInstance player) : BasePlayerManager(player)
 {

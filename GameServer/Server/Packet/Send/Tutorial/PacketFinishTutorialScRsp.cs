@@ -1,6 +1,6 @@
 ﻿using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Tutorial;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Tutorial;
 
 public class PacketFinishTutorialScRsp : BasePacket
 {

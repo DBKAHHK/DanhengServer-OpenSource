@@ -1,10 +1,10 @@
 ﻿using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Data.Excel;
-using EggLink.DanhengServer.Game.Scene;
-using EggLink.DanhengServer.Game.Scene.Entity;
+using EggLink.DanhengServer.GameServer.Game.Scene;
+using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Game.Rogue.Scene.Entity;
+namespace EggLink.DanhengServer.GameServer.Game.Rogue.Scene.Entity;
 
 public class RogueProp(SceneInstance scene, MazePropExcel excel, GroupInfo group, PropInfo prop)
     : EntityProp(scene, excel, group, prop)

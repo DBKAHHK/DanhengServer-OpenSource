@@ -1,13 +1,13 @@
-﻿using EggLink.DanhengServer.Common.Enums;
-using EggLink.DanhengServer.Database;
+﻿using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Account;
 using EggLink.DanhengServer.Database.Player;
-using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.Enums;
+using EggLink.DanhengServer.GameServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Player;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Player;
 
 [Opcode(CmdIds.PlayerGetTokenCsReq)]
 public class HandlerPlayerGetTokenCsReq : Handler

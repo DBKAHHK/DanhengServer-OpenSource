@@ -2,14 +2,14 @@
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Lineup;
-using EggLink.DanhengServer.Game.Player;
-using EggLink.DanhengServer.Game.Scene;
+using EggLink.DanhengServer.GameServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Game.Scene;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.Util;
 using LineupInfo = EggLink.DanhengServer.Database.Lineup.LineupInfo;
 
-namespace EggLink.DanhengServer.Game.Lineup;
+namespace EggLink.DanhengServer.GameServer.Game.Lineup;
 
 public class LineupManager : BasePlayerManager
 {

@@ -1,10 +1,10 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database.Inventory;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Shop;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.Shop;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Shop;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Shop;
 
 [Opcode(CmdIds.DoGachaInRollShopCsReq)]
 public class HandlerDoGachaInRollShopCsReq : Handler

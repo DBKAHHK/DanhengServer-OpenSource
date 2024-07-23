@@ -1,4 +1,4 @@
-﻿namespace EggLink.DanhengServer.Server.Packet.Recv.Scene;
+﻿namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Scene;
 
 [Opcode(CmdIds.LeaveMapRotationRegionCsReq)]
 public class HandlerLeaveMapRotationRegionCsReq : Handler

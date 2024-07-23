@@ -1,4 +1,4 @@
-﻿namespace EggLink.DanhengServer.Plugin.Constructor;
+﻿namespace EggLink.DanhengServer.GameServer.Plugin.Constructor;
 
 [AttributeUsage(AttributeTargets.Class)]
 public class PluginInfo(string name, string description, string version) : Attribute

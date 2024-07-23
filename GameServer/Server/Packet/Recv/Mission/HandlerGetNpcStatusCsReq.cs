@@ -1,6 +1,6 @@
-﻿using EggLink.DanhengServer.Server.Packet.Send.Mission;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Mission;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Mission;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Mission;
 
 [Opcode(CmdIds.GetNpcStatusCsReq)]
 public class HandlerGetNpcStatusCsReq : Handler

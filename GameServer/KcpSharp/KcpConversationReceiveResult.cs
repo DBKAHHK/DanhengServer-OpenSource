@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace EggLink.DanhengServer.KcpSharp;
+namespace EggLink.DanhengServer.GameServer.KcpSharp;
 
 /// <summary>
 ///     The result of a receive or peek operation.

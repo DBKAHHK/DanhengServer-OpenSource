@@ -1,6 +1,6 @@
 ﻿using EggLink.DanhengServer.Database.Inventory;
 
-namespace EggLink.DanhengServer.Game.Drop;
+namespace EggLink.DanhengServer.GameServer.Game.Drop;
 
 public class DropService
 {

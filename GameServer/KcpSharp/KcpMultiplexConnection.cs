@@ -2,9 +2,8 @@
 using System.Collections.Concurrent;
 using System.Net;
 using System.Net.Sockets;
-using KcpSharp;
 
-namespace EggLink.DanhengServer.KcpSharp;
+namespace EggLink.DanhengServer.GameServer.KcpSharp;
 
 /// <summary>
 ///     Multiplex many channels or conversations over the same transport.

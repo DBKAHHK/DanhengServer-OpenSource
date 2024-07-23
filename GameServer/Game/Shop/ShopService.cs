@@ -2,9 +2,10 @@
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Enums.Item;
-using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.Enums.Mission;
+using EggLink.DanhengServer.GameServer.Game.Player;
 
-namespace EggLink.DanhengServer.Game.Shop;
+namespace EggLink.DanhengServer.GameServer.Game.Shop;
 
 public class ShopService(PlayerInstance player) : BasePlayerManager(player)
 {

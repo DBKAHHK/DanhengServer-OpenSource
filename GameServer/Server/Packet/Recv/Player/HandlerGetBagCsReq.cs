@@ -1,6 +1,6 @@
-﻿using EggLink.DanhengServer.Server.Packet.Send.Player;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Player;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Player;
 
 [Opcode(CmdIds.GetBagCsReq)]
 public class HandlerGetBagCsReq : Handler

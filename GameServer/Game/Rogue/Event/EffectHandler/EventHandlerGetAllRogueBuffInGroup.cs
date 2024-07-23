@@ -1,7 +1,7 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Enums.Rogue;
 
-namespace EggLink.DanhengServer.Game.Rogue.Event.EffectHandler;
+namespace EggLink.DanhengServer.GameServer.Game.Rogue.Event.EffectHandler;
 
 [RogueEvent(DialogueEventTypeEnum.GetAllRogueBuffInGroup)]
 public class EventHandlerGetAllRogueBuffInGroup : RogueEventEffectHandler

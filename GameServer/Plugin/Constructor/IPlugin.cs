@@ -1,4 +1,4 @@
-﻿namespace EggLink.DanhengServer.Plugin.Constructor;
+﻿namespace EggLink.DanhengServer.GameServer.Plugin.Constructor;
 
 public interface IPlugin
 {

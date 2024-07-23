@@ -2,7 +2,7 @@
 using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Internationalization;
 
-namespace EggLink.DanhengServer.Command.Cmd;
+namespace EggLink.DanhengServer.Command.Command.Cmd;
 
 [CommandInfo("reload", "Game.Command.Reload.Desc", "Game.Command.Reload.Usage", permission: "egglink.manage")]
 public class CommandReload : ICommand

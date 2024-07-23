@@ -1,7 +1,7 @@
-﻿using EggLink.DanhengServer.Game.Scene.Entity;
+﻿using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Scene;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 
 public class PacketSceneGroupRefreshScNotify : BasePacket
 {

@@ -3,18 +3,18 @@ using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Enums.Scene;
-using EggLink.DanhengServer.Game.Battle;
-using EggLink.DanhengServer.Game.Challenge;
-using EggLink.DanhengServer.Game.ChessRogue.Cell;
-using EggLink.DanhengServer.Game.Player;
-using EggLink.DanhengServer.Game.Rogue.Scene;
-using EggLink.DanhengServer.Game.Scene.Entity;
+using EggLink.DanhengServer.GameServer.Game.Battle;
+using EggLink.DanhengServer.GameServer.Game.Challenge;
+using EggLink.DanhengServer.GameServer.Game.ChessRogue.Cell;
 using EggLink.DanhengServer.GameServer.Game.Mission;
+using EggLink.DanhengServer.GameServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Game.Rogue.Scene;
+using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Game.Scene;
+namespace EggLink.DanhengServer.GameServer.Game.Scene;
 
 public class SceneInstance
 {

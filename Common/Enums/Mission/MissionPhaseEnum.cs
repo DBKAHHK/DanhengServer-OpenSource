@@ -1,7 +1,7 @@
 ﻿using EggLink.DanhengServer.Enums.Task;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Enums;
+namespace EggLink.DanhengServer.Enums.Mission;
 
 public enum MissionPhaseEnum
 {

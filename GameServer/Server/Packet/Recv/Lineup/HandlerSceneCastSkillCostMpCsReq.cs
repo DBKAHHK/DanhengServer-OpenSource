@@ -1,7 +1,7 @@
-﻿using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.Lineup;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
+using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Lineup;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Lineup;
 
 [Opcode(CmdIds.SceneCastSkillCostMpCsReq)]
 public class HandlerSceneCastSkillCostMpCsReq : Handler

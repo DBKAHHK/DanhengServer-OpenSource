@@ -1,8 +1,8 @@
 ﻿using EggLink.DanhengServer.Data;
-using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Battle;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Challenge;
 
 public class PacketGetChallengeScRsp : BasePacket
 {

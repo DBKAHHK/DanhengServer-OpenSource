@@ -1,7 +1,7 @@
-﻿using EggLink.DanhengServer.Game.Battle;
+﻿using EggLink.DanhengServer.GameServer.Game.Battle;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Game.Scene.Entity;
+namespace EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 
 public interface IGameEntity
 {

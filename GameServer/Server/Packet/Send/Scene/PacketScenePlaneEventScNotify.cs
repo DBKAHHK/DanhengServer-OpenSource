@@ -1,7 +1,7 @@
 ﻿using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Scene;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 
 public class PacketScenePlaneEventScNotify : BasePacket
 {

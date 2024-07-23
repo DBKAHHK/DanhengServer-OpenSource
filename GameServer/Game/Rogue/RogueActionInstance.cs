@@ -1,8 +1,8 @@
-﻿using EggLink.DanhengServer.Game.Rogue.Buff;
-using EggLink.DanhengServer.Game.Rogue.Miracle;
+﻿using EggLink.DanhengServer.GameServer.Game.Rogue.Buff;
+using EggLink.DanhengServer.GameServer.Game.Rogue.Miracle;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Game.Rogue;
+namespace EggLink.DanhengServer.GameServer.Game.Rogue;
 
 public class RogueActionInstance
 {

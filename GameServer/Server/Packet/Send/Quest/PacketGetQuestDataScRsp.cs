@@ -1,7 +1,7 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Quest;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Quest;
 
 public class PacketGetQuestDataScRsp : BasePacket
 {

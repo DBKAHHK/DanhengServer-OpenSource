@@ -1,6 +1,6 @@
-﻿using EggLink.DanhengServer.Server.Packet.Send.Rogue;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Rogue;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Rogue;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Rogue;
 
 [Opcode(CmdIds.LeaveRogueCsReq)]
 public class HandlerLeaveRogueCsReq : Handler

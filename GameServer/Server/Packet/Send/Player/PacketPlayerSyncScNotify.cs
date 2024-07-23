@@ -5,7 +5,7 @@ using EggLink.DanhengServer.Database.Message;
 using EggLink.DanhengServer.Enums.Item;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Player;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 
 public class PacketPlayerSyncScNotify : BasePacket
 {

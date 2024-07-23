@@ -1,6 +1,6 @@
-﻿using EggLink.DanhengServer.Server.Packet.Send.Gacha;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Gacha;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Gacha;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Gacha;
 
 [Opcode(CmdIds.GetGachaInfoCsReq)]
 public class HandlerGetGachaInfoCsReq : Handler

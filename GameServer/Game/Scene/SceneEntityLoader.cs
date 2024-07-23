@@ -1,11 +1,12 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Enums;
+using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.Enums.Scene;
-using EggLink.DanhengServer.Game.Scene.Entity;
-using EggLink.DanhengServer.Server.Packet.Send.Scene;
+using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 
-namespace EggLink.DanhengServer.Game.Scene;
+namespace EggLink.DanhengServer.GameServer.Game.Scene;
 
 public class SceneEntityLoader(SceneInstance scene)
 {

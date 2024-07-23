@@ -1,6 +1,6 @@
-﻿using EggLink.DanhengServer.Game.Player;
+﻿using EggLink.DanhengServer.GameServer.Game.Player;
 
-namespace EggLink.DanhengServer.Game;
+namespace EggLink.DanhengServer.GameServer.Game;
 
 public class BasePlayerManager(PlayerInstance player)
 {

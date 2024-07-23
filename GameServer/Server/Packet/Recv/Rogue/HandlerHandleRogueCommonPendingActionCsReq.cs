@@ -1,6 +1,6 @@
 ﻿using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Rogue;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Rogue;
 
 [Opcode(CmdIds.HandleRogueCommonPendingActionCsReq)]
 public class HandlerHandleRogueCommonPendingActionCsReq : Handler

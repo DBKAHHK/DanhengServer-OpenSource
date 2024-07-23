@@ -3,14 +3,15 @@ using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Enums.Item;
-using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.Enums.Mission;
+using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Others;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.Player;
-using EggLink.DanhengServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Game.Inventory;
+namespace EggLink.DanhengServer.GameServer.Game.Inventory;
 
 public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
 {

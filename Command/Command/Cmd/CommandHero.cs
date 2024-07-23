@@ -1,9 +1,9 @@
 ﻿using EggLink.DanhengServer.Enums.Avatar;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Avatar;
 using EggLink.DanhengServer.Internationalization;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.Avatar;
 
-namespace EggLink.DanhengServer.Command.Cmd;
+namespace EggLink.DanhengServer.Command.Command.Cmd;
 
 [CommandInfo("hero", "Game.Command.Hero.Desc", "Game.Command.Hero.Usage")]
 public class CommandHero : ICommand

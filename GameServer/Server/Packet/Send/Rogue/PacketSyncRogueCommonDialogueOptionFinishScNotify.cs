@@ -1,6 +1,5 @@
-﻿using EggLink.DanhengServer.Game.Rogue.Event;
+﻿using EggLink.DanhengServer.GameServer.Game.Rogue.Event;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet;
 
 namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Rogue;
 

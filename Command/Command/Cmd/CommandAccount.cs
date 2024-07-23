@@ -1,7 +1,7 @@
 ﻿using EggLink.DanhengServer.Database.Account;
 using EggLink.DanhengServer.Internationalization;
 
-namespace EggLink.DanhengServer.Command.Cmd;
+namespace EggLink.DanhengServer.Command.Command.Cmd;
 
 [CommandInfo("account", "Game.Command.Account.Desc", "Game.Command.Account.Usage", permission: "egglink.manage")]
 public class CommandAccount : ICommand

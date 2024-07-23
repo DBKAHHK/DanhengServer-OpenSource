@@ -1,6 +1,6 @@
 ﻿using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Mission;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Mission;
 
 public class PacketMissionAcceptScNotify : BasePacket
 {

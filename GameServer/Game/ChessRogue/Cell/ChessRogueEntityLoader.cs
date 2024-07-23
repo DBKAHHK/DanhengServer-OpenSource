@@ -3,12 +3,12 @@ using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Enums.Rogue;
 using EggLink.DanhengServer.Enums.Scene;
-using EggLink.DanhengServer.Game.Rogue.Scene.Entity;
-using EggLink.DanhengServer.Game.Scene;
-using EggLink.DanhengServer.Game.Scene.Entity;
+using EggLink.DanhengServer.GameServer.Game.Rogue.Scene.Entity;
+using EggLink.DanhengServer.GameServer.Game.Scene;
+using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Game.ChessRogue.Cell;
+namespace EggLink.DanhengServer.GameServer.Game.ChessRogue.Cell;
 
 public class ChessRogueEntityLoader(SceneInstance scene) : SceneEntityLoader(scene)
 {

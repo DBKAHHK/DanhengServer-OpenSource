@@ -1,11 +1,11 @@
 ﻿using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Enums.Avatar;
-using EggLink.DanhengServer.Game.Battle.Skill.Action;
-using EggLink.DanhengServer.Game.Scene;
-using EggLink.DanhengServer.Game.Scene.Entity;
+using EggLink.DanhengServer.GameServer.Game.Battle.Skill.Action;
+using EggLink.DanhengServer.GameServer.Game.Scene;
+using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 
-namespace EggLink.DanhengServer.Game.Battle.Skill;
+namespace EggLink.DanhengServer.GameServer.Game.Battle.Skill;
 
 public class MazeSkill
 {

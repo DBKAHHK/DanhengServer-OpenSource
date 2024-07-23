@@ -1,12 +1,12 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Excel;
-using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Rogue;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.Lineup;
-using EggLink.DanhengServer.Server.Packet.Send.Rogue;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Game.Rogue;
+namespace EggLink.DanhengServer.GameServer.Game.Rogue;
 
 public class RogueManager(PlayerInstance player) : BasePlayerManager(player)
 {

@@ -1,10 +1,10 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Excel;
-using EggLink.DanhengServer.Game.Rogue.Scene.Entity;
+using EggLink.DanhengServer.GameServer.Game.Rogue.Scene.Entity;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Game.Rogue.Event;
+namespace EggLink.DanhengServer.GameServer.Game.Rogue.Event;
 
 public class RogueEventInstance(int eventId, RogueNpc npc, List<RogueEventParam> optionIds, int uniqueId)
 {

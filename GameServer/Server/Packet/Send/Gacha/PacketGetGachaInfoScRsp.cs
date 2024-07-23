@@ -1,6 +1,6 @@
-﻿using EggLink.DanhengServer.Game.Player;
+﻿using EggLink.DanhengServer.GameServer.Game.Player;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Gacha;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Gacha;
 
 public class PacketGetGachaInfoScRsp : BasePacket
 {

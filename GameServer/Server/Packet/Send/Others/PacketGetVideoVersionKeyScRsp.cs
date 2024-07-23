@@ -1,4 +1,4 @@
-﻿namespace EggLink.DanhengServer.Server.Packet.Send.Others;
+﻿namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Others;
 
 public class PacketGetVideoVersionKeyScRsp : BasePacket
 {

@@ -1,6 +1,6 @@
 ﻿using EggLink.DanhengServer.Enums;
-using EggLink.DanhengServer.Game.Mission.FinishAction;
-using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.Enums.Mission;
+using EggLink.DanhengServer.GameServer.Game.Player;
 
 namespace EggLink.DanhengServer.GameServer.Game.Mission.FinishAction.Handler;
 

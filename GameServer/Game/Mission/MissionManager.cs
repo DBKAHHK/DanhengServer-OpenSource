@@ -4,19 +4,20 @@ using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Enums.Item;
-using EggLink.DanhengServer.Game.Mission.FinishAction;
-using EggLink.DanhengServer.Game.Mission.FinishType;
-using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.Enums.Mission;
+using EggLink.DanhengServer.GameServer.Game.Mission.FinishAction;
+using EggLink.DanhengServer.GameServer.Game.Mission.FinishType;
+using EggLink.DanhengServer.GameServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Plugin.Event;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.HeartDial;
-using EggLink.DanhengServer.Plugin.Event;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Mission;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.Mission;
-using EggLink.DanhengServer.Server.Packet.Send.Player;
-using EggLink.DanhengServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Util;
 using MissionData = EggLink.DanhengServer.Database.Mission.MissionData;
 
-namespace EggLink.DanhengServer.Game.Mission;
+namespace EggLink.DanhengServer.GameServer.Game.Mission;
 
 public class MissionManager : BasePlayerManager
 {

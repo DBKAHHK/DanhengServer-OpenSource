@@ -2,17 +2,16 @@
 using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Challenge;
-using EggLink.DanhengServer.Game.Battle;
-using EggLink.DanhengServer.Game.Player;
-using EggLink.DanhengServer.Game.Scene;
-using EggLink.DanhengServer.Game.Scene.Entity;
+using EggLink.DanhengServer.GameServer.Game.Battle;
+using EggLink.DanhengServer.GameServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Game.Scene;
+using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Challenge;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.Challenge;
-using EggLink.DanhengServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Game.Challenge;
+namespace EggLink.DanhengServer.GameServer.Game.Challenge;
 
 public class ChallengeInstance
 {

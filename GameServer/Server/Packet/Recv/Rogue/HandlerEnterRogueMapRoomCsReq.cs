@@ -1,7 +1,7 @@
-﻿using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.Rogue;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Rogue;
+using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Rogue;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Rogue;
 
 [Opcode(CmdIds.EnterRogueMapRoomCsReq)]
 public class HandlerEnterRogueMapRoomCsReq : Handler

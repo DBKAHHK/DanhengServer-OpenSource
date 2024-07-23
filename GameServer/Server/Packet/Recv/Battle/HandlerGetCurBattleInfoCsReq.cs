@@ -1,6 +1,6 @@
 ﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Battle;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Battle;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Battle;
 
 [Opcode(CmdIds.GetCurBattleInfoCsReq)]
 public class HandlerGetCurBattleInfoCsReq : Handler

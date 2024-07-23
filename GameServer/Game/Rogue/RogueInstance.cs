@@ -1,15 +1,15 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Excel;
-using EggLink.DanhengServer.Game.Battle;
-using EggLink.DanhengServer.Game.Player;
-using EggLink.DanhengServer.Game.Rogue.Buff;
-using EggLink.DanhengServer.Game.Rogue.Event;
-using EggLink.DanhengServer.Game.Rogue.Scene;
+using EggLink.DanhengServer.GameServer.Game.Battle;
+using EggLink.DanhengServer.GameServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Game.Rogue.Buff;
+using EggLink.DanhengServer.GameServer.Game.Rogue.Event;
+using EggLink.DanhengServer.GameServer.Game.Rogue.Scene;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Rogue;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.Rogue;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Game.Rogue;
+namespace EggLink.DanhengServer.GameServer.Game.Rogue;
 
 public class RogueInstance : BaseRogueInstance
 {

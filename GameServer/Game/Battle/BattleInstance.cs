@@ -3,13 +3,13 @@ using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Inventory;
-using EggLink.DanhengServer.Game.Player;
-using EggLink.DanhengServer.Game.Scene;
-using EggLink.DanhengServer.Game.Scene.Entity;
+using EggLink.DanhengServer.GameServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Game.Scene;
+using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.Proto;
 using LineupInfo = EggLink.DanhengServer.Database.Lineup.LineupInfo;
 
-namespace EggLink.DanhengServer.Game.Battle;
+namespace EggLink.DanhengServer.GameServer.Game.Battle;
 
 public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<StageConfigExcel> stages)
     : BasePlayerManager(player)

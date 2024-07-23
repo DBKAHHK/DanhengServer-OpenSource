@@ -1,7 +1,7 @@
 ﻿using EggLink.DanhengServer.Proto;
 using Google.Protobuf.Collections;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Avatar;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Avatar;
 
 public class PacketSetAssistAvatarScRsp : BasePacket
 {

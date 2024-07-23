@@ -1,6 +1,6 @@
 ﻿using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Avatar;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Avatar;
 
 public class PacketGetAssistListScRsp : BasePacket
 {

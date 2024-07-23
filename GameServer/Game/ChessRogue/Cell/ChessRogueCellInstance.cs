@@ -6,7 +6,7 @@ using EggLink.DanhengServer.Enums.Rogue;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Game.ChessRogue.Cell;
+namespace EggLink.DanhengServer.GameServer.Game.ChessRogue.Cell;
 
 public class ChessRogueCellInstance
 {

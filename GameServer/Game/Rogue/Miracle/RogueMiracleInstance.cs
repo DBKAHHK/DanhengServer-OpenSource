@@ -1,11 +1,11 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Enums.Rogue;
-using EggLink.DanhengServer.Game.Battle;
+using EggLink.DanhengServer.GameServer.Game.Battle;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Rogue;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.Rogue;
 
-namespace EggLink.DanhengServer.Game.Rogue.Miracle;
+namespace EggLink.DanhengServer.GameServer.Game.Rogue.Miracle;
 
 public class RogueMiracleInstance
 {

@@ -1,7 +1,7 @@
 ﻿using EggLink.DanhengServer.Enums.Rogue;
-using EggLink.DanhengServer.Server.Packet.Send.Lineup;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 
-namespace EggLink.DanhengServer.Game.Rogue.Event.CostHandler;
+namespace EggLink.DanhengServer.GameServer.Game.Rogue.Event.CostHandler;
 
 [RogueEvent(costType: DialogueEventCostTypeEnum.CostHpSpToPercent)]
 public class EventHandlerCostHpSpToPercent : RogueEventCostHandler

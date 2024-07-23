@@ -1,11 +1,10 @@
 ﻿using System.Reflection;
 using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Enums.Rogue;
-using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Rogue;
-using EggLink.DanhengServer.Server.Packet.Send.Rogue;
 
-namespace EggLink.DanhengServer.Game.Rogue.Event;
+namespace EggLink.DanhengServer.GameServer.Game.Rogue.Event;
 
 public class RogueEventManager
 {

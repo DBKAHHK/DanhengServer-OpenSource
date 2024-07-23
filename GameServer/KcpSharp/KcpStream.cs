@@ -1,6 +1,4 @@
-﻿using KcpSharp;
-
-namespace EggLink.DanhengServer.KcpSharp;
+﻿namespace EggLink.DanhengServer.GameServer.KcpSharp;
 
 /// <summary>
 ///     A stream wrapper of <see cref="KcpConversation" />.

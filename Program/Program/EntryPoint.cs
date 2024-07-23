@@ -1,19 +1,20 @@
 ﻿using EggLink.DanhengServer.Command;
+using EggLink.DanhengServer.Command.Command;
 using EggLink.DanhengServer.Configuration;
 using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.GameServer.Command;
-using EggLink.DanhengServer.Handbook;
+using EggLink.DanhengServer.GameServer.Plugin;
+using EggLink.DanhengServer.GameServer.Server;
+using EggLink.DanhengServer.GameServer.Server.Packet;
 using EggLink.DanhengServer.Internationalization;
-using EggLink.DanhengServer.Plugin;
-using EggLink.DanhengServer.Server;
-using EggLink.DanhengServer.Server.Packet;
+using EggLink.DanhengServer.Program.Handbook;
 using EggLink.DanhengServer.Util;
 using EggLink.DanhengServer.WebServer;
 using EggLink.DanhengServer.WebServer.Server;
 
-namespace EggLink.DanhengServer.Program;
+namespace EggLink.DanhengServer.Program.Program;
 
 public class EntryPoint
 {

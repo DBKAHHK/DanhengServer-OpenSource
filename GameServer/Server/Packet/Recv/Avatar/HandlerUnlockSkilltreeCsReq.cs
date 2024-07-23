@@ -1,10 +1,10 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Avatar;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.Avatar;
-using EggLink.DanhengServer.Server.Packet.Send.Player;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Avatar;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Avatar;
 
 [Opcode(CmdIds.UnlockSkilltreeCsReq)]
 public class HandlerUnlockSkilltreeCsReq : Handler

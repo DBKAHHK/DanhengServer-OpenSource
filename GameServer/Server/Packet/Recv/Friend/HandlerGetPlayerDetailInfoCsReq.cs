@@ -1,9 +1,9 @@
 ﻿using EggLink.DanhengServer.Database.Player;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Friend;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.Friend;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Friend;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Friend;
 
 [Opcode(CmdIds.GetPlayerDetailInfoCsReq)]
 public class HandlerGetPlayerDetailInfoCsReq : Handler

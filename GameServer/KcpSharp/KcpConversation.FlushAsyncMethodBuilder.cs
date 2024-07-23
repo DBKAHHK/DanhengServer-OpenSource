@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.ExceptionServices;
 using System.Threading.Tasks.Sources;
 
-namespace KcpSharp;
+namespace EggLink.DanhengServer.GameServer.KcpSharp;
 
 partial class KcpConversation
 {

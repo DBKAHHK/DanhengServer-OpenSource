@@ -1,12 +1,12 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Enums.Scene;
-using EggLink.DanhengServer.Game.Player;
-using EggLink.DanhengServer.Game.Rogue.Scene.Entity;
-using EggLink.DanhengServer.Game.Scene;
-using EggLink.DanhengServer.Game.Scene.Entity;
+using EggLink.DanhengServer.GameServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Game.Rogue.Scene.Entity;
+using EggLink.DanhengServer.GameServer.Game.Scene;
+using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 
-namespace EggLink.DanhengServer.Game.Rogue.Scene;
+namespace EggLink.DanhengServer.GameServer.Game.Rogue.Scene;
 
 public class RogueEntityLoader(SceneInstance scene, PlayerInstance player) : SceneEntityLoader(scene)
 {

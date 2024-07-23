@@ -1,6 +1,6 @@
 ﻿using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Game.Battle;
+namespace EggLink.DanhengServer.GameServer.Game.Battle;
 
 public class BattleEventInstance(int battleEventId, int curSp, int maxSp = 10000)
 {

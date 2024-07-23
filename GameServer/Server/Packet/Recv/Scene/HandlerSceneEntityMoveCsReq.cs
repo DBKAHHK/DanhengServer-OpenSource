@@ -1,7 +1,7 @@
 ﻿using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Scene;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Scene;
 
 [Opcode(CmdIds.SceneEntityMoveCsReq)]
 public class HandlerSceneEntityMoveCsReq : Handler

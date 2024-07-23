@@ -1,6 +1,6 @@
-﻿using EggLink.DanhengServer.Server.Packet.Send.ChessRogue;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.ChessRogue;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.ChessRogue;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.ChessRogue;
 
 [Opcode(CmdIds.GetChessRogueBuffEnhanceInfoCsReq)]
 public class HandlerGetChessRogueBuffEnhanceInfoCsReq : Handler

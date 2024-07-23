@@ -1,4 +1,4 @@
-﻿namespace EggLink.DanhengServer.Server.Packet.Recv.Player;
+﻿namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Player;
 
 [Opcode(CmdIds.PlayerLoginFinishCsReq)]
 public class HandlerPlayerLoginFinishCsReq : Handler

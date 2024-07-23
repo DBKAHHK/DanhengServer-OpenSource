@@ -2,11 +2,11 @@
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Challenge;
 using EggLink.DanhengServer.Database.Inventory;
-using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Challenge;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.Challenge;
 
-namespace EggLink.DanhengServer.Game.Challenge;
+namespace EggLink.DanhengServer.GameServer.Game.Challenge;
 
 public class ChallengeManager(PlayerInstance player) : BasePlayerManager(player)
 {

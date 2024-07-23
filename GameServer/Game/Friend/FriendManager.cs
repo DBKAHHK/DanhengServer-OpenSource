@@ -1,14 +1,14 @@
 ﻿using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Friend;
 using EggLink.DanhengServer.Database.Player;
-using EggLink.DanhengServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Command;
+using EggLink.DanhengServer.GameServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Server;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Friend;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server;
-using EggLink.DanhengServer.Server.Packet.Send.Friend;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Game.Friend;
+namespace EggLink.DanhengServer.GameServer.Game.Friend;
 
 public class FriendManager(PlayerInstance player) : BasePlayerManager(player)
 {

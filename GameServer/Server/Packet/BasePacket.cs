@@ -1,7 +1,7 @@
 ﻿using EggLink.DanhengServer.Util;
 using Google.Protobuf;
 
-namespace EggLink.DanhengServer.Server.Packet;
+namespace EggLink.DanhengServer.GameServer.Server.Packet;
 
 public class BasePacket(ushort cmdId)
 {

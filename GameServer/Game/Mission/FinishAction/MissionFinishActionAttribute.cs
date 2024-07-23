@@ -1,6 +1,7 @@
 ﻿using EggLink.DanhengServer.Enums;
+using EggLink.DanhengServer.Enums.Mission;
 
-namespace EggLink.DanhengServer.Game.Mission.FinishAction;
+namespace EggLink.DanhengServer.GameServer.Game.Mission.FinishAction;
 
 [AttributeUsage(AttributeTargets.Class)]
 public class MissionFinishActionAttribute(FinishActionTypeEnum finishAction) : Attribute

@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace EggLink.DanhengServer.KcpSharp;
+namespace EggLink.DanhengServer.GameServer.KcpSharp;
 
 /// <summary>
 ///     A transport to send and receive packets.

@@ -1,6 +1,6 @@
 ﻿using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Player;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Player;
 
 [Opcode(CmdIds.UseItemCsReq)]
 public class HandlerUseItemCsReq : Handler

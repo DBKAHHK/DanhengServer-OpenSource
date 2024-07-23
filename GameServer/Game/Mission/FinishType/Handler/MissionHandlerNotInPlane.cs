@@ -1,7 +1,7 @@
 ﻿using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Enums;
-using EggLink.DanhengServer.Game.Mission.FinishType;
-using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.Enums.Mission;
+using EggLink.DanhengServer.GameServer.Game.Player;
 
 namespace EggLink.DanhengServer.GameServer.Game.Mission.FinishType.Handler;
 

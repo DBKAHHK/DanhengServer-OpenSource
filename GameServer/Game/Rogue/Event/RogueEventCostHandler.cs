@@ -1,4 +1,4 @@
-﻿namespace EggLink.DanhengServer.Game.Rogue.Event;
+﻿namespace EggLink.DanhengServer.GameServer.Game.Rogue.Event;
 
 public abstract class RogueEventCostHandler
 {

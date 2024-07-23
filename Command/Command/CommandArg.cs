@@ -1,7 +1,7 @@
-﻿using EggLink.DanhengServer.Server;
+﻿using EggLink.DanhengServer.GameServer.Server;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Command;
+namespace EggLink.DanhengServer.Command.Command;
 
 public class CommandArg
 {

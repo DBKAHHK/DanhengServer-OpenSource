@@ -1,7 +1,7 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Shop;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Shop;
 
 public class PacketGetRollShopInfoScRsp : BasePacket
 {

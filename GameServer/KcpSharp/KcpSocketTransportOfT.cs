@@ -1,10 +1,10 @@
 ﻿using System.Buffers;
 using System.Net;
 using System.Net.Sockets;
-using EggLink.DanhengServer.Server;
+using EggLink.DanhengServer.GameServer.Server;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.KcpSharp;
+namespace EggLink.DanhengServer.GameServer.KcpSharp;
 
 /// <summary>
 ///     A Socket transport for upper-level connections.

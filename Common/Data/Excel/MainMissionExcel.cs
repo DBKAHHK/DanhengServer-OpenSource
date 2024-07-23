@@ -1,6 +1,7 @@
 ﻿using EggLink.DanhengServer.Database.Mission;
 using EggLink.DanhengServer.Database.Player;
 using EggLink.DanhengServer.Enums;
+using EggLink.DanhengServer.Enums.Mission;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using MissionInfo = EggLink.DanhengServer.Data.Config.MissionInfo;

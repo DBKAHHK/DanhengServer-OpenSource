@@ -1,7 +1,7 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Player;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 
 public class PacketGetArchiveDataScRsp : BasePacket
 {

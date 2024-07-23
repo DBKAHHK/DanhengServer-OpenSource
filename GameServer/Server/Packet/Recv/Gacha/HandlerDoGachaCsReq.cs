@@ -1,7 +1,7 @@
-﻿using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.Gacha;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Gacha;
+using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Gacha;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Gacha;
 
 [Opcode(CmdIds.DoGachaCsReq)]
 public class HandlerDoGachaCsReq : Handler

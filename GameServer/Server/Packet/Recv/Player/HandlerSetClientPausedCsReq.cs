@@ -1,9 +1,9 @@
-﻿using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.Others;
-using EggLink.DanhengServer.Server.Packet.Send.Player;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Others;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
+using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Player;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Player;
 
 [Opcode(CmdIds.SetClientPausedCsReq)]
 public class HandlerSetClientPausedCsReq : Handler

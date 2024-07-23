@@ -1,6 +1,6 @@
-﻿using EggLink.DanhengServer.Server.Packet.Send.Gacha;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Friend;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Friend;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Friend;
 
 [Opcode(CmdIds.GetFriendListInfoCsReq)]
 public class HandlerGetFriendListInfoCsReq : Handler

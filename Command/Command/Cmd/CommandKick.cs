@@ -1,7 +1,7 @@
-﻿using EggLink.DanhengServer.Internationalization;
-using EggLink.DanhengServer.Server.Packet.Send.Player;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
+using EggLink.DanhengServer.Internationalization;
 
-namespace EggLink.DanhengServer.Command.Cmd;
+namespace EggLink.DanhengServer.Command.Command.Cmd;
 
 [CommandInfo("kick", "Game.Command.Kick.Desc", "Game.Command.Kick.Usage", permission: "egglink.manage")]
 public class CommandKick : ICommand

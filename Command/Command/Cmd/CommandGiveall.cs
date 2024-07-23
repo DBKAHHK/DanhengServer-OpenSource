@@ -1,10 +1,10 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Enums.Item;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.Internationalization;
-using EggLink.DanhengServer.Server.Packet.Send.Player;
 
-namespace EggLink.DanhengServer.Command.Cmd;
+namespace EggLink.DanhengServer.Command.Command.Cmd;
 
 [CommandInfo("giveall", "Game.Command.GiveAll.Desc", "Game.Command.GiveAll.Usage")]
 public class CommandGiveall : ICommand

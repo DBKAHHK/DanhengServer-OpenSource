@@ -1,10 +1,10 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Enums.Rogue;
-using EggLink.DanhengServer.Game.Battle;
+using EggLink.DanhengServer.GameServer.Game.Battle;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Game.Rogue.Buff;
+namespace EggLink.DanhengServer.GameServer.Game.Rogue.Buff;
 
 public class RogueBuffInstance(int buffId, int buffLevel)
 {

@@ -2,7 +2,7 @@
 using EggLink.DanhengServer.Enums.Rogue;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Game.Rogue.Event.EffectHandler;
+namespace EggLink.DanhengServer.GameServer.Game.Rogue.Event.EffectHandler;
 
 [RogueEvent(DialogueEventTypeEnum.GetRogueMiracle)]
 public class EventHandlerGetRogueMiracle : RogueEventEffectHandler

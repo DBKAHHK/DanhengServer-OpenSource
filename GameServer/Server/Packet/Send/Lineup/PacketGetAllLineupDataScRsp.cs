@@ -1,7 +1,7 @@
-﻿using EggLink.DanhengServer.Game.Player;
+﻿using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Lineup;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 
 public class PacketGetAllLineupDataScRsp : BasePacket
 {

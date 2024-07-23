@@ -1,8 +1,8 @@
-﻿using EggLink.DanhengServer.Game.Battle.Skill;
+﻿using EggLink.DanhengServer.GameServer.Game.Battle.Skill;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Battle;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet.Send.Battle;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Battle;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Battle;
 
 [Opcode(CmdIds.SceneCastSkillCsReq)]
 public class HandlerSceneCastSkillCsReq : Handler

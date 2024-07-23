@@ -1,6 +1,6 @@
 ﻿using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Friend;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Friend;
 
 public class PacketRevcMsgScNotify : BasePacket
 {

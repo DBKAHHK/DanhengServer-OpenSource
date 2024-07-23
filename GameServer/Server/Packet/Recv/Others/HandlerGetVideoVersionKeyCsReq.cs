@@ -1,6 +1,6 @@
-﻿using EggLink.DanhengServer.Server.Packet.Send.Others;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Others;
 
-namespace EggLink.DanhengServer.Server.Packet.Recv.Others;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Others;
 
 [Opcode(CmdIds.GetVideoVersionKeyCsReq)]
 public class HandlerGetVideoVersionKeyCsReq : Handler

@@ -1,7 +1,7 @@
 ﻿using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Player;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 
 public class PacketPlayerLoginScRsp : BasePacket
 {

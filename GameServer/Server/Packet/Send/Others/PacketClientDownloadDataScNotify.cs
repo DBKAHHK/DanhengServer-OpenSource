@@ -1,7 +1,7 @@
 ﻿using EggLink.DanhengServer.Proto;
 using Google.Protobuf;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Others;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Others;
 
 public class PacketClientDownloadDataScNotify : BasePacket
 {

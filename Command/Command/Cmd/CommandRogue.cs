@@ -1,9 +1,9 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Excel;
-using EggLink.DanhengServer.Game.Rogue.Scene.Entity;
+using EggLink.DanhengServer.GameServer.Game.Rogue.Scene.Entity;
 using EggLink.DanhengServer.Internationalization;
 
-namespace EggLink.DanhengServer.Command.Cmd;
+namespace EggLink.DanhengServer.Command.Command.Cmd;
 
 [CommandInfo("rogue", "Game.Command.Rogue.Desc", "Game.Command.Rogue.Usage")]
 public class CommandRogue : ICommand

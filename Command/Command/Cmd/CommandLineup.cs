@@ -1,7 +1,7 @@
-﻿using EggLink.DanhengServer.Internationalization;
-using EggLink.DanhengServer.Server.Packet.Send.Lineup;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
+using EggLink.DanhengServer.Internationalization;
 
-namespace EggLink.DanhengServer.Command.Cmd;
+namespace EggLink.DanhengServer.Command.Command.Cmd;
 
 [CommandInfo("lineup", "Game.Command.Lineup.Desc", "Game.Command.Lineup.Usage")]
 public class CommandLineup : ICommand

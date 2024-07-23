@@ -1,6 +1,5 @@
-﻿using EggLink.DanhengServer.Game.Challenge;
+﻿using EggLink.DanhengServer.GameServer.Game.Challenge;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Server.Packet;
 
 namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Challenge;
 

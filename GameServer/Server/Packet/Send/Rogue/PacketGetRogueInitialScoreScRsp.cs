@@ -1,7 +1,7 @@
-﻿using EggLink.DanhengServer.Game.Player;
+﻿using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Rogue;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Rogue;
 
 public class PacketGetRogueInitialScoreScRsp : BasePacket
 {

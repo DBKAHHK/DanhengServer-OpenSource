@@ -1,7 +1,7 @@
 ﻿using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 
-namespace EggLink.DanhengServer.Game.Scene;
+namespace EggLink.DanhengServer.GameServer.Game.Scene;
 
 public class SceneBuff(int buffID, int buffLevel, int owner, int duration = -1)
 {

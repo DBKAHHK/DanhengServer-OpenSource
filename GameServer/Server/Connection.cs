@@ -1,15 +1,15 @@
 ﻿using System.Buffers;
 using System.Net;
 using System.Reflection;
-using EggLink.DanhengServer.Common.Enums;
-using EggLink.DanhengServer.Game.Player;
-using EggLink.DanhengServer.Server.Packet;
+using EggLink.DanhengServer.Enums;
+using EggLink.DanhengServer.GameServer.Game.Player;
+using EggLink.DanhengServer.GameServer.KcpSharp;
+using EggLink.DanhengServer.GameServer.Server.Packet;
 using EggLink.DanhengServer.Util;
 using Google.Protobuf;
 using Google.Protobuf.Reflection;
-using KcpSharp;
 
-namespace EggLink.DanhengServer.Server;
+namespace EggLink.DanhengServer.GameServer.Server;
 
 public class Connection
 {

@@ -1,6 +1,6 @@
 ﻿using EggLink.DanhengServer.Enums.Rogue;
 
-namespace EggLink.DanhengServer.Game.Rogue.Event;
+namespace EggLink.DanhengServer.GameServer.Game.Rogue.Event;
 
 [AttributeUsage(AttributeTargets.Class)]
 public class RogueEventAttribute(

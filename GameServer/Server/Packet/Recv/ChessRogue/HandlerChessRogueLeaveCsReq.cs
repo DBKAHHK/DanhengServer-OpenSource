@@ -1,4 +1,4 @@
-﻿namespace EggLink.DanhengServer.Server.Packet.Recv.ChessRogue;
+﻿namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.ChessRogue;
 
 [Opcode(CmdIds.ChessRogueLeaveCsReq)]
 public class HandlerChessRogueLeaveCsReq : Handler

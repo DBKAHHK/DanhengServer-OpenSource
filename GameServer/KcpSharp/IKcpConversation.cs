@@ -1,6 +1,6 @@
 ﻿using System.Net.Sockets;
 
-namespace EggLink.DanhengServer.KcpSharp;
+namespace EggLink.DanhengServer.GameServer.KcpSharp;
 
 /// <summary>
 ///     A conversation or a channel over the transport.

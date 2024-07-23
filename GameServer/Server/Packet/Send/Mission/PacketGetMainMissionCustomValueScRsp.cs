@@ -1,8 +1,9 @@
 ﻿using EggLink.DanhengServer.Enums;
-using EggLink.DanhengServer.Game.Player;
+using EggLink.DanhengServer.Enums.Mission;
+using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Mission;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Mission;
 
 public class PacketGetMainMissionCustomValueScRsp : BasePacket
 {

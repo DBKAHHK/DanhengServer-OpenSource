@@ -1,8 +1,7 @@
 ﻿using System.Net;
 using System.Net.Sockets;
-using KcpSharp;
 
-namespace EggLink.DanhengServer.KcpSharp;
+namespace EggLink.DanhengServer.GameServer.KcpSharp;
 
 /// <summary>
 ///     Helper methods to create socket transports for KCP conversations.

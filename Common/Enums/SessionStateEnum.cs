@@ -1,4 +1,4 @@
-﻿namespace EggLink.DanhengServer.Common.Enums;
+﻿namespace EggLink.DanhengServer.Enums;
 
 public enum SessionStateEnum
 {

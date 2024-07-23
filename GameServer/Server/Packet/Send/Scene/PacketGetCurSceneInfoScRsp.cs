@@ -1,7 +1,7 @@
-﻿using EggLink.DanhengServer.Game.Player;
+﻿using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.Server.Packet.Send.Scene;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 
 public class PacketGetCurSceneInfoScRsp : BasePacket
 {
