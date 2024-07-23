@@ -11,7 +11,6 @@ namespace EggLink.DanhengServer.WebServer.Controllers;
 [Route("/")]
 public class MuipServerRoutes
 {
-    [HttpGet("/muip/auth_admin")]
     [HttpPost("/muip/auth_admin")]
     public IActionResult AuthAdminKey([FromBody] AuthAdminKeyRequestBody req)
     {
@@ -23,22 +22,42 @@ public class MuipServerRoutes
     }
 
     [HttpGet("/muip/exec_cmd")]
+    public IActionResult ExecuteCommandGet([FromQuery] AdminExecRequest req)
+    {
+        var resp = MuipManager.ExecuteCommand(req.SessionId, req.Command, req.TargetUid);
+        return new JsonResult(resp);
+    }
+
     [HttpPost("/muip/exec_cmd")]
-    public IActionResult ExecuteCommand([FromBody] AdminExecRequest req)
+    public IActionResult ExecuteCommandPost([FromBody] AdminExecRequest req)
     {
         var resp = MuipManager.ExecuteCommand(req.SessionId, req.Command, req.TargetUid);
         return new JsonResult(resp);
     }
 
     [HttpGet("/muip/server_information")]
-    public IActionResult GetServerInformation([FromQuery] ServerInformationRequest req)
+    public IActionResult GetServerInformationGet([FromQuery] ServerInformationRequest req)
+    {
+        var resp = MuipManager.GetInformation(req.SessionId);
+        return new JsonResult(resp);
+    }
+
+    [HttpPost("/muip/server_information")]
+    public IActionResult GetServerInformationPost([FromBody] ServerInformationRequest req)
     {
         var resp = MuipManager.GetInformation(req.SessionId);
         return new JsonResult(resp);
     }
 
     [HttpGet("/muip/player_information")]
-    public IActionResult GetPlayerInformation([FromQuery] PlayerInformationRequest req)
+    public IActionResult GetPlayerInformationGet([FromQuery] PlayerInformationRequest req)
+    {
+        var resp = MuipManager.GetPlayerInformation(req.SessionId, req.Uid);
+        return new JsonResult(resp);
+    }
+
+    [HttpPost("/muip/player_information")]
+    public IActionResult GetPlayerInformationPost([FromBody] PlayerInformationRequest req)
     {
         var resp = MuipManager.GetPlayerInformation(req.SessionId, req.Uid);
         return new JsonResult(resp);
