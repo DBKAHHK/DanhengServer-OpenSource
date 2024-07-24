@@ -53,7 +53,8 @@ public class SceneInstance
             PlaneId = (uint)PlaneId,
             FloorId = (uint)FloorId,
             EntryId = (uint)EntryId,
-            SceneMissionInfo = new MissionStatusBySceneInfo()
+            SceneMissionInfo = new MissionStatusBySceneInfo(),
+            BONACBOIIBE = (uint)(EntityLoader is StoryLineEntityLoader loader ? loader.DimensionId : 0),
         };
 
         var playerGroupInfo = new SceneEntityGroupInfo(); // avatar group

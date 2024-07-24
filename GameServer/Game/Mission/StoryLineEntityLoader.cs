@@ -9,6 +9,7 @@ namespace EggLink.DanhengServer.GameServer.Game.Mission;
 public class StoryLineEntityLoader(SceneInstance scene) : SceneEntityLoader(scene)
 {
     public List<int> LoadGroups = [];
+    public int DimensionId;
 
     public override async ValueTask LoadEntity()
     {
@@ -26,6 +27,8 @@ public class StoryLineEntityLoader(SceneInstance scene) : SceneEntityLoader(scen
         var dim = Scene?.FloorInfo?.DimensionList.Find(d => d.ID == floorInfo.DimensionID);
         if (dim == null) return;
 
+        DimensionId = dim.ID;
+
         LoadGroups.AddRange(dim.GroupIDList);
 
         foreach (var group in Scene?.FloorInfo?.Groups.Values!) // Sanity check in SceneInstance
@@ -41,47 +44,6 @@ public class StoryLineEntityLoader(SceneInstance scene) : SceneEntityLoader(scen
     public override async ValueTask<List<IGameEntity>?> LoadGroup(GroupInfo info, bool forceLoad = false)
     {
         if (!LoadGroups.Contains(info.Id)) return null;
-
-        if (Scene.Entities.Values.ToList().FindIndex(x => x.GroupID == info.Id) !=
-            -1) // check if group is already loaded
-            return null;
-
-        // load
-        Scene.Groups.Add(info.Id);
-
-        var entityList = new List<IGameEntity>();
-        foreach (var npc in info.NPCList)
-            try
-            {
-                if (await LoadNpc(npc, info) is EntityNpc entity) entityList.Add(entity);
-            }
-            catch
-            {
-            }
-
-        foreach (var monster in info.MonsterList)
-            try
-            {
-                if (await LoadMonster(monster, info) is EntityMonster entity) entityList.Add(entity);
-            }
-            catch
-            {
-            }
-
-        foreach (var prop in info.PropList)
-            try
-            {
-                if (await LoadProp(prop, info) is EntityProp entity) entityList.Add(entity);
-            }
-            catch
-            {
-            }
-
-        return entityList;
-    }
-
-    public override async ValueTask SyncEntity()
-    {
-        await System.Threading.Tasks.Task.CompletedTask;
+        return await base.LoadGroup(info, forceLoad);
     }
 }

@@ -39,7 +39,7 @@ public class HandlerPlayerGetTokenCsReq : Handler
             connection.Player = new PlayerInstance(pd);
         connection.DebugFile = Path.Combine(ConfigManager.Config.Path.LogPath, "Debug/", $"{req.AccountUid}/",
             $"Debug-{DateTime.Now:yyyy-MM-dd HH-mm-ss}.log");
-        await connection.Player.OnLogin();
+        await connection.Player.OnGetToken();
         connection.Player.Connection = connection;
         await connection.SendPacket(new PacketPlayerGetTokenScRsp(connection));
     }

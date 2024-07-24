@@ -9,8 +9,8 @@ public class PacketStoryLineInfoScNotify : BasePacket
     public PacketStoryLineInfoScNotify(PlayerInstance player) : base(CmdIds.StoryLineInfoScNotify)
     {
         var storyLineIdList =
-            player.StoryLineManager?.StoryLineData.RunningStoryLines.Keys.Select(x => (uint)x).ToList();
-        storyLineIdList?.Insert(0, 0);
+            player.StoryLineManager?.StoryLineData.RunningStoryLines.Keys.Select(x => (uint)x).ToList() ?? [];
+        storyLineIdList.Insert(0, 0);
 
         var proto = new StoryLineInfoScNotify
         {

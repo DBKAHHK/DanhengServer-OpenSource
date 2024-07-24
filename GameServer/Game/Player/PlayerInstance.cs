@@ -149,9 +149,6 @@ public class PlayerInstance(PlayerData data)
         Data.LastActiveTime = Extensions.GetUnixSec();
         DatabaseHelper.Instance?.UpdateInstance(Data);
 
-        ChallengeManager.ResurrectInstance();
-        await StoryLineManager.OnLogin();
-
         if (LineupManager!.GetCurLineup() != null) // null -> ignore(new player)
         {
             if (LineupManager!.GetCurLineup()!.IsExtraLineup() &&
@@ -212,11 +209,21 @@ public class PlayerInstance(PlayerData data)
 
     #region Network
 
-    public async ValueTask OnLogin()
+    public async ValueTask OnGetToken()
     {
         if (!Initialized) await InitialPlayerManager();
+    }
 
+    public async ValueTask OnLogin()
+    {
         await SendPacket(new PacketStaminaInfoScNotify(this));
+
+        ChallengeManager?.ResurrectInstance();
+        if (StoryLineManager != null)
+            await StoryLineManager.OnLogin();
+
+        if (RaidManager != null)
+            await RaidManager.OnLogin();
 
         InvokeOnPlayerLogin(this);
     }
@@ -475,7 +482,7 @@ public class PlayerInstance(PlayerData data)
 
         var anchor = floorInfo.GetAnchorInfo(StartGroup, StartAnchor);
 
-        MissionManager?.HandleFinishType(MissionFinishTypeEnum.EnterMapByEntrance, entryId);
+        await MissionManager!.HandleFinishType(MissionFinishTypeEnum.EnterMapByEntrance, entryId);
 
         var beforeEntryId = Data.EntryId;
 
@@ -573,7 +580,8 @@ public class PlayerInstance(PlayerData data)
 
         SceneInstance = instance;
 
-        MissionManager?.OnPlayerChangeScene();
+        if (MissionManager != null)
+            await MissionManager.OnPlayerChangeScene();
 
         Connection?.SendPacket(CmdIds.SyncServerSceneChangeNotify);
         if (sendPacket && notSendMove)
@@ -581,10 +589,13 @@ public class PlayerInstance(PlayerData data)
         else if (sendPacket && !notSendMove) // send move packet
             await SendPacket(new PacketSceneEntityMoveScNotify(this));
 
-        MissionManager?.HandleFinishType(MissionFinishTypeEnum.EnterFloor);
-        MissionManager?.HandleFinishType(MissionFinishTypeEnum.EnterPlane);
-        MissionManager?.HandleFinishType(MissionFinishTypeEnum.NotInFloor);
-        MissionManager?.HandleFinishType(MissionFinishTypeEnum.NotInPlane);
+        if (MissionManager != null)
+        {
+            await MissionManager.HandleFinishType(MissionFinishTypeEnum.EnterFloor);
+            await MissionManager.HandleFinishType(MissionFinishTypeEnum.EnterPlane);
+            await MissionManager.HandleFinishType(MissionFinishTypeEnum.NotInFloor);
+            await MissionManager.HandleFinishType(MissionFinishTypeEnum.NotInPlane);
+        }
     }
 
     public ScenePropData? GetScenePropData(int floorId, int groupId, int propId)

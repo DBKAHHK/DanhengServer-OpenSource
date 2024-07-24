@@ -1,6 +1,5 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Config;
-using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.Enums.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
@@ -28,8 +27,6 @@ public class SceneEntityLoader(SceneInstance scene)
 
     public virtual async ValueTask SyncEntity()
     {
-        if (Scene.Excel.PlaneType == PlaneTypeEnum.Raid) return;
-
         var refreshed = false;
         var oldGroupId = new List<int>();
         foreach (var entity in Scene.Entities.Values)
@@ -94,15 +91,12 @@ public class SceneEntityLoader(SceneInstance scene)
 
         if (info.GroupName.Contains("TrainVisitor")) return null;
 
-        if (Scene.Excel.PlaneType != PlaneTypeEnum.Raid)
-        {
-            if (!(info.OwnerMainMissionID == 0 ||
-                  Scene.Player.MissionManager!.GetMainMissionStatus(info.OwnerMainMissionID) ==
-                  MissionPhaseEnum.Accept)) return null;
+        if (!(info.OwnerMainMissionID == 0 ||
+              Scene.Player.MissionManager!.GetMainMissionStatus(info.OwnerMainMissionID) ==
+              MissionPhaseEnum.Accept)) return null;
 
-            if ((!info.LoadCondition.IsTrue(missionData) || info.UnloadCondition.IsTrue(missionData, false) ||
-                 info.ForceUnloadCondition.IsTrue(missionData, false)) && !forceLoad) return null;
-        }
+        if ((!info.LoadCondition.IsTrue(missionData) || info.UnloadCondition.IsTrue(missionData, false) ||
+             info.ForceUnloadCondition.IsTrue(missionData, false)) && !forceLoad) return null;
 
         if (Scene.Entities.Values.ToList().FindIndex(x => x.GroupID == info.Id) !=
             -1) // check if group is already loaded

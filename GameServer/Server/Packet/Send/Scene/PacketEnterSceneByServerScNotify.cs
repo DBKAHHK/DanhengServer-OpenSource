@@ -15,7 +15,10 @@ public class PacketEnterSceneByServerScNotify : BasePacket
             Lineup = scene.Player.LineupManager!.GetCurLineup()!.ToProto()
         };
 
-        notify.Scene.BONACBOIIBE = (uint)storyLineAction;
+        //if (scene.Player.StoryLineManager?.StoryLineData.CurStoryLineId != 0)
+        //{
+        //    notify.Scene.BONACBOIIBE = (uint)storyLineAction;
+        //}
 
         SetData(notify);
     }

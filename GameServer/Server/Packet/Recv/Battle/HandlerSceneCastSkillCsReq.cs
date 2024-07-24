@@ -22,7 +22,7 @@ public class HandlerSceneCastSkillCsReq : Handler
             if (req.SkillIndex > 0)
             {
                 // Cast skill effects
-                if (caster.AvatarInfo.Excel!.MazeSkill != null)
+                if (caster.AvatarInfo.Excel?.MazeSkill != null)
                 {
                     mazeSkill = MazeSkillManager.GetSkill(caster.AvatarInfo.GetAvatarId(), (int)req.SkillIndex);
                     mazeSkill.OnCast(caster);

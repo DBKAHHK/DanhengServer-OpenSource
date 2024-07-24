@@ -16,8 +16,6 @@ public class RaidManager : BasePlayerManager
     public RaidManager(PlayerInstance player) : base(player)
     {
         RaidData = DatabaseHelper.Instance!.GetInstanceOrCreateNew<RaidData>(player.Uid);
-        var task = System.Threading.Tasks.Task.Run(async () => { await OnLogin(); });
-        task.Wait();
     }
 
     public RaidData RaidData { get; }
@@ -48,12 +46,14 @@ public class RaidManager : BasePlayerManager
             {
                 RaidData.CurRaidId = 0;
                 RaidData.CurRaidWorldLevel = 0;
+                await Player.SendPacket(new PacketRaidInfoNotify());
             }
         }
         else
         {
             RaidData.CurRaidId = 0;
             RaidData.CurRaidWorldLevel = 0;
+            await Player.SendPacket(new PacketRaidInfoNotify());
         }
     }
 

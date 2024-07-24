@@ -1,6 +1,7 @@
 ﻿using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Game.Player;
+using EggLink.DanhengServer.Proto;
 
 namespace EggLink.DanhengServer.GameServer.Game.Mission.FinishAction.Handler;
 
@@ -13,6 +14,6 @@ public class MissionHandlerEnterEntryIfNotThere : MissionFinishActionHandler
         var anchorGroup = Params[1];
         var anchorId = Params[2];
 
-        await Player.EnterMissionScene(entryId, anchorGroup, anchorId, true);
+        await Player.EnterMissionScene(entryId, anchorGroup, anchorId, true, ChangeStoryLineAction.FinishAction);
     }
 }

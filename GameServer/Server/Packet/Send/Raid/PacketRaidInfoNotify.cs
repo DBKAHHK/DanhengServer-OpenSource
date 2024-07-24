@@ -21,10 +21,7 @@ public class PacketRaidInfoNotify : BasePacket
 
     public PacketRaidInfoNotify() : base(CmdIds.RaidInfoNotify)
     {
-        var proto = new RaidInfoNotify
-        {
-            ItemList = new ItemList()
-        };
+        var proto = new RaidInfoNotify();
 
         SetData(proto);
     }

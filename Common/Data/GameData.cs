@@ -200,9 +200,9 @@ public static class GameData
 
     #region Actions
 
-    public static void GetFloorInfo(int planeId, int floorId, out FloorInfo outer)
+    public static void GetFloorInfo(int planeId, int floorId, out FloorInfo? outer)
     {
-        FloorInfoData.TryGetValue("P" + planeId + "_F" + floorId, out outer!);
+        FloorInfoData.TryGetValue("P" + planeId + "_F" + floorId, out outer);
     }
 
     public static int GetAvatarExpRequired(int group, int level)

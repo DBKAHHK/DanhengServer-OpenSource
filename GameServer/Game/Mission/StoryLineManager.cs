@@ -53,16 +53,16 @@ public class StoryLineManager : BasePlayerManager
         Player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupHeliobus, avatarList);
 
         StoryLineData.CurStoryLineId = storyExcel.StoryLineID;
-        await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
         await Player.SendPacket(new PacketStoryLineInfoScNotify(Player));
-        await Player.SendPacket(
-            new PacketChangeStoryLineFinishScNotify(storyExcel.StoryLineID, ChangeStoryLineAction.FinishAction));
-
+        await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
         if (entryId > 0)
             await Player.EnterMissionScene(entryId, anchorGroupId, anchorId, true, ChangeStoryLineAction.FinishAction);
         else
             await Player.EnterMissionScene(storyExcel.InitEntranceID, storyExcel.InitGroupID, storyExcel.InitAnchorID,
                 true, ChangeStoryLineAction.FinishAction);
+        await Player.SendPacket(
+            new PacketChangeStoryLineFinishScNotify(storyExcel.StoryLineID, ChangeStoryLineAction.FinishAction));
+
 
         var record = new StoryLineInfo
         {
@@ -108,14 +108,14 @@ public class StoryLineManager : BasePlayerManager
             lineInfo.Lineup.Select(x => x.SpecialAvatarId > 0 ? x.SpecialAvatarId / 10 : x.BaseAvatarId).ToList());
 
         StoryLineData.CurStoryLineId = lineInfo.StoryLineId;
-        await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
         await Player.SendPacket(new PacketStoryLineInfoScNotify(Player));
-        await Player.SendPacket(
-            new PacketChangeStoryLineFinishScNotify(StoryLineData.CurStoryLineId, ChangeStoryLineAction.Client));
+        await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
 
         if (tp)
             await Player.LoadScene(lineInfo.SavedPlaneId, lineInfo.SavedFloorId, lineInfo.SavedEntryId,
                 lineInfo.SavedPos, lineInfo.SavedRot, true, ChangeStoryLineAction.Client);
+        await Player.SendPacket(
+            new PacketChangeStoryLineFinishScNotify(StoryLineData.CurStoryLineId, ChangeStoryLineAction.Client));
     }
 
     public async ValueTask LeaveStoryLine(bool tp)
@@ -143,9 +143,8 @@ public class StoryLineManager : BasePlayerManager
         StoryLineData.RunningStoryLines[storyExcel.StoryLineID] = record;
         StoryLineData.CurStoryLineId = 0;
 
-        await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
         await Player.SendPacket(new PacketStoryLineInfoScNotify(Player));
-        await Player.SendPacket(new PacketChangeStoryLineFinishScNotify(0, ChangeStoryLineAction.None));
+        await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
 
         if (tp)
         {
@@ -158,6 +157,7 @@ public class StoryLineManager : BasePlayerManager
             StoryLineData.OldPos = new Position();
             StoryLineData.OldRot = new Position();
         }
+        await Player.SendPacket(new PacketChangeStoryLineFinishScNotify(0, ChangeStoryLineAction.None));
     }
 
     public async ValueTask
@@ -203,8 +203,6 @@ public class StoryLineManager : BasePlayerManager
 
     public async ValueTask OnLogin()
     {
-        if (StoryLineData.CurStoryLineId == 0) return;
-
         await Player.SendPacket(new PacketStoryLineInfoScNotify(Player));
     }
 }
