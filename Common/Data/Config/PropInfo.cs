@@ -28,6 +28,8 @@ public class PropInfo : PositionInfo
 
     [JsonIgnore] public int MazePieceCount { get; set; }
 
+    [JsonIgnore] public bool CommonConsole = false;
+
     public void Load(GroupInfo info)
     {
         if (ValueSource != null)

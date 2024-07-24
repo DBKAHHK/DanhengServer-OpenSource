@@ -64,7 +64,7 @@ public class FloorInfo
                 }
                 else if (json.Contains("Common_Console"))
                 {
-                    //prop.CommonConsole = true;
+                    prop.CommonConsole = true;
                 }
 
                 // Clear for garbage collection

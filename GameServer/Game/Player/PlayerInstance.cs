@@ -398,6 +398,18 @@ public class PlayerInstance(PlayerData data)
                             }
 
                         break;
+                    case PropTypeEnum.PROP_ORDINARY:
+                        if (prop.PropInfo.CommonConsole)
+                        {
+                            // set group
+                            foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupID))
+                            {
+                                await p.SetState(newState);
+
+                                await MissionManager!.OnPlayerInteractWithProp();
+                            }
+                        }
+                        break;
                 }
 
                 // for door unlock

@@ -38,6 +38,7 @@ public class StoryLineManager : BasePlayerManager
         GameData.StoryLineData.TryGetValue(storyLineId, out var storyExcel);
         GameData.StroyLineTrialAvatarDataData.TryGetValue(storyLineId, out var storyAvatarExcel);
         if (storyExcel == null || storyAvatarExcel == null) return;
+        StoryLineData.RunningStoryLines.TryGetValue(storyLineId, out var lineInfo);
         StoryLineData.OldEntryId = Player.Data.EntryId;
         StoryLineData.OldFloorId = Player.Data.FloorId;
         StoryLineData.OldPlaneId = Player.Data.PlaneId;
@@ -58,8 +59,19 @@ public class StoryLineManager : BasePlayerManager
         if (entryId > 0)
             await Player.EnterMissionScene(entryId, anchorGroupId, anchorId, true, ChangeStoryLineAction.FinishAction);
         else
-            await Player.EnterMissionScene(storyExcel.InitEntranceID, storyExcel.InitGroupID, storyExcel.InitAnchorID,
-                true, ChangeStoryLineAction.FinishAction);
+        {
+            if (lineInfo == null)
+            {
+                await Player.EnterMissionScene(storyExcel.InitEntranceID, storyExcel.InitGroupID, storyExcel.InitAnchorID,
+                    true, ChangeStoryLineAction.FinishAction);
+            }
+            else
+            {
+                await Player.LoadScene(lineInfo.SavedPlaneId, lineInfo.SavedFloorId, lineInfo.SavedEntryId,
+                    lineInfo.SavedPos, lineInfo.SavedRot, true, ChangeStoryLineAction.FinishAction);
+            }
+            
+        }
         await Player.SendPacket(
             new PacketChangeStoryLineFinishScNotify(storyExcel.StoryLineID, ChangeStoryLineAction.FinishAction));
 
@@ -175,10 +187,24 @@ public class StoryLineManager : BasePlayerManager
     {
         if (StoryLineData.CurStoryLineId == 0) return;
 
+        GameData.StoryLineData.TryGetValue(StoryLineData.CurStoryLineId, out var storyExcel);
+        if (storyExcel == null) return;
         Player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupNone, []);
 
         // delete old & reset
-        StoryLineData.RunningStoryLines.Remove(StoryLineData.CurStoryLineId);
+        if (Player.MissionManager!.GetSubMissionStatus(storyExcel.EndCondition.Param) == MissionPhaseEnum.Finish)
+            StoryLineData.RunningStoryLines.Remove(StoryLineData.CurStoryLineId);
+        else
+            StoryLineData.RunningStoryLines[StoryLineData.CurStoryLineId] = new StoryLineInfo
+            {
+                Lineup = Player.LineupManager!.GetCurLineup()!.BaseAvatars!,
+                SavedEntryId = Player.Data.EntryId,
+                SavedFloorId = Player.Data.FloorId,
+                SavedPlaneId = Player.Data.PlaneId,
+                SavedPos = Player.Data.Pos!,
+                SavedRot = Player.Data.Rot!,
+                StoryLineId = StoryLineData.CurStoryLineId
+            };
         StoryLineData.CurStoryLineId = 0;
 
         StoryLineData.OldPlaneId = 0;

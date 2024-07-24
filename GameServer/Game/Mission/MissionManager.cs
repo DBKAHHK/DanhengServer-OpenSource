@@ -433,17 +433,37 @@ public class MissionManager : BasePlayerManager
             if (mission.TakeType == SubMissionTakeTypeEnum.CustomValue)
             {
                 var index = 0;
-                var accept = true;
-                foreach (var customValue in mission.TakeParamIntList ?? [])
+                var accept = false;
+                List<List<int>> list = [mission.TakeParamIntList ?? []];
+                if (mission.TakeParamIntList?.Count > 5)
                 {
-                    if (customValue == 0 && index == 0) continue; // skip 0
-                    var valueInst = values.Find(x => x.Index == index);
-                    if (valueInst == null) continue;
-                    if (valueInst.CustomValue != customValue)
+                    // every 3 as group
+                    var group = mission.TakeParamIntList.Count / 3;
+                    list = [];
+                    for (var i = 0; i < group; i++)
                     {
-                        accept = false;
-                        break;
+                        var customValue = mission.TakeParamIntList.GetRange(i * 3, 3);
+                        list.Add(customValue);
                     }
+                }
+                foreach (var customValues in list)
+                {
+                    var thisAccept = true;
+                    foreach (var customValue in customValues)
+                    {
+                        if (customValue == 0 && index == 0) continue; // skip 0
+                        var valueInst = values.Find(x => x.Index == index);
+                        if (valueInst == null) continue;
+                        if (valueInst.CustomValue != customValue)
+                        {
+                            thisAccept = false;
+                            break;
+                        }
+
+                        index++;
+                    }
+
+                    if (thisAccept) accept = true;  // accept if any group is true
                 }
 
                 if (accept) await AcceptSubMission(mission.ID);
