@@ -15,6 +15,7 @@ using EggLink.DanhengServer.WebServer.Response;
 using Org.BouncyCastle.Crypto.Parameters;
 using Org.BouncyCastle.Math;
 using Org.BouncyCastle.X509;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace EggLink.DanhengServer.WebServer.Server;
 
@@ -37,11 +38,9 @@ public static class MuipManager
     public static event ServerInformationDelegate? OnGetServerInformation;
     public static event GetPlayerStatusDelegate? OnGetPlayerStatus;
 
-    public static AuthAdminKeyData? AuthAdminAndCreateSession(string key, string key_type)
+    public static CreateSessionResponse CreateSession(string keyType)
     {
-        if (ConfigManager.Config.MuipServer.AdminKey == "" ||
-            ConfigManager.Config.MuipServer.AdminKey != key) return null;
-
+        if (ConfigManager.Config.MuipServer.AdminKey == "") return new CreateSessionResponse(1, "This function is not enabled in this server!", null);
         var session = new MuipSession
         {
             SessionId = Guid.NewGuid().ToString(),
@@ -50,20 +49,62 @@ public static class MuipManager
             IsAdmin = true
         };
 
-        if (key_type == "PEM")
+        if (keyType == "PEM")
             // convert to PEM
             session.RsaPublicKey = XMLToPEM_Pub(session.RsaPublicKey);
 
         Sessions.Add(session.SessionId, session);
 
-        var data = new AuthAdminKeyData
+        var data = new CreateSessionData()
         {
             RsaPublicKey = session.RsaPublicKey,
             SessionId = session.SessionId,
             ExpireTimeStamp = session.ExpireTimeStamp
         };
 
-        return data;
+        return new CreateSessionResponse(0, "Created!", data);
+    }
+
+    public static AuthAdminKeyResponse AuthAdmin(string sessionId, string key)
+    {
+        if (Sessions.TryGetValue(sessionId, out var value))
+        {
+            var session = value;
+            if (session.ExpireTimeStamp < DateTime.Now.ToUnixSec())
+            {
+                Sessions.Remove(sessionId);
+                return new AuthAdminKeyResponse(1, "Session has expired!", null);
+            }
+            // decrypt key
+            var rsa = new RSACryptoServiceProvider();
+            rsa.FromXmlString(GetRsaKeyPair().Item2);  // private key
+            byte[] decrypted;
+
+            try
+            {
+                decrypted = rsa.Decrypt(Convert.FromBase64String(key), RSAEncryptionPadding.Pkcs1);
+            }
+            catch
+            {
+                return new AuthAdminKeyResponse(3, "Wrong encrypted key", null);
+            }
+
+            var keyStr = Encoding.UTF8.GetString(decrypted);
+            if (keyStr != ConfigManager.Config.MuipServer.AdminKey)
+                return new AuthAdminKeyResponse(2, "Admin key is invalid!", null);
+
+            session.IsAuthorized = true;
+
+            var data = new AuthAdminKeyData
+            {
+                SessionId = session.SessionId,
+                ExpireTimeStamp = session.ExpireTimeStamp
+            };
+
+            return new AuthAdminKeyResponse(0, "Authorized admin key successfully!", data);
+        }
+
+        return new AuthAdminKeyResponse(4, "Session not found!", null);
     }
 
     public static MuipSession? GetSession(string sessionId)
@@ -93,6 +134,9 @@ public static class MuipManager
                 Sessions.Remove(sessionId);
                 return new ExecuteCommandResponse(1, "Session has expired!");
             }
+
+            if (!session.IsAuthorized)
+                return new ExecuteCommandResponse(4, "Not authorized!");
 
             var rsa = new RSACryptoServiceProvider();
             rsa.FromXmlString(GetRsaKeyPair().Item2);
@@ -139,6 +183,8 @@ public static class MuipManager
                 Sessions.Remove(sessionId);
                 return new ServerInformationResponse(1, "Session has expired!");
             }
+            if (!session.IsAuthorized)
+                return new ServerInformationResponse(3, "Not authorized!");
 
             var currentProcess = Process.GetCurrentProcess();
 
@@ -191,8 +237,9 @@ public static class MuipManager
                 Sessions.Remove(sessionId);
                 return new PlayerInformationResponse(1, "Session has expired!");
             }
+            if (!session.IsAuthorized)
+                return new PlayerInformationResponse(4, "Not authorized!");
 
-            var result = new Dictionary<int, PlayerData>();
             var player = DatabaseHelper.Instance?.GetInstance<PlayerData>(uid);
             if (player == null) return new PlayerInformationResponse(2, "Player not exist!");
 

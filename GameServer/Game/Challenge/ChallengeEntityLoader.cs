@@ -70,10 +70,12 @@ public class ChallengeEntityLoader(SceneInstance scene, PlayerInstance player) :
         var npcMonsterExcel = GameData.NpcMonsterDataData[challengeMonsterInfo.NpcMonsterId];
 
         // Create monster from group monster info
-        var entity = new EntityMonster(scene, info.ToPositionProto(), info.ToRotationProto(), group.Id, info.ID,
-            npcMonsterExcel, info);
-        entity.EventID = challengeMonsterInfo.EventId;
-        entity.CustomStageID = challengeMonsterInfo.EventId;
+        var entity = new EntityMonster(Scene, info.ToPositionProto(), info.ToRotationProto(), group.Id, info.ID,
+            npcMonsterExcel, info)
+        {
+            EventID = challengeMonsterInfo.EventId,
+            CustomStageID = challengeMonsterInfo.EventId
+        };
         await Scene.AddEntity(entity, sendPacket);
 
         return entity;

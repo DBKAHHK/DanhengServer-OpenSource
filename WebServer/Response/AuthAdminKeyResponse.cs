@@ -7,7 +7,6 @@ public class AuthAdminKeyResponse(int code, string message, AuthAdminKeyData? da
 
 public class AuthAdminKeyData
 {
-    public string RsaPublicKey { get; set; } = "";
     public string SessionId { get; set; } = "";
     public long ExpireTimeStamp { get; set; } = 0;
 }

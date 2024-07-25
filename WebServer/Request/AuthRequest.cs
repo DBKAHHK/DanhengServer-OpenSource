@@ -2,6 +2,6 @@
 
 public class AuthAdminKeyRequestBody
 {
+    public string session_id { get; set; } = "";
     public string admin_key { get; set; } = "";
-    public string key_type { get; set; } = "XML";
 }

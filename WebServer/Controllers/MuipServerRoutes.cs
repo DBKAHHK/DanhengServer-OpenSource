@@ -11,14 +11,18 @@ namespace EggLink.DanhengServer.WebServer.Controllers;
 [Route("/")]
 public class MuipServerRoutes
 {
+    [HttpPost("/muip/create_session")]
+    public IActionResult CreateSession([FromBody] CreateSessionRequestBody req)
+    {
+        var resp = MuipManager.CreateSession(req.key_type);
+        return new JsonResult(resp);
+    }
+
     [HttpPost("/muip/auth_admin")]
     public IActionResult AuthAdminKey([FromBody] AuthAdminKeyRequestBody req)
     {
-        var data = MuipManager.AuthAdminAndCreateSession(req.admin_key, req.key_type);
-        if (data == null)
-            return new JsonResult(new AuthAdminKeyResponse(1, "Admin key is invalid or the function is not enabled!",
-                null));
-        return new JsonResult(new AuthAdminKeyResponse(0, "Authorized admin key successfully!", data));
+        var resp = MuipManager.AuthAdmin(req.session_id, req.admin_key);
+        return new JsonResult(resp);
     }
 
     [HttpGet("/muip/exec_cmd")]

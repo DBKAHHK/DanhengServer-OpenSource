@@ -9,5 +9,6 @@ public class MuipSession
     public long ExpireTimeStamp { get; set; } = 0;
 
     public bool IsAdmin { get; set; } = false;
+    public bool IsAuthorized { get; set; } = false;
     public AccountData? Account { get; set; } = null;
 }
