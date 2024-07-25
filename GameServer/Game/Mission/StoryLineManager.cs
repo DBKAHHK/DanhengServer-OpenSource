@@ -57,18 +57,18 @@ public class StoryLineManager : BasePlayerManager
         await Player.SendPacket(new PacketStoryLineInfoScNotify(Player));
         await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
         if (entryId > 0)
-            await Player.EnterMissionScene(entryId, anchorGroupId, anchorId, true, ChangeStoryLineAction.FinishAction);
+            await Player.EnterMissionScene(entryId, anchorGroupId, anchorId, true);
         else
         {
             if (lineInfo == null)
             {
                 await Player.EnterMissionScene(storyExcel.InitEntranceID, storyExcel.InitGroupID, storyExcel.InitAnchorID,
-                    true, ChangeStoryLineAction.FinishAction);
+                    true);
             }
             else
             {
                 await Player.LoadScene(lineInfo.SavedPlaneId, lineInfo.SavedFloorId, lineInfo.SavedEntryId,
-                    lineInfo.SavedPos, lineInfo.SavedRot, true, ChangeStoryLineAction.FinishAction);
+                    lineInfo.SavedPos, lineInfo.SavedRot, true);
             }
             
         }
@@ -125,7 +125,7 @@ public class StoryLineManager : BasePlayerManager
 
         if (tp)
             await Player.LoadScene(lineInfo.SavedPlaneId, lineInfo.SavedFloorId, lineInfo.SavedEntryId,
-                lineInfo.SavedPos, lineInfo.SavedRot, true, ChangeStoryLineAction.Client);
+                lineInfo.SavedPos, lineInfo.SavedRot, true);
         await Player.SendPacket(
             new PacketChangeStoryLineFinishScNotify(StoryLineData.CurStoryLineId, ChangeStoryLineAction.Client));
     }
@@ -223,7 +223,7 @@ public class StoryLineManager : BasePlayerManager
                 await Player.EnterMissionScene(entryId, anchorGroupId, anchorId, true);
             else
                 await Player.LoadScene(StoryLineData.OldPlaneId, StoryLineData.OldFloorId, StoryLineData.OldEntryId,
-                    StoryLineData.OldPos, StoryLineData.OldRot, true, ChangeStoryLineAction.FinishAction);
+                    StoryLineData.OldPos, StoryLineData.OldRot, true);
         }
     }
 

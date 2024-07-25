@@ -3,7 +3,6 @@ using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Player;
 using EggLink.DanhengServer.Database.Scene;
 using EggLink.DanhengServer.Database.Tutorial;
-using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Enums.Avatar;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.Enums.Scene;
@@ -459,12 +458,14 @@ public class PlayerInstance(PlayerData data)
         return null;
     }
 
-    public async ValueTask<bool> EnterScene(int entryId, int teleportId, bool sendPacket,
-        ChangeStoryLineAction storyLineAction = ChangeStoryLineAction.None, int storyLineId = 0, bool mapTp = false)
+    public async ValueTask<bool> EnterScene(int entryId, int teleportId, bool sendPacket,int storyLineId = 0, 
+        bool mapTp = false)
     {
+        var beforeStoryLineId = StoryLineManager?.StoryLineData.CurStoryLineId;
         if (storyLineId != StoryLineManager?.StoryLineData.CurStoryLineId)
         {
-            StoryLineManager?.EnterStoryLine(storyLineId, entryId == 0); // entryId == 0 -> teleport
+            if (StoryLineManager != null)
+                await StoryLineManager.EnterStoryLine(storyLineId, entryId == 0); // entryId == 0 -> teleport
             mapTp = false; // do not use mapTp when enter story line
         }
 
@@ -474,40 +475,39 @@ public class PlayerInstance(PlayerData data)
         GameData.GetFloorInfo(entrance.PlaneID, entrance.FloorID, out var floorInfo);
         if (floorInfo == null) return false;
 
-        var StartGroup = entrance.StartGroupID;
-        var StartAnchor = entrance.StartAnchorID;
+        var startGroup = entrance.StartGroupID;
+        var startAnchor = entrance.StartAnchorID;
 
         if (teleportId != 0)
         {
             floorInfo.CachedTeleports.TryGetValue(teleportId, out var teleport);
             if (teleport != null)
             {
-                StartGroup = teleport.AnchorGroupID;
-                StartAnchor = teleport.AnchorID;
+                startGroup = teleport.AnchorGroupID;
+                startAnchor = teleport.AnchorID;
             }
         }
-        else if (StartAnchor == 0)
+        else if (startAnchor == 0)
         {
-            StartGroup = floorInfo.StartGroupID;
-            StartAnchor = floorInfo.StartAnchorID;
+            startGroup = floorInfo.StartGroupID;
+            startAnchor = floorInfo.StartAnchorID;
         }
 
-        var anchor = floorInfo.GetAnchorInfo(StartGroup, StartAnchor);
+        var anchor = floorInfo.GetAnchorInfo(startGroup, startAnchor);
 
         await MissionManager!.HandleFinishType(MissionFinishTypeEnum.EnterMapByEntrance, entryId);
 
         var beforeEntryId = Data.EntryId;
 
         await LoadScene(entrance.PlaneID, entrance.FloorID, entryId, anchor!.ToPositionProto(),
-            anchor.ToRotationProto(), sendPacket, storyLineAction, mapTp);
+            anchor.ToRotationProto(), sendPacket, mapTp);
 
         var afterEntryId = Data.EntryId;
 
-        return beforeEntryId != afterEntryId; // return true if entryId changed
+        return (beforeEntryId != afterEntryId || beforeStoryLineId != storyLineId); // return true if entryId changed or story line changed
     }
 
-    public async ValueTask EnterMissionScene(int entranceId, int anchorGroupId, int anchorId, bool sendPacket,
-        ChangeStoryLineAction storyLineAction = ChangeStoryLineAction.None)
+    public async ValueTask EnterMissionScene(int entranceId, int anchorGroupId, int anchorId, bool sendPacket)
     {
         GameData.MapEntranceData.TryGetValue(entranceId, out var entrance);
         if (entrance == null) return;
@@ -515,19 +515,19 @@ public class PlayerInstance(PlayerData data)
         GameData.GetFloorInfo(entrance.PlaneID, entrance.FloorID, out var floorInfo);
         if (floorInfo == null) return;
 
-        var StartGroup = anchorGroupId == 0 ? entrance.StartGroupID : anchorGroupId;
-        var StartAnchor = anchorId == 0 ? entrance.StartAnchorID : anchorId;
+        var startGroup = anchorGroupId == 0 ? entrance.StartGroupID : anchorGroupId;
+        var startAnchor = anchorId == 0 ? entrance.StartAnchorID : anchorId;
 
-        if (StartAnchor == 0)
+        if (startAnchor == 0)
         {
-            StartGroup = floorInfo.StartGroupID;
-            StartAnchor = floorInfo.StartAnchorID;
+            startGroup = floorInfo.StartGroupID;
+            startAnchor = floorInfo.StartAnchorID;
         }
 
-        var anchor = floorInfo.GetAnchorInfo(StartGroup, StartAnchor);
+        var anchor = floorInfo.GetAnchorInfo(startGroup, startAnchor);
 
         await LoadScene(entrance.PlaneID, entrance.FloorID, entranceId, anchor!.ToPositionProto(),
-            anchor.ToRotationProto(), sendPacket, storyLineAction);
+            anchor.ToRotationProto(), sendPacket);
     }
 
     public async ValueTask MoveTo(Position position)
@@ -550,7 +550,7 @@ public class PlayerInstance(PlayerData data)
     }
 
     public async ValueTask LoadScene(int planeId, int floorId, int entryId, Position pos, Position rot, bool sendPacket,
-        ChangeStoryLineAction storyLineAction = ChangeStoryLineAction.None, bool mapTp = false)
+        bool mapTp = false)
     {
         GameData.MazePlaneData.TryGetValue(planeId, out var plane);
         if (plane == null) return;
@@ -597,7 +597,7 @@ public class PlayerInstance(PlayerData data)
 
         Connection?.SendPacket(CmdIds.SyncServerSceneChangeNotify);
         if (sendPacket && notSendMove)
-            await SendPacket(new PacketEnterSceneByServerScNotify(instance, storyLineAction));
+            await SendPacket(new PacketEnterSceneByServerScNotify(instance));
         else if (sendPacket && !notSendMove) // send move packet
             await SendPacket(new PacketSceneEntityMoveScNotify(this));
 

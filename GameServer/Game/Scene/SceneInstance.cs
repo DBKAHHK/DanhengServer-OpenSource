@@ -225,15 +225,14 @@ public class SceneInstance
         var oldAvatarInfo = AvatarInfo.Values.ToList();
         AvatarInfo.Clear();
         var sendPacket = false;
-        var AddAvatar = new List<IGameEntity>();
-        var RemoveAvatar = new List<IGameEntity>();
+        var addAvatar = new List<IGameEntity>();
+        var removeAvatar = new List<IGameEntity>();
         foreach (var avatar in Player.LineupManager?.GetAvatarsFromCurTeam() ?? [])
         {
-            if (avatar == null) continue;
             avatar.AvatarInfo.PlayerData = Player.Data;
             if (forceSetEntityId && avatar.AvatarInfo.EntityId != 0)
             {
-                RemoveAvatar.Add(new AvatarSceneInfo(new AvatarInfo
+                removeAvatar.Add(new AvatarSceneInfo(new AvatarInfo
                 {
                     EntityId = avatar.AvatarInfo.EntityId
                 }, AvatarType.AvatarFormalType, Player));
@@ -245,7 +244,7 @@ public class SceneInstance
             if (avatarInstance == null)
             {
                 if (avatar.AvatarInfo.EntityId == 0) avatar.AvatarInfo.EntityId = ++LastEntityId;
-                AddAvatar.Add(avatar);
+                addAvatar.Add(avatar);
                 AvatarInfo.Add(avatar.AvatarInfo.EntityId, avatar);
                 sendPacket = true;
             }
@@ -259,7 +258,7 @@ public class SceneInstance
         foreach (var avatar in oldAvatarInfo)
             if (AvatarInfo.Values.ToList().FindIndex(x => x.AvatarInfo.AvatarId == avatar.AvatarInfo.AvatarId) == -1)
             {
-                RemoveAvatar.Add(new AvatarSceneInfo(new AvatarInfo
+                removeAvatar.Add(new AvatarSceneInfo(new AvatarInfo
                 {
                     EntityId = avatar.AvatarInfo.EntityId
                 }, AvatarType.AvatarFormalType, Player));
@@ -267,15 +266,15 @@ public class SceneInstance
                 sendPacket = true;
             }
 
-        var LeaderAvatarId = Player.LineupManager?.GetCurLineup()?.LeaderAvatarId;
-        var LeaderAvatarSlot = Player.LineupManager?.GetCurLineup()?.BaseAvatars
-            ?.FindIndex(x => x.BaseAvatarId == LeaderAvatarId);
-        if (LeaderAvatarSlot == -1) LeaderAvatarSlot = 0;
+        var leaderAvatarId = Player.LineupManager?.GetCurLineup()?.LeaderAvatarId;
+        var leaderAvatarSlot = Player.LineupManager?.GetCurLineup()?.BaseAvatars
+            ?.FindIndex(x => x.BaseAvatarId == leaderAvatarId);
+        if (leaderAvatarSlot == -1) leaderAvatarSlot = 0;
         if (AvatarInfo.Count == 0) return;
-        var info = AvatarInfo.Values.ToList()[LeaderAvatarSlot ?? 0];
+        var info = AvatarInfo.Values.ToList()[leaderAvatarSlot ?? 0];
         LeaderEntityId = info.AvatarInfo.EntityId;
         if (sendPacket && !notSendPacket)
-            await Player.SendPacket(new PacketSceneGroupRefreshScNotify(AddAvatar, RemoveAvatar));
+            await Player.SendPacket(new PacketSceneGroupRefreshScNotify(addAvatar, removeAvatar));
     }
 
     public void SyncGroupInfo()
@@ -292,13 +291,13 @@ public class SceneInstance
         await AddEntity(entity, IsLoaded);
     }
 
-    public async ValueTask AddEntity(IGameEntity entity, bool SendPacket)
+    public async ValueTask AddEntity(IGameEntity entity, bool sendPacket)
     {
-        if (entity == null || entity.EntityID != 0) return;
+        if (entity.EntityID != 0) return;
         entity.EntityID = ++LastEntityId;
 
         Entities.Add(entity.EntityID, entity);
-        if (SendPacket) await Player.SendPacket(new PacketSceneGroupRefreshScNotify(entity));
+        if (sendPacket) await Player.SendPacket(new PacketSceneGroupRefreshScNotify(entity));
     }
 
     public async ValueTask RemoveEntity(IGameEntity monster)
@@ -306,11 +305,11 @@ public class SceneInstance
         await RemoveEntity(monster, IsLoaded);
     }
 
-    public async ValueTask RemoveEntity(IGameEntity monster, bool SendPacket)
+    public async ValueTask RemoveEntity(IGameEntity monster, bool sendPacket)
     {
         Entities.Remove(monster.EntityID);
 
-        if (SendPacket) await Player.SendPacket(new PacketSceneGroupRefreshScNotify(null, monster));
+        if (sendPacket) await Player.SendPacket(new PacketSceneGroupRefreshScNotify(null, monster));
     }
 
     public List<T> GetEntitiesInGroup<T>(int groupID)
