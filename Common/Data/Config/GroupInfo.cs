@@ -17,7 +17,7 @@ public class GroupInfo
 
     [JsonConverter(typeof(StringEnumConverter))]
     public GroupCategoryEnum Category { get; set; }
-
+    public LevelGroupSystemUnlockCondition? SystemUnlockCondition { get; set; } = null;
     public string LevelGraph { get; set; } = "";
     public bool LoadOnInitial { get; set; }
     public string GroupName { get; set; } = "";
@@ -57,7 +57,7 @@ public class LoadCondition
         var canLoad = Operation == OperationEnum.And;
         // check load condition
         foreach (var condition in Conditions)
-            if (condition.Type == ConditionTypeEnum.MainMission)
+            if (condition.Type == LevelGroupMissionTypeEnum.MainMission)
             {
                 var info = mission.GetMainMissionStatus(condition.ID);
                 if (!ConfigManager.Config.ServerOption.EnableMission) info = MissionPhaseEnum.Finish;
@@ -116,10 +116,18 @@ public class LoadCondition
 public class Condition
 {
     [JsonConverter(typeof(StringEnumConverter))]
-    public ConditionTypeEnum Type { get; set; } = ConditionTypeEnum.MainMission;
+    public LevelGroupMissionTypeEnum Type { get; set; } = LevelGroupMissionTypeEnum.MainMission;
 
     public int ID { get; set; }
 
     [JsonConverter(typeof(StringEnumConverter))]
     public MissionPhaseEnum Phase { get; set; } = MissionPhaseEnum.Accept;
+}
+
+public class LevelGroupSystemUnlockCondition
+{
+    public List<int> Conditions { get; set; } = [];
+
+    [JsonConverter(typeof(StringEnumConverter))]
+    public OperationEnum Operation { get; set; }
 }

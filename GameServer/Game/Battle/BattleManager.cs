@@ -365,7 +365,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
 
         Player.BattleInstance = null;
 
-        await Player.MissionManager!.OnBattleFinish(req);
+        await Player.MissionManager!.OnBattleFinish(req, battle);
         if (Player.RogueManager?.GetRogueInstance() != null)
             await Player.RogueManager!.GetRogueInstance()!.OnBattleEnd(battle, req);
 

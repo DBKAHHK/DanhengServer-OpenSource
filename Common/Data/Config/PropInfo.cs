@@ -26,13 +26,20 @@ public class PropInfo : PositionInfo
 
     [JsonIgnore] public Dictionary<int, List<int>> UnlockControllerID { get; set; } = [];
 
-    [JsonIgnore] public int MazePieceCount { get; set; }
+    [JsonIgnore] public bool IsLevelBtn { get; set; }
 
     [JsonIgnore] public bool CommonConsole = false;
 
     public void Load(GroupInfo info)
     {
         if (ValueSource != null)
+        {
+            if (Name.StartsWith("Button_") &&
+                ValueSource.Values.Find(x => x["Key"]?.ToString() == "AnchorName") != null)
+            {
+                IsLevelBtn = true;
+            }
+
             foreach (var v in ValueSource.Values)
                 try
                 {
@@ -86,6 +93,7 @@ public class PropInfo : PositionInfo
                 catch
                 {
                 }
+        }
     }
 }
 

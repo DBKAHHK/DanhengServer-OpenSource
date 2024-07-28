@@ -19,6 +19,7 @@ using EggLink.DanhengServer.GameServer.Game.Lineup;
 using EggLink.DanhengServer.GameServer.Game.Mail;
 using EggLink.DanhengServer.GameServer.Game.Message;
 using EggLink.DanhengServer.GameServer.Game.Mission;
+using EggLink.DanhengServer.GameServer.Game.Quest;
 using EggLink.DanhengServer.GameServer.Game.Raid;
 using EggLink.DanhengServer.GameServer.Game.Rogue;
 using EggLink.DanhengServer.GameServer.Game.Scene;
@@ -48,6 +49,7 @@ public class PlayerInstance(PlayerData data)
     public BattleManager? BattleManager { get; private set; }
     public BattleInstance? BattleInstance { get; set; }
     public MissionManager? MissionManager { get; private set; }
+    public QuestManager? QuestManager { get; private set; }
     public GachaManager? GachaManager { get; private set; }
     public MessageManager? MessageManager { get; private set; }
     public MailManager? MailManager { get; private set; }
@@ -138,6 +140,7 @@ public class PlayerInstance(PlayerData data)
         TaskManager = new TaskManager(this);
         RaidManager = new RaidManager(this);
         StoryLineManager = new StoryLineManager(this);
+        QuestManager = new QuestManager(this);
 
         PlayerUnlockData = InitializeDatabase<PlayerUnlockData>();
         SceneData = InitializeDatabase<SceneData>();
@@ -376,6 +379,7 @@ public class PlayerInstance(PlayerData data)
                     case PropTypeEnum.PROP_DESTRUCT:
                         if (newState == PropStateEnum.Closed) await prop.SetState(PropStateEnum.Open);
                         break;
+                    case PropTypeEnum.PROP_MAZE_JIGSAW:
                     case PropTypeEnum.PROP_MAZE_PUZZLE:
                         if (newState == PropStateEnum.Closed || newState == PropStateEnum.Open)
                             foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupID))
@@ -384,7 +388,7 @@ public class PlayerInstance(PlayerData data)
                                 {
                                     await p.SetState(PropStateEnum.ChestUsed);
                                 }
-                                else if (p.Excel.PropType == PropTypeEnum.PROP_MAZE_PUZZLE)
+                                else if (p.Excel.PropType == prop.Excel.PropType)
                                 {
                                     // Skip
                                 }
@@ -449,6 +453,11 @@ public class PlayerInstance(PlayerData data)
 
                     TaskManager?.SceneTaskTrigger.TriggerFloor(plane, floor);
                     MissionManager?.HandleFinishType(MissionFinishTypeEnum.FloorSavedValue);
+                }
+
+                if (prop.PropInfo.IsLevelBtn)
+                {
+                    await prop.SetState(PropStateEnum.Closed);
                 }
 
                 return prop;

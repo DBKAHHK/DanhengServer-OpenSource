@@ -125,6 +125,10 @@ public class RaidManager : BasePlayerManager
                 }
 
                 Player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupHeliobus, list);
+                if (excel.LockCaptain)
+                {
+                    Player.LineupManager!.GetCurLineup()!.LeaderAvatarId = excel.LockCaptainAvatarID;
+                }
                 await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
             }
             else

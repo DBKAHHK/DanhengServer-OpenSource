@@ -1,5 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Config;
+using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.Enums.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
@@ -10,10 +11,15 @@ namespace EggLink.DanhengServer.GameServer.Game.Scene;
 public class SceneEntityLoader(SceneInstance scene)
 {
     public SceneInstance Scene { get; set; } = scene;
+    public List<int> LoadGroups { get; set; } = [];
 
     public virtual async ValueTask LoadEntity()
     {
         if (Scene.IsLoaded) return;
+
+        var dimInfo = Scene.FloorInfo?.DimensionList.Find(x => x.ID == 0);
+        if (dimInfo == null) return;
+        LoadGroups.AddRange(dimInfo.GroupIDList);
 
         foreach (var group in Scene?.FloorInfo?.Groups.Values!) // Sanity check in SceneInstance
         {
@@ -86,14 +92,57 @@ public class SceneEntityLoader(SceneInstance scene)
 
     public virtual async ValueTask<List<IGameEntity>?> LoadGroup(GroupInfo info, bool forceLoad = false)
     {
+        if (!LoadGroups.Contains(info.Id)) return null;
         var missionData = Scene.Player.MissionManager!.Data;
         if (info.LoadSide == GroupLoadSideEnum.Client) return null;
 
         if (info.GroupName.Contains("TrainVisitor")) return null;
 
+        if (info.SystemUnlockCondition != null)
+        {
+            var result = info.SystemUnlockCondition.Operation != OperationEnum.Or;
+            foreach (var conditionId in info.SystemUnlockCondition.Conditions)
+            {
+                GameData.GroupSystemUnlockDataData.TryGetValue(conditionId, out var unlockExcel);
+                if (unlockExcel == null) continue;
+                var part = Scene.Player.QuestManager?.UnlockHandler.GetUnlockStatus(unlockExcel.UnlockID) ?? false;
+                if (info.SystemUnlockCondition.Operation == OperationEnum.Or && part)
+                {
+                    result = true;
+                    break;
+                }
+
+                if (info.SystemUnlockCondition.Operation == OperationEnum.And && !part)
+                {
+                    result = false;
+                    break;
+                }
+
+                if (info.SystemUnlockCondition.Operation == OperationEnum.Not && part)
+                {
+                    result = false;
+                    break;
+                }
+            }
+
+            if (!result)
+            {
+                return null;
+            }
+        }
+
         if (!(info.OwnerMainMissionID == 0 ||
               Scene.Player.MissionManager!.GetMainMissionStatus(info.OwnerMainMissionID) ==
               MissionPhaseEnum.Accept)) return null;
+
+        if (Scene.FloorId == 20332001 && info.Id == 109)
+        {
+            if (Scene.Player.SceneData?.FloorSavedData.GetValueOrDefault(20332001, [])
+                    .GetValueOrDefault("ShowFeather", 0) != 1)
+            {
+                return null;
+            }
+        }  // a temp solution to Sunday
 
         if ((!info.LoadCondition.IsTrue(missionData) || info.UnloadCondition.IsTrue(missionData, false) ||
              info.ForceUnloadCondition.IsTrue(missionData, false)) && !forceLoad) return null;
@@ -173,22 +222,7 @@ public class SceneEntityLoader(SceneInstance scene)
     {
         if (info.IsClientOnly || info.IsDelete) return null;
 
-        if (group.Id == 117) GameData.GetAvatarExpRequired(0, 0);
-
         if (!GameData.NpcDataData.ContainsKey(info.NPCID)) return null;
-
-        var hasDuplicateNpcId = false;
-        foreach (var entity in Scene.Entities.Values)
-            if (entity is EntityNpc eNpc && eNpc.NpcId == info.NPCID)
-            {
-                hasDuplicateNpcId = true;
-                break;
-            }
-
-        if (hasDuplicateNpcId)
-        {
-            //return null;
-        }
 
         EntityNpc npc = new(Scene, group, info);
         await Scene.AddEntity(npc, sendPacket);

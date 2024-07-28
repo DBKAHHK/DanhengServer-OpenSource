@@ -22,7 +22,7 @@ public class LevelTask(PlayerInstance player)
         if (act is TargetFetchAdvPropEx fetch)
         {
             if (fetch.FetchType != TargetFetchAdvPropFetchTypeEnum.SinglePropByPropID) return null;
-            foreach (var entity in Player.SceneInstance!.Entities.Values)
+            foreach (var entity in Player.SceneInstance?.Entities.Values.ToList() ?? [])
                 if (entity is EntityProp prop && prop.GroupID == fetch.SinglePropID.GroupID.GetValue() &&
                     prop.InstId == fetch.SinglePropID.ID.GetValue())
                     return prop;

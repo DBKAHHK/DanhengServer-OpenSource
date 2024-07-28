@@ -97,6 +97,8 @@ public static class GameData
     public static Dictionary<int, MazePropExcel> MazePropData { get; private set; } = [];
     public static Dictionary<int, PlaneEventExcel> PlaneEventData { get; private set; } = [];
     public static Dictionary<int, ContentPackageConfigExcel> ContentPackageConfigData { get; private set; } = [];
+    public static Dictionary<int, GroupSystemUnlockDataExcel> GroupSystemUnlockDataData { get; private set; } = [];
+    public static Dictionary<int, FuncUnlockDataExcel> FuncUnlockDataData { get; private set; } = [];
 
     #endregion
 

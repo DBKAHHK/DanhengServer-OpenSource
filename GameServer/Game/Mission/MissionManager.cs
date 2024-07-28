@@ -4,6 +4,7 @@ using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Enums.Item;
 using EggLink.DanhengServer.Enums.Mission;
+using EggLink.DanhengServer.GameServer.Game.Battle;
 using EggLink.DanhengServer.GameServer.Game.Mission.FinishAction;
 using EggLink.DanhengServer.GameServer.Game.Mission.FinishType;
 using EggLink.DanhengServer.GameServer.Game.Player;
@@ -571,7 +572,7 @@ public class MissionManager : BasePlayerManager
 
     #region Handlers
 
-    public async ValueTask OnBattleFinish(PVEBattleResultCsReq req)
+    public async ValueTask OnBattleFinish(PVEBattleResultCsReq req, BattleInstance instance)
     {
         foreach (var mission in GetRunningSubMissionIdList())
         {
@@ -579,7 +580,10 @@ public class MissionManager : BasePlayerManager
             if (subMission != null && subMission.FinishType == MissionFinishTypeEnum.StageWin &&
                 req.EndStatus == BattleEndStatus.BattleEndWin) // TODO: Move to handler
                 if (req.StageId.ToString().StartsWith(subMission.ParamInt1.ToString()))
+                {
                     await FinishSubMission(mission);
+                    instance.EventId = 0;
+                }
         }
     }
 

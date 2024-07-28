@@ -18,6 +18,9 @@ public class RaidConfigExcel : ExcelResource
     public List<int> TrialAvatarList { get; set; } = [];
     public List<int> MainMissionIDList { get; set; } = [];
 
+    public bool LockCaptain { get; set; }
+    public int LockCaptainAvatarID { get; set; }
+
     public override int GetId()
     {
         return RaidID * 100 + HardLevel;

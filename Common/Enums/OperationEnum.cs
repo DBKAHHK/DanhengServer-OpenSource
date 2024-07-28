@@ -3,5 +3,6 @@
 public enum OperationEnum
 {
     And = 0,
-    Or = 1
+    Or = 1,
+    Not = 2,
 }
