@@ -7,6 +7,7 @@ namespace EggLink.DanhengServer.Data.Config;
 
 public class PropInfo : PositionInfo
 {
+    [JsonIgnore] public bool CommonConsole = false;
     public int MappingInfoID { get; set; }
     public int AnchorGroupID { get; set; }
     public int AnchorID { get; set; }
@@ -27,8 +28,6 @@ public class PropInfo : PositionInfo
     [JsonIgnore] public Dictionary<int, List<int>> UnlockControllerID { get; set; } = [];
 
     [JsonIgnore] public bool IsLevelBtn { get; set; }
-
-    [JsonIgnore] public bool CommonConsole = false;
 
     public void Load(GroupInfo info)
     {

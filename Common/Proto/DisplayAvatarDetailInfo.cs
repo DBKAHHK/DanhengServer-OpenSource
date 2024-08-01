@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static DisplayAvatarDetailInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1EaXNwbGF5QXZhdGFyRGV0YWlsSW5mby5wcm90bxoaRGlzcGxheUVxdWlw",
-            "bWVudEluZm8ucHJvdG8aFkRpc3BsYXlSZWxpY0luZm8ucHJvdG8aFUF2YXRh",
-            "clNraWxsVHJlZS5wcm90byL2AgoXRGlzcGxheUF2YXRhckRldGFpbEluZm8S",
+            "Ch1EaXNwbGF5QXZhdGFyRGV0YWlsSW5mby5wcm90bxoWRGlzcGxheVJlbGlj",
+            "SW5mby5wcm90bxoVQXZhdGFyU2tpbGxUcmVlLnByb3RvGhpEaXNwbGF5RXF1",
+            "aXBtZW50SW5mby5wcm90byL2AgoXRGlzcGxheUF2YXRhckRldGFpbEluZm8S",
             "DAoEcmFuaxgHIAEoDRILCgNwb3MYDCABKA0SFwoPZHJlc3NlZF9za2luX2lk",
             "GAQgASgNEigKCWVxdWlwbWVudBgFIAEoCzIVLkRpc3BsYXlFcXVpcG1lbnRJ",
             "bmZvEiUKCnJlbGljX2xpc3QYCyADKAsyES5EaXNwbGF5UmVsaWNJbmZvEi8K",
@@ -37,7 +37,7 @@ namespace EggLink.DanhengServer.Proto {
             "DQoFbGV2ZWwYCiABKA0SEQoJcHJvbW90aW9uGA4gASgNQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DisplayEquipmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayRelicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DisplayRelicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayEquipmentInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo), global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo.Parser, new[]{ "Rank", "Pos", "DressedSkinId", "Equipment", "RelicList", "AllPathUnlockedSpecialPointIdList", "SkilltreeList", "Exp", "AvatarId", "AllPathSpecialSkilltreeList", "Level", "Promotion" }, null, null, null, null)
           }));

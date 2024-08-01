@@ -2,6 +2,7 @@
 using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Challenge;
+using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Game.Battle;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Game.Scene;
@@ -249,6 +250,9 @@ public class ChallengeInstance
                 await Player.SendPacket(new PacketChallengeBossPhaseSettleNotify(this));
             else
                 await Player.SendPacket(new PacketChallengeSettleNotify(this));
+
+            // Call MissionManager
+            await Player.MissionManager!.HandleFinishType(MissionFinishTypeEnum.ChallengeFinish, this);
         }
         else
         {

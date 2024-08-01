@@ -1,5 +1,5 @@
 ﻿using EggLink.DanhengServer.Data;
-using EggLink.DanhengServer.Database;
+using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Avatar;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.Proto;
@@ -33,9 +33,13 @@ public class HandlerUnlockSkilltreeCsReq : Handler
 
         avatar.GetSkillTree().TryGetValue((int)req.PointId, out var level);
         avatar.GetSkillTree()[(int)req.PointId] = level + 1;
-        DatabaseHelper.Instance!.UpdateInstance(player.AvatarManager.AvatarData!);
 
         await connection.SendPacket(new PacketPlayerSyncScNotify(avatar));
+
+        player.MissionManager?.HandleFinishType(MissionFinishTypeEnum.UnlockSkilltreeCnt, "UnlockSkillTree");
+        player.MissionManager?.HandleFinishType(MissionFinishTypeEnum.UnlockSkilltree, "UnlockSkillTree");
+        player.MissionManager?.HandleFinishType(MissionFinishTypeEnum.AllAvatarUnlockSkilltreeCnt, "UnlockSkillTree");
+
         await connection.SendPacket(new PacketUnlockSkilltreeScRsp(req.PointId, req.Level));
     }
 }

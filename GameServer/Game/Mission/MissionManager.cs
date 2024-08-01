@@ -15,7 +15,7 @@ using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
-using MissionData = EggLink.DanhengServer.Database.Mission.MissionData;
+using MissionData = EggLink.DanhengServer.Database.Quests.MissionData;
 
 namespace EggLink.DanhengServer.GameServer.Game.Mission;
 
@@ -183,16 +183,13 @@ public class MissionManager : BasePlayerManager
                 FinishTypeHandlers.TryGetValue(mission.SubMissionInfo.FinishType, out var handler);
                 if (doFinishTypeAction)
                     if (handler != null)
-                        await handler.HandleFinishType(Player, mission.SubMissionInfo, null);
+                        await handler.HandleMissionFinishType(Player, mission.SubMissionInfo, null);
             }
             catch
             {
             }
 
-        if (SkipSubMissionList.Contains(missionId))
-        {
-            //FinishSubMission(missionId);
-        }
+        if (SkipSubMissionList.Contains(missionId)) await FinishSubMission(missionId);
 
         if (mission.SubMissionInfo?.LevelFloorID == Player.SceneInstance?.FloorId)
             if (mission.SubMissionInfo?.GroupIDList != null)
@@ -200,7 +197,7 @@ public class MissionManager : BasePlayerManager
                     await Player.SceneInstance!.EntityLoader!.LoadGroup(group);
 
         // TODO: Mission Task
-        Player.TaskManager?.MissionTaskTrigger?.TriggerMissionTask(missionId);
+        Player.TaskManager?.MissionTaskTrigger.TriggerMissionTask(missionId);
 
         return sync;
     }
@@ -311,7 +308,7 @@ public class MissionManager : BasePlayerManager
         foreach (var nextMission in GetRunningSubMissionList())
         {
             FinishTypeHandlers.TryGetValue(nextMission.FinishType, out var handler);
-            if (handler != null) await handler.HandleFinishType(Player, nextMission, null);
+            if (handler != null) await handler.HandleMissionFinishType(Player, nextMission, null);
         }
 
         if (shouldFinish) await FinishMainMission(mainMissionId);
@@ -359,29 +356,34 @@ public class MissionManager : BasePlayerManager
         GameData.MainMissionData.TryGetValue(mainMissionId, out var mainMission);
         if (mainMission == null) return;
         GameData.RewardDataData.TryGetValue(mainMission.RewardID, out var reward);
-        var ItemList = new ItemList();
+        var itemList = new ItemList();
         reward?.GetItems().ForEach(async i =>
         {
             GameData.ItemConfigData.TryGetValue(i.Item1, out var item);
             var res = await Player.InventoryManager!.AddItem(i.Item1, i.Item2,
                 item?.ItemMainType == ItemMainTypeEnum.AvatarCard);
-            if (res != null) ItemList.ItemList_.Add(res.ToProto());
+            if (res != null) itemList.ItemList_.Add(res.ToProto());
         });
 
-        mainMission.SubRewardList.ForEach(i =>
+        var hCoin = await Player.InventoryManager!.AddItem(1, reward?.Hcoin ?? 0, false);
+        if (hCoin != null) itemList.ItemList_.Add(hCoin.ToProto());
+
+        mainMission.SubRewardList.ForEach(async i =>
         {
-            GameData.RewardDataData.TryGetValue(i, out var reward);
-            reward?.GetItems().ForEach(async j =>
+            GameData.RewardDataData.TryGetValue(i, out var rewardDataExcel);
+            rewardDataExcel?.GetItems().ForEach(async j =>
             {
                 GameData.ItemConfigData.TryGetValue(j.Item1, out var item);
                 var res = await Player.InventoryManager!.AddItem(j.Item1, j.Item2,
                     item?.ItemMainType == ItemMainTypeEnum.AvatarCard);
-                if (res != null) ItemList.ItemList_.Add(res.ToProto());
+                if (res != null) itemList.ItemList_.Add(res.ToProto());
             });
+            var hCoin2 = await Player.InventoryManager!.AddItem(1, rewardDataExcel?.Hcoin ?? 0, false);
+            if (hCoin2 != null) itemList.ItemList_.Add(hCoin2.ToProto());
         });
 
-        await Player.SendPacket(new PacketMissionRewardScNotify(mainMissionId, 0, ItemList));
-        await Player.SendPacket(new PacketScenePlaneEventScNotify(ItemList));
+        await Player.SendPacket(new PacketMissionRewardScNotify(mainMissionId, 0, itemList));
+        await Player.SendPacket(new PacketScenePlaneEventScNotify(itemList));
     }
 
     public async ValueTask HandleSubMissionReward(int subMissionId)
@@ -389,15 +391,15 @@ public class MissionManager : BasePlayerManager
         GameData.SubMissionData.TryGetValue(subMissionId, out var subMission);
         if (subMission == null) return;
         GameData.RewardDataData.TryGetValue(subMission.SubMissionInfo?.SubRewardID ?? 0, out var reward);
-        var ItemList = new ItemList();
+        var itemList = new ItemList();
         reward?.GetItems().ForEach(async i =>
         {
             var res = await Player.InventoryManager!.AddItem(i.Item1, i.Item2, false);
-            if (res != null) ItemList.ItemList_.Add(res.ToProto());
+            if (res != null) itemList.ItemList_.Add(res.ToProto());
         });
 
-        await Player.SendPacket(new PacketMissionRewardScNotify(0, subMissionId, ItemList));
-        await Player.SendPacket(new PacketScenePlaneEventScNotify(ItemList));
+        await Player.SendPacket(new PacketMissionRewardScNotify(0, subMissionId, itemList));
+        await Player.SendPacket(new PacketScenePlaneEventScNotify(itemList));
     }
 
     public async ValueTask HandleFinishType(MissionFinishTypeEnum finishType, object? arg = null)
@@ -406,7 +408,21 @@ public class MissionManager : BasePlayerManager
         foreach (var mission in GetRunningSubMissionList())
             if (mission.FinishType == finishType)
                 if (handler != null)
-                    await handler.HandleFinishType(Player, mission, arg);
+                    await handler.HandleMissionFinishType(Player, mission, arg);
+
+        foreach (var quest in Player.QuestManager?.GetRunningQuest() ?? [])
+        {
+            var excel = GameData.QuestDataData[quest.QuestId];
+            var finishWay = GameData.FinishWayData[excel.FinishWayID];
+            if (finishWay.FinishType == finishType)
+                if (handler != null)
+                    await handler.HandleQuestFinishType(Player, excel, finishWay, arg);
+        }
+    }
+
+    public async ValueTask HandleAllFinishType(object? arg = null)
+    {
+        foreach (var handler in FinishTypeHandlers) await HandleFinishType(handler.Key, arg);
     }
 
     public async ValueTask HandleTalkStr(string talkString)
@@ -417,6 +433,15 @@ public class MissionManager : BasePlayerManager
             if (mission.FinishType == MissionFinishTypeEnum.Talk)
                 if (mission.ParamStr1 == talkString)
                     await FinishSubMission(mission.ID);
+
+        foreach (var quest in Player.QuestManager?.GetRunningQuest() ?? [])
+        {
+            var excel = GameData.QuestDataData[quest.QuestId];
+            var finishWay = GameData.FinishWayData[excel.FinishWayID];
+            if (finishWay.FinishType == MissionFinishTypeEnum.Talk)
+                if (finishWay.ParamStr1 == talkString)
+                    await Player.QuestManager!.FinishQuest(quest.QuestId);
+        }
     }
 
     public async ValueTask HandleCustomValue(List<MissionCustomValue> values, int missionId)
@@ -586,6 +611,9 @@ public class MissionManager : BasePlayerManager
                     instance.EventId = 0;
                 }
         }
+
+        await HandleFinishType(MissionFinishTypeEnum.AnyCocoonFinish, instance);
+        await HandleFinishType(MissionFinishTypeEnum.AnyFarmElementFinish, instance);
     }
 
     public async ValueTask OnPlayerInteractWithProp()
@@ -594,7 +622,7 @@ public class MissionManager : BasePlayerManager
             if (GetSubMissionInfo(id)?.FinishType == MissionFinishTypeEnum.PropState)
             {
                 FinishTypeHandlers.TryGetValue(MissionFinishTypeEnum.PropState, out var handler);
-                if (handler != null) await handler.HandleFinishType(Player, GetSubMissionInfo(id)!, null);
+                if (handler != null) await handler.HandleMissionFinishType(Player, GetSubMissionInfo(id)!, null);
             }
     }
 

@@ -3,5 +3,5 @@
 public enum StoryLineConditionTypeEnum
 {
     FinishSubMission = 1,
-    SubMissionTaken = 2,
+    SubMissionTaken = 2
 }

@@ -33,7 +33,7 @@ public class ShopService(PlayerInstance player) : BasePlayerManager(player)
             if (item != null) items.Add(item);
         }
 
-        await Player.MissionManager!.HandleFinishType(MissionFinishTypeEnum.BuyShopGoods, "BuyGoods");
+        await Player.MissionManager!.HandleFinishType(MissionFinishTypeEnum.BuyShopGoods, goods);
 
         return items;
     }

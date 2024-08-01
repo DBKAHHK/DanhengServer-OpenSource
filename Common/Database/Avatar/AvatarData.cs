@@ -157,6 +157,12 @@ public class AvatarInfo
         return PathInfoes[GetAvatarId()];
     }
 
+    public PathInfo? GetPathInfo(int pathId)
+    {
+        if (PathInfoes.TryGetValue(pathId, out var value)) return value;
+        return null;
+    }
+
     public Dictionary<int, int> GetSkillTree(int pathId = 0)
     {
         if (pathId == 0) pathId = PathId;

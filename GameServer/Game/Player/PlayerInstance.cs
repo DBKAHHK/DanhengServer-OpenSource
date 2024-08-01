@@ -108,7 +108,6 @@ public class PlayerInstance(PlayerData data)
             if (ConfigManager.Config.ServerOption.EnableMission)
             {
                 await LineupManager!.AddSpecialAvatarToCurTeam(10010050);
-                await MissionManager!.AcceptMainMissionByCondition();
             }
             else
             {
@@ -201,6 +200,12 @@ public class PlayerInstance(PlayerData data)
 
         await LoadScene(Data.PlaneId, Data.FloorId, Data.EntryId, Data.Pos!, Data.Rot!, false);
         if (SceneInstance == null) await EnterScene(2000101, 0, false);
+
+        if (ConfigManager.Config.ServerOption.EnableMission)
+        {
+            await MissionManager!.AcceptMainMissionByCondition();
+            await QuestManager!.AcceptQuestByCondition();
+        }
     }
 
     public T InitializeDatabase<T>() where T : class, new()
@@ -355,6 +360,8 @@ public class PlayerInstance(PlayerData data)
         await OnStaminaRecover();
 
         InvokeOnPlayerHeartBeat(this);
+        if (MissionManager != null)
+            await MissionManager.HandleAllFinishType();
 
         DatabaseHelper.ToSaveUidList.SafeAdd(Uid);
     }
@@ -530,7 +537,7 @@ public class PlayerInstance(PlayerData data)
 
         var anchor = floorInfo.GetAnchorInfo(startGroup, startAnchor);
 
-        await MissionManager!.HandleFinishType(MissionFinishTypeEnum.EnterMapByEntrance, entryId);
+        await MissionManager!.HandleFinishType(MissionFinishTypeEnum.EnterMapByEntrance, entrance);
 
         var beforeEntryId = Data.EntryId;
 
