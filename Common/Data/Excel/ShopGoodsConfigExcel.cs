@@ -35,7 +35,7 @@ public class ShopGoodsConfigExcel : ExcelResource
     {
         return new Goods
         {
-            EndTime = long.MaxValue,
+            EndTime = uint.MaxValue,
             GoodsId = (uint)GoodsID,
             ItemId = (uint)ItemID
         };

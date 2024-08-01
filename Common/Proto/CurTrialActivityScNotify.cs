@@ -24,14 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static CurTrialActivityScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5DdXJUcmlhbEFjdGl2aXR5U2NOb3RpZnkucHJvdG8aEUJJQ0pDTVBNRExM",
-            "LnByb3RvIk0KGEN1clRyaWFsQWN0aXZpdHlTY05vdGlmeRITCgtCT0tFRU9G",
-            "TEhNUBgNIAEoDRIcCgZzdGF0dXMYASABKA4yDC5CSUNKQ01QTURMTEIeqgIb",
-            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Ch5DdXJUcmlhbEFjdGl2aXR5U2NOb3RpZnkucHJvdG8aGVRyaWFsQWN0aXZp",
+            "dHlTdGF0dXMucHJvdG8iUgoYQ3VyVHJpYWxBY3Rpdml0eVNjTm90aWZ5EhAK",
+            "CHN0YWdlX2lkGAogASgNEiQKBnN0YXR1cxgEIAEoDjIULlRyaWFsQWN0aXZp",
+            "dHlTdGF0dXNCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BICJCMPMDLLReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrialActivityStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CurTrialActivityScNotify), global::EggLink.DanhengServer.Proto.CurTrialActivityScNotify.Parser, new[]{ "BOKEEOFLHMP", "Status" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CurTrialActivityScNotify), global::EggLink.DanhengServer.Proto.CurTrialActivityScNotify.Parser, new[]{ "StageId", "Status" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CurTrialActivityScNotify(CurTrialActivityScNotify other) : this() {
-      bOKEEOFLHMP_ = other.bOKEEOFLHMP_;
+      stageId_ = other.stageId_;
       status_ = other.status_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,24 +85,24 @@ namespace EggLink.DanhengServer.Proto {
       return new CurTrialActivityScNotify(this);
     }
 
-    /// <summary>Field number for the "BOKEEOFLHMP" field.</summary>
-    public const int BOKEEOFLHMPFieldNumber = 13;
-    private uint bOKEEOFLHMP_;
+    /// <summary>Field number for the "stage_id" field.</summary>
+    public const int StageIdFieldNumber = 10;
+    private uint stageId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BOKEEOFLHMP {
-      get { return bOKEEOFLHMP_; }
+    public uint StageId {
+      get { return stageId_; }
       set {
-        bOKEEOFLHMP_ = value;
+        stageId_ = value;
       }
     }
 
     /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.BICJCMPMDLL status_ = global::EggLink.DanhengServer.Proto.BICJCMPMDLL.TrialActivityStatusNone;
+    public const int StatusFieldNumber = 4;
+    private global::EggLink.DanhengServer.Proto.TrialActivityStatus status_ = global::EggLink.DanhengServer.Proto.TrialActivityStatus.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.BICJCMPMDLL Status {
+    public global::EggLink.DanhengServer.Proto.TrialActivityStatus Status {
       get { return status_; }
       set {
         status_ = value;
@@ -123,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (BOKEEOFLHMP != other.BOKEEOFLHMP) return false;
+      if (StageId != other.StageId) return false;
       if (Status != other.Status) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -132,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (BOKEEOFLHMP != 0) hash ^= BOKEEOFLHMP.GetHashCode();
-      if (Status != global::EggLink.DanhengServer.Proto.BICJCMPMDLL.TrialActivityStatusNone) hash ^= Status.GetHashCode();
+      if (StageId != 0) hash ^= StageId.GetHashCode();
+      if (Status != global::EggLink.DanhengServer.Proto.TrialActivityStatus.None) hash ^= Status.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Status != global::EggLink.DanhengServer.Proto.BICJCMPMDLL.TrialActivityStatusNone) {
-        output.WriteRawTag(8);
+      if (Status != global::EggLink.DanhengServer.Proto.TrialActivityStatus.None) {
+        output.WriteRawTag(32);
         output.WriteEnum((int) Status);
       }
-      if (BOKEEOFLHMP != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(BOKEEOFLHMP);
+      if (StageId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(StageId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Status != global::EggLink.DanhengServer.Proto.BICJCMPMDLL.TrialActivityStatusNone) {
-        output.WriteRawTag(8);
+      if (Status != global::EggLink.DanhengServer.Proto.TrialActivityStatus.None) {
+        output.WriteRawTag(32);
         output.WriteEnum((int) Status);
       }
-      if (BOKEEOFLHMP != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(BOKEEOFLHMP);
+      if (StageId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(StageId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,10 +189,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (BOKEEOFLHMP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BOKEEOFLHMP);
+      if (StageId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(StageId);
       }
-      if (Status != global::EggLink.DanhengServer.Proto.BICJCMPMDLL.TrialActivityStatusNone) {
+      if (Status != global::EggLink.DanhengServer.Proto.TrialActivityStatus.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (_unknownFields != null) {
@@ -206,10 +207,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.BOKEEOFLHMP != 0) {
-        BOKEEOFLHMP = other.BOKEEOFLHMP;
+      if (other.StageId != 0) {
+        StageId = other.StageId;
       }
-      if (other.Status != global::EggLink.DanhengServer.Proto.BICJCMPMDLL.TrialActivityStatusNone) {
+      if (other.Status != global::EggLink.DanhengServer.Proto.TrialActivityStatus.None) {
         Status = other.Status;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -227,12 +228,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Status = (global::EggLink.DanhengServer.Proto.BICJCMPMDLL) input.ReadEnum();
+          case 32: {
+            Status = (global::EggLink.DanhengServer.Proto.TrialActivityStatus) input.ReadEnum();
             break;
           }
-          case 104: {
-            BOKEEOFLHMP = input.ReadUInt32();
+          case 80: {
+            StageId = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +251,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Status = (global::EggLink.DanhengServer.Proto.BICJCMPMDLL) input.ReadEnum();
+          case 32: {
+            Status = (global::EggLink.DanhengServer.Proto.TrialActivityStatus) input.ReadEnum();
             break;
           }
-          case 104: {
-            BOKEEOFLHMP = input.ReadUInt32();
+          case 80: {
+            StageId = input.ReadUInt32();
             break;
           }
         }

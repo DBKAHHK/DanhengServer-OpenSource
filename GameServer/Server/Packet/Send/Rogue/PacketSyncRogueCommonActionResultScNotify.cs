@@ -5,7 +5,7 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Rogue;
 public class PacketSyncRogueCommonActionResultScNotify : BasePacket
 {
     public PacketSyncRogueCommonActionResultScNotify(int rogueSubmode, RogueCommonActionResult result,
-        RogueActionDisplayType displayType = RogueActionDisplayType.RogueCommonActionResultDisplayTypeNone) : base(
+        RogueCommonActionResultDisplayType displayType = RogueCommonActionResultDisplayType.None) : base(
         CmdIds.SyncRogueCommonActionResultScNotify)
     {
         var proto = new SyncRogueCommonActionResultScNotify
@@ -20,7 +20,7 @@ public class PacketSyncRogueCommonActionResultScNotify : BasePacket
     }
 
     public PacketSyncRogueCommonActionResultScNotify(int rogueSubmode, List<RogueCommonActionResult> results,
-        RogueActionDisplayType displayType = RogueActionDisplayType.RogueCommonActionResultDisplayTypeNone) : base(
+        RogueCommonActionResultDisplayType displayType = RogueCommonActionResultDisplayType.None) : base(
         CmdIds.SyncRogueCommonActionResultScNotify)
     {
         var proto = new SyncRogueCommonActionResultScNotify

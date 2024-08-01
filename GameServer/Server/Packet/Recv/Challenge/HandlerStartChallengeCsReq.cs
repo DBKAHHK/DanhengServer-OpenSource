@@ -9,21 +9,19 @@ public class HandlerStartChallengeCsReq : Handler
     {
         var req = StartChallengeCsReq.Parser.ParseFrom(data);
 
-        StartChallengeStoryBuffInfo? storyBuffInfo = null;
+        ChallengeStoryBuffInfo? storyBuffInfo = null;
         if (req.PlayerInfo != null && req.PlayerInfo.StoryBuffInfo != null)
             storyBuffInfo = req.PlayerInfo.StoryBuffInfo;
-        ;
 
-        StartChallengeBossBuffInfo? bossBuffInfo = null;
+        ChallengeBossBuffInfo? bossBuffInfo = null;
         if (req.PlayerInfo != null && req.PlayerInfo.BossBuffInfo != null) bossBuffInfo = req.PlayerInfo.BossBuffInfo;
-        ;
 
-        if (req.TeamOne.Count > 0)
-            await connection.Player!.LineupManager!.ReplaceLineup(0, req.TeamOne.Select(x => (int)x).ToList(),
+        if (req.FirstLineup.Count > 0)
+            await connection.Player!.LineupManager!.ReplaceLineup(0, req.FirstLineup.Select(x => (int)x).ToList(),
                 ExtraLineupType.LineupChallenge);
 
-        if (req.TeamTwo.Count > 0)
-            await connection.Player!.LineupManager!.ReplaceLineup(0, req.TeamTwo.Select(x => (int)x).ToList(),
+        if (req.SecondLineup.Count > 0)
+            await connection.Player!.LineupManager!.ReplaceLineup(0, req.SecondLineup.Select(x => (int)x).ToList(),
                 ExtraLineupType.LineupChallenge2);
 
         await connection.Player!.ChallengeManager!.StartChallenge((int)req.ChallengeId, storyBuffInfo, bossBuffInfo);

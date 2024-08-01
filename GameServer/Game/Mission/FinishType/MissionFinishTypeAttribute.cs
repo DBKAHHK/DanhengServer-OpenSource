@@ -1,5 +1,4 @@
-﻿using EggLink.DanhengServer.Enums;
-using EggLink.DanhengServer.Enums.Mission;
+﻿using EggLink.DanhengServer.Enums.Mission;
 
 namespace EggLink.DanhengServer.GameServer.Game.Mission.FinishType;
 

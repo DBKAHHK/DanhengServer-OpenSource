@@ -183,7 +183,7 @@ public class ChessRogueCellInstance
             CellType = (uint)CellType,
             IsUnlock = true,
             RoomId = (uint)RoomId,
-            MGEHIHCCHHO = true,
+            JEHEAOINGMP = true,
             PosX = (uint)GetRow()
         };
 

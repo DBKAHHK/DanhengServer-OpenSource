@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlHZXRSZXBsYXlUb2tlblNjUnNwLnByb3RvGhBSZXBsYXlUeXBlLnByb3Rv",
-            "In4KE0dldFJlcGxheVRva2VuU2NSc3ASIAoLSUdJSlBGQUFLQU4YAyABKA4y",
-            "Cy5SZXBsYXlUeXBlEg8KB3JldGNvZGUYBSABKA0SDQoFdG9rZW4YCSABKAkS",
-            "EwoLRkZFRkxLSkJJQkIYDiABKAkSEAoIc3RhZ2VfaWQYDCABKA1CHqoCG0Vn",
-            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "InYKE0dldFJlcGxheVRva2VuU2NSc3ASCwoDbWQ1GA8gASgJEiAKC3JlcGxh",
+            "eV90eXBlGAkgASgOMgsuUmVwbGF5VHlwZRIPCgdyZXRjb2RlGAMgASgNEhAK",
+            "CHN0YWdlX2lkGAEgASgNEg0KBXRva2VuGAQgASgJQh6qAhtFZ2dMaW5rLkRh",
+            "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ReplayTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetReplayTokenScRsp), global::EggLink.DanhengServer.Proto.GetReplayTokenScRsp.Parser, new[]{ "IGIJPFAAKAN", "Retcode", "Token", "FFEFLKJBIBB", "StageId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetReplayTokenScRsp), global::EggLink.DanhengServer.Proto.GetReplayTokenScRsp.Parser, new[]{ "Md5", "ReplayType", "Retcode", "StageId", "Token" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,11 +74,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetReplayTokenScRsp(GetReplayTokenScRsp other) : this() {
-      iGIJPFAAKAN_ = other.iGIJPFAAKAN_;
+      md5_ = other.md5_;
+      replayType_ = other.replayType_;
       retcode_ = other.retcode_;
-      token_ = other.token_;
-      fFEFLKJBIBB_ = other.fFEFLKJBIBB_;
       stageId_ = other.stageId_;
+      token_ = other.token_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,20 +88,32 @@ namespace EggLink.DanhengServer.Proto {
       return new GetReplayTokenScRsp(this);
     }
 
-    /// <summary>Field number for the "IGIJPFAAKAN" field.</summary>
-    public const int IGIJPFAAKANFieldNumber = 3;
-    private global::EggLink.DanhengServer.Proto.ReplayType iGIJPFAAKAN_ = global::EggLink.DanhengServer.Proto.ReplayType.None;
+    /// <summary>Field number for the "md5" field.</summary>
+    public const int Md5FieldNumber = 15;
+    private string md5_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ReplayType IGIJPFAAKAN {
-      get { return iGIJPFAAKAN_; }
+    public string Md5 {
+      get { return md5_; }
       set {
-        iGIJPFAAKAN_ = value;
+        md5_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "replay_type" field.</summary>
+    public const int ReplayTypeFieldNumber = 9;
+    private global::EggLink.DanhengServer.Proto.ReplayType replayType_ = global::EggLink.DanhengServer.Proto.ReplayType.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ReplayType ReplayType {
+      get { return replayType_; }
+      set {
+        replayType_ = value;
       }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 5;
+    public const int RetcodeFieldNumber = 3;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,32 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "token" field.</summary>
-    public const int TokenFieldNumber = 9;
-    private string token_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Token {
-      get { return token_; }
-      set {
-        token_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "FFEFLKJBIBB" field.</summary>
-    public const int FFEFLKJBIBBFieldNumber = 14;
-    private string fFEFLKJBIBB_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string FFEFLKJBIBB {
-      get { return fFEFLKJBIBB_; }
-      set {
-        fFEFLKJBIBB_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "stage_id" field.</summary>
-    public const int StageIdFieldNumber = 12;
+    public const int StageIdFieldNumber = 1;
     private uint stageId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -145,6 +133,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return stageId_; }
       set {
         stageId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "token" field.</summary>
+    public const int TokenFieldNumber = 4;
+    private string token_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Token {
+      get { return token_; }
+      set {
+        token_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -163,11 +163,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IGIJPFAAKAN != other.IGIJPFAAKAN) return false;
+      if (Md5 != other.Md5) return false;
+      if (ReplayType != other.ReplayType) return false;
       if (Retcode != other.Retcode) return false;
-      if (Token != other.Token) return false;
-      if (FFEFLKJBIBB != other.FFEFLKJBIBB) return false;
       if (StageId != other.StageId) return false;
+      if (Token != other.Token) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -175,11 +175,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IGIJPFAAKAN != global::EggLink.DanhengServer.Proto.ReplayType.None) hash ^= IGIJPFAAKAN.GetHashCode();
+      if (Md5.Length != 0) hash ^= Md5.GetHashCode();
+      if (ReplayType != global::EggLink.DanhengServer.Proto.ReplayType.None) hash ^= ReplayType.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (Token.Length != 0) hash ^= Token.GetHashCode();
-      if (FFEFLKJBIBB.Length != 0) hash ^= FFEFLKJBIBB.GetHashCode();
       if (StageId != 0) hash ^= StageId.GetHashCode();
+      if (Token.Length != 0) hash ^= Token.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -198,25 +198,25 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IGIJPFAAKAN != global::EggLink.DanhengServer.Proto.ReplayType.None) {
-        output.WriteRawTag(24);
-        output.WriteEnum((int) IGIJPFAAKAN);
+      if (StageId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(StageId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
       if (Token.Length != 0) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(34);
         output.WriteString(Token);
       }
-      if (StageId != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(StageId);
+      if (ReplayType != global::EggLink.DanhengServer.Proto.ReplayType.None) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) ReplayType);
       }
-      if (FFEFLKJBIBB.Length != 0) {
-        output.WriteRawTag(114);
-        output.WriteString(FFEFLKJBIBB);
+      if (Md5.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(Md5);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -228,25 +228,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IGIJPFAAKAN != global::EggLink.DanhengServer.Proto.ReplayType.None) {
-        output.WriteRawTag(24);
-        output.WriteEnum((int) IGIJPFAAKAN);
+      if (StageId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(StageId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
       if (Token.Length != 0) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(34);
         output.WriteString(Token);
       }
-      if (StageId != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(StageId);
+      if (ReplayType != global::EggLink.DanhengServer.Proto.ReplayType.None) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) ReplayType);
       }
-      if (FFEFLKJBIBB.Length != 0) {
-        output.WriteRawTag(114);
-        output.WriteString(FFEFLKJBIBB);
+      if (Md5.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(Md5);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -258,20 +258,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IGIJPFAAKAN != global::EggLink.DanhengServer.Proto.ReplayType.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IGIJPFAAKAN);
+      if (Md5.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Md5);
+      }
+      if (ReplayType != global::EggLink.DanhengServer.Proto.ReplayType.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReplayType);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (Token.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Token);
-      }
-      if (FFEFLKJBIBB.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(FFEFLKJBIBB);
-      }
       if (StageId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(StageId);
+      }
+      if (Token.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Token);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IGIJPFAAKAN != global::EggLink.DanhengServer.Proto.ReplayType.None) {
-        IGIJPFAAKAN = other.IGIJPFAAKAN;
+      if (other.Md5.Length != 0) {
+        Md5 = other.Md5;
+      }
+      if (other.ReplayType != global::EggLink.DanhengServer.Proto.ReplayType.None) {
+        ReplayType = other.ReplayType;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.Token.Length != 0) {
-        Token = other.Token;
-      }
-      if (other.FFEFLKJBIBB.Length != 0) {
-        FFEFLKJBIBB = other.FFEFLKJBIBB;
-      }
       if (other.StageId != 0) {
         StageId = other.StageId;
+      }
+      if (other.Token.Length != 0) {
+        Token = other.Token;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -315,24 +315,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            IGIJPFAAKAN = (global::EggLink.DanhengServer.Proto.ReplayType) input.ReadEnum();
-            break;
-          }
-          case 40: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 74: {
-            Token = input.ReadString();
-            break;
-          }
-          case 96: {
+          case 8: {
             StageId = input.ReadUInt32();
             break;
           }
-          case 114: {
-            FFEFLKJBIBB = input.ReadString();
+          case 24: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 34: {
+            Token = input.ReadString();
+            break;
+          }
+          case 72: {
+            ReplayType = (global::EggLink.DanhengServer.Proto.ReplayType) input.ReadEnum();
+            break;
+          }
+          case 122: {
+            Md5 = input.ReadString();
             break;
           }
         }
@@ -350,24 +350,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            IGIJPFAAKAN = (global::EggLink.DanhengServer.Proto.ReplayType) input.ReadEnum();
-            break;
-          }
-          case 40: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 74: {
-            Token = input.ReadString();
-            break;
-          }
-          case 96: {
+          case 8: {
             StageId = input.ReadUInt32();
             break;
           }
-          case 114: {
-            FFEFLKJBIBB = input.ReadString();
+          case 24: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 34: {
+            Token = input.ReadString();
+            break;
+          }
+          case 72: {
+            ReplayType = (global::EggLink.DanhengServer.Proto.ReplayType) input.ReadEnum();
+            break;
+          }
+          case 122: {
+            Md5 = input.ReadString();
             break;
           }
         }

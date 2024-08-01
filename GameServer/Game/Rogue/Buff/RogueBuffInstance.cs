@@ -50,7 +50,7 @@ public class RogueBuffInstance(int buffId, int buffLevel)
         };
     }
 
-    public RogueCommonActionResult ToResultProto(RogueActionSource source)
+    public RogueCommonActionResult ToResultProto(RogueCommonActionResultSourceType source)
     {
         return new RogueCommonActionResult
         {
@@ -66,9 +66,9 @@ public class RogueBuffInstance(int buffId, int buffLevel)
         };
     }
 
-    public RogueBuffEnhance ToEnhanceProto()
+    public RogueBuffEnhanceInfo ToEnhanceProto()
     {
-        return new RogueBuffEnhance
+        return new RogueBuffEnhanceInfo
         {
             BuffId = (uint)BuffId,
             CostData = new ItemCostData
@@ -88,9 +88,9 @@ public class RogueBuffInstance(int buffId, int buffLevel)
         };
     }
 
-    public ChessRogueBuffEnhance ToChessEnhanceProto()
+    public ChessRogueBuffEnhanceInfo ToChessEnhanceProto()
     {
-        return new ChessRogueBuffEnhance
+        return new ChessRogueBuffEnhanceInfo
         {
             BuffId = (uint)BuffId,
             CostData = new ItemCostData

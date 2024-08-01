@@ -24,13 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GetChatEmojiListScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtHZXRDaGF0RW1vamlMaXN0U2NSc3AucHJvdG8iPQoVR2V0Q2hhdEVtb2pp",
-            "TGlzdFNjUnNwEg8KB3JldGNvZGUYAiABKA0SEwoLS09GSEJHSUFNQkMYCyAD",
-            "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChtHZXRDaGF0RW1vamlMaXN0U2NSc3AucHJvdG8iQQoVR2V0Q2hhdEVtb2pp",
+            "TGlzdFNjUnNwEg8KB3JldGNvZGUYBSABKA0SFwoPY2hhdF9lbW9qaV9saXN0",
+            "GA4gAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetChatEmojiListScRsp), global::EggLink.DanhengServer.Proto.GetChatEmojiListScRsp.Parser, new[]{ "Retcode", "KOFHBGIAMBC" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetChatEmojiListScRsp), global::EggLink.DanhengServer.Proto.GetChatEmojiListScRsp.Parser, new[]{ "Retcode", "ChatEmojiList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetChatEmojiListScRsp(GetChatEmojiListScRsp other) : this() {
       retcode_ = other.retcode_;
-      kOFHBGIAMBC_ = other.kOFHBGIAMBC_.Clone();
+      chatEmojiList_ = other.chatEmojiList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 2;
+    public const int RetcodeFieldNumber = 5;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "KOFHBGIAMBC" field.</summary>
-    public const int KOFHBGIAMBCFieldNumber = 11;
-    private static readonly pb::FieldCodec<uint> _repeated_kOFHBGIAMBC_codec
-        = pb::FieldCodec.ForUInt32(90);
-    private readonly pbc::RepeatedField<uint> kOFHBGIAMBC_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "chat_emoji_list" field.</summary>
+    public const int ChatEmojiListFieldNumber = 14;
+    private static readonly pb::FieldCodec<uint> _repeated_chatEmojiList_codec
+        = pb::FieldCodec.ForUInt32(114);
+    private readonly pbc::RepeatedField<uint> chatEmojiList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> KOFHBGIAMBC {
-      get { return kOFHBGIAMBC_; }
+    public pbc::RepeatedField<uint> ChatEmojiList {
+      get { return chatEmojiList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Retcode != other.Retcode) return false;
-      if(!kOFHBGIAMBC_.Equals(other.kOFHBGIAMBC_)) return false;
+      if(!chatEmojiList_.Equals(other.chatEmojiList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      hash ^= kOFHBGIAMBC_.GetHashCode();
+      hash ^= chatEmojiList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,10 +152,10 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
-      kOFHBGIAMBC_.WriteTo(output, _repeated_kOFHBGIAMBC_codec);
+      chatEmojiList_.WriteTo(output, _repeated_chatEmojiList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,10 +167,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
-      kOFHBGIAMBC_.WriteTo(ref output, _repeated_kOFHBGIAMBC_codec);
+      chatEmojiList_.WriteTo(ref output, _repeated_chatEmojiList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -183,7 +184,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += kOFHBGIAMBC_.CalculateSize(_repeated_kOFHBGIAMBC_codec);
+      size += chatEmojiList_.CalculateSize(_repeated_chatEmojiList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -199,7 +200,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      kOFHBGIAMBC_.Add(other.kOFHBGIAMBC_);
+      chatEmojiList_.Add(other.chatEmojiList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -215,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 90:
-          case 88: {
-            kOFHBGIAMBC_.AddEntriesFrom(input, _repeated_kOFHBGIAMBC_codec);
+          case 114:
+          case 112: {
+            chatEmojiList_.AddEntriesFrom(input, _repeated_chatEmojiList_codec);
             break;
           }
         }
@@ -239,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 90:
-          case 88: {
-            kOFHBGIAMBC_.AddEntriesFrom(ref input, _repeated_kOFHBGIAMBC_codec);
+          case 114:
+          case 112: {
+            chatEmojiList_.AddEntriesFrom(ref input, _repeated_chatEmojiList_codec);
             break;
           }
         }

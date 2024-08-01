@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiVHZXRGcmllbmRSZWNvbW1lbmRMaXN0SW5mb1NjUnNwLnByb3RvGhlGcmll",
             "bmRSZWNvbW1lbmRJbmZvLnByb3RvImcKH0dldEZyaWVuZFJlY29tbWVuZExp",
-            "c3RJbmZvU2NSc3ASMwoVZnJpZW5kX3JlY29tbWVuZF9saXN0GA8gAygLMhQu",
-            "RnJpZW5kUmVjb21tZW5kSW5mbxIPCgdyZXRjb2RlGAYgASgNQh6qAhtFZ2dM",
+            "c3RJbmZvU2NSc3ASMwoVZnJpZW5kX3JlY29tbWVuZF9saXN0GA0gAygLMhQu",
+            "RnJpZW5kUmVjb21tZW5kSW5mbxIPCgdyZXRjb2RlGAUgASgNQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FriendRecommendInfoReflection.Descriptor, },
@@ -86,9 +86,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "friend_recommend_list" field.</summary>
-    public const int FriendRecommendListFieldNumber = 15;
+    public const int FriendRecommendListFieldNumber = 13;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.FriendRecommendInfo> _repeated_friendRecommendList_codec
-        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.FriendRecommendInfo.Parser);
+        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.FriendRecommendInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FriendRecommendInfo> friendRecommendList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FriendRecommendInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 6;
+    public const int RetcodeFieldNumber = 5;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
       friendRecommendList_.WriteTo(output, _repeated_friendRecommendList_codec);
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
       friendRecommendList_.WriteTo(ref output, _repeated_friendRecommendList_codec);
@@ -217,11 +217,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 122: {
+          case 106: {
             friendRecommendList_.AddEntriesFrom(input, _repeated_friendRecommendList_codec);
             break;
           }
@@ -240,11 +240,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 122: {
+          case 106: {
             friendRecommendList_.AddEntriesFrom(ref input, _repeated_friendRecommendList_codec);
             break;
           }

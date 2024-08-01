@@ -24,18 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static RogueCommonDialogueOptionInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNSb2d1ZUNvbW1vbkRpYWxvZ3VlT3B0aW9uSW5mby5wcm90bxoqUm9ndWVD",
-            "b21tb25EaWFsb2d1ZU9wdGlvbkRpc3BsYXlJbmZvLnByb3RvGhFQSU5PS0NM",
-            "RU5BRS5wcm90byLGAQodUm9ndWVDb21tb25EaWFsb2d1ZU9wdGlvbkluZm8S",
-            "IQoLS0JKS0dMS0xCR0IYDCADKAsyDC5QSU5PS0NMRU5BRRIQCghpc192YWxp",
-            "ZBgFIAEoCBIRCglvcHRpb25faWQYDSABKA0SDgoGYXJnX2lkGA4gASgNEg8K",
-            "B2NvbmZpcm0YCyABKAgSPAoNZGlzcGxheV92YWx1ZRgBIAEoCzIlLlJvZ3Vl",
+            "CiNSb2d1ZUNvbW1vbkRpYWxvZ3VlT3B0aW9uSW5mby5wcm90bxoRRUZDQkdD",
+            "Sk5OSkEucHJvdG8aKlJvZ3VlQ29tbW9uRGlhbG9ndWVPcHRpb25EaXNwbGF5",
+            "SW5mby5wcm90byLGAQodUm9ndWVDb21tb25EaWFsb2d1ZU9wdGlvbkluZm8S",
+            "EQoJb3B0aW9uX2lkGAkgASgNEiEKC0JOS0xQRkdBR1BFGAggAygLMgwuRUZD",
+            "QkdDSk5OSkESDgoGYXJnX2lkGAYgASgNEg8KB2NvbmZpcm0YDSABKAgSEAoI",
+            "aXNfdmFsaWQYBSABKAgSPAoNZGlzcGxheV92YWx1ZRgOIAEoCzIlLlJvZ3Vl",
             "Q29tbW9uRGlhbG9ndWVPcHRpb25EaXNwbGF5SW5mb0IeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionDisplayInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PINOKCLENAEReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EFCBGCJNNJAReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionDisplayInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfo), global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfo.Parser, new[]{ "KBJKGLKLBGB", "IsValid", "OptionId", "ArgId", "Confirm", "DisplayValue" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfo), global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfo.Parser, new[]{ "OptionId", "BNKLPFGAGPE", "ArgId", "Confirm", "IsValid", "DisplayValue" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,11 +77,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueCommonDialogueOptionInfo(RogueCommonDialogueOptionInfo other) : this() {
-      kBJKGLKLBGB_ = other.kBJKGLKLBGB_.Clone();
-      isValid_ = other.isValid_;
       optionId_ = other.optionId_;
+      bNKLPFGAGPE_ = other.bNKLPFGAGPE_.Clone();
       argId_ = other.argId_;
       confirm_ = other.confirm_;
+      isValid_ = other.isValid_;
       displayValue_ = other.displayValue_ != null ? other.displayValue_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -92,15 +92,51 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueCommonDialogueOptionInfo(this);
     }
 
-    /// <summary>Field number for the "KBJKGLKLBGB" field.</summary>
-    public const int KBJKGLKLBGBFieldNumber = 12;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.PINOKCLENAE> _repeated_kBJKGLKLBGB_codec
-        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.PINOKCLENAE.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PINOKCLENAE> kBJKGLKLBGB_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PINOKCLENAE>();
+    /// <summary>Field number for the "option_id" field.</summary>
+    public const int OptionIdFieldNumber = 9;
+    private uint optionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PINOKCLENAE> KBJKGLKLBGB {
-      get { return kBJKGLKLBGB_; }
+    public uint OptionId {
+      get { return optionId_; }
+      set {
+        optionId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "BNKLPFGAGPE" field.</summary>
+    public const int BNKLPFGAGPEFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EFCBGCJNNJA> _repeated_bNKLPFGAGPE_codec
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.EFCBGCJNNJA.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EFCBGCJNNJA> bNKLPFGAGPE_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EFCBGCJNNJA>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EFCBGCJNNJA> BNKLPFGAGPE {
+      get { return bNKLPFGAGPE_; }
+    }
+
+    /// <summary>Field number for the "arg_id" field.</summary>
+    public const int ArgIdFieldNumber = 6;
+    private uint argId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ArgId {
+      get { return argId_; }
+      set {
+        argId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "confirm" field.</summary>
+    public const int ConfirmFieldNumber = 13;
+    private bool confirm_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Confirm {
+      get { return confirm_; }
+      set {
+        confirm_ = value;
+      }
     }
 
     /// <summary>Field number for the "is_valid" field.</summary>
@@ -115,44 +151,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "option_id" field.</summary>
-    public const int OptionIdFieldNumber = 13;
-    private uint optionId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint OptionId {
-      get { return optionId_; }
-      set {
-        optionId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "arg_id" field.</summary>
-    public const int ArgIdFieldNumber = 14;
-    private uint argId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ArgId {
-      get { return argId_; }
-      set {
-        argId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "confirm" field.</summary>
-    public const int ConfirmFieldNumber = 11;
-    private bool confirm_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Confirm {
-      get { return confirm_; }
-      set {
-        confirm_ = value;
-      }
-    }
-
     /// <summary>Field number for the "display_value" field.</summary>
-    public const int DisplayValueFieldNumber = 1;
+    public const int DisplayValueFieldNumber = 14;
     private global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionDisplayInfo displayValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -178,11 +178,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!kBJKGLKLBGB_.Equals(other.kBJKGLKLBGB_)) return false;
-      if (IsValid != other.IsValid) return false;
       if (OptionId != other.OptionId) return false;
+      if(!bNKLPFGAGPE_.Equals(other.bNKLPFGAGPE_)) return false;
       if (ArgId != other.ArgId) return false;
       if (Confirm != other.Confirm) return false;
+      if (IsValid != other.IsValid) return false;
       if (!object.Equals(DisplayValue, other.DisplayValue)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -191,11 +191,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= kBJKGLKLBGB_.GetHashCode();
-      if (IsValid != false) hash ^= IsValid.GetHashCode();
       if (OptionId != 0) hash ^= OptionId.GetHashCode();
+      hash ^= bNKLPFGAGPE_.GetHashCode();
       if (ArgId != 0) hash ^= ArgId.GetHashCode();
       if (Confirm != false) hash ^= Confirm.GetHashCode();
+      if (IsValid != false) hash ^= IsValid.GetHashCode();
       if (displayValue_ != null) hash ^= DisplayValue.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -215,26 +215,26 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (displayValue_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(DisplayValue);
-      }
       if (IsValid != false) {
         output.WriteRawTag(40);
         output.WriteBool(IsValid);
       }
-      if (Confirm != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(Confirm);
+      if (ArgId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(ArgId);
       }
-      kBJKGLKLBGB_.WriteTo(output, _repeated_kBJKGLKLBGB_codec);
+      bNKLPFGAGPE_.WriteTo(output, _repeated_bNKLPFGAGPE_codec);
       if (OptionId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(72);
         output.WriteUInt32(OptionId);
       }
-      if (ArgId != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(ArgId);
+      if (Confirm != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(Confirm);
+      }
+      if (displayValue_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(DisplayValue);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -246,26 +246,26 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (displayValue_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(DisplayValue);
-      }
       if (IsValid != false) {
         output.WriteRawTag(40);
         output.WriteBool(IsValid);
       }
-      if (Confirm != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(Confirm);
+      if (ArgId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(ArgId);
       }
-      kBJKGLKLBGB_.WriteTo(ref output, _repeated_kBJKGLKLBGB_codec);
+      bNKLPFGAGPE_.WriteTo(ref output, _repeated_bNKLPFGAGPE_codec);
       if (OptionId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(72);
         output.WriteUInt32(OptionId);
       }
-      if (ArgId != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(ArgId);
+      if (Confirm != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(Confirm);
+      }
+      if (displayValue_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(DisplayValue);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -277,17 +277,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += kBJKGLKLBGB_.CalculateSize(_repeated_kBJKGLKLBGB_codec);
-      if (IsValid != false) {
-        size += 1 + 1;
-      }
       if (OptionId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OptionId);
       }
+      size += bNKLPFGAGPE_.CalculateSize(_repeated_bNKLPFGAGPE_codec);
       if (ArgId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ArgId);
       }
       if (Confirm != false) {
+        size += 1 + 1;
+      }
+      if (IsValid != false) {
         size += 1 + 1;
       }
       if (displayValue_ != null) {
@@ -305,18 +305,18 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      kBJKGLKLBGB_.Add(other.kBJKGLKLBGB_);
-      if (other.IsValid != false) {
-        IsValid = other.IsValid;
-      }
       if (other.OptionId != 0) {
         OptionId = other.OptionId;
       }
+      bNKLPFGAGPE_.Add(other.bNKLPFGAGPE_);
       if (other.ArgId != 0) {
         ArgId = other.ArgId;
       }
       if (other.Confirm != false) {
         Confirm = other.Confirm;
+      }
+      if (other.IsValid != false) {
+        IsValid = other.IsValid;
       }
       if (other.displayValue_ != null) {
         if (displayValue_ == null) {
@@ -339,31 +339,31 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            if (displayValue_ == null) {
-              DisplayValue = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionDisplayInfo();
-            }
-            input.ReadMessage(DisplayValue);
-            break;
-          }
           case 40: {
             IsValid = input.ReadBool();
             break;
           }
-          case 88: {
-            Confirm = input.ReadBool();
+          case 48: {
+            ArgId = input.ReadUInt32();
             break;
           }
-          case 98: {
-            kBJKGLKLBGB_.AddEntriesFrom(input, _repeated_kBJKGLKLBGB_codec);
+          case 66: {
+            bNKLPFGAGPE_.AddEntriesFrom(input, _repeated_bNKLPFGAGPE_codec);
             break;
           }
-          case 104: {
+          case 72: {
             OptionId = input.ReadUInt32();
             break;
           }
-          case 112: {
-            ArgId = input.ReadUInt32();
+          case 104: {
+            Confirm = input.ReadBool();
+            break;
+          }
+          case 114: {
+            if (displayValue_ == null) {
+              DisplayValue = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionDisplayInfo();
+            }
+            input.ReadMessage(DisplayValue);
             break;
           }
         }
@@ -381,31 +381,31 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            if (displayValue_ == null) {
-              DisplayValue = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionDisplayInfo();
-            }
-            input.ReadMessage(DisplayValue);
-            break;
-          }
           case 40: {
             IsValid = input.ReadBool();
             break;
           }
-          case 88: {
-            Confirm = input.ReadBool();
+          case 48: {
+            ArgId = input.ReadUInt32();
             break;
           }
-          case 98: {
-            kBJKGLKLBGB_.AddEntriesFrom(ref input, _repeated_kBJKGLKLBGB_codec);
+          case 66: {
+            bNKLPFGAGPE_.AddEntriesFrom(ref input, _repeated_bNKLPFGAGPE_codec);
             break;
           }
-          case 104: {
+          case 72: {
             OptionId = input.ReadUInt32();
             break;
           }
-          case 112: {
-            ArgId = input.ReadUInt32();
+          case 104: {
+            Confirm = input.ReadBool();
+            break;
+          }
+          case 114: {
+            if (displayValue_ == null) {
+              DisplayValue = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionDisplayInfo();
+            }
+            input.ReadMessage(DisplayValue);
             break;
           }
         }

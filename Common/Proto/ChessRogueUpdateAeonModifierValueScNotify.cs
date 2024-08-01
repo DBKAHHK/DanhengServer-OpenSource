@@ -26,12 +26,12 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ci9DaGVzc1JvZ3VlVXBkYXRlQWVvbk1vZGlmaWVyVmFsdWVTY05vdGlmeS5w",
             "cm90byJRCilDaGVzc1JvZ3VlVXBkYXRlQWVvbk1vZGlmaWVyVmFsdWVTY05v",
-            "dGlmeRITCgtNTkFMSEVPS0NQRBgPIAEoBRIPCgdhZW9uX2lkGAUgASgNQh6q",
+            "dGlmeRIPCgdhZW9uX2lkGAUgASgNEhMKC0tOSURHSEhESUtKGAYgASgFQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueUpdateAeonModifierValueScNotify), global::EggLink.DanhengServer.Proto.ChessRogueUpdateAeonModifierValueScNotify.Parser, new[]{ "MNALHEOKCPD", "AeonId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueUpdateAeonModifierValueScNotify), global::EggLink.DanhengServer.Proto.ChessRogueUpdateAeonModifierValueScNotify.Parser, new[]{ "AeonId", "KNIDGHHDIKJ" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueUpdateAeonModifierValueScNotify(ChessRogueUpdateAeonModifierValueScNotify other) : this() {
-      mNALHEOKCPD_ = other.mNALHEOKCPD_;
       aeonId_ = other.aeonId_;
+      kNIDGHHDIKJ_ = other.kNIDGHHDIKJ_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,18 +82,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueUpdateAeonModifierValueScNotify Clone() {
       return new ChessRogueUpdateAeonModifierValueScNotify(this);
-    }
-
-    /// <summary>Field number for the "MNALHEOKCPD" field.</summary>
-    public const int MNALHEOKCPDFieldNumber = 15;
-    private int mNALHEOKCPD_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int MNALHEOKCPD {
-      get { return mNALHEOKCPD_; }
-      set {
-        mNALHEOKCPD_ = value;
-      }
     }
 
     /// <summary>Field number for the "aeon_id" field.</summary>
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return aeonId_; }
       set {
         aeonId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "KNIDGHHDIKJ" field.</summary>
+    public const int KNIDGHHDIKJFieldNumber = 6;
+    private int kNIDGHHDIKJ_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int KNIDGHHDIKJ {
+      get { return kNIDGHHDIKJ_; }
+      set {
+        kNIDGHHDIKJ_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MNALHEOKCPD != other.MNALHEOKCPD) return false;
       if (AeonId != other.AeonId) return false;
+      if (KNIDGHHDIKJ != other.KNIDGHHDIKJ) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MNALHEOKCPD != 0) hash ^= MNALHEOKCPD.GetHashCode();
       if (AeonId != 0) hash ^= AeonId.GetHashCode();
+      if (KNIDGHHDIKJ != 0) hash ^= KNIDGHHDIKJ.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -156,9 +156,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteUInt32(AeonId);
       }
-      if (MNALHEOKCPD != 0) {
-        output.WriteRawTag(120);
-        output.WriteInt32(MNALHEOKCPD);
+      if (KNIDGHHDIKJ != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(KNIDGHHDIKJ);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -174,9 +174,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteUInt32(AeonId);
       }
-      if (MNALHEOKCPD != 0) {
-        output.WriteRawTag(120);
-        output.WriteInt32(MNALHEOKCPD);
+      if (KNIDGHHDIKJ != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(KNIDGHHDIKJ);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MNALHEOKCPD != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MNALHEOKCPD);
-      }
       if (AeonId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AeonId);
+      }
+      if (KNIDGHHDIKJ != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(KNIDGHHDIKJ);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MNALHEOKCPD != 0) {
-        MNALHEOKCPD = other.MNALHEOKCPD;
-      }
       if (other.AeonId != 0) {
         AeonId = other.AeonId;
+      }
+      if (other.KNIDGHHDIKJ != 0) {
+        KNIDGHHDIKJ = other.KNIDGHHDIKJ;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,8 +231,8 @@ namespace EggLink.DanhengServer.Proto {
             AeonId = input.ReadUInt32();
             break;
           }
-          case 120: {
-            MNALHEOKCPD = input.ReadInt32();
+          case 48: {
+            KNIDGHHDIKJ = input.ReadInt32();
             break;
           }
         }
@@ -254,8 +254,8 @@ namespace EggLink.DanhengServer.Proto {
             AeonId = input.ReadUInt32();
             break;
           }
-          case 120: {
-            MNALHEOKCPD = input.ReadInt32();
+          case 48: {
+            KNIDGHHDIKJ = input.ReadInt32();
             break;
           }
         }

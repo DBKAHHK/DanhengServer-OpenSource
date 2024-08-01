@@ -9,7 +9,7 @@ public class PacketChessRogueNousEditDiceScRsp : BasePacket
     {
         var proto = new ChessRogueNousEditDiceScRsp
         {
-            DiceInfo = diceData.ToProto()
+            QueryDiceInfo = diceData.ToProto()
         };
 
         SetData(proto);

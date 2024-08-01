@@ -24,17 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static LogisticsScoreReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRMb2dpc3RpY3NTY29yZS5wcm90bxoOSXRlbUxpc3QucHJvdG8iyAEKDkxv",
-            "Z2lzdGljc1Njb3JlEhkKBnJld2FyZBgPIAEoCzIJLkl0ZW1MaXN0EhsKE0N1",
-            "clNjb3JlRmllbGROdW1iZXIYASABKA0SHwoXTGFzdE1heFNjb3JlRmllbGRO",
-            "dW1iZXIYBCABKA0SGAoQTWFwSWRGaWVsZE51bWJlchgGIAEoDRIbChNNYXhT",
-            "Y29yZUZpZWxkTnVtYmVyGAcgASgNEhMKC1VubG9ja2xldmVsGAsgASgNEhEK",
-            "CUxhc3RsZXZlbBgNIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
-            "b3RvYgZwcm90bzM="));
+            "ChRMb2dpc3RpY3NTY29yZS5wcm90bxoOSXRlbUxpc3QucHJvdG8iowEKDkxv",
+            "Z2lzdGljc1Njb3JlEhIKCmxhc3RfbGV2ZWwYBiABKA0SEQoJbWF4X3Njb3Jl",
+            "GAggASgNEhkKBnJld2FyZBgEIAEoCzIJLkl0ZW1MaXN0EhYKDmxhc3RfbWF4",
+            "X3Njb3JlGAEgASgNEg4KBm1hcF9pZBgLIAEoDRIUCgx1bmxvY2tfbGV2ZWwY",
+            "DiABKA0SEQoJY3VyX3Njb3JlGAMgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LogisticsScore), global::EggLink.DanhengServer.Proto.LogisticsScore.Parser, new[]{ "Reward", "CurScoreFieldNumber", "LastMaxScoreFieldNumber", "MapIdFieldNumber", "MaxScoreFieldNumber", "Unlocklevel", "Lastlevel" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LogisticsScore), global::EggLink.DanhengServer.Proto.LogisticsScore.Parser, new[]{ "LastLevel", "MaxScore", "Reward", "LastMaxScore", "MapId", "UnlockLevel", "CurScore" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,13 +75,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LogisticsScore(LogisticsScore other) : this() {
+      lastLevel_ = other.lastLevel_;
+      maxScore_ = other.maxScore_;
       reward_ = other.reward_ != null ? other.reward_.Clone() : null;
-      curScoreFieldNumber_ = other.curScoreFieldNumber_;
-      lastMaxScoreFieldNumber_ = other.lastMaxScoreFieldNumber_;
-      mapIdFieldNumber_ = other.mapIdFieldNumber_;
-      maxScoreFieldNumber_ = other.maxScoreFieldNumber_;
-      unlocklevel_ = other.unlocklevel_;
-      lastlevel_ = other.lastlevel_;
+      lastMaxScore_ = other.lastMaxScore_;
+      mapId_ = other.mapId_;
+      unlockLevel_ = other.unlockLevel_;
+      curScore_ = other.curScore_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -92,8 +91,32 @@ namespace EggLink.DanhengServer.Proto {
       return new LogisticsScore(this);
     }
 
+    /// <summary>Field number for the "last_level" field.</summary>
+    public const int LastLevelFieldNumber = 6;
+    private uint lastLevel_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint LastLevel {
+      get { return lastLevel_; }
+      set {
+        lastLevel_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "max_score" field.</summary>
+    public const int MaxScoreFieldNumber = 8;
+    private uint maxScore_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint MaxScore {
+      get { return maxScore_; }
+      set {
+        maxScore_ = value;
+      }
+    }
+
     /// <summary>Field number for the "reward" field.</summary>
-    public const int RewardFieldNumber = 15;
+    public const int RewardFieldNumber = 4;
     private global::EggLink.DanhengServer.Proto.ItemList reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,75 +127,51 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CurScoreFieldNumber" field.</summary>
-    public const int CurScoreFieldNumberFieldNumber = 1;
-    private uint curScoreFieldNumber_;
+    /// <summary>Field number for the "last_max_score" field.</summary>
+    public const int LastMaxScoreFieldNumber = 1;
+    private uint lastMaxScore_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CurScoreFieldNumber {
-      get { return curScoreFieldNumber_; }
+    public uint LastMaxScore {
+      get { return lastMaxScore_; }
       set {
-        curScoreFieldNumber_ = value;
+        lastMaxScore_ = value;
       }
     }
 
-    /// <summary>Field number for the "LastMaxScoreFieldNumber" field.</summary>
-    public const int LastMaxScoreFieldNumberFieldNumber = 4;
-    private uint lastMaxScoreFieldNumber_;
+    /// <summary>Field number for the "map_id" field.</summary>
+    public const int MapIdFieldNumber = 11;
+    private uint mapId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LastMaxScoreFieldNumber {
-      get { return lastMaxScoreFieldNumber_; }
+    public uint MapId {
+      get { return mapId_; }
       set {
-        lastMaxScoreFieldNumber_ = value;
+        mapId_ = value;
       }
     }
 
-    /// <summary>Field number for the "MapIdFieldNumber" field.</summary>
-    public const int MapIdFieldNumberFieldNumber = 6;
-    private uint mapIdFieldNumber_;
+    /// <summary>Field number for the "unlock_level" field.</summary>
+    public const int UnlockLevelFieldNumber = 14;
+    private uint unlockLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MapIdFieldNumber {
-      get { return mapIdFieldNumber_; }
+    public uint UnlockLevel {
+      get { return unlockLevel_; }
       set {
-        mapIdFieldNumber_ = value;
+        unlockLevel_ = value;
       }
     }
 
-    /// <summary>Field number for the "MaxScoreFieldNumber" field.</summary>
-    public const int MaxScoreFieldNumberFieldNumber = 7;
-    private uint maxScoreFieldNumber_;
+    /// <summary>Field number for the "cur_score" field.</summary>
+    public const int CurScoreFieldNumber = 3;
+    private uint curScore_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MaxScoreFieldNumber {
-      get { return maxScoreFieldNumber_; }
+    public uint CurScore {
+      get { return curScore_; }
       set {
-        maxScoreFieldNumber_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "Unlocklevel" field.</summary>
-    public const int UnlocklevelFieldNumber = 11;
-    private uint unlocklevel_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Unlocklevel {
-      get { return unlocklevel_; }
-      set {
-        unlocklevel_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "Lastlevel" field.</summary>
-    public const int LastlevelFieldNumber = 13;
-    private uint lastlevel_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Lastlevel {
-      get { return lastlevel_; }
-      set {
-        lastlevel_ = value;
+        curScore_ = value;
       }
     }
 
@@ -191,13 +190,13 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (LastLevel != other.LastLevel) return false;
+      if (MaxScore != other.MaxScore) return false;
       if (!object.Equals(Reward, other.Reward)) return false;
-      if (CurScoreFieldNumber != other.CurScoreFieldNumber) return false;
-      if (LastMaxScoreFieldNumber != other.LastMaxScoreFieldNumber) return false;
-      if (MapIdFieldNumber != other.MapIdFieldNumber) return false;
-      if (MaxScoreFieldNumber != other.MaxScoreFieldNumber) return false;
-      if (Unlocklevel != other.Unlocklevel) return false;
-      if (Lastlevel != other.Lastlevel) return false;
+      if (LastMaxScore != other.LastMaxScore) return false;
+      if (MapId != other.MapId) return false;
+      if (UnlockLevel != other.UnlockLevel) return false;
+      if (CurScore != other.CurScore) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -205,13 +204,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (LastLevel != 0) hash ^= LastLevel.GetHashCode();
+      if (MaxScore != 0) hash ^= MaxScore.GetHashCode();
       if (reward_ != null) hash ^= Reward.GetHashCode();
-      if (CurScoreFieldNumber != 0) hash ^= CurScoreFieldNumber.GetHashCode();
-      if (LastMaxScoreFieldNumber != 0) hash ^= LastMaxScoreFieldNumber.GetHashCode();
-      if (MapIdFieldNumber != 0) hash ^= MapIdFieldNumber.GetHashCode();
-      if (MaxScoreFieldNumber != 0) hash ^= MaxScoreFieldNumber.GetHashCode();
-      if (Unlocklevel != 0) hash ^= Unlocklevel.GetHashCode();
-      if (Lastlevel != 0) hash ^= Lastlevel.GetHashCode();
+      if (LastMaxScore != 0) hash ^= LastMaxScore.GetHashCode();
+      if (MapId != 0) hash ^= MapId.GetHashCode();
+      if (UnlockLevel != 0) hash ^= UnlockLevel.GetHashCode();
+      if (CurScore != 0) hash ^= CurScore.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -230,33 +229,33 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CurScoreFieldNumber != 0) {
+      if (LastMaxScore != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(CurScoreFieldNumber);
+        output.WriteUInt32(LastMaxScore);
       }
-      if (LastMaxScoreFieldNumber != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(LastMaxScoreFieldNumber);
-      }
-      if (MapIdFieldNumber != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(MapIdFieldNumber);
-      }
-      if (MaxScoreFieldNumber != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(MaxScoreFieldNumber);
-      }
-      if (Unlocklevel != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(Unlocklevel);
-      }
-      if (Lastlevel != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(Lastlevel);
+      if (CurScore != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(CurScore);
       }
       if (reward_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(34);
         output.WriteMessage(Reward);
+      }
+      if (LastLevel != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(LastLevel);
+      }
+      if (MaxScore != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(MaxScore);
+      }
+      if (MapId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(MapId);
+      }
+      if (UnlockLevel != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(UnlockLevel);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -268,33 +267,33 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CurScoreFieldNumber != 0) {
+      if (LastMaxScore != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(CurScoreFieldNumber);
+        output.WriteUInt32(LastMaxScore);
       }
-      if (LastMaxScoreFieldNumber != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(LastMaxScoreFieldNumber);
-      }
-      if (MapIdFieldNumber != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(MapIdFieldNumber);
-      }
-      if (MaxScoreFieldNumber != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(MaxScoreFieldNumber);
-      }
-      if (Unlocklevel != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(Unlocklevel);
-      }
-      if (Lastlevel != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(Lastlevel);
+      if (CurScore != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(CurScore);
       }
       if (reward_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(34);
         output.WriteMessage(Reward);
+      }
+      if (LastLevel != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(LastLevel);
+      }
+      if (MaxScore != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(MaxScore);
+      }
+      if (MapId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(MapId);
+      }
+      if (UnlockLevel != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(UnlockLevel);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -306,26 +305,26 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (LastLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LastLevel);
+      }
+      if (MaxScore != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxScore);
+      }
       if (reward_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Reward);
       }
-      if (CurScoreFieldNumber != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurScoreFieldNumber);
+      if (LastMaxScore != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LastMaxScore);
       }
-      if (LastMaxScoreFieldNumber != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LastMaxScoreFieldNumber);
+      if (MapId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MapId);
       }
-      if (MapIdFieldNumber != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MapIdFieldNumber);
+      if (UnlockLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UnlockLevel);
       }
-      if (MaxScoreFieldNumber != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxScoreFieldNumber);
-      }
-      if (Unlocklevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Unlocklevel);
-      }
-      if (Lastlevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Lastlevel);
+      if (CurScore != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurScore);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -339,29 +338,29 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.LastLevel != 0) {
+        LastLevel = other.LastLevel;
+      }
+      if (other.MaxScore != 0) {
+        MaxScore = other.MaxScore;
+      }
       if (other.reward_ != null) {
         if (reward_ == null) {
           Reward = new global::EggLink.DanhengServer.Proto.ItemList();
         }
         Reward.MergeFrom(other.Reward);
       }
-      if (other.CurScoreFieldNumber != 0) {
-        CurScoreFieldNumber = other.CurScoreFieldNumber;
+      if (other.LastMaxScore != 0) {
+        LastMaxScore = other.LastMaxScore;
       }
-      if (other.LastMaxScoreFieldNumber != 0) {
-        LastMaxScoreFieldNumber = other.LastMaxScoreFieldNumber;
+      if (other.MapId != 0) {
+        MapId = other.MapId;
       }
-      if (other.MapIdFieldNumber != 0) {
-        MapIdFieldNumber = other.MapIdFieldNumber;
+      if (other.UnlockLevel != 0) {
+        UnlockLevel = other.UnlockLevel;
       }
-      if (other.MaxScoreFieldNumber != 0) {
-        MaxScoreFieldNumber = other.MaxScoreFieldNumber;
-      }
-      if (other.Unlocklevel != 0) {
-        Unlocklevel = other.Unlocklevel;
-      }
-      if (other.Lastlevel != 0) {
-        Lastlevel = other.Lastlevel;
+      if (other.CurScore != 0) {
+        CurScore = other.CurScore;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -379,34 +378,34 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            CurScoreFieldNumber = input.ReadUInt32();
+            LastMaxScore = input.ReadUInt32();
             break;
           }
-          case 32: {
-            LastMaxScoreFieldNumber = input.ReadUInt32();
+          case 24: {
+            CurScore = input.ReadUInt32();
             break;
           }
-          case 48: {
-            MapIdFieldNumber = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            MaxScoreFieldNumber = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            Unlocklevel = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            Lastlevel = input.ReadUInt32();
-            break;
-          }
-          case 122: {
+          case 34: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
+            break;
+          }
+          case 48: {
+            LastLevel = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            MaxScore = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            MapId = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            UnlockLevel = input.ReadUInt32();
             break;
           }
         }
@@ -425,34 +424,34 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            CurScoreFieldNumber = input.ReadUInt32();
+            LastMaxScore = input.ReadUInt32();
             break;
           }
-          case 32: {
-            LastMaxScoreFieldNumber = input.ReadUInt32();
+          case 24: {
+            CurScore = input.ReadUInt32();
             break;
           }
-          case 48: {
-            MapIdFieldNumber = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            MaxScoreFieldNumber = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            Unlocklevel = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            Lastlevel = input.ReadUInt32();
-            break;
-          }
-          case 122: {
+          case 34: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
+            break;
+          }
+          case 48: {
+            LastLevel = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            MaxScore = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            MapId = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            UnlockLevel = input.ReadUInt32();
             break;
           }
         }

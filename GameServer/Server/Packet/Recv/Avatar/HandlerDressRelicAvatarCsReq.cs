@@ -10,7 +10,7 @@ public class HandlerDressRelicAvatarCsReq : Handler
         var req = DressRelicAvatarCsReq.Parser.ParseFrom(data);
 
         foreach (var param in req.SwitchList)
-            await connection.Player!.InventoryManager!.EquipRelic((int)req.DressAvatarId, (int)param.RelicUniqueId,
+            await connection.Player!.InventoryManager!.EquipRelic((int)req.AvatarId, (int)param.RelicUniqueId,
                 (int)param.RelicType);
 
         await connection.SendPacket(CmdIds.DressRelicAvatarScRsp);

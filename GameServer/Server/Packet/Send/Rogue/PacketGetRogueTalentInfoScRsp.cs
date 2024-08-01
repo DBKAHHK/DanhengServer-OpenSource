@@ -9,7 +9,7 @@ public class PacketGetRogueTalentInfoScRsp : BasePacket
     {
         var proto = new GetRogueTalentInfoScRsp
         {
-            RogueTalentInfo = RogueManager.ToTalentProto()
+            TalentInfoList = RogueManager.ToTalentProto()
         };
 
         SetData(proto);

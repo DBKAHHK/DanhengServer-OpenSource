@@ -36,9 +36,7 @@ public class PropInfo : PositionInfo
         {
             if (Name.StartsWith("Button_") &&
                 ValueSource.Values.Find(x => x["Key"]?.ToString() == "AnchorName") != null)
-            {
                 IsLevelBtn = true;
-            }
 
             foreach (var v in ValueSource.Values)
                 try

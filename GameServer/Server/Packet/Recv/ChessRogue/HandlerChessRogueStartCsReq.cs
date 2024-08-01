@@ -22,6 +22,6 @@ public class HandlerChessRogueStartCsReq : Handler
                 disableAeonIdList.Add((int)disableAeonId);
 
         await player.ChessRogueManager!.StartRogue((int)req.AeonId, [.. req.BaseAvatarIdList], (int)req.Id,
-            (int)req.BranchId, difficultyIdList, disableAeonIdList);
+            (int)req.DiceBranchId, difficultyIdList, disableAeonIdList);
     }
 }

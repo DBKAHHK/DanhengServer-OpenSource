@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CilTeW5jUm9ndWVDb21tb25EaWFsb2d1ZURhdGFTY05vdGlmeS5wcm90bxoh",
-            "Um9ndWVDb21tb25EaWFsb2d1ZURhdGFJbmZvLnByb3RvImAKI1N5bmNSb2d1",
-            "ZUNvbW1vbkRpYWxvZ3VlRGF0YVNjTm90aWZ5EjkKE2RpYWxvZ3VlX2V2ZW50",
-            "X2xpc3QYASADKAsyHC5Sb2d1ZUNvbW1vbkRpYWxvZ3VlRGF0YUluZm9CHqoC",
-            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "Um9ndWVDb21tb25EaWFsb2d1ZURhdGFJbmZvLnByb3RvIl8KI1N5bmNSb2d1",
+            "ZUNvbW1vbkRpYWxvZ3VlRGF0YVNjTm90aWZ5EjgKEmRpYWxvZ3VlX2RhdGFf",
+            "bGlzdBgKIAMoCzIcLlJvZ3VlQ29tbW9uRGlhbG9ndWVEYXRhSW5mb0IeqgIb",
+            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SyncRogueCommonDialogueDataScNotify), global::EggLink.DanhengServer.Proto.SyncRogueCommonDialogueDataScNotify.Parser, new[]{ "DialogueEventList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SyncRogueCommonDialogueDataScNotify), global::EggLink.DanhengServer.Proto.SyncRogueCommonDialogueDataScNotify.Parser, new[]{ "DialogueDataList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SyncRogueCommonDialogueDataScNotify(SyncRogueCommonDialogueDataScNotify other) : this() {
-      dialogueEventList_ = other.dialogueEventList_.Clone();
+      dialogueDataList_ = other.dialogueDataList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,15 +84,15 @@ namespace EggLink.DanhengServer.Proto {
       return new SyncRogueCommonDialogueDataScNotify(this);
     }
 
-    /// <summary>Field number for the "dialogue_event_list" field.</summary>
-    public const int DialogueEventListFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo> _repeated_dialogueEventList_codec
-        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo> dialogueEventList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo>();
+    /// <summary>Field number for the "dialogue_data_list" field.</summary>
+    public const int DialogueDataListFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo> _repeated_dialogueDataList_codec
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo> dialogueDataList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo> DialogueEventList {
-      get { return dialogueEventList_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo> DialogueDataList {
+      get { return dialogueDataList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!dialogueEventList_.Equals(other.dialogueEventList_)) return false;
+      if(!dialogueDataList_.Equals(other.dialogueDataList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -118,7 +118,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= dialogueEventList_.GetHashCode();
+      hash ^= dialogueDataList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      dialogueEventList_.WriteTo(output, _repeated_dialogueEventList_codec);
+      dialogueDataList_.WriteTo(output, _repeated_dialogueDataList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -148,7 +148,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      dialogueEventList_.WriteTo(ref output, _repeated_dialogueEventList_codec);
+      dialogueDataList_.WriteTo(ref output, _repeated_dialogueDataList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -159,7 +159,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += dialogueEventList_.CalculateSize(_repeated_dialogueEventList_codec);
+      size += dialogueDataList_.CalculateSize(_repeated_dialogueDataList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -172,7 +172,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      dialogueEventList_.Add(other.dialogueEventList_);
+      dialogueDataList_.Add(other.dialogueDataList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -188,8 +188,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            dialogueEventList_.AddEntriesFrom(input, _repeated_dialogueEventList_codec);
+          case 82: {
+            dialogueDataList_.AddEntriesFrom(input, _repeated_dialogueDataList_codec);
             break;
           }
         }
@@ -207,8 +207,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            dialogueEventList_.AddEntriesFrom(ref input, _repeated_dialogueEventList_codec);
+          case 82: {
+            dialogueDataList_.AddEntriesFrom(ref input, _repeated_dialogueDataList_codec);
             break;
           }
         }

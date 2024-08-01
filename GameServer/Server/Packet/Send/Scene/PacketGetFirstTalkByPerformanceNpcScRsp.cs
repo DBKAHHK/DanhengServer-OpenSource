@@ -9,10 +9,10 @@ public class PacketGetFirstTalkByPerformanceNpcScRsp : BasePacket
     {
         var rsp = new GetFirstTalkByPerformanceNpcScRsp();
 
-        foreach (var id in req.FirstTalkIdList)
-            rsp.NpcMeetStatusList.Add(new NpcMeetStatusInfo
+        foreach (var id in req.PerformanceIdList)
+            rsp.NpcMeetStatusList.Add(new NpcMeetByPerformanceStatus
             {
-                MeetId = id
+                PerformanceId = id
             });
 
         SetData(rsp);

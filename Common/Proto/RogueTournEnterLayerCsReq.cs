@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static RogueTournEnterLayerCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9Sb2d1ZVRvdXJuRW50ZXJMYXllckNzUmVxLnByb3RvIlcKGVJvZ3VlVG91",
-            "cm5FbnRlckxheWVyQ3NSZXESGwoTcmVhY2hlZF9sYXllcl9jb3VudBgIIAEo",
-            "DRIdChVyb2d1ZV90b3Vybl9yb29tX3R5cGUYCSABKA1CHqoCG0VnZ0xpbmsu",
-            "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "Ch9Sb2d1ZVRvdXJuRW50ZXJMYXllckNzUmVxLnByb3RvIkwKGVJvZ3VlVG91",
+            "cm5FbnRlckxheWVyQ3NSZXESFwoPY3VyX2xldmVsX2luZGV4GAogASgNEhYK",
+            "Dm5leHRfcm9vbV90eXBlGAsgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournEnterLayerCsReq), global::EggLink.DanhengServer.Proto.RogueTournEnterLayerCsReq.Parser, new[]{ "ReachedLayerCount", "RogueTournRoomType" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournEnterLayerCsReq), global::EggLink.DanhengServer.Proto.RogueTournEnterLayerCsReq.Parser, new[]{ "CurLevelIndex", "NextRoomType" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournEnterLayerCsReq(RogueTournEnterLayerCsReq other) : this() {
-      reachedLayerCount_ = other.reachedLayerCount_;
-      rogueTournRoomType_ = other.rogueTournRoomType_;
+      curLevelIndex_ = other.curLevelIndex_;
+      nextRoomType_ = other.nextRoomType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,27 +84,27 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournEnterLayerCsReq(this);
     }
 
-    /// <summary>Field number for the "reached_layer_count" field.</summary>
-    public const int ReachedLayerCountFieldNumber = 8;
-    private uint reachedLayerCount_;
+    /// <summary>Field number for the "cur_level_index" field.</summary>
+    public const int CurLevelIndexFieldNumber = 10;
+    private uint curLevelIndex_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ReachedLayerCount {
-      get { return reachedLayerCount_; }
+    public uint CurLevelIndex {
+      get { return curLevelIndex_; }
       set {
-        reachedLayerCount_ = value;
+        curLevelIndex_ = value;
       }
     }
 
-    /// <summary>Field number for the "rogue_tourn_room_type" field.</summary>
-    public const int RogueTournRoomTypeFieldNumber = 9;
-    private uint rogueTournRoomType_;
+    /// <summary>Field number for the "next_room_type" field.</summary>
+    public const int NextRoomTypeFieldNumber = 11;
+    private uint nextRoomType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint RogueTournRoomType {
-      get { return rogueTournRoomType_; }
+    public uint NextRoomType {
+      get { return nextRoomType_; }
       set {
-        rogueTournRoomType_ = value;
+        nextRoomType_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ReachedLayerCount != other.ReachedLayerCount) return false;
-      if (RogueTournRoomType != other.RogueTournRoomType) return false;
+      if (CurLevelIndex != other.CurLevelIndex) return false;
+      if (NextRoomType != other.NextRoomType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ReachedLayerCount != 0) hash ^= ReachedLayerCount.GetHashCode();
-      if (RogueTournRoomType != 0) hash ^= RogueTournRoomType.GetHashCode();
+      if (CurLevelIndex != 0) hash ^= CurLevelIndex.GetHashCode();
+      if (NextRoomType != 0) hash ^= NextRoomType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ReachedLayerCount != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(ReachedLayerCount);
+      if (CurLevelIndex != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(CurLevelIndex);
       }
-      if (RogueTournRoomType != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(RogueTournRoomType);
+      if (NextRoomType != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(NextRoomType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ReachedLayerCount != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(ReachedLayerCount);
+      if (CurLevelIndex != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(CurLevelIndex);
       }
-      if (RogueTournRoomType != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(RogueTournRoomType);
+      if (NextRoomType != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(NextRoomType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ReachedLayerCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ReachedLayerCount);
+      if (CurLevelIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurLevelIndex);
       }
-      if (RogueTournRoomType != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RogueTournRoomType);
+      if (NextRoomType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NextRoomType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ReachedLayerCount != 0) {
-        ReachedLayerCount = other.ReachedLayerCount;
+      if (other.CurLevelIndex != 0) {
+        CurLevelIndex = other.CurLevelIndex;
       }
-      if (other.RogueTournRoomType != 0) {
-        RogueTournRoomType = other.RogueTournRoomType;
+      if (other.NextRoomType != 0) {
+        NextRoomType = other.NextRoomType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
-            ReachedLayerCount = input.ReadUInt32();
+          case 80: {
+            CurLevelIndex = input.ReadUInt32();
             break;
           }
-          case 72: {
-            RogueTournRoomType = input.ReadUInt32();
+          case 88: {
+            NextRoomType = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
-            ReachedLayerCount = input.ReadUInt32();
+          case 80: {
+            CurLevelIndex = input.ReadUInt32();
             break;
           }
-          case 72: {
-            RogueTournRoomType = input.ReadUInt32();
+          case 88: {
+            NextRoomType = input.ReadUInt32();
             break;
           }
         }

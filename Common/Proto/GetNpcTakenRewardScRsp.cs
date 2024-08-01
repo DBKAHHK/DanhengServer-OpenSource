@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GetNpcTakenRewardScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxHZXROcGNUYWtlblJld2FyZFNjUnNwLnByb3RvIk4KFkdldE5wY1Rha2Vu",
-            "UmV3YXJkU2NSc3ASEwoLTlBCQU9DQUxQQUsYByADKA0SDgoGbnBjX2lkGAUg",
-            "ASgNEg8KB3JldGNvZGUYDCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
-            "ci5Qcm90b2IGcHJvdG8z"));
+            "ChxHZXROcGNUYWtlblJld2FyZFNjUnNwLnByb3RvIlIKFkdldE5wY1Rha2Vu",
+            "UmV3YXJkU2NSc3ASDgoGbnBjX2lkGAIgASgNEhcKD3RhbGtfZXZlbnRfbGlz",
+            "dBgOIAMoDRIPCgdyZXRjb2RlGAQgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetNpcTakenRewardScRsp), global::EggLink.DanhengServer.Proto.GetNpcTakenRewardScRsp.Parser, new[]{ "NPBAOCALPAK", "NpcId", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetNpcTakenRewardScRsp), global::EggLink.DanhengServer.Proto.GetNpcTakenRewardScRsp.Parser, new[]{ "NpcId", "TalkEventList", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetNpcTakenRewardScRsp(GetNpcTakenRewardScRsp other) : this() {
-      nPBAOCALPAK_ = other.nPBAOCALPAK_.Clone();
       npcId_ = other.npcId_;
+      talkEventList_ = other.talkEventList_.Clone();
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -85,19 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new GetNpcTakenRewardScRsp(this);
     }
 
-    /// <summary>Field number for the "NPBAOCALPAK" field.</summary>
-    public const int NPBAOCALPAKFieldNumber = 7;
-    private static readonly pb::FieldCodec<uint> _repeated_nPBAOCALPAK_codec
-        = pb::FieldCodec.ForUInt32(58);
-    private readonly pbc::RepeatedField<uint> nPBAOCALPAK_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> NPBAOCALPAK {
-      get { return nPBAOCALPAK_; }
-    }
-
     /// <summary>Field number for the "npc_id" field.</summary>
-    public const int NpcIdFieldNumber = 5;
+    public const int NpcIdFieldNumber = 2;
     private uint npcId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -108,8 +97,19 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "talk_event_list" field.</summary>
+    public const int TalkEventListFieldNumber = 14;
+    private static readonly pb::FieldCodec<uint> _repeated_talkEventList_codec
+        = pb::FieldCodec.ForUInt32(114);
+    private readonly pbc::RepeatedField<uint> talkEventList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> TalkEventList {
+      get { return talkEventList_; }
+    }
+
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 12;
+    public const int RetcodeFieldNumber = 4;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -135,8 +135,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!nPBAOCALPAK_.Equals(other.nPBAOCALPAK_)) return false;
       if (NpcId != other.NpcId) return false;
+      if(!talkEventList_.Equals(other.talkEventList_)) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -145,8 +145,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= nPBAOCALPAK_.GetHashCode();
       if (NpcId != 0) hash ^= NpcId.GetHashCode();
+      hash ^= talkEventList_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -167,14 +167,14 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (NpcId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(16);
         output.WriteUInt32(NpcId);
       }
-      nPBAOCALPAK_.WriteTo(output, _repeated_nPBAOCALPAK_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
       }
+      talkEventList_.WriteTo(output, _repeated_talkEventList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -186,14 +186,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (NpcId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(16);
         output.WriteUInt32(NpcId);
       }
-      nPBAOCALPAK_.WriteTo(ref output, _repeated_nPBAOCALPAK_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
       }
+      talkEventList_.WriteTo(ref output, _repeated_talkEventList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -204,10 +204,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += nPBAOCALPAK_.CalculateSize(_repeated_nPBAOCALPAK_codec);
       if (NpcId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NpcId);
       }
+      size += talkEventList_.CalculateSize(_repeated_talkEventList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
@@ -223,10 +223,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      nPBAOCALPAK_.Add(other.nPBAOCALPAK_);
       if (other.NpcId != 0) {
         NpcId = other.NpcId;
       }
+      talkEventList_.Add(other.talkEventList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
@@ -245,17 +245,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 16: {
             NpcId = input.ReadUInt32();
             break;
           }
-          case 58:
-          case 56: {
-            nPBAOCALPAK_.AddEntriesFrom(input, _repeated_nPBAOCALPAK_codec);
+          case 32: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 96: {
-            Retcode = input.ReadUInt32();
+          case 114:
+          case 112: {
+            talkEventList_.AddEntriesFrom(input, _repeated_talkEventList_codec);
             break;
           }
         }
@@ -273,17 +273,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 16: {
             NpcId = input.ReadUInt32();
             break;
           }
-          case 58:
-          case 56: {
-            nPBAOCALPAK_.AddEntriesFrom(ref input, _repeated_nPBAOCALPAK_codec);
+          case 32: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 96: {
-            Retcode = input.ReadUInt32();
+          case 114:
+          case 112: {
+            talkEventList_.AddEntriesFrom(ref input, _repeated_talkEventList_codec);
             break;
           }
         }

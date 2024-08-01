@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static RogueCommonDialogueBasicInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiJSb2d1ZUNvbW1vbkRpYWxvZ3VlQmFzaWNJbmZvLnByb3RvIkUKHFJvZ3Vl",
-            "Q29tbW9uRGlhbG9ndWVCYXNpY0luZm8SEwoLSkJOSkJITkFNRU4YByABKA0S",
-            "EAoIZXZlbnRfaWQYDiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
-            "cm90b2IGcHJvdG8z"));
+            "CiJSb2d1ZUNvbW1vbkRpYWxvZ3VlQmFzaWNJbmZvLnByb3RvIkAKHFJvZ3Vl",
+            "Q29tbW9uRGlhbG9ndWVCYXNpY0luZm8SEwoLZGlhbG9ndWVfaWQYBCABKA0S",
+            "CwoDc3VzGAUgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonDialogueBasicInfo), global::EggLink.DanhengServer.Proto.RogueCommonDialogueBasicInfo.Parser, new[]{ "JBNJBHNAMEN", "EventId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonDialogueBasicInfo), global::EggLink.DanhengServer.Proto.RogueCommonDialogueBasicInfo.Parser, new[]{ "DialogueId", "Sus" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueCommonDialogueBasicInfo(RogueCommonDialogueBasicInfo other) : this() {
-      jBNJBHNAMEN_ = other.jBNJBHNAMEN_;
-      eventId_ = other.eventId_;
+      dialogueId_ = other.dialogueId_;
+      sus_ = other.sus_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,27 +84,27 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueCommonDialogueBasicInfo(this);
     }
 
-    /// <summary>Field number for the "JBNJBHNAMEN" field.</summary>
-    public const int JBNJBHNAMENFieldNumber = 7;
-    private uint jBNJBHNAMEN_;
+    /// <summary>Field number for the "dialogue_id" field.</summary>
+    public const int DialogueIdFieldNumber = 4;
+    private uint dialogueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint JBNJBHNAMEN {
-      get { return jBNJBHNAMEN_; }
+    public uint DialogueId {
+      get { return dialogueId_; }
       set {
-        jBNJBHNAMEN_ = value;
+        dialogueId_ = value;
       }
     }
 
-    /// <summary>Field number for the "event_id" field.</summary>
-    public const int EventIdFieldNumber = 14;
-    private uint eventId_;
+    /// <summary>Field number for the "sus" field.</summary>
+    public const int SusFieldNumber = 5;
+    private uint sus_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint EventId {
-      get { return eventId_; }
+    public uint Sus {
+      get { return sus_; }
       set {
-        eventId_ = value;
+        sus_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (JBNJBHNAMEN != other.JBNJBHNAMEN) return false;
-      if (EventId != other.EventId) return false;
+      if (DialogueId != other.DialogueId) return false;
+      if (Sus != other.Sus) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (JBNJBHNAMEN != 0) hash ^= JBNJBHNAMEN.GetHashCode();
-      if (EventId != 0) hash ^= EventId.GetHashCode();
+      if (DialogueId != 0) hash ^= DialogueId.GetHashCode();
+      if (Sus != 0) hash ^= Sus.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (JBNJBHNAMEN != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(JBNJBHNAMEN);
+      if (DialogueId != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(DialogueId);
       }
-      if (EventId != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(EventId);
+      if (Sus != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Sus);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (JBNJBHNAMEN != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(JBNJBHNAMEN);
+      if (DialogueId != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(DialogueId);
       }
-      if (EventId != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(EventId);
+      if (Sus != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Sus);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (JBNJBHNAMEN != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JBNJBHNAMEN);
+      if (DialogueId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DialogueId);
       }
-      if (EventId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EventId);
+      if (Sus != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Sus);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.JBNJBHNAMEN != 0) {
-        JBNJBHNAMEN = other.JBNJBHNAMEN;
+      if (other.DialogueId != 0) {
+        DialogueId = other.DialogueId;
       }
-      if (other.EventId != 0) {
-        EventId = other.EventId;
+      if (other.Sus != 0) {
+        Sus = other.Sus;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            JBNJBHNAMEN = input.ReadUInt32();
+          case 32: {
+            DialogueId = input.ReadUInt32();
             break;
           }
-          case 112: {
-            EventId = input.ReadUInt32();
+          case 40: {
+            Sus = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            JBNJBHNAMEN = input.ReadUInt32();
+          case 32: {
+            DialogueId = input.ReadUInt32();
             break;
           }
-          case 112: {
-            EventId = input.ReadUInt32();
+          case 40: {
+            Sus = input.ReadUInt32();
             break;
           }
         }

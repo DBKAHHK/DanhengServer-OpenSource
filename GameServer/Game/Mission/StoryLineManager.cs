@@ -1,7 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Mission;
-using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
@@ -57,21 +56,20 @@ public class StoryLineManager : BasePlayerManager
         await Player.SendPacket(new PacketStoryLineInfoScNotify(Player));
         await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
         if (entryId > 0)
+        {
             await Player.EnterMissionScene(entryId, anchorGroupId, anchorId, true);
+        }
         else
         {
             if (lineInfo == null)
-            {
-                await Player.EnterMissionScene(storyExcel.InitEntranceID, storyExcel.InitGroupID, storyExcel.InitAnchorID,
+                await Player.EnterMissionScene(storyExcel.InitEntranceID, storyExcel.InitGroupID,
+                    storyExcel.InitAnchorID,
                     true);
-            }
             else
-            {
                 await Player.LoadScene(lineInfo.SavedPlaneId, lineInfo.SavedFloorId, lineInfo.SavedEntryId,
                     lineInfo.SavedPos, lineInfo.SavedRot, true);
-            }
-            
         }
+
         await Player.SendPacket(
             new PacketChangeStoryLineFinishScNotify(storyExcel.StoryLineID, ChangeStoryLineAction.FinishAction));
 
@@ -169,6 +167,7 @@ public class StoryLineManager : BasePlayerManager
             StoryLineData.OldPos = new Position();
             StoryLineData.OldRot = new Position();
         }
+
         await Player.SendPacket(new PacketChangeStoryLineFinishScNotify(0, ChangeStoryLineAction.None));
     }
 

@@ -212,7 +212,7 @@ public class MissionManager : BasePlayerManager
         if (Data.GetMainMissionStatus(missionId) != MissionPhaseEnum.Accept) return;
         Data.SetMainMissionStatus(missionId, MissionPhaseEnum.Finish);
         var sync = new MissionSync();
-        sync.MainMissionIdList.Add((uint)missionId);
+        sync.FinishedMainMissionIdList.Add((uint)missionId);
         // get next main mission
         foreach (var mission in mainMission.SubMissionIds)
             if (GetSubMissionStatus(mission) != MissionPhaseEnum.Finish)
@@ -318,7 +318,7 @@ public class MissionManager : BasePlayerManager
 
         if (missionId == 101140201)
         {
-            //Player.ChangeHeroBasicType(Enums.Avatar.HeroBasicTypeEnum.Knight);
+            // Player.ChangeAvatarPathType(8001, Enums.Avatar.MultiPathAvatarTypeEnum.Knight);
             var list = Player.LineupManager!.GetCurLineup()!.BaseAvatars!
                 .Select(x => x.SpecialAvatarId > 0 ? x.SpecialAvatarId / 10 : x.BaseAvatarId).ToList();
             list[list.IndexOf(8001)] = Player.Data.CurrentGender == Gender.Man ? 1008003 : 1008004;
@@ -446,6 +446,7 @@ public class MissionManager : BasePlayerManager
                         list.Add(customValue);
                     }
                 }
+
                 foreach (var customValues in list)
                 {
                     var thisAccept = true;
@@ -463,7 +464,7 @@ public class MissionManager : BasePlayerManager
                         index++;
                     }
 
-                    if (thisAccept) accept = true;  // accept if any group is true
+                    if (thisAccept) accept = true; // accept if any group is true
                 }
 
                 if (accept) await AcceptSubMission(mission.ID);
@@ -619,7 +620,7 @@ public class MissionManager : BasePlayerManager
         {
             foreach (var subMission in mainMission.MissionInfo?.SubMissionList ?? [])
                 if (subMission.LevelFloorID == info.FloorId)
-                    info.SceneMissionInfo.SceneSubMissionList.Add(new Proto.Mission
+                    info.SceneMissionInfo.SubMissionStatusList.Add(new Proto.Mission
                     {
                         Id = (uint)subMission.ID,
                         Status = GetSubMissionStatus(subMission.ID).ToProto(),
@@ -630,9 +631,9 @@ public class MissionManager : BasePlayerManager
                 if (subMission.LevelFloorID == info.FloorId)
                 {
                     if (GetMainMissionStatus(mainMission.MainMissionID) == MissionPhaseEnum.Finish)
-                        info.SceneMissionInfo.MainMissionIdList.Add((uint)mainMission.MainMissionID);
+                        info.SceneMissionInfo.FinishedMainMissionIdList.Add((uint)mainMission.MainMissionID);
                     else if (GetMainMissionStatus(mainMission.MainMissionID) == MissionPhaseEnum.Accept)
-                        info.SceneMissionInfo.AcceptMainMissionIdList.Add((uint)mainMission.MainMissionID);
+                        info.SceneMissionInfo.UnfinishedMainMissionIdList.Add((uint)mainMission.MainMissionID);
                     break; // only one
                 }
         }

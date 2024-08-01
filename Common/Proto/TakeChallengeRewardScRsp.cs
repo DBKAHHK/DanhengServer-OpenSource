@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch5UYWtlQ2hhbGxlbmdlUmV3YXJkU2NSc3AucHJvdG8aHlRha2VuQ2hhbGxl",
             "bmdlUmV3YXJkSW5mby5wcm90byJzChhUYWtlQ2hhbGxlbmdlUmV3YXJkU2NS",
-            "c3ASNAoRdGFrZW5fcmV3YXJkX2xpc3QYBSADKAsyGS5UYWtlbkNoYWxsZW5n",
-            "ZVJld2FyZEluZm8SEAoIZ3JvdXBfaWQYCiABKA0SDwoHcmV0Y29kZRgNIAEo",
+            "c3ASNAoRdGFrZW5fcmV3YXJkX2xpc3QYDSADKAsyGS5UYWtlbkNoYWxsZW5n",
+            "ZVJld2FyZEluZm8SEAoIZ3JvdXBfaWQYBSABKA0SDwoHcmV0Y29kZRgPIAEo",
             "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TakenChallengeRewardInfoReflection.Descriptor, },
@@ -87,9 +87,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "taken_reward_list" field.</summary>
-    public const int TakenRewardListFieldNumber = 5;
+    public const int TakenRewardListFieldNumber = 13;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.TakenChallengeRewardInfo> _repeated_takenRewardList_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.TakenChallengeRewardInfo.Parser);
+        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.TakenChallengeRewardInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TakenChallengeRewardInfo> takenRewardList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TakenChallengeRewardInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 10;
+    public const int GroupIdFieldNumber = 5;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 13;
+    public const int RetcodeFieldNumber = 15;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,13 +167,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      takenRewardList_.WriteTo(output, _repeated_takenRewardList_codec);
       if (GroupId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(40);
         output.WriteUInt32(GroupId);
       }
+      takenRewardList_.WriteTo(output, _repeated_takenRewardList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(120);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -186,13 +186,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      takenRewardList_.WriteTo(ref output, _repeated_takenRewardList_codec);
       if (GroupId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(40);
         output.WriteUInt32(GroupId);
       }
+      takenRewardList_.WriteTo(ref output, _repeated_takenRewardList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(120);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -246,15 +246,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
-            takenRewardList_.AddEntriesFrom(input, _repeated_takenRewardList_codec);
-            break;
-          }
-          case 80: {
+          case 40: {
             GroupId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 106: {
+            takenRewardList_.AddEntriesFrom(input, _repeated_takenRewardList_codec);
+            break;
+          }
+          case 120: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -273,15 +273,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
-            takenRewardList_.AddEntriesFrom(ref input, _repeated_takenRewardList_codec);
-            break;
-          }
-          case 80: {
+          case 40: {
             GroupId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 106: {
+            takenRewardList_.AddEntriesFrom(ref input, _repeated_takenRewardList_codec);
+            break;
+          }
+          case 120: {
             Retcode = input.ReadUInt32();
             break;
           }

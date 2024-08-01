@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using EggLink.DanhengServer.Enums.Mission;
-using EggLink.DanhengServer.Enums.Quest;
+﻿using EggLink.DanhengServer.Enums.Quest;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
@@ -15,6 +9,7 @@ public class FuncUnlockDataExcel : ExcelResource
 {
     public int UnlockID { get; set; }
     public List<FuncUnlockCondition> Conditions { get; set; } = [];
+
     public override int GetId()
     {
         return UnlockID;
@@ -30,5 +25,6 @@ public class FuncUnlockCondition
 {
     [JsonConverter(typeof(StringEnumConverter))]
     public ConditionTypeEnum Type { get; set; }
+
     public string Param { get; set; } = string.Empty;
 }

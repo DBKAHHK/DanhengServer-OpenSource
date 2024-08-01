@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static MusicDataReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg9NdXNpY0RhdGEucHJvdG8iPAoJTXVzaWNEYXRhEhEKCWlzX3BsYXllZBgN",
-            "IAEoCBIKCgJpZBgBIAEoDRIQCghncm91cF9pZBgCIAEoDUIeqgIbRWdnTGlu",
+            "Cg9NdXNpY0RhdGEucHJvdG8iPAoJTXVzaWNEYXRhEgoKAmlkGAwgASgNEhEK",
+            "CWlzX3BsYXllZBgFIAEoCBIQCghncm91cF9pZBgIIAEoDUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicData), global::EggLink.DanhengServer.Proto.MusicData.Parser, new[]{ "IsPlayed", "Id", "GroupId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicData), global::EggLink.DanhengServer.Proto.MusicData.Parser, new[]{ "Id", "IsPlayed", "GroupId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MusicData(MusicData other) : this() {
-      isPlayed_ = other.isPlayed_;
       id_ = other.id_;
+      isPlayed_ = other.isPlayed_;
       groupId_ = other.groupId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new MusicData(this);
     }
 
-    /// <summary>Field number for the "is_played" field.</summary>
-    public const int IsPlayedFieldNumber = 13;
-    private bool isPlayed_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsPlayed {
-      get { return isPlayed_; }
-      set {
-        isPlayed_ = value;
-      }
-    }
-
     /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
+    public const int IdFieldNumber = 12;
     private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -108,8 +96,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "is_played" field.</summary>
+    public const int IsPlayedFieldNumber = 5;
+    private bool isPlayed_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsPlayed {
+      get { return isPlayed_; }
+      set {
+        isPlayed_ = value;
+      }
+    }
+
     /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 2;
+    public const int GroupIdFieldNumber = 8;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -135,8 +135,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsPlayed != other.IsPlayed) return false;
       if (Id != other.Id) return false;
+      if (IsPlayed != other.IsPlayed) return false;
       if (GroupId != other.GroupId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -145,8 +145,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsPlayed != false) hash ^= IsPlayed.GetHashCode();
       if (Id != 0) hash ^= Id.GetHashCode();
+      if (IsPlayed != false) hash ^= IsPlayed.GetHashCode();
       if (GroupId != 0) hash ^= GroupId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -166,17 +166,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Id != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Id);
+      if (IsPlayed != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(IsPlayed);
       }
       if (GroupId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(64);
         output.WriteUInt32(GroupId);
       }
-      if (IsPlayed != false) {
-        output.WriteRawTag(104);
-        output.WriteBool(IsPlayed);
+      if (Id != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Id);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -188,17 +188,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Id);
+      if (IsPlayed != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(IsPlayed);
       }
       if (GroupId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(64);
         output.WriteUInt32(GroupId);
       }
-      if (IsPlayed != false) {
-        output.WriteRawTag(104);
-        output.WriteBool(IsPlayed);
+      if (Id != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Id);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -210,11 +210,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsPlayed != false) {
-        size += 1 + 1;
-      }
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
+      }
+      if (IsPlayed != false) {
+        size += 1 + 1;
       }
       if (GroupId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
@@ -231,11 +231,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsPlayed != false) {
-        IsPlayed = other.IsPlayed;
-      }
       if (other.Id != 0) {
         Id = other.Id;
+      }
+      if (other.IsPlayed != false) {
+        IsPlayed = other.IsPlayed;
       }
       if (other.GroupId != 0) {
         GroupId = other.GroupId;
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Id = input.ReadUInt32();
+          case 40: {
+            IsPlayed = input.ReadBool();
             break;
           }
-          case 16: {
+          case 64: {
             GroupId = input.ReadUInt32();
             break;
           }
-          case 104: {
-            IsPlayed = input.ReadBool();
+          case 96: {
+            Id = input.ReadUInt32();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Id = input.ReadUInt32();
+          case 40: {
+            IsPlayed = input.ReadBool();
             break;
           }
-          case 16: {
+          case 64: {
             GroupId = input.ReadUInt32();
             break;
           }
-          case 104: {
-            IsPlayed = input.ReadBool();
+          case 96: {
+            Id = input.ReadUInt32();
             break;
           }
         }

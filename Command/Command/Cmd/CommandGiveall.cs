@@ -1,5 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database.Inventory;
+using EggLink.DanhengServer.Enums.Avatar;
 using EggLink.DanhengServer.Enums.Item;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.Internationalization;
@@ -31,21 +32,30 @@ public class CommandGiveall : ICommand
 
         var avatarList = GameData.AvatarConfigData.Values;
         foreach (var avatar in avatarList)
+        {
+            if (avatar.AvatarID > 2000 && avatar.AvatarID != 8001)
+                continue; // Hacky way to prevent giving random avatars
             if (player.AvatarManager!.GetAvatar(avatar.AvatarID) == null)
             {
+                GameData.MultiplePathAvatarConfigData.TryGetValue(avatar.AvatarID, out var multiPathAvatar);
+                if (multiPathAvatar != null && avatar.AvatarID != multiPathAvatar.BaseAvatarID) continue;
+                // Normal avatar
                 await player.InventoryManager!.AddItem(avatar.AvatarID, 1, false, sync: false);
                 player.AvatarManager!.GetAvatar(avatar.AvatarID)!.Level = Math.Max(Math.Min(level, 80), 0);
                 player.AvatarManager!.GetAvatar(avatar.AvatarID)!.Promotion =
                     GameData.GetMinPromotionForLevel(Math.Max(Math.Min(level, 80), 0));
-                player.AvatarManager!.GetAvatar(avatar.AvatarID)!.Rank = Math.Max(Math.Min(rank, 6), 0);
+                player.AvatarManager!.GetAvatar(avatar.AvatarID)!.GetCurPathInfo().Rank =
+                    Math.Max(Math.Min(rank, 6), 0);
             }
             else
             {
                 player.AvatarManager!.GetAvatar(avatar.AvatarID)!.Level = Math.Max(Math.Min(level, 80), 0);
                 player.AvatarManager!.GetAvatar(avatar.AvatarID)!.Promotion =
                     GameData.GetMinPromotionForLevel(Math.Max(Math.Min(level, 80), 0));
-                player.AvatarManager!.GetAvatar(avatar.AvatarID)!.Rank = Math.Max(Math.Min(rank, 6), 0);
+                player.AvatarManager!.GetAvatar(avatar.AvatarID)!.GetCurPathInfo().Rank =
+                    Math.Max(Math.Min(rank, 6), 0);
             }
+        }
 
         await player.SendPacket(new PacketPlayerSyncScNotify(player.AvatarManager!.AvatarData.Avatars));
 
@@ -193,5 +203,41 @@ public class CommandGiveall : ICommand
 
         await arg.SendMsg(I18nManager.Translate("Game.Command.GiveAll.GiveAllItems",
             I18nManager.Translate("Word.Unlock"), "1"));
+    }
+
+    [CommandMethod("0 path")]
+    public async ValueTask GiveAllPath(CommandArg arg)
+    {
+        var player = arg.Target?.Player;
+        if (player == null)
+        {
+            await arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
+            return;
+        }
+
+        foreach (var multiPathAvatar in GameData.MultiplePathAvatarConfigData.Values)
+        {
+            if (player.AvatarManager!.GetAvatar(multiPathAvatar.BaseAvatarID) == null)
+            {
+                await player.InventoryManager!.AddItem(multiPathAvatar.BaseAvatarID, 1, false, sync: false);
+                player.AvatarManager!.GetAvatar(multiPathAvatar.BaseAvatarID)!.Level = Math.Max(Math.Min(1, 80), 0);
+                player.AvatarManager!.GetAvatar(multiPathAvatar.BaseAvatarID)!.Promotion =
+                    GameData.GetMinPromotionForLevel(Math.Max(Math.Min(1, 80), 0));
+                player.AvatarManager!.GetAvatar(multiPathAvatar.BaseAvatarID)!.GetCurPathInfo().Rank =
+                    Math.Max(Math.Min(0, 6), 0);
+            }
+
+            var avatarData = player.AvatarManager!.GetAvatar(multiPathAvatar.BaseAvatarID)!;
+            if (avatarData.PathInfoes.ContainsKey(multiPathAvatar.AvatarID)) continue;
+            if (multiPathAvatar.BaseAvatarID > 8000 && multiPathAvatar.AvatarID % 2 != 1) continue;
+            await player.ChangeAvatarPathType(multiPathAvatar.BaseAvatarID,
+                (MultiPathAvatarTypeEnum)multiPathAvatar.AvatarID);
+        }
+
+        await player.SendPacket(new PacketPlayerSyncScNotify(player.AvatarManager!.AvatarData.Avatars));
+
+        await arg.SendMsg(I18nManager.Translate("Game.Command.GiveAll.GiveAllItems",
+            I18nManager.Translate("Word.Avatar"),
+            "1"));
     }
 }

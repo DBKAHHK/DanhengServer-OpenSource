@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CipSb2d1ZUNvbW1vbkRpYWxvZ3VlT3B0aW9uRGlzcGxheUluZm8ucHJvdG8i",
-            "TgokUm9ndWVDb21tb25EaWFsb2d1ZU9wdGlvbkRpc3BsYXlJbmZvEhMKC2Zs",
-            "b2F0X3ZhbHVlGAcgASgCEhEKCWludF92YWx1ZRgJIAEoBUIeqgIbRWdnTGlu",
-            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "XgokUm9ndWVDb21tb25EaWFsb2d1ZU9wdGlvbkRpc3BsYXlJbmZvEhkKEWRp",
+            "c3BsYXlfaW50X3ZhbHVlGAYgASgFEhsKE2Rpc3BsYXlfZmxvYXRfdmFsdWUY",
+            "CiABKAJCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionDisplayInfo), global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionDisplayInfo.Parser, new[]{ "FloatValue", "IntValue" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionDisplayInfo), global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionDisplayInfo.Parser, new[]{ "DisplayIntValue", "DisplayFloatValue" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueCommonDialogueOptionDisplayInfo(RogueCommonDialogueOptionDisplayInfo other) : this() {
-      floatValue_ = other.floatValue_;
-      intValue_ = other.intValue_;
+      displayIntValue_ = other.displayIntValue_;
+      displayFloatValue_ = other.displayFloatValue_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,27 +84,27 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueCommonDialogueOptionDisplayInfo(this);
     }
 
-    /// <summary>Field number for the "float_value" field.</summary>
-    public const int FloatValueFieldNumber = 7;
-    private float floatValue_;
+    /// <summary>Field number for the "display_int_value" field.</summary>
+    public const int DisplayIntValueFieldNumber = 6;
+    private int displayIntValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float FloatValue {
-      get { return floatValue_; }
+    public int DisplayIntValue {
+      get { return displayIntValue_; }
       set {
-        floatValue_ = value;
+        displayIntValue_ = value;
       }
     }
 
-    /// <summary>Field number for the "int_value" field.</summary>
-    public const int IntValueFieldNumber = 9;
-    private int intValue_;
+    /// <summary>Field number for the "display_float_value" field.</summary>
+    public const int DisplayFloatValueFieldNumber = 10;
+    private float displayFloatValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int IntValue {
-      get { return intValue_; }
+    public float DisplayFloatValue {
+      get { return displayFloatValue_; }
       set {
-        intValue_ = value;
+        displayFloatValue_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(FloatValue, other.FloatValue)) return false;
-      if (IntValue != other.IntValue) return false;
+      if (DisplayIntValue != other.DisplayIntValue) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(DisplayFloatValue, other.DisplayFloatValue)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (FloatValue != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(FloatValue);
-      if (IntValue != 0) hash ^= IntValue.GetHashCode();
+      if (DisplayIntValue != 0) hash ^= DisplayIntValue.GetHashCode();
+      if (DisplayFloatValue != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(DisplayFloatValue);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FloatValue != 0F) {
-        output.WriteRawTag(61);
-        output.WriteFloat(FloatValue);
+      if (DisplayIntValue != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(DisplayIntValue);
       }
-      if (IntValue != 0) {
-        output.WriteRawTag(72);
-        output.WriteInt32(IntValue);
+      if (DisplayFloatValue != 0F) {
+        output.WriteRawTag(85);
+        output.WriteFloat(DisplayFloatValue);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FloatValue != 0F) {
-        output.WriteRawTag(61);
-        output.WriteFloat(FloatValue);
+      if (DisplayIntValue != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(DisplayIntValue);
       }
-      if (IntValue != 0) {
-        output.WriteRawTag(72);
-        output.WriteInt32(IntValue);
+      if (DisplayFloatValue != 0F) {
+        output.WriteRawTag(85);
+        output.WriteFloat(DisplayFloatValue);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (FloatValue != 0F) {
-        size += 1 + 4;
+      if (DisplayIntValue != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DisplayIntValue);
       }
-      if (IntValue != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(IntValue);
+      if (DisplayFloatValue != 0F) {
+        size += 1 + 4;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.FloatValue != 0F) {
-        FloatValue = other.FloatValue;
+      if (other.DisplayIntValue != 0) {
+        DisplayIntValue = other.DisplayIntValue;
       }
-      if (other.IntValue != 0) {
-        IntValue = other.IntValue;
+      if (other.DisplayFloatValue != 0F) {
+        DisplayFloatValue = other.DisplayFloatValue;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 61: {
-            FloatValue = input.ReadFloat();
+          case 48: {
+            DisplayIntValue = input.ReadInt32();
             break;
           }
-          case 72: {
-            IntValue = input.ReadInt32();
+          case 85: {
+            DisplayFloatValue = input.ReadFloat();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 61: {
-            FloatValue = input.ReadFloat();
+          case 48: {
+            DisplayIntValue = input.ReadInt32();
             break;
           }
-          case 72: {
-            IntValue = input.ReadInt32();
+          case 85: {
+            DisplayFloatValue = input.ReadFloat();
             break;
           }
         }

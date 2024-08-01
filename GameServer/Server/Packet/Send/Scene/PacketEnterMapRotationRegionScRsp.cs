@@ -9,7 +9,7 @@ public class PacketEnterMapRotationRegionScRsp : BasePacket
         var proto = new EnterMapRotationRegionScRsp
         {
             Motion = motion,
-            EnergyInfo = new RotatorEnergyInfo
+            EnergyInfo = new RotaterEnergyInfo
             {
                 CurNum = 5,
                 MaxNum = 5

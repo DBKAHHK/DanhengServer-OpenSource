@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhUZXh0Sm9pblF1ZXJ5U2NSc3AucHJvdG8aElRleHRKb2luSW5mby5wcm90",
-            "byJMChJUZXh0Sm9pblF1ZXJ5U2NSc3ASJQoOdGV4dF9qb2luX2xpc3QYBSAD",
-            "KAsyDS5UZXh0Sm9pbkluZm8SDwoHcmV0Y29kZRgKIAEoDUIeqgIbRWdnTGlu",
+            "byJMChJUZXh0Sm9pblF1ZXJ5U2NSc3ASJQoOdGV4dF9qb2luX2xpc3QYCiAD",
+            "KAsyDS5UZXh0Sm9pbkluZm8SDwoHcmV0Y29kZRgDIAEoDUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TextJoinInfoReflection.Descriptor, },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "text_join_list" field.</summary>
-    public const int TextJoinListFieldNumber = 5;
+    public const int TextJoinListFieldNumber = 10;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.TextJoinInfo> _repeated_textJoinList_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.TextJoinInfo.Parser);
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.TextJoinInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TextJoinInfo> textJoinList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TextJoinInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 10;
+    public const int RetcodeFieldNumber = 3;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      textJoinList_.WriteTo(output, _repeated_textJoinList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
+      textJoinList_.WriteTo(output, _repeated_textJoinList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      textJoinList_.WriteTo(ref output, _repeated_textJoinList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
+      textJoinList_.WriteTo(ref output, _repeated_textJoinList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
-            textJoinList_.AddEntriesFrom(input, _repeated_textJoinList_codec);
+          case 24: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 80: {
-            Retcode = input.ReadUInt32();
+          case 82: {
+            textJoinList_.AddEntriesFrom(input, _repeated_textJoinList_codec);
             break;
           }
         }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
-            textJoinList_.AddEntriesFrom(ref input, _repeated_textJoinList_codec);
+          case 24: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 80: {
-            Retcode = input.ReadUInt32();
+          case 82: {
+            textJoinList_.AddEntriesFrom(ref input, _repeated_textJoinList_codec);
             break;
           }
         }

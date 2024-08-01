@@ -10,7 +10,7 @@ public class HandlerDressAvatarCsReq : Handler
         var req = DressAvatarCsReq.Parser.ParseFrom(data);
         var player = connection.Player!;
 
-        await player.InventoryManager!.EquipAvatar((int)req.DressAvatarId, (int)req.EquipmentUniqueId);
+        await player.InventoryManager!.EquipAvatar((int)req.AvatarId, (int)req.EquipmentUniqueId);
 
         await connection.SendPacket(CmdIds.DressAvatarScRsp);
     }

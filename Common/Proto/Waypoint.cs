@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static WaypointReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg5XYXlwb2ludC5wcm90byI7CghXYXlwb2ludBITCgtQRENFUEpFRkFEUBgM",
-            "IAEoDRIOCgZpc19uZXcYBiABKAgSCgoCaWQYCyABKA1CHqoCG0VnZ0xpbmsu",
-            "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "Cg5XYXlwb2ludC5wcm90byI8CghXYXlwb2ludBIOCgZpc19uZXcYCiABKAgS",
+            "CgoCaWQYDCABKA0SFAoMZmluaXNoX3RpbWVzGAsgASgNQh6qAhtFZ2dMaW5r",
+            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Waypoint), global::EggLink.DanhengServer.Proto.Waypoint.Parser, new[]{ "PDCEPJEFADP", "IsNew", "Id" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Waypoint), global::EggLink.DanhengServer.Proto.Waypoint.Parser, new[]{ "IsNew", "Id", "FinishTimes" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,9 +72,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Waypoint(Waypoint other) : this() {
-      pDCEPJEFADP_ = other.pDCEPJEFADP_;
       isNew_ = other.isNew_;
       id_ = other.id_;
+      finishTimes_ = other.finishTimes_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new Waypoint(this);
     }
 
-    /// <summary>Field number for the "PDCEPJEFADP" field.</summary>
-    public const int PDCEPJEFADPFieldNumber = 12;
-    private uint pDCEPJEFADP_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PDCEPJEFADP {
-      get { return pDCEPJEFADP_; }
-      set {
-        pDCEPJEFADP_ = value;
-      }
-    }
-
     /// <summary>Field number for the "is_new" field.</summary>
-    public const int IsNewFieldNumber = 6;
+    public const int IsNewFieldNumber = 10;
     private bool isNew_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 11;
+    public const int IdFieldNumber = 12;
     private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -117,6 +105,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return id_; }
       set {
         id_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "finish_times" field.</summary>
+    public const int FinishTimesFieldNumber = 11;
+    private uint finishTimes_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint FinishTimes {
+      get { return finishTimes_; }
+      set {
+        finishTimes_ = value;
       }
     }
 
@@ -135,9 +135,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (PDCEPJEFADP != other.PDCEPJEFADP) return false;
       if (IsNew != other.IsNew) return false;
       if (Id != other.Id) return false;
+      if (FinishTimes != other.FinishTimes) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,9 +145,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (PDCEPJEFADP != 0) hash ^= PDCEPJEFADP.GetHashCode();
       if (IsNew != false) hash ^= IsNew.GetHashCode();
       if (Id != 0) hash ^= Id.GetHashCode();
+      if (FinishTimes != 0) hash ^= FinishTimes.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,16 +167,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (IsNew != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(80);
         output.WriteBool(IsNew);
       }
-      if (Id != 0) {
+      if (FinishTimes != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(Id);
+        output.WriteUInt32(FinishTimes);
       }
-      if (PDCEPJEFADP != 0) {
+      if (Id != 0) {
         output.WriteRawTag(96);
-        output.WriteUInt32(PDCEPJEFADP);
+        output.WriteUInt32(Id);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,16 +189,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IsNew != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(80);
         output.WriteBool(IsNew);
       }
-      if (Id != 0) {
+      if (FinishTimes != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(Id);
+        output.WriteUInt32(FinishTimes);
       }
-      if (PDCEPJEFADP != 0) {
+      if (Id != 0) {
         output.WriteRawTag(96);
-        output.WriteUInt32(PDCEPJEFADP);
+        output.WriteUInt32(Id);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -210,14 +210,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (PDCEPJEFADP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PDCEPJEFADP);
-      }
       if (IsNew != false) {
         size += 1 + 1;
       }
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
+      }
+      if (FinishTimes != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FinishTimes);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -231,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.PDCEPJEFADP != 0) {
-        PDCEPJEFADP = other.PDCEPJEFADP;
-      }
       if (other.IsNew != false) {
         IsNew = other.IsNew;
       }
       if (other.Id != 0) {
         Id = other.Id;
+      }
+      if (other.FinishTimes != 0) {
+        FinishTimes = other.FinishTimes;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 80: {
             IsNew = input.ReadBool();
             break;
           }
           case 88: {
-            Id = input.ReadUInt32();
+            FinishTimes = input.ReadUInt32();
             break;
           }
           case 96: {
-            PDCEPJEFADP = input.ReadUInt32();
+            Id = input.ReadUInt32();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 80: {
             IsNew = input.ReadBool();
             break;
           }
           case 88: {
-            Id = input.ReadUInt32();
+            FinishTimes = input.ReadUInt32();
             break;
           }
           case 96: {
-            PDCEPJEFADP = input.ReadUInt32();
+            Id = input.ReadUInt32();
             break;
           }
         }

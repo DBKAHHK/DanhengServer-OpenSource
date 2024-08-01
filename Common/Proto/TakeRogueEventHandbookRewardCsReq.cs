@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CidUYWtlUm9ndWVFdmVudEhhbmRib29rUmV3YXJkQ3NSZXEucHJvdG8iRgoh",
             "VGFrZVJvZ3VlRXZlbnRIYW5kYm9va1Jld2FyZENzUmVxEiEKGXRha2VfaGFu",
-            "ZGJvb2tfcmV3YXJkX2xpc3QYAiADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "ZGJvb2tfcmV3YXJkX2xpc3QYByADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "take_handbook_reward_list" field.</summary>
-    public const int TakeHandbookRewardListFieldNumber = 2;
+    public const int TakeHandbookRewardListFieldNumber = 7;
     private static readonly pb::FieldCodec<uint> _repeated_takeHandbookRewardList_codec
-        = pb::FieldCodec.ForUInt32(18);
+        = pb::FieldCodec.ForUInt32(58);
     private readonly pbc::RepeatedField<uint> takeHandbookRewardList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,8 +187,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18:
-          case 16: {
+          case 58:
+          case 56: {
             takeHandbookRewardList_.AddEntriesFrom(input, _repeated_takeHandbookRewardList_codec);
             break;
           }
@@ -207,8 +207,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18:
-          case 16: {
+          case 58:
+          case 56: {
             takeHandbookRewardList_.AddEntriesFrom(ref input, _repeated_takeHandbookRewardList_codec);
             break;
           }

@@ -32,8 +32,8 @@ public class CommandHero : ICommand
 
         var player = arg.Target!.Player!;
         player.Data.CurrentGender = gender;
-        await player.ChangeHeroBasicType(HeroBasicTypeEnum.Warrior);
-        await player.SendPacket(new PacketGetHeroBasicTypeInfoScRsp(player));
+        await player.ChangeAvatarPathType(8001, MultiPathAvatarTypeEnum.Warrior);
+        await player.SendPacket(new PacketGetMultiPathAvatarInfoScRsp(player));
 
         await arg.SendMsg(I18nManager.Translate("Game.Command.Hero.GenderChanged"));
     }
@@ -53,7 +53,7 @@ public class CommandHero : ICommand
             return;
         }
 
-        var gender = (HeroBasicTypeEnum)arg.GetInt(0);
+        var gender = (MultiPathAvatarTypeEnum)arg.GetInt(0);
         if (gender == 0)
         {
             await arg.SendMsg(I18nManager.Translate("Game.Command.Hero.HeroTypeNotSpecified"));
@@ -61,7 +61,7 @@ public class CommandHero : ICommand
         }
 
         var player = arg.Target!.Player!;
-        await player.ChangeHeroBasicType(gender);
+        await player.ChangeAvatarPathType(8001, gender);
 
         await arg.SendMsg(I18nManager.Translate("Game.Command.Hero.HeroTypeChanged"));
     }

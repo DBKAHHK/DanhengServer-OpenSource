@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChtTZXREaXNwbGF5QXZhdGFyU2NSc3AucHJvdG8aF0Rpc3BsYXlBdmF0YXJE",
             "YXRhLnByb3RvIlkKFVNldERpc3BsYXlBdmF0YXJTY1JzcBIvChNkaXNwbGF5",
-            "X2F2YXRhcl9saXN0GA8gAygLMhIuRGlzcGxheUF2YXRhckRhdGESDwoHcmV0",
-            "Y29kZRgNIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "X2F2YXRhcl9saXN0GAIgAygLMhIuRGlzcGxheUF2YXRhckRhdGESDwoHcmV0",
+            "Y29kZRgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DisplayAvatarDataReflection.Descriptor, },
@@ -86,9 +86,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "display_avatar_list" field.</summary>
-    public const int DisplayAvatarListFieldNumber = 15;
+    public const int DisplayAvatarListFieldNumber = 2;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DisplayAvatarData> _repeated_displayAvatarList_codec
-        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.DisplayAvatarData.Parser);
+        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.DisplayAvatarData.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarData> displayAvatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 13;
+    public const int RetcodeFieldNumber = 3;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      displayAvatarList_.WriteTo(output, _repeated_displayAvatarList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
-      displayAvatarList_.WriteTo(output, _repeated_displayAvatarList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      displayAvatarList_.WriteTo(ref output, _repeated_displayAvatarList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
-      displayAvatarList_.WriteTo(ref output, _repeated_displayAvatarList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -217,12 +217,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 104: {
-            Retcode = input.ReadUInt32();
+          case 18: {
+            displayAvatarList_.AddEntriesFrom(input, _repeated_displayAvatarList_codec);
             break;
           }
-          case 122: {
-            displayAvatarList_.AddEntriesFrom(input, _repeated_displayAvatarList_codec);
+          case 24: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 104: {
-            Retcode = input.ReadUInt32();
+          case 18: {
+            displayAvatarList_.AddEntriesFrom(ref input, _repeated_displayAvatarList_codec);
             break;
           }
-          case 122: {
-            displayAvatarList_.AddEntriesFrom(ref input, _repeated_displayAvatarList_codec);
+          case 24: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

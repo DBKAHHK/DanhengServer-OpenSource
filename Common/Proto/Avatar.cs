@@ -24,20 +24,20 @@ namespace EggLink.DanhengServer.Proto {
     static AvatarReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgxBdmF0YXIucHJvdG8aFUF2YXRhclNraWxsVHJlZS5wcm90bxoQRXF1aXBS",
-            "ZWxpYy5wcm90byK+AgoGQXZhdGFyEhEKCXByb21vdGlvbhgNIAEoDRIbChNl",
-            "cXVpcG1lbnRfdW5pcXVlX2lkGAUgASgNEhwKFGZpcnN0X21ldF90aW1lX3N0",
-            "YW1wGA4gASgEEhcKD2RyZXNzZWRfc2tpbl9pZBgPIAEoDRIRCglpc19tYXJr",
-            "ZWQYAiABKAgSFgoOYmFzZV9hdmF0YXJfaWQYASABKA0SKAoOc2tpbGx0cmVl",
-            "X2xpc3QYDCADKAsyEC5BdmF0YXJTa2lsbFRyZWUSDAoEcmFuaxgLIAEoDRIl",
-            "ChBlcXVpcF9yZWxpY19saXN0GAcgAygLMgsuRXF1aXBSZWxpYxInCh9oYXNf",
-            "dGFrZW5fcHJvbW90aW9uX3Jld2FyZF9saXN0GAYgAygNEgsKA2V4cBgKIAEo",
-            "DRINCgVsZXZlbBgIIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "CgxBdmF0YXIucHJvdG8aEEVxdWlwUmVsaWMucHJvdG8aFUF2YXRhclNraWxs",
+            "VHJlZS5wcm90byK+AgoGQXZhdGFyEgwKBHJhbmsYASABKA0SEQoJcHJvbW90",
+            "aW9uGAwgASgNEhwKFGZpcnN0X21ldF90aW1lX3N0YW1wGAggASgEEhsKE2Vx",
+            "dWlwbWVudF91bmlxdWVfaWQYByABKA0SCwoDZXhwGA8gASgNEiUKEGVxdWlw",
+            "X3JlbGljX2xpc3QYDiADKAsyCy5FcXVpcFJlbGljEhYKDmJhc2VfYXZhdGFy",
+            "X2lkGA0gASgNEhEKCWlzX21hcmtlZBgDIAEoCBIoCg5za2lsbHRyZWVfbGlz",
+            "dBgJIAMoCzIQLkF2YXRhclNraWxsVHJlZRInCh9oYXNfdGFrZW5fcHJvbW90",
+            "aW9uX3Jld2FyZF9saXN0GAsgAygNEg0KBWxldmVsGAUgASgNEhcKD2RyZXNz",
+            "ZWRfc2tpbl9pZBgGIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipRelicReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EquipRelicReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Avatar), global::EggLink.DanhengServer.Proto.Avatar.Parser, new[]{ "Promotion", "EquipmentUniqueId", "FirstMetTimeStamp", "DressedSkinId", "IsMarked", "BaseAvatarId", "SkilltreeList", "Rank", "EquipRelicList", "HasTakenPromotionRewardList", "Exp", "Level" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Avatar), global::EggLink.DanhengServer.Proto.Avatar.Parser, new[]{ "Rank", "Promotion", "FirstMetTimeStamp", "EquipmentUniqueId", "Exp", "EquipRelicList", "BaseAvatarId", "IsMarked", "SkilltreeList", "HasTakenPromotionRewardList", "Level", "DressedSkinId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -79,18 +79,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Avatar(Avatar other) : this() {
-      promotion_ = other.promotion_;
-      equipmentUniqueId_ = other.equipmentUniqueId_;
-      firstMetTimeStamp_ = other.firstMetTimeStamp_;
-      dressedSkinId_ = other.dressedSkinId_;
-      isMarked_ = other.isMarked_;
-      baseAvatarId_ = other.baseAvatarId_;
-      skilltreeList_ = other.skilltreeList_.Clone();
       rank_ = other.rank_;
-      equipRelicList_ = other.equipRelicList_.Clone();
-      hasTakenPromotionRewardList_ = other.hasTakenPromotionRewardList_.Clone();
+      promotion_ = other.promotion_;
+      firstMetTimeStamp_ = other.firstMetTimeStamp_;
+      equipmentUniqueId_ = other.equipmentUniqueId_;
       exp_ = other.exp_;
+      equipRelicList_ = other.equipRelicList_.Clone();
+      baseAvatarId_ = other.baseAvatarId_;
+      isMarked_ = other.isMarked_;
+      skilltreeList_ = other.skilltreeList_.Clone();
+      hasTakenPromotionRewardList_ = other.hasTakenPromotionRewardList_.Clone();
       level_ = other.level_;
+      dressedSkinId_ = other.dressedSkinId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -100,91 +100,8 @@ namespace EggLink.DanhengServer.Proto {
       return new Avatar(this);
     }
 
-    /// <summary>Field number for the "promotion" field.</summary>
-    public const int PromotionFieldNumber = 13;
-    private uint promotion_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Promotion {
-      get { return promotion_; }
-      set {
-        promotion_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "equipment_unique_id" field.</summary>
-    public const int EquipmentUniqueIdFieldNumber = 5;
-    private uint equipmentUniqueId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint EquipmentUniqueId {
-      get { return equipmentUniqueId_; }
-      set {
-        equipmentUniqueId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "first_met_time_stamp" field.</summary>
-    public const int FirstMetTimeStampFieldNumber = 14;
-    private ulong firstMetTimeStamp_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong FirstMetTimeStamp {
-      get { return firstMetTimeStamp_; }
-      set {
-        firstMetTimeStamp_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "dressed_skin_id" field.</summary>
-    public const int DressedSkinIdFieldNumber = 15;
-    private uint dressedSkinId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DressedSkinId {
-      get { return dressedSkinId_; }
-      set {
-        dressedSkinId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "is_marked" field.</summary>
-    public const int IsMarkedFieldNumber = 2;
-    private bool isMarked_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsMarked {
-      get { return isMarked_; }
-      set {
-        isMarked_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "base_avatar_id" field.</summary>
-    public const int BaseAvatarIdFieldNumber = 1;
-    private uint baseAvatarId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BaseAvatarId {
-      get { return baseAvatarId_; }
-      set {
-        baseAvatarId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "skilltree_list" field.</summary>
-    public const int SkilltreeListFieldNumber = 12;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.AvatarSkillTree> _repeated_skilltreeList_codec
-        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.AvatarSkillTree.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AvatarSkillTree> skilltreeList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AvatarSkillTree>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AvatarSkillTree> SkilltreeList {
-      get { return skilltreeList_; }
-    }
-
     /// <summary>Field number for the "rank" field.</summary>
-    public const int RankFieldNumber = 11;
+    public const int RankFieldNumber = 1;
     private uint rank_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -195,30 +112,44 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "equip_relic_list" field.</summary>
-    public const int EquipRelicListFieldNumber = 7;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EquipRelic> _repeated_equipRelicList_codec
-        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.EquipRelic.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EquipRelic> equipRelicList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EquipRelic>();
+    /// <summary>Field number for the "promotion" field.</summary>
+    public const int PromotionFieldNumber = 12;
+    private uint promotion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EquipRelic> EquipRelicList {
-      get { return equipRelicList_; }
+    public uint Promotion {
+      get { return promotion_; }
+      set {
+        promotion_ = value;
+      }
     }
 
-    /// <summary>Field number for the "has_taken_promotion_reward_list" field.</summary>
-    public const int HasTakenPromotionRewardListFieldNumber = 6;
-    private static readonly pb::FieldCodec<uint> _repeated_hasTakenPromotionRewardList_codec
-        = pb::FieldCodec.ForUInt32(50);
-    private readonly pbc::RepeatedField<uint> hasTakenPromotionRewardList_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "first_met_time_stamp" field.</summary>
+    public const int FirstMetTimeStampFieldNumber = 8;
+    private ulong firstMetTimeStamp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> HasTakenPromotionRewardList {
-      get { return hasTakenPromotionRewardList_; }
+    public ulong FirstMetTimeStamp {
+      get { return firstMetTimeStamp_; }
+      set {
+        firstMetTimeStamp_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "equipment_unique_id" field.</summary>
+    public const int EquipmentUniqueIdFieldNumber = 7;
+    private uint equipmentUniqueId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint EquipmentUniqueId {
+      get { return equipmentUniqueId_; }
+      set {
+        equipmentUniqueId_ = value;
+      }
     }
 
     /// <summary>Field number for the "exp" field.</summary>
-    public const int ExpFieldNumber = 10;
+    public const int ExpFieldNumber = 15;
     private uint exp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -229,8 +160,65 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "equip_relic_list" field.</summary>
+    public const int EquipRelicListFieldNumber = 14;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EquipRelic> _repeated_equipRelicList_codec
+        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.EquipRelic.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EquipRelic> equipRelicList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EquipRelic>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EquipRelic> EquipRelicList {
+      get { return equipRelicList_; }
+    }
+
+    /// <summary>Field number for the "base_avatar_id" field.</summary>
+    public const int BaseAvatarIdFieldNumber = 13;
+    private uint baseAvatarId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint BaseAvatarId {
+      get { return baseAvatarId_; }
+      set {
+        baseAvatarId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_marked" field.</summary>
+    public const int IsMarkedFieldNumber = 3;
+    private bool isMarked_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsMarked {
+      get { return isMarked_; }
+      set {
+        isMarked_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "skilltree_list" field.</summary>
+    public const int SkilltreeListFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.AvatarSkillTree> _repeated_skilltreeList_codec
+        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.AvatarSkillTree.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AvatarSkillTree> skilltreeList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AvatarSkillTree>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AvatarSkillTree> SkilltreeList {
+      get { return skilltreeList_; }
+    }
+
+    /// <summary>Field number for the "has_taken_promotion_reward_list" field.</summary>
+    public const int HasTakenPromotionRewardListFieldNumber = 11;
+    private static readonly pb::FieldCodec<uint> _repeated_hasTakenPromotionRewardList_codec
+        = pb::FieldCodec.ForUInt32(90);
+    private readonly pbc::RepeatedField<uint> hasTakenPromotionRewardList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> HasTakenPromotionRewardList {
+      get { return hasTakenPromotionRewardList_; }
+    }
+
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 8;
+    public const int LevelFieldNumber = 5;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -238,6 +226,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return level_; }
       set {
         level_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "dressed_skin_id" field.</summary>
+    public const int DressedSkinIdFieldNumber = 6;
+    private uint dressedSkinId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DressedSkinId {
+      get { return dressedSkinId_; }
+      set {
+        dressedSkinId_ = value;
       }
     }
 
@@ -256,18 +256,18 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Promotion != other.Promotion) return false;
-      if (EquipmentUniqueId != other.EquipmentUniqueId) return false;
-      if (FirstMetTimeStamp != other.FirstMetTimeStamp) return false;
-      if (DressedSkinId != other.DressedSkinId) return false;
-      if (IsMarked != other.IsMarked) return false;
-      if (BaseAvatarId != other.BaseAvatarId) return false;
-      if(!skilltreeList_.Equals(other.skilltreeList_)) return false;
       if (Rank != other.Rank) return false;
-      if(!equipRelicList_.Equals(other.equipRelicList_)) return false;
-      if(!hasTakenPromotionRewardList_.Equals(other.hasTakenPromotionRewardList_)) return false;
+      if (Promotion != other.Promotion) return false;
+      if (FirstMetTimeStamp != other.FirstMetTimeStamp) return false;
+      if (EquipmentUniqueId != other.EquipmentUniqueId) return false;
       if (Exp != other.Exp) return false;
+      if(!equipRelicList_.Equals(other.equipRelicList_)) return false;
+      if (BaseAvatarId != other.BaseAvatarId) return false;
+      if (IsMarked != other.IsMarked) return false;
+      if(!skilltreeList_.Equals(other.skilltreeList_)) return false;
+      if(!hasTakenPromotionRewardList_.Equals(other.hasTakenPromotionRewardList_)) return false;
       if (Level != other.Level) return false;
+      if (DressedSkinId != other.DressedSkinId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -275,18 +275,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Promotion != 0) hash ^= Promotion.GetHashCode();
-      if (EquipmentUniqueId != 0) hash ^= EquipmentUniqueId.GetHashCode();
-      if (FirstMetTimeStamp != 0UL) hash ^= FirstMetTimeStamp.GetHashCode();
-      if (DressedSkinId != 0) hash ^= DressedSkinId.GetHashCode();
-      if (IsMarked != false) hash ^= IsMarked.GetHashCode();
-      if (BaseAvatarId != 0) hash ^= BaseAvatarId.GetHashCode();
-      hash ^= skilltreeList_.GetHashCode();
       if (Rank != 0) hash ^= Rank.GetHashCode();
-      hash ^= equipRelicList_.GetHashCode();
-      hash ^= hasTakenPromotionRewardList_.GetHashCode();
+      if (Promotion != 0) hash ^= Promotion.GetHashCode();
+      if (FirstMetTimeStamp != 0UL) hash ^= FirstMetTimeStamp.GetHashCode();
+      if (EquipmentUniqueId != 0) hash ^= EquipmentUniqueId.GetHashCode();
       if (Exp != 0) hash ^= Exp.GetHashCode();
+      hash ^= equipRelicList_.GetHashCode();
+      if (BaseAvatarId != 0) hash ^= BaseAvatarId.GetHashCode();
+      if (IsMarked != false) hash ^= IsMarked.GetHashCode();
+      hash ^= skilltreeList_.GetHashCode();
+      hash ^= hasTakenPromotionRewardList_.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
+      if (DressedSkinId != 0) hash ^= DressedSkinId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -305,44 +305,44 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (BaseAvatarId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(BaseAvatarId);
-      }
-      if (IsMarked != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(IsMarked);
-      }
-      if (EquipmentUniqueId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(EquipmentUniqueId);
-      }
-      hasTakenPromotionRewardList_.WriteTo(output, _repeated_hasTakenPromotionRewardList_codec);
-      equipRelicList_.WriteTo(output, _repeated_equipRelicList_codec);
-      if (Level != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(Level);
-      }
-      if (Exp != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Exp);
-      }
       if (Rank != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(8);
         output.WriteUInt32(Rank);
       }
-      skilltreeList_.WriteTo(output, _repeated_skilltreeList_codec);
-      if (Promotion != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(Promotion);
+      if (IsMarked != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(IsMarked);
       }
-      if (FirstMetTimeStamp != 0UL) {
-        output.WriteRawTag(112);
-        output.WriteUInt64(FirstMetTimeStamp);
+      if (Level != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Level);
       }
       if (DressedSkinId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(48);
         output.WriteUInt32(DressedSkinId);
+      }
+      if (EquipmentUniqueId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(EquipmentUniqueId);
+      }
+      if (FirstMetTimeStamp != 0UL) {
+        output.WriteRawTag(64);
+        output.WriteUInt64(FirstMetTimeStamp);
+      }
+      skilltreeList_.WriteTo(output, _repeated_skilltreeList_codec);
+      hasTakenPromotionRewardList_.WriteTo(output, _repeated_hasTakenPromotionRewardList_codec);
+      if (Promotion != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Promotion);
+      }
+      if (BaseAvatarId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(BaseAvatarId);
+      }
+      equipRelicList_.WriteTo(output, _repeated_equipRelicList_codec);
+      if (Exp != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(Exp);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -354,44 +354,44 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BaseAvatarId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(BaseAvatarId);
-      }
-      if (IsMarked != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(IsMarked);
-      }
-      if (EquipmentUniqueId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(EquipmentUniqueId);
-      }
-      hasTakenPromotionRewardList_.WriteTo(ref output, _repeated_hasTakenPromotionRewardList_codec);
-      equipRelicList_.WriteTo(ref output, _repeated_equipRelicList_codec);
-      if (Level != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(Level);
-      }
-      if (Exp != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Exp);
-      }
       if (Rank != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(8);
         output.WriteUInt32(Rank);
       }
-      skilltreeList_.WriteTo(ref output, _repeated_skilltreeList_codec);
-      if (Promotion != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(Promotion);
+      if (IsMarked != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(IsMarked);
       }
-      if (FirstMetTimeStamp != 0UL) {
-        output.WriteRawTag(112);
-        output.WriteUInt64(FirstMetTimeStamp);
+      if (Level != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Level);
       }
       if (DressedSkinId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(48);
         output.WriteUInt32(DressedSkinId);
+      }
+      if (EquipmentUniqueId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(EquipmentUniqueId);
+      }
+      if (FirstMetTimeStamp != 0UL) {
+        output.WriteRawTag(64);
+        output.WriteUInt64(FirstMetTimeStamp);
+      }
+      skilltreeList_.WriteTo(ref output, _repeated_skilltreeList_codec);
+      hasTakenPromotionRewardList_.WriteTo(ref output, _repeated_hasTakenPromotionRewardList_codec);
+      if (Promotion != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Promotion);
+      }
+      if (BaseAvatarId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(BaseAvatarId);
+      }
+      equipRelicList_.WriteTo(ref output, _repeated_equipRelicList_codec);
+      if (Exp != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(Exp);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -403,35 +403,35 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (Rank != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Rank);
+      }
       if (Promotion != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Promotion);
-      }
-      if (EquipmentUniqueId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EquipmentUniqueId);
       }
       if (FirstMetTimeStamp != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(FirstMetTimeStamp);
       }
-      if (DressedSkinId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DressedSkinId);
+      if (EquipmentUniqueId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EquipmentUniqueId);
+      }
+      if (Exp != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Exp);
+      }
+      size += equipRelicList_.CalculateSize(_repeated_equipRelicList_codec);
+      if (BaseAvatarId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BaseAvatarId);
       }
       if (IsMarked != false) {
         size += 1 + 1;
       }
-      if (BaseAvatarId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BaseAvatarId);
-      }
       size += skilltreeList_.CalculateSize(_repeated_skilltreeList_codec);
-      if (Rank != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Rank);
-      }
-      size += equipRelicList_.CalculateSize(_repeated_equipRelicList_codec);
       size += hasTakenPromotionRewardList_.CalculateSize(_repeated_hasTakenPromotionRewardList_codec);
-      if (Exp != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Exp);
-      }
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
+      }
+      if (DressedSkinId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DressedSkinId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -445,35 +445,35 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.Rank != 0) {
+        Rank = other.Rank;
+      }
       if (other.Promotion != 0) {
         Promotion = other.Promotion;
-      }
-      if (other.EquipmentUniqueId != 0) {
-        EquipmentUniqueId = other.EquipmentUniqueId;
       }
       if (other.FirstMetTimeStamp != 0UL) {
         FirstMetTimeStamp = other.FirstMetTimeStamp;
       }
-      if (other.DressedSkinId != 0) {
-        DressedSkinId = other.DressedSkinId;
+      if (other.EquipmentUniqueId != 0) {
+        EquipmentUniqueId = other.EquipmentUniqueId;
+      }
+      if (other.Exp != 0) {
+        Exp = other.Exp;
+      }
+      equipRelicList_.Add(other.equipRelicList_);
+      if (other.BaseAvatarId != 0) {
+        BaseAvatarId = other.BaseAvatarId;
       }
       if (other.IsMarked != false) {
         IsMarked = other.IsMarked;
       }
-      if (other.BaseAvatarId != 0) {
-        BaseAvatarId = other.BaseAvatarId;
-      }
       skilltreeList_.Add(other.skilltreeList_);
-      if (other.Rank != 0) {
-        Rank = other.Rank;
-      }
-      equipRelicList_.Add(other.equipRelicList_);
       hasTakenPromotionRewardList_.Add(other.hasTakenPromotionRewardList_);
-      if (other.Exp != 0) {
-        Exp = other.Exp;
-      }
       if (other.Level != 0) {
         Level = other.Level;
+      }
+      if (other.DressedSkinId != 0) {
+        DressedSkinId = other.DressedSkinId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -491,52 +491,52 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            BaseAvatarId = input.ReadUInt32();
+            Rank = input.ReadUInt32();
             break;
           }
-          case 16: {
+          case 24: {
             IsMarked = input.ReadBool();
             break;
           }
           case 40: {
-            EquipmentUniqueId = input.ReadUInt32();
-            break;
-          }
-          case 50:
-          case 48: {
-            hasTakenPromotionRewardList_.AddEntriesFrom(input, _repeated_hasTakenPromotionRewardList_codec);
-            break;
-          }
-          case 58: {
-            equipRelicList_.AddEntriesFrom(input, _repeated_equipRelicList_codec);
-            break;
-          }
-          case 64: {
             Level = input.ReadUInt32();
             break;
           }
-          case 80: {
-            Exp = input.ReadUInt32();
+          case 48: {
+            DressedSkinId = input.ReadUInt32();
             break;
           }
-          case 88: {
-            Rank = input.ReadUInt32();
+          case 56: {
+            EquipmentUniqueId = input.ReadUInt32();
             break;
           }
-          case 98: {
-            skilltreeList_.AddEntriesFrom(input, _repeated_skilltreeList_codec);
-            break;
-          }
-          case 104: {
-            Promotion = input.ReadUInt32();
-            break;
-          }
-          case 112: {
+          case 64: {
             FirstMetTimeStamp = input.ReadUInt64();
             break;
           }
+          case 74: {
+            skilltreeList_.AddEntriesFrom(input, _repeated_skilltreeList_codec);
+            break;
+          }
+          case 90:
+          case 88: {
+            hasTakenPromotionRewardList_.AddEntriesFrom(input, _repeated_hasTakenPromotionRewardList_codec);
+            break;
+          }
+          case 96: {
+            Promotion = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            BaseAvatarId = input.ReadUInt32();
+            break;
+          }
+          case 114: {
+            equipRelicList_.AddEntriesFrom(input, _repeated_equipRelicList_codec);
+            break;
+          }
           case 120: {
-            DressedSkinId = input.ReadUInt32();
+            Exp = input.ReadUInt32();
             break;
           }
         }
@@ -555,52 +555,52 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            BaseAvatarId = input.ReadUInt32();
+            Rank = input.ReadUInt32();
             break;
           }
-          case 16: {
+          case 24: {
             IsMarked = input.ReadBool();
             break;
           }
           case 40: {
-            EquipmentUniqueId = input.ReadUInt32();
-            break;
-          }
-          case 50:
-          case 48: {
-            hasTakenPromotionRewardList_.AddEntriesFrom(ref input, _repeated_hasTakenPromotionRewardList_codec);
-            break;
-          }
-          case 58: {
-            equipRelicList_.AddEntriesFrom(ref input, _repeated_equipRelicList_codec);
-            break;
-          }
-          case 64: {
             Level = input.ReadUInt32();
             break;
           }
-          case 80: {
-            Exp = input.ReadUInt32();
+          case 48: {
+            DressedSkinId = input.ReadUInt32();
             break;
           }
-          case 88: {
-            Rank = input.ReadUInt32();
+          case 56: {
+            EquipmentUniqueId = input.ReadUInt32();
             break;
           }
-          case 98: {
-            skilltreeList_.AddEntriesFrom(ref input, _repeated_skilltreeList_codec);
-            break;
-          }
-          case 104: {
-            Promotion = input.ReadUInt32();
-            break;
-          }
-          case 112: {
+          case 64: {
             FirstMetTimeStamp = input.ReadUInt64();
             break;
           }
+          case 74: {
+            skilltreeList_.AddEntriesFrom(ref input, _repeated_skilltreeList_codec);
+            break;
+          }
+          case 90:
+          case 88: {
+            hasTakenPromotionRewardList_.AddEntriesFrom(ref input, _repeated_hasTakenPromotionRewardList_codec);
+            break;
+          }
+          case 96: {
+            Promotion = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            BaseAvatarId = input.ReadUInt32();
+            break;
+          }
+          case 114: {
+            equipRelicList_.AddEntriesFrom(ref input, _repeated_equipRelicList_codec);
+            break;
+          }
           case 120: {
-            DressedSkinId = input.ReadUInt32();
+            Exp = input.ReadUInt32();
             break;
           }
         }

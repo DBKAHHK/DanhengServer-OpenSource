@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiBVcGRhdGVNb3ZpZVJhY2luZ0RhdGFDc1JlcS5wcm90bxoQUmFjaW5nRGF0",
             "YS5wcm90byI+ChpVcGRhdGVNb3ZpZVJhY2luZ0RhdGFDc1JlcRIgCgtyYWNp",
-            "bmdfZGF0YRgNIAEoCzILLlJhY2luZ0RhdGFCHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "bmdfZGF0YRgCIAEoCzILLlJhY2luZ0RhdGFCHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RacingDataReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "racing_data" field.</summary>
-    public const int RacingDataFieldNumber = 13;
+    public const int RacingDataFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.RacingData racingData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (racingData_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(18);
         output.WriteMessage(RacingData);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (racingData_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(18);
         output.WriteMessage(RacingData);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 106: {
+          case 18: {
             if (racingData_ == null) {
               RacingData = new global::EggLink.DanhengServer.Proto.RacingData();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 106: {
+          case 18: {
             if (racingData_ == null) {
               RacingData = new global::EggLink.DanhengServer.Proto.RacingData();
             }

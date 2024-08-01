@@ -15,13 +15,13 @@ public class PacketGetEnteredSceneScRsp : BasePacket
             if (excel.FinishMainMissionList.Count == 0 && excel.FinishMainMissionList.Count == 0) continue;
 
             // Add info
-            var info = new EnteredScene
+            var info = new EnteredSceneInfo
             {
                 FloorId = (uint)excel.FloorID,
                 PlaneId = (uint)excel.PlaneID
             };
 
-            proto.EnteredSceneList.Add(info);
+            proto.EnteredSceneInfoList.Add(info);
         }
 
         SetData(proto);

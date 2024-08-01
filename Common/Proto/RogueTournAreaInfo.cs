@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhSb2d1ZVRvdXJuQXJlYUluZm8ucHJvdG8ijAEKElJvZ3VlVG91cm5BcmVh",
-            "SW5mbxIRCglpc19maW5pc2gYCiABKAgSFwoPaXNfdGFrZW5fcmV3YXJkGAIg",
-            "ASgIEg8KB2FyZWFfaWQYDiABKA0SJgoedW5sb2NrZWRfdG91cm5fZGlmZmlj",
-            "dWx0eV9saXN0GAsgAygNEhEKCWlzX3VubG9jaxgDIAEoCEIeqgIbRWdnTGlu",
+            "SW5mbxImCh51bmxvY2tlZF90b3Vybl9kaWZmaWN1bHR5X2xpc3QYDSADKA0S",
+            "EQoJaXNfZmluaXNoGAYgASgIEhcKD2lzX3Rha2VuX3Jld2FyZBgIIAEoCBIR",
+            "Cglpc191bmxvY2sYCSABKAgSDwoHYXJlYV9pZBgDIAEoDUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournAreaInfo), global::EggLink.DanhengServer.Proto.RogueTournAreaInfo.Parser, new[]{ "IsFinish", "IsTakenReward", "AreaId", "UnlockedTournDifficultyList", "IsUnlock" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournAreaInfo), global::EggLink.DanhengServer.Proto.RogueTournAreaInfo.Parser, new[]{ "UnlockedTournDifficultyList", "IsFinish", "IsTakenReward", "IsUnlock", "AreaId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,11 +74,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournAreaInfo(RogueTournAreaInfo other) : this() {
+      unlockedTournDifficultyList_ = other.unlockedTournDifficultyList_.Clone();
       isFinish_ = other.isFinish_;
       isTakenReward_ = other.isTakenReward_;
-      areaId_ = other.areaId_;
-      unlockedTournDifficultyList_ = other.unlockedTournDifficultyList_.Clone();
       isUnlock_ = other.isUnlock_;
+      areaId_ = other.areaId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,8 +88,19 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournAreaInfo(this);
     }
 
+    /// <summary>Field number for the "unlocked_tourn_difficulty_list" field.</summary>
+    public const int UnlockedTournDifficultyListFieldNumber = 13;
+    private static readonly pb::FieldCodec<uint> _repeated_unlockedTournDifficultyList_codec
+        = pb::FieldCodec.ForUInt32(106);
+    private readonly pbc::RepeatedField<uint> unlockedTournDifficultyList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> UnlockedTournDifficultyList {
+      get { return unlockedTournDifficultyList_; }
+    }
+
     /// <summary>Field number for the "is_finish" field.</summary>
-    public const int IsFinishFieldNumber = 10;
+    public const int IsFinishFieldNumber = 6;
     private bool isFinish_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -101,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_taken_reward" field.</summary>
-    public const int IsTakenRewardFieldNumber = 2;
+    public const int IsTakenRewardFieldNumber = 8;
     private bool isTakenReward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,31 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "area_id" field.</summary>
-    public const int AreaIdFieldNumber = 14;
-    private uint areaId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint AreaId {
-      get { return areaId_; }
-      set {
-        areaId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "unlocked_tourn_difficulty_list" field.</summary>
-    public const int UnlockedTournDifficultyListFieldNumber = 11;
-    private static readonly pb::FieldCodec<uint> _repeated_unlockedTournDifficultyList_codec
-        = pb::FieldCodec.ForUInt32(90);
-    private readonly pbc::RepeatedField<uint> unlockedTournDifficultyList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> UnlockedTournDifficultyList {
-      get { return unlockedTournDifficultyList_; }
-    }
-
     /// <summary>Field number for the "is_unlock" field.</summary>
-    public const int IsUnlockFieldNumber = 3;
+    public const int IsUnlockFieldNumber = 9;
     private bool isUnlock_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -144,6 +132,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return isUnlock_; }
       set {
         isUnlock_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "area_id" field.</summary>
+    public const int AreaIdFieldNumber = 3;
+    private uint areaId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint AreaId {
+      get { return areaId_; }
+      set {
+        areaId_ = value;
       }
     }
 
@@ -162,11 +162,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if(!unlockedTournDifficultyList_.Equals(other.unlockedTournDifficultyList_)) return false;
       if (IsFinish != other.IsFinish) return false;
       if (IsTakenReward != other.IsTakenReward) return false;
-      if (AreaId != other.AreaId) return false;
-      if(!unlockedTournDifficultyList_.Equals(other.unlockedTournDifficultyList_)) return false;
       if (IsUnlock != other.IsUnlock) return false;
+      if (AreaId != other.AreaId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -174,11 +174,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      hash ^= unlockedTournDifficultyList_.GetHashCode();
       if (IsFinish != false) hash ^= IsFinish.GetHashCode();
       if (IsTakenReward != false) hash ^= IsTakenReward.GetHashCode();
-      if (AreaId != 0) hash ^= AreaId.GetHashCode();
-      hash ^= unlockedTournDifficultyList_.GetHashCode();
       if (IsUnlock != false) hash ^= IsUnlock.GetHashCode();
+      if (AreaId != 0) hash ^= AreaId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -197,23 +197,23 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (AreaId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(AreaId);
+      }
+      if (IsFinish != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(IsFinish);
+      }
       if (IsTakenReward != false) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(64);
         output.WriteBool(IsTakenReward);
       }
       if (IsUnlock != false) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(72);
         output.WriteBool(IsUnlock);
       }
-      if (IsFinish != false) {
-        output.WriteRawTag(80);
-        output.WriteBool(IsFinish);
-      }
       unlockedTournDifficultyList_.WriteTo(output, _repeated_unlockedTournDifficultyList_codec);
-      if (AreaId != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(AreaId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -224,23 +224,23 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AreaId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(AreaId);
+      }
+      if (IsFinish != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(IsFinish);
+      }
       if (IsTakenReward != false) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(64);
         output.WriteBool(IsTakenReward);
       }
       if (IsUnlock != false) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(72);
         output.WriteBool(IsUnlock);
       }
-      if (IsFinish != false) {
-        output.WriteRawTag(80);
-        output.WriteBool(IsFinish);
-      }
       unlockedTournDifficultyList_.WriteTo(ref output, _repeated_unlockedTournDifficultyList_codec);
-      if (AreaId != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(AreaId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -251,18 +251,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += unlockedTournDifficultyList_.CalculateSize(_repeated_unlockedTournDifficultyList_codec);
       if (IsFinish != false) {
         size += 1 + 1;
       }
       if (IsTakenReward != false) {
         size += 1 + 1;
       }
-      if (AreaId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AreaId);
-      }
-      size += unlockedTournDifficultyList_.CalculateSize(_repeated_unlockedTournDifficultyList_codec);
       if (IsUnlock != false) {
         size += 1 + 1;
+      }
+      if (AreaId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AreaId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -276,18 +276,18 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      unlockedTournDifficultyList_.Add(other.unlockedTournDifficultyList_);
       if (other.IsFinish != false) {
         IsFinish = other.IsFinish;
       }
       if (other.IsTakenReward != false) {
         IsTakenReward = other.IsTakenReward;
       }
-      if (other.AreaId != 0) {
-        AreaId = other.AreaId;
-      }
-      unlockedTournDifficultyList_.Add(other.unlockedTournDifficultyList_);
       if (other.IsUnlock != false) {
         IsUnlock = other.IsUnlock;
+      }
+      if (other.AreaId != 0) {
+        AreaId = other.AreaId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -304,25 +304,25 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            IsTakenReward = input.ReadBool();
-            break;
-          }
           case 24: {
-            IsUnlock = input.ReadBool();
+            AreaId = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 48: {
             IsFinish = input.ReadBool();
             break;
           }
-          case 90:
-          case 88: {
-            unlockedTournDifficultyList_.AddEntriesFrom(input, _repeated_unlockedTournDifficultyList_codec);
+          case 64: {
+            IsTakenReward = input.ReadBool();
             break;
           }
-          case 112: {
-            AreaId = input.ReadUInt32();
+          case 72: {
+            IsUnlock = input.ReadBool();
+            break;
+          }
+          case 106:
+          case 104: {
+            unlockedTournDifficultyList_.AddEntriesFrom(input, _repeated_unlockedTournDifficultyList_codec);
             break;
           }
         }
@@ -340,25 +340,25 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            IsTakenReward = input.ReadBool();
-            break;
-          }
           case 24: {
-            IsUnlock = input.ReadBool();
+            AreaId = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 48: {
             IsFinish = input.ReadBool();
             break;
           }
-          case 90:
-          case 88: {
-            unlockedTournDifficultyList_.AddEntriesFrom(ref input, _repeated_unlockedTournDifficultyList_codec);
+          case 64: {
+            IsTakenReward = input.ReadBool();
             break;
           }
-          case 112: {
-            AreaId = input.ReadUInt32();
+          case 72: {
+            IsUnlock = input.ReadBool();
+            break;
+          }
+          case 106:
+          case 104: {
+            unlockedTournDifficultyList_.AddEntriesFrom(ref input, _repeated_unlockedTournDifficultyList_codec);
             break;
           }
         }

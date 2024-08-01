@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlHZXRBcmNoaXZlRGF0YVNjUnNwLnByb3RvGhFBcmNoaXZlRGF0YS5wcm90",
-            "byJKChNHZXRBcmNoaXZlRGF0YVNjUnNwEg8KB3JldGNvZGUYBCABKA0SIgoM",
-            "YXJjaGl2ZV9pbmZvGAkgASgLMgwuQXJjaGl2ZURhdGFCHqoCG0VnZ0xpbmsu",
+            "byJKChNHZXRBcmNoaXZlRGF0YVNjUnNwEiIKDGFyY2hpdmVfZGF0YRgBIAEo",
+            "CzIMLkFyY2hpdmVEYXRhEg8KB3JldGNvZGUYByABKA1CHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ArchiveDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetArchiveDataScRsp), global::EggLink.DanhengServer.Proto.GetArchiveDataScRsp.Parser, new[]{ "Retcode", "ArchiveInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetArchiveDataScRsp), global::EggLink.DanhengServer.Proto.GetArchiveDataScRsp.Parser, new[]{ "ArchiveData", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetArchiveDataScRsp(GetArchiveDataScRsp other) : this() {
+      archiveData_ = other.archiveData_ != null ? other.archiveData_.Clone() : null;
       retcode_ = other.retcode_;
-      archiveInfo_ = other.archiveInfo_ != null ? other.archiveInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,8 +84,20 @@ namespace EggLink.DanhengServer.Proto {
       return new GetArchiveDataScRsp(this);
     }
 
+    /// <summary>Field number for the "archive_data" field.</summary>
+    public const int ArchiveDataFieldNumber = 1;
+    private global::EggLink.DanhengServer.Proto.ArchiveData archiveData_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ArchiveData ArchiveData {
+      get { return archiveData_; }
+      set {
+        archiveData_ = value;
+      }
+    }
+
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 4;
+    public const int RetcodeFieldNumber = 7;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -93,18 +105,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "archive_info" field.</summary>
-    public const int ArchiveInfoFieldNumber = 9;
-    private global::EggLink.DanhengServer.Proto.ArchiveData archiveInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ArchiveData ArchiveInfo {
-      get { return archiveInfo_; }
-      set {
-        archiveInfo_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(ArchiveData, other.ArchiveData)) return false;
       if (Retcode != other.Retcode) return false;
-      if (!object.Equals(ArchiveInfo, other.ArchiveInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (archiveData_ != null) hash ^= ArchiveData.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (archiveInfo_ != null) hash ^= ArchiveInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Retcode);
+      if (archiveData_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ArchiveData);
       }
-      if (archiveInfo_ != null) {
-        output.WriteRawTag(74);
-        output.WriteMessage(ArchiveInfo);
+      if (Retcode != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Retcode);
+      if (archiveData_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ArchiveData);
       }
-      if (archiveInfo_ != null) {
-        output.WriteRawTag(74);
-        output.WriteMessage(ArchiveInfo);
+      if (Retcode != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (archiveData_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ArchiveData);
+      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
-      if (archiveInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ArchiveInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,14 +206,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.archiveData_ != null) {
+        if (archiveData_ == null) {
+          ArchiveData = new global::EggLink.DanhengServer.Proto.ArchiveData();
+        }
+        ArchiveData.MergeFrom(other.ArchiveData);
+      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
-      }
-      if (other.archiveInfo_ != null) {
-        if (archiveInfo_ == null) {
-          ArchiveInfo = new global::EggLink.DanhengServer.Proto.ArchiveData();
-        }
-        ArchiveInfo.MergeFrom(other.ArchiveInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            Retcode = input.ReadUInt32();
+          case 10: {
+            if (archiveData_ == null) {
+              ArchiveData = new global::EggLink.DanhengServer.Proto.ArchiveData();
+            }
+            input.ReadMessage(ArchiveData);
             break;
           }
-          case 74: {
-            if (archiveInfo_ == null) {
-              ArchiveInfo = new global::EggLink.DanhengServer.Proto.ArchiveData();
-            }
-            input.ReadMessage(ArchiveInfo);
+          case 56: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            Retcode = input.ReadUInt32();
+          case 10: {
+            if (archiveData_ == null) {
+              ArchiveData = new global::EggLink.DanhengServer.Proto.ArchiveData();
+            }
+            input.ReadMessage(ArchiveData);
             break;
           }
-          case 74: {
-            if (archiveInfo_ == null) {
-              ArchiveInfo = new global::EggLink.DanhengServer.Proto.ArchiveData();
-            }
-            input.ReadMessage(ArchiveInfo);
+          case 56: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

@@ -4,7 +4,7 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.ChessRogue;
 
 public class PacketChessRogueUpdateLevelBaseInfoScNotify : BasePacket
 {
-    public PacketChessRogueUpdateLevelBaseInfoScNotify(ChessRogueLevelStatusType status) : base(
+    public PacketChessRogueUpdateLevelBaseInfoScNotify(ChessRogueLevelStatus status) : base(
         CmdIds.ChessRogueUpdateLevelBaseInfoScNotify)
     {
         var proto = new ChessRogueUpdateLevelBaseInfoScNotify

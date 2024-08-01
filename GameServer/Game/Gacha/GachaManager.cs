@@ -134,7 +134,7 @@ public class GachaManager(PlayerInstance player) : BasePlayerManager(player)
                         if (rankUpItemId != null)
                         {
                             var rankUpItem = Player.InventoryManager!.GetItem(rankUpItemId.Value);
-                            if (avatar.Rank + rankUpItem?.Count >= 6)
+                            if (avatar.PathInfoes[item].Rank + rankUpItem?.Count >= 6)
                             {
                                 star += 60;
                             }
@@ -169,7 +169,7 @@ public class GachaManager(PlayerInstance player) : BasePlayerManager(player)
                         if (rankUpItemId != null)
                         {
                             var rankUpItem = Player.InventoryManager!.GetItem(rankUpItemId.Value);
-                            if (avatar.Rank + rankUpItem?.Count >= 6)
+                            if (avatar.PathInfoes[item].Rank + rankUpItem?.Count >= 6)
                             {
                                 star += 12;
                             }

@@ -40,7 +40,7 @@ public class NewLoginResJson
 
         public List<LinkData> links { get; set; } = new()
         {
-            new()
+            new LinkData()
         };
 
         public string mid { get; set; } = "";

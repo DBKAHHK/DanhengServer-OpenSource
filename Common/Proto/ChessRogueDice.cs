@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRDaGVzc1JvZ3VlRGljZS5wcm90bxofQ2hlc3NSb2d1ZURpY2VTdXJmYWNl",
-            "SW5mby5wcm90byKAAQoOQ2hlc3NSb2d1ZURpY2USGAoQZGlmZmljdWx0eV9s",
-            "ZXZlbBgPIAEoDRIRCglicmFuY2hfaWQYDSABKA0SMAoMc3VyZmFjZV9saXN0",
-            "GAUgAygLMhouQ2hlc3NSb2d1ZURpY2VTdXJmYWNlSW5mbxIPCgdhcmVhX2lk",
-            "GAEgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
-            "Mw=="));
+            "SW5mby5wcm90byKNAQoOQ2hlc3NSb2d1ZURpY2USFgoOZGljZV9icmFuY2hf",
+            "aWQYBiABKA0SHAoUbWF4X2RpZmZpY3VsdHlfbGV2ZWwYBSABKA0SMAoMc3Vy",
+            "ZmFjZV9saXN0GAcgAygLMhouQ2hlc3NSb2d1ZURpY2VTdXJmYWNlSW5mbxIT",
+            "CgttYXhfYXJlYV9pZBgIIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueDice), global::EggLink.DanhengServer.Proto.ChessRogueDice.Parser, new[]{ "DifficultyLevel", "BranchId", "SurfaceList", "AreaId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueDice), global::EggLink.DanhengServer.Proto.ChessRogueDice.Parser, new[]{ "DiceBranchId", "MaxDifficultyLevel", "SurfaceList", "MaxAreaId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,10 +75,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueDice(ChessRogueDice other) : this() {
-      difficultyLevel_ = other.difficultyLevel_;
-      branchId_ = other.branchId_;
+      diceBranchId_ = other.diceBranchId_;
+      maxDifficultyLevel_ = other.maxDifficultyLevel_;
       surfaceList_ = other.surfaceList_.Clone();
-      areaId_ = other.areaId_;
+      maxAreaId_ = other.maxAreaId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,34 +88,34 @@ namespace EggLink.DanhengServer.Proto {
       return new ChessRogueDice(this);
     }
 
-    /// <summary>Field number for the "difficulty_level" field.</summary>
-    public const int DifficultyLevelFieldNumber = 15;
-    private uint difficultyLevel_;
+    /// <summary>Field number for the "dice_branch_id" field.</summary>
+    public const int DiceBranchIdFieldNumber = 6;
+    private uint diceBranchId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DifficultyLevel {
-      get { return difficultyLevel_; }
+    public uint DiceBranchId {
+      get { return diceBranchId_; }
       set {
-        difficultyLevel_ = value;
+        diceBranchId_ = value;
       }
     }
 
-    /// <summary>Field number for the "branch_id" field.</summary>
-    public const int BranchIdFieldNumber = 13;
-    private uint branchId_;
+    /// <summary>Field number for the "max_difficulty_level" field.</summary>
+    public const int MaxDifficultyLevelFieldNumber = 5;
+    private uint maxDifficultyLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BranchId {
-      get { return branchId_; }
+    public uint MaxDifficultyLevel {
+      get { return maxDifficultyLevel_; }
       set {
-        branchId_ = value;
+        maxDifficultyLevel_ = value;
       }
     }
 
     /// <summary>Field number for the "surface_list" field.</summary>
-    public const int SurfaceListFieldNumber = 5;
+    public const int SurfaceListFieldNumber = 7;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo> _repeated_surfaceList_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo.Parser);
+        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo> surfaceList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,15 +123,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return surfaceList_; }
     }
 
-    /// <summary>Field number for the "area_id" field.</summary>
-    public const int AreaIdFieldNumber = 1;
-    private uint areaId_;
+    /// <summary>Field number for the "max_area_id" field.</summary>
+    public const int MaxAreaIdFieldNumber = 8;
+    private uint maxAreaId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint AreaId {
-      get { return areaId_; }
+    public uint MaxAreaId {
+      get { return maxAreaId_; }
       set {
-        areaId_ = value;
+        maxAreaId_ = value;
       }
     }
 
@@ -150,10 +150,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DifficultyLevel != other.DifficultyLevel) return false;
-      if (BranchId != other.BranchId) return false;
+      if (DiceBranchId != other.DiceBranchId) return false;
+      if (MaxDifficultyLevel != other.MaxDifficultyLevel) return false;
       if(!surfaceList_.Equals(other.surfaceList_)) return false;
-      if (AreaId != other.AreaId) return false;
+      if (MaxAreaId != other.MaxAreaId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,10 +161,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (DifficultyLevel != 0) hash ^= DifficultyLevel.GetHashCode();
-      if (BranchId != 0) hash ^= BranchId.GetHashCode();
+      if (DiceBranchId != 0) hash ^= DiceBranchId.GetHashCode();
+      if (MaxDifficultyLevel != 0) hash ^= MaxDifficultyLevel.GetHashCode();
       hash ^= surfaceList_.GetHashCode();
-      if (AreaId != 0) hash ^= AreaId.GetHashCode();
+      if (MaxAreaId != 0) hash ^= MaxAreaId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,18 +183,18 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (AreaId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(AreaId);
+      if (MaxDifficultyLevel != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(MaxDifficultyLevel);
+      }
+      if (DiceBranchId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(DiceBranchId);
       }
       surfaceList_.WriteTo(output, _repeated_surfaceList_codec);
-      if (BranchId != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(BranchId);
-      }
-      if (DifficultyLevel != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(DifficultyLevel);
+      if (MaxAreaId != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(MaxAreaId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -206,18 +206,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (AreaId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(AreaId);
+      if (MaxDifficultyLevel != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(MaxDifficultyLevel);
+      }
+      if (DiceBranchId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(DiceBranchId);
       }
       surfaceList_.WriteTo(ref output, _repeated_surfaceList_codec);
-      if (BranchId != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(BranchId);
-      }
-      if (DifficultyLevel != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(DifficultyLevel);
+      if (MaxAreaId != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(MaxAreaId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -229,15 +229,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (DifficultyLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DifficultyLevel);
+      if (DiceBranchId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DiceBranchId);
       }
-      if (BranchId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BranchId);
+      if (MaxDifficultyLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxDifficultyLevel);
       }
       size += surfaceList_.CalculateSize(_repeated_surfaceList_codec);
-      if (AreaId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AreaId);
+      if (MaxAreaId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxAreaId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -251,15 +251,15 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.DifficultyLevel != 0) {
-        DifficultyLevel = other.DifficultyLevel;
+      if (other.DiceBranchId != 0) {
+        DiceBranchId = other.DiceBranchId;
       }
-      if (other.BranchId != 0) {
-        BranchId = other.BranchId;
+      if (other.MaxDifficultyLevel != 0) {
+        MaxDifficultyLevel = other.MaxDifficultyLevel;
       }
       surfaceList_.Add(other.surfaceList_);
-      if (other.AreaId != 0) {
-        AreaId = other.AreaId;
+      if (other.MaxAreaId != 0) {
+        MaxAreaId = other.MaxAreaId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -276,20 +276,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            AreaId = input.ReadUInt32();
+          case 40: {
+            MaxDifficultyLevel = input.ReadUInt32();
             break;
           }
-          case 42: {
+          case 48: {
+            DiceBranchId = input.ReadUInt32();
+            break;
+          }
+          case 58: {
             surfaceList_.AddEntriesFrom(input, _repeated_surfaceList_codec);
             break;
           }
-          case 104: {
-            BranchId = input.ReadUInt32();
-            break;
-          }
-          case 120: {
-            DifficultyLevel = input.ReadUInt32();
+          case 64: {
+            MaxAreaId = input.ReadUInt32();
             break;
           }
         }
@@ -307,20 +307,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            AreaId = input.ReadUInt32();
+          case 40: {
+            MaxDifficultyLevel = input.ReadUInt32();
             break;
           }
-          case 42: {
+          case 48: {
+            DiceBranchId = input.ReadUInt32();
+            break;
+          }
+          case 58: {
             surfaceList_.AddEntriesFrom(ref input, _repeated_surfaceList_codec);
             break;
           }
-          case 104: {
-            BranchId = input.ReadUInt32();
-            break;
-          }
-          case 120: {
-            DifficultyLevel = input.ReadUInt32();
+          case 64: {
+            MaxAreaId = input.ReadUInt32();
             break;
           }
         }

@@ -11,9 +11,9 @@ public class PacketContentPackageSyncDataScNotify : BasePacket
         {
             Data = new ContentPackageData
             {
-                ContentInfoList =
+                ContentPackageList =
                 {
-                    GameData.ContentPackageConfigData.Select(x => new ContentInfo
+                    GameData.ContentPackageConfigData.Select(x => new ContentPackageInfo
                     {
                         ContentId = (uint)x.Key,
                         Status = ContentPackageStatus.Finished

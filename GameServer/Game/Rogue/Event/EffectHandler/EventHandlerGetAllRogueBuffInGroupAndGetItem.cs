@@ -15,6 +15,6 @@ public class EventHandlerGetAllRogueBuffInGroupAndGetItem : RogueEventEffectHand
         if (buffGroup == null) return;
         await rogue.AddBuffList(buffGroup.BuffList);
         await rogue.GainMoney(paramList[2], paramList[3],
-            RogueActionDisplayType.RogueCommonActionResultDisplayTypeSingle);
+            RogueCommonActionResultDisplayType.Single);
     }
 }

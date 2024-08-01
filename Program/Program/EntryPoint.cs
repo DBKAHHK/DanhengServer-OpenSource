@@ -1,5 +1,4 @@
-﻿using EggLink.DanhengServer.Command;
-using EggLink.DanhengServer.Command.Command;
+﻿using EggLink.DanhengServer.Command.Command;
 using EggLink.DanhengServer.Configuration;
 using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database;

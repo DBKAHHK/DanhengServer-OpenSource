@@ -13,7 +13,7 @@ public class PacketGetSceneMapInfoScRsp : BasePacket
     {
         var rsp = new GetSceneMapInfoScRsp
         {
-            CGIIIEKIDJE = req.CGIIIEKIDJE
+            NKDMCDLKHDK = req.NKDMCDLKHDK
         };
 
         foreach (var entry in req.EntryIdList)
@@ -38,20 +38,20 @@ public class PacketGetSceneMapInfoScRsp : BasePacket
 
             mazeMap.ChestList.Add(new ChestInfo
             {
-                TotalAmount = 1,
-                MapInfoChestType = ChestType.MapInfoChestTypeNormal
+                ExistNum = 1,
+                ChestType = ChestType.MapInfoChestTypeNormal
             });
 
             mazeMap.ChestList.Add(new ChestInfo
             {
-                TotalAmount = 1,
-                MapInfoChestType = ChestType.MapInfoChestTypePuzzle
+                ExistNum = 1,
+                ChestType = ChestType.MapInfoChestTypePuzzle
             });
 
             mazeMap.ChestList.Add(new ChestInfo
             {
-                TotalAmount = 1,
-                MapInfoChestType = ChestType.MapInfoChestTypeChallenge
+                ExistNum = 1,
+                ChestType = ChestType.MapInfoChestTypeChallenge
             });
 
             foreach (var groupInfo in floorInfo.Groups.Values) // all the icons on the map

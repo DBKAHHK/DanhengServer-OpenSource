@@ -8,7 +8,6 @@ namespace EggLink.DanhengServer.GameServer.Game.Mission;
 
 public class StoryLineEntityLoader(SceneInstance scene) : SceneEntityLoader(scene)
 {
-    public List<int> LoadGroups = [];
     public int DimensionId;
 
     public override async ValueTask LoadEntity()

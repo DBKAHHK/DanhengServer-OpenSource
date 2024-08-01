@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static SetGenderScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRTZXRHZW5kZXJTY1JzcC5wcm90bxoTSGVyb0Jhc2ljVHlwZS5wcm90byJJ",
-            "Cg5TZXRHZW5kZXJTY1JzcBImCg5jdXJfYmFzaWNfdHlwZRgJIAEoDjIOLkhl",
-            "cm9CYXNpY1R5cGUSDwoHcmV0Y29kZRgNIAEoDUIeqgIbRWdnTGluay5EYW5o",
-            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChRTZXRHZW5kZXJTY1JzcC5wcm90bxoZTXVsdGlQYXRoQXZhdGFyVHlwZS5w",
+            "cm90byJQCg5TZXRHZW5kZXJTY1JzcBItCg9jdXJfYXZhdGFyX3BhdGgYASAB",
+            "KA4yFC5NdWx0aVBhdGhBdmF0YXJUeXBlEg8KB3JldGNvZGUYBCABKA1CHqoC",
+            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeroBasicTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MultiPathAvatarTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetGenderScRsp), global::EggLink.DanhengServer.Proto.SetGenderScRsp.Parser, new[]{ "CurBasicType", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetGenderScRsp), global::EggLink.DanhengServer.Proto.SetGenderScRsp.Parser, new[]{ "CurAvatarPath", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SetGenderScRsp(SetGenderScRsp other) : this() {
-      curBasicType_ = other.curBasicType_;
+      curAvatarPath_ = other.curAvatarPath_;
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,20 +84,20 @@ namespace EggLink.DanhengServer.Proto {
       return new SetGenderScRsp(this);
     }
 
-    /// <summary>Field number for the "cur_basic_type" field.</summary>
-    public const int CurBasicTypeFieldNumber = 9;
-    private global::EggLink.DanhengServer.Proto.HeroBasicType curBasicType_ = global::EggLink.DanhengServer.Proto.HeroBasicType.None;
+    /// <summary>Field number for the "cur_avatar_path" field.</summary>
+    public const int CurAvatarPathFieldNumber = 1;
+    private global::EggLink.DanhengServer.Proto.MultiPathAvatarType curAvatarPath_ = global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.HeroBasicType CurBasicType {
-      get { return curBasicType_; }
+    public global::EggLink.DanhengServer.Proto.MultiPathAvatarType CurAvatarPath {
+      get { return curAvatarPath_; }
       set {
-        curBasicType_ = value;
+        curAvatarPath_ = value;
       }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 13;
+    public const int RetcodeFieldNumber = 4;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CurBasicType != other.CurBasicType) return false;
+      if (CurAvatarPath != other.CurAvatarPath) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -132,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CurBasicType != global::EggLink.DanhengServer.Proto.HeroBasicType.None) hash ^= CurBasicType.GetHashCode();
+      if (CurAvatarPath != global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None) hash ^= CurAvatarPath.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -152,12 +152,12 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CurBasicType != global::EggLink.DanhengServer.Proto.HeroBasicType.None) {
-        output.WriteRawTag(72);
-        output.WriteEnum((int) CurBasicType);
+      if (CurAvatarPath != global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) CurAvatarPath);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -170,12 +170,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CurBasicType != global::EggLink.DanhengServer.Proto.HeroBasicType.None) {
-        output.WriteRawTag(72);
-        output.WriteEnum((int) CurBasicType);
+      if (CurAvatarPath != global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) CurAvatarPath);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -188,8 +188,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CurBasicType != global::EggLink.DanhengServer.Proto.HeroBasicType.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CurBasicType);
+      if (CurAvatarPath != global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CurAvatarPath);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
@@ -206,8 +206,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.CurBasicType != global::EggLink.DanhengServer.Proto.HeroBasicType.None) {
-        CurBasicType = other.CurBasicType;
+      if (other.CurAvatarPath != global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None) {
+        CurAvatarPath = other.CurAvatarPath;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
-            CurBasicType = (global::EggLink.DanhengServer.Proto.HeroBasicType) input.ReadEnum();
+          case 8: {
+            CurAvatarPath = (global::EggLink.DanhengServer.Proto.MultiPathAvatarType) input.ReadEnum();
             break;
           }
-          case 104: {
+          case 32: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
-            CurBasicType = (global::EggLink.DanhengServer.Proto.HeroBasicType) input.ReadEnum();
+          case 8: {
+            CurAvatarPath = (global::EggLink.DanhengServer.Proto.MultiPathAvatarType) input.ReadEnum();
             break;
           }
-          case 104: {
+          case 32: {
             Retcode = input.ReadUInt32();
             break;
           }

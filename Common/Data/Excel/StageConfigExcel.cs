@@ -29,8 +29,8 @@ public class StageConfigExcel : ExcelResource
         {
             var proto = new SceneMonsterWave
             {
-                WaveId = (uint)waveId++,
-                StageId = (uint)StageID
+                BattleWaveId = (uint)waveId++,
+                BattleStageId = (uint)StageID
             };
 
             proto.MonsterList.Add(new SceneMonster

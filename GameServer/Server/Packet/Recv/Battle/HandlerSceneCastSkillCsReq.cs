@@ -11,6 +11,7 @@ public class HandlerSceneCastSkillCsReq : Handler
     {
         var req = SceneCastSkillCsReq.Parser.ParseFrom(data);
 
+        var player = connection.Player!;
         MazeSkill mazeSkill = new([]);
 
         // Get casting avatar
@@ -22,7 +23,7 @@ public class HandlerSceneCastSkillCsReq : Handler
             if (req.SkillIndex > 0)
             {
                 // Cast skill effects
-                if (caster.AvatarInfo.Excel?.MazeSkill != null)
+                if (caster.AvatarInfo.Excel != null && caster.AvatarInfo.Excel!.MazeSkill != null)
                 {
                     mazeSkill = MazeSkillManager.GetSkill(caster.AvatarInfo.GetAvatarId(), (int)req.SkillIndex);
                     mazeSkill.OnCast(caster);
@@ -36,15 +37,23 @@ public class HandlerSceneCastSkillCsReq : Handler
 
         if (req.AssistMonsterEntityIdList.Count > 0)
         {
-            List<uint> hitTargetEntityIdList = [];
-            if (req.AssistMonsterEntityIdList.Count > 0)
-                foreach (var id in req.AssistMonsterEntityIdList)
-                    hitTargetEntityIdList.Add(id);
+            if (caster != null && caster.AvatarInfo.AvatarId == 1218 && req.SkillIndex == 1)
+            {
+                // Avoid Jiqoqiu's E skill
+                await connection.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId));
+            }
             else
-                foreach (var id in req.HitTargetEntityIdList)
-                    hitTargetEntityIdList.Add(id);
-            // Start battle
-            await connection.Player!.BattleManager!.StartBattle(req, mazeSkill!, [.. hitTargetEntityIdList]);
+            {
+                var hitTargetEntityIdList = new List<uint>();
+                if (req.AssistMonsterEntityIdList.Count > 0)
+                    foreach (var id in req.AssistMonsterEntityIdList)
+                        hitTargetEntityIdList.Add(id);
+                else
+                    foreach (var id in req.HitTargetEntityIdList)
+                        hitTargetEntityIdList.Add(id);
+                // Start battle
+                await connection.Player!.BattleManager!.StartBattle(req, mazeSkill!, [.. hitTargetEntityIdList]);
+            }
         }
         else
         {

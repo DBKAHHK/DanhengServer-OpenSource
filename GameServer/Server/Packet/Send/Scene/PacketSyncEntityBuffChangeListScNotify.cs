@@ -10,7 +10,7 @@ public class PacketSyncEntityBuffChangeListScNotify : BasePacket
         CmdIds.SyncEntityBuffChangeListScNotify)
     {
         var proto = new SyncEntityBuffChangeListScNotify();
-        var change = new EntityBuffChange
+        var change = new SceneEntityBuffChange
         {
             EntityId = (uint)entity.EntityID,
             BuffChangeInfo = buff.ToProto()
@@ -28,7 +28,7 @@ public class PacketSyncEntityBuffChangeListScNotify : BasePacket
         foreach (var buff in buffs)
         {
             buff.Duration = 0;
-            var change = new EntityBuffChange
+            var change = new SceneEntityBuffChange
             {
                 EntityId = (uint)entity.EntityID,
                 BuffChangeInfo = buff.ToProto()

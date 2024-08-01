@@ -21,8 +21,8 @@ public class ChallengeManager(PlayerInstance player) : BasePlayerManager(player)
 
     #region Management
 
-    public async ValueTask StartChallenge(int challengeId, StartChallengeStoryBuffInfo? storyBuffs,
-        StartChallengeBossBuffInfo? bossBuffs)
+    public async ValueTask StartChallenge(int challengeId, ChallengeStoryBuffInfo? storyBuffs,
+        ChallengeBossBuffInfo? bossBuffs)
     {
         // Get challenge excel
         if (!GameData.ChallengeConfigData.TryGetValue(challengeId, out var value))
@@ -109,14 +109,14 @@ public class ChallengeManager(PlayerInstance player) : BasePlayerManager(player)
 
         if (Excel.IsStory() && storyBuffs != null)
         {
-            instance.StoryBuffs.Add((int)storyBuffs.StoryBuffOne);
-            instance.StoryBuffs.Add((int)storyBuffs.StoryBuffTwo);
+            instance.StoryBuffs.Add((int)storyBuffs.BuffOne);
+            instance.StoryBuffs.Add((int)storyBuffs.BuffTwo);
         }
 
         if (bossBuffs != null)
         {
-            instance.BossBuffs.Add((int)bossBuffs.StoryBuffOne);
-            instance.BossBuffs.Add((int)bossBuffs.StoryBuffTwo);
+            instance.BossBuffs.Add((int)bossBuffs.BuffOne);
+            instance.BossBuffs.Add((int)bossBuffs.BuffTwo);
         }
 
         // Send packet

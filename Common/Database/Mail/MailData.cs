@@ -33,7 +33,7 @@ public class MailInfo
         {
             Id = (uint)MailID,
             Sender = SenderName,
-            MessageText = Content,
+            Content = Content,
             MailType = IsStar ? MailType.Star : MailType.Normal,
             ExpireTime = ExpireTime,
             IsRead = IsRead,

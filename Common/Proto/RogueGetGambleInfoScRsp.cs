@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch1Sb2d1ZUdldEdhbWJsZUluZm9TY1JzcC5wcm90bxoVUm9ndWVHYW1ibGVJ",
             "bmZvLnByb3RvIlEKF1JvZ3VlR2V0R2FtYmxlSW5mb1NjUnNwEiUKC2dhbWJs",
-            "ZV9pbmZvGAQgASgLMhAuUm9ndWVHYW1ibGVJbmZvEg8KB3JldGNvZGUYCiAB",
+            "ZV9pbmZvGAggASgLMhAuUm9ndWVHYW1ibGVJbmZvEg8KB3JldGNvZGUYByAB",
             "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueGambleInfoReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "gamble_info" field.</summary>
-    public const int GambleInfoFieldNumber = 4;
+    public const int GambleInfoFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.RogueGambleInfo gambleInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 10;
+    public const int RetcodeFieldNumber = 7;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (gambleInfo_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(GambleInfo);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
+      }
+      if (gambleInfo_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(GambleInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (gambleInfo_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(GambleInfo);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
+      }
+      if (gambleInfo_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(GambleInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
+          case 56: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 66: {
             if (gambleInfo_ == null) {
               GambleInfo = new global::EggLink.DanhengServer.Proto.RogueGambleInfo();
             }
             input.ReadMessage(GambleInfo);
-            break;
-          }
-          case 80: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
+          case 56: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 66: {
             if (gambleInfo_ == null) {
               GambleInfo = new global::EggLink.DanhengServer.Proto.RogueGambleInfo();
             }
             input.ReadMessage(GambleInfo);
-            break;
-          }
-          case 80: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }

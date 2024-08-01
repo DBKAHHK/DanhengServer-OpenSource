@@ -17,7 +17,7 @@ public class PacketChallengeBossPhaseSettleNotify : BasePacket
             Star = (uint)challenge.Stars,
             Phase = (uint)challenge.CurrentStage,
             IsRemainingAction = true,
-            HCLKAEHJCDO = true
+            JFKBGANLNGF = true
         };
 
         SetData(proto);

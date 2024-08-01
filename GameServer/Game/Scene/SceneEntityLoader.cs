@@ -125,10 +125,7 @@ public class SceneEntityLoader(SceneInstance scene)
                 }
             }
 
-            if (!result)
-            {
-                return null;
-            }
+            if (!result) return null;
         }
 
         if (!(info.OwnerMainMissionID == 0 ||
@@ -136,13 +133,9 @@ public class SceneEntityLoader(SceneInstance scene)
               MissionPhaseEnum.Accept)) return null;
 
         if (Scene.FloorId == 20332001 && info.Id == 109)
-        {
             if (Scene.Player.SceneData?.FloorSavedData.GetValueOrDefault(20332001, [])
                     .GetValueOrDefault("ShowFeather", 0) != 1)
-            {
-                return null;
-            }
-        }  // a temp solution to Sunday
+                return null; // a temp solution for Sunday
 
         if ((!info.LoadCondition.IsTrue(missionData) || info.UnloadCondition.IsTrue(missionData, false) ||
              info.ForceUnloadCondition.IsTrue(missionData, false)) && !forceLoad) return null;

@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static DoGachaCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJEb0dhY2hhQ3NSZXEucHJvdG8iYQoMRG9HYWNoYUNzUmVxEhAKCGdhY2hh",
-            "X2lkGAcgASgNEhEKCWdhY2hhX251bRgKIAEoDRIWCg5zaW11bGF0ZV9tYWdp",
-            "YxgNIAEoDRIUCgxnYWNoYV9yYW5kb20YCSABKA1CHqoCG0VnZ0xpbmsuRGFu",
+            "ChJEb0dhY2hhQ3NSZXEucHJvdG8iYQoMRG9HYWNoYUNzUmVxEhEKCWdhY2hh",
+            "X251bRgGIAEoDRIQCghnYWNoYV9pZBgMIAEoDRIUCgxnYWNoYV9yYW5kb20Y",
+            "DiABKA0SFgoOc2ltdWxhdGVfbWFnaWMYByABKA1CHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DoGachaCsReq), global::EggLink.DanhengServer.Proto.DoGachaCsReq.Parser, new[]{ "GachaId", "GachaNum", "SimulateMagic", "GachaRandom" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DoGachaCsReq), global::EggLink.DanhengServer.Proto.DoGachaCsReq.Parser, new[]{ "GachaNum", "GachaId", "GachaRandom", "SimulateMagic" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,10 +73,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DoGachaCsReq(DoGachaCsReq other) : this() {
-      gachaId_ = other.gachaId_;
       gachaNum_ = other.gachaNum_;
-      simulateMagic_ = other.simulateMagic_;
+      gachaId_ = other.gachaId_;
       gachaRandom_ = other.gachaRandom_;
+      simulateMagic_ = other.simulateMagic_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,20 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new DoGachaCsReq(this);
     }
 
-    /// <summary>Field number for the "gacha_id" field.</summary>
-    public const int GachaIdFieldNumber = 7;
-    private uint gachaId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GachaId {
-      get { return gachaId_; }
-      set {
-        gachaId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "gacha_num" field.</summary>
-    public const int GachaNumFieldNumber = 10;
+    public const int GachaNumFieldNumber = 6;
     private uint gachaNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,20 +98,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "simulate_magic" field.</summary>
-    public const int SimulateMagicFieldNumber = 13;
-    private uint simulateMagic_;
+    /// <summary>Field number for the "gacha_id" field.</summary>
+    public const int GachaIdFieldNumber = 12;
+    private uint gachaId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SimulateMagic {
-      get { return simulateMagic_; }
+    public uint GachaId {
+      get { return gachaId_; }
       set {
-        simulateMagic_ = value;
+        gachaId_ = value;
       }
     }
 
     /// <summary>Field number for the "gacha_random" field.</summary>
-    public const int GachaRandomFieldNumber = 9;
+    public const int GachaRandomFieldNumber = 14;
     private uint gachaRandom_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -131,6 +119,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return gachaRandom_; }
       set {
         gachaRandom_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "simulate_magic" field.</summary>
+    public const int SimulateMagicFieldNumber = 7;
+    private uint simulateMagic_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SimulateMagic {
+      get { return simulateMagic_; }
+      set {
+        simulateMagic_ = value;
       }
     }
 
@@ -149,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (GachaId != other.GachaId) return false;
       if (GachaNum != other.GachaNum) return false;
-      if (SimulateMagic != other.SimulateMagic) return false;
+      if (GachaId != other.GachaId) return false;
       if (GachaRandom != other.GachaRandom) return false;
+      if (SimulateMagic != other.SimulateMagic) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (GachaId != 0) hash ^= GachaId.GetHashCode();
       if (GachaNum != 0) hash ^= GachaNum.GetHashCode();
-      if (SimulateMagic != 0) hash ^= SimulateMagic.GetHashCode();
+      if (GachaId != 0) hash ^= GachaId.GetHashCode();
       if (GachaRandom != 0) hash ^= GachaRandom.GetHashCode();
+      if (SimulateMagic != 0) hash ^= SimulateMagic.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,21 +182,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (GachaId != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(GachaId);
-      }
-      if (GachaRandom != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(GachaRandom);
-      }
       if (GachaNum != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(48);
         output.WriteUInt32(GachaNum);
       }
       if (SimulateMagic != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(56);
         output.WriteUInt32(SimulateMagic);
+      }
+      if (GachaId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(GachaId);
+      }
+      if (GachaRandom != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(GachaRandom);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -208,21 +208,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (GachaId != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(GachaId);
-      }
-      if (GachaRandom != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(GachaRandom);
-      }
       if (GachaNum != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(48);
         output.WriteUInt32(GachaNum);
       }
       if (SimulateMagic != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(56);
         output.WriteUInt32(SimulateMagic);
+      }
+      if (GachaId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(GachaId);
+      }
+      if (GachaRandom != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(GachaRandom);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -234,17 +234,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (GachaId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GachaId);
-      }
       if (GachaNum != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GachaNum);
       }
-      if (SimulateMagic != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SimulateMagic);
+      if (GachaId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GachaId);
       }
       if (GachaRandom != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GachaRandom);
+      }
+      if (SimulateMagic != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SimulateMagic);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -258,17 +258,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.GachaId != 0) {
-        GachaId = other.GachaId;
-      }
       if (other.GachaNum != 0) {
         GachaNum = other.GachaNum;
       }
-      if (other.SimulateMagic != 0) {
-        SimulateMagic = other.SimulateMagic;
+      if (other.GachaId != 0) {
+        GachaId = other.GachaId;
       }
       if (other.GachaRandom != 0) {
         GachaRandom = other.GachaRandom;
+      }
+      if (other.SimulateMagic != 0) {
+        SimulateMagic = other.SimulateMagic;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            GachaId = input.ReadUInt32();
-            break;
-          }
-          case 72: {
-            GachaRandom = input.ReadUInt32();
-            break;
-          }
-          case 80: {
+          case 48: {
             GachaNum = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 56: {
             SimulateMagic = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            GachaId = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            GachaRandom = input.ReadUInt32();
             break;
           }
         }
@@ -316,20 +316,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            GachaId = input.ReadUInt32();
-            break;
-          }
-          case 72: {
-            GachaRandom = input.ReadUInt32();
-            break;
-          }
-          case 80: {
+          case 48: {
             GachaNum = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 56: {
             SimulateMagic = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            GachaId = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            GachaRandom = input.ReadUInt32();
             break;
           }
         }

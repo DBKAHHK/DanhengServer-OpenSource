@@ -63,7 +63,7 @@ public class RogueEventInstance(int eventId, RogueNpc npc, List<RogueEventParam>
         {
             DialogueBasicInfo = new RogueCommonDialogueBasicInfo
             {
-                EventId = (uint)EventId
+                DialogueId = (uint)EventId
             }
         };
 
@@ -87,7 +87,7 @@ public class RogueEventParam
             OptionId = (uint)OptionId,
             DisplayValue = new RogueCommonDialogueOptionDisplayInfo
             {
-                FloatValue = Ratio
+                DisplayFloatValue = Ratio
             },
             Confirm = IsSelected
         };
@@ -97,7 +97,7 @@ public class RogueEventParam
     {
         return new NpcDialogueEventParam
         {
-            DialogueEventId = (uint)OptionId,
+            RogueDialogueEventId = (uint)OptionId,
             ArgId = (uint)ArgId
         };
     }

@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static UpdateEnergyScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpVcGRhdGVFbmVyZ3lTY05vdGlmeS5wcm90bxoXUm90YXRvckVuZXJneUlu",
+            "ChpVcGRhdGVFbmVyZ3lTY05vdGlmeS5wcm90bxoXUm90YXRlckVuZXJneUlu",
             "Zm8ucHJvdG8iPwoUVXBkYXRlRW5lcmd5U2NOb3RpZnkSJwoLZW5lcmd5X2lu",
-            "Zm8YDCABKAsyEi5Sb3RhdG9yRW5lcmd5SW5mb0IeqgIbRWdnTGluay5EYW5o",
+            "Zm8YBSABKAsyEi5Sb3RhdGVyRW5lcmd5SW5mb0IeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RotatorEnergyInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdateEnergyScNotify), global::EggLink.DanhengServer.Proto.UpdateEnergyScNotify.Parser, new[]{ "EnergyInfo" }, null, null, null, null)
           }));
@@ -84,11 +84,11 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "energy_info" field.</summary>
-    public const int EnergyInfoFieldNumber = 12;
-    private global::EggLink.DanhengServer.Proto.RotatorEnergyInfo energyInfo_;
+    public const int EnergyInfoFieldNumber = 5;
+    private global::EggLink.DanhengServer.Proto.RotaterEnergyInfo energyInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RotatorEnergyInfo EnergyInfo {
+    public global::EggLink.DanhengServer.Proto.RotaterEnergyInfo EnergyInfo {
       get { return energyInfo_; }
       set {
         energyInfo_ = value;
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (energyInfo_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(42);
         output.WriteMessage(EnergyInfo);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (energyInfo_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(42);
         output.WriteMessage(EnergyInfo);
       }
       if (_unknownFields != null) {
@@ -182,7 +182,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.energyInfo_ != null) {
         if (energyInfo_ == null) {
-          EnergyInfo = new global::EggLink.DanhengServer.Proto.RotatorEnergyInfo();
+          EnergyInfo = new global::EggLink.DanhengServer.Proto.RotaterEnergyInfo();
         }
         EnergyInfo.MergeFrom(other.EnergyInfo);
       }
@@ -201,9 +201,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 98: {
+          case 42: {
             if (energyInfo_ == null) {
-              EnergyInfo = new global::EggLink.DanhengServer.Proto.RotatorEnergyInfo();
+              EnergyInfo = new global::EggLink.DanhengServer.Proto.RotaterEnergyInfo();
             }
             input.ReadMessage(EnergyInfo);
             break;
@@ -223,9 +223,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 98: {
+          case 42: {
             if (energyInfo_ == null) {
-              EnergyInfo = new global::EggLink.DanhengServer.Proto.RotatorEnergyInfo();
+              EnergyInfo = new global::EggLink.DanhengServer.Proto.RotaterEnergyInfo();
             }
             input.ReadMessage(EnergyInfo);
             break;

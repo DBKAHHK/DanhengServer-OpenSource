@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static FormulaBuffTypeInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlGb3JtdWxhQnVmZlR5cGVJbmZvLnByb3RvIjgKE0Zvcm11bGFCdWZmVHlw",
-            "ZUluZm8SCwoDbnVtGAogASgFEhQKDGJ1ZmZfdHlwZV9pZBgGIAEoDUIeqgIb",
-            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChlGb3JtdWxhQnVmZlR5cGVJbmZvLnByb3RvIjwKE0Zvcm11bGFCdWZmVHlw",
+            "ZUluZm8SCwoDa2V5GAkgASgNEhgKEGZvcm11bGFfYnVmZl9udW0YAiABKAVC",
+            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FormulaBuffTypeInfo), global::EggLink.DanhengServer.Proto.FormulaBuffTypeInfo.Parser, new[]{ "Num", "BuffTypeId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FormulaBuffTypeInfo), global::EggLink.DanhengServer.Proto.FormulaBuffTypeInfo.Parser, new[]{ "Key", "FormulaBuffNum" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FormulaBuffTypeInfo(FormulaBuffTypeInfo other) : this() {
-      num_ = other.num_;
-      buffTypeId_ = other.buffTypeId_;
+      key_ = other.key_;
+      formulaBuffNum_ = other.formulaBuffNum_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,27 +83,27 @@ namespace EggLink.DanhengServer.Proto {
       return new FormulaBuffTypeInfo(this);
     }
 
-    /// <summary>Field number for the "num" field.</summary>
-    public const int NumFieldNumber = 10;
-    private int num_;
+    /// <summary>Field number for the "key" field.</summary>
+    public const int KeyFieldNumber = 9;
+    private uint key_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Num {
-      get { return num_; }
+    public uint Key {
+      get { return key_; }
       set {
-        num_ = value;
+        key_ = value;
       }
     }
 
-    /// <summary>Field number for the "buff_type_id" field.</summary>
-    public const int BuffTypeIdFieldNumber = 6;
-    private uint buffTypeId_;
+    /// <summary>Field number for the "formula_buff_num" field.</summary>
+    public const int FormulaBuffNumFieldNumber = 2;
+    private int formulaBuffNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BuffTypeId {
-      get { return buffTypeId_; }
+    public int FormulaBuffNum {
+      get { return formulaBuffNum_; }
       set {
-        buffTypeId_ = value;
+        formulaBuffNum_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Num != other.Num) return false;
-      if (BuffTypeId != other.BuffTypeId) return false;
+      if (Key != other.Key) return false;
+      if (FormulaBuffNum != other.FormulaBuffNum) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Num != 0) hash ^= Num.GetHashCode();
-      if (BuffTypeId != 0) hash ^= BuffTypeId.GetHashCode();
+      if (Key != 0) hash ^= Key.GetHashCode();
+      if (FormulaBuffNum != 0) hash ^= FormulaBuffNum.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (BuffTypeId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(BuffTypeId);
+      if (FormulaBuffNum != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(FormulaBuffNum);
       }
-      if (Num != 0) {
-        output.WriteRawTag(80);
-        output.WriteInt32(Num);
+      if (Key != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(Key);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BuffTypeId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(BuffTypeId);
+      if (FormulaBuffNum != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(FormulaBuffNum);
       }
-      if (Num != 0) {
-        output.WriteRawTag(80);
-        output.WriteInt32(Num);
+      if (Key != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(Key);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Num != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Num);
+      if (Key != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Key);
       }
-      if (BuffTypeId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuffTypeId);
+      if (FormulaBuffNum != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FormulaBuffNum);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Num != 0) {
-        Num = other.Num;
+      if (other.Key != 0) {
+        Key = other.Key;
       }
-      if (other.BuffTypeId != 0) {
-        BuffTypeId = other.BuffTypeId;
+      if (other.FormulaBuffNum != 0) {
+        FormulaBuffNum = other.FormulaBuffNum;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            BuffTypeId = input.ReadUInt32();
+          case 16: {
+            FormulaBuffNum = input.ReadInt32();
             break;
           }
-          case 80: {
-            Num = input.ReadInt32();
+          case 72: {
+            Key = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            BuffTypeId = input.ReadUInt32();
+          case 16: {
+            FormulaBuffNum = input.ReadInt32();
             break;
           }
-          case 80: {
-            Num = input.ReadInt32();
+          case 72: {
+            Key = input.ReadUInt32();
             break;
           }
         }

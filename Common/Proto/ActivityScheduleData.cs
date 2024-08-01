@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpBY3Rpdml0eVNjaGVkdWxlRGF0YS5wcm90byJjChRBY3Rpdml0eVNjaGVk",
-            "dWxlRGF0YRIQCghwYW5lbF9pZBgMIAEoDRIQCghlbmRfdGltZRgKIAEoAxIT",
-            "CgthY3Rpdml0eV9pZBgDIAEoDRISCgpiZWdpbl90aW1lGAkgASgDQh6qAhtF",
+            "dWxlRGF0YRITCgthY3Rpdml0eV9pZBgGIAEoDRIQCghlbmRfdGltZRgHIAEo",
+            "AxISCgpiZWdpbl90aW1lGA0gASgDEhAKCHBhbmVsX2lkGAkgASgNQh6qAhtF",
             "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ActivityScheduleData), global::EggLink.DanhengServer.Proto.ActivityScheduleData.Parser, new[]{ "PanelId", "EndTime", "ActivityId", "BeginTime" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ActivityScheduleData), global::EggLink.DanhengServer.Proto.ActivityScheduleData.Parser, new[]{ "ActivityId", "EndTime", "BeginTime", "PanelId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,10 +73,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ActivityScheduleData(ActivityScheduleData other) : this() {
-      panelId_ = other.panelId_;
-      endTime_ = other.endTime_;
       activityId_ = other.activityId_;
+      endTime_ = other.endTime_;
       beginTime_ = other.beginTime_;
+      panelId_ = other.panelId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,32 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new ActivityScheduleData(this);
     }
 
-    /// <summary>Field number for the "panel_id" field.</summary>
-    public const int PanelIdFieldNumber = 12;
-    private uint panelId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PanelId {
-      get { return panelId_; }
-      set {
-        panelId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "end_time" field.</summary>
-    public const int EndTimeFieldNumber = 10;
-    private long endTime_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long EndTime {
-      get { return endTime_; }
-      set {
-        endTime_ = value;
-      }
-    }
-
     /// <summary>Field number for the "activity_id" field.</summary>
-    public const int ActivityIdFieldNumber = 3;
+    public const int ActivityIdFieldNumber = 6;
     private uint activityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,8 +98,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 7;
+    private long endTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
     /// <summary>Field number for the "begin_time" field.</summary>
-    public const int BeginTimeFieldNumber = 9;
+    public const int BeginTimeFieldNumber = 13;
     private long beginTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -131,6 +119,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return beginTime_; }
       set {
         beginTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "panel_id" field.</summary>
+    public const int PanelIdFieldNumber = 9;
+    private uint panelId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PanelId {
+      get { return panelId_; }
+      set {
+        panelId_ = value;
       }
     }
 
@@ -149,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (PanelId != other.PanelId) return false;
-      if (EndTime != other.EndTime) return false;
       if (ActivityId != other.ActivityId) return false;
+      if (EndTime != other.EndTime) return false;
       if (BeginTime != other.BeginTime) return false;
+      if (PanelId != other.PanelId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (PanelId != 0) hash ^= PanelId.GetHashCode();
-      if (EndTime != 0L) hash ^= EndTime.GetHashCode();
       if (ActivityId != 0) hash ^= ActivityId.GetHashCode();
+      if (EndTime != 0L) hash ^= EndTime.GetHashCode();
       if (BeginTime != 0L) hash ^= BeginTime.GetHashCode();
+      if (PanelId != 0) hash ^= PanelId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,20 +183,20 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (ActivityId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(48);
         output.WriteUInt32(ActivityId);
       }
-      if (BeginTime != 0L) {
-        output.WriteRawTag(72);
-        output.WriteInt64(BeginTime);
-      }
       if (EndTime != 0L) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(56);
         output.WriteInt64(EndTime);
       }
       if (PanelId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(72);
         output.WriteUInt32(PanelId);
+      }
+      if (BeginTime != 0L) {
+        output.WriteRawTag(104);
+        output.WriteInt64(BeginTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -209,20 +209,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ActivityId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(48);
         output.WriteUInt32(ActivityId);
       }
-      if (BeginTime != 0L) {
-        output.WriteRawTag(72);
-        output.WriteInt64(BeginTime);
-      }
       if (EndTime != 0L) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(56);
         output.WriteInt64(EndTime);
       }
       if (PanelId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(72);
         output.WriteUInt32(PanelId);
+      }
+      if (BeginTime != 0L) {
+        output.WriteRawTag(104);
+        output.WriteInt64(BeginTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -234,17 +234,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (PanelId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PanelId);
+      if (ActivityId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ActivityId);
       }
       if (EndTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(EndTime);
       }
-      if (ActivityId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ActivityId);
-      }
       if (BeginTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(BeginTime);
+      }
+      if (PanelId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PanelId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -258,17 +258,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.PanelId != 0) {
-        PanelId = other.PanelId;
+      if (other.ActivityId != 0) {
+        ActivityId = other.ActivityId;
       }
       if (other.EndTime != 0L) {
         EndTime = other.EndTime;
       }
-      if (other.ActivityId != 0) {
-        ActivityId = other.ActivityId;
-      }
       if (other.BeginTime != 0L) {
         BeginTime = other.BeginTime;
+      }
+      if (other.PanelId != 0) {
+        PanelId = other.PanelId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 48: {
             ActivityId = input.ReadUInt32();
             break;
           }
-          case 72: {
-            BeginTime = input.ReadInt64();
-            break;
-          }
-          case 80: {
+          case 56: {
             EndTime = input.ReadInt64();
             break;
           }
-          case 96: {
+          case 72: {
             PanelId = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            BeginTime = input.ReadInt64();
             break;
           }
         }
@@ -316,20 +316,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 48: {
             ActivityId = input.ReadUInt32();
             break;
           }
-          case 72: {
-            BeginTime = input.ReadInt64();
-            break;
-          }
-          case 80: {
+          case 56: {
             EndTime = input.ReadInt64();
             break;
           }
-          case 96: {
+          case 72: {
             PanelId = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            BeginTime = input.ReadInt64();
             break;
           }
         }

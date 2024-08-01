@@ -17,6 +17,7 @@ public class PlayerData : BaseDatabaseDataHelper
     public int PhoneTheme { get; set; } = 221000;
     public int ChatBubble { get; set; } = 220000;
     public int CurrentBgm { get; set; } = 210007;
+    public bool IsGenderSet { get; set; } = false;
     public Gender CurrentGender { get; set; } = Gender.Man;
     public int Level { get; set; } = 1;
     public int Exp { get; set; } = 0;
@@ -118,7 +119,7 @@ public class PlayerData : BaseDatabaseDataHelper
             Platform = PlatformType.Pc,
             Uid = (uint)Uid,
             WorldLevel = (uint)WorldLevel,
-            RecordInfo = new DisplayRecordInfo()
+            RecordInfo = new PlayerRecordInfo()
         };
 
         var AvatarInfo = DatabaseHelper.Instance!.GetInstance<AvatarData>(Uid);

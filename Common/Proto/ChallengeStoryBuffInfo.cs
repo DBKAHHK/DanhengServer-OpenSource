@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static ChallengeStoryBuffInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxDaGFsbGVuZ2VTdG9yeUJ1ZmZJbmZvLnByb3RvIisKFkNoYWxsZW5nZVN0",
-            "b3J5QnVmZkluZm8SEQoJYnVmZl9saXN0GA8gAygNQh6qAhtFZ2dMaW5rLkRh",
-            "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChxDaGFsbGVuZ2VTdG9yeUJ1ZmZJbmZvLnByb3RvIjwKFkNoYWxsZW5nZVN0",
+            "b3J5QnVmZkluZm8SEAoIYnVmZl9vbmUYCiABKA0SEAoIYnVmZl90d28YByAB",
+            "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeStoryBuffInfo), global::EggLink.DanhengServer.Proto.ChallengeStoryBuffInfo.Parser, new[]{ "BuffList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeStoryBuffInfo), global::EggLink.DanhengServer.Proto.ChallengeStoryBuffInfo.Parser, new[]{ "BuffOne", "BuffTwo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChallengeStoryBuffInfo(ChallengeStoryBuffInfo other) : this() {
-      buffList_ = other.buffList_.Clone();
+      buffOne_ = other.buffOne_;
+      buffTwo_ = other.buffTwo_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +83,28 @@ namespace EggLink.DanhengServer.Proto {
       return new ChallengeStoryBuffInfo(this);
     }
 
-    /// <summary>Field number for the "buff_list" field.</summary>
-    public const int BuffListFieldNumber = 15;
-    private static readonly pb::FieldCodec<uint> _repeated_buffList_codec
-        = pb::FieldCodec.ForUInt32(122);
-    private readonly pbc::RepeatedField<uint> buffList_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "buff_one" field.</summary>
+    public const int BuffOneFieldNumber = 10;
+    private uint buffOne_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> BuffList {
-      get { return buffList_; }
+    public uint BuffOne {
+      get { return buffOne_; }
+      set {
+        buffOne_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "buff_two" field.</summary>
+    public const int BuffTwoFieldNumber = 7;
+    private uint buffTwo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint BuffTwo {
+      get { return buffTwo_; }
+      set {
+        buffTwo_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -108,7 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!buffList_.Equals(other.buffList_)) return false;
+      if (BuffOne != other.BuffOne) return false;
+      if (BuffTwo != other.BuffTwo) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -116,7 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= buffList_.GetHashCode();
+      if (BuffOne != 0) hash ^= BuffOne.GetHashCode();
+      if (BuffTwo != 0) hash ^= BuffTwo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -135,7 +151,14 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      buffList_.WriteTo(output, _repeated_buffList_codec);
+      if (BuffTwo != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(BuffTwo);
+      }
+      if (BuffOne != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(BuffOne);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -146,7 +169,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      buffList_.WriteTo(ref output, _repeated_buffList_codec);
+      if (BuffTwo != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(BuffTwo);
+      }
+      if (BuffOne != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(BuffOne);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -157,7 +187,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += buffList_.CalculateSize(_repeated_buffList_codec);
+      if (BuffOne != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuffOne);
+      }
+      if (BuffTwo != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuffTwo);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -170,7 +205,12 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      buffList_.Add(other.buffList_);
+      if (other.BuffOne != 0) {
+        BuffOne = other.BuffOne;
+      }
+      if (other.BuffTwo != 0) {
+        BuffTwo = other.BuffTwo;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -186,9 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 122:
-          case 120: {
-            buffList_.AddEntriesFrom(input, _repeated_buffList_codec);
+          case 56: {
+            BuffTwo = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            BuffOne = input.ReadUInt32();
             break;
           }
         }
@@ -206,9 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 122:
-          case 120: {
-            buffList_.AddEntriesFrom(ref input, _repeated_buffList_codec);
+          case 56: {
+            BuffTwo = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            BuffOne = input.ReadUInt32();
             break;
           }
         }

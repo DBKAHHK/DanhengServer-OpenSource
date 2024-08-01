@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhHYWNoYUNlaWxpbmdBdmF0YXIucHJvdG8iPQoSR2FjaGFDZWlsaW5nQXZh",
-            "dGFyEhQKDHJlcGVhdGVkX2NudBgOIAEoDRIRCglhdmF0YXJfaWQYDCABKA1C",
+            "dGFyEhQKDHJlcGVhdGVkX2NudBgNIAEoDRIRCglhdmF0YXJfaWQYDCABKA1C",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "repeated_cnt" field.</summary>
-    public const int RepeatedCntFieldNumber = 14;
+    public const int RepeatedCntFieldNumber = 13;
     private uint repeatedCnt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -156,7 +156,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(AvatarId);
       }
       if (RepeatedCnt != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(104);
         output.WriteUInt32(RepeatedCnt);
       }
       if (_unknownFields != null) {
@@ -174,7 +174,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(AvatarId);
       }
       if (RepeatedCnt != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(104);
         output.WriteUInt32(RepeatedCnt);
       }
       if (_unknownFields != null) {
@@ -230,7 +230,7 @@ namespace EggLink.DanhengServer.Proto {
             AvatarId = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 104: {
             RepeatedCnt = input.ReadUInt32();
             break;
           }
@@ -253,7 +253,7 @@ namespace EggLink.DanhengServer.Proto {
             AvatarId = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 104: {
             RepeatedCnt = input.ReadUInt32();
             break;
           }

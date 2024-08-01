@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjhDaGVzc1JvZ3VlVXBkYXRlRGljZVBhc3NpdmVBY2N1bXVsYXRlVmFsdWVT",
-            "Y05vdGlmeS5wcm90byJJCjJDaGVzc1JvZ3VlVXBkYXRlRGljZVBhc3NpdmVB",
-            "Y2N1bXVsYXRlVmFsdWVTY05vdGlmeRITCgtFTlBPT0xJQ09PShgIIAEoBUIe",
-            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Y05vdGlmeS5wcm90byJLCjJDaGVzc1JvZ3VlVXBkYXRlRGljZVBhc3NpdmVB",
+            "Y2N1bXVsYXRlVmFsdWVTY05vdGlmeRIVCg1wYXNzaXZlX3ZhbHVlGA8gASgF",
+            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueUpdateDicePassiveAccumulateValueScNotify), global::EggLink.DanhengServer.Proto.ChessRogueUpdateDicePassiveAccumulateValueScNotify.Parser, new[]{ "ENPOOLICOOJ" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueUpdateDicePassiveAccumulateValueScNotify), global::EggLink.DanhengServer.Proto.ChessRogueUpdateDicePassiveAccumulateValueScNotify.Parser, new[]{ "PassiveValue" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueUpdateDicePassiveAccumulateValueScNotify(ChessRogueUpdateDicePassiveAccumulateValueScNotify other) : this() {
-      eNPOOLICOOJ_ = other.eNPOOLICOOJ_;
+      passiveValue_ = other.passiveValue_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new ChessRogueUpdateDicePassiveAccumulateValueScNotify(this);
     }
 
-    /// <summary>Field number for the "ENPOOLICOOJ" field.</summary>
-    public const int ENPOOLICOOJFieldNumber = 8;
-    private int eNPOOLICOOJ_;
+    /// <summary>Field number for the "passive_value" field.</summary>
+    public const int PassiveValueFieldNumber = 15;
+    private int passiveValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int ENPOOLICOOJ {
-      get { return eNPOOLICOOJ_; }
+    public int PassiveValue {
+      get { return passiveValue_; }
       set {
-        eNPOOLICOOJ_ = value;
+        passiveValue_ = value;
       }
     }
 
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ENPOOLICOOJ != other.ENPOOLICOOJ) return false;
+      if (PassiveValue != other.PassiveValue) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -118,7 +118,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ENPOOLICOOJ != 0) hash ^= ENPOOLICOOJ.GetHashCode();
+      if (PassiveValue != 0) hash ^= PassiveValue.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ENPOOLICOOJ != 0) {
-        output.WriteRawTag(64);
-        output.WriteInt32(ENPOOLICOOJ);
+      if (PassiveValue != 0) {
+        output.WriteRawTag(120);
+        output.WriteInt32(PassiveValue);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -151,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ENPOOLICOOJ != 0) {
-        output.WriteRawTag(64);
-        output.WriteInt32(ENPOOLICOOJ);
+      if (PassiveValue != 0) {
+        output.WriteRawTag(120);
+        output.WriteInt32(PassiveValue);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -165,8 +165,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ENPOOLICOOJ != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ENPOOLICOOJ);
+      if (PassiveValue != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PassiveValue);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -180,8 +180,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ENPOOLICOOJ != 0) {
-        ENPOOLICOOJ = other.ENPOOLICOOJ;
+      if (other.PassiveValue != 0) {
+        PassiveValue = other.PassiveValue;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -198,8 +198,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
-            ENPOOLICOOJ = input.ReadInt32();
+          case 120: {
+            PassiveValue = input.ReadInt32();
             break;
           }
         }
@@ -217,8 +217,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
-            ENPOOLICOOJ = input.ReadInt32();
+          case 120: {
+            PassiveValue = input.ReadInt32();
             break;
           }
         }

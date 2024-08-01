@@ -25,14 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpQdW5rTG9yZEJhdHRsZVJlcGxheS5wcm90bxoQUmVwbGF5SW5mby5wcm90",
-            "byJmChRQdW5rTG9yZEJhdHRsZVJlcGxheRIiChpCYXR0bGVSZXBsYXlLZXlG",
-            "aWVsZE51bWJlchgBIAEoCRIqChVSZXBsYXlJbmZvRmllbGROdW1iZXIYAiAB",
-            "KAsyCy5SZXBsYXlJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
-            "dG9iBnByb3RvMw=="));
+            "byJTChRQdW5rTG9yZEJhdHRsZVJlcGxheRIZChFiYXR0bGVfcmVwbGF5X2tl",
+            "eRgBIAEoCRIgCgtyZXBsYXlfaW5mbxgCIAEoCzILLlJlcGxheUluZm9CHqoC",
+            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ReplayInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PunkLordBattleReplay), global::EggLink.DanhengServer.Proto.PunkLordBattleReplay.Parser, new[]{ "BattleReplayKeyFieldNumber", "ReplayInfoFieldNumber" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PunkLordBattleReplay), global::EggLink.DanhengServer.Proto.PunkLordBattleReplay.Parser, new[]{ "BattleReplayKey", "ReplayInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PunkLordBattleReplay(PunkLordBattleReplay other) : this() {
-      battleReplayKeyFieldNumber_ = other.battleReplayKeyFieldNumber_;
-      replayInfoFieldNumber_ = other.replayInfoFieldNumber_ != null ? other.replayInfoFieldNumber_.Clone() : null;
+      battleReplayKey_ = other.battleReplayKey_;
+      replayInfo_ = other.replayInfo_ != null ? other.replayInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,27 +84,27 @@ namespace EggLink.DanhengServer.Proto {
       return new PunkLordBattleReplay(this);
     }
 
-    /// <summary>Field number for the "BattleReplayKeyFieldNumber" field.</summary>
-    public const int BattleReplayKeyFieldNumberFieldNumber = 1;
-    private string battleReplayKeyFieldNumber_ = "";
+    /// <summary>Field number for the "battle_replay_key" field.</summary>
+    public const int BattleReplayKeyFieldNumber = 1;
+    private string battleReplayKey_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string BattleReplayKeyFieldNumber {
-      get { return battleReplayKeyFieldNumber_; }
+    public string BattleReplayKey {
+      get { return battleReplayKey_; }
       set {
-        battleReplayKeyFieldNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        battleReplayKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "ReplayInfoFieldNumber" field.</summary>
-    public const int ReplayInfoFieldNumberFieldNumber = 2;
-    private global::EggLink.DanhengServer.Proto.ReplayInfo replayInfoFieldNumber_;
+    /// <summary>Field number for the "replay_info" field.</summary>
+    public const int ReplayInfoFieldNumber = 2;
+    private global::EggLink.DanhengServer.Proto.ReplayInfo replayInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ReplayInfo ReplayInfoFieldNumber {
-      get { return replayInfoFieldNumber_; }
+    public global::EggLink.DanhengServer.Proto.ReplayInfo ReplayInfo {
+      get { return replayInfo_; }
       set {
-        replayInfoFieldNumber_ = value;
+        replayInfo_ = value;
       }
     }
 
@@ -124,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (BattleReplayKeyFieldNumber != other.BattleReplayKeyFieldNumber) return false;
-      if (!object.Equals(ReplayInfoFieldNumber, other.ReplayInfoFieldNumber)) return false;
+      if (BattleReplayKey != other.BattleReplayKey) return false;
+      if (!object.Equals(ReplayInfo, other.ReplayInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (BattleReplayKeyFieldNumber.Length != 0) hash ^= BattleReplayKeyFieldNumber.GetHashCode();
-      if (replayInfoFieldNumber_ != null) hash ^= ReplayInfoFieldNumber.GetHashCode();
+      if (BattleReplayKey.Length != 0) hash ^= BattleReplayKey.GetHashCode();
+      if (replayInfo_ != null) hash ^= ReplayInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (BattleReplayKeyFieldNumber.Length != 0) {
+      if (BattleReplayKey.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(BattleReplayKeyFieldNumber);
+        output.WriteString(BattleReplayKey);
       }
-      if (replayInfoFieldNumber_ != null) {
+      if (replayInfo_ != null) {
         output.WriteRawTag(18);
-        output.WriteMessage(ReplayInfoFieldNumber);
+        output.WriteMessage(ReplayInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BattleReplayKeyFieldNumber.Length != 0) {
+      if (BattleReplayKey.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(BattleReplayKeyFieldNumber);
+        output.WriteString(BattleReplayKey);
       }
-      if (replayInfoFieldNumber_ != null) {
+      if (replayInfo_ != null) {
         output.WriteRawTag(18);
-        output.WriteMessage(ReplayInfoFieldNumber);
+        output.WriteMessage(ReplayInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -189,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (BattleReplayKeyFieldNumber.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(BattleReplayKeyFieldNumber);
+      if (BattleReplayKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BattleReplayKey);
       }
-      if (replayInfoFieldNumber_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReplayInfoFieldNumber);
+      if (replayInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReplayInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -207,14 +206,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.BattleReplayKeyFieldNumber.Length != 0) {
-        BattleReplayKeyFieldNumber = other.BattleReplayKeyFieldNumber;
+      if (other.BattleReplayKey.Length != 0) {
+        BattleReplayKey = other.BattleReplayKey;
       }
-      if (other.replayInfoFieldNumber_ != null) {
-        if (replayInfoFieldNumber_ == null) {
-          ReplayInfoFieldNumber = new global::EggLink.DanhengServer.Proto.ReplayInfo();
+      if (other.replayInfo_ != null) {
+        if (replayInfo_ == null) {
+          ReplayInfo = new global::EggLink.DanhengServer.Proto.ReplayInfo();
         }
-        ReplayInfoFieldNumber.MergeFrom(other.ReplayInfoFieldNumber);
+        ReplayInfo.MergeFrom(other.ReplayInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -232,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            BattleReplayKeyFieldNumber = input.ReadString();
+            BattleReplayKey = input.ReadString();
             break;
           }
           case 18: {
-            if (replayInfoFieldNumber_ == null) {
-              ReplayInfoFieldNumber = new global::EggLink.DanhengServer.Proto.ReplayInfo();
+            if (replayInfo_ == null) {
+              ReplayInfo = new global::EggLink.DanhengServer.Proto.ReplayInfo();
             }
-            input.ReadMessage(ReplayInfoFieldNumber);
+            input.ReadMessage(ReplayInfo);
             break;
           }
         }
@@ -258,14 +257,14 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            BattleReplayKeyFieldNumber = input.ReadString();
+            BattleReplayKey = input.ReadString();
             break;
           }
           case 18: {
-            if (replayInfoFieldNumber_ == null) {
-              ReplayInfoFieldNumber = new global::EggLink.DanhengServer.Proto.ReplayInfo();
+            if (replayInfo_ == null) {
+              ReplayInfo = new global::EggLink.DanhengServer.Proto.ReplayInfo();
             }
-            input.ReadMessage(ReplayInfoFieldNumber);
+            input.ReadMessage(ReplayInfo);
             break;
           }
         }

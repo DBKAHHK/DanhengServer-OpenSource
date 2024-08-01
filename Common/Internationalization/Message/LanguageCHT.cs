@@ -109,6 +109,8 @@ public class CommandTextCHT
     public MailTextCHT Mail { get; } = new();
     public RaidTextCHT Raid { get; } = new();
     public AccountTextCHT Account { get; } = new();
+    public UnstuckTextCHT Unstuck { get; } = new();
+    public SetlevelTextCHT Setlevel { get; } = new();
 }
 
 #endregion
@@ -390,6 +392,28 @@ public class AccountTextCHT
     public string DuplicateAccount { get; } = "賬號 {0} 已存在!";
     public string DuplicateUID { get; } = "UID {0} 已存在!";
     public string DataError { get; } = "新賬號獲取失敗! {0}!";
+}
+
+/// <summary>
+///     path: Game.Command.Unstuck
+/// </summary>
+public class UnstuckTextCHT
+{
+    public string Desc { get; } = "將玩家傳送回預設場景";
+    public string Usage { get; } = "/unstuck <UID>";
+    public string UnstuckSuccess { get; } = "已成功將該玩家傳送回預設場景";
+    public string UidNotExist { get; } = "該UID不存在！";
+    public string PlayerIsOnline { get; } = "該玩家目前在線上！";
+}
+
+/// <summary>
+///     path: Game.Command.Setlevel
+/// </summary>
+public class SetlevelTextCHT
+{
+    public string Desc { get; } = "設定玩家等級";
+    public string Usage { get; } = "/setlevel <等級>";
+    public string SetlevelSuccess { get; } = "等級設定成功！";
 }
 
 #endregion

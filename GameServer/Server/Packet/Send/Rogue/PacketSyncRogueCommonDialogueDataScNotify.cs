@@ -10,7 +10,7 @@ public class PacketSyncRogueCommonDialogueDataScNotify : BasePacket
     {
         var proto = new SyncRogueCommonDialogueDataScNotify();
 
-        proto.DialogueEventList.Add(rogueEvent.ToProto());
+        proto.DialogueDataList.Add(rogueEvent.ToProto());
 
         SetData(proto);
     }

@@ -20,13 +20,13 @@ public class ChessRogueNousDiceData
     {
         return new ChessRogueDice
         {
-            BranchId = (uint)BranchId,
+            DiceBranchId = (uint)BranchId,
             SurfaceList =
             {
                 Surfaces.Select(x => new ChessRogueDiceSurfaceInfo { Index = (uint)x.Key, SurfaceId = (uint)x.Value })
             },
-            AreaId = (uint)AreaId,
-            DifficultyLevel = (uint)DifficultyLevel
+            MaxAreaId = (uint)AreaId,
+            MaxDifficultyLevel = (uint)DifficultyLevel
         };
     }
 }

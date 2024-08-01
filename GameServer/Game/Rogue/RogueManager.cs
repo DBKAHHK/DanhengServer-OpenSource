@@ -121,8 +121,8 @@ public class RogueManager(PlayerInstance player) : BasePlayerManager(player)
             ExploreScore = (uint)GetRogueScore(),
             PoolRefreshed = true,
             PoolId = (uint)(20 + Player.Data.WorldLevel),
-            BeginTime = time.Item1,
-            EndTime = time.Item2,
+            RewardBeginTime = time.Item1,
+            RewardEndTime = time.Item2,
             HasTakenInitialScore = true
         };
     }
@@ -180,12 +180,12 @@ public class RogueManager(PlayerInstance player) : BasePlayerManager(player)
         };
     }
 
-    public static RogueTalentInfo ToTalentProto()
+    public static RogueTalentInfoList ToTalentProto()
     {
-        var proto = new RogueTalentInfo();
+        var proto = new RogueTalentInfoList();
 
         foreach (var talent in GameData.RogueTalentData)
-            proto.RogueTalentList.Add(new RogueTalent
+            proto.TalentInfo.Add(new RogueTalentInfo
             {
                 TalentId = (uint)talent.Key,
                 Status = RogueTalentStatus.Enable

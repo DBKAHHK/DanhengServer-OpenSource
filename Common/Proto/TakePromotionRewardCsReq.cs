@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5UYWtlUHJvbW90aW9uUmV3YXJkQ3NSZXEucHJvdG8iRQoYVGFrZVByb21v",
-            "dGlvblJld2FyZENzUmVxEhEKCXByb21vdGlvbhgCIAEoDRIWCg5iYXNlX2F2",
-            "YXRhcl9pZBgBIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "dGlvblJld2FyZENzUmVxEhEKCXByb21vdGlvbhgPIAEoDRIWCg5iYXNlX2F2",
+            "YXRhcl9pZBgHIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "promotion" field.</summary>
-    public const int PromotionFieldNumber = 2;
+    public const int PromotionFieldNumber = 15;
     private uint promotion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "base_avatar_id" field.</summary>
-    public const int BaseAvatarIdFieldNumber = 1;
+    public const int BaseAvatarIdFieldNumber = 7;
     private uint baseAvatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (BaseAvatarId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(56);
         output.WriteUInt32(BaseAvatarId);
       }
       if (Promotion != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(120);
         output.WriteUInt32(Promotion);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (BaseAvatarId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(56);
         output.WriteUInt32(BaseAvatarId);
       }
       if (Promotion != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(120);
         output.WriteUInt32(Promotion);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 56: {
             BaseAvatarId = input.ReadUInt32();
             break;
           }
-          case 16: {
+          case 120: {
             Promotion = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 56: {
             BaseAvatarId = input.ReadUInt32();
             break;
           }
-          case 16: {
+          case 120: {
             Promotion = input.ReadUInt32();
             break;
           }

@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch1DaGVzc1JvZ3VlUXVlcnlHYW1lSW5mby5wcm90bxoTUm9ndWVHYW1lSW5m",
             "by5wcm90byJiChdDaGVzc1JvZ3VlUXVlcnlHYW1lSW5mbxIWCg5yb2d1ZV9z",
-            "dWJfbW9kZRgJIAEoDRIvChdyb2d1ZV9jdXJyZW50X2dhbWVfaW5mbxgNIAMo",
+            "dWJfbW9kZRgHIAEoDRIvChdyb2d1ZV9jdXJyZW50X2dhbWVfaW5mbxgMIAMo",
             "CzIOLlJvZ3VlR2FtZUluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
             "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_sub_mode" field.</summary>
-    public const int RogueSubModeFieldNumber = 9;
+    public const int RogueSubModeFieldNumber = 7;
     private uint rogueSubMode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_current_game_info" field.</summary>
-    public const int RogueCurrentGameInfoFieldNumber = 13;
+    public const int RogueCurrentGameInfoFieldNumber = 12;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueGameInfo> _repeated_rogueCurrentGameInfo_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.RogueGameInfo.Parser);
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.RogueGameInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueGameInfo> rogueCurrentGameInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueGameInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (RogueSubMode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(56);
         output.WriteUInt32(RogueSubMode);
       }
       rogueCurrentGameInfo_.WriteTo(output, _repeated_rogueCurrentGameInfo_codec);
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (RogueSubMode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(56);
         output.WriteUInt32(RogueSubMode);
       }
       rogueCurrentGameInfo_.WriteTo(ref output, _repeated_rogueCurrentGameInfo_codec);
@@ -217,11 +217,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
+          case 56: {
             RogueSubMode = input.ReadUInt32();
             break;
           }
-          case 106: {
+          case 98: {
             rogueCurrentGameInfo_.AddEntriesFrom(input, _repeated_rogueCurrentGameInfo_codec);
             break;
           }
@@ -240,11 +240,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
+          case 56: {
             RogueSubMode = input.ReadUInt32();
             break;
           }
-          case 106: {
+          case 98: {
             rogueCurrentGameInfo_.AddEntriesFrom(ref input, _repeated_rogueCurrentGameInfo_codec);
             break;
           }

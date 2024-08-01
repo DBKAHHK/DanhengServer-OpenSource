@@ -15,7 +15,7 @@ public class PacketGetSaveRaidScRsp : BasePacket
             {
                 proto.RaidId = (uint)record.RaidId;
                 proto.WorldLevel = (uint)record.WorldLevel;
-                proto.IsSave = record.Status != RaidStatus.Finish && record.Status != RaidStatus.None;
+                proto.IsSaveData = record.Status != RaidStatus.Finish && record.Status != RaidStatus.None;
             }
             else
             {

@@ -24,37 +24,36 @@ namespace EggLink.DanhengServer.Proto {
     static RogueCommonActionResultDataReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFSb2d1ZUNvbW1vbkFjdGlvblJlc3VsdERhdGEucHJvdG8aEUdMTEpNUEpK",
-            "QUZELnByb3RvGhhSb2d1ZUNvbW1vbkZvcm11bGEucHJvdG8aFVJvZ3VlQ29t",
-            "bW9uQnVmZi5wcm90bxoWUm9ndWVDb21tb25Nb25leS5wcm90bxoRR05CR0ZK",
-            "Q0hGQU4ucHJvdG8aEUlPUE1MQUtFT0NKLnByb3RvGhFMQ0JKRkpQQkpDQi5w",
-            "cm90bxoRTktJQ0hLSUdGTkUucHJvdG8aGFJvZ3VlQ29tbW9uTWlyYWNsZS5w",
-            "cm90bxoRTUlQSktFUERNT0YucHJvdG8aEUlISEdMRktFSE5QLnByb3RvGhFN",
-            "TkJHQU1BS0RPSy5wcm90bxoRTUJDR0dOSkNFT0UucHJvdG8aEUVGTE9OTkNP",
-            "QkJHLnByb3RvGhhSb2d1ZUNvbW1vbktleXdvcmQucHJvdG8aEUhIRE9FUEpH",
-            "R05FLnByb3RvIpkGChtSb2d1ZUNvbW1vbkFjdGlvblJlc3VsdERhdGESKgoN",
-            "Z2V0X2l0ZW1fbGlzdBgGIAEoCzIRLlJvZ3VlQ29tbW9uTW9uZXlIABItChBy",
-            "ZW1vdmVfaXRlbV9saXN0GAUgASgLMhEuUm9ndWVDb21tb25Nb25leUgAEioK",
-            "DWdldF9idWZmX2xpc3QYygEgASgLMhAuUm9ndWVDb21tb25CdWZmSAASLAoQ",
-            "cmVtb3ZlX2J1ZmZfbGlzdBhlIAEoCzIQLlJvZ3VlQ29tbW9uQnVmZkgAEjAK",
-            "EGdldF9taXJhY2xlX2xpc3QYrQEgASgLMhMuUm9ndWVDb21tb25NaXJhY2xl",
-            "SAASJAoLRUpIRElOQk9BSEwY6wIgASgLMgwuSUhIR0xGS0VITlBIABIkCgtM",
-            "S0ZERU9PUEpDTRi5CyABKAsyDC5FRkxPTk5DT0JCR0gAEiQKC0JIQVBLSUJO",
-            "TUFMGNMOIAEoCzIMLk1JUEpLRVBETU9GSAASJAoLTUFITkxKQUxHS0cYwwYg",
-            "ASgLMgwuTktJQ0hLSUdGTkVIABIkCgtGR05HS0VQTVBEThiOASABKAsyDC5M",
-            "Q0JKRkpQQkpDQkgAEiQKC0hHTk5FR1BQTENEGMkMIAEoCzIMLk1OQkdBTUFL",
-            "RE9LSAASMAoQZ2V0X2Zvcm11bGFfbGlzdBitDiABKAsyEy5Sb2d1ZUNvbW1v",
-            "bkZvcm11bGFIABIkCgtLREZHREZJSU9NSxihDyABKAsyDC5HTkJHRkpDSEZB",
-            "TkgAEiQKC0tMTU9QSElGTUhQGLUIIAEoCzIMLklPUE1MQUtFT0NKSAASJAoL",
-            "RlBNTkhLQkZQRUIY8wMgASgLMgwuSEhET0VQSkdHTkVIABIkCgtMSkhFSERE",
-            "QVBDRhjdDiABKAsyDC5NQkNHR05KQ0VPRUgAEjAKEGdldF9rZXl3b3JkX2xp",
-            "c3QY2gQgASgLMhMuUm9ndWVDb21tb25LZXl3b3JkSAASJAoLSk1BRUdOT0dJ",
-            "UEwY0g0gASgLMgwuR0xMSk1QSkpBRkRIAEINCgtyZXN1bHRfZGF0YUIeqgIb",
-            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "CiFSb2d1ZUNvbW1vbkFjdGlvblJlc3VsdERhdGEucHJvdG8aFlJvZ3VlQ29t",
+            "bW9uTW9uZXkucHJvdG8aFVJvZ3VlQ29tbW9uQnVmZi5wcm90bxoYUm9ndWVD",
+            "b21tb25NaXJhY2xlLnByb3RvGhFFSExEQ0VMS0RLQi5wcm90bxoRQUZLR0RO",
+            "UEZKQUEucHJvdG8aEUZHT0lKQk5NSUVQLnByb3RvGhFGQklPT0FIRkRFTS5w",
+            "cm90bxoRTFBQUEJIR0hKREYucHJvdG8aEUtPTUNDSkdKSE5NLnByb3RvGhhS",
+            "b2d1ZUNvbW1vbkZvcm11bGEucHJvdG8aEUJBTkVOQ0xBSEZILnByb3RvGhFK",
+            "Q0VHT0hPSElHSy5wcm90bxoRRkNLSU5LTUtGT0oucHJvdG8aEU1FUFBDRkNP",
+            "Q01DLnByb3RvGhhSb2d1ZUNvbW1vbktleXdvcmQucHJvdG8aEURDQ0VOTUlK",
+            "SkRHLnByb3RvIucFChtSb2d1ZUNvbW1vbkFjdGlvblJlc3VsdERhdGESKAoN",
+            "Z2V0X2l0ZW1fbGlzdBgGIAEoCzIRLlJvZ3VlQ29tbW9uTW9uZXkSKwoQcmVt",
+            "b3ZlX2l0ZW1fbGlzdBgCIAEoCzIRLlJvZ3VlQ29tbW9uTW9uZXkSKAoNZ2V0",
+            "X2J1ZmZfbGlzdBjcDiABKAsyEC5Sb2d1ZUNvbW1vbkJ1ZmYSKwoQcmVtb3Zl",
+            "X2J1ZmZfbGlzdBiIDCABKAsyEC5Sb2d1ZUNvbW1vbkJ1ZmYSLgoQZ2V0X21p",
+            "cmFjbGVfbGlzdBjvCSABKAsyEy5Sb2d1ZUNvbW1vbk1pcmFjbGUSIgoLS0RH",
+            "S0hIRkhGQkoY+QcgASgLMgwuRUhMRENFTEtES0ISIgoLREhIRkNLS0RGTkoY",
+            "3QYgASgLMgwuQUZLR0ROUEZKQUESIgoLT05HQkdIQkpCQkYY2QEgASgLMgwu",
+            "RkdPSUpCTk1JRVASIgoLRUtNQkJIRUhFUEMY6gogASgLMgwuRkJJT09BSEZE",
+            "RU0SIgoLSEVJSkZERE1NRkoYiQIgASgLMgwuTFBQUEJIR0hKREYSIgoLTUlD",
+            "T0NCTk1FQUoYygIgASgLMgwuS09NQ0NKR0pITk0SLgoQZ2V0X2Zvcm11bGFf",
+            "bGlzdBiIBiABKAsyEy5Sb2d1ZUNvbW1vbkZvcm11bGESIgoLTktNSUpITUJD",
+            "SkUY/A8gASgLMgwuQkFORU5DTEFIRkgSIgoLR0FDTUpLT05MUE8Y7wsgASgL",
+            "MgwuSkNFR09IT0hJR0sSIgoLS0RIQ0VLSEVJRUsYgAogASgLMgwuRkNLSU5L",
+            "TUtGT0oSIgoLT0NGSERISkhPTEgYsw4gASgLMgwuTUVQUENGQ09DTUMSLgoQ",
+            "Z2V0X2tleXdvcmRfbGlzdBiaCyABKAsyEy5Sb2d1ZUNvbW1vbktleXdvcmQS",
+            "IgoLSkJQSk9BSE9CR00YwgogASgLMgwuRENDRU5NSUpKREdCHqoCG0VnZ0xp",
+            "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GLLJMPJJAFDReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonFormulaReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonBuffReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonMoneyReflection.Descriptor, global::EggLink.DanhengServer.Proto.GNBGFJCHFANReflection.Descriptor, global::EggLink.DanhengServer.Proto.IOPMLAKEOCJReflection.Descriptor, global::EggLink.DanhengServer.Proto.LCBJFJPBJCBReflection.Descriptor, global::EggLink.DanhengServer.Proto.NKICHKIGFNEReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonMiracleReflection.Descriptor, global::EggLink.DanhengServer.Proto.MIPJKEPDMOFReflection.Descriptor, global::EggLink.DanhengServer.Proto.IHHGLFKEHNPReflection.Descriptor, global::EggLink.DanhengServer.Proto.MNBGAMAKDOKReflection.Descriptor, global::EggLink.DanhengServer.Proto.MBCGGNJCEOEReflection.Descriptor, global::EggLink.DanhengServer.Proto.EFLONNCOBBGReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonKeywordReflection.Descriptor, global::EggLink.DanhengServer.Proto.HHDOEPJGGNEReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonMoneyReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonBuffReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonMiracleReflection.Descriptor, global::EggLink.DanhengServer.Proto.EHLDCELKDKBReflection.Descriptor, global::EggLink.DanhengServer.Proto.AFKGDNPFJAAReflection.Descriptor, global::EggLink.DanhengServer.Proto.FGOIJBNMIEPReflection.Descriptor, global::EggLink.DanhengServer.Proto.FBIOOAHFDEMReflection.Descriptor, global::EggLink.DanhengServer.Proto.LPPPBHGHJDFReflection.Descriptor, global::EggLink.DanhengServer.Proto.KOMCCJGJHNMReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonFormulaReflection.Descriptor, global::EggLink.DanhengServer.Proto.BANENCLAHFHReflection.Descriptor, global::EggLink.DanhengServer.Proto.JCEGOHOHIGKReflection.Descriptor, global::EggLink.DanhengServer.Proto.FCKINKMKFOJReflection.Descriptor, global::EggLink.DanhengServer.Proto.MEPPCFCOCMCReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonKeywordReflection.Descriptor, global::EggLink.DanhengServer.Proto.DCCENMIJJDGReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonActionResultData), global::EggLink.DanhengServer.Proto.RogueCommonActionResultData.Parser, new[]{ "GetItemList", "RemoveItemList", "GetBuffList", "RemoveBuffList", "GetMiracleList", "EJHDINBOAHL", "LKFDEOOPJCM", "BHAPKIBNMAL", "MAHNLJALGKG", "FGNGKEPMPDN", "HGNNEGPPLCD", "GetFormulaList", "KDFGDFIIOMK", "KLMOPHIFMHP", "FPMNHKBFPEB", "LJHEHDDAPCF", "GetKeywordList", "JMAEGNOGIPL" }, new[]{ "ResultData" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonActionResultData), global::EggLink.DanhengServer.Proto.RogueCommonActionResultData.Parser, new[]{ "GetItemList", "RemoveItemList", "GetBuffList", "RemoveBuffList", "GetMiracleList", "KDGKHHFHFBJ", "DHHFCKKDFNJ", "ONGBGHBJBBF", "EKMBBHEHEPC", "HEIJFDDMMFJ", "MICOCBNMEAJ", "GetFormulaList", "NKMIJHMBCJE", "GACMJKONLPO", "KDHCEKHEIEK", "OCFHDHJHOLH", "GetKeywordList", "JBPJOAHOBGM" }, null, null, null, null)
           }));
     }
     #endregion
@@ -96,63 +95,24 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueCommonActionResultData(RogueCommonActionResultData other) : this() {
-      switch (other.ResultDataCase) {
-        case ResultDataOneofCase.GetItemList:
-          GetItemList = other.GetItemList.Clone();
-          break;
-        case ResultDataOneofCase.RemoveItemList:
-          RemoveItemList = other.RemoveItemList.Clone();
-          break;
-        case ResultDataOneofCase.GetBuffList:
-          GetBuffList = other.GetBuffList.Clone();
-          break;
-        case ResultDataOneofCase.RemoveBuffList:
-          RemoveBuffList = other.RemoveBuffList.Clone();
-          break;
-        case ResultDataOneofCase.GetMiracleList:
-          GetMiracleList = other.GetMiracleList.Clone();
-          break;
-        case ResultDataOneofCase.EJHDINBOAHL:
-          EJHDINBOAHL = other.EJHDINBOAHL.Clone();
-          break;
-        case ResultDataOneofCase.LKFDEOOPJCM:
-          LKFDEOOPJCM = other.LKFDEOOPJCM.Clone();
-          break;
-        case ResultDataOneofCase.BHAPKIBNMAL:
-          BHAPKIBNMAL = other.BHAPKIBNMAL.Clone();
-          break;
-        case ResultDataOneofCase.MAHNLJALGKG:
-          MAHNLJALGKG = other.MAHNLJALGKG.Clone();
-          break;
-        case ResultDataOneofCase.FGNGKEPMPDN:
-          FGNGKEPMPDN = other.FGNGKEPMPDN.Clone();
-          break;
-        case ResultDataOneofCase.HGNNEGPPLCD:
-          HGNNEGPPLCD = other.HGNNEGPPLCD.Clone();
-          break;
-        case ResultDataOneofCase.GetFormulaList:
-          GetFormulaList = other.GetFormulaList.Clone();
-          break;
-        case ResultDataOneofCase.KDFGDFIIOMK:
-          KDFGDFIIOMK = other.KDFGDFIIOMK.Clone();
-          break;
-        case ResultDataOneofCase.KLMOPHIFMHP:
-          KLMOPHIFMHP = other.KLMOPHIFMHP.Clone();
-          break;
-        case ResultDataOneofCase.FPMNHKBFPEB:
-          FPMNHKBFPEB = other.FPMNHKBFPEB.Clone();
-          break;
-        case ResultDataOneofCase.LJHEHDDAPCF:
-          LJHEHDDAPCF = other.LJHEHDDAPCF.Clone();
-          break;
-        case ResultDataOneofCase.GetKeywordList:
-          GetKeywordList = other.GetKeywordList.Clone();
-          break;
-        case ResultDataOneofCase.JMAEGNOGIPL:
-          JMAEGNOGIPL = other.JMAEGNOGIPL.Clone();
-          break;
-      }
-
+      getItemList_ = other.getItemList_ != null ? other.getItemList_.Clone() : null;
+      removeItemList_ = other.removeItemList_ != null ? other.removeItemList_.Clone() : null;
+      getBuffList_ = other.getBuffList_ != null ? other.getBuffList_.Clone() : null;
+      removeBuffList_ = other.removeBuffList_ != null ? other.removeBuffList_.Clone() : null;
+      getMiracleList_ = other.getMiracleList_ != null ? other.getMiracleList_.Clone() : null;
+      kDGKHHFHFBJ_ = other.kDGKHHFHFBJ_ != null ? other.kDGKHHFHFBJ_.Clone() : null;
+      dHHFCKKDFNJ_ = other.dHHFCKKDFNJ_ != null ? other.dHHFCKKDFNJ_.Clone() : null;
+      oNGBGHBJBBF_ = other.oNGBGHBJBBF_ != null ? other.oNGBGHBJBBF_.Clone() : null;
+      eKMBBHEHEPC_ = other.eKMBBHEHEPC_ != null ? other.eKMBBHEHEPC_.Clone() : null;
+      hEIJFDDMMFJ_ = other.hEIJFDDMMFJ_ != null ? other.hEIJFDDMMFJ_.Clone() : null;
+      mICOCBNMEAJ_ = other.mICOCBNMEAJ_ != null ? other.mICOCBNMEAJ_.Clone() : null;
+      getFormulaList_ = other.getFormulaList_ != null ? other.getFormulaList_.Clone() : null;
+      nKMIJHMBCJE_ = other.nKMIJHMBCJE_ != null ? other.nKMIJHMBCJE_.Clone() : null;
+      gACMJKONLPO_ = other.gACMJKONLPO_ != null ? other.gACMJKONLPO_.Clone() : null;
+      kDHCEKHEIEK_ = other.kDHCEKHEIEK_ != null ? other.kDHCEKHEIEK_.Clone() : null;
+      oCFHDHJHOLH_ = other.oCFHDHJHOLH_ != null ? other.oCFHDHJHOLH_.Clone() : null;
+      getKeywordList_ = other.getKeywordList_ != null ? other.getKeywordList_.Clone() : null;
+      jBPJOAHOBGM_ = other.jBPJOAHOBGM_ != null ? other.jBPJOAHOBGM_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -164,255 +124,218 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "get_item_list" field.</summary>
     public const int GetItemListFieldNumber = 6;
+    private global::EggLink.DanhengServer.Proto.RogueCommonMoney getItemList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.RogueCommonMoney GetItemList {
-      get { return resultDataCase_ == ResultDataOneofCase.GetItemList ? (global::EggLink.DanhengServer.Proto.RogueCommonMoney) resultData_ : null; }
+      get { return getItemList_; }
       set {
-        resultData_ = value;
-        resultDataCase_ = value == null ? ResultDataOneofCase.None : ResultDataOneofCase.GetItemList;
+        getItemList_ = value;
       }
     }
 
     /// <summary>Field number for the "remove_item_list" field.</summary>
-    public const int RemoveItemListFieldNumber = 5;
+    public const int RemoveItemListFieldNumber = 2;
+    private global::EggLink.DanhengServer.Proto.RogueCommonMoney removeItemList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.RogueCommonMoney RemoveItemList {
-      get { return resultDataCase_ == ResultDataOneofCase.RemoveItemList ? (global::EggLink.DanhengServer.Proto.RogueCommonMoney) resultData_ : null; }
+      get { return removeItemList_; }
       set {
-        resultData_ = value;
-        resultDataCase_ = value == null ? ResultDataOneofCase.None : ResultDataOneofCase.RemoveItemList;
+        removeItemList_ = value;
       }
     }
 
     /// <summary>Field number for the "get_buff_list" field.</summary>
-    public const int GetBuffListFieldNumber = 202;
+    public const int GetBuffListFieldNumber = 1884;
+    private global::EggLink.DanhengServer.Proto.RogueCommonBuff getBuffList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.RogueCommonBuff GetBuffList {
-      get { return resultDataCase_ == ResultDataOneofCase.GetBuffList ? (global::EggLink.DanhengServer.Proto.RogueCommonBuff) resultData_ : null; }
+      get { return getBuffList_; }
       set {
-        resultData_ = value;
-        resultDataCase_ = value == null ? ResultDataOneofCase.None : ResultDataOneofCase.GetBuffList;
+        getBuffList_ = value;
       }
     }
 
     /// <summary>Field number for the "remove_buff_list" field.</summary>
-    public const int RemoveBuffListFieldNumber = 101;
+    public const int RemoveBuffListFieldNumber = 1544;
+    private global::EggLink.DanhengServer.Proto.RogueCommonBuff removeBuffList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.RogueCommonBuff RemoveBuffList {
-      get { return resultDataCase_ == ResultDataOneofCase.RemoveBuffList ? (global::EggLink.DanhengServer.Proto.RogueCommonBuff) resultData_ : null; }
+      get { return removeBuffList_; }
       set {
-        resultData_ = value;
-        resultDataCase_ = value == null ? ResultDataOneofCase.None : ResultDataOneofCase.RemoveBuffList;
+        removeBuffList_ = value;
       }
     }
 
     /// <summary>Field number for the "get_miracle_list" field.</summary>
-    public const int GetMiracleListFieldNumber = 173;
+    public const int GetMiracleListFieldNumber = 1263;
+    private global::EggLink.DanhengServer.Proto.RogueCommonMiracle getMiracleList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.RogueCommonMiracle GetMiracleList {
-      get { return resultDataCase_ == ResultDataOneofCase.GetMiracleList ? (global::EggLink.DanhengServer.Proto.RogueCommonMiracle) resultData_ : null; }
+      get { return getMiracleList_; }
       set {
-        resultData_ = value;
-        resultDataCase_ = value == null ? ResultDataOneofCase.None : ResultDataOneofCase.GetMiracleList;
+        getMiracleList_ = value;
       }
     }
 
-    /// <summary>Field number for the "EJHDINBOAHL" field.</summary>
-    public const int EJHDINBOAHLFieldNumber = 363;
+    /// <summary>Field number for the "KDGKHHFHFBJ" field.</summary>
+    public const int KDGKHHFHFBJFieldNumber = 1017;
+    private global::EggLink.DanhengServer.Proto.EHLDCELKDKB kDGKHHFHFBJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.IHHGLFKEHNP EJHDINBOAHL {
-      get { return resultDataCase_ == ResultDataOneofCase.EJHDINBOAHL ? (global::EggLink.DanhengServer.Proto.IHHGLFKEHNP) resultData_ : null; }
+    public global::EggLink.DanhengServer.Proto.EHLDCELKDKB KDGKHHFHFBJ {
+      get { return kDGKHHFHFBJ_; }
       set {
-        resultData_ = value;
-        resultDataCase_ = value == null ? ResultDataOneofCase.None : ResultDataOneofCase.EJHDINBOAHL;
+        kDGKHHFHFBJ_ = value;
       }
     }
 
-    /// <summary>Field number for the "LKFDEOOPJCM" field.</summary>
-    public const int LKFDEOOPJCMFieldNumber = 1465;
+    /// <summary>Field number for the "DHHFCKKDFNJ" field.</summary>
+    public const int DHHFCKKDFNJFieldNumber = 861;
+    private global::EggLink.DanhengServer.Proto.AFKGDNPFJAA dHHFCKKDFNJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.EFLONNCOBBG LKFDEOOPJCM {
-      get { return resultDataCase_ == ResultDataOneofCase.LKFDEOOPJCM ? (global::EggLink.DanhengServer.Proto.EFLONNCOBBG) resultData_ : null; }
+    public global::EggLink.DanhengServer.Proto.AFKGDNPFJAA DHHFCKKDFNJ {
+      get { return dHHFCKKDFNJ_; }
       set {
-        resultData_ = value;
-        resultDataCase_ = value == null ? ResultDataOneofCase.None : ResultDataOneofCase.LKFDEOOPJCM;
+        dHHFCKKDFNJ_ = value;
       }
     }
 
-    /// <summary>Field number for the "BHAPKIBNMAL" field.</summary>
-    public const int BHAPKIBNMALFieldNumber = 1875;
+    /// <summary>Field number for the "ONGBGHBJBBF" field.</summary>
+    public const int ONGBGHBJBBFFieldNumber = 217;
+    private global::EggLink.DanhengServer.Proto.FGOIJBNMIEP oNGBGHBJBBF_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MIPJKEPDMOF BHAPKIBNMAL {
-      get { return resultDataCase_ == ResultDataOneofCase.BHAPKIBNMAL ? (global::EggLink.DanhengServer.Proto.MIPJKEPDMOF) resultData_ : null; }
+    public global::EggLink.DanhengServer.Proto.FGOIJBNMIEP ONGBGHBJBBF {
+      get { return oNGBGHBJBBF_; }
       set {
-        resultData_ = value;
-        resultDataCase_ = value == null ? ResultDataOneofCase.None : ResultDataOneofCase.BHAPKIBNMAL;
+        oNGBGHBJBBF_ = value;
       }
     }
 
-    /// <summary>Field number for the "MAHNLJALGKG" field.</summary>
-    public const int MAHNLJALGKGFieldNumber = 835;
+    /// <summary>Field number for the "EKMBBHEHEPC" field.</summary>
+    public const int EKMBBHEHEPCFieldNumber = 1386;
+    private global::EggLink.DanhengServer.Proto.FBIOOAHFDEM eKMBBHEHEPC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.NKICHKIGFNE MAHNLJALGKG {
-      get { return resultDataCase_ == ResultDataOneofCase.MAHNLJALGKG ? (global::EggLink.DanhengServer.Proto.NKICHKIGFNE) resultData_ : null; }
+    public global::EggLink.DanhengServer.Proto.FBIOOAHFDEM EKMBBHEHEPC {
+      get { return eKMBBHEHEPC_; }
       set {
-        resultData_ = value;
-        resultDataCase_ = value == null ? ResultDataOneofCase.None : ResultDataOneofCase.MAHNLJALGKG;
+        eKMBBHEHEPC_ = value;
       }
     }
 
-    /// <summary>Field number for the "FGNGKEPMPDN" field.</summary>
-    public const int FGNGKEPMPDNFieldNumber = 142;
+    /// <summary>Field number for the "HEIJFDDMMFJ" field.</summary>
+    public const int HEIJFDDMMFJFieldNumber = 265;
+    private global::EggLink.DanhengServer.Proto.LPPPBHGHJDF hEIJFDDMMFJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.LCBJFJPBJCB FGNGKEPMPDN {
-      get { return resultDataCase_ == ResultDataOneofCase.FGNGKEPMPDN ? (global::EggLink.DanhengServer.Proto.LCBJFJPBJCB) resultData_ : null; }
+    public global::EggLink.DanhengServer.Proto.LPPPBHGHJDF HEIJFDDMMFJ {
+      get { return hEIJFDDMMFJ_; }
       set {
-        resultData_ = value;
-        resultDataCase_ = value == null ? ResultDataOneofCase.None : ResultDataOneofCase.FGNGKEPMPDN;
+        hEIJFDDMMFJ_ = value;
       }
     }
 
-    /// <summary>Field number for the "HGNNEGPPLCD" field.</summary>
-    public const int HGNNEGPPLCDFieldNumber = 1609;
+    /// <summary>Field number for the "MICOCBNMEAJ" field.</summary>
+    public const int MICOCBNMEAJFieldNumber = 330;
+    private global::EggLink.DanhengServer.Proto.KOMCCJGJHNM mICOCBNMEAJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MNBGAMAKDOK HGNNEGPPLCD {
-      get { return resultDataCase_ == ResultDataOneofCase.HGNNEGPPLCD ? (global::EggLink.DanhengServer.Proto.MNBGAMAKDOK) resultData_ : null; }
+    public global::EggLink.DanhengServer.Proto.KOMCCJGJHNM MICOCBNMEAJ {
+      get { return mICOCBNMEAJ_; }
       set {
-        resultData_ = value;
-        resultDataCase_ = value == null ? ResultDataOneofCase.None : ResultDataOneofCase.HGNNEGPPLCD;
+        mICOCBNMEAJ_ = value;
       }
     }
 
     /// <summary>Field number for the "get_formula_list" field.</summary>
-    public const int GetFormulaListFieldNumber = 1837;
+    public const int GetFormulaListFieldNumber = 776;
+    private global::EggLink.DanhengServer.Proto.RogueCommonFormula getFormulaList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.RogueCommonFormula GetFormulaList {
-      get { return resultDataCase_ == ResultDataOneofCase.GetFormulaList ? (global::EggLink.DanhengServer.Proto.RogueCommonFormula) resultData_ : null; }
+      get { return getFormulaList_; }
       set {
-        resultData_ = value;
-        resultDataCase_ = value == null ? ResultDataOneofCase.None : ResultDataOneofCase.GetFormulaList;
+        getFormulaList_ = value;
       }
     }
 
-    /// <summary>Field number for the "KDFGDFIIOMK" field.</summary>
-    public const int KDFGDFIIOMKFieldNumber = 1953;
+    /// <summary>Field number for the "NKMIJHMBCJE" field.</summary>
+    public const int NKMIJHMBCJEFieldNumber = 2044;
+    private global::EggLink.DanhengServer.Proto.BANENCLAHFH nKMIJHMBCJE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.GNBGFJCHFAN KDFGDFIIOMK {
-      get { return resultDataCase_ == ResultDataOneofCase.KDFGDFIIOMK ? (global::EggLink.DanhengServer.Proto.GNBGFJCHFAN) resultData_ : null; }
+    public global::EggLink.DanhengServer.Proto.BANENCLAHFH NKMIJHMBCJE {
+      get { return nKMIJHMBCJE_; }
       set {
-        resultData_ = value;
-        resultDataCase_ = value == null ? ResultDataOneofCase.None : ResultDataOneofCase.KDFGDFIIOMK;
+        nKMIJHMBCJE_ = value;
       }
     }
 
-    /// <summary>Field number for the "KLMOPHIFMHP" field.</summary>
-    public const int KLMOPHIFMHPFieldNumber = 1077;
+    /// <summary>Field number for the "GACMJKONLPO" field.</summary>
+    public const int GACMJKONLPOFieldNumber = 1519;
+    private global::EggLink.DanhengServer.Proto.JCEGOHOHIGK gACMJKONLPO_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.IOPMLAKEOCJ KLMOPHIFMHP {
-      get { return resultDataCase_ == ResultDataOneofCase.KLMOPHIFMHP ? (global::EggLink.DanhengServer.Proto.IOPMLAKEOCJ) resultData_ : null; }
+    public global::EggLink.DanhengServer.Proto.JCEGOHOHIGK GACMJKONLPO {
+      get { return gACMJKONLPO_; }
       set {
-        resultData_ = value;
-        resultDataCase_ = value == null ? ResultDataOneofCase.None : ResultDataOneofCase.KLMOPHIFMHP;
+        gACMJKONLPO_ = value;
       }
     }
 
-    /// <summary>Field number for the "FPMNHKBFPEB" field.</summary>
-    public const int FPMNHKBFPEBFieldNumber = 499;
+    /// <summary>Field number for the "KDHCEKHEIEK" field.</summary>
+    public const int KDHCEKHEIEKFieldNumber = 1280;
+    private global::EggLink.DanhengServer.Proto.FCKINKMKFOJ kDHCEKHEIEK_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.HHDOEPJGGNE FPMNHKBFPEB {
-      get { return resultDataCase_ == ResultDataOneofCase.FPMNHKBFPEB ? (global::EggLink.DanhengServer.Proto.HHDOEPJGGNE) resultData_ : null; }
+    public global::EggLink.DanhengServer.Proto.FCKINKMKFOJ KDHCEKHEIEK {
+      get { return kDHCEKHEIEK_; }
       set {
-        resultData_ = value;
-        resultDataCase_ = value == null ? ResultDataOneofCase.None : ResultDataOneofCase.FPMNHKBFPEB;
+        kDHCEKHEIEK_ = value;
       }
     }
 
-    /// <summary>Field number for the "LJHEHDDAPCF" field.</summary>
-    public const int LJHEHDDAPCFFieldNumber = 1885;
+    /// <summary>Field number for the "OCFHDHJHOLH" field.</summary>
+    public const int OCFHDHJHOLHFieldNumber = 1843;
+    private global::EggLink.DanhengServer.Proto.MEPPCFCOCMC oCFHDHJHOLH_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MBCGGNJCEOE LJHEHDDAPCF {
-      get { return resultDataCase_ == ResultDataOneofCase.LJHEHDDAPCF ? (global::EggLink.DanhengServer.Proto.MBCGGNJCEOE) resultData_ : null; }
+    public global::EggLink.DanhengServer.Proto.MEPPCFCOCMC OCFHDHJHOLH {
+      get { return oCFHDHJHOLH_; }
       set {
-        resultData_ = value;
-        resultDataCase_ = value == null ? ResultDataOneofCase.None : ResultDataOneofCase.LJHEHDDAPCF;
+        oCFHDHJHOLH_ = value;
       }
     }
 
     /// <summary>Field number for the "get_keyword_list" field.</summary>
-    public const int GetKeywordListFieldNumber = 602;
+    public const int GetKeywordListFieldNumber = 1434;
+    private global::EggLink.DanhengServer.Proto.RogueCommonKeyword getKeywordList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.RogueCommonKeyword GetKeywordList {
-      get { return resultDataCase_ == ResultDataOneofCase.GetKeywordList ? (global::EggLink.DanhengServer.Proto.RogueCommonKeyword) resultData_ : null; }
+      get { return getKeywordList_; }
       set {
-        resultData_ = value;
-        resultDataCase_ = value == null ? ResultDataOneofCase.None : ResultDataOneofCase.GetKeywordList;
+        getKeywordList_ = value;
       }
     }
 
-    /// <summary>Field number for the "JMAEGNOGIPL" field.</summary>
-    public const int JMAEGNOGIPLFieldNumber = 1746;
+    /// <summary>Field number for the "JBPJOAHOBGM" field.</summary>
+    public const int JBPJOAHOBGMFieldNumber = 1346;
+    private global::EggLink.DanhengServer.Proto.DCCENMIJJDG jBPJOAHOBGM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.GLLJMPJJAFD JMAEGNOGIPL {
-      get { return resultDataCase_ == ResultDataOneofCase.JMAEGNOGIPL ? (global::EggLink.DanhengServer.Proto.GLLJMPJJAFD) resultData_ : null; }
+    public global::EggLink.DanhengServer.Proto.DCCENMIJJDG JBPJOAHOBGM {
+      get { return jBPJOAHOBGM_; }
       set {
-        resultData_ = value;
-        resultDataCase_ = value == null ? ResultDataOneofCase.None : ResultDataOneofCase.JMAEGNOGIPL;
+        jBPJOAHOBGM_ = value;
       }
-    }
-
-    private object resultData_;
-    /// <summary>Enum of possible cases for the "result_data" oneof.</summary>
-    public enum ResultDataOneofCase {
-      None = 0,
-      GetItemList = 6,
-      RemoveItemList = 5,
-      GetBuffList = 202,
-      RemoveBuffList = 101,
-      GetMiracleList = 173,
-      EJHDINBOAHL = 363,
-      LKFDEOOPJCM = 1465,
-      BHAPKIBNMAL = 1875,
-      MAHNLJALGKG = 835,
-      FGNGKEPMPDN = 142,
-      HGNNEGPPLCD = 1609,
-      GetFormulaList = 1837,
-      KDFGDFIIOMK = 1953,
-      KLMOPHIFMHP = 1077,
-      FPMNHKBFPEB = 499,
-      LJHEHDDAPCF = 1885,
-      GetKeywordList = 602,
-      JMAEGNOGIPL = 1746,
-    }
-    private ResultDataOneofCase resultDataCase_ = ResultDataOneofCase.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ResultDataOneofCase ResultDataCase {
-      get { return resultDataCase_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearResultData() {
-      resultDataCase_ = ResultDataOneofCase.None;
-      resultData_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -435,20 +358,19 @@ namespace EggLink.DanhengServer.Proto {
       if (!object.Equals(GetBuffList, other.GetBuffList)) return false;
       if (!object.Equals(RemoveBuffList, other.RemoveBuffList)) return false;
       if (!object.Equals(GetMiracleList, other.GetMiracleList)) return false;
-      if (!object.Equals(EJHDINBOAHL, other.EJHDINBOAHL)) return false;
-      if (!object.Equals(LKFDEOOPJCM, other.LKFDEOOPJCM)) return false;
-      if (!object.Equals(BHAPKIBNMAL, other.BHAPKIBNMAL)) return false;
-      if (!object.Equals(MAHNLJALGKG, other.MAHNLJALGKG)) return false;
-      if (!object.Equals(FGNGKEPMPDN, other.FGNGKEPMPDN)) return false;
-      if (!object.Equals(HGNNEGPPLCD, other.HGNNEGPPLCD)) return false;
+      if (!object.Equals(KDGKHHFHFBJ, other.KDGKHHFHFBJ)) return false;
+      if (!object.Equals(DHHFCKKDFNJ, other.DHHFCKKDFNJ)) return false;
+      if (!object.Equals(ONGBGHBJBBF, other.ONGBGHBJBBF)) return false;
+      if (!object.Equals(EKMBBHEHEPC, other.EKMBBHEHEPC)) return false;
+      if (!object.Equals(HEIJFDDMMFJ, other.HEIJFDDMMFJ)) return false;
+      if (!object.Equals(MICOCBNMEAJ, other.MICOCBNMEAJ)) return false;
       if (!object.Equals(GetFormulaList, other.GetFormulaList)) return false;
-      if (!object.Equals(KDFGDFIIOMK, other.KDFGDFIIOMK)) return false;
-      if (!object.Equals(KLMOPHIFMHP, other.KLMOPHIFMHP)) return false;
-      if (!object.Equals(FPMNHKBFPEB, other.FPMNHKBFPEB)) return false;
-      if (!object.Equals(LJHEHDDAPCF, other.LJHEHDDAPCF)) return false;
+      if (!object.Equals(NKMIJHMBCJE, other.NKMIJHMBCJE)) return false;
+      if (!object.Equals(GACMJKONLPO, other.GACMJKONLPO)) return false;
+      if (!object.Equals(KDHCEKHEIEK, other.KDHCEKHEIEK)) return false;
+      if (!object.Equals(OCFHDHJHOLH, other.OCFHDHJHOLH)) return false;
       if (!object.Equals(GetKeywordList, other.GetKeywordList)) return false;
-      if (!object.Equals(JMAEGNOGIPL, other.JMAEGNOGIPL)) return false;
-      if (ResultDataCase != other.ResultDataCase) return false;
+      if (!object.Equals(JBPJOAHOBGM, other.JBPJOAHOBGM)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -456,25 +378,24 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (resultDataCase_ == ResultDataOneofCase.GetItemList) hash ^= GetItemList.GetHashCode();
-      if (resultDataCase_ == ResultDataOneofCase.RemoveItemList) hash ^= RemoveItemList.GetHashCode();
-      if (resultDataCase_ == ResultDataOneofCase.GetBuffList) hash ^= GetBuffList.GetHashCode();
-      if (resultDataCase_ == ResultDataOneofCase.RemoveBuffList) hash ^= RemoveBuffList.GetHashCode();
-      if (resultDataCase_ == ResultDataOneofCase.GetMiracleList) hash ^= GetMiracleList.GetHashCode();
-      if (resultDataCase_ == ResultDataOneofCase.EJHDINBOAHL) hash ^= EJHDINBOAHL.GetHashCode();
-      if (resultDataCase_ == ResultDataOneofCase.LKFDEOOPJCM) hash ^= LKFDEOOPJCM.GetHashCode();
-      if (resultDataCase_ == ResultDataOneofCase.BHAPKIBNMAL) hash ^= BHAPKIBNMAL.GetHashCode();
-      if (resultDataCase_ == ResultDataOneofCase.MAHNLJALGKG) hash ^= MAHNLJALGKG.GetHashCode();
-      if (resultDataCase_ == ResultDataOneofCase.FGNGKEPMPDN) hash ^= FGNGKEPMPDN.GetHashCode();
-      if (resultDataCase_ == ResultDataOneofCase.HGNNEGPPLCD) hash ^= HGNNEGPPLCD.GetHashCode();
-      if (resultDataCase_ == ResultDataOneofCase.GetFormulaList) hash ^= GetFormulaList.GetHashCode();
-      if (resultDataCase_ == ResultDataOneofCase.KDFGDFIIOMK) hash ^= KDFGDFIIOMK.GetHashCode();
-      if (resultDataCase_ == ResultDataOneofCase.KLMOPHIFMHP) hash ^= KLMOPHIFMHP.GetHashCode();
-      if (resultDataCase_ == ResultDataOneofCase.FPMNHKBFPEB) hash ^= FPMNHKBFPEB.GetHashCode();
-      if (resultDataCase_ == ResultDataOneofCase.LJHEHDDAPCF) hash ^= LJHEHDDAPCF.GetHashCode();
-      if (resultDataCase_ == ResultDataOneofCase.GetKeywordList) hash ^= GetKeywordList.GetHashCode();
-      if (resultDataCase_ == ResultDataOneofCase.JMAEGNOGIPL) hash ^= JMAEGNOGIPL.GetHashCode();
-      hash ^= (int) resultDataCase_;
+      if (getItemList_ != null) hash ^= GetItemList.GetHashCode();
+      if (removeItemList_ != null) hash ^= RemoveItemList.GetHashCode();
+      if (getBuffList_ != null) hash ^= GetBuffList.GetHashCode();
+      if (removeBuffList_ != null) hash ^= RemoveBuffList.GetHashCode();
+      if (getMiracleList_ != null) hash ^= GetMiracleList.GetHashCode();
+      if (kDGKHHFHFBJ_ != null) hash ^= KDGKHHFHFBJ.GetHashCode();
+      if (dHHFCKKDFNJ_ != null) hash ^= DHHFCKKDFNJ.GetHashCode();
+      if (oNGBGHBJBBF_ != null) hash ^= ONGBGHBJBBF.GetHashCode();
+      if (eKMBBHEHEPC_ != null) hash ^= EKMBBHEHEPC.GetHashCode();
+      if (hEIJFDDMMFJ_ != null) hash ^= HEIJFDDMMFJ.GetHashCode();
+      if (mICOCBNMEAJ_ != null) hash ^= MICOCBNMEAJ.GetHashCode();
+      if (getFormulaList_ != null) hash ^= GetFormulaList.GetHashCode();
+      if (nKMIJHMBCJE_ != null) hash ^= NKMIJHMBCJE.GetHashCode();
+      if (gACMJKONLPO_ != null) hash ^= GACMJKONLPO.GetHashCode();
+      if (kDHCEKHEIEK_ != null) hash ^= KDHCEKHEIEK.GetHashCode();
+      if (oCFHDHJHOLH_ != null) hash ^= OCFHDHJHOLH.GetHashCode();
+      if (getKeywordList_ != null) hash ^= GetKeywordList.GetHashCode();
+      if (jBPJOAHOBGM_ != null) hash ^= JBPJOAHOBGM.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -493,77 +414,77 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (resultDataCase_ == ResultDataOneofCase.RemoveItemList) {
-        output.WriteRawTag(42);
+      if (removeItemList_ != null) {
+        output.WriteRawTag(18);
         output.WriteMessage(RemoveItemList);
       }
-      if (resultDataCase_ == ResultDataOneofCase.GetItemList) {
+      if (getItemList_ != null) {
         output.WriteRawTag(50);
         output.WriteMessage(GetItemList);
       }
-      if (resultDataCase_ == ResultDataOneofCase.RemoveBuffList) {
-        output.WriteRawTag(170, 6);
-        output.WriteMessage(RemoveBuffList);
+      if (oNGBGHBJBBF_ != null) {
+        output.WriteRawTag(202, 13);
+        output.WriteMessage(ONGBGHBJBBF);
       }
-      if (resultDataCase_ == ResultDataOneofCase.FGNGKEPMPDN) {
-        output.WriteRawTag(242, 8);
-        output.WriteMessage(FGNGKEPMPDN);
+      if (hEIJFDDMMFJ_ != null) {
+        output.WriteRawTag(202, 16);
+        output.WriteMessage(HEIJFDDMMFJ);
       }
-      if (resultDataCase_ == ResultDataOneofCase.GetMiracleList) {
-        output.WriteRawTag(234, 10);
-        output.WriteMessage(GetMiracleList);
+      if (mICOCBNMEAJ_ != null) {
+        output.WriteRawTag(210, 20);
+        output.WriteMessage(MICOCBNMEAJ);
       }
-      if (resultDataCase_ == ResultDataOneofCase.GetBuffList) {
-        output.WriteRawTag(210, 12);
-        output.WriteMessage(GetBuffList);
-      }
-      if (resultDataCase_ == ResultDataOneofCase.EJHDINBOAHL) {
-        output.WriteRawTag(218, 22);
-        output.WriteMessage(EJHDINBOAHL);
-      }
-      if (resultDataCase_ == ResultDataOneofCase.FPMNHKBFPEB) {
-        output.WriteRawTag(154, 31);
-        output.WriteMessage(FPMNHKBFPEB);
-      }
-      if (resultDataCase_ == ResultDataOneofCase.GetKeywordList) {
-        output.WriteRawTag(210, 37);
-        output.WriteMessage(GetKeywordList);
-      }
-      if (resultDataCase_ == ResultDataOneofCase.MAHNLJALGKG) {
-        output.WriteRawTag(154, 52);
-        output.WriteMessage(MAHNLJALGKG);
-      }
-      if (resultDataCase_ == ResultDataOneofCase.KLMOPHIFMHP) {
-        output.WriteRawTag(170, 67);
-        output.WriteMessage(KLMOPHIFMHP);
-      }
-      if (resultDataCase_ == ResultDataOneofCase.LKFDEOOPJCM) {
-        output.WriteRawTag(202, 91);
-        output.WriteMessage(LKFDEOOPJCM);
-      }
-      if (resultDataCase_ == ResultDataOneofCase.HGNNEGPPLCD) {
-        output.WriteRawTag(202, 100);
-        output.WriteMessage(HGNNEGPPLCD);
-      }
-      if (resultDataCase_ == ResultDataOneofCase.JMAEGNOGIPL) {
-        output.WriteRawTag(146, 109);
-        output.WriteMessage(JMAEGNOGIPL);
-      }
-      if (resultDataCase_ == ResultDataOneofCase.GetFormulaList) {
-        output.WriteRawTag(234, 114);
+      if (getFormulaList_ != null) {
+        output.WriteRawTag(194, 48);
         output.WriteMessage(GetFormulaList);
       }
-      if (resultDataCase_ == ResultDataOneofCase.BHAPKIBNMAL) {
-        output.WriteRawTag(154, 117);
-        output.WriteMessage(BHAPKIBNMAL);
+      if (dHHFCKKDFNJ_ != null) {
+        output.WriteRawTag(234, 53);
+        output.WriteMessage(DHHFCKKDFNJ);
       }
-      if (resultDataCase_ == ResultDataOneofCase.LJHEHDDAPCF) {
-        output.WriteRawTag(234, 117);
-        output.WriteMessage(LJHEHDDAPCF);
+      if (kDGKHHFHFBJ_ != null) {
+        output.WriteRawTag(202, 63);
+        output.WriteMessage(KDGKHHFHFBJ);
       }
-      if (resultDataCase_ == ResultDataOneofCase.KDFGDFIIOMK) {
-        output.WriteRawTag(138, 122);
-        output.WriteMessage(KDFGDFIIOMK);
+      if (getMiracleList_ != null) {
+        output.WriteRawTag(250, 78);
+        output.WriteMessage(GetMiracleList);
+      }
+      if (kDHCEKHEIEK_ != null) {
+        output.WriteRawTag(130, 80);
+        output.WriteMessage(KDHCEKHEIEK);
+      }
+      if (jBPJOAHOBGM_ != null) {
+        output.WriteRawTag(146, 84);
+        output.WriteMessage(JBPJOAHOBGM);
+      }
+      if (eKMBBHEHEPC_ != null) {
+        output.WriteRawTag(210, 86);
+        output.WriteMessage(EKMBBHEHEPC);
+      }
+      if (getKeywordList_ != null) {
+        output.WriteRawTag(210, 89);
+        output.WriteMessage(GetKeywordList);
+      }
+      if (gACMJKONLPO_ != null) {
+        output.WriteRawTag(250, 94);
+        output.WriteMessage(GACMJKONLPO);
+      }
+      if (removeBuffList_ != null) {
+        output.WriteRawTag(194, 96);
+        output.WriteMessage(RemoveBuffList);
+      }
+      if (oCFHDHJHOLH_ != null) {
+        output.WriteRawTag(154, 115);
+        output.WriteMessage(OCFHDHJHOLH);
+      }
+      if (getBuffList_ != null) {
+        output.WriteRawTag(226, 117);
+        output.WriteMessage(GetBuffList);
+      }
+      if (nKMIJHMBCJE_ != null) {
+        output.WriteRawTag(226, 127);
+        output.WriteMessage(NKMIJHMBCJE);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -575,77 +496,77 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (resultDataCase_ == ResultDataOneofCase.RemoveItemList) {
-        output.WriteRawTag(42);
+      if (removeItemList_ != null) {
+        output.WriteRawTag(18);
         output.WriteMessage(RemoveItemList);
       }
-      if (resultDataCase_ == ResultDataOneofCase.GetItemList) {
+      if (getItemList_ != null) {
         output.WriteRawTag(50);
         output.WriteMessage(GetItemList);
       }
-      if (resultDataCase_ == ResultDataOneofCase.RemoveBuffList) {
-        output.WriteRawTag(170, 6);
-        output.WriteMessage(RemoveBuffList);
+      if (oNGBGHBJBBF_ != null) {
+        output.WriteRawTag(202, 13);
+        output.WriteMessage(ONGBGHBJBBF);
       }
-      if (resultDataCase_ == ResultDataOneofCase.FGNGKEPMPDN) {
-        output.WriteRawTag(242, 8);
-        output.WriteMessage(FGNGKEPMPDN);
+      if (hEIJFDDMMFJ_ != null) {
+        output.WriteRawTag(202, 16);
+        output.WriteMessage(HEIJFDDMMFJ);
       }
-      if (resultDataCase_ == ResultDataOneofCase.GetMiracleList) {
-        output.WriteRawTag(234, 10);
-        output.WriteMessage(GetMiracleList);
+      if (mICOCBNMEAJ_ != null) {
+        output.WriteRawTag(210, 20);
+        output.WriteMessage(MICOCBNMEAJ);
       }
-      if (resultDataCase_ == ResultDataOneofCase.GetBuffList) {
-        output.WriteRawTag(210, 12);
-        output.WriteMessage(GetBuffList);
-      }
-      if (resultDataCase_ == ResultDataOneofCase.EJHDINBOAHL) {
-        output.WriteRawTag(218, 22);
-        output.WriteMessage(EJHDINBOAHL);
-      }
-      if (resultDataCase_ == ResultDataOneofCase.FPMNHKBFPEB) {
-        output.WriteRawTag(154, 31);
-        output.WriteMessage(FPMNHKBFPEB);
-      }
-      if (resultDataCase_ == ResultDataOneofCase.GetKeywordList) {
-        output.WriteRawTag(210, 37);
-        output.WriteMessage(GetKeywordList);
-      }
-      if (resultDataCase_ == ResultDataOneofCase.MAHNLJALGKG) {
-        output.WriteRawTag(154, 52);
-        output.WriteMessage(MAHNLJALGKG);
-      }
-      if (resultDataCase_ == ResultDataOneofCase.KLMOPHIFMHP) {
-        output.WriteRawTag(170, 67);
-        output.WriteMessage(KLMOPHIFMHP);
-      }
-      if (resultDataCase_ == ResultDataOneofCase.LKFDEOOPJCM) {
-        output.WriteRawTag(202, 91);
-        output.WriteMessage(LKFDEOOPJCM);
-      }
-      if (resultDataCase_ == ResultDataOneofCase.HGNNEGPPLCD) {
-        output.WriteRawTag(202, 100);
-        output.WriteMessage(HGNNEGPPLCD);
-      }
-      if (resultDataCase_ == ResultDataOneofCase.JMAEGNOGIPL) {
-        output.WriteRawTag(146, 109);
-        output.WriteMessage(JMAEGNOGIPL);
-      }
-      if (resultDataCase_ == ResultDataOneofCase.GetFormulaList) {
-        output.WriteRawTag(234, 114);
+      if (getFormulaList_ != null) {
+        output.WriteRawTag(194, 48);
         output.WriteMessage(GetFormulaList);
       }
-      if (resultDataCase_ == ResultDataOneofCase.BHAPKIBNMAL) {
-        output.WriteRawTag(154, 117);
-        output.WriteMessage(BHAPKIBNMAL);
+      if (dHHFCKKDFNJ_ != null) {
+        output.WriteRawTag(234, 53);
+        output.WriteMessage(DHHFCKKDFNJ);
       }
-      if (resultDataCase_ == ResultDataOneofCase.LJHEHDDAPCF) {
-        output.WriteRawTag(234, 117);
-        output.WriteMessage(LJHEHDDAPCF);
+      if (kDGKHHFHFBJ_ != null) {
+        output.WriteRawTag(202, 63);
+        output.WriteMessage(KDGKHHFHFBJ);
       }
-      if (resultDataCase_ == ResultDataOneofCase.KDFGDFIIOMK) {
-        output.WriteRawTag(138, 122);
-        output.WriteMessage(KDFGDFIIOMK);
+      if (getMiracleList_ != null) {
+        output.WriteRawTag(250, 78);
+        output.WriteMessage(GetMiracleList);
+      }
+      if (kDHCEKHEIEK_ != null) {
+        output.WriteRawTag(130, 80);
+        output.WriteMessage(KDHCEKHEIEK);
+      }
+      if (jBPJOAHOBGM_ != null) {
+        output.WriteRawTag(146, 84);
+        output.WriteMessage(JBPJOAHOBGM);
+      }
+      if (eKMBBHEHEPC_ != null) {
+        output.WriteRawTag(210, 86);
+        output.WriteMessage(EKMBBHEHEPC);
+      }
+      if (getKeywordList_ != null) {
+        output.WriteRawTag(210, 89);
+        output.WriteMessage(GetKeywordList);
+      }
+      if (gACMJKONLPO_ != null) {
+        output.WriteRawTag(250, 94);
+        output.WriteMessage(GACMJKONLPO);
+      }
+      if (removeBuffList_ != null) {
+        output.WriteRawTag(194, 96);
+        output.WriteMessage(RemoveBuffList);
+      }
+      if (oCFHDHJHOLH_ != null) {
+        output.WriteRawTag(154, 115);
+        output.WriteMessage(OCFHDHJHOLH);
+      }
+      if (getBuffList_ != null) {
+        output.WriteRawTag(226, 117);
+        output.WriteMessage(GetBuffList);
+      }
+      if (nKMIJHMBCJE_ != null) {
+        output.WriteRawTag(226, 127);
+        output.WriteMessage(NKMIJHMBCJE);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -657,59 +578,59 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (resultDataCase_ == ResultDataOneofCase.GetItemList) {
+      if (getItemList_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GetItemList);
       }
-      if (resultDataCase_ == ResultDataOneofCase.RemoveItemList) {
+      if (removeItemList_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RemoveItemList);
       }
-      if (resultDataCase_ == ResultDataOneofCase.GetBuffList) {
+      if (getBuffList_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(GetBuffList);
       }
-      if (resultDataCase_ == ResultDataOneofCase.RemoveBuffList) {
+      if (removeBuffList_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(RemoveBuffList);
       }
-      if (resultDataCase_ == ResultDataOneofCase.GetMiracleList) {
+      if (getMiracleList_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(GetMiracleList);
       }
-      if (resultDataCase_ == ResultDataOneofCase.EJHDINBOAHL) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(EJHDINBOAHL);
+      if (kDGKHHFHFBJ_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(KDGKHHFHFBJ);
       }
-      if (resultDataCase_ == ResultDataOneofCase.LKFDEOOPJCM) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(LKFDEOOPJCM);
+      if (dHHFCKKDFNJ_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DHHFCKKDFNJ);
       }
-      if (resultDataCase_ == ResultDataOneofCase.BHAPKIBNMAL) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(BHAPKIBNMAL);
+      if (oNGBGHBJBBF_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ONGBGHBJBBF);
       }
-      if (resultDataCase_ == ResultDataOneofCase.MAHNLJALGKG) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(MAHNLJALGKG);
+      if (eKMBBHEHEPC_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(EKMBBHEHEPC);
       }
-      if (resultDataCase_ == ResultDataOneofCase.FGNGKEPMPDN) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(FGNGKEPMPDN);
+      if (hEIJFDDMMFJ_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(HEIJFDDMMFJ);
       }
-      if (resultDataCase_ == ResultDataOneofCase.HGNNEGPPLCD) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(HGNNEGPPLCD);
+      if (mICOCBNMEAJ_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(MICOCBNMEAJ);
       }
-      if (resultDataCase_ == ResultDataOneofCase.GetFormulaList) {
+      if (getFormulaList_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(GetFormulaList);
       }
-      if (resultDataCase_ == ResultDataOneofCase.KDFGDFIIOMK) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(KDFGDFIIOMK);
+      if (nKMIJHMBCJE_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(NKMIJHMBCJE);
       }
-      if (resultDataCase_ == ResultDataOneofCase.KLMOPHIFMHP) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(KLMOPHIFMHP);
+      if (gACMJKONLPO_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(GACMJKONLPO);
       }
-      if (resultDataCase_ == ResultDataOneofCase.FPMNHKBFPEB) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(FPMNHKBFPEB);
+      if (kDHCEKHEIEK_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(KDHCEKHEIEK);
       }
-      if (resultDataCase_ == ResultDataOneofCase.LJHEHDDAPCF) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(LJHEHDDAPCF);
+      if (oCFHDHJHOLH_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(OCFHDHJHOLH);
       }
-      if (resultDataCase_ == ResultDataOneofCase.GetKeywordList) {
+      if (getKeywordList_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(GetKeywordList);
       }
-      if (resultDataCase_ == ResultDataOneofCase.JMAEGNOGIPL) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(JMAEGNOGIPL);
+      if (jBPJOAHOBGM_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(JBPJOAHOBGM);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -723,117 +644,114 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      switch (other.ResultDataCase) {
-        case ResultDataOneofCase.GetItemList:
-          if (GetItemList == null) {
-            GetItemList = new global::EggLink.DanhengServer.Proto.RogueCommonMoney();
-          }
-          GetItemList.MergeFrom(other.GetItemList);
-          break;
-        case ResultDataOneofCase.RemoveItemList:
-          if (RemoveItemList == null) {
-            RemoveItemList = new global::EggLink.DanhengServer.Proto.RogueCommonMoney();
-          }
-          RemoveItemList.MergeFrom(other.RemoveItemList);
-          break;
-        case ResultDataOneofCase.GetBuffList:
-          if (GetBuffList == null) {
-            GetBuffList = new global::EggLink.DanhengServer.Proto.RogueCommonBuff();
-          }
-          GetBuffList.MergeFrom(other.GetBuffList);
-          break;
-        case ResultDataOneofCase.RemoveBuffList:
-          if (RemoveBuffList == null) {
-            RemoveBuffList = new global::EggLink.DanhengServer.Proto.RogueCommonBuff();
-          }
-          RemoveBuffList.MergeFrom(other.RemoveBuffList);
-          break;
-        case ResultDataOneofCase.GetMiracleList:
-          if (GetMiracleList == null) {
-            GetMiracleList = new global::EggLink.DanhengServer.Proto.RogueCommonMiracle();
-          }
-          GetMiracleList.MergeFrom(other.GetMiracleList);
-          break;
-        case ResultDataOneofCase.EJHDINBOAHL:
-          if (EJHDINBOAHL == null) {
-            EJHDINBOAHL = new global::EggLink.DanhengServer.Proto.IHHGLFKEHNP();
-          }
-          EJHDINBOAHL.MergeFrom(other.EJHDINBOAHL);
-          break;
-        case ResultDataOneofCase.LKFDEOOPJCM:
-          if (LKFDEOOPJCM == null) {
-            LKFDEOOPJCM = new global::EggLink.DanhengServer.Proto.EFLONNCOBBG();
-          }
-          LKFDEOOPJCM.MergeFrom(other.LKFDEOOPJCM);
-          break;
-        case ResultDataOneofCase.BHAPKIBNMAL:
-          if (BHAPKIBNMAL == null) {
-            BHAPKIBNMAL = new global::EggLink.DanhengServer.Proto.MIPJKEPDMOF();
-          }
-          BHAPKIBNMAL.MergeFrom(other.BHAPKIBNMAL);
-          break;
-        case ResultDataOneofCase.MAHNLJALGKG:
-          if (MAHNLJALGKG == null) {
-            MAHNLJALGKG = new global::EggLink.DanhengServer.Proto.NKICHKIGFNE();
-          }
-          MAHNLJALGKG.MergeFrom(other.MAHNLJALGKG);
-          break;
-        case ResultDataOneofCase.FGNGKEPMPDN:
-          if (FGNGKEPMPDN == null) {
-            FGNGKEPMPDN = new global::EggLink.DanhengServer.Proto.LCBJFJPBJCB();
-          }
-          FGNGKEPMPDN.MergeFrom(other.FGNGKEPMPDN);
-          break;
-        case ResultDataOneofCase.HGNNEGPPLCD:
-          if (HGNNEGPPLCD == null) {
-            HGNNEGPPLCD = new global::EggLink.DanhengServer.Proto.MNBGAMAKDOK();
-          }
-          HGNNEGPPLCD.MergeFrom(other.HGNNEGPPLCD);
-          break;
-        case ResultDataOneofCase.GetFormulaList:
-          if (GetFormulaList == null) {
-            GetFormulaList = new global::EggLink.DanhengServer.Proto.RogueCommonFormula();
-          }
-          GetFormulaList.MergeFrom(other.GetFormulaList);
-          break;
-        case ResultDataOneofCase.KDFGDFIIOMK:
-          if (KDFGDFIIOMK == null) {
-            KDFGDFIIOMK = new global::EggLink.DanhengServer.Proto.GNBGFJCHFAN();
-          }
-          KDFGDFIIOMK.MergeFrom(other.KDFGDFIIOMK);
-          break;
-        case ResultDataOneofCase.KLMOPHIFMHP:
-          if (KLMOPHIFMHP == null) {
-            KLMOPHIFMHP = new global::EggLink.DanhengServer.Proto.IOPMLAKEOCJ();
-          }
-          KLMOPHIFMHP.MergeFrom(other.KLMOPHIFMHP);
-          break;
-        case ResultDataOneofCase.FPMNHKBFPEB:
-          if (FPMNHKBFPEB == null) {
-            FPMNHKBFPEB = new global::EggLink.DanhengServer.Proto.HHDOEPJGGNE();
-          }
-          FPMNHKBFPEB.MergeFrom(other.FPMNHKBFPEB);
-          break;
-        case ResultDataOneofCase.LJHEHDDAPCF:
-          if (LJHEHDDAPCF == null) {
-            LJHEHDDAPCF = new global::EggLink.DanhengServer.Proto.MBCGGNJCEOE();
-          }
-          LJHEHDDAPCF.MergeFrom(other.LJHEHDDAPCF);
-          break;
-        case ResultDataOneofCase.GetKeywordList:
-          if (GetKeywordList == null) {
-            GetKeywordList = new global::EggLink.DanhengServer.Proto.RogueCommonKeyword();
-          }
-          GetKeywordList.MergeFrom(other.GetKeywordList);
-          break;
-        case ResultDataOneofCase.JMAEGNOGIPL:
-          if (JMAEGNOGIPL == null) {
-            JMAEGNOGIPL = new global::EggLink.DanhengServer.Proto.GLLJMPJJAFD();
-          }
-          JMAEGNOGIPL.MergeFrom(other.JMAEGNOGIPL);
-          break;
+      if (other.getItemList_ != null) {
+        if (getItemList_ == null) {
+          GetItemList = new global::EggLink.DanhengServer.Proto.RogueCommonMoney();
+        }
+        GetItemList.MergeFrom(other.GetItemList);
       }
-
+      if (other.removeItemList_ != null) {
+        if (removeItemList_ == null) {
+          RemoveItemList = new global::EggLink.DanhengServer.Proto.RogueCommonMoney();
+        }
+        RemoveItemList.MergeFrom(other.RemoveItemList);
+      }
+      if (other.getBuffList_ != null) {
+        if (getBuffList_ == null) {
+          GetBuffList = new global::EggLink.DanhengServer.Proto.RogueCommonBuff();
+        }
+        GetBuffList.MergeFrom(other.GetBuffList);
+      }
+      if (other.removeBuffList_ != null) {
+        if (removeBuffList_ == null) {
+          RemoveBuffList = new global::EggLink.DanhengServer.Proto.RogueCommonBuff();
+        }
+        RemoveBuffList.MergeFrom(other.RemoveBuffList);
+      }
+      if (other.getMiracleList_ != null) {
+        if (getMiracleList_ == null) {
+          GetMiracleList = new global::EggLink.DanhengServer.Proto.RogueCommonMiracle();
+        }
+        GetMiracleList.MergeFrom(other.GetMiracleList);
+      }
+      if (other.kDGKHHFHFBJ_ != null) {
+        if (kDGKHHFHFBJ_ == null) {
+          KDGKHHFHFBJ = new global::EggLink.DanhengServer.Proto.EHLDCELKDKB();
+        }
+        KDGKHHFHFBJ.MergeFrom(other.KDGKHHFHFBJ);
+      }
+      if (other.dHHFCKKDFNJ_ != null) {
+        if (dHHFCKKDFNJ_ == null) {
+          DHHFCKKDFNJ = new global::EggLink.DanhengServer.Proto.AFKGDNPFJAA();
+        }
+        DHHFCKKDFNJ.MergeFrom(other.DHHFCKKDFNJ);
+      }
+      if (other.oNGBGHBJBBF_ != null) {
+        if (oNGBGHBJBBF_ == null) {
+          ONGBGHBJBBF = new global::EggLink.DanhengServer.Proto.FGOIJBNMIEP();
+        }
+        ONGBGHBJBBF.MergeFrom(other.ONGBGHBJBBF);
+      }
+      if (other.eKMBBHEHEPC_ != null) {
+        if (eKMBBHEHEPC_ == null) {
+          EKMBBHEHEPC = new global::EggLink.DanhengServer.Proto.FBIOOAHFDEM();
+        }
+        EKMBBHEHEPC.MergeFrom(other.EKMBBHEHEPC);
+      }
+      if (other.hEIJFDDMMFJ_ != null) {
+        if (hEIJFDDMMFJ_ == null) {
+          HEIJFDDMMFJ = new global::EggLink.DanhengServer.Proto.LPPPBHGHJDF();
+        }
+        HEIJFDDMMFJ.MergeFrom(other.HEIJFDDMMFJ);
+      }
+      if (other.mICOCBNMEAJ_ != null) {
+        if (mICOCBNMEAJ_ == null) {
+          MICOCBNMEAJ = new global::EggLink.DanhengServer.Proto.KOMCCJGJHNM();
+        }
+        MICOCBNMEAJ.MergeFrom(other.MICOCBNMEAJ);
+      }
+      if (other.getFormulaList_ != null) {
+        if (getFormulaList_ == null) {
+          GetFormulaList = new global::EggLink.DanhengServer.Proto.RogueCommonFormula();
+        }
+        GetFormulaList.MergeFrom(other.GetFormulaList);
+      }
+      if (other.nKMIJHMBCJE_ != null) {
+        if (nKMIJHMBCJE_ == null) {
+          NKMIJHMBCJE = new global::EggLink.DanhengServer.Proto.BANENCLAHFH();
+        }
+        NKMIJHMBCJE.MergeFrom(other.NKMIJHMBCJE);
+      }
+      if (other.gACMJKONLPO_ != null) {
+        if (gACMJKONLPO_ == null) {
+          GACMJKONLPO = new global::EggLink.DanhengServer.Proto.JCEGOHOHIGK();
+        }
+        GACMJKONLPO.MergeFrom(other.GACMJKONLPO);
+      }
+      if (other.kDHCEKHEIEK_ != null) {
+        if (kDHCEKHEIEK_ == null) {
+          KDHCEKHEIEK = new global::EggLink.DanhengServer.Proto.FCKINKMKFOJ();
+        }
+        KDHCEKHEIEK.MergeFrom(other.KDHCEKHEIEK);
+      }
+      if (other.oCFHDHJHOLH_ != null) {
+        if (oCFHDHJHOLH_ == null) {
+          OCFHDHJHOLH = new global::EggLink.DanhengServer.Proto.MEPPCFCOCMC();
+        }
+        OCFHDHJHOLH.MergeFrom(other.OCFHDHJHOLH);
+      }
+      if (other.getKeywordList_ != null) {
+        if (getKeywordList_ == null) {
+          GetKeywordList = new global::EggLink.DanhengServer.Proto.RogueCommonKeyword();
+        }
+        GetKeywordList.MergeFrom(other.GetKeywordList);
+      }
+      if (other.jBPJOAHOBGM_ != null) {
+        if (jBPJOAHOBGM_ == null) {
+          JBPJOAHOBGM = new global::EggLink.DanhengServer.Proto.DCCENMIJJDG();
+        }
+        JBPJOAHOBGM.MergeFrom(other.JBPJOAHOBGM);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -849,166 +767,130 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
-            global::EggLink.DanhengServer.Proto.RogueCommonMoney subBuilder = new global::EggLink.DanhengServer.Proto.RogueCommonMoney();
-            if (resultDataCase_ == ResultDataOneofCase.RemoveItemList) {
-              subBuilder.MergeFrom(RemoveItemList);
+          case 18: {
+            if (removeItemList_ == null) {
+              RemoveItemList = new global::EggLink.DanhengServer.Proto.RogueCommonMoney();
             }
-            input.ReadMessage(subBuilder);
-            RemoveItemList = subBuilder;
+            input.ReadMessage(RemoveItemList);
             break;
           }
           case 50: {
-            global::EggLink.DanhengServer.Proto.RogueCommonMoney subBuilder = new global::EggLink.DanhengServer.Proto.RogueCommonMoney();
-            if (resultDataCase_ == ResultDataOneofCase.GetItemList) {
-              subBuilder.MergeFrom(GetItemList);
+            if (getItemList_ == null) {
+              GetItemList = new global::EggLink.DanhengServer.Proto.RogueCommonMoney();
             }
-            input.ReadMessage(subBuilder);
-            GetItemList = subBuilder;
+            input.ReadMessage(GetItemList);
             break;
           }
-          case 810: {
-            global::EggLink.DanhengServer.Proto.RogueCommonBuff subBuilder = new global::EggLink.DanhengServer.Proto.RogueCommonBuff();
-            if (resultDataCase_ == ResultDataOneofCase.RemoveBuffList) {
-              subBuilder.MergeFrom(RemoveBuffList);
+          case 1738: {
+            if (oNGBGHBJBBF_ == null) {
+              ONGBGHBJBBF = new global::EggLink.DanhengServer.Proto.FGOIJBNMIEP();
             }
-            input.ReadMessage(subBuilder);
-            RemoveBuffList = subBuilder;
+            input.ReadMessage(ONGBGHBJBBF);
             break;
           }
-          case 1138: {
-            global::EggLink.DanhengServer.Proto.LCBJFJPBJCB subBuilder = new global::EggLink.DanhengServer.Proto.LCBJFJPBJCB();
-            if (resultDataCase_ == ResultDataOneofCase.FGNGKEPMPDN) {
-              subBuilder.MergeFrom(FGNGKEPMPDN);
+          case 2122: {
+            if (hEIJFDDMMFJ_ == null) {
+              HEIJFDDMMFJ = new global::EggLink.DanhengServer.Proto.LPPPBHGHJDF();
             }
-            input.ReadMessage(subBuilder);
-            FGNGKEPMPDN = subBuilder;
+            input.ReadMessage(HEIJFDDMMFJ);
             break;
           }
-          case 1386: {
-            global::EggLink.DanhengServer.Proto.RogueCommonMiracle subBuilder = new global::EggLink.DanhengServer.Proto.RogueCommonMiracle();
-            if (resultDataCase_ == ResultDataOneofCase.GetMiracleList) {
-              subBuilder.MergeFrom(GetMiracleList);
+          case 2642: {
+            if (mICOCBNMEAJ_ == null) {
+              MICOCBNMEAJ = new global::EggLink.DanhengServer.Proto.KOMCCJGJHNM();
             }
-            input.ReadMessage(subBuilder);
-            GetMiracleList = subBuilder;
+            input.ReadMessage(MICOCBNMEAJ);
             break;
           }
-          case 1618: {
-            global::EggLink.DanhengServer.Proto.RogueCommonBuff subBuilder = new global::EggLink.DanhengServer.Proto.RogueCommonBuff();
-            if (resultDataCase_ == ResultDataOneofCase.GetBuffList) {
-              subBuilder.MergeFrom(GetBuffList);
+          case 6210: {
+            if (getFormulaList_ == null) {
+              GetFormulaList = new global::EggLink.DanhengServer.Proto.RogueCommonFormula();
             }
-            input.ReadMessage(subBuilder);
-            GetBuffList = subBuilder;
+            input.ReadMessage(GetFormulaList);
             break;
           }
-          case 2906: {
-            global::EggLink.DanhengServer.Proto.IHHGLFKEHNP subBuilder = new global::EggLink.DanhengServer.Proto.IHHGLFKEHNP();
-            if (resultDataCase_ == ResultDataOneofCase.EJHDINBOAHL) {
-              subBuilder.MergeFrom(EJHDINBOAHL);
+          case 6890: {
+            if (dHHFCKKDFNJ_ == null) {
+              DHHFCKKDFNJ = new global::EggLink.DanhengServer.Proto.AFKGDNPFJAA();
             }
-            input.ReadMessage(subBuilder);
-            EJHDINBOAHL = subBuilder;
+            input.ReadMessage(DHHFCKKDFNJ);
             break;
           }
-          case 3994: {
-            global::EggLink.DanhengServer.Proto.HHDOEPJGGNE subBuilder = new global::EggLink.DanhengServer.Proto.HHDOEPJGGNE();
-            if (resultDataCase_ == ResultDataOneofCase.FPMNHKBFPEB) {
-              subBuilder.MergeFrom(FPMNHKBFPEB);
+          case 8138: {
+            if (kDGKHHFHFBJ_ == null) {
+              KDGKHHFHFBJ = new global::EggLink.DanhengServer.Proto.EHLDCELKDKB();
             }
-            input.ReadMessage(subBuilder);
-            FPMNHKBFPEB = subBuilder;
+            input.ReadMessage(KDGKHHFHFBJ);
             break;
           }
-          case 4818: {
-            global::EggLink.DanhengServer.Proto.RogueCommonKeyword subBuilder = new global::EggLink.DanhengServer.Proto.RogueCommonKeyword();
-            if (resultDataCase_ == ResultDataOneofCase.GetKeywordList) {
-              subBuilder.MergeFrom(GetKeywordList);
+          case 10106: {
+            if (getMiracleList_ == null) {
+              GetMiracleList = new global::EggLink.DanhengServer.Proto.RogueCommonMiracle();
             }
-            input.ReadMessage(subBuilder);
-            GetKeywordList = subBuilder;
+            input.ReadMessage(GetMiracleList);
             break;
           }
-          case 6682: {
-            global::EggLink.DanhengServer.Proto.NKICHKIGFNE subBuilder = new global::EggLink.DanhengServer.Proto.NKICHKIGFNE();
-            if (resultDataCase_ == ResultDataOneofCase.MAHNLJALGKG) {
-              subBuilder.MergeFrom(MAHNLJALGKG);
+          case 10242: {
+            if (kDHCEKHEIEK_ == null) {
+              KDHCEKHEIEK = new global::EggLink.DanhengServer.Proto.FCKINKMKFOJ();
             }
-            input.ReadMessage(subBuilder);
-            MAHNLJALGKG = subBuilder;
+            input.ReadMessage(KDHCEKHEIEK);
             break;
           }
-          case 8618: {
-            global::EggLink.DanhengServer.Proto.IOPMLAKEOCJ subBuilder = new global::EggLink.DanhengServer.Proto.IOPMLAKEOCJ();
-            if (resultDataCase_ == ResultDataOneofCase.KLMOPHIFMHP) {
-              subBuilder.MergeFrom(KLMOPHIFMHP);
+          case 10770: {
+            if (jBPJOAHOBGM_ == null) {
+              JBPJOAHOBGM = new global::EggLink.DanhengServer.Proto.DCCENMIJJDG();
             }
-            input.ReadMessage(subBuilder);
-            KLMOPHIFMHP = subBuilder;
+            input.ReadMessage(JBPJOAHOBGM);
             break;
           }
-          case 11722: {
-            global::EggLink.DanhengServer.Proto.EFLONNCOBBG subBuilder = new global::EggLink.DanhengServer.Proto.EFLONNCOBBG();
-            if (resultDataCase_ == ResultDataOneofCase.LKFDEOOPJCM) {
-              subBuilder.MergeFrom(LKFDEOOPJCM);
+          case 11090: {
+            if (eKMBBHEHEPC_ == null) {
+              EKMBBHEHEPC = new global::EggLink.DanhengServer.Proto.FBIOOAHFDEM();
             }
-            input.ReadMessage(subBuilder);
-            LKFDEOOPJCM = subBuilder;
+            input.ReadMessage(EKMBBHEHEPC);
             break;
           }
-          case 12874: {
-            global::EggLink.DanhengServer.Proto.MNBGAMAKDOK subBuilder = new global::EggLink.DanhengServer.Proto.MNBGAMAKDOK();
-            if (resultDataCase_ == ResultDataOneofCase.HGNNEGPPLCD) {
-              subBuilder.MergeFrom(HGNNEGPPLCD);
+          case 11474: {
+            if (getKeywordList_ == null) {
+              GetKeywordList = new global::EggLink.DanhengServer.Proto.RogueCommonKeyword();
             }
-            input.ReadMessage(subBuilder);
-            HGNNEGPPLCD = subBuilder;
+            input.ReadMessage(GetKeywordList);
             break;
           }
-          case 13970: {
-            global::EggLink.DanhengServer.Proto.GLLJMPJJAFD subBuilder = new global::EggLink.DanhengServer.Proto.GLLJMPJJAFD();
-            if (resultDataCase_ == ResultDataOneofCase.JMAEGNOGIPL) {
-              subBuilder.MergeFrom(JMAEGNOGIPL);
+          case 12154: {
+            if (gACMJKONLPO_ == null) {
+              GACMJKONLPO = new global::EggLink.DanhengServer.Proto.JCEGOHOHIGK();
             }
-            input.ReadMessage(subBuilder);
-            JMAEGNOGIPL = subBuilder;
+            input.ReadMessage(GACMJKONLPO);
             break;
           }
-          case 14698: {
-            global::EggLink.DanhengServer.Proto.RogueCommonFormula subBuilder = new global::EggLink.DanhengServer.Proto.RogueCommonFormula();
-            if (resultDataCase_ == ResultDataOneofCase.GetFormulaList) {
-              subBuilder.MergeFrom(GetFormulaList);
+          case 12354: {
+            if (removeBuffList_ == null) {
+              RemoveBuffList = new global::EggLink.DanhengServer.Proto.RogueCommonBuff();
             }
-            input.ReadMessage(subBuilder);
-            GetFormulaList = subBuilder;
+            input.ReadMessage(RemoveBuffList);
             break;
           }
-          case 15002: {
-            global::EggLink.DanhengServer.Proto.MIPJKEPDMOF subBuilder = new global::EggLink.DanhengServer.Proto.MIPJKEPDMOF();
-            if (resultDataCase_ == ResultDataOneofCase.BHAPKIBNMAL) {
-              subBuilder.MergeFrom(BHAPKIBNMAL);
+          case 14746: {
+            if (oCFHDHJHOLH_ == null) {
+              OCFHDHJHOLH = new global::EggLink.DanhengServer.Proto.MEPPCFCOCMC();
             }
-            input.ReadMessage(subBuilder);
-            BHAPKIBNMAL = subBuilder;
+            input.ReadMessage(OCFHDHJHOLH);
             break;
           }
-          case 15082: {
-            global::EggLink.DanhengServer.Proto.MBCGGNJCEOE subBuilder = new global::EggLink.DanhengServer.Proto.MBCGGNJCEOE();
-            if (resultDataCase_ == ResultDataOneofCase.LJHEHDDAPCF) {
-              subBuilder.MergeFrom(LJHEHDDAPCF);
+          case 15074: {
+            if (getBuffList_ == null) {
+              GetBuffList = new global::EggLink.DanhengServer.Proto.RogueCommonBuff();
             }
-            input.ReadMessage(subBuilder);
-            LJHEHDDAPCF = subBuilder;
+            input.ReadMessage(GetBuffList);
             break;
           }
-          case 15626: {
-            global::EggLink.DanhengServer.Proto.GNBGFJCHFAN subBuilder = new global::EggLink.DanhengServer.Proto.GNBGFJCHFAN();
-            if (resultDataCase_ == ResultDataOneofCase.KDFGDFIIOMK) {
-              subBuilder.MergeFrom(KDFGDFIIOMK);
+          case 16354: {
+            if (nKMIJHMBCJE_ == null) {
+              NKMIJHMBCJE = new global::EggLink.DanhengServer.Proto.BANENCLAHFH();
             }
-            input.ReadMessage(subBuilder);
-            KDFGDFIIOMK = subBuilder;
+            input.ReadMessage(NKMIJHMBCJE);
             break;
           }
         }
@@ -1026,166 +908,130 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
-            global::EggLink.DanhengServer.Proto.RogueCommonMoney subBuilder = new global::EggLink.DanhengServer.Proto.RogueCommonMoney();
-            if (resultDataCase_ == ResultDataOneofCase.RemoveItemList) {
-              subBuilder.MergeFrom(RemoveItemList);
+          case 18: {
+            if (removeItemList_ == null) {
+              RemoveItemList = new global::EggLink.DanhengServer.Proto.RogueCommonMoney();
             }
-            input.ReadMessage(subBuilder);
-            RemoveItemList = subBuilder;
+            input.ReadMessage(RemoveItemList);
             break;
           }
           case 50: {
-            global::EggLink.DanhengServer.Proto.RogueCommonMoney subBuilder = new global::EggLink.DanhengServer.Proto.RogueCommonMoney();
-            if (resultDataCase_ == ResultDataOneofCase.GetItemList) {
-              subBuilder.MergeFrom(GetItemList);
+            if (getItemList_ == null) {
+              GetItemList = new global::EggLink.DanhengServer.Proto.RogueCommonMoney();
             }
-            input.ReadMessage(subBuilder);
-            GetItemList = subBuilder;
+            input.ReadMessage(GetItemList);
             break;
           }
-          case 810: {
-            global::EggLink.DanhengServer.Proto.RogueCommonBuff subBuilder = new global::EggLink.DanhengServer.Proto.RogueCommonBuff();
-            if (resultDataCase_ == ResultDataOneofCase.RemoveBuffList) {
-              subBuilder.MergeFrom(RemoveBuffList);
+          case 1738: {
+            if (oNGBGHBJBBF_ == null) {
+              ONGBGHBJBBF = new global::EggLink.DanhengServer.Proto.FGOIJBNMIEP();
             }
-            input.ReadMessage(subBuilder);
-            RemoveBuffList = subBuilder;
+            input.ReadMessage(ONGBGHBJBBF);
             break;
           }
-          case 1138: {
-            global::EggLink.DanhengServer.Proto.LCBJFJPBJCB subBuilder = new global::EggLink.DanhengServer.Proto.LCBJFJPBJCB();
-            if (resultDataCase_ == ResultDataOneofCase.FGNGKEPMPDN) {
-              subBuilder.MergeFrom(FGNGKEPMPDN);
+          case 2122: {
+            if (hEIJFDDMMFJ_ == null) {
+              HEIJFDDMMFJ = new global::EggLink.DanhengServer.Proto.LPPPBHGHJDF();
             }
-            input.ReadMessage(subBuilder);
-            FGNGKEPMPDN = subBuilder;
+            input.ReadMessage(HEIJFDDMMFJ);
             break;
           }
-          case 1386: {
-            global::EggLink.DanhengServer.Proto.RogueCommonMiracle subBuilder = new global::EggLink.DanhengServer.Proto.RogueCommonMiracle();
-            if (resultDataCase_ == ResultDataOneofCase.GetMiracleList) {
-              subBuilder.MergeFrom(GetMiracleList);
+          case 2642: {
+            if (mICOCBNMEAJ_ == null) {
+              MICOCBNMEAJ = new global::EggLink.DanhengServer.Proto.KOMCCJGJHNM();
             }
-            input.ReadMessage(subBuilder);
-            GetMiracleList = subBuilder;
+            input.ReadMessage(MICOCBNMEAJ);
             break;
           }
-          case 1618: {
-            global::EggLink.DanhengServer.Proto.RogueCommonBuff subBuilder = new global::EggLink.DanhengServer.Proto.RogueCommonBuff();
-            if (resultDataCase_ == ResultDataOneofCase.GetBuffList) {
-              subBuilder.MergeFrom(GetBuffList);
+          case 6210: {
+            if (getFormulaList_ == null) {
+              GetFormulaList = new global::EggLink.DanhengServer.Proto.RogueCommonFormula();
             }
-            input.ReadMessage(subBuilder);
-            GetBuffList = subBuilder;
+            input.ReadMessage(GetFormulaList);
             break;
           }
-          case 2906: {
-            global::EggLink.DanhengServer.Proto.IHHGLFKEHNP subBuilder = new global::EggLink.DanhengServer.Proto.IHHGLFKEHNP();
-            if (resultDataCase_ == ResultDataOneofCase.EJHDINBOAHL) {
-              subBuilder.MergeFrom(EJHDINBOAHL);
+          case 6890: {
+            if (dHHFCKKDFNJ_ == null) {
+              DHHFCKKDFNJ = new global::EggLink.DanhengServer.Proto.AFKGDNPFJAA();
             }
-            input.ReadMessage(subBuilder);
-            EJHDINBOAHL = subBuilder;
+            input.ReadMessage(DHHFCKKDFNJ);
             break;
           }
-          case 3994: {
-            global::EggLink.DanhengServer.Proto.HHDOEPJGGNE subBuilder = new global::EggLink.DanhengServer.Proto.HHDOEPJGGNE();
-            if (resultDataCase_ == ResultDataOneofCase.FPMNHKBFPEB) {
-              subBuilder.MergeFrom(FPMNHKBFPEB);
+          case 8138: {
+            if (kDGKHHFHFBJ_ == null) {
+              KDGKHHFHFBJ = new global::EggLink.DanhengServer.Proto.EHLDCELKDKB();
             }
-            input.ReadMessage(subBuilder);
-            FPMNHKBFPEB = subBuilder;
+            input.ReadMessage(KDGKHHFHFBJ);
             break;
           }
-          case 4818: {
-            global::EggLink.DanhengServer.Proto.RogueCommonKeyword subBuilder = new global::EggLink.DanhengServer.Proto.RogueCommonKeyword();
-            if (resultDataCase_ == ResultDataOneofCase.GetKeywordList) {
-              subBuilder.MergeFrom(GetKeywordList);
+          case 10106: {
+            if (getMiracleList_ == null) {
+              GetMiracleList = new global::EggLink.DanhengServer.Proto.RogueCommonMiracle();
             }
-            input.ReadMessage(subBuilder);
-            GetKeywordList = subBuilder;
+            input.ReadMessage(GetMiracleList);
             break;
           }
-          case 6682: {
-            global::EggLink.DanhengServer.Proto.NKICHKIGFNE subBuilder = new global::EggLink.DanhengServer.Proto.NKICHKIGFNE();
-            if (resultDataCase_ == ResultDataOneofCase.MAHNLJALGKG) {
-              subBuilder.MergeFrom(MAHNLJALGKG);
+          case 10242: {
+            if (kDHCEKHEIEK_ == null) {
+              KDHCEKHEIEK = new global::EggLink.DanhengServer.Proto.FCKINKMKFOJ();
             }
-            input.ReadMessage(subBuilder);
-            MAHNLJALGKG = subBuilder;
+            input.ReadMessage(KDHCEKHEIEK);
             break;
           }
-          case 8618: {
-            global::EggLink.DanhengServer.Proto.IOPMLAKEOCJ subBuilder = new global::EggLink.DanhengServer.Proto.IOPMLAKEOCJ();
-            if (resultDataCase_ == ResultDataOneofCase.KLMOPHIFMHP) {
-              subBuilder.MergeFrom(KLMOPHIFMHP);
+          case 10770: {
+            if (jBPJOAHOBGM_ == null) {
+              JBPJOAHOBGM = new global::EggLink.DanhengServer.Proto.DCCENMIJJDG();
             }
-            input.ReadMessage(subBuilder);
-            KLMOPHIFMHP = subBuilder;
+            input.ReadMessage(JBPJOAHOBGM);
             break;
           }
-          case 11722: {
-            global::EggLink.DanhengServer.Proto.EFLONNCOBBG subBuilder = new global::EggLink.DanhengServer.Proto.EFLONNCOBBG();
-            if (resultDataCase_ == ResultDataOneofCase.LKFDEOOPJCM) {
-              subBuilder.MergeFrom(LKFDEOOPJCM);
+          case 11090: {
+            if (eKMBBHEHEPC_ == null) {
+              EKMBBHEHEPC = new global::EggLink.DanhengServer.Proto.FBIOOAHFDEM();
             }
-            input.ReadMessage(subBuilder);
-            LKFDEOOPJCM = subBuilder;
+            input.ReadMessage(EKMBBHEHEPC);
             break;
           }
-          case 12874: {
-            global::EggLink.DanhengServer.Proto.MNBGAMAKDOK subBuilder = new global::EggLink.DanhengServer.Proto.MNBGAMAKDOK();
-            if (resultDataCase_ == ResultDataOneofCase.HGNNEGPPLCD) {
-              subBuilder.MergeFrom(HGNNEGPPLCD);
+          case 11474: {
+            if (getKeywordList_ == null) {
+              GetKeywordList = new global::EggLink.DanhengServer.Proto.RogueCommonKeyword();
             }
-            input.ReadMessage(subBuilder);
-            HGNNEGPPLCD = subBuilder;
+            input.ReadMessage(GetKeywordList);
             break;
           }
-          case 13970: {
-            global::EggLink.DanhengServer.Proto.GLLJMPJJAFD subBuilder = new global::EggLink.DanhengServer.Proto.GLLJMPJJAFD();
-            if (resultDataCase_ == ResultDataOneofCase.JMAEGNOGIPL) {
-              subBuilder.MergeFrom(JMAEGNOGIPL);
+          case 12154: {
+            if (gACMJKONLPO_ == null) {
+              GACMJKONLPO = new global::EggLink.DanhengServer.Proto.JCEGOHOHIGK();
             }
-            input.ReadMessage(subBuilder);
-            JMAEGNOGIPL = subBuilder;
+            input.ReadMessage(GACMJKONLPO);
             break;
           }
-          case 14698: {
-            global::EggLink.DanhengServer.Proto.RogueCommonFormula subBuilder = new global::EggLink.DanhengServer.Proto.RogueCommonFormula();
-            if (resultDataCase_ == ResultDataOneofCase.GetFormulaList) {
-              subBuilder.MergeFrom(GetFormulaList);
+          case 12354: {
+            if (removeBuffList_ == null) {
+              RemoveBuffList = new global::EggLink.DanhengServer.Proto.RogueCommonBuff();
             }
-            input.ReadMessage(subBuilder);
-            GetFormulaList = subBuilder;
+            input.ReadMessage(RemoveBuffList);
             break;
           }
-          case 15002: {
-            global::EggLink.DanhengServer.Proto.MIPJKEPDMOF subBuilder = new global::EggLink.DanhengServer.Proto.MIPJKEPDMOF();
-            if (resultDataCase_ == ResultDataOneofCase.BHAPKIBNMAL) {
-              subBuilder.MergeFrom(BHAPKIBNMAL);
+          case 14746: {
+            if (oCFHDHJHOLH_ == null) {
+              OCFHDHJHOLH = new global::EggLink.DanhengServer.Proto.MEPPCFCOCMC();
             }
-            input.ReadMessage(subBuilder);
-            BHAPKIBNMAL = subBuilder;
+            input.ReadMessage(OCFHDHJHOLH);
             break;
           }
-          case 15082: {
-            global::EggLink.DanhengServer.Proto.MBCGGNJCEOE subBuilder = new global::EggLink.DanhengServer.Proto.MBCGGNJCEOE();
-            if (resultDataCase_ == ResultDataOneofCase.LJHEHDDAPCF) {
-              subBuilder.MergeFrom(LJHEHDDAPCF);
+          case 15074: {
+            if (getBuffList_ == null) {
+              GetBuffList = new global::EggLink.DanhengServer.Proto.RogueCommonBuff();
             }
-            input.ReadMessage(subBuilder);
-            LJHEHDDAPCF = subBuilder;
+            input.ReadMessage(GetBuffList);
             break;
           }
-          case 15626: {
-            global::EggLink.DanhengServer.Proto.GNBGFJCHFAN subBuilder = new global::EggLink.DanhengServer.Proto.GNBGFJCHFAN();
-            if (resultDataCase_ == ResultDataOneofCase.KDFGDFIIOMK) {
-              subBuilder.MergeFrom(KDFGDFIIOMK);
+          case 16354: {
+            if (nKMIJHMBCJE_ == null) {
+              NKMIJHMBCJE = new global::EggLink.DanhengServer.Proto.BANENCLAHFH();
             }
-            input.ReadMessage(subBuilder);
-            KDFGDFIIOMK = subBuilder;
+            input.ReadMessage(NKMIJHMBCJE);
             break;
           }
         }

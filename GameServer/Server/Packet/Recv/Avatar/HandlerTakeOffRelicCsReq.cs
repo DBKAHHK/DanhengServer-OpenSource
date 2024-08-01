@@ -9,8 +9,7 @@ public class HandlerTakeOffRelicCsReq : Handler
     {
         var req = TakeOffRelicCsReq.Parser.ParseFrom(data);
         foreach (var param in req.RelicTypeList)
-            await connection.Player!.InventoryManager!.UnequipRelic((int)req.DressAvatarId, (int)param);
-
+            await connection.Player!.InventoryManager!.UnequipRelic((int)req.AvatarId, (int)param);
         await connection.SendPacket(CmdIds.TakeOffRelicScRsp);
     }
 }

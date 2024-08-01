@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static RogueTournFormulaResultReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1Sb2d1ZVRvdXJuRm9ybXVsYVJlc3VsdC5wcm90byItChdSb2d1ZVRvdXJu",
-            "Rm9ybXVsYVJlc3VsdBISCgpmb3JtdWxhX2lkGAUgASgNQh6qAhtFZ2dMaW5r",
-            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "Ch1Sb2d1ZVRvdXJuRm9ybXVsYVJlc3VsdC5wcm90byIzChdSb2d1ZVRvdXJu",
+            "Rm9ybXVsYVJlc3VsdBIYChB0b3Vybl9mb3JtdWxhX2lkGAsgASgNQh6qAhtF",
+            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournFormulaResult), global::EggLink.DanhengServer.Proto.RogueTournFormulaResult.Parser, new[]{ "FormulaId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournFormulaResult), global::EggLink.DanhengServer.Proto.RogueTournFormulaResult.Parser, new[]{ "TournFormulaId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournFormulaResult(RogueTournFormulaResult other) : this() {
-      formulaId_ = other.formulaId_;
+      tournFormulaId_ = other.tournFormulaId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournFormulaResult(this);
     }
 
-    /// <summary>Field number for the "formula_id" field.</summary>
-    public const int FormulaIdFieldNumber = 5;
-    private uint formulaId_;
+    /// <summary>Field number for the "tourn_formula_id" field.</summary>
+    public const int TournFormulaIdFieldNumber = 11;
+    private uint tournFormulaId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FormulaId {
-      get { return formulaId_; }
+    public uint TournFormulaId {
+      get { return tournFormulaId_; }
       set {
-        formulaId_ = value;
+        tournFormulaId_ = value;
       }
     }
 
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FormulaId != other.FormulaId) return false;
+      if (TournFormulaId != other.TournFormulaId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (FormulaId != 0) hash ^= FormulaId.GetHashCode();
+      if (TournFormulaId != 0) hash ^= TournFormulaId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FormulaId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(FormulaId);
+      if (TournFormulaId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(TournFormulaId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FormulaId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(FormulaId);
+      if (TournFormulaId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(TournFormulaId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -164,8 +164,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (FormulaId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FormulaId);
+      if (TournFormulaId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TournFormulaId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -179,8 +179,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.FormulaId != 0) {
-        FormulaId = other.FormulaId;
+      if (other.TournFormulaId != 0) {
+        TournFormulaId = other.TournFormulaId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -197,8 +197,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            FormulaId = input.ReadUInt32();
+          case 88: {
+            TournFormulaId = input.ReadUInt32();
             break;
           }
         }
@@ -216,8 +216,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            FormulaId = input.ReadUInt32();
+          case 88: {
+            TournFormulaId = input.ReadUInt32();
             break;
           }
         }

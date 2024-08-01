@@ -10,7 +10,7 @@ public class PacketGetStoryLineInfoScRsp : BasePacket
         var proto = new GetStoryLineInfoScRsp
         {
             CurStoryLineId = (uint)player.StoryLineManager!.StoryLineData.CurStoryLineId,
-            RunningStoryLineIdList =
+            UnfinishedStoryLineIdList =
                 { player.StoryLineManager!.StoryLineData.RunningStoryLines.Keys.Select(x => (uint)x) }
         };
 

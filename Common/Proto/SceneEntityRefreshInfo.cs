@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChxTY2VuZUVudGl0eVJlZnJlc2hJbmZvLnByb3RvGhVTY2VuZUVudGl0eUlu",
             "Zm8ucHJvdG8iagoWU2NlbmVFbnRpdHlSZWZyZXNoSW5mbxIkCgphZGRfZW50",
-            "aXR5GAQgASgLMhAuU2NlbmVFbnRpdHlJbmZvEhUKDWRlbGV0ZV9lbnRpdHkY",
-            "BSABKA0SEwoLSUdQSk1PSURBSkwYDiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "aXR5GAYgASgLMhAuU2NlbmVFbnRpdHlJbmZvEhMKC05QSkxLTE9LTklLGAkg",
+            "ASgNEhUKDWRlbGV0ZV9lbnRpdHkYBCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneEntityInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo), global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo.Parser, new[]{ "AddEntity", "DeleteEntity", "IGPJMOIDAJL" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo), global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo.Parser, new[]{ "AddEntity", "NPJLKLOKNIK", "DeleteEntity" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,8 +75,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SceneEntityRefreshInfo(SceneEntityRefreshInfo other) : this() {
       addEntity_ = other.addEntity_ != null ? other.addEntity_.Clone() : null;
+      nPJLKLOKNIK_ = other.nPJLKLOKNIK_;
       deleteEntity_ = other.deleteEntity_;
-      iGPJMOIDAJL_ = other.iGPJMOIDAJL_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "add_entity" field.</summary>
-    public const int AddEntityFieldNumber = 4;
+    public const int AddEntityFieldNumber = 6;
     private global::EggLink.DanhengServer.Proto.SceneEntityInfo addEntity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,27 +98,33 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "NPJLKLOKNIK" field.</summary>
+    public const int NPJLKLOKNIKFieldNumber = 9;
+    private uint nPJLKLOKNIK_;
+    /// <summary>
+    /// 4
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint NPJLKLOKNIK {
+      get { return nPJLKLOKNIK_; }
+      set {
+        nPJLKLOKNIK_ = value;
+      }
+    }
+
     /// <summary>Field number for the "delete_entity" field.</summary>
-    public const int DeleteEntityFieldNumber = 5;
+    public const int DeleteEntityFieldNumber = 4;
     private uint deleteEntity_;
+    /// <summary>
+    /// 9
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint DeleteEntity {
       get { return deleteEntity_; }
       set {
         deleteEntity_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "IGPJMOIDAJL" field.</summary>
-    public const int IGPJMOIDAJLFieldNumber = 14;
-    private uint iGPJMOIDAJL_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IGPJMOIDAJL {
-      get { return iGPJMOIDAJL_; }
-      set {
-        iGPJMOIDAJL_ = value;
       }
     }
 
@@ -138,8 +144,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(AddEntity, other.AddEntity)) return false;
+      if (NPJLKLOKNIK != other.NPJLKLOKNIK) return false;
       if (DeleteEntity != other.DeleteEntity) return false;
-      if (IGPJMOIDAJL != other.IGPJMOIDAJL) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -148,8 +154,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (addEntity_ != null) hash ^= AddEntity.GetHashCode();
+      if (NPJLKLOKNIK != 0) hash ^= NPJLKLOKNIK.GetHashCode();
       if (DeleteEntity != 0) hash ^= DeleteEntity.GetHashCode();
-      if (IGPJMOIDAJL != 0) hash ^= IGPJMOIDAJL.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,17 +174,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (addEntity_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(AddEntity);
-      }
       if (DeleteEntity != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteUInt32(DeleteEntity);
       }
-      if (IGPJMOIDAJL != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(IGPJMOIDAJL);
+      if (addEntity_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(AddEntity);
+      }
+      if (NPJLKLOKNIK != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(NPJLKLOKNIK);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,17 +196,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (addEntity_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(AddEntity);
-      }
       if (DeleteEntity != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteUInt32(DeleteEntity);
       }
-      if (IGPJMOIDAJL != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(IGPJMOIDAJL);
+      if (addEntity_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(AddEntity);
+      }
+      if (NPJLKLOKNIK != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(NPJLKLOKNIK);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -215,11 +221,11 @@ namespace EggLink.DanhengServer.Proto {
       if (addEntity_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AddEntity);
       }
+      if (NPJLKLOKNIK != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NPJLKLOKNIK);
+      }
       if (DeleteEntity != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DeleteEntity);
-      }
-      if (IGPJMOIDAJL != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IGPJMOIDAJL);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -239,11 +245,11 @@ namespace EggLink.DanhengServer.Proto {
         }
         AddEntity.MergeFrom(other.AddEntity);
       }
+      if (other.NPJLKLOKNIK != 0) {
+        NPJLKLOKNIK = other.NPJLKLOKNIK;
+      }
       if (other.DeleteEntity != 0) {
         DeleteEntity = other.DeleteEntity;
-      }
-      if (other.IGPJMOIDAJL != 0) {
-        IGPJMOIDAJL = other.IGPJMOIDAJL;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -260,19 +266,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
+          case 32: {
+            DeleteEntity = input.ReadUInt32();
+            break;
+          }
+          case 50: {
             if (addEntity_ == null) {
               AddEntity = new global::EggLink.DanhengServer.Proto.SceneEntityInfo();
             }
             input.ReadMessage(AddEntity);
             break;
           }
-          case 40: {
-            DeleteEntity = input.ReadUInt32();
-            break;
-          }
-          case 112: {
-            IGPJMOIDAJL = input.ReadUInt32();
+          case 72: {
+            NPJLKLOKNIK = input.ReadUInt32();
             break;
           }
         }
@@ -290,19 +296,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
+          case 32: {
+            DeleteEntity = input.ReadUInt32();
+            break;
+          }
+          case 50: {
             if (addEntity_ == null) {
               AddEntity = new global::EggLink.DanhengServer.Proto.SceneEntityInfo();
             }
             input.ReadMessage(AddEntity);
             break;
           }
-          case 40: {
-            DeleteEntity = input.ReadUInt32();
-            break;
-          }
-          case 112: {
-            IGPJMOIDAJL = input.ReadUInt32();
+          case 72: {
+            NPJLKLOKNIK = input.ReadUInt32();
             break;
           }
         }

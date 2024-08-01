@@ -24,13 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static LockRelicCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRMb2NrUmVsaWNDc1JlcS5wcm90byI/Cg5Mb2NrUmVsaWNDc1JlcRIUCgxp",
-            "c19wcm90ZWN0ZWQYByABKAgSFwoPcmVsaWNfdW5pcXVlX2lkGAkgASgNQh6q",
-            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChRMb2NrUmVsaWNDc1JlcS5wcm90byJpCg5Mb2NrUmVsaWNDc1JlcRIUCgxp",
+            "c19wcm90ZWN0ZWQYBCABKAgSFwoPcmVsaWNfdW5pcXVlX2lkGAYgASgNEhMK",
+            "C0tHQkdOR0xOR0VHGAIgASgIEhMKC1BQRUlMTERPQ0JFGAwgAygNQh6qAhtF",
+            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LockRelicCsReq), global::EggLink.DanhengServer.Proto.LockRelicCsReq.Parser, new[]{ "IsProtected", "RelicUniqueId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LockRelicCsReq), global::EggLink.DanhengServer.Proto.LockRelicCsReq.Parser, new[]{ "IsProtected", "RelicUniqueId", "KGBGNGLNGEG", "PPEILLDOCBE" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,6 +75,8 @@ namespace EggLink.DanhengServer.Proto {
     public LockRelicCsReq(LockRelicCsReq other) : this() {
       isProtected_ = other.isProtected_;
       relicUniqueId_ = other.relicUniqueId_;
+      kGBGNGLNGEG_ = other.kGBGNGLNGEG_;
+      pPEILLDOCBE_ = other.pPEILLDOCBE_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_protected" field.</summary>
-    public const int IsProtectedFieldNumber = 7;
+    public const int IsProtectedFieldNumber = 4;
     private bool isProtected_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "relic_unique_id" field.</summary>
-    public const int RelicUniqueIdFieldNumber = 9;
+    public const int RelicUniqueIdFieldNumber = 6;
     private uint relicUniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +108,29 @@ namespace EggLink.DanhengServer.Proto {
       set {
         relicUniqueId_ = value;
       }
+    }
+
+    /// <summary>Field number for the "KGBGNGLNGEG" field.</summary>
+    public const int KGBGNGLNGEGFieldNumber = 2;
+    private bool kGBGNGLNGEG_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool KGBGNGLNGEG {
+      get { return kGBGNGLNGEG_; }
+      set {
+        kGBGNGLNGEG_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PPEILLDOCBE" field.</summary>
+    public const int PPEILLDOCBEFieldNumber = 12;
+    private static readonly pb::FieldCodec<uint> _repeated_pPEILLDOCBE_codec
+        = pb::FieldCodec.ForUInt32(98);
+    private readonly pbc::RepeatedField<uint> pPEILLDOCBE_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> PPEILLDOCBE {
+      get { return pPEILLDOCBE_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -124,6 +150,8 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (IsProtected != other.IsProtected) return false;
       if (RelicUniqueId != other.RelicUniqueId) return false;
+      if (KGBGNGLNGEG != other.KGBGNGLNGEG) return false;
+      if(!pPEILLDOCBE_.Equals(other.pPEILLDOCBE_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,6 +161,8 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (IsProtected != false) hash ^= IsProtected.GetHashCode();
       if (RelicUniqueId != 0) hash ^= RelicUniqueId.GetHashCode();
+      if (KGBGNGLNGEG != false) hash ^= KGBGNGLNGEG.GetHashCode();
+      hash ^= pPEILLDOCBE_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,14 +181,19 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (KGBGNGLNGEG != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(KGBGNGLNGEG);
+      }
       if (IsProtected != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(32);
         output.WriteBool(IsProtected);
       }
       if (RelicUniqueId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(48);
         output.WriteUInt32(RelicUniqueId);
       }
+      pPEILLDOCBE_.WriteTo(output, _repeated_pPEILLDOCBE_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -169,14 +204,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (KGBGNGLNGEG != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(KGBGNGLNGEG);
+      }
       if (IsProtected != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(32);
         output.WriteBool(IsProtected);
       }
       if (RelicUniqueId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(48);
         output.WriteUInt32(RelicUniqueId);
       }
+      pPEILLDOCBE_.WriteTo(ref output, _repeated_pPEILLDOCBE_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -193,6 +233,10 @@ namespace EggLink.DanhengServer.Proto {
       if (RelicUniqueId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RelicUniqueId);
       }
+      if (KGBGNGLNGEG != false) {
+        size += 1 + 1;
+      }
+      size += pPEILLDOCBE_.CalculateSize(_repeated_pPEILLDOCBE_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -211,6 +255,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other.RelicUniqueId != 0) {
         RelicUniqueId = other.RelicUniqueId;
       }
+      if (other.KGBGNGLNGEG != false) {
+        KGBGNGLNGEG = other.KGBGNGLNGEG;
+      }
+      pPEILLDOCBE_.Add(other.pPEILLDOCBE_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -226,12 +274,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
+          case 16: {
+            KGBGNGLNGEG = input.ReadBool();
+            break;
+          }
+          case 32: {
             IsProtected = input.ReadBool();
             break;
           }
-          case 72: {
+          case 48: {
             RelicUniqueId = input.ReadUInt32();
+            break;
+          }
+          case 98:
+          case 96: {
+            pPEILLDOCBE_.AddEntriesFrom(input, _repeated_pPEILLDOCBE_codec);
             break;
           }
         }
@@ -249,12 +306,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
+          case 16: {
+            KGBGNGLNGEG = input.ReadBool();
+            break;
+          }
+          case 32: {
             IsProtected = input.ReadBool();
             break;
           }
-          case 72: {
+          case 48: {
             RelicUniqueId = input.ReadUInt32();
+            break;
+          }
+          case 98:
+          case 96: {
+            pPEILLDOCBE_.AddEntriesFrom(ref input, _repeated_pPEILLDOCBE_codec);
             break;
           }
         }

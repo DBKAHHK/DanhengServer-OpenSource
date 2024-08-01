@@ -52,7 +52,6 @@ public class PathConfig
     public string DatabasePath { get; set; } = "Config/Database";
     public string LogPath { get; set; } = "Logs";
     public string PluginPath { get; set; } = "Plugins";
-    public string PluginConfigPath { get; set; } = "Plugins/Config";
 }
 
 public class DatabaseConfig

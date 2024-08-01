@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static TurnFoodSwitchReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRUdXJuRm9vZFN3aXRjaC5wcm90byplCg5UdXJuRm9vZFN3aXRjaBIZChVU",
-            "VVJOX0ZPT0RfU1dJVENIX05PTkUQABIbChdUVVJOX0ZPT0RfU1dJVENIX0FU",
-            "VEFDSxABEhsKF1RVUk5fRk9PRF9TV0lUQ0hfREVGSU5FEAJCHqoCG0VnZ0xp",
-            "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChRUdXJuRm9vZFN3aXRjaC5wcm90bypUCg5UdXJuRm9vZFN3aXRjaBIZChVU",
+            "VVJOX0ZPT0RfU1dJVENIX05PTkUQABIKCgZhdHRhY2sQARIbChdUVVJOX0ZP",
+            "T0RfU1dJVENIX0RFRklORRACQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.TurnFoodSwitch), }, null, null));
@@ -38,7 +38,7 @@ namespace EggLink.DanhengServer.Proto {
   #region Enums
   public enum TurnFoodSwitch {
     [pbr::OriginalName("TURN_FOOD_SWITCH_NONE")] None = 0,
-    [pbr::OriginalName("TURN_FOOD_SWITCH_ATTACK")] Attack = 1,
+    [pbr::OriginalName("attack")] Attack = 1,
     [pbr::OriginalName("TURN_FOOD_SWITCH_DEFINE")] Define = 2,
   }
 

@@ -17,6 +17,7 @@ public class GroupInfo
 
     [JsonConverter(typeof(StringEnumConverter))]
     public GroupCategoryEnum Category { get; set; }
+
     public LevelGroupSystemUnlockCondition? SystemUnlockCondition { get; set; } = null;
     public string LevelGraph { get; set; } = "";
     public bool LoadOnInitial { get; set; }

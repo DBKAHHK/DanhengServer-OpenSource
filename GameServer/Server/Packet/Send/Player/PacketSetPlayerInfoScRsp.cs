@@ -9,7 +9,7 @@ public class PacketSetPlayerInfoScRsp : BasePacket
     {
         var proto = new SetPlayerInfoScRsp
         {
-            CurBasicType = (HeroBasicType)player.Data.CurBasicType,
+            CurAvatarPath = (MultiPathAvatarType)player.Data.CurBasicType,
             IsModify = IsModify
         };
 

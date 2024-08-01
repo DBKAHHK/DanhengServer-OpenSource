@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtDZWxsTW9uc3RlclNlbGVjdEluZm8ucHJvdG8iSAoVQ2VsbE1vbnN0ZXJT",
-            "ZWxlY3RJbmZvEhcKD3NlbGVjdF9kZWNheV9pZBgKIAMoDRIWCg5tYXplX2J1",
-            "ZmZfbGlzdBgBIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "ZWxlY3RJbmZvEhcKD3NlbGVjdF9kZWNheV9pZBgLIAMoDRIWCg5tYXplX2J1",
+            "ZmZfbGlzdBgDIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_decay_id" field.</summary>
-    public const int SelectDecayIdFieldNumber = 10;
+    public const int SelectDecayIdFieldNumber = 11;
     private static readonly pb::FieldCodec<uint> _repeated_selectDecayId_codec
-        = pb::FieldCodec.ForUInt32(82);
+        = pb::FieldCodec.ForUInt32(90);
     private readonly pbc::RepeatedField<uint> selectDecayId_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,9 +96,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "maze_buff_list" field.</summary>
-    public const int MazeBuffListFieldNumber = 1;
+    public const int MazeBuffListFieldNumber = 3;
     private static readonly pb::FieldCodec<uint> _repeated_mazeBuffList_codec
-        = pb::FieldCodec.ForUInt32(10);
+        = pb::FieldCodec.ForUInt32(26);
     private readonly pbc::RepeatedField<uint> mazeBuffList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -205,13 +205,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10:
-          case 8: {
+          case 26:
+          case 24: {
             mazeBuffList_.AddEntriesFrom(input, _repeated_mazeBuffList_codec);
             break;
           }
-          case 82:
-          case 80: {
+          case 90:
+          case 88: {
             selectDecayId_.AddEntriesFrom(input, _repeated_selectDecayId_codec);
             break;
           }
@@ -230,13 +230,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10:
-          case 8: {
+          case 26:
+          case 24: {
             mazeBuffList_.AddEntriesFrom(ref input, _repeated_mazeBuffList_codec);
             break;
           }
-          case 82:
-          case 80: {
+          case 90:
+          case 88: {
             selectDecayId_.AddEntriesFrom(ref input, _repeated_selectDecayId_codec);
             break;
           }

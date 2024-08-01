@@ -1,6 +1,0 @@
-﻿namespace EggLink.DanhengServer.Data.Excel;
-
-// Deprecated in 2.4, so we don't need to implement this class in this version (2.3)
-public class HeroConfigExcel
-{
-}

@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRRdWl0Um9ndWVTY1JzcC5wcm90bxoPUm9ndWVJbmZvLnByb3RvGhVSb2d1",
-            "ZUZpbmlzaEluZm8ucHJvdG8iaAoOUXVpdFJvZ3VlU2NSc3ASJQoLZmluaXNo",
-            "X2luZm8YByABKAsyEC5Sb2d1ZUZpbmlzaEluZm8SDwoHcmV0Y29kZRgKIAEo",
-            "DRIeCgpyb2d1ZV9pbmZvGAIgASgLMgouUm9ndWVJbmZvQh6qAhtFZ2dMaW5r",
-            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ZUZpbmlzaEluZm8ucHJvdG8ibgoOUXVpdFJvZ3VlU2NSc3ASDwoHcmV0Y29k",
+            "ZRgIIAEoDRIeCgpyb2d1ZV9pbmZvGAIgASgLMgouUm9ndWVJbmZvEisKEXJv",
+            "Z3VlX2ZpbmlzaF9pbmZvGAEgASgLMhAuUm9ndWVGaW5pc2hJbmZvQh6qAhtF",
+            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueFinishInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.QuitRogueScRsp), global::EggLink.DanhengServer.Proto.QuitRogueScRsp.Parser, new[]{ "FinishInfo", "Retcode", "RogueInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.QuitRogueScRsp), global::EggLink.DanhengServer.Proto.QuitRogueScRsp.Parser, new[]{ "Retcode", "RogueInfo", "RogueFinishInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public QuitRogueScRsp(QuitRogueScRsp other) : this() {
-      finishInfo_ = other.finishInfo_ != null ? other.finishInfo_.Clone() : null;
       retcode_ = other.retcode_;
       rogueInfo_ = other.rogueInfo_ != null ? other.rogueInfo_.Clone() : null;
+      rogueFinishInfo_ = other.rogueFinishInfo_ != null ? other.rogueFinishInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,20 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new QuitRogueScRsp(this);
     }
 
-    /// <summary>Field number for the "finish_info" field.</summary>
-    public const int FinishInfoFieldNumber = 7;
-    private global::EggLink.DanhengServer.Proto.RogueFinishInfo finishInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueFinishInfo FinishInfo {
-      get { return finishInfo_; }
-      set {
-        finishInfo_ = value;
-      }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 10;
+    public const int RetcodeFieldNumber = 8;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,6 +110,18 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "rogue_finish_info" field.</summary>
+    public const int RogueFinishInfoFieldNumber = 1;
+    private global::EggLink.DanhengServer.Proto.RogueFinishInfo rogueFinishInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueFinishInfo RogueFinishInfo {
+      get { return rogueFinishInfo_; }
+      set {
+        rogueFinishInfo_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(FinishInfo, other.FinishInfo)) return false;
       if (Retcode != other.Retcode) return false;
       if (!object.Equals(RogueInfo, other.RogueInfo)) return false;
+      if (!object.Equals(RogueFinishInfo, other.RogueFinishInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,9 +147,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (finishInfo_ != null) hash ^= FinishInfo.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (rogueInfo_ != null) hash ^= RogueInfo.GetHashCode();
+      if (rogueFinishInfo_ != null) hash ^= RogueFinishInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,16 +168,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (rogueFinishInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(RogueFinishInfo);
+      }
       if (rogueInfo_ != null) {
         output.WriteRawTag(18);
         output.WriteMessage(RogueInfo);
       }
-      if (finishInfo_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(FinishInfo);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -190,16 +190,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (rogueFinishInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(RogueFinishInfo);
+      }
       if (rogueInfo_ != null) {
         output.WriteRawTag(18);
         output.WriteMessage(RogueInfo);
       }
-      if (finishInfo_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(FinishInfo);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -212,14 +212,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (finishInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FinishInfo);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (rogueInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueInfo);
+      }
+      if (rogueFinishInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueFinishInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -233,12 +233,6 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.finishInfo_ != null) {
-        if (finishInfo_ == null) {
-          FinishInfo = new global::EggLink.DanhengServer.Proto.RogueFinishInfo();
-        }
-        FinishInfo.MergeFrom(other.FinishInfo);
-      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
@@ -247,6 +241,12 @@ namespace EggLink.DanhengServer.Proto {
           RogueInfo = new global::EggLink.DanhengServer.Proto.RogueInfo();
         }
         RogueInfo.MergeFrom(other.RogueInfo);
+      }
+      if (other.rogueFinishInfo_ != null) {
+        if (rogueFinishInfo_ == null) {
+          RogueFinishInfo = new global::EggLink.DanhengServer.Proto.RogueFinishInfo();
+        }
+        RogueFinishInfo.MergeFrom(other.RogueFinishInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -263,6 +263,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            if (rogueFinishInfo_ == null) {
+              RogueFinishInfo = new global::EggLink.DanhengServer.Proto.RogueFinishInfo();
+            }
+            input.ReadMessage(RogueFinishInfo);
+            break;
+          }
           case 18: {
             if (rogueInfo_ == null) {
               RogueInfo = new global::EggLink.DanhengServer.Proto.RogueInfo();
@@ -270,14 +277,7 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(RogueInfo);
             break;
           }
-          case 58: {
-            if (finishInfo_ == null) {
-              FinishInfo = new global::EggLink.DanhengServer.Proto.RogueFinishInfo();
-            }
-            input.ReadMessage(FinishInfo);
-            break;
-          }
-          case 80: {
+          case 64: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -296,6 +296,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10: {
+            if (rogueFinishInfo_ == null) {
+              RogueFinishInfo = new global::EggLink.DanhengServer.Proto.RogueFinishInfo();
+            }
+            input.ReadMessage(RogueFinishInfo);
+            break;
+          }
           case 18: {
             if (rogueInfo_ == null) {
               RogueInfo = new global::EggLink.DanhengServer.Proto.RogueInfo();
@@ -303,14 +310,7 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(RogueInfo);
             break;
           }
-          case 58: {
-            if (finishInfo_ == null) {
-              FinishInfo = new global::EggLink.DanhengServer.Proto.RogueFinishInfo();
-            }
-            input.ReadMessage(FinishInfo);
-            break;
-          }
-          case 80: {
+          case 64: {
             Retcode = input.ReadUInt32();
             break;
           }

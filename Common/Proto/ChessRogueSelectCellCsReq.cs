@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9DaGVzc1JvZ3VlU2VsZWN0Q2VsbENzUmVxLnByb3RvIkcKGUNoZXNzUm9n",
-            "dWVTZWxlY3RDZWxsQ3NSZXESDwoHY2VsbF9pZBgCIAEoDRIZChFzZWxlY3Rf",
-            "bW9uc3Rlcl9pZBgPIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "dWVTZWxlY3RDZWxsQ3NSZXESGQoRc2VsZWN0X21vbnN0ZXJfaWQYBSABKA0S",
+            "DwoHY2VsbF9pZBgCIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueSelectCellCsReq), global::EggLink.DanhengServer.Proto.ChessRogueSelectCellCsReq.Parser, new[]{ "CellId", "SelectMonsterId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueSelectCellCsReq), global::EggLink.DanhengServer.Proto.ChessRogueSelectCellCsReq.Parser, new[]{ "SelectMonsterId", "CellId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueSelectCellCsReq(ChessRogueSelectCellCsReq other) : this() {
-      cellId_ = other.cellId_;
       selectMonsterId_ = other.selectMonsterId_;
+      cellId_ = other.cellId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,6 +82,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueSelectCellCsReq Clone() {
       return new ChessRogueSelectCellCsReq(this);
+    }
+
+    /// <summary>Field number for the "select_monster_id" field.</summary>
+    public const int SelectMonsterIdFieldNumber = 5;
+    private uint selectMonsterId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SelectMonsterId {
+      get { return selectMonsterId_; }
+      set {
+        selectMonsterId_ = value;
+      }
     }
 
     /// <summary>Field number for the "cell_id" field.</summary>
@@ -93,18 +105,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return cellId_; }
       set {
         cellId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "select_monster_id" field.</summary>
-    public const int SelectMonsterIdFieldNumber = 15;
-    private uint selectMonsterId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SelectMonsterId {
-      get { return selectMonsterId_; }
-      set {
-        selectMonsterId_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CellId != other.CellId) return false;
       if (SelectMonsterId != other.SelectMonsterId) return false;
+      if (CellId != other.CellId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CellId != 0) hash ^= CellId.GetHashCode();
       if (SelectMonsterId != 0) hash ^= SelectMonsterId.GetHashCode();
+      if (CellId != 0) hash ^= CellId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(CellId);
       }
       if (SelectMonsterId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(40);
         output.WriteUInt32(SelectMonsterId);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(CellId);
       }
       if (SelectMonsterId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(40);
         output.WriteUInt32(SelectMonsterId);
       }
       if (_unknownFields != null) {
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CellId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CellId);
-      }
       if (SelectMonsterId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SelectMonsterId);
+      }
+      if (CellId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CellId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.CellId != 0) {
-        CellId = other.CellId;
-      }
       if (other.SelectMonsterId != 0) {
         SelectMonsterId = other.SelectMonsterId;
+      }
+      if (other.CellId != 0) {
+        CellId = other.CellId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,7 +231,7 @@ namespace EggLink.DanhengServer.Proto {
             CellId = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 40: {
             SelectMonsterId = input.ReadUInt32();
             break;
           }
@@ -254,7 +254,7 @@ namespace EggLink.DanhengServer.Proto {
             CellId = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 40: {
             SelectMonsterId = input.ReadUInt32();
             break;
           }

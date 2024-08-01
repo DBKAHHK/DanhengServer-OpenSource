@@ -156,9 +156,11 @@ public class LineupManager : BasePlayerManager
             AvatarData = Player.AvatarManager!.AvatarData
         };
 
+        var worldLevel = type == ExtraLineupType.LineupStageTrial ? 0 : Player.Data.WorldLevel;
+
         foreach (var avatarId in baseAvatarIds)
         {
-            GameData.SpecialAvatarData.TryGetValue(avatarId * 10 + Player.Data.WorldLevel, out var specialAvatar);
+            GameData.SpecialAvatarData.TryGetValue(avatarId * 10 + worldLevel, out var specialAvatar);
             if (specialAvatar != null)
                 lineup.BaseAvatars!.Add(new LineupAvatarInfo
                     { BaseAvatarId = specialAvatar.AvatarID, SpecialAvatarId = specialAvatar.GetId() });
@@ -339,14 +341,21 @@ public class LineupManager : BasePlayerManager
         await Player.SendPacket(new PacketSyncLineupNotify(lineup));
     }
 
-    public async ValueTask CostMp(int count)
+    public async ValueTask DestroyExtraLineup(ExtraLineupType type)
+    {
+        var index = (int)type + 10;
+        LineupData.Lineups.Remove(index);
+        await Player.SendPacket(new PacketExtraLineupDestroyNotify(type));
+    }
+
+    public async ValueTask CostMp(int count, uint castEntityId = 1)
     {
         var curLineup = GetCurLineup()!;
         curLineup.Mp -= count;
         curLineup.Mp = Math.Min(Math.Max(0, curLineup.Mp), 5);
         DatabaseHelper.Instance?.UpdateInstance(LineupData);
 
-        await Player.SendPacket(new PacketSceneCastSkillMpUpdateScNotify(1, curLineup.Mp));
+        await Player.SendPacket(new PacketSceneCastSkillMpUpdateScNotify(castEntityId, curLineup.Mp));
     }
 
     public async ValueTask GainMp(int count, bool sendPacket = true)

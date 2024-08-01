@@ -11,7 +11,7 @@ public class HandlerChessRogueNousEditDiceCsReq : Handler
         var player = connection.Player!;
         var req = ChessRogueNousEditDiceCsReq.Parser.ParseFrom(data);
 
-        var diceData = player.ChessRogueManager!.SetDice(req.DiceInfo);
+        var diceData = player.ChessRogueManager!.SetDice(req.QueryDiceInfo);
 
         await connection.SendPacket(new PacketChessRogueNousEditDiceScRsp(diceData));
     }

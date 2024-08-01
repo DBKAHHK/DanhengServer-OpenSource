@@ -187,8 +187,8 @@ public class FriendManager(PlayerInstance player) : BasePlayerManager(player)
         foreach (var chat in history.MessageList)
             info.Add(new ChatMessageData
             {
-                Timestamp = (ulong)chat.SendTime,
-                MessageText = chat.Message,
+                CreateTime = (ulong)chat.SendTime,
+                Content = chat.Message,
                 ExtraId = (uint)chat.ExtraId,
                 SenderId = (uint)chat.SendUid,
                 MessageType = chat.ExtraId > 0 ? MsgType.Emoji : MsgType.CustomText

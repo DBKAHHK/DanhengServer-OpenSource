@@ -64,6 +64,15 @@ public class SpecialAvatarExcel : ExcelResource
             SpecialBaseAvatarId = SpecialAvatarID,
             Level = Level,
             Promotion = Promotion,
+            PathInfoes = new Dictionary<int, PathInfo>(),
+            CurrentHp = hp == 0 ? 10000 : hp,
+            CurrentSp = sp,
+            InternalEntityId = Id,
+            PlayerData = DatabaseHelper.Instance!.GetInstance<PlayerData>(uid)
+        };
+
+        instance.PathInfoes.Add(AvatarID, new PathInfo(AvatarID)
+        {
             Rank = Rank,
             EquipData = new ItemData
             {
@@ -71,12 +80,8 @@ public class SpecialAvatarExcel : ExcelResource
                 Level = EquipmentLevel,
                 Promotion = EquipmentPromotion,
                 Rank = EquipmentRank
-            },
-            CurrentHp = hp == 0 ? 10000 : hp,
-            CurrentSp = sp,
-            InternalEntityId = Id,
-            PlayerData = DatabaseHelper.Instance!.GetInstance<PlayerData>(uid)
-        };
+            }
+        });
 
         if (avatarConfig != null)
             foreach (var skill in avatarConfig.DefaultSkillTree)

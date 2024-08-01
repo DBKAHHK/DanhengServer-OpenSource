@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static SyncRogueExploreWinScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFTeW5jUm9ndWVFeHBsb3JlV2luU2NOb3RpZnkucHJvdG8iLQobU3luY1Jv",
-            "Z3VlRXhwbG9yZVdpblNjTm90aWZ5Eg4KBmlzX3dpbhgPIAEoCEIeqgIbRWdn",
-            "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "CiFTeW5jUm9ndWVFeHBsb3JlV2luU2NOb3RpZnkucHJvdG8iNQobU3luY1Jv",
+            "Z3VlRXhwbG9yZVdpblNjTm90aWZ5EhYKDmlzX2V4cGxvcmVfd2luGAkgASgI",
+            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SyncRogueExploreWinScNotify), global::EggLink.DanhengServer.Proto.SyncRogueExploreWinScNotify.Parser, new[]{ "IsWin" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SyncRogueExploreWinScNotify), global::EggLink.DanhengServer.Proto.SyncRogueExploreWinScNotify.Parser, new[]{ "IsExploreWin" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SyncRogueExploreWinScNotify(SyncRogueExploreWinScNotify other) : this() {
-      isWin_ = other.isWin_;
+      isExploreWin_ = other.isExploreWin_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new SyncRogueExploreWinScNotify(this);
     }
 
-    /// <summary>Field number for the "is_win" field.</summary>
-    public const int IsWinFieldNumber = 15;
-    private bool isWin_;
+    /// <summary>Field number for the "is_explore_win" field.</summary>
+    public const int IsExploreWinFieldNumber = 9;
+    private bool isExploreWin_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsWin {
-      get { return isWin_; }
+    public bool IsExploreWin {
+      get { return isExploreWin_; }
       set {
-        isWin_ = value;
+        isExploreWin_ = value;
       }
     }
 
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsWin != other.IsWin) return false;
+      if (IsExploreWin != other.IsExploreWin) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsWin != false) hash ^= IsWin.GetHashCode();
+      if (IsExploreWin != false) hash ^= IsExploreWin.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsWin != false) {
-        output.WriteRawTag(120);
-        output.WriteBool(IsWin);
+      if (IsExploreWin != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(IsExploreWin);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsWin != false) {
-        output.WriteRawTag(120);
-        output.WriteBool(IsWin);
+      if (IsExploreWin != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(IsExploreWin);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -164,7 +164,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsWin != false) {
+      if (IsExploreWin != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -179,8 +179,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsWin != false) {
-        IsWin = other.IsWin;
+      if (other.IsExploreWin != false) {
+        IsExploreWin = other.IsExploreWin;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -197,8 +197,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 120: {
-            IsWin = input.ReadBool();
+          case 72: {
+            IsExploreWin = input.ReadBool();
             break;
           }
         }
@@ -216,8 +216,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 120: {
-            IsWin = input.ReadBool();
+          case 72: {
+            IsExploreWin = input.ReadBool();
             break;
           }
         }
