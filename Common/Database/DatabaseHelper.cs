@@ -1,5 +1,5 @@
 ﻿using EggLink.DanhengServer.Database.Inventory;
-using EggLink.DanhengServer.Database.Mission;
+using EggLink.DanhengServer.Database.Quests;
 using EggLink.DanhengServer.Internationalization;
 using EggLink.DanhengServer.Util;
 using SqlSugar;

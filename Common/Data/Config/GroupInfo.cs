@@ -1,4 +1,4 @@
-﻿using EggLink.DanhengServer.Database.Mission;
+﻿using EggLink.DanhengServer.Database.Quests;
 using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.Enums.Scene;

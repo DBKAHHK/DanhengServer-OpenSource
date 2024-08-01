@@ -1,6 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database.Avatar;
-using EggLink.DanhengServer.Database.Mission;
+using EggLink.DanhengServer.Database.Quests;
 using EggLink.DanhengServer.Proto;
 using Newtonsoft.Json;
 using SqlSugar;

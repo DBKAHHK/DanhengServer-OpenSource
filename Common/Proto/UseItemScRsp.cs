@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChJVc2VJdGVtU2NSc3AucHJvdG8aDkl0ZW1MaXN0LnByb3RvIpUBCgxVc2VJ",
-            "dGVtU2NSc3ASFgoOdXNlX2l0ZW1fY291bnQYByABKA0SEgoKZm9ybXVsYV9p",
-            "ZBgOIAEoDRITCgtBTk1LQkpITUtHQxgKIAEoBBITCgt1c2VfaXRlbV9pZBgJ",
+            "dGVtU2NSc3ASEwoLdXNlX2l0ZW1faWQYByABKA0SEgoKZm9ybXVsYV9pZBgO",
+            "IAEoDRITCgtBTk1LQkpITUtHQxgKIAEoBBIWCg51c2VfaXRlbV9jb3VudBgJ",
             "IAEoDRIPCgdyZXRjb2RlGAYgASgNEh4KC3JldHVybl9kYXRhGAggASgLMgku",
             "SXRlbUxpc3RCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UseItemScRsp), global::EggLink.DanhengServer.Proto.UseItemScRsp.Parser, new[]{ "UseItemCount", "FormulaId", "ANMKBJHMKGC", "UseItemId", "Retcode", "ReturnData" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UseItemScRsp), global::EggLink.DanhengServer.Proto.UseItemScRsp.Parser, new[]{ "UseItemId", "FormulaId", "ANMKBJHMKGC", "UseItemCount", "Retcode", "ReturnData" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,10 +75,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UseItemScRsp(UseItemScRsp other) : this() {
-      useItemCount_ = other.useItemCount_;
+      useItemId_ = other.useItemId_;
       formulaId_ = other.formulaId_;
       aNMKBJHMKGC_ = other.aNMKBJHMKGC_;
-      useItemId_ = other.useItemId_;
+      useItemCount_ = other.useItemCount_;
       retcode_ = other.retcode_;
       returnData_ = other.returnData_ != null ? other.returnData_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -90,18 +90,15 @@ namespace EggLink.DanhengServer.Proto {
       return new UseItemScRsp(this);
     }
 
-    /// <summary>Field number for the "use_item_count" field.</summary>
-    public const int UseItemCountFieldNumber = 7;
-    private uint useItemCount_;
-    /// <summary>
-    /// 9
-    /// </summary>
+    /// <summary>Field number for the "use_item_id" field.</summary>
+    public const int UseItemIdFieldNumber = 7;
+    private uint useItemId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint UseItemCount {
-      get { return useItemCount_; }
+    public uint UseItemId {
+      get { return useItemId_; }
       set {
-        useItemCount_ = value;
+        useItemId_ = value;
       }
     }
 
@@ -129,18 +126,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "use_item_id" field.</summary>
-    public const int UseItemIdFieldNumber = 9;
-    private uint useItemId_;
-    /// <summary>
-    /// 7
-    /// </summary>
+    /// <summary>Field number for the "use_item_count" field.</summary>
+    public const int UseItemCountFieldNumber = 9;
+    private uint useItemCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint UseItemId {
-      get { return useItemId_; }
+    public uint UseItemCount {
+      get { return useItemCount_; }
       set {
-        useItemId_ = value;
+        useItemCount_ = value;
       }
     }
 
@@ -183,10 +177,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (UseItemCount != other.UseItemCount) return false;
+      if (UseItemId != other.UseItemId) return false;
       if (FormulaId != other.FormulaId) return false;
       if (ANMKBJHMKGC != other.ANMKBJHMKGC) return false;
-      if (UseItemId != other.UseItemId) return false;
+      if (UseItemCount != other.UseItemCount) return false;
       if (Retcode != other.Retcode) return false;
       if (!object.Equals(ReturnData, other.ReturnData)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -196,10 +190,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (UseItemCount != 0) hash ^= UseItemCount.GetHashCode();
+      if (UseItemId != 0) hash ^= UseItemId.GetHashCode();
       if (FormulaId != 0) hash ^= FormulaId.GetHashCode();
       if (ANMKBJHMKGC != 0UL) hash ^= ANMKBJHMKGC.GetHashCode();
-      if (UseItemId != 0) hash ^= UseItemId.GetHashCode();
+      if (UseItemCount != 0) hash ^= UseItemCount.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (returnData_ != null) hash ^= ReturnData.GetHashCode();
       if (_unknownFields != null) {
@@ -224,17 +218,17 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
-      if (UseItemCount != 0) {
+      if (UseItemId != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(UseItemCount);
+        output.WriteUInt32(UseItemId);
       }
       if (returnData_ != null) {
         output.WriteRawTag(66);
         output.WriteMessage(ReturnData);
       }
-      if (UseItemId != 0) {
+      if (UseItemCount != 0) {
         output.WriteRawTag(72);
-        output.WriteUInt32(UseItemId);
+        output.WriteUInt32(UseItemCount);
       }
       if (ANMKBJHMKGC != 0UL) {
         output.WriteRawTag(80);
@@ -258,17 +252,17 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
-      if (UseItemCount != 0) {
+      if (UseItemId != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(UseItemCount);
+        output.WriteUInt32(UseItemId);
       }
       if (returnData_ != null) {
         output.WriteRawTag(66);
         output.WriteMessage(ReturnData);
       }
-      if (UseItemId != 0) {
+      if (UseItemCount != 0) {
         output.WriteRawTag(72);
-        output.WriteUInt32(UseItemId);
+        output.WriteUInt32(UseItemCount);
       }
       if (ANMKBJHMKGC != 0UL) {
         output.WriteRawTag(80);
@@ -288,8 +282,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (UseItemCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UseItemCount);
+      if (UseItemId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UseItemId);
       }
       if (FormulaId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FormulaId);
@@ -297,8 +291,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ANMKBJHMKGC != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(ANMKBJHMKGC);
       }
-      if (UseItemId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UseItemId);
+      if (UseItemCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UseItemCount);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
@@ -318,8 +312,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.UseItemCount != 0) {
-        UseItemCount = other.UseItemCount;
+      if (other.UseItemId != 0) {
+        UseItemId = other.UseItemId;
       }
       if (other.FormulaId != 0) {
         FormulaId = other.FormulaId;
@@ -327,8 +321,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.ANMKBJHMKGC != 0UL) {
         ANMKBJHMKGC = other.ANMKBJHMKGC;
       }
-      if (other.UseItemId != 0) {
-        UseItemId = other.UseItemId;
+      if (other.UseItemCount != 0) {
+        UseItemCount = other.UseItemCount;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
@@ -359,7 +353,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 56: {
-            UseItemCount = input.ReadUInt32();
+            UseItemId = input.ReadUInt32();
             break;
           }
           case 66: {
@@ -370,7 +364,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 72: {
-            UseItemId = input.ReadUInt32();
+            UseItemCount = input.ReadUInt32();
             break;
           }
           case 80: {
@@ -401,7 +395,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 56: {
-            UseItemCount = input.ReadUInt32();
+            UseItemId = input.ReadUInt32();
             break;
           }
           case 66: {
@@ -412,7 +406,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 72: {
-            UseItemId = input.ReadUInt32();
+            UseItemCount = input.ReadUInt32();
             break;
           }
           case 80: {

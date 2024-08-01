@@ -502,7 +502,8 @@ public class ChessRogueInstance : BaseRogueInstance
             ChessRogueMiracleInfo_ = new ChessRogueMiracle()
         };
 
-        proto.ChessRogueMiracleInfo_.MiracleList.AddRange(RogueMiracles.Select(x => x.Value.ToGameMiracleProto()).ToList());
+        proto.ChessRogueMiracleInfo_.MiracleList.AddRange(RogueMiracles.Select(x => x.Value.ToGameMiracleProto())
+            .ToList());
 
         return proto;
     }

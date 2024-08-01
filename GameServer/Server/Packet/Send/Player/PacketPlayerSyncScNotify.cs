@@ -2,6 +2,7 @@
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Database.Message;
+using EggLink.DanhengServer.Database.Quests;
 using EggLink.DanhengServer.Enums.Item;
 using EggLink.DanhengServer.Proto;
 
@@ -118,6 +119,14 @@ public class PacketPlayerSyncScNotify : BasePacket
                 SectionId = (uint)sectionData.SectionId,
                 SectionStatus_ = sectionData.Status
             });
+
+        SetData(proto);
+    }
+
+    public PacketPlayerSyncScNotify(QuestInfo quest) : base(CmdIds.PlayerSyncScNotify)
+    {
+        var proto = new PlayerSyncScNotify();
+        proto.QuestList.Add(quest.ToProto());
 
         SetData(proto);
     }

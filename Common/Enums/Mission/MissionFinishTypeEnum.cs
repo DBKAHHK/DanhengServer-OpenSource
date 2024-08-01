@@ -510,5 +510,6 @@ public enum MissionFinishTypeEnum
     BuyGoodsFromShopList = 240012,
     SwordTrainingActionTurnStatusChange = 240013,
     SwordTrainingMoodValue = 240014,
-    SwordTrainingTurnActionsIn = 240015
+    SwordTrainingTurnActionsIn = 240015,
+    BattleChallengeByClient = 240016
 }

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9NdXNldW1JbmZvQ2hhbmdlZFNjTm90aWZ5LnByb3RvGhFNTk1NRUxBSUJK",
-            "Sy5wcm90bxoRT1BPSERISERPQUUucHJvdG8aEUtQTlBPQUFIREFDLnByb3Rv",
-            "GhFJUE1JR0JHTFBOSi5wcm90byLWAgoZTXVzZXVtSW5mb0NoYW5nZWRTY05v",
+            "Sy5wcm90bxoRSVBNSUdCR0xQTkoucHJvdG8aEUtQTlBPQUFIREFDLnByb3Rv",
+            "GhFPUE9IREhIRE9BRS5wcm90byLWAgoZTXVzZXVtSW5mb0NoYW5nZWRTY05v",
             "dGlmeRITCgtKT0FOR0RMQ0hLTRgOIAEoDRITCgtOQkJLUElKRUpQUBgKIAEo",
             "DRIhCgtNRUxOSUxNUE9CQRgNIAMoCzIMLk1OTU1FTEFJQkpLEhMKC0JISUhP",
             "UExEUEdGGAMgAygNEhMKC0NDS0JCT0VPS0dPGAIgASgNEhMKC1BGR0VOTkRB",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "QxIhCgtBRE9CRU9ESkJMShgJIAEoCzIMLklQTUlHQkdMUE5KEgsKA2V4cBgF",
             "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MNMMELAIBJKReflection.Descriptor, global::EggLink.DanhengServer.Proto.OPOHDHHDOAEReflection.Descriptor, global::EggLink.DanhengServer.Proto.KPNPOAAHDACReflection.Descriptor, global::EggLink.DanhengServer.Proto.IPMIGBGLPNJReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MNMMELAIBJKReflection.Descriptor, global::EggLink.DanhengServer.Proto.IPMIGBGLPNJReflection.Descriptor, global::EggLink.DanhengServer.Proto.KPNPOAAHDACReflection.Descriptor, global::EggLink.DanhengServer.Proto.OPOHDHHDOAEReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MuseumInfoChangedScNotify), global::EggLink.DanhengServer.Proto.MuseumInfoChangedScNotify.Parser, new[]{ "JOANGDLCHKM", "NBBKPIJEJPP", "MELNILMPOBA", "BHIHOPLDPGF", "CCKBBOEOKGO", "PFGENNDADFA", "ODNOFEPBJAG", "GLGFCBDLOOI", "EBNNBEEGJFN", "Level", "MDHKFPDCFGP", "ADOBEODJBLJ", "Exp" }, null, null, null, null)
           }));

@@ -27,7 +27,7 @@ internal class QueryGatewayHandler
             Unk4 = true,
             Unk5 = true,
             Unk6 = true,
-            Unk7 = true,
+            Unk7 = true
         };
 
         if (urlData.AssetBundleUrl != null && urlData.AssetBundleUrl.Length > 0)

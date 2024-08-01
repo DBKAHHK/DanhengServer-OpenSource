@@ -25,13 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFET1BFS0lKT0ZGRS5wcm90bxocTWlzc2lvbkN1c3RvbVZhbHVlTGlzdC5w",
-            "cm90byJOCgtET1BFS0lKT0ZGRRIKCgJpZBgBIAEoDRIzChFjdXN0b21fdmFs",
-            "dWVfbGlzdBi4CCABKAsyFy5NaXNzaW9uQ3VzdG9tVmFsdWVMaXN0Qh6qAhtF",
-            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "cm90byJfCgtET1BFS0lKT0ZGRRIKCgJpZBgBIAEoDRI1ChFjdXN0b21fdmFs",
+            "dWVfbGlzdBi4CCABKAsyFy5NaXNzaW9uQ3VzdG9tVmFsdWVMaXN0SABCDQoL",
+            "RENDUEhFTURQSElCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MissionCustomValueListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DOPEKIJOFFE), global::EggLink.DanhengServer.Proto.DOPEKIJOFFE.Parser, new[]{ "Id", "CustomValueList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DOPEKIJOFFE), global::EggLink.DanhengServer.Proto.DOPEKIJOFFE.Parser, new[]{ "Id", "CustomValueList" }, new[]{ "DCCPHEMDPHI" }, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +75,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DOPEKIJOFFE(DOPEKIJOFFE other) : this() {
       id_ = other.id_;
-      customValueList_ = other.customValueList_ != null ? other.customValueList_.Clone() : null;
+      switch (other.DCCPHEMDPHICase) {
+        case DCCPHEMDPHIOneofCase.CustomValueList:
+          CustomValueList = other.CustomValueList.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -98,14 +104,34 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "custom_value_list" field.</summary>
     public const int CustomValueListFieldNumber = 1080;
-    private global::EggLink.DanhengServer.Proto.MissionCustomValueList customValueList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.MissionCustomValueList CustomValueList {
-      get { return customValueList_; }
+      get { return dCCPHEMDPHICase_ == DCCPHEMDPHIOneofCase.CustomValueList ? (global::EggLink.DanhengServer.Proto.MissionCustomValueList) dCCPHEMDPHI_ : null; }
       set {
-        customValueList_ = value;
+        dCCPHEMDPHI_ = value;
+        dCCPHEMDPHICase_ = value == null ? DCCPHEMDPHIOneofCase.None : DCCPHEMDPHIOneofCase.CustomValueList;
       }
+    }
+
+    private object dCCPHEMDPHI_;
+    /// <summary>Enum of possible cases for the "DCCPHEMDPHI" oneof.</summary>
+    public enum DCCPHEMDPHIOneofCase {
+      None = 0,
+      CustomValueList = 1080,
+    }
+    private DCCPHEMDPHIOneofCase dCCPHEMDPHICase_ = DCCPHEMDPHIOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DCCPHEMDPHIOneofCase DCCPHEMDPHICase {
+      get { return dCCPHEMDPHICase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDCCPHEMDPHI() {
+      dCCPHEMDPHICase_ = DCCPHEMDPHIOneofCase.None;
+      dCCPHEMDPHI_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -125,6 +151,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (Id != other.Id) return false;
       if (!object.Equals(CustomValueList, other.CustomValueList)) return false;
+      if (DCCPHEMDPHICase != other.DCCPHEMDPHICase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,7 +160,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
-      if (customValueList_ != null) hash ^= CustomValueList.GetHashCode();
+      if (dCCPHEMDPHICase_ == DCCPHEMDPHIOneofCase.CustomValueList) hash ^= CustomValueList.GetHashCode();
+      hash ^= (int) dCCPHEMDPHICase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -156,7 +184,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(Id);
       }
-      if (customValueList_ != null) {
+      if (dCCPHEMDPHICase_ == DCCPHEMDPHIOneofCase.CustomValueList) {
         output.WriteRawTag(194, 67);
         output.WriteMessage(CustomValueList);
       }
@@ -174,7 +202,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(Id);
       }
-      if (customValueList_ != null) {
+      if (dCCPHEMDPHICase_ == DCCPHEMDPHIOneofCase.CustomValueList) {
         output.WriteRawTag(194, 67);
         output.WriteMessage(CustomValueList);
       }
@@ -191,7 +219,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
       }
-      if (customValueList_ != null) {
+      if (dCCPHEMDPHICase_ == DCCPHEMDPHIOneofCase.CustomValueList) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(CustomValueList);
       }
       if (_unknownFields != null) {
@@ -209,12 +237,15 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Id != 0) {
         Id = other.Id;
       }
-      if (other.customValueList_ != null) {
-        if (customValueList_ == null) {
-          CustomValueList = new global::EggLink.DanhengServer.Proto.MissionCustomValueList();
-        }
-        CustomValueList.MergeFrom(other.CustomValueList);
+      switch (other.DCCPHEMDPHICase) {
+        case DCCPHEMDPHIOneofCase.CustomValueList:
+          if (CustomValueList == null) {
+            CustomValueList = new global::EggLink.DanhengServer.Proto.MissionCustomValueList();
+          }
+          CustomValueList.MergeFrom(other.CustomValueList);
+          break;
       }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -235,10 +266,12 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 8642: {
-            if (customValueList_ == null) {
-              CustomValueList = new global::EggLink.DanhengServer.Proto.MissionCustomValueList();
+            global::EggLink.DanhengServer.Proto.MissionCustomValueList subBuilder = new global::EggLink.DanhengServer.Proto.MissionCustomValueList();
+            if (dCCPHEMDPHICase_ == DCCPHEMDPHIOneofCase.CustomValueList) {
+              subBuilder.MergeFrom(CustomValueList);
             }
-            input.ReadMessage(CustomValueList);
+            input.ReadMessage(subBuilder);
+            CustomValueList = subBuilder;
             break;
           }
         }
@@ -261,10 +294,12 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 8642: {
-            if (customValueList_ == null) {
-              CustomValueList = new global::EggLink.DanhengServer.Proto.MissionCustomValueList();
+            global::EggLink.DanhengServer.Proto.MissionCustomValueList subBuilder = new global::EggLink.DanhengServer.Proto.MissionCustomValueList();
+            if (dCCPHEMDPHICase_ == DCCPHEMDPHIOneofCase.CustomValueList) {
+              subBuilder.MergeFrom(CustomValueList);
             }
-            input.ReadMessage(CustomValueList);
+            input.ReadMessage(subBuilder);
+            CustomValueList = subBuilder;
             break;
           }
         }

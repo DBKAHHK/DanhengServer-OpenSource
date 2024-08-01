@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static PlayerLoginCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZQbGF5ZXJMb2dpbkNzUmVxLnByb3RvGhJMYW5ndWFnZVR5cGUucHJvdG8a",
-            "ElBsYXRmb3JtVHlwZS5wcm90bxoRR0JBTU5BUEdIRkYucHJvdG8iwwQKEFBs",
+            "ChZQbGF5ZXJMb2dpbkNzUmVxLnByb3RvGhFHQkFNTkFQR0hGRi5wcm90bxoS",
+            "UGxhdGZvcm1UeXBlLnByb3RvGhJMYW5ndWFnZVR5cGUucHJvdG8iwwQKEFBs",
             "YXllckxvZ2luQ3NSZXESEwoLSUxFSEtDSlBHR0UYCCABKAkSEwoLUExJTkNL",
             "SkJCTU4YCiABKAkSEwoLTEdMRUZDTklKS0wYDSABKAkSFAoMbG9naW5fcmFu",
             "ZG9tGAkgASgEEhYKDmNsaWVudF92ZXJzaW9uGAQgASgJEiQKDWxhbmd1YWdl",
@@ -41,7 +41,7 @@ namespace EggLink.DanhengServer.Proto {
             "TUJLSURMQRgOIAEoCRIUCgtCSEhPTUhLQU1MTxihBiABKAhCHqoCG0VnZ0xp",
             "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.GBAMNAPGHFFReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GBAMNAPGHFFReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerLoginCsReq), global::EggLink.DanhengServer.Proto.PlayerLoginCsReq.Parser, new[]{ "ILEHKCJPGGE", "PLINCKJBBMN", "LGLEFCNIJKL", "LoginRandom", "ClientVersion", "LanguageType", "DHICFKJEPBI", "Signature", "JJNINCMBIDN", "OPIACEKOANJ", "NJLPCOEBMFJ", "LGOMKMJMEDM", "BCIJKADEMIE", "GIMCNHMAPBP", "Platform", "CIDHAHDCHDL", "ResVersion", "MCKKBKPOMLI", "GANJMFCLNFL", "RogueGetInfo", "OKPDCDEDOIL", "BOLHLHDEGGG", "HKIGMBKIDLA", "BHHOMHKAMLO" }, null, null, null, null)
           }));

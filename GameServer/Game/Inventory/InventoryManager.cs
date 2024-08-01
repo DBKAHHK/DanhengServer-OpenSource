@@ -174,7 +174,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
             clone.Count = count;
             if (notify) await Player.SendPacket(new PacketScenePlaneEventScNotify(clone));
 
-            Player.MissionManager?.HandleFinishType(MissionFinishTypeEnum.GetItem, itemData);
+            Player.MissionManager?.HandleFinishType(MissionFinishTypeEnum.GetItem, itemData.ToProto());
         }
 
         return returnRaw ? itemData : clone ?? itemData;
@@ -396,6 +396,25 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
             GameData.RewardDataData.TryGetValue(id, out var reward);
             reward?.GetItems().ForEach(async x => await AddItem(x.Item1, x.Item2));
         }
+    }
+
+    public async ValueTask<List<ItemData>> HandleReward(int rewardId, bool notify = false)
+    {
+        GameData.RewardDataData.TryGetValue(rewardId, out var rewardData);
+        if (rewardData == null) return [];
+        List<ItemData> items = [];
+
+        foreach (var item in rewardData.GetItems())
+        {
+            var i = await AddItem(item.Item1, item.Item2, notify);
+            if (i != null) items.Add(i);
+        }
+
+        var hCoin = await AddItem(1, rewardData.Hcoin, notify);
+        if (hCoin != null)
+            items.Add(hCoin);
+
+        return items;
     }
 
     public async ValueTask<List<ItemData>> HandleMappingInfo(int mappingId, int worldLevel)

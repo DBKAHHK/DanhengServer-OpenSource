@@ -18,7 +18,8 @@ public class CommandHelp : ICommand
                 return;
             }
 
-            var msg = $"/{command.Name} - {I18nManager.Translate(command.Description)}\n\n{I18nManager.Translate(command.Usage)}";
+            var msg =
+                $"/{command.Name} - {I18nManager.Translate(command.Description)}\n\n{I18nManager.Translate(command.Usage)}";
             if (command.Permission != "")
                 msg += $"\n\n{I18nManager.Translate("Game.Command.Help.CommandPermission")} {command.Permission}";
 
