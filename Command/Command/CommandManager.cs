@@ -16,6 +16,7 @@ public class CommandManager
 
     private List<string> commandHistory = new();
     private int historyIndex = -1;
+    private const int MaxCommandHistory = 100;
 
     public void RegisterCommand()
     {
@@ -45,6 +46,12 @@ public class CommandManager
             {
                 var input = ReadCommand();
                 if (string.IsNullOrEmpty(input)) continue;
+
+                if (commandHistory.Count >= MaxCommandHistory)
+                {
+                    commandHistory.RemoveAt(0); 
+                }
+
                 commandHistory.Add(input);
                 historyIndex = commandHistory.Count;
                 HandleCommand(input, new ConsoleCommandSender(Logger));
