@@ -7,7 +7,10 @@ public class PacketGetShopListScRsp : BasePacket
 {
     public PacketGetShopListScRsp(uint shopType) : base(CmdIds.GetShopListScRsp)
     {
-        var proto = new GetShopListScRsp();
+        var proto = new GetShopListScRsp
+        {
+            ShopType = shopType
+        };
 
         foreach (var item in GameData.ShopConfigData.Values)
             if (item.ShopType == shopType)
@@ -15,7 +18,7 @@ public class PacketGetShopListScRsp : BasePacket
                 {
                     ShopId = (uint)item.ShopID,
                     CityLevel = 1,
-                    EndTime = long.MaxValue,
+                    EndTime = uint.MaxValue,
                     GoodsList = { item.Goods.Select(g => g.ToProto()) }
                 });
 

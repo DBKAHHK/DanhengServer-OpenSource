@@ -139,7 +139,7 @@ public class LineupInfo
             info.GameStoryLineId = (uint)storyId;
             BaseAvatars?.ForEach(item =>
             {
-                if (item.SpecialAvatarId != 0) info.StoryLineBaseAvatarIdList.Add((uint)item.BaseAvatarId);
+                if (item.SpecialAvatarId != 0) info.StoryLineAvatarIdList.Add((uint)item.BaseAvatarId);
             });
         }
 

@@ -8,7 +8,7 @@ public class PacketUpdateEnergyScNotify : BasePacket
     {
         var proto = new UpdateEnergyScNotify
         {
-            EnergyInfo = new RotatorEnergyInfo
+            EnergyInfo = new RotaterEnergyInfo
             {
                 MaxNum = (uint)maxNum,
                 CurNum = (uint)curNum

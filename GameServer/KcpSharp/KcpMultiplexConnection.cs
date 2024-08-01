@@ -63,7 +63,7 @@ public sealed class KcpMultiplexConnection<T> : IKcpTransport, IKcpConversation,
     public void SetTransportClosed()
     {
         _transportClosed = true;
-        foreach ((var conversation, var _) in _conversations.Values) conversation.SetTransportClosed();
+        foreach (var (conversation, _) in _conversations.Values) conversation.SetTransportClosed();
     }
 
     /// <inheritdoc />
@@ -220,7 +220,7 @@ public sealed class KcpMultiplexConnection<T> : IKcpTransport, IKcpConversation,
         if (conversation is null) throw new ArgumentNullException(nameof(conversation));
 
         CheckDispose();
-        (var addedConversation, var _) = _conversations.GetOrAdd(id, (conversation, state));
+        var (addedConversation, _) = _conversations.GetOrAdd(id, (conversation, state));
         if (!ReferenceEquals(addedConversation, conversation))
             throw new InvalidOperationException("Duplicated conversation.");
         if (_disposed)

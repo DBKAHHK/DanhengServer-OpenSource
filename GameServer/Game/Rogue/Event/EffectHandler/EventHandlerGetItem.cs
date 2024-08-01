@@ -10,6 +10,6 @@ public class EventHandlerGetItem : RogueEventEffectHandler
         List<int> paramList)
     {
         await rogue.GainMoney(paramList[1], paramList[2],
-            RogueActionDisplayType.RogueCommonActionResultDisplayTypeSingle);
+            RogueCommonActionResultDisplayType.Single);
     }
 }

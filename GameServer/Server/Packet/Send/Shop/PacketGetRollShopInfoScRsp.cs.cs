@@ -15,10 +15,10 @@ public class PacketGetRollShopInfoScRsp : BasePacket
         foreach (var item in GameData.RollShopConfigData.Values)
             if (item.RollShopID == rollShopId)
             {
-                proto.NOPNEOADJEI.Add(item.T1GroupID);
-                proto.NOPNEOADJEI.Add(item.T2GroupID);
-                proto.NOPNEOADJEI.Add(item.T3GroupID);
-                proto.NOPNEOADJEI.Add(item.T4GroupID);
+                proto.ShopGroupIdList.Add(item.T1GroupID);
+                proto.ShopGroupIdList.Add(item.T2GroupID);
+                proto.ShopGroupIdList.Add(item.T3GroupID);
+                proto.ShopGroupIdList.Add(item.T4GroupID);
             }
 
         proto.Retcode = 0;

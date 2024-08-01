@@ -320,7 +320,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
         {
             var lineup = Player.LineupManager!.GetCurLineup()!;
             // Update battle status
-            foreach (var avatar in req.Stt.AvatarBattleList)
+            foreach (var avatar in req.Stt.BattleAvatarList)
             {
                 var avatarInstance = Player.AvatarManager!.GetAvatar((int)avatar.Id);
                 var prop = avatar.AvatarStatus;

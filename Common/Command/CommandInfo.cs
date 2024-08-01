@@ -4,10 +4,10 @@
 public class CommandInfo(string name, string description, string usage, string keyword = "", string permission = "")
     : Attribute
 {
-    public CommandInfo(string name, string description, string usage, List<string> alias, string keyword = "",
+    public CommandInfo(string name, string description, string usage, string[] alias, string keyword = "",
         string permission = "") : this(name, description, usage, keyword, permission)
     {
-        Alias = alias ?? [];
+        Alias = alias;
     }
 
     public string Name { get; } = name;
@@ -15,7 +15,7 @@ public class CommandInfo(string name, string description, string usage, string k
     public string Usage { get; } = usage;
     public string Keyword { get; } = keyword;
     public string Permission { get; } = permission;
-    public List<string> Alias { get; } = [];
+    public string[] Alias { get; } = [];
 }
 
 [AttributeUsage(AttributeTargets.Method)]

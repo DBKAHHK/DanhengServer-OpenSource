@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static ChapterBriefReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJDaGFwdGVyQnJpZWYucHJvdG8iVAoMQ2hhcHRlckJyaWVmEgoKAmlkGAwg",
-            "ASgNEg4KBmlzX25ldxgGIAEoCBITCgtOTkRPSUpJT0hBShgOIAMoDRITCgtG",
-            "TERGRkxPTkZCSRgPIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
-            "b3RvYgZwcm90bzM="));
+            "ChJDaGFwdGVyQnJpZWYucHJvdG8iZgoMQ2hhcHRlckJyaWVmEg4KBmlzX25l",
+            "dxgMIAEoCBIcChRmaW5pc2hfY2hhbGxlbmdlX251bRgGIAEoDRIcChR0YWtl",
+            "bl9yZXdhcmRfaWRfbGlzdBgLIAMoDRIKCgJpZBgDIAEoDUIeqgIbRWdnTGlu",
+            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChapterBrief), global::EggLink.DanhengServer.Proto.ChapterBrief.Parser, new[]{ "Id", "IsNew", "NNDOIJIOHAJ", "FLDFFLONFBI" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChapterBrief), global::EggLink.DanhengServer.Proto.ChapterBrief.Parser, new[]{ "IsNew", "FinishChallengeNum", "TakenRewardIdList", "Id" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,10 +73,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChapterBrief(ChapterBrief other) : this() {
-      id_ = other.id_;
       isNew_ = other.isNew_;
-      nNDOIJIOHAJ_ = other.nNDOIJIOHAJ_.Clone();
-      fLDFFLONFBI_ = other.fLDFFLONFBI_;
+      finishChallengeNum_ = other.finishChallengeNum_;
+      takenRewardIdList_ = other.takenRewardIdList_.Clone();
+      id_ = other.id_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,20 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new ChapterBrief(this);
     }
 
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 12;
-    private uint id_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Id {
-      get { return id_; }
-      set {
-        id_ = value;
-      }
-    }
-
     /// <summary>Field number for the "is_new" field.</summary>
-    public const int IsNewFieldNumber = 6;
+    public const int IsNewFieldNumber = 12;
     private bool isNew_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,26 +98,38 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "NNDOIJIOHAJ" field.</summary>
-    public const int NNDOIJIOHAJFieldNumber = 14;
-    private static readonly pb::FieldCodec<uint> _repeated_nNDOIJIOHAJ_codec
-        = pb::FieldCodec.ForUInt32(114);
-    private readonly pbc::RepeatedField<uint> nNDOIJIOHAJ_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "finish_challenge_num" field.</summary>
+    public const int FinishChallengeNumFieldNumber = 6;
+    private uint finishChallengeNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> NNDOIJIOHAJ {
-      get { return nNDOIJIOHAJ_; }
+    public uint FinishChallengeNum {
+      get { return finishChallengeNum_; }
+      set {
+        finishChallengeNum_ = value;
+      }
     }
 
-    /// <summary>Field number for the "FLDFFLONFBI" field.</summary>
-    public const int FLDFFLONFBIFieldNumber = 15;
-    private uint fLDFFLONFBI_;
+    /// <summary>Field number for the "taken_reward_id_list" field.</summary>
+    public const int TakenRewardIdListFieldNumber = 11;
+    private static readonly pb::FieldCodec<uint> _repeated_takenRewardIdList_codec
+        = pb::FieldCodec.ForUInt32(90);
+    private readonly pbc::RepeatedField<uint> takenRewardIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FLDFFLONFBI {
-      get { return fLDFFLONFBI_; }
+    public pbc::RepeatedField<uint> TakenRewardIdList {
+      get { return takenRewardIdList_; }
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 3;
+    private uint id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Id {
+      get { return id_; }
       set {
-        fLDFFLONFBI_ = value;
+        id_ = value;
       }
     }
 
@@ -148,10 +148,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Id != other.Id) return false;
       if (IsNew != other.IsNew) return false;
-      if(!nNDOIJIOHAJ_.Equals(other.nNDOIJIOHAJ_)) return false;
-      if (FLDFFLONFBI != other.FLDFFLONFBI) return false;
+      if (FinishChallengeNum != other.FinishChallengeNum) return false;
+      if(!takenRewardIdList_.Equals(other.takenRewardIdList_)) return false;
+      if (Id != other.Id) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -159,10 +159,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id != 0) hash ^= Id.GetHashCode();
       if (IsNew != false) hash ^= IsNew.GetHashCode();
-      hash ^= nNDOIJIOHAJ_.GetHashCode();
-      if (FLDFFLONFBI != 0) hash ^= FLDFFLONFBI.GetHashCode();
+      if (FinishChallengeNum != 0) hash ^= FinishChallengeNum.GetHashCode();
+      hash ^= takenRewardIdList_.GetHashCode();
+      if (Id != 0) hash ^= Id.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -181,18 +181,18 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsNew != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(IsNew);
-      }
       if (Id != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(24);
         output.WriteUInt32(Id);
       }
-      nNDOIJIOHAJ_.WriteTo(output, _repeated_nNDOIJIOHAJ_codec);
-      if (FLDFFLONFBI != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(FLDFFLONFBI);
+      if (FinishChallengeNum != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(FinishChallengeNum);
+      }
+      takenRewardIdList_.WriteTo(output, _repeated_takenRewardIdList_codec);
+      if (IsNew != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(IsNew);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -204,18 +204,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsNew != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(IsNew);
-      }
       if (Id != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(24);
         output.WriteUInt32(Id);
       }
-      nNDOIJIOHAJ_.WriteTo(ref output, _repeated_nNDOIJIOHAJ_codec);
-      if (FLDFFLONFBI != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(FLDFFLONFBI);
+      if (FinishChallengeNum != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(FinishChallengeNum);
+      }
+      takenRewardIdList_.WriteTo(ref output, _repeated_takenRewardIdList_codec);
+      if (IsNew != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(IsNew);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,15 +227,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
-      }
       if (IsNew != false) {
         size += 1 + 1;
       }
-      size += nNDOIJIOHAJ_.CalculateSize(_repeated_nNDOIJIOHAJ_codec);
-      if (FLDFFLONFBI != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FLDFFLONFBI);
+      if (FinishChallengeNum != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FinishChallengeNum);
+      }
+      size += takenRewardIdList_.CalculateSize(_repeated_takenRewardIdList_codec);
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -249,15 +249,15 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Id != 0) {
-        Id = other.Id;
-      }
       if (other.IsNew != false) {
         IsNew = other.IsNew;
       }
-      nNDOIJIOHAJ_.Add(other.nNDOIJIOHAJ_);
-      if (other.FLDFFLONFBI != 0) {
-        FLDFFLONFBI = other.FLDFFLONFBI;
+      if (other.FinishChallengeNum != 0) {
+        FinishChallengeNum = other.FinishChallengeNum;
+      }
+      takenRewardIdList_.Add(other.takenRewardIdList_);
+      if (other.Id != 0) {
+        Id = other.Id;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -274,21 +274,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            IsNew = input.ReadBool();
-            break;
-          }
-          case 96: {
+          case 24: {
             Id = input.ReadUInt32();
             break;
           }
-          case 114:
-          case 112: {
-            nNDOIJIOHAJ_.AddEntriesFrom(input, _repeated_nNDOIJIOHAJ_codec);
+          case 48: {
+            FinishChallengeNum = input.ReadUInt32();
             break;
           }
-          case 120: {
-            FLDFFLONFBI = input.ReadUInt32();
+          case 90:
+          case 88: {
+            takenRewardIdList_.AddEntriesFrom(input, _repeated_takenRewardIdList_codec);
+            break;
+          }
+          case 96: {
+            IsNew = input.ReadBool();
             break;
           }
         }
@@ -306,21 +306,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            IsNew = input.ReadBool();
-            break;
-          }
-          case 96: {
+          case 24: {
             Id = input.ReadUInt32();
             break;
           }
-          case 114:
-          case 112: {
-            nNDOIJIOHAJ_.AddEntriesFrom(ref input, _repeated_nNDOIJIOHAJ_codec);
+          case 48: {
+            FinishChallengeNum = input.ReadUInt32();
             break;
           }
-          case 120: {
-            FLDFFLONFBI = input.ReadUInt32();
+          case 90:
+          case 88: {
+            takenRewardIdList_.AddEntriesFrom(ref input, _repeated_takenRewardIdList_codec);
+            break;
+          }
+          case 96: {
+            IsNew = input.ReadBool();
             break;
           }
         }

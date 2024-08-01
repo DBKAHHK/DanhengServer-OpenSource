@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFSb2d1ZVRvdXJuUmV2aXZlQXZhdGFyU2NSc3AucHJvdG8aEkl0ZW1Db3N0",
-            "RGF0YS5wcm90byJVChtSb2d1ZVRvdXJuUmV2aXZlQXZhdGFyU2NSc3ASJQoO",
-            "Z2FtZV9pdGVtX2luZm8YAiABKAsyDS5JdGVtQ29zdERhdGESDwoHcmV0Y29k",
-            "ZRgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
-            "bzM="));
+            "RGF0YS5wcm90byJYChtSb2d1ZVRvdXJuUmV2aXZlQXZhdGFyU2NSc3ASKAoR",
+            "cm9ndWVfcmV2aXZlX2Nvc3QYDiABKAsyDS5JdGVtQ29zdERhdGESDwoHcmV0",
+            "Y29kZRgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournReviveAvatarScRsp), global::EggLink.DanhengServer.Proto.RogueTournReviveAvatarScRsp.Parser, new[]{ "GameItemInfo", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournReviveAvatarScRsp), global::EggLink.DanhengServer.Proto.RogueTournReviveAvatarScRsp.Parser, new[]{ "RogueReviveCost", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournReviveAvatarScRsp(RogueTournReviveAvatarScRsp other) : this() {
-      gameItemInfo_ = other.gameItemInfo_ != null ? other.gameItemInfo_.Clone() : null;
+      rogueReviveCost_ = other.rogueReviveCost_ != null ? other.rogueReviveCost_.Clone() : null;
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -85,15 +85,15 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournReviveAvatarScRsp(this);
     }
 
-    /// <summary>Field number for the "game_item_info" field.</summary>
-    public const int GameItemInfoFieldNumber = 2;
-    private global::EggLink.DanhengServer.Proto.ItemCostData gameItemInfo_;
+    /// <summary>Field number for the "rogue_revive_cost" field.</summary>
+    public const int RogueReviveCostFieldNumber = 14;
+    private global::EggLink.DanhengServer.Proto.ItemCostData rogueReviveCost_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ItemCostData GameItemInfo {
-      get { return gameItemInfo_; }
+    public global::EggLink.DanhengServer.Proto.ItemCostData RogueReviveCost {
+      get { return rogueReviveCost_; }
       set {
-        gameItemInfo_ = value;
+        rogueReviveCost_ = value;
       }
     }
 
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(GameItemInfo, other.GameItemInfo)) return false;
+      if (!object.Equals(RogueReviveCost, other.RogueReviveCost)) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (gameItemInfo_ != null) hash ^= GameItemInfo.GetHashCode();
+      if (rogueReviveCost_ != null) hash ^= RogueReviveCost.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (gameItemInfo_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(GameItemInfo);
-      }
       if (Retcode != 0) {
         output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
+      }
+      if (rogueReviveCost_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(RogueReviveCost);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (gameItemInfo_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(GameItemInfo);
-      }
       if (Retcode != 0) {
         output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
+      }
+      if (rogueReviveCost_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(RogueReviveCost);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -189,8 +189,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (gameItemInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameItemInfo);
+      if (rogueReviveCost_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueReviveCost);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
@@ -207,11 +207,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.gameItemInfo_ != null) {
-        if (gameItemInfo_ == null) {
-          GameItemInfo = new global::EggLink.DanhengServer.Proto.ItemCostData();
+      if (other.rogueReviveCost_ != null) {
+        if (rogueReviveCost_ == null) {
+          RogueReviveCost = new global::EggLink.DanhengServer.Proto.ItemCostData();
         }
-        GameItemInfo.MergeFrom(other.GameItemInfo);
+        RogueReviveCost.MergeFrom(other.RogueReviveCost);
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
-            if (gameItemInfo_ == null) {
-              GameItemInfo = new global::EggLink.DanhengServer.Proto.ItemCostData();
-            }
-            input.ReadMessage(GameItemInfo);
-            break;
-          }
           case 24: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 114: {
+            if (rogueReviveCost_ == null) {
+              RogueReviveCost = new global::EggLink.DanhengServer.Proto.ItemCostData();
+            }
+            input.ReadMessage(RogueReviveCost);
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
-            if (gameItemInfo_ == null) {
-              GameItemInfo = new global::EggLink.DanhengServer.Proto.ItemCostData();
-            }
-            input.ReadMessage(GameItemInfo);
-            break;
-          }
           case 24: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 114: {
+            if (rogueReviveCost_ == null) {
+              RogueReviveCost = new global::EggLink.DanhengServer.Proto.ItemCostData();
+            }
+            input.ReadMessage(RogueReviveCost);
             break;
           }
         }

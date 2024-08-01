@@ -24,11 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static ContentPackageStatusReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpDb250ZW50UGFja2FnZVN0YXR1cy5wcm90byqXAQoUQ29udGVudFBhY2th",
+            "ChpDb250ZW50UGFja2FnZVN0YXR1cy5wcm90byq5AQoUQ29udGVudFBhY2th",
             "Z2VTdGF0dXMSHQoZQ29udGVudFBhY2thZ2VTdGF0dXNfTm9uZRAAEh0KGUNv",
             "bnRlbnRQYWNrYWdlU3RhdHVzX0luaXQQARIeChpDb250ZW50UGFja2FnZVN0",
             "YXR1c19Eb2luZxACEiEKHUNvbnRlbnRQYWNrYWdlU3RhdHVzX0ZpbmlzaGVk",
-            "EANCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "EAMSIAocQ29udGVudFBhY2thZ2VTdGF0dXNfUmVsZWFzZRAEQh6qAhtFZ2dM",
+            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.ContentPackageStatus), }, null, null));
@@ -42,6 +43,7 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("ContentPackageStatus_Init")] Init = 1,
     [pbr::OriginalName("ContentPackageStatus_Doing")] Doing = 2,
     [pbr::OriginalName("ContentPackageStatus_Finished")] Finished = 3,
+    [pbr::OriginalName("ContentPackageStatus_Release")] Release = 4,
   }
 
   #endregion

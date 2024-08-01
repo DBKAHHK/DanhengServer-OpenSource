@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GetRogueShopMiracleInfoCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiJHZXRSb2d1ZVNob3BNaXJhY2xlSW5mb0NzUmVxLnByb3RvIkcKHEdldFJv",
-            "Z3VlU2hvcE1pcmFjbGVJbmZvQ3NSZXESEwoLT09HSk9BQ0JJQlAYDSABKAgS",
-            "EgoKbW9uc3Rlcl9pZBgGIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
-            "LlByb3RvYgZwcm90bzM="));
+            "CiJHZXRSb2d1ZVNob3BNaXJhY2xlSW5mb0NzUmVxLnByb3RvIkMKHEdldFJv",
+            "Z3VlU2hvcE1pcmFjbGVJbmZvQ3NSZXESDwoHcmVmcmVzaBgBIAEoCBISCgpt",
+            "b25zdGVyX2lkGAYgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
+            "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRogueShopMiracleInfoCsReq), global::EggLink.DanhengServer.Proto.GetRogueShopMiracleInfoCsReq.Parser, new[]{ "OOGJOACBIBP", "MonsterId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRogueShopMiracleInfoCsReq), global::EggLink.DanhengServer.Proto.GetRogueShopMiracleInfoCsReq.Parser, new[]{ "Refresh", "MonsterId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetRogueShopMiracleInfoCsReq(GetRogueShopMiracleInfoCsReq other) : this() {
-      oOGJOACBIBP_ = other.oOGJOACBIBP_;
+      refresh_ = other.refresh_;
       monsterId_ = other.monsterId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,15 +84,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GetRogueShopMiracleInfoCsReq(this);
     }
 
-    /// <summary>Field number for the "OOGJOACBIBP" field.</summary>
-    public const int OOGJOACBIBPFieldNumber = 13;
-    private bool oOGJOACBIBP_;
+    /// <summary>Field number for the "refresh" field.</summary>
+    public const int RefreshFieldNumber = 1;
+    private bool refresh_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool OOGJOACBIBP {
-      get { return oOGJOACBIBP_; }
+    public bool Refresh {
+      get { return refresh_; }
       set {
-        oOGJOACBIBP_ = value;
+        refresh_ = value;
       }
     }
 
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (OOGJOACBIBP != other.OOGJOACBIBP) return false;
+      if (Refresh != other.Refresh) return false;
       if (MonsterId != other.MonsterId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -132,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (OOGJOACBIBP != false) hash ^= OOGJOACBIBP.GetHashCode();
+      if (Refresh != false) hash ^= Refresh.GetHashCode();
       if (MonsterId != 0) hash ^= MonsterId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (Refresh != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Refresh);
+      }
       if (MonsterId != 0) {
         output.WriteRawTag(48);
         output.WriteUInt32(MonsterId);
-      }
-      if (OOGJOACBIBP != false) {
-        output.WriteRawTag(104);
-        output.WriteBool(OOGJOACBIBP);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Refresh != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Refresh);
+      }
       if (MonsterId != 0) {
         output.WriteRawTag(48);
         output.WriteUInt32(MonsterId);
-      }
-      if (OOGJOACBIBP != false) {
-        output.WriteRawTag(104);
-        output.WriteBool(OOGJOACBIBP);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (OOGJOACBIBP != false) {
+      if (Refresh != false) {
         size += 1 + 1;
       }
       if (MonsterId != 0) {
@@ -206,8 +206,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.OOGJOACBIBP != false) {
-        OOGJOACBIBP = other.OOGJOACBIBP;
+      if (other.Refresh != false) {
+        Refresh = other.Refresh;
       }
       if (other.MonsterId != 0) {
         MonsterId = other.MonsterId;
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            MonsterId = input.ReadUInt32();
+          case 8: {
+            Refresh = input.ReadBool();
             break;
           }
-          case 104: {
-            OOGJOACBIBP = input.ReadBool();
+          case 48: {
+            MonsterId = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            MonsterId = input.ReadUInt32();
+          case 8: {
+            Refresh = input.ReadBool();
             break;
           }
-          case 104: {
-            OOGJOACBIBP = input.ReadBool();
+          case 48: {
+            MonsterId = input.ReadUInt32();
             break;
           }
         }

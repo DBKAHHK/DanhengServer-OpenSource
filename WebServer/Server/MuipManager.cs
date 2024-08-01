@@ -15,7 +15,6 @@ using EggLink.DanhengServer.WebServer.Response;
 using Org.BouncyCastle.Crypto.Parameters;
 using Org.BouncyCastle.Math;
 using Org.BouncyCastle.X509;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace EggLink.DanhengServer.WebServer.Server;
 
@@ -40,7 +39,8 @@ public static class MuipManager
 
     public static CreateSessionResponse CreateSession(string keyType)
     {
-        if (ConfigManager.Config.MuipServer.AdminKey == "") return new CreateSessionResponse(1, "This function is not enabled in this server!", null);
+        if (ConfigManager.Config.MuipServer.AdminKey == "")
+            return new CreateSessionResponse(1, "This function is not enabled in this server!", null);
         var session = new MuipSession
         {
             SessionId = Guid.NewGuid().ToString(),
@@ -55,7 +55,7 @@ public static class MuipManager
 
         Sessions.Add(session.SessionId, session);
 
-        var data = new CreateSessionData()
+        var data = new CreateSessionData
         {
             RsaPublicKey = session.RsaPublicKey,
             SessionId = session.SessionId,
@@ -75,9 +75,10 @@ public static class MuipManager
                 Sessions.Remove(sessionId);
                 return new AuthAdminKeyResponse(1, "Session has expired!", null);
             }
+
             // decrypt key
             var rsa = new RSACryptoServiceProvider();
-            rsa.FromXmlString(GetRsaKeyPair().Item2);  // private key
+            rsa.FromXmlString(GetRsaKeyPair().Item2); // private key
             byte[] decrypted;
 
             try
@@ -183,6 +184,7 @@ public static class MuipManager
                 Sessions.Remove(sessionId);
                 return new ServerInformationResponse(1, "Session has expired!");
             }
+
             if (!session.IsAuthorized)
                 return new ServerInformationResponse(3, "Not authorized!");
 
@@ -237,6 +239,7 @@ public static class MuipManager
                 Sessions.Remove(sessionId);
                 return new PlayerInformationResponse(1, "Session has expired!");
             }
+
             if (!session.IsAuthorized)
                 return new PlayerInformationResponse(4, "Not authorized!");
 

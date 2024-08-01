@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static CommonRogueUpdateScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9Db21tb25Sb2d1ZVVwZGF0ZVNjTm90aWZ5LnByb3RvGhFHT0JMTUhNSEJK",
-            "TS5wcm90bxoRTEJBQk9GQUxFUEEucHJvdG8iZQoZQ29tbW9uUm9ndWVVcGRh",
-            "dGVTY05vdGlmeRIlCg9yb2d1ZV9hcmVhX2luZm8YAiABKAsyDC5HT0JMTUhN",
-            "SEJKTRIhCgtOQkVMUEpNQ0tKQhgHIAEoCzIMLkxCQUJPRkFMRVBBQh6qAhtF",
+            "Ch9Db21tb25Sb2d1ZVVwZGF0ZVNjTm90aWZ5LnByb3RvGhFDRkhQSklNT0xH",
+            "QS5wcm90bxoRTE5JSE1QTUZNT08ucHJvdG8iZQoZQ29tbW9uUm9ndWVVcGRh",
+            "dGVTY05vdGlmeRIlCg9yb2d1ZV9hcmVhX2luZm8YCSABKAsyDC5DRkhQSklN",
+            "T0xHQRIhCgtJTUpMUEhFSk1CQhgKIAEoCzIMLkxOSUhNUE1GTU9PQh6qAhtF",
             "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GOBLMHMHBJMReflection.Descriptor, global::EggLink.DanhengServer.Proto.LBABOFALEPAReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CFHPJIMOLGAReflection.Descriptor, global::EggLink.DanhengServer.Proto.LNIHMPMFMOOReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CommonRogueUpdateScNotify), global::EggLink.DanhengServer.Proto.CommonRogueUpdateScNotify.Parser, new[]{ "RogueAreaInfo", "NBELPJMCKJB" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CommonRogueUpdateScNotify), global::EggLink.DanhengServer.Proto.CommonRogueUpdateScNotify.Parser, new[]{ "RogueAreaInfo", "IMJLPHEJMBB" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CommonRogueUpdateScNotify(CommonRogueUpdateScNotify other) : this() {
       rogueAreaInfo_ = other.rogueAreaInfo_ != null ? other.rogueAreaInfo_.Clone() : null;
-      nBELPJMCKJB_ = other.nBELPJMCKJB_ != null ? other.nBELPJMCKJB_.Clone() : null;
+      iMJLPHEJMBB_ = other.iMJLPHEJMBB_ != null ? other.iMJLPHEJMBB_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,26 +86,26 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_area_info" field.</summary>
-    public const int RogueAreaInfoFieldNumber = 2;
-    private global::EggLink.DanhengServer.Proto.GOBLMHMHBJM rogueAreaInfo_;
+    public const int RogueAreaInfoFieldNumber = 9;
+    private global::EggLink.DanhengServer.Proto.CFHPJIMOLGA rogueAreaInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.GOBLMHMHBJM RogueAreaInfo {
+    public global::EggLink.DanhengServer.Proto.CFHPJIMOLGA RogueAreaInfo {
       get { return rogueAreaInfo_; }
       set {
         rogueAreaInfo_ = value;
       }
     }
 
-    /// <summary>Field number for the "NBELPJMCKJB" field.</summary>
-    public const int NBELPJMCKJBFieldNumber = 7;
-    private global::EggLink.DanhengServer.Proto.LBABOFALEPA nBELPJMCKJB_;
+    /// <summary>Field number for the "IMJLPHEJMBB" field.</summary>
+    public const int IMJLPHEJMBBFieldNumber = 10;
+    private global::EggLink.DanhengServer.Proto.LNIHMPMFMOO iMJLPHEJMBB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.LBABOFALEPA NBELPJMCKJB {
-      get { return nBELPJMCKJB_; }
+    public global::EggLink.DanhengServer.Proto.LNIHMPMFMOO IMJLPHEJMBB {
+      get { return iMJLPHEJMBB_; }
       set {
-        nBELPJMCKJB_ = value;
+        iMJLPHEJMBB_ = value;
       }
     }
 
@@ -125,7 +125,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(RogueAreaInfo, other.RogueAreaInfo)) return false;
-      if (!object.Equals(NBELPJMCKJB, other.NBELPJMCKJB)) return false;
+      if (!object.Equals(IMJLPHEJMBB, other.IMJLPHEJMBB)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -134,7 +134,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (rogueAreaInfo_ != null) hash ^= RogueAreaInfo.GetHashCode();
-      if (nBELPJMCKJB_ != null) hash ^= NBELPJMCKJB.GetHashCode();
+      if (iMJLPHEJMBB_ != null) hash ^= IMJLPHEJMBB.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -154,12 +154,12 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (rogueAreaInfo_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(74);
         output.WriteMessage(RogueAreaInfo);
       }
-      if (nBELPJMCKJB_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(NBELPJMCKJB);
+      if (iMJLPHEJMBB_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(IMJLPHEJMBB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -172,12 +172,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (rogueAreaInfo_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(74);
         output.WriteMessage(RogueAreaInfo);
       }
-      if (nBELPJMCKJB_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(NBELPJMCKJB);
+      if (iMJLPHEJMBB_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(IMJLPHEJMBB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -192,8 +192,8 @@ namespace EggLink.DanhengServer.Proto {
       if (rogueAreaInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueAreaInfo);
       }
-      if (nBELPJMCKJB_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NBELPJMCKJB);
+      if (iMJLPHEJMBB_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IMJLPHEJMBB);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -209,15 +209,15 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.rogueAreaInfo_ != null) {
         if (rogueAreaInfo_ == null) {
-          RogueAreaInfo = new global::EggLink.DanhengServer.Proto.GOBLMHMHBJM();
+          RogueAreaInfo = new global::EggLink.DanhengServer.Proto.CFHPJIMOLGA();
         }
         RogueAreaInfo.MergeFrom(other.RogueAreaInfo);
       }
-      if (other.nBELPJMCKJB_ != null) {
-        if (nBELPJMCKJB_ == null) {
-          NBELPJMCKJB = new global::EggLink.DanhengServer.Proto.LBABOFALEPA();
+      if (other.iMJLPHEJMBB_ != null) {
+        if (iMJLPHEJMBB_ == null) {
+          IMJLPHEJMBB = new global::EggLink.DanhengServer.Proto.LNIHMPMFMOO();
         }
-        NBELPJMCKJB.MergeFrom(other.NBELPJMCKJB);
+        IMJLPHEJMBB.MergeFrom(other.IMJLPHEJMBB);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -234,18 +234,18 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 74: {
             if (rogueAreaInfo_ == null) {
-              RogueAreaInfo = new global::EggLink.DanhengServer.Proto.GOBLMHMHBJM();
+              RogueAreaInfo = new global::EggLink.DanhengServer.Proto.CFHPJIMOLGA();
             }
             input.ReadMessage(RogueAreaInfo);
             break;
           }
-          case 58: {
-            if (nBELPJMCKJB_ == null) {
-              NBELPJMCKJB = new global::EggLink.DanhengServer.Proto.LBABOFALEPA();
+          case 82: {
+            if (iMJLPHEJMBB_ == null) {
+              IMJLPHEJMBB = new global::EggLink.DanhengServer.Proto.LNIHMPMFMOO();
             }
-            input.ReadMessage(NBELPJMCKJB);
+            input.ReadMessage(IMJLPHEJMBB);
             break;
           }
         }
@@ -263,18 +263,18 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 74: {
             if (rogueAreaInfo_ == null) {
-              RogueAreaInfo = new global::EggLink.DanhengServer.Proto.GOBLMHMHBJM();
+              RogueAreaInfo = new global::EggLink.DanhengServer.Proto.CFHPJIMOLGA();
             }
             input.ReadMessage(RogueAreaInfo);
             break;
           }
-          case 58: {
-            if (nBELPJMCKJB_ == null) {
-              NBELPJMCKJB = new global::EggLink.DanhengServer.Proto.LBABOFALEPA();
+          case 82: {
+            if (iMJLPHEJMBB_ == null) {
+              IMJLPHEJMBB = new global::EggLink.DanhengServer.Proto.LNIHMPMFMOO();
             }
-            input.ReadMessage(NBELPJMCKJB);
+            input.ReadMessage(IMJLPHEJMBB);
             break;
           }
         }

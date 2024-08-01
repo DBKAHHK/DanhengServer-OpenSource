@@ -79,8 +79,8 @@ public abstract class BaseRogueInstance(PlayerInstance player, int rogueVersionI
     }
 
     public virtual async ValueTask<RogueCommonActionResult?> AddBuff(int buffId, int level = 1,
-        RogueActionSource source = RogueActionSource.RogueCommonActionResultSourceTypeDialogue,
-        RogueActionDisplayType displayType = RogueActionDisplayType.RogueCommonActionResultDisplayTypeSingle,
+        RogueCommonActionResultSourceType source = RogueCommonActionResultSourceType.Dialogue,
+        RogueCommonActionResultDisplayType displayType = RogueCommonActionResultDisplayType.Single,
         bool updateMenu = true, bool notify = true)
     {
         if (RogueBuffs.Exists(x => x.BuffExcel.MazeBuffID == buffId)) return null;
@@ -107,19 +107,19 @@ public abstract class BaseRogueInstance(PlayerInstance player, int rogueVersionI
         foreach (var buff in excel)
         {
             var res = await AddBuff(buff.MazeBuffID, buff.MazeBuffLevel,
-                displayType: RogueActionDisplayType.RogueCommonActionResultDisplayTypeMulti, updateMenu: false,
+                displayType: RogueCommonActionResultDisplayType.Multi, updateMenu: false,
                 notify: false);
             if (res != null) resultList.Add(res);
         }
 
         await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueVersionId, resultList,
-            RogueActionDisplayType.RogueCommonActionResultDisplayTypeMulti));
+            RogueCommonActionResultDisplayType.Multi));
 
         await UpdateMenu();
     }
 
     public virtual async ValueTask EnhanceBuff(int buffId,
-        RogueActionSource source = RogueActionSource.RogueCommonActionResultSourceTypeDialogue)
+        RogueCommonActionResultSourceType source = RogueCommonActionResultSourceType.Dialogue)
     {
         var buff = RogueBuffs.Find(x => x.BuffExcel.MazeBuffID == buffId);
         if (buff != null)
@@ -130,7 +130,7 @@ public abstract class BaseRogueInstance(PlayerInstance player, int rogueVersionI
             {
                 buff.BuffLevel++;
                 await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueVersionId,
-                    buff.ToResultProto(source), RogueActionDisplayType.RogueCommonActionResultDisplayTypeSingle));
+                    buff.ToResultProto(source), RogueCommonActionResultDisplayType.Single));
             }
         }
     }
@@ -154,14 +154,14 @@ public abstract class BaseRogueInstance(PlayerInstance player, int rogueVersionI
                 if (RogueBuffs.Exists(x => x.BuffExcel.MazeBuffID == buffId)) // check if buff already exists
                 {
                     // enhance
-                    await EnhanceBuff(buffId, RogueActionSource.RogueCommonActionResultSourceTypeSelect);
+                    await EnhanceBuff(buffId, RogueCommonActionResultSourceType.Select);
                 }
                 else
                 {
                     var instance = new RogueBuffInstance(buff.MazeBuffID, buff.MazeBuffLevel);
                     RogueBuffs.Add(instance);
                     await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueVersionId,
-                        instance.ToResultProto(RogueActionSource.RogueCommonActionResultSourceTypeSelect)));
+                        instance.ToResultProto(RogueCommonActionResultSourceType.Select)));
                 }
             }
 
@@ -191,7 +191,7 @@ public abstract class BaseRogueInstance(PlayerInstance player, int rogueVersionI
     #region Money
 
     public async ValueTask CostMoney(int amount,
-        RogueActionDisplayType displayType = RogueActionDisplayType.RogueCommonActionResultDisplayTypeNone)
+        RogueCommonActionResultDisplayType displayType = RogueCommonActionResultDisplayType.None)
     {
         CurMoney -= amount;
         await Player.SendPacket(new PacketSyncRogueCommonVirtualItemInfoScNotify(this));
@@ -199,7 +199,7 @@ public abstract class BaseRogueInstance(PlayerInstance player, int rogueVersionI
         await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueVersionId,
             new RogueCommonActionResult
             {
-                Source = RogueActionSource.RogueCommonActionResultSourceTypeDialogue,
+                Source = RogueCommonActionResultSourceType.Dialogue,
                 RogueAction = new RogueCommonActionResultData
                 {
                     RemoveItemList = new RogueCommonMoney
@@ -212,7 +212,7 @@ public abstract class BaseRogueInstance(PlayerInstance player, int rogueVersionI
     }
 
     public async ValueTask GainMoney(int amount, int displayType = 2,
-        RogueActionDisplayType display = RogueActionDisplayType.RogueCommonActionResultDisplayTypeNone)
+        RogueCommonActionResultDisplayType display = RogueCommonActionResultDisplayType.None)
     {
         CurMoney += amount;
         await Player.SendPacket(new PacketSyncRogueCommonVirtualItemInfoScNotify(this));
@@ -225,7 +225,7 @@ public abstract class BaseRogueInstance(PlayerInstance player, int rogueVersionI
         await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueVersionId,
             new RogueCommonActionResult
             {
-                Source = RogueActionSource.RogueCommonActionResultSourceTypeDialogue,
+                Source = RogueCommonActionResultSourceType.Dialogue,
                 RogueAction = new RogueCommonActionResultData
                 {
                     GetItemList = new RogueCommonMoney
@@ -296,7 +296,7 @@ public abstract class BaseRogueInstance(PlayerInstance player, int rogueVersionI
         var miracle = new RogueMiracleInstance(this, miracleId);
         RogueMiracles.Add(miracleId, miracle);
         await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueVersionId, miracle.ToGetResult(),
-            RogueActionDisplayType.RogueCommonActionResultDisplayTypeSingle));
+            RogueCommonActionResultDisplayType.Single));
     }
 
     #endregion
@@ -403,20 +403,20 @@ public abstract class BaseRogueInstance(PlayerInstance player, int rogueVersionI
 
     #region Serialization
 
-    public RogueBuffEnhanceInfo ToEnhanceInfo()
+    public RogueBuffEnhanceInfoList ToEnhanceInfo()
     {
-        var proto = new RogueBuffEnhanceInfo();
+        var proto = new RogueBuffEnhanceInfoList();
 
-        foreach (var buff in RogueBuffs) proto.EnhanceInfo.Add(buff.ToEnhanceProto());
+        foreach (var buff in RogueBuffs) proto.EnhanceInfoList.Add(buff.ToEnhanceProto());
 
         return proto;
     }
 
-    public ChessRogueBuffEnhanceInfo ToChessEnhanceInfo()
+    public ChessRogueBuffEnhanceList ToChessEnhanceInfo()
     {
-        var proto = new ChessRogueBuffEnhanceInfo();
+        var proto = new ChessRogueBuffEnhanceList();
 
-        foreach (var buff in RogueBuffs) proto.EnhanceInfo.Add(buff.ToChessEnhanceProto());
+        foreach (var buff in RogueBuffs) proto.EnhanceInfoList.Add(buff.ToChessEnhanceProto());
 
         return proto;
     }

@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static AttackDamagePropertyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpBdHRhY2tEYW1hZ2VQcm9wZXJ0eS5wcm90byJAChRBdHRhY2tEYW1hZ2VQ",
-            "cm9wZXJ0eRITCgtFTEVQRkRNSEJDRRgBIAEoCRITCgtNR0tJR0lMS0ZOQRgC",
-            "IAEoAUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChpBdHRhY2tEYW1hZ2VQcm9wZXJ0eS5wcm90byI7ChRBdHRhY2tEYW1hZ2VQ",
+            "cm9wZXJ0eRITCgthdHRhY2tfdHlwZRgBIAEoCRIOCgZkYW1hZ2UYAiABKAFC",
+            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AttackDamageProperty), global::EggLink.DanhengServer.Proto.AttackDamageProperty.Parser, new[]{ "ELEPFDMHBCE", "MGKIGILKFNA" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AttackDamageProperty), global::EggLink.DanhengServer.Proto.AttackDamageProperty.Parser, new[]{ "AttackType", "Damage" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AttackDamageProperty(AttackDamageProperty other) : this() {
-      eLEPFDMHBCE_ = other.eLEPFDMHBCE_;
-      mGKIGILKFNA_ = other.mGKIGILKFNA_;
+      attackType_ = other.attackType_;
+      damage_ = other.damage_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,27 +83,27 @@ namespace EggLink.DanhengServer.Proto {
       return new AttackDamageProperty(this);
     }
 
-    /// <summary>Field number for the "ELEPFDMHBCE" field.</summary>
-    public const int ELEPFDMHBCEFieldNumber = 1;
-    private string eLEPFDMHBCE_ = "";
+    /// <summary>Field number for the "attack_type" field.</summary>
+    public const int AttackTypeFieldNumber = 1;
+    private string attackType_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string ELEPFDMHBCE {
-      get { return eLEPFDMHBCE_; }
+    public string AttackType {
+      get { return attackType_; }
       set {
-        eLEPFDMHBCE_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        attackType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "MGKIGILKFNA" field.</summary>
-    public const int MGKIGILKFNAFieldNumber = 2;
-    private double mGKIGILKFNA_;
+    /// <summary>Field number for the "damage" field.</summary>
+    public const int DamageFieldNumber = 2;
+    private double damage_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public double MGKIGILKFNA {
-      get { return mGKIGILKFNA_; }
+    public double Damage {
+      get { return damage_; }
       set {
-        mGKIGILKFNA_ = value;
+        damage_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ELEPFDMHBCE != other.ELEPFDMHBCE) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(MGKIGILKFNA, other.MGKIGILKFNA)) return false;
+      if (AttackType != other.AttackType) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Damage, other.Damage)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ELEPFDMHBCE.Length != 0) hash ^= ELEPFDMHBCE.GetHashCode();
-      if (MGKIGILKFNA != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(MGKIGILKFNA);
+      if (AttackType.Length != 0) hash ^= AttackType.GetHashCode();
+      if (Damage != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Damage);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ELEPFDMHBCE.Length != 0) {
+      if (AttackType.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(ELEPFDMHBCE);
+        output.WriteString(AttackType);
       }
-      if (MGKIGILKFNA != 0D) {
+      if (Damage != 0D) {
         output.WriteRawTag(17);
-        output.WriteDouble(MGKIGILKFNA);
+        output.WriteDouble(Damage);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ELEPFDMHBCE.Length != 0) {
+      if (AttackType.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(ELEPFDMHBCE);
+        output.WriteString(AttackType);
       }
-      if (MGKIGILKFNA != 0D) {
+      if (Damage != 0D) {
         output.WriteRawTag(17);
-        output.WriteDouble(MGKIGILKFNA);
+        output.WriteDouble(Damage);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,10 +187,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ELEPFDMHBCE.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ELEPFDMHBCE);
+      if (AttackType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AttackType);
       }
-      if (MGKIGILKFNA != 0D) {
+      if (Damage != 0D) {
         size += 1 + 8;
       }
       if (_unknownFields != null) {
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ELEPFDMHBCE.Length != 0) {
-        ELEPFDMHBCE = other.ELEPFDMHBCE;
+      if (other.AttackType.Length != 0) {
+        AttackType = other.AttackType;
       }
-      if (other.MGKIGILKFNA != 0D) {
-        MGKIGILKFNA = other.MGKIGILKFNA;
+      if (other.Damage != 0D) {
+        Damage = other.Damage;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            ELEPFDMHBCE = input.ReadString();
+            AttackType = input.ReadString();
             break;
           }
           case 17: {
-            MGKIGILKFNA = input.ReadDouble();
+            Damage = input.ReadDouble();
             break;
           }
         }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            ELEPFDMHBCE = input.ReadString();
+            AttackType = input.ReadString();
             break;
           }
           case 17: {
-            MGKIGILKFNA = input.ReadDouble();
+            Damage = input.ReadDouble();
             break;
           }
         }

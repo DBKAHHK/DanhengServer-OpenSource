@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static FightKickOutScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpGaWdodEtpY2tPdXRTY05vdGlmeS5wcm90bxoRSUhORERIT09JTE4ucHJv",
-            "dG8iOQoURmlnaHRLaWNrT3V0U2NOb3RpZnkSIQoLSk9FRkpGUExHQUcYBSAB",
-            "KA4yDC5JSE5EREhPT0lMTkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
-            "b3RvYgZwcm90bzM="));
+            "ChpGaWdodEtpY2tPdXRTY05vdGlmeS5wcm90bxoWRmlnaHRLaWNrb3V0VHlw",
+            "ZS5wcm90byI8ChRGaWdodEtpY2tPdXRTY05vdGlmeRIkCglraWNrX3R5cGUY",
+            "CiABKA4yES5GaWdodEtpY2tvdXRUeXBlQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IHNDDHOOILNReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FightKickoutTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightKickOutScNotify), global::EggLink.DanhengServer.Proto.FightKickOutScNotify.Parser, new[]{ "JOEFJFPLGAG" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightKickOutScNotify), global::EggLink.DanhengServer.Proto.FightKickOutScNotify.Parser, new[]{ "KickType" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FightKickOutScNotify(FightKickOutScNotify other) : this() {
-      jOEFJFPLGAG_ = other.jOEFJFPLGAG_;
+      kickType_ = other.kickType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new FightKickOutScNotify(this);
     }
 
-    /// <summary>Field number for the "JOEFJFPLGAG" field.</summary>
-    public const int JOEFJFPLGAGFieldNumber = 5;
-    private global::EggLink.DanhengServer.Proto.IHNDDHOOILN jOEFJFPLGAG_ = global::EggLink.DanhengServer.Proto.IHNDDHOOILN.FightKickoutUnknown;
+    /// <summary>Field number for the "kick_type" field.</summary>
+    public const int KickTypeFieldNumber = 10;
+    private global::EggLink.DanhengServer.Proto.FightKickoutType kickType_ = global::EggLink.DanhengServer.Proto.FightKickoutType.FightKickoutUnknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.IHNDDHOOILN JOEFJFPLGAG {
-      get { return jOEFJFPLGAG_; }
+    public global::EggLink.DanhengServer.Proto.FightKickoutType KickType {
+      get { return kickType_; }
       set {
-        jOEFJFPLGAG_ = value;
+        kickType_ = value;
       }
     }
 
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (JOEFJFPLGAG != other.JOEFJFPLGAG) return false;
+      if (KickType != other.KickType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -118,7 +118,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (JOEFJFPLGAG != global::EggLink.DanhengServer.Proto.IHNDDHOOILN.FightKickoutUnknown) hash ^= JOEFJFPLGAG.GetHashCode();
+      if (KickType != global::EggLink.DanhengServer.Proto.FightKickoutType.FightKickoutUnknown) hash ^= KickType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (JOEFJFPLGAG != global::EggLink.DanhengServer.Proto.IHNDDHOOILN.FightKickoutUnknown) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) JOEFJFPLGAG);
+      if (KickType != global::EggLink.DanhengServer.Proto.FightKickoutType.FightKickoutUnknown) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) KickType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -151,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (JOEFJFPLGAG != global::EggLink.DanhengServer.Proto.IHNDDHOOILN.FightKickoutUnknown) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) JOEFJFPLGAG);
+      if (KickType != global::EggLink.DanhengServer.Proto.FightKickoutType.FightKickoutUnknown) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) KickType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -165,8 +165,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (JOEFJFPLGAG != global::EggLink.DanhengServer.Proto.IHNDDHOOILN.FightKickoutUnknown) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) JOEFJFPLGAG);
+      if (KickType != global::EggLink.DanhengServer.Proto.FightKickoutType.FightKickoutUnknown) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) KickType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -180,8 +180,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.JOEFJFPLGAG != global::EggLink.DanhengServer.Proto.IHNDDHOOILN.FightKickoutUnknown) {
-        JOEFJFPLGAG = other.JOEFJFPLGAG;
+      if (other.KickType != global::EggLink.DanhengServer.Proto.FightKickoutType.FightKickoutUnknown) {
+        KickType = other.KickType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -198,8 +198,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            JOEFJFPLGAG = (global::EggLink.DanhengServer.Proto.IHNDDHOOILN) input.ReadEnum();
+          case 80: {
+            KickType = (global::EggLink.DanhengServer.Proto.FightKickoutType) input.ReadEnum();
             break;
           }
         }
@@ -217,8 +217,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            JOEFJFPLGAG = (global::EggLink.DanhengServer.Proto.IHNDDHOOILN) input.ReadEnum();
+          case 80: {
+            KickType = (global::EggLink.DanhengServer.Proto.FightKickoutType) input.ReadEnum();
             break;
           }
         }

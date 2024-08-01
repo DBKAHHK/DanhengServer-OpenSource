@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static InspirationCircuitInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxJbnNwaXJhdGlvbkNpcmN1aXRJbmZvLnByb3RvGhVSb2d1ZVRhbGVudElu",
-            "Zm8ucHJvdG8iXgoWSW5zcGlyYXRpb25DaXJjdWl0SW5mbxIrChFyb2d1ZV90",
-            "YWxlbnRfaW5mbxgGIAEoCzIQLlJvZ3VlVGFsZW50SW5mbxIXCg9pbnNwaXJh",
-            "dGlvbl9udW0YDCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
-            "b2IGcHJvdG8z"));
+            "ChxJbnNwaXJhdGlvbkNpcmN1aXRJbmZvLnByb3RvGhlSb2d1ZVRhbGVudElu",
+            "Zm9MaXN0LnByb3RvImEKFkluc3BpcmF0aW9uQ2lyY3VpdEluZm8SLgoQdGFs",
+            "ZW50X2luZm9fbGlzdBgMIAEoCzIULlJvZ3VlVGFsZW50SW5mb0xpc3QSFwoP",
+            "aW5zcGlyYXRpb25fbnVtGAggASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTalentInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTalentInfoListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.InspirationCircuitInfo), global::EggLink.DanhengServer.Proto.InspirationCircuitInfo.Parser, new[]{ "RogueTalentInfo", "InspirationNum" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.InspirationCircuitInfo), global::EggLink.DanhengServer.Proto.InspirationCircuitInfo.Parser, new[]{ "TalentInfoList", "InspirationNum" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InspirationCircuitInfo(InspirationCircuitInfo other) : this() {
-      rogueTalentInfo_ = other.rogueTalentInfo_ != null ? other.rogueTalentInfo_.Clone() : null;
+      talentInfoList_ = other.talentInfoList_ != null ? other.talentInfoList_.Clone() : null;
       inspirationNum_ = other.inspirationNum_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -85,20 +85,20 @@ namespace EggLink.DanhengServer.Proto {
       return new InspirationCircuitInfo(this);
     }
 
-    /// <summary>Field number for the "rogue_talent_info" field.</summary>
-    public const int RogueTalentInfoFieldNumber = 6;
-    private global::EggLink.DanhengServer.Proto.RogueTalentInfo rogueTalentInfo_;
+    /// <summary>Field number for the "talent_info_list" field.</summary>
+    public const int TalentInfoListFieldNumber = 12;
+    private global::EggLink.DanhengServer.Proto.RogueTalentInfoList talentInfoList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueTalentInfo RogueTalentInfo {
-      get { return rogueTalentInfo_; }
+    public global::EggLink.DanhengServer.Proto.RogueTalentInfoList TalentInfoList {
+      get { return talentInfoList_; }
       set {
-        rogueTalentInfo_ = value;
+        talentInfoList_ = value;
       }
     }
 
     /// <summary>Field number for the "inspiration_num" field.</summary>
-    public const int InspirationNumFieldNumber = 12;
+    public const int InspirationNumFieldNumber = 8;
     private uint inspirationNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(RogueTalentInfo, other.RogueTalentInfo)) return false;
+      if (!object.Equals(TalentInfoList, other.TalentInfoList)) return false;
       if (InspirationNum != other.InspirationNum) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (rogueTalentInfo_ != null) hash ^= RogueTalentInfo.GetHashCode();
+      if (talentInfoList_ != null) hash ^= TalentInfoList.GetHashCode();
       if (InspirationNum != 0) hash ^= InspirationNum.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (rogueTalentInfo_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(RogueTalentInfo);
-      }
       if (InspirationNum != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteUInt32(InspirationNum);
+      }
+      if (talentInfoList_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(TalentInfoList);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (rogueTalentInfo_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(RogueTalentInfo);
-      }
       if (InspirationNum != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteUInt32(InspirationNum);
+      }
+      if (talentInfoList_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(TalentInfoList);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -189,8 +189,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (rogueTalentInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueTalentInfo);
+      if (talentInfoList_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TalentInfoList);
       }
       if (InspirationNum != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(InspirationNum);
@@ -207,11 +207,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.rogueTalentInfo_ != null) {
-        if (rogueTalentInfo_ == null) {
-          RogueTalentInfo = new global::EggLink.DanhengServer.Proto.RogueTalentInfo();
+      if (other.talentInfoList_ != null) {
+        if (talentInfoList_ == null) {
+          TalentInfoList = new global::EggLink.DanhengServer.Proto.RogueTalentInfoList();
         }
-        RogueTalentInfo.MergeFrom(other.RogueTalentInfo);
+        TalentInfoList.MergeFrom(other.TalentInfoList);
       }
       if (other.InspirationNum != 0) {
         InspirationNum = other.InspirationNum;
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
-            if (rogueTalentInfo_ == null) {
-              RogueTalentInfo = new global::EggLink.DanhengServer.Proto.RogueTalentInfo();
-            }
-            input.ReadMessage(RogueTalentInfo);
+          case 64: {
+            InspirationNum = input.ReadUInt32();
             break;
           }
-          case 96: {
-            InspirationNum = input.ReadUInt32();
+          case 98: {
+            if (talentInfoList_ == null) {
+              TalentInfoList = new global::EggLink.DanhengServer.Proto.RogueTalentInfoList();
+            }
+            input.ReadMessage(TalentInfoList);
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
-            if (rogueTalentInfo_ == null) {
-              RogueTalentInfo = new global::EggLink.DanhengServer.Proto.RogueTalentInfo();
-            }
-            input.ReadMessage(RogueTalentInfo);
+          case 64: {
+            InspirationNum = input.ReadUInt32();
             break;
           }
-          case 96: {
-            InspirationNum = input.ReadUInt32();
+          case 98: {
+            if (talentInfoList_ == null) {
+              TalentInfoList = new global::EggLink.DanhengServer.Proto.RogueTalentInfoList();
+            }
+            input.ReadMessage(TalentInfoList);
             break;
           }
         }

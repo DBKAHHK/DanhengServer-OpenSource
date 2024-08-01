@@ -13,7 +13,7 @@ public class HandlerDoGachaInRollShopCsReq : Handler
     {
         var req = DoGachaInRollShopCsReq.Parser.ParseFrom(data);
         ItemList itemList = new();
-        var count = req.JLLODFFJGDM;
+        var count = req.GachaCount;
         uint maxtype = 3;
         for (uint i = 0; i < count; i++)
         {

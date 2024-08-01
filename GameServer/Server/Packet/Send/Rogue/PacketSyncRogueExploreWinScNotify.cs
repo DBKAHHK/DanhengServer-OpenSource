@@ -8,7 +8,7 @@ public class PacketSyncRogueExploreWinScNotify : BasePacket
     {
         var proto = new SyncRogueExploreWinScNotify
         {
-            IsWin = true
+            IsExploreWin = true
         };
 
         SetData(proto);

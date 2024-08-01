@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9DaGVzc1JvZ3VlRGljZVN1cmZhY2VJbmZvLnByb3RvIj4KGUNoZXNzUm9n",
-            "dWVEaWNlU3VyZmFjZUluZm8SEgoKc3VyZmFjZV9pZBgFIAEoDRINCgVpbmRl",
-            "eBgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "dWVEaWNlU3VyZmFjZUluZm8SEgoKc3VyZmFjZV9pZBgGIAEoDRINCgVpbmRl",
+            "eBgEIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "surface_id" field.</summary>
-    public const int SurfaceIdFieldNumber = 5;
+    public const int SurfaceIdFieldNumber = 6;
     private uint surfaceId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "index" field.</summary>
-    public const int IndexFieldNumber = 9;
+    public const int IndexFieldNumber = 4;
     private uint index_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (SurfaceId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(SurfaceId);
-      }
       if (Index != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(32);
         output.WriteUInt32(Index);
+      }
+      if (SurfaceId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(SurfaceId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (SurfaceId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(SurfaceId);
-      }
       if (Index != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(32);
         output.WriteUInt32(Index);
+      }
+      if (SurfaceId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(SurfaceId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            SurfaceId = input.ReadUInt32();
+          case 32: {
+            Index = input.ReadUInt32();
             break;
           }
-          case 72: {
-            Index = input.ReadUInt32();
+          case 48: {
+            SurfaceId = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            SurfaceId = input.ReadUInt32();
+          case 32: {
+            Index = input.ReadUInt32();
             break;
           }
-          case 72: {
-            Index = input.ReadUInt32();
+          case 48: {
+            SurfaceId = input.ReadUInt32();
             break;
           }
         }

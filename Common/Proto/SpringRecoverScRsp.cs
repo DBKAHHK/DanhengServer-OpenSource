@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhTcHJpbmdSZWNvdmVyU2NSc3AucHJvdG8aEkhlYWxQb29sSW5mby5wcm90",
-            "byJVChJTcHJpbmdSZWNvdmVyU2NSc3ASLgoXSGVhbFBvb2xJbmZvRmllbGRO",
-            "dW1iZXIYCiABKAsyDS5IZWFsUG9vbEluZm8SDwoHcmV0Y29kZRgMIAEoDUIe",
-            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "byJMChJTcHJpbmdSZWNvdmVyU2NSc3ASJQoOaGVhbF9wb29sX2luZm8YBCAB",
+            "KAsyDS5IZWFsUG9vbEluZm8SDwoHcmV0Y29kZRgLIAEoDUIeqgIbRWdnTGlu",
+            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HealPoolInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SpringRecoverScRsp), global::EggLink.DanhengServer.Proto.SpringRecoverScRsp.Parser, new[]{ "HealPoolInfoFieldNumber", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SpringRecoverScRsp), global::EggLink.DanhengServer.Proto.SpringRecoverScRsp.Parser, new[]{ "HealPoolInfo", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SpringRecoverScRsp(SpringRecoverScRsp other) : this() {
-      healPoolInfoFieldNumber_ = other.healPoolInfoFieldNumber_ != null ? other.healPoolInfoFieldNumber_.Clone() : null;
+      healPoolInfo_ = other.healPoolInfo_ != null ? other.healPoolInfo_.Clone() : null;
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,20 +84,20 @@ namespace EggLink.DanhengServer.Proto {
       return new SpringRecoverScRsp(this);
     }
 
-    /// <summary>Field number for the "HealPoolInfoFieldNumber" field.</summary>
-    public const int HealPoolInfoFieldNumberFieldNumber = 10;
-    private global::EggLink.DanhengServer.Proto.HealPoolInfo healPoolInfoFieldNumber_;
+    /// <summary>Field number for the "heal_pool_info" field.</summary>
+    public const int HealPoolInfoFieldNumber = 4;
+    private global::EggLink.DanhengServer.Proto.HealPoolInfo healPoolInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.HealPoolInfo HealPoolInfoFieldNumber {
-      get { return healPoolInfoFieldNumber_; }
+    public global::EggLink.DanhengServer.Proto.HealPoolInfo HealPoolInfo {
+      get { return healPoolInfo_; }
       set {
-        healPoolInfoFieldNumber_ = value;
+        healPoolInfo_ = value;
       }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 12;
+    public const int RetcodeFieldNumber = 11;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(HealPoolInfoFieldNumber, other.HealPoolInfoFieldNumber)) return false;
+      if (!object.Equals(HealPoolInfo, other.HealPoolInfo)) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -132,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (healPoolInfoFieldNumber_ != null) hash ^= HealPoolInfoFieldNumber.GetHashCode();
+      if (healPoolInfo_ != null) hash ^= HealPoolInfo.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -152,12 +152,12 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (healPoolInfoFieldNumber_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(HealPoolInfoFieldNumber);
+      if (healPoolInfo_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(HealPoolInfo);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -170,12 +170,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (healPoolInfoFieldNumber_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(HealPoolInfoFieldNumber);
+      if (healPoolInfo_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(HealPoolInfo);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -188,8 +188,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (healPoolInfoFieldNumber_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(HealPoolInfoFieldNumber);
+      if (healPoolInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(HealPoolInfo);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.healPoolInfoFieldNumber_ != null) {
-        if (healPoolInfoFieldNumber_ == null) {
-          HealPoolInfoFieldNumber = new global::EggLink.DanhengServer.Proto.HealPoolInfo();
+      if (other.healPoolInfo_ != null) {
+        if (healPoolInfo_ == null) {
+          HealPoolInfo = new global::EggLink.DanhengServer.Proto.HealPoolInfo();
         }
-        HealPoolInfoFieldNumber.MergeFrom(other.HealPoolInfoFieldNumber);
+        HealPoolInfo.MergeFrom(other.HealPoolInfo);
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
@@ -230,14 +230,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 82: {
-            if (healPoolInfoFieldNumber_ == null) {
-              HealPoolInfoFieldNumber = new global::EggLink.DanhengServer.Proto.HealPoolInfo();
+          case 34: {
+            if (healPoolInfo_ == null) {
+              HealPoolInfo = new global::EggLink.DanhengServer.Proto.HealPoolInfo();
             }
-            input.ReadMessage(HealPoolInfoFieldNumber);
+            input.ReadMessage(HealPoolInfo);
             break;
           }
-          case 96: {
+          case 88: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -256,14 +256,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 82: {
-            if (healPoolInfoFieldNumber_ == null) {
-              HealPoolInfoFieldNumber = new global::EggLink.DanhengServer.Proto.HealPoolInfo();
+          case 34: {
+            if (healPoolInfo_ == null) {
+              HealPoolInfo = new global::EggLink.DanhengServer.Proto.HealPoolInfo();
             }
-            input.ReadMessage(HealPoolInfoFieldNumber);
+            input.ReadMessage(HealPoolInfo);
             break;
           }
-          case 96: {
+          case 88: {
             Retcode = input.ReadUInt32();
             break;
           }

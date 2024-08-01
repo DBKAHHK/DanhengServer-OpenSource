@@ -1,13 +1,13 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Scene;
-using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.Enums.Scene;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Raid;
 using EggLink.DanhengServer.Proto;
+using RaidData = EggLink.DanhengServer.Database.Scene.RaidData;
 
 namespace EggLink.DanhengServer.GameServer.Game.Raid;
 
@@ -125,10 +125,7 @@ public class RaidManager : BasePlayerManager
                 }
 
                 Player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupHeliobus, list);
-                if (excel.LockCaptain)
-                {
-                    Player.LineupManager!.GetCurLineup()!.LeaderAvatarId = excel.LockCaptainAvatarID;
-                }
+                if (excel.LockCaptain) Player.LineupManager!.GetCurLineup()!.LeaderAvatarId = excel.LockCaptainAvatarID;
                 await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
             }
             else

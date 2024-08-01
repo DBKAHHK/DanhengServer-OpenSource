@@ -1,5 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database;
+using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Player;
 using EggLink.DanhengServer.Database.Scene;
 using EggLink.DanhengServer.Database.Tutorial;
@@ -82,6 +83,7 @@ public class PlayerInstance(PlayerData data)
     public bool IsNewPlayer { get; set; }
     public int NextBattleId { get; set; } = 0;
     public int ChargerNum { get; set; } = 0;
+    public int LastWorldId { get; set; } = 101;
 
     #endregion
 
@@ -244,16 +246,41 @@ public class PlayerInstance(PlayerData data)
 
     #region Actions
 
-    public async ValueTask ChangeHeroBasicType(HeroBasicTypeEnum type)
+    public async ValueTask ChangeAvatarPathType(int baseAvatarId, MultiPathAvatarTypeEnum type)
     {
-        var id = (int)((int)type + Data.CurrentGender - 1);
-        if (Data.CurBasicType == id) return;
-        Data.CurBasicType = id;
-        AvatarManager!.GetHero()!.HeroId = id;
-        AvatarManager!.GetHero()!.ValidateHero();
-        AvatarManager!.GetHero()!.SetCurSp(0, LineupManager!.GetCurLineup()!.IsExtraLineup());
-        await SendPacket(new PacketHeroBasicTypeChangedNotify(id));
-        await SendPacket(new PacketPlayerSyncScNotify(AvatarManager!.GetHero()!));
+        if (baseAvatarId == 8001)
+        {
+            var id = (int)((int)type + Data.CurrentGender - 1);
+            if (Data.CurBasicType == id) return;
+            Data.CurBasicType = id;
+            var avatar = AvatarManager!.GetHero()!;
+            // Set avatar path
+            avatar.PathId = id;
+            avatar.ValidateHero();
+            avatar.SetCurSp(0, LineupManager!.GetCurLineup()!.IsExtraLineup());
+            // Save new skill tree
+            avatar.GetSkillTree();
+            await SendPacket(new PacketAvatarPathChangedNotify(8001, (MultiPathAvatarType)id));
+            await SendPacket(new PacketPlayerSyncScNotify(AvatarManager!.GetHero()!));
+        }
+        else
+        {
+            var avatar = AvatarManager!.GetAvatar(baseAvatarId)!;
+            avatar.PathId = (int)type;
+            avatar.SetCurSp(0, LineupManager!.GetCurLineup()!.IsExtraLineup());
+            // Save new skill tree
+            avatar.GetSkillTree();
+            await SendPacket(new PacketAvatarPathChangedNotify((uint)avatar.AvatarId, (MultiPathAvatarType)type));
+            await SendPacket(new PacketPlayerSyncScNotify(avatar));
+        }
+    }
+
+    public async ValueTask<AvatarInfo> MarkAvatar(int avatarId, bool isMarked, bool sendPacket = true)
+    {
+        var avatar = AvatarManager!.GetAvatar(avatarId)!;
+        avatar.IsMarked = isMarked;
+        if (sendPacket) await SendPacket(new PacketPlayerSyncScNotify(avatar));
+        return avatar;
     }
 
     public async ValueTask AddAvatar(int avatarId, bool sync = true, bool notify = true)
@@ -403,7 +430,6 @@ public class PlayerInstance(PlayerData data)
                         break;
                     case PropTypeEnum.PROP_ORDINARY:
                         if (prop.PropInfo.CommonConsole)
-                        {
                             // set group
                             foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupID))
                             {
@@ -411,7 +437,7 @@ public class PlayerInstance(PlayerData data)
 
                                 await MissionManager!.OnPlayerInteractWithProp();
                             }
-                        }
+
                         break;
                 }
 
@@ -455,10 +481,7 @@ public class PlayerInstance(PlayerData data)
                     MissionManager?.HandleFinishType(MissionFinishTypeEnum.FloorSavedValue);
                 }
 
-                if (prop.PropInfo.IsLevelBtn)
-                {
-                    await prop.SetState(PropStateEnum.Closed);
-                }
+                if (prop.PropInfo.IsLevelBtn) await prop.SetState(PropStateEnum.Closed);
 
                 return prop;
             }
@@ -467,7 +490,7 @@ public class PlayerInstance(PlayerData data)
         return null;
     }
 
-    public async ValueTask<bool> EnterScene(int entryId, int teleportId, bool sendPacket,int storyLineId = 0, 
+    public async ValueTask<bool> EnterScene(int entryId, int teleportId, bool sendPacket, int storyLineId = 0,
         bool mapTp = false)
     {
         var beforeStoryLineId = StoryLineManager?.StoryLineData.CurStoryLineId;
@@ -483,6 +506,9 @@ public class PlayerInstance(PlayerData data)
 
         GameData.GetFloorInfo(entrance.PlaneID, entrance.FloorID, out var floorInfo);
         if (floorInfo == null) return false;
+
+        // Record last plane id for train view
+        if (entrance.PlaneID != 10000) LastWorldId = GameData.MazePlaneData[entrance.PlaneID].WorldID;
 
         var startGroup = entrance.StartGroupID;
         var startAnchor = entrance.StartAnchorID;
@@ -513,7 +539,8 @@ public class PlayerInstance(PlayerData data)
 
         var afterEntryId = Data.EntryId;
 
-        return (beforeEntryId != afterEntryId || beforeStoryLineId != storyLineId); // return true if entryId changed or story line changed
+        return beforeEntryId != afterEntryId ||
+               beforeStoryLineId != storyLineId; // return true if entryId changed or story line changed
     }
 
     public async ValueTask EnterMissionScene(int entranceId, int anchorGroupId, int anchorId, bool sendPacket)

@@ -15,11 +15,11 @@ public class PacketStoryLineInfoScNotify : BasePacket
         var proto = new StoryLineInfoScNotify
         {
             CurStoryLineId = (uint)(player.StoryLineManager?.StoryLineData.CurStoryLineId ?? 0),
-            RunningStoryLineIdList = { storyLineIdList }
+            UnfinishedStoryLineIdList = { storyLineIdList }
         };
 
-        if (!proto.RunningStoryLineIdList.Contains(proto.CurStoryLineId))
-            proto.RunningStoryLineIdList.Add(proto.CurStoryLineId);
+        if (!proto.UnfinishedStoryLineIdList.Contains(proto.CurStoryLineId))
+            proto.UnfinishedStoryLineIdList.Add(proto.CurStoryLineId);
 
         GameData.StroyLineTrialAvatarDataData.TryGetValue(player.StoryLineManager!.StoryLineData.CurStoryLineId,
             out var storyExcel);

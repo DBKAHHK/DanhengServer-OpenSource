@@ -1,6 +1,9 @@
 ﻿using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Enums.Avatar;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Avatar;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.Internationalization;
+using EggLink.DanhengServer.Proto;
 
 namespace EggLink.DanhengServer.Command.Command.Cmd;
 
@@ -37,11 +40,11 @@ public class CommandAvatar : ICommand
         {
             player.AvatarManager!.AvatarData.Avatars.ForEach(avatar =>
             {
-                if (avatar.HeroId > 0)
+                if (avatar.PathId > 0)
                 {
-                    avatar.SkillTreeExtra.TryGetValue(avatar.HeroId, out var hero);
+                    avatar.SkillTreeExtra.TryGetValue(avatar.PathId, out var hero);
                     hero ??= [];
-                    var excel = GameData.AvatarConfigData[avatar.HeroId];
+                    var excel = GameData.AvatarConfigData[avatar.PathId];
                     excel.SkillTree.ForEach(talent => { hero[talent.PointID] = Math.Min(level, talent.MaxLevel); });
                 }
                 else
@@ -128,7 +131,7 @@ public class CommandAvatar : ICommand
         {
             arg.Target.Player!.AvatarManager!.AvatarData.Avatars.ForEach(avatar =>
             {
-                avatar.Rank = Math.Min(rank, 6);
+                foreach (var path in avatar.PathInfoes.Values) path.Rank = Math.Min(rank, 6);
             });
             await arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AllAvatarsLevelSet",
                 I18nManager.Translate("Word.Rank"), rank.ToString()));
@@ -146,7 +149,7 @@ public class CommandAvatar : ICommand
                 return;
             }
 
-            avatar.Rank = Math.Min(rank, 6);
+            foreach (var path in avatar.PathInfoes.Values) path.Rank = Math.Min(rank, 6);
 
             // sync
             await arg.Target.SendPacket(new PacketPlayerSyncScNotify(avatar));
@@ -214,5 +217,43 @@ public class CommandAvatar : ICommand
                 avatar.Excel?.Name?.Replace("{NICKNAME}", arg.Target.Player!.Data.Name) ?? id.ToString(),
                 I18nManager.Translate("Word.Avatar"), level.ToString()));
         }
+    }
+
+    [CommandMethod("path")]
+    public async ValueTask SetPath(CommandArg arg)
+    {
+        if (arg.Target == null)
+        {
+            await arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
+            return;
+        }
+
+        if (arg.BasicArgs.Count < 2)
+        {
+            await arg.SendMsg(I18nManager.Translate("Game.Command.Notice.InvalidArguments"));
+            return;
+        }
+
+        var avatarId = arg.GetInt(0);
+        var pathId = arg.GetInt(1);
+
+        var avatar = arg.Target.Player!.AvatarManager!.GetAvatar(avatarId);
+        if (avatar == null)
+        {
+            await arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AvatarNotFound"));
+            return;
+        }
+
+        if (!GameData.MultiplePathAvatarConfigData.ContainsKey(pathId))
+        {
+            await arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AvatarNotFound"));
+            return;
+        }
+
+        await arg.Target.Player.ChangeAvatarPathType(avatarId, (MultiPathAvatarTypeEnum)pathId);
+        await arg.Target.SendPacket(new PacketAvatarPathChangedNotify((uint)avatarId, (MultiPathAvatarType)pathId));
+        await arg.Target.SendPacket(new PacketPlayerSyncScNotify(avatar));
+
+        // arg.SendMsg(I18nManager.Translate("Game.Command.Avatar.AvatarLevelSet", avatar.Excel?.Name?.Replace("{NICKNAME}", arg.Target.Player!.Data.Name) ?? id.ToString(), I18nManager.Translate("Word.Avatar"), level.ToString()));
     }
 }

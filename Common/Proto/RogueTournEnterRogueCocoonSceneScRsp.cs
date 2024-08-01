@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CipSb2d1ZVRvdXJuRW50ZXJSb2d1ZUNvY29vblNjZW5lU2NSc3AucHJvdG8a",
             "HFJvZ3VlVG91cm5DdXJTY2VuZUluZm8ucHJvdG8idAokUm9ndWVUb3VybkVu",
-            "dGVyUm9ndWVDb2Nvb25TY2VuZVNjUnNwEg8KB3JldGNvZGUYByABKA0SOwoa",
+            "dGVyUm9ndWVDb2Nvb25TY2VuZVNjUnNwEg8KB3JldGNvZGUYCyABKA0SOwoa",
             "cm9ndWVfdG91cm5fY3VyX3NjZW5lX2luZm8YASABKAsyFy5Sb2d1ZVRvdXJu",
             "Q3VyU2NlbmVJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 7;
+    public const int RetcodeFieldNumber = 11;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -159,7 +159,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteMessage(RogueTournCurSceneInfo);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -177,7 +177,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteMessage(RogueTournCurSceneInfo);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -239,7 +239,7 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(RogueTournCurSceneInfo);
             break;
           }
-          case 56: {
+          case 88: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -265,7 +265,7 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(RogueTournCurSceneInfo);
             break;
           }
-          case 56: {
+          case 88: {
             Retcode = input.ReadUInt32();
             break;
           }

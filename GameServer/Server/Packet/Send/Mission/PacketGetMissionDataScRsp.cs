@@ -1,5 +1,4 @@
 ﻿using EggLink.DanhengServer.Data;
-using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.Proto;
@@ -17,7 +16,7 @@ public class PacketGetMissionDataScRsp : BasePacket
 
         foreach (var mission in GameData.MainMissionData.Keys)
             if (player.MissionManager!.GetMainMissionStatus(mission) == MissionPhaseEnum.Accept)
-                proto.MissionDataList.Add(new MissionData
+                proto.MainMissionList.Add(new MainMission
                 {
                     Id = (uint)mission,
                     Status = MissionStatus.MissionDoing

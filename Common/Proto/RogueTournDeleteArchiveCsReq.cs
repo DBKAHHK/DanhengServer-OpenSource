@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static RogueTournDeleteArchiveCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiJSb2d1ZVRvdXJuRGVsZXRlQXJjaGl2ZUNzUmVxLnByb3RvIjMKHFJvZ3Vl",
-            "VG91cm5EZWxldGVBcmNoaXZlQ3NSZXESEwoLQ05LTk5JSk5PTE0YDiABKA1C",
-            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "CiJSb2d1ZVRvdXJuRGVsZXRlQXJjaGl2ZUNzUmVxLnByb3RvIjEKHFJvZ3Vl",
+            "VG91cm5EZWxldGVBcmNoaXZlQ3NSZXESEQoJbWF4X3RpbWVzGAQgASgNQh6q",
+            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournDeleteArchiveCsReq), global::EggLink.DanhengServer.Proto.RogueTournDeleteArchiveCsReq.Parser, new[]{ "CNKNNIJNOLM" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournDeleteArchiveCsReq), global::EggLink.DanhengServer.Proto.RogueTournDeleteArchiveCsReq.Parser, new[]{ "MaxTimes" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournDeleteArchiveCsReq(RogueTournDeleteArchiveCsReq other) : this() {
-      cNKNNIJNOLM_ = other.cNKNNIJNOLM_;
+      maxTimes_ = other.maxTimes_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournDeleteArchiveCsReq(this);
     }
 
-    /// <summary>Field number for the "CNKNNIJNOLM" field.</summary>
-    public const int CNKNNIJNOLMFieldNumber = 14;
-    private uint cNKNNIJNOLM_;
+    /// <summary>Field number for the "max_times" field.</summary>
+    public const int MaxTimesFieldNumber = 4;
+    private uint maxTimes_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CNKNNIJNOLM {
-      get { return cNKNNIJNOLM_; }
+    public uint MaxTimes {
+      get { return maxTimes_; }
       set {
-        cNKNNIJNOLM_ = value;
+        maxTimes_ = value;
       }
     }
 
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CNKNNIJNOLM != other.CNKNNIJNOLM) return false;
+      if (MaxTimes != other.MaxTimes) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CNKNNIJNOLM != 0) hash ^= CNKNNIJNOLM.GetHashCode();
+      if (MaxTimes != 0) hash ^= MaxTimes.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CNKNNIJNOLM != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(CNKNNIJNOLM);
+      if (MaxTimes != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(MaxTimes);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CNKNNIJNOLM != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(CNKNNIJNOLM);
+      if (MaxTimes != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(MaxTimes);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -164,8 +164,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CNKNNIJNOLM != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CNKNNIJNOLM);
+      if (MaxTimes != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxTimes);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -179,8 +179,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.CNKNNIJNOLM != 0) {
-        CNKNNIJNOLM = other.CNKNNIJNOLM;
+      if (other.MaxTimes != 0) {
+        MaxTimes = other.MaxTimes;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -197,8 +197,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 112: {
-            CNKNNIJNOLM = input.ReadUInt32();
+          case 32: {
+            MaxTimes = input.ReadUInt32();
             break;
           }
         }
@@ -216,8 +216,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 112: {
-            CNKNNIJNOLM = input.ReadUInt32();
+          case 32: {
+            MaxTimes = input.ReadUInt32();
             break;
           }
         }

@@ -24,16 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static RogueCommonActionResultReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1Sb2d1ZUNvbW1vbkFjdGlvblJlc3VsdC5wcm90bxoXUm9ndWVBY3Rpb25T",
-            "b3VyY2UucHJvdG8aIVJvZ3VlQ29tbW9uQWN0aW9uUmVzdWx0RGF0YS5wcm90",
-            "byJxChdSb2d1ZUNvbW1vbkFjdGlvblJlc3VsdBIiCgZzb3VyY2UYCiABKA4y",
-            "Ei5Sb2d1ZUFjdGlvblNvdXJjZRIyCgxyb2d1ZV9hY3Rpb24YBCABKAsyHC5S",
-            "b2d1ZUNvbW1vbkFjdGlvblJlc3VsdERhdGFCHqoCG0VnZ0xpbmsuRGFuaGVu",
-            "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "Ch1Sb2d1ZUNvbW1vbkFjdGlvblJlc3VsdC5wcm90bxohUm9ndWVDb21tb25B",
+            "Y3Rpb25SZXN1bHREYXRhLnByb3RvGidSb2d1ZUNvbW1vbkFjdGlvblJlc3Vs",
+            "dFNvdXJjZVR5cGUucHJvdG8igQEKF1JvZ3VlQ29tbW9uQWN0aW9uUmVzdWx0",
+            "EjIKDHJvZ3VlX2FjdGlvbhgEIAEoCzIcLlJvZ3VlQ29tbW9uQWN0aW9uUmVz",
+            "dWx0RGF0YRIyCgZzb3VyY2UYCyABKA4yIi5Sb2d1ZUNvbW1vbkFjdGlvblJl",
+            "c3VsdFNvdXJjZVR5cGVCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueActionSourceReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonActionResultDataReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonActionResultDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonActionResultSourceTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonActionResult), global::EggLink.DanhengServer.Proto.RogueCommonActionResult.Parser, new[]{ "Source", "RogueAction" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonActionResult), global::EggLink.DanhengServer.Proto.RogueCommonActionResult.Parser, new[]{ "RogueAction", "Source" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,8 +76,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueCommonActionResult(RogueCommonActionResult other) : this() {
-      source_ = other.source_;
       rogueAction_ = other.rogueAction_ != null ? other.rogueAction_.Clone() : null;
+      source_ = other.source_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,18 +85,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueCommonActionResult Clone() {
       return new RogueCommonActionResult(this);
-    }
-
-    /// <summary>Field number for the "source" field.</summary>
-    public const int SourceFieldNumber = 10;
-    private global::EggLink.DanhengServer.Proto.RogueActionSource source_ = global::EggLink.DanhengServer.Proto.RogueActionSource.RogueCommonActionResultSourceTypeNone;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueActionSource Source {
-      get { return source_; }
-      set {
-        source_ = value;
-      }
     }
 
     /// <summary>Field number for the "rogue_action" field.</summary>
@@ -107,6 +96,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return rogueAction_; }
       set {
         rogueAction_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "source" field.</summary>
+    public const int SourceFieldNumber = 11;
+    private global::EggLink.DanhengServer.Proto.RogueCommonActionResultSourceType source_ = global::EggLink.DanhengServer.Proto.RogueCommonActionResultSourceType.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueCommonActionResultSourceType Source {
+      get { return source_; }
+      set {
+        source_ = value;
       }
     }
 
@@ -125,8 +126,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Source != other.Source) return false;
       if (!object.Equals(RogueAction, other.RogueAction)) return false;
+      if (Source != other.Source) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -134,8 +135,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Source != global::EggLink.DanhengServer.Proto.RogueActionSource.RogueCommonActionResultSourceTypeNone) hash ^= Source.GetHashCode();
       if (rogueAction_ != null) hash ^= RogueAction.GetHashCode();
+      if (Source != global::EggLink.DanhengServer.Proto.RogueCommonActionResultSourceType.None) hash ^= Source.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -158,8 +159,8 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(34);
         output.WriteMessage(RogueAction);
       }
-      if (Source != global::EggLink.DanhengServer.Proto.RogueActionSource.RogueCommonActionResultSourceTypeNone) {
-        output.WriteRawTag(80);
+      if (Source != global::EggLink.DanhengServer.Proto.RogueCommonActionResultSourceType.None) {
+        output.WriteRawTag(88);
         output.WriteEnum((int) Source);
       }
       if (_unknownFields != null) {
@@ -176,8 +177,8 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(34);
         output.WriteMessage(RogueAction);
       }
-      if (Source != global::EggLink.DanhengServer.Proto.RogueActionSource.RogueCommonActionResultSourceTypeNone) {
-        output.WriteRawTag(80);
+      if (Source != global::EggLink.DanhengServer.Proto.RogueCommonActionResultSourceType.None) {
+        output.WriteRawTag(88);
         output.WriteEnum((int) Source);
       }
       if (_unknownFields != null) {
@@ -190,11 +191,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Source != global::EggLink.DanhengServer.Proto.RogueActionSource.RogueCommonActionResultSourceTypeNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Source);
-      }
       if (rogueAction_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueAction);
+      }
+      if (Source != global::EggLink.DanhengServer.Proto.RogueCommonActionResultSourceType.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Source);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -208,14 +209,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Source != global::EggLink.DanhengServer.Proto.RogueActionSource.RogueCommonActionResultSourceTypeNone) {
-        Source = other.Source;
-      }
       if (other.rogueAction_ != null) {
         if (rogueAction_ == null) {
           RogueAction = new global::EggLink.DanhengServer.Proto.RogueCommonActionResultData();
         }
         RogueAction.MergeFrom(other.RogueAction);
+      }
+      if (other.Source != global::EggLink.DanhengServer.Proto.RogueCommonActionResultSourceType.None) {
+        Source = other.Source;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -239,8 +240,8 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(RogueAction);
             break;
           }
-          case 80: {
-            Source = (global::EggLink.DanhengServer.Proto.RogueActionSource) input.ReadEnum();
+          case 88: {
+            Source = (global::EggLink.DanhengServer.Proto.RogueCommonActionResultSourceType) input.ReadEnum();
             break;
           }
         }
@@ -265,8 +266,8 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(RogueAction);
             break;
           }
-          case 80: {
-            Source = (global::EggLink.DanhengServer.Proto.RogueActionSource) input.ReadEnum();
+          case 88: {
+            Source = (global::EggLink.DanhengServer.Proto.RogueCommonActionResultSourceType) input.ReadEnum();
             break;
           }
         }

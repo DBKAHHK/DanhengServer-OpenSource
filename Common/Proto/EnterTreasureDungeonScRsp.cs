@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch9FbnRlclRyZWFzdXJlRHVuZ2VvblNjUnNwLnByb3RvGhpUcmVhc3VyZUR1",
             "bmdlb25MZXZlbC5wcm90byJYChlFbnRlclRyZWFzdXJlRHVuZ2VvblNjUnNw",
-            "EioKC05ES0tCTktFSExBGAcgASgLMhUuVHJlYXN1cmVEdW5nZW9uTGV2ZWwS",
-            "DwoHcmV0Y29kZRgKIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "Eg8KB3JldGNvZGUYBiABKA0SKgoLQU5HTElFQktCQk0YCSABKAsyFS5UcmVh",
+            "c3VyZUR1bmdlb25MZXZlbEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TreasureDungeonLevelReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EnterTreasureDungeonScRsp), global::EggLink.DanhengServer.Proto.EnterTreasureDungeonScRsp.Parser, new[]{ "NDKKBNKEHLA", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EnterTreasureDungeonScRsp), global::EggLink.DanhengServer.Proto.EnterTreasureDungeonScRsp.Parser, new[]{ "Retcode", "ANGLIEBKBBM" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EnterTreasureDungeonScRsp(EnterTreasureDungeonScRsp other) : this() {
-      nDKKBNKEHLA_ = other.nDKKBNKEHLA_ != null ? other.nDKKBNKEHLA_.Clone() : null;
       retcode_ = other.retcode_;
+      aNGLIEBKBBM_ = other.aNGLIEBKBBM_ != null ? other.aNGLIEBKBBM_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new EnterTreasureDungeonScRsp(this);
     }
 
-    /// <summary>Field number for the "NDKKBNKEHLA" field.</summary>
-    public const int NDKKBNKEHLAFieldNumber = 7;
-    private global::EggLink.DanhengServer.Proto.TreasureDungeonLevel nDKKBNKEHLA_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.TreasureDungeonLevel NDKKBNKEHLA {
-      get { return nDKKBNKEHLA_; }
-      set {
-        nDKKBNKEHLA_ = value;
-      }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 10;
+    public const int RetcodeFieldNumber = 6;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,6 +94,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ANGLIEBKBBM" field.</summary>
+    public const int ANGLIEBKBBMFieldNumber = 9;
+    private global::EggLink.DanhengServer.Proto.TreasureDungeonLevel aNGLIEBKBBM_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.TreasureDungeonLevel ANGLIEBKBBM {
+      get { return aNGLIEBKBBM_; }
+      set {
+        aNGLIEBKBBM_ = value;
       }
     }
 
@@ -124,8 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(NDKKBNKEHLA, other.NDKKBNKEHLA)) return false;
       if (Retcode != other.Retcode) return false;
+      if (!object.Equals(ANGLIEBKBBM, other.ANGLIEBKBBM)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (nDKKBNKEHLA_ != null) hash ^= NDKKBNKEHLA.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (aNGLIEBKBBM_ != null) hash ^= ANGLIEBKBBM.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (nDKKBNKEHLA_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(NDKKBNKEHLA);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
+      }
+      if (aNGLIEBKBBM_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ANGLIEBKBBM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (nDKKBNKEHLA_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(NDKKBNKEHLA);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
+      }
+      if (aNGLIEBKBBM_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ANGLIEBKBBM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -189,11 +189,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (nDKKBNKEHLA_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NDKKBNKEHLA);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (aNGLIEBKBBM_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ANGLIEBKBBM);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -207,14 +207,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.nDKKBNKEHLA_ != null) {
-        if (nDKKBNKEHLA_ == null) {
-          NDKKBNKEHLA = new global::EggLink.DanhengServer.Proto.TreasureDungeonLevel();
-        }
-        NDKKBNKEHLA.MergeFrom(other.NDKKBNKEHLA);
-      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
+      }
+      if (other.aNGLIEBKBBM_ != null) {
+        if (aNGLIEBKBBM_ == null) {
+          ANGLIEBKBBM = new global::EggLink.DanhengServer.Proto.TreasureDungeonLevel();
+        }
+        ANGLIEBKBBM.MergeFrom(other.ANGLIEBKBBM);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58: {
-            if (nDKKBNKEHLA_ == null) {
-              NDKKBNKEHLA = new global::EggLink.DanhengServer.Proto.TreasureDungeonLevel();
-            }
-            input.ReadMessage(NDKKBNKEHLA);
+          case 48: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 80: {
-            Retcode = input.ReadUInt32();
+          case 74: {
+            if (aNGLIEBKBBM_ == null) {
+              ANGLIEBKBBM = new global::EggLink.DanhengServer.Proto.TreasureDungeonLevel();
+            }
+            input.ReadMessage(ANGLIEBKBBM);
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58: {
-            if (nDKKBNKEHLA_ == null) {
-              NDKKBNKEHLA = new global::EggLink.DanhengServer.Proto.TreasureDungeonLevel();
-            }
-            input.ReadMessage(NDKKBNKEHLA);
+          case 48: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 80: {
-            Retcode = input.ReadUInt32();
+          case 74: {
+            if (aNGLIEBKBBM_ == null) {
+              ANGLIEBKBBM = new global::EggLink.DanhengServer.Proto.TreasureDungeonLevel();
+            }
+            input.ReadMessage(ANGLIEBKBBM);
             break;
           }
         }

@@ -120,7 +120,7 @@ public class RogueMiracleInstance
 
             // send packet
             await Instance.Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(Instance.RogueVersionId,
-                ToGetResult(), RogueActionDisplayType.RogueCommonActionResultDisplayTypeSingle));
+                ToGetResult(), RogueCommonActionResultDisplayType.Single));
         }
     }
 
@@ -139,7 +139,7 @@ public class RogueMiracleInstance
         return new GameRogueMiracle
         {
             MiracleId = (uint)MiracleId,
-            MaxTimes = (uint)Durability,
+            Durability = (uint)Durability,
             CurTimes = (uint)UsedTimes
         };
     }
@@ -148,7 +148,7 @@ public class RogueMiracleInstance
     {
         return new RogueCommonActionResult
         {
-            Source = RogueActionSource.RogueCommonActionResultSourceTypeSelect,
+            Source = RogueCommonActionResultSourceType.Select,
             RogueAction = new RogueCommonActionResultData
             {
                 GetMiracleList = new RogueCommonMiracle

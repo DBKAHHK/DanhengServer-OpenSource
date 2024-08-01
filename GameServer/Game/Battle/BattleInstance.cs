@@ -17,15 +17,26 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
     public BattleInstance(PlayerInstance player, LineupInfo lineup, List<EntityMonster> monsters) : this(player, lineup,
         new List<StageConfigExcel>())
     {
-        foreach (var monster in monsters)
+        if (player.ActivityManager!.TrialActivityInstance != null &&
+            player.ActivityManager!.TrialActivityInstance.Data.CurTrialStageId != 0)
         {
-            var id = monster.GetStageId();
-            GameData.StageConfigData.TryGetValue(id, out var stage);
+            var instance = player.ActivityManager!.TrialActivityInstance;
+            GameData.StageConfigData.TryGetValue(instance.Data.CurTrialStageId, out var stage);
             if (stage != null) Stages.Add(stage);
+            StageId = Stages[0].StageID;
         }
+        else
+        {
+            foreach (var monster in monsters)
+            {
+                var id = monster.GetStageId();
+                GameData.StageConfigData.TryGetValue(id, out var stage);
+                if (stage != null) Stages.Add(stage);
+            }
 
-        EntityMonsters = monsters;
-        StageId = Stages[0].StageID;
+            EntityMonsters = monsters;
+            StageId = Stages[0].StageID;
+        }
     }
 
     public int BattleId { get; set; } = ++player.NextBattleId;
@@ -175,7 +186,7 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
         {
             BattleId = (uint)BattleId,
             WorldLevel = (uint)WorldLevel,
-            RoundsLimit = (uint)RoundLimit,
+            // RoundsLimit = (uint)RoundLimit,
             StageId = (uint)StageId,
             LogicRandomSeed = (uint)Random.Shared.Next()
         };
@@ -190,7 +201,7 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
         }
 
         foreach (var avatar in GetBattleAvatars())
-            proto.AvatarBattleList.Add(avatar.Key.ToBattleProto(Player.LineupManager!.GetCurLineup()!,
+            proto.BattleAvatarList.Add(avatar.Key.ToBattleProto(Player.LineupManager!.GetCurLineup()!,
                 Player.InventoryManager!.Data, avatar.Value));
 
         System.Threading.Tasks.Task.Run(async () =>

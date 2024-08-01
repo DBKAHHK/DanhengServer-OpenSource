@@ -35,6 +35,7 @@ public class Logger(string moduleName)
             Console.WriteLine("] " + message);
 
             var logMessage = $"[{DateTime.Now:HH:mm:ss}] [{ModuleName}] [{level}] {message}";
+            PluginEventCommon.InvokeOnConsoleLog(logMessage);
             WriteToFile(logMessage);
         }
     }

@@ -8,7 +8,7 @@ public class PacketSyncRogueFinishScNotify : BasePacket
     {
         var proto = new SyncRogueFinishScNotify
         {
-            FinishInfo = info
+            RogueFinishInfo = info
         };
 
         SetData(proto);

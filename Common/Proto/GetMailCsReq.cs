@@ -24,13 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GetMailCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJHZXRNYWlsQ3NSZXEucHJvdG8iOAoMR2V0TWFpbENzUmVxEhMKC0lNS0xH",
-            "SUlMRkJBGAQgASgNEhMKC0dHQktJTU5HRVBPGAMgASgNQh6qAhtFZ2dMaW5r",
-            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChJHZXRNYWlsQ3NSZXEucHJvdG8iTAoMR2V0TWFpbENzUmVxEicKH01VU0VV",
+            "TV9SQU5ET01fRVZFTlRfU1RBVEVfU1RBUlQYCyABKA0SEwoLREhQTkVHUERI",
+            "Rk4YByABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMailCsReq), global::EggLink.DanhengServer.Proto.GetMailCsReq.Parser, new[]{ "IMKLGIILFBA", "GGBKIMNGEPO" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMailCsReq), global::EggLink.DanhengServer.Proto.GetMailCsReq.Parser, new[]{ "MUSEUMRANDOMEVENTSTATESTART", "DHPNEGPDHFN" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetMailCsReq(GetMailCsReq other) : this() {
-      iMKLGIILFBA_ = other.iMKLGIILFBA_;
-      gGBKIMNGEPO_ = other.gGBKIMNGEPO_;
+      mUSEUMRANDOMEVENTSTATESTART_ = other.mUSEUMRANDOMEVENTSTATESTART_;
+      dHPNEGPDHFN_ = other.dHPNEGPDHFN_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,27 +84,27 @@ namespace EggLink.DanhengServer.Proto {
       return new GetMailCsReq(this);
     }
 
-    /// <summary>Field number for the "IMKLGIILFBA" field.</summary>
-    public const int IMKLGIILFBAFieldNumber = 4;
-    private uint iMKLGIILFBA_;
+    /// <summary>Field number for the "MUSEUM_RANDOM_EVENT_STATE_START" field.</summary>
+    public const int MUSEUMRANDOMEVENTSTATESTARTFieldNumber = 11;
+    private uint mUSEUMRANDOMEVENTSTATESTART_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IMKLGIILFBA {
-      get { return iMKLGIILFBA_; }
+    public uint MUSEUMRANDOMEVENTSTATESTART {
+      get { return mUSEUMRANDOMEVENTSTATESTART_; }
       set {
-        iMKLGIILFBA_ = value;
+        mUSEUMRANDOMEVENTSTATESTART_ = value;
       }
     }
 
-    /// <summary>Field number for the "GGBKIMNGEPO" field.</summary>
-    public const int GGBKIMNGEPOFieldNumber = 3;
-    private uint gGBKIMNGEPO_;
+    /// <summary>Field number for the "DHPNEGPDHFN" field.</summary>
+    public const int DHPNEGPDHFNFieldNumber = 7;
+    private uint dHPNEGPDHFN_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GGBKIMNGEPO {
-      get { return gGBKIMNGEPO_; }
+    public uint DHPNEGPDHFN {
+      get { return dHPNEGPDHFN_; }
       set {
-        gGBKIMNGEPO_ = value;
+        dHPNEGPDHFN_ = value;
       }
     }
 
@@ -122,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IMKLGIILFBA != other.IMKLGIILFBA) return false;
-      if (GGBKIMNGEPO != other.GGBKIMNGEPO) return false;
+      if (MUSEUMRANDOMEVENTSTATESTART != other.MUSEUMRANDOMEVENTSTATESTART) return false;
+      if (DHPNEGPDHFN != other.DHPNEGPDHFN) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IMKLGIILFBA != 0) hash ^= IMKLGIILFBA.GetHashCode();
-      if (GGBKIMNGEPO != 0) hash ^= GGBKIMNGEPO.GetHashCode();
+      if (MUSEUMRANDOMEVENTSTATESTART != 0) hash ^= MUSEUMRANDOMEVENTSTATESTART.GetHashCode();
+      if (DHPNEGPDHFN != 0) hash ^= DHPNEGPDHFN.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (GGBKIMNGEPO != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(GGBKIMNGEPO);
+      if (DHPNEGPDHFN != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(DHPNEGPDHFN);
       }
-      if (IMKLGIILFBA != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(IMKLGIILFBA);
+      if (MUSEUMRANDOMEVENTSTATESTART != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(MUSEUMRANDOMEVENTSTATESTART);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (GGBKIMNGEPO != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(GGBKIMNGEPO);
+      if (DHPNEGPDHFN != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(DHPNEGPDHFN);
       }
-      if (IMKLGIILFBA != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(IMKLGIILFBA);
+      if (MUSEUMRANDOMEVENTSTATESTART != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(MUSEUMRANDOMEVENTSTATESTART);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IMKLGIILFBA != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IMKLGIILFBA);
+      if (MUSEUMRANDOMEVENTSTATESTART != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MUSEUMRANDOMEVENTSTATESTART);
       }
-      if (GGBKIMNGEPO != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GGBKIMNGEPO);
+      if (DHPNEGPDHFN != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DHPNEGPDHFN);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IMKLGIILFBA != 0) {
-        IMKLGIILFBA = other.IMKLGIILFBA;
+      if (other.MUSEUMRANDOMEVENTSTATESTART != 0) {
+        MUSEUMRANDOMEVENTSTATESTART = other.MUSEUMRANDOMEVENTSTATESTART;
       }
-      if (other.GGBKIMNGEPO != 0) {
-        GGBKIMNGEPO = other.GGBKIMNGEPO;
+      if (other.DHPNEGPDHFN != 0) {
+        DHPNEGPDHFN = other.DHPNEGPDHFN;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            GGBKIMNGEPO = input.ReadUInt32();
+          case 56: {
+            DHPNEGPDHFN = input.ReadUInt32();
             break;
           }
-          case 32: {
-            IMKLGIILFBA = input.ReadUInt32();
+          case 88: {
+            MUSEUMRANDOMEVENTSTATESTART = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            GGBKIMNGEPO = input.ReadUInt32();
+          case 56: {
+            DHPNEGPDHFN = input.ReadUInt32();
             break;
           }
-          case 32: {
-            IMKLGIILFBA = input.ReadUInt32();
+          case 88: {
+            MUSEUMRANDOMEVENTSTATESTART = input.ReadUInt32();
             break;
           }
         }

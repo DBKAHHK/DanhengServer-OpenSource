@@ -1,5 +1,4 @@
 ﻿using EggLink.DanhengServer.Data;
-using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.Internationalization;
@@ -37,7 +36,7 @@ public class CommandUnlockAll : ICommand
         {
             player.Data.CurrentGender = Gender.Woman;
             player.Data.CurBasicType = 8002;
-            player.AvatarManager!.GetHero()!.HeroId = 8002;
+            player.AvatarManager!.GetHero()!.PathId = 8002;
         }
 
         await arg.SendMsg(I18nManager.Translate("Game.Command.UnlockAll.AllMissionsUnlocked"));

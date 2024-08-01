@@ -11,7 +11,8 @@ public class HandlerStartRaidCsReq : Handler
         var player = connection.Player!;
 
         await player.RaidManager!.EnterRaid((int)req.RaidId, (int)req.WorldLevel,
-            req.AvatarList.Select(x => (int)x).ToList(), req.IsSave == 1);
+            req.AvatarList.Select(x => (int)x).ToList(),
+            req.IsSaveData == 1);
 
         await connection.SendPacket(CmdIds.StartRaidScRsp);
     }

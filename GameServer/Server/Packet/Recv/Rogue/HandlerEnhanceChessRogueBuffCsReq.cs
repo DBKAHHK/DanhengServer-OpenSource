@@ -11,7 +11,7 @@ public class HandlerEnhanceChessRogueBuffCsReq : Handler
         var req = EnhanceChessRogueBuffCsReq.Parser.ParseFrom(data);
 
         await connection.Player!.ChessRogueManager!.RogueInstance!.EnhanceBuff((int)req.MazeBuffId,
-            RogueActionSource.RogueCommonActionResultSourceTypeEnhance);
+            RogueCommonActionResultSourceType.Enhance);
         await connection.SendPacket(
             new PacketEnhanceChessRogueBuffScRsp(connection.Player!.ChessRogueManager!.RogueInstance!, req.MazeBuffId));
     }

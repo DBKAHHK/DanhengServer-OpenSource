@@ -7,7 +7,7 @@ using Newtonsoft.Json.Converters;
 
 namespace EggLink.DanhengServer.Data.Excel;
 
-[ResourceEntity("AvatarConfig.json", true)]
+[ResourceEntity("AvatarConfig.json,AvatarConfigTrial.json", true)]
 public class AvatarConfigExcel : ExcelResource
 {
     [JsonIgnore] public List<AvatarSkillTreeConfigExcel> DefaultSkillTree = [];
@@ -45,7 +45,7 @@ public class AvatarConfigExcel : ExcelResource
 
     public override void Loaded()
     {
-        GameData.AvatarConfigData.Add(AvatarID, this);
+        if (!GameData.AvatarConfigData.ContainsKey(AvatarID)) GameData.AvatarConfigData.Add(AvatarID, this);
         RankUpItemId = AvatarID + 10000;
 
         var regex = new Regex(@"(?<=Avatar_)(.*?)(?=_Config)");

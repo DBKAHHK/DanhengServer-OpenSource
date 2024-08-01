@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiBVcGRhdGVTZXJ2ZXJQcmVmc0RhdGFDc1JlcS5wcm90bxoRU2VydmVyUHJl",
             "ZnMucHJvdG8iQAoaVXBkYXRlU2VydmVyUHJlZnNEYXRhQ3NSZXESIgoMc2Vy",
-            "dmVyX3ByZWZzGA4gASgLMgwuU2VydmVyUHJlZnNCHqoCG0VnZ0xpbmsuRGFu",
+            "dmVyX3ByZWZzGAQgASgLMgwuU2VydmVyUHJlZnNCHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ServerPrefsReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "server_prefs" field.</summary>
-    public const int ServerPrefsFieldNumber = 14;
+    public const int ServerPrefsFieldNumber = 4;
     private global::EggLink.DanhengServer.Proto.ServerPrefs serverPrefs_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (serverPrefs_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(34);
         output.WriteMessage(ServerPrefs);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (serverPrefs_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(34);
         output.WriteMessage(ServerPrefs);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 114: {
+          case 34: {
             if (serverPrefs_ == null) {
               ServerPrefs = new global::EggLink.DanhengServer.Proto.ServerPrefs();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 114: {
+          case 34: {
             if (serverPrefs_ == null) {
               ServerPrefs = new global::EggLink.DanhengServer.Proto.ServerPrefs();
             }

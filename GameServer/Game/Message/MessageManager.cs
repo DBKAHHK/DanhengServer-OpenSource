@@ -1,7 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Message;
-using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
@@ -47,7 +46,7 @@ public class MessageManager(PlayerInstance player) : BasePlayerManager(player)
                         Id = (uint)section.SectionId,
                         Status = section.Status
                     };
-                    sectionInfo.ToChooseItemId.AddRange(section.ToChooseItemId.Select(m => (uint)m));
+                    sectionInfo.MessageItemList.AddRange(section.ToChooseItemId.Select(m => (uint)m));
                     sectionInfo.ItemList.AddRange(section.Items.Select(m => new MessageItem
                     {
                         ItemId = (uint)m.ItemId

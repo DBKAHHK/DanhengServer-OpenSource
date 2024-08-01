@@ -1,11 +1,12 @@
 ﻿using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.Proto;
 
 namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 
 public class PacketGetArchiveDataScRsp : BasePacket
 {
-    public PacketGetArchiveDataScRsp() : base(CmdIds.GetArchiveDataScRsp)
+    public PacketGetArchiveDataScRsp(PlayerInstance player) : base(CmdIds.GetArchiveDataScRsp)
     {
         var proto = new GetArchiveDataScRsp();
 
@@ -13,7 +14,7 @@ public class PacketGetArchiveDataScRsp : BasePacket
 
         GameData.MonsterConfigData.Values.ToList().ForEach(monster =>
         {
-            info.ArchiveMonsterIdList.Add(new ArchiveMonsterId
+            info.KillMonsterList.Add(new MonsterList
             {
                 MonsterId = (uint)monster.GetId(),
                 Num = 1
@@ -22,21 +23,25 @@ public class PacketGetArchiveDataScRsp : BasePacket
 
         info.ArchiveAvatarIdList.Add(23027);
 
-        GameData.EquipmentConfigData.Values.ToList().ForEach(equipment =>
-        {
-            info.ArchiveEquipmentIdList.Add((uint)equipment.GetId());
-        });
+        foreach (var equipment in player.InventoryManager!.Data.EquipmentItems)
+            if (!info.ArchiveEquipmentIdList.Contains((uint)equipment.ItemId))
+                info.ArchiveEquipmentIdList.Add((uint)equipment.ItemId);
+        ;
 
-        GameData.RelicConfigData.Values.ToList().ForEach(relic =>
+        foreach (var item in player.InventoryManager!.Data.RelicItems)
         {
-            info.RelicList.Add(new RelicList
-            {
-                SetId = (uint)relic.ID,
-                Type = (uint)relic.Type
-            });
-        });
+            GameData.RelicConfigData.TryGetValue(item.ItemId, out var relic);
+            if (relic != null)
+                info.RelicList.Add(new RelicList
+                {
+                    SetId = (uint)relic.SetID,
+                    Type = (uint)relic.Type
+                });
+        }
 
-        proto.ArchiveInfo = info;
+        ;
+
+        proto.ArchiveData = info;
 
         SetData(proto);
     }

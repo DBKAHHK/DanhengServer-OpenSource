@@ -1,5 +1,4 @@
 ﻿using EggLink.DanhengServer.WebServer.Request;
-using EggLink.DanhengServer.WebServer.Response;
 using EggLink.DanhengServer.WebServer.Server;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;

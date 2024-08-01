@@ -24,17 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static RaidKickByServerScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5SYWlkS2lja0J5U2VydmVyU2NOb3RpZnkucHJvdG8aEExpbmV1cEluZm8u",
-            "cHJvdG8aEU5NTUdNSElMRE1PLnByb3RvGg9TY2VuZUluZm8ucHJvdG8ilgEK",
-            "GFJhaWRLaWNrQnlTZXJ2ZXJTY05vdGlmeRIcCgZyZWFzb24YBCABKA4yDC5O",
-            "TU1HTUhJTERNTxIPCgdyYWlkX2lkGAggASgNEhkKBXNjZW5lGAYgASgLMgou",
-            "U2NlbmVJbmZvEhMKC3dvcmxkX2xldmVsGA8gASgNEhsKBmxpbmV1cBgBIAEo",
-            "CzILLkxpbmV1cEluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "Ch5SYWlkS2lja0J5U2VydmVyU2NOb3RpZnkucHJvdG8aEUhESElFTkFKQktG",
+            "LnByb3RvGhBMaW5ldXBJbmZvLnByb3RvGg9TY2VuZUluZm8ucHJvdG8ilgEK",
+            "GFJhaWRLaWNrQnlTZXJ2ZXJTY05vdGlmeRIcCgZyZWFzb24YDyABKA4yDC5I",
+            "REhJRU5BSkJLRhITCgt3b3JsZF9sZXZlbBgLIAEoDRIbCgZsaW5ldXAYASAB",
+            "KAsyCy5MaW5ldXBJbmZvEg8KB3JhaWRfaWQYAyABKA0SGQoFc2NlbmUYDiAB",
+            "KAsyCi5TY2VuZUluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.NMMGMHILDMOReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HDHIENAJBKFReflection.Descriptor, global::EggLink.DanhengServer.Proto.LineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RaidKickByServerScNotify), global::EggLink.DanhengServer.Proto.RaidKickByServerScNotify.Parser, new[]{ "Reason", "RaidId", "Scene", "WorldLevel", "Lineup" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RaidKickByServerScNotify), global::EggLink.DanhengServer.Proto.RaidKickByServerScNotify.Parser, new[]{ "Reason", "WorldLevel", "Lineup", "RaidId", "Scene" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,10 +77,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RaidKickByServerScNotify(RaidKickByServerScNotify other) : this() {
       reason_ = other.reason_;
-      raidId_ = other.raidId_;
-      scene_ = other.scene_ != null ? other.scene_.Clone() : null;
       worldLevel_ = other.worldLevel_;
       lineup_ = other.lineup_ != null ? other.lineup_.Clone() : null;
+      raidId_ = other.raidId_;
+      scene_ = other.scene_ != null ? other.scene_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -91,43 +91,19 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "reason" field.</summary>
-    public const int ReasonFieldNumber = 4;
-    private global::EggLink.DanhengServer.Proto.NMMGMHILDMO reason_ = global::EggLink.DanhengServer.Proto.NMMGMHILDMO.RaidKickReasonNone;
+    public const int ReasonFieldNumber = 15;
+    private global::EggLink.DanhengServer.Proto.HDHIENAJBKF reason_ = global::EggLink.DanhengServer.Proto.HDHIENAJBKF.RaidKickReasonNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.NMMGMHILDMO Reason {
+    public global::EggLink.DanhengServer.Proto.HDHIENAJBKF Reason {
       get { return reason_; }
       set {
         reason_ = value;
       }
     }
 
-    /// <summary>Field number for the "raid_id" field.</summary>
-    public const int RaidIdFieldNumber = 8;
-    private uint raidId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint RaidId {
-      get { return raidId_; }
-      set {
-        raidId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "scene" field.</summary>
-    public const int SceneFieldNumber = 6;
-    private global::EggLink.DanhengServer.Proto.SceneInfo scene_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.SceneInfo Scene {
-      get { return scene_; }
-      set {
-        scene_ = value;
-      }
-    }
-
     /// <summary>Field number for the "world_level" field.</summary>
-    public const int WorldLevelFieldNumber = 15;
+    public const int WorldLevelFieldNumber = 11;
     private uint worldLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -150,6 +126,30 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "raid_id" field.</summary>
+    public const int RaidIdFieldNumber = 3;
+    private uint raidId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RaidId {
+      get { return raidId_; }
+      set {
+        raidId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "scene" field.</summary>
+    public const int SceneFieldNumber = 14;
+    private global::EggLink.DanhengServer.Proto.SceneInfo scene_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.SceneInfo Scene {
+      get { return scene_; }
+      set {
+        scene_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -166,10 +166,10 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Reason != other.Reason) return false;
-      if (RaidId != other.RaidId) return false;
-      if (!object.Equals(Scene, other.Scene)) return false;
       if (WorldLevel != other.WorldLevel) return false;
       if (!object.Equals(Lineup, other.Lineup)) return false;
+      if (RaidId != other.RaidId) return false;
+      if (!object.Equals(Scene, other.Scene)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -177,11 +177,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Reason != global::EggLink.DanhengServer.Proto.NMMGMHILDMO.RaidKickReasonNone) hash ^= Reason.GetHashCode();
-      if (RaidId != 0) hash ^= RaidId.GetHashCode();
-      if (scene_ != null) hash ^= Scene.GetHashCode();
+      if (Reason != global::EggLink.DanhengServer.Proto.HDHIENAJBKF.RaidKickReasonNone) hash ^= Reason.GetHashCode();
       if (WorldLevel != 0) hash ^= WorldLevel.GetHashCode();
       if (lineup_ != null) hash ^= Lineup.GetHashCode();
+      if (RaidId != 0) hash ^= RaidId.GetHashCode();
+      if (scene_ != null) hash ^= Scene.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -204,21 +204,21 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(10);
         output.WriteMessage(Lineup);
       }
-      if (Reason != global::EggLink.DanhengServer.Proto.NMMGMHILDMO.RaidKickReasonNone) {
-        output.WriteRawTag(32);
-        output.WriteEnum((int) Reason);
-      }
-      if (scene_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(Scene);
-      }
       if (RaidId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(24);
         output.WriteUInt32(RaidId);
       }
       if (WorldLevel != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(88);
         output.WriteUInt32(WorldLevel);
+      }
+      if (scene_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(Scene);
+      }
+      if (Reason != global::EggLink.DanhengServer.Proto.HDHIENAJBKF.RaidKickReasonNone) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) Reason);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -234,21 +234,21 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(10);
         output.WriteMessage(Lineup);
       }
-      if (Reason != global::EggLink.DanhengServer.Proto.NMMGMHILDMO.RaidKickReasonNone) {
-        output.WriteRawTag(32);
-        output.WriteEnum((int) Reason);
-      }
-      if (scene_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(Scene);
-      }
       if (RaidId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(24);
         output.WriteUInt32(RaidId);
       }
       if (WorldLevel != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(88);
         output.WriteUInt32(WorldLevel);
+      }
+      if (scene_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(Scene);
+      }
+      if (Reason != global::EggLink.DanhengServer.Proto.HDHIENAJBKF.RaidKickReasonNone) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) Reason);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -260,20 +260,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Reason != global::EggLink.DanhengServer.Proto.NMMGMHILDMO.RaidKickReasonNone) {
+      if (Reason != global::EggLink.DanhengServer.Proto.HDHIENAJBKF.RaidKickReasonNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Reason);
-      }
-      if (RaidId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RaidId);
-      }
-      if (scene_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Scene);
       }
       if (WorldLevel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorldLevel);
       }
       if (lineup_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Lineup);
+      }
+      if (RaidId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RaidId);
+      }
+      if (scene_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Scene);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -287,17 +287,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Reason != global::EggLink.DanhengServer.Proto.NMMGMHILDMO.RaidKickReasonNone) {
+      if (other.Reason != global::EggLink.DanhengServer.Proto.HDHIENAJBKF.RaidKickReasonNone) {
         Reason = other.Reason;
-      }
-      if (other.RaidId != 0) {
-        RaidId = other.RaidId;
-      }
-      if (other.scene_ != null) {
-        if (scene_ == null) {
-          Scene = new global::EggLink.DanhengServer.Proto.SceneInfo();
-        }
-        Scene.MergeFrom(other.Scene);
       }
       if (other.WorldLevel != 0) {
         WorldLevel = other.WorldLevel;
@@ -307,6 +298,15 @@ namespace EggLink.DanhengServer.Proto {
           Lineup = new global::EggLink.DanhengServer.Proto.LineupInfo();
         }
         Lineup.MergeFrom(other.Lineup);
+      }
+      if (other.RaidId != 0) {
+        RaidId = other.RaidId;
+      }
+      if (other.scene_ != null) {
+        if (scene_ == null) {
+          Scene = new global::EggLink.DanhengServer.Proto.SceneInfo();
+        }
+        Scene.MergeFrom(other.Scene);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -330,23 +330,23 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(Lineup);
             break;
           }
-          case 32: {
-            Reason = (global::EggLink.DanhengServer.Proto.NMMGMHILDMO) input.ReadEnum();
+          case 24: {
+            RaidId = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 88: {
+            WorldLevel = input.ReadUInt32();
+            break;
+          }
+          case 114: {
             if (scene_ == null) {
               Scene = new global::EggLink.DanhengServer.Proto.SceneInfo();
             }
             input.ReadMessage(Scene);
             break;
           }
-          case 64: {
-            RaidId = input.ReadUInt32();
-            break;
-          }
           case 120: {
-            WorldLevel = input.ReadUInt32();
+            Reason = (global::EggLink.DanhengServer.Proto.HDHIENAJBKF) input.ReadEnum();
             break;
           }
         }
@@ -371,23 +371,23 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(Lineup);
             break;
           }
-          case 32: {
-            Reason = (global::EggLink.DanhengServer.Proto.NMMGMHILDMO) input.ReadEnum();
+          case 24: {
+            RaidId = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 88: {
+            WorldLevel = input.ReadUInt32();
+            break;
+          }
+          case 114: {
             if (scene_ == null) {
               Scene = new global::EggLink.DanhengServer.Proto.SceneInfo();
             }
             input.ReadMessage(Scene);
             break;
           }
-          case 64: {
-            RaidId = input.ReadUInt32();
-            break;
-          }
           case 120: {
-            WorldLevel = input.ReadUInt32();
+            Reason = (global::EggLink.DanhengServer.Proto.HDHIENAJBKF) input.ReadEnum();
             break;
           }
         }

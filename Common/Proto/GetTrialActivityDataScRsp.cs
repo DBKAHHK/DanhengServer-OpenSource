@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9HZXRUcmlhbEFjdGl2aXR5RGF0YVNjUnNwLnByb3RvGhdUcmlhbEFjdGl2",
-            "aXR5SW5mby5wcm90byJyChlHZXRUcmlhbEFjdGl2aXR5RGF0YVNjUnNwEg8K",
-            "B3JldGNvZGUYAiABKA0SEwoLQk9LRUVPRkxITVAYCSABKA0SLwoTdHJpYWxf",
-            "YWN0aXZpdHlfbGlzdBgIIAMoCzISLlRyaWFsQWN0aXZpdHlJbmZvQh6qAhtF",
-            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "aXR5SW5mby5wcm90byJvChlHZXRUcmlhbEFjdGl2aXR5RGF0YVNjUnNwEg8K",
+            "B3JldGNvZGUYByABKA0SLwoTdHJpYWxfYWN0aXZpdHlfbGlzdBgIIAMoCzIS",
+            "LlRyaWFsQWN0aXZpdHlJbmZvEhAKCHN0YWdlX2lkGA4gASgNQh6qAhtFZ2dM",
+            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrialActivityInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetTrialActivityDataScRsp), global::EggLink.DanhengServer.Proto.GetTrialActivityDataScRsp.Parser, new[]{ "Retcode", "BOKEEOFLHMP", "TrialActivityList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetTrialActivityDataScRsp), global::EggLink.DanhengServer.Proto.GetTrialActivityDataScRsp.Parser, new[]{ "Retcode", "TrialActivityList", "StageId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,8 +75,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetTrialActivityDataScRsp(GetTrialActivityDataScRsp other) : this() {
       retcode_ = other.retcode_;
-      bOKEEOFLHMP_ = other.bOKEEOFLHMP_;
       trialActivityList_ = other.trialActivityList_.Clone();
+      stageId_ = other.stageId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 2;
+    public const int RetcodeFieldNumber = 7;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,18 +95,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "BOKEEOFLHMP" field.</summary>
-    public const int BOKEEOFLHMPFieldNumber = 9;
-    private uint bOKEEOFLHMP_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BOKEEOFLHMP {
-      get { return bOKEEOFLHMP_; }
-      set {
-        bOKEEOFLHMP_ = value;
       }
     }
 
@@ -119,6 +107,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrialActivityInfo> TrialActivityList {
       get { return trialActivityList_; }
+    }
+
+    /// <summary>Field number for the "stage_id" field.</summary>
+    public const int StageIdFieldNumber = 14;
+    private uint stageId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint StageId {
+      get { return stageId_; }
+      set {
+        stageId_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -137,8 +137,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Retcode != other.Retcode) return false;
-      if (BOKEEOFLHMP != other.BOKEEOFLHMP) return false;
       if(!trialActivityList_.Equals(other.trialActivityList_)) return false;
+      if (StageId != other.StageId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,8 +147,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (BOKEEOFLHMP != 0) hash ^= BOKEEOFLHMP.GetHashCode();
       hash ^= trialActivityList_.GetHashCode();
+      if (StageId != 0) hash ^= StageId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,13 +168,13 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
       trialActivityList_.WriteTo(output, _repeated_trialActivityList_codec);
-      if (BOKEEOFLHMP != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(BOKEEOFLHMP);
+      if (StageId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(StageId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -187,13 +187,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
       trialActivityList_.WriteTo(ref output, _repeated_trialActivityList_codec);
-      if (BOKEEOFLHMP != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(BOKEEOFLHMP);
+      if (StageId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(StageId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -208,10 +208,10 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (BOKEEOFLHMP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BOKEEOFLHMP);
-      }
       size += trialActivityList_.CalculateSize(_repeated_trialActivityList_codec);
+      if (StageId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(StageId);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -227,10 +227,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.BOKEEOFLHMP != 0) {
-        BOKEEOFLHMP = other.BOKEEOFLHMP;
-      }
       trialActivityList_.Add(other.trialActivityList_);
+      if (other.StageId != 0) {
+        StageId = other.StageId;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -246,7 +246,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 56: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -254,8 +254,8 @@ namespace EggLink.DanhengServer.Proto {
             trialActivityList_.AddEntriesFrom(input, _repeated_trialActivityList_codec);
             break;
           }
-          case 72: {
-            BOKEEOFLHMP = input.ReadUInt32();
+          case 112: {
+            StageId = input.ReadUInt32();
             break;
           }
         }
@@ -273,7 +273,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 56: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -281,8 +281,8 @@ namespace EggLink.DanhengServer.Proto {
             trialActivityList_.AddEntriesFrom(ref input, _repeated_trialActivityList_codec);
             break;
           }
-          case 72: {
-            BOKEEOFLHMP = input.ReadUInt32();
+          case 112: {
+            StageId = input.ReadUInt32();
             break;
           }
         }

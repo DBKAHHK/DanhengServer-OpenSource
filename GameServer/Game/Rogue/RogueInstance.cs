@@ -250,13 +250,13 @@ public class RogueInstance : BaseRogueInstance
             RogueAeonInfo = ToAeonInfo(),
             RogueLineupInfo = ToLineupInfo(),
             RogueBuffInfo = ToBuffInfo(),
-            RogueVirtualItem = ToVirtualItemInfo(),
-            MapInfo = ToMapInfo(),
+            VirtualItemInfo = ToVirtualItemInfo(),
+            RoomMap = ToMapInfo(),
             ModuleInfo = new RogueModuleInfo
             {
                 ModuleIdList = { 1, 2, 3, 4, 5 }
             },
-            IsWin = IsWin
+            IsExploreWin = IsWin
         };
 
         if (RogueActions.Count > 0)
@@ -365,7 +365,7 @@ public class RogueInstance : BaseRogueInstance
             //FinishedRoomCount = (uint)CurReachedRoom,
             //ReachedRoomCount = (uint)CurReachedRoom,
             IsWin = IsWin,
-            Record = new RogueRecordInfo
+            RecordInfo = new RogueRecordInfo
             {
                 AvatarList =
                 {

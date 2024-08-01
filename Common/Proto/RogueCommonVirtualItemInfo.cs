@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBSb2d1ZUNvbW1vblZpcnR1YWxJdGVtSW5mby5wcm90byJPChpSb2d1ZUNv",
-            "bW1vblZpcnR1YWxJdGVtSW5mbxIXCg92aXJ0dWFsX2l0ZW1faWQYBCABKA0S",
-            "GAoQdmlydHVhbF9pdGVtX251bRgGIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "bW1vblZpcnR1YWxJdGVtSW5mbxIXCg92aXJ0dWFsX2l0ZW1faWQYAyABKA0S",
+            "GAoQdmlydHVhbF9pdGVtX251bRgLIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,8 +85,11 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "virtual_item_id" field.</summary>
-    public const int VirtualItemIdFieldNumber = 4;
+    public const int VirtualItemIdFieldNumber = 3;
     private uint virtualItemId_;
+    /// <summary>
+    /// 11
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint VirtualItemId {
@@ -97,8 +100,11 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "virtual_item_num" field.</summary>
-    public const int VirtualItemNumFieldNumber = 6;
+    public const int VirtualItemNumFieldNumber = 11;
     private uint virtualItemNum_;
+    /// <summary>
+    /// 3
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint VirtualItemNum {
@@ -153,11 +159,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (VirtualItemId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteUInt32(VirtualItemId);
       }
       if (VirtualItemNum != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(88);
         output.WriteUInt32(VirtualItemNum);
       }
       if (_unknownFields != null) {
@@ -171,11 +177,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (VirtualItemId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteUInt32(VirtualItemId);
       }
       if (VirtualItemNum != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(88);
         output.WriteUInt32(VirtualItemNum);
       }
       if (_unknownFields != null) {
@@ -227,11 +233,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 24: {
             VirtualItemId = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 88: {
             VirtualItemNum = input.ReadUInt32();
             break;
           }
@@ -250,11 +256,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 24: {
             VirtualItemId = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 88: {
             VirtualItemNum = input.ReadUInt32();
             break;
           }

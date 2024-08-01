@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChVGcmllbmRBcHBseUluZm8ucHJvdG8aFlBsYXllclNpbXBsZUluZm8ucHJv",
-            "dG8iTQoPRnJpZW5kQXBwbHlJbmZvEhIKCmFwcGx5X3RpbWUYCSABKAMSJgoL",
-            "cGxheWVyX2luZm8YDCABKAsyES5QbGF5ZXJTaW1wbGVJbmZvQh6qAhtFZ2dM",
+            "dG8iTQoPRnJpZW5kQXBwbHlJbmZvEiYKC3BsYXllcl9pbmZvGAkgASgLMhEu",
+            "UGxheWVyU2ltcGxlSW5mbxISCgphcHBseV90aW1lGAEgASgDQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlayerSimpleInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FriendApplyInfo), global::EggLink.DanhengServer.Proto.FriendApplyInfo.Parser, new[]{ "ApplyTime", "PlayerInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FriendApplyInfo), global::EggLink.DanhengServer.Proto.FriendApplyInfo.Parser, new[]{ "PlayerInfo", "ApplyTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FriendApplyInfo(FriendApplyInfo other) : this() {
-      applyTime_ = other.applyTime_;
       playerInfo_ = other.playerInfo_ != null ? other.playerInfo_.Clone() : null;
+      applyTime_ = other.applyTime_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new FriendApplyInfo(this);
     }
 
-    /// <summary>Field number for the "apply_time" field.</summary>
-    public const int ApplyTimeFieldNumber = 9;
-    private long applyTime_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long ApplyTime {
-      get { return applyTime_; }
-      set {
-        applyTime_ = value;
-      }
-    }
-
     /// <summary>Field number for the "player_info" field.</summary>
-    public const int PlayerInfoFieldNumber = 12;
+    public const int PlayerInfoFieldNumber = 9;
     private global::EggLink.DanhengServer.Proto.PlayerSimpleInfo playerInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return playerInfo_; }
       set {
         playerInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "apply_time" field.</summary>
+    public const int ApplyTimeFieldNumber = 1;
+    private long applyTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long ApplyTime {
+      get { return applyTime_; }
+      set {
+        applyTime_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ApplyTime != other.ApplyTime) return false;
       if (!object.Equals(PlayerInfo, other.PlayerInfo)) return false;
+      if (ApplyTime != other.ApplyTime) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ApplyTime != 0L) hash ^= ApplyTime.GetHashCode();
       if (playerInfo_ != null) hash ^= PlayerInfo.GetHashCode();
+      if (ApplyTime != 0L) hash ^= ApplyTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (ApplyTime != 0L) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(8);
         output.WriteInt64(ApplyTime);
       }
       if (playerInfo_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(74);
         output.WriteMessage(PlayerInfo);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ApplyTime != 0L) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(8);
         output.WriteInt64(ApplyTime);
       }
       if (playerInfo_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(74);
         output.WriteMessage(PlayerInfo);
       }
       if (_unknownFields != null) {
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ApplyTime != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ApplyTime);
-      }
       if (playerInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PlayerInfo);
+      }
+      if (ApplyTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ApplyTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,14 +206,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ApplyTime != 0L) {
-        ApplyTime = other.ApplyTime;
-      }
       if (other.playerInfo_ != null) {
         if (playerInfo_ == null) {
           PlayerInfo = new global::EggLink.DanhengServer.Proto.PlayerSimpleInfo();
         }
         PlayerInfo.MergeFrom(other.PlayerInfo);
+      }
+      if (other.ApplyTime != 0L) {
+        ApplyTime = other.ApplyTime;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -230,11 +230,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
+          case 8: {
             ApplyTime = input.ReadInt64();
             break;
           }
-          case 98: {
+          case 74: {
             if (playerInfo_ == null) {
               PlayerInfo = new global::EggLink.DanhengServer.Proto.PlayerSimpleInfo();
             }
@@ -256,11 +256,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
+          case 8: {
             ApplyTime = input.ReadInt64();
             break;
           }
-          case 98: {
+          case 74: {
             if (playerInfo_ == null) {
               PlayerInfo = new global::EggLink.DanhengServer.Proto.PlayerSimpleInfo();
             }

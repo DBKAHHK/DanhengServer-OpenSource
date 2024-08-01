@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZTZXROaWNrbmFtZUNzUmVxLnByb3RvIjcKEFNldE5pY2tuYW1lQ3NSZXES",
-            "EAoIbmlja25hbWUYDCABKAkSEQoJaXNfbW9kaWZ5GAIgASgIQh6qAhtFZ2dM",
+            "EAoIbmlja25hbWUYDyABKAkSEQoJaXNfbW9kaWZ5GAwgASgIQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "nickname" field.</summary>
-    public const int NicknameFieldNumber = 12;
+    public const int NicknameFieldNumber = 15;
     private string nickname_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_modify" field.</summary>
-    public const int IsModifyFieldNumber = 2;
+    public const int IsModifyFieldNumber = 12;
     private bool isModify_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (IsModify != false) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(96);
         output.WriteBool(IsModify);
       }
       if (Nickname.Length != 0) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(122);
         output.WriteString(Nickname);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IsModify != false) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(96);
         output.WriteBool(IsModify);
       }
       if (Nickname.Length != 0) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(122);
         output.WriteString(Nickname);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 96: {
             IsModify = input.ReadBool();
             break;
           }
-          case 98: {
+          case 122: {
             Nickname = input.ReadString();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 96: {
             IsModify = input.ReadBool();
             break;
           }
-          case 98: {
+          case 122: {
             Nickname = input.ReadString();
             break;
           }

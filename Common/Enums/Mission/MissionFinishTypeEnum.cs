@@ -494,5 +494,21 @@ public enum MissionFinishTypeEnum
     PlayerReturnTakeBPRewardCnt = 230102,
     PlayerReturnPlayTrialCnt = 230103,
     PlayerReturnPlayRogueCnt = 230104,
-    PlayerReturnFinishCocoonCnt = 230105
+    PlayerReturnFinishCocoonCnt = 230105,
+    BattleWinWithCustomValue = 240000,
+    TrackPhotoSettleStageCnt = 240001,
+    TrackPhotoStageStarCnt = 240002,
+    SummonActivityStarCnt = 240003,
+    SwordTrainingFinishNewStoryLine = 240004,
+    SwordTrainingDoAction = 240005,
+    SwordTrainingStatusValue = 240006,
+    SwordTrainingCombatPower = 240007,
+    SwordTrainingLearnSkill = 240008,
+    SwordTrainingLearnDifferentSkill = 240009,
+    SwordTrainingFinishNewEnding = 240010,
+    BattleCustomValueRecord = 240011,
+    BuyGoodsFromShopList = 240012,
+    SwordTrainingActionTurnStatusChange = 240013,
+    SwordTrainingMoodValue = 240014,
+    SwordTrainingTurnActionsIn = 240015
 }

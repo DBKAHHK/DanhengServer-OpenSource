@@ -29,7 +29,20 @@ public class AvatarManager : BasePlayerManager
         GameData.AvatarConfigData.TryGetValue(avatarId, out var avatarExcel);
         if (avatarExcel == null) return null;
 
-        if (AvatarData.Avatars.Find(x => x.AvatarId == avatarId) != null) return null;
+        GameData.MultiplePathAvatarConfigData.TryGetValue(avatarId, out var multiPathAvatar);
+        if (multiPathAvatar != null && multiPathAvatar.BaseAvatarID != avatarId)
+        {
+            // Is path
+            foreach (var avatarData in AvatarData.Avatars)
+                if (avatarData.AvatarId == multiPathAvatar.BaseAvatarID)
+                {
+                    // Add path for the character
+                    avatarData.PathInfoes.Add(avatarId, new PathInfo(avatarId));
+                    break;
+                }
+
+            return null;
+        }
 
         var avatar = new AvatarInfo(avatarExcel)
         {
@@ -43,7 +56,7 @@ public class AvatarManager : BasePlayerManager
         if (avatarId >= 8001)
         {
             if (GetHero() != null) return null; // Only one hero
-            avatar.HeroId = avatarId;
+            avatar.PathId = avatarId;
         }
 
         avatar.PlayerData = Player.Data;
@@ -57,14 +70,16 @@ public class AvatarManager : BasePlayerManager
         return avatarExcel;
     }
 
-    public AvatarInfo? GetAvatar(int baseAvatarId)
+    public AvatarInfo? GetAvatar(int avatarId)
     {
-        if (baseAvatarId > 8000) baseAvatarId = 8001;
-        return AvatarData.Avatars.Find(avatar => avatar.AvatarId == baseAvatarId);
+        if (avatarId > 8000) avatarId = 8001;
+        if (GameData.MultiplePathAvatarConfigData.ContainsKey(avatarId))
+            avatarId = GameData.MultiplePathAvatarConfigData[avatarId].BaseAvatarID;
+        return AvatarData.Avatars.Find(avatar => avatar.AvatarId == avatarId);
     }
 
     public AvatarInfo? GetHero()
     {
-        return AvatarData.Avatars.Find(avatar => avatar.HeroId > 0);
+        return AvatarData.Avatars.Find(avatar => avatar.AvatarId == 8001);
     }
 }

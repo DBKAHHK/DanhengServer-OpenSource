@@ -13,7 +13,7 @@ public class HandlerEnhanceRogueBuffCsReq : Handler
         var rogue = connection.Player!.RogueManager?.GetRogueInstance();
         if (rogue == null) return;
 
-        await rogue.EnhanceBuff((int)req.MazeBuffId, RogueActionSource.RogueCommonActionResultSourceTypeEnhance);
+        await rogue.EnhanceBuff((int)req.MazeBuffId, RogueCommonActionResultSourceType.Enhance);
 
         await connection.SendPacket(new PacketEnhanceRogueBuffScRsp(req.MazeBuffId));
     }

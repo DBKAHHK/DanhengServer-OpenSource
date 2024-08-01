@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.GameServer.Game.Player;
+﻿using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.Proto;
 
 namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Avatar;
@@ -14,10 +15,19 @@ public class PacketGetAvatarDataScRsp : BasePacket
 
         player.AvatarManager?.AvatarData?.Avatars?.ForEach(avatar =>
         {
-            if (avatar.GetBaseAvatarId() != 8001)
+            GameData.MultiplePathAvatarConfigData.TryGetValue(avatar.AvatarId, out var multiPathAvatar);
+
+            if (multiPathAvatar == null)
+            {
+                // Normal avatar
                 proto.AvatarList.Add(avatar.ToProto());
+            }
+            else
+            {
+                // Multiple path avatar
+                if (avatar.AvatarId == multiPathAvatar.BaseAvatarID) proto.AvatarList.Add(avatar.ToProto());
+            }
         });
-        proto.AvatarList.Add(player.AvatarManager!.GetHero()!.ToProto());
 
         SetData(proto);
     }

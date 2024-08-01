@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpQbGF5ZXJIZWFydEJlYXRDc1JlcS5wcm90bxoWQ2xpZW50VXBsb2FkRGF0",
-            "YS5wcm90byJrChRQbGF5ZXJIZWFydEJlYXRDc1JlcRImCgt1cGxvYWRfZGF0",
-            "YRgIIAEoCzIRLkNsaWVudFVwbG9hZERhdGESEwoLTlBBTU5OQklBQkIYBCAB",
-            "KA0SFgoOY2xpZW50X3RpbWVfbXMYCyABKARCHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "YS5wcm90byJrChRQbGF5ZXJIZWFydEJlYXRDc1JlcRIWCg5jbGllbnRfdGlt",
+            "ZV9tcxgKIAEoBBITCgtMTE1LR1BBSVBLRxgOIAEoDRImCgtCS0tNS1BPSlBJ",
+            "SBgEIAEoCzIRLkNsaWVudFVwbG9hZERhdGFCHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ClientUploadDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerHeartBeatCsReq), global::EggLink.DanhengServer.Proto.PlayerHeartBeatCsReq.Parser, new[]{ "UploadData", "NPAMNNBIABB", "ClientTimeMs" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerHeartBeatCsReq), global::EggLink.DanhengServer.Proto.PlayerHeartBeatCsReq.Parser, new[]{ "ClientTimeMs", "LLMKGPAIPKG", "BKKMKPOJPIH" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PlayerHeartBeatCsReq(PlayerHeartBeatCsReq other) : this() {
-      uploadData_ = other.uploadData_ != null ? other.uploadData_.Clone() : null;
-      nPAMNNBIABB_ = other.nPAMNNBIABB_;
       clientTimeMs_ = other.clientTimeMs_;
+      lLMKGPAIPKG_ = other.lLMKGPAIPKG_;
+      bKKMKPOJPIH_ = other.bKKMKPOJPIH_ != null ? other.bKKMKPOJPIH_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,32 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new PlayerHeartBeatCsReq(this);
     }
 
-    /// <summary>Field number for the "upload_data" field.</summary>
-    public const int UploadDataFieldNumber = 8;
-    private global::EggLink.DanhengServer.Proto.ClientUploadData uploadData_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ClientUploadData UploadData {
-      get { return uploadData_; }
-      set {
-        uploadData_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "NPAMNNBIABB" field.</summary>
-    public const int NPAMNNBIABBFieldNumber = 4;
-    private uint nPAMNNBIABB_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NPAMNNBIABB {
-      get { return nPAMNNBIABB_; }
-      set {
-        nPAMNNBIABB_ = value;
-      }
-    }
-
     /// <summary>Field number for the "client_time_ms" field.</summary>
-    public const int ClientTimeMsFieldNumber = 11;
+    public const int ClientTimeMsFieldNumber = 10;
     private ulong clientTimeMs_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -119,6 +95,30 @@ namespace EggLink.DanhengServer.Proto {
       get { return clientTimeMs_; }
       set {
         clientTimeMs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "LLMKGPAIPKG" field.</summary>
+    public const int LLMKGPAIPKGFieldNumber = 14;
+    private uint lLMKGPAIPKG_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint LLMKGPAIPKG {
+      get { return lLMKGPAIPKG_; }
+      set {
+        lLMKGPAIPKG_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "BKKMKPOJPIH" field.</summary>
+    public const int BKKMKPOJPIHFieldNumber = 4;
+    private global::EggLink.DanhengServer.Proto.ClientUploadData bKKMKPOJPIH_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ClientUploadData BKKMKPOJPIH {
+      get { return bKKMKPOJPIH_; }
+      set {
+        bKKMKPOJPIH_ = value;
       }
     }
 
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(UploadData, other.UploadData)) return false;
-      if (NPAMNNBIABB != other.NPAMNNBIABB) return false;
       if (ClientTimeMs != other.ClientTimeMs) return false;
+      if (LLMKGPAIPKG != other.LLMKGPAIPKG) return false;
+      if (!object.Equals(BKKMKPOJPIH, other.BKKMKPOJPIH)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,9 +147,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (uploadData_ != null) hash ^= UploadData.GetHashCode();
-      if (NPAMNNBIABB != 0) hash ^= NPAMNNBIABB.GetHashCode();
       if (ClientTimeMs != 0UL) hash ^= ClientTimeMs.GetHashCode();
+      if (LLMKGPAIPKG != 0) hash ^= LLMKGPAIPKG.GetHashCode();
+      if (bKKMKPOJPIH_ != null) hash ^= BKKMKPOJPIH.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,17 +168,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (NPAMNNBIABB != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(NPAMNNBIABB);
-      }
-      if (uploadData_ != null) {
-        output.WriteRawTag(66);
-        output.WriteMessage(UploadData);
+      if (bKKMKPOJPIH_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(BKKMKPOJPIH);
       }
       if (ClientTimeMs != 0UL) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(80);
         output.WriteUInt64(ClientTimeMs);
+      }
+      if (LLMKGPAIPKG != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(LLMKGPAIPKG);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,17 +190,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (NPAMNNBIABB != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(NPAMNNBIABB);
-      }
-      if (uploadData_ != null) {
-        output.WriteRawTag(66);
-        output.WriteMessage(UploadData);
+      if (bKKMKPOJPIH_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(BKKMKPOJPIH);
       }
       if (ClientTimeMs != 0UL) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(80);
         output.WriteUInt64(ClientTimeMs);
+      }
+      if (LLMKGPAIPKG != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(LLMKGPAIPKG);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -212,14 +212,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (uploadData_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UploadData);
-      }
-      if (NPAMNNBIABB != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NPAMNNBIABB);
-      }
       if (ClientTimeMs != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(ClientTimeMs);
+      }
+      if (LLMKGPAIPKG != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LLMKGPAIPKG);
+      }
+      if (bKKMKPOJPIH_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BKKMKPOJPIH);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -233,17 +233,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.uploadData_ != null) {
-        if (uploadData_ == null) {
-          UploadData = new global::EggLink.DanhengServer.Proto.ClientUploadData();
-        }
-        UploadData.MergeFrom(other.UploadData);
-      }
-      if (other.NPAMNNBIABB != 0) {
-        NPAMNNBIABB = other.NPAMNNBIABB;
-      }
       if (other.ClientTimeMs != 0UL) {
         ClientTimeMs = other.ClientTimeMs;
+      }
+      if (other.LLMKGPAIPKG != 0) {
+        LLMKGPAIPKG = other.LLMKGPAIPKG;
+      }
+      if (other.bKKMKPOJPIH_ != null) {
+        if (bKKMKPOJPIH_ == null) {
+          BKKMKPOJPIH = new global::EggLink.DanhengServer.Proto.ClientUploadData();
+        }
+        BKKMKPOJPIH.MergeFrom(other.BKKMKPOJPIH);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -260,19 +260,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            NPAMNNBIABB = input.ReadUInt32();
-            break;
-          }
-          case 66: {
-            if (uploadData_ == null) {
-              UploadData = new global::EggLink.DanhengServer.Proto.ClientUploadData();
+          case 34: {
+            if (bKKMKPOJPIH_ == null) {
+              BKKMKPOJPIH = new global::EggLink.DanhengServer.Proto.ClientUploadData();
             }
-            input.ReadMessage(UploadData);
+            input.ReadMessage(BKKMKPOJPIH);
             break;
           }
-          case 88: {
+          case 80: {
             ClientTimeMs = input.ReadUInt64();
+            break;
+          }
+          case 112: {
+            LLMKGPAIPKG = input.ReadUInt32();
             break;
           }
         }
@@ -290,19 +290,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            NPAMNNBIABB = input.ReadUInt32();
-            break;
-          }
-          case 66: {
-            if (uploadData_ == null) {
-              UploadData = new global::EggLink.DanhengServer.Proto.ClientUploadData();
+          case 34: {
+            if (bKKMKPOJPIH_ == null) {
+              BKKMKPOJPIH = new global::EggLink.DanhengServer.Proto.ClientUploadData();
             }
-            input.ReadMessage(UploadData);
+            input.ReadMessage(BKKMKPOJPIH);
             break;
           }
-          case 88: {
+          case 80: {
             ClientTimeMs = input.ReadUInt64();
+            break;
+          }
+          case 112: {
+            LLMKGPAIPKG = input.ReadUInt32();
             break;
           }
         }

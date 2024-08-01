@@ -14,7 +14,7 @@ public class PacketServerAnnounceNotify : BasePacket
             BeginTime = Extensions.GetUnixSec(),
             EndTime = Extensions.GetUnixSec() + 3600,
             ConfigId = 1,
-            CHJPFPLHJBJ = ConfigManager.Config.ServerOption.ServerAnnounce.AnnounceContent
+            ALJACEDDGHA = ConfigManager.Config.ServerOption.ServerAnnounce.AnnounceContent
         });
 
         if (ConfigManager.Config.ServerOption.ServerAnnounce.EnableAnnounce) SetData(proto);

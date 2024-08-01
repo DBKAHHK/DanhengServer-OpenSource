@@ -26,14 +26,14 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CitSb2d1ZVRvdXJuR2V0UGVybWFuZW50VGFsZW50SW5mb1NjUnNwLnByb3Rv",
             "GhxJbnNwaXJhdGlvbkNpcmN1aXRJbmZvLnByb3RvIm4KJVJvZ3VlVG91cm5H",
-            "ZXRQZXJtYW5lbnRUYWxlbnRJbmZvU2NSc3ASNAoTaW5zcGlyYXRpb25fY2ly",
-            "Y3VpdBgCIAEoCzIXLkluc3BpcmF0aW9uQ2lyY3VpdEluZm8SDwoHcmV0Y29k",
-            "ZRgHIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "ZXRQZXJtYW5lbnRUYWxlbnRJbmZvU2NSc3ASDwoHcmV0Y29kZRgMIAEoDRI0",
+            "ChNpbnNwaXJhdGlvbl9jaXJjdWl0GA8gASgLMhcuSW5zcGlyYXRpb25DaXJj",
+            "dWl0SW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.InspirationCircuitInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournGetPermanentTalentInfoScRsp), global::EggLink.DanhengServer.Proto.RogueTournGetPermanentTalentInfoScRsp.Parser, new[]{ "InspirationCircuit", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournGetPermanentTalentInfoScRsp), global::EggLink.DanhengServer.Proto.RogueTournGetPermanentTalentInfoScRsp.Parser, new[]{ "Retcode", "InspirationCircuit" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,8 +75,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournGetPermanentTalentInfoScRsp(RogueTournGetPermanentTalentInfoScRsp other) : this() {
-      inspirationCircuit_ = other.inspirationCircuit_ != null ? other.inspirationCircuit_.Clone() : null;
       retcode_ = other.retcode_;
+      inspirationCircuit_ = other.inspirationCircuit_ != null ? other.inspirationCircuit_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,20 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournGetPermanentTalentInfoScRsp(this);
     }
 
-    /// <summary>Field number for the "inspiration_circuit" field.</summary>
-    public const int InspirationCircuitFieldNumber = 2;
-    private global::EggLink.DanhengServer.Proto.InspirationCircuitInfo inspirationCircuit_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.InspirationCircuitInfo InspirationCircuit {
-      get { return inspirationCircuit_; }
-      set {
-        inspirationCircuit_ = value;
-      }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 7;
+    public const int RetcodeFieldNumber = 12;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -107,6 +95,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "inspiration_circuit" field.</summary>
+    public const int InspirationCircuitFieldNumber = 15;
+    private global::EggLink.DanhengServer.Proto.InspirationCircuitInfo inspirationCircuit_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.InspirationCircuitInfo InspirationCircuit {
+      get { return inspirationCircuit_; }
+      set {
+        inspirationCircuit_ = value;
       }
     }
 
@@ -125,8 +125,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(InspirationCircuit, other.InspirationCircuit)) return false;
       if (Retcode != other.Retcode) return false;
+      if (!object.Equals(InspirationCircuit, other.InspirationCircuit)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -134,8 +134,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (inspirationCircuit_ != null) hash ^= InspirationCircuit.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (inspirationCircuit_ != null) hash ^= InspirationCircuit.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -154,13 +154,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (inspirationCircuit_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(InspirationCircuit);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
+      }
+      if (inspirationCircuit_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(InspirationCircuit);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -172,13 +172,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (inspirationCircuit_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(InspirationCircuit);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
+      }
+      if (inspirationCircuit_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(InspirationCircuit);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -190,11 +190,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (inspirationCircuit_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InspirationCircuit);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (inspirationCircuit_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InspirationCircuit);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -208,14 +208,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
       if (other.inspirationCircuit_ != null) {
         if (inspirationCircuit_ == null) {
           InspirationCircuit = new global::EggLink.DanhengServer.Proto.InspirationCircuitInfo();
         }
         InspirationCircuit.MergeFrom(other.InspirationCircuit);
-      }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -232,15 +232,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 96: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 122: {
             if (inspirationCircuit_ == null) {
               InspirationCircuit = new global::EggLink.DanhengServer.Proto.InspirationCircuitInfo();
             }
             input.ReadMessage(InspirationCircuit);
-            break;
-          }
-          case 56: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -258,15 +258,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 96: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 122: {
             if (inspirationCircuit_ == null) {
               InspirationCircuit = new global::EggLink.DanhengServer.Proto.InspirationCircuitInfo();
             }
             input.ReadMessage(InspirationCircuit);
-            break;
-          }
-          case 56: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }

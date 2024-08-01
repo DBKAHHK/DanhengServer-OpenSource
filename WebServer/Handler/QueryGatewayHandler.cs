@@ -21,11 +21,13 @@ internal class QueryGatewayHandler
             Ip = config.GameServer.PublicAddress,
             Port = config.GameServer.PublicPort,
             Msg = "Access verification failed. Please check if you have logged in to the correct account and server.",
-            B1 = true,
-            B2 = true,
-            B3 = true,
-            B4 = true,
-            B5 = true
+            Unk1 = true,
+            Unk2 = true,
+            Unk3 = true,
+            Unk4 = true,
+            Unk5 = true,
+            Unk6 = true,
+            Unk7 = true,
         };
 
         if (urlData.AssetBundleUrl != null && urlData.AssetBundleUrl.Length > 0)

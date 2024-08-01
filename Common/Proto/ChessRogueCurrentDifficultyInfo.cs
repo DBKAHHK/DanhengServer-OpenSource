@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static ChessRogueCurrentDifficultyInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiVDaGVzc1JvZ3VlQ3VycmVudERpZmZpY3VsdHlJbmZvLnByb3RvIj4KH0No",
-            "ZXNzUm9ndWVDdXJyZW50RGlmZmljdWx0eUluZm8SGwoTY2hlc3NfZGlmZmlj",
-            "dWx0eV9pZBgBIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
-            "YgZwcm90bzM="));
+            "CiVDaGVzc1JvZ3VlQ3VycmVudERpZmZpY3VsdHlJbmZvLnByb3RvIj0KH0No",
+            "ZXNzUm9ndWVDdXJyZW50RGlmZmljdWx0eUluZm8SGgoSZGlmZmljdWx0eV9p",
+            "ZF9saXN0GAkgAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueCurrentDifficultyInfo), global::EggLink.DanhengServer.Proto.ChessRogueCurrentDifficultyInfo.Parser, new[]{ "ChessDifficultyId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueCurrentDifficultyInfo), global::EggLink.DanhengServer.Proto.ChessRogueCurrentDifficultyInfo.Parser, new[]{ "DifficultyIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueCurrentDifficultyInfo(ChessRogueCurrentDifficultyInfo other) : this() {
-      chessDifficultyId_ = other.chessDifficultyId_.Clone();
+      difficultyIdList_ = other.difficultyIdList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new ChessRogueCurrentDifficultyInfo(this);
     }
 
-    /// <summary>Field number for the "chess_difficulty_id" field.</summary>
-    public const int ChessDifficultyIdFieldNumber = 1;
-    private static readonly pb::FieldCodec<uint> _repeated_chessDifficultyId_codec
-        = pb::FieldCodec.ForUInt32(10);
-    private readonly pbc::RepeatedField<uint> chessDifficultyId_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "difficulty_id_list" field.</summary>
+    public const int DifficultyIdListFieldNumber = 9;
+    private static readonly pb::FieldCodec<uint> _repeated_difficultyIdList_codec
+        = pb::FieldCodec.ForUInt32(74);
+    private readonly pbc::RepeatedField<uint> difficultyIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> ChessDifficultyId {
-      get { return chessDifficultyId_; }
+    public pbc::RepeatedField<uint> DifficultyIdList {
+      get { return difficultyIdList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!chessDifficultyId_.Equals(other.chessDifficultyId_)) return false;
+      if(!difficultyIdList_.Equals(other.difficultyIdList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= chessDifficultyId_.GetHashCode();
+      hash ^= difficultyIdList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      chessDifficultyId_.WriteTo(output, _repeated_chessDifficultyId_codec);
+      difficultyIdList_.WriteTo(output, _repeated_difficultyIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -147,7 +147,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      chessDifficultyId_.WriteTo(ref output, _repeated_chessDifficultyId_codec);
+      difficultyIdList_.WriteTo(ref output, _repeated_difficultyIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -158,7 +158,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += chessDifficultyId_.CalculateSize(_repeated_chessDifficultyId_codec);
+      size += difficultyIdList_.CalculateSize(_repeated_difficultyIdList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -171,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      chessDifficultyId_.Add(other.chessDifficultyId_);
+      difficultyIdList_.Add(other.difficultyIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -187,9 +187,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10:
-          case 8: {
-            chessDifficultyId_.AddEntriesFrom(input, _repeated_chessDifficultyId_codec);
+          case 74:
+          case 72: {
+            difficultyIdList_.AddEntriesFrom(input, _repeated_difficultyIdList_codec);
             break;
           }
         }
@@ -207,9 +207,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10:
-          case 8: {
-            chessDifficultyId_.AddEntriesFrom(ref input, _repeated_chessDifficultyId_codec);
+          case 74:
+          case 72: {
+            difficultyIdList_.AddEntriesFrom(ref input, _repeated_difficultyIdList_codec);
             break;
           }
         }

@@ -116,7 +116,7 @@ public class ChessRogueManager(PlayerInstance player) : BasePlayerManager(player
 
     public ChessRogueNousDiceData SetDice(ChessRogueDice dice)
     {
-        var branchId = (int)dice.BranchId;
+        var branchId = (int)dice.DiceBranchId;
         ChessRogueNousData.RogueDiceData.TryGetValue(branchId, out var diceData);
         if (diceData == null)
         {
@@ -147,8 +147,8 @@ public class ChessRogueManager(PlayerInstance player) : BasePlayerManager(player
         var info = new ChessRogueGetInfo
         {
             ChessAeonInfo = ToAeonInfo(),
-            DiceInfo = ToDiceInfo(),
-            RogueTalentInfo = ToTalentInfo(),
+            QueryDiceInfo = ToDiceInfo(),
+            TalentInfoList = ToTalentInfo(),
             RogueDifficultyInfo = new ChessRogueQueryDiffcultyInfo()
         };
 
@@ -176,12 +176,12 @@ public class ChessRogueManager(PlayerInstance player) : BasePlayerManager(player
             RogueDifficultyInfo = new ChessRogueCurrentDifficultyInfo(),
             GameMiracleInfo = new ChessRogueMiracleInfo
             {
-                MiracleInfo = new ChessRogueMiracle()
+                ChessRogueMiracleInfo_ = new ChessRogueMiracle()
             }, // needed for avoiding null reference exception （below 4 lines）
-            RogueBuffInfo = new RogueDLCBuffInfo { RogueDlcMazeBuffInfo = new RogueMazeBuffInfo() },
+            RogueBuffInfo = new ChessRogueBuffInfo { ChessRogueBuffInfo_ = new ChessRogueBuff() },
             PendingAction = new RogueCommonPendingAction(),
             RogueLineupInfo = ToLineupInfo(),
-            RogueVirtualItem = new RogueVirtualItem()
+            VirtualItemInfo = new RogueVirtualItem()
         };
 
         return info;
@@ -192,9 +192,9 @@ public class ChessRogueManager(PlayerInstance player) : BasePlayerManager(player
         var info = new ChessRogueQueryInfo
         {
             ChessAeonInfo = ToAeonInfo(),
-            RogueTalentInfo = ToTalentInfo(),
+            TalentInfoList = ToTalentInfo(),
             RogueDifficultyInfo = new ChessRogueQueryDiffcultyInfo(),
-            DiceInfo = ToDiceInfo()
+            QueryDiceInfo = ToDiceInfo()
         };
 
         foreach (var area in GameData.RogueDLCAreaData.Keys)
@@ -216,7 +216,7 @@ public class ChessRogueManager(PlayerInstance player) : BasePlayerManager(player
             AreaInfo = new ChessRogueAreaInfo
             {
                 Cell = new CellInfo(),
-                NFPIJHGAEGM = new JJPJGJJGCKJ()
+                OJNCMJDAABJ = new JDIPIHPMEKN()
             }
         };
 
@@ -270,8 +270,8 @@ public class ChessRogueManager(PlayerInstance player) : BasePlayerManager(player
 
         foreach (var dice in GameData.RogueNousDiceBranchData) proto.DiceList.Add(GetDice(dice.Key).ToProto());
 
-        for (var i = 1; i < 7; i++) proto.GEMMFOEDJJA.Add((uint)i, i % 3 == 0);
-        proto.GEMMFOEDJJA[5] = true;
+        for (var i = 1; i < 7; i++) proto.MLKDHOECNFL.Add((uint)i, i % 3 == 0);
+        proto.MLKDHOECNFL[5] = true;
 
         return proto;
     }
@@ -285,10 +285,10 @@ public class ChessRogueManager(PlayerInstance player) : BasePlayerManager(player
 
     public ChessRogueTalentInfo ToTalentInfo()
     {
-        var talentInfo = new RogueTalentInfo();
+        var talentInfo = new RogueTalentInfoList();
 
         foreach (var talent in GameData.RogueNousTalentData.Values)
-            talentInfo.RogueTalentList.Add(new RogueTalent
+            talentInfo.TalentInfo.Add(new RogueTalentInfo
             {
                 TalentId = (uint)talent.TalentID,
                 Status = RogueTalentStatus.Enable
@@ -296,7 +296,7 @@ public class ChessRogueManager(PlayerInstance player) : BasePlayerManager(player
 
         var proto = new ChessRogueTalentInfo
         {
-            TalentInfo = talentInfo
+            RogueTalentInfoList = talentInfo
         };
 
         return proto;
@@ -306,9 +306,9 @@ public class ChessRogueManager(PlayerInstance player) : BasePlayerManager(player
     {
         var proto = new ChessRogueLineupInfo
         {
-            ReviveInfo = new IBHFIGDHELO
+            ReviveInfo = new RogueAvatarReviveCost
             {
-                GameItemInfo = new ItemCostData()
+                RogueReviveCost = new ItemCostData()
             }
         };
 

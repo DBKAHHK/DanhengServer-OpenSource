@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static ChessRogueLineupInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpDaGVzc1JvZ3VlTGluZXVwSW5mby5wcm90bxoRSUJIRklHREhFTE8ucHJv",
-            "dG8aIENoZXNzUm9ndWVMaW5ldXBBdmF0YXJJbmZvLnByb3RvInEKFENoZXNz",
-            "Um9ndWVMaW5ldXBJbmZvEjYKEWNoZXNzX2F2YXRhcl9saXN0GAEgAygLMhsu",
-            "Q2hlc3NSb2d1ZUxpbmV1cEF2YXRhckluZm8SIQoLcmV2aXZlX2luZm8YBiAB",
-            "KAsyDC5JQkhGSUdESEVMT0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
-            "b3RvYgZwcm90bzM="));
+            "ChpDaGVzc1JvZ3VlTGluZXVwSW5mby5wcm90bxogQ2hlc3NSb2d1ZUxpbmV1",
+            "cEF2YXRhckluZm8ucHJvdG8aG1JvZ3VlQXZhdGFyUmV2aXZlQ29zdC5wcm90",
+            "byJ7ChRDaGVzc1JvZ3VlTGluZXVwSW5mbxI2ChFjaGVzc19hdmF0YXJfbGlz",
+            "dBgLIAMoCzIbLkNoZXNzUm9ndWVMaW5ldXBBdmF0YXJJbmZvEisKC3Jldml2",
+            "ZV9pbmZvGAogASgLMhYuUm9ndWVBdmF0YXJSZXZpdmVDb3N0Qh6qAhtFZ2dM",
+            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IBHFIGDHELOReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueLineupAvatarInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueLineupAvatarInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAvatarReviveCostReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueLineupInfo), global::EggLink.DanhengServer.Proto.ChessRogueLineupInfo.Parser, new[]{ "ChessAvatarList", "ReviveInfo" }, null, null, null, null)
           }));
@@ -87,9 +87,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "chess_avatar_list" field.</summary>
-    public const int ChessAvatarListFieldNumber = 1;
+    public const int ChessAvatarListFieldNumber = 11;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChessRogueLineupAvatarInfo> _repeated_chessAvatarList_codec
-        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.ChessRogueLineupAvatarInfo.Parser);
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.ChessRogueLineupAvatarInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueLineupAvatarInfo> chessAvatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueLineupAvatarInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,11 +98,11 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "revive_info" field.</summary>
-    public const int ReviveInfoFieldNumber = 6;
-    private global::EggLink.DanhengServer.Proto.IBHFIGDHELO reviveInfo_;
+    public const int ReviveInfoFieldNumber = 10;
+    private global::EggLink.DanhengServer.Proto.RogueAvatarReviveCost reviveInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.IBHFIGDHELO ReviveInfo {
+    public global::EggLink.DanhengServer.Proto.RogueAvatarReviveCost ReviveInfo {
       get { return reviveInfo_; }
       set {
         reviveInfo_ = value;
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      chessAvatarList_.WriteTo(output, _repeated_chessAvatarList_codec);
       if (reviveInfo_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(82);
         output.WriteMessage(ReviveInfo);
       }
+      chessAvatarList_.WriteTo(output, _repeated_chessAvatarList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -168,11 +168,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      chessAvatarList_.WriteTo(ref output, _repeated_chessAvatarList_codec);
       if (reviveInfo_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(82);
         output.WriteMessage(ReviveInfo);
       }
+      chessAvatarList_.WriteTo(ref output, _repeated_chessAvatarList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -202,7 +202,7 @@ namespace EggLink.DanhengServer.Proto {
       chessAvatarList_.Add(other.chessAvatarList_);
       if (other.reviveInfo_ != null) {
         if (reviveInfo_ == null) {
-          ReviveInfo = new global::EggLink.DanhengServer.Proto.IBHFIGDHELO();
+          ReviveInfo = new global::EggLink.DanhengServer.Proto.RogueAvatarReviveCost();
         }
         ReviveInfo.MergeFrom(other.ReviveInfo);
       }
@@ -221,15 +221,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            chessAvatarList_.AddEntriesFrom(input, _repeated_chessAvatarList_codec);
-            break;
-          }
-          case 50: {
+          case 82: {
             if (reviveInfo_ == null) {
-              ReviveInfo = new global::EggLink.DanhengServer.Proto.IBHFIGDHELO();
+              ReviveInfo = new global::EggLink.DanhengServer.Proto.RogueAvatarReviveCost();
             }
             input.ReadMessage(ReviveInfo);
+            break;
+          }
+          case 90: {
+            chessAvatarList_.AddEntriesFrom(input, _repeated_chessAvatarList_codec);
             break;
           }
         }
@@ -247,15 +247,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            chessAvatarList_.AddEntriesFrom(ref input, _repeated_chessAvatarList_codec);
-            break;
-          }
-          case 50: {
+          case 82: {
             if (reviveInfo_ == null) {
-              ReviveInfo = new global::EggLink.DanhengServer.Proto.IBHFIGDHELO();
+              ReviveInfo = new global::EggLink.DanhengServer.Proto.RogueAvatarReviveCost();
             }
             input.ReadMessage(ReviveInfo);
+            break;
+          }
+          case 90: {
+            chessAvatarList_.AddEntriesFrom(ref input, _repeated_chessAvatarList_codec);
             break;
           }
         }

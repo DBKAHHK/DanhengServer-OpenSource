@@ -9,7 +9,7 @@ public class HandlerLeaveRaidCsReq : Handler
     {
         var player = connection.Player!;
         var req = LeaveRaidCsReq.Parser.ParseFrom(data);
-        await player.RaidManager!.LeaveRaid(req.IsSave);
+        await player.RaidManager!.LeaveRaid(req.IsSaveData);
 
         await connection.SendPacket(CmdIds.LeaveRaidScRsp);
     }

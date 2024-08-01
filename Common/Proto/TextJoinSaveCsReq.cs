@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdUZXh0Sm9pblNhdmVDc1JlcS5wcm90byJbChFUZXh0Sm9pblNhdmVDc1Jl",
-            "cRIUCgx0ZXh0X2l0ZW1faWQYCSABKA0SGwoTdGV4dF9pdGVtX2NvbmZpZ19p",
-            "ZBgPIAEoDRITCgtOQUdHQ0lLRk1CTxgGIAEoCUIeqgIbRWdnTGluay5EYW5o",
+            "cRIUCgx0ZXh0X2l0ZW1faWQYByABKA0SEwoLQ0ZDSkROQUtDTkEYCCABKAkS",
+            "GwoTdGV4dF9pdGVtX2NvbmZpZ19pZBgNIAEoDUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TextJoinSaveCsReq), global::EggLink.DanhengServer.Proto.TextJoinSaveCsReq.Parser, new[]{ "TextItemId", "TextItemConfigId", "NAGGCIKFMBO" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TextJoinSaveCsReq), global::EggLink.DanhengServer.Proto.TextJoinSaveCsReq.Parser, new[]{ "TextItemId", "CFCJDNAKCNA", "TextItemConfigId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextJoinSaveCsReq(TextJoinSaveCsReq other) : this() {
       textItemId_ = other.textItemId_;
+      cFCJDNAKCNA_ = other.cFCJDNAKCNA_;
       textItemConfigId_ = other.textItemConfigId_;
-      nAGGCIKFMBO_ = other.nAGGCIKFMBO_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,10 +86,10 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "text_item_id" field.</summary>
-    public const int TextItemIdFieldNumber = 9;
+    public const int TextItemIdFieldNumber = 7;
     private uint textItemId_;
     /// <summary>
-    /// 15
+    /// 13
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,11 +100,23 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "CFCJDNAKCNA" field.</summary>
+    public const int CFCJDNAKCNAFieldNumber = 8;
+    private string cFCJDNAKCNA_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CFCJDNAKCNA {
+      get { return cFCJDNAKCNA_; }
+      set {
+        cFCJDNAKCNA_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "text_item_config_id" field.</summary>
-    public const int TextItemConfigIdFieldNumber = 15;
+    public const int TextItemConfigIdFieldNumber = 13;
     private uint textItemConfigId_;
     /// <summary>
-    /// 9
+    /// 7
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,18 +124,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return textItemConfigId_; }
       set {
         textItemConfigId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "NAGGCIKFMBO" field.</summary>
-    public const int NAGGCIKFMBOFieldNumber = 6;
-    private string nAGGCIKFMBO_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string NAGGCIKFMBO {
-      get { return nAGGCIKFMBO_; }
-      set {
-        nAGGCIKFMBO_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -143,8 +143,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (TextItemId != other.TextItemId) return false;
+      if (CFCJDNAKCNA != other.CFCJDNAKCNA) return false;
       if (TextItemConfigId != other.TextItemConfigId) return false;
-      if (NAGGCIKFMBO != other.NAGGCIKFMBO) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -153,8 +153,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (TextItemId != 0) hash ^= TextItemId.GetHashCode();
+      if (CFCJDNAKCNA.Length != 0) hash ^= CFCJDNAKCNA.GetHashCode();
       if (TextItemConfigId != 0) hash ^= TextItemConfigId.GetHashCode();
-      if (NAGGCIKFMBO.Length != 0) hash ^= NAGGCIKFMBO.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -173,16 +173,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (NAGGCIKFMBO.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(NAGGCIKFMBO);
-      }
       if (TextItemId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(56);
         output.WriteUInt32(TextItemId);
       }
+      if (CFCJDNAKCNA.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(CFCJDNAKCNA);
+      }
       if (TextItemConfigId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(104);
         output.WriteUInt32(TextItemConfigId);
       }
       if (_unknownFields != null) {
@@ -195,16 +195,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (NAGGCIKFMBO.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(NAGGCIKFMBO);
-      }
       if (TextItemId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(56);
         output.WriteUInt32(TextItemId);
       }
+      if (CFCJDNAKCNA.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(CFCJDNAKCNA);
+      }
       if (TextItemConfigId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(104);
         output.WriteUInt32(TextItemConfigId);
       }
       if (_unknownFields != null) {
@@ -220,11 +220,11 @@ namespace EggLink.DanhengServer.Proto {
       if (TextItemId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TextItemId);
       }
+      if (CFCJDNAKCNA.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CFCJDNAKCNA);
+      }
       if (TextItemConfigId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TextItemConfigId);
-      }
-      if (NAGGCIKFMBO.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(NAGGCIKFMBO);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -241,11 +241,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.TextItemId != 0) {
         TextItemId = other.TextItemId;
       }
+      if (other.CFCJDNAKCNA.Length != 0) {
+        CFCJDNAKCNA = other.CFCJDNAKCNA;
+      }
       if (other.TextItemConfigId != 0) {
         TextItemConfigId = other.TextItemConfigId;
-      }
-      if (other.NAGGCIKFMBO.Length != 0) {
-        NAGGCIKFMBO = other.NAGGCIKFMBO;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -262,15 +262,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
-            NAGGCIKFMBO = input.ReadString();
-            break;
-          }
-          case 72: {
+          case 56: {
             TextItemId = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 66: {
+            CFCJDNAKCNA = input.ReadString();
+            break;
+          }
+          case 104: {
             TextItemConfigId = input.ReadUInt32();
             break;
           }
@@ -289,15 +289,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
-            NAGGCIKFMBO = input.ReadString();
-            break;
-          }
-          case 72: {
+          case 56: {
             TextItemId = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 66: {
+            CFCJDNAKCNA = input.ReadString();
+            break;
+          }
+          case 104: {
             TextItemConfigId = input.ReadUInt32();
             break;
           }

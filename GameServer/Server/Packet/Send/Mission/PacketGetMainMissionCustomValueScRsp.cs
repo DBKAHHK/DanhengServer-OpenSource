@@ -1,5 +1,4 @@
-﻿using EggLink.DanhengServer.Enums;
-using EggLink.DanhengServer.Enums.Mission;
+﻿using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.Proto;
 
@@ -12,7 +11,7 @@ public class PacketGetMainMissionCustomValueScRsp : BasePacket
     {
         var proto = new GetMainMissionCustomValueScRsp();
         foreach (var mission in req.MainMissionIdList)
-            proto.MissionDataList.Add(new MissionData
+            proto.MainMissionList.Add(new MainMission
             {
                 Id = mission,
                 Status = player.MissionManager!.GetMainMissionStatus((int)mission).ToProto()

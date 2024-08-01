@@ -11,7 +11,7 @@ public class PacketGetAllSaveRaidScRsp : BasePacket
 
         foreach (var dict in player.RaidManager!.RaidData.RaidRecordDatas.Values)
         foreach (var record in dict.Values)
-            proto.SavedData.Add(new RaidSavedData
+            proto.RaidDataList.Add(new RaidData
             {
                 RaidId = (uint)record.RaidId,
                 WorldLevel = (uint)record.WorldLevel

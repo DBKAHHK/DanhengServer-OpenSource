@@ -31,9 +31,6 @@ public class PluginManager
         if (!Directory.Exists(ConfigManager.Config.Path.PluginPath))
             Directory.CreateDirectory(ConfigManager.Config.Path.PluginPath);
 
-        if (!Directory.Exists(ConfigManager.Config.Path.PluginConfigPath))
-            Directory.CreateDirectory(ConfigManager.Config.Path.PluginConfigPath);
-
         var plugins = Directory.GetFiles(ConfigManager.Config.Path.PluginPath, "*.dll");
         var loaders = new List<PluginLoader>();
         AppDomain.CurrentDomain.AssemblyResolve += (sender, args) =>

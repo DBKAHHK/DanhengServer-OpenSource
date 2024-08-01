@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFVcGRhdGVGbG9vclNhdmVkVmFsdWVOb3RpZnkucHJvdG8ikwEKG1VwZGF0",
-            "ZUZsb29yU2F2ZWRWYWx1ZU5vdGlmeRJBCgtzYXZlZF92YWx1ZRgPIAMoCzIs",
+            "ZUZsb29yU2F2ZWRWYWx1ZU5vdGlmeRJBCgtzYXZlZF92YWx1ZRgNIAMoCzIs",
             "LlVwZGF0ZUZsb29yU2F2ZWRWYWx1ZU5vdGlmeS5TYXZlZFZhbHVlRW50cnka",
             "MQoPU2F2ZWRWYWx1ZUVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
             "BToCOAFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "saved_value" field.</summary>
-    public const int SavedValueFieldNumber = 15;
+    public const int SavedValueFieldNumber = 13;
     private static readonly pbc::MapField<string, int>.Codec _map_savedValue_codec
-        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 122);
+        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 106);
     private readonly pbc::MapField<string, int> savedValue_ = new pbc::MapField<string, int>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 122: {
+          case 106: {
             savedValue_.AddEntriesFrom(input, _map_savedValue_codec);
             break;
           }
@@ -207,7 +207,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 122: {
+          case 106: {
             savedValue_.AddEntriesFrom(ref input, _map_savedValue_codec);
             break;
           }

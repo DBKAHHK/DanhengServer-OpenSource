@@ -48,13 +48,13 @@ public class SceneInstance
     {
         SceneInfo sceneInfo = new()
         {
-            WorldId = (uint)Excel.WorldID,
+            WorldId = (uint)(Excel.WorldID == 100 ? Player.LastWorldId : Excel.WorldID),
             GameModeType = (uint)(CustomGameModeId > 0 ? CustomGameModeId : (int)Excel.PlaneType),
             PlaneId = (uint)PlaneId,
             FloorId = (uint)FloorId,
             EntryId = (uint)EntryId,
             SceneMissionInfo = new MissionStatusBySceneInfo(),
-            BONACBOIIBE = (uint)(EntityLoader is StoryLineEntityLoader loader ? loader.DimensionId : 0),
+            DimensionId = (uint)(EntityLoader is StoryLineEntityLoader loader ? loader.DimensionId : 0)
         };
 
         var playerGroupInfo = new SceneEntityGroupInfo(); // avatar group
@@ -103,7 +103,7 @@ public class SceneInstance
 
         if (data != null)
             foreach (var customData in data)
-                sceneInfo.SaveDataList.Add(new CustomSaveData
+                sceneInfo.CustomDataList.Add(new CustomSaveData
                 {
                     GroupId = (uint)customData.Key,
                     SaveData = customData.Value
@@ -203,6 +203,10 @@ public class SceneInstance
             case PlaneTypeEnum.Challenge:
                 EntityLoader = new ChallengeEntityLoader(this, Player);
                 break;
+            // Temproary disabled
+            /* case Enums.Scene.PlaneTypeEnum.TrialActivity:
+                EntityLoader = new ChallengeEntityLoader(this, Player);
+                break; */
             default:
                 if (Player.StoryLineManager?.StoryLineData.CurStoryLineId != 0)
                     EntityLoader = new StoryLineEntityLoader(this);

@@ -133,16 +133,16 @@ public class ChallengeInstance
             ExtraLineupType = (ExtraLineupType)CurrentExtraLineup,
             PlayerInfo = new ChallengeStoryInfo
             {
-                CurStoryBuff = new ChallengeStoryBuffInfo(),
-                CurBossBuff = new ChallengeBossBuffInfo()
+                CurStoryBuffs = new ChallengeStoryBuffList(),
+                CurBossBuffs = new ChallengeBossBuffList()
             }
         };
 
         if (StoryBuffs != null && StoryBuffs.Count >= CurrentStage)
-            proto.PlayerInfo.CurStoryBuff.BuffList.Add(StoryBuffs.Select(x => (uint)x));
+            proto.PlayerInfo.CurStoryBuffs.BuffList.Add(StoryBuffs.Select(x => (uint)x));
 
         if (BossBuffs != null && BossBuffs.Count >= CurrentStage)
-            proto.PlayerInfo.CurBossBuff.BuffList.Add(BossBuffs.Select(x => (uint)x));
+            proto.PlayerInfo.CurBossBuffs.BuffList.Add(BossBuffs.Select(x => (uint)x));
 
         return proto;
     }

@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch5Sb2d1ZVRvdXJuRW50ZXJSb29tQ3NSZXEucHJvdG8iSgoYUm9ndWVUb3Vy",
             "bkVudGVyUm9vbUNzUmVxEhYKDm5leHRfcm9vbV90eXBlGAogASgNEhYKDmN1",
-            "cl9yb29tX2luZGV4GA4gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "cl9yb29tX2luZGV4GAIgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cur_room_index" field.</summary>
-    public const int CurRoomIndexFieldNumber = 14;
+    public const int CurRoomIndexFieldNumber = 2;
     private uint curRoomIndex_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (CurRoomIndex != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(CurRoomIndex);
+      }
       if (NextRoomType != 0) {
         output.WriteRawTag(80);
         output.WriteUInt32(NextRoomType);
-      }
-      if (CurRoomIndex != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(CurRoomIndex);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CurRoomIndex != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(CurRoomIndex);
+      }
       if (NextRoomType != 0) {
         output.WriteRawTag(80);
         output.WriteUInt32(NextRoomType);
-      }
-      if (CurRoomIndex != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(CurRoomIndex);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 80: {
-            NextRoomType = input.ReadUInt32();
+          case 16: {
+            CurRoomIndex = input.ReadUInt32();
             break;
           }
-          case 112: {
-            CurRoomIndex = input.ReadUInt32();
+          case 80: {
+            NextRoomType = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 80: {
-            NextRoomType = input.ReadUInt32();
+          case 16: {
+            CurRoomIndex = input.ReadUInt32();
             break;
           }
-          case 112: {
-            CurRoomIndex = input.ReadUInt32();
+          case 80: {
+            NextRoomType = input.ReadUInt32();
             break;
           }
         }

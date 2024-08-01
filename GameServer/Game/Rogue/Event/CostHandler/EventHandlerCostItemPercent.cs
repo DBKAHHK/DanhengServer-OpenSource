@@ -10,6 +10,6 @@ public class EventHandlerCostItemPercent : RogueEventCostHandler
         List<int> paramList)
     {
         await rogue.CostMoney((int)(rogue.CurMoney * (paramList[1] / 100f)),
-            RogueActionDisplayType.RogueCommonActionResultDisplayTypeSingle);
+            RogueCommonActionResultDisplayType.Single);
     }
 }

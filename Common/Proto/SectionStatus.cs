@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChNTZWN0aW9uU3RhdHVzLnByb3RvGhpNZXNzYWdlU2VjdGlvblN0YXR1cy5w",
-            "cm90byJSCg1TZWN0aW9uU3RhdHVzEi0KDnNlY3Rpb25fc3RhdHVzGAogASgO",
-            "MhUuTWVzc2FnZVNlY3Rpb25TdGF0dXMSEgoKc2VjdGlvbl9pZBgOIAEoDUIe",
+            "cm90byJSCg1TZWN0aW9uU3RhdHVzEi0KDnNlY3Rpb25fc3RhdHVzGAsgASgO",
+            "MhUuTWVzc2FnZVNlY3Rpb25TdGF0dXMSEgoKc2VjdGlvbl9pZBgEIAEoDUIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MessageSectionStatusReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "section_status" field.</summary>
-    public const int SectionStatus_FieldNumber = 10;
+    public const int SectionStatus_FieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.MessageSectionStatus sectionStatus_ = global::EggLink.DanhengServer.Proto.MessageSectionStatus.MessageSectionNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "section_id" field.</summary>
-    public const int SectionIdFieldNumber = 14;
+    public const int SectionIdFieldNumber = 4;
     private uint sectionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (SectionStatus_ != global::EggLink.DanhengServer.Proto.MessageSectionStatus.MessageSectionNone) {
-        output.WriteRawTag(80);
-        output.WriteEnum((int) SectionStatus_);
-      }
       if (SectionId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(32);
         output.WriteUInt32(SectionId);
+      }
+      if (SectionStatus_ != global::EggLink.DanhengServer.Proto.MessageSectionStatus.MessageSectionNone) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) SectionStatus_);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (SectionStatus_ != global::EggLink.DanhengServer.Proto.MessageSectionStatus.MessageSectionNone) {
-        output.WriteRawTag(80);
-        output.WriteEnum((int) SectionStatus_);
-      }
       if (SectionId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(32);
         output.WriteUInt32(SectionId);
+      }
+      if (SectionStatus_ != global::EggLink.DanhengServer.Proto.MessageSectionStatus.MessageSectionNone) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) SectionStatus_);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 80: {
-            SectionStatus_ = (global::EggLink.DanhengServer.Proto.MessageSectionStatus) input.ReadEnum();
+          case 32: {
+            SectionId = input.ReadUInt32();
             break;
           }
-          case 112: {
-            SectionId = input.ReadUInt32();
+          case 88: {
+            SectionStatus_ = (global::EggLink.DanhengServer.Proto.MessageSectionStatus) input.ReadEnum();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 80: {
-            SectionStatus_ = (global::EggLink.DanhengServer.Proto.MessageSectionStatus) input.ReadEnum();
+          case 32: {
+            SectionId = input.ReadUInt32();
             break;
           }
-          case 112: {
-            SectionId = input.ReadUInt32();
+          case 88: {
+            SectionStatus_ = (global::EggLink.DanhengServer.Proto.MessageSectionStatus) input.ReadEnum();
             break;
           }
         }

@@ -10,8 +10,8 @@ public class HandlerEnterSceneCsReq : Handler
     {
         var req = EnterSceneCsReq.Parser.ParseFrom(data);
         var overMapTp = await connection.Player!.EnterScene((int)req.EntryId, (int)req.TeleportId, true,
-            storyLineId: (int)req.GameStoryLineId, mapTp: req.MapTp);
+            (int)req.GameStoryLineId, req.IsCloseMap);
 
-        await connection.SendPacket(new PacketEnterSceneScRsp(overMapTp, req.MapTp, (int)req.GameStoryLineId));
+        await connection.SendPacket(new PacketEnterSceneScRsp(overMapTp, req.IsCloseMap, (int)req.GameStoryLineId));
     }
 }

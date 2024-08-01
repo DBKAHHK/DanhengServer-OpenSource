@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static HeliobusSelectSkillCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5IZWxpb2J1c1NlbGVjdFNraWxsQ3NSZXEucHJvdG8iLwoYSGVsaW9idXNT",
-            "ZWxlY3RTa2lsbENzUmVxEhMKC0ZKSE9DSEhBSE1QGAwgASgNQh6qAhtFZ2dM",
-            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "Ch5IZWxpb2J1c1NlbGVjdFNraWxsQ3NSZXEucHJvdG8iLAoYSGVsaW9idXNT",
+            "ZWxlY3RTa2lsbENzUmVxEhAKCHNraWxsX2lkGAogASgNQh6qAhtFZ2dMaW5r",
+            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeliobusSelectSkillCsReq), global::EggLink.DanhengServer.Proto.HeliobusSelectSkillCsReq.Parser, new[]{ "FJHOCHHAHMP" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeliobusSelectSkillCsReq), global::EggLink.DanhengServer.Proto.HeliobusSelectSkillCsReq.Parser, new[]{ "SkillId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HeliobusSelectSkillCsReq(HeliobusSelectSkillCsReq other) : this() {
-      fJHOCHHAHMP_ = other.fJHOCHHAHMP_;
+      skillId_ = other.skillId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new HeliobusSelectSkillCsReq(this);
     }
 
-    /// <summary>Field number for the "FJHOCHHAHMP" field.</summary>
-    public const int FJHOCHHAHMPFieldNumber = 12;
-    private uint fJHOCHHAHMP_;
+    /// <summary>Field number for the "skill_id" field.</summary>
+    public const int SkillIdFieldNumber = 10;
+    private uint skillId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FJHOCHHAHMP {
-      get { return fJHOCHHAHMP_; }
+    public uint SkillId {
+      get { return skillId_; }
       set {
-        fJHOCHHAHMP_ = value;
+        skillId_ = value;
       }
     }
 
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FJHOCHHAHMP != other.FJHOCHHAHMP) return false;
+      if (SkillId != other.SkillId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (FJHOCHHAHMP != 0) hash ^= FJHOCHHAHMP.GetHashCode();
+      if (SkillId != 0) hash ^= SkillId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FJHOCHHAHMP != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(FJHOCHHAHMP);
+      if (SkillId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(SkillId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FJHOCHHAHMP != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(FJHOCHHAHMP);
+      if (SkillId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(SkillId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -164,8 +164,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (FJHOCHHAHMP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FJHOCHHAHMP);
+      if (SkillId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SkillId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -179,8 +179,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.FJHOCHHAHMP != 0) {
-        FJHOCHHAHMP = other.FJHOCHHAHMP;
+      if (other.SkillId != 0) {
+        SkillId = other.SkillId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -197,8 +197,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 96: {
-            FJHOCHHAHMP = input.ReadUInt32();
+          case 80: {
+            SkillId = input.ReadUInt32();
             break;
           }
         }
@@ -216,8 +216,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 96: {
-            FJHOCHHAHMP = input.ReadUInt32();
+          case 80: {
+            SkillId = input.ReadUInt32();
             break;
           }
         }

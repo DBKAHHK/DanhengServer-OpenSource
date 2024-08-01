@@ -3,7 +3,8 @@ using LinkedListOfQueueItem = KcpSharp.NetstandardShim.LinkedList<(KcpSharp.KcpB
 using LinkedListNodeOfQueueItem = KcpSharp.NetstandardShim.LinkedListNode<(KcpSharp.KcpBuffer Data, byte Fragment)>;
 #else
 using LinkedListNodeOfQueueItem =
-    System.Collections.Generic.LinkedListNode<(EggLink.DanhengServer.GameServer.KcpSharp.KcpBuffer Data, byte Fragment)>;
+    System.Collections.Generic.LinkedListNode<(EggLink.DanhengServer.GameServer.KcpSharp.KcpBuffer Data, byte Fragment
+        )>;
 using LinkedListOfQueueItem =
     System.Collections.Generic.LinkedList<(EggLink.DanhengServer.GameServer.KcpSharp.KcpBuffer Data, byte Fragment)>;
 #endif

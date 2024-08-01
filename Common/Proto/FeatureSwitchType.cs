@@ -24,7 +24,7 @@ namespace EggLink.DanhengServer.Proto {
     static FeatureSwitchTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdGZWF0dXJlU3dpdGNoVHlwZS5wcm90byqtDQoRRmVhdHVyZVN3aXRjaFR5",
+            "ChdGZWF0dXJlU3dpdGNoVHlwZS5wcm90byqEDgoRRmVhdHVyZVN3aXRjaFR5",
             "cGUSFwoTRkVBVFVSRV9TV0lUQ0hfTk9ORRAAEhcKE0ZFQVRVUkVfU1dJVENI",
             "X1NIT1AQARIeChpGRUFUVVJFX1NXSVRDSF9MSU5FVVBfTkFNRRACEiAKHEZF",
             "QVRVUkVfU1dJVENIX1JFQ0hBUkdFX1NIT1AQAxIbChdGRUFUVVJFX1NXSVRD",
@@ -62,8 +62,10 @@ namespace EggLink.DanhengServer.Proto {
             "Q0hfUFNOX01FTUJFUl9TSElQX0NIRUNLEC0SKwonRkVBVFVSRV9TV0lUQ0hf",
             "UExBWUVSX0JPQVJEX0RFVkVMT1BNRU5UEC4SFgoSRkVBVFVSRV9TV0lUQ0hf",
             "UFZQEC8SHQoZRkVBVFVSRV9TV0lUQ0hfUk9HVUVfTU9ERRAwEiIKHkZFQVRV",
-            "UkVfU1dJVENIX1JPR1VFX1RPVVJOX1VHQxAxQh6qAhtFZ2dMaW5rLkRhbmhl",
-            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "UkVfU1dJVENIX1JPR1VFX1RPVVJOX1VHQxAxEikKJUZFQVRVUkVfU1dJVENI",
+            "X1JFTElDX0ZJTFRFUl9QTEFOX05BTUUQMhIqCiZGRUFUVVJFX1NXSVRDSF9N",
+            "QVpFX0lURU1fVVNFX0JVRkZfRFJPUBAzQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.FeatureSwitchType), }, null, null));
@@ -123,6 +125,8 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("FEATURE_SWITCH_PVP")] FeatureSwitchPvp = 47,
     [pbr::OriginalName("FEATURE_SWITCH_ROGUE_MODE")] FeatureSwitchRogueMode = 48,
     [pbr::OriginalName("FEATURE_SWITCH_ROGUE_TOURN_UGC")] FeatureSwitchRogueTournUgc = 49,
+    [pbr::OriginalName("FEATURE_SWITCH_RELIC_FILTER_PLAN_NAME")] FeatureSwitchRelicFilterPlanName = 50,
+    [pbr::OriginalName("FEATURE_SWITCH_MAZE_ITEM_USE_BUFF_DROP")] FeatureSwitchMazeItemUseBuffDrop = 51,
   }
 
   #endregion

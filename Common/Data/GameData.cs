@@ -25,7 +25,12 @@ public static class GameData
     public static Dictionary<int, AvatarPromotionConfigExcel> AvatarPromotionConfigData { get; private set; } = [];
     public static Dictionary<int, AvatarExpItemConfigExcel> AvatarExpItemConfigData { get; private set; } = [];
     public static Dictionary<int, AvatarSkillTreeConfigExcel> AvatarSkillTreeConfigData { get; private set; } = [];
+    public static Dictionary<int, AvatarDemoConfigExcel> AvatarDemoConfigData { get; private set; } = [];
     public static Dictionary<int, ExpTypeExcel> ExpTypeData { get; } = [];
+
+    public static Dictionary<int, MultiplePathAvatarConfigExcel> MultiplePathAvatarConfigData { get; private set; } =
+        [];
+
     public static Dictionary<int, AdventurePlayerExcel> AdventurePlayerData { get; private set; } = [];
     public static Dictionary<int, SummonUnitExcel> SummonUnitData { get; private set; } = [];
 
@@ -202,9 +207,16 @@ public static class GameData
 
     #region Actions
 
-    public static void GetFloorInfo(int planeId, int floorId, out FloorInfo? outer)
+    public static void GetFloorInfo(int planeId, int floorId, out FloorInfo outer)
     {
-        FloorInfoData.TryGetValue("P" + planeId + "_F" + floorId, out outer);
+        FloorInfoData.TryGetValue("P" + planeId + "_F" + floorId, out outer!);
+    }
+
+    public static int GetPlayerExpRequired(int level)
+    {
+        var excel = PlayerLevelConfigData[level];
+        var prevExcel = PlayerLevelConfigData[level - 1];
+        return excel != null && prevExcel != null ? excel.PlayerExp - prevExcel.PlayerExp : 0;
     }
 
     public static int GetAvatarExpRequired(int group, int level)

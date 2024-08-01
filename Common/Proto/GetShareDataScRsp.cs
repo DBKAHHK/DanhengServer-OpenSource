@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdHZXRTaGFyZURhdGFTY1JzcC5wcm90bxoPU2hhcmVEYXRhLnByb3RvIkUK",
-            "EUdldFNoYXJlRGF0YVNjUnNwEg8KB3JldGNvZGUYASABKA0SHwoLTEJPRE5O",
-            "S0tHR0sYCSADKAsyCi5TaGFyZURhdGFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "EUdldFNoYXJlRGF0YVNjUnNwEg8KB3JldGNvZGUYASABKA0SHwoLSUNLT09E",
+            "RkhETUUYBSADKAsyCi5TaGFyZURhdGFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ShareDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetShareDataScRsp), global::EggLink.DanhengServer.Proto.GetShareDataScRsp.Parser, new[]{ "Retcode", "LBODNNKKGGK" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetShareDataScRsp), global::EggLink.DanhengServer.Proto.GetShareDataScRsp.Parser, new[]{ "Retcode", "ICKOODFHDME" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetShareDataScRsp(GetShareDataScRsp other) : this() {
       retcode_ = other.retcode_;
-      lBODNNKKGGK_ = other.lBODNNKKGGK_.Clone();
+      iCKOODFHDME_ = other.iCKOODFHDME_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "LBODNNKKGGK" field.</summary>
-    public const int LBODNNKKGGKFieldNumber = 9;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ShareData> _repeated_lBODNNKKGGK_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.ShareData.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ShareData> lBODNNKKGGK_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ShareData>();
+    /// <summary>Field number for the "ICKOODFHDME" field.</summary>
+    public const int ICKOODFHDMEFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ShareData> _repeated_iCKOODFHDME_codec
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.ShareData.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ShareData> iCKOODFHDME_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ShareData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ShareData> LBODNNKKGGK {
-      get { return lBODNNKKGGK_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ShareData> ICKOODFHDME {
+      get { return iCKOODFHDME_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Retcode != other.Retcode) return false;
-      if(!lBODNNKKGGK_.Equals(other.lBODNNKKGGK_)) return false;
+      if(!iCKOODFHDME_.Equals(other.iCKOODFHDME_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      hash ^= lBODNNKKGGK_.GetHashCode();
+      hash ^= iCKOODFHDME_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -155,7 +155,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
       }
-      lBODNNKKGGK_.WriteTo(output, _repeated_lBODNNKKGGK_codec);
+      iCKOODFHDME_.WriteTo(output, _repeated_iCKOODFHDME_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -170,7 +170,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
       }
-      lBODNNKKGGK_.WriteTo(ref output, _repeated_lBODNNKKGGK_codec);
+      iCKOODFHDME_.WriteTo(ref output, _repeated_iCKOODFHDME_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -184,7 +184,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += lBODNNKKGGK_.CalculateSize(_repeated_lBODNNKKGGK_codec);
+      size += iCKOODFHDME_.CalculateSize(_repeated_iCKOODFHDME_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -200,7 +200,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      lBODNNKKGGK_.Add(other.lBODNNKKGGK_);
+      iCKOODFHDME_.Add(other.iCKOODFHDME_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -220,8 +220,8 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 74: {
-            lBODNNKKGGK_.AddEntriesFrom(input, _repeated_lBODNNKKGGK_codec);
+          case 42: {
+            iCKOODFHDME_.AddEntriesFrom(input, _repeated_iCKOODFHDME_codec);
             break;
           }
         }
@@ -243,8 +243,8 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 74: {
-            lBODNNKKGGK_.AddEntriesFrom(ref input, _repeated_lBODNNKKGGK_codec);
+          case 42: {
+            iCKOODFHDME_.AddEntriesFrom(ref input, _repeated_iCKOODFHDME_codec);
             break;
           }
         }

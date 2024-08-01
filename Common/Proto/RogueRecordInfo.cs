@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChVSb2d1ZVJlY29yZEluZm8ucHJvdG8aD1JvZ3VlQnVmZi5wcm90bxoXUm9n",
             "dWVSZWNvcmRBdmF0YXIucHJvdG8ibwoPUm9ndWVSZWNvcmRJbmZvEh0KCWJ1",
-            "ZmZfbGlzdBgHIAMoCzIKLlJvZ3VlQnVmZhIUCgxtaXJhY2xlX2xpc3QYCCAD",
-            "KA0SJwoLYXZhdGFyX2xpc3QYBCADKAsyEi5Sb2d1ZVJlY29yZEF2YXRhckIe",
+            "ZmZfbGlzdBgPIAMoCzIKLlJvZ3VlQnVmZhIUCgxtaXJhY2xlX2xpc3QYCiAD",
+            "KA0SJwoLYXZhdGFyX2xpc3QYBiADKAsyEi5Sb2d1ZVJlY29yZEF2YXRhckIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueBuffReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueRecordAvatarReflection.Descriptor, },
@@ -87,9 +87,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "buff_list" field.</summary>
-    public const int BuffListFieldNumber = 7;
+    public const int BuffListFieldNumber = 15;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueBuff> _repeated_buffList_codec
-        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.RogueBuff.Parser);
+        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.RogueBuff.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueBuff> buffList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueBuff>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "miracle_list" field.</summary>
-    public const int MiracleListFieldNumber = 8;
+    public const int MiracleListFieldNumber = 10;
     private static readonly pb::FieldCodec<uint> _repeated_miracleList_codec
-        = pb::FieldCodec.ForUInt32(66);
+        = pb::FieldCodec.ForUInt32(82);
     private readonly pbc::RepeatedField<uint> miracleList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,9 +109,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "avatar_list" field.</summary>
-    public const int AvatarListFieldNumber = 4;
+    public const int AvatarListFieldNumber = 6;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueRecordAvatar> _repeated_avatarList_codec
-        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.RogueRecordAvatar.Parser);
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.RogueRecordAvatar.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueRecordAvatar> avatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueRecordAvatar>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,8 +166,8 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       avatarList_.WriteTo(output, _repeated_avatarList_codec);
-      buffList_.WriteTo(output, _repeated_buffList_codec);
       miracleList_.WriteTo(output, _repeated_miracleList_codec);
+      buffList_.WriteTo(output, _repeated_buffList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -179,8 +179,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       avatarList_.WriteTo(ref output, _repeated_avatarList_codec);
-      buffList_.WriteTo(ref output, _repeated_buffList_codec);
       miracleList_.WriteTo(ref output, _repeated_miracleList_codec);
+      buffList_.WriteTo(ref output, _repeated_buffList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -224,17 +224,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
+          case 50: {
             avatarList_.AddEntriesFrom(input, _repeated_avatarList_codec);
             break;
           }
-          case 58: {
-            buffList_.AddEntriesFrom(input, _repeated_buffList_codec);
+          case 82:
+          case 80: {
+            miracleList_.AddEntriesFrom(input, _repeated_miracleList_codec);
             break;
           }
-          case 66:
-          case 64: {
-            miracleList_.AddEntriesFrom(input, _repeated_miracleList_codec);
+          case 122: {
+            buffList_.AddEntriesFrom(input, _repeated_buffList_codec);
             break;
           }
         }
@@ -252,17 +252,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
+          case 50: {
             avatarList_.AddEntriesFrom(ref input, _repeated_avatarList_codec);
             break;
           }
-          case 58: {
-            buffList_.AddEntriesFrom(ref input, _repeated_buffList_codec);
+          case 82:
+          case 80: {
+            miracleList_.AddEntriesFrom(ref input, _repeated_miracleList_codec);
             break;
           }
-          case 66:
-          case 64: {
-            miracleList_.AddEntriesFrom(ref input, _repeated_miracleList_codec);
+          case 122: {
+            buffList_.AddEntriesFrom(ref input, _repeated_buffList_codec);
             break;
           }
         }

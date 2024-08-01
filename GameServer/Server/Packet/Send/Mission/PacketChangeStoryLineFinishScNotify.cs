@@ -9,8 +9,8 @@ public class PacketChangeStoryLineFinishScNotify : BasePacket
     {
         var proto = new ChangeStoryLineFinishScNotify
         {
-            ActionType = reason,
-            CurStoryLineId = (uint)curId,
+            Action = reason,
+            CurStoryLineId = (uint)curId
         };
 
         SetData(proto);

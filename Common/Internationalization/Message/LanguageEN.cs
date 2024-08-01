@@ -113,6 +113,8 @@ public class CommandTextEN
     public MailTextEN Mail { get; } = new();
     public RaidTextEN Raid { get; } = new();
     public AccountTextEN Account { get; } = new();
+    public UnstuckTextEN Unstuck { get; } = new();
+    public SetlevelTextEN Setlevel { get; } = new();
 }
 
 #endregion
@@ -406,6 +408,28 @@ public class AccountTextEN
     public string DuplicateAccount { get; } = "Account {0} already exists!";
     public string DuplicateUID { get; } = "UID {0} already exists!";
     public string DataError { get; } = "Failed to retrieve new account! {0}!";
+}
+
+/// <summary>
+///     path: Game.Command.Unstuck
+/// </summary>
+public class UnstuckTextEN
+{
+    public string Desc { get; } = "Teleport player back to default location";
+    public string Usage { get; } = "/unstuck <UID>";
+    public string UnstuckSuccess { get; } = "Successfully teleported the player back to default location";
+    public string UidNotExist { get; } = "The UID does not exist!";
+    public string PlayerIsOnline { get; } = "The player is online!";
+}
+
+/// <summary>
+///     path: Game.Command.Setlevel
+/// </summary>
+public class SetlevelTextEN
+{
+    public string Desc { get; } = "Set player level";
+    public string Usage { get; } = "/setlevel <Level>";
+    public string SetlevelSuccess { get; } = "Successfully set player level!";
 }
 
 #endregion

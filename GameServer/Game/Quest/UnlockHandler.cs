@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using EggLink.DanhengServer.Data;
+﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.Enums.Quest;
 using EggLink.DanhengServer.GameServer.Game.Player;
@@ -21,18 +16,18 @@ public class UnlockHandler(PlayerInstance player)
 
         // judge
         foreach (var condition in unlockData.Conditions)
-        {
             switch (condition.Type)
             {
                 case ConditionTypeEnum.WorldLevel:
-                    if (Player.Data.WorldLevel < int.Parse(condition.Param)) return false;  // less than it
+                    if (Player.Data.WorldLevel < int.Parse(condition.Param)) return false; // less than it
                     break;
                 case ConditionTypeEnum.FinishMainMission:
                     if (Player.MissionManager?.GetMainMissionStatus(int.Parse(condition.Param)) !=
                         MissionPhaseEnum.Finish) return false;
                     break;
                 case ConditionTypeEnum.InStoryLine:
-                    if (Player.StoryLineManager?.StoryLineData.CurStoryLineId != int.Parse(condition.Param)) return false;
+                    if (Player.StoryLineManager?.StoryLineData.CurStoryLineId != int.Parse(condition.Param))
+                        return false;
                     break;
                 case ConditionTypeEnum.PlayerLevel:
                     if (Player.Data.Level < int.Parse(condition.Param)) return false;
@@ -42,7 +37,6 @@ public class UnlockHandler(PlayerInstance player)
                         MissionPhaseEnum.Finish) return false;
                     break;
             }
-        }
 
         return true;
     }

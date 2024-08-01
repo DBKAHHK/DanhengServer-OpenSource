@@ -8,7 +8,7 @@ public class PacketDeployRotaterScRsp : BasePacket
     {
         var proto = new DeployRotaterScRsp
         {
-            EnergyInfo = new RotatorEnergyInfo
+            EnergyInfo = new RotaterEnergyInfo
             {
                 MaxNum = (uint)maxNum,
                 CurNum = (uint)curNum

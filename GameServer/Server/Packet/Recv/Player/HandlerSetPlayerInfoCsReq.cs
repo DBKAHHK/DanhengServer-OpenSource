@@ -23,7 +23,8 @@ public class HandlerSetPlayerInfoCsReq : Handler
             player.Data.CurrentGender = Gender.Woman;
         else
             player.Data.CurrentGender = Gender.Man;
-        await player.ChangeHeroBasicType(HeroBasicTypeEnum.Warrior);
+        player.Data.IsGenderSet = true;
+        await player.ChangeAvatarPathType(8001, MultiPathAvatarTypeEnum.Warrior);
 
         await player.LineupManager!.AddAvatarToCurTeam(8001);
         await player.LineupManager!.AddAvatarToCurTeam(1001);

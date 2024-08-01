@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static MissionGroupWarnScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5NaXNzaW9uR3JvdXBXYXJuU2NOb3RpZnkucHJvdG8iLwoYTWlzc2lvbkdy",
-            "b3VwV2FyblNjTm90aWZ5EhMKC0JPRU9BTUNOR0NJGAEgAygNQh6qAhtFZ2dM",
-            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "Ch5NaXNzaW9uR3JvdXBXYXJuU2NOb3RpZnkucHJvdG8iMQoYTWlzc2lvbkdy",
+            "b3VwV2FyblNjTm90aWZ5EhUKDWdyb3VwX2lkX2xpc3QYCCADKA1CHqoCG0Vn",
+            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MissionGroupWarnScNotify), global::EggLink.DanhengServer.Proto.MissionGroupWarnScNotify.Parser, new[]{ "BOEOAMCNGCI" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MissionGroupWarnScNotify), global::EggLink.DanhengServer.Proto.MissionGroupWarnScNotify.Parser, new[]{ "GroupIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MissionGroupWarnScNotify(MissionGroupWarnScNotify other) : this() {
-      bOEOAMCNGCI_ = other.bOEOAMCNGCI_.Clone();
+      groupIdList_ = other.groupIdList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new MissionGroupWarnScNotify(this);
     }
 
-    /// <summary>Field number for the "BOEOAMCNGCI" field.</summary>
-    public const int BOEOAMCNGCIFieldNumber = 1;
-    private static readonly pb::FieldCodec<uint> _repeated_bOEOAMCNGCI_codec
-        = pb::FieldCodec.ForUInt32(10);
-    private readonly pbc::RepeatedField<uint> bOEOAMCNGCI_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "group_id_list" field.</summary>
+    public const int GroupIdListFieldNumber = 8;
+    private static readonly pb::FieldCodec<uint> _repeated_groupIdList_codec
+        = pb::FieldCodec.ForUInt32(66);
+    private readonly pbc::RepeatedField<uint> groupIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> BOEOAMCNGCI {
-      get { return bOEOAMCNGCI_; }
+    public pbc::RepeatedField<uint> GroupIdList {
+      get { return groupIdList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -108,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!bOEOAMCNGCI_.Equals(other.bOEOAMCNGCI_)) return false;
+      if(!groupIdList_.Equals(other.groupIdList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -116,7 +116,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= bOEOAMCNGCI_.GetHashCode();
+      hash ^= groupIdList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -135,7 +135,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      bOEOAMCNGCI_.WriteTo(output, _repeated_bOEOAMCNGCI_codec);
+      groupIdList_.WriteTo(output, _repeated_groupIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -146,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      bOEOAMCNGCI_.WriteTo(ref output, _repeated_bOEOAMCNGCI_codec);
+      groupIdList_.WriteTo(ref output, _repeated_groupIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += bOEOAMCNGCI_.CalculateSize(_repeated_bOEOAMCNGCI_codec);
+      size += groupIdList_.CalculateSize(_repeated_groupIdList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -170,7 +170,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      bOEOAMCNGCI_.Add(other.bOEOAMCNGCI_);
+      groupIdList_.Add(other.groupIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -186,9 +186,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10:
-          case 8: {
-            bOEOAMCNGCI_.AddEntriesFrom(input, _repeated_bOEOAMCNGCI_codec);
+          case 66:
+          case 64: {
+            groupIdList_.AddEntriesFrom(input, _repeated_groupIdList_codec);
             break;
           }
         }
@@ -206,9 +206,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10:
-          case 8: {
-            bOEOAMCNGCI_.AddEntriesFrom(ref input, _repeated_bOEOAMCNGCI_codec);
+          case 66:
+          case 64: {
+            groupIdList_.AddEntriesFrom(ref input, _repeated_groupIdList_codec);
             break;
           }
         }

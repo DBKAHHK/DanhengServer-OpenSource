@@ -24,14 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static DressAvatarCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZEcmVzc0F2YXRhckNzUmVxLnByb3RvIkgKEERyZXNzQXZhdGFyQ3NSZXES",
-            "FwoPZHJlc3NfYXZhdGFyX2lkGAIgASgNEhsKE2VxdWlwbWVudF91bmlxdWVf",
-            "aWQYDiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
-            "dG8z"));
+            "ChZEcmVzc0F2YXRhckNzUmVxLnByb3RvIkIKEERyZXNzQXZhdGFyQ3NSZXES",
+            "EQoJYXZhdGFyX2lkGAIgASgNEhsKE2VxdWlwbWVudF91bmlxdWVfaWQYBCAB",
+            "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DressAvatarCsReq), global::EggLink.DanhengServer.Proto.DressAvatarCsReq.Parser, new[]{ "DressAvatarId", "EquipmentUniqueId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DressAvatarCsReq), global::EggLink.DanhengServer.Proto.DressAvatarCsReq.Parser, new[]{ "AvatarId", "EquipmentUniqueId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DressAvatarCsReq(DressAvatarCsReq other) : this() {
-      dressAvatarId_ = other.dressAvatarId_;
+      avatarId_ = other.avatarId_;
       equipmentUniqueId_ = other.equipmentUniqueId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,20 +83,20 @@ namespace EggLink.DanhengServer.Proto {
       return new DressAvatarCsReq(this);
     }
 
-    /// <summary>Field number for the "dress_avatar_id" field.</summary>
-    public const int DressAvatarIdFieldNumber = 2;
-    private uint dressAvatarId_;
+    /// <summary>Field number for the "avatar_id" field.</summary>
+    public const int AvatarIdFieldNumber = 2;
+    private uint avatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DressAvatarId {
-      get { return dressAvatarId_; }
+    public uint AvatarId {
+      get { return avatarId_; }
       set {
-        dressAvatarId_ = value;
+        avatarId_ = value;
       }
     }
 
     /// <summary>Field number for the "equipment_unique_id" field.</summary>
-    public const int EquipmentUniqueIdFieldNumber = 14;
+    public const int EquipmentUniqueIdFieldNumber = 4;
     private uint equipmentUniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DressAvatarId != other.DressAvatarId) return false;
+      if (AvatarId != other.AvatarId) return false;
       if (EquipmentUniqueId != other.EquipmentUniqueId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -132,7 +131,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (DressAvatarId != 0) hash ^= DressAvatarId.GetHashCode();
+      if (AvatarId != 0) hash ^= AvatarId.GetHashCode();
       if (EquipmentUniqueId != 0) hash ^= EquipmentUniqueId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -152,12 +151,12 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (DressAvatarId != 0) {
+      if (AvatarId != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(DressAvatarId);
+        output.WriteUInt32(AvatarId);
       }
       if (EquipmentUniqueId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(32);
         output.WriteUInt32(EquipmentUniqueId);
       }
       if (_unknownFields != null) {
@@ -170,12 +169,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (DressAvatarId != 0) {
+      if (AvatarId != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(DressAvatarId);
+        output.WriteUInt32(AvatarId);
       }
       if (EquipmentUniqueId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(32);
         output.WriteUInt32(EquipmentUniqueId);
       }
       if (_unknownFields != null) {
@@ -188,8 +187,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (DressAvatarId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DressAvatarId);
+      if (AvatarId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AvatarId);
       }
       if (EquipmentUniqueId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EquipmentUniqueId);
@@ -206,8 +205,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.DressAvatarId != 0) {
-        DressAvatarId = other.DressAvatarId;
+      if (other.AvatarId != 0) {
+        AvatarId = other.AvatarId;
       }
       if (other.EquipmentUniqueId != 0) {
         EquipmentUniqueId = other.EquipmentUniqueId;
@@ -228,10 +227,10 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 16: {
-            DressAvatarId = input.ReadUInt32();
+            AvatarId = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 32: {
             EquipmentUniqueId = input.ReadUInt32();
             break;
           }
@@ -251,10 +250,10 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 16: {
-            DressAvatarId = input.ReadUInt32();
+            AvatarId = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 32: {
             EquipmentUniqueId = input.ReadUInt32();
             break;
           }

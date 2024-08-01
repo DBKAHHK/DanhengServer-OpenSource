@@ -12,7 +12,7 @@ public class PacketGetRaidInfoScRsp : BasePacket
         foreach (var recordDict in player.RaidManager!.RaidData.RaidRecordDatas)
         foreach (var record in recordDict.Value)
             if (record.Value.Status == RaidStatus.Finish)
-                proto.FinishedRaidInfoList.Add(new RaidInfo
+                proto.FinishedRaidInfoList.Add(new FinishedRaidInfo
                 {
                     RaidId = (uint)record.Value.RaidId,
                     WorldLevel = (uint)record.Value.WorldLevel
