@@ -1,4 +1,6 @@
-﻿namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Rogue;
+﻿using EggLink.DanhengServer.Kcp;
+
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Rogue;
 
 [Opcode(CmdIds.ChessRogueReRollDiceCsReq)]
 public class HandlerChessRogueReRollDiceCsReq : Handler

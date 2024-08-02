@@ -1,4 +1,5 @@
 ﻿using EggLink.DanhengServer.GameServer.Server;
+using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.Command.Command;
@@ -38,10 +39,9 @@ public class CommandArg
 
         CharacterArgs.TryGetValue("@", out var target);
         if (target != null)
-        {
-            var connection = Listener.Connections.Values.ToList().Find(item => item.Player?.Uid.ToString() == target);
-            if (connection != null) Target = connection;
-        }
+            if (DanhengListener.Connections.Values.ToList()
+                    .Find(item => (item as Connection)?.Player?.Uid.ToString() == target) is Connection connection)
+                Target = connection;
     }
 
     public string Raw { get; }

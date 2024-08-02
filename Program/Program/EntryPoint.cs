@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.Command.Command;
+﻿using System.Globalization;
+using EggLink.DanhengServer.Command.Command;
 using EggLink.DanhengServer.Configuration;
 using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database;
@@ -8,6 +9,7 @@ using EggLink.DanhengServer.GameServer.Plugin;
 using EggLink.DanhengServer.GameServer.Server;
 using EggLink.DanhengServer.GameServer.Server.Packet;
 using EggLink.DanhengServer.Internationalization;
+using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Program.Handbook;
 using EggLink.DanhengServer.Util;
 using EggLink.DanhengServer.WebServer;
@@ -17,7 +19,7 @@ namespace EggLink.DanhengServer.Program.Program;
 
 public class EntryPoint
 {
-    private static readonly Logger logger = new("Program");
+    private static readonly Logger Logger = new("Program");
     public static readonly DatabaseHelper DatabaseHelper = new();
     public static readonly Listener Listener = new();
     public static readonly CommandManager CommandManager = new();
@@ -26,12 +28,12 @@ public class EntryPoint
     {
         AppDomain.CurrentDomain.ProcessExit += (sender, eventArgs) =>
         {
-            logger.Info(I18nManager.Translate("Server.ServerInfo.Shutdown"));
+            Logger.Info(I18nManager.Translate("Server.ServerInfo.Shutdown"));
             PerformCleanup();
         };
         Console.CancelKeyPress += (sender, eventArgs) =>
         {
-            logger.Info(I18nManager.Translate("Server.ServerInfo.CancelKeyPressed"));
+            Logger.Info(I18nManager.Translate("Server.ServerInfo.CancelKeyPressed"));
             eventArgs.Cancel = true;
             Environment.Exit(0);
         };
@@ -51,45 +53,45 @@ public class EntryPoint
 
         Logger.SetLogFile(file);
         // Starting the server
-        logger.Info(I18nManager.Translate("Server.ServerInfo.StartingServer"));
+        Logger.Info(I18nManager.Translate("Server.ServerInfo.StartingServer"));
 
         // Load the config
-        logger.Info(I18nManager.Translate("Server.ServerInfo.LoadingItem", I18nManager.Translate("Word.Config")));
+        Logger.Info(I18nManager.Translate("Server.ServerInfo.LoadingItem", I18nManager.Translate("Word.Config")));
         try
         {
             ConfigManager.LoadConfig();
         }
         catch (Exception e)
         {
-            logger.Error(
+            Logger.Error(
                 I18nManager.Translate("Server.ServerInfo.FailedToLoadItem", I18nManager.Translate("Word.Config")), e);
             Console.ReadLine();
             return;
         }
 
         // Load the language
-        logger.Info(I18nManager.Translate("Server.ServerInfo.LoadingItem", I18nManager.Translate("Word.Language")));
+        Logger.Info(I18nManager.Translate("Server.ServerInfo.LoadingItem", I18nManager.Translate("Word.Language")));
         try
         {
             I18nManager.LoadLanguage();
         }
         catch (Exception e)
         {
-            logger.Error(
+            Logger.Error(
                 I18nManager.Translate("Server.ServerInfo.FailedToLoadItem", I18nManager.Translate("Word.Language")), e);
             Console.ReadLine();
             return;
         }
 
         // Load the game data
-        logger.Info(I18nManager.Translate("Server.ServerInfo.LoadingItem", I18nManager.Translate("Word.GameData")));
+        Logger.Info(I18nManager.Translate("Server.ServerInfo.LoadingItem", I18nManager.Translate("Word.GameData")));
         try
         {
             ResourceManager.LoadGameData();
         }
         catch (Exception e)
         {
-            logger.Error(
+            Logger.Error(
                 I18nManager.Translate("Server.ServerInfo.FailedToLoadItem", I18nManager.Translate("Word.GameData")), e);
             Console.ReadLine();
             return;
@@ -106,7 +108,7 @@ public class EntryPoint
         }
         catch (Exception e)
         {
-            logger.Error(
+            Logger.Error(
                 I18nManager.Translate("Server.ServerInfo.FailedToLoadItem", I18nManager.Translate("Word.Database")), e);
             Console.ReadLine();
             return;
@@ -119,7 +121,7 @@ public class EntryPoint
         }
         catch (Exception e)
         {
-            logger.Error(
+            Logger.Error(
                 I18nManager.Translate("Server.ServerInfo.FailedToInitializeItem",
                     I18nManager.Translate("Word.Command")), e);
             Console.ReadLine();
@@ -127,14 +129,14 @@ public class EntryPoint
         }
 
         // Load the plugins
-        logger.Info(I18nManager.Translate("Server.ServerInfo.LoadingItem", I18nManager.Translate("Word.Plugin")));
+        Logger.Info(I18nManager.Translate("Server.ServerInfo.LoadingItem", I18nManager.Translate("Word.Plugin")));
         try
         {
             PluginManager.LoadPlugins();
         }
         catch (Exception e)
         {
-            logger.Error(
+            Logger.Error(
                 I18nManager.Translate("Server.ServerInfo.FailedToLoadItem", I18nManager.Translate("Word.Plugin")), e);
             Console.ReadLine();
             return;
@@ -145,37 +147,40 @@ public class EntryPoint
         MuipManager.OnExecuteCommand += CommandManager.HandleCommand;
         MuipManager.OnGetServerInformation += x =>
         {
-            foreach (var con in Listener.Connections.Values)
-                if (con.Player != null)
-                    x.Add(con.Player.Uid, con.Player.Data);
+            foreach (var con in DanhengListener.Connections.Values)
+                if ((con as Connection)?.Player != null)
+                    x.Add((con as Connection)!.Player!.Uid, (con as Connection)!.Player!.Data);
         };
         MuipManager.OnGetPlayerStatus += (int uid, out PlayerStatusEnum status, out PlayerSubStatusEnum subStatus) =>
         {
             subStatus = PlayerSubStatusEnum.None;
-            foreach (var con in Listener.Connections.Values)
-                if (con.Player != null && con.Player.Uid == uid)
+            foreach (var con in DanhengListener.Connections.Values)
+                if ((con as Connection)!.Player != null && (con as Connection)!.Player!.Uid == uid)
                 {
-                    if (con.Player.RogueManager?.GetRogueInstance() != null)
+                    if ((con as Connection)!.Player!.RogueManager?.GetRogueInstance() != null)
                     {
                         status = PlayerStatusEnum.Rogue;
-                        if (con.Player.ChessRogueManager?.RogueInstance?.AreaExcel.RogueVersionId == 202)
+                        if ((con as Connection)!.Player!.ChessRogueManager?.RogueInstance?.AreaExcel.RogueVersionId ==
+                            202)
                             status = PlayerStatusEnum.ChessRogueNous;
-                        else if (con.Player.ChessRogueManager?.RogueInstance?.AreaExcel.RogueVersionId == 201)
+                        else if ((con as Connection)!.Player!.ChessRogueManager?.RogueInstance?.AreaExcel
+                                 .RogueVersionId == 201)
                             status = PlayerStatusEnum.ChessRogue;
                     }
-                    else if (con.Player.ChallengeManager?.ChallengeInstance != null)
+                    else if ((con as Connection)!.Player!.ChallengeManager?.ChallengeInstance != null)
                     {
                         status = PlayerStatusEnum.Challenge;
-                        if (con.Player.ChallengeManager.ChallengeInstance.Excel.StoryExcel != null)
+                        if ((con as Connection)!.Player?.ChallengeManager?.ChallengeInstance?.Excel.StoryExcel != null)
                             status = PlayerStatusEnum.ChallengeStory;
-                        else if (con.Player.ChallengeManager.ChallengeInstance.Excel.BossExcel != null)
+                        else if ((con as Connection)!.Player?.ChallengeManager?.ChallengeInstance?.Excel.BossExcel !=
+                                 null)
                             status = PlayerStatusEnum.ChallengeBoss;
                     }
-                    else if (con.Player.RaidManager?.RaidData.CurRaidId != 0)
+                    else if ((con as Connection)!.Player!.RaidManager?.RaidData.CurRaidId != 0)
                     {
                         status = PlayerStatusEnum.Raid;
                     }
-                    else if (con.Player.StoryLineManager?.StoryLineData.CurStoryLineId != 0)
+                    else if ((con as Connection)!.Player!.StoryLineManager?.StoryLineData.CurStoryLineId != 0)
                     {
                         status = PlayerStatusEnum.StoryLine;
                     }
@@ -184,7 +189,7 @@ public class EntryPoint
                         status = PlayerStatusEnum.Explore;
                     }
 
-                    if (con.Player.BattleInstance != null) subStatus = PlayerSubStatusEnum.Battle;
+                    if ((con as Connection)!.Player!.BattleInstance != null) subStatus = PlayerSubStatusEnum.Battle;
 
                     return;
                 }
@@ -198,18 +203,20 @@ public class EntryPoint
         HandlerManager.Init();
 
         WebProgram.Main([], GetConfig().HttpServer.PublicPort, GetConfig().HttpServer.GetDisplayAddress());
-        logger.Info(I18nManager.Translate("Server.ServerInfo.ServerRunning", I18nManager.Translate("Word.Dispatch"),
+        Logger.Info(I18nManager.Translate("Server.ServerInfo.ServerRunning", I18nManager.Translate("Word.Dispatch"),
             GetConfig().HttpServer.GetDisplayAddress()));
 
-        Listener.StartListener();
+        DanhengListener.BaseConnection = typeof(Connection);
+        DanhengListener.StartListener();
 
         var elapsed = DateTime.Now - time;
-        logger.Info(I18nManager.Translate("Server.ServerInfo.ServerStarted", elapsed.TotalSeconds.ToString()[..4]));
+        Logger.Info(I18nManager.Translate("Server.ServerInfo.ServerStarted",
+            elapsed.TotalSeconds.ToString(CultureInfo.InvariantCulture)[..4]));
 
         GenerateLogMap();
 
         if (GetConfig().ServerOption.EnableMission)
-            logger.Warn(I18nManager.Translate("Server.ServerInfo.MissionEnabled"));
+            Logger.Warn(I18nManager.Translate("Server.ServerInfo.MissionEnabled"));
         CommandManager.Start();
     }
 
@@ -221,7 +228,7 @@ public class EntryPoint
     private static void PerformCleanup()
     {
         PluginManager.UnloadPlugins();
-        Listener.Connections.Values.ToList().ForEach(x => x.Stop());
+        DanhengListener.Connections.Values.ToList().ForEach(x => x.Stop());
 
         DatabaseHelper.SaveThread?.Interrupt();
         DatabaseHelper.SaveDatabase();
@@ -235,7 +242,7 @@ public class EntryPoint
         {
             var name = opcode.Name;
             var value = (int)opcode.GetValue(null)!;
-            Connection.LogMap.Add(value.ToString(), name);
+            DanhengConnection.LogMap.Add(value.ToString(), name);
         }
     }
 }

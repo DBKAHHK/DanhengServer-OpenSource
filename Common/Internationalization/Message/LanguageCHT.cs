@@ -179,7 +179,8 @@ public class NoticeTextCHT
 /// </summary>
 public class HeroTextCHT
 {
-    public string Desc => "切換主角的性別/形態\n當切換性別時，genderId為1代表男性，2代表女性\n當切換形態時，8001代表毀滅命途，8003代表存護命途，8005代表同諧命途。\n注意，切換性別時會清空所有可選命途以及行跡，為不可逆操作！";
+    public string Desc =>
+        "切換主角的性別/形態\n當切換性別時，genderId為1代表男性，2代表女性\n當切換形態時，8001代表毀滅命途，8003代表存護命途，8005代表同諧命途。\n注意，切換性別時會清空所有可選命途以及行跡，為不可逆操作！";
 
     public string Usage => "用法：/hero gender [genderId]\n\n用法：/hero type [typeId]";
     public string GenderNotSpecified => "性別不存在!";
@@ -208,7 +209,8 @@ public class AvatarTextCHT
 {
     public string Desc => "設定玩家已有角色的屬性\n設置行跡等級時，設置X級即設置所有行跡節點至X級，若大於此節點允許的最高等級，設置為最高等級\n注意：-1意為所有已擁有角色";
 
-    public string Usage => "用法：/avatar talent [角色ID/-1] [行跡等級]\n\n用法：/avatar get [角色ID]\n\n用法：/avatar rank [角色ID/-1] [星魂]\n\n用法：/avatar level [角色ID/-1] [角色等級]";
+    public string Usage =>
+        "用法：/avatar talent [角色ID/-1] [行跡等級]\n\n用法：/avatar get [角色ID]\n\n用法：/avatar rank [角色ID/-1] [星魂]\n\n用法：/avatar level [角色ID/-1] [角色等級]";
 
     public string InvalidLevel => "{0}等級無效";
     public string AllAvatarsLevelSet => "已將全部角色 {0}等級設置為 {1}";
@@ -236,7 +238,8 @@ public class GiveAllTextCHT
 {
     public string Desc => "給予玩家全部指定類型的物品\navatar意為角色，equipment意為光錐，relic意為遺器，unlock意為氣泡、手機壁紙、頭像";
 
-    public string Usage => "用法：/giveall avatar r<星魂> l<等級>\n\n用法：/giveall equipment r<疊影> l<等級> x<數量>\n\n用法：/giveall relic l<等級> x<數量>\n\n用法：/giveall unlock";
+    public string Usage =>
+        "用法：/giveall avatar r<星魂> l<等級>\n\n用法：/giveall equipment r<疊影> l<等級> x<數量>\n\n用法：/giveall relic l<等級> x<數量>\n\n用法：/giveall unlock";
 
     public string GiveAllItems => "已給予所有 {0}, 各 {1} 個";
 }
@@ -284,7 +287,8 @@ public class MissionTextCHT
         "使用 running 獲取正在進行的任務以及可能卡住的任務，使用後可能會出現較長任務列表，請注意甄別\n" +
         "使用 reaccept 可重新進行指定主任務，請瀏覽 handbook 來獲取主任務ID";
 
-    public string Usage => "用法：/mission pass\n\n用法：/mission finish [子任務ID]\n\n用法：/mission running\n\n用法：/mission reaccept [主任務ID]";
+    public string Usage =>
+        "用法：/mission pass\n\n用法：/mission finish [子任務ID]\n\n用法：/mission running\n\n用法：/mission reaccept [主任務ID]";
 
     public string AllMissionsFinished => "所有任務已完成!";
     public string AllRunningMissionsFinished => "共 {0} 個進行中的任務已完成!";
@@ -306,7 +310,8 @@ public class RelicTextCHT
 {
     public string Desc => "管理玩家的遺器\n主詞條可選，副詞條可選，但至少存在其中之一\n等級限制：1≤等級≤9999";
 
-    public string Usage => "用法：/relic <遺器ID> <主詞條ID> <小詞條ID1:小詞條等級> <小詞條ID2:小詞條等級> <小詞條ID3:小詞條等級> <小詞條ID4:小詞條等級> l<等級> x<數量>";
+    public string Usage =>
+        "用法：/relic <遺器ID> <主詞條ID> <小詞條ID1:小詞條等級> <小詞條ID2:小詞條等級> <小詞條ID3:小詞條等級> <小詞條ID4:小詞條等級> l<等級> x<數量>";
 
     public string RelicNotFound => "遺器不存在!";
     public string InvalidMainAffixId => "主詞條ID無效";
@@ -331,7 +336,8 @@ public class RogueTextCHT
 {
     public string Desc => "管理玩家模擬宇宙中的數據\n-1意為所有祝福（已擁有祝福）\n使用 buff 來獲取祝福\n使用 enhance 來強化祝福";
 
-    public string Usage => "用法：/rogue money [宇宙碎片數量]\n\n用法：/rogue buff [祝福ID/-1]\n\n用法：/rogue miracle [奇物ID]\n\n用法：/rogue enhance [祝福ID/-1]\n\n用法：/rogue unstuck - 脫離事件";
+    public string Usage =>
+        "用法：/rogue money [宇宙碎片數量]\n\n用法：/rogue buff [祝福ID/-1]\n\n用法：/rogue miracle [奇物ID]\n\n用法：/rogue enhance [祝福ID/-1]\n\n用法：/rogue unstuck - 脫離事件";
 
     public string PlayerGainedMoney => "玩家已獲得 {0} 宇宙碎片";
     public string PlayerGainedAllItems => "玩家已獲得所有{0}";
@@ -357,7 +363,8 @@ public class SceneTextCHT
         "使用 reload 來重新加載當前場景，並回到初始位置\n" +
         "使用 reset 來重置指定場景所有道具狀態，要獲取當前FloorId，請訪問數據庫 Player 表";
 
-    public string Usage => "用法：/scene prop [組ID] [道具ID] [狀態]\n\n用法：/scene remove [實體ID]\n\n用法：/scene unlockall\n\n用法：/scene change [entryId]\n\n用法：/scene reload\n\n用法：/scene reset <floorId>";
+    public string Usage =>
+        "用法：/scene prop [組ID] [道具ID] [狀態]\n\n用法：/scene remove [實體ID]\n\n用法：/scene unlockall\n\n用法：/scene change [entryId]\n\n用法：/scene reload\n\n用法：/scene reset <floorId>";
 
     public string LoadedGroups => "已加載組: {0}";
     public string PropStateChanged => "道具: {0} 的狀態已設置為 {1}";

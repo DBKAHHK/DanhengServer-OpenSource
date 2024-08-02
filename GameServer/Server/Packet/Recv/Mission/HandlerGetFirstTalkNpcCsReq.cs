@@ -1,4 +1,6 @@
-﻿namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Mission;
+﻿using EggLink.DanhengServer.Kcp;
+
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Mission;
 
 [Opcode(CmdIds.GetFirstTalkNpcCsReq)]
 public class HandlerGetFirstTalkNpcCsReq : Handler

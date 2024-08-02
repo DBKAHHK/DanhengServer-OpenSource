@@ -1,37 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using EggLink.DanhengServer.Data.Config;
+﻿using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.GameServer.Game.Mission.FinishType.Handler
+namespace EggLink.DanhengServer.GameServer.Game.Mission.FinishType.Handler;
+
+[MissionFinishType(MissionFinishTypeEnum.FinishQuest)]
+public class MissionHandlerFinishQuest : MissionFinishTypeHandler
 {
-    [MissionFinishType(MissionFinishTypeEnum.FinishQuest)]
-    public class MissionHandlerFinishQuest : MissionFinishTypeHandler
+    public override async ValueTask HandleMissionFinishType(PlayerInstance player, SubMissionInfo info, object? arg)
     {
-        public override async ValueTask HandleMissionFinishType(PlayerInstance player, SubMissionInfo info, object? arg)
+        // this type wont be used in mission
+        await ValueTask.CompletedTask;
+    }
+
+    public override async ValueTask HandleQuestFinishType(PlayerInstance player, QuestDataExcel quest,
+        FinishWayExcel excel, object? arg)
+    {
+        var questCount = 0;
+        foreach (var qid in excel.ParamIntList)
         {
-            // this type wont be used in mission
-            await ValueTask.CompletedTask;
+            var status = player.QuestManager?.GetQuestStatus(qid);
+            if (status == QuestStatus.QuestFinish || status == QuestStatus.QuestClose)
+                questCount++;
         }
 
-        public override async ValueTask HandleQuestFinishType(PlayerInstance player, QuestDataExcel quest,
-            FinishWayExcel excel, object? arg)
-        {
-            var questCount = 0;
-            foreach (var qid in excel.ParamIntList)
-            {
-                var status = player.QuestManager?.GetQuestStatus(qid);
-                if (status == QuestStatus.QuestFinish || status == QuestStatus.QuestClose)
-                    questCount++;
-            }
-
-            await player.QuestManager!.UpdateQuestProgress(quest.QuestID, questCount);
-        }
+        await player.QuestManager!.UpdateQuestProgress(quest.QuestID, questCount);
     }
 }

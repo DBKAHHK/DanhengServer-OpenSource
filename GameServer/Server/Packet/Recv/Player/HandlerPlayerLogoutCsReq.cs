@@ -1,4 +1,6 @@
-﻿namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Player;
+﻿using EggLink.DanhengServer.Kcp;
+
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Player;
 
 [Opcode(CmdIds.PlayerLogoutCsReq)]
 public class HandlerPlayerLogoutCsReq : Handler

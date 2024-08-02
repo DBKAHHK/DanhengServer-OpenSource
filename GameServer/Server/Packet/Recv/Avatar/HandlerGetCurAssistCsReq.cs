@@ -1,4 +1,6 @@
-﻿namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Avatar;
+﻿using EggLink.DanhengServer.Kcp;
+
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Avatar;
 
 [Opcode(CmdIds.GetCurAssistCsReq)]
 public class HandlerGetCurAssistCsReq : Handler

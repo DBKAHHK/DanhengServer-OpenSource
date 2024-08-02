@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using EggLink.DanhengServer.GameServer.Server;
 using EggLink.DanhengServer.Internationalization;
+using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Util;
 using Spectre.Console;
 
@@ -8,15 +9,15 @@ namespace EggLink.DanhengServer.Command.Command;
 
 public class CommandManager
 {
+    private const int MaxCommandHistory = 100;
+
+    private readonly List<string> _commandHistory = [];
+    private int _historyIndex = -1;
     public static CommandManager? Instance { get; private set; }
     public Dictionary<string, ICommand> Commands { get; } = [];
     public Dictionary<string, CommandInfo> CommandInfo { get; } = [];
     public Logger Logger { get; } = new("CommandManager");
     public Connection? Target { get; set; }
-
-    private List<string> commandHistory = new();
-    private int historyIndex = -1;
-    private const int MaxCommandHistory = 100;
 
     public void RegisterCommand()
     {
@@ -48,18 +49,12 @@ public class CommandManager
 
                 if (string.IsNullOrEmpty(input)) continue;
 
-                if (input.StartsWith("/"))
-                {
-                    input = input.Substring(1);
-                }
+                if (input.StartsWith("/")) input = input.Substring(1);
 
-                if (commandHistory.Count >= MaxCommandHistory)
-                {
-                    commandHistory.RemoveAt(0);
-                }
+                if (_commandHistory.Count >= MaxCommandHistory) _commandHistory.RemoveAt(0);
 
-                if (commandHistory.Count == 0 || commandHistory.Last() != input) commandHistory.Add(input);
-                historyIndex = commandHistory.Count;
+                if (_commandHistory.Count == 0 || _commandHistory.Last() != input) _commandHistory.Add(input);
+                _historyIndex = _commandHistory.Count;
                 HandleCommand(input, new ConsoleCommandSender(Logger));
             }
             catch
@@ -94,26 +89,26 @@ public class CommandManager
             }
             else if (keyInfo.Key == ConsoleKey.UpArrow)
             {
-                if (historyIndex > 0)
+                if (_historyIndex > 0)
                 {
-                    historyIndex--;
-                    ReplaceInput(input, commandHistory[historyIndex]);
+                    _historyIndex--;
+                    ReplaceInput(input, _commandHistory[_historyIndex]);
                 }
             }
             else if (keyInfo.Key == ConsoleKey.DownArrow)
             {
-                if (historyIndex < commandHistory.Count - 1)
+                if (_historyIndex < _commandHistory.Count - 1)
                 {
-                    historyIndex++;
-                    ReplaceInput(input, commandHistory[historyIndex]);
+                    _historyIndex++;
+                    ReplaceInput(input, _commandHistory[_historyIndex]);
                 }
-                else if (historyIndex == commandHistory.Count - 1)
+                else if (_historyIndex == _commandHistory.Count - 1)
                 {
-                    historyIndex++;
+                    _historyIndex++;
                     ReplaceInput(input, string.Empty);
                 }
             }
-            else  // known issue: Ctrl + (Any Key but C) or other control key will cause display error
+            else // known issue: Ctrl + (Any Key but C) or other control key will cause display error
             {
                 input.Add(keyInfo.KeyChar);
                 Console.Write(keyInfo.KeyChar);
@@ -147,8 +142,8 @@ public class CommandManager
                 if (cmd.StartsWith('@'))
                 {
                     var target = cmd[1..];
-                    var con = Listener.Connections.Values.ToList().Find(item => item.Player?.Uid.ToString() == target);
-                    if (con != null)
+                    if (DanhengListener.Connections.Values.ToList()
+                            .Find(item => (item as Connection)?.Player?.Uid.ToString() == target) is Connection con)
                     {
                         Target = con;
                         sender.SendMsg(I18nManager.Translate("Game.Command.Notice.TargetFound", target,

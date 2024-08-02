@@ -143,8 +143,12 @@ public class ServerInfoTextEN
     public string LoadedItem => "Loaded {0}.";
     public string LoadedItems => "Loaded {0} {1}(s).";
     public string ServerRunning => "{0} server listening on {1}";
-    public string ServerStarted => "Startup complete! Took {0}s, better than 99% of users. Type 'help' for command help"; // This is a meme, consider localizing in English
-    public string MissionEnabled => "Mission system enabled. This feature is still in development and may not work as expected. Please report any bugs to the developers.";
+
+    public string ServerStarted =>
+        "Startup complete! Took {0}s, better than 99% of users. Type 'help' for command help"; // This is a meme, consider localizing in English
+
+    public string MissionEnabled =>
+        "Mission system enabled. This feature is still in development and may not work as expected. Please report any bugs to the developers.";
 
     public string ConfigMissing => "{0} is missing. Please check your resource folder: {1}, {2} may not be available.";
     public string UnloadedItems => "Unloaded all {0}.";
@@ -179,7 +183,8 @@ public class NoticeTextEN
 /// </summary>
 public class HeroTextEN
 {
-    public string Desc => "Switch the gender/type of the main character\nWhen switch the gender, 1 means male, 2 means female\nWhen switch the type(path), 8001 means Destruction, 8003 means Preservation, 8005 means Harmony.\nNotice: Switch gender will clear all the paths and talents of main character, this operation is irreversible!";
+    public string Desc =>
+        "Switch the gender/type of the main character\nWhen switch the gender, 1 means male, 2 means female\nWhen switch the type(path), 8001 means Destruction, 8003 means Preservation, 8005 means Harmony.\nNotice: Switch gender will clear all the paths and talents of main character, this operation is irreversible!";
 
     public string Usage => "Usage: /hero gender [genderId]\n\nUsage: /hero type [typeId]";
 
@@ -197,6 +202,7 @@ public class UnlockAllTextEN
     public string Desc =>
         "Unlock the objects in given category\n" +
         "Use '/unlockall mission' to finish all missions, and the target player will be kicked, after re-login, the player may be stuck in tutorial, please use with caution";
+
     public string Usage => "Usage: /unlockall mission";
     public string AllMissionsUnlocked => "All missions have been unlocked!";
 }
@@ -206,9 +212,11 @@ public class UnlockAllTextEN
 /// </summary>
 public class AvatarTextEN
 {
-    public string Desc => "Set the properties of the avatars player owned\nWhen set talent level, set to X level means set all talent point to X level, if greater than the point max level, set to max level\nNotice: -1 means all owned avatars";
+    public string Desc =>
+        "Set the properties of the avatars player owned\nWhen set talent level, set to X level means set all talent point to X level, if greater than the point max level, set to max level\nNotice: -1 means all owned avatars";
 
-    public string Usage => "Usage: /avatar talent [Avatar ID/-1] [Talent Level]\n\nUsage: /avatar get [Avatar ID]\n\nUsage: /avatar rank [Avatar ID/-1] [Rank]\n\nUsage: /avatar level [Avatar ID/-1] [Avatar Level]";
+    public string Usage =>
+        "Usage: /avatar talent [Avatar ID/-1] [Talent Level]\n\nUsage: /avatar get [Avatar ID]\n\nUsage: /avatar rank [Avatar ID/-1] [Rank]\n\nUsage: /avatar level [Avatar ID/-1] [Avatar Level]";
 
     public string InvalidLevel => "Invalid {0} level";
     public string AllAvatarsLevelSet => "Set all characters' {0} level to {1}";
@@ -234,9 +242,11 @@ public class GiveTextEN
 /// </summary>
 public class GiveAllTextEN
 {
-    public string Desc => "Give the player all specified types of items\navatar means characters, equipment means light cones, relic means relic(artifact), unlock means chatBubbles, avatar(head icon), wallpaper";
+    public string Desc =>
+        "Give the player all specified types of items\navatar means characters, equipment means light cones, relic means relic(artifact), unlock means chatBubbles, avatar(head icon), wallpaper";
 
-    public string Usage => "Usage: /giveall avatar r<rank> l<level>\n\nUsage: /giveall equipment r<rank> l<level> x<amount>\n\nUsage: /giveall relic l<level> x<amount>\n\nUsage: /giveall unlock";
+    public string Usage =>
+        "Usage: /giveall avatar r<rank> l<level>\n\nUsage: /giveall equipment r<rank> l<level> x<amount>\n\nUsage: /giveall relic l<level> x<amount>\n\nUsage: /giveall unlock";
 
     public string GiveAllItems => "Gave all {0}, each {1} items";
 }
@@ -285,7 +295,8 @@ public class MissionTextEN
         "Use 'running' to get the running mission and possible stuck missions, after use, a longer mission list may appear, please note that\n" +
         "Use 'reaccept' to re-accept given main mission, please find main mission id in handbook";
 
-    public string Usage => "Usage: /mission pass\n\nUsage: /mission finish [Sub mission ID]\n\nUsage: /mission running\n\nUsage: /mission reaccept [main mission id]";
+    public string Usage =>
+        "Usage: /mission pass\n\nUsage: /mission finish [Sub mission ID]\n\nUsage: /mission running\n\nUsage: /mission reaccept [main mission id]";
 
     public string AllMissionsFinished => "All tasks have been completed!";
     public string AllRunningMissionsFinished => "A total of {0} ongoing tasks have been completed!";
@@ -305,9 +316,11 @@ public class MissionTextEN
 /// </summary>
 public class RelicTextEN
 {
-    public string Desc => "Manage player's relics\nmain affix optional, sub affix optional, but at least one of them exists\nLevel limit: 1≤Level≤9999";
+    public string Desc =>
+        "Manage player's relics\nmain affix optional, sub affix optional, but at least one of them exists\nLevel limit: 1≤Level≤9999";
 
-    public string Usage => "Usage: /relic <relic ID> <main affix ID> <sub affix ID1:sub affix level> <sub affix ID2:sub affix level> <sub affix ID3:sub affix level> <sub affix ID4:sub affix level> l<level> x<amount>";
+    public string Usage =>
+        "Usage: /relic <relic ID> <main affix ID> <sub affix ID1:sub affix level> <sub affix ID2:sub affix level> <sub affix ID3:sub affix level> <sub affix ID4:sub affix level> l<level> x<amount>";
 
     public string RelicNotFound => "Relic does not exist!";
     public string InvalidMainAffixId => "Invalid main affix ID";
@@ -330,9 +343,11 @@ public class ReloadTextEN
 /// </summary>
 public class RogueTextEN
 {
-    public string Desc => "Manage player's data in the simulated universe\n-1 means all blessings (all owned blessings)\nUse 'buff' to get blessings\nUse 'enhance' to enhance blessings";
+    public string Desc =>
+        "Manage player's data in the simulated universe\n-1 means all blessings (all owned blessings)\nUse 'buff' to get blessings\nUse 'enhance' to enhance blessings";
 
-    public string Usage => "Usage: /rogue money [Universe Debris Amount]\n\nUsage: /rogue buff [Blessing Id/-1]\n\nUsage: /rogue miracle [Miracle ID]\n\nUsage: /rogue enhance [Blessing ID/-1]\n\nUsage: /rogue unstuck - Leave event";
+    public string Usage =>
+        "Usage: /rogue money [Universe Debris Amount]\n\nUsage: /rogue buff [Blessing Id/-1]\n\nUsage: /rogue miracle [Miracle ID]\n\nUsage: /rogue enhance [Blessing ID/-1]\n\nUsage: /rogue unstuck - Leave event";
 
     public string PlayerGainedMoney => "Player gained {0} universe debris";
     public string PlayerGainedAllItems => "Player gained all {0}";
@@ -358,7 +373,8 @@ public class SceneTextEN
         "Use 'reload' to reload the current scene and return to the initial position.\n" +
         "Use 'reset' to reset the state of all props in the specified scene. For the current FloorId, refer to the Player table in the database.";
 
-    public string Usage => "Usage: /scene prop [groupId] [propId] [state]\n\nUsage: /scene remove [entityId]\n\nUsage: /scene unlockall\n\nUsage: /scene change [entryId]\n\nUsage: /scene reload\n\nUsage: /scene reset <floorId>";
+    public string Usage =>
+        "Usage: /scene prop [groupId] [propId] [state]\n\nUsage: /scene remove [entityId]\n\nUsage: /scene unlockall\n\nUsage: /scene change [entryId]\n\nUsage: /scene reload\n\nUsage: /scene reset <floorId>";
 
     public string LoadedGroups => "Loaded groups: {0}";
     public string PropStateChanged => "Prop: {0} state set to {1}";

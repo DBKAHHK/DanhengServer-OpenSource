@@ -179,7 +179,8 @@ public class NoticeTextCHS
 /// </summary>
 public class HeroTextCHS
 {
-    public string Desc => "切换主角的性别/形态\n当切换性别时，genderId为1代表男性，2代表女性\n当切换形态时，8001代表毁灭命途，8003代表存护命途，8005代表同谐命途。\n注意，切换性别时会清空所有可选命途以及行迹，为不可逆操作！";
+    public string Desc =>
+        "切换主角的性别/形态\n当切换性别时，genderId为1代表男性，2代表女性\n当切换形态时，8001代表毁灭命途，8003代表存护命途，8005代表同谐命途。\n注意，切换性别时会清空所有可选命途以及行迹，为不可逆操作！";
 
     public string Usage => "用法：/hero gender [genderId]\n\n用法：/hero type [typeId]";
     public string GenderNotSpecified => "性别不存在!";
@@ -208,7 +209,8 @@ public class AvatarTextCHS
 {
     public string Desc => "设定玩家已有角色的属性\n设置行迹等级时，设置X级即设置所有行迹节点至X级，若大于此节点允许的最高等级，设置为最高等级\n注意：-1意为所有已拥有角色";
 
-    public string Usage => "用法：/avatar talent [角色ID/-1] [行迹等级]\n\n用法：/avatar get [角色ID]\n\n用法：/avatar rank [角色ID/-1] [星魂]\n\n用法：/avatar level [角色ID/-1] [角色等级]";
+    public string Usage =>
+        "用法：/avatar talent [角色ID/-1] [行迹等级]\n\n用法：/avatar get [角色ID]\n\n用法：/avatar rank [角色ID/-1] [星魂]\n\n用法：/avatar level [角色ID/-1] [角色等级]";
 
     public string InvalidLevel => "{0}等级无效";
     public string AllAvatarsLevelSet => "已将全部角色 {0}等级设置为 {1}";
@@ -236,7 +238,8 @@ public class GiveAllTextCHS
 {
     public string Desc => "给予玩家全部指定类型的物品\navatar意为角色，equipment意为光锥，relic意为遗器，unlock意为气泡、手机壁纸、头像";
 
-    public string Usage => "用法：/giveall avatar r<星魂> l<等级>\n\n用法：/giveall equipment r<叠影> l<等级> x<数量>\n\n用法：/giveall relic l<等级> x<数量>\n\n用法：/giveall unlock";
+    public string Usage =>
+        "用法：/giveall avatar r<星魂> l<等级>\n\n用法：/giveall equipment r<叠影> l<等级> x<数量>\n\n用法：/giveall relic l<等级> x<数量>\n\n用法：/giveall unlock";
 
     public string GiveAllItems => "已给予所有 {0}, 各 {1} 个";
 }
@@ -284,7 +287,8 @@ public class MissionTextCHS
         "使用 running 获取正在进行的任务以及可能卡住的任务，使用后可能会出现较长任务列表，请注意甄别\n" +
         "使用 reaccept 可重新进行指定主任务，请浏览 handbook 来获取主任务ID";
 
-    public string Usage => "用法：/mission pass\n\n用法：/mission finish [子任务ID]\n\n用法：/mission running\n\n用法：/mission reaccept [主任务ID]";
+    public string Usage =>
+        "用法：/mission pass\n\n用法：/mission finish [子任务ID]\n\n用法：/mission running\n\n用法：/mission reaccept [主任务ID]";
 
     public string AllMissionsFinished => "所有任务已完成!";
     public string AllRunningMissionsFinished => "共 {0} 个进行中的任务已完成!";
@@ -306,7 +310,8 @@ public class RelicTextCHS
 {
     public string Desc => "管理玩家的遗器\n主词条可选，副词条可选，但至少存在其中之一\n等级限制：1≤等级≤9999";
 
-    public string Usage => "用法：/relic <遗器ID> <主词条ID> <小词条ID1:小词条等级> <小词条ID2:小词条等级> <小词条ID3:小词条等级> <小词条ID4:小词条等级> l<等级> x<数量>";
+    public string Usage =>
+        "用法：/relic <遗器ID> <主词条ID> <小词条ID1:小词条等级> <小词条ID2:小词条等级> <小词条ID3:小词条等级> <小词条ID4:小词条等级> l<等级> x<数量>";
 
     public string RelicNotFound => "遗器不存在!";
     public string InvalidMainAffixId => "主词条ID无效";
@@ -331,7 +336,8 @@ public class RogueTextCHS
 {
     public string Desc => "管理玩家模拟宇宙中的数据\n-1意为所有祝福（已拥有祝福）\n使用 buff 来获取祝福\n使用 enhance 来强化祝福";
 
-    public string Usage => "用法：/rogue money [宇宙碎片数量]\n\n用法：/rogue buff [祝福ID/-1]\n\n用法：/rogue miracle [奇物ID]\n\n用法：/rogue enhance [祝福ID/-1]\n\n用法：/rogue unstuck - 脱离事件";
+    public string Usage =>
+        "用法：/rogue money [宇宙碎片数量]\n\n用法：/rogue buff [祝福ID/-1]\n\n用法：/rogue miracle [奇物ID]\n\n用法：/rogue enhance [祝福ID/-1]\n\n用法：/rogue unstuck - 脱离事件";
 
     public string PlayerGainedMoney => "玩家已获得 {0} 宇宙碎片";
     public string PlayerGainedAllItems => "玩家已获得所有{0}";
@@ -357,7 +363,8 @@ public class SceneTextCHS
         "使用 reload 来重新加载当前场景，并回到初始位置\n" +
         "使用 reset 来重置指定场景所有道具状态，要获取当前FloorId，请访问数据库 Player 表";
 
-    public string Usage => "用法：/scene prop [组ID] [道具ID] [状态]\n\n用法：/scene remove [实体ID]\n\n用法：/scene unlockall\n\n用法：/scene change [entryId]\n\n用法：/scene reload\n\n用法：/scene reset <floorId>";
+    public string Usage =>
+        "用法：/scene prop [组ID] [道具ID] [状态]\n\n用法：/scene remove [实体ID]\n\n用法：/scene unlockall\n\n用法：/scene change [entryId]\n\n用法：/scene reload\n\n用法：/scene reset <floorId>";
 
     public string LoadedGroups => "已加载组: {0}";
     public string PropStateChanged => "道具: {0} 的状态已设置为 {1}";

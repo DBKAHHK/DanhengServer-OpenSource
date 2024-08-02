@@ -1,4 +1,6 @@
-﻿namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Battle;
+﻿using EggLink.DanhengServer.Kcp;
+
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Battle;
 
 [Opcode(CmdIds.QuitBattleCsReq)]
 public class HandlerQuitBattleCsReq : Handler

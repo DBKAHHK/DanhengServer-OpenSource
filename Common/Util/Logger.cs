@@ -1,5 +1,5 @@
-﻿using Spectre.Console;
-using System.Diagnostics;
+﻿using System.Diagnostics;
+using Spectre.Console;
 
 namespace EggLink.DanhengServer.Util;
 
@@ -14,8 +14,8 @@ public class Logger(string moduleName)
         lock (_lock)
         {
             AnsiConsole.Write(new Markup($"[[[bold deepskyblue3_1]{DateTime.Now:HH:mm:ss}[/]]] " +
-                                         $"[[[gray]{ModuleName}[/]]] [[[{((ConsoleColor)level)}]{level}[/]]] {message.Replace("[", "[[").Replace("]", "]]")}\n"));
-            
+                                         $"[[[gray]{ModuleName}[/]]] [[[{(ConsoleColor)level}]{level}[/]]] {message.Replace("[", "[[").Replace("]", "]]")}\n"));
+
             var logMessage = $"[{DateTime.Now:HH:mm:ss}] [{ModuleName}] [{level}] {message}";
             PluginEventCommon.InvokeOnConsoleLog(logMessage);
             WriteToFile(logMessage);

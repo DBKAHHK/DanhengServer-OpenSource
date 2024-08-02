@@ -43,7 +43,8 @@ public class QuestManager(PlayerInstance player) : BasePlayerManager(player)
                     var accept2 = true;
 
                     foreach (var questId in quest.UnlockParamList)
-                        if (GetQuestStatus(questId) != QuestStatus.QuestFinish && GetQuestStatus(questId) != QuestStatus.QuestClose)
+                        if (GetQuestStatus(questId) != QuestStatus.QuestFinish &&
+                            GetQuestStatus(questId) != QuestStatus.QuestClose)
                         {
                             accept2 = false;
                             break;

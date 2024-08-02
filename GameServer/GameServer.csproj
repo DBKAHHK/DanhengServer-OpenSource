@@ -18,7 +18,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj" />
-    <ProjectReference Include="..\WebServer\WebServer.csproj" />
+    <ProjectReference Include="..\DanhengKcpSharp\DanhengKcpSharp.csproj" />
+    <ProjectReference Include="..\Proto\Proto.csproj" />
   </ItemGroup>
 
   <ItemGroup>

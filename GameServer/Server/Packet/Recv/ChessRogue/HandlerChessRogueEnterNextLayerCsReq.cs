@@ -1,4 +1,6 @@
-﻿namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.ChessRogue;
+﻿using EggLink.DanhengServer.Kcp;
+
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.ChessRogue;
 
 [Opcode(CmdIds.ChessRogueEnterNextLayerCsReq)]
 public class HandlerChessRogueEnterNextLayerCsReq : Handler
