@@ -20,15 +20,15 @@ public class ChallengeEntityLoader(SceneInstance scene, PlayerInstance player) :
         // Get challenge instance
         if (Player.ChallengeManager!.ChallengeInstance == null) return;
         var instance = Player.ChallengeManager.ChallengeInstance;
+        LoadGroups.SafeAddRange(Scene.FloorInfo!.Groups.Keys.ToList());
 
         // Setup first stage
         var excel = instance.Excel;
-        Scene.FloorInfo!.Groups.TryGetValue(excel.MazeGroupID1, out var groupData);
+        Scene.FloorInfo.Groups.TryGetValue(excel.MazeGroupID1, out var groupData);
         if (groupData != null) await LoadGroup(groupData);
-        ;
 
         // Set leave entry
-        Scene.LeaveEntityId =
+        Scene.LeaveEntryId =
             instance.IsStory() ? GameConstants.CHALLENGE_STORY_ENTRANCE : GameConstants.CHALLENGE_ENTRANCE;
 
         foreach (var group in Scene.FloorInfo.Groups.Values)

@@ -34,6 +34,12 @@ public class TrialActivityInstance : BaseActivityInstance
     public async ValueTask EndActivity(TrialActivityStatus status = TrialActivityStatus.None)
     {
         var player = ActivityManager.Player!;
+
+        // Remove trial lineup
+        await player.LineupManager!.DestroyExtraLineup(ExtraLineupType.LineupStageTrial);
+        player.LineupManager!.LineupData.CurExtraLineup = -1;
+
+        // Go back to default scene
         await player.EnterScene(2000101, 0, true);
         if (status == TrialActivityStatus.Finish)
         {

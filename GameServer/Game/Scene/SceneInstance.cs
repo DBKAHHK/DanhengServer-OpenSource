@@ -3,6 +3,7 @@ using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Enums.Scene;
+using EggLink.DanhengServer.GameServer.Game.Activity.Loaders;
 using EggLink.DanhengServer.GameServer.Game.Battle;
 using EggLink.DanhengServer.GameServer.Game.Challenge;
 using EggLink.DanhengServer.GameServer.Game.ChessRogue.Cell;
@@ -158,7 +159,7 @@ public class SceneInstance
     public int PlaneId;
     public int EntryId;
 
-    public int LeaveEntityId;
+    public int LeaveEntryId;
     public int LastEntityId;
     public bool IsLoaded = false;
 
@@ -179,7 +180,7 @@ public class SceneInstance
         PlaneId = excel.PlaneID;
         FloorId = floorId;
         EntryId = entryId;
-        LeaveEntityId = 0;
+        LeaveEntryId = 0;
 
         System.Threading.Tasks.Task.Run(async () => { await SyncLineup(true, true); }).Wait();
 
@@ -203,10 +204,9 @@ public class SceneInstance
             case PlaneTypeEnum.Challenge:
                 EntityLoader = new ChallengeEntityLoader(this, Player);
                 break;
-            // Temproary disabled
-            /* case Enums.Scene.PlaneTypeEnum.TrialActivity:
-                EntityLoader = new ChallengeEntityLoader(this, Player);
-                break; */
+            case PlaneTypeEnum.TrialActivity:
+                EntityLoader = new TrialActivityEntityLoader(this, Player);
+                break;
             default:
                 if (Player.StoryLineManager?.StoryLineData.CurStoryLineId != 0)
                     EntityLoader = new StoryLineEntityLoader(this);
