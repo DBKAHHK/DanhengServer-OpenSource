@@ -29,7 +29,7 @@ public class HandlerLeaveChallengeCsReq : Handler
             foreach (var avatar in player.LineupManager.GetCurLineup()!.AvatarData!.Avatars) avatar.CurrentHp = 10000;
 
             var leaveEntryId = GameConstants.CHALLENGE_ENTRANCE;
-            if (player.SceneInstance.LeaveEntityId != 0) leaveEntryId = player.SceneInstance.LeaveEntityId;
+            if (player.SceneInstance.LeaveEntryId != 0) leaveEntryId = player.SceneInstance.LeaveEntryId;
             await player.EnterScene(leaveEntryId, 0, true);
         }
 
