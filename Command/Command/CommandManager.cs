@@ -14,6 +14,10 @@ public class CommandManager
     public Logger Logger { get; } = new("CommandManager");
     public Connection? Target { get; set; }
 
+    private List<string> commandHistory = new();
+    private int historyIndex = -1;
+    private const int MaxCommandHistory = 100;
+
     public void RegisterCommand()
     {
         Instance = this;
@@ -40,14 +44,95 @@ public class CommandManager
         while (true)
             try
             {
-                var input = AnsiConsole.Ask<string>("> ");
+                var input = ReadCommand();
+
                 if (string.IsNullOrEmpty(input)) continue;
+
+                if (input.StartsWith("/"))
+                {
+                    input = input.Substring(1);
+                }
+
+                if (commandHistory.Count >= MaxCommandHistory)
+                {
+                    commandHistory.RemoveAt(0);
+                }
+
+                if (commandHistory.Count == 0 || commandHistory.Last() != input) commandHistory.Add(input);
+                historyIndex = commandHistory.Count;
                 HandleCommand(input, new ConsoleCommandSender(Logger));
             }
             catch
             {
                 Logger.Error(I18nManager.Translate("Game.Command.Notice.InternalError"));
             }
+    }
+
+    private string ReadCommand()
+    {
+        var input = new List<char>();
+        ConsoleKeyInfo keyInfo;
+
+        AnsiConsole.Markup("[yellow]> [/]");
+        while (true)
+        {
+            keyInfo = Console.ReadKey(true);
+
+            if (keyInfo.Key == ConsoleKey.Enter)
+            {
+                Console.WriteLine();
+                break;
+            }
+
+            if (keyInfo.Key == ConsoleKey.Backspace)
+            {
+                if (input.Count > 0)
+                {
+                    input.RemoveAt(input.Count - 1);
+                    Console.Write("\b \b");
+                }
+            }
+            else if (keyInfo.Key == ConsoleKey.UpArrow)
+            {
+                if (historyIndex > 0)
+                {
+                    historyIndex--;
+                    ReplaceInput(input, commandHistory[historyIndex]);
+                }
+            }
+            else if (keyInfo.Key == ConsoleKey.DownArrow)
+            {
+                if (historyIndex < commandHistory.Count - 1)
+                {
+                    historyIndex++;
+                    ReplaceInput(input, commandHistory[historyIndex]);
+                }
+                else if (historyIndex == commandHistory.Count - 1)
+                {
+                    historyIndex++;
+                    ReplaceInput(input, string.Empty);
+                }
+            }
+            else
+            {
+                input.Add(keyInfo.KeyChar);
+                Console.Write(keyInfo.KeyChar);
+            }
+        }
+
+        return new string(input.ToArray());
+    }
+
+    private void ReplaceInput(List<char> input, string newText)
+    {
+        while (input.Count > 0)
+        {
+            input.RemoveAt(input.Count - 1);
+            Console.Write("\b \b");
+        }
+
+        input.AddRange(newText.ToCharArray());
+        Console.Write(newText);
     }
 
     public void HandleCommand(string input, ICommandSender sender)
