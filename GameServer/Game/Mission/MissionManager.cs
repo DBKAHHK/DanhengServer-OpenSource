@@ -257,8 +257,6 @@ public class MissionManager : BasePlayerManager
             Progress = (uint)(subMission.SubMissionInfo?.Progress ?? 1)
         });
 
-        var subMissionInfo = subMission?.SubMissionInfo;
-
         // get next sub mission
         foreach (var nextMission in mainMission.MissionInfo?.SubMissionList ?? [])
         {
@@ -413,7 +411,8 @@ public class MissionManager : BasePlayerManager
         foreach (var quest in Player.QuestManager?.GetRunningQuest() ?? [])
         {
             var excel = GameData.QuestDataData[quest.QuestId];
-            var finishWay = GameData.FinishWayData[excel.FinishWayID];
+            var finishWay = GameData.FinishWayData.GetValueOrDefault(excel.FinishWayID);
+            if (finishWay == null) continue;
             if (finishWay.FinishType == finishType)
                 if (handler != null)
                     await handler.HandleQuestFinishType(Player, excel, finishWay, arg);
@@ -437,7 +436,8 @@ public class MissionManager : BasePlayerManager
         foreach (var quest in Player.QuestManager?.GetRunningQuest() ?? [])
         {
             var excel = GameData.QuestDataData[quest.QuestId];
-            var finishWay = GameData.FinishWayData[excel.FinishWayID];
+            var finishWay = GameData.FinishWayData.GetValueOrDefault(excel.FinishWayID);
+            if (finishWay == null) continue;
             if (finishWay.FinishType == MissionFinishTypeEnum.Talk)
                 if (finishWay.ParamStr1 == talkString)
                     await Player.QuestManager!.FinishQuest(quest.QuestId);
