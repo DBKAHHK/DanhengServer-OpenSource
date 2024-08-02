@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using Spectre.Console;
+using System.Diagnostics;
 
 namespace EggLink.DanhengServer.Util;
 
@@ -12,28 +13,9 @@ public class Logger(string moduleName)
     {
         lock (_lock)
         {
-            Console.Write("[");
-
-            Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.Write(DateTime.Now.ToString("HH:mm:ss"));
-            Console.ResetColor();
-
-            Console.Write("] ");
-            Console.Write("[");
-
-            Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.Write(ModuleName);
-            Console.ResetColor();
-
-            Console.Write("] ");
-            Console.Write("[");
-
-            Console.ForegroundColor = (ConsoleColor)level;
-            Console.Write(level);
-            Console.ResetColor();
-
-            Console.WriteLine("] " + message);
-
+            AnsiConsole.Write(new Markup($"[[[bold deepskyblue3_1]{DateTime.Now:HH:mm:ss}[/]]] " +
+                                         $"[[[gray]{ModuleName}[/]]] [[[{((ConsoleColor)level)}]{level}[/]]] {message.Replace("[", "[[").Replace("]", "]]")}\n"));
+            
             var logMessage = $"[{DateTime.Now:HH:mm:ss}] [{ModuleName}] [{level}] {message}";
             PluginEventCommon.InvokeOnConsoleLog(logMessage);
             WriteToFile(logMessage);

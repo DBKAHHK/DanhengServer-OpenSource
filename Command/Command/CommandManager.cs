@@ -113,7 +113,7 @@ public class CommandManager
                     ReplaceInput(input, string.Empty);
                 }
             }
-            else
+            else  // known issue: Ctrl + (Any Key but C) or other control key will cause display error
             {
                 input.Add(keyInfo.KeyChar);
                 Console.Write(keyInfo.KeyChar);
