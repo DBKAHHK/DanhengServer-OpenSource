@@ -5,6 +5,7 @@ using EggLink.DanhengServer.Enums.Scene;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Game.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
+using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Game.Activity.Loaders;
 
@@ -19,13 +20,13 @@ public class TrialActivityEntityLoader(SceneInstance scene, PlayerInstance playe
         // Get activity instance
         if (Player.ActivityManager!.TrialActivityInstance == null) return;
         var instance = Player.ActivityManager!.TrialActivityInstance;
+        LoadGroups.SafeAddRange(Scene.FloorInfo!.Groups.Keys.ToList());
 
         // Setup stage
         GameData.AvatarDemoConfigData.TryGetValue(instance.Data.CurTrialStageId, out var excel);
         if (excel == null) return;
         Scene.FloorInfo!.Groups.TryGetValue(excel.MazeGroupID1, out var groupData);
         if (groupData != null) await LoadGroup(groupData);
-        ;
 
         foreach (var group in Scene.FloorInfo.Groups.Values)
         {
@@ -72,5 +73,11 @@ public class TrialActivityEntityLoader(SceneInstance scene, PlayerInstance playe
         await Scene.AddEntity(entity, sendPacket);
 
         return entity;
+    }
+
+    public override async ValueTask<EntityNpc?> LoadNpc(NpcInfo info, GroupInfo group, bool sendPacket = false)
+    {
+        await System.Threading.Tasks.Task.CompletedTask;
+        return null;
     }
 }
