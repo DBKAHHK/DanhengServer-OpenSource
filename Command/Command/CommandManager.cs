@@ -45,14 +45,20 @@ public class CommandManager
             try
             {
                 var input = ReadCommand();
+
                 if (string.IsNullOrEmpty(input)) continue;
+
+                if (input.StartsWith("/"))
+                {
+                    input = input.Substring(1);
+                }
 
                 if (commandHistory.Count >= MaxCommandHistory)
                 {
-                    commandHistory.RemoveAt(0); 
+                    commandHistory.RemoveAt(0);
                 }
 
-                commandHistory.Add(input);
+                if (commandHistory.Count == 0 || commandHistory.Last() != input) commandHistory.Add(input);
                 historyIndex = commandHistory.Count;
                 HandleCommand(input, new ConsoleCommandSender(Logger));
             }
