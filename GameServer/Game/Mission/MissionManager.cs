@@ -257,8 +257,6 @@ public class MissionManager : BasePlayerManager
             Progress = (uint)(subMission.SubMissionInfo?.Progress ?? 1)
         });
 
-        var subMissionInfo = subMission?.SubMissionInfo;
-
         // get next sub mission
         foreach (var nextMission in mainMission.MissionInfo?.SubMissionList ?? [])
         {
