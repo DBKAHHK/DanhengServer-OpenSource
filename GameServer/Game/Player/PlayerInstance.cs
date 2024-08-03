@@ -205,8 +205,9 @@ public class PlayerInstance(PlayerData data)
         if (ConfigManager.Config.ServerOption.EnableMission)
         {
             await MissionManager!.AcceptMainMissionByCondition();
-            await QuestManager!.AcceptQuestByCondition();
         }
+
+        await QuestManager!.AcceptQuestByCondition();
     }
 
     public T InitializeDatabase<T>() where T : class, new()

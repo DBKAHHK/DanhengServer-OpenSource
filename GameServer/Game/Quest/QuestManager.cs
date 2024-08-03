@@ -7,6 +7,7 @@ using EggLink.DanhengServer.Enums.Quest;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.Proto;
+using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Game.Quest;
 
@@ -14,18 +15,21 @@ public class QuestManager(PlayerInstance player) : BasePlayerManager(player)
 {
     public UnlockHandler UnlockHandler { get; } = new(player);
     public QuestData QuestData { get; } = DatabaseHelper.Instance!.GetInstanceOrCreateNew<QuestData>(player.Uid);
+    public List<QuestInfo> WaitToSync { get; } = [];
 
     #region Actions
 
     public async ValueTask AcceptQuestByCondition()
     {
+        var syncList = new List<QuestInfo>();
         foreach (var quest in GameData.QuestDataData.Values)
         {
             if (QuestData.Quests.ContainsKey(quest.QuestID)) continue; // Already accepted
+            QuestInfo? acceptQuest = null;
             switch (quest.UnlockType)
             {
                 case QuestUnlockTypeEnum.AutoUnlock:
-                    await AcceptQuest(quest.QuestID);
+                    acceptQuest = await AcceptQuest(quest.QuestID, false);
                     break;
                 case QuestUnlockTypeEnum.FinishMission:
                     var accept = true;
@@ -37,7 +41,10 @@ public class QuestManager(PlayerInstance player) : BasePlayerManager(player)
                             break;
                         }
 
-                    if (accept) await AcceptQuest(quest.QuestID);
+                    if (accept)
+                    {
+                        acceptQuest = await AcceptQuest(quest.QuestID, false);
+                    }
                     break;
                 case QuestUnlockTypeEnum.FinishQuest:
                     var accept2 = true;
@@ -50,7 +57,7 @@ public class QuestManager(PlayerInstance player) : BasePlayerManager(player)
                             break;
                         }
 
-                    if (accept2) await AcceptQuest(quest.QuestID);
+                    if (accept2) acceptQuest = await AcceptQuest(quest.QuestID, false);
                     break;
                 case QuestUnlockTypeEnum.ManualUnlock: // idk what this is
                     break;
@@ -59,15 +66,20 @@ public class QuestManager(PlayerInstance player) : BasePlayerManager(player)
                 default:
                     break;
             }
+
+            if (acceptQuest != null) syncList.Add(acceptQuest);
         }
+
+        if (syncList.Count > 0)
+            await Player.SendPacket(new PacketPlayerSyncScNotify(syncList));
     }
 
-    public async ValueTask AcceptQuest(int questId)
+    public async ValueTask<QuestInfo?> AcceptQuest(int questId, bool sync = true)
     {
         GameData.QuestDataData.TryGetValue(questId, out var questExcel);
-        if (questExcel == null) return;
+        if (questExcel == null) return null;
 
-        if (QuestData.Quests.ContainsKey(questId)) return;
+        if (QuestData.Quests.ContainsKey(questId)) return null;
 
         var questInfo = new QuestInfo
         {
@@ -78,10 +90,12 @@ public class QuestManager(PlayerInstance player) : BasePlayerManager(player)
 
         QuestData.Quests.Add(questId, questInfo);
 
-        await Player.SendPacket(new PacketPlayerSyncScNotify(questInfo));
+        if (sync) await Player.SendPacket(new PacketPlayerSyncScNotify(questInfo));
+
+        return questInfo;
     }
 
-    public async ValueTask FinishQuest(int questId)
+    public async ValueTask FinishQuest(int questId, bool push = true)
     {
         GameData.QuestDataData.TryGetValue(questId, out var questExcel);
         if (questExcel == null) return;
@@ -93,7 +107,10 @@ public class QuestManager(PlayerInstance player) : BasePlayerManager(player)
 
         questInfo.QuestStatus = QuestStatus.QuestFinish;
         questInfo.Progress = finishWayExcel.Progress;
-        await Player.SendPacket(new PacketPlayerSyncScNotify(questInfo));
+        if (push)
+            await Player.SendPacket(new PacketPlayerSyncScNotify(questInfo));
+        else
+            WaitToSync.SafeAdd(questInfo);
 
         // accept next quest
         await AcceptQuestByCondition();
@@ -134,7 +151,7 @@ public class QuestManager(PlayerInstance player) : BasePlayerManager(player)
         return (Retcode.RetSucc, items);
     }
 
-    public async ValueTask AddQuestProgress(int questId, int progress)
+    public async ValueTask AddQuestProgress(int questId, int progress, bool push = false)
     {
         GameData.QuestDataData.TryGetValue(questId, out var questExcel);
         if (questExcel == null) return;
@@ -145,13 +162,14 @@ public class QuestManager(PlayerInstance player) : BasePlayerManager(player)
         if (questInfo.QuestStatus != QuestStatus.QuestDoing) return;
 
         questInfo.Progress += progress;
-        if (questInfo.Progress >= finishWayExcel.Progress)
-            await FinishQuest(questId);
-        else
+        if (questInfo.Progress >= finishWayExcel.Progress) await FinishQuest(questId, push);
+        else if (push)
             await Player.SendPacket(new PacketPlayerSyncScNotify(questInfo));
+        else
+            WaitToSync.SafeAdd(questInfo);
     }
 
-    public async ValueTask UpdateQuestProgress(int questId, int progress)
+    public async ValueTask UpdateQuestProgress(int questId, int progress, bool push = false)
     {
         GameData.QuestDataData.TryGetValue(questId, out var questExcel);
         if (questExcel == null) return;
@@ -164,10 +182,18 @@ public class QuestManager(PlayerInstance player) : BasePlayerManager(player)
         if (progress < questInfo.Progress) return; // prevent rollback
         if (progress == questInfo.Progress) return;
         questInfo.Progress = progress;
-        if (questInfo.Progress >= finishWayExcel.Progress)
-            await FinishQuest(questId);
-        else
+        if (questInfo.Progress >= finishWayExcel.Progress) await FinishQuest(questId, push);
+        else if (push)
             await Player.SendPacket(new PacketPlayerSyncScNotify(questInfo));
+        else
+            WaitToSync.SafeAdd(questInfo);
+    }
+
+    public async ValueTask SyncQuest()
+    {
+        if (WaitToSync.Count == 0) return;
+        await Player.SendPacket(new PacketPlayerSyncScNotify(WaitToSync));
+        WaitToSync.Clear();
     }
 
     #endregion

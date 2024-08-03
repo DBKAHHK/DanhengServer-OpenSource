@@ -131,6 +131,13 @@ public class PacketPlayerSyncScNotify : BasePacket
 
         SetData(proto);
     }
+    public PacketPlayerSyncScNotify(List<QuestInfo> quest) : base(CmdIds.PlayerSyncScNotify)
+    {
+        var proto = new PlayerSyncScNotify();
+        proto.QuestList.Add(quest.Select(x => x.ToProto()));
+
+        SetData(proto);
+    }
 
     private void AddItemToProto(ItemData item, PlayerSyncScNotify notify)
     {

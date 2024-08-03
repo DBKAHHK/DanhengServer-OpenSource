@@ -31,8 +31,6 @@ public class Connection : DanhengConnection
         Player?.OnLogoutAsync();
         DanhengListener.UnregisterConnection(this);
         base.Stop();
-
-        IsOnline = false;
     }
 
     protected async Task ReceiveLoop()

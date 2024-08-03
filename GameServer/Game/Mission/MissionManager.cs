@@ -400,7 +400,7 @@ public class MissionManager : BasePlayerManager
         await Player.SendPacket(new PacketScenePlaneEventScNotify(itemList));
     }
 
-    public async ValueTask HandleFinishType(MissionFinishTypeEnum finishType, object? arg = null)
+    public async ValueTask HandleFinishType(MissionFinishTypeEnum finishType, object? arg = null, bool pushQuest = true)
     {
         FinishTypeHandlers.TryGetValue(finishType, out var handler);
         foreach (var mission in GetRunningSubMissionList())
@@ -417,11 +417,14 @@ public class MissionManager : BasePlayerManager
                 if (handler != null)
                     await handler.HandleQuestFinishType(Player, excel, finishWay, arg);
         }
+        if (pushQuest)
+            await Player.QuestManager!.SyncQuest();
     }
 
     public async ValueTask HandleAllFinishType(object? arg = null)
     {
-        foreach (var handler in FinishTypeHandlers) await HandleFinishType(handler.Key, arg);
+        foreach (var handler in FinishTypeHandlers) await HandleFinishType(handler.Key, arg, false);
+        await Player.QuestManager!.SyncQuest();
     }
 
     public async ValueTask HandleTalkStr(string talkString)
