@@ -36,6 +36,6 @@ public class FinishWayExcel : ExcelResource
 
     public override void Loaded()
     {
-        GameData.FinishWayData.Add(ID, this);
+        GameData.FinishWayData.TryAdd(ID, this);
     }
 }

@@ -10,8 +10,6 @@ public class HandlerPVEBattleResultCsReq : Handler
     {
         var req = PVEBattleResultCsReq.Parser.ParseFrom(data);
         var player = connection.Player!;
-        player.BattleManager?.EndBattle(req);
-        if (player.ActivityManager!.TrialActivityInstance != null && req.EndStatus == BattleEndStatus.BattleEndWin)
-            await player.ActivityManager.TrialActivityInstance.EndActivity(TrialActivityStatus.Finish);
+        await player.BattleManager!.EndBattle(req);
     }
 }

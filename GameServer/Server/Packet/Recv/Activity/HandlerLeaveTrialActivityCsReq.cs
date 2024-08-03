@@ -16,6 +16,8 @@ public class HandlerLeaveTrialActivityCsReq : Handler
             await manager.TrialActivityInstance.EndActivity();
         }
 
+        connection.Player!.ActivityManager!.TrialActivityInstance = null;
+
         await connection.SendPacket(CmdIds.LeaveTrialActivityScRsp);
     }
 }
