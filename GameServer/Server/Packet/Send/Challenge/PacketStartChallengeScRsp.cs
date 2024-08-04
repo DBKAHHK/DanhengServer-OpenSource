@@ -16,18 +16,19 @@ public class PacketStartChallengeScRsp : BasePacket
         SetData(proto);
     }
 
-    public PacketStartChallengeScRsp(PlayerInstance player) : base(CmdIds.StartChallengeScRsp)
+    public PacketStartChallengeScRsp(PlayerInstance player, bool sendScene = true) : base(CmdIds.StartChallengeScRsp)
     {
-        StartChallengeScRsp proto = new()
-        {
-            Scene = player.SceneInstance!.ToProto()
-        };
+        StartChallengeScRsp proto = new();
 
         if (player.ChallengeManager!.ChallengeInstance != null)
         {
             proto.CurChallenge = player.ChallengeManager.ChallengeInstance.ToProto();
             proto.LineupList.Add(player.LineupManager!.GetExtraLineup(ExtraLineupType.LineupChallenge)!.ToProto());
             proto.LineupList.Add(player.LineupManager!.GetExtraLineup(ExtraLineupType.LineupChallenge2)!.ToProto());
+            if (sendScene)
+            {
+                proto.Scene = player.SceneInstance!.ToProto();
+            }
         }
         else
         {

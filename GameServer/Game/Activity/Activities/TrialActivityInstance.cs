@@ -47,7 +47,6 @@ public class TrialActivityInstance : BaseActivityInstance
             {
                 StageId = Data.CurTrialStageId
             });
-            // player.SendPacket(new PacketTrialActivityDataChangeScNotify((uint)Data.CurTrialStageId));
             await player.SendPacket(new PacketCurTrialActivityScNotify((uint)Data.CurTrialStageId, status));
         }
 

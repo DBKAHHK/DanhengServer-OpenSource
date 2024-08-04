@@ -376,6 +376,9 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
         if (Player.ChallengeManager?.ChallengeInstance != null)
             await Player.ChallengeManager!.ChallengeInstance.OnBattleEnd(battle, req);
 
+        if (player.ActivityManager!.TrialActivityInstance != null && req.EndStatus == BattleEndStatus.BattleEndWin)
+            await player.ActivityManager.TrialActivityInstance.EndActivity(TrialActivityStatus.Finish);
+
         await Player.SendPacket(new PacketPVEBattleResultScRsp(req, Player, battle));
     }
 }
