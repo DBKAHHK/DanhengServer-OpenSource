@@ -94,7 +94,7 @@ public class DanhengConnection
         }
         catch
         {
-            var output = $"{sendOrRecv}: {LogMap[opcode.ToString()]}({opcode})";
+            var output = $"{sendOrRecv}: {LogMap.GetValueOrDefault(opcode.ToString(), "UnknownPacket")}({opcode})";
 #if DEBUG
             Logger.Debug(output);
 #endif

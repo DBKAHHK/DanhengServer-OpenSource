@@ -13,7 +13,6 @@ using EggLink.DanhengServer.GameServer.Plugin.Event;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.HeartDial;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Mission;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
-using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 using MissionData = EggLink.DanhengServer.Database.Quests.MissionData;
@@ -415,7 +414,8 @@ public class MissionManager : BasePlayerManager
 
         foreach (var quest in Player.QuestManager?.GetRunningQuest() ?? [])
         {
-            var excel = GameData.QuestDataData[quest.QuestId];
+            var excel = GameData.QuestDataData.GetValueOrDefault(quest.QuestId);
+            if (excel == null) continue;
             var finishWay = GameData.FinishWayData.GetValueOrDefault(excel.FinishWayID);
             if (finishWay == null) continue;
             if (finishWay.FinishType == finishType)
@@ -443,7 +443,8 @@ public class MissionManager : BasePlayerManager
 
         foreach (var quest in Player.QuestManager?.GetRunningQuest() ?? [])
         {
-            var excel = GameData.QuestDataData[quest.QuestId];
+            var excel = GameData.QuestDataData.GetValueOrDefault(quest.QuestId);
+            if (excel == null) continue;
             var finishWay = GameData.FinishWayData.GetValueOrDefault(excel.FinishWayID);
             if (finishWay == null) continue;
             if (finishWay.FinishType == MissionFinishTypeEnum.Talk)
@@ -462,7 +463,7 @@ public class MissionManager : BasePlayerManager
         GameData.MainMissionData.TryGetValue(mainMissionId, out var mainMission);
         if (mainMission == null) return;
 
-        foreach (var mission in mainMission?.MissionInfo?.SubMissionList ?? [])
+        foreach (var mission in mainMission.MissionInfo?.SubMissionList ?? [])
             if (mission.TakeType == SubMissionTakeTypeEnum.CustomValue)
             {
                 var index = 0;
