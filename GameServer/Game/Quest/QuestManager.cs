@@ -1,9 +1,11 @@
 ﻿using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Database.Quests;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.Enums.Quest;
+using EggLink.DanhengServer.GameServer.Game.Battle;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.Proto;
@@ -107,6 +109,7 @@ public class QuestManager(PlayerInstance player) : BasePlayerManager(player)
 
         questInfo.QuestStatus = QuestStatus.QuestFinish;
         questInfo.Progress = finishWayExcel.Progress;
+        questInfo.FinishTime = DateTime.Now.ToUnixSec();
         if (push)
             await Player.SendPacket(new PacketPlayerSyncScNotify(questInfo));
         else
@@ -120,11 +123,16 @@ public class QuestManager(PlayerInstance player) : BasePlayerManager(player)
     {
         GameData.QuestDataData.TryGetValue(questId, out var questExcel);
         if (questExcel == null) return Retcode.RetFail;
+        GameData.FinishWayData.TryGetValue(questExcel.FinishWayID, out var finishWayExcel);
+        if (finishWayExcel == null) return Retcode.RetQuestStatusError;
+        if (finishWayExcel.FinishType != MissionFinishTypeEnum.AutoFinish) return Retcode.RetQuestStatusError;
 
         if (!QuestData.Quests.TryGetValue(questId, out var questInfo)) return Retcode.RetQuestNotAccept;
         if (questInfo.QuestStatus != QuestStatus.QuestDoing) return Retcode.RetQuestStatusError;
 
         questInfo.QuestStatus = QuestStatus.QuestFinish;
+        questInfo.Progress = finishWayExcel.Progress;
+        questInfo.FinishTime = DateTime.Now.ToUnixSec();
         await Player.SendPacket(new PacketPlayerSyncScNotify(questInfo));
 
         // accept next quest
@@ -209,6 +217,34 @@ public class QuestManager(PlayerInstance player) : BasePlayerManager(player)
     public List<QuestInfo> GetRunningQuest()
     {
         return QuestData.Quests.Values.Where(x => x.QuestStatus == QuestStatus.QuestDoing).ToList();
+    }
+
+    public int GetQuestProgress(int questId)
+    {
+        if (!QuestData.Quests.TryGetValue(questId, out var questInfo)) return 0;
+        return questInfo.Progress;
+    }
+
+    #endregion
+
+    #region Handler
+
+    public void OnBattleStart(BattleInstance instance)
+    {
+        foreach (var questInfo in GetRunningQuest())
+        {
+            var questExcel = GameData.QuestDataData.GetValueOrDefault(questInfo.QuestId);
+            if (questExcel == null) continue;
+            var finishWayExcel = GameData.FinishWayData.GetValueOrDefault(questExcel.FinishWayID);
+            if (finishWayExcel == null) continue;
+            if (finishWayExcel.FinishType == MissionFinishTypeEnum.BattleChallenge)
+            {
+                foreach (var target in finishWayExcel.ParamIntList)
+                {
+                    instance.AddBattleTarget(2, target, GetQuestProgress(questExcel.QuestID), finishWayExcel.Progress);
+                }
+            }
+        }
     }
 
     #endregion

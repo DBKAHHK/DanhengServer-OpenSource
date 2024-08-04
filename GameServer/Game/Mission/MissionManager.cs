@@ -2,6 +2,7 @@
 using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Database;
+using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Enums.Item;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Game.Battle;
@@ -354,34 +355,36 @@ public class MissionManager : BasePlayerManager
         GameData.MainMissionData.TryGetValue(mainMissionId, out var mainMission);
         if (mainMission == null) return;
         GameData.RewardDataData.TryGetValue(mainMission.RewardID, out var reward);
-        var itemList = new ItemList();
-        reward?.GetItems().ForEach(async i =>
+        var itemList = new List<ItemData>();
+
+        foreach (var item in reward?.GetItems() ?? [])
         {
-            GameData.ItemConfigData.TryGetValue(i.Item1, out var item);
-            var res = await Player.InventoryManager!.AddItem(i.Item1, i.Item2,
-                item?.ItemMainType == ItemMainTypeEnum.AvatarCard);
-            if (res != null) itemList.ItemList_.Add(res.ToProto());
-        });
+            GameData.ItemConfigData.TryGetValue(item.Item1, out var itemExcel);
+            var res = await Player.InventoryManager!.AddItem(item.Item1, item.Item2,
+                itemExcel?.ItemMainType == ItemMainTypeEnum.AvatarCard);  // notify if avatar card
+            if (res != null) itemList.Add(res);
+        }
 
         var hCoin = await Player.InventoryManager!.AddItem(1, reward?.Hcoin ?? 0, false);
-        if (hCoin != null) itemList.ItemList_.Add(hCoin.ToProto());
+        if (hCoin != null) itemList.Add(hCoin);
 
-        mainMission.SubRewardList.ForEach(async i =>
+        foreach (var i in mainMission.SubRewardList)
         {
             GameData.RewardDataData.TryGetValue(i, out var rewardDataExcel);
-            rewardDataExcel?.GetItems().ForEach(async j =>
+            var hCoin2 = await Player.InventoryManager!.AddItem(1, rewardDataExcel?.Hcoin ?? 0, false);  // hcoin
+            if (hCoin2 != null) itemList.Add(hCoin2);
+            foreach (var item in rewardDataExcel?.GetItems() ?? [])  // items
             {
-                GameData.ItemConfigData.TryGetValue(j.Item1, out var item);
-                var res = await Player.InventoryManager!.AddItem(j.Item1, j.Item2,
-                    item?.ItemMainType == ItemMainTypeEnum.AvatarCard);
-                if (res != null) itemList.ItemList_.Add(res.ToProto());
-            });
-            var hCoin2 = await Player.InventoryManager!.AddItem(1, rewardDataExcel?.Hcoin ?? 0, false);
-            if (hCoin2 != null) itemList.ItemList_.Add(hCoin2.ToProto());
-        });
+                GameData.ItemConfigData.TryGetValue(item.Item1, out var itemExcel);
+                var res = await Player.InventoryManager!.AddItem(item.Item1, item.Item2,
+                    itemExcel?.ItemMainType == ItemMainTypeEnum.AvatarCard);  // notify if avatar card
+                if (res != null) itemList.Add(res);
+            }
+        }
 
-        await Player.SendPacket(new PacketMissionRewardScNotify(mainMissionId, 0, itemList));
-        await Player.SendPacket(new PacketScenePlaneEventScNotify(itemList));
+
+        if (itemList.Count > 0)
+            await Player.SendPacket(new PacketMissionRewardScNotify(mainMissionId, 0, itemList));
     }
 
     public async ValueTask HandleSubMissionReward(int subMissionId)
@@ -389,15 +392,17 @@ public class MissionManager : BasePlayerManager
         GameData.SubMissionData.TryGetValue(subMissionId, out var subMission);
         if (subMission == null) return;
         GameData.RewardDataData.TryGetValue(subMission.SubMissionInfo?.SubRewardID ?? 0, out var reward);
-        var itemList = new ItemList();
-        reward?.GetItems().ForEach(async i =>
-        {
-            var res = await Player.InventoryManager!.AddItem(i.Item1, i.Item2, false);
-            if (res != null) itemList.ItemList_.Add(res.ToProto());
-        });
+        var itemList = new List<ItemData>();
 
-        await Player.SendPacket(new PacketMissionRewardScNotify(0, subMissionId, itemList));
-        await Player.SendPacket(new PacketScenePlaneEventScNotify(itemList));
+        foreach (var item in reward?.GetItems() ?? [])
+        {
+            GameData.ItemConfigData.TryGetValue(item.Item1, out var itemExcel);
+            var res = await Player.InventoryManager!.AddItem(item.Item1, item.Item2,
+                itemExcel?.ItemMainType == ItemMainTypeEnum.AvatarCard);  // notify if avatar card
+            if (res != null) itemList.Add(res);
+        }
+
+        await Player.SendPacket(new PacketSubMissionRewardScNotify(subMissionId, itemList));
     }
 
     public async ValueTask HandleFinishType(MissionFinishTypeEnum finishType, object? arg = null, bool pushQuest = true)
@@ -570,7 +575,7 @@ public class MissionManager : BasePlayerManager
         if (!ConfigManager.Config.ServerOption.EnableMission) return [];
 
         var list = new List<int>();
-        foreach (var id in Data.RunningSubMissionIds) list.Add(id);
+        list.AddRange(Data.RunningSubMissionIds);
         return list;
     }
 
@@ -579,7 +584,9 @@ public class MissionManager : BasePlayerManager
         if (!ConfigManager.Config.ServerOption.EnableMission) return [];
 
         var list = new List<SubMissionInfo>();
-        foreach (var id in Data.RunningSubMissionIds)
+        var ids = new List<int>();
+        ids.AddRange(Data.RunningSubMissionIds);
+        foreach (var id in ids)
         {
             GameData.SubMissionData.TryGetValue(id, out var mission);
             if (mission != null && mission.SubMissionInfo != null) list.Add(mission.SubMissionInfo);
@@ -615,8 +622,7 @@ public class MissionManager : BasePlayerManager
                 }
         }
 
-        await HandleFinishType(MissionFinishTypeEnum.AnyCocoonFinish, instance);
-        await HandleFinishType(MissionFinishTypeEnum.AnyFarmElementFinish, instance);
+        await HandleAllFinishType(instance);
     }
 
     public async ValueTask OnPlayerInteractWithProp()

@@ -406,11 +406,13 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
 
         foreach (var item in rewardData.GetItems())
         {
-            var i = await AddItem(item.Item1, item.Item2, notify);
+            var i = await AddItem(item.Item1, item.Item2, notify, sync:false);
             if (i != null) items.Add(i);
         }
 
-        var hCoin = await AddItem(1, rewardData.Hcoin, notify);
+        await Player.SendPacket(new PacketPlayerSyncScNotify(items));
+
+        var hCoin = await AddItem(1, rewardData.Hcoin, notify, sync:false);
         if (hCoin != null)
             items.Add(hCoin);
 

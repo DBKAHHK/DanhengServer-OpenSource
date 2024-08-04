@@ -163,6 +163,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
             // call battle start
             Player.RogueManager!.GetRogueInstance()?.OnBattleStart(battleInstance);
             Player.ChallengeManager!.ChallengeInstance?.OnBattleStart(battleInstance);
+            Player.QuestManager!.OnBattleStart(battleInstance);
 
             Player.BattleInstance = battleInstance;
             await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, battleInstance));
@@ -214,6 +215,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
         // call battle start
         Player.RogueManager!.GetRogueInstance()?.OnBattleStart(battleInstance);
         Player.ChallengeManager!.ChallengeInstance?.OnBattleStart(battleInstance);
+        Player.QuestManager!.OnBattleStart(battleInstance);
 
         Player.BattleInstance = battleInstance;
 
@@ -278,6 +280,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
         battleInstance.AvatarInfo = avatarList;
 
         Player.BattleInstance = battleInstance;
+        Player.QuestManager!.OnBattleStart(battleInstance);
 
         await Player.SendPacket(new PacketStartCocoonStageScRsp(battleInstance, cocoonId, wave));
     }
@@ -362,6 +365,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
 
         // call battle end
         battle.MonsterDropItems = dropItems;
+        battle.BattleResult = req;
 
         Player.BattleInstance = null;
 

@@ -14,6 +14,7 @@ public class QuestInfo
     public int QuestId { get; set; }
     public QuestStatus QuestStatus { get; set; }
     public int Progress { get; set; }
+    public long FinishTime { get; set; }
 
     public Quest ToProto()
     {
@@ -21,7 +22,8 @@ public class QuestInfo
         {
             Id = (uint)QuestId,
             Status = QuestStatus,
-            Progress = (uint)Progress
+            Progress = (uint)Progress,
+            FinishTime = FinishTime
         };
     }
 }

@@ -59,6 +59,7 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
     public List<MazeBuff> Buffs { get; set; } = [];
     public Dictionary<int, BattleEventInstance> BattleEvents { get; set; } = [];
     public Dictionary<int, BattleTargetList> BattleTargets { get; set; } = [];
+    public PVEBattleResultCsReq? BattleResult { get; set; }
 
     public ItemList GetDropItemList()
     {

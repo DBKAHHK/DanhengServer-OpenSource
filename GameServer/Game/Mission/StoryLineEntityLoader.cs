@@ -1,5 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Config;
+using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Enums.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
@@ -20,8 +21,8 @@ public class StoryLineEntityLoader(SceneInstance scene) : SceneEntityLoader(scen
         GameData.StoryLineFloorDataData.TryGetValue(storyId, out var floorData);
         if (floorData == null) return;
 
-        floorData.TryGetValue(Scene.FloorInfo?.FloorID ?? 0, out var floorInfo);
-        if (floorInfo == null) return;
+        floorData.TryGetValue(Scene.FloorInfo?.FloorID ?? 0, out var floorInfo); 
+        floorInfo ??= new StoryLineFloorDataExcel { DimensionID = 0 };  // Default
 
         var dim = Scene.FloorInfo?.DimensionList.Find(d => d.ID == floorInfo.DimensionID);
         if (dim == null) return;

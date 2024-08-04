@@ -4,14 +4,13 @@ using EggLink.DanhengServer.Proto;
 
 namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Mission;
 
-public class PacketMissionRewardScNotify : BasePacket
+public class PacketSubMissionRewardScNotify : BasePacket
 {
-    public PacketMissionRewardScNotify(int mainMissionId, int subMissionId, List<ItemData> item) : base(
-        CmdIds.MissionRewardScNotify)
+    public PacketSubMissionRewardScNotify(int subMissionId, List<ItemData> item) : base(
+        CmdIds.SubMissionRewardScNotify)
     {
-        var proto = new MissionRewardScNotify
+        var proto = new SubMissionRewardScNotify
         {
-            MainMissionId = (uint)mainMissionId,
             SubMissionId = (uint)subMissionId,
             Reward = new ItemList()
         };
