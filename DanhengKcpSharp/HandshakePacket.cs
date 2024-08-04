@@ -4,9 +4,9 @@ using Google.Protobuf;
 
 namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Others;
 
-public class PacketClientDownloadDataScNotify : BasePacket
+public class HandshakePacket : BasePacket
 {
-    public PacketClientDownloadDataScNotify(byte[] data) : base(CmdIds.ClientDownloadDataScNotify)
+    public HandshakePacket(byte[] data) : base(CmdIds.HandShakeScNotify)
     {
         var downloadData = new ClientDownloadData
         {
@@ -22,7 +22,7 @@ public class PacketClientDownloadDataScNotify : BasePacket
         SetData(notify);
     }
 
-    public PacketClientDownloadDataScNotify(string base64) : base(CmdIds.ClientDownloadDataScNotify)
+    public HandshakePacket(string base64) : base(CmdIds.HandShakeScNotify)
     {
         SetData(Convert.FromBase64String(base64));
     }

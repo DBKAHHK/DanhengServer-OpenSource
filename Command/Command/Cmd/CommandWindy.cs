@@ -19,7 +19,7 @@ public class CommandWindy : ICommand
         if (File.Exists(filePath))
         {
             var fileBytes = await File.ReadAllBytesAsync(filePath);
-            await arg.Target.SendPacket(new PacketClientDownloadDataScNotify(fileBytes));
+            await arg.Target.SendPacket(new HandshakePacket(fileBytes));
             await arg.SendMsg("Read BYTECODE from Lua script: " + filePath.Replace("\\", "/"));
         }
         else

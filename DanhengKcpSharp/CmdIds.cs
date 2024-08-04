@@ -916,7 +916,7 @@ public class CmdIds
     public const int SetGameplayBirthdayScRsp = 88;
     public const int UpdatePlayerSettingScRsp = 65;
     public const int GmTalkScRsp = 89;
-    public const int ClientDownloadDataScNotify = 53;
+    public const int HandShakeScNotify = 53;
     public const int PlayerGetTokenScRsp = 49;
     public const int UpdatePsnSettingsInfoCsReq = 5;
     public const int GetAuthkeyScRsp = 91;
