@@ -50,7 +50,7 @@ public class SceneInstance
         SceneInfo sceneInfo = new()
         {
             WorldId = (uint)(Excel.WorldID == 100 ? Player.LastWorldId : Excel.WorldID),
-            GameModeType = (uint)(CustomGameModeId > 0 ? CustomGameModeId : (int)Excel.PlaneType),
+            GameModeType = (uint)GameModeType,
             PlaneId = (uint)PlaneId,
             FloorId = (uint)FloorId,
             EntryId = (uint)EntryId,
@@ -172,7 +172,7 @@ public class SceneInstance
 
     public SceneEntityLoader? EntityLoader;
 
-    public int CustomGameModeId;
+    public GameModeTypeEnum GameModeType;
 
     public SceneInstance(PlayerInstance player, MazePlaneExcel excel, int floorId, int entryId)
     {
@@ -188,13 +188,14 @@ public class SceneInstance
         GameData.GetFloorInfo(PlaneId, FloorId, out FloorInfo);
         if (FloorInfo == null) return;
 
+        GameModeType = (GameModeTypeEnum)excel.PlaneType;
         switch (Excel.PlaneType)
         {
             case PlaneTypeEnum.Rogue:
                 if (Player.ChessRogueManager!.RogueInstance != null)
                 {
                     EntityLoader = new ChessRogueEntityLoader(this);
-                    CustomGameModeId = 16; // ChessRogue
+                    GameModeType = GameModeTypeEnum.ChessRogue; // ChessRogue
                 }
                 else
                 {

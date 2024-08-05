@@ -346,16 +346,16 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
                 }
             }
 
-            DatabaseHelper.Instance?.UpdateInstance(Player.AvatarManager!.AvatarData!);
+            DatabaseHelper.Instance?.UpdateInstance(Player.AvatarManager!.AvatarData);
             await Player.SendPacket(new PacketSyncLineupNotify(lineup));
         }
 
         if (teleportToAnchor)
         {
             var anchorProp = Player.SceneInstance?.GetNearestSpring(long.MaxValue);
-            if (anchorProp != null && anchorProp.PropInfo != null)
+            if (anchorProp != null)
             {
-                var anchor = Player!.SceneInstance?.FloorInfo?.GetAnchorInfo(
+                var anchor = Player.SceneInstance?.FloorInfo?.GetAnchorInfo(
                     anchorProp.PropInfo.AnchorGroupID,
                     anchorProp.PropInfo.AnchorID
                 );
@@ -376,8 +376,8 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
         if (Player.ChallengeManager?.ChallengeInstance != null)
             await Player.ChallengeManager!.ChallengeInstance.OnBattleEnd(battle, req);
 
-        if (player.ActivityManager!.TrialActivityInstance != null && req.EndStatus == BattleEndStatus.BattleEndWin)
-            await player.ActivityManager.TrialActivityInstance.EndActivity(TrialActivityStatus.Finish);
+        if (Player.ActivityManager!.TrialActivityInstance != null && req.EndStatus == BattleEndStatus.BattleEndWin)
+            await Player.ActivityManager.TrialActivityInstance.EndActivity(TrialActivityStatus.Finish);
 
         await Player.SendPacket(new PacketPVEBattleResultScRsp(req, Player, battle));
     }
