@@ -28,7 +28,6 @@ using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.GameServer.Game.Shop;
 using EggLink.DanhengServer.GameServer.Game.Task;
 using EggLink.DanhengServer.GameServer.Server;
-using EggLink.DanhengServer.GameServer.Server.Packet;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Avatar;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
@@ -471,6 +470,12 @@ public class PlayerInstance(PlayerData data)
 
                 var floorSavedKey = prop.PropInfo.Name.Replace("Controller_", "");
                 var key = $"FSV_ML{floorSavedKey}{(config.TargetState == PropStateEnum.Open ? "Started" : "Complete")}";
+
+                if (prop.Group.GroupName.Contains("JigsawPuzzle") && prop.Group.GroupName.Contains("MainLine"))
+                {
+                    var splits = prop.Group.GroupName.Split('_');
+                    key = $"JG_ML_{splits[3]}_Puzzle{(config.TargetState == PropStateEnum.Open ? "Started" : "Complete")}";
+                }
                 if (SceneInstance?.FloorInfo?.SavedValues.Find(x => x.Name == key) != null)
                 {
                     // should save

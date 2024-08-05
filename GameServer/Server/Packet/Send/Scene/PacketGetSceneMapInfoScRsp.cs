@@ -24,8 +24,8 @@ public class PacketGetSceneMapInfoScRsp : BasePacket
             {
                 EntryId = entry,
                 EntryStoryLineId = (uint)(player.StoryLineManager?.StoryLineData.CurStoryLineId ?? 0),
-                DimensionId = (uint)(player.SceneInstance?.EntityLoader is StoryLineEntityLoader loader ? loader.DimensionId
-                    : 0)
+                //DimensionId = (uint)(player.SceneInstance?.EntityLoader is StoryLineEntityLoader loader ? loader.DimensionId
+                //    : 0)
             };
             GameData.MapEntranceData.TryGetValue((int)entry, out var mapData);
             if (mapData == null)
