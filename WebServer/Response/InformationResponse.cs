@@ -52,7 +52,7 @@ public class PlayerInformationData
 
     // Player info
     [Newtonsoft.Json.JsonConverter(typeof(StringEnumConverter))]
-    [System.Text.Json.Serialization.JsonConverter(typeof(JsonStringEnumConverter))]
+    [JsonConverter(typeof(JsonStringEnumConverter))]
     public PlayerStatusEnum PlayerStatus { get; set; } = PlayerStatusEnum.Explore;
 
     [Newtonsoft.Json.JsonConverter(typeof(StringEnumConverter))]
@@ -67,8 +67,7 @@ public class PlayerInformationData
     // Mission info
     public List<int> FinishedMainMissionIdList { get; set; } = [];
     public List<int> FinishedSubMissionIdList { get; set; } = [];
-    public List<int> AcceptedMainMissionIdList { get; set; } = [];
-    public List<int> AcceptedSubMissionIdList { get; set; } = [];
+    public Dictionary<int, List<int>> AcceptedMissionList { get; set; } = [];
 
     // Lineup info
     public List<int> LineupBaseAvatarIdList { get; set; } = [];

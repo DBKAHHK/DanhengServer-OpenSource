@@ -269,6 +269,17 @@ public static class MuipManager
                     if (excel != null) curLineupAvatars.Add(avatar.BaseAvatarId);
                 }
 
+            Dictionary<int, List<int>> missionDict = [];
+            foreach (var subId in missionData.RunningSubMissionIds)
+            {
+                var subMission = GameData.SubMissionData.GetValueOrDefault(subId);
+                if (subMission == null) continue;
+
+                if (missionDict.ContainsKey(subMission.MainMissionID))
+                    missionDict[subMission.MainMissionID].Add(subMission.SubMissionID);
+                else
+                    missionDict[subMission.MainMissionID] = [subMission.SubMissionID];
+            }
 
             return new PlayerInformationResponse(0, "Success", new PlayerInformationData
             {
@@ -282,8 +293,7 @@ public static class MuipManager
                 CurPlaneId = player.PlaneId,
                 AssistAvatarList = avatarData.AssistAvatars,
                 DisplayAvatarList = avatarData.DisplayAvatars,
-                AcceptedSubMissionIdList = missionData.RunningSubMissionIds,
-                AcceptedMainMissionIdList = missionData.RunningMainMissionIds,
+                AcceptedMissionList = missionDict,
                 FinishedMainMissionIdList = missionData.FinishedMainMissionIds,
                 FinishedSubMissionIdList = missionData.FinishedSubMissionIds,
                 PlayerStatus = status,
