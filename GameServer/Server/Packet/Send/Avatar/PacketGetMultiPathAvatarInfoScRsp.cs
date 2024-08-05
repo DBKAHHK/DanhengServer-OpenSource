@@ -17,7 +17,7 @@ public class PacketGetMultiPathAvatarInfoScRsp : BasePacket
                 var avatar = player.AvatarManager!.GetAvatar(multiPathAvatar.BaseAvatarID);
                 if (avatar != null)
                 {
-                    proto.BasicTypeIdList.Add((uint)avatar.AvatarId);
+                    proto.BasicTypeIdList.Add((uint)avatar.PathId);
                     var pathId = avatar.PathId > 0 ? avatar.PathId : avatar.AvatarId;
                     if (pathId == 8001)
                         if (player.Data.CurrentGender != Gender.Man)

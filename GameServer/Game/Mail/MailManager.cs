@@ -22,6 +22,12 @@ public class MailManager(PlayerInstance player) : BasePlayerManager(player)
         return MailData.MailList.Find(x => x.MailID == mailId);
     }
 
+    public void DeleteMail(int mailId)
+    {
+        var index = MailData.MailList.FindIndex(x => x.MailID == mailId);
+        MailData.MailList.RemoveAt(index);
+    }
+
     public async ValueTask SendMail(string sender, string title, string content, int templateId, int expiredDay = 30)
     {
         var mail = new MailInfo

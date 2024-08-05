@@ -394,7 +394,7 @@ public class MailTextEN
 {
     public string Desc => "Manage player's mails";
 
-    public string Usage => "Usage: /mail send [senderName] [title] [content] [templateId] [expiryDays]";
+    public string Usage => "Usage: /mail [senderName] [templateId] [expiryDays] _TITLE [title] _CONTENT [content]";
 
     public string MailSent => "Mail has been sent!";
     public string MailSentWithAttachment => "Mail with attachments has been sent!";
