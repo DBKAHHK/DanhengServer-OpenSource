@@ -19,6 +19,7 @@ public static class ConfigManager
             logger.Info("Muipserver Admin key: " + Config.MuipServer.AdminKey);
             SaveConfig();
         }
+
         using var reader = new StreamReader(file.OpenRead());
         var json = reader.ReadToEnd();
         Config = JsonConvert.DeserializeObject<ConfigContainer>(json)!;

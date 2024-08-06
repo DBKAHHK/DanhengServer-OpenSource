@@ -4,8 +4,10 @@ using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Enums.Item;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Game.Player;
-using EggLink.DanhengServer.GameServer.Server.Packet.Send.Others;
+using EggLink.DanhengServer.GameServer.Game.Scene;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.PlayerSync;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
@@ -406,13 +408,13 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
 
         foreach (var item in rewardData.GetItems())
         {
-            var i = await AddItem(item.Item1, item.Item2, notify, sync:false);
+            var i = await AddItem(item.Item1, item.Item2, notify, sync: false);
             if (i != null) items.Add(i);
         }
 
         await Player.SendPacket(new PacketPlayerSyncScNotify(items));
 
-        var hCoin = await AddItem(1, rewardData.Hcoin, notify, sync:false);
+        var hCoin = await AddItem(1, rewardData.Hcoin, notify, sync: false);
         if (hCoin != null)
             items.Add(hCoin);
 
@@ -548,6 +550,99 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         }
 
         return items;
+    }
+
+    public async ValueTask<(Retcode, List<ItemData>? returnItems)> UseItem(int itemId, int count = 1, int baseAvatarId = 0)
+    {
+        GameData.ItemConfigData.TryGetValue(itemId, out var itemConfig);
+        if (itemConfig == null) return (Retcode.RetItemNotExist, null);
+        var dataId = itemConfig.UseDataID;
+        GameData.ItemUseBuffDataData.TryGetValue(dataId, out var useConfig);
+        if (useConfig == null) return (Retcode.RetItemUseConfigNotExist, null);
+
+        for (int i = 0; i < count; i++)  // do count times
+        {
+            if (useConfig.PreviewSkillPoint != 0)
+            {
+                await Player.LineupManager!.GainMp((int)useConfig.PreviewSkillPoint);
+            }
+
+            if (baseAvatarId > 0)
+            {
+                // single use
+                var avatar = Player.AvatarManager!.GetAvatar(baseAvatarId);
+                if (avatar == null) return (Retcode.RetAvatarNotExist, null);
+
+                var extraLineup = Player.LineupManager!.GetCurLineup()?.IsExtraLineup() == true;
+
+                if (useConfig.PreviewHPRecoveryPercent != 0)
+                {
+                    avatar.SetCurHp(Math.Min(Math.Max(avatar.CurrentHp + (int)(useConfig.PreviewHPRecoveryPercent * 10000), 0), 10000), extraLineup);
+
+                    await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager.GetCurLineup()!));
+                }
+
+                if (useConfig.PreviewHPRecoveryValue != 0)
+                {
+                    avatar.SetCurHp(Math.Min(Math.Max(avatar.CurrentHp + (int)useConfig.PreviewHPRecoveryValue, 0), 10000), extraLineup);
+
+                    await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager.GetCurLineup()!));
+                }
+
+                if (useConfig.PreviewPowerPercent != 0)
+                {
+                    avatar.SetCurSp(Math.Min(Math.Max(avatar.CurrentHp + (int)(useConfig.PreviewPowerPercent * 10000), 0), 10000), extraLineup);
+
+                    await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager.GetCurLineup()!));
+                }
+
+            }
+            else
+            {
+                // team use
+                if (useConfig.PreviewHPRecoveryPercent != 0)
+                {
+                    Player.LineupManager!.GetCurLineup()!.Heal((int)(useConfig.PreviewHPRecoveryPercent * 10000), true);
+
+                    await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager.GetCurLineup()!));
+                }
+
+                if (useConfig.PreviewHPRecoveryValue != 0)
+                {
+                    Player.LineupManager!.GetCurLineup()!.Heal((int)useConfig.PreviewHPRecoveryValue, true);
+
+                    await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager.GetCurLineup()!));
+                }
+
+                if (useConfig.PreviewPowerPercent != 0)
+                {
+                    Player.LineupManager!.GetCurLineup()!.AddPercentSp((int)(useConfig.PreviewPowerPercent * 10000));
+
+                    await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager.GetCurLineup()!));
+                }
+            }
+        }
+
+        //maze buff
+        if (useConfig.MazeBuffID > 0)
+        {
+            foreach (var info in Player.SceneInstance?.AvatarInfo.Values.ToList() ?? [])
+            {
+                if (baseAvatarId == 0 || info.AvatarInfo.GetBaseAvatarId() == baseAvatarId)
+                    await info.AddBuff(new SceneBuff(useConfig.MazeBuffID, 1, info.AvatarInfo.AvatarId));
+            }
+        }
+
+        if (useConfig.MazeBuffID2 > 0)
+        {
+            foreach (var info in Player.SceneInstance?.AvatarInfo.Values.ToList() ?? [])
+            {
+                if (baseAvatarId == 0 || info.AvatarInfo.GetBaseAvatarId() == baseAvatarId)
+                    await info.AddBuff(new SceneBuff(useConfig.MazeBuffID2, 1, info.AvatarInfo.AvatarId));
+            }
+        }
+
+        return (Retcode.RetSucc, null);
     }
 
     #region Equip

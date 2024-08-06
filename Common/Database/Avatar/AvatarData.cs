@@ -170,7 +170,7 @@ public class AvatarInfo
         if (pathId == 0 && AvatarId == 1001)
         {
             PathId = 1001;
-            pathId = 1001;  // march 7th
+            pathId = 1001; // march 7th
         }
 
         var value = SkillTree;

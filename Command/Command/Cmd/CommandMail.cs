@@ -49,16 +49,10 @@ public class CommandMail : ICommand
                 continue;
             }
 
-            if (flagTitle && !flagContent)
-            {
-                title += text + " ";
-            }
+            if (flagTitle && !flagContent) title += text + " ";
 
 
-            if (flagTitle && flagContent)
-            {
-                content += text + " ";
-            }
+            if (flagTitle && flagContent) content += text + " ";
         }
 
         content = content[..^1];

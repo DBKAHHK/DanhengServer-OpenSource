@@ -17,7 +17,7 @@ public class PacketFinishTutorialGuideScRsp : BasePacket
             Reward = new ItemList()
         };
 
-        rsp.Reward.ItemList_.Add(new Item
+        rsp.Reward.ItemList_.Add(new Proto.Item
         {
             ItemId = 1,
             Num = 1

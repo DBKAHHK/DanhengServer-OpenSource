@@ -1,5 +1,4 @@
 ﻿using EggLink.DanhengServer.Data;
-using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Database.Quests;
@@ -7,7 +6,7 @@ using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.Enums.Quest;
 using EggLink.DanhengServer.GameServer.Game.Battle;
 using EggLink.DanhengServer.GameServer.Game.Player;
-using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.PlayerSync;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 
@@ -18,6 +17,24 @@ public class QuestManager(PlayerInstance player) : BasePlayerManager(player)
     public UnlockHandler UnlockHandler { get; } = new(player);
     public QuestData QuestData { get; } = DatabaseHelper.Instance!.GetInstanceOrCreateNew<QuestData>(player.Uid);
     public List<QuestInfo> WaitToSync { get; } = [];
+
+    #region Handler
+
+    public void OnBattleStart(BattleInstance instance)
+    {
+        foreach (var questInfo in GetRunningQuest())
+        {
+            var questExcel = GameData.QuestDataData.GetValueOrDefault(questInfo.QuestId);
+            if (questExcel == null) continue;
+            var finishWayExcel = GameData.FinishWayData.GetValueOrDefault(questExcel.FinishWayID);
+            if (finishWayExcel == null) continue;
+            if (finishWayExcel.FinishType == MissionFinishTypeEnum.BattleChallenge)
+                foreach (var target in finishWayExcel.ParamIntList)
+                    instance.AddBattleTarget(2, target, GetQuestProgress(questExcel.QuestID), finishWayExcel.Progress);
+        }
+    }
+
+    #endregion
 
     #region Actions
 
@@ -43,10 +60,7 @@ public class QuestManager(PlayerInstance player) : BasePlayerManager(player)
                             break;
                         }
 
-                    if (accept)
-                    {
-                        acceptQuest = await AcceptQuest(quest.QuestID, false);
-                    }
+                    if (accept) acceptQuest = await AcceptQuest(quest.QuestID, false);
                     break;
                 case QuestUnlockTypeEnum.FinishQuest:
                     var accept2 = true;
@@ -223,28 +237,6 @@ public class QuestManager(PlayerInstance player) : BasePlayerManager(player)
     {
         if (!QuestData.Quests.TryGetValue(questId, out var questInfo)) return 0;
         return questInfo.Progress;
-    }
-
-    #endregion
-
-    #region Handler
-
-    public void OnBattleStart(BattleInstance instance)
-    {
-        foreach (var questInfo in GetRunningQuest())
-        {
-            var questExcel = GameData.QuestDataData.GetValueOrDefault(questInfo.QuestId);
-            if (questExcel == null) continue;
-            var finishWayExcel = GameData.FinishWayData.GetValueOrDefault(questExcel.FinishWayID);
-            if (finishWayExcel == null) continue;
-            if (finishWayExcel.FinishType == MissionFinishTypeEnum.BattleChallenge)
-            {
-                foreach (var target in finishWayExcel.ParamIntList)
-                {
-                    instance.AddBattleTarget(2, target, GetQuestProgress(questExcel.QuestID), finishWayExcel.Progress);
-                }
-            }
-        }
     }
 
     #endregion

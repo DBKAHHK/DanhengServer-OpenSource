@@ -2,7 +2,7 @@
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Account;
 using EggLink.DanhengServer.GameServer.Game.Player;
-using EggLink.DanhengServer.GameServer.Server.Packet.Send.Friend;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Chat;
 using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Command;

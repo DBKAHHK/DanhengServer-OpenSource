@@ -2,7 +2,7 @@
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Enums.Avatar;
 using EggLink.DanhengServer.Enums.Item;
-using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.PlayerSync;
 using EggLink.DanhengServer.Internationalization;
 
 namespace EggLink.DanhengServer.Command.Command.Cmd;
@@ -126,7 +126,7 @@ public class CommandGiveall : ICommand
         var materialList = GameData.ItemConfigData.Values;
         var items = new List<ItemData>();
         foreach (var material in materialList)
-            if (material.ItemMainType == ItemMainTypeEnum.Material)
+            if (material.ItemMainType == ItemMainTypeEnum.Material || material.ItemSubType == ItemSubTypeEnum.Food)
                 items.Add(new ItemData
                 {
                     ItemId = material.ID,

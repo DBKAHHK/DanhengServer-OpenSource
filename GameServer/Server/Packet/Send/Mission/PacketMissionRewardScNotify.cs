@@ -16,10 +16,7 @@ public class PacketMissionRewardScNotify : BasePacket
             Reward = new ItemList()
         };
 
-        foreach (var i in item)
-        {
-            proto.Reward.ItemList_.Add(i.ToProto());
-        }
+        foreach (var i in item) proto.Reward.ItemList_.Add(i.ToProto());
 
         SetData(proto);
     }

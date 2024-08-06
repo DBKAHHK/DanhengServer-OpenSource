@@ -52,7 +52,7 @@ public class PlayerInformationData
 
     // Player info
     [Newtonsoft.Json.JsonConverter(typeof(StringEnumConverter))]
-    [JsonConverter(typeof(JsonStringEnumConverter))]
+    [System.Text.Json.Serialization.JsonConverter(typeof(JsonStringEnumConverter))]
     public PlayerStatusEnum PlayerStatus { get; set; } = PlayerStatusEnum.Explore;
 
     [Newtonsoft.Json.JsonConverter(typeof(StringEnumConverter))]

@@ -1,8 +1,7 @@
-﻿using EggLink.DanhengServer.Kcp;
-using EggLink.DanhengServer.Proto;
+﻿using EggLink.DanhengServer.Proto;
 using Google.Protobuf;
 
-namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Others;
+namespace EggLink.DanhengServer.Kcp;
 
 public class HandshakePacket : BasePacket
 {

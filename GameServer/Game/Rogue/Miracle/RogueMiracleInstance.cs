@@ -2,7 +2,7 @@
 using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Enums.Rogue;
 using EggLink.DanhengServer.GameServer.Game.Battle;
-using EggLink.DanhengServer.GameServer.Server.Packet.Send.Rogue;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueCommon;
 using EggLink.DanhengServer.Proto;
 
 namespace EggLink.DanhengServer.GameServer.Game.Rogue.Miracle;

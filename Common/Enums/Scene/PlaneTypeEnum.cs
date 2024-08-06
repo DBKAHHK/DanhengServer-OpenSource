@@ -10,5 +10,5 @@ public enum PlaneTypeEnum
     Rogue = GameModeTypeEnum.RogueExplore,
     Raid = GameModeTypeEnum.Raid,
     AetherDivide = GameModeTypeEnum.AetherDivide,
-    TrialActivity = GameModeTypeEnum.TrialActivity,
+    TrialActivity = GameModeTypeEnum.TrialActivity
 }

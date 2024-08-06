@@ -4,7 +4,7 @@ using EggLink.DanhengServer.Database.Quests;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
-using EggLink.DanhengServer.GameServer.Server.Packet.Send.Mission;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.StoryLine;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 

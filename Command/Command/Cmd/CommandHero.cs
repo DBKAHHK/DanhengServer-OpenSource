@@ -1,5 +1,5 @@
 ﻿using EggLink.DanhengServer.Enums.Avatar;
-using EggLink.DanhengServer.GameServer.Server.Packet.Send.Avatar;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.Internationalization;
 using EggLink.DanhengServer.Proto;
 

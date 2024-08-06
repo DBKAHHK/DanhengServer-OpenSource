@@ -49,8 +49,9 @@ public class LineupInfo
                 if (avatarInfo != null)
                 {
                     if (avatarInfo.GetCurHp(IsExtraLineup()) <= 0 && !allowRevive) continue;
-                    if (avatarInfo.GetCurHp(IsExtraLineup()) >= 10000) continue;
-                    avatarInfo.SetCurHp(Math.Min(avatarInfo.GetCurHp(IsExtraLineup()) + count, 10000), IsExtraLineup());
+                    if (avatarInfo.GetCurHp(IsExtraLineup()) >= 10000 && count > 0) continue;  // full hp
+                    if (avatarInfo.GetCurHp(IsExtraLineup()) <= 0 && count < 0) continue;  // dead
+                    avatarInfo.SetCurHp(Math.Max(Math.Min(avatarInfo.GetCurHp(IsExtraLineup()) + count, 10000), 0), IsExtraLineup());
                     result = true;
                 }
             }
@@ -74,6 +75,28 @@ public class LineupInfo
                     if (avatarInfo.CurrentHp <= 0) continue;
                     avatarInfo.SetCurHp((int)Math.Max(avatarInfo.GetCurHp(IsExtraLineup()) * (1 - count), 100),
                         IsExtraLineup());
+                    result = true;
+                }
+            }
+
+            DatabaseHelper.Instance?.UpdateInstance(AvatarData!);
+        }
+
+        return result;
+    }
+
+    public bool AddPercentSp(int count)
+    {
+        var result = false;
+        if (BaseAvatars != null && AvatarData != null)
+        {
+            foreach (var avatar in BaseAvatars)
+            {
+                var avatarInfo = AvatarData?.Avatars?.Find(item => item.GetAvatarId() == avatar.BaseAvatarId);
+                if (avatarInfo != null)
+                {
+                    if (avatarInfo.CurrentHp <= 0) continue;
+                    avatarInfo.SetCurSp((int)Math.Min(avatarInfo.GetCurSp(IsExtraLineup()) + count, 10000), IsExtraLineup());
                     result = true;
                 }
             }

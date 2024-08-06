@@ -1,6 +1,5 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Enums.Scene;
-using EggLink.DanhengServer.GameServer.Game.Mission;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
@@ -23,7 +22,7 @@ public class PacketGetSceneMapInfoScRsp : BasePacket
             var mazeMap = new SceneMapInfo
             {
                 EntryId = entry,
-                EntryStoryLineId = (uint)(player.StoryLineManager?.StoryLineData.CurStoryLineId ?? 0),
+                EntryStoryLineId = (uint)(player.StoryLineManager?.StoryLineData.CurStoryLineId ?? 0)
                 //DimensionId = (uint)(player.SceneInstance?.EntityLoader is StoryLineEntityLoader loader ? loader.DimensionId
                 //    : 0)
             };

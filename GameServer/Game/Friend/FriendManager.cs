@@ -4,6 +4,7 @@ using EggLink.DanhengServer.Database.Player;
 using EggLink.DanhengServer.GameServer.Command;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Server;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Chat;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Friend;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;

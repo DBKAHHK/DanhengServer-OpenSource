@@ -25,10 +25,7 @@ public class PacketStartChallengeScRsp : BasePacket
             proto.CurChallenge = player.ChallengeManager.ChallengeInstance.ToProto();
             proto.LineupList.Add(player.LineupManager!.GetExtraLineup(ExtraLineupType.LineupChallenge)!.ToProto());
             proto.LineupList.Add(player.LineupManager!.GetExtraLineup(ExtraLineupType.LineupChallenge2)!.ToProto());
-            if (sendScene)
-            {
-                proto.Scene = player.SceneInstance!.ToProto();
-            }
+            if (sendScene) proto.Scene = player.SceneInstance!.ToProto();
         }
         else
         {

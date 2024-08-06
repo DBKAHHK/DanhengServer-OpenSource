@@ -2,8 +2,7 @@
 using LinkedListOfQueueItem = KcpSharp.NetstandardShim.LinkedList<KcpSharp.KcpBuffer>;
 using LinkedListNodeOfQueueItem = KcpSharp.NetstandardShim.LinkedListNode<KcpSharp.KcpBuffer>;
 #else
-using LinkedListOfQueueItem =
-    System.Collections.Generic.LinkedList<EggLink.DanhengServer.Kcp.KcpSharp.KcpBuffer>;
+using LinkedListOfQueueItem = System.Collections.Generic.LinkedList<EggLink.DanhengServer.Kcp.KcpSharp.KcpBuffer>;
 using LinkedListNodeOfQueueItem =
     System.Collections.Generic.LinkedListNode<EggLink.DanhengServer.Kcp.KcpSharp.KcpBuffer>;
 #endif

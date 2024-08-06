@@ -21,8 +21,8 @@ public class StoryLineEntityLoader(SceneInstance scene) : SceneEntityLoader(scen
         GameData.StoryLineFloorDataData.TryGetValue(storyId, out var floorData);
         if (floorData == null) return;
 
-        floorData.TryGetValue(Scene.FloorInfo?.FloorID ?? 0, out var floorInfo); 
-        floorInfo ??= new StoryLineFloorDataExcel { DimensionID = 0 };  // Default
+        floorData.TryGetValue(Scene.FloorInfo?.FloorID ?? 0, out var floorInfo);
+        floorInfo ??= new StoryLineFloorDataExcel { DimensionID = 0 }; // Default
 
         var dim = Scene.FloorInfo?.DimensionList.Find(d => d.ID == floorInfo.DimensionID);
         if (dim == null) return;

@@ -28,9 +28,9 @@ using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.GameServer.Game.Shop;
 using EggLink.DanhengServer.GameServer.Game.Task;
 using EggLink.DanhengServer.GameServer.Server;
-using EggLink.DanhengServer.GameServer.Server.Packet.Send.Avatar;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.PlayerSync;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
@@ -198,22 +198,17 @@ public class PlayerInstance(PlayerData data)
         }
 
         foreach (var avatar in AvatarManager?.AvatarData.Avatars ?? [])
+        foreach (var skill in avatar.GetSkillTree())
         {
-            foreach (var skill in avatar.GetSkillTree())
-            {
-                GameData.AvatarSkillTreeConfigData.TryGetValue(skill.Key * 10 + 1, out var config);
-                if (config == null) continue;
-                avatar.GetSkillTree()[skill.Key] = Math.Min(skill.Value, config.MaxLevel);  // limit skill level
-            }
+            GameData.AvatarSkillTreeConfigData.TryGetValue(skill.Key * 10 + 1, out var config);
+            if (config == null) continue;
+            avatar.GetSkillTree()[skill.Key] = Math.Min(skill.Value, config.MaxLevel); // limit skill level
         }
 
         await LoadScene(Data.PlaneId, Data.FloorId, Data.EntryId, Data.Pos!, Data.Rot!, false);
         if (SceneInstance == null) await EnterScene(2000101, 0, false);
 
-        if (ConfigManager.Config.ServerOption.EnableMission)
-        {
-            await MissionManager!.AcceptMainMissionByCondition();
-        }
+        if (ConfigManager.Config.ServerOption.EnableMission) await MissionManager!.AcceptMainMissionByCondition();
 
         await QuestManager!.AcceptQuestByCondition();
     }
@@ -483,8 +478,10 @@ public class PlayerInstance(PlayerData data)
                 if (prop.Group.GroupName.Contains("JigsawPuzzle") && prop.Group.GroupName.Contains("MainLine"))
                 {
                     var splits = prop.Group.GroupName.Split('_');
-                    key = $"JG_ML_{splits[3]}_Puzzle{(config.TargetState == PropStateEnum.Open ? "Started" : "Complete")}";
+                    key =
+                        $"JG_ML_{splits[3]}_Puzzle{(config.TargetState == PropStateEnum.Open ? "Started" : "Complete")}";
                 }
+
                 if (SceneInstance?.FloorInfo?.SavedValues.Find(x => x.Name == key) != null)
                 {
                     // should save

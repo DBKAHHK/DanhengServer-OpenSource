@@ -12,7 +12,7 @@ using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Plugin.Event;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.HeartDial;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Mission;
-using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.PlayerSync;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 using MissionData = EggLink.DanhengServer.Database.Quests.MissionData;
@@ -360,7 +360,7 @@ public class MissionManager : BasePlayerManager
         {
             GameData.ItemConfigData.TryGetValue(item.Item1, out var itemExcel);
             var res = await Player.InventoryManager!.AddItem(item.Item1, item.Item2,
-                itemExcel?.ItemMainType == ItemMainTypeEnum.AvatarCard);  // notify if avatar card
+                itemExcel?.ItemMainType == ItemMainTypeEnum.AvatarCard); // notify if avatar card
             if (res != null) itemList.Add(res);
         }
 
@@ -370,13 +370,13 @@ public class MissionManager : BasePlayerManager
         foreach (var i in mainMission.SubRewardList)
         {
             GameData.RewardDataData.TryGetValue(i, out var rewardDataExcel);
-            var hCoin2 = await Player.InventoryManager!.AddItem(1, rewardDataExcel?.Hcoin ?? 0, false);  // hcoin
+            var hCoin2 = await Player.InventoryManager!.AddItem(1, rewardDataExcel?.Hcoin ?? 0, false); // hcoin
             if (hCoin2 != null) itemList.Add(hCoin2);
-            foreach (var item in rewardDataExcel?.GetItems() ?? [])  // items
+            foreach (var item in rewardDataExcel?.GetItems() ?? []) // items
             {
                 GameData.ItemConfigData.TryGetValue(item.Item1, out var itemExcel);
                 var res = await Player.InventoryManager!.AddItem(item.Item1, item.Item2,
-                    itemExcel?.ItemMainType == ItemMainTypeEnum.AvatarCard);  // notify if avatar card
+                    itemExcel?.ItemMainType == ItemMainTypeEnum.AvatarCard); // notify if avatar card
                 if (res != null) itemList.Add(res);
             }
         }
@@ -397,7 +397,7 @@ public class MissionManager : BasePlayerManager
         {
             GameData.ItemConfigData.TryGetValue(item.Item1, out var itemExcel);
             var res = await Player.InventoryManager!.AddItem(item.Item1, item.Item2,
-                itemExcel?.ItemMainType == ItemMainTypeEnum.AvatarCard);  // notify if avatar card
+                itemExcel?.ItemMainType == ItemMainTypeEnum.AvatarCard); // notify if avatar card
             if (res != null) itemList.Add(res);
         }
 
@@ -422,6 +422,7 @@ public class MissionManager : BasePlayerManager
                 if (handler != null)
                     await handler.HandleQuestFinishType(Player, excel, finishWay, arg);
         }
+
         if (pushQuest)
             await Player.QuestManager!.SyncQuest();
     }

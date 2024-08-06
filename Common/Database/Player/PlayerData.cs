@@ -45,8 +45,7 @@ public class PlayerData : BaseDatabaseDataHelper
 
     [SugarColumn(IsNullable = true)] public long LastActiveTime { get; set; }
 
-    [SugarColumn(IsJson = true)]
-    public List<int> TakenLevelReward { get; set; } = [];
+    [SugarColumn(IsJson = true)] public List<int> TakenLevelReward { get; set; } = [];
 
     public static PlayerData? GetPlayerByUid(long uid)
     {

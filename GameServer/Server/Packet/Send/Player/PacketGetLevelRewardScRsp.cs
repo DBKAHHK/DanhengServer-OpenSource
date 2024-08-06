@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using EggLink.DanhengServer.Database.Inventory;
+﻿using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
 
@@ -19,10 +14,7 @@ public class PacketGetLevelRewardScRsp : BasePacket
             Reward = new ItemList()
         };
 
-        foreach (var item in reward)
-        {
-            proto.Reward.ItemList_.Add(item.ToProto());
-        }
+        foreach (var item in reward) proto.Reward.ItemList_.Add(item.ToProto());
 
         SetData(proto);
     }

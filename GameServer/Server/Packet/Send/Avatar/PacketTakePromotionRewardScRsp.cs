@@ -7,7 +7,7 @@ public class PacketTakePromotionRewardScRsp : BasePacket
 {
     public PacketTakePromotionRewardScRsp() : base(CmdIds.TakePromotionRewardScRsp)
     {
-        var itemList = new Item
+        var itemList = new Proto.Item
         {
             ItemId = 101,
             Num = 1

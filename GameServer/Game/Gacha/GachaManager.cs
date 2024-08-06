@@ -5,7 +5,7 @@ using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Enums.Item;
 using EggLink.DanhengServer.GameServer.Game.Player;
-using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.PlayerSync;
 using EggLink.DanhengServer.Proto;
 using GachaInfo = EggLink.DanhengServer.Database.Gacha.GachaInfo;
 

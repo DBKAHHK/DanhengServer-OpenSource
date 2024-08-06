@@ -5,6 +5,7 @@ using EggLink.DanhengServer.Database.Lineup;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Game.Scene;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 using LineupInfo = EggLink.DanhengServer.Database.Lineup.LineupInfo;
@@ -355,12 +356,11 @@ public class LineupManager : BasePlayerManager
         curLineup.Mp = Math.Min(Math.Max(0, curLineup.Mp), 5);
         DatabaseHelper.Instance?.UpdateInstance(LineupData);
 
-        await Player.SendPacket(new PacketSceneCastSkillMpUpdateScNotify(castEntityId, curLineup.Mp));
+        //await Player.SendPacket(new PacketSceneCastSkillMpUpdateScNotify(castEntityId, curLineup.Mp));
     }
 
     public async ValueTask GainMp(int count, bool sendPacket = true)
     {
-        count = Math.Min(Math.Max(0, count), 2);
         var curLineup = GetCurLineup()!;
         curLineup.Mp += count;
         curLineup.Mp = Math.Min(Math.Max(0, curLineup.Mp), 5);

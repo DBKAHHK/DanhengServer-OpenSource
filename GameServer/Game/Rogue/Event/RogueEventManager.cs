@@ -2,7 +2,7 @@
 using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Enums.Rogue;
 using EggLink.DanhengServer.GameServer.Game.Player;
-using EggLink.DanhengServer.GameServer.Server.Packet.Send.Rogue;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueCommon;
 
 namespace EggLink.DanhengServer.GameServer.Game.Rogue.Event;
 

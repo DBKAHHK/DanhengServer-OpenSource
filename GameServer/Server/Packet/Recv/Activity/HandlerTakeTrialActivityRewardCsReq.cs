@@ -2,7 +2,7 @@
 using EggLink.DanhengServer.Database.Activity;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Activity;
-using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.PlayerSync;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
