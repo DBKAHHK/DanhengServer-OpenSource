@@ -17,14 +17,14 @@ public class HandlerUnlockSkilltreeCsReq : Handler
         GameData.AvatarSkillTreeConfigData.TryGetValue((int)(req.PointId * 10 + req.Level), out var config);
         if (config == null)
         {
-            await connection.SendPacket(new PacketUnlockSkilltreeScRsp());
+            await connection.SendPacket(new PacketUnlockSkilltreeScRsp(Retcode.RetSkilltreeConfigNotExist));
             return;
         }
 
         var avatar = player.AvatarManager!.GetAvatar(config.AvatarID);
         if (avatar == null)
         {
-            await connection.SendPacket(new PacketUnlockSkilltreeScRsp());
+            await connection.SendPacket(new PacketUnlockSkilltreeScRsp(Retcode.RetAvatarNotExist));
             return;
         }
 
@@ -32,8 +32,7 @@ public class HandlerUnlockSkilltreeCsReq : Handler
             await connection.Player!.InventoryManager!.RemoveItem((int)cost.PileItem.ItemId,
                 (int)cost.PileItem.ItemNum);
 
-        avatar.GetSkillTree().TryGetValue((int)req.PointId, out var level);
-        avatar.GetSkillTree()[(int)req.PointId] = level + 1;
+        avatar.GetSkillTree()[(int)req.PointId] = (int)req.Level;
 
         await connection.SendPacket(new PacketPlayerSyncScNotify(avatar));
 

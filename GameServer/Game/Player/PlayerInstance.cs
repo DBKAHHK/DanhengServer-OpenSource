@@ -150,7 +150,6 @@ public class PlayerInstance(PlayerData data)
         TutorialGuideData = InitializeDatabase<TutorialGuideData>();
 
         Data.LastActiveTime = Extensions.GetUnixSec();
-        DatabaseHelper.Instance?.UpdateInstance(Data);
 
         if (LineupManager!.GetCurLineup() != null) // null -> ignore(new player)
         {
@@ -195,6 +194,16 @@ public class PlayerInstance(PlayerData data)
                 if (avatarData != null && avatarData.CurrentHp <= 0)
                     // revive
                     avatarData.CurrentHp = 2000;
+            }
+        }
+
+        foreach (var avatar in AvatarManager?.AvatarData.Avatars ?? [])
+        {
+            foreach (var skill in avatar.GetSkillTree())
+            {
+                GameData.AvatarSkillTreeConfigData.TryGetValue(skill.Key * 10 + 1, out var config);
+                if (config == null) continue;
+                avatar.GetSkillTree()[skill.Key] = Math.Min(skill.Value, config.MaxLevel);  // limit skill level
             }
         }
 

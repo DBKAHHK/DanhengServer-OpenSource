@@ -5,11 +5,11 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Avatar;
 
 public class PacketUnlockSkilltreeScRsp : BasePacket
 {
-    public PacketUnlockSkilltreeScRsp() : base(CmdIds.UnlockSkilltreeScRsp)
+    public PacketUnlockSkilltreeScRsp(Retcode retCode) : base(CmdIds.UnlockSkilltreeScRsp)
     {
         var proto = new UnlockSkilltreeScRsp
         {
-            Retcode = 1
+            Retcode = (uint)retCode
         };
 
         SetData(proto);
