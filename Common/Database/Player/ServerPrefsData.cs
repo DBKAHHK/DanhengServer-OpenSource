@@ -10,6 +10,8 @@ public class ServerPrefsData : BaseDatabaseDataHelper
     [SugarColumn(IsJson = true)]
     public Dictionary<int, ServerPrefsInfo> ServerPrefsDict { get; set; } = [];
 
+    public double Version { get; set; } = 2.4;
+
     public void SetData(int prefsId, string b64Data)
     {
         ServerPrefsDict[prefsId] = new ServerPrefsInfo()
