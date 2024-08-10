@@ -13,7 +13,8 @@ public class PacketSelectRogueCommonDialogueOptionScRsp : BasePacket
         {
             EventUniqueId = (uint)rogueEvent.EventUniqueId,
             DialogueData = rogueEvent.ToProto(),
-            OptionId = (uint)rogueEvent.SelectedOptionId
+            OptionId = (uint)rogueEvent.SelectedOptionId,
+            MMDFEMGOIAI = true
         };
 
         SetData(proto);

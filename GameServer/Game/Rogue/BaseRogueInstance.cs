@@ -359,10 +359,10 @@ public abstract class BaseRogueInstance(PlayerInstance player, int rogueVersionI
 
     public async ValueTask<RogueEventInstance> GenerateEvent(RogueNpc npc)
     {
-        RogueNPCDialogueExcel? dialogue;
+        RogueNPCExcel? dialogue;
         do
         {
-            dialogue = GameData.RogueNPCDialogueData.Values.ToList().RandomElement();
+            dialogue = GameData.RogueNPCData.Values.ToList().RandomElement();
         } while (!dialogue.CanUseInVer(RogueType));
 
         var instance = new RogueEventInstance(dialogue, npc, CurEventUniqueID++);

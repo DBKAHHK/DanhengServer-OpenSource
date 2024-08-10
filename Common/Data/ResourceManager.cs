@@ -1,5 +1,7 @@
 ﻿using System.Reflection;
 using EggLink.DanhengServer.Data.Config;
+using EggLink.DanhengServer.Data.Config.Rogue;
+using EggLink.DanhengServer.Data.Config.Scene;
 using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Enums.Rogue;
@@ -361,9 +363,9 @@ public class ResourceManager
     {
         Logger.Info(I18nManager.Translate("Server.ServerInfo.LoadingItem", I18nManager.Translate("Word.DialogueInfo")));
         var count = 0;
-        foreach (var dialogue in GameData.RogueNPCDialogueData)
+        foreach (var dialogue in GameData.RogueNPCData)
         {
-            var path = ConfigManager.Config.Path.ResourcePath + "/" + dialogue.Value.DialoguePath;
+            var path = ConfigManager.Config.Path.ResourcePath + "/" + dialogue.Value.NPCJsonPath;
             var file = new FileInfo(path);
             if (!file.Exists) continue;
             try
@@ -371,14 +373,11 @@ public class ResourceManager
                 using var reader = file.OpenRead();
                 using StreamReader reader2 = new(reader);
                 var text = reader2.ReadToEnd().Replace("$type", "Type");
-                var dialogueInfo = JsonConvert.DeserializeObject<DialogueInfo>(text);
+                var dialogueInfo = JsonConvert.DeserializeObject<RogueNPCConfigInfo>(text);
                 if (dialogueInfo != null)
                 {
-                    dialogue.Value.DialogueInfo = dialogueInfo;
+                    dialogue.Value.RogueNpcConfig = dialogueInfo;
                     dialogueInfo.Loaded();
-                    if (dialogueInfo.DialogueIds.Count == 0)
-                        // set to invalid
-                        dialogue.Value.DialogueInfo = null;
                     count++;
                 }
             }
@@ -390,7 +389,7 @@ public class ResourceManager
             }
         }
 
-        if (count < GameData.RogueNPCDialogueData.Count)
+        if (count < GameData.RogueNPCData.Count)
             Logger.Warn(I18nManager.Translate("Server.ServerInfo.ConfigMissing",
                 I18nManager.Translate("Word.DialogueInfo"),
                 $"{ConfigManager.Config.Path.ResourcePath}/Config/Level/Rogue/Dialogue",

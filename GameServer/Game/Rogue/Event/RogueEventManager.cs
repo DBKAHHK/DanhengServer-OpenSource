@@ -108,8 +108,7 @@ public class RogueEventManager
             await Player.SendPacket(new PacketSelectRogueCommonDialogueOptionScRsp());
             return;
         }
-
-        option.IsSelected = true;
+        await Player.SendPacket(new PacketSyncRogueCommonDialogueDataScNotify(eventInstance));
 
         var param = dialogueEvent.RogueEffectParamList;
         if (option.ArgId > 0)
@@ -138,6 +137,7 @@ public class RogueEventManager
 
         // send rsp
         await Player.SendPacket(new PacketSyncRogueCommonDialogueOptionFinishScNotify(eventInstance));
+        option.IsSelected = true;
         await Player.SendPacket(new PacketSelectRogueCommonDialogueOptionScRsp(eventInstance));
     }
 }
