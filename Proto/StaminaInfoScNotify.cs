@@ -24,14 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static StaminaInfoScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlTdGFtaW5hSW5mb1NjTm90aWZ5LnByb3RvIm8KE1N0YW1pbmFJbmZvU2NO",
+            "ChlTdGFtaW5hSW5mb1NjTm90aWZ5LnByb3RvIn0KE1N0YW1pbmFJbmZvU2NO",
             "b3RpZnkSGQoRbmV4dF9yZWNvdmVyX3RpbWUYCyABKAMSFwoPcmVzZXJ2ZV9z",
-            "dGFtaW5hGAwgASgNEg8KB3N0YW1pbmEYAiABKA0SEwoLS0pCSUdBRkREQU8Y",
-            "DiABKANCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "dGFtaW5hGAwgASgNEg8KB3N0YW1pbmEYAiABKA0SIQoZbmV4dF9yZXNlcnZl",
+            "X3JlY292ZXJfdGltZRgOIAEoA0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StaminaInfoScNotify), global::EggLink.DanhengServer.Proto.StaminaInfoScNotify.Parser, new[]{ "NextRecoverTime", "ReserveStamina", "Stamina", "KJBIGAFDDAO" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StaminaInfoScNotify), global::EggLink.DanhengServer.Proto.StaminaInfoScNotify.Parser, new[]{ "NextRecoverTime", "ReserveStamina", "Stamina", "NextReserveRecoverTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,7 +77,7 @@ namespace EggLink.DanhengServer.Proto {
       nextRecoverTime_ = other.nextRecoverTime_;
       reserveStamina_ = other.reserveStamina_;
       stamina_ = other.stamina_;
-      kJBIGAFDDAO_ = other.kJBIGAFDDAO_;
+      nextReserveRecoverTime_ = other.nextReserveRecoverTime_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -125,18 +126,18 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "KJBIGAFDDAO" field.</summary>
-    public const int KJBIGAFDDAOFieldNumber = 14;
-    private long kJBIGAFDDAO_;
+    /// <summary>Field number for the "next_reserve_recover_time" field.</summary>
+    public const int NextReserveRecoverTimeFieldNumber = 14;
+    private long nextReserveRecoverTime_;
     /// <summary>
     /// 11
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long KJBIGAFDDAO {
-      get { return kJBIGAFDDAO_; }
+    public long NextReserveRecoverTime {
+      get { return nextReserveRecoverTime_; }
       set {
-        kJBIGAFDDAO_ = value;
+        nextReserveRecoverTime_ = value;
       }
     }
 
@@ -158,7 +159,7 @@ namespace EggLink.DanhengServer.Proto {
       if (NextRecoverTime != other.NextRecoverTime) return false;
       if (ReserveStamina != other.ReserveStamina) return false;
       if (Stamina != other.Stamina) return false;
-      if (KJBIGAFDDAO != other.KJBIGAFDDAO) return false;
+      if (NextReserveRecoverTime != other.NextReserveRecoverTime) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -169,7 +170,7 @@ namespace EggLink.DanhengServer.Proto {
       if (NextRecoverTime != 0L) hash ^= NextRecoverTime.GetHashCode();
       if (ReserveStamina != 0) hash ^= ReserveStamina.GetHashCode();
       if (Stamina != 0) hash ^= Stamina.GetHashCode();
-      if (KJBIGAFDDAO != 0L) hash ^= KJBIGAFDDAO.GetHashCode();
+      if (NextReserveRecoverTime != 0L) hash ^= NextReserveRecoverTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -200,9 +201,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(96);
         output.WriteUInt32(ReserveStamina);
       }
-      if (KJBIGAFDDAO != 0L) {
+      if (NextReserveRecoverTime != 0L) {
         output.WriteRawTag(112);
-        output.WriteInt64(KJBIGAFDDAO);
+        output.WriteInt64(NextReserveRecoverTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -226,9 +227,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(96);
         output.WriteUInt32(ReserveStamina);
       }
-      if (KJBIGAFDDAO != 0L) {
+      if (NextReserveRecoverTime != 0L) {
         output.WriteRawTag(112);
-        output.WriteInt64(KJBIGAFDDAO);
+        output.WriteInt64(NextReserveRecoverTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -249,8 +250,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Stamina != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Stamina);
       }
-      if (KJBIGAFDDAO != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(KJBIGAFDDAO);
+      if (NextReserveRecoverTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(NextReserveRecoverTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -273,8 +274,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Stamina != 0) {
         Stamina = other.Stamina;
       }
-      if (other.KJBIGAFDDAO != 0L) {
-        KJBIGAFDDAO = other.KJBIGAFDDAO;
+      if (other.NextReserveRecoverTime != 0L) {
+        NextReserveRecoverTime = other.NextReserveRecoverTime;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -304,7 +305,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 112: {
-            KJBIGAFDDAO = input.ReadInt64();
+            NextReserveRecoverTime = input.ReadInt64();
             break;
           }
         }
@@ -335,7 +336,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 112: {
-            KJBIGAFDDAO = input.ReadInt64();
+            NextReserveRecoverTime = input.ReadInt64();
             break;
           }
         }

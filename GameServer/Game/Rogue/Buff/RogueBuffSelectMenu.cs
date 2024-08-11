@@ -9,7 +9,7 @@ public class RogueBuffSelectMenu(BaseRogueInstance rogue)
     public int HintId { get; set; } = 1;
     public List<RogueBuffExcel> Buffs { get; set; } = [];
     public int RollMaxCount { get; set; } = rogue.BaseRerollCount;
-    public int RollCount { get; set; } = rogue.BaseRerollCount;
+    public int RollCount { get; set; } = 0;
     public int RollFreeCount { get; set; } = rogue.BaseRerollFreeCount;
     public int RollCost { get; set; } = rogue.CurRerollCost;
     public int QueueAppend { get; set; } = 3;
@@ -55,12 +55,12 @@ public class RogueBuffSelectMenu(BaseRogueInstance rogue)
         }
         else
         {
-            if (RollCount <= 0) return;
-            RollCount--; // Paid reroll
+            if (RollMaxCount - RollCount <= 0) return;
+            RollCount++; // Paid reroll
             await rogue.CostMoney(RollCost);
         }
 
-        RollBuff(BuffPool);
+        RollBuff(BuffPool.ToList());
     }
 
     public RogueActionInstance GetActionInstance()
@@ -77,7 +77,7 @@ public class RogueBuffSelectMenu(BaseRogueInstance rogue)
     {
         return new RogueCommonBuffSelectInfo
         {
-            CanRoll = RollCount > 0,
+            CanRoll = true,
             RollBuffCount = (uint)RollCount,
             RollBuffFreeCount = (uint)RollFreeCount,
             RollBuffMaxCount = (uint)RollMaxCount,

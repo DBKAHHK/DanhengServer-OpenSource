@@ -24,14 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static SwordTrainingGameSyncChangeScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CilTd29yZFRyYWluaW5nR2FtZVN5bmNDaGFuZ2VTY05vdGlmeS5wcm90bxoR",
-            "QkZEQ0ZDS0hJTFAucHJvdG8iSAojU3dvcmRUcmFpbmluZ0dhbWVTeW5jQ2hh",
-            "bmdlU2NOb3RpZnkSIQoLSVBIQ0ZNUEFNTkYYBSADKAsyDC5CRkRDRkNLSElM",
-            "UEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "CilTd29yZFRyYWluaW5nR2FtZVN5bmNDaGFuZ2VTY05vdGlmeS5wcm90bxoZ",
+            "U3dvcmRUcmFpbmluZ0NoYW5nZS5wcm90byJaCiNTd29yZFRyYWluaW5nR2Ft",
+            "ZVN5bmNDaGFuZ2VTY05vdGlmeRIzChVzd29yZF90cmFpbmluZ19jaGFuZ2UY",
+            "BSADKAsyFC5Td29yZFRyYWluaW5nQ2hhbmdlQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BFDCFCKHILPReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SwordTrainingChangeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SwordTrainingGameSyncChangeScNotify), global::EggLink.DanhengServer.Proto.SwordTrainingGameSyncChangeScNotify.Parser, new[]{ "IPHCFMPAMNF" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SwordTrainingGameSyncChangeScNotify), global::EggLink.DanhengServer.Proto.SwordTrainingGameSyncChangeScNotify.Parser, new[]{ "SwordTrainingChange" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SwordTrainingGameSyncChangeScNotify(SwordTrainingGameSyncChangeScNotify other) : this() {
-      iPHCFMPAMNF_ = other.iPHCFMPAMNF_.Clone();
+      swordTrainingChange_ = other.swordTrainingChange_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,15 +84,15 @@ namespace EggLink.DanhengServer.Proto {
       return new SwordTrainingGameSyncChangeScNotify(this);
     }
 
-    /// <summary>Field number for the "IPHCFMPAMNF" field.</summary>
-    public const int IPHCFMPAMNFFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.BFDCFCKHILP> _repeated_iPHCFMPAMNF_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.BFDCFCKHILP.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BFDCFCKHILP> iPHCFMPAMNF_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BFDCFCKHILP>();
+    /// <summary>Field number for the "sword_training_change" field.</summary>
+    public const int SwordTrainingChangeFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.SwordTrainingChange> _repeated_swordTrainingChange_codec
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.SwordTrainingChange.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SwordTrainingChange> swordTrainingChange_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SwordTrainingChange>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BFDCFCKHILP> IPHCFMPAMNF {
-      get { return iPHCFMPAMNF_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SwordTrainingChange> SwordTrainingChange {
+      get { return swordTrainingChange_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -109,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!iPHCFMPAMNF_.Equals(other.iPHCFMPAMNF_)) return false;
+      if(!swordTrainingChange_.Equals(other.swordTrainingChange_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +118,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= iPHCFMPAMNF_.GetHashCode();
+      hash ^= swordTrainingChange_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      iPHCFMPAMNF_.WriteTo(output, _repeated_iPHCFMPAMNF_codec);
+      swordTrainingChange_.WriteTo(output, _repeated_swordTrainingChange_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -147,7 +148,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      iPHCFMPAMNF_.WriteTo(ref output, _repeated_iPHCFMPAMNF_codec);
+      swordTrainingChange_.WriteTo(ref output, _repeated_swordTrainingChange_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -158,7 +159,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += iPHCFMPAMNF_.CalculateSize(_repeated_iPHCFMPAMNF_codec);
+      size += swordTrainingChange_.CalculateSize(_repeated_swordTrainingChange_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -171,7 +172,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      iPHCFMPAMNF_.Add(other.iPHCFMPAMNF_);
+      swordTrainingChange_.Add(other.swordTrainingChange_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -188,7 +189,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 42: {
-            iPHCFMPAMNF_.AddEntriesFrom(input, _repeated_iPHCFMPAMNF_codec);
+            swordTrainingChange_.AddEntriesFrom(input, _repeated_swordTrainingChange_codec);
             break;
           }
         }
@@ -207,7 +208,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 42: {
-            iPHCFMPAMNF_.AddEntriesFrom(ref input, _repeated_iPHCFMPAMNF_codec);
+            swordTrainingChange_.AddEntriesFrom(ref input, _repeated_swordTrainingChange_codec);
             break;
           }
         }

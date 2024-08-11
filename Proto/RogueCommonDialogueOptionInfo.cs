@@ -24,18 +24,19 @@ namespace EggLink.DanhengServer.Proto {
     static RogueCommonDialogueOptionInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNSb2d1ZUNvbW1vbkRpYWxvZ3VlT3B0aW9uSW5mby5wcm90bxoRRUZDQkdD",
-            "Sk5OSkEucHJvdG8aKlJvZ3VlQ29tbW9uRGlhbG9ndWVPcHRpb25EaXNwbGF5",
-            "SW5mby5wcm90byLGAQodUm9ndWVDb21tb25EaWFsb2d1ZU9wdGlvbkluZm8S",
-            "EQoJb3B0aW9uX2lkGAkgASgNEiEKC0JOS0xQRkdBR1BFGAggAygLMgwuRUZD",
-            "QkdDSk5OSkESDgoGYXJnX2lkGAYgASgNEg8KB2NvbmZpcm0YDSABKAgSEAoI",
-            "aXNfdmFsaWQYBSABKAgSPAoNZGlzcGxheV92YWx1ZRgOIAEoCzIlLlJvZ3Vl",
-            "Q29tbW9uRGlhbG9ndWVPcHRpb25EaXNwbGF5SW5mb0IeqgIbRWdnTGluay5E",
-            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "CiNSb2d1ZUNvbW1vbkRpYWxvZ3VlT3B0aW9uSW5mby5wcm90bxoqUm9ndWVD",
+            "b21tb25EaWFsb2d1ZU9wdGlvbkRpc3BsYXlJbmZvLnByb3RvGilSb2d1ZUNv",
+            "bW1vbkRpYWxvZ3VlT3B0aW9uUmVzdWx0SW5mby5wcm90byLlAQodUm9ndWVD",
+            "b21tb25EaWFsb2d1ZU9wdGlvbkluZm8SEQoJb3B0aW9uX2lkGAkgASgNEkAK",
+            "Em9wdGlvbl9yZXN1bHRfaW5mbxgIIAMoCzIkLlJvZ3VlQ29tbW9uRGlhbG9n",
+            "dWVPcHRpb25SZXN1bHRJbmZvEg4KBmFyZ19pZBgGIAEoDRIPCgdjb25maXJt",
+            "GA0gASgIEhAKCGlzX3ZhbGlkGAUgASgIEjwKDWRpc3BsYXlfdmFsdWUYDiAB",
+            "KAsyJS5Sb2d1ZUNvbW1vbkRpYWxvZ3VlT3B0aW9uRGlzcGxheUluZm9CHqoC",
+            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EFCBGCJNNJAReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionDisplayInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionDisplayInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionResultInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfo), global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfo.Parser, new[]{ "OptionId", "BNKLPFGAGPE", "ArgId", "Confirm", "IsValid", "DisplayValue" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfo), global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfo.Parser, new[]{ "OptionId", "OptionResultInfo", "ArgId", "Confirm", "IsValid", "DisplayValue" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,7 +79,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueCommonDialogueOptionInfo(RogueCommonDialogueOptionInfo other) : this() {
       optionId_ = other.optionId_;
-      bNKLPFGAGPE_ = other.bNKLPFGAGPE_.Clone();
+      optionResultInfo_ = other.optionResultInfo_.Clone();
       argId_ = other.argId_;
       confirm_ = other.confirm_;
       isValid_ = other.isValid_;
@@ -104,15 +105,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "BNKLPFGAGPE" field.</summary>
-    public const int BNKLPFGAGPEFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EFCBGCJNNJA> _repeated_bNKLPFGAGPE_codec
-        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.EFCBGCJNNJA.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EFCBGCJNNJA> bNKLPFGAGPE_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EFCBGCJNNJA>();
+    /// <summary>Field number for the "option_result_info" field.</summary>
+    public const int OptionResultInfoFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionResultInfo> _repeated_optionResultInfo_codec
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionResultInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionResultInfo> optionResultInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionResultInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EFCBGCJNNJA> BNKLPFGAGPE {
-      get { return bNKLPFGAGPE_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionResultInfo> OptionResultInfo {
+      get { return optionResultInfo_; }
     }
 
     /// <summary>Field number for the "arg_id" field.</summary>
@@ -179,7 +180,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (OptionId != other.OptionId) return false;
-      if(!bNKLPFGAGPE_.Equals(other.bNKLPFGAGPE_)) return false;
+      if(!optionResultInfo_.Equals(other.optionResultInfo_)) return false;
       if (ArgId != other.ArgId) return false;
       if (Confirm != other.Confirm) return false;
       if (IsValid != other.IsValid) return false;
@@ -192,7 +193,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (OptionId != 0) hash ^= OptionId.GetHashCode();
-      hash ^= bNKLPFGAGPE_.GetHashCode();
+      hash ^= optionResultInfo_.GetHashCode();
       if (ArgId != 0) hash ^= ArgId.GetHashCode();
       if (Confirm != false) hash ^= Confirm.GetHashCode();
       if (IsValid != false) hash ^= IsValid.GetHashCode();
@@ -223,7 +224,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteUInt32(ArgId);
       }
-      bNKLPFGAGPE_.WriteTo(output, _repeated_bNKLPFGAGPE_codec);
+      optionResultInfo_.WriteTo(output, _repeated_optionResultInfo_codec);
       if (OptionId != 0) {
         output.WriteRawTag(72);
         output.WriteUInt32(OptionId);
@@ -254,7 +255,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteUInt32(ArgId);
       }
-      bNKLPFGAGPE_.WriteTo(ref output, _repeated_bNKLPFGAGPE_codec);
+      optionResultInfo_.WriteTo(ref output, _repeated_optionResultInfo_codec);
       if (OptionId != 0) {
         output.WriteRawTag(72);
         output.WriteUInt32(OptionId);
@@ -280,7 +281,7 @@ namespace EggLink.DanhengServer.Proto {
       if (OptionId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OptionId);
       }
-      size += bNKLPFGAGPE_.CalculateSize(_repeated_bNKLPFGAGPE_codec);
+      size += optionResultInfo_.CalculateSize(_repeated_optionResultInfo_codec);
       if (ArgId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ArgId);
       }
@@ -308,7 +309,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.OptionId != 0) {
         OptionId = other.OptionId;
       }
-      bNKLPFGAGPE_.Add(other.bNKLPFGAGPE_);
+      optionResultInfo_.Add(other.optionResultInfo_);
       if (other.ArgId != 0) {
         ArgId = other.ArgId;
       }
@@ -348,7 +349,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 66: {
-            bNKLPFGAGPE_.AddEntriesFrom(input, _repeated_bNKLPFGAGPE_codec);
+            optionResultInfo_.AddEntriesFrom(input, _repeated_optionResultInfo_codec);
             break;
           }
           case 72: {
@@ -390,7 +391,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 66: {
-            bNKLPFGAGPE_.AddEntriesFrom(ref input, _repeated_bNKLPFGAGPE_codec);
+            optionResultInfo_.AddEntriesFrom(ref input, _repeated_optionResultInfo_codec);
             break;
           }
           case 72: {

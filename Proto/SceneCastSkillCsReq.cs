@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlTY2VuZUNhc3RTa2lsbENzUmVxLnByb3RvGhNTa2lsbEV4dHJhVGFnLnBy",
-            "b3RvGhBNb3Rpb25JbmZvLnByb3RvGhFBQkpDQkFPS0lDRS5wcm90bxodQXNz",
-            "aXN0TW9uc3RlckVudGl0eUluZm8ucHJvdG8i8gIKE1NjZW5lQ2FzdFNraWxs",
+            "b3RvGh1Bc3Npc3RNb25zdGVyRW50aXR5SW5mby5wcm90bxoQTW90aW9uSW5m",
+            "by5wcm90bxoRQUJKQ0JBT0tJQ0UucHJvdG8i8gIKE1NjZW5lQ2FzdFNraWxs",
             "Q3NSZXESEwoLTEZIREZNSkRLTU4YAyABKA0SFgoOY2FzdF9lbnRpdHlfaWQY",
             "CiABKA0SPAoaYXNzaXN0X21vbnN0ZXJfZW50aXR5X2luZm8YBCADKAsyGC5B",
             "c3Npc3RNb25zdGVyRW50aXR5SW5mbxIkCg5keW5hbWljX3ZhbHVlcxgLIAMo",
@@ -37,7 +37,7 @@ namespace EggLink.DanhengServer.Proto {
             "EiUKHWFzc2lzdF9tb25zdGVyX2VudGl0eV9pZF9saXN0GAIgAygNQh6qAhtF",
             "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SkillExtraTagReflection.Descriptor, global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ABJCBAOKICEReflection.Descriptor, global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SkillExtraTagReflection.Descriptor, global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ABJCBAOKICEReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneCastSkillCsReq), global::EggLink.DanhengServer.Proto.SceneCastSkillCsReq.Parser, new[]{ "LFHDFMJDKMN", "CastEntityId", "AssistMonsterEntityInfo", "DynamicValues", "SkillIndex", "TargetMotion", "HitTargetEntityIdList", "AttackedByEntityId", "SkillExtraTags", "AssistMonsterEntityIdList" }, null, null, null, null)
           }));

@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFIZWxpb2J1c0luZm9DaGFuZ2VkU2NOb3RpZnkucHJvdG8aEUZISkZQRVBE",
-            "S0NILnByb3RvInkKG0hlbGlvYnVzSW5mb0NoYW5nZWRTY05vdGlmeRITCgtN",
-            "R0tERk5CRU5BSRgCIAEoDRINCgVwaGFzZRgEIAEoDRITCgtGR01MR05BSUdQ",
+            "S0NILnByb3RvInkKG0hlbGlvYnVzSW5mb0NoYW5nZWRTY05vdGlmeRITCgtz",
+            "a2lsbF9wb3dlchgCIAEoDRINCgVwaGFzZRgEIAEoDRITCgtGR01MR05BSUdQ",
             "TRgGIAEoDRIhCgtKS0hNQkdHT0tKQRgHIAMoCzIMLkZISkZQRVBES0NIQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FHJFPEPDKCHReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeliobusInfoChangedScNotify), global::EggLink.DanhengServer.Proto.HeliobusInfoChangedScNotify.Parser, new[]{ "MGKDFNBENAI", "Phase", "FGMLGNAIGPM", "JKHMBGGOKJA" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeliobusInfoChangedScNotify), global::EggLink.DanhengServer.Proto.HeliobusInfoChangedScNotify.Parser, new[]{ "SkillPower", "Phase", "FGMLGNAIGPM", "JKHMBGGOKJA" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HeliobusInfoChangedScNotify(HeliobusInfoChangedScNotify other) : this() {
-      mGKDFNBENAI_ = other.mGKDFNBENAI_;
+      skillPower_ = other.skillPower_;
       phase_ = other.phase_;
       fGMLGNAIGPM_ = other.fGMLGNAIGPM_;
       jKHMBGGOKJA_ = other.jKHMBGGOKJA_.Clone();
@@ -87,15 +87,15 @@ namespace EggLink.DanhengServer.Proto {
       return new HeliobusInfoChangedScNotify(this);
     }
 
-    /// <summary>Field number for the "MGKDFNBENAI" field.</summary>
-    public const int MGKDFNBENAIFieldNumber = 2;
-    private uint mGKDFNBENAI_;
+    /// <summary>Field number for the "skill_power" field.</summary>
+    public const int SkillPowerFieldNumber = 2;
+    private uint skillPower_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MGKDFNBENAI {
-      get { return mGKDFNBENAI_; }
+    public uint SkillPower {
+      get { return skillPower_; }
       set {
-        mGKDFNBENAI_ = value;
+        skillPower_ = value;
       }
     }
 
@@ -149,7 +149,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MGKDFNBENAI != other.MGKDFNBENAI) return false;
+      if (SkillPower != other.SkillPower) return false;
       if (Phase != other.Phase) return false;
       if (FGMLGNAIGPM != other.FGMLGNAIGPM) return false;
       if(!jKHMBGGOKJA_.Equals(other.jKHMBGGOKJA_)) return false;
@@ -160,7 +160,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MGKDFNBENAI != 0) hash ^= MGKDFNBENAI.GetHashCode();
+      if (SkillPower != 0) hash ^= SkillPower.GetHashCode();
       if (Phase != 0) hash ^= Phase.GetHashCode();
       if (FGMLGNAIGPM != 0) hash ^= FGMLGNAIGPM.GetHashCode();
       hash ^= jKHMBGGOKJA_.GetHashCode();
@@ -182,9 +182,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MGKDFNBENAI != 0) {
+      if (SkillPower != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(MGKDFNBENAI);
+        output.WriteUInt32(SkillPower);
       }
       if (Phase != 0) {
         output.WriteRawTag(32);
@@ -205,9 +205,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MGKDFNBENAI != 0) {
+      if (SkillPower != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(MGKDFNBENAI);
+        output.WriteUInt32(SkillPower);
       }
       if (Phase != 0) {
         output.WriteRawTag(32);
@@ -228,8 +228,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MGKDFNBENAI != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MGKDFNBENAI);
+      if (SkillPower != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SkillPower);
       }
       if (Phase != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Phase);
@@ -250,8 +250,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MGKDFNBENAI != 0) {
-        MGKDFNBENAI = other.MGKDFNBENAI;
+      if (other.SkillPower != 0) {
+        SkillPower = other.SkillPower;
       }
       if (other.Phase != 0) {
         Phase = other.Phase;
@@ -276,7 +276,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 16: {
-            MGKDFNBENAI = input.ReadUInt32();
+            SkillPower = input.ReadUInt32();
             break;
           }
           case 32: {
@@ -307,7 +307,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 16: {
-            MGKDFNBENAI = input.ReadUInt32();
+            SkillPower = input.ReadUInt32();
             break;
           }
           case 32: {

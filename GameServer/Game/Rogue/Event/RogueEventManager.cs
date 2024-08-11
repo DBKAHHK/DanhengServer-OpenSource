@@ -3,6 +3,7 @@ using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Enums.Rogue;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueCommon;
+using Microsoft.Extensions.Logging;
 
 namespace EggLink.DanhengServer.GameServer.Game.Rogue.Event;
 
@@ -49,6 +50,17 @@ public class RogueEventManager
     public async ValueTask AddEvent(RogueEventInstance eventInstance)
     {
         RunningEvent.Add(eventInstance);
+        foreach (var option in eventInstance.Options)
+        {
+            GameData.DialogueEventData.TryGetValue(option.OptionId, out var dialogueEvent);
+            if (dialogueEvent == null) continue;
+
+            var param = dialogueEvent.RogueEffectParamList;
+
+            // Init option
+            if (EffectHandler.TryGetValue(dialogueEvent.RogueEffectType, out var effectHandler))
+                effectHandler.Init(Rogue, eventInstance, param, option);
+        }
         await Player.SendPacket(new PacketSyncRogueCommonDialogueDataScNotify(eventInstance));
     }
 
@@ -83,13 +95,13 @@ public class RogueEventManager
 
         var Param = dialogueEvent.RogueEffectParamList;
 
-        // Handle option
-        if (EffectHandler.TryGetValue(dialogueEvent.RogueEffectType, out var effectHandler))
-            effectHandler.Handle(Rogue, eventInstance, Param);
-
         // Handle cost
         if (CostHandler.TryGetValue(dialogueEvent.CostType, out var costHandler))
             costHandler.Handle(Rogue, eventInstance, dialogueEvent.CostParamList);
+
+        // Handle option
+        if (EffectHandler.TryGetValue(dialogueEvent.RogueEffectType, out var effectHandler))
+            effectHandler.Handle(Rogue, eventInstance, Param, null);
     }
 
     public async ValueTask SelectOption(RogueEventInstance eventInstance, int optionId)
@@ -127,13 +139,13 @@ public class RogueEventManager
             }
         }
 
-        // Handle option
-        if (EffectHandler.TryGetValue(dialogueEvent.RogueEffectType, out var effectHandler))
-            await effectHandler.Handle(Rogue, eventInstance, param);
-
         // Handle cost
         if (CostHandler.TryGetValue(dialogueEvent.CostType, out var costHandler))
             await costHandler.Handle(Rogue, eventInstance, dialogueEvent.CostParamList);
+
+        // Handle option
+        if (EffectHandler.TryGetValue(dialogueEvent.RogueEffectType, out var effectHandler))
+            await effectHandler.Handle(Rogue, eventInstance, param, option);
 
         // send rsp
         await Player.SendPacket(new PacketSyncRogueCommonDialogueOptionFinishScNotify(eventInstance));

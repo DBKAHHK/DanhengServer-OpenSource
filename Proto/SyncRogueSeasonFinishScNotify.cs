@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static SyncRogueSeasonFinishScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNTeW5jUm9ndWVTZWFzb25GaW5pc2hTY05vdGlmeS5wcm90bxoQTGluZXVw",
-            "SW5mby5wcm90bxoPU2NlbmVJbmZvLnByb3RvGhpSb2d1ZVNjb3JlUmV3YXJk",
-            "SW5mby5wcm90bxoVUm9ndWVGaW5pc2hJbmZvLnByb3RvItEBCh1TeW5jUm9n",
+            "CiNTeW5jUm9ndWVTZWFzb25GaW5pc2hTY05vdGlmeS5wcm90bxoPU2NlbmVJ",
+            "bmZvLnByb3RvGhVSb2d1ZUZpbmlzaEluZm8ucHJvdG8aEExpbmV1cEluZm8u",
+            "cHJvdG8aGlJvZ3VlU2NvcmVSZXdhcmRJbmZvLnByb3RvItEBCh1TeW5jUm9n",
             "dWVTZWFzb25GaW5pc2hTY05vdGlmeRIZCgVzY2VuZRgNIAEoCzIKLlNjZW5l",
             "SW5mbxITCgtHRkxLT0lNUEZCRhgOIAEoCBIbCgZsaW5ldXAYCyABKAsyCy5M",
             "aW5ldXBJbmZvEjYKF3JvZ3VlX3Njb3JlX3Jld2FyZF9pbmZvGAYgASgLMhUu",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "KAsyEC5Sb2d1ZUZpbmlzaEluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueScoreRewardInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueFinishInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueFinishInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueScoreRewardInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SyncRogueSeasonFinishScNotify), global::EggLink.DanhengServer.Proto.SyncRogueSeasonFinishScNotify.Parser, new[]{ "Scene", "GFLKOIMPFBF", "Lineup", "RogueScoreRewardInfo", "RogueFinishInfo" }, null, null, null, null)
           }));

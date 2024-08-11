@@ -190,8 +190,7 @@ public abstract class BaseRogueInstance(PlayerInstance player, int rogueVersionI
 
     #region Money
 
-    public async ValueTask CostMoney(int amount,
-        RogueCommonActionResultDisplayType displayType = RogueCommonActionResultDisplayType.None)
+    public async ValueTask CostMoney(int amount, int displayType = 0)
     {
         CurMoney -= amount;
         await Player.SendPacket(new PacketSyncRogueCommonVirtualItemInfoScNotify(this));
@@ -205,14 +204,13 @@ public abstract class BaseRogueInstance(PlayerInstance player, int rogueVersionI
                     RemoveItemList = new RogueCommonMoney
                     {
                         Num = (uint)amount,
-                        DisplayType = (uint)displayType + 1
+                        DisplayType = (uint)displayType
                     }
                 }
-            }, displayType));
+            }, RogueCommonActionResultDisplayType.Single));
     }
 
-    public async ValueTask GainMoney(int amount, int displayType = 2,
-        RogueCommonActionResultDisplayType display = RogueCommonActionResultDisplayType.None)
+    public async ValueTask GainMoney(int amount, int displayType = 0)
     {
         CurMoney += amount;
         await Player.SendPacket(new PacketSyncRogueCommonVirtualItemInfoScNotify(this));
@@ -234,7 +232,7 @@ public abstract class BaseRogueInstance(PlayerInstance player, int rogueVersionI
                         DisplayType = (uint)displayType
                     }
                 }
-            }, display));
+            }, RogueCommonActionResultDisplayType.Single));
     }
 
     #endregion

@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static RogueCommonDialogueInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1Sb2d1ZUNvbW1vbkRpYWxvZ3VlSW5mby5wcm90bxoiUm9ndWVDb21tb25E",
-            "aWFsb2d1ZUJhc2ljSW5mby5wcm90bxoRQ0JFUEVKRERCSEsucHJvdG8aEU5D",
-            "QUhGSkVQQk1PLnByb3RvGhFESUFDS0JKTUdPTS5wcm90byLTAQoXUm9ndWVD",
+            "Ch1Sb2d1ZUNvbW1vbkRpYWxvZ3VlSW5mby5wcm90bxoRRElBQ0tCSk1HT00u",
+            "cHJvdG8aIlJvZ3VlQ29tbW9uRGlhbG9ndWVCYXNpY0luZm8ucHJvdG8aEUNC",
+            "RVBFSkREQkhLLnByb3RvGhFOQ0FIRkpFUEJNTy5wcm90byLTAQoXUm9ndWVD",
             "b21tb25EaWFsb2d1ZUluZm8SIQoLSUJPRURHS0ZMSUgYASABKAsyDC5OQ0FI",
             "RkpFUEJNTxI8ChNkaWFsb2d1ZV9iYXNpY19pbmZvGA0gASgLMh0uUm9ndWVD",
             "b21tb25EaWFsb2d1ZUJhc2ljSW5mb0gAEiMKC0lFQ0ZDQklIQ0tHGAYgASgL",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "SkREQkhLSABCDQoLT0JDREhFRUpFRkhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonDialogueBasicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CBEPEJDDBHKReflection.Descriptor, global::EggLink.DanhengServer.Proto.NCAHFJEPBMOReflection.Descriptor, global::EggLink.DanhengServer.Proto.DIACKBJMGOMReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DIACKBJMGOMReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonDialogueBasicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CBEPEJDDBHKReflection.Descriptor, global::EggLink.DanhengServer.Proto.NCAHFJEPBMOReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonDialogueInfo), global::EggLink.DanhengServer.Proto.RogueCommonDialogueInfo.Parser, new[]{ "IBOEDGKFLIH", "DialogueBasicInfo", "IECFCBIHCKG", "HCNKEAOPIGF" }, new[]{ "OBCDHEEJEFH" }, null, null, null)
           }));

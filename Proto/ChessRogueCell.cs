@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static ChessRogueCellReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRDaGVzc1JvZ3VlQ2VsbC5wcm90bxofQ2hlc3NSb2d1ZUJvYXJkQ2VsbFN0",
-            "YXR1cy5wcm90bxofQ2hlc3NSb2d1ZUNlbGxTcGVjaWFsVHlwZS5wcm90bxoV",
-            "Q2VsbEFkdmFuY2VJbmZvLnByb3RvIroCCg5DaGVzc1JvZ3VlQ2VsbBINCgVw",
+            "ChRDaGVzc1JvZ3VlQ2VsbC5wcm90bxofQ2hlc3NSb2d1ZUNlbGxTcGVjaWFs",
+            "VHlwZS5wcm90bxoVQ2VsbEFkdmFuY2VJbmZvLnByb3RvGh9DaGVzc1JvZ3Vl",
+            "Qm9hcmRDZWxsU3RhdHVzLnByb3RvIroCCg5DaGVzc1JvZ3VlQ2VsbBINCgVw",
             "b3NfeRgFIAEoDRIRCglpc191bmxvY2sYCiABKAgSEQoJY2VsbF90eXBlGAMg",
             "ASgNEg0KBXBvc194GAEgASgNEhMKC0pFSEVBT0lOR01QGA4gASgIEgoKAmlk",
             "GAYgASgNEi8KC2NlbGxfc3RhdHVzGAkgASgOMhouQ2hlc3NSb2d1ZUJvYXJk",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "GAsgAygNEg8KB3Jvb21faWQYBCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.CellAdvanceInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.CellAdvanceInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueCell), global::EggLink.DanhengServer.Proto.ChessRogueCell.Parser, new[]{ "PosY", "IsUnlock", "CellType", "PosX", "JEHEAOINGMP", "Id", "CellStatus", "PlayerInfo", "BICGKJHDPNJ", "SpecialType", "GKAPPNGOCNB", "RoomId" }, null, null, null, null)
           }));

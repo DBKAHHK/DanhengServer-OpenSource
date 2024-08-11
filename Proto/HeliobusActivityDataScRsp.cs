@@ -24,11 +24,11 @@ namespace EggLink.DanhengServer.Proto {
     static HeliobusActivityDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9IZWxpb2J1c0FjdGl2aXR5RGF0YVNjUnNwLnByb3RvGh1IZWxpb2J1c0No",
-            "YWxsZW5nZUxpbmV1cC5wcm90bxoRRkhKRlBFUERLQ0gucHJvdG8aEU1MTUdI",
-            "TEZLRkxNLnByb3RvGhNDaGFsbGVuZ2VMaXN0LnByb3RvIqUCChlIZWxpb2J1",
-            "c0FjdGl2aXR5RGF0YVNjUnNwEg8KB3JldGNvZGUYAyABKA0SEwoLTUdLREZO",
-            "QkVOQUkYDiABKA0SIAoKc2tpbGxfaW5mbxgHIAEoCzIMLk1MTUdITEZLRkxN",
+            "Ch9IZWxpb2J1c0FjdGl2aXR5RGF0YVNjUnNwLnByb3RvGhFNTE1HSExGS0ZM",
+            "TS5wcm90bxodSGVsaW9idXNDaGFsbGVuZ2VMaW5ldXAucHJvdG8aE0NoYWxs",
+            "ZW5nZUxpc3QucHJvdG8aEUZISkZQRVBES0NILnByb3RvIqUCChlIZWxpb2J1",
+            "c0FjdGl2aXR5RGF0YVNjUnNwEg8KB3JldGNvZGUYAyABKA0SEwoLc2tpbGxf",
+            "cG93ZXIYDiABKA0SIAoKc2tpbGxfaW5mbxgHIAEoCzIMLk1MTUdITEZLRkxN",
             "EiYKDmNoYWxsZW5nZV9saXN0GAggAygLMg4uQ2hhbGxlbmdlTGlzdBITCgtG",
             "R01MR05BSUdQTRgGIAEoDRINCgVwaGFzZRgPIAEoDRIhCgtJQkhNRk9PSk1Q",
             "TxgFIAMoCzIMLkZISkZQRVBES0NIEg0KBWxldmVsGAEgASgNEhMKC0pLSE5F",
@@ -36,9 +36,9 @@ namespace EggLink.DanhengServer.Proto {
             "aGFsbGVuZ2VMaW5ldXBCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeliobusChallengeLineupReflection.Descriptor, global::EggLink.DanhengServer.Proto.FHJFPEPDKCHReflection.Descriptor, global::EggLink.DanhengServer.Proto.MLMGHLFKFLMReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeListReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MLMGHLFKFLMReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeliobusChallengeLineupReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeListReflection.Descriptor, global::EggLink.DanhengServer.Proto.FHJFPEPDKCHReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeliobusActivityDataScRsp), global::EggLink.DanhengServer.Proto.HeliobusActivityDataScRsp.Parser, new[]{ "Retcode", "MGKDFNBENAI", "SkillInfo", "ChallengeList", "FGMLGNAIGPM", "Phase", "IBHMFOOJMPO", "Level", "JKHNEGPJABJ", "AALKCALNHIL" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeliobusActivityDataScRsp), global::EggLink.DanhengServer.Proto.HeliobusActivityDataScRsp.Parser, new[]{ "Retcode", "SkillPower", "SkillInfo", "ChallengeList", "FGMLGNAIGPM", "Phase", "IBHMFOOJMPO", "Level", "JKHNEGPJABJ", "AALKCALNHIL" }, null, null, null, null)
           }));
     }
     #endregion
@@ -81,7 +81,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HeliobusActivityDataScRsp(HeliobusActivityDataScRsp other) : this() {
       retcode_ = other.retcode_;
-      mGKDFNBENAI_ = other.mGKDFNBENAI_;
+      skillPower_ = other.skillPower_;
       skillInfo_ = other.skillInfo_ != null ? other.skillInfo_.Clone() : null;
       challengeList_ = other.challengeList_.Clone();
       fGMLGNAIGPM_ = other.fGMLGNAIGPM_;
@@ -111,15 +111,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "MGKDFNBENAI" field.</summary>
-    public const int MGKDFNBENAIFieldNumber = 14;
-    private uint mGKDFNBENAI_;
+    /// <summary>Field number for the "skill_power" field.</summary>
+    public const int SkillPowerFieldNumber = 14;
+    private uint skillPower_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MGKDFNBENAI {
-      get { return mGKDFNBENAI_; }
+    public uint SkillPower {
+      get { return skillPower_; }
       set {
-        mGKDFNBENAI_ = value;
+        skillPower_ = value;
       }
     }
 
@@ -232,7 +232,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Retcode != other.Retcode) return false;
-      if (MGKDFNBENAI != other.MGKDFNBENAI) return false;
+      if (SkillPower != other.SkillPower) return false;
       if (!object.Equals(SkillInfo, other.SkillInfo)) return false;
       if(!challengeList_.Equals(other.challengeList_)) return false;
       if (FGMLGNAIGPM != other.FGMLGNAIGPM) return false;
@@ -249,7 +249,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (MGKDFNBENAI != 0) hash ^= MGKDFNBENAI.GetHashCode();
+      if (SkillPower != 0) hash ^= SkillPower.GetHashCode();
       if (skillInfo_ != null) hash ^= SkillInfo.GetHashCode();
       hash ^= challengeList_.GetHashCode();
       if (FGMLGNAIGPM != 0) hash ^= FGMLGNAIGPM.GetHashCode();
@@ -299,9 +299,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteUInt32(JKHNEGPJABJ);
       }
-      if (MGKDFNBENAI != 0) {
+      if (SkillPower != 0) {
         output.WriteRawTag(112);
-        output.WriteUInt32(MGKDFNBENAI);
+        output.WriteUInt32(SkillPower);
       }
       if (Phase != 0) {
         output.WriteRawTag(120);
@@ -340,9 +340,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteUInt32(JKHNEGPJABJ);
       }
-      if (MGKDFNBENAI != 0) {
+      if (SkillPower != 0) {
         output.WriteRawTag(112);
-        output.WriteUInt32(MGKDFNBENAI);
+        output.WriteUInt32(SkillPower);
       }
       if (Phase != 0) {
         output.WriteRawTag(120);
@@ -361,8 +361,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (MGKDFNBENAI != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MGKDFNBENAI);
+      if (SkillPower != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SkillPower);
       }
       if (skillInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SkillInfo);
@@ -397,8 +397,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.MGKDFNBENAI != 0) {
-        MGKDFNBENAI = other.MGKDFNBENAI;
+      if (other.SkillPower != 0) {
+        SkillPower = other.SkillPower;
       }
       if (other.skillInfo_ != null) {
         if (skillInfo_ == null) {
@@ -472,7 +472,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 112: {
-            MGKDFNBENAI = input.ReadUInt32();
+            SkillPower = input.ReadUInt32();
             break;
           }
           case 120: {
@@ -530,7 +530,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 112: {
-            MGKDFNBENAI = input.ReadUInt32();
+            SkillPower = input.ReadUInt32();
             break;
           }
           case 120: {

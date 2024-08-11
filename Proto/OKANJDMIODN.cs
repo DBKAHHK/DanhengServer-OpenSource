@@ -24,24 +24,25 @@ namespace EggLink.DanhengServer.Proto {
     static OKANJDMIODNReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFPS0FOSkRNSU9ETi5wcm90bxoRUE9IS0dIUEJMRkIucHJvdG8aEUNIRUNN",
-            "QUFQT0pDLnByb3RvGhFLTUJPTURGQU1FTS5wcm90bxoRSk5PRVBCUEJBREUu",
-            "cHJvdG8aEUNFSEVEQ0VJQ0RFLnByb3RvGhFISEdDQk5ITEdHTi5wcm90bxoR",
-            "UE1ES0xOQkxGTUkucHJvdG8aEUxDSUhDRkhJSkVOLnByb3RvGhFMQ0lQTFBI",
-            "SEhKQy5wcm90byKMAwoLT0tBTkpETUlPRE4SEwoLTkJIUERNRE5ES0wYCSAB",
+            "ChFPS0FOSkRNSU9ETi5wcm90bxoRQ0VIRURDRUlDREUucHJvdG8aEUxDSUhD",
+            "RkhJSkVOLnByb3RvGhFDSEVDTUFBUE9KQy5wcm90bxoRSEhHQ0JOSExHR04u",
+            "cHJvdG8aEVBNREtMTkJMRk1JLnByb3RvGhFQT0hLR0hQQkxGQi5wcm90bxoR",
+            "TENJUExQSEhISkMucHJvdG8aEUtNQk9NREZBTUVNLnByb3RvGhFKTk9FUEJQ",
+            "QkFERS5wcm90byKZAwoLT0tBTkpETUlPRE4SEwoLTkJIUERNRE5ES0wYCSAB",
             "KA0SMQobUFVOS19MT1JEX1NIQVJFX1RZUEVfRlJJRU5EGAIgASgLMgwuQ0hF",
             "Q01BQVBPSkMSIwoLT0dFUE9DQ0NFQksYByABKAsyDC5KTk9FUEJQQkFERUgA",
             "EiMKC01KRkRPQUhGQUFGGAEgASgLMgwuQ0VIRURDRUlDREVIABIjCgtKT0FO",
             "R0RMQ0hLTRgEIAEoCzIMLkhIR0NCTkhMR0dOSAASIwoLTk9JRk9DSkRMR0MY",
             "CiABKAsyDC5MQ0lIQ0ZISUpFTkgAEiMKC0ZPSEpPR0dGSUlJGAYgASgLMgwu",
-            "S01CT01ERkFNRU1IABIjCgtEQVBBS01NTUFPShgMIAEoCzIMLkxDSVBMUEhI",
-            "SEpDSAASIwoLRExEQURJTkJGTkYYCCABKAsyDC5QTURLTE5CTEZNSUgAEiMK",
-            "C0FERE5JQ0VMTUlDGAsgASgLMgwuUE9IS0dIUEJMRkJIAEINCgtLSkhISktL",
-            "T0FKQUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "S01CT01ERkFNRU1IABIwChhzd29yZF90cmFpbmluZ19nYW1lX2luZm8YDCAB",
+            "KAsyDC5MQ0lQTFBISEhKQ0gAEiMKC0RMREFESU5CRk5GGAggASgLMgwuUE1E",
+            "S0xOQkxGTUlIABIjCgtBREROSUNFTE1JQxgLIAEoCzIMLlBPSEtHSFBCTEZC",
+            "SABCDQoLS0pISEpLS09BSkFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.POHKGHPBLFBReflection.Descriptor, global::EggLink.DanhengServer.Proto.CHECMAAPOJCReflection.Descriptor, global::EggLink.DanhengServer.Proto.KMBOMDFAMEMReflection.Descriptor, global::EggLink.DanhengServer.Proto.JNOEPBPBADEReflection.Descriptor, global::EggLink.DanhengServer.Proto.CEHEDCEICDEReflection.Descriptor, global::EggLink.DanhengServer.Proto.HHGCBNHLGGNReflection.Descriptor, global::EggLink.DanhengServer.Proto.PMDKLNBLFMIReflection.Descriptor, global::EggLink.DanhengServer.Proto.LCIHCFHIJENReflection.Descriptor, global::EggLink.DanhengServer.Proto.LCIPLPHHHJCReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CEHEDCEICDEReflection.Descriptor, global::EggLink.DanhengServer.Proto.LCIHCFHIJENReflection.Descriptor, global::EggLink.DanhengServer.Proto.CHECMAAPOJCReflection.Descriptor, global::EggLink.DanhengServer.Proto.HHGCBNHLGGNReflection.Descriptor, global::EggLink.DanhengServer.Proto.PMDKLNBLFMIReflection.Descriptor, global::EggLink.DanhengServer.Proto.POHKGHPBLFBReflection.Descriptor, global::EggLink.DanhengServer.Proto.LCIPLPHHHJCReflection.Descriptor, global::EggLink.DanhengServer.Proto.KMBOMDFAMEMReflection.Descriptor, global::EggLink.DanhengServer.Proto.JNOEPBPBADEReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OKANJDMIODN), global::EggLink.DanhengServer.Proto.OKANJDMIODN.Parser, new[]{ "NBHPDMDNDKL", "PUNKLORDSHARETYPEFRIEND", "OGEPOCCCEBK", "MJFDOAHFAAF", "JOANGDLCHKM", "NOIFOCJDLGC", "FOHJOGGFIII", "DAPAKMMMAOJ", "DLDADINBFNF", "ADDNICELMIC" }, new[]{ "KJHHJKKOAJA" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OKANJDMIODN), global::EggLink.DanhengServer.Proto.OKANJDMIODN.Parser, new[]{ "NBHPDMDNDKL", "PUNKLORDSHARETYPEFRIEND", "OGEPOCCCEBK", "MJFDOAHFAAF", "JOANGDLCHKM", "NOIFOCJDLGC", "FOHJOGGFIII", "SwordTrainingGameInfo", "DLDADINBFNF", "ADDNICELMIC" }, new[]{ "KJHHJKKOAJA" }, null, null, null)
           }));
     }
     #endregion
@@ -101,8 +102,8 @@ namespace EggLink.DanhengServer.Proto {
         case KJHHJKKOAJAOneofCase.FOHJOGGFIII:
           FOHJOGGFIII = other.FOHJOGGFIII.Clone();
           break;
-        case KJHHJKKOAJAOneofCase.DAPAKMMMAOJ:
-          DAPAKMMMAOJ = other.DAPAKMMMAOJ.Clone();
+        case KJHHJKKOAJAOneofCase.SwordTrainingGameInfo:
+          SwordTrainingGameInfo = other.SwordTrainingGameInfo.Clone();
           break;
         case KJHHJKKOAJAOneofCase.DLDADINBFNF:
           DLDADINBFNF = other.DLDADINBFNF.Clone();
@@ -205,15 +206,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "DAPAKMMMAOJ" field.</summary>
-    public const int DAPAKMMMAOJFieldNumber = 12;
+    /// <summary>Field number for the "sword_training_game_info" field.</summary>
+    public const int SwordTrainingGameInfoFieldNumber = 12;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.LCIPLPHHHJC DAPAKMMMAOJ {
-      get { return kJHHJKKOAJACase_ == KJHHJKKOAJAOneofCase.DAPAKMMMAOJ ? (global::EggLink.DanhengServer.Proto.LCIPLPHHHJC) kJHHJKKOAJA_ : null; }
+    public global::EggLink.DanhengServer.Proto.LCIPLPHHHJC SwordTrainingGameInfo {
+      get { return kJHHJKKOAJACase_ == KJHHJKKOAJAOneofCase.SwordTrainingGameInfo ? (global::EggLink.DanhengServer.Proto.LCIPLPHHHJC) kJHHJKKOAJA_ : null; }
       set {
         kJHHJKKOAJA_ = value;
-        kJHHJKKOAJACase_ = value == null ? KJHHJKKOAJAOneofCase.None : KJHHJKKOAJAOneofCase.DAPAKMMMAOJ;
+        kJHHJKKOAJACase_ = value == null ? KJHHJKKOAJAOneofCase.None : KJHHJKKOAJAOneofCase.SwordTrainingGameInfo;
       }
     }
 
@@ -250,7 +251,7 @@ namespace EggLink.DanhengServer.Proto {
       JOANGDLCHKM = 4,
       NOIFOCJDLGC = 10,
       FOHJOGGFIII = 6,
-      DAPAKMMMAOJ = 12,
+      SwordTrainingGameInfo = 12,
       DLDADINBFNF = 8,
       ADDNICELMIC = 11,
     }
@@ -290,7 +291,7 @@ namespace EggLink.DanhengServer.Proto {
       if (!object.Equals(JOANGDLCHKM, other.JOANGDLCHKM)) return false;
       if (!object.Equals(NOIFOCJDLGC, other.NOIFOCJDLGC)) return false;
       if (!object.Equals(FOHJOGGFIII, other.FOHJOGGFIII)) return false;
-      if (!object.Equals(DAPAKMMMAOJ, other.DAPAKMMMAOJ)) return false;
+      if (!object.Equals(SwordTrainingGameInfo, other.SwordTrainingGameInfo)) return false;
       if (!object.Equals(DLDADINBFNF, other.DLDADINBFNF)) return false;
       if (!object.Equals(ADDNICELMIC, other.ADDNICELMIC)) return false;
       if (KJHHJKKOAJACase != other.KJHHJKKOAJACase) return false;
@@ -308,7 +309,7 @@ namespace EggLink.DanhengServer.Proto {
       if (kJHHJKKOAJACase_ == KJHHJKKOAJAOneofCase.JOANGDLCHKM) hash ^= JOANGDLCHKM.GetHashCode();
       if (kJHHJKKOAJACase_ == KJHHJKKOAJAOneofCase.NOIFOCJDLGC) hash ^= NOIFOCJDLGC.GetHashCode();
       if (kJHHJKKOAJACase_ == KJHHJKKOAJAOneofCase.FOHJOGGFIII) hash ^= FOHJOGGFIII.GetHashCode();
-      if (kJHHJKKOAJACase_ == KJHHJKKOAJAOneofCase.DAPAKMMMAOJ) hash ^= DAPAKMMMAOJ.GetHashCode();
+      if (kJHHJKKOAJACase_ == KJHHJKKOAJAOneofCase.SwordTrainingGameInfo) hash ^= SwordTrainingGameInfo.GetHashCode();
       if (kJHHJKKOAJACase_ == KJHHJKKOAJAOneofCase.DLDADINBFNF) hash ^= DLDADINBFNF.GetHashCode();
       if (kJHHJKKOAJACase_ == KJHHJKKOAJAOneofCase.ADDNICELMIC) hash ^= ADDNICELMIC.GetHashCode();
       hash ^= (int) kJHHJKKOAJACase_;
@@ -366,9 +367,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(90);
         output.WriteMessage(ADDNICELMIC);
       }
-      if (kJHHJKKOAJACase_ == KJHHJKKOAJAOneofCase.DAPAKMMMAOJ) {
+      if (kJHHJKKOAJACase_ == KJHHJKKOAJAOneofCase.SwordTrainingGameInfo) {
         output.WriteRawTag(98);
-        output.WriteMessage(DAPAKMMMAOJ);
+        output.WriteMessage(SwordTrainingGameInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -416,9 +417,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(90);
         output.WriteMessage(ADDNICELMIC);
       }
-      if (kJHHJKKOAJACase_ == KJHHJKKOAJAOneofCase.DAPAKMMMAOJ) {
+      if (kJHHJKKOAJACase_ == KJHHJKKOAJAOneofCase.SwordTrainingGameInfo) {
         output.WriteRawTag(98);
-        output.WriteMessage(DAPAKMMMAOJ);
+        output.WriteMessage(SwordTrainingGameInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -451,8 +452,8 @@ namespace EggLink.DanhengServer.Proto {
       if (kJHHJKKOAJACase_ == KJHHJKKOAJAOneofCase.FOHJOGGFIII) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(FOHJOGGFIII);
       }
-      if (kJHHJKKOAJACase_ == KJHHJKKOAJAOneofCase.DAPAKMMMAOJ) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DAPAKMMMAOJ);
+      if (kJHHJKKOAJACase_ == KJHHJKKOAJAOneofCase.SwordTrainingGameInfo) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SwordTrainingGameInfo);
       }
       if (kJHHJKKOAJACase_ == KJHHJKKOAJAOneofCase.DLDADINBFNF) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DLDADINBFNF);
@@ -512,11 +513,11 @@ namespace EggLink.DanhengServer.Proto {
           }
           FOHJOGGFIII.MergeFrom(other.FOHJOGGFIII);
           break;
-        case KJHHJKKOAJAOneofCase.DAPAKMMMAOJ:
-          if (DAPAKMMMAOJ == null) {
-            DAPAKMMMAOJ = new global::EggLink.DanhengServer.Proto.LCIPLPHHHJC();
+        case KJHHJKKOAJAOneofCase.SwordTrainingGameInfo:
+          if (SwordTrainingGameInfo == null) {
+            SwordTrainingGameInfo = new global::EggLink.DanhengServer.Proto.LCIPLPHHHJC();
           }
-          DAPAKMMMAOJ.MergeFrom(other.DAPAKMMMAOJ);
+          SwordTrainingGameInfo.MergeFrom(other.SwordTrainingGameInfo);
           break;
         case KJHHJKKOAJAOneofCase.DLDADINBFNF:
           if (DLDADINBFNF == null) {
@@ -623,11 +624,11 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 98: {
             global::EggLink.DanhengServer.Proto.LCIPLPHHHJC subBuilder = new global::EggLink.DanhengServer.Proto.LCIPLPHHHJC();
-            if (kJHHJKKOAJACase_ == KJHHJKKOAJAOneofCase.DAPAKMMMAOJ) {
-              subBuilder.MergeFrom(DAPAKMMMAOJ);
+            if (kJHHJKKOAJACase_ == KJHHJKKOAJAOneofCase.SwordTrainingGameInfo) {
+              subBuilder.MergeFrom(SwordTrainingGameInfo);
             }
             input.ReadMessage(subBuilder);
-            DAPAKMMMAOJ = subBuilder;
+            SwordTrainingGameInfo = subBuilder;
             break;
           }
         }
@@ -721,11 +722,11 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 98: {
             global::EggLink.DanhengServer.Proto.LCIPLPHHHJC subBuilder = new global::EggLink.DanhengServer.Proto.LCIPLPHHHJC();
-            if (kJHHJKKOAJACase_ == KJHHJKKOAJAOneofCase.DAPAKMMMAOJ) {
-              subBuilder.MergeFrom(DAPAKMMMAOJ);
+            if (kJHHJKKOAJACase_ == KJHHJKKOAJAOneofCase.SwordTrainingGameInfo) {
+              subBuilder.MergeFrom(SwordTrainingGameInfo);
             }
             input.ReadMessage(subBuilder);
-            DAPAKMMMAOJ = subBuilder;
+            SwordTrainingGameInfo = subBuilder;
             break;
           }
         }

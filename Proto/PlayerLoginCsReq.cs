@@ -24,26 +24,26 @@ namespace EggLink.DanhengServer.Proto {
     static PlayerLoginCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZQbGF5ZXJMb2dpbkNzUmVxLnByb3RvGhFHQkFNTkFQR0hGRi5wcm90bxoS",
-            "UGxhdGZvcm1UeXBlLnByb3RvGhJMYW5ndWFnZVR5cGUucHJvdG8iwwQKEFBs",
-            "YXllckxvZ2luQ3NSZXESEwoLSUxFSEtDSlBHR0UYCCABKAkSEwoLUExJTkNL",
-            "SkJCTU4YCiABKAkSEwoLTEdMRUZDTklKS0wYDSABKAkSFAoMbG9naW5fcmFu",
-            "ZG9tGAkgASgEEhYKDmNsaWVudF92ZXJzaW9uGAQgASgJEiQKDWxhbmd1YWdl",
-            "X3R5cGUYByABKA4yDS5MYW5ndWFnZVR5cGUSFAoLREhJQ0ZLSkVQQkkYlw0g",
-            "ASgNEhEKCXNpZ25hdHVyZRgMIAEoCRITCgtKSk5JTkNNQklEThgFIAEoCRIU",
-            "CgtPUElBQ0VLT0FOShi8ASABKAkSEwoLTkpMUENPRUJNRkoYAiABKAkSFAoL",
-            "TEdPTUtNSk1FRE0YmwEgASgJEhQKC0JDSUpLQURFTUlFGKwHIAEoCRITCgtH",
-            "SU1DTkhNQVBCUBgLIAEoCRIfCghwbGF0Zm9ybRgDIAEoDjINLlBsYXRmb3Jt",
-            "VHlwZRITCgtDSURIQUhEQ0hETBgPIAEoDRITCgtyZXNfdmVyc2lvbhgBIAEo",
-            "DRIUCgtNQ0tLQktQT01MSRiKASABKAkSIgoLR0FOSk1GQ0xORkwY9QYgASgL",
-            "MgwuR0JBTU5BUEdIRkYSFgoOcm9ndWVfZ2V0X2luZm8YBiABKAkSFAoLT0tQ",
-            "RENERURPSUwY3gwgASgNEhQKC0JPTEhMSERFR0dHGPYPIAEoCRITCgtIS0lH",
-            "TUJLSURMQRgOIAEoCRIUCgtCSEhPTUhLQU1MTxihBiABKAhCHqoCG0VnZ0xp",
-            "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChZQbGF5ZXJMb2dpbkNzUmVxLnByb3RvGhVFeHRyYURldmljZUluZm8ucHJv",
+            "dG8aElBsYXRmb3JtVHlwZS5wcm90bxoSTGFuZ3VhZ2VUeXBlLnByb3RvIscE",
+            "ChBQbGF5ZXJMb2dpbkNzUmVxEhMKC0lMRUhLQ0pQR0dFGAggASgJEhMKC1BM",
+            "SU5DS0pCQk1OGAogASgJEhMKC2RldmljZV9pbmZvGA0gASgJEhQKDGxvZ2lu",
+            "X3JhbmRvbRgJIAEoBBIWCg5jbGllbnRfdmVyc2lvbhgEIAEoCRIfCghsYW5n",
+            "dWFnZRgHIAEoDjINLkxhbmd1YWdlVHlwZRITCgpjaGFubmVsX2lkGJcNIAEo",
+            "DRIRCglzaWduYXR1cmUYDCABKAkSEwoLZGV2aWNlX3V1aWQYBSABKAkSFAoL",
+            "T1BJQUNFS09BTkoYvAEgASgJEhIKCnJlc29sdXRpb24YAiABKAkSEgoJZGV2",
+            "aWNlX2ZwGJsBIAEoCRIUCgtCQ0lKS0FERU1JRRisByABKAkSEwoLR0lNQ05I",
+            "TUFQQlAYCyABKAkSHwoIcGxhdGZvcm0YAyABKA4yDS5QbGF0Zm9ybVR5cGUS",
+            "EwoLQ0lESEFIRENIREwYDyABKA0SEwoLcmVzX3ZlcnNpb24YASABKA0SFAoL",
+            "TUNLS0JLUE9NTEkYigEgASgJEiYKC0dBTkpNRkNMTkZMGPUGIAEoCzIQLkV4",
+            "dHJhRGV2aWNlSW5mbxIWCg5yb2d1ZV9nZXRfaW5mbxgGIAEoCRIUCgtPS1BE",
+            "Q0RFRE9JTBjeDCABKA0SGQoQY2xpZW50X3RpbWVfem9uZRj2DyABKAkSFwoP",
+            "c3lzdGVtX2xhbmd1YWdlGA4gASgJEhQKC0JISE9NSEtBTUxPGKEGIAEoCEIe",
+            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GBAMNAPGHFFReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ExtraDeviceInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerLoginCsReq), global::EggLink.DanhengServer.Proto.PlayerLoginCsReq.Parser, new[]{ "ILEHKCJPGGE", "PLINCKJBBMN", "LGLEFCNIJKL", "LoginRandom", "ClientVersion", "LanguageType", "DHICFKJEPBI", "Signature", "JJNINCMBIDN", "OPIACEKOANJ", "NJLPCOEBMFJ", "LGOMKMJMEDM", "BCIJKADEMIE", "GIMCNHMAPBP", "Platform", "CIDHAHDCHDL", "ResVersion", "MCKKBKPOMLI", "GANJMFCLNFL", "RogueGetInfo", "OKPDCDEDOIL", "BOLHLHDEGGG", "HKIGMBKIDLA", "BHHOMHKAMLO" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerLoginCsReq), global::EggLink.DanhengServer.Proto.PlayerLoginCsReq.Parser, new[]{ "ILEHKCJPGGE", "PLINCKJBBMN", "DeviceInfo", "LoginRandom", "ClientVersion", "Language", "ChannelId", "Signature", "DeviceUuid", "OPIACEKOANJ", "Resolution", "DeviceFp", "BCIJKADEMIE", "GIMCNHMAPBP", "Platform", "CIDHAHDCHDL", "ResVersion", "MCKKBKPOMLI", "GANJMFCLNFL", "RogueGetInfo", "OKPDCDEDOIL", "ClientTimeZone", "SystemLanguage", "BHHOMHKAMLO" }, null, null, null, null)
           }));
     }
     #endregion
@@ -87,16 +87,16 @@ namespace EggLink.DanhengServer.Proto {
     public PlayerLoginCsReq(PlayerLoginCsReq other) : this() {
       iLEHKCJPGGE_ = other.iLEHKCJPGGE_;
       pLINCKJBBMN_ = other.pLINCKJBBMN_;
-      lGLEFCNIJKL_ = other.lGLEFCNIJKL_;
+      deviceInfo_ = other.deviceInfo_;
       loginRandom_ = other.loginRandom_;
       clientVersion_ = other.clientVersion_;
-      languageType_ = other.languageType_;
-      dHICFKJEPBI_ = other.dHICFKJEPBI_;
+      language_ = other.language_;
+      channelId_ = other.channelId_;
       signature_ = other.signature_;
-      jJNINCMBIDN_ = other.jJNINCMBIDN_;
+      deviceUuid_ = other.deviceUuid_;
       oPIACEKOANJ_ = other.oPIACEKOANJ_;
-      nJLPCOEBMFJ_ = other.nJLPCOEBMFJ_;
-      lGOMKMJMEDM_ = other.lGOMKMJMEDM_;
+      resolution_ = other.resolution_;
+      deviceFp_ = other.deviceFp_;
       bCIJKADEMIE_ = other.bCIJKADEMIE_;
       gIMCNHMAPBP_ = other.gIMCNHMAPBP_;
       platform_ = other.platform_;
@@ -106,8 +106,8 @@ namespace EggLink.DanhengServer.Proto {
       gANJMFCLNFL_ = other.gANJMFCLNFL_ != null ? other.gANJMFCLNFL_.Clone() : null;
       rogueGetInfo_ = other.rogueGetInfo_;
       oKPDCDEDOIL_ = other.oKPDCDEDOIL_;
-      bOLHLHDEGGG_ = other.bOLHLHDEGGG_;
-      hKIGMBKIDLA_ = other.hKIGMBKIDLA_;
+      clientTimeZone_ = other.clientTimeZone_;
+      systemLanguage_ = other.systemLanguage_;
       bHHOMHKAMLO_ = other.bHHOMHKAMLO_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -142,15 +142,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "LGLEFCNIJKL" field.</summary>
-    public const int LGLEFCNIJKLFieldNumber = 13;
-    private string lGLEFCNIJKL_ = "";
+    /// <summary>Field number for the "device_info" field.</summary>
+    public const int DeviceInfoFieldNumber = 13;
+    private string deviceInfo_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string LGLEFCNIJKL {
-      get { return lGLEFCNIJKL_; }
+    public string DeviceInfo {
+      get { return deviceInfo_; }
       set {
-        lGLEFCNIJKL_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        deviceInfo_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -178,27 +178,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "language_type" field.</summary>
-    public const int LanguageTypeFieldNumber = 7;
-    private global::EggLink.DanhengServer.Proto.LanguageType languageType_ = global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone;
+    /// <summary>Field number for the "language" field.</summary>
+    public const int LanguageFieldNumber = 7;
+    private global::EggLink.DanhengServer.Proto.LanguageType language_ = global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.LanguageType LanguageType {
-      get { return languageType_; }
+    public global::EggLink.DanhengServer.Proto.LanguageType Language {
+      get { return language_; }
       set {
-        languageType_ = value;
+        language_ = value;
       }
     }
 
-    /// <summary>Field number for the "DHICFKJEPBI" field.</summary>
-    public const int DHICFKJEPBIFieldNumber = 1687;
-    private uint dHICFKJEPBI_;
+    /// <summary>Field number for the "channel_id" field.</summary>
+    public const int ChannelIdFieldNumber = 1687;
+    private uint channelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DHICFKJEPBI {
-      get { return dHICFKJEPBI_; }
+    public uint ChannelId {
+      get { return channelId_; }
       set {
-        dHICFKJEPBI_ = value;
+        channelId_ = value;
       }
     }
 
@@ -214,15 +214,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "JJNINCMBIDN" field.</summary>
-    public const int JJNINCMBIDNFieldNumber = 5;
-    private string jJNINCMBIDN_ = "";
+    /// <summary>Field number for the "device_uuid" field.</summary>
+    public const int DeviceUuidFieldNumber = 5;
+    private string deviceUuid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string JJNINCMBIDN {
-      get { return jJNINCMBIDN_; }
+    public string DeviceUuid {
+      get { return deviceUuid_; }
       set {
-        jJNINCMBIDN_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        deviceUuid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -238,27 +238,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "NJLPCOEBMFJ" field.</summary>
-    public const int NJLPCOEBMFJFieldNumber = 2;
-    private string nJLPCOEBMFJ_ = "";
+    /// <summary>Field number for the "resolution" field.</summary>
+    public const int ResolutionFieldNumber = 2;
+    private string resolution_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string NJLPCOEBMFJ {
-      get { return nJLPCOEBMFJ_; }
+    public string Resolution {
+      get { return resolution_; }
       set {
-        nJLPCOEBMFJ_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        resolution_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "LGOMKMJMEDM" field.</summary>
-    public const int LGOMKMJMEDMFieldNumber = 155;
-    private string lGOMKMJMEDM_ = "";
+    /// <summary>Field number for the "device_fp" field.</summary>
+    public const int DeviceFpFieldNumber = 155;
+    private string deviceFp_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string LGOMKMJMEDM {
-      get { return lGOMKMJMEDM_; }
+    public string DeviceFp {
+      get { return deviceFp_; }
       set {
-        lGOMKMJMEDM_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        deviceFp_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -336,10 +336,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "GANJMFCLNFL" field.</summary>
     public const int GANJMFCLNFLFieldNumber = 885;
-    private global::EggLink.DanhengServer.Proto.GBAMNAPGHFF gANJMFCLNFL_;
+    private global::EggLink.DanhengServer.Proto.ExtraDeviceInfo gANJMFCLNFL_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.GBAMNAPGHFF GANJMFCLNFL {
+    public global::EggLink.DanhengServer.Proto.ExtraDeviceInfo GANJMFCLNFL {
       get { return gANJMFCLNFL_; }
       set {
         gANJMFCLNFL_ = value;
@@ -370,27 +370,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "BOLHLHDEGGG" field.</summary>
-    public const int BOLHLHDEGGGFieldNumber = 2038;
-    private string bOLHLHDEGGG_ = "";
+    /// <summary>Field number for the "client_time_zone" field.</summary>
+    public const int ClientTimeZoneFieldNumber = 2038;
+    private string clientTimeZone_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string BOLHLHDEGGG {
-      get { return bOLHLHDEGGG_; }
+    public string ClientTimeZone {
+      get { return clientTimeZone_; }
       set {
-        bOLHLHDEGGG_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        clientTimeZone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "HKIGMBKIDLA" field.</summary>
-    public const int HKIGMBKIDLAFieldNumber = 14;
-    private string hKIGMBKIDLA_ = "";
+    /// <summary>Field number for the "system_language" field.</summary>
+    public const int SystemLanguageFieldNumber = 14;
+    private string systemLanguage_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string HKIGMBKIDLA {
-      get { return hKIGMBKIDLA_; }
+    public string SystemLanguage {
+      get { return systemLanguage_; }
       set {
-        hKIGMBKIDLA_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        systemLanguage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -423,16 +423,16 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (ILEHKCJPGGE != other.ILEHKCJPGGE) return false;
       if (PLINCKJBBMN != other.PLINCKJBBMN) return false;
-      if (LGLEFCNIJKL != other.LGLEFCNIJKL) return false;
+      if (DeviceInfo != other.DeviceInfo) return false;
       if (LoginRandom != other.LoginRandom) return false;
       if (ClientVersion != other.ClientVersion) return false;
-      if (LanguageType != other.LanguageType) return false;
-      if (DHICFKJEPBI != other.DHICFKJEPBI) return false;
+      if (Language != other.Language) return false;
+      if (ChannelId != other.ChannelId) return false;
       if (Signature != other.Signature) return false;
-      if (JJNINCMBIDN != other.JJNINCMBIDN) return false;
+      if (DeviceUuid != other.DeviceUuid) return false;
       if (OPIACEKOANJ != other.OPIACEKOANJ) return false;
-      if (NJLPCOEBMFJ != other.NJLPCOEBMFJ) return false;
-      if (LGOMKMJMEDM != other.LGOMKMJMEDM) return false;
+      if (Resolution != other.Resolution) return false;
+      if (DeviceFp != other.DeviceFp) return false;
       if (BCIJKADEMIE != other.BCIJKADEMIE) return false;
       if (GIMCNHMAPBP != other.GIMCNHMAPBP) return false;
       if (Platform != other.Platform) return false;
@@ -442,8 +442,8 @@ namespace EggLink.DanhengServer.Proto {
       if (!object.Equals(GANJMFCLNFL, other.GANJMFCLNFL)) return false;
       if (RogueGetInfo != other.RogueGetInfo) return false;
       if (OKPDCDEDOIL != other.OKPDCDEDOIL) return false;
-      if (BOLHLHDEGGG != other.BOLHLHDEGGG) return false;
-      if (HKIGMBKIDLA != other.HKIGMBKIDLA) return false;
+      if (ClientTimeZone != other.ClientTimeZone) return false;
+      if (SystemLanguage != other.SystemLanguage) return false;
       if (BHHOMHKAMLO != other.BHHOMHKAMLO) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -454,16 +454,16 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (ILEHKCJPGGE.Length != 0) hash ^= ILEHKCJPGGE.GetHashCode();
       if (PLINCKJBBMN.Length != 0) hash ^= PLINCKJBBMN.GetHashCode();
-      if (LGLEFCNIJKL.Length != 0) hash ^= LGLEFCNIJKL.GetHashCode();
+      if (DeviceInfo.Length != 0) hash ^= DeviceInfo.GetHashCode();
       if (LoginRandom != 0UL) hash ^= LoginRandom.GetHashCode();
       if (ClientVersion.Length != 0) hash ^= ClientVersion.GetHashCode();
-      if (LanguageType != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) hash ^= LanguageType.GetHashCode();
-      if (DHICFKJEPBI != 0) hash ^= DHICFKJEPBI.GetHashCode();
+      if (Language != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) hash ^= Language.GetHashCode();
+      if (ChannelId != 0) hash ^= ChannelId.GetHashCode();
       if (Signature.Length != 0) hash ^= Signature.GetHashCode();
-      if (JJNINCMBIDN.Length != 0) hash ^= JJNINCMBIDN.GetHashCode();
+      if (DeviceUuid.Length != 0) hash ^= DeviceUuid.GetHashCode();
       if (OPIACEKOANJ.Length != 0) hash ^= OPIACEKOANJ.GetHashCode();
-      if (NJLPCOEBMFJ.Length != 0) hash ^= NJLPCOEBMFJ.GetHashCode();
-      if (LGOMKMJMEDM.Length != 0) hash ^= LGOMKMJMEDM.GetHashCode();
+      if (Resolution.Length != 0) hash ^= Resolution.GetHashCode();
+      if (DeviceFp.Length != 0) hash ^= DeviceFp.GetHashCode();
       if (BCIJKADEMIE.Length != 0) hash ^= BCIJKADEMIE.GetHashCode();
       if (GIMCNHMAPBP.Length != 0) hash ^= GIMCNHMAPBP.GetHashCode();
       if (Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) hash ^= Platform.GetHashCode();
@@ -473,8 +473,8 @@ namespace EggLink.DanhengServer.Proto {
       if (gANJMFCLNFL_ != null) hash ^= GANJMFCLNFL.GetHashCode();
       if (RogueGetInfo.Length != 0) hash ^= RogueGetInfo.GetHashCode();
       if (OKPDCDEDOIL != 0) hash ^= OKPDCDEDOIL.GetHashCode();
-      if (BOLHLHDEGGG.Length != 0) hash ^= BOLHLHDEGGG.GetHashCode();
-      if (HKIGMBKIDLA.Length != 0) hash ^= HKIGMBKIDLA.GetHashCode();
+      if (ClientTimeZone.Length != 0) hash ^= ClientTimeZone.GetHashCode();
+      if (SystemLanguage.Length != 0) hash ^= SystemLanguage.GetHashCode();
       if (BHHOMHKAMLO != false) hash ^= BHHOMHKAMLO.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -498,9 +498,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(ResVersion);
       }
-      if (NJLPCOEBMFJ.Length != 0) {
+      if (Resolution.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(NJLPCOEBMFJ);
+        output.WriteString(Resolution);
       }
       if (Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) {
         output.WriteRawTag(24);
@@ -510,17 +510,17 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(34);
         output.WriteString(ClientVersion);
       }
-      if (JJNINCMBIDN.Length != 0) {
+      if (DeviceUuid.Length != 0) {
         output.WriteRawTag(42);
-        output.WriteString(JJNINCMBIDN);
+        output.WriteString(DeviceUuid);
       }
       if (RogueGetInfo.Length != 0) {
         output.WriteRawTag(50);
         output.WriteString(RogueGetInfo);
       }
-      if (LanguageType != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) {
+      if (Language != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) {
         output.WriteRawTag(56);
-        output.WriteEnum((int) LanguageType);
+        output.WriteEnum((int) Language);
       }
       if (ILEHKCJPGGE.Length != 0) {
         output.WriteRawTag(66);
@@ -542,13 +542,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(98);
         output.WriteString(Signature);
       }
-      if (LGLEFCNIJKL.Length != 0) {
+      if (DeviceInfo.Length != 0) {
         output.WriteRawTag(106);
-        output.WriteString(LGLEFCNIJKL);
+        output.WriteString(DeviceInfo);
       }
-      if (HKIGMBKIDLA.Length != 0) {
+      if (SystemLanguage.Length != 0) {
         output.WriteRawTag(114);
-        output.WriteString(HKIGMBKIDLA);
+        output.WriteString(SystemLanguage);
       }
       if (CIDHAHDCHDL != 0) {
         output.WriteRawTag(120);
@@ -558,9 +558,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(210, 8);
         output.WriteString(MCKKBKPOMLI);
       }
-      if (LGOMKMJMEDM.Length != 0) {
+      if (DeviceFp.Length != 0) {
         output.WriteRawTag(218, 9);
-        output.WriteString(LGOMKMJMEDM);
+        output.WriteString(DeviceFp);
       }
       if (OPIACEKOANJ.Length != 0) {
         output.WriteRawTag(226, 11);
@@ -582,13 +582,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(240, 101);
         output.WriteUInt32(OKPDCDEDOIL);
       }
-      if (DHICFKJEPBI != 0) {
+      if (ChannelId != 0) {
         output.WriteRawTag(184, 105);
-        output.WriteUInt32(DHICFKJEPBI);
+        output.WriteUInt32(ChannelId);
       }
-      if (BOLHLHDEGGG.Length != 0) {
+      if (ClientTimeZone.Length != 0) {
         output.WriteRawTag(178, 127);
-        output.WriteString(BOLHLHDEGGG);
+        output.WriteString(ClientTimeZone);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -604,9 +604,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(ResVersion);
       }
-      if (NJLPCOEBMFJ.Length != 0) {
+      if (Resolution.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(NJLPCOEBMFJ);
+        output.WriteString(Resolution);
       }
       if (Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) {
         output.WriteRawTag(24);
@@ -616,17 +616,17 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(34);
         output.WriteString(ClientVersion);
       }
-      if (JJNINCMBIDN.Length != 0) {
+      if (DeviceUuid.Length != 0) {
         output.WriteRawTag(42);
-        output.WriteString(JJNINCMBIDN);
+        output.WriteString(DeviceUuid);
       }
       if (RogueGetInfo.Length != 0) {
         output.WriteRawTag(50);
         output.WriteString(RogueGetInfo);
       }
-      if (LanguageType != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) {
+      if (Language != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) {
         output.WriteRawTag(56);
-        output.WriteEnum((int) LanguageType);
+        output.WriteEnum((int) Language);
       }
       if (ILEHKCJPGGE.Length != 0) {
         output.WriteRawTag(66);
@@ -648,13 +648,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(98);
         output.WriteString(Signature);
       }
-      if (LGLEFCNIJKL.Length != 0) {
+      if (DeviceInfo.Length != 0) {
         output.WriteRawTag(106);
-        output.WriteString(LGLEFCNIJKL);
+        output.WriteString(DeviceInfo);
       }
-      if (HKIGMBKIDLA.Length != 0) {
+      if (SystemLanguage.Length != 0) {
         output.WriteRawTag(114);
-        output.WriteString(HKIGMBKIDLA);
+        output.WriteString(SystemLanguage);
       }
       if (CIDHAHDCHDL != 0) {
         output.WriteRawTag(120);
@@ -664,9 +664,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(210, 8);
         output.WriteString(MCKKBKPOMLI);
       }
-      if (LGOMKMJMEDM.Length != 0) {
+      if (DeviceFp.Length != 0) {
         output.WriteRawTag(218, 9);
-        output.WriteString(LGOMKMJMEDM);
+        output.WriteString(DeviceFp);
       }
       if (OPIACEKOANJ.Length != 0) {
         output.WriteRawTag(226, 11);
@@ -688,13 +688,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(240, 101);
         output.WriteUInt32(OKPDCDEDOIL);
       }
-      if (DHICFKJEPBI != 0) {
+      if (ChannelId != 0) {
         output.WriteRawTag(184, 105);
-        output.WriteUInt32(DHICFKJEPBI);
+        output.WriteUInt32(ChannelId);
       }
-      if (BOLHLHDEGGG.Length != 0) {
+      if (ClientTimeZone.Length != 0) {
         output.WriteRawTag(178, 127);
-        output.WriteString(BOLHLHDEGGG);
+        output.WriteString(ClientTimeZone);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -712,8 +712,8 @@ namespace EggLink.DanhengServer.Proto {
       if (PLINCKJBBMN.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PLINCKJBBMN);
       }
-      if (LGLEFCNIJKL.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(LGLEFCNIJKL);
+      if (DeviceInfo.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DeviceInfo);
       }
       if (LoginRandom != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(LoginRandom);
@@ -721,26 +721,26 @@ namespace EggLink.DanhengServer.Proto {
       if (ClientVersion.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ClientVersion);
       }
-      if (LanguageType != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LanguageType);
+      if (Language != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Language);
       }
-      if (DHICFKJEPBI != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(DHICFKJEPBI);
+      if (ChannelId != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(ChannelId);
       }
       if (Signature.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Signature);
       }
-      if (JJNINCMBIDN.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(JJNINCMBIDN);
+      if (DeviceUuid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DeviceUuid);
       }
       if (OPIACEKOANJ.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(OPIACEKOANJ);
       }
-      if (NJLPCOEBMFJ.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(NJLPCOEBMFJ);
+      if (Resolution.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Resolution);
       }
-      if (LGOMKMJMEDM.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(LGOMKMJMEDM);
+      if (DeviceFp.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(DeviceFp);
       }
       if (BCIJKADEMIE.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(BCIJKADEMIE);
@@ -769,11 +769,11 @@ namespace EggLink.DanhengServer.Proto {
       if (OKPDCDEDOIL != 0) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(OKPDCDEDOIL);
       }
-      if (BOLHLHDEGGG.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(BOLHLHDEGGG);
+      if (ClientTimeZone.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ClientTimeZone);
       }
-      if (HKIGMBKIDLA.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(HKIGMBKIDLA);
+      if (SystemLanguage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SystemLanguage);
       }
       if (BHHOMHKAMLO != false) {
         size += 2 + 1;
@@ -796,8 +796,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.PLINCKJBBMN.Length != 0) {
         PLINCKJBBMN = other.PLINCKJBBMN;
       }
-      if (other.LGLEFCNIJKL.Length != 0) {
-        LGLEFCNIJKL = other.LGLEFCNIJKL;
+      if (other.DeviceInfo.Length != 0) {
+        DeviceInfo = other.DeviceInfo;
       }
       if (other.LoginRandom != 0UL) {
         LoginRandom = other.LoginRandom;
@@ -805,26 +805,26 @@ namespace EggLink.DanhengServer.Proto {
       if (other.ClientVersion.Length != 0) {
         ClientVersion = other.ClientVersion;
       }
-      if (other.LanguageType != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) {
-        LanguageType = other.LanguageType;
+      if (other.Language != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) {
+        Language = other.Language;
       }
-      if (other.DHICFKJEPBI != 0) {
-        DHICFKJEPBI = other.DHICFKJEPBI;
+      if (other.ChannelId != 0) {
+        ChannelId = other.ChannelId;
       }
       if (other.Signature.Length != 0) {
         Signature = other.Signature;
       }
-      if (other.JJNINCMBIDN.Length != 0) {
-        JJNINCMBIDN = other.JJNINCMBIDN;
+      if (other.DeviceUuid.Length != 0) {
+        DeviceUuid = other.DeviceUuid;
       }
       if (other.OPIACEKOANJ.Length != 0) {
         OPIACEKOANJ = other.OPIACEKOANJ;
       }
-      if (other.NJLPCOEBMFJ.Length != 0) {
-        NJLPCOEBMFJ = other.NJLPCOEBMFJ;
+      if (other.Resolution.Length != 0) {
+        Resolution = other.Resolution;
       }
-      if (other.LGOMKMJMEDM.Length != 0) {
-        LGOMKMJMEDM = other.LGOMKMJMEDM;
+      if (other.DeviceFp.Length != 0) {
+        DeviceFp = other.DeviceFp;
       }
       if (other.BCIJKADEMIE.Length != 0) {
         BCIJKADEMIE = other.BCIJKADEMIE;
@@ -846,7 +846,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.gANJMFCLNFL_ != null) {
         if (gANJMFCLNFL_ == null) {
-          GANJMFCLNFL = new global::EggLink.DanhengServer.Proto.GBAMNAPGHFF();
+          GANJMFCLNFL = new global::EggLink.DanhengServer.Proto.ExtraDeviceInfo();
         }
         GANJMFCLNFL.MergeFrom(other.GANJMFCLNFL);
       }
@@ -856,11 +856,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.OKPDCDEDOIL != 0) {
         OKPDCDEDOIL = other.OKPDCDEDOIL;
       }
-      if (other.BOLHLHDEGGG.Length != 0) {
-        BOLHLHDEGGG = other.BOLHLHDEGGG;
+      if (other.ClientTimeZone.Length != 0) {
+        ClientTimeZone = other.ClientTimeZone;
       }
-      if (other.HKIGMBKIDLA.Length != 0) {
-        HKIGMBKIDLA = other.HKIGMBKIDLA;
+      if (other.SystemLanguage.Length != 0) {
+        SystemLanguage = other.SystemLanguage;
       }
       if (other.BHHOMHKAMLO != false) {
         BHHOMHKAMLO = other.BHHOMHKAMLO;
@@ -885,7 +885,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 18: {
-            NJLPCOEBMFJ = input.ReadString();
+            Resolution = input.ReadString();
             break;
           }
           case 24: {
@@ -897,7 +897,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 42: {
-            JJNINCMBIDN = input.ReadString();
+            DeviceUuid = input.ReadString();
             break;
           }
           case 50: {
@@ -905,7 +905,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 56: {
-            LanguageType = (global::EggLink.DanhengServer.Proto.LanguageType) input.ReadEnum();
+            Language = (global::EggLink.DanhengServer.Proto.LanguageType) input.ReadEnum();
             break;
           }
           case 66: {
@@ -929,11 +929,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 106: {
-            LGLEFCNIJKL = input.ReadString();
+            DeviceInfo = input.ReadString();
             break;
           }
           case 114: {
-            HKIGMBKIDLA = input.ReadString();
+            SystemLanguage = input.ReadString();
             break;
           }
           case 120: {
@@ -945,7 +945,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 1242: {
-            LGOMKMJMEDM = input.ReadString();
+            DeviceFp = input.ReadString();
             break;
           }
           case 1506: {
@@ -958,7 +958,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 7082: {
             if (gANJMFCLNFL_ == null) {
-              GANJMFCLNFL = new global::EggLink.DanhengServer.Proto.GBAMNAPGHFF();
+              GANJMFCLNFL = new global::EggLink.DanhengServer.Proto.ExtraDeviceInfo();
             }
             input.ReadMessage(GANJMFCLNFL);
             break;
@@ -972,11 +972,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 13496: {
-            DHICFKJEPBI = input.ReadUInt32();
+            ChannelId = input.ReadUInt32();
             break;
           }
           case 16306: {
-            BOLHLHDEGGG = input.ReadString();
+            ClientTimeZone = input.ReadString();
             break;
           }
         }
@@ -999,7 +999,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 18: {
-            NJLPCOEBMFJ = input.ReadString();
+            Resolution = input.ReadString();
             break;
           }
           case 24: {
@@ -1011,7 +1011,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 42: {
-            JJNINCMBIDN = input.ReadString();
+            DeviceUuid = input.ReadString();
             break;
           }
           case 50: {
@@ -1019,7 +1019,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 56: {
-            LanguageType = (global::EggLink.DanhengServer.Proto.LanguageType) input.ReadEnum();
+            Language = (global::EggLink.DanhengServer.Proto.LanguageType) input.ReadEnum();
             break;
           }
           case 66: {
@@ -1043,11 +1043,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 106: {
-            LGLEFCNIJKL = input.ReadString();
+            DeviceInfo = input.ReadString();
             break;
           }
           case 114: {
-            HKIGMBKIDLA = input.ReadString();
+            SystemLanguage = input.ReadString();
             break;
           }
           case 120: {
@@ -1059,7 +1059,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 1242: {
-            LGOMKMJMEDM = input.ReadString();
+            DeviceFp = input.ReadString();
             break;
           }
           case 1506: {
@@ -1072,7 +1072,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 7082: {
             if (gANJMFCLNFL_ == null) {
-              GANJMFCLNFL = new global::EggLink.DanhengServer.Proto.GBAMNAPGHFF();
+              GANJMFCLNFL = new global::EggLink.DanhengServer.Proto.ExtraDeviceInfo();
             }
             input.ReadMessage(GANJMFCLNFL);
             break;
@@ -1086,11 +1086,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 13496: {
-            DHICFKJEPBI = input.ReadUInt32();
+            ChannelId = input.ReadUInt32();
             break;
           }
           case 16306: {
-            BOLHLHDEGGG = input.ReadString();
+            ClientTimeZone = input.ReadString();
             break;
           }
         }

@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static RogueGetInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJSb2d1ZUdldEluZm8ucHJvdG8aE1JvZ3VlQWVvbkluZm8ucHJvdG8aE1Jv",
-            "Z3VlQXJlYUluZm8ucHJvdG8aFVJvZ3VlU2Vhc29uSW5mby5wcm90bxoaUm9n",
-            "dWVTY29yZVJld2FyZEluZm8ucHJvdG8aHVJvZ3VlR2V0VmlydHVhbEl0ZW1J",
+            "ChJSb2d1ZUdldEluZm8ucHJvdG8aE1JvZ3VlQXJlYUluZm8ucHJvdG8aE1Jv",
+            "Z3VlQWVvbkluZm8ucHJvdG8aHVJvZ3VlR2V0VmlydHVhbEl0ZW1JbmZvLnBy",
+            "b3RvGhpSb2d1ZVNjb3JlUmV3YXJkSW5mby5wcm90bxoVUm9ndWVTZWFzb25J",
             "bmZvLnByb3RvIoACCgxSb2d1ZUdldEluZm8SNgoXcm9ndWVfc2NvcmVfcmV3",
             "YXJkX2luZm8YCiABKAsyFS5Sb2d1ZVNjb3JlUmV3YXJkSW5mbxInCg9yb2d1",
             "ZV9hZW9uX2luZm8YAyABKAsyDi5Sb2d1ZUFlb25JbmZvEjkKF3JvZ3VlX3Zp",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "Zm8SJwoPcm9ndWVfYXJlYV9pbmZvGAwgASgLMg4uUm9ndWVBcmVhSW5mb0Ie",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueAeonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAreaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueSeasonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueScoreRewardInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueGetVirtualItemInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueAreaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAeonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueGetVirtualItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueScoreRewardInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueSeasonInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueGetInfo), global::EggLink.DanhengServer.Proto.RogueGetInfo.Parser, new[]{ "RogueScoreRewardInfo", "RogueAeonInfo", "RogueVirtualItemInfo", "RogueSeasonInfo", "RogueAreaInfo" }, null, null, null, null)
           }));

@@ -84,8 +84,6 @@ public class RogueEntityLoader(SceneInstance scene, PlayerInstance player) : Sce
                 npc.RogueNpcId = instance.EventId;
                 npc.UniqueId = instance.EventUniqueId;
             }
-
-            ;
         }
 
         await Scene.AddEntity(npc, sendPacket);

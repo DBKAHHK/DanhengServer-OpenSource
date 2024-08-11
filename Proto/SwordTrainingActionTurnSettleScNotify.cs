@@ -25,12 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CitTd29yZFRyYWluaW5nQWN0aW9uVHVyblNldHRsZVNjTm90aWZ5LnByb3Rv",
-            "GhFKREhMSkxDRktNTy5wcm90byJ0CiVTd29yZFRyYWluaW5nQWN0aW9uVHVy",
-            "blNldHRsZVNjTm90aWZ5EhMKC0xKRVBJQkJERk5KGAIgASgNEhMKC05BRUtK",
-            "Qk9FTUNBGAYgASgNEiEKC0ZFSk9BRUFMS0RGGAQgAygLMgwuSkRITEpMQ0ZL",
-            "TU9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "GiFTd29yZFRyYWluaW5nU2tpbGxQb3dlckluZm8ucHJvdG8ihAEKJVN3b3Jk",
+            "VHJhaW5pbmdBY3Rpb25UdXJuU2V0dGxlU2NOb3RpZnkSEwoLTEpFUElCQkRG",
+            "TkoYAiABKA0SEwoLTkFFS0pCT0VNQ0EYBiABKA0SMQoLRkVKT0FFQUxLREYY",
+            "BCADKAsyHC5Td29yZFRyYWluaW5nU2tpbGxQb3dlckluZm9CHqoCG0VnZ0xp",
+            "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JDHLJLCFKMOReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SwordTrainingSkillPowerInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SwordTrainingActionTurnSettleScNotify), global::EggLink.DanhengServer.Proto.SwordTrainingActionTurnSettleScNotify.Parser, new[]{ "LJEPIBBDFNJ", "NAEKJBOEMCA", "FEJOAEALKDF" }, null, null, null, null)
           }));
@@ -112,12 +113,12 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "FEJOAEALKDF" field.</summary>
     public const int FEJOAEALKDFFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.JDHLJLCFKMO> _repeated_fEJOAEALKDF_codec
-        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.JDHLJLCFKMO.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.JDHLJLCFKMO> fEJOAEALKDF_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.JDHLJLCFKMO>();
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.SwordTrainingSkillPowerInfo> _repeated_fEJOAEALKDF_codec
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.SwordTrainingSkillPowerInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SwordTrainingSkillPowerInfo> fEJOAEALKDF_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SwordTrainingSkillPowerInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.JDHLJLCFKMO> FEJOAEALKDF {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SwordTrainingSkillPowerInfo> FEJOAEALKDF {
       get { return fEJOAEALKDF_; }
     }
 

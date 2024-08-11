@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static SwordTrainingGetSkillInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiRTd29yZFRyYWluaW5nR2V0U2tpbGxJbmZvU2NSc3AucHJvdG8iaQoeU3dv",
+            "CiRTd29yZFRyYWluaW5nR2V0U2tpbGxJbmZvU2NSc3AucHJvdG8ibwoeU3dv",
             "cmRUcmFpbmluZ0dldFNraWxsSW5mb1NjUnNwEgwKBHR5cGUYAiABKA0SDwoH",
-            "cmV0Y29kZRgPIAEoDRITCgtOSFBISEFQSk9ERxgHIAMoDRITCgtGRUtJTExC",
-            "SUVLTxgFIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "cmV0Y29kZRgPIAEoDRITCgtOSFBISEFQSk9ERxgHIAMoDRIZChF1bmxvY2tf",
+            "c2tpbGxfbGlzdBgFIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SwordTrainingGetSkillInfoScRsp), global::EggLink.DanhengServer.Proto.SwordTrainingGetSkillInfoScRsp.Parser, new[]{ "Type", "Retcode", "NHPHHAPJODG", "FEKILLBIEKO" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SwordTrainingGetSkillInfoScRsp), global::EggLink.DanhengServer.Proto.SwordTrainingGetSkillInfoScRsp.Parser, new[]{ "Type", "Retcode", "NHPHHAPJODG", "UnlockSkillList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,7 +77,7 @@ namespace EggLink.DanhengServer.Proto {
       type_ = other.type_;
       retcode_ = other.retcode_;
       nHPHHAPJODG_ = other.nHPHHAPJODG_.Clone();
-      fEKILLBIEKO_ = other.fEKILLBIEKO_.Clone();
+      unlockSkillList_ = other.unlockSkillList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -122,15 +122,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return nHPHHAPJODG_; }
     }
 
-    /// <summary>Field number for the "FEKILLBIEKO" field.</summary>
-    public const int FEKILLBIEKOFieldNumber = 5;
-    private static readonly pb::FieldCodec<uint> _repeated_fEKILLBIEKO_codec
+    /// <summary>Field number for the "unlock_skill_list" field.</summary>
+    public const int UnlockSkillListFieldNumber = 5;
+    private static readonly pb::FieldCodec<uint> _repeated_unlockSkillList_codec
         = pb::FieldCodec.ForUInt32(42);
-    private readonly pbc::RepeatedField<uint> fEKILLBIEKO_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> unlockSkillList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> FEKILLBIEKO {
-      get { return fEKILLBIEKO_; }
+    public pbc::RepeatedField<uint> UnlockSkillList {
+      get { return unlockSkillList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Type != other.Type) return false;
       if (Retcode != other.Retcode) return false;
       if(!nHPHHAPJODG_.Equals(other.nHPHHAPJODG_)) return false;
-      if(!fEKILLBIEKO_.Equals(other.fEKILLBIEKO_)) return false;
+      if(!unlockSkillList_.Equals(other.unlockSkillList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -162,7 +162,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Type != 0) hash ^= Type.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       hash ^= nHPHHAPJODG_.GetHashCode();
-      hash ^= fEKILLBIEKO_.GetHashCode();
+      hash ^= unlockSkillList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -185,7 +185,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt32(Type);
       }
-      fEKILLBIEKO_.WriteTo(output, _repeated_fEKILLBIEKO_codec);
+      unlockSkillList_.WriteTo(output, _repeated_unlockSkillList_codec);
       nHPHHAPJODG_.WriteTo(output, _repeated_nHPHHAPJODG_codec);
       if (Retcode != 0) {
         output.WriteRawTag(120);
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt32(Type);
       }
-      fEKILLBIEKO_.WriteTo(ref output, _repeated_fEKILLBIEKO_codec);
+      unlockSkillList_.WriteTo(ref output, _repeated_unlockSkillList_codec);
       nHPHHAPJODG_.WriteTo(ref output, _repeated_nHPHHAPJODG_codec);
       if (Retcode != 0) {
         output.WriteRawTag(120);
@@ -228,7 +228,7 @@ namespace EggLink.DanhengServer.Proto {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       size += nHPHHAPJODG_.CalculateSize(_repeated_nHPHHAPJODG_codec);
-      size += fEKILLBIEKO_.CalculateSize(_repeated_fEKILLBIEKO_codec);
+      size += unlockSkillList_.CalculateSize(_repeated_unlockSkillList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -248,7 +248,7 @@ namespace EggLink.DanhengServer.Proto {
         Retcode = other.Retcode;
       }
       nHPHHAPJODG_.Add(other.nHPHHAPJODG_);
-      fEKILLBIEKO_.Add(other.fEKILLBIEKO_);
+      unlockSkillList_.Add(other.unlockSkillList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -270,7 +270,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 42:
           case 40: {
-            fEKILLBIEKO_.AddEntriesFrom(input, _repeated_fEKILLBIEKO_codec);
+            unlockSkillList_.AddEntriesFrom(input, _repeated_unlockSkillList_codec);
             break;
           }
           case 58:
@@ -303,7 +303,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 42:
           case 40: {
-            fEKILLBIEKO_.AddEntriesFrom(ref input, _repeated_fEKILLBIEKO_codec);
+            unlockSkillList_.AddEntriesFrom(ref input, _repeated_unlockSkillList_codec);
             break;
           }
           case 58:

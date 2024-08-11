@@ -10,6 +10,6 @@ public class EventHandlerCostItemValue : RogueEventCostHandler
         List<int> paramList)
     {
         var decreaseMoney = paramList[1];
-        await rogue.CostMoney(decreaseMoney, RogueCommonActionResultDisplayType.Single);
+        await rogue.CostMoney(decreaseMoney, 0);
     }
 }

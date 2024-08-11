@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static RogueModifierReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNSb2d1ZU1vZGlmaWVyLnByb3RvGhpSb2d1ZU1vZGlmaWVyQ29udGVudC5w",
-            "cm90bxodUm9ndWVNb2RpZmllclNvdXJjZVR5cGUucHJvdG8aHENoZXNzUm9n",
-            "dWVNb2RpZmllckluZm8ucHJvdG8i2AEKDVJvZ3VlTW9kaWZpZXISLwoQbW9k",
+            "ChNSb2d1ZU1vZGlmaWVyLnByb3RvGhxDaGVzc1JvZ3VlTW9kaWZpZXJJbmZv",
+            "LnByb3RvGhpSb2d1ZU1vZGlmaWVyQ29udGVudC5wcm90bxodUm9ndWVNb2Rp",
+            "ZmllclNvdXJjZVR5cGUucHJvdG8i2AEKDVJvZ3VlTW9kaWZpZXISLwoQbW9k",
             "aWZpZXJfY29udGVudBgEIAEoCzIVLlJvZ3VlTW9kaWZpZXJDb250ZW50EhwK",
             "FG1haW5fbW9kaWZpZXJfZWZmZWN0GAwgASgEEjYKFG1vZGlmaWVyX3NvdXJj",
             "ZV90eXBlGAsgASgOMhguUm9ndWVNb2RpZmllclNvdXJjZVR5cGUSMQoNbW9k",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "DQoLTElNQUVDT0VCUEVCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueModifierContentReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueModifierSourceTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueModifierInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueModifierInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueModifierContentReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueModifierSourceTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueModifier), global::EggLink.DanhengServer.Proto.RogueModifier.Parser, new[]{ "ModifierContent", "MainModifierEffect", "ModifierSourceType", "ModifierInfo" }, new[]{ "LIMAECOEBPE" }, null, null, null)
           }));
