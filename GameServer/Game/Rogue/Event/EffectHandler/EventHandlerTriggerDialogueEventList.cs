@@ -17,7 +17,7 @@ public class EventHandlerTriggerDialogueEventList : RogueEventEffectHandler
         foreach (var param in paramList)
         {
             eventInstance?.EffectEventId.SafeAdd(param);
-            rogue.TriggerEvent(eventInstance, param);
+            await rogue.TriggerEvent(eventInstance, param);
         }
 
         await System.Threading.Tasks.Task.CompletedTask;

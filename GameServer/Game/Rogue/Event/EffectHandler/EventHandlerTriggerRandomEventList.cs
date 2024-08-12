@@ -19,7 +19,7 @@ public class EventHandlerTriggerRandomEventList : RogueEventEffectHandler
 
         var randomEvent = list.GetRandom();
         eventInstance?.EffectEventId.SafeAdd(randomEvent);
-        rogue.TriggerEvent(eventInstance, randomEvent);
+        await rogue.TriggerEvent(eventInstance, randomEvent);
 
         await System.Threading.Tasks.Task.CompletedTask;
     }

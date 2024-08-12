@@ -24,7 +24,7 @@ public class EventHandlerRepeatableGamble : RogueEventEffectHandler
             // win
             eventInstance.EffectEventId.SafeAdd(paramList[0]);
             option.OverrideSelected = true;
-            rogue.TriggerEvent(eventInstance, paramList[0]);
+            await rogue.TriggerEvent(eventInstance, paramList[0]);
         }
         else
         {
@@ -32,7 +32,7 @@ public class EventHandlerRepeatableGamble : RogueEventEffectHandler
             eventInstance.EffectEventId.SafeAdd(paramList[3]);
             option.OverrideSelected = false;
             option.Ratio += paramList[2] / 100f;
-            rogue.TriggerEvent(eventInstance, paramList[3]);
+            await rogue.TriggerEvent(eventInstance, paramList[3]);
         }
     }
 }
