@@ -207,6 +207,20 @@ public static class GameData
 
     #endregion
 
+    #region TournRogue
+
+    public static Dictionary<int, RogueTournAreaExcel> RogueTournAreaData { get; private set; } = [];
+    public static Dictionary<int, RogueTournBuffExcel> RogueTournBuffData { get; private set; } = [];
+    public static Dictionary<int, RogueTournFormulaExcel> RogueTournFormulaData { get; private set; } = [];
+    public static Dictionary<int, RogueTournBuffGroupExcel> RogueTournBuffGroupData { get; private set; } = [];
+    public static Dictionary<int, RogueTournHexAvatarBaseTypeExcel> RogueTournHexAvatarBaseTypeData { get; private set; } = [];
+    public static Dictionary<int, RogueTournHandBookEventExcel> RogueTournHandBookEventData { get; private set; } = [];
+    public static Dictionary<int, RogueTournHandbookMiracleExcel> RogueTournHandbookMiracleData { get; private set; } = [];
+    public static Dictionary<int, RogueTournDifficultyCompExcel> RogueTournDifficultyCompData { get; private set; } = [];
+    public static Dictionary<int, RogueTournPermanentTalentExcel> RogueTournPermanentTalentData { get; private set; } = [];
+
+    #endregion
+
     #region Actions
 
     public static void GetFloorInfo(int planeId, int floorId, out FloorInfo outer)

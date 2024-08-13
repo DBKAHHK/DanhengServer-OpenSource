@@ -23,6 +23,7 @@ using EggLink.DanhengServer.GameServer.Game.Mission;
 using EggLink.DanhengServer.GameServer.Game.Quest;
 using EggLink.DanhengServer.GameServer.Game.Raid;
 using EggLink.DanhengServer.GameServer.Game.Rogue;
+using EggLink.DanhengServer.GameServer.Game.RogueTourn;
 using EggLink.DanhengServer.GameServer.Game.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.GameServer.Game.Shop;
@@ -61,6 +62,7 @@ public class PlayerInstance(PlayerData data)
     public FriendManager? FriendManager { get; private set; }
     public RogueManager? RogueManager { get; private set; }
     public ChessRogueManager? ChessRogueManager { get; private set; }
+    public RogueTournManager? RogueTournManager { get; private set; }
     public ShopService? ShopService { get; private set; }
     public ChallengeManager? ChallengeManager { get; private set; }
 
@@ -138,6 +140,7 @@ public class PlayerInstance(PlayerData data)
         RogueManager = new RogueManager(this);
         ShopService = new ShopService(this);
         ChessRogueManager = new ChessRogueManager(this);
+        RogueTournManager = new RogueTournManager(this);
         ChallengeManager = new ChallengeManager(this);
         TaskManager = new TaskManager(this);
         RaidManager = new RaidManager(this);

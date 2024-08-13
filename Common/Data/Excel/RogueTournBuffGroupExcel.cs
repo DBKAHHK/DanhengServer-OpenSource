@@ -3,25 +3,24 @@ using Newtonsoft.Json;
 
 namespace EggLink.DanhengServer.Data.Excel;
 
-[ResourceEntity("RogueBuffGroup.json")]
-public class RogueBuffGroupExcel : ExcelResource
+[ResourceEntity("RogueTournBuffGroup.json")]
+public class RogueTournBuffGroupExcel : ExcelResource
 {
-    [JsonProperty("MNNPAFJEGJC")] public int GroupID { get; set; }
+    public int RogueBuffGroupID { get; set; }
+    public List<int> RogueBuffDrop { get; set; } = [];
 
-    [JsonProperty("KCFPNHGBGIA")] public List<int> BuffTagList { get; set; } = [];
-
-    [JsonIgnore] public List<RogueBuffExcel> BuffList { get; set; } = [];
-
+    [JsonIgnore] public List<RogueTournBuffExcel> BuffList { get; set; } = [];
     [JsonIgnore] public bool IsLoaded { get; set; }
+
 
     public override int GetId()
     {
-        return GroupID;
+        return RogueBuffGroupID;
     }
 
     public override void Loaded()
     {
-        GameData.RogueBuffGroupData.Add(GetId(), this);
+        GameData.RogueTournBuffGroupData.Add(GetId(), this);
         LoadBuff();
     }
 
@@ -34,8 +33,8 @@ public class RogueBuffGroupExcel : ExcelResource
     {
         if (IsLoaded) return;
         var count = 0;
-        foreach (var buffId in BuffTagList)
-            if (GameData.RogueBuffData.FirstOrDefault(x => x.Value.RogueBuffTag == buffId).Value is RogueBuffExcel buff)
+        foreach (var buffId in RogueBuffDrop)
+            if (GameData.RogueTournBuffData.FirstOrDefault(x => x.Value.RogueBuffTag == buffId).Value is { } buff)
             {
                 BuffList.SafeAdd(buff);
                 count++;
@@ -43,12 +42,12 @@ public class RogueBuffGroupExcel : ExcelResource
             else
             {
                 // might is group id
-                if (!GameData.RogueBuffGroupData.TryGetValue(buffId, out var group)) continue;
+                if (!GameData.RogueTournBuffGroupData.TryGetValue(buffId, out var group)) continue;
                 group.LoadBuff();
                 BuffList.SafeAddRange(group.BuffList);
                 count++;
             }
 
-        if (count == BuffTagList.Count) IsLoaded = true;
+        if (count == RogueBuffDrop.Count) IsLoaded = true;
     }
 }
