@@ -21,7 +21,8 @@ public class PacketSyncRogueCommonActionResultScNotify : BasePacket
         SetData(proto);
     }
 
-    public PacketSyncRogueCommonActionResultScNotify(RogueSubModeEnum rogueSubmode, List<RogueCommonActionResult> results,
+    public PacketSyncRogueCommonActionResultScNotify(RogueSubModeEnum rogueSubmode,
+        List<RogueCommonActionResult> results,
         RogueCommonActionResultDisplayType displayType = RogueCommonActionResultDisplayType.None) : base(
         CmdIds.SyncRogueCommonActionResultScNotify)
     {

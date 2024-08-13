@@ -1,5 +1,4 @@
-﻿using EggLink.DanhengServer.Data.Config;
-using EggLink.DanhengServer.Data.Config.Rogue;
+﻿using EggLink.DanhengServer.Data.Config.Rogue;
 
 namespace EggLink.DanhengServer.Data.Excel;
 

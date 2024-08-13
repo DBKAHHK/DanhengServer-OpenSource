@@ -9,7 +9,7 @@ public class RogueBuffSelectMenu(BaseRogueInstance rogue)
     public int HintId { get; set; } = 1;
     public List<RogueBuffExcel> Buffs { get; set; } = [];
     public int RollMaxCount { get; set; } = rogue.BaseRerollCount;
-    public int RollCount { get; set; } = 0;
+    public int RollCount { get; set; }
     public int RollFreeCount { get; set; } = rogue.BaseRerollFreeCount;
     public int RollCost { get; set; } = rogue.CurRerollCost;
     public int QueueAppend { get; set; } = 3;

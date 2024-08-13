@@ -13,7 +13,8 @@ public class EventHandlerRepeatableGamble : RogueEventEffectHandler
         option.Ratio = paramList[1] / 100f;
     }
 
-    public override async ValueTask Handle(BaseRogueInstance rogue, RogueEventInstance? eventInstance, List<int> paramList, RogueEventParam? option)
+    public override async ValueTask Handle(BaseRogueInstance rogue, RogueEventInstance? eventInstance,
+        List<int> paramList, RogueEventParam? option)
     {
         if (option == null) return;
         if (eventInstance == null) return;

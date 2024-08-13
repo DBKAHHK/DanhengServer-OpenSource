@@ -7,8 +7,9 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueCommon;
 
 public class PacketSyncRogueCommonPendingActionScNotify : BasePacket
 {
-    public PacketSyncRogueCommonPendingActionScNotify(RogueActionInstance actionInstance, RogueSubModeEnum rogueSubmode) : base(
-        CmdIds.SyncRogueCommonPendingActionScNotify)
+    public PacketSyncRogueCommonPendingActionScNotify(RogueActionInstance actionInstance, RogueSubModeEnum rogueSubmode)
+        : base(
+            CmdIds.SyncRogueCommonPendingActionScNotify)
     {
         var proto = new SyncRogueCommonPendingActionScNotify
         {

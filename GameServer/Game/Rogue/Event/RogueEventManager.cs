@@ -58,6 +58,7 @@ public class RogueEventManager
             if (EffectHandler.TryGetValue(dialogueEvent.RogueEffectType, out var effectHandler))
                 effectHandler.Init(Rogue, eventInstance, param, option);
         }
+
         await Player.SendPacket(new PacketSyncRogueCommonDialogueDataScNotify(eventInstance));
     }
 
@@ -114,6 +115,7 @@ public class RogueEventManager
             await Player.SendPacket(new PacketSelectRogueCommonDialogueOptionScRsp());
             return;
         }
+
         await Player.SendPacket(new PacketSyncRogueCommonDialogueDataScNotify(eventInstance));
 
         var param = dialogueEvent.RogueEffectParamList;

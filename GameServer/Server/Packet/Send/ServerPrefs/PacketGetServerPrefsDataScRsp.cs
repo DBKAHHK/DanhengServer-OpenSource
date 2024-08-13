@@ -11,7 +11,7 @@ public class PacketGetServerPrefsDataScRsp : BasePacket
     {
         var proto = new GetServerPrefsDataScRsp
         {
-            ServerPrefs = info?.ToProto() ?? new Proto.ServerPrefs()
+            ServerPrefs = info?.ToProto() ?? new Proto.ServerPrefs
             {
                 Data = ByteString.Empty,
                 ServerPrefsId = id

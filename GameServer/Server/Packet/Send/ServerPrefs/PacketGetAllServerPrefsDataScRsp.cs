@@ -10,10 +10,7 @@ public class PacketGetAllServerPrefsDataScRsp : BasePacket
     {
         var proto = new GetAllServerPrefsDataScRsp();
 
-        foreach (var info in infos)
-        {
-            proto.CFHMFEBMJIK.Add(info.ToProto());
-        }
+        foreach (var info in infos) proto.CFHMFEBMJIK.Add(info.ToProto());
 
         SetData(proto);
     }

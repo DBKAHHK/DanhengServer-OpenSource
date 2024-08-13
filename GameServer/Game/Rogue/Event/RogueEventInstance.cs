@@ -90,7 +90,7 @@ public class RogueEventParam
             OptionId = (uint)OptionId,
             DisplayValue = new RogueCommonDialogueOptionDisplayInfo
             {
-                DisplayFloatValue = Ratio,
+                DisplayFloatValue = Ratio
             },
             OptionResultInfo = { Results.Select(x => x.ToProto()) },
             Confirm = OverrideSelected ?? IsSelected
@@ -110,11 +110,12 @@ public class RogueEventParam
 public class RogueEventResultInfo
 {
     public int BattleEventId { get; set; }
+
     public RogueCommonDialogueOptionResultInfo ToProto()
     {
-        return new RogueCommonDialogueOptionResultInfo()
+        return new RogueCommonDialogueOptionResultInfo
         {
-            BattleResultInfo = new RogueCommonDialogueOptionBattleResultInfo()
+            BattleResultInfo = new RogueCommonDialogueOptionBattleResultInfo
             {
                 BattleEventId = (uint)BattleEventId
             }

@@ -8,15 +8,13 @@ public class RogueNPCConfigInfo
 {
     [JsonConverter(typeof(StringEnumConverter))]
     public RogueDialogueTypeEnum DialogueType { get; set; }
+
     public List<RogueNPCDialogueConfigInfo> DialogueList { get; set; } = [];
 
     public void Loaded()
     {
         if (DialogueList.Count == 0) return;
 
-        foreach (var info in DialogueList)
-        {
-            info.Loaded();
-        }
+        foreach (var info in DialogueList) info.Loaded();
     }
 }

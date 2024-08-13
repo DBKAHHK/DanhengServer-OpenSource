@@ -13,7 +13,6 @@ public class PacketMonthCardRewardNotify : BasePacket
             Reward = new ItemList
             {
                 ItemList_ = { items.Select(x => x.ToProto()) }
-
             }
         };
 

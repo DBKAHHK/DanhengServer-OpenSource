@@ -288,7 +288,9 @@ public class ChessRogueInstance : BaseRogueInstance
 
         LayerMap = GameConstants.AllowedChessRogueEntranceId.RandomElement();
 
-        CurBoardExcel = RogueSubMode == RogueSubModeEnum.ChessRogue ? GameData.RogueSwarmChessBoardData[level].RandomElement() : GameData.RogueNousChessBoardData[level].RandomElement();
+        CurBoardExcel = RogueSubMode == RogueSubModeEnum.ChessRogue
+            ? GameData.RogueSwarmChessBoardData[level].RandomElement()
+            : GameData.RogueNousChessBoardData[level].RandomElement();
 
         RogueCells.Clear();
         CurCell = null;
@@ -455,7 +457,9 @@ public class ChessRogueInstance : BaseRogueInstance
             RogueDifficultyInfo = ToDifficultyInfo(),
             VirtualItemInfo = ToVirtualItemInfo(),
             LevelInfo = ToLevelInfo(),
-            PendingAction = RogueActions.Count > 0 ? RogueActions.First().Value.ToProto() : new RogueCommonPendingAction()
+            PendingAction = RogueActions.Count > 0
+                ? RogueActions.First().Value.ToProto()
+                : new RogueCommonPendingAction()
         };
 
         proto.RogueCurrentGameInfo.AddRange(ToGameInfo());

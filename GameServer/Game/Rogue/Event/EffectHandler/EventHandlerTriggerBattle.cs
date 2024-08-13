@@ -1,6 +1,6 @@
-﻿namespace EggLink.DanhengServer.GameServer.Game.Rogue.Event.EffectHandler;
+﻿using EggLink.DanhengServer.Enums.Rogue;
 
-using EggLink.DanhengServer.Enums.Rogue;
+namespace EggLink.DanhengServer.GameServer.Game.Rogue.Event.EffectHandler;
 
 [RogueEvent(DialogueEventTypeEnum.TriggerBattle)]
 public class EventHandlerTriggerBattle : RogueEventEffectHandler

@@ -504,7 +504,6 @@ public class PlayerInstance(PlayerData data)
         if (prop.PropInfo.IsLevelBtn) await prop.SetState(PropStateEnum.Closed);
 
         return prop;
-
     }
 
     public async ValueTask<bool> EnterScene(int entryId, int teleportId, bool sendPacket, int storyLineId = 0,

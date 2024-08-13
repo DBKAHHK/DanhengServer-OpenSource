@@ -23,13 +23,11 @@ public class PacketSelectRogueCommonDialogueOptionScRsp : BasePacket
         }
 
         foreach (var option in rogueEvent.Options)
-        {
             if (option.OverrideSelected ?? option.IsSelected)
             {
                 proto.EventHasEffect = true;
                 break;
             }
-        }
 
         SetData(proto);
     }
