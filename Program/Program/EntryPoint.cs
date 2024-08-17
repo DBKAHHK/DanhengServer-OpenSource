@@ -203,7 +203,7 @@ public class EntryPoint
 
         HandlerManager.Init();
 
-        WebProgram.Main([], GetConfig().HttpServer.PublicPort, GetConfig().HttpServer.GetDisplayAddress());
+        WebProgram.Main([], GetConfig().HttpServer.Port, GetConfig().HttpServer.GetBindDisplayAddress());
         Logger.Info(I18nManager.Translate("Server.ServerInfo.ServerRunning", I18nManager.Translate("Word.Dispatch"),
             GetConfig().HttpServer.GetDisplayAddress()));
 

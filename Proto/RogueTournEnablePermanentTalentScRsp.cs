@@ -25,14 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CipSb2d1ZVRvdXJuRW5hYmxlUGVybWFuZW50VGFsZW50U2NSc3AucHJvdG8a",
-            "HEluc3BpcmF0aW9uQ2lyY3VpdEluZm8ucHJvdG8ibQokUm9ndWVUb3VybkVu",
-            "YWJsZVBlcm1hbmVudFRhbGVudFNjUnNwEjQKE2luc3BpcmF0aW9uX2NpcmN1",
-            "aXQYBSABKAsyFy5JbnNwaXJhdGlvbkNpcmN1aXRJbmZvEg8KB3JldGNvZGUY",
-            "DCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "I1JvZ3VlVG91cm5QZXJtYW5lbnRUYWxlbnRJbmZvLnByb3RvIm8KJFJvZ3Vl",
+            "VG91cm5FbmFibGVQZXJtYW5lbnRUYWxlbnRTY1JzcBI2Cg5wZXJtYW5lbnRf",
+            "aW5mbxgFIAEoCzIeLlJvZ3VlVG91cm5QZXJtYW5lbnRUYWxlbnRJbmZvEg8K",
+            "B3JldGNvZGUYDCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.InspirationCircuitInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTournPermanentTalentInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournEnablePermanentTalentScRsp), global::EggLink.DanhengServer.Proto.RogueTournEnablePermanentTalentScRsp.Parser, new[]{ "InspirationCircuit", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournEnablePermanentTalentScRsp), global::EggLink.DanhengServer.Proto.RogueTournEnablePermanentTalentScRsp.Parser, new[]{ "PermanentInfo", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournEnablePermanentTalentScRsp(RogueTournEnablePermanentTalentScRsp other) : this() {
-      inspirationCircuit_ = other.inspirationCircuit_ != null ? other.inspirationCircuit_.Clone() : null;
+      permanentInfo_ = other.permanentInfo_ != null ? other.permanentInfo_.Clone() : null;
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -85,15 +86,15 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournEnablePermanentTalentScRsp(this);
     }
 
-    /// <summary>Field number for the "inspiration_circuit" field.</summary>
-    public const int InspirationCircuitFieldNumber = 5;
-    private global::EggLink.DanhengServer.Proto.InspirationCircuitInfo inspirationCircuit_;
+    /// <summary>Field number for the "permanent_info" field.</summary>
+    public const int PermanentInfoFieldNumber = 5;
+    private global::EggLink.DanhengServer.Proto.RogueTournPermanentTalentInfo permanentInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.InspirationCircuitInfo InspirationCircuit {
-      get { return inspirationCircuit_; }
+    public global::EggLink.DanhengServer.Proto.RogueTournPermanentTalentInfo PermanentInfo {
+      get { return permanentInfo_; }
       set {
-        inspirationCircuit_ = value;
+        permanentInfo_ = value;
       }
     }
 
@@ -124,7 +125,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(InspirationCircuit, other.InspirationCircuit)) return false;
+      if (!object.Equals(PermanentInfo, other.PermanentInfo)) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -133,7 +134,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (inspirationCircuit_ != null) hash ^= InspirationCircuit.GetHashCode();
+      if (permanentInfo_ != null) hash ^= PermanentInfo.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -153,9 +154,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (inspirationCircuit_ != null) {
+      if (permanentInfo_ != null) {
         output.WriteRawTag(42);
-        output.WriteMessage(InspirationCircuit);
+        output.WriteMessage(PermanentInfo);
       }
       if (Retcode != 0) {
         output.WriteRawTag(96);
@@ -171,9 +172,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (inspirationCircuit_ != null) {
+      if (permanentInfo_ != null) {
         output.WriteRawTag(42);
-        output.WriteMessage(InspirationCircuit);
+        output.WriteMessage(PermanentInfo);
       }
       if (Retcode != 0) {
         output.WriteRawTag(96);
@@ -189,8 +190,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (inspirationCircuit_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InspirationCircuit);
+      if (permanentInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PermanentInfo);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
@@ -207,11 +208,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.inspirationCircuit_ != null) {
-        if (inspirationCircuit_ == null) {
-          InspirationCircuit = new global::EggLink.DanhengServer.Proto.InspirationCircuitInfo();
+      if (other.permanentInfo_ != null) {
+        if (permanentInfo_ == null) {
+          PermanentInfo = new global::EggLink.DanhengServer.Proto.RogueTournPermanentTalentInfo();
         }
-        InspirationCircuit.MergeFrom(other.InspirationCircuit);
+        PermanentInfo.MergeFrom(other.PermanentInfo);
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
@@ -232,10 +233,10 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 42: {
-            if (inspirationCircuit_ == null) {
-              InspirationCircuit = new global::EggLink.DanhengServer.Proto.InspirationCircuitInfo();
+            if (permanentInfo_ == null) {
+              PermanentInfo = new global::EggLink.DanhengServer.Proto.RogueTournPermanentTalentInfo();
             }
-            input.ReadMessage(InspirationCircuit);
+            input.ReadMessage(PermanentInfo);
             break;
           }
           case 96: {
@@ -258,10 +259,10 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 42: {
-            if (inspirationCircuit_ == null) {
-              InspirationCircuit = new global::EggLink.DanhengServer.Proto.InspirationCircuitInfo();
+            if (permanentInfo_ == null) {
+              PermanentInfo = new global::EggLink.DanhengServer.Proto.RogueTournPermanentTalentInfo();
             }
-            input.ReadMessage(InspirationCircuit);
+            input.ReadMessage(PermanentInfo);
             break;
           }
           case 96: {

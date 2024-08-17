@@ -25,9 +25,9 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtDaGVzc1JvZ3VlR2l2ZVVwU2NSc3AucHJvdG8aGkNoZXNzUm9ndWVQbGF5",
-            "ZXJJbmZvLnByb3RvGhdDaGVzc1JvZ3VlR2V0SW5mby5wcm90bxoYQ2hlc3NS",
-            "b2d1ZUFlb25JbmZvLnByb3RvGhlDaGVzc1JvZ3VlUXVlcnlJbmZvLnByb3Rv",
-            "GhpDaGVzc1JvZ3VlRmluaXNoSW5mby5wcm90byKEAgoVQ2hlc3NSb2d1ZUdp",
+            "ZXJJbmZvLnByb3RvGhdDaGVzc1JvZ3VlR2V0SW5mby5wcm90bxoZQ2hlc3NS",
+            "b2d1ZVF1ZXJ5SW5mby5wcm90bxoaQ2hlc3NSb2d1ZUZpbmlzaEluZm8ucHJv",
+            "dG8aGENoZXNzUm9ndWVBZW9uSW5mby5wcm90byKEAgoVQ2hlc3NSb2d1ZUdp",
             "dmVVcFNjUnNwEioKC2ZpbmlzaF9pbmZvGAUgASgLMhUuQ2hlc3NSb2d1ZUZp",
             "bmlzaEluZm8SKgoLcGxheWVyX2luZm8YByABKAsyFS5DaGVzc1JvZ3VlUGxh",
             "eWVySW5mbxIqCg5yb2d1ZV9nZXRfaW5mbxgJIAEoCzISLkNoZXNzUm9ndWVH",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "SW5mbxIPCgdyZXRjb2RlGAsgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRoguePlayerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueGetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueAeonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueQueryInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueFinishInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRoguePlayerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueGetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueQueryInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueFinishInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueAeonInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueGiveUpScRsp), global::EggLink.DanhengServer.Proto.ChessRogueGiveUpScRsp.Parser, new[]{ "FinishInfo", "PlayerInfo", "RogueGetInfo", "RogueAeonInfo", "QueryInfo", "Retcode" }, null, null, null, null)
           }));

@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static GetMuseumInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhHZXRNdXNldW1JbmZvU2NSc3AucHJvdG8aEUtQTlBPQUFIREFDLnByb3Rv",
-            "GhFJUE1JR0JHTFBOSi5wcm90bxoRT1BPSERISERPQUUucHJvdG8aEU1OTU1F",
+            "ChhHZXRNdXNldW1JbmZvU2NSc3AucHJvdG8aEU9QT0hESEhET0FFLnByb3Rv",
+            "GhFJUE1JR0JHTFBOSi5wcm90bxoRS1BOUE9BQUhEQUMucHJvdG8aEU1OTU1F",
             "TEFJQkpLLnByb3RvIuACChJHZXRNdXNldW1JbmZvU2NSc3ASIQoLTUVMTklM",
             "TVBPQkEYBCADKAsyDC5NTk1NRUxBSUJKSxIhCgtNREhLRlBEQ0ZHUBgNIAEo",
             "CzIMLktQTlBPQUFIREFDEg8KB3JldGNvZGUYAiABKA0SEwoLQ0NLQkJPRU9L",
@@ -37,7 +37,7 @@ namespace EggLink.DanhengServer.Proto {
             "TRgMIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KPNPOAAHDACReflection.Descriptor, global::EggLink.DanhengServer.Proto.IPMIGBGLPNJReflection.Descriptor, global::EggLink.DanhengServer.Proto.OPOHDHHDOAEReflection.Descriptor, global::EggLink.DanhengServer.Proto.MNMMELAIBJKReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OPOHDHHDOAEReflection.Descriptor, global::EggLink.DanhengServer.Proto.IPMIGBGLPNJReflection.Descriptor, global::EggLink.DanhengServer.Proto.KPNPOAAHDACReflection.Descriptor, global::EggLink.DanhengServer.Proto.MNMMELAIBJKReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMuseumInfoScRsp), global::EggLink.DanhengServer.Proto.GetMuseumInfoScRsp.Parser, new[]{ "MELNILMPOBA", "MDHKFPDCFGP", "Retcode", "CCKBBOEOKGO", "Exp", "ADOBEODJBLJ", "Level", "EBNNBEEGJFN", "NBBKPIJEJPP", "PFGENNDADFA", "ODNOFEPBJAG", "GLGFCBDLOOI", "BHIHOPLDPGF", "JOANGDLCHKM" }, null, null, null, null)
           }));

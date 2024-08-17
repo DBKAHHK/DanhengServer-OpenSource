@@ -24,11 +24,11 @@ namespace EggLink.DanhengServer.Proto {
     static SwordTrainingGameInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtTd29yZFRyYWluaW5nR2FtZUluZm8ucHJvdG8aEUtDRk5PQU1PTEZDLnBy",
-            "b3RvGhxTd29yZFRyYWluaW5nUG93ZXJJbmZvLnByb3RvGhFLS0RDSktGUExN",
-            "Ri5wcm90bxoRRUNJR05FR0VBSUgucHJvdG8aHFN3b3JkVHJhaW5pbmdTa2ls",
-            "bEluZm8ucHJvdG8aHVN3b3JkVHJhaW5pbmdBY3Rpb25JbmZvLnByb3RvGhFE",
-            "TEJBTUdGSUFDTi5wcm90bxoRS0tJUElMQURJR0IucHJvdG8ikgMKFVN3b3Jk",
+            "ChtTd29yZFRyYWluaW5nR2FtZUluZm8ucHJvdG8aHFN3b3JkVHJhaW5pbmdT",
+            "a2lsbEluZm8ucHJvdG8aHFN3b3JkVHJhaW5pbmdQb3dlckluZm8ucHJvdG8a",
+            "EUtLRENKS0ZQTE1GLnByb3RvGhFLS0lQSUxBRElHQi5wcm90bxoRS0NGTk9B",
+            "TU9MRkMucHJvdG8aHVN3b3JkVHJhaW5pbmdBY3Rpb25JbmZvLnByb3RvGhFE",
+            "TEJBTUdGSUFDTi5wcm90bxoRRUNJR05FR0VBSUgucHJvdG8ikgMKFVN3b3Jk",
             "VHJhaW5pbmdHYW1lSW5mbxIrCgpza2lsbF9pbmZvGA8gASgLMhcuU3dvcmRU",
             "cmFpbmluZ1NraWxsSW5mbxIhCgtNQ0tJRUpPREtHRRgDIAEoCzIMLkVDSUdO",
             "RUdFQUlIEisKCnBvd2VyX2luZm8YDCABKAsyFy5Td29yZFRyYWluaW5nUG93",
@@ -40,7 +40,7 @@ namespace EggLink.DanhengServer.Proto {
             "bmZvGAsgASgLMhguU3dvcmRUcmFpbmluZ0FjdGlvbkluZm9CHqoCG0VnZ0xp",
             "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KCFNOAMOLFCReflection.Descriptor, global::EggLink.DanhengServer.Proto.SwordTrainingPowerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KKDCJKFPLMFReflection.Descriptor, global::EggLink.DanhengServer.Proto.ECIGNEGEAIHReflection.Descriptor, global::EggLink.DanhengServer.Proto.SwordTrainingSkillInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SwordTrainingActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DLBAMGFIACNReflection.Descriptor, global::EggLink.DanhengServer.Proto.KKIPILADIGBReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SwordTrainingSkillInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SwordTrainingPowerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KKDCJKFPLMFReflection.Descriptor, global::EggLink.DanhengServer.Proto.KKIPILADIGBReflection.Descriptor, global::EggLink.DanhengServer.Proto.KCFNOAMOLFCReflection.Descriptor, global::EggLink.DanhengServer.Proto.SwordTrainingActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DLBAMGFIACNReflection.Descriptor, global::EggLink.DanhengServer.Proto.ECIGNEGEAIHReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SwordTrainingGameInfo), global::EggLink.DanhengServer.Proto.SwordTrainingGameInfo.Parser, new[]{ "SkillInfo", "MCKIEJODKGE", "PowerInfo", "IIHDBEFHEOC", "INJNGCMDBGL", "PendingAction", "SkillPower", "OptionResultInfo", "DPHNBKLJEHM", "SwordTrainingActionInfo" }, null, null, null, null)
           }));

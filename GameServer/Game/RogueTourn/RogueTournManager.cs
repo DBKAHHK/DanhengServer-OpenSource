@@ -15,7 +15,7 @@ public class RogueTournManager(PlayerInstance player) : BasePlayerManager(player
         var proto = new RogueTournInfo
         {
             ExtraScoreInfo = ToExtraScoreProto(),
-            InspirationCircuit = ToInspirationCircuitProto(),
+            PermanentInfo = ToPermanentTalentProto(),
             RogueSeasonInfo = ToSeasonProto(),
             RogueTournAreaInfo = { ToAreaProtoList() },
             RogueTournDifficultyInfo = { ToDifficultyProtoList() },
@@ -39,9 +39,9 @@ public class RogueTournManager(PlayerInstance player) : BasePlayerManager(player
         };
     }
 
-    public InspirationCircuitInfo ToInspirationCircuitProto()
+    public RogueTournPermanentTalentInfo ToPermanentTalentProto()
     {
-        return new InspirationCircuitInfo
+        return new RogueTournPermanentTalentInfo
         {
             TalentInfoList = new RogueTalentInfoList
             {
@@ -121,7 +121,7 @@ public class RogueTournManager(PlayerInstance player) : BasePlayerManager(player
 
         foreach (var eventId in GameData.RogueTournHandBookEventData.Keys)
         {
-            proto.TakeHandbookRewardList.Add((uint)eventId);  // should be HandbookEventList
+            proto.HandbookEventList.Add((uint)eventId);
         }
 
         return proto;

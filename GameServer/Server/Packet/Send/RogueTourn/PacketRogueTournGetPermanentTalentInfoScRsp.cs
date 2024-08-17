@@ -11,7 +11,7 @@ public class PacketRogueTournGetPermanentTalentInfoScRsp : BasePacket
     {
         var proto = new RogueTournGetPermanentTalentInfoScRsp
         {
-            InspirationCircuit = player.RogueTournManager!.ToInspirationCircuitProto()
+            PermanentInfo = player.RogueTournManager!.ToPermanentTalentProto()
         };
 
         SetData(proto);
