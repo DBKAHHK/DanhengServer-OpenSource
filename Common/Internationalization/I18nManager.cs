@@ -31,8 +31,9 @@ public static class I18nManager
     {
         var value = GetNestedPropertyValue(Language, key);
 
-        foreach (var arg in args) value = value.Replace("{" + args.ToList().IndexOf(arg) + "}", arg);
-        return value;
+        var index = 0;
+
+        return args.Aggregate(value, (current, arg) => current.Replace("{" + index++ + "}", arg));
     }
 
 

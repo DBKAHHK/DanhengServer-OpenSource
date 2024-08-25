@@ -23,6 +23,9 @@ public static class ConfigManager
         using var reader = new StreamReader(file.OpenRead());
         var json = reader.ReadToEnd();
         Config = JsonConvert.DeserializeObject<ConfigContainer>(json)!;
+        // save it again to make sure all fields are present
+        reader.Close();
+        SaveConfig();
     }
 
     public static void SaveConfig()
