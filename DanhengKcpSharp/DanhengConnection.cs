@@ -13,7 +13,7 @@ public class DanhengConnection
     public const int HANDSHAKE_SIZE = 20;
     public static readonly List<int> BannedPackets = [];
     private static readonly Logger Logger = new("GameServer");
-    public static readonly Dictionary<string, string> LogMap = [];
+    public static readonly Dictionary<int, string> LogMap = [];
 
     public static readonly List<int> IgnoreLog =
     [
@@ -73,27 +73,25 @@ public class DanhengConnection
             if (IgnoreLog.Contains(opcode)) return;
             var typ = AppDomain.CurrentDomain.GetAssemblies()
                 .SingleOrDefault(assembly => assembly.GetName().Name == "DanhengProto")!.GetTypes()
-                .First(t => t.Name == $"{LogMap[opcode.ToString()]}"); //get the type using the packet name
+                .First(t => t.Name == $"{LogMap[opcode]}"); //get the type using the packet name
             var descriptor =
                 typ.GetProperty("Descriptor", BindingFlags.Public | BindingFlags.Static)?.GetValue(
                     null, null) as MessageDescriptor; // get the static property Descriptor
             var packet = descriptor?.Parser.ParseFrom(payload);
             var formatter = JsonFormatter.Default;
             var asJson = formatter.Format(packet);
-            var output = $"{sendOrRecv}: {LogMap[opcode.ToString()]}({opcode})\r\n{asJson}";
+            var output = $"{sendOrRecv}: {LogMap[opcode]}({opcode})\r\n{asJson}";
 #if DEBUG
             Logger.Debug(output);
 #endif
-            if (DebugFile != "" && ConfigManager.Config.ServerOption.SavePersonalDebugFile)
-            {
-                var sw = GetWriter();
-                sw.WriteLine($"[{DateTime.Now:HH:mm:ss}] [GameServer] [DEBUG] " + output);
-                sw.Flush();
-            }
+            if (DebugFile == "" || !ConfigManager.Config.ServerOption.SavePersonalDebugFile) return;
+            var sw = GetWriter();
+            sw.WriteLine($"[{DateTime.Now:HH:mm:ss}] [GameServer] [DEBUG] " + output);
+            sw.Flush();
         }
         catch
         {
-            var output = $"{sendOrRecv}: {LogMap.GetValueOrDefault(opcode.ToString(), "UnknownPacket")}({opcode})";
+            var output = $"{sendOrRecv}: {LogMap.GetValueOrDefault(opcode, "UnknownPacket")}({opcode})";
 #if DEBUG
             Logger.Debug(output);
 #endif

@@ -142,12 +142,25 @@ public class CommandScene : ICommand
         }
 
         var player = arg.Target!.Player!;
-        if (player.SceneData?.ScenePropData.TryGetValue(floorId, out var _) == true)
+        if (player.SceneData?.ScenePropData.TryGetValue(floorId, out _) == true)
             player.SceneData.ScenePropData[floorId] = [];
 
-        if (player.SceneData?.FloorSavedData.TryGetValue(floorId, out var _) == true)
+        if (player.SceneData?.FloorSavedData.TryGetValue(floorId, out _) == true)
             player.SceneData.FloorSavedData[floorId] = [];
 
         await arg.SendMsg(I18nManager.Translate("Game.Command.Scene.SceneReset", floorId.ToString()));
+    }
+
+    [CommandMethod("0 cur")]
+    public async ValueTask GetCurrentScene(CommandArg arg)
+    {
+        if (arg.Target == null)
+        {
+            await arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
+            return;
+        }
+
+        var player = arg.Target!.Player!;
+        await arg.SendMsg(I18nManager.Translate("Game.Command.Scene.CurrentScene", player.Data.EntryId.ToString(), player.Data.PlaneId.ToString(), player.Data.FloorId.ToString()));
     }
 }

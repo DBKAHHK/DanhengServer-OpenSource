@@ -21,10 +21,8 @@ public class SceneEntityLoader(SceneInstance scene)
         if (dimInfo == null) return;
         LoadGroups.AddRange(dimInfo.GroupIDList);
 
-        foreach (var group in Scene?.FloorInfo?.Groups.Values!) // Sanity check in SceneInstance
+        foreach (var group in from @group in Scene.FloorInfo?.Groups.Values! where @group.LoadSide != GroupLoadSideEnum.Client where !@group.GroupName.Contains("TrainVisitor") select @group)
         {
-            if (group.LoadSide == GroupLoadSideEnum.Client) continue;
-            if (group.GroupName.Contains("TrainVisitor")) continue;
             await LoadGroup(group);
         }
 
@@ -35,31 +33,25 @@ public class SceneEntityLoader(SceneInstance scene)
     {
         var refreshed = false;
         var oldGroupId = new List<int>();
-        foreach (var entity in Scene.Entities.Values)
-            if (!oldGroupId.Contains(entity.GroupID))
-                oldGroupId.Add(entity.GroupID);
+        foreach (var entity in Scene.Entities.Values.Where(entity => !oldGroupId.Contains(entity.GroupID)))
+            oldGroupId.Add(entity.GroupID);
 
         var removeList = new List<IGameEntity>();
         var addList = new List<IGameEntity>();
 
-        foreach (var group in Scene.FloorInfo!.Groups.Values)
+        foreach (var group in Scene.FloorInfo!.Groups.Values.Where(group => group.LoadSide != GroupLoadSideEnum.Client).Where(group => !group.GroupName.Contains("TrainVisitor")))
         {
-            if (group.LoadSide == GroupLoadSideEnum.Client) continue;
-
-            if (group.GroupName.Contains("TrainVisitor")) continue;
-
             if (oldGroupId.Contains(group.Id)) // check if it should be unloaded
             {
                 if (group.ForceUnloadCondition.IsTrue(Scene.Player.MissionManager!.Data, false) ||
                     group.UnloadCondition.IsTrue(Scene.Player.MissionManager!.Data, false))
                 {
-                    foreach (var entity in Scene.Entities.Values)
-                        if (entity.GroupID == group.Id)
-                        {
-                            await Scene.RemoveEntity(entity, false);
-                            removeList.Add(entity);
-                            refreshed = true;
-                        }
+                    foreach (var entity in Scene.Entities.Values.Where(entity => entity.GroupID == group.Id))
+                    {
+                        await Scene.RemoveEntity(entity, false);
+                        removeList.Add(entity);
+                        refreshed = true;
+                    }
 
                     Scene.Groups.Remove(group.Id);
                 }
@@ -67,13 +59,12 @@ public class SceneEntityLoader(SceneInstance scene)
                          Scene.Player.MissionManager!.GetMainMissionStatus(group.OwnerMainMissionID) !=
                          MissionPhaseEnum.Accept)
                 {
-                    foreach (var entity in Scene.Entities.Values)
-                        if (entity.GroupID == group.Id)
-                        {
-                            await Scene.RemoveEntity(entity, false);
-                            removeList.Add(entity);
-                            refreshed = true;
-                        }
+                    foreach (var entity in Scene.Entities.Values.Where(entity => entity.GroupID == group.Id))
+                    {
+                        await Scene.RemoveEntity(entity, false);
+                        removeList.Add(entity);
+                        refreshed = true;
+                    }
 
                     Scene.Groups.Remove(group.Id);
                 }

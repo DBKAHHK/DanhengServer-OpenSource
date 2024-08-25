@@ -115,10 +115,6 @@ public class Connection : DanhengConnection
         {
             Logger.Error(e.Message, e);
         }
-        finally
-        {
-            await ms.DisposeAsync();
-        }
     }
 
     private async Task<bool> HandlePacket(ushort opcode, byte[] header, byte[] payload)
@@ -149,6 +145,17 @@ public class Connection : DanhengConnection
             await handler.OnHandle(this, header, payload);
             return true;
         }
+
+        // No handler found
+        // get the packet name
+        var packetName = LogMap.GetValueOrDefault(opcode);
+        if (packetName == null) return false;
+
+        var respName = packetName.Replace("Cs", "Sc").Replace("Req", "Rsp");  // Get the response packet name
+        var respOpcode = LogMap.FirstOrDefault(x => x.Value == respName).Key;  // Get the response opcode
+
+        // Send Rsp
+        await SendPacket(respOpcode);
 
         return false;
     }

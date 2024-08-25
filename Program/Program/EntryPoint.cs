@@ -45,11 +45,9 @@ public class EntryPoint
         while (true)
         {
             file = new FileInfo(GetConfig().Path.LogPath + $"/{DateTime.Now:yyyy-MM-dd}-{++counter}.log");
-            if (!file.Exists && file.Directory != null)
-            {
-                file.Directory.Create();
-                break;
-            }
+            if (file is not { Exists: false, Directory: not null }) continue;
+            file.Directory.Create();
+            break;
         }
 
         Logger.SetLogFile(file);
@@ -160,13 +158,14 @@ public class EntryPoint
                 {
                     if ((con as Connection)!.Player!.RogueManager?.GetRogueInstance() != null)
                     {
-                        status = PlayerStatusEnum.Rogue;
-                        if ((con as Connection)!.Player!.ChessRogueManager?.RogueInstance?.AreaExcel.RogueVersionId ==
-                            RogueSubModeEnum.ChessRogue)
-                            status = PlayerStatusEnum.ChessRogueNous;
-                        else if ((con as Connection)!.Player!.ChessRogueManager?.RogueInstance?.AreaExcel
-                                 .RogueVersionId == RogueSubModeEnum.ChessRogueNous)
-                            status = PlayerStatusEnum.ChessRogue;
+                        status =
+                            (con as Connection)!.Player!.ChessRogueManager?.RogueInstance?.AreaExcel
+                                .RogueVersionId switch
+                                {
+                                    RogueSubModeEnum.ChessRogue => PlayerStatusEnum.ChessRogueNous,
+                                    RogueSubModeEnum.ChessRogueNous => PlayerStatusEnum.ChessRogue,
+                                    _ => PlayerStatusEnum.Rogue
+                                };
                     }
                     else if ((con as Connection)!.Player!.ChallengeManager?.ChallengeInstance != null)
                     {
@@ -243,7 +242,7 @@ public class EntryPoint
         {
             var name = opcode.Name;
             var value = (int)opcode.GetValue(null)!;
-            DanhengConnection.LogMap.Add(value.ToString(), name);
+            DanhengConnection.LogMap.Add(value, name);
         }
     }
 }
