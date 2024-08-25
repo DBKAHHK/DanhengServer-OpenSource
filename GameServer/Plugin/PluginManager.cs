@@ -2,6 +2,7 @@
 using EggLink.DanhengServer.GameServer.Plugin.Constructor;
 using EggLink.DanhengServer.Internationalization;
 using EggLink.DanhengServer.Util;
+using McMaster.NETCore.Plugins;
 
 namespace EggLink.DanhengServer.GameServer.Plugin;
 
@@ -37,9 +38,7 @@ public class PluginManager
             var assemblyName = new AssemblyName(args.Name).Name + ".dll";
             var assemblyPath = Path.Combine(ConfigManager.Config.Path.PluginPath, assemblyName);
 
-            if (File.Exists(assemblyPath)) return Assembly.LoadFrom(assemblyPath);
-
-            return null;
+            return File.Exists(assemblyPath) ? Assembly.LoadFrom(assemblyPath) : null;
         };
         foreach (var plugin in plugins)
         {

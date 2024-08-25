@@ -20,6 +20,8 @@
     <ProjectReference Include="..\Common\Common.csproj" />
     <ProjectReference Include="..\DanhengKcpSharp\DanhengKcpSharp.csproj" />
     <ProjectReference Include="..\Proto\Proto.csproj" />
+    <PackageReference Include="McMaster.NETCore.Plugins" Version="1.4.0" />
+    <PackageReference Include="McMaster.NETCore.Plugins.Mvc" Version="1.4.0" />
   </ItemGroup>
 
   <ItemGroup>
