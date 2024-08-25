@@ -151,8 +151,8 @@ public class Connection : DanhengConnection
         var packetName = LogMap.GetValueOrDefault(opcode);
         if (packetName == null) return false;
 
-        var respName = packetName.Replace("Cs", "Sc").Replace("Req", "Rsp");  // Get the response packet name
-        var respOpcode = LogMap.FirstOrDefault(x => x.Value == respName).Key;  // Get the response opcode
+        var respName = packetName.Replace("Cs", "Sc").Replace("Req", "Rsp"); // Get the response packet name
+        var respOpcode = LogMap.FirstOrDefault(x => x.Value == respName).Key; // Get the response opcode
 
         // Send Rsp
         await SendPacket(respOpcode);

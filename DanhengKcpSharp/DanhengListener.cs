@@ -43,7 +43,7 @@ public class DanhengListener
         if (UDPListener == null) return;
         KCPTransport = KcpSocketTransport.CreateMultiplexConnection(UDPClient, 1400);
         KCPTransport.Start();
-        Logger.Info(I18nManager.Translate("Server.ServerInfo.ServerRunning", I18nManager.Translate("Word.Game"),
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.ServerRunning", I18NManager.Translate("Word.Game"),
             ConfigManager.Config.GameServer.GetDisplayAddress()));
     }
 

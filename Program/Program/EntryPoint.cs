@@ -29,12 +29,12 @@ public class EntryPoint
     {
         AppDomain.CurrentDomain.ProcessExit += (_, _) =>
         {
-            Logger.Info(I18nManager.Translate("Server.ServerInfo.Shutdown"));
+            Logger.Info(I18NManager.Translate("Server.ServerInfo.Shutdown"));
             PerformCleanup();
         };
         Console.CancelKeyPress += (_, eventArgs) =>
         {
-            Logger.Info(I18nManager.Translate("Server.ServerInfo.CancelKeyPressed"));
+            Logger.Info(I18NManager.Translate("Server.ServerInfo.CancelKeyPressed"));
             eventArgs.Cancel = true;
             Environment.Exit(0);
         };
@@ -52,10 +52,10 @@ public class EntryPoint
 
         Logger.SetLogFile(file);
         // Starting the server
-        Logger.Info(I18nManager.Translate("Server.ServerInfo.StartingServer"));
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.StartingServer"));
 
         // Load the config
-        Logger.Info(I18nManager.Translate("Server.ServerInfo.LoadingItem", I18nManager.Translate("Word.Config")));
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadingItem", I18NManager.Translate("Word.Config")));
         try
         {
             ConfigManager.LoadConfig();
@@ -63,27 +63,27 @@ public class EntryPoint
         catch (Exception e)
         {
             Logger.Error(
-                I18nManager.Translate("Server.ServerInfo.FailedToLoadItem", I18nManager.Translate("Word.Config")), e);
+                I18NManager.Translate("Server.ServerInfo.FailedToLoadItem", I18NManager.Translate("Word.Config")), e);
             Console.ReadLine();
             return;
         }
 
         // Load the language
-        Logger.Info(I18nManager.Translate("Server.ServerInfo.LoadingItem", I18nManager.Translate("Word.Language")));
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadingItem", I18NManager.Translate("Word.Language")));
         try
         {
-            I18nManager.LoadLanguage();
+            I18NManager.LoadLanguage();
         }
         catch (Exception e)
         {
             Logger.Error(
-                I18nManager.Translate("Server.ServerInfo.FailedToLoadItem", I18nManager.Translate("Word.Language")), e);
+                I18NManager.Translate("Server.ServerInfo.FailedToLoadItem", I18NManager.Translate("Word.Language")), e);
             Console.ReadLine();
             return;
         }
 
         // Load the game data
-        Logger.Info(I18nManager.Translate("Server.ServerInfo.LoadingItem", I18nManager.Translate("Word.GameData")));
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadingItem", I18NManager.Translate("Word.GameData")));
         try
         {
             ResourceManager.LoadGameData();
@@ -91,7 +91,7 @@ public class EntryPoint
         catch (Exception e)
         {
             Logger.Error(
-                I18nManager.Translate("Server.ServerInfo.FailedToLoadItem", I18nManager.Translate("Word.GameData")), e);
+                I18NManager.Translate("Server.ServerInfo.FailedToLoadItem", I18NManager.Translate("Word.GameData")), e);
             Console.ReadLine();
             return;
         }
@@ -108,7 +108,7 @@ public class EntryPoint
         catch (Exception e)
         {
             Logger.Error(
-                I18nManager.Translate("Server.ServerInfo.FailedToLoadItem", I18nManager.Translate("Word.Database")), e);
+                I18NManager.Translate("Server.ServerInfo.FailedToLoadItem", I18NManager.Translate("Word.Database")), e);
             Console.ReadLine();
             return;
         }
@@ -121,14 +121,14 @@ public class EntryPoint
         catch (Exception e)
         {
             Logger.Error(
-                I18nManager.Translate("Server.ServerInfo.FailedToInitializeItem",
-                    I18nManager.Translate("Word.Command")), e);
+                I18NManager.Translate("Server.ServerInfo.FailedToInitializeItem",
+                    I18NManager.Translate("Word.Command")), e);
             Console.ReadLine();
             return;
         }
 
         // Load the plugins
-        Logger.Info(I18nManager.Translate("Server.ServerInfo.LoadingItem", I18nManager.Translate("Word.Plugin")));
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadingItem", I18NManager.Translate("Word.Plugin")));
         try
         {
             PluginManager.LoadPlugins();
@@ -136,7 +136,7 @@ public class EntryPoint
         catch (Exception e)
         {
             Logger.Error(
-                I18nManager.Translate("Server.ServerInfo.FailedToLoadItem", I18nManager.Translate("Word.Plugin")), e);
+                I18NManager.Translate("Server.ServerInfo.FailedToLoadItem", I18NManager.Translate("Word.Plugin")), e);
             Console.ReadLine();
             return;
         }
@@ -203,20 +203,20 @@ public class EntryPoint
         HandlerManager.Init();
 
         WebProgram.Main([], GetConfig().HttpServer.Port, GetConfig().HttpServer.GetBindDisplayAddress());
-        Logger.Info(I18nManager.Translate("Server.ServerInfo.ServerRunning", I18nManager.Translate("Word.Dispatch"),
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.ServerRunning", I18NManager.Translate("Word.Dispatch"),
             GetConfig().HttpServer.GetDisplayAddress()));
 
         DanhengListener.BaseConnection = typeof(Connection);
         DanhengListener.StartListener();
 
         var elapsed = DateTime.Now - time;
-        Logger.Info(I18nManager.Translate("Server.ServerInfo.ServerStarted",
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.ServerStarted",
             elapsed.TotalSeconds.ToString(CultureInfo.InvariantCulture)[..4]));
 
         GenerateLogMap();
 
         if (GetConfig().ServerOption.EnableMission)
-            Logger.Warn(I18nManager.Translate("Server.ServerInfo.MissionEnabled"));
+            Logger.Warn(I18NManager.Translate("Server.ServerInfo.MissionEnabled"));
         CommandManager.Start();
     }
 

@@ -2,7 +2,6 @@
 using EggLink.DanhengServer.GameServer.Plugin.Constructor;
 using EggLink.DanhengServer.Internationalization;
 using EggLink.DanhengServer.Util;
-using McMaster.NETCore.Plugins;
 
 namespace EggLink.DanhengServer.GameServer.Plugin;
 
@@ -127,7 +126,7 @@ public class PluginManager
     {
         foreach (var plugin in Plugins.Keys) UnloadPlugin(plugin);
 
-        logger.Info(I18nManager.Translate("Server.ServerInfo.UnloadedItems", I18nManager.Translate("Word.Plugin")));
+        logger.Info(I18NManager.Translate("Server.ServerInfo.UnloadedItems", I18NManager.Translate("Word.Plugin")));
     }
 
     #endregion

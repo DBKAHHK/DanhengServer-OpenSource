@@ -23,7 +23,7 @@ public class DatabaseHelper
 
     public void Initialize()
     {
-        logger.Info(I18nManager.Translate("Server.ServerInfo.LoadingItem", I18nManager.Translate("Word.Database")));
+        logger.Info(I18NManager.Translate("Server.ServerInfo.LoadingItem", I18NManager.Translate("Word.Database")));
         var config = ConfigManager.Config;
         DbType type;
         string connectionString;
@@ -271,7 +271,7 @@ public class DatabaseHelper
                 }
             }
 
-            logger.Info(I18nManager.Translate("Server.ServerInfo.SaveDatabase",
+            logger.Info(I18NManager.Translate("Server.ServerInfo.SaveDatabase",
                 (DateTime.Now - prev).TotalSeconds.ToString()[..4]));
 
             ToSaveUidList.Clear();

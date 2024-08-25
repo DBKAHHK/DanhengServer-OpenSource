@@ -3,7 +3,7 @@ using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.Internationalization;
 
-public static class I18nManager
+public static class I18NManager
 {
     public static Logger Logger = new("I18nManager");
 

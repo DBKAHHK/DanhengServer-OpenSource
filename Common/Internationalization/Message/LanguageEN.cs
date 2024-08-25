@@ -272,6 +272,7 @@ public class HelpTextEN
     public string Commands => "Commands:";
     public string CommandUsage => "Usage: ";
     public string CommandPermission => "Need Permission: ";
+    public string CommandAlias => "Command Alias：";
 }
 
 /// <summary>

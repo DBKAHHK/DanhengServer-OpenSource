@@ -264,6 +264,7 @@ public class HelpTextCHT
     public string Usage => "用法：/help\n\n用法：/help [命令]";
     public string Commands => "命令:";
     public string CommandPermission => "所需權限: ";
+    public string CommandAlias => "命令彆名：";
 }
 
 /// <summary>

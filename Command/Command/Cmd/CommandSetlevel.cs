@@ -13,13 +13,13 @@ public class CommandSetlevel : ICommand
     {
         if (arg.Target == null)
         {
-            await arg.SendMsg(I18nManager.Translate("Game.Command.Notice.PlayerNotFound"));
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.PlayerNotFound"));
             return;
         }
 
         if (arg.Args.Count < 1)
         {
-            await arg.SendMsg(I18nManager.Translate("Game.Command.Notice.InvalidArguments"));
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.InvalidArguments"));
             return;
         }
 
@@ -31,6 +31,6 @@ public class CommandSetlevel : ICommand
         player.Data.Exp = GameData.GetPlayerExpRequired(level);
         await player.SendPacket(new PacketPlayerSyncScNotify(player.ToProto()));
 
-        await arg.SendMsg(I18nManager.Translate("Game.Command.Setlevel.SetlevelSuccess"));
+        await arg.SendMsg(I18NManager.Translate("Game.Command.Setlevel.SetlevelSuccess"));
     }
 }

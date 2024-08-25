@@ -68,12 +68,12 @@ public class LineupManager : BasePlayerManager
                 var avatarStorage = DatabaseHelper.Instance?.GetInstance<AvatarData>(avatar.AssistUid);
                 avatarType = AvatarType.AvatarAssistType;
                 if (avatarStorage == null) continue;
-                foreach (var avatarData in avatarStorage.Avatars!)
-                    if (avatarData.AvatarId == avatar.BaseAvatarId)
-                    {
-                        avatarInfo = avatarData;
-                        break;
-                    }
+                foreach (var avatarData in avatarStorage.Avatars.Where(avatarData =>
+                             avatarData.AvatarId == avatar.BaseAvatarId))
+                {
+                    avatarInfo = avatarData;
+                    break;
+                }
             }
             else
             {
@@ -307,10 +307,10 @@ public class LineupManager : BasePlayerManager
         LineupInfo lineup;
         if (LineupData.CurExtraLineup != -1)
             lineup = LineupData.Lineups[LineupData.CurExtraLineup]; // Extra lineup
-        else if (lineupIndex < 0 || !LineupData.Lineups.ContainsKey(lineupIndex))
+        else if (lineupIndex < 0 || !LineupData.Lineups.TryGetValue(lineupIndex, out var dataLineup))
             return;
         else
-            lineup = LineupData.Lineups[lineupIndex];
+            lineup = dataLineup;
         lineup.BaseAvatars = [];
         var index = lineup.LineupType == 0 ? lineupIndex : LineupData.GetCurLineupIndex();
         foreach (var avatar in lineupSlotList) await AddAvatar(index, avatar, false);
@@ -330,7 +330,7 @@ public class LineupManager : BasePlayerManager
         LineupInfo lineup;
         if (LineupData.CurExtraLineup != -1)
             lineup = LineupData.Lineups[LineupData.CurExtraLineup]; // Extra lineup
-        else if (req.Index < 0 || !LineupData.Lineups.ContainsKey((int)req.Index))
+        else if (!LineupData.Lineups.ContainsKey((int)req.Index))
             return;
         else
             lineup = LineupData.Lineups[(int)req.Index];
