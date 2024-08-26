@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static PlayerDetailInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZQbGF5ZXJEZXRhaWxJbmZvLnByb3RvGhtQbGF5ZXJEaXNwbGF5U2V0dGlu",
-            "Z3MucHJvdG8aHURpc3BsYXlBdmF0YXJEZXRhaWxJbmZvLnByb3RvGhZQbGF5",
-            "ZXJSZWNvcmRJbmZvLnByb3RvGhJQbGF0Zm9ybVR5cGUucHJvdG8aEUROQ0xQ",
-            "R0pHSEhLLnByb3RvIoUEChBQbGF5ZXJEZXRhaWxJbmZvEhEKCWlzX2Jhbm5l",
+            "ChZQbGF5ZXJEZXRhaWxJbmZvLnByb3RvGhZQbGF5ZXJSZWNvcmRJbmZvLnBy",
+            "b3RvGhtQbGF5ZXJEaXNwbGF5U2V0dGluZ3MucHJvdG8aEUROQ0xQR0pHSEhL",
+            "LnByb3RvGh1EaXNwbGF5QXZhdGFyRGV0YWlsSW5mby5wcm90bxoSUGxhdGZv",
+            "cm1UeXBlLnByb3RvIoUEChBQbGF5ZXJEZXRhaWxJbmZvEhEKCWlzX2Jhbm5l",
             "ZBgLIAEoCBITCgt3b3JsZF9sZXZlbBgGIAEoDRIiCgtNTEROTk9NTEhKRBjx",
             "CSABKAsyDC5ETkNMUEdKR0hISxITCgtMRkZKTUFEQkhOThgKIAEoDRIRCglo",
             "ZWFkX2ljb24YDCABKA0SEwoLT1BJQUNFS09BTkoYAyABKAkSEQoJc2lnbmF0",
-            "dXJlGAQgASgJEjQKEmFzc2lzdF9hdmF0YXJfbGlzdBgIIAMoCzIYLkRpc3Bs",
-            "YXlBdmF0YXJEZXRhaWxJbmZvEjYKE2Rpc3BsYXlfYXZhdGFyX2xpc3QYvg4g",
+            "dXJlGAQgASgJEjUKE2Rpc3BsYXlfYXZhdGFyX2xpc3QYCCADKAsyGC5EaXNw",
+            "bGF5QXZhdGFyRGV0YWlsSW5mbxI1ChJhc3Npc3RfYXZhdGFyX2xpc3QYvg4g",
             "AygLMhguRGlzcGxheUF2YXRhckRldGFpbEluZm8SHwoIcGxhdGZvcm0YBSAB",
             "KA4yDS5QbGF0Zm9ybVR5cGUSJgoLcmVjb3JkX2luZm8YDSABKAsyES5QbGF5",
             "ZXJSZWNvcmRJbmZvEjEKEGRpc3BsYXlfc2V0dGluZ3MYtwggASgLMhYuUGxh",
@@ -41,9 +41,9 @@ namespace EggLink.DanhengServer.Proto {
             "TkFET0FLT01FRRgBIAEoCBITCgtNQ0tLQktQT01MSRgHIAEoCUIeqgIbRWdn",
             "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlayerDisplaySettingsReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerRecordInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.DNCLPGJGHHKReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlayerRecordInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerDisplaySettingsReflection.Descriptor, global::EggLink.DanhengServer.Proto.DNCLPGJGHHKReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerDetailInfo), global::EggLink.DanhengServer.Proto.PlayerDetailInfo.Parser, new[]{ "IsBanned", "WorldLevel", "MLDNNOMLHJD", "LFFJMADBHNN", "HeadIcon", "OPIACEKOANJ", "Signature", "AssistAvatarList", "DisplayAvatarList", "Platform", "RecordInfo", "DisplaySettings", "Uid", "COAELHIGPNG", "Level", "Nickname", "HNADOAKOMEE", "MCKKBKPOMLI" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerDetailInfo), global::EggLink.DanhengServer.Proto.PlayerDetailInfo.Parser, new[]{ "IsBanned", "WorldLevel", "MLDNNOMLHJD", "LFFJMADBHNN", "HeadIcon", "OPIACEKOANJ", "Signature", "DisplayAvatarList", "AssistAvatarList", "Platform", "RecordInfo", "DisplaySettings", "Uid", "COAELHIGPNG", "Level", "Nickname", "HNADOAKOMEE", "MCKKBKPOMLI" }, null, null, null, null)
           }));
     }
     #endregion
@@ -92,8 +92,8 @@ namespace EggLink.DanhengServer.Proto {
       headIcon_ = other.headIcon_;
       oPIACEKOANJ_ = other.oPIACEKOANJ_;
       signature_ = other.signature_;
-      assistAvatarList_ = other.assistAvatarList_.Clone();
       displayAvatarList_ = other.displayAvatarList_.Clone();
+      assistAvatarList_ = other.assistAvatarList_.Clone();
       platform_ = other.platform_;
       recordInfo_ = other.recordInfo_ != null ? other.recordInfo_.Clone() : null;
       displaySettings_ = other.displaySettings_ != null ? other.displaySettings_.Clone() : null;
@@ -196,26 +196,26 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "assist_avatar_list" field.</summary>
-    public const int AssistAvatarListFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> _repeated_assistAvatarList_codec
-        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> assistAvatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> AssistAvatarList {
-      get { return assistAvatarList_; }
-    }
-
     /// <summary>Field number for the "display_avatar_list" field.</summary>
-    public const int DisplayAvatarListFieldNumber = 1854;
+    public const int DisplayAvatarListFieldNumber = 8;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> _repeated_displayAvatarList_codec
-        = pb::FieldCodec.ForMessage(14834, global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo.Parser);
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> displayAvatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> DisplayAvatarList {
       get { return displayAvatarList_; }
+    }
+
+    /// <summary>Field number for the "assist_avatar_list" field.</summary>
+    public const int AssistAvatarListFieldNumber = 1854;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> _repeated_assistAvatarList_codec
+        = pb::FieldCodec.ForMessage(14834, global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> assistAvatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> AssistAvatarList {
+      get { return assistAvatarList_; }
     }
 
     /// <summary>Field number for the "platform" field.</summary>
@@ -348,8 +348,8 @@ namespace EggLink.DanhengServer.Proto {
       if (HeadIcon != other.HeadIcon) return false;
       if (OPIACEKOANJ != other.OPIACEKOANJ) return false;
       if (Signature != other.Signature) return false;
-      if(!assistAvatarList_.Equals(other.assistAvatarList_)) return false;
       if(!displayAvatarList_.Equals(other.displayAvatarList_)) return false;
+      if(!assistAvatarList_.Equals(other.assistAvatarList_)) return false;
       if (Platform != other.Platform) return false;
       if (!object.Equals(RecordInfo, other.RecordInfo)) return false;
       if (!object.Equals(DisplaySettings, other.DisplaySettings)) return false;
@@ -373,8 +373,8 @@ namespace EggLink.DanhengServer.Proto {
       if (HeadIcon != 0) hash ^= HeadIcon.GetHashCode();
       if (OPIACEKOANJ.Length != 0) hash ^= OPIACEKOANJ.GetHashCode();
       if (Signature.Length != 0) hash ^= Signature.GetHashCode();
-      hash ^= assistAvatarList_.GetHashCode();
       hash ^= displayAvatarList_.GetHashCode();
+      hash ^= assistAvatarList_.GetHashCode();
       if (Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) hash ^= Platform.GetHashCode();
       if (recordInfo_ != null) hash ^= RecordInfo.GetHashCode();
       if (displaySettings_ != null) hash ^= DisplaySettings.GetHashCode();
@@ -430,7 +430,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(58);
         output.WriteString(MCKKBKPOMLI);
       }
-      assistAvatarList_.WriteTo(output, _repeated_assistAvatarList_codec);
+      displayAvatarList_.WriteTo(output, _repeated_displayAvatarList_codec);
       if (Uid != 0) {
         output.WriteRawTag(72);
         output.WriteUInt32(Uid);
@@ -467,7 +467,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(138, 79);
         output.WriteMessage(MLDNNOMLHJD);
       }
-      displayAvatarList_.WriteTo(output, _repeated_displayAvatarList_codec);
+      assistAvatarList_.WriteTo(output, _repeated_assistAvatarList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -506,7 +506,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(58);
         output.WriteString(MCKKBKPOMLI);
       }
-      assistAvatarList_.WriteTo(ref output, _repeated_assistAvatarList_codec);
+      displayAvatarList_.WriteTo(ref output, _repeated_displayAvatarList_codec);
       if (Uid != 0) {
         output.WriteRawTag(72);
         output.WriteUInt32(Uid);
@@ -543,7 +543,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(138, 79);
         output.WriteMessage(MLDNNOMLHJD);
       }
-      displayAvatarList_.WriteTo(ref output, _repeated_displayAvatarList_codec);
+      assistAvatarList_.WriteTo(ref output, _repeated_assistAvatarList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -575,8 +575,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Signature.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Signature);
       }
-      size += assistAvatarList_.CalculateSize(_repeated_assistAvatarList_codec);
       size += displayAvatarList_.CalculateSize(_repeated_displayAvatarList_codec);
+      size += assistAvatarList_.CalculateSize(_repeated_assistAvatarList_codec);
       if (Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Platform);
       }
@@ -640,8 +640,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Signature.Length != 0) {
         Signature = other.Signature;
       }
-      assistAvatarList_.Add(other.assistAvatarList_);
       displayAvatarList_.Add(other.displayAvatarList_);
+      assistAvatarList_.Add(other.assistAvatarList_);
       if (other.Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) {
         Platform = other.Platform;
       }
@@ -719,7 +719,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 66: {
-            assistAvatarList_.AddEntriesFrom(input, _repeated_assistAvatarList_codec);
+            displayAvatarList_.AddEntriesFrom(input, _repeated_displayAvatarList_codec);
             break;
           }
           case 72: {
@@ -768,7 +768,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 14834: {
-            displayAvatarList_.AddEntriesFrom(input, _repeated_displayAvatarList_codec);
+            assistAvatarList_.AddEntriesFrom(input, _repeated_assistAvatarList_codec);
             break;
           }
         }
@@ -815,7 +815,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 66: {
-            assistAvatarList_.AddEntriesFrom(ref input, _repeated_assistAvatarList_codec);
+            displayAvatarList_.AddEntriesFrom(ref input, _repeated_displayAvatarList_codec);
             break;
           }
           case 72: {
@@ -864,7 +864,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 14834: {
-            displayAvatarList_.AddEntriesFrom(ref input, _repeated_displayAvatarList_codec);
+            assistAvatarList_.AddEntriesFrom(ref input, _repeated_assistAvatarList_codec);
             break;
           }
         }

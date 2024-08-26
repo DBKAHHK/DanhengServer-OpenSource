@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GetBattleCollegeDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9HZXRCYXR0bGVDb2xsZWdlRGF0YVNjUnNwLnByb3RvIlYKGUdldEJhdHRs",
-            "ZUNvbGxlZ2VEYXRhU2NSc3ASDwoHcmV0Y29kZRgBIAEoDRITCgtHREhBSEhO",
-            "R0pCSRgOIAMoDRITCgtPS0dKR05ESklERRgPIAEoDUIeqgIbRWdnTGluay5E",
-            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Ch9HZXRCYXR0bGVDb2xsZWdlRGF0YVNjUnNwLnByb3RvImMKGUdldEJhdHRs",
+            "ZUNvbGxlZ2VEYXRhU2NSc3ASDwoHcmV0Y29kZRgBIAEoDRIgChhmaW5pc2hl",
+            "ZF9jb2xsZWdlX2lkX2xpc3QYDiADKA0SEwoLT0tHSkdOREpJREUYDyABKA1C",
+            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetBattleCollegeDataScRsp), global::EggLink.DanhengServer.Proto.GetBattleCollegeDataScRsp.Parser, new[]{ "Retcode", "GDHAHHNGJBI", "OKGJGNDJIDE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetBattleCollegeDataScRsp), global::EggLink.DanhengServer.Proto.GetBattleCollegeDataScRsp.Parser, new[]{ "Retcode", "FinishedCollegeIdList", "OKGJGNDJIDE" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetBattleCollegeDataScRsp(GetBattleCollegeDataScRsp other) : this() {
       retcode_ = other.retcode_;
-      gDHAHHNGJBI_ = other.gDHAHHNGJBI_.Clone();
+      finishedCollegeIdList_ = other.finishedCollegeIdList_.Clone();
       oKGJGNDJIDE_ = other.oKGJGNDJIDE_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -97,15 +97,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "GDHAHHNGJBI" field.</summary>
-    public const int GDHAHHNGJBIFieldNumber = 14;
-    private static readonly pb::FieldCodec<uint> _repeated_gDHAHHNGJBI_codec
+    /// <summary>Field number for the "finished_college_id_list" field.</summary>
+    public const int FinishedCollegeIdListFieldNumber = 14;
+    private static readonly pb::FieldCodec<uint> _repeated_finishedCollegeIdList_codec
         = pb::FieldCodec.ForUInt32(114);
-    private readonly pbc::RepeatedField<uint> gDHAHHNGJBI_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> finishedCollegeIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> GDHAHHNGJBI {
-      get { return gDHAHHNGJBI_; }
+    public pbc::RepeatedField<uint> FinishedCollegeIdList {
+      get { return finishedCollegeIdList_; }
     }
 
     /// <summary>Field number for the "OKGJGNDJIDE" field.</summary>
@@ -136,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Retcode != other.Retcode) return false;
-      if(!gDHAHHNGJBI_.Equals(other.gDHAHHNGJBI_)) return false;
+      if(!finishedCollegeIdList_.Equals(other.finishedCollegeIdList_)) return false;
       if (OKGJGNDJIDE != other.OKGJGNDJIDE) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -146,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      hash ^= gDHAHHNGJBI_.GetHashCode();
+      hash ^= finishedCollegeIdList_.GetHashCode();
       if (OKGJGNDJIDE != 0) hash ^= OKGJGNDJIDE.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -170,7 +170,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
       }
-      gDHAHHNGJBI_.WriteTo(output, _repeated_gDHAHHNGJBI_codec);
+      finishedCollegeIdList_.WriteTo(output, _repeated_finishedCollegeIdList_codec);
       if (OKGJGNDJIDE != 0) {
         output.WriteRawTag(120);
         output.WriteUInt32(OKGJGNDJIDE);
@@ -189,7 +189,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
       }
-      gDHAHHNGJBI_.WriteTo(ref output, _repeated_gDHAHHNGJBI_codec);
+      finishedCollegeIdList_.WriteTo(ref output, _repeated_finishedCollegeIdList_codec);
       if (OKGJGNDJIDE != 0) {
         output.WriteRawTag(120);
         output.WriteUInt32(OKGJGNDJIDE);
@@ -207,7 +207,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += gDHAHHNGJBI_.CalculateSize(_repeated_gDHAHHNGJBI_codec);
+      size += finishedCollegeIdList_.CalculateSize(_repeated_finishedCollegeIdList_codec);
       if (OKGJGNDJIDE != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OKGJGNDJIDE);
       }
@@ -226,7 +226,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      gDHAHHNGJBI_.Add(other.gDHAHHNGJBI_);
+      finishedCollegeIdList_.Add(other.finishedCollegeIdList_);
       if (other.OKGJGNDJIDE != 0) {
         OKGJGNDJIDE = other.OKGJGNDJIDE;
       }
@@ -251,7 +251,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 114:
           case 112: {
-            gDHAHHNGJBI_.AddEntriesFrom(input, _repeated_gDHAHHNGJBI_codec);
+            finishedCollegeIdList_.AddEntriesFrom(input, _repeated_finishedCollegeIdList_codec);
             break;
           }
           case 120: {
@@ -279,7 +279,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 114:
           case 112: {
-            gDHAHHNGJBI_.AddEntriesFrom(ref input, _repeated_gDHAHHNGJBI_codec);
+            finishedCollegeIdList_.AddEntriesFrom(ref input, _repeated_finishedCollegeIdList_codec);
             break;
           }
           case 120: {

@@ -24,17 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static SceneEntityBuffChangeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtTY2VuZUVudGl0eUJ1ZmZDaGFuZ2UucHJvdG8aH1NjZW5lRW50aXR5QnVm",
-            "ZkNoYW5nZVR5cGUucHJvdG8aDkJ1ZmZJbmZvLnByb3RvIqYBChVTY2VuZUVu",
+            "ChtTY2VuZUVudGl0eUJ1ZmZDaGFuZ2UucHJvdG8aDkJ1ZmZJbmZvLnByb3Rv",
+            "Gh9TY2VuZUVudGl0eUJ1ZmZDaGFuZ2VUeXBlLnByb3RvIqQBChVTY2VuZUVu",
             "dGl0eUJ1ZmZDaGFuZ2USKgoGcmVhc29uGAQgASgOMhouU2NlbmVFbnRpdHlC",
             "dWZmQ2hhbmdlVHlwZRIRCgllbnRpdHlfaWQYDCABKA0SJQoQYnVmZl9jaGFu",
             "Z2VfaW5mbxgFIAEoCzIJLkJ1ZmZJbmZvSAASGAoOcmVtb3ZlX2J1ZmZfaWQY",
-            "DyABKA1IAEINCgtLRU1GSkRKSEpQS0IeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
-            "dmVyLlByb3RvYgZwcm90bzM="));
+            "DyABKA1IAEILCglidWZmX2luZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.BuffInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityBuffChange), global::EggLink.DanhengServer.Proto.SceneEntityBuffChange.Parser, new[]{ "Reason", "EntityId", "BuffChangeInfo", "RemoveBuffId" }, new[]{ "KEMFJDJHJPK" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityBuffChange), global::EggLink.DanhengServer.Proto.SceneEntityBuffChange.Parser, new[]{ "Reason", "EntityId", "BuffChangeInfo", "RemoveBuffId" }, new[]{ "BuffInfo" }, null, null, null)
           }));
     }
     #endregion
@@ -78,11 +78,11 @@ namespace EggLink.DanhengServer.Proto {
     public SceneEntityBuffChange(SceneEntityBuffChange other) : this() {
       reason_ = other.reason_;
       entityId_ = other.entityId_;
-      switch (other.KEMFJDJHJPKCase) {
-        case KEMFJDJHJPKOneofCase.BuffChangeInfo:
+      switch (other.BuffInfoCase) {
+        case BuffInfoOneofCase.BuffChangeInfo:
           BuffChangeInfo = other.BuffChangeInfo.Clone();
           break;
-        case KEMFJDJHJPKOneofCase.RemoveBuffId:
+        case BuffInfoOneofCase.RemoveBuffId:
           RemoveBuffId = other.RemoveBuffId;
           break;
       }
@@ -125,10 +125,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.BuffInfo BuffChangeInfo {
-      get { return kEMFJDJHJPKCase_ == KEMFJDJHJPKOneofCase.BuffChangeInfo ? (global::EggLink.DanhengServer.Proto.BuffInfo) kEMFJDJHJPK_ : null; }
+      get { return buffInfoCase_ == BuffInfoOneofCase.BuffChangeInfo ? (global::EggLink.DanhengServer.Proto.BuffInfo) buffInfo_ : null; }
       set {
-        kEMFJDJHJPK_ = value;
-        kEMFJDJHJPKCase_ = value == null ? KEMFJDJHJPKOneofCase.None : KEMFJDJHJPKOneofCase.BuffChangeInfo;
+        buffInfo_ = value;
+        buffInfoCase_ = value == null ? BuffInfoOneofCase.None : BuffInfoOneofCase.BuffChangeInfo;
       }
     }
 
@@ -137,46 +137,46 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint RemoveBuffId {
-      get { return HasRemoveBuffId ? (uint) kEMFJDJHJPK_ : 0; }
+      get { return HasRemoveBuffId ? (uint) buffInfo_ : 0; }
       set {
-        kEMFJDJHJPK_ = value;
-        kEMFJDJHJPKCase_ = KEMFJDJHJPKOneofCase.RemoveBuffId;
+        buffInfo_ = value;
+        buffInfoCase_ = BuffInfoOneofCase.RemoveBuffId;
       }
     }
     /// <summary>Gets whether the "remove_buff_id" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasRemoveBuffId {
-      get { return kEMFJDJHJPKCase_ == KEMFJDJHJPKOneofCase.RemoveBuffId; }
+      get { return buffInfoCase_ == BuffInfoOneofCase.RemoveBuffId; }
     }
     /// <summary> Clears the value of the oneof if it's currently set to "remove_buff_id" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearRemoveBuffId() {
       if (HasRemoveBuffId) {
-        ClearKEMFJDJHJPK();
+        ClearBuffInfo();
       }
     }
 
-    private object kEMFJDJHJPK_;
-    /// <summary>Enum of possible cases for the "KEMFJDJHJPK" oneof.</summary>
-    public enum KEMFJDJHJPKOneofCase {
+    private object buffInfo_;
+    /// <summary>Enum of possible cases for the "buff_info" oneof.</summary>
+    public enum BuffInfoOneofCase {
       None = 0,
       BuffChangeInfo = 5,
       RemoveBuffId = 15,
     }
-    private KEMFJDJHJPKOneofCase kEMFJDJHJPKCase_ = KEMFJDJHJPKOneofCase.None;
+    private BuffInfoOneofCase buffInfoCase_ = BuffInfoOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public KEMFJDJHJPKOneofCase KEMFJDJHJPKCase {
-      get { return kEMFJDJHJPKCase_; }
+    public BuffInfoOneofCase BuffInfoCase {
+      get { return buffInfoCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearKEMFJDJHJPK() {
-      kEMFJDJHJPKCase_ = KEMFJDJHJPKOneofCase.None;
-      kEMFJDJHJPK_ = null;
+    public void ClearBuffInfo() {
+      buffInfoCase_ = BuffInfoOneofCase.None;
+      buffInfo_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -198,7 +198,7 @@ namespace EggLink.DanhengServer.Proto {
       if (EntityId != other.EntityId) return false;
       if (!object.Equals(BuffChangeInfo, other.BuffChangeInfo)) return false;
       if (RemoveBuffId != other.RemoveBuffId) return false;
-      if (KEMFJDJHJPKCase != other.KEMFJDJHJPKCase) return false;
+      if (BuffInfoCase != other.BuffInfoCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -208,9 +208,9 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (Reason != global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeType.Default) hash ^= Reason.GetHashCode();
       if (EntityId != 0) hash ^= EntityId.GetHashCode();
-      if (kEMFJDJHJPKCase_ == KEMFJDJHJPKOneofCase.BuffChangeInfo) hash ^= BuffChangeInfo.GetHashCode();
+      if (buffInfoCase_ == BuffInfoOneofCase.BuffChangeInfo) hash ^= BuffChangeInfo.GetHashCode();
       if (HasRemoveBuffId) hash ^= RemoveBuffId.GetHashCode();
-      hash ^= (int) kEMFJDJHJPKCase_;
+      hash ^= (int) buffInfoCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -233,7 +233,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteEnum((int) Reason);
       }
-      if (kEMFJDJHJPKCase_ == KEMFJDJHJPKOneofCase.BuffChangeInfo) {
+      if (buffInfoCase_ == BuffInfoOneofCase.BuffChangeInfo) {
         output.WriteRawTag(42);
         output.WriteMessage(BuffChangeInfo);
       }
@@ -259,7 +259,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteEnum((int) Reason);
       }
-      if (kEMFJDJHJPKCase_ == KEMFJDJHJPKOneofCase.BuffChangeInfo) {
+      if (buffInfoCase_ == BuffInfoOneofCase.BuffChangeInfo) {
         output.WriteRawTag(42);
         output.WriteMessage(BuffChangeInfo);
       }
@@ -287,7 +287,7 @@ namespace EggLink.DanhengServer.Proto {
       if (EntityId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EntityId);
       }
-      if (kEMFJDJHJPKCase_ == KEMFJDJHJPKOneofCase.BuffChangeInfo) {
+      if (buffInfoCase_ == BuffInfoOneofCase.BuffChangeInfo) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BuffChangeInfo);
       }
       if (HasRemoveBuffId) {
@@ -311,14 +311,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other.EntityId != 0) {
         EntityId = other.EntityId;
       }
-      switch (other.KEMFJDJHJPKCase) {
-        case KEMFJDJHJPKOneofCase.BuffChangeInfo:
+      switch (other.BuffInfoCase) {
+        case BuffInfoOneofCase.BuffChangeInfo:
           if (BuffChangeInfo == null) {
             BuffChangeInfo = new global::EggLink.DanhengServer.Proto.BuffInfo();
           }
           BuffChangeInfo.MergeFrom(other.BuffChangeInfo);
           break;
-        case KEMFJDJHJPKOneofCase.RemoveBuffId:
+        case BuffInfoOneofCase.RemoveBuffId:
           RemoveBuffId = other.RemoveBuffId;
           break;
       }
@@ -344,7 +344,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 42: {
             global::EggLink.DanhengServer.Proto.BuffInfo subBuilder = new global::EggLink.DanhengServer.Proto.BuffInfo();
-            if (kEMFJDJHJPKCase_ == KEMFJDJHJPKOneofCase.BuffChangeInfo) {
+            if (buffInfoCase_ == BuffInfoOneofCase.BuffChangeInfo) {
               subBuilder.MergeFrom(BuffChangeInfo);
             }
             input.ReadMessage(subBuilder);
@@ -380,7 +380,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 42: {
             global::EggLink.DanhengServer.Proto.BuffInfo subBuilder = new global::EggLink.DanhengServer.Proto.BuffInfo();
-            if (kEMFJDJHJPKCase_ == KEMFJDJHJPKOneofCase.BuffChangeInfo) {
+            if (buffInfoCase_ == BuffInfoOneofCase.BuffChangeInfo) {
               subBuilder.MergeFrom(BuffChangeInfo);
             }
             input.ReadMessage(subBuilder);

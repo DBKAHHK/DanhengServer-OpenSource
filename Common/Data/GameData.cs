@@ -55,6 +55,7 @@ public static class GameData
     public static Dictionary<int, NPCMonsterDataExcel> NpcMonsterDataData { get; private set; } = [];
     public static Dictionary<int, MonsterConfigExcel> MonsterConfigData { get; private set; } = [];
     public static Dictionary<int, MonsterDropExcel> MonsterDropData { get; private set; } = [];
+    public static Dictionary<int, BattleCollegeConfigExcel> BattleCollegeConfigData { get; private set; } = [];
 
     #endregion
 

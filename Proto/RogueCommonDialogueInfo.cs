@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static RogueCommonDialogueInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1Sb2d1ZUNvbW1vbkRpYWxvZ3VlSW5mby5wcm90bxoRRElBQ0tCSk1HT00u",
+            "Ch1Sb2d1ZUNvbW1vbkRpYWxvZ3VlSW5mby5wcm90bxoRTkNBSEZKRVBCTU8u",
             "cHJvdG8aEUNCRVBFSkREQkhLLnByb3RvGiJSb2d1ZUNvbW1vbkRpYWxvZ3Vl",
-            "QmFzaWNJbmZvLnByb3RvGhFOQ0FIRkpFUEJNTy5wcm90byLTAQoXUm9ndWVD",
+            "QmFzaWNJbmZvLnByb3RvGhFESUFDS0JKTUdPTS5wcm90byLTAQoXUm9ndWVD",
             "b21tb25EaWFsb2d1ZUluZm8SIQoLSUJPRURHS0ZMSUgYASABKAsyDC5OQ0FI",
             "RkpFUEJNTxI8ChNkaWFsb2d1ZV9iYXNpY19pbmZvGA0gASgLMh0uUm9ndWVD",
             "b21tb25EaWFsb2d1ZUJhc2ljSW5mb0gAEiMKC0lFQ0ZDQklIQ0tHGAYgASgL",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "SkREQkhLSABCDQoLT0JDREhFRUpFRkhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DIACKBJMGOMReflection.Descriptor, global::EggLink.DanhengServer.Proto.CBEPEJDDBHKReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonDialogueBasicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.NCAHFJEPBMOReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NCAHFJEPBMOReflection.Descriptor, global::EggLink.DanhengServer.Proto.CBEPEJDDBHKReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonDialogueBasicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DIACKBJMGOMReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonDialogueInfo), global::EggLink.DanhengServer.Proto.RogueCommonDialogueInfo.Parser, new[]{ "IBOEDGKFLIH", "DialogueBasicInfo", "IECFCBIHCKG", "HCNKEAOPIGF" }, new[]{ "OBCDHEEJEFH" }, null, null, null)
           }));

@@ -8,13 +8,9 @@ using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Server;
 
-public class Connection : DanhengConnection
+public class Connection(KcpConversation conversation, IPEndPoint remote) : DanhengConnection(conversation, remote)
 {
     private static readonly Logger Logger = new("GameServer");
-
-    public Connection(KcpConversation conversation, IPEndPoint remote) : base(conversation, remote)
-    {
-    }
 
     public PlayerInstance? Player { get; set; }
 
@@ -117,7 +113,7 @@ public class Connection : DanhengConnection
         }
     }
 
-    private async Task<bool> HandlePacket(ushort opcode, byte[] header, byte[] payload)
+    private async Task HandlePacket(ushort opcode, byte[] header, byte[] payload)
     {
         // Find the Handler for this opcode
         var handler = HandlerManager.GetHandler(opcode);
@@ -130,12 +126,12 @@ public class Connection : DanhengConnection
             {
                 case CmdIds.PlayerGetTokenCsReq:
                 {
-                    if (state != SessionStateEnum.WAITING_FOR_TOKEN) return true;
+                    if (state != SessionStateEnum.WAITING_FOR_TOKEN) return;
                     goto default;
                 }
                 case CmdIds.PlayerLoginCsReq:
                 {
-                    if (state != SessionStateEnum.WAITING_FOR_LOGIN) return true;
+                    if (state != SessionStateEnum.WAITING_FOR_LOGIN) return;
                     goto default;
                 }
                 default:
@@ -143,20 +139,19 @@ public class Connection : DanhengConnection
             }
 
             await handler.OnHandle(this, header, payload);
-            return true;
+            return;
         }
 
         // No handler found
         // get the packet name
         var packetName = LogMap.GetValueOrDefault(opcode);
-        if (packetName == null) return false;
+        if (packetName == null) return;
 
         var respName = packetName.Replace("Cs", "Sc").Replace("Req", "Rsp"); // Get the response packet name
+        if (respName == packetName) return;  // do not send rsp when resp name = recv name
         var respOpcode = LogMap.FirstOrDefault(x => x.Value == respName).Key; // Get the response opcode
 
         // Send Rsp
         await SendPacket(respOpcode);
-
-        return false;
     }
 }

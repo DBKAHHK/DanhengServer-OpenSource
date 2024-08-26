@@ -24,14 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static DiscardRelicCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdEaXNjYXJkUmVsaWNDc1JlcS5wcm90byJqChFEaXNjYXJkUmVsaWNDc1Jl",
+            "ChdEaXNjYXJkUmVsaWNDc1JlcS5wcm90byJzChFEaXNjYXJkUmVsaWNDc1Jl",
             "cRIXCg9yZWxpY191bmlxdWVfaWQYByABKA0SEgoKaXNfZGlzY2FyZBgJIAEo",
-            "CBITCgtQUEVJTExET0NCRRgPIAMoDRITCgtLR0JHTkdMTkdFRxgGIAEoCEIe",
-            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "CBIcChRyZWxpY191bmlxdWVfaWRfbGlzdBgPIAMoDRITCgtLR0JHTkdMTkdF",
+            "RxgGIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DiscardRelicCsReq), global::EggLink.DanhengServer.Proto.DiscardRelicCsReq.Parser, new[]{ "RelicUniqueId", "IsDiscard", "PPEILLDOCBE", "KGBGNGLNGEG" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DiscardRelicCsReq), global::EggLink.DanhengServer.Proto.DiscardRelicCsReq.Parser, new[]{ "RelicUniqueId", "IsDiscard", "RelicUniqueIdList", "KGBGNGLNGEG" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +76,7 @@ namespace EggLink.DanhengServer.Proto {
     public DiscardRelicCsReq(DiscardRelicCsReq other) : this() {
       relicUniqueId_ = other.relicUniqueId_;
       isDiscard_ = other.isDiscard_;
-      pPEILLDOCBE_ = other.pPEILLDOCBE_.Clone();
+      relicUniqueIdList_ = other.relicUniqueIdList_.Clone();
       kGBGNGLNGEG_ = other.kGBGNGLNGEG_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -110,15 +111,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "PPEILLDOCBE" field.</summary>
-    public const int PPEILLDOCBEFieldNumber = 15;
-    private static readonly pb::FieldCodec<uint> _repeated_pPEILLDOCBE_codec
+    /// <summary>Field number for the "relic_unique_id_list" field.</summary>
+    public const int RelicUniqueIdListFieldNumber = 15;
+    private static readonly pb::FieldCodec<uint> _repeated_relicUniqueIdList_codec
         = pb::FieldCodec.ForUInt32(122);
-    private readonly pbc::RepeatedField<uint> pPEILLDOCBE_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> relicUniqueIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> PPEILLDOCBE {
-      get { return pPEILLDOCBE_; }
+    public pbc::RepeatedField<uint> RelicUniqueIdList {
+      get { return relicUniqueIdList_; }
     }
 
     /// <summary>Field number for the "KGBGNGLNGEG" field.</summary>
@@ -150,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (RelicUniqueId != other.RelicUniqueId) return false;
       if (IsDiscard != other.IsDiscard) return false;
-      if(!pPEILLDOCBE_.Equals(other.pPEILLDOCBE_)) return false;
+      if(!relicUniqueIdList_.Equals(other.relicUniqueIdList_)) return false;
       if (KGBGNGLNGEG != other.KGBGNGLNGEG) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -161,7 +162,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (RelicUniqueId != 0) hash ^= RelicUniqueId.GetHashCode();
       if (IsDiscard != false) hash ^= IsDiscard.GetHashCode();
-      hash ^= pPEILLDOCBE_.GetHashCode();
+      hash ^= relicUniqueIdList_.GetHashCode();
       if (KGBGNGLNGEG != false) hash ^= KGBGNGLNGEG.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -193,7 +194,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteBool(IsDiscard);
       }
-      pPEILLDOCBE_.WriteTo(output, _repeated_pPEILLDOCBE_codec);
+      relicUniqueIdList_.WriteTo(output, _repeated_relicUniqueIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -216,7 +217,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteBool(IsDiscard);
       }
-      pPEILLDOCBE_.WriteTo(ref output, _repeated_pPEILLDOCBE_codec);
+      relicUniqueIdList_.WriteTo(ref output, _repeated_relicUniqueIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -233,7 +234,7 @@ namespace EggLink.DanhengServer.Proto {
       if (IsDiscard != false) {
         size += 1 + 1;
       }
-      size += pPEILLDOCBE_.CalculateSize(_repeated_pPEILLDOCBE_codec);
+      size += relicUniqueIdList_.CalculateSize(_repeated_relicUniqueIdList_codec);
       if (KGBGNGLNGEG != false) {
         size += 1 + 1;
       }
@@ -255,7 +256,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.IsDiscard != false) {
         IsDiscard = other.IsDiscard;
       }
-      pPEILLDOCBE_.Add(other.pPEILLDOCBE_);
+      relicUniqueIdList_.Add(other.relicUniqueIdList_);
       if (other.KGBGNGLNGEG != false) {
         KGBGNGLNGEG = other.KGBGNGLNGEG;
       }
@@ -288,7 +289,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 122:
           case 120: {
-            pPEILLDOCBE_.AddEntriesFrom(input, _repeated_pPEILLDOCBE_codec);
+            relicUniqueIdList_.AddEntriesFrom(input, _repeated_relicUniqueIdList_codec);
             break;
           }
         }
@@ -320,7 +321,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 122:
           case 120: {
-            pPEILLDOCBE_.AddEntriesFrom(ref input, _repeated_pPEILLDOCBE_codec);
+            relicUniqueIdList_.AddEntriesFrom(ref input, _repeated_relicUniqueIdList_codec);
             break;
           }
         }

@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static GetHeartDialInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtHZXRIZWFydERpYWxJbmZvU2NSc3AucHJvdG8aGUhlYXJ0RGlhbFNjcmlw",
-            "dEluZm8ucHJvdG8aG0hlYXJ0RGlhbERpYWxvZ3VlSW5mby5wcm90bxobSGVh",
+            "ChtHZXRIZWFydERpYWxJbmZvU2NSc3AucHJvdG8aG0hlYXJ0RGlhbERpYWxv",
+            "Z3VlSW5mby5wcm90bxoZSGVhcnREaWFsU2NyaXB0SW5mby5wcm90bxobSGVh",
             "cnREaWFsVW5sb2NrU3RhdHVzLnByb3RvGhFPQUlHQ0pLTkVHQS5wcm90byLe",
             "AQoVR2V0SGVhcnREaWFsSW5mb1NjUnNwEg8KB3JldGNvZGUYASABKA0SLgoQ",
             "c2NyaXB0X2luZm9fbGlzdBgGIAMoCzIULkhlYXJ0RGlhbFNjcmlwdEluZm8S",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "dW5sb2NrX3N0YXR1cxgOIAEoDjIWLkhlYXJ0RGlhbFVubG9ja1N0YXR1c0Ie",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeartDialScriptInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialDialogueInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialUnlockStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.OAIGCJKNEGAReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeartDialDialogueInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialScriptInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialUnlockStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.OAIGCJKNEGAReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetHeartDialInfoScRsp), global::EggLink.DanhengServer.Proto.GetHeartDialInfoScRsp.Parser, new[]{ "Retcode", "ScriptInfoList", "DialogueInfoList", "BIKNELBHPEE", "UnlockStatus" }, null, null, null, null)
           }));
