@@ -211,7 +211,7 @@ public class EntryPoint
 
         var elapsed = DateTime.Now - time;
         Logger.Info(I18NManager.Translate("Server.ServerInfo.ServerStarted",
-            elapsed.TotalSeconds.ToString(CultureInfo.InvariantCulture)[..4]));
+            Math.Round(elapsed.TotalSeconds, 2).ToString(CultureInfo.InvariantCulture)));
 
         GenerateLogMap();
 

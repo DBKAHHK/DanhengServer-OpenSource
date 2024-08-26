@@ -124,7 +124,6 @@ public class LineupManager : BasePlayerManager
         if (GetLineup(lineupIndex)!.BaseAvatars!.Count == 0) return false;
         LineupData.CurLineup = lineupIndex;
         LineupData.CurExtraLineup = -1;
-        DatabaseHelper.Instance?.UpdateInstance(LineupData);
 
         Player.SceneInstance?.SyncLineup();
         await Player.SendPacket(new PacketSyncLineupNotify(GetCurLineup()!));
@@ -138,7 +137,6 @@ public class LineupManager : BasePlayerManager
         {
             // reset lineup
             LineupData.CurExtraLineup = -1;
-            DatabaseHelper.Instance?.UpdateInstance(LineupData);
             return;
         }
 
@@ -281,7 +279,6 @@ public class LineupManager : BasePlayerManager
         else
             lineup.BaseAvatars?.RemoveAll(avatar => avatar.BaseAvatarId == avatarId);
         LineupData.Lineups[lineupIndex] = lineup;
-        DatabaseHelper.Instance?.UpdateInstance(LineupData);
 
         if (sendPacket)
         {
@@ -354,7 +351,6 @@ public class LineupManager : BasePlayerManager
         var curLineup = GetCurLineup()!;
         curLineup.Mp -= count;
         curLineup.Mp = Math.Min(Math.Max(0, curLineup.Mp), 5);
-        DatabaseHelper.Instance?.UpdateInstance(LineupData);
 
         await Player.SendPacket(new PacketSceneCastSkillMpUpdateScNotify(castEntityId, curLineup.Mp));
     }
@@ -365,7 +361,6 @@ public class LineupManager : BasePlayerManager
         var curLineup = GetCurLineup()!;
         curLineup.Mp += count;
         curLineup.Mp = Math.Min(Math.Max(0, curLineup.Mp), 5);
-        DatabaseHelper.Instance?.UpdateInstance(LineupData);
         if (sendPacket)
             await Player.SendPacket(
                 new PacketSyncLineupNotify(GetCurLineup()!, reason));

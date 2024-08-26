@@ -1,5 +1,4 @@
 ﻿using EggLink.DanhengServer.Data;
-using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.PlayerSync;
 using EggLink.DanhengServer.Internationalization;
 
@@ -27,7 +26,6 @@ public class CommandSetlevel : ICommand
         var level = Math.Max(Math.Min(arg.GetInt(0), 70), 1);
         player.Data.Level = level;
         player.OnLevelChange();
-        DatabaseHelper.Instance?.UpdateInstance(player.Data);
         player.Data.Exp = GameData.GetPlayerExpRequired(level);
         await player.SendPacket(new PacketPlayerSyncScNotify(player.ToProto()));
 

@@ -1,6 +1,5 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Excel;
-using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.GameServer.Game.Battle.Skill;
 using EggLink.DanhengServer.GameServer.Game.Player;
@@ -347,7 +346,6 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
                 }
             }
 
-            DatabaseHelper.Instance?.UpdateInstance(Player.AvatarManager!.AvatarData);
             await Player.SendPacket(new PacketSyncLineupNotify(lineup));
         }
 

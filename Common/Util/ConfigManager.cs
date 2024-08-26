@@ -5,7 +5,7 @@ namespace EggLink.DanhengServer.Util;
 
 public static class ConfigManager
 {
-    public static Logger logger = new("ConfigManager");
+    public static Logger Logger = new("ConfigManager");
     public static ConfigContainer Config { get; private set; } = new();
 
     public static void LoadConfig()
@@ -13,10 +13,22 @@ public static class ConfigManager
         var file = new FileInfo("config.json");
         if (!file.Exists)
         {
-            logger.Warn("Config file not found, creating a new one");
-            Config = new ConfigContainer();
-            Config.MuipServer.AdminKey = Guid.NewGuid().ToString();
-            logger.Info("Muipserver Admin key: " + Config.MuipServer.AdminKey);
+            Logger.Warn("Config file not found, creating a new one");
+
+            Config = new ConfigContainer
+            {
+                MuipServer =
+                {
+                    AdminKey = Guid.NewGuid().ToString()
+                },
+                ServerOption =
+                {
+                    Language = UtilTools.GetCurrentLanguage()
+                }
+            };
+
+            Logger.Info("Current Language is " + Config.ServerOption.Language);
+            Logger.Info("Muipserver Admin key: " + Config.MuipServer.AdminKey);
             SaveConfig();
         }
 

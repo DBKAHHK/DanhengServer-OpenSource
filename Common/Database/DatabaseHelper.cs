@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.Database.Inventory;
+﻿using System.Globalization;
+using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Database.Quests;
 using EggLink.DanhengServer.Internationalization;
 using EggLink.DanhengServer.Util;
@@ -109,7 +110,9 @@ public class DatabaseHelper
 
         foreach (var instance in GetAllInstance<MissionData>()!) instance.MoveFromOld();
 
-        foreach (var instance in GetAllInstance<InventoryData>()!) UpdateInstance(instance);
+        foreach (var instance in GetAllInstance<InventoryData>()!)
+        {
+        }
     }
 
     public void MoveFromSqlite()
@@ -236,14 +239,6 @@ public class DatabaseHelper
             .Add((instance as BaseDatabaseDataHelper)!); // add to the map
     }
 
-    public void UpdateInstance<T>(T instance) where T : class, new()
-    {
-        //lock (GetLock((instance as BaseDatabaseDataHelper)!.Uid))
-        //{
-        //    sqlSugarScope?.Updateable(instance).ExecuteCommand();
-        //}
-    }
-
     public void CalcSaveDatabase() // per 5 min
     {
         if (LastSaveTick + TimeSpan.TicksPerMinute * 5 > DateTime.UtcNow.Ticks) return;
@@ -271,8 +266,9 @@ public class DatabaseHelper
                 }
             }
 
+            var t = (DateTime.Now - prev).TotalSeconds;
             logger.Info(I18NManager.Translate("Server.ServerInfo.SaveDatabase",
-                (DateTime.Now - prev).TotalSeconds.ToString()[..4]));
+                Math.Round(t, 2).ToString(CultureInfo.InvariantCulture)));
 
             ToSaveUidList.Clear();
         }
