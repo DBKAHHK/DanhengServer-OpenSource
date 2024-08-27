@@ -116,7 +116,7 @@ public class EntryPoint
         // Register the command handlers
         try
         {
-            CommandManager.RegisterCommand();
+            CommandManager.RegisterCommands();
         }
         catch (Exception e)
         {

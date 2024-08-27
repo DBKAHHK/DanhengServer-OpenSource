@@ -20,25 +20,30 @@ public class CommandManager
     public Logger Logger { get; } = new("CommandManager");
     public Connection? Target { get; set; }
 
-    public void RegisterCommand()
+    public void RegisterCommands()
     {
         Instance = this;
         foreach (var type in Assembly.GetExecutingAssembly().GetTypes())
         {
-            var attr = type.GetCustomAttribute<CommandInfoAttribute>();
-            if (attr == null) continue;
-            var instance = Activator.CreateInstance(type);
-            if (instance is not ICommand command) continue;
-            Commands.Add(attr.Name, command);
-            CommandInfo.Add(attr.Name, attr);
-
-            // register alias
-            foreach (var alias in attr.Alias) // add alias
-                CommandAlias.Add(alias, attr.Name);
+            if (typeof(ICommand).IsAssignableFrom(type) && !type.IsAbstract) RegisterCommand(type);
         }
 
         Logger.Info(I18NManager.Translate("Server.ServerInfo.RegisterItem", Commands.Count.ToString(),
             I18NManager.Translate("Word.Command")));
+    }
+
+    public void RegisterCommand(Type type)
+    {
+        var attr = type.GetCustomAttribute<CommandInfoAttribute>();
+        if (attr == null) return;
+        var instance = Activator.CreateInstance(type);
+        if (instance is not ICommand command) return;
+        Commands.Add(attr.Name, command);
+        CommandInfo.Add(attr.Name, attr);
+
+        // register alias
+        foreach (var alias in attr.Alias) // add alias
+            CommandAlias.Add(alias, attr.Name);
     }
 
     public void Start()

@@ -40,33 +40,46 @@ public class ResourceManager
     public static void LoadExcel()
     {
         var classes = Assembly.GetExecutingAssembly().GetTypes(); // Get all classes in the assembly
-        var resList = new List<ExcelResource>();
-        foreach (var cls in classes)
+        List<ExcelResource> resList = [];
+
+        foreach (var cls in classes.Where(x => x.IsSubclassOf(typeof(ExcelResource))))
         {
-            var attribute = (ResourceEntity?)Attribute.GetCustomAttribute(cls, typeof(ResourceEntity));
+            var res = LoadSingleExcelResource(cls);
+            if (res != null) resList.AddRange(res);
+        }
 
-            if (attribute == null) continue;
-            var resource = (ExcelResource)Activator.CreateInstance(cls)!;
-            var count = 0;
-            foreach (var fileName in attribute.FileName)
-                try
+        foreach (var cls in resList) cls.AfterAllDone();
+    }
+
+    public static List<T>? LoadSingleExcel<T>(Type cls) where T : ExcelResource, new() => LoadSingleExcelResource(cls) as List<T>;
+
+    public static List<ExcelResource>? LoadSingleExcelResource(Type cls)
+    {
+        var attribute = (ResourceEntity?)Attribute.GetCustomAttribute(cls, typeof(ResourceEntity));
+
+        if (attribute == null) return null;
+        var resource = (ExcelResource)Activator.CreateInstance(cls)!;
+        var count = 0;
+        List<ExcelResource> resList = [];
+        foreach (var fileName in attribute.FileName)
+            try
+            {
+                var path = ConfigManager.Config.Path.ResourcePath + "/ExcelOutput/" + fileName;
+                var file = new FileInfo(path);
+                if (!file.Exists)
                 {
-                    var path = ConfigManager.Config.Path.ResourcePath + "/ExcelOutput/" + fileName;
-                    var file = new FileInfo(path);
-                    if (!file.Exists)
-                    {
-                        Logger.Error(I18NManager.Translate("Server.ServerInfo.FailedToReadItem", fileName,
-                            I18NManager.Translate("Word.NotFound")));
-                        continue;
-                    }
+                    Logger.Error(I18NManager.Translate("Server.ServerInfo.FailedToReadItem", fileName,
+                        I18NManager.Translate("Word.NotFound")));
+                    continue;
+                }
 
-                    var json = file.OpenText().ReadToEnd();
-                    using (var reader = new JsonTextReader(new StringReader(json)))
+                var json = file.OpenText().ReadToEnd();
+                using (var reader = new JsonTextReader(new StringReader(json)))
+                {
+                    reader.Read();
+                    switch (reader.TokenType)
                     {
-                        reader.Read();
-                        switch (reader.TokenType)
-                        {
-                            case JsonToken.StartArray:
+                        case JsonToken.StartArray:
                             {
                                 // array
                                 var jArray = JArray.Parse(json);
@@ -80,7 +93,7 @@ public class ResourceManager
 
                                 break;
                             }
-                            case JsonToken.StartObject:
+                        case JsonToken.StartObject:
                             {
                                 // dictionary
                                 var jObject = JObject.Parse(json);
@@ -113,22 +126,21 @@ public class ResourceManager
 
                                 break;
                             }
-                        }
                     }
-
-                    resource.Finalized();
-                }
-                catch (Exception ex)
-                {
-                    Logger.Error(
-                        I18NManager.Translate("Server.ServerInfo.FailedToReadItem", fileName,
-                            I18NManager.Translate("Word.Error")), ex);
                 }
 
-            Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItems", count.ToString(), cls.Name));
-        }
+                resource.Finalized();
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(
+                    I18NManager.Translate("Server.ServerInfo.FailedToReadItem", fileName,
+                        I18NManager.Translate("Word.Error")), ex);
+            }
 
-        foreach (var cls in resList) cls.AfterAllDone();
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItems", count.ToString(), cls.Name));
+
+        return resList;
     }
 
     public static void LoadFloorInfo()

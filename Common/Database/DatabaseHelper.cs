@@ -91,9 +91,8 @@ public class DatabaseHelper
             .Select(x => x)
             .ToList();
 
-        foreach (var instance in list!)
+        foreach (var inst in list!.Select(instance => (instance as BaseDatabaseDataHelper)!))
         {
-            var inst = (instance as BaseDatabaseDataHelper)!;
             if (!UidInstanceMap.TryGetValue(inst.Uid, out var value))
             {
                 value = [];
@@ -109,10 +108,6 @@ public class DatabaseHelper
         logger.Info("Upgrading database...");
 
         foreach (var instance in GetAllInstance<MissionData>()!) instance.MoveFromOld();
-
-        foreach (var instance in GetAllInstance<InventoryData>()!)
-        {
-        }
     }
 
     public void MoveFromSqlite()
@@ -170,6 +165,7 @@ public class DatabaseHelper
         InitializeSqlite();
     }
 
+    // ReSharper disable once UnusedMember.Global
     public static void InitializeSqliteTable<T>() where T : class, new()
     {
         try
@@ -178,6 +174,7 @@ public class DatabaseHelper
         }
         catch
         {
+            // ignored
         }
     }
 
@@ -185,17 +182,12 @@ public class DatabaseHelper
     {
         try
         {
-            if (!UidInstanceMap.TryGetValue(uid, out var value))
-            {
-                value = [];
-                UidInstanceMap[uid] = value;
-            }
+            if (UidInstanceMap.TryGetValue(uid, out var value))
+                return value.OfType<T>().Select(instance => instance).FirstOrDefault();
+            value = [];
+            UidInstanceMap[uid] = value;
 
-            foreach (var instance in value)
-                if (instance is T)
-                    return instance as T; // found
-
-            return null; // not found
+            return value.OfType<T>().Select(instance => instance).FirstOrDefault();
         }
         catch (Exception e)
         {
@@ -207,12 +199,10 @@ public class DatabaseHelper
     public T GetInstanceOrCreateNew<T>(int uid) where T : class, new()
     {
         var instance = GetInstance<T>(uid);
-        if (instance == null)
-        {
-            instance = new T();
-            (instance as BaseDatabaseDataHelper)!.Uid = uid;
-            SaveInstance(instance);
-        }
+        if (instance != null) return instance;
+        instance = new T();
+        (instance as BaseDatabaseDataHelper)!.Uid = uid;
+        SaveInstance(instance);
 
         return instance;
     }

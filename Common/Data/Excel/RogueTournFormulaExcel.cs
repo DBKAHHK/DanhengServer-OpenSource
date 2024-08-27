@@ -7,10 +7,10 @@ namespace EggLink.DanhengServer.Data.Excel;
 [ResourceEntity("RogueTournFormula.json")]
 public class RogueTournFormulaExcel : ExcelResource
 {
-    public string FormulaIcon { get; set; }
-    public string UltraFormulaIcon { get; set; }
-    public string FormulaSubIcon { get; set; }
-    public string FormulaStoryJson { get; set; }
+    public string FormulaIcon { get; set; } = "";
+    public string UltraFormulaIcon { get; set; } = "";
+    public string FormulaSubIcon { get; set; } = "";
+    public string FormulaStoryJson { get; set; } = "";
     public int MazeBuffID { get; set; }
     public int SubBuffNum { get; set; }
 
