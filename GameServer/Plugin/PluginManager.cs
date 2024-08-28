@@ -44,6 +44,10 @@ public class PluginManager
             var fileInfo = new FileInfo(plugin);
             LoadPlugin(fileInfo.FullName);
         }
+
+        //var dict = PluginAssemblies.ToDictionary(pluginAssembly => Plugins[pluginAssembly.Key].Name, pluginAssembly => pluginAssembly.Value);
+
+        //I18NManager.LoadPluginLanguage(dict);
     }
 
     public static void LoadPlugin(string plugin)
@@ -94,7 +98,19 @@ public class PluginManager
 
                         pluginTypes.AddRange(types);
 
-                        pluginInstance.OnLoad();
+                        try
+                        {
+                            var dict = new Dictionary<string, List<Type>> { { pluginInfo.Name, pluginTypes } };
+
+                            I18NManager.LoadPluginLanguage(dict);
+                            pluginInstance.OnLoad();
+                        }
+                        catch (Exception e)
+                        {
+                            Logger.Error($"Failed to load plugin {plugin}: {e.Message}");
+                            // unload the plugin
+                            UnloadPlugin(pluginInstance);
+                        }
                     }
                     else
                     {
