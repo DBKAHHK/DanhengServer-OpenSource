@@ -28,6 +28,7 @@ public class EntityMonster(
     public List<SceneBuff> BuffList { get; set; } = [];
     public SceneBuff? TempBuff { get; set; }
     public bool IsAlive { get; private set; } = true;
+    public bool IsInSummonUnit { get; set; } = false;
 
     public int EventID { get; set; } = info.EventID;
     public int CustomStageID { get; set; } = 0;
@@ -38,6 +39,15 @@ public class EntityMonster(
     {
         BuffList.Add(buff);
         await Scene.Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, buff));
+    }
+
+    public async ValueTask RemoveBuff(int buffId)
+    {
+        var buff = BuffList.Find(x => x.BuffId == buffId);
+        if (buff == null) return;
+
+        BuffList.Remove(buff);
+        await Scene.Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, [buff]));
     }
 
     public async ValueTask ApplyBuff(BattleInstance instance)

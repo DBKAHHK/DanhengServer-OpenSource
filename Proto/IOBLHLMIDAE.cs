@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static IOBLHLMIDAEReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFJT0JMSExNSURBRS5wcm90bxoQTGluZXVwSW5mby5wcm90bxoRRk1CTEdF",
-            "Q0JJQlAucHJvdG8aEVBFQ05JSkVBSUlCLnByb3RvGhFDSklBSEdPT0hBRC5w",
+            "ChFJT0JMSExNSURBRS5wcm90bxoRUEVDTklKRUFJSUIucHJvdG8aEUZNQkxH",
+            "RUNCSUJQLnByb3RvGhFDSklBSEdPT0hBRC5wcm90bxoQTGluZXVwSW5mby5w",
             "cm90bxoXUm9ndWVUb3VybkN1ckluZm8ucHJvdG8i0AEKC0lPQkxITE1JREFF",
             "EiEKC0NPRU5QTE5NTU9IGAYgASgLMgwuRk1CTEdFQ0JJQlASIQoLT0dBQUZF",
             "SUtOT04YDyABKAsyDC5QRUNOSUpFQUlJQhIwChRyb2d1ZV90b3Vybl9jdXJf",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "CzIMLkNKSUFIR09PSEFEQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
             "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.FMBLGECBIBPReflection.Descriptor, global::EggLink.DanhengServer.Proto.PECNIJEAIIBReflection.Descriptor, global::EggLink.DanhengServer.Proto.CJIAHGOOHADReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournCurInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PECNIJEAIIBReflection.Descriptor, global::EggLink.DanhengServer.Proto.FMBLGECBIBPReflection.Descriptor, global::EggLink.DanhengServer.Proto.CJIAHGOOHADReflection.Descriptor, global::EggLink.DanhengServer.Proto.LineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournCurInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.IOBLHLMIDAE), global::EggLink.DanhengServer.Proto.IOBLHLMIDAE.Parser, new[]{ "COENPLNMMOH", "OGAAFEIKNON", "RogueTournCurInfo", "RogueLineupInfo", "BFIGBKDHIGJ" }, null, null, null, null)
           }));

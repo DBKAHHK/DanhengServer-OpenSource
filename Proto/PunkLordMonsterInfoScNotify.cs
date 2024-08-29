@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static PunkLordMonsterInfoScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFQdW5rTG9yZE1vbnN0ZXJJbmZvU2NOb3RpZnkucHJvdG8aHlB1bmtMb3Jk",
-            "TW9uc3RlckJhc2ljSW5mby5wcm90bxoaUHVua0xvcmRCYXR0bGVSZWNvcmQu",
-            "cHJvdG8aJVB1bmtMb3JkTW9uc3RlckluZm9Ob3RpZnlSZWFzb24ucHJvdG8i",
+            "CiFQdW5rTG9yZE1vbnN0ZXJJbmZvU2NOb3RpZnkucHJvdG8aJVB1bmtMb3Jk",
+            "TW9uc3RlckluZm9Ob3RpZnlSZWFzb24ucHJvdG8aHlB1bmtMb3JkTW9uc3Rl",
+            "ckJhc2ljSW5mby5wcm90bxoaUHVua0xvcmRCYXR0bGVSZWNvcmQucHJvdG8i",
             "xwEKG1B1bmtMb3JkTW9uc3RlckluZm9TY05vdGlmeRItCgpiYXNpY19pbmZv",
             "GAwgASgLMhkuUHVua0xvcmRNb25zdGVyQmFzaWNJbmZvEiwKDWJhdHRsZV9y",
             "ZWNvcmQYDyABKAsyFS5QdW5rTG9yZEJhdHRsZVJlY29yZBIwCgZyZWFzb24Y",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "dGFja2VyX3VpZF9saXN0GA4gAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PunkLordMonsterBasicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PunkLordBattleRecordReflection.Descriptor, global::EggLink.DanhengServer.Proto.PunkLordMonsterInfoNotifyReasonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PunkLordMonsterInfoNotifyReasonReflection.Descriptor, global::EggLink.DanhengServer.Proto.PunkLordMonsterBasicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PunkLordBattleRecordReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PunkLordMonsterInfoScNotify), global::EggLink.DanhengServer.Proto.PunkLordMonsterInfoScNotify.Parser, new[]{ "BasicInfo", "BattleRecord", "Reason", "AttackerUidList" }, null, null, null, null)
           }));

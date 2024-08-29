@@ -102,7 +102,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
             if (castAvatar != null)
             {
                 skill.OnAttack(Player.SceneInstance!.AvatarInfo[(int)req.AttackedByEntityId], targetList);
-                skill.OnCast(castAvatar);
+                skill.OnCast(castAvatar, Player);
             }
 
             var triggerBattle = targetList.Any(target => target.IsAlive);

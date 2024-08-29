@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZQbGF5ZXJMb2dpbkNzUmVxLnByb3RvGhJQbGF0Zm9ybVR5cGUucHJvdG8a",
-            "Ekxhbmd1YWdlVHlwZS5wcm90bxoVRXh0cmFEZXZpY2VJbmZvLnByb3RvIscE",
+            "FUV4dHJhRGV2aWNlSW5mby5wcm90bxoSTGFuZ3VhZ2VUeXBlLnByb3RvIscE",
             "ChBQbGF5ZXJMb2dpbkNzUmVxEhMKC0lMRUhLQ0pQR0dFGAggASgJEhMKC1BM",
             "SU5DS0pCQk1OGAogASgJEhMKC2RldmljZV9pbmZvGA0gASgJEhQKDGxvZ2lu",
             "X3JhbmRvbRgJIAEoBBIWCg5jbGllbnRfdmVyc2lvbhgEIAEoCRIfCghsYW5n",
@@ -41,7 +41,7 @@ namespace EggLink.DanhengServer.Proto {
             "c3lzdGVtX2xhbmd1YWdlGA4gASgJEhQKC0JISE9NSEtBTUxPGKEGIAEoCEIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.ExtraDeviceInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.ExtraDeviceInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerLoginCsReq), global::EggLink.DanhengServer.Proto.PlayerLoginCsReq.Parser, new[]{ "ILEHKCJPGGE", "PLINCKJBBMN", "DeviceInfo", "LoginRandom", "ClientVersion", "Language", "ChannelId", "Signature", "DeviceUuid", "OPIACEKOANJ", "Resolution", "DeviceFp", "BCIJKADEMIE", "GIMCNHMAPBP", "Platform", "CIDHAHDCHDL", "ResVersion", "MCKKBKPOMLI", "GANJMFCLNFL", "RogueGetInfo", "OKPDCDEDOIL", "ClientTimeZone", "SystemLanguage", "BHHOMHKAMLO" }, null, null, null, null)
           }));

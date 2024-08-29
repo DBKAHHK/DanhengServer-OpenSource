@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static GroupRefreshInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZHcm91cFJlZnJlc2hJbmZvLnByb3RvGhtTY2VuZUdyb3VwUmVmcmVzaFR5",
-            "cGUucHJvdG8aHFNjZW5lRW50aXR5UmVmcmVzaEluZm8ucHJvdG8ikgEKEEdy",
+            "ChZHcm91cFJlZnJlc2hJbmZvLnByb3RvGhxTY2VuZUVudGl0eVJlZnJlc2hJ",
+            "bmZvLnByb3RvGhtTY2VuZUdyb3VwUmVmcmVzaFR5cGUucHJvdG8ikgEKEEdy",
             "b3VwUmVmcmVzaEluZm8SDQoFc3RhdGUYASABKA0SLAoMcmVmcmVzaF90eXBl",
             "GAcgASgOMhYuU2NlbmVHcm91cFJlZnJlc2hUeXBlEi8KDnJlZnJlc2hfZW50",
             "aXR5GAUgAygLMhcuU2NlbmVFbnRpdHlSZWZyZXNoSW5mbxIQCghncm91cF9p",
             "ZBgCIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneGroupRefreshTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneGroupRefreshTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GroupRefreshInfo), global::EggLink.DanhengServer.Proto.GroupRefreshInfo.Parser, new[]{ "State", "RefreshType", "RefreshEntity", "GroupId" }, null, null, null, null)
           }));

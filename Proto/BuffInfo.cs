@@ -24,17 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static BuffInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg5CdWZmSW5mby5wcm90byL6AQoIQnVmZkluZm8SDQoFY291bnQYCCABKA0S",
+            "Cg5CdWZmSW5mby5wcm90byKEAgoIQnVmZkluZm8SDQoFY291bnQYCCABKA0S",
             "EwoLYWRkX3RpbWVfbXMYDyABKAQSFgoOYmFzZV9hdmF0YXJfaWQYBSABKA0S",
             "NAoOZHluYW1pY192YWx1ZXMYBCADKAsyHC5CdWZmSW5mby5EeW5hbWljVmFs",
-            "dWVzRW50cnkSEwoLSkZFSUZERkFIRUIYDSABKA0SDwoHYnVmZl9pZBgDIAEo",
-            "DRINCgVsZXZlbBgHIAEoDRIRCglsaWZlX3RpbWUYCyABKAIaNAoSRHluYW1p",
-            "Y1ZhbHVlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoAjoCOAFC",
-            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "dWVzRW50cnkSHQoVYnVmZl9zdW1tb25fZW50aXR5X2lkGA0gASgNEg8KB2J1",
+            "ZmZfaWQYAyABKA0SDQoFbGV2ZWwYByABKA0SEQoJbGlmZV90aW1lGAsgASgC",
+            "GjQKEkR5bmFtaWNWYWx1ZXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAI6AjgBQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BuffInfo), global::EggLink.DanhengServer.Proto.BuffInfo.Parser, new[]{ "Count", "AddTimeMs", "BaseAvatarId", "DynamicValues", "JFEIFDFAHEB", "BuffId", "Level", "LifeTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BuffInfo), global::EggLink.DanhengServer.Proto.BuffInfo.Parser, new[]{ "Count", "AddTimeMs", "BaseAvatarId", "DynamicValues", "BuffSummonEntityId", "BuffId", "Level", "LifeTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -80,7 +81,7 @@ namespace EggLink.DanhengServer.Proto {
       addTimeMs_ = other.addTimeMs_;
       baseAvatarId_ = other.baseAvatarId_;
       dynamicValues_ = other.dynamicValues_.Clone();
-      jFEIFDFAHEB_ = other.jFEIFDFAHEB_;
+      buffSummonEntityId_ = other.buffSummonEntityId_;
       buffId_ = other.buffId_;
       level_ = other.level_;
       lifeTime_ = other.lifeTime_;
@@ -140,15 +141,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return dynamicValues_; }
     }
 
-    /// <summary>Field number for the "JFEIFDFAHEB" field.</summary>
-    public const int JFEIFDFAHEBFieldNumber = 13;
-    private uint jFEIFDFAHEB_;
+    /// <summary>Field number for the "buff_summon_entity_id" field.</summary>
+    public const int BuffSummonEntityIdFieldNumber = 13;
+    private uint buffSummonEntityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint JFEIFDFAHEB {
-      get { return jFEIFDFAHEB_; }
+    public uint BuffSummonEntityId {
+      get { return buffSummonEntityId_; }
       set {
-        jFEIFDFAHEB_ = value;
+        buffSummonEntityId_ = value;
       }
     }
 
@@ -207,7 +208,7 @@ namespace EggLink.DanhengServer.Proto {
       if (AddTimeMs != other.AddTimeMs) return false;
       if (BaseAvatarId != other.BaseAvatarId) return false;
       if (!DynamicValues.Equals(other.DynamicValues)) return false;
-      if (JFEIFDFAHEB != other.JFEIFDFAHEB) return false;
+      if (BuffSummonEntityId != other.BuffSummonEntityId) return false;
       if (BuffId != other.BuffId) return false;
       if (Level != other.Level) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(LifeTime, other.LifeTime)) return false;
@@ -222,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
       if (AddTimeMs != 0UL) hash ^= AddTimeMs.GetHashCode();
       if (BaseAvatarId != 0) hash ^= BaseAvatarId.GetHashCode();
       hash ^= DynamicValues.GetHashCode();
-      if (JFEIFDFAHEB != 0) hash ^= JFEIFDFAHEB.GetHashCode();
+      if (BuffSummonEntityId != 0) hash ^= BuffSummonEntityId.GetHashCode();
       if (BuffId != 0) hash ^= BuffId.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
       if (LifeTime != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(LifeTime);
@@ -265,9 +266,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(93);
         output.WriteFloat(LifeTime);
       }
-      if (JFEIFDFAHEB != 0) {
+      if (BuffSummonEntityId != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(JFEIFDFAHEB);
+        output.WriteUInt32(BuffSummonEntityId);
       }
       if (AddTimeMs != 0UL) {
         output.WriteRawTag(120);
@@ -304,9 +305,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(93);
         output.WriteFloat(LifeTime);
       }
-      if (JFEIFDFAHEB != 0) {
+      if (BuffSummonEntityId != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(JFEIFDFAHEB);
+        output.WriteUInt32(BuffSummonEntityId);
       }
       if (AddTimeMs != 0UL) {
         output.WriteRawTag(120);
@@ -332,8 +333,8 @@ namespace EggLink.DanhengServer.Proto {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BaseAvatarId);
       }
       size += dynamicValues_.CalculateSize(_map_dynamicValues_codec);
-      if (JFEIFDFAHEB != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JFEIFDFAHEB);
+      if (BuffSummonEntityId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuffSummonEntityId);
       }
       if (BuffId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuffId);
@@ -366,8 +367,8 @@ namespace EggLink.DanhengServer.Proto {
         BaseAvatarId = other.BaseAvatarId;
       }
       dynamicValues_.MergeFrom(other.dynamicValues_);
-      if (other.JFEIFDFAHEB != 0) {
-        JFEIFDFAHEB = other.JFEIFDFAHEB;
+      if (other.BuffSummonEntityId != 0) {
+        BuffSummonEntityId = other.BuffSummonEntityId;
       }
       if (other.BuffId != 0) {
         BuffId = other.BuffId;
@@ -418,7 +419,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 104: {
-            JFEIFDFAHEB = input.ReadUInt32();
+            BuffSummonEntityId = input.ReadUInt32();
             break;
           }
           case 120: {
@@ -465,7 +466,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 104: {
-            JFEIFDFAHEB = input.ReadUInt32();
+            BuffSummonEntityId = input.ReadUInt32();
             break;
           }
           case 120: {

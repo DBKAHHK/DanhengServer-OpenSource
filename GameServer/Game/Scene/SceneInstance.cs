@@ -2,6 +2,7 @@
 using EggLink.DanhengServer.Data.Config.Scene;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Avatar;
+using EggLink.DanhengServer.Database.Player;
 using EggLink.DanhengServer.Enums.Scene;
 using EggLink.DanhengServer.GameServer.Game.Activity.Loaders;
 using EggLink.DanhengServer.GameServer.Game.Battle;
@@ -174,6 +175,8 @@ public class SceneInstance
 
     public GameModeTypeEnum GameModeType;
 
+    public EntitySummonUnit? SummonUnit;
+
     public SceneInstance(PlayerInstance player, MazePlaneExcel excel, int floorId, int entryId)
     {
         Player = player;
@@ -260,17 +263,15 @@ public class SceneInstance
             }
         }
 
-        ;
-        foreach (var avatar in oldAvatarInfo)
-            if (AvatarInfo.Values.ToList().FindIndex(x => x.AvatarInfo.AvatarId == avatar.AvatarInfo.AvatarId) == -1)
+        foreach (var avatar in oldAvatarInfo.Where(avatar => AvatarInfo.Values.ToList().FindIndex(x => x.AvatarInfo.AvatarId == avatar.AvatarInfo.AvatarId) == -1))
+        {
+            removeAvatar.Add(new AvatarSceneInfo(new AvatarInfo
             {
-                removeAvatar.Add(new AvatarSceneInfo(new AvatarInfo
-                {
-                    EntityId = avatar.AvatarInfo.EntityId
-                }, AvatarType.AvatarFormalType, Player));
-                avatar.AvatarInfo.EntityId = 0;
-                sendPacket = true;
-            }
+                EntityId = avatar.AvatarInfo.EntityId
+            }, AvatarType.AvatarFormalType, Player));
+            avatar.AvatarInfo.EntityId = 0;
+            sendPacket = true;
+        }
 
         var leaderAvatarId = Player.LineupManager?.GetCurLineup()?.LeaderAvatarId;
         var leaderAvatarSlot = Player.LineupManager?.GetCurLineup()?.BaseAvatars
@@ -306,6 +307,15 @@ public class SceneInstance
         if (sendPacket) await Player.SendPacket(new PacketSceneGroupRefreshScNotify(entity));
     }
 
+    public async ValueTask AddSummonUnitEntity(EntitySummonUnit entity)
+    {
+        if (entity.EntityID != 0) return;
+        entity.EntityID = ++LastEntityId;
+        // old
+        await Player.SendPacket(new PacketSceneGroupRefreshScNotify(entity, SummonUnit));
+        SummonUnit = entity;
+    }
+
     public async ValueTask RemoveEntity(IGameEntity monster)
     {
         await RemoveEntity(monster, IsLoaded);
@@ -328,21 +338,121 @@ public class SceneInstance
     }
 
     #endregion
+
+    #region SummonUnit
+
+    public async ValueTask<Retcode> TriggerSummonUnit(string triggerName, List<uint> targetIds)
+    {
+        if (SummonUnit == null) return Retcode.RetSceneEntityNotExist;
+
+        // check trigger
+        var trigger = SummonUnit.TriggerList.Find(x => x.TriggerName == triggerName);
+        if (trigger == null) return Retcode.RetSceneUseSkillFail;
+
+        await Player.SendPacket(new PacketRefreshTriggerByClientScNotify(triggerName, (uint)SummonUnit.EntityID, targetIds));
+        // check target
+
+        List<IGameEntity> targetEnter = [];
+        List<IGameEntity> targetExit = [];
+        foreach (var targetId in targetIds)
+        {
+            if (!Entities.TryGetValue((int)targetId, out var entity)) continue;
+            EntityMonster? monster = null;
+            EntityProp? prop = null;
+
+            switch (entity)
+            {
+                case EntityMonster m:
+                    monster = m;
+                    break;
+                case EntityProp p:
+                    prop = p;
+                    break;
+            }
+
+            if (monster != null)
+            {
+                if (!monster.IsAlive) continue;
+
+                if (monster.IsInSummonUnit)
+                {
+                    // leave
+                    monster.IsInSummonUnit = false;
+                    targetExit.Add(monster);
+                }
+                else
+                {
+                    // enter
+                    monster.IsInSummonUnit = true;
+                    targetEnter.Add(monster);
+                }
+            }
+
+            if (prop != null)
+            {
+                targetEnter.Add(prop);
+            }
+        }
+
+        if (targetEnter.Count > 0)
+        {
+            // enter
+            var config = trigger.OnTriggerEnter;
+
+            Player.TaskManager!.AvatarLevelTask.TriggerTasks(config, targetEnter, SummonUnit);
+        }
+
+        if (targetExit.Count <= 0) return Retcode.RetSucc;
+        {
+            // enter
+            var config = trigger.OnTriggerExit;
+
+            Player.TaskManager!.AvatarLevelTask.TriggerTasks(config, targetExit, SummonUnit);
+        }
+
+
+        return Retcode.RetSucc;
+    }
+
+    public async ValueTask ClearSummonUnit()
+    {
+        await Player.SendPacket(new PacketSceneGroupRefreshScNotify(null, SummonUnit));
+
+        SummonUnit = null;
+    }
+
+    public async ValueTask OnHeartBeat()
+    {
+        if (SummonUnit == null) return;
+        var endTime = SummonUnit.CreateTimeMs + SummonUnit.LifeTimeMs;
+
+        if (endTime < Extensions.GetUnixMs())
+        {
+            await ClearSummonUnit();
+        }
+    }
+
+    #endregion
 }
 
-public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, PlayerInstance Player) : IGameEntity
+public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, PlayerInstance player) : IGameEntity
 {
     public AvatarInfo AvatarInfo = avatarInfo;
     public AvatarType AvatarType = avatarType;
 
     public List<SceneBuff> BuffList = [];
 
-    public int EntityID { get; set; } = avatarInfo.EntityId;
+    public int EntityID
+    {
+        get => AvatarInfo.EntityId;
+        set => AvatarInfo.EntityId = value;
+    }
+
     public int GroupID { get; set; } = 0;
 
     public async ValueTask AddBuff(SceneBuff buff)
     {
-        var oldBuff = BuffList.Find(x => x.BuffID == buff.BuffID);
+        var oldBuff = BuffList.Find(x => x.BuffId == buff.BuffId);
         if (oldBuff != null)
         {
             if (oldBuff.IsExpired())
@@ -355,25 +465,24 @@ public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, Playe
                 oldBuff.CreatedTime = Extensions.GetUnixMs();
                 oldBuff.Duration = buff.Duration;
 
-                await Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, oldBuff));
+                await player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, oldBuff));
                 return;
             }
         }
 
         BuffList.Add(buff);
-        await Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, buff));
+        await player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, buff));
     }
 
     public async ValueTask ApplyBuff(BattleInstance instance)
     {
         if (BuffList.Count == 0) return;
-        foreach (var buff in BuffList)
+        foreach (var buff in BuffList.Where(buff => !buff.IsExpired()))
         {
-            if (buff.IsExpired()) continue;
             instance.Buffs.Add(new MazeBuff(buff));
         }
 
-        await Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, BuffList));
+        await player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, BuffList));
 
         BuffList.Clear();
     }

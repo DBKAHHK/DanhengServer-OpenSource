@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static SwordTrainingChangeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlTd29yZFRyYWluaW5nQ2hhbmdlLnByb3RvGhlTd29yZFRyYWluaW5nQWN0",
-            "aW9uLnByb3RvGh5Td29yZFRyYWluR2FtZVNvdXJjZVR5cGUucHJvdG8ibAoT",
+            "ChlTd29yZFRyYWluaW5nQ2hhbmdlLnByb3RvGh5Td29yZFRyYWluR2FtZVNv",
+            "dXJjZVR5cGUucHJvdG8aGVN3b3JkVHJhaW5pbmdBY3Rpb24ucHJvdG8ibAoT",
             "U3dvcmRUcmFpbmluZ0NoYW5nZRIqCgxyb2d1ZV9hY3Rpb24YASABKAsyFC5T",
             "d29yZFRyYWluaW5nQWN0aW9uEikKBnNvdXJjZRgOIAEoDjIZLlN3b3JkVHJh",
             "aW5HYW1lU291cmNlVHlwZUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SwordTrainingActionReflection.Descriptor, global::EggLink.DanhengServer.Proto.SwordTrainGameSourceTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SwordTrainGameSourceTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.SwordTrainingActionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SwordTrainingChange), global::EggLink.DanhengServer.Proto.SwordTrainingChange.Parser, new[]{ "RogueAction", "Source" }, null, null, null, null)
           }));
