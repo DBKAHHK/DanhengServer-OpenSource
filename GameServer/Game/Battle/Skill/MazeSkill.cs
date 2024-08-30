@@ -18,6 +18,8 @@ public class MazeSkill
         IsMazeSkill = isSkill;
         Excel = excel;
         foreach (var task in taskInfos) AddAction(task);
+
+        if (GameData.SummonUnitDataData.TryGetValue((excel?.AvatarID ?? 0) * 10 + 1, out var summonUnit) && isSkill && !summonUnit.IsClient) Actions.Add(new MazeSummonUnit(summonUnit, req.TargetMotion));
     }
 
     public SceneCastSkillCsReq Req;
@@ -44,7 +46,7 @@ public class MazeSkill
             case TaskTypeEnum.AdventureModifyTeamPlayerSP:
                 break;
             case TaskTypeEnum.CreateSummonUnit:
-                Actions.Add(new MazeSummonUnit(GameData.SummonUnitDataData[task.SummonUnitID], Req.TargetMotion));
+                //Actions.Add(new MazeSummonUnit(GameData.SummonUnitDataData[task.SummonUnitID], Req.TargetMotion));
                 break;
             case TaskTypeEnum.AdventureSetAttackTargetMonsterDie:
                 Actions.Add(new MazeSetTargetMonsterDie());

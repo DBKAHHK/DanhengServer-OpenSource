@@ -14,13 +14,15 @@ public class MazeSummonUnit(SummonUnitDataExcel excel, MotionInfo motion) : IMaz
         {
             EntityID = 0,
             CreateAvatarEntityId = avatar.EntityID,
+            AttachEntityId = excel.ConfigInfo?.AttachPoint == "Origin" ? avatar.EntityID : 0,
             SummonUnitId = excel.ID,
+            CreateAvatarId = avatar.AvatarInfo.GetAvatarId(),
             LifeTimeMs = 15000,
             TriggerList = excel.ConfigInfo?.TriggerConfig.CustomTriggers ?? [],
             Motion = motion
         };
 
-        await player.SceneInstance!.AddEntity(unit);
+        await player.SceneInstance!.AddSummonUnitEntity(unit);
     }
 
     public async ValueTask OnHitTarget(AvatarSceneInfo avatar, List<EntityMonster> entities)

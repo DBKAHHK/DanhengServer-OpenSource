@@ -10,6 +10,8 @@ public class EntitySummonUnit : IGameEntity
     public int EntityID { get; set; }
     public int GroupID { get; set; } = 0;
     public int CreateAvatarEntityId { get; set; } = 0;
+    public int AttachEntityId { get; set; } = 0;
+    public int CreateAvatarId { get; set; } = 0;
     public long CreateTimeMs { get; set; } = Extensions.GetUnixMs();
     public int LifeTimeMs { get; set; } = -1;
     public int SummonUnitId { get; set; } = 0;
@@ -37,6 +39,7 @@ public class EntitySummonUnit : IGameEntity
             SummonUnit = new SceneSummonUnitInfo
             {
                 CasterEntityId = (uint)CreateAvatarEntityId,
+                AttachEntityId = (uint)AttachEntityId,
                 CreateTimeMs = (ulong)CreateTimeMs,
                 LifeTimeMs = LifeTimeMs,
                 SummonUnitId = (uint)SummonUnitId,

@@ -37,6 +37,11 @@ public class EntityMonster(
 
     public async ValueTask AddBuff(SceneBuff buff)
     {
+        var oldBuff = BuffList.Find(x => x.BuffId == buff.BuffId);
+        if (oldBuff != null)
+        {
+            BuffList.Remove(oldBuff);
+        }
         BuffList.Add(buff);
         await Scene.Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, buff));
     }

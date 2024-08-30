@@ -40,7 +40,7 @@ public class AvatarLevelTask
     {
         if (act is not AddMazeBuff addMazeBuff) return;
 
-        var buff = new SceneBuff(addMazeBuff.ID, 1, 0)
+        var buff = new SceneBuff(addMazeBuff.ID, 1, summonUnit?.CreateAvatarId ?? 0)
         {
             SummonUnitEntityId = summonUnit?.EntityID ?? 0
         };
@@ -65,6 +65,24 @@ public class AvatarLevelTask
             if (targetEntity is not EntityMonster monster) continue;
 
             await monster.RemoveBuff(removeMazeBuff.ID);
+        }
+    }
+
+    public async ValueTask RefreshMazeBuffTime(TaskConfigInfo act, List<IGameEntity> targetEntities, EntitySummonUnit? summonUnit)
+    {
+        if (act is not RefreshMazeBuffTime refreshMazeBuffTime) return;
+
+        var buff = new SceneBuff(refreshMazeBuffTime.ID, 1, summonUnit?.CreateAvatarId ?? 0)
+        {
+            SummonUnitEntityId = summonUnit?.EntityID ?? 0,
+            Duration = refreshMazeBuffTime.LifeTime.GetValue()
+        };
+
+        foreach (var targetEntity in targetEntities)
+        {
+            if (targetEntity is not EntityMonster monster) continue;
+
+            await monster.AddBuff(buff);
         }
     }
 

@@ -312,6 +312,22 @@ public class SceneInstance
         if (entity.EntityID != 0) return;
         entity.EntityID = ++LastEntityId;
         // old
+
+        foreach (var e in Entities.Values.Where(x => x is EntityMonster))
+        {
+            var monster = e as EntityMonster;
+            monster!.IsInSummonUnit = false;
+            List<SceneBuff> buffList = [.. monster.BuffList];
+            foreach (var sceneBuff in buffList)
+            {
+                if (sceneBuff.SummonUnitEntityId > 0)
+                {
+                    // clear old buff
+                    await monster.RemoveBuff(sceneBuff.BuffId);
+                }
+            }
+        }
+
         await Player.SendPacket(new PacketSceneGroupRefreshScNotify(entity, SummonUnit));
         SummonUnit = entity;
     }
@@ -374,23 +390,24 @@ public class SceneInstance
             {
                 if (!monster.IsAlive) continue;
 
-                if (monster.IsInSummonUnit)
-                {
-                    // leave
-                    monster.IsInSummonUnit = false;
-                    targetExit.Add(monster);
-                }
-                else
-                {
-                    // enter
-                    monster.IsInSummonUnit = true;
-                    targetEnter.Add(monster);
-                }
+                monster.IsInSummonUnit = true;
+                targetEnter.Add(monster);
             }
 
             if (prop != null)
             {
                 targetEnter.Add(prop);
+            }
+        }
+
+        foreach (var gameEntity in Entities.Values)
+        {
+            if (gameEntity is not EntityMonster monster) continue;
+
+            if (monster.IsInSummonUnit && !targetEnter.Contains(monster))
+            {
+                monster.IsInSummonUnit = false;
+                targetExit.Add(monster);
             }
         }
 
@@ -416,9 +433,25 @@ public class SceneInstance
 
     public async ValueTask ClearSummonUnit()
     {
+        if (SummonUnit == null) return;
         await Player.SendPacket(new PacketSceneGroupRefreshScNotify(null, SummonUnit));
 
         SummonUnit = null;
+
+        foreach (var entity in Entities.Values.Where(x => x is EntityMonster))
+        {
+            var monster = entity as EntityMonster;
+            monster!.IsInSummonUnit = false;
+            List<SceneBuff> buffList = [.. monster.BuffList];
+            foreach (var sceneBuff in buffList)
+            {
+                if (sceneBuff.SummonUnitEntityId > 0)
+                {
+                    // clear old buff
+                    await monster.RemoveBuff(sceneBuff.BuffId);
+                }
+            }
+        }
     }
 
     public async ValueTask OnHeartBeat()

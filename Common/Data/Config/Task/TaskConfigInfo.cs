@@ -51,6 +51,13 @@ public class TaskConfigInfo
             return res;
         }
 
+        if (typeStr == "RefreshMazeBuffTime")
+        {
+            var res = RefreshMazeBuffTime.LoadFromJsonObject(json);
+            res.Type = type;
+            return res;
+        }
+
         if (typeClass != null)
         {
             var res = (TaskConfigInfo)json.ToObject(typeClass)!;
