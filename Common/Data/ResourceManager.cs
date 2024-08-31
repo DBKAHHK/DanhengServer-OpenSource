@@ -16,6 +16,7 @@ namespace EggLink.DanhengServer.Data;
 public class ResourceManager
 {
     public static Logger Logger { get; } = new("ResourceManager");
+    public static bool IsLoaded { get; set; }
 
     public static void LoadGameData()
     {
