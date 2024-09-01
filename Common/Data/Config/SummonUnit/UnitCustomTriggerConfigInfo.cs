@@ -17,8 +17,9 @@ public class UnitCustomTriggerConfigInfo
     public bool DependOnServerTarget { get; set; }
     public bool IsSingle { get; set; }
     // EntityType TargetEntityType { get; set; }
-    public DynamicFloat TargetGroupID { get; set; }
-    public DynamicFloat TargetID { get; set; }
+    public DynamicFloat TargetGroupID { get; set; } = new();
+
+    public DynamicFloat TargetID { get; set; } = new();
     // EntityType[] TargetTypes { get; set; }
     // PredicateConfigInfo TargetFilter { get; set; }
     public string ColliderRelativePath { get; set; } = "";

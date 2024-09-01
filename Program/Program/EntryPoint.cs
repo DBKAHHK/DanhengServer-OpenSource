@@ -25,7 +25,7 @@ public class EntryPoint
     public static readonly Listener Listener = new();
     public static readonly CommandManager CommandManager = new();
 
-    public static void Main(string[] args)
+    public static async Task Main(string[] args)
     {
         AppDomain.CurrentDomain.ProcessExit += (_, _) =>
         {
@@ -85,11 +85,15 @@ public class EntryPoint
         // Initialize the database
         try
         {
-            DatabaseHelper.Initialize();
+            _ = Task.Run(DatabaseHelper.Initialize);  // do not wait
 
-            if (args.Contains("--upgrade-database")) DatabaseHelper.UpgradeDatabase();
+            while (!DatabaseHelper.LoadAccount)
+            {
+                Thread.Sleep(100);
+            }
 
-            if (args.Contains("--move")) DatabaseHelper.MoveFromSqlite();
+            Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItem", I18NManager.Translate("Word.DatabaseAccount")));
+            Logger.Warn(I18NManager.Translate("Server.ServerInfo.WaitForAllDone"));
         }
         catch (Exception e)
         {
@@ -211,6 +215,26 @@ public class EntryPoint
         // generate the handbook
         HandbookGenerator.Generate();
 
+        if (!DatabaseHelper.LoadAllData)
+        {
+            Logger.Warn(I18NManager.Translate("Server.ServerInfo.WaitForAllDone"));
+            var t = Task.Run(() =>
+            {
+                while (!DatabaseHelper.LoadAllData) // wait for all data to be loaded
+                {
+                    Thread.Sleep(100);
+                }
+            });
+
+            await t.WaitAsync(new CancellationToken());
+
+            Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItem", I18NManager.Translate("Word.Database")));
+        }
+
+        if (args.Contains("--upgrade-database")) DatabaseHelper.UpgradeDatabase();
+
+        if (args.Contains("--move")) DatabaseHelper.MoveFromSqlite();
+
         var elapsed = DateTime.Now - time;
         Logger.Info(I18NManager.Translate("Server.ServerInfo.ServerStarted",
             Math.Round(elapsed.TotalSeconds, 2).ToString(CultureInfo.InvariantCulture)));
@@ -245,7 +269,7 @@ public class EntryPoint
         {
             var name = opcode.Name;
             var value = (int)opcode.GetValue(null)!;
-            DanhengConnection.LogMap.Add(value, name);
+            DanhengConnection.LogMap.TryAdd(value, name);
         }
     }
 }

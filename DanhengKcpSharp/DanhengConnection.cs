@@ -1,4 +1,6 @@
-﻿using System.Net;
+﻿using System.Collections.Concurrent;
+using System.IO.Pipelines;
+using System.Net;
 using System.Reflection;
 using EggLink.DanhengServer.Kcp.KcpSharp;
 using EggLink.DanhengServer.Util;
@@ -11,11 +13,11 @@ public class DanhengConnection
 {
     public const int MAX_MSG_SIZE = 16384;
     public const int HANDSHAKE_SIZE = 20;
-    public static readonly List<int> BannedPackets = [];
+    public static readonly ConcurrentBag<int> BannedPackets = [];
     private static readonly Logger Logger = new("GameServer");
-    public static readonly Dictionary<int, string> LogMap = [];
+    public static readonly ConcurrentDictionary<int, string> LogMap = [];
 
-    public static readonly List<int> IgnoreLog =
+    public static readonly ConcurrentBag<int> IgnoreLog =
     [
         CmdIds.PlayerHeartBeatCsReq, CmdIds.PlayerHeartBeatScRsp, CmdIds.SceneEntityMoveCsReq,
         CmdIds.SceneEntityMoveScRsp, CmdIds.GetShopListCsReq, CmdIds.GetShopListScRsp

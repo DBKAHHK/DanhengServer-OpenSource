@@ -1,4 +1,7 @@
-﻿using System.Globalization;
+﻿using System.Collections.Concurrent;
+using System.Globalization;
+using EggLink.DanhengServer.Data.Excel;
+using EggLink.DanhengServer.Database.Account;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Database.Quests;
 using EggLink.DanhengServer.Internationalization;
@@ -12,10 +15,12 @@ public class DatabaseHelper
     public static Logger logger = new("Database");
     public static SqlSugarScope? sqlSugarScope;
     public static DatabaseHelper? Instance;
-    public static readonly Dictionary<int, List<BaseDatabaseDataHelper>> UidInstanceMap = [];
+    public static readonly ConcurrentDictionary<int, List<BaseDatabaseDataHelper>> UidInstanceMap = [];
     public static readonly List<int> ToSaveUidList = [];
     public static long LastSaveTick = DateTime.UtcNow.Ticks;
     public static Thread? SaveThread;
+    public static bool LoadAccount = false;
+    public static bool LoadAllData = false;
 
     public DatabaseHelper()
     {
@@ -71,10 +76,42 @@ public class DatabaseHelper
 
         var baseType = typeof(BaseDatabaseDataHelper);
         var assembly = typeof(BaseDatabaseDataHelper).Assembly;
+
         var types = assembly.GetTypes().Where(t => t.IsSubclassOf(baseType));
-        foreach (var t in types)
-            typeof(DatabaseHelper).GetMethod("InitializeTable")?.MakeGenericMethod(t)
-                .Invoke(null, null); // cache the data
+
+        var list = sqlSugarScope.Queryable<AccountData>()
+            .Select(x => x)
+            .ToList();
+
+        foreach (var inst in list!.Select(instance => (instance as BaseDatabaseDataHelper)!))
+        {
+            if (!UidInstanceMap.TryGetValue(inst.Uid, out var value))
+            {
+                value = [];
+                UidInstanceMap[inst.Uid] = value;
+            }
+
+            value.Add(inst); // add to the map
+        }
+
+        // start dispatch server
+        LoadAccount = true;
+
+        var res = Parallel.ForEach(list, account =>
+        {
+            Parallel.ForEach(types, t =>
+            {
+                if (t == typeof(AccountData)) return;  // skip the account data
+
+                typeof(DatabaseHelper).GetMethod(nameof(InitializeTable))?.MakeGenericMethod(t)
+                    .Invoke(null, [account.Uid]);
+            }); // cache the data
+        });
+
+        while (!res.IsCompleted)
+        {
+
+        }
 
         LastSaveTick = DateTime.UtcNow.Ticks;
 
@@ -83,12 +120,16 @@ public class DatabaseHelper
             while (true) CalcSaveDatabase();
         });
         SaveThread.Start();
+
+        LoadAllData = true;
     }
 
-    public static void InitializeTable<T>() where T : class, new()
+    public static void InitializeTable<T>(int uid) where T : BaseDatabaseDataHelper, new()
     {
         var list = sqlSugarScope?.Queryable<T>()
             .Select(x => x)
+            .Select<T>()
+            .Where(x => x.Uid == uid)
             .ToList();
 
         foreach (var inst in list!.Select(instance => (instance as BaseDatabaseDataHelper)!))

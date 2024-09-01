@@ -80,6 +80,8 @@ public class WordTextCHS
     public string RogueChestMapInfo => "模拟宇宙地图文件";
     public string ChessRogueRoom => "模拟宇宙DLC";
     public string ChessRogueRoomInfo => "模拟宇宙DLC文件";
+
+    public string DatabaseAccount => "数据库账号";
 }
 
 #endregion
@@ -150,6 +152,7 @@ public class ServerInfoTextCHS
     public string ConfigMissing => "{0} 缺失，请检查你的资源文件夹：{1}，{2} 可能不能使用。";
     public string UnloadedItems => "卸载了所有 {0}。";
     public string SaveDatabase => "已保存数据库，用时 {0}s";
+    public string WaitForAllDone => "现在还不可以进入游戏，请等待所有项目加载完成后再试";
 }
 
 #endregion
