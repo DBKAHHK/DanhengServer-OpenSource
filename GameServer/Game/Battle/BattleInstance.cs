@@ -30,7 +30,9 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
         {
             foreach (var id in monsters.Select(monster => monster.GetStageId()))
             {
-                GameData.StageConfigData.TryGetValue(id, out var stage);
+                GameData.PlaneEventData.TryGetValue(id * 10 + player.Data.WorldLevel, out var planeEvent);
+                if (planeEvent == null) continue;
+                GameData.StageConfigData.TryGetValue(planeEvent.StageID, out var stage);
                 if (stage != null) Stages.Add(stage);
             }
 
@@ -214,7 +216,8 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
             WorldLevel = (uint)WorldLevel,
             RoundsLimit = (uint)RoundLimit,
             StageId = (uint)StageId,
-            LogicRandomSeed = (uint)Random.Shared.Next()
+            LogicRandomSeed = (uint)Random.Shared.Next(),
+            GPNMHCNAODM = new()
         };
 
         foreach (var protoWave in Stages.Select(wave => wave.ToProto()))

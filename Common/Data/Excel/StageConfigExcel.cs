@@ -2,7 +2,7 @@
 
 namespace EggLink.DanhengServer.Data.Excel;
 
-[ResourceEntity("StageConfig.json", false)]
+[ResourceEntity("StageConfig.json,StageTestConfig.json", true)]
 public class StageConfigExcel : ExcelResource
 {
     public int StageID { get; set; } = 0;

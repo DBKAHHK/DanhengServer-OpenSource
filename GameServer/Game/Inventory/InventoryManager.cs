@@ -326,18 +326,26 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         return itemData;
     }
 
-    public ItemData? GetItem(int itemId)
+    /// <summary>
+    /// Get item by itemId and uniqueId, if uniqueId provided, itemId will be ignored
+    /// </summary>
+    /// <param name="itemId"></param>
+    /// <param name="uniqueId"></param>
+    /// <returns></returns>
+    public ItemData? GetItem(int itemId, int uniqueId = 0, ItemMainTypeEnum mainType = ItemMainTypeEnum.Unknown)
     {
         GameData.ItemConfigData.TryGetValue(itemId, out var itemConfig);
-        if (itemConfig == null) return null;
-        switch (itemConfig.ItemMainType)
+        if (itemConfig == null && mainType == ItemMainTypeEnum.Unknown) return null;
+        if (itemConfig != null)
+            mainType = itemConfig.ItemMainType;
+        switch (mainType)
         {
             case ItemMainTypeEnum.Material:
                 return Data.MaterialItems.Find(x => x.ItemId == itemId);
             case ItemMainTypeEnum.Equipment:
-                return Data.EquipmentItems.Find(x => x.ItemId == itemId);
+                return uniqueId > 0 ? Data.EquipmentItems.Find(x => x.UniqueId == uniqueId) : Data.EquipmentItems.Find(x => x.ItemId == itemId);
             case ItemMainTypeEnum.Relic:
-                return Data.RelicItems.Find(x => x.ItemId == itemId);
+                return uniqueId > 0 ? Data.RelicItems.Find(x => x.UniqueId == uniqueId) : Data.RelicItems.Find(x => x.ItemId == itemId);
             case ItemMainTypeEnum.Virtual:
                 switch (itemConfig.ID)
                 {
