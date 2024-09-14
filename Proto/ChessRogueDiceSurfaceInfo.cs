@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static ChessRogueDiceSurfaceInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9DaGVzc1JvZ3VlRGljZVN1cmZhY2VJbmZvLnByb3RvIj4KGUNoZXNzUm9n",
-            "dWVEaWNlU3VyZmFjZUluZm8SEgoKc3VyZmFjZV9pZBgGIAEoDRINCgVpbmRl",
-            "eBgEIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
-            "bzM="));
+            "Ch9DaGVzc1JvZ3VlRGljZVN1cmZhY2VJbmZvLnByb3RvIkoKGUNoZXNzUm9n",
+            "dWVEaWNlU3VyZmFjZUluZm8SFwoPZGljZV9zdXJmYWNlX2lkGAcgASgNEhQK",
+            "DGRpY2Vfc2xvdF9pZBgGIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo), global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo.Parser, new[]{ "SurfaceId", "Index" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo), global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo.Parser, new[]{ "DiceSurfaceId", "DiceSlotId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueDiceSurfaceInfo(ChessRogueDiceSurfaceInfo other) : this() {
-      surfaceId_ = other.surfaceId_;
-      index_ = other.index_;
+      diceSurfaceId_ = other.diceSurfaceId_;
+      diceSlotId_ = other.diceSlotId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,27 +84,27 @@ namespace EggLink.DanhengServer.Proto {
       return new ChessRogueDiceSurfaceInfo(this);
     }
 
-    /// <summary>Field number for the "surface_id" field.</summary>
-    public const int SurfaceIdFieldNumber = 6;
-    private uint surfaceId_;
+    /// <summary>Field number for the "dice_surface_id" field.</summary>
+    public const int DiceSurfaceIdFieldNumber = 7;
+    private uint diceSurfaceId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SurfaceId {
-      get { return surfaceId_; }
+    public uint DiceSurfaceId {
+      get { return diceSurfaceId_; }
       set {
-        surfaceId_ = value;
+        diceSurfaceId_ = value;
       }
     }
 
-    /// <summary>Field number for the "index" field.</summary>
-    public const int IndexFieldNumber = 4;
-    private uint index_;
+    /// <summary>Field number for the "dice_slot_id" field.</summary>
+    public const int DiceSlotIdFieldNumber = 6;
+    private uint diceSlotId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Index {
-      get { return index_; }
+    public uint DiceSlotId {
+      get { return diceSlotId_; }
       set {
-        index_ = value;
+        diceSlotId_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (SurfaceId != other.SurfaceId) return false;
-      if (Index != other.Index) return false;
+      if (DiceSurfaceId != other.DiceSurfaceId) return false;
+      if (DiceSlotId != other.DiceSlotId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (SurfaceId != 0) hash ^= SurfaceId.GetHashCode();
-      if (Index != 0) hash ^= Index.GetHashCode();
+      if (DiceSurfaceId != 0) hash ^= DiceSurfaceId.GetHashCode();
+      if (DiceSlotId != 0) hash ^= DiceSlotId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Index != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Index);
-      }
-      if (SurfaceId != 0) {
+      if (DiceSlotId != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(SurfaceId);
+        output.WriteUInt32(DiceSlotId);
+      }
+      if (DiceSurfaceId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(DiceSurfaceId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Index != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Index);
-      }
-      if (SurfaceId != 0) {
+      if (DiceSlotId != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(SurfaceId);
+        output.WriteUInt32(DiceSlotId);
+      }
+      if (DiceSurfaceId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(DiceSurfaceId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (SurfaceId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SurfaceId);
+      if (DiceSurfaceId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DiceSurfaceId);
       }
-      if (Index != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Index);
+      if (DiceSlotId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DiceSlotId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.SurfaceId != 0) {
-        SurfaceId = other.SurfaceId;
+      if (other.DiceSurfaceId != 0) {
+        DiceSurfaceId = other.DiceSurfaceId;
       }
-      if (other.Index != 0) {
-        Index = other.Index;
+      if (other.DiceSlotId != 0) {
+        DiceSlotId = other.DiceSlotId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            Index = input.ReadUInt32();
+          case 48: {
+            DiceSlotId = input.ReadUInt32();
             break;
           }
-          case 48: {
-            SurfaceId = input.ReadUInt32();
+          case 56: {
+            DiceSurfaceId = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            Index = input.ReadUInt32();
+          case 48: {
+            DiceSlotId = input.ReadUInt32();
             break;
           }
-          case 48: {
-            SurfaceId = input.ReadUInt32();
+          case 56: {
+            DiceSurfaceId = input.ReadUInt32();
             break;
           }
         }

@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static SettleTrackPhotoStageCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiBTZXR0bGVUcmFja1Bob3RvU3RhZ2VDc1JlcS5wcm90bxoRTFBQUEpBUEpM",
-            "QUUucHJvdG8iZAoaU2V0dGxlVHJhY2tQaG90b1N0YWdlQ3NSZXESEQoJY29z",
-            "dF90aW1lGAYgASgNEiEKC05GQk5DT0dMSUJLGAcgAygLMgwuTFBQUEpBUEpM",
-            "QUUSEAoIc3RhZ2VfaWQYAyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "CiBTZXR0bGVUcmFja1Bob3RvU3RhZ2VDc1JlcS5wcm90bxoRQkhCTURKRkFC",
+            "S1AucHJvdG8iZAoaU2V0dGxlVHJhY2tQaG90b1N0YWdlQ3NSZXESIQoLQUdC",
+            "TU9OR0RGSEoYAyADKAsyDC5CSEJNREpGQUJLUBIQCghzdGFnZV9pZBgLIAEo",
+            "DRIRCgljb3N0X3RpbWUYBiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LPPPJAPJLAEReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BHBMDJFABKPReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SettleTrackPhotoStageCsReq), global::EggLink.DanhengServer.Proto.SettleTrackPhotoStageCsReq.Parser, new[]{ "CostTime", "NFBNCOGLIBK", "StageId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SettleTrackPhotoStageCsReq), global::EggLink.DanhengServer.Proto.SettleTrackPhotoStageCsReq.Parser, new[]{ "AGBMONGDFHJ", "StageId", "CostTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SettleTrackPhotoStageCsReq(SettleTrackPhotoStageCsReq other) : this() {
-      costTime_ = other.costTime_;
-      nFBNCOGLIBK_ = other.nFBNCOGLIBK_.Clone();
+      aGBMONGDFHJ_ = other.aGBMONGDFHJ_.Clone();
       stageId_ = other.stageId_;
+      costTime_ = other.costTime_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,6 +84,29 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SettleTrackPhotoStageCsReq Clone() {
       return new SettleTrackPhotoStageCsReq(this);
+    }
+
+    /// <summary>Field number for the "AGBMONGDFHJ" field.</summary>
+    public const int AGBMONGDFHJFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.BHBMDJFABKP> _repeated_aGBMONGDFHJ_codec
+        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.BHBMDJFABKP.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BHBMDJFABKP> aGBMONGDFHJ_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BHBMDJFABKP>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BHBMDJFABKP> AGBMONGDFHJ {
+      get { return aGBMONGDFHJ_; }
+    }
+
+    /// <summary>Field number for the "stage_id" field.</summary>
+    public const int StageIdFieldNumber = 11;
+    private uint stageId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint StageId {
+      get { return stageId_; }
+      set {
+        stageId_ = value;
+      }
     }
 
     /// <summary>Field number for the "cost_time" field.</summary>
@@ -95,29 +118,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return costTime_; }
       set {
         costTime_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "NFBNCOGLIBK" field.</summary>
-    public const int NFBNCOGLIBKFieldNumber = 7;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.LPPPJAPJLAE> _repeated_nFBNCOGLIBK_codec
-        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.LPPPJAPJLAE.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LPPPJAPJLAE> nFBNCOGLIBK_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LPPPJAPJLAE>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LPPPJAPJLAE> NFBNCOGLIBK {
-      get { return nFBNCOGLIBK_; }
-    }
-
-    /// <summary>Field number for the "stage_id" field.</summary>
-    public const int StageIdFieldNumber = 3;
-    private uint stageId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint StageId {
-      get { return stageId_; }
-      set {
-        stageId_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CostTime != other.CostTime) return false;
-      if(!nFBNCOGLIBK_.Equals(other.nFBNCOGLIBK_)) return false;
+      if(!aGBMONGDFHJ_.Equals(other.aGBMONGDFHJ_)) return false;
       if (StageId != other.StageId) return false;
+      if (CostTime != other.CostTime) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CostTime != 0) hash ^= CostTime.GetHashCode();
-      hash ^= nFBNCOGLIBK_.GetHashCode();
+      hash ^= aGBMONGDFHJ_.GetHashCode();
       if (StageId != 0) hash ^= StageId.GetHashCode();
+      if (CostTime != 0) hash ^= CostTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,15 +167,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (StageId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(StageId);
-      }
+      aGBMONGDFHJ_.WriteTo(output, _repeated_aGBMONGDFHJ_codec);
       if (CostTime != 0) {
         output.WriteRawTag(48);
         output.WriteUInt32(CostTime);
       }
-      nFBNCOGLIBK_.WriteTo(output, _repeated_nFBNCOGLIBK_codec);
+      if (StageId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(StageId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -186,15 +186,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (StageId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(StageId);
-      }
+      aGBMONGDFHJ_.WriteTo(ref output, _repeated_aGBMONGDFHJ_codec);
       if (CostTime != 0) {
         output.WriteRawTag(48);
         output.WriteUInt32(CostTime);
       }
-      nFBNCOGLIBK_.WriteTo(ref output, _repeated_nFBNCOGLIBK_codec);
+      if (StageId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(StageId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -205,12 +205,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CostTime != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CostTime);
-      }
-      size += nFBNCOGLIBK_.CalculateSize(_repeated_nFBNCOGLIBK_codec);
+      size += aGBMONGDFHJ_.CalculateSize(_repeated_aGBMONGDFHJ_codec);
       if (StageId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(StageId);
+      }
+      if (CostTime != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CostTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -224,12 +224,12 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.CostTime != 0) {
-        CostTime = other.CostTime;
-      }
-      nFBNCOGLIBK_.Add(other.nFBNCOGLIBK_);
+      aGBMONGDFHJ_.Add(other.aGBMONGDFHJ_);
       if (other.StageId != 0) {
         StageId = other.StageId;
+      }
+      if (other.CostTime != 0) {
+        CostTime = other.CostTime;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -246,16 +246,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            StageId = input.ReadUInt32();
+          case 26: {
+            aGBMONGDFHJ_.AddEntriesFrom(input, _repeated_aGBMONGDFHJ_codec);
             break;
           }
           case 48: {
             CostTime = input.ReadUInt32();
             break;
           }
-          case 58: {
-            nFBNCOGLIBK_.AddEntriesFrom(input, _repeated_nFBNCOGLIBK_codec);
+          case 88: {
+            StageId = input.ReadUInt32();
             break;
           }
         }
@@ -273,16 +273,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            StageId = input.ReadUInt32();
+          case 26: {
+            aGBMONGDFHJ_.AddEntriesFrom(ref input, _repeated_aGBMONGDFHJ_codec);
             break;
           }
           case 48: {
             CostTime = input.ReadUInt32();
             break;
           }
-          case 58: {
-            nFBNCOGLIBK_.AddEntriesFrom(ref input, _repeated_nFBNCOGLIBK_codec);
+          case 88: {
+            StageId = input.ReadUInt32();
             break;
           }
         }

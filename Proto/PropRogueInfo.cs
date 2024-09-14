@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static PropRogueInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNQcm9wUm9ndWVJbmZvLnByb3RvIlsKDVByb3BSb2d1ZUluZm8SEwoLRExO",
-            "QkZMR0RLSFAYDCABKA0SEwoLSE9MTUNDTk9BQUsYBCABKA0SDwoHcm9vbV9p",
-            "ZBgIIAEoDRIPCgdzaXRlX2lkGAYgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ChNQcm9wUm9ndWVJbmZvLnByb3RvIlsKDVByb3BSb2d1ZUluZm8SEwoLRE5C",
+            "UERJR0JBRkQYBiABKA0SEwoLTkdBTEtJSUlJT0IYAiABKA0SDwoHc2l0ZV9p",
+            "ZBgEIAEoDRIPCgdyb29tX2lkGAcgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PropRogueInfo), global::EggLink.DanhengServer.Proto.PropRogueInfo.Parser, new[]{ "DLNBFLGDKHP", "HOLMCCNOAAK", "RoomId", "SiteId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PropRogueInfo), global::EggLink.DanhengServer.Proto.PropRogueInfo.Parser, new[]{ "DNBPDIGBAFD", "NGALKIIIIOB", "SiteId", "RoomId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,10 +73,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PropRogueInfo(PropRogueInfo other) : this() {
-      dLNBFLGDKHP_ = other.dLNBFLGDKHP_;
-      hOLMCCNOAAK_ = other.hOLMCCNOAAK_;
-      roomId_ = other.roomId_;
+      dNBPDIGBAFD_ = other.dNBPDIGBAFD_;
+      nGALKIIIIOB_ = other.nGALKIIIIOB_;
       siteId_ = other.siteId_;
+      roomId_ = other.roomId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,44 +86,32 @@ namespace EggLink.DanhengServer.Proto {
       return new PropRogueInfo(this);
     }
 
-    /// <summary>Field number for the "DLNBFLGDKHP" field.</summary>
-    public const int DLNBFLGDKHPFieldNumber = 12;
-    private uint dLNBFLGDKHP_;
+    /// <summary>Field number for the "DNBPDIGBAFD" field.</summary>
+    public const int DNBPDIGBAFDFieldNumber = 6;
+    private uint dNBPDIGBAFD_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DLNBFLGDKHP {
-      get { return dLNBFLGDKHP_; }
+    public uint DNBPDIGBAFD {
+      get { return dNBPDIGBAFD_; }
       set {
-        dLNBFLGDKHP_ = value;
+        dNBPDIGBAFD_ = value;
       }
     }
 
-    /// <summary>Field number for the "HOLMCCNOAAK" field.</summary>
-    public const int HOLMCCNOAAKFieldNumber = 4;
-    private uint hOLMCCNOAAK_;
+    /// <summary>Field number for the "NGALKIIIIOB" field.</summary>
+    public const int NGALKIIIIOBFieldNumber = 2;
+    private uint nGALKIIIIOB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint HOLMCCNOAAK {
-      get { return hOLMCCNOAAK_; }
+    public uint NGALKIIIIOB {
+      get { return nGALKIIIIOB_; }
       set {
-        hOLMCCNOAAK_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "room_id" field.</summary>
-    public const int RoomIdFieldNumber = 8;
-    private uint roomId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint RoomId {
-      get { return roomId_; }
-      set {
-        roomId_ = value;
+        nGALKIIIIOB_ = value;
       }
     }
 
     /// <summary>Field number for the "site_id" field.</summary>
-    public const int SiteIdFieldNumber = 6;
+    public const int SiteIdFieldNumber = 4;
     private uint siteId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -131,6 +119,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return siteId_; }
       set {
         siteId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "room_id" field.</summary>
+    public const int RoomIdFieldNumber = 7;
+    private uint roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
       }
     }
 
@@ -149,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DLNBFLGDKHP != other.DLNBFLGDKHP) return false;
-      if (HOLMCCNOAAK != other.HOLMCCNOAAK) return false;
-      if (RoomId != other.RoomId) return false;
+      if (DNBPDIGBAFD != other.DNBPDIGBAFD) return false;
+      if (NGALKIIIIOB != other.NGALKIIIIOB) return false;
       if (SiteId != other.SiteId) return false;
+      if (RoomId != other.RoomId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (DLNBFLGDKHP != 0) hash ^= DLNBFLGDKHP.GetHashCode();
-      if (HOLMCCNOAAK != 0) hash ^= HOLMCCNOAAK.GetHashCode();
-      if (RoomId != 0) hash ^= RoomId.GetHashCode();
+      if (DNBPDIGBAFD != 0) hash ^= DNBPDIGBAFD.GetHashCode();
+      if (NGALKIIIIOB != 0) hash ^= NGALKIIIIOB.GetHashCode();
       if (SiteId != 0) hash ^= SiteId.GetHashCode();
+      if (RoomId != 0) hash ^= RoomId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,21 +182,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (HOLMCCNOAAK != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(HOLMCCNOAAK);
+      if (NGALKIIIIOB != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(NGALKIIIIOB);
       }
       if (SiteId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(32);
         output.WriteUInt32(SiteId);
       }
-      if (RoomId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(RoomId);
+      if (DNBPDIGBAFD != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(DNBPDIGBAFD);
       }
-      if (DLNBFLGDKHP != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(DLNBFLGDKHP);
+      if (RoomId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(RoomId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -208,21 +208,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HOLMCCNOAAK != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(HOLMCCNOAAK);
+      if (NGALKIIIIOB != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(NGALKIIIIOB);
       }
       if (SiteId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(32);
         output.WriteUInt32(SiteId);
       }
-      if (RoomId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(RoomId);
+      if (DNBPDIGBAFD != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(DNBPDIGBAFD);
       }
-      if (DLNBFLGDKHP != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(DLNBFLGDKHP);
+      if (RoomId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(RoomId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -234,17 +234,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (DLNBFLGDKHP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DLNBFLGDKHP);
+      if (DNBPDIGBAFD != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DNBPDIGBAFD);
       }
-      if (HOLMCCNOAAK != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HOLMCCNOAAK);
-      }
-      if (RoomId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RoomId);
+      if (NGALKIIIIOB != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NGALKIIIIOB);
       }
       if (SiteId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SiteId);
+      }
+      if (RoomId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RoomId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -258,17 +258,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.DLNBFLGDKHP != 0) {
-        DLNBFLGDKHP = other.DLNBFLGDKHP;
+      if (other.DNBPDIGBAFD != 0) {
+        DNBPDIGBAFD = other.DNBPDIGBAFD;
       }
-      if (other.HOLMCCNOAAK != 0) {
-        HOLMCCNOAAK = other.HOLMCCNOAAK;
-      }
-      if (other.RoomId != 0) {
-        RoomId = other.RoomId;
+      if (other.NGALKIIIIOB != 0) {
+        NGALKIIIIOB = other.NGALKIIIIOB;
       }
       if (other.SiteId != 0) {
         SiteId = other.SiteId;
+      }
+      if (other.RoomId != 0) {
+        RoomId = other.RoomId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            HOLMCCNOAAK = input.ReadUInt32();
+          case 16: {
+            NGALKIIIIOB = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 32: {
             SiteId = input.ReadUInt32();
             break;
           }
-          case 64: {
-            RoomId = input.ReadUInt32();
+          case 48: {
+            DNBPDIGBAFD = input.ReadUInt32();
             break;
           }
-          case 96: {
-            DLNBFLGDKHP = input.ReadUInt32();
+          case 56: {
+            RoomId = input.ReadUInt32();
             break;
           }
         }
@@ -316,20 +316,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            HOLMCCNOAAK = input.ReadUInt32();
+          case 16: {
+            NGALKIIIIOB = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 32: {
             SiteId = input.ReadUInt32();
             break;
           }
-          case 64: {
-            RoomId = input.ReadUInt32();
+          case 48: {
+            DNBPDIGBAFD = input.ReadUInt32();
             break;
           }
-          case 96: {
-            DLNBFLGDKHP = input.ReadUInt32();
+          case 56: {
+            RoomId = input.ReadUInt32();
             break;
           }
         }

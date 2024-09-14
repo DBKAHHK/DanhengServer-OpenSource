@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static SyncEntityBuffChangeListScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiZTeW5jRW50aXR5QnVmZkNoYW5nZUxpc3RTY05vdGlmeS5wcm90bxobU2Nl",
-            "bmVFbnRpdHlCdWZmQ2hhbmdlLnByb3RvIlsKIFN5bmNFbnRpdHlCdWZmQ2hh",
-            "bmdlTGlzdFNjTm90aWZ5EjcKF2VudGl0eV9idWZmX2NoYW5nZV9saXN0GAog",
-            "AygLMhYuU2NlbmVFbnRpdHlCdWZmQ2hhbmdlQh6qAhtFZ2dMaW5rLkRhbmhl",
-            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "CiZTeW5jRW50aXR5QnVmZkNoYW5nZUxpc3RTY05vdGlmeS5wcm90bxoaRW50",
+            "aXR5QnVmZkNoYW5nZUluZm8ucHJvdG8iWgogU3luY0VudGl0eUJ1ZmZDaGFu",
+            "Z2VMaXN0U2NOb3RpZnkSNgoXZW50aXR5X2J1ZmZfY2hhbmdlX2xpc3QYDCAD",
+            "KAsyFS5FbnRpdHlCdWZmQ2hhbmdlSW5mb0IeqgIbRWdnTGluay5EYW5oZW5n",
+            "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EntityBuffChangeInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SyncEntityBuffChangeListScNotify), global::EggLink.DanhengServer.Proto.SyncEntityBuffChangeListScNotify.Parser, new[]{ "EntityBuffChangeList" }, null, null, null, null)
           }));
@@ -85,13 +85,13 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "entity_buff_change_list" field.</summary>
-    public const int EntityBuffChangeListFieldNumber = 10;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.SceneEntityBuffChange> _repeated_entityBuffChangeList_codec
-        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.SceneEntityBuffChange.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneEntityBuffChange> entityBuffChangeList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneEntityBuffChange>();
+    public const int EntityBuffChangeListFieldNumber = 12;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EntityBuffChangeInfo> _repeated_entityBuffChangeList_codec
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.EntityBuffChangeInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EntityBuffChangeInfo> entityBuffChangeList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EntityBuffChangeInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneEntityBuffChange> EntityBuffChangeList {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EntityBuffChangeInfo> EntityBuffChangeList {
       get { return entityBuffChangeList_; }
     }
 
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 82: {
+          case 98: {
             entityBuffChangeList_.AddEntriesFrom(input, _repeated_entityBuffChangeList_codec);
             break;
           }
@@ -207,7 +207,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 82: {
+          case 98: {
             entityBuffChangeList_.AddEntriesFrom(ref input, _repeated_entityBuffChangeList_codec);
             break;
           }

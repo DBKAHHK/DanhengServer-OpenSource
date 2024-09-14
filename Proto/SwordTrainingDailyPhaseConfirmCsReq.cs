@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CilTd29yZFRyYWluaW5nRGFpbHlQaGFzZUNvbmZpcm1Dc1JlcS5wcm90bxoh",
-            "U3dvcmRUcmFpbmluZ0RhaWx5UGhhc2VUeXBlLnByb3RvIlEKI1N3b3JkVHJh",
-            "aW5pbmdEYWlseVBoYXNlQ29uZmlybUNzUmVxEioKBHR5cGUYBSABKA4yHC5T",
-            "d29yZFRyYWluaW5nRGFpbHlQaGFzZVR5cGVCHqoCG0VnZ0xpbmsuRGFuaGVu",
-            "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "U3dvcmRUcmFpbmluZ0RhaWx5UGhhc2VUeXBlLnByb3RvIlgKI1N3b3JkVHJh",
+            "aW5pbmdEYWlseVBoYXNlQ29uZmlybUNzUmVxEjEKC0tJTkpFREtQSE1MGAIg",
+            "ASgOMhwuU3dvcmRUcmFpbmluZ0RhaWx5UGhhc2VUeXBlQh6qAhtFZ2dMaW5r",
+            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseConfirmCsReq), global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseConfirmCsReq.Parser, new[]{ "Type" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseConfirmCsReq), global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseConfirmCsReq.Parser, new[]{ "KINJEDKPHML" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SwordTrainingDailyPhaseConfirmCsReq(SwordTrainingDailyPhaseConfirmCsReq other) : this() {
-      type_ = other.type_;
+      kINJEDKPHML_ = other.kINJEDKPHML_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,15 +84,15 @@ namespace EggLink.DanhengServer.Proto {
       return new SwordTrainingDailyPhaseConfirmCsReq(this);
     }
 
-    /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 5;
-    private global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType type_ = global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType.None;
+    /// <summary>Field number for the "KINJEDKPHML" field.</summary>
+    public const int KINJEDKPHMLFieldNumber = 2;
+    private global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType kINJEDKPHML_ = global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType Type {
-      get { return type_; }
+    public global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType KINJEDKPHML {
+      get { return kINJEDKPHML_; }
       set {
-        type_ = value;
+        kINJEDKPHML_ = value;
       }
     }
 
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Type != other.Type) return false;
+      if (KINJEDKPHML != other.KINJEDKPHML) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -119,7 +119,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType.None) hash ^= Type.GetHashCode();
+      if (KINJEDKPHML != global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType.None) hash ^= KINJEDKPHML.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -138,9 +138,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Type != global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType.None) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) Type);
+      if (KINJEDKPHML != global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType.None) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) KINJEDKPHML);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -152,9 +152,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Type != global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType.None) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) Type);
+      if (KINJEDKPHML != global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType.None) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) KINJEDKPHML);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -166,8 +166,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Type != global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      if (KINJEDKPHML != global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) KINJEDKPHML);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -181,8 +181,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Type != global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType.None) {
-        Type = other.Type;
+      if (other.KINJEDKPHML != global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType.None) {
+        KINJEDKPHML = other.KINJEDKPHML;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -199,8 +199,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            Type = (global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType) input.ReadEnum();
+          case 16: {
+            KINJEDKPHML = (global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType) input.ReadEnum();
             break;
           }
         }
@@ -218,8 +218,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            Type = (global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType) input.ReadEnum();
+          case 16: {
+            KINJEDKPHML = (global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType) input.ReadEnum();
             break;
           }
         }

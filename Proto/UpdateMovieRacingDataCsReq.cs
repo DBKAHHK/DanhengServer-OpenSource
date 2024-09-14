@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBVcGRhdGVNb3ZpZVJhY2luZ0RhdGFDc1JlcS5wcm90bxoQUmFjaW5nRGF0",
-            "YS5wcm90byI+ChpVcGRhdGVNb3ZpZVJhY2luZ0RhdGFDc1JlcRIgCgtyYWNp",
-            "bmdfZGF0YRgCIAEoCzILLlJhY2luZ0RhdGFCHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "YS5wcm90byI+ChpVcGRhdGVNb3ZpZVJhY2luZ0RhdGFDc1JlcRIgCgtPT0RE",
+            "UElPSEdNTBgIIAEoCzILLlJhY2luZ0RhdGFCHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RacingDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdateMovieRacingDataCsReq), global::EggLink.DanhengServer.Proto.UpdateMovieRacingDataCsReq.Parser, new[]{ "RacingData" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdateMovieRacingDataCsReq), global::EggLink.DanhengServer.Proto.UpdateMovieRacingDataCsReq.Parser, new[]{ "OODDPIOHGML" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateMovieRacingDataCsReq(UpdateMovieRacingDataCsReq other) : this() {
-      racingData_ = other.racingData_ != null ? other.racingData_.Clone() : null;
+      oODDPIOHGML_ = other.oODDPIOHGML_ != null ? other.oODDPIOHGML_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new UpdateMovieRacingDataCsReq(this);
     }
 
-    /// <summary>Field number for the "racing_data" field.</summary>
-    public const int RacingDataFieldNumber = 2;
-    private global::EggLink.DanhengServer.Proto.RacingData racingData_;
+    /// <summary>Field number for the "OODDPIOHGML" field.</summary>
+    public const int OODDPIOHGMLFieldNumber = 8;
+    private global::EggLink.DanhengServer.Proto.RacingData oODDPIOHGML_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RacingData RacingData {
-      get { return racingData_; }
+    public global::EggLink.DanhengServer.Proto.RacingData OODDPIOHGML {
+      get { return oODDPIOHGML_; }
       set {
-        racingData_ = value;
+        oODDPIOHGML_ = value;
       }
     }
 
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(RacingData, other.RacingData)) return false;
+      if (!object.Equals(OODDPIOHGML, other.OODDPIOHGML)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -118,7 +118,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (racingData_ != null) hash ^= RacingData.GetHashCode();
+      if (oODDPIOHGML_ != null) hash ^= OODDPIOHGML.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (racingData_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(RacingData);
+      if (oODDPIOHGML_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(OODDPIOHGML);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -151,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (racingData_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(RacingData);
+      if (oODDPIOHGML_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(OODDPIOHGML);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -165,8 +165,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (racingData_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RacingData);
+      if (oODDPIOHGML_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OODDPIOHGML);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -180,11 +180,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.racingData_ != null) {
-        if (racingData_ == null) {
-          RacingData = new global::EggLink.DanhengServer.Proto.RacingData();
+      if (other.oODDPIOHGML_ != null) {
+        if (oODDPIOHGML_ == null) {
+          OODDPIOHGML = new global::EggLink.DanhengServer.Proto.RacingData();
         }
-        RacingData.MergeFrom(other.RacingData);
+        OODDPIOHGML.MergeFrom(other.OODDPIOHGML);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -201,11 +201,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
-            if (racingData_ == null) {
-              RacingData = new global::EggLink.DanhengServer.Proto.RacingData();
+          case 66: {
+            if (oODDPIOHGML_ == null) {
+              OODDPIOHGML = new global::EggLink.DanhengServer.Proto.RacingData();
             }
-            input.ReadMessage(RacingData);
+            input.ReadMessage(OODDPIOHGML);
             break;
           }
         }
@@ -223,11 +223,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
-            if (racingData_ == null) {
-              RacingData = new global::EggLink.DanhengServer.Proto.RacingData();
+          case 66: {
+            if (oODDPIOHGML_ == null) {
+              OODDPIOHGML = new global::EggLink.DanhengServer.Proto.RacingData();
             }
-            input.ReadMessage(RacingData);
+            input.ReadMessage(OODDPIOHGML);
             break;
           }
         }

@@ -25,18 +25,17 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChNSb2d1ZU1vZGlmaWVyLnByb3RvGhxDaGVzc1JvZ3VlTW9kaWZpZXJJbmZv",
-            "LnByb3RvGhpSb2d1ZU1vZGlmaWVyQ29udGVudC5wcm90bxodUm9ndWVNb2Rp",
-            "ZmllclNvdXJjZVR5cGUucHJvdG8i2AEKDVJvZ3VlTW9kaWZpZXISLwoQbW9k",
-            "aWZpZXJfY29udGVudBgEIAEoCzIVLlJvZ3VlTW9kaWZpZXJDb250ZW50EhwK",
-            "FG1haW5fbW9kaWZpZXJfZWZmZWN0GAwgASgEEjYKFG1vZGlmaWVyX3NvdXJj",
-            "ZV90eXBlGAsgASgOMhguUm9ndWVNb2RpZmllclNvdXJjZVR5cGUSMQoNbW9k",
-            "aWZpZXJfaW5mbxiUCCABKAsyFy5DaGVzc1JvZ3VlTW9kaWZpZXJJbmZvSABC",
-            "DQoLTElNQUVDT0VCUEVCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
-            "b2IGcHJvdG8z"));
+            "LnByb3RvGh1Sb2d1ZU1vZGlmaWVyU291cmNlVHlwZS5wcm90bxoaUm9ndWVN",
+            "b2RpZmllckNvbnRlbnQucHJvdG8ixwEKDVJvZ3VlTW9kaWZpZXISNgoUbW9k",
+            "aWZpZXJfc291cmNlX3R5cGUYASABKA4yGC5Sb2d1ZU1vZGlmaWVyU291cmNl",
+            "VHlwZRIvChBtb2RpZmllcl9jb250ZW50GAUgASgLMhUuUm9ndWVNb2RpZmll",
+            "ckNvbnRlbnQSHAoUbWFpbl9tb2RpZmllcl9lZmZlY3QYByABKAQSLwoNbW9k",
+            "aWZpZXJfaW5mbxiRByABKAsyFy5DaGVzc1JvZ3VlTW9kaWZpZXJJbmZvQh6q",
+            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueModifierInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueModifierContentReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueModifierSourceTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueModifierInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueModifierSourceTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueModifierContentReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueModifier), global::EggLink.DanhengServer.Proto.RogueModifier.Parser, new[]{ "ModifierContent", "MainModifierEffect", "ModifierSourceType", "ModifierInfo" }, new[]{ "LIMAECOEBPE" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueModifier), global::EggLink.DanhengServer.Proto.RogueModifier.Parser, new[]{ "ModifierSourceType", "ModifierContent", "MainModifierEffect", "ModifierInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,15 +77,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueModifier(RogueModifier other) : this() {
+      modifierSourceType_ = other.modifierSourceType_;
       modifierContent_ = other.modifierContent_ != null ? other.modifierContent_.Clone() : null;
       mainModifierEffect_ = other.mainModifierEffect_;
-      modifierSourceType_ = other.modifierSourceType_;
-      switch (other.LIMAECOEBPECase) {
-        case LIMAECOEBPEOneofCase.ModifierInfo:
-          ModifierInfo = other.ModifierInfo.Clone();
-          break;
-      }
-
+      modifierInfo_ = other.modifierInfo_ != null ? other.modifierInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -96,8 +90,20 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueModifier(this);
     }
 
+    /// <summary>Field number for the "modifier_source_type" field.</summary>
+    public const int ModifierSourceTypeFieldNumber = 1;
+    private global::EggLink.DanhengServer.Proto.RogueModifierSourceType modifierSourceType_ = global::EggLink.DanhengServer.Proto.RogueModifierSourceType.RogueModifierSourceNone;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueModifierSourceType ModifierSourceType {
+      get { return modifierSourceType_; }
+      set {
+        modifierSourceType_ = value;
+      }
+    }
+
     /// <summary>Field number for the "modifier_content" field.</summary>
-    public const int ModifierContentFieldNumber = 4;
+    public const int ModifierContentFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.RogueModifierContent modifierContent_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +115,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "main_modifier_effect" field.</summary>
-    public const int MainModifierEffectFieldNumber = 12;
+    public const int MainModifierEffectFieldNumber = 7;
     private ulong mainModifierEffect_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -120,48 +126,16 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "modifier_source_type" field.</summary>
-    public const int ModifierSourceTypeFieldNumber = 11;
-    private global::EggLink.DanhengServer.Proto.RogueModifierSourceType modifierSourceType_ = global::EggLink.DanhengServer.Proto.RogueModifierSourceType.RogueModifierSourceNone;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueModifierSourceType ModifierSourceType {
-      get { return modifierSourceType_; }
-      set {
-        modifierSourceType_ = value;
-      }
-    }
-
     /// <summary>Field number for the "modifier_info" field.</summary>
-    public const int ModifierInfoFieldNumber = 1044;
+    public const int ModifierInfoFieldNumber = 913;
+    private global::EggLink.DanhengServer.Proto.ChessRogueModifierInfo modifierInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.ChessRogueModifierInfo ModifierInfo {
-      get { return lIMAECOEBPECase_ == LIMAECOEBPEOneofCase.ModifierInfo ? (global::EggLink.DanhengServer.Proto.ChessRogueModifierInfo) lIMAECOEBPE_ : null; }
+      get { return modifierInfo_; }
       set {
-        lIMAECOEBPE_ = value;
-        lIMAECOEBPECase_ = value == null ? LIMAECOEBPEOneofCase.None : LIMAECOEBPEOneofCase.ModifierInfo;
+        modifierInfo_ = value;
       }
-    }
-
-    private object lIMAECOEBPE_;
-    /// <summary>Enum of possible cases for the "LIMAECOEBPE" oneof.</summary>
-    public enum LIMAECOEBPEOneofCase {
-      None = 0,
-      ModifierInfo = 1044,
-    }
-    private LIMAECOEBPEOneofCase lIMAECOEBPECase_ = LIMAECOEBPEOneofCase.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public LIMAECOEBPEOneofCase LIMAECOEBPECase {
-      get { return lIMAECOEBPECase_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearLIMAECOEBPE() {
-      lIMAECOEBPECase_ = LIMAECOEBPEOneofCase.None;
-      lIMAECOEBPE_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -179,11 +153,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (ModifierSourceType != other.ModifierSourceType) return false;
       if (!object.Equals(ModifierContent, other.ModifierContent)) return false;
       if (MainModifierEffect != other.MainModifierEffect) return false;
-      if (ModifierSourceType != other.ModifierSourceType) return false;
       if (!object.Equals(ModifierInfo, other.ModifierInfo)) return false;
-      if (LIMAECOEBPECase != other.LIMAECOEBPECase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -191,11 +164,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (ModifierSourceType != global::EggLink.DanhengServer.Proto.RogueModifierSourceType.RogueModifierSourceNone) hash ^= ModifierSourceType.GetHashCode();
       if (modifierContent_ != null) hash ^= ModifierContent.GetHashCode();
       if (MainModifierEffect != 0UL) hash ^= MainModifierEffect.GetHashCode();
-      if (ModifierSourceType != global::EggLink.DanhengServer.Proto.RogueModifierSourceType.RogueModifierSourceNone) hash ^= ModifierSourceType.GetHashCode();
-      if (lIMAECOEBPECase_ == LIMAECOEBPEOneofCase.ModifierInfo) hash ^= ModifierInfo.GetHashCode();
-      hash ^= (int) lIMAECOEBPECase_;
+      if (modifierInfo_ != null) hash ^= ModifierInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -214,20 +186,20 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (modifierContent_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(ModifierContent);
-      }
       if (ModifierSourceType != global::EggLink.DanhengServer.Proto.RogueModifierSourceType.RogueModifierSourceNone) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(8);
         output.WriteEnum((int) ModifierSourceType);
       }
+      if (modifierContent_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ModifierContent);
+      }
       if (MainModifierEffect != 0UL) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(56);
         output.WriteUInt64(MainModifierEffect);
       }
-      if (lIMAECOEBPECase_ == LIMAECOEBPEOneofCase.ModifierInfo) {
-        output.WriteRawTag(162, 65);
+      if (modifierInfo_ != null) {
+        output.WriteRawTag(138, 57);
         output.WriteMessage(ModifierInfo);
       }
       if (_unknownFields != null) {
@@ -240,20 +212,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (modifierContent_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(ModifierContent);
-      }
       if (ModifierSourceType != global::EggLink.DanhengServer.Proto.RogueModifierSourceType.RogueModifierSourceNone) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(8);
         output.WriteEnum((int) ModifierSourceType);
       }
+      if (modifierContent_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ModifierContent);
+      }
       if (MainModifierEffect != 0UL) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(56);
         output.WriteUInt64(MainModifierEffect);
       }
-      if (lIMAECOEBPECase_ == LIMAECOEBPEOneofCase.ModifierInfo) {
-        output.WriteRawTag(162, 65);
+      if (modifierInfo_ != null) {
+        output.WriteRawTag(138, 57);
         output.WriteMessage(ModifierInfo);
       }
       if (_unknownFields != null) {
@@ -266,16 +238,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (ModifierSourceType != global::EggLink.DanhengServer.Proto.RogueModifierSourceType.RogueModifierSourceNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ModifierSourceType);
+      }
       if (modifierContent_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModifierContent);
       }
       if (MainModifierEffect != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(MainModifierEffect);
       }
-      if (ModifierSourceType != global::EggLink.DanhengServer.Proto.RogueModifierSourceType.RogueModifierSourceNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ModifierSourceType);
-      }
-      if (lIMAECOEBPECase_ == LIMAECOEBPEOneofCase.ModifierInfo) {
+      if (modifierInfo_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ModifierInfo);
       }
       if (_unknownFields != null) {
@@ -290,6 +262,9 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.ModifierSourceType != global::EggLink.DanhengServer.Proto.RogueModifierSourceType.RogueModifierSourceNone) {
+        ModifierSourceType = other.ModifierSourceType;
+      }
       if (other.modifierContent_ != null) {
         if (modifierContent_ == null) {
           ModifierContent = new global::EggLink.DanhengServer.Proto.RogueModifierContent();
@@ -299,18 +274,12 @@ namespace EggLink.DanhengServer.Proto {
       if (other.MainModifierEffect != 0UL) {
         MainModifierEffect = other.MainModifierEffect;
       }
-      if (other.ModifierSourceType != global::EggLink.DanhengServer.Proto.RogueModifierSourceType.RogueModifierSourceNone) {
-        ModifierSourceType = other.ModifierSourceType;
+      if (other.modifierInfo_ != null) {
+        if (modifierInfo_ == null) {
+          ModifierInfo = new global::EggLink.DanhengServer.Proto.ChessRogueModifierInfo();
+        }
+        ModifierInfo.MergeFrom(other.ModifierInfo);
       }
-      switch (other.LIMAECOEBPECase) {
-        case LIMAECOEBPEOneofCase.ModifierInfo:
-          if (ModifierInfo == null) {
-            ModifierInfo = new global::EggLink.DanhengServer.Proto.ChessRogueModifierInfo();
-          }
-          ModifierInfo.MergeFrom(other.ModifierInfo);
-          break;
-      }
-
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -326,28 +295,26 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
+          case 8: {
+            ModifierSourceType = (global::EggLink.DanhengServer.Proto.RogueModifierSourceType) input.ReadEnum();
+            break;
+          }
+          case 42: {
             if (modifierContent_ == null) {
               ModifierContent = new global::EggLink.DanhengServer.Proto.RogueModifierContent();
             }
             input.ReadMessage(ModifierContent);
             break;
           }
-          case 88: {
-            ModifierSourceType = (global::EggLink.DanhengServer.Proto.RogueModifierSourceType) input.ReadEnum();
-            break;
-          }
-          case 96: {
+          case 56: {
             MainModifierEffect = input.ReadUInt64();
             break;
           }
-          case 8354: {
-            global::EggLink.DanhengServer.Proto.ChessRogueModifierInfo subBuilder = new global::EggLink.DanhengServer.Proto.ChessRogueModifierInfo();
-            if (lIMAECOEBPECase_ == LIMAECOEBPEOneofCase.ModifierInfo) {
-              subBuilder.MergeFrom(ModifierInfo);
+          case 7306: {
+            if (modifierInfo_ == null) {
+              ModifierInfo = new global::EggLink.DanhengServer.Proto.ChessRogueModifierInfo();
             }
-            input.ReadMessage(subBuilder);
-            ModifierInfo = subBuilder;
+            input.ReadMessage(ModifierInfo);
             break;
           }
         }
@@ -365,28 +332,26 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
+          case 8: {
+            ModifierSourceType = (global::EggLink.DanhengServer.Proto.RogueModifierSourceType) input.ReadEnum();
+            break;
+          }
+          case 42: {
             if (modifierContent_ == null) {
               ModifierContent = new global::EggLink.DanhengServer.Proto.RogueModifierContent();
             }
             input.ReadMessage(ModifierContent);
             break;
           }
-          case 88: {
-            ModifierSourceType = (global::EggLink.DanhengServer.Proto.RogueModifierSourceType) input.ReadEnum();
-            break;
-          }
-          case 96: {
+          case 56: {
             MainModifierEffect = input.ReadUInt64();
             break;
           }
-          case 8354: {
-            global::EggLink.DanhengServer.Proto.ChessRogueModifierInfo subBuilder = new global::EggLink.DanhengServer.Proto.ChessRogueModifierInfo();
-            if (lIMAECOEBPECase_ == LIMAECOEBPEOneofCase.ModifierInfo) {
-              subBuilder.MergeFrom(ModifierInfo);
+          case 7306: {
+            if (modifierInfo_ == null) {
+              ModifierInfo = new global::EggLink.DanhengServer.Proto.ChessRogueModifierInfo();
             }
-            input.ReadMessage(subBuilder);
-            ModifierInfo = subBuilder;
+            input.ReadMessage(ModifierInfo);
             break;
           }
         }

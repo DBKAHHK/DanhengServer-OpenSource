@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9TdGFydFRyYWNrUGhvdG9TdGFnZUNzUmVxLnByb3RvIkIKGVN0YXJ0VHJh",
-            "Y2tQaG90b1N0YWdlQ3NSZXESEAoIc3RhZ2VfaWQYAiABKA0SEwoLQktOR0NM",
-            "QURPQU4YCSABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "Y2tQaG90b1N0YWdlQ3NSZXESEAoIc3RhZ2VfaWQYDiABKA0SEwoLUEVDQUdB",
+            "TkVLR0kYBCABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StartTrackPhotoStageCsReq), global::EggLink.DanhengServer.Proto.StartTrackPhotoStageCsReq.Parser, new[]{ "StageId", "BKNGCLADOAN" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StartTrackPhotoStageCsReq), global::EggLink.DanhengServer.Proto.StartTrackPhotoStageCsReq.Parser, new[]{ "StageId", "PECAGANEKGI" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StartTrackPhotoStageCsReq(StartTrackPhotoStageCsReq other) : this() {
       stageId_ = other.stageId_;
-      bKNGCLADOAN_ = other.bKNGCLADOAN_;
+      pECAGANEKGI_ = other.pECAGANEKGI_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "stage_id" field.</summary>
-    public const int StageIdFieldNumber = 2;
+    public const int StageIdFieldNumber = 14;
     private uint stageId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "BKNGCLADOAN" field.</summary>
-    public const int BKNGCLADOANFieldNumber = 9;
-    private bool bKNGCLADOAN_;
+    /// <summary>Field number for the "PECAGANEKGI" field.</summary>
+    public const int PECAGANEKGIFieldNumber = 4;
+    private bool pECAGANEKGI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool BKNGCLADOAN {
-      get { return bKNGCLADOAN_; }
+    public bool PECAGANEKGI {
+      get { return pECAGANEKGI_; }
       set {
-        bKNGCLADOAN_ = value;
+        pECAGANEKGI_ = value;
       }
     }
 
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (StageId != other.StageId) return false;
-      if (BKNGCLADOAN != other.BKNGCLADOAN) return false;
+      if (PECAGANEKGI != other.PECAGANEKGI) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (StageId != 0) hash ^= StageId.GetHashCode();
-      if (BKNGCLADOAN != false) hash ^= BKNGCLADOAN.GetHashCode();
+      if (PECAGANEKGI != false) hash ^= PECAGANEKGI.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (StageId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(StageId);
+      if (PECAGANEKGI != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(PECAGANEKGI);
       }
-      if (BKNGCLADOAN != false) {
-        output.WriteRawTag(72);
-        output.WriteBool(BKNGCLADOAN);
+      if (StageId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(StageId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (StageId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(StageId);
+      if (PECAGANEKGI != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(PECAGANEKGI);
       }
-      if (BKNGCLADOAN != false) {
-        output.WriteRawTag(72);
-        output.WriteBool(BKNGCLADOAN);
+      if (StageId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(StageId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -191,7 +191,7 @@ namespace EggLink.DanhengServer.Proto {
       if (StageId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(StageId);
       }
-      if (BKNGCLADOAN != false) {
+      if (PECAGANEKGI != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -209,8 +209,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.StageId != 0) {
         StageId = other.StageId;
       }
-      if (other.BKNGCLADOAN != false) {
-        BKNGCLADOAN = other.BKNGCLADOAN;
+      if (other.PECAGANEKGI != false) {
+        PECAGANEKGI = other.PECAGANEKGI;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            StageId = input.ReadUInt32();
+          case 32: {
+            PECAGANEKGI = input.ReadBool();
             break;
           }
-          case 72: {
-            BKNGCLADOAN = input.ReadBool();
+          case 112: {
+            StageId = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            StageId = input.ReadUInt32();
+          case 32: {
+            PECAGANEKGI = input.ReadBool();
             break;
           }
-          case 72: {
-            BKNGCLADOAN = input.ReadBool();
+          case 112: {
+            StageId = input.ReadUInt32();
             break;
           }
         }

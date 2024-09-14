@@ -24,12 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static EnterSceneReasonReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZFbnRlclNjZW5lUmVhc29uLnByb3RvKqgBChBFbnRlclNjZW5lUmVhc29u",
+            "ChZFbnRlclNjZW5lUmVhc29uLnByb3RvKtABChBFbnRlclNjZW5lUmVhc29u",
             "EhsKF0VOVEVSX1NDRU5FX1JFQVNPTl9OT05FEAASKAokRU5URVJfU0NFTkVf",
             "UkVBU09OX0NIQUxMRU5HRV9USU1FT1VUEAESJAogRU5URVJfU0NFTkVfUkVB",
             "U09OX1JPR1VFX1RJTUVPVVQQAhInCiNFTlRFUl9TQ0VORV9SRUFTT05fQ0hB",
-            "TkdFX1NUT1JZTElORRADQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
-            "dG9iBnByb3RvMw=="));
+            "TkdFX1NUT1JZTElORRADEiYKIkVOVEVSX1NDRU5FX1JFQVNPTl9ESU1FTlNJ",
+            "T05fTUVSR0UQBEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.EnterSceneReason), }, null, null));
@@ -43,6 +44,7 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("ENTER_SCENE_REASON_CHALLENGE_TIMEOUT")] ChallengeTimeout = 1,
     [pbr::OriginalName("ENTER_SCENE_REASON_ROGUE_TIMEOUT")] RogueTimeout = 2,
     [pbr::OriginalName("ENTER_SCENE_REASON_CHANGE_STORYLINE")] ChangeStoryline = 3,
+    [pbr::OriginalName("ENTER_SCENE_REASON_DIMENSION_MERGE")] DimensionMerge = 4,
   }
 
   #endregion

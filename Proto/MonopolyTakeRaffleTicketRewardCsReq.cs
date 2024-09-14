@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CilNb25vcG9seVRha2VSYWZmbGVUaWNrZXRSZXdhcmRDc1JlcS5wcm90byJL",
-            "CiNNb25vcG9seVRha2VSYWZmbGVUaWNrZXRSZXdhcmRDc1JlcRITCgtKTktL",
-            "Qk9PS0VIThgOIAEoBBIPCgdwb29sX2lkGAsgASgNQh6qAhtFZ2dMaW5rLkRh",
+            "CiNNb25vcG9seVRha2VSYWZmbGVUaWNrZXRSZXdhcmRDc1JlcRITCgtLUEhE",
+            "QU1FREVJTRgOIAEoBBIPCgdwb29sX2lkGAsgASgNQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonopolyTakeRaffleTicketRewardCsReq), global::EggLink.DanhengServer.Proto.MonopolyTakeRaffleTicketRewardCsReq.Parser, new[]{ "JNKKBOOKEHN", "PoolId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonopolyTakeRaffleTicketRewardCsReq), global::EggLink.DanhengServer.Proto.MonopolyTakeRaffleTicketRewardCsReq.Parser, new[]{ "KPHDAMEDEIM", "PoolId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MonopolyTakeRaffleTicketRewardCsReq(MonopolyTakeRaffleTicketRewardCsReq other) : this() {
-      jNKKBOOKEHN_ = other.jNKKBOOKEHN_;
+      kPHDAMEDEIM_ = other.kPHDAMEDEIM_;
       poolId_ = other.poolId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,15 +84,15 @@ namespace EggLink.DanhengServer.Proto {
       return new MonopolyTakeRaffleTicketRewardCsReq(this);
     }
 
-    /// <summary>Field number for the "JNKKBOOKEHN" field.</summary>
-    public const int JNKKBOOKEHNFieldNumber = 14;
-    private ulong jNKKBOOKEHN_;
+    /// <summary>Field number for the "KPHDAMEDEIM" field.</summary>
+    public const int KPHDAMEDEIMFieldNumber = 14;
+    private ulong kPHDAMEDEIM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong JNKKBOOKEHN {
-      get { return jNKKBOOKEHN_; }
+    public ulong KPHDAMEDEIM {
+      get { return kPHDAMEDEIM_; }
       set {
-        jNKKBOOKEHN_ = value;
+        kPHDAMEDEIM_ = value;
       }
     }
 
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (JNKKBOOKEHN != other.JNKKBOOKEHN) return false;
+      if (KPHDAMEDEIM != other.KPHDAMEDEIM) return false;
       if (PoolId != other.PoolId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -132,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (JNKKBOOKEHN != 0UL) hash ^= JNKKBOOKEHN.GetHashCode();
+      if (KPHDAMEDEIM != 0UL) hash ^= KPHDAMEDEIM.GetHashCode();
       if (PoolId != 0) hash ^= PoolId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -156,9 +156,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(88);
         output.WriteUInt32(PoolId);
       }
-      if (JNKKBOOKEHN != 0UL) {
+      if (KPHDAMEDEIM != 0UL) {
         output.WriteRawTag(112);
-        output.WriteUInt64(JNKKBOOKEHN);
+        output.WriteUInt64(KPHDAMEDEIM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -174,9 +174,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(88);
         output.WriteUInt32(PoolId);
       }
-      if (JNKKBOOKEHN != 0UL) {
+      if (KPHDAMEDEIM != 0UL) {
         output.WriteRawTag(112);
-        output.WriteUInt64(JNKKBOOKEHN);
+        output.WriteUInt64(KPHDAMEDEIM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,8 +188,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (JNKKBOOKEHN != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(JNKKBOOKEHN);
+      if (KPHDAMEDEIM != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(KPHDAMEDEIM);
       }
       if (PoolId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PoolId);
@@ -206,8 +206,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.JNKKBOOKEHN != 0UL) {
-        JNKKBOOKEHN = other.JNKKBOOKEHN;
+      if (other.KPHDAMEDEIM != 0UL) {
+        KPHDAMEDEIM = other.KPHDAMEDEIM;
       }
       if (other.PoolId != 0) {
         PoolId = other.PoolId;
@@ -232,7 +232,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 112: {
-            JNKKBOOKEHN = input.ReadUInt64();
+            KPHDAMEDEIM = input.ReadUInt64();
             break;
           }
         }
@@ -255,7 +255,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 112: {
-            JNKKBOOKEHN = input.ReadUInt64();
+            KPHDAMEDEIM = input.ReadUInt64();
             break;
           }
         }

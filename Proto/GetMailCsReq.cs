@@ -24,14 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static GetMailCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJHZXRNYWlsQ3NSZXEucHJvdG8iTAoMR2V0TWFpbENzUmVxEicKH01VU0VV",
-            "TV9SQU5ET01fRVZFTlRfU1RBVEVfU1RBUlQYCyABKA0SEwoLREhQTkVHUERI",
-            "Rk4YByABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
-            "dG8z"));
+            "ChJHZXRNYWlsQ3NSZXEucHJvdG8iMgoMR2V0TWFpbENzUmVxEg0KBXN0YXJ0",
+            "GAwgASgNEhMKC0hFTFBIR0VLTVBJGAogASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMailCsReq), global::EggLink.DanhengServer.Proto.GetMailCsReq.Parser, new[]{ "MUSEUMRANDOMEVENTSTATESTART", "DHPNEGPDHFN" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMailCsReq), global::EggLink.DanhengServer.Proto.GetMailCsReq.Parser, new[]{ "Start", "HELPHGEKMPI" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetMailCsReq(GetMailCsReq other) : this() {
-      mUSEUMRANDOMEVENTSTATESTART_ = other.mUSEUMRANDOMEVENTSTATESTART_;
-      dHPNEGPDHFN_ = other.dHPNEGPDHFN_;
+      start_ = other.start_;
+      hELPHGEKMPI_ = other.hELPHGEKMPI_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,27 +83,27 @@ namespace EggLink.DanhengServer.Proto {
       return new GetMailCsReq(this);
     }
 
-    /// <summary>Field number for the "MUSEUM_RANDOM_EVENT_STATE_START" field.</summary>
-    public const int MUSEUMRANDOMEVENTSTATESTARTFieldNumber = 11;
-    private uint mUSEUMRANDOMEVENTSTATESTART_;
+    /// <summary>Field number for the "start" field.</summary>
+    public const int StartFieldNumber = 12;
+    private uint start_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MUSEUMRANDOMEVENTSTATESTART {
-      get { return mUSEUMRANDOMEVENTSTATESTART_; }
+    public uint Start {
+      get { return start_; }
       set {
-        mUSEUMRANDOMEVENTSTATESTART_ = value;
+        start_ = value;
       }
     }
 
-    /// <summary>Field number for the "DHPNEGPDHFN" field.</summary>
-    public const int DHPNEGPDHFNFieldNumber = 7;
-    private uint dHPNEGPDHFN_;
+    /// <summary>Field number for the "HELPHGEKMPI" field.</summary>
+    public const int HELPHGEKMPIFieldNumber = 10;
+    private uint hELPHGEKMPI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DHPNEGPDHFN {
-      get { return dHPNEGPDHFN_; }
+    public uint HELPHGEKMPI {
+      get { return hELPHGEKMPI_; }
       set {
-        dHPNEGPDHFN_ = value;
+        hELPHGEKMPI_ = value;
       }
     }
 
@@ -123,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MUSEUMRANDOMEVENTSTATESTART != other.MUSEUMRANDOMEVENTSTATESTART) return false;
-      if (DHPNEGPDHFN != other.DHPNEGPDHFN) return false;
+      if (Start != other.Start) return false;
+      if (HELPHGEKMPI != other.HELPHGEKMPI) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MUSEUMRANDOMEVENTSTATESTART != 0) hash ^= MUSEUMRANDOMEVENTSTATESTART.GetHashCode();
-      if (DHPNEGPDHFN != 0) hash ^= DHPNEGPDHFN.GetHashCode();
+      if (Start != 0) hash ^= Start.GetHashCode();
+      if (HELPHGEKMPI != 0) hash ^= HELPHGEKMPI.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (DHPNEGPDHFN != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(DHPNEGPDHFN);
+      if (HELPHGEKMPI != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(HELPHGEKMPI);
       }
-      if (MUSEUMRANDOMEVENTSTATESTART != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(MUSEUMRANDOMEVENTSTATESTART);
+      if (Start != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Start);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (DHPNEGPDHFN != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(DHPNEGPDHFN);
+      if (HELPHGEKMPI != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(HELPHGEKMPI);
       }
-      if (MUSEUMRANDOMEVENTSTATESTART != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(MUSEUMRANDOMEVENTSTATESTART);
+      if (Start != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Start);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MUSEUMRANDOMEVENTSTATESTART != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MUSEUMRANDOMEVENTSTATESTART);
+      if (Start != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Start);
       }
-      if (DHPNEGPDHFN != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DHPNEGPDHFN);
+      if (HELPHGEKMPI != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HELPHGEKMPI);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MUSEUMRANDOMEVENTSTATESTART != 0) {
-        MUSEUMRANDOMEVENTSTATESTART = other.MUSEUMRANDOMEVENTSTATESTART;
+      if (other.Start != 0) {
+        Start = other.Start;
       }
-      if (other.DHPNEGPDHFN != 0) {
-        DHPNEGPDHFN = other.DHPNEGPDHFN;
+      if (other.HELPHGEKMPI != 0) {
+        HELPHGEKMPI = other.HELPHGEKMPI;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            DHPNEGPDHFN = input.ReadUInt32();
+          case 80: {
+            HELPHGEKMPI = input.ReadUInt32();
             break;
           }
-          case 88: {
-            MUSEUMRANDOMEVENTSTATESTART = input.ReadUInt32();
+          case 96: {
+            Start = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            DHPNEGPDHFN = input.ReadUInt32();
+          case 80: {
+            HELPHGEKMPI = input.ReadUInt32();
             break;
           }
-          case 88: {
-            MUSEUMRANDOMEVENTSTATESTART = input.ReadUInt32();
+          case 96: {
+            Start = input.ReadUInt32();
             break;
           }
         }

@@ -27,16 +27,16 @@ namespace EggLink.DanhengServer.Proto {
             "CiNSb2d1ZUNvbW1vbkRpYWxvZ3VlT3B0aW9uSW5mby5wcm90bxopUm9ndWVD",
             "b21tb25EaWFsb2d1ZU9wdGlvblJlc3VsdEluZm8ucHJvdG8aKlJvZ3VlQ29t",
             "bW9uRGlhbG9ndWVPcHRpb25EaXNwbGF5SW5mby5wcm90byLlAQodUm9ndWVD",
-            "b21tb25EaWFsb2d1ZU9wdGlvbkluZm8SEQoJb3B0aW9uX2lkGAkgASgNEkAK",
-            "Em9wdGlvbl9yZXN1bHRfaW5mbxgIIAMoCzIkLlJvZ3VlQ29tbW9uRGlhbG9n",
-            "dWVPcHRpb25SZXN1bHRJbmZvEg4KBmFyZ19pZBgGIAEoDRIPCgdjb25maXJt",
-            "GA0gASgIEhAKCGlzX3ZhbGlkGAUgASgIEjwKDWRpc3BsYXlfdmFsdWUYDiAB",
-            "KAsyJS5Sb2d1ZUNvbW1vbkRpYWxvZ3VlT3B0aW9uRGlzcGxheUluZm9CHqoC",
+            "b21tb25EaWFsb2d1ZU9wdGlvbkluZm8SQAoSb3B0aW9uX3Jlc3VsdF9pbmZv",
+            "GAwgAygLMiQuUm9ndWVDb21tb25EaWFsb2d1ZU9wdGlvblJlc3VsdEluZm8S",
+            "PAoNZGlzcGxheV92YWx1ZRgLIAEoCzIlLlJvZ3VlQ29tbW9uRGlhbG9ndWVP",
+            "cHRpb25EaXNwbGF5SW5mbxIOCgZhcmdfaWQYASABKA0SEQoJb3B0aW9uX2lk",
+            "GAYgASgNEhAKCGlzX3ZhbGlkGAUgASgIEg8KB2NvbmZpcm0YByABKAhCHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionResultInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionDisplayInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfo), global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfo.Parser, new[]{ "OptionId", "OptionResultInfo", "ArgId", "Confirm", "IsValid", "DisplayValue" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfo), global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfo.Parser, new[]{ "OptionResultInfo", "DisplayValue", "ArgId", "OptionId", "IsValid", "Confirm" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,12 +78,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueCommonDialogueOptionInfo(RogueCommonDialogueOptionInfo other) : this() {
-      optionId_ = other.optionId_;
       optionResultInfo_ = other.optionResultInfo_.Clone();
-      argId_ = other.argId_;
-      confirm_ = other.confirm_;
-      isValid_ = other.isValid_;
       displayValue_ = other.displayValue_ != null ? other.displayValue_.Clone() : null;
+      argId_ = other.argId_;
+      optionId_ = other.optionId_;
+      isValid_ = other.isValid_;
+      confirm_ = other.confirm_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -93,22 +93,10 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueCommonDialogueOptionInfo(this);
     }
 
-    /// <summary>Field number for the "option_id" field.</summary>
-    public const int OptionIdFieldNumber = 9;
-    private uint optionId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint OptionId {
-      get { return optionId_; }
-      set {
-        optionId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "option_result_info" field.</summary>
-    public const int OptionResultInfoFieldNumber = 8;
+    public const int OptionResultInfoFieldNumber = 12;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionResultInfo> _repeated_optionResultInfo_codec
-        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionResultInfo.Parser);
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionResultInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionResultInfo> optionResultInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionResultInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -116,8 +104,20 @@ namespace EggLink.DanhengServer.Proto {
       get { return optionResultInfo_; }
     }
 
+    /// <summary>Field number for the "display_value" field.</summary>
+    public const int DisplayValueFieldNumber = 11;
+    private global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionDisplayInfo displayValue_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionDisplayInfo DisplayValue {
+      get { return displayValue_; }
+      set {
+        displayValue_ = value;
+      }
+    }
+
     /// <summary>Field number for the "arg_id" field.</summary>
-    public const int ArgIdFieldNumber = 6;
+    public const int ArgIdFieldNumber = 1;
     private uint argId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -128,15 +128,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "confirm" field.</summary>
-    public const int ConfirmFieldNumber = 13;
-    private bool confirm_;
+    /// <summary>Field number for the "option_id" field.</summary>
+    public const int OptionIdFieldNumber = 6;
+    private uint optionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Confirm {
-      get { return confirm_; }
+    public uint OptionId {
+      get { return optionId_; }
       set {
-        confirm_ = value;
+        optionId_ = value;
       }
     }
 
@@ -152,15 +152,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "display_value" field.</summary>
-    public const int DisplayValueFieldNumber = 14;
-    private global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionDisplayInfo displayValue_;
+    /// <summary>Field number for the "confirm" field.</summary>
+    public const int ConfirmFieldNumber = 7;
+    private bool confirm_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionDisplayInfo DisplayValue {
-      get { return displayValue_; }
+    public bool Confirm {
+      get { return confirm_; }
       set {
-        displayValue_ = value;
+        confirm_ = value;
       }
     }
 
@@ -179,12 +179,12 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (OptionId != other.OptionId) return false;
       if(!optionResultInfo_.Equals(other.optionResultInfo_)) return false;
-      if (ArgId != other.ArgId) return false;
-      if (Confirm != other.Confirm) return false;
-      if (IsValid != other.IsValid) return false;
       if (!object.Equals(DisplayValue, other.DisplayValue)) return false;
+      if (ArgId != other.ArgId) return false;
+      if (OptionId != other.OptionId) return false;
+      if (IsValid != other.IsValid) return false;
+      if (Confirm != other.Confirm) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -192,12 +192,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (OptionId != 0) hash ^= OptionId.GetHashCode();
       hash ^= optionResultInfo_.GetHashCode();
-      if (ArgId != 0) hash ^= ArgId.GetHashCode();
-      if (Confirm != false) hash ^= Confirm.GetHashCode();
-      if (IsValid != false) hash ^= IsValid.GetHashCode();
       if (displayValue_ != null) hash ^= DisplayValue.GetHashCode();
+      if (ArgId != 0) hash ^= ArgId.GetHashCode();
+      if (OptionId != 0) hash ^= OptionId.GetHashCode();
+      if (IsValid != false) hash ^= IsValid.GetHashCode();
+      if (Confirm != false) hash ^= Confirm.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -216,27 +216,27 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (ArgId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(ArgId);
+      }
       if (IsValid != false) {
         output.WriteRawTag(40);
         output.WriteBool(IsValid);
       }
-      if (ArgId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(ArgId);
-      }
-      optionResultInfo_.WriteTo(output, _repeated_optionResultInfo_codec);
       if (OptionId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(48);
         output.WriteUInt32(OptionId);
       }
       if (Confirm != false) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(56);
         output.WriteBool(Confirm);
       }
       if (displayValue_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(90);
         output.WriteMessage(DisplayValue);
       }
+      optionResultInfo_.WriteTo(output, _repeated_optionResultInfo_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -247,27 +247,27 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ArgId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(ArgId);
+      }
       if (IsValid != false) {
         output.WriteRawTag(40);
         output.WriteBool(IsValid);
       }
-      if (ArgId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(ArgId);
-      }
-      optionResultInfo_.WriteTo(ref output, _repeated_optionResultInfo_codec);
       if (OptionId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(48);
         output.WriteUInt32(OptionId);
       }
       if (Confirm != false) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(56);
         output.WriteBool(Confirm);
       }
       if (displayValue_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(90);
         output.WriteMessage(DisplayValue);
       }
+      optionResultInfo_.WriteTo(ref output, _repeated_optionResultInfo_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -278,21 +278,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (OptionId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OptionId);
-      }
       size += optionResultInfo_.CalculateSize(_repeated_optionResultInfo_codec);
+      if (displayValue_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DisplayValue);
+      }
       if (ArgId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ArgId);
       }
-      if (Confirm != false) {
-        size += 1 + 1;
+      if (OptionId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OptionId);
       }
       if (IsValid != false) {
         size += 1 + 1;
       }
-      if (displayValue_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DisplayValue);
+      if (Confirm != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -306,24 +306,24 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.OptionId != 0) {
-        OptionId = other.OptionId;
-      }
       optionResultInfo_.Add(other.optionResultInfo_);
-      if (other.ArgId != 0) {
-        ArgId = other.ArgId;
-      }
-      if (other.Confirm != false) {
-        Confirm = other.Confirm;
-      }
-      if (other.IsValid != false) {
-        IsValid = other.IsValid;
-      }
       if (other.displayValue_ != null) {
         if (displayValue_ == null) {
           DisplayValue = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionDisplayInfo();
         }
         DisplayValue.MergeFrom(other.DisplayValue);
+      }
+      if (other.ArgId != 0) {
+        ArgId = other.ArgId;
+      }
+      if (other.OptionId != 0) {
+        OptionId = other.OptionId;
+      }
+      if (other.IsValid != false) {
+        IsValid = other.IsValid;
+      }
+      if (other.Confirm != false) {
+        Confirm = other.Confirm;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -340,31 +340,31 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 8: {
+            ArgId = input.ReadUInt32();
+            break;
+          }
           case 40: {
             IsValid = input.ReadBool();
             break;
           }
           case 48: {
-            ArgId = input.ReadUInt32();
-            break;
-          }
-          case 66: {
-            optionResultInfo_.AddEntriesFrom(input, _repeated_optionResultInfo_codec);
-            break;
-          }
-          case 72: {
             OptionId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 56: {
             Confirm = input.ReadBool();
             break;
           }
-          case 114: {
+          case 90: {
             if (displayValue_ == null) {
               DisplayValue = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionDisplayInfo();
             }
             input.ReadMessage(DisplayValue);
+            break;
+          }
+          case 98: {
+            optionResultInfo_.AddEntriesFrom(input, _repeated_optionResultInfo_codec);
             break;
           }
         }
@@ -382,31 +382,31 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 8: {
+            ArgId = input.ReadUInt32();
+            break;
+          }
           case 40: {
             IsValid = input.ReadBool();
             break;
           }
           case 48: {
-            ArgId = input.ReadUInt32();
-            break;
-          }
-          case 66: {
-            optionResultInfo_.AddEntriesFrom(ref input, _repeated_optionResultInfo_codec);
-            break;
-          }
-          case 72: {
             OptionId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 56: {
             Confirm = input.ReadBool();
             break;
           }
-          case 114: {
+          case 90: {
             if (displayValue_ == null) {
               DisplayValue = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionDisplayInfo();
             }
             input.ReadMessage(DisplayValue);
+            break;
+          }
+          case 98: {
+            optionResultInfo_.AddEntriesFrom(ref input, _repeated_optionResultInfo_codec);
             break;
           }
         }

@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChxTY2VuZUVudGl0eVJlZnJlc2hJbmZvLnByb3RvGhVTY2VuZUVudGl0eUlu",
             "Zm8ucHJvdG8iewoWU2NlbmVFbnRpdHlSZWZyZXNoSW5mbxImCgphZGRfZW50",
-            "aXR5GAYgASgLMhAuU2NlbmVFbnRpdHlJbmZvSAASFQoLTlBKTEtMT0tOSUsY",
-            "CSABKA1IABIXCg1kZWxldGVfZW50aXR5GAQgASgNSABCCQoHcmVmcmVzaEIe",
+            "aXR5GAUgASgLMhAuU2NlbmVFbnRpdHlJbmZvSAASFQoLTkhNTEVOS0lQTU8Y",
+            "AyABKA1IABIXCg1kZWxldGVfZW50aXR5GA4gASgNSABCCQoHcmVmcmVzaEIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneEntityInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo), global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo.Parser, new[]{ "AddEntity", "NPJLKLOKNIK", "DeleteEntity" }, new[]{ "Refresh" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo), global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo.Parser, new[]{ "AddEntity", "NHMLENKIPMO", "DeleteEntity" }, new[]{ "Refresh" }, null, null, null)
           }));
     }
     #endregion
@@ -78,8 +78,8 @@ namespace EggLink.DanhengServer.Proto {
         case RefreshOneofCase.AddEntity:
           AddEntity = other.AddEntity.Clone();
           break;
-        case RefreshOneofCase.NPJLKLOKNIK:
-          NPJLKLOKNIK = other.NPJLKLOKNIK;
+        case RefreshOneofCase.NHMLENKIPMO:
+          NHMLENKIPMO = other.NHMLENKIPMO;
           break;
         case RefreshOneofCase.DeleteEntity:
           DeleteEntity = other.DeleteEntity;
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "add_entity" field.</summary>
-    public const int AddEntityFieldNumber = 6;
+    public const int AddEntityFieldNumber = 5;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.SceneEntityInfo AddEntity {
@@ -107,40 +107,34 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "NPJLKLOKNIK" field.</summary>
-    public const int NPJLKLOKNIKFieldNumber = 9;
-    /// <summary>
-    /// 4
-    /// </summary>
+    /// <summary>Field number for the "NHMLENKIPMO" field.</summary>
+    public const int NHMLENKIPMOFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NPJLKLOKNIK {
-      get { return HasNPJLKLOKNIK ? (uint) refresh_ : 0; }
+    public uint NHMLENKIPMO {
+      get { return HasNHMLENKIPMO ? (uint) refresh_ : 0; }
       set {
         refresh_ = value;
-        refreshCase_ = RefreshOneofCase.NPJLKLOKNIK;
+        refreshCase_ = RefreshOneofCase.NHMLENKIPMO;
       }
     }
-    /// <summary>Gets whether the "NPJLKLOKNIK" field is set</summary>
+    /// <summary>Gets whether the "NHMLENKIPMO" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasNPJLKLOKNIK {
-      get { return refreshCase_ == RefreshOneofCase.NPJLKLOKNIK; }
+    public bool HasNHMLENKIPMO {
+      get { return refreshCase_ == RefreshOneofCase.NHMLENKIPMO; }
     }
-    /// <summary> Clears the value of the oneof if it's currently set to "NPJLKLOKNIK" </summary>
+    /// <summary> Clears the value of the oneof if it's currently set to "NHMLENKIPMO" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearNPJLKLOKNIK() {
-      if (HasNPJLKLOKNIK) {
+    public void ClearNHMLENKIPMO() {
+      if (HasNHMLENKIPMO) {
         ClearRefresh();
       }
     }
 
     /// <summary>Field number for the "delete_entity" field.</summary>
-    public const int DeleteEntityFieldNumber = 4;
-    /// <summary>
-    /// 9
-    /// </summary>
+    public const int DeleteEntityFieldNumber = 14;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint DeleteEntity {
@@ -169,9 +163,9 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "refresh" oneof.</summary>
     public enum RefreshOneofCase {
       None = 0,
-      AddEntity = 6,
-      NPJLKLOKNIK = 9,
-      DeleteEntity = 4,
+      AddEntity = 5,
+      NHMLENKIPMO = 3,
+      DeleteEntity = 14,
     }
     private RefreshOneofCase refreshCase_ = RefreshOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -203,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(AddEntity, other.AddEntity)) return false;
-      if (NPJLKLOKNIK != other.NPJLKLOKNIK) return false;
+      if (NHMLENKIPMO != other.NHMLENKIPMO) return false;
       if (DeleteEntity != other.DeleteEntity) return false;
       if (RefreshCase != other.RefreshCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -214,7 +208,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (refreshCase_ == RefreshOneofCase.AddEntity) hash ^= AddEntity.GetHashCode();
-      if (HasNPJLKLOKNIK) hash ^= NPJLKLOKNIK.GetHashCode();
+      if (HasNHMLENKIPMO) hash ^= NHMLENKIPMO.GetHashCode();
       if (HasDeleteEntity) hash ^= DeleteEntity.GetHashCode();
       hash ^= (int) refreshCase_;
       if (_unknownFields != null) {
@@ -235,17 +229,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (HasDeleteEntity) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(DeleteEntity);
+      if (HasNHMLENKIPMO) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(NHMLENKIPMO);
       }
       if (refreshCase_ == RefreshOneofCase.AddEntity) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(42);
         output.WriteMessage(AddEntity);
       }
-      if (HasNPJLKLOKNIK) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(NPJLKLOKNIK);
+      if (HasDeleteEntity) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(DeleteEntity);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -257,17 +251,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HasDeleteEntity) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(DeleteEntity);
+      if (HasNHMLENKIPMO) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(NHMLENKIPMO);
       }
       if (refreshCase_ == RefreshOneofCase.AddEntity) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(42);
         output.WriteMessage(AddEntity);
       }
-      if (HasNPJLKLOKNIK) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(NPJLKLOKNIK);
+      if (HasDeleteEntity) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(DeleteEntity);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -282,8 +276,8 @@ namespace EggLink.DanhengServer.Proto {
       if (refreshCase_ == RefreshOneofCase.AddEntity) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AddEntity);
       }
-      if (HasNPJLKLOKNIK) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NPJLKLOKNIK);
+      if (HasNHMLENKIPMO) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NHMLENKIPMO);
       }
       if (HasDeleteEntity) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DeleteEntity);
@@ -307,8 +301,8 @@ namespace EggLink.DanhengServer.Proto {
           }
           AddEntity.MergeFrom(other.AddEntity);
           break;
-        case RefreshOneofCase.NPJLKLOKNIK:
-          NPJLKLOKNIK = other.NPJLKLOKNIK;
+        case RefreshOneofCase.NHMLENKIPMO:
+          NHMLENKIPMO = other.NHMLENKIPMO;
           break;
         case RefreshOneofCase.DeleteEntity:
           DeleteEntity = other.DeleteEntity;
@@ -330,11 +324,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            DeleteEntity = input.ReadUInt32();
+          case 24: {
+            NHMLENKIPMO = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 42: {
             global::EggLink.DanhengServer.Proto.SceneEntityInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneEntityInfo();
             if (refreshCase_ == RefreshOneofCase.AddEntity) {
               subBuilder.MergeFrom(AddEntity);
@@ -343,8 +337,8 @@ namespace EggLink.DanhengServer.Proto {
             AddEntity = subBuilder;
             break;
           }
-          case 72: {
-            NPJLKLOKNIK = input.ReadUInt32();
+          case 112: {
+            DeleteEntity = input.ReadUInt32();
             break;
           }
         }
@@ -362,11 +356,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            DeleteEntity = input.ReadUInt32();
+          case 24: {
+            NHMLENKIPMO = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 42: {
             global::EggLink.DanhengServer.Proto.SceneEntityInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneEntityInfo();
             if (refreshCase_ == RefreshOneofCase.AddEntity) {
               subBuilder.MergeFrom(AddEntity);
@@ -375,8 +369,8 @@ namespace EggLink.DanhengServer.Proto {
             AddEntity = subBuilder;
             break;
           }
-          case 72: {
-            NPJLKLOKNIK = input.ReadUInt32();
+          case 112: {
+            DeleteEntity = input.ReadUInt32();
             break;
           }
         }

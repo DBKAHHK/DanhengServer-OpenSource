@@ -24,14 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static RogueTournStartCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpSb2d1ZVRvdXJuU3RhcnRDc1JlcS5wcm90byJuChRSb2d1ZVRvdXJuU3Rh",
-            "cnRDc1JlcRIaChJkaWZmaWN1bHR5X2lkX2xpc3QYCCADKA0SDwoHYXJlYV9p",
-            "ZBgGIAEoDRIbChNiYXNlX2F2YXRhcl9pZF9saXN0GAIgAygNEgwKBHdlZWsY",
-            "ASABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChpSb2d1ZVRvdXJuU3RhcnRDc1JlcS5wcm90byJ0ChRSb2d1ZVRvdXJuU3Rh",
+            "cnRDc1JlcRIMCgR3ZWVrGAMgASgNEiAKGHN0YXJ0X2RpZmZpY3VsdHlfaWRf",
+            "bGlzdBgGIAMoDRIPCgdhcmVhX2lkGAggASgNEhsKE2Jhc2VfYXZhdGFyX2lk",
+            "X2xpc3QYCiADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournStartCsReq), global::EggLink.DanhengServer.Proto.RogueTournStartCsReq.Parser, new[]{ "DifficultyIdList", "AreaId", "BaseAvatarIdList", "Week" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournStartCsReq), global::EggLink.DanhengServer.Proto.RogueTournStartCsReq.Parser, new[]{ "Week", "StartDifficultyIdList", "AreaId", "BaseAvatarIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournStartCsReq(RogueTournStartCsReq other) : this() {
-      difficultyIdList_ = other.difficultyIdList_.Clone();
+      week_ = other.week_;
+      startDifficultyIdList_ = other.startDifficultyIdList_.Clone();
       areaId_ = other.areaId_;
       baseAvatarIdList_ = other.baseAvatarIdList_.Clone();
-      week_ = other.week_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,19 +87,31 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournStartCsReq(this);
     }
 
-    /// <summary>Field number for the "difficulty_id_list" field.</summary>
-    public const int DifficultyIdListFieldNumber = 8;
-    private static readonly pb::FieldCodec<uint> _repeated_difficultyIdList_codec
-        = pb::FieldCodec.ForUInt32(66);
-    private readonly pbc::RepeatedField<uint> difficultyIdList_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "week" field.</summary>
+    public const int WeekFieldNumber = 3;
+    private uint week_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> DifficultyIdList {
-      get { return difficultyIdList_; }
+    public uint Week {
+      get { return week_; }
+      set {
+        week_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "start_difficulty_id_list" field.</summary>
+    public const int StartDifficultyIdListFieldNumber = 6;
+    private static readonly pb::FieldCodec<uint> _repeated_startDifficultyIdList_codec
+        = pb::FieldCodec.ForUInt32(50);
+    private readonly pbc::RepeatedField<uint> startDifficultyIdList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> StartDifficultyIdList {
+      get { return startDifficultyIdList_; }
     }
 
     /// <summary>Field number for the "area_id" field.</summary>
-    public const int AreaIdFieldNumber = 6;
+    public const int AreaIdFieldNumber = 8;
     private uint areaId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,26 +123,14 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "base_avatar_id_list" field.</summary>
-    public const int BaseAvatarIdListFieldNumber = 2;
+    public const int BaseAvatarIdListFieldNumber = 10;
     private static readonly pb::FieldCodec<uint> _repeated_baseAvatarIdList_codec
-        = pb::FieldCodec.ForUInt32(18);
+        = pb::FieldCodec.ForUInt32(82);
     private readonly pbc::RepeatedField<uint> baseAvatarIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<uint> BaseAvatarIdList {
       get { return baseAvatarIdList_; }
-    }
-
-    /// <summary>Field number for the "week" field.</summary>
-    public const int WeekFieldNumber = 1;
-    private uint week_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Week {
-      get { return week_; }
-      set {
-        week_ = value;
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -147,10 +148,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!difficultyIdList_.Equals(other.difficultyIdList_)) return false;
+      if (Week != other.Week) return false;
+      if(!startDifficultyIdList_.Equals(other.startDifficultyIdList_)) return false;
       if (AreaId != other.AreaId) return false;
       if(!baseAvatarIdList_.Equals(other.baseAvatarIdList_)) return false;
-      if (Week != other.Week) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -158,10 +159,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= difficultyIdList_.GetHashCode();
+      if (Week != 0) hash ^= Week.GetHashCode();
+      hash ^= startDifficultyIdList_.GetHashCode();
       if (AreaId != 0) hash ^= AreaId.GetHashCode();
       hash ^= baseAvatarIdList_.GetHashCode();
-      if (Week != 0) hash ^= Week.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -181,15 +182,15 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Week != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(24);
         output.WriteUInt32(Week);
       }
-      baseAvatarIdList_.WriteTo(output, _repeated_baseAvatarIdList_codec);
+      startDifficultyIdList_.WriteTo(output, _repeated_startDifficultyIdList_codec);
       if (AreaId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(64);
         output.WriteUInt32(AreaId);
       }
-      difficultyIdList_.WriteTo(output, _repeated_difficultyIdList_codec);
+      baseAvatarIdList_.WriteTo(output, _repeated_baseAvatarIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -201,15 +202,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Week != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(24);
         output.WriteUInt32(Week);
       }
-      baseAvatarIdList_.WriteTo(ref output, _repeated_baseAvatarIdList_codec);
+      startDifficultyIdList_.WriteTo(ref output, _repeated_startDifficultyIdList_codec);
       if (AreaId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(64);
         output.WriteUInt32(AreaId);
       }
-      difficultyIdList_.WriteTo(ref output, _repeated_difficultyIdList_codec);
+      baseAvatarIdList_.WriteTo(ref output, _repeated_baseAvatarIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -220,14 +221,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += difficultyIdList_.CalculateSize(_repeated_difficultyIdList_codec);
+      if (Week != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Week);
+      }
+      size += startDifficultyIdList_.CalculateSize(_repeated_startDifficultyIdList_codec);
       if (AreaId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AreaId);
       }
       size += baseAvatarIdList_.CalculateSize(_repeated_baseAvatarIdList_codec);
-      if (Week != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Week);
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -240,14 +241,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      difficultyIdList_.Add(other.difficultyIdList_);
+      if (other.Week != 0) {
+        Week = other.Week;
+      }
+      startDifficultyIdList_.Add(other.startDifficultyIdList_);
       if (other.AreaId != 0) {
         AreaId = other.AreaId;
       }
       baseAvatarIdList_.Add(other.baseAvatarIdList_);
-      if (other.Week != 0) {
-        Week = other.Week;
-      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -263,22 +264,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 24: {
             Week = input.ReadUInt32();
             break;
           }
-          case 18:
-          case 16: {
-            baseAvatarIdList_.AddEntriesFrom(input, _repeated_baseAvatarIdList_codec);
+          case 50:
+          case 48: {
+            startDifficultyIdList_.AddEntriesFrom(input, _repeated_startDifficultyIdList_codec);
             break;
           }
-          case 48: {
+          case 64: {
             AreaId = input.ReadUInt32();
             break;
           }
-          case 66:
-          case 64: {
-            difficultyIdList_.AddEntriesFrom(input, _repeated_difficultyIdList_codec);
+          case 82:
+          case 80: {
+            baseAvatarIdList_.AddEntriesFrom(input, _repeated_baseAvatarIdList_codec);
             break;
           }
         }
@@ -296,22 +297,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 24: {
             Week = input.ReadUInt32();
             break;
           }
-          case 18:
-          case 16: {
-            baseAvatarIdList_.AddEntriesFrom(ref input, _repeated_baseAvatarIdList_codec);
+          case 50:
+          case 48: {
+            startDifficultyIdList_.AddEntriesFrom(ref input, _repeated_startDifficultyIdList_codec);
             break;
           }
-          case 48: {
+          case 64: {
             AreaId = input.ReadUInt32();
             break;
           }
-          case 66:
-          case 64: {
-            difficultyIdList_.AddEntriesFrom(ref input, _repeated_difficultyIdList_codec);
+          case 82:
+          case 80: {
+            baseAvatarIdList_.AddEntriesFrom(ref input, _repeated_baseAvatarIdList_codec);
             break;
           }
         }

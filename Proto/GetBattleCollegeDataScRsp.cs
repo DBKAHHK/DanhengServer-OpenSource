@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9HZXRCYXR0bGVDb2xsZWdlRGF0YVNjUnNwLnByb3RvImMKGUdldEJhdHRs",
-            "ZUNvbGxlZ2VEYXRhU2NSc3ASDwoHcmV0Y29kZRgBIAEoDRIgChhmaW5pc2hl",
-            "ZF9jb2xsZWdlX2lkX2xpc3QYDiADKA0SEwoLT0tHSkdOREpJREUYDyABKA1C",
+            "ZUNvbGxlZ2VEYXRhU2NSc3ASEwoLQk9OQUJBSE9ET04YDiABKA0SDwoHcmV0",
+            "Y29kZRgGIAEoDRIgChhmaW5pc2hlZF9jb2xsZWdlX2lkX2xpc3QYBCADKA1C",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetBattleCollegeDataScRsp), global::EggLink.DanhengServer.Proto.GetBattleCollegeDataScRsp.Parser, new[]{ "Retcode", "FinishedCollegeIdList", "OKGJGNDJIDE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetBattleCollegeDataScRsp), global::EggLink.DanhengServer.Proto.GetBattleCollegeDataScRsp.Parser, new[]{ "BONABAHODON", "Retcode", "FinishedCollegeIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetBattleCollegeDataScRsp(GetBattleCollegeDataScRsp other) : this() {
+      bONABAHODON_ = other.bONABAHODON_;
       retcode_ = other.retcode_;
       finishedCollegeIdList_ = other.finishedCollegeIdList_.Clone();
-      oKGJGNDJIDE_ = other.oKGJGNDJIDE_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,8 +85,20 @@ namespace EggLink.DanhengServer.Proto {
       return new GetBattleCollegeDataScRsp(this);
     }
 
+    /// <summary>Field number for the "BONABAHODON" field.</summary>
+    public const int BONABAHODONFieldNumber = 14;
+    private uint bONABAHODON_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint BONABAHODON {
+      get { return bONABAHODON_; }
+      set {
+        bONABAHODON_ = value;
+      }
+    }
+
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 1;
+    public const int RetcodeFieldNumber = 6;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,26 +110,14 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "finished_college_id_list" field.</summary>
-    public const int FinishedCollegeIdListFieldNumber = 14;
+    public const int FinishedCollegeIdListFieldNumber = 4;
     private static readonly pb::FieldCodec<uint> _repeated_finishedCollegeIdList_codec
-        = pb::FieldCodec.ForUInt32(114);
+        = pb::FieldCodec.ForUInt32(34);
     private readonly pbc::RepeatedField<uint> finishedCollegeIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<uint> FinishedCollegeIdList {
       get { return finishedCollegeIdList_; }
-    }
-
-    /// <summary>Field number for the "OKGJGNDJIDE" field.</summary>
-    public const int OKGJGNDJIDEFieldNumber = 15;
-    private uint oKGJGNDJIDE_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint OKGJGNDJIDE {
-      get { return oKGJGNDJIDE_; }
-      set {
-        oKGJGNDJIDE_ = value;
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -135,9 +135,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (BONABAHODON != other.BONABAHODON) return false;
       if (Retcode != other.Retcode) return false;
       if(!finishedCollegeIdList_.Equals(other.finishedCollegeIdList_)) return false;
-      if (OKGJGNDJIDE != other.OKGJGNDJIDE) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,9 +145,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (BONABAHODON != 0) hash ^= BONABAHODON.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       hash ^= finishedCollegeIdList_.GetHashCode();
-      if (OKGJGNDJIDE != 0) hash ^= OKGJGNDJIDE.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,14 +166,14 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      finishedCollegeIdList_.WriteTo(output, _repeated_finishedCollegeIdList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
-      finishedCollegeIdList_.WriteTo(output, _repeated_finishedCollegeIdList_codec);
-      if (OKGJGNDJIDE != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(OKGJGNDJIDE);
+      if (BONABAHODON != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(BONABAHODON);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -185,14 +185,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      finishedCollegeIdList_.WriteTo(ref output, _repeated_finishedCollegeIdList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
-      finishedCollegeIdList_.WriteTo(ref output, _repeated_finishedCollegeIdList_codec);
-      if (OKGJGNDJIDE != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(OKGJGNDJIDE);
+      if (BONABAHODON != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(BONABAHODON);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -204,13 +204,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (BONABAHODON != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BONABAHODON);
+      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       size += finishedCollegeIdList_.CalculateSize(_repeated_finishedCollegeIdList_codec);
-      if (OKGJGNDJIDE != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OKGJGNDJIDE);
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -223,13 +223,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.BONABAHODON != 0) {
+        BONABAHODON = other.BONABAHODON;
+      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
       finishedCollegeIdList_.Add(other.finishedCollegeIdList_);
-      if (other.OKGJGNDJIDE != 0) {
-        OKGJGNDJIDE = other.OKGJGNDJIDE;
-      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -245,17 +245,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 114:
-          case 112: {
+          case 34:
+          case 32: {
             finishedCollegeIdList_.AddEntriesFrom(input, _repeated_finishedCollegeIdList_codec);
             break;
           }
-          case 120: {
-            OKGJGNDJIDE = input.ReadUInt32();
+          case 48: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            BONABAHODON = input.ReadUInt32();
             break;
           }
         }
@@ -273,17 +273,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 114:
-          case 112: {
+          case 34:
+          case 32: {
             finishedCollegeIdList_.AddEntriesFrom(ref input, _repeated_finishedCollegeIdList_codec);
             break;
           }
-          case 120: {
-            OKGJGNDJIDE = input.ReadUInt32();
+          case 48: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            BONABAHODON = input.ReadUInt32();
             break;
           }
         }

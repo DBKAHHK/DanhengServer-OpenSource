@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRNZXNzYWdlU2VjdGlvbi5wcm90bxoRTWVzc2FnZUl0ZW0ucHJvdG8aGk1l",
-            "c3NhZ2VTZWN0aW9uU3RhdHVzLnByb3RvIpcBCg5NZXNzYWdlU2VjdGlvbhIK",
-            "CgJpZBgMIAEoDRIWCg5mcm96ZW5faXRlbV9pZBgFIAEoDRIlCgZzdGF0dXMY",
-            "ByABKA4yFS5NZXNzYWdlU2VjdGlvblN0YXR1cxIZChFtZXNzYWdlX2l0ZW1f",
-            "bGlzdBgEIAMoDRIfCglpdGVtX2xpc3QYBiADKAsyDC5NZXNzYWdlSXRlbUIe",
+            "c3NhZ2VTZWN0aW9uU3RhdHVzLnByb3RvIpcBCg5NZXNzYWdlU2VjdGlvbhIZ",
+            "ChFtZXNzYWdlX2l0ZW1fbGlzdBgJIAMoDRIfCglpdGVtX2xpc3QYBiADKAsy",
+            "DC5NZXNzYWdlSXRlbRIKCgJpZBgOIAEoDRIlCgZzdGF0dXMYCyABKA4yFS5N",
+            "ZXNzYWdlU2VjdGlvblN0YXR1cxIWCg5mcm96ZW5faXRlbV9pZBgBIAEoDUIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MessageItemReflection.Descriptor, global::EggLink.DanhengServer.Proto.MessageSectionStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MessageSection), global::EggLink.DanhengServer.Proto.MessageSection.Parser, new[]{ "Id", "FrozenItemId", "Status", "MessageItemList", "ItemList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MessageSection), global::EggLink.DanhengServer.Proto.MessageSection.Parser, new[]{ "MessageItemList", "ItemList", "Id", "Status", "FrozenItemId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,11 +75,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MessageSection(MessageSection other) : this() {
-      id_ = other.id_;
-      frozenItemId_ = other.frozenItemId_;
-      status_ = other.status_;
       messageItemList_ = other.messageItemList_.Clone();
       itemList_ = other.itemList_.Clone();
+      id_ = other.id_;
+      status_ = other.status_;
+      frozenItemId_ = other.frozenItemId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -89,46 +89,10 @@ namespace EggLink.DanhengServer.Proto {
       return new MessageSection(this);
     }
 
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 12;
-    private uint id_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Id {
-      get { return id_; }
-      set {
-        id_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "frozen_item_id" field.</summary>
-    public const int FrozenItemIdFieldNumber = 5;
-    private uint frozenItemId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FrozenItemId {
-      get { return frozenItemId_; }
-      set {
-        frozenItemId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 7;
-    private global::EggLink.DanhengServer.Proto.MessageSectionStatus status_ = global::EggLink.DanhengServer.Proto.MessageSectionStatus.MessageSectionNone;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MessageSectionStatus Status {
-      get { return status_; }
-      set {
-        status_ = value;
-      }
-    }
-
     /// <summary>Field number for the "message_item_list" field.</summary>
-    public const int MessageItemListFieldNumber = 4;
+    public const int MessageItemListFieldNumber = 9;
     private static readonly pb::FieldCodec<uint> _repeated_messageItemList_codec
-        = pb::FieldCodec.ForUInt32(34);
+        = pb::FieldCodec.ForUInt32(74);
     private readonly pbc::RepeatedField<uint> messageItemList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -147,6 +111,42 @@ namespace EggLink.DanhengServer.Proto {
       get { return itemList_; }
     }
 
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 14;
+    private uint id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Id {
+      get { return id_; }
+      set {
+        id_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 11;
+    private global::EggLink.DanhengServer.Proto.MessageSectionStatus status_ = global::EggLink.DanhengServer.Proto.MessageSectionStatus.MessageSectionNone;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.MessageSectionStatus Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "frozen_item_id" field.</summary>
+    public const int FrozenItemIdFieldNumber = 1;
+    private uint frozenItemId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint FrozenItemId {
+      get { return frozenItemId_; }
+      set {
+        frozenItemId_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -162,11 +162,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Id != other.Id) return false;
-      if (FrozenItemId != other.FrozenItemId) return false;
-      if (Status != other.Status) return false;
       if(!messageItemList_.Equals(other.messageItemList_)) return false;
       if(!itemList_.Equals(other.itemList_)) return false;
+      if (Id != other.Id) return false;
+      if (Status != other.Status) return false;
+      if (FrozenItemId != other.FrozenItemId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -174,11 +174,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id != 0) hash ^= Id.GetHashCode();
-      if (FrozenItemId != 0) hash ^= FrozenItemId.GetHashCode();
-      if (Status != global::EggLink.DanhengServer.Proto.MessageSectionStatus.MessageSectionNone) hash ^= Status.GetHashCode();
       hash ^= messageItemList_.GetHashCode();
       hash ^= itemList_.GetHashCode();
+      if (Id != 0) hash ^= Id.GetHashCode();
+      if (Status != global::EggLink.DanhengServer.Proto.MessageSectionStatus.MessageSectionNone) hash ^= Status.GetHashCode();
+      if (FrozenItemId != 0) hash ^= FrozenItemId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -197,18 +197,18 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      messageItemList_.WriteTo(output, _repeated_messageItemList_codec);
       if (FrozenItemId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(8);
         output.WriteUInt32(FrozenItemId);
       }
       itemList_.WriteTo(output, _repeated_itemList_codec);
+      messageItemList_.WriteTo(output, _repeated_messageItemList_codec);
       if (Status != global::EggLink.DanhengServer.Proto.MessageSectionStatus.MessageSectionNone) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(88);
         output.WriteEnum((int) Status);
       }
       if (Id != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(112);
         output.WriteUInt32(Id);
       }
       if (_unknownFields != null) {
@@ -221,18 +221,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      messageItemList_.WriteTo(ref output, _repeated_messageItemList_codec);
       if (FrozenItemId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(8);
         output.WriteUInt32(FrozenItemId);
       }
       itemList_.WriteTo(ref output, _repeated_itemList_codec);
+      messageItemList_.WriteTo(ref output, _repeated_messageItemList_codec);
       if (Status != global::EggLink.DanhengServer.Proto.MessageSectionStatus.MessageSectionNone) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(88);
         output.WriteEnum((int) Status);
       }
       if (Id != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(112);
         output.WriteUInt32(Id);
       }
       if (_unknownFields != null) {
@@ -245,17 +245,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += messageItemList_.CalculateSize(_repeated_messageItemList_codec);
+      size += itemList_.CalculateSize(_repeated_itemList_codec);
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
-      }
-      if (FrozenItemId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FrozenItemId);
       }
       if (Status != global::EggLink.DanhengServer.Proto.MessageSectionStatus.MessageSectionNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
-      size += messageItemList_.CalculateSize(_repeated_messageItemList_codec);
-      size += itemList_.CalculateSize(_repeated_itemList_codec);
+      if (FrozenItemId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FrozenItemId);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -268,17 +268,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      messageItemList_.Add(other.messageItemList_);
+      itemList_.Add(other.itemList_);
       if (other.Id != 0) {
         Id = other.Id;
-      }
-      if (other.FrozenItemId != 0) {
-        FrozenItemId = other.FrozenItemId;
       }
       if (other.Status != global::EggLink.DanhengServer.Proto.MessageSectionStatus.MessageSectionNone) {
         Status = other.Status;
       }
-      messageItemList_.Add(other.messageItemList_);
-      itemList_.Add(other.itemList_);
+      if (other.FrozenItemId != 0) {
+        FrozenItemId = other.FrozenItemId;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -294,12 +294,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34:
-          case 32: {
-            messageItemList_.AddEntriesFrom(input, _repeated_messageItemList_codec);
-            break;
-          }
-          case 40: {
+          case 8: {
             FrozenItemId = input.ReadUInt32();
             break;
           }
@@ -307,11 +302,16 @@ namespace EggLink.DanhengServer.Proto {
             itemList_.AddEntriesFrom(input, _repeated_itemList_codec);
             break;
           }
-          case 56: {
+          case 74:
+          case 72: {
+            messageItemList_.AddEntriesFrom(input, _repeated_messageItemList_codec);
+            break;
+          }
+          case 88: {
             Status = (global::EggLink.DanhengServer.Proto.MessageSectionStatus) input.ReadEnum();
             break;
           }
-          case 96: {
+          case 112: {
             Id = input.ReadUInt32();
             break;
           }
@@ -330,12 +330,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34:
-          case 32: {
-            messageItemList_.AddEntriesFrom(ref input, _repeated_messageItemList_codec);
-            break;
-          }
-          case 40: {
+          case 8: {
             FrozenItemId = input.ReadUInt32();
             break;
           }
@@ -343,11 +338,16 @@ namespace EggLink.DanhengServer.Proto {
             itemList_.AddEntriesFrom(ref input, _repeated_itemList_codec);
             break;
           }
-          case 56: {
+          case 74:
+          case 72: {
+            messageItemList_.AddEntriesFrom(ref input, _repeated_messageItemList_codec);
+            break;
+          }
+          case 88: {
             Status = (global::EggLink.DanhengServer.Proto.MessageSectionStatus) input.ReadEnum();
             break;
           }
-          case 96: {
+          case 112: {
             Id = input.ReadUInt32();
             break;
           }

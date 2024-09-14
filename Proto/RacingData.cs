@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChBSYWNpbmdEYXRhLnByb3RvGhVNb3ZpZVJhY2luZ1R5cGUucHJvdG8iZQoK",
-            "UmFjaW5nRGF0YRITCgtJR0hCREhFQkhBRhgLIAEoDRITCgtHQU1HS0xGSERB",
-            "QhgDIAEoDRINCgVsZXZlbBgIIAEoDRIeCgR0eXBlGAUgASgOMhAuTW92aWVS",
-            "YWNpbmdUeXBlQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "UmFjaW5nRGF0YRINCgVsZXZlbBgGIAEoDRITCgtQTkJOTUhKTkxKRhgLIAEo",
+            "DRIeCgR0eXBlGA0gASgOMhAuTW92aWVSYWNpbmdUeXBlEhMKC0pCTElLRkxH",
+            "SklBGAQgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MovieRacingTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RacingData), global::EggLink.DanhengServer.Proto.RacingData.Parser, new[]{ "IGHBDHEBHAF", "GAMGKLFHDAB", "Level", "Type" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RacingData), global::EggLink.DanhengServer.Proto.RacingData.Parser, new[]{ "Level", "PNBNMHJNLJF", "Type", "JBLIKFLGJIA" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RacingData(RacingData other) : this() {
-      iGHBDHEBHAF_ = other.iGHBDHEBHAF_;
-      gAMGKLFHDAB_ = other.gAMGKLFHDAB_;
       level_ = other.level_;
+      pNBNMHJNLJF_ = other.pNBNMHJNLJF_;
       type_ = other.type_;
+      jBLIKFLGJIA_ = other.jBLIKFLGJIA_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,32 +87,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RacingData(this);
     }
 
-    /// <summary>Field number for the "IGHBDHEBHAF" field.</summary>
-    public const int IGHBDHEBHAFFieldNumber = 11;
-    private uint iGHBDHEBHAF_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IGHBDHEBHAF {
-      get { return iGHBDHEBHAF_; }
-      set {
-        iGHBDHEBHAF_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "GAMGKLFHDAB" field.</summary>
-    public const int GAMGKLFHDABFieldNumber = 3;
-    private uint gAMGKLFHDAB_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GAMGKLFHDAB {
-      get { return gAMGKLFHDAB_; }
-      set {
-        gAMGKLFHDAB_ = value;
-      }
-    }
-
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 8;
+    public const int LevelFieldNumber = 6;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,8 +99,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "PNBNMHJNLJF" field.</summary>
+    public const int PNBNMHJNLJFFieldNumber = 11;
+    private uint pNBNMHJNLJF_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PNBNMHJNLJF {
+      get { return pNBNMHJNLJF_; }
+      set {
+        pNBNMHJNLJF_ = value;
+      }
+    }
+
     /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 5;
+    public const int TypeFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.MovieRacingType type_ = global::EggLink.DanhengServer.Proto.MovieRacingType.MovieRacingOverTake;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -132,6 +120,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return type_; }
       set {
         type_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "JBLIKFLGJIA" field.</summary>
+    public const int JBLIKFLGJIAFieldNumber = 4;
+    private uint jBLIKFLGJIA_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint JBLIKFLGJIA {
+      get { return jBLIKFLGJIA_; }
+      set {
+        jBLIKFLGJIA_ = value;
       }
     }
 
@@ -150,10 +150,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IGHBDHEBHAF != other.IGHBDHEBHAF) return false;
-      if (GAMGKLFHDAB != other.GAMGKLFHDAB) return false;
       if (Level != other.Level) return false;
+      if (PNBNMHJNLJF != other.PNBNMHJNLJF) return false;
       if (Type != other.Type) return false;
+      if (JBLIKFLGJIA != other.JBLIKFLGJIA) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,10 +161,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IGHBDHEBHAF != 0) hash ^= IGHBDHEBHAF.GetHashCode();
-      if (GAMGKLFHDAB != 0) hash ^= GAMGKLFHDAB.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
+      if (PNBNMHJNLJF != 0) hash ^= PNBNMHJNLJF.GetHashCode();
       if (Type != global::EggLink.DanhengServer.Proto.MovieRacingType.MovieRacingOverTake) hash ^= Type.GetHashCode();
+      if (JBLIKFLGJIA != 0) hash ^= JBLIKFLGJIA.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,21 +183,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (GAMGKLFHDAB != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(GAMGKLFHDAB);
-      }
-      if (Type != global::EggLink.DanhengServer.Proto.MovieRacingType.MovieRacingOverTake) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) Type);
+      if (JBLIKFLGJIA != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(JBLIKFLGJIA);
       }
       if (Level != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(48);
         output.WriteUInt32(Level);
       }
-      if (IGHBDHEBHAF != 0) {
+      if (PNBNMHJNLJF != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(IGHBDHEBHAF);
+        output.WriteUInt32(PNBNMHJNLJF);
+      }
+      if (Type != global::EggLink.DanhengServer.Proto.MovieRacingType.MovieRacingOverTake) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) Type);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -209,21 +209,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (GAMGKLFHDAB != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(GAMGKLFHDAB);
-      }
-      if (Type != global::EggLink.DanhengServer.Proto.MovieRacingType.MovieRacingOverTake) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) Type);
+      if (JBLIKFLGJIA != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(JBLIKFLGJIA);
       }
       if (Level != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(48);
         output.WriteUInt32(Level);
       }
-      if (IGHBDHEBHAF != 0) {
+      if (PNBNMHJNLJF != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(IGHBDHEBHAF);
+        output.WriteUInt32(PNBNMHJNLJF);
+      }
+      if (Type != global::EggLink.DanhengServer.Proto.MovieRacingType.MovieRacingOverTake) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) Type);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -235,17 +235,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IGHBDHEBHAF != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IGHBDHEBHAF);
-      }
-      if (GAMGKLFHDAB != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GAMGKLFHDAB);
-      }
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
       }
+      if (PNBNMHJNLJF != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PNBNMHJNLJF);
+      }
       if (Type != global::EggLink.DanhengServer.Proto.MovieRacingType.MovieRacingOverTake) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (JBLIKFLGJIA != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JBLIKFLGJIA);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -259,17 +259,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IGHBDHEBHAF != 0) {
-        IGHBDHEBHAF = other.IGHBDHEBHAF;
-      }
-      if (other.GAMGKLFHDAB != 0) {
-        GAMGKLFHDAB = other.GAMGKLFHDAB;
-      }
       if (other.Level != 0) {
         Level = other.Level;
       }
+      if (other.PNBNMHJNLJF != 0) {
+        PNBNMHJNLJF = other.PNBNMHJNLJF;
+      }
       if (other.Type != global::EggLink.DanhengServer.Proto.MovieRacingType.MovieRacingOverTake) {
         Type = other.Type;
+      }
+      if (other.JBLIKFLGJIA != 0) {
+        JBLIKFLGJIA = other.JBLIKFLGJIA;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -286,20 +286,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            GAMGKLFHDAB = input.ReadUInt32();
+          case 32: {
+            JBLIKFLGJIA = input.ReadUInt32();
             break;
           }
-          case 40: {
-            Type = (global::EggLink.DanhengServer.Proto.MovieRacingType) input.ReadEnum();
-            break;
-          }
-          case 64: {
+          case 48: {
             Level = input.ReadUInt32();
             break;
           }
           case 88: {
-            IGHBDHEBHAF = input.ReadUInt32();
+            PNBNMHJNLJF = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            Type = (global::EggLink.DanhengServer.Proto.MovieRacingType) input.ReadEnum();
             break;
           }
         }
@@ -317,20 +317,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            GAMGKLFHDAB = input.ReadUInt32();
+          case 32: {
+            JBLIKFLGJIA = input.ReadUInt32();
             break;
           }
-          case 40: {
-            Type = (global::EggLink.DanhengServer.Proto.MovieRacingType) input.ReadEnum();
-            break;
-          }
-          case 64: {
+          case 48: {
             Level = input.ReadUInt32();
             break;
           }
           case 88: {
-            IGHBDHEBHAF = input.ReadUInt32();
+            PNBNMHJNLJF = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            Type = (global::EggLink.DanhengServer.Proto.MovieRacingType) input.ReadEnum();
             break;
           }
         }

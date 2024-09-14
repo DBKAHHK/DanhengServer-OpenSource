@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpTY2VuZUVudGl0eU1vdmVDc1JlcS5wcm90bxoSRW50aXR5TW90aW9uLnBy",
-            "b3RvImcKFFNjZW5lRW50aXR5TW92ZUNzUmVxEhIKCmNsaWVudF9sb2cYCCAB",
-            "KAQSEAoIZW50cnlfaWQYCyABKA0SKQoSZW50aXR5X21vdGlvbl9saXN0GAwg",
-            "AygLMg0uRW50aXR5TW90aW9uQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
-            "UHJvdG9iBnByb3RvMw=="));
+            "b3RvImgKFFNjZW5lRW50aXR5TW92ZUNzUmVxEhMKC05KUEVNQ0FHUElCGAog",
+            "ASgEEikKEmVudGl0eV9tb3Rpb25fbGlzdBgPIAMoCzINLkVudGl0eU1vdGlv",
+            "bhIQCghlbnRyeV9pZBgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EntityMotionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityMoveCsReq), global::EggLink.DanhengServer.Proto.SceneEntityMoveCsReq.Parser, new[]{ "ClientLog", "EntryId", "EntityMotionList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityMoveCsReq), global::EggLink.DanhengServer.Proto.SceneEntityMoveCsReq.Parser, new[]{ "NJPEMCAGPIB", "EntityMotionList", "EntryId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SceneEntityMoveCsReq(SceneEntityMoveCsReq other) : this() {
-      clientLog_ = other.clientLog_;
-      entryId_ = other.entryId_;
+      nJPEMCAGPIB_ = other.nJPEMCAGPIB_;
       entityMotionList_ = other.entityMotionList_.Clone();
+      entryId_ = other.entryId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,20 +86,31 @@ namespace EggLink.DanhengServer.Proto {
       return new SceneEntityMoveCsReq(this);
     }
 
-    /// <summary>Field number for the "client_log" field.</summary>
-    public const int ClientLogFieldNumber = 8;
-    private ulong clientLog_;
+    /// <summary>Field number for the "NJPEMCAGPIB" field.</summary>
+    public const int NJPEMCAGPIBFieldNumber = 10;
+    private ulong nJPEMCAGPIB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong ClientLog {
-      get { return clientLog_; }
+    public ulong NJPEMCAGPIB {
+      get { return nJPEMCAGPIB_; }
       set {
-        clientLog_ = value;
+        nJPEMCAGPIB_ = value;
       }
     }
 
+    /// <summary>Field number for the "entity_motion_list" field.</summary>
+    public const int EntityMotionListFieldNumber = 15;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EntityMotion> _repeated_entityMotionList_codec
+        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.EntityMotion.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EntityMotion> entityMotionList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EntityMotion>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EntityMotion> EntityMotionList {
+      get { return entityMotionList_; }
+    }
+
     /// <summary>Field number for the "entry_id" field.</summary>
-    public const int EntryIdFieldNumber = 11;
+    public const int EntryIdFieldNumber = 3;
     private uint entryId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -108,17 +119,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         entryId_ = value;
       }
-    }
-
-    /// <summary>Field number for the "entity_motion_list" field.</summary>
-    public const int EntityMotionListFieldNumber = 12;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EntityMotion> _repeated_entityMotionList_codec
-        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.EntityMotion.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EntityMotion> entityMotionList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EntityMotion>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EntityMotion> EntityMotionList {
-      get { return entityMotionList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ClientLog != other.ClientLog) return false;
-      if (EntryId != other.EntryId) return false;
+      if (NJPEMCAGPIB != other.NJPEMCAGPIB) return false;
       if(!entityMotionList_.Equals(other.entityMotionList_)) return false;
+      if (EntryId != other.EntryId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ClientLog != 0UL) hash ^= ClientLog.GetHashCode();
-      if (EntryId != 0) hash ^= EntryId.GetHashCode();
+      if (NJPEMCAGPIB != 0UL) hash ^= NJPEMCAGPIB.GetHashCode();
       hash ^= entityMotionList_.GetHashCode();
+      if (EntryId != 0) hash ^= EntryId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,13 +167,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ClientLog != 0UL) {
-        output.WriteRawTag(64);
-        output.WriteUInt64(ClientLog);
-      }
       if (EntryId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(24);
         output.WriteUInt32(EntryId);
+      }
+      if (NJPEMCAGPIB != 0UL) {
+        output.WriteRawTag(80);
+        output.WriteUInt64(NJPEMCAGPIB);
       }
       entityMotionList_.WriteTo(output, _repeated_entityMotionList_codec);
       if (_unknownFields != null) {
@@ -186,13 +186,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ClientLog != 0UL) {
-        output.WriteRawTag(64);
-        output.WriteUInt64(ClientLog);
-      }
       if (EntryId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(24);
         output.WriteUInt32(EntryId);
+      }
+      if (NJPEMCAGPIB != 0UL) {
+        output.WriteRawTag(80);
+        output.WriteUInt64(NJPEMCAGPIB);
       }
       entityMotionList_.WriteTo(ref output, _repeated_entityMotionList_codec);
       if (_unknownFields != null) {
@@ -205,13 +205,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ClientLog != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(ClientLog);
+      if (NJPEMCAGPIB != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(NJPEMCAGPIB);
       }
+      size += entityMotionList_.CalculateSize(_repeated_entityMotionList_codec);
       if (EntryId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EntryId);
       }
-      size += entityMotionList_.CalculateSize(_repeated_entityMotionList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -224,13 +224,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ClientLog != 0UL) {
-        ClientLog = other.ClientLog;
+      if (other.NJPEMCAGPIB != 0UL) {
+        NJPEMCAGPIB = other.NJPEMCAGPIB;
       }
+      entityMotionList_.Add(other.entityMotionList_);
       if (other.EntryId != 0) {
         EntryId = other.EntryId;
       }
-      entityMotionList_.Add(other.entityMotionList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -246,15 +246,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
-            ClientLog = input.ReadUInt64();
-            break;
-          }
-          case 88: {
+          case 24: {
             EntryId = input.ReadUInt32();
             break;
           }
-          case 98: {
+          case 80: {
+            NJPEMCAGPIB = input.ReadUInt64();
+            break;
+          }
+          case 122: {
             entityMotionList_.AddEntriesFrom(input, _repeated_entityMotionList_codec);
             break;
           }
@@ -273,15 +273,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
-            ClientLog = input.ReadUInt64();
-            break;
-          }
-          case 88: {
+          case 24: {
             EntryId = input.ReadUInt32();
             break;
           }
-          case 98: {
+          case 80: {
+            NJPEMCAGPIB = input.ReadUInt64();
+            break;
+          }
+          case 122: {
             entityMotionList_.AddEntriesFrom(ref input, _repeated_entityMotionList_codec);
             break;
           }

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChBNb3Rpb25JbmZvLnByb3RvGgxWZWN0b3IucHJvdG8iOAoKTW90aW9uSW5m",
-            "bxIUCgNwb3MYBSABKAsyBy5WZWN0b3ISFAoDcm90GAsgASgLMgcuVmVjdG9y",
+            "bxIUCgNwb3MYDiABKAsyBy5WZWN0b3ISFAoDcm90GA0gASgLMgcuVmVjdG9y",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.VectorReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "pos" field.</summary>
-    public const int PosFieldNumber = 5;
+    public const int PosFieldNumber = 14;
     private global::EggLink.DanhengServer.Proto.Vector pos_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rot" field.</summary>
-    public const int RotFieldNumber = 11;
+    public const int RotFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.Vector rot_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (pos_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(Pos);
-      }
       if (rot_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(106);
         output.WriteMessage(Rot);
+      }
+      if (pos_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(Pos);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (pos_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(Pos);
-      }
       if (rot_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(106);
         output.WriteMessage(Rot);
+      }
+      if (pos_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(Pos);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -232,18 +232,18 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
-            if (pos_ == null) {
-              Pos = new global::EggLink.DanhengServer.Proto.Vector();
-            }
-            input.ReadMessage(Pos);
-            break;
-          }
-          case 90: {
+          case 106: {
             if (rot_ == null) {
               Rot = new global::EggLink.DanhengServer.Proto.Vector();
             }
             input.ReadMessage(Rot);
+            break;
+          }
+          case 114: {
+            if (pos_ == null) {
+              Pos = new global::EggLink.DanhengServer.Proto.Vector();
+            }
+            input.ReadMessage(Pos);
             break;
           }
         }
@@ -261,18 +261,18 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
-            if (pos_ == null) {
-              Pos = new global::EggLink.DanhengServer.Proto.Vector();
-            }
-            input.ReadMessage(Pos);
-            break;
-          }
-          case 90: {
+          case 106: {
             if (rot_ == null) {
               Rot = new global::EggLink.DanhengServer.Proto.Vector();
             }
             input.ReadMessage(Rot);
+            break;
+          }
+          case 114: {
+            if (pos_ == null) {
+              Pos = new global::EggLink.DanhengServer.Proto.Vector();
+            }
+            input.ReadMessage(Pos);
             break;
           }
         }

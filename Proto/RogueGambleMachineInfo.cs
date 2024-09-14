@@ -26,12 +26,12 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChxSb2d1ZUdhbWJsZU1hY2hpbmVJbmZvLnByb3RvGhVSb2d1ZUdhbWJsZUlu",
             "Zm8ucHJvdG8iVAoWUm9ndWVHYW1ibGVNYWNoaW5lSW5mbxIlCgtnYW1ibGVf",
-            "aW5mbxgNIAEoCzIQLlJvZ3VlR2FtYmxlSW5mbxITCgtDSUNHRU9FQU9CRhgP",
+            "aW5mbxgGIAEoCzIQLlJvZ3VlR2FtYmxlSW5mbxITCgtGQVBPS0pQUEdIRBgF",
             "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueGambleInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueGambleMachineInfo), global::EggLink.DanhengServer.Proto.RogueGambleMachineInfo.Parser, new[]{ "GambleInfo", "CICGEOEAOBF" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueGambleMachineInfo), global::EggLink.DanhengServer.Proto.RogueGambleMachineInfo.Parser, new[]{ "GambleInfo", "FAPOKJPPGHD" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueGambleMachineInfo(RogueGambleMachineInfo other) : this() {
       gambleInfo_ = other.gambleInfo_ != null ? other.gambleInfo_.Clone() : null;
-      cICGEOEAOBF_ = other.cICGEOEAOBF_;
+      fAPOKJPPGHD_ = other.fAPOKJPPGHD_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "gamble_info" field.</summary>
-    public const int GambleInfoFieldNumber = 13;
+    public const int GambleInfoFieldNumber = 6;
     private global::EggLink.DanhengServer.Proto.RogueGambleInfo gambleInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CICGEOEAOBF" field.</summary>
-    public const int CICGEOEAOBFFieldNumber = 15;
-    private uint cICGEOEAOBF_;
+    /// <summary>Field number for the "FAPOKJPPGHD" field.</summary>
+    public const int FAPOKJPPGHDFieldNumber = 5;
+    private uint fAPOKJPPGHD_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CICGEOEAOBF {
-      get { return cICGEOEAOBF_; }
+    public uint FAPOKJPPGHD {
+      get { return fAPOKJPPGHD_; }
       set {
-        cICGEOEAOBF_ = value;
+        fAPOKJPPGHD_ = value;
       }
     }
 
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(GambleInfo, other.GambleInfo)) return false;
-      if (CICGEOEAOBF != other.CICGEOEAOBF) return false;
+      if (FAPOKJPPGHD != other.FAPOKJPPGHD) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (gambleInfo_ != null) hash ^= GambleInfo.GetHashCode();
-      if (CICGEOEAOBF != 0) hash ^= CICGEOEAOBF.GetHashCode();
+      if (FAPOKJPPGHD != 0) hash ^= FAPOKJPPGHD.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (gambleInfo_ != null) {
-        output.WriteRawTag(106);
-        output.WriteMessage(GambleInfo);
+      if (FAPOKJPPGHD != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(FAPOKJPPGHD);
       }
-      if (CICGEOEAOBF != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(CICGEOEAOBF);
+      if (gambleInfo_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(GambleInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (gambleInfo_ != null) {
-        output.WriteRawTag(106);
-        output.WriteMessage(GambleInfo);
+      if (FAPOKJPPGHD != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(FAPOKJPPGHD);
       }
-      if (CICGEOEAOBF != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(CICGEOEAOBF);
+      if (gambleInfo_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(GambleInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -191,8 +191,8 @@ namespace EggLink.DanhengServer.Proto {
       if (gambleInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GambleInfo);
       }
-      if (CICGEOEAOBF != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CICGEOEAOBF);
+      if (FAPOKJPPGHD != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FAPOKJPPGHD);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -212,8 +212,8 @@ namespace EggLink.DanhengServer.Proto {
         }
         GambleInfo.MergeFrom(other.GambleInfo);
       }
-      if (other.CICGEOEAOBF != 0) {
-        CICGEOEAOBF = other.CICGEOEAOBF;
+      if (other.FAPOKJPPGHD != 0) {
+        FAPOKJPPGHD = other.FAPOKJPPGHD;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 106: {
+          case 40: {
+            FAPOKJPPGHD = input.ReadUInt32();
+            break;
+          }
+          case 50: {
             if (gambleInfo_ == null) {
               GambleInfo = new global::EggLink.DanhengServer.Proto.RogueGambleInfo();
             }
             input.ReadMessage(GambleInfo);
-            break;
-          }
-          case 120: {
-            CICGEOEAOBF = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 106: {
+          case 40: {
+            FAPOKJPPGHD = input.ReadUInt32();
+            break;
+          }
+          case 50: {
             if (gambleInfo_ == null) {
               GambleInfo = new global::EggLink.DanhengServer.Proto.RogueGambleInfo();
             }
             input.ReadMessage(GambleInfo);
-            break;
-          }
-          case 120: {
-            CICGEOEAOBF = input.ReadUInt32();
             break;
           }
         }

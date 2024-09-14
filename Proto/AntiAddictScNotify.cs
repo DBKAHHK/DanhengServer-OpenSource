@@ -24,14 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static AntiAddictScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhBbnRpQWRkaWN0U2NOb3RpZnkucHJvdG8iRgoSQW50aUFkZGljdFNjTm90",
-            "aWZ5EhQKDG1lc3NhZ2VfdHlwZRgIIAEoDRINCgVsZXZlbBgMIAEoCRILCgNt",
-            "c2cYBiABKAlCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
-            "dG8z"));
+            "ChhBbnRpQWRkaWN0U2NOb3RpZnkucHJvdG8iQgoSQW50aUFkZGljdFNjTm90",
+            "aWZ5Eg0KBWxldmVsGAggASgJEgsKA21zZxgEIAEoCRIQCghtc2dfdHlwZRgM",
+            "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AntiAddictScNotify), global::EggLink.DanhengServer.Proto.AntiAddictScNotify.Parser, new[]{ "MessageType", "Level", "Msg" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AntiAddictScNotify), global::EggLink.DanhengServer.Proto.AntiAddictScNotify.Parser, new[]{ "Level", "Msg", "MsgType" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +72,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AntiAddictScNotify(AntiAddictScNotify other) : this() {
-      messageType_ = other.messageType_;
       level_ = other.level_;
       msg_ = other.msg_;
+      msgType_ = other.msgType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new AntiAddictScNotify(this);
     }
 
-    /// <summary>Field number for the "message_type" field.</summary>
-    public const int MessageTypeFieldNumber = 8;
-    private uint messageType_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MessageType {
-      get { return messageType_; }
-      set {
-        messageType_ = value;
-      }
-    }
-
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 12;
+    public const int LevelFieldNumber = 8;
     private string level_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "msg" field.</summary>
-    public const int MsgFieldNumber = 6;
+    public const int MsgFieldNumber = 4;
     private string msg_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -118,6 +105,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return msg_; }
       set {
         msg_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "msg_type" field.</summary>
+    public const int MsgTypeFieldNumber = 12;
+    private uint msgType_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint MsgType {
+      get { return msgType_; }
+      set {
+        msgType_ = value;
       }
     }
 
@@ -136,9 +135,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MessageType != other.MessageType) return false;
       if (Level != other.Level) return false;
       if (Msg != other.Msg) return false;
+      if (MsgType != other.MsgType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +145,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MessageType != 0) hash ^= MessageType.GetHashCode();
       if (Level.Length != 0) hash ^= Level.GetHashCode();
       if (Msg.Length != 0) hash ^= Msg.GetHashCode();
+      if (MsgType != 0) hash ^= MsgType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,16 +167,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Msg.Length != 0) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(34);
         output.WriteString(Msg);
       }
-      if (MessageType != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(MessageType);
-      }
       if (Level.Length != 0) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(66);
         output.WriteString(Level);
+      }
+      if (MsgType != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(MsgType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,16 +189,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Msg.Length != 0) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(34);
         output.WriteString(Msg);
       }
-      if (MessageType != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(MessageType);
-      }
       if (Level.Length != 0) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(66);
         output.WriteString(Level);
+      }
+      if (MsgType != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(MsgType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,14 +210,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MessageType != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MessageType);
-      }
       if (Level.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Level);
       }
       if (Msg.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Msg);
+      }
+      if (MsgType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MsgType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MessageType != 0) {
-        MessageType = other.MessageType;
-      }
       if (other.Level.Length != 0) {
         Level = other.Level;
       }
       if (other.Msg.Length != 0) {
         Msg = other.Msg;
+      }
+      if (other.MsgType != 0) {
+        MsgType = other.MsgType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
+          case 34: {
             Msg = input.ReadString();
             break;
           }
-          case 64: {
-            MessageType = input.ReadUInt32();
+          case 66: {
+            Level = input.ReadString();
             break;
           }
-          case 98: {
-            Level = input.ReadString();
+          case 96: {
+            MsgType = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
+          case 34: {
             Msg = input.ReadString();
             break;
           }
-          case 64: {
-            MessageType = input.ReadUInt32();
+          case 66: {
+            Level = input.ReadString();
             break;
           }
-          case 98: {
-            Level = input.ReadString();
+          case 96: {
+            MsgType = input.ReadUInt32();
             break;
           }
         }

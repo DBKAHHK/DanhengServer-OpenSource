@@ -25,25 +25,25 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZQbGF5ZXJEZXRhaWxJbmZvLnByb3RvGhZQbGF5ZXJSZWNvcmRJbmZvLnBy",
-            "b3RvGhJQbGF0Zm9ybVR5cGUucHJvdG8aEUROQ0xQR0pHSEhLLnByb3RvGhtQ",
-            "bGF5ZXJEaXNwbGF5U2V0dGluZ3MucHJvdG8aHURpc3BsYXlBdmF0YXJEZXRh",
-            "aWxJbmZvLnByb3RvIoUEChBQbGF5ZXJEZXRhaWxJbmZvEhEKCWlzX2Jhbm5l",
-            "ZBgLIAEoCBITCgt3b3JsZF9sZXZlbBgGIAEoDRIiCgtNTEROTk9NTEhKRBjx",
-            "CSABKAsyDC5ETkNMUEdKR0hISxITCgtMRkZKTUFEQkhOThgKIAEoDRIRCglo",
-            "ZWFkX2ljb24YDCABKA0SEwoLT1BJQUNFS09BTkoYAyABKAkSEQoJc2lnbmF0",
-            "dXJlGAQgASgJEjUKE2Rpc3BsYXlfYXZhdGFyX2xpc3QYCCADKAsyGC5EaXNw",
-            "bGF5QXZhdGFyRGV0YWlsSW5mbxI1ChJhc3Npc3RfYXZhdGFyX2xpc3QYvg4g",
-            "AygLMhguRGlzcGxheUF2YXRhckRldGFpbEluZm8SHwoIcGxhdGZvcm0YBSAB",
-            "KA4yDS5QbGF0Zm9ybVR5cGUSJgoLcmVjb3JkX2luZm8YDSABKAsyES5QbGF5",
-            "ZXJSZWNvcmRJbmZvEjEKEGRpc3BsYXlfc2V0dGluZ3MYtwggASgLMhYuUGxh",
-            "eWVyRGlzcGxheVNldHRpbmdzEgsKA3VpZBgJIAEoDRITCgtDT0FFTEhJR1BO",
-            "RxgPIAEoDRINCgVsZXZlbBgOIAEoDRIQCghuaWNrbmFtZRgCIAEoCRITCgtI",
-            "TkFET0FLT01FRRgBIAEoCBITCgtNQ0tLQktQT01MSRgHIAEoCUIeqgIbRWdn",
-            "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "b3RvGhJQbGF0Zm9ybVR5cGUucHJvdG8aHURpc3BsYXlBdmF0YXJEZXRhaWxJ",
+            "bmZvLnByb3RvGhtQbGF5ZXJEaXNwbGF5U2V0dGluZ3MucHJvdG8aFVByaXZh",
+            "Y3lTZXR0aW5ncy5wcm90byKJBAoQUGxheWVyRGV0YWlsSW5mbxIQCghuaWNr",
+            "bmFtZRgEIAEoCRINCgVsZXZlbBgPIAEoDRIRCgloZWFkX2ljb24YCCABKA0S",
+            "HwoIcGxhdGZvcm0YAyABKA4yDS5QbGF0Zm9ybVR5cGUSEwoLd29ybGRfbGV2",
+            "ZWwYBSABKA0SKwoQcHJpdmFjeV9zZXR0aW5ncxjPDSABKAsyEC5Qcml2YWN5",
+            "U2V0dGluZ3MSNQoTZGlzcGxheV9hdmF0YXJfbGlzdBgLIAMoCzIYLkRpc3Bs",
+            "YXlBdmF0YXJEZXRhaWxJbmZvEhMKC0NERlBMQkJJS0RJGAYgASgJEhMKC0ZM",
+            "SERDSkVDQ1BOGAkgASgNEgsKA3VpZBgNIAEoDRIsCgtPQlBKSEVEQ05KTRiR",
+            "CiABKAsyFi5QbGF5ZXJEaXNwbGF5U2V0dGluZ3MSEQoJc2lnbmF0dXJlGA4g",
+            "ASgJEhMKC0tQRk1CS0lBR01KGAEgASgIEhEKCWlzX2Jhbm5lZBgMIAEoCBI1",
+            "ChJhc3Npc3RfYXZhdGFyX2xpc3QYpA0gAygLMhguRGlzcGxheUF2YXRhckRl",
+            "dGFpbEluZm8SEwoLQ0hGQU5KTUlQS0EYAiABKA0SEwoLRU1HQURMQ0dEQkYY",
+            "CiABKAkSJgoLcmVjb3JkX2luZm8YByABKAsyES5QbGF5ZXJSZWNvcmRJbmZv",
+            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlayerRecordInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.DNCLPGJGHHKReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerDisplaySettingsReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlayerRecordInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerDisplaySettingsReflection.Descriptor, global::EggLink.DanhengServer.Proto.PrivacySettingsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerDetailInfo), global::EggLink.DanhengServer.Proto.PlayerDetailInfo.Parser, new[]{ "IsBanned", "WorldLevel", "MLDNNOMLHJD", "LFFJMADBHNN", "HeadIcon", "OPIACEKOANJ", "Signature", "DisplayAvatarList", "AssistAvatarList", "Platform", "RecordInfo", "DisplaySettings", "Uid", "COAELHIGPNG", "Level", "Nickname", "HNADOAKOMEE", "MCKKBKPOMLI" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerDetailInfo), global::EggLink.DanhengServer.Proto.PlayerDetailInfo.Parser, new[]{ "Nickname", "Level", "HeadIcon", "Platform", "WorldLevel", "PrivacySettings", "DisplayAvatarList", "CDFPLBBIKDI", "FLHDCJECCPN", "Uid", "OBPJHEDCNJM", "Signature", "KPFMBKIAGMJ", "IsBanned", "AssistAvatarList", "CHFANJMIPKA", "EMGADLCGDBF", "RecordInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -85,24 +85,24 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PlayerDetailInfo(PlayerDetailInfo other) : this() {
-      isBanned_ = other.isBanned_;
-      worldLevel_ = other.worldLevel_;
-      mLDNNOMLHJD_ = other.mLDNNOMLHJD_ != null ? other.mLDNNOMLHJD_.Clone() : null;
-      lFFJMADBHNN_ = other.lFFJMADBHNN_;
-      headIcon_ = other.headIcon_;
-      oPIACEKOANJ_ = other.oPIACEKOANJ_;
-      signature_ = other.signature_;
-      displayAvatarList_ = other.displayAvatarList_.Clone();
-      assistAvatarList_ = other.assistAvatarList_.Clone();
-      platform_ = other.platform_;
-      recordInfo_ = other.recordInfo_ != null ? other.recordInfo_.Clone() : null;
-      displaySettings_ = other.displaySettings_ != null ? other.displaySettings_.Clone() : null;
-      uid_ = other.uid_;
-      cOAELHIGPNG_ = other.cOAELHIGPNG_;
-      level_ = other.level_;
       nickname_ = other.nickname_;
-      hNADOAKOMEE_ = other.hNADOAKOMEE_;
-      mCKKBKPOMLI_ = other.mCKKBKPOMLI_;
+      level_ = other.level_;
+      headIcon_ = other.headIcon_;
+      platform_ = other.platform_;
+      worldLevel_ = other.worldLevel_;
+      privacySettings_ = other.privacySettings_ != null ? other.privacySettings_.Clone() : null;
+      displayAvatarList_ = other.displayAvatarList_.Clone();
+      cDFPLBBIKDI_ = other.cDFPLBBIKDI_;
+      fLHDCJECCPN_ = other.fLHDCJECCPN_;
+      uid_ = other.uid_;
+      oBPJHEDCNJM_ = other.oBPJHEDCNJM_ != null ? other.oBPJHEDCNJM_.Clone() : null;
+      signature_ = other.signature_;
+      kPFMBKIAGMJ_ = other.kPFMBKIAGMJ_;
+      isBanned_ = other.isBanned_;
+      assistAvatarList_ = other.assistAvatarList_.Clone();
+      cHFANJMIPKA_ = other.cHFANJMIPKA_;
+      eMGADLCGDBF_ = other.eMGADLCGDBF_;
+      recordInfo_ = other.recordInfo_ != null ? other.recordInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -112,186 +112,8 @@ namespace EggLink.DanhengServer.Proto {
       return new PlayerDetailInfo(this);
     }
 
-    /// <summary>Field number for the "is_banned" field.</summary>
-    public const int IsBannedFieldNumber = 11;
-    private bool isBanned_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsBanned {
-      get { return isBanned_; }
-      set {
-        isBanned_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "world_level" field.</summary>
-    public const int WorldLevelFieldNumber = 6;
-    private uint worldLevel_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint WorldLevel {
-      get { return worldLevel_; }
-      set {
-        worldLevel_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "MLDNNOMLHJD" field.</summary>
-    public const int MLDNNOMLHJDFieldNumber = 1265;
-    private global::EggLink.DanhengServer.Proto.DNCLPGJGHHK mLDNNOMLHJD_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.DNCLPGJGHHK MLDNNOMLHJD {
-      get { return mLDNNOMLHJD_; }
-      set {
-        mLDNNOMLHJD_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "LFFJMADBHNN" field.</summary>
-    public const int LFFJMADBHNNFieldNumber = 10;
-    private uint lFFJMADBHNN_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LFFJMADBHNN {
-      get { return lFFJMADBHNN_; }
-      set {
-        lFFJMADBHNN_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "head_icon" field.</summary>
-    public const int HeadIconFieldNumber = 12;
-    private uint headIcon_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint HeadIcon {
-      get { return headIcon_; }
-      set {
-        headIcon_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "OPIACEKOANJ" field.</summary>
-    public const int OPIACEKOANJFieldNumber = 3;
-    private string oPIACEKOANJ_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string OPIACEKOANJ {
-      get { return oPIACEKOANJ_; }
-      set {
-        oPIACEKOANJ_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "signature" field.</summary>
-    public const int SignatureFieldNumber = 4;
-    private string signature_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Signature {
-      get { return signature_; }
-      set {
-        signature_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "display_avatar_list" field.</summary>
-    public const int DisplayAvatarListFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> _repeated_displayAvatarList_codec
-        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> displayAvatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> DisplayAvatarList {
-      get { return displayAvatarList_; }
-    }
-
-    /// <summary>Field number for the "assist_avatar_list" field.</summary>
-    public const int AssistAvatarListFieldNumber = 1854;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> _repeated_assistAvatarList_codec
-        = pb::FieldCodec.ForMessage(14834, global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> assistAvatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> AssistAvatarList {
-      get { return assistAvatarList_; }
-    }
-
-    /// <summary>Field number for the "platform" field.</summary>
-    public const int PlatformFieldNumber = 5;
-    private global::EggLink.DanhengServer.Proto.PlatformType platform_ = global::EggLink.DanhengServer.Proto.PlatformType.Editor;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.PlatformType Platform {
-      get { return platform_; }
-      set {
-        platform_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "record_info" field.</summary>
-    public const int RecordInfoFieldNumber = 13;
-    private global::EggLink.DanhengServer.Proto.PlayerRecordInfo recordInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.PlayerRecordInfo RecordInfo {
-      get { return recordInfo_; }
-      set {
-        recordInfo_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "display_settings" field.</summary>
-    public const int DisplaySettingsFieldNumber = 1079;
-    private global::EggLink.DanhengServer.Proto.PlayerDisplaySettings displaySettings_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.PlayerDisplaySettings DisplaySettings {
-      get { return displaySettings_; }
-      set {
-        displaySettings_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "uid" field.</summary>
-    public const int UidFieldNumber = 9;
-    private uint uid_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Uid {
-      get { return uid_; }
-      set {
-        uid_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "COAELHIGPNG" field.</summary>
-    public const int COAELHIGPNGFieldNumber = 15;
-    private uint cOAELHIGPNG_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint COAELHIGPNG {
-      get { return cOAELHIGPNG_; }
-      set {
-        cOAELHIGPNG_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 14;
-    private uint level_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Level {
-      get { return level_; }
-      set {
-        level_ = value;
-      }
-    }
-
     /// <summary>Field number for the "nickname" field.</summary>
-    public const int NicknameFieldNumber = 2;
+    public const int NicknameFieldNumber = 4;
     private string nickname_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -302,27 +124,205 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "HNADOAKOMEE" field.</summary>
-    public const int HNADOAKOMEEFieldNumber = 1;
-    private bool hNADOAKOMEE_;
+    /// <summary>Field number for the "level" field.</summary>
+    public const int LevelFieldNumber = 15;
+    private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HNADOAKOMEE {
-      get { return hNADOAKOMEE_; }
+    public uint Level {
+      get { return level_; }
       set {
-        hNADOAKOMEE_ = value;
+        level_ = value;
       }
     }
 
-    /// <summary>Field number for the "MCKKBKPOMLI" field.</summary>
-    public const int MCKKBKPOMLIFieldNumber = 7;
-    private string mCKKBKPOMLI_ = "";
+    /// <summary>Field number for the "head_icon" field.</summary>
+    public const int HeadIconFieldNumber = 8;
+    private uint headIcon_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string MCKKBKPOMLI {
-      get { return mCKKBKPOMLI_; }
+    public uint HeadIcon {
+      get { return headIcon_; }
       set {
-        mCKKBKPOMLI_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        headIcon_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "platform" field.</summary>
+    public const int PlatformFieldNumber = 3;
+    private global::EggLink.DanhengServer.Proto.PlatformType platform_ = global::EggLink.DanhengServer.Proto.PlatformType.Editor;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.PlatformType Platform {
+      get { return platform_; }
+      set {
+        platform_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "world_level" field.</summary>
+    public const int WorldLevelFieldNumber = 5;
+    private uint worldLevel_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint WorldLevel {
+      get { return worldLevel_; }
+      set {
+        worldLevel_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "privacy_settings" field.</summary>
+    public const int PrivacySettingsFieldNumber = 1743;
+    private global::EggLink.DanhengServer.Proto.PrivacySettings privacySettings_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.PrivacySettings PrivacySettings {
+      get { return privacySettings_; }
+      set {
+        privacySettings_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "display_avatar_list" field.</summary>
+    public const int DisplayAvatarListFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> _repeated_displayAvatarList_codec
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> displayAvatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> DisplayAvatarList {
+      get { return displayAvatarList_; }
+    }
+
+    /// <summary>Field number for the "CDFPLBBIKDI" field.</summary>
+    public const int CDFPLBBIKDIFieldNumber = 6;
+    private string cDFPLBBIKDI_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CDFPLBBIKDI {
+      get { return cDFPLBBIKDI_; }
+      set {
+        cDFPLBBIKDI_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "FLHDCJECCPN" field.</summary>
+    public const int FLHDCJECCPNFieldNumber = 9;
+    private uint fLHDCJECCPN_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint FLHDCJECCPN {
+      get { return fLHDCJECCPN_; }
+      set {
+        fLHDCJECCPN_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "uid" field.</summary>
+    public const int UidFieldNumber = 13;
+    private uint uid_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Uid {
+      get { return uid_; }
+      set {
+        uid_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "OBPJHEDCNJM" field.</summary>
+    public const int OBPJHEDCNJMFieldNumber = 1297;
+    private global::EggLink.DanhengServer.Proto.PlayerDisplaySettings oBPJHEDCNJM_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.PlayerDisplaySettings OBPJHEDCNJM {
+      get { return oBPJHEDCNJM_; }
+      set {
+        oBPJHEDCNJM_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "signature" field.</summary>
+    public const int SignatureFieldNumber = 14;
+    private string signature_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Signature {
+      get { return signature_; }
+      set {
+        signature_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "KPFMBKIAGMJ" field.</summary>
+    public const int KPFMBKIAGMJFieldNumber = 1;
+    private bool kPFMBKIAGMJ_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool KPFMBKIAGMJ {
+      get { return kPFMBKIAGMJ_; }
+      set {
+        kPFMBKIAGMJ_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_banned" field.</summary>
+    public const int IsBannedFieldNumber = 12;
+    private bool isBanned_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsBanned {
+      get { return isBanned_; }
+      set {
+        isBanned_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "assist_avatar_list" field.</summary>
+    public const int AssistAvatarListFieldNumber = 1700;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> _repeated_assistAvatarList_codec
+        = pb::FieldCodec.ForMessage(13602, global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> assistAvatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> AssistAvatarList {
+      get { return assistAvatarList_; }
+    }
+
+    /// <summary>Field number for the "CHFANJMIPKA" field.</summary>
+    public const int CHFANJMIPKAFieldNumber = 2;
+    private uint cHFANJMIPKA_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CHFANJMIPKA {
+      get { return cHFANJMIPKA_; }
+      set {
+        cHFANJMIPKA_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "EMGADLCGDBF" field.</summary>
+    public const int EMGADLCGDBFFieldNumber = 10;
+    private string eMGADLCGDBF_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EMGADLCGDBF {
+      get { return eMGADLCGDBF_; }
+      set {
+        eMGADLCGDBF_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "record_info" field.</summary>
+    public const int RecordInfoFieldNumber = 7;
+    private global::EggLink.DanhengServer.Proto.PlayerRecordInfo recordInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.PlayerRecordInfo RecordInfo {
+      get { return recordInfo_; }
+      set {
+        recordInfo_ = value;
       }
     }
 
@@ -341,24 +341,24 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsBanned != other.IsBanned) return false;
-      if (WorldLevel != other.WorldLevel) return false;
-      if (!object.Equals(MLDNNOMLHJD, other.MLDNNOMLHJD)) return false;
-      if (LFFJMADBHNN != other.LFFJMADBHNN) return false;
-      if (HeadIcon != other.HeadIcon) return false;
-      if (OPIACEKOANJ != other.OPIACEKOANJ) return false;
-      if (Signature != other.Signature) return false;
-      if(!displayAvatarList_.Equals(other.displayAvatarList_)) return false;
-      if(!assistAvatarList_.Equals(other.assistAvatarList_)) return false;
-      if (Platform != other.Platform) return false;
-      if (!object.Equals(RecordInfo, other.RecordInfo)) return false;
-      if (!object.Equals(DisplaySettings, other.DisplaySettings)) return false;
-      if (Uid != other.Uid) return false;
-      if (COAELHIGPNG != other.COAELHIGPNG) return false;
-      if (Level != other.Level) return false;
       if (Nickname != other.Nickname) return false;
-      if (HNADOAKOMEE != other.HNADOAKOMEE) return false;
-      if (MCKKBKPOMLI != other.MCKKBKPOMLI) return false;
+      if (Level != other.Level) return false;
+      if (HeadIcon != other.HeadIcon) return false;
+      if (Platform != other.Platform) return false;
+      if (WorldLevel != other.WorldLevel) return false;
+      if (!object.Equals(PrivacySettings, other.PrivacySettings)) return false;
+      if(!displayAvatarList_.Equals(other.displayAvatarList_)) return false;
+      if (CDFPLBBIKDI != other.CDFPLBBIKDI) return false;
+      if (FLHDCJECCPN != other.FLHDCJECCPN) return false;
+      if (Uid != other.Uid) return false;
+      if (!object.Equals(OBPJHEDCNJM, other.OBPJHEDCNJM)) return false;
+      if (Signature != other.Signature) return false;
+      if (KPFMBKIAGMJ != other.KPFMBKIAGMJ) return false;
+      if (IsBanned != other.IsBanned) return false;
+      if(!assistAvatarList_.Equals(other.assistAvatarList_)) return false;
+      if (CHFANJMIPKA != other.CHFANJMIPKA) return false;
+      if (EMGADLCGDBF != other.EMGADLCGDBF) return false;
+      if (!object.Equals(RecordInfo, other.RecordInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -366,24 +366,24 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsBanned != false) hash ^= IsBanned.GetHashCode();
-      if (WorldLevel != 0) hash ^= WorldLevel.GetHashCode();
-      if (mLDNNOMLHJD_ != null) hash ^= MLDNNOMLHJD.GetHashCode();
-      if (LFFJMADBHNN != 0) hash ^= LFFJMADBHNN.GetHashCode();
-      if (HeadIcon != 0) hash ^= HeadIcon.GetHashCode();
-      if (OPIACEKOANJ.Length != 0) hash ^= OPIACEKOANJ.GetHashCode();
-      if (Signature.Length != 0) hash ^= Signature.GetHashCode();
-      hash ^= displayAvatarList_.GetHashCode();
-      hash ^= assistAvatarList_.GetHashCode();
-      if (Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) hash ^= Platform.GetHashCode();
-      if (recordInfo_ != null) hash ^= RecordInfo.GetHashCode();
-      if (displaySettings_ != null) hash ^= DisplaySettings.GetHashCode();
-      if (Uid != 0) hash ^= Uid.GetHashCode();
-      if (COAELHIGPNG != 0) hash ^= COAELHIGPNG.GetHashCode();
-      if (Level != 0) hash ^= Level.GetHashCode();
       if (Nickname.Length != 0) hash ^= Nickname.GetHashCode();
-      if (HNADOAKOMEE != false) hash ^= HNADOAKOMEE.GetHashCode();
-      if (MCKKBKPOMLI.Length != 0) hash ^= MCKKBKPOMLI.GetHashCode();
+      if (Level != 0) hash ^= Level.GetHashCode();
+      if (HeadIcon != 0) hash ^= HeadIcon.GetHashCode();
+      if (Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) hash ^= Platform.GetHashCode();
+      if (WorldLevel != 0) hash ^= WorldLevel.GetHashCode();
+      if (privacySettings_ != null) hash ^= PrivacySettings.GetHashCode();
+      hash ^= displayAvatarList_.GetHashCode();
+      if (CDFPLBBIKDI.Length != 0) hash ^= CDFPLBBIKDI.GetHashCode();
+      if (FLHDCJECCPN != 0) hash ^= FLHDCJECCPN.GetHashCode();
+      if (Uid != 0) hash ^= Uid.GetHashCode();
+      if (oBPJHEDCNJM_ != null) hash ^= OBPJHEDCNJM.GetHashCode();
+      if (Signature.Length != 0) hash ^= Signature.GetHashCode();
+      if (KPFMBKIAGMJ != false) hash ^= KPFMBKIAGMJ.GetHashCode();
+      if (IsBanned != false) hash ^= IsBanned.GetHashCode();
+      hash ^= assistAvatarList_.GetHashCode();
+      if (CHFANJMIPKA != 0) hash ^= CHFANJMIPKA.GetHashCode();
+      if (EMGADLCGDBF.Length != 0) hash ^= EMGADLCGDBF.GetHashCode();
+      if (recordInfo_ != null) hash ^= RecordInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -402,72 +402,72 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (HNADOAKOMEE != false) {
+      if (KPFMBKIAGMJ != false) {
         output.WriteRawTag(8);
-        output.WriteBool(HNADOAKOMEE);
+        output.WriteBool(KPFMBKIAGMJ);
       }
-      if (Nickname.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Nickname);
-      }
-      if (OPIACEKOANJ.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(OPIACEKOANJ);
-      }
-      if (Signature.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(Signature);
+      if (CHFANJMIPKA != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(CHFANJMIPKA);
       }
       if (Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteEnum((int) Platform);
       }
+      if (Nickname.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Nickname);
+      }
       if (WorldLevel != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(40);
         output.WriteUInt32(WorldLevel);
       }
-      if (MCKKBKPOMLI.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(MCKKBKPOMLI);
-      }
-      displayAvatarList_.WriteTo(output, _repeated_displayAvatarList_codec);
-      if (Uid != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(Uid);
-      }
-      if (LFFJMADBHNN != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(LFFJMADBHNN);
-      }
-      if (IsBanned != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(IsBanned);
-      }
-      if (HeadIcon != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(HeadIcon);
+      if (CDFPLBBIKDI.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(CDFPLBBIKDI);
       }
       if (recordInfo_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(58);
         output.WriteMessage(RecordInfo);
       }
+      if (HeadIcon != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(HeadIcon);
+      }
+      if (FLHDCJECCPN != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(FLHDCJECCPN);
+      }
+      if (EMGADLCGDBF.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(EMGADLCGDBF);
+      }
+      displayAvatarList_.WriteTo(output, _repeated_displayAvatarList_codec);
+      if (IsBanned != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(IsBanned);
+      }
+      if (Uid != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(Uid);
+      }
+      if (Signature.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(Signature);
+      }
       if (Level != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(120);
         output.WriteUInt32(Level);
       }
-      if (COAELHIGPNG != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(COAELHIGPNG);
-      }
-      if (displaySettings_ != null) {
-        output.WriteRawTag(186, 67);
-        output.WriteMessage(DisplaySettings);
-      }
-      if (mLDNNOMLHJD_ != null) {
-        output.WriteRawTag(138, 79);
-        output.WriteMessage(MLDNNOMLHJD);
+      if (oBPJHEDCNJM_ != null) {
+        output.WriteRawTag(138, 81);
+        output.WriteMessage(OBPJHEDCNJM);
       }
       assistAvatarList_.WriteTo(output, _repeated_assistAvatarList_codec);
+      if (privacySettings_ != null) {
+        output.WriteRawTag(250, 108);
+        output.WriteMessage(PrivacySettings);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -478,72 +478,72 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HNADOAKOMEE != false) {
+      if (KPFMBKIAGMJ != false) {
         output.WriteRawTag(8);
-        output.WriteBool(HNADOAKOMEE);
+        output.WriteBool(KPFMBKIAGMJ);
       }
-      if (Nickname.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Nickname);
-      }
-      if (OPIACEKOANJ.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(OPIACEKOANJ);
-      }
-      if (Signature.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(Signature);
+      if (CHFANJMIPKA != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(CHFANJMIPKA);
       }
       if (Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteEnum((int) Platform);
       }
+      if (Nickname.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Nickname);
+      }
       if (WorldLevel != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(40);
         output.WriteUInt32(WorldLevel);
       }
-      if (MCKKBKPOMLI.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(MCKKBKPOMLI);
-      }
-      displayAvatarList_.WriteTo(ref output, _repeated_displayAvatarList_codec);
-      if (Uid != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(Uid);
-      }
-      if (LFFJMADBHNN != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(LFFJMADBHNN);
-      }
-      if (IsBanned != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(IsBanned);
-      }
-      if (HeadIcon != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(HeadIcon);
+      if (CDFPLBBIKDI.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(CDFPLBBIKDI);
       }
       if (recordInfo_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(58);
         output.WriteMessage(RecordInfo);
       }
+      if (HeadIcon != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(HeadIcon);
+      }
+      if (FLHDCJECCPN != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(FLHDCJECCPN);
+      }
+      if (EMGADLCGDBF.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(EMGADLCGDBF);
+      }
+      displayAvatarList_.WriteTo(ref output, _repeated_displayAvatarList_codec);
+      if (IsBanned != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(IsBanned);
+      }
+      if (Uid != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(Uid);
+      }
+      if (Signature.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(Signature);
+      }
       if (Level != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(120);
         output.WriteUInt32(Level);
       }
-      if (COAELHIGPNG != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(COAELHIGPNG);
-      }
-      if (displaySettings_ != null) {
-        output.WriteRawTag(186, 67);
-        output.WriteMessage(DisplaySettings);
-      }
-      if (mLDNNOMLHJD_ != null) {
-        output.WriteRawTag(138, 79);
-        output.WriteMessage(MLDNNOMLHJD);
+      if (oBPJHEDCNJM_ != null) {
+        output.WriteRawTag(138, 81);
+        output.WriteMessage(OBPJHEDCNJM);
       }
       assistAvatarList_.WriteTo(ref output, _repeated_assistAvatarList_codec);
+      if (privacySettings_ != null) {
+        output.WriteRawTag(250, 108);
+        output.WriteMessage(PrivacySettings);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -554,55 +554,55 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsBanned != false) {
-        size += 1 + 1;
-      }
-      if (WorldLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorldLevel);
-      }
-      if (mLDNNOMLHJD_ != null) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(MLDNNOMLHJD);
-      }
-      if (LFFJMADBHNN != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LFFJMADBHNN);
-      }
-      if (HeadIcon != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HeadIcon);
-      }
-      if (OPIACEKOANJ.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(OPIACEKOANJ);
-      }
-      if (Signature.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Signature);
-      }
-      size += displayAvatarList_.CalculateSize(_repeated_displayAvatarList_codec);
-      size += assistAvatarList_.CalculateSize(_repeated_assistAvatarList_codec);
-      if (Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Platform);
-      }
-      if (recordInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RecordInfo);
-      }
-      if (displaySettings_ != null) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DisplaySettings);
-      }
-      if (Uid != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Uid);
-      }
-      if (COAELHIGPNG != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(COAELHIGPNG);
+      if (Nickname.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Nickname);
       }
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
       }
-      if (Nickname.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Nickname);
+      if (HeadIcon != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HeadIcon);
       }
-      if (HNADOAKOMEE != false) {
+      if (Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Platform);
+      }
+      if (WorldLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorldLevel);
+      }
+      if (privacySettings_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(PrivacySettings);
+      }
+      size += displayAvatarList_.CalculateSize(_repeated_displayAvatarList_codec);
+      if (CDFPLBBIKDI.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CDFPLBBIKDI);
+      }
+      if (FLHDCJECCPN != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FLHDCJECCPN);
+      }
+      if (Uid != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Uid);
+      }
+      if (oBPJHEDCNJM_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(OBPJHEDCNJM);
+      }
+      if (Signature.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Signature);
+      }
+      if (KPFMBKIAGMJ != false) {
         size += 1 + 1;
       }
-      if (MCKKBKPOMLI.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(MCKKBKPOMLI);
+      if (IsBanned != false) {
+        size += 1 + 1;
+      }
+      size += assistAvatarList_.CalculateSize(_repeated_assistAvatarList_codec);
+      if (CHFANJMIPKA != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CHFANJMIPKA);
+      }
+      if (EMGADLCGDBF.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(EMGADLCGDBF);
+      }
+      if (recordInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RecordInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -616,64 +616,64 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsBanned != false) {
-        IsBanned = other.IsBanned;
+      if (other.Nickname.Length != 0) {
+        Nickname = other.Nickname;
       }
-      if (other.WorldLevel != 0) {
-        WorldLevel = other.WorldLevel;
-      }
-      if (other.mLDNNOMLHJD_ != null) {
-        if (mLDNNOMLHJD_ == null) {
-          MLDNNOMLHJD = new global::EggLink.DanhengServer.Proto.DNCLPGJGHHK();
-        }
-        MLDNNOMLHJD.MergeFrom(other.MLDNNOMLHJD);
-      }
-      if (other.LFFJMADBHNN != 0) {
-        LFFJMADBHNN = other.LFFJMADBHNN;
+      if (other.Level != 0) {
+        Level = other.Level;
       }
       if (other.HeadIcon != 0) {
         HeadIcon = other.HeadIcon;
       }
-      if (other.OPIACEKOANJ.Length != 0) {
-        OPIACEKOANJ = other.OPIACEKOANJ;
+      if (other.Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) {
+        Platform = other.Platform;
+      }
+      if (other.WorldLevel != 0) {
+        WorldLevel = other.WorldLevel;
+      }
+      if (other.privacySettings_ != null) {
+        if (privacySettings_ == null) {
+          PrivacySettings = new global::EggLink.DanhengServer.Proto.PrivacySettings();
+        }
+        PrivacySettings.MergeFrom(other.PrivacySettings);
+      }
+      displayAvatarList_.Add(other.displayAvatarList_);
+      if (other.CDFPLBBIKDI.Length != 0) {
+        CDFPLBBIKDI = other.CDFPLBBIKDI;
+      }
+      if (other.FLHDCJECCPN != 0) {
+        FLHDCJECCPN = other.FLHDCJECCPN;
+      }
+      if (other.Uid != 0) {
+        Uid = other.Uid;
+      }
+      if (other.oBPJHEDCNJM_ != null) {
+        if (oBPJHEDCNJM_ == null) {
+          OBPJHEDCNJM = new global::EggLink.DanhengServer.Proto.PlayerDisplaySettings();
+        }
+        OBPJHEDCNJM.MergeFrom(other.OBPJHEDCNJM);
       }
       if (other.Signature.Length != 0) {
         Signature = other.Signature;
       }
-      displayAvatarList_.Add(other.displayAvatarList_);
+      if (other.KPFMBKIAGMJ != false) {
+        KPFMBKIAGMJ = other.KPFMBKIAGMJ;
+      }
+      if (other.IsBanned != false) {
+        IsBanned = other.IsBanned;
+      }
       assistAvatarList_.Add(other.assistAvatarList_);
-      if (other.Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) {
-        Platform = other.Platform;
+      if (other.CHFANJMIPKA != 0) {
+        CHFANJMIPKA = other.CHFANJMIPKA;
+      }
+      if (other.EMGADLCGDBF.Length != 0) {
+        EMGADLCGDBF = other.EMGADLCGDBF;
       }
       if (other.recordInfo_ != null) {
         if (recordInfo_ == null) {
           RecordInfo = new global::EggLink.DanhengServer.Proto.PlayerRecordInfo();
         }
         RecordInfo.MergeFrom(other.RecordInfo);
-      }
-      if (other.displaySettings_ != null) {
-        if (displaySettings_ == null) {
-          DisplaySettings = new global::EggLink.DanhengServer.Proto.PlayerDisplaySettings();
-        }
-        DisplaySettings.MergeFrom(other.DisplaySettings);
-      }
-      if (other.Uid != 0) {
-        Uid = other.Uid;
-      }
-      if (other.COAELHIGPNG != 0) {
-        COAELHIGPNG = other.COAELHIGPNG;
-      }
-      if (other.Level != 0) {
-        Level = other.Level;
-      }
-      if (other.Nickname.Length != 0) {
-        Nickname = other.Nickname;
-      }
-      if (other.HNADOAKOMEE != false) {
-        HNADOAKOMEE = other.HNADOAKOMEE;
-      }
-      if (other.MCKKBKPOMLI.Length != 0) {
-        MCKKBKPOMLI = other.MCKKBKPOMLI;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -691,84 +691,84 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            HNADOAKOMEE = input.ReadBool();
+            KPFMBKIAGMJ = input.ReadBool();
             break;
           }
-          case 18: {
-            Nickname = input.ReadString();
+          case 16: {
+            CHFANJMIPKA = input.ReadUInt32();
             break;
           }
-          case 26: {
-            OPIACEKOANJ = input.ReadString();
-            break;
-          }
-          case 34: {
-            Signature = input.ReadString();
-            break;
-          }
-          case 40: {
+          case 24: {
             Platform = (global::EggLink.DanhengServer.Proto.PlatformType) input.ReadEnum();
             break;
           }
-          case 48: {
+          case 34: {
+            Nickname = input.ReadString();
+            break;
+          }
+          case 40: {
             WorldLevel = input.ReadUInt32();
             break;
           }
+          case 50: {
+            CDFPLBBIKDI = input.ReadString();
+            break;
+          }
           case 58: {
-            MCKKBKPOMLI = input.ReadString();
-            break;
-          }
-          case 66: {
-            displayAvatarList_.AddEntriesFrom(input, _repeated_displayAvatarList_codec);
-            break;
-          }
-          case 72: {
-            Uid = input.ReadUInt32();
-            break;
-          }
-          case 80: {
-            LFFJMADBHNN = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            IsBanned = input.ReadBool();
-            break;
-          }
-          case 96: {
-            HeadIcon = input.ReadUInt32();
-            break;
-          }
-          case 106: {
             if (recordInfo_ == null) {
               RecordInfo = new global::EggLink.DanhengServer.Proto.PlayerRecordInfo();
             }
             input.ReadMessage(RecordInfo);
             break;
           }
-          case 112: {
-            Level = input.ReadUInt32();
+          case 64: {
+            HeadIcon = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            FLHDCJECCPN = input.ReadUInt32();
+            break;
+          }
+          case 82: {
+            EMGADLCGDBF = input.ReadString();
+            break;
+          }
+          case 90: {
+            displayAvatarList_.AddEntriesFrom(input, _repeated_displayAvatarList_codec);
+            break;
+          }
+          case 96: {
+            IsBanned = input.ReadBool();
+            break;
+          }
+          case 104: {
+            Uid = input.ReadUInt32();
+            break;
+          }
+          case 114: {
+            Signature = input.ReadString();
             break;
           }
           case 120: {
-            COAELHIGPNG = input.ReadUInt32();
+            Level = input.ReadUInt32();
             break;
           }
-          case 8634: {
-            if (displaySettings_ == null) {
-              DisplaySettings = new global::EggLink.DanhengServer.Proto.PlayerDisplaySettings();
+          case 10378: {
+            if (oBPJHEDCNJM_ == null) {
+              OBPJHEDCNJM = new global::EggLink.DanhengServer.Proto.PlayerDisplaySettings();
             }
-            input.ReadMessage(DisplaySettings);
+            input.ReadMessage(OBPJHEDCNJM);
             break;
           }
-          case 10122: {
-            if (mLDNNOMLHJD_ == null) {
-              MLDNNOMLHJD = new global::EggLink.DanhengServer.Proto.DNCLPGJGHHK();
-            }
-            input.ReadMessage(MLDNNOMLHJD);
-            break;
-          }
-          case 14834: {
+          case 13602: {
             assistAvatarList_.AddEntriesFrom(input, _repeated_assistAvatarList_codec);
+            break;
+          }
+          case 13946: {
+            if (privacySettings_ == null) {
+              PrivacySettings = new global::EggLink.DanhengServer.Proto.PrivacySettings();
+            }
+            input.ReadMessage(PrivacySettings);
             break;
           }
         }
@@ -787,84 +787,84 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            HNADOAKOMEE = input.ReadBool();
+            KPFMBKIAGMJ = input.ReadBool();
             break;
           }
-          case 18: {
-            Nickname = input.ReadString();
+          case 16: {
+            CHFANJMIPKA = input.ReadUInt32();
             break;
           }
-          case 26: {
-            OPIACEKOANJ = input.ReadString();
-            break;
-          }
-          case 34: {
-            Signature = input.ReadString();
-            break;
-          }
-          case 40: {
+          case 24: {
             Platform = (global::EggLink.DanhengServer.Proto.PlatformType) input.ReadEnum();
             break;
           }
-          case 48: {
+          case 34: {
+            Nickname = input.ReadString();
+            break;
+          }
+          case 40: {
             WorldLevel = input.ReadUInt32();
             break;
           }
+          case 50: {
+            CDFPLBBIKDI = input.ReadString();
+            break;
+          }
           case 58: {
-            MCKKBKPOMLI = input.ReadString();
-            break;
-          }
-          case 66: {
-            displayAvatarList_.AddEntriesFrom(ref input, _repeated_displayAvatarList_codec);
-            break;
-          }
-          case 72: {
-            Uid = input.ReadUInt32();
-            break;
-          }
-          case 80: {
-            LFFJMADBHNN = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            IsBanned = input.ReadBool();
-            break;
-          }
-          case 96: {
-            HeadIcon = input.ReadUInt32();
-            break;
-          }
-          case 106: {
             if (recordInfo_ == null) {
               RecordInfo = new global::EggLink.DanhengServer.Proto.PlayerRecordInfo();
             }
             input.ReadMessage(RecordInfo);
             break;
           }
-          case 112: {
-            Level = input.ReadUInt32();
+          case 64: {
+            HeadIcon = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            FLHDCJECCPN = input.ReadUInt32();
+            break;
+          }
+          case 82: {
+            EMGADLCGDBF = input.ReadString();
+            break;
+          }
+          case 90: {
+            displayAvatarList_.AddEntriesFrom(ref input, _repeated_displayAvatarList_codec);
+            break;
+          }
+          case 96: {
+            IsBanned = input.ReadBool();
+            break;
+          }
+          case 104: {
+            Uid = input.ReadUInt32();
+            break;
+          }
+          case 114: {
+            Signature = input.ReadString();
             break;
           }
           case 120: {
-            COAELHIGPNG = input.ReadUInt32();
+            Level = input.ReadUInt32();
             break;
           }
-          case 8634: {
-            if (displaySettings_ == null) {
-              DisplaySettings = new global::EggLink.DanhengServer.Proto.PlayerDisplaySettings();
+          case 10378: {
+            if (oBPJHEDCNJM_ == null) {
+              OBPJHEDCNJM = new global::EggLink.DanhengServer.Proto.PlayerDisplaySettings();
             }
-            input.ReadMessage(DisplaySettings);
+            input.ReadMessage(OBPJHEDCNJM);
             break;
           }
-          case 10122: {
-            if (mLDNNOMLHJD_ == null) {
-              MLDNNOMLHJD = new global::EggLink.DanhengServer.Proto.DNCLPGJGHHK();
-            }
-            input.ReadMessage(MLDNNOMLHJD);
-            break;
-          }
-          case 14834: {
+          case 13602: {
             assistAvatarList_.AddEntriesFrom(ref input, _repeated_assistAvatarList_codec);
+            break;
+          }
+          case 13946: {
+            if (privacySettings_ == null) {
+              PrivacySettings = new global::EggLink.DanhengServer.Proto.PrivacySettings();
+            }
+            input.ReadMessage(PrivacySettings);
             break;
           }
         }

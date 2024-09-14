@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChVCYXNpY01vZHVsZVN5bmMucHJvdG8iRgoPQmFzaWNNb2R1bGVTeW5jEiIK",
-            "GndlZWtfY29jb29uX2ZpbmlzaGVkX2NvdW50GAIgASgNEg8KB3N0YW1pbmEY",
-            "DyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "GndlZWtfY29jb29uX2ZpbmlzaGVkX2NvdW50GA0gASgNEg8KB3N0YW1pbmEY",
+            "BiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "week_cocoon_finished_count" field.</summary>
-    public const int WeekCocoonFinishedCountFieldNumber = 2;
+    public const int WeekCocoonFinishedCountFieldNumber = 13;
     private uint weekCocoonFinishedCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "stamina" field.</summary>
-    public const int StaminaFieldNumber = 15;
+    public const int StaminaFieldNumber = 6;
     private uint stamina_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (WeekCocoonFinishedCount != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(WeekCocoonFinishedCount);
-      }
       if (Stamina != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(48);
         output.WriteUInt32(Stamina);
+      }
+      if (WeekCocoonFinishedCount != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(WeekCocoonFinishedCount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (WeekCocoonFinishedCount != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(WeekCocoonFinishedCount);
-      }
       if (Stamina != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(48);
         output.WriteUInt32(Stamina);
+      }
+      if (WeekCocoonFinishedCount != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(WeekCocoonFinishedCount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            WeekCocoonFinishedCount = input.ReadUInt32();
+          case 48: {
+            Stamina = input.ReadUInt32();
             break;
           }
-          case 120: {
-            Stamina = input.ReadUInt32();
+          case 104: {
+            WeekCocoonFinishedCount = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            WeekCocoonFinishedCount = input.ReadUInt32();
+          case 48: {
+            Stamina = input.ReadUInt32();
             break;
           }
-          case 120: {
-            Stamina = input.ReadUInt32();
+          case 104: {
+            WeekCocoonFinishedCount = input.ReadUInt32();
             break;
           }
         }

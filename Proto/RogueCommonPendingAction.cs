@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5Sb2d1ZUNvbW1vblBlbmRpbmdBY3Rpb24ucHJvdG8aEVJvZ3VlQWN0aW9u",
-            "LnByb3RvIlYKGFJvZ3VlQ29tbW9uUGVuZGluZ0FjdGlvbhIiCgxyb2d1ZV9h",
-            "Y3Rpb24YDCABKAsyDC5Sb2d1ZUFjdGlvbhIWCg5xdWV1ZV9wb3NpdGlvbhgF",
-            "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "LnByb3RvIlYKGFJvZ3VlQ29tbW9uUGVuZGluZ0FjdGlvbhIWCg5xdWV1ZV9w",
+            "b3NpdGlvbhgPIAEoDRIiCgxyb2d1ZV9hY3Rpb24YCSABKAsyDC5Sb2d1ZUFj",
+            "dGlvbkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueActionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonPendingAction), global::EggLink.DanhengServer.Proto.RogueCommonPendingAction.Parser, new[]{ "RogueAction", "QueuePosition" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonPendingAction), global::EggLink.DanhengServer.Proto.RogueCommonPendingAction.Parser, new[]{ "QueuePosition", "RogueAction" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueCommonPendingAction(RogueCommonPendingAction other) : this() {
-      rogueAction_ = other.rogueAction_ != null ? other.rogueAction_.Clone() : null;
       queuePosition_ = other.queuePosition_;
+      rogueAction_ = other.rogueAction_ != null ? other.rogueAction_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueCommonPendingAction(this);
     }
 
-    /// <summary>Field number for the "rogue_action" field.</summary>
-    public const int RogueActionFieldNumber = 12;
-    private global::EggLink.DanhengServer.Proto.RogueAction rogueAction_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueAction RogueAction {
-      get { return rogueAction_; }
-      set {
-        rogueAction_ = value;
-      }
-    }
-
     /// <summary>Field number for the "queue_position" field.</summary>
-    public const int QueuePositionFieldNumber = 5;
+    public const int QueuePositionFieldNumber = 15;
     private uint queuePosition_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return queuePosition_; }
       set {
         queuePosition_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rogue_action" field.</summary>
+    public const int RogueActionFieldNumber = 9;
+    private global::EggLink.DanhengServer.Proto.RogueAction rogueAction_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueAction RogueAction {
+      get { return rogueAction_; }
+      set {
+        rogueAction_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(RogueAction, other.RogueAction)) return false;
       if (QueuePosition != other.QueuePosition) return false;
+      if (!object.Equals(RogueAction, other.RogueAction)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (rogueAction_ != null) hash ^= RogueAction.GetHashCode();
       if (QueuePosition != 0) hash ^= QueuePosition.GetHashCode();
+      if (rogueAction_ != null) hash ^= RogueAction.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (QueuePosition != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(QueuePosition);
-      }
       if (rogueAction_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(74);
         output.WriteMessage(RogueAction);
+      }
+      if (QueuePosition != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(QueuePosition);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (QueuePosition != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(QueuePosition);
-      }
       if (rogueAction_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(74);
         output.WriteMessage(RogueAction);
+      }
+      if (QueuePosition != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(QueuePosition);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (rogueAction_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueAction);
-      }
       if (QueuePosition != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(QueuePosition);
+      }
+      if (rogueAction_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueAction);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,14 +206,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.QueuePosition != 0) {
+        QueuePosition = other.QueuePosition;
+      }
       if (other.rogueAction_ != null) {
         if (rogueAction_ == null) {
           RogueAction = new global::EggLink.DanhengServer.Proto.RogueAction();
         }
         RogueAction.MergeFrom(other.RogueAction);
-      }
-      if (other.QueuePosition != 0) {
-        QueuePosition = other.QueuePosition;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            QueuePosition = input.ReadUInt32();
-            break;
-          }
-          case 98: {
+          case 74: {
             if (rogueAction_ == null) {
               RogueAction = new global::EggLink.DanhengServer.Proto.RogueAction();
             }
             input.ReadMessage(RogueAction);
+            break;
+          }
+          case 120: {
+            QueuePosition = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            QueuePosition = input.ReadUInt32();
-            break;
-          }
-          case 98: {
+          case 74: {
             if (rogueAction_ == null) {
               RogueAction = new global::EggLink.DanhengServer.Proto.RogueAction();
             }
             input.ReadMessage(RogueAction);
+            break;
+          }
+          case 120: {
+            QueuePosition = input.ReadUInt32();
             break;
           }
         }

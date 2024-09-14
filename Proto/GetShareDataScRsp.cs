@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdHZXRTaGFyZURhdGFTY1JzcC5wcm90bxoPU2hhcmVEYXRhLnByb3RvIkUK",
-            "EUdldFNoYXJlRGF0YVNjUnNwEg8KB3JldGNvZGUYASABKA0SHwoLSUNLT09E",
-            "RkhETUUYBSADKAsyCi5TaGFyZURhdGFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "EUdldFNoYXJlRGF0YVNjUnNwEh8KC1BHQURERE5NSENFGAcgAygLMgouU2hh",
+            "cmVEYXRhEg8KB3JldGNvZGUYASABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ShareDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetShareDataScRsp), global::EggLink.DanhengServer.Proto.GetShareDataScRsp.Parser, new[]{ "Retcode", "ICKOODFHDME" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetShareDataScRsp), global::EggLink.DanhengServer.Proto.GetShareDataScRsp.Parser, new[]{ "PGADDDNMHCE", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetShareDataScRsp(GetShareDataScRsp other) : this() {
+      pGADDDNMHCE_ = other.pGADDDNMHCE_.Clone();
       retcode_ = other.retcode_;
-      iCKOODFHDME_ = other.iCKOODFHDME_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,6 +82,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetShareDataScRsp Clone() {
       return new GetShareDataScRsp(this);
+    }
+
+    /// <summary>Field number for the "PGADDDNMHCE" field.</summary>
+    public const int PGADDDNMHCEFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ShareData> _repeated_pGADDDNMHCE_codec
+        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.ShareData.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ShareData> pGADDDNMHCE_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ShareData>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ShareData> PGADDDNMHCE {
+      get { return pGADDDNMHCE_; }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
@@ -94,17 +105,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         retcode_ = value;
       }
-    }
-
-    /// <summary>Field number for the "ICKOODFHDME" field.</summary>
-    public const int ICKOODFHDMEFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ShareData> _repeated_iCKOODFHDME_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.ShareData.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ShareData> iCKOODFHDME_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ShareData>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ShareData> ICKOODFHDME {
-      get { return iCKOODFHDME_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if(!pGADDDNMHCE_.Equals(other.pGADDDNMHCE_)) return false;
       if (Retcode != other.Retcode) return false;
-      if(!iCKOODFHDME_.Equals(other.iCKOODFHDME_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      hash ^= pGADDDNMHCE_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      hash ^= iCKOODFHDME_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -155,7 +155,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
       }
-      iCKOODFHDME_.WriteTo(output, _repeated_iCKOODFHDME_codec);
+      pGADDDNMHCE_.WriteTo(output, _repeated_pGADDDNMHCE_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -170,7 +170,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
       }
-      iCKOODFHDME_.WriteTo(ref output, _repeated_iCKOODFHDME_codec);
+      pGADDDNMHCE_.WriteTo(ref output, _repeated_pGADDDNMHCE_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -181,10 +181,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += pGADDDNMHCE_.CalculateSize(_repeated_pGADDDNMHCE_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += iCKOODFHDME_.CalculateSize(_repeated_iCKOODFHDME_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -197,10 +197,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      pGADDDNMHCE_.Add(other.pGADDDNMHCE_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      iCKOODFHDME_.Add(other.iCKOODFHDME_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -220,8 +220,8 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 42: {
-            iCKOODFHDME_.AddEntriesFrom(input, _repeated_iCKOODFHDME_codec);
+          case 58: {
+            pGADDDNMHCE_.AddEntriesFrom(input, _repeated_pGADDDNMHCE_codec);
             break;
           }
         }
@@ -243,8 +243,8 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 42: {
-            iCKOODFHDME_.AddEntriesFrom(ref input, _repeated_iCKOODFHDME_codec);
+          case 58: {
+            pGADDDNMHCE_.AddEntriesFrom(ref input, _repeated_pGADDDNMHCE_codec);
             break;
           }
         }

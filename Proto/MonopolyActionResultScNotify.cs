@@ -26,12 +26,12 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiJNb25vcG9seUFjdGlvblJlc3VsdFNjTm90aWZ5LnByb3RvGhpNb25vcG9s",
             "eUFjdGlvblJlc3VsdC5wcm90byJKChxNb25vcG9seUFjdGlvblJlc3VsdFNj",
-            "Tm90aWZ5EioKC0xBSVBCQ0tIRUFKGA0gAygLMhUuTW9ub3BvbHlBY3Rpb25S",
+            "Tm90aWZ5EioKC05FS1BISkVNQ1BNGAogAygLMhUuTW9ub3BvbHlBY3Rpb25S",
             "ZXN1bHRCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MonopolyActionResultReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonopolyActionResultScNotify), global::EggLink.DanhengServer.Proto.MonopolyActionResultScNotify.Parser, new[]{ "LAIPBCKHEAJ" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonopolyActionResultScNotify), global::EggLink.DanhengServer.Proto.MonopolyActionResultScNotify.Parser, new[]{ "NEKPHJEMCPM" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MonopolyActionResultScNotify(MonopolyActionResultScNotify other) : this() {
-      lAIPBCKHEAJ_ = other.lAIPBCKHEAJ_.Clone();
+      nEKPHJEMCPM_ = other.nEKPHJEMCPM_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new MonopolyActionResultScNotify(this);
     }
 
-    /// <summary>Field number for the "LAIPBCKHEAJ" field.</summary>
-    public const int LAIPBCKHEAJFieldNumber = 13;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MonopolyActionResult> _repeated_lAIPBCKHEAJ_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.MonopolyActionResult.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MonopolyActionResult> lAIPBCKHEAJ_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MonopolyActionResult>();
+    /// <summary>Field number for the "NEKPHJEMCPM" field.</summary>
+    public const int NEKPHJEMCPMFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MonopolyActionResult> _repeated_nEKPHJEMCPM_codec
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.MonopolyActionResult.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MonopolyActionResult> nEKPHJEMCPM_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MonopolyActionResult>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MonopolyActionResult> LAIPBCKHEAJ {
-      get { return lAIPBCKHEAJ_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MonopolyActionResult> NEKPHJEMCPM {
+      get { return nEKPHJEMCPM_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!lAIPBCKHEAJ_.Equals(other.lAIPBCKHEAJ_)) return false;
+      if(!nEKPHJEMCPM_.Equals(other.nEKPHJEMCPM_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= lAIPBCKHEAJ_.GetHashCode();
+      hash ^= nEKPHJEMCPM_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      lAIPBCKHEAJ_.WriteTo(output, _repeated_lAIPBCKHEAJ_codec);
+      nEKPHJEMCPM_.WriteTo(output, _repeated_nEKPHJEMCPM_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -147,7 +147,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      lAIPBCKHEAJ_.WriteTo(ref output, _repeated_lAIPBCKHEAJ_codec);
+      nEKPHJEMCPM_.WriteTo(ref output, _repeated_nEKPHJEMCPM_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -158,7 +158,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += lAIPBCKHEAJ_.CalculateSize(_repeated_lAIPBCKHEAJ_codec);
+      size += nEKPHJEMCPM_.CalculateSize(_repeated_nEKPHJEMCPM_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -171,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      lAIPBCKHEAJ_.Add(other.lAIPBCKHEAJ_);
+      nEKPHJEMCPM_.Add(other.nEKPHJEMCPM_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -187,8 +187,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 106: {
-            lAIPBCKHEAJ_.AddEntriesFrom(input, _repeated_lAIPBCKHEAJ_codec);
+          case 82: {
+            nEKPHJEMCPM_.AddEntriesFrom(input, _repeated_nEKPHJEMCPM_codec);
             break;
           }
         }
@@ -206,8 +206,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 106: {
-            lAIPBCKHEAJ_.AddEntriesFrom(ref input, _repeated_lAIPBCKHEAJ_codec);
+          case 82: {
+            nEKPHJEMCPM_.AddEntriesFrom(ref input, _repeated_nEKPHJEMCPM_codec);
             break;
           }
         }

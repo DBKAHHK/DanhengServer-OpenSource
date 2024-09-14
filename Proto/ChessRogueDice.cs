@@ -25,15 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRDaGVzc1JvZ3VlRGljZS5wcm90bxofQ2hlc3NSb2d1ZURpY2VTdXJmYWNl",
-            "SW5mby5wcm90byKNAQoOQ2hlc3NSb2d1ZURpY2USFgoOZGljZV9icmFuY2hf",
-            "aWQYBiABKA0SHAoUbWF4X2RpZmZpY3VsdHlfbGV2ZWwYBSABKA0SMAoMc3Vy",
-            "ZmFjZV9saXN0GAcgAygLMhouQ2hlc3NSb2d1ZURpY2VTdXJmYWNlSW5mbxIT",
-            "CgttYXhfYXJlYV9pZBgIIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
-            "LlByb3RvYgZwcm90bzM="));
+            "SW5mby5wcm90byJ6Cg5DaGVzc1JvZ3VlRGljZRIRCglicmFuY2hfaWQYCiAB",
+            "KA0SEgoKc3VyZmFjZV9pZBgFIAEoDRIPCgdzbG90X2lkGAYgASgNEjAKDHN1",
+            "cmZhY2VfbGlzdBgJIAMoCzIaLkNoZXNzUm9ndWVEaWNlU3VyZmFjZUluZm9C",
+            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueDice), global::EggLink.DanhengServer.Proto.ChessRogueDice.Parser, new[]{ "DiceBranchId", "MaxDifficultyLevel", "SurfaceList", "MaxAreaId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueDice), global::EggLink.DanhengServer.Proto.ChessRogueDice.Parser, new[]{ "BranchId", "SurfaceId", "SlotId", "SurfaceList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueDice(ChessRogueDice other) : this() {
-      diceBranchId_ = other.diceBranchId_;
-      maxDifficultyLevel_ = other.maxDifficultyLevel_;
+      branchId_ = other.branchId_;
+      surfaceId_ = other.surfaceId_;
+      slotId_ = other.slotId_;
       surfaceList_ = other.surfaceList_.Clone();
-      maxAreaId_ = other.maxAreaId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,51 +87,51 @@ namespace EggLink.DanhengServer.Proto {
       return new ChessRogueDice(this);
     }
 
-    /// <summary>Field number for the "dice_branch_id" field.</summary>
-    public const int DiceBranchIdFieldNumber = 6;
-    private uint diceBranchId_;
+    /// <summary>Field number for the "branch_id" field.</summary>
+    public const int BranchIdFieldNumber = 10;
+    private uint branchId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DiceBranchId {
-      get { return diceBranchId_; }
+    public uint BranchId {
+      get { return branchId_; }
       set {
-        diceBranchId_ = value;
+        branchId_ = value;
       }
     }
 
-    /// <summary>Field number for the "max_difficulty_level" field.</summary>
-    public const int MaxDifficultyLevelFieldNumber = 5;
-    private uint maxDifficultyLevel_;
+    /// <summary>Field number for the "surface_id" field.</summary>
+    public const int SurfaceIdFieldNumber = 5;
+    private uint surfaceId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MaxDifficultyLevel {
-      get { return maxDifficultyLevel_; }
+    public uint SurfaceId {
+      get { return surfaceId_; }
       set {
-        maxDifficultyLevel_ = value;
+        surfaceId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "slot_id" field.</summary>
+    public const int SlotIdFieldNumber = 6;
+    private uint slotId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SlotId {
+      get { return slotId_; }
+      set {
+        slotId_ = value;
       }
     }
 
     /// <summary>Field number for the "surface_list" field.</summary>
-    public const int SurfaceListFieldNumber = 7;
+    public const int SurfaceListFieldNumber = 9;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo> _repeated_surfaceList_codec
-        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo.Parser);
+        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo> surfaceList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo> SurfaceList {
       get { return surfaceList_; }
-    }
-
-    /// <summary>Field number for the "max_area_id" field.</summary>
-    public const int MaxAreaIdFieldNumber = 8;
-    private uint maxAreaId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MaxAreaId {
-      get { return maxAreaId_; }
-      set {
-        maxAreaId_ = value;
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -150,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DiceBranchId != other.DiceBranchId) return false;
-      if (MaxDifficultyLevel != other.MaxDifficultyLevel) return false;
+      if (BranchId != other.BranchId) return false;
+      if (SurfaceId != other.SurfaceId) return false;
+      if (SlotId != other.SlotId) return false;
       if(!surfaceList_.Equals(other.surfaceList_)) return false;
-      if (MaxAreaId != other.MaxAreaId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (DiceBranchId != 0) hash ^= DiceBranchId.GetHashCode();
-      if (MaxDifficultyLevel != 0) hash ^= MaxDifficultyLevel.GetHashCode();
+      if (BranchId != 0) hash ^= BranchId.GetHashCode();
+      if (SurfaceId != 0) hash ^= SurfaceId.GetHashCode();
+      if (SlotId != 0) hash ^= SlotId.GetHashCode();
       hash ^= surfaceList_.GetHashCode();
-      if (MaxAreaId != 0) hash ^= MaxAreaId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,18 +182,18 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MaxDifficultyLevel != 0) {
+      if (SurfaceId != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(MaxDifficultyLevel);
+        output.WriteUInt32(SurfaceId);
       }
-      if (DiceBranchId != 0) {
+      if (SlotId != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(DiceBranchId);
+        output.WriteUInt32(SlotId);
       }
       surfaceList_.WriteTo(output, _repeated_surfaceList_codec);
-      if (MaxAreaId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(MaxAreaId);
+      if (BranchId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(BranchId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -206,18 +205,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MaxDifficultyLevel != 0) {
+      if (SurfaceId != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(MaxDifficultyLevel);
+        output.WriteUInt32(SurfaceId);
       }
-      if (DiceBranchId != 0) {
+      if (SlotId != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(DiceBranchId);
+        output.WriteUInt32(SlotId);
       }
       surfaceList_.WriteTo(ref output, _repeated_surfaceList_codec);
-      if (MaxAreaId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(MaxAreaId);
+      if (BranchId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(BranchId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -229,16 +228,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (DiceBranchId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DiceBranchId);
+      if (BranchId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BranchId);
       }
-      if (MaxDifficultyLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxDifficultyLevel);
+      if (SurfaceId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SurfaceId);
+      }
+      if (SlotId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SlotId);
       }
       size += surfaceList_.CalculateSize(_repeated_surfaceList_codec);
-      if (MaxAreaId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxAreaId);
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -251,16 +250,16 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.DiceBranchId != 0) {
-        DiceBranchId = other.DiceBranchId;
+      if (other.BranchId != 0) {
+        BranchId = other.BranchId;
       }
-      if (other.MaxDifficultyLevel != 0) {
-        MaxDifficultyLevel = other.MaxDifficultyLevel;
+      if (other.SurfaceId != 0) {
+        SurfaceId = other.SurfaceId;
+      }
+      if (other.SlotId != 0) {
+        SlotId = other.SlotId;
       }
       surfaceList_.Add(other.surfaceList_);
-      if (other.MaxAreaId != 0) {
-        MaxAreaId = other.MaxAreaId;
-      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -277,19 +276,19 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 40: {
-            MaxDifficultyLevel = input.ReadUInt32();
+            SurfaceId = input.ReadUInt32();
             break;
           }
           case 48: {
-            DiceBranchId = input.ReadUInt32();
+            SlotId = input.ReadUInt32();
             break;
           }
-          case 58: {
+          case 74: {
             surfaceList_.AddEntriesFrom(input, _repeated_surfaceList_codec);
             break;
           }
-          case 64: {
-            MaxAreaId = input.ReadUInt32();
+          case 80: {
+            BranchId = input.ReadUInt32();
             break;
           }
         }
@@ -308,19 +307,19 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 40: {
-            MaxDifficultyLevel = input.ReadUInt32();
+            SurfaceId = input.ReadUInt32();
             break;
           }
           case 48: {
-            DiceBranchId = input.ReadUInt32();
+            SlotId = input.ReadUInt32();
             break;
           }
-          case 58: {
+          case 74: {
             surfaceList_.AddEntriesFrom(ref input, _repeated_surfaceList_codec);
             break;
           }
-          case 64: {
-            MaxAreaId = input.ReadUInt32();
+          case 80: {
+            BranchId = input.ReadUInt32();
             break;
           }
         }

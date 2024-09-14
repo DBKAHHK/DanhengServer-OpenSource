@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlTY2VuZU5wY01vbnN0ZXJJbmZvLnByb3RvGhlOcGNNb25zdGVyRXh0cmFJ",
-            "bmZvLnByb3RvIqQBChNTY2VuZU5wY01vbnN0ZXJJbmZvEhMKC0tJRURHTkhI",
-            "Qk1BGAYgASgIEhMKC3dvcmxkX2xldmVsGAggASgNEhIKCm1vbnN0ZXJfaWQY",
-            "CiABKA0SEwoLRE5DS0ROQ09PQUIYASABKAgSEAoIZXZlbnRfaWQYDSABKA0S",
-            "KAoKZXh0cmFfaW5mbxgPIAEoCzIULk5wY01vbnN0ZXJFeHRyYUluZm9CHqoC",
+            "bmZvLnByb3RvIqQBChNTY2VuZU5wY01vbnN0ZXJJbmZvEhMKC0FITkFJQkdN",
+            "Q0RCGAsgASgIEhIKCm1vbnN0ZXJfaWQYDCABKA0SEAoIZXZlbnRfaWQYASAB",
+            "KA0SEwoLTU5HSUhIRkJQTE8YAyABKAgSEwoLd29ybGRfbGV2ZWwYCiABKA0S",
+            "KAoKZXh0cmFfaW5mbxgCIAEoCzIULk5wY01vbnN0ZXJFeHRyYUluZm9CHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NpcMonsterExtraInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneNpcMonsterInfo), global::EggLink.DanhengServer.Proto.SceneNpcMonsterInfo.Parser, new[]{ "KIEDGNHHBMA", "WorldLevel", "MonsterId", "DNCKDNCOOAB", "EventId", "ExtraInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneNpcMonsterInfo), global::EggLink.DanhengServer.Proto.SceneNpcMonsterInfo.Parser, new[]{ "AHNAIBGMCDB", "MonsterId", "EventId", "MNGIHHFBPLO", "WorldLevel", "ExtraInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,11 +75,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SceneNpcMonsterInfo(SceneNpcMonsterInfo other) : this() {
-      kIEDGNHHBMA_ = other.kIEDGNHHBMA_;
-      worldLevel_ = other.worldLevel_;
+      aHNAIBGMCDB_ = other.aHNAIBGMCDB_;
       monsterId_ = other.monsterId_;
-      dNCKDNCOOAB_ = other.dNCKDNCOOAB_;
       eventId_ = other.eventId_;
+      mNGIHHFBPLO_ = other.mNGIHHFBPLO_;
+      worldLevel_ = other.worldLevel_;
       extraInfo_ = other.extraInfo_ != null ? other.extraInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -90,32 +90,20 @@ namespace EggLink.DanhengServer.Proto {
       return new SceneNpcMonsterInfo(this);
     }
 
-    /// <summary>Field number for the "KIEDGNHHBMA" field.</summary>
-    public const int KIEDGNHHBMAFieldNumber = 6;
-    private bool kIEDGNHHBMA_;
+    /// <summary>Field number for the "AHNAIBGMCDB" field.</summary>
+    public const int AHNAIBGMCDBFieldNumber = 11;
+    private bool aHNAIBGMCDB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool KIEDGNHHBMA {
-      get { return kIEDGNHHBMA_; }
+    public bool AHNAIBGMCDB {
+      get { return aHNAIBGMCDB_; }
       set {
-        kIEDGNHHBMA_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "world_level" field.</summary>
-    public const int WorldLevelFieldNumber = 8;
-    private uint worldLevel_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint WorldLevel {
-      get { return worldLevel_; }
-      set {
-        worldLevel_ = value;
+        aHNAIBGMCDB_ = value;
       }
     }
 
     /// <summary>Field number for the "monster_id" field.</summary>
-    public const int MonsterIdFieldNumber = 10;
+    public const int MonsterIdFieldNumber = 12;
     private uint monsterId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -126,20 +114,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "DNCKDNCOOAB" field.</summary>
-    public const int DNCKDNCOOABFieldNumber = 1;
-    private bool dNCKDNCOOAB_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool DNCKDNCOOAB {
-      get { return dNCKDNCOOAB_; }
-      set {
-        dNCKDNCOOAB_ = value;
-      }
-    }
-
     /// <summary>Field number for the "event_id" field.</summary>
-    public const int EventIdFieldNumber = 13;
+    public const int EventIdFieldNumber = 1;
     private uint eventId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -150,8 +126,32 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "MNGIHHFBPLO" field.</summary>
+    public const int MNGIHHFBPLOFieldNumber = 3;
+    private bool mNGIHHFBPLO_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool MNGIHHFBPLO {
+      get { return mNGIHHFBPLO_; }
+      set {
+        mNGIHHFBPLO_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "world_level" field.</summary>
+    public const int WorldLevelFieldNumber = 10;
+    private uint worldLevel_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint WorldLevel {
+      get { return worldLevel_; }
+      set {
+        worldLevel_ = value;
+      }
+    }
+
     /// <summary>Field number for the "extra_info" field.</summary>
-    public const int ExtraInfoFieldNumber = 15;
+    public const int ExtraInfoFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.NpcMonsterExtraInfo extraInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -177,11 +177,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (KIEDGNHHBMA != other.KIEDGNHHBMA) return false;
-      if (WorldLevel != other.WorldLevel) return false;
+      if (AHNAIBGMCDB != other.AHNAIBGMCDB) return false;
       if (MonsterId != other.MonsterId) return false;
-      if (DNCKDNCOOAB != other.DNCKDNCOOAB) return false;
       if (EventId != other.EventId) return false;
+      if (MNGIHHFBPLO != other.MNGIHHFBPLO) return false;
+      if (WorldLevel != other.WorldLevel) return false;
       if (!object.Equals(ExtraInfo, other.ExtraInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -190,11 +190,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (KIEDGNHHBMA != false) hash ^= KIEDGNHHBMA.GetHashCode();
-      if (WorldLevel != 0) hash ^= WorldLevel.GetHashCode();
+      if (AHNAIBGMCDB != false) hash ^= AHNAIBGMCDB.GetHashCode();
       if (MonsterId != 0) hash ^= MonsterId.GetHashCode();
-      if (DNCKDNCOOAB != false) hash ^= DNCKDNCOOAB.GetHashCode();
       if (EventId != 0) hash ^= EventId.GetHashCode();
+      if (MNGIHHFBPLO != false) hash ^= MNGIHHFBPLO.GetHashCode();
+      if (WorldLevel != 0) hash ^= WorldLevel.GetHashCode();
       if (extraInfo_ != null) hash ^= ExtraInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -214,29 +214,29 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (DNCKDNCOOAB != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(DNCKDNCOOAB);
-      }
-      if (KIEDGNHHBMA != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(KIEDGNHHBMA);
-      }
-      if (WorldLevel != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(WorldLevel);
-      }
-      if (MonsterId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(MonsterId);
-      }
       if (EventId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(8);
         output.WriteUInt32(EventId);
       }
       if (extraInfo_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(18);
         output.WriteMessage(ExtraInfo);
+      }
+      if (MNGIHHFBPLO != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(MNGIHHFBPLO);
+      }
+      if (WorldLevel != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(WorldLevel);
+      }
+      if (AHNAIBGMCDB != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(AHNAIBGMCDB);
+      }
+      if (MonsterId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(MonsterId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -248,29 +248,29 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (DNCKDNCOOAB != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(DNCKDNCOOAB);
-      }
-      if (KIEDGNHHBMA != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(KIEDGNHHBMA);
-      }
-      if (WorldLevel != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(WorldLevel);
-      }
-      if (MonsterId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(MonsterId);
-      }
       if (EventId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(8);
         output.WriteUInt32(EventId);
       }
       if (extraInfo_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(18);
         output.WriteMessage(ExtraInfo);
+      }
+      if (MNGIHHFBPLO != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(MNGIHHFBPLO);
+      }
+      if (WorldLevel != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(WorldLevel);
+      }
+      if (AHNAIBGMCDB != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(AHNAIBGMCDB);
+      }
+      if (MonsterId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(MonsterId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -282,20 +282,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (KIEDGNHHBMA != false) {
+      if (AHNAIBGMCDB != false) {
         size += 1 + 1;
-      }
-      if (WorldLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorldLevel);
       }
       if (MonsterId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MonsterId);
       }
-      if (DNCKDNCOOAB != false) {
-        size += 1 + 1;
-      }
       if (EventId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EventId);
+      }
+      if (MNGIHHFBPLO != false) {
+        size += 1 + 1;
+      }
+      if (WorldLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorldLevel);
       }
       if (extraInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExtraInfo);
@@ -312,20 +312,20 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.KIEDGNHHBMA != false) {
-        KIEDGNHHBMA = other.KIEDGNHHBMA;
-      }
-      if (other.WorldLevel != 0) {
-        WorldLevel = other.WorldLevel;
+      if (other.AHNAIBGMCDB != false) {
+        AHNAIBGMCDB = other.AHNAIBGMCDB;
       }
       if (other.MonsterId != 0) {
         MonsterId = other.MonsterId;
       }
-      if (other.DNCKDNCOOAB != false) {
-        DNCKDNCOOAB = other.DNCKDNCOOAB;
-      }
       if (other.EventId != 0) {
         EventId = other.EventId;
+      }
+      if (other.MNGIHHFBPLO != false) {
+        MNGIHHFBPLO = other.MNGIHHFBPLO;
+      }
+      if (other.WorldLevel != 0) {
+        WorldLevel = other.WorldLevel;
       }
       if (other.extraInfo_ != null) {
         if (extraInfo_ == null) {
@@ -349,30 +349,30 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            DNCKDNCOOAB = input.ReadBool();
-            break;
-          }
-          case 48: {
-            KIEDGNHHBMA = input.ReadBool();
-            break;
-          }
-          case 64: {
-            WorldLevel = input.ReadUInt32();
-            break;
-          }
-          case 80: {
-            MonsterId = input.ReadUInt32();
-            break;
-          }
-          case 104: {
             EventId = input.ReadUInt32();
             break;
           }
-          case 122: {
+          case 18: {
             if (extraInfo_ == null) {
               ExtraInfo = new global::EggLink.DanhengServer.Proto.NpcMonsterExtraInfo();
             }
             input.ReadMessage(ExtraInfo);
+            break;
+          }
+          case 24: {
+            MNGIHHFBPLO = input.ReadBool();
+            break;
+          }
+          case 80: {
+            WorldLevel = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            AHNAIBGMCDB = input.ReadBool();
+            break;
+          }
+          case 96: {
+            MonsterId = input.ReadUInt32();
             break;
           }
         }
@@ -391,30 +391,30 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            DNCKDNCOOAB = input.ReadBool();
-            break;
-          }
-          case 48: {
-            KIEDGNHHBMA = input.ReadBool();
-            break;
-          }
-          case 64: {
-            WorldLevel = input.ReadUInt32();
-            break;
-          }
-          case 80: {
-            MonsterId = input.ReadUInt32();
-            break;
-          }
-          case 104: {
             EventId = input.ReadUInt32();
             break;
           }
-          case 122: {
+          case 18: {
             if (extraInfo_ == null) {
               ExtraInfo = new global::EggLink.DanhengServer.Proto.NpcMonsterExtraInfo();
             }
             input.ReadMessage(ExtraInfo);
+            break;
+          }
+          case 24: {
+            MNGIHHFBPLO = input.ReadBool();
+            break;
+          }
+          case 80: {
+            WorldLevel = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            AHNAIBGMCDB = input.ReadBool();
+            break;
+          }
+          case 96: {
+            MonsterId = input.ReadUInt32();
             break;
           }
         }

@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtQbGF5ZXJCb2FyZE1vZHVsZVN5bmMucHJvdG8aEkhlYWRJY29uRGF0YS5w",
-            "cm90byJ5ChVQbGF5ZXJCb2FyZE1vZHVsZVN5bmMSHQoVaXNfc2lnbmF0dXJl",
-            "X21vZGlmaWVkGAwgASgIEhEKCXNpZ25hdHVyZRgGIAEoCRIuChd1bmxvY2tl",
-            "ZF9oZWFkX2ljb25fbGlzdBgPIAMoCzINLkhlYWRJY29uRGF0YUIeqgIbRWdn",
-            "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "cm90byJvChVQbGF5ZXJCb2FyZE1vZHVsZVN5bmMSLgoXdW5sb2NrZWRfaGVh",
+            "ZF9pY29uX2xpc3QYDiADKAsyDS5IZWFkSWNvbkRhdGESEQoJc2lnbmF0dXJl",
+            "GA0gASgJEhMKC0VERUFKT0lBRk1PGAcgASgIQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeadIconDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerBoardModuleSync), global::EggLink.DanhengServer.Proto.PlayerBoardModuleSync.Parser, new[]{ "IsSignatureModified", "Signature", "UnlockedHeadIconList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerBoardModuleSync), global::EggLink.DanhengServer.Proto.PlayerBoardModuleSync.Parser, new[]{ "UnlockedHeadIconList", "Signature", "EDEAJOIAFMO" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PlayerBoardModuleSync(PlayerBoardModuleSync other) : this() {
-      isSignatureModified_ = other.isSignatureModified_;
-      signature_ = other.signature_;
       unlockedHeadIconList_ = other.unlockedHeadIconList_.Clone();
+      signature_ = other.signature_;
+      eDEAJOIAFMO_ = other.eDEAJOIAFMO_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,20 +86,19 @@ namespace EggLink.DanhengServer.Proto {
       return new PlayerBoardModuleSync(this);
     }
 
-    /// <summary>Field number for the "is_signature_modified" field.</summary>
-    public const int IsSignatureModifiedFieldNumber = 12;
-    private bool isSignatureModified_;
+    /// <summary>Field number for the "unlocked_head_icon_list" field.</summary>
+    public const int UnlockedHeadIconListFieldNumber = 14;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.HeadIconData> _repeated_unlockedHeadIconList_codec
+        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.HeadIconData.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeadIconData> unlockedHeadIconList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeadIconData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsSignatureModified {
-      get { return isSignatureModified_; }
-      set {
-        isSignatureModified_ = value;
-      }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeadIconData> UnlockedHeadIconList {
+      get { return unlockedHeadIconList_; }
     }
 
     /// <summary>Field number for the "signature" field.</summary>
-    public const int SignatureFieldNumber = 6;
+    public const int SignatureFieldNumber = 13;
     private string signature_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,15 +109,16 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "unlocked_head_icon_list" field.</summary>
-    public const int UnlockedHeadIconListFieldNumber = 15;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.HeadIconData> _repeated_unlockedHeadIconList_codec
-        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.HeadIconData.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeadIconData> unlockedHeadIconList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeadIconData>();
+    /// <summary>Field number for the "EDEAJOIAFMO" field.</summary>
+    public const int EDEAJOIAFMOFieldNumber = 7;
+    private bool eDEAJOIAFMO_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeadIconData> UnlockedHeadIconList {
-      get { return unlockedHeadIconList_; }
+    public bool EDEAJOIAFMO {
+      get { return eDEAJOIAFMO_; }
+      set {
+        eDEAJOIAFMO_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsSignatureModified != other.IsSignatureModified) return false;
-      if (Signature != other.Signature) return false;
       if(!unlockedHeadIconList_.Equals(other.unlockedHeadIconList_)) return false;
+      if (Signature != other.Signature) return false;
+      if (EDEAJOIAFMO != other.EDEAJOIAFMO) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsSignatureModified != false) hash ^= IsSignatureModified.GetHashCode();
-      if (Signature.Length != 0) hash ^= Signature.GetHashCode();
       hash ^= unlockedHeadIconList_.GetHashCode();
+      if (Signature.Length != 0) hash ^= Signature.GetHashCode();
+      if (EDEAJOIAFMO != false) hash ^= EDEAJOIAFMO.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,13 +167,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Signature.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(Signature);
+      if (EDEAJOIAFMO != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(EDEAJOIAFMO);
       }
-      if (IsSignatureModified != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(IsSignatureModified);
+      if (Signature.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(Signature);
       }
       unlockedHeadIconList_.WriteTo(output, _repeated_unlockedHeadIconList_codec);
       if (_unknownFields != null) {
@@ -186,13 +186,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Signature.Length != 0) {
-        output.WriteRawTag(50);
-        output.WriteString(Signature);
+      if (EDEAJOIAFMO != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(EDEAJOIAFMO);
       }
-      if (IsSignatureModified != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(IsSignatureModified);
+      if (Signature.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(Signature);
       }
       unlockedHeadIconList_.WriteTo(ref output, _repeated_unlockedHeadIconList_codec);
       if (_unknownFields != null) {
@@ -205,13 +205,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsSignatureModified != false) {
-        size += 1 + 1;
-      }
+      size += unlockedHeadIconList_.CalculateSize(_repeated_unlockedHeadIconList_codec);
       if (Signature.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Signature);
       }
-      size += unlockedHeadIconList_.CalculateSize(_repeated_unlockedHeadIconList_codec);
+      if (EDEAJOIAFMO != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -224,13 +224,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsSignatureModified != false) {
-        IsSignatureModified = other.IsSignatureModified;
-      }
+      unlockedHeadIconList_.Add(other.unlockedHeadIconList_);
       if (other.Signature.Length != 0) {
         Signature = other.Signature;
       }
-      unlockedHeadIconList_.Add(other.unlockedHeadIconList_);
+      if (other.EDEAJOIAFMO != false) {
+        EDEAJOIAFMO = other.EDEAJOIAFMO;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -246,15 +246,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
+          case 56: {
+            EDEAJOIAFMO = input.ReadBool();
+            break;
+          }
+          case 106: {
             Signature = input.ReadString();
             break;
           }
-          case 96: {
-            IsSignatureModified = input.ReadBool();
-            break;
-          }
-          case 122: {
+          case 114: {
             unlockedHeadIconList_.AddEntriesFrom(input, _repeated_unlockedHeadIconList_codec);
             break;
           }
@@ -273,15 +273,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
+          case 56: {
+            EDEAJOIAFMO = input.ReadBool();
+            break;
+          }
+          case 106: {
             Signature = input.ReadString();
             break;
           }
-          case 96: {
-            IsSignatureModified = input.ReadBool();
-            break;
-          }
-          case 122: {
+          case 114: {
             unlockedHeadIconList_.AddEntriesFrom(ref input, _repeated_unlockedHeadIconList_codec);
             break;
           }

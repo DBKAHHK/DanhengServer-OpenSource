@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhSb2d1ZVRvdXJuRG9vckluZm8ucHJvdG8iXQoSUm9ndWVUb3VybkRvb3JJ",
-            "bmZvEh0KFXJvZ3VlX3RvdXJuX3Jvb21fdHlwZRgEIAEoDRITCgtLS0lIR0VJ",
-            "RklNRRgGIAEoCBITCgtNSEFBTUtJUEZNSBgNIAEoDUIeqgIbRWdnTGluay5E",
+            "bmZvEh0KFXJvZ3VlX3RvdXJuX3Jvb21fdHlwZRgKIAEoDRITCgtLUENLSk5B",
+            "TkNLQRgFIAEoCBITCgtHREJNT01OREFLTBgOIAEoDUIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournDoorInfo), global::EggLink.DanhengServer.Proto.RogueTournDoorInfo.Parser, new[]{ "RogueTournRoomType", "KKIHGEIFIME", "MHAAMKIPFMH" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournDoorInfo), global::EggLink.DanhengServer.Proto.RogueTournDoorInfo.Parser, new[]{ "RogueTournRoomType", "KPCKJNANCKA", "GDBMOMNDAKL" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournDoorInfo(RogueTournDoorInfo other) : this() {
       rogueTournRoomType_ = other.rogueTournRoomType_;
-      kKIHGEIFIME_ = other.kKIHGEIFIME_;
-      mHAAMKIPFMH_ = other.mHAAMKIPFMH_;
+      kPCKJNANCKA_ = other.kPCKJNANCKA_;
+      gDBMOMNDAKL_ = other.gDBMOMNDAKL_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_tourn_room_type" field.</summary>
-    public const int RogueTournRoomTypeFieldNumber = 4;
+    public const int RogueTournRoomTypeFieldNumber = 10;
     private uint rogueTournRoomType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,27 +97,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "KKIHGEIFIME" field.</summary>
-    public const int KKIHGEIFIMEFieldNumber = 6;
-    private bool kKIHGEIFIME_;
+    /// <summary>Field number for the "KPCKJNANCKA" field.</summary>
+    public const int KPCKJNANCKAFieldNumber = 5;
+    private bool kPCKJNANCKA_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool KKIHGEIFIME {
-      get { return kKIHGEIFIME_; }
+    public bool KPCKJNANCKA {
+      get { return kPCKJNANCKA_; }
       set {
-        kKIHGEIFIME_ = value;
+        kPCKJNANCKA_ = value;
       }
     }
 
-    /// <summary>Field number for the "MHAAMKIPFMH" field.</summary>
-    public const int MHAAMKIPFMHFieldNumber = 13;
-    private uint mHAAMKIPFMH_;
+    /// <summary>Field number for the "GDBMOMNDAKL" field.</summary>
+    public const int GDBMOMNDAKLFieldNumber = 14;
+    private uint gDBMOMNDAKL_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MHAAMKIPFMH {
-      get { return mHAAMKIPFMH_; }
+    public uint GDBMOMNDAKL {
+      get { return gDBMOMNDAKL_; }
       set {
-        mHAAMKIPFMH_ = value;
+        gDBMOMNDAKL_ = value;
       }
     }
 
@@ -137,8 +137,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (RogueTournRoomType != other.RogueTournRoomType) return false;
-      if (KKIHGEIFIME != other.KKIHGEIFIME) return false;
-      if (MHAAMKIPFMH != other.MHAAMKIPFMH) return false;
+      if (KPCKJNANCKA != other.KPCKJNANCKA) return false;
+      if (GDBMOMNDAKL != other.GDBMOMNDAKL) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,8 +147,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (RogueTournRoomType != 0) hash ^= RogueTournRoomType.GetHashCode();
-      if (KKIHGEIFIME != false) hash ^= KKIHGEIFIME.GetHashCode();
-      if (MHAAMKIPFMH != 0) hash ^= MHAAMKIPFMH.GetHashCode();
+      if (KPCKJNANCKA != false) hash ^= KPCKJNANCKA.GetHashCode();
+      if (GDBMOMNDAKL != 0) hash ^= GDBMOMNDAKL.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (KPCKJNANCKA != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(KPCKJNANCKA);
+      }
       if (RogueTournRoomType != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(80);
         output.WriteUInt32(RogueTournRoomType);
       }
-      if (KKIHGEIFIME != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(KKIHGEIFIME);
-      }
-      if (MHAAMKIPFMH != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(MHAAMKIPFMH);
+      if (GDBMOMNDAKL != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(GDBMOMNDAKL);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (KPCKJNANCKA != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(KPCKJNANCKA);
+      }
       if (RogueTournRoomType != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(80);
         output.WriteUInt32(RogueTournRoomType);
       }
-      if (KKIHGEIFIME != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(KKIHGEIFIME);
-      }
-      if (MHAAMKIPFMH != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(MHAAMKIPFMH);
+      if (GDBMOMNDAKL != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(GDBMOMNDAKL);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -214,11 +214,11 @@ namespace EggLink.DanhengServer.Proto {
       if (RogueTournRoomType != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RogueTournRoomType);
       }
-      if (KKIHGEIFIME != false) {
+      if (KPCKJNANCKA != false) {
         size += 1 + 1;
       }
-      if (MHAAMKIPFMH != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MHAAMKIPFMH);
+      if (GDBMOMNDAKL != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GDBMOMNDAKL);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -235,11 +235,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.RogueTournRoomType != 0) {
         RogueTournRoomType = other.RogueTournRoomType;
       }
-      if (other.KKIHGEIFIME != false) {
-        KKIHGEIFIME = other.KKIHGEIFIME;
+      if (other.KPCKJNANCKA != false) {
+        KPCKJNANCKA = other.KPCKJNANCKA;
       }
-      if (other.MHAAMKIPFMH != 0) {
-        MHAAMKIPFMH = other.MHAAMKIPFMH;
+      if (other.GDBMOMNDAKL != 0) {
+        GDBMOMNDAKL = other.GDBMOMNDAKL;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 40: {
+            KPCKJNANCKA = input.ReadBool();
+            break;
+          }
+          case 80: {
             RogueTournRoomType = input.ReadUInt32();
             break;
           }
-          case 48: {
-            KKIHGEIFIME = input.ReadBool();
-            break;
-          }
-          case 104: {
-            MHAAMKIPFMH = input.ReadUInt32();
+          case 112: {
+            GDBMOMNDAKL = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 40: {
+            KPCKJNANCKA = input.ReadBool();
+            break;
+          }
+          case 80: {
             RogueTournRoomType = input.ReadUInt32();
             break;
           }
-          case 48: {
-            KKIHGEIFIME = input.ReadBool();
-            break;
-          }
-          case 104: {
-            MHAAMKIPFMH = input.ReadUInt32();
+          case 112: {
+            GDBMOMNDAKL = input.ReadUInt32();
             break;
           }
         }

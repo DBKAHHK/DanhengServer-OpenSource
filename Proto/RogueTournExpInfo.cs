@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdSb2d1ZVRvdXJuRXhwSW5mby5wcm90byI9ChFSb2d1ZVRvdXJuRXhwSW5m",
-            "bxILCgNleHAYDSABKA0SGwoTdGFrZW5fbGV2ZWxfcmV3YXJkcxgBIAMoDUIe",
+            "bxILCgNleHAYDyABKA0SGwoTdGFrZW5fbGV2ZWxfcmV3YXJkcxgKIAMoDUIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "exp" field.</summary>
-    public const int ExpFieldNumber = 13;
+    public const int ExpFieldNumber = 15;
     private uint exp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,9 +96,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "taken_level_rewards" field.</summary>
-    public const int TakenLevelRewardsFieldNumber = 1;
+    public const int TakenLevelRewardsFieldNumber = 10;
     private static readonly pb::FieldCodec<uint> _repeated_takenLevelRewards_codec
-        = pb::FieldCodec.ForUInt32(10);
+        = pb::FieldCodec.ForUInt32(82);
     private readonly pbc::RepeatedField<uint> takenLevelRewards_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       takenLevelRewards_.WriteTo(output, _repeated_takenLevelRewards_codec);
       if (Exp != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(120);
         output.WriteUInt32(Exp);
       }
       if (_unknownFields != null) {
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       takenLevelRewards_.WriteTo(ref output, _repeated_takenLevelRewards_codec);
       if (Exp != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(120);
         output.WriteUInt32(Exp);
       }
       if (_unknownFields != null) {
@@ -215,12 +215,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10:
-          case 8: {
+          case 82:
+          case 80: {
             takenLevelRewards_.AddEntriesFrom(input, _repeated_takenLevelRewards_codec);
             break;
           }
-          case 104: {
+          case 120: {
             Exp = input.ReadUInt32();
             break;
           }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10:
-          case 8: {
+          case 82:
+          case 80: {
             takenLevelRewards_.AddEntriesFrom(ref input, _repeated_takenLevelRewards_codec);
             break;
           }
-          case 104: {
+          case 120: {
             Exp = input.ReadUInt32();
             break;
           }

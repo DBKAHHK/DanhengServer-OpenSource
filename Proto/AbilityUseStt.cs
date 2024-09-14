@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static AbilityUseSttReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNBYmlsaXR5VXNlU3R0LnByb3RvIkkKDUFiaWxpdHlVc2VTdHQSEwoLR1BM",
-            "TkFHQ0ZGS0YYASABKAkSDQoFY291bnQYAiABKA0SFAoMdG90YWxfZGFtYWdl",
+            "ChNBYmlsaXR5VXNlU3R0LnByb3RvIkkKDUFiaWxpdHlVc2VTdHQSEwoLSUhE",
+            "Tk1GTUNCT0wYASABKAkSDQoFY291bnQYAiABKA0SFAoMdG90YWxfZGFtYWdl",
             "GAMgASgBQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AbilityUseStt), global::EggLink.DanhengServer.Proto.AbilityUseStt.Parser, new[]{ "GPLNAGCFFKF", "Count", "TotalDamage" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AbilityUseStt), global::EggLink.DanhengServer.Proto.AbilityUseStt.Parser, new[]{ "IHDNMFMCBOL", "Count", "TotalDamage" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AbilityUseStt(AbilityUseStt other) : this() {
-      gPLNAGCFFKF_ = other.gPLNAGCFFKF_;
+      iHDNMFMCBOL_ = other.iHDNMFMCBOL_;
       count_ = other.count_;
       totalDamage_ = other.totalDamage_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -85,15 +85,15 @@ namespace EggLink.DanhengServer.Proto {
       return new AbilityUseStt(this);
     }
 
-    /// <summary>Field number for the "GPLNAGCFFKF" field.</summary>
-    public const int GPLNAGCFFKFFieldNumber = 1;
-    private string gPLNAGCFFKF_ = "";
+    /// <summary>Field number for the "IHDNMFMCBOL" field.</summary>
+    public const int IHDNMFMCBOLFieldNumber = 1;
+    private string iHDNMFMCBOL_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string GPLNAGCFFKF {
-      get { return gPLNAGCFFKF_; }
+    public string IHDNMFMCBOL {
+      get { return iHDNMFMCBOL_; }
       set {
-        gPLNAGCFFKF_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        iHDNMFMCBOL_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -136,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (GPLNAGCFFKF != other.GPLNAGCFFKF) return false;
+      if (IHDNMFMCBOL != other.IHDNMFMCBOL) return false;
       if (Count != other.Count) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TotalDamage, other.TotalDamage)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -146,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (GPLNAGCFFKF.Length != 0) hash ^= GPLNAGCFFKF.GetHashCode();
+      if (IHDNMFMCBOL.Length != 0) hash ^= IHDNMFMCBOL.GetHashCode();
       if (Count != 0) hash ^= Count.GetHashCode();
       if (TotalDamage != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TotalDamage);
       if (_unknownFields != null) {
@@ -167,9 +167,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (GPLNAGCFFKF.Length != 0) {
+      if (IHDNMFMCBOL.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(GPLNAGCFFKF);
+        output.WriteString(IHDNMFMCBOL);
       }
       if (Count != 0) {
         output.WriteRawTag(16);
@@ -189,9 +189,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (GPLNAGCFFKF.Length != 0) {
+      if (IHDNMFMCBOL.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(GPLNAGCFFKF);
+        output.WriteString(IHDNMFMCBOL);
       }
       if (Count != 0) {
         output.WriteRawTag(16);
@@ -211,8 +211,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (GPLNAGCFFKF.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(GPLNAGCFFKF);
+      if (IHDNMFMCBOL.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IHDNMFMCBOL);
       }
       if (Count != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Count);
@@ -232,8 +232,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.GPLNAGCFFKF.Length != 0) {
-        GPLNAGCFFKF = other.GPLNAGCFFKF;
+      if (other.IHDNMFMCBOL.Length != 0) {
+        IHDNMFMCBOL = other.IHDNMFMCBOL;
       }
       if (other.Count != 0) {
         Count = other.Count;
@@ -257,7 +257,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            GPLNAGCFFKF = input.ReadString();
+            IHDNMFMCBOL = input.ReadString();
             break;
           }
           case 16: {
@@ -284,7 +284,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            GPLNAGCFFKF = input.ReadString();
+            IHDNMFMCBOL = input.ReadString();
             break;
           }
           case 16: {

@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static VectorReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgxWZWN0b3IucHJvdG8iKQoGVmVjdG9yEgkKAXgYBiABKBESCQoBeRgCIAEo",
-            "ERIJCgF6GA8gASgRQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "CgxWZWN0b3IucHJvdG8iKQoGVmVjdG9yEgkKAXgYDiABKBESCQoBeRgFIAEo",
+            "ERIJCgF6GAMgASgRQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "x" field.</summary>
-    public const int XFieldNumber = 6;
+    public const int XFieldNumber = 14;
     private int x_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "y" field.</summary>
-    public const int YFieldNumber = 2;
+    public const int YFieldNumber = 5;
     private int y_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "z" field.</summary>
-    public const int ZFieldNumber = 15;
+    public const int ZFieldNumber = 3;
     private int z_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,17 +166,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (Z != 0) {
+        output.WriteRawTag(24);
+        output.WriteSInt32(Z);
+      }
       if (Y != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(40);
         output.WriteSInt32(Y);
       }
       if (X != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(112);
         output.WriteSInt32(X);
-      }
-      if (Z != 0) {
-        output.WriteRawTag(120);
-        output.WriteSInt32(Z);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -188,17 +188,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Z != 0) {
+        output.WriteRawTag(24);
+        output.WriteSInt32(Z);
+      }
       if (Y != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(40);
         output.WriteSInt32(Y);
       }
       if (X != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(112);
         output.WriteSInt32(X);
-      }
-      if (Z != 0) {
-        output.WriteRawTag(120);
-        output.WriteSInt32(Z);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 24: {
+            Z = input.ReadSInt32();
+            break;
+          }
+          case 40: {
             Y = input.ReadSInt32();
             break;
           }
-          case 48: {
+          case 112: {
             X = input.ReadSInt32();
-            break;
-          }
-          case 120: {
-            Z = input.ReadSInt32();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 24: {
+            Z = input.ReadSInt32();
+            break;
+          }
+          case 40: {
             Y = input.ReadSInt32();
             break;
           }
-          case 48: {
+          case 112: {
             X = input.ReadSInt32();
-            break;
-          }
-          case 120: {
-            Z = input.ReadSInt32();
             break;
           }
         }

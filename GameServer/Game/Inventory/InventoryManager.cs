@@ -146,7 +146,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
             case ItemMainTypeEnum.AvatarCard:
                 // add avatar
                 var avatar = Player.AvatarManager?.GetAvatar(itemId);
-                if (avatar != null && avatar.Excel != null)
+                if (avatar is { Excel: not null })
                 {
                     var rankUpItem = Player.InventoryManager!.GetItem(avatar.Excel.RankUpItemId);
                     if ((avatar.PathInfoes[itemId].Rank + rankUpItem?.Count ?? 0) <= 5)
@@ -168,18 +168,17 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         }
 
         ItemData? clone = null;
-        if (itemData != null)
-        {
-            clone = itemData.Clone();
-            if (sync)
-                await Player.SendPacket(new PacketPlayerSyncScNotify(itemData));
-            clone.Count = count;
-            if (notify) await Player.SendPacket(new PacketScenePlaneEventScNotify(clone));
+        if (itemData == null) return returnRaw ? itemData : clone ?? itemData;
 
-            Player.MissionManager?.HandleFinishType(MissionFinishTypeEnum.GetItem, itemData.ToProto());
-        }
+        clone = itemData.Clone();
+        if (sync)
+            await Player.SendPacket(new PacketPlayerSyncScNotify(itemData));
+        clone.Count = count;
+        if (notify) await Player.SendPacket(new PacketScenePlaneEventScNotify(clone));
 
-        return returnRaw ? itemData : clone ?? itemData;
+        Player.MissionManager?.HandleFinishType(MissionFinishTypeEnum.GetItem, itemData.ToProto());
+
+        return returnRaw ? itemData : clone;
     }
 
     public async ValueTask<ItemData> PutItem(int itemId, int count, int rank = 0, int promotion = 0, int level = 0,

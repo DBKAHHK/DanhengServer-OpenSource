@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhTZXRGcmllbmRNYXJrU2NSc3AucHJvdG8iRwoSU2V0RnJpZW5kTWFya1Nj",
-            "UnNwEhMKC2lzX3NldF9tYXJrGAQgASgIEg8KB3JldGNvZGUYDCABKA0SCwoD",
-            "dWlkGAggASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "UnNwEhMKC01IT0VFSERFQ0dJGAogASgIEgsKA3VpZBgIIAEoDRIPCgdyZXRj",
+            "b2RlGA4gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetFriendMarkScRsp), global::EggLink.DanhengServer.Proto.SetFriendMarkScRsp.Parser, new[]{ "IsSetMark", "Retcode", "Uid" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetFriendMarkScRsp), global::EggLink.DanhengServer.Proto.SetFriendMarkScRsp.Parser, new[]{ "MHOEEHDECGI", "Uid", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SetFriendMarkScRsp(SetFriendMarkScRsp other) : this() {
-      isSetMark_ = other.isSetMark_;
-      retcode_ = other.retcode_;
+      mHOEEHDECGI_ = other.mHOEEHDECGI_;
       uid_ = other.uid_;
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,27 +85,15 @@ namespace EggLink.DanhengServer.Proto {
       return new SetFriendMarkScRsp(this);
     }
 
-    /// <summary>Field number for the "is_set_mark" field.</summary>
-    public const int IsSetMarkFieldNumber = 4;
-    private bool isSetMark_;
+    /// <summary>Field number for the "MHOEEHDECGI" field.</summary>
+    public const int MHOEEHDECGIFieldNumber = 10;
+    private bool mHOEEHDECGI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsSetMark {
-      get { return isSetMark_; }
+    public bool MHOEEHDECGI {
+      get { return mHOEEHDECGI_; }
       set {
-        isSetMark_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 12;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
+        mHOEEHDECGI_ = value;
       }
     }
 
@@ -118,6 +106,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return uid_; }
       set {
         uid_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 14;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsSetMark != other.IsSetMark) return false;
-      if (Retcode != other.Retcode) return false;
+      if (MHOEEHDECGI != other.MHOEEHDECGI) return false;
       if (Uid != other.Uid) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsSetMark != false) hash ^= IsSetMark.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (MHOEEHDECGI != false) hash ^= MHOEEHDECGI.GetHashCode();
       if (Uid != 0) hash ^= Uid.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,16 +167,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsSetMark != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(IsSetMark);
-      }
       if (Uid != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(Uid);
       }
+      if (MHOEEHDECGI != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(MHOEEHDECGI);
+      }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -189,16 +189,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsSetMark != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(IsSetMark);
-      }
       if (Uid != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(Uid);
       }
+      if (MHOEEHDECGI != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(MHOEEHDECGI);
+      }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -211,14 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsSetMark != false) {
+      if (MHOEEHDECGI != false) {
         size += 1 + 1;
-      }
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (Uid != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Uid);
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,14 +232,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsSetMark != false) {
-        IsSetMark = other.IsSetMark;
-      }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
+      if (other.MHOEEHDECGI != false) {
+        MHOEEHDECGI = other.MHOEEHDECGI;
       }
       if (other.Uid != 0) {
         Uid = other.Uid;
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            IsSetMark = input.ReadBool();
-            break;
-          }
           case 64: {
             Uid = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 80: {
+            MHOEEHDECGI = input.ReadBool();
+            break;
+          }
+          case 112: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -283,15 +283,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            IsSetMark = input.ReadBool();
-            break;
-          }
           case 64: {
             Uid = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 80: {
+            MHOEEHDECGI = input.ReadBool();
+            break;
+          }
+          case 112: {
             Retcode = input.ReadUInt32();
             break;
           }

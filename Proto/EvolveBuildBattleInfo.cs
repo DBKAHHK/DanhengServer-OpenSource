@@ -24,27 +24,27 @@ namespace EggLink.DanhengServer.Proto {
     static EvolveBuildBattleInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtFdm9sdmVCdWlsZEJhdHRsZUluZm8ucHJvdG8aEUxHQkRNQkpETkxLLnBy",
-            "b3RvGhFIRURERERBTlBLQi5wcm90bxoRQkhKRUlFQkNNT0wucHJvdG8aH0V2",
-            "b2x2ZUJ1aWxkR2VhckRhbWFnZUluZm8ucHJvdG8aEU1PR0FPQkNQQkhLLnBy",
+            "ChtFdm9sdmVCdWlsZEJhdHRsZUluZm8ucHJvdG8aEUZHQklPTExNQ1BJLnBy",
+            "b3RvGhFPT0pDQ05PTUZJQS5wcm90bxofRXZvbHZlQnVpbGRHZWFyRGFtYWdl",
+            "SW5mby5wcm90bxoRR0hJTExKQklIRkEucHJvdG8aEUpPSUlPQk5LQ0JILnBy",
             "b3RvIqIFChVFdm9sdmVCdWlsZEJhdHRsZUluZm8SFAoMY3VyX2xldmVsX2lk",
             "GAEgASgNEhIKCmN1cl9wZXJpb2QYAiABKA0SEAoIY3VyX2NvaW4YAyABKA0S",
-            "JgoQd2VhcG9uX3Nsb3RfbGlzdBgEIAMoCzIMLk1PR0FPQkNQQkhLEikKE2Fj",
-            "Y2Vzc29yeV9zbG90X2xpc3QYBSADKAsyDC5NT0dBT0JDUEJISxIVCg1iYW5f",
-            "Z2Vhcl9saXN0GAYgAygNEiAKCmNvbGxlY3Rpb24YByABKAsyDC5MR0JETUJK",
-            "RE5MSxIZChFhbGxvd2VkX2dlYXJfbGlzdBgIIAMoDRIPCgdjdXJfZXhwGAkg",
+            "JgoQd2VhcG9uX3Nsb3RfbGlzdBgEIAMoCzIMLk9PSkNDTk9NRklBEikKE2Fj",
+            "Y2Vzc29yeV9zbG90X2xpc3QYBSADKAsyDC5PT0pDQ05PTUZJQRIVCg1iYW5f",
+            "Z2Vhcl9saXN0GAYgAygNEiAKCmNvbGxlY3Rpb24YByABKAsyDC5KT0lJT0JO",
+            "S0NCSBIZChFhbGxvd2VkX2dlYXJfbGlzdBgIIAMoDRIPCgdjdXJfZXhwGAkg",
             "ASgNEhIKCmN1cl9yZXJvbGwYCiABKA0SHQoVY3VyX3RyZWFzdXJlX21pc3Nf",
             "Y250GAsgASgNEhYKDnBlcmlvZF9pZF9saXN0GAwgAygNEhkKEWN1cl9nZWFy",
             "X2xvc3RfY250GA0gASgNEhAKCGN1cl93YXZlGA4gASgNEh0KFWlzX3VubG9j",
             "a19nZWFyX3Jlcm9sbBgPIAEoCBIaChJpc191bmxvY2tfZ2Vhcl9iYW4YECAB",
-            "KAgSHwoJY2FyZF9saXN0GBEgAygLMgwuQkhKRUlFQkNNT0wSNAoQZ2Vhcl9k",
+            "KAgSHwoJY2FyZF9saXN0GBEgAygLMgwuRkdCSU9MTE1DUEkSNAoQZ2Vhcl9k",
             "YW1hZ2VfbGlzdBgSIAMoCzIaLkV2b2x2ZUJ1aWxkR2VhckRhbWFnZUluZm8S",
             "EwoLc3RhdF9wYXJhbXMYEyADKA0SEQoJaXNfZ2l2ZXVwGBQgASgIEhwKFGN1",
             "cl91bnVzZWRfcm91bmRfY250GBUgASgNEiMKDXN0YXRfbG9nX2luZm8YFiAB",
-            "KAsyDC5IRURERERBTlBLQhIgChhwZXJpb2RfZmlyc3RfcmFuZG9tX3NlZWQY",
+            "KAsyDC5HSElMTEpCSUhGQRIgChhwZXJpb2RfZmlyc3RfcmFuZG9tX3NlZWQY",
             "FyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LGBDMBJDNLKReflection.Descriptor, global::EggLink.DanhengServer.Proto.HEDDDDANPKBReflection.Descriptor, global::EggLink.DanhengServer.Proto.BHJEIEBCMOLReflection.Descriptor, global::EggLink.DanhengServer.Proto.EvolveBuildGearDamageInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MOGAOBCPBHKReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FGBIOLLMCPIReflection.Descriptor, global::EggLink.DanhengServer.Proto.OOJCCNOMFIAReflection.Descriptor, global::EggLink.DanhengServer.Proto.EvolveBuildGearDamageInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GHILLJBIHFAReflection.Descriptor, global::EggLink.DanhengServer.Proto.JOIIOBNKCBHReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EvolveBuildBattleInfo), global::EggLink.DanhengServer.Proto.EvolveBuildBattleInfo.Parser, new[]{ "CurLevelId", "CurPeriod", "CurCoin", "WeaponSlotList", "AccessorySlotList", "BanGearList", "Collection", "AllowedGearList", "CurExp", "CurReroll", "CurTreasureMissCnt", "PeriodIdList", "CurGearLostCnt", "CurWave", "IsUnlockGearReroll", "IsUnlockGearBan", "CardList", "GearDamageList", "StatParams", "IsGiveup", "CurUnusedRoundCnt", "StatLogInfo", "PeriodFirstRandomSeed" }, null, null, null, null)
           }));
@@ -158,23 +158,23 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "weapon_slot_list" field.</summary>
     public const int WeaponSlotListFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MOGAOBCPBHK> _repeated_weaponSlotList_codec
-        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.MOGAOBCPBHK.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MOGAOBCPBHK> weaponSlotList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MOGAOBCPBHK>();
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.OOJCCNOMFIA> _repeated_weaponSlotList_codec
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.OOJCCNOMFIA.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OOJCCNOMFIA> weaponSlotList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OOJCCNOMFIA>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MOGAOBCPBHK> WeaponSlotList {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OOJCCNOMFIA> WeaponSlotList {
       get { return weaponSlotList_; }
     }
 
     /// <summary>Field number for the "accessory_slot_list" field.</summary>
     public const int AccessorySlotListFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MOGAOBCPBHK> _repeated_accessorySlotList_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.MOGAOBCPBHK.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MOGAOBCPBHK> accessorySlotList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MOGAOBCPBHK>();
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.OOJCCNOMFIA> _repeated_accessorySlotList_codec
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.OOJCCNOMFIA.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OOJCCNOMFIA> accessorySlotList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OOJCCNOMFIA>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MOGAOBCPBHK> AccessorySlotList {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OOJCCNOMFIA> AccessorySlotList {
       get { return accessorySlotList_; }
     }
 
@@ -191,10 +191,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "collection" field.</summary>
     public const int CollectionFieldNumber = 7;
-    private global::EggLink.DanhengServer.Proto.LGBDMBJDNLK collection_;
+    private global::EggLink.DanhengServer.Proto.JOIIOBNKCBH collection_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.LGBDMBJDNLK Collection {
+    public global::EggLink.DanhengServer.Proto.JOIIOBNKCBH Collection {
       get { return collection_; }
       set {
         collection_ = value;
@@ -309,12 +309,12 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "card_list" field.</summary>
     public const int CardListFieldNumber = 17;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.BHJEIEBCMOL> _repeated_cardList_codec
-        = pb::FieldCodec.ForMessage(138, global::EggLink.DanhengServer.Proto.BHJEIEBCMOL.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BHJEIEBCMOL> cardList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BHJEIEBCMOL>();
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.FGBIOLLMCPI> _repeated_cardList_codec
+        = pb::FieldCodec.ForMessage(138, global::EggLink.DanhengServer.Proto.FGBIOLLMCPI.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FGBIOLLMCPI> cardList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FGBIOLLMCPI>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BHJEIEBCMOL> CardList {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FGBIOLLMCPI> CardList {
       get { return cardList_; }
     }
 
@@ -366,10 +366,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "stat_log_info" field.</summary>
     public const int StatLogInfoFieldNumber = 22;
-    private global::EggLink.DanhengServer.Proto.HEDDDDANPKB statLogInfo_;
+    private global::EggLink.DanhengServer.Proto.GHILLJBIHFA statLogInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.HEDDDDANPKB StatLogInfo {
+    public global::EggLink.DanhengServer.Proto.GHILLJBIHFA StatLogInfo {
       get { return statLogInfo_; }
       set {
         statLogInfo_ = value;
@@ -709,7 +709,7 @@ namespace EggLink.DanhengServer.Proto {
       banGearList_.Add(other.banGearList_);
       if (other.collection_ != null) {
         if (collection_ == null) {
-          Collection = new global::EggLink.DanhengServer.Proto.LGBDMBJDNLK();
+          Collection = new global::EggLink.DanhengServer.Proto.JOIIOBNKCBH();
         }
         Collection.MergeFrom(other.Collection);
       }
@@ -747,7 +747,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.statLogInfo_ != null) {
         if (statLogInfo_ == null) {
-          StatLogInfo = new global::EggLink.DanhengServer.Proto.HEDDDDANPKB();
+          StatLogInfo = new global::EggLink.DanhengServer.Proto.GHILLJBIHFA();
         }
         StatLogInfo.MergeFrom(other.StatLogInfo);
       }
@@ -796,7 +796,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 58: {
             if (collection_ == null) {
-              Collection = new global::EggLink.DanhengServer.Proto.LGBDMBJDNLK();
+              Collection = new global::EggLink.DanhengServer.Proto.JOIIOBNKCBH();
             }
             input.ReadMessage(Collection);
             break;
@@ -862,7 +862,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 178: {
             if (statLogInfo_ == null) {
-              StatLogInfo = new global::EggLink.DanhengServer.Proto.HEDDDDANPKB();
+              StatLogInfo = new global::EggLink.DanhengServer.Proto.GHILLJBIHFA();
             }
             input.ReadMessage(StatLogInfo);
             break;
@@ -913,7 +913,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 58: {
             if (collection_ == null) {
-              Collection = new global::EggLink.DanhengServer.Proto.LGBDMBJDNLK();
+              Collection = new global::EggLink.DanhengServer.Proto.JOIIOBNKCBH();
             }
             input.ReadMessage(Collection);
             break;
@@ -979,7 +979,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 178: {
             if (statLogInfo_ == null) {
-              StatLogInfo = new global::EggLink.DanhengServer.Proto.HEDDDDANPKB();
+              StatLogInfo = new global::EggLink.DanhengServer.Proto.GHILLJBIHFA();
             }
             input.ReadMessage(StatLogInfo);
             break;

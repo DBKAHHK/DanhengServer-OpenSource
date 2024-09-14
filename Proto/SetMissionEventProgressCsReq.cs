@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJTZXRNaXNzaW9uRXZlbnRQcm9ncmVzc0NzUmVxLnByb3RvIkoKHFNldE1p",
-            "c3Npb25FdmVudFByb2dyZXNzQ3NSZXESGAoQbWlzc2lvbl9ldmVudF9pZBgD",
-            "IAEoDRIQCghwcm9ncmVzcxgPIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
+            "c3Npb25FdmVudFByb2dyZXNzQ3NSZXESGAoQbWlzc2lvbl9ldmVudF9pZBgG",
+            "IAEoDRIQCghwcm9ncmVzcxgCIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "mission_event_id" field.</summary>
-    public const int MissionEventIdFieldNumber = 3;
+    public const int MissionEventIdFieldNumber = 6;
     private uint missionEventId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "progress" field.</summary>
-    public const int ProgressFieldNumber = 15;
+    public const int ProgressFieldNumber = 2;
     private uint progress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MissionEventId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(MissionEventId);
-      }
       if (Progress != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(16);
         output.WriteUInt32(Progress);
+      }
+      if (MissionEventId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(MissionEventId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MissionEventId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(MissionEventId);
-      }
       if (Progress != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(16);
         output.WriteUInt32(Progress);
+      }
+      if (MissionEventId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(MissionEventId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            MissionEventId = input.ReadUInt32();
+          case 16: {
+            Progress = input.ReadUInt32();
             break;
           }
-          case 120: {
-            Progress = input.ReadUInt32();
+          case 48: {
+            MissionEventId = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            MissionEventId = input.ReadUInt32();
+          case 16: {
+            Progress = input.ReadUInt32();
             break;
           }
-          case 120: {
-            Progress = input.ReadUInt32();
+          case 48: {
+            MissionEventId = input.ReadUInt32();
             break;
           }
         }

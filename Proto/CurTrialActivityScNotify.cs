@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5DdXJUcmlhbEFjdGl2aXR5U2NOb3RpZnkucHJvdG8aGVRyaWFsQWN0aXZp",
-            "dHlTdGF0dXMucHJvdG8iUgoYQ3VyVHJpYWxBY3Rpdml0eVNjTm90aWZ5EhAK",
-            "CHN0YWdlX2lkGAogASgNEiQKBnN0YXR1cxgEIAEoDjIULlRyaWFsQWN0aXZp",
-            "dHlTdGF0dXNCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
-            "dG8z"));
+            "dHlTdGF0dXMucHJvdG8iWwoYQ3VyVHJpYWxBY3Rpdml0eVNjTm90aWZ5EiQK",
+            "BnN0YXR1cxgNIAEoDjIULlRyaWFsQWN0aXZpdHlTdGF0dXMSGQoRYWN0aXZp",
+            "dHlfc3RhZ2VfaWQYASABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrialActivityStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CurTrialActivityScNotify), global::EggLink.DanhengServer.Proto.CurTrialActivityScNotify.Parser, new[]{ "StageId", "Status" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CurTrialActivityScNotify), global::EggLink.DanhengServer.Proto.CurTrialActivityScNotify.Parser, new[]{ "Status", "ActivityStageId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CurTrialActivityScNotify(CurTrialActivityScNotify other) : this() {
-      stageId_ = other.stageId_;
       status_ = other.status_;
+      activityStageId_ = other.activityStageId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new CurTrialActivityScNotify(this);
     }
 
-    /// <summary>Field number for the "stage_id" field.</summary>
-    public const int StageIdFieldNumber = 10;
-    private uint stageId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint StageId {
-      get { return stageId_; }
-      set {
-        stageId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 4;
+    public const int StatusFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.TrialActivityStatus status_ = global::EggLink.DanhengServer.Proto.TrialActivityStatus.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,6 +94,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return status_; }
       set {
         status_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "activity_stage_id" field.</summary>
+    public const int ActivityStageIdFieldNumber = 1;
+    private uint activityStageId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ActivityStageId {
+      get { return activityStageId_; }
+      set {
+        activityStageId_ = value;
       }
     }
 
@@ -124,8 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (StageId != other.StageId) return false;
       if (Status != other.Status) return false;
+      if (ActivityStageId != other.ActivityStageId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (StageId != 0) hash ^= StageId.GetHashCode();
       if (Status != global::EggLink.DanhengServer.Proto.TrialActivityStatus.None) hash ^= Status.GetHashCode();
+      if (ActivityStageId != 0) hash ^= ActivityStageId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Status != global::EggLink.DanhengServer.Proto.TrialActivityStatus.None) {
-        output.WriteRawTag(32);
-        output.WriteEnum((int) Status);
+      if (ActivityStageId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(ActivityStageId);
       }
-      if (StageId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(StageId);
+      if (Status != global::EggLink.DanhengServer.Proto.TrialActivityStatus.None) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) Status);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Status != global::EggLink.DanhengServer.Proto.TrialActivityStatus.None) {
-        output.WriteRawTag(32);
-        output.WriteEnum((int) Status);
+      if (ActivityStageId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(ActivityStageId);
       }
-      if (StageId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(StageId);
+      if (Status != global::EggLink.DanhengServer.Proto.TrialActivityStatus.None) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) Status);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -189,11 +189,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (StageId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(StageId);
-      }
       if (Status != global::EggLink.DanhengServer.Proto.TrialActivityStatus.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
+      if (ActivityStageId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ActivityStageId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -207,11 +207,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.StageId != 0) {
-        StageId = other.StageId;
-      }
       if (other.Status != global::EggLink.DanhengServer.Proto.TrialActivityStatus.None) {
         Status = other.Status;
+      }
+      if (other.ActivityStageId != 0) {
+        ActivityStageId = other.ActivityStageId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -228,12 +228,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            Status = (global::EggLink.DanhengServer.Proto.TrialActivityStatus) input.ReadEnum();
+          case 8: {
+            ActivityStageId = input.ReadUInt32();
             break;
           }
-          case 80: {
-            StageId = input.ReadUInt32();
+          case 104: {
+            Status = (global::EggLink.DanhengServer.Proto.TrialActivityStatus) input.ReadEnum();
             break;
           }
         }
@@ -251,12 +251,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            Status = (global::EggLink.DanhengServer.Proto.TrialActivityStatus) input.ReadEnum();
+          case 8: {
+            ActivityStageId = input.ReadUInt32();
             break;
           }
-          case 80: {
-            StageId = input.ReadUInt32();
+          case 104: {
+            Status = (global::EggLink.DanhengServer.Proto.TrialActivityStatus) input.ReadEnum();
             break;
           }
         }

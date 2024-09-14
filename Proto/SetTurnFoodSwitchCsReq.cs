@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxTZXRUdXJuRm9vZFN3aXRjaENzUmVxLnByb3RvGhRUdXJuRm9vZFN3aXRj",
-            "aC5wcm90byJTChZTZXRUdXJuRm9vZFN3aXRjaENzUmVxEiQKC0RHTExKRk5F",
-            "TU9LGAYgASgOMg8uVHVybkZvb2RTd2l0Y2gSEwoLTE5FS0JFR0tBQ1AYAyAB",
-            "KAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "aC5wcm90byJTChZTZXRUdXJuRm9vZFN3aXRjaENzUmVxEhMKC05ESUZLQUtI",
+            "R0tIGAQgASgIEiQKC0xQTE1KS0VETERCGAIgASgOMg8uVHVybkZvb2RTd2l0",
+            "Y2hCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TurnFoodSwitchReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetTurnFoodSwitchCsReq), global::EggLink.DanhengServer.Proto.SetTurnFoodSwitchCsReq.Parser, new[]{ "DGLLJFNEMOK", "LNEKBEGKACP" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetTurnFoodSwitchCsReq), global::EggLink.DanhengServer.Proto.SetTurnFoodSwitchCsReq.Parser, new[]{ "NDIFKAKHGKH", "LPLMJKEDLDB" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SetTurnFoodSwitchCsReq(SetTurnFoodSwitchCsReq other) : this() {
-      dGLLJFNEMOK_ = other.dGLLJFNEMOK_;
-      lNEKBEGKACP_ = other.lNEKBEGKACP_;
+      nDIFKAKHGKH_ = other.nDIFKAKHGKH_;
+      lPLMJKEDLDB_ = other.lPLMJKEDLDB_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,27 +84,27 @@ namespace EggLink.DanhengServer.Proto {
       return new SetTurnFoodSwitchCsReq(this);
     }
 
-    /// <summary>Field number for the "DGLLJFNEMOK" field.</summary>
-    public const int DGLLJFNEMOKFieldNumber = 6;
-    private global::EggLink.DanhengServer.Proto.TurnFoodSwitch dGLLJFNEMOK_ = global::EggLink.DanhengServer.Proto.TurnFoodSwitch.None;
+    /// <summary>Field number for the "NDIFKAKHGKH" field.</summary>
+    public const int NDIFKAKHGKHFieldNumber = 4;
+    private bool nDIFKAKHGKH_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.TurnFoodSwitch DGLLJFNEMOK {
-      get { return dGLLJFNEMOK_; }
+    public bool NDIFKAKHGKH {
+      get { return nDIFKAKHGKH_; }
       set {
-        dGLLJFNEMOK_ = value;
+        nDIFKAKHGKH_ = value;
       }
     }
 
-    /// <summary>Field number for the "LNEKBEGKACP" field.</summary>
-    public const int LNEKBEGKACPFieldNumber = 3;
-    private bool lNEKBEGKACP_;
+    /// <summary>Field number for the "LPLMJKEDLDB" field.</summary>
+    public const int LPLMJKEDLDBFieldNumber = 2;
+    private global::EggLink.DanhengServer.Proto.TurnFoodSwitch lPLMJKEDLDB_ = global::EggLink.DanhengServer.Proto.TurnFoodSwitch.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool LNEKBEGKACP {
-      get { return lNEKBEGKACP_; }
+    public global::EggLink.DanhengServer.Proto.TurnFoodSwitch LPLMJKEDLDB {
+      get { return lPLMJKEDLDB_; }
       set {
-        lNEKBEGKACP_ = value;
+        lPLMJKEDLDB_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DGLLJFNEMOK != other.DGLLJFNEMOK) return false;
-      if (LNEKBEGKACP != other.LNEKBEGKACP) return false;
+      if (NDIFKAKHGKH != other.NDIFKAKHGKH) return false;
+      if (LPLMJKEDLDB != other.LPLMJKEDLDB) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (DGLLJFNEMOK != global::EggLink.DanhengServer.Proto.TurnFoodSwitch.None) hash ^= DGLLJFNEMOK.GetHashCode();
-      if (LNEKBEGKACP != false) hash ^= LNEKBEGKACP.GetHashCode();
+      if (NDIFKAKHGKH != false) hash ^= NDIFKAKHGKH.GetHashCode();
+      if (LPLMJKEDLDB != global::EggLink.DanhengServer.Proto.TurnFoodSwitch.None) hash ^= LPLMJKEDLDB.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (LNEKBEGKACP != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(LNEKBEGKACP);
+      if (LPLMJKEDLDB != global::EggLink.DanhengServer.Proto.TurnFoodSwitch.None) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) LPLMJKEDLDB);
       }
-      if (DGLLJFNEMOK != global::EggLink.DanhengServer.Proto.TurnFoodSwitch.None) {
-        output.WriteRawTag(48);
-        output.WriteEnum((int) DGLLJFNEMOK);
+      if (NDIFKAKHGKH != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(NDIFKAKHGKH);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (LNEKBEGKACP != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(LNEKBEGKACP);
+      if (LPLMJKEDLDB != global::EggLink.DanhengServer.Proto.TurnFoodSwitch.None) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) LPLMJKEDLDB);
       }
-      if (DGLLJFNEMOK != global::EggLink.DanhengServer.Proto.TurnFoodSwitch.None) {
-        output.WriteRawTag(48);
-        output.WriteEnum((int) DGLLJFNEMOK);
+      if (NDIFKAKHGKH != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(NDIFKAKHGKH);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (DGLLJFNEMOK != global::EggLink.DanhengServer.Proto.TurnFoodSwitch.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DGLLJFNEMOK);
-      }
-      if (LNEKBEGKACP != false) {
+      if (NDIFKAKHGKH != false) {
         size += 1 + 1;
+      }
+      if (LPLMJKEDLDB != global::EggLink.DanhengServer.Proto.TurnFoodSwitch.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LPLMJKEDLDB);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.DGLLJFNEMOK != global::EggLink.DanhengServer.Proto.TurnFoodSwitch.None) {
-        DGLLJFNEMOK = other.DGLLJFNEMOK;
+      if (other.NDIFKAKHGKH != false) {
+        NDIFKAKHGKH = other.NDIFKAKHGKH;
       }
-      if (other.LNEKBEGKACP != false) {
-        LNEKBEGKACP = other.LNEKBEGKACP;
+      if (other.LPLMJKEDLDB != global::EggLink.DanhengServer.Proto.TurnFoodSwitch.None) {
+        LPLMJKEDLDB = other.LPLMJKEDLDB;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            LNEKBEGKACP = input.ReadBool();
+          case 16: {
+            LPLMJKEDLDB = (global::EggLink.DanhengServer.Proto.TurnFoodSwitch) input.ReadEnum();
             break;
           }
-          case 48: {
-            DGLLJFNEMOK = (global::EggLink.DanhengServer.Proto.TurnFoodSwitch) input.ReadEnum();
+          case 32: {
+            NDIFKAKHGKH = input.ReadBool();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            LNEKBEGKACP = input.ReadBool();
+          case 16: {
+            LPLMJKEDLDB = (global::EggLink.DanhengServer.Proto.TurnFoodSwitch) input.ReadEnum();
             break;
           }
-          case 48: {
-            DGLLJFNEMOK = (global::EggLink.DanhengServer.Proto.TurnFoodSwitch) input.ReadEnum();
+          case 32: {
+            NDIFKAKHGKH = input.ReadBool();
             break;
           }
         }

@@ -24,7 +24,7 @@ namespace EggLink.DanhengServer.Proto {
     static FeatureSwitchTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdGZWF0dXJlU3dpdGNoVHlwZS5wcm90byqEDgoRRmVhdHVyZVN3aXRjaFR5",
+            "ChdGZWF0dXJlU3dpdGNoVHlwZS5wcm90byqgDgoRRmVhdHVyZVN3aXRjaFR5",
             "cGUSFwoTRkVBVFVSRV9TV0lUQ0hfTk9ORRAAEhcKE0ZFQVRVUkVfU1dJVENI",
             "X1NIT1AQARIeChpGRUFUVVJFX1NXSVRDSF9MSU5FVVBfTkFNRRACEiAKHEZF",
             "QVRVUkVfU1dJVENIX1JFQ0hBUkdFX1NIT1AQAxIbChdGRUFUVVJFX1NXSVRD",
@@ -64,8 +64,9 @@ namespace EggLink.DanhengServer.Proto {
             "UFZQEC8SHQoZRkVBVFVSRV9TV0lUQ0hfUk9HVUVfTU9ERRAwEiIKHkZFQVRV",
             "UkVfU1dJVENIX1JPR1VFX1RPVVJOX1VHQxAxEikKJUZFQVRVUkVfU1dJVENI",
             "X1JFTElDX0ZJTFRFUl9QTEFOX05BTUUQMhIqCiZGRUFUVVJFX1NXSVRDSF9N",
-            "QVpFX0lURU1fVVNFX0JVRkZfRFJPUBAzQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
-            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "QVpFX0lURU1fVVNFX0JVRkZfRFJPUBAzEhoKFkZFQVRVUkVfU1dJVENIX1JF",
+            "RF9ET1QQNEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.FeatureSwitchType), }, null, null));
@@ -127,6 +128,7 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("FEATURE_SWITCH_ROGUE_TOURN_UGC")] FeatureSwitchRogueTournUgc = 49,
     [pbr::OriginalName("FEATURE_SWITCH_RELIC_FILTER_PLAN_NAME")] FeatureSwitchRelicFilterPlanName = 50,
     [pbr::OriginalName("FEATURE_SWITCH_MAZE_ITEM_USE_BUFF_DROP")] FeatureSwitchMazeItemUseBuffDrop = 51,
+    [pbr::OriginalName("FEATURE_SWITCH_RED_DOT")] FeatureSwitchRedDot = 52,
   }
 
   #endregion

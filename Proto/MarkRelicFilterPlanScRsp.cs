@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static MarkRelicFilterPlanScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5NYXJrUmVsaWNGaWx0ZXJQbGFuU2NSc3AucHJvdG8iVQoYTWFya1JlbGlj",
-            "RmlsdGVyUGxhblNjUnNwEhMKC0xQSERMUERMREpHGAwgAygNEg8KB3JldGNv",
-            "ZGUYCyABKA0SEwoLaXNfc2V0X21hcmsYDiABKAhCHqoCG0VnZ0xpbmsuRGFu",
-            "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "Ch5NYXJrUmVsaWNGaWx0ZXJQbGFuU2NSc3AucHJvdG8iaAoYTWFya1JlbGlj",
+            "RmlsdGVyUGxhblNjUnNwEhkKEUlzTWFya0ZpZWxkTnVtYmVyGAkgASgIEiAK",
+            "GFNsb3RJbmRleExpc3RGaWVsZE51bWJlchgKIAMoDRIPCgdyZXRjb2RlGA4g",
+            "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarkRelicFilterPlanScRsp), global::EggLink.DanhengServer.Proto.MarkRelicFilterPlanScRsp.Parser, new[]{ "LPHDLPDLDJG", "Retcode", "IsSetMark" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarkRelicFilterPlanScRsp), global::EggLink.DanhengServer.Proto.MarkRelicFilterPlanScRsp.Parser, new[]{ "IsMarkFieldNumber", "SlotIndexListFieldNumber", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MarkRelicFilterPlanScRsp(MarkRelicFilterPlanScRsp other) : this() {
-      lPHDLPDLDJG_ = other.lPHDLPDLDJG_.Clone();
+      isMarkFieldNumber_ = other.isMarkFieldNumber_;
+      slotIndexListFieldNumber_ = other.slotIndexListFieldNumber_.Clone();
       retcode_ = other.retcode_;
-      isSetMark_ = other.isSetMark_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,19 +85,31 @@ namespace EggLink.DanhengServer.Proto {
       return new MarkRelicFilterPlanScRsp(this);
     }
 
-    /// <summary>Field number for the "LPHDLPDLDJG" field.</summary>
-    public const int LPHDLPDLDJGFieldNumber = 12;
-    private static readonly pb::FieldCodec<uint> _repeated_lPHDLPDLDJG_codec
-        = pb::FieldCodec.ForUInt32(98);
-    private readonly pbc::RepeatedField<uint> lPHDLPDLDJG_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "IsMarkFieldNumber" field.</summary>
+    public const int IsMarkFieldNumberFieldNumber = 9;
+    private bool isMarkFieldNumber_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> LPHDLPDLDJG {
-      get { return lPHDLPDLDJG_; }
+    public bool IsMarkFieldNumber {
+      get { return isMarkFieldNumber_; }
+      set {
+        isMarkFieldNumber_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "SlotIndexListFieldNumber" field.</summary>
+    public const int SlotIndexListFieldNumberFieldNumber = 10;
+    private static readonly pb::FieldCodec<uint> _repeated_slotIndexListFieldNumber_codec
+        = pb::FieldCodec.ForUInt32(82);
+    private readonly pbc::RepeatedField<uint> slotIndexListFieldNumber_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> SlotIndexListFieldNumber {
+      get { return slotIndexListFieldNumber_; }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 11;
+    public const int RetcodeFieldNumber = 14;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,18 +117,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "is_set_mark" field.</summary>
-    public const int IsSetMarkFieldNumber = 14;
-    private bool isSetMark_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsSetMark {
-      get { return isSetMark_; }
-      set {
-        isSetMark_ = value;
       }
     }
 
@@ -135,9 +135,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!lPHDLPDLDJG_.Equals(other.lPHDLPDLDJG_)) return false;
+      if (IsMarkFieldNumber != other.IsMarkFieldNumber) return false;
+      if(!slotIndexListFieldNumber_.Equals(other.slotIndexListFieldNumber_)) return false;
       if (Retcode != other.Retcode) return false;
-      if (IsSetMark != other.IsSetMark) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,9 +145,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= lPHDLPDLDJG_.GetHashCode();
+      if (IsMarkFieldNumber != false) hash ^= IsMarkFieldNumber.GetHashCode();
+      hash ^= slotIndexListFieldNumber_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (IsSetMark != false) hash ^= IsSetMark.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,14 +166,14 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(Retcode);
+      if (IsMarkFieldNumber != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(IsMarkFieldNumber);
       }
-      lPHDLPDLDJG_.WriteTo(output, _repeated_lPHDLPDLDJG_codec);
-      if (IsSetMark != false) {
+      slotIndexListFieldNumber_.WriteTo(output, _repeated_slotIndexListFieldNumber_codec);
+      if (Retcode != 0) {
         output.WriteRawTag(112);
-        output.WriteBool(IsSetMark);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -185,14 +185,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(Retcode);
+      if (IsMarkFieldNumber != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(IsMarkFieldNumber);
       }
-      lPHDLPDLDJG_.WriteTo(ref output, _repeated_lPHDLPDLDJG_codec);
-      if (IsSetMark != false) {
+      slotIndexListFieldNumber_.WriteTo(ref output, _repeated_slotIndexListFieldNumber_codec);
+      if (Retcode != 0) {
         output.WriteRawTag(112);
-        output.WriteBool(IsSetMark);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -204,12 +204,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += lPHDLPDLDJG_.CalculateSize(_repeated_lPHDLPDLDJG_codec);
+      if (IsMarkFieldNumber != false) {
+        size += 1 + 1;
+      }
+      size += slotIndexListFieldNumber_.CalculateSize(_repeated_slotIndexListFieldNumber_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
-      if (IsSetMark != false) {
-        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -223,12 +223,12 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      lPHDLPDLDJG_.Add(other.lPHDLPDLDJG_);
+      if (other.IsMarkFieldNumber != false) {
+        IsMarkFieldNumber = other.IsMarkFieldNumber;
+      }
+      slotIndexListFieldNumber_.Add(other.slotIndexListFieldNumber_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
-      }
-      if (other.IsSetMark != false) {
-        IsSetMark = other.IsSetMark;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -245,17 +245,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 88: {
-            Retcode = input.ReadUInt32();
+          case 72: {
+            IsMarkFieldNumber = input.ReadBool();
             break;
           }
-          case 98:
-          case 96: {
-            lPHDLPDLDJG_.AddEntriesFrom(input, _repeated_lPHDLPDLDJG_codec);
+          case 82:
+          case 80: {
+            slotIndexListFieldNumber_.AddEntriesFrom(input, _repeated_slotIndexListFieldNumber_codec);
             break;
           }
           case 112: {
-            IsSetMark = input.ReadBool();
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -273,17 +273,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 88: {
-            Retcode = input.ReadUInt32();
+          case 72: {
+            IsMarkFieldNumber = input.ReadBool();
             break;
           }
-          case 98:
-          case 96: {
-            lPHDLPDLDJG_.AddEntriesFrom(ref input, _repeated_lPHDLPDLDJG_codec);
+          case 82:
+          case 80: {
+            slotIndexListFieldNumber_.AddEntriesFrom(ref input, _repeated_slotIndexListFieldNumber_codec);
             break;
           }
           case 112: {
-            IsSetMark = input.ReadBool();
+            Retcode = input.ReadUInt32();
             break;
           }
         }

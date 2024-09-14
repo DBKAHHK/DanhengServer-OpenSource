@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static TakeTalkRewardCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlUYWtlVGFsa1Jld2FyZENzUmVxLnByb3RvGgxWZWN0b3IucHJvdG8iSwoT",
-            "VGFrZVRhbGtSZXdhcmRDc1JlcRIdCgxucGNfbG9jYXRpb24YDiABKAsyBy5W",
-            "ZWN0b3ISFQoNdGFsa19ldmVudF9pZBgPIAEoDUIeqgIbRWdnTGluay5EYW5o",
-            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChlUYWtlVGFsa1Jld2FyZENzUmVxLnByb3RvGgxWZWN0b3IucHJvdG8iSAoT",
+            "VGFrZVRhbGtSZXdhcmRDc1JlcRITCgtHR0ZQQU9KQUtNQhgGIAEoDRIcCgtI",
+            "SUdOT0xQTktKRRgCIAEoCzIHLlZlY3RvckIeqgIbRWdnTGluay5EYW5oZW5n",
+            "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.VectorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeTalkRewardCsReq), global::EggLink.DanhengServer.Proto.TakeTalkRewardCsReq.Parser, new[]{ "NpcLocation", "TalkEventId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeTalkRewardCsReq), global::EggLink.DanhengServer.Proto.TakeTalkRewardCsReq.Parser, new[]{ "GGFPAOJAKMB", "HIGNOLPNKJE" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TakeTalkRewardCsReq(TakeTalkRewardCsReq other) : this() {
-      npcLocation_ = other.npcLocation_ != null ? other.npcLocation_.Clone() : null;
-      talkEventId_ = other.talkEventId_;
+      gGFPAOJAKMB_ = other.gGFPAOJAKMB_;
+      hIGNOLPNKJE_ = other.hIGNOLPNKJE_ != null ? other.hIGNOLPNKJE_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,27 +84,27 @@ namespace EggLink.DanhengServer.Proto {
       return new TakeTalkRewardCsReq(this);
     }
 
-    /// <summary>Field number for the "npc_location" field.</summary>
-    public const int NpcLocationFieldNumber = 14;
-    private global::EggLink.DanhengServer.Proto.Vector npcLocation_;
+    /// <summary>Field number for the "GGFPAOJAKMB" field.</summary>
+    public const int GGFPAOJAKMBFieldNumber = 6;
+    private uint gGFPAOJAKMB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.Vector NpcLocation {
-      get { return npcLocation_; }
+    public uint GGFPAOJAKMB {
+      get { return gGFPAOJAKMB_; }
       set {
-        npcLocation_ = value;
+        gGFPAOJAKMB_ = value;
       }
     }
 
-    /// <summary>Field number for the "talk_event_id" field.</summary>
-    public const int TalkEventIdFieldNumber = 15;
-    private uint talkEventId_;
+    /// <summary>Field number for the "HIGNOLPNKJE" field.</summary>
+    public const int HIGNOLPNKJEFieldNumber = 2;
+    private global::EggLink.DanhengServer.Proto.Vector hIGNOLPNKJE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TalkEventId {
-      get { return talkEventId_; }
+    public global::EggLink.DanhengServer.Proto.Vector HIGNOLPNKJE {
+      get { return hIGNOLPNKJE_; }
       set {
-        talkEventId_ = value;
+        hIGNOLPNKJE_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(NpcLocation, other.NpcLocation)) return false;
-      if (TalkEventId != other.TalkEventId) return false;
+      if (GGFPAOJAKMB != other.GGFPAOJAKMB) return false;
+      if (!object.Equals(HIGNOLPNKJE, other.HIGNOLPNKJE)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (npcLocation_ != null) hash ^= NpcLocation.GetHashCode();
-      if (TalkEventId != 0) hash ^= TalkEventId.GetHashCode();
+      if (GGFPAOJAKMB != 0) hash ^= GGFPAOJAKMB.GetHashCode();
+      if (hIGNOLPNKJE_ != null) hash ^= HIGNOLPNKJE.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (npcLocation_ != null) {
-        output.WriteRawTag(114);
-        output.WriteMessage(NpcLocation);
+      if (hIGNOLPNKJE_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(HIGNOLPNKJE);
       }
-      if (TalkEventId != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(TalkEventId);
+      if (GGFPAOJAKMB != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(GGFPAOJAKMB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (npcLocation_ != null) {
-        output.WriteRawTag(114);
-        output.WriteMessage(NpcLocation);
+      if (hIGNOLPNKJE_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(HIGNOLPNKJE);
       }
-      if (TalkEventId != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(TalkEventId);
+      if (GGFPAOJAKMB != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(GGFPAOJAKMB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (npcLocation_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NpcLocation);
+      if (GGFPAOJAKMB != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GGFPAOJAKMB);
       }
-      if (TalkEventId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TalkEventId);
+      if (hIGNOLPNKJE_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(HIGNOLPNKJE);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,14 +206,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.npcLocation_ != null) {
-        if (npcLocation_ == null) {
-          NpcLocation = new global::EggLink.DanhengServer.Proto.Vector();
-        }
-        NpcLocation.MergeFrom(other.NpcLocation);
+      if (other.GGFPAOJAKMB != 0) {
+        GGFPAOJAKMB = other.GGFPAOJAKMB;
       }
-      if (other.TalkEventId != 0) {
-        TalkEventId = other.TalkEventId;
+      if (other.hIGNOLPNKJE_ != null) {
+        if (hIGNOLPNKJE_ == null) {
+          HIGNOLPNKJE = new global::EggLink.DanhengServer.Proto.Vector();
+        }
+        HIGNOLPNKJE.MergeFrom(other.HIGNOLPNKJE);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 114: {
-            if (npcLocation_ == null) {
-              NpcLocation = new global::EggLink.DanhengServer.Proto.Vector();
+          case 18: {
+            if (hIGNOLPNKJE_ == null) {
+              HIGNOLPNKJE = new global::EggLink.DanhengServer.Proto.Vector();
             }
-            input.ReadMessage(NpcLocation);
+            input.ReadMessage(HIGNOLPNKJE);
             break;
           }
-          case 120: {
-            TalkEventId = input.ReadUInt32();
+          case 48: {
+            GGFPAOJAKMB = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 114: {
-            if (npcLocation_ == null) {
-              NpcLocation = new global::EggLink.DanhengServer.Proto.Vector();
+          case 18: {
+            if (hIGNOLPNKJE_ == null) {
+              HIGNOLPNKJE = new global::EggLink.DanhengServer.Proto.Vector();
             }
-            input.ReadMessage(NpcLocation);
+            input.ReadMessage(HIGNOLPNKJE);
             break;
           }
-          case 120: {
-            TalkEventId = input.ReadUInt32();
+          case 48: {
+            GGFPAOJAKMB = input.ReadUInt32();
             break;
           }
         }

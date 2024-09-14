@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxSb2d1ZU1vZGlmaWVyRGVsTm90aWZ5LnByb3RvIjYKFlJvZ3VlTW9kaWZp",
-            "ZXJEZWxOb3RpZnkSHAoUbWFpbl9tb2RpZmllcl9lZmZlY3QYCSABKARCHqoC",
+            "ZXJEZWxOb3RpZnkSHAoUbWFpbl9tb2RpZmllcl9lZmZlY3QYCyABKARCHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "main_modifier_effect" field.</summary>
-    public const int MainModifierEffectFieldNumber = 9;
+    public const int MainModifierEffectFieldNumber = 11;
     private ulong mainModifierEffect_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (MainModifierEffect != 0UL) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(88);
         output.WriteUInt64(MainModifierEffect);
       }
       if (_unknownFields != null) {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MainModifierEffect != 0UL) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(88);
         output.WriteUInt64(MainModifierEffect);
       }
       if (_unknownFields != null) {
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
+          case 88: {
             MainModifierEffect = input.ReadUInt64();
             break;
           }
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
+          case 88: {
             MainModifierEffect = input.ReadUInt64();
             break;
           }

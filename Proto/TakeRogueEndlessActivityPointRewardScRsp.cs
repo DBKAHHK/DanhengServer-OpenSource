@@ -26,15 +26,15 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ci5UYWtlUm9ndWVFbmRsZXNzQWN0aXZpdHlQb2ludFJld2FyZFNjUnNwLnBy",
             "b3RvGg5JdGVtTGlzdC5wcm90byKwAQooVGFrZVJvZ3VlRW5kbGVzc0FjdGl2",
-            "aXR5UG9pbnRSZXdhcmRTY1JzcBIfChd0YWtlbl9yZXdhcmRfbGV2ZWxfbGlz",
-            "dBgMIAMoDRIZCgZyZXdhcmQYByABKAsyCS5JdGVtTGlzdBINCgVsZXZlbBgC",
-            "IAEoDRITCgtIRkVESkZHUE5PSBgLIAEoCBITCgtJUE9KR1BCS0tQRBgIIAEo",
-            "DRIPCgdyZXRjb2RlGAogASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "aXR5UG9pbnRSZXdhcmRTY1JzcBIZCgZyZXdhcmQYAyABKAsyCS5JdGVtTGlz",
+            "dBITCgtPR0xIQUdGQ0RCQRgLIAEoCBITCgtLSUVLUEFHREJGSBgPIAEoDRIN",
+            "CgVsZXZlbBgBIAEoDRIfChd0YWtlbl9yZXdhcmRfbGV2ZWxfbGlzdBgOIAMo",
+            "DRIPCgdyZXRjb2RlGAggASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeRogueEndlessActivityPointRewardScRsp), global::EggLink.DanhengServer.Proto.TakeRogueEndlessActivityPointRewardScRsp.Parser, new[]{ "TakenRewardLevelList", "Reward", "Level", "HFEDJFGPNOH", "IPOJGPBKKPD", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeRogueEndlessActivityPointRewardScRsp), global::EggLink.DanhengServer.Proto.TakeRogueEndlessActivityPointRewardScRsp.Parser, new[]{ "Reward", "OGLHAGFCDBA", "KIEKPAGDBFH", "Level", "TakenRewardLevelList", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,11 +76,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TakeRogueEndlessActivityPointRewardScRsp(TakeRogueEndlessActivityPointRewardScRsp other) : this() {
-      takenRewardLevelList_ = other.takenRewardLevelList_.Clone();
       reward_ = other.reward_ != null ? other.reward_.Clone() : null;
+      oGLHAGFCDBA_ = other.oGLHAGFCDBA_;
+      kIEKPAGDBFH_ = other.kIEKPAGDBFH_;
       level_ = other.level_;
-      hFEDJFGPNOH_ = other.hFEDJFGPNOH_;
-      iPOJGPBKKPD_ = other.iPOJGPBKKPD_;
+      takenRewardLevelList_ = other.takenRewardLevelList_.Clone();
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -91,19 +91,8 @@ namespace EggLink.DanhengServer.Proto {
       return new TakeRogueEndlessActivityPointRewardScRsp(this);
     }
 
-    /// <summary>Field number for the "taken_reward_level_list" field.</summary>
-    public const int TakenRewardLevelListFieldNumber = 12;
-    private static readonly pb::FieldCodec<uint> _repeated_takenRewardLevelList_codec
-        = pb::FieldCodec.ForUInt32(98);
-    private readonly pbc::RepeatedField<uint> takenRewardLevelList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> TakenRewardLevelList {
-      get { return takenRewardLevelList_; }
-    }
-
     /// <summary>Field number for the "reward" field.</summary>
-    public const int RewardFieldNumber = 7;
+    public const int RewardFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.ItemList reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -114,8 +103,32 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "OGLHAGFCDBA" field.</summary>
+    public const int OGLHAGFCDBAFieldNumber = 11;
+    private bool oGLHAGFCDBA_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool OGLHAGFCDBA {
+      get { return oGLHAGFCDBA_; }
+      set {
+        oGLHAGFCDBA_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "KIEKPAGDBFH" field.</summary>
+    public const int KIEKPAGDBFHFieldNumber = 15;
+    private uint kIEKPAGDBFH_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint KIEKPAGDBFH {
+      get { return kIEKPAGDBFH_; }
+      set {
+        kIEKPAGDBFH_ = value;
+      }
+    }
+
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 2;
+    public const int LevelFieldNumber = 1;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -126,32 +139,19 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "HFEDJFGPNOH" field.</summary>
-    public const int HFEDJFGPNOHFieldNumber = 11;
-    private bool hFEDJFGPNOH_;
+    /// <summary>Field number for the "taken_reward_level_list" field.</summary>
+    public const int TakenRewardLevelListFieldNumber = 14;
+    private static readonly pb::FieldCodec<uint> _repeated_takenRewardLevelList_codec
+        = pb::FieldCodec.ForUInt32(114);
+    private readonly pbc::RepeatedField<uint> takenRewardLevelList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HFEDJFGPNOH {
-      get { return hFEDJFGPNOH_; }
-      set {
-        hFEDJFGPNOH_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "IPOJGPBKKPD" field.</summary>
-    public const int IPOJGPBKKPDFieldNumber = 8;
-    private uint iPOJGPBKKPD_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IPOJGPBKKPD {
-      get { return iPOJGPBKKPD_; }
-      set {
-        iPOJGPBKKPD_ = value;
-      }
+    public pbc::RepeatedField<uint> TakenRewardLevelList {
+      get { return takenRewardLevelList_; }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 10;
+    public const int RetcodeFieldNumber = 8;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -177,11 +177,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!takenRewardLevelList_.Equals(other.takenRewardLevelList_)) return false;
       if (!object.Equals(Reward, other.Reward)) return false;
+      if (OGLHAGFCDBA != other.OGLHAGFCDBA) return false;
+      if (KIEKPAGDBFH != other.KIEKPAGDBFH) return false;
       if (Level != other.Level) return false;
-      if (HFEDJFGPNOH != other.HFEDJFGPNOH) return false;
-      if (IPOJGPBKKPD != other.IPOJGPBKKPD) return false;
+      if(!takenRewardLevelList_.Equals(other.takenRewardLevelList_)) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -190,11 +190,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= takenRewardLevelList_.GetHashCode();
       if (reward_ != null) hash ^= Reward.GetHashCode();
+      if (OGLHAGFCDBA != false) hash ^= OGLHAGFCDBA.GetHashCode();
+      if (KIEKPAGDBFH != 0) hash ^= KIEKPAGDBFH.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
-      if (HFEDJFGPNOH != false) hash ^= HFEDJFGPNOH.GetHashCode();
-      if (IPOJGPBKKPD != 0) hash ^= IPOJGPBKKPD.GetHashCode();
+      hash ^= takenRewardLevelList_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -215,26 +215,26 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Level != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(8);
         output.WriteUInt32(Level);
       }
       if (reward_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(26);
         output.WriteMessage(Reward);
       }
-      if (IPOJGPBKKPD != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(IPOJGPBKKPD);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
-      if (HFEDJFGPNOH != false) {
+      if (OGLHAGFCDBA != false) {
         output.WriteRawTag(88);
-        output.WriteBool(HFEDJFGPNOH);
+        output.WriteBool(OGLHAGFCDBA);
       }
       takenRewardLevelList_.WriteTo(output, _repeated_takenRewardLevelList_codec);
+      if (KIEKPAGDBFH != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(KIEKPAGDBFH);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -246,26 +246,26 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Level != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(8);
         output.WriteUInt32(Level);
       }
       if (reward_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(26);
         output.WriteMessage(Reward);
       }
-      if (IPOJGPBKKPD != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(IPOJGPBKKPD);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
-      if (HFEDJFGPNOH != false) {
+      if (OGLHAGFCDBA != false) {
         output.WriteRawTag(88);
-        output.WriteBool(HFEDJFGPNOH);
+        output.WriteBool(OGLHAGFCDBA);
       }
       takenRewardLevelList_.WriteTo(ref output, _repeated_takenRewardLevelList_codec);
+      if (KIEKPAGDBFH != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(KIEKPAGDBFH);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -276,19 +276,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += takenRewardLevelList_.CalculateSize(_repeated_takenRewardLevelList_codec);
       if (reward_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Reward);
+      }
+      if (OGLHAGFCDBA != false) {
+        size += 1 + 1;
+      }
+      if (KIEKPAGDBFH != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KIEKPAGDBFH);
       }
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
       }
-      if (HFEDJFGPNOH != false) {
-        size += 1 + 1;
-      }
-      if (IPOJGPBKKPD != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IPOJGPBKKPD);
-      }
+      size += takenRewardLevelList_.CalculateSize(_repeated_takenRewardLevelList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
@@ -304,22 +304,22 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      takenRewardLevelList_.Add(other.takenRewardLevelList_);
       if (other.reward_ != null) {
         if (reward_ == null) {
           Reward = new global::EggLink.DanhengServer.Proto.ItemList();
         }
         Reward.MergeFrom(other.Reward);
       }
+      if (other.OGLHAGFCDBA != false) {
+        OGLHAGFCDBA = other.OGLHAGFCDBA;
+      }
+      if (other.KIEKPAGDBFH != 0) {
+        KIEKPAGDBFH = other.KIEKPAGDBFH;
+      }
       if (other.Level != 0) {
         Level = other.Level;
       }
-      if (other.HFEDJFGPNOH != false) {
-        HFEDJFGPNOH = other.HFEDJFGPNOH;
-      }
-      if (other.IPOJGPBKKPD != 0) {
-        IPOJGPBKKPD = other.IPOJGPBKKPD;
-      }
+      takenRewardLevelList_.Add(other.takenRewardLevelList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
@@ -338,11 +338,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 8: {
             Level = input.ReadUInt32();
             break;
           }
-          case 58: {
+          case 26: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
@@ -350,20 +350,20 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 64: {
-            IPOJGPBKKPD = input.ReadUInt32();
-            break;
-          }
-          case 80: {
             Retcode = input.ReadUInt32();
             break;
           }
           case 88: {
-            HFEDJFGPNOH = input.ReadBool();
+            OGLHAGFCDBA = input.ReadBool();
             break;
           }
-          case 98:
-          case 96: {
+          case 114:
+          case 112: {
             takenRewardLevelList_.AddEntriesFrom(input, _repeated_takenRewardLevelList_codec);
+            break;
+          }
+          case 120: {
+            KIEKPAGDBFH = input.ReadUInt32();
             break;
           }
         }
@@ -381,11 +381,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 8: {
             Level = input.ReadUInt32();
             break;
           }
-          case 58: {
+          case 26: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
@@ -393,20 +393,20 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 64: {
-            IPOJGPBKKPD = input.ReadUInt32();
-            break;
-          }
-          case 80: {
             Retcode = input.ReadUInt32();
             break;
           }
           case 88: {
-            HFEDJFGPNOH = input.ReadBool();
+            OGLHAGFCDBA = input.ReadBool();
             break;
           }
-          case 98:
-          case 96: {
+          case 114:
+          case 112: {
             takenRewardLevelList_.AddEntriesFrom(ref input, _repeated_takenRewardLevelList_codec);
+            break;
+          }
+          case 120: {
+            KIEKPAGDBFH = input.ReadUInt32();
             break;
           }
         }

@@ -24,16 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static AddRelicFilterPlanCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1BZGRSZWxpY0ZpbHRlclBsYW5Dc1JlcS5wcm90bxoRSE5HRE5CSUFBTUMu",
-            "cHJvdG8aEUJHSEZHUEpQS0xFLnByb3RvIpMBChdBZGRSZWxpY0ZpbHRlclBs",
-            "YW5Dc1JlcRIRCglpc19tYXJrZWQYDCABKAgSEQoJbWF4X3RpbWVzGAcgASgN",
-            "EgwKBG5hbWUYAiABKAkSIQoLRk1OSUlOTkpOSEcYBCABKAsyDC5CR0hGR1BK",
-            "UEtMRRIhCgtJSFBMR0VCS05BRBgJIAEoCzIMLkhOR0ROQklBQU1DQh6qAhtF",
-            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "Ch1BZGRSZWxpY0ZpbHRlclBsYW5Dc1JlcS5wcm90bxoZUmVsaWNGaWx0ZXJQ",
+            "bGFuSWNvbi5wcm90bxodUmVsaWNGaWx0ZXJQbGFuU2V0dGluZ3MucHJvdG8i",
+            "tQEKF0FkZFJlbGljRmlsdGVyUGxhbkNzUmVxEi0KD0ljb25GaWVsZE51bWJl",
+            "chgOIAEoCzIULlJlbGljRmlsdGVyUGxhbkljb24SGwoTSXNNYXJrZWRGaWVs",
+            "ZE51bWJlchgEIAEoCBI1ChNTZXR0aW5nc0ZpZWxkTnVtYmVyGA0gASgLMhgu",
+            "UmVsaWNGaWx0ZXJQbGFuU2V0dGluZ3MSFwoPTmFtZUZpZWxkTnVtYmVyGAMg",
+            "ASgJQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HNGDNBIAAMCReflection.Descriptor, global::EggLink.DanhengServer.Proto.BGHFGPJPKLEReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RelicFilterPlanIconReflection.Descriptor, global::EggLink.DanhengServer.Proto.RelicFilterPlanSettingsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AddRelicFilterPlanCsReq), global::EggLink.DanhengServer.Proto.AddRelicFilterPlanCsReq.Parser, new[]{ "IsMarked", "MaxTimes", "Name", "FMNIINNJNHG", "IHPLGEBKNAD" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AddRelicFilterPlanCsReq), global::EggLink.DanhengServer.Proto.AddRelicFilterPlanCsReq.Parser, new[]{ "IconFieldNumber", "IsMarkedFieldNumber", "SettingsFieldNumber", "NameFieldNumber" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,11 +76,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AddRelicFilterPlanCsReq(AddRelicFilterPlanCsReq other) : this() {
-      isMarked_ = other.isMarked_;
-      maxTimes_ = other.maxTimes_;
-      name_ = other.name_;
-      fMNIINNJNHG_ = other.fMNIINNJNHG_ != null ? other.fMNIINNJNHG_.Clone() : null;
-      iHPLGEBKNAD_ = other.iHPLGEBKNAD_ != null ? other.iHPLGEBKNAD_.Clone() : null;
+      iconFieldNumber_ = other.iconFieldNumber_ != null ? other.iconFieldNumber_.Clone() : null;
+      isMarkedFieldNumber_ = other.isMarkedFieldNumber_;
+      settingsFieldNumber_ = other.settingsFieldNumber_ != null ? other.settingsFieldNumber_.Clone() : null;
+      nameFieldNumber_ = other.nameFieldNumber_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -89,63 +89,51 @@ namespace EggLink.DanhengServer.Proto {
       return new AddRelicFilterPlanCsReq(this);
     }
 
-    /// <summary>Field number for the "is_marked" field.</summary>
-    public const int IsMarkedFieldNumber = 12;
-    private bool isMarked_;
+    /// <summary>Field number for the "IconFieldNumber" field.</summary>
+    public const int IconFieldNumberFieldNumber = 14;
+    private global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon iconFieldNumber_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsMarked {
-      get { return isMarked_; }
+    public global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon IconFieldNumber {
+      get { return iconFieldNumber_; }
       set {
-        isMarked_ = value;
+        iconFieldNumber_ = value;
       }
     }
 
-    /// <summary>Field number for the "max_times" field.</summary>
-    public const int MaxTimesFieldNumber = 7;
-    private uint maxTimes_;
+    /// <summary>Field number for the "IsMarkedFieldNumber" field.</summary>
+    public const int IsMarkedFieldNumberFieldNumber = 4;
+    private bool isMarkedFieldNumber_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MaxTimes {
-      get { return maxTimes_; }
+    public bool IsMarkedFieldNumber {
+      get { return isMarkedFieldNumber_; }
       set {
-        maxTimes_ = value;
+        isMarkedFieldNumber_ = value;
       }
     }
 
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 2;
-    private string name_ = "";
+    /// <summary>Field number for the "SettingsFieldNumber" field.</summary>
+    public const int SettingsFieldNumberFieldNumber = 13;
+    private global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings settingsFieldNumber_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Name {
-      get { return name_; }
+    public global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings SettingsFieldNumber {
+      get { return settingsFieldNumber_; }
       set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        settingsFieldNumber_ = value;
       }
     }
 
-    /// <summary>Field number for the "FMNIINNJNHG" field.</summary>
-    public const int FMNIINNJNHGFieldNumber = 4;
-    private global::EggLink.DanhengServer.Proto.BGHFGPJPKLE fMNIINNJNHG_;
+    /// <summary>Field number for the "NameFieldNumber" field.</summary>
+    public const int NameFieldNumberFieldNumber = 3;
+    private string nameFieldNumber_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.BGHFGPJPKLE FMNIINNJNHG {
-      get { return fMNIINNJNHG_; }
+    public string NameFieldNumber {
+      get { return nameFieldNumber_; }
       set {
-        fMNIINNJNHG_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "IHPLGEBKNAD" field.</summary>
-    public const int IHPLGEBKNADFieldNumber = 9;
-    private global::EggLink.DanhengServer.Proto.HNGDNBIAAMC iHPLGEBKNAD_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.HNGDNBIAAMC IHPLGEBKNAD {
-      get { return iHPLGEBKNAD_; }
-      set {
-        iHPLGEBKNAD_ = value;
+        nameFieldNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -164,11 +152,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsMarked != other.IsMarked) return false;
-      if (MaxTimes != other.MaxTimes) return false;
-      if (Name != other.Name) return false;
-      if (!object.Equals(FMNIINNJNHG, other.FMNIINNJNHG)) return false;
-      if (!object.Equals(IHPLGEBKNAD, other.IHPLGEBKNAD)) return false;
+      if (!object.Equals(IconFieldNumber, other.IconFieldNumber)) return false;
+      if (IsMarkedFieldNumber != other.IsMarkedFieldNumber) return false;
+      if (!object.Equals(SettingsFieldNumber, other.SettingsFieldNumber)) return false;
+      if (NameFieldNumber != other.NameFieldNumber) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -176,11 +163,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsMarked != false) hash ^= IsMarked.GetHashCode();
-      if (MaxTimes != 0) hash ^= MaxTimes.GetHashCode();
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (fMNIINNJNHG_ != null) hash ^= FMNIINNJNHG.GetHashCode();
-      if (iHPLGEBKNAD_ != null) hash ^= IHPLGEBKNAD.GetHashCode();
+      if (iconFieldNumber_ != null) hash ^= IconFieldNumber.GetHashCode();
+      if (IsMarkedFieldNumber != false) hash ^= IsMarkedFieldNumber.GetHashCode();
+      if (settingsFieldNumber_ != null) hash ^= SettingsFieldNumber.GetHashCode();
+      if (NameFieldNumber.Length != 0) hash ^= NameFieldNumber.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -199,25 +185,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Name.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Name);
+      if (NameFieldNumber.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(NameFieldNumber);
       }
-      if (fMNIINNJNHG_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(FMNIINNJNHG);
+      if (IsMarkedFieldNumber != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IsMarkedFieldNumber);
       }
-      if (MaxTimes != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(MaxTimes);
+      if (settingsFieldNumber_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(SettingsFieldNumber);
       }
-      if (iHPLGEBKNAD_ != null) {
-        output.WriteRawTag(74);
-        output.WriteMessage(IHPLGEBKNAD);
-      }
-      if (IsMarked != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(IsMarked);
+      if (iconFieldNumber_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(IconFieldNumber);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -229,25 +211,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Name.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Name);
+      if (NameFieldNumber.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(NameFieldNumber);
       }
-      if (fMNIINNJNHG_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(FMNIINNJNHG);
+      if (IsMarkedFieldNumber != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IsMarkedFieldNumber);
       }
-      if (MaxTimes != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(MaxTimes);
+      if (settingsFieldNumber_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(SettingsFieldNumber);
       }
-      if (iHPLGEBKNAD_ != null) {
-        output.WriteRawTag(74);
-        output.WriteMessage(IHPLGEBKNAD);
-      }
-      if (IsMarked != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(IsMarked);
+      if (iconFieldNumber_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(IconFieldNumber);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -259,20 +237,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsMarked != false) {
+      if (iconFieldNumber_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IconFieldNumber);
+      }
+      if (IsMarkedFieldNumber != false) {
         size += 1 + 1;
       }
-      if (MaxTimes != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxTimes);
+      if (settingsFieldNumber_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SettingsFieldNumber);
       }
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (fMNIINNJNHG_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FMNIINNJNHG);
-      }
-      if (iHPLGEBKNAD_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IHPLGEBKNAD);
+      if (NameFieldNumber.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NameFieldNumber);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -286,26 +261,23 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsMarked != false) {
-        IsMarked = other.IsMarked;
-      }
-      if (other.MaxTimes != 0) {
-        MaxTimes = other.MaxTimes;
-      }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
-      if (other.fMNIINNJNHG_ != null) {
-        if (fMNIINNJNHG_ == null) {
-          FMNIINNJNHG = new global::EggLink.DanhengServer.Proto.BGHFGPJPKLE();
+      if (other.iconFieldNumber_ != null) {
+        if (iconFieldNumber_ == null) {
+          IconFieldNumber = new global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon();
         }
-        FMNIINNJNHG.MergeFrom(other.FMNIINNJNHG);
+        IconFieldNumber.MergeFrom(other.IconFieldNumber);
       }
-      if (other.iHPLGEBKNAD_ != null) {
-        if (iHPLGEBKNAD_ == null) {
-          IHPLGEBKNAD = new global::EggLink.DanhengServer.Proto.HNGDNBIAAMC();
+      if (other.IsMarkedFieldNumber != false) {
+        IsMarkedFieldNumber = other.IsMarkedFieldNumber;
+      }
+      if (other.settingsFieldNumber_ != null) {
+        if (settingsFieldNumber_ == null) {
+          SettingsFieldNumber = new global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings();
         }
-        IHPLGEBKNAD.MergeFrom(other.IHPLGEBKNAD);
+        SettingsFieldNumber.MergeFrom(other.SettingsFieldNumber);
+      }
+      if (other.NameFieldNumber.Length != 0) {
+        NameFieldNumber = other.NameFieldNumber;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -322,30 +294,26 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
-            Name = input.ReadString();
+          case 26: {
+            NameFieldNumber = input.ReadString();
             break;
           }
-          case 34: {
-            if (fMNIINNJNHG_ == null) {
-              FMNIINNJNHG = new global::EggLink.DanhengServer.Proto.BGHFGPJPKLE();
+          case 32: {
+            IsMarkedFieldNumber = input.ReadBool();
+            break;
+          }
+          case 106: {
+            if (settingsFieldNumber_ == null) {
+              SettingsFieldNumber = new global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings();
             }
-            input.ReadMessage(FMNIINNJNHG);
+            input.ReadMessage(SettingsFieldNumber);
             break;
           }
-          case 56: {
-            MaxTimes = input.ReadUInt32();
-            break;
-          }
-          case 74: {
-            if (iHPLGEBKNAD_ == null) {
-              IHPLGEBKNAD = new global::EggLink.DanhengServer.Proto.HNGDNBIAAMC();
+          case 114: {
+            if (iconFieldNumber_ == null) {
+              IconFieldNumber = new global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon();
             }
-            input.ReadMessage(IHPLGEBKNAD);
-            break;
-          }
-          case 96: {
-            IsMarked = input.ReadBool();
+            input.ReadMessage(IconFieldNumber);
             break;
           }
         }
@@ -363,30 +331,26 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
-            Name = input.ReadString();
+          case 26: {
+            NameFieldNumber = input.ReadString();
             break;
           }
-          case 34: {
-            if (fMNIINNJNHG_ == null) {
-              FMNIINNJNHG = new global::EggLink.DanhengServer.Proto.BGHFGPJPKLE();
+          case 32: {
+            IsMarkedFieldNumber = input.ReadBool();
+            break;
+          }
+          case 106: {
+            if (settingsFieldNumber_ == null) {
+              SettingsFieldNumber = new global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings();
             }
-            input.ReadMessage(FMNIINNJNHG);
+            input.ReadMessage(SettingsFieldNumber);
             break;
           }
-          case 56: {
-            MaxTimes = input.ReadUInt32();
-            break;
-          }
-          case 74: {
-            if (iHPLGEBKNAD_ == null) {
-              IHPLGEBKNAD = new global::EggLink.DanhengServer.Proto.HNGDNBIAAMC();
+          case 114: {
+            if (iconFieldNumber_ == null) {
+              IconFieldNumber = new global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon();
             }
-            input.ReadMessage(IHPLGEBKNAD);
-            break;
-          }
-          case 96: {
-            IsMarked = input.ReadBool();
+            input.ReadMessage(IconFieldNumber);
             break;
           }
         }

@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CgtRdWVzdC5wcm90bxoRUXVlc3RTdGF0dXMucHJvdG8ibQoFUXVlc3QSEwoL",
-            "ZmluaXNoX3RpbWUYBCABKAMSEwoLR0VDQkZGQ0pKR0oYASADKA0SHAoGc3Rh",
-            "dHVzGAggASgOMgwuUXVlc3RTdGF0dXMSEAoIcHJvZ3Jlc3MYBiABKA0SCgoC",
-            "aWQYDyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "ZmluaXNoX3RpbWUYDSABKAMSCgoCaWQYCiABKA0SHAoGc3RhdHVzGA8gASgO",
+            "MgwuUXVlc3RTdGF0dXMSEAoIcHJvZ3Jlc3MYBiABKA0SEwoLQU5BS0dNRklE",
+            "QkoYBSADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.QuestStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Quest), global::EggLink.DanhengServer.Proto.Quest.Parser, new[]{ "FinishTime", "GECBFFCJJGJ", "Status", "Progress", "Id" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Quest), global::EggLink.DanhengServer.Proto.Quest.Parser, new[]{ "FinishTime", "Id", "Status", "Progress", "ANAKGMFIDBJ" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,10 +75,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Quest(Quest other) : this() {
       finishTime_ = other.finishTime_;
-      gECBFFCJJGJ_ = other.gECBFFCJJGJ_.Clone();
+      id_ = other.id_;
       status_ = other.status_;
       progress_ = other.progress_;
-      id_ = other.id_;
+      aNAKGMFIDBJ_ = other.aNAKGMFIDBJ_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -89,7 +89,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "finish_time" field.</summary>
-    public const int FinishTimeFieldNumber = 4;
+    public const int FinishTimeFieldNumber = 13;
     private long finishTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,19 +100,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "GECBFFCJJGJ" field.</summary>
-    public const int GECBFFCJJGJFieldNumber = 1;
-    private static readonly pb::FieldCodec<uint> _repeated_gECBFFCJJGJ_codec
-        = pb::FieldCodec.ForUInt32(10);
-    private readonly pbc::RepeatedField<uint> gECBFFCJJGJ_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 10;
+    private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> GECBFFCJJGJ {
-      get { return gECBFFCJJGJ_; }
+    public uint Id {
+      get { return id_; }
+      set {
+        id_ = value;
+      }
     }
 
     /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 8;
+    public const int StatusFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.QuestStatus status_ = global::EggLink.DanhengServer.Proto.QuestStatus.QuestNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -135,16 +136,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 15;
-    private uint id_;
+    /// <summary>Field number for the "ANAKGMFIDBJ" field.</summary>
+    public const int ANAKGMFIDBJFieldNumber = 5;
+    private static readonly pb::FieldCodec<uint> _repeated_aNAKGMFIDBJ_codec
+        = pb::FieldCodec.ForUInt32(42);
+    private readonly pbc::RepeatedField<uint> aNAKGMFIDBJ_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Id {
-      get { return id_; }
-      set {
-        id_ = value;
-      }
+    public pbc::RepeatedField<uint> ANAKGMFIDBJ {
+      get { return aNAKGMFIDBJ_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -163,10 +163,10 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (FinishTime != other.FinishTime) return false;
-      if(!gECBFFCJJGJ_.Equals(other.gECBFFCJJGJ_)) return false;
+      if (Id != other.Id) return false;
       if (Status != other.Status) return false;
       if (Progress != other.Progress) return false;
-      if (Id != other.Id) return false;
+      if(!aNAKGMFIDBJ_.Equals(other.aNAKGMFIDBJ_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -175,10 +175,10 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (FinishTime != 0L) hash ^= FinishTime.GetHashCode();
-      hash ^= gECBFFCJJGJ_.GetHashCode();
+      if (Id != 0) hash ^= Id.GetHashCode();
       if (Status != global::EggLink.DanhengServer.Proto.QuestStatus.QuestNone) hash ^= Status.GetHashCode();
       if (Progress != 0) hash ^= Progress.GetHashCode();
-      if (Id != 0) hash ^= Id.GetHashCode();
+      hash ^= aNAKGMFIDBJ_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -197,22 +197,22 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      gECBFFCJJGJ_.WriteTo(output, _repeated_gECBFFCJJGJ_codec);
-      if (FinishTime != 0L) {
-        output.WriteRawTag(32);
-        output.WriteInt64(FinishTime);
-      }
+      aNAKGMFIDBJ_.WriteTo(output, _repeated_aNAKGMFIDBJ_codec);
       if (Progress != 0) {
         output.WriteRawTag(48);
         output.WriteUInt32(Progress);
       }
-      if (Status != global::EggLink.DanhengServer.Proto.QuestStatus.QuestNone) {
-        output.WriteRawTag(64);
-        output.WriteEnum((int) Status);
-      }
       if (Id != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(80);
         output.WriteUInt32(Id);
+      }
+      if (FinishTime != 0L) {
+        output.WriteRawTag(104);
+        output.WriteInt64(FinishTime);
+      }
+      if (Status != global::EggLink.DanhengServer.Proto.QuestStatus.QuestNone) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) Status);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -224,22 +224,22 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      gECBFFCJJGJ_.WriteTo(ref output, _repeated_gECBFFCJJGJ_codec);
-      if (FinishTime != 0L) {
-        output.WriteRawTag(32);
-        output.WriteInt64(FinishTime);
-      }
+      aNAKGMFIDBJ_.WriteTo(ref output, _repeated_aNAKGMFIDBJ_codec);
       if (Progress != 0) {
         output.WriteRawTag(48);
         output.WriteUInt32(Progress);
       }
-      if (Status != global::EggLink.DanhengServer.Proto.QuestStatus.QuestNone) {
-        output.WriteRawTag(64);
-        output.WriteEnum((int) Status);
-      }
       if (Id != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(80);
         output.WriteUInt32(Id);
+      }
+      if (FinishTime != 0L) {
+        output.WriteRawTag(104);
+        output.WriteInt64(FinishTime);
+      }
+      if (Status != global::EggLink.DanhengServer.Proto.QuestStatus.QuestNone) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) Status);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -254,16 +254,16 @@ namespace EggLink.DanhengServer.Proto {
       if (FinishTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(FinishTime);
       }
-      size += gECBFFCJJGJ_.CalculateSize(_repeated_gECBFFCJJGJ_codec);
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
+      }
       if (Status != global::EggLink.DanhengServer.Proto.QuestStatus.QuestNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (Progress != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Progress);
       }
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
-      }
+      size += aNAKGMFIDBJ_.CalculateSize(_repeated_aNAKGMFIDBJ_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -279,16 +279,16 @@ namespace EggLink.DanhengServer.Proto {
       if (other.FinishTime != 0L) {
         FinishTime = other.FinishTime;
       }
-      gECBFFCJJGJ_.Add(other.gECBFFCJJGJ_);
+      if (other.Id != 0) {
+        Id = other.Id;
+      }
       if (other.Status != global::EggLink.DanhengServer.Proto.QuestStatus.QuestNone) {
         Status = other.Status;
       }
       if (other.Progress != 0) {
         Progress = other.Progress;
       }
-      if (other.Id != 0) {
-        Id = other.Id;
-      }
+      aNAKGMFIDBJ_.Add(other.aNAKGMFIDBJ_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -304,25 +304,25 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10:
-          case 8: {
-            gECBFFCJJGJ_.AddEntriesFrom(input, _repeated_gECBFFCJJGJ_codec);
-            break;
-          }
-          case 32: {
-            FinishTime = input.ReadInt64();
+          case 42:
+          case 40: {
+            aNAKGMFIDBJ_.AddEntriesFrom(input, _repeated_aNAKGMFIDBJ_codec);
             break;
           }
           case 48: {
             Progress = input.ReadUInt32();
             break;
           }
-          case 64: {
-            Status = (global::EggLink.DanhengServer.Proto.QuestStatus) input.ReadEnum();
+          case 80: {
+            Id = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            FinishTime = input.ReadInt64();
             break;
           }
           case 120: {
-            Id = input.ReadUInt32();
+            Status = (global::EggLink.DanhengServer.Proto.QuestStatus) input.ReadEnum();
             break;
           }
         }
@@ -340,25 +340,25 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10:
-          case 8: {
-            gECBFFCJJGJ_.AddEntriesFrom(ref input, _repeated_gECBFFCJJGJ_codec);
-            break;
-          }
-          case 32: {
-            FinishTime = input.ReadInt64();
+          case 42:
+          case 40: {
+            aNAKGMFIDBJ_.AddEntriesFrom(ref input, _repeated_aNAKGMFIDBJ_codec);
             break;
           }
           case 48: {
             Progress = input.ReadUInt32();
             break;
           }
-          case 64: {
-            Status = (global::EggLink.DanhengServer.Proto.QuestStatus) input.ReadEnum();
+          case 80: {
+            Id = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            FinishTime = input.ReadInt64();
             break;
           }
           case 120: {
-            Id = input.ReadUInt32();
+            Status = (global::EggLink.DanhengServer.Proto.QuestStatus) input.ReadEnum();
             break;
           }
         }

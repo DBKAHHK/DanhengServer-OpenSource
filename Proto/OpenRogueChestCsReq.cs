@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlPcGVuUm9ndWVDaGVzdENzUmVxLnByb3RvIj4KE09wZW5Sb2d1ZUNoZXN0",
-            "Q3NSZXESEwoLSExORkRQTkVOR08YCCABKAgSEgoKbW9uc3Rlcl9pZBgEIAEo",
+            "Q3NSZXESEwoLS0tQSUxCREFETkgYCSABKAgSEgoKbW9uc3Rlcl9pZBgFIAEo",
             "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OpenRogueChestCsReq), global::EggLink.DanhengServer.Proto.OpenRogueChestCsReq.Parser, new[]{ "HLNFDPNENGO", "MonsterId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OpenRogueChestCsReq), global::EggLink.DanhengServer.Proto.OpenRogueChestCsReq.Parser, new[]{ "KKPILBDADNH", "MonsterId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OpenRogueChestCsReq(OpenRogueChestCsReq other) : this() {
-      hLNFDPNENGO_ = other.hLNFDPNENGO_;
+      kKPILBDADNH_ = other.kKPILBDADNH_;
       monsterId_ = other.monsterId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -83,20 +83,20 @@ namespace EggLink.DanhengServer.Proto {
       return new OpenRogueChestCsReq(this);
     }
 
-    /// <summary>Field number for the "HLNFDPNENGO" field.</summary>
-    public const int HLNFDPNENGOFieldNumber = 8;
-    private bool hLNFDPNENGO_;
+    /// <summary>Field number for the "KKPILBDADNH" field.</summary>
+    public const int KKPILBDADNHFieldNumber = 9;
+    private bool kKPILBDADNH_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HLNFDPNENGO {
-      get { return hLNFDPNENGO_; }
+    public bool KKPILBDADNH {
+      get { return kKPILBDADNH_; }
       set {
-        hLNFDPNENGO_ = value;
+        kKPILBDADNH_ = value;
       }
     }
 
     /// <summary>Field number for the "monster_id" field.</summary>
-    public const int MonsterIdFieldNumber = 4;
+    public const int MonsterIdFieldNumber = 5;
     private uint monsterId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (HLNFDPNENGO != other.HLNFDPNENGO) return false;
+      if (KKPILBDADNH != other.KKPILBDADNH) return false;
       if (MonsterId != other.MonsterId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -131,7 +131,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (HLNFDPNENGO != false) hash ^= HLNFDPNENGO.GetHashCode();
+      if (KKPILBDADNH != false) hash ^= KKPILBDADNH.GetHashCode();
       if (MonsterId != 0) hash ^= MonsterId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -152,12 +152,12 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (MonsterId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteUInt32(MonsterId);
       }
-      if (HLNFDPNENGO != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(HLNFDPNENGO);
+      if (KKPILBDADNH != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(KKPILBDADNH);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,12 +170,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MonsterId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteUInt32(MonsterId);
       }
-      if (HLNFDPNENGO != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(HLNFDPNENGO);
+      if (KKPILBDADNH != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(KKPILBDADNH);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (HLNFDPNENGO != false) {
+      if (KKPILBDADNH != false) {
         size += 1 + 1;
       }
       if (MonsterId != 0) {
@@ -205,8 +205,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.HLNFDPNENGO != false) {
-        HLNFDPNENGO = other.HLNFDPNENGO;
+      if (other.KKPILBDADNH != false) {
+        KKPILBDADNH = other.KKPILBDADNH;
       }
       if (other.MonsterId != 0) {
         MonsterId = other.MonsterId;
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 40: {
             MonsterId = input.ReadUInt32();
             break;
           }
-          case 64: {
-            HLNFDPNENGO = input.ReadBool();
+          case 72: {
+            KKPILBDADNH = input.ReadBool();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 40: {
             MonsterId = input.ReadUInt32();
             break;
           }
-          case 64: {
-            HLNFDPNENGO = input.ReadBool();
+          case 72: {
+            KKPILBDADNH = input.ReadBool();
             break;
           }
         }

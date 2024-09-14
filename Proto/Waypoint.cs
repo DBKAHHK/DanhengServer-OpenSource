@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static WaypointReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg5XYXlwb2ludC5wcm90byI8CghXYXlwb2ludBIOCgZpc19uZXcYCiABKAgS",
-            "CgoCaWQYDCABKA0SFAoMZmluaXNoX3RpbWVzGAsgASgNQh6qAhtFZ2dMaW5r",
-            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "Cg5XYXlwb2ludC5wcm90byI7CghXYXlwb2ludBIKCgJpZBgFIAEoDRIOCgZp",
+            "c19uZXcYAyABKAgSEwoLTk5QTlBHRktGRkgYCyABKA1CHqoCG0VnZ0xpbmsu",
+            "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Waypoint), global::EggLink.DanhengServer.Proto.Waypoint.Parser, new[]{ "IsNew", "Id", "FinishTimes" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Waypoint), global::EggLink.DanhengServer.Proto.Waypoint.Parser, new[]{ "Id", "IsNew", "NNPNPGFKFFH" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,9 +72,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Waypoint(Waypoint other) : this() {
-      isNew_ = other.isNew_;
       id_ = other.id_;
-      finishTimes_ = other.finishTimes_;
+      isNew_ = other.isNew_;
+      nNPNPGFKFFH_ = other.nNPNPGFKFFH_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new Waypoint(this);
     }
 
-    /// <summary>Field number for the "is_new" field.</summary>
-    public const int IsNewFieldNumber = 10;
-    private bool isNew_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsNew {
-      get { return isNew_; }
-      set {
-        isNew_ = value;
-      }
-    }
-
     /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 12;
+    public const int IdFieldNumber = 5;
     private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -108,15 +96,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "finish_times" field.</summary>
-    public const int FinishTimesFieldNumber = 11;
-    private uint finishTimes_;
+    /// <summary>Field number for the "is_new" field.</summary>
+    public const int IsNewFieldNumber = 3;
+    private bool isNew_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FinishTimes {
-      get { return finishTimes_; }
+    public bool IsNew {
+      get { return isNew_; }
       set {
-        finishTimes_ = value;
+        isNew_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "NNPNPGFKFFH" field.</summary>
+    public const int NNPNPGFKFFHFieldNumber = 11;
+    private uint nNPNPGFKFFH_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint NNPNPGFKFFH {
+      get { return nNPNPGFKFFH_; }
+      set {
+        nNPNPGFKFFH_ = value;
       }
     }
 
@@ -135,9 +135,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsNew != other.IsNew) return false;
       if (Id != other.Id) return false;
-      if (FinishTimes != other.FinishTimes) return false;
+      if (IsNew != other.IsNew) return false;
+      if (NNPNPGFKFFH != other.NNPNPGFKFFH) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,9 +145,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsNew != false) hash ^= IsNew.GetHashCode();
       if (Id != 0) hash ^= Id.GetHashCode();
-      if (FinishTimes != 0) hash ^= FinishTimes.GetHashCode();
+      if (IsNew != false) hash ^= IsNew.GetHashCode();
+      if (NNPNPGFKFFH != 0) hash ^= NNPNPGFKFFH.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,16 +167,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (IsNew != false) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(24);
         output.WriteBool(IsNew);
       }
-      if (FinishTimes != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(FinishTimes);
-      }
       if (Id != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(40);
         output.WriteUInt32(Id);
+      }
+      if (NNPNPGFKFFH != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(NNPNPGFKFFH);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,16 +189,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IsNew != false) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(24);
         output.WriteBool(IsNew);
       }
-      if (FinishTimes != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(FinishTimes);
-      }
       if (Id != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(40);
         output.WriteUInt32(Id);
+      }
+      if (NNPNPGFKFFH != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(NNPNPGFKFFH);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -210,14 +210,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsNew != false) {
-        size += 1 + 1;
-      }
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
       }
-      if (FinishTimes != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FinishTimes);
+      if (IsNew != false) {
+        size += 1 + 1;
+      }
+      if (NNPNPGFKFFH != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NNPNPGFKFFH);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -231,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsNew != false) {
-        IsNew = other.IsNew;
-      }
       if (other.Id != 0) {
         Id = other.Id;
       }
-      if (other.FinishTimes != 0) {
-        FinishTimes = other.FinishTimes;
+      if (other.IsNew != false) {
+        IsNew = other.IsNew;
+      }
+      if (other.NNPNPGFKFFH != 0) {
+        NNPNPGFKFFH = other.NNPNPGFKFFH;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 80: {
+          case 24: {
             IsNew = input.ReadBool();
             break;
           }
-          case 88: {
-            FinishTimes = input.ReadUInt32();
+          case 40: {
+            Id = input.ReadUInt32();
             break;
           }
-          case 96: {
-            Id = input.ReadUInt32();
+          case 88: {
+            NNPNPGFKFFH = input.ReadUInt32();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 80: {
+          case 24: {
             IsNew = input.ReadBool();
             break;
           }
-          case 88: {
-            FinishTimes = input.ReadUInt32();
+          case 40: {
+            Id = input.ReadUInt32();
             break;
           }
-          case 96: {
-            Id = input.ReadUInt32();
+          case 88: {
+            NNPNPGFKFFH = input.ReadUInt32();
             break;
           }
         }

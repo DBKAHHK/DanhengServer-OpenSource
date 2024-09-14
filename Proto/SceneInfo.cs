@@ -25,33 +25,34 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cg9TY2VuZUluZm8ucHJvdG8aHk1pc3Npb25TdGF0dXNCeVNjZW5lSW5mby5w",
-            "cm90bxoUQ3VzdG9tU2F2ZURhdGEucHJvdG8aFVNjZW5lRW50aXR5SW5mby5w",
-            "cm90bxoaU2NlbmVFbnRpdHlHcm91cEluZm8ucHJvdG8aDkJ1ZmZJbmZvLnBy",
-            "b3RvGhRFbnRpdHlCdWZmSW5mby5wcm90bxoRRktDSEpFRkVQTkYucHJvdG8a",
-            "FVNjZW5lR3JvdXBTdGF0ZS5wcm90byLCBgoJU2NlbmVJbmZvEhwKFGxpZ2h0",
-            "ZW5fc2VjdGlvbl9saXN0GAggAygNEjAKC0NHTlBET0NLRElCGAMgAygLMhsu",
-            "U2NlbmVJbmZvLkNHTlBET0NLRElCRW50cnkSJQoLZW50aXR5X2xpc3QYBCAD",
-            "KAsyEC5TY2VuZUVudGl0eUluZm8SEAoId29ybGRfaWQYDyABKA0SEwoKY29u",
-            "dGVudF9pZBjjBSABKA0SKQoQZW50aXR5X2J1ZmZfbGlzdBgJIAMoCzIPLkVu",
-            "dGl0eUJ1ZmZJbmZvEiAKDWVudl9idWZmX2xpc3QYCyADKAsyCS5CdWZmSW5m",
-            "bxIYChBsZWFkZXJfZW50aXR5X2lkGA4gASgNEjkKEGZsb29yX3NhdmVkX2Rh",
-            "dGEYvQIgAygLMh4uU2NlbmVJbmZvLkZsb29yU2F2ZWREYXRhRW50cnkSGwoT",
-            "bGV2ZWxfZ3JvdXBfaWRfbGlzdBgBIAMoDRIbChJnYW1lX3N0b3J5X2xpbmVf",
-            "aWQYzQ8gASgNEhAKCHBsYW5lX2lkGAUgASgNEikKEGN1c3RvbV9kYXRhX2xp",
-            "c3QYDSADKAsyDy5DdXN0b21TYXZlRGF0YRI2ChJzY2VuZV9taXNzaW9uX2lu",
-            "Zm8Y7gQgASgLMhkuTWlzc2lvblN0YXR1c0J5U2NlbmVJbmZvEhYKDmdhbWVf",
-            "bW9kZV90eXBlGAogASgNEhoKEmNsaWVudF9wb3NfdmVyc2lvbhgMIAEoDRIQ",
-            "CghmbG9vcl9pZBgHIAEoDRIxChFlbnRpdHlfZ3JvdXBfbGlzdBjLASADKAsy",
-            "FS5TY2VuZUVudGl0eUdyb3VwSW5mbxIrChBncm91cF9zdGF0ZV9saXN0GPoJ",
-            "IAMoCzIQLlNjZW5lR3JvdXBTdGF0ZRIQCghlbnRyeV9pZBgGIAEoDRIVCgxk",
-            "aW1lbnNpb25faWQYiwIgASgNGkAKEENHTlBET0NLRElCRW50cnkSCwoDa2V5",
-            "GAEgASgNEhsKBXZhbHVlGAIgASgLMgwuRktDSEpFRkVQTkY6AjgBGjUKE0Zs",
-            "b29yU2F2ZWREYXRhRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgF",
-            "OgI4AUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "cm90bxoURW50aXR5QnVmZkluZm8ucHJvdG8aEUdHSUNIQ0NCTE1ELnByb3Rv",
+            "Gg5CdWZmSW5mby5wcm90bxoVU2NlbmVHcm91cFN0YXRlLnByb3RvGhVTY2Vu",
+            "ZUVudGl0eUluZm8ucHJvdG8aGlNjZW5lRW50aXR5R3JvdXBJbmZvLnByb3Rv",
+            "GhRDdXN0b21TYXZlRGF0YS5wcm90byLHBgoJU2NlbmVJbmZvEhgKEGxlYWRl",
+            "cl9lbnRpdHlfaWQYDiABKA0SEAoIcGxhbmVfaWQYAiABKA0SFAoMZGltZW5z",
+            "aW9uX2lkGFEgASgNEhYKDmdhbWVfbW9kZV90eXBlGAUgASgNEiUKC2VudGl0",
+            "eV9saXN0GAYgAygLMhAuU2NlbmVFbnRpdHlJbmZvEhAKCGVudHJ5X2lkGA0g",
+            "ASgNEhMKCmNvbnRlbnRfaWQY1wQgASgNEhAKCHdvcmxkX2lkGA8gASgNEhoK",
+            "EmNsaWVudF9wb3NfdmVyc2lvbhgHIAEoDRIrChBncm91cF9zdGF0ZV9saXN0",
+            "GKkMIAMoCzIQLlNjZW5lR3JvdXBTdGF0ZRIVCg1ncm91cF9pZF9saXN0GAEg",
+            "AygNEicKFHNjZW5lX2J1ZmZfaW5mb19saXN0GAwgAygLMgkuQnVmZkluZm8S",
+            "KQoQY3VzdG9tX2RhdGFfbGlzdBgDIAMoCzIPLkN1c3RvbVNhdmVEYXRhEhwK",
+            "FGxpZ2h0ZW5fc2VjdGlvbl9saXN0GAggAygNEhAKCGZsb29yX2lkGAsgASgN",
+            "EjkKEGZsb29yX3NhdmVkX2RhdGEYsgsgAygLMh4uU2NlbmVJbmZvLkZsb29y",
+            "U2F2ZWREYXRhRW50cnkSGwoSZ2FtZV9zdG9yeV9saW5lX2lkGMoJIAEoDRIx",
+            "ChFlbnRpdHlfZ3JvdXBfbGlzdBj1DiADKAsyFS5TY2VuZUVudGl0eUdyb3Vw",
+            "SW5mbxI2ChJzY2VuZV9taXNzaW9uX2luZm8YmA4gASgLMhkuTWlzc2lvblN0",
+            "YXR1c0J5U2NlbmVJbmZvEi4KFWVudGl0eV9idWZmX2luZm9fbGlzdBgEIAMo",
+            "CzIPLkVudGl0eUJ1ZmZJbmZvEjAKC0dERUZGQURLRkFOGAkgAygLMhsuU2Nl",
+            "bmVJbmZvLkdERUZGQURLRkFORW50cnkaNQoTRmxvb3JTYXZlZERhdGFFbnRy",
+            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAU6AjgBGkAKEEdERUZGQURL",
+            "RkFORW50cnkSCwoDa2V5GAEgASgNEhsKBXZhbHVlGAIgASgLMgwuR0dJQ0hD",
+            "Q0JMTUQ6AjgBQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MissionStatusBySceneInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CustomSaveDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneEntityInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneEntityGroupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.EntityBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.FKCHJEFEPNFReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneGroupStateReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MissionStatusBySceneInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.EntityBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GGICHCCBLMDReflection.Descriptor, global::EggLink.DanhengServer.Proto.BuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneGroupStateReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneEntityInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneEntityGroupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CustomSaveDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneInfo), global::EggLink.DanhengServer.Proto.SceneInfo.Parser, new[]{ "LightenSectionList", "CGNPDOCKDIB", "EntityList", "WorldId", "ContentId", "EntityBuffList", "EnvBuffList", "LeaderEntityId", "FloorSavedData", "LevelGroupIdList", "GameStoryLineId", "PlaneId", "CustomDataList", "SceneMissionInfo", "GameModeType", "ClientPosVersion", "FloorId", "EntityGroupList", "GroupStateList", "EntryId", "DimensionId" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneInfo), global::EggLink.DanhengServer.Proto.SceneInfo.Parser, new[]{ "LeaderEntityId", "PlaneId", "DimensionId", "GameModeType", "EntityList", "EntryId", "ContentId", "WorldId", "ClientPosVersion", "GroupStateList", "GroupIdList", "SceneBuffInfoList", "CustomDataList", "LightenSectionList", "FloorId", "FloorSavedData", "GameStoryLineId", "EntityGroupList", "SceneMissionInfo", "EntityBuffInfoList", "GDEFFADKFAN" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -93,27 +94,27 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SceneInfo(SceneInfo other) : this() {
-      lightenSectionList_ = other.lightenSectionList_.Clone();
-      cGNPDOCKDIB_ = other.cGNPDOCKDIB_.Clone();
-      entityList_ = other.entityList_.Clone();
-      worldId_ = other.worldId_;
-      contentId_ = other.contentId_;
-      entityBuffList_ = other.entityBuffList_.Clone();
-      envBuffList_ = other.envBuffList_.Clone();
       leaderEntityId_ = other.leaderEntityId_;
-      floorSavedData_ = other.floorSavedData_.Clone();
-      levelGroupIdList_ = other.levelGroupIdList_.Clone();
-      gameStoryLineId_ = other.gameStoryLineId_;
       planeId_ = other.planeId_;
-      customDataList_ = other.customDataList_.Clone();
-      sceneMissionInfo_ = other.sceneMissionInfo_ != null ? other.sceneMissionInfo_.Clone() : null;
-      gameModeType_ = other.gameModeType_;
-      clientPosVersion_ = other.clientPosVersion_;
-      floorId_ = other.floorId_;
-      entityGroupList_ = other.entityGroupList_.Clone();
-      groupStateList_ = other.groupStateList_.Clone();
-      entryId_ = other.entryId_;
       dimensionId_ = other.dimensionId_;
+      gameModeType_ = other.gameModeType_;
+      entityList_ = other.entityList_.Clone();
+      entryId_ = other.entryId_;
+      contentId_ = other.contentId_;
+      worldId_ = other.worldId_;
+      clientPosVersion_ = other.clientPosVersion_;
+      groupStateList_ = other.groupStateList_.Clone();
+      groupIdList_ = other.groupIdList_.Clone();
+      sceneBuffInfoList_ = other.sceneBuffInfoList_.Clone();
+      customDataList_ = other.customDataList_.Clone();
+      lightenSectionList_ = other.lightenSectionList_.Clone();
+      floorId_ = other.floorId_;
+      floorSavedData_ = other.floorSavedData_.Clone();
+      gameStoryLineId_ = other.gameStoryLineId_;
+      entityGroupList_ = other.entityGroupList_.Clone();
+      sceneMissionInfo_ = other.sceneMissionInfo_ != null ? other.sceneMissionInfo_.Clone() : null;
+      entityBuffInfoList_ = other.entityBuffInfoList_.Clone();
+      gDEFFADKFAN_ = other.gDEFFADKFAN_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -121,85 +122,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SceneInfo Clone() {
       return new SceneInfo(this);
-    }
-
-    /// <summary>Field number for the "lighten_section_list" field.</summary>
-    public const int LightenSectionListFieldNumber = 8;
-    private static readonly pb::FieldCodec<uint> _repeated_lightenSectionList_codec
-        = pb::FieldCodec.ForUInt32(66);
-    private readonly pbc::RepeatedField<uint> lightenSectionList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> LightenSectionList {
-      get { return lightenSectionList_; }
-    }
-
-    /// <summary>Field number for the "CGNPDOCKDIB" field.</summary>
-    public const int CGNPDOCKDIBFieldNumber = 3;
-    private static readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.FKCHJEFEPNF>.Codec _map_cGNPDOCKDIB_codec
-        = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.FKCHJEFEPNF>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.FKCHJEFEPNF.Parser), 26);
-    private readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.FKCHJEFEPNF> cGNPDOCKDIB_ = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.FKCHJEFEPNF>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<uint, global::EggLink.DanhengServer.Proto.FKCHJEFEPNF> CGNPDOCKDIB {
-      get { return cGNPDOCKDIB_; }
-    }
-
-    /// <summary>Field number for the "entity_list" field.</summary>
-    public const int EntityListFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.SceneEntityInfo> _repeated_entityList_codec
-        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.SceneEntityInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneEntityInfo> entityList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneEntityInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneEntityInfo> EntityList {
-      get { return entityList_; }
-    }
-
-    /// <summary>Field number for the "world_id" field.</summary>
-    public const int WorldIdFieldNumber = 15;
-    private uint worldId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint WorldId {
-      get { return worldId_; }
-      set {
-        worldId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "content_id" field.</summary>
-    public const int ContentIdFieldNumber = 739;
-    private uint contentId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ContentId {
-      get { return contentId_; }
-      set {
-        contentId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "entity_buff_list" field.</summary>
-    public const int EntityBuffListFieldNumber = 9;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EntityBuffInfo> _repeated_entityBuffList_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.EntityBuffInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EntityBuffInfo> entityBuffList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EntityBuffInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EntityBuffInfo> EntityBuffList {
-      get { return entityBuffList_; }
-    }
-
-    /// <summary>Field number for the "env_buff_list" field.</summary>
-    public const int EnvBuffListFieldNumber = 11;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.BuffInfo> _repeated_envBuffList_codec
-        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.BuffInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BuffInfo> envBuffList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BuffInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BuffInfo> EnvBuffList {
-      get { return envBuffList_; }
     }
 
     /// <summary>Field number for the "leader_entity_id" field.</summary>
@@ -214,42 +136,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "floor_saved_data" field.</summary>
-    public const int FloorSavedDataFieldNumber = 317;
-    private static readonly pbc::MapField<string, int>.Codec _map_floorSavedData_codec
-        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 2538);
-    private readonly pbc::MapField<string, int> floorSavedData_ = new pbc::MapField<string, int>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<string, int> FloorSavedData {
-      get { return floorSavedData_; }
-    }
-
-    /// <summary>Field number for the "level_group_id_list" field.</summary>
-    public const int LevelGroupIdListFieldNumber = 1;
-    private static readonly pb::FieldCodec<uint> _repeated_levelGroupIdList_codec
-        = pb::FieldCodec.ForUInt32(10);
-    private readonly pbc::RepeatedField<uint> levelGroupIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> LevelGroupIdList {
-      get { return levelGroupIdList_; }
-    }
-
-    /// <summary>Field number for the "game_story_line_id" field.</summary>
-    public const int GameStoryLineIdFieldNumber = 1997;
-    private uint gameStoryLineId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GameStoryLineId {
-      get { return gameStoryLineId_; }
-      set {
-        gameStoryLineId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "plane_id" field.</summary>
-    public const int PlaneIdFieldNumber = 5;
+    public const int PlaneIdFieldNumber = 2;
     private uint planeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -260,31 +148,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "custom_data_list" field.</summary>
-    public const int CustomDataListFieldNumber = 13;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.CustomSaveData> _repeated_customDataList_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.CustomSaveData.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CustomSaveData> customDataList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CustomSaveData>();
+    /// <summary>Field number for the "dimension_id" field.</summary>
+    public const int DimensionIdFieldNumber = 81;
+    private uint dimensionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CustomSaveData> CustomDataList {
-      get { return customDataList_; }
-    }
-
-    /// <summary>Field number for the "scene_mission_info" field.</summary>
-    public const int SceneMissionInfoFieldNumber = 622;
-    private global::EggLink.DanhengServer.Proto.MissionStatusBySceneInfo sceneMissionInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MissionStatusBySceneInfo SceneMissionInfo {
-      get { return sceneMissionInfo_; }
+    public uint DimensionId {
+      get { return dimensionId_; }
       set {
-        sceneMissionInfo_ = value;
+        dimensionId_ = value;
       }
     }
 
     /// <summary>Field number for the "game_mode_type" field.</summary>
-    public const int GameModeTypeFieldNumber = 10;
+    public const int GameModeTypeFieldNumber = 5;
     private uint gameModeType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -295,54 +172,19 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "client_pos_version" field.</summary>
-    public const int ClientPosVersionFieldNumber = 12;
-    private uint clientPosVersion_;
+    /// <summary>Field number for the "entity_list" field.</summary>
+    public const int EntityListFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.SceneEntityInfo> _repeated_entityList_codec
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.SceneEntityInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneEntityInfo> entityList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneEntityInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ClientPosVersion {
-      get { return clientPosVersion_; }
-      set {
-        clientPosVersion_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "floor_id" field.</summary>
-    public const int FloorIdFieldNumber = 7;
-    private uint floorId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FloorId {
-      get { return floorId_; }
-      set {
-        floorId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "entity_group_list" field.</summary>
-    public const int EntityGroupListFieldNumber = 203;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.SceneEntityGroupInfo> _repeated_entityGroupList_codec
-        = pb::FieldCodec.ForMessage(1626, global::EggLink.DanhengServer.Proto.SceneEntityGroupInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneEntityGroupInfo> entityGroupList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneEntityGroupInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneEntityGroupInfo> EntityGroupList {
-      get { return entityGroupList_; }
-    }
-
-    /// <summary>Field number for the "group_state_list" field.</summary>
-    public const int GroupStateListFieldNumber = 1274;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.SceneGroupState> _repeated_groupStateList_codec
-        = pb::FieldCodec.ForMessage(10194, global::EggLink.DanhengServer.Proto.SceneGroupState.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneGroupState> groupStateList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneGroupState>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneGroupState> GroupStateList {
-      get { return groupStateList_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneEntityInfo> EntityList {
+      get { return entityList_; }
     }
 
     /// <summary>Field number for the "entry_id" field.</summary>
-    public const int EntryIdFieldNumber = 6;
+    public const int EntryIdFieldNumber = 13;
     private uint entryId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -353,16 +195,175 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "dimension_id" field.</summary>
-    public const int DimensionIdFieldNumber = 267;
-    private uint dimensionId_;
+    /// <summary>Field number for the "content_id" field.</summary>
+    public const int ContentIdFieldNumber = 599;
+    private uint contentId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DimensionId {
-      get { return dimensionId_; }
+    public uint ContentId {
+      get { return contentId_; }
       set {
-        dimensionId_ = value;
+        contentId_ = value;
       }
+    }
+
+    /// <summary>Field number for the "world_id" field.</summary>
+    public const int WorldIdFieldNumber = 15;
+    private uint worldId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint WorldId {
+      get { return worldId_; }
+      set {
+        worldId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "client_pos_version" field.</summary>
+    public const int ClientPosVersionFieldNumber = 7;
+    private uint clientPosVersion_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ClientPosVersion {
+      get { return clientPosVersion_; }
+      set {
+        clientPosVersion_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "group_state_list" field.</summary>
+    public const int GroupStateListFieldNumber = 1577;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.SceneGroupState> _repeated_groupStateList_codec
+        = pb::FieldCodec.ForMessage(12618, global::EggLink.DanhengServer.Proto.SceneGroupState.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneGroupState> groupStateList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneGroupState>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneGroupState> GroupStateList {
+      get { return groupStateList_; }
+    }
+
+    /// <summary>Field number for the "group_id_list" field.</summary>
+    public const int GroupIdListFieldNumber = 1;
+    private static readonly pb::FieldCodec<uint> _repeated_groupIdList_codec
+        = pb::FieldCodec.ForUInt32(10);
+    private readonly pbc::RepeatedField<uint> groupIdList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> GroupIdList {
+      get { return groupIdList_; }
+    }
+
+    /// <summary>Field number for the "scene_buff_info_list" field.</summary>
+    public const int SceneBuffInfoListFieldNumber = 12;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.BuffInfo> _repeated_sceneBuffInfoList_codec
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.BuffInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BuffInfo> sceneBuffInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BuffInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BuffInfo> SceneBuffInfoList {
+      get { return sceneBuffInfoList_; }
+    }
+
+    /// <summary>Field number for the "custom_data_list" field.</summary>
+    public const int CustomDataListFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.CustomSaveData> _repeated_customDataList_codec
+        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.CustomSaveData.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CustomSaveData> customDataList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CustomSaveData>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CustomSaveData> CustomDataList {
+      get { return customDataList_; }
+    }
+
+    /// <summary>Field number for the "lighten_section_list" field.</summary>
+    public const int LightenSectionListFieldNumber = 8;
+    private static readonly pb::FieldCodec<uint> _repeated_lightenSectionList_codec
+        = pb::FieldCodec.ForUInt32(66);
+    private readonly pbc::RepeatedField<uint> lightenSectionList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> LightenSectionList {
+      get { return lightenSectionList_; }
+    }
+
+    /// <summary>Field number for the "floor_id" field.</summary>
+    public const int FloorIdFieldNumber = 11;
+    private uint floorId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint FloorId {
+      get { return floorId_; }
+      set {
+        floorId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "floor_saved_data" field.</summary>
+    public const int FloorSavedDataFieldNumber = 1458;
+    private static readonly pbc::MapField<string, int>.Codec _map_floorSavedData_codec
+        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 11666);
+    private readonly pbc::MapField<string, int> floorSavedData_ = new pbc::MapField<string, int>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, int> FloorSavedData {
+      get { return floorSavedData_; }
+    }
+
+    /// <summary>Field number for the "game_story_line_id" field.</summary>
+    public const int GameStoryLineIdFieldNumber = 1226;
+    private uint gameStoryLineId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint GameStoryLineId {
+      get { return gameStoryLineId_; }
+      set {
+        gameStoryLineId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "entity_group_list" field.</summary>
+    public const int EntityGroupListFieldNumber = 1909;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.SceneEntityGroupInfo> _repeated_entityGroupList_codec
+        = pb::FieldCodec.ForMessage(15274, global::EggLink.DanhengServer.Proto.SceneEntityGroupInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneEntityGroupInfo> entityGroupList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneEntityGroupInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneEntityGroupInfo> EntityGroupList {
+      get { return entityGroupList_; }
+    }
+
+    /// <summary>Field number for the "scene_mission_info" field.</summary>
+    public const int SceneMissionInfoFieldNumber = 1816;
+    private global::EggLink.DanhengServer.Proto.MissionStatusBySceneInfo sceneMissionInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.MissionStatusBySceneInfo SceneMissionInfo {
+      get { return sceneMissionInfo_; }
+      set {
+        sceneMissionInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "entity_buff_info_list" field.</summary>
+    public const int EntityBuffInfoListFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EntityBuffInfo> _repeated_entityBuffInfoList_codec
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.EntityBuffInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EntityBuffInfo> entityBuffInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EntityBuffInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EntityBuffInfo> EntityBuffInfoList {
+      get { return entityBuffInfoList_; }
+    }
+
+    /// <summary>Field number for the "GDEFFADKFAN" field.</summary>
+    public const int GDEFFADKFANFieldNumber = 9;
+    private static readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.GGICHCCBLMD>.Codec _map_gDEFFADKFAN_codec
+        = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.GGICHCCBLMD>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.GGICHCCBLMD.Parser), 74);
+    private readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.GGICHCCBLMD> gDEFFADKFAN_ = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.GGICHCCBLMD>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<uint, global::EggLink.DanhengServer.Proto.GGICHCCBLMD> GDEFFADKFAN {
+      get { return gDEFFADKFAN_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -380,27 +381,27 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!lightenSectionList_.Equals(other.lightenSectionList_)) return false;
-      if (!CGNPDOCKDIB.Equals(other.CGNPDOCKDIB)) return false;
-      if(!entityList_.Equals(other.entityList_)) return false;
-      if (WorldId != other.WorldId) return false;
-      if (ContentId != other.ContentId) return false;
-      if(!entityBuffList_.Equals(other.entityBuffList_)) return false;
-      if(!envBuffList_.Equals(other.envBuffList_)) return false;
       if (LeaderEntityId != other.LeaderEntityId) return false;
-      if (!FloorSavedData.Equals(other.FloorSavedData)) return false;
-      if(!levelGroupIdList_.Equals(other.levelGroupIdList_)) return false;
-      if (GameStoryLineId != other.GameStoryLineId) return false;
       if (PlaneId != other.PlaneId) return false;
-      if(!customDataList_.Equals(other.customDataList_)) return false;
-      if (!object.Equals(SceneMissionInfo, other.SceneMissionInfo)) return false;
-      if (GameModeType != other.GameModeType) return false;
-      if (ClientPosVersion != other.ClientPosVersion) return false;
-      if (FloorId != other.FloorId) return false;
-      if(!entityGroupList_.Equals(other.entityGroupList_)) return false;
-      if(!groupStateList_.Equals(other.groupStateList_)) return false;
-      if (EntryId != other.EntryId) return false;
       if (DimensionId != other.DimensionId) return false;
+      if (GameModeType != other.GameModeType) return false;
+      if(!entityList_.Equals(other.entityList_)) return false;
+      if (EntryId != other.EntryId) return false;
+      if (ContentId != other.ContentId) return false;
+      if (WorldId != other.WorldId) return false;
+      if (ClientPosVersion != other.ClientPosVersion) return false;
+      if(!groupStateList_.Equals(other.groupStateList_)) return false;
+      if(!groupIdList_.Equals(other.groupIdList_)) return false;
+      if(!sceneBuffInfoList_.Equals(other.sceneBuffInfoList_)) return false;
+      if(!customDataList_.Equals(other.customDataList_)) return false;
+      if(!lightenSectionList_.Equals(other.lightenSectionList_)) return false;
+      if (FloorId != other.FloorId) return false;
+      if (!FloorSavedData.Equals(other.FloorSavedData)) return false;
+      if (GameStoryLineId != other.GameStoryLineId) return false;
+      if(!entityGroupList_.Equals(other.entityGroupList_)) return false;
+      if (!object.Equals(SceneMissionInfo, other.SceneMissionInfo)) return false;
+      if(!entityBuffInfoList_.Equals(other.entityBuffInfoList_)) return false;
+      if (!GDEFFADKFAN.Equals(other.GDEFFADKFAN)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -408,27 +409,27 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= lightenSectionList_.GetHashCode();
-      hash ^= CGNPDOCKDIB.GetHashCode();
-      hash ^= entityList_.GetHashCode();
-      if (WorldId != 0) hash ^= WorldId.GetHashCode();
-      if (ContentId != 0) hash ^= ContentId.GetHashCode();
-      hash ^= entityBuffList_.GetHashCode();
-      hash ^= envBuffList_.GetHashCode();
       if (LeaderEntityId != 0) hash ^= LeaderEntityId.GetHashCode();
-      hash ^= FloorSavedData.GetHashCode();
-      hash ^= levelGroupIdList_.GetHashCode();
-      if (GameStoryLineId != 0) hash ^= GameStoryLineId.GetHashCode();
       if (PlaneId != 0) hash ^= PlaneId.GetHashCode();
-      hash ^= customDataList_.GetHashCode();
-      if (sceneMissionInfo_ != null) hash ^= SceneMissionInfo.GetHashCode();
-      if (GameModeType != 0) hash ^= GameModeType.GetHashCode();
-      if (ClientPosVersion != 0) hash ^= ClientPosVersion.GetHashCode();
-      if (FloorId != 0) hash ^= FloorId.GetHashCode();
-      hash ^= entityGroupList_.GetHashCode();
-      hash ^= groupStateList_.GetHashCode();
-      if (EntryId != 0) hash ^= EntryId.GetHashCode();
       if (DimensionId != 0) hash ^= DimensionId.GetHashCode();
+      if (GameModeType != 0) hash ^= GameModeType.GetHashCode();
+      hash ^= entityList_.GetHashCode();
+      if (EntryId != 0) hash ^= EntryId.GetHashCode();
+      if (ContentId != 0) hash ^= ContentId.GetHashCode();
+      if (WorldId != 0) hash ^= WorldId.GetHashCode();
+      if (ClientPosVersion != 0) hash ^= ClientPosVersion.GetHashCode();
+      hash ^= groupStateList_.GetHashCode();
+      hash ^= groupIdList_.GetHashCode();
+      hash ^= sceneBuffInfoList_.GetHashCode();
+      hash ^= customDataList_.GetHashCode();
+      hash ^= lightenSectionList_.GetHashCode();
+      if (FloorId != 0) hash ^= FloorId.GetHashCode();
+      hash ^= FloorSavedData.GetHashCode();
+      if (GameStoryLineId != 0) hash ^= GameStoryLineId.GetHashCode();
+      hash ^= entityGroupList_.GetHashCode();
+      if (sceneMissionInfo_ != null) hash ^= SceneMissionInfo.GetHashCode();
+      hash ^= entityBuffInfoList_.GetHashCode();
+      hash ^= GDEFFADKFAN.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -447,33 +448,33 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      levelGroupIdList_.WriteTo(output, _repeated_levelGroupIdList_codec);
-      cGNPDOCKDIB_.WriteTo(output, _map_cGNPDOCKDIB_codec);
-      entityList_.WriteTo(output, _repeated_entityList_codec);
+      groupIdList_.WriteTo(output, _repeated_groupIdList_codec);
       if (PlaneId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(16);
         output.WriteUInt32(PlaneId);
       }
-      if (EntryId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(EntryId);
-      }
-      if (FloorId != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(FloorId);
-      }
-      lightenSectionList_.WriteTo(output, _repeated_lightenSectionList_codec);
-      entityBuffList_.WriteTo(output, _repeated_entityBuffList_codec);
+      customDataList_.WriteTo(output, _repeated_customDataList_codec);
+      entityBuffInfoList_.WriteTo(output, _repeated_entityBuffInfoList_codec);
       if (GameModeType != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(40);
         output.WriteUInt32(GameModeType);
       }
-      envBuffList_.WriteTo(output, _repeated_envBuffList_codec);
+      entityList_.WriteTo(output, _repeated_entityList_codec);
       if (ClientPosVersion != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(56);
         output.WriteUInt32(ClientPosVersion);
       }
-      customDataList_.WriteTo(output, _repeated_customDataList_codec);
+      lightenSectionList_.WriteTo(output, _repeated_lightenSectionList_codec);
+      gDEFFADKFAN_.WriteTo(output, _map_gDEFFADKFAN_codec);
+      if (FloorId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(FloorId);
+      }
+      sceneBuffInfoList_.WriteTo(output, _repeated_sceneBuffInfoList_codec);
+      if (EntryId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(EntryId);
+      }
       if (LeaderEntityId != 0) {
         output.WriteRawTag(112);
         output.WriteUInt32(LeaderEntityId);
@@ -482,25 +483,25 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(120);
         output.WriteUInt32(WorldId);
       }
-      entityGroupList_.WriteTo(output, _repeated_entityGroupList_codec);
       if (DimensionId != 0) {
-        output.WriteRawTag(216, 16);
+        output.WriteRawTag(136, 5);
         output.WriteUInt32(DimensionId);
       }
-      floorSavedData_.WriteTo(output, _map_floorSavedData_codec);
-      if (sceneMissionInfo_ != null) {
-        output.WriteRawTag(242, 38);
-        output.WriteMessage(SceneMissionInfo);
-      }
       if (ContentId != 0) {
-        output.WriteRawTag(152, 46);
+        output.WriteRawTag(184, 37);
         output.WriteUInt32(ContentId);
       }
-      groupStateList_.WriteTo(output, _repeated_groupStateList_codec);
       if (GameStoryLineId != 0) {
-        output.WriteRawTag(232, 124);
+        output.WriteRawTag(208, 76);
         output.WriteUInt32(GameStoryLineId);
       }
+      floorSavedData_.WriteTo(output, _map_floorSavedData_codec);
+      groupStateList_.WriteTo(output, _repeated_groupStateList_codec);
+      if (sceneMissionInfo_ != null) {
+        output.WriteRawTag(194, 113);
+        output.WriteMessage(SceneMissionInfo);
+      }
+      entityGroupList_.WriteTo(output, _repeated_entityGroupList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -511,33 +512,33 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      levelGroupIdList_.WriteTo(ref output, _repeated_levelGroupIdList_codec);
-      cGNPDOCKDIB_.WriteTo(ref output, _map_cGNPDOCKDIB_codec);
-      entityList_.WriteTo(ref output, _repeated_entityList_codec);
+      groupIdList_.WriteTo(ref output, _repeated_groupIdList_codec);
       if (PlaneId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(16);
         output.WriteUInt32(PlaneId);
       }
-      if (EntryId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(EntryId);
-      }
-      if (FloorId != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(FloorId);
-      }
-      lightenSectionList_.WriteTo(ref output, _repeated_lightenSectionList_codec);
-      entityBuffList_.WriteTo(ref output, _repeated_entityBuffList_codec);
+      customDataList_.WriteTo(ref output, _repeated_customDataList_codec);
+      entityBuffInfoList_.WriteTo(ref output, _repeated_entityBuffInfoList_codec);
       if (GameModeType != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(40);
         output.WriteUInt32(GameModeType);
       }
-      envBuffList_.WriteTo(ref output, _repeated_envBuffList_codec);
+      entityList_.WriteTo(ref output, _repeated_entityList_codec);
       if (ClientPosVersion != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(56);
         output.WriteUInt32(ClientPosVersion);
       }
-      customDataList_.WriteTo(ref output, _repeated_customDataList_codec);
+      lightenSectionList_.WriteTo(ref output, _repeated_lightenSectionList_codec);
+      gDEFFADKFAN_.WriteTo(ref output, _map_gDEFFADKFAN_codec);
+      if (FloorId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(FloorId);
+      }
+      sceneBuffInfoList_.WriteTo(ref output, _repeated_sceneBuffInfoList_codec);
+      if (EntryId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(EntryId);
+      }
       if (LeaderEntityId != 0) {
         output.WriteRawTag(112);
         output.WriteUInt32(LeaderEntityId);
@@ -546,25 +547,25 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(120);
         output.WriteUInt32(WorldId);
       }
-      entityGroupList_.WriteTo(ref output, _repeated_entityGroupList_codec);
       if (DimensionId != 0) {
-        output.WriteRawTag(216, 16);
+        output.WriteRawTag(136, 5);
         output.WriteUInt32(DimensionId);
       }
-      floorSavedData_.WriteTo(ref output, _map_floorSavedData_codec);
-      if (sceneMissionInfo_ != null) {
-        output.WriteRawTag(242, 38);
-        output.WriteMessage(SceneMissionInfo);
-      }
       if (ContentId != 0) {
-        output.WriteRawTag(152, 46);
+        output.WriteRawTag(184, 37);
         output.WriteUInt32(ContentId);
       }
-      groupStateList_.WriteTo(ref output, _repeated_groupStateList_codec);
       if (GameStoryLineId != 0) {
-        output.WriteRawTag(232, 124);
+        output.WriteRawTag(208, 76);
         output.WriteUInt32(GameStoryLineId);
       }
+      floorSavedData_.WriteTo(ref output, _map_floorSavedData_codec);
+      groupStateList_.WriteTo(ref output, _repeated_groupStateList_codec);
+      if (sceneMissionInfo_ != null) {
+        output.WriteRawTag(194, 113);
+        output.WriteMessage(SceneMissionInfo);
+      }
+      entityGroupList_.WriteTo(ref output, _repeated_entityGroupList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -575,49 +576,49 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += lightenSectionList_.CalculateSize(_repeated_lightenSectionList_codec);
-      size += cGNPDOCKDIB_.CalculateSize(_map_cGNPDOCKDIB_codec);
-      size += entityList_.CalculateSize(_repeated_entityList_codec);
-      if (WorldId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorldId);
-      }
-      if (ContentId != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(ContentId);
-      }
-      size += entityBuffList_.CalculateSize(_repeated_entityBuffList_codec);
-      size += envBuffList_.CalculateSize(_repeated_envBuffList_codec);
       if (LeaderEntityId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LeaderEntityId);
-      }
-      size += floorSavedData_.CalculateSize(_map_floorSavedData_codec);
-      size += levelGroupIdList_.CalculateSize(_repeated_levelGroupIdList_codec);
-      if (GameStoryLineId != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(GameStoryLineId);
       }
       if (PlaneId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PlaneId);
       }
-      size += customDataList_.CalculateSize(_repeated_customDataList_codec);
-      if (sceneMissionInfo_ != null) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SceneMissionInfo);
+      if (DimensionId != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(DimensionId);
       }
       if (GameModeType != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GameModeType);
       }
-      if (ClientPosVersion != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ClientPosVersion);
-      }
-      if (FloorId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FloorId);
-      }
-      size += entityGroupList_.CalculateSize(_repeated_entityGroupList_codec);
-      size += groupStateList_.CalculateSize(_repeated_groupStateList_codec);
+      size += entityList_.CalculateSize(_repeated_entityList_codec);
       if (EntryId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EntryId);
       }
-      if (DimensionId != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(DimensionId);
+      if (ContentId != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(ContentId);
       }
+      if (WorldId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorldId);
+      }
+      if (ClientPosVersion != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ClientPosVersion);
+      }
+      size += groupStateList_.CalculateSize(_repeated_groupStateList_codec);
+      size += groupIdList_.CalculateSize(_repeated_groupIdList_codec);
+      size += sceneBuffInfoList_.CalculateSize(_repeated_sceneBuffInfoList_codec);
+      size += customDataList_.CalculateSize(_repeated_customDataList_codec);
+      size += lightenSectionList_.CalculateSize(_repeated_lightenSectionList_codec);
+      if (FloorId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FloorId);
+      }
+      size += floorSavedData_.CalculateSize(_map_floorSavedData_codec);
+      if (GameStoryLineId != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(GameStoryLineId);
+      }
+      size += entityGroupList_.CalculateSize(_repeated_entityGroupList_codec);
+      if (sceneMissionInfo_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SceneMissionInfo);
+      }
+      size += entityBuffInfoList_.CalculateSize(_repeated_entityBuffInfoList_codec);
+      size += gDEFFADKFAN_.CalculateSize(_map_gDEFFADKFAN_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -630,52 +631,52 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      lightenSectionList_.Add(other.lightenSectionList_);
-      cGNPDOCKDIB_.MergeFrom(other.cGNPDOCKDIB_);
-      entityList_.Add(other.entityList_);
-      if (other.WorldId != 0) {
-        WorldId = other.WorldId;
-      }
-      if (other.ContentId != 0) {
-        ContentId = other.ContentId;
-      }
-      entityBuffList_.Add(other.entityBuffList_);
-      envBuffList_.Add(other.envBuffList_);
       if (other.LeaderEntityId != 0) {
         LeaderEntityId = other.LeaderEntityId;
-      }
-      floorSavedData_.MergeFrom(other.floorSavedData_);
-      levelGroupIdList_.Add(other.levelGroupIdList_);
-      if (other.GameStoryLineId != 0) {
-        GameStoryLineId = other.GameStoryLineId;
       }
       if (other.PlaneId != 0) {
         PlaneId = other.PlaneId;
       }
+      if (other.DimensionId != 0) {
+        DimensionId = other.DimensionId;
+      }
+      if (other.GameModeType != 0) {
+        GameModeType = other.GameModeType;
+      }
+      entityList_.Add(other.entityList_);
+      if (other.EntryId != 0) {
+        EntryId = other.EntryId;
+      }
+      if (other.ContentId != 0) {
+        ContentId = other.ContentId;
+      }
+      if (other.WorldId != 0) {
+        WorldId = other.WorldId;
+      }
+      if (other.ClientPosVersion != 0) {
+        ClientPosVersion = other.ClientPosVersion;
+      }
+      groupStateList_.Add(other.groupStateList_);
+      groupIdList_.Add(other.groupIdList_);
+      sceneBuffInfoList_.Add(other.sceneBuffInfoList_);
       customDataList_.Add(other.customDataList_);
+      lightenSectionList_.Add(other.lightenSectionList_);
+      if (other.FloorId != 0) {
+        FloorId = other.FloorId;
+      }
+      floorSavedData_.MergeFrom(other.floorSavedData_);
+      if (other.GameStoryLineId != 0) {
+        GameStoryLineId = other.GameStoryLineId;
+      }
+      entityGroupList_.Add(other.entityGroupList_);
       if (other.sceneMissionInfo_ != null) {
         if (sceneMissionInfo_ == null) {
           SceneMissionInfo = new global::EggLink.DanhengServer.Proto.MissionStatusBySceneInfo();
         }
         SceneMissionInfo.MergeFrom(other.SceneMissionInfo);
       }
-      if (other.GameModeType != 0) {
-        GameModeType = other.GameModeType;
-      }
-      if (other.ClientPosVersion != 0) {
-        ClientPosVersion = other.ClientPosVersion;
-      }
-      if (other.FloorId != 0) {
-        FloorId = other.FloorId;
-      }
-      entityGroupList_.Add(other.entityGroupList_);
-      groupStateList_.Add(other.groupStateList_);
-      if (other.EntryId != 0) {
-        EntryId = other.EntryId;
-      }
-      if (other.DimensionId != 0) {
-        DimensionId = other.DimensionId;
-      }
+      entityBuffInfoList_.Add(other.entityBuffInfoList_);
+      gDEFFADKFAN_.MergeFrom(other.gDEFFADKFAN_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -693,27 +694,31 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 10:
           case 8: {
-            levelGroupIdList_.AddEntriesFrom(input, _repeated_levelGroupIdList_codec);
+            groupIdList_.AddEntriesFrom(input, _repeated_groupIdList_codec);
             break;
           }
-          case 26: {
-            cGNPDOCKDIB_.AddEntriesFrom(input, _map_cGNPDOCKDIB_codec);
-            break;
-          }
-          case 34: {
-            entityList_.AddEntriesFrom(input, _repeated_entityList_codec);
-            break;
-          }
-          case 40: {
+          case 16: {
             PlaneId = input.ReadUInt32();
             break;
           }
-          case 48: {
-            EntryId = input.ReadUInt32();
+          case 26: {
+            customDataList_.AddEntriesFrom(input, _repeated_customDataList_codec);
+            break;
+          }
+          case 34: {
+            entityBuffInfoList_.AddEntriesFrom(input, _repeated_entityBuffInfoList_codec);
+            break;
+          }
+          case 40: {
+            GameModeType = input.ReadUInt32();
+            break;
+          }
+          case 50: {
+            entityList_.AddEntriesFrom(input, _repeated_entityList_codec);
             break;
           }
           case 56: {
-            FloorId = input.ReadUInt32();
+            ClientPosVersion = input.ReadUInt32();
             break;
           }
           case 66:
@@ -722,23 +727,19 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 74: {
-            entityBuffList_.AddEntriesFrom(input, _repeated_entityBuffList_codec);
+            gDEFFADKFAN_.AddEntriesFrom(input, _map_gDEFFADKFAN_codec);
             break;
           }
-          case 80: {
-            GameModeType = input.ReadUInt32();
+          case 88: {
+            FloorId = input.ReadUInt32();
             break;
           }
-          case 90: {
-            envBuffList_.AddEntriesFrom(input, _repeated_envBuffList_codec);
+          case 98: {
+            sceneBuffInfoList_.AddEntriesFrom(input, _repeated_sceneBuffInfoList_codec);
             break;
           }
-          case 96: {
-            ClientPosVersion = input.ReadUInt32();
-            break;
-          }
-          case 106: {
-            customDataList_.AddEntriesFrom(input, _repeated_customDataList_codec);
+          case 104: {
+            EntryId = input.ReadUInt32();
             break;
           }
           case 112: {
@@ -749,35 +750,35 @@ namespace EggLink.DanhengServer.Proto {
             WorldId = input.ReadUInt32();
             break;
           }
-          case 1626: {
-            entityGroupList_.AddEntriesFrom(input, _repeated_entityGroupList_codec);
-            break;
-          }
-          case 2136: {
+          case 648: {
             DimensionId = input.ReadUInt32();
             break;
           }
-          case 2538: {
+          case 4792: {
+            ContentId = input.ReadUInt32();
+            break;
+          }
+          case 9808: {
+            GameStoryLineId = input.ReadUInt32();
+            break;
+          }
+          case 11666: {
             floorSavedData_.AddEntriesFrom(input, _map_floorSavedData_codec);
             break;
           }
-          case 4978: {
+          case 12618: {
+            groupStateList_.AddEntriesFrom(input, _repeated_groupStateList_codec);
+            break;
+          }
+          case 14530: {
             if (sceneMissionInfo_ == null) {
               SceneMissionInfo = new global::EggLink.DanhengServer.Proto.MissionStatusBySceneInfo();
             }
             input.ReadMessage(SceneMissionInfo);
             break;
           }
-          case 5912: {
-            ContentId = input.ReadUInt32();
-            break;
-          }
-          case 10194: {
-            groupStateList_.AddEntriesFrom(input, _repeated_groupStateList_codec);
-            break;
-          }
-          case 15976: {
-            GameStoryLineId = input.ReadUInt32();
+          case 15274: {
+            entityGroupList_.AddEntriesFrom(input, _repeated_entityGroupList_codec);
             break;
           }
         }
@@ -797,27 +798,31 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 10:
           case 8: {
-            levelGroupIdList_.AddEntriesFrom(ref input, _repeated_levelGroupIdList_codec);
+            groupIdList_.AddEntriesFrom(ref input, _repeated_groupIdList_codec);
             break;
           }
-          case 26: {
-            cGNPDOCKDIB_.AddEntriesFrom(ref input, _map_cGNPDOCKDIB_codec);
-            break;
-          }
-          case 34: {
-            entityList_.AddEntriesFrom(ref input, _repeated_entityList_codec);
-            break;
-          }
-          case 40: {
+          case 16: {
             PlaneId = input.ReadUInt32();
             break;
           }
-          case 48: {
-            EntryId = input.ReadUInt32();
+          case 26: {
+            customDataList_.AddEntriesFrom(ref input, _repeated_customDataList_codec);
+            break;
+          }
+          case 34: {
+            entityBuffInfoList_.AddEntriesFrom(ref input, _repeated_entityBuffInfoList_codec);
+            break;
+          }
+          case 40: {
+            GameModeType = input.ReadUInt32();
+            break;
+          }
+          case 50: {
+            entityList_.AddEntriesFrom(ref input, _repeated_entityList_codec);
             break;
           }
           case 56: {
-            FloorId = input.ReadUInt32();
+            ClientPosVersion = input.ReadUInt32();
             break;
           }
           case 66:
@@ -826,23 +831,19 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 74: {
-            entityBuffList_.AddEntriesFrom(ref input, _repeated_entityBuffList_codec);
+            gDEFFADKFAN_.AddEntriesFrom(ref input, _map_gDEFFADKFAN_codec);
             break;
           }
-          case 80: {
-            GameModeType = input.ReadUInt32();
+          case 88: {
+            FloorId = input.ReadUInt32();
             break;
           }
-          case 90: {
-            envBuffList_.AddEntriesFrom(ref input, _repeated_envBuffList_codec);
+          case 98: {
+            sceneBuffInfoList_.AddEntriesFrom(ref input, _repeated_sceneBuffInfoList_codec);
             break;
           }
-          case 96: {
-            ClientPosVersion = input.ReadUInt32();
-            break;
-          }
-          case 106: {
-            customDataList_.AddEntriesFrom(ref input, _repeated_customDataList_codec);
+          case 104: {
+            EntryId = input.ReadUInt32();
             break;
           }
           case 112: {
@@ -853,35 +854,35 @@ namespace EggLink.DanhengServer.Proto {
             WorldId = input.ReadUInt32();
             break;
           }
-          case 1626: {
-            entityGroupList_.AddEntriesFrom(ref input, _repeated_entityGroupList_codec);
-            break;
-          }
-          case 2136: {
+          case 648: {
             DimensionId = input.ReadUInt32();
             break;
           }
-          case 2538: {
+          case 4792: {
+            ContentId = input.ReadUInt32();
+            break;
+          }
+          case 9808: {
+            GameStoryLineId = input.ReadUInt32();
+            break;
+          }
+          case 11666: {
             floorSavedData_.AddEntriesFrom(ref input, _map_floorSavedData_codec);
             break;
           }
-          case 4978: {
+          case 12618: {
+            groupStateList_.AddEntriesFrom(ref input, _repeated_groupStateList_codec);
+            break;
+          }
+          case 14530: {
             if (sceneMissionInfo_ == null) {
               SceneMissionInfo = new global::EggLink.DanhengServer.Proto.MissionStatusBySceneInfo();
             }
             input.ReadMessage(SceneMissionInfo);
             break;
           }
-          case 5912: {
-            ContentId = input.ReadUInt32();
-            break;
-          }
-          case 10194: {
-            groupStateList_.AddEntriesFrom(ref input, _repeated_groupStateList_codec);
-            break;
-          }
-          case 15976: {
-            GameStoryLineId = input.ReadUInt32();
+          case 15274: {
+            entityGroupList_.AddEntriesFrom(ref input, _repeated_entityGroupList_codec);
             break;
           }
         }

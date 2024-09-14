@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNTZXRDbGllbnRSYWlkVGFyZ2V0Q291bnRDc1JlcS5wcm90byJGCh1TZXRD",
-            "bGllbnRSYWlkVGFyZ2V0Q291bnRDc1JlcRIQCghwcm9ncmVzcxgIIAEoDRIT",
-            "CgtCRkROREJQUEVPTBgHIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "bGllbnRSYWlkVGFyZ2V0Q291bnRDc1JlcRIQCghwcm9ncmVzcxgBIAEoDRIT",
+            "CgtLR01IRUxQSEJPTBgHIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetClientRaidTargetCountCsReq), global::EggLink.DanhengServer.Proto.SetClientRaidTargetCountCsReq.Parser, new[]{ "Progress", "BFDNDBPPEOL" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetClientRaidTargetCountCsReq), global::EggLink.DanhengServer.Proto.SetClientRaidTargetCountCsReq.Parser, new[]{ "Progress", "KGMHELPHBOL" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SetClientRaidTargetCountCsReq(SetClientRaidTargetCountCsReq other) : this() {
       progress_ = other.progress_;
-      bFDNDBPPEOL_ = other.bFDNDBPPEOL_;
+      kGMHELPHBOL_ = other.kGMHELPHBOL_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "progress" field.</summary>
-    public const int ProgressFieldNumber = 8;
+    public const int ProgressFieldNumber = 1;
     private uint progress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "BFDNDBPPEOL" field.</summary>
-    public const int BFDNDBPPEOLFieldNumber = 7;
-    private uint bFDNDBPPEOL_;
+    /// <summary>Field number for the "KGMHELPHBOL" field.</summary>
+    public const int KGMHELPHBOLFieldNumber = 7;
+    private uint kGMHELPHBOL_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BFDNDBPPEOL {
-      get { return bFDNDBPPEOL_; }
+    public uint KGMHELPHBOL {
+      get { return kGMHELPHBOL_; }
       set {
-        bFDNDBPPEOL_ = value;
+        kGMHELPHBOL_ = value;
       }
     }
 
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Progress != other.Progress) return false;
-      if (BFDNDBPPEOL != other.BFDNDBPPEOL) return false;
+      if (KGMHELPHBOL != other.KGMHELPHBOL) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Progress != 0) hash ^= Progress.GetHashCode();
-      if (BFDNDBPPEOL != 0) hash ^= BFDNDBPPEOL.GetHashCode();
+      if (KGMHELPHBOL != 0) hash ^= KGMHELPHBOL.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (BFDNDBPPEOL != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(BFDNDBPPEOL);
-      }
       if (Progress != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(8);
         output.WriteUInt32(Progress);
+      }
+      if (KGMHELPHBOL != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(KGMHELPHBOL);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BFDNDBPPEOL != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(BFDNDBPPEOL);
-      }
       if (Progress != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(8);
         output.WriteUInt32(Progress);
+      }
+      if (KGMHELPHBOL != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(KGMHELPHBOL);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -191,8 +191,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Progress != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Progress);
       }
-      if (BFDNDBPPEOL != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BFDNDBPPEOL);
+      if (KGMHELPHBOL != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KGMHELPHBOL);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -209,8 +209,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Progress != 0) {
         Progress = other.Progress;
       }
-      if (other.BFDNDBPPEOL != 0) {
-        BFDNDBPPEOL = other.BFDNDBPPEOL;
+      if (other.KGMHELPHBOL != 0) {
+        KGMHELPHBOL = other.KGMHELPHBOL;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            BFDNDBPPEOL = input.ReadUInt32();
+          case 8: {
+            Progress = input.ReadUInt32();
             break;
           }
-          case 64: {
-            Progress = input.ReadUInt32();
+          case 56: {
+            KGMHELPHBOL = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            BFDNDBPPEOL = input.ReadUInt32();
+          case 8: {
+            Progress = input.ReadUInt32();
             break;
           }
-          case 64: {
-            Progress = input.ReadUInt32();
+          case 56: {
+            KGMHELPHBOL = input.ReadUInt32();
             break;
           }
         }

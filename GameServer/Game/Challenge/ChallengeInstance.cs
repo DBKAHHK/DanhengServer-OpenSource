@@ -132,18 +132,18 @@ public class ChallengeInstance
             ScoreTwo = (uint)ScoreStage2,
             RoundCount = (uint)GetRoundsElapsed(),
             ExtraLineupType = (ExtraLineupType)CurrentExtraLineup,
-            PlayerInfo = new ChallengeStoryInfo
+            StageInfo = new ChallengeStoryInfo
             {
                 CurStoryBuffs = new ChallengeStoryBuffList(),
                 CurBossBuffs = new ChallengeBossBuffList()
             }
         };
 
-        if (StoryBuffs != null && StoryBuffs.Count >= CurrentStage)
-            proto.PlayerInfo.CurStoryBuffs.BuffList.Add(StoryBuffs.Select(x => (uint)x));
+        if (StoryBuffs.Count >= CurrentStage)
+            proto.StageInfo.CurStoryBuffs.BuffList.Add(StoryBuffs.Select(x => (uint)x));
 
-        if (BossBuffs != null && BossBuffs.Count >= CurrentStage)
-            proto.PlayerInfo.CurBossBuffs.BuffList.Add(BossBuffs.Select(x => (uint)x));
+        if (BossBuffs.Count >= CurrentStage)
+            proto.StageInfo.CurBossBuffs.BuffList.Add(BossBuffs.Select(x => (uint)x));
 
         return proto;
     }

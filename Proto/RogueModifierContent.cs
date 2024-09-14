@@ -26,14 +26,14 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChpSb2d1ZU1vZGlmaWVyQ29udGVudC5wcm90bxoeUm9ndWVNb2RpZmllckNv",
             "bnRlbnRUeXBlLnByb3RvIokBChRSb2d1ZU1vZGlmaWVyQ29udGVudBIiChpj",
-            "b250ZW50X21vZGlmaWVyX2VmZmVjdF9pZBgFIAEoDRI4ChVtb2RpZmllcl9j",
+            "b250ZW50X21vZGlmaWVyX2VmZmVjdF9pZBgNIAEoDRI4ChVtb2RpZmllcl9j",
             "b250ZW50X3R5cGUYDCABKA4yGS5Sb2d1ZU1vZGlmaWVyQ29udGVudFR5cGUS",
-            "EwoLQktJRUtDSEtCSEgYDSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "EwoLS0VMQkdCRERESk8YByABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueModifierContentTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueModifierContent), global::EggLink.DanhengServer.Proto.RogueModifierContent.Parser, new[]{ "ContentModifierEffectId", "ModifierContentType", "BKIEKCHKBHH" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueModifierContent), global::EggLink.DanhengServer.Proto.RogueModifierContent.Parser, new[]{ "ContentModifierEffectId", "ModifierContentType", "KELBGBDDDJO" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,7 +77,7 @@ namespace EggLink.DanhengServer.Proto {
     public RogueModifierContent(RogueModifierContent other) : this() {
       contentModifierEffectId_ = other.contentModifierEffectId_;
       modifierContentType_ = other.modifierContentType_;
-      bKIEKCHKBHH_ = other.bKIEKCHKBHH_;
+      kELBGBDDDJO_ = other.kELBGBDDDJO_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,8 +88,11 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "content_modifier_effect_id" field.</summary>
-    public const int ContentModifierEffectIdFieldNumber = 5;
+    public const int ContentModifierEffectIdFieldNumber = 13;
     private uint contentModifierEffectId_;
+    /// <summary>
+    /// 7
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint ContentModifierEffectId {
@@ -111,15 +114,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "BKIEKCHKBHH" field.</summary>
-    public const int BKIEKCHKBHHFieldNumber = 13;
-    private uint bKIEKCHKBHH_;
+    /// <summary>Field number for the "KELBGBDDDJO" field.</summary>
+    public const int KELBGBDDDJOFieldNumber = 7;
+    private uint kELBGBDDDJO_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BKIEKCHKBHH {
-      get { return bKIEKCHKBHH_; }
+    public uint KELBGBDDDJO {
+      get { return kELBGBDDDJO_; }
       set {
-        bKIEKCHKBHH_ = value;
+        kELBGBDDDJO_ = value;
       }
     }
 
@@ -140,7 +143,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (ContentModifierEffectId != other.ContentModifierEffectId) return false;
       if (ModifierContentType != other.ModifierContentType) return false;
-      if (BKIEKCHKBHH != other.BKIEKCHKBHH) return false;
+      if (KELBGBDDDJO != other.KELBGBDDDJO) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -150,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (ContentModifierEffectId != 0) hash ^= ContentModifierEffectId.GetHashCode();
       if (ModifierContentType != global::EggLink.DanhengServer.Proto.RogueModifierContentType.RogueModifierContentDefinite) hash ^= ModifierContentType.GetHashCode();
-      if (BKIEKCHKBHH != 0) hash ^= BKIEKCHKBHH.GetHashCode();
+      if (KELBGBDDDJO != 0) hash ^= KELBGBDDDJO.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -169,17 +172,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ContentModifierEffectId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(ContentModifierEffectId);
+      if (KELBGBDDDJO != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(KELBGBDDDJO);
       }
       if (ModifierContentType != global::EggLink.DanhengServer.Proto.RogueModifierContentType.RogueModifierContentDefinite) {
         output.WriteRawTag(96);
         output.WriteEnum((int) ModifierContentType);
       }
-      if (BKIEKCHKBHH != 0) {
+      if (ContentModifierEffectId != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(BKIEKCHKBHH);
+        output.WriteUInt32(ContentModifierEffectId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -191,17 +194,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ContentModifierEffectId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(ContentModifierEffectId);
+      if (KELBGBDDDJO != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(KELBGBDDDJO);
       }
       if (ModifierContentType != global::EggLink.DanhengServer.Proto.RogueModifierContentType.RogueModifierContentDefinite) {
         output.WriteRawTag(96);
         output.WriteEnum((int) ModifierContentType);
       }
-      if (BKIEKCHKBHH != 0) {
+      if (ContentModifierEffectId != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(BKIEKCHKBHH);
+        output.WriteUInt32(ContentModifierEffectId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -219,8 +222,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ModifierContentType != global::EggLink.DanhengServer.Proto.RogueModifierContentType.RogueModifierContentDefinite) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ModifierContentType);
       }
-      if (BKIEKCHKBHH != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BKIEKCHKBHH);
+      if (KELBGBDDDJO != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KELBGBDDDJO);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -240,8 +243,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.ModifierContentType != global::EggLink.DanhengServer.Proto.RogueModifierContentType.RogueModifierContentDefinite) {
         ModifierContentType = other.ModifierContentType;
       }
-      if (other.BKIEKCHKBHH != 0) {
-        BKIEKCHKBHH = other.BKIEKCHKBHH;
+      if (other.KELBGBDDDJO != 0) {
+        KELBGBDDDJO = other.KELBGBDDDJO;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -258,8 +261,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            ContentModifierEffectId = input.ReadUInt32();
+          case 56: {
+            KELBGBDDDJO = input.ReadUInt32();
             break;
           }
           case 96: {
@@ -267,7 +270,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 104: {
-            BKIEKCHKBHH = input.ReadUInt32();
+            ContentModifierEffectId = input.ReadUInt32();
             break;
           }
         }
@@ -285,8 +288,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            ContentModifierEffectId = input.ReadUInt32();
+          case 56: {
+            KELBGBDDDJO = input.ReadUInt32();
             break;
           }
           case 96: {
@@ -294,7 +297,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 104: {
-            BKIEKCHKBHH = input.ReadUInt32();
+            ContentModifierEffectId = input.ReadUInt32();
             break;
           }
         }

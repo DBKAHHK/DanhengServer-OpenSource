@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static PrivateMsgOfflineUsersScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiRQcml2YXRlTXNnT2ZmbGluZVVzZXJzU2NOb3RpZnkucHJvdG8iOQoeUHJp",
-            "dmF0ZU1zZ09mZmxpbmVVc2Vyc1NjTm90aWZ5EhcKD2NvbnRhY3RfaWRfbGlz",
-            "dBgEIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
-            "bzM="));
+            "CiRQcml2YXRlTXNnT2ZmbGluZVVzZXJzU2NOb3RpZnkucHJvdG8iOgoeUHJp",
+            "dmF0ZU1zZ09mZmxpbmVVc2Vyc1NjTm90aWZ5EhgKEGNvbnRhY3RfdWlkX2xp",
+            "c3QYCiADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PrivateMsgOfflineUsersScNotify), global::EggLink.DanhengServer.Proto.PrivateMsgOfflineUsersScNotify.Parser, new[]{ "ContactIdList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PrivateMsgOfflineUsersScNotify), global::EggLink.DanhengServer.Proto.PrivateMsgOfflineUsersScNotify.Parser, new[]{ "ContactUidList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PrivateMsgOfflineUsersScNotify(PrivateMsgOfflineUsersScNotify other) : this() {
-      contactIdList_ = other.contactIdList_.Clone();
+      contactUidList_ = other.contactUidList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new PrivateMsgOfflineUsersScNotify(this);
     }
 
-    /// <summary>Field number for the "contact_id_list" field.</summary>
-    public const int ContactIdListFieldNumber = 4;
-    private static readonly pb::FieldCodec<uint> _repeated_contactIdList_codec
-        = pb::FieldCodec.ForUInt32(34);
-    private readonly pbc::RepeatedField<uint> contactIdList_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "contact_uid_list" field.</summary>
+    public const int ContactUidListFieldNumber = 10;
+    private static readonly pb::FieldCodec<uint> _repeated_contactUidList_codec
+        = pb::FieldCodec.ForUInt32(82);
+    private readonly pbc::RepeatedField<uint> contactUidList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> ContactIdList {
-      get { return contactIdList_; }
+    public pbc::RepeatedField<uint> ContactUidList {
+      get { return contactUidList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!contactIdList_.Equals(other.contactIdList_)) return false;
+      if(!contactUidList_.Equals(other.contactUidList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= contactIdList_.GetHashCode();
+      hash ^= contactUidList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      contactIdList_.WriteTo(output, _repeated_contactIdList_codec);
+      contactUidList_.WriteTo(output, _repeated_contactUidList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -147,7 +147,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      contactIdList_.WriteTo(ref output, _repeated_contactIdList_codec);
+      contactUidList_.WriteTo(ref output, _repeated_contactUidList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -158,7 +158,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += contactIdList_.CalculateSize(_repeated_contactIdList_codec);
+      size += contactUidList_.CalculateSize(_repeated_contactUidList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -171,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      contactIdList_.Add(other.contactIdList_);
+      contactUidList_.Add(other.contactUidList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -187,9 +187,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34:
-          case 32: {
-            contactIdList_.AddEntriesFrom(input, _repeated_contactIdList_codec);
+          case 82:
+          case 80: {
+            contactUidList_.AddEntriesFrom(input, _repeated_contactUidList_codec);
             break;
           }
         }
@@ -207,9 +207,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34:
-          case 32: {
-            contactIdList_.AddEntriesFrom(ref input, _repeated_contactIdList_codec);
+          case 82:
+          case 80: {
+            contactUidList_.AddEntriesFrom(ref input, _repeated_contactUidList_codec);
             break;
           }
         }

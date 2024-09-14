@@ -24,20 +24,20 @@ namespace EggLink.DanhengServer.Proto {
     static ChessRogueAreaInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhDaGVzc1JvZ3VlQXJlYUluZm8ucHJvdG8aH0NoZXNzUm9ndWVIaXN0b3J5",
-            "Q2VsbEluZm8ucHJvdG8aEUpESVBJSFBNRUtOLnByb3RvGh9DaGVzc1JvZ3Vl",
-            "Qm9hcmRDZWxsU3RhdHVzLnByb3RvGg5DZWxsSW5mby5wcm90byL/AQoSQ2hl",
-            "c3NSb2d1ZUFyZWFJbmZvEjAKDGxheWVyX3N0YXR1cxgNIAEoDjIaLkNoZXNz",
-            "Um9ndWVCb2FyZENlbGxTdGF0dXMSIQoLT0pOQ01KREFBQkoYASABKAsyDC5K",
-            "RElQSUhQTUVLThIjChthbGxvd2VkX3NlbGVjdF9jZWxsX2lkX2xpc3QYCiAD",
-            "KA0SFwoEY2VsbBgCIAEoCzIJLkNlbGxJbmZvEjAKDGhpc3RvcnlfY2VsbBgH",
-            "IAMoCzIaLkNoZXNzUm9ndWVIaXN0b3J5Q2VsbEluZm8SDgoGY3VyX2lkGAwg",
-            "ASgNEhQKDGN1cl9ib2FyZF9pZBgPIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
-            "U2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChhDaGVzc1JvZ3VlQXJlYUluZm8ucHJvdG8aDkNlbGxJbmZvLnByb3RvGh9D",
+            "aGVzc1JvZ3VlSGlzdG9yeUNlbGxJbmZvLnByb3RvGhFLS0NQREFDRE1LTS5w",
+            "cm90bxofQ2hlc3NSb2d1ZUJvYXJkQ2VsbFN0YXR1cy5wcm90byL9AQoSQ2hl",
+            "c3NSb2d1ZUFyZWFJbmZvEjAKDGhpc3RvcnlfY2VsbBgJIAMoCzIaLkNoZXNz",
+            "Um9ndWVIaXN0b3J5Q2VsbEluZm8SFAoMY3VyX2JvYXJkX2lkGAYgASgNEjAK",
+            "DGxheWVyX3N0YXR1cxgKIAEoDjIaLkNoZXNzUm9ndWVCb2FyZENlbGxTdGF0",
+            "dXMSIQoLRUZDQkpITEhHRkcYAiABKAsyDC5LS0NQREFDRE1LTRIXCgRjZWxs",
+            "GAcgASgLMgkuQ2VsbEluZm8SDgoGY3VyX2lkGA8gASgNEiEKGWFsbG93X3Nl",
+            "bGVjdF9jZWxsX2lkX2xpc3QYAyADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueHistoryCellInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.JDIPIHPMEKNReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.CellInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CellInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueHistoryCellInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KKCPDACDMKMReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueAreaInfo), global::EggLink.DanhengServer.Proto.ChessRogueAreaInfo.Parser, new[]{ "LayerStatus", "OJNCMJDAABJ", "AllowedSelectCellIdList", "Cell", "HistoryCell", "CurId", "CurBoardId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueAreaInfo), global::EggLink.DanhengServer.Proto.ChessRogueAreaInfo.Parser, new[]{ "HistoryCell", "CurBoardId", "LayerStatus", "EFCBJHLHGFG", "Cell", "CurId", "AllowSelectCellIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -79,13 +79,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueAreaInfo(ChessRogueAreaInfo other) : this() {
-      layerStatus_ = other.layerStatus_;
-      oJNCMJDAABJ_ = other.oJNCMJDAABJ_ != null ? other.oJNCMJDAABJ_.Clone() : null;
-      allowedSelectCellIdList_ = other.allowedSelectCellIdList_.Clone();
-      cell_ = other.cell_ != null ? other.cell_.Clone() : null;
       historyCell_ = other.historyCell_.Clone();
-      curId_ = other.curId_;
       curBoardId_ = other.curBoardId_;
+      layerStatus_ = other.layerStatus_;
+      eFCBJHLHGFG_ = other.eFCBJHLHGFG_ != null ? other.eFCBJHLHGFG_.Clone() : null;
+      cell_ = other.cell_ != null ? other.cell_.Clone() : null;
+      curId_ = other.curId_;
+      allowSelectCellIdList_ = other.allowSelectCellIdList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -95,8 +95,31 @@ namespace EggLink.DanhengServer.Proto {
       return new ChessRogueAreaInfo(this);
     }
 
+    /// <summary>Field number for the "history_cell" field.</summary>
+    public const int HistoryCellFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChessRogueHistoryCellInfo> _repeated_historyCell_codec
+        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.ChessRogueHistoryCellInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueHistoryCellInfo> historyCell_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueHistoryCellInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueHistoryCellInfo> HistoryCell {
+      get { return historyCell_; }
+    }
+
+    /// <summary>Field number for the "cur_board_id" field.</summary>
+    public const int CurBoardIdFieldNumber = 6;
+    private uint curBoardId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CurBoardId {
+      get { return curBoardId_; }
+      set {
+        curBoardId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "layer_status" field.</summary>
-    public const int LayerStatusFieldNumber = 13;
+    public const int LayerStatusFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus layerStatus_ = global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus.Idle;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -107,31 +130,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "OJNCMJDAABJ" field.</summary>
-    public const int OJNCMJDAABJFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.JDIPIHPMEKN oJNCMJDAABJ_;
+    /// <summary>Field number for the "EFCBJHLHGFG" field.</summary>
+    public const int EFCBJHLHGFGFieldNumber = 2;
+    private global::EggLink.DanhengServer.Proto.KKCPDACDMKM eFCBJHLHGFG_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.JDIPIHPMEKN OJNCMJDAABJ {
-      get { return oJNCMJDAABJ_; }
+    public global::EggLink.DanhengServer.Proto.KKCPDACDMKM EFCBJHLHGFG {
+      get { return eFCBJHLHGFG_; }
       set {
-        oJNCMJDAABJ_ = value;
+        eFCBJHLHGFG_ = value;
       }
     }
 
-    /// <summary>Field number for the "allowed_select_cell_id_list" field.</summary>
-    public const int AllowedSelectCellIdListFieldNumber = 10;
-    private static readonly pb::FieldCodec<uint> _repeated_allowedSelectCellIdList_codec
-        = pb::FieldCodec.ForUInt32(82);
-    private readonly pbc::RepeatedField<uint> allowedSelectCellIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> AllowedSelectCellIdList {
-      get { return allowedSelectCellIdList_; }
-    }
-
     /// <summary>Field number for the "cell" field.</summary>
-    public const int CellFieldNumber = 2;
+    public const int CellFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.CellInfo cell_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -142,19 +154,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "history_cell" field.</summary>
-    public const int HistoryCellFieldNumber = 7;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChessRogueHistoryCellInfo> _repeated_historyCell_codec
-        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.ChessRogueHistoryCellInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueHistoryCellInfo> historyCell_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueHistoryCellInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueHistoryCellInfo> HistoryCell {
-      get { return historyCell_; }
-    }
-
     /// <summary>Field number for the "cur_id" field.</summary>
-    public const int CurIdFieldNumber = 12;
+    public const int CurIdFieldNumber = 15;
     private uint curId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -165,16 +166,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "cur_board_id" field.</summary>
-    public const int CurBoardIdFieldNumber = 15;
-    private uint curBoardId_;
+    /// <summary>Field number for the "allow_select_cell_id_list" field.</summary>
+    public const int AllowSelectCellIdListFieldNumber = 3;
+    private static readonly pb::FieldCodec<uint> _repeated_allowSelectCellIdList_codec
+        = pb::FieldCodec.ForUInt32(26);
+    private readonly pbc::RepeatedField<uint> allowSelectCellIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CurBoardId {
-      get { return curBoardId_; }
-      set {
-        curBoardId_ = value;
-      }
+    public pbc::RepeatedField<uint> AllowSelectCellIdList {
+      get { return allowSelectCellIdList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -192,13 +192,13 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (LayerStatus != other.LayerStatus) return false;
-      if (!object.Equals(OJNCMJDAABJ, other.OJNCMJDAABJ)) return false;
-      if(!allowedSelectCellIdList_.Equals(other.allowedSelectCellIdList_)) return false;
-      if (!object.Equals(Cell, other.Cell)) return false;
       if(!historyCell_.Equals(other.historyCell_)) return false;
-      if (CurId != other.CurId) return false;
       if (CurBoardId != other.CurBoardId) return false;
+      if (LayerStatus != other.LayerStatus) return false;
+      if (!object.Equals(EFCBJHLHGFG, other.EFCBJHLHGFG)) return false;
+      if (!object.Equals(Cell, other.Cell)) return false;
+      if (CurId != other.CurId) return false;
+      if(!allowSelectCellIdList_.Equals(other.allowSelectCellIdList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -206,13 +206,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (LayerStatus != global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus.Idle) hash ^= LayerStatus.GetHashCode();
-      if (oJNCMJDAABJ_ != null) hash ^= OJNCMJDAABJ.GetHashCode();
-      hash ^= allowedSelectCellIdList_.GetHashCode();
-      if (cell_ != null) hash ^= Cell.GetHashCode();
       hash ^= historyCell_.GetHashCode();
-      if (CurId != 0) hash ^= CurId.GetHashCode();
       if (CurBoardId != 0) hash ^= CurBoardId.GetHashCode();
+      if (LayerStatus != global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus.Idle) hash ^= LayerStatus.GetHashCode();
+      if (eFCBJHLHGFG_ != null) hash ^= EFCBJHLHGFG.GetHashCode();
+      if (cell_ != null) hash ^= Cell.GetHashCode();
+      if (CurId != 0) hash ^= CurId.GetHashCode();
+      hash ^= allowSelectCellIdList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -231,27 +231,27 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (oJNCMJDAABJ_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(OJNCMJDAABJ);
+      if (eFCBJHLHGFG_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EFCBJHLHGFG);
+      }
+      allowSelectCellIdList_.WriteTo(output, _repeated_allowSelectCellIdList_codec);
+      if (CurBoardId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(CurBoardId);
       }
       if (cell_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(58);
         output.WriteMessage(Cell);
       }
       historyCell_.WriteTo(output, _repeated_historyCell_codec);
-      allowedSelectCellIdList_.WriteTo(output, _repeated_allowedSelectCellIdList_codec);
-      if (CurId != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(CurId);
-      }
       if (LayerStatus != global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus.Idle) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(80);
         output.WriteEnum((int) LayerStatus);
       }
-      if (CurBoardId != 0) {
+      if (CurId != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(CurBoardId);
+        output.WriteUInt32(CurId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -263,27 +263,27 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (oJNCMJDAABJ_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(OJNCMJDAABJ);
+      if (eFCBJHLHGFG_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EFCBJHLHGFG);
+      }
+      allowSelectCellIdList_.WriteTo(ref output, _repeated_allowSelectCellIdList_codec);
+      if (CurBoardId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(CurBoardId);
       }
       if (cell_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(58);
         output.WriteMessage(Cell);
       }
       historyCell_.WriteTo(ref output, _repeated_historyCell_codec);
-      allowedSelectCellIdList_.WriteTo(ref output, _repeated_allowedSelectCellIdList_codec);
-      if (CurId != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(CurId);
-      }
       if (LayerStatus != global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus.Idle) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(80);
         output.WriteEnum((int) LayerStatus);
       }
-      if (CurBoardId != 0) {
+      if (CurId != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(CurBoardId);
+        output.WriteUInt32(CurId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -295,23 +295,23 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (LayerStatus != global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus.Idle) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LayerStatus);
-      }
-      if (oJNCMJDAABJ_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OJNCMJDAABJ);
-      }
-      size += allowedSelectCellIdList_.CalculateSize(_repeated_allowedSelectCellIdList_codec);
-      if (cell_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Cell);
-      }
       size += historyCell_.CalculateSize(_repeated_historyCell_codec);
-      if (CurId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurId);
-      }
       if (CurBoardId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurBoardId);
       }
+      if (LayerStatus != global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus.Idle) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LayerStatus);
+      }
+      if (eFCBJHLHGFG_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EFCBJHLHGFG);
+      }
+      if (cell_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Cell);
+      }
+      if (CurId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurId);
+      }
+      size += allowSelectCellIdList_.CalculateSize(_repeated_allowSelectCellIdList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -324,29 +324,29 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      historyCell_.Add(other.historyCell_);
+      if (other.CurBoardId != 0) {
+        CurBoardId = other.CurBoardId;
+      }
       if (other.LayerStatus != global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus.Idle) {
         LayerStatus = other.LayerStatus;
       }
-      if (other.oJNCMJDAABJ_ != null) {
-        if (oJNCMJDAABJ_ == null) {
-          OJNCMJDAABJ = new global::EggLink.DanhengServer.Proto.JDIPIHPMEKN();
+      if (other.eFCBJHLHGFG_ != null) {
+        if (eFCBJHLHGFG_ == null) {
+          EFCBJHLHGFG = new global::EggLink.DanhengServer.Proto.KKCPDACDMKM();
         }
-        OJNCMJDAABJ.MergeFrom(other.OJNCMJDAABJ);
+        EFCBJHLHGFG.MergeFrom(other.EFCBJHLHGFG);
       }
-      allowedSelectCellIdList_.Add(other.allowedSelectCellIdList_);
       if (other.cell_ != null) {
         if (cell_ == null) {
           Cell = new global::EggLink.DanhengServer.Proto.CellInfo();
         }
         Cell.MergeFrom(other.Cell);
       }
-      historyCell_.Add(other.historyCell_);
       if (other.CurId != 0) {
         CurId = other.CurId;
       }
-      if (other.CurBoardId != 0) {
-        CurBoardId = other.CurBoardId;
-      }
+      allowSelectCellIdList_.Add(other.allowSelectCellIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -362,39 +362,39 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            if (oJNCMJDAABJ_ == null) {
-              OJNCMJDAABJ = new global::EggLink.DanhengServer.Proto.JDIPIHPMEKN();
+          case 18: {
+            if (eFCBJHLHGFG_ == null) {
+              EFCBJHLHGFG = new global::EggLink.DanhengServer.Proto.KKCPDACDMKM();
             }
-            input.ReadMessage(OJNCMJDAABJ);
+            input.ReadMessage(EFCBJHLHGFG);
             break;
           }
-          case 18: {
+          case 26:
+          case 24: {
+            allowSelectCellIdList_.AddEntriesFrom(input, _repeated_allowSelectCellIdList_codec);
+            break;
+          }
+          case 48: {
+            CurBoardId = input.ReadUInt32();
+            break;
+          }
+          case 58: {
             if (cell_ == null) {
               Cell = new global::EggLink.DanhengServer.Proto.CellInfo();
             }
             input.ReadMessage(Cell);
             break;
           }
-          case 58: {
+          case 74: {
             historyCell_.AddEntriesFrom(input, _repeated_historyCell_codec);
             break;
           }
-          case 82:
           case 80: {
-            allowedSelectCellIdList_.AddEntriesFrom(input, _repeated_allowedSelectCellIdList_codec);
-            break;
-          }
-          case 96: {
-            CurId = input.ReadUInt32();
-            break;
-          }
-          case 104: {
             LayerStatus = (global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus) input.ReadEnum();
             break;
           }
           case 120: {
-            CurBoardId = input.ReadUInt32();
+            CurId = input.ReadUInt32();
             break;
           }
         }
@@ -412,39 +412,39 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            if (oJNCMJDAABJ_ == null) {
-              OJNCMJDAABJ = new global::EggLink.DanhengServer.Proto.JDIPIHPMEKN();
+          case 18: {
+            if (eFCBJHLHGFG_ == null) {
+              EFCBJHLHGFG = new global::EggLink.DanhengServer.Proto.KKCPDACDMKM();
             }
-            input.ReadMessage(OJNCMJDAABJ);
+            input.ReadMessage(EFCBJHLHGFG);
             break;
           }
-          case 18: {
+          case 26:
+          case 24: {
+            allowSelectCellIdList_.AddEntriesFrom(ref input, _repeated_allowSelectCellIdList_codec);
+            break;
+          }
+          case 48: {
+            CurBoardId = input.ReadUInt32();
+            break;
+          }
+          case 58: {
             if (cell_ == null) {
               Cell = new global::EggLink.DanhengServer.Proto.CellInfo();
             }
             input.ReadMessage(Cell);
             break;
           }
-          case 58: {
+          case 74: {
             historyCell_.AddEntriesFrom(ref input, _repeated_historyCell_codec);
             break;
           }
-          case 82:
           case 80: {
-            allowedSelectCellIdList_.AddEntriesFrom(ref input, _repeated_allowedSelectCellIdList_codec);
-            break;
-          }
-          case 96: {
-            CurId = input.ReadUInt32();
-            break;
-          }
-          case 104: {
             LayerStatus = (global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus) input.ReadEnum();
             break;
           }
           case 120: {
-            CurBoardId = input.ReadUInt32();
+            CurId = input.ReadUInt32();
             break;
           }
         }

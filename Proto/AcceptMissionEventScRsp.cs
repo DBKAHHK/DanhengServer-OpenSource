@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch1BY2NlcHRNaXNzaW9uRXZlbnRTY1JzcC5wcm90bxoNTWlzc2lvbi5wcm90",
             "byJLChdBY2NlcHRNaXNzaW9uRXZlbnRTY1JzcBIfCg1taXNzaW9uX2V2ZW50",
-            "GAEgASgLMgguTWlzc2lvbhIPCgdyZXRjb2RlGAQgASgNQh6qAhtFZ2dMaW5r",
+            "GAcgASgLMgguTWlzc2lvbhIPCgdyZXRjb2RlGAMgASgNQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MissionReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "mission_event" field.</summary>
-    public const int MissionEventFieldNumber = 1;
+    public const int MissionEventFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.Mission missionEvent_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 4;
+    public const int RetcodeFieldNumber = 3;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (missionEvent_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(MissionEvent);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
+      }
+      if (missionEvent_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(MissionEvent);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (missionEvent_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(MissionEvent);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
+      }
+      if (missionEvent_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(MissionEvent);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 24: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 58: {
             if (missionEvent_ == null) {
               MissionEvent = new global::EggLink.DanhengServer.Proto.Mission();
             }
             input.ReadMessage(MissionEvent);
-            break;
-          }
-          case 32: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 24: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 58: {
             if (missionEvent_ == null) {
               MissionEvent = new global::EggLink.DanhengServer.Proto.Mission();
             }
             input.ReadMessage(MissionEvent);
-            break;
-          }
-          case 32: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }

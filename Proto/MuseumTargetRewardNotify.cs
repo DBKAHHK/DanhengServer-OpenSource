@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5NdXNldW1UYXJnZXRSZXdhcmROb3RpZnkucHJvdG8iVAoYTXVzZXVtVGFy",
-            "Z2V0UmV3YXJkTm90aWZ5EhMKC0JFR0dJQUVIT0VHGA8gASgNEg8KB2l0ZW1f",
-            "aWQYAiABKA0SEgoKaXRlbV9jb3VudBgFIAEoDUIeqgIbRWdnTGluay5EYW5o",
+            "Z2V0UmV3YXJkTm90aWZ5Eg8KB2l0ZW1faWQYDiABKA0SEwoLR01JRkpDT0FP",
+            "QksYAyABKA0SEgoKaXRlbV9jb3VudBgIIAEoDUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MuseumTargetRewardNotify), global::EggLink.DanhengServer.Proto.MuseumTargetRewardNotify.Parser, new[]{ "BEGGIAEHOEG", "ItemId", "ItemCount" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MuseumTargetRewardNotify), global::EggLink.DanhengServer.Proto.MuseumTargetRewardNotify.Parser, new[]{ "ItemId", "GMIFJCOAOBK", "ItemCount" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MuseumTargetRewardNotify(MuseumTargetRewardNotify other) : this() {
-      bEGGIAEHOEG_ = other.bEGGIAEHOEG_;
       itemId_ = other.itemId_;
+      gMIFJCOAOBK_ = other.gMIFJCOAOBK_;
       itemCount_ = other.itemCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new MuseumTargetRewardNotify(this);
     }
 
-    /// <summary>Field number for the "BEGGIAEHOEG" field.</summary>
-    public const int BEGGIAEHOEGFieldNumber = 15;
-    private uint bEGGIAEHOEG_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BEGGIAEHOEG {
-      get { return bEGGIAEHOEG_; }
-      set {
-        bEGGIAEHOEG_ = value;
-      }
-    }
-
     /// <summary>Field number for the "item_id" field.</summary>
-    public const int ItemIdFieldNumber = 2;
+    public const int ItemIdFieldNumber = 14;
     private uint itemId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,8 +97,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "GMIFJCOAOBK" field.</summary>
+    public const int GMIFJCOAOBKFieldNumber = 3;
+    private uint gMIFJCOAOBK_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint GMIFJCOAOBK {
+      get { return gMIFJCOAOBK_; }
+      set {
+        gMIFJCOAOBK_ = value;
+      }
+    }
+
     /// <summary>Field number for the "item_count" field.</summary>
-    public const int ItemCountFieldNumber = 5;
+    public const int ItemCountFieldNumber = 8;
     private uint itemCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,8 +136,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (BEGGIAEHOEG != other.BEGGIAEHOEG) return false;
       if (ItemId != other.ItemId) return false;
+      if (GMIFJCOAOBK != other.GMIFJCOAOBK) return false;
       if (ItemCount != other.ItemCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -146,8 +146,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (BEGGIAEHOEG != 0) hash ^= BEGGIAEHOEG.GetHashCode();
       if (ItemId != 0) hash ^= ItemId.GetHashCode();
+      if (GMIFJCOAOBK != 0) hash ^= GMIFJCOAOBK.GetHashCode();
       if (ItemCount != 0) hash ^= ItemCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ItemId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(ItemId);
+      if (GMIFJCOAOBK != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(GMIFJCOAOBK);
       }
       if (ItemCount != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(64);
         output.WriteUInt32(ItemCount);
       }
-      if (BEGGIAEHOEG != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(BEGGIAEHOEG);
+      if (ItemId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(ItemId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ItemId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(ItemId);
+      if (GMIFJCOAOBK != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(GMIFJCOAOBK);
       }
       if (ItemCount != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(64);
         output.WriteUInt32(ItemCount);
       }
-      if (BEGGIAEHOEG != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(BEGGIAEHOEG);
+      if (ItemId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(ItemId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,11 +211,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (BEGGIAEHOEG != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BEGGIAEHOEG);
-      }
       if (ItemId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ItemId);
+      }
+      if (GMIFJCOAOBK != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GMIFJCOAOBK);
       }
       if (ItemCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ItemCount);
@@ -232,11 +232,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.BEGGIAEHOEG != 0) {
-        BEGGIAEHOEG = other.BEGGIAEHOEG;
-      }
       if (other.ItemId != 0) {
         ItemId = other.ItemId;
+      }
+      if (other.GMIFJCOAOBK != 0) {
+        GMIFJCOAOBK = other.GMIFJCOAOBK;
       }
       if (other.ItemCount != 0) {
         ItemCount = other.ItemCount;
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            ItemId = input.ReadUInt32();
+          case 24: {
+            GMIFJCOAOBK = input.ReadUInt32();
             break;
           }
-          case 40: {
+          case 64: {
             ItemCount = input.ReadUInt32();
             break;
           }
-          case 120: {
-            BEGGIAEHOEG = input.ReadUInt32();
+          case 112: {
+            ItemId = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            ItemId = input.ReadUInt32();
+          case 24: {
+            GMIFJCOAOBK = input.ReadUInt32();
             break;
           }
-          case 40: {
+          case 64: {
             ItemCount = input.ReadUInt32();
             break;
           }
-          case 120: {
-            BEGGIAEHOEG = input.ReadUInt32();
+          case 112: {
+            ItemId = input.ReadUInt32();
             break;
           }
         }

@@ -25,15 +25,16 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9UcmVhc3VyZUR1bmdlb25SZWNvcmREYXRhLnByb3RvGh9UcmVhc3VyZUR1",
-            "bmdlb25SZWNvcmRUeXBlLnByb3RvIpUBChlUcmVhc3VyZUR1bmdlb25SZWNv",
-            "cmREYXRhEhYKDnNvdXJjZV9ncmlkX2lkGAkgASgNEigKBHR5cGUYDyABKA4y",
-            "Gi5UcmVhc3VyZUR1bmdlb25SZWNvcmRUeXBlEg4KBnBhcmFtMRgFIAEoDRIW",
-            "Cg50YXJnZXRfZ3JpZF9pZBgCIAEoDRIOCgZwYXJhbTIYByABKA1CHqoCG0Vn",
-            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "bmdlb25SZWNvcmRUeXBlLnByb3RvIr0BChlUcmVhc3VyZUR1bmdlb25SZWNv",
+            "cmREYXRhEigKBHR5cGUYDCABKA4yGi5UcmVhc3VyZUR1bmdlb25SZWNvcmRU",
+            "eXBlEhkKEVBhcmFtMkZpZWxkTnVtYmVyGA0gASgNEh8KF1RhcmdldEdyaWRJ",
+            "ZEZpZWxkTnVtYmVyGAogASgNEhkKEVBhcmFtMUZpZWxkTnVtYmVyGAggASgN",
+            "Eh8KF1NvdXJjZUdyaWRJZEZpZWxkTnVtYmVyGAUgASgNQh6qAhtFZ2dMaW5r",
+            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TreasureDungeonRecordTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TreasureDungeonRecordData), global::EggLink.DanhengServer.Proto.TreasureDungeonRecordData.Parser, new[]{ "SourceGridId", "Type", "Param1", "TargetGridId", "Param2" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TreasureDungeonRecordData), global::EggLink.DanhengServer.Proto.TreasureDungeonRecordData.Parser, new[]{ "Type", "Param2FieldNumber", "TargetGridIdFieldNumber", "Param1FieldNumber", "SourceGridIdFieldNumber" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,11 +76,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TreasureDungeonRecordData(TreasureDungeonRecordData other) : this() {
-      sourceGridId_ = other.sourceGridId_;
       type_ = other.type_;
-      param1_ = other.param1_;
-      targetGridId_ = other.targetGridId_;
-      param2_ = other.param2_;
+      param2FieldNumber_ = other.param2FieldNumber_;
+      targetGridIdFieldNumber_ = other.targetGridIdFieldNumber_;
+      param1FieldNumber_ = other.param1FieldNumber_;
+      sourceGridIdFieldNumber_ = other.sourceGridIdFieldNumber_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -89,20 +90,8 @@ namespace EggLink.DanhengServer.Proto {
       return new TreasureDungeonRecordData(this);
     }
 
-    /// <summary>Field number for the "source_grid_id" field.</summary>
-    public const int SourceGridIdFieldNumber = 9;
-    private uint sourceGridId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SourceGridId {
-      get { return sourceGridId_; }
-      set {
-        sourceGridId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 15;
+    public const int TypeFieldNumber = 12;
     private global::EggLink.DanhengServer.Proto.TreasureDungeonRecordType type_ = global::EggLink.DanhengServer.Proto.TreasureDungeonRecordType.TreasureDungeonRecordNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -113,39 +102,51 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "param1" field.</summary>
-    public const int Param1FieldNumber = 5;
-    private uint param1_;
+    /// <summary>Field number for the "Param2FieldNumber" field.</summary>
+    public const int Param2FieldNumberFieldNumber = 13;
+    private uint param2FieldNumber_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Param1 {
-      get { return param1_; }
+    public uint Param2FieldNumber {
+      get { return param2FieldNumber_; }
       set {
-        param1_ = value;
+        param2FieldNumber_ = value;
       }
     }
 
-    /// <summary>Field number for the "target_grid_id" field.</summary>
-    public const int TargetGridIdFieldNumber = 2;
-    private uint targetGridId_;
+    /// <summary>Field number for the "TargetGridIdFieldNumber" field.</summary>
+    public const int TargetGridIdFieldNumberFieldNumber = 10;
+    private uint targetGridIdFieldNumber_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TargetGridId {
-      get { return targetGridId_; }
+    public uint TargetGridIdFieldNumber {
+      get { return targetGridIdFieldNumber_; }
       set {
-        targetGridId_ = value;
+        targetGridIdFieldNumber_ = value;
       }
     }
 
-    /// <summary>Field number for the "param2" field.</summary>
-    public const int Param2FieldNumber = 7;
-    private uint param2_;
+    /// <summary>Field number for the "Param1FieldNumber" field.</summary>
+    public const int Param1FieldNumberFieldNumber = 8;
+    private uint param1FieldNumber_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Param2 {
-      get { return param2_; }
+    public uint Param1FieldNumber {
+      get { return param1FieldNumber_; }
       set {
-        param2_ = value;
+        param1FieldNumber_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "SourceGridIdFieldNumber" field.</summary>
+    public const int SourceGridIdFieldNumberFieldNumber = 5;
+    private uint sourceGridIdFieldNumber_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SourceGridIdFieldNumber {
+      get { return sourceGridIdFieldNumber_; }
+      set {
+        sourceGridIdFieldNumber_ = value;
       }
     }
 
@@ -164,11 +165,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (SourceGridId != other.SourceGridId) return false;
       if (Type != other.Type) return false;
-      if (Param1 != other.Param1) return false;
-      if (TargetGridId != other.TargetGridId) return false;
-      if (Param2 != other.Param2) return false;
+      if (Param2FieldNumber != other.Param2FieldNumber) return false;
+      if (TargetGridIdFieldNumber != other.TargetGridIdFieldNumber) return false;
+      if (Param1FieldNumber != other.Param1FieldNumber) return false;
+      if (SourceGridIdFieldNumber != other.SourceGridIdFieldNumber) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -176,11 +177,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (SourceGridId != 0) hash ^= SourceGridId.GetHashCode();
       if (Type != global::EggLink.DanhengServer.Proto.TreasureDungeonRecordType.TreasureDungeonRecordNone) hash ^= Type.GetHashCode();
-      if (Param1 != 0) hash ^= Param1.GetHashCode();
-      if (TargetGridId != 0) hash ^= TargetGridId.GetHashCode();
-      if (Param2 != 0) hash ^= Param2.GetHashCode();
+      if (Param2FieldNumber != 0) hash ^= Param2FieldNumber.GetHashCode();
+      if (TargetGridIdFieldNumber != 0) hash ^= TargetGridIdFieldNumber.GetHashCode();
+      if (Param1FieldNumber != 0) hash ^= Param1FieldNumber.GetHashCode();
+      if (SourceGridIdFieldNumber != 0) hash ^= SourceGridIdFieldNumber.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -199,25 +200,25 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (TargetGridId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(TargetGridId);
-      }
-      if (Param1 != 0) {
+      if (SourceGridIdFieldNumber != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(Param1);
+        output.WriteUInt32(SourceGridIdFieldNumber);
       }
-      if (Param2 != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(Param2);
+      if (Param1FieldNumber != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Param1FieldNumber);
       }
-      if (SourceGridId != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(SourceGridId);
+      if (TargetGridIdFieldNumber != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(TargetGridIdFieldNumber);
       }
       if (Type != global::EggLink.DanhengServer.Proto.TreasureDungeonRecordType.TreasureDungeonRecordNone) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(96);
         output.WriteEnum((int) Type);
+      }
+      if (Param2FieldNumber != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(Param2FieldNumber);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -229,25 +230,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TargetGridId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(TargetGridId);
-      }
-      if (Param1 != 0) {
+      if (SourceGridIdFieldNumber != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(Param1);
+        output.WriteUInt32(SourceGridIdFieldNumber);
       }
-      if (Param2 != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(Param2);
+      if (Param1FieldNumber != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Param1FieldNumber);
       }
-      if (SourceGridId != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(SourceGridId);
+      if (TargetGridIdFieldNumber != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(TargetGridIdFieldNumber);
       }
       if (Type != global::EggLink.DanhengServer.Proto.TreasureDungeonRecordType.TreasureDungeonRecordNone) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(96);
         output.WriteEnum((int) Type);
+      }
+      if (Param2FieldNumber != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(Param2FieldNumber);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -259,20 +260,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (SourceGridId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SourceGridId);
-      }
       if (Type != global::EggLink.DanhengServer.Proto.TreasureDungeonRecordType.TreasureDungeonRecordNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
-      if (Param1 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Param1);
+      if (Param2FieldNumber != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Param2FieldNumber);
       }
-      if (TargetGridId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TargetGridId);
+      if (TargetGridIdFieldNumber != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TargetGridIdFieldNumber);
       }
-      if (Param2 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Param2);
+      if (Param1FieldNumber != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Param1FieldNumber);
+      }
+      if (SourceGridIdFieldNumber != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SourceGridIdFieldNumber);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -286,20 +287,20 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.SourceGridId != 0) {
-        SourceGridId = other.SourceGridId;
-      }
       if (other.Type != global::EggLink.DanhengServer.Proto.TreasureDungeonRecordType.TreasureDungeonRecordNone) {
         Type = other.Type;
       }
-      if (other.Param1 != 0) {
-        Param1 = other.Param1;
+      if (other.Param2FieldNumber != 0) {
+        Param2FieldNumber = other.Param2FieldNumber;
       }
-      if (other.TargetGridId != 0) {
-        TargetGridId = other.TargetGridId;
+      if (other.TargetGridIdFieldNumber != 0) {
+        TargetGridIdFieldNumber = other.TargetGridIdFieldNumber;
       }
-      if (other.Param2 != 0) {
-        Param2 = other.Param2;
+      if (other.Param1FieldNumber != 0) {
+        Param1FieldNumber = other.Param1FieldNumber;
+      }
+      if (other.SourceGridIdFieldNumber != 0) {
+        SourceGridIdFieldNumber = other.SourceGridIdFieldNumber;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -316,24 +317,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            TargetGridId = input.ReadUInt32();
-            break;
-          }
           case 40: {
-            Param1 = input.ReadUInt32();
+            SourceGridIdFieldNumber = input.ReadUInt32();
             break;
           }
-          case 56: {
-            Param2 = input.ReadUInt32();
+          case 64: {
+            Param1FieldNumber = input.ReadUInt32();
             break;
           }
-          case 72: {
-            SourceGridId = input.ReadUInt32();
+          case 80: {
+            TargetGridIdFieldNumber = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 96: {
             Type = (global::EggLink.DanhengServer.Proto.TreasureDungeonRecordType) input.ReadEnum();
+            break;
+          }
+          case 104: {
+            Param2FieldNumber = input.ReadUInt32();
             break;
           }
         }
@@ -351,24 +352,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            TargetGridId = input.ReadUInt32();
-            break;
-          }
           case 40: {
-            Param1 = input.ReadUInt32();
+            SourceGridIdFieldNumber = input.ReadUInt32();
             break;
           }
-          case 56: {
-            Param2 = input.ReadUInt32();
+          case 64: {
+            Param1FieldNumber = input.ReadUInt32();
             break;
           }
-          case 72: {
-            SourceGridId = input.ReadUInt32();
+          case 80: {
+            TargetGridIdFieldNumber = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 96: {
             Type = (global::EggLink.DanhengServer.Proto.TreasureDungeonRecordType) input.ReadEnum();
+            break;
+          }
+          case 104: {
+            Param2FieldNumber = input.ReadUInt32();
             break;
           }
         }

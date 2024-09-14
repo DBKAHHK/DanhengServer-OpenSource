@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlHZXRBcmNoaXZlRGF0YVNjUnNwLnByb3RvGhFBcmNoaXZlRGF0YS5wcm90",
-            "byJKChNHZXRBcmNoaXZlRGF0YVNjUnNwEiIKDGFyY2hpdmVfZGF0YRgBIAEo",
+            "byJKChNHZXRBcmNoaXZlRGF0YVNjUnNwEiIKDGFyY2hpdmVfZGF0YRgDIAEo",
             "CzIMLkFyY2hpdmVEYXRhEg8KB3JldGNvZGUYByABKA1CHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "archive_data" field.</summary>
-    public const int ArchiveDataFieldNumber = 1;
+    public const int ArchiveDataFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.ArchiveData archiveData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (archiveData_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(26);
         output.WriteMessage(ArchiveData);
       }
       if (Retcode != 0) {
@@ -171,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (archiveData_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(26);
         output.WriteMessage(ArchiveData);
       }
       if (Retcode != 0) {
@@ -230,7 +230,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 26: {
             if (archiveData_ == null) {
               ArchiveData = new global::EggLink.DanhengServer.Proto.ArchiveData();
             }
@@ -256,7 +256,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 26: {
             if (archiveData_ == null) {
               ArchiveData = new global::EggLink.DanhengServer.Proto.ArchiveData();
             }
