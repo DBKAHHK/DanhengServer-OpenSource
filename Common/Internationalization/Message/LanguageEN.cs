@@ -158,6 +158,8 @@ public class ServerInfoTextEN
     public string SaveDatabase => "Database saved in {0}s";
 
     public string WaitForAllDone => "You cannot enter the game yet. Please wait for all items to load before trying again";
+
+    public string UnhandledException => "An unhandled exception occurred: {0}";
 }
 
 #endregion

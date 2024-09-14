@@ -155,6 +155,8 @@ public class ServerInfoTextCHS
     public string UnloadedItems => "卸载了所有 {0}。";
     public string SaveDatabase => "已保存数据库，用时 {0}s";
     public string WaitForAllDone => "现在还不可以进入游戏，请等待所有项目加载完成后再试";
+
+    public string UnhandledException => "发生未经处理的异常：{0}";
 }
 
 #endregion

@@ -153,6 +153,8 @@ public class ServerInfoTextCHT
     public string UnloadedItems => "卸載了所有 {0}。";
     public string SaveDatabase => "已保存數據庫，用時 {0}s";
     public string WaitForAllDone => "現在還不可以進入遊戲，請等待所有項目加載完成後再試";
+
+    public string UnhandledException => "未處理的異常：{0}";
 }
 
 #endregion

@@ -32,6 +32,14 @@ public class EntryPoint
             Logger.Info(I18NManager.Translate("Server.ServerInfo.Shutdown"));
             PerformCleanup();
         };
+        AppDomain.CurrentDomain.UnhandledException += (obj, arg) =>
+        {
+            Logger.Error(I18NManager.Translate("Server.ServerInfo.UnhandledException", obj.GetType().Name), (Exception)arg.ExceptionObject);
+            Logger.Info(I18NManager.Translate("Server.ServerInfo.Shutdown"));
+            PerformCleanup();
+            Environment.Exit(1);
+        };
+
         Console.CancelKeyPress += (_, eventArgs) =>
         {
             Logger.Info(I18NManager.Translate("Server.ServerInfo.CancelKeyPressed"));
