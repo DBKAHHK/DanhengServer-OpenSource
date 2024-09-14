@@ -80,6 +80,8 @@ public class WordTextCHS
     public string RogueChestMapInfo => "模拟宇宙地图文件";
     public string ChessRogueRoom => "模拟宇宙DLC";
     public string ChessRogueRoomInfo => "模拟宇宙DLC文件";
+    public string SummonUnit => "秘技生成";
+    public string SummonUnitInfo => "秘技生成文件";
 
     public string DatabaseAccount => "数据库账号";
 }
