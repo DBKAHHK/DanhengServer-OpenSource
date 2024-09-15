@@ -13,6 +13,6 @@ public class HandlerGetServerPrefsDataCsReq : Handler
 
         var info = connection.Player!.ServerPrefsData?.ServerPrefsDict.GetValueOrDefault((int)req.ServerPrefsId);
 
-        await connection.SendPacket(new PacketGetServerPrefsDataScRsp(info, req.ServerPrefsId));
+        //await connection.SendPacket(new PacketGetServerPrefsDataScRsp(info, req.ServerPrefsId));
     }
 }
