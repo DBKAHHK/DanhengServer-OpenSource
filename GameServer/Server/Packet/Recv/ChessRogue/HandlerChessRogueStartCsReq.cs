@@ -14,9 +14,11 @@ public class HandlerChessRogueStartCsReq : Handler
         var difficultyIdList = new List<int>();
         var disableAeonIdList = new List<int>();
 
-        if (req.StartDifficultyIdList != null) difficultyIdList.AddRange(req.StartDifficultyIdList.Select(difficultyId => (int)difficultyId));
+        if (req.StartDifficultyIdList != null)
+            difficultyIdList.AddRange(req.StartDifficultyIdList.Select(difficultyId => (int)difficultyId));
 
-        if (req.DisableAeonIdList != null) disableAeonIdList.AddRange(req.DisableAeonIdList.Select(disableAeonId => (int)disableAeonId));
+        if (req.DisableAeonIdList != null)
+            disableAeonIdList.AddRange(req.DisableAeonIdList.Select(disableAeonId => (int)disableAeonId));
 
         await player.ChessRogueManager!.StartRogue((int)req.AeonId, [.. req.BaseAvatarIdList], (int)req.Id,
             (int)req.BranchId, difficultyIdList, disableAeonIdList);

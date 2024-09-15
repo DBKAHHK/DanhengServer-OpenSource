@@ -1,8 +1,6 @@
 ﻿using System.Collections.Concurrent;
 using System.Globalization;
-using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Account;
-using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Database.Quests;
 using EggLink.DanhengServer.Internationalization;
 using EggLink.DanhengServer.Util;
@@ -19,8 +17,8 @@ public class DatabaseHelper
     public static readonly List<int> ToSaveUidList = [];
     public static long LastSaveTick = DateTime.UtcNow.Ticks;
     public static Thread? SaveThread;
-    public static bool LoadAccount = false;
-    public static bool LoadAllData = false;
+    public static bool LoadAccount;
+    public static bool LoadAllData;
 
     public DatabaseHelper()
     {
@@ -101,7 +99,7 @@ public class DatabaseHelper
         {
             Parallel.ForEach(types, t =>
             {
-                if (t == typeof(AccountData)) return;  // skip the account data
+                if (t == typeof(AccountData)) return; // skip the account data
 
                 typeof(DatabaseHelper).GetMethod(nameof(InitializeTable))?.MakeGenericMethod(t)
                     .Invoke(null, [account.Uid]);
@@ -110,7 +108,6 @@ public class DatabaseHelper
 
         while (!res.IsCompleted)
         {
-
         }
 
         LastSaveTick = DateTime.UtcNow.Ticks;

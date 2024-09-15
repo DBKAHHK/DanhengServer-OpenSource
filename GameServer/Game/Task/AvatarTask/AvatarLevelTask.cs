@@ -1,6 +1,4 @@
-﻿using EggLink.DanhengServer.Data.Config.Scene;
-using EggLink.DanhengServer.Data.Config.Task;
-using EggLink.DanhengServer.Data.Excel;
+﻿using EggLink.DanhengServer.Data.Config.Task;
 using EggLink.DanhengServer.GameServer.Game.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
@@ -10,14 +8,21 @@ namespace EggLink.DanhengServer.GameServer.Game.Task.AvatarTask;
 
 public class AvatarLevelTask
 {
+    #region Task Condition
+
+    public bool ByIsContainAdventureModifier(TaskConfigInfo act, List<IGameEntity> targetEntities,
+        EntitySummonUnit? summonUnit)
+    {
+        return true;
+    }
+
+    #endregion
+
     #region Manage
 
     public void TriggerTasks(List<TaskConfigInfo> tasks, List<IGameEntity> targetEntities, EntitySummonUnit? summonUnit)
     {
-        foreach (var task in tasks)
-        {
-            TriggerTask(task, targetEntities, summonUnit);
-        }
+        foreach (var task in tasks) TriggerTask(task, targetEntities, summonUnit);
     }
 
     public void TriggerTask(TaskConfigInfo act, List<IGameEntity> targetEntities, EntitySummonUnit? summonUnit)
@@ -38,7 +43,8 @@ public class AvatarLevelTask
 
     #region Task
 
-    public async ValueTask PredicateTaskList(TaskConfigInfo act, List<IGameEntity> targetEntities, EntitySummonUnit? summonUnit)
+    public async ValueTask PredicateTaskList(TaskConfigInfo act, List<IGameEntity> targetEntities,
+        EntitySummonUnit? summonUnit)
     {
         if (act is PredicateTaskList predicateTaskList)
         {
@@ -61,7 +67,8 @@ public class AvatarLevelTask
         await ValueTask.CompletedTask;
     }
 
-    public async ValueTask AddMazeBuff(TaskConfigInfo act, List<IGameEntity> targetEntities, EntitySummonUnit? summonUnit)
+    public async ValueTask AddMazeBuff(TaskConfigInfo act, List<IGameEntity> targetEntities,
+        EntitySummonUnit? summonUnit)
     {
         if (act is not AddMazeBuff addMazeBuff) return;
 
@@ -81,7 +88,8 @@ public class AvatarLevelTask
         }
     }
 
-    public async ValueTask RemoveMazeBuff(TaskConfigInfo act, List<IGameEntity> targetEntities, EntitySummonUnit? summonUnit)
+    public async ValueTask RemoveMazeBuff(TaskConfigInfo act, List<IGameEntity> targetEntities,
+        EntitySummonUnit? summonUnit)
     {
         if (act is not RemoveMazeBuff removeMazeBuff) return;
 
@@ -93,7 +101,8 @@ public class AvatarLevelTask
         }
     }
 
-    public async ValueTask RefreshMazeBuffTime(TaskConfigInfo act, List<IGameEntity> targetEntities, EntitySummonUnit? summonUnit)
+    public async ValueTask RefreshMazeBuffTime(TaskConfigInfo act, List<IGameEntity> targetEntities,
+        EntitySummonUnit? summonUnit)
     {
         if (act is not RefreshMazeBuffTime refreshMazeBuffTime) return;
 
@@ -111,7 +120,8 @@ public class AvatarLevelTask
         }
     }
 
-    public async ValueTask TriggerHitProp(TaskConfigInfo act, List<IGameEntity> targetEntities, EntitySummonUnit? summonUnit)
+    public async ValueTask TriggerHitProp(TaskConfigInfo act, List<IGameEntity> targetEntities,
+        EntitySummonUnit? summonUnit)
     {
         foreach (var targetEntity in targetEntities)
         {
@@ -125,7 +135,8 @@ public class AvatarLevelTask
             else if (prop.Excel.IsHpRecover)
             {
                 prop.Scene.Player.LineupManager!.GetCurLineup()!.Heal(2000, false);
-                await prop.Scene.Player.SendPacket(new PacketSyncLineupNotify(prop.Scene.Player.LineupManager!.GetCurLineup()!));
+                await prop.Scene.Player.SendPacket(
+                    new PacketSyncLineupNotify(prop.Scene.Player.LineupManager!.GetCurLineup()!));
             }
             else
             {
@@ -134,15 +145,6 @@ public class AvatarLevelTask
 
             prop.Scene.Player.RogueManager!.GetRogueInstance()?.OnPropDestruct(prop);
         }
-    }
-
-    #endregion
-
-    #region Task Condition
-
-    public bool ByIsContainAdventureModifier(TaskConfigInfo act, List<IGameEntity> targetEntities, EntitySummonUnit? summonUnit)
-    {
-        return true;
     }
 
     #endregion

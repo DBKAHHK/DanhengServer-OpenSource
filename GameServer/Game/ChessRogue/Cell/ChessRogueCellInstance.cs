@@ -178,7 +178,6 @@ public class ChessRogueCellInstance
 
         if (CellAdvanceInfo.Count <= 0) return info;
         if (SelectedDecayId.Count > 0)
-        {
             info.StageInfo = new CellAdvanceInfo
             {
                 FinalBossInfo = new CellFinalMonsterInfo
@@ -194,7 +193,6 @@ public class ChessRogueCellInstance
                     }
                 }
             };
-        }
         else
             info.StageInfo = new CellAdvanceInfo
             {

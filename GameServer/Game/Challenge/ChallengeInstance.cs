@@ -137,17 +137,12 @@ public class ChallengeInstance
         };
 
         if (Excel.IsBoss())
-        {
             proto.StageInfo.CurBossBuffs = new ChallengeBossBuffList
             {
                 ChallengeBossConst = 1
             };
-        }
 
-        if (Excel.IsStory())
-        {
-            proto.StageInfo.CurStoryBuffs = new ChallengeStoryBuffList();
-        }
+        if (Excel.IsStory()) proto.StageInfo.CurStoryBuffs = new ChallengeStoryBuffList();
 
         if (StoryBuffs.Count >= CurrentStage)
             proto.StageInfo.CurStoryBuffs.BuffList.Add(StoryBuffs.Select(x => (uint)x));
@@ -177,7 +172,8 @@ public class ChallengeInstance
                 LBOJBINABDG = true
             };
 
-            foreach (var lineupAvatar in Player.LineupManager?.GetExtraLineup(ExtraLineupType.LineupChallenge)?.BaseAvatars ?? [])
+            foreach (var lineupAvatar in Player.LineupManager?.GetExtraLineup(ExtraLineupType.LineupChallenge)
+                         ?.BaseAvatars ?? [])
             {
                 var avatar = Player.AvatarManager?.GetAvatar(lineupAvatar.BaseAvatarId);
                 if (avatar == null) continue;
@@ -185,7 +181,8 @@ public class ChallengeInstance
                 var equip = Player.InventoryManager?.GetItem(0, avatar.GetCurPathInfo().EquipId,
                     ItemMainTypeEnum.Equipment);
                 if (equip != null)
-                    proto.BossInfo.ChallengeAvatarEquipmentMap.Add((uint)avatar.GetAvatarId(), equip.ToChallengeEquipmentProto());
+                    proto.BossInfo.ChallengeAvatarEquipmentMap.Add((uint)avatar.GetAvatarId(),
+                        equip.ToChallengeEquipmentProto());
 
                 var relicProto = new ChallengeBossAvatarRelicInfo();
 
@@ -195,10 +192,12 @@ public class ChallengeInstance
                     if (relic == null) continue;
                     relicProto.AvatarRelicSlotMap.Add((uint)relicUniqueId.Key, relic.ToChallengeRelicProto());
                 }
+
                 proto.BossInfo.ChallengeAvatarRelicMap.Add((uint)avatar.GetAvatarId(), relicProto);
             }
 
-            foreach (var lineupAvatar in Player.LineupManager?.GetExtraLineup(ExtraLineupType.LineupChallenge2)?.BaseAvatars ?? [])
+            foreach (var lineupAvatar in Player.LineupManager?.GetExtraLineup(ExtraLineupType.LineupChallenge2)
+                         ?.BaseAvatars ?? [])
             {
                 var avatar = Player.AvatarManager?.GetAvatar(lineupAvatar.BaseAvatarId);
                 if (avatar == null) continue;
@@ -206,7 +205,8 @@ public class ChallengeInstance
                 var equip = Player.InventoryManager?.GetItem(0, avatar.GetCurPathInfo().EquipId,
                     ItemMainTypeEnum.Equipment);
                 if (equip != null)
-                    proto.BossInfo.ChallengeAvatarEquipmentMap.Add((uint)avatar.GetAvatarId(), equip.ToChallengeEquipmentProto());
+                    proto.BossInfo.ChallengeAvatarEquipmentMap.Add((uint)avatar.GetAvatarId(),
+                        equip.ToChallengeEquipmentProto());
 
                 var relicProto = new ChallengeBossAvatarRelicInfo();
 
@@ -216,6 +216,7 @@ public class ChallengeInstance
                     if (relic == null) continue;
                     relicProto.AvatarRelicSlotMap.Add((uint)relicUniqueId.Key, relic.ToChallengeRelicProto());
                 }
+
                 proto.BossInfo.ChallengeAvatarRelicMap.Add((uint)avatar.GetAvatarId(), relicProto);
             }
         }
@@ -272,9 +273,7 @@ public class ChallengeInstance
             // Calculate score for current stage
             var stageScore = 0;
             foreach (var battleTarget in req.Stt.BattleTargetInfo[1].BattleTargetList_)
-            {
                 stageScore += (int)battleTarget.Progress;
-            }
 
             // Set score
             if (CurrentStage == 1)
@@ -376,7 +375,9 @@ public class ChallengeInstance
                     await Player.SceneInstance!.EntityLoader!.LoadGroup(Excel.MazeGroupID2);
                 }
                 else
+                {
                     await Player.MoveTo(StartPos, StartRot);
+                }
             }
         }
     }
@@ -403,7 +404,9 @@ public class ChallengeInstance
             await Player.SceneInstance!.EntityLoader!.LoadGroup(Excel.MazeGroupID2);
         }
         else
+        {
             await Player.MoveTo(StartPos, StartRot);
+        }
     }
 
     public void OnUpdate()

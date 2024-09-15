@@ -327,7 +327,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
     }
 
     /// <summary>
-    /// Get item by itemId and uniqueId, if uniqueId provided, itemId will be ignored
+    ///     Get item by itemId and uniqueId, if uniqueId provided, itemId will be ignored
     /// </summary>
     /// <param name="itemId"></param>
     /// <param name="uniqueId"></param>
@@ -343,9 +343,13 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
             case ItemMainTypeEnum.Material:
                 return Data.MaterialItems.Find(x => x.ItemId == itemId);
             case ItemMainTypeEnum.Equipment:
-                return uniqueId > 0 ? Data.EquipmentItems.Find(x => x.UniqueId == uniqueId) : Data.EquipmentItems.Find(x => x.ItemId == itemId);
+                return uniqueId > 0
+                    ? Data.EquipmentItems.Find(x => x.UniqueId == uniqueId)
+                    : Data.EquipmentItems.Find(x => x.ItemId == itemId);
             case ItemMainTypeEnum.Relic:
-                return uniqueId > 0 ? Data.RelicItems.Find(x => x.UniqueId == uniqueId) : Data.RelicItems.Find(x => x.ItemId == itemId);
+                return uniqueId > 0
+                    ? Data.RelicItems.Find(x => x.UniqueId == uniqueId)
+                    : Data.RelicItems.Find(x => x.ItemId == itemId);
             case ItemMainTypeEnum.Virtual:
                 switch (itemConfig?.ID ?? 0)
                 {

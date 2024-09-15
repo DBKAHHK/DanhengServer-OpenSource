@@ -23,8 +23,9 @@ public class ChessRogueNousDiceData
             BranchId = (uint)BranchId,
             SurfaceList =
             {
-                Surfaces.Select(x => new ChessRogueDiceSurfaceInfo { DiceSlotId = (uint)x.Key, DiceSurfaceId = (uint)x.Value })
-            },
+                Surfaces.Select(x => new ChessRogueDiceSurfaceInfo
+                    { DiceSlotId = (uint)x.Key, DiceSurfaceId = (uint)x.Value })
+            }
             //MaxAreaId = (uint)AreaId,
             //MaxDifficultyLevel = (uint)DifficultyLevel
         };

@@ -95,15 +95,14 @@ public class PlayerData : BaseDatabaseDataHelper
         };
 
         var pos = 0;
-        foreach (var avatar in instance.AssistAvatars.Select(assist => instance.Avatars.Find(x => x.AvatarId == assist)!))
-        {
+        foreach (var avatar in instance.AssistAvatars.Select(
+                     assist => instance.Avatars.Find(x => x.AvatarId == assist)!))
             info.AssistSimpleInfoList.Add(new AssistSimpleInfo
             {
                 AvatarId = (uint)avatar.AvatarId,
                 Level = (uint)avatar.Level,
                 Pos = (uint)pos++
             });
-        }
 
         return info;
     }
@@ -133,16 +132,14 @@ public class PlayerData : BaseDatabaseDataHelper
         }
 
         var pos = 0;
-        foreach (var avatar in avatarInfo.AssistAvatars.Select(assist => avatarInfo.Avatars.Find(x => x.AvatarId == assist)!))
-        {
+        foreach (var avatar in avatarInfo.AssistAvatars.Select(assist =>
+                     avatarInfo.Avatars.Find(x => x.AvatarId == assist)!))
             info.AssistAvatarList.Add(avatar.ToDetailProto(pos++));
-        }
 
         pos = 0;
-        foreach (var avatar in avatarInfo.DisplayAvatars.Select(display => avatarInfo.Avatars.Find(x => x.AvatarId == display)!))
-        {
+        foreach (var avatar in avatarInfo.DisplayAvatars.Select(display =>
+                     avatarInfo.Avatars.Find(x => x.AvatarId == display)!))
             info.DisplayAvatarList.Add(avatar.ToDetailProto(pos++));
-        }
 
         return info;
     }

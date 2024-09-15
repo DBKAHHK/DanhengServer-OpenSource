@@ -30,8 +30,7 @@ public class StageConfigExcel : ExcelResource
             var proto = new SceneMonsterWave
             {
                 BattleWaveId = (uint)waveId++,
-                BattleStageId = (uint)StageID,
-                DropList = {  }
+                BattleStageId = (uint)StageID
             };
 
             if (monsters.Monster0 != 0)

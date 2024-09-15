@@ -1,14 +1,14 @@
 ﻿using EggLink.DanhengServer.GameServer.Game.Challenge;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
-using Google.Protobuf.Collections;
 
 namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Challenge;
 
 public class PacketChallengeBossPhaseSettleNotify : BasePacket
 {
-    public PacketChallengeBossPhaseSettleNotify(ChallengeInstance challenge, BattleTargetList? targetLists = null) : base(CmdIds
-        .ChallengeBossPhaseSettleNotify)
+    public PacketChallengeBossPhaseSettleNotify(ChallengeInstance challenge, BattleTargetList? targetLists = null) :
+        base(CmdIds
+            .ChallengeBossPhaseSettleNotify)
     {
         var proto = new ChallengeBossPhaseSettleNotify
         {

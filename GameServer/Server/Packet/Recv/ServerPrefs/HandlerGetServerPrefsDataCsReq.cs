@@ -1,5 +1,4 @@
-﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.ServerPrefs;
-using EggLink.DanhengServer.Kcp;
+﻿using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
 
 namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.ServerPrefs;

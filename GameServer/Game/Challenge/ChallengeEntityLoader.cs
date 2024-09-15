@@ -58,9 +58,9 @@ public class ChallengeEntityLoader(SceneInstance scene, PlayerInstance player) :
         // Get current stage monster infos
         Dictionary<int, ChallengeConfigExcel.ChallengeMonsterInfo> challengeMonsters;
         if (instance.Excel.MazeGroupID1 == group.Id || instance.Excel.MazeGroupID2 == group.Id)
-        {
-            challengeMonsters = instance.CurrentStage == 1 ? instance.Excel.ChallengeMonsters1 : instance.Excel.ChallengeMonsters2;
-        }
+            challengeMonsters = instance.CurrentStage == 1
+                ? instance.Excel.ChallengeMonsters1
+                : instance.Excel.ChallengeMonsters2;
         else
             return null;
 

@@ -38,21 +38,9 @@ public class EntityMonster(
     public async ValueTask AddBuff(SceneBuff buff)
     {
         var oldBuff = BuffList.Find(x => x.BuffId == buff.BuffId);
-        if (oldBuff != null)
-        {
-            BuffList.Remove(oldBuff);
-        }
+        if (oldBuff != null) BuffList.Remove(oldBuff);
         BuffList.Add(buff);
         await Scene.Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, buff));
-    }
-
-    public async ValueTask RemoveBuff(int buffId)
-    {
-        var buff = BuffList.Find(x => x.BuffId == buffId);
-        if (buff == null) return;
-
-        BuffList.Remove(buff);
-        await Scene.Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, [buff]));
     }
 
     public async ValueTask ApplyBuff(BattleInstance instance)
@@ -95,6 +83,15 @@ public class EntityMonster(
                 WorldLevel = (uint)Scene.Player.Data.WorldLevel
             }
         };
+    }
+
+    public async ValueTask RemoveBuff(int buffId)
+    {
+        var buff = BuffList.Find(x => x.BuffId == buffId);
+        if (buff == null) return;
+
+        BuffList.Remove(buff);
+        await Scene.Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, [buff]));
     }
 
     public int GetStageId()

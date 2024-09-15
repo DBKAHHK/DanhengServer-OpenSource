@@ -71,7 +71,9 @@ public class RogueTournManager(PlayerInstance player) : BasePlayerManager(player
         return (from areaExcel in GameData.RogueTournAreaData
                 where areaExcel.Value.AreaGroupID != RogueTournAreaGroupIDEnum.WeekChallenge
                 select new RogueTournAreaInfo
-                    { AreaId = (uint)areaExcel.Value.AreaID, IsTournFinish = true, IsTakenReward = true, IsUnlock = true })
+                {
+                    AreaId = (uint)areaExcel.Value.AreaID, IsTournFinish = true, IsTakenReward = true, IsUnlock = true
+                })
             .ToList();
     }
 

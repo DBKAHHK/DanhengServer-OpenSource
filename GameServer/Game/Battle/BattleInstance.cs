@@ -80,7 +80,8 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
         t.Wait();
 
         if (CollegeConfigExcel == null ||
-            Player.BattleCollegeData?.FinishedCollegeIdList.Contains(CollegeConfigExcel.ID) != false) return list; // if college excel is not null and college is not finished
+            Player.BattleCollegeData?.FinishedCollegeIdList.Contains(CollegeConfigExcel.ID) != false)
+            return list; // if college excel is not null and college is not finished
 
         // finish it 
         Player.BattleCollegeData.FinishedCollegeIdList.Add(CollegeConfigExcel.ID);
@@ -119,29 +120,24 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
         List<int> list = [.. excel.TrialAvatarList];
 
         // if college excel is not null
-        if (CollegeConfigExcel is { TrialAvatarList.Count: > 0 })
-        {
-            list = [.. CollegeConfigExcel.TrialAvatarList];
-        }
+        if (CollegeConfigExcel is { TrialAvatarList.Count: > 0 }) list = [.. CollegeConfigExcel.TrialAvatarList];
 
         if (list.Count > 0)
         {
             List<int> tempList = [.. list];
             if (Player.Data.CurrentGender == Gender.Man)
-            {
-                foreach (var avatar in tempList.Where(avatar => GameData.SpecialAvatarData.TryGetValue(avatar * 10 + 0, out var specialAvatarExcel) &&
-                                                                specialAvatarExcel.AvatarID is 8002 or 8004 or 8006))
+                foreach (var avatar in tempList.Where(avatar =>
+                             GameData.SpecialAvatarData.TryGetValue(avatar * 10 + 0, out var specialAvatarExcel) &&
+                             specialAvatarExcel.AvatarID is 8002 or 8004 or 8006))
                     list.Remove(avatar);
-            }
             else
-            {
-                foreach (var avatar in tempList.Where(avatar => GameData.SpecialAvatarData.TryGetValue(avatar * 10 + 0, out var specialAvatarExcel) &&
-                                                                specialAvatarExcel.AvatarID is 8001 or 8003 or 8005))
+                foreach (var avatar in tempList.Where(avatar =>
+                             GameData.SpecialAvatarData.TryGetValue(avatar * 10 + 0, out var specialAvatarExcel) &&
+                             specialAvatarExcel.AvatarID is 8001 or 8003 or 8005))
                     list.Remove(avatar);
-            }
         }
 
-        if (list.Count > 0)  // if list is not empty
+        if (list.Count > 0) // if list is not empty
         {
             Dictionary<AvatarInfo, AvatarType> dict = [];
             foreach (var avatar in list)
@@ -171,7 +167,7 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
         else
         {
             Dictionary<AvatarInfo, AvatarType> dict = [];
-            foreach (var avatar in Lineup.BaseAvatars!)  // if list is empty, use scene lineup
+            foreach (var avatar in Lineup.BaseAvatars!) // if list is empty, use scene lineup
             {
                 AvatarInfo? avatarInstance = null;
                 var avatarType = AvatarType.AvatarFormalType;
@@ -237,10 +233,10 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
             foreach (var monster in EntityMonsters) await monster.ApplyBuff(this);
 
             foreach (var avatar in AvatarInfo)
-            {
-                if (avatars.Keys.FirstOrDefault(x => x.GetSpecialAvatarId() == avatar.AvatarInfo.GetSpecialAvatarId()) != null)  // if avatar is in lineup
+                if (avatars.Keys.FirstOrDefault(x =>
+                        x.GetSpecialAvatarId() == avatar.AvatarInfo.GetSpecialAvatarId()) !=
+                    null) // if avatar is in lineup
                     await avatar.ApplyBuff(this);
-            }
         }).Wait();
 
         foreach (var eventInstance in BattleEvents.Values) proto.BattleEvent.Add(eventInstance.ToProto());
@@ -250,9 +246,7 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
             var battleTargetEntry = new BattleTargetList();
 
             if (BattleTargets.TryGetValue(i, out var battleTargetList))
-            {
                 battleTargetEntry.BattleTargetList_.AddRange(battleTargetList.BattleTargetList_);
-            }
 
             proto.BattleTargetInfo.Add((uint)i, battleTargetEntry);
         }

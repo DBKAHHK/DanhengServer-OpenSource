@@ -60,7 +60,10 @@ public class ResourceManager
         foreach (var cls in resList) cls.AfterAllDone();
     }
 
-    public static List<T>? LoadSingleExcel<T>(Type cls) where T : ExcelResource, new() => LoadSingleExcelResource(cls) as List<T>;
+    public static List<T>? LoadSingleExcel<T>(Type cls) where T : ExcelResource, new()
+    {
+        return LoadSingleExcelResource(cls) as List<T>;
+    }
 
     public static List<ExcelResource>? LoadSingleExcelResource(Type cls)
     {
@@ -89,52 +92,52 @@ public class ResourceManager
                     switch (reader.TokenType)
                     {
                         case JsonToken.StartArray:
+                        {
+                            // array
+                            var jArray = JArray.Parse(json);
+                            foreach (var item in jArray)
                             {
-                                // array
-                                var jArray = JArray.Parse(json);
-                                foreach (var item in jArray)
-                                {
-                                    var res = JsonConvert.DeserializeObject(item.ToString(), cls);
-                                    resList.Add((ExcelResource)res!);
-                                    ((ExcelResource?)res)?.Loaded();
-                                    count++;
-                                }
-
-                                break;
+                                var res = JsonConvert.DeserializeObject(item.ToString(), cls);
+                                resList.Add((ExcelResource)res!);
+                                ((ExcelResource?)res)?.Loaded();
+                                count++;
                             }
+
+                            break;
+                        }
                         case JsonToken.StartObject:
+                        {
+                            // dictionary
+                            var jObject = JObject.Parse(json);
+                            foreach (var (_, obj) in jObject)
                             {
-                                // dictionary
-                                var jObject = JObject.Parse(json);
-                                foreach (var (_, obj) in jObject)
+                                var instance = JsonConvert.DeserializeObject(obj!.ToString(), cls);
+
+                                if (((ExcelResource?)instance)?.GetId() == 0 || (ExcelResource?)instance == null)
                                 {
-                                    var instance = JsonConvert.DeserializeObject(obj!.ToString(), cls);
+                                    // Deserialize as JObject to handle nested dictionaries
+                                    var nestedObject = JsonConvert.DeserializeObject<JObject>(obj.ToString());
 
-                                    if (((ExcelResource?)instance)?.GetId() == 0 || (ExcelResource?)instance == null)
+                                    foreach (var nestedItem in nestedObject ?? [])
                                     {
-                                        // Deserialize as JObject to handle nested dictionaries
-                                        var nestedObject = JsonConvert.DeserializeObject<JObject>(obj.ToString());
-
-                                        foreach (var nestedItem in nestedObject ?? [])
-                                        {
-                                            var nestedInstance =
-                                                JsonConvert.DeserializeObject(nestedItem.Value!.ToString(), cls);
-                                            resList.Add((ExcelResource)nestedInstance!);
-                                            ((ExcelResource?)nestedInstance)?.Loaded();
-                                            count++;
-                                        }
+                                        var nestedInstance =
+                                            JsonConvert.DeserializeObject(nestedItem.Value!.ToString(), cls);
+                                        resList.Add((ExcelResource)nestedInstance!);
+                                        ((ExcelResource?)nestedInstance)?.Loaded();
+                                        count++;
                                     }
-                                    else
-                                    {
-                                        resList.Add((ExcelResource)instance);
-                                        ((ExcelResource)instance).Loaded();
-                                    }
-
-                                    count++;
+                                }
+                                else
+                                {
+                                    resList.Add((ExcelResource)instance);
+                                    ((ExcelResource)instance).Loaded();
                                 }
 
-                                break;
+                                count++;
                             }
+
+                            break;
+                        }
                     }
                 }
 
@@ -237,18 +240,13 @@ public class ResourceManager
         });
 
         // wait it done
-        while (!res.IsCompleted)
-        {
-            Thread.Sleep(10);
-        }
+        while (!res.IsCompleted) Thread.Sleep(10);
 
         if (missingGroupInfos)
-        {
             Logger.Warn(I18NManager.Translate("Server.ServerInfo.ConfigMissing",
                 I18NManager.Translate("Word.FloorGroupInfo"),
                 $"{ConfigManager.Config.Path.ResourcePath}/Config/LevelOutput/SharedRuntimeGroup",
                 I18NManager.Translate("Word.FloorGroupMissingResult")));
-        }
 
         Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItems", GameData.FloorInfoData.Count.ToString(),
             I18NManager.Translate("Word.FloorInfo")));
@@ -294,10 +292,7 @@ public class ResourceManager
         });
 
         // wait it done
-        while (!res.IsCompleted)
-        {
-            Thread.Sleep(10);
-        }
+        while (!res.IsCompleted) Thread.Sleep(10);
 
         if (missingMissionInfos)
             Logger.Warn(I18NManager.Translate("Server.ServerInfo.ConfigMissing",
@@ -392,10 +387,7 @@ public class ResourceManager
         });
 
         // wait it done
-        while (!res.IsCompleted)
-        {
-            Thread.Sleep(10);
-        }
+        while (!res.IsCompleted) Thread.Sleep(10);
 
         if (count < GameData.AdventurePlayerData.Count)
             Logger.Warn(I18NManager.Translate("Server.ServerInfo.ConfigMissing",
@@ -438,10 +430,7 @@ public class ResourceManager
         });
 
         // wait it done
-        while (!res.IsCompleted)
-        {
-            Thread.Sleep(10);
-        }
+        while (!res.IsCompleted) Thread.Sleep(10);
 
         if (count < GameData.SummonUnitDataData.Count)
             Logger.Warn(I18NManager.Translate("Server.ServerInfo.ConfigMissing",
@@ -482,10 +471,7 @@ public class ResourceManager
         });
 
         // wait it done
-        while (!res.IsCompleted)
-        {
-            Thread.Sleep(10);
-        }
+        while (!res.IsCompleted) Thread.Sleep(10);
 
         if (count < GameData.RogueNPCData.Count)
             Logger.Warn(I18NManager.Translate("Server.ServerInfo.ConfigMissing",
@@ -562,10 +548,7 @@ public class ResourceManager
         });
 
         // wait it done
-        while (!(res.IsCompleted && res2.IsCompleted))
-        {
-            Thread.Sleep(10);
-        }
+        while (!(res.IsCompleted && res2.IsCompleted)) Thread.Sleep(10);
 
         if (count < GameData.PerformanceEData.Count + GameData.PerformanceDData.Count)
         {
@@ -608,10 +591,7 @@ public class ResourceManager
         });
 
         // wait it done
-        while (!res.IsCompleted)
-        {
-            Thread.Sleep(10);
-        }
+        while (!res.IsCompleted) Thread.Sleep(10);
 
         if (count < GameData.SubMissionData.Count)
         {

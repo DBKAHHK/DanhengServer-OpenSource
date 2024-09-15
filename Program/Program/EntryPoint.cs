@@ -34,7 +34,8 @@ public class EntryPoint
         };
         AppDomain.CurrentDomain.UnhandledException += (obj, arg) =>
         {
-            Logger.Error(I18NManager.Translate("Server.ServerInfo.UnhandledException", obj.GetType().Name), (Exception)arg.ExceptionObject);
+            Logger.Error(I18NManager.Translate("Server.ServerInfo.UnhandledException", obj.GetType().Name),
+                (Exception)arg.ExceptionObject);
             Logger.Info(I18NManager.Translate("Server.ServerInfo.Shutdown"));
             PerformCleanup();
             Environment.Exit(1);
@@ -93,14 +94,12 @@ public class EntryPoint
         // Initialize the database
         try
         {
-            _ = Task.Run(DatabaseHelper.Initialize);  // do not wait
+            _ = Task.Run(DatabaseHelper.Initialize); // do not wait
 
-            while (!DatabaseHelper.LoadAccount)
-            {
-                Thread.Sleep(100);
-            }
+            while (!DatabaseHelper.LoadAccount) Thread.Sleep(100);
 
-            Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItem", I18NManager.Translate("Word.DatabaseAccount")));
+            Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItem",
+                I18NManager.Translate("Word.DatabaseAccount")));
             Logger.Warn(I18NManager.Translate("Server.ServerInfo.WaitForAllDone"));
         }
         catch (Exception e)
@@ -229,9 +228,7 @@ public class EntryPoint
             var t = Task.Run(() =>
             {
                 while (!DatabaseHelper.LoadAllData) // wait for all data to be loaded
-                {
                     Thread.Sleep(100);
-                }
             });
 
             await t.WaitAsync(new CancellationToken());
