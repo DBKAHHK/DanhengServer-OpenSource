@@ -31,6 +31,9 @@ public class ChallengeEntityLoader(SceneInstance scene, PlayerInstance player) :
         Scene.LeaveEntryId =
             instance.IsStory() ? GameConstants.CHALLENGE_STORY_ENTRANCE : GameConstants.CHALLENGE_ENTRANCE;
 
+        if (instance.IsBoss())
+            Scene.LeaveEntryId = GameConstants.CHALLENGE_BOSS_ENTRANCE;
+
         foreach (var group in Scene.FloorInfo.Groups.Values)
         {
             // Skip non-server groups

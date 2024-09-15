@@ -1,4 +1,6 @@
-﻿using EggLink.DanhengServer.Data.Config.Task;
+﻿using EggLink.DanhengServer.Data.Config.Scene;
+using EggLink.DanhengServer.Data.Config.Task;
+using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.GameServer.Game.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
@@ -35,6 +37,29 @@ public class AvatarLevelTask
     #endregion
 
     #region Task
+
+    public async ValueTask PredicateTaskList(TaskConfigInfo act, List<IGameEntity> targetEntities, EntitySummonUnit? summonUnit)
+    {
+        if (act is PredicateTaskList predicateTaskList)
+        {
+            // handle predicateCondition
+            var methodName = predicateTaskList.Predicate.Type.Replace("RPG.GameCore.", "");
+
+            var method = GetType().GetMethod(methodName);
+            if (method != null)
+            {
+                var resp = method.Invoke(this, [predicateTaskList.Predicate, targetEntities, summonUnit]);
+                if (resp is bool res && res)
+                    foreach (var task in predicateTaskList.SuccessTaskList)
+                        TriggerTask(task, targetEntities, summonUnit);
+                else
+                    foreach (var task in predicateTaskList.FailedTaskList)
+                        TriggerTask(task, targetEntities, summonUnit);
+            }
+        }
+
+        await ValueTask.CompletedTask;
+    }
 
     public async ValueTask AddMazeBuff(TaskConfigInfo act, List<IGameEntity> targetEntities, EntitySummonUnit? summonUnit)
     {
@@ -109,6 +134,15 @@ public class AvatarLevelTask
 
             prop.Scene.Player.RogueManager!.GetRogueInstance()?.OnPropDestruct(prop);
         }
+    }
+
+    #endregion
+
+    #region Task Condition
+
+    public bool ByIsContainAdventureModifier(TaskConfigInfo act, List<IGameEntity> targetEntities, EntitySummonUnit? summonUnit)
+    {
+        return true;
     }
 
     #endregion

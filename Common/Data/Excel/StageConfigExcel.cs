@@ -30,33 +30,40 @@ public class StageConfigExcel : ExcelResource
             var proto = new SceneMonsterWave
             {
                 BattleWaveId = (uint)waveId++,
-                BattleStageId = (uint)StageID
+                BattleStageId = (uint)StageID,
+                DropList = {  }
             };
 
-            proto.MonsterList.Add(new SceneMonster
-            {
-                MonsterId = (uint)monsters.Monster0
-            });
+            if (monsters.Monster0 != 0)
+                proto.MonsterList.Add(new SceneMonster
+                {
+                    MonsterId = (uint)monsters.Monster0
+                });
 
-            proto.MonsterList.Add(new SceneMonster
-            {
-                MonsterId = (uint)monsters.Monster1
-            });
 
-            proto.MonsterList.Add(new SceneMonster
-            {
-                MonsterId = (uint)monsters.Monster2
-            });
+            if (monsters.Monster1 != 0)
+                proto.MonsterList.Add(new SceneMonster
+                {
+                    MonsterId = (uint)monsters.Monster1
+                });
 
-            proto.MonsterList.Add(new SceneMonster
-            {
-                MonsterId = (uint)monsters.Monster3
-            });
+            if (monsters.Monster2 != 0)
+                proto.MonsterList.Add(new SceneMonster
+                {
+                    MonsterId = (uint)monsters.Monster2
+                });
 
-            proto.MonsterList.Add(new SceneMonster
-            {
-                MonsterId = (uint)monsters.Monster4
-            });
+            if (monsters.Monster3 != 0)
+                proto.MonsterList.Add(new SceneMonster
+                {
+                    MonsterId = (uint)monsters.Monster3
+                });
+
+            if (monsters.Monster4 != 0)
+                proto.MonsterList.Add(new SceneMonster
+                {
+                    MonsterId = (uint)monsters.Monster4
+                });
 
             proto.MonsterParam = new SceneMonsterWaveParam();
             result.Add(proto);

@@ -456,6 +456,21 @@ public class SceneInstance
 
     public async ValueTask OnHeartBeat()
     {
+        foreach (var gameEntity in Entities.Values.Clone().Where(x => x is EntityMonster).OfType<EntityMonster>())
+        {
+            foreach (var sceneBuff in gameEntity.BuffList.Clone().Where(sceneBuff => sceneBuff.IsExpired()))
+            {
+                await gameEntity.RemoveBuff(sceneBuff.BuffId);
+            }
+        }
+
+        foreach (var gameEntity in AvatarInfo.Values.Clone())
+        {
+            foreach (var sceneBuff in gameEntity.BuffList.Clone().Where(sceneBuff => sceneBuff.IsExpired()))
+            {
+                await gameEntity.RemoveBuff(sceneBuff.BuffId);
+            }
+        }
         if (SummonUnit == null) return;
         var endTime = SummonUnit.CreateTimeMs + SummonUnit.LifeTimeMs;
 
@@ -505,6 +520,15 @@ public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, Playe
 
         BuffList.Add(buff);
         await player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, buff));
+    }
+
+    public async ValueTask RemoveBuff(int buffId)
+    {
+        var buff = BuffList.Find(x => x.BuffId == buffId);
+        if (buff == null) return;
+
+        BuffList.Remove(buff);
+        await player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, [buff]));
     }
 
     public async ValueTask ApplyBuff(BattleInstance instance)

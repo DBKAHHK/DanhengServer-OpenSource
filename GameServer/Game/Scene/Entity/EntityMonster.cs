@@ -100,9 +100,6 @@ public class EntityMonster(
     public int GetStageId()
     {
         if (CustomStageID > 0) return CustomStageID;
-        var id = Info.EventID * 10 + Scene.Player.Data.WorldLevel;
-        if (GameData.StageConfigData.ContainsKey(id))
-            return id;
         return Info.EventID;
     }
 

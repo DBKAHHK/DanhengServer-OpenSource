@@ -216,8 +216,7 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
             WorldLevel = (uint)WorldLevel,
             RoundsLimit = (uint)RoundLimit,
             StageId = (uint)StageId,
-            LogicRandomSeed = (uint)Random.Shared.Next(),
-            GPNMHCNAODM = new()
+            LogicRandomSeed = (uint)Random.Shared.Next()
         };
 
         foreach (var protoWave in Stages.Select(wave => wave.ToProto()))
