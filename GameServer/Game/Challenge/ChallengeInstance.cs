@@ -182,7 +182,10 @@ public class ChallengeInstance
                 var avatar = Player.AvatarManager?.GetAvatar(lineupAvatar.BaseAvatarId);
                 if (avatar == null) continue;
                 proto.BossInfo.FirstLineup.Add((uint)avatar.GetAvatarId());
-                proto.BossInfo.ChallengeAvatarEquipmentMap.Add((uint)avatar.GetAvatarId(), Player.InventoryManager?.GetItem(0, avatar.GetCurPathInfo().EquipId, ItemMainTypeEnum.Equipment)?.ToChallengeEquipmentProto());  // it wont be null
+                var equip = Player.InventoryManager?.GetItem(0, avatar.GetCurPathInfo().EquipId,
+                    ItemMainTypeEnum.Equipment);
+                if (equip != null)
+                    proto.BossInfo.ChallengeAvatarEquipmentMap.Add((uint)avatar.GetAvatarId(), equip.ToChallengeEquipmentProto());
 
                 var relicProto = new ChallengeBossAvatarRelicInfo();
 
@@ -200,7 +203,10 @@ public class ChallengeInstance
                 var avatar = Player.AvatarManager?.GetAvatar(lineupAvatar.BaseAvatarId);
                 if (avatar == null) continue;
                 proto.BossInfo.FirstLineup.Add((uint)avatar.GetAvatarId());
-                proto.BossInfo.ChallengeAvatarEquipmentMap.Add((uint)avatar.GetAvatarId(), Player.InventoryManager?.GetItem(0, avatar.GetCurPathInfo().EquipId, ItemMainTypeEnum.Equipment)?.ToChallengeEquipmentProto());  // it wont be null
+                var equip = Player.InventoryManager?.GetItem(0, avatar.GetCurPathInfo().EquipId,
+                    ItemMainTypeEnum.Equipment);
+                if (equip != null)
+                    proto.BossInfo.ChallengeAvatarEquipmentMap.Add((uint)avatar.GetAvatarId(), equip.ToChallengeEquipmentProto());
 
                 var relicProto = new ChallengeBossAvatarRelicInfo();
 

@@ -347,7 +347,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
             case ItemMainTypeEnum.Relic:
                 return uniqueId > 0 ? Data.RelicItems.Find(x => x.UniqueId == uniqueId) : Data.RelicItems.Find(x => x.ItemId == itemId);
             case ItemMainTypeEnum.Virtual:
-                switch (itemConfig.ID)
+                switch (itemConfig?.ID ?? 0)
                 {
                     case 1:
                         return new ItemData
