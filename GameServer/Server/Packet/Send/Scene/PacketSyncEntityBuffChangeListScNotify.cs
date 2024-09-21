@@ -28,7 +28,6 @@ public class PacketSyncEntityBuffChangeListScNotify : BasePacket
 
         foreach (var buff in buffs)
         {
-            buff.Duration = 0;
             var change = new EntityBuffChangeInfo
             {
                 EntityId = (uint)entity.EntityID,

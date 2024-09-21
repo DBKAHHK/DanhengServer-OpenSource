@@ -109,7 +109,7 @@ public class AvatarLevelTask
         var buff = new SceneBuff(refreshMazeBuffTime.ID, 1, summonUnit?.CreateAvatarId ?? 0)
         {
             SummonUnitEntityId = summonUnit?.EntityID ?? 0,
-            Duration = refreshMazeBuffTime.LifeTime.GetValue()
+            Duration = refreshMazeBuffTime.LifeTime.GetValue() == 0 ? -1 : refreshMazeBuffTime.LifeTime.GetValue()
         };
 
         foreach (var targetEntity in targetEntities)

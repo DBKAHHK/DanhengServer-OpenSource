@@ -8,6 +8,7 @@ using EggLink.DanhengServer.GameServer.Game.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.BattleCollege;
 using EggLink.DanhengServer.Proto;
+using EggLink.DanhengServer.Util;
 using LineupInfo = EggLink.DanhengServer.Database.Lineup.LineupInfo;
 
 namespace EggLink.DanhengServer.GameServer.Game.Battle;
@@ -249,6 +250,31 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
                 battleTargetEntry.BattleTargetList_.AddRange(battleTargetList.BattleTargetList_);
 
             proto.BattleTargetInfo.Add((uint)i, battleTargetEntry);
+        }
+
+        foreach (var buff in Buffs)
+        {
+            if (buff.WaveFlag != null) continue;
+            var buffs = Buffs.FindAll(x => x.BuffID == buff.BuffID);
+            if (buffs.Count < 2) continue;
+            var count = 0;
+            foreach (var mazeBuff in buffs)
+            {
+                mazeBuff.WaveFlag = (int)Math.Pow(2, count);
+                count++;
+            }
+        }
+
+        foreach (var buff in Buffs.Clone())
+        {
+            if (buff.BuffID == 122003)  // Fei Xiao Maze Buff
+            {
+                Buffs.Add(new MazeBuff(122002, buff.BuffLevel, 0)
+                {
+                    WaveFlag = buff.WaveFlag,
+                    OwnerAvatarId = buff.OwnerAvatarId
+                });
+            }
         }
 
         proto.BuffList.AddRange(Buffs.Select(buff => buff.ToProto(this)));
