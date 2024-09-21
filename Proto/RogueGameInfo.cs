@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static RogueGameInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNSb2d1ZUdhbWVJbmZvLnByb3RvGhpSb2d1ZVRvdXJuTGluZXVwSW5mby5w",
-            "cm90bxoYS2V5d29yZFVubG9ja1ZhbHVlLnByb3RvGhtSb2d1ZVRvdXJuRm9y",
-            "bXVsYUluZm8ucHJvdG8aHlJvZ3VlRGlmZmljdWx0eUxldmVsSW5mby5wcm90",
-            "bxocQ2hlc3NSb2d1ZUdhbWVBZW9uSW5mby5wcm90bxoYUm9ndWVHYW1lSXRl",
-            "bVZhbHVlLnByb3RvGhhDaGVzc1JvZ3VlQnVmZkluZm8ucHJvdG8aG0NoZXNz",
-            "Um9ndWVNaXJhY2xlSW5mby5wcm90byKTAwoNUm9ndWVHYW1lSW5mbxIsCg9y",
+            "ChNSb2d1ZUdhbWVJbmZvLnByb3RvGhtSb2d1ZVRvdXJuRm9ybXVsYUluZm8u",
+            "cHJvdG8aGEtleXdvcmRVbmxvY2tWYWx1ZS5wcm90bxobQ2hlc3NSb2d1ZU1p",
+            "cmFjbGVJbmZvLnByb3RvGhhSb2d1ZUdhbWVJdGVtVmFsdWUucHJvdG8aGENo",
+            "ZXNzUm9ndWVCdWZmSW5mby5wcm90bxoaUm9ndWVUb3VybkxpbmV1cEluZm8u",
+            "cHJvdG8aHENoZXNzUm9ndWVHYW1lQWVvbkluZm8ucHJvdG8aHlJvZ3VlRGlm",
+            "ZmljdWx0eUxldmVsSW5mby5wcm90byKTAwoNUm9ndWVHYW1lSW5mbxIsCg9y",
             "b2d1ZV9idWZmX2luZm8YDCABKAsyEy5DaGVzc1JvZ3VlQnVmZkluZm8SMQoR",
             "Z2FtZV9taXJhY2xlX2luZm8YCSABKAsyFi5DaGVzc1JvZ3VlTWlyYWNsZUlu",
             "Zm8SLAoPZ2FtZV9pdGVtX3ZhbHVlGAIgASgLMhMuUm9ndWVHYW1lSXRlbVZh",
@@ -41,7 +41,7 @@ namespace EggLink.DanhengServer.Proto {
             "MhUuUm9ndWVUb3VybkxpbmV1cEluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTournLineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KeywordUnlockValueReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournFormulaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueDifficultyLevelInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueGameAeonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueGameItemValueReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTournFormulaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KeywordUnlockValueReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueGameItemValueReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournLineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueGameAeonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueDifficultyLevelInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueGameInfo), global::EggLink.DanhengServer.Proto.RogueGameInfo.Parser, new[]{ "RogueBuffInfo", "GameMiracleInfo", "GameItemValue", "RogueAeonInfo", "RogueDifficultyInfo", "DPHEHCODKDE", "IPPILPLLBGK", "RogueLineupInfo" }, null, null, null, null)
           }));

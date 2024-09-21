@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFFSkpHRlBBTUtDRy5wcm90bxoRR1BJQU5OQ0xEQ1AucHJvdG8aEUNMQ0lD",
-            "SURNSEtFLnByb3RvGhFGRkxPRUFHRk9JQS5wcm90bxoRTUpIQ09DTVBBR0Mu",
-            "cHJvdG8aEUpGQ01LQk9LRk9GLnByb3RvIrwBCgtFSkpHRlBBTUtDRxIhCgtN",
+            "SURNSEtFLnByb3RvGhFKRkNNS0JPS0ZPRi5wcm90bxoRRkZMT0VBR0ZPSUEu",
+            "cHJvdG8aEU1KSENPQ01QQUdDLnByb3RvIrwBCgtFSkpHRlBBTUtDRxIhCgtN",
             "TU9ER0FLRE5DShgCIAEoCzIMLk1KSENPQ01QQUdDEiEKC09GTUVGRElLSFBI",
             "GAogASgLMgwuQ0xDSUNJRE1IS0USIQoLUFBPQkpMUEFBTk0YDyABKAsyDC5K",
             "RkNNS0JPS0ZPRhIhCgtMSkVCTkVCRExPQhgMIAEoCzIMLkZGTE9FQUdGT0lB",
             "EiEKC01JREdPRkhEQk1GGAkgASgLMgwuR1BJQU5OQ0xEQ1BCHqoCG0VnZ0xp",
             "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GPIANNCLDCPReflection.Descriptor, global::EggLink.DanhengServer.Proto.CLCICIDMHKEReflection.Descriptor, global::EggLink.DanhengServer.Proto.FFLOEAGFOIAReflection.Descriptor, global::EggLink.DanhengServer.Proto.MJHCOCMPAGCReflection.Descriptor, global::EggLink.DanhengServer.Proto.JFCMKBOKFOFReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GPIANNCLDCPReflection.Descriptor, global::EggLink.DanhengServer.Proto.CLCICIDMHKEReflection.Descriptor, global::EggLink.DanhengServer.Proto.JFCMKBOKFOFReflection.Descriptor, global::EggLink.DanhengServer.Proto.FFLOEAGFOIAReflection.Descriptor, global::EggLink.DanhengServer.Proto.MJHCOCMPAGCReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EJJGFPAMKCG), global::EggLink.DanhengServer.Proto.EJJGFPAMKCG.Parser, new[]{ "MMODGAKDNCJ", "OFMEFDIKHPH", "PPOBJLPAANM", "LJEBNEBDLOB", "MIDGOFHDBMF" }, null, null, null, null)
           }));

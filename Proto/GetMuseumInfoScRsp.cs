@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static GetMuseumInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhHZXRNdXNldW1JbmZvU2NSc3AucHJvdG8aEUhFS01KSUNHTk9LLnByb3Rv",
-            "GhFITUpHRUNLQ0tNTS5wcm90bxoRTFBOQUFQR0NJTkYucHJvdG8aEUtPUEJN",
+            "ChhHZXRNdXNldW1JbmZvU2NSc3AucHJvdG8aEUhNSkdFQ0tDS01NLnByb3Rv",
+            "GhFIRUtNSklDR05PSy5wcm90bxoRTFBOQUFQR0NJTkYucHJvdG8aEUtPUEJN",
             "R0JLQUJFLnByb3RvIuACChJHZXRNdXNldW1JbmZvU2NSc3ASDwoHcmV0Y29k",
             "ZRgHIAEoDRIhCgtQSUJFRkVGR01OThgCIAEoCzIMLkxQTkFBUEdDSU5GEhMK",
             "C0JGS0JMS05CSEZCGAwgASgNEiEKC0VHRk1ITkNBS01MGAggAygLMgwuSEVL",
@@ -37,7 +37,7 @@ namespace EggLink.DanhengServer.Proto {
             "cBgGIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HEKMJICGNOKReflection.Descriptor, global::EggLink.DanhengServer.Proto.HMJGECKCKMMReflection.Descriptor, global::EggLink.DanhengServer.Proto.LPNAAPGCINFReflection.Descriptor, global::EggLink.DanhengServer.Proto.KOPBMGBKABEReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HMJGECKCKMMReflection.Descriptor, global::EggLink.DanhengServer.Proto.HEKMJICGNOKReflection.Descriptor, global::EggLink.DanhengServer.Proto.LPNAAPGCINFReflection.Descriptor, global::EggLink.DanhengServer.Proto.KOPBMGBKABEReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMuseumInfoScRsp), global::EggLink.DanhengServer.Proto.GetMuseumInfoScRsp.Parser, new[]{ "Retcode", "PIBEFEFGMNN", "BFKBLKNBHFB", "EGFMHNCAKML", "FLNOGELFODP", "LADPOGLHNJJ", "NMFNDFLLOIM", "HHDFFEDNLGM", "Level", "NBGPOPOKELO", "CPKMIAOLGJK", "JOFNJMPGNHB", "JPIKKFGJMCE", "Exp" }, null, null, null, null)
           }));
