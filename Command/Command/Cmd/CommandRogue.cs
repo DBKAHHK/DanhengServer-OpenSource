@@ -1,4 +1,5 @@
 ﻿using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.GameServer.Game.Rogue.Scene.Entity;
 using EggLink.DanhengServer.Internationalization;
 
@@ -48,7 +49,8 @@ public class CommandRogue : ICommand
 
         if (id == -1)
         {
-            var buffList = GameData.RogueBuffData.Values.Where(buff => !buff.IsAeonBuff && buff.MazeBuffLevel != 2)
+            var buffList = GameData.RogueBuffData.Values.Where(buff =>
+                    buff is RogueBuffExcel { IsAeonBuff: false } && buff.MazeBuffLevel != 2)
                 .ToList();
 
             await instance.AddBuffList(buffList);

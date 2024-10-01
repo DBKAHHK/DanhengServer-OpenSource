@@ -190,8 +190,8 @@ public static class GameData
     public static Dictionary<int, List<RogueBuffExcel>> RogueAeonEnhanceData { get; private set; } = [];
     public static Dictionary<int, RogueAreaConfigExcel> RogueAreaConfigData { get; private set; } = [];
     public static Dictionary<int, RogueBonusExcel> RogueBonusData { get; private set; } = [];
-    public static Dictionary<int, RogueBuffExcel> RogueBuffData { get; private set; } = [];
-    public static Dictionary<int, RogueBuffGroupExcel> RogueBuffGroupData { get; private set; } = [];
+    public static Dictionary<int, BaseRogueBuffExcel> RogueBuffData { get; private set; } = [];
+    public static Dictionary<int, BaseRogueBuffGroupExcel> RogueBuffGroupData { get; private set; } = [];
     public static Dictionary<int, RogueHandBookEventExcel> RogueHandBookEventData { get; private set; } = [];
     public static Dictionary<int, RogueHandbookMiracleExcel> RogueHandbookMiracleData { get; private set; } = [];
     public static Dictionary<int, RogueManagerExcel> RogueManagerData { get; private set; } = [];
@@ -212,9 +212,7 @@ public static class GameData
     #region TournRogue
 
     public static Dictionary<int, RogueTournAreaExcel> RogueTournAreaData { get; private set; } = [];
-    public static Dictionary<int, RogueTournBuffExcel> RogueTournBuffData { get; private set; } = [];
     public static Dictionary<int, RogueTournFormulaExcel> RogueTournFormulaData { get; private set; } = [];
-    public static Dictionary<int, RogueTournBuffGroupExcel> RogueTournBuffGroupData { get; private set; } = [];
 
     public static Dictionary<int, RogueTournHexAvatarBaseTypeExcel> RogueTournHexAvatarBaseTypeData
     {
@@ -230,7 +228,13 @@ public static class GameData
     public static Dictionary<int, RogueTournDifficultyCompExcel> RogueTournDifficultyCompData { get; private set; } =
         [];
 
+    public static Dictionary<int, RogueTournRoomExcel> RogueTournRoomData { get; private set; } = [];
+    public static Dictionary<int, RogueTournDifficultyExcel> RogueTournDifficultyData { get; private set; } = [];
+
     public static Dictionary<int, RogueTournPermanentTalentExcel> RogueTournPermanentTalentData { get; private set; } =
+        [];
+
+    public static List<RogueTournRoomConfig> RogueTournRoomGenData { get; set; } =
         [];
 
     #endregion

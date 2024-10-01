@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static GKJMKHADBHMReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFHS0pNS0hBREJITS5wcm90bxoRREZOSE1JRE5GSUgucHJvdG8aEUdGS0lG",
-            "SkxHQkpJLnByb3RvImkKC0dLSk1LSEFEQkhNEhQKC09DTElBSkpKSE9GGK0K",
+            "ChFHS0pNS0hBREJITS5wcm90bxoRR0ZLSUZKTEdCSkkucHJvdG8aEURGTkhN",
+            "SURORklILnByb3RvImkKC0dLSk1LSEFEQkhNEhQKC09DTElBSkpKSE9GGK0K",
             "IAEoDRIhCgtGTkNFSk9KUEpITxgJIAEoCzIMLkRGTkhNSURORklIEiEKC0JQ",
             "RUpES09FRE1DGAcgASgLMgwuR0ZLSUZKTEdCSklCHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DFNHMIDNFIHReflection.Descriptor, global::EggLink.DanhengServer.Proto.GFKIFJLGBJIReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GFKIFJLGBJIReflection.Descriptor, global::EggLink.DanhengServer.Proto.DFNHMIDNFIHReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GKJMKHADBHM), global::EggLink.DanhengServer.Proto.GKJMKHADBHM.Parser, new[]{ "OCLIAJJJHOF", "FNCEJOJPJHO", "BPEJDKOEDMC" }, null, null, null, null)
           }));

@@ -1,4 +1,5 @@
 ﻿using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Enums.Rogue;
 using EggLink.DanhengServer.GameServer.Game.Battle;
@@ -85,14 +86,14 @@ public class RogueInstance : BaseRogueInstance
         foreach (var buff in RogueBuffs)
             if (buff.BuffExcel.RogueBuffType == AeonExcel.RogueBuffType)
             {
-                if (!buff.BuffExcel.IsAeonBuff)
+                if (!(buff.BuffExcel as RogueBuffExcel)!.IsAeonBuff)
                 {
                     curAeonBuffCount++;
                 }
                 else
                 {
                     hintId++; // next hint
-                    enhanceData.Remove(buff.BuffExcel);
+                    enhanceData.Remove((buff.BuffExcel as RogueBuffExcel)!);
                 }
             }
 
@@ -125,7 +126,7 @@ public class RogueInstance : BaseRogueInstance
             {
                 CurAeonEnhanceCount++;
                 // add enhance buff
-                menu.RollBuff(enhanceData, enhanceData.Count);
+                menu.RollBuff(enhanceData.Select(x => x as BaseRogueBuffExcel).ToList(), enhanceData.Count);
             }
 
             var action = menu.GetActionInstance();

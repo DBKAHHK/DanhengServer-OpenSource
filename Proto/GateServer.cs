@@ -24,7 +24,7 @@ namespace EggLink.DanhengServer.Proto {
     static GateServerReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChBHYXRlU2VydmVyLnByb3RvIs4JCgpHYXRlU2VydmVyEhQKC0FQQUdKS0RK",
+            "ChBHYXRlU2VydmVyLnByb3RvIssJCgpHYXRlU2VydmVyEhQKC0FQQUdKS0RK",
             "R0VQGJ4MIAEoCBIUCgtLS0FGR1BFS0RDQhigDyABKAgSFAoLR0JJQ0FNRkRG",
             "Q0UYswQgASgJEhMKC3JlZ2lvbl9uYW1lGAUgASgJEg0KBHVuazcYsQsgASgI",
             "EhQKC09BT05MQUtLTklIGMwFIAEoCRIUCgtMTEJPUERNR01MTxjECSABKAkS",
@@ -50,13 +50,13 @@ namespace EggLink.DanhengServer.Proto {
             "IAEoCRIUCgtNTkVNSEhCTUtFQRjaCiABKAkSFAoLTUFORE1KT0xQSEgY6QYg",
             "ASgJEhQKC1BQSEJQR0JOT0VNGPMLIAEoCBIUCgtMQlBGSFBDQkNLTBiABCAB",
             "KAkSFAoLQkZJSEZLTE1NRUsYuAIgASgJEgwKBHVuazIYByABKAgSFAoLRU5M",
-            "R0dFRUtDSkgYjAsgASgJEhQKC01FQUNBR0FGSEdBGLsEIAEoCRIUCgtKSURC",
-            "REVLT0hESBi5BiABKAgSFAoLUEtERENGR0REREUY1g0gASgJQh6qAhtFZ2dM",
-            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "R0dFRUtDSkgYjAsgASgJEhQKC01FQUNBR0FGSEdBGLsEIAEoCRIRCgh1c2Vy",
+            "X3RjcBi5BiABKAgSFAoLUEtERENGR0REREUY1g0gASgJQh6qAhtFZ2dMaW5r",
+            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GateServer), global::EggLink.DanhengServer.Proto.GateServer.Parser, new[]{ "APAGJKDJGEP", "KKAFGPEKDCB", "GBICAMFDFCE", "RegionName", "Unk7", "OAONLAKKNIH", "LLBOPDMGMLO", "DEGFPDPOIHI", "KICPPAHLGHB", "Unk5", "ExResourceUrl", "FPHFAJBCHPG", "BHDBHBJJPNI", "IfixUrl", "PNHBALGFHOH", "ClientSecretKey", "Port", "NDAOKPKOLKI", "OPKPHGMFICB", "OHOGINOGEOG", "IfixVersion", "AOMEDACHLJD", "Unk1", "FNCHMFHFMID", "Msg", "KEICDBEHMDO", "AssetBundleUrl", "LBAAIACEFCD", "GBCBIDAHGJC", "MdkResVersion", "JCFGJFMGNLF", "BCADOJCHKAE", "GMCEHMDOHDL", "POHJHDDOECN", "Unk3", "NCIKDCIIGOF", "IHGAICFNADN", "Retcode", "NPNBJBCFPNE", "BAGLOFEACNC", "GDOBHNDOCOJ", "Ip", "EFKNBDLNAKJ", "Unk4", "LuaUrl", "GHCIOIALPMH", "Unk6", "MDAILCAMOAO", "HABFAOFIPLA", "MNEMHHBMKEA", "MANDMJOLPHH", "PPHBPGBNOEM", "LBPFHPCBCKL", "BFIHFKLMMEK", "Unk2", "ENLGGEEKCJH", "MEACAGAFHGA", "JIDBDEKOHDH", "PKDDCFGDDDE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GateServer), global::EggLink.DanhengServer.Proto.GateServer.Parser, new[]{ "APAGJKDJGEP", "KKAFGPEKDCB", "GBICAMFDFCE", "RegionName", "Unk7", "OAONLAKKNIH", "LLBOPDMGMLO", "DEGFPDPOIHI", "KICPPAHLGHB", "Unk5", "ExResourceUrl", "FPHFAJBCHPG", "BHDBHBJJPNI", "IfixUrl", "PNHBALGFHOH", "ClientSecretKey", "Port", "NDAOKPKOLKI", "OPKPHGMFICB", "OHOGINOGEOG", "IfixVersion", "AOMEDACHLJD", "Unk1", "FNCHMFHFMID", "Msg", "KEICDBEHMDO", "AssetBundleUrl", "LBAAIACEFCD", "GBCBIDAHGJC", "MdkResVersion", "JCFGJFMGNLF", "BCADOJCHKAE", "GMCEHMDOHDL", "POHJHDDOECN", "Unk3", "NCIKDCIIGOF", "IHGAICFNADN", "Retcode", "NPNBJBCFPNE", "BAGLOFEACNC", "GDOBHNDOCOJ", "Ip", "EFKNBDLNAKJ", "Unk4", "LuaUrl", "GHCIOIALPMH", "Unk6", "MDAILCAMOAO", "HABFAOFIPLA", "MNEMHHBMKEA", "MANDMJOLPHH", "PPHBPGBNOEM", "LBPFHPCBCKL", "BFIHFKLMMEK", "Unk2", "ENLGGEEKCJH", "MEACAGAFHGA", "UserTcp", "PKDDCFGDDDE" }, null, null, null, null)
           }));
     }
     #endregion
@@ -155,7 +155,7 @@ namespace EggLink.DanhengServer.Proto {
       unk2_ = other.unk2_;
       eNLGGEEKCJH_ = other.eNLGGEEKCJH_;
       mEACAGAFHGA_ = other.mEACAGAFHGA_;
-      jIDBDEKOHDH_ = other.jIDBDEKOHDH_;
+      userTcp_ = other.userTcp_;
       pKDDCFGDDDE_ = other.pKDDCFGDDDE_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -849,15 +849,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "JIDBDEKOHDH" field.</summary>
-    public const int JIDBDEKOHDHFieldNumber = 825;
-    private bool jIDBDEKOHDH_;
+    /// <summary>Field number for the "user_tcp" field.</summary>
+    public const int UserTcpFieldNumber = 825;
+    private bool userTcp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool JIDBDEKOHDH {
-      get { return jIDBDEKOHDH_; }
+    public bool UserTcp {
+      get { return userTcp_; }
       set {
-        jIDBDEKOHDH_ = value;
+        userTcp_ = value;
       }
     }
 
@@ -945,7 +945,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Unk2 != other.Unk2) return false;
       if (ENLGGEEKCJH != other.ENLGGEEKCJH) return false;
       if (MEACAGAFHGA != other.MEACAGAFHGA) return false;
-      if (JIDBDEKOHDH != other.JIDBDEKOHDH) return false;
+      if (UserTcp != other.UserTcp) return false;
       if (PKDDCFGDDDE != other.PKDDCFGDDDE) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1011,7 +1011,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Unk2 != false) hash ^= Unk2.GetHashCode();
       if (ENLGGEEKCJH.Length != 0) hash ^= ENLGGEEKCJH.GetHashCode();
       if (MEACAGAFHGA.Length != 0) hash ^= MEACAGAFHGA.GetHashCode();
-      if (JIDBDEKOHDH != false) hash ^= JIDBDEKOHDH.GetHashCode();
+      if (UserTcp != false) hash ^= UserTcp.GetHashCode();
       if (PKDDCFGDDDE.Length != 0) hash ^= PKDDCFGDDDE.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1148,9 +1148,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(226, 44);
         output.WriteString(OAONLAKKNIH);
       }
-      if (JIDBDEKOHDH != false) {
+      if (UserTcp != false) {
         output.WriteRawTag(200, 51);
-        output.WriteBool(JIDBDEKOHDH);
+        output.WriteBool(UserTcp);
       }
       if (MANDMJOLPHH.Length != 0) {
         output.WriteRawTag(202, 54);
@@ -1391,9 +1391,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(226, 44);
         output.WriteString(OAONLAKKNIH);
       }
-      if (JIDBDEKOHDH != false) {
+      if (UserTcp != false) {
         output.WriteRawTag(200, 51);
-        output.WriteBool(JIDBDEKOHDH);
+        output.WriteBool(UserTcp);
       }
       if (MANDMJOLPHH.Length != 0) {
         output.WriteRawTag(202, 54);
@@ -1686,7 +1686,7 @@ namespace EggLink.DanhengServer.Proto {
       if (MEACAGAFHGA.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(MEACAGAFHGA);
       }
-      if (JIDBDEKOHDH != false) {
+      if (UserTcp != false) {
         size += 2 + 1;
       }
       if (PKDDCFGDDDE.Length != 0) {
@@ -1873,8 +1873,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.MEACAGAFHGA.Length != 0) {
         MEACAGAFHGA = other.MEACAGAFHGA;
       }
-      if (other.JIDBDEKOHDH != false) {
-        JIDBDEKOHDH = other.JIDBDEKOHDH;
+      if (other.UserTcp != false) {
+        UserTcp = other.UserTcp;
       }
       if (other.PKDDCFGDDDE.Length != 0) {
         PKDDCFGDDDE = other.PKDDCFGDDDE;
@@ -2015,7 +2015,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 6600: {
-            JIDBDEKOHDH = input.ReadBool();
+            UserTcp = input.ReadBool();
             break;
           }
           case 6986: {
@@ -2266,7 +2266,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 6600: {
-            JIDBDEKOHDH = input.ReadBool();
+            UserTcp = input.ReadBool();
             break;
           }
           case 6986: {

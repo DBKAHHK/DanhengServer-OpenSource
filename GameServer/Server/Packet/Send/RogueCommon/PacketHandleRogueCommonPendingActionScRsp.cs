@@ -7,7 +7,8 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueCommon;
 public class PacketHandleRogueCommonPendingActionScRsp : BasePacket
 {
     public PacketHandleRogueCommonPendingActionScRsp(int queuePosition, bool selectBuff = false,
-        bool selectMiracle = false, bool selectBonus = false, RogueBuffSelectMenu? menu = null) : base(
+        bool selectMiracle = false, bool selectBonus = false, bool selectFormula = false,
+        RogueBuffSelectMenu? menu = null) : base(
         CmdIds.HandleRogueCommonPendingActionScRsp)
     {
         var proto = new HandleRogueCommonPendingActionScRsp
@@ -21,6 +22,8 @@ public class PacketHandleRogueCommonPendingActionScRsp : BasePacket
         if (selectMiracle) proto.MiracleSelectCallback = new RogueMiracleSelectCallback();
 
         if (selectBonus) proto.BonusSelectCallback = new RogueBonusSelectCallback();
+
+        if (selectFormula) proto.RogueTournFormulaCallback = new RogueTournFormulaCallback();
 
         if (menu != null)
             proto.BuffRerollCallback = new RogueBuffRerollCallback
