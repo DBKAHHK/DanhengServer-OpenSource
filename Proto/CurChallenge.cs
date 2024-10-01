@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChJDdXJDaGFsbGVuZ2UucHJvdG8aGENoYWxsZW5nZVN0b3J5SW5mby5wcm90",
-            "bxoVQ2hhbGxlbmdlU3RhdHVzLnByb3RvGhVFeHRyYUxpbmV1cFR5cGUucHJv",
-            "dG8aEUtpbGxNb25zdGVyLnByb3RvIpgCCgxDdXJDaGFsbGVuZ2USEQoJc2Nv",
+            "bxoRS2lsbE1vbnN0ZXIucHJvdG8aFUNoYWxsZW5nZVN0YXR1cy5wcm90bxoV",
+            "RXh0cmFMaW5ldXBUeXBlLnByb3RvIpgCCgxDdXJDaGFsbGVuZ2USEQoJc2Nv",
             "cmVfdHdvGAUgASgNEicKEWtpbGxfbW9uc3Rlcl9saXN0GAogAygLMgwuS2ls",
             "bE1vbnN0ZXISEAoIc2NvcmVfaWQYDiABKA0SKwoRZXh0cmFfbGluZXVwX3R5",
             "cGUYCyABKA4yEC5FeHRyYUxpbmV1cFR5cGUSFAoMY2hhbGxlbmdlX2lkGAQg",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "EiAKBnN0YXR1cxgBIAEoDjIQLkNoYWxsZW5nZVN0YXR1c0IeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeStoryInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.ExtraLineupTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.KillMonsterReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeStoryInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KillMonsterReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.ExtraLineupTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CurChallenge), global::EggLink.DanhengServer.Proto.CurChallenge.Parser, new[]{ "ScoreTwo", "KillMonsterList", "ScoreId", "ExtraLineupType", "ChallengeId", "StageInfo", "RoundCount", "DeadAvatarNum", "Status" }, null, null, null, null)
           }));

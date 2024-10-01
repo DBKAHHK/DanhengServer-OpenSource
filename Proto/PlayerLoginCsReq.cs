@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static PlayerLoginCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZQbGF5ZXJMb2dpbkNzUmVxLnByb3RvGhJMYW5ndWFnZVR5cGUucHJvdG8a",
-            "EUxCT0ZKSE9KR1BILnByb3RvGhJQbGF0Zm9ybVR5cGUucHJvdG8i7QQKEFBs",
+            "ChZQbGF5ZXJMb2dpbkNzUmVxLnByb3RvGhJQbGF0Zm9ybVR5cGUucHJvdG8a",
+            "Ekxhbmd1YWdlVHlwZS5wcm90bxoRTEJPRkpIT0pHUEgucHJvdG8i7QQKEFBs",
             "YXllckxvZ2luQ3NSZXESEwoLQkdDRVBIR0dNTE4YDSABKA0SEwoLS0dMREpF",
             "RUhPT08YDiABKAkSEwoLQURBQUJHSERFRkkYCSABKAkSFAoLSUNHSENOT0JL",
             "TUwY5QkgASgNEhQKC0lQT0xDTk9DRk5CGJwEIAEoDRIUCgtKUE9JTUhQSEVJ",
@@ -42,7 +42,7 @@ namespace EggLink.DanhengServer.Proto {
             "SU9GGM4KIAEoCBIUCgtCQVBKUE9BQUVHTRifCSABKAlCHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LBOFJHOJGPHReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LBOFJHOJGPHReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerLoginCsReq), global::EggLink.DanhengServer.Proto.PlayerLoginCsReq.Parser, new[]{ "BGCEPHGGMLN", "KGLDJEEHOOO", "ADAABGHDEFI", "ICGHCNOBKML", "IPOLCNOCFNB", "JPOIMHPHEIM", "FJCCIGGAIPJ", "Platform", "BCMIKPBAIDP", "IFFJDADGAJA", "ClientVersion", "DJGLMHDKEEO", "LoginRandom", "EMGADLCGDBF", "BIJCDONDCOE", "CDFPLBBIKDI", "GCFIHCACEJA", "MEJHAKLCHFO", "OPLPLPDDDEP", "RogueGetInfo", "BGPJNKCMIMM", "Signature", "ResVersion", "EBLEHHAKCHN", "EKJOPHKEIOF", "BAPJPOAAEGM" }, null, null, null, null)
           }));

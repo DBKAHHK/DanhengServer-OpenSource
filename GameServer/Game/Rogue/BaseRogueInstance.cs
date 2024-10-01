@@ -1,4 +1,5 @@
 ﻿using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Enums.Rogue;
@@ -37,7 +38,7 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
 
     public SortedDictionary<int, RogueActionInstance> RogueActions { get; set; } = []; // queue_position -> action
     public int CurActionQueuePosition { get; set; } = 0;
-    public int CurEventUniqueID { get; set; } = 100;
+    public int CurEventUniqueId { get; set; } = 100;
 
     public int CurAeonBuffCount { get; set; } = 0;
     public int CurAeonEnhanceCount { get; set; } = 0;
@@ -55,11 +56,11 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
     public virtual async ValueTask RollBuff(int amount, int buffGroupId, int buffHintType = 1)
     {
         var buffGroup = GameData.RogueBuffGroupData[buffGroupId];
-        var buffList = buffGroup.BuffList;
-        var actualBuffList = new List<RogueBuffExcel>();
-        foreach (var buff in buffList)
-            if (!RogueBuffs.Exists(x => x.BuffExcel.MazeBuffID == buff.MazeBuffID))
-                actualBuffList.Add(buff);
+        var buffList = RogueSubMode == RogueSubModeEnum.TournRogue
+            ? (buffGroup as RogueTournBuffGroupExcel)!.BuffList.Select(x => x)
+            : (buffGroup as RogueBuffGroupExcel)!.BuffList;
+        var actualBuffList = buffList.Where(buff => !RogueBuffs.Exists(x => x.BuffExcel.MazeBuffID == buff.MazeBuffID))
+            .ToList();
 
         if (actualBuffList.Count == 0) return; // no buffs to roll
 
@@ -88,7 +89,7 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
         GameData.RogueBuffData.TryGetValue(buffId * 100 + level, out var excel);
         if (excel == null) return null;
         if (CurAeonBuffCount > 0) // check if aeon buff exists
-            if (excel.IsAeonBuff)
+            if (excel is RogueBuffExcel { IsAeonBuff: true })
                 return null;
         var buff = new RogueBuffInstance(buffId, level);
         RogueBuffs.Add(buff);
@@ -102,7 +103,7 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
         return result;
     }
 
-    public virtual async ValueTask AddBuffList(List<RogueBuffExcel> excel)
+    public virtual async ValueTask AddBuffList(List<BaseRogueBuffExcel> excel)
     {
         List<RogueCommonActionResult> resultList = [];
         foreach (var buff in excel)
@@ -363,9 +364,16 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
         do
         {
             dialogue = GameData.RogueNPCData.Values.ToList().RandomElement();
-        } while (!dialogue.CanUseInVer(RogueType));
+            if (dialogue.NPCJsonPath.Contains("RogueNPC_230") && RogueSubMode != RogueSubModeEnum.TournRogue)
+                // skip because it's a tourn rogue event
+                dialogue = null;
+            else if (!dialogue.NPCJsonPath.Contains("RogueNPC_230") && RogueSubMode == RogueSubModeEnum.TournRogue)
+                // skip because it's not a tourn rogue event
+                dialogue = null;
+        } while (dialogue == null || (!dialogue.CanUseInVer(RogueType) &&
+                                      dialogue.RogueNpcConfig?.DialogueType == RogueDialogueTypeEnum.Event));
 
-        var instance = new RogueEventInstance(dialogue, npc, CurEventUniqueID++);
+        var instance = new RogueEventInstance(dialogue, npc, CurEventUniqueId++);
         if (EventManager == null) return instance;
         await EventManager.AddEvent(instance);
 

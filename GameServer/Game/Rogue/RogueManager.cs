@@ -81,7 +81,11 @@ public class RogueManager(PlayerInstance player) : BasePlayerManager(player)
     {
         if (RogueInstance != null)
             return RogueInstance;
-        return Player.ChessRogueManager!.RogueInstance;
+
+        if (Player.ChessRogueManager?.RogueInstance != null)
+            return Player.ChessRogueManager.RogueInstance;
+
+        return Player.RogueTournManager?.RogueTournInstance;
     }
 
     #endregion

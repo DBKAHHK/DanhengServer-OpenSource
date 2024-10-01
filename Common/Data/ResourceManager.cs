@@ -42,6 +42,7 @@ public class ResourceManager
             LoadCustomFile<RogueMiracleEffectConfig>("Rogue Miracle Effect", "RogueMiracleEffectGen") ??
             new RogueMiracleEffectConfig();
         LoadChessRogueRoomData();
+        LoadRogueTournRoomData();
 
         Task.WaitAll(t1, t2, t3, t4, t5, t6, t7);
     }
@@ -721,6 +722,51 @@ public class ResourceManager
 
         Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItems", count.ToString(),
             I18NManager.Translate("Word.ChessRogueRoomInfo")));
+    }
+
+    public static void LoadRogueTournRoomData()
+    {
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadingItem",
+            I18NManager.Translate("Word.RogueTournRoomInfo")));
+        var count = 0;
+
+        FileInfo file = new(ConfigManager.Config.Path.ConfigPath + "/TournRogueRoomGen.json");
+
+        if (!file.Exists)
+        {
+            Logger.Warn(I18NManager.Translate("Server.ServerInfo.ConfigMissing",
+                I18NManager.Translate("Word.RogueTournRoomInfo"),
+                $"{ConfigManager.Config.Path.ConfigPath}/TournRogueRoomGen.json",
+                I18NManager.Translate("Word.RogueTournRoom")));
+
+            return;
+        }
+
+        try
+        {
+            using var reader = file.OpenRead();
+            using StreamReader reader2 = new(reader);
+            var text = reader2.ReadToEnd();
+            var json = JsonConvert.DeserializeObject<List<RogueTournRoomConfig>>(text);
+            if (json == null) throw new Exception("Failed to deserialize TournRogueRoomGen.json");
+
+            foreach (var room in json.Clone())
+                if (room.RoomType == RogueTournRoomTypeEnum.Event)
+                {
+                    json.Add(room.Clone(RogueTournRoomTypeEnum.Reward));
+                    json.Add(room.Clone(RogueTournRoomTypeEnum.Encounter));
+                }
+
+            GameData.RogueTournRoomGenData = json;
+            count = json.Count;
+        }
+        catch (Exception ex)
+        {
+            Logger.Error("Error in reading " + file.Name, ex);
+        }
+
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItems", count.ToString(),
+            I18NManager.Translate("Word.RogueTournRoomInfo")));
     }
 
     public static void AddRoomToGameData(RogueDLCBlockTypeEnum type, ChessRogueRoomConfig room)

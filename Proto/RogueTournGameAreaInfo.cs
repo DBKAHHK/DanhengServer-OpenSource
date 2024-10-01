@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static RogueTournGameAreaInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxSb2d1ZVRvdXJuR2FtZUFyZWFJbmZvLnByb3RvIkMKFlJvZ3VlVG91cm5H",
-            "YW1lQXJlYUluZm8SFAoMZ2FtZV9hcmVhX2lkGAIgASgNEhMKC05KRFBFTExL",
-            "REhFGA8gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
-            "b3RvMw=="));
+            "ChxSb2d1ZVRvdXJuR2FtZUFyZWFJbmZvLnByb3RvIkEKFlJvZ3VlVG91cm5H",
+            "YW1lQXJlYUluZm8SEQoJZ2FtZV93ZWVrGAIgASgNEhQKDGdhbWVfYXJlYV9p",
+            "ZBgPIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournGameAreaInfo), global::EggLink.DanhengServer.Proto.RogueTournGameAreaInfo.Parser, new[]{ "GameAreaId", "NJDPELLKDHE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournGameAreaInfo), global::EggLink.DanhengServer.Proto.RogueTournGameAreaInfo.Parser, new[]{ "GameWeek", "GameAreaId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournGameAreaInfo(RogueTournGameAreaInfo other) : this() {
+      gameWeek_ = other.gameWeek_;
       gameAreaId_ = other.gameAreaId_;
-      nJDPELLKDHE_ = other.nJDPELLKDHE_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,30 +84,30 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournGameAreaInfo(this);
     }
 
-    /// <summary>Field number for the "game_area_id" field.</summary>
-    public const int GameAreaIdFieldNumber = 2;
-    private uint gameAreaId_;
+    /// <summary>Field number for the "game_week" field.</summary>
+    public const int GameWeekFieldNumber = 2;
+    private uint gameWeek_;
     /// <summary>
     /// 15
     /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint GameWeek {
+      get { return gameWeek_; }
+      set {
+        gameWeek_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "game_area_id" field.</summary>
+    public const int GameAreaIdFieldNumber = 15;
+    private uint gameAreaId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint GameAreaId {
       get { return gameAreaId_; }
       set {
         gameAreaId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "NJDPELLKDHE" field.</summary>
-    public const int NJDPELLKDHEFieldNumber = 15;
-    private uint nJDPELLKDHE_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NJDPELLKDHE {
-      get { return nJDPELLKDHE_; }
-      set {
-        nJDPELLKDHE_ = value;
       }
     }
 
@@ -126,8 +126,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (GameWeek != other.GameWeek) return false;
       if (GameAreaId != other.GameAreaId) return false;
-      if (NJDPELLKDHE != other.NJDPELLKDHE) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -135,8 +135,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (GameWeek != 0) hash ^= GameWeek.GetHashCode();
       if (GameAreaId != 0) hash ^= GameAreaId.GetHashCode();
-      if (NJDPELLKDHE != 0) hash ^= NJDPELLKDHE.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -155,13 +155,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (GameAreaId != 0) {
+      if (GameWeek != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(GameAreaId);
+        output.WriteUInt32(GameWeek);
       }
-      if (NJDPELLKDHE != 0) {
+      if (GameAreaId != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(NJDPELLKDHE);
+        output.WriteUInt32(GameAreaId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -173,13 +173,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (GameAreaId != 0) {
+      if (GameWeek != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(GameAreaId);
+        output.WriteUInt32(GameWeek);
       }
-      if (NJDPELLKDHE != 0) {
+      if (GameAreaId != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(NJDPELLKDHE);
+        output.WriteUInt32(GameAreaId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -191,11 +191,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (GameWeek != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GameWeek);
+      }
       if (GameAreaId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GameAreaId);
-      }
-      if (NJDPELLKDHE != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NJDPELLKDHE);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -209,11 +209,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.GameWeek != 0) {
+        GameWeek = other.GameWeek;
+      }
       if (other.GameAreaId != 0) {
         GameAreaId = other.GameAreaId;
-      }
-      if (other.NJDPELLKDHE != 0) {
-        NJDPELLKDHE = other.NJDPELLKDHE;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,11 +231,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 16: {
-            GameAreaId = input.ReadUInt32();
+            GameWeek = input.ReadUInt32();
             break;
           }
           case 120: {
-            NJDPELLKDHE = input.ReadUInt32();
+            GameAreaId = input.ReadUInt32();
             break;
           }
         }
@@ -254,11 +254,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 16: {
-            GameAreaId = input.ReadUInt32();
+            GameWeek = input.ReadUInt32();
             break;
           }
           case 120: {
-            NJDPELLKDHE = input.ReadUInt32();
+            GameAreaId = input.ReadUInt32();
             break;
           }
         }

@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.Kcp;
+﻿using EggLink.DanhengServer.GameServer.Game.RogueTourn;
+using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
 
 namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.RogueCommon;
@@ -20,5 +21,8 @@ public class HandlerHandleRogueCommonPendingActionCsReq : Handler
         if (req.BonusSelectResult != null) await rogue.HandleBonusSelect((int)req.BonusSelectResult.BonusId);
 
         if (req.MiracleSelectResult != null) await rogue.HandleMiracleSelect(req.MiracleSelectResult.MiracleSelectId);
+
+        if (req.RogueTournFormulaResult != null && rogue is RogueTournInstance tournInstance)
+            await tournInstance.HandleFormulaSelect((int)req.RogueTournFormulaResult.TournFormulaId);
     }
 }

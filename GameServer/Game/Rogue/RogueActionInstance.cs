@@ -1,5 +1,6 @@
 ﻿using EggLink.DanhengServer.GameServer.Game.Rogue.Buff;
 using EggLink.DanhengServer.GameServer.Game.Rogue.Miracle;
+using EggLink.DanhengServer.GameServer.Game.RogueTourn.Formula;
 using EggLink.DanhengServer.Proto;
 
 namespace EggLink.DanhengServer.GameServer.Game.Rogue;
@@ -10,6 +11,7 @@ public class RogueActionInstance
     public RogueBuffSelectMenu? RogueBuffSelectMenu { get; set; }
     public RogueMiracleSelectMenu? RogueMiracleSelectMenu { get; set; }
     public RogueBonusSelectInfo? RogueBonusSelectInfo { get; set; }
+    public RogueFormulaSelectMenu? RogueFormulaSelectMenu { get; set; }
 
     public void SetBonus()
     {
@@ -28,6 +30,8 @@ public class RogueActionInstance
         if (RogueMiracleSelectMenu != null) action.MiracleSelectInfo = RogueMiracleSelectMenu.ToProto();
 
         if (RogueBonusSelectInfo != null) action.BonusSelectInfo = RogueBonusSelectInfo;
+
+        if (RogueFormulaSelectMenu != null) action.RogueFormulaSelectInfo = RogueFormulaSelectMenu.ToProto();
 
         return new RogueCommonPendingAction
         {

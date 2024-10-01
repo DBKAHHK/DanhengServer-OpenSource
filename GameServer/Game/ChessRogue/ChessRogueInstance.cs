@@ -1,4 +1,5 @@
 ﻿using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Enums.Rogue;
 using EggLink.DanhengServer.GameServer.Game.Battle;
@@ -201,12 +202,12 @@ public class ChessRogueInstance : BaseRogueInstance
             return;
         var curAeonBuffCount = 0; // current path buff count
         var hintId = AeonId * 100 + 1;
-        var enhanceData = GameData.RogueAeonEnhanceData[AeonId];
+        var enhanceData = GameData.RogueAeonEnhanceData[AeonId].Select(x => x as BaseRogueBuffExcel).ToList();
         var buffData = GameData.RogueAeonBuffData[AeonId];
         foreach (var buff in RogueBuffs)
             if (buff.BuffExcel.RogueBuffType == AeonExcel.RogueBuffType)
             {
-                if (!buff.BuffExcel.IsAeonBuff)
+                if (buff.BuffExcel is RogueBuffExcel { IsAeonBuff: false })
                 {
                     curAeonBuffCount++;
                 }
