@@ -1,5 +1,7 @@
 ﻿using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
+using EggLink.DanhengServer.Util;
+using EggLink.DanhengServer.Util.Security;
 
 namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 
@@ -13,6 +15,12 @@ public class PacketPlayerGetTokenScRsp : BasePacket
             Uid = (uint)(connection.Player?.Uid ?? 0)
         };
 
+        if (ConfigManager.Config.GameServer.UsePacketEncryption)
+        {
+            MT19937 tempRandom = new MT19937((ulong)DateTimeOffset.Now.ToUnixTimeSeconds());
+            rsp.SecretKeySeed = connection.ClientSecretKeySeed = tempRandom.NextUInt64();
+        }
+        
         SetData(rsp);
     }
 

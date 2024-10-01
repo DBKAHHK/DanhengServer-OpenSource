@@ -30,11 +30,20 @@ public class DanhengConnection
     public bool IsOnline = true;
     public StreamWriter? Writer;
 
+    public byte[]? XorKey { get; set; }
+    public ulong ClientSecretKeySeed { get; set; }
+
     public DanhengConnection(KcpConversation conversation, IPEndPoint remote)
     {
         Conversation = conversation;
         RemoteEndPoint = remote;
         CancelToken = new CancellationTokenSource();
+        if (ConfigManager.Config.GameServer.UsePacketEncryption)
+        {
+#pragma warning disable CS8602 // CS8602 - Dereference of a possibly null reference.
+            XorKey = Crypto.ClientSecretKey.GetXorKey();
+#pragma warning restore CS8602 // CS8602 - Dereference of a possibly null reference.
+        }
         Start();
     }
 
@@ -123,6 +132,8 @@ public class DanhengConnection
     {
         try
         {
+            if (ConfigManager.Config.GameServer.UsePacketEncryption)
+                Crypto.Xor(packet, XorKey);
             _ = await Conversation.SendAsync(packet, CancelToken.Token);
         }
         catch
@@ -148,7 +159,8 @@ public class DanhengConnection
 
         try
         {
-            _ = await Conversation.SendAsync(packetBytes, CancelToken.Token);
+            //_ = await Conversation.SendAsync(packetBytes, CancelToken.Token);
+            await SendPacket(packetBytes);
         }
         catch
         {

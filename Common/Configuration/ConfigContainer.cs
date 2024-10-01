@@ -44,6 +44,7 @@ public class GameServerConfig
     public string GameServerId { get; set; } = "dan_heng";
     public string GameServerName { get; set; } = "DanhengServer";
     public string GameServerDescription { get; set; } = "A re-implementation of StarRail server";
+    public bool UsePacketEncryption { get; set; } = true;
 
     public string GetDisplayAddress()
     {
