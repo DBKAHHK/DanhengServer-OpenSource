@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static GetAetherDivideInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5HZXRBZXRoZXJEaXZpZGVJbmZvU2NSc3AucHJvdG8aFUFldGhlclNraWxs",
-            "SW5mby5wcm90bxocQWV0aGVyRGl2aWRlTGluZXVwSW5mby5wcm90bxocQWV0",
-            "aGVyRGl2aWRlU3Bpcml0SW5mby5wcm90byKdAgoYR2V0QWV0aGVyRGl2aWRl",
+            "Ch5HZXRBZXRoZXJEaXZpZGVJbmZvU2NSc3AucHJvdG8aHEFldGhlckRpdmlk",
+            "ZVNwaXJpdEluZm8ucHJvdG8aFUFldGhlclNraWxsSW5mby5wcm90bxocQWV0",
+            "aGVyRGl2aWRlTGluZXVwSW5mby5wcm90byKdAgoYR2V0QWV0aGVyRGl2aWRl",
             "SW5mb1NjUnNwEhMKC0lKRUVITUlHTkZJGAkgASgNEhMKC09NS05DQ0dES05Q",
             "GAIgASgNEiwKC2F2YXRhcl9saXN0GAggAygLMhcuQWV0aGVyRGl2aWRlU3Bp",
             "cml0SW5mbxITCgtMQ05GQ0dIS0FDTxgBIAEoDRIsCgtsaW5ldXBfbGlzdBgH",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "IAMoCzIQLkFldGhlclNraWxsSW5mbxITCgtORU9BSUZHTktOSRgGIAEoDUIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AetherSkillInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AetherDivideLineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AetherSkillInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AetherDivideLineupInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetAetherDivideInfoScRsp), global::EggLink.DanhengServer.Proto.GetAetherDivideInfoScRsp.Parser, new[]{ "IJEEHMIGNFI", "OMKNCCGDKNP", "AvatarList", "LCNFCGHKACO", "LineupList", "Retcode", "NPKMPDHJHCL", "AetherSkillList", "NEOAIFGNKNI" }, null, null, null, null)
           }));

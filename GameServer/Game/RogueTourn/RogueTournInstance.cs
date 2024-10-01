@@ -17,6 +17,8 @@ namespace EggLink.DanhengServer.GameServer.Game.RogueTourn;
 
 public class RogueTournInstance : BaseRogueInstance
 {
+    #region Initializer
+
     public RogueTournInstance(PlayerInstance player, int areaId) : base(player, RogueSubModeEnum.TournRogue, 0)
     {
         // generate levels
@@ -35,9 +37,17 @@ public class RogueTournInstance : BaseRogueInstance
 
         CurLayerId = 1101;
         EventManager = new RogueEventManager(player, this);
+
+        var t = RollFormula(1, [RogueFormulaCategoryEnum.Common, RogueFormulaCategoryEnum.Rare]);
+        t.AsTask().Wait();
     }
 
+    #endregion
+
+    #region Properties
+
     public List<RogueTournFormulaExcel> RogueFormulas { get; set; } = [];
+    public List<int> ExpandedFormulaIdList { get; set; } = [];
     public Dictionary<int, RogueTournLevelInstance> Levels { get; set; } = [];
     public List<RogueTournDifficultyExcel> DifficultyExcels { get; set; } = [];
     public int CurLayerId { get; set; }
@@ -46,16 +56,20 @@ public class RogueTournInstance : BaseRogueInstance
 
     public Dictionary<RogueTournRoomTypeEnum, int> RoomTypeWeight { get; set; } = new()
     {
-        { RogueTournRoomTypeEnum.Battle, 7 },
-        { RogueTournRoomTypeEnum.Coin, 2 },
-        { RogueTournRoomTypeEnum.Shop, 2 },
-        { RogueTournRoomTypeEnum.Event, 3 },
-        { RogueTournRoomTypeEnum.Adventure, 3 },
+        { RogueTournRoomTypeEnum.Battle, 15 },
+        { RogueTournRoomTypeEnum.Coin, 4 },
+        { RogueTournRoomTypeEnum.Shop, 4 },
+        { RogueTournRoomTypeEnum.Event, 7 },
+        { RogueTournRoomTypeEnum.Adventure, 6 },
         { RogueTournRoomTypeEnum.Reward, 5 },
         { RogueTournRoomTypeEnum.Hidden, 1 }
     };
 
     public RogueTournLevelInstance? CurLevel => Levels.GetValueOrDefault(CurLayerId);
+
+    #endregion
+
+    #region Scene
 
     public async ValueTask EnterNextLayer(int roomIndex, RogueTournRoomTypeEnum type)
     {
@@ -102,9 +116,71 @@ public class RogueTournInstance : BaseRogueInstance
         Player.RogueTournManager!.RogueTournInstance = null;
     }
 
+    #endregion
+
+    #region Buff & Formula
+
     public override async ValueTask RollBuff(int amount)
     {
         await RollBuff(amount, 2000101);
+    }
+
+    public async ValueTask RollFormula(int amount, List<RogueFormulaCategoryEnum> categories)
+    {
+        var formulaList = GameData.RogueTournFormulaData.Values.Where(x => !RogueFormulas.Contains(x) && categories.Contains(x.FormulaCategory)).ToList();
+
+        for (var i = 0; i < amount; i++)
+        {
+            var menu = new RogueFormulaSelectMenu(this);
+            menu.RollFormula(formulaList);
+            var action = menu.GetActionInstance();
+            RogueActions.Add(action.QueuePosition, action);
+        }
+
+        await UpdateMenu();
+    }
+
+    public override async ValueTask HandleBuffSelect(int buffId)
+    {
+        await base.HandleBuffSelect(buffId);
+        await ExpandFormula();
+    }
+
+    public override async ValueTask<RogueCommonActionResult?> AddBuff(int buffId, int level = 1,
+        RogueCommonActionResultSourceType source = RogueCommonActionResultSourceType.Dialogue,
+        RogueCommonActionResultDisplayType displayType = RogueCommonActionResultDisplayType.Single,
+        bool updateMenu = true, bool notify = true)
+    {
+        var res = await base.AddBuff(buffId, level, source, displayType, updateMenu, notify);
+
+        await ExpandFormula();
+
+        return res;
+    }
+
+    public async ValueTask ExpandFormula()
+    {
+        // expand formula
+        foreach (var formula in RogueFormulas)
+        {
+            if (formula.IsExpanded(RogueBuffs.Select(x => x.BuffId).ToList()) &&
+                !ExpandedFormulaIdList.Contains(formula.FormulaID))
+            {
+                ExpandedFormulaIdList.Add(formula.FormulaID);
+                await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode,
+                    formula.ToResultProto(RogueCommonActionResultSourceType.Select,
+                        RogueBuffs.Select(x => x.BuffId).ToList())));
+            }
+
+            else if (!formula.IsExpanded(RogueBuffs.Select(x => x.BuffId).ToList()) &&
+                     ExpandedFormulaIdList.Contains(formula.FormulaID))  // remove expanded formula
+            {
+                ExpandedFormulaIdList.Remove(formula.FormulaID);
+                await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode,
+                    formula.ToResultProto(RogueCommonActionResultSourceType.Select,
+                        RogueBuffs.Select(x => x.BuffId).ToList())));
+            }
+        }
     }
 
     public async ValueTask HandleFormulaSelect(int formulaId)
@@ -132,6 +208,10 @@ public class RogueTournInstance : BaseRogueInstance
         await Player.SendPacket(
             new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, selectFormula: true));
     }
+
+    #endregion
+
+    #region Handlers
 
     public override void OnBattleStart(BattleInstance battle)
     {
@@ -173,19 +253,8 @@ public class RogueTournInstance : BaseRogueInstance
             else
             {
                 // trigger formula
-                var formulaList = GameData.RogueTournFormulaData.Values.Where(x => !RogueFormulas.Contains(x)).ToList();
-
-                for (var i = 0; i < battle.Stages.Count; i++)
-                {
-                    await RollBuff(battle.Stages.Count, 2000103);
-
-                    var menu = new RogueFormulaSelectMenu(this);
-                    menu.RollFormula(formulaList);
-                    var action = menu.GetActionInstance();
-                    RogueActions.Add(action.QueuePosition, action);
-                }
-
-                await UpdateMenu();
+                await RollBuff(battle.Stages.Count, 2000103);
+                await RollFormula(battle.Stages.Count, [RogueFormulaCategoryEnum.Legendary]);
             }
         }
         else
@@ -194,6 +263,61 @@ public class RogueTournInstance : BaseRogueInstance
             await GainMoney(Random.Shared.Next(20, 60) * battle.Stages.Count);
         }
     }
+
+    #endregion
+
+    #region Workbench
+
+    public async ValueTask<Retcode> HandleFunc(RogueWorkbenchFunc func, RogueWorkbenchContentInfo content)
+    {
+        switch (func.Excel.FuncType)
+        {
+            case RogueTournWorkbenchFuncTypeEnum.BuffEnhance:
+                return await HandleBuffEnhance(func, content);
+            case RogueTournWorkbenchFuncTypeEnum.BuffReforge:
+                return await HandleBuffReforge(func, content);
+        }
+
+        return Retcode.RetSucc;
+    }
+
+    public async ValueTask<Retcode> HandleBuffEnhance(RogueWorkbenchFunc func, RogueWorkbenchContentInfo content)
+    {
+        var buffId = content.EnhanceBuffFunc.TargetBuffId;
+        var buff = RogueBuffs.Find(x => x.BuffId == buffId);
+        if (buff == null) return Retcode.RetRogueSelectBuffNotExist;
+
+        if (buff.BuffLevel == 2) return Retcode.RetRogueSelectBuffCertainMismatch;  // already enhanced
+
+        var cost = (int)buff.BuffExcel.RogueBuffCategory;
+        if (func.CurNum < cost) return Retcode.RetRogueCoinNotEnough;
+
+        func.CurNum -= cost;
+
+        await EnhanceBuff(buff.BuffId, RogueCommonActionResultSourceType.Enhance);
+
+        return Retcode.RetSucc;
+    }
+
+    public async ValueTask<Retcode> HandleBuffReforge(RogueWorkbenchFunc func, RogueWorkbenchContentInfo content)
+    {
+        var buffId = content.ReforgeBuffFunc.HMJAFJLBPAM;
+        var buff = RogueBuffs.Find(x => x.BuffId == buffId);
+        if (buff == null) return Retcode.RetRogueSelectBuffNotExist;
+
+        var cost = func.CurCost;
+        if (CurMoney < cost) return Retcode.RetRogueCoinNotEnough;
+        func.CurCost += 30;
+
+        // TODO: remove old buff
+
+
+        //await ReforgeBuff(buff.BuffId, RogueCommonActionResultSourceType.Reforge);
+
+        return Retcode.RetSucc;
+    }
+
+    #endregion
 
     #region Serilization
 

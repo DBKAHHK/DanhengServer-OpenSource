@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static RogueGambleInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVSb2d1ZUdhbWJsZUluZm8ucHJvdG8aHlJvZ3VlR2FtYmxlTWF6ZUdyb3Vw",
-            "SW5mby5wcm90bxoSSXRlbUNvc3REYXRhLnByb3RvItIBCg9Sb2d1ZUdhbWJs",
+            "ChVSb2d1ZUdhbWJsZUluZm8ucHJvdG8aEkl0ZW1Db3N0RGF0YS5wcm90bxoe",
+            "Um9ndWVHYW1ibGVNYXplR3JvdXBJbmZvLnByb3RvItIBCg9Sb2d1ZUdhbWJs",
             "ZUluZm8SMgoPbWF6ZV9ncm91cF9saXN0GAcgAygLMhkuUm9ndWVHYW1ibGVN",
             "YXplR3JvdXBJbmZvEhAKCGNhbl9wbGF5GAUgASgIEhMKC0pFR01NQkZLQUVD",
             "GAIgASgNEhMKC0RHR0dPQkZOQ0xCGAogASgNEhEKCWN1cl90aW1lcxgEIAEo",
@@ -33,7 +33,7 @@ namespace EggLink.DanhengServer.Proto {
             "ASgLMg0uSXRlbUNvc3REYXRhQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueGambleMazeGroupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueGambleMazeGroupInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueGambleInfo), global::EggLink.DanhengServer.Proto.RogueGambleInfo.Parser, new[]{ "MazeGroupList", "CanPlay", "JEGMMBFKAEC", "DGGGOBFNCLB", "CurTimes", "MaxGameTimes", "CurCostItem" }, null, null, null, null)
           }));
