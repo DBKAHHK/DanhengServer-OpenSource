@@ -68,16 +68,16 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
         {
             var menu = new RogueBuffSelectMenu(this)
             {
-                CurCount = i + 1,
-                TotalCount = amount
+                CurCount = 1,
+                TotalCount = 1
             };
             menu.RollBuff(actualBuffList);
             menu.HintId = buffHintType;
             var action = menu.GetActionInstance();
             RogueActions.Add(action.QueuePosition, action);
-        }
 
-        await UpdateMenu();
+            await UpdateMenu();
+        }
     }
 
     public virtual async ValueTask<RogueCommonActionResult?> AddBuff(int buffId, int level = 1,
@@ -94,6 +94,24 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
         var buff = new RogueBuffInstance(buffId, level);
         RogueBuffs.Add(buff);
         var result = buff.ToResultProto(source);
+
+        if (notify)
+            await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode, result, displayType));
+
+        if (updateMenu) await UpdateMenu();
+
+        return result;
+    }
+
+    public virtual async ValueTask<RogueCommonActionResult?> RemoveBuff(int buffId,
+        RogueCommonActionResultSourceType source = RogueCommonActionResultSourceType.Dialogue,
+        RogueCommonActionResultDisplayType displayType = RogueCommonActionResultDisplayType.Single,
+        bool updateMenu = true, bool notify = true)
+    {
+        var buff = RogueBuffs.Find(x => x.BuffExcel.MazeBuffID == buffId);
+        if (buff == null) return null;  // buff not found
+        RogueBuffs.Remove(buff);
+        var result = buff.ToRemoveResultProto(source);
 
         if (notify)
             await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode, result, displayType));
@@ -212,7 +230,7 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
             }, RogueCommonActionResultDisplayType.Single));
     }
 
-    public async ValueTask GainMoney(int amount, int displayType = 0)
+    public async ValueTask GainMoney(int amount, int displayType = 1)
     {
         CurMoney += amount;
         await Player.SendPacket(new PacketSyncRogueCommonVirtualItemInfoScNotify(this));
@@ -225,7 +243,6 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
         await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode,
             new RogueCommonActionResult
             {
-                Source = RogueCommonActionResultSourceType.Dialogue,
                 RogueAction = new RogueCommonActionResultData
                 {
                     GetItemList = new RogueCommonMoney

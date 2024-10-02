@@ -40,10 +40,28 @@ public class RogueWorkbenchFunc(RogueTournWorkbenchFuncExcel excel)
 {
     public int FuncId { get; set; } = excel.FuncID;
     public RogueTournWorkbenchFuncExcel Excel { get; set; } = excel;
-    public int CurNum { get; set; } = 5;
+    public int CurNum { get; set; } = excel.FuncType switch
+    {
+        RogueTournWorkbenchFuncTypeEnum.BuffReforge => -1,  // infinite
+        RogueTournWorkbenchFuncTypeEnum.FormulaReforge => 5,
+        RogueTournWorkbenchFuncTypeEnum.BuffEnhance => 5,
+        _ => 0
+    };
     public int MaxNum { get; set; } = 5;
 
-    public int CurCost { get; set; }
+    public int CurCost { get; set; } = excel.FuncType switch
+    {
+        RogueTournWorkbenchFuncTypeEnum.BuffReforge => 0,
+        RogueTournWorkbenchFuncTypeEnum.FormulaReforge => 50,
+        _ => 0
+    };
+
+    public int CurFreeNum { get; set; } = excel.FuncType switch
+    {
+        RogueTournWorkbenchFuncTypeEnum.BuffReforge => 1,
+        RogueTournWorkbenchFuncTypeEnum.FormulaReforge => 0,
+        _ => 0
+    };
 
     public WorkbenchFuncIdInfo ToIdInfo()
     {
@@ -65,7 +83,7 @@ public class RogueWorkbenchFunc(RogueTournWorkbenchFuncExcel excel)
                 {
                     CurNum = (uint)CurNum,
                     MaxNum = (uint)MaxNum,
-                    PFLOHKLIMAL =  // cost
+                    BuffEnhanceCostMap =
                     {
                         {1, 1},
                         {2, 2},
@@ -86,7 +104,11 @@ public class RogueWorkbenchFunc(RogueTournWorkbenchFuncExcel excel)
                                 ItemNum = (uint)CurCost
                             }
                         } }
-                    }
+                    },
+                    CanFreeReforge = CurFreeNum > 0,
+                    FreeReforgeNum = (uint)CurFreeNum,
+                    IntReforgeNumValue = CurNum,
+                    UintReforgeNumValue = (uint)CurNum
                 };
                 break;
             case RogueTournWorkbenchFuncTypeEnum.FormulaReforge:
@@ -102,7 +124,11 @@ public class RogueWorkbenchFunc(RogueTournWorkbenchFuncExcel excel)
                                 ItemNum = (uint)CurCost
                             }
                         } }
-                    }
+                    },
+                    CanFreeReforge = CurFreeNum > 0,
+                    FreeReforgeNum = (uint)CurFreeNum,
+                    IntReforgeNumValue = CurNum,
+                    UintReforgeNumValue = (uint)CurNum
                 };
                 break;
         }

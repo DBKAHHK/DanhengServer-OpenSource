@@ -5,6 +5,7 @@ using EggLink.DanhengServer.Enums.TournRogue;
 using EggLink.DanhengServer.GameServer.Game.Battle;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Game.Rogue;
+using EggLink.DanhengServer.GameServer.Game.Rogue.Buff;
 using EggLink.DanhengServer.GameServer.Game.Rogue.Event;
 using EggLink.DanhengServer.GameServer.Game.RogueTourn.Formula;
 using EggLink.DanhengServer.GameServer.Game.RogueTourn.Scene;
@@ -12,6 +13,7 @@ using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueCommon;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueTourn;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
+using FormulaTypeValue = EggLink.DanhengServer.Proto.FormulaTypeValue;
 
 namespace EggLink.DanhengServer.GameServer.Game.RogueTourn;
 
@@ -38,7 +40,8 @@ public class RogueTournInstance : BaseRogueInstance
         CurLayerId = 1101;
         EventManager = new RogueEventManager(player, this);
 
-        var t = RollFormula(1, [RogueFormulaCategoryEnum.Common, RogueFormulaCategoryEnum.Rare]);
+        BaseRerollCount = 0;
+        var t = RollFormula(1, [RogueFormulaCategoryEnum.Epic]);
         t.AsTask().Wait();
     }
 
@@ -95,6 +98,11 @@ public class RogueTournInstance : BaseRogueInstance
         CurLevel.CurRoomIndex = roomIndex;
         CurLevel.CurRoom?.Init(type);
 
+        // next room
+        var next = CurLevel.Rooms.Find(x => x.RoomIndex == roomIndex + 1);
+        if (next != null)
+            next.Status = RogueTournRoomStatus.Inited;
+
         // scene
         var entrance = CurLevel.CurRoom?.Config?.EntranceId ?? 0;
         var group = CurLevel.CurRoom?.Config?.AnchorGroup ?? 0;
@@ -142,8 +150,36 @@ public class RogueTournInstance : BaseRogueInstance
 
     public override async ValueTask HandleBuffSelect(int buffId)
     {
-        await base.HandleBuffSelect(buffId);
+        if (RogueActions.Count == 0) return;
+
+        var action = RogueActions.First().Value;
+        if (action.RogueBuffSelectMenu != null)
+        {
+            var buff = action.RogueBuffSelectMenu.Buffs.Find(x => x.MazeBuffID == buffId);
+            if (buff != null) // check if buff is in the list
+            {
+                if (RogueBuffs.Exists(x => x.BuffExcel.MazeBuffID == buffId)) // check if buff already exists
+                {
+                    // enhance
+                    await EnhanceBuff(buffId, RogueCommonActionResultSourceType.Select);
+                }
+                else
+                {
+                    var instance = new RogueBuffInstance(buff.MazeBuffID, buff.MazeBuffLevel);
+                    RogueBuffs.Add(instance);
+                    await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode,
+                        instance.ToResultProto(RogueCommonActionResultSourceType.Select)));
+                }
+            }
+
+            RogueActions.Remove(action.QueuePosition);
+            if (action.RogueBuffSelectMenu.IsAeonBuff) AeonBuffPending = false; // aeon buff added
+        }
+
         await ExpandFormula();
+        await UpdateMenu();
+
+        await Player.SendPacket(new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, true));
     }
 
     public override async ValueTask<RogueCommonActionResult?> AddBuff(int buffId, int level = 1,
@@ -152,6 +188,18 @@ public class RogueTournInstance : BaseRogueInstance
         bool updateMenu = true, bool notify = true)
     {
         var res = await base.AddBuff(buffId, level, source, displayType, updateMenu, notify);
+
+        await ExpandFormula();
+
+        return res;
+    }
+
+    public override async ValueTask<RogueCommonActionResult?> RemoveBuff(int buffId,
+        RogueCommonActionResultSourceType source = RogueCommonActionResultSourceType.Dialogue,
+        RogueCommonActionResultDisplayType displayType = RogueCommonActionResultDisplayType.Single,
+        bool updateMenu = true, bool notify = true)
+    {
+        var res = await base.RemoveBuff(buffId, source, displayType, updateMenu, notify);
 
         await ExpandFormula();
 
@@ -168,19 +216,42 @@ public class RogueTournInstance : BaseRogueInstance
             {
                 ExpandedFormulaIdList.Add(formula.FormulaID);
                 await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode,
-                    formula.ToResultProto(RogueCommonActionResultSourceType.Select,
-                        RogueBuffs.Select(x => x.BuffId).ToList())));
+                    formula.ToExpandResultProto(RogueCommonActionResultSourceType.Buff,
+                        RogueBuffs.Select(x => x.BuffId).ToList()), RogueCommonActionResultDisplayType.Single));
             }
 
             else if (!formula.IsExpanded(RogueBuffs.Select(x => x.BuffId).ToList()) &&
-                     ExpandedFormulaIdList.Contains(formula.FormulaID))  // remove expanded formula
+                     ExpandedFormulaIdList.Contains(formula.FormulaID)) // remove expanded formula
             {
                 ExpandedFormulaIdList.Remove(formula.FormulaID);
                 await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode,
-                    formula.ToResultProto(RogueCommonActionResultSourceType.Select,
-                        RogueBuffs.Select(x => x.BuffId).ToList())));
+                    formula.ToContractResultProto(RogueCommonActionResultSourceType.Buff,
+                        RogueBuffs.Select(x => x.BuffId).ToList()), RogueCommonActionResultDisplayType.Single));
             }
         }
+
+        // buff type
+        Dictionary<uint, int> buffTypeDict = [];
+        foreach (var type in RogueBuffs.Select(buff => buff.BuffExcel.RogueBuffType)
+                     .Where(type => !buffTypeDict.TryAdd((uint)type, 1)))
+        {
+            buffTypeDict[(uint)type]++;
+        }
+
+        await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode, new RogueCommonActionResult
+        {
+            RogueAction = new RogueCommonActionResultData
+            {
+                PathBuffList = new RogueCommonPathBuff
+                {
+                    Value = new FormulaTypeValue
+                    {
+                        FormulaTypeMap = { buffTypeDict }
+                    }
+                }
+            },
+            Source = RogueCommonActionResultSourceType.Buff
+        }, RogueCommonActionResultDisplayType.Single));
     }
 
     public async ValueTask HandleFormulaSelect(int formulaId)
@@ -197,7 +268,7 @@ public class RogueTournInstance : BaseRogueInstance
                     RogueFormulas.Add(formula);
                     await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode,
                         formula.ToResultProto(RogueCommonActionResultSourceType.Select,
-                            RogueBuffs.Select(x => x.BuffId).ToList())));
+                            RogueBuffs.Select(x => x.BuffId).ToList()), RogueCommonActionResultDisplayType.Single));
                 }
 
             RogueActions.Remove(action.QueuePosition);
@@ -207,6 +278,28 @@ public class RogueTournInstance : BaseRogueInstance
 
         await Player.SendPacket(
             new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, selectFormula: true));
+    }
+
+    public virtual async ValueTask<RogueCommonActionResult?> RemoveFormula(int formulaId,
+        RogueCommonActionResultSourceType source = RogueCommonActionResultSourceType.Dialogue,
+        RogueCommonActionResultDisplayType displayType = RogueCommonActionResultDisplayType.Single,
+        bool updateMenu = true, bool notify = true)
+    {
+        var formula = RogueFormulas.Find(x => x.FormulaID == formulaId);
+        if (formula == null) return null;  // buff not found
+        RogueFormulas.Remove(formula);
+        var result = formula.ToRemoveResultProto(source,
+            RogueBuffs.Select(x => x.BuffId).ToList());
+
+        if (ExpandedFormulaIdList.Contains(formulaId))
+            ExpandedFormulaIdList.Remove(formulaId);
+
+        if (notify)
+            await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode, result, displayType));
+
+        if (updateMenu) await UpdateMenu();
+
+        return result;
     }
 
     #endregion
@@ -255,6 +348,7 @@ public class RogueTournInstance : BaseRogueInstance
                 // trigger formula
                 await RollBuff(battle.Stages.Count, 2000103);
                 await RollFormula(battle.Stages.Count, [RogueFormulaCategoryEnum.Legendary]);
+                await GainMoney(Random.Shared.Next(100, 150) * battle.Stages.Count);
             }
         }
         else
@@ -294,25 +388,31 @@ public class RogueTournInstance : BaseRogueInstance
 
         func.CurNum -= cost;
 
-        await EnhanceBuff(buff.BuffId, RogueCommonActionResultSourceType.Enhance);
-
+        await EnhanceBuff(buff.BuffId, RogueCommonActionResultSourceType.None);
+        await ExpandFormula();
         return Retcode.RetSucc;
     }
 
     public async ValueTask<Retcode> HandleBuffReforge(RogueWorkbenchFunc func, RogueWorkbenchContentInfo content)
     {
-        var buffId = content.ReforgeBuffFunc.HMJAFJLBPAM;
+        var buffId = content.ReforgeBuffFunc.TargetReforgeBuffId;
         var buff = RogueBuffs.Find(x => x.BuffId == buffId);
         if (buff == null) return Retcode.RetRogueSelectBuffNotExist;
 
         var cost = func.CurCost;
         if (CurMoney < cost) return Retcode.RetRogueCoinNotEnough;
+
+        if (func.CurFreeNum > 0) func.CurFreeNum--;
         func.CurCost += 30;
 
-        // TODO: remove old buff
-
-
-        //await ReforgeBuff(buff.BuffId, RogueCommonActionResultSourceType.Reforge);
+        await RemoveBuff(buff.BuffId, RogueCommonActionResultSourceType.Reforge);
+        await RollBuff(1, buff.BuffExcel.RogueBuffCategory switch
+        {
+            RogueBuffCategoryEnum.Common => 2000001,
+            RogueBuffCategoryEnum.Rare => 2000002,
+            RogueBuffCategoryEnum.Legendary => 2000003,
+            _ => 2000001
+        });
 
         return Retcode.RetSucc;
     }
@@ -340,7 +440,10 @@ public class RogueTournInstance : BaseRogueInstance
             Lineup = ToLineupInfo(),
             MiracleInfo = ToMiracleInfo(),
             RogueTournGameAreaInfo = ToGameAreaInfo(),
-            TournFormulaInfo = ToFormulaInfo()
+            TournFormulaInfo = ToFormulaInfo(),
+            UnlockValue = new KeywordUnlockValue(),
+            GameDifficultyInfo = new RogueTournGameDifficultyInfo(),
+            MECLNIDJLHD = new BFDKODPIHGF()
         };
     }
 

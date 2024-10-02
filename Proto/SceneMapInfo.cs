@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static SceneMapInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJTY2VuZU1hcEluZm8ucHJvdG8aEU1EUE5MSU9EQVBELnByb3RvGhNNYXpl",
-            "UHJvcFN0YXRlLnByb3RvGg9DaGVzdEluZm8ucHJvdG8aD01hemVHcm91cC5w",
+            "ChJTY2VuZU1hcEluZm8ucHJvdG8aE01hemVQcm9wU3RhdGUucHJvdG8aD0No",
+            "ZXN0SW5mby5wcm90bxoPTWF6ZUdyb3VwLnByb3RvGhFNRFBOTElPREFQRC5w",
             "cm90byLSAwoMU2NlbmVNYXBJbmZvEjsKEGZsb29yX3NhdmVkX2RhdGEYCCAD",
             "KAsyIS5TY2VuZU1hcEluZm8uRmxvb3JTYXZlZERhdGFFbnRyeRIcChR1bmxv",
             "Y2tfdGVsZXBvcnRfbGlzdBgLIAMoDRIjCg9tYXplX2dyb3VwX2xpc3QYASAD",
@@ -39,7 +39,7 @@ namespace EggLink.DanhengServer.Proto {
             "IAEoCRINCgV2YWx1ZRgCIAEoBToCOAFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MDPNLIODAPDReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazePropStateReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChestInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazeGroupReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MazePropStateReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChestInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazeGroupReflection.Descriptor, global::EggLink.DanhengServer.Proto.MDPNLIODAPDReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneMapInfo), global::EggLink.DanhengServer.Proto.SceneMapInfo.Parser, new[]{ "FloorSavedData", "UnlockTeleportList", "MazeGroupList", "EntryId", "ChestList", "LightenSectionList", "CurMapEntryId", "EntryStoryLineId", "Retcode", "DCKLOFCGOMC", "DimensionId", "MazePropList", "ContentId" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));

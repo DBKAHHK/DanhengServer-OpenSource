@@ -98,7 +98,7 @@ public class RogueBuffSelectMenu(BaseRogueInstance rogue)
                 }
             },
             SourceHintId = (uint)HintId,
-            HandbookUnlockBuffIdList = { Buffs.Select(x => (uint)x.MazeBuffID) },
+            //HandbookUnlockBuffIdList = { Buffs.Select(x => (uint)x.MazeBuffID) },
             SelectBuffList = { Buffs.Select(x => x.ToProto()) }
         };
     }

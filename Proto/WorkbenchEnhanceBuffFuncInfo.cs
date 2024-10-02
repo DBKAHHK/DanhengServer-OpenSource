@@ -24,16 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static WorkbenchEnhanceBuffFuncInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiJXb3JrYmVuY2hFbmhhbmNlQnVmZkZ1bmNJbmZvLnByb3RvIrkBChxXb3Jr",
-            "YmVuY2hFbmhhbmNlQnVmZkZ1bmNJbmZvEg8KB2N1cl9udW0YCSABKA0SQwoL",
-            "UEZMT0hLTElNQUwYDSADKAsyLi5Xb3JrYmVuY2hFbmhhbmNlQnVmZkZ1bmNJ",
-            "bmZvLlBGTE9IS0xJTUFMRW50cnkSDwoHbWF4X251bRgEIAEoDRoyChBQRkxP",
-            "SEtMSU1BTEVudHJ5EgsKA2tleRgBIAEoDRINCgV2YWx1ZRgCIAEoDToCOAFC",
-            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "CiJXb3JrYmVuY2hFbmhhbmNlQnVmZkZ1bmNJbmZvLnByb3RvItEBChxXb3Jr",
+            "YmVuY2hFbmhhbmNlQnVmZkZ1bmNJbmZvEg8KB2N1cl9udW0YCSABKA0SVAoV",
+            "YnVmZl9lbmhhbmNlX2Nvc3RfbWFwGA0gAygLMjUuV29ya2JlbmNoRW5oYW5j",
+            "ZUJ1ZmZGdW5jSW5mby5CdWZmRW5oYW5jZUNvc3RNYXBFbnRyeRIPCgdtYXhf",
+            "bnVtGAQgASgNGjkKF0J1ZmZFbmhhbmNlQ29zdE1hcEVudHJ5EgsKA2tleRgB",
+            "IAEoDRINCgV2YWx1ZRgCIAEoDToCOAFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.WorkbenchEnhanceBuffFuncInfo), global::EggLink.DanhengServer.Proto.WorkbenchEnhanceBuffFuncInfo.Parser, new[]{ "CurNum", "PFLOHKLIMAL", "MaxNum" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.WorkbenchEnhanceBuffFuncInfo), global::EggLink.DanhengServer.Proto.WorkbenchEnhanceBuffFuncInfo.Parser, new[]{ "CurNum", "BuffEnhanceCostMap", "MaxNum" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -76,7 +77,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkbenchEnhanceBuffFuncInfo(WorkbenchEnhanceBuffFuncInfo other) : this() {
       curNum_ = other.curNum_;
-      pFLOHKLIMAL_ = other.pFLOHKLIMAL_.Clone();
+      buffEnhanceCostMap_ = other.buffEnhanceCostMap_.Clone();
       maxNum_ = other.maxNum_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -99,18 +100,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "PFLOHKLIMAL" field.</summary>
-    public const int PFLOHKLIMALFieldNumber = 13;
-    private static readonly pbc::MapField<uint, uint>.Codec _map_pFLOHKLIMAL_codec
+    /// <summary>Field number for the "buff_enhance_cost_map" field.</summary>
+    public const int BuffEnhanceCostMapFieldNumber = 13;
+    private static readonly pbc::MapField<uint, uint>.Codec _map_buffEnhanceCostMap_codec
         = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 106);
-    private readonly pbc::MapField<uint, uint> pFLOHKLIMAL_ = new pbc::MapField<uint, uint>();
-    /// <summary>
-    /// sus
-    /// </summary>
+    private readonly pbc::MapField<uint, uint> buffEnhanceCostMap_ = new pbc::MapField<uint, uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<uint, uint> PFLOHKLIMAL {
-      get { return pFLOHKLIMAL_; }
+    public pbc::MapField<uint, uint> BuffEnhanceCostMap {
+      get { return buffEnhanceCostMap_; }
     }
 
     /// <summary>Field number for the "max_num" field.</summary>
@@ -141,7 +139,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (CurNum != other.CurNum) return false;
-      if (!PFLOHKLIMAL.Equals(other.PFLOHKLIMAL)) return false;
+      if (!BuffEnhanceCostMap.Equals(other.BuffEnhanceCostMap)) return false;
       if (MaxNum != other.MaxNum) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -151,7 +149,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (CurNum != 0) hash ^= CurNum.GetHashCode();
-      hash ^= PFLOHKLIMAL.GetHashCode();
+      hash ^= BuffEnhanceCostMap.GetHashCode();
       if (MaxNum != 0) hash ^= MaxNum.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -179,7 +177,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteUInt32(CurNum);
       }
-      pFLOHKLIMAL_.WriteTo(output, _map_pFLOHKLIMAL_codec);
+      buffEnhanceCostMap_.WriteTo(output, _map_buffEnhanceCostMap_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -198,7 +196,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteUInt32(CurNum);
       }
-      pFLOHKLIMAL_.WriteTo(ref output, _map_pFLOHKLIMAL_codec);
+      buffEnhanceCostMap_.WriteTo(ref output, _map_buffEnhanceCostMap_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -212,7 +210,7 @@ namespace EggLink.DanhengServer.Proto {
       if (CurNum != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurNum);
       }
-      size += pFLOHKLIMAL_.CalculateSize(_map_pFLOHKLIMAL_codec);
+      size += buffEnhanceCostMap_.CalculateSize(_map_buffEnhanceCostMap_codec);
       if (MaxNum != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxNum);
       }
@@ -231,7 +229,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.CurNum != 0) {
         CurNum = other.CurNum;
       }
-      pFLOHKLIMAL_.MergeFrom(other.pFLOHKLIMAL_);
+      buffEnhanceCostMap_.MergeFrom(other.buffEnhanceCostMap_);
       if (other.MaxNum != 0) {
         MaxNum = other.MaxNum;
       }
@@ -259,7 +257,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 106: {
-            pFLOHKLIMAL_.AddEntriesFrom(input, _map_pFLOHKLIMAL_codec);
+            buffEnhanceCostMap_.AddEntriesFrom(input, _map_buffEnhanceCostMap_codec);
             break;
           }
         }
@@ -286,7 +284,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 106: {
-            pFLOHKLIMAL_.AddEntriesFrom(ref input, _map_pFLOHKLIMAL_codec);
+            buffEnhanceCostMap_.AddEntriesFrom(ref input, _map_buffEnhanceCostMap_codec);
             break;
           }
         }

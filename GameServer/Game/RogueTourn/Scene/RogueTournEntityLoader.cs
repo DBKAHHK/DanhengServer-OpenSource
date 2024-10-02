@@ -157,6 +157,8 @@ public class RogueTournEntityLoader(SceneInstance scene, PlayerInstance player) 
         GameData.MazePropData.TryGetValue(info.PropID, out var propExcel);
         if (propExcel == null) return null;
 
+        if (info.PropID == 1049) return null;  // gamble machine
+
         var prop = new RogueProp(Scene, propExcel, group, info);
 
         if (RogueDoorPropIds.Contains(prop.PropInfo.PropID))
