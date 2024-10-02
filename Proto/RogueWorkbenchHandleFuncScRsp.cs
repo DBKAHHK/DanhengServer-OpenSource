@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static RogueWorkbenchHandleFuncScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNSb2d1ZVdvcmtiZW5jaEhhbmRsZUZ1bmNTY1JzcC5wcm90bxoRTUtNRkVP",
-            "SE1IREwucHJvdG8iaAodUm9ndWVXb3JrYmVuY2hIYW5kbGVGdW5jU2NSc3AS",
-            "IQoLS0RJSU9QREVPREwYDiABKAsyDC5NS01GRU9ITUhETBITCgtGSUhFRkFP",
-            "Q09DQhgHIAEoDRIPCgdyZXRjb2RlGAwgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
-            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "CiNSb2d1ZVdvcmtiZW5jaEhhbmRsZUZ1bmNTY1JzcC5wcm90bxoXV29ya2Jl",
+            "bmNoRnVuY0luZm8ucHJvdG8ieQodUm9ndWVXb3JrYmVuY2hIYW5kbGVGdW5j",
+            "U2NSc3ASLAoQdGFyZ2V0X2Z1bmNfaW5mbxgOIAEoCzISLldvcmtiZW5jaEZ1",
+            "bmNJbmZvEhkKEXdvcmtiZW5jaF9mdW5jX2lkGAcgASgNEg8KB3JldGNvZGUY",
+            "DCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MKMFEOHMHDLReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.WorkbenchFuncInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueWorkbenchHandleFuncScRsp), global::EggLink.DanhengServer.Proto.RogueWorkbenchHandleFuncScRsp.Parser, new[]{ "KDIIOPDEODL", "FIHEFAOCOCB", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueWorkbenchHandleFuncScRsp), global::EggLink.DanhengServer.Proto.RogueWorkbenchHandleFuncScRsp.Parser, new[]{ "TargetFuncInfo", "WorkbenchFuncId", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueWorkbenchHandleFuncScRsp(RogueWorkbenchHandleFuncScRsp other) : this() {
-      kDIIOPDEODL_ = other.kDIIOPDEODL_ != null ? other.kDIIOPDEODL_.Clone() : null;
-      fIHEFAOCOCB_ = other.fIHEFAOCOCB_;
+      targetFuncInfo_ = other.targetFuncInfo_ != null ? other.targetFuncInfo_.Clone() : null;
+      workbenchFuncId_ = other.workbenchFuncId_;
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -86,27 +86,27 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueWorkbenchHandleFuncScRsp(this);
     }
 
-    /// <summary>Field number for the "KDIIOPDEODL" field.</summary>
-    public const int KDIIOPDEODLFieldNumber = 14;
-    private global::EggLink.DanhengServer.Proto.MKMFEOHMHDL kDIIOPDEODL_;
+    /// <summary>Field number for the "target_func_info" field.</summary>
+    public const int TargetFuncInfoFieldNumber = 14;
+    private global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo targetFuncInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MKMFEOHMHDL KDIIOPDEODL {
-      get { return kDIIOPDEODL_; }
+    public global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo TargetFuncInfo {
+      get { return targetFuncInfo_; }
       set {
-        kDIIOPDEODL_ = value;
+        targetFuncInfo_ = value;
       }
     }
 
-    /// <summary>Field number for the "FIHEFAOCOCB" field.</summary>
-    public const int FIHEFAOCOCBFieldNumber = 7;
-    private uint fIHEFAOCOCB_;
+    /// <summary>Field number for the "workbench_func_id" field.</summary>
+    public const int WorkbenchFuncIdFieldNumber = 7;
+    private uint workbenchFuncId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FIHEFAOCOCB {
-      get { return fIHEFAOCOCB_; }
+    public uint WorkbenchFuncId {
+      get { return workbenchFuncId_; }
       set {
-        fIHEFAOCOCB_ = value;
+        workbenchFuncId_ = value;
       }
     }
 
@@ -137,8 +137,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(KDIIOPDEODL, other.KDIIOPDEODL)) return false;
-      if (FIHEFAOCOCB != other.FIHEFAOCOCB) return false;
+      if (!object.Equals(TargetFuncInfo, other.TargetFuncInfo)) return false;
+      if (WorkbenchFuncId != other.WorkbenchFuncId) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -147,8 +147,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (kDIIOPDEODL_ != null) hash ^= KDIIOPDEODL.GetHashCode();
-      if (FIHEFAOCOCB != 0) hash ^= FIHEFAOCOCB.GetHashCode();
+      if (targetFuncInfo_ != null) hash ^= TargetFuncInfo.GetHashCode();
+      if (WorkbenchFuncId != 0) hash ^= WorkbenchFuncId.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -168,17 +168,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FIHEFAOCOCB != 0) {
+      if (WorkbenchFuncId != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(FIHEFAOCOCB);
+        output.WriteUInt32(WorkbenchFuncId);
       }
       if (Retcode != 0) {
         output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
       }
-      if (kDIIOPDEODL_ != null) {
+      if (targetFuncInfo_ != null) {
         output.WriteRawTag(114);
-        output.WriteMessage(KDIIOPDEODL);
+        output.WriteMessage(TargetFuncInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,17 +190,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FIHEFAOCOCB != 0) {
+      if (WorkbenchFuncId != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(FIHEFAOCOCB);
+        output.WriteUInt32(WorkbenchFuncId);
       }
       if (Retcode != 0) {
         output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
       }
-      if (kDIIOPDEODL_ != null) {
+      if (targetFuncInfo_ != null) {
         output.WriteRawTag(114);
-        output.WriteMessage(KDIIOPDEODL);
+        output.WriteMessage(TargetFuncInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -212,11 +212,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (kDIIOPDEODL_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(KDIIOPDEODL);
+      if (targetFuncInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TargetFuncInfo);
       }
-      if (FIHEFAOCOCB != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FIHEFAOCOCB);
+      if (WorkbenchFuncId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorkbenchFuncId);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
@@ -233,14 +233,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.kDIIOPDEODL_ != null) {
-        if (kDIIOPDEODL_ == null) {
-          KDIIOPDEODL = new global::EggLink.DanhengServer.Proto.MKMFEOHMHDL();
+      if (other.targetFuncInfo_ != null) {
+        if (targetFuncInfo_ == null) {
+          TargetFuncInfo = new global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo();
         }
-        KDIIOPDEODL.MergeFrom(other.KDIIOPDEODL);
+        TargetFuncInfo.MergeFrom(other.TargetFuncInfo);
       }
-      if (other.FIHEFAOCOCB != 0) {
-        FIHEFAOCOCB = other.FIHEFAOCOCB;
+      if (other.WorkbenchFuncId != 0) {
+        WorkbenchFuncId = other.WorkbenchFuncId;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
@@ -261,7 +261,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 56: {
-            FIHEFAOCOCB = input.ReadUInt32();
+            WorkbenchFuncId = input.ReadUInt32();
             break;
           }
           case 96: {
@@ -269,10 +269,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 114: {
-            if (kDIIOPDEODL_ == null) {
-              KDIIOPDEODL = new global::EggLink.DanhengServer.Proto.MKMFEOHMHDL();
+            if (targetFuncInfo_ == null) {
+              TargetFuncInfo = new global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo();
             }
-            input.ReadMessage(KDIIOPDEODL);
+            input.ReadMessage(TargetFuncInfo);
             break;
           }
         }
@@ -291,7 +291,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 56: {
-            FIHEFAOCOCB = input.ReadUInt32();
+            WorkbenchFuncId = input.ReadUInt32();
             break;
           }
           case 96: {
@@ -299,10 +299,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 114: {
-            if (kDIIOPDEODL_ == null) {
-              KDIIOPDEODL = new global::EggLink.DanhengServer.Proto.MKMFEOHMHDL();
+            if (targetFuncInfo_ == null) {
+              TargetFuncInfo = new global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo();
             }
-            input.ReadMessage(KDIIOPDEODL);
+            input.ReadMessage(TargetFuncInfo);
             break;
           }
         }

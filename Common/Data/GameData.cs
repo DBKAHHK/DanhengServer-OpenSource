@@ -212,6 +212,8 @@ public static class GameData
     #region TournRogue
 
     public static Dictionary<int, RogueTournAreaExcel> RogueTournAreaData { get; private set; } = [];
+    public static Dictionary<int, RogueTournWorkbenchExcel> RogueTournWorkbenchData { get; private set; } = [];
+    public static Dictionary<int, RogueTournWorkbenchFuncExcel> RogueTournWorkbenchFuncData { get; private set; } = [];
     public static Dictionary<int, RogueTournFormulaExcel> RogueTournFormulaData { get; private set; } = [];
 
     public static Dictionary<int, RogueTournHexAvatarBaseTypeExcel> RogueTournHexAvatarBaseTypeData

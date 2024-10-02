@@ -67,6 +67,22 @@ public class RogueBuffInstance(int buffId, int buffLevel)
         };
     }
 
+    public RogueCommonActionResult ToRemoveResultProto(RogueCommonActionResultSourceType source)
+    {
+        return new RogueCommonActionResult
+        {
+            RogueAction = new RogueCommonActionResultData
+            {
+                RemoveBuffList = new RogueCommonBuff
+                {
+                    BuffId = (uint)BuffId,
+                    BuffLevel = (uint)BuffLevel
+                }
+            },
+            Source = source
+        };
+    }
+
     public RogueBuffEnhanceInfo ToEnhanceProto()
     {
         return new RogueBuffEnhanceInfo

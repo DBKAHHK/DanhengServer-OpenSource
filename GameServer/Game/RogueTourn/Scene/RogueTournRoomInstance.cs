@@ -28,7 +28,7 @@ public class RogueTournRoomInstance(int roomIndex, RogueTournLevelInstance level
 
     public void Init(RogueTournRoomTypeEnum type)
     {
-        if (Status != RogueTournRoomStatus.None) return; // already initialized
+        if (Status == RogueTournRoomStatus.Processing || Status == RogueTournRoomStatus.Finish) return; // already initialized
 
         RoomType = type;
         Status = RogueTournRoomStatus.Processing;
@@ -54,7 +54,9 @@ public class RogueTournRoomInstance(int roomIndex, RogueTournLevelInstance level
         var groupList = new List<int>();
         groupList.AddRange(Config!.DefaultLoadBasicGroup);
         groupList.AddRange(Config.DefaultLoadGroup);
-        groupList.AddRange(Config.SubMonsterGroup);
+
+        if (RoomIndex == 1)  // first room
+            groupList.AddRange(Config.SubMonsterGroup);
 
         return groupList;
     }

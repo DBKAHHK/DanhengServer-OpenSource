@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static MuseumInfoChangedScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9NdXNldW1JbmZvQ2hhbmdlZFNjTm90aWZ5LnByb3RvGhFITUpHRUNLQ0tN",
-            "TS5wcm90bxoRSEVLTUpJQ0dOT0sucHJvdG8aEUtPUEJNR0JLQUJFLnByb3Rv",
-            "GhFMUE5BQVBHQ0lORi5wcm90byLWAgoZTXVzZXVtSW5mb0NoYW5nZWRTY05v",
+            "Ch9NdXNldW1JbmZvQ2hhbmdlZFNjTm90aWZ5LnByb3RvGhFMUE5BQVBHQ0lO",
+            "Ri5wcm90bxoRSEVLTUpJQ0dOT0sucHJvdG8aEUhNSkdFQ0tDS01NLnByb3Rv",
+            "GhFLT1BCTUdCS0FCRS5wcm90byLWAgoZTXVzZXVtSW5mb0NoYW5nZWRTY05v",
             "dGlmeRINCgVsZXZlbBgHIAEoDRIhCgtQSUJFRkVGR01OThgGIAEoCzIMLkxQ",
             "TkFBUEdDSU5GEiEKC0VHRk1ITkNBS01MGAIgAygLMgwuSEVLTUpJQ0dOT0sS",
             "EwoLTk1GTkRGTExPSU0YBCABKA0SEwoLTEFEUE9HTEhOSkoYCCADKA0SEwoL",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "TUlBT0xHSksYAyADKA0SIQoLSk9GTkpNUEdOSEIYCiADKAsyDC5LT1BCTUdC",
             "S0FCRUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HMJGECKCKMMReflection.Descriptor, global::EggLink.DanhengServer.Proto.HEKMJICGNOKReflection.Descriptor, global::EggLink.DanhengServer.Proto.KOPBMGBKABEReflection.Descriptor, global::EggLink.DanhengServer.Proto.LPNAAPGCINFReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LPNAAPGCINFReflection.Descriptor, global::EggLink.DanhengServer.Proto.HEKMJICGNOKReflection.Descriptor, global::EggLink.DanhengServer.Proto.HMJGECKCKMMReflection.Descriptor, global::EggLink.DanhengServer.Proto.KOPBMGBKABEReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MuseumInfoChangedScNotify), global::EggLink.DanhengServer.Proto.MuseumInfoChangedScNotify.Parser, new[]{ "Level", "PIBEFEFGMNN", "EGFMHNCAKML", "NMFNDFLLOIM", "LADPOGLHNJJ", "BFKBLKNBHFB", "NBGPOPOKELO", "Exp", "JPIKKFGJMCE", "HHDFFEDNLGM", "FLNOGELFODP", "CPKMIAOLGJK", "JOFNJMPGNHB" }, null, null, null, null)
           }));

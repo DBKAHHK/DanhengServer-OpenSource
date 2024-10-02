@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.Enums.TournRogue;
+﻿using EggLink.DanhengServer.Data.Custom;
+using EggLink.DanhengServer.Enums.TournRogue;
 using EggLink.DanhengServer.Proto;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -67,7 +68,7 @@ public class RogueTournFormulaExcel : ExcelResource
     public bool IsExpanded(List<int> buffIdList)
     {
         Dictionary<int, int> buffTypeNumDict = new();
-        foreach (var buff in buffIdList.Select(buffId => GameData.RogueBuffData.GetValueOrDefault(buffId))
+        foreach (var buff in buffIdList.Select(buffId => GameData.RogueBuffData.GetValueOrDefault(buffId * 100 + 1))
                      .OfType<RogueTournBuffExcel>()
                      .Where(buff => !buffTypeNumDict.TryAdd(buff.RogueBuffType, 1)))
             buffTypeNumDict[buff.RogueBuffType]++;
@@ -84,6 +85,51 @@ public class RogueTournFormulaExcel : ExcelResource
             RogueAction = new RogueCommonActionResultData
             {
                 GetFormulaList = new RogueCommonFormula
+                {
+                    FormulaInfo = ToProto(buffIdList)
+                }
+            },
+            Source = select
+        };
+    }
+
+    public RogueCommonActionResult ToRemoveResultProto(RogueCommonActionResultSourceType select, List<int> buffIdList)
+    {
+        return new RogueCommonActionResult
+        {
+            RogueAction = new RogueCommonActionResultData
+            {
+                RemoveFormulaList = new RogueCommonRemoveFormula
+                {
+                    FormulaInfo = ToProto(buffIdList)
+                }
+            },
+            Source = select
+        };
+    }
+
+    public RogueCommonActionResult ToExpandResultProto(RogueCommonActionResultSourceType select, List<int> buffIdList)
+    {
+        return new RogueCommonActionResult
+        {
+            RogueAction = new RogueCommonActionResultData
+            {
+                ExpandFormulaList = new RogueCommonExpandedFormula
+                {
+                    FormulaInfo = ToProto(buffIdList)
+                }
+            },
+            Source = select
+        };
+    }
+
+    public RogueCommonActionResult ToContractResultProto(RogueCommonActionResultSourceType select, List<int> buffIdList)
+    {
+        return new RogueCommonActionResult
+        {
+            RogueAction = new RogueCommonActionResultData
+            {
+                ContractFormulaList = new RogueCommonContractFormula
                 {
                     FormulaInfo = ToProto(buffIdList)
                 }

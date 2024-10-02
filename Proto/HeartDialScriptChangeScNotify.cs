@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNIZWFydERpYWxTY3JpcHRDaGFuZ2VTY05vdGlmeS5wcm90bxoRRkxJS0dH",
-            "SElLRkcucHJvdG8aG0hlYXJ0RGlhbFVubG9ja1N0YXR1cy5wcm90bxoZSGVh",
-            "cnREaWFsU2NyaXB0SW5mby5wcm90bxobSGVhcnREaWFsRGlhbG9ndWVJbmZv",
+            "SElLRkcucHJvdG8aGUhlYXJ0RGlhbFNjcmlwdEluZm8ucHJvdG8aG0hlYXJ0",
+            "RGlhbERpYWxvZ3VlSW5mby5wcm90bxobSGVhcnREaWFsVW5sb2NrU3RhdHVz",
             "LnByb3RvIuUBCh1IZWFydERpYWxTY3JpcHRDaGFuZ2VTY05vdGlmeRIhCgtC",
             "RUNPREVBTkNHShgJIAMoCzIMLkZMSUtHR0hJS0ZHEjoKGmNoYW5nZWRfZGlh",
             "bG9ndWVfaW5mb19saXN0GAsgAygLMhYuSGVhcnREaWFsRGlhbG9ndWVJbmZv",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "aWFsU2NyaXB0SW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FLIKGGHIKFGReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialUnlockStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialScriptInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialDialogueInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FLIKGGHIKFGReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialScriptInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialDialogueInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialUnlockStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeartDialScriptChangeScNotify), global::EggLink.DanhengServer.Proto.HeartDialScriptChangeScNotify.Parser, new[]{ "BECODEANCGJ", "ChangedDialogueInfoList", "UnlockStatus", "ChangedScriptInfoList" }, null, null, null, null)
           }));

@@ -54,7 +54,7 @@ public class RogueProp(SceneInstance scene, MazePropExcel excel, GroupInfo group
             {
                 RogueTournDoorInfo = new RogueTournDoorInfo
                 {
-                    KPCKJNANCKA = EnterNextLayer,
+                    EnterNextLayer = EnterNextLayer,
                     RogueTournRoomType = (uint)RoomType
                 }
             };
