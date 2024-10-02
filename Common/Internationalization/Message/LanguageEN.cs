@@ -38,6 +38,7 @@ public class WordTextEN
     public string Rank => "Rank";
     public string Avatar => "Avatar";
     public string Material => "Material";
+    public string Pet => "Pet";
     public string Relic => "Relic";
     public string Equipment => "Light Cone";
     public string Talent => "Talent";

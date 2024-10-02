@@ -27,6 +27,8 @@ public class PlayerData : BaseDatabaseDataHelper
     public int Mcoin { get; set; } = 0; // Crystals
     public int TalentPoints { get; set; } = 0; // Rogue talent points
 
+    public int Pet { get; set; } = 0;
+
     public int Stamina { get; set; } = 240;
     public double StaminaReserve { get; set; } = 0;
     public long NextStaminaRecover { get; set; } = 0;
