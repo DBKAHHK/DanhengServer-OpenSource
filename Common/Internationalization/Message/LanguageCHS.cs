@@ -38,6 +38,7 @@ public class WordTextCHS
     public string Rank => "星魂";
     public string Avatar => "角色";
     public string Material => "材料";
+    public string Pet => "宠物";
     public string Relic => "遗器";
     public string Equipment => "光锥";
     public string Talent => "行迹";
