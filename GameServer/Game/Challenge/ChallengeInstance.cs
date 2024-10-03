@@ -242,7 +242,7 @@ public class ChallengeInstance
 
         if (Excel.StoryExcel != null)
         {
-            battle.AddBattleTarget(1, 10001, GetTotalScore());
+            battle.AddBattleTarget(1, 10002, GetTotalScore());
 
             foreach (var id in Excel.StoryExcel.BattleTargetID!) battle.AddBattleTarget(5, id, GetTotalScore());
         }
