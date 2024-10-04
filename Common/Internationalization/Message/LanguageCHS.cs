@@ -38,6 +38,7 @@ public class WordTextCHS
     public string Rank => "星魂";
     public string Avatar => "角色";
     public string Material => "材料";
+    public string Pet => "宠物";
     public string Relic => "遗器";
     public string Equipment => "光锥";
     public string Talent => "行迹";
@@ -142,6 +143,7 @@ public class ServerInfoTextCHS
     public string LoadingItem => "正在加载 {0}…";
     public string RegisterItem => "注册了 {0} 个 {1}。";
     public string FailedToLoadItem => "加载 {0} 失败。";
+    public string NewClientSecretKey => "客户端密钥不存在，正在生成新的客户端密钥。";
     public string FailedToInitializeItem => "初始化 {0} 失败。";
     public string FailedToReadItem => "读取 {0} 失败，文件{1}";
     public string GeneratedItem => "已生成 {0}。";

@@ -132,6 +132,7 @@ public static class GameData
     public static Dictionary<int, RelicConfigExcel> RelicConfigData { get; private set; } = [];
     public static Dictionary<int, RelicExpItemExcel> RelicExpItemData { get; private set; } = [];
     public static Dictionary<int, RelicExpTypeExcel> RelicExpTypeData { get; private set; } = [];
+    public static Dictionary<int, PetExcel> PetData { get; private set; } = [];
 
     #endregion
 

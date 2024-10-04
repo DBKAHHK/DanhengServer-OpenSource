@@ -38,6 +38,7 @@ public class WordTextCHT
     public string Rank => "星魂";
     public string Avatar => "角色";
     public string Material => "材料";
+    public string Pet => "寵物";
     public string Relic => "遺器";
     public string Equipment => "光錐";
     public string Talent => "行跡";
@@ -140,6 +141,7 @@ public class ServerInfoTextCHT
     public string LoadingItem => "正在加載 {0}…";
     public string RegisterItem => "註冊了 {0} 個 {1}。";
     public string FailedToLoadItem => "加載 {0} 失敗。";
+    public string NewClientSecretKey => "客戶端密鑰不存在，正在產生新的客戶端密鑰。";
     public string FailedToInitializeItem => "初始化 {0} 失敗。";
     public string FailedToReadItem => "讀取 {0} 失敗，文件{1}";
     public string GeneratedItem => "已生成 {0}。";

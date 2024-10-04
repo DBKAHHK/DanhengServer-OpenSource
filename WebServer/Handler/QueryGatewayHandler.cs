@@ -31,6 +31,8 @@ internal class QueryGatewayHandler
             Unk6 = true,
             Unk7 = true
         };
+        if (ConfigManager.Config.GameServer.UsePacketEncryption)
+            gateServer.ClientSecretKey = Convert.ToBase64String(Crypto.ClientSecretKey.GetBytes());
 
         if (!ResourceManager.IsLoaded) gateServer.Retcode = 2;
 

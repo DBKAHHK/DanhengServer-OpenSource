@@ -78,6 +78,8 @@ public class Connection(KcpConversation conversation, IPEndPoint remote) : Danhe
     private async Task ProcessMessageAsync(Memory<byte> data)
     {
         var gamePacket = data.ToArray();
+        if (ConfigManager.Config.GameServer.UsePacketEncryption)
+            Crypto.Xor(gamePacket, XorKey);
 
         await using MemoryStream ms = new(gamePacket);
         using BinaryReader br = new(ms);
