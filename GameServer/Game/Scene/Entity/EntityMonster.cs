@@ -35,6 +35,8 @@ public class EntityMonster(
     public int EntityID { get; set; } = 0;
     public int GroupID { get; set; } = GroupID;
 
+    public int RogueMonsterId { get; set; } = 0;
+
     public async ValueTask AddBuff(SceneBuff buff)
     {
         var oldBuff = BuffList.Find(x => x.BuffId == buff.BuffId);
@@ -66,7 +68,7 @@ public class EntityMonster(
 
     public SceneEntityInfo ToProto()
     {
-        return new SceneEntityInfo
+        var proto = new SceneEntityInfo
         {
             EntityId = (uint)EntityID,
             GroupId = (uint)GroupID,
@@ -83,6 +85,17 @@ public class EntityMonster(
                 WorldLevel = (uint)Scene.Player.Data.WorldLevel
             }
         };
+
+        if (RogueMonsterId > 0)
+            proto.NpcMonster.ExtraInfo = new NpcMonsterExtraInfo
+            {
+                RogueGameInfo = new NpcMonsterRogueInfo
+                {
+                    RogueMonsterId = (uint)RogueMonsterId
+                }
+            };
+
+        return proto;
     }
 
     public async ValueTask RemoveBuff(int buffId)

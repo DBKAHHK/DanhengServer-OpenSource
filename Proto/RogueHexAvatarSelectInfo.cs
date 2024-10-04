@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static RogueHexAvatarSelectInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5Sb2d1ZUhleEF2YXRhclNlbGVjdEluZm8ucHJvdG8iTwoYUm9ndWVIZXhB",
-            "dmF0YXJTZWxlY3RJbmZvEhMKC0lKS0lLRU1ERUJCGAcgASgNEh4KFnNlbGVj",
-            "dF9taXJhY2xlX2lkX2xpc3QYDSADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
-            "cnZlci5Qcm90b2IGcHJvdG8z"));
+            "Ch5Sb2d1ZUhleEF2YXRhclNlbGVjdEluZm8ucHJvdG8iUgoYUm9ndWVIZXhB",
+            "dmF0YXJTZWxlY3RJbmZvEhYKDnNlbGVjdF9oaW50X2lkGAcgASgNEh4KFnNl",
+            "bGVjdF9taXJhY2xlX2lkX2xpc3QYDSADKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueHexAvatarSelectInfo), global::EggLink.DanhengServer.Proto.RogueHexAvatarSelectInfo.Parser, new[]{ "IJKIKEMDEBB", "SelectMiracleIdList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueHexAvatarSelectInfo), global::EggLink.DanhengServer.Proto.RogueHexAvatarSelectInfo.Parser, new[]{ "SelectHintId", "SelectMiracleIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueHexAvatarSelectInfo(RogueHexAvatarSelectInfo other) : this() {
-      iJKIKEMDEBB_ = other.iJKIKEMDEBB_;
+      selectHintId_ = other.selectHintId_;
       selectMiracleIdList_ = other.selectMiracleIdList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,15 +84,15 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueHexAvatarSelectInfo(this);
     }
 
-    /// <summary>Field number for the "IJKIKEMDEBB" field.</summary>
-    public const int IJKIKEMDEBBFieldNumber = 7;
-    private uint iJKIKEMDEBB_;
+    /// <summary>Field number for the "select_hint_id" field.</summary>
+    public const int SelectHintIdFieldNumber = 7;
+    private uint selectHintId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IJKIKEMDEBB {
-      get { return iJKIKEMDEBB_; }
+    public uint SelectHintId {
+      get { return selectHintId_; }
       set {
-        iJKIKEMDEBB_ = value;
+        selectHintId_ = value;
       }
     }
 
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IJKIKEMDEBB != other.IJKIKEMDEBB) return false;
+      if (SelectHintId != other.SelectHintId) return false;
       if(!selectMiracleIdList_.Equals(other.selectMiracleIdList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -131,7 +131,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IJKIKEMDEBB != 0) hash ^= IJKIKEMDEBB.GetHashCode();
+      if (SelectHintId != 0) hash ^= SelectHintId.GetHashCode();
       hash ^= selectMiracleIdList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -151,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IJKIKEMDEBB != 0) {
+      if (SelectHintId != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(IJKIKEMDEBB);
+        output.WriteUInt32(SelectHintId);
       }
       selectMiracleIdList_.WriteTo(output, _repeated_selectMiracleIdList_codec);
       if (_unknownFields != null) {
@@ -166,9 +166,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IJKIKEMDEBB != 0) {
+      if (SelectHintId != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(IJKIKEMDEBB);
+        output.WriteUInt32(SelectHintId);
       }
       selectMiracleIdList_.WriteTo(ref output, _repeated_selectMiracleIdList_codec);
       if (_unknownFields != null) {
@@ -181,8 +181,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IJKIKEMDEBB != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IJKIKEMDEBB);
+      if (SelectHintId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SelectHintId);
       }
       size += selectMiracleIdList_.CalculateSize(_repeated_selectMiracleIdList_codec);
       if (_unknownFields != null) {
@@ -197,8 +197,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IJKIKEMDEBB != 0) {
-        IJKIKEMDEBB = other.IJKIKEMDEBB;
+      if (other.SelectHintId != 0) {
+        SelectHintId = other.SelectHintId;
       }
       selectMiracleIdList_.Add(other.selectMiracleIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -217,7 +217,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 56: {
-            IJKIKEMDEBB = input.ReadUInt32();
+            SelectHintId = input.ReadUInt32();
             break;
           }
           case 106:
@@ -241,7 +241,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 56: {
-            IJKIKEMDEBB = input.ReadUInt32();
+            SelectHintId = input.ReadUInt32();
             break;
           }
           case 106:

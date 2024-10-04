@@ -16,6 +16,8 @@ public class HandlerHandleRogueCommonPendingActionCsReq : Handler
 
         if (req.BuffSelectResult != null) await rogue.HandleBuffSelect((int)req.BuffSelectResult.BuffSelectId);
 
+        if (req.BuffReforgeSelectResult != null) await rogue.HandleBuffReforgeSelect((int)req.BuffReforgeSelectResult.BuffSelectId);
+
         if (req.BuffRerollSelectResult != null) await rogue.HandleRerollBuff();
 
         if (req.BonusSelectResult != null) await rogue.HandleBonusSelect((int)req.BonusSelectResult.BonusId);

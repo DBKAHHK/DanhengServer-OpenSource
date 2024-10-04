@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static EvolveBuildLevelInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpFdm9sdmVCdWlsZExldmVsSW5mby5wcm90bxoXRXZvbHZlQnVpbGRBdmF0",
-            "YXIucHJvdG8aG0V2b2x2ZUJ1aWxkQmF0dGxlSW5mby5wcm90bxoSQmF0dGxl",
-            "VGFyZ2V0LnByb3RvIvQBChRFdm9sdmVCdWlsZExldmVsSW5mbxIyChtCYXR0",
+            "ChpFdm9sdmVCdWlsZExldmVsSW5mby5wcm90bxoSQmF0dGxlVGFyZ2V0LnBy",
+            "b3RvGhtFdm9sdmVCdWlsZEJhdHRsZUluZm8ucHJvdG8aF0V2b2x2ZUJ1aWxk",
+            "QXZhdGFyLnByb3RvIvQBChRFdm9sdmVCdWlsZExldmVsSW5mbxIyChtCYXR0",
             "bGVUYXJnZXRMaXN0RmllbGROdW1iZXIYCSADKAsyDS5CYXR0bGVUYXJnZXQS",
             "GwoTUm91bmRDbnRGaWVsZE51bWJlchgFIAEoDRIWCg5wZXJpb2RfaWRfbGlz",
             "dBgOIAMoDRInCgthdmF0YXJfbGlzdBgEIAMoCzISLkV2b2x2ZUJ1aWxkQXZh",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "aW5mbxgLIAEoCzIWLkV2b2x2ZUJ1aWxkQmF0dGxlSW5mb0IeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EvolveBuildAvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.EvolveBuildBattleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleTargetReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BattleTargetReflection.Descriptor, global::EggLink.DanhengServer.Proto.EvolveBuildBattleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.EvolveBuildAvatarReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EvolveBuildLevelInfo), global::EggLink.DanhengServer.Proto.EvolveBuildLevelInfo.Parser, new[]{ "BattleTargetListFieldNumber", "RoundCntFieldNumber", "PeriodIdList", "AvatarList", "CurGameExpFieldNumber", "BattleInfo" }, null, null, null, null)
           }));

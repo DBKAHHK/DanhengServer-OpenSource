@@ -8,6 +8,7 @@ public class PacketHandleRogueCommonPendingActionScRsp : BasePacket
 {
     public PacketHandleRogueCommonPendingActionScRsp(int queuePosition, bool selectBuff = false,
         bool selectMiracle = false, bool selectBonus = false, bool selectFormula = false,
+        bool reforgeBuff = false,
         RogueBuffSelectMenu? menu = null) : base(
         CmdIds.HandleRogueCommonPendingActionScRsp)
     {
@@ -24,6 +25,8 @@ public class PacketHandleRogueCommonPendingActionScRsp : BasePacket
         if (selectBonus) proto.BonusSelectCallback = new RogueBonusSelectCallback();
 
         if (selectFormula) proto.RogueTournFormulaCallback = new RogueTournFormulaCallback();
+
+        if (reforgeBuff) proto.BuffReforgeSelectCallback = new RogueBuffReforgeSelectCallback();
 
         if (menu != null)
             proto.BuffRerollCallback = new RogueBuffRerollCallback

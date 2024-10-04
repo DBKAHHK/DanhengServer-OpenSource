@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static RogueComposeMiracleSelectInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNSb2d1ZUNvbXBvc2VNaXJhY2xlU2VsZWN0SW5mby5wcm90byJUCh1Sb2d1",
+            "CiNSb2d1ZUNvbXBvc2VNaXJhY2xlU2VsZWN0SW5mby5wcm90byJXCh1Sb2d1",
             "ZUNvbXBvc2VNaXJhY2xlU2VsZWN0SW5mbxIeChZzZWxlY3RfbWlyYWNsZV9p",
-            "ZF9saXN0GA0gAygNEhMKC0lKS0lLRU1ERUJCGAkgASgNQh6qAhtFZ2dMaW5r",
-            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ZF9saXN0GA0gAygNEhYKDnNlbGVjdF9oaW50X2lkGAkgASgNQh6qAhtFZ2dM",
+            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueComposeMiracleSelectInfo), global::EggLink.DanhengServer.Proto.RogueComposeMiracleSelectInfo.Parser, new[]{ "SelectMiracleIdList", "IJKIKEMDEBB" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueComposeMiracleSelectInfo), global::EggLink.DanhengServer.Proto.RogueComposeMiracleSelectInfo.Parser, new[]{ "SelectMiracleIdList", "SelectHintId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueComposeMiracleSelectInfo(RogueComposeMiracleSelectInfo other) : this() {
       selectMiracleIdList_ = other.selectMiracleIdList_.Clone();
-      iJKIKEMDEBB_ = other.iJKIKEMDEBB_;
+      selectHintId_ = other.selectHintId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -95,15 +95,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return selectMiracleIdList_; }
     }
 
-    /// <summary>Field number for the "IJKIKEMDEBB" field.</summary>
-    public const int IJKIKEMDEBBFieldNumber = 9;
-    private uint iJKIKEMDEBB_;
+    /// <summary>Field number for the "select_hint_id" field.</summary>
+    public const int SelectHintIdFieldNumber = 9;
+    private uint selectHintId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IJKIKEMDEBB {
-      get { return iJKIKEMDEBB_; }
+    public uint SelectHintId {
+      get { return selectHintId_; }
       set {
-        iJKIKEMDEBB_ = value;
+        selectHintId_ = value;
       }
     }
 
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!selectMiracleIdList_.Equals(other.selectMiracleIdList_)) return false;
-      if (IJKIKEMDEBB != other.IJKIKEMDEBB) return false;
+      if (SelectHintId != other.SelectHintId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= selectMiracleIdList_.GetHashCode();
-      if (IJKIKEMDEBB != 0) hash ^= IJKIKEMDEBB.GetHashCode();
+      if (SelectHintId != 0) hash ^= SelectHintId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IJKIKEMDEBB != 0) {
+      if (SelectHintId != 0) {
         output.WriteRawTag(72);
-        output.WriteUInt32(IJKIKEMDEBB);
+        output.WriteUInt32(SelectHintId);
       }
       selectMiracleIdList_.WriteTo(output, _repeated_selectMiracleIdList_codec);
       if (_unknownFields != null) {
@@ -166,9 +166,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IJKIKEMDEBB != 0) {
+      if (SelectHintId != 0) {
         output.WriteRawTag(72);
-        output.WriteUInt32(IJKIKEMDEBB);
+        output.WriteUInt32(SelectHintId);
       }
       selectMiracleIdList_.WriteTo(ref output, _repeated_selectMiracleIdList_codec);
       if (_unknownFields != null) {
@@ -182,8 +182,8 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += selectMiracleIdList_.CalculateSize(_repeated_selectMiracleIdList_codec);
-      if (IJKIKEMDEBB != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IJKIKEMDEBB);
+      if (SelectHintId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SelectHintId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -198,8 +198,8 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       selectMiracleIdList_.Add(other.selectMiracleIdList_);
-      if (other.IJKIKEMDEBB != 0) {
-        IJKIKEMDEBB = other.IJKIKEMDEBB;
+      if (other.SelectHintId != 0) {
+        SelectHintId = other.SelectHintId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -217,7 +217,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 72: {
-            IJKIKEMDEBB = input.ReadUInt32();
+            SelectHintId = input.ReadUInt32();
             break;
           }
           case 106:
@@ -241,7 +241,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 72: {
-            IJKIKEMDEBB = input.ReadUInt32();
+            SelectHintId = input.ReadUInt32();
             break;
           }
           case 106:

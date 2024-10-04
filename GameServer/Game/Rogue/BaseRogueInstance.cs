@@ -53,7 +53,7 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
         await RollBuff(amount, 100005);
     }
 
-    public virtual async ValueTask RollBuff(int amount, int buffGroupId, int buffHintType = 1)
+    public virtual async ValueTask RollBuff(int amount, int buffGroupId, int buffHintType = 1, bool isReforge = false)
     {
         var buffGroup = GameData.RogueBuffGroupData[buffGroupId];
         var buffList = RogueSubMode == RogueSubModeEnum.TournRogue
@@ -74,6 +74,7 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
             menu.RollBuff(actualBuffList);
             menu.HintId = buffHintType;
             var action = menu.GetActionInstance();
+            action.IsReforge = isReforge;
             RogueActions.Add(action.QueuePosition, action);
 
             await UpdateMenu();
@@ -192,6 +193,39 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
         await UpdateMenu();
 
         await Player.SendPacket(new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, true));
+    }
+
+    public virtual async ValueTask HandleBuffReforgeSelect(int buffId)
+    {
+        if (RogueActions.Count == 0) return;
+
+        var action = RogueActions.First().Value;
+        if (action.RogueBuffSelectMenu != null)
+        {
+            var buff = action.RogueBuffSelectMenu.Buffs.Find(x => x.MazeBuffID == buffId);
+            if (buff != null) // check if buff is in the list
+            {
+                if (RogueBuffs.Exists(x => x.BuffExcel.MazeBuffID == buffId)) // check if buff already exists
+                {
+                    // enhance
+                    await EnhanceBuff(buffId, RogueCommonActionResultSourceType.Select);
+                }
+                else
+                {
+                    var instance = new RogueBuffInstance(buff.MazeBuffID, buff.MazeBuffLevel);
+                    RogueBuffs.Add(instance);
+                    await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode,
+                        instance.ToResultProto(RogueCommonActionResultSourceType.Select)));
+                }
+            }
+
+            RogueActions.Remove(action.QueuePosition);
+            if (action.RogueBuffSelectMenu.IsAeonBuff) AeonBuffPending = false; // aeon buff added
+        }
+
+        await UpdateMenu();
+
+        await Player.SendPacket(new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, reforgeBuff:true));
     }
 
     public virtual async ValueTask HandleRerollBuff()

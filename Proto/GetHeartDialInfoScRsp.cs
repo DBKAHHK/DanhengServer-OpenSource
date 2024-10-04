@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static GetHeartDialInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtHZXRIZWFydERpYWxJbmZvU2NSc3AucHJvdG8aEUZMSUtHR0hJS0ZHLnBy",
-            "b3RvGhlIZWFydERpYWxTY3JpcHRJbmZvLnByb3RvGhtIZWFydERpYWxEaWFs",
-            "b2d1ZUluZm8ucHJvdG8aG0hlYXJ0RGlhbFVubG9ja1N0YXR1cy5wcm90byLe",
+            "ChtHZXRIZWFydERpYWxJbmZvU2NSc3AucHJvdG8aG0hlYXJ0RGlhbFVubG9j",
+            "a1N0YXR1cy5wcm90bxoZSGVhcnREaWFsU2NyaXB0SW5mby5wcm90bxoRRkxJ",
+            "S0dHSElLRkcucHJvdG8aG0hlYXJ0RGlhbERpYWxvZ3VlSW5mby5wcm90byLe",
             "AQoVR2V0SGVhcnREaWFsSW5mb1NjUnNwEi0KDXVubG9ja19zdGF0dXMYASAB",
             "KA4yFi5IZWFydERpYWxVbmxvY2tTdGF0dXMSLgoQc2NyaXB0X2luZm9fbGlz",
             "dBgMIAMoCzIULkhlYXJ0RGlhbFNjcmlwdEluZm8SIQoLQkVDT0RFQU5DR0oY",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "KAsyFi5IZWFydERpYWxEaWFsb2d1ZUluZm8SDwoHcmV0Y29kZRgDIAEoDUIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FLIKGGHIKFGReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialScriptInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialDialogueInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialUnlockStatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeartDialUnlockStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialScriptInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.FLIKGGHIKFGReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialDialogueInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetHeartDialInfoScRsp), global::EggLink.DanhengServer.Proto.GetHeartDialInfoScRsp.Parser, new[]{ "UnlockStatus", "ScriptInfoList", "BECODEANCGJ", "DialogueInfoList", "Retcode" }, null, null, null, null)
           }));

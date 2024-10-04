@@ -55,7 +55,7 @@ public class RogueTournRoomInstance(int roomIndex, RogueTournLevelInstance level
         groupList.AddRange(Config!.DefaultLoadBasicGroup);
         groupList.AddRange(Config.DefaultLoadGroup);
 
-        if (RoomIndex == 1)  // first room
+        //if (RoomIndex == 1)  // first room
             groupList.AddRange(Config.SubMonsterGroup);
 
         return groupList;

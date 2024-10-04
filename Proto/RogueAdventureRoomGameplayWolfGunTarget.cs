@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci1Sb2d1ZUFkdmVudHVyZVJvb21HYW1lcGxheVdvbGZHdW5UYXJnZXQucHJv",
-            "dG8aEU1ISkVITE5JQ0ZQLnByb3RvGhFMTktHR0FQQlBMRi5wcm90bxoRRktQ",
-            "SUxGQktETEEucHJvdG8aEUpKT0JIT0VETEhPLnByb3RvIrsBCidSb2d1ZUFk",
+            "dG8aEUZLUElMRkJLRExBLnByb3RvGhFKSk9CSE9FRExITy5wcm90bxoRTE5L",
+            "R0dBUEJQTEYucHJvdG8aEU1ISkVITE5JQ0ZQLnByb3RvIrsBCidSb2d1ZUFk",
             "dmVudHVyZVJvb21HYW1lcGxheVdvbGZHdW5UYXJnZXQSIQoLdGFyZ2V0X25v",
             "bmUYCiABKAsyDC5NSEpFSExOSUNGUBIhCgt0YXJnZXRfY29pbhgIIAEoCzIM",
             "LkZLUElMRkJLRExBEiQKDnRhcmdldF9taXJhY2xlGAQgASgLMgwuTE5LR0dB",
             "UEJQTEYSJAoOdGFyZ2V0X3J1YW5tZWkYASABKAsyDC5KSk9CSE9FRExIT0Ie",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MHJEHLNICFPReflection.Descriptor, global::EggLink.DanhengServer.Proto.LNKGGAPBPLFReflection.Descriptor, global::EggLink.DanhengServer.Proto.FKPILFBKDLAReflection.Descriptor, global::EggLink.DanhengServer.Proto.JJOBHOEDLHOReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FKPILFBKDLAReflection.Descriptor, global::EggLink.DanhengServer.Proto.JJOBHOEDLHOReflection.Descriptor, global::EggLink.DanhengServer.Proto.LNKGGAPBPLFReflection.Descriptor, global::EggLink.DanhengServer.Proto.MHJEHLNICFPReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunTarget), global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunTarget.Parser, new[]{ "TargetNone", "TargetCoin", "TargetMiracle", "TargetRuanmei" }, null, null, null, null)
           }));

@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static RogueCommonBuffSelectInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9Sb2d1ZUNvbW1vbkJ1ZmZTZWxlY3RJbmZvLnByb3RvGhVSb2d1ZUNvbW1v",
-            "bkJ1ZmYucHJvdG8aEkl0ZW1Db3N0RGF0YS5wcm90bxolUm9ndWVDb21tb25C",
+            "Ch9Sb2d1ZUNvbW1vbkJ1ZmZTZWxlY3RJbmZvLnByb3RvGhJJdGVtQ29zdERh",
+            "dGEucHJvdG8aFVJvZ3VlQ29tbW9uQnVmZi5wcm90bxolUm9ndWVDb21tb25C",
             "dWZmU2VsZWN0U291cmNlVHlwZS5wcm90byLCAwoZUm9ndWVDb21tb25CdWZm",
             "U2VsZWN0SW5mbxIqChNyb2xsX2J1ZmZfY29zdF9kYXRhGAUgASgLMg0uSXRl",
             "bUNvc3REYXRhEjUKC3NvdXJjZV90eXBlGAggASgOMiAuUm9ndWVDb21tb25C",
@@ -39,7 +39,7 @@ namespace EggLink.DanhengServer.Proto {
             "KA0SGAoQc291cmNlX2N1cl9jb3VudBgEIAEoDUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonBuffReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonBuffReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectInfo), global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectInfo.Parser, new[]{ "RollBuffCostData", "SourceType", "HandbookUnlockBuffIdList", "CertainSelectBuffId", "SelectBuffList", "SourceHintId", "RollBuffMaxCount", "RollBuffFreeCount", "FirstBuffTypeList", "CanRoll", "RollBuffCount", "SourceTotalCount", "SourceCurCount" }, null, null, null, null)
           }));

@@ -102,4 +102,12 @@ public class RogueBuffSelectMenu(BaseRogueInstance rogue)
             SelectBuffList = { Buffs.Select(x => x.ToProto()) }
         };
     }
+
+    public RogueCommonBuffReforgeSelectInfo ToReforgeProto()
+    {
+        return new RogueCommonBuffReforgeSelectInfo
+        {
+            SelectBuffs = { Buffs.Select(x => x.ToProto()) }
+        };
+    }
 }

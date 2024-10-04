@@ -99,6 +99,7 @@ public class RogueTournInstance : BaseRogueInstance
         CurLevel.CurRoom?.Init(type);
 
         // next room
+        CurActionQueuePosition += 15;
         var next = CurLevel.Rooms.Find(x => x.RoomIndex == roomIndex + 1);
         if (next != null)
             next.Status = RogueTournRoomStatus.Inited;
@@ -405,14 +406,14 @@ public class RogueTournInstance : BaseRogueInstance
         if (func.CurFreeNum > 0) func.CurFreeNum--;
         func.CurCost += 30;
 
-        await RemoveBuff(buff.BuffId, RogueCommonActionResultSourceType.Reforge);
+        await RemoveBuff(buff.BuffId, RogueCommonActionResultSourceType.Reforge, RogueCommonActionResultDisplayType.None);
         await RollBuff(1, buff.BuffExcel.RogueBuffCategory switch
         {
             RogueBuffCategoryEnum.Common => 2000001,
             RogueBuffCategoryEnum.Rare => 2000002,
             RogueBuffCategoryEnum.Legendary => 2000003,
             _ => 2000001
-        });
+        }, isReforge:true);
 
         return Retcode.RetSucc;
     }
@@ -443,7 +444,10 @@ public class RogueTournInstance : BaseRogueInstance
             TournFormulaInfo = ToFormulaInfo(),
             UnlockValue = new KeywordUnlockValue(),
             GameDifficultyInfo = new RogueTournGameDifficultyInfo(),
-            MECLNIDJLHD = new BFDKODPIHGF()
+            TournModuleInfo = new RogueTournModuleInfo
+            {
+                AllowFood = true
+            }
         };
     }
 

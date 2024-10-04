@@ -141,7 +141,8 @@ public class RogueTournEntityLoader(SceneInstance scene, PlayerInstance player) 
             new(Scene, info.ToPositionProto(), info.ToRotationProto(), group.Id, info.ID, excel, info)
             {
                 EventID = rogueMonster.EventID,
-                CustomStageID = rogueMonster.EventID
+                CustomStageID = rogueMonster.EventID,
+                RogueMonsterId = rogueMonster.RogueMonsterID
             };
 
         await Scene.AddEntity(entity, sendPacket);

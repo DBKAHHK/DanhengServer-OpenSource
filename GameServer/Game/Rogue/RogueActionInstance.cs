@@ -13,6 +13,8 @@ public class RogueActionInstance
     public RogueBonusSelectInfo? RogueBonusSelectInfo { get; set; }
     public RogueFormulaSelectMenu? RogueFormulaSelectMenu { get; set; }
 
+    public bool IsReforge { get; set; }
+
     public void SetBonus()
     {
         RogueBonusSelectInfo = new RogueBonusSelectInfo
@@ -25,7 +27,9 @@ public class RogueActionInstance
     {
         var action = new RogueAction();
 
-        if (RogueBuffSelectMenu != null) action.BuffSelectInfo = RogueBuffSelectMenu.ToProto();
+        if (RogueBuffSelectMenu != null && !IsReforge) action.BuffSelectInfo = RogueBuffSelectMenu.ToProto();
+
+        if (RogueBuffSelectMenu != null && IsReforge) action.BuffReforgeSelectInfo = RogueBuffSelectMenu.ToReforgeProto();
 
         if (RogueMiracleSelectMenu != null) action.MiracleSelectInfo = RogueMiracleSelectMenu.ToProto();
 

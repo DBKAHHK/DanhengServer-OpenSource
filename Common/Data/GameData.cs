@@ -102,6 +102,7 @@ public static class GameData
     public static ConcurrentDictionary<string, FloorInfo> FloorInfoData { get; } = [];
     public static Dictionary<int, MapEntranceExcel> MapEntranceData { get; private set; } = [];
     public static Dictionary<int, MazePlaneExcel> MazePlaneData { get; private set; } = [];
+    public static Dictionary<int, MazeChestExcel> MazeChestData { get; private set; } = [];
     public static Dictionary<int, MazePropExcel> MazePropData { get; private set; } = [];
     public static Dictionary<int, PlaneEventExcel> PlaneEventData { get; private set; } = [];
     public static Dictionary<int, ContentPackageConfigExcel> ContentPackageConfigData { get; private set; } = [];
