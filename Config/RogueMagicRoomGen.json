@@ -1,0 +1,352 @@
+[
+    {
+        "EntranceId": 8050401,
+        "RoomType": "Boss",
+        "AnchorGroup": 24,
+        "AnchorId": 1,
+        "DefaultLoadBasicGroup": [
+            23,
+            24
+        ],
+        "DefaultLoadGroup": [
+            25
+        ]
+    },
+    {
+        "EntranceId": 8050401,
+        "RoomType": "Reforge",
+        "AnchorGroup": 30,
+        "AnchorId": 1,
+        "DefaultLoadBasicGroup": [
+            29,
+            30
+        ],
+        "DefaultLoadGroup": [
+            31
+        ]
+    },
+    {
+        "EntranceId": 8050401,
+        "RoomType": "Shop",
+        "AnchorGroup": 34,
+        "AnchorId": 1,
+        "DefaultLoadBasicGroup": [
+            33,
+            34
+        ],
+        "DefaultLoadGroup": [
+            35,
+            36
+        ]
+    },
+    {
+        "EntranceId": 8050401,
+        "RoomType": "Elite",
+        "AnchorGroup": 38,
+        "AnchorId": 1,
+        "DefaultLoadBasicGroup": [
+            37,
+            38
+        ],
+        "DefaultLoadGroup": [
+            39
+        ]
+    },
+    {
+        "EntranceId": 8050401,
+        "RoomType": "Wealth",
+        "AnchorGroup": 41,
+        "AnchorId": 1,
+        "DefaultLoadBasicGroup": [
+            40,
+            41
+        ],
+        "DefaultLoadGroup": [
+            42
+        ]
+    },
+    {
+        "EntranceId": 8050401,
+        "RoomType": "Event",
+        "AnchorGroup": 41,
+        "AnchorId": 1,
+        "DefaultLoadBasicGroup": [
+            40,
+            41
+        ],
+        "DefaultLoadGroup": [
+            43,
+            44,
+            45
+        ]
+    },
+    {
+        "EntranceId": 8050401,
+        "RoomType": "Battle",
+        "AnchorGroup": 41,
+        "AnchorId": 1,
+        "DefaultLoadBasicGroup": [
+            40,
+            41
+        ],
+        "DefaultLoadGroup": [
+            46
+        ],
+        "SubMonsterGroup": [
+            47,
+            48
+        ]
+    },
+    {
+        "EntranceId": 8050401,
+        "RoomType": "Battle",
+        "AnchorGroup": 41,
+        "AnchorId": 1,
+        "DefaultLoadBasicGroup": [
+            40,
+            41
+        ],
+        "DefaultLoadGroup": [
+            101
+        ],
+        "SubMonsterGroup": [
+            102,
+            103
+        ]
+    },
+    {
+        "EntranceId": 8050401,
+        "RoomType": "Wealth",
+        "AnchorGroup": 41,
+        "AnchorId": 1,
+        "DefaultLoadBasicGroup": [
+            40,
+            41
+        ],
+        "DefaultLoadGroup": [
+            104
+        ]
+    },
+    {
+        "EntranceId": 8050401,
+        "RoomType": "Event",
+        "AnchorGroup": 41,
+        "AnchorId": 1,
+        "DefaultLoadBasicGroup": [
+            40,
+            41
+        ],
+        "DefaultLoadGroup": [
+            115,
+            116
+        ]
+    },
+    {
+        "EntranceId": 8050401,
+        "RoomType": "Wealth",
+        "AnchorGroup": 59,
+        "AnchorId": 1,
+        "DefaultLoadBasicGroup": [
+            58,
+            59
+        ],
+        "DefaultLoadGroup": [
+            60
+        ]
+    },
+    {
+        "EntranceId": 8050401,
+        "RoomType": "Event",
+        "AnchorGroup": 59,
+        "AnchorId": 1,
+        "DefaultLoadBasicGroup": [
+            58,
+            59
+        ],
+        "DefaultLoadGroup": [
+            61,
+            62,
+            63
+        ]
+    },
+    {
+        "EntranceId": 8050401,
+        "RoomType": "Battle",
+        "AnchorGroup": 59,
+        "AnchorId": 1,
+        "DefaultLoadBasicGroup": [
+            58,
+            59
+        ],
+        "DefaultLoadGroup": [
+            64
+        ],
+        "SubMonsterGroup": [
+            65,
+            66
+        ]
+    },
+    {
+        "EntranceId": 8050401,
+        "RoomType": "Battle",
+        "AnchorGroup": 59,
+        "AnchorId": 1,
+        "DefaultLoadBasicGroup": [
+            58,
+            59
+        ],
+        "DefaultLoadGroup": [
+            105
+        ],
+        "SubMonsterGroup": [
+            106,
+            107
+        ]
+    },
+    {
+        "EntranceId": 8050401,
+        "RoomType": "Wealth",
+        "AnchorGroup": 59,
+        "AnchorId": 1,
+        "DefaultLoadBasicGroup": [
+            58,
+            59
+        ],
+        "DefaultLoadGroup": [
+            108
+        ]
+    },
+    {
+        "EntranceId": 8050401,
+        "RoomType": "Event",
+        "AnchorGroup": 59,
+        "AnchorId": 1,
+        "DefaultLoadBasicGroup": [
+            58,
+            59
+        ],
+        "DefaultLoadGroup": [
+            117
+        ]
+    },
+    {
+        "EntranceId": 8050401,
+        "RoomType": "Wealth",
+        "AnchorGroup": 68,
+        "AnchorId": 1,
+        "DefaultLoadBasicGroup": [
+            67,
+            68
+        ],
+        "DefaultLoadGroup": [
+            69
+        ]
+    },
+    {
+        "EntranceId": 8050401,
+        "RoomType": "Event",
+        "AnchorGroup": 68,
+        "AnchorId": 1,
+        "DefaultLoadBasicGroup": [
+            67,
+            68
+        ],
+        "DefaultLoadGroup": [
+            70,
+            71,
+            72
+        ]
+    },
+    {
+        "EntranceId": 8050401,
+        "RoomType": "Battle",
+        "AnchorGroup": 68,
+        "AnchorId": 1,
+        "DefaultLoadBasicGroup": [
+            67,
+            68
+        ],
+        "DefaultLoadGroup": [
+            73
+        ],
+        "SubMonsterGroup": [
+            74,
+            75
+        ]
+    },
+    {
+        "EntranceId": 8050401,
+        "RoomType": "Wealth",
+        "AnchorGroup": 77,
+        "AnchorId": 1,
+        "DefaultLoadBasicGroup": [
+            76,
+            77
+        ],
+        "DefaultLoadGroup": [
+            78
+        ]
+    },
+    {
+        "EntranceId": 8050401,
+        "RoomType": "Event",
+        "AnchorGroup": 77,
+        "AnchorId": 1,
+        "DefaultLoadBasicGroup": [
+            76,
+            77
+        ],
+        "DefaultLoadGroup": [
+            79,
+            80,
+            81
+        ]
+    },
+    {
+        "EntranceId": 8050401,
+        "RoomType": "Battle",
+        "AnchorGroup": 77,
+        "AnchorId": 1,
+        "DefaultLoadBasicGroup": [
+            76,
+            77
+        ],
+        "DefaultLoadGroup": [
+            82
+        ],
+        "SubMonsterGroup": [
+            83,
+            84
+        ]
+    },
+    {
+        "EntranceId": 8050401,
+        "RoomType": "Battle",
+        "AnchorGroup": 77,
+        "AnchorId": 1,
+        "DefaultLoadBasicGroup": [
+            76,
+            77
+        ],
+        "DefaultLoadGroup": [
+            110
+        ],
+        "SubMonsterGroup": [
+            111,
+            112
+        ]
+    },
+    {
+        "EntranceId": 8050401,
+        "RoomType": "Boss",
+        "AnchorGroup": 122,
+        "AnchorId": 1,
+        "DefaultLoadBasicGroup": [
+            121,
+            122
+        ],
+        "DefaultLoadGroup": [
+            123
+        ]
+    }
+]
