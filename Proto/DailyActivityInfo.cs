@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static DailyActivityInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdEYWlseUFjdGl2aXR5SW5mby5wcm90byJpChFEYWlseUFjdGl2aXR5SW5m",
-            "bxIUCgxpc19oYXNfdGFrZW4YAiABKAgSDQoFbGV2ZWwYASABKA0SEwoLd29y",
-            "bGRfbGV2ZWwYAyABKA0SGgoSZGFpbHlfYWN0aXZlX3BvaW50GA0gASgNQh6q",
-            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChdEYWlseUFjdGl2aXR5SW5mby5wcm90byJhChFEYWlseUFjdGl2aXR5SW5m",
+            "bxITCgt3b3JsZF9sZXZlbBgPIAEoDRITCgtGUE5EUExNSUdKUBgDIAEoDRIT",
+            "CgtKQUlKRENJRUpKRRgEIAEoCBINCgVsZXZlbBgLIAEoDUIeqgIbRWdnTGlu",
+            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DailyActivityInfo), global::EggLink.DanhengServer.Proto.DailyActivityInfo.Parser, new[]{ "IsHasTaken", "Level", "WorldLevel", "DailyActivePoint" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DailyActivityInfo), global::EggLink.DanhengServer.Proto.DailyActivityInfo.Parser, new[]{ "WorldLevel", "FPNDPLMIGJP", "JAIJDCIEJJE", "Level" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,10 +73,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DailyActivityInfo(DailyActivityInfo other) : this() {
-      isHasTaken_ = other.isHasTaken_;
-      level_ = other.level_;
       worldLevel_ = other.worldLevel_;
-      dailyActivePoint_ = other.dailyActivePoint_;
+      fPNDPLMIGJP_ = other.fPNDPLMIGJP_;
+      jAIJDCIEJJE_ = other.jAIJDCIEJJE_;
+      level_ = other.level_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,32 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new DailyActivityInfo(this);
     }
 
-    /// <summary>Field number for the "is_has_taken" field.</summary>
-    public const int IsHasTakenFieldNumber = 2;
-    private bool isHasTaken_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsHasTaken {
-      get { return isHasTaken_; }
-      set {
-        isHasTaken_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 1;
-    private uint level_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Level {
-      get { return level_; }
-      set {
-        level_ = value;
-      }
-    }
-
     /// <summary>Field number for the "world_level" field.</summary>
-    public const int WorldLevelFieldNumber = 3;
+    public const int WorldLevelFieldNumber = 15;
     private uint worldLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,15 +98,39 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "daily_active_point" field.</summary>
-    public const int DailyActivePointFieldNumber = 13;
-    private uint dailyActivePoint_;
+    /// <summary>Field number for the "FPNDPLMIGJP" field.</summary>
+    public const int FPNDPLMIGJPFieldNumber = 3;
+    private uint fPNDPLMIGJP_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DailyActivePoint {
-      get { return dailyActivePoint_; }
+    public uint FPNDPLMIGJP {
+      get { return fPNDPLMIGJP_; }
       set {
-        dailyActivePoint_ = value;
+        fPNDPLMIGJP_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "JAIJDCIEJJE" field.</summary>
+    public const int JAIJDCIEJJEFieldNumber = 4;
+    private bool jAIJDCIEJJE_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool JAIJDCIEJJE {
+      get { return jAIJDCIEJJE_; }
+      set {
+        jAIJDCIEJJE_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "level" field.</summary>
+    public const int LevelFieldNumber = 11;
+    private uint level_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Level {
+      get { return level_; }
+      set {
+        level_ = value;
       }
     }
 
@@ -149,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsHasTaken != other.IsHasTaken) return false;
-      if (Level != other.Level) return false;
       if (WorldLevel != other.WorldLevel) return false;
-      if (DailyActivePoint != other.DailyActivePoint) return false;
+      if (FPNDPLMIGJP != other.FPNDPLMIGJP) return false;
+      if (JAIJDCIEJJE != other.JAIJDCIEJJE) return false;
+      if (Level != other.Level) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsHasTaken != false) hash ^= IsHasTaken.GetHashCode();
-      if (Level != 0) hash ^= Level.GetHashCode();
       if (WorldLevel != 0) hash ^= WorldLevel.GetHashCode();
-      if (DailyActivePoint != 0) hash ^= DailyActivePoint.GetHashCode();
+      if (FPNDPLMIGJP != 0) hash ^= FPNDPLMIGJP.GetHashCode();
+      if (JAIJDCIEJJE != false) hash ^= JAIJDCIEJJE.GetHashCode();
+      if (Level != 0) hash ^= Level.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,21 +182,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (FPNDPLMIGJP != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(FPNDPLMIGJP);
+      }
+      if (JAIJDCIEJJE != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(JAIJDCIEJJE);
+      }
       if (Level != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(88);
         output.WriteUInt32(Level);
       }
-      if (IsHasTaken != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(IsHasTaken);
-      }
       if (WorldLevel != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(120);
         output.WriteUInt32(WorldLevel);
-      }
-      if (DailyActivePoint != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(DailyActivePoint);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -208,21 +208,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (FPNDPLMIGJP != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(FPNDPLMIGJP);
+      }
+      if (JAIJDCIEJJE != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(JAIJDCIEJJE);
+      }
       if (Level != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(88);
         output.WriteUInt32(Level);
       }
-      if (IsHasTaken != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(IsHasTaken);
-      }
       if (WorldLevel != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(120);
         output.WriteUInt32(WorldLevel);
-      }
-      if (DailyActivePoint != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(DailyActivePoint);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -234,17 +234,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsHasTaken != false) {
+      if (WorldLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorldLevel);
+      }
+      if (FPNDPLMIGJP != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FPNDPLMIGJP);
+      }
+      if (JAIJDCIEJJE != false) {
         size += 1 + 1;
       }
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
-      }
-      if (WorldLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorldLevel);
-      }
-      if (DailyActivePoint != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DailyActivePoint);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -258,17 +258,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsHasTaken != false) {
-        IsHasTaken = other.IsHasTaken;
-      }
-      if (other.Level != 0) {
-        Level = other.Level;
-      }
       if (other.WorldLevel != 0) {
         WorldLevel = other.WorldLevel;
       }
-      if (other.DailyActivePoint != 0) {
-        DailyActivePoint = other.DailyActivePoint;
+      if (other.FPNDPLMIGJP != 0) {
+        FPNDPLMIGJP = other.FPNDPLMIGJP;
+      }
+      if (other.JAIJDCIEJJE != false) {
+        JAIJDCIEJJE = other.JAIJDCIEJJE;
+      }
+      if (other.Level != 0) {
+        Level = other.Level;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 24: {
+            FPNDPLMIGJP = input.ReadUInt32();
+            break;
+          }
+          case 32: {
+            JAIJDCIEJJE = input.ReadBool();
+            break;
+          }
+          case 88: {
             Level = input.ReadUInt32();
             break;
           }
-          case 16: {
-            IsHasTaken = input.ReadBool();
-            break;
-          }
-          case 24: {
+          case 120: {
             WorldLevel = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            DailyActivePoint = input.ReadUInt32();
             break;
           }
         }
@@ -316,20 +316,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 24: {
+            FPNDPLMIGJP = input.ReadUInt32();
+            break;
+          }
+          case 32: {
+            JAIJDCIEJJE = input.ReadBool();
+            break;
+          }
+          case 88: {
             Level = input.ReadUInt32();
             break;
           }
-          case 16: {
-            IsHasTaken = input.ReadBool();
-            break;
-          }
-          case 24: {
+          case 120: {
             WorldLevel = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            DailyActivePoint = input.ReadUInt32();
             break;
           }
         }

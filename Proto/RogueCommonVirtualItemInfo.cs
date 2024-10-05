@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBSb2d1ZUNvbW1vblZpcnR1YWxJdGVtSW5mby5wcm90byJPChpSb2d1ZUNv",
-            "bW1vblZpcnR1YWxJdGVtSW5mbxIXCg92aXJ0dWFsX2l0ZW1faWQYAyABKA0S",
-            "GAoQdmlydHVhbF9pdGVtX251bRgLIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "bW1vblZpcnR1YWxJdGVtSW5mbxIYChB2aXJ0dWFsX2l0ZW1fbnVtGAUgASgN",
+            "EhcKD3ZpcnR1YWxfaXRlbV9pZBgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonVirtualItemInfo), global::EggLink.DanhengServer.Proto.RogueCommonVirtualItemInfo.Parser, new[]{ "VirtualItemId", "VirtualItemNum" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonVirtualItemInfo), global::EggLink.DanhengServer.Proto.RogueCommonVirtualItemInfo.Parser, new[]{ "VirtualItemNum", "VirtualItemId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueCommonVirtualItemInfo(RogueCommonVirtualItemInfo other) : this() {
-      virtualItemId_ = other.virtualItemId_;
       virtualItemNum_ = other.virtualItemNum_;
+      virtualItemId_ = other.virtualItemId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,27 +84,33 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueCommonVirtualItemInfo(this);
     }
 
-    /// <summary>Field number for the "virtual_item_id" field.</summary>
-    public const int VirtualItemIdFieldNumber = 3;
-    private uint virtualItemId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint VirtualItemId {
-      get { return virtualItemId_; }
-      set {
-        virtualItemId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "virtual_item_num" field.</summary>
-    public const int VirtualItemNumFieldNumber = 11;
+    public const int VirtualItemNumFieldNumber = 5;
     private uint virtualItemNum_;
+    /// <summary>
+    /// 9
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint VirtualItemNum {
       get { return virtualItemNum_; }
       set {
         virtualItemNum_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "virtual_item_id" field.</summary>
+    public const int VirtualItemIdFieldNumber = 9;
+    private uint virtualItemId_;
+    /// <summary>
+    /// 5
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint VirtualItemId {
+      get { return virtualItemId_; }
+      set {
+        virtualItemId_ = value;
       }
     }
 
@@ -123,8 +129,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (VirtualItemId != other.VirtualItemId) return false;
       if (VirtualItemNum != other.VirtualItemNum) return false;
+      if (VirtualItemId != other.VirtualItemId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +138,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (VirtualItemId != 0) hash ^= VirtualItemId.GetHashCode();
       if (VirtualItemNum != 0) hash ^= VirtualItemNum.GetHashCode();
+      if (VirtualItemId != 0) hash ^= VirtualItemId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +158,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (VirtualItemId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(VirtualItemId);
-      }
       if (VirtualItemNum != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(40);
         output.WriteUInt32(VirtualItemNum);
+      }
+      if (VirtualItemId != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(VirtualItemId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +176,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (VirtualItemId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(VirtualItemId);
-      }
       if (VirtualItemNum != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(40);
         output.WriteUInt32(VirtualItemNum);
+      }
+      if (VirtualItemId != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(VirtualItemId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +194,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (VirtualItemId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(VirtualItemId);
-      }
       if (VirtualItemNum != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(VirtualItemNum);
+      }
+      if (VirtualItemId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(VirtualItemId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +212,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.VirtualItemId != 0) {
-        VirtualItemId = other.VirtualItemId;
-      }
       if (other.VirtualItemNum != 0) {
         VirtualItemNum = other.VirtualItemNum;
+      }
+      if (other.VirtualItemId != 0) {
+        VirtualItemId = other.VirtualItemId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +233,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            VirtualItemId = input.ReadUInt32();
+          case 40: {
+            VirtualItemNum = input.ReadUInt32();
             break;
           }
-          case 88: {
-            VirtualItemNum = input.ReadUInt32();
+          case 72: {
+            VirtualItemId = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +256,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            VirtualItemId = input.ReadUInt32();
+          case 40: {
+            VirtualItemNum = input.ReadUInt32();
             break;
           }
-          case 88: {
-            VirtualItemNum = input.ReadUInt32();
+          case 72: {
+            VirtualItemId = input.ReadUInt32();
             break;
           }
         }

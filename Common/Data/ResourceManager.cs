@@ -6,6 +6,8 @@ using EggLink.DanhengServer.Data.Config.SummonUnit;
 using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Enums.Rogue;
+using EggLink.DanhengServer.Enums.RogueMagic;
+using EggLink.DanhengServer.Enums.TournRogue;
 using EggLink.DanhengServer.Internationalization;
 using EggLink.DanhengServer.Util;
 using Newtonsoft.Json;
@@ -43,6 +45,7 @@ public class ResourceManager
             new RogueMiracleEffectConfig();
         LoadChessRogueRoomData();
         LoadRogueTournRoomData();
+        LoadRogueMagicRoomData();
 
         Task.WaitAll(t1, t2, t3, t4, t5, t6, t7);
     }
@@ -767,6 +770,51 @@ public class ResourceManager
 
         Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItems", count.ToString(),
             I18NManager.Translate("Word.RogueTournRoomInfo")));
+    }
+
+    public static void LoadRogueMagicRoomData()
+    {
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadingItem",
+            I18NManager.Translate("Word.RogueMagicRoomInfo")));
+        var count = 0;
+
+        FileInfo file = new(ConfigManager.Config.Path.ConfigPath + "/RogueMagicRoomGen.json");
+
+        if (!file.Exists)
+        {
+            Logger.Warn(I18NManager.Translate("Server.ServerInfo.ConfigMissing",
+                I18NManager.Translate("Word.RogueMagicRoomInfo"),
+                $"{ConfigManager.Config.Path.ConfigPath}/RogueMagicRoomGen.json",
+                I18NManager.Translate("Word.RogueMagicRoom")));
+
+            return;
+        }
+
+        try
+        {
+            using var reader = file.OpenRead();
+            using StreamReader reader2 = new(reader);
+            var text = reader2.ReadToEnd();
+            var json = JsonConvert.DeserializeObject<List<RogueMagicRoomConfig>>(text);
+            if (json == null) throw new Exception("Failed to deserialize RogueMagicRoomGen.json");
+
+            foreach (var room in json.Clone())
+                if (room.RoomType == RogueMagicRoomTypeEnum.Event)
+                {
+                    json.Add(room.Clone(RogueMagicRoomTypeEnum.Reward));
+                    json.Add(room.Clone(RogueMagicRoomTypeEnum.Encounter));
+                }
+
+            GameData.RogueMagicRoomGenData = json;
+            count = json.Count;
+        }
+        catch (Exception ex)
+        {
+            Logger.Error("Error in reading " + file.Name, ex);
+        }
+
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItems", count.ToString(),
+            I18NManager.Translate("Word.RogueMagicRoomInfo")));
     }
 
     public static void AddRoomToGameData(RogueDLCBlockTypeEnum type, ChessRogueRoomConfig room)

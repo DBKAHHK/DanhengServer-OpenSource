@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChpTY2VuZUVudGl0eU1vdmVTY1JzcC5wcm90bxoYQ2xpZW50RG93bmxvYWRE",
             "YXRhLnByb3RvGhJFbnRpdHlNb3Rpb24ucHJvdG8ifgoUU2NlbmVFbnRpdHlN",
-            "b3ZlU2NSc3ASDwoHcmV0Y29kZRgJIAEoDRIpChJlbnRpdHlfbW90aW9uX2xp",
-            "c3QYDSADKAsyDS5FbnRpdHlNb3Rpb24SKgoNZG93bmxvYWRfZGF0YRgKIAEo",
+            "b3ZlU2NSc3ASDwoHcmV0Y29kZRgIIAEoDRIpChJlbnRpdHlfbW90aW9uX2xp",
+            "c3QYCyADKAsyDS5FbnRpdHlNb3Rpb24SKgoNZG93bmxvYWRfZGF0YRgMIAEo",
             "CzITLkNsaWVudERvd25sb2FkRGF0YUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -88,7 +88,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 9;
+    public const int RetcodeFieldNumber = 8;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,9 +100,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "entity_motion_list" field.</summary>
-    public const int EntityMotionListFieldNumber = 13;
+    public const int EntityMotionListFieldNumber = 11;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EntityMotion> _repeated_entityMotionList_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.EntityMotion.Parser);
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.EntityMotion.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EntityMotion> entityMotionList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EntityMotion>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "download_data" field.</summary>
-    public const int DownloadDataFieldNumber = 10;
+    public const int DownloadDataFieldNumber = 12;
     private global::EggLink.DanhengServer.Proto.ClientDownloadData downloadData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -169,14 +169,14 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
+      entityMotionList_.WriteTo(output, _repeated_entityMotionList_codec);
       if (downloadData_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(98);
         output.WriteMessage(DownloadData);
       }
-      entityMotionList_.WriteTo(output, _repeated_entityMotionList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -188,14 +188,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
+      entityMotionList_.WriteTo(ref output, _repeated_entityMotionList_codec);
       if (downloadData_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(98);
         output.WriteMessage(DownloadData);
       }
-      entityMotionList_.WriteTo(ref output, _repeated_entityMotionList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -250,19 +250,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
+          case 64: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 82: {
+          case 90: {
+            entityMotionList_.AddEntriesFrom(input, _repeated_entityMotionList_codec);
+            break;
+          }
+          case 98: {
             if (downloadData_ == null) {
               DownloadData = new global::EggLink.DanhengServer.Proto.ClientDownloadData();
             }
             input.ReadMessage(DownloadData);
-            break;
-          }
-          case 106: {
-            entityMotionList_.AddEntriesFrom(input, _repeated_entityMotionList_codec);
             break;
           }
         }
@@ -280,19 +280,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
+          case 64: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 82: {
+          case 90: {
+            entityMotionList_.AddEntriesFrom(ref input, _repeated_entityMotionList_codec);
+            break;
+          }
+          case 98: {
             if (downloadData_ == null) {
               DownloadData = new global::EggLink.DanhengServer.Proto.ClientDownloadData();
             }
             input.ReadMessage(DownloadData);
-            break;
-          }
-          case 106: {
-            entityMotionList_.AddEntriesFrom(ref input, _repeated_entityMotionList_codec);
             break;
           }
         }

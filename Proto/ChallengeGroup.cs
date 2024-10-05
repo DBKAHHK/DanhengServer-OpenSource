@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static ChallengeGroupReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRDaGFsbGVuZ2VHcm91cC5wcm90byJECg5DaGFsbGVuZ2VHcm91cBIgChh0",
-            "YWtlbl9zdGFyc19jb3VudF9yZXdhcmQYAyABKAQSEAoIZ3JvdXBfaWQYASAB",
-            "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChRDaGFsbGVuZ2VHcm91cC5wcm90byJECg5DaGFsbGVuZ2VHcm91cBIQCghn",
+            "cm91cF9pZBgBIAEoDRIgChh0YWtlbl9zdGFyc19jb3VudF9yZXdhcmQYBSAB",
+            "KARCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeGroup), global::EggLink.DanhengServer.Proto.ChallengeGroup.Parser, new[]{ "TakenStarsCountReward", "GroupId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeGroup), global::EggLink.DanhengServer.Proto.ChallengeGroup.Parser, new[]{ "GroupId", "TakenStarsCountReward" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChallengeGroup(ChallengeGroup other) : this() {
-      takenStarsCountReward_ = other.takenStarsCountReward_;
       groupId_ = other.groupId_;
+      takenStarsCountReward_ = other.takenStarsCountReward_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -81,18 +81,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChallengeGroup Clone() {
       return new ChallengeGroup(this);
-    }
-
-    /// <summary>Field number for the "taken_stars_count_reward" field.</summary>
-    public const int TakenStarsCountRewardFieldNumber = 3;
-    private ulong takenStarsCountReward_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong TakenStarsCountReward {
-      get { return takenStarsCountReward_; }
-      set {
-        takenStarsCountReward_ = value;
-      }
     }
 
     /// <summary>Field number for the "group_id" field.</summary>
@@ -104,6 +92,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return groupId_; }
       set {
         groupId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "taken_stars_count_reward" field.</summary>
+    public const int TakenStarsCountRewardFieldNumber = 5;
+    private ulong takenStarsCountReward_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong TakenStarsCountReward {
+      get { return takenStarsCountReward_; }
+      set {
+        takenStarsCountReward_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (TakenStarsCountReward != other.TakenStarsCountReward) return false;
       if (GroupId != other.GroupId) return false;
+      if (TakenStarsCountReward != other.TakenStarsCountReward) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (TakenStarsCountReward != 0UL) hash ^= TakenStarsCountReward.GetHashCode();
       if (GroupId != 0) hash ^= GroupId.GetHashCode();
+      if (TakenStarsCountReward != 0UL) hash ^= TakenStarsCountReward.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -156,7 +156,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(GroupId);
       }
       if (TakenStarsCountReward != 0UL) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(40);
         output.WriteUInt64(TakenStarsCountReward);
       }
       if (_unknownFields != null) {
@@ -174,7 +174,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(GroupId);
       }
       if (TakenStarsCountReward != 0UL) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(40);
         output.WriteUInt64(TakenStarsCountReward);
       }
       if (_unknownFields != null) {
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (TakenStarsCountReward != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(TakenStarsCountReward);
-      }
       if (GroupId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
+      }
+      if (TakenStarsCountReward != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(TakenStarsCountReward);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.TakenStarsCountReward != 0UL) {
-        TakenStarsCountReward = other.TakenStarsCountReward;
-      }
       if (other.GroupId != 0) {
         GroupId = other.GroupId;
+      }
+      if (other.TakenStarsCountReward != 0UL) {
+        TakenStarsCountReward = other.TakenStarsCountReward;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -230,7 +230,7 @@ namespace EggLink.DanhengServer.Proto {
             GroupId = input.ReadUInt32();
             break;
           }
-          case 24: {
+          case 40: {
             TakenStarsCountReward = input.ReadUInt64();
             break;
           }
@@ -253,7 +253,7 @@ namespace EggLink.DanhengServer.Proto {
             GroupId = input.ReadUInt32();
             break;
           }
-          case 24: {
+          case 40: {
             TakenStarsCountReward = input.ReadUInt64();
             break;
           }

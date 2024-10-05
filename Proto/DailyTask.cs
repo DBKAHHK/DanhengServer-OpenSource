@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static DailyTaskReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg9EYWlseVRhc2sucHJvdG8iOQoJRGFpbHlUYXNrEhcKD21haW5fbWlzc2lv",
-            "bl9pZBgDIAEoDRITCgtpc19maW5pc2hlZBgBIAEoCEIeqgIbRWdnTGluay5E",
+            "Cg9EYWlseVRhc2sucHJvdG8iOQoJRGFpbHlUYXNrEhMKC2lzX2ZpbmlzaGVk",
+            "GAcgASgIEhcKD21haW5fbWlzc2lvbl9pZBgDIAEoDUIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DailyTask), global::EggLink.DanhengServer.Proto.DailyTask.Parser, new[]{ "MainMissionId", "IsFinished" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DailyTask), global::EggLink.DanhengServer.Proto.DailyTask.Parser, new[]{ "IsFinished", "MainMissionId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DailyTask(DailyTask other) : this() {
-      mainMissionId_ = other.mainMissionId_;
       isFinished_ = other.isFinished_;
+      mainMissionId_ = other.mainMissionId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -81,6 +81,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DailyTask Clone() {
       return new DailyTask(this);
+    }
+
+    /// <summary>Field number for the "is_finished" field.</summary>
+    public const int IsFinishedFieldNumber = 7;
+    private bool isFinished_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsFinished {
+      get { return isFinished_; }
+      set {
+        isFinished_ = value;
+      }
     }
 
     /// <summary>Field number for the "main_mission_id" field.</summary>
@@ -92,18 +104,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return mainMissionId_; }
       set {
         mainMissionId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "is_finished" field.</summary>
-    public const int IsFinishedFieldNumber = 1;
-    private bool isFinished_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsFinished {
-      get { return isFinished_; }
-      set {
-        isFinished_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MainMissionId != other.MainMissionId) return false;
       if (IsFinished != other.IsFinished) return false;
+      if (MainMissionId != other.MainMissionId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MainMissionId != 0) hash ^= MainMissionId.GetHashCode();
       if (IsFinished != false) hash ^= IsFinished.GetHashCode();
+      if (MainMissionId != 0) hash ^= MainMissionId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsFinished != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(IsFinished);
-      }
       if (MainMissionId != 0) {
         output.WriteRawTag(24);
         output.WriteUInt32(MainMissionId);
+      }
+      if (IsFinished != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(IsFinished);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsFinished != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(IsFinished);
-      }
       if (MainMissionId != 0) {
         output.WriteRawTag(24);
         output.WriteUInt32(MainMissionId);
+      }
+      if (IsFinished != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(IsFinished);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MainMissionId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MainMissionId);
-      }
       if (IsFinished != false) {
         size += 1 + 1;
+      }
+      if (MainMissionId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MainMissionId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MainMissionId != 0) {
-        MainMissionId = other.MainMissionId;
-      }
       if (other.IsFinished != false) {
         IsFinished = other.IsFinished;
+      }
+      if (other.MainMissionId != 0) {
+        MainMissionId = other.MainMissionId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            IsFinished = input.ReadBool();
-            break;
-          }
           case 24: {
             MainMissionId = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            IsFinished = input.ReadBool();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            IsFinished = input.ReadBool();
-            break;
-          }
           case 24: {
             MainMissionId = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            IsFinished = input.ReadBool();
             break;
           }
         }

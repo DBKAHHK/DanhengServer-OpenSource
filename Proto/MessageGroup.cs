@@ -24,17 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static MessageGroupReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJNZXNzYWdlR3JvdXAucHJvdG8aGE1lc3NhZ2VHcm91cFN0YXR1cy5wcm90",
-            "bxoUTWVzc2FnZVNlY3Rpb24ucHJvdG8ioAEKDE1lc3NhZ2VHcm91cBIUCgxy",
-            "ZWZyZXNoX3RpbWUYCSABKAMSGgoSbWVzc2FnZV9zZWN0aW9uX2lkGAsgASgN",
-            "EgoKAmlkGAEgASgNEi0KFG1lc3NhZ2Vfc2VjdGlvbl9saXN0GAMgAygLMg8u",
-            "TWVzc2FnZVNlY3Rpb24SIwoGc3RhdHVzGAwgASgOMhMuTWVzc2FnZUdyb3Vw",
-            "U3RhdHVzQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "ChJNZXNzYWdlR3JvdXAucHJvdG8aFE1lc3NhZ2VTZWN0aW9uLnByb3RvGhhN",
+            "ZXNzYWdlR3JvdXBTdGF0dXMucHJvdG8ioAEKDE1lc3NhZ2VHcm91cBItChRt",
+            "ZXNzYWdlX3NlY3Rpb25fbGlzdBgLIAMoCzIPLk1lc3NhZ2VTZWN0aW9uEiMK",
+            "BnN0YXR1cxgPIAEoDjITLk1lc3NhZ2VHcm91cFN0YXR1cxIUCgxyZWZyZXNo",
+            "X3RpbWUYASABKAMSCgoCaWQYCiABKA0SGgoSbWVzc2FnZV9zZWN0aW9uX2lk",
+            "GAYgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MessageGroupStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.MessageSectionReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MessageSectionReflection.Descriptor, global::EggLink.DanhengServer.Proto.MessageGroupStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MessageGroup), global::EggLink.DanhengServer.Proto.MessageGroup.Parser, new[]{ "RefreshTime", "MessageSectionId", "Id", "MessageSectionList", "Status" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MessageGroup), global::EggLink.DanhengServer.Proto.MessageGroup.Parser, new[]{ "MessageSectionList", "Status", "RefreshTime", "Id", "MessageSectionId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,11 +76,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MessageGroup(MessageGroup other) : this() {
-      refreshTime_ = other.refreshTime_;
-      messageSectionId_ = other.messageSectionId_;
-      id_ = other.id_;
       messageSectionList_ = other.messageSectionList_.Clone();
       status_ = other.status_;
+      refreshTime_ = other.refreshTime_;
+      id_ = other.id_;
+      messageSectionId_ = other.messageSectionId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -90,8 +90,31 @@ namespace EggLink.DanhengServer.Proto {
       return new MessageGroup(this);
     }
 
+    /// <summary>Field number for the "message_section_list" field.</summary>
+    public const int MessageSectionListFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MessageSection> _repeated_messageSectionList_codec
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.MessageSection.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MessageSection> messageSectionList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MessageSection>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MessageSection> MessageSectionList {
+      get { return messageSectionList_; }
+    }
+
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 15;
+    private global::EggLink.DanhengServer.Proto.MessageGroupStatus status_ = global::EggLink.DanhengServer.Proto.MessageGroupStatus.MessageGroupNone;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.MessageGroupStatus Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
     /// <summary>Field number for the "refresh_time" field.</summary>
-    public const int RefreshTimeFieldNumber = 9;
+    public const int RefreshTimeFieldNumber = 1;
     private long refreshTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -102,20 +125,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "message_section_id" field.</summary>
-    public const int MessageSectionIdFieldNumber = 11;
-    private uint messageSectionId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MessageSectionId {
-      get { return messageSectionId_; }
-      set {
-        messageSectionId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
+    public const int IdFieldNumber = 10;
     private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -126,26 +137,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "message_section_list" field.</summary>
-    public const int MessageSectionListFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MessageSection> _repeated_messageSectionList_codec
-        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.MessageSection.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MessageSection> messageSectionList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MessageSection>();
+    /// <summary>Field number for the "message_section_id" field.</summary>
+    public const int MessageSectionIdFieldNumber = 6;
+    private uint messageSectionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MessageSection> MessageSectionList {
-      get { return messageSectionList_; }
-    }
-
-    /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 12;
-    private global::EggLink.DanhengServer.Proto.MessageGroupStatus status_ = global::EggLink.DanhengServer.Proto.MessageGroupStatus.MessageGroupNone;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MessageGroupStatus Status {
-      get { return status_; }
+    public uint MessageSectionId {
+      get { return messageSectionId_; }
       set {
-        status_ = value;
+        messageSectionId_ = value;
       }
     }
 
@@ -164,11 +164,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (RefreshTime != other.RefreshTime) return false;
-      if (MessageSectionId != other.MessageSectionId) return false;
-      if (Id != other.Id) return false;
       if(!messageSectionList_.Equals(other.messageSectionList_)) return false;
       if (Status != other.Status) return false;
+      if (RefreshTime != other.RefreshTime) return false;
+      if (Id != other.Id) return false;
+      if (MessageSectionId != other.MessageSectionId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -176,11 +176,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (RefreshTime != 0L) hash ^= RefreshTime.GetHashCode();
-      if (MessageSectionId != 0) hash ^= MessageSectionId.GetHashCode();
-      if (Id != 0) hash ^= Id.GetHashCode();
       hash ^= messageSectionList_.GetHashCode();
       if (Status != global::EggLink.DanhengServer.Proto.MessageGroupStatus.MessageGroupNone) hash ^= Status.GetHashCode();
+      if (RefreshTime != 0L) hash ^= RefreshTime.GetHashCode();
+      if (Id != 0) hash ^= Id.GetHashCode();
+      if (MessageSectionId != 0) hash ^= MessageSectionId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -199,21 +199,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Id != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Id);
-      }
-      messageSectionList_.WriteTo(output, _repeated_messageSectionList_codec);
       if (RefreshTime != 0L) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(8);
         output.WriteInt64(RefreshTime);
       }
       if (MessageSectionId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(48);
         output.WriteUInt32(MessageSectionId);
       }
+      if (Id != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Id);
+      }
+      messageSectionList_.WriteTo(output, _repeated_messageSectionList_codec);
       if (Status != global::EggLink.DanhengServer.Proto.MessageGroupStatus.MessageGroupNone) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(120);
         output.WriteEnum((int) Status);
       }
       if (_unknownFields != null) {
@@ -226,21 +226,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Id);
-      }
-      messageSectionList_.WriteTo(ref output, _repeated_messageSectionList_codec);
       if (RefreshTime != 0L) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(8);
         output.WriteInt64(RefreshTime);
       }
       if (MessageSectionId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(48);
         output.WriteUInt32(MessageSectionId);
       }
+      if (Id != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Id);
+      }
+      messageSectionList_.WriteTo(ref output, _repeated_messageSectionList_codec);
       if (Status != global::EggLink.DanhengServer.Proto.MessageGroupStatus.MessageGroupNone) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(120);
         output.WriteEnum((int) Status);
       }
       if (_unknownFields != null) {
@@ -253,18 +253,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += messageSectionList_.CalculateSize(_repeated_messageSectionList_codec);
+      if (Status != global::EggLink.DanhengServer.Proto.MessageGroupStatus.MessageGroupNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
       if (RefreshTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(RefreshTime);
-      }
-      if (MessageSectionId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MessageSectionId);
       }
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
       }
-      size += messageSectionList_.CalculateSize(_repeated_messageSectionList_codec);
-      if (Status != global::EggLink.DanhengServer.Proto.MessageGroupStatus.MessageGroupNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      if (MessageSectionId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MessageSectionId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -278,18 +278,18 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      messageSectionList_.Add(other.messageSectionList_);
+      if (other.Status != global::EggLink.DanhengServer.Proto.MessageGroupStatus.MessageGroupNone) {
+        Status = other.Status;
+      }
       if (other.RefreshTime != 0L) {
         RefreshTime = other.RefreshTime;
-      }
-      if (other.MessageSectionId != 0) {
-        MessageSectionId = other.MessageSectionId;
       }
       if (other.Id != 0) {
         Id = other.Id;
       }
-      messageSectionList_.Add(other.messageSectionList_);
-      if (other.Status != global::EggLink.DanhengServer.Proto.MessageGroupStatus.MessageGroupNone) {
-        Status = other.Status;
+      if (other.MessageSectionId != 0) {
+        MessageSectionId = other.MessageSectionId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -307,22 +307,22 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Id = input.ReadUInt32();
-            break;
-          }
-          case 26: {
-            messageSectionList_.AddEntriesFrom(input, _repeated_messageSectionList_codec);
-            break;
-          }
-          case 72: {
             RefreshTime = input.ReadInt64();
             break;
           }
-          case 88: {
+          case 48: {
             MessageSectionId = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 80: {
+            Id = input.ReadUInt32();
+            break;
+          }
+          case 90: {
+            messageSectionList_.AddEntriesFrom(input, _repeated_messageSectionList_codec);
+            break;
+          }
+          case 120: {
             Status = (global::EggLink.DanhengServer.Proto.MessageGroupStatus) input.ReadEnum();
             break;
           }
@@ -342,22 +342,22 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Id = input.ReadUInt32();
-            break;
-          }
-          case 26: {
-            messageSectionList_.AddEntriesFrom(ref input, _repeated_messageSectionList_codec);
-            break;
-          }
-          case 72: {
             RefreshTime = input.ReadInt64();
             break;
           }
-          case 88: {
+          case 48: {
             MessageSectionId = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 80: {
+            Id = input.ReadUInt32();
+            break;
+          }
+          case 90: {
+            messageSectionList_.AddEntriesFrom(ref input, _repeated_messageSectionList_codec);
+            break;
+          }
+          case 120: {
             Status = (global::EggLink.DanhengServer.Proto.MessageGroupStatus) input.ReadEnum();
             break;
           }

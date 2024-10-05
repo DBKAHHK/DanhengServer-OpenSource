@@ -24,13 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static RegionStopScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhSZWdpb25TdG9wU2NOb3RpZnkucHJvdG8iPgoSUmVnaW9uU3RvcFNjTm90",
-            "aWZ5EhMKC0tJQ1BQQUhMR0hCGAIgASgDEhMKC1BPSEpIRERPRUNOGA0gASgD",
-            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChhSZWdpb25TdG9wU2NOb3RpZnkucHJvdG8iSAoSUmVnaW9uU3RvcFNjTm90",
+            "aWZ5EhcKD3JlZ2lvbl9zdG9wX2VuZBgOIAEoAxIZChFyZWdpb25fc3RvcF9z",
+            "dGFydBgHIAEoA0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RegionStopScNotify), global::EggLink.DanhengServer.Proto.RegionStopScNotify.Parser, new[]{ "KICPPAHLGHB", "POHJHDDOECN" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RegionStopScNotify), global::EggLink.DanhengServer.Proto.RegionStopScNotify.Parser, new[]{ "RegionStopEnd", "RegionStopStart" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RegionStopScNotify(RegionStopScNotify other) : this() {
-      kICPPAHLGHB_ = other.kICPPAHLGHB_;
-      pOHJHDDOECN_ = other.pOHJHDDOECN_;
+      regionStopEnd_ = other.regionStopEnd_;
+      regionStopStart_ = other.regionStopStart_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,27 +84,27 @@ namespace EggLink.DanhengServer.Proto {
       return new RegionStopScNotify(this);
     }
 
-    /// <summary>Field number for the "KICPPAHLGHB" field.</summary>
-    public const int KICPPAHLGHBFieldNumber = 2;
-    private long kICPPAHLGHB_;
+    /// <summary>Field number for the "region_stop_end" field.</summary>
+    public const int RegionStopEndFieldNumber = 14;
+    private long regionStopEnd_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long KICPPAHLGHB {
-      get { return kICPPAHLGHB_; }
+    public long RegionStopEnd {
+      get { return regionStopEnd_; }
       set {
-        kICPPAHLGHB_ = value;
+        regionStopEnd_ = value;
       }
     }
 
-    /// <summary>Field number for the "POHJHDDOECN" field.</summary>
-    public const int POHJHDDOECNFieldNumber = 13;
-    private long pOHJHDDOECN_;
+    /// <summary>Field number for the "region_stop_start" field.</summary>
+    public const int RegionStopStartFieldNumber = 7;
+    private long regionStopStart_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long POHJHDDOECN {
-      get { return pOHJHDDOECN_; }
+    public long RegionStopStart {
+      get { return regionStopStart_; }
       set {
-        pOHJHDDOECN_ = value;
+        regionStopStart_ = value;
       }
     }
 
@@ -122,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (KICPPAHLGHB != other.KICPPAHLGHB) return false;
-      if (POHJHDDOECN != other.POHJHDDOECN) return false;
+      if (RegionStopEnd != other.RegionStopEnd) return false;
+      if (RegionStopStart != other.RegionStopStart) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (KICPPAHLGHB != 0L) hash ^= KICPPAHLGHB.GetHashCode();
-      if (POHJHDDOECN != 0L) hash ^= POHJHDDOECN.GetHashCode();
+      if (RegionStopEnd != 0L) hash ^= RegionStopEnd.GetHashCode();
+      if (RegionStopStart != 0L) hash ^= RegionStopStart.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (KICPPAHLGHB != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(KICPPAHLGHB);
+      if (RegionStopStart != 0L) {
+        output.WriteRawTag(56);
+        output.WriteInt64(RegionStopStart);
       }
-      if (POHJHDDOECN != 0L) {
-        output.WriteRawTag(104);
-        output.WriteInt64(POHJHDDOECN);
+      if (RegionStopEnd != 0L) {
+        output.WriteRawTag(112);
+        output.WriteInt64(RegionStopEnd);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (KICPPAHLGHB != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(KICPPAHLGHB);
+      if (RegionStopStart != 0L) {
+        output.WriteRawTag(56);
+        output.WriteInt64(RegionStopStart);
       }
-      if (POHJHDDOECN != 0L) {
-        output.WriteRawTag(104);
-        output.WriteInt64(POHJHDDOECN);
+      if (RegionStopEnd != 0L) {
+        output.WriteRawTag(112);
+        output.WriteInt64(RegionStopEnd);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (KICPPAHLGHB != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(KICPPAHLGHB);
+      if (RegionStopEnd != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RegionStopEnd);
       }
-      if (POHJHDDOECN != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(POHJHDDOECN);
+      if (RegionStopStart != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RegionStopStart);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.KICPPAHLGHB != 0L) {
-        KICPPAHLGHB = other.KICPPAHLGHB;
+      if (other.RegionStopEnd != 0L) {
+        RegionStopEnd = other.RegionStopEnd;
       }
-      if (other.POHJHDDOECN != 0L) {
-        POHJHDDOECN = other.POHJHDDOECN;
+      if (other.RegionStopStart != 0L) {
+        RegionStopStart = other.RegionStopStart;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            KICPPAHLGHB = input.ReadInt64();
+          case 56: {
+            RegionStopStart = input.ReadInt64();
             break;
           }
-          case 104: {
-            POHJHDDOECN = input.ReadInt64();
+          case 112: {
+            RegionStopEnd = input.ReadInt64();
             break;
           }
         }
@@ -249,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            KICPPAHLGHB = input.ReadInt64();
+          case 56: {
+            RegionStopStart = input.ReadInt64();
             break;
           }
-          case 104: {
-            POHJHDDOECN = input.ReadInt64();
+          case 112: {
+            RegionStopEnd = input.ReadInt64();
             break;
           }
         }

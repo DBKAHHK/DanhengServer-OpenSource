@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static GetRogueShopMiracleInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiJHZXRSb2d1ZVNob3BNaXJhY2xlSW5mb1NjUnNwLnByb3RvGhJJdGVtQ29z",
-            "dERhdGEucHJvdG8aEU9DQ1BJT0NJQkVJLnByb3RvIpEBChxHZXRSb2d1ZVNo",
-            "b3BNaXJhY2xlSW5mb1NjUnNwEicKEWdhbWVfbWlyYWNsZV9pbmZvGAQgASgL",
-            "MgwuT0NDUElPQ0lCRUkSDwoHcmV0Y29kZRgLIAEoDRITCgtLSUVHUERMQkdM",
-            "TxgOIAEoCBIiCgtQTUdCUEJHTERNThgDIAEoCzINLkl0ZW1Db3N0RGF0YUIe",
+            "CiJHZXRSb2d1ZVNob3BNaXJhY2xlSW5mb1NjUnNwLnByb3RvGhFDT09DQkRB",
+            "SU5MSy5wcm90bxoSSXRlbUNvc3REYXRhLnByb3RvIpEBChxHZXRSb2d1ZVNo",
+            "b3BNaXJhY2xlSW5mb1NjUnNwEg8KB3JldGNvZGUYDiABKA0SEwoLTkdPR0ZF",
+            "RExMT08YBSABKAgSJwoRZ2FtZV9taXJhY2xlX2luZm8YCCABKAsyDC5DT09D",
+            "QkRBSU5MSxIiCgtCRE5MR0VBTkdBTxgCIAEoCzINLkl0ZW1Db3N0RGF0YUIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.OCCPIOCIBEIReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.COOCBDAINLKReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRogueShopMiracleInfoScRsp), global::EggLink.DanhengServer.Proto.GetRogueShopMiracleInfoScRsp.Parser, new[]{ "GameMiracleInfo", "Retcode", "KIEGPDLBGLO", "PMGBPBGLDMN" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRogueShopMiracleInfoScRsp), global::EggLink.DanhengServer.Proto.GetRogueShopMiracleInfoScRsp.Parser, new[]{ "Retcode", "NGOGFEDLLOO", "GameMiracleInfo", "BDNLGEANGAO" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,10 +75,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetRogueShopMiracleInfoScRsp(GetRogueShopMiracleInfoScRsp other) : this() {
-      gameMiracleInfo_ = other.gameMiracleInfo_ != null ? other.gameMiracleInfo_.Clone() : null;
       retcode_ = other.retcode_;
-      kIEGPDLBGLO_ = other.kIEGPDLBGLO_;
-      pMGBPBGLDMN_ = other.pMGBPBGLDMN_ != null ? other.pMGBPBGLDMN_.Clone() : null;
+      nGOGFEDLLOO_ = other.nGOGFEDLLOO_;
+      gameMiracleInfo_ = other.gameMiracleInfo_ != null ? other.gameMiracleInfo_.Clone() : null;
+      bDNLGEANGAO_ = other.bDNLGEANGAO_ != null ? other.bDNLGEANGAO_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,20 +88,8 @@ namespace EggLink.DanhengServer.Proto {
       return new GetRogueShopMiracleInfoScRsp(this);
     }
 
-    /// <summary>Field number for the "game_miracle_info" field.</summary>
-    public const int GameMiracleInfoFieldNumber = 4;
-    private global::EggLink.DanhengServer.Proto.OCCPIOCIBEI gameMiracleInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.OCCPIOCIBEI GameMiracleInfo {
-      get { return gameMiracleInfo_; }
-      set {
-        gameMiracleInfo_ = value;
-      }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 11;
+    public const int RetcodeFieldNumber = 14;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,27 +100,39 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "KIEGPDLBGLO" field.</summary>
-    public const int KIEGPDLBGLOFieldNumber = 14;
-    private bool kIEGPDLBGLO_;
+    /// <summary>Field number for the "NGOGFEDLLOO" field.</summary>
+    public const int NGOGFEDLLOOFieldNumber = 5;
+    private bool nGOGFEDLLOO_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool KIEGPDLBGLO {
-      get { return kIEGPDLBGLO_; }
+    public bool NGOGFEDLLOO {
+      get { return nGOGFEDLLOO_; }
       set {
-        kIEGPDLBGLO_ = value;
+        nGOGFEDLLOO_ = value;
       }
     }
 
-    /// <summary>Field number for the "PMGBPBGLDMN" field.</summary>
-    public const int PMGBPBGLDMNFieldNumber = 3;
-    private global::EggLink.DanhengServer.Proto.ItemCostData pMGBPBGLDMN_;
+    /// <summary>Field number for the "game_miracle_info" field.</summary>
+    public const int GameMiracleInfoFieldNumber = 8;
+    private global::EggLink.DanhengServer.Proto.COOCBDAINLK gameMiracleInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ItemCostData PMGBPBGLDMN {
-      get { return pMGBPBGLDMN_; }
+    public global::EggLink.DanhengServer.Proto.COOCBDAINLK GameMiracleInfo {
+      get { return gameMiracleInfo_; }
       set {
-        pMGBPBGLDMN_ = value;
+        gameMiracleInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "BDNLGEANGAO" field.</summary>
+    public const int BDNLGEANGAOFieldNumber = 2;
+    private global::EggLink.DanhengServer.Proto.ItemCostData bDNLGEANGAO_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ItemCostData BDNLGEANGAO {
+      get { return bDNLGEANGAO_; }
+      set {
+        bDNLGEANGAO_ = value;
       }
     }
 
@@ -151,10 +151,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(GameMiracleInfo, other.GameMiracleInfo)) return false;
       if (Retcode != other.Retcode) return false;
-      if (KIEGPDLBGLO != other.KIEGPDLBGLO) return false;
-      if (!object.Equals(PMGBPBGLDMN, other.PMGBPBGLDMN)) return false;
+      if (NGOGFEDLLOO != other.NGOGFEDLLOO) return false;
+      if (!object.Equals(GameMiracleInfo, other.GameMiracleInfo)) return false;
+      if (!object.Equals(BDNLGEANGAO, other.BDNLGEANGAO)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -162,10 +162,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (gameMiracleInfo_ != null) hash ^= GameMiracleInfo.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (KIEGPDLBGLO != false) hash ^= KIEGPDLBGLO.GetHashCode();
-      if (pMGBPBGLDMN_ != null) hash ^= PMGBPBGLDMN.GetHashCode();
+      if (NGOGFEDLLOO != false) hash ^= NGOGFEDLLOO.GetHashCode();
+      if (gameMiracleInfo_ != null) hash ^= GameMiracleInfo.GetHashCode();
+      if (bDNLGEANGAO_ != null) hash ^= BDNLGEANGAO.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -184,21 +184,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (pMGBPBGLDMN_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(PMGBPBGLDMN);
+      if (bDNLGEANGAO_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(BDNLGEANGAO);
+      }
+      if (NGOGFEDLLOO != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(NGOGFEDLLOO);
       }
       if (gameMiracleInfo_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(66);
         output.WriteMessage(GameMiracleInfo);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(Retcode);
-      }
-      if (KIEGPDLBGLO != false) {
         output.WriteRawTag(112);
-        output.WriteBool(KIEGPDLBGLO);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -210,21 +210,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (pMGBPBGLDMN_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(PMGBPBGLDMN);
+      if (bDNLGEANGAO_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(BDNLGEANGAO);
+      }
+      if (NGOGFEDLLOO != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(NGOGFEDLLOO);
       }
       if (gameMiracleInfo_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(66);
         output.WriteMessage(GameMiracleInfo);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(Retcode);
-      }
-      if (KIEGPDLBGLO != false) {
         output.WriteRawTag(112);
-        output.WriteBool(KIEGPDLBGLO);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -236,17 +236,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (gameMiracleInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameMiracleInfo);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (KIEGPDLBGLO != false) {
+      if (NGOGFEDLLOO != false) {
         size += 1 + 1;
       }
-      if (pMGBPBGLDMN_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PMGBPBGLDMN);
+      if (gameMiracleInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameMiracleInfo);
+      }
+      if (bDNLGEANGAO_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BDNLGEANGAO);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -260,23 +260,23 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.gameMiracleInfo_ != null) {
-        if (gameMiracleInfo_ == null) {
-          GameMiracleInfo = new global::EggLink.DanhengServer.Proto.OCCPIOCIBEI();
-        }
-        GameMiracleInfo.MergeFrom(other.GameMiracleInfo);
-      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.KIEGPDLBGLO != false) {
-        KIEGPDLBGLO = other.KIEGPDLBGLO;
+      if (other.NGOGFEDLLOO != false) {
+        NGOGFEDLLOO = other.NGOGFEDLLOO;
       }
-      if (other.pMGBPBGLDMN_ != null) {
-        if (pMGBPBGLDMN_ == null) {
-          PMGBPBGLDMN = new global::EggLink.DanhengServer.Proto.ItemCostData();
+      if (other.gameMiracleInfo_ != null) {
+        if (gameMiracleInfo_ == null) {
+          GameMiracleInfo = new global::EggLink.DanhengServer.Proto.COOCBDAINLK();
         }
-        PMGBPBGLDMN.MergeFrom(other.PMGBPBGLDMN);
+        GameMiracleInfo.MergeFrom(other.GameMiracleInfo);
+      }
+      if (other.bDNLGEANGAO_ != null) {
+        if (bDNLGEANGAO_ == null) {
+          BDNLGEANGAO = new global::EggLink.DanhengServer.Proto.ItemCostData();
+        }
+        BDNLGEANGAO.MergeFrom(other.BDNLGEANGAO);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -293,26 +293,26 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26: {
-            if (pMGBPBGLDMN_ == null) {
-              PMGBPBGLDMN = new global::EggLink.DanhengServer.Proto.ItemCostData();
+          case 18: {
+            if (bDNLGEANGAO_ == null) {
+              BDNLGEANGAO = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
-            input.ReadMessage(PMGBPBGLDMN);
+            input.ReadMessage(BDNLGEANGAO);
             break;
           }
-          case 34: {
+          case 40: {
+            NGOGFEDLLOO = input.ReadBool();
+            break;
+          }
+          case 66: {
             if (gameMiracleInfo_ == null) {
-              GameMiracleInfo = new global::EggLink.DanhengServer.Proto.OCCPIOCIBEI();
+              GameMiracleInfo = new global::EggLink.DanhengServer.Proto.COOCBDAINLK();
             }
             input.ReadMessage(GameMiracleInfo);
             break;
           }
-          case 88: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
           case 112: {
-            KIEGPDLBGLO = input.ReadBool();
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -330,26 +330,26 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26: {
-            if (pMGBPBGLDMN_ == null) {
-              PMGBPBGLDMN = new global::EggLink.DanhengServer.Proto.ItemCostData();
+          case 18: {
+            if (bDNLGEANGAO_ == null) {
+              BDNLGEANGAO = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
-            input.ReadMessage(PMGBPBGLDMN);
+            input.ReadMessage(BDNLGEANGAO);
             break;
           }
-          case 34: {
+          case 40: {
+            NGOGFEDLLOO = input.ReadBool();
+            break;
+          }
+          case 66: {
             if (gameMiracleInfo_ == null) {
-              GameMiracleInfo = new global::EggLink.DanhengServer.Proto.OCCPIOCIBEI();
+              GameMiracleInfo = new global::EggLink.DanhengServer.Proto.COOCBDAINLK();
             }
             input.ReadMessage(GameMiracleInfo);
             break;
           }
-          case 88: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
           case 112: {
-            KIEGPDLBGLO = input.ReadBool();
+            Retcode = input.ReadUInt32();
             break;
           }
         }

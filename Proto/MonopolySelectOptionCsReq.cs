@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9Nb25vcG9seVNlbGVjdE9wdGlvbkNzUmVxLnByb3RvIkAKGU1vbm9wb2x5",
-            "U2VsZWN0T3B0aW9uQ3NSZXESEQoJb3B0aW9uX2lkGAYgASgNEhAKCGV2ZW50",
+            "U2VsZWN0T3B0aW9uQ3NSZXESEQoJb3B0aW9uX2lkGA4gASgNEhAKCGV2ZW50",
             "X2lkGAQgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "option_id" field.</summary>
-    public const int OptionIdFieldNumber = 6;
+    public const int OptionIdFieldNumber = 14;
     private uint optionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(EventId);
       }
       if (OptionId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(112);
         output.WriteUInt32(OptionId);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(EventId);
       }
       if (OptionId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(112);
         output.WriteUInt32(OptionId);
       }
       if (_unknownFields != null) {
@@ -231,7 +231,7 @@ namespace EggLink.DanhengServer.Proto {
             EventId = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 112: {
             OptionId = input.ReadUInt32();
             break;
           }
@@ -254,7 +254,7 @@ namespace EggLink.DanhengServer.Proto {
             EventId = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 112: {
             OptionId = input.ReadUInt32();
             break;
           }

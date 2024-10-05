@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJTZXRNaXNzaW9uRXZlbnRQcm9ncmVzc0NzUmVxLnByb3RvIkoKHFNldE1p",
-            "c3Npb25FdmVudFByb2dyZXNzQ3NSZXESGAoQbWlzc2lvbl9ldmVudF9pZBgG",
+            "c3Npb25FdmVudFByb2dyZXNzQ3NSZXESGAoQbWlzc2lvbl9ldmVudF9pZBgE",
             "IAEoDRIQCghwcm9ncmVzcxgCIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "mission_event_id" field.</summary>
-    public const int MissionEventIdFieldNumber = 6;
+    public const int MissionEventIdFieldNumber = 4;
     private uint missionEventId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Progress);
       }
       if (MissionEventId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(32);
         output.WriteUInt32(MissionEventId);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Progress);
       }
       if (MissionEventId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(32);
         output.WriteUInt32(MissionEventId);
       }
       if (_unknownFields != null) {
@@ -231,7 +231,7 @@ namespace EggLink.DanhengServer.Proto {
             Progress = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 32: {
             MissionEventId = input.ReadUInt32();
             break;
           }
@@ -254,7 +254,7 @@ namespace EggLink.DanhengServer.Proto {
             Progress = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 32: {
             MissionEventId = input.ReadUInt32();
             break;
           }

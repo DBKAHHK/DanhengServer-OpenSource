@@ -26,15 +26,15 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CilHZXRDaGVzc1JvZ3VlU3RvcnlBZW9uVGFsa0luZm9TY1JzcC5wcm90byLQ",
             "AQojR2V0Q2hlc3NSb2d1ZVN0b3J5QWVvblRhbGtJbmZvU2NSc3ASDwoHcmV0",
-            "Y29kZRgHIAEoDRJKCgtITk1HTUlKSk1FSRgKIAMoCzI1LkdldENoZXNzUm9n",
-            "dWVTdG9yeUFlb25UYWxrSW5mb1NjUnNwLkhOTUdNSUpKTUVJRW50cnkSGAoQ",
-            "dGFsa19kaWFsb2d1ZV9pZBgEIAEoDRoyChBITk1HTUlKSk1FSUVudHJ5EgsK",
+            "Y29kZRgMIAEoDRIYChB0YWxrX2RpYWxvZ3VlX2lkGAcgASgNEkoKC0xGRVBC",
+            "QUpPQ1BFGAsgAygLMjUuR2V0Q2hlc3NSb2d1ZVN0b3J5QWVvblRhbGtJbmZv",
+            "U2NSc3AuTEZFUEJBSk9DUEVFbnRyeRoyChBMRkVQQkFKT0NQRUVudHJ5EgsK",
             "A2tleRgBIAEoDRINCgV2YWx1ZRgCIAEoDToCOAFCHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetChessRogueStoryAeonTalkInfoScRsp), global::EggLink.DanhengServer.Proto.GetChessRogueStoryAeonTalkInfoScRsp.Parser, new[]{ "Retcode", "HNMGMIJJMEI", "TalkDialogueId" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetChessRogueStoryAeonTalkInfoScRsp), global::EggLink.DanhengServer.Proto.GetChessRogueStoryAeonTalkInfoScRsp.Parser, new[]{ "Retcode", "TalkDialogueId", "LFEPBAJOCPE" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -77,8 +77,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetChessRogueStoryAeonTalkInfoScRsp(GetChessRogueStoryAeonTalkInfoScRsp other) : this() {
       retcode_ = other.retcode_;
-      hNMGMIJJMEI_ = other.hNMGMIJJMEI_.Clone();
       talkDialogueId_ = other.talkDialogueId_;
+      lFEPBAJOCPE_ = other.lFEPBAJOCPE_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -89,7 +89,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 7;
+    public const int RetcodeFieldNumber = 12;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,19 +100,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "HNMGMIJJMEI" field.</summary>
-    public const int HNMGMIJJMEIFieldNumber = 10;
-    private static readonly pbc::MapField<uint, uint>.Codec _map_hNMGMIJJMEI_codec
-        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 82);
-    private readonly pbc::MapField<uint, uint> hNMGMIJJMEI_ = new pbc::MapField<uint, uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<uint, uint> HNMGMIJJMEI {
-      get { return hNMGMIJJMEI_; }
-    }
-
     /// <summary>Field number for the "talk_dialogue_id" field.</summary>
-    public const int TalkDialogueIdFieldNumber = 4;
+    public const int TalkDialogueIdFieldNumber = 7;
     private uint talkDialogueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -121,6 +110,17 @@ namespace EggLink.DanhengServer.Proto {
       set {
         talkDialogueId_ = value;
       }
+    }
+
+    /// <summary>Field number for the "LFEPBAJOCPE" field.</summary>
+    public const int LFEPBAJOCPEFieldNumber = 11;
+    private static readonly pbc::MapField<uint, uint>.Codec _map_lFEPBAJOCPE_codec
+        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 90);
+    private readonly pbc::MapField<uint, uint> lFEPBAJOCPE_ = new pbc::MapField<uint, uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<uint, uint> LFEPBAJOCPE {
+      get { return lFEPBAJOCPE_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -139,8 +139,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Retcode != other.Retcode) return false;
-      if (!HNMGMIJJMEI.Equals(other.HNMGMIJJMEI)) return false;
       if (TalkDialogueId != other.TalkDialogueId) return false;
+      if (!LFEPBAJOCPE.Equals(other.LFEPBAJOCPE)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -149,8 +149,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      hash ^= HNMGMIJJMEI.GetHashCode();
       if (TalkDialogueId != 0) hash ^= TalkDialogueId.GetHashCode();
+      hash ^= LFEPBAJOCPE.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -170,14 +170,14 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (TalkDialogueId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(56);
         output.WriteUInt32(TalkDialogueId);
       }
+      lFEPBAJOCPE_.WriteTo(output, _map_lFEPBAJOCPE_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
       }
-      hNMGMIJJMEI_.WriteTo(output, _map_hNMGMIJJMEI_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -189,14 +189,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (TalkDialogueId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(56);
         output.WriteUInt32(TalkDialogueId);
       }
+      lFEPBAJOCPE_.WriteTo(ref output, _map_lFEPBAJOCPE_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
       }
-      hNMGMIJJMEI_.WriteTo(ref output, _map_hNMGMIJJMEI_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -210,10 +210,10 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += hNMGMIJJMEI_.CalculateSize(_map_hNMGMIJJMEI_codec);
       if (TalkDialogueId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TalkDialogueId);
       }
+      size += lFEPBAJOCPE_.CalculateSize(_map_lFEPBAJOCPE_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -229,10 +229,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      hNMGMIJJMEI_.MergeFrom(other.hNMGMIJJMEI_);
       if (other.TalkDialogueId != 0) {
         TalkDialogueId = other.TalkDialogueId;
       }
+      lFEPBAJOCPE_.MergeFrom(other.lFEPBAJOCPE_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -248,16 +248,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 56: {
             TalkDialogueId = input.ReadUInt32();
             break;
           }
-          case 56: {
-            Retcode = input.ReadUInt32();
+          case 90: {
+            lFEPBAJOCPE_.AddEntriesFrom(input, _map_lFEPBAJOCPE_codec);
             break;
           }
-          case 82: {
-            hNMGMIJJMEI_.AddEntriesFrom(input, _map_hNMGMIJJMEI_codec);
+          case 96: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -275,16 +275,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 56: {
             TalkDialogueId = input.ReadUInt32();
             break;
           }
-          case 56: {
-            Retcode = input.ReadUInt32();
+          case 90: {
+            lFEPBAJOCPE_.AddEntriesFrom(ref input, _map_lFEPBAJOCPE_codec);
             break;
           }
-          case 82: {
-            hNMGMIJJMEI_.AddEntriesFrom(ref input, _map_hNMGMIJJMEI_codec);
+          case 96: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

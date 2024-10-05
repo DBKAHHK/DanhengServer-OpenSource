@@ -24,19 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static RelicFilterPlanReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVSZWxpY0ZpbHRlclBsYW4ucHJvdG8aGVJlbGljRmlsdGVyUGxhbkljb24u",
-            "cHJvdG8aHVJlbGljRmlsdGVyUGxhblNldHRpbmdzLnByb3RvIu8BCg9SZWxp",
-            "Y0ZpbHRlclBsYW4SLQoPSWNvbkZpZWxkTnVtYmVyGAMgASgLMhQuUmVsaWNG",
-            "aWx0ZXJQbGFuSWNvbhIiChpVcGRhdGVUaW1lc3RhbXBGaWVsZE51bWJlchgF",
-            "IAEoAxI1ChNTZXR0aW5nc0ZpZWxkTnVtYmVyGAggASgLMhguUmVsaWNGaWx0",
-            "ZXJQbGFuU2V0dGluZ3MSFwoPTmFtZUZpZWxkTnVtYmVyGAwgASgJEhwKFFNs",
-            "b3RJbmRleEZpZWxkTnVtYmVyGA8gASgNEhsKE0lzTWFya2VkRmllbGROdW1i",
-            "ZXIYCyABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
-            "dG8z"));
+            "ChVSZWxpY0ZpbHRlclBsYW4ucHJvdG8aHVJlbGljRmlsdGVyUGxhblNldHRp",
+            "bmdzLnByb3RvGhlSZWxpY0ZpbHRlclBsYW5JY29uLnByb3RvIscBCg9SZWxp",
+            "Y0ZpbHRlclBsYW4SGAoQQXZhdGFySWRPbkNyZWF0ZRgDIAEoDRIQCghJc01h",
+            "cmtlZBgPIAEoCBIqCghTZXR0aW5ncxgFIAEoCzIYLlJlbGljRmlsdGVyUGxh",
+            "blNldHRpbmdzEhcKD1VwZGF0ZVRpbWVzdGFtcBgOIAEoAxIMCgROYW1lGAgg",
+            "ASgJEhEKCVNsb3RJbmRleBgGIAEoDRIiCgRJY29uGAsgASgLMhQuUmVsaWNG",
+            "aWx0ZXJQbGFuSWNvbkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RelicFilterPlanIconReflection.Descriptor, global::EggLink.DanhengServer.Proto.RelicFilterPlanSettingsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RelicFilterPlanSettingsReflection.Descriptor, global::EggLink.DanhengServer.Proto.RelicFilterPlanIconReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RelicFilterPlan), global::EggLink.DanhengServer.Proto.RelicFilterPlan.Parser, new[]{ "IconFieldNumber", "UpdateTimestampFieldNumber", "SettingsFieldNumber", "NameFieldNumber", "SlotIndexFieldNumber", "IsMarkedFieldNumber" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RelicFilterPlan), global::EggLink.DanhengServer.Proto.RelicFilterPlan.Parser, new[]{ "AvatarIdOnCreate", "IsMarked", "Settings", "UpdateTimestamp", "Name", "SlotIndex", "Icon" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,12 +77,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RelicFilterPlan(RelicFilterPlan other) : this() {
-      iconFieldNumber_ = other.iconFieldNumber_ != null ? other.iconFieldNumber_.Clone() : null;
-      updateTimestampFieldNumber_ = other.updateTimestampFieldNumber_;
-      settingsFieldNumber_ = other.settingsFieldNumber_ != null ? other.settingsFieldNumber_.Clone() : null;
-      nameFieldNumber_ = other.nameFieldNumber_;
-      slotIndexFieldNumber_ = other.slotIndexFieldNumber_;
-      isMarkedFieldNumber_ = other.isMarkedFieldNumber_;
+      avatarIdOnCreate_ = other.avatarIdOnCreate_;
+      isMarked_ = other.isMarked_;
+      settings_ = other.settings_ != null ? other.settings_.Clone() : null;
+      updateTimestamp_ = other.updateTimestamp_;
+      name_ = other.name_;
+      slotIndex_ = other.slotIndex_;
+      icon_ = other.icon_ != null ? other.icon_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -93,75 +93,87 @@ namespace EggLink.DanhengServer.Proto {
       return new RelicFilterPlan(this);
     }
 
-    /// <summary>Field number for the "IconFieldNumber" field.</summary>
-    public const int IconFieldNumberFieldNumber = 3;
-    private global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon iconFieldNumber_;
+    /// <summary>Field number for the "AvatarIdOnCreate" field.</summary>
+    public const int AvatarIdOnCreateFieldNumber = 3;
+    private uint avatarIdOnCreate_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon IconFieldNumber {
-      get { return iconFieldNumber_; }
+    public uint AvatarIdOnCreate {
+      get { return avatarIdOnCreate_; }
       set {
-        iconFieldNumber_ = value;
+        avatarIdOnCreate_ = value;
       }
     }
 
-    /// <summary>Field number for the "UpdateTimestampFieldNumber" field.</summary>
-    public const int UpdateTimestampFieldNumberFieldNumber = 5;
-    private long updateTimestampFieldNumber_;
+    /// <summary>Field number for the "IsMarked" field.</summary>
+    public const int IsMarkedFieldNumber = 15;
+    private bool isMarked_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long UpdateTimestampFieldNumber {
-      get { return updateTimestampFieldNumber_; }
+    public bool IsMarked {
+      get { return isMarked_; }
       set {
-        updateTimestampFieldNumber_ = value;
+        isMarked_ = value;
       }
     }
 
-    /// <summary>Field number for the "SettingsFieldNumber" field.</summary>
-    public const int SettingsFieldNumberFieldNumber = 8;
-    private global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings settingsFieldNumber_;
+    /// <summary>Field number for the "Settings" field.</summary>
+    public const int SettingsFieldNumber = 5;
+    private global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings settings_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings SettingsFieldNumber {
-      get { return settingsFieldNumber_; }
+    public global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings Settings {
+      get { return settings_; }
       set {
-        settingsFieldNumber_ = value;
+        settings_ = value;
       }
     }
 
-    /// <summary>Field number for the "NameFieldNumber" field.</summary>
-    public const int NameFieldNumberFieldNumber = 12;
-    private string nameFieldNumber_ = "";
+    /// <summary>Field number for the "UpdateTimestamp" field.</summary>
+    public const int UpdateTimestampFieldNumber = 14;
+    private long updateTimestamp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string NameFieldNumber {
-      get { return nameFieldNumber_; }
+    public long UpdateTimestamp {
+      get { return updateTimestamp_; }
       set {
-        nameFieldNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        updateTimestamp_ = value;
       }
     }
 
-    /// <summary>Field number for the "SlotIndexFieldNumber" field.</summary>
-    public const int SlotIndexFieldNumberFieldNumber = 15;
-    private uint slotIndexFieldNumber_;
+    /// <summary>Field number for the "Name" field.</summary>
+    public const int NameFieldNumber = 8;
+    private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SlotIndexFieldNumber {
-      get { return slotIndexFieldNumber_; }
+    public string Name {
+      get { return name_; }
       set {
-        slotIndexFieldNumber_ = value;
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "IsMarkedFieldNumber" field.</summary>
-    public const int IsMarkedFieldNumberFieldNumber = 11;
-    private bool isMarkedFieldNumber_;
+    /// <summary>Field number for the "SlotIndex" field.</summary>
+    public const int SlotIndexFieldNumber = 6;
+    private uint slotIndex_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsMarkedFieldNumber {
-      get { return isMarkedFieldNumber_; }
+    public uint SlotIndex {
+      get { return slotIndex_; }
       set {
-        isMarkedFieldNumber_ = value;
+        slotIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Icon" field.</summary>
+    public const int IconFieldNumber = 11;
+    private global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon icon_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon Icon {
+      get { return icon_; }
+      set {
+        icon_ = value;
       }
     }
 
@@ -180,12 +192,13 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(IconFieldNumber, other.IconFieldNumber)) return false;
-      if (UpdateTimestampFieldNumber != other.UpdateTimestampFieldNumber) return false;
-      if (!object.Equals(SettingsFieldNumber, other.SettingsFieldNumber)) return false;
-      if (NameFieldNumber != other.NameFieldNumber) return false;
-      if (SlotIndexFieldNumber != other.SlotIndexFieldNumber) return false;
-      if (IsMarkedFieldNumber != other.IsMarkedFieldNumber) return false;
+      if (AvatarIdOnCreate != other.AvatarIdOnCreate) return false;
+      if (IsMarked != other.IsMarked) return false;
+      if (!object.Equals(Settings, other.Settings)) return false;
+      if (UpdateTimestamp != other.UpdateTimestamp) return false;
+      if (Name != other.Name) return false;
+      if (SlotIndex != other.SlotIndex) return false;
+      if (!object.Equals(Icon, other.Icon)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -193,12 +206,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (iconFieldNumber_ != null) hash ^= IconFieldNumber.GetHashCode();
-      if (UpdateTimestampFieldNumber != 0L) hash ^= UpdateTimestampFieldNumber.GetHashCode();
-      if (settingsFieldNumber_ != null) hash ^= SettingsFieldNumber.GetHashCode();
-      if (NameFieldNumber.Length != 0) hash ^= NameFieldNumber.GetHashCode();
-      if (SlotIndexFieldNumber != 0) hash ^= SlotIndexFieldNumber.GetHashCode();
-      if (IsMarkedFieldNumber != false) hash ^= IsMarkedFieldNumber.GetHashCode();
+      if (AvatarIdOnCreate != 0) hash ^= AvatarIdOnCreate.GetHashCode();
+      if (IsMarked != false) hash ^= IsMarked.GetHashCode();
+      if (settings_ != null) hash ^= Settings.GetHashCode();
+      if (UpdateTimestamp != 0L) hash ^= UpdateTimestamp.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (SlotIndex != 0) hash ^= SlotIndex.GetHashCode();
+      if (icon_ != null) hash ^= Icon.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -217,29 +231,33 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (iconFieldNumber_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(IconFieldNumber);
+      if (AvatarIdOnCreate != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(AvatarIdOnCreate);
       }
-      if (UpdateTimestampFieldNumber != 0L) {
-        output.WriteRawTag(40);
-        output.WriteInt64(UpdateTimestampFieldNumber);
+      if (settings_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Settings);
       }
-      if (settingsFieldNumber_ != null) {
+      if (SlotIndex != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(SlotIndex);
+      }
+      if (Name.Length != 0) {
         output.WriteRawTag(66);
-        output.WriteMessage(SettingsFieldNumber);
+        output.WriteString(Name);
       }
-      if (IsMarkedFieldNumber != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(IsMarkedFieldNumber);
+      if (icon_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(Icon);
       }
-      if (NameFieldNumber.Length != 0) {
-        output.WriteRawTag(98);
-        output.WriteString(NameFieldNumber);
+      if (UpdateTimestamp != 0L) {
+        output.WriteRawTag(112);
+        output.WriteInt64(UpdateTimestamp);
       }
-      if (SlotIndexFieldNumber != 0) {
+      if (IsMarked != false) {
         output.WriteRawTag(120);
-        output.WriteUInt32(SlotIndexFieldNumber);
+        output.WriteBool(IsMarked);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -251,29 +269,33 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (iconFieldNumber_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(IconFieldNumber);
+      if (AvatarIdOnCreate != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(AvatarIdOnCreate);
       }
-      if (UpdateTimestampFieldNumber != 0L) {
-        output.WriteRawTag(40);
-        output.WriteInt64(UpdateTimestampFieldNumber);
+      if (settings_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Settings);
       }
-      if (settingsFieldNumber_ != null) {
+      if (SlotIndex != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(SlotIndex);
+      }
+      if (Name.Length != 0) {
         output.WriteRawTag(66);
-        output.WriteMessage(SettingsFieldNumber);
+        output.WriteString(Name);
       }
-      if (IsMarkedFieldNumber != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(IsMarkedFieldNumber);
+      if (icon_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(Icon);
       }
-      if (NameFieldNumber.Length != 0) {
-        output.WriteRawTag(98);
-        output.WriteString(NameFieldNumber);
+      if (UpdateTimestamp != 0L) {
+        output.WriteRawTag(112);
+        output.WriteInt64(UpdateTimestamp);
       }
-      if (SlotIndexFieldNumber != 0) {
+      if (IsMarked != false) {
         output.WriteRawTag(120);
-        output.WriteUInt32(SlotIndexFieldNumber);
+        output.WriteBool(IsMarked);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -285,23 +307,26 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (iconFieldNumber_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IconFieldNumber);
+      if (AvatarIdOnCreate != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AvatarIdOnCreate);
       }
-      if (UpdateTimestampFieldNumber != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(UpdateTimestampFieldNumber);
-      }
-      if (settingsFieldNumber_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SettingsFieldNumber);
-      }
-      if (NameFieldNumber.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(NameFieldNumber);
-      }
-      if (SlotIndexFieldNumber != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SlotIndexFieldNumber);
-      }
-      if (IsMarkedFieldNumber != false) {
+      if (IsMarked != false) {
         size += 1 + 1;
+      }
+      if (settings_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Settings);
+      }
+      if (UpdateTimestamp != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(UpdateTimestamp);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (SlotIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SlotIndex);
+      }
+      if (icon_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Icon);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -315,29 +340,32 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.iconFieldNumber_ != null) {
-        if (iconFieldNumber_ == null) {
-          IconFieldNumber = new global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon();
+      if (other.AvatarIdOnCreate != 0) {
+        AvatarIdOnCreate = other.AvatarIdOnCreate;
+      }
+      if (other.IsMarked != false) {
+        IsMarked = other.IsMarked;
+      }
+      if (other.settings_ != null) {
+        if (settings_ == null) {
+          Settings = new global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings();
         }
-        IconFieldNumber.MergeFrom(other.IconFieldNumber);
+        Settings.MergeFrom(other.Settings);
       }
-      if (other.UpdateTimestampFieldNumber != 0L) {
-        UpdateTimestampFieldNumber = other.UpdateTimestampFieldNumber;
+      if (other.UpdateTimestamp != 0L) {
+        UpdateTimestamp = other.UpdateTimestamp;
       }
-      if (other.settingsFieldNumber_ != null) {
-        if (settingsFieldNumber_ == null) {
-          SettingsFieldNumber = new global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings();
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.SlotIndex != 0) {
+        SlotIndex = other.SlotIndex;
+      }
+      if (other.icon_ != null) {
+        if (icon_ == null) {
+          Icon = new global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon();
         }
-        SettingsFieldNumber.MergeFrom(other.SettingsFieldNumber);
-      }
-      if (other.NameFieldNumber.Length != 0) {
-        NameFieldNumber = other.NameFieldNumber;
-      }
-      if (other.SlotIndexFieldNumber != 0) {
-        SlotIndexFieldNumber = other.SlotIndexFieldNumber;
-      }
-      if (other.IsMarkedFieldNumber != false) {
-        IsMarkedFieldNumber = other.IsMarkedFieldNumber;
+        Icon.MergeFrom(other.Icon);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -354,34 +382,38 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26: {
-            if (iconFieldNumber_ == null) {
-              IconFieldNumber = new global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon();
-            }
-            input.ReadMessage(IconFieldNumber);
+          case 24: {
+            AvatarIdOnCreate = input.ReadUInt32();
             break;
           }
-          case 40: {
-            UpdateTimestampFieldNumber = input.ReadInt64();
+          case 42: {
+            if (settings_ == null) {
+              Settings = new global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings();
+            }
+            input.ReadMessage(Settings);
+            break;
+          }
+          case 48: {
+            SlotIndex = input.ReadUInt32();
             break;
           }
           case 66: {
-            if (settingsFieldNumber_ == null) {
-              SettingsFieldNumber = new global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings();
+            Name = input.ReadString();
+            break;
+          }
+          case 90: {
+            if (icon_ == null) {
+              Icon = new global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon();
             }
-            input.ReadMessage(SettingsFieldNumber);
+            input.ReadMessage(Icon);
             break;
           }
-          case 88: {
-            IsMarkedFieldNumber = input.ReadBool();
-            break;
-          }
-          case 98: {
-            NameFieldNumber = input.ReadString();
+          case 112: {
+            UpdateTimestamp = input.ReadInt64();
             break;
           }
           case 120: {
-            SlotIndexFieldNumber = input.ReadUInt32();
+            IsMarked = input.ReadBool();
             break;
           }
         }
@@ -399,34 +431,38 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26: {
-            if (iconFieldNumber_ == null) {
-              IconFieldNumber = new global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon();
-            }
-            input.ReadMessage(IconFieldNumber);
+          case 24: {
+            AvatarIdOnCreate = input.ReadUInt32();
             break;
           }
-          case 40: {
-            UpdateTimestampFieldNumber = input.ReadInt64();
+          case 42: {
+            if (settings_ == null) {
+              Settings = new global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings();
+            }
+            input.ReadMessage(Settings);
+            break;
+          }
+          case 48: {
+            SlotIndex = input.ReadUInt32();
             break;
           }
           case 66: {
-            if (settingsFieldNumber_ == null) {
-              SettingsFieldNumber = new global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings();
+            Name = input.ReadString();
+            break;
+          }
+          case 90: {
+            if (icon_ == null) {
+              Icon = new global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon();
             }
-            input.ReadMessage(SettingsFieldNumber);
+            input.ReadMessage(Icon);
             break;
           }
-          case 88: {
-            IsMarkedFieldNumber = input.ReadBool();
-            break;
-          }
-          case 98: {
-            NameFieldNumber = input.ReadString();
+          case 112: {
+            UpdateTimestamp = input.ReadInt64();
             break;
           }
           case 120: {
-            SlotIndexFieldNumber = input.ReadUInt32();
+            IsMarked = input.ReadBool();
             break;
           }
         }

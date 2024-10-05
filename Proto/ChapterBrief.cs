@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static ChapterBriefReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJDaGFwdGVyQnJpZWYucHJvdG8iXQoMQ2hhcHRlckJyaWVmEg4KBmlzX25l",
-            "dxgIIAEoCBITCgtBUEFGTEtQTUFNRBgKIAEoDRIKCgJpZBgOIAEoDRIcChR0",
-            "YWtlbl9yZXdhcmRfaWRfbGlzdBgNIAMoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "ChJDaGFwdGVyQnJpZWYucHJvdG8iXQoMQ2hhcHRlckJyaWVmEgoKAmlkGAgg",
+            "ASgNEhMKC0pKR05PTUdQQ0tNGA4gASgNEhwKFHRha2VuX3Jld2FyZF9pZF9s",
+            "aXN0GAQgAygNEg4KBmlzX25ldxgBIAEoCEIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChapterBrief), global::EggLink.DanhengServer.Proto.ChapterBrief.Parser, new[]{ "IsNew", "APAFLKPMAMD", "Id", "TakenRewardIdList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChapterBrief), global::EggLink.DanhengServer.Proto.ChapterBrief.Parser, new[]{ "Id", "JJGNOMGPCKM", "TakenRewardIdList", "IsNew" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,10 +73,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChapterBrief(ChapterBrief other) : this() {
-      isNew_ = other.isNew_;
-      aPAFLKPMAMD_ = other.aPAFLKPMAMD_;
       id_ = other.id_;
+      jJGNOMGPCKM_ = other.jJGNOMGPCKM_;
       takenRewardIdList_ = other.takenRewardIdList_.Clone();
+      isNew_ = other.isNew_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,32 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new ChapterBrief(this);
     }
 
-    /// <summary>Field number for the "is_new" field.</summary>
-    public const int IsNewFieldNumber = 8;
-    private bool isNew_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsNew {
-      get { return isNew_; }
-      set {
-        isNew_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "APAFLKPMAMD" field.</summary>
-    public const int APAFLKPMAMDFieldNumber = 10;
-    private uint aPAFLKPMAMD_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint APAFLKPMAMD {
-      get { return aPAFLKPMAMD_; }
-      set {
-        aPAFLKPMAMD_ = value;
-      }
-    }
-
     /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 14;
+    public const int IdFieldNumber = 8;
     private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,15 +98,39 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "JJGNOMGPCKM" field.</summary>
+    public const int JJGNOMGPCKMFieldNumber = 14;
+    private uint jJGNOMGPCKM_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint JJGNOMGPCKM {
+      get { return jJGNOMGPCKM_; }
+      set {
+        jJGNOMGPCKM_ = value;
+      }
+    }
+
     /// <summary>Field number for the "taken_reward_id_list" field.</summary>
-    public const int TakenRewardIdListFieldNumber = 13;
+    public const int TakenRewardIdListFieldNumber = 4;
     private static readonly pb::FieldCodec<uint> _repeated_takenRewardIdList_codec
-        = pb::FieldCodec.ForUInt32(106);
+        = pb::FieldCodec.ForUInt32(34);
     private readonly pbc::RepeatedField<uint> takenRewardIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<uint> TakenRewardIdList {
       get { return takenRewardIdList_; }
+    }
+
+    /// <summary>Field number for the "is_new" field.</summary>
+    public const int IsNewFieldNumber = 1;
+    private bool isNew_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsNew {
+      get { return isNew_; }
+      set {
+        isNew_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -148,10 +148,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsNew != other.IsNew) return false;
-      if (APAFLKPMAMD != other.APAFLKPMAMD) return false;
       if (Id != other.Id) return false;
+      if (JJGNOMGPCKM != other.JJGNOMGPCKM) return false;
       if(!takenRewardIdList_.Equals(other.takenRewardIdList_)) return false;
+      if (IsNew != other.IsNew) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -159,10 +159,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsNew != false) hash ^= IsNew.GetHashCode();
-      if (APAFLKPMAMD != 0) hash ^= APAFLKPMAMD.GetHashCode();
       if (Id != 0) hash ^= Id.GetHashCode();
+      if (JJGNOMGPCKM != 0) hash ^= JJGNOMGPCKM.GetHashCode();
       hash ^= takenRewardIdList_.GetHashCode();
+      if (IsNew != false) hash ^= IsNew.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,17 +182,17 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (IsNew != false) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(8);
         output.WriteBool(IsNew);
-      }
-      if (APAFLKPMAMD != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(APAFLKPMAMD);
       }
       takenRewardIdList_.WriteTo(output, _repeated_takenRewardIdList_codec);
       if (Id != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(64);
         output.WriteUInt32(Id);
+      }
+      if (JJGNOMGPCKM != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(JJGNOMGPCKM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -205,17 +205,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IsNew != false) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(8);
         output.WriteBool(IsNew);
-      }
-      if (APAFLKPMAMD != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(APAFLKPMAMD);
       }
       takenRewardIdList_.WriteTo(ref output, _repeated_takenRewardIdList_codec);
       if (Id != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(64);
         output.WriteUInt32(Id);
+      }
+      if (JJGNOMGPCKM != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(JJGNOMGPCKM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,16 +227,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsNew != false) {
-        size += 1 + 1;
-      }
-      if (APAFLKPMAMD != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(APAFLKPMAMD);
-      }
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
       }
+      if (JJGNOMGPCKM != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JJGNOMGPCKM);
+      }
       size += takenRewardIdList_.CalculateSize(_repeated_takenRewardIdList_codec);
+      if (IsNew != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -249,16 +249,16 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsNew != false) {
-        IsNew = other.IsNew;
-      }
-      if (other.APAFLKPMAMD != 0) {
-        APAFLKPMAMD = other.APAFLKPMAMD;
-      }
       if (other.Id != 0) {
         Id = other.Id;
       }
+      if (other.JJGNOMGPCKM != 0) {
+        JJGNOMGPCKM = other.JJGNOMGPCKM;
+      }
       takenRewardIdList_.Add(other.takenRewardIdList_);
+      if (other.IsNew != false) {
+        IsNew = other.IsNew;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -274,21 +274,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
+          case 8: {
             IsNew = input.ReadBool();
             break;
           }
-          case 80: {
-            APAFLKPMAMD = input.ReadUInt32();
-            break;
-          }
-          case 106:
-          case 104: {
+          case 34:
+          case 32: {
             takenRewardIdList_.AddEntriesFrom(input, _repeated_takenRewardIdList_codec);
             break;
           }
-          case 112: {
+          case 64: {
             Id = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            JJGNOMGPCKM = input.ReadUInt32();
             break;
           }
         }
@@ -306,21 +306,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
+          case 8: {
             IsNew = input.ReadBool();
             break;
           }
-          case 80: {
-            APAFLKPMAMD = input.ReadUInt32();
-            break;
-          }
-          case 106:
-          case 104: {
+          case 34:
+          case 32: {
             takenRewardIdList_.AddEntriesFrom(ref input, _repeated_takenRewardIdList_codec);
             break;
           }
-          case 112: {
+          case 64: {
             Id = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            JJGNOMGPCKM = input.ReadUInt32();
             break;
           }
         }

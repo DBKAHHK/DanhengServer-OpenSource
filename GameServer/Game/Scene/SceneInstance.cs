@@ -10,6 +10,7 @@ using EggLink.DanhengServer.GameServer.Game.ChessRogue.Cell;
 using EggLink.DanhengServer.GameServer.Game.Mission;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Game.Rogue.Scene;
+using EggLink.DanhengServer.GameServer.Game.RogueMagic.Scene;
 using EggLink.DanhengServer.GameServer.Game.RogueTourn.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
@@ -204,6 +205,11 @@ public class SceneInstance
                 {
                     EntityLoader = new RogueTournEntityLoader(this, Player);
                     GameModeType = GameModeTypeEnum.TournRogue; // TournRogue
+                }
+                else if (Player.RogueMagicManager!.RogueMagicInstance != null)
+                {
+                    EntityLoader = new RogueMagicEntityLoader(this, Player);
+                    GameModeType = GameModeTypeEnum.MagicRogue; // MagicRogue
                 }
                 else
                 {

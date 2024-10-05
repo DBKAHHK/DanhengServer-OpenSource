@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch5Sb2d1ZVRvdXJuSGFuZEJvb2tOb3RpZnkucHJvdG8aHFJvZ3VlVG91cm5I",
             "YW5kYm9va1R5cGUucHJvdG8iXQoYUm9ndWVUb3VybkhhbmRCb29rTm90aWZ5",
-            "EhMKC01BS0FNTU9PS0RCGAggAygNEiwKC0pKSlBFTElMR0ZIGAEgASgOMhcu",
+            "EhMKC09NRExBSUNFTENKGAMgAygNEiwKC0lDRExCUFBLTk5LGA8gASgOMhcu",
             "Um9ndWVUb3VybkhhbmRib29rVHlwZUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTournHandbookTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournHandBookNotify), global::EggLink.DanhengServer.Proto.RogueTournHandBookNotify.Parser, new[]{ "MAKAMMOOKDB", "JJJPELILGFH" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournHandBookNotify), global::EggLink.DanhengServer.Proto.RogueTournHandBookNotify.Parser, new[]{ "OMDLAICELCJ", "ICDLBPPKNNK" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournHandBookNotify(RogueTournHandBookNotify other) : this() {
-      mAKAMMOOKDB_ = other.mAKAMMOOKDB_.Clone();
-      jJJPELILGFH_ = other.jJJPELILGFH_;
+      oMDLAICELCJ_ = other.oMDLAICELCJ_.Clone();
+      iCDLBPPKNNK_ = other.iCDLBPPKNNK_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,26 +85,26 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournHandBookNotify(this);
     }
 
-    /// <summary>Field number for the "MAKAMMOOKDB" field.</summary>
-    public const int MAKAMMOOKDBFieldNumber = 8;
-    private static readonly pb::FieldCodec<uint> _repeated_mAKAMMOOKDB_codec
-        = pb::FieldCodec.ForUInt32(66);
-    private readonly pbc::RepeatedField<uint> mAKAMMOOKDB_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "OMDLAICELCJ" field.</summary>
+    public const int OMDLAICELCJFieldNumber = 3;
+    private static readonly pb::FieldCodec<uint> _repeated_oMDLAICELCJ_codec
+        = pb::FieldCodec.ForUInt32(26);
+    private readonly pbc::RepeatedField<uint> oMDLAICELCJ_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> MAKAMMOOKDB {
-      get { return mAKAMMOOKDB_; }
+    public pbc::RepeatedField<uint> OMDLAICELCJ {
+      get { return oMDLAICELCJ_; }
     }
 
-    /// <summary>Field number for the "JJJPELILGFH" field.</summary>
-    public const int JJJPELILGFHFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.RogueTournHandbookType jJJPELILGFH_ = global::EggLink.DanhengServer.Proto.RogueTournHandbookType.RogueTournHandbookNone;
+    /// <summary>Field number for the "ICDLBPPKNNK" field.</summary>
+    public const int ICDLBPPKNNKFieldNumber = 15;
+    private global::EggLink.DanhengServer.Proto.RogueTournHandbookType iCDLBPPKNNK_ = global::EggLink.DanhengServer.Proto.RogueTournHandbookType.RogueTournHandbookNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueTournHandbookType JJJPELILGFH {
-      get { return jJJPELILGFH_; }
+    public global::EggLink.DanhengServer.Proto.RogueTournHandbookType ICDLBPPKNNK {
+      get { return iCDLBPPKNNK_; }
       set {
-        jJJPELILGFH_ = value;
+        iCDLBPPKNNK_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!mAKAMMOOKDB_.Equals(other.mAKAMMOOKDB_)) return false;
-      if (JJJPELILGFH != other.JJJPELILGFH) return false;
+      if(!oMDLAICELCJ_.Equals(other.oMDLAICELCJ_)) return false;
+      if (ICDLBPPKNNK != other.ICDLBPPKNNK) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= mAKAMMOOKDB_.GetHashCode();
-      if (JJJPELILGFH != global::EggLink.DanhengServer.Proto.RogueTournHandbookType.RogueTournHandbookNone) hash ^= JJJPELILGFH.GetHashCode();
+      hash ^= oMDLAICELCJ_.GetHashCode();
+      if (ICDLBPPKNNK != global::EggLink.DanhengServer.Proto.RogueTournHandbookType.RogueTournHandbookNone) hash ^= ICDLBPPKNNK.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (JJJPELILGFH != global::EggLink.DanhengServer.Proto.RogueTournHandbookType.RogueTournHandbookNone) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) JJJPELILGFH);
+      oMDLAICELCJ_.WriteTo(output, _repeated_oMDLAICELCJ_codec);
+      if (ICDLBPPKNNK != global::EggLink.DanhengServer.Proto.RogueTournHandbookType.RogueTournHandbookNone) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) ICDLBPPKNNK);
       }
-      mAKAMMOOKDB_.WriteTo(output, _repeated_mAKAMMOOKDB_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (JJJPELILGFH != global::EggLink.DanhengServer.Proto.RogueTournHandbookType.RogueTournHandbookNone) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) JJJPELILGFH);
+      oMDLAICELCJ_.WriteTo(ref output, _repeated_oMDLAICELCJ_codec);
+      if (ICDLBPPKNNK != global::EggLink.DanhengServer.Proto.RogueTournHandbookType.RogueTournHandbookNone) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) ICDLBPPKNNK);
       }
-      mAKAMMOOKDB_.WriteTo(ref output, _repeated_mAKAMMOOKDB_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -182,9 +182,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += mAKAMMOOKDB_.CalculateSize(_repeated_mAKAMMOOKDB_codec);
-      if (JJJPELILGFH != global::EggLink.DanhengServer.Proto.RogueTournHandbookType.RogueTournHandbookNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) JJJPELILGFH);
+      size += oMDLAICELCJ_.CalculateSize(_repeated_oMDLAICELCJ_codec);
+      if (ICDLBPPKNNK != global::EggLink.DanhengServer.Proto.RogueTournHandbookType.RogueTournHandbookNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ICDLBPPKNNK);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -198,9 +198,9 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      mAKAMMOOKDB_.Add(other.mAKAMMOOKDB_);
-      if (other.JJJPELILGFH != global::EggLink.DanhengServer.Proto.RogueTournHandbookType.RogueTournHandbookNone) {
-        JJJPELILGFH = other.JJJPELILGFH;
+      oMDLAICELCJ_.Add(other.oMDLAICELCJ_);
+      if (other.ICDLBPPKNNK != global::EggLink.DanhengServer.Proto.RogueTournHandbookType.RogueTournHandbookNone) {
+        ICDLBPPKNNK = other.ICDLBPPKNNK;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -217,13 +217,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            JJJPELILGFH = (global::EggLink.DanhengServer.Proto.RogueTournHandbookType) input.ReadEnum();
+          case 26:
+          case 24: {
+            oMDLAICELCJ_.AddEntriesFrom(input, _repeated_oMDLAICELCJ_codec);
             break;
           }
-          case 66:
-          case 64: {
-            mAKAMMOOKDB_.AddEntriesFrom(input, _repeated_mAKAMMOOKDB_codec);
+          case 120: {
+            ICDLBPPKNNK = (global::EggLink.DanhengServer.Proto.RogueTournHandbookType) input.ReadEnum();
             break;
           }
         }
@@ -241,13 +241,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            JJJPELILGFH = (global::EggLink.DanhengServer.Proto.RogueTournHandbookType) input.ReadEnum();
+          case 26:
+          case 24: {
+            oMDLAICELCJ_.AddEntriesFrom(ref input, _repeated_oMDLAICELCJ_codec);
             break;
           }
-          case 66:
-          case 64: {
-            mAKAMMOOKDB_.AddEntriesFrom(ref input, _repeated_mAKAMMOOKDB_codec);
+          case 120: {
+            ICDLBPPKNNK = (global::EggLink.DanhengServer.Proto.RogueTournHandbookType) input.ReadEnum();
             break;
           }
         }

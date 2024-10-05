@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdTZWFyY2hQbGF5ZXJDc1JlcS5wcm90byI6ChFTZWFyY2hQbGF5ZXJDc1Jl",
-            "cRIQCgh1aWRfbGlzdBgGIAMoDRITCgtQR0FHQUJGSERMRRgPIAEoCEIeqgIb",
+            "cRIQCgh1aWRfbGlzdBgOIAMoDRITCgtDT0JESExNQUxLSRgPIAEoCEIeqgIb",
             "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SearchPlayerCsReq), global::EggLink.DanhengServer.Proto.SearchPlayerCsReq.Parser, new[]{ "UidList", "PGAGABFHDLE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SearchPlayerCsReq), global::EggLink.DanhengServer.Proto.SearchPlayerCsReq.Parser, new[]{ "UidList", "COBDHLMALKI" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SearchPlayerCsReq(SearchPlayerCsReq other) : this() {
       uidList_ = other.uidList_.Clone();
-      pGAGABFHDLE_ = other.pGAGABFHDLE_;
+      cOBDHLMALKI_ = other.cOBDHLMALKI_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "uid_list" field.</summary>
-    public const int UidListFieldNumber = 6;
+    public const int UidListFieldNumber = 14;
     private static readonly pb::FieldCodec<uint> _repeated_uidList_codec
-        = pb::FieldCodec.ForUInt32(50);
+        = pb::FieldCodec.ForUInt32(114);
     private readonly pbc::RepeatedField<uint> uidList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -94,15 +94,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return uidList_; }
     }
 
-    /// <summary>Field number for the "PGAGABFHDLE" field.</summary>
-    public const int PGAGABFHDLEFieldNumber = 15;
-    private bool pGAGABFHDLE_;
+    /// <summary>Field number for the "COBDHLMALKI" field.</summary>
+    public const int COBDHLMALKIFieldNumber = 15;
+    private bool cOBDHLMALKI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool PGAGABFHDLE {
-      get { return pGAGABFHDLE_; }
+    public bool COBDHLMALKI {
+      get { return cOBDHLMALKI_; }
       set {
-        pGAGABFHDLE_ = value;
+        cOBDHLMALKI_ = value;
       }
     }
 
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!uidList_.Equals(other.uidList_)) return false;
-      if (PGAGABFHDLE != other.PGAGABFHDLE) return false;
+      if (COBDHLMALKI != other.COBDHLMALKI) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,7 +131,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= uidList_.GetHashCode();
-      if (PGAGABFHDLE != false) hash ^= PGAGABFHDLE.GetHashCode();
+      if (COBDHLMALKI != false) hash ^= COBDHLMALKI.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       uidList_.WriteTo(output, _repeated_uidList_codec);
-      if (PGAGABFHDLE != false) {
+      if (COBDHLMALKI != false) {
         output.WriteRawTag(120);
-        output.WriteBool(PGAGABFHDLE);
+        output.WriteBool(COBDHLMALKI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -166,9 +166,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       uidList_.WriteTo(ref output, _repeated_uidList_codec);
-      if (PGAGABFHDLE != false) {
+      if (COBDHLMALKI != false) {
         output.WriteRawTag(120);
-        output.WriteBool(PGAGABFHDLE);
+        output.WriteBool(COBDHLMALKI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -181,7 +181,7 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += uidList_.CalculateSize(_repeated_uidList_codec);
-      if (PGAGABFHDLE != false) {
+      if (COBDHLMALKI != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -197,8 +197,8 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       uidList_.Add(other.uidList_);
-      if (other.PGAGABFHDLE != false) {
-        PGAGABFHDLE = other.PGAGABFHDLE;
+      if (other.COBDHLMALKI != false) {
+        COBDHLMALKI = other.COBDHLMALKI;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -215,13 +215,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50:
-          case 48: {
+          case 114:
+          case 112: {
             uidList_.AddEntriesFrom(input, _repeated_uidList_codec);
             break;
           }
           case 120: {
-            PGAGABFHDLE = input.ReadBool();
+            COBDHLMALKI = input.ReadBool();
             break;
           }
         }
@@ -239,13 +239,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50:
-          case 48: {
+          case 114:
+          case 112: {
             uidList_.AddEntriesFrom(ref input, _repeated_uidList_codec);
             break;
           }
           case 120: {
-            PGAGABFHDLE = input.ReadBool();
+            COBDHLMALKI = input.ReadBool();
             break;
           }
         }

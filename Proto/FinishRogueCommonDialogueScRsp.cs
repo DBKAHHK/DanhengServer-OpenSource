@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiRGaW5pc2hSb2d1ZUNvbW1vbkRpYWxvZ3VlU2NSc3AucHJvdG8iSgoeRmlu",
             "aXNoUm9ndWVDb21tb25EaWFsb2d1ZVNjUnNwEg8KB3JldGNvZGUYDSABKA0S",
-            "FwoPZXZlbnRfdW5pcXVlX2lkGAMgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "FwoPZXZlbnRfdW5pcXVlX2lkGA8gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "event_unique_id" field.</summary>
-    public const int EventUniqueIdFieldNumber = 3;
+    public const int EventUniqueIdFieldNumber = 15;
     private uint eventUniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (EventUniqueId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(EventUniqueId);
-      }
       if (Retcode != 0) {
         output.WriteRawTag(104);
         output.WriteUInt32(Retcode);
+      }
+      if (EventUniqueId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(EventUniqueId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (EventUniqueId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(EventUniqueId);
-      }
       if (Retcode != 0) {
         output.WriteRawTag(104);
         output.WriteUInt32(Retcode);
+      }
+      if (EventUniqueId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(EventUniqueId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            EventUniqueId = input.ReadUInt32();
-            break;
-          }
           case 104: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            EventUniqueId = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            EventUniqueId = input.ReadUInt32();
-            break;
-          }
           case 104: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            EventUniqueId = input.ReadUInt32();
             break;
           }
         }

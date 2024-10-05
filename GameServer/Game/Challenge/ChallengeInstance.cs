@@ -169,7 +169,7 @@ public class ChallengeInstance
                 {
                     BuffId = (uint)BossBuffs[1]
                 },
-                LBOJBINABDG = true
+                CPNMHNAFDJM = true
             };
 
             foreach (var lineupAvatar in Player.LineupManager?.GetExtraLineup(ExtraLineupType.LineupChallenge)
@@ -259,7 +259,7 @@ public class ChallengeInstance
         if (IsStory())
         {
             // Calculate score for current stage
-            var stageScore = (int)req.Stt.ChallengeScore - GetTotalScore();
+            var stageScore = (int)req.Stt.BATTLETARGETTYPECHALLENGESCORE - GetTotalScore();
 
             // Set score
             if (CurrentStage == 1)

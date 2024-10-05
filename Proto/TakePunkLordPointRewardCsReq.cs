@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJUYWtlUHVua0xvcmRQb2ludFJld2FyZENzUmVxLnByb3RvIkIKHFRha2VQ",
-            "dW5rTG9yZFBvaW50UmV3YXJkQ3NSZXESDQoFbGV2ZWwYASABKA0SEwoLT0dM",
-            "SEFHRkNEQkEYCSABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "dW5rTG9yZFBvaW50UmV3YXJkQ3NSZXESDQoFbGV2ZWwYBSABKA0SEwoLTUdD",
+            "SUFDRktCRk0YAiABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakePunkLordPointRewardCsReq), global::EggLink.DanhengServer.Proto.TakePunkLordPointRewardCsReq.Parser, new[]{ "Level", "OGLHAGFCDBA" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakePunkLordPointRewardCsReq), global::EggLink.DanhengServer.Proto.TakePunkLordPointRewardCsReq.Parser, new[]{ "Level", "MGCIACFKBFM" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TakePunkLordPointRewardCsReq(TakePunkLordPointRewardCsReq other) : this() {
       level_ = other.level_;
-      oGLHAGFCDBA_ = other.oGLHAGFCDBA_;
+      mGCIACFKBFM_ = other.mGCIACFKBFM_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 1;
+    public const int LevelFieldNumber = 5;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "OGLHAGFCDBA" field.</summary>
-    public const int OGLHAGFCDBAFieldNumber = 9;
-    private bool oGLHAGFCDBA_;
+    /// <summary>Field number for the "MGCIACFKBFM" field.</summary>
+    public const int MGCIACFKBFMFieldNumber = 2;
+    private bool mGCIACFKBFM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool OGLHAGFCDBA {
-      get { return oGLHAGFCDBA_; }
+    public bool MGCIACFKBFM {
+      get { return mGCIACFKBFM_; }
       set {
-        oGLHAGFCDBA_ = value;
+        mGCIACFKBFM_ = value;
       }
     }
 
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Level != other.Level) return false;
-      if (OGLHAGFCDBA != other.OGLHAGFCDBA) return false;
+      if (MGCIACFKBFM != other.MGCIACFKBFM) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Level != 0) hash ^= Level.GetHashCode();
-      if (OGLHAGFCDBA != false) hash ^= OGLHAGFCDBA.GetHashCode();
+      if (MGCIACFKBFM != false) hash ^= MGCIACFKBFM.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Level != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Level);
+      if (MGCIACFKBFM != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(MGCIACFKBFM);
       }
-      if (OGLHAGFCDBA != false) {
-        output.WriteRawTag(72);
-        output.WriteBool(OGLHAGFCDBA);
+      if (Level != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Level);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Level != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Level);
+      if (MGCIACFKBFM != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(MGCIACFKBFM);
       }
-      if (OGLHAGFCDBA != false) {
-        output.WriteRawTag(72);
-        output.WriteBool(OGLHAGFCDBA);
+      if (Level != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Level);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -191,7 +191,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
       }
-      if (OGLHAGFCDBA != false) {
+      if (MGCIACFKBFM != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -209,8 +209,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Level != 0) {
         Level = other.Level;
       }
-      if (other.OGLHAGFCDBA != false) {
-        OGLHAGFCDBA = other.OGLHAGFCDBA;
+      if (other.MGCIACFKBFM != false) {
+        MGCIACFKBFM = other.MGCIACFKBFM;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Level = input.ReadUInt32();
+          case 16: {
+            MGCIACFKBFM = input.ReadBool();
             break;
           }
-          case 72: {
-            OGLHAGFCDBA = input.ReadBool();
+          case 40: {
+            Level = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Level = input.ReadUInt32();
+          case 16: {
+            MGCIACFKBFM = input.ReadBool();
             break;
           }
-          case 72: {
-            OGLHAGFCDBA = input.ReadBool();
+          case 40: {
+            Level = input.ReadUInt32();
             break;
           }
         }

@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtTdGFydENvY29vblN0YWdlQ3NSZXEucHJvdG8iZQoVU3RhcnRDb2Nvb25T",
-            "dGFnZUNzUmVxEgwKBHdhdmUYAyABKA0SEwoLd29ybGRfbGV2ZWwYBSABKA0S",
-            "FgoOcHJvcF9lbnRpdHlfaWQYAiABKA0SEQoJY29jb29uX2lkGAogASgNQh6q",
+            "dGFnZUNzUmVxEhYKDnByb3BfZW50aXR5X2lkGAggASgNEhEKCWNvY29vbl9p",
+            "ZBgHIAEoDRITCgt3b3JsZF9sZXZlbBgEIAEoDRIMCgR3YXZlGAkgASgNQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StartCocoonStageCsReq), global::EggLink.DanhengServer.Proto.StartCocoonStageCsReq.Parser, new[]{ "Wave", "WorldLevel", "PropEntityId", "CocoonId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StartCocoonStageCsReq), global::EggLink.DanhengServer.Proto.StartCocoonStageCsReq.Parser, new[]{ "PropEntityId", "CocoonId", "WorldLevel", "Wave" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,10 +73,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StartCocoonStageCsReq(StartCocoonStageCsReq other) : this() {
-      wave_ = other.wave_;
-      worldLevel_ = other.worldLevel_;
       propEntityId_ = other.propEntityId_;
       cocoonId_ = other.cocoonId_;
+      worldLevel_ = other.worldLevel_;
+      wave_ = other.wave_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,32 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new StartCocoonStageCsReq(this);
     }
 
-    /// <summary>Field number for the "wave" field.</summary>
-    public const int WaveFieldNumber = 3;
-    private uint wave_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Wave {
-      get { return wave_; }
-      set {
-        wave_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "world_level" field.</summary>
-    public const int WorldLevelFieldNumber = 5;
-    private uint worldLevel_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint WorldLevel {
-      get { return worldLevel_; }
-      set {
-        worldLevel_ = value;
-      }
-    }
-
     /// <summary>Field number for the "prop_entity_id" field.</summary>
-    public const int PropEntityIdFieldNumber = 2;
+    public const int PropEntityIdFieldNumber = 8;
     private uint propEntityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cocoon_id" field.</summary>
-    public const int CocoonIdFieldNumber = 10;
+    public const int CocoonIdFieldNumber = 7;
     private uint cocoonId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -131,6 +107,30 @@ namespace EggLink.DanhengServer.Proto {
       get { return cocoonId_; }
       set {
         cocoonId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "world_level" field.</summary>
+    public const int WorldLevelFieldNumber = 4;
+    private uint worldLevel_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint WorldLevel {
+      get { return worldLevel_; }
+      set {
+        worldLevel_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "wave" field.</summary>
+    public const int WaveFieldNumber = 9;
+    private uint wave_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Wave {
+      get { return wave_; }
+      set {
+        wave_ = value;
       }
     }
 
@@ -149,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Wave != other.Wave) return false;
-      if (WorldLevel != other.WorldLevel) return false;
       if (PropEntityId != other.PropEntityId) return false;
       if (CocoonId != other.CocoonId) return false;
+      if (WorldLevel != other.WorldLevel) return false;
+      if (Wave != other.Wave) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Wave != 0) hash ^= Wave.GetHashCode();
-      if (WorldLevel != 0) hash ^= WorldLevel.GetHashCode();
       if (PropEntityId != 0) hash ^= PropEntityId.GetHashCode();
       if (CocoonId != 0) hash ^= CocoonId.GetHashCode();
+      if (WorldLevel != 0) hash ^= WorldLevel.GetHashCode();
+      if (Wave != 0) hash ^= Wave.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,21 +182,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PropEntityId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(PropEntityId);
-      }
-      if (Wave != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(Wave);
-      }
       if (WorldLevel != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteUInt32(WorldLevel);
       }
       if (CocoonId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(56);
         output.WriteUInt32(CocoonId);
+      }
+      if (PropEntityId != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(PropEntityId);
+      }
+      if (Wave != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(Wave);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -208,21 +208,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PropEntityId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(PropEntityId);
-      }
-      if (Wave != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(Wave);
-      }
       if (WorldLevel != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteUInt32(WorldLevel);
       }
       if (CocoonId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(56);
         output.WriteUInt32(CocoonId);
+      }
+      if (PropEntityId != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(PropEntityId);
+      }
+      if (Wave != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(Wave);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -234,17 +234,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Wave != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Wave);
-      }
-      if (WorldLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorldLevel);
-      }
       if (PropEntityId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PropEntityId);
       }
       if (CocoonId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CocoonId);
+      }
+      if (WorldLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorldLevel);
+      }
+      if (Wave != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Wave);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -258,17 +258,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Wave != 0) {
-        Wave = other.Wave;
-      }
-      if (other.WorldLevel != 0) {
-        WorldLevel = other.WorldLevel;
-      }
       if (other.PropEntityId != 0) {
         PropEntityId = other.PropEntityId;
       }
       if (other.CocoonId != 0) {
         CocoonId = other.CocoonId;
+      }
+      if (other.WorldLevel != 0) {
+        WorldLevel = other.WorldLevel;
+      }
+      if (other.Wave != 0) {
+        Wave = other.Wave;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            PropEntityId = input.ReadUInt32();
-            break;
-          }
-          case 24: {
-            Wave = input.ReadUInt32();
-            break;
-          }
-          case 40: {
+          case 32: {
             WorldLevel = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 56: {
             CocoonId = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            PropEntityId = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            Wave = input.ReadUInt32();
             break;
           }
         }
@@ -316,20 +316,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            PropEntityId = input.ReadUInt32();
-            break;
-          }
-          case 24: {
-            Wave = input.ReadUInt32();
-            break;
-          }
-          case 40: {
+          case 32: {
             WorldLevel = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 56: {
             CocoonId = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            PropEntityId = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            Wave = input.ReadUInt32();
             break;
           }
         }

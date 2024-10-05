@@ -26,14 +26,14 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNSb2d1ZVdvcmtiZW5jaEhhbmRsZUZ1bmNDc1JlcS5wcm90bxofUm9ndWVX",
             "b3JrYmVuY2hDb250ZW50SW5mby5wcm90byKJAQodUm9ndWVXb3JrYmVuY2hI",
-            "YW5kbGVGdW5jQ3NSZXESGQoRd29ya2JlbmNoX2Z1bmNfaWQYBiABKA0SFgoO",
-            "cHJvcF9lbnRpdHlfaWQYCSABKA0SNQoRd29ya2JlbmNoX2NvbnRlbnQYCiAB",
+            "YW5kbGVGdW5jQ3NSZXESFgoOcHJvcF9lbnRpdHlfaWQYBSABKA0SGQoRd29y",
+            "a2JlbmNoX2Z1bmNfaWQYBCABKA0SNQoRd29ya2JlbmNoX2NvbnRlbnQYCiAB",
             "KAsyGi5Sb2d1ZVdvcmtiZW5jaENvbnRlbnRJbmZvQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueWorkbenchContentInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueWorkbenchHandleFuncCsReq), global::EggLink.DanhengServer.Proto.RogueWorkbenchHandleFuncCsReq.Parser, new[]{ "WorkbenchFuncId", "PropEntityId", "WorkbenchContent" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueWorkbenchHandleFuncCsReq), global::EggLink.DanhengServer.Proto.RogueWorkbenchHandleFuncCsReq.Parser, new[]{ "PropEntityId", "WorkbenchFuncId", "WorkbenchContent" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,8 +75,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueWorkbenchHandleFuncCsReq(RogueWorkbenchHandleFuncCsReq other) : this() {
-      workbenchFuncId_ = other.workbenchFuncId_;
       propEntityId_ = other.propEntityId_;
+      workbenchFuncId_ = other.workbenchFuncId_;
       workbenchContent_ = other.workbenchContent_ != null ? other.workbenchContent_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -87,20 +87,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueWorkbenchHandleFuncCsReq(this);
     }
 
-    /// <summary>Field number for the "workbench_func_id" field.</summary>
-    public const int WorkbenchFuncIdFieldNumber = 6;
-    private uint workbenchFuncId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint WorkbenchFuncId {
-      get { return workbenchFuncId_; }
-      set {
-        workbenchFuncId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "prop_entity_id" field.</summary>
-    public const int PropEntityIdFieldNumber = 9;
+    public const int PropEntityIdFieldNumber = 5;
     private uint propEntityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -108,6 +96,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return propEntityId_; }
       set {
         propEntityId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "workbench_func_id" field.</summary>
+    public const int WorkbenchFuncIdFieldNumber = 4;
+    private uint workbenchFuncId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint WorkbenchFuncId {
+      get { return workbenchFuncId_; }
+      set {
+        workbenchFuncId_ = value;
       }
     }
 
@@ -138,8 +138,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (WorkbenchFuncId != other.WorkbenchFuncId) return false;
       if (PropEntityId != other.PropEntityId) return false;
+      if (WorkbenchFuncId != other.WorkbenchFuncId) return false;
       if (!object.Equals(WorkbenchContent, other.WorkbenchContent)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -148,8 +148,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (WorkbenchFuncId != 0) hash ^= WorkbenchFuncId.GetHashCode();
       if (PropEntityId != 0) hash ^= PropEntityId.GetHashCode();
+      if (WorkbenchFuncId != 0) hash ^= WorkbenchFuncId.GetHashCode();
       if (workbenchContent_ != null) hash ^= WorkbenchContent.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (WorkbenchFuncId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(32);
         output.WriteUInt32(WorkbenchFuncId);
       }
       if (PropEntityId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(40);
         output.WriteUInt32(PropEntityId);
       }
       if (workbenchContent_ != null) {
@@ -192,11 +192,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (WorkbenchFuncId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(32);
         output.WriteUInt32(WorkbenchFuncId);
       }
       if (PropEntityId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(40);
         output.WriteUInt32(PropEntityId);
       }
       if (workbenchContent_ != null) {
@@ -213,11 +213,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (WorkbenchFuncId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorkbenchFuncId);
-      }
       if (PropEntityId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PropEntityId);
+      }
+      if (WorkbenchFuncId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorkbenchFuncId);
       }
       if (workbenchContent_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(WorkbenchContent);
@@ -234,11 +234,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.WorkbenchFuncId != 0) {
-        WorkbenchFuncId = other.WorkbenchFuncId;
-      }
       if (other.PropEntityId != 0) {
         PropEntityId = other.PropEntityId;
+      }
+      if (other.WorkbenchFuncId != 0) {
+        WorkbenchFuncId = other.WorkbenchFuncId;
       }
       if (other.workbenchContent_ != null) {
         if (workbenchContent_ == null) {
@@ -261,11 +261,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 32: {
             WorkbenchFuncId = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 40: {
             PropEntityId = input.ReadUInt32();
             break;
           }
@@ -291,11 +291,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 32: {
             WorkbenchFuncId = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 40: {
             PropEntityId = input.ReadUInt32();
             break;
           }

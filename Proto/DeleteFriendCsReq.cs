@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdEZWxldGVGcmllbmRDc1JlcS5wcm90byI1ChFEZWxldGVGcmllbmRDc1Jl",
-            "cRILCgN1aWQYDCABKA0SEwoLSUpESkNISUFKR1AYAyABKA1CHqoCG0VnZ0xp",
+            "cRILCgN1aWQYAyABKA0SEwoLTEVKRlBBSk5IREQYCyABKA1CHqoCG0VnZ0xp",
             "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DeleteFriendCsReq), global::EggLink.DanhengServer.Proto.DeleteFriendCsReq.Parser, new[]{ "Uid", "IJDJCHIAJGP" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DeleteFriendCsReq), global::EggLink.DanhengServer.Proto.DeleteFriendCsReq.Parser, new[]{ "Uid", "LEJFPAJNHDD" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteFriendCsReq(DeleteFriendCsReq other) : this() {
       uid_ = other.uid_;
-      iJDJCHIAJGP_ = other.iJDJCHIAJGP_;
+      lEJFPAJNHDD_ = other.lEJFPAJNHDD_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "uid" field.</summary>
-    public const int UidFieldNumber = 12;
+    public const int UidFieldNumber = 3;
     private uint uid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,15 +95,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "IJDJCHIAJGP" field.</summary>
-    public const int IJDJCHIAJGPFieldNumber = 3;
-    private uint iJDJCHIAJGP_;
+    /// <summary>Field number for the "LEJFPAJNHDD" field.</summary>
+    public const int LEJFPAJNHDDFieldNumber = 11;
+    private uint lEJFPAJNHDD_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IJDJCHIAJGP {
-      get { return iJDJCHIAJGP_; }
+    public uint LEJFPAJNHDD {
+      get { return lEJFPAJNHDD_; }
       set {
-        iJDJCHIAJGP_ = value;
+        lEJFPAJNHDD_ = value;
       }
     }
 
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Uid != other.Uid) return false;
-      if (IJDJCHIAJGP != other.IJDJCHIAJGP) return false;
+      if (LEJFPAJNHDD != other.LEJFPAJNHDD) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Uid != 0) hash ^= Uid.GetHashCode();
-      if (IJDJCHIAJGP != 0) hash ^= IJDJCHIAJGP.GetHashCode();
+      if (LEJFPAJNHDD != 0) hash ^= LEJFPAJNHDD.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IJDJCHIAJGP != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(IJDJCHIAJGP);
-      }
       if (Uid != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(24);
         output.WriteUInt32(Uid);
+      }
+      if (LEJFPAJNHDD != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(LEJFPAJNHDD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IJDJCHIAJGP != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(IJDJCHIAJGP);
-      }
       if (Uid != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(24);
         output.WriteUInt32(Uid);
+      }
+      if (LEJFPAJNHDD != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(LEJFPAJNHDD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -190,8 +190,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Uid != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Uid);
       }
-      if (IJDJCHIAJGP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IJDJCHIAJGP);
+      if (LEJFPAJNHDD != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LEJFPAJNHDD);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -208,8 +208,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Uid != 0) {
         Uid = other.Uid;
       }
-      if (other.IJDJCHIAJGP != 0) {
-        IJDJCHIAJGP = other.IJDJCHIAJGP;
+      if (other.LEJFPAJNHDD != 0) {
+        LEJFPAJNHDD = other.LEJFPAJNHDD;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 24: {
-            IJDJCHIAJGP = input.ReadUInt32();
+            Uid = input.ReadUInt32();
             break;
           }
-          case 96: {
-            Uid = input.ReadUInt32();
+          case 88: {
+            LEJFPAJNHDD = input.ReadUInt32();
             break;
           }
         }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 24: {
-            IJDJCHIAJGP = input.ReadUInt32();
+            Uid = input.ReadUInt32();
             break;
           }
-          case 96: {
-            Uid = input.ReadUInt32();
+          case 88: {
+            LEJFPAJNHDD = input.ReadUInt32();
             break;
           }
         }

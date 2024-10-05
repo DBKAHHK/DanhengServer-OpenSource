@@ -24,25 +24,25 @@ namespace EggLink.DanhengServer.Proto {
     static PropExtraInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNQcm9wRXh0cmFJbmZvLnByb3RvGhJQcm9wQWVvbkluZm8ucHJvdG8aGFJv",
-            "Z3VlVG91cm5Eb29ySW5mby5wcm90bxoZUm9ndWVDdXJzZUNoZXN0SW5mby5w",
-            "cm90bxoYUHJvcENoZXNzUm9ndWVJbmZvLnByb3RvGhxSb2d1ZUdhbWJsZU1h",
-            "Y2hpbmVJbmZvLnByb3RvGh1Sb2d1ZVRvdXJuV29ya2JlbmNoSW5mby5wcm90",
-            "bxoTUHJvcFJvZ3VlSW5mby5wcm90byKFAwoNUHJvcEV4dHJhSW5mbxI8Chpy",
-            "b2d1ZV90b3Vybl93b3JrYmVuY2hfaW5mbxgCIAEoCzIYLlJvZ3VlVG91cm5X",
-            "b3JrYmVuY2hJbmZvEiQKCnJvZ3VlX2luZm8YCiABKAsyDi5Qcm9wUm9ndWVJ",
-            "bmZvSAASIgoJYWVvbl9pbmZvGAcgASgLMg0uUHJvcEFlb25JbmZvSAASLwoQ",
-            "Y2hlc3Nfcm9ndWVfaW5mbxgIIAEoCzITLlByb3BDaGVzc1JvZ3VlSW5mb0gA",
-            "EjQKFXJvZ3VlX3RvdXJuX2Rvb3JfaW5mbxgMIAEoCzITLlJvZ3VlVG91cm5E",
-            "b29ySW5mb0gAEjwKGXJvZ3VlX2dhbWJsZV9tYWNoaW5lX2luZm8YDSABKAsy",
-            "Fy5Sb2d1ZUdhbWJsZU1hY2hpbmVJbmZvSAASNgoWcm9ndWVfY3Vyc2VfY2hl",
-            "c3RfaW5mbxgOIAEoCzIULlJvZ3VlQ3Vyc2VDaGVzdEluZm9IAEIPCg1JbmZv",
-            "T25lb2ZDYXNlQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
-            "b3RvMw=="));
+            "ChNQcm9wRXh0cmFJbmZvLnByb3RvGhhSb2d1ZU1hZ2ljRG9vckluZm8ucHJv",
+            "dG8aGVJvZ3VlQ3Vyc2VDaGVzdEluZm8ucHJvdG8aGFByb3BDaGVzc1JvZ3Vl",
+            "SW5mby5wcm90bxoYUm9ndWVUb3VybkRvb3JJbmZvLnByb3RvGhJQcm9wQWVv",
+            "bkluZm8ucHJvdG8aE1Byb3BSb2d1ZUluZm8ucHJvdG8aHFJvZ3VlR2FtYmxl",
+            "TWFjaGluZUluZm8ucHJvdG8aHVJvZ3VlVG91cm5Xb3JrYmVuY2hJbmZvLnBy",
+            "b3RvIokDCg1Qcm9wRXh0cmFJbmZvEiEKCVJvZ3VlSW5mbxgNIAEoCzIOLlBy",
+            "b3BSb2d1ZUluZm8SHwoIQWVvbkluZm8YAiABKAsyDS5Qcm9wQWVvbkluZm8S",
+            "KwoOQ2hlc3NSb2d1ZUluZm8YBiABKAsyEy5Qcm9wQ2hlc3NSb2d1ZUluZm8S",
+            "LwoSUm9ndWVUb3VybkRvb3JJbmZvGAcgASgLMhMuUm9ndWVUb3VybkRvb3JJ",
+            "bmZvEjkKF1JvZ3VlVG91cm5Xb3JrYmVuY2hJbmZvGAQgASgLMhguUm9ndWVU",
+            "b3VybldvcmtiZW5jaEluZm8SNwoWUm9ndWVHYW1ibGVNYWNoaW5lSW5mbxgK",
+            "IAEoCzIXLlJvZ3VlR2FtYmxlTWFjaGluZUluZm8SMQoTUm9ndWVDdXJzZUNo",
+            "ZXN0SW5mbxgIIAEoCzIULlJvZ3VlQ3Vyc2VDaGVzdEluZm8SLwoSUm9ndWVN",
+            "YWdpY0Rvb3JJbmZvGAMgASgLMhMuUm9ndWVNYWdpY0Rvb3JJbmZvQh6qAhtF",
+            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PropAeonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournDoorInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCurseChestInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PropChessRogueInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueGambleMachineInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournWorkbenchInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PropRogueInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicDoorInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCurseChestInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PropChessRogueInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournDoorInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PropAeonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PropRogueInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueGambleMachineInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournWorkbenchInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PropExtraInfo), global::EggLink.DanhengServer.Proto.PropExtraInfo.Parser, new[]{ "RogueTournWorkbenchInfo", "RogueInfo", "AeonInfo", "ChessRogueInfo", "RogueTournDoorInfo", "RogueGambleMachineInfo", "RogueCurseChestInfo" }, new[]{ "InfoOneofCase" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PropExtraInfo), global::EggLink.DanhengServer.Proto.PropExtraInfo.Parser, new[]{ "RogueInfo", "AeonInfo", "ChessRogueInfo", "RogueTournDoorInfo", "RogueTournWorkbenchInfo", "RogueGambleMachineInfo", "RogueCurseChestInfo", "RogueMagicDoorInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -84,28 +84,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PropExtraInfo(PropExtraInfo other) : this() {
+      rogueInfo_ = other.rogueInfo_ != null ? other.rogueInfo_.Clone() : null;
+      aeonInfo_ = other.aeonInfo_ != null ? other.aeonInfo_.Clone() : null;
+      chessRogueInfo_ = other.chessRogueInfo_ != null ? other.chessRogueInfo_.Clone() : null;
+      rogueTournDoorInfo_ = other.rogueTournDoorInfo_ != null ? other.rogueTournDoorInfo_.Clone() : null;
       rogueTournWorkbenchInfo_ = other.rogueTournWorkbenchInfo_ != null ? other.rogueTournWorkbenchInfo_.Clone() : null;
-      switch (other.InfoOneofCaseCase) {
-        case InfoOneofCaseOneofCase.RogueInfo:
-          RogueInfo = other.RogueInfo.Clone();
-          break;
-        case InfoOneofCaseOneofCase.AeonInfo:
-          AeonInfo = other.AeonInfo.Clone();
-          break;
-        case InfoOneofCaseOneofCase.ChessRogueInfo:
-          ChessRogueInfo = other.ChessRogueInfo.Clone();
-          break;
-        case InfoOneofCaseOneofCase.RogueTournDoorInfo:
-          RogueTournDoorInfo = other.RogueTournDoorInfo.Clone();
-          break;
-        case InfoOneofCaseOneofCase.RogueGambleMachineInfo:
-          RogueGambleMachineInfo = other.RogueGambleMachineInfo.Clone();
-          break;
-        case InfoOneofCaseOneofCase.RogueCurseChestInfo:
-          RogueCurseChestInfo = other.RogueCurseChestInfo.Clone();
-          break;
-      }
-
+      rogueGambleMachineInfo_ = other.rogueGambleMachineInfo_ != null ? other.rogueGambleMachineInfo_.Clone() : null;
+      rogueCurseChestInfo_ = other.rogueCurseChestInfo_ != null ? other.rogueCurseChestInfo_.Clone() : null;
+      rogueMagicDoorInfo_ = other.rogueMagicDoorInfo_ != null ? other.rogueMagicDoorInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -115,8 +101,56 @@ namespace EggLink.DanhengServer.Proto {
       return new PropExtraInfo(this);
     }
 
-    /// <summary>Field number for the "rogue_tourn_workbench_info" field.</summary>
-    public const int RogueTournWorkbenchInfoFieldNumber = 2;
+    /// <summary>Field number for the "RogueInfo" field.</summary>
+    public const int RogueInfoFieldNumber = 13;
+    private global::EggLink.DanhengServer.Proto.PropRogueInfo rogueInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.PropRogueInfo RogueInfo {
+      get { return rogueInfo_; }
+      set {
+        rogueInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "AeonInfo" field.</summary>
+    public const int AeonInfoFieldNumber = 2;
+    private global::EggLink.DanhengServer.Proto.PropAeonInfo aeonInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.PropAeonInfo AeonInfo {
+      get { return aeonInfo_; }
+      set {
+        aeonInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ChessRogueInfo" field.</summary>
+    public const int ChessRogueInfoFieldNumber = 6;
+    private global::EggLink.DanhengServer.Proto.PropChessRogueInfo chessRogueInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.PropChessRogueInfo ChessRogueInfo {
+      get { return chessRogueInfo_; }
+      set {
+        chessRogueInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "RogueTournDoorInfo" field.</summary>
+    public const int RogueTournDoorInfoFieldNumber = 7;
+    private global::EggLink.DanhengServer.Proto.RogueTournDoorInfo rogueTournDoorInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueTournDoorInfo RogueTournDoorInfo {
+      get { return rogueTournDoorInfo_; }
+      set {
+        rogueTournDoorInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "RogueTournWorkbenchInfo" field.</summary>
+    public const int RogueTournWorkbenchInfoFieldNumber = 4;
     private global::EggLink.DanhengServer.Proto.RogueTournWorkbenchInfo rogueTournWorkbenchInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -127,101 +161,40 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "rogue_info" field.</summary>
-    public const int RogueInfoFieldNumber = 10;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.PropRogueInfo RogueInfo {
-      get { return infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueInfo ? (global::EggLink.DanhengServer.Proto.PropRogueInfo) infoOneofCase_ : null; }
-      set {
-        infoOneofCase_ = value;
-        infoOneofCaseCase_ = value == null ? InfoOneofCaseOneofCase.None : InfoOneofCaseOneofCase.RogueInfo;
-      }
-    }
-
-    /// <summary>Field number for the "aeon_info" field.</summary>
-    public const int AeonInfoFieldNumber = 7;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.PropAeonInfo AeonInfo {
-      get { return infoOneofCaseCase_ == InfoOneofCaseOneofCase.AeonInfo ? (global::EggLink.DanhengServer.Proto.PropAeonInfo) infoOneofCase_ : null; }
-      set {
-        infoOneofCase_ = value;
-        infoOneofCaseCase_ = value == null ? InfoOneofCaseOneofCase.None : InfoOneofCaseOneofCase.AeonInfo;
-      }
-    }
-
-    /// <summary>Field number for the "chess_rogue_info" field.</summary>
-    public const int ChessRogueInfoFieldNumber = 8;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.PropChessRogueInfo ChessRogueInfo {
-      get { return infoOneofCaseCase_ == InfoOneofCaseOneofCase.ChessRogueInfo ? (global::EggLink.DanhengServer.Proto.PropChessRogueInfo) infoOneofCase_ : null; }
-      set {
-        infoOneofCase_ = value;
-        infoOneofCaseCase_ = value == null ? InfoOneofCaseOneofCase.None : InfoOneofCaseOneofCase.ChessRogueInfo;
-      }
-    }
-
-    /// <summary>Field number for the "rogue_tourn_door_info" field.</summary>
-    public const int RogueTournDoorInfoFieldNumber = 12;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueTournDoorInfo RogueTournDoorInfo {
-      get { return infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueTournDoorInfo ? (global::EggLink.DanhengServer.Proto.RogueTournDoorInfo) infoOneofCase_ : null; }
-      set {
-        infoOneofCase_ = value;
-        infoOneofCaseCase_ = value == null ? InfoOneofCaseOneofCase.None : InfoOneofCaseOneofCase.RogueTournDoorInfo;
-      }
-    }
-
-    /// <summary>Field number for the "rogue_gamble_machine_info" field.</summary>
-    public const int RogueGambleMachineInfoFieldNumber = 13;
+    /// <summary>Field number for the "RogueGambleMachineInfo" field.</summary>
+    public const int RogueGambleMachineInfoFieldNumber = 10;
+    private global::EggLink.DanhengServer.Proto.RogueGambleMachineInfo rogueGambleMachineInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.RogueGambleMachineInfo RogueGambleMachineInfo {
-      get { return infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueGambleMachineInfo ? (global::EggLink.DanhengServer.Proto.RogueGambleMachineInfo) infoOneofCase_ : null; }
+      get { return rogueGambleMachineInfo_; }
       set {
-        infoOneofCase_ = value;
-        infoOneofCaseCase_ = value == null ? InfoOneofCaseOneofCase.None : InfoOneofCaseOneofCase.RogueGambleMachineInfo;
+        rogueGambleMachineInfo_ = value;
       }
     }
 
-    /// <summary>Field number for the "rogue_curse_chest_info" field.</summary>
-    public const int RogueCurseChestInfoFieldNumber = 14;
+    /// <summary>Field number for the "RogueCurseChestInfo" field.</summary>
+    public const int RogueCurseChestInfoFieldNumber = 8;
+    private global::EggLink.DanhengServer.Proto.RogueCurseChestInfo rogueCurseChestInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.RogueCurseChestInfo RogueCurseChestInfo {
-      get { return infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueCurseChestInfo ? (global::EggLink.DanhengServer.Proto.RogueCurseChestInfo) infoOneofCase_ : null; }
+      get { return rogueCurseChestInfo_; }
       set {
-        infoOneofCase_ = value;
-        infoOneofCaseCase_ = value == null ? InfoOneofCaseOneofCase.None : InfoOneofCaseOneofCase.RogueCurseChestInfo;
+        rogueCurseChestInfo_ = value;
       }
     }
 
-    private object infoOneofCase_;
-    /// <summary>Enum of possible cases for the "InfoOneofCase" oneof.</summary>
-    public enum InfoOneofCaseOneofCase {
-      None = 0,
-      RogueInfo = 10,
-      AeonInfo = 7,
-      ChessRogueInfo = 8,
-      RogueTournDoorInfo = 12,
-      RogueGambleMachineInfo = 13,
-      RogueCurseChestInfo = 14,
-    }
-    private InfoOneofCaseOneofCase infoOneofCaseCase_ = InfoOneofCaseOneofCase.None;
+    /// <summary>Field number for the "RogueMagicDoorInfo" field.</summary>
+    public const int RogueMagicDoorInfoFieldNumber = 3;
+    private global::EggLink.DanhengServer.Proto.RogueMagicDoorInfo rogueMagicDoorInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InfoOneofCaseOneofCase InfoOneofCaseCase {
-      get { return infoOneofCaseCase_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearInfoOneofCase() {
-      infoOneofCaseCase_ = InfoOneofCaseOneofCase.None;
-      infoOneofCase_ = null;
+    public global::EggLink.DanhengServer.Proto.RogueMagicDoorInfo RogueMagicDoorInfo {
+      get { return rogueMagicDoorInfo_; }
+      set {
+        rogueMagicDoorInfo_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -239,14 +212,14 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(RogueTournWorkbenchInfo, other.RogueTournWorkbenchInfo)) return false;
       if (!object.Equals(RogueInfo, other.RogueInfo)) return false;
       if (!object.Equals(AeonInfo, other.AeonInfo)) return false;
       if (!object.Equals(ChessRogueInfo, other.ChessRogueInfo)) return false;
       if (!object.Equals(RogueTournDoorInfo, other.RogueTournDoorInfo)) return false;
+      if (!object.Equals(RogueTournWorkbenchInfo, other.RogueTournWorkbenchInfo)) return false;
       if (!object.Equals(RogueGambleMachineInfo, other.RogueGambleMachineInfo)) return false;
       if (!object.Equals(RogueCurseChestInfo, other.RogueCurseChestInfo)) return false;
-      if (InfoOneofCaseCase != other.InfoOneofCaseCase) return false;
+      if (!object.Equals(RogueMagicDoorInfo, other.RogueMagicDoorInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -254,14 +227,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (rogueInfo_ != null) hash ^= RogueInfo.GetHashCode();
+      if (aeonInfo_ != null) hash ^= AeonInfo.GetHashCode();
+      if (chessRogueInfo_ != null) hash ^= ChessRogueInfo.GetHashCode();
+      if (rogueTournDoorInfo_ != null) hash ^= RogueTournDoorInfo.GetHashCode();
       if (rogueTournWorkbenchInfo_ != null) hash ^= RogueTournWorkbenchInfo.GetHashCode();
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueInfo) hash ^= RogueInfo.GetHashCode();
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.AeonInfo) hash ^= AeonInfo.GetHashCode();
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.ChessRogueInfo) hash ^= ChessRogueInfo.GetHashCode();
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueTournDoorInfo) hash ^= RogueTournDoorInfo.GetHashCode();
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueGambleMachineInfo) hash ^= RogueGambleMachineInfo.GetHashCode();
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueCurseChestInfo) hash ^= RogueCurseChestInfo.GetHashCode();
-      hash ^= (int) infoOneofCaseCase_;
+      if (rogueGambleMachineInfo_ != null) hash ^= RogueGambleMachineInfo.GetHashCode();
+      if (rogueCurseChestInfo_ != null) hash ^= RogueCurseChestInfo.GetHashCode();
+      if (rogueMagicDoorInfo_ != null) hash ^= RogueMagicDoorInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -280,33 +253,37 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (rogueTournWorkbenchInfo_ != null) {
+      if (aeonInfo_ != null) {
         output.WriteRawTag(18);
-        output.WriteMessage(RogueTournWorkbenchInfo);
-      }
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.AeonInfo) {
-        output.WriteRawTag(58);
         output.WriteMessage(AeonInfo);
       }
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.ChessRogueInfo) {
-        output.WriteRawTag(66);
+      if (rogueMagicDoorInfo_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RogueMagicDoorInfo);
+      }
+      if (rogueTournWorkbenchInfo_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(RogueTournWorkbenchInfo);
+      }
+      if (chessRogueInfo_ != null) {
+        output.WriteRawTag(50);
         output.WriteMessage(ChessRogueInfo);
       }
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueInfo) {
-        output.WriteRawTag(82);
-        output.WriteMessage(RogueInfo);
-      }
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueTournDoorInfo) {
-        output.WriteRawTag(98);
+      if (rogueTournDoorInfo_ != null) {
+        output.WriteRawTag(58);
         output.WriteMessage(RogueTournDoorInfo);
       }
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueGambleMachineInfo) {
-        output.WriteRawTag(106);
+      if (rogueCurseChestInfo_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(RogueCurseChestInfo);
+      }
+      if (rogueGambleMachineInfo_ != null) {
+        output.WriteRawTag(82);
         output.WriteMessage(RogueGambleMachineInfo);
       }
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueCurseChestInfo) {
-        output.WriteRawTag(114);
-        output.WriteMessage(RogueCurseChestInfo);
+      if (rogueInfo_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(RogueInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -318,33 +295,37 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (rogueTournWorkbenchInfo_ != null) {
+      if (aeonInfo_ != null) {
         output.WriteRawTag(18);
-        output.WriteMessage(RogueTournWorkbenchInfo);
-      }
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.AeonInfo) {
-        output.WriteRawTag(58);
         output.WriteMessage(AeonInfo);
       }
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.ChessRogueInfo) {
-        output.WriteRawTag(66);
+      if (rogueMagicDoorInfo_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RogueMagicDoorInfo);
+      }
+      if (rogueTournWorkbenchInfo_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(RogueTournWorkbenchInfo);
+      }
+      if (chessRogueInfo_ != null) {
+        output.WriteRawTag(50);
         output.WriteMessage(ChessRogueInfo);
       }
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueInfo) {
-        output.WriteRawTag(82);
-        output.WriteMessage(RogueInfo);
-      }
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueTournDoorInfo) {
-        output.WriteRawTag(98);
+      if (rogueTournDoorInfo_ != null) {
+        output.WriteRawTag(58);
         output.WriteMessage(RogueTournDoorInfo);
       }
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueGambleMachineInfo) {
-        output.WriteRawTag(106);
+      if (rogueCurseChestInfo_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(RogueCurseChestInfo);
+      }
+      if (rogueGambleMachineInfo_ != null) {
+        output.WriteRawTag(82);
         output.WriteMessage(RogueGambleMachineInfo);
       }
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueCurseChestInfo) {
-        output.WriteRawTag(114);
-        output.WriteMessage(RogueCurseChestInfo);
+      if (rogueInfo_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(RogueInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -356,26 +337,29 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (rogueInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueInfo);
+      }
+      if (aeonInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AeonInfo);
+      }
+      if (chessRogueInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ChessRogueInfo);
+      }
+      if (rogueTournDoorInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueTournDoorInfo);
+      }
       if (rogueTournWorkbenchInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueTournWorkbenchInfo);
       }
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueInfo) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueInfo);
-      }
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.AeonInfo) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AeonInfo);
-      }
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.ChessRogueInfo) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ChessRogueInfo);
-      }
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueTournDoorInfo) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueTournDoorInfo);
-      }
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueGambleMachineInfo) {
+      if (rogueGambleMachineInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueGambleMachineInfo);
       }
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueCurseChestInfo) {
+      if (rogueCurseChestInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueCurseChestInfo);
+      }
+      if (rogueMagicDoorInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueMagicDoorInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -389,51 +373,54 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.rogueInfo_ != null) {
+        if (rogueInfo_ == null) {
+          RogueInfo = new global::EggLink.DanhengServer.Proto.PropRogueInfo();
+        }
+        RogueInfo.MergeFrom(other.RogueInfo);
+      }
+      if (other.aeonInfo_ != null) {
+        if (aeonInfo_ == null) {
+          AeonInfo = new global::EggLink.DanhengServer.Proto.PropAeonInfo();
+        }
+        AeonInfo.MergeFrom(other.AeonInfo);
+      }
+      if (other.chessRogueInfo_ != null) {
+        if (chessRogueInfo_ == null) {
+          ChessRogueInfo = new global::EggLink.DanhengServer.Proto.PropChessRogueInfo();
+        }
+        ChessRogueInfo.MergeFrom(other.ChessRogueInfo);
+      }
+      if (other.rogueTournDoorInfo_ != null) {
+        if (rogueTournDoorInfo_ == null) {
+          RogueTournDoorInfo = new global::EggLink.DanhengServer.Proto.RogueTournDoorInfo();
+        }
+        RogueTournDoorInfo.MergeFrom(other.RogueTournDoorInfo);
+      }
       if (other.rogueTournWorkbenchInfo_ != null) {
         if (rogueTournWorkbenchInfo_ == null) {
           RogueTournWorkbenchInfo = new global::EggLink.DanhengServer.Proto.RogueTournWorkbenchInfo();
         }
         RogueTournWorkbenchInfo.MergeFrom(other.RogueTournWorkbenchInfo);
       }
-      switch (other.InfoOneofCaseCase) {
-        case InfoOneofCaseOneofCase.RogueInfo:
-          if (RogueInfo == null) {
-            RogueInfo = new global::EggLink.DanhengServer.Proto.PropRogueInfo();
-          }
-          RogueInfo.MergeFrom(other.RogueInfo);
-          break;
-        case InfoOneofCaseOneofCase.AeonInfo:
-          if (AeonInfo == null) {
-            AeonInfo = new global::EggLink.DanhengServer.Proto.PropAeonInfo();
-          }
-          AeonInfo.MergeFrom(other.AeonInfo);
-          break;
-        case InfoOneofCaseOneofCase.ChessRogueInfo:
-          if (ChessRogueInfo == null) {
-            ChessRogueInfo = new global::EggLink.DanhengServer.Proto.PropChessRogueInfo();
-          }
-          ChessRogueInfo.MergeFrom(other.ChessRogueInfo);
-          break;
-        case InfoOneofCaseOneofCase.RogueTournDoorInfo:
-          if (RogueTournDoorInfo == null) {
-            RogueTournDoorInfo = new global::EggLink.DanhengServer.Proto.RogueTournDoorInfo();
-          }
-          RogueTournDoorInfo.MergeFrom(other.RogueTournDoorInfo);
-          break;
-        case InfoOneofCaseOneofCase.RogueGambleMachineInfo:
-          if (RogueGambleMachineInfo == null) {
-            RogueGambleMachineInfo = new global::EggLink.DanhengServer.Proto.RogueGambleMachineInfo();
-          }
-          RogueGambleMachineInfo.MergeFrom(other.RogueGambleMachineInfo);
-          break;
-        case InfoOneofCaseOneofCase.RogueCurseChestInfo:
-          if (RogueCurseChestInfo == null) {
-            RogueCurseChestInfo = new global::EggLink.DanhengServer.Proto.RogueCurseChestInfo();
-          }
-          RogueCurseChestInfo.MergeFrom(other.RogueCurseChestInfo);
-          break;
+      if (other.rogueGambleMachineInfo_ != null) {
+        if (rogueGambleMachineInfo_ == null) {
+          RogueGambleMachineInfo = new global::EggLink.DanhengServer.Proto.RogueGambleMachineInfo();
+        }
+        RogueGambleMachineInfo.MergeFrom(other.RogueGambleMachineInfo);
       }
-
+      if (other.rogueCurseChestInfo_ != null) {
+        if (rogueCurseChestInfo_ == null) {
+          RogueCurseChestInfo = new global::EggLink.DanhengServer.Proto.RogueCurseChestInfo();
+        }
+        RogueCurseChestInfo.MergeFrom(other.RogueCurseChestInfo);
+      }
+      if (other.rogueMagicDoorInfo_ != null) {
+        if (rogueMagicDoorInfo_ == null) {
+          RogueMagicDoorInfo = new global::EggLink.DanhengServer.Proto.RogueMagicDoorInfo();
+        }
+        RogueMagicDoorInfo.MergeFrom(other.RogueMagicDoorInfo);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -450,64 +437,59 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 18: {
+            if (aeonInfo_ == null) {
+              AeonInfo = new global::EggLink.DanhengServer.Proto.PropAeonInfo();
+            }
+            input.ReadMessage(AeonInfo);
+            break;
+          }
+          case 26: {
+            if (rogueMagicDoorInfo_ == null) {
+              RogueMagicDoorInfo = new global::EggLink.DanhengServer.Proto.RogueMagicDoorInfo();
+            }
+            input.ReadMessage(RogueMagicDoorInfo);
+            break;
+          }
+          case 34: {
             if (rogueTournWorkbenchInfo_ == null) {
               RogueTournWorkbenchInfo = new global::EggLink.DanhengServer.Proto.RogueTournWorkbenchInfo();
             }
             input.ReadMessage(RogueTournWorkbenchInfo);
             break;
           }
-          case 58: {
-            global::EggLink.DanhengServer.Proto.PropAeonInfo subBuilder = new global::EggLink.DanhengServer.Proto.PropAeonInfo();
-            if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.AeonInfo) {
-              subBuilder.MergeFrom(AeonInfo);
+          case 50: {
+            if (chessRogueInfo_ == null) {
+              ChessRogueInfo = new global::EggLink.DanhengServer.Proto.PropChessRogueInfo();
             }
-            input.ReadMessage(subBuilder);
-            AeonInfo = subBuilder;
+            input.ReadMessage(ChessRogueInfo);
+            break;
+          }
+          case 58: {
+            if (rogueTournDoorInfo_ == null) {
+              RogueTournDoorInfo = new global::EggLink.DanhengServer.Proto.RogueTournDoorInfo();
+            }
+            input.ReadMessage(RogueTournDoorInfo);
             break;
           }
           case 66: {
-            global::EggLink.DanhengServer.Proto.PropChessRogueInfo subBuilder = new global::EggLink.DanhengServer.Proto.PropChessRogueInfo();
-            if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.ChessRogueInfo) {
-              subBuilder.MergeFrom(ChessRogueInfo);
+            if (rogueCurseChestInfo_ == null) {
+              RogueCurseChestInfo = new global::EggLink.DanhengServer.Proto.RogueCurseChestInfo();
             }
-            input.ReadMessage(subBuilder);
-            ChessRogueInfo = subBuilder;
+            input.ReadMessage(RogueCurseChestInfo);
             break;
           }
           case 82: {
-            global::EggLink.DanhengServer.Proto.PropRogueInfo subBuilder = new global::EggLink.DanhengServer.Proto.PropRogueInfo();
-            if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueInfo) {
-              subBuilder.MergeFrom(RogueInfo);
+            if (rogueGambleMachineInfo_ == null) {
+              RogueGambleMachineInfo = new global::EggLink.DanhengServer.Proto.RogueGambleMachineInfo();
             }
-            input.ReadMessage(subBuilder);
-            RogueInfo = subBuilder;
-            break;
-          }
-          case 98: {
-            global::EggLink.DanhengServer.Proto.RogueTournDoorInfo subBuilder = new global::EggLink.DanhengServer.Proto.RogueTournDoorInfo();
-            if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueTournDoorInfo) {
-              subBuilder.MergeFrom(RogueTournDoorInfo);
-            }
-            input.ReadMessage(subBuilder);
-            RogueTournDoorInfo = subBuilder;
+            input.ReadMessage(RogueGambleMachineInfo);
             break;
           }
           case 106: {
-            global::EggLink.DanhengServer.Proto.RogueGambleMachineInfo subBuilder = new global::EggLink.DanhengServer.Proto.RogueGambleMachineInfo();
-            if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueGambleMachineInfo) {
-              subBuilder.MergeFrom(RogueGambleMachineInfo);
+            if (rogueInfo_ == null) {
+              RogueInfo = new global::EggLink.DanhengServer.Proto.PropRogueInfo();
             }
-            input.ReadMessage(subBuilder);
-            RogueGambleMachineInfo = subBuilder;
-            break;
-          }
-          case 114: {
-            global::EggLink.DanhengServer.Proto.RogueCurseChestInfo subBuilder = new global::EggLink.DanhengServer.Proto.RogueCurseChestInfo();
-            if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueCurseChestInfo) {
-              subBuilder.MergeFrom(RogueCurseChestInfo);
-            }
-            input.ReadMessage(subBuilder);
-            RogueCurseChestInfo = subBuilder;
+            input.ReadMessage(RogueInfo);
             break;
           }
         }
@@ -526,64 +508,59 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 18: {
+            if (aeonInfo_ == null) {
+              AeonInfo = new global::EggLink.DanhengServer.Proto.PropAeonInfo();
+            }
+            input.ReadMessage(AeonInfo);
+            break;
+          }
+          case 26: {
+            if (rogueMagicDoorInfo_ == null) {
+              RogueMagicDoorInfo = new global::EggLink.DanhengServer.Proto.RogueMagicDoorInfo();
+            }
+            input.ReadMessage(RogueMagicDoorInfo);
+            break;
+          }
+          case 34: {
             if (rogueTournWorkbenchInfo_ == null) {
               RogueTournWorkbenchInfo = new global::EggLink.DanhengServer.Proto.RogueTournWorkbenchInfo();
             }
             input.ReadMessage(RogueTournWorkbenchInfo);
             break;
           }
-          case 58: {
-            global::EggLink.DanhengServer.Proto.PropAeonInfo subBuilder = new global::EggLink.DanhengServer.Proto.PropAeonInfo();
-            if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.AeonInfo) {
-              subBuilder.MergeFrom(AeonInfo);
+          case 50: {
+            if (chessRogueInfo_ == null) {
+              ChessRogueInfo = new global::EggLink.DanhengServer.Proto.PropChessRogueInfo();
             }
-            input.ReadMessage(subBuilder);
-            AeonInfo = subBuilder;
+            input.ReadMessage(ChessRogueInfo);
+            break;
+          }
+          case 58: {
+            if (rogueTournDoorInfo_ == null) {
+              RogueTournDoorInfo = new global::EggLink.DanhengServer.Proto.RogueTournDoorInfo();
+            }
+            input.ReadMessage(RogueTournDoorInfo);
             break;
           }
           case 66: {
-            global::EggLink.DanhengServer.Proto.PropChessRogueInfo subBuilder = new global::EggLink.DanhengServer.Proto.PropChessRogueInfo();
-            if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.ChessRogueInfo) {
-              subBuilder.MergeFrom(ChessRogueInfo);
+            if (rogueCurseChestInfo_ == null) {
+              RogueCurseChestInfo = new global::EggLink.DanhengServer.Proto.RogueCurseChestInfo();
             }
-            input.ReadMessage(subBuilder);
-            ChessRogueInfo = subBuilder;
+            input.ReadMessage(RogueCurseChestInfo);
             break;
           }
           case 82: {
-            global::EggLink.DanhengServer.Proto.PropRogueInfo subBuilder = new global::EggLink.DanhengServer.Proto.PropRogueInfo();
-            if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueInfo) {
-              subBuilder.MergeFrom(RogueInfo);
+            if (rogueGambleMachineInfo_ == null) {
+              RogueGambleMachineInfo = new global::EggLink.DanhengServer.Proto.RogueGambleMachineInfo();
             }
-            input.ReadMessage(subBuilder);
-            RogueInfo = subBuilder;
-            break;
-          }
-          case 98: {
-            global::EggLink.DanhengServer.Proto.RogueTournDoorInfo subBuilder = new global::EggLink.DanhengServer.Proto.RogueTournDoorInfo();
-            if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueTournDoorInfo) {
-              subBuilder.MergeFrom(RogueTournDoorInfo);
-            }
-            input.ReadMessage(subBuilder);
-            RogueTournDoorInfo = subBuilder;
+            input.ReadMessage(RogueGambleMachineInfo);
             break;
           }
           case 106: {
-            global::EggLink.DanhengServer.Proto.RogueGambleMachineInfo subBuilder = new global::EggLink.DanhengServer.Proto.RogueGambleMachineInfo();
-            if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueGambleMachineInfo) {
-              subBuilder.MergeFrom(RogueGambleMachineInfo);
+            if (rogueInfo_ == null) {
+              RogueInfo = new global::EggLink.DanhengServer.Proto.PropRogueInfo();
             }
-            input.ReadMessage(subBuilder);
-            RogueGambleMachineInfo = subBuilder;
-            break;
-          }
-          case 114: {
-            global::EggLink.DanhengServer.Proto.RogueCurseChestInfo subBuilder = new global::EggLink.DanhengServer.Proto.RogueCurseChestInfo();
-            if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.RogueCurseChestInfo) {
-              subBuilder.MergeFrom(RogueCurseChestInfo);
-            }
-            input.ReadMessage(subBuilder);
-            RogueCurseChestInfo = subBuilder;
+            input.ReadMessage(RogueInfo);
             break;
           }
         }

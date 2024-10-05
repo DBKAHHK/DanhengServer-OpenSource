@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static RogueTournFormulaInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtSb2d1ZVRvdXJuRm9ybXVsYUluZm8ucHJvdG8aFkZvcm11bGFUeXBlVmFs",
-            "dWUucHJvdG8aEUZvcm11bGFJbmZvLnByb3RvIm8KFVJvZ3VlVG91cm5Gb3Jt",
-            "dWxhSW5mbxInChFnYW1lX2Zvcm11bGFfaW5mbxgBIAMoCzIMLkZvcm11bGFJ",
-            "bmZvEi0KEmZvcm11bGFfdHlwZV92YWx1ZRgDIAEoCzIRLkZvcm11bGFUeXBl",
-            "VmFsdWVCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChtSb2d1ZVRvdXJuRm9ybXVsYUluZm8ucHJvdG8aEUZvcm11bGFJbmZvLnBy",
+            "b3RvGhZGb3JtdWxhVHlwZVZhbHVlLnByb3RvIm8KFVJvZ3VlVG91cm5Gb3Jt",
+            "dWxhSW5mbxItChJmb3JtdWxhX3R5cGVfdmFsdWUYAiABKAsyES5Gb3JtdWxh",
+            "VHlwZVZhbHVlEicKEWdhbWVfZm9ybXVsYV9pbmZvGA0gAygLMgwuRm9ybXVs",
+            "YUluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FormulaTypeValueReflection.Descriptor, global::EggLink.DanhengServer.Proto.FormulaInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FormulaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.FormulaTypeValueReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo), global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo.Parser, new[]{ "GameFormulaInfo", "FormulaTypeValue" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo), global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo.Parser, new[]{ "FormulaTypeValue", "GameFormulaInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournFormulaInfo(RogueTournFormulaInfo other) : this() {
-      gameFormulaInfo_ = other.gameFormulaInfo_.Clone();
       formulaTypeValue_ = other.formulaTypeValue_ != null ? other.formulaTypeValue_.Clone() : null;
+      gameFormulaInfo_ = other.gameFormulaInfo_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,19 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournFormulaInfo(this);
     }
 
-    /// <summary>Field number for the "game_formula_info" field.</summary>
-    public const int GameFormulaInfoFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.FormulaInfo> _repeated_gameFormulaInfo_codec
-        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.FormulaInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FormulaInfo> gameFormulaInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FormulaInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FormulaInfo> GameFormulaInfo {
-      get { return gameFormulaInfo_; }
-    }
-
     /// <summary>Field number for the "formula_type_value" field.</summary>
-    public const int FormulaTypeValueFieldNumber = 3;
+    public const int FormulaTypeValueFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.FormulaTypeValue formulaTypeValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,6 +95,17 @@ namespace EggLink.DanhengServer.Proto {
       set {
         formulaTypeValue_ = value;
       }
+    }
+
+    /// <summary>Field number for the "game_formula_info" field.</summary>
+    public const int GameFormulaInfoFieldNumber = 13;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.FormulaInfo> _repeated_gameFormulaInfo_codec
+        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.FormulaInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FormulaInfo> gameFormulaInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FormulaInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FormulaInfo> GameFormulaInfo {
+      get { return gameFormulaInfo_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!gameFormulaInfo_.Equals(other.gameFormulaInfo_)) return false;
       if (!object.Equals(FormulaTypeValue, other.FormulaTypeValue)) return false;
+      if(!gameFormulaInfo_.Equals(other.gameFormulaInfo_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= gameFormulaInfo_.GetHashCode();
       if (formulaTypeValue_ != null) hash ^= FormulaTypeValue.GetHashCode();
+      hash ^= gameFormulaInfo_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      gameFormulaInfo_.WriteTo(output, _repeated_gameFormulaInfo_codec);
       if (formulaTypeValue_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteMessage(FormulaTypeValue);
       }
+      gameFormulaInfo_.WriteTo(output, _repeated_gameFormulaInfo_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      gameFormulaInfo_.WriteTo(ref output, _repeated_gameFormulaInfo_codec);
       if (formulaTypeValue_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteMessage(FormulaTypeValue);
       }
+      gameFormulaInfo_.WriteTo(ref output, _repeated_gameFormulaInfo_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -182,10 +182,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += gameFormulaInfo_.CalculateSize(_repeated_gameFormulaInfo_codec);
       if (formulaTypeValue_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(FormulaTypeValue);
       }
+      size += gameFormulaInfo_.CalculateSize(_repeated_gameFormulaInfo_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -198,13 +198,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      gameFormulaInfo_.Add(other.gameFormulaInfo_);
       if (other.formulaTypeValue_ != null) {
         if (formulaTypeValue_ == null) {
           FormulaTypeValue = new global::EggLink.DanhengServer.Proto.FormulaTypeValue();
         }
         FormulaTypeValue.MergeFrom(other.FormulaTypeValue);
       }
+      gameFormulaInfo_.Add(other.gameFormulaInfo_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -220,15 +220,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            gameFormulaInfo_.AddEntriesFrom(input, _repeated_gameFormulaInfo_codec);
-            break;
-          }
-          case 26: {
+          case 18: {
             if (formulaTypeValue_ == null) {
               FormulaTypeValue = new global::EggLink.DanhengServer.Proto.FormulaTypeValue();
             }
             input.ReadMessage(FormulaTypeValue);
+            break;
+          }
+          case 106: {
+            gameFormulaInfo_.AddEntriesFrom(input, _repeated_gameFormulaInfo_codec);
             break;
           }
         }
@@ -246,15 +246,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            gameFormulaInfo_.AddEntriesFrom(ref input, _repeated_gameFormulaInfo_codec);
-            break;
-          }
-          case 26: {
+          case 18: {
             if (formulaTypeValue_ == null) {
               FormulaTypeValue = new global::EggLink.DanhengServer.Proto.FormulaTypeValue();
             }
             input.ReadMessage(FormulaTypeValue);
+            break;
+          }
+          case 106: {
+            gameFormulaInfo_.AddEntriesFrom(ref input, _repeated_gameFormulaInfo_codec);
             break;
           }
         }

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJSb2d1ZVRvdXJuUmVuYW1lQXJjaGl2ZUNzUmVxLnByb3RvIj8KHFJvZ3Vl",
-            "VG91cm5SZW5hbWVBcmNoaXZlQ3NSZXESDAoEbmFtZRgPIAEoCRIRCgltYXhf",
+            "VG91cm5SZW5hbWVBcmNoaXZlQ3NSZXESDAoEbmFtZRgJIAEoCRIRCgltYXhf",
             "dGltZXMYAiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 15;
+    public const int NameFieldNumber = 9;
     private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(MaxTimes);
       }
       if (Name.Length != 0) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(74);
         output.WriteString(Name);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(MaxTimes);
       }
       if (Name.Length != 0) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(74);
         output.WriteString(Name);
       }
       if (_unknownFields != null) {
@@ -231,7 +231,7 @@ namespace EggLink.DanhengServer.Proto {
             MaxTimes = input.ReadUInt32();
             break;
           }
-          case 122: {
+          case 74: {
             Name = input.ReadString();
             break;
           }
@@ -254,7 +254,7 @@ namespace EggLink.DanhengServer.Proto {
             MaxTimes = input.ReadUInt32();
             break;
           }
-          case 122: {
+          case 74: {
             Name = input.ReadString();
             break;
           }

@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch1Sb2d1ZVRvdXJuV29ya2JlbmNoSW5mby5wcm90bxoZV29ya2JlbmNoRnVu",
             "Y0lkSW5mby5wcm90byJiChdSb2d1ZVRvdXJuV29ya2JlbmNoSW5mbxIUCgx3",
-            "b3JrYmVuY2hfaWQYDSABKA0SMQoTd29ya2JlbmNoX2Z1bmNfbGlzdBgBIAMo",
+            "b3JrYmVuY2hfaWQYDyABKA0SMQoTd29ya2JlbmNoX2Z1bmNfbGlzdBgGIAMo",
             "CzIULldvcmtiZW5jaEZ1bmNJZEluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "workbench_id" field.</summary>
-    public const int WorkbenchIdFieldNumber = 13;
+    public const int WorkbenchIdFieldNumber = 15;
     private uint workbenchId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "workbench_func_list" field.</summary>
-    public const int WorkbenchFuncListFieldNumber = 1;
+    public const int WorkbenchFuncListFieldNumber = 6;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.WorkbenchFuncIdInfo> _repeated_workbenchFuncList_codec
-        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.WorkbenchFuncIdInfo.Parser);
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.WorkbenchFuncIdInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.WorkbenchFuncIdInfo> workbenchFuncList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.WorkbenchFuncIdInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -154,7 +154,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       workbenchFuncList_.WriteTo(output, _repeated_workbenchFuncList_codec);
       if (WorkbenchId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(120);
         output.WriteUInt32(WorkbenchId);
       }
       if (_unknownFields != null) {
@@ -169,7 +169,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       workbenchFuncList_.WriteTo(ref output, _repeated_workbenchFuncList_codec);
       if (WorkbenchId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(120);
         output.WriteUInt32(WorkbenchId);
       }
       if (_unknownFields != null) {
@@ -217,11 +217,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 50: {
             workbenchFuncList_.AddEntriesFrom(input, _repeated_workbenchFuncList_codec);
             break;
           }
-          case 104: {
+          case 120: {
             WorkbenchId = input.ReadUInt32();
             break;
           }
@@ -240,11 +240,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 50: {
             workbenchFuncList_.AddEntriesFrom(ref input, _repeated_workbenchFuncList_codec);
             break;
           }
-          case 104: {
+          case 120: {
             WorkbenchId = input.ReadUInt32();
             break;
           }

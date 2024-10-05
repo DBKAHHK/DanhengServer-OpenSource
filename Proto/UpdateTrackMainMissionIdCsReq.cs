@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static UpdateTrackMainMissionIdCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNVcGRhdGVUcmFja01haW5NaXNzaW9uSWRDc1JlcS5wcm90bxocVHJhY2tN",
-            "YWluTWlzc2lvblVwZGF0ZS5wcm90byJ8Ch1VcGRhdGVUcmFja01haW5NaXNz",
-            "aW9uSWRDc1JlcRIYChB0cmFja19taXNzaW9uX2lkGAcgASgNEhMKC0dMSk5H",
-            "TEdHSENIGAwgASgNEiwKC0tLR0JQQUdBTU5NGAQgASgOMhcuVHJhY2tNYWlu",
-            "TWlzc2lvblVwZGF0ZUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
-            "YgZwcm90bzM="));
+            "CiNVcGRhdGVUcmFja01haW5NaXNzaW9uSWRDc1JlcS5wcm90bxokVHJhY2tN",
+            "YWluTWlzc2lvblVwZGF0ZVJlYXNvbklkLnByb3RvIoQBCh1VcGRhdGVUcmFj",
+            "a01haW5NaXNzaW9uSWRDc1JlcRI0CgtKS0pOTUtNSURCUBgEIAEoDjIfLlRy",
+            "YWNrTWFpbk1pc3Npb25VcGRhdGVSZWFzb25JZBITCgtJTENDQkNPSkVPSBgH",
+            "IAEoDRIYChB0cmFja19taXNzaW9uX2lkGA4gASgNQh6qAhtFZ2dMaW5rLkRh",
+            "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonIdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdateTrackMainMissionIdCsReq), global::EggLink.DanhengServer.Proto.UpdateTrackMainMissionIdCsReq.Parser, new[]{ "TrackMissionId", "GLJNGLGGHCH", "KKGBPAGAMNM" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdateTrackMainMissionIdCsReq), global::EggLink.DanhengServer.Proto.UpdateTrackMainMissionIdCsReq.Parser, new[]{ "JKJNMKMIDBP", "ILCCBCOJEOH", "TrackMissionId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,9 +75,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateTrackMainMissionIdCsReq(UpdateTrackMainMissionIdCsReq other) : this() {
+      jKJNMKMIDBP_ = other.jKJNMKMIDBP_;
+      iLCCBCOJEOH_ = other.iLCCBCOJEOH_;
       trackMissionId_ = other.trackMissionId_;
-      gLJNGLGGHCH_ = other.gLJNGLGGHCH_;
-      kKGBPAGAMNM_ = other.kKGBPAGAMNM_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,8 +87,32 @@ namespace EggLink.DanhengServer.Proto {
       return new UpdateTrackMainMissionIdCsReq(this);
     }
 
+    /// <summary>Field number for the "JKJNMKMIDBP" field.</summary>
+    public const int JKJNMKMIDBPFieldNumber = 4;
+    private global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonId jKJNMKMIDBP_ = global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonId.TrackMainMissionUpdateNone;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonId JKJNMKMIDBP {
+      get { return jKJNMKMIDBP_; }
+      set {
+        jKJNMKMIDBP_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ILCCBCOJEOH" field.</summary>
+    public const int ILCCBCOJEOHFieldNumber = 7;
+    private uint iLCCBCOJEOH_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ILCCBCOJEOH {
+      get { return iLCCBCOJEOH_; }
+      set {
+        iLCCBCOJEOH_ = value;
+      }
+    }
+
     /// <summary>Field number for the "track_mission_id" field.</summary>
-    public const int TrackMissionIdFieldNumber = 7;
+    public const int TrackMissionIdFieldNumber = 14;
     private uint trackMissionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,30 +120,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return trackMissionId_; }
       set {
         trackMissionId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "GLJNGLGGHCH" field.</summary>
-    public const int GLJNGLGGHCHFieldNumber = 12;
-    private uint gLJNGLGGHCH_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GLJNGLGGHCH {
-      get { return gLJNGLGGHCH_; }
-      set {
-        gLJNGLGGHCH_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "KKGBPAGAMNM" field.</summary>
-    public const int KKGBPAGAMNMFieldNumber = 4;
-    private global::EggLink.DanhengServer.Proto.TrackMainMissionUpdate kKGBPAGAMNM_ = global::EggLink.DanhengServer.Proto.TrackMainMissionUpdate.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.TrackMainMissionUpdate KKGBPAGAMNM {
-      get { return kKGBPAGAMNM_; }
-      set {
-        kKGBPAGAMNM_ = value;
       }
     }
 
@@ -138,9 +138,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (JKJNMKMIDBP != other.JKJNMKMIDBP) return false;
+      if (ILCCBCOJEOH != other.ILCCBCOJEOH) return false;
       if (TrackMissionId != other.TrackMissionId) return false;
-      if (GLJNGLGGHCH != other.GLJNGLGGHCH) return false;
-      if (KKGBPAGAMNM != other.KKGBPAGAMNM) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -148,9 +148,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (JKJNMKMIDBP != global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonId.TrackMainMissionUpdateNone) hash ^= JKJNMKMIDBP.GetHashCode();
+      if (ILCCBCOJEOH != 0) hash ^= ILCCBCOJEOH.GetHashCode();
       if (TrackMissionId != 0) hash ^= TrackMissionId.GetHashCode();
-      if (GLJNGLGGHCH != 0) hash ^= GLJNGLGGHCH.GetHashCode();
-      if (KKGBPAGAMNM != global::EggLink.DanhengServer.Proto.TrackMainMissionUpdate.None) hash ^= KKGBPAGAMNM.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -169,17 +169,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (KKGBPAGAMNM != global::EggLink.DanhengServer.Proto.TrackMainMissionUpdate.None) {
+      if (JKJNMKMIDBP != global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonId.TrackMainMissionUpdateNone) {
         output.WriteRawTag(32);
-        output.WriteEnum((int) KKGBPAGAMNM);
+        output.WriteEnum((int) JKJNMKMIDBP);
+      }
+      if (ILCCBCOJEOH != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(ILCCBCOJEOH);
       }
       if (TrackMissionId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(112);
         output.WriteUInt32(TrackMissionId);
-      }
-      if (GLJNGLGGHCH != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(GLJNGLGGHCH);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -191,17 +191,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (KKGBPAGAMNM != global::EggLink.DanhengServer.Proto.TrackMainMissionUpdate.None) {
+      if (JKJNMKMIDBP != global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonId.TrackMainMissionUpdateNone) {
         output.WriteRawTag(32);
-        output.WriteEnum((int) KKGBPAGAMNM);
+        output.WriteEnum((int) JKJNMKMIDBP);
+      }
+      if (ILCCBCOJEOH != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(ILCCBCOJEOH);
       }
       if (TrackMissionId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(112);
         output.WriteUInt32(TrackMissionId);
-      }
-      if (GLJNGLGGHCH != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(GLJNGLGGHCH);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -213,14 +213,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (JKJNMKMIDBP != global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonId.TrackMainMissionUpdateNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) JKJNMKMIDBP);
+      }
+      if (ILCCBCOJEOH != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ILCCBCOJEOH);
+      }
       if (TrackMissionId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TrackMissionId);
-      }
-      if (GLJNGLGGHCH != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GLJNGLGGHCH);
-      }
-      if (KKGBPAGAMNM != global::EggLink.DanhengServer.Proto.TrackMainMissionUpdate.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) KKGBPAGAMNM);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -234,14 +234,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.JKJNMKMIDBP != global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonId.TrackMainMissionUpdateNone) {
+        JKJNMKMIDBP = other.JKJNMKMIDBP;
+      }
+      if (other.ILCCBCOJEOH != 0) {
+        ILCCBCOJEOH = other.ILCCBCOJEOH;
+      }
       if (other.TrackMissionId != 0) {
         TrackMissionId = other.TrackMissionId;
-      }
-      if (other.GLJNGLGGHCH != 0) {
-        GLJNGLGGHCH = other.GLJNGLGGHCH;
-      }
-      if (other.KKGBPAGAMNM != global::EggLink.DanhengServer.Proto.TrackMainMissionUpdate.None) {
-        KKGBPAGAMNM = other.KKGBPAGAMNM;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -259,15 +259,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 32: {
-            KKGBPAGAMNM = (global::EggLink.DanhengServer.Proto.TrackMainMissionUpdate) input.ReadEnum();
+            JKJNMKMIDBP = (global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonId) input.ReadEnum();
             break;
           }
           case 56: {
-            TrackMissionId = input.ReadUInt32();
+            ILCCBCOJEOH = input.ReadUInt32();
             break;
           }
-          case 96: {
-            GLJNGLGGHCH = input.ReadUInt32();
+          case 112: {
+            TrackMissionId = input.ReadUInt32();
             break;
           }
         }
@@ -286,15 +286,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 32: {
-            KKGBPAGAMNM = (global::EggLink.DanhengServer.Proto.TrackMainMissionUpdate) input.ReadEnum();
+            JKJNMKMIDBP = (global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonId) input.ReadEnum();
             break;
           }
           case 56: {
-            TrackMissionId = input.ReadUInt32();
+            ILCCBCOJEOH = input.ReadUInt32();
             break;
           }
-          case 96: {
-            GLJNGLGGHCH = input.ReadUInt32();
+          case 112: {
+            TrackMissionId = input.ReadUInt32();
             break;
           }
         }

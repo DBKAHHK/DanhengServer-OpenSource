@@ -26,14 +26,14 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChtTdGFydFdvbGZCcm9HYW1lQ3NSZXEucHJvdG8aFEdyb3VwU3RhdGVJbmZv",
             "LnByb3RvGhBNb3Rpb25JbmZvLnByb3RvIoABChVTdGFydFdvbGZCcm9HYW1l",
-            "Q3NSZXESKQoQZ3JvdXBfc3RhdGVfaW5mbxgKIAEoCzIPLkdyb3VwU3RhdGVJ",
-            "bmZvEhsKBm1vdGlvbhgEIAEoCzILLk1vdGlvbkluZm8SEwoLUEVDQUdBTkVL",
-            "R0kYAyABKAgSCgoCaWQYASABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "Q3NSZXESGwoGbW90aW9uGAogASgLMgsuTW90aW9uSW5mbxIKCgJpZBgEIAEo",
+            "DRIpChBncm91cF9zdGF0ZV9pbmZvGAUgASgLMg8uR3JvdXBTdGF0ZUluZm8S",
+            "EwoLSk1BUEVQR0xFTk4YCCABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GroupStateInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StartWolfBroGameCsReq), global::EggLink.DanhengServer.Proto.StartWolfBroGameCsReq.Parser, new[]{ "GroupStateInfo", "Motion", "PECAGANEKGI", "Id" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StartWolfBroGameCsReq), global::EggLink.DanhengServer.Proto.StartWolfBroGameCsReq.Parser, new[]{ "Motion", "Id", "GroupStateInfo", "JMAPEPGLENN" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,10 +75,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StartWolfBroGameCsReq(StartWolfBroGameCsReq other) : this() {
-      groupStateInfo_ = other.groupStateInfo_ != null ? other.groupStateInfo_.Clone() : null;
       motion_ = other.motion_ != null ? other.motion_.Clone() : null;
-      pECAGANEKGI_ = other.pECAGANEKGI_;
       id_ = other.id_;
+      groupStateInfo_ = other.groupStateInfo_ != null ? other.groupStateInfo_.Clone() : null;
+      jMAPEPGLENN_ = other.jMAPEPGLENN_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,20 +88,8 @@ namespace EggLink.DanhengServer.Proto {
       return new StartWolfBroGameCsReq(this);
     }
 
-    /// <summary>Field number for the "group_state_info" field.</summary>
-    public const int GroupStateInfoFieldNumber = 10;
-    private global::EggLink.DanhengServer.Proto.GroupStateInfo groupStateInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.GroupStateInfo GroupStateInfo {
-      get { return groupStateInfo_; }
-      set {
-        groupStateInfo_ = value;
-      }
-    }
-
     /// <summary>Field number for the "motion" field.</summary>
-    public const int MotionFieldNumber = 4;
+    public const int MotionFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.MotionInfo motion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,20 +100,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "PECAGANEKGI" field.</summary>
-    public const int PECAGANEKGIFieldNumber = 3;
-    private bool pECAGANEKGI_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool PECAGANEKGI {
-      get { return pECAGANEKGI_; }
-      set {
-        pECAGANEKGI_ = value;
-      }
-    }
-
     /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
+    public const int IdFieldNumber = 4;
     private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -133,6 +109,30 @@ namespace EggLink.DanhengServer.Proto {
       get { return id_; }
       set {
         id_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "group_state_info" field.</summary>
+    public const int GroupStateInfoFieldNumber = 5;
+    private global::EggLink.DanhengServer.Proto.GroupStateInfo groupStateInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.GroupStateInfo GroupStateInfo {
+      get { return groupStateInfo_; }
+      set {
+        groupStateInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "JMAPEPGLENN" field.</summary>
+    public const int JMAPEPGLENNFieldNumber = 8;
+    private bool jMAPEPGLENN_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool JMAPEPGLENN {
+      get { return jMAPEPGLENN_; }
+      set {
+        jMAPEPGLENN_ = value;
       }
     }
 
@@ -151,10 +151,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(GroupStateInfo, other.GroupStateInfo)) return false;
       if (!object.Equals(Motion, other.Motion)) return false;
-      if (PECAGANEKGI != other.PECAGANEKGI) return false;
       if (Id != other.Id) return false;
+      if (!object.Equals(GroupStateInfo, other.GroupStateInfo)) return false;
+      if (JMAPEPGLENN != other.JMAPEPGLENN) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -162,10 +162,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (groupStateInfo_ != null) hash ^= GroupStateInfo.GetHashCode();
       if (motion_ != null) hash ^= Motion.GetHashCode();
-      if (PECAGANEKGI != false) hash ^= PECAGANEKGI.GetHashCode();
       if (Id != 0) hash ^= Id.GetHashCode();
+      if (groupStateInfo_ != null) hash ^= GroupStateInfo.GetHashCode();
+      if (JMAPEPGLENN != false) hash ^= JMAPEPGLENN.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -185,20 +185,20 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Id != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(32);
         output.WriteUInt32(Id);
       }
-      if (PECAGANEKGI != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(PECAGANEKGI);
+      if (groupStateInfo_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(GroupStateInfo);
+      }
+      if (JMAPEPGLENN != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(JMAPEPGLENN);
       }
       if (motion_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(Motion);
-      }
-      if (groupStateInfo_ != null) {
         output.WriteRawTag(82);
-        output.WriteMessage(GroupStateInfo);
+        output.WriteMessage(Motion);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -211,20 +211,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Id != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(32);
         output.WriteUInt32(Id);
       }
-      if (PECAGANEKGI != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(PECAGANEKGI);
+      if (groupStateInfo_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(GroupStateInfo);
+      }
+      if (JMAPEPGLENN != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(JMAPEPGLENN);
       }
       if (motion_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(Motion);
-      }
-      if (groupStateInfo_ != null) {
         output.WriteRawTag(82);
-        output.WriteMessage(GroupStateInfo);
+        output.WriteMessage(Motion);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -236,17 +236,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (groupStateInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GroupStateInfo);
-      }
       if (motion_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Motion);
       }
-      if (PECAGANEKGI != false) {
-        size += 1 + 1;
-      }
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
+      }
+      if (groupStateInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GroupStateInfo);
+      }
+      if (JMAPEPGLENN != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -260,23 +260,23 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.groupStateInfo_ != null) {
-        if (groupStateInfo_ == null) {
-          GroupStateInfo = new global::EggLink.DanhengServer.Proto.GroupStateInfo();
-        }
-        GroupStateInfo.MergeFrom(other.GroupStateInfo);
-      }
       if (other.motion_ != null) {
         if (motion_ == null) {
           Motion = new global::EggLink.DanhengServer.Proto.MotionInfo();
         }
         Motion.MergeFrom(other.Motion);
       }
-      if (other.PECAGANEKGI != false) {
-        PECAGANEKGI = other.PECAGANEKGI;
-      }
       if (other.Id != 0) {
         Id = other.Id;
+      }
+      if (other.groupStateInfo_ != null) {
+        if (groupStateInfo_ == null) {
+          GroupStateInfo = new global::EggLink.DanhengServer.Proto.GroupStateInfo();
+        }
+        GroupStateInfo.MergeFrom(other.GroupStateInfo);
+      }
+      if (other.JMAPEPGLENN != false) {
+        JMAPEPGLENN = other.JMAPEPGLENN;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -293,26 +293,26 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 32: {
             Id = input.ReadUInt32();
             break;
           }
-          case 24: {
-            PECAGANEKGI = input.ReadBool();
-            break;
-          }
-          case 34: {
-            if (motion_ == null) {
-              Motion = new global::EggLink.DanhengServer.Proto.MotionInfo();
-            }
-            input.ReadMessage(Motion);
-            break;
-          }
-          case 82: {
+          case 42: {
             if (groupStateInfo_ == null) {
               GroupStateInfo = new global::EggLink.DanhengServer.Proto.GroupStateInfo();
             }
             input.ReadMessage(GroupStateInfo);
+            break;
+          }
+          case 64: {
+            JMAPEPGLENN = input.ReadBool();
+            break;
+          }
+          case 82: {
+            if (motion_ == null) {
+              Motion = new global::EggLink.DanhengServer.Proto.MotionInfo();
+            }
+            input.ReadMessage(Motion);
             break;
           }
         }
@@ -330,26 +330,26 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 32: {
             Id = input.ReadUInt32();
             break;
           }
-          case 24: {
-            PECAGANEKGI = input.ReadBool();
-            break;
-          }
-          case 34: {
-            if (motion_ == null) {
-              Motion = new global::EggLink.DanhengServer.Proto.MotionInfo();
-            }
-            input.ReadMessage(Motion);
-            break;
-          }
-          case 82: {
+          case 42: {
             if (groupStateInfo_ == null) {
               GroupStateInfo = new global::EggLink.DanhengServer.Proto.GroupStateInfo();
             }
             input.ReadMessage(GroupStateInfo);
+            break;
+          }
+          case 64: {
+            JMAPEPGLENN = input.ReadBool();
+            break;
+          }
+          case 82: {
+            if (motion_ == null) {
+              Motion = new global::EggLink.DanhengServer.Proto.MotionInfo();
+            }
+            input.ReadMessage(Motion);
             break;
           }
         }

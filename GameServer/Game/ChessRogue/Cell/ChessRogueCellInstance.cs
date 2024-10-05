@@ -167,13 +167,13 @@ public class ChessRogueCellInstance
         var info = new ChessRogueCell
         {
             CellStatus = CellStatus,
-            PosY = (uint)PosY,
+            //PosY = (uint)PosY,
             Id = (uint)GetCellId(),
-            BlockType = (uint)BlockType,
+            //BlockType = (uint)BlockType,
             IsUnlock = true,
             RoomId = (uint)RoomId,
-            PLOEJLHMONC = true,
-            PosX = (uint)GetRow()
+            //PLOEJLHMONC = true,
+            //PosX = (uint)GetRow()
         };
 
         if (CellAdvanceInfo.Count <= 0) return info;
@@ -182,7 +182,7 @@ public class ChessRogueCellInstance
             {
                 FinalBossInfo = new CellFinalMonsterInfo
                 {
-                    BossInfo = new CellMonsterInfo
+                    CellBossInfo = new CellMonsterInfo
                     {
                         CellMonsterList = { CellAdvanceInfo.Select(x => x.ToProto()).ToList() },
                         SelectBossId = (uint)SelectMonsterId
@@ -196,7 +196,7 @@ public class ChessRogueCellInstance
         else
             info.StageInfo = new CellAdvanceInfo
             {
-                BossInfo = new CellMonsterInfo
+                CellBossInfo = new CellMonsterInfo
                 {
                     CellMonsterList = { CellAdvanceInfo.Select(x => x.ToProto()).ToList() },
                     SelectBossId = (uint)SelectMonsterId

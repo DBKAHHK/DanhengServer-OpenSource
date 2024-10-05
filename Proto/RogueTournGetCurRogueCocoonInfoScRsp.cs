@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CipSb2d1ZVRvdXJuR2V0Q3VyUm9ndWVDb2Nvb25JbmZvU2NSc3AucHJvdG8i",
-            "ewokUm9ndWVUb3VybkdldEN1clJvZ3VlQ29jb29uSW5mb1NjUnNwEhgKEGRp",
-            "ZmZpY3VsdHlfbGV2ZWwYBSABKA0SEwoLSEZEQkJBSkNCQUEYASABKA0SDwoH",
-            "cmV0Y29kZRgEIAEoDRITCgtJSUVEUEdPSkdDRBgIIAEoDUIeqgIbRWdnTGlu",
+            "ewokUm9ndWVUb3VybkdldEN1clJvZ3VlQ29jb29uSW5mb1NjUnNwEhMKC0RL",
+            "QkhCQkxFUE9QGA4gASgNEg8KB3JldGNvZGUYBiABKA0SEwoLTkVFQ0JCREtJ",
+            "TkIYCyABKA0SGAoQZGlmZmljdWx0eV9sZXZlbBgIIAEoDUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournGetCurRogueCocoonInfoScRsp), global::EggLink.DanhengServer.Proto.RogueTournGetCurRogueCocoonInfoScRsp.Parser, new[]{ "DifficultyLevel", "HFDBBAJCBAA", "Retcode", "IIEDPGOJGCD" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournGetCurRogueCocoonInfoScRsp), global::EggLink.DanhengServer.Proto.RogueTournGetCurRogueCocoonInfoScRsp.Parser, new[]{ "DKBHBBLEPOP", "Retcode", "NEECBBDKINB", "DifficultyLevel" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournGetCurRogueCocoonInfoScRsp(RogueTournGetCurRogueCocoonInfoScRsp other) : this() {
-      difficultyLevel_ = other.difficultyLevel_;
-      hFDBBAJCBAA_ = other.hFDBBAJCBAA_;
+      dKBHBBLEPOP_ = other.dKBHBBLEPOP_;
       retcode_ = other.retcode_;
-      iIEDPGOJGCD_ = other.iIEDPGOJGCD_;
+      nEECBBDKINB_ = other.nEECBBDKINB_;
+      difficultyLevel_ = other.difficultyLevel_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,32 +87,20 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournGetCurRogueCocoonInfoScRsp(this);
     }
 
-    /// <summary>Field number for the "difficulty_level" field.</summary>
-    public const int DifficultyLevelFieldNumber = 5;
-    private uint difficultyLevel_;
+    /// <summary>Field number for the "DKBHBBLEPOP" field.</summary>
+    public const int DKBHBBLEPOPFieldNumber = 14;
+    private uint dKBHBBLEPOP_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DifficultyLevel {
-      get { return difficultyLevel_; }
+    public uint DKBHBBLEPOP {
+      get { return dKBHBBLEPOP_; }
       set {
-        difficultyLevel_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "HFDBBAJCBAA" field.</summary>
-    public const int HFDBBAJCBAAFieldNumber = 1;
-    private uint hFDBBAJCBAA_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint HFDBBAJCBAA {
-      get { return hFDBBAJCBAA_; }
-      set {
-        hFDBBAJCBAA_ = value;
+        dKBHBBLEPOP_ = value;
       }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 4;
+    public const int RetcodeFieldNumber = 6;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,15 +111,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "IIEDPGOJGCD" field.</summary>
-    public const int IIEDPGOJGCDFieldNumber = 8;
-    private uint iIEDPGOJGCD_;
+    /// <summary>Field number for the "NEECBBDKINB" field.</summary>
+    public const int NEECBBDKINBFieldNumber = 11;
+    private uint nEECBBDKINB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IIEDPGOJGCD {
-      get { return iIEDPGOJGCD_; }
+    public uint NEECBBDKINB {
+      get { return nEECBBDKINB_; }
       set {
-        iIEDPGOJGCD_ = value;
+        nEECBBDKINB_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "difficulty_level" field.</summary>
+    public const int DifficultyLevelFieldNumber = 8;
+    private uint difficultyLevel_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DifficultyLevel {
+      get { return difficultyLevel_; }
+      set {
+        difficultyLevel_ = value;
       }
     }
 
@@ -150,10 +150,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DifficultyLevel != other.DifficultyLevel) return false;
-      if (HFDBBAJCBAA != other.HFDBBAJCBAA) return false;
+      if (DKBHBBLEPOP != other.DKBHBBLEPOP) return false;
       if (Retcode != other.Retcode) return false;
-      if (IIEDPGOJGCD != other.IIEDPGOJGCD) return false;
+      if (NEECBBDKINB != other.NEECBBDKINB) return false;
+      if (DifficultyLevel != other.DifficultyLevel) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,10 +161,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (DifficultyLevel != 0) hash ^= DifficultyLevel.GetHashCode();
-      if (HFDBBAJCBAA != 0) hash ^= HFDBBAJCBAA.GetHashCode();
+      if (DKBHBBLEPOP != 0) hash ^= DKBHBBLEPOP.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (IIEDPGOJGCD != 0) hash ^= IIEDPGOJGCD.GetHashCode();
+      if (NEECBBDKINB != 0) hash ^= NEECBBDKINB.GetHashCode();
+      if (DifficultyLevel != 0) hash ^= DifficultyLevel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,21 +183,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (HFDBBAJCBAA != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(HFDBBAJCBAA);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
       if (DifficultyLevel != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(64);
         output.WriteUInt32(DifficultyLevel);
       }
-      if (IIEDPGOJGCD != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(IIEDPGOJGCD);
+      if (NEECBBDKINB != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(NEECBBDKINB);
+      }
+      if (DKBHBBLEPOP != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(DKBHBBLEPOP);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -209,21 +209,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HFDBBAJCBAA != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(HFDBBAJCBAA);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
       if (DifficultyLevel != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(64);
         output.WriteUInt32(DifficultyLevel);
       }
-      if (IIEDPGOJGCD != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(IIEDPGOJGCD);
+      if (NEECBBDKINB != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(NEECBBDKINB);
+      }
+      if (DKBHBBLEPOP != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(DKBHBBLEPOP);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -235,17 +235,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (DifficultyLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DifficultyLevel);
-      }
-      if (HFDBBAJCBAA != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HFDBBAJCBAA);
+      if (DKBHBBLEPOP != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DKBHBBLEPOP);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (IIEDPGOJGCD != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IIEDPGOJGCD);
+      if (NEECBBDKINB != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NEECBBDKINB);
+      }
+      if (DifficultyLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DifficultyLevel);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -259,17 +259,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.DifficultyLevel != 0) {
-        DifficultyLevel = other.DifficultyLevel;
-      }
-      if (other.HFDBBAJCBAA != 0) {
-        HFDBBAJCBAA = other.HFDBBAJCBAA;
+      if (other.DKBHBBLEPOP != 0) {
+        DKBHBBLEPOP = other.DKBHBBLEPOP;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.IIEDPGOJGCD != 0) {
-        IIEDPGOJGCD = other.IIEDPGOJGCD;
+      if (other.NEECBBDKINB != 0) {
+        NEECBBDKINB = other.NEECBBDKINB;
+      }
+      if (other.DifficultyLevel != 0) {
+        DifficultyLevel = other.DifficultyLevel;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -286,20 +286,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            HFDBBAJCBAA = input.ReadUInt32();
-            break;
-          }
-          case 32: {
+          case 48: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 40: {
+          case 64: {
             DifficultyLevel = input.ReadUInt32();
             break;
           }
-          case 64: {
-            IIEDPGOJGCD = input.ReadUInt32();
+          case 88: {
+            NEECBBDKINB = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            DKBHBBLEPOP = input.ReadUInt32();
             break;
           }
         }
@@ -317,20 +317,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            HFDBBAJCBAA = input.ReadUInt32();
-            break;
-          }
-          case 32: {
+          case 48: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 40: {
+          case 64: {
             DifficultyLevel = input.ReadUInt32();
             break;
           }
-          case 64: {
-            IIEDPGOJGCD = input.ReadUInt32();
+          case 88: {
+            NEECBBDKINB = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            DKBHBBLEPOP = input.ReadUInt32();
             break;
           }
         }

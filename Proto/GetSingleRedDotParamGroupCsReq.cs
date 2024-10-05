@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiRHZXRTaW5nbGVSZWREb3RQYXJhbUdyb3VwQ3NSZXEucHJvdG8iWQoeR2V0",
-            "U2luZ2xlUmVkRG90UGFyYW1Hcm91cENzUmVxEhAKCHBhbmVsX2lkGAUgASgN",
-            "EhMKC05BT0RKUEZOQ1BLGAcgASgNEhAKCGdyb3VwX2lkGAogASgNQh6qAhtF",
+            "U2luZ2xlUmVkRG90UGFyYW1Hcm91cENzUmVxEhMKC0FDUExGRENOR0tPGAgg",
+            "ASgNEhAKCHBhbmVsX2lkGAwgASgNEhAKCGdyb3VwX2lkGAcgASgNQh6qAhtF",
             "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetSingleRedDotParamGroupCsReq), global::EggLink.DanhengServer.Proto.GetSingleRedDotParamGroupCsReq.Parser, new[]{ "PanelId", "NAODJPFNCPK", "GroupId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetSingleRedDotParamGroupCsReq), global::EggLink.DanhengServer.Proto.GetSingleRedDotParamGroupCsReq.Parser, new[]{ "ACPLFDCNGKO", "PanelId", "GroupId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetSingleRedDotParamGroupCsReq(GetSingleRedDotParamGroupCsReq other) : this() {
+      aCPLFDCNGKO_ = other.aCPLFDCNGKO_;
       panelId_ = other.panelId_;
-      nAODJPFNCPK_ = other.nAODJPFNCPK_;
       groupId_ = other.groupId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -85,8 +85,20 @@ namespace EggLink.DanhengServer.Proto {
       return new GetSingleRedDotParamGroupCsReq(this);
     }
 
+    /// <summary>Field number for the "ACPLFDCNGKO" field.</summary>
+    public const int ACPLFDCNGKOFieldNumber = 8;
+    private uint aCPLFDCNGKO_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ACPLFDCNGKO {
+      get { return aCPLFDCNGKO_; }
+      set {
+        aCPLFDCNGKO_ = value;
+      }
+    }
+
     /// <summary>Field number for the "panel_id" field.</summary>
-    public const int PanelIdFieldNumber = 5;
+    public const int PanelIdFieldNumber = 12;
     private uint panelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,20 +109,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "NAODJPFNCPK" field.</summary>
-    public const int NAODJPFNCPKFieldNumber = 7;
-    private uint nAODJPFNCPK_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NAODJPFNCPK {
-      get { return nAODJPFNCPK_; }
-      set {
-        nAODJPFNCPK_ = value;
-      }
-    }
-
     /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 10;
+    public const int GroupIdFieldNumber = 7;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,8 +136,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (ACPLFDCNGKO != other.ACPLFDCNGKO) return false;
       if (PanelId != other.PanelId) return false;
-      if (NAODJPFNCPK != other.NAODJPFNCPK) return false;
       if (GroupId != other.GroupId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -146,8 +146,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (ACPLFDCNGKO != 0) hash ^= ACPLFDCNGKO.GetHashCode();
       if (PanelId != 0) hash ^= PanelId.GetHashCode();
-      if (NAODJPFNCPK != 0) hash ^= NAODJPFNCPK.GetHashCode();
       if (GroupId != 0) hash ^= GroupId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PanelId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(PanelId);
-      }
-      if (NAODJPFNCPK != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(NAODJPFNCPK);
-      }
       if (GroupId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(56);
         output.WriteUInt32(GroupId);
+      }
+      if (ACPLFDCNGKO != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(ACPLFDCNGKO);
+      }
+      if (PanelId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(PanelId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PanelId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(PanelId);
-      }
-      if (NAODJPFNCPK != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(NAODJPFNCPK);
-      }
       if (GroupId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(56);
         output.WriteUInt32(GroupId);
+      }
+      if (ACPLFDCNGKO != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(ACPLFDCNGKO);
+      }
+      if (PanelId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(PanelId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,11 +211,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (ACPLFDCNGKO != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ACPLFDCNGKO);
+      }
       if (PanelId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PanelId);
-      }
-      if (NAODJPFNCPK != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NAODJPFNCPK);
       }
       if (GroupId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
@@ -232,11 +232,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.ACPLFDCNGKO != 0) {
+        ACPLFDCNGKO = other.ACPLFDCNGKO;
+      }
       if (other.PanelId != 0) {
         PanelId = other.PanelId;
-      }
-      if (other.NAODJPFNCPK != 0) {
-        NAODJPFNCPK = other.NAODJPFNCPK;
       }
       if (other.GroupId != 0) {
         GroupId = other.GroupId;
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            PanelId = input.ReadUInt32();
-            break;
-          }
           case 56: {
-            NAODJPFNCPK = input.ReadUInt32();
+            GroupId = input.ReadUInt32();
             break;
           }
-          case 80: {
-            GroupId = input.ReadUInt32();
+          case 64: {
+            ACPLFDCNGKO = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            PanelId = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            PanelId = input.ReadUInt32();
-            break;
-          }
           case 56: {
-            NAODJPFNCPK = input.ReadUInt32();
+            GroupId = input.ReadUInt32();
             break;
           }
-          case 80: {
-            GroupId = input.ReadUInt32();
+          case 64: {
+            ACPLFDCNGKO = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            PanelId = input.ReadUInt32();
             break;
           }
         }

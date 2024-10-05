@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static DrinkMakerChallengeCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5Ecmlua01ha2VyQ2hhbGxlbmdlQ3NSZXEucHJvdG8aEUpJT0hQRURNUEdI",
+            "Ch5Ecmlua01ha2VyQ2hhbGxlbmdlQ3NSZXEucHJvdG8aEUxHTklPQURKTk9K",
             "LnByb3RvIlMKGERyaW5rTWFrZXJDaGFsbGVuZ2VDc1JlcRIUCgxjaGFsbGVu",
-            "Z2VfaWQYDCABKA0SIQoLS05BSkFOREdPQUsYCiABKAsyDC5KSU9IUEVETVBH",
-            "SEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Z2VfaWQYBCABKA0SIQoLT0VFSEVPS0tOR0QYAyABKAsyDC5MR05JT0FESk5P",
+            "SkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JIOHPEDMPGHReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LGNIOADJNOJReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DrinkMakerChallengeCsReq), global::EggLink.DanhengServer.Proto.DrinkMakerChallengeCsReq.Parser, new[]{ "ChallengeId", "KNAJANDGOAK" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DrinkMakerChallengeCsReq), global::EggLink.DanhengServer.Proto.DrinkMakerChallengeCsReq.Parser, new[]{ "ChallengeId", "OEEHEOKKNGD" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DrinkMakerChallengeCsReq(DrinkMakerChallengeCsReq other) : this() {
       challengeId_ = other.challengeId_;
-      kNAJANDGOAK_ = other.kNAJANDGOAK_ != null ? other.kNAJANDGOAK_.Clone() : null;
+      oEEHEOKKNGD_ = other.oEEHEOKKNGD_ != null ? other.oEEHEOKKNGD_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "challenge_id" field.</summary>
-    public const int ChallengeIdFieldNumber = 12;
+    public const int ChallengeIdFieldNumber = 4;
     private uint challengeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "KNAJANDGOAK" field.</summary>
-    public const int KNAJANDGOAKFieldNumber = 10;
-    private global::EggLink.DanhengServer.Proto.JIOHPEDMPGH kNAJANDGOAK_;
+    /// <summary>Field number for the "OEEHEOKKNGD" field.</summary>
+    public const int OEEHEOKKNGDFieldNumber = 3;
+    private global::EggLink.DanhengServer.Proto.LGNIOADJNOJ oEEHEOKKNGD_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.JIOHPEDMPGH KNAJANDGOAK {
-      get { return kNAJANDGOAK_; }
+    public global::EggLink.DanhengServer.Proto.LGNIOADJNOJ OEEHEOKKNGD {
+      get { return oEEHEOKKNGD_; }
       set {
-        kNAJANDGOAK_ = value;
+        oEEHEOKKNGD_ = value;
       }
     }
 
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (ChallengeId != other.ChallengeId) return false;
-      if (!object.Equals(KNAJANDGOAK, other.KNAJANDGOAK)) return false;
+      if (!object.Equals(OEEHEOKKNGD, other.OEEHEOKKNGD)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (ChallengeId != 0) hash ^= ChallengeId.GetHashCode();
-      if (kNAJANDGOAK_ != null) hash ^= KNAJANDGOAK.GetHashCode();
+      if (oEEHEOKKNGD_ != null) hash ^= OEEHEOKKNGD.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,12 +152,12 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (kNAJANDGOAK_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(KNAJANDGOAK);
+      if (oEEHEOKKNGD_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(OEEHEOKKNGD);
       }
       if (ChallengeId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(32);
         output.WriteUInt32(ChallengeId);
       }
       if (_unknownFields != null) {
@@ -170,12 +170,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (kNAJANDGOAK_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(KNAJANDGOAK);
+      if (oEEHEOKKNGD_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(OEEHEOKKNGD);
       }
       if (ChallengeId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(32);
         output.WriteUInt32(ChallengeId);
       }
       if (_unknownFields != null) {
@@ -191,8 +191,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ChallengeId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChallengeId);
       }
-      if (kNAJANDGOAK_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(KNAJANDGOAK);
+      if (oEEHEOKKNGD_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OEEHEOKKNGD);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -209,11 +209,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.ChallengeId != 0) {
         ChallengeId = other.ChallengeId;
       }
-      if (other.kNAJANDGOAK_ != null) {
-        if (kNAJANDGOAK_ == null) {
-          KNAJANDGOAK = new global::EggLink.DanhengServer.Proto.JIOHPEDMPGH();
+      if (other.oEEHEOKKNGD_ != null) {
+        if (oEEHEOKKNGD_ == null) {
+          OEEHEOKKNGD = new global::EggLink.DanhengServer.Proto.LGNIOADJNOJ();
         }
-        KNAJANDGOAK.MergeFrom(other.KNAJANDGOAK);
+        OEEHEOKKNGD.MergeFrom(other.OEEHEOKKNGD);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -230,14 +230,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 82: {
-            if (kNAJANDGOAK_ == null) {
-              KNAJANDGOAK = new global::EggLink.DanhengServer.Proto.JIOHPEDMPGH();
+          case 26: {
+            if (oEEHEOKKNGD_ == null) {
+              OEEHEOKKNGD = new global::EggLink.DanhengServer.Proto.LGNIOADJNOJ();
             }
-            input.ReadMessage(KNAJANDGOAK);
+            input.ReadMessage(OEEHEOKKNGD);
             break;
           }
-          case 96: {
+          case 32: {
             ChallengeId = input.ReadUInt32();
             break;
           }
@@ -256,14 +256,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 82: {
-            if (kNAJANDGOAK_ == null) {
-              KNAJANDGOAK = new global::EggLink.DanhengServer.Proto.JIOHPEDMPGH();
+          case 26: {
+            if (oEEHEOKKNGD_ == null) {
+              OEEHEOKKNGD = new global::EggLink.DanhengServer.Proto.LGNIOADJNOJ();
             }
-            input.ReadMessage(KNAJANDGOAK);
+            input.ReadMessage(OEEHEOKKNGD);
             break;
           }
-          case 96: {
+          case 32: {
             ChallengeId = input.ReadUInt32();
             break;
           }

@@ -24,13 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static PlayingStateReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJQbGF5aW5nU3RhdGUucHJvdG8q5wEKDFBsYXlpbmdTdGF0ZRIWChJQTEFZ",
+            "ChJQbGF5aW5nU3RhdGUucHJvdG8qgAIKDFBsYXlpbmdTdGF0ZRIWChJQTEFZ",
             "SU5HX1NUQVRFX05PTkUQABIYChRQTEFZSU5HX1JPR1VFX0NPU01PUxABEhcK",
             "E1BMQVlJTkdfUk9HVUVfQ0hFU1MQAhIcChhQTEFZSU5HX1JPR1VFX0NIRVNT",
             "X05PVVMQAxIcChhQTEFZSU5HX0NIQUxMRU5HRV9NRU1PUlkQBBIbChdQTEFZ",
             "SU5HX0NIQUxMRU5HRV9TVE9SWRAFEhoKFlBMQVlJTkdfQ0hBTExFTkdFX0JP",
-            "U1MQBhIXChNQTEFZSU5HX1JPR1VFX1RPVVJOEAdCHqoCG0VnZ0xpbmsuRGFu",
-            "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "U1MQBhIXChNQTEFZSU5HX1JPR1VFX1RPVVJOEAcSFwoTUExBWUlOR19ST0dV",
+            "RV9NQUdJQxAIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.PlayingState), }, null, null));
@@ -48,6 +49,7 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("PLAYING_CHALLENGE_STORY")] PlayingChallengeStory = 5,
     [pbr::OriginalName("PLAYING_CHALLENGE_BOSS")] PlayingChallengeBoss = 6,
     [pbr::OriginalName("PLAYING_ROGUE_TOURN")] PlayingRogueTourn = 7,
+    [pbr::OriginalName("PLAYING_ROGUE_MAGIC")] PlayingRogueMagic = 8,
   }
 
   #endregion

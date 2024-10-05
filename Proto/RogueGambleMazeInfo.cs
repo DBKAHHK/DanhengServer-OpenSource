@@ -24,15 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static RogueGambleMazeInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlSb2d1ZUdhbWJsZU1hemVJbmZvLnByb3RvGhFMSEJHSUdPUEFCRy5wcm90",
-            "byJeChNSb2d1ZUdhbWJsZU1hemVJbmZvEg8KB21hemVfaWQYDyABKA0SEwoL",
-            "bWF6ZV9lbmFibGUYCiABKAgSIQoLSU5FUEVDUERLRkEYBSABKAsyDC5MSEJH",
-            "SUdPUEFCR0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
-            "bzM="));
+            "ChlSb2d1ZUdhbWJsZU1hemVJbmZvLnByb3RvGhFPTVBFQkRBT0ZJRy5wcm90",
+            "bxoRRU5ISEdBTUVLTUIucHJvdG8igQEKE1JvZ3VlR2FtYmxlTWF6ZUluZm8S",
+            "DwoHbWF6ZV9pZBgOIAEoDRITCgttYXplX2VuYWJsZRgJIAEoCBIhCgtCS05H",
+            "Q0JJQlBGSxgDIAEoCzIMLkVOSEhHQU1FS01CEiEKC0FITEFLS0dQSEdEGA0g",
+            "ASgLMgwuT01QRUJEQU9GSUdCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LHBGIGOPABGReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OMPEBDAOFIGReflection.Descriptor, global::EggLink.DanhengServer.Proto.ENHHGAMEKMBReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueGambleMazeInfo), global::EggLink.DanhengServer.Proto.RogueGambleMazeInfo.Parser, new[]{ "MazeId", "MazeEnable", "INEPECPDKFA" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueGambleMazeInfo), global::EggLink.DanhengServer.Proto.RogueGambleMazeInfo.Parser, new[]{ "MazeId", "MazeEnable", "BKNGCBIBPFK", "AHLAKKGPHGD" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,7 +77,8 @@ namespace EggLink.DanhengServer.Proto {
     public RogueGambleMazeInfo(RogueGambleMazeInfo other) : this() {
       mazeId_ = other.mazeId_;
       mazeEnable_ = other.mazeEnable_;
-      iNEPECPDKFA_ = other.iNEPECPDKFA_ != null ? other.iNEPECPDKFA_.Clone() : null;
+      bKNGCBIBPFK_ = other.bKNGCBIBPFK_ != null ? other.bKNGCBIBPFK_.Clone() : null;
+      aHLAKKGPHGD_ = other.aHLAKKGPHGD_ != null ? other.aHLAKKGPHGD_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,7 +89,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "maze_id" field.</summary>
-    public const int MazeIdFieldNumber = 15;
+    public const int MazeIdFieldNumber = 14;
     private uint mazeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +101,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "maze_enable" field.</summary>
-    public const int MazeEnableFieldNumber = 10;
+    public const int MazeEnableFieldNumber = 9;
     private bool mazeEnable_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,15 +112,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "INEPECPDKFA" field.</summary>
-    public const int INEPECPDKFAFieldNumber = 5;
-    private global::EggLink.DanhengServer.Proto.LHBGIGOPABG iNEPECPDKFA_;
+    /// <summary>Field number for the "BKNGCBIBPFK" field.</summary>
+    public const int BKNGCBIBPFKFieldNumber = 3;
+    private global::EggLink.DanhengServer.Proto.ENHHGAMEKMB bKNGCBIBPFK_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.LHBGIGOPABG INEPECPDKFA {
-      get { return iNEPECPDKFA_; }
+    public global::EggLink.DanhengServer.Proto.ENHHGAMEKMB BKNGCBIBPFK {
+      get { return bKNGCBIBPFK_; }
       set {
-        iNEPECPDKFA_ = value;
+        bKNGCBIBPFK_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "AHLAKKGPHGD" field.</summary>
+    public const int AHLAKKGPHGDFieldNumber = 13;
+    private global::EggLink.DanhengServer.Proto.OMPEBDAOFIG aHLAKKGPHGD_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.OMPEBDAOFIG AHLAKKGPHGD {
+      get { return aHLAKKGPHGD_; }
+      set {
+        aHLAKKGPHGD_ = value;
       }
     }
 
@@ -139,7 +153,8 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (MazeId != other.MazeId) return false;
       if (MazeEnable != other.MazeEnable) return false;
-      if (!object.Equals(INEPECPDKFA, other.INEPECPDKFA)) return false;
+      if (!object.Equals(BKNGCBIBPFK, other.BKNGCBIBPFK)) return false;
+      if (!object.Equals(AHLAKKGPHGD, other.AHLAKKGPHGD)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -149,7 +164,8 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (MazeId != 0) hash ^= MazeId.GetHashCode();
       if (MazeEnable != false) hash ^= MazeEnable.GetHashCode();
-      if (iNEPECPDKFA_ != null) hash ^= INEPECPDKFA.GetHashCode();
+      if (bKNGCBIBPFK_ != null) hash ^= BKNGCBIBPFK.GetHashCode();
+      if (aHLAKKGPHGD_ != null) hash ^= AHLAKKGPHGD.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,16 +184,20 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (iNEPECPDKFA_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(INEPECPDKFA);
+      if (bKNGCBIBPFK_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(BKNGCBIBPFK);
       }
       if (MazeEnable != false) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(72);
         output.WriteBool(MazeEnable);
       }
+      if (aHLAKKGPHGD_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(AHLAKKGPHGD);
+      }
       if (MazeId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(112);
         output.WriteUInt32(MazeId);
       }
       if (_unknownFields != null) {
@@ -190,16 +210,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (iNEPECPDKFA_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(INEPECPDKFA);
+      if (bKNGCBIBPFK_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(BKNGCBIBPFK);
       }
       if (MazeEnable != false) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(72);
         output.WriteBool(MazeEnable);
       }
+      if (aHLAKKGPHGD_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(AHLAKKGPHGD);
+      }
       if (MazeId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(112);
         output.WriteUInt32(MazeId);
       }
       if (_unknownFields != null) {
@@ -218,8 +242,11 @@ namespace EggLink.DanhengServer.Proto {
       if (MazeEnable != false) {
         size += 1 + 1;
       }
-      if (iNEPECPDKFA_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(INEPECPDKFA);
+      if (bKNGCBIBPFK_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BKNGCBIBPFK);
+      }
+      if (aHLAKKGPHGD_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AHLAKKGPHGD);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -239,11 +266,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other.MazeEnable != false) {
         MazeEnable = other.MazeEnable;
       }
-      if (other.iNEPECPDKFA_ != null) {
-        if (iNEPECPDKFA_ == null) {
-          INEPECPDKFA = new global::EggLink.DanhengServer.Proto.LHBGIGOPABG();
+      if (other.bKNGCBIBPFK_ != null) {
+        if (bKNGCBIBPFK_ == null) {
+          BKNGCBIBPFK = new global::EggLink.DanhengServer.Proto.ENHHGAMEKMB();
         }
-        INEPECPDKFA.MergeFrom(other.INEPECPDKFA);
+        BKNGCBIBPFK.MergeFrom(other.BKNGCBIBPFK);
+      }
+      if (other.aHLAKKGPHGD_ != null) {
+        if (aHLAKKGPHGD_ == null) {
+          AHLAKKGPHGD = new global::EggLink.DanhengServer.Proto.OMPEBDAOFIG();
+        }
+        AHLAKKGPHGD.MergeFrom(other.AHLAKKGPHGD);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -260,18 +293,25 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
-            if (iNEPECPDKFA_ == null) {
-              INEPECPDKFA = new global::EggLink.DanhengServer.Proto.LHBGIGOPABG();
+          case 26: {
+            if (bKNGCBIBPFK_ == null) {
+              BKNGCBIBPFK = new global::EggLink.DanhengServer.Proto.ENHHGAMEKMB();
             }
-            input.ReadMessage(INEPECPDKFA);
+            input.ReadMessage(BKNGCBIBPFK);
             break;
           }
-          case 80: {
+          case 72: {
             MazeEnable = input.ReadBool();
             break;
           }
-          case 120: {
+          case 106: {
+            if (aHLAKKGPHGD_ == null) {
+              AHLAKKGPHGD = new global::EggLink.DanhengServer.Proto.OMPEBDAOFIG();
+            }
+            input.ReadMessage(AHLAKKGPHGD);
+            break;
+          }
+          case 112: {
             MazeId = input.ReadUInt32();
             break;
           }
@@ -290,18 +330,25 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
-            if (iNEPECPDKFA_ == null) {
-              INEPECPDKFA = new global::EggLink.DanhengServer.Proto.LHBGIGOPABG();
+          case 26: {
+            if (bKNGCBIBPFK_ == null) {
+              BKNGCBIBPFK = new global::EggLink.DanhengServer.Proto.ENHHGAMEKMB();
             }
-            input.ReadMessage(INEPECPDKFA);
+            input.ReadMessage(BKNGCBIBPFK);
             break;
           }
-          case 80: {
+          case 72: {
             MazeEnable = input.ReadBool();
             break;
           }
-          case 120: {
+          case 106: {
+            if (aHLAKKGPHGD_ == null) {
+              AHLAKKGPHGD = new global::EggLink.DanhengServer.Proto.OMPEBDAOFIG();
+            }
+            input.ReadMessage(AHLAKKGPHGD);
+            break;
+          }
+          case 112: {
             MazeId = input.ReadUInt32();
             break;
           }

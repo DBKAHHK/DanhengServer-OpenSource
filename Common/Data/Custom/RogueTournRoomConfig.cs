@@ -1,4 +1,4 @@
-﻿using EggLink.DanhengServer.Enums.Rogue;
+﻿using EggLink.DanhengServer.Enums.TournRogue;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 

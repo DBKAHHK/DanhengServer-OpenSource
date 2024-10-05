@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CipTeW5jUm9ndWVDb21tb25QZW5kaW5nQWN0aW9uU2NOb3RpZnkucHJvdG8a",
             "HlJvZ3VlQ29tbW9uUGVuZGluZ0FjdGlvbi5wcm90byJpCiRTeW5jUm9ndWVD",
-            "b21tb25QZW5kaW5nQWN0aW9uU2NOb3RpZnkSKQoGYWN0aW9uGA8gASgLMhku",
-            "Um9ndWVDb21tb25QZW5kaW5nQWN0aW9uEhYKDnJvZ3VlX3N1Yl9tb2RlGAwg",
+            "b21tb25QZW5kaW5nQWN0aW9uU2NOb3RpZnkSKQoGYWN0aW9uGAsgASgLMhku",
+            "Um9ndWVDb21tb25QZW5kaW5nQWN0aW9uEhYKDnJvZ3VlX3N1Yl9tb2RlGA8g",
             "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonPendingActionReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "action" field.</summary>
-    public const int ActionFieldNumber = 15;
+    public const int ActionFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.RogueCommonPendingAction action_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_sub_mode" field.</summary>
-    public const int RogueSubModeFieldNumber = 12;
+    public const int RogueSubModeFieldNumber = 15;
     private uint rogueSubMode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (RogueSubMode != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(RogueSubMode);
-      }
       if (action_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(90);
         output.WriteMessage(Action);
+      }
+      if (RogueSubMode != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(RogueSubMode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (RogueSubMode != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(RogueSubMode);
-      }
       if (action_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(90);
         output.WriteMessage(Action);
+      }
+      if (RogueSubMode != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(RogueSubMode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 96: {
-            RogueSubMode = input.ReadUInt32();
-            break;
-          }
-          case 122: {
+          case 90: {
             if (action_ == null) {
               Action = new global::EggLink.DanhengServer.Proto.RogueCommonPendingAction();
             }
             input.ReadMessage(Action);
+            break;
+          }
+          case 120: {
+            RogueSubMode = input.ReadUInt32();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 96: {
-            RogueSubMode = input.ReadUInt32();
-            break;
-          }
-          case 122: {
+          case 90: {
             if (action_ == null) {
               Action = new global::EggLink.DanhengServer.Proto.RogueCommonPendingAction();
             }
             input.ReadMessage(Action);
+            break;
+          }
+          case 120: {
+            RogueSubMode = input.ReadUInt32();
             break;
           }
         }

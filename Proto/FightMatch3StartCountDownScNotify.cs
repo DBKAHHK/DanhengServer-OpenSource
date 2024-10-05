@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static FightMatch3StartCountDownScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CidGaWdodE1hdGNoM1N0YXJ0Q291bnREb3duU2NOb3RpZnkucHJvdG8aEUtH",
-            "TUdCQ1BJTUFCLnByb3RvIj8KIUZpZ2h0TWF0Y2gzU3RhcnRDb3VudERvd25T",
-            "Y05vdGlmeRIaCgRkYXRhGAUgASgLMgwuS0dNR0JDUElNQUJCHqoCG0VnZ0xp",
+            "CidGaWdodE1hdGNoM1N0YXJ0Q291bnREb3duU2NOb3RpZnkucHJvdG8aEUNG",
+            "SFBNQk9BSExBLnByb3RvIj8KIUZpZ2h0TWF0Y2gzU3RhcnRDb3VudERvd25T",
+            "Y05vdGlmeRIaCgRkYXRhGAMgASgLMgwuQ0ZIUE1CT0FITEFCHqoCG0VnZ0xp",
             "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KGMGBCPIMABReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CFHPMBOAHLAReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightMatch3StartCountDownScNotify), global::EggLink.DanhengServer.Proto.FightMatch3StartCountDownScNotify.Parser, new[]{ "Data" }, null, null, null, null)
           }));
@@ -84,11 +84,11 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "data" field.</summary>
-    public const int DataFieldNumber = 5;
-    private global::EggLink.DanhengServer.Proto.KGMGBCPIMAB data_;
+    public const int DataFieldNumber = 3;
+    private global::EggLink.DanhengServer.Proto.CFHPMBOAHLA data_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.KGMGBCPIMAB Data {
+    public global::EggLink.DanhengServer.Proto.CFHPMBOAHLA Data {
       get { return data_; }
       set {
         data_ = value;
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (data_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(26);
         output.WriteMessage(Data);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (data_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(26);
         output.WriteMessage(Data);
       }
       if (_unknownFields != null) {
@@ -182,7 +182,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.data_ != null) {
         if (data_ == null) {
-          Data = new global::EggLink.DanhengServer.Proto.KGMGBCPIMAB();
+          Data = new global::EggLink.DanhengServer.Proto.CFHPMBOAHLA();
         }
         Data.MergeFrom(other.Data);
       }
@@ -201,9 +201,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
+          case 26: {
             if (data_ == null) {
-              Data = new global::EggLink.DanhengServer.Proto.KGMGBCPIMAB();
+              Data = new global::EggLink.DanhengServer.Proto.CFHPMBOAHLA();
             }
             input.ReadMessage(Data);
             break;
@@ -223,9 +223,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
+          case 26: {
             if (data_ == null) {
-              Data = new global::EggLink.DanhengServer.Proto.KGMGBCPIMAB();
+              Data = new global::EggLink.DanhengServer.Proto.CFHPMBOAHLA();
             }
             input.ReadMessage(Data);
             break;

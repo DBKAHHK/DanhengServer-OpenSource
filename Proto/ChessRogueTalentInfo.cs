@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpDaGVzc1JvZ3VlVGFsZW50SW5mby5wcm90bxoZUm9ndWVUYWxlbnRJbmZv",
-            "TGlzdC5wcm90byJhChRDaGVzc1JvZ3VlVGFsZW50SW5mbxITCgtOR0hFRUZI",
-            "SUdEQxgDIAEoDRI0ChZyb2d1ZV90YWxlbnRfaW5mb19saXN0GAIgASgLMhQu",
-            "Um9ndWVUYWxlbnRJbmZvTGlzdEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "TGlzdC5wcm90byJhChRDaGVzc1JvZ3VlVGFsZW50SW5mbxI0ChZyb2d1ZV90",
+            "YWxlbnRfaW5mb19saXN0GAQgASgLMhQuUm9ndWVUYWxlbnRJbmZvTGlzdBIT",
+            "CgtGQ0FBR0xLRkFJRBgOIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTalentInfoListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueTalentInfo), global::EggLink.DanhengServer.Proto.ChessRogueTalentInfo.Parser, new[]{ "NGHEEFHIGDC", "RogueTalentInfoList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueTalentInfo), global::EggLink.DanhengServer.Proto.ChessRogueTalentInfo.Parser, new[]{ "RogueTalentInfoList", "FCAAGLKFAID" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueTalentInfo(ChessRogueTalentInfo other) : this() {
-      nGHEEFHIGDC_ = other.nGHEEFHIGDC_;
       rogueTalentInfoList_ = other.rogueTalentInfoList_ != null ? other.rogueTalentInfoList_.Clone() : null;
+      fCAAGLKFAID_ = other.fCAAGLKFAID_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new ChessRogueTalentInfo(this);
     }
 
-    /// <summary>Field number for the "NGHEEFHIGDC" field.</summary>
-    public const int NGHEEFHIGDCFieldNumber = 3;
-    private uint nGHEEFHIGDC_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NGHEEFHIGDC {
-      get { return nGHEEFHIGDC_; }
-      set {
-        nGHEEFHIGDC_ = value;
-      }
-    }
-
     /// <summary>Field number for the "rogue_talent_info_list" field.</summary>
-    public const int RogueTalentInfoListFieldNumber = 2;
+    public const int RogueTalentInfoListFieldNumber = 4;
     private global::EggLink.DanhengServer.Proto.RogueTalentInfoList rogueTalentInfoList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,6 +94,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return rogueTalentInfoList_; }
       set {
         rogueTalentInfoList_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "FCAAGLKFAID" field.</summary>
+    public const int FCAAGLKFAIDFieldNumber = 14;
+    private uint fCAAGLKFAID_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint FCAAGLKFAID {
+      get { return fCAAGLKFAID_; }
+      set {
+        fCAAGLKFAID_ = value;
       }
     }
 
@@ -124,8 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (NGHEEFHIGDC != other.NGHEEFHIGDC) return false;
       if (!object.Equals(RogueTalentInfoList, other.RogueTalentInfoList)) return false;
+      if (FCAAGLKFAID != other.FCAAGLKFAID) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (NGHEEFHIGDC != 0) hash ^= NGHEEFHIGDC.GetHashCode();
       if (rogueTalentInfoList_ != null) hash ^= RogueTalentInfoList.GetHashCode();
+      if (FCAAGLKFAID != 0) hash ^= FCAAGLKFAID.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -154,12 +154,12 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (rogueTalentInfoList_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(34);
         output.WriteMessage(RogueTalentInfoList);
       }
-      if (NGHEEFHIGDC != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(NGHEEFHIGDC);
+      if (FCAAGLKFAID != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(FCAAGLKFAID);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -172,12 +172,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (rogueTalentInfoList_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(34);
         output.WriteMessage(RogueTalentInfoList);
       }
-      if (NGHEEFHIGDC != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(NGHEEFHIGDC);
+      if (FCAAGLKFAID != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(FCAAGLKFAID);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -189,11 +189,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (NGHEEFHIGDC != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NGHEEFHIGDC);
-      }
       if (rogueTalentInfoList_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueTalentInfoList);
+      }
+      if (FCAAGLKFAID != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FCAAGLKFAID);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -207,14 +207,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.NGHEEFHIGDC != 0) {
-        NGHEEFHIGDC = other.NGHEEFHIGDC;
-      }
       if (other.rogueTalentInfoList_ != null) {
         if (rogueTalentInfoList_ == null) {
           RogueTalentInfoList = new global::EggLink.DanhengServer.Proto.RogueTalentInfoList();
         }
         RogueTalentInfoList.MergeFrom(other.RogueTalentInfoList);
+      }
+      if (other.FCAAGLKFAID != 0) {
+        FCAAGLKFAID = other.FCAAGLKFAID;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 34: {
             if (rogueTalentInfoList_ == null) {
               RogueTalentInfoList = new global::EggLink.DanhengServer.Proto.RogueTalentInfoList();
             }
             input.ReadMessage(RogueTalentInfoList);
             break;
           }
-          case 24: {
-            NGHEEFHIGDC = input.ReadUInt32();
+          case 112: {
+            FCAAGLKFAID = input.ReadUInt32();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 34: {
             if (rogueTalentInfoList_ == null) {
               RogueTalentInfoList = new global::EggLink.DanhengServer.Proto.RogueTalentInfoList();
             }
             input.ReadMessage(RogueTalentInfoList);
             break;
           }
-          case 24: {
-            NGHEEFHIGDC = input.ReadUInt32();
+          case 112: {
+            FCAAGLKFAID = input.ReadUInt32();
             break;
           }
         }

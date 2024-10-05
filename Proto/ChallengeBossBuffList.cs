@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtDaGFsbGVuZ2VCb3NzQnVmZkxpc3QucHJvdG8iSAoVQ2hhbGxlbmdlQm9z",
-            "c0J1ZmZMaXN0EhEKCWJ1ZmZfbGlzdBgKIAMoDRIcChRjaGFsbGVuZ2VfYm9z",
+            "c0J1ZmZMaXN0EhEKCWJ1ZmZfbGlzdBgGIAMoDRIcChRjaGFsbGVuZ2VfYm9z",
             "c19jb25zdBgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "buff_list" field.</summary>
-    public const int BuffListFieldNumber = 10;
+    public const int BuffListFieldNumber = 6;
     private static readonly pb::FieldCodec<uint> _repeated_buffList_codec
-        = pb::FieldCodec.ForUInt32(82);
+        = pb::FieldCodec.ForUInt32(50);
     private readonly pbc::RepeatedField<uint> buffList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      buffList_.WriteTo(output, _repeated_buffList_codec);
       if (ChallengeBossConst != 0) {
         output.WriteRawTag(72);
         output.WriteUInt32(ChallengeBossConst);
       }
-      buffList_.WriteTo(output, _repeated_buffList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      buffList_.WriteTo(ref output, _repeated_buffList_codec);
       if (ChallengeBossConst != 0) {
         output.WriteRawTag(72);
         output.WriteUInt32(ChallengeBossConst);
       }
-      buffList_.WriteTo(ref output, _repeated_buffList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
-            ChallengeBossConst = input.ReadUInt32();
+          case 50:
+          case 48: {
+            buffList_.AddEntriesFrom(input, _repeated_buffList_codec);
             break;
           }
-          case 82:
-          case 80: {
-            buffList_.AddEntriesFrom(input, _repeated_buffList_codec);
+          case 72: {
+            ChallengeBossConst = input.ReadUInt32();
             break;
           }
         }
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
-            ChallengeBossConst = input.ReadUInt32();
+          case 50:
+          case 48: {
+            buffList_.AddEntriesFrom(ref input, _repeated_buffList_codec);
             break;
           }
-          case 82:
-          case 80: {
-            buffList_.AddEntriesFrom(ref input, _repeated_buffList_codec);
+          case 72: {
+            ChallengeBossConst = input.ReadUInt32();
             break;
           }
         }

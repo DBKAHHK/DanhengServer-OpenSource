@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static MonopolySttUpdateScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9Nb25vcG9seVN0dFVwZGF0ZVNjTm90aWZ5LnByb3RvGhFLRkJFQVBMQkVG",
-            "Qi5wcm90byI2ChlNb25vcG9seVN0dFVwZGF0ZVNjTm90aWZ5EhkKA3N0dBgB",
-            "IAEoCzIMLktGQkVBUExCRUZCQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "Ch9Nb25vcG9seVN0dFVwZGF0ZVNjTm90aWZ5LnByb3RvGhFQQVBFUExGRENP",
+            "Ti5wcm90byI2ChlNb25vcG9seVN0dFVwZGF0ZVNjTm90aWZ5EhkKA3N0dBgB",
+            "IAEoCzIMLlBBUEVQTEZEQ09OQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KFBEAPLBEFBReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PAPEPLFDCONReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonopolySttUpdateScNotify), global::EggLink.DanhengServer.Proto.MonopolySttUpdateScNotify.Parser, new[]{ "Stt" }, null, null, null, null)
           }));
@@ -85,10 +85,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "stt" field.</summary>
     public const int SttFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.KFBEAPLBEFB stt_;
+    private global::EggLink.DanhengServer.Proto.PAPEPLFDCON stt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.KFBEAPLBEFB Stt {
+    public global::EggLink.DanhengServer.Proto.PAPEPLFDCON Stt {
       get { return stt_; }
       set {
         stt_ = value;
@@ -182,7 +182,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.stt_ != null) {
         if (stt_ == null) {
-          Stt = new global::EggLink.DanhengServer.Proto.KFBEAPLBEFB();
+          Stt = new global::EggLink.DanhengServer.Proto.PAPEPLFDCON();
         }
         Stt.MergeFrom(other.Stt);
       }
@@ -203,7 +203,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 10: {
             if (stt_ == null) {
-              Stt = new global::EggLink.DanhengServer.Proto.KFBEAPLBEFB();
+              Stt = new global::EggLink.DanhengServer.Proto.PAPEPLFDCON();
             }
             input.ReadMessage(Stt);
             break;
@@ -225,7 +225,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 10: {
             if (stt_ == null) {
-              Stt = new global::EggLink.DanhengServer.Proto.KFBEAPLBEFB();
+              Stt = new global::EggLink.DanhengServer.Proto.PAPEPLFDCON();
             }
             input.ReadMessage(Stt);
             break;

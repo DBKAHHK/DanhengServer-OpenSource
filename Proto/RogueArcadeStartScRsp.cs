@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static RogueArcadeStartScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtSb2d1ZUFyY2FkZVN0YXJ0U2NSc3AucHJvdG8aEURESUdOSEhKUEFFLnBy",
-            "b3RvImsKFVJvZ3VlQXJjYWRlU3RhcnRTY1JzcBIPCgdyZXRjb2RlGA8gASgN",
-            "Eg8KB3Jvb21faWQYAyABKA0SMAoacm9ndWVfdG91cm5fY3VyX3NjZW5lX2lu",
-            "Zm8YBiABKAsyDC5ERElHTkhISlBBRUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
+            "ChtSb2d1ZUFyY2FkZVN0YXJ0U2NSc3AucHJvdG8aEUlLRU5BQUpEQUZGLnBy",
+            "b3RvImsKFVJvZ3VlQXJjYWRlU3RhcnRTY1JzcBIwChpyb2d1ZV90b3Vybl9j",
+            "dXJfc2NlbmVfaW5mbxgIIAEoCzIMLklLRU5BQUpEQUZGEg8KB3JldGNvZGUY",
+            "DyABKA0SDwoHcm9vbV9pZBgBIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DDIGNHHJPAEReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IKENAAJDAFFReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueArcadeStartScRsp), global::EggLink.DanhengServer.Proto.RogueArcadeStartScRsp.Parser, new[]{ "Retcode", "RoomId", "RogueTournCurSceneInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueArcadeStartScRsp), global::EggLink.DanhengServer.Proto.RogueArcadeStartScRsp.Parser, new[]{ "RogueTournCurSceneInfo", "Retcode", "RoomId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueArcadeStartScRsp(RogueArcadeStartScRsp other) : this() {
+      rogueTournCurSceneInfo_ = other.rogueTournCurSceneInfo_ != null ? other.rogueTournCurSceneInfo_.Clone() : null;
       retcode_ = other.retcode_;
       roomId_ = other.roomId_;
-      rogueTournCurSceneInfo_ = other.rogueTournCurSceneInfo_ != null ? other.rogueTournCurSceneInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,6 +84,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueArcadeStartScRsp Clone() {
       return new RogueArcadeStartScRsp(this);
+    }
+
+    /// <summary>Field number for the "rogue_tourn_cur_scene_info" field.</summary>
+    public const int RogueTournCurSceneInfoFieldNumber = 8;
+    private global::EggLink.DanhengServer.Proto.IKENAAJDAFF rogueTournCurSceneInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.IKENAAJDAFF RogueTournCurSceneInfo {
+      get { return rogueTournCurSceneInfo_; }
+      set {
+        rogueTournCurSceneInfo_ = value;
+      }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
@@ -99,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "room_id" field.</summary>
-    public const int RoomIdFieldNumber = 3;
+    public const int RoomIdFieldNumber = 1;
     private uint roomId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -107,18 +119,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return roomId_; }
       set {
         roomId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "rogue_tourn_cur_scene_info" field.</summary>
-    public const int RogueTournCurSceneInfoFieldNumber = 6;
-    private global::EggLink.DanhengServer.Proto.DDIGNHHJPAE rogueTournCurSceneInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.DDIGNHHJPAE RogueTournCurSceneInfo {
-      get { return rogueTournCurSceneInfo_; }
-      set {
-        rogueTournCurSceneInfo_ = value;
       }
     }
 
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(RogueTournCurSceneInfo, other.RogueTournCurSceneInfo)) return false;
       if (Retcode != other.Retcode) return false;
       if (RoomId != other.RoomId) return false;
-      if (!object.Equals(RogueTournCurSceneInfo, other.RogueTournCurSceneInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,9 +147,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (rogueTournCurSceneInfo_ != null) hash ^= RogueTournCurSceneInfo.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (RoomId != 0) hash ^= RoomId.GetHashCode();
-      if (rogueTournCurSceneInfo_ != null) hash ^= RogueTournCurSceneInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -169,11 +169,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (RoomId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteUInt32(RoomId);
       }
       if (rogueTournCurSceneInfo_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(66);
         output.WriteMessage(RogueTournCurSceneInfo);
       }
       if (Retcode != 0) {
@@ -191,11 +191,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (RoomId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteUInt32(RoomId);
       }
       if (rogueTournCurSceneInfo_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(66);
         output.WriteMessage(RogueTournCurSceneInfo);
       }
       if (Retcode != 0) {
@@ -212,14 +212,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (rogueTournCurSceneInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueTournCurSceneInfo);
+      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (RoomId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RoomId);
-      }
-      if (rogueTournCurSceneInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueTournCurSceneInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -233,17 +233,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.rogueTournCurSceneInfo_ != null) {
+        if (rogueTournCurSceneInfo_ == null) {
+          RogueTournCurSceneInfo = new global::EggLink.DanhengServer.Proto.IKENAAJDAFF();
+        }
+        RogueTournCurSceneInfo.MergeFrom(other.RogueTournCurSceneInfo);
+      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
       if (other.RoomId != 0) {
         RoomId = other.RoomId;
-      }
-      if (other.rogueTournCurSceneInfo_ != null) {
-        if (rogueTournCurSceneInfo_ == null) {
-          RogueTournCurSceneInfo = new global::EggLink.DanhengServer.Proto.DDIGNHHJPAE();
-        }
-        RogueTournCurSceneInfo.MergeFrom(other.RogueTournCurSceneInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -260,13 +260,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 8: {
             RoomId = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 66: {
             if (rogueTournCurSceneInfo_ == null) {
-              RogueTournCurSceneInfo = new global::EggLink.DanhengServer.Proto.DDIGNHHJPAE();
+              RogueTournCurSceneInfo = new global::EggLink.DanhengServer.Proto.IKENAAJDAFF();
             }
             input.ReadMessage(RogueTournCurSceneInfo);
             break;
@@ -290,13 +290,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 8: {
             RoomId = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 66: {
             if (rogueTournCurSceneInfo_ == null) {
-              RogueTournCurSceneInfo = new global::EggLink.DanhengServer.Proto.DDIGNHHJPAE();
+              RogueTournCurSceneInfo = new global::EggLink.DanhengServer.Proto.IKENAAJDAFF();
             }
             input.ReadMessage(RogueTournCurSceneInfo);
             break;

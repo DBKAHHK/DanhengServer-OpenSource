@@ -1,4 +1,4 @@
-﻿using EggLink.DanhengServer.Enums.Rogue;
+﻿using EggLink.DanhengServer.Enums.TournRogue;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueTourn;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;

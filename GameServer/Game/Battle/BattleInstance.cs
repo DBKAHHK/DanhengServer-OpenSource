@@ -60,6 +60,7 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
     public List<EntityMonster> EntityMonsters { get; set; } = [];
     public List<AvatarSceneInfo> AvatarInfo { get; set; } = [];
     public List<MazeBuff> Buffs { get; set; } = [];
+    public BattleRogueMagicInfo? MagicInfo { get; set; }
     public Dictionary<int, BattleEventInstance> BattleEvents { get; set; } = [];
     public Dictionary<int, BattleTargetList> BattleTargets { get; set; } = [];
     public BattleCollegeConfigExcel? CollegeConfigExcel { get; set; }
@@ -215,6 +216,8 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
             StageId = (uint)StageId,
             LogicRandomSeed = (uint)Random.Shared.Next()
         };
+
+        if (MagicInfo != null) proto.BattleRogueMagicInfo = MagicInfo;
 
         foreach (var protoWave in Stages.Select(wave => wave.ToProto()))
         {

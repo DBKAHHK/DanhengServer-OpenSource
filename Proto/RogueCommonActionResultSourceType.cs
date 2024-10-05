@@ -24,7 +24,7 @@ namespace EggLink.DanhengServer.Proto {
     static RogueCommonActionResultSourceTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CidSb2d1ZUNvbW1vbkFjdGlvblJlc3VsdFNvdXJjZVR5cGUucHJvdG8q+QUK",
+            "CidSb2d1ZUNvbW1vbkFjdGlvblJlc3VsdFNvdXJjZVR5cGUucHJvdG8q9wYK",
             "IVJvZ3VlQ29tbW9uQWN0aW9uUmVzdWx0U291cmNlVHlwZRIvCitST0dVRV9D",
             "T01NT05fQUNUSU9OX1JFU1VMVF9TT1VSQ0VfVFlQRV9OT05FEAASMQotUk9H",
             "VUVfQ09NTU9OX0FDVElPTl9SRVNVTFRfU09VUkNFX1RZUEVfU0VMRUNUEAES",
@@ -41,8 +41,11 @@ namespace EggLink.DanhengServer.Proto {
             "RV9NQVpFX1NLSUxMEAoSOgo2Uk9HVUVfQ09NTU9OX0FDVElPTl9SRVNVTFRf",
             "U09VUkNFX1RZUEVfTEVWRUxfTUVDSEFOSVNNEAsSLworUk9HVUVfQ09NTU9O",
             "X0FDVElPTl9SRVNVTFRfU09VUkNFX1RZUEVfQlVGRhAMEjIKLlJPR1VFX0NP",
-            "TU1PTl9BQ1RJT05fUkVTVUxUX1NPVVJDRV9UWVBFX1JFRk9SR0UQDUIeqgIb",
-            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "TU1PTl9BQ1RJT05fUkVTVUxUX1NPVVJDRV9UWVBFX1JFRk9SR0UQDRI9CjlS",
+            "T0dVRV9DT01NT05fQUNUSU9OX1JFU1VMVF9TT1VSQ0VfVFlQRV9NQUdJQ19V",
+            "TklUX0NPTVBPU0UQDhI9CjlST0dVRV9DT01NT05fQUNUSU9OX1JFU1VMVF9T",
+            "T1VSQ0VfVFlQRV9NQUdJQ19VTklUX1JFRk9SR0UQD0IeqgIbRWdnTGluay5E",
+            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.RogueCommonActionResultSourceType), }, null, null));
@@ -66,6 +69,8 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("ROGUE_COMMON_ACTION_RESULT_SOURCE_TYPE_LEVEL_MECHANISM")] LevelMechanism = 11,
     [pbr::OriginalName("ROGUE_COMMON_ACTION_RESULT_SOURCE_TYPE_BUFF")] Buff = 12,
     [pbr::OriginalName("ROGUE_COMMON_ACTION_RESULT_SOURCE_TYPE_REFORGE")] Reforge = 13,
+    [pbr::OriginalName("ROGUE_COMMON_ACTION_RESULT_SOURCE_TYPE_MAGIC_UNIT_COMPOSE")] MagicUnitCompose = 14,
+    [pbr::OriginalName("ROGUE_COMMON_ACTION_RESULT_SOURCE_TYPE_MAGIC_UNIT_REFORGE")] MagicUnitReforge = 15,
   }
 
   #endregion

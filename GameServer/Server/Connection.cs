@@ -79,7 +79,7 @@ public class Connection(KcpConversation conversation, IPEndPoint remote) : Danhe
     {
         var gamePacket = data.ToArray();
         if (ConfigManager.Config.GameServer.UsePacketEncryption)
-            Crypto.Xor(gamePacket, XorKey);
+            Crypto.Xor(gamePacket, XorKey!);
 
         await using MemoryStream ms = new(gamePacket);
         using BinaryReader br = new(ms);

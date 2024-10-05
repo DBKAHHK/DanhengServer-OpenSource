@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFTZXRJc0Rpc3BsYXlBdmF0YXJJbmZvU2NSc3AucHJvdG8iQgobU2V0SXNE",
-            "aXNwbGF5QXZhdGFySW5mb1NjUnNwEhIKCmlzX2Rpc3BsYXkYASABKAgSDwoH",
-            "cmV0Y29kZRgEIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "aXNwbGF5QXZhdGFySW5mb1NjUnNwEhIKCmlzX2Rpc3BsYXkYBCABKAgSDwoH",
+            "cmV0Y29kZRgBIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_display" field.</summary>
-    public const int IsDisplayFieldNumber = 1;
+    public const int IsDisplayFieldNumber = 4;
     private bool isDisplay_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 4;
+    public const int RetcodeFieldNumber = 1;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsDisplay != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(IsDisplay);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
+      }
+      if (IsDisplay != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IsDisplay);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsDisplay != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(IsDisplay);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
+      }
+      if (IsDisplay != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IsDisplay);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -228,11 +228,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            IsDisplay = input.ReadBool();
+            Retcode = input.ReadUInt32();
             break;
           }
           case 32: {
-            Retcode = input.ReadUInt32();
+            IsDisplay = input.ReadBool();
             break;
           }
         }
@@ -251,11 +251,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            IsDisplay = input.ReadBool();
+            Retcode = input.ReadUInt32();
             break;
           }
           case 32: {
-            Retcode = input.ReadUInt32();
+            IsDisplay = input.ReadBool();
             break;
           }
         }

@@ -243,6 +243,21 @@ public static class GameData
 
     #endregion
 
+    #region RogueMagic
+
+    public static Dictionary<int, RogueMagicAreaExcel> RogueMagicAreaData { get; private set; } = [];
+    public static Dictionary<int, RogueMagicDifficultyCompExcel> RogueMagicDifficultyCompData { get; private set; } = [];
+    public static Dictionary<int, RogueMagicStoryExcel> RogueMagicStoryData { get; private set; } = [];
+    public static Dictionary<int, RogueMagicScepterExcel> RogueMagicScepterData { get; private set; } = [];
+    public static Dictionary<int, RogueMagicRoomExcel> RogueMagicRoomData { get; private set; } = [];
+    public static Dictionary<int, RogueMagicUnitExcel> RogueMagicUnitData { get; private set; } = [];
+    public static Dictionary<int, RogueMagicTalentExcel> RogueMagicTalentData { get; private set; } = [];
+
+    public static List<RogueMagicRoomConfig> RogueMagicRoomGenData { get; set; } =
+        [];
+
+    #endregion
+
     #region Actions
 
     public static void GetFloorInfo(int planeId, int floorId, out FloorInfo outer)

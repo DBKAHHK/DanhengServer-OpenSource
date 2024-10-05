@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static TakeRogueMiracleHandbookRewardCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CilUYWtlUm9ndWVNaXJhY2xlSGFuZGJvb2tSZXdhcmRDc1JlcS5wcm90byI6",
-            "CiNUYWtlUm9ndWVNaXJhY2xlSGFuZGJvb2tSZXdhcmRDc1JlcRITCgtLT0RJ",
-            "S0ZOSU5NShgEIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
-            "YgZwcm90bzM="));
+            "CilUYWtlUm9ndWVNaXJhY2xlSGFuZGJvb2tSZXdhcmRDc1JlcS5wcm90byJB",
+            "CiNUYWtlUm9ndWVNaXJhY2xlSGFuZGJvb2tSZXdhcmRDc1JlcRIaChJoYW5k",
+            "Ym9va19idWZmX2xpc3QYAyADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeRogueMiracleHandbookRewardCsReq), global::EggLink.DanhengServer.Proto.TakeRogueMiracleHandbookRewardCsReq.Parser, new[]{ "KODIKFNINMJ" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeRogueMiracleHandbookRewardCsReq), global::EggLink.DanhengServer.Proto.TakeRogueMiracleHandbookRewardCsReq.Parser, new[]{ "HandbookBuffList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TakeRogueMiracleHandbookRewardCsReq(TakeRogueMiracleHandbookRewardCsReq other) : this() {
-      kODIKFNINMJ_ = other.kODIKFNINMJ_.Clone();
+      handbookBuffList_ = other.handbookBuffList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new TakeRogueMiracleHandbookRewardCsReq(this);
     }
 
-    /// <summary>Field number for the "KODIKFNINMJ" field.</summary>
-    public const int KODIKFNINMJFieldNumber = 4;
-    private static readonly pb::FieldCodec<uint> _repeated_kODIKFNINMJ_codec
-        = pb::FieldCodec.ForUInt32(34);
-    private readonly pbc::RepeatedField<uint> kODIKFNINMJ_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "handbook_buff_list" field.</summary>
+    public const int HandbookBuffListFieldNumber = 3;
+    private static readonly pb::FieldCodec<uint> _repeated_handbookBuffList_codec
+        = pb::FieldCodec.ForUInt32(26);
+    private readonly pbc::RepeatedField<uint> handbookBuffList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> KODIKFNINMJ {
-      get { return kODIKFNINMJ_; }
+    public pbc::RepeatedField<uint> HandbookBuffList {
+      get { return handbookBuffList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!kODIKFNINMJ_.Equals(other.kODIKFNINMJ_)) return false;
+      if(!handbookBuffList_.Equals(other.handbookBuffList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= kODIKFNINMJ_.GetHashCode();
+      hash ^= handbookBuffList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      kODIKFNINMJ_.WriteTo(output, _repeated_kODIKFNINMJ_codec);
+      handbookBuffList_.WriteTo(output, _repeated_handbookBuffList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -147,7 +147,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      kODIKFNINMJ_.WriteTo(ref output, _repeated_kODIKFNINMJ_codec);
+      handbookBuffList_.WriteTo(ref output, _repeated_handbookBuffList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -158,7 +158,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += kODIKFNINMJ_.CalculateSize(_repeated_kODIKFNINMJ_codec);
+      size += handbookBuffList_.CalculateSize(_repeated_handbookBuffList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -171,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      kODIKFNINMJ_.Add(other.kODIKFNINMJ_);
+      handbookBuffList_.Add(other.handbookBuffList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -187,9 +187,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34:
-          case 32: {
-            kODIKFNINMJ_.AddEntriesFrom(input, _repeated_kODIKFNINMJ_codec);
+          case 26:
+          case 24: {
+            handbookBuffList_.AddEntriesFrom(input, _repeated_handbookBuffList_codec);
             break;
           }
         }
@@ -207,9 +207,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34:
-          case 32: {
-            kODIKFNINMJ_.AddEntriesFrom(ref input, _repeated_kODIKFNINMJ_codec);
+          case 26:
+          case 24: {
+            handbookBuffList_.AddEntriesFrom(ref input, _repeated_handbookBuffList_codec);
             break;
           }
         }

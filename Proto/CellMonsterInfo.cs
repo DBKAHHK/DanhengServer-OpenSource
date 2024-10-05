@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChVDZWxsTW9uc3RlckluZm8ucHJvdG8aEUNlbGxNb25zdGVyLnByb3RvImMK",
-            "D0NlbGxNb25zdGVySW5mbxIWCg5zZWxlY3RfYm9zc19pZBgBIAEoDRIPCgdj",
-            "b25maXJtGAwgASgIEicKEWNlbGxfbW9uc3Rlcl9saXN0GAMgAygLMgwuQ2Vs",
-            "bE1vbnN0ZXJCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "D0NlbGxNb25zdGVySW5mbxIWCg5zZWxlY3RfYm9zc19pZBgMIAEoDRInChFj",
+            "ZWxsX21vbnN0ZXJfbGlzdBgDIAMoCzIMLkNlbGxNb25zdGVyEg8KB2NvbmZp",
+            "cm0YDSABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CellMonsterReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CellMonsterInfo), global::EggLink.DanhengServer.Proto.CellMonsterInfo.Parser, new[]{ "SelectBossId", "Confirm", "CellMonsterList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CellMonsterInfo), global::EggLink.DanhengServer.Proto.CellMonsterInfo.Parser, new[]{ "SelectBossId", "CellMonsterList", "Confirm" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,8 +75,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CellMonsterInfo(CellMonsterInfo other) : this() {
       selectBossId_ = other.selectBossId_;
-      confirm_ = other.confirm_;
       cellMonsterList_ = other.cellMonsterList_.Clone();
+      confirm_ = other.confirm_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_boss_id" field.</summary>
-    public const int SelectBossIdFieldNumber = 1;
+    public const int SelectBossIdFieldNumber = 12;
     private uint selectBossId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,18 +95,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return selectBossId_; }
       set {
         selectBossId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "confirm" field.</summary>
-    public const int ConfirmFieldNumber = 12;
-    private bool confirm_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Confirm {
-      get { return confirm_; }
-      set {
-        confirm_ = value;
       }
     }
 
@@ -119,6 +107,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CellMonster> CellMonsterList {
       get { return cellMonsterList_; }
+    }
+
+    /// <summary>Field number for the "confirm" field.</summary>
+    public const int ConfirmFieldNumber = 13;
+    private bool confirm_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Confirm {
+      get { return confirm_; }
+      set {
+        confirm_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -137,8 +137,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (SelectBossId != other.SelectBossId) return false;
-      if (Confirm != other.Confirm) return false;
       if(!cellMonsterList_.Equals(other.cellMonsterList_)) return false;
+      if (Confirm != other.Confirm) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,8 +147,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (SelectBossId != 0) hash ^= SelectBossId.GetHashCode();
-      if (Confirm != false) hash ^= Confirm.GetHashCode();
       hash ^= cellMonsterList_.GetHashCode();
+      if (Confirm != false) hash ^= Confirm.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,13 +167,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      cellMonsterList_.WriteTo(output, _repeated_cellMonsterList_codec);
       if (SelectBossId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(96);
         output.WriteUInt32(SelectBossId);
       }
-      cellMonsterList_.WriteTo(output, _repeated_cellMonsterList_codec);
       if (Confirm != false) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(104);
         output.WriteBool(Confirm);
       }
       if (_unknownFields != null) {
@@ -186,13 +186,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      cellMonsterList_.WriteTo(ref output, _repeated_cellMonsterList_codec);
       if (SelectBossId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(96);
         output.WriteUInt32(SelectBossId);
       }
-      cellMonsterList_.WriteTo(ref output, _repeated_cellMonsterList_codec);
       if (Confirm != false) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(104);
         output.WriteBool(Confirm);
       }
       if (_unknownFields != null) {
@@ -208,10 +208,10 @@ namespace EggLink.DanhengServer.Proto {
       if (SelectBossId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SelectBossId);
       }
+      size += cellMonsterList_.CalculateSize(_repeated_cellMonsterList_codec);
       if (Confirm != false) {
         size += 1 + 1;
       }
-      size += cellMonsterList_.CalculateSize(_repeated_cellMonsterList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -227,10 +227,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other.SelectBossId != 0) {
         SelectBossId = other.SelectBossId;
       }
+      cellMonsterList_.Add(other.cellMonsterList_);
       if (other.Confirm != false) {
         Confirm = other.Confirm;
       }
-      cellMonsterList_.Add(other.cellMonsterList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -246,15 +246,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            SelectBossId = input.ReadUInt32();
-            break;
-          }
           case 26: {
             cellMonsterList_.AddEntriesFrom(input, _repeated_cellMonsterList_codec);
             break;
           }
           case 96: {
+            SelectBossId = input.ReadUInt32();
+            break;
+          }
+          case 104: {
             Confirm = input.ReadBool();
             break;
           }
@@ -273,15 +273,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            SelectBossId = input.ReadUInt32();
-            break;
-          }
           case 26: {
             cellMonsterList_.AddEntriesFrom(ref input, _repeated_cellMonsterList_codec);
             break;
           }
           case 96: {
+            SelectBossId = input.ReadUInt32();
+            break;
+          }
+          case 104: {
             Confirm = input.ReadBool();
             break;
           }

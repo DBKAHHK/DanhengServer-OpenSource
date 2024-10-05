@@ -25,16 +25,16 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZBZXRoZXJBdmF0YXJJbmZvLnByb3RvGiJBZXRoZXJkaXZpZGVTcGlyaXRM",
-            "aW5ldXBUeXBlLnByb3RvGg9TcEJhckluZm8ucHJvdG8ioAEKEEFldGhlckF2",
+            "aW5ldXBUeXBlLnByb3RvGg9TcEJhckluZm8ucHJvdG8irgEKEEFldGhlckF2",
             "YXRhckluZm8SCgoCaWQYASABKA0SDQoFaW5kZXgYAiABKA0SEQoJcHJvbW90",
-            "aW9uGAMgASgNEhUKDXBhc3NpdmVfc2tpbGwYBCADKA0SKwoEdHlwZRgFIAEo",
-            "DjIdLkFldGhlcmRpdmlkZVNwaXJpdExpbmV1cFR5cGUSGgoGc3BfYmFyGAYg",
-            "ASgLMgouU3BCYXJJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
-            "dG9iBnByb3RvMw=="));
+            "aW9uGAMgASgNEhUKDXBhc3NpdmVfc2tpbGwYBCADKA0SOQoSc3Bpcml0X2xp",
+            "bmV1cF90eXBlGAUgASgOMh0uQWV0aGVyZGl2aWRlU3Bpcml0TGluZXVwVHlw",
+            "ZRIaCgZzcF9iYXIYBiABKAsyCi5TcEJhckluZm9CHqoCG0VnZ0xpbmsuRGFu",
+            "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AetherdivideSpiritLineupTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.SpBarInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AetherAvatarInfo), global::EggLink.DanhengServer.Proto.AetherAvatarInfo.Parser, new[]{ "Id", "Index", "Promotion", "PassiveSkill", "Type", "SpBar" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AetherAvatarInfo), global::EggLink.DanhengServer.Proto.AetherAvatarInfo.Parser, new[]{ "Id", "Index", "Promotion", "PassiveSkill", "SpiritLineupType", "SpBar" }, null, null, null, null)
           }));
     }
     #endregion
@@ -80,7 +80,7 @@ namespace EggLink.DanhengServer.Proto {
       index_ = other.index_;
       promotion_ = other.promotion_;
       passiveSkill_ = other.passiveSkill_.Clone();
-      type_ = other.type_;
+      spiritLineupType_ = other.spiritLineupType_;
       spBar_ = other.spBar_ != null ? other.spBar_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -138,15 +138,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return passiveSkill_; }
     }
 
-    /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 5;
-    private global::EggLink.DanhengServer.Proto.AetherdivideSpiritLineupType type_ = global::EggLink.DanhengServer.Proto.AetherdivideSpiritLineupType.AetherdivideSpiritLineupNone;
+    /// <summary>Field number for the "spirit_lineup_type" field.</summary>
+    public const int SpiritLineupTypeFieldNumber = 5;
+    private global::EggLink.DanhengServer.Proto.AetherdivideSpiritLineupType spiritLineupType_ = global::EggLink.DanhengServer.Proto.AetherdivideSpiritLineupType.AetherdivideSpiritLineupNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.AetherdivideSpiritLineupType Type {
-      get { return type_; }
+    public global::EggLink.DanhengServer.Proto.AetherdivideSpiritLineupType SpiritLineupType {
+      get { return spiritLineupType_; }
       set {
-        type_ = value;
+        spiritLineupType_ = value;
       }
     }
 
@@ -181,7 +181,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Index != other.Index) return false;
       if (Promotion != other.Promotion) return false;
       if(!passiveSkill_.Equals(other.passiveSkill_)) return false;
-      if (Type != other.Type) return false;
+      if (SpiritLineupType != other.SpiritLineupType) return false;
       if (!object.Equals(SpBar, other.SpBar)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -194,7 +194,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Index != 0) hash ^= Index.GetHashCode();
       if (Promotion != 0) hash ^= Promotion.GetHashCode();
       hash ^= passiveSkill_.GetHashCode();
-      if (Type != global::EggLink.DanhengServer.Proto.AetherdivideSpiritLineupType.AetherdivideSpiritLineupNone) hash ^= Type.GetHashCode();
+      if (SpiritLineupType != global::EggLink.DanhengServer.Proto.AetherdivideSpiritLineupType.AetherdivideSpiritLineupNone) hash ^= SpiritLineupType.GetHashCode();
       if (spBar_ != null) hash ^= SpBar.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -227,9 +227,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Promotion);
       }
       passiveSkill_.WriteTo(output, _repeated_passiveSkill_codec);
-      if (Type != global::EggLink.DanhengServer.Proto.AetherdivideSpiritLineupType.AetherdivideSpiritLineupNone) {
+      if (SpiritLineupType != global::EggLink.DanhengServer.Proto.AetherdivideSpiritLineupType.AetherdivideSpiritLineupNone) {
         output.WriteRawTag(40);
-        output.WriteEnum((int) Type);
+        output.WriteEnum((int) SpiritLineupType);
       }
       if (spBar_ != null) {
         output.WriteRawTag(50);
@@ -258,9 +258,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Promotion);
       }
       passiveSkill_.WriteTo(ref output, _repeated_passiveSkill_codec);
-      if (Type != global::EggLink.DanhengServer.Proto.AetherdivideSpiritLineupType.AetherdivideSpiritLineupNone) {
+      if (SpiritLineupType != global::EggLink.DanhengServer.Proto.AetherdivideSpiritLineupType.AetherdivideSpiritLineupNone) {
         output.WriteRawTag(40);
-        output.WriteEnum((int) Type);
+        output.WriteEnum((int) SpiritLineupType);
       }
       if (spBar_ != null) {
         output.WriteRawTag(50);
@@ -286,8 +286,8 @@ namespace EggLink.DanhengServer.Proto {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Promotion);
       }
       size += passiveSkill_.CalculateSize(_repeated_passiveSkill_codec);
-      if (Type != global::EggLink.DanhengServer.Proto.AetherdivideSpiritLineupType.AetherdivideSpiritLineupNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      if (SpiritLineupType != global::EggLink.DanhengServer.Proto.AetherdivideSpiritLineupType.AetherdivideSpiritLineupNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SpiritLineupType);
       }
       if (spBar_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SpBar);
@@ -314,8 +314,8 @@ namespace EggLink.DanhengServer.Proto {
         Promotion = other.Promotion;
       }
       passiveSkill_.Add(other.passiveSkill_);
-      if (other.Type != global::EggLink.DanhengServer.Proto.AetherdivideSpiritLineupType.AetherdivideSpiritLineupNone) {
-        Type = other.Type;
+      if (other.SpiritLineupType != global::EggLink.DanhengServer.Proto.AetherdivideSpiritLineupType.AetherdivideSpiritLineupNone) {
+        SpiritLineupType = other.SpiritLineupType;
       }
       if (other.spBar_ != null) {
         if (spBar_ == null) {
@@ -356,7 +356,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            Type = (global::EggLink.DanhengServer.Proto.AetherdivideSpiritLineupType) input.ReadEnum();
+            SpiritLineupType = (global::EggLink.DanhengServer.Proto.AetherdivideSpiritLineupType) input.ReadEnum();
             break;
           }
           case 50: {
@@ -399,7 +399,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            Type = (global::EggLink.DanhengServer.Proto.AetherdivideSpiritLineupType) input.ReadEnum();
+            SpiritLineupType = (global::EggLink.DanhengServer.Proto.AetherdivideSpiritLineupType) input.ReadEnum();
             break;
           }
           case 50: {

@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhQcm9wQ2hlc3NSb2d1ZUluZm8ucHJvdG8iQgoSUHJvcENoZXNzUm9ndWVJ",
-            "bmZvEhMKC0RHSktGS05QTkxGGA4gASgIEhcKD2VudGVyX25leHRfY2VsbBgJ",
+            "bmZvEhcKD2VudGVyX25leHRfY2VsbBgCIAEoCBITCgtFSEJIQkFHUEFIQhgL",
             "IAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PropChessRogueInfo), global::EggLink.DanhengServer.Proto.PropChessRogueInfo.Parser, new[]{ "DGJKFKNPNLF", "EnterNextCell" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PropChessRogueInfo), global::EggLink.DanhengServer.Proto.PropChessRogueInfo.Parser, new[]{ "EnterNextCell", "EHBHBAGPAHB" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PropChessRogueInfo(PropChessRogueInfo other) : this() {
-      dGJKFKNPNLF_ = other.dGJKFKNPNLF_;
       enterNextCell_ = other.enterNextCell_;
+      eHBHBAGPAHB_ = other.eHBHBAGPAHB_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,27 +83,30 @@ namespace EggLink.DanhengServer.Proto {
       return new PropChessRogueInfo(this);
     }
 
-    /// <summary>Field number for the "DGJKFKNPNLF" field.</summary>
-    public const int DGJKFKNPNLFFieldNumber = 14;
-    private bool dGJKFKNPNLF_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool DGJKFKNPNLF {
-      get { return dGJKFKNPNLF_; }
-      set {
-        dGJKFKNPNLF_ = value;
-      }
-    }
-
     /// <summary>Field number for the "enter_next_cell" field.</summary>
-    public const int EnterNextCellFieldNumber = 9;
+    public const int EnterNextCellFieldNumber = 2;
     private bool enterNextCell_;
+    /// <summary>
+    /// 11
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool EnterNextCell {
       get { return enterNextCell_; }
       set {
         enterNextCell_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "EHBHBAGPAHB" field.</summary>
+    public const int EHBHBAGPAHBFieldNumber = 11;
+    private bool eHBHBAGPAHB_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EHBHBAGPAHB {
+      get { return eHBHBAGPAHB_; }
+      set {
+        eHBHBAGPAHB_ = value;
       }
     }
 
@@ -122,8 +125,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DGJKFKNPNLF != other.DGJKFKNPNLF) return false;
       if (EnterNextCell != other.EnterNextCell) return false;
+      if (EHBHBAGPAHB != other.EHBHBAGPAHB) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +134,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (DGJKFKNPNLF != false) hash ^= DGJKFKNPNLF.GetHashCode();
       if (EnterNextCell != false) hash ^= EnterNextCell.GetHashCode();
+      if (EHBHBAGPAHB != false) hash ^= EHBHBAGPAHB.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,12 +155,12 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (EnterNextCell != false) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(16);
         output.WriteBool(EnterNextCell);
       }
-      if (DGJKFKNPNLF != false) {
-        output.WriteRawTag(112);
-        output.WriteBool(DGJKFKNPNLF);
+      if (EHBHBAGPAHB != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(EHBHBAGPAHB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,12 +173,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (EnterNextCell != false) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(16);
         output.WriteBool(EnterNextCell);
       }
-      if (DGJKFKNPNLF != false) {
-        output.WriteRawTag(112);
-        output.WriteBool(DGJKFKNPNLF);
+      if (EHBHBAGPAHB != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(EHBHBAGPAHB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,10 +190,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (DGJKFKNPNLF != false) {
+      if (EnterNextCell != false) {
         size += 1 + 1;
       }
-      if (EnterNextCell != false) {
+      if (EHBHBAGPAHB != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -205,11 +208,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.DGJKFKNPNLF != false) {
-        DGJKFKNPNLF = other.DGJKFKNPNLF;
-      }
       if (other.EnterNextCell != false) {
         EnterNextCell = other.EnterNextCell;
+      }
+      if (other.EHBHBAGPAHB != false) {
+        EHBHBAGPAHB = other.EHBHBAGPAHB;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,12 +229,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
+          case 16: {
             EnterNextCell = input.ReadBool();
             break;
           }
-          case 112: {
-            DGJKFKNPNLF = input.ReadBool();
+          case 88: {
+            EHBHBAGPAHB = input.ReadBool();
             break;
           }
         }
@@ -249,12 +252,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
+          case 16: {
             EnterNextCell = input.ReadBool();
             break;
           }
-          case 112: {
-            DGJKFKNPNLF = input.ReadBool();
+          case 88: {
+            EHBHBAGPAHB = input.ReadBool();
             break;
           }
         }

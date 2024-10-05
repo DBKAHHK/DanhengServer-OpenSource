@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdIYW5kbGVGcmllbmRDc1JlcS5wcm90byIzChFIYW5kbGVGcmllbmRDc1Jl",
-            "cRIRCglpc19hY2NlcHQYDCABKAgSCwoDdWlkGAsgASgNQh6qAhtFZ2dMaW5r",
+            "cRIRCglpc19hY2NlcHQYCCABKAgSCwoDdWlkGAwgASgNQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_accept" field.</summary>
-    public const int IsAcceptFieldNumber = 12;
+    public const int IsAcceptFieldNumber = 8;
     private bool isAccept_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "uid" field.</summary>
-    public const int UidFieldNumber = 11;
+    public const int UidFieldNumber = 12;
     private uint uid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Uid != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(Uid);
-      }
       if (IsAccept != false) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteBool(IsAccept);
+      }
+      if (Uid != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Uid);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Uid != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(Uid);
-      }
       if (IsAccept != false) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteBool(IsAccept);
+      }
+      if (Uid != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Uid);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 88: {
-            Uid = input.ReadUInt32();
+          case 64: {
+            IsAccept = input.ReadBool();
             break;
           }
           case 96: {
-            IsAccept = input.ReadBool();
+            Uid = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 88: {
-            Uid = input.ReadUInt32();
+          case 64: {
+            IsAccept = input.ReadBool();
             break;
           }
           case 96: {
-            IsAccept = input.ReadBool();
+            Uid = input.ReadUInt32();
             break;
           }
         }

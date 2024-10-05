@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static ItemListReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg5JdGVtTGlzdC5wcm90bxoKSXRlbS5wcm90byIkCghJdGVtTGlzdBIYCglp",
-            "dGVtX2xpc3QYCiADKAsyBS5JdGVtQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "Cg5JdGVtTGlzdC5wcm90bxoKSXRlbS5wcm90byIkCghJdGVtTGlzdBIYCglJ",
+            "dGVtTGlzdF8YDCADKAsyBS5JdGVtQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemReflection.Descriptor, },
@@ -82,10 +82,10 @@ namespace EggLink.DanhengServer.Proto {
       return new ItemList(this);
     }
 
-    /// <summary>Field number for the "item_list" field.</summary>
-    public const int ItemList_FieldNumber = 10;
+    /// <summary>Field number for the "ItemList_" field.</summary>
+    public const int ItemList_FieldNumber = 12;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.Item> _repeated_itemList_codec
-        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.Item.Parser);
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.Item.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Item> itemList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Item>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 82: {
+          case 98: {
             itemList_.AddEntriesFrom(input, _repeated_itemList_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 82: {
+          case 98: {
             itemList_.AddEntriesFrom(ref input, _repeated_itemList_codec);
             break;
           }

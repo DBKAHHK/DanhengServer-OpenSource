@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1TeW5jUm9ndWVTdGF0dXNTY05vdGlmeS5wcm90bxoRUm9ndWVTdGF0dXMu",
-            "cHJvdG8iTAoXU3luY1JvZ3VlU3RhdHVzU2NOb3RpZnkSEwoLQ1BHT0hJTklM",
-            "T0kYDyABKAgSHAoGc3RhdHVzGAYgASgOMgwuUm9ndWVTdGF0dXNCHqoCG0Vn",
+            "cHJvdG8iTAoXU3luY1JvZ3VlU3RhdHVzU2NOb3RpZnkSEwoLTU1HRkNJTElD",
+            "TkQYBSABKAgSHAoGc3RhdHVzGAcgASgOMgwuUm9ndWVTdGF0dXNCHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SyncRogueStatusScNotify), global::EggLink.DanhengServer.Proto.SyncRogueStatusScNotify.Parser, new[]{ "CPGOHINILOI", "Status" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SyncRogueStatusScNotify), global::EggLink.DanhengServer.Proto.SyncRogueStatusScNotify.Parser, new[]{ "MMGFCILICND", "Status" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SyncRogueStatusScNotify(SyncRogueStatusScNotify other) : this() {
-      cPGOHINILOI_ = other.cPGOHINILOI_;
+      mMGFCILICND_ = other.mMGFCILICND_;
       status_ = other.status_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,20 +84,20 @@ namespace EggLink.DanhengServer.Proto {
       return new SyncRogueStatusScNotify(this);
     }
 
-    /// <summary>Field number for the "CPGOHINILOI" field.</summary>
-    public const int CPGOHINILOIFieldNumber = 15;
-    private bool cPGOHINILOI_;
+    /// <summary>Field number for the "MMGFCILICND" field.</summary>
+    public const int MMGFCILICNDFieldNumber = 5;
+    private bool mMGFCILICND_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool CPGOHINILOI {
-      get { return cPGOHINILOI_; }
+    public bool MMGFCILICND {
+      get { return mMGFCILICND_; }
       set {
-        cPGOHINILOI_ = value;
+        mMGFCILICND_ = value;
       }
     }
 
     /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 6;
+    public const int StatusFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.RogueStatus status_ = global::EggLink.DanhengServer.Proto.RogueStatus.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CPGOHINILOI != other.CPGOHINILOI) return false;
+      if (MMGFCILICND != other.MMGFCILICND) return false;
       if (Status != other.Status) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -132,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CPGOHINILOI != false) hash ^= CPGOHINILOI.GetHashCode();
+      if (MMGFCILICND != false) hash ^= MMGFCILICND.GetHashCode();
       if (Status != global::EggLink.DanhengServer.Proto.RogueStatus.None) hash ^= Status.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Status != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
-        output.WriteRawTag(48);
-        output.WriteEnum((int) Status);
+      if (MMGFCILICND != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(MMGFCILICND);
       }
-      if (CPGOHINILOI != false) {
-        output.WriteRawTag(120);
-        output.WriteBool(CPGOHINILOI);
+      if (Status != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) Status);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Status != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
-        output.WriteRawTag(48);
-        output.WriteEnum((int) Status);
+      if (MMGFCILICND != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(MMGFCILICND);
       }
-      if (CPGOHINILOI != false) {
-        output.WriteRawTag(120);
-        output.WriteBool(CPGOHINILOI);
+      if (Status != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) Status);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CPGOHINILOI != false) {
+      if (MMGFCILICND != false) {
         size += 1 + 1;
       }
       if (Status != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
@@ -206,8 +206,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.CPGOHINILOI != false) {
-        CPGOHINILOI = other.CPGOHINILOI;
+      if (other.MMGFCILICND != false) {
+        MMGFCILICND = other.MMGFCILICND;
       }
       if (other.Status != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
         Status = other.Status;
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            Status = (global::EggLink.DanhengServer.Proto.RogueStatus) input.ReadEnum();
+          case 40: {
+            MMGFCILICND = input.ReadBool();
             break;
           }
-          case 120: {
-            CPGOHINILOI = input.ReadBool();
+          case 56: {
+            Status = (global::EggLink.DanhengServer.Proto.RogueStatus) input.ReadEnum();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            Status = (global::EggLink.DanhengServer.Proto.RogueStatus) input.ReadEnum();
+          case 40: {
+            MMGFCILICND = input.ReadBool();
             break;
           }
-          case 120: {
-            CPGOHINILOI = input.ReadBool();
+          case 56: {
+            Status = (global::EggLink.DanhengServer.Proto.RogueStatus) input.ReadEnum();
             break;
           }
         }

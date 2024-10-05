@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static DiscardRelicCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdEaXNjYXJkUmVsaWNDc1JlcS5wcm90byJaChFEaXNjYXJkUmVsaWNDc1Jl",
-            "cRISCgppc19kaXNjYXJkGAYgASgIEhwKFHJlbGljX3VuaXF1ZV9pZF9saXN0",
-            "GAMgAygNEhMKC0tJSktQRVBEREVMGA8gASgIQh6qAhtFZ2dMaW5rLkRhbmhl",
-            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChdEaXNjYXJkUmVsaWNDc1JlcS5wcm90byJSChFEaXNjYXJkUmVsaWNDc1Jl",
+            "cRITCgtLRUZLQURPUE9FQxgDIAEoCBITCgtPS0tKRklCTkdDRRgLIAEoCBIT",
+            "CgtFQU1MS0xBQkZCTxgKIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DiscardRelicCsReq), global::EggLink.DanhengServer.Proto.DiscardRelicCsReq.Parser, new[]{ "IsDiscard", "RelicUniqueIdList", "KIJKPEPDDEL" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DiscardRelicCsReq), global::EggLink.DanhengServer.Proto.DiscardRelicCsReq.Parser, new[]{ "KEFKADOPOEC", "OKKJFIBNGCE", "EAMLKLABFBO" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DiscardRelicCsReq(DiscardRelicCsReq other) : this() {
-      isDiscard_ = other.isDiscard_;
-      relicUniqueIdList_ = other.relicUniqueIdList_.Clone();
-      kIJKPEPDDEL_ = other.kIJKPEPDDEL_;
+      kEFKADOPOEC_ = other.kEFKADOPOEC_;
+      oKKJFIBNGCE_ = other.oKKJFIBNGCE_;
+      eAMLKLABFBO_ = other.eAMLKLABFBO_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,39 +85,39 @@ namespace EggLink.DanhengServer.Proto {
       return new DiscardRelicCsReq(this);
     }
 
-    /// <summary>Field number for the "is_discard" field.</summary>
-    public const int IsDiscardFieldNumber = 6;
-    private bool isDiscard_;
+    /// <summary>Field number for the "KEFKADOPOEC" field.</summary>
+    public const int KEFKADOPOECFieldNumber = 3;
+    private bool kEFKADOPOEC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsDiscard {
-      get { return isDiscard_; }
+    public bool KEFKADOPOEC {
+      get { return kEFKADOPOEC_; }
       set {
-        isDiscard_ = value;
+        kEFKADOPOEC_ = value;
       }
     }
 
-    /// <summary>Field number for the "relic_unique_id_list" field.</summary>
-    public const int RelicUniqueIdListFieldNumber = 3;
-    private static readonly pb::FieldCodec<uint> _repeated_relicUniqueIdList_codec
-        = pb::FieldCodec.ForUInt32(26);
-    private readonly pbc::RepeatedField<uint> relicUniqueIdList_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "OKKJFIBNGCE" field.</summary>
+    public const int OKKJFIBNGCEFieldNumber = 11;
+    private bool oKKJFIBNGCE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> RelicUniqueIdList {
-      get { return relicUniqueIdList_; }
+    public bool OKKJFIBNGCE {
+      get { return oKKJFIBNGCE_; }
+      set {
+        oKKJFIBNGCE_ = value;
+      }
     }
 
-    /// <summary>Field number for the "KIJKPEPDDEL" field.</summary>
-    public const int KIJKPEPDDELFieldNumber = 15;
-    private bool kIJKPEPDDEL_;
+    /// <summary>Field number for the "EAMLKLABFBO" field.</summary>
+    public const int EAMLKLABFBOFieldNumber = 10;
+    private static readonly pb::FieldCodec<uint> _repeated_eAMLKLABFBO_codec
+        = pb::FieldCodec.ForUInt32(82);
+    private readonly pbc::RepeatedField<uint> eAMLKLABFBO_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool KIJKPEPDDEL {
-      get { return kIJKPEPDDEL_; }
-      set {
-        kIJKPEPDDEL_ = value;
-      }
+    public pbc::RepeatedField<uint> EAMLKLABFBO {
+      get { return eAMLKLABFBO_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -135,9 +135,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsDiscard != other.IsDiscard) return false;
-      if(!relicUniqueIdList_.Equals(other.relicUniqueIdList_)) return false;
-      if (KIJKPEPDDEL != other.KIJKPEPDDEL) return false;
+      if (KEFKADOPOEC != other.KEFKADOPOEC) return false;
+      if (OKKJFIBNGCE != other.OKKJFIBNGCE) return false;
+      if(!eAMLKLABFBO_.Equals(other.eAMLKLABFBO_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,9 +145,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsDiscard != false) hash ^= IsDiscard.GetHashCode();
-      hash ^= relicUniqueIdList_.GetHashCode();
-      if (KIJKPEPDDEL != false) hash ^= KIJKPEPDDEL.GetHashCode();
+      if (KEFKADOPOEC != false) hash ^= KEFKADOPOEC.GetHashCode();
+      if (OKKJFIBNGCE != false) hash ^= OKKJFIBNGCE.GetHashCode();
+      hash ^= eAMLKLABFBO_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,14 +166,14 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      relicUniqueIdList_.WriteTo(output, _repeated_relicUniqueIdList_codec);
-      if (IsDiscard != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(IsDiscard);
+      if (KEFKADOPOEC != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(KEFKADOPOEC);
       }
-      if (KIJKPEPDDEL != false) {
-        output.WriteRawTag(120);
-        output.WriteBool(KIJKPEPDDEL);
+      eAMLKLABFBO_.WriteTo(output, _repeated_eAMLKLABFBO_codec);
+      if (OKKJFIBNGCE != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(OKKJFIBNGCE);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -185,14 +185,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      relicUniqueIdList_.WriteTo(ref output, _repeated_relicUniqueIdList_codec);
-      if (IsDiscard != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(IsDiscard);
+      if (KEFKADOPOEC != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(KEFKADOPOEC);
       }
-      if (KIJKPEPDDEL != false) {
-        output.WriteRawTag(120);
-        output.WriteBool(KIJKPEPDDEL);
+      eAMLKLABFBO_.WriteTo(ref output, _repeated_eAMLKLABFBO_codec);
+      if (OKKJFIBNGCE != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(OKKJFIBNGCE);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -204,13 +204,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsDiscard != false) {
+      if (KEFKADOPOEC != false) {
         size += 1 + 1;
       }
-      size += relicUniqueIdList_.CalculateSize(_repeated_relicUniqueIdList_codec);
-      if (KIJKPEPDDEL != false) {
+      if (OKKJFIBNGCE != false) {
         size += 1 + 1;
       }
+      size += eAMLKLABFBO_.CalculateSize(_repeated_eAMLKLABFBO_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -223,13 +223,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsDiscard != false) {
-        IsDiscard = other.IsDiscard;
+      if (other.KEFKADOPOEC != false) {
+        KEFKADOPOEC = other.KEFKADOPOEC;
       }
-      relicUniqueIdList_.Add(other.relicUniqueIdList_);
-      if (other.KIJKPEPDDEL != false) {
-        KIJKPEPDDEL = other.KIJKPEPDDEL;
+      if (other.OKKJFIBNGCE != false) {
+        OKKJFIBNGCE = other.OKKJFIBNGCE;
       }
+      eAMLKLABFBO_.Add(other.eAMLKLABFBO_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -245,17 +245,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26:
           case 24: {
-            relicUniqueIdList_.AddEntriesFrom(input, _repeated_relicUniqueIdList_codec);
+            KEFKADOPOEC = input.ReadBool();
             break;
           }
-          case 48: {
-            IsDiscard = input.ReadBool();
+          case 82:
+          case 80: {
+            eAMLKLABFBO_.AddEntriesFrom(input, _repeated_eAMLKLABFBO_codec);
             break;
           }
-          case 120: {
-            KIJKPEPDDEL = input.ReadBool();
+          case 88: {
+            OKKJFIBNGCE = input.ReadBool();
             break;
           }
         }
@@ -273,17 +273,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26:
           case 24: {
-            relicUniqueIdList_.AddEntriesFrom(ref input, _repeated_relicUniqueIdList_codec);
+            KEFKADOPOEC = input.ReadBool();
             break;
           }
-          case 48: {
-            IsDiscard = input.ReadBool();
+          case 82:
+          case 80: {
+            eAMLKLABFBO_.AddEntriesFrom(ref input, _repeated_eAMLKLABFBO_codec);
             break;
           }
-          case 120: {
-            KIJKPEPDDEL = input.ReadBool();
+          case 88: {
+            OKKJFIBNGCE = input.ReadBool();
             break;
           }
         }

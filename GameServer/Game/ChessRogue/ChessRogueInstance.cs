@@ -660,8 +660,8 @@ public class ChessRogueInstance : BaseRogueInstance
     {
         var info = new ChessRogueFinishInfo
         {
-            EndAreaId = (uint)AreaExcel.AreaID,
-            LastLayerId = (uint)CurLayer,
+            //EndAreaId = (uint)AreaExcel.AreaID,
+            //LastLayerId = (uint)CurLayer,
             RogueLineup = CurLineup!.ToProto(),
             DifficultyLevel =
                 uint.Parse(AreaExcel.AreaID.ToString().Substring(AreaExcel.AreaID.ToString().Length - 1, 1)),

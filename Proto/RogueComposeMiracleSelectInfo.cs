@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static RogueComposeMiracleSelectInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNSb2d1ZUNvbXBvc2VNaXJhY2xlU2VsZWN0SW5mby5wcm90byJXCh1Sb2d1",
-            "ZUNvbXBvc2VNaXJhY2xlU2VsZWN0SW5mbxIeChZzZWxlY3RfbWlyYWNsZV9p",
-            "ZF9saXN0GA0gAygNEhYKDnNlbGVjdF9oaW50X2lkGAkgASgNQh6qAhtFZ2dM",
-            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "CiNSb2d1ZUNvbXBvc2VNaXJhY2xlU2VsZWN0SW5mby5wcm90byJMCh1Sb2d1",
+            "ZUNvbXBvc2VNaXJhY2xlU2VsZWN0SW5mbxIWCg5zZWxlY3RfaGludF9pZBgN",
+            "IAEoDRITCgtGR0tOTkZHSEVHRxgBIAMoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueComposeMiracleSelectInfo), global::EggLink.DanhengServer.Proto.RogueComposeMiracleSelectInfo.Parser, new[]{ "SelectMiracleIdList", "SelectHintId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueComposeMiracleSelectInfo), global::EggLink.DanhengServer.Proto.RogueComposeMiracleSelectInfo.Parser, new[]{ "SelectHintId", "FGKNNFGHEGG" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueComposeMiracleSelectInfo(RogueComposeMiracleSelectInfo other) : this() {
-      selectMiracleIdList_ = other.selectMiracleIdList_.Clone();
       selectHintId_ = other.selectHintId_;
+      fGKNNFGHEGG_ = other.fGKNNFGHEGG_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,19 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueComposeMiracleSelectInfo(this);
     }
 
-    /// <summary>Field number for the "select_miracle_id_list" field.</summary>
-    public const int SelectMiracleIdListFieldNumber = 13;
-    private static readonly pb::FieldCodec<uint> _repeated_selectMiracleIdList_codec
-        = pb::FieldCodec.ForUInt32(106);
-    private readonly pbc::RepeatedField<uint> selectMiracleIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> SelectMiracleIdList {
-      get { return selectMiracleIdList_; }
-    }
-
     /// <summary>Field number for the "select_hint_id" field.</summary>
-    public const int SelectHintIdFieldNumber = 9;
+    public const int SelectHintIdFieldNumber = 13;
     private uint selectHintId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +94,17 @@ namespace EggLink.DanhengServer.Proto {
       set {
         selectHintId_ = value;
       }
+    }
+
+    /// <summary>Field number for the "FGKNNFGHEGG" field.</summary>
+    public const int FGKNNFGHEGGFieldNumber = 1;
+    private static readonly pb::FieldCodec<uint> _repeated_fGKNNFGHEGG_codec
+        = pb::FieldCodec.ForUInt32(10);
+    private readonly pbc::RepeatedField<uint> fGKNNFGHEGG_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> FGKNNFGHEGG {
+      get { return fGKNNFGHEGG_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!selectMiracleIdList_.Equals(other.selectMiracleIdList_)) return false;
       if (SelectHintId != other.SelectHintId) return false;
+      if(!fGKNNFGHEGG_.Equals(other.fGKNNFGHEGG_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= selectMiracleIdList_.GetHashCode();
       if (SelectHintId != 0) hash ^= SelectHintId.GetHashCode();
+      hash ^= fGKNNFGHEGG_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      fGKNNFGHEGG_.WriteTo(output, _repeated_fGKNNFGHEGG_codec);
       if (SelectHintId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(104);
         output.WriteUInt32(SelectHintId);
       }
-      selectMiracleIdList_.WriteTo(output, _repeated_selectMiracleIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      fGKNNFGHEGG_.WriteTo(ref output, _repeated_fGKNNFGHEGG_codec);
       if (SelectHintId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(104);
         output.WriteUInt32(SelectHintId);
       }
-      selectMiracleIdList_.WriteTo(ref output, _repeated_selectMiracleIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -181,10 +181,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += selectMiracleIdList_.CalculateSize(_repeated_selectMiracleIdList_codec);
       if (SelectHintId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SelectHintId);
       }
+      size += fGKNNFGHEGG_.CalculateSize(_repeated_fGKNNFGHEGG_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -197,10 +197,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      selectMiracleIdList_.Add(other.selectMiracleIdList_);
       if (other.SelectHintId != 0) {
         SelectHintId = other.SelectHintId;
       }
+      fGKNNFGHEGG_.Add(other.fGKNNFGHEGG_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
-            SelectHintId = input.ReadUInt32();
+          case 10:
+          case 8: {
+            fGKNNFGHEGG_.AddEntriesFrom(input, _repeated_fGKNNFGHEGG_codec);
             break;
           }
-          case 106:
           case 104: {
-            selectMiracleIdList_.AddEntriesFrom(input, _repeated_selectMiracleIdList_codec);
+            SelectHintId = input.ReadUInt32();
             break;
           }
         }
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
-            SelectHintId = input.ReadUInt32();
+          case 10:
+          case 8: {
+            fGKNNFGHEGG_.AddEntriesFrom(ref input, _repeated_fGKNNFGHEGG_codec);
             break;
           }
-          case 106:
           case 104: {
-            selectMiracleIdList_.AddEntriesFrom(ref input, _repeated_selectMiracleIdList_codec);
+            SelectHintId = input.ReadUInt32();
             break;
           }
         }

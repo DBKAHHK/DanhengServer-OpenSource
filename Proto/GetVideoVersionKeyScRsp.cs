@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch1HZXRWaWRlb1ZlcnNpb25LZXlTY1JzcC5wcm90bxoSVmlkZW9LZXlJbmZv",
             "LnByb3RvIosBChdHZXRWaWRlb1ZlcnNpb25LZXlTY1JzcBIPCgdyZXRjb2Rl",
-            "GAUgASgNEioKE3ZpZGVvX2tleV9pbmZvX2xpc3QYByADKAsyDS5WaWRlb0tl",
-            "eUluZm8SMwocYWN0aXZpdHlfdmlkZW9fa2V5X2luZm9fbGlzdBgCIAMoCzIN",
+            "GAkgASgNEioKE3ZpZGVvX2tleV9pbmZvX2xpc3QYDiADKAsyDS5WaWRlb0tl",
+            "eUluZm8SMwocYWN0aXZpdHlfdmlkZW9fa2V5X2luZm9fbGlzdBgFIAMoCzIN",
             "LlZpZGVvS2V5SW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -88,7 +88,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 5;
+    public const int RetcodeFieldNumber = 9;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,9 +100,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "video_key_info_list" field.</summary>
-    public const int VideoKeyInfoListFieldNumber = 7;
+    public const int VideoKeyInfoListFieldNumber = 14;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.VideoKeyInfo> _repeated_videoKeyInfoList_codec
-        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.VideoKeyInfo.Parser);
+        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.VideoKeyInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.VideoKeyInfo> videoKeyInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.VideoKeyInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,9 +111,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "activity_video_key_info_list" field.</summary>
-    public const int ActivityVideoKeyInfoListFieldNumber = 2;
+    public const int ActivityVideoKeyInfoListFieldNumber = 5;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.VideoKeyInfo> _repeated_activityVideoKeyInfoList_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.VideoKeyInfo.Parser);
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.VideoKeyInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.VideoKeyInfo> activityVideoKeyInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.VideoKeyInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -169,7 +169,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       activityVideoKeyInfoList_.WriteTo(output, _repeated_activityVideoKeyInfoList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
       }
       videoKeyInfoList_.WriteTo(output, _repeated_videoKeyInfoList_codec);
@@ -185,7 +185,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       activityVideoKeyInfoList_.WriteTo(ref output, _repeated_activityVideoKeyInfoList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
       }
       videoKeyInfoList_.WriteTo(ref output, _repeated_videoKeyInfoList_codec);
@@ -236,15 +236,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 42: {
             activityVideoKeyInfoList_.AddEntriesFrom(input, _repeated_activityVideoKeyInfoList_codec);
             break;
           }
-          case 40: {
+          case 72: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 58: {
+          case 114: {
             videoKeyInfoList_.AddEntriesFrom(input, _repeated_videoKeyInfoList_codec);
             break;
           }
@@ -263,15 +263,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 42: {
             activityVideoKeyInfoList_.AddEntriesFrom(ref input, _repeated_activityVideoKeyInfoList_codec);
             break;
           }
-          case 40: {
+          case 72: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 58: {
+          case 114: {
             videoKeyInfoList_.AddEntriesFrom(ref input, _repeated_videoKeyInfoList_codec);
             break;
           }

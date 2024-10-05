@@ -25,16 +25,16 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChJEb0dhY2hhU2NSc3AucHJvdG8aD0dhY2hhSXRlbS5wcm90byLSAQoMRG9H",
-            "YWNoYVNjUnNwEg8KB3JldGNvZGUYBCABKA0SEwoLUEdQSElQQkNHQVAYASAB",
-            "KA0SEwoLTUtBQU9IRUVGQkMYCiABKA0SEwoLQ1BKS0hKRUFFQk0YDyABKA0S",
-            "IwoPZ2FjaGFfaXRlbV9saXN0GAwgAygLMgouR2FjaGFJdGVtEhEKCWdhY2hh",
-            "X251bRgIIAEoDRITCgtjZWlsaW5nX251bRgHIAEoDRIQCghnYWNoYV9pZBgG",
-            "IAEoDRITCgtFQ0tPRUhNSEpCTRgOIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "YWNoYVNjUnNwEhMKC0tFQUNHTUxLQkRLGA4gASgNEhMKC1BKQUZJTU1DUERG",
+            "GAIgASgNEhMKC0hOUENQREpQR0xMGA0gASgNEhEKCWdhY2hhX251bRgLIAEo",
+            "DRIQCghnYWNoYV9pZBgFIAEoDRITCgtjZWlsaW5nX251bRgBIAEoDRITCgtM",
+            "SE1CTk1JT0tIQhgPIAEoDRIPCgdyZXRjb2RlGAYgASgNEiMKD2dhY2hhX2l0",
+            "ZW1fbGlzdBgIIAMoCzIKLkdhY2hhSXRlbUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GachaItemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DoGachaScRsp), global::EggLink.DanhengServer.Proto.DoGachaScRsp.Parser, new[]{ "Retcode", "PGPHIPBCGAP", "MKAAOHEEFBC", "CPJKHJEAEBM", "GachaItemList", "GachaNum", "CeilingNum", "GachaId", "ECKOEHMHJBM" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DoGachaScRsp), global::EggLink.DanhengServer.Proto.DoGachaScRsp.Parser, new[]{ "KEACGMLKBDK", "PJAFIMMCPDF", "HNPCPDJPGLL", "GachaNum", "GachaId", "CeilingNum", "LHMBNMIOKHB", "Retcode", "GachaItemList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,15 +76,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DoGachaScRsp(DoGachaScRsp other) : this() {
-      retcode_ = other.retcode_;
-      pGPHIPBCGAP_ = other.pGPHIPBCGAP_;
-      mKAAOHEEFBC_ = other.mKAAOHEEFBC_;
-      cPJKHJEAEBM_ = other.cPJKHJEAEBM_;
-      gachaItemList_ = other.gachaItemList_.Clone();
+      kEACGMLKBDK_ = other.kEACGMLKBDK_;
+      pJAFIMMCPDF_ = other.pJAFIMMCPDF_;
+      hNPCPDJPGLL_ = other.hNPCPDJPGLL_;
       gachaNum_ = other.gachaNum_;
-      ceilingNum_ = other.ceilingNum_;
       gachaId_ = other.gachaId_;
-      eCKOEHMHJBM_ = other.eCKOEHMHJBM_;
+      ceilingNum_ = other.ceilingNum_;
+      lHMBNMIOKHB_ = other.lHMBNMIOKHB_;
+      retcode_ = other.retcode_;
+      gachaItemList_ = other.gachaItemList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -94,67 +94,44 @@ namespace EggLink.DanhengServer.Proto {
       return new DoGachaScRsp(this);
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 4;
-    private uint retcode_;
+    /// <summary>Field number for the "KEACGMLKBDK" field.</summary>
+    public const int KEACGMLKBDKFieldNumber = 14;
+    private uint kEACGMLKBDK_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
+    public uint KEACGMLKBDK {
+      get { return kEACGMLKBDK_; }
       set {
-        retcode_ = value;
+        kEACGMLKBDK_ = value;
       }
     }
 
-    /// <summary>Field number for the "PGPHIPBCGAP" field.</summary>
-    public const int PGPHIPBCGAPFieldNumber = 1;
-    private uint pGPHIPBCGAP_;
+    /// <summary>Field number for the "PJAFIMMCPDF" field.</summary>
+    public const int PJAFIMMCPDFFieldNumber = 2;
+    private uint pJAFIMMCPDF_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PGPHIPBCGAP {
-      get { return pGPHIPBCGAP_; }
+    public uint PJAFIMMCPDF {
+      get { return pJAFIMMCPDF_; }
       set {
-        pGPHIPBCGAP_ = value;
+        pJAFIMMCPDF_ = value;
       }
     }
 
-    /// <summary>Field number for the "MKAAOHEEFBC" field.</summary>
-    public const int MKAAOHEEFBCFieldNumber = 10;
-    private uint mKAAOHEEFBC_;
+    /// <summary>Field number for the "HNPCPDJPGLL" field.</summary>
+    public const int HNPCPDJPGLLFieldNumber = 13;
+    private uint hNPCPDJPGLL_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MKAAOHEEFBC {
-      get { return mKAAOHEEFBC_; }
+    public uint HNPCPDJPGLL {
+      get { return hNPCPDJPGLL_; }
       set {
-        mKAAOHEEFBC_ = value;
+        hNPCPDJPGLL_ = value;
       }
-    }
-
-    /// <summary>Field number for the "CPJKHJEAEBM" field.</summary>
-    public const int CPJKHJEAEBMFieldNumber = 15;
-    private uint cPJKHJEAEBM_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CPJKHJEAEBM {
-      get { return cPJKHJEAEBM_; }
-      set {
-        cPJKHJEAEBM_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "gacha_item_list" field.</summary>
-    public const int GachaItemListFieldNumber = 12;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GachaItem> _repeated_gachaItemList_codec
-        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.GachaItem.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GachaItem> gachaItemList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GachaItem>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GachaItem> GachaItemList {
-      get { return gachaItemList_; }
     }
 
     /// <summary>Field number for the "gacha_num" field.</summary>
-    public const int GachaNumFieldNumber = 8;
+    public const int GachaNumFieldNumber = 11;
     private uint gachaNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -165,20 +142,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ceiling_num" field.</summary>
-    public const int CeilingNumFieldNumber = 7;
-    private uint ceilingNum_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CeilingNum {
-      get { return ceilingNum_; }
-      set {
-        ceilingNum_ = value;
-      }
-    }
-
     /// <summary>Field number for the "gacha_id" field.</summary>
-    public const int GachaIdFieldNumber = 6;
+    public const int GachaIdFieldNumber = 5;
     private uint gachaId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -189,16 +154,51 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ECKOEHMHJBM" field.</summary>
-    public const int ECKOEHMHJBMFieldNumber = 14;
-    private uint eCKOEHMHJBM_;
+    /// <summary>Field number for the "ceiling_num" field.</summary>
+    public const int CeilingNumFieldNumber = 1;
+    private uint ceilingNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ECKOEHMHJBM {
-      get { return eCKOEHMHJBM_; }
+    public uint CeilingNum {
+      get { return ceilingNum_; }
       set {
-        eCKOEHMHJBM_ = value;
+        ceilingNum_ = value;
       }
+    }
+
+    /// <summary>Field number for the "LHMBNMIOKHB" field.</summary>
+    public const int LHMBNMIOKHBFieldNumber = 15;
+    private uint lHMBNMIOKHB_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint LHMBNMIOKHB {
+      get { return lHMBNMIOKHB_; }
+      set {
+        lHMBNMIOKHB_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 6;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "gacha_item_list" field.</summary>
+    public const int GachaItemListFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GachaItem> _repeated_gachaItemList_codec
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.GachaItem.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GachaItem> gachaItemList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GachaItem>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GachaItem> GachaItemList {
+      get { return gachaItemList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -216,15 +216,15 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
-      if (PGPHIPBCGAP != other.PGPHIPBCGAP) return false;
-      if (MKAAOHEEFBC != other.MKAAOHEEFBC) return false;
-      if (CPJKHJEAEBM != other.CPJKHJEAEBM) return false;
-      if(!gachaItemList_.Equals(other.gachaItemList_)) return false;
+      if (KEACGMLKBDK != other.KEACGMLKBDK) return false;
+      if (PJAFIMMCPDF != other.PJAFIMMCPDF) return false;
+      if (HNPCPDJPGLL != other.HNPCPDJPGLL) return false;
       if (GachaNum != other.GachaNum) return false;
-      if (CeilingNum != other.CeilingNum) return false;
       if (GachaId != other.GachaId) return false;
-      if (ECKOEHMHJBM != other.ECKOEHMHJBM) return false;
+      if (CeilingNum != other.CeilingNum) return false;
+      if (LHMBNMIOKHB != other.LHMBNMIOKHB) return false;
+      if (Retcode != other.Retcode) return false;
+      if(!gachaItemList_.Equals(other.gachaItemList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -232,15 +232,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (PGPHIPBCGAP != 0) hash ^= PGPHIPBCGAP.GetHashCode();
-      if (MKAAOHEEFBC != 0) hash ^= MKAAOHEEFBC.GetHashCode();
-      if (CPJKHJEAEBM != 0) hash ^= CPJKHJEAEBM.GetHashCode();
-      hash ^= gachaItemList_.GetHashCode();
+      if (KEACGMLKBDK != 0) hash ^= KEACGMLKBDK.GetHashCode();
+      if (PJAFIMMCPDF != 0) hash ^= PJAFIMMCPDF.GetHashCode();
+      if (HNPCPDJPGLL != 0) hash ^= HNPCPDJPGLL.GetHashCode();
       if (GachaNum != 0) hash ^= GachaNum.GetHashCode();
-      if (CeilingNum != 0) hash ^= CeilingNum.GetHashCode();
       if (GachaId != 0) hash ^= GachaId.GetHashCode();
-      if (ECKOEHMHJBM != 0) hash ^= ECKOEHMHJBM.GetHashCode();
+      if (CeilingNum != 0) hash ^= CeilingNum.GetHashCode();
+      if (LHMBNMIOKHB != 0) hash ^= LHMBNMIOKHB.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      hash ^= gachaItemList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -259,38 +259,38 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PGPHIPBCGAP != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(PGPHIPBCGAP);
-      }
-      if (Retcode != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Retcode);
-      }
-      if (GachaId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(GachaId);
-      }
       if (CeilingNum != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(8);
         output.WriteUInt32(CeilingNum);
       }
-      if (GachaNum != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(GachaNum);
+      if (PJAFIMMCPDF != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(PJAFIMMCPDF);
       }
-      if (MKAAOHEEFBC != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(MKAAOHEEFBC);
+      if (GachaId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(GachaId);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(Retcode);
       }
       gachaItemList_.WriteTo(output, _repeated_gachaItemList_codec);
-      if (ECKOEHMHJBM != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(ECKOEHMHJBM);
+      if (GachaNum != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(GachaNum);
       }
-      if (CPJKHJEAEBM != 0) {
+      if (HNPCPDJPGLL != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(HNPCPDJPGLL);
+      }
+      if (KEACGMLKBDK != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(KEACGMLKBDK);
+      }
+      if (LHMBNMIOKHB != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(CPJKHJEAEBM);
+        output.WriteUInt32(LHMBNMIOKHB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -302,38 +302,38 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PGPHIPBCGAP != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(PGPHIPBCGAP);
-      }
-      if (Retcode != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Retcode);
-      }
-      if (GachaId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(GachaId);
-      }
       if (CeilingNum != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(8);
         output.WriteUInt32(CeilingNum);
       }
-      if (GachaNum != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(GachaNum);
+      if (PJAFIMMCPDF != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(PJAFIMMCPDF);
       }
-      if (MKAAOHEEFBC != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(MKAAOHEEFBC);
+      if (GachaId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(GachaId);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(Retcode);
       }
       gachaItemList_.WriteTo(ref output, _repeated_gachaItemList_codec);
-      if (ECKOEHMHJBM != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(ECKOEHMHJBM);
+      if (GachaNum != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(GachaNum);
       }
-      if (CPJKHJEAEBM != 0) {
+      if (HNPCPDJPGLL != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(HNPCPDJPGLL);
+      }
+      if (KEACGMLKBDK != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(KEACGMLKBDK);
+      }
+      if (LHMBNMIOKHB != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(CPJKHJEAEBM);
+        output.WriteUInt32(LHMBNMIOKHB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -345,31 +345,31 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      if (KEACGMLKBDK != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KEACGMLKBDK);
       }
-      if (PGPHIPBCGAP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PGPHIPBCGAP);
+      if (PJAFIMMCPDF != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PJAFIMMCPDF);
       }
-      if (MKAAOHEEFBC != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MKAAOHEEFBC);
+      if (HNPCPDJPGLL != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HNPCPDJPGLL);
       }
-      if (CPJKHJEAEBM != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CPJKHJEAEBM);
-      }
-      size += gachaItemList_.CalculateSize(_repeated_gachaItemList_codec);
       if (GachaNum != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GachaNum);
-      }
-      if (CeilingNum != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CeilingNum);
       }
       if (GachaId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GachaId);
       }
-      if (ECKOEHMHJBM != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ECKOEHMHJBM);
+      if (CeilingNum != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CeilingNum);
       }
+      if (LHMBNMIOKHB != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LHMBNMIOKHB);
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      size += gachaItemList_.CalculateSize(_repeated_gachaItemList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -382,31 +382,31 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
+      if (other.KEACGMLKBDK != 0) {
+        KEACGMLKBDK = other.KEACGMLKBDK;
       }
-      if (other.PGPHIPBCGAP != 0) {
-        PGPHIPBCGAP = other.PGPHIPBCGAP;
+      if (other.PJAFIMMCPDF != 0) {
+        PJAFIMMCPDF = other.PJAFIMMCPDF;
       }
-      if (other.MKAAOHEEFBC != 0) {
-        MKAAOHEEFBC = other.MKAAOHEEFBC;
+      if (other.HNPCPDJPGLL != 0) {
+        HNPCPDJPGLL = other.HNPCPDJPGLL;
       }
-      if (other.CPJKHJEAEBM != 0) {
-        CPJKHJEAEBM = other.CPJKHJEAEBM;
-      }
-      gachaItemList_.Add(other.gachaItemList_);
       if (other.GachaNum != 0) {
         GachaNum = other.GachaNum;
-      }
-      if (other.CeilingNum != 0) {
-        CeilingNum = other.CeilingNum;
       }
       if (other.GachaId != 0) {
         GachaId = other.GachaId;
       }
-      if (other.ECKOEHMHJBM != 0) {
-        ECKOEHMHJBM = other.ECKOEHMHJBM;
+      if (other.CeilingNum != 0) {
+        CeilingNum = other.CeilingNum;
       }
+      if (other.LHMBNMIOKHB != 0) {
+        LHMBNMIOKHB = other.LHMBNMIOKHB;
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
+      gachaItemList_.Add(other.gachaItemList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -423,39 +423,39 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            PGPHIPBCGAP = input.ReadUInt32();
-            break;
-          }
-          case 32: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 48: {
-            GachaId = input.ReadUInt32();
-            break;
-          }
-          case 56: {
             CeilingNum = input.ReadUInt32();
             break;
           }
-          case 64: {
-            GachaNum = input.ReadUInt32();
+          case 16: {
+            PJAFIMMCPDF = input.ReadUInt32();
             break;
           }
-          case 80: {
-            MKAAOHEEFBC = input.ReadUInt32();
+          case 40: {
+            GachaId = input.ReadUInt32();
             break;
           }
-          case 98: {
+          case 48: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 66: {
             gachaItemList_.AddEntriesFrom(input, _repeated_gachaItemList_codec);
             break;
           }
+          case 88: {
+            GachaNum = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            HNPCPDJPGLL = input.ReadUInt32();
+            break;
+          }
           case 112: {
-            ECKOEHMHJBM = input.ReadUInt32();
+            KEACGMLKBDK = input.ReadUInt32();
             break;
           }
           case 120: {
-            CPJKHJEAEBM = input.ReadUInt32();
+            LHMBNMIOKHB = input.ReadUInt32();
             break;
           }
         }
@@ -474,39 +474,39 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            PGPHIPBCGAP = input.ReadUInt32();
-            break;
-          }
-          case 32: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 48: {
-            GachaId = input.ReadUInt32();
-            break;
-          }
-          case 56: {
             CeilingNum = input.ReadUInt32();
             break;
           }
-          case 64: {
-            GachaNum = input.ReadUInt32();
+          case 16: {
+            PJAFIMMCPDF = input.ReadUInt32();
             break;
           }
-          case 80: {
-            MKAAOHEEFBC = input.ReadUInt32();
+          case 40: {
+            GachaId = input.ReadUInt32();
             break;
           }
-          case 98: {
+          case 48: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 66: {
             gachaItemList_.AddEntriesFrom(ref input, _repeated_gachaItemList_codec);
             break;
           }
+          case 88: {
+            GachaNum = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            HNPCPDJPGLL = input.ReadUInt32();
+            break;
+          }
           case 112: {
-            ECKOEHMHJBM = input.ReadUInt32();
+            KEACGMLKBDK = input.ReadUInt32();
             break;
           }
           case 120: {
-            CPJKHJEAEBM = input.ReadUInt32();
+            LHMBNMIOKHB = input.ReadUInt32();
             break;
           }
         }

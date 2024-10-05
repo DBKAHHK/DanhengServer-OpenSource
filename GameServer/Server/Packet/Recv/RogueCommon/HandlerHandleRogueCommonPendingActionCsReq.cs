@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.GameServer.Game.RogueTourn;
+﻿using EggLink.DanhengServer.GameServer.Game.RogueMagic;
+using EggLink.DanhengServer.GameServer.Game.RogueTourn;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
 
@@ -26,5 +27,11 @@ public class HandlerHandleRogueCommonPendingActionCsReq : Handler
 
         if (req.RogueTournFormulaResult != null && rogue is RogueTournInstance tournInstance)
             await tournInstance.HandleFormulaSelect((int)req.RogueTournFormulaResult.TournFormulaId);
+
+        if (req.MagicUnitSelectResult != null && rogue is RogueMagicInstance magic)
+            await magic.HandleMagicUnitSelect(req.MagicUnitSelectResult.SelectMagicUnit);
+
+        if (req.ScepterSelectResult != null && rogue is RogueMagicInstance magic2)
+            await magic2.HandleScepterSelect(req.ScepterSelectResult.SelectScepter);
     }
 }

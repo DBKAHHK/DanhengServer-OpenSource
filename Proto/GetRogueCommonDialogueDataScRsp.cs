@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiVHZXRSb2d1ZUNvbW1vbkRpYWxvZ3VlRGF0YVNjUnNwLnByb3RvGiFSb2d1",
             "ZUNvbW1vbkRpYWxvZ3VlRGF0YUluZm8ucHJvdG8ibAofR2V0Um9ndWVDb21t",
-            "b25EaWFsb2d1ZURhdGFTY1JzcBIPCgdyZXRjb2RlGAggASgNEjgKEmRpYWxv",
-            "Z3VlX2RhdGFfbGlzdBgCIAMoCzIcLlJvZ3VlQ29tbW9uRGlhbG9ndWVEYXRh",
+            "b25EaWFsb2d1ZURhdGFTY1JzcBIPCgdyZXRjb2RlGAUgASgNEjgKEmRpYWxv",
+            "Z3VlX2RhdGFfbGlzdBgHIAMoCzIcLlJvZ3VlQ29tbW9uRGlhbG9ndWVEYXRh",
             "SW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfoReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 8;
+    public const int RetcodeFieldNumber = 5;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "dialogue_data_list" field.</summary>
-    public const int DialogueDataListFieldNumber = 2;
+    public const int DialogueDataListFieldNumber = 7;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo> _repeated_dialogueDataList_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo.Parser);
+        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo> dialogueDataList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      dialogueDataList_.WriteTo(output, _repeated_dialogueDataList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
+      dialogueDataList_.WriteTo(output, _repeated_dialogueDataList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      dialogueDataList_.WriteTo(ref output, _repeated_dialogueDataList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
+      dialogueDataList_.WriteTo(ref output, _repeated_dialogueDataList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -217,12 +217,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
-            dialogueDataList_.AddEntriesFrom(input, _repeated_dialogueDataList_codec);
+          case 40: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 64: {
-            Retcode = input.ReadUInt32();
+          case 58: {
+            dialogueDataList_.AddEntriesFrom(input, _repeated_dialogueDataList_codec);
             break;
           }
         }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
-            dialogueDataList_.AddEntriesFrom(ref input, _repeated_dialogueDataList_codec);
+          case 40: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 64: {
-            Retcode = input.ReadUInt32();
+          case 58: {
+            dialogueDataList_.AddEntriesFrom(ref input, _repeated_dialogueDataList_codec);
             break;
           }
         }

@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static EnterSceneScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVFbnRlclNjZW5lU2NSc3AucHJvdG8ifQoPRW50ZXJTY2VuZVNjUnNwEhMK",
-            "C2lzX292ZXJfbWFwGAQgASgIEg8KB3JldGNvZGUYAyABKA0SFAoMaXNfY2xv",
-            "c2VfbWFwGAsgASgIEhIKCmNvbnRlbnRfaWQYDSABKA0SGgoSZ2FtZV9zdG9y",
-            "eV9saW5lX2lkGAogASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
+            "ChVFbnRlclNjZW5lU2NSc3AucHJvdG8ifQoPRW50ZXJTY2VuZVNjUnNwEhIK",
+            "CmNvbnRlbnRfaWQYByABKA0SGgoSZ2FtZV9zdG9yeV9saW5lX2lkGAggASgN",
+            "EhMKC2lzX292ZXJfbWFwGAogASgIEhQKDGlzX2Nsb3NlX21hcBgMIAEoCBIP",
+            "CgdyZXRjb2RlGAEgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
             "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EnterSceneScRsp), global::EggLink.DanhengServer.Proto.EnterSceneScRsp.Parser, new[]{ "IsOverMap", "Retcode", "IsCloseMap", "ContentId", "GameStoryLineId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EnterSceneScRsp), global::EggLink.DanhengServer.Proto.EnterSceneScRsp.Parser, new[]{ "ContentId", "GameStoryLineId", "IsOverMap", "IsCloseMap", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,11 +74,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EnterSceneScRsp(EnterSceneScRsp other) : this() {
-      isOverMap_ = other.isOverMap_;
-      retcode_ = other.retcode_;
-      isCloseMap_ = other.isCloseMap_;
       contentId_ = other.contentId_;
       gameStoryLineId_ = other.gameStoryLineId_;
+      isOverMap_ = other.isOverMap_;
+      isCloseMap_ = other.isCloseMap_;
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,44 +88,8 @@ namespace EggLink.DanhengServer.Proto {
       return new EnterSceneScRsp(this);
     }
 
-    /// <summary>Field number for the "is_over_map" field.</summary>
-    public const int IsOverMapFieldNumber = 4;
-    private bool isOverMap_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsOverMap {
-      get { return isOverMap_; }
-      set {
-        isOverMap_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 3;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "is_close_map" field.</summary>
-    public const int IsCloseMapFieldNumber = 11;
-    private bool isCloseMap_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsCloseMap {
-      get { return isCloseMap_; }
-      set {
-        isCloseMap_ = value;
-      }
-    }
-
     /// <summary>Field number for the "content_id" field.</summary>
-    public const int ContentIdFieldNumber = 13;
+    public const int ContentIdFieldNumber = 7;
     private uint contentId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +101,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "game_story_line_id" field.</summary>
-    public const int GameStoryLineIdFieldNumber = 10;
+    public const int GameStoryLineIdFieldNumber = 8;
     private uint gameStoryLineId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -145,6 +109,42 @@ namespace EggLink.DanhengServer.Proto {
       get { return gameStoryLineId_; }
       set {
         gameStoryLineId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_over_map" field.</summary>
+    public const int IsOverMapFieldNumber = 10;
+    private bool isOverMap_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsOverMap {
+      get { return isOverMap_; }
+      set {
+        isOverMap_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_close_map" field.</summary>
+    public const int IsCloseMapFieldNumber = 12;
+    private bool isCloseMap_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsCloseMap {
+      get { return isCloseMap_; }
+      set {
+        isCloseMap_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 1;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
       }
     }
 
@@ -163,11 +163,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsOverMap != other.IsOverMap) return false;
-      if (Retcode != other.Retcode) return false;
-      if (IsCloseMap != other.IsCloseMap) return false;
       if (ContentId != other.ContentId) return false;
       if (GameStoryLineId != other.GameStoryLineId) return false;
+      if (IsOverMap != other.IsOverMap) return false;
+      if (IsCloseMap != other.IsCloseMap) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -175,11 +175,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsOverMap != false) hash ^= IsOverMap.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (IsCloseMap != false) hash ^= IsCloseMap.GetHashCode();
       if (ContentId != 0) hash ^= ContentId.GetHashCode();
       if (GameStoryLineId != 0) hash ^= GameStoryLineId.GetHashCode();
+      if (IsOverMap != false) hash ^= IsOverMap.GetHashCode();
+      if (IsCloseMap != false) hash ^= IsCloseMap.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -199,24 +199,24 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
       }
-      if (IsOverMap != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(IsOverMap);
+      if (ContentId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(ContentId);
       }
       if (GameStoryLineId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(64);
         output.WriteUInt32(GameStoryLineId);
       }
-      if (IsCloseMap != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(IsCloseMap);
+      if (IsOverMap != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(IsOverMap);
       }
-      if (ContentId != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(ContentId);
+      if (IsCloseMap != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(IsCloseMap);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -229,24 +229,24 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
       }
-      if (IsOverMap != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(IsOverMap);
+      if (ContentId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(ContentId);
       }
       if (GameStoryLineId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(64);
         output.WriteUInt32(GameStoryLineId);
       }
-      if (IsCloseMap != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(IsCloseMap);
+      if (IsOverMap != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(IsOverMap);
       }
-      if (ContentId != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(ContentId);
+      if (IsCloseMap != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(IsCloseMap);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -258,20 +258,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsOverMap != false) {
-        size += 1 + 1;
-      }
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
-      if (IsCloseMap != false) {
-        size += 1 + 1;
-      }
       if (ContentId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ContentId);
       }
       if (GameStoryLineId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GameStoryLineId);
+      }
+      if (IsOverMap != false) {
+        size += 1 + 1;
+      }
+      if (IsCloseMap != false) {
+        size += 1 + 1;
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsOverMap != false) {
-        IsOverMap = other.IsOverMap;
-      }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
-      if (other.IsCloseMap != false) {
-        IsCloseMap = other.IsCloseMap;
-      }
       if (other.ContentId != 0) {
         ContentId = other.ContentId;
       }
       if (other.GameStoryLineId != 0) {
         GameStoryLineId = other.GameStoryLineId;
+      }
+      if (other.IsOverMap != false) {
+        IsOverMap = other.IsOverMap;
+      }
+      if (other.IsCloseMap != false) {
+        IsCloseMap = other.IsCloseMap;
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -315,24 +315,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 8: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 32: {
-            IsOverMap = input.ReadBool();
+          case 56: {
+            ContentId = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 64: {
             GameStoryLineId = input.ReadUInt32();
             break;
           }
-          case 88: {
-            IsCloseMap = input.ReadBool();
+          case 80: {
+            IsOverMap = input.ReadBool();
             break;
           }
-          case 104: {
-            ContentId = input.ReadUInt32();
+          case 96: {
+            IsCloseMap = input.ReadBool();
             break;
           }
         }
@@ -350,24 +350,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 8: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 32: {
-            IsOverMap = input.ReadBool();
+          case 56: {
+            ContentId = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 64: {
             GameStoryLineId = input.ReadUInt32();
             break;
           }
-          case 88: {
-            IsCloseMap = input.ReadBool();
+          case 80: {
+            IsOverMap = input.ReadBool();
             break;
           }
-          case 104: {
-            ContentId = input.ReadUInt32();
+          case 96: {
+            IsCloseMap = input.ReadBool();
             break;
           }
         }

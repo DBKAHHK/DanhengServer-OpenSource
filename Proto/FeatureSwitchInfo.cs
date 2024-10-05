@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChdGZWF0dXJlU3dpdGNoSW5mby5wcm90bxoYRmVhdHVyZVN3aXRjaFBhcmFt",
             "LnByb3RvGhdGZWF0dXJlU3dpdGNoVHlwZS5wcm90byJ2ChFGZWF0dXJlU3dp",
-            "dGNoSW5mbxIgCgR0eXBlGAEgASgOMhIuRmVhdHVyZVN3aXRjaFR5cGUSKAoL",
+            "dGNoSW5mbxIgCgRUeXBlGAEgASgOMhIuRmVhdHVyZVN3aXRjaFR5cGUSKAoL",
             "c3dpdGNoX2xpc3QYAiADKAsyEy5GZWF0dXJlU3dpdGNoUGFyYW0SFQoNaXNf",
             "YWxsX2Nsb3NlZBgDIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
       return new FeatureSwitchInfo(this);
     }
 
-    /// <summary>Field number for the "type" field.</summary>
+    /// <summary>Field number for the "Type" field.</summary>
     public const int TypeFieldNumber = 1;
     private global::EggLink.DanhengServer.Proto.FeatureSwitchType type_ = global::EggLink.DanhengServer.Proto.FeatureSwitchType.FeatureSwitchNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

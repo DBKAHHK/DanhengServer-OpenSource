@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static DeleteRelicFilterPlanCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiBEZWxldGVSZWxpY0ZpbHRlclBsYW5Dc1JlcS5wcm90byJcChpEZWxldGVS",
-            "ZWxpY0ZpbHRlclBsYW5Dc1JlcRIcChRJc0JhdGNoT3BGaWVsZE51bWJlchgF",
-            "IAEoCBIgChhTbG90SW5kZXhMaXN0RmllbGROdW1iZXIYCiADKA1CHqoCG0Vn",
-            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "CiBEZWxldGVSZWxpY0ZpbHRlclBsYW5Dc1JlcS5wcm90byJGChpEZWxldGVS",
+            "ZWxpY0ZpbHRlclBsYW5Dc1JlcRIRCglJc0JhdGNoT3AYCiABKAgSFQoNU2xv",
+            "dEluZGV4TGlzdBgBIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DeleteRelicFilterPlanCsReq), global::EggLink.DanhengServer.Proto.DeleteRelicFilterPlanCsReq.Parser, new[]{ "IsBatchOpFieldNumber", "SlotIndexListFieldNumber" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DeleteRelicFilterPlanCsReq), global::EggLink.DanhengServer.Proto.DeleteRelicFilterPlanCsReq.Parser, new[]{ "IsBatchOp", "SlotIndexList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteRelicFilterPlanCsReq(DeleteRelicFilterPlanCsReq other) : this() {
-      isBatchOpFieldNumber_ = other.isBatchOpFieldNumber_;
-      slotIndexListFieldNumber_ = other.slotIndexListFieldNumber_.Clone();
+      isBatchOp_ = other.isBatchOp_;
+      slotIndexList_ = other.slotIndexList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,27 +84,27 @@ namespace EggLink.DanhengServer.Proto {
       return new DeleteRelicFilterPlanCsReq(this);
     }
 
-    /// <summary>Field number for the "IsBatchOpFieldNumber" field.</summary>
-    public const int IsBatchOpFieldNumberFieldNumber = 5;
-    private bool isBatchOpFieldNumber_;
+    /// <summary>Field number for the "IsBatchOp" field.</summary>
+    public const int IsBatchOpFieldNumber = 10;
+    private bool isBatchOp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsBatchOpFieldNumber {
-      get { return isBatchOpFieldNumber_; }
+    public bool IsBatchOp {
+      get { return isBatchOp_; }
       set {
-        isBatchOpFieldNumber_ = value;
+        isBatchOp_ = value;
       }
     }
 
-    /// <summary>Field number for the "SlotIndexListFieldNumber" field.</summary>
-    public const int SlotIndexListFieldNumberFieldNumber = 10;
-    private static readonly pb::FieldCodec<uint> _repeated_slotIndexListFieldNumber_codec
-        = pb::FieldCodec.ForUInt32(82);
-    private readonly pbc::RepeatedField<uint> slotIndexListFieldNumber_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "SlotIndexList" field.</summary>
+    public const int SlotIndexListFieldNumber = 1;
+    private static readonly pb::FieldCodec<uint> _repeated_slotIndexList_codec
+        = pb::FieldCodec.ForUInt32(10);
+    private readonly pbc::RepeatedField<uint> slotIndexList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> SlotIndexListFieldNumber {
-      get { return slotIndexListFieldNumber_; }
+    public pbc::RepeatedField<uint> SlotIndexList {
+      get { return slotIndexList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsBatchOpFieldNumber != other.IsBatchOpFieldNumber) return false;
-      if(!slotIndexListFieldNumber_.Equals(other.slotIndexListFieldNumber_)) return false;
+      if (IsBatchOp != other.IsBatchOp) return false;
+      if(!slotIndexList_.Equals(other.slotIndexList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsBatchOpFieldNumber != false) hash ^= IsBatchOpFieldNumber.GetHashCode();
-      hash ^= slotIndexListFieldNumber_.GetHashCode();
+      if (IsBatchOp != false) hash ^= IsBatchOp.GetHashCode();
+      hash ^= slotIndexList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsBatchOpFieldNumber != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(IsBatchOpFieldNumber);
+      slotIndexList_.WriteTo(output, _repeated_slotIndexList_codec);
+      if (IsBatchOp != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(IsBatchOp);
       }
-      slotIndexListFieldNumber_.WriteTo(output, _repeated_slotIndexListFieldNumber_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsBatchOpFieldNumber != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(IsBatchOpFieldNumber);
+      slotIndexList_.WriteTo(ref output, _repeated_slotIndexList_codec);
+      if (IsBatchOp != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(IsBatchOp);
       }
-      slotIndexListFieldNumber_.WriteTo(ref output, _repeated_slotIndexListFieldNumber_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -181,10 +181,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsBatchOpFieldNumber != false) {
+      if (IsBatchOp != false) {
         size += 1 + 1;
       }
-      size += slotIndexListFieldNumber_.CalculateSize(_repeated_slotIndexListFieldNumber_codec);
+      size += slotIndexList_.CalculateSize(_repeated_slotIndexList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -197,10 +197,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsBatchOpFieldNumber != false) {
-        IsBatchOpFieldNumber = other.IsBatchOpFieldNumber;
+      if (other.IsBatchOp != false) {
+        IsBatchOp = other.IsBatchOp;
       }
-      slotIndexListFieldNumber_.Add(other.slotIndexListFieldNumber_);
+      slotIndexList_.Add(other.slotIndexList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            IsBatchOpFieldNumber = input.ReadBool();
+          case 10:
+          case 8: {
+            slotIndexList_.AddEntriesFrom(input, _repeated_slotIndexList_codec);
             break;
           }
-          case 82:
           case 80: {
-            slotIndexListFieldNumber_.AddEntriesFrom(input, _repeated_slotIndexListFieldNumber_codec);
+            IsBatchOp = input.ReadBool();
             break;
           }
         }
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            IsBatchOpFieldNumber = input.ReadBool();
+          case 10:
+          case 8: {
+            slotIndexList_.AddEntriesFrom(ref input, _repeated_slotIndexList_codec);
             break;
           }
-          case 82:
           case 80: {
-            slotIndexListFieldNumber_.AddEntriesFrom(ref input, _repeated_slotIndexListFieldNumber_codec);
+            IsBatchOp = input.ReadBool();
             break;
           }
         }

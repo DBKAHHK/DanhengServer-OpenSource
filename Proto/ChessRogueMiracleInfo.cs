@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChtDaGVzc1JvZ3VlTWlyYWNsZUluZm8ucHJvdG8aF0NoZXNzUm9ndWVNaXJh",
             "Y2xlLnByb3RvIk0KFUNoZXNzUm9ndWVNaXJhY2xlSW5mbxI0ChhjaGVzc19y",
-            "b2d1ZV9taXJhY2xlX2luZm8YDyABKAsyEi5DaGVzc1JvZ3VlTWlyYWNsZUIe",
+            "b2d1ZV9taXJhY2xlX2luZm8YDCABKAsyEi5DaGVzc1JvZ3VlTWlyYWNsZUIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueMiracleReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "chess_rogue_miracle_info" field.</summary>
-    public const int ChessRogueMiracleInfo_FieldNumber = 15;
+    public const int ChessRogueMiracleInfo_FieldNumber = 12;
     private global::EggLink.DanhengServer.Proto.ChessRogueMiracle chessRogueMiracleInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (chessRogueMiracleInfo_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(98);
         output.WriteMessage(ChessRogueMiracleInfo_);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (chessRogueMiracleInfo_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(98);
         output.WriteMessage(ChessRogueMiracleInfo_);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 122: {
+          case 98: {
             if (chessRogueMiracleInfo_ == null) {
               ChessRogueMiracleInfo_ = new global::EggLink.DanhengServer.Proto.ChessRogueMiracle();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 122: {
+          case 98: {
             if (chessRogueMiracleInfo_ == null) {
               ChessRogueMiracleInfo_ = new global::EggLink.DanhengServer.Proto.ChessRogueMiracle();
             }

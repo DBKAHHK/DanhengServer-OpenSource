@@ -24,19 +24,20 @@ namespace EggLink.DanhengServer.Proto {
     static RelicFilterPlanSettingsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1SZWxpY0ZpbHRlclBsYW5TZXR0aW5ncy5wcm90byKrAgoXUmVsaWNGaWx0",
+            "Ch1SZWxpY0ZpbHRlclBsYW5TZXR0aW5ncy5wcm90byLtAgoXUmVsaWNGaWx0",
             "ZXJQbGFuU2V0dGluZ3MSFQoNcmFyaXR5X2JpdHNldBgBIAEoDRIWCg5yZWxp",
             "Y19zZXRfbGlzdBgCIAMoDRIfChdib2R5X21haW5fcHJvcGVydHlfbGlzdBgD",
             "IAMoDRIfChdmb290X21haW5fcHJvcGVydHlfbGlzdBgEIAMoDRIhChlzcGhl",
             "cmVfbWFpbl9wcm9wZXJ0eV9saXN0GAUgAygNEh8KF3JvcGVfbWFpbl9wcm9w",
             "ZXJ0eV9saXN0GAYgAygNEiYKHmlzX2luY2x1ZGVfZmlsdGVyX3N1Yl9wcm9w",
             "ZXJ0eRgHIAEoCBIYChBzdWJfcHJvcGVydHlfbnVtGAggASgNEhkKEXN1Yl9w",
-            "cm9wZXJ0eV9saXN0GAkgAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
-            "UHJvdG9iBnByb3RvMw=="));
+            "cm9wZXJ0eV9saXN0GAkgAygNEh8KF2hlYWRfbWFpbl9wcm9wZXJ0eV9saXN0",
+            "GAogAygNEh8KF2hhbmRfbWFpbl9wcm9wZXJ0eV9saXN0GAsgAygNQh6qAhtF",
+            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings), global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings.Parser, new[]{ "RarityBitset", "RelicSetList", "BodyMainPropertyList", "FootMainPropertyList", "SphereMainPropertyList", "RopeMainPropertyList", "IsIncludeFilterSubProperty", "SubPropertyNum", "SubPropertyList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings), global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings.Parser, new[]{ "RarityBitset", "RelicSetList", "BodyMainPropertyList", "FootMainPropertyList", "SphereMainPropertyList", "RopeMainPropertyList", "IsIncludeFilterSubProperty", "SubPropertyNum", "SubPropertyList", "HeadMainPropertyList", "HandMainPropertyList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -87,6 +88,8 @@ namespace EggLink.DanhengServer.Proto {
       isIncludeFilterSubProperty_ = other.isIncludeFilterSubProperty_;
       subPropertyNum_ = other.subPropertyNum_;
       subPropertyList_ = other.subPropertyList_.Clone();
+      headMainPropertyList_ = other.headMainPropertyList_.Clone();
+      handMainPropertyList_ = other.handMainPropertyList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -198,6 +201,28 @@ namespace EggLink.DanhengServer.Proto {
       get { return subPropertyList_; }
     }
 
+    /// <summary>Field number for the "head_main_property_list" field.</summary>
+    public const int HeadMainPropertyListFieldNumber = 10;
+    private static readonly pb::FieldCodec<uint> _repeated_headMainPropertyList_codec
+        = pb::FieldCodec.ForUInt32(82);
+    private readonly pbc::RepeatedField<uint> headMainPropertyList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> HeadMainPropertyList {
+      get { return headMainPropertyList_; }
+    }
+
+    /// <summary>Field number for the "hand_main_property_list" field.</summary>
+    public const int HandMainPropertyListFieldNumber = 11;
+    private static readonly pb::FieldCodec<uint> _repeated_handMainPropertyList_codec
+        = pb::FieldCodec.ForUInt32(90);
+    private readonly pbc::RepeatedField<uint> handMainPropertyList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> HandMainPropertyList {
+      get { return handMainPropertyList_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -222,6 +247,8 @@ namespace EggLink.DanhengServer.Proto {
       if (IsIncludeFilterSubProperty != other.IsIncludeFilterSubProperty) return false;
       if (SubPropertyNum != other.SubPropertyNum) return false;
       if(!subPropertyList_.Equals(other.subPropertyList_)) return false;
+      if(!headMainPropertyList_.Equals(other.headMainPropertyList_)) return false;
+      if(!handMainPropertyList_.Equals(other.handMainPropertyList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -238,6 +265,8 @@ namespace EggLink.DanhengServer.Proto {
       if (IsIncludeFilterSubProperty != false) hash ^= IsIncludeFilterSubProperty.GetHashCode();
       if (SubPropertyNum != 0) hash ^= SubPropertyNum.GetHashCode();
       hash ^= subPropertyList_.GetHashCode();
+      hash ^= headMainPropertyList_.GetHashCode();
+      hash ^= handMainPropertyList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -274,6 +303,8 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(SubPropertyNum);
       }
       subPropertyList_.WriteTo(output, _repeated_subPropertyList_codec);
+      headMainPropertyList_.WriteTo(output, _repeated_headMainPropertyList_codec);
+      handMainPropertyList_.WriteTo(output, _repeated_handMainPropertyList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -302,6 +333,8 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(SubPropertyNum);
       }
       subPropertyList_.WriteTo(ref output, _repeated_subPropertyList_codec);
+      headMainPropertyList_.WriteTo(ref output, _repeated_headMainPropertyList_codec);
+      handMainPropertyList_.WriteTo(ref output, _repeated_handMainPropertyList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -327,6 +360,8 @@ namespace EggLink.DanhengServer.Proto {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SubPropertyNum);
       }
       size += subPropertyList_.CalculateSize(_repeated_subPropertyList_codec);
+      size += headMainPropertyList_.CalculateSize(_repeated_headMainPropertyList_codec);
+      size += handMainPropertyList_.CalculateSize(_repeated_handMainPropertyList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -354,6 +389,8 @@ namespace EggLink.DanhengServer.Proto {
         SubPropertyNum = other.SubPropertyNum;
       }
       subPropertyList_.Add(other.subPropertyList_);
+      headMainPropertyList_.Add(other.headMainPropertyList_);
+      handMainPropertyList_.Add(other.handMainPropertyList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -411,6 +448,16 @@ namespace EggLink.DanhengServer.Proto {
             subPropertyList_.AddEntriesFrom(input, _repeated_subPropertyList_codec);
             break;
           }
+          case 82:
+          case 80: {
+            headMainPropertyList_.AddEntriesFrom(input, _repeated_headMainPropertyList_codec);
+            break;
+          }
+          case 90:
+          case 88: {
+            handMainPropertyList_.AddEntriesFrom(input, _repeated_handMainPropertyList_codec);
+            break;
+          }
         }
       }
     #endif
@@ -466,6 +513,16 @@ namespace EggLink.DanhengServer.Proto {
           case 74:
           case 72: {
             subPropertyList_.AddEntriesFrom(ref input, _repeated_subPropertyList_codec);
+            break;
+          }
+          case 82:
+          case 80: {
+            headMainPropertyList_.AddEntriesFrom(ref input, _repeated_headMainPropertyList_codec);
+            break;
+          }
+          case 90:
+          case 88: {
+            handMainPropertyList_.AddEntriesFrom(ref input, _repeated_handMainPropertyList_codec);
             break;
           }
         }

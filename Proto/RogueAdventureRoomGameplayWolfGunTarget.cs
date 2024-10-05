@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci1Sb2d1ZUFkdmVudHVyZVJvb21HYW1lcGxheVdvbGZHdW5UYXJnZXQucHJv",
-            "dG8aEUZLUElMRkJLRExBLnByb3RvGhFKSk9CSE9FRExITy5wcm90bxoRTE5L",
-            "R0dBUEJQTEYucHJvdG8aEU1ISkVITE5JQ0ZQLnByb3RvIrsBCidSb2d1ZUFk",
-            "dmVudHVyZVJvb21HYW1lcGxheVdvbGZHdW5UYXJnZXQSIQoLdGFyZ2V0X25v",
-            "bmUYCiABKAsyDC5NSEpFSExOSUNGUBIhCgt0YXJnZXRfY29pbhgIIAEoCzIM",
-            "LkZLUElMRkJLRExBEiQKDnRhcmdldF9taXJhY2xlGAQgASgLMgwuTE5LR0dB",
-            "UEJQTEYSJAoOdGFyZ2V0X3J1YW5tZWkYASABKAsyDC5KSk9CSE9FRExIT0Ie",
-            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "dG8aEUVISUdPRURCRFBNLnByb3RvGhFPRE9QSE1FREtCRC5wcm90bxoRTkxH",
+            "REZFREpER0EucHJvdG8aEUZETUFLREpMR0xNLnByb3RvIrcBCidSb2d1ZUFk",
+            "dmVudHVyZVJvb21HYW1lcGxheVdvbGZHdW5UYXJnZXQSIAoKVGFyZ2V0Tm9u",
+            "ZRgKIAEoCzIMLkVISUdPRURCRFBNEiAKClRhcmdldENvaW4YByABKAsyDC5P",
+            "RE9QSE1FREtCRBIjCg1UYXJnZXRNaXJhY2xlGAMgASgLMgwuTkxHREZFREpE",
+            "R0ESIwoNVGFyZ2V0UnVhbm1laRgFIAEoCzIMLkZETUFLREpMR0xNQh6qAhtF",
+            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FKPILFBKDLAReflection.Descriptor, global::EggLink.DanhengServer.Proto.JJOBHOEDLHOReflection.Descriptor, global::EggLink.DanhengServer.Proto.LNKGGAPBPLFReflection.Descriptor, global::EggLink.DanhengServer.Proto.MHJEHLNICFPReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EHIGOEDBDPMReflection.Descriptor, global::EggLink.DanhengServer.Proto.ODOPHMEDKBDReflection.Descriptor, global::EggLink.DanhengServer.Proto.NLGDFEDJDGAReflection.Descriptor, global::EggLink.DanhengServer.Proto.FDMAKDJLGLMReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunTarget), global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunTarget.Parser, new[]{ "TargetNone", "TargetCoin", "TargetMiracle", "TargetRuanmei" }, null, null, null, null)
           }));
@@ -90,48 +90,48 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueAdventureRoomGameplayWolfGunTarget(this);
     }
 
-    /// <summary>Field number for the "target_none" field.</summary>
+    /// <summary>Field number for the "TargetNone" field.</summary>
     public const int TargetNoneFieldNumber = 10;
-    private global::EggLink.DanhengServer.Proto.MHJEHLNICFP targetNone_;
+    private global::EggLink.DanhengServer.Proto.EHIGOEDBDPM targetNone_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MHJEHLNICFP TargetNone {
+    public global::EggLink.DanhengServer.Proto.EHIGOEDBDPM TargetNone {
       get { return targetNone_; }
       set {
         targetNone_ = value;
       }
     }
 
-    /// <summary>Field number for the "target_coin" field.</summary>
-    public const int TargetCoinFieldNumber = 8;
-    private global::EggLink.DanhengServer.Proto.FKPILFBKDLA targetCoin_;
+    /// <summary>Field number for the "TargetCoin" field.</summary>
+    public const int TargetCoinFieldNumber = 7;
+    private global::EggLink.DanhengServer.Proto.ODOPHMEDKBD targetCoin_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.FKPILFBKDLA TargetCoin {
+    public global::EggLink.DanhengServer.Proto.ODOPHMEDKBD TargetCoin {
       get { return targetCoin_; }
       set {
         targetCoin_ = value;
       }
     }
 
-    /// <summary>Field number for the "target_miracle" field.</summary>
-    public const int TargetMiracleFieldNumber = 4;
-    private global::EggLink.DanhengServer.Proto.LNKGGAPBPLF targetMiracle_;
+    /// <summary>Field number for the "TargetMiracle" field.</summary>
+    public const int TargetMiracleFieldNumber = 3;
+    private global::EggLink.DanhengServer.Proto.NLGDFEDJDGA targetMiracle_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.LNKGGAPBPLF TargetMiracle {
+    public global::EggLink.DanhengServer.Proto.NLGDFEDJDGA TargetMiracle {
       get { return targetMiracle_; }
       set {
         targetMiracle_ = value;
       }
     }
 
-    /// <summary>Field number for the "target_ruanmei" field.</summary>
-    public const int TargetRuanmeiFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.JJOBHOEDLHO targetRuanmei_;
+    /// <summary>Field number for the "TargetRuanmei" field.</summary>
+    public const int TargetRuanmeiFieldNumber = 5;
+    private global::EggLink.DanhengServer.Proto.FDMAKDJLGLM targetRuanmei_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.JJOBHOEDLHO TargetRuanmei {
+    public global::EggLink.DanhengServer.Proto.FDMAKDJLGLM TargetRuanmei {
       get { return targetRuanmei_; }
       set {
         targetRuanmei_ = value;
@@ -186,16 +186,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (targetRuanmei_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(TargetRuanmei);
-      }
       if (targetMiracle_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(26);
         output.WriteMessage(TargetMiracle);
       }
+      if (targetRuanmei_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(TargetRuanmei);
+      }
       if (targetCoin_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(58);
         output.WriteMessage(TargetCoin);
       }
       if (targetNone_ != null) {
@@ -212,16 +212,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (targetRuanmei_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(TargetRuanmei);
-      }
       if (targetMiracle_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(26);
         output.WriteMessage(TargetMiracle);
       }
+      if (targetRuanmei_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(TargetRuanmei);
+      }
       if (targetCoin_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(58);
         output.WriteMessage(TargetCoin);
       }
       if (targetNone_ != null) {
@@ -264,25 +264,25 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.targetNone_ != null) {
         if (targetNone_ == null) {
-          TargetNone = new global::EggLink.DanhengServer.Proto.MHJEHLNICFP();
+          TargetNone = new global::EggLink.DanhengServer.Proto.EHIGOEDBDPM();
         }
         TargetNone.MergeFrom(other.TargetNone);
       }
       if (other.targetCoin_ != null) {
         if (targetCoin_ == null) {
-          TargetCoin = new global::EggLink.DanhengServer.Proto.FKPILFBKDLA();
+          TargetCoin = new global::EggLink.DanhengServer.Proto.ODOPHMEDKBD();
         }
         TargetCoin.MergeFrom(other.TargetCoin);
       }
       if (other.targetMiracle_ != null) {
         if (targetMiracle_ == null) {
-          TargetMiracle = new global::EggLink.DanhengServer.Proto.LNKGGAPBPLF();
+          TargetMiracle = new global::EggLink.DanhengServer.Proto.NLGDFEDJDGA();
         }
         TargetMiracle.MergeFrom(other.TargetMiracle);
       }
       if (other.targetRuanmei_ != null) {
         if (targetRuanmei_ == null) {
-          TargetRuanmei = new global::EggLink.DanhengServer.Proto.JJOBHOEDLHO();
+          TargetRuanmei = new global::EggLink.DanhengServer.Proto.FDMAKDJLGLM();
         }
         TargetRuanmei.MergeFrom(other.TargetRuanmei);
       }
@@ -301,30 +301,30 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            if (targetRuanmei_ == null) {
-              TargetRuanmei = new global::EggLink.DanhengServer.Proto.JJOBHOEDLHO();
-            }
-            input.ReadMessage(TargetRuanmei);
-            break;
-          }
-          case 34: {
+          case 26: {
             if (targetMiracle_ == null) {
-              TargetMiracle = new global::EggLink.DanhengServer.Proto.LNKGGAPBPLF();
+              TargetMiracle = new global::EggLink.DanhengServer.Proto.NLGDFEDJDGA();
             }
             input.ReadMessage(TargetMiracle);
             break;
           }
-          case 66: {
+          case 42: {
+            if (targetRuanmei_ == null) {
+              TargetRuanmei = new global::EggLink.DanhengServer.Proto.FDMAKDJLGLM();
+            }
+            input.ReadMessage(TargetRuanmei);
+            break;
+          }
+          case 58: {
             if (targetCoin_ == null) {
-              TargetCoin = new global::EggLink.DanhengServer.Proto.FKPILFBKDLA();
+              TargetCoin = new global::EggLink.DanhengServer.Proto.ODOPHMEDKBD();
             }
             input.ReadMessage(TargetCoin);
             break;
           }
           case 82: {
             if (targetNone_ == null) {
-              TargetNone = new global::EggLink.DanhengServer.Proto.MHJEHLNICFP();
+              TargetNone = new global::EggLink.DanhengServer.Proto.EHIGOEDBDPM();
             }
             input.ReadMessage(TargetNone);
             break;
@@ -344,30 +344,30 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            if (targetRuanmei_ == null) {
-              TargetRuanmei = new global::EggLink.DanhengServer.Proto.JJOBHOEDLHO();
-            }
-            input.ReadMessage(TargetRuanmei);
-            break;
-          }
-          case 34: {
+          case 26: {
             if (targetMiracle_ == null) {
-              TargetMiracle = new global::EggLink.DanhengServer.Proto.LNKGGAPBPLF();
+              TargetMiracle = new global::EggLink.DanhengServer.Proto.NLGDFEDJDGA();
             }
             input.ReadMessage(TargetMiracle);
             break;
           }
-          case 66: {
+          case 42: {
+            if (targetRuanmei_ == null) {
+              TargetRuanmei = new global::EggLink.DanhengServer.Proto.FDMAKDJLGLM();
+            }
+            input.ReadMessage(TargetRuanmei);
+            break;
+          }
+          case 58: {
             if (targetCoin_ == null) {
-              TargetCoin = new global::EggLink.DanhengServer.Proto.FKPILFBKDLA();
+              TargetCoin = new global::EggLink.DanhengServer.Proto.ODOPHMEDKBD();
             }
             input.ReadMessage(TargetCoin);
             break;
           }
           case 82: {
             if (targetNone_ == null) {
-              TargetNone = new global::EggLink.DanhengServer.Proto.MHJEHLNICFP();
+              TargetNone = new global::EggLink.DanhengServer.Proto.EHIGOEDBDPM();
             }
             input.ReadMessage(TargetNone);
             break;

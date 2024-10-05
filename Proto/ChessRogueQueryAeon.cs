@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlDaGVzc1JvZ3VlUXVlcnlBZW9uLnByb3RvIjsKE0NoZXNzUm9ndWVRdWVy",
-            "eUFlb24SDwoHYWVvbl9pZBgDIAEoDRITCgtCT05BQkFIT0RPThgOIAEoDUIe",
+            "eUFlb24SEwoLSERER1BNTU5JQ0QYDCABKA0SDwoHYWVvbl9pZBgDIAEoDUIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueQueryAeon), global::EggLink.DanhengServer.Proto.ChessRogueQueryAeon.Parser, new[]{ "AeonId", "BONABAHODON" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueQueryAeon), global::EggLink.DanhengServer.Proto.ChessRogueQueryAeon.Parser, new[]{ "HDDGPMMNICD", "AeonId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueQueryAeon(ChessRogueQueryAeon other) : this() {
+      hDDGPMMNICD_ = other.hDDGPMMNICD_;
       aeonId_ = other.aeonId_;
-      bONABAHODON_ = other.bONABAHODON_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -81,6 +81,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueQueryAeon Clone() {
       return new ChessRogueQueryAeon(this);
+    }
+
+    /// <summary>Field number for the "HDDGPMMNICD" field.</summary>
+    public const int HDDGPMMNICDFieldNumber = 12;
+    private uint hDDGPMMNICD_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint HDDGPMMNICD {
+      get { return hDDGPMMNICD_; }
+      set {
+        hDDGPMMNICD_ = value;
+      }
     }
 
     /// <summary>Field number for the "aeon_id" field.</summary>
@@ -92,18 +104,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return aeonId_; }
       set {
         aeonId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "BONABAHODON" field.</summary>
-    public const int BONABAHODONFieldNumber = 14;
-    private uint bONABAHODON_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BONABAHODON {
-      get { return bONABAHODON_; }
-      set {
-        bONABAHODON_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (HDDGPMMNICD != other.HDDGPMMNICD) return false;
       if (AeonId != other.AeonId) return false;
-      if (BONABAHODON != other.BONABAHODON) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (HDDGPMMNICD != 0) hash ^= HDDGPMMNICD.GetHashCode();
       if (AeonId != 0) hash ^= AeonId.GetHashCode();
-      if (BONABAHODON != 0) hash ^= BONABAHODON.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -155,9 +155,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(24);
         output.WriteUInt32(AeonId);
       }
-      if (BONABAHODON != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(BONABAHODON);
+      if (HDDGPMMNICD != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(HDDGPMMNICD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -173,9 +173,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(24);
         output.WriteUInt32(AeonId);
       }
-      if (BONABAHODON != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(BONABAHODON);
+      if (HDDGPMMNICD != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(HDDGPMMNICD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (HDDGPMMNICD != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HDDGPMMNICD);
+      }
       if (AeonId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AeonId);
-      }
-      if (BONABAHODON != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BONABAHODON);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.HDDGPMMNICD != 0) {
+        HDDGPMMNICD = other.HDDGPMMNICD;
+      }
       if (other.AeonId != 0) {
         AeonId = other.AeonId;
-      }
-      if (other.BONABAHODON != 0) {
-        BONABAHODON = other.BONABAHODON;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -230,8 +230,8 @@ namespace EggLink.DanhengServer.Proto {
             AeonId = input.ReadUInt32();
             break;
           }
-          case 112: {
-            BONABAHODON = input.ReadUInt32();
+          case 96: {
+            HDDGPMMNICD = input.ReadUInt32();
             break;
           }
         }
@@ -253,8 +253,8 @@ namespace EggLink.DanhengServer.Proto {
             AeonId = input.ReadUInt32();
             break;
           }
-          case 112: {
-            BONABAHODON = input.ReadUInt32();
+          case 96: {
+            HDDGPMMNICD = input.ReadUInt32();
             break;
           }
         }

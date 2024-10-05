@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5DaGFuZ2VTY3JpcHRFbW90aW9uQ3NSZXEucHJvdG8aGkhlYXJ0RGlhbEVt",
-            "b3Rpb25UeXBlLnByb3RvInYKGENoYW5nZVNjcmlwdEVtb3Rpb25Dc1JlcRIT",
-            "CgtHQ1BJQ05IQUVHQRgNIAEoDRIRCglzY3JpcHRfaWQYCyABKA0SMgoTdGFy",
-            "Z2V0X2Vtb3Rpb25fdHlwZRgIIAEoDjIVLkhlYXJ0RGlhbEVtb3Rpb25UeXBl",
+            "b3Rpb25UeXBlLnByb3RvInYKGENoYW5nZVNjcmlwdEVtb3Rpb25Dc1JlcRIR",
+            "CglzY3JpcHRfaWQYBiABKA0SMgoTdGFyZ2V0X2Vtb3Rpb25fdHlwZRgCIAEo",
+            "DjIVLkhlYXJ0RGlhbEVtb3Rpb25UeXBlEhMKC0ZQUEVGQktCRkREGAcgASgN",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeartDialEmotionTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChangeScriptEmotionCsReq), global::EggLink.DanhengServer.Proto.ChangeScriptEmotionCsReq.Parser, new[]{ "GCPICNHAEGA", "ScriptId", "TargetEmotionType" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChangeScriptEmotionCsReq), global::EggLink.DanhengServer.Proto.ChangeScriptEmotionCsReq.Parser, new[]{ "ScriptId", "TargetEmotionType", "FPPEFBKBFDD" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChangeScriptEmotionCsReq(ChangeScriptEmotionCsReq other) : this() {
-      gCPICNHAEGA_ = other.gCPICNHAEGA_;
       scriptId_ = other.scriptId_;
       targetEmotionType_ = other.targetEmotionType_;
+      fPPEFBKBFDD_ = other.fPPEFBKBFDD_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,20 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new ChangeScriptEmotionCsReq(this);
     }
 
-    /// <summary>Field number for the "GCPICNHAEGA" field.</summary>
-    public const int GCPICNHAEGAFieldNumber = 13;
-    private uint gCPICNHAEGA_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GCPICNHAEGA {
-      get { return gCPICNHAEGA_; }
-      set {
-        gCPICNHAEGA_ = value;
-      }
-    }
-
     /// <summary>Field number for the "script_id" field.</summary>
-    public const int ScriptIdFieldNumber = 11;
+    public const int ScriptIdFieldNumber = 6;
     private uint scriptId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "target_emotion_type" field.</summary>
-    public const int TargetEmotionTypeFieldNumber = 8;
+    public const int TargetEmotionTypeFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.HeartDialEmotionType targetEmotionType_ = global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -119,6 +107,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return targetEmotionType_; }
       set {
         targetEmotionType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "FPPEFBKBFDD" field.</summary>
+    public const int FPPEFBKBFDDFieldNumber = 7;
+    private uint fPPEFBKBFDD_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint FPPEFBKBFDD {
+      get { return fPPEFBKBFDD_; }
+      set {
+        fPPEFBKBFDD_ = value;
       }
     }
 
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (GCPICNHAEGA != other.GCPICNHAEGA) return false;
       if (ScriptId != other.ScriptId) return false;
       if (TargetEmotionType != other.TargetEmotionType) return false;
+      if (FPPEFBKBFDD != other.FPPEFBKBFDD) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,9 +147,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (GCPICNHAEGA != 0) hash ^= GCPICNHAEGA.GetHashCode();
       if (ScriptId != 0) hash ^= ScriptId.GetHashCode();
       if (TargetEmotionType != global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace) hash ^= TargetEmotionType.GetHashCode();
+      if (FPPEFBKBFDD != 0) hash ^= FPPEFBKBFDD.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -169,16 +169,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (TargetEmotionType != global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(16);
         output.WriteEnum((int) TargetEmotionType);
       }
       if (ScriptId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(48);
         output.WriteUInt32(ScriptId);
       }
-      if (GCPICNHAEGA != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(GCPICNHAEGA);
+      if (FPPEFBKBFDD != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(FPPEFBKBFDD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -191,16 +191,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (TargetEmotionType != global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(16);
         output.WriteEnum((int) TargetEmotionType);
       }
       if (ScriptId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(48);
         output.WriteUInt32(ScriptId);
       }
-      if (GCPICNHAEGA != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(GCPICNHAEGA);
+      if (FPPEFBKBFDD != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(FPPEFBKBFDD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -212,14 +212,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (GCPICNHAEGA != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GCPICNHAEGA);
-      }
       if (ScriptId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScriptId);
       }
       if (TargetEmotionType != global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TargetEmotionType);
+      }
+      if (FPPEFBKBFDD != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FPPEFBKBFDD);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -233,14 +233,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.GCPICNHAEGA != 0) {
-        GCPICNHAEGA = other.GCPICNHAEGA;
-      }
       if (other.ScriptId != 0) {
         ScriptId = other.ScriptId;
       }
       if (other.TargetEmotionType != global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace) {
         TargetEmotionType = other.TargetEmotionType;
+      }
+      if (other.FPPEFBKBFDD != 0) {
+        FPPEFBKBFDD = other.FPPEFBKBFDD;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -257,16 +257,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
+          case 16: {
             TargetEmotionType = (global::EggLink.DanhengServer.Proto.HeartDialEmotionType) input.ReadEnum();
             break;
           }
-          case 88: {
+          case 48: {
             ScriptId = input.ReadUInt32();
             break;
           }
-          case 104: {
-            GCPICNHAEGA = input.ReadUInt32();
+          case 56: {
+            FPPEFBKBFDD = input.ReadUInt32();
             break;
           }
         }
@@ -284,16 +284,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
+          case 16: {
             TargetEmotionType = (global::EggLink.DanhengServer.Proto.HeartDialEmotionType) input.ReadEnum();
             break;
           }
-          case 88: {
+          case 48: {
             ScriptId = input.ReadUInt32();
             break;
           }
-          case 104: {
-            GCPICNHAEGA = input.ReadUInt32();
+          case 56: {
+            FPPEFBKBFDD = input.ReadUInt32();
             break;
           }
         }

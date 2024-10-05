@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJSb2d1ZVRvdXJuVGFrZUV4cFJld2FyZENzUmVxLnByb3RvIkkKHFJvZ3Vl",
-            "VG91cm5UYWtlRXhwUmV3YXJkQ3NSZXESEwoLRE5KSkFFT0hGQkQYDiADKA0S",
-            "FAoMc3ViX3RvdXJuX2lkGAwgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "VG91cm5UYWtlRXhwUmV3YXJkQ3NSZXESFAoMc3ViX3RvdXJuX2lkGA0gASgN",
+            "EhMKC0pHTUdDSk5GRElHGAggAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournTakeExpRewardCsReq), global::EggLink.DanhengServer.Proto.RogueTournTakeExpRewardCsReq.Parser, new[]{ "DNJJAEOHFBD", "SubTournId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournTakeExpRewardCsReq), global::EggLink.DanhengServer.Proto.RogueTournTakeExpRewardCsReq.Parser, new[]{ "SubTournId", "JGMGCJNFDIG" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournTakeExpRewardCsReq(RogueTournTakeExpRewardCsReq other) : this() {
-      dNJJAEOHFBD_ = other.dNJJAEOHFBD_.Clone();
       subTournId_ = other.subTournId_;
+      jGMGCJNFDIG_ = other.jGMGCJNFDIG_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,19 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournTakeExpRewardCsReq(this);
     }
 
-    /// <summary>Field number for the "DNJJAEOHFBD" field.</summary>
-    public const int DNJJAEOHFBDFieldNumber = 14;
-    private static readonly pb::FieldCodec<uint> _repeated_dNJJAEOHFBD_codec
-        = pb::FieldCodec.ForUInt32(114);
-    private readonly pbc::RepeatedField<uint> dNJJAEOHFBD_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> DNJJAEOHFBD {
-      get { return dNJJAEOHFBD_; }
-    }
-
     /// <summary>Field number for the "sub_tourn_id" field.</summary>
-    public const int SubTournIdFieldNumber = 12;
+    public const int SubTournIdFieldNumber = 13;
     private uint subTournId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +94,17 @@ namespace EggLink.DanhengServer.Proto {
       set {
         subTournId_ = value;
       }
+    }
+
+    /// <summary>Field number for the "JGMGCJNFDIG" field.</summary>
+    public const int JGMGCJNFDIGFieldNumber = 8;
+    private static readonly pb::FieldCodec<uint> _repeated_jGMGCJNFDIG_codec
+        = pb::FieldCodec.ForUInt32(66);
+    private readonly pbc::RepeatedField<uint> jGMGCJNFDIG_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> JGMGCJNFDIG {
+      get { return jGMGCJNFDIG_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!dNJJAEOHFBD_.Equals(other.dNJJAEOHFBD_)) return false;
       if (SubTournId != other.SubTournId) return false;
+      if(!jGMGCJNFDIG_.Equals(other.jGMGCJNFDIG_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= dNJJAEOHFBD_.GetHashCode();
       if (SubTournId != 0) hash ^= SubTournId.GetHashCode();
+      hash ^= jGMGCJNFDIG_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      jGMGCJNFDIG_.WriteTo(output, _repeated_jGMGCJNFDIG_codec);
       if (SubTournId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(104);
         output.WriteUInt32(SubTournId);
       }
-      dNJJAEOHFBD_.WriteTo(output, _repeated_dNJJAEOHFBD_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      jGMGCJNFDIG_.WriteTo(ref output, _repeated_jGMGCJNFDIG_codec);
       if (SubTournId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(104);
         output.WriteUInt32(SubTournId);
       }
-      dNJJAEOHFBD_.WriteTo(ref output, _repeated_dNJJAEOHFBD_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -181,10 +181,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += dNJJAEOHFBD_.CalculateSize(_repeated_dNJJAEOHFBD_codec);
       if (SubTournId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SubTournId);
       }
+      size += jGMGCJNFDIG_.CalculateSize(_repeated_jGMGCJNFDIG_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -197,10 +197,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      dNJJAEOHFBD_.Add(other.dNJJAEOHFBD_);
       if (other.SubTournId != 0) {
         SubTournId = other.SubTournId;
       }
+      jGMGCJNFDIG_.Add(other.jGMGCJNFDIG_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 96: {
-            SubTournId = input.ReadUInt32();
+          case 66:
+          case 64: {
+            jGMGCJNFDIG_.AddEntriesFrom(input, _repeated_jGMGCJNFDIG_codec);
             break;
           }
-          case 114:
-          case 112: {
-            dNJJAEOHFBD_.AddEntriesFrom(input, _repeated_dNJJAEOHFBD_codec);
+          case 104: {
+            SubTournId = input.ReadUInt32();
             break;
           }
         }
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 96: {
-            SubTournId = input.ReadUInt32();
+          case 66:
+          case 64: {
+            jGMGCJNFDIG_.AddEntriesFrom(ref input, _repeated_jGMGCJNFDIG_codec);
             break;
           }
-          case 114:
-          case 112: {
-            dNJJAEOHFBD_.AddEntriesFrom(ref input, _repeated_dNJJAEOHFBD_codec);
+          case 104: {
+            SubTournId = input.ReadUInt32();
             break;
           }
         }

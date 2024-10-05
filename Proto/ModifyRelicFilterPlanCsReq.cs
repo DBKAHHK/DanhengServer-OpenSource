@@ -24,18 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static ModifyRelicFilterPlanCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiBNb2RpZnlSZWxpY0ZpbHRlclBsYW5Dc1JlcS5wcm90bxoZUmVsaWNGaWx0",
-            "ZXJQbGFuSWNvbi5wcm90bxodUmVsaWNGaWx0ZXJQbGFuU2V0dGluZ3MucHJv",
-            "dG8iuQEKGk1vZGlmeVJlbGljRmlsdGVyUGxhbkNzUmVxEhwKFFNsb3RJbmRl",
-            "eEZpZWxkTnVtYmVyGAEgASgNEhcKD05hbWVGaWVsZE51bWJlchgFIAEoCRIt",
-            "Cg9JY29uRmllbGROdW1iZXIYCCABKAsyFC5SZWxpY0ZpbHRlclBsYW5JY29u",
-            "EjUKE1NldHRpbmdzRmllbGROdW1iZXIYAyABKAsyGC5SZWxpY0ZpbHRlclBs",
-            "YW5TZXR0aW5nc0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "CiBNb2RpZnlSZWxpY0ZpbHRlclBsYW5Dc1JlcS5wcm90bxodUmVsaWNGaWx0",
+            "ZXJQbGFuU2V0dGluZ3MucHJvdG8aGVJlbGljRmlsdGVyUGxhbkljb24ucHJv",
+            "dG8ijQEKGk1vZGlmeVJlbGljRmlsdGVyUGxhbkNzUmVxEhEKCVNsb3RJbmRl",
+            "eBgHIAEoDRIMCgROYW1lGAUgASgJEiIKBEljb24YASABKAsyFC5SZWxpY0Zp",
+            "bHRlclBsYW5JY29uEioKCFNldHRpbmdzGA8gASgLMhguUmVsaWNGaWx0ZXJQ",
+            "bGFuU2V0dGluZ3NCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RelicFilterPlanIconReflection.Descriptor, global::EggLink.DanhengServer.Proto.RelicFilterPlanSettingsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RelicFilterPlanSettingsReflection.Descriptor, global::EggLink.DanhengServer.Proto.RelicFilterPlanIconReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ModifyRelicFilterPlanCsReq), global::EggLink.DanhengServer.Proto.ModifyRelicFilterPlanCsReq.Parser, new[]{ "SlotIndexFieldNumber", "NameFieldNumber", "IconFieldNumber", "SettingsFieldNumber" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ModifyRelicFilterPlanCsReq), global::EggLink.DanhengServer.Proto.ModifyRelicFilterPlanCsReq.Parser, new[]{ "SlotIndex", "Name", "Icon", "Settings" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,10 +76,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ModifyRelicFilterPlanCsReq(ModifyRelicFilterPlanCsReq other) : this() {
-      slotIndexFieldNumber_ = other.slotIndexFieldNumber_;
-      nameFieldNumber_ = other.nameFieldNumber_;
-      iconFieldNumber_ = other.iconFieldNumber_ != null ? other.iconFieldNumber_.Clone() : null;
-      settingsFieldNumber_ = other.settingsFieldNumber_ != null ? other.settingsFieldNumber_.Clone() : null;
+      slotIndex_ = other.slotIndex_;
+      name_ = other.name_;
+      icon_ = other.icon_ != null ? other.icon_.Clone() : null;
+      settings_ = other.settings_ != null ? other.settings_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -90,51 +89,51 @@ namespace EggLink.DanhengServer.Proto {
       return new ModifyRelicFilterPlanCsReq(this);
     }
 
-    /// <summary>Field number for the "SlotIndexFieldNumber" field.</summary>
-    public const int SlotIndexFieldNumberFieldNumber = 1;
-    private uint slotIndexFieldNumber_;
+    /// <summary>Field number for the "SlotIndex" field.</summary>
+    public const int SlotIndexFieldNumber = 7;
+    private uint slotIndex_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SlotIndexFieldNumber {
-      get { return slotIndexFieldNumber_; }
+    public uint SlotIndex {
+      get { return slotIndex_; }
       set {
-        slotIndexFieldNumber_ = value;
+        slotIndex_ = value;
       }
     }
 
-    /// <summary>Field number for the "NameFieldNumber" field.</summary>
-    public const int NameFieldNumberFieldNumber = 5;
-    private string nameFieldNumber_ = "";
+    /// <summary>Field number for the "Name" field.</summary>
+    public const int NameFieldNumber = 5;
+    private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string NameFieldNumber {
-      get { return nameFieldNumber_; }
+    public string Name {
+      get { return name_; }
       set {
-        nameFieldNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "IconFieldNumber" field.</summary>
-    public const int IconFieldNumberFieldNumber = 8;
-    private global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon iconFieldNumber_;
+    /// <summary>Field number for the "Icon" field.</summary>
+    public const int IconFieldNumber = 1;
+    private global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon icon_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon IconFieldNumber {
-      get { return iconFieldNumber_; }
+    public global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon Icon {
+      get { return icon_; }
       set {
-        iconFieldNumber_ = value;
+        icon_ = value;
       }
     }
 
-    /// <summary>Field number for the "SettingsFieldNumber" field.</summary>
-    public const int SettingsFieldNumberFieldNumber = 3;
-    private global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings settingsFieldNumber_;
+    /// <summary>Field number for the "Settings" field.</summary>
+    public const int SettingsFieldNumber = 15;
+    private global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings settings_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings SettingsFieldNumber {
-      get { return settingsFieldNumber_; }
+    public global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings Settings {
+      get { return settings_; }
       set {
-        settingsFieldNumber_ = value;
+        settings_ = value;
       }
     }
 
@@ -153,10 +152,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (SlotIndexFieldNumber != other.SlotIndexFieldNumber) return false;
-      if (NameFieldNumber != other.NameFieldNumber) return false;
-      if (!object.Equals(IconFieldNumber, other.IconFieldNumber)) return false;
-      if (!object.Equals(SettingsFieldNumber, other.SettingsFieldNumber)) return false;
+      if (SlotIndex != other.SlotIndex) return false;
+      if (Name != other.Name) return false;
+      if (!object.Equals(Icon, other.Icon)) return false;
+      if (!object.Equals(Settings, other.Settings)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -164,10 +163,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (SlotIndexFieldNumber != 0) hash ^= SlotIndexFieldNumber.GetHashCode();
-      if (NameFieldNumber.Length != 0) hash ^= NameFieldNumber.GetHashCode();
-      if (iconFieldNumber_ != null) hash ^= IconFieldNumber.GetHashCode();
-      if (settingsFieldNumber_ != null) hash ^= SettingsFieldNumber.GetHashCode();
+      if (SlotIndex != 0) hash ^= SlotIndex.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (icon_ != null) hash ^= Icon.GetHashCode();
+      if (settings_ != null) hash ^= Settings.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -186,21 +185,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (SlotIndexFieldNumber != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(SlotIndexFieldNumber);
+      if (icon_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Icon);
       }
-      if (settingsFieldNumber_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(SettingsFieldNumber);
-      }
-      if (NameFieldNumber.Length != 0) {
+      if (Name.Length != 0) {
         output.WriteRawTag(42);
-        output.WriteString(NameFieldNumber);
+        output.WriteString(Name);
       }
-      if (iconFieldNumber_ != null) {
-        output.WriteRawTag(66);
-        output.WriteMessage(IconFieldNumber);
+      if (SlotIndex != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(SlotIndex);
+      }
+      if (settings_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(Settings);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -212,21 +211,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (SlotIndexFieldNumber != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(SlotIndexFieldNumber);
+      if (icon_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Icon);
       }
-      if (settingsFieldNumber_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(SettingsFieldNumber);
-      }
-      if (NameFieldNumber.Length != 0) {
+      if (Name.Length != 0) {
         output.WriteRawTag(42);
-        output.WriteString(NameFieldNumber);
+        output.WriteString(Name);
       }
-      if (iconFieldNumber_ != null) {
-        output.WriteRawTag(66);
-        output.WriteMessage(IconFieldNumber);
+      if (SlotIndex != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(SlotIndex);
+      }
+      if (settings_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(Settings);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -238,17 +237,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (SlotIndexFieldNumber != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SlotIndexFieldNumber);
+      if (SlotIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SlotIndex);
       }
-      if (NameFieldNumber.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(NameFieldNumber);
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (iconFieldNumber_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IconFieldNumber);
+      if (icon_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Icon);
       }
-      if (settingsFieldNumber_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SettingsFieldNumber);
+      if (settings_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Settings);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -262,23 +261,23 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.SlotIndexFieldNumber != 0) {
-        SlotIndexFieldNumber = other.SlotIndexFieldNumber;
+      if (other.SlotIndex != 0) {
+        SlotIndex = other.SlotIndex;
       }
-      if (other.NameFieldNumber.Length != 0) {
-        NameFieldNumber = other.NameFieldNumber;
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
-      if (other.iconFieldNumber_ != null) {
-        if (iconFieldNumber_ == null) {
-          IconFieldNumber = new global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon();
+      if (other.icon_ != null) {
+        if (icon_ == null) {
+          Icon = new global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon();
         }
-        IconFieldNumber.MergeFrom(other.IconFieldNumber);
+        Icon.MergeFrom(other.Icon);
       }
-      if (other.settingsFieldNumber_ != null) {
-        if (settingsFieldNumber_ == null) {
-          SettingsFieldNumber = new global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings();
+      if (other.settings_ != null) {
+        if (settings_ == null) {
+          Settings = new global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings();
         }
-        SettingsFieldNumber.MergeFrom(other.SettingsFieldNumber);
+        Settings.MergeFrom(other.Settings);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -295,26 +294,26 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            SlotIndexFieldNumber = input.ReadUInt32();
-            break;
-          }
-          case 26: {
-            if (settingsFieldNumber_ == null) {
-              SettingsFieldNumber = new global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings();
+          case 10: {
+            if (icon_ == null) {
+              Icon = new global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon();
             }
-            input.ReadMessage(SettingsFieldNumber);
+            input.ReadMessage(Icon);
             break;
           }
           case 42: {
-            NameFieldNumber = input.ReadString();
+            Name = input.ReadString();
             break;
           }
-          case 66: {
-            if (iconFieldNumber_ == null) {
-              IconFieldNumber = new global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon();
+          case 56: {
+            SlotIndex = input.ReadUInt32();
+            break;
+          }
+          case 122: {
+            if (settings_ == null) {
+              Settings = new global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings();
             }
-            input.ReadMessage(IconFieldNumber);
+            input.ReadMessage(Settings);
             break;
           }
         }
@@ -332,26 +331,26 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            SlotIndexFieldNumber = input.ReadUInt32();
-            break;
-          }
-          case 26: {
-            if (settingsFieldNumber_ == null) {
-              SettingsFieldNumber = new global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings();
+          case 10: {
+            if (icon_ == null) {
+              Icon = new global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon();
             }
-            input.ReadMessage(SettingsFieldNumber);
+            input.ReadMessage(Icon);
             break;
           }
           case 42: {
-            NameFieldNumber = input.ReadString();
+            Name = input.ReadString();
             break;
           }
-          case 66: {
-            if (iconFieldNumber_ == null) {
-              IconFieldNumber = new global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon();
+          case 56: {
+            SlotIndex = input.ReadUInt32();
+            break;
+          }
+          case 122: {
+            if (settings_ == null) {
+              Settings = new global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings();
             }
-            input.ReadMessage(IconFieldNumber);
+            input.ReadMessage(Settings);
             break;
           }
         }

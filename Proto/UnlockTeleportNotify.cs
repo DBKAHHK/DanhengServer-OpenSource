@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpVbmxvY2tUZWxlcG9ydE5vdGlmeS5wcm90byI9ChRVbmxvY2tUZWxlcG9y",
-            "dE5vdGlmeRITCgt0ZWxlcG9ydF9pZBgMIAEoDRIQCghlbnRyeV9pZBgNIAEo",
+            "dE5vdGlmeRITCgt0ZWxlcG9ydF9pZBgOIAEoDRIQCghlbnRyeV9pZBgMIAEo",
             "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "teleport_id" field.</summary>
-    public const int TeleportIdFieldNumber = 12;
+    public const int TeleportIdFieldNumber = 14;
     private uint teleportId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "entry_id" field.</summary>
-    public const int EntryIdFieldNumber = 13;
+    public const int EntryIdFieldNumber = 12;
     private uint entryId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (TeleportId != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(TeleportId);
-      }
       if (EntryId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(96);
         output.WriteUInt32(EntryId);
+      }
+      if (TeleportId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(TeleportId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TeleportId != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(TeleportId);
-      }
       if (EntryId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(96);
         output.WriteUInt32(EntryId);
+      }
+      if (TeleportId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(TeleportId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 96: {
-            TeleportId = input.ReadUInt32();
+            EntryId = input.ReadUInt32();
             break;
           }
-          case 104: {
-            EntryId = input.ReadUInt32();
+          case 112: {
+            TeleportId = input.ReadUInt32();
             break;
           }
         }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 96: {
-            TeleportId = input.ReadUInt32();
+            EntryId = input.ReadUInt32();
             break;
           }
-          case 104: {
-            EntryId = input.ReadUInt32();
+          case 112: {
+            TeleportId = input.ReadUInt32();
             break;
           }
         }

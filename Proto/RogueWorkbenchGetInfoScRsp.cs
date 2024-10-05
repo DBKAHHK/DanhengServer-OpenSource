@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiBSb2d1ZVdvcmtiZW5jaEdldEluZm9TY1JzcC5wcm90bxoXV29ya2JlbmNo",
             "RnVuY0luZm8ucHJvdG8iugEKGlJvZ3VlV29ya2JlbmNoR2V0SW5mb1NjUnNw",
-            "EkMKDWZ1bmNfaW5mb19tYXAYCCADKAsyLC5Sb2d1ZVdvcmtiZW5jaEdldElu",
-            "Zm9TY1JzcC5GdW5jSW5mb01hcEVudHJ5Eg8KB3JldGNvZGUYAyABKA0aRgoQ",
+            "EkMKDWZ1bmNfaW5mb19tYXAYASADKAsyLC5Sb2d1ZVdvcmtiZW5jaEdldElu",
+            "Zm9TY1JzcC5GdW5jSW5mb01hcEVudHJ5Eg8KB3JldGNvZGUYDyABKA0aRgoQ",
             "RnVuY0luZm9NYXBFbnRyeRILCgNrZXkYASABKA0SIQoFdmFsdWUYAiABKAsy",
             "Ei5Xb3JrYmVuY2hGdW5jSW5mbzoCOAFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
@@ -88,9 +88,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "func_info_map" field.</summary>
-    public const int FuncInfoMapFieldNumber = 8;
+    public const int FuncInfoMapFieldNumber = 1;
     private static readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo>.Codec _map_funcInfoMap_codec
-        = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo.Parser), 66);
+        = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo.Parser), 10);
     private readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo> funcInfoMap_ = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 3;
+    public const int RetcodeFieldNumber = 15;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -154,11 +154,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      funcInfoMap_.WriteTo(output, _map_funcInfoMap_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(120);
         output.WriteUInt32(Retcode);
       }
-      funcInfoMap_.WriteTo(output, _map_funcInfoMap_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -169,11 +169,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      funcInfoMap_.WriteTo(ref output, _map_funcInfoMap_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(120);
         output.WriteUInt32(Retcode);
       }
-      funcInfoMap_.WriteTo(ref output, _map_funcInfoMap_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -219,12 +219,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            Retcode = input.ReadUInt32();
+          case 10: {
+            funcInfoMap_.AddEntriesFrom(input, _map_funcInfoMap_codec);
             break;
           }
-          case 66: {
-            funcInfoMap_.AddEntriesFrom(input, _map_funcInfoMap_codec);
+          case 120: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -242,12 +242,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            Retcode = input.ReadUInt32();
+          case 10: {
+            funcInfoMap_.AddEntriesFrom(ref input, _map_funcInfoMap_codec);
             break;
           }
-          case 66: {
-            funcInfoMap_.AddEntriesFrom(ref input, _map_funcInfoMap_codec);
+          case 120: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9LaWxsZWRQdW5rTG9yZE1vbnN0ZXJJbmZvLnByb3RvIpYBChlLaWxsZWRQ",
-            "dW5rTG9yZE1vbnN0ZXJJbmZvEhMKC09EQ0xFR01PSk9EGAQgASgNEhIKCm1v",
-            "bnN0ZXJfaWQYDCABKA0SEwoLY3JlYXRlX3RpbWUYBiABKAMSEwoLd29ybGRf",
-            "bGV2ZWwYAiABKA0SEwoLSUxDQUhMSEJKUEgYBSABKAgSEQoJY29uZmlnX2lk",
-            "GAogASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "dW5rTG9yZE1vbnN0ZXJJbmZvEhMKC09FRkZMQkZIQ0NBGA0gASgNEhEKCWNv",
+            "bmZpZ19pZBgEIAEoDRISCgptb25zdGVyX2lkGA8gASgNEhMKC2NyZWF0ZV90",
+            "aW1lGAkgASgDEhMKC3dvcmxkX2xldmVsGAYgASgNEhMKC01NQkFPQ0dGQkxJ",
+            "GAUgASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.KilledPunkLordMonsterInfo), global::EggLink.DanhengServer.Proto.KilledPunkLordMonsterInfo.Parser, new[]{ "ODCLEGMOJOD", "MonsterId", "CreateTime", "WorldLevel", "ILCAHLHBJPH", "ConfigId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.KilledPunkLordMonsterInfo), global::EggLink.DanhengServer.Proto.KilledPunkLordMonsterInfo.Parser, new[]{ "OEFFLBFHCCA", "ConfigId", "MonsterId", "CreateTime", "WorldLevel", "MMBAOCGFBLI" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,12 +75,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public KilledPunkLordMonsterInfo(KilledPunkLordMonsterInfo other) : this() {
-      oDCLEGMOJOD_ = other.oDCLEGMOJOD_;
+      oEFFLBFHCCA_ = other.oEFFLBFHCCA_;
+      configId_ = other.configId_;
       monsterId_ = other.monsterId_;
       createTime_ = other.createTime_;
       worldLevel_ = other.worldLevel_;
-      iLCAHLHBJPH_ = other.iLCAHLHBJPH_;
-      configId_ = other.configId_;
+      mMBAOCGFBLI_ = other.mMBAOCGFBLI_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -90,20 +90,32 @@ namespace EggLink.DanhengServer.Proto {
       return new KilledPunkLordMonsterInfo(this);
     }
 
-    /// <summary>Field number for the "ODCLEGMOJOD" field.</summary>
-    public const int ODCLEGMOJODFieldNumber = 4;
-    private uint oDCLEGMOJOD_;
+    /// <summary>Field number for the "OEFFLBFHCCA" field.</summary>
+    public const int OEFFLBFHCCAFieldNumber = 13;
+    private uint oEFFLBFHCCA_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ODCLEGMOJOD {
-      get { return oDCLEGMOJOD_; }
+    public uint OEFFLBFHCCA {
+      get { return oEFFLBFHCCA_; }
       set {
-        oDCLEGMOJOD_ = value;
+        oEFFLBFHCCA_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "config_id" field.</summary>
+    public const int ConfigIdFieldNumber = 4;
+    private uint configId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ConfigId {
+      get { return configId_; }
+      set {
+        configId_ = value;
       }
     }
 
     /// <summary>Field number for the "monster_id" field.</summary>
-    public const int MonsterIdFieldNumber = 12;
+    public const int MonsterIdFieldNumber = 15;
     private uint monsterId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -115,7 +127,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "create_time" field.</summary>
-    public const int CreateTimeFieldNumber = 6;
+    public const int CreateTimeFieldNumber = 9;
     private long createTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -127,7 +139,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "world_level" field.</summary>
-    public const int WorldLevelFieldNumber = 2;
+    public const int WorldLevelFieldNumber = 6;
     private uint worldLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,27 +150,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ILCAHLHBJPH" field.</summary>
-    public const int ILCAHLHBJPHFieldNumber = 5;
-    private bool iLCAHLHBJPH_;
+    /// <summary>Field number for the "MMBAOCGFBLI" field.</summary>
+    public const int MMBAOCGFBLIFieldNumber = 5;
+    private bool mMBAOCGFBLI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool ILCAHLHBJPH {
-      get { return iLCAHLHBJPH_; }
+    public bool MMBAOCGFBLI {
+      get { return mMBAOCGFBLI_; }
       set {
-        iLCAHLHBJPH_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "config_id" field.</summary>
-    public const int ConfigIdFieldNumber = 10;
-    private uint configId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ConfigId {
-      get { return configId_; }
-      set {
-        configId_ = value;
+        mMBAOCGFBLI_ = value;
       }
     }
 
@@ -177,12 +177,12 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ODCLEGMOJOD != other.ODCLEGMOJOD) return false;
+      if (OEFFLBFHCCA != other.OEFFLBFHCCA) return false;
+      if (ConfigId != other.ConfigId) return false;
       if (MonsterId != other.MonsterId) return false;
       if (CreateTime != other.CreateTime) return false;
       if (WorldLevel != other.WorldLevel) return false;
-      if (ILCAHLHBJPH != other.ILCAHLHBJPH) return false;
-      if (ConfigId != other.ConfigId) return false;
+      if (MMBAOCGFBLI != other.MMBAOCGFBLI) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -190,12 +190,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ODCLEGMOJOD != 0) hash ^= ODCLEGMOJOD.GetHashCode();
+      if (OEFFLBFHCCA != 0) hash ^= OEFFLBFHCCA.GetHashCode();
+      if (ConfigId != 0) hash ^= ConfigId.GetHashCode();
       if (MonsterId != 0) hash ^= MonsterId.GetHashCode();
       if (CreateTime != 0L) hash ^= CreateTime.GetHashCode();
       if (WorldLevel != 0) hash ^= WorldLevel.GetHashCode();
-      if (ILCAHLHBJPH != false) hash ^= ILCAHLHBJPH.GetHashCode();
-      if (ConfigId != 0) hash ^= ConfigId.GetHashCode();
+      if (MMBAOCGFBLI != false) hash ^= MMBAOCGFBLI.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -214,28 +214,28 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (WorldLevel != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(WorldLevel);
-      }
-      if (ODCLEGMOJOD != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(ODCLEGMOJOD);
-      }
-      if (ILCAHLHBJPH != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(ILCAHLHBJPH);
-      }
-      if (CreateTime != 0L) {
-        output.WriteRawTag(48);
-        output.WriteInt64(CreateTime);
-      }
       if (ConfigId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(32);
         output.WriteUInt32(ConfigId);
       }
+      if (MMBAOCGFBLI != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(MMBAOCGFBLI);
+      }
+      if (WorldLevel != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(WorldLevel);
+      }
+      if (CreateTime != 0L) {
+        output.WriteRawTag(72);
+        output.WriteInt64(CreateTime);
+      }
+      if (OEFFLBFHCCA != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(OEFFLBFHCCA);
+      }
       if (MonsterId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(120);
         output.WriteUInt32(MonsterId);
       }
       if (_unknownFields != null) {
@@ -248,28 +248,28 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (WorldLevel != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(WorldLevel);
-      }
-      if (ODCLEGMOJOD != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(ODCLEGMOJOD);
-      }
-      if (ILCAHLHBJPH != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(ILCAHLHBJPH);
-      }
-      if (CreateTime != 0L) {
-        output.WriteRawTag(48);
-        output.WriteInt64(CreateTime);
-      }
       if (ConfigId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(32);
         output.WriteUInt32(ConfigId);
       }
+      if (MMBAOCGFBLI != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(MMBAOCGFBLI);
+      }
+      if (WorldLevel != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(WorldLevel);
+      }
+      if (CreateTime != 0L) {
+        output.WriteRawTag(72);
+        output.WriteInt64(CreateTime);
+      }
+      if (OEFFLBFHCCA != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(OEFFLBFHCCA);
+      }
       if (MonsterId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(120);
         output.WriteUInt32(MonsterId);
       }
       if (_unknownFields != null) {
@@ -282,8 +282,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ODCLEGMOJOD != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ODCLEGMOJOD);
+      if (OEFFLBFHCCA != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OEFFLBFHCCA);
+      }
+      if (ConfigId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ConfigId);
       }
       if (MonsterId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MonsterId);
@@ -294,11 +297,8 @@ namespace EggLink.DanhengServer.Proto {
       if (WorldLevel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorldLevel);
       }
-      if (ILCAHLHBJPH != false) {
+      if (MMBAOCGFBLI != false) {
         size += 1 + 1;
-      }
-      if (ConfigId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ConfigId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -312,8 +312,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ODCLEGMOJOD != 0) {
-        ODCLEGMOJOD = other.ODCLEGMOJOD;
+      if (other.OEFFLBFHCCA != 0) {
+        OEFFLBFHCCA = other.OEFFLBFHCCA;
+      }
+      if (other.ConfigId != 0) {
+        ConfigId = other.ConfigId;
       }
       if (other.MonsterId != 0) {
         MonsterId = other.MonsterId;
@@ -324,11 +327,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.WorldLevel != 0) {
         WorldLevel = other.WorldLevel;
       }
-      if (other.ILCAHLHBJPH != false) {
-        ILCAHLHBJPH = other.ILCAHLHBJPH;
-      }
-      if (other.ConfigId != 0) {
-        ConfigId = other.ConfigId;
+      if (other.MMBAOCGFBLI != false) {
+        MMBAOCGFBLI = other.MMBAOCGFBLI;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -345,27 +345,27 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            WorldLevel = input.ReadUInt32();
-            break;
-          }
           case 32: {
-            ODCLEGMOJOD = input.ReadUInt32();
-            break;
-          }
-          case 40: {
-            ILCAHLHBJPH = input.ReadBool();
-            break;
-          }
-          case 48: {
-            CreateTime = input.ReadInt64();
-            break;
-          }
-          case 80: {
             ConfigId = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 40: {
+            MMBAOCGFBLI = input.ReadBool();
+            break;
+          }
+          case 48: {
+            WorldLevel = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            CreateTime = input.ReadInt64();
+            break;
+          }
+          case 104: {
+            OEFFLBFHCCA = input.ReadUInt32();
+            break;
+          }
+          case 120: {
             MonsterId = input.ReadUInt32();
             break;
           }
@@ -384,27 +384,27 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            WorldLevel = input.ReadUInt32();
-            break;
-          }
           case 32: {
-            ODCLEGMOJOD = input.ReadUInt32();
-            break;
-          }
-          case 40: {
-            ILCAHLHBJPH = input.ReadBool();
-            break;
-          }
-          case 48: {
-            CreateTime = input.ReadInt64();
-            break;
-          }
-          case 80: {
             ConfigId = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 40: {
+            MMBAOCGFBLI = input.ReadBool();
+            break;
+          }
+          case 48: {
+            WorldLevel = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            CreateTime = input.ReadInt64();
+            break;
+          }
+          case 104: {
+            OEFFLBFHCCA = input.ReadUInt32();
+            break;
+          }
+          case 120: {
             MonsterId = input.ReadUInt32();
             break;
           }

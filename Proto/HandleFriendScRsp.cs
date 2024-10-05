@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdIYW5kbGVGcmllbmRTY1JzcC5wcm90bxoWRnJpZW5kU2ltcGxlSW5mby5w",
-            "cm90byJsChFIYW5kbGVGcmllbmRTY1JzcBIPCgdyZXRjb2RlGAEgASgNEhEK",
-            "CWlzX2FjY2VwdBgLIAEoCBImCgtmcmllbmRfaW5mbxgGIAEoCzIRLkZyaWVu",
-            "ZFNpbXBsZUluZm8SCwoDdWlkGAcgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "cm90byJsChFIYW5kbGVGcmllbmRTY1JzcBIPCgdyZXRjb2RlGAEgASgNEiYK",
+            "C2ZyaWVuZF9pbmZvGA4gASgLMhEuRnJpZW5kU2ltcGxlSW5mbxILCgN1aWQY",
+            "AyABKA0SEQoJaXNfYWNjZXB0GAUgASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FriendSimpleInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HandleFriendScRsp), global::EggLink.DanhengServer.Proto.HandleFriendScRsp.Parser, new[]{ "Retcode", "IsAccept", "FriendInfo", "Uid" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HandleFriendScRsp), global::EggLink.DanhengServer.Proto.HandleFriendScRsp.Parser, new[]{ "Retcode", "FriendInfo", "Uid", "IsAccept" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,9 +75,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HandleFriendScRsp(HandleFriendScRsp other) : this() {
       retcode_ = other.retcode_;
-      isAccept_ = other.isAccept_;
       friendInfo_ = other.friendInfo_ != null ? other.friendInfo_.Clone() : null;
       uid_ = other.uid_;
+      isAccept_ = other.isAccept_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -99,20 +99,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "is_accept" field.</summary>
-    public const int IsAcceptFieldNumber = 11;
-    private bool isAccept_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsAccept {
-      get { return isAccept_; }
-      set {
-        isAccept_ = value;
-      }
-    }
-
     /// <summary>Field number for the "friend_info" field.</summary>
-    public const int FriendInfoFieldNumber = 6;
+    public const int FriendInfoFieldNumber = 14;
     private global::EggLink.DanhengServer.Proto.FriendSimpleInfo friendInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -124,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "uid" field.</summary>
-    public const int UidFieldNumber = 7;
+    public const int UidFieldNumber = 3;
     private uint uid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -132,6 +120,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return uid_; }
       set {
         uid_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_accept" field.</summary>
+    public const int IsAcceptFieldNumber = 5;
+    private bool isAccept_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsAccept {
+      get { return isAccept_; }
+      set {
+        isAccept_ = value;
       }
     }
 
@@ -151,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Retcode != other.Retcode) return false;
-      if (IsAccept != other.IsAccept) return false;
       if (!object.Equals(FriendInfo, other.FriendInfo)) return false;
       if (Uid != other.Uid) return false;
+      if (IsAccept != other.IsAccept) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -162,9 +162,9 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (IsAccept != false) hash ^= IsAccept.GetHashCode();
       if (friendInfo_ != null) hash ^= FriendInfo.GetHashCode();
       if (Uid != 0) hash ^= Uid.GetHashCode();
+      if (IsAccept != false) hash ^= IsAccept.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -187,17 +187,17 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
       }
-      if (friendInfo_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(FriendInfo);
-      }
       if (Uid != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(24);
         output.WriteUInt32(Uid);
       }
       if (IsAccept != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(40);
         output.WriteBool(IsAccept);
+      }
+      if (friendInfo_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(FriendInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -213,17 +213,17 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
       }
-      if (friendInfo_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(FriendInfo);
-      }
       if (Uid != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(24);
         output.WriteUInt32(Uid);
       }
       if (IsAccept != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(40);
         output.WriteBool(IsAccept);
+      }
+      if (friendInfo_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(FriendInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -238,14 +238,14 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (IsAccept != false) {
-        size += 1 + 1;
-      }
       if (friendInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(FriendInfo);
       }
       if (Uid != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Uid);
+      }
+      if (IsAccept != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -262,9 +262,6 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.IsAccept != false) {
-        IsAccept = other.IsAccept;
-      }
       if (other.friendInfo_ != null) {
         if (friendInfo_ == null) {
           FriendInfo = new global::EggLink.DanhengServer.Proto.FriendSimpleInfo();
@@ -273,6 +270,9 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.Uid != 0) {
         Uid = other.Uid;
+      }
+      if (other.IsAccept != false) {
+        IsAccept = other.IsAccept;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -293,19 +293,19 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 24: {
+            Uid = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            IsAccept = input.ReadBool();
+            break;
+          }
+          case 114: {
             if (friendInfo_ == null) {
               FriendInfo = new global::EggLink.DanhengServer.Proto.FriendSimpleInfo();
             }
             input.ReadMessage(FriendInfo);
-            break;
-          }
-          case 56: {
-            Uid = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            IsAccept = input.ReadBool();
             break;
           }
         }
@@ -327,19 +327,19 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 24: {
+            Uid = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            IsAccept = input.ReadBool();
+            break;
+          }
+          case 114: {
             if (friendInfo_ == null) {
               FriendInfo = new global::EggLink.DanhengServer.Proto.FriendSimpleInfo();
             }
             input.ReadMessage(FriendInfo);
-            break;
-          }
-          case 56: {
-            Uid = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            IsAccept = input.ReadBool();
             break;
           }
         }

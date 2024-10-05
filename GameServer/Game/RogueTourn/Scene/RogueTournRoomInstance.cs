@@ -1,6 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Custom;
-using EggLink.DanhengServer.Enums.Rogue;
+using EggLink.DanhengServer.Enums.TournRogue;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 
