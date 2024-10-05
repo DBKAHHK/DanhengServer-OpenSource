@@ -17,7 +17,7 @@ public class HttpServerConfig
     public string BindAddress { get; set; } = "0.0.0.0";
     public string PublicAddress { get; set; } = "127.0.0.1";
     public int Port { get; set; } = 443;
-    public bool UseSSL { get; set; } = true;
+    public bool UseSSL { get; set; } = false;
 
     public string GetDisplayAddress()
     {
