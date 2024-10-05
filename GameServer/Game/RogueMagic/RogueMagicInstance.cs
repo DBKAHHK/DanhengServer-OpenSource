@@ -92,7 +92,7 @@ public class RogueMagicInstance : BaseRogueInstance
             return;
         }
 
-        CurLayerId = AreaExcel.LayerIDList[curIndex - 1];
+        CurLayerId = AreaExcel.LayerIDList[curIndex];
         await EnterRoom(roomIndex, type);
     }
 
