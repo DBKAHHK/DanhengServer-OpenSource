@@ -57,7 +57,7 @@ Some functions for the game might not support at the first time when new "Anime 
 
 DanhengServer is built using .NET Framework
 
-**Requirement: **
+**Requirement:**
 
 - [.NET](https://dotnet.microsoft.com/)
 - [Git](https://git-scm.com/downloads)
