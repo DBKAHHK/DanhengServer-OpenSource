@@ -95,7 +95,7 @@ cd DanhengServer-Beta
 
 ## ❕️ Troubleshooting
 
-For solutions to common problems or assistance, please join our Discord server at [https://discord.gg/xRtZsmHBVj](https://discord.gg/xRtZsmHBVj)
+For solutions to common problems or assistance, please join our Discord server at [Discord server](https://discord.gg/xRtZsmHBVj)
 
 ## 🙌 Acknowledgements
 
