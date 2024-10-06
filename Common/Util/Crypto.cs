@@ -69,7 +69,7 @@ public class Crypto
         }
         catch (Exception ex)
         {
-            Logger.Error($"An error occurred while loading the Encryption Seed：{ex}");
+            Logger.Error($"An error occurred while loading the Client Secret Key：{ex}");
             return null;
         }
     }

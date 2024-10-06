@@ -16,7 +16,7 @@ namespace EggLink.DanhengServer.Util.Security
         private byte[] Data;
 
         private ulong Seed;
-        private byte[] xorKey;
+        private byte[] XorKey;
 
 #pragma warning disable CS8618 // CS8618 - Non-nullable variable must contain a non-null value when exiting constructor.
         private Ec2b(byte[] key, byte[] data)
@@ -127,7 +127,7 @@ namespace EggLink.DanhengServer.Util.Security
 
         public byte[] GetXorKey()
         {
-            return xorKey;
+            return XorKey;
         }
 
         private void GenerateDecryptionVector(byte[] key, byte[] crypt)
@@ -154,7 +154,7 @@ namespace EggLink.DanhengServer.Util.Security
                 output.AddRange(bytes);
             }
 
-            xorKey = output.ToArray();
+            XorKey = output.ToArray();
         }
 
         private static void KeyScramble(byte[] key)

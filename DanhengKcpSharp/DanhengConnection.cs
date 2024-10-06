@@ -134,6 +134,7 @@ public class DanhengConnection
         {
             if (ConfigManager.Config.GameServer.UsePacketEncryption)
                 Crypto.Xor(packet, XorKey);
+
             _ = await Conversation.SendAsync(packet, CancelToken.Token);
         }
         catch
@@ -159,7 +160,6 @@ public class DanhengConnection
 
         try
         {
-            //_ = await Conversation.SendAsync(packetBytes, CancelToken.Token);
             await SendPacket(packetBytes);
         }
         catch
