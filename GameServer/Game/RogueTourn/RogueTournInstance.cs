@@ -9,6 +9,7 @@ using EggLink.DanhengServer.GameServer.Game.Rogue.Buff;
 using EggLink.DanhengServer.GameServer.Game.Rogue.Event;
 using EggLink.DanhengServer.GameServer.Game.RogueTourn.Formula;
 using EggLink.DanhengServer.GameServer.Game.RogueTourn.Scene;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup; 
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueCommon;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueTourn;
 using EggLink.DanhengServer.Proto;
@@ -119,11 +120,21 @@ public class RogueTournInstance : BaseRogueInstance
         await Player.SendPacket(new PacketRogueTournLevelInfoUpdateScNotify(this, [CurLevel]));
     }
 
+    
+
     public async ValueTask QuitRogue()
     {
+        Player.LineupManager?.SetExtraLineup(ExtraLineupType.LineupNone, []);
+
+        var currentLineup = Player.LineupManager!.GetCurLineup()!;
+
+        await Player.SendPacket(new PacketSyncLineupNotify(currentLineup));
+        
         await Player.EnterMissionScene(1034102, 0, 0, false);
+        
         Player.RogueTournManager!.RogueTournInstance = null;
     }
+
 
     #endregion
 
