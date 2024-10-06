@@ -11,6 +11,7 @@ using EggLink.DanhengServer.GameServer.Game.RogueMagic.MagicUnit;
 using EggLink.DanhengServer.GameServer.Game.RogueMagic.Scene;
 using EggLink.DanhengServer.GameServer.Game.RogueMagic.Scepter;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueCommon;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueMagic;
 using EggLink.DanhengServer.Proto;
@@ -147,10 +148,17 @@ public class RogueMagicInstance : BaseRogueInstance
     }
 
     public async ValueTask QuitRogue()
-    {
-        await Player.EnterMissionScene(801120102, 0, 0, false);
-        Player.RogueMagicManager!.RogueMagicInstance = null;
-    }
+{
+    Player.LineupManager?.SetExtraLineup(ExtraLineupType.LineupNone, []);
+
+    var currentLineup = Player.LineupManager!.GetCurLineup()!;
+
+    await Player.SendPacket(new PacketSyncLineupNotify(currentLineup));
+
+    await Player.EnterMissionScene(801120102, 0, 0, false);
+
+    Player.RogueMagicManager!.RogueMagicInstance = null;
+}
 
     #endregion
 
