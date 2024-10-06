@@ -12,7 +12,18 @@
   <a href="https://discord.gg/xRtZsmHBVj"><img src="https://img.shields.io/badge/Discord%20Server-000000.svg?style=for-the-badge&logo=Discord&logoColor=white" /></a>
 </p>
 
-[EN](README.md) | [简中](docs/README_zh-CN.md) | [繁中](docs/README_zh-CN.md) | [JP](docs/README_ja-JP.md)
+<div align="center">
+<table>
+<td valign="center"><img src="https://github.com/twitter/twemoji/blob/master/assets/72x72/1f1fa-1f1f8.png" width="16"/> English</td>
+ 
+<td valign="center"><a href="docs/README_zh-CN.md"><img src="https://em-content.zobj.net/thumbs/120/twitter/351/flag-china_1f1e8-1f1f3.png" width="16"/> 简中</td>
+ 
+<td valign="center"><a href="docs/README_zh-TW.md"><img src="https://em-content.zobj.net/thumbs/120/twitter/351/flag-china_1f1e8-1f1f3.png" width="16"/> 繁中</td>
+ 
+<td valign="center"><a href="docs/README_ja-JP.md"><img src="https://github.com/twitter/twemoji/blob/master/assets/72x72/1f1ef-1f1f5.png" width="16"/> 日本語</td>
+</td>
+</table>
+</div>
 
 ## 💡 Function
 
@@ -25,7 +36,7 @@
 - [√] **Quests** - There may be some bugs in some missions, the main story before Penacony is basically playable, and most of the story after Penacony has bugs
 - [√] **Friends**
 - [√] **Forgotten Hall & Pure Fiction & Apocalyptic Shadow**
-- [√] **Simulated Universe & Gold and Gears & Divergent Universe **
+- [√] **Simulated Universe & Gold and Gears & Divergent Universe**
 - [√] **Achievements** - Most achievements can be completed.
 
 - [ ] **More**  - Coming soon
@@ -37,7 +48,7 @@ Some functions for the game might not support at the first time when new "Anime 
 ### Quick Start
 
 1. Download the executable file from [Action](https://github.com/StopWuyu/DanhengServer-Beta/actions)
-2. Open the downloaded `DanhengServer-Beta.zip` and extract it to any folder __*preferably an English path__
+2. Open the downloaded `DanhengServer-Beta.zip` and extract it to any folder __preferably an English path__
    (Optional) Download the `certificate.p12` from the WebServer folder of the source code to enable HTTPS mode, ensuring a more secure traffic
 3. Run GameServer.exe
 4. Run proxy, start the game, and enjoy!
@@ -46,7 +57,7 @@ Some functions for the game might not support at the first time when new "Anime 
 
 DanhengServer is built using .NET Framework
 
-**Requirement: **
+**Requirement:**
 
 - [.NET](https://dotnet.microsoft.com/)
 - [Git](https://git-scm.com/downloads)
@@ -84,7 +95,7 @@ cd DanhengServer-Beta
 
 ## ❕️ Troubleshooting
 
-For solutions to common problems or assistance, please join our Discord server at [https://discord.gg/xRtZsmHBVj](https://discord.gg/xRtZsmHBVj)
+For solutions to common problems or assistance, please join our Discord server at [Discord](https://discord.gg/xRtZsmHBVj)
 
 ## 🙌 Acknowledgements
 
