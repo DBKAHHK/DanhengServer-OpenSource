@@ -36,7 +36,7 @@
 - [√] **Quests** - There may be some bugs in some missions, the main story before Penacony is basically playable, and most of the story after Penacony has bugs
 - [√] **Friends**
 - [√] **Forgotten Hall & Pure Fiction & Apocalyptic Shadow**
-- [√] **Simulated Universe & Gold and Gears & Divergent Universe **
+- [√] **Simulated Universe & Gold and Gears & Divergent Universe**
 - [√] **Achievements** - Most achievements can be completed.
 
 - [ ] **More**  - Coming soon
@@ -48,7 +48,7 @@ Some functions for the game might not support at the first time when new "Anime 
 ### Quick Start
 
 1. Download the executable file from [Action](https://github.com/StopWuyu/DanhengServer-Beta/actions)
-2. Open the downloaded `DanhengServer-Beta.zip` and extract it to any folder __*preferably an English path__
+2. Open the downloaded `DanhengServer-Beta.zip` and extract it to any folder __preferably an English path__
    (Optional) Download the `certificate.p12` from the WebServer folder of the source code to enable HTTPS mode, ensuring a more secure traffic
 3. Run GameServer.exe
 4. Run proxy, start the game, and enjoy!
