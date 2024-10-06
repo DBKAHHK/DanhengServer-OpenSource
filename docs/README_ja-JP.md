@@ -1,4 +1,4 @@
-# Danheng Server
+# Danheng Server-Beta
 
 **__このプロジェクトは開発中です！__**
 
@@ -11,7 +11,7 @@
   <a href="https://discord.gg/xRtZsmHBVj"><img src="https://img.shields.io/badge/Discord%20Server-000000.svg?style=for-the-badge&logo=Discord&logoColor=white" /></a>
 </p>
 
-[EN](../README.md) | [簡中](README_zh-CN.md) | [繁中](README_zh-CN.md) | [JP](README_ja-JP.md)
+[EN](../README.md) | [简中](README_zh-CN.md) | [繁中](README_zh-CN.md) | [JP](README_ja-JP.md)
 
 ## 💡機能
 
@@ -23,8 +23,8 @@
 - [√] **基本的な役割育成** - ちょっとバグがありますが、影響はあまりありません
 - [√] **タスク＃タスク＃** - 一部のタスクにはエラーがある可能性があります。ベロブルグの主要なタスクはすべて完了しています。男性主人公と女性主人公にはまだテストされていません
 - [-] **交友機能**
-- [-] **忘却の庭 & 虚構叙事**
-- [-] **模擬宇宙**
+- [-] **忘却の庭 & 虚構叙事 &終末の幻影**
+- [-] **模擬宇宙 & 黄金機械 & 差分宇宙**
 
 - [ ] **詳細**  - Coming soon...
 
@@ -34,8 +34,8 @@
 
 ### クイックスタート
 
-1. [Action](https://github.com/StopWuyu/DanhengServer/actions) で実行可能ファイルをダウンロードする
-2. ダウンロードが完了した` DanhengServer.zip `を開いて任意のフォルダに解凍します __*英文パスが望ましい*__
+1. [Action](https://github.com/StopWuyu/DanhengServer-Beta/actions) で実行可能ファイルをダウンロードする
+2. ダウンロードが完了した` DanhengServer-Beta.zip `を開いて任意のフォルダに解凍します __*英文パスが望ましい*__
 
 > (オプション) ソースコードのWebServerフォルダに` certificate.p 12 `をダウンロードすることで、HTTPSモードで起動して転送をより安全にすることができます: )
 
@@ -54,7 +54,7 @@ Danhengserver Dotnetを使用した構築
 ##### Windows
 
 ```shell
-git clone --recurse-submodules https://github.com/StopWuyu/DanhengServer.git
+git clone --recurse-submodules https://github.com/StopWuyu/DanhengServer-Beta.git
 cd DanhengServer
 .\dotnet build # コンパイル
 ```
@@ -74,8 +74,8 @@ sudo apt-get update && \
 
 - 環境をコンパイルして実行する
 ```shell
-git clone --recurse-submodules https://github.com/StopWuyu/DanhengServer.git
-cd DanhengServer
+git clone --recurse-submodules https://github.com/StopWuyu/DanhengServer-Beta.git
+cd DanhengServer-Beta
 .\dotnet build # コンパイル
 ./Gameserver
 ```

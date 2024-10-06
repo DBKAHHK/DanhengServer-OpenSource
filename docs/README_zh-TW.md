@@ -1,4 +1,4 @@
-# Danheng S# Danheng Server
+# Danheng Server-Beta
 
 **__此專案目前尚在開發中！__**
 
@@ -11,7 +11,7 @@
   <a href="https://discord.gg/xRtZsmHBVj"><img src="https://img.shields.io/badge/Discord%20Server-000000.svg?style=for-the-badge&logo=Discord&logoColor=white" /></a>
 </p>
 
-[EN](../README.md) | [簡中](README_zh-CN.md) | [繁中](README_zh-CN.md) | [JP](README_ja-JP.md)
+[EN](../README.md) | [简中](README_zh-CN.md) | [繁中](README_zh-CN.md) | [JP](README_ja-JP.md)
 
 ## 💡功能
 
@@ -23,9 +23,8 @@
 - [√] **基本的角色培養** - 一些小bug，影響體驗不大
 - [√] **任務** - 某些任務中可能存在一些錯誤，貝洛伯格主線任務已全數完成，剩餘內容正在製作中或是尚未測試，適用於星與穹
 - [√] **好友**
-- [√] **忘卻之庭 & 虛構敘事**
-- [√] **模擬宇宙**
-
+- [√] **忘卻之庭 & 虛構敘事 & 末日幻影**
+- [√] **類比宇宙&黃金機械&差分宇宙**
 - [ ] **更多**  - Coming soon...
 
 當新版本之「某動漫遊戲」發佈時，某些功能將不會在第一時間支援，請持續關注我們的提交內容。自從2.3版本起，我們建立了適用於Beta版本的私人分支，將在準備完成後第一時間合併至主倉庫。
@@ -34,8 +33,8 @@
 
 ### 快速啟動
 
-1. 在 [Action](https://github.com/StopWuyu/DanhengServer/actions) 下載可執行文件
-2. 打開下載完成的 `DanhengServer.zip` 解解壓至任意資料夹 __*最好是英文路徑*__
+1. 在 [Action](https://github.com/StopWuyu/DanhengServer-Beta/actions) 下載可執行文件
+2. 打開下載完成的 `DanhengServer-Beta.zip` 解解壓至任意資料夹 __*最好是英文路徑*__
 
 > (可選) 在原始碼的WebServer資料夾中下載 `certificate.p12` 使其以HTTPS模式啟動 讓你的傳輸更加安全: )
 
@@ -54,8 +53,8 @@ DanhengServer 使用 .NET Framework 構建
 ##### Windows
 
 ```shell
-git clone --recurse-submodules https://github.com/EggLinks/DanhengServer.git
-cd DanhengServer
+git clone --recurse-submodules https://github.com/StopWuyu/DanhengServer-Beta.git
+cd DanhengServer-Beta
 .\dotnet build # 編譯
 ```
 ##### Linux （Ubuntu 20.04）
@@ -72,8 +71,8 @@ sudo apt-get update && \
 
 - 編譯並運行環境
 ```shell
-git clone --recurse-submodules https://github.com/EggLinks/DanhengServer.git
-cd DanhengServer
+git clone --recurse-submodules https://github.com/StopWuyu/DanhengServer-Beta.git
+cd DanhengServer-Beta
 .\dotnet build # 編譯
 ./Gameserver
 ```

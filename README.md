@@ -1,6 +1,7 @@
-# Danheng Server
+# Danheng Server-Beta
 
 **__This project is under development! Some game technique might not correctly!__**
+
 
 <p align="center">
 <a href="https://visualstudio.com"><img src="https://img.shields.io/badge/Visual%20Studio-000000.svg?style=for-the-badge&logo=visual-studio&logoColor=white" /></a>
@@ -11,7 +12,7 @@
   <a href="https://discord.gg/xRtZsmHBVj"><img src="https://img.shields.io/badge/Discord%20Server-000000.svg?style=for-the-badge&logo=Discord&logoColor=white" /></a>
 </p>
 
-[EN](README.md) | [簡中](docs/README_zh-CN.md) | [繁中](docs/README_zh-CN.md) | [JP](docs/README_ja-JP.md)
+[EN](README.md) | [简中](docs/README_zh-CN.md) | [繁中](docs/README_zh-CN.md) | [JP](docs/README_ja-JP.md)
 
 ## 💡 Function
 
@@ -24,7 +25,7 @@
 - [√] **Quests** - There may be some bugs in some missions, the main story before Penacony is basically playable, and most of the story after Penacony has bugs
 - [√] **Friends**
 - [√] **Forgotten Hall & Pure Fiction & Apocalyptic Shadow**
-- [√] **Simulated Universe & Gold and Gears**
+- [√] **Simulated Universe & Gold and Gears & Divergent Universe **
 - [√] **Achievements** - Most achievements can be completed.
 
 - [ ] **More**  - Coming soon
@@ -35,8 +36,8 @@ Some functions for the game might not support at the first time when new "Anime 
 
 ### Quick Start
 
-1. Download the executable file from [Action](https://github.com/EggLinks/DanhengServer/actions)
-2. Open the downloaded `DanhengServer.zip` and extract it to any folder __*preferably an English path__
+1. Download the executable file from [Action](https://github.com/StopWuyu/DanhengServer-Beta/actions)
+2. Open the downloaded `DanhengServer-Beta.zip` and extract it to any folder __*preferably an English path__
    (Optional) Download the `certificate.p12` from the WebServer folder of the source code to enable HTTPS mode, ensuring a more secure traffic
 3. Run GameServer.exe
 4. Run proxy, start the game, and enjoy!
@@ -53,8 +54,8 @@ DanhengServer is built using .NET Framework
 ##### Windows
 
 ```shell
-git clone --recurse-submodules https://github.com/EggLinks/DanhengServer.git
-cd DanhengServer
+git clone --recurse-submodules https://github.com/StopWuyu/DanhengServer-Beta.git
+cd DanhengServer-Beta
 dotnet build # compile
 ```
 ##### Linux （Ubuntu 20.04）
@@ -70,8 +71,8 @@ sudo apt-get update && \
 
 - Compile and run environment
 ```shell
-git clone --recurse-submodules https://github.com/EggLinks/DanhengServer.git
-cd DanhengServer
+git clone --recurse-submodules https://github.com/StopWuyu/DanhengServer-Beta.git
+cd DanhengServer-Beta
 .\dotnet build # compile
 ./Gameserver
 ```

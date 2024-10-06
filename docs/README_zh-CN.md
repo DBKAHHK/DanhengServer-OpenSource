@@ -1,4 +1,4 @@
-# Danheng Server
+# Danheng Server-Beta
 
 **__此项目正在开发中！__**
 
@@ -11,7 +11,7 @@
   <a href="https://discord.gg/xRtZsmHBVj"><img src="https://img.shields.io/badge/Discord%20Server-000000.svg?style=for-the-badge&logo=Discord&logoColor=white" /></a>
 </p>
 
-[EN](../README.md) | [簡中](README_zh-CN.md) | [繁中](README_zh-CN.md) | [JP](README_ja-JP.md)
+[EN](../README.md) | [简中](README_zh-CN.md) | [繁中](README_zh-CN.md) | [JP](README_ja-JP.md)
 
 ## 💡功能
 
@@ -24,7 +24,7 @@
 - [√] **任务** - 某些任务中可能存在一些错误，匹诺康尼前的主线剧情基本能正常游玩,匹诺康尼后大部分剧情存在大量bug
 - [√] **朋友**
 - [√] **忘却之庭 & 虚构叙事 & 末日幻影**
-- [√] **模拟宇宙 & 黄金机械**
+- [√] **模拟宇宙 & 黄金机械 & 差分宇宙**
 - [√] **成就** - 大多数成就均可完成
 
 - [ ] **更多**  - Coming soon...
@@ -35,8 +35,8 @@
 
 ### 快速启动
 
-1. 在 [Action](https://github.com/StopWuyu/DanhengServer/actions) 下载可执行文件
-2. 打开下载完成的 `DanhengServer.zip` 解压至任意文件夹 __*最好是英文路径*__
+1. 在 [Action](https://github.com/StopWuyu/DanhengServer-Beta/actions) 下载可执行文件
+2. 打开下载完成的 `DanhengServer-Beta.zip` 解压至任意文件夹 __*最好是英文路径*__
 
 > (可选) 在源代码的WebServer文件夹中下载 `certificate.p12` 使得以HTTPS模式启动 让你的传输更安全: )
 
@@ -55,8 +55,8 @@ DanhengServer 使用 .NET Framework 构建
 ##### Windows
 
 ```shell
-git clone --recurse-submodules https://github.com/StopWuyu/DanhengServer.git
-cd DanhengServer
+git clone --recurse-submodules https://github.com/StopWuyu/DanhengServer-Beta.git
+cd DanhengServer-Beta
 .\dotnet build # 编译
 ```
 ##### Linux （Ubuntu 20.04）
@@ -73,8 +73,8 @@ sudo apt-get update && \
 
 - 编译并运行环境
 ```shell
-git clone --recurse-submodules https://github.com/StopWuyu/DanhengServer.git
-cd DanhengServer
+git clone --recurse-submodules https://github.com/StopWuyu/DanhengServer-Beta.git
+cd DanhengServer-Beta
 .\dotnet build # 编译
 ./Gameserver
 ```
