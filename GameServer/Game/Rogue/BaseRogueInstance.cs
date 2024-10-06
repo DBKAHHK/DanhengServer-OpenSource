@@ -14,6 +14,7 @@ using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueCommon;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
+using System;
 using LineupInfo = EggLink.DanhengServer.Database.Lineup.LineupInfo;
 
 namespace EggLink.DanhengServer.GameServer.Game.Rogue;
@@ -162,7 +163,7 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
         return RogueBuffs.FindAll(x => group.BuffList.Contains(x.BuffExcel));
     }
 
-    public virtual async ValueTask HandleBuffSelect(int buffId)
+    public virtual async ValueTask HandleBuffSelect(int buffId, int location)
     {
         if (RogueActions.Count == 0) return;
 
@@ -192,10 +193,10 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
 
         await UpdateMenu();
 
-        await Player.SendPacket(new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, true));
+        await Player.SendPacket(new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, location, true));
     }
 
-    public virtual async ValueTask HandleBuffReforgeSelect(int buffId)
+    public virtual async ValueTask HandleBuffReforgeSelect(int buffId, int location)
     {
         if (RogueActions.Count == 0) return;
 
@@ -225,10 +226,10 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
 
         await UpdateMenu();
 
-        await Player.SendPacket(new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, reforgeBuff:true));
+        await Player.SendPacket(new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, location, reforgeBuff:true));
     }
 
-    public virtual async ValueTask HandleRerollBuff()
+    public virtual async ValueTask HandleRerollBuff(int location)
     {
         if (RogueActions.Count == 0) return;
         var action = RogueActions.First().Value;
@@ -236,7 +237,7 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
         {
             await action.RogueBuffSelectMenu.RerollBuff(); // reroll
             await Player.SendPacket(
-                new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, menu: action.RogueBuffSelectMenu));
+                new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, location, menu: action.RogueBuffSelectMenu));
         }
     }
 
@@ -319,7 +320,7 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
         await UpdateMenu();
     }
 
-    public virtual async ValueTask HandleMiracleSelect(uint miracleId)
+    public virtual async ValueTask HandleMiracleSelect(uint miracleId, int location)
     {
         if (RogueActions.Count == 0) return;
 
@@ -334,7 +335,7 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
         await UpdateMenu();
 
         await Player.SendPacket(
-            new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, selectMiracle: true));
+            new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, location, selectMiracle: true));
     }
 
     public virtual async ValueTask AddMiracle(int miracleId)
@@ -354,7 +355,7 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
 
     #region Actions
 
-    public virtual async ValueTask HandleBonusSelect(int bonusId)
+    public virtual async ValueTask HandleBonusSelect(int bonusId, int location)
     {
         if (RogueActions.Count == 0) return;
 
@@ -367,14 +368,28 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
         RogueActions.Remove(action.QueuePosition);
         await UpdateMenu();
 
-        await Player.SendPacket(new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, selectBonus: true));
+        await Player.SendPacket(new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, location, selectBonus: true));
     }
 
-    public virtual async ValueTask UpdateMenu()
+    public virtual async ValueTask UpdateMenu(int position = 0)
     {
         if (RogueActions.Count > 0)
-            await Player.SendPacket(
-                new PacketSyncRogueCommonPendingActionScNotify(RogueActions.First().Value, RogueSubMode));
+        {
+            if (position == 0)
+            {
+                var action = RogueActions.Values.First();
+                action.GetSelectMenu()?.Roll();
+                await Player.SendPacket(
+                    new PacketSyncRogueCommonPendingActionScNotify(action, RogueSubMode));
+            }
+            else
+            {
+                var action = RogueActions[position];
+                action.GetSelectMenu()?.Roll();
+                await Player.SendPacket(
+                    new PacketSyncRogueCommonPendingActionScNotify(action, RogueSubMode));
+            }
+        }
     }
 
     #endregion

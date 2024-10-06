@@ -35,16 +35,19 @@ public class RogueMagicLevelInstance
 
     public int EntranceId { get; set; }
 
-    public RogueMagicLayerInfo ToProto()
+    public RogueMagicLayerInfo ToProto(List<int>? updateRoomIndexList = null)
     {
         var proto = new RogueMagicLayerInfo
         {
             Status = LevelStatus,
             CurRoomIndex = (uint)CurRoomIndex,
             LayerId = (uint)LayerId,
-            LevelIndex = (uint)LevelIndex,
-            TournRoomList = { Rooms.Select(x => x.ToProto()) }
+            LevelIndex = (uint)LevelIndex
         };
+
+        proto.TournRoomList.AddRange(updateRoomIndexList != null
+            ? Rooms.Where(x => updateRoomIndexList.Contains(x.RoomIndex)).Select(x => x.ToProto())
+            : Rooms.Select(x => x.ToProto()));
 
         return proto;
     }

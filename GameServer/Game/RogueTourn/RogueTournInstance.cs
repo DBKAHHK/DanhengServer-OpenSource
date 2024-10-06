@@ -77,7 +77,7 @@ public class RogueTournInstance : BaseRogueInstance
     public async ValueTask EnterNextLayer(int roomIndex, RogueTournRoomTypeEnum type)
     {
         CurLayerId += 100;
-        await EnterRoom(roomIndex, type);
+        await EnterRoom(1, type);
     }
 
     public async ValueTask EnterRoom(int roomIndex, RogueTournRoomTypeEnum type)
@@ -149,7 +149,7 @@ public class RogueTournInstance : BaseRogueInstance
         await UpdateMenu();
     }
 
-    public override async ValueTask HandleBuffSelect(int buffId)
+    public override async ValueTask HandleBuffSelect(int buffId, int location)
     {
         if (RogueActions.Count == 0) return;
 
@@ -180,7 +180,7 @@ public class RogueTournInstance : BaseRogueInstance
         await ExpandFormula();
         await UpdateMenu();
 
-        await Player.SendPacket(new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, true));
+        await Player.SendPacket(new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, location, true));
     }
 
     public override async ValueTask<RogueCommonActionResult?> AddBuff(int buffId, int level = 1,
@@ -255,7 +255,7 @@ public class RogueTournInstance : BaseRogueInstance
         }, RogueCommonActionResultDisplayType.Single));
     }
 
-    public async ValueTask HandleFormulaSelect(int formulaId)
+    public async ValueTask HandleFormulaSelect(int formulaId, int location)
     {
         if (RogueActions.Count == 0) return;
 
@@ -278,7 +278,7 @@ public class RogueTournInstance : BaseRogueInstance
         await UpdateMenu();
 
         await Player.SendPacket(
-            new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, selectFormula: true));
+            new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, location, selectFormula: true));
     }
 
     public virtual async ValueTask<RogueCommonActionResult?> RemoveFormula(int formulaId,

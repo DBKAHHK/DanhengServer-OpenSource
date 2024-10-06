@@ -36,6 +36,7 @@ public class EntityMonster(
     public int GroupID { get; set; } = GroupID;
 
     public int RogueMonsterId { get; set; } = 0;
+    public int CustomLevel { get; set; } = 0;
 
     public async ValueTask AddBuff(SceneBuff buff)
     {
@@ -91,7 +92,8 @@ public class EntityMonster(
             {
                 RogueGameInfo = new NpcMonsterRogueInfo
                 {
-                    RogueMonsterId = (uint)RogueMonsterId
+                    RogueMonsterId = (uint)RogueMonsterId,
+                    Level = (uint)CustomLevel
                 }
             };
 

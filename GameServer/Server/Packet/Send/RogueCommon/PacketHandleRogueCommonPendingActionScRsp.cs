@@ -6,7 +6,7 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueCommon;
 
 public class PacketHandleRogueCommonPendingActionScRsp : BasePacket
 {
-    public PacketHandleRogueCommonPendingActionScRsp(int queuePosition, bool selectBuff = false,
+    public PacketHandleRogueCommonPendingActionScRsp(int queuePosition, int queueLocation, bool selectBuff = false,
         bool selectMiracle = false, bool selectBonus = false, bool selectFormula = false,
         bool reforgeBuff = false, bool selectMagicUnit = false, bool selectScepter = false,
         RogueBuffSelectMenu? menu = null) : base(
@@ -14,7 +14,7 @@ public class PacketHandleRogueCommonPendingActionScRsp : BasePacket
     {
         var proto = new HandleRogueCommonPendingActionScRsp
         {
-            QueueLocation = (uint)queuePosition,
+            QueueLocation = (uint)queueLocation,
             QueuePosition = (uint)queuePosition
         };
 

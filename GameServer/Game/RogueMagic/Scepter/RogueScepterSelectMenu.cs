@@ -2,31 +2,40 @@
 using EggLink.DanhengServer.GameServer.Game.Rogue;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
+using System;
 
 namespace EggLink.DanhengServer.GameServer.Game.RogueMagic.Scepter;
 
-public class RogueScepterSelectMenu(BaseRogueInstance rogue)
+public class RogueScepterSelectMenu(BaseRogueInstance rogue) : BaseRogueSelectMenu
 {
     public List<RogueMagicScepterExcel> Scepters { get; set; } = [];
     public int RollMaxCount { get; set; } = rogue.BaseRerollCount;
     public int RollCount { get; set; }
     public int RollFreeCount { get; set; } = rogue.BaseRerollFreeCount;
     public int RollCost { get; set; } = rogue.CurRerollCost;
-    public int QueueAppend { get; set; } = 3;
+    public int QueueAppend { get; set; } = 2;
+    public int Count { get; set; } = 3;
     public List<RogueMagicScepterExcel> ScepterPool { get; set; } = [];
 
-    public void RollScepter(List<RogueMagicScepterExcel> scepters, int count = 3)
+    public override void Roll()
     {
-        ScepterPool.Clear();
-        ScepterPool.AddRange(scepters);
-
+        if (Scepters.Count > 0) return;  // already init
+        // Remove existing scepters
+        if (rogue is RogueMagicInstance magic)
+        {
+            foreach (var excel in ScepterPool.Clone())
+            {
+                if (magic.RogueScepters.Any(x => x.Value.Excel.ScepterID == excel.ScepterID))
+                    ScepterPool.Remove(excel);
+            }
+        }
         var list = new RandomList<RogueMagicScepterExcel>();
 
-        foreach (var magicScepterExcel in scepters)
+        foreach (var magicScepterExcel in ScepterPool)
             list.Add(magicScepterExcel, 1);
         var result = new List<RogueMagicScepterExcel>();
 
-        for (var i = 0; i < count; i++)
+        for (var i = 0; i < Count; i++)
         {
             var scepterExcel = list.GetRandom();
             if (scepterExcel != null)
@@ -39,6 +48,13 @@ public class RogueScepterSelectMenu(BaseRogueInstance rogue)
         }
 
         Scepters = result;
+    }
+
+    public void SetScepterPool(List<RogueMagicScepterExcel> scepters, int count = 3)
+    {
+        ScepterPool.Clear();
+        ScepterPool.AddRange(scepters);
+        Count = count;
     }
 
     public async ValueTask RerollScepter()
@@ -54,7 +70,7 @@ public class RogueScepterSelectMenu(BaseRogueInstance rogue)
             await rogue.CostMoney(RollCost);
         }
 
-        RollScepter(ScepterPool.Clone().ToList());
+        Roll();
     }
 
     public RogueActionInstance GetActionInstance()

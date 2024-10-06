@@ -205,6 +205,7 @@ public static class GameData
     public static Dictionary<int, List<int>> RogueMiracleGroupData { get; set; } = [];
     public static Dictionary<int, RogueMiracleDisplayExcel> RogueMiracleDisplayData { get; private set; } = [];
     public static Dictionary<int, RogueMonsterExcel> RogueMonsterData { get; private set; } = [];
+    public static Dictionary<int, RogueMonsterGroupExcel> RogueMonsterGroupData { get; private set; } = [];
     public static Dictionary<int, RogueNPCExcel> RogueNPCData { get; private set; } = [];
     public static Dictionary<int, RogueRoomExcel> RogueRoomData { get; private set; } = [];
     public static Dictionary<int, RogueTalentExcel> RogueTalentData { get; private set; } = [];

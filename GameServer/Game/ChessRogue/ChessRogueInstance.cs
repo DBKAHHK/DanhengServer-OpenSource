@@ -258,9 +258,9 @@ public class ChessRogueInstance : BaseRogueInstance
         }
     }
 
-    public override async ValueTask UpdateMenu()
+    public override async ValueTask UpdateMenu(int position = 0)
     {
-        await base.UpdateMenu();
+        await base.UpdateMenu(position);
 
 
         await AddAeonBuff(); // check if aeon buff can be added

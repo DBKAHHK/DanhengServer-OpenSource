@@ -51,4 +51,15 @@ public class RogueActionInstance
             RogueAction = action
         };
     }
+
+    public BaseRogueSelectMenu? GetSelectMenu()
+    {
+        //if (RogueBuffSelectMenu != null) return RogueBuffSelectMenu;
+        //if (RogueMiracleSelectMenu != null) return RogueMiracleSelectMenu;
+        //if (RogueFormulaSelectMenu != null) return RogueFormulaSelectMenu;
+        if (RogueMagicUnitSelectMenu != null) return RogueMagicUnitSelectMenu;
+        if (RogueScepterSelectMenu != null) return RogueScepterSelectMenu;
+
+        return null;
+    }
 }

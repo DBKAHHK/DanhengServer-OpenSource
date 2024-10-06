@@ -8,6 +8,7 @@ using EggLink.DanhengServer.GameServer.Game.Rogue.Scene.Entity;
 using EggLink.DanhengServer.GameServer.Game.RogueTourn.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
+using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Game.RogueMagic.Scene;
@@ -15,8 +16,10 @@ namespace EggLink.DanhengServer.GameServer.Game.RogueMagic.Scene;
 public class RogueMagicEntityLoader(SceneInstance scene, PlayerInstance player) : SceneEntityLoader(scene)
 {
     public List<RogueMagicRoomTypeEnum> ExistTypes = [];
-    public List<int> FinalRoomBossIds = [3007091, 3007101, 3007111, 3007121, 3007131, 3007141];
-    public List<int> LayerNormalBossIds = [3007011, 3007021, 3007031, 3007041, 3007051, 3007061, 3007071, 3007081];
+    public int FinalRoomBossGroup = 500401;
+
+    public int LayerNormalBossGroup2 = 500301;
+    public int LayerNormalBossGroup1 = 400711;
     public PlayerInstance Player = player;
     public List<int> RogueDoorPropIds = [1033, 1034, 1035, 1036, 1037, 1000, 1053, 1054, 1055, 1056, 1057];
 
@@ -121,9 +124,38 @@ public class RogueMagicEntityLoader(SceneInstance scene, PlayerInstance player) 
         if (config.RoomType == RogueMagicRoomTypeEnum.Boss)
         {
             if (rogueInstance.CurLevel?.LevelIndex == 3)
-                rogueMonster = GameData.RogueMonsterData[FinalRoomBossIds.RandomElement()];
+            {
+                var dict = GameData.RogueMonsterGroupData[FinalRoomBossGroup].RogueMonsterListAndWeight;
+                var random = new RandomList<int>();
+                foreach (var i in dict)
+                {
+                    random.Add(int.Parse(i.Key), i.Value);
+                }
+
+                rogueMonster = GameData.RogueMonsterData[random.GetRandom()];
+            }
+            else if (rogueInstance.CurLevel?.LevelIndex == 2)
+            {
+                var dict = GameData.RogueMonsterGroupData[LayerNormalBossGroup2].RogueMonsterListAndWeight;
+                var random = new RandomList<int>();
+                foreach (var i in dict)
+                {
+                    random.Add(int.Parse(i.Key), i.Value);
+                }
+
+                rogueMonster = GameData.RogueMonsterData[random.GetRandom()];
+            }
             else
-                rogueMonster = GameData.RogueMonsterData[LayerNormalBossIds.RandomElement()];
+            {
+                var dict = GameData.RogueMonsterGroupData[LayerNormalBossGroup1].RogueMonsterListAndWeight;
+                var random = new RandomList<int>();
+                foreach (var i in dict)
+                {
+                    random.Add(int.Parse(i.Key), i.Value);
+                }
+
+                rogueMonster = GameData.RogueMonsterData[random.GetRandom()];
+            }
         }
         else
         {
@@ -138,12 +170,21 @@ public class RogueMagicEntityLoader(SceneInstance scene, PlayerInstance player) 
         GameData.NpcMonsterDataData.TryGetValue(rogueMonster.NpcMonsterID, out var excel);
         if (excel == null) return null;
 
+        var customLevel = 0;
+        if (rogueInstance.DifficultyExcels.Count > 0)
+        {
+            var diff = rogueInstance.DifficultyExcels.RandomElement();
+            if (diff.LevelList.Count > 0)
+                customLevel = diff.LevelList.RandomElement();
+        }
+
         EntityMonster entity =
             new(Scene, info.ToPositionProto(), info.ToRotationProto(), group.Id, info.ID, excel, info)
             {
                 EventID = rogueMonster.EventID,
                 CustomStageID = rogueMonster.EventID,
-                RogueMonsterId = rogueMonster.RogueMonsterID
+                RogueMonsterId = rogueMonster.RogueMonsterID,
+                CustomLevel = customLevel
             };
 
         await Scene.AddEntity(entity, sendPacket);
@@ -165,9 +206,9 @@ public class RogueMagicEntityLoader(SceneInstance scene, PlayerInstance player) 
 
         if (RogueDoorPropIds.Contains(prop.PropInfo.PropID))
         {
-            if (room is { RoomIndex: 4, LevelInstance.LevelIndex: 3 }) // last room
+            if (room is { RoomIndex: 6, LevelInstance.LevelIndex: 3 }) // last room
                 // exit
-                prop.CustomPropID = 1033;
+                prop.CustomPropID = 1053;
             else
                 do // find next room
                 {
