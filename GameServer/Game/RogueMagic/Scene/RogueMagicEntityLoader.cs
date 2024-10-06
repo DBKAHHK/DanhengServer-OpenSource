@@ -105,6 +105,11 @@ public class RogueMagicEntityLoader(SceneInstance scene, PlayerInstance player) 
 
         if (config == null) return null;
 
+        if (config.RoomType == RogueMagicRoomTypeEnum.Adventure)
+        {
+            return await base.LoadMonster(info, group, sendPacket);
+        }
+
         List<MonsterRankEnum> allowedRank = [];
 
         switch (config.RoomType)
@@ -170,21 +175,12 @@ public class RogueMagicEntityLoader(SceneInstance scene, PlayerInstance player) 
         GameData.NpcMonsterDataData.TryGetValue(rogueMonster.NpcMonsterID, out var excel);
         if (excel == null) return null;
 
-        var customLevel = 0;
-        if (rogueInstance.DifficultyExcels.Count > 0)
-        {
-            var diff = rogueInstance.DifficultyExcels.RandomElement();
-            if (diff.LevelList.Count > 0)
-                customLevel = diff.LevelList.RandomElement();
-        }
-
         EntityMonster entity =
             new(Scene, info.ToPositionProto(), info.ToRotationProto(), group.Id, info.ID, excel, info)
             {
                 EventID = rogueMonster.EventID,
                 CustomStageID = rogueMonster.EventID,
-                RogueMonsterId = rogueMonster.RogueMonsterID,
-                CustomLevel = customLevel
+                RogueMonsterId = rogueMonster.RogueMonsterID
             };
 
         await Scene.AddEntity(entity, sendPacket);
@@ -197,6 +193,9 @@ public class RogueMagicEntityLoader(SceneInstance scene, PlayerInstance player) 
         var room = Player.RogueMagicManager?.RogueMagicInstance?.CurLevel?.CurRoom;
         if (room == null) return null;
 
+        var magic = Player.RogueMagicManager?.RogueMagicInstance;
+        if (magic == null) return null;
+
         GameData.MazePropData.TryGetValue(info.PropID, out var propExcel);
         if (propExcel == null) return null;
 
@@ -206,9 +205,12 @@ public class RogueMagicEntityLoader(SceneInstance scene, PlayerInstance player) 
 
         if (RogueDoorPropIds.Contains(prop.PropInfo.PropID))
         {
-            if (room is { RoomIndex: 6, LevelInstance.LevelIndex: 3 }) // last room
+            if (magic.CurLevel?.LayerId == magic.Levels.Last().Key && magic.CurLevel?.Rooms.Last().RoomIndex == room.RoomIndex) // last room
+            {
                 // exit
+                if (prop.InstId != 300002) return null;  // not center door
                 prop.CustomPropID = 1053;
+            }
             else
                 do // find next room
                 {

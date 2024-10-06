@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static StopRogueAdventureRoomCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFTdG9wUm9ndWVBZHZlbnR1cmVSb29tQ3NSZXEucHJvdG8iRwobU3RvcFJv",
-            "Z3VlQWR2ZW50dXJlUm9vbUNzUmVxEhMKC0pJSEFMT0FFTU1KGAwgASgNEhMK",
-            "C0dNQUZESUhJSUdDGAQgAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
-            "UHJvdG9iBnByb3RvMw=="));
+            "CiFTdG9wUm9ndWVBZHZlbnR1cmVSb29tQ3NSZXEucHJvdG8iUQobU3RvcFJv",
+            "Z3VlQWR2ZW50dXJlUm9vbUNzUmVxEhMKC0pJSEFMT0FFTU1KGAwgASgNEh0K",
+            "FWhpdF90YXJnZXRfaW5kZXhfbGlzdBgEIAMoDUIeqgIbRWdnTGluay5EYW5o",
+            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StopRogueAdventureRoomCsReq), global::EggLink.DanhengServer.Proto.StopRogueAdventureRoomCsReq.Parser, new[]{ "JIHALOAEMMJ", "GMAFDIHIIGC" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StopRogueAdventureRoomCsReq), global::EggLink.DanhengServer.Proto.StopRogueAdventureRoomCsReq.Parser, new[]{ "JIHALOAEMMJ", "HitTargetIndexList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StopRogueAdventureRoomCsReq(StopRogueAdventureRoomCsReq other) : this() {
       jIHALOAEMMJ_ = other.jIHALOAEMMJ_;
-      gMAFDIHIIGC_ = other.gMAFDIHIIGC_.Clone();
+      hitTargetIndexList_ = other.hitTargetIndexList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "GMAFDIHIIGC" field.</summary>
-    public const int GMAFDIHIIGCFieldNumber = 4;
-    private static readonly pb::FieldCodec<uint> _repeated_gMAFDIHIIGC_codec
+    /// <summary>Field number for the "hit_target_index_list" field.</summary>
+    public const int HitTargetIndexListFieldNumber = 4;
+    private static readonly pb::FieldCodec<uint> _repeated_hitTargetIndexList_codec
         = pb::FieldCodec.ForUInt32(34);
-    private readonly pbc::RepeatedField<uint> gMAFDIHIIGC_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> hitTargetIndexList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> GMAFDIHIIGC {
-      get { return gMAFDIHIIGC_; }
+    public pbc::RepeatedField<uint> HitTargetIndexList {
+      get { return hitTargetIndexList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (JIHALOAEMMJ != other.JIHALOAEMMJ) return false;
-      if(!gMAFDIHIIGC_.Equals(other.gMAFDIHIIGC_)) return false;
+      if(!hitTargetIndexList_.Equals(other.hitTargetIndexList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (JIHALOAEMMJ != 0) hash ^= JIHALOAEMMJ.GetHashCode();
-      hash ^= gMAFDIHIIGC_.GetHashCode();
+      hash ^= hitTargetIndexList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      gMAFDIHIIGC_.WriteTo(output, _repeated_gMAFDIHIIGC_codec);
+      hitTargetIndexList_.WriteTo(output, _repeated_hitTargetIndexList_codec);
       if (JIHALOAEMMJ != 0) {
         output.WriteRawTag(96);
         output.WriteUInt32(JIHALOAEMMJ);
@@ -166,7 +166,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      gMAFDIHIIGC_.WriteTo(ref output, _repeated_gMAFDIHIIGC_codec);
+      hitTargetIndexList_.WriteTo(ref output, _repeated_hitTargetIndexList_codec);
       if (JIHALOAEMMJ != 0) {
         output.WriteRawTag(96);
         output.WriteUInt32(JIHALOAEMMJ);
@@ -184,7 +184,7 @@ namespace EggLink.DanhengServer.Proto {
       if (JIHALOAEMMJ != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JIHALOAEMMJ);
       }
-      size += gMAFDIHIIGC_.CalculateSize(_repeated_gMAFDIHIIGC_codec);
+      size += hitTargetIndexList_.CalculateSize(_repeated_hitTargetIndexList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -200,7 +200,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.JIHALOAEMMJ != 0) {
         JIHALOAEMMJ = other.JIHALOAEMMJ;
       }
-      gMAFDIHIIGC_.Add(other.gMAFDIHIIGC_);
+      hitTargetIndexList_.Add(other.hitTargetIndexList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -218,7 +218,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 34:
           case 32: {
-            gMAFDIHIIGC_.AddEntriesFrom(input, _repeated_gMAFDIHIIGC_codec);
+            hitTargetIndexList_.AddEntriesFrom(input, _repeated_hitTargetIndexList_codec);
             break;
           }
           case 96: {
@@ -242,7 +242,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 34:
           case 32: {
-            gMAFDIHIIGC_.AddEntriesFrom(ref input, _repeated_gMAFDIHIIGC_codec);
+            hitTargetIndexList_.AddEntriesFrom(ref input, _repeated_hitTargetIndexList_codec);
             break;
           }
           case 96: {

@@ -6,9 +6,11 @@ using EggLink.DanhengServer.GameServer.Game.Battle;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Game.Rogue;
 using EggLink.DanhengServer.GameServer.Game.Rogue.Event;
+using EggLink.DanhengServer.GameServer.Game.RogueMagic.Adventure;
 using EggLink.DanhengServer.GameServer.Game.RogueMagic.MagicUnit;
 using EggLink.DanhengServer.GameServer.Game.RogueMagic.Scene;
 using EggLink.DanhengServer.GameServer.Game.RogueMagic.Scepter;
+using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueCommon;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueMagic;
 using EggLink.DanhengServer.Proto;
@@ -24,11 +26,12 @@ public class RogueMagicInstance : BaseRogueInstance
     {
         // generate levels
         AreaExcel = GameData.RogueMagicAreaData.GetValueOrDefault(areaId) ??
-                    throw new Exception("Invalid area id"); // wont be null because of validation in RogueTournManager
+                    throw new Exception("Invalid area id"); // wont be null because of validation in RogueMagicManager
 
         foreach (var index in Enumerable.Range(1, AreaExcel.LayerIDList.Count))
         {
-            var levelInstance = new RogueMagicLevelInstance(index, AreaExcel.LayerIDList[index - 1]);
+            var layerId = AreaExcel.LayerIDList[index - 1];
+            var levelInstance = new RogueMagicLevelInstance(index, layerId, GameData.RogueMagicLayerIdRoomCountDict.GetValueOrDefault(layerId));
             Levels.Add(levelInstance.LayerId, levelInstance);
         }
 
@@ -44,7 +47,7 @@ public class RogueMagicInstance : BaseRogueInstance
                 DifficultyCompExcels.Add(excel);
         }
 
-        foreach (var id in AreaExcel.DifficultyIDList)
+        foreach (var id in AreaExcel.DifficultyIDList)  // need to find a better way to get difficulty excels
         {
             GameData.RogueTournDifficultyData.TryGetValue(1000 + id, out var excel);
             if (excel != null)
@@ -82,7 +85,7 @@ public class RogueMagicInstance : BaseRogueInstance
         { RogueMagicRoomTypeEnum.Wealth, 4 },
         { RogueMagicRoomTypeEnum.Shop, 4 },
         { RogueMagicRoomTypeEnum.Event, 7 },
-        { RogueMagicRoomTypeEnum.Adventure, 6 },
+        { RogueMagicRoomTypeEnum.Adventure, 60 },
         { RogueMagicRoomTypeEnum.Reward, 5 },
         { RogueMagicRoomTypeEnum.Elite, 1 }
     };
@@ -214,7 +217,7 @@ public class RogueMagicInstance : BaseRogueInstance
 
     public async ValueTask RollMagicUnit(int amount, int level, List<RogueMagicUnitCategoryEnum> categories)
     {
-        var unitExcels = GameData.RogueMagicUnitData.Values.Where(x => !RogueMagicUnits.ContainsKey(x.MagicUnitID) && x.MagicUnitLevel == level && categories.Contains(x.MagicUnitCategory)).ToList();
+        var unitExcels = GameData.RogueMagicUnitData.Values.Where(x => !RogueMagicUnits.ContainsKey(x.MagicUnitID) && x.MagicUnitLevel == level && categories.Contains(x.MagicUnitCategory) && x.MagicUnitType != RogueMagicMountTypeEnum.Active).ToList();
 
         for (var i = 0; i < amount; i++)
         {
@@ -258,6 +261,44 @@ public class RogueMagicInstance : BaseRogueInstance
 
     #endregion
 
+    #region Adventure
+
+    public async ValueTask HandleStopWolfGunAdventure(List<int> targetIndex, RogueMagicAdventureInstance instance)
+    {
+        if (instance.WolfGunTargets.Count == 0) return;
+
+        var result = (from index in targetIndex
+            where index >= 0 && index < instance.WolfGunTargets.Count
+            select instance.WolfGunTargets[index]).ToList();
+
+        foreach (var target in result)
+        {
+            if (target.IsMoney)
+            {
+                // money
+                await GainMoney(target.TargetId, 2);
+            }
+            else if (target.IsMiracle)
+            {
+                // miracle
+                await AddMiracle(target.TargetId);
+            }
+            else if (target.IsRuanmei)
+            {
+                // ruanmei
+                foreach (var unused in Enumerable.Range(0, 10))
+                {
+                    var unitExcels = GameData.RogueMagicUnitData.Values
+                        .Where(x => !RogueMagicUnits.ContainsKey(x.MagicUnitID) && x.MagicUnitLevel == 1 && x.MagicUnitType != RogueMagicMountTypeEnum.Active).ToList();
+                    var unit = unitExcels.RandomElement();
+                    await AddMagicUnit(unit, RogueCommonActionResultSourceType.None);
+                }
+            }
+        }
+    }
+
+    #endregion
+
     #region Handlers
 
     public override void OnBattleStart(BattleInstance battle)
@@ -286,6 +327,11 @@ public class RogueMagicInstance : BaseRogueInstance
         };
     }
 
+    public async ValueTask HitMonsterInAdventure(List<EntityMonster> monsters)
+    {
+        await ValueTask.CompletedTask;
+    }
+
     public override async ValueTask OnBattleEnd(BattleInstance battle, PVEBattleResultCsReq req)
     {
         if (battle.BattleEndStatus != BattleEndStatus.BattleEndWin)
@@ -305,6 +351,18 @@ public class RogueMagicInstance : BaseRogueInstance
         }
     }
 
+    public override async ValueTask OnPropDestruct(EntityProp prop)
+    {
+        await base.OnPropDestruct(prop);
+
+        var inst = CurLevel?.CurRoom?.AdventureInstance;
+        if (inst != null && inst.Excel.AdventureType == RogueAdventureGameplayTypeEnum.RogueDestroyProp)
+        {
+            inst.Score++;
+
+            await Player.SendPacket(new PacketSyncRogueAdventureRoomInfoScNotify(inst));
+        }
+    }
 
     #endregion
 

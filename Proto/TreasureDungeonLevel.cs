@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static TreasureDungeonLevelReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpUcmVhc3VyZUR1bmdlb25MZXZlbC5wcm90bxoRR0dDUExPTkVBRUcucHJv",
-            "dG8aEUFQRkJDRVBKTERDLnByb3RvGh9UcmVhc3VyZUR1bmdlb25SZWNvcmRE",
-            "YXRhLnByb3RvGhFHS0hJS0dGTEVITy5wcm90bxoRQ0pMSUZCSk9PQUoucHJv",
-            "dG8aEU9QTVBOSEVEQ0hCLnByb3RvIoAEChRUcmVhc3VyZUR1bmdlb25MZXZl",
+            "ChpUcmVhc3VyZUR1bmdlb25MZXZlbC5wcm90bxoRQ0pMSUZCSk9PQUoucHJv",
+            "dG8aEUdLSElLR0ZMRUhPLnByb3RvGh9UcmVhc3VyZUR1bmdlb25SZWNvcmRE",
+            "YXRhLnByb3RvGhFPUE1QTkhFRENIQi5wcm90bxoRQVBGQkNFUEpMREMucHJv",
+            "dG8aEUdHQ1BMT05FQUVHLnByb3RvIoAEChRUcmVhc3VyZUR1bmdlb25MZXZl",
             "bBIUCgtQTURBRE5DS0pJQRiQByABKA0SEwoLQ05JSkdBUE9QQUgYCSABKA0S",
             "IAoJaXRlbV9saXN0GMMHIAMoCzIMLk9QTVBOSEVEQ0hCEg4KBm1hcF9pZBgO",
             "IAEoDRIiCgtCS0NCSEZOUE5EQhjgDCADKAsyDC5HR0NQTE9ORUFFRxIiCgth",
@@ -41,7 +41,7 @@ namespace EggLink.DanhengServer.Proto {
             "6wMgAygLMgwuQVBGQkNFUEpMREMSEwoLTkNGQUpQQU1CR0QYDyABKA1CHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GGCPLONEAEGReflection.Descriptor, global::EggLink.DanhengServer.Proto.APFBCEPJLDCReflection.Descriptor, global::EggLink.DanhengServer.Proto.TreasureDungeonRecordDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.GKHIKGFLEHOReflection.Descriptor, global::EggLink.DanhengServer.Proto.CJLIFBJOOAJReflection.Descriptor, global::EggLink.DanhengServer.Proto.OPMPNHEDCHBReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CJLIFBJOOAJReflection.Descriptor, global::EggLink.DanhengServer.Proto.GKHIKGFLEHOReflection.Descriptor, global::EggLink.DanhengServer.Proto.TreasureDungeonRecordDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.OPMPNHEDCHBReflection.Descriptor, global::EggLink.DanhengServer.Proto.APFBCEPJLDCReflection.Descriptor, global::EggLink.DanhengServer.Proto.GGCPLONEAEGReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TreasureDungeonLevel), global::EggLink.DanhengServer.Proto.TreasureDungeonLevel.Parser, new[]{ "PMDADNCKJIA", "CNIJGAPOPAH", "ItemList", "MapId", "BKCBHFNPNDB", "AvatarList", "OJJLBIPFMAP", "BuffList", "NONCAHOJMIL", "GDMHDNHIBIF", "ANMGHMCILLM", "NHLIFOPDKGM", "DHLPHKJBMHB", "FDIPCGICJKF", "KHGLEILELJP", "IOOLNIOPGBJ", "KCAOCAEKGMK", "NCFAJPAMBGD" }, null, null, null, null)
           }));

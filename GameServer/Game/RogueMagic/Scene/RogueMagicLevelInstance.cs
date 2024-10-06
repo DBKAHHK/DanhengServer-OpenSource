@@ -7,22 +7,16 @@ namespace EggLink.DanhengServer.GameServer.Game.RogueMagic.Scene;
 
 public class RogueMagicLevelInstance
 {
-    public RogueMagicLevelInstance(int levelIndex, int layerId)
+    public RogueMagicLevelInstance(int levelIndex, int layerId, int roomCount)
     {
         LevelIndex = levelIndex;
         LayerId = layerId;
         EntranceId = GameData.RogueMagicRoomGenData.Where(x => x.RoomType != RogueMagicRoomTypeEnum.Adventure)
             .Select(x => x.EntranceId).ToHashSet().ToList()
             .RandomElement();
-        if (levelIndex == 2)
-            foreach (var index in Enumerable.Range(1, 8))
-                Rooms.Add(new RogueMagicRoomInstance(index, this));
-        else if (levelIndex == 1)
-            foreach (var index in Enumerable.Range(1, 4))
-                Rooms.Add(new RogueMagicRoomInstance(index, this));
-        else
-            foreach (var index in Enumerable.Range(1, 6))
-                Rooms.Add(new RogueMagicRoomInstance(index, this));
+
+        foreach (var index in Enumerable.Range(1, roomCount))
+            Rooms.Add(new RogueMagicRoomInstance(index, this));
     }
 
     public List<RogueMagicRoomInstance> Rooms { get; set; } = [];

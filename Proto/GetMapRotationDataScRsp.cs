@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static GetMapRotationDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1HZXRNYXBSb3RhdGlvbkRhdGFTY1JzcC5wcm90bxoRSE1CTElBRE5LRU8u",
-            "cHJvdG8aEUNoYXJnZXJJbmZvLnByb3RvGhdSb3RhdGVyRW5lcmd5SW5mby5w",
-            "cm90bxoRUm90YXRlckRhdGEucHJvdG8i/wEKF0dldE1hcFJvdGF0aW9uRGF0",
+            "Ch1HZXRNYXBSb3RhdGlvbkRhdGFTY1JzcC5wcm90bxoRUm90YXRlckRhdGEu",
+            "cHJvdG8aEUhNQkxJQUROS0VPLnByb3RvGhdSb3RhdGVyRW5lcmd5SW5mby5w",
+            "cm90bxoRQ2hhcmdlckluZm8ucHJvdG8i/wEKF0dldE1hcFJvdGF0aW9uRGF0",
             "YVNjUnNwEh4KCHJvb21fbWFwGAYgASgLMgwuSE1CTElBRE5LRU8SEwoLSEZK",
             "Tk5CUERMQ0sYCyABKAgSDwoHcmV0Y29kZRgNIAEoDRIiCgxjaGFyZ2VyX2lu",
             "Zm8YBSADKAsyDC5DaGFyZ2VySW5mbxITCgtDSEpNT0RJTUxEQRgEIAEoDRIn",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "ckVuZXJneUluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HMBLIADNKEOReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.HMBLIADNKEOReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMapRotationDataScRsp), global::EggLink.DanhengServer.Proto.GetMapRotationDataScRsp.Parser, new[]{ "RoomMap", "HFJNNBPDLCK", "Retcode", "ChargerInfo", "CHJMODIMLDA", "RotaterDataList", "IPFOFHHKJKP", "EnergyInfo" }, null, null, null, null)
           }));

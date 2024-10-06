@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9IZWxpb2J1c0FjdGl2aXR5RGF0YVNjUnNwLnByb3RvGhFQQ01ER0RMQU5G",
-            "Ri5wcm90bxodSGVsaW9idXNDaGFsbGVuZ2VMaW5ldXAucHJvdG8aEU5DSUhM",
-            "TEFFSkpLLnByb3RvGhFKTkFNR0ZDQURETi5wcm90byKjAgoZSGVsaW9idXNB",
+            "Ri5wcm90bxodSGVsaW9idXNDaGFsbGVuZ2VMaW5ldXAucHJvdG8aEUpOQU1H",
+            "RkNBREROLnByb3RvGhFOQ0lITExBRUpKSy5wcm90byKjAgoZSGVsaW9idXNB",
             "Y3Rpdml0eURhdGFTY1JzcBIgCgpza2lsbF9pbmZvGA0gASgLMgwuTkNJSExM",
             "QUVKSksSLQoLRk1BSkZJQ0ZNRk8YByADKAsyGC5IZWxpb2J1c0NoYWxsZW5n",
             "ZUxpbmV1cBITCgtBSUpISEhDT0JGRhgFIAEoDRINCgVwaGFzZRgIIAEoDRIP",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "ZXZlbBgOIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PCMDGDLANFFReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeliobusChallengeLineupReflection.Descriptor, global::EggLink.DanhengServer.Proto.NCIHLLAEJJKReflection.Descriptor, global::EggLink.DanhengServer.Proto.JNAMGFCADDNReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PCMDGDLANFFReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeliobusChallengeLineupReflection.Descriptor, global::EggLink.DanhengServer.Proto.JNAMGFCADDNReflection.Descriptor, global::EggLink.DanhengServer.Proto.NCIHLLAEJJKReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeliobusActivityDataScRsp), global::EggLink.DanhengServer.Proto.HeliobusActivityDataScRsp.Parser, new[]{ "SkillInfo", "FMAJFICFMFO", "AIJHHHCOBFF", "Phase", "Retcode", "CBHOAPIBCJM", "ChallengeList", "JGKJJKFBLCF", "IBNHFLHJFEO", "Level" }, null, null, null, null)
           }));

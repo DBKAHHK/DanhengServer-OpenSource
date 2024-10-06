@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static DisplayAvatarDetailInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1EaXNwbGF5QXZhdGFyRGV0YWlsSW5mby5wcm90bxoaRGlzcGxheUVxdWlw",
-            "bWVudEluZm8ucHJvdG8aFUF2YXRhclNraWxsVHJlZS5wcm90bxoWRGlzcGxh",
-            "eVJlbGljSW5mby5wcm90byKIAgoXRGlzcGxheUF2YXRhckRldGFpbEluZm8S",
+            "Ch1EaXNwbGF5QXZhdGFyRGV0YWlsSW5mby5wcm90bxoWRGlzcGxheVJlbGlj",
+            "SW5mby5wcm90bxoVQXZhdGFyU2tpbGxUcmVlLnByb3RvGhpEaXNwbGF5RXF1",
+            "aXBtZW50SW5mby5wcm90byKIAgoXRGlzcGxheUF2YXRhckRldGFpbEluZm8S",
             "DAoEUmFuaxgIIAEoDRILCgNFeHAYDSABKA0SFwoPZHJlc3NlZF9za2luX2lk",
             "GAwgASgNEhEKCWF2YXRhcl9pZBgCIAEoDRIkCglSZWxpY0xpc3QYDiADKAsy",
             "ES5EaXNwbGF5UmVsaWNJbmZvEgsKA1BvcxgBIAEoDRInCg1Ta2lsbHRyZWVM",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "RXF1aXBtZW50SW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DisplayEquipmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayRelicInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DisplayRelicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayEquipmentInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo), global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo.Parser, new[]{ "Rank", "Exp", "DressedSkinId", "AvatarId", "RelicList", "Pos", "SkilltreeList", "Promotion", "Level", "Equipment" }, null, null, null, null)
           }));

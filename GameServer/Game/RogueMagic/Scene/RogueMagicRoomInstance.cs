@@ -2,6 +2,7 @@
 using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Enums.RogueMagic;
 using EggLink.DanhengServer.Enums.TournRogue;
+using EggLink.DanhengServer.GameServer.Game.RogueMagic.Adventure;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 
@@ -16,6 +17,8 @@ public class RogueMagicRoomInstance(int roomIndex, RogueMagicLevelInstance level
     public RogueMagicRoomTypeEnum RoomType { get; set; }
 
     public RogueMagicRoomConfig? Config { get; set; }
+
+    public RogueMagicAdventureInstance? AdventureInstance { get; set; }
 
     public RogueMagicRoomInfo ToProto()
     {
@@ -48,6 +51,14 @@ public class RogueMagicRoomInstance(int roomIndex, RogueMagicLevelInstance level
 
         RoomId = GameData.RogueMagicRoomData.Where(x => x.Value.RogueRoomType == RoomType).Select(x => x.Key).ToList()
             .RandomElement();
+
+        if (RoomType == RogueMagicRoomTypeEnum.Adventure)
+        {
+            AdventureInstance = new RogueMagicAdventureInstance(GameData.RogueMagicAdventureRoomData.Values
+                .Where(x => x.AdventureType == Config.AdventureType).ToList().RandomElement());
+
+            RoomId = AdventureInstance.Excel.RoomID;
+        }
     }
 
     public List<int> GetLoadGroupList()

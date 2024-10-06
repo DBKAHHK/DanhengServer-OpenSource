@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.Enums.RogueMagic;
+﻿using EggLink.DanhengServer.Enums.Rogue;
+using EggLink.DanhengServer.Enums.RogueMagic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
@@ -10,6 +11,9 @@ public class RogueMagicRoomConfig
 
     [JsonConverter(typeof(StringEnumConverter))]
     public RogueMagicRoomTypeEnum RoomType { get; set; }
+
+    [JsonConverter(typeof(StringEnumConverter))]
+    public RogueAdventureGameplayTypeEnum AdventureType { get; set; }
 
     public int AnchorGroup { get; set; }
     public int AnchorId { get; set; }
@@ -29,7 +33,8 @@ public class RogueMagicRoomConfig
             DefaultLoadBasicGroup = DefaultLoadBasicGroup,
             DefaultLoadGroup = DefaultLoadGroup,
             EntranceId = EntranceId,
-            SubMonsterGroup = SubMonsterGroup
+            SubMonsterGroup = SubMonsterGroup,
+            AdventureType = AdventureType
         };
     }
 }

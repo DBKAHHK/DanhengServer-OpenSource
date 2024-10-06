@@ -3,6 +3,7 @@ using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.GameServer.Game.Battle.Skill;
 using EggLink.DanhengServer.GameServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Game.RogueMagic;
 using EggLink.DanhengServer.GameServer.Game.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Battle;
@@ -109,6 +110,18 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
 
             if (!triggerBattle)
             {
+                await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId));
+                return;
+            }
+
+            var inst = Player.RogueManager!.GetRogueInstance();
+            if (inst is RogueMagicInstance { CurLevel.CurRoom.AdventureInstance: not null } magic)
+            {
+                foreach (var entityMonster in targetList)
+                {
+                    await entityMonster.Kill();
+                }
+                await magic.HitMonsterInAdventure(targetList);
                 await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId));
                 return;
             }

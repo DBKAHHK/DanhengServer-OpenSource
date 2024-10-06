@@ -24,14 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static SyncRogueAdventureRoomInfoScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CihTeW5jUm9ndWVBZHZlbnR1cmVSb29tSW5mb1NjTm90aWZ5LnByb3RvGhFH",
-            "RUpCSkpBTEpESC5wcm90byJHCiJTeW5jUm9ndWVBZHZlbnR1cmVSb29tSW5m",
-            "b1NjTm90aWZ5EiEKC0xKQU1HRFBQS1BQGA8gASgLMgwuR0VKQkpKQUxKREhC",
-            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "CihTeW5jUm9ndWVBZHZlbnR1cmVSb29tSW5mb1NjTm90aWZ5LnByb3RvGhdB",
+            "ZHZlbnR1cmVSb29tSW5mby5wcm90byJVCiJTeW5jUm9ndWVBZHZlbnR1cmVS",
+            "b29tSW5mb1NjTm90aWZ5Ei8KE2FkdmVudHVyZV9yb29tX2luZm8YDyABKAsy",
+            "Ei5BZHZlbnR1cmVSb29tSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GEJBJJALJDHReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AdventureRoomInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SyncRogueAdventureRoomInfoScNotify), global::EggLink.DanhengServer.Proto.SyncRogueAdventureRoomInfoScNotify.Parser, new[]{ "LJAMGDPPKPP" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SyncRogueAdventureRoomInfoScNotify), global::EggLink.DanhengServer.Proto.SyncRogueAdventureRoomInfoScNotify.Parser, new[]{ "AdventureRoomInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SyncRogueAdventureRoomInfoScNotify(SyncRogueAdventureRoomInfoScNotify other) : this() {
-      lJAMGDPPKPP_ = other.lJAMGDPPKPP_ != null ? other.lJAMGDPPKPP_.Clone() : null;
+      adventureRoomInfo_ = other.adventureRoomInfo_ != null ? other.adventureRoomInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,15 +84,15 @@ namespace EggLink.DanhengServer.Proto {
       return new SyncRogueAdventureRoomInfoScNotify(this);
     }
 
-    /// <summary>Field number for the "LJAMGDPPKPP" field.</summary>
-    public const int LJAMGDPPKPPFieldNumber = 15;
-    private global::EggLink.DanhengServer.Proto.GEJBJJALJDH lJAMGDPPKPP_;
+    /// <summary>Field number for the "adventure_room_info" field.</summary>
+    public const int AdventureRoomInfoFieldNumber = 15;
+    private global::EggLink.DanhengServer.Proto.AdventureRoomInfo adventureRoomInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.GEJBJJALJDH LJAMGDPPKPP {
-      get { return lJAMGDPPKPP_; }
+    public global::EggLink.DanhengServer.Proto.AdventureRoomInfo AdventureRoomInfo {
+      get { return adventureRoomInfo_; }
       set {
-        lJAMGDPPKPP_ = value;
+        adventureRoomInfo_ = value;
       }
     }
 
@@ -110,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(LJAMGDPPKPP, other.LJAMGDPPKPP)) return false;
+      if (!object.Equals(AdventureRoomInfo, other.AdventureRoomInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -118,7 +119,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (lJAMGDPPKPP_ != null) hash ^= LJAMGDPPKPP.GetHashCode();
+      if (adventureRoomInfo_ != null) hash ^= AdventureRoomInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -137,9 +138,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (lJAMGDPPKPP_ != null) {
+      if (adventureRoomInfo_ != null) {
         output.WriteRawTag(122);
-        output.WriteMessage(LJAMGDPPKPP);
+        output.WriteMessage(AdventureRoomInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -151,9 +152,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (lJAMGDPPKPP_ != null) {
+      if (adventureRoomInfo_ != null) {
         output.WriteRawTag(122);
-        output.WriteMessage(LJAMGDPPKPP);
+        output.WriteMessage(AdventureRoomInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -165,8 +166,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (lJAMGDPPKPP_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LJAMGDPPKPP);
+      if (adventureRoomInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AdventureRoomInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -180,11 +181,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.lJAMGDPPKPP_ != null) {
-        if (lJAMGDPPKPP_ == null) {
-          LJAMGDPPKPP = new global::EggLink.DanhengServer.Proto.GEJBJJALJDH();
+      if (other.adventureRoomInfo_ != null) {
+        if (adventureRoomInfo_ == null) {
+          AdventureRoomInfo = new global::EggLink.DanhengServer.Proto.AdventureRoomInfo();
         }
-        LJAMGDPPKPP.MergeFrom(other.LJAMGDPPKPP);
+        AdventureRoomInfo.MergeFrom(other.AdventureRoomInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -202,10 +203,10 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 122: {
-            if (lJAMGDPPKPP_ == null) {
-              LJAMGDPPKPP = new global::EggLink.DanhengServer.Proto.GEJBJJALJDH();
+            if (adventureRoomInfo_ == null) {
+              AdventureRoomInfo = new global::EggLink.DanhengServer.Proto.AdventureRoomInfo();
             }
-            input.ReadMessage(LJAMGDPPKPP);
+            input.ReadMessage(AdventureRoomInfo);
             break;
           }
         }
@@ -224,10 +225,10 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 122: {
-            if (lJAMGDPPKPP_ == null) {
-              LJAMGDPPKPP = new global::EggLink.DanhengServer.Proto.GEJBJJALJDH();
+            if (adventureRoomInfo_ == null) {
+              AdventureRoomInfo = new global::EggLink.DanhengServer.Proto.AdventureRoomInfo();
             }
-            input.ReadMessage(LJAMGDPPKPP);
+            input.ReadMessage(AdventureRoomInfo);
             break;
           }
         }
