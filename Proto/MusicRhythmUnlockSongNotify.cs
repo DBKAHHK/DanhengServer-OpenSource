@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static MusicRhythmUnlockSongNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFNdXNpY1JoeXRobVVubG9ja1NvbmdOb3RpZnkucHJvdG8iMgobTXVzaWNS",
-            "aHl0aG1VbmxvY2tTb25nTm90aWZ5EhMKC0xJR0ZDR0FFRVBGGAcgAygNQh6q",
-            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "CiFNdXNpY1JoeXRobVVubG9ja1NvbmdOb3RpZnkucHJvdG8iOAobTXVzaWNS",
+            "aHl0aG1VbmxvY2tTb25nTm90aWZ5EhkKEW11c2ljX3VubG9ja19saXN0GAcg",
+            "AygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmUnlockSongNotify), global::EggLink.DanhengServer.Proto.MusicRhythmUnlockSongNotify.Parser, new[]{ "LIGFCGAEEPF" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmUnlockSongNotify), global::EggLink.DanhengServer.Proto.MusicRhythmUnlockSongNotify.Parser, new[]{ "MusicUnlockList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MusicRhythmUnlockSongNotify(MusicRhythmUnlockSongNotify other) : this() {
-      lIGFCGAEEPF_ = other.lIGFCGAEEPF_.Clone();
+      musicUnlockList_ = other.musicUnlockList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new MusicRhythmUnlockSongNotify(this);
     }
 
-    /// <summary>Field number for the "LIGFCGAEEPF" field.</summary>
-    public const int LIGFCGAEEPFFieldNumber = 7;
-    private static readonly pb::FieldCodec<uint> _repeated_lIGFCGAEEPF_codec
+    /// <summary>Field number for the "music_unlock_list" field.</summary>
+    public const int MusicUnlockListFieldNumber = 7;
+    private static readonly pb::FieldCodec<uint> _repeated_musicUnlockList_codec
         = pb::FieldCodec.ForUInt32(58);
-    private readonly pbc::RepeatedField<uint> lIGFCGAEEPF_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> musicUnlockList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> LIGFCGAEEPF {
-      get { return lIGFCGAEEPF_; }
+    public pbc::RepeatedField<uint> MusicUnlockList {
+      get { return musicUnlockList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -108,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!lIGFCGAEEPF_.Equals(other.lIGFCGAEEPF_)) return false;
+      if(!musicUnlockList_.Equals(other.musicUnlockList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -116,7 +116,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= lIGFCGAEEPF_.GetHashCode();
+      hash ^= musicUnlockList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -135,7 +135,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      lIGFCGAEEPF_.WriteTo(output, _repeated_lIGFCGAEEPF_codec);
+      musicUnlockList_.WriteTo(output, _repeated_musicUnlockList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -146,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      lIGFCGAEEPF_.WriteTo(ref output, _repeated_lIGFCGAEEPF_codec);
+      musicUnlockList_.WriteTo(ref output, _repeated_musicUnlockList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += lIGFCGAEEPF_.CalculateSize(_repeated_lIGFCGAEEPF_codec);
+      size += musicUnlockList_.CalculateSize(_repeated_musicUnlockList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -170,7 +170,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      lIGFCGAEEPF_.Add(other.lIGFCGAEEPF_);
+      musicUnlockList_.Add(other.musicUnlockList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 58:
           case 56: {
-            lIGFCGAEEPF_.AddEntriesFrom(input, _repeated_lIGFCGAEEPF_codec);
+            musicUnlockList_.AddEntriesFrom(input, _repeated_musicUnlockList_codec);
             break;
           }
         }
@@ -208,7 +208,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 58:
           case 56: {
-            lIGFCGAEEPF_.AddEntriesFrom(ref input, _repeated_lIGFCGAEEPF_codec);
+            musicUnlockList_.AddEntriesFrom(ref input, _repeated_musicUnlockList_codec);
             break;
           }
         }

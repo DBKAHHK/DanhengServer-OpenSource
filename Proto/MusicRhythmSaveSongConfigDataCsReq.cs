@@ -24,12 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static MusicRhythmSaveSongConfigDataCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CihNdXNpY1JoeXRobVNhdmVTb25nQ29uZmlnRGF0YUNzUmVxLnByb3RvGhFN",
-            "REhIRkpHT0pORy5wcm90byJHCiJNdXNpY1JoeXRobVNhdmVTb25nQ29uZmln",
-            "RGF0YUNzUmVxEiEKC0NPQUFISENNSUdBGAUgASgLMgwuTURISEZKR09KTkdC",
-            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "CihNdXNpY1JoeXRobVNhdmVTb25nQ29uZmlnRGF0YUNzUmVxLnByb3RvGhZN",
+            "dXNpY1JoeXRobUdyb3VwLnByb3RvIkwKIk11c2ljUmh5dGhtU2F2ZVNvbmdD",
+            "b25maWdEYXRhQ3NSZXESJgoLQ09BQUhIQ01JR0EYBSABKAsyES5NdXNpY1Jo",
+            "eXRobUdyb3VwQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MDHHFJGOJNGReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MusicRhythmGroupReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmSaveSongConfigDataCsReq), global::EggLink.DanhengServer.Proto.MusicRhythmSaveSongConfigDataCsReq.Parser, new[]{ "COAAHHCMIGA" }, null, null, null, null)
           }));
@@ -85,10 +86,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "COAAHHCMIGA" field.</summary>
     public const int COAAHHCMIGAFieldNumber = 5;
-    private global::EggLink.DanhengServer.Proto.MDHHFJGOJNG cOAAHHCMIGA_;
+    private global::EggLink.DanhengServer.Proto.MusicRhythmGroup cOAAHHCMIGA_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MDHHFJGOJNG COAAHHCMIGA {
+    public global::EggLink.DanhengServer.Proto.MusicRhythmGroup COAAHHCMIGA {
       get { return cOAAHHCMIGA_; }
       set {
         cOAAHHCMIGA_ = value;
@@ -182,7 +183,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.cOAAHHCMIGA_ != null) {
         if (cOAAHHCMIGA_ == null) {
-          COAAHHCMIGA = new global::EggLink.DanhengServer.Proto.MDHHFJGOJNG();
+          COAAHHCMIGA = new global::EggLink.DanhengServer.Proto.MusicRhythmGroup();
         }
         COAAHHCMIGA.MergeFrom(other.COAAHHCMIGA);
       }
@@ -203,7 +204,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 42: {
             if (cOAAHHCMIGA_ == null) {
-              COAAHHCMIGA = new global::EggLink.DanhengServer.Proto.MDHHFJGOJNG();
+              COAAHHCMIGA = new global::EggLink.DanhengServer.Proto.MusicRhythmGroup();
             }
             input.ReadMessage(COAAHHCMIGA);
             break;
@@ -225,7 +226,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 42: {
             if (cOAAHHCMIGA_ == null) {
-              COAAHHCMIGA = new global::EggLink.DanhengServer.Proto.MDHHFJGOJNG();
+              COAAHHCMIGA = new global::EggLink.DanhengServer.Proto.MusicRhythmGroup();
             }
             input.ReadMessage(COAAHHCMIGA);
             break;

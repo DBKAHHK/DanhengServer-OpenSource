@@ -108,6 +108,12 @@ public static class GameData
     public static Dictionary<int, ContentPackageConfigExcel> ContentPackageConfigData { get; private set; } = [];
     public static Dictionary<int, GroupSystemUnlockDataExcel> GroupSystemUnlockDataData { get; private set; } = [];
     public static Dictionary<int, FuncUnlockDataExcel> FuncUnlockDataData { get; private set; } = [];
+    public static Dictionary<int, MusicRhythmLevelExcel> MusicRhythmLevelData { get; private set; } = [];
+    public static Dictionary<int, MusicRhythmGroupExcel> MusicRhythmGroupData { get; private set; } = [];
+    public static Dictionary<int, MusicRhythmPhaseExcel> MusicRhythmPhaseData { get; private set; } = [];
+    public static Dictionary<int, MusicRhythmSongExcel> MusicRhythmSongData { get; private set; } = [];
+    public static Dictionary<int, MusicRhythmSoundEffectExcel> MusicRhythmSoundEffectData { get; private set; } = [];
+    public static Dictionary<int, MusicRhythmTrackExcel> MusicRhythmTrackData { get; private set; } = [];
 
     #endregion
 

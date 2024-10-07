@@ -24,13 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static MusicRhythmUnlockTrackScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiRNdXNpY1JoeXRobVVubG9ja1RyYWNrU2NOb3RpZnkucHJvdG8iNQoeTXVz",
-            "aWNSaHl0aG1VbmxvY2tUcmFja1NjTm90aWZ5EhMKC05ETkNFS0ZJTERDGA4g",
-            "AygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "CiRNdXNpY1JoeXRobVVubG9ja1RyYWNrU2NOb3RpZnkucHJvdG8iOwoeTXVz",
+            "aWNSaHl0aG1VbmxvY2tUcmFja1NjTm90aWZ5EhkKEXRyYWNrX3VubG9ja19s",
+            "aXN0GA4gAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmUnlockTrackScNotify), global::EggLink.DanhengServer.Proto.MusicRhythmUnlockTrackScNotify.Parser, new[]{ "NDNCEKFILDC" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmUnlockTrackScNotify), global::EggLink.DanhengServer.Proto.MusicRhythmUnlockTrackScNotify.Parser, new[]{ "TrackUnlockList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MusicRhythmUnlockTrackScNotify(MusicRhythmUnlockTrackScNotify other) : this() {
-      nDNCEKFILDC_ = other.nDNCEKFILDC_.Clone();
+      trackUnlockList_ = other.trackUnlockList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new MusicRhythmUnlockTrackScNotify(this);
     }
 
-    /// <summary>Field number for the "NDNCEKFILDC" field.</summary>
-    public const int NDNCEKFILDCFieldNumber = 14;
-    private static readonly pb::FieldCodec<uint> _repeated_nDNCEKFILDC_codec
+    /// <summary>Field number for the "track_unlock_list" field.</summary>
+    public const int TrackUnlockListFieldNumber = 14;
+    private static readonly pb::FieldCodec<uint> _repeated_trackUnlockList_codec
         = pb::FieldCodec.ForUInt32(114);
-    private readonly pbc::RepeatedField<uint> nDNCEKFILDC_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> trackUnlockList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> NDNCEKFILDC {
-      get { return nDNCEKFILDC_; }
+    public pbc::RepeatedField<uint> TrackUnlockList {
+      get { return trackUnlockList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -108,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!nDNCEKFILDC_.Equals(other.nDNCEKFILDC_)) return false;
+      if(!trackUnlockList_.Equals(other.trackUnlockList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -116,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= nDNCEKFILDC_.GetHashCode();
+      hash ^= trackUnlockList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -135,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      nDNCEKFILDC_.WriteTo(output, _repeated_nDNCEKFILDC_codec);
+      trackUnlockList_.WriteTo(output, _repeated_trackUnlockList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -146,7 +147,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      nDNCEKFILDC_.WriteTo(ref output, _repeated_nDNCEKFILDC_codec);
+      trackUnlockList_.WriteTo(ref output, _repeated_trackUnlockList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -157,7 +158,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += nDNCEKFILDC_.CalculateSize(_repeated_nDNCEKFILDC_codec);
+      size += trackUnlockList_.CalculateSize(_repeated_trackUnlockList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -170,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      nDNCEKFILDC_.Add(other.nDNCEKFILDC_);
+      trackUnlockList_.Add(other.trackUnlockList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -188,7 +189,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 114:
           case 112: {
-            nDNCEKFILDC_.AddEntriesFrom(input, _repeated_nDNCEKFILDC_codec);
+            trackUnlockList_.AddEntriesFrom(input, _repeated_trackUnlockList_codec);
             break;
           }
         }
@@ -208,7 +209,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 114:
           case 112: {
-            nDNCEKFILDC_.AddEntriesFrom(ref input, _repeated_nDNCEKFILDC_codec);
+            trackUnlockList_.AddEntriesFrom(ref input, _repeated_trackUnlockList_codec);
             break;
           }
         }

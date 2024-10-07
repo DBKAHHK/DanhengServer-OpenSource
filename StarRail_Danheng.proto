@@ -5767,7 +5767,7 @@ message EvolveBuildLevelInfo {
 message EJKBGEPDPMF {
 	uint32 KHHFCELAFJA = 13;
 	uint32 max_score = 3;
-	uint32 DGEJMCKIFJB = 11;
+	uint32 level_id = 11;
 }
 
 message NHCDHNDCJMI {
@@ -5776,7 +5776,7 @@ message NHCDHNDCJMI {
 }
 
 message LCINGIMGEEM {
-	uint32 DGEJMCKIFJB = 11;
+	uint32 level_id = 11;
 	bool HOAMCDKDELJ = 12;
 	repeated uint32 NEKECKBBFMH = 5;
 	bool PBBEHNBHIIM = 9;
@@ -5805,7 +5805,7 @@ message EvolveBuildQueryInfoScRsp {
 }
 
 message EvolveBuildStartLevelCsReq {
-	uint32 DGEJMCKIFJB = 4;
+	uint32 level_id = 4;
 	repeated EvolveBuildAvatar avatar_list = 13;
 	NGIKGHKMAHA JJLFIBAAJNJ = 12;
 }
@@ -5817,7 +5817,7 @@ message EvolveBuildStartLevelScRsp {
 }
 
 message EvolveBuildStartStageCsReq {
-	uint32 DGEJMCKIFJB = 3;
+	uint32 level_id = 3;
 }
 
 message EvolveBuildStartStageScRsp {
@@ -5855,7 +5855,7 @@ message EvolveBuildFinishScNotify {
 }
 
 message EvolveBuildReRandomStageCsReq {
-	uint32 DGEJMCKIFJB = 13;
+	uint32 level_id = 13;
 }
 
 message EvolveBuildReRandomStageScRsp {
@@ -6480,7 +6480,7 @@ message KEKABJPICIP {
 }
 
 message FightMatch3DataCsReq {
-	int32 NMGNOHPOJOP = 14;
+	int32 player_data = 14;
 }
 
 message FightMatch3DataScRsp {
@@ -8736,7 +8736,7 @@ message MatchThreeGetDataCsReq {
 }
 
 message FNJFGLPKKIJ {
-	uint32 DGEJMCKIFJB = 15;
+	uint32 level_id = 15;
 	uint32 KIFPFCDEAAE = 11;
 }
 
@@ -8764,13 +8764,13 @@ message MatchThreeLevelEndCsReq {
 	repeated uint32 MHPCLHBGCDC = 11;
 	string NIEPAOBBFJF = 6;
 	uint32 MBFKOHNGMPJ = 1;
-	uint32 DGEJMCKIFJB = 5;
+	uint32 level_id = 5;
 	uint32 KIFPFCDEAAE = 2;
 	map<uint32, uint32> ACBMBACFCCN = 15;
 }
 
 message MatchThreeLevelEndScRsp {
-	uint32 DGEJMCKIFJB = 7;
+	uint32 level_id = 7;
 	uint32 retcode = 12;
 	uint32 KIFPFCDEAAE = 10;
 }
@@ -10216,7 +10216,7 @@ message MultiplayerFightGameStateScRsp {
 }
 
 message MultiplayerGetFightGateCsReq {
-	uint32 NMGNOHPOJOP = 8;
+	uint32 player_data = 8;
 }
 
 message MultiplayerGetFightGateScRsp {
@@ -10612,77 +10612,78 @@ enum FMMPPGLCOAL {
 	STATUS_OPEN = 1;
 }
 
-message HEKPICHLMEN {
-	uint32 DGEJMCKIFJB = 5;
-	uint32 AEEMPPOFGBN = 13;
+message MusicRhythmLevel {
+	uint32 unlock_level = 13;
+	bool is_full_combo = 8;
+	uint32 level_id = 5;
 }
 
-message MDHHFJGOJNG {
-	uint32 JGPGJJCEFGG = 10;
+message MusicRhythmGroup {
+	uint32 music_group_phase = 10;
 	repeated uint32 MPCFOJALNHN = 3;
 	repeated uint32 OALLJLKBIOJ = 6;
-	uint32 IDLOLPIICMA = 5;
+	uint32 music_group_id = 5;
 }
 
 message MusicRhythmDataCsReq {
-	uint32 NMGNOHPOJOP = 6;
+	uint32 player_data = 6;
 }
 
 message MusicRhythmDataScRsp {
-	repeated uint32 GBMLNHOCJMO = 15;
-	uint32 PEFCBMODPOI = 2;
-	repeated uint32 OPFOILFDBKG = 8;
-	repeated uint32 FEAHHAMLDFB = 5;
-	bool FCLINCKMILK = 6;
-	repeated MDHHFJGOJNG MEHKJJFJAPK = 1;
-	repeated HEKPICHLMEN MFIFEBCDIMM = 13;
-	uint32 BMJGCIILHCA = 10;
+	repeated uint32 unlock_song_list = 15;
+	uint32 cur_song_id = 2;
+	repeated uint32 unlock_track_list = 8;
+	repeated uint32 unlock_phase_list = 5;
+	bool show_hint = 6;
+	repeated MusicRhythmGroup music_group = 1;
+	repeated MusicRhythmLevel music_level = 13;
+	uint32 cur_level_id = 10;
 	uint32 retcode = 12;
 }
 
 message MusicRhythmStartLevelCsReq {
-	uint32 DGEJMCKIFJB = 3;
+	uint32 level_id = 3;
 }
 
 message MusicRhythmStartLevelScRsp {
 	uint32 retcode = 6;
-	uint32 DGEJMCKIFJB = 3;
+	uint32 level_id = 3;
 	string NJOONPFKHGE = 8;
 }
 
 message MusicRhythmFinishLevelCsReq {
 	uint32 score_id = 12;
-	uint32 MAIL_TYPE_STAR = 11;
+	uint32 finish_level = 11;
 }
 
 message MusicRhythmFinishLevelScRsp {
 	uint32 retcode = 9;
-	uint32 DGEJMCKIFJB = 4;
+	uint32 level_id = 4;
 }
 
 message MusicRhythmUnlockTrackScNotify {
-	repeated uint32 NDNCEKFILDC = 14;
+	repeated uint32 track_unlock_list = 14;
 }
 
 message MusicRhythmSaveSongConfigDataCsReq {
-	MDHHFJGOJNG COAAHHCMIGA = 5;
+	MusicRhythmGroup COAAHHCMIGA = 5;
 }
 
 message MusicRhythmSaveSongConfigDataScRsp {
 	uint32 ALCHNKEFMEN = 1;
 	uint32 retcode = 15;
-	uint32 PEFCBMODPOI = 5;
+	uint32 cur_song_id = 5;
 }
 
 message MusicRhythmUnlockSongNotify {
-	repeated uint32 LIGFCGAEEPF = 7;
+	repeated uint32 music_unlock_list = 7;
 }
 
 message MusicRhythmMaxDifficultyLevelsUnlockNotify {
 }
 
 message MusicRhythmUnlockSongSfxScNotify {
-	repeated uint32 LIGFCGAEEPF = 14;
+	repeated uint32 music_unlock_list = 14;
 }
 
 enum CmdOfferingType {

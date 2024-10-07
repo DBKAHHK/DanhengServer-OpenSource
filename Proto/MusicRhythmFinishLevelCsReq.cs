@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static MusicRhythmFinishLevelCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFNdXNpY1JoeXRobUZpbmlzaExldmVsQ3NSZXEucHJvdG8iRwobTXVzaWNS",
-            "aHl0aG1GaW5pc2hMZXZlbENzUmVxEhAKCHNjb3JlX2lkGAwgASgNEhYKDk1B",
-            "SUxfVFlQRV9TVEFSGAsgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
-            "UHJvdG9iBnByb3RvMw=="));
+            "CiFNdXNpY1JoeXRobUZpbmlzaExldmVsQ3NSZXEucHJvdG8iRQobTXVzaWNS",
+            "aHl0aG1GaW5pc2hMZXZlbENzUmVxEhAKCHNjb3JlX2lkGAwgASgNEhQKDGZp",
+            "bmlzaF9sZXZlbBgLIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmFinishLevelCsReq), global::EggLink.DanhengServer.Proto.MusicRhythmFinishLevelCsReq.Parser, new[]{ "ScoreId", "MAILTYPESTAR" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmFinishLevelCsReq), global::EggLink.DanhengServer.Proto.MusicRhythmFinishLevelCsReq.Parser, new[]{ "ScoreId", "FinishLevel" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MusicRhythmFinishLevelCsReq(MusicRhythmFinishLevelCsReq other) : this() {
       scoreId_ = other.scoreId_;
-      mAILTYPESTAR_ = other.mAILTYPESTAR_;
+      finishLevel_ = other.finishLevel_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "MAIL_TYPE_STAR" field.</summary>
-    public const int MAILTYPESTARFieldNumber = 11;
-    private uint mAILTYPESTAR_;
+    /// <summary>Field number for the "finish_level" field.</summary>
+    public const int FinishLevelFieldNumber = 11;
+    private uint finishLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MAILTYPESTAR {
-      get { return mAILTYPESTAR_; }
+    public uint FinishLevel {
+      get { return finishLevel_; }
       set {
-        mAILTYPESTAR_ = value;
+        finishLevel_ = value;
       }
     }
 
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (ScoreId != other.ScoreId) return false;
-      if (MAILTYPESTAR != other.MAILTYPESTAR) return false;
+      if (FinishLevel != other.FinishLevel) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (ScoreId != 0) hash ^= ScoreId.GetHashCode();
-      if (MAILTYPESTAR != 0) hash ^= MAILTYPESTAR.GetHashCode();
+      if (FinishLevel != 0) hash ^= FinishLevel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,9 +152,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MAILTYPESTAR != 0) {
+      if (FinishLevel != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(MAILTYPESTAR);
+        output.WriteUInt32(FinishLevel);
       }
       if (ScoreId != 0) {
         output.WriteRawTag(96);
@@ -170,9 +170,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MAILTYPESTAR != 0) {
+      if (FinishLevel != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(MAILTYPESTAR);
+        output.WriteUInt32(FinishLevel);
       }
       if (ScoreId != 0) {
         output.WriteRawTag(96);
@@ -191,8 +191,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ScoreId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScoreId);
       }
-      if (MAILTYPESTAR != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MAILTYPESTAR);
+      if (FinishLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FinishLevel);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -209,8 +209,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.ScoreId != 0) {
         ScoreId = other.ScoreId;
       }
-      if (other.MAILTYPESTAR != 0) {
-        MAILTYPESTAR = other.MAILTYPESTAR;
+      if (other.FinishLevel != 0) {
+        FinishLevel = other.FinishLevel;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -228,7 +228,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 88: {
-            MAILTYPESTAR = input.ReadUInt32();
+            FinishLevel = input.ReadUInt32();
             break;
           }
           case 96: {
@@ -251,7 +251,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 88: {
-            MAILTYPESTAR = input.ReadUInt32();
+            FinishLevel = input.ReadUInt32();
             break;
           }
           case 96: {
