@@ -41,7 +41,7 @@ public class HandlerSceneCastSkillCsReq : Handler
             if (caster != null && caster.AvatarInfo.AvatarId == 1218 && req.SkillIndex == 1)
             {
                 // Avoid Jiqoqiu's E skill
-                await connection.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId));
+                await connection.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, []));
             }
             else
             {
@@ -59,7 +59,7 @@ public class HandlerSceneCastSkillCsReq : Handler
         else
         {
             // We had no targets for some reason
-            await connection.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId));
+            await connection.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, []));
         }
     }
 }

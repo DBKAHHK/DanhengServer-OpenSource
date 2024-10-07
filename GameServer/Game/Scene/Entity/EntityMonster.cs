@@ -117,7 +117,6 @@ public class EntityMonster(
 
     public async ValueTask<List<ItemData>> Kill(bool sendPacket = true)
     {
-        await Scene.RemoveEntity(this);
         IsAlive = false;
 
         GameData.MonsterDropData.TryGetValue(MonsterData.ID * 10 + Scene.Player.Data.WorldLevel, out var dropData);
@@ -128,6 +127,7 @@ public class EntityMonster(
         // TODO: Rogue support
         // call mission handler
         await Scene.Player.MissionManager!.HandleFinishType(MissionFinishTypeEnum.KillMonster, this);
+        await Scene.RemoveEntity(this);
         return dropItems;
     }
 }

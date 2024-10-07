@@ -31,7 +31,7 @@ public class RogueMagicUnitSelectMenu(BaseRogueInstance rogue) : BaseRogueSelect
         var list = new RandomList<RogueMagicUnitExcel>();
 
         foreach (var unitExcel in MagicUnitPool)
-            list.Add(unitExcel, (int)(6 - unitExcel.MagicUnitCategory));
+            list.Add(unitExcel, 1);
         var result = new List<RogueMagicUnitExcel>();
 
         for (var i = 0; i < Count; i++)

@@ -56,7 +56,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
 
             if (!isAmbushed)
             {
-                await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId));
+                await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, []));
                 return;
             }
 
@@ -66,7 +66,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
 
         if (targetList.Count == 0 && propList.Count == 0)
         {
-            await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId));
+            await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, []));
             return;
         }
 
@@ -95,8 +95,12 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
             // Skill handle
             if (!skill.TriggerBattle)
             {
+                // Skill is not supposed to trigger a battle
+                List<HitMonsterInstance> hitMonsterInstances = [];
+                hitMonsterInstances.AddRange(targetList.Select(entityMonster => new HitMonsterInstance(entityMonster.EntityID, MonsterBattleType.NoBattle)));
+
                 skill.OnHitTarget(Player.SceneInstance!.AvatarInfo[(int)req.AttackedByEntityId], targetList);
-                await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId));
+                await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, hitMonsterInstances));
                 return;
             }
 
@@ -110,23 +114,30 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
 
             if (!triggerBattle)
             {
-                await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId));
+                List<HitMonsterInstance> hitMonsterInstances = [];
+                hitMonsterInstances.AddRange(targetList.Select(entityMonster => new HitMonsterInstance(entityMonster.EntityID, MonsterBattleType.DirectDieSimulateBattle)));
+
+                await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, hitMonsterInstances));
                 return;
             }
 
             var inst = Player.RogueManager!.GetRogueInstance();
             if (inst is RogueMagicInstance { CurLevel.CurRoom.AdventureInstance: not null } magic)
             {
+                List<HitMonsterInstance> hitMonsterInstances = [];
+                hitMonsterInstances.AddRange(targetList.Select(entityMonster => new HitMonsterInstance(entityMonster.EntityID, MonsterBattleType.DirectDieSkipBattle)));
+
+                await magic.HitMonsterInAdventure(targetList);
+
                 foreach (var entityMonster in targetList)
                 {
                     await entityMonster.Kill();
                 }
-                await magic.HitMonsterInAdventure(targetList);
-                await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId));
+                await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, hitMonsterInstances));
                 return;
             }
 
-            BattleInstance battleInstance = new(Player, Player.LineupManager!.GetCurLineup()!, targetList)
+            BattleInstance battleInstance = new(Player, Player.LineupManager!.GetCurLineup()!, targetList.Where(x => x.IsAlive).ToList())
             {
                 WorldLevel = Player.Data.WorldLevel
             };
@@ -168,12 +179,18 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
             Player.QuestManager!.OnBattleStart(battleInstance);
 
             Player.BattleInstance = battleInstance;
-            await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, battleInstance));
+
+            // Send battle start packet
+            List<HitMonsterInstance> hitMonsterInstance = [];
+            hitMonsterInstance.AddRange(targetList.Where(x => x.IsAlive).Select(entityMonster => new HitMonsterInstance(entityMonster.EntityID, MonsterBattleType.TriggerBattle)));
+            hitMonsterInstance.AddRange(targetList.Where(x => !x.IsAlive).Select(entityMonster => new HitMonsterInstance(entityMonster.EntityID, MonsterBattleType.DirectDieSkipBattle)));
+
+            await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, battleInstance, hitMonsterInstance));
             Player.SceneInstance?.ClearSummonUnit();
         }
         else
         {
-            await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId));
+            await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, []));
         }
     }
 

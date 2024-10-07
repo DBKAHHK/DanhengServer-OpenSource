@@ -256,7 +256,9 @@ public class RogueMagicInstance : BaseRogueInstance
             new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, location, selectMagicUnit: true));
     }
 
-    public async ValueTask AddMagicUnit(RogueMagicUnitExcel excel, RogueCommonActionResultSourceType source = RogueCommonActionResultSourceType.Select)
+    public async ValueTask<RogueCommonActionResult> AddMagicUnit(RogueMagicUnitExcel excel,
+        RogueCommonActionResultSourceType source = RogueCommonActionResultSourceType.Select,
+        RogueCommonActionResultDisplayType display = RogueCommonActionResultDisplayType.None, bool sync = true)
     {
         var unit = new RogueMagicUnitInstance(excel)
         {
@@ -264,7 +266,43 @@ public class RogueMagicInstance : BaseRogueInstance
         };
         RogueMagicUnits.Add(unit.UniqueId, unit);
 
-        await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode, unit.ToGetInfo(source)));
+        var res = unit.ToGetInfo(source);
+        if (sync)
+            await Player.SendPacket(
+                new PacketSyncRogueCommonActionResultScNotify(RogueSubMode, res, display));
+
+        return res;
+    }
+
+    public async ValueTask AddMagicUnits(List<RogueMagicUnitExcel> excels, RogueCommonActionResultSourceType source = RogueCommonActionResultSourceType.Select, RogueCommonActionResultDisplayType display = RogueCommonActionResultDisplayType.Multi)
+    {
+        List<RogueCommonActionResult> results = [];
+        foreach (var excel in excels)
+        {
+            results.Add(await AddMagicUnit(excel, source, RogueCommonActionResultDisplayType.None, false));
+        }
+
+        await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode, results, display));
+    }
+
+    #endregion
+
+    #region Rewrite
+
+    public override async ValueTask<RogueCommonActionResult?> AddBuff(int buffId, int level = 1,
+        RogueCommonActionResultSourceType source = RogueCommonActionResultSourceType.Dialogue,
+        RogueCommonActionResultDisplayType displayType = RogueCommonActionResultDisplayType.Single, bool updateMenu = true,
+        bool notify = true)
+    {
+        // this mode does not support buff
+        await ValueTask.CompletedTask;
+        return null;
+    }
+
+    public override async ValueTask RollBuff(int amount, int buffGroupId, int buffHintType = 1, bool isReforge = false)
+    {
+        // this mode does not support buff
+        await ValueTask.CompletedTask;
     }
 
     #endregion
@@ -294,13 +332,17 @@ public class RogueMagicInstance : BaseRogueInstance
             else if (target.IsRuanmei)
             {
                 // ruanmei
+                var toAddExcel = new List<RogueMagicUnitExcel>();
+                var unitExcels = GameData.RogueMagicUnitData.Values
+                    .Where(x => !RogueMagicUnits.ContainsKey(x.MagicUnitID) && x.MagicUnitLevel == 1 && x.MagicUnitType != RogueMagicMountTypeEnum.Active).ToList();
                 foreach (var unused in Enumerable.Range(0, 10))
                 {
-                    var unitExcels = GameData.RogueMagicUnitData.Values
-                        .Where(x => !RogueMagicUnits.ContainsKey(x.MagicUnitID) && x.MagicUnitLevel == 1 && x.MagicUnitType != RogueMagicMountTypeEnum.Active).ToList();
                     var unit = unitExcels.RandomElement();
-                    await AddMagicUnit(unit, RogueCommonActionResultSourceType.None);
+                    toAddExcel.Add(unit);
+                    unitExcels.Remove(unit);  // remove to avoid duplicate
                 }
+
+                await AddMagicUnits(toAddExcel, RogueCommonActionResultSourceType.None);
             }
         }
     }
@@ -337,7 +379,15 @@ public class RogueMagicInstance : BaseRogueInstance
 
     public async ValueTask HitMonsterInAdventure(List<EntityMonster> monsters)
     {
-        await ValueTask.CompletedTask;
+        var inst = CurLevel?.CurRoom?.AdventureInstance;
+        if (inst != null && inst.Excel.AdventureType == RogueAdventureGameplayTypeEnum.RogueCaptureMonster)
+        {
+            inst.Score += 200;
+            inst.RemainMonsterNum--;
+            inst.CaughtMonsterNum++;
+
+            await Player.SendPacket(new PacketSyncRogueAdventureRoomInfoScNotify(inst));
+        }
     }
 
     public override async ValueTask OnBattleEnd(BattleInstance battle, PVEBattleResultCsReq req)
@@ -352,10 +402,12 @@ public class RogueMagicInstance : BaseRogueInstance
         {
             await RollScepter(battle.Stages.Count, 1);
             await RollMagicUnit(battle.Stages.Count, 1, [RogueMagicUnitCategoryEnum.Ultra]);
+            await GainMoney(Random.Shared.Next(150, 200) * battle.Stages.Count);
         }
         else
         {
             await RollMagicUnit(battle.Stages.Count, 1, [RogueMagicUnitCategoryEnum.Common]);
+            await GainMoney(Random.Shared.Next(30, 50) * battle.Stages.Count);
         }
     }
 

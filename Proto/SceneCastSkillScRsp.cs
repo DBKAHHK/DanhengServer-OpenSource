@@ -24,16 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static SceneCastSkillScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlTY2VuZUNhc3RTa2lsbFNjUnNwLnByb3RvGhVTY2VuZUJhdHRsZUluZm8u",
-            "cHJvdG8aEUlJTUhKTkdPSU9OLnByb3RvIogBChNTY2VuZUNhc3RTa2lsbFNj",
-            "UnNwEhYKDmNhc3RfZW50aXR5X2lkGAEgASgNEiEKC0lBQkpBQU9KUEpNGAkg",
-            "AygLMgwuSUlNSEpOR09JT04SDwoHcmV0Y29kZRgOIAEoDRIlCgtiYXR0bGVf",
-            "aW5mbxgHIAEoCzIQLlNjZW5lQmF0dGxlSW5mb0IeqgIbRWdnTGluay5EYW5o",
-            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChlTY2VuZUNhc3RTa2lsbFNjUnNwLnByb3RvGhpIaXRNb25zdGVyQmF0dGxl",
+            "SW5mby5wcm90bxoVU2NlbmVCYXR0bGVJbmZvLnByb3RvIpkBChNTY2VuZUNh",
+            "c3RTa2lsbFNjUnNwEhYKDmNhc3RfZW50aXR5X2lkGAEgASgNEjIKE21vbnN0",
+            "ZXJfYmF0dGxlX2luZm8YCSADKAsyFS5IaXRNb25zdGVyQmF0dGxlSW5mbxIP",
+            "CgdyZXRjb2RlGA4gASgNEiUKC2JhdHRsZV9pbmZvGAcgASgLMhAuU2NlbmVC",
+            "YXR0bGVJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneBattleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.IIMHJNGOIONReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HitMonsterBattleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneBattleInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneCastSkillScRsp), global::EggLink.DanhengServer.Proto.SceneCastSkillScRsp.Parser, new[]{ "CastEntityId", "IABJAAOJPJM", "Retcode", "BattleInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneCastSkillScRsp), global::EggLink.DanhengServer.Proto.SceneCastSkillScRsp.Parser, new[]{ "CastEntityId", "MonsterBattleInfo", "Retcode", "BattleInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,7 +77,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SceneCastSkillScRsp(SceneCastSkillScRsp other) : this() {
       castEntityId_ = other.castEntityId_;
-      iABJAAOJPJM_ = other.iABJAAOJPJM_.Clone();
+      monsterBattleInfo_ = other.monsterBattleInfo_.Clone();
       retcode_ = other.retcode_;
       battleInfo_ = other.battleInfo_ != null ? other.battleInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -100,15 +101,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "IABJAAOJPJM" field.</summary>
-    public const int IABJAAOJPJMFieldNumber = 9;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.IIMHJNGOION> _repeated_iABJAAOJPJM_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.IIMHJNGOION.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IIMHJNGOION> iABJAAOJPJM_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IIMHJNGOION>();
+    /// <summary>Field number for the "monster_battle_info" field.</summary>
+    public const int MonsterBattleInfoFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.HitMonsterBattleInfo> _repeated_monsterBattleInfo_codec
+        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.HitMonsterBattleInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HitMonsterBattleInfo> monsterBattleInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HitMonsterBattleInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IIMHJNGOION> IABJAAOJPJM {
-      get { return iABJAAOJPJM_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HitMonsterBattleInfo> MonsterBattleInfo {
+      get { return monsterBattleInfo_; }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
@@ -151,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (CastEntityId != other.CastEntityId) return false;
-      if(!iABJAAOJPJM_.Equals(other.iABJAAOJPJM_)) return false;
+      if(!monsterBattleInfo_.Equals(other.monsterBattleInfo_)) return false;
       if (Retcode != other.Retcode) return false;
       if (!object.Equals(BattleInfo, other.BattleInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -162,7 +163,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (CastEntityId != 0) hash ^= CastEntityId.GetHashCode();
-      hash ^= iABJAAOJPJM_.GetHashCode();
+      hash ^= monsterBattleInfo_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (battleInfo_ != null) hash ^= BattleInfo.GetHashCode();
       if (_unknownFields != null) {
@@ -191,7 +192,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(58);
         output.WriteMessage(BattleInfo);
       }
-      iABJAAOJPJM_.WriteTo(output, _repeated_iABJAAOJPJM_codec);
+      monsterBattleInfo_.WriteTo(output, _repeated_monsterBattleInfo_codec);
       if (Retcode != 0) {
         output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
@@ -214,7 +215,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(58);
         output.WriteMessage(BattleInfo);
       }
-      iABJAAOJPJM_.WriteTo(ref output, _repeated_iABJAAOJPJM_codec);
+      monsterBattleInfo_.WriteTo(ref output, _repeated_monsterBattleInfo_codec);
       if (Retcode != 0) {
         output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
@@ -232,7 +233,7 @@ namespace EggLink.DanhengServer.Proto {
       if (CastEntityId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CastEntityId);
       }
-      size += iABJAAOJPJM_.CalculateSize(_repeated_iABJAAOJPJM_codec);
+      size += monsterBattleInfo_.CalculateSize(_repeated_monsterBattleInfo_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
@@ -254,7 +255,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.CastEntityId != 0) {
         CastEntityId = other.CastEntityId;
       }
-      iABJAAOJPJM_.Add(other.iABJAAOJPJM_);
+      monsterBattleInfo_.Add(other.monsterBattleInfo_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
@@ -291,7 +292,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 74: {
-            iABJAAOJPJM_.AddEntriesFrom(input, _repeated_iABJAAOJPJM_codec);
+            monsterBattleInfo_.AddEntriesFrom(input, _repeated_monsterBattleInfo_codec);
             break;
           }
           case 112: {
@@ -325,7 +326,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 74: {
-            iABJAAOJPJM_.AddEntriesFrom(ref input, _repeated_iABJAAOJPJM_codec);
+            monsterBattleInfo_.AddEntriesFrom(ref input, _repeated_monsterBattleInfo_codec);
             break;
           }
           case 112: {

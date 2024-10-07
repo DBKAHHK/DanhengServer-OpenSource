@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static SceneCastSkillCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlTY2VuZUNhc3RTa2lsbENzUmVxLnByb3RvGhNTa2lsbEV4dHJhVGFnLnBy",
-            "b3RvGhBNb3Rpb25JbmZvLnByb3RvGh1Bc3Npc3RNb25zdGVyRW50aXR5SW5m",
-            "by5wcm90bxoRQUxERFBIRkNNR0cucHJvdG8ihwMKE1NjZW5lQ2FzdFNraWxs",
+            "ChlTY2VuZUNhc3RTa2lsbENzUmVxLnByb3RvGhFBTEREUEhGQ01HRy5wcm90",
+            "bxoTU2tpbGxFeHRyYVRhZy5wcm90bxoQTW90aW9uSW5mby5wcm90bxodQXNz",
+            "aXN0TW9uc3RlckVudGl0eUluZm8ucHJvdG8ihwMKE1NjZW5lQ2FzdFNraWxs",
             "Q3NSZXESPAoaYXNzaXN0X21vbnN0ZXJfZW50aXR5X2luZm8YCCADKAsyGC5B",
             "c3Npc3RNb25zdGVyRW50aXR5SW5mbxIlCh1hc3Npc3RfbW9uc3Rlcl9lbnRp",
             "dHlfaWRfbGlzdBgMIAMoDRIdChVhdHRhY2tlZF9ieV9lbnRpdHlfaWQYBCAB",
@@ -38,7 +38,7 @@ namespace EggLink.DanhengServer.Proto {
             "Di5Ta2lsbEV4dHJhVGFnQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
             "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SkillExtraTagReflection.Descriptor, global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ALDDPHFCMGGReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ALDDPHFCMGGReflection.Descriptor, global::EggLink.DanhengServer.Proto.SkillExtraTagReflection.Descriptor, global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneCastSkillCsReq), global::EggLink.DanhengServer.Proto.SceneCastSkillCsReq.Parser, new[]{ "AssistMonsterEntityInfo", "AssistMonsterEntityIdList", "AttackedByEntityId", "DynamicValues", "MFHMICGELNB", "CastEntityId", "HitTargetEntityIdList", "SkillIndex", "TargetMotion", "GOJHHBLMAEB", "SkillExtraTags" }, null, null, null, null)
           }));

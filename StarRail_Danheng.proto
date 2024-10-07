@@ -4031,8 +4031,8 @@ message ChatMessageData {
 message RevcMsgScNotify {
 	string message_text = 2;
 	ChatType chat_type = 11;
-	uint32 target_uid = 10; // 5
-	uint32 source_uid = 5; // 10
+	uint32 source_uid = 10;
+	uint32 target_uid = 5;
 	MsgType message_type = 3;
 	uint32 extra_id = 4;
 	LFCKPPDLIJI BNABNCCMILM = 1;
@@ -13583,64 +13583,64 @@ message PDMHACNANPF {
 	COBDHAGFEHD BFBAFDCAEPD = 13;
 }
 
-message EHIGOEDBDPM {
+message RogueAdventureRoomTargetNone {
 }
 
-message ODOPHMEDKBD {
+message RogueAdventureRoomTargetCoin {
 	int32 count = 6;
 }
 
-message NLGDFEDJDGA {
+message RogueAdventureRoomTargetMiracle {
 	uint32 miracle_id = 9;
 }
 
-message FDMAKDJLGLM {
+message RogueAdventureRoomTargetRuanmei {
 }
 
 message RogueAdventureRoomGameplayWolfGunTarget {
-	EHIGOEDBDPM TargetNone = 10;
-	ODOPHMEDKBD TargetCoin = 7;
-	NLGDFEDJDGA TargetMiracle = 3;
-	FDMAKDJLGLM TargetRuanmei = 5;
+	RogueAdventureRoomTargetNone TargetNone = 10;
+	RogueAdventureRoomTargetCoin TargetCoin = 7;
+	RogueAdventureRoomTargetMiracle TargetMiracle = 3;
+	RogueAdventureRoomTargetRuanmei TargetRuanmei = 5;
 }
 
-message DIENBPEPKHO {
-	uint32 ODGOKJLIJNI = 4;
+message RogueAdventureRoomGameplayWolfGunGameInfo {
+	uint32 game_target_num = 4;
 	repeated RogueAdventureRoomGameplayWolfGunTarget battle_target_list = 2;
 }
 
-message LMCPIPPBBCA {
-	DIENBPEPKHO NDEOLKALNPA = 11;
+message RogueAdventureRoomGameplayWolfGunInfo {
+	RogueAdventureRoomGameplayWolfGunGameInfo game_info = 11;
 }
 
-message GEJBJJALJDH {
-	uint32 EBFOIHCIDBF = 13;
+message AdventureRoomInfo {
+	uint32 remain_monster_num = 13;  // 3
 	uint32 score_id = 14;
-	uint32 status = 6;
-	uint32 CIPMBLPEMFP = 3;
-	LMCPIPPBBCA query_info = 9;
-	double IHHMAKEKBHI = 8;
+	RogueAdventureRoomStatus status = 6;  // original: uint32
+	uint32 caught_monster_num = 3;  // 13
+	RogueAdventureRoomGameplayWolfGunInfo query_info = 9;
+	double sus = 8;
 }
 
 message SyncRogueAdventureRoomInfoScNotify {
-	GEJBJJALJDH LJAMGDPPKPP = 15;
+	AdventureRoomInfo adventure_room_info = 15;
 }
 
 message PrepareRogueAdventureRoomCsReq {
 }
 
 message PrepareRogueAdventureRoomScRsp {
-	GEJBJJALJDH LJAMGDPPKPP = 14;
+	AdventureRoomInfo adventure_room_info = 14;
 	uint32 retcode = 9;
 }
 
 message StopRogueAdventureRoomCsReq {
 	uint32 JIHALOAEMMJ = 12;
-	repeated uint32 GMAFDIHIIGC = 4;
+	repeated uint32 hit_target_index_list = 4;
 }
 
 message StopRogueAdventureRoomScRsp {
-	GEJBJJALJDH LJAMGDPPKPP = 8;
+	AdventureRoomInfo adventure_room_info = 8;
 	uint32 retcode = 2;
 }
 
@@ -13649,7 +13649,7 @@ message GetRogueAdventureRoomInfoCsReq {
 
 message GetRogueAdventureRoomInfoScRsp {
 	uint32 retcode = 7;
-	GEJBJJALJDH LJAMGDPPKPP = 13;
+	AdventureRoomInfo adventure_room_info = 13;
 }
 
 message UpdateRogueAdventureRoomScoreCsReq {
@@ -13659,7 +13659,7 @@ message UpdateRogueAdventureRoomScoreCsReq {
 
 message UpdateRogueAdventureRoomScoreScRsp {
 	uint32 retcode = 15;
-	GEJBJJALJDH LJAMGDPPKPP = 10;
+	AdventureRoomInfo adventure_room_info = 10;
 }
 
 message IPICDPBDHBJ {
@@ -16385,9 +16385,9 @@ message InteractPropScRsp {
 	uint32 prop_entity_id = 1;
 }
 
-message IIMHJNGOION {
-	MonsterBattleType DPEENNJLPEL = 10;
-	uint32 KBNMPFEJMBE = 12;
+message HitMonsterBattleInfo {
+	MonsterBattleType monster_battle_type = 10;
+	uint32 target_monster_entity_id = 12;
 }
 
 message ALDDPHFCMGG {
@@ -16415,7 +16415,7 @@ message SceneCastSkillCsReq {
 
 message SceneCastSkillScRsp {
 	uint32 cast_entity_id = 1;
-	repeated IIMHJNGOION IABJAAOJPJM = 9;
+	repeated HitMonsterBattleInfo monster_battle_info = 9;
 	uint32 retcode = 14;
 	SceneBattleInfo battle_info = 7;
 }

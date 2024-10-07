@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static PlayerLoginCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZQbGF5ZXJMb2dpbkNzUmVxLnByb3RvGhJMYW5ndWFnZVR5cGUucHJvdG8a",
-            "FUV4dHJhRGV2aWNlSW5mby5wcm90bxoSUGxhdGZvcm1UeXBlLnByb3RvIvAE",
+            "ChZQbGF5ZXJMb2dpbkNzUmVxLnByb3RvGhVFeHRyYURldmljZUluZm8ucHJv",
+            "dG8aElBsYXRmb3JtVHlwZS5wcm90bxoSTGFuZ3VhZ2VUeXBlLnByb3RvIvAE",
             "ChBQbGF5ZXJMb2dpbkNzUmVxEhMKC3Jlc192ZXJzaW9uGAggASgNEhMKC0NF",
             "S09MQ1BMQkVEGAYgASgJEhMKCmNoYW5uZWxfaWQYzgQgASgNEhQKC0hGSEdQ",
             "TE1FRkdKGJALIAEoCRIWCg5yb2d1ZV9nZXRfaW5mbxgFIAEoCRITCgtOTURN",
@@ -42,7 +42,7 @@ namespace EggLink.DanhengServer.Proto {
             "TUNCT0NHRUtCRhjWAiABKAkSFAoLRkxGS0NJSENFTkYY0QggASgJQh6qAhtF",
             "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.ExtraDeviceInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ExtraDeviceInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerLoginCsReq), global::EggLink.DanhengServer.Proto.PlayerLoginCsReq.Parser, new[]{ "ResVersion", "CEKOLCPLBED", "ChannelId", "HFHGPLMEFGJ", "RogueGetInfo", "NMDMJEFOPKB", "OPNLMMDFFLL", "ACMBPIIJKFL", "FKFJDGCNDII", "Platform", "ClientVersion", "Signature", "MJAJBCHKDFP", "OGKGOLNAICH", "OPNBNKJAIKD", "JJDBFAMDEPP", "EIFPHAMMIEG", "HDPJMCHLGCM", "IIAHICGOMKP", "KOGIIKIEJIJ", "AIEONDBHNDC", "GLNBFFILPNA", "LoginRandom", "DNDEFIGPDGE", "BMCBOCGEKBF", "FLFKCIHCENF" }, null, null, null, null)
           }));

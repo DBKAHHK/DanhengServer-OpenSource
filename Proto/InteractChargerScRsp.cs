@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static InteractChargerScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpJbnRlcmFjdENoYXJnZXJTY1JzcC5wcm90bxoXUm90YXRlckVuZXJneUlu",
-            "Zm8ucHJvdG8aEUNoYXJnZXJJbmZvLnByb3RvInQKFEludGVyYWN0Q2hhcmdl",
+            "ChpJbnRlcmFjdENoYXJnZXJTY1JzcC5wcm90bxoRQ2hhcmdlckluZm8ucHJv",
+            "dG8aF1JvdGF0ZXJFbmVyZ3lJbmZvLnByb3RvInQKFEludGVyYWN0Q2hhcmdl",
             "clNjUnNwEiIKDGNoYXJnZXJfaW5mbxgGIAEoCzIMLkNoYXJnZXJJbmZvEg8K",
             "B3JldGNvZGUYDCABKA0SJwoLZW5lcmd5X2luZm8YAyABKAsyEi5Sb3RhdGVy",
             "RW5lcmd5SW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.InteractChargerScRsp), global::EggLink.DanhengServer.Proto.InteractChargerScRsp.Parser, new[]{ "ChargerInfo", "Retcode", "EnergyInfo" }, null, null, null, null)
           }));

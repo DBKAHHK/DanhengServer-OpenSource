@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static RogueMagicLevelInfoUpdateScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CidSb2d1ZU1hZ2ljTGV2ZWxJbmZvVXBkYXRlU2NOb3RpZnkucHJvdG8aHFJv",
-            "Z3VlTWFnaWNTZXR0bGVSZWFzb24ucHJvdG8aGVJvZ3VlTWFnaWNMYXllcklu",
-            "Zm8ucHJvdG8aG1JvZ3VlTWFnaWNMZXZlbFN0YXR1cy5wcm90byLmAQohUm9n",
+            "CidSb2d1ZU1hZ2ljTGV2ZWxJbmZvVXBkYXRlU2NOb3RpZnkucHJvdG8aGVJv",
+            "Z3VlTWFnaWNMYXllckluZm8ucHJvdG8aG1JvZ3VlTWFnaWNMZXZlbFN0YXR1",
+            "cy5wcm90bxocUm9ndWVNYWdpY1NldHRsZVJlYXNvbi5wcm90byLmAQohUm9n",
             "dWVNYWdpY0xldmVsSW5mb1VwZGF0ZVNjTm90aWZ5EicKBnJlYXNvbhgBIAEo",
             "DjIXLlJvZ3VlTWFnaWNTZXR0bGVSZWFzb24SEwoLS0RCSVBOT0dJREoYDSAB",
             "KA0SJgoGc3RhdHVzGA8gASgOMhYuUm9ndWVNYWdpY0xldmVsU3RhdHVzEi0K",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "EwoLTEFCR0tNUE1CRUQYCSABKA0SFwoPY3VyX2xldmVsX2luZGV4GAIgASgN",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicSettleReasonReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicLayerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicLevelStatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicLayerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicLevelStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicSettleReasonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicLevelInfoUpdateScNotify), global::EggLink.DanhengServer.Proto.RogueMagicLevelInfoUpdateScNotify.Parser, new[]{ "Reason", "KDBIPNOGIDJ", "Status", "LevelInfoList", "LABGKMPMBED", "CurLevelIndex" }, null, null, null, null)
           }));
