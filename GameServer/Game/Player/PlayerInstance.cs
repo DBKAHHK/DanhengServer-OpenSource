@@ -418,7 +418,7 @@ public class PlayerInstance(PlayerData data)
                 if (oldState == PropStateEnum.ChestClosed && newState == PropStateEnum.ChestUsed)
                 {
                     // TODO: Filter treasure chest
-                    var items = DropService.CalculateDropsFromProp();
+                    var items = DropService.CalculateDropsFromProp(prop.PropInfo.ChestID);
                     await SceneInstance.Player.InventoryManager!.AddItems(items);
                 }
 
