@@ -1,4 +1,5 @@
 ﻿using System.Collections.Concurrent;
+using EggLink.DanhengServer.Data.Config.AdventureAbility;
 using EggLink.DanhengServer.Data.Config.Scene;
 using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Data.Excel;
@@ -110,6 +111,8 @@ public static class GameData
     public static Dictionary<int, ContentPackageConfigExcel> ContentPackageConfigData { get; private set; } = [];
     public static Dictionary<int, GroupSystemUnlockDataExcel> GroupSystemUnlockDataData { get; private set; } = [];
     public static Dictionary<int, FuncUnlockDataExcel> FuncUnlockDataData { get; private set; } = [];
+
+    public static Dictionary<string, AdventureModifierConfig> AdventureModifierData { get; set; } = [];
 
     #endregion
 

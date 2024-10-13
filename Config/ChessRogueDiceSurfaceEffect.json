@@ -136,7 +136,7 @@
                 "EffectType": "SetBlockTypeToAround",
                 "Params": {
                     "SourceType": "3",
-                    "TargetType": "3",
+                    "TargetType": "0",
                     "Count": "1"
                 }
             }
@@ -161,7 +161,7 @@
             {
                 "EffectType": "SwapCellToCurAround",
                 "Params": {
-                    "SourceType": "3,5"
+                    "SourceType": "3;5"
                 }
             }
         ]
@@ -172,6 +172,7 @@
             {
                 "EffectType": "ReplicateCurCellToRandom",
                 "Params": {
+                    "SourceType": "1;2;3;4;5;6;7;8;9;10;13;14;16;17",
                     "Count": 2
                 }
             }
@@ -183,7 +184,7 @@
             {
                 "EffectType": "SetColCanMove",
                 "Params": {
-                    "Count": "~1;~2;~3"
+                    "Column": "~1;~2;~3"
                 }
             }
         ]
@@ -223,7 +224,7 @@
         "SurfaceId": 2063,
         "ContentEffects": [
             {
-                "EffectType": "SetRandomCellToTargeType",
+                "EffectType": "TurnRandomCellBlockType",
                 "Params": {
                     "SourceType": "1;2;3;4;5;6;7;8;9;10;14;16;17",
                     "TargetType": "13",

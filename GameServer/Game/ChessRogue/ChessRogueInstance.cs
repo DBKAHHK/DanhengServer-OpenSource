@@ -1,4 +1,5 @@
 ﻿using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Data.Config.AdventureAbility;
 using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Enums.Rogue;
@@ -74,6 +75,7 @@ public class ChessRogueInstance : BaseRogueInstance
 
     public Dictionary<int, ChessRogueCellInstance> RogueCells { get; set; } = [];
     public ChessRogueCellInstance? CurCell { get; set; }
+    public List<int> CanMoveCellIdList { get; set; } = [];
     public List<ChessRogueCellInstance> HistoryCell { get; set; } = [];
     public int StartCell { get; set; }
 
@@ -208,6 +210,38 @@ public class ChessRogueInstance : BaseRogueInstance
     }
 
     #region Buff Management
+
+    public override void HandleMazeBuffModifier(AdventureModifierConfig config, MazeBuff buff)
+    {
+        var task = config.OnBeforeBattle;
+
+        foreach (var info in task)
+        {
+            if (!info.Type.Replace("RPG.GameCore.", "").StartsWith("SetDynamicValueBy")) continue;
+            var key = info.Type.Replace("RPG.GameCore.SetDynamicValueBy", "");
+            var value = key switch
+            {
+                "ItemNum" => CurMoney,
+                "RogueMiracleNum" => RogueMiracles.Count,
+                "RogueBuffNumWithType" => RogueBuffs.Count,
+                "RogueModifierCount" => DiceInstance.Modifier == null ? 0: 1,
+                "RogueLayer" => Layers.IndexOf(CurLayer) + 1,
+                _ => 0
+            };
+
+            key = key switch
+            {
+                "ItemNum" => "ItemNumber",
+                "RogueMiracleNum" => "RogueMiracleNumber",
+                "RogueBuffNumWithType" => "RogueBuffNumberWithType",
+                "RogueModifierCount" => "RogueModifierCount",
+                "RogueLayer" => "_RogueLayer",
+                _ => key
+            };
+
+            buff.DynamicValues.Add(key, value);
+        }
+    }
 
     public override async ValueTask RollBuff(int amount)
     {
@@ -690,6 +724,10 @@ public class ChessRogueInstance : BaseRogueInstance
             if (cell.Value.PosX == CurCell!.PosX + 2)
                 canSelected.Add((uint)cell.Value.GetCellId());
         }
+
+        canSelected.AddRange(CanMoveCellIdList.Select(i => (uint)i));
+
+        CanMoveCellIdList.Clear();  // clear
 
         var proto = new ChessRogueLevelInfo
         {

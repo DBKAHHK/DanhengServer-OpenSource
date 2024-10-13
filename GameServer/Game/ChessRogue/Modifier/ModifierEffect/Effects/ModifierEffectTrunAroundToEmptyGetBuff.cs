@@ -58,7 +58,8 @@ public class ModifierEffectTrunAroundToEmptyGetBuff : ModifierEffectHandler
         }
     }
 
-    public override void BeforeBattle(ChessRogueDiceModifierInstance modifierInstance, BattleInstance battle)
+    public override void BeforeBattle(ChessRogueDiceModifierInstance modifierInstance, BattleInstance battle,
+        ChessRogueInstance instance)
     {
     }
 

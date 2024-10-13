@@ -1,4 +1,5 @@
 ﻿using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Data.Config.AdventureAbility;
 using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Inventory;
@@ -237,6 +238,34 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
             await action.RogueBuffSelectMenu.RerollBuff(); // reroll
             await Player.SendPacket(
                 new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, menu: action.RogueBuffSelectMenu));
+        }
+    }
+
+    public virtual void HandleMazeBuffModifier(AdventureModifierConfig config, MazeBuff buff)
+    {
+        var task = config.OnBeforeBattle;
+
+        foreach (var info in task)
+        {
+            if (!info.Type.Replace("RPG.GameCore.", "").StartsWith("SetDynamicValueBy")) continue;
+            var key = info.Type.Replace("RPG.GameCore.SetDynamicValueBy", "");
+            var value = key switch
+            {
+                "ItemNum" => CurMoney,
+                "RogueMiracleNum" => RogueMiracles.Count,
+                "RogueBuffNumWithType" => RogueBuffs.Count,
+                _ => 0
+            };
+
+            key = key switch
+            {
+                "ItemNum" => "ItemNumber",
+                "RogueMiracleNum" => "RogueMiracleNumber",
+                "RogueBuffNumWithType" => "RogueBuffNumberWithType",
+                _ => key
+            };
+
+            buff.DynamicValues.Add(key, value);
         }
     }
 

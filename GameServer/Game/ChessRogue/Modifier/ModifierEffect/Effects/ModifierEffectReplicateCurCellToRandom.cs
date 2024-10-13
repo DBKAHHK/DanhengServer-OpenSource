@@ -5,35 +5,36 @@ using EggLink.DanhengServer.GameServer.Server.Packet.Send.ChessRogue;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueModifier;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
+using System.Collections.Generic;
 
 namespace EggLink.DanhengServer.GameServer.Game.ChessRogue.Modifier.ModifierEffect.Effects;
 
-[ModifierEffect(ModifierEffectTypeEnum.TurnRandomCellBlockType)]
-public class ModifierEffectTurnRandomCellBlockType : ModifierEffectHandler
+[ModifierEffect(ModifierEffectTypeEnum.ReplicateCurCellToRandom)]
+public class ModifierEffectReplicateCurCellToRandom : ModifierEffectHandler
 {
     public override async ValueTask OnConfirmed(ChessRogueDiceModifierInstance modifierInstance, ChessRogueInstance chessRogueInstance)
     {
         await chessRogueInstance.Player.SendPacket(new PacketRogueModifierStageStartNotify(modifierInstance.SourceType));
 
-        List<ChessRogueCellInstance> targetCells = [];
-        var types = modifierInstance.EffectConfig.Params.GetValueOrDefault("SourceType", "3").Split(";");
-        var targetTypes = modifierInstance.EffectConfig.Params.GetValueOrDefault("TargetType", "3").Split(";").Select(x => (RogueDLCBlockTypeEnum)int.Parse(x)).ToList();
-        var count = int.Parse(modifierInstance.EffectConfig.Params.GetValueOrDefault("Count", "1"));
+        List<ChessRogueCellInstance> targetCells = [];  // list of cells can be changed
+        var types = modifierInstance.EffectConfig.Params.GetValueOrDefault("SourceType", "3").Split(";");  // get the target types
+        var count = int.Parse(modifierInstance.EffectConfig.Params.GetValueOrDefault("Count", "1"));  // get the count of cells to change
+        var curCell = chessRogueInstance.CurCell;
         foreach (var type in types)
         {
-            var cells = chessRogueInstance.RogueCells.Where(x =>
+            var cells = chessRogueInstance.RogueCells.Where(x =>  // get all cells with the target type
                 x.Value.BlockType == (RogueDLCBlockTypeEnum)int.Parse(type) && !x.Value.IsCollapsed());
 
-            targetCells.AddRange(cells.Select(x => x.Value));
+            targetCells.AddRange(cells.Select(x => x.Value));  // add the cells to the list
         }
 
         List<ChessRogueCellInstance> updated = [];
         for (var i = 0; i < count; i++)
         {
-            if (targetCells.Count == 0)
+            if (targetCells.Count == 0)  // if there are no more cells to change, quit the loop
                 break;
-            var targetCell = targetCells.RandomElement();
-            targetCell.BlockType = targetTypes.RandomElement();
+            var targetCell = targetCells.RandomElement();  // get a random cell from the list
+            targetCell.BlockType = curCell?.BlockType ?? RogueDLCBlockTypeEnum.Empty;  // set the cell type to the current cell type
             targetCells.Remove(targetCell);
             updated.Add(targetCell);
         }
@@ -41,7 +42,7 @@ public class ModifierEffectTurnRandomCellBlockType : ModifierEffectHandler
         await chessRogueInstance.Player.SendPacket(new PacketChessRogueCellUpdateNotify(updated,
             chessRogueInstance.CurBoardExcel?.ChessBoardID ?? 0, modifierInstance.SourceType,
             ChessRogueCellUpdateReason.Modifier));
-        
+
         modifierInstance.IsConfirmed = true;
     }
 

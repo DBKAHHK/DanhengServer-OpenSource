@@ -89,7 +89,8 @@ public class ModifierEffectSetCellTypeAndTakeReward : ModifierEffectHandler
         await ValueTask.CompletedTask;
     }
 
-    public override void BeforeBattle(ChessRogueDiceModifierInstance modifierInstance, BattleInstance battle)
+    public override void BeforeBattle(ChessRogueDiceModifierInstance modifierInstance, BattleInstance battle,
+        ChessRogueInstance instance)
     {
     }
 
