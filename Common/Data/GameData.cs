@@ -67,6 +67,8 @@ public static class GameData
     public static Dictionary<RogueDLCBlockTypeEnum, List<ChessRogueRoomConfig>>
         ChessRogueRoomData { get; private set; } = [];
 
+    public static Dictionary<int, ChessRogueDiceSurfaceEffectConfig> ChessRogueDiceSurfaceEffectData { get; set; } = [];
+
     public static Dictionary<int, RogueDLCAreaExcel> RogueDLCAreaData { get; private set; } = [];
     public static Dictionary<int, RogueDLCBossDecayExcel> RogueDLCBossDecayData { get; private set; } = [];
     public static Dictionary<int, RogueDLCBossBpExcel> RogueDLCBossBpData { get; private set; } = [];

@@ -5,13 +5,18 @@ using EggLink.DanhengServer.Enums.Rogue;
 using EggLink.DanhengServer.GameServer.Game.Battle;
 using EggLink.DanhengServer.GameServer.Game.ChessRogue.Cell;
 using EggLink.DanhengServer.GameServer.Game.ChessRogue.Dice;
+using EggLink.DanhengServer.GameServer.Game.ChessRogue.Modifier.ModifierEffect;
+using EggLink.DanhengServer.GameServer.Game.Mission.FinishAction;
+using EggLink.DanhengServer.GameServer.Game.Mission.FinishType;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Game.Rogue;
 using EggLink.DanhengServer.GameServer.Game.Rogue.Buff;
 using EggLink.DanhengServer.GameServer.Game.Rogue.Event;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.ChessRogue;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueModifier;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
+using System.Reflection;
 
 namespace EggLink.DanhengServer.GameServer.Game.ChessRogue;
 
@@ -29,8 +34,18 @@ public class ChessRogueInstance : BaseRogueInstance
         Layers = areaExcel.LayerIDList;
         CurLayer = Layers.First();
         EventManager = new RogueEventManager(player, this);
-
         RogueType = rogueSubMode == RogueSubModeEnum.ChessRogueNous ? 160 : 130;
+
+
+        var types = Assembly.GetExecutingAssembly().GetTypes();
+        foreach (var type in types)
+        {
+            var attr = type.GetCustomAttribute<ModifierEffectAttribute>();
+            if (attr == null) continue;
+
+            var handler = (ModifierEffectHandler)Activator.CreateInstance(type, null)!;
+            ModifierEffectHandlers.Add(attr.EffectType, handler);
+        }
 
         foreach (var difficulty in areaExcel.DifficultyID)
             if (GameData.RogueDLCDifficultyData.TryGetValue(difficulty, out var diff))
@@ -55,6 +70,7 @@ public class ChessRogueInstance : BaseRogueInstance
     public int BossAeonId { get; set; }
     public List<RogueDLCDifficultyExcel> DifficultyExcel { get; set; } = [];
     public ChessRogueDiceInstance DiceInstance { get; set; }
+    public Dictionary<ModifierEffectTypeEnum, ModifierEffectHandler> ModifierEffectHandlers { get; set; } = [];
 
     public Dictionary<int, ChessRogueCellInstance> RogueCells { get; set; } = [];
     public ChessRogueCellInstance? CurCell { get; set; }
@@ -70,6 +86,7 @@ public class ChessRogueInstance : BaseRogueInstance
     public int LayerMap { get; set; }
 
     public int ActionPoint { get; set; } = 15;
+    public int CurModifierId { get; set; } = 1;
 
     public List<int> DisableAeonIds { get; set; } = [];
 
@@ -108,6 +125,11 @@ public class ChessRogueInstance : BaseRogueInstance
                     WaveFlag = -1
                 });
         }
+
+
+        if (DiceInstance.Modifier == null) return;
+        var modifier = DiceInstance.Modifier;
+        modifier.BeforeBattle(this, battle);
     }
 
     public void CalculateDifficulty(BattleInstance battle)
@@ -164,6 +186,12 @@ public class ChessRogueInstance : BaseRogueInstance
         }
 
         await RollBuff(battle.Stages.Count);
+
+        if (DiceInstance.Modifier != null)
+        {
+            var modifier = DiceInstance.Modifier;
+            await modifier.AfterBattle(this, battle);
+        }
 
         switch (CurCell!.BlockType)
         {
@@ -352,6 +380,12 @@ public class ChessRogueInstance : BaseRogueInstance
         await Player.SendPacket(new PacketChessRogueCellUpdateNotify(cell, CurBoardExcel?.ChessBoardID ?? 0));
         await CostActionPoint(1);
 
+        if (DiceInstance.Modifier != null)
+        {
+            var modifier = DiceInstance.Modifier;
+            await modifier.SelectCell(this, cellId);
+        }
+
         await Player.SendPacket(new PacketChessRogueSelectCellScRsp(cellId));
     }
 
@@ -387,7 +421,7 @@ public class ChessRogueInstance : BaseRogueInstance
 
     public async ValueTask ConfirmRoll()
     {
-        DiceInstance.DiceStatus = ChessRogueDiceStatus.ChessRogueDiceConfirmed;
+        await DiceInstance.ConfirmDice();
 
         await Player.SendPacket(new PacketChessRogueUpdateDiceInfoScNotify(DiceInstance));
         await Player.SendPacket(new PacketChessRogueConfirmRollScRsp(DiceInstance));
@@ -404,6 +438,30 @@ public class ChessRogueInstance : BaseRogueInstance
         //}
 
         //Player.SendPacket(new PacketChessRogueUpdateAllowedSelectCellScNotify(CurLayerData![-1][0], cellIds));
+    }
+
+    #endregion
+
+    #region Modifier
+
+    public async ValueTask ApplyModifier(int selectCellId)
+    {
+        if (DiceInstance.Modifier == null) return;
+
+        var modifier = DiceInstance.Modifier;
+        if (selectCellId == 0)
+        {
+            modifier.IsConfirmed = true;
+            await Player.SendPacket(new PacketRogueModifierStageStartNotify(modifier.SourceType));
+            // gain money
+            await GainMoney(10, 2);
+
+            await Player.SendPacket(new PacketChessRogueUpdateDiceInfoScNotify(DiceInstance));
+            return;
+        }
+        await modifier.SelectModifierCell(this, selectCellId);
+
+        await Player.SendPacket(new PacketChessRogueUpdateDiceInfoScNotify(DiceInstance));
     }
 
     #endregion
