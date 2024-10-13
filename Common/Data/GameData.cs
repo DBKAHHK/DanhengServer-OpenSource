@@ -1,4 +1,5 @@
 ﻿using System.Collections.Concurrent;
+using EggLink.DanhengServer.Data.Config.AdventureAbility;
 using EggLink.DanhengServer.Data.Config.Scene;
 using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Data.Excel;
@@ -116,6 +117,8 @@ public static class GameData
     public static Dictionary<int, MusicRhythmSongExcel> MusicRhythmSongData { get; private set; } = [];
     public static Dictionary<int, MusicRhythmSoundEffectExcel> MusicRhythmSoundEffectData { get; private set; } = [];
     public static Dictionary<int, MusicRhythmTrackExcel> MusicRhythmTrackData { get; private set; } = [];
+
+    public static Dictionary<string, AdventureModifierConfig> AdventureModifierData { get; set; } = [];
 
     #endregion
 

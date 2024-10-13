@@ -2,15 +2,16 @@
 using EggLink.DanhengServer.GameServer.Game.Battle;
 using EggLink.DanhengServer.GameServer.Game.ChessRogue.Cell;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.ChessRogue;
-using System.Collections.Generic;
-using EggLink.DanhengServer.Util;
-using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueModifier;
+using EggLink.DanhengServer.Proto;
+using EggLink.DanhengServer.Util;
+using System.Collections.Generic;
+using System.Xml.Linq;
 
 namespace EggLink.DanhengServer.GameServer.Game.ChessRogue.Modifier.ModifierEffect.Effects;
 
-[ModifierEffect(ModifierEffectTypeEnum.ReplicateSelectCellToAround)]
-public class ModifierEffectReplicateSelectCellToAround : ModifierEffectHandler
+[ModifierEffect(ModifierEffectTypeEnum.SetBlockTypeToAround)]
+public class ModifierEffectSetBlockTypeToAround : ModifierEffectHandler
 {
     public override async ValueTask OnConfirmed(ChessRogueDiceModifierInstance modifierInstance, ChessRogueInstance chessRogueInstance)
     {

@@ -2,15 +2,14 @@
 using EggLink.DanhengServer.GameServer.Game.Battle;
 using EggLink.DanhengServer.GameServer.Game.ChessRogue.Cell;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.ChessRogue;
-using System.Collections.Generic;
-using EggLink.DanhengServer.Util;
-using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueModifier;
+using EggLink.DanhengServer.Proto;
+using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Game.ChessRogue.Modifier.ModifierEffect.Effects;
 
-[ModifierEffect(ModifierEffectTypeEnum.ReplicateSelectCellToAround)]
-public class ModifierEffectReplicateSelectCellToAround : ModifierEffectHandler
+[ModifierEffect(ModifierEffectTypeEnum.ReplicateSelectCellToRandom)]
+public class ModifierEffectReplicateSelectCellToRandom : ModifierEffectHandler
 {
     public override async ValueTask OnConfirmed(ChessRogueDiceModifierInstance modifierInstance, ChessRogueInstance chessRogueInstance)
     {
@@ -40,8 +39,7 @@ public class ModifierEffectReplicateSelectCellToAround : ModifierEffectHandler
         foreach (var type in types)
         {
             var cells = chessRogueInstance.RogueCells.Where(x =>
-                x.Value.BlockType == (RogueDLCBlockTypeEnum)int.Parse(type) && !x.Value.IsCollapsed() &&
-                Math.Abs(x.Value.PosX - targetCell.PosX) <= 1 && Math.Abs(x.Value.PosY - targetCell.PosY) <= 1);
+                x.Value.BlockType == (RogueDLCBlockTypeEnum)int.Parse(type) && !x.Value.IsCollapsed());  // get all cells with the target type
 
             targetCells.AddRange(cells.Select(x => x.Value));
         }

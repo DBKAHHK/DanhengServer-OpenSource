@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using EggLink.DanhengServer.Data.Config;
+using EggLink.DanhengServer.Data.Config.AdventureAbility;
 using EggLink.DanhengServer.Data.Config.Rogue;
 using EggLink.DanhengServer.Data.Config.Scene;
 using EggLink.DanhengServer.Data.Config.SummonUnit;
@@ -35,6 +36,7 @@ public class ResourceManager
         var t5 = Task.Run(LoadPerformanceInfo);
         var t6 = Task.Run(LoadDialogueInfo);
         var t7 = Task.Run(LoadRogueChestMapInfo);
+        var t8 = Task.Run(LoadAdventureModifier);
         GameData.ActivityConfig = LoadCustomFile<ActivityConfig>("Activity", "ActivityConfig") ?? new ActivityConfig();
         GameData.BannersConfig = LoadCustomFile<BannersConfig>("Banner", "Banners") ?? new BannersConfig();
         GameData.RogueMapGenData = LoadCustomFile<Dictionary<int, List<int>>>("Rogue Map", "RogueMapGen") ?? [];
@@ -48,7 +50,7 @@ public class ResourceManager
         LoadChessRogueDiceSurfaceEffectData();
         LoadRogueMagicRoomData();
 
-        Task.WaitAll(t1, t2, t3, t4, t5, t6, t7);
+        Task.WaitAll(t1, t2, t3, t4, t5, t6, t7, t8);
     }
 
     public static void LoadExcel()
@@ -657,6 +659,59 @@ public class ResourceManager
 
         Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItems", count.ToString(),
             I18NManager.Translate("Word.RogueChestMapInfo")));
+    }
+
+    public static void LoadAdventureModifier()
+    {
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadingItem",
+            I18NManager.Translate("Word.AdventureModifierInfo")));
+        var count = 0;
+
+        // list the files in folder
+        var directory = new DirectoryInfo($"{ConfigManager.Config.Path.ResourcePath}/Config/ConfigAdventureModifier");
+        if (!directory.Exists)
+        {
+            Logger.Warn(I18NManager.Translate("Server.ServerInfo.ConfigMissing",
+                I18NManager.Translate("Word.AdventureModifierInfo"),
+                $"{ConfigManager.Config.Path.ResourcePath}/Config/ConfigAdventureModifier",
+                I18NManager.Translate("Word.Buff")));
+
+            return;
+        }
+        var files = directory.GetFiles();
+
+        foreach (var file in files)
+        {
+            try
+            {
+                using var reader = file.OpenRead();
+                using StreamReader reader2 = new(reader);
+                var text = reader2.ReadToEnd().Replace("$type", "Type");
+                var obj = JObject.Parse(text);
+                var info = AdventureModifierLookupTableConfig.LoadFromJObject(obj);
+
+                foreach (var config in info.ModifierMap)
+                {
+                    GameData.AdventureModifierData.Add(config.Key, config.Value);
+                    count++;
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(
+                    I18NManager.Translate("Server.ServerInfo.FailedToReadItem", file.Name,
+                        I18NManager.Translate("Word.Error")), ex);
+            }
+        }
+
+        //if (count < boardList.Count)
+        //    Logger.Warn(I18NManager.Translate("Server.ServerInfo.ConfigMissing",
+        //        I18NManager.Translate("Word.AdventureModifierInfo"),
+        //        $"{ConfigManager.Config.Path.ResourcePath}/Config/ConfigAdventureModifier",
+        //        I18NManager.Translate("Word.Buff")));
+
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItems", count.ToString(),
+            I18NManager.Translate("Word.AdventureModifierInfo")));
     }
 
     public static void LoadChessRogueRoomData()

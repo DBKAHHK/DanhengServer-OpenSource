@@ -58,7 +58,7 @@ public class ChessRogueDiceModifierInstance(int modifierId, ChessRogueDiceSurfac
         instance.ModifierEffectHandlers.TryGetValue(effect, out var handler);
 
         if (handler != null)
-            handler.BeforeBattle(this, battle);
+            handler.BeforeBattle(this, battle, instance);
         else
             IsConfirmed = true;
     }

@@ -7,8 +7,8 @@ using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Game.ChessRogue.Modifier.ModifierEffect.Effects;
 
-[ModifierEffect(ModifierEffectTypeEnum.ChangeSelectCellType)]
-public class ModifierEffectChangeSelectCellType : ModifierEffectHandler
+[ModifierEffect(ModifierEffectTypeEnum.ReRandomCellTypeGetMoney)]
+public class ModifierEffectReRandomCellTypeGetMoney : ModifierEffectHandler
 {
     public override async ValueTask OnConfirmed(ChessRogueDiceModifierInstance modifierInstance, ChessRogueInstance chessRogueInstance)
     {
@@ -16,28 +16,42 @@ public class ModifierEffectChangeSelectCellType : ModifierEffectHandler
 
         foreach (var type in types)
         {
-            var cells = chessRogueInstance.RogueCells.Where(x => x.Value.BlockType == (RogueDLCBlockTypeEnum)int.Parse(type) && !x.Value.IsCollapsed());
+            var cells = chessRogueInstance.RogueCells.Where(x =>
+                x.Value.BlockType == (RogueDLCBlockTypeEnum)int.Parse(type) && !x.Value.IsCollapsed());
             modifierInstance.SelectableCells.AddRange(cells.Select(x => x.Key));
         }
+
         await ValueTask.CompletedTask;
     }
 
-    public override async ValueTask SelectModifierCell(ChessRogueDiceModifierInstance modifierInstance, ChessRogueInstance chessRogueInstance,
+    public override async ValueTask SelectModifierCell(ChessRogueDiceModifierInstance modifierInstance,
+        ChessRogueInstance chessRogueInstance,
         int selectCellId)
     {
-        var cell = chessRogueInstance.RogueCells[selectCellId];
-
+        await chessRogueInstance.Player.SendPacket(
+            new PacketRogueModifierStageStartNotify(modifierInstance.SourceType));
         modifierInstance.SelectedCell = selectCellId;
         modifierInstance.IsConfirmed = true;
 
-        await chessRogueInstance.Player.SendPacket(new PacketRogueModifierStageStartNotify(modifierInstance.SourceType));
-
+        var targetCell = chessRogueInstance.RogueCells[selectCellId];
+        var reRandomType = targetCell.BlockType;
+        var refreshCell = chessRogueInstance.RogueCells.Values.Where(x =>
+            x.BlockType == reRandomType && !x.IsCollapsed()).ToList();
         var types = modifierInstance.EffectConfig.Params.GetValueOrDefault("TargetType", "3").Split(";");
-        var targetType = types.Select(x => (RogueDLCBlockTypeEnum)int.Parse(x)).ToList().RandomElement();
+        var targetType = types.Select(x => (RogueDLCBlockTypeEnum)int.Parse(x)).ToList();
 
-        cell.BlockType = targetType;
+        foreach (var cell in refreshCell)
+        {
+            cell.BlockType = targetType.RandomElement();
+        }
 
-        await chessRogueInstance.Player.SendPacket(new PacketChessRogueCellUpdateNotify(cell, chessRogueInstance.CurBoardExcel?.ChessBoardID ?? 0, modifierInstance.SourceType, ChessRogueCellUpdateReason.Modifier));
+        // get money
+        var money = int.Parse(modifierInstance.EffectConfig.Params.GetValueOrDefault("Count", "0"));
+        await chessRogueInstance.GainMoney(money);
+
+        await chessRogueInstance.Player.SendPacket(new PacketChessRogueCellUpdateNotify(refreshCell,
+            chessRogueInstance.CurBoardExcel?.ChessBoardID ?? 0, modifierInstance.SourceType,
+            ChessRogueCellUpdateReason.Modifier));
     }
 
     public override async ValueTask SelectCell(ChessRogueDiceModifierInstance modifierInstance, ChessRogueInstance chessRogueInstance,
