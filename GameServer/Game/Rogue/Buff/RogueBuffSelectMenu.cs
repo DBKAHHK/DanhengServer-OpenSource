@@ -27,9 +27,9 @@ public class RogueBuffSelectMenu(BaseRogueInstance rogue)
 
         foreach (var buff in buffs)
             if (buff.RogueBuffType == rogue.RogueBuffType)
-                list.Add(buff, (int)(20f / (int)buff.RogueBuffCategory * 2.5));
+                list.Add(buff, 20);
             else
-                list.Add(buff, (int)(20f / (int)buff.RogueBuffCategory * 0.7));
+                list.Add(buff, 15);
         var result = new List<BaseRogueBuffExcel>();
 
         for (var i = 0; i < count; i++)

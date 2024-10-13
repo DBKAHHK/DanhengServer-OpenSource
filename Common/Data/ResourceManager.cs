@@ -45,6 +45,7 @@ public class ResourceManager
             new RogueMiracleEffectConfig();
         LoadChessRogueRoomData();
         LoadRogueTournRoomData();
+        LoadChessRogueDiceSurfaceEffectData();
         LoadRogueMagicRoomData();
 
         Task.WaitAll(t1, t2, t3, t4, t5, t6, t7);
@@ -815,6 +816,44 @@ public class ResourceManager
 
         Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItems", count.ToString(),
             I18NManager.Translate("Word.RogueMagicRoomInfo")));
+    }
+
+    public static void LoadChessRogueDiceSurfaceEffectData()
+    {
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadingItem",
+            I18NManager.Translate("Word.RogueDiceSurfaceInfo")));
+        var count = 0;
+
+        FileInfo file = new(ConfigManager.Config.Path.ConfigPath + "/ChessRogueDiceSurfaceEffect.json");
+
+        if (!file.Exists)
+        {
+            Logger.Warn(I18NManager.Translate("Server.ServerInfo.ConfigMissing",
+                I18NManager.Translate("Word.RogueDiceSurfaceInfo"),
+                $"{ConfigManager.Config.Path.ConfigPath}/ChessRogueDiceSurfaceEffect.json",
+                I18NManager.Translate("Word.RogueDiceSurface")));
+
+            return;
+        }
+
+        try
+        {
+            using var reader = file.OpenRead();
+            using StreamReader reader2 = new(reader);
+            var text = reader2.ReadToEnd();
+            var json = JsonConvert.DeserializeObject<Dictionary<int, ChessRogueDiceSurfaceEffectConfig>>(text);
+            if (json == null) throw new Exception("Failed to deserialize ChessRogueDiceSurfaceEffect.json");
+
+            GameData.ChessRogueDiceSurfaceEffectData = json;
+            count = json.Count;
+        }
+        catch (Exception ex)
+        {
+            Logger.Error("Error in reading " + file.Name, ex);
+        }
+
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItems", count.ToString(),
+            I18NManager.Translate("Word.RogueDiceSurfaceInfo")));
     }
 
     public static void AddRoomToGameData(RogueDLCBlockTypeEnum type, ChessRogueRoomConfig room)
