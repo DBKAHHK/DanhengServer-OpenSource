@@ -196,7 +196,7 @@ public class ChessRogueCellInstance
             RoomId = (uint)RoomId,
             //PLOEJLHMONC = true,
             //PosX = (uint)GetRow(),
-            MarkType = (uint)MarkType
+            //MarkType = (uint)MarkType
         };
 
         if (CellAdvanceInfo.Count <= 0) return info;

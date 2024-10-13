@@ -90,7 +90,7 @@ public class ChessRogueDiceModifierInstance(int modifierId, ChessRogueDiceSurfac
             },
             ModifierInfo = new ChessRogueModifierInfo
             {
-                LBMGNJJEPFM = { SelectableCells.Select(x => (uint)x) },
+                GNDJCFDJHEJ = { SelectableCells.Select(x => (uint)x) },
                 SelectCellId = (uint)SelectedCell,
                 Confirm = IsConfirmed
             }
