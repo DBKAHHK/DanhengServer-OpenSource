@@ -83,6 +83,14 @@ public class WordTextCHS
     public string ChessRogueRoomInfo => "模拟宇宙DLC文件";
     public string SummonUnit => "秘技生成";
     public string SummonUnitInfo => "秘技生成文件";
+    public string RogueTournRoom => "差分宇宙";
+    public string RogueTournRoomInfo => "差分宇宙房间文件";
+    public string RogueMagicRoom => "不可知域";
+    public string RogueMagicRoomInfo => "不可知域房间文件";
+    public string RogueDiceSurface => "骰面效果";
+    public string RogueDiceSurfaceInfo => "骰面效果文件";
+    public string AdventureModifier => "AdventureModifier";
+    public string AdventureModifierInfo => "AdventureModifier文件";
 
     public string DatabaseAccount => "数据库账号";
 }

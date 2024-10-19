@@ -224,7 +224,7 @@ public class PlayerInstance(PlayerData data)
         await QuestManager!.AcceptQuestByCondition();
     }
 
-    public T InitializeDatabase<T>() where T : class, new()
+    public T InitializeDatabase<T>() where T : BaseDatabaseDataHelper, new()
     {
         var instance = DatabaseHelper.Instance?.GetInstanceOrCreateNew<T>(Uid);
         return instance!;
