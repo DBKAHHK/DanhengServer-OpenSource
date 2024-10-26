@@ -196,6 +196,7 @@ public class ResourceManager
                 foreach (var groupInfo in info.GroupInstanceList)
                 {
                     if (groupInfo.IsDelete) continue;
+                    if (groupInfo.GroupPath.Contains("_D100")) continue;
                     FileInfo groupFile = new(ConfigManager.Config.Path.ResourcePath + "/" + groupInfo.GroupPath);
                     if (!groupFile.Exists) continue;
 
