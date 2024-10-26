@@ -33,7 +33,8 @@ public class RogueActionInstance
 
         if (RogueBuffSelectMenu != null && !IsReforge) action.BuffSelectInfo = RogueBuffSelectMenu.ToProto();
 
-        if (RogueBuffSelectMenu != null && IsReforge) action.BuffReforgeSelectInfo = RogueBuffSelectMenu.ToReforgeProto();
+        if (RogueBuffSelectMenu != null && IsReforge)
+            action.BuffReforgeSelectInfo = RogueBuffSelectMenu.ToReforgeProto();
 
         if (RogueMiracleSelectMenu != null) action.MiracleSelectInfo = RogueMiracleSelectMenu.ToProto();
 

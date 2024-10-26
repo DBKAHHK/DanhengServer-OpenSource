@@ -7,24 +7,29 @@ using EggLink.DanhengServer.Proto;
 
 namespace EggLink.DanhengServer.GameServer.Game.ChessRogue.Modifier.ModifierEffect.Effects;
 
-[ModifierEffect(ModifierEffectTypeEnum.TrunAroundToEmptyGetBuff)]  // I don't know why it's called TrunAround instead of TurnAround, maybe miHoYo r sleeping lol
+[ModifierEffect(ModifierEffectTypeEnum
+    .TrunAroundToEmptyGetBuff)] // I don't know why it's called TrunAround instead of TurnAround, maybe miHoYo r sleeping lol
 public class ModifierEffectTrunAroundToEmptyGetBuff : ModifierEffectHandler
 {
-    public override async ValueTask OnConfirmed(ChessRogueDiceModifierInstance modifierInstance, ChessRogueInstance chessRogueInstance)
+    public override async ValueTask OnConfirmed(ChessRogueDiceModifierInstance modifierInstance,
+        ChessRogueInstance chessRogueInstance)
     {
         await ValueTask.CompletedTask;
     }
 
-    public override async ValueTask SelectModifierCell(ChessRogueDiceModifierInstance modifierInstance, ChessRogueInstance chessRogueInstance,
+    public override async ValueTask SelectModifierCell(ChessRogueDiceModifierInstance modifierInstance,
+        ChessRogueInstance chessRogueInstance,
         int selectCellId)
     {
         await ValueTask.CompletedTask;
     }
 
-    public override async ValueTask SelectCell(ChessRogueDiceModifierInstance modifierInstance, ChessRogueInstance chessRogueInstance,
+    public override async ValueTask SelectCell(ChessRogueDiceModifierInstance modifierInstance,
+        ChessRogueInstance chessRogueInstance,
         int selectCellId)
     {
-        await chessRogueInstance.Player.SendPacket(new PacketRogueModifierStageStartNotify(modifierInstance.SourceType));
+        await chessRogueInstance.Player.SendPacket(
+            new PacketRogueModifierStageStartNotify(modifierInstance.SourceType));
         var targetCell = chessRogueInstance.RogueCells[selectCellId];
         modifierInstance.IsConfirmed = true;
 
@@ -52,10 +57,7 @@ public class ModifierEffectTrunAroundToEmptyGetBuff : ModifierEffectHandler
             chessRogueInstance.CurBoardExcel?.ChessBoardID ?? 0, modifierInstance.SourceType,
             ChessRogueCellUpdateReason.Modifier));
 
-        if (count > 0)
-        {
-            await chessRogueInstance.RollBuff(count, 100004);
-        }
+        if (count > 0) await chessRogueInstance.RollBuff(count, 100004);
     }
 
     public override void BeforeBattle(ChessRogueDiceModifierInstance modifierInstance, BattleInstance battle,

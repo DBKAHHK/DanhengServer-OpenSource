@@ -2,7 +2,6 @@
 
 public enum RogueMagicRoomTypeEnum
 {
-
     Unknown = 0,
     Boss = 1,
     Battle = 2,

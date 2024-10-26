@@ -2,7 +2,6 @@
 
 public enum RogueMagicAreaGroupIDEnum
 {
-
     None = 0,
     Guide = 1,
     Formal = 2,

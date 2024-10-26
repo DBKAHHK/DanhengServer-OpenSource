@@ -10,10 +10,7 @@ public class PacketMusicRhythmUnlockSongNotify : BasePacket
     {
         var proto = new MusicRhythmUnlockSongNotify();
 
-        foreach (var song in GameData.MusicRhythmSongData.Values)
-        {
-            proto.MusicUnlockList.Add((uint)song.GetId());
-        }
+        foreach (var song in GameData.MusicRhythmSongData.Values) proto.MusicUnlockList.Add((uint)song.GetId());
 
         SetData(proto);
     }

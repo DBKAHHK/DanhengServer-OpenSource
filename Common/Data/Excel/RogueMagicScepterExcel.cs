@@ -18,12 +18,13 @@ public class RogueMagicScepterExcel : ExcelResource
 
     [JsonConverter(typeof(StringEnumConverter))]
     public RogueMagicStyleTypeEnum StyleType { get; set; }
+
     //public FixPoint ScepterBasicPower { get; set; }
     public int StaffMazeBuffID { get; set; }
 
     [JsonConverter(typeof(StringEnumConverter))]
     public RogueMagicRangeTypeEnum LimitRangeType { get; set; }
-    
+
     [JsonProperty(ItemConverterType = typeof(StringEnumConverter))]
     public List<RogueMagicEffectTypeEnum> EffectTypeList { get; set; } = [];
 
@@ -40,9 +41,7 @@ public class RogueMagicScepterExcel : ExcelResource
 
 public class LockMagicUnitInfo
 {
-    [JsonProperty("GHFHMJLCIEC")]
-    public int MagicUnitId { get; set; }
+    [JsonProperty("GHFHMJLCIEC")] public int MagicUnitId { get; set; }
 
-    [JsonProperty("LDEDAMNEIJO")]
-    public int MagicUnitLevel { get; set; }
+    [JsonProperty("LDEDAMNEIJO")] public int MagicUnitLevel { get; set; }
 }

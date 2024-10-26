@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.Data;
+﻿using System.Reflection;
+using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Config.AdventureAbility;
 using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Data.Excel;
@@ -7,8 +8,6 @@ using EggLink.DanhengServer.GameServer.Game.Battle;
 using EggLink.DanhengServer.GameServer.Game.ChessRogue.Cell;
 using EggLink.DanhengServer.GameServer.Game.ChessRogue.Dice;
 using EggLink.DanhengServer.GameServer.Game.ChessRogue.Modifier.ModifierEffect;
-using EggLink.DanhengServer.GameServer.Game.Mission.FinishAction;
-using EggLink.DanhengServer.GameServer.Game.Mission.FinishType;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Game.Rogue;
 using EggLink.DanhengServer.GameServer.Game.Rogue.Buff;
@@ -17,7 +16,6 @@ using EggLink.DanhengServer.GameServer.Server.Packet.Send.ChessRogue;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueModifier;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
-using System.Reflection;
 
 namespace EggLink.DanhengServer.GameServer.Game.ChessRogue;
 
@@ -209,6 +207,31 @@ public class ChessRogueInstance : BaseRogueInstance
         }
     }
 
+    #region Modifier
+
+    public async ValueTask ApplyModifier(int selectCellId)
+    {
+        if (DiceInstance.Modifier == null) return;
+
+        var modifier = DiceInstance.Modifier;
+        if (selectCellId == 0)
+        {
+            modifier.IsConfirmed = true;
+            await Player.SendPacket(new PacketRogueModifierStageStartNotify(modifier.SourceType));
+            // gain money
+            await GainMoney(10, 2);
+
+            await Player.SendPacket(new PacketChessRogueUpdateDiceInfoScNotify(DiceInstance));
+            return;
+        }
+
+        await modifier.SelectModifierCell(this, selectCellId);
+
+        await Player.SendPacket(new PacketChessRogueUpdateDiceInfoScNotify(DiceInstance));
+    }
+
+    #endregion
+
     #region Buff Management
 
     public override void HandleMazeBuffModifier(AdventureModifierConfig config, MazeBuff buff)
@@ -224,7 +247,7 @@ public class ChessRogueInstance : BaseRogueInstance
                 "ItemNum" => CurMoney,
                 "RogueMiracleNum" => RogueMiracles.Count,
                 "RogueBuffNumWithType" => RogueBuffs.Count,
-                "RogueModifierCount" => DiceInstance.Modifier == null ? 0: 1,
+                "RogueModifierCount" => DiceInstance.Modifier == null ? 0 : 1,
                 "RogueLayer" => Layers.IndexOf(CurLayer) + 1,
                 _ => 0
             };
@@ -476,30 +499,6 @@ public class ChessRogueInstance : BaseRogueInstance
 
     #endregion
 
-    #region Modifier
-
-    public async ValueTask ApplyModifier(int selectCellId)
-    {
-        if (DiceInstance.Modifier == null) return;
-
-        var modifier = DiceInstance.Modifier;
-        if (selectCellId == 0)
-        {
-            modifier.IsConfirmed = true;
-            await Player.SendPacket(new PacketRogueModifierStageStartNotify(modifier.SourceType));
-            // gain money
-            await GainMoney(10, 2);
-
-            await Player.SendPacket(new PacketChessRogueUpdateDiceInfoScNotify(DiceInstance));
-            return;
-        }
-        await modifier.SelectModifierCell(this, selectCellId);
-
-        await Player.SendPacket(new PacketChessRogueUpdateDiceInfoScNotify(DiceInstance));
-    }
-
-    #endregion
-
     #region Action Management
 
     public async ValueTask CostActionPoint(int cost)
@@ -727,7 +726,7 @@ public class ChessRogueInstance : BaseRogueInstance
 
         canSelected.AddRange(CanMoveCellIdList.Select(i => (uint)i));
 
-        CanMoveCellIdList.Clear();  // clear
+        CanMoveCellIdList.Clear(); // clear
 
         var proto = new ChessRogueLevelInfo
         {

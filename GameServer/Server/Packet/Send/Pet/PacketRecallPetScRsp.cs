@@ -7,7 +7,6 @@ public class PacketRecallPetScRsp : BasePacket
 {
     public PacketRecallPetScRsp(uint newPetId) : base(CmdIds.RecallPetScRsp)
     {
-        
         var proto = new RecallPetScRsp
         {
             CurPetId = newPetId,

@@ -18,16 +18,12 @@ public class RogueMagicUnitSelectMenu(BaseRogueInstance rogue) : BaseRogueSelect
 
     public override void Roll()
     {
-        if (MagicUnits.Count > 0) return;  // already init
+        if (MagicUnits.Count > 0) return; // already init
         // Remove existing magic units
         if (rogue is RogueMagicInstance magic)
-        {
             foreach (var excel in MagicUnitPool.Clone())
-            {
                 if (magic.RogueMagicUnits.Any(x => x.Value.Excel.MagicUnitID == excel.MagicUnitID))
                     MagicUnitPool.Remove(excel);
-            }
-        }
         var list = new RandomList<RogueMagicUnitExcel>();
 
         foreach (var unitExcel in MagicUnitPool)
@@ -87,11 +83,14 @@ public class RogueMagicUnitSelectMenu(BaseRogueInstance rogue) : BaseRogueSelect
     {
         return new RogueMagicUnitSelectInfo
         {
-            SelectMagicUnits = { MagicUnits.Select(x => new RogueMagicGameUnit
+            SelectMagicUnits =
             {
-                MagicUnitId = (uint)x.MagicUnitID,
-                Level = (uint)x.MagicUnitLevel
-            }) },
+                MagicUnits.Select(x => new RogueMagicGameUnit
+                {
+                    MagicUnitId = (uint)x.MagicUnitID,
+                    Level = (uint)x.MagicUnitLevel
+                })
+            },
             SelectHintId = 260002,
             ABHPIGOGACI = 1,
             OMPAAKLLLFD = 1

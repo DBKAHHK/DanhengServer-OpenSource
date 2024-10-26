@@ -1,5 +1,4 @@
-﻿using EggLink.DanhengServer.Data.Custom;
-using EggLink.DanhengServer.Enums.TournRogue;
+﻿using EggLink.DanhengServer.Enums.TournRogue;
 using EggLink.DanhengServer.Proto;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;

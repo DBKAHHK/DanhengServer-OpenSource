@@ -30,9 +30,6 @@ public class DanhengConnection
     public bool IsOnline = true;
     public StreamWriter? Writer;
 
-    public byte[]? XorKey { get; set; }
-    public ulong ClientSecretKeySeed { get; set; }
-
     public DanhengConnection(KcpConversation conversation, IPEndPoint remote)
     {
         Conversation = conversation;
@@ -44,8 +41,12 @@ public class DanhengConnection
             XorKey = Crypto.ClientSecretKey.GetXorKey();
 #pragma warning restore CS8602 // CS8602 - Dereference of a possibly null reference.
         }
+
         Start();
     }
+
+    public byte[]? XorKey { get; set; }
+    public ulong ClientSecretKeySeed { get; set; }
 
     public long? ConversationId => Conversation.ConversationId;
 

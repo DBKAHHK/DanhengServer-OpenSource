@@ -10,7 +10,7 @@ public class HandlerMusicRhythmStartLevelCsReq : Handler
     public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
         var req = MusicRhythmStartLevelCsReq.Parser.ParseFrom(data);
-        uint curLevel = req.LevelId;
+        var curLevel = req.LevelId;
 
         connection.Player!.Data.CurMusicLevel = (int)curLevel;
 

@@ -1,6 +1,5 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Enums.RogueMagic;
-using EggLink.DanhengServer.Enums.TournRogue;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.Proto;
@@ -49,9 +48,7 @@ public class RogueMagicManager(PlayerInstance player) : BasePlayerManager(player
         var proto = new RogueMagicGetInfo
         {
             StoryInfo = ToStoryInfo(),
-            RogueMagicTalentInfo = ToTalentInfo(),
-            RogueMagicUnitInfoList = {   },
-            RogueMagicScepterInfoList = {   }
+            RogueMagicTalentInfo = ToTalentInfo()
         };
 
         proto.RogueTournAreaInfo.AddRange(ToAreaInfoList());
@@ -76,11 +73,14 @@ public class RogueMagicManager(PlayerInstance player) : BasePlayerManager(player
         {
             TalentInfoList = new RogueTalentInfoList
             {
-                TalentInfo = { GameData.RogueMagicTalentData.Keys.Select(x => new RogueTalentInfo
+                TalentInfo =
                 {
-                    TalentId = (uint)x,
-                    Status = RogueTalentStatus.Enable
-                }) }
+                    GameData.RogueMagicTalentData.Keys.Select(x => new RogueTalentInfo
+                    {
+                        TalentId = (uint)x,
+                        Status = RogueTalentStatus.Enable
+                    })
+                }
             }
         };
 
@@ -97,7 +97,7 @@ public class RogueMagicManager(PlayerInstance player) : BasePlayerManager(player
     public List<RogueMagicDifficultyInfo> ToDifficultyInfoList()
     {
         return (from difficulty in GameData.RogueMagicDifficultyCompData.Values
-                select new RogueMagicDifficultyInfo
+            select new RogueMagicDifficultyInfo
                 { DifficultyId = (uint)difficulty.DifficultyCompID, IsUnlocked = true }).ToList();
     }
 

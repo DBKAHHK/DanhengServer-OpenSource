@@ -7,7 +7,8 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueMagic;
 
 public class PacketRogueMagicLevelInfoUpdateScNotify : BasePacket
 {
-    public PacketRogueMagicLevelInfoUpdateScNotify(RogueMagicInstance instance, List<RogueMagicLevelInstance> levels, List<int>? updateRoomIndexList = null) : base(CmdIds.RogueMagicLevelInfoUpdateScNotify)
+    public PacketRogueMagicLevelInfoUpdateScNotify(RogueMagicInstance instance, List<RogueMagicLevelInstance> levels,
+        List<int>? updateRoomIndexList = null) : base(CmdIds.RogueMagicLevelInfoUpdateScNotify)
     {
         var proto = new RogueMagicLevelInfoUpdateScNotify
         {

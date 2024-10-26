@@ -14,8 +14,6 @@ public class RogueMagicLayerRoomExcel : ExcelResource
     public override void Loaded()
     {
         if (!GameData.RogueMagicLayerIdRoomCountDict.TryAdd(LayerID, 1))
-        {
             GameData.RogueMagicLayerIdRoomCountDict[LayerID]++;
-        }
     }
 }

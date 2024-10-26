@@ -7,5 +7,5 @@ public enum RogueTournWorkbenchFuncTypeEnum
     BuffReforge = 2,
     FormulaReforge = 3,
     MiracleCompose = 4,
-    MiracleReforge = 5,
+    MiracleReforge = 5
 }

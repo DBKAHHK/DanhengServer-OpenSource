@@ -10,10 +10,7 @@ public class PacketMusicRhythmUnlockSongSfxScNotify : BasePacket
     {
         var proto = new MusicRhythmUnlockSongSfxScNotify();
 
-        foreach (var sfx in GameData.MusicRhythmSoundEffectData.Values)
-        {
-            proto.MusicUnlockList.Add((uint)sfx.GetId());
-        }
+        foreach (var sfx in GameData.MusicRhythmSoundEffectData.Values) proto.MusicUnlockList.Add((uint)sfx.GetId());
 
         SetData(proto);
     }

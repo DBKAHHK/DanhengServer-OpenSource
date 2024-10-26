@@ -13,7 +13,8 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Player;
 [Opcode(CmdIds.PlayerGetTokenCsReq)]
 public class HandlerPlayerGetTokenCsReq : Handler
 {
-    Logger logger = new Logger("GameServer");
+    private readonly Logger logger = new("GameServer");
+
     public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
         var req = PlayerGetTokenCsReq.Parser.ParseFrom(data);
@@ -51,7 +52,7 @@ public class HandlerPlayerGetTokenCsReq : Handler
         if (ConfigManager.Config.GameServer.UsePacketEncryption)
         {
             connection.XorKey = Crypto.GenerateXorKey(connection.ClientSecretKeySeed);
-            logger.Info($"{connection.RemoteEndPoint.ToString()} key exchange successful");
+            logger.Info($"{connection.RemoteEndPoint} key exchange successful");
         }
     }
 }

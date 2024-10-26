@@ -678,10 +678,10 @@ public class ResourceManager
 
             return;
         }
+
         var files = directory.GetFiles();
 
         foreach (var file in files)
-        {
             try
             {
                 using var reader = file.OpenRead();
@@ -702,7 +702,6 @@ public class ResourceManager
                     I18NManager.Translate("Server.ServerInfo.FailedToReadItem", file.Name,
                         I18NManager.Translate("Word.Error")), ex);
             }
-        }
 
         //if (count < boardList.Count)
         //    Logger.Warn(I18NManager.Translate("Server.ServerInfo.ConfigMissing",

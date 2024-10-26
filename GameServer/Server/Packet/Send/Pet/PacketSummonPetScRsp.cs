@@ -7,7 +7,6 @@ public class PacketSummonPetScRsp : BasePacket
 {
     public PacketSummonPetScRsp(int curPetId, uint newPetId) : base(CmdIds.SummonPetScRsp)
     {
-        
         var proto = new SummonPetScRsp
         {
             CurPetId = (uint)curPetId,

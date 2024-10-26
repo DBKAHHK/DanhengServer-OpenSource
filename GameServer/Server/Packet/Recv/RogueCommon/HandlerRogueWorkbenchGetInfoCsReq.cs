@@ -21,6 +21,7 @@ public class HandlerRogueWorkbenchGetInfoCsReq : Handler
             await connection.SendPacket(new PacketRogueWorkbenchGetInfoScRsp(Retcode.RetSceneEntityNotExist, null));
             return;
         }
+
         await connection.SendPacket(new PacketRogueWorkbenchGetInfoScRsp(Retcode.RetSucc, prop));
     }
 }

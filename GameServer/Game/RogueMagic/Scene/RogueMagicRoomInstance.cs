@@ -1,7 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Enums.RogueMagic;
-using EggLink.DanhengServer.Enums.TournRogue;
 using EggLink.DanhengServer.GameServer.Game.RogueMagic.Adventure;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
@@ -32,7 +31,8 @@ public class RogueMagicRoomInstance(int roomIndex, RogueMagicLevelInstance level
 
     public void Init(RogueMagicRoomTypeEnum type)
     {
-        if (Status == RogueMagicRoomStatus.Processing || Status == RogueMagicRoomStatus.Finish) return; // already initialized
+        if (Status == RogueMagicRoomStatus.Processing || Status == RogueMagicRoomStatus.Finish)
+            return; // already initialized
 
         RoomType = type;
         Status = RogueMagicRoomStatus.Processing;
@@ -68,7 +68,7 @@ public class RogueMagicRoomInstance(int roomIndex, RogueMagicLevelInstance level
         groupList.AddRange(Config.DefaultLoadGroup);
 
         //if (RoomIndex == 1)  // first room
-            groupList.AddRange(Config.SubMonsterGroup);
+        groupList.AddRange(Config.SubMonsterGroup);
 
         return groupList;
     }

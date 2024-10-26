@@ -10,7 +10,8 @@ namespace EggLink.DanhengServer.GameServer.Game.ChessRogue.Modifier.ModifierEffe
 [ModifierEffect(ModifierEffectTypeEnum.ReRandomCellTypeGetMoney)]
 public class ModifierEffectReRandomCellTypeGetMoney : ModifierEffectHandler
 {
-    public override async ValueTask OnConfirmed(ChessRogueDiceModifierInstance modifierInstance, ChessRogueInstance chessRogueInstance)
+    public override async ValueTask OnConfirmed(ChessRogueDiceModifierInstance modifierInstance,
+        ChessRogueInstance chessRogueInstance)
     {
         var types = modifierInstance.EffectConfig.Params.GetValueOrDefault("SourceType", "3").Split(";");
 
@@ -40,10 +41,7 @@ public class ModifierEffectReRandomCellTypeGetMoney : ModifierEffectHandler
         var types = modifierInstance.EffectConfig.Params.GetValueOrDefault("TargetType", "3").Split(";");
         var targetType = types.Select(x => (RogueDLCBlockTypeEnum)int.Parse(x)).ToList();
 
-        foreach (var cell in refreshCell)
-        {
-            cell.BlockType = targetType.RandomElement();
-        }
+        foreach (var cell in refreshCell) cell.BlockType = targetType.RandomElement();
 
         // get money
         var money = int.Parse(modifierInstance.EffectConfig.Params.GetValueOrDefault("Count", "0"));
@@ -54,7 +52,8 @@ public class ModifierEffectReRandomCellTypeGetMoney : ModifierEffectHandler
             ChessRogueCellUpdateReason.Modifier));
     }
 
-    public override async ValueTask SelectCell(ChessRogueDiceModifierInstance modifierInstance, ChessRogueInstance chessRogueInstance,
+    public override async ValueTask SelectCell(ChessRogueDiceModifierInstance modifierInstance,
+        ChessRogueInstance chessRogueInstance,
         int selectCellId)
     {
         await ValueTask.CompletedTask;

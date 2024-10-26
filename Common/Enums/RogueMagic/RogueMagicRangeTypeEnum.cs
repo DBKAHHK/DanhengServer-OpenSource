@@ -6,5 +6,5 @@ public enum RogueMagicRangeTypeEnum
     Eject = 1,
     Concentrate = 2,
     AOE = 3,
-    Spread = 4,
+    Spread = 4
 }

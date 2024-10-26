@@ -96,11 +96,13 @@ public class AdventureModifierConfig
                 .ToList() ?? [];
 
         if (obj.ContainsKey(nameof(OnBeforeBattle)))
-            info.OnBeforeBattle = obj[nameof(OnBeforeBattle)]?.Select(x => TaskConfigInfo.LoadFromJsonObject((x as JObject)!))
+            info.OnBeforeBattle = obj[nameof(OnBeforeBattle)]
+                ?.Select(x => TaskConfigInfo.LoadFromJsonObject((x as JObject)!))
                 .ToList() ?? [];
 
         if (obj.ContainsKey(nameof(OnAfterBattle)))
-            info.OnAfterBattle = obj[nameof(OnAfterBattle)]?.Select(x => TaskConfigInfo.LoadFromJsonObject((x as JObject)!))
+            info.OnAfterBattle = obj[nameof(OnAfterBattle)]
+                ?.Select(x => TaskConfigInfo.LoadFromJsonObject((x as JObject)!))
                 .ToList() ?? [];
 
         if (obj.ContainsKey(nameof(OnStage)))
@@ -112,11 +114,13 @@ public class AdventureModifierConfig
                 .ToList() ?? [];
 
         if (obj.ContainsKey(nameof(OnForeGround)))
-            info.OnForeGround = obj[nameof(OnForeGround)]?.Select(x => TaskConfigInfo.LoadFromJsonObject((x as JObject)!))
+            info.OnForeGround = obj[nameof(OnForeGround)]
+                ?.Select(x => TaskConfigInfo.LoadFromJsonObject((x as JObject)!))
                 .ToList() ?? [];
 
         if (obj.ContainsKey(nameof(OnBackGround)))
-            info.OnBackGround = obj[nameof(OnBackGround)]?.Select(x => TaskConfigInfo.LoadFromJsonObject((x as JObject)!))
+            info.OnBackGround = obj[nameof(OnBackGround)]
+                ?.Select(x => TaskConfigInfo.LoadFromJsonObject((x as JObject)!))
                 .ToList() ?? [];
 
         // TODO: others

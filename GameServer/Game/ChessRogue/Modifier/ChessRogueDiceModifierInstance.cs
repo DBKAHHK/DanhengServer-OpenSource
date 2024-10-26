@@ -13,6 +13,26 @@ public class ChessRogueDiceModifierInstance(int modifierId, ChessRogueDiceSurfac
     public int SelectedCell { get; set; }
     public bool IsConfirmed { get; set; }
 
+    public RogueModifier ToProto()
+    {
+        return new RogueModifier
+        {
+            MainModifierEffect = (ulong)ModifierId,
+            ModifierSourceType = SourceType,
+            ModifierContent = new RogueModifierContent
+            {
+                ContentModifierEffectId = (uint)EffectConfig.EffectType,
+                ModifierContentType = RogueModifierContentType.RogueModifierContentDefinite
+            },
+            ModifierInfo = new ChessRogueModifierInfo
+            {
+                GNDJCFDJHEJ = { SelectableCells.Select(x => (uint)x) },
+                SelectCellId = (uint)SelectedCell,
+                Confirm = IsConfirmed
+            }
+        };
+    }
+
     #region Effect
 
     public async ValueTask SelectCell(ChessRogueInstance instance, int selectCellId)
@@ -33,7 +53,7 @@ public class ChessRogueDiceModifierInstance(int modifierId, ChessRogueDiceSurfac
 
         instance.ModifierEffectHandlers.TryGetValue(effect, out var handler);
 
-        if (handler != null) 
+        if (handler != null)
             await handler.SelectModifierCell(this, instance, selectCellId);
         else
             IsConfirmed = true;
@@ -76,24 +96,4 @@ public class ChessRogueDiceModifierInstance(int modifierId, ChessRogueDiceSurfac
     }
 
     #endregion
-
-    public RogueModifier ToProto()
-    {
-        return new RogueModifier
-        {
-            MainModifierEffect = (ulong)ModifierId,
-            ModifierSourceType = SourceType,
-            ModifierContent = new RogueModifierContent
-            {
-                ContentModifierEffectId = (uint)EffectConfig.EffectType,
-                ModifierContentType = RogueModifierContentType.RogueModifierContentDefinite
-            },
-            ModifierInfo = new ChessRogueModifierInfo
-            {
-                GNDJCFDJHEJ = { SelectableCells.Select(x => (uint)x) },
-                SelectCellId = (uint)SelectedCell,
-                Confirm = IsConfirmed
-            }
-        };
-    }
 }

@@ -147,6 +147,7 @@ public class CommandGiveall : ICommand
             await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.PlayerNotFound"));
             return;
         }
+
         arg.CharacterArgs.TryGetValue("x", out var amountStr);
         amountStr ??= "1";
         if (!int.TryParse(amountStr, out var amount))
@@ -154,6 +155,7 @@ public class CommandGiveall : ICommand
             await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.InvalidArguments"));
             return;
         }
+
         var petList = GameData.ItemConfigData.Values;
         var items = new List<ItemData>();
         foreach (var pet in petList)
@@ -163,7 +165,7 @@ public class CommandGiveall : ICommand
                     ItemId = pet.ID,
                     Count = amount
                 });
-        await player.InventoryManager!.AddItems(items, true);
+        await player.InventoryManager!.AddItems(items);
         await arg.SendMsg(I18NManager.Translate("Game.Command.GiveAll.GiveAllItems",
             I18NManager.Translate("Word.Pet"), "1"));
     }

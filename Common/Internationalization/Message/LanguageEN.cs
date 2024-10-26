@@ -151,7 +151,10 @@ public class ServerInfoTextEN
     public string LoadingItem => "Loading {0}...";
     public string RegisterItem => "Registered {0} {1}(s).";
     public string FailedToLoadItem => "Failed to load {0}.";
-    public string NewClientSecretKey => "Client Secret Key does not exist and a new Client Secret Key is being generated.";
+
+    public string NewClientSecretKey =>
+        "Client Secret Key does not exist and a new Client Secret Key is being generated.";
+
     public string FailedToInitializeItem => "Failed to initialize {0}.";
     public string FailedToReadItem => "Failed to read {0}, file {1}";
     public string GeneratedItem => "Generated {0}.";

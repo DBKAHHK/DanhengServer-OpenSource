@@ -10,7 +10,10 @@ namespace EggLink.DanhengServer.GameServer.Game.RogueMagic.Adventure;
 public class RogueMagicAdventureInstance(RogueMagicAdventureRoomExcel excel)
 {
     public RogueMagicAdventureRoomExcel Excel { get; set; } = excel;
-    public int RemainMonsterNum { get; set; } = excel.AdventureType == RogueAdventureGameplayTypeEnum.RogueCaptureMonster ? 16 : 0;
+
+    public int RemainMonsterNum { get; set; } =
+        excel.AdventureType == RogueAdventureGameplayTypeEnum.RogueCaptureMonster ? 16 : 0;
+
     public int CaughtMonsterNum { get; set; }
     public RogueAdventureRoomStatus Status { get; set; } = RogueAdventureRoomStatus.None;
     public int Score { get; set; } = 0;
@@ -67,7 +70,6 @@ public class RogueMagicAdventureInstance(RogueMagicAdventureRoomExcel excel)
         };
 
         if (WolfGunTargets.Count > 0)
-        {
             proto.QueryInfo = new RogueAdventureRoomGameplayWolfGunInfo
             {
                 GameInfo = new RogueAdventureRoomGameplayWolfGunGameInfo
@@ -76,7 +78,6 @@ public class RogueMagicAdventureInstance(RogueMagicAdventureRoomExcel excel)
                     BattleTargetList = { WolfGunTargets.Select(x => x.ToProto()) }
                 }
             };
-        }
 
         return proto;
     }

@@ -9,17 +9,12 @@ public class PacketGetPetDataScRsp : BasePacket
 {
     public PacketGetPetDataScRsp(PlayerInstance player) : base(CmdIds.GetPetDataScRsp)
     {
-        
         var proto = new GetPetDataScRsp
         {
-            CurPetId = (uint)player.Data.Pet,
+            CurPetId = (uint)player.Data.Pet
         };
 
-        foreach (var pet in GameData.PetData.Values)
-        {
-                    
-            proto.PetIdList.Add((uint)pet.PetID);
-        }
+        foreach (var pet in GameData.PetData.Values) proto.PetIdList.Add((uint)pet.PetID);
 
         SetData(proto);
     }

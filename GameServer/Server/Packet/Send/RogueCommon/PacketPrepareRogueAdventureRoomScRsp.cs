@@ -6,7 +6,8 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueCommon;
 
 public class PacketPrepareRogueAdventureRoomScRsp : BasePacket
 {
-    public PacketPrepareRogueAdventureRoomScRsp(RogueMagicAdventureInstance instance) : base(CmdIds.PrepareRogueAdventureRoomScRsp)
+    public PacketPrepareRogueAdventureRoomScRsp(RogueMagicAdventureInstance instance) : base(
+        CmdIds.PrepareRogueAdventureRoomScRsp)
     {
         var proto = new PrepareRogueAdventureRoomScRsp
         {

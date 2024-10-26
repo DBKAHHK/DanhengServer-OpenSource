@@ -9,7 +9,7 @@ public class PacketMusicRhythmStartLevelScRsp : BasePacket
     {
         var proto = new MusicRhythmStartLevelScRsp
         {
-            LevelId = levelId,
+            LevelId = levelId
         };
 
         SetData(proto);

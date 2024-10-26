@@ -6,7 +6,8 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueCommon;
 
 public class PacketRogueWorkbenchGetInfoScRsp : BasePacket
 {
-    public PacketRogueWorkbenchGetInfoScRsp(Retcode ret, RogueWorkbenchProp? prop) : base(CmdIds.RogueWorkbenchGetInfoScRsp)
+    public PacketRogueWorkbenchGetInfoScRsp(Retcode ret, RogueWorkbenchProp? prop) : base(
+        CmdIds.RogueWorkbenchGetInfoScRsp)
     {
         var proto = new RogueWorkbenchGetInfoScRsp
         {
@@ -14,12 +15,8 @@ public class PacketRogueWorkbenchGetInfoScRsp : BasePacket
         };
 
         if (prop != null)
-        {
             foreach (var rogueWorkbenchFunc in prop.WorkbenchFuncs)
-            {
                 proto.FuncInfoMap.Add((uint)rogueWorkbenchFunc.FuncId, rogueWorkbenchFunc.ToProto());
-            }
-        }
 
         SetData(proto);
     }

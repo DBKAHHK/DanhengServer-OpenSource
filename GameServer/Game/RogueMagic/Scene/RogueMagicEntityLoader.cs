@@ -8,7 +8,6 @@ using EggLink.DanhengServer.GameServer.Game.Rogue.Scene.Entity;
 using EggLink.DanhengServer.GameServer.Game.RogueTourn.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
-using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Game.RogueMagic.Scene;
@@ -17,9 +16,9 @@ public class RogueMagicEntityLoader(SceneInstance scene, PlayerInstance player) 
 {
     public List<RogueMagicRoomTypeEnum> ExistTypes = [];
     public int FinalRoomBossGroup = 500401;
+    public int LayerNormalBossGroup1 = 400711;
 
     public int LayerNormalBossGroup2 = 500301;
-    public int LayerNormalBossGroup1 = 400711;
     public PlayerInstance Player = player;
     public List<int> RogueDoorPropIds = [1033, 1034, 1035, 1036, 1037, 1000, 1053, 1054, 1055, 1056, 1057];
 
@@ -105,10 +104,7 @@ public class RogueMagicEntityLoader(SceneInstance scene, PlayerInstance player) 
 
         if (config == null) return null;
 
-        if (config.RoomType == RogueMagicRoomTypeEnum.Adventure)
-        {
-            return await base.LoadMonster(info, group, sendPacket);
-        }
+        if (config.RoomType == RogueMagicRoomTypeEnum.Adventure) return await base.LoadMonster(info, group, sendPacket);
 
         List<MonsterRankEnum> allowedRank = [];
 
@@ -132,10 +128,7 @@ public class RogueMagicEntityLoader(SceneInstance scene, PlayerInstance player) 
             {
                 var dict = GameData.RogueMonsterGroupData[FinalRoomBossGroup].RogueMonsterListAndWeight;
                 var random = new RandomList<int>();
-                foreach (var i in dict)
-                {
-                    random.Add(int.Parse(i.Key), i.Value);
-                }
+                foreach (var i in dict) random.Add(int.Parse(i.Key), i.Value);
 
                 rogueMonster = GameData.RogueMonsterData[random.GetRandom()];
             }
@@ -143,10 +136,7 @@ public class RogueMagicEntityLoader(SceneInstance scene, PlayerInstance player) 
             {
                 var dict = GameData.RogueMonsterGroupData[LayerNormalBossGroup2].RogueMonsterListAndWeight;
                 var random = new RandomList<int>();
-                foreach (var i in dict)
-                {
-                    random.Add(int.Parse(i.Key), i.Value);
-                }
+                foreach (var i in dict) random.Add(int.Parse(i.Key), i.Value);
 
                 rogueMonster = GameData.RogueMonsterData[random.GetRandom()];
             }
@@ -154,10 +144,7 @@ public class RogueMagicEntityLoader(SceneInstance scene, PlayerInstance player) 
             {
                 var dict = GameData.RogueMonsterGroupData[LayerNormalBossGroup1].RogueMonsterListAndWeight;
                 var random = new RandomList<int>();
-                foreach (var i in dict)
-                {
-                    random.Add(int.Parse(i.Key), i.Value);
-                }
+                foreach (var i in dict) random.Add(int.Parse(i.Key), i.Value);
 
                 rogueMonster = GameData.RogueMonsterData[random.GetRandom()];
             }
@@ -199,19 +186,21 @@ public class RogueMagicEntityLoader(SceneInstance scene, PlayerInstance player) 
         GameData.MazePropData.TryGetValue(info.PropID, out var propExcel);
         if (propExcel == null) return null;
 
-        if (info.PropID == 1049) return null;  // gamble machine
+        if (info.PropID == 1049) return null; // gamble machine
 
         var prop = new RogueProp(Scene, propExcel, group, info);
 
         if (RogueDoorPropIds.Contains(prop.PropInfo.PropID))
         {
-            if (magic.CurLevel?.LayerId == magic.Levels.Last().Key && magic.CurLevel?.Rooms.Last().RoomIndex == room.RoomIndex) // last room
+            if (magic.CurLevel?.LayerId == magic.Levels.Last().Key &&
+                magic.CurLevel?.Rooms.Last().RoomIndex == room.RoomIndex) // last room
             {
                 // exit
-                if (prop.InstId != 300002) return null;  // not center door
+                if (prop.InstId != 300002) return null; // not center door
                 prop.CustomPropID = 1053;
             }
             else
+            {
                 do // find next room
                 {
                     RandomList<RogueMagicRoomTypeEnum> roomTypes = new();
@@ -222,12 +211,13 @@ public class RogueMagicEntityLoader(SceneInstance scene, PlayerInstance player) 
 
                     if (room.LevelInstance.Rooms.Last().RoomIndex - 1 == room.RoomIndex) // boss only
                     {
-                        if (prop.InstId != 300002) return null;  // not center door
+                        if (prop.InstId != 300002) return null; // not center door
                         nextRoom = RogueMagicRoomTypeEnum.Boss;
                     }
-                    else if (room.LevelInstance.Rooms.Last().RoomIndex - 2 == room.RoomIndex && room.LevelInstance.LevelIndex == 3)  // respite only
+                    else if (room.LevelInstance.Rooms.Last().RoomIndex - 2 == room.RoomIndex &&
+                             room.LevelInstance.LevelIndex == 3) // respite only
                     {
-                        if (prop.InstId != 300002) return null;  // not center door
+                        if (prop.InstId != 300002) return null; // not center door
                         nextRoom = RogueMagicRoomTypeEnum.Reforge;
                     }
                     else
@@ -255,6 +245,7 @@ public class RogueMagicEntityLoader(SceneInstance scene, PlayerInstance player) 
 
                     break;
                 } while (true);
+            }
 
             await prop.SetState(PropStateEnum.Open);
         }
@@ -266,12 +257,8 @@ public class RogueMagicEntityLoader(SceneInstance scene, PlayerInstance player) 
             };
             var workbenchExcel = GameData.RogueTournWorkbenchData.GetValueOrDefault(p.WorkbenchId);
             if (workbenchExcel != null)
-            {
                 foreach (var funcExcel in workbenchExcel.Funcs)
-                {
                     p.WorkbenchFuncs.Add(new RogueWorkbenchFunc(funcExcel));
-                }
-            }
 
             prop = p;
             await prop.SetState(info.State);

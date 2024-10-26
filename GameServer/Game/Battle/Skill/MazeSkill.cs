@@ -23,7 +23,8 @@ public class MazeSkill
         foreach (var task in taskInfos) AddAction(task);
 
         if (GameData.SummonUnitDataData.TryGetValue((excel?.AvatarID ?? 0) * 10 + 1, out var summonUnit) && isSkill &&
-            !summonUnit.IsClient && req.MazeAbilityStr == "") Actions.Add(new MazeSummonUnit(summonUnit, req.TargetMotion));
+            !summonUnit.IsClient &&
+            req.MazeAbilityStr == "") Actions.Add(new MazeSummonUnit(summonUnit, req.TargetMotion));
     }
 
     public List<IMazeSkillAction> Actions { get; } = [];

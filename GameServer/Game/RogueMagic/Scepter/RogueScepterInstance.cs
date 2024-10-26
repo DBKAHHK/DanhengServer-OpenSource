@@ -29,31 +29,22 @@ public class RogueScepterInstance(RogueMagicScepterExcel excel)
         };
 
         foreach (var dressedUnit in DressedUnits)
-        {
-            foreach (var unit in dressedUnit.Value)
+        foreach (var unit in dressedUnit.Value)
+            proto.ScepterDressInfo.Add(new RogueMagicScepterDressInfo
             {
-                proto.ScepterDressInfo.Add(new RogueMagicScepterDressInfo
-                {
-                    Slot = (uint)dressedUnit.Key,
-                    DressMagicUnitUniqueId = (uint)unit.UniqueId,
-                    Type = (uint)unit.Excel.MagicUnitType
-                });
-            }
-        }
+                Slot = (uint)dressedUnit.Key,
+                DressMagicUnitUniqueId = (uint)unit.UniqueId,
+                Type = (uint)unit.Excel.MagicUnitType
+            });
 
-        foreach (var trench in Excel.TrenchCount)
-        {
-            proto.TrenchCount.Add((uint)trench.Key, (uint)trench.Value);
-        }
+        foreach (var trench in Excel.TrenchCount) proto.TrenchCount.Add((uint)trench.Key, (uint)trench.Value);
 
         foreach (var unitInfo in Excel.LockMagicUnit)
-        {
             proto.LockedMagicUnitList.Add(new RogueMagicGameUnit
             {
                 MagicUnitId = (uint)unitInfo.MagicUnitId,
                 Level = (uint)unitInfo.MagicUnitLevel
             });
-        }
 
         return proto;
     }
@@ -90,32 +81,23 @@ public class RogueScepterInstance(RogueMagicScepterExcel excel)
             Level = (uint)Excel.ScepterLevel
         };
 
-        foreach (var trench in Excel.TrenchCount)
-        {
-            proto.TrenchCount.Add((uint)trench.Key, (uint)trench.Value);
-        }
+        foreach (var trench in Excel.TrenchCount) proto.TrenchCount.Add((uint)trench.Key, (uint)trench.Value);
 
         foreach (var unitInfo in Excel.LockMagicUnit)
-        {
             proto.RogueMagicUnitInfoList.Add(new BattleRogueMagicUnit
             {
                 MagicUnitId = (uint)unitInfo.MagicUnitId,
                 Level = (uint)unitInfo.MagicUnitLevel
             });
-        }
 
         foreach (var unitInfo in DressedUnits)
-        {
-            foreach (var unit in unitInfo.Value)
+        foreach (var unit in unitInfo.Value)
+            proto.RogueMagicUnitInfoList.Add(new BattleRogueMagicUnit
             {
-                proto.RogueMagicUnitInfoList.Add(new BattleRogueMagicUnit
-                {
-                    MagicUnitId = (uint)unit.Excel.MagicUnitID,
-                    Level = (uint)unit.Excel.MagicUnitLevel,
-                    DiceSlotId = (uint)unitInfo.Key
-                });
-            }
-        }
+                MagicUnitId = (uint)unit.Excel.MagicUnitID,
+                Level = (uint)unit.Excel.MagicUnitLevel,
+                DiceSlotId = (uint)unitInfo.Key
+            });
 
         return proto;
     }

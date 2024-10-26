@@ -18,26 +18,30 @@ public class HandlerRogueWorkbenchHandleFuncCsReq : Handler
         player.SceneInstance?.Entities.TryGetValue((int)req.PropEntityId, out entity);
         if (entity is not RogueWorkbenchProp prop)
         {
-            await connection.SendPacket(new PacketRogueWorkbenchHandleFuncScRsp(Retcode.RetSceneEntityNotExist, req.WorkbenchFuncId, null));
+            await connection.SendPacket(new PacketRogueWorkbenchHandleFuncScRsp(Retcode.RetSceneEntityNotExist,
+                req.WorkbenchFuncId, null));
             return;
         }
 
         var func = prop.WorkbenchFuncs.Find(x => x.FuncId == req.WorkbenchFuncId);
         if (func == null)
         {
-            await connection.SendPacket(new PacketRogueWorkbenchHandleFuncScRsp(Retcode.RetFail, req.WorkbenchFuncId, null));
+            await connection.SendPacket(
+                new PacketRogueWorkbenchHandleFuncScRsp(Retcode.RetFail, req.WorkbenchFuncId, null));
             return;
         }
 
         var instance = player.RogueTournManager?.RogueTournInstance;
         if (instance == null)
         {
-            await connection.SendPacket(new PacketRogueWorkbenchHandleFuncScRsp(Retcode.RetTournRogueStatusMismatch, req.WorkbenchFuncId, null));
+            await connection.SendPacket(new PacketRogueWorkbenchHandleFuncScRsp(Retcode.RetTournRogueStatusMismatch,
+                req.WorkbenchFuncId, null));
             return;
         }
 
         await instance.HandleFunc(func, req.WorkbenchContent);
 
-        await connection.SendPacket(new PacketRogueWorkbenchHandleFuncScRsp(Retcode.RetSucc, req.WorkbenchFuncId, func));
+        await connection.SendPacket(
+            new PacketRogueWorkbenchHandleFuncScRsp(Retcode.RetSucc, req.WorkbenchFuncId, func));
     }
 }

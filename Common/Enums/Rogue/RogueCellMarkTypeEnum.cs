@@ -2,7 +2,6 @@
 
 public enum RogueCellMarkTypeEnum
 {
-
     None = 0,
     Enhance = 1,
     Buff = 2,

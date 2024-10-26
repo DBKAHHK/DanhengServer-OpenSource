@@ -8,7 +8,7 @@ public class HandlerMusicRhythmFinishLevelCsReq : Handler
 {
     public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
-        int curLevel = connection.Player!.Data.CurMusicLevel;
+        var curLevel = connection.Player!.Data.CurMusicLevel;
         await connection.SendPacket(new PacketMusicRhythmFinishLevelScRsp((uint)curLevel));
     }
 }

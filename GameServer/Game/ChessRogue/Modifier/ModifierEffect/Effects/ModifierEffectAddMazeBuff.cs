@@ -1,5 +1,4 @@
 ﻿using EggLink.DanhengServer.Data;
-using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Enums.Rogue;
 using EggLink.DanhengServer.GameServer.Game.Battle;
 
@@ -8,19 +7,22 @@ namespace EggLink.DanhengServer.GameServer.Game.ChessRogue.Modifier.ModifierEffe
 [ModifierEffect(ModifierEffectTypeEnum.AddMazeBuff)]
 public class ModifierEffectAddMazeBuff : ModifierEffectHandler
 {
-    public override async ValueTask OnConfirmed(ChessRogueDiceModifierInstance modifierInstance, ChessRogueInstance chessRogueInstance)
+    public override async ValueTask OnConfirmed(ChessRogueDiceModifierInstance modifierInstance,
+        ChessRogueInstance chessRogueInstance)
     {
         modifierInstance.IsConfirmed = true;
         await ValueTask.CompletedTask;
     }
 
-    public override async ValueTask SelectModifierCell(ChessRogueDiceModifierInstance modifierInstance, ChessRogueInstance chessRogueInstance,
+    public override async ValueTask SelectModifierCell(ChessRogueDiceModifierInstance modifierInstance,
+        ChessRogueInstance chessRogueInstance,
         int selectCellId)
     {
         await ValueTask.CompletedTask;
     }
 
-    public override async ValueTask SelectCell(ChessRogueDiceModifierInstance modifierInstance, ChessRogueInstance chessRogueInstance,
+    public override async ValueTask SelectCell(ChessRogueDiceModifierInstance modifierInstance,
+        ChessRogueInstance chessRogueInstance,
         int selectCellId)
     {
         await ValueTask.CompletedTask;
@@ -42,10 +44,8 @@ public class ModifierEffectAddMazeBuff : ModifierEffectHandler
         {
             var modifier = GameData.AdventureModifierData.GetValueOrDefault(buffExcel.ModifierName);
             if (modifier != null)
-            {
                 // handle modifier
                 instance.HandleMazeBuffModifier(modifier, buff);
-            }
         }
 
         battle.Buffs.Add(buff);

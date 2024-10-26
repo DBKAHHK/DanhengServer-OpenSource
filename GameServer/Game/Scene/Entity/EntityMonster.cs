@@ -32,11 +32,11 @@ public class EntityMonster(
 
     public int EventID { get; set; } = info.EventID;
     public int CustomStageID { get; set; } = 0;
-    public int EntityID { get; set; } = 0;
-    public int GroupID { get; set; } = GroupID;
 
     public int RogueMonsterId { get; set; } = 0;
     public int CustomLevel { get; set; } = 0;
+    public int EntityID { get; set; } = 0;
+    public int GroupID { get; set; } = GroupID;
 
     public async ValueTask AddBuff(SceneBuff buff)
     {

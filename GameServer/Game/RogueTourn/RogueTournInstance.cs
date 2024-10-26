@@ -9,7 +9,7 @@ using EggLink.DanhengServer.GameServer.Game.Rogue.Buff;
 using EggLink.DanhengServer.GameServer.Game.Rogue.Event;
 using EggLink.DanhengServer.GameServer.Game.RogueTourn.Formula;
 using EggLink.DanhengServer.GameServer.Game.RogueTourn.Scene;
-using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup; 
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueCommon;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueTourn;
 using EggLink.DanhengServer.Proto;
@@ -120,7 +120,6 @@ public class RogueTournInstance : BaseRogueInstance
         await Player.SendPacket(new PacketRogueTournLevelInfoUpdateScNotify(this, [CurLevel]));
     }
 
-    
 
     public async ValueTask QuitRogue()
     {
@@ -129,12 +128,11 @@ public class RogueTournInstance : BaseRogueInstance
         var currentLineup = Player.LineupManager!.GetCurLineup()!;
 
         await Player.SendPacket(new PacketSyncLineupNotify(currentLineup));
-        
+
         await Player.EnterMissionScene(1034102, 0, 0, false);
-        
+
         Player.RogueTournManager!.RogueTournInstance = null;
     }
-
 
     #endregion
 
@@ -147,7 +145,8 @@ public class RogueTournInstance : BaseRogueInstance
 
     public async ValueTask RollFormula(int amount, List<RogueFormulaCategoryEnum> categories)
     {
-        var formulaList = GameData.RogueTournFormulaData.Values.Where(x => !RogueFormulas.Contains(x) && categories.Contains(x.FormulaCategory)).ToList();
+        var formulaList = GameData.RogueTournFormulaData.Values
+            .Where(x => !RogueFormulas.Contains(x) && categories.Contains(x.FormulaCategory)).ToList();
 
         for (var i = 0; i < amount; i++)
         {
@@ -222,7 +221,6 @@ public class RogueTournInstance : BaseRogueInstance
     {
         // expand formula
         foreach (var formula in RogueFormulas)
-        {
             if (formula.IsExpanded(RogueBuffs.Select(x => x.BuffId).ToList()) &&
                 !ExpandedFormulaIdList.Contains(formula.FormulaID))
             {
@@ -240,15 +238,12 @@ public class RogueTournInstance : BaseRogueInstance
                     formula.ToContractResultProto(RogueCommonActionResultSourceType.Buff,
                         RogueBuffs.Select(x => x.BuffId).ToList()), RogueCommonActionResultDisplayType.Single));
             }
-        }
 
         // buff type
         Dictionary<uint, int> buffTypeDict = [];
         foreach (var type in RogueBuffs.Select(buff => buff.BuffExcel.RogueBuffType)
                      .Where(type => !buffTypeDict.TryAdd((uint)type, 1)))
-        {
             buffTypeDict[(uint)type]++;
-        }
 
         await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode, new RogueCommonActionResult
         {
@@ -298,7 +293,7 @@ public class RogueTournInstance : BaseRogueInstance
         bool updateMenu = true, bool notify = true)
     {
         var formula = RogueFormulas.Find(x => x.FormulaID == formulaId);
-        if (formula == null) return null;  // buff not found
+        if (formula == null) return null; // buff not found
         RogueFormulas.Remove(formula);
         var result = formula.ToRemoveResultProto(source,
             RogueBuffs.Select(x => x.BuffId).ToList());
@@ -393,7 +388,7 @@ public class RogueTournInstance : BaseRogueInstance
         var buff = RogueBuffs.Find(x => x.BuffId == buffId);
         if (buff == null) return Retcode.RetRogueSelectBuffNotExist;
 
-        if (buff.BuffLevel == 2) return Retcode.RetRogueSelectBuffCertainMismatch;  // already enhanced
+        if (buff.BuffLevel == 2) return Retcode.RetRogueSelectBuffCertainMismatch; // already enhanced
 
         var cost = (int)buff.BuffExcel.RogueBuffCategory;
         if (func.CurNum < cost) return Retcode.RetRogueCoinNotEnough;
@@ -417,14 +412,15 @@ public class RogueTournInstance : BaseRogueInstance
         if (func.CurFreeNum > 0) func.CurFreeNum--;
         func.CurCost += 30;
 
-        await RemoveBuff(buff.BuffId, RogueCommonActionResultSourceType.Reforge, RogueCommonActionResultDisplayType.None);
+        await RemoveBuff(buff.BuffId, RogueCommonActionResultSourceType.Reforge,
+            RogueCommonActionResultDisplayType.None);
         await RollBuff(1, buff.BuffExcel.RogueBuffCategory switch
         {
             RogueBuffCategoryEnum.Common => 2000001,
             RogueBuffCategoryEnum.Rare => 2000002,
             RogueBuffCategoryEnum.Legendary => 2000003,
             _ => 2000001
-        }, isReforge:true);
+        }, isReforge: true);
 
         return Retcode.RetSucc;
     }

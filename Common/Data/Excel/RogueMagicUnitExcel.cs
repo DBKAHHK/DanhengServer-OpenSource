@@ -19,6 +19,7 @@ public class RogueMagicUnitExcel : ExcelResource
 
     [JsonConverter(typeof(StringEnumConverter))]
     public RogueMagicStyleTypeEnum StyleType { get; set; }
+
     //public TextID MagicUnitDesc { get; set; }
     //public TextID MagicUnitSimpleDesc { get; set; }
     public List<int> ExtraEffectID { get; set; } = [];

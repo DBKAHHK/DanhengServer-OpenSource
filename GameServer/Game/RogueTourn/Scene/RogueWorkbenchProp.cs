@@ -40,13 +40,15 @@ public class RogueWorkbenchFunc(RogueTournWorkbenchFuncExcel excel)
 {
     public int FuncId { get; set; } = excel.FuncID;
     public RogueTournWorkbenchFuncExcel Excel { get; set; } = excel;
+
     public int CurNum { get; set; } = excel.FuncType switch
     {
-        RogueTournWorkbenchFuncTypeEnum.BuffReforge => -1,  // infinite
+        RogueTournWorkbenchFuncTypeEnum.BuffReforge => -1, // infinite
         RogueTournWorkbenchFuncTypeEnum.FormulaReforge => 5,
         RogueTournWorkbenchFuncTypeEnum.BuffEnhance => 5,
         _ => 0
     };
+
     public int MaxNum { get; set; } = 5;
 
     public int CurCost { get; set; } = excel.FuncType switch
@@ -85,9 +87,9 @@ public class RogueWorkbenchFunc(RogueTournWorkbenchFuncExcel excel)
                     MaxNum = (uint)MaxNum,
                     BuffEnhanceCostMap =
                     {
-                        {1, 1},
-                        {2, 2},
-                        {3, 3}
+                        { 1, 1 },
+                        { 2, 2 },
+                        { 3, 3 }
                     }
                 };
                 break;
@@ -96,14 +98,17 @@ public class RogueWorkbenchFunc(RogueTournWorkbenchFuncExcel excel)
                 {
                     CostData = new ItemCostData
                     {
-                        ItemList = { new ItemCost
+                        ItemList =
                         {
-                            PileItem = new PileItem
+                            new ItemCost
                             {
-                                ItemId = 31,
-                                ItemNum = (uint)CurCost
+                                PileItem = new PileItem
+                                {
+                                    ItemId = 31,
+                                    ItemNum = (uint)CurCost
+                                }
                             }
-                        } }
+                        }
                     },
                     CanFreeReforge = CurFreeNum > 0,
                     FreeReforgeNum = (uint)CurFreeNum,
@@ -116,14 +121,17 @@ public class RogueWorkbenchFunc(RogueTournWorkbenchFuncExcel excel)
                 {
                     CostData = new ItemCostData
                     {
-                        ItemList = { new ItemCost
+                        ItemList =
                         {
-                            PileItem = new PileItem
+                            new ItemCost
                             {
-                                ItemId = 31,
-                                ItemNum = (uint)CurCost
+                                PileItem = new PileItem
+                                {
+                                    ItemId = 31,
+                                    ItemNum = (uint)CurCost
+                                }
                             }
-                        } }
+                        }
                     },
                     CanFreeReforge = CurFreeNum > 0,
                     FreeReforgeNum = (uint)CurFreeNum,

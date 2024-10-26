@@ -11,7 +11,8 @@ namespace EggLink.DanhengServer.GameServer.Game.ChessRogue.Modifier.ModifierEffe
 [ModifierEffect(ModifierEffectTypeEnum.SwapCellToCurAround)]
 public class ModifierEffectSwapCellToCurAround : ModifierEffectHandler
 {
-    public override async ValueTask OnConfirmed(ChessRogueDiceModifierInstance modifierInstance, ChessRogueInstance chessRogueInstance)
+    public override async ValueTask OnConfirmed(ChessRogueDiceModifierInstance modifierInstance,
+        ChessRogueInstance chessRogueInstance)
     {
         var types = modifierInstance.EffectConfig.Params.GetValueOrDefault("SourceType", "3").Split(";");
 
@@ -56,7 +57,8 @@ public class ModifierEffectSwapCellToCurAround : ModifierEffectHandler
             ChessRogueCellUpdateReason.Modifier));
     }
 
-    public override async ValueTask SelectCell(ChessRogueDiceModifierInstance modifierInstance, ChessRogueInstance chessRogueInstance,
+    public override async ValueTask SelectCell(ChessRogueDiceModifierInstance modifierInstance,
+        ChessRogueInstance chessRogueInstance,
         int selectCellId)
     {
         await ValueTask.CompletedTask;

@@ -113,10 +113,7 @@ public class EntryPoint
         if (ConfigManager.Config.GameServer.UsePacketEncryption)
         {
             Crypto.ClientSecretKey = Crypto.InitEc2b();
-            if (Crypto.ClientSecretKey == null)
-            {
-                ConfigManager.Config.GameServer.UsePacketEncryption = false;
-            }
+            if (Crypto.ClientSecretKey == null) ConfigManager.Config.GameServer.UsePacketEncryption = false;
         }
 
         Logger.Warn(I18NManager.Translate("Server.ServerInfo.WaitForAllDone"));

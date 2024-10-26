@@ -132,7 +132,7 @@ public class ChessRogueCellInstance
         var curCell = Instance.CurCell;
         if (curCell == null) return true;
 
-        return curCell.PosX >= PosX;  // only check the left side of the board
+        return curCell.PosX >= PosX; // only check the left side of the board
     }
 
     public int GetEntryId()

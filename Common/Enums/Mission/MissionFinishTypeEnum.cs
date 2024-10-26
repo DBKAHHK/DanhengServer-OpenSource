@@ -2,7 +2,6 @@
 
 public enum MissionFinishTypeEnum
 {
-
     Unknown = 0,
     AutoFinish = 1,
     Talk = 2,

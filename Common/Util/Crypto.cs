@@ -26,12 +26,12 @@ public class Crypto
 
     public static byte[] GenerateXorKey(ulong seed)
     {
-        byte[] key = new byte[4096];
-        MT19937 random = new MT19937(seed);
+        var key = new byte[4096];
+        var random = new MT19937(seed);
 
-        for (int i = 0; i < key.Length / 8; i++)
+        for (var i = 0; i < key.Length / 8; i++)
         {
-            ulong value = random.NextUInt64();
+            var value = random.NextUInt64();
 
             key[i * 8 + 0] = (byte)((value >> 56) & 0xFF);
             key[i * 8 + 1] = (byte)((value >> 48) & 0xFF);
@@ -48,24 +48,22 @@ public class Crypto
 
     public static Ec2b? InitEc2b()
     {
-        string filePath = ConfigManager.Config.Path.ConfigPath + "/ClientSecretKey.ec2b";
+        var filePath = ConfigManager.Config.Path.ConfigPath + "/ClientSecretKey.ec2b";
         try
         {
             byte[] ec2bData;
             if (!File.Exists(filePath))
             {
-                Ec2b newEc2b = Ec2b.GenerateEc2b();
+                var newEc2b = Ec2b.GenerateEc2b();
                 ec2bData = newEc2b.GetBytes();
                 File.WriteAllBytes(filePath, ec2bData);
                 Logger.Info(I18NManager.Translate("Server.ServerInfo.NewClientSecretKey"));
                 return newEc2b;
             }
-            else
-            {
-                ec2bData = File.ReadAllBytes(filePath);
-                Ec2b ec2b = Ec2b.Read(ec2bData);
-                return ec2b;
-            }
+
+            ec2bData = File.ReadAllBytes(filePath);
+            var ec2b = Ec2b.Read(ec2bData);
+            return ec2b;
         }
         catch (Exception ex)
         {

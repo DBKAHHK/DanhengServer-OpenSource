@@ -17,6 +17,7 @@ public class PacketEnterSceneScRsp : BasePacket
 
         SetData(proto);
     }
+
     public PacketEnterSceneScRsp(Retcode retcode) : base(
         CmdIds.EnterSceneScRsp)
     {

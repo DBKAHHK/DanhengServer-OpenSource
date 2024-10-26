@@ -14,5 +14,6 @@ public class ChessRogueDiceSurfaceContentEffect
 {
     [JsonConverter(typeof(StringEnumConverter))]
     public ModifierEffectTypeEnum EffectType { get; set; }
+
     public Dictionary<string, string> Params { get; set; } = [];
 }

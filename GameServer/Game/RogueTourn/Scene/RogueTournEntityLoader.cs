@@ -158,7 +158,7 @@ public class RogueTournEntityLoader(SceneInstance scene, PlayerInstance player) 
         GameData.MazePropData.TryGetValue(info.PropID, out var propExcel);
         if (propExcel == null) return null;
 
-        if (info.PropID == 1049) return null;  // gamble machine
+        if (info.PropID == 1049) return null; // gamble machine
 
         var prop = new RogueProp(Scene, propExcel, group, info);
 
@@ -178,12 +178,13 @@ public class RogueTournEntityLoader(SceneInstance scene, PlayerInstance player) 
 
                     if (room.LevelInstance.Rooms.Last().RoomIndex - 1 == room.RoomIndex) // boss only
                     {
-                        if (prop.InstId != 300002) return null;  // not center door
+                        if (prop.InstId != 300002) return null; // not center door
                         nextRoom = RogueTournRoomTypeEnum.Boss;
                     }
-                    else if (room.LevelInstance.Rooms.Last().RoomIndex - 2 == room.RoomIndex && room.LevelInstance.LevelIndex == 3)  // respite only
+                    else if (room.LevelInstance.Rooms.Last().RoomIndex - 2 == room.RoomIndex &&
+                             room.LevelInstance.LevelIndex == 3) // respite only
                     {
-                        if (prop.InstId != 300002) return null;  // not center door
+                        if (prop.InstId != 300002) return null; // not center door
                         nextRoom = RogueTournRoomTypeEnum.Respite;
                     }
                     else
@@ -223,12 +224,8 @@ public class RogueTournEntityLoader(SceneInstance scene, PlayerInstance player) 
             };
             var workbenchExcel = GameData.RogueTournWorkbenchData.GetValueOrDefault(p.WorkbenchId);
             if (workbenchExcel != null)
-            {
                 foreach (var funcExcel in workbenchExcel.Funcs)
-                {
                     p.WorkbenchFuncs.Add(new RogueWorkbenchFunc(funcExcel));
-                }
-            }
 
             prop = p;
             await prop.SetState(info.State);

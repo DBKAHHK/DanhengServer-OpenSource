@@ -23,7 +23,8 @@ public class RogueMagicInstance : BaseRogueInstance
 {
     #region Initializer
 
-    public RogueMagicInstance(PlayerInstance player, int areaId, List<int> difficultyIds, int styleType) : base(player, RogueSubModeEnum.MagicRogue, 0)
+    public RogueMagicInstance(PlayerInstance player, int areaId, List<int> difficultyIds, int styleType) : base(player,
+        RogueSubModeEnum.MagicRogue, 0)
     {
         // generate levels
         AreaExcel = GameData.RogueMagicAreaData.GetValueOrDefault(areaId) ??
@@ -32,7 +33,8 @@ public class RogueMagicInstance : BaseRogueInstance
         foreach (var index in Enumerable.Range(1, AreaExcel.LayerIDList.Count))
         {
             var layerId = AreaExcel.LayerIDList[index - 1];
-            var levelInstance = new RogueMagicLevelInstance(index, layerId, GameData.RogueMagicLayerIdRoomCountDict.GetValueOrDefault(layerId));
+            var levelInstance = new RogueMagicLevelInstance(index, layerId,
+                GameData.RogueMagicLayerIdRoomCountDict.GetValueOrDefault(layerId));
             Levels.Add(levelInstance.LayerId, levelInstance);
         }
 
@@ -48,7 +50,7 @@ public class RogueMagicInstance : BaseRogueInstance
                 DifficultyCompExcels.Add(excel);
         }
 
-        foreach (var id in AreaExcel.DifficultyIDList)  // need to find a better way to get difficulty excels
+        foreach (var id in AreaExcel.DifficultyIDList) // need to find a better way to get difficulty excels
         {
             GameData.RogueTournDifficultyData.TryGetValue(1000 + id, out var excel);
             if (excel != null)
@@ -63,12 +65,46 @@ public class RogueMagicInstance : BaseRogueInstance
 
     #endregion
 
+    #region Adventure
+
+    public async ValueTask HandleStopWolfGunAdventure(List<int> targetIndex, RogueMagicAdventureInstance instance)
+    {
+        if (instance.WolfGunTargets.Count == 0) return;
+
+        var result = (from index in targetIndex
+            where index >= 0 && index < instance.WolfGunTargets.Count
+            select instance.WolfGunTargets[index]).ToList();
+
+        foreach (var target in result)
+            if (target.IsMoney)
+            {
+                // money
+                await GainMoney(target.TargetId, 2);
+            }
+            else if (target.IsMiracle)
+            {
+                // miracle
+                await AddMiracle(target.TargetId);
+            }
+            else if (target.IsRuanmei)
+            {
+                // ruanmei
+                var unitExcels = GameData.RogueMagicUnitData.Values
+                    .Where(x => x.MagicUnitLevel == 1 && x.MagicUnitType != RogueMagicMountTypeEnum.Active).ToList();
+                var toAddExcel = Enumerable.Range(0, 10).Select(unused => unitExcels.RandomElement()).ToList();
+
+                await AddMagicUnits(toAddExcel, RogueCommonActionResultSourceType.None);
+            }
+    }
+
+    #endregion
+
     #region Properties
 
     public RogueMagicAreaExcel AreaExcel { get; set; }
     public List<RogueMagicDifficultyCompExcel> DifficultyCompExcels { get; set; } = [];
     public Dictionary<int, RogueMagicLevelInstance> Levels { get; set; } = [];
-    public List<RogueTournDifficultyExcel> DifficultyExcels { get; set; } = [];  // for battle
+    public List<RogueTournDifficultyExcel> DifficultyExcels { get; set; } = []; // for battle
 
     public int CurLayerId { get; set; }
     public RogueMagicLevelInstance? CurLevel => Levels.GetValueOrDefault(CurLayerId);
@@ -101,10 +137,8 @@ public class RogueMagicInstance : BaseRogueInstance
     {
         var curIndex = CurLevel?.LevelIndex ?? 0;
         if (curIndex == 3)
-        {
             // last layer
             return;
-        }
 
         CurLayerId = AreaExcel.LayerIDList[curIndex];
         await EnterRoom(1, type);
@@ -145,22 +179,24 @@ public class RogueMagicInstance : BaseRogueInstance
         await Player.EnterMissionScene(entrance, group, anchor, false);
 
         // sync
-        await Player.SendPacket(new PacketRogueMagicLevelInfoUpdateScNotify(this, [CurLevel], [next?.RoomIndex ?? 0,
-            (next?.RoomIndex ?? 0) - 1]));
+        await Player.SendPacket(new PacketRogueMagicLevelInfoUpdateScNotify(this, [CurLevel], [
+            next?.RoomIndex ?? 0,
+            (next?.RoomIndex ?? 0) - 1
+        ]));
     }
 
     public async ValueTask QuitRogue()
-{
-    Player.LineupManager?.SetExtraLineup(ExtraLineupType.LineupNone, []);
+    {
+        Player.LineupManager?.SetExtraLineup(ExtraLineupType.LineupNone, []);
 
-    var currentLineup = Player.LineupManager!.GetCurLineup()!;
+        var currentLineup = Player.LineupManager!.GetCurLineup()!;
 
-    await Player.SendPacket(new PacketSyncLineupNotify(currentLineup));
+        await Player.SendPacket(new PacketSyncLineupNotify(currentLineup));
 
-    await Player.EnterMissionScene(801120102, 0, 0, false);
+        await Player.EnterMissionScene(801120102, 0, 0, false);
 
-    Player.RogueMagicManager!.RogueMagicInstance = null;
-}
+        Player.RogueMagicManager!.RogueMagicInstance = null;
+    }
 
     #endregion
 
@@ -168,7 +204,8 @@ public class RogueMagicInstance : BaseRogueInstance
 
     public async ValueTask RollScepter(int amount, int level)
     {
-        var scepterExcels = GameData.RogueMagicScepterData.Values.Where(x => !RogueScepters.ContainsKey(x.ScepterID) && x.ScepterLevel == level).ToList();
+        var scepterExcels = GameData.RogueMagicScepterData.Values
+            .Where(x => !RogueScepters.ContainsKey(x.ScepterID) && x.ScepterLevel == level).ToList();
 
         for (var i = 0; i < amount; i++)
         {
@@ -199,7 +236,8 @@ public class RogueMagicInstance : BaseRogueInstance
             new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, location, selectScepter: true));
     }
 
-    public async ValueTask AddScepter(RogueMagicScepterExcel excel, RogueCommonActionResultSourceType source = RogueCommonActionResultSourceType.Select)
+    public async ValueTask AddScepter(RogueMagicScepterExcel excel,
+        RogueCommonActionResultSourceType source = RogueCommonActionResultSourceType.Select)
     {
         var scepter = new RogueScepterInstance(excel);
         RogueScepters.Add(excel.ScepterID, scepter);
@@ -218,7 +256,8 @@ public class RogueMagicInstance : BaseRogueInstance
         // add
         scepter.AddUnit(slot, unit);
 
-        await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode, scepter.ToDressInfo(RogueCommonActionResultSourceType.None)));
+        await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode,
+            scepter.ToDressInfo(RogueCommonActionResultSourceType.None)));
     }
 
     #endregion
@@ -227,7 +266,9 @@ public class RogueMagicInstance : BaseRogueInstance
 
     public async ValueTask RollMagicUnit(int amount, int level, List<RogueMagicUnitCategoryEnum> categories)
     {
-        var unitExcels = GameData.RogueMagicUnitData.Values.Where(x => x.MagicUnitLevel == level && categories.Contains(x.MagicUnitCategory) && x.MagicUnitType != RogueMagicMountTypeEnum.Active).ToList();
+        var unitExcels = GameData.RogueMagicUnitData.Values.Where(x =>
+            x.MagicUnitLevel == level && categories.Contains(x.MagicUnitCategory) &&
+            x.MagicUnitType != RogueMagicMountTypeEnum.Active).ToList();
 
         for (var i = 0; i < amount; i++)
         {
@@ -247,7 +288,8 @@ public class RogueMagicInstance : BaseRogueInstance
         var action = RogueActions.First().Value;
         if (action.RogueMagicUnitSelectMenu != null)
         {
-            var unitExcel = action.RogueMagicUnitSelectMenu.MagicUnits.Find(x => x.MagicUnitID == selectMagicUnit.MagicUnitId);
+            var unitExcel =
+                action.RogueMagicUnitSelectMenu.MagicUnits.Find(x => x.MagicUnitID == selectMagicUnit.MagicUnitId);
             if (unitExcel != null) await AddMagicUnit(unitExcel);
             RogueActions.Remove(action.QueuePosition);
         }
@@ -260,7 +302,8 @@ public class RogueMagicInstance : BaseRogueInstance
 
     public async ValueTask<RogueCommonActionResult> AddMagicUnit(RogueMagicUnitExcel excel,
         RogueCommonActionResultSourceType source = RogueCommonActionResultSourceType.Select,
-        RogueCommonActionResultDisplayType display = RogueCommonActionResultDisplayType.None, bool sync = true, bool compose = true)
+        RogueCommonActionResultDisplayType display = RogueCommonActionResultDisplayType.None, bool sync = true,
+        bool compose = true)
     {
         var unit = new RogueMagicUnitInstance(excel)
         {
@@ -283,10 +326,7 @@ public class RogueMagicInstance : BaseRogueInstance
         RogueCommonActionResultSourceType source = RogueCommonActionResultSourceType.Select,
         RogueCommonActionResultDisplayType display = RogueCommonActionResultDisplayType.None, bool sync = true)
     {
-        if (!RogueMagicUnits.Remove(uniqueId, out var unit))
-        {
-            return null;
-        }
+        if (!RogueMagicUnits.Remove(uniqueId, out var unit)) return null;
 
         var res = unit.ToRemoveInfo(source);
         if (sync)
@@ -308,56 +348,59 @@ public class RogueMagicInstance : BaseRogueInstance
         }
 
         foreach (var unitLevelDict in unitMap)
+        foreach (var unitLevelMap in unitLevelDict.Value)
         {
-            foreach (var unitLevelMap in unitLevelDict.Value)
+            if (unitLevelMap.Key == 3) continue; // max level
+            if (unitLevelMap.Value.Count < 3) continue; // cannot compose
+
+            // remove
+            List<RogueMagicUnitInstance> removeInstances = [];
+            var addCount = unitLevelMap.Value.Count / 3;
+
+            removeInstances.AddRange(Enumerable.Range(0, addCount * 3).Select(i => unitLevelMap.Value[i]));
+
+            List<RogueCommonActionResult> resList = [];
+            foreach (var rogueMagicUnitInstance in removeInstances)
             {
-                if (unitLevelMap.Key == 3) continue;  // max level
-                if (unitLevelMap.Value.Count < 3) continue;  // cannot compose
+                var res = await RemoveMagicUnit(rogueMagicUnitInstance.UniqueId,
+                    RogueCommonActionResultSourceType.MagicUnitCompose,
+                    sync: false);
 
-                // remove
-                List<RogueMagicUnitInstance> removeInstances = [];
-                var addCount = unitLevelMap.Value.Count / 3;
-
-                removeInstances.AddRange(Enumerable.Range(0, addCount * 3).Select(i => unitLevelMap.Value[i]));
-
-                List<RogueCommonActionResult> resList = [];
-                foreach (var rogueMagicUnitInstance in removeInstances)
-                {
-                    var res = await RemoveMagicUnit(rogueMagicUnitInstance.UniqueId, RogueCommonActionResultSourceType.MagicUnitCompose,
-                        sync: false);
-
-                    if (res != null) resList.Add(res);
-                }
-
-                // get the dressed scepter
-                List<RogueCommonActionResult> scepterResList = [];
-                scepterResList.AddRange(from rogueMagicUnitInstance in removeInstances from scepter in RogueScepters where scepter.Value.DressedUnits.Any(x => x.Value.Remove(rogueMagicUnitInstance)) select scepter.Value.ToDressInfo(RogueCommonActionResultSourceType.MagicUnitCompose));
-
-                // send packet
-                await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode, scepterResList));
-                await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode, resList));
-
-                // add new
-                var excels = GameData.RogueMagicUnitData.Values.Where(x =>
-                    x.MagicUnitID == unitLevelDict.Key && x.MagicUnitLevel == unitLevelMap.Key + 1).ToList();
-
-                if (excels.Count <= 0) continue;
-                for (var i = 0; i < addCount; i++)
-                        await AddMagicUnit(excels.RandomElement(), RogueCommonActionResultSourceType.MagicUnitCompose, compose:false);
-
-                // select another
-                await RollMagicUnit(addCount, unitLevelMap.Key, [excels.RandomElement().MagicUnitCategory]);
+                if (res != null) resList.Add(res);
             }
+
+            // get the dressed scepter
+            List<RogueCommonActionResult> scepterResList = [];
+            scepterResList.AddRange(from rogueMagicUnitInstance in removeInstances
+                from scepter in RogueScepters
+                where scepter.Value.DressedUnits.Any(x => x.Value.Remove(rogueMagicUnitInstance))
+                select scepter.Value.ToDressInfo(RogueCommonActionResultSourceType.MagicUnitCompose));
+
+            // send packet
+            await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode, scepterResList));
+            await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode, resList));
+
+            // add new
+            var excels = GameData.RogueMagicUnitData.Values.Where(x =>
+                x.MagicUnitID == unitLevelDict.Key && x.MagicUnitLevel == unitLevelMap.Key + 1).ToList();
+
+            if (excels.Count <= 0) continue;
+            for (var i = 0; i < addCount; i++)
+                await AddMagicUnit(excels.RandomElement(), RogueCommonActionResultSourceType.MagicUnitCompose,
+                    compose: false);
+
+            // select another
+            await RollMagicUnit(addCount, unitLevelMap.Key, [excels.RandomElement().MagicUnitCategory]);
         }
     }
 
-    public async ValueTask AddMagicUnits(List<RogueMagicUnitExcel> excels, RogueCommonActionResultSourceType source = RogueCommonActionResultSourceType.Select, RogueCommonActionResultDisplayType display = RogueCommonActionResultDisplayType.Multi)
+    public async ValueTask AddMagicUnits(List<RogueMagicUnitExcel> excels,
+        RogueCommonActionResultSourceType source = RogueCommonActionResultSourceType.Select,
+        RogueCommonActionResultDisplayType display = RogueCommonActionResultDisplayType.Multi)
     {
         List<RogueCommonActionResult> results = [];
         foreach (var excel in excels)
-        {
             results.Add(await AddMagicUnit(excel, source, RogueCommonActionResultDisplayType.None, false));
-        }
 
         await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode, results, display));
     }
@@ -368,7 +411,8 @@ public class RogueMagicInstance : BaseRogueInstance
 
     public override async ValueTask<RogueCommonActionResult?> AddBuff(int buffId, int level = 1,
         RogueCommonActionResultSourceType source = RogueCommonActionResultSourceType.Dialogue,
-        RogueCommonActionResultDisplayType displayType = RogueCommonActionResultDisplayType.Single, bool updateMenu = true,
+        RogueCommonActionResultDisplayType displayType = RogueCommonActionResultDisplayType.Single,
+        bool updateMenu = true,
         bool notify = true)
     {
         // this mode does not support buff
@@ -384,42 +428,6 @@ public class RogueMagicInstance : BaseRogueInstance
 
     #endregion
 
-    #region Adventure
-
-    public async ValueTask HandleStopWolfGunAdventure(List<int> targetIndex, RogueMagicAdventureInstance instance)
-    {
-        if (instance.WolfGunTargets.Count == 0) return;
-
-        var result = (from index in targetIndex
-            where index >= 0 && index < instance.WolfGunTargets.Count
-            select instance.WolfGunTargets[index]).ToList();
-
-        foreach (var target in result)
-        {
-            if (target.IsMoney)
-            {
-                // money
-                await GainMoney(target.TargetId, 2);
-            }
-            else if (target.IsMiracle)
-            {
-                // miracle
-                await AddMiracle(target.TargetId);
-            }
-            else if (target.IsRuanmei)
-            {
-                // ruanmei
-                var unitExcels = GameData.RogueMagicUnitData.Values
-                    .Where(x => x.MagicUnitLevel == 1 && x.MagicUnitType != RogueMagicMountTypeEnum.Active).ToList();
-                var toAddExcel = Enumerable.Range(0, 10).Select(unused => unitExcels.RandomElement()).ToList();
-
-                await AddMagicUnits(toAddExcel, RogueCommonActionResultSourceType.None);
-            }
-        }
-    }
-
-    #endregion
-
     #region Handlers
 
     public override void OnBattleStart(BattleInstance battle)
@@ -431,6 +439,7 @@ public class RogueMagicInstance : BaseRogueInstance
             if (excel.LevelList.Count > 0)
                 battle.CustomLevel = excel.LevelList.RandomElement();
         }
+
         battle.MagicInfo = new BattleRogueMagicInfo
         {
             ModifierContent = new BattleRogueMagicModifierInfo
@@ -468,10 +477,8 @@ public class RogueMagicInstance : BaseRogueInstance
     public override async ValueTask OnBattleEnd(BattleInstance battle, PVEBattleResultCsReq req)
     {
         if (battle.BattleEndStatus != BattleEndStatus.BattleEndWin)
-        {
             // quit
             return;
-        }
 
         // extra round calc
         var usedCnt = req.Stt.RoundCnt;

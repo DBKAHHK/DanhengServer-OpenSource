@@ -2,17 +2,17 @@
 using EggLink.DanhengServer.GameServer.Game.Battle;
 using EggLink.DanhengServer.GameServer.Game.ChessRogue.Cell;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.ChessRogue;
-using System.Collections.Generic;
-using EggLink.DanhengServer.Util;
-using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueModifier;
+using EggLink.DanhengServer.Proto;
+using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Game.ChessRogue.Modifier.ModifierEffect.Effects;
 
 [ModifierEffect(ModifierEffectTypeEnum.ReplicateSelectCellToAround)]
 public class ModifierEffectReplicateSelectCellToAround : ModifierEffectHandler
 {
-    public override async ValueTask OnConfirmed(ChessRogueDiceModifierInstance modifierInstance, ChessRogueInstance chessRogueInstance)
+    public override async ValueTask OnConfirmed(ChessRogueDiceModifierInstance modifierInstance,
+        ChessRogueInstance chessRogueInstance)
     {
         var types = modifierInstance.EffectConfig.Params.GetValueOrDefault("SourceType", "3").Split(";");
 
@@ -26,10 +26,12 @@ public class ModifierEffectReplicateSelectCellToAround : ModifierEffectHandler
         await ValueTask.CompletedTask;
     }
 
-    public override async ValueTask SelectModifierCell(ChessRogueDiceModifierInstance modifierInstance, ChessRogueInstance chessRogueInstance,
+    public override async ValueTask SelectModifierCell(ChessRogueDiceModifierInstance modifierInstance,
+        ChessRogueInstance chessRogueInstance,
         int selectCellId)
     {
-        await chessRogueInstance.Player.SendPacket(new PacketRogueModifierStageStartNotify(modifierInstance.SourceType));
+        await chessRogueInstance.Player.SendPacket(
+            new PacketRogueModifierStageStartNotify(modifierInstance.SourceType));
         modifierInstance.SelectedCell = selectCellId;
         modifierInstance.IsConfirmed = true;
 
@@ -45,6 +47,7 @@ public class ModifierEffectReplicateSelectCellToAround : ModifierEffectHandler
 
             targetCells.AddRange(cells.Select(x => x.Value));
         }
+
         targetCells.Remove(targetCell);
 
         List<ChessRogueCellInstance> updated = [];
@@ -59,10 +62,13 @@ public class ModifierEffectReplicateSelectCellToAround : ModifierEffectHandler
         }
 
         // Send packet to update the cell
-        await chessRogueInstance.Player.SendPacket(new PacketChessRogueCellUpdateNotify(updated, chessRogueInstance.CurBoardExcel?.ChessBoardID ?? 0, modifierInstance.SourceType, ChessRogueCellUpdateReason.Modifier));
+        await chessRogueInstance.Player.SendPacket(new PacketChessRogueCellUpdateNotify(updated,
+            chessRogueInstance.CurBoardExcel?.ChessBoardID ?? 0, modifierInstance.SourceType,
+            ChessRogueCellUpdateReason.Modifier));
     }
 
-    public override async ValueTask SelectCell(ChessRogueDiceModifierInstance modifierInstance, ChessRogueInstance chessRogueInstance,
+    public override async ValueTask SelectCell(ChessRogueDiceModifierInstance modifierInstance,
+        ChessRogueInstance chessRogueInstance,
         int selectCellId)
     {
         await ValueTask.CompletedTask;

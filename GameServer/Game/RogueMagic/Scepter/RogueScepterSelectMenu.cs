@@ -2,7 +2,6 @@
 using EggLink.DanhengServer.GameServer.Game.Rogue;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
-using System;
 
 namespace EggLink.DanhengServer.GameServer.Game.RogueMagic.Scepter;
 
@@ -19,16 +18,12 @@ public class RogueScepterSelectMenu(BaseRogueInstance rogue) : BaseRogueSelectMe
 
     public override void Roll()
     {
-        if (Scepters.Count > 0) return;  // already init
+        if (Scepters.Count > 0) return; // already init
         // Remove existing scepters
         if (rogue is RogueMagicInstance magic)
-        {
             foreach (var excel in ScepterPool.Clone())
-            {
                 if (magic.RogueScepters.Any(x => x.Value.Excel.ScepterID == excel.ScepterID))
                     ScepterPool.Remove(excel);
-            }
-        }
         var list = new RandomList<RogueMagicScepterExcel>();
 
         foreach (var magicScepterExcel in ScepterPool)
@@ -88,11 +83,14 @@ public class RogueScepterSelectMenu(BaseRogueInstance rogue) : BaseRogueSelectMe
     {
         return new RogueMagicScepterSelectInfo
         {
-            SelectScepters = { Scepters.Select(x => new RogueMagicScepter
+            SelectScepters =
             {
-                ScepterId = (uint)x.ScepterID,
-                Level = (uint)x.ScepterLevel
-            }) }
+                Scepters.Select(x => new RogueMagicScepter
+                {
+                    ScepterId = (uint)x.ScepterID,
+                    Level = (uint)x.ScepterLevel
+                })
+            }
         };
     }
 }

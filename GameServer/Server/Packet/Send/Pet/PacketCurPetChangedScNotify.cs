@@ -7,10 +7,9 @@ public class PacketCurPetChangedScNotify : BasePacket
 {
     public PacketCurPetChangedScNotify(uint newPetId) : base(CmdIds.CurPetChangedScNotify)
     {
-        
         var proto = new CurPetChangedScNotify
         {
-            CurPetId = newPetId,
+            CurPetId = newPetId
         };
 
         SetData(proto);

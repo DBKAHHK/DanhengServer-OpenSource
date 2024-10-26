@@ -14,38 +14,25 @@ public class PacketMusicRhythmDataScRsp : BasePacket
         };
 
         foreach (var level in GameData.MusicRhythmLevelData.Values)
-        {
             proto.MusicLevel.Add(new MusicRhythmLevel
             {
                 LevelId = (uint)level.GetId(),
                 IsFullCombo = true,
                 UnlockLevel = 3
             });
-        }
 
         foreach (var group in GameData.MusicRhythmGroupData.Values)
-        {
             proto.MusicGroup.Add(new MusicRhythmGroup
             {
                 MusicGroupId = (uint)group.GetId(),
                 MusicGroupPhase = (uint)group.Phase
             });
-        }
 
-        foreach (var song in GameData.MusicRhythmSongData.Values)
-        {
-            proto.UnlockSongList.Add((uint)song.GetId());
-        }
+        foreach (var song in GameData.MusicRhythmSongData.Values) proto.UnlockSongList.Add((uint)song.GetId());
 
-        foreach (var track in GameData.MusicRhythmTrackData.Values)
-        {
-            proto.UnlockTrackList.Add((uint)track.GetId());
-        }
+        foreach (var track in GameData.MusicRhythmTrackData.Values) proto.UnlockTrackList.Add((uint)track.GetId());
 
-        foreach (var phase in GameData.MusicRhythmPhaseData.Values)
-        {
-            proto.UnlockPhaseList.Add((uint)phase.GetId());
-        }
+        foreach (var phase in GameData.MusicRhythmPhaseData.Values) proto.UnlockPhaseList.Add((uint)phase.GetId());
 
         SetData(proto);
     }

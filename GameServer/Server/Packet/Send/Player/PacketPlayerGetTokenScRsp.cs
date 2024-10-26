@@ -17,10 +17,10 @@ public class PacketPlayerGetTokenScRsp : BasePacket
 
         if (ConfigManager.Config.GameServer.UsePacketEncryption)
         {
-            MT19937 tempRandom = new MT19937((ulong)DateTimeOffset.Now.ToUnixTimeSeconds());
+            var tempRandom = new MT19937((ulong)DateTimeOffset.Now.ToUnixTimeSeconds());
             rsp.SecretKeySeed = connection.ClientSecretKeySeed = tempRandom.NextUInt64();
         }
-        
+
         SetData(rsp);
     }
 
