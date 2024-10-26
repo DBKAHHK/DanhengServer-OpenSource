@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static EntityBuffChangeInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpFbnRpdHlCdWZmQ2hhbmdlSW5mby5wcm90bxoOQnVmZkluZm8ucHJvdG8a",
-            "H1NjZW5lRW50aXR5QnVmZkNoYW5nZVR5cGUucHJvdG8ikgEKFEVudGl0eUJ1",
+            "ChpFbnRpdHlCdWZmQ2hhbmdlSW5mby5wcm90bxofU2NlbmVFbnRpdHlCdWZm",
+            "Q2hhbmdlVHlwZS5wcm90bxoOQnVmZkluZm8ucHJvdG8ikgEKFEVudGl0eUJ1",
             "ZmZDaGFuZ2VJbmZvEhEKCWVudGl0eV9pZBgKIAEoDRIjChBidWZmX2NoYW5n",
             "ZV9pbmZvGAYgASgLMgkuQnVmZkluZm8SFgoOcmVtb3ZlX2J1ZmZfaWQYByAB",
             "KA0SKgoGcmVhc29uGAsgASgOMhouU2NlbmVFbnRpdHlCdWZmQ2hhbmdlVHlw",
             "ZUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.BuffInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EntityBuffChangeInfo), global::EggLink.DanhengServer.Proto.EntityBuffChangeInfo.Parser, new[]{ "EntityId", "BuffChangeInfo", "RemoveBuffId", "Reason" }, null, null, null, null)
           }));

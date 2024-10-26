@@ -10,7 +10,7 @@ public class PacketRogueModifierAddNotify : BasePacket
     {
         var proto = new RogueModifierAddNotify
         {
-            CHESSROGUECELLUPDATEREASONMODIFIER = modifier.ToProto()
+            Modifier = modifier.ToProto()
         };
 
         SetData(proto);

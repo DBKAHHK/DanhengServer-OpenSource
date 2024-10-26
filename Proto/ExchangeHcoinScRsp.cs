@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhFeGNoYW5nZUhjb2luU2NSc3AucHJvdG8iMgoSRXhjaGFuZ2VIY29pblNj",
-            "UnNwEgsKA051bRgPIAEoDRIPCgdyZXRjb2RlGA4gASgNQh6qAhtFZ2dMaW5r",
+            "UnNwEgsKA251bRgPIAEoDRIPCgdyZXRjb2RlGA4gASgNQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
       return new ExchangeHcoinScRsp(this);
     }
 
-    /// <summary>Field number for the "Num" field.</summary>
+    /// <summary>Field number for the "num" field.</summary>
     public const int NumFieldNumber = 15;
     private uint num_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

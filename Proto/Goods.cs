@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static GoodsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgtHb29kcy5wcm90byJeCgVHb29kcxIQCghCdXlUaW1lcxgBIAEoDRIRCglC",
-            "ZWdpblRpbWUYCyABKAMSDgoGSXRlbUlkGAggASgNEg8KB0dvb2RzSWQYByAB",
-            "KA0SDwoHRW5kVGltZRgDIAEoA0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
-            "LlByb3RvYgZwcm90bzM="));
+            "CgtHb29kcy5wcm90byJfCgVHb29kcxIQCghCdXlUaW1lcxgBIAEoDRIRCglC",
+            "ZWdpblRpbWUYCyABKAMSDwoHaXRlbV9pZBgIIAEoDRIPCgdHb29kc0lkGAcg",
+            "ASgNEg8KB0VuZFRpbWUYAyABKANCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ItemId" field.</summary>
+    /// <summary>Field number for the "item_id" field.</summary>
     public const int ItemIdFieldNumber = 8;
     private uint itemId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

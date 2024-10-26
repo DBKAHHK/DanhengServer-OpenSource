@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static GetRecyleTimeScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhHZXRSZWN5bGVUaW1lU2NSc3AucHJvdG8aEUJMT0JNUEdDSEtPLnByb3Rv",
-            "IkgKEkdldFJlY3lsZVRpbWVTY1JzcBIPCgdyZXRjb2RlGAMgASgNEiEKC0hO",
-            "QkhMQ0FLQUpHGAogAygLMgwuQkxPQk1QR0NIS09CHqoCG0VnZ0xpbmsuRGFu",
-            "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChhHZXRSZWN5bGVUaW1lU2NSc3AucHJvdG8aD01hdGVyaWFsMC5wcm90byJG",
+            "ChJHZXRSZWN5bGVUaW1lU2NSc3ASDwoHcmV0Y29kZRgDIAEoDRIfCgtITkJI",
+            "TENBS0FKRxgKIAMoCzIKLk1hdGVyaWFsMEIeqgIbRWdnTGluay5EYW5oZW5n",
+            "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BLOBMPGCHKOReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.Material0Reflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRecyleTimeScRsp), global::EggLink.DanhengServer.Proto.GetRecyleTimeScRsp.Parser, new[]{ "Retcode", "HNBHLCAKAJG" }, null, null, null, null)
           }));
@@ -98,12 +98,12 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "HNBHLCAKAJG" field.</summary>
     public const int HNBHLCAKAJGFieldNumber = 10;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.BLOBMPGCHKO> _repeated_hNBHLCAKAJG_codec
-        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.BLOBMPGCHKO.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BLOBMPGCHKO> hNBHLCAKAJG_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BLOBMPGCHKO>();
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.Material0> _repeated_hNBHLCAKAJG_codec
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.Material0.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Material0> hNBHLCAKAJG_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Material0>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BLOBMPGCHKO> HNBHLCAKAJG {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Material0> HNBHLCAKAJG {
       get { return hNBHLCAKAJG_; }
     }
 

@@ -259,7 +259,7 @@ public class ChallengeInstance
         if (IsStory())
         {
             // Calculate score for current stage
-            var stageScore = (int)req.Stt.BATTLETARGETTYPECHALLENGESCORE - GetTotalScore();
+            var stageScore = (int)req.Stt.ChallengeScore - GetTotalScore();
 
             // Set score
             if (CurrentStage == 1)

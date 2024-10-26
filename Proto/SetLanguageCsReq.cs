@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZTZXRMYW5ndWFnZUNzUmVxLnByb3RvGhJMYW5ndWFnZVR5cGUucHJvdG8i",
-            "NgoQU2V0TGFuZ3VhZ2VDc1JlcRIiCgtETkRFRklHUERHRRgNIAEoDjINLkxh",
-            "bmd1YWdlVHlwZUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "MwoQU2V0TGFuZ3VhZ2VDc1JlcRIfCghsYW5ndWFnZRgNIAEoDjINLkxhbmd1",
+            "YWdlVHlwZUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetLanguageCsReq), global::EggLink.DanhengServer.Proto.SetLanguageCsReq.Parser, new[]{ "DNDEFIGPDGE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetLanguageCsReq), global::EggLink.DanhengServer.Proto.SetLanguageCsReq.Parser, new[]{ "Language" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SetLanguageCsReq(SetLanguageCsReq other) : this() {
-      dNDEFIGPDGE_ = other.dNDEFIGPDGE_;
+      language_ = other.language_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new SetLanguageCsReq(this);
     }
 
-    /// <summary>Field number for the "DNDEFIGPDGE" field.</summary>
-    public const int DNDEFIGPDGEFieldNumber = 13;
-    private global::EggLink.DanhengServer.Proto.LanguageType dNDEFIGPDGE_ = global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone;
+    /// <summary>Field number for the "language" field.</summary>
+    public const int LanguageFieldNumber = 13;
+    private global::EggLink.DanhengServer.Proto.LanguageType language_ = global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.LanguageType DNDEFIGPDGE {
-      get { return dNDEFIGPDGE_; }
+    public global::EggLink.DanhengServer.Proto.LanguageType Language {
+      get { return language_; }
       set {
-        dNDEFIGPDGE_ = value;
+        language_ = value;
       }
     }
 
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DNDEFIGPDGE != other.DNDEFIGPDGE) return false;
+      if (Language != other.Language) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -118,7 +118,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (DNDEFIGPDGE != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) hash ^= DNDEFIGPDGE.GetHashCode();
+      if (Language != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) hash ^= Language.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (DNDEFIGPDGE != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) {
+      if (Language != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) {
         output.WriteRawTag(104);
-        output.WriteEnum((int) DNDEFIGPDGE);
+        output.WriteEnum((int) Language);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -151,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (DNDEFIGPDGE != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) {
+      if (Language != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) {
         output.WriteRawTag(104);
-        output.WriteEnum((int) DNDEFIGPDGE);
+        output.WriteEnum((int) Language);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -165,8 +165,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (DNDEFIGPDGE != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DNDEFIGPDGE);
+      if (Language != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Language);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -180,8 +180,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.DNDEFIGPDGE != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) {
-        DNDEFIGPDGE = other.DNDEFIGPDGE;
+      if (other.Language != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) {
+        Language = other.Language;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -199,7 +199,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 104: {
-            DNDEFIGPDGE = (global::EggLink.DanhengServer.Proto.LanguageType) input.ReadEnum();
+            Language = (global::EggLink.DanhengServer.Proto.LanguageType) input.ReadEnum();
             break;
           }
         }
@@ -218,7 +218,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 104: {
-            DNDEFIGPDGE = (global::EggLink.DanhengServer.Proto.LanguageType) input.ReadEnum();
+            Language = (global::EggLink.DanhengServer.Proto.LanguageType) input.ReadEnum();
             break;
           }
         }

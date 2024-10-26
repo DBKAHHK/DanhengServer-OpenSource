@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpSb2d1ZU1hZ2ljVGFsZW50SW5mby5wcm90bxoZUm9ndWVUYWxlbnRJbmZv",
-            "TGlzdC5wcm90byJbChRSb2d1ZU1hZ2ljVGFsZW50SW5mbxITCgtBSkFKR0pC",
-            "RklNThgGIAEoDRIuChB0YWxlbnRfaW5mb19saXN0GAogASgLMhQuUm9ndWVU",
-            "YWxlbnRJbmZvTGlzdEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
-            "YgZwcm90bzM="));
+            "TGlzdC5wcm90byJhChRSb2d1ZU1hZ2ljVGFsZW50SW5mbxIZChFtYWdpY190",
+            "YWxlbnRfY29pbhgGIAEoDRIuChB0YWxlbnRfaW5mb19saXN0GAogASgLMhQu",
+            "Um9ndWVUYWxlbnRJbmZvTGlzdEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTalentInfoListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicTalentInfo), global::EggLink.DanhengServer.Proto.RogueMagicTalentInfo.Parser, new[]{ "AJAJGJBFIMN", "TalentInfoList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicTalentInfo), global::EggLink.DanhengServer.Proto.RogueMagicTalentInfo.Parser, new[]{ "MagicTalentCoin", "TalentInfoList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueMagicTalentInfo(RogueMagicTalentInfo other) : this() {
-      aJAJGJBFIMN_ = other.aJAJGJBFIMN_;
+      magicTalentCoin_ = other.magicTalentCoin_;
       talentInfoList_ = other.talentInfoList_ != null ? other.talentInfoList_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -85,15 +85,15 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueMagicTalentInfo(this);
     }
 
-    /// <summary>Field number for the "AJAJGJBFIMN" field.</summary>
-    public const int AJAJGJBFIMNFieldNumber = 6;
-    private uint aJAJGJBFIMN_;
+    /// <summary>Field number for the "magic_talent_coin" field.</summary>
+    public const int MagicTalentCoinFieldNumber = 6;
+    private uint magicTalentCoin_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint AJAJGJBFIMN {
-      get { return aJAJGJBFIMN_; }
+    public uint MagicTalentCoin {
+      get { return magicTalentCoin_; }
       set {
-        aJAJGJBFIMN_ = value;
+        magicTalentCoin_ = value;
       }
     }
 
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (AJAJGJBFIMN != other.AJAJGJBFIMN) return false;
+      if (MagicTalentCoin != other.MagicTalentCoin) return false;
       if (!object.Equals(TalentInfoList, other.TalentInfoList)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (AJAJGJBFIMN != 0) hash ^= AJAJGJBFIMN.GetHashCode();
+      if (MagicTalentCoin != 0) hash ^= MagicTalentCoin.GetHashCode();
       if (talentInfoList_ != null) hash ^= TalentInfoList.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -153,9 +153,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (AJAJGJBFIMN != 0) {
+      if (MagicTalentCoin != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(AJAJGJBFIMN);
+        output.WriteUInt32(MagicTalentCoin);
       }
       if (talentInfoList_ != null) {
         output.WriteRawTag(82);
@@ -171,9 +171,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (AJAJGJBFIMN != 0) {
+      if (MagicTalentCoin != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(AJAJGJBFIMN);
+        output.WriteUInt32(MagicTalentCoin);
       }
       if (talentInfoList_ != null) {
         output.WriteRawTag(82);
@@ -189,8 +189,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (AJAJGJBFIMN != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AJAJGJBFIMN);
+      if (MagicTalentCoin != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MagicTalentCoin);
       }
       if (talentInfoList_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TalentInfoList);
@@ -207,8 +207,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.AJAJGJBFIMN != 0) {
-        AJAJGJBFIMN = other.AJAJGJBFIMN;
+      if (other.MagicTalentCoin != 0) {
+        MagicTalentCoin = other.MagicTalentCoin;
       }
       if (other.talentInfoList_ != null) {
         if (talentInfoList_ == null) {
@@ -232,7 +232,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 48: {
-            AJAJGJBFIMN = input.ReadUInt32();
+            MagicTalentCoin = input.ReadUInt32();
             break;
           }
           case 82: {
@@ -258,7 +258,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 48: {
-            AJAJGJBFIMN = input.ReadUInt32();
+            MagicTalentCoin = input.ReadUInt32();
             break;
           }
           case 82: {

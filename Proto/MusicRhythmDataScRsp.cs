@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static MusicRhythmDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpNdXNpY1JoeXRobURhdGFTY1JzcC5wcm90bxoWTXVzaWNSaHl0aG1Hcm91",
-            "cC5wcm90bxoWTXVzaWNSaHl0aG1MZXZlbC5wcm90byKFAgoUTXVzaWNSaHl0",
+            "ChpNdXNpY1JoeXRobURhdGFTY1JzcC5wcm90bxoWTXVzaWNSaHl0aG1MZXZl",
+            "bC5wcm90bxoWTXVzaWNSaHl0aG1Hcm91cC5wcm90byKFAgoUTXVzaWNSaHl0",
             "aG1EYXRhU2NSc3ASGAoQdW5sb2NrX3NvbmdfbGlzdBgPIAMoDRITCgtjdXJf",
             "c29uZ19pZBgCIAEoDRIZChF1bmxvY2tfdHJhY2tfbGlzdBgIIAMoDRIZChF1",
             "bmxvY2tfcGhhc2VfbGlzdBgFIAMoDRIRCglzaG93X2hpbnQYBiABKAgSJgoL",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "aWQYCiABKA0SDwoHcmV0Y29kZRgMIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MusicRhythmGroupReflection.Descriptor, global::EggLink.DanhengServer.Proto.MusicRhythmLevelReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MusicRhythmLevelReflection.Descriptor, global::EggLink.DanhengServer.Proto.MusicRhythmGroupReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmDataScRsp), global::EggLink.DanhengServer.Proto.MusicRhythmDataScRsp.Parser, new[]{ "UnlockSongList", "CurSongId", "UnlockTrackList", "UnlockPhaseList", "ShowHint", "MusicGroup", "MusicLevel", "CurLevelId", "Retcode" }, null, null, null, null)
           }));

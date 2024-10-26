@@ -37,4 +37,16 @@ public class RogueMagicUnitInstance(RogueMagicUnitExcel excel)
             }
         };
     }
+
+    public RogueCommonActionResult ToRemoveInfo(RogueCommonActionResultSourceType source)
+    {
+        return new RogueCommonActionResult
+        {
+            Source = source,
+            RogueAction = new RogueCommonActionResultData
+            {
+                RemoveMagicUnitList = ToProto()
+            }
+        };
+    }
 }

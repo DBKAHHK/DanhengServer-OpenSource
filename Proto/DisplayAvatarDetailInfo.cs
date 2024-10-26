@@ -27,10 +27,10 @@ namespace EggLink.DanhengServer.Proto {
             "Ch1EaXNwbGF5QXZhdGFyRGV0YWlsSW5mby5wcm90bxoaRGlzcGxheUVxdWlw",
             "bWVudEluZm8ucHJvdG8aFkRpc3BsYXlSZWxpY0luZm8ucHJvdG8aFUF2YXRh",
             "clNraWxsVHJlZS5wcm90byKIAgoXRGlzcGxheUF2YXRhckRldGFpbEluZm8S",
-            "DAoEUmFuaxgIIAEoDRILCgNFeHAYDSABKA0SFwoPZHJlc3NlZF9za2luX2lk",
+            "DAoEcmFuaxgIIAEoDRILCgNFeHAYDSABKA0SFwoPZHJlc3NlZF9za2luX2lk",
             "GAwgASgNEhEKCWF2YXRhcl9pZBgCIAEoDRIkCglSZWxpY0xpc3QYDiADKAsy",
             "ES5EaXNwbGF5UmVsaWNJbmZvEgsKA1BvcxgBIAEoDRInCg1Ta2lsbHRyZWVM",
-            "aXN0GA8gAygLMhAuQXZhdGFyU2tpbGxUcmVlEhEKCVByb21vdGlvbhgKIAEo",
+            "aXN0GA8gAygLMhAuQXZhdGFyU2tpbGxUcmVlEhEKCXByb21vdGlvbhgKIAEo",
             "DRINCgVsZXZlbBgJIAEoDRIoCglFcXVpcG1lbnQYAyABKAsyFS5EaXNwbGF5",
             "RXF1aXBtZW50SW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
       return new DisplayAvatarDetailInfo(this);
     }
 
-    /// <summary>Field number for the "Rank" field.</summary>
+    /// <summary>Field number for the "rank" field.</summary>
     public const int RankFieldNumber = 8;
     private uint rank_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -180,7 +180,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return skilltreeList_; }
     }
 
-    /// <summary>Field number for the "Promotion" field.</summary>
+    /// <summary>Field number for the "promotion" field.</summary>
     public const int PromotionFieldNumber = 10;
     private uint promotion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

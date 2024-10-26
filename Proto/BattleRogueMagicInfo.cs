@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static BattleRogueMagicInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpCYXR0bGVSb2d1ZU1hZ2ljSW5mby5wcm90bxoRSUdFRk5HTkNLT0cucHJv",
-            "dG8aIEJhdHRsZVJvZ3VlTWFnaWNEZXRhaWxJbmZvLnByb3RvInAKFEJhdHRs",
-            "ZVJvZ3VlTWFnaWNJbmZvEiYKEG1vZGlmaWVyX2NvbnRlbnQYASABKAsyDC5J",
-            "R0VGTkdOQ0tPRxIwCgtkZXRhaWxfaW5mbxgCIAEoCzIbLkJhdHRsZVJvZ3Vl",
-            "TWFnaWNEZXRhaWxJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
-            "dG9iBnByb3RvMw=="));
+            "ChpCYXR0bGVSb2d1ZU1hZ2ljSW5mby5wcm90bxoiQmF0dGxlUm9ndWVNYWdp",
+            "Y01vZGlmaWVySW5mby5wcm90bxogQmF0dGxlUm9ndWVNYWdpY0RldGFpbElu",
+            "Zm8ucHJvdG8igQEKFEJhdHRsZVJvZ3VlTWFnaWNJbmZvEjcKEG1vZGlmaWVy",
+            "X2NvbnRlbnQYASABKAsyHS5CYXR0bGVSb2d1ZU1hZ2ljTW9kaWZpZXJJbmZv",
+            "EjAKC2RldGFpbF9pbmZvGAIgASgLMhsuQmF0dGxlUm9ndWVNYWdpY0RldGFp",
+            "bEluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IGEFNGNCKOGReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleRogueMagicDetailInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BattleRogueMagicModifierInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleRogueMagicDetailInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BattleRogueMagicInfo), global::EggLink.DanhengServer.Proto.BattleRogueMagicInfo.Parser, new[]{ "ModifierContent", "DetailInfo" }, null, null, null, null)
           }));
@@ -88,10 +88,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "modifier_content" field.</summary>
     public const int ModifierContentFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.IGEFNGNCKOG modifierContent_;
+    private global::EggLink.DanhengServer.Proto.BattleRogueMagicModifierInfo modifierContent_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.IGEFNGNCKOG ModifierContent {
+    public global::EggLink.DanhengServer.Proto.BattleRogueMagicModifierInfo ModifierContent {
       get { return modifierContent_; }
       set {
         modifierContent_ = value;
@@ -210,7 +210,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.modifierContent_ != null) {
         if (modifierContent_ == null) {
-          ModifierContent = new global::EggLink.DanhengServer.Proto.IGEFNGNCKOG();
+          ModifierContent = new global::EggLink.DanhengServer.Proto.BattleRogueMagicModifierInfo();
         }
         ModifierContent.MergeFrom(other.ModifierContent);
       }
@@ -237,7 +237,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 10: {
             if (modifierContent_ == null) {
-              ModifierContent = new global::EggLink.DanhengServer.Proto.IGEFNGNCKOG();
+              ModifierContent = new global::EggLink.DanhengServer.Proto.BattleRogueMagicModifierInfo();
             }
             input.ReadMessage(ModifierContent);
             break;
@@ -266,7 +266,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 10: {
             if (modifierContent_ == null) {
-              ModifierContent = new global::EggLink.DanhengServer.Proto.IGEFNGNCKOG();
+              ModifierContent = new global::EggLink.DanhengServer.Proto.BattleRogueMagicModifierInfo();
             }
             input.ReadMessage(ModifierContent);
             break;

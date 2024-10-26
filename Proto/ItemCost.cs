@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static ItemCostReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg5JdGVtQ29zdC5wcm90bxoOUGlsZUl0ZW0ucHJvdG8iWQoISXRlbUNvc3QS",
-            "GwoIUGlsZUl0ZW0YBiABKAsyCS5QaWxlSXRlbRIZChFFcXVpcG1lbnRVbmlx",
-            "dWVJZBgCIAEoDRIVCg1SZWxpY1VuaXF1ZUlkGA4gASgNQh6qAhtFZ2dMaW5r",
-            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "Cg5JdGVtQ29zdC5wcm90bxoOUGlsZUl0ZW0ucHJvdG8iXgoISXRlbUNvc3QS",
+            "HAoJcGlsZV9pdGVtGAYgASgLMgkuUGlsZUl0ZW0SGwoTZXF1aXBtZW50X3Vu",
+            "aXF1ZV9pZBgCIAEoDRIXCg9yZWxpY191bmlxdWVfaWQYDiABKA1CHqoCG0Vn",
+            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PileItemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
       return new ItemCost(this);
     }
 
-    /// <summary>Field number for the "PileItem" field.</summary>
+    /// <summary>Field number for the "pile_item" field.</summary>
     public const int PileItemFieldNumber = 6;
     private global::EggLink.DanhengServer.Proto.PileItem pileItem_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "EquipmentUniqueId" field.</summary>
+    /// <summary>Field number for the "equipment_unique_id" field.</summary>
     public const int EquipmentUniqueIdFieldNumber = 2;
     private uint equipmentUniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "RelicUniqueId" field.</summary>
+    /// <summary>Field number for the "relic_unique_id" field.</summary>
     public const int RelicUniqueIdFieldNumber = 14;
     private uint relicUniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

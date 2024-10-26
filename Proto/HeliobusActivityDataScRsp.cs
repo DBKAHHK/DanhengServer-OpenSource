@@ -24,19 +24,19 @@ namespace EggLink.DanhengServer.Proto {
     static HeliobusActivityDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9IZWxpb2J1c0FjdGl2aXR5RGF0YVNjUnNwLnByb3RvGh1IZWxpb2J1c0No",
-            "YWxsZW5nZUxpbmV1cC5wcm90bxoRTkNJSExMQUVKSksucHJvdG8aEUpOQU1H",
-            "RkNBREROLnByb3RvGhFQQ01ER0RMQU5GRi5wcm90byKjAgoZSGVsaW9idXNB",
-            "Y3Rpdml0eURhdGFTY1JzcBIgCgpza2lsbF9pbmZvGA0gASgLMgwuTkNJSExM",
-            "QUVKSksSLQoLRk1BSkZJQ0ZNRk8YByADKAsyGC5IZWxpb2J1c0NoYWxsZW5n",
-            "ZUxpbmV1cBITCgtBSUpISEhDT0JGRhgFIAEoDRINCgVwaGFzZRgIIAEoDRIP",
-            "CgdyZXRjb2RlGAEgASgNEhMKC0NCSE9BUElCQ0pNGAYgASgNEiQKDmNoYWxs",
-            "ZW5nZV9saXN0GA8gAygLMgwuSk5BTUdGQ0FERE4SEwoLSkdLSkpLRkJMQ0YY",
-            "DCABKA0SIQoLSUJOSEZMSEpGRU8YBCADKAsyDC5QQ01ER0RMQU5GRhINCgVs",
-            "ZXZlbBgOIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "Ch9IZWxpb2J1c0FjdGl2aXR5RGF0YVNjUnNwLnByb3RvGhFQQ01ER0RMQU5G",
+            "Ri5wcm90bxoRTkNJSExMQUVKSksucHJvdG8aHUhlbGlvYnVzQ2hhbGxlbmdl",
+            "TGluZXVwLnByb3RvGhNDaGFsbGVuZ2VMaXN0LnByb3RvIqUCChlIZWxpb2J1",
+            "c0FjdGl2aXR5RGF0YVNjUnNwEiAKCnNraWxsX2luZm8YDSABKAsyDC5OQ0lI",
+            "TExBRUpKSxItCgtGTUFKRklDRk1GTxgHIAMoCzIYLkhlbGlvYnVzQ2hhbGxl",
+            "bmdlTGluZXVwEhMKC0FJSkhISENPQkZGGAUgASgNEg0KBXBoYXNlGAggASgN",
+            "Eg8KB3JldGNvZGUYASABKA0SEwoLQ0JIT0FQSUJDSk0YBiABKA0SJgoOY2hh",
+            "bGxlbmdlX2xpc3QYDyADKAsyDi5DaGFsbGVuZ2VMaXN0EhMKC0pHS0pKS0ZC",
+            "TENGGAwgASgNEiEKC0lCTkhGTEhKRkVPGAQgAygLMgwuUENNREdETEFORkYS",
+            "DQoFbGV2ZWwYDiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeliobusChallengeLineupReflection.Descriptor, global::EggLink.DanhengServer.Proto.NCIHLLAEJJKReflection.Descriptor, global::EggLink.DanhengServer.Proto.JNAMGFCADDNReflection.Descriptor, global::EggLink.DanhengServer.Proto.PCMDGDLANFFReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PCMDGDLANFFReflection.Descriptor, global::EggLink.DanhengServer.Proto.NCIHLLAEJJKReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeliobusChallengeLineupReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeliobusActivityDataScRsp), global::EggLink.DanhengServer.Proto.HeliobusActivityDataScRsp.Parser, new[]{ "SkillInfo", "FMAJFICFMFO", "AIJHHHCOBFF", "Phase", "Retcode", "CBHOAPIBCJM", "ChallengeList", "JGKJJKFBLCF", "IBNHFLHJFEO", "Level" }, null, null, null, null)
           }));
@@ -172,12 +172,12 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "challenge_list" field.</summary>
     public const int ChallengeListFieldNumber = 15;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.JNAMGFCADDN> _repeated_challengeList_codec
-        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.JNAMGFCADDN.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.JNAMGFCADDN> challengeList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.JNAMGFCADDN>();
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChallengeList> _repeated_challengeList_codec
+        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.ChallengeList.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengeList> challengeList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengeList>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.JNAMGFCADDN> ChallengeList {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengeList> ChallengeList {
       get { return challengeList_; }
     }
 

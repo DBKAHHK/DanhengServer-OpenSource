@@ -43,7 +43,7 @@ public class RogueMagicAdventureInstance(RogueMagicAdventureRoomExcel excel)
             randomList.Add(new RogueAdventureWolfGunTargetInstance { IsMoney = true, TargetId = 50 }, 5);
             randomList.Add(new RogueAdventureWolfGunTargetInstance { IsMoney = true, TargetId = 100 }, 5);
 
-            randomList.Add(new RogueAdventureWolfGunTargetInstance { IsRuanmei = true }, 1);
+            randomList.Add(new RogueAdventureWolfGunTargetInstance { IsRuanmei = true }, 100);
 
             for (var i = 0; i < 4; i++)
             {

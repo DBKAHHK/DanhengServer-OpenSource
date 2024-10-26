@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static BattleRogueMagicRoundCountReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiBCYXR0bGVSb2d1ZU1hZ2ljUm91bmRDb3VudC5wcm90byJGChpCYXR0bGVS",
-            "b2d1ZU1hZ2ljUm91bmRDb3VudBITCgtISEZKQUlCR0FNQRgBIAEoDRITCgtN",
-            "TUtPTE5CSUtKSBgCIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
-            "b3RvYgZwcm90bzM="));
+            "CiBCYXR0bGVSb2d1ZU1hZ2ljUm91bmRDb3VudC5wcm90byJjChpCYXR0bGVS",
+            "b2d1ZU1hZ2ljUm91bmRDb3VudBIjChtiYXR0bGVfc3RhbmRhcmRfcm91bmRf",
+            "bGltaXQYASABKA0SIAoYYmF0dGxlX2V4dHJhX3JvdW5kX2xpbWl0GAIgASgN",
+            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BattleRogueMagicRoundCount), global::EggLink.DanhengServer.Proto.BattleRogueMagicRoundCount.Parser, new[]{ "HHFJAIBGAMA", "MMKOLNBIKJH" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BattleRogueMagicRoundCount), global::EggLink.DanhengServer.Proto.BattleRogueMagicRoundCount.Parser, new[]{ "BattleStandardRoundLimit", "BattleExtraRoundLimit" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BattleRogueMagicRoundCount(BattleRogueMagicRoundCount other) : this() {
-      hHFJAIBGAMA_ = other.hHFJAIBGAMA_;
-      mMKOLNBIKJH_ = other.mMKOLNBIKJH_;
+      battleStandardRoundLimit_ = other.battleStandardRoundLimit_;
+      battleExtraRoundLimit_ = other.battleExtraRoundLimit_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,27 +84,27 @@ namespace EggLink.DanhengServer.Proto {
       return new BattleRogueMagicRoundCount(this);
     }
 
-    /// <summary>Field number for the "HHFJAIBGAMA" field.</summary>
-    public const int HHFJAIBGAMAFieldNumber = 1;
-    private uint hHFJAIBGAMA_;
+    /// <summary>Field number for the "battle_standard_round_limit" field.</summary>
+    public const int BattleStandardRoundLimitFieldNumber = 1;
+    private uint battleStandardRoundLimit_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint HHFJAIBGAMA {
-      get { return hHFJAIBGAMA_; }
+    public uint BattleStandardRoundLimit {
+      get { return battleStandardRoundLimit_; }
       set {
-        hHFJAIBGAMA_ = value;
+        battleStandardRoundLimit_ = value;
       }
     }
 
-    /// <summary>Field number for the "MMKOLNBIKJH" field.</summary>
-    public const int MMKOLNBIKJHFieldNumber = 2;
-    private uint mMKOLNBIKJH_;
+    /// <summary>Field number for the "battle_extra_round_limit" field.</summary>
+    public const int BattleExtraRoundLimitFieldNumber = 2;
+    private uint battleExtraRoundLimit_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MMKOLNBIKJH {
-      get { return mMKOLNBIKJH_; }
+    public uint BattleExtraRoundLimit {
+      get { return battleExtraRoundLimit_; }
       set {
-        mMKOLNBIKJH_ = value;
+        battleExtraRoundLimit_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (HHFJAIBGAMA != other.HHFJAIBGAMA) return false;
-      if (MMKOLNBIKJH != other.MMKOLNBIKJH) return false;
+      if (BattleStandardRoundLimit != other.BattleStandardRoundLimit) return false;
+      if (BattleExtraRoundLimit != other.BattleExtraRoundLimit) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (HHFJAIBGAMA != 0) hash ^= HHFJAIBGAMA.GetHashCode();
-      if (MMKOLNBIKJH != 0) hash ^= MMKOLNBIKJH.GetHashCode();
+      if (BattleStandardRoundLimit != 0) hash ^= BattleStandardRoundLimit.GetHashCode();
+      if (BattleExtraRoundLimit != 0) hash ^= BattleExtraRoundLimit.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (HHFJAIBGAMA != 0) {
+      if (BattleStandardRoundLimit != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(HHFJAIBGAMA);
+        output.WriteUInt32(BattleStandardRoundLimit);
       }
-      if (MMKOLNBIKJH != 0) {
+      if (BattleExtraRoundLimit != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(MMKOLNBIKJH);
+        output.WriteUInt32(BattleExtraRoundLimit);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HHFJAIBGAMA != 0) {
+      if (BattleStandardRoundLimit != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(HHFJAIBGAMA);
+        output.WriteUInt32(BattleStandardRoundLimit);
       }
-      if (MMKOLNBIKJH != 0) {
+      if (BattleExtraRoundLimit != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(MMKOLNBIKJH);
+        output.WriteUInt32(BattleExtraRoundLimit);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (HHFJAIBGAMA != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HHFJAIBGAMA);
+      if (BattleStandardRoundLimit != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BattleStandardRoundLimit);
       }
-      if (MMKOLNBIKJH != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MMKOLNBIKJH);
+      if (BattleExtraRoundLimit != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BattleExtraRoundLimit);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.HHFJAIBGAMA != 0) {
-        HHFJAIBGAMA = other.HHFJAIBGAMA;
+      if (other.BattleStandardRoundLimit != 0) {
+        BattleStandardRoundLimit = other.BattleStandardRoundLimit;
       }
-      if (other.MMKOLNBIKJH != 0) {
-        MMKOLNBIKJH = other.MMKOLNBIKJH;
+      if (other.BattleExtraRoundLimit != 0) {
+        BattleExtraRoundLimit = other.BattleExtraRoundLimit;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -228,11 +228,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            HHFJAIBGAMA = input.ReadUInt32();
+            BattleStandardRoundLimit = input.ReadUInt32();
             break;
           }
           case 16: {
-            MMKOLNBIKJH = input.ReadUInt32();
+            BattleExtraRoundLimit = input.ReadUInt32();
             break;
           }
         }
@@ -251,11 +251,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            HHFJAIBGAMA = input.ReadUInt32();
+            BattleStandardRoundLimit = input.ReadUInt32();
             break;
           }
           case 16: {
-            MMKOLNBIKJH = input.ReadUInt32();
+            BattleExtraRoundLimit = input.ReadUInt32();
             break;
           }
         }

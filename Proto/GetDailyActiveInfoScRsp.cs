@@ -25,14 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1HZXREYWlseUFjdGl2ZUluZm9TY1JzcC5wcm90bxoXRGFpbHlBY3Rpdml0",
-            "eUluZm8ucHJvdG8ifQoXR2V0RGFpbHlBY3RpdmVJbmZvU2NSc3ASEwoLRlBO",
-            "RFBMTUlHSlAYBiABKA0SEwoLRUtMT0JJREFHT0QYCCADKA0SDwoHcmV0Y29k",
-            "ZRgHIAEoDRInCgtLR0NMRk9BQkNJQhgBIAMoCzISLkRhaWx5QWN0aXZpdHlJ",
-            "bmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "eUluZm8ucHJvdG8inwEKF0dldERhaWx5QWN0aXZlSW5mb1NjUnNwEhoKEmRh",
+            "aWx5X2FjdGl2ZV9wb2ludBgGIAEoDRIiChpkYWlseV9hY3RpdmVfcXVlc3Rf",
+            "aWRfbGlzdBgIIAMoDRIPCgdyZXRjb2RlGAcgASgNEjMKF2RhaWx5X2FjdGl2",
+            "ZV9sZXZlbF9saXN0GAEgAygLMhIuRGFpbHlBY3Rpdml0eUluZm9CHqoCG0Vn",
+            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DailyActivityInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetDailyActiveInfoScRsp), global::EggLink.DanhengServer.Proto.GetDailyActiveInfoScRsp.Parser, new[]{ "FPNDPLMIGJP", "EKLOBIDAGOD", "Retcode", "KGCLFOABCIB" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetDailyActiveInfoScRsp), global::EggLink.DanhengServer.Proto.GetDailyActiveInfoScRsp.Parser, new[]{ "DailyActivePoint", "DailyActiveQuestIdList", "Retcode", "DailyActiveLevelList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +75,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetDailyActiveInfoScRsp(GetDailyActiveInfoScRsp other) : this() {
-      fPNDPLMIGJP_ = other.fPNDPLMIGJP_;
-      eKLOBIDAGOD_ = other.eKLOBIDAGOD_.Clone();
+      dailyActivePoint_ = other.dailyActivePoint_;
+      dailyActiveQuestIdList_ = other.dailyActiveQuestIdList_.Clone();
       retcode_ = other.retcode_;
-      kGCLFOABCIB_ = other.kGCLFOABCIB_.Clone();
+      dailyActiveLevelList_ = other.dailyActiveLevelList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,27 +88,27 @@ namespace EggLink.DanhengServer.Proto {
       return new GetDailyActiveInfoScRsp(this);
     }
 
-    /// <summary>Field number for the "FPNDPLMIGJP" field.</summary>
-    public const int FPNDPLMIGJPFieldNumber = 6;
-    private uint fPNDPLMIGJP_;
+    /// <summary>Field number for the "daily_active_point" field.</summary>
+    public const int DailyActivePointFieldNumber = 6;
+    private uint dailyActivePoint_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FPNDPLMIGJP {
-      get { return fPNDPLMIGJP_; }
+    public uint DailyActivePoint {
+      get { return dailyActivePoint_; }
       set {
-        fPNDPLMIGJP_ = value;
+        dailyActivePoint_ = value;
       }
     }
 
-    /// <summary>Field number for the "EKLOBIDAGOD" field.</summary>
-    public const int EKLOBIDAGODFieldNumber = 8;
-    private static readonly pb::FieldCodec<uint> _repeated_eKLOBIDAGOD_codec
+    /// <summary>Field number for the "daily_active_quest_id_list" field.</summary>
+    public const int DailyActiveQuestIdListFieldNumber = 8;
+    private static readonly pb::FieldCodec<uint> _repeated_dailyActiveQuestIdList_codec
         = pb::FieldCodec.ForUInt32(66);
-    private readonly pbc::RepeatedField<uint> eKLOBIDAGOD_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> dailyActiveQuestIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> EKLOBIDAGOD {
-      get { return eKLOBIDAGOD_; }
+    public pbc::RepeatedField<uint> DailyActiveQuestIdList {
+      get { return dailyActiveQuestIdList_; }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
@@ -122,15 +123,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "KGCLFOABCIB" field.</summary>
-    public const int KGCLFOABCIBFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DailyActivityInfo> _repeated_kGCLFOABCIB_codec
+    /// <summary>Field number for the "daily_active_level_list" field.</summary>
+    public const int DailyActiveLevelListFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DailyActivityInfo> _repeated_dailyActiveLevelList_codec
         = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.DailyActivityInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DailyActivityInfo> kGCLFOABCIB_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DailyActivityInfo>();
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DailyActivityInfo> dailyActiveLevelList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DailyActivityInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DailyActivityInfo> KGCLFOABCIB {
-      get { return kGCLFOABCIB_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DailyActivityInfo> DailyActiveLevelList {
+      get { return dailyActiveLevelList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -148,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FPNDPLMIGJP != other.FPNDPLMIGJP) return false;
-      if(!eKLOBIDAGOD_.Equals(other.eKLOBIDAGOD_)) return false;
+      if (DailyActivePoint != other.DailyActivePoint) return false;
+      if(!dailyActiveQuestIdList_.Equals(other.dailyActiveQuestIdList_)) return false;
       if (Retcode != other.Retcode) return false;
-      if(!kGCLFOABCIB_.Equals(other.kGCLFOABCIB_)) return false;
+      if(!dailyActiveLevelList_.Equals(other.dailyActiveLevelList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -159,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (FPNDPLMIGJP != 0) hash ^= FPNDPLMIGJP.GetHashCode();
-      hash ^= eKLOBIDAGOD_.GetHashCode();
+      if (DailyActivePoint != 0) hash ^= DailyActivePoint.GetHashCode();
+      hash ^= dailyActiveQuestIdList_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      hash ^= kGCLFOABCIB_.GetHashCode();
+      hash ^= dailyActiveLevelList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -181,16 +182,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      kGCLFOABCIB_.WriteTo(output, _repeated_kGCLFOABCIB_codec);
-      if (FPNDPLMIGJP != 0) {
+      dailyActiveLevelList_.WriteTo(output, _repeated_dailyActiveLevelList_codec);
+      if (DailyActivePoint != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(FPNDPLMIGJP);
+        output.WriteUInt32(DailyActivePoint);
       }
       if (Retcode != 0) {
         output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
-      eKLOBIDAGOD_.WriteTo(output, _repeated_eKLOBIDAGOD_codec);
+      dailyActiveQuestIdList_.WriteTo(output, _repeated_dailyActiveQuestIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -201,16 +202,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      kGCLFOABCIB_.WriteTo(ref output, _repeated_kGCLFOABCIB_codec);
-      if (FPNDPLMIGJP != 0) {
+      dailyActiveLevelList_.WriteTo(ref output, _repeated_dailyActiveLevelList_codec);
+      if (DailyActivePoint != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(FPNDPLMIGJP);
+        output.WriteUInt32(DailyActivePoint);
       }
       if (Retcode != 0) {
         output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
-      eKLOBIDAGOD_.WriteTo(ref output, _repeated_eKLOBIDAGOD_codec);
+      dailyActiveQuestIdList_.WriteTo(ref output, _repeated_dailyActiveQuestIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -221,14 +222,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (FPNDPLMIGJP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FPNDPLMIGJP);
+      if (DailyActivePoint != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DailyActivePoint);
       }
-      size += eKLOBIDAGOD_.CalculateSize(_repeated_eKLOBIDAGOD_codec);
+      size += dailyActiveQuestIdList_.CalculateSize(_repeated_dailyActiveQuestIdList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += kGCLFOABCIB_.CalculateSize(_repeated_kGCLFOABCIB_codec);
+      size += dailyActiveLevelList_.CalculateSize(_repeated_dailyActiveLevelList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -241,14 +242,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.FPNDPLMIGJP != 0) {
-        FPNDPLMIGJP = other.FPNDPLMIGJP;
+      if (other.DailyActivePoint != 0) {
+        DailyActivePoint = other.DailyActivePoint;
       }
-      eKLOBIDAGOD_.Add(other.eKLOBIDAGOD_);
+      dailyActiveQuestIdList_.Add(other.dailyActiveQuestIdList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      kGCLFOABCIB_.Add(other.kGCLFOABCIB_);
+      dailyActiveLevelList_.Add(other.dailyActiveLevelList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -265,11 +266,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            kGCLFOABCIB_.AddEntriesFrom(input, _repeated_kGCLFOABCIB_codec);
+            dailyActiveLevelList_.AddEntriesFrom(input, _repeated_dailyActiveLevelList_codec);
             break;
           }
           case 48: {
-            FPNDPLMIGJP = input.ReadUInt32();
+            DailyActivePoint = input.ReadUInt32();
             break;
           }
           case 56: {
@@ -278,7 +279,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 66:
           case 64: {
-            eKLOBIDAGOD_.AddEntriesFrom(input, _repeated_eKLOBIDAGOD_codec);
+            dailyActiveQuestIdList_.AddEntriesFrom(input, _repeated_dailyActiveQuestIdList_codec);
             break;
           }
         }
@@ -297,11 +298,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            kGCLFOABCIB_.AddEntriesFrom(ref input, _repeated_kGCLFOABCIB_codec);
+            dailyActiveLevelList_.AddEntriesFrom(ref input, _repeated_dailyActiveLevelList_codec);
             break;
           }
           case 48: {
-            FPNDPLMIGJP = input.ReadUInt32();
+            DailyActivePoint = input.ReadUInt32();
             break;
           }
           case 56: {
@@ -310,7 +311,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 66:
           case 64: {
-            eKLOBIDAGOD_.AddEntriesFrom(ref input, _repeated_eKLOBIDAGOD_codec);
+            dailyActiveQuestIdList_.AddEntriesFrom(ref input, _repeated_dailyActiveQuestIdList_codec);
             break;
           }
         }

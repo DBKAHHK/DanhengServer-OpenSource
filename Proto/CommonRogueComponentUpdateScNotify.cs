@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CihDb21tb25Sb2d1ZUNvbXBvbmVudFVwZGF0ZVNjTm90aWZ5LnByb3RvGhNS",
-            "b2d1ZUdhbWVJbmZvLnByb3RvIosBCiJDb21tb25Sb2d1ZUNvbXBvbmVudFVw",
-            "ZGF0ZVNjTm90aWZ5EhMKC09KSUJPQk5BSUtIGAUgASgNEhMKC0lIS0hORUdC",
-            "RUxFGA0gASgNEiMKC0FPUE9BT05JSUFNGAMgASgLMg4uUm9ndWVHYW1lSW5m",
-            "bxIWCg5yb2d1ZV9zdWJfbW9kZRgHIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
-            "U2VydmVyLlByb3RvYgZwcm90bzM="));
+            "b2d1ZUdhbWVJbmZvLnByb3RvIpgBCiJDb21tb25Sb2d1ZUNvbXBvbmVudFVw",
+            "ZGF0ZVNjTm90aWZ5EiAKGHJvZ3VlX21hZ2ljX2JhdHRsZV9jb25zdBgFIAEo",
+            "DRITCgtJSEtITkVHQkVMRRgNIAEoDRIjCgtBT1BPQU9OSUlBTRgDIAEoCzIO",
+            "LlJvZ3VlR2FtZUluZm8SFgoOcm9ndWVfc3ViX21vZGUYByABKA1CHqoCG0Vn",
+            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueGameInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CommonRogueComponentUpdateScNotify), global::EggLink.DanhengServer.Proto.CommonRogueComponentUpdateScNotify.Parser, new[]{ "OJIBOBNAIKH", "IHKHNEGBELE", "AOPOAONIIAM", "RogueSubMode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CommonRogueComponentUpdateScNotify), global::EggLink.DanhengServer.Proto.CommonRogueComponentUpdateScNotify.Parser, new[]{ "RogueMagicBattleConst", "IHKHNEGBELE", "AOPOAONIIAM", "RogueSubMode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CommonRogueComponentUpdateScNotify(CommonRogueComponentUpdateScNotify other) : this() {
-      oJIBOBNAIKH_ = other.oJIBOBNAIKH_;
+      rogueMagicBattleConst_ = other.rogueMagicBattleConst_;
       iHKHNEGBELE_ = other.iHKHNEGBELE_;
       aOPOAONIIAM_ = other.aOPOAONIIAM_ != null ? other.aOPOAONIIAM_.Clone() : null;
       rogueSubMode_ = other.rogueSubMode_;
@@ -88,15 +88,15 @@ namespace EggLink.DanhengServer.Proto {
       return new CommonRogueComponentUpdateScNotify(this);
     }
 
-    /// <summary>Field number for the "OJIBOBNAIKH" field.</summary>
-    public const int OJIBOBNAIKHFieldNumber = 5;
-    private uint oJIBOBNAIKH_;
+    /// <summary>Field number for the "rogue_magic_battle_const" field.</summary>
+    public const int RogueMagicBattleConstFieldNumber = 5;
+    private uint rogueMagicBattleConst_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint OJIBOBNAIKH {
-      get { return oJIBOBNAIKH_; }
+    public uint RogueMagicBattleConst {
+      get { return rogueMagicBattleConst_; }
       set {
-        oJIBOBNAIKH_ = value;
+        rogueMagicBattleConst_ = value;
       }
     }
 
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (OJIBOBNAIKH != other.OJIBOBNAIKH) return false;
+      if (RogueMagicBattleConst != other.RogueMagicBattleConst) return false;
       if (IHKHNEGBELE != other.IHKHNEGBELE) return false;
       if (!object.Equals(AOPOAONIIAM, other.AOPOAONIIAM)) return false;
       if (RogueSubMode != other.RogueSubMode) return false;
@@ -162,7 +162,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (OJIBOBNAIKH != 0) hash ^= OJIBOBNAIKH.GetHashCode();
+      if (RogueMagicBattleConst != 0) hash ^= RogueMagicBattleConst.GetHashCode();
       if (IHKHNEGBELE != 0) hash ^= IHKHNEGBELE.GetHashCode();
       if (aOPOAONIIAM_ != null) hash ^= AOPOAONIIAM.GetHashCode();
       if (RogueSubMode != 0) hash ^= RogueSubMode.GetHashCode();
@@ -188,9 +188,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(26);
         output.WriteMessage(AOPOAONIIAM);
       }
-      if (OJIBOBNAIKH != 0) {
+      if (RogueMagicBattleConst != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(OJIBOBNAIKH);
+        output.WriteUInt32(RogueMagicBattleConst);
       }
       if (RogueSubMode != 0) {
         output.WriteRawTag(56);
@@ -214,9 +214,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(26);
         output.WriteMessage(AOPOAONIIAM);
       }
-      if (OJIBOBNAIKH != 0) {
+      if (RogueMagicBattleConst != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(OJIBOBNAIKH);
+        output.WriteUInt32(RogueMagicBattleConst);
       }
       if (RogueSubMode != 0) {
         output.WriteRawTag(56);
@@ -236,8 +236,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (OJIBOBNAIKH != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OJIBOBNAIKH);
+      if (RogueMagicBattleConst != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RogueMagicBattleConst);
       }
       if (IHKHNEGBELE != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IHKHNEGBELE);
@@ -260,8 +260,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.OJIBOBNAIKH != 0) {
-        OJIBOBNAIKH = other.OJIBOBNAIKH;
+      if (other.RogueMagicBattleConst != 0) {
+        RogueMagicBattleConst = other.RogueMagicBattleConst;
       }
       if (other.IHKHNEGBELE != 0) {
         IHKHNEGBELE = other.IHKHNEGBELE;
@@ -298,7 +298,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            OJIBOBNAIKH = input.ReadUInt32();
+            RogueMagicBattleConst = input.ReadUInt32();
             break;
           }
           case 56: {
@@ -332,7 +332,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            OJIBOBNAIKH = input.ReadUInt32();
+            RogueMagicBattleConst = input.ReadUInt32();
             break;
           }
           case 56: {

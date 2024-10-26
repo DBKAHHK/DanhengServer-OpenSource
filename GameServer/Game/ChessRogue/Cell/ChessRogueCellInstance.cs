@@ -189,14 +189,14 @@ public class ChessRogueCellInstance
         var info = new ChessRogueCell
         {
             CellStatus = CellStatus,
-            //PosY = (uint)PosY,
+            PosY = (uint)PosY,
             Id = (uint)GetCellId(),
-            //BlockType = (uint)BlockType,
+            BlockType = (uint)BlockType,
             IsUnlock = true,
             RoomId = (uint)RoomId,
-            //PLOEJLHMONC = true,
-            //PosX = (uint)GetRow(),
-            //MarkType = (uint)MarkType
+            IsUnlocked = true,
+            PosX = (uint)GetRow(),
+            MarkType = (uint)MarkType
         };
 
         if (CellAdvanceInfo.Count <= 0) return info;

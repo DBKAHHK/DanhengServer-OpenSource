@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static HeliobusChallengeUpdateScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiVIZWxpb2J1c0NoYWxsZW5nZVVwZGF0ZVNjTm90aWZ5LnByb3RvGhFKTkFN",
-            "R0ZDQURETi5wcm90byJCCh9IZWxpb2J1c0NoYWxsZW5nZVVwZGF0ZVNjTm90",
-            "aWZ5Eh8KCWNoYWxsZW5nZRgJIAEoCzIMLkpOQU1HRkNBREROQh6qAhtFZ2dM",
-            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "CiVIZWxpb2J1c0NoYWxsZW5nZVVwZGF0ZVNjTm90aWZ5LnByb3RvGhNDaGFs",
+            "bGVuZ2VMaXN0LnByb3RvIkQKH0hlbGlvYnVzQ2hhbGxlbmdlVXBkYXRlU2NO",
+            "b3RpZnkSIQoJY2hhbGxlbmdlGAkgASgLMg4uQ2hhbGxlbmdlTGlzdEIeqgIb",
+            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JNAMGFCADDNReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeliobusChallengeUpdateScNotify), global::EggLink.DanhengServer.Proto.HeliobusChallengeUpdateScNotify.Parser, new[]{ "Challenge" }, null, null, null, null)
           }));
@@ -85,10 +85,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "challenge" field.</summary>
     public const int ChallengeFieldNumber = 9;
-    private global::EggLink.DanhengServer.Proto.JNAMGFCADDN challenge_;
+    private global::EggLink.DanhengServer.Proto.ChallengeList challenge_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.JNAMGFCADDN Challenge {
+    public global::EggLink.DanhengServer.Proto.ChallengeList Challenge {
       get { return challenge_; }
       set {
         challenge_ = value;
@@ -182,7 +182,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.challenge_ != null) {
         if (challenge_ == null) {
-          Challenge = new global::EggLink.DanhengServer.Proto.JNAMGFCADDN();
+          Challenge = new global::EggLink.DanhengServer.Proto.ChallengeList();
         }
         Challenge.MergeFrom(other.Challenge);
       }
@@ -203,7 +203,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 74: {
             if (challenge_ == null) {
-              Challenge = new global::EggLink.DanhengServer.Proto.JNAMGFCADDN();
+              Challenge = new global::EggLink.DanhengServer.Proto.ChallengeList();
             }
             input.ReadMessage(Challenge);
             break;
@@ -225,7 +225,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 74: {
             if (challenge_ == null) {
-              Challenge = new global::EggLink.DanhengServer.Proto.JNAMGFCADDN();
+              Challenge = new global::EggLink.DanhengServer.Proto.ChallengeList();
             }
             input.ReadMessage(Challenge);
             break;
