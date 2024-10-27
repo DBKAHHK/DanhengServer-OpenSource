@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiJBZXRoZXJEaXZpZGVTcGlyaXRFeHBVcFNjUnNwLnByb3RvGhxBZXRoZXJE",
             "aXZpZGVTcGlyaXRJbmZvLnByb3RvInIKHEFldGhlckRpdmlkZVNwaXJpdEV4",
-            "cFVwU2NSc3ASLAoLYWV0aGVyX2luZm8YAyABKAsyFy5BZXRoZXJEaXZpZGVT",
-            "cGlyaXRJbmZvEg8KB3JldGNvZGUYBiABKA0SEwoLTlBHT01MRkdCSk0YCCAB",
-            "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "cFVwU2NSc3ASDwoHcmV0Y29kZRgNIAEoDRITCgtBS0ZNRkJLS0VPSRgLIAEo",
+            "DRIsCgthdmF0YXJfaW5mbxgPIAEoCzIXLkFldGhlckRpdmlkZVNwaXJpdElu",
+            "Zm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AetherDivideSpiritExpUpScRsp), global::EggLink.DanhengServer.Proto.AetherDivideSpiritExpUpScRsp.Parser, new[]{ "AetherInfo", "Retcode", "NPGOMLFGBJM" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AetherDivideSpiritExpUpScRsp), global::EggLink.DanhengServer.Proto.AetherDivideSpiritExpUpScRsp.Parser, new[]{ "Retcode", "AKFMFBKKEOI", "AvatarInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AetherDivideSpiritExpUpScRsp(AetherDivideSpiritExpUpScRsp other) : this() {
-      aetherInfo_ = other.aetherInfo_ != null ? other.aetherInfo_.Clone() : null;
       retcode_ = other.retcode_;
-      nPGOMLFGBJM_ = other.nPGOMLFGBJM_;
+      aKFMFBKKEOI_ = other.aKFMFBKKEOI_;
+      avatarInfo_ = other.avatarInfo_ != null ? other.avatarInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,20 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new AetherDivideSpiritExpUpScRsp(this);
     }
 
-    /// <summary>Field number for the "aether_info" field.</summary>
-    public const int AetherInfoFieldNumber = 3;
-    private global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfo aetherInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfo AetherInfo {
-      get { return aetherInfo_; }
-      set {
-        aetherInfo_ = value;
-      }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 6;
+    public const int RetcodeFieldNumber = 13;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,15 +98,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "NPGOMLFGBJM" field.</summary>
-    public const int NPGOMLFGBJMFieldNumber = 8;
-    private uint nPGOMLFGBJM_;
+    /// <summary>Field number for the "AKFMFBKKEOI" field.</summary>
+    public const int AKFMFBKKEOIFieldNumber = 11;
+    private uint aKFMFBKKEOI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NPGOMLFGBJM {
-      get { return nPGOMLFGBJM_; }
+    public uint AKFMFBKKEOI {
+      get { return aKFMFBKKEOI_; }
       set {
-        nPGOMLFGBJM_ = value;
+        aKFMFBKKEOI_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "avatar_info" field.</summary>
+    public const int AvatarInfoFieldNumber = 15;
+    private global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfo avatarInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfo AvatarInfo {
+      get { return avatarInfo_; }
+      set {
+        avatarInfo_ = value;
       }
     }
 
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(AetherInfo, other.AetherInfo)) return false;
       if (Retcode != other.Retcode) return false;
-      if (NPGOMLFGBJM != other.NPGOMLFGBJM) return false;
+      if (AKFMFBKKEOI != other.AKFMFBKKEOI) return false;
+      if (!object.Equals(AvatarInfo, other.AvatarInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,9 +147,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (aetherInfo_ != null) hash ^= AetherInfo.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (NPGOMLFGBJM != 0) hash ^= NPGOMLFGBJM.GetHashCode();
+      if (AKFMFBKKEOI != 0) hash ^= AKFMFBKKEOI.GetHashCode();
+      if (avatarInfo_ != null) hash ^= AvatarInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,17 +168,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (aetherInfo_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(AetherInfo);
+      if (AKFMFBKKEOI != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(AKFMFBKKEOI);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(104);
         output.WriteUInt32(Retcode);
       }
-      if (NPGOMLFGBJM != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(NPGOMLFGBJM);
+      if (avatarInfo_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(AvatarInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,17 +190,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (aetherInfo_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(AetherInfo);
+      if (AKFMFBKKEOI != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(AKFMFBKKEOI);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(104);
         output.WriteUInt32(Retcode);
       }
-      if (NPGOMLFGBJM != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(NPGOMLFGBJM);
+      if (avatarInfo_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(AvatarInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -212,14 +212,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (aetherInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AetherInfo);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (NPGOMLFGBJM != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NPGOMLFGBJM);
+      if (AKFMFBKKEOI != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AKFMFBKKEOI);
+      }
+      if (avatarInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AvatarInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -233,17 +233,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.aetherInfo_ != null) {
-        if (aetherInfo_ == null) {
-          AetherInfo = new global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfo();
-        }
-        AetherInfo.MergeFrom(other.AetherInfo);
-      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.NPGOMLFGBJM != 0) {
-        NPGOMLFGBJM = other.NPGOMLFGBJM;
+      if (other.AKFMFBKKEOI != 0) {
+        AKFMFBKKEOI = other.AKFMFBKKEOI;
+      }
+      if (other.avatarInfo_ != null) {
+        if (avatarInfo_ == null) {
+          AvatarInfo = new global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfo();
+        }
+        AvatarInfo.MergeFrom(other.AvatarInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -260,19 +260,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26: {
-            if (aetherInfo_ == null) {
-              AetherInfo = new global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfo();
-            }
-            input.ReadMessage(AetherInfo);
+          case 88: {
+            AKFMFBKKEOI = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 104: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 64: {
-            NPGOMLFGBJM = input.ReadUInt32();
+          case 122: {
+            if (avatarInfo_ == null) {
+              AvatarInfo = new global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfo();
+            }
+            input.ReadMessage(AvatarInfo);
             break;
           }
         }
@@ -290,19 +290,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26: {
-            if (aetherInfo_ == null) {
-              AetherInfo = new global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfo();
-            }
-            input.ReadMessage(AetherInfo);
+          case 88: {
+            AKFMFBKKEOI = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 104: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 64: {
-            NPGOMLFGBJM = input.ReadUInt32();
+          case 122: {
+            if (avatarInfo_ == null) {
+              AvatarInfo = new global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfo();
+            }
+            input.ReadMessage(AvatarInfo);
             break;
           }
         }

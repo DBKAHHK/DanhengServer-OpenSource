@@ -24,24 +24,24 @@ namespace EggLink.DanhengServer.Proto {
     static PVEBattleResultCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpQVkVCYXR0bGVSZXN1bHRDc1JlcS5wcm90bxoOQmF0dGxlT3AucHJvdG8a",
-            "FkJhdHRsZVN0YXRpc3RpY3MucHJvdG8aFUJhdHRsZUVuZFN0YXR1cy5wcm90",
-            "byLpAwoUUFZFQmF0dGxlUmVzdWx0Q3NSZXESOwoLTEFPSUdCSUNCQU8YBCAD",
-            "KAsyJi5QVkVCYXR0bGVSZXN1bHRDc1JlcS5MQU9JR0JJQ0JBT0VudHJ5EhEK",
-            "CWNvc3RfdGltZRgCIAEoDRIkCgplbmRfc3RhdHVzGAkgASgOMhAuQmF0dGxl",
-            "RW5kU3RhdHVzEhMKC0tORkVHR0RHRkdDGA8gASgIEhMKC3Jlc192ZXJzaW9u",
-            "GA0gASgNEhAKCHN0YWdlX2lkGAcgASgNEhUKDWlzX2F1dG9fZmlnaHQYCyAB",
-            "KAgSEQoJYmF0dGxlX2lkGAEgASgNEh4KA3N0dBgOIAEoCzIRLkJhdHRsZVN0",
-            "YXRpc3RpY3MSGAoQZGVidWdfZXh0cmFfaW5mbxgFIAEoCRIWCg5jbGllbnRf",
-            "dmVyc2lvbhgKIAEoDRIaCgdvcF9saXN0GAMgAygLMgkuQmF0dGxlT3ASEwoL",
-            "RUpFTFBCR05JTkYYBiABKA0SGgoSdHVybl9zbmFwc2hvdF9oYXNoGAwgASgM",
-            "EiIKGmlzX2FpX2NvbnNpZGVyX3VsdHJhX3NraWxsGAggASgIGjIKEExBT0lH",
-            "QklDQkFPRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgNOgI4AUIe",
+            "ChpQVkVCYXR0bGVSZXN1bHRDc1JlcS5wcm90bxoWQmF0dGxlU3RhdGlzdGlj",
+            "cy5wcm90bxoOQmF0dGxlT3AucHJvdG8aFUJhdHRsZUVuZFN0YXR1cy5wcm90",
+            "byLpAwoUUFZFQmF0dGxlUmVzdWx0Q3NSZXESJAoKZW5kX3N0YXR1cxgHIAEo",
+            "DjIQLkJhdHRsZUVuZFN0YXR1cxIRCgliYXR0bGVfaWQYBSABKA0SGAoQZGVi",
+            "dWdfZXh0cmFfaW5mbxgJIAEoCRIRCgljb3N0X3RpbWUYBiABKA0SFQoNaXNf",
+            "YXV0b19maWdodBgPIAEoCBIQCghzdGFnZV9pZBgCIAEoDRIaCgdvcF9saXN0",
+            "GAMgAygLMgkuQmF0dGxlT3ASEwoLT0dQSUNGTU5PRUQYCCABKAgSOwoLQkZB",
+            "QUJNQ0xPSUoYDiADKAsyJi5QVkVCYXR0bGVSZXN1bHRDc1JlcS5CRkFBQk1D",
+            "TE9JSkVudHJ5EhMKC3Jlc192ZXJzaW9uGAogASgNEh4KA3N0dBgMIAEoCzIR",
+            "LkJhdHRsZVN0YXRpc3RpY3MSFgoOY2xpZW50X3ZlcnNpb24YCyABKA0SGgoS",
+            "dHVybl9zbmFwc2hvdF9oYXNoGAQgASgMEiIKGmlzX2FpX2NvbnNpZGVyX3Vs",
+            "dHJhX3NraWxsGAEgASgIEhMKC0VDSEZQRkJLREVPGA0gASgNGjIKEEJGQUFC",
+            "TUNMT0lKRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgNOgI4AUIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BattleOpReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleEndStatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BattleStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleOpReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleEndStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PVEBattleResultCsReq), global::EggLink.DanhengServer.Proto.PVEBattleResultCsReq.Parser, new[]{ "LAOIGBICBAO", "CostTime", "EndStatus", "KNFEGGDGFGC", "ResVersion", "StageId", "IsAutoFight", "BattleId", "Stt", "DebugExtraInfo", "ClientVersion", "OpList", "EJELPBGNINF", "TurnSnapshotHash", "IsAiConsiderUltraSkill" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PVEBattleResultCsReq), global::EggLink.DanhengServer.Proto.PVEBattleResultCsReq.Parser, new[]{ "EndStatus", "BattleId", "DebugExtraInfo", "CostTime", "IsAutoFight", "StageId", "OpList", "OGPICFMNOED", "BFAABMCLOIJ", "ResVersion", "Stt", "ClientVersion", "TurnSnapshotHash", "IsAiConsiderUltraSkill", "ECHFPFBKDEO" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -83,21 +83,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PVEBattleResultCsReq(PVEBattleResultCsReq other) : this() {
-      lAOIGBICBAO_ = other.lAOIGBICBAO_.Clone();
-      costTime_ = other.costTime_;
       endStatus_ = other.endStatus_;
-      kNFEGGDGFGC_ = other.kNFEGGDGFGC_;
-      resVersion_ = other.resVersion_;
-      stageId_ = other.stageId_;
-      isAutoFight_ = other.isAutoFight_;
       battleId_ = other.battleId_;
-      stt_ = other.stt_ != null ? other.stt_.Clone() : null;
       debugExtraInfo_ = other.debugExtraInfo_;
-      clientVersion_ = other.clientVersion_;
+      costTime_ = other.costTime_;
+      isAutoFight_ = other.isAutoFight_;
+      stageId_ = other.stageId_;
       opList_ = other.opList_.Clone();
-      eJELPBGNINF_ = other.eJELPBGNINF_;
+      oGPICFMNOED_ = other.oGPICFMNOED_;
+      bFAABMCLOIJ_ = other.bFAABMCLOIJ_.Clone();
+      resVersion_ = other.resVersion_;
+      stt_ = other.stt_ != null ? other.stt_.Clone() : null;
+      clientVersion_ = other.clientVersion_;
       turnSnapshotHash_ = other.turnSnapshotHash_;
       isAiConsiderUltraSkill_ = other.isAiConsiderUltraSkill_;
+      eCHFPFBKDEO_ = other.eCHFPFBKDEO_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -107,31 +107,8 @@ namespace EggLink.DanhengServer.Proto {
       return new PVEBattleResultCsReq(this);
     }
 
-    /// <summary>Field number for the "LAOIGBICBAO" field.</summary>
-    public const int LAOIGBICBAOFieldNumber = 4;
-    private static readonly pbc::MapField<string, uint>.Codec _map_lAOIGBICBAO_codec
-        = new pbc::MapField<string, uint>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForUInt32(16, 0), 34);
-    private readonly pbc::MapField<string, uint> lAOIGBICBAO_ = new pbc::MapField<string, uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<string, uint> LAOIGBICBAO {
-      get { return lAOIGBICBAO_; }
-    }
-
-    /// <summary>Field number for the "cost_time" field.</summary>
-    public const int CostTimeFieldNumber = 2;
-    private uint costTime_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CostTime {
-      get { return costTime_; }
-      set {
-        costTime_ = value;
-      }
-    }
-
     /// <summary>Field number for the "end_status" field.</summary>
-    public const int EndStatusFieldNumber = 9;
+    public const int EndStatusFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.BattleEndStatus endStatus_ = global::EggLink.DanhengServer.Proto.BattleEndStatus.BattleEndNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -142,56 +119,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "KNFEGGDGFGC" field.</summary>
-    public const int KNFEGGDGFGCFieldNumber = 15;
-    private bool kNFEGGDGFGC_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool KNFEGGDGFGC {
-      get { return kNFEGGDGFGC_; }
-      set {
-        kNFEGGDGFGC_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "res_version" field.</summary>
-    public const int ResVersionFieldNumber = 13;
-    private uint resVersion_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ResVersion {
-      get { return resVersion_; }
-      set {
-        resVersion_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "stage_id" field.</summary>
-    public const int StageIdFieldNumber = 7;
-    private uint stageId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint StageId {
-      get { return stageId_; }
-      set {
-        stageId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "is_auto_fight" field.</summary>
-    public const int IsAutoFightFieldNumber = 11;
-    private bool isAutoFight_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsAutoFight {
-      get { return isAutoFight_; }
-      set {
-        isAutoFight_ = value;
-      }
-    }
-
     /// <summary>Field number for the "battle_id" field.</summary>
-    public const int BattleIdFieldNumber = 1;
+    public const int BattleIdFieldNumber = 5;
     private uint battleId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -202,20 +131,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "stt" field.</summary>
-    public const int SttFieldNumber = 14;
-    private global::EggLink.DanhengServer.Proto.BattleStatistics stt_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.BattleStatistics Stt {
-      get { return stt_; }
-      set {
-        stt_ = value;
-      }
-    }
-
     /// <summary>Field number for the "debug_extra_info" field.</summary>
-    public const int DebugExtraInfoFieldNumber = 5;
+    public const int DebugExtraInfoFieldNumber = 9;
     private string debugExtraInfo_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -226,15 +143,39 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "client_version" field.</summary>
-    public const int ClientVersionFieldNumber = 10;
-    private uint clientVersion_;
+    /// <summary>Field number for the "cost_time" field.</summary>
+    public const int CostTimeFieldNumber = 6;
+    private uint costTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ClientVersion {
-      get { return clientVersion_; }
+    public uint CostTime {
+      get { return costTime_; }
       set {
-        clientVersion_ = value;
+        costTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_auto_fight" field.</summary>
+    public const int IsAutoFightFieldNumber = 15;
+    private bool isAutoFight_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsAutoFight {
+      get { return isAutoFight_; }
+      set {
+        isAutoFight_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "stage_id" field.</summary>
+    public const int StageIdFieldNumber = 2;
+    private uint stageId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint StageId {
+      get { return stageId_; }
+      set {
+        stageId_ = value;
       }
     }
 
@@ -249,20 +190,67 @@ namespace EggLink.DanhengServer.Proto {
       get { return opList_; }
     }
 
-    /// <summary>Field number for the "EJELPBGNINF" field.</summary>
-    public const int EJELPBGNINFFieldNumber = 6;
-    private uint eJELPBGNINF_;
+    /// <summary>Field number for the "OGPICFMNOED" field.</summary>
+    public const int OGPICFMNOEDFieldNumber = 8;
+    private bool oGPICFMNOED_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint EJELPBGNINF {
-      get { return eJELPBGNINF_; }
+    public bool OGPICFMNOED {
+      get { return oGPICFMNOED_; }
       set {
-        eJELPBGNINF_ = value;
+        oGPICFMNOED_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "BFAABMCLOIJ" field.</summary>
+    public const int BFAABMCLOIJFieldNumber = 14;
+    private static readonly pbc::MapField<string, uint>.Codec _map_bFAABMCLOIJ_codec
+        = new pbc::MapField<string, uint>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForUInt32(16, 0), 114);
+    private readonly pbc::MapField<string, uint> bFAABMCLOIJ_ = new pbc::MapField<string, uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, uint> BFAABMCLOIJ {
+      get { return bFAABMCLOIJ_; }
+    }
+
+    /// <summary>Field number for the "res_version" field.</summary>
+    public const int ResVersionFieldNumber = 10;
+    private uint resVersion_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ResVersion {
+      get { return resVersion_; }
+      set {
+        resVersion_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "stt" field.</summary>
+    public const int SttFieldNumber = 12;
+    private global::EggLink.DanhengServer.Proto.BattleStatistics stt_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.BattleStatistics Stt {
+      get { return stt_; }
+      set {
+        stt_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "client_version" field.</summary>
+    public const int ClientVersionFieldNumber = 11;
+    private uint clientVersion_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ClientVersion {
+      get { return clientVersion_; }
+      set {
+        clientVersion_ = value;
       }
     }
 
     /// <summary>Field number for the "turn_snapshot_hash" field.</summary>
-    public const int TurnSnapshotHashFieldNumber = 12;
+    public const int TurnSnapshotHashFieldNumber = 4;
     private pb::ByteString turnSnapshotHash_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -274,7 +262,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_ai_consider_ultra_skill" field.</summary>
-    public const int IsAiConsiderUltraSkillFieldNumber = 8;
+    public const int IsAiConsiderUltraSkillFieldNumber = 1;
     private bool isAiConsiderUltraSkill_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -282,6 +270,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return isAiConsiderUltraSkill_; }
       set {
         isAiConsiderUltraSkill_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ECHFPFBKDEO" field.</summary>
+    public const int ECHFPFBKDEOFieldNumber = 13;
+    private uint eCHFPFBKDEO_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ECHFPFBKDEO {
+      get { return eCHFPFBKDEO_; }
+      set {
+        eCHFPFBKDEO_ = value;
       }
     }
 
@@ -300,21 +300,21 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!LAOIGBICBAO.Equals(other.LAOIGBICBAO)) return false;
-      if (CostTime != other.CostTime) return false;
       if (EndStatus != other.EndStatus) return false;
-      if (KNFEGGDGFGC != other.KNFEGGDGFGC) return false;
-      if (ResVersion != other.ResVersion) return false;
-      if (StageId != other.StageId) return false;
-      if (IsAutoFight != other.IsAutoFight) return false;
       if (BattleId != other.BattleId) return false;
-      if (!object.Equals(Stt, other.Stt)) return false;
       if (DebugExtraInfo != other.DebugExtraInfo) return false;
-      if (ClientVersion != other.ClientVersion) return false;
+      if (CostTime != other.CostTime) return false;
+      if (IsAutoFight != other.IsAutoFight) return false;
+      if (StageId != other.StageId) return false;
       if(!opList_.Equals(other.opList_)) return false;
-      if (EJELPBGNINF != other.EJELPBGNINF) return false;
+      if (OGPICFMNOED != other.OGPICFMNOED) return false;
+      if (!BFAABMCLOIJ.Equals(other.BFAABMCLOIJ)) return false;
+      if (ResVersion != other.ResVersion) return false;
+      if (!object.Equals(Stt, other.Stt)) return false;
+      if (ClientVersion != other.ClientVersion) return false;
       if (TurnSnapshotHash != other.TurnSnapshotHash) return false;
       if (IsAiConsiderUltraSkill != other.IsAiConsiderUltraSkill) return false;
+      if (ECHFPFBKDEO != other.ECHFPFBKDEO) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -322,21 +322,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= LAOIGBICBAO.GetHashCode();
-      if (CostTime != 0) hash ^= CostTime.GetHashCode();
       if (EndStatus != global::EggLink.DanhengServer.Proto.BattleEndStatus.BattleEndNone) hash ^= EndStatus.GetHashCode();
-      if (KNFEGGDGFGC != false) hash ^= KNFEGGDGFGC.GetHashCode();
-      if (ResVersion != 0) hash ^= ResVersion.GetHashCode();
-      if (StageId != 0) hash ^= StageId.GetHashCode();
-      if (IsAutoFight != false) hash ^= IsAutoFight.GetHashCode();
       if (BattleId != 0) hash ^= BattleId.GetHashCode();
-      if (stt_ != null) hash ^= Stt.GetHashCode();
       if (DebugExtraInfo.Length != 0) hash ^= DebugExtraInfo.GetHashCode();
-      if (ClientVersion != 0) hash ^= ClientVersion.GetHashCode();
+      if (CostTime != 0) hash ^= CostTime.GetHashCode();
+      if (IsAutoFight != false) hash ^= IsAutoFight.GetHashCode();
+      if (StageId != 0) hash ^= StageId.GetHashCode();
       hash ^= opList_.GetHashCode();
-      if (EJELPBGNINF != 0) hash ^= EJELPBGNINF.GetHashCode();
+      if (OGPICFMNOED != false) hash ^= OGPICFMNOED.GetHashCode();
+      hash ^= BFAABMCLOIJ.GetHashCode();
+      if (ResVersion != 0) hash ^= ResVersion.GetHashCode();
+      if (stt_ != null) hash ^= Stt.GetHashCode();
+      if (ClientVersion != 0) hash ^= ClientVersion.GetHashCode();
       if (TurnSnapshotHash.Length != 0) hash ^= TurnSnapshotHash.GetHashCode();
       if (IsAiConsiderUltraSkill != false) hash ^= IsAiConsiderUltraSkill.GetHashCode();
+      if (ECHFPFBKDEO != 0) hash ^= ECHFPFBKDEO.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -355,59 +355,59 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (BattleId != 0) {
+      if (IsAiConsiderUltraSkill != false) {
         output.WriteRawTag(8);
+        output.WriteBool(IsAiConsiderUltraSkill);
+      }
+      if (StageId != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(StageId);
+      }
+      opList_.WriteTo(output, _repeated_opList_codec);
+      if (TurnSnapshotHash.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(TurnSnapshotHash);
+      }
+      if (BattleId != 0) {
+        output.WriteRawTag(40);
         output.WriteUInt32(BattleId);
       }
       if (CostTime != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(48);
         output.WriteUInt32(CostTime);
       }
-      opList_.WriteTo(output, _repeated_opList_codec);
-      lAOIGBICBAO_.WriteTo(output, _map_lAOIGBICBAO_codec);
-      if (DebugExtraInfo.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(DebugExtraInfo);
-      }
-      if (EJELPBGNINF != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(EJELPBGNINF);
-      }
-      if (StageId != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(StageId);
-      }
-      if (IsAiConsiderUltraSkill != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(IsAiConsiderUltraSkill);
-      }
       if (EndStatus != global::EggLink.DanhengServer.Proto.BattleEndStatus.BattleEndNone) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(56);
         output.WriteEnum((int) EndStatus);
       }
-      if (ClientVersion != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(ClientVersion);
+      if (OGPICFMNOED != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(OGPICFMNOED);
       }
-      if (IsAutoFight != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(IsAutoFight);
-      }
-      if (TurnSnapshotHash.Length != 0) {
-        output.WriteRawTag(98);
-        output.WriteBytes(TurnSnapshotHash);
+      if (DebugExtraInfo.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(DebugExtraInfo);
       }
       if (ResVersion != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(80);
         output.WriteUInt32(ResVersion);
       }
+      if (ClientVersion != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(ClientVersion);
+      }
       if (stt_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(98);
         output.WriteMessage(Stt);
       }
-      if (KNFEGGDGFGC != false) {
+      if (ECHFPFBKDEO != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(ECHFPFBKDEO);
+      }
+      bFAABMCLOIJ_.WriteTo(output, _map_bFAABMCLOIJ_codec);
+      if (IsAutoFight != false) {
         output.WriteRawTag(120);
-        output.WriteBool(KNFEGGDGFGC);
+        output.WriteBool(IsAutoFight);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -419,59 +419,59 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BattleId != 0) {
+      if (IsAiConsiderUltraSkill != false) {
         output.WriteRawTag(8);
+        output.WriteBool(IsAiConsiderUltraSkill);
+      }
+      if (StageId != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(StageId);
+      }
+      opList_.WriteTo(ref output, _repeated_opList_codec);
+      if (TurnSnapshotHash.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(TurnSnapshotHash);
+      }
+      if (BattleId != 0) {
+        output.WriteRawTag(40);
         output.WriteUInt32(BattleId);
       }
       if (CostTime != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(48);
         output.WriteUInt32(CostTime);
       }
-      opList_.WriteTo(ref output, _repeated_opList_codec);
-      lAOIGBICBAO_.WriteTo(ref output, _map_lAOIGBICBAO_codec);
-      if (DebugExtraInfo.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(DebugExtraInfo);
-      }
-      if (EJELPBGNINF != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(EJELPBGNINF);
-      }
-      if (StageId != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(StageId);
-      }
-      if (IsAiConsiderUltraSkill != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(IsAiConsiderUltraSkill);
-      }
       if (EndStatus != global::EggLink.DanhengServer.Proto.BattleEndStatus.BattleEndNone) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(56);
         output.WriteEnum((int) EndStatus);
       }
-      if (ClientVersion != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(ClientVersion);
+      if (OGPICFMNOED != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(OGPICFMNOED);
       }
-      if (IsAutoFight != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(IsAutoFight);
-      }
-      if (TurnSnapshotHash.Length != 0) {
-        output.WriteRawTag(98);
-        output.WriteBytes(TurnSnapshotHash);
+      if (DebugExtraInfo.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(DebugExtraInfo);
       }
       if (ResVersion != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(80);
         output.WriteUInt32(ResVersion);
       }
+      if (ClientVersion != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(ClientVersion);
+      }
       if (stt_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(98);
         output.WriteMessage(Stt);
       }
-      if (KNFEGGDGFGC != false) {
+      if (ECHFPFBKDEO != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(ECHFPFBKDEO);
+      }
+      bFAABMCLOIJ_.WriteTo(ref output, _map_bFAABMCLOIJ_codec);
+      if (IsAutoFight != false) {
         output.WriteRawTag(120);
-        output.WriteBool(KNFEGGDGFGC);
+        output.WriteBool(IsAutoFight);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -483,46 +483,46 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += lAOIGBICBAO_.CalculateSize(_map_lAOIGBICBAO_codec);
-      if (CostTime != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CostTime);
-      }
       if (EndStatus != global::EggLink.DanhengServer.Proto.BattleEndStatus.BattleEndNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EndStatus);
-      }
-      if (KNFEGGDGFGC != false) {
-        size += 1 + 1;
-      }
-      if (ResVersion != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ResVersion);
-      }
-      if (StageId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(StageId);
-      }
-      if (IsAutoFight != false) {
-        size += 1 + 1;
       }
       if (BattleId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BattleId);
       }
-      if (stt_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stt);
-      }
       if (DebugExtraInfo.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DebugExtraInfo);
       }
-      if (ClientVersion != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ClientVersion);
+      if (CostTime != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CostTime);
+      }
+      if (IsAutoFight != false) {
+        size += 1 + 1;
+      }
+      if (StageId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(StageId);
       }
       size += opList_.CalculateSize(_repeated_opList_codec);
-      if (EJELPBGNINF != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EJELPBGNINF);
+      if (OGPICFMNOED != false) {
+        size += 1 + 1;
+      }
+      size += bFAABMCLOIJ_.CalculateSize(_map_bFAABMCLOIJ_codec);
+      if (ResVersion != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ResVersion);
+      }
+      if (stt_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stt);
+      }
+      if (ClientVersion != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ClientVersion);
       }
       if (TurnSnapshotHash.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(TurnSnapshotHash);
       }
       if (IsAiConsiderUltraSkill != false) {
         size += 1 + 1;
+      }
+      if (ECHFPFBKDEO != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ECHFPFBKDEO);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -536,27 +536,31 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      lAOIGBICBAO_.MergeFrom(other.lAOIGBICBAO_);
-      if (other.CostTime != 0) {
-        CostTime = other.CostTime;
-      }
       if (other.EndStatus != global::EggLink.DanhengServer.Proto.BattleEndStatus.BattleEndNone) {
         EndStatus = other.EndStatus;
       }
-      if (other.KNFEGGDGFGC != false) {
-        KNFEGGDGFGC = other.KNFEGGDGFGC;
+      if (other.BattleId != 0) {
+        BattleId = other.BattleId;
       }
-      if (other.ResVersion != 0) {
-        ResVersion = other.ResVersion;
+      if (other.DebugExtraInfo.Length != 0) {
+        DebugExtraInfo = other.DebugExtraInfo;
       }
-      if (other.StageId != 0) {
-        StageId = other.StageId;
+      if (other.CostTime != 0) {
+        CostTime = other.CostTime;
       }
       if (other.IsAutoFight != false) {
         IsAutoFight = other.IsAutoFight;
       }
-      if (other.BattleId != 0) {
-        BattleId = other.BattleId;
+      if (other.StageId != 0) {
+        StageId = other.StageId;
+      }
+      opList_.Add(other.opList_);
+      if (other.OGPICFMNOED != false) {
+        OGPICFMNOED = other.OGPICFMNOED;
+      }
+      bFAABMCLOIJ_.MergeFrom(other.bFAABMCLOIJ_);
+      if (other.ResVersion != 0) {
+        ResVersion = other.ResVersion;
       }
       if (other.stt_ != null) {
         if (stt_ == null) {
@@ -564,21 +568,17 @@ namespace EggLink.DanhengServer.Proto {
         }
         Stt.MergeFrom(other.Stt);
       }
-      if (other.DebugExtraInfo.Length != 0) {
-        DebugExtraInfo = other.DebugExtraInfo;
-      }
       if (other.ClientVersion != 0) {
         ClientVersion = other.ClientVersion;
-      }
-      opList_.Add(other.opList_);
-      if (other.EJELPBGNINF != 0) {
-        EJELPBGNINF = other.EJELPBGNINF;
       }
       if (other.TurnSnapshotHash.Length != 0) {
         TurnSnapshotHash = other.TurnSnapshotHash;
       }
       if (other.IsAiConsiderUltraSkill != false) {
         IsAiConsiderUltraSkill = other.IsAiConsiderUltraSkill;
+      }
+      if (other.ECHFPFBKDEO != 0) {
+        ECHFPFBKDEO = other.ECHFPFBKDEO;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -596,11 +596,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            BattleId = input.ReadUInt32();
+            IsAiConsiderUltraSkill = input.ReadBool();
             break;
           }
           case 16: {
-            CostTime = input.ReadUInt32();
+            StageId = input.ReadUInt32();
             break;
           }
           case 26: {
@@ -608,54 +608,54 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 34: {
-            lAOIGBICBAO_.AddEntriesFrom(input, _map_lAOIGBICBAO_codec);
-            break;
-          }
-          case 42: {
-            DebugExtraInfo = input.ReadString();
-            break;
-          }
-          case 48: {
-            EJELPBGNINF = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            StageId = input.ReadUInt32();
-            break;
-          }
-          case 64: {
-            IsAiConsiderUltraSkill = input.ReadBool();
-            break;
-          }
-          case 72: {
-            EndStatus = (global::EggLink.DanhengServer.Proto.BattleEndStatus) input.ReadEnum();
-            break;
-          }
-          case 80: {
-            ClientVersion = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            IsAutoFight = input.ReadBool();
-            break;
-          }
-          case 98: {
             TurnSnapshotHash = input.ReadBytes();
             break;
           }
-          case 104: {
+          case 40: {
+            BattleId = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            CostTime = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            EndStatus = (global::EggLink.DanhengServer.Proto.BattleEndStatus) input.ReadEnum();
+            break;
+          }
+          case 64: {
+            OGPICFMNOED = input.ReadBool();
+            break;
+          }
+          case 74: {
+            DebugExtraInfo = input.ReadString();
+            break;
+          }
+          case 80: {
             ResVersion = input.ReadUInt32();
             break;
           }
-          case 114: {
+          case 88: {
+            ClientVersion = input.ReadUInt32();
+            break;
+          }
+          case 98: {
             if (stt_ == null) {
               Stt = new global::EggLink.DanhengServer.Proto.BattleStatistics();
             }
             input.ReadMessage(Stt);
             break;
           }
+          case 104: {
+            ECHFPFBKDEO = input.ReadUInt32();
+            break;
+          }
+          case 114: {
+            bFAABMCLOIJ_.AddEntriesFrom(input, _map_bFAABMCLOIJ_codec);
+            break;
+          }
           case 120: {
-            KNFEGGDGFGC = input.ReadBool();
+            IsAutoFight = input.ReadBool();
             break;
           }
         }
@@ -674,11 +674,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            BattleId = input.ReadUInt32();
+            IsAiConsiderUltraSkill = input.ReadBool();
             break;
           }
           case 16: {
-            CostTime = input.ReadUInt32();
+            StageId = input.ReadUInt32();
             break;
           }
           case 26: {
@@ -686,54 +686,54 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 34: {
-            lAOIGBICBAO_.AddEntriesFrom(ref input, _map_lAOIGBICBAO_codec);
-            break;
-          }
-          case 42: {
-            DebugExtraInfo = input.ReadString();
-            break;
-          }
-          case 48: {
-            EJELPBGNINF = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            StageId = input.ReadUInt32();
-            break;
-          }
-          case 64: {
-            IsAiConsiderUltraSkill = input.ReadBool();
-            break;
-          }
-          case 72: {
-            EndStatus = (global::EggLink.DanhengServer.Proto.BattleEndStatus) input.ReadEnum();
-            break;
-          }
-          case 80: {
-            ClientVersion = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            IsAutoFight = input.ReadBool();
-            break;
-          }
-          case 98: {
             TurnSnapshotHash = input.ReadBytes();
             break;
           }
-          case 104: {
+          case 40: {
+            BattleId = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            CostTime = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            EndStatus = (global::EggLink.DanhengServer.Proto.BattleEndStatus) input.ReadEnum();
+            break;
+          }
+          case 64: {
+            OGPICFMNOED = input.ReadBool();
+            break;
+          }
+          case 74: {
+            DebugExtraInfo = input.ReadString();
+            break;
+          }
+          case 80: {
             ResVersion = input.ReadUInt32();
             break;
           }
-          case 114: {
+          case 88: {
+            ClientVersion = input.ReadUInt32();
+            break;
+          }
+          case 98: {
             if (stt_ == null) {
               Stt = new global::EggLink.DanhengServer.Proto.BattleStatistics();
             }
             input.ReadMessage(Stt);
             break;
           }
+          case 104: {
+            ECHFPFBKDEO = input.ReadUInt32();
+            break;
+          }
+          case 114: {
+            bFAABMCLOIJ_.AddEntriesFrom(ref input, _map_bFAABMCLOIJ_codec);
+            break;
+          }
           case 120: {
-            KNFEGGDGFGC = input.ReadBool();
+            IsAutoFight = input.ReadBool();
             break;
           }
         }

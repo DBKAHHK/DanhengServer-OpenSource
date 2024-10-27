@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static EnterSceneByServerScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiBFbnRlclNjZW5lQnlTZXJ2ZXJTY05vdGlmeS5wcm90bxoWRW50ZXJTY2Vu",
-            "ZVJlYXNvbi5wcm90bxoQTGluZXVwSW5mby5wcm90bxoPU2NlbmVJbmZvLnBy",
-            "b3RvIncKGkVudGVyU2NlbmVCeVNlcnZlclNjTm90aWZ5EhkKBXNjZW5lGA0g",
+            "CiBFbnRlclNjZW5lQnlTZXJ2ZXJTY05vdGlmeS5wcm90bxoPU2NlbmVJbmZv",
+            "LnByb3RvGhBMaW5ldXBJbmZvLnByb3RvGhZFbnRlclNjZW5lUmVhc29uLnBy",
+            "b3RvIncKGkVudGVyU2NlbmVCeVNlcnZlclNjTm90aWZ5EhkKBXNjZW5lGAIg",
             "ASgLMgouU2NlbmVJbmZvEhsKBmxpbmV1cBgJIAEoCzILLkxpbmV1cEluZm8S",
-            "IQoGcmVhc29uGAwgASgOMhEuRW50ZXJTY2VuZVJlYXNvbkIeqgIbRWdnTGlu",
+            "IQoGcmVhc29uGAogASgOMhEuRW50ZXJTY2VuZVJlYXNvbkIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EnterSceneReasonReflection.Descriptor, global::EggLink.DanhengServer.Proto.LineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.EnterSceneReasonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EnterSceneByServerScNotify), global::EggLink.DanhengServer.Proto.EnterSceneByServerScNotify.Parser, new[]{ "Scene", "Lineup", "Reason" }, null, null, null, null)
           }));
@@ -88,7 +88,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "scene" field.</summary>
-    public const int SceneFieldNumber = 13;
+    public const int SceneFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.SceneInfo scene_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "reason" field.</summary>
-    public const int ReasonFieldNumber = 12;
+    public const int ReasonFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.EnterSceneReason reason_ = global::EggLink.DanhengServer.Proto.EnterSceneReason.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -169,17 +169,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (scene_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Scene);
+      }
       if (lineup_ != null) {
         output.WriteRawTag(74);
         output.WriteMessage(Lineup);
       }
       if (Reason != global::EggLink.DanhengServer.Proto.EnterSceneReason.None) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(80);
         output.WriteEnum((int) Reason);
-      }
-      if (scene_ != null) {
-        output.WriteRawTag(106);
-        output.WriteMessage(Scene);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -191,17 +191,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (scene_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Scene);
+      }
       if (lineup_ != null) {
         output.WriteRawTag(74);
         output.WriteMessage(Lineup);
       }
       if (Reason != global::EggLink.DanhengServer.Proto.EnterSceneReason.None) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(80);
         output.WriteEnum((int) Reason);
-      }
-      if (scene_ != null) {
-        output.WriteRawTag(106);
-        output.WriteMessage(Scene);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -264,6 +264,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 18: {
+            if (scene_ == null) {
+              Scene = new global::EggLink.DanhengServer.Proto.SceneInfo();
+            }
+            input.ReadMessage(Scene);
+            break;
+          }
           case 74: {
             if (lineup_ == null) {
               Lineup = new global::EggLink.DanhengServer.Proto.LineupInfo();
@@ -271,15 +278,8 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(Lineup);
             break;
           }
-          case 96: {
+          case 80: {
             Reason = (global::EggLink.DanhengServer.Proto.EnterSceneReason) input.ReadEnum();
-            break;
-          }
-          case 106: {
-            if (scene_ == null) {
-              Scene = new global::EggLink.DanhengServer.Proto.SceneInfo();
-            }
-            input.ReadMessage(Scene);
             break;
           }
         }
@@ -297,6 +297,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 18: {
+            if (scene_ == null) {
+              Scene = new global::EggLink.DanhengServer.Proto.SceneInfo();
+            }
+            input.ReadMessage(Scene);
+            break;
+          }
           case 74: {
             if (lineup_ == null) {
               Lineup = new global::EggLink.DanhengServer.Proto.LineupInfo();
@@ -304,15 +311,8 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(Lineup);
             break;
           }
-          case 96: {
+          case 80: {
             Reason = (global::EggLink.DanhengServer.Proto.EnterSceneReason) input.ReadEnum();
-            break;
-          }
-          case 106: {
-            if (scene_ == null) {
-              Scene = new global::EggLink.DanhengServer.Proto.SceneInfo();
-            }
-            input.ReadMessage(Scene);
             break;
           }
         }

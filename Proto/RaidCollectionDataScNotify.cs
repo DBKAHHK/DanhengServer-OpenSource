@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static RaidCollectionDataScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiBSYWlkQ29sbGVjdGlvbkRhdGFTY05vdGlmeS5wcm90bxoRS09HQkRITk1N",
-            "REYucHJvdG8iQwoaUmFpZENvbGxlY3Rpb25EYXRhU2NOb3RpZnkSJQoPY29s",
-            "bGVjdGlvbl9pbmZvGAQgASgLMgwuS09HQkRITk1NREZCHqoCG0VnZ0xpbmsu",
+            "CiBSYWlkQ29sbGVjdGlvbkRhdGFTY05vdGlmeS5wcm90bxoRT0tGTk5QTUFD",
+            "TU8ucHJvdG8iQwoaUmFpZENvbGxlY3Rpb25EYXRhU2NOb3RpZnkSJQoPY29s",
+            "bGVjdGlvbl9pbmZvGAMgASgLMgwuT0tGTk5QTUFDTU9CHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KOGBDHNMMDFReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OKFNNPMACMOReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RaidCollectionDataScNotify), global::EggLink.DanhengServer.Proto.RaidCollectionDataScNotify.Parser, new[]{ "CollectionInfo" }, null, null, null, null)
           }));
@@ -84,11 +84,11 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "collection_info" field.</summary>
-    public const int CollectionInfoFieldNumber = 4;
-    private global::EggLink.DanhengServer.Proto.KOGBDHNMMDF collectionInfo_;
+    public const int CollectionInfoFieldNumber = 3;
+    private global::EggLink.DanhengServer.Proto.OKFNNPMACMO collectionInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.KOGBDHNMMDF CollectionInfo {
+    public global::EggLink.DanhengServer.Proto.OKFNNPMACMO CollectionInfo {
       get { return collectionInfo_; }
       set {
         collectionInfo_ = value;
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (collectionInfo_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(26);
         output.WriteMessage(CollectionInfo);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (collectionInfo_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(26);
         output.WriteMessage(CollectionInfo);
       }
       if (_unknownFields != null) {
@@ -182,7 +182,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.collectionInfo_ != null) {
         if (collectionInfo_ == null) {
-          CollectionInfo = new global::EggLink.DanhengServer.Proto.KOGBDHNMMDF();
+          CollectionInfo = new global::EggLink.DanhengServer.Proto.OKFNNPMACMO();
         }
         CollectionInfo.MergeFrom(other.CollectionInfo);
       }
@@ -201,9 +201,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
+          case 26: {
             if (collectionInfo_ == null) {
-              CollectionInfo = new global::EggLink.DanhengServer.Proto.KOGBDHNMMDF();
+              CollectionInfo = new global::EggLink.DanhengServer.Proto.OKFNNPMACMO();
             }
             input.ReadMessage(CollectionInfo);
             break;
@@ -223,9 +223,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
+          case 26: {
             if (collectionInfo_ == null) {
-              CollectionInfo = new global::EggLink.DanhengServer.Proto.KOGBDHNMMDF();
+              CollectionInfo = new global::EggLink.DanhengServer.Proto.OKFNNPMACMO();
             }
             input.ReadMessage(CollectionInfo);
             break;

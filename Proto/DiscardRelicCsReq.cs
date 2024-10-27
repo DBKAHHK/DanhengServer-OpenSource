@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdEaXNjYXJkUmVsaWNDc1JlcS5wcm90byJaChFEaXNjYXJkUmVsaWNDc1Jl",
-            "cRISCgppc19kaXNjYXJkGAMgASgIEhMKC09LS0pGSUJOR0NFGAsgASgIEhwK",
-            "FHJlbGljX3VuaXF1ZV9pZF9saXN0GAogAygNQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "cRITCgtGSktHQk1HTExHTBgHIAEoCBISCgppc19kaXNjYXJkGAYgASgIEhwK",
+            "FHJlbGljX3VuaXF1ZV9pZF9saXN0GA8gAygNQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DiscardRelicCsReq), global::EggLink.DanhengServer.Proto.DiscardRelicCsReq.Parser, new[]{ "IsDiscard", "OKKJFIBNGCE", "RelicUniqueIdList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DiscardRelicCsReq), global::EggLink.DanhengServer.Proto.DiscardRelicCsReq.Parser, new[]{ "FJKGBMGLLGL", "IsDiscard", "RelicUniqueIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DiscardRelicCsReq(DiscardRelicCsReq other) : this() {
+      fJKGBMGLLGL_ = other.fJKGBMGLLGL_;
       isDiscard_ = other.isDiscard_;
-      oKKJFIBNGCE_ = other.oKKJFIBNGCE_;
       relicUniqueIdList_ = other.relicUniqueIdList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -85,8 +85,20 @@ namespace EggLink.DanhengServer.Proto {
       return new DiscardRelicCsReq(this);
     }
 
+    /// <summary>Field number for the "FJKGBMGLLGL" field.</summary>
+    public const int FJKGBMGLLGLFieldNumber = 7;
+    private bool fJKGBMGLLGL_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool FJKGBMGLLGL {
+      get { return fJKGBMGLLGL_; }
+      set {
+        fJKGBMGLLGL_ = value;
+      }
+    }
+
     /// <summary>Field number for the "is_discard" field.</summary>
-    public const int IsDiscardFieldNumber = 3;
+    public const int IsDiscardFieldNumber = 6;
     private bool isDiscard_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,22 +109,10 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "OKKJFIBNGCE" field.</summary>
-    public const int OKKJFIBNGCEFieldNumber = 11;
-    private bool oKKJFIBNGCE_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool OKKJFIBNGCE {
-      get { return oKKJFIBNGCE_; }
-      set {
-        oKKJFIBNGCE_ = value;
-      }
-    }
-
     /// <summary>Field number for the "relic_unique_id_list" field.</summary>
-    public const int RelicUniqueIdListFieldNumber = 10;
+    public const int RelicUniqueIdListFieldNumber = 15;
     private static readonly pb::FieldCodec<uint> _repeated_relicUniqueIdList_codec
-        = pb::FieldCodec.ForUInt32(82);
+        = pb::FieldCodec.ForUInt32(122);
     private readonly pbc::RepeatedField<uint> relicUniqueIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -135,8 +135,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (FJKGBMGLLGL != other.FJKGBMGLLGL) return false;
       if (IsDiscard != other.IsDiscard) return false;
-      if (OKKJFIBNGCE != other.OKKJFIBNGCE) return false;
       if(!relicUniqueIdList_.Equals(other.relicUniqueIdList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -145,8 +145,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (FJKGBMGLLGL != false) hash ^= FJKGBMGLLGL.GetHashCode();
       if (IsDiscard != false) hash ^= IsDiscard.GetHashCode();
-      if (OKKJFIBNGCE != false) hash ^= OKKJFIBNGCE.GetHashCode();
       hash ^= relicUniqueIdList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -167,14 +167,14 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (IsDiscard != false) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(48);
         output.WriteBool(IsDiscard);
       }
-      relicUniqueIdList_.WriteTo(output, _repeated_relicUniqueIdList_codec);
-      if (OKKJFIBNGCE != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(OKKJFIBNGCE);
+      if (FJKGBMGLLGL != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(FJKGBMGLLGL);
       }
+      relicUniqueIdList_.WriteTo(output, _repeated_relicUniqueIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -186,14 +186,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IsDiscard != false) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(48);
         output.WriteBool(IsDiscard);
       }
-      relicUniqueIdList_.WriteTo(ref output, _repeated_relicUniqueIdList_codec);
-      if (OKKJFIBNGCE != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(OKKJFIBNGCE);
+      if (FJKGBMGLLGL != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(FJKGBMGLLGL);
       }
+      relicUniqueIdList_.WriteTo(ref output, _repeated_relicUniqueIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -204,10 +204,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsDiscard != false) {
+      if (FJKGBMGLLGL != false) {
         size += 1 + 1;
       }
-      if (OKKJFIBNGCE != false) {
+      if (IsDiscard != false) {
         size += 1 + 1;
       }
       size += relicUniqueIdList_.CalculateSize(_repeated_relicUniqueIdList_codec);
@@ -223,11 +223,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.FJKGBMGLLGL != false) {
+        FJKGBMGLLGL = other.FJKGBMGLLGL;
+      }
       if (other.IsDiscard != false) {
         IsDiscard = other.IsDiscard;
-      }
-      if (other.OKKJFIBNGCE != false) {
-        OKKJFIBNGCE = other.OKKJFIBNGCE;
       }
       relicUniqueIdList_.Add(other.relicUniqueIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -245,17 +245,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 48: {
             IsDiscard = input.ReadBool();
             break;
           }
-          case 82:
-          case 80: {
-            relicUniqueIdList_.AddEntriesFrom(input, _repeated_relicUniqueIdList_codec);
+          case 56: {
+            FJKGBMGLLGL = input.ReadBool();
             break;
           }
-          case 88: {
-            OKKJFIBNGCE = input.ReadBool();
+          case 122:
+          case 120: {
+            relicUniqueIdList_.AddEntriesFrom(input, _repeated_relicUniqueIdList_codec);
             break;
           }
         }
@@ -273,17 +273,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 48: {
             IsDiscard = input.ReadBool();
             break;
           }
-          case 82:
-          case 80: {
-            relicUniqueIdList_.AddEntriesFrom(ref input, _repeated_relicUniqueIdList_codec);
+          case 56: {
+            FJKGBMGLLGL = input.ReadBool();
             break;
           }
-          case 88: {
-            OKKJFIBNGCE = input.ReadBool();
+          case 122:
+          case 120: {
+            relicUniqueIdList_.AddEntriesFrom(ref input, _repeated_relicUniqueIdList_codec);
             break;
           }
         }

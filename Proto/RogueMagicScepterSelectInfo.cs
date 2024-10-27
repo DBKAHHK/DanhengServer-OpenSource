@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFSb2d1ZU1hZ2ljU2NlcHRlclNlbGVjdEluZm8ucHJvdG8aF1JvZ3VlTWFn",
             "aWNTY2VwdGVyLnByb3RvImIKG1JvZ3VlTWFnaWNTY2VwdGVyU2VsZWN0SW5m",
-            "bxIrCg9zZWxlY3Rfc2NlcHRlcnMYCyADKAsyEi5Sb2d1ZU1hZ2ljU2NlcHRl",
-            "chIWCg5zZWxlY3RfaGludF9pZBgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "bxIrCg9zZWxlY3Rfc2NlcHRlcnMYBCADKAsyEi5Sb2d1ZU1hZ2ljU2NlcHRl",
+            "chIWCg5zZWxlY3RfaGludF9pZBgOIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicScepterReflection.Descriptor, },
@@ -86,9 +86,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_scepters" field.</summary>
-    public const int SelectSceptersFieldNumber = 11;
+    public const int SelectSceptersFieldNumber = 4;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueMagicScepter> _repeated_selectScepters_codec
-        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.RogueMagicScepter.Parser);
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.RogueMagicScepter.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicScepter> selectScepters_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicScepter>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_hint_id" field.</summary>
-    public const int SelectHintIdFieldNumber = 9;
+    public const int SelectHintIdFieldNumber = 14;
     private uint selectHintId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      selectScepters_.WriteTo(output, _repeated_selectScepters_codec);
       if (SelectHintId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(112);
         output.WriteUInt32(SelectHintId);
       }
-      selectScepters_.WriteTo(output, _repeated_selectScepters_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      selectScepters_.WriteTo(ref output, _repeated_selectScepters_codec);
       if (SelectHintId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(112);
         output.WriteUInt32(SelectHintId);
       }
-      selectScepters_.WriteTo(ref output, _repeated_selectScepters_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -217,12 +217,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
-            SelectHintId = input.ReadUInt32();
+          case 34: {
+            selectScepters_.AddEntriesFrom(input, _repeated_selectScepters_codec);
             break;
           }
-          case 90: {
-            selectScepters_.AddEntriesFrom(input, _repeated_selectScepters_codec);
+          case 112: {
+            SelectHintId = input.ReadUInt32();
             break;
           }
         }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
-            SelectHintId = input.ReadUInt32();
+          case 34: {
+            selectScepters_.AddEntriesFrom(ref input, _repeated_selectScepters_codec);
             break;
           }
-          case 90: {
-            selectScepters_.AddEntriesFrom(ref input, _repeated_selectScepters_codec);
+          case 112: {
+            SelectHintId = input.ReadUInt32();
             break;
           }
         }

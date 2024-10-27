@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static SocialEventServerCacheReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxTb2NpYWxFdmVudFNlcnZlckNhY2hlLnByb3RvIlYKFlNvY2lhbEV2ZW50",
-            "U2VydmVyQ2FjaGUSCgoCaWQYAyABKA0SDwoHQWRkQ29pbhgNIAEoDRIPCgdT",
-            "dWJDb2luGAsgASgNEg4KBlNyY1VpZBgHIAEoDUIeqgIbRWdnTGluay5EYW5o",
-            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChxTb2NpYWxFdmVudFNlcnZlckNhY2hlLnByb3RvIlkKFlNvY2lhbEV2ZW50",
+            "U2VydmVyQ2FjaGUSCgoCaWQYDiABKA0SEAoIc3ViX2NvaW4YBCABKA0SDwoH",
+            "c3JjX3VpZBgMIAEoDRIQCghhZGRfY29pbhgNIAEoDUIeqgIbRWdnTGluay5E",
+            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SocialEventServerCache), global::EggLink.DanhengServer.Proto.SocialEventServerCache.Parser, new[]{ "Id", "AddCoin", "SubCoin", "SrcUid" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SocialEventServerCache), global::EggLink.DanhengServer.Proto.SocialEventServerCache.Parser, new[]{ "Id", "SubCoin", "SrcUid", "AddCoin" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SocialEventServerCache(SocialEventServerCache other) : this() {
       id_ = other.id_;
-      addCoin_ = other.addCoin_;
       subCoin_ = other.subCoin_;
       srcUid_ = other.srcUid_;
+      addCoin_ = other.addCoin_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 3;
+    public const int IdFieldNumber = 14;
     private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,20 +98,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "AddCoin" field.</summary>
-    public const int AddCoinFieldNumber = 13;
-    private uint addCoin_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint AddCoin {
-      get { return addCoin_; }
-      set {
-        addCoin_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "SubCoin" field.</summary>
-    public const int SubCoinFieldNumber = 11;
+    /// <summary>Field number for the "sub_coin" field.</summary>
+    public const int SubCoinFieldNumber = 4;
     private uint subCoin_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,8 +110,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "SrcUid" field.</summary>
-    public const int SrcUidFieldNumber = 7;
+    /// <summary>Field number for the "src_uid" field.</summary>
+    public const int SrcUidFieldNumber = 12;
     private uint srcUid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -131,6 +119,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return srcUid_; }
       set {
         srcUid_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "add_coin" field.</summary>
+    public const int AddCoinFieldNumber = 13;
+    private uint addCoin_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint AddCoin {
+      get { return addCoin_; }
+      set {
+        addCoin_ = value;
       }
     }
 
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Id != other.Id) return false;
-      if (AddCoin != other.AddCoin) return false;
       if (SubCoin != other.SubCoin) return false;
       if (SrcUid != other.SrcUid) return false;
+      if (AddCoin != other.AddCoin) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,9 +161,9 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
-      if (AddCoin != 0) hash ^= AddCoin.GetHashCode();
       if (SubCoin != 0) hash ^= SubCoin.GetHashCode();
       if (SrcUid != 0) hash ^= SrcUid.GetHashCode();
+      if (AddCoin != 0) hash ^= AddCoin.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,21 +182,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Id != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(Id);
+      if (SubCoin != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(SubCoin);
       }
       if (SrcUid != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(96);
         output.WriteUInt32(SrcUid);
-      }
-      if (SubCoin != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(SubCoin);
       }
       if (AddCoin != 0) {
         output.WriteRawTag(104);
         output.WriteUInt32(AddCoin);
+      }
+      if (Id != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(Id);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -208,21 +208,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(Id);
+      if (SubCoin != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(SubCoin);
       }
       if (SrcUid != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(96);
         output.WriteUInt32(SrcUid);
-      }
-      if (SubCoin != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(SubCoin);
       }
       if (AddCoin != 0) {
         output.WriteRawTag(104);
         output.WriteUInt32(AddCoin);
+      }
+      if (Id != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(Id);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -237,14 +237,14 @@ namespace EggLink.DanhengServer.Proto {
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
       }
-      if (AddCoin != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AddCoin);
-      }
       if (SubCoin != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SubCoin);
       }
       if (SrcUid != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SrcUid);
+      }
+      if (AddCoin != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AddCoin);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -261,14 +261,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Id != 0) {
         Id = other.Id;
       }
-      if (other.AddCoin != 0) {
-        AddCoin = other.AddCoin;
-      }
       if (other.SubCoin != 0) {
         SubCoin = other.SubCoin;
       }
       if (other.SrcUid != 0) {
         SrcUid = other.SrcUid;
+      }
+      if (other.AddCoin != 0) {
+        AddCoin = other.AddCoin;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            Id = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            SrcUid = input.ReadUInt32();
-            break;
-          }
-          case 88: {
+          case 32: {
             SubCoin = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            SrcUid = input.ReadUInt32();
             break;
           }
           case 104: {
             AddCoin = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            Id = input.ReadUInt32();
             break;
           }
         }
@@ -316,20 +316,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            Id = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            SrcUid = input.ReadUInt32();
-            break;
-          }
-          case 88: {
+          case 32: {
             SubCoin = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            SrcUid = input.ReadUInt32();
             break;
           }
           case 104: {
             AddCoin = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            Id = input.ReadUInt32();
             break;
           }
         }

@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static WaypointReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg5XYXlwb2ludC5wcm90byI7CghXYXlwb2ludBIKCgJpZBgOIAEoDRIOCgZp",
-            "c19uZXcYASABKAgSEwoLR05GRENPSEdHRlAYBSABKA1CHqoCG0VnZ0xpbmsu",
+            "Cg5XYXlwb2ludC5wcm90byI7CghXYXlwb2ludBIKCgJpZBgMIAEoDRIOCgZp",
+            "c19uZXcYBCABKAgSEwoLRUNCREhJSUxITkQYBiABKA1CHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Waypoint), global::EggLink.DanhengServer.Proto.Waypoint.Parser, new[]{ "Id", "IsNew", "GNFDCOHGGFP" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Waypoint), global::EggLink.DanhengServer.Proto.Waypoint.Parser, new[]{ "Id", "IsNew", "ECBDHIILHND" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     public Waypoint(Waypoint other) : this() {
       id_ = other.id_;
       isNew_ = other.isNew_;
-      gNFDCOHGGFP_ = other.gNFDCOHGGFP_;
+      eCBDHIILHND_ = other.eCBDHIILHND_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 14;
+    public const int IdFieldNumber = 12;
     private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_new" field.</summary>
-    public const int IsNewFieldNumber = 1;
+    public const int IsNewFieldNumber = 4;
     private bool isNew_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -108,15 +108,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "GNFDCOHGGFP" field.</summary>
-    public const int GNFDCOHGGFPFieldNumber = 5;
-    private uint gNFDCOHGGFP_;
+    /// <summary>Field number for the "ECBDHIILHND" field.</summary>
+    public const int ECBDHIILHNDFieldNumber = 6;
+    private uint eCBDHIILHND_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GNFDCOHGGFP {
-      get { return gNFDCOHGGFP_; }
+    public uint ECBDHIILHND {
+      get { return eCBDHIILHND_; }
       set {
-        gNFDCOHGGFP_ = value;
+        eCBDHIILHND_ = value;
       }
     }
 
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (Id != other.Id) return false;
       if (IsNew != other.IsNew) return false;
-      if (GNFDCOHGGFP != other.GNFDCOHGGFP) return false;
+      if (ECBDHIILHND != other.ECBDHIILHND) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,7 +147,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
       if (IsNew != false) hash ^= IsNew.GetHashCode();
-      if (GNFDCOHGGFP != 0) hash ^= GNFDCOHGGFP.GetHashCode();
+      if (ECBDHIILHND != 0) hash ^= ECBDHIILHND.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,15 +167,15 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (IsNew != false) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(32);
         output.WriteBool(IsNew);
       }
-      if (GNFDCOHGGFP != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(GNFDCOHGGFP);
+      if (ECBDHIILHND != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(ECBDHIILHND);
       }
       if (Id != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(96);
         output.WriteUInt32(Id);
       }
       if (_unknownFields != null) {
@@ -189,15 +189,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IsNew != false) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(32);
         output.WriteBool(IsNew);
       }
-      if (GNFDCOHGGFP != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(GNFDCOHGGFP);
+      if (ECBDHIILHND != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(ECBDHIILHND);
       }
       if (Id != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(96);
         output.WriteUInt32(Id);
       }
       if (_unknownFields != null) {
@@ -216,8 +216,8 @@ namespace EggLink.DanhengServer.Proto {
       if (IsNew != false) {
         size += 1 + 1;
       }
-      if (GNFDCOHGGFP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GNFDCOHGGFP);
+      if (ECBDHIILHND != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ECBDHIILHND);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -237,8 +237,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.IsNew != false) {
         IsNew = other.IsNew;
       }
-      if (other.GNFDCOHGGFP != 0) {
-        GNFDCOHGGFP = other.GNFDCOHGGFP;
+      if (other.ECBDHIILHND != 0) {
+        ECBDHIILHND = other.ECBDHIILHND;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -255,15 +255,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 32: {
             IsNew = input.ReadBool();
             break;
           }
-          case 40: {
-            GNFDCOHGGFP = input.ReadUInt32();
+          case 48: {
+            ECBDHIILHND = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 96: {
             Id = input.ReadUInt32();
             break;
           }
@@ -282,15 +282,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 32: {
             IsNew = input.ReadBool();
             break;
           }
-          case 40: {
-            GNFDCOHGGFP = input.ReadUInt32();
+          case 48: {
+            ECBDHIILHND = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 96: {
             Id = input.ReadUInt32();
             break;
           }

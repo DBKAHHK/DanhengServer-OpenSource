@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChtDaGFsbGVuZ2VCb3NzQnVmZkxpc3QucHJvdG8iSAoVQ2hhbGxlbmdlQm9z",
             "c0J1ZmZMaXN0EhEKCWJ1ZmZfbGlzdBgGIAMoDRIcChRjaGFsbGVuZ2VfYm9z",
-            "c19jb25zdBgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "c19jb25zdBgOIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "challenge_boss_const" field.</summary>
-    public const int ChallengeBossConstFieldNumber = 9;
+    public const int ChallengeBossConstFieldNumber = 14;
     private uint challengeBossConst_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       buffList_.WriteTo(output, _repeated_buffList_codec);
       if (ChallengeBossConst != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(112);
         output.WriteUInt32(ChallengeBossConst);
       }
       if (_unknownFields != null) {
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       buffList_.WriteTo(ref output, _repeated_buffList_codec);
       if (ChallengeBossConst != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(112);
         output.WriteUInt32(ChallengeBossConst);
       }
       if (_unknownFields != null) {
@@ -221,7 +221,7 @@ namespace EggLink.DanhengServer.Proto {
             buffList_.AddEntriesFrom(input, _repeated_buffList_codec);
             break;
           }
-          case 72: {
+          case 112: {
             ChallengeBossConst = input.ReadUInt32();
             break;
           }
@@ -245,7 +245,7 @@ namespace EggLink.DanhengServer.Proto {
             buffList_.AddEntriesFrom(ref input, _repeated_buffList_codec);
             break;
           }
-          case 72: {
+          case 112: {
             ChallengeBossConst = input.ReadUInt32();
             break;
           }

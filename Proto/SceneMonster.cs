@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChJTY2VuZU1vbnN0ZXIucHJvdG8iQgoMU2NlbmVNb25zdGVyEg4KBm1heF9o",
-            "cBgKIAEoDRIOCgZjdXJfaHAYDiABKA0SEgoKbW9uc3Rlcl9pZBgLIAEoDUIe",
+            "cBgOIAEoDRIOCgZjdXJfaHAYCCABKA0SEgoKbW9uc3Rlcl9pZBgJIAEoDUIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "max_hp" field.</summary>
-    public const int MaxHpFieldNumber = 10;
+    public const int MaxHpFieldNumber = 14;
     private uint maxHp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cur_hp" field.</summary>
-    public const int CurHpFieldNumber = 14;
+    public const int CurHpFieldNumber = 8;
     private uint curHp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "monster_id" field.</summary>
-    public const int MonsterIdFieldNumber = 11;
+    public const int MonsterIdFieldNumber = 9;
     private uint monsterId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,17 +166,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MaxHp != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(MaxHp);
+      if (CurHp != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(CurHp);
       }
       if (MonsterId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(72);
         output.WriteUInt32(MonsterId);
       }
-      if (CurHp != 0) {
+      if (MaxHp != 0) {
         output.WriteRawTag(112);
-        output.WriteUInt32(CurHp);
+        output.WriteUInt32(MaxHp);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -188,17 +188,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MaxHp != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(MaxHp);
+      if (CurHp != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(CurHp);
       }
       if (MonsterId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(72);
         output.WriteUInt32(MonsterId);
       }
-      if (CurHp != 0) {
+      if (MaxHp != 0) {
         output.WriteRawTag(112);
-        output.WriteUInt32(CurHp);
+        output.WriteUInt32(MaxHp);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 80: {
-            MaxHp = input.ReadUInt32();
+          case 64: {
+            CurHp = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 72: {
             MonsterId = input.ReadUInt32();
             break;
           }
           case 112: {
-            CurHp = input.ReadUInt32();
+            MaxHp = input.ReadUInt32();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 80: {
-            MaxHp = input.ReadUInt32();
+          case 64: {
+            CurHp = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 72: {
             MonsterId = input.ReadUInt32();
             break;
           }
           case 112: {
-            CurHp = input.ReadUInt32();
+            MaxHp = input.ReadUInt32();
             break;
           }
         }

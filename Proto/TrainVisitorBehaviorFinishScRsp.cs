@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVUcmFpblZpc2l0b3JCZWhhdmlvckZpbmlzaFNjUnNwLnByb3RvGg5JdGVt",
-            "TGlzdC5wcm90byJiCh9UcmFpblZpc2l0b3JCZWhhdmlvckZpbmlzaFNjUnNw",
-            "Eg8KB3JldGNvZGUYCyABKA0SEwoLREpMS0NIS01OTUkYBSABKA0SGQoGcmV3",
-            "YXJkGAkgASgLMgkuSXRlbUxpc3RCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
-            "ci5Qcm90b2IGcHJvdG8z"));
+            "TGlzdC5wcm90byJhCh9UcmFpblZpc2l0b3JCZWhhdmlvckZpbmlzaFNjUnNw",
+            "Eg8KB3JldGNvZGUYDCABKA0SEgoKdmlzaXRvcl9pZBgCIAEoDRIZCgZyZXdh",
+            "cmQYBSABKAsyCS5JdGVtTGlzdEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainVisitorBehaviorFinishScRsp), global::EggLink.DanhengServer.Proto.TrainVisitorBehaviorFinishScRsp.Parser, new[]{ "Retcode", "DJLKCHKMNMI", "Reward" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainVisitorBehaviorFinishScRsp), global::EggLink.DanhengServer.Proto.TrainVisitorBehaviorFinishScRsp.Parser, new[]{ "Retcode", "VisitorId", "Reward" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainVisitorBehaviorFinishScRsp(TrainVisitorBehaviorFinishScRsp other) : this() {
       retcode_ = other.retcode_;
-      dJLKCHKMNMI_ = other.dJLKCHKMNMI_;
+      visitorId_ = other.visitorId_;
       reward_ = other.reward_ != null ? other.reward_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 11;
+    public const int RetcodeFieldNumber = 12;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,20 +98,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "DJLKCHKMNMI" field.</summary>
-    public const int DJLKCHKMNMIFieldNumber = 5;
-    private uint dJLKCHKMNMI_;
+    /// <summary>Field number for the "visitor_id" field.</summary>
+    public const int VisitorIdFieldNumber = 2;
+    private uint visitorId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DJLKCHKMNMI {
-      get { return dJLKCHKMNMI_; }
+    public uint VisitorId {
+      get { return visitorId_; }
       set {
-        dJLKCHKMNMI_ = value;
+        visitorId_ = value;
       }
     }
 
     /// <summary>Field number for the "reward" field.</summary>
-    public const int RewardFieldNumber = 9;
+    public const int RewardFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.ItemList reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Retcode != other.Retcode) return false;
-      if (DJLKCHKMNMI != other.DJLKCHKMNMI) return false;
+      if (VisitorId != other.VisitorId) return false;
       if (!object.Equals(Reward, other.Reward)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -148,7 +148,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (DJLKCHKMNMI != 0) hash ^= DJLKCHKMNMI.GetHashCode();
+      if (VisitorId != 0) hash ^= VisitorId.GetHashCode();
       if (reward_ != null) hash ^= Reward.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -168,16 +168,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (DJLKCHKMNMI != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(DJLKCHKMNMI);
+      if (VisitorId != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(VisitorId);
       }
       if (reward_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(42);
         output.WriteMessage(Reward);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -190,16 +190,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (DJLKCHKMNMI != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(DJLKCHKMNMI);
+      if (VisitorId != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(VisitorId);
       }
       if (reward_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(42);
         output.WriteMessage(Reward);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -215,8 +215,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (DJLKCHKMNMI != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DJLKCHKMNMI);
+      if (VisitorId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(VisitorId);
       }
       if (reward_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Reward);
@@ -236,8 +236,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.DJLKCHKMNMI != 0) {
-        DJLKCHKMNMI = other.DJLKCHKMNMI;
+      if (other.VisitorId != 0) {
+        VisitorId = other.VisitorId;
       }
       if (other.reward_ != null) {
         if (reward_ == null) {
@@ -260,18 +260,18 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            DJLKCHKMNMI = input.ReadUInt32();
+          case 16: {
+            VisitorId = input.ReadUInt32();
             break;
           }
-          case 74: {
+          case 42: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
             break;
           }
-          case 88: {
+          case 96: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -290,18 +290,18 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            DJLKCHKMNMI = input.ReadUInt32();
+          case 16: {
+            VisitorId = input.ReadUInt32();
             break;
           }
-          case 74: {
+          case 42: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
             break;
           }
-          case 88: {
+          case 96: {
             Retcode = input.ReadUInt32();
             break;
           }

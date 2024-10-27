@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpDbGllbnRPYmpVcGxvYWRDc1JlcS5wcm90byJAChRDbGllbnRPYmpVcGxv",
-            "YWRDc1JlcRITCgtMRkVJT0ZJSEpBQhgBIAEoDBITCgtDQU5EUEpNREVBRBgC",
-            "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "YWRDc1JlcRITCgtJSUhNT0hCSUhLTBgHIAEoDRITCgt1cGxvYWRfZGF0YRgP",
+            "IAEoDEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ClientObjUploadCsReq), global::EggLink.DanhengServer.Proto.ClientObjUploadCsReq.Parser, new[]{ "LFEIOFIHJAB", "CANDPJMDEAD" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ClientObjUploadCsReq), global::EggLink.DanhengServer.Proto.ClientObjUploadCsReq.Parser, new[]{ "IIHMOHBIHKL", "UploadData" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ClientObjUploadCsReq(ClientObjUploadCsReq other) : this() {
-      lFEIOFIHJAB_ = other.lFEIOFIHJAB_;
-      cANDPJMDEAD_ = other.cANDPJMDEAD_;
+      iIHMOHBIHKL_ = other.iIHMOHBIHKL_;
+      uploadData_ = other.uploadData_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,27 +83,27 @@ namespace EggLink.DanhengServer.Proto {
       return new ClientObjUploadCsReq(this);
     }
 
-    /// <summary>Field number for the "LFEIOFIHJAB" field.</summary>
-    public const int LFEIOFIHJABFieldNumber = 1;
-    private pb::ByteString lFEIOFIHJAB_ = pb::ByteString.Empty;
+    /// <summary>Field number for the "IIHMOHBIHKL" field.</summary>
+    public const int IIHMOHBIHKLFieldNumber = 7;
+    private uint iIHMOHBIHKL_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pb::ByteString LFEIOFIHJAB {
-      get { return lFEIOFIHJAB_; }
+    public uint IIHMOHBIHKL {
+      get { return iIHMOHBIHKL_; }
       set {
-        lFEIOFIHJAB_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        iIHMOHBIHKL_ = value;
       }
     }
 
-    /// <summary>Field number for the "CANDPJMDEAD" field.</summary>
-    public const int CANDPJMDEADFieldNumber = 2;
-    private uint cANDPJMDEAD_;
+    /// <summary>Field number for the "upload_data" field.</summary>
+    public const int UploadDataFieldNumber = 15;
+    private pb::ByteString uploadData_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CANDPJMDEAD {
-      get { return cANDPJMDEAD_; }
+    public pb::ByteString UploadData {
+      get { return uploadData_; }
       set {
-        cANDPJMDEAD_ = value;
+        uploadData_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (LFEIOFIHJAB != other.LFEIOFIHJAB) return false;
-      if (CANDPJMDEAD != other.CANDPJMDEAD) return false;
+      if (IIHMOHBIHKL != other.IIHMOHBIHKL) return false;
+      if (UploadData != other.UploadData) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (LFEIOFIHJAB.Length != 0) hash ^= LFEIOFIHJAB.GetHashCode();
-      if (CANDPJMDEAD != 0) hash ^= CANDPJMDEAD.GetHashCode();
+      if (IIHMOHBIHKL != 0) hash ^= IIHMOHBIHKL.GetHashCode();
+      if (UploadData.Length != 0) hash ^= UploadData.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (LFEIOFIHJAB.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteBytes(LFEIOFIHJAB);
+      if (IIHMOHBIHKL != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(IIHMOHBIHKL);
       }
-      if (CANDPJMDEAD != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(CANDPJMDEAD);
+      if (UploadData.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteBytes(UploadData);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (LFEIOFIHJAB.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteBytes(LFEIOFIHJAB);
+      if (IIHMOHBIHKL != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(IIHMOHBIHKL);
       }
-      if (CANDPJMDEAD != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(CANDPJMDEAD);
+      if (UploadData.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteBytes(UploadData);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (LFEIOFIHJAB.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeBytesSize(LFEIOFIHJAB);
+      if (IIHMOHBIHKL != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IIHMOHBIHKL);
       }
-      if (CANDPJMDEAD != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CANDPJMDEAD);
+      if (UploadData.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(UploadData);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.LFEIOFIHJAB.Length != 0) {
-        LFEIOFIHJAB = other.LFEIOFIHJAB;
+      if (other.IIHMOHBIHKL != 0) {
+        IIHMOHBIHKL = other.IIHMOHBIHKL;
       }
-      if (other.CANDPJMDEAD != 0) {
-        CANDPJMDEAD = other.CANDPJMDEAD;
+      if (other.UploadData.Length != 0) {
+        UploadData = other.UploadData;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            LFEIOFIHJAB = input.ReadBytes();
+          case 56: {
+            IIHMOHBIHKL = input.ReadUInt32();
             break;
           }
-          case 16: {
-            CANDPJMDEAD = input.ReadUInt32();
+          case 122: {
+            UploadData = input.ReadBytes();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            LFEIOFIHJAB = input.ReadBytes();
+          case 56: {
+            IIHMOHBIHKL = input.ReadUInt32();
             break;
           }
-          case 16: {
-            CANDPJMDEAD = input.ReadUInt32();
+          case 122: {
+            UploadData = input.ReadBytes();
             break;
           }
         }

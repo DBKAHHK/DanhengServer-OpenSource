@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChxTY2VuZUVudGl0eVJlZnJlc2hJbmZvLnByb3RvGhVTY2VuZUVudGl0eUlu",
             "Zm8ucHJvdG8iewoWU2NlbmVFbnRpdHlSZWZyZXNoSW5mbxImCgphZGRfZW50",
-            "aXR5GAQgASgLMhAuU2NlbmVFbnRpdHlJbmZvSAASFQoLRklGTExPR1BOTUMY",
-            "CiABKA1IABIXCg1kZWxldGVfZW50aXR5GAsgASgNSABCCQoHcmVmcmVzaEIe",
+            "aXR5GAggASgLMhAuU2NlbmVFbnRpdHlJbmZvSAASFQoLRURNRkVKSEVQRkgY",
+            "CyABKA1IABIXCg1kZWxldGVfZW50aXR5GAQgASgNSABCCQoHcmVmcmVzaEIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneEntityInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo), global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo.Parser, new[]{ "AddEntity", "FIFLLOGPNMC", "DeleteEntity" }, new[]{ "Refresh" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo), global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo.Parser, new[]{ "AddEntity", "EDMFEJHEPFH", "DeleteEntity" }, new[]{ "Refresh" }, null, null, null)
           }));
     }
     #endregion
@@ -78,8 +78,8 @@ namespace EggLink.DanhengServer.Proto {
         case RefreshOneofCase.AddEntity:
           AddEntity = other.AddEntity.Clone();
           break;
-        case RefreshOneofCase.FIFLLOGPNMC:
-          FIFLLOGPNMC = other.FIFLLOGPNMC;
+        case RefreshOneofCase.EDMFEJHEPFH:
+          EDMFEJHEPFH = other.EDMFEJHEPFH;
           break;
         case RefreshOneofCase.DeleteEntity:
           DeleteEntity = other.DeleteEntity;
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "add_entity" field.</summary>
-    public const int AddEntityFieldNumber = 4;
+    public const int AddEntityFieldNumber = 8;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.SceneEntityInfo AddEntity {
@@ -107,37 +107,34 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "FIFLLOGPNMC" field.</summary>
-    public const int FIFLLOGPNMCFieldNumber = 10;
+    /// <summary>Field number for the "EDMFEJHEPFH" field.</summary>
+    public const int EDMFEJHEPFHFieldNumber = 11;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FIFLLOGPNMC {
-      get { return HasFIFLLOGPNMC ? (uint) refresh_ : 0; }
+    public uint EDMFEJHEPFH {
+      get { return HasEDMFEJHEPFH ? (uint) refresh_ : 0; }
       set {
         refresh_ = value;
-        refreshCase_ = RefreshOneofCase.FIFLLOGPNMC;
+        refreshCase_ = RefreshOneofCase.EDMFEJHEPFH;
       }
     }
-    /// <summary>Gets whether the "FIFLLOGPNMC" field is set</summary>
+    /// <summary>Gets whether the "EDMFEJHEPFH" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasFIFLLOGPNMC {
-      get { return refreshCase_ == RefreshOneofCase.FIFLLOGPNMC; }
+    public bool HasEDMFEJHEPFH {
+      get { return refreshCase_ == RefreshOneofCase.EDMFEJHEPFH; }
     }
-    /// <summary> Clears the value of the oneof if it's currently set to "FIFLLOGPNMC" </summary>
+    /// <summary> Clears the value of the oneof if it's currently set to "EDMFEJHEPFH" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearFIFLLOGPNMC() {
-      if (HasFIFLLOGPNMC) {
+    public void ClearEDMFEJHEPFH() {
+      if (HasEDMFEJHEPFH) {
         ClearRefresh();
       }
     }
 
     /// <summary>Field number for the "delete_entity" field.</summary>
-    public const int DeleteEntityFieldNumber = 11;
-    /// <summary>
-    /// should be 10, but i dont know why andy use 11
-    /// </summary>
+    public const int DeleteEntityFieldNumber = 4;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint DeleteEntity {
@@ -166,9 +163,9 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "refresh" oneof.</summary>
     public enum RefreshOneofCase {
       None = 0,
-      AddEntity = 4,
-      FIFLLOGPNMC = 10,
-      DeleteEntity = 11,
+      AddEntity = 8,
+      EDMFEJHEPFH = 11,
+      DeleteEntity = 4,
     }
     private RefreshOneofCase refreshCase_ = RefreshOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -200,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(AddEntity, other.AddEntity)) return false;
-      if (FIFLLOGPNMC != other.FIFLLOGPNMC) return false;
+      if (EDMFEJHEPFH != other.EDMFEJHEPFH) return false;
       if (DeleteEntity != other.DeleteEntity) return false;
       if (RefreshCase != other.RefreshCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -211,7 +208,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (refreshCase_ == RefreshOneofCase.AddEntity) hash ^= AddEntity.GetHashCode();
-      if (HasFIFLLOGPNMC) hash ^= FIFLLOGPNMC.GetHashCode();
+      if (HasEDMFEJHEPFH) hash ^= EDMFEJHEPFH.GetHashCode();
       if (HasDeleteEntity) hash ^= DeleteEntity.GetHashCode();
       hash ^= (int) refreshCase_;
       if (_unknownFields != null) {
@@ -232,17 +229,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (HasDeleteEntity) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(DeleteEntity);
+      }
       if (refreshCase_ == RefreshOneofCase.AddEntity) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(66);
         output.WriteMessage(AddEntity);
       }
-      if (HasFIFLLOGPNMC) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(FIFLLOGPNMC);
-      }
-      if (HasDeleteEntity) {
+      if (HasEDMFEJHEPFH) {
         output.WriteRawTag(88);
-        output.WriteUInt32(DeleteEntity);
+        output.WriteUInt32(EDMFEJHEPFH);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -254,17 +251,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasDeleteEntity) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(DeleteEntity);
+      }
       if (refreshCase_ == RefreshOneofCase.AddEntity) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(66);
         output.WriteMessage(AddEntity);
       }
-      if (HasFIFLLOGPNMC) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(FIFLLOGPNMC);
-      }
-      if (HasDeleteEntity) {
+      if (HasEDMFEJHEPFH) {
         output.WriteRawTag(88);
-        output.WriteUInt32(DeleteEntity);
+        output.WriteUInt32(EDMFEJHEPFH);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -279,8 +276,8 @@ namespace EggLink.DanhengServer.Proto {
       if (refreshCase_ == RefreshOneofCase.AddEntity) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AddEntity);
       }
-      if (HasFIFLLOGPNMC) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FIFLLOGPNMC);
+      if (HasEDMFEJHEPFH) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EDMFEJHEPFH);
       }
       if (HasDeleteEntity) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DeleteEntity);
@@ -304,8 +301,8 @@ namespace EggLink.DanhengServer.Proto {
           }
           AddEntity.MergeFrom(other.AddEntity);
           break;
-        case RefreshOneofCase.FIFLLOGPNMC:
-          FIFLLOGPNMC = other.FIFLLOGPNMC;
+        case RefreshOneofCase.EDMFEJHEPFH:
+          EDMFEJHEPFH = other.EDMFEJHEPFH;
           break;
         case RefreshOneofCase.DeleteEntity:
           DeleteEntity = other.DeleteEntity;
@@ -327,7 +324,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
+          case 32: {
+            DeleteEntity = input.ReadUInt32();
+            break;
+          }
+          case 66: {
             global::EggLink.DanhengServer.Proto.SceneEntityInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneEntityInfo();
             if (refreshCase_ == RefreshOneofCase.AddEntity) {
               subBuilder.MergeFrom(AddEntity);
@@ -336,12 +337,8 @@ namespace EggLink.DanhengServer.Proto {
             AddEntity = subBuilder;
             break;
           }
-          case 80: {
-            FIFLLOGPNMC = input.ReadUInt32();
-            break;
-          }
           case 88: {
-            DeleteEntity = input.ReadUInt32();
+            EDMFEJHEPFH = input.ReadUInt32();
             break;
           }
         }
@@ -359,7 +356,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
+          case 32: {
+            DeleteEntity = input.ReadUInt32();
+            break;
+          }
+          case 66: {
             global::EggLink.DanhengServer.Proto.SceneEntityInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneEntityInfo();
             if (refreshCase_ == RefreshOneofCase.AddEntity) {
               subBuilder.MergeFrom(AddEntity);
@@ -368,12 +369,8 @@ namespace EggLink.DanhengServer.Proto {
             AddEntity = subBuilder;
             break;
           }
-          case 80: {
-            FIFLLOGPNMC = input.ReadUInt32();
-            break;
-          }
           case 88: {
-            DeleteEntity = input.ReadUInt32();
+            EDMFEJHEPFH = input.ReadUInt32();
             break;
           }
         }

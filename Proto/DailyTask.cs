@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cg9EYWlseVRhc2sucHJvdG8iOQoJRGFpbHlUYXNrEhMKC2lzX2ZpbmlzaGVk",
-            "GAcgASgIEhcKD21haW5fbWlzc2lvbl9pZBgDIAEoDUIeqgIbRWdnTGluay5E",
+            "GAggASgIEhcKD21haW5fbWlzc2lvbl9pZBgEIAEoDUIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_finished" field.</summary>
-    public const int IsFinishedFieldNumber = 7;
+    public const int IsFinishedFieldNumber = 8;
     private bool isFinished_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "main_mission_id" field.</summary>
-    public const int MainMissionIdFieldNumber = 3;
+    public const int MainMissionIdFieldNumber = 4;
     private uint mainMissionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (MainMissionId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteUInt32(MainMissionId);
       }
       if (IsFinished != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(64);
         output.WriteBool(IsFinished);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MainMissionId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteUInt32(MainMissionId);
       }
       if (IsFinished != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(64);
         output.WriteBool(IsFinished);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 32: {
             MainMissionId = input.ReadUInt32();
             break;
           }
-          case 56: {
+          case 64: {
             IsFinished = input.ReadBool();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 32: {
             MainMissionId = input.ReadUInt32();
             break;
           }
-          case 56: {
+          case 64: {
             IsFinished = input.ReadBool();
             break;
           }

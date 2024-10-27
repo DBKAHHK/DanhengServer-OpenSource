@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static MusicRhythmFinishLevelCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFNdXNpY1JoeXRobUZpbmlzaExldmVsQ3NSZXEucHJvdG8iRQobTXVzaWNS",
-            "aHl0aG1GaW5pc2hMZXZlbENzUmVxEhAKCHNjb3JlX2lkGAwgASgNEhQKDGZp",
-            "bmlzaF9sZXZlbBgLIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
-            "b3RvYgZwcm90bzM="));
+            "CiFNdXNpY1JoeXRobUZpbmlzaExldmVsQ3NSZXEucHJvdG8iUQobTXVzaWNS",
+            "aHl0aG1GaW5pc2hMZXZlbENzUmVxEhIKCmZ1bGxfY29tYm8YASABKAgSEAoI",
+            "c2NvcmVfaWQYDiABKA0SDAoEc3RhchgJIAEoDUIeqgIbRWdnTGluay5EYW5o",
+            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmFinishLevelCsReq), global::EggLink.DanhengServer.Proto.MusicRhythmFinishLevelCsReq.Parser, new[]{ "ScoreId", "FinishLevel" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmFinishLevelCsReq), global::EggLink.DanhengServer.Proto.MusicRhythmFinishLevelCsReq.Parser, new[]{ "FullCombo", "ScoreId", "Star" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MusicRhythmFinishLevelCsReq(MusicRhythmFinishLevelCsReq other) : this() {
+      fullCombo_ = other.fullCombo_;
       scoreId_ = other.scoreId_;
-      finishLevel_ = other.finishLevel_;
+      star_ = other.star_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,8 +85,20 @@ namespace EggLink.DanhengServer.Proto {
       return new MusicRhythmFinishLevelCsReq(this);
     }
 
+    /// <summary>Field number for the "full_combo" field.</summary>
+    public const int FullComboFieldNumber = 1;
+    private bool fullCombo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool FullCombo {
+      get { return fullCombo_; }
+      set {
+        fullCombo_ = value;
+      }
+    }
+
     /// <summary>Field number for the "score_id" field.</summary>
-    public const int ScoreIdFieldNumber = 12;
+    public const int ScoreIdFieldNumber = 14;
     private uint scoreId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,15 +109,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "finish_level" field.</summary>
-    public const int FinishLevelFieldNumber = 11;
-    private uint finishLevel_;
+    /// <summary>Field number for the "star" field.</summary>
+    public const int StarFieldNumber = 9;
+    private uint star_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FinishLevel {
-      get { return finishLevel_; }
+    public uint Star {
+      get { return star_; }
       set {
-        finishLevel_ = value;
+        star_ = value;
       }
     }
 
@@ -123,8 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (FullCombo != other.FullCombo) return false;
       if (ScoreId != other.ScoreId) return false;
-      if (FinishLevel != other.FinishLevel) return false;
+      if (Star != other.Star) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (FullCombo != false) hash ^= FullCombo.GetHashCode();
       if (ScoreId != 0) hash ^= ScoreId.GetHashCode();
-      if (FinishLevel != 0) hash ^= FinishLevel.GetHashCode();
+      if (Star != 0) hash ^= Star.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,12 +167,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FinishLevel != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(FinishLevel);
+      if (FullCombo != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(FullCombo);
+      }
+      if (Star != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(Star);
       }
       if (ScoreId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(112);
         output.WriteUInt32(ScoreId);
       }
       if (_unknownFields != null) {
@@ -170,12 +189,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FinishLevel != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(FinishLevel);
+      if (FullCombo != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(FullCombo);
+      }
+      if (Star != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(Star);
       }
       if (ScoreId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(112);
         output.WriteUInt32(ScoreId);
       }
       if (_unknownFields != null) {
@@ -188,11 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (FullCombo != false) {
+        size += 1 + 1;
+      }
       if (ScoreId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScoreId);
       }
-      if (FinishLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FinishLevel);
+      if (Star != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Star);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +232,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.FullCombo != false) {
+        FullCombo = other.FullCombo;
+      }
       if (other.ScoreId != 0) {
         ScoreId = other.ScoreId;
       }
-      if (other.FinishLevel != 0) {
-        FinishLevel = other.FinishLevel;
+      if (other.Star != 0) {
+        Star = other.Star;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,11 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 88: {
-            FinishLevel = input.ReadUInt32();
+          case 8: {
+            FullCombo = input.ReadBool();
             break;
           }
-          case 96: {
+          case 72: {
+            Star = input.ReadUInt32();
+            break;
+          }
+          case 112: {
             ScoreId = input.ReadUInt32();
             break;
           }
@@ -250,11 +283,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 88: {
-            FinishLevel = input.ReadUInt32();
+          case 8: {
+            FullCombo = input.ReadBool();
             break;
           }
-          case 96: {
+          case 72: {
+            Star = input.ReadUInt32();
+            break;
+          }
+          case 112: {
             ScoreId = input.ReadUInt32();
             break;
           }

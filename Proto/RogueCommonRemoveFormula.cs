@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch5Sb2d1ZUNvbW1vblJlbW92ZUZvcm11bGEucHJvdG8aEUZvcm11bGFJbmZv",
             "LnByb3RvIj4KGFJvZ3VlQ29tbW9uUmVtb3ZlRm9ybXVsYRIiCgxmb3JtdWxh",
-            "X2luZm8YBiABKAsyDC5Gb3JtdWxhSW5mb0IeqgIbRWdnTGluay5EYW5oZW5n",
+            "X2luZm8YCiABKAsyDC5Gb3JtdWxhSW5mb0IeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FormulaInfoReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "formula_info" field.</summary>
-    public const int FormulaInfoFieldNumber = 6;
+    public const int FormulaInfoFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.FormulaInfo formulaInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (formulaInfo_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(82);
         output.WriteMessage(FormulaInfo);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (formulaInfo_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(82);
         output.WriteMessage(FormulaInfo);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
+          case 82: {
             if (formulaInfo_ == null) {
               FormulaInfo = new global::EggLink.DanhengServer.Proto.FormulaInfo();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
+          case 82: {
             if (formulaInfo_ == null) {
               FormulaInfo = new global::EggLink.DanhengServer.Proto.FormulaInfo();
             }

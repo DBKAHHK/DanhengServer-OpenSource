@@ -24,19 +24,19 @@ namespace EggLink.DanhengServer.Proto {
     static GetHeartDialInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtHZXRIZWFydERpYWxJbmZvU2NSc3AucHJvdG8aEUtHSEZKUEVHQk5MLnBy",
-            "b3RvGhtIZWFydERpYWxVbmxvY2tTdGF0dXMucHJvdG8aGUhlYXJ0RGlhbFNj",
-            "cmlwdEluZm8ucHJvdG8aG0hlYXJ0RGlhbERpYWxvZ3VlSW5mby5wcm90byLe",
-            "AQoVR2V0SGVhcnREaWFsSW5mb1NjUnNwEi4KEHNjcmlwdF9pbmZvX2xpc3QY",
-            "BiADKAsyFC5IZWFydERpYWxTY3JpcHRJbmZvEg8KB3JldGNvZGUYASABKA0S",
-            "LQoNdW5sb2NrX3N0YXR1cxgKIAEoDjIWLkhlYXJ0RGlhbFVubG9ja1N0YXR1",
-            "cxIyChJkaWFsb2d1ZV9pbmZvX2xpc3QYDCADKAsyFi5IZWFydERpYWxEaWFs",
-            "b2d1ZUluZm8SIQoLTkRLSk9QTExEUEgYAyADKAsyDC5LR0hGSlBFR0JOTEIe",
+            "ChtHZXRIZWFydERpYWxJbmZvU2NSc3AucHJvdG8aGUhlYXJ0RGlhbFNjcmlw",
+            "dEluZm8ucHJvdG8aEUhOR09KSEJQRkVKLnByb3RvGhtIZWFydERpYWxEaWFs",
+            "b2d1ZUluZm8ucHJvdG8aG0hlYXJ0RGlhbFVubG9ja1N0YXR1cy5wcm90byLe",
+            "AQoVR2V0SGVhcnREaWFsSW5mb1NjUnNwEjIKEmRpYWxvZ3VlX2luZm9fbGlz",
+            "dBgGIAMoCzIWLkhlYXJ0RGlhbERpYWxvZ3VlSW5mbxIuChBzY3JpcHRfaW5m",
+            "b19saXN0GAggAygLMhQuSGVhcnREaWFsU2NyaXB0SW5mbxIhCgtFTkVMTUhF",
+            "REpJSRgHIAMoCzIMLkhOR09KSEJQRkVKEg8KB3JldGNvZGUYBSABKA0SLQoN",
+            "dW5sb2NrX3N0YXR1cxgJIAEoDjIWLkhlYXJ0RGlhbFVubG9ja1N0YXR1c0Ie",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KGHFJPEGBNLReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialUnlockStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialScriptInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialDialogueInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeartDialScriptInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HNGOJHBPFEJReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialDialogueInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialUnlockStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetHeartDialInfoScRsp), global::EggLink.DanhengServer.Proto.GetHeartDialInfoScRsp.Parser, new[]{ "ScriptInfoList", "Retcode", "UnlockStatus", "DialogueInfoList", "NDKJOPLLDPH" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetHeartDialInfoScRsp), global::EggLink.DanhengServer.Proto.GetHeartDialInfoScRsp.Parser, new[]{ "DialogueInfoList", "ScriptInfoList", "ENELMHEDJII", "Retcode", "UnlockStatus" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,11 +78,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetHeartDialInfoScRsp(GetHeartDialInfoScRsp other) : this() {
+      dialogueInfoList_ = other.dialogueInfoList_.Clone();
       scriptInfoList_ = other.scriptInfoList_.Clone();
+      eNELMHEDJII_ = other.eNELMHEDJII_.Clone();
       retcode_ = other.retcode_;
       unlockStatus_ = other.unlockStatus_;
-      dialogueInfoList_ = other.dialogueInfoList_.Clone();
-      nDKJOPLLDPH_ = other.nDKJOPLLDPH_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -92,10 +92,21 @@ namespace EggLink.DanhengServer.Proto {
       return new GetHeartDialInfoScRsp(this);
     }
 
+    /// <summary>Field number for the "dialogue_info_list" field.</summary>
+    public const int DialogueInfoListFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.HeartDialDialogueInfo> _repeated_dialogueInfoList_codec
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.HeartDialDialogueInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeartDialDialogueInfo> dialogueInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeartDialDialogueInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeartDialDialogueInfo> DialogueInfoList {
+      get { return dialogueInfoList_; }
+    }
+
     /// <summary>Field number for the "script_info_list" field.</summary>
-    public const int ScriptInfoListFieldNumber = 6;
+    public const int ScriptInfoListFieldNumber = 8;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.HeartDialScriptInfo> _repeated_scriptInfoList_codec
-        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.HeartDialScriptInfo.Parser);
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.HeartDialScriptInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeartDialScriptInfo> scriptInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeartDialScriptInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -103,8 +114,19 @@ namespace EggLink.DanhengServer.Proto {
       get { return scriptInfoList_; }
     }
 
+    /// <summary>Field number for the "ENELMHEDJII" field.</summary>
+    public const int ENELMHEDJIIFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.HNGOJHBPFEJ> _repeated_eNELMHEDJII_codec
+        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.HNGOJHBPFEJ.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HNGOJHBPFEJ> eNELMHEDJII_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HNGOJHBPFEJ>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HNGOJHBPFEJ> ENELMHEDJII {
+      get { return eNELMHEDJII_; }
+    }
+
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 1;
+    public const int RetcodeFieldNumber = 5;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -116,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "unlock_status" field.</summary>
-    public const int UnlockStatusFieldNumber = 10;
+    public const int UnlockStatusFieldNumber = 9;
     private global::EggLink.DanhengServer.Proto.HeartDialUnlockStatus unlockStatus_ = global::EggLink.DanhengServer.Proto.HeartDialUnlockStatus.Lock;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -125,28 +147,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         unlockStatus_ = value;
       }
-    }
-
-    /// <summary>Field number for the "dialogue_info_list" field.</summary>
-    public const int DialogueInfoListFieldNumber = 12;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.HeartDialDialogueInfo> _repeated_dialogueInfoList_codec
-        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.HeartDialDialogueInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeartDialDialogueInfo> dialogueInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeartDialDialogueInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeartDialDialogueInfo> DialogueInfoList {
-      get { return dialogueInfoList_; }
-    }
-
-    /// <summary>Field number for the "NDKJOPLLDPH" field.</summary>
-    public const int NDKJOPLLDPHFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.KGHFJPEGBNL> _repeated_nDKJOPLLDPH_codec
-        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.KGHFJPEGBNL.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KGHFJPEGBNL> nDKJOPLLDPH_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KGHFJPEGBNL>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KGHFJPEGBNL> NDKJOPLLDPH {
-      get { return nDKJOPLLDPH_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -164,11 +164,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if(!dialogueInfoList_.Equals(other.dialogueInfoList_)) return false;
       if(!scriptInfoList_.Equals(other.scriptInfoList_)) return false;
+      if(!eNELMHEDJII_.Equals(other.eNELMHEDJII_)) return false;
       if (Retcode != other.Retcode) return false;
       if (UnlockStatus != other.UnlockStatus) return false;
-      if(!dialogueInfoList_.Equals(other.dialogueInfoList_)) return false;
-      if(!nDKJOPLLDPH_.Equals(other.nDKJOPLLDPH_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -176,11 +176,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      hash ^= dialogueInfoList_.GetHashCode();
       hash ^= scriptInfoList_.GetHashCode();
+      hash ^= eNELMHEDJII_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (UnlockStatus != global::EggLink.DanhengServer.Proto.HeartDialUnlockStatus.Lock) hash ^= UnlockStatus.GetHashCode();
-      hash ^= dialogueInfoList_.GetHashCode();
-      hash ^= nDKJOPLLDPH_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -200,16 +200,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
-      nDKJOPLLDPH_.WriteTo(output, _repeated_nDKJOPLLDPH_codec);
+      dialogueInfoList_.WriteTo(output, _repeated_dialogueInfoList_codec);
+      eNELMHEDJII_.WriteTo(output, _repeated_eNELMHEDJII_codec);
       scriptInfoList_.WriteTo(output, _repeated_scriptInfoList_codec);
       if (UnlockStatus != global::EggLink.DanhengServer.Proto.HeartDialUnlockStatus.Lock) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(72);
         output.WriteEnum((int) UnlockStatus);
       }
-      dialogueInfoList_.WriteTo(output, _repeated_dialogueInfoList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -221,16 +221,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
-      nDKJOPLLDPH_.WriteTo(ref output, _repeated_nDKJOPLLDPH_codec);
+      dialogueInfoList_.WriteTo(ref output, _repeated_dialogueInfoList_codec);
+      eNELMHEDJII_.WriteTo(ref output, _repeated_eNELMHEDJII_codec);
       scriptInfoList_.WriteTo(ref output, _repeated_scriptInfoList_codec);
       if (UnlockStatus != global::EggLink.DanhengServer.Proto.HeartDialUnlockStatus.Lock) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(72);
         output.WriteEnum((int) UnlockStatus);
       }
-      dialogueInfoList_.WriteTo(ref output, _repeated_dialogueInfoList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -241,15 +241,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += dialogueInfoList_.CalculateSize(_repeated_dialogueInfoList_codec);
       size += scriptInfoList_.CalculateSize(_repeated_scriptInfoList_codec);
+      size += eNELMHEDJII_.CalculateSize(_repeated_eNELMHEDJII_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (UnlockStatus != global::EggLink.DanhengServer.Proto.HeartDialUnlockStatus.Lock) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) UnlockStatus);
       }
-      size += dialogueInfoList_.CalculateSize(_repeated_dialogueInfoList_codec);
-      size += nDKJOPLLDPH_.CalculateSize(_repeated_nDKJOPLLDPH_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -262,15 +262,15 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      dialogueInfoList_.Add(other.dialogueInfoList_);
       scriptInfoList_.Add(other.scriptInfoList_);
+      eNELMHEDJII_.Add(other.eNELMHEDJII_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
       if (other.UnlockStatus != global::EggLink.DanhengServer.Proto.HeartDialUnlockStatus.Lock) {
         UnlockStatus = other.UnlockStatus;
       }
-      dialogueInfoList_.Add(other.dialogueInfoList_);
-      nDKJOPLLDPH_.Add(other.nDKJOPLLDPH_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -286,24 +286,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 26: {
-            nDKJOPLLDPH_.AddEntriesFrom(input, _repeated_nDKJOPLLDPH_codec);
+          case 50: {
+            dialogueInfoList_.AddEntriesFrom(input, _repeated_dialogueInfoList_codec);
             break;
           }
-          case 50: {
+          case 58: {
+            eNELMHEDJII_.AddEntriesFrom(input, _repeated_eNELMHEDJII_codec);
+            break;
+          }
+          case 66: {
             scriptInfoList_.AddEntriesFrom(input, _repeated_scriptInfoList_codec);
             break;
           }
-          case 80: {
+          case 72: {
             UnlockStatus = (global::EggLink.DanhengServer.Proto.HeartDialUnlockStatus) input.ReadEnum();
-            break;
-          }
-          case 98: {
-            dialogueInfoList_.AddEntriesFrom(input, _repeated_dialogueInfoList_codec);
             break;
           }
         }
@@ -321,24 +321,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 26: {
-            nDKJOPLLDPH_.AddEntriesFrom(ref input, _repeated_nDKJOPLLDPH_codec);
+          case 50: {
+            dialogueInfoList_.AddEntriesFrom(ref input, _repeated_dialogueInfoList_codec);
             break;
           }
-          case 50: {
+          case 58: {
+            eNELMHEDJII_.AddEntriesFrom(ref input, _repeated_eNELMHEDJII_codec);
+            break;
+          }
+          case 66: {
             scriptInfoList_.AddEntriesFrom(ref input, _repeated_scriptInfoList_codec);
             break;
           }
-          case 80: {
+          case 72: {
             UnlockStatus = (global::EggLink.DanhengServer.Proto.HeartDialUnlockStatus) input.ReadEnum();
-            break;
-          }
-          case 98: {
-            dialogueInfoList_.AddEntriesFrom(ref input, _repeated_dialogueInfoList_codec);
             break;
           }
         }

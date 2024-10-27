@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpSb2d1ZU1hZ2ljVGFsZW50SW5mby5wcm90bxoZUm9ndWVUYWxlbnRJbmZv",
-            "TGlzdC5wcm90byJhChRSb2d1ZU1hZ2ljVGFsZW50SW5mbxIZChFtYWdpY190",
-            "YWxlbnRfY29pbhgGIAEoDRIuChB0YWxlbnRfaW5mb19saXN0GAogASgLMhQu",
-            "Um9ndWVUYWxlbnRJbmZvTGlzdEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "TGlzdC5wcm90byJhChRSb2d1ZU1hZ2ljVGFsZW50SW5mbxIuChB0YWxlbnRf",
+            "aW5mb19saXN0GAsgASgLMhQuUm9ndWVUYWxlbnRJbmZvTGlzdBIZChFtYWdp",
+            "Y190YWxlbnRfY29pbhgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTalentInfoListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicTalentInfo), global::EggLink.DanhengServer.Proto.RogueMagicTalentInfo.Parser, new[]{ "MagicTalentCoin", "TalentInfoList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicTalentInfo), global::EggLink.DanhengServer.Proto.RogueMagicTalentInfo.Parser, new[]{ "TalentInfoList", "MagicTalentCoin" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueMagicTalentInfo(RogueMagicTalentInfo other) : this() {
-      magicTalentCoin_ = other.magicTalentCoin_;
       talentInfoList_ = other.talentInfoList_ != null ? other.talentInfoList_.Clone() : null;
+      magicTalentCoin_ = other.magicTalentCoin_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueMagicTalentInfo(this);
     }
 
-    /// <summary>Field number for the "magic_talent_coin" field.</summary>
-    public const int MagicTalentCoinFieldNumber = 6;
-    private uint magicTalentCoin_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MagicTalentCoin {
-      get { return magicTalentCoin_; }
-      set {
-        magicTalentCoin_ = value;
-      }
-    }
-
     /// <summary>Field number for the "talent_info_list" field.</summary>
-    public const int TalentInfoListFieldNumber = 10;
+    public const int TalentInfoListFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.RogueTalentInfoList talentInfoList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,6 +94,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return talentInfoList_; }
       set {
         talentInfoList_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "magic_talent_coin" field.</summary>
+    public const int MagicTalentCoinFieldNumber = 9;
+    private uint magicTalentCoin_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint MagicTalentCoin {
+      get { return magicTalentCoin_; }
+      set {
+        magicTalentCoin_ = value;
       }
     }
 
@@ -124,8 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MagicTalentCoin != other.MagicTalentCoin) return false;
       if (!object.Equals(TalentInfoList, other.TalentInfoList)) return false;
+      if (MagicTalentCoin != other.MagicTalentCoin) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MagicTalentCoin != 0) hash ^= MagicTalentCoin.GetHashCode();
       if (talentInfoList_ != null) hash ^= TalentInfoList.GetHashCode();
+      if (MagicTalentCoin != 0) hash ^= MagicTalentCoin.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -154,11 +154,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (MagicTalentCoin != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(72);
         output.WriteUInt32(MagicTalentCoin);
       }
       if (talentInfoList_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(90);
         output.WriteMessage(TalentInfoList);
       }
       if (_unknownFields != null) {
@@ -172,11 +172,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MagicTalentCoin != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(72);
         output.WriteUInt32(MagicTalentCoin);
       }
       if (talentInfoList_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(90);
         output.WriteMessage(TalentInfoList);
       }
       if (_unknownFields != null) {
@@ -189,11 +189,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MagicTalentCoin != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MagicTalentCoin);
-      }
       if (talentInfoList_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TalentInfoList);
+      }
+      if (MagicTalentCoin != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MagicTalentCoin);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -207,14 +207,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MagicTalentCoin != 0) {
-        MagicTalentCoin = other.MagicTalentCoin;
-      }
       if (other.talentInfoList_ != null) {
         if (talentInfoList_ == null) {
           TalentInfoList = new global::EggLink.DanhengServer.Proto.RogueTalentInfoList();
         }
         TalentInfoList.MergeFrom(other.TalentInfoList);
+      }
+      if (other.MagicTalentCoin != 0) {
+        MagicTalentCoin = other.MagicTalentCoin;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,11 +231,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 72: {
             MagicTalentCoin = input.ReadUInt32();
             break;
           }
-          case 82: {
+          case 90: {
             if (talentInfoList_ == null) {
               TalentInfoList = new global::EggLink.DanhengServer.Proto.RogueTalentInfoList();
             }
@@ -257,11 +257,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 72: {
             MagicTalentCoin = input.ReadUInt32();
             break;
           }
-          case 82: {
+          case 90: {
             if (talentInfoList_ == null) {
               TalentInfoList = new global::EggLink.DanhengServer.Proto.RogueTalentInfoList();
             }

@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static MusicDataReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg9NdXNpY0RhdGEucHJvdG8iPAoJTXVzaWNEYXRhEhEKCWlzX3BsYXllZBgE",
-            "IAEoCBIKCgJpZBgLIAEoDRIQCghncm91cF9pZBgIIAEoDUIeqgIbRWdnTGlu",
+            "Cg9NdXNpY0RhdGEucHJvdG8iPAoJTXVzaWNEYXRhEhEKCWlzX3BsYXllZBgI",
+            "IAEoCBIKCgJpZBgKIAEoDRIQCghncm91cF9pZBgLIAEoDUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_played" field.</summary>
-    public const int IsPlayedFieldNumber = 4;
+    public const int IsPlayedFieldNumber = 8;
     private bool isPlayed_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 11;
+    public const int IdFieldNumber = 10;
     private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 8;
+    public const int GroupIdFieldNumber = 11;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,16 +167,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (IsPlayed != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(64);
         output.WriteBool(IsPlayed);
       }
-      if (GroupId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(GroupId);
-      }
       if (Id != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(80);
         output.WriteUInt32(Id);
+      }
+      if (GroupId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(GroupId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,16 +189,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IsPlayed != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(64);
         output.WriteBool(IsPlayed);
       }
-      if (GroupId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(GroupId);
-      }
       if (Id != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(80);
         output.WriteUInt32(Id);
+      }
+      if (GroupId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(GroupId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 64: {
             IsPlayed = input.ReadBool();
             break;
           }
-          case 64: {
-            GroupId = input.ReadUInt32();
+          case 80: {
+            Id = input.ReadUInt32();
             break;
           }
           case 88: {
-            Id = input.ReadUInt32();
+            GroupId = input.ReadUInt32();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 64: {
             IsPlayed = input.ReadBool();
             break;
           }
-          case 64: {
-            GroupId = input.ReadUInt32();
+          case 80: {
+            Id = input.ReadUInt32();
             break;
           }
           case 88: {
-            Id = input.ReadUInt32();
+            GroupId = input.ReadUInt32();
             break;
           }
         }

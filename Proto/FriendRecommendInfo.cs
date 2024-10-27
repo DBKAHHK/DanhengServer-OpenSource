@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlGcmllbmRSZWNvbW1lbmRJbmZvLnByb3RvGhZQbGF5ZXJTaW1wbGVJbmZv",
-            "LnByb3RvIlIKE0ZyaWVuZFJlY29tbWVuZEluZm8SEwoLTkJISUFERkVLRkYY",
-            "CyABKAgSJgoLcGxheWVyX2luZm8YDSABKAsyES5QbGF5ZXJTaW1wbGVJbmZv",
+            "LnByb3RvIlIKE0ZyaWVuZFJlY29tbWVuZEluZm8SEwoLS01KQk1LQUxOT0oY",
+            "DCABKAgSJgoLcGxheWVyX2luZm8YDyABKAsyES5QbGF5ZXJTaW1wbGVJbmZv",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlayerSimpleInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FriendRecommendInfo), global::EggLink.DanhengServer.Proto.FriendRecommendInfo.Parser, new[]{ "NBHIADFEKFF", "PlayerInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FriendRecommendInfo), global::EggLink.DanhengServer.Proto.FriendRecommendInfo.Parser, new[]{ "KMJBMKALNOJ", "PlayerInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FriendRecommendInfo(FriendRecommendInfo other) : this() {
-      nBHIADFEKFF_ = other.nBHIADFEKFF_;
+      kMJBMKALNOJ_ = other.kMJBMKALNOJ_;
       playerInfo_ = other.playerInfo_ != null ? other.playerInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,20 +84,20 @@ namespace EggLink.DanhengServer.Proto {
       return new FriendRecommendInfo(this);
     }
 
-    /// <summary>Field number for the "NBHIADFEKFF" field.</summary>
-    public const int NBHIADFEKFFFieldNumber = 11;
-    private bool nBHIADFEKFF_;
+    /// <summary>Field number for the "KMJBMKALNOJ" field.</summary>
+    public const int KMJBMKALNOJFieldNumber = 12;
+    private bool kMJBMKALNOJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool NBHIADFEKFF {
-      get { return nBHIADFEKFF_; }
+    public bool KMJBMKALNOJ {
+      get { return kMJBMKALNOJ_; }
       set {
-        nBHIADFEKFF_ = value;
+        kMJBMKALNOJ_ = value;
       }
     }
 
     /// <summary>Field number for the "player_info" field.</summary>
-    public const int PlayerInfoFieldNumber = 13;
+    public const int PlayerInfoFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.PlayerSimpleInfo playerInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (NBHIADFEKFF != other.NBHIADFEKFF) return false;
+      if (KMJBMKALNOJ != other.KMJBMKALNOJ) return false;
       if (!object.Equals(PlayerInfo, other.PlayerInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -132,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (NBHIADFEKFF != false) hash ^= NBHIADFEKFF.GetHashCode();
+      if (KMJBMKALNOJ != false) hash ^= KMJBMKALNOJ.GetHashCode();
       if (playerInfo_ != null) hash ^= PlayerInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -152,12 +152,12 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (NBHIADFEKFF != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(NBHIADFEKFF);
+      if (KMJBMKALNOJ != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(KMJBMKALNOJ);
       }
       if (playerInfo_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(122);
         output.WriteMessage(PlayerInfo);
       }
       if (_unknownFields != null) {
@@ -170,12 +170,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (NBHIADFEKFF != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(NBHIADFEKFF);
+      if (KMJBMKALNOJ != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(KMJBMKALNOJ);
       }
       if (playerInfo_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(122);
         output.WriteMessage(PlayerInfo);
       }
       if (_unknownFields != null) {
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (NBHIADFEKFF != false) {
+      if (KMJBMKALNOJ != false) {
         size += 1 + 1;
       }
       if (playerInfo_ != null) {
@@ -206,8 +206,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.NBHIADFEKFF != false) {
-        NBHIADFEKFF = other.NBHIADFEKFF;
+      if (other.KMJBMKALNOJ != false) {
+        KMJBMKALNOJ = other.KMJBMKALNOJ;
       }
       if (other.playerInfo_ != null) {
         if (playerInfo_ == null) {
@@ -230,11 +230,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 88: {
-            NBHIADFEKFF = input.ReadBool();
+          case 96: {
+            KMJBMKALNOJ = input.ReadBool();
             break;
           }
-          case 106: {
+          case 122: {
             if (playerInfo_ == null) {
               PlayerInfo = new global::EggLink.DanhengServer.Proto.PlayerSimpleInfo();
             }
@@ -256,11 +256,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 88: {
-            NBHIADFEKFF = input.ReadBool();
+          case 96: {
+            KMJBMKALNOJ = input.ReadBool();
             break;
           }
-          case 106: {
+          case 122: {
             if (playerInfo_ == null) {
               PlayerInfo = new global::EggLink.DanhengServer.Proto.PlayerSimpleInfo();
             }

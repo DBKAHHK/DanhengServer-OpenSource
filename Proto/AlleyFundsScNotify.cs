@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static AlleyFundsScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhBbGxleUZ1bmRzU2NOb3RpZnkucHJvdG8iKQoSQWxsZXlGdW5kc1NjTm90",
-            "aWZ5EhMKC01NSURKRUhNSE1QGA8gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
-            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChhBbGxleUZ1bmRzU2NOb3RpZnkucHJvdG8iJwoSQWxsZXlGdW5kc1NjTm90",
+            "aWZ5EhEKCWNvaW5fY29zdBgMIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
+            "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AlleyFundsScNotify), global::EggLink.DanhengServer.Proto.AlleyFundsScNotify.Parser, new[]{ "MMIDJEHMHMP" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AlleyFundsScNotify), global::EggLink.DanhengServer.Proto.AlleyFundsScNotify.Parser, new[]{ "CoinCost" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AlleyFundsScNotify(AlleyFundsScNotify other) : this() {
-      mMIDJEHMHMP_ = other.mMIDJEHMHMP_;
+      coinCost_ = other.coinCost_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new AlleyFundsScNotify(this);
     }
 
-    /// <summary>Field number for the "MMIDJEHMHMP" field.</summary>
-    public const int MMIDJEHMHMPFieldNumber = 15;
-    private uint mMIDJEHMHMP_;
+    /// <summary>Field number for the "coin_cost" field.</summary>
+    public const int CoinCostFieldNumber = 12;
+    private uint coinCost_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MMIDJEHMHMP {
-      get { return mMIDJEHMHMP_; }
+    public uint CoinCost {
+      get { return coinCost_; }
       set {
-        mMIDJEHMHMP_ = value;
+        coinCost_ = value;
       }
     }
 
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MMIDJEHMHMP != other.MMIDJEHMHMP) return false;
+      if (CoinCost != other.CoinCost) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MMIDJEHMHMP != 0) hash ^= MMIDJEHMHMP.GetHashCode();
+      if (CoinCost != 0) hash ^= CoinCost.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MMIDJEHMHMP != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(MMIDJEHMHMP);
+      if (CoinCost != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(CoinCost);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MMIDJEHMHMP != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(MMIDJEHMHMP);
+      if (CoinCost != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(CoinCost);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -164,8 +164,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MMIDJEHMHMP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MMIDJEHMHMP);
+      if (CoinCost != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CoinCost);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -179,8 +179,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MMIDJEHMHMP != 0) {
-        MMIDJEHMHMP = other.MMIDJEHMHMP;
+      if (other.CoinCost != 0) {
+        CoinCost = other.CoinCost;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -197,8 +197,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 120: {
-            MMIDJEHMHMP = input.ReadUInt32();
+          case 96: {
+            CoinCost = input.ReadUInt32();
             break;
           }
         }
@@ -216,8 +216,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 120: {
-            MMIDJEHMHMP = input.ReadUInt32();
+          case 96: {
+            CoinCost = input.ReadUInt32();
             break;
           }
         }

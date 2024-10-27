@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch1BcmNoaXZlV29sZkJyb0dhbWVDc1JlcS5wcm90bxoQTW90aW9uSW5mby5w",
             "cm90byJCChdBcmNoaXZlV29sZkJyb0dhbWVDc1JlcRIbCgZtb3Rpb24YBCAB",
-            "KAsyCy5Nb3Rpb25JbmZvEgoKAmlkGAogASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "KAsyCy5Nb3Rpb25JbmZvEgoKAmlkGAsgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, },
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 10;
+    public const int IdFieldNumber = 11;
     private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteMessage(Motion);
       }
       if (Id != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(88);
         output.WriteUInt32(Id);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteMessage(Motion);
       }
       if (Id != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(88);
         output.WriteUInt32(Id);
       }
       if (_unknownFields != null) {
@@ -237,7 +237,7 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(Motion);
             break;
           }
-          case 80: {
+          case 88: {
             Id = input.ReadUInt32();
             break;
           }
@@ -263,7 +263,7 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(Motion);
             break;
           }
-          case 80: {
+          case 88: {
             Id = input.ReadUInt32();
             break;
           }

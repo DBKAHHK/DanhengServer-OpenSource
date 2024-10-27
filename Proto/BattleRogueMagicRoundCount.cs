@@ -87,6 +87,9 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Field number for the "battle_standard_round_limit" field.</summary>
     public const int BattleStandardRoundLimitFieldNumber = 1;
     private uint battleStandardRoundLimit_;
+    /// <summary>
+    /// 2
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint BattleStandardRoundLimit {
@@ -99,6 +102,9 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Field number for the "battle_extra_round_limit" field.</summary>
     public const int BattleExtraRoundLimitFieldNumber = 2;
     private uint battleExtraRoundLimit_;
+    /// <summary>
+    /// 1
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint BattleExtraRoundLimit {

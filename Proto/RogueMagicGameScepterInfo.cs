@@ -24,21 +24,21 @@ namespace EggLink.DanhengServer.Proto {
     static RogueMagicGameScepterInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9Sb2d1ZU1hZ2ljR2FtZVNjZXB0ZXJJbmZvLnByb3RvGiBSb2d1ZU1hZ2lj",
-            "U2NlcHRlckRyZXNzSW5mby5wcm90bxoYUm9ndWVNYWdpY0dhbWVVbml0LnBy",
-            "b3RvGhdSb2d1ZU1hZ2ljU2NlcHRlci5wcm90byKuAgoZUm9ndWVNYWdpY0dh",
-            "bWVTY2VwdGVySW5mbxJBCgx0cmVuY2hfY291bnQYBCADKAsyKy5Sb2d1ZU1h",
-            "Z2ljR2FtZVNjZXB0ZXJJbmZvLlRyZW5jaENvdW50RW50cnkSMwoWbG9ja2Vk",
-            "X21hZ2ljX3VuaXRfbGlzdBgKIAMoCzITLlJvZ3VlTWFnaWNHYW1lVW5pdBIs",
-            "ChBtb2RpZmllcl9jb250ZW50GAggASgLMhIuUm9ndWVNYWdpY1NjZXB0ZXIS",
-            "NwoSc2NlcHRlcl9kcmVzc19pbmZvGAUgAygLMhsuUm9ndWVNYWdpY1NjZXB0",
-            "ZXJEcmVzc0luZm8aMgoQVHJlbmNoQ291bnRFbnRyeRILCgNrZXkYASABKA0S",
+            "Ch9Sb2d1ZU1hZ2ljR2FtZVNjZXB0ZXJJbmZvLnByb3RvGhhSb2d1ZU1hZ2lj",
+            "R2FtZVVuaXQucHJvdG8aF1JvZ3VlTWFnaWNTY2VwdGVyLnByb3RvGiBSb2d1",
+            "ZU1hZ2ljU2NlcHRlckRyZXNzSW5mby5wcm90byKuAgoZUm9ndWVNYWdpY0dh",
+            "bWVTY2VwdGVySW5mbxI3ChJzY2VwdGVyX2RyZXNzX2luZm8YCCADKAsyGy5S",
+            "b2d1ZU1hZ2ljU2NlcHRlckRyZXNzSW5mbxIzChZsb2NrZWRfbWFnaWNfdW5p",
+            "dF9saXN0GAYgAygLMhMuUm9ndWVNYWdpY0dhbWVVbml0EiwKEG1vZGlmaWVy",
+            "X2NvbnRlbnQYCiABKAsyEi5Sb2d1ZU1hZ2ljU2NlcHRlchJBCgx0cmVuY2hf",
+            "Y291bnQYDyADKAsyKy5Sb2d1ZU1hZ2ljR2FtZVNjZXB0ZXJJbmZvLlRyZW5j",
+            "aENvdW50RW50cnkaMgoQVHJlbmNoQ291bnRFbnRyeRILCgNrZXkYASABKA0S",
             "DQoFdmFsdWUYAiABKA06AjgBQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicScepterDressInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicGameUnitReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicScepterReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicGameUnitReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicScepterReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicScepterDressInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicGameScepterInfo), global::EggLink.DanhengServer.Proto.RogueMagicGameScepterInfo.Parser, new[]{ "TrenchCount", "LockedMagicUnitList", "ModifierContent", "ScepterDressInfo" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicGameScepterInfo), global::EggLink.DanhengServer.Proto.RogueMagicGameScepterInfo.Parser, new[]{ "ScepterDressInfo", "LockedMagicUnitList", "ModifierContent", "TrenchCount" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -80,10 +80,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueMagicGameScepterInfo(RogueMagicGameScepterInfo other) : this() {
-      trenchCount_ = other.trenchCount_.Clone();
+      scepterDressInfo_ = other.scepterDressInfo_.Clone();
       lockedMagicUnitList_ = other.lockedMagicUnitList_.Clone();
       modifierContent_ = other.modifierContent_ != null ? other.modifierContent_.Clone() : null;
-      scepterDressInfo_ = other.scepterDressInfo_.Clone();
+      trenchCount_ = other.trenchCount_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -93,21 +93,21 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueMagicGameScepterInfo(this);
     }
 
-    /// <summary>Field number for the "trench_count" field.</summary>
-    public const int TrenchCountFieldNumber = 4;
-    private static readonly pbc::MapField<uint, uint>.Codec _map_trenchCount_codec
-        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 34);
-    private readonly pbc::MapField<uint, uint> trenchCount_ = new pbc::MapField<uint, uint>();
+    /// <summary>Field number for the "scepter_dress_info" field.</summary>
+    public const int ScepterDressInfoFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueMagicScepterDressInfo> _repeated_scepterDressInfo_codec
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.RogueMagicScepterDressInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicScepterDressInfo> scepterDressInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicScepterDressInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<uint, uint> TrenchCount {
-      get { return trenchCount_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicScepterDressInfo> ScepterDressInfo {
+      get { return scepterDressInfo_; }
     }
 
     /// <summary>Field number for the "locked_magic_unit_list" field.</summary>
-    public const int LockedMagicUnitListFieldNumber = 10;
+    public const int LockedMagicUnitListFieldNumber = 6;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueMagicGameUnit> _repeated_lockedMagicUnitList_codec
-        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.RogueMagicGameUnit.Parser);
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.RogueMagicGameUnit.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicGameUnit> lockedMagicUnitList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicGameUnit>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -116,7 +116,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "modifier_content" field.</summary>
-    public const int ModifierContentFieldNumber = 8;
+    public const int ModifierContentFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.RogueMagicScepter modifierContent_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -127,15 +127,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "scepter_dress_info" field.</summary>
-    public const int ScepterDressInfoFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueMagicScepterDressInfo> _repeated_scepterDressInfo_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.RogueMagicScepterDressInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicScepterDressInfo> scepterDressInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicScepterDressInfo>();
+    /// <summary>Field number for the "trench_count" field.</summary>
+    public const int TrenchCountFieldNumber = 15;
+    private static readonly pbc::MapField<uint, uint>.Codec _map_trenchCount_codec
+        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 122);
+    private readonly pbc::MapField<uint, uint> trenchCount_ = new pbc::MapField<uint, uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicScepterDressInfo> ScepterDressInfo {
-      get { return scepterDressInfo_; }
+    public pbc::MapField<uint, uint> TrenchCount {
+      get { return trenchCount_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -153,10 +153,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!TrenchCount.Equals(other.TrenchCount)) return false;
+      if(!scepterDressInfo_.Equals(other.scepterDressInfo_)) return false;
       if(!lockedMagicUnitList_.Equals(other.lockedMagicUnitList_)) return false;
       if (!object.Equals(ModifierContent, other.ModifierContent)) return false;
-      if(!scepterDressInfo_.Equals(other.scepterDressInfo_)) return false;
+      if (!TrenchCount.Equals(other.TrenchCount)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -164,10 +164,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= TrenchCount.GetHashCode();
+      hash ^= scepterDressInfo_.GetHashCode();
       hash ^= lockedMagicUnitList_.GetHashCode();
       if (modifierContent_ != null) hash ^= ModifierContent.GetHashCode();
-      hash ^= scepterDressInfo_.GetHashCode();
+      hash ^= TrenchCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -186,13 +186,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      trenchCount_.WriteTo(output, _map_trenchCount_codec);
+      lockedMagicUnitList_.WriteTo(output, _repeated_lockedMagicUnitList_codec);
       scepterDressInfo_.WriteTo(output, _repeated_scepterDressInfo_codec);
       if (modifierContent_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(82);
         output.WriteMessage(ModifierContent);
       }
-      lockedMagicUnitList_.WriteTo(output, _repeated_lockedMagicUnitList_codec);
+      trenchCount_.WriteTo(output, _map_trenchCount_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -203,13 +203,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      trenchCount_.WriteTo(ref output, _map_trenchCount_codec);
+      lockedMagicUnitList_.WriteTo(ref output, _repeated_lockedMagicUnitList_codec);
       scepterDressInfo_.WriteTo(ref output, _repeated_scepterDressInfo_codec);
       if (modifierContent_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(82);
         output.WriteMessage(ModifierContent);
       }
-      lockedMagicUnitList_.WriteTo(ref output, _repeated_lockedMagicUnitList_codec);
+      trenchCount_.WriteTo(ref output, _map_trenchCount_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -220,12 +220,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += trenchCount_.CalculateSize(_map_trenchCount_codec);
+      size += scepterDressInfo_.CalculateSize(_repeated_scepterDressInfo_codec);
       size += lockedMagicUnitList_.CalculateSize(_repeated_lockedMagicUnitList_codec);
       if (modifierContent_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModifierContent);
       }
-      size += scepterDressInfo_.CalculateSize(_repeated_scepterDressInfo_codec);
+      size += trenchCount_.CalculateSize(_map_trenchCount_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -238,7 +238,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      trenchCount_.MergeFrom(other.trenchCount_);
+      scepterDressInfo_.Add(other.scepterDressInfo_);
       lockedMagicUnitList_.Add(other.lockedMagicUnitList_);
       if (other.modifierContent_ != null) {
         if (modifierContent_ == null) {
@@ -246,7 +246,7 @@ namespace EggLink.DanhengServer.Proto {
         }
         ModifierContent.MergeFrom(other.ModifierContent);
       }
-      scepterDressInfo_.Add(other.scepterDressInfo_);
+      trenchCount_.MergeFrom(other.trenchCount_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -262,23 +262,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
-            trenchCount_.AddEntriesFrom(input, _map_trenchCount_codec);
-            break;
-          }
-          case 42: {
-            scepterDressInfo_.AddEntriesFrom(input, _repeated_scepterDressInfo_codec);
+          case 50: {
+            lockedMagicUnitList_.AddEntriesFrom(input, _repeated_lockedMagicUnitList_codec);
             break;
           }
           case 66: {
+            scepterDressInfo_.AddEntriesFrom(input, _repeated_scepterDressInfo_codec);
+            break;
+          }
+          case 82: {
             if (modifierContent_ == null) {
               ModifierContent = new global::EggLink.DanhengServer.Proto.RogueMagicScepter();
             }
             input.ReadMessage(ModifierContent);
             break;
           }
-          case 82: {
-            lockedMagicUnitList_.AddEntriesFrom(input, _repeated_lockedMagicUnitList_codec);
+          case 122: {
+            trenchCount_.AddEntriesFrom(input, _map_trenchCount_codec);
             break;
           }
         }
@@ -296,23 +296,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
-            trenchCount_.AddEntriesFrom(ref input, _map_trenchCount_codec);
-            break;
-          }
-          case 42: {
-            scepterDressInfo_.AddEntriesFrom(ref input, _repeated_scepterDressInfo_codec);
+          case 50: {
+            lockedMagicUnitList_.AddEntriesFrom(ref input, _repeated_lockedMagicUnitList_codec);
             break;
           }
           case 66: {
+            scepterDressInfo_.AddEntriesFrom(ref input, _repeated_scepterDressInfo_codec);
+            break;
+          }
+          case 82: {
             if (modifierContent_ == null) {
               ModifierContent = new global::EggLink.DanhengServer.Proto.RogueMagicScepter();
             }
             input.ReadMessage(ModifierContent);
             break;
           }
-          case 82: {
-            lockedMagicUnitList_.AddEntriesFrom(ref input, _repeated_lockedMagicUnitList_codec);
+          case 122: {
+            trenchCount_.AddEntriesFrom(ref input, _map_trenchCount_codec);
             break;
           }
         }

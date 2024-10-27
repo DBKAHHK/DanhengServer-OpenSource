@@ -25,17 +25,17 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFHZXRNdWx0aVBhdGhBdmF0YXJJbmZvU2NSc3AucHJvdG8aGU11bHRpUGF0",
-            "aEF2YXRhckluZm8ucHJvdG8aGU11bHRpUGF0aEF2YXRhclR5cGUucHJvdG8i",
+            "aEF2YXRhclR5cGUucHJvdG8aGU11bHRpUGF0aEF2YXRhckluZm8ucHJvdG8i",
             "mwIKG0dldE11bHRpUGF0aEF2YXRhckluZm9TY1JzcBIaChJiYXNpY190eXBl",
-            "X2lkX2xpc3QYAiADKA0SOQobbXVsdGlfcGF0aF9hdmF0YXJfaW5mb19saXN0",
-            "GAcgAygLMhQuTXVsdGlQYXRoQXZhdGFySW5mbxIPCgdyZXRjb2RlGAggASgN",
-            "EkgKD2N1cl9hdmF0YXJfcGF0aBgFIAMoCzIvLkdldE11bHRpUGF0aEF2YXRh",
+            "X2lkX2xpc3QYASADKA0SOQobbXVsdGlfcGF0aF9hdmF0YXJfaW5mb19saXN0",
+            "GAQgAygLMhQuTXVsdGlQYXRoQXZhdGFySW5mbxIPCgdyZXRjb2RlGAggASgN",
+            "EkgKD2N1cl9hdmF0YXJfcGF0aBgNIAMoCzIvLkdldE11bHRpUGF0aEF2YXRh",
             "ckluZm9TY1JzcC5DdXJBdmF0YXJQYXRoRW50cnkaSgoSQ3VyQXZhdGFyUGF0",
             "aEVudHJ5EgsKA2tleRgBIAEoDRIjCgV2YWx1ZRgCIAEoDjIULk11bHRpUGF0",
             "aEF2YXRhclR5cGU6AjgBQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
             "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MultiPathAvatarInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MultiPathAvatarTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MultiPathAvatarTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.MultiPathAvatarInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMultiPathAvatarInfoScRsp), global::EggLink.DanhengServer.Proto.GetMultiPathAvatarInfoScRsp.Parser, new[]{ "BasicTypeIdList", "MultiPathAvatarInfoList", "Retcode", "CurAvatarPath" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
@@ -93,9 +93,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "basic_type_id_list" field.</summary>
-    public const int BasicTypeIdListFieldNumber = 2;
+    public const int BasicTypeIdListFieldNumber = 1;
     private static readonly pb::FieldCodec<uint> _repeated_basicTypeIdList_codec
-        = pb::FieldCodec.ForUInt32(18);
+        = pb::FieldCodec.ForUInt32(10);
     private readonly pbc::RepeatedField<uint> basicTypeIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,9 +104,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "multi_path_avatar_info_list" field.</summary>
-    public const int MultiPathAvatarInfoListFieldNumber = 7;
+    public const int MultiPathAvatarInfoListFieldNumber = 4;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo> _repeated_multiPathAvatarInfoList_codec
-        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo.Parser);
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo> multiPathAvatarInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -127,9 +127,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cur_avatar_path" field.</summary>
-    public const int CurAvatarPathFieldNumber = 5;
+    public const int CurAvatarPathFieldNumber = 13;
     private static readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.MultiPathAvatarType>.Codec _map_curAvatarPath_codec
-        = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.MultiPathAvatarType>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForEnum(16, x => (int) x, x => (global::EggLink.DanhengServer.Proto.MultiPathAvatarType) x, global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None), 42);
+        = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.MultiPathAvatarType>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForEnum(16, x => (int) x, x => (global::EggLink.DanhengServer.Proto.MultiPathAvatarType) x, global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None), 106);
     private readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.MultiPathAvatarType> curAvatarPath_ = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.MultiPathAvatarType>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,12 +186,12 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       basicTypeIdList_.WriteTo(output, _repeated_basicTypeIdList_codec);
-      curAvatarPath_.WriteTo(output, _map_curAvatarPath_codec);
       multiPathAvatarInfoList_.WriteTo(output, _repeated_multiPathAvatarInfoList_codec);
       if (Retcode != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
+      curAvatarPath_.WriteTo(output, _map_curAvatarPath_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -203,12 +203,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       basicTypeIdList_.WriteTo(ref output, _repeated_basicTypeIdList_codec);
-      curAvatarPath_.WriteTo(ref output, _map_curAvatarPath_codec);
       multiPathAvatarInfoList_.WriteTo(ref output, _repeated_multiPathAvatarInfoList_codec);
       if (Retcode != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
+      curAvatarPath_.WriteTo(ref output, _map_curAvatarPath_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -258,21 +258,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18:
-          case 16: {
+          case 10:
+          case 8: {
             basicTypeIdList_.AddEntriesFrom(input, _repeated_basicTypeIdList_codec);
             break;
           }
-          case 42: {
-            curAvatarPath_.AddEntriesFrom(input, _map_curAvatarPath_codec);
-            break;
-          }
-          case 58: {
+          case 34: {
             multiPathAvatarInfoList_.AddEntriesFrom(input, _repeated_multiPathAvatarInfoList_codec);
             break;
           }
           case 64: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 106: {
+            curAvatarPath_.AddEntriesFrom(input, _map_curAvatarPath_codec);
             break;
           }
         }
@@ -290,21 +290,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18:
-          case 16: {
+          case 10:
+          case 8: {
             basicTypeIdList_.AddEntriesFrom(ref input, _repeated_basicTypeIdList_codec);
             break;
           }
-          case 42: {
-            curAvatarPath_.AddEntriesFrom(ref input, _map_curAvatarPath_codec);
-            break;
-          }
-          case 58: {
+          case 34: {
             multiPathAvatarInfoList_.AddEntriesFrom(ref input, _repeated_multiPathAvatarInfoList_codec);
             break;
           }
           case 64: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 106: {
+            curAvatarPath_.AddEntriesFrom(ref input, _map_curAvatarPath_codec);
             break;
           }
         }

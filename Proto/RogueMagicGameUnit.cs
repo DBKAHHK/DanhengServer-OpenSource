@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhSb2d1ZU1hZ2ljR2FtZVVuaXQucHJvdG8iOgoSUm9ndWVNYWdpY0dhbWVV",
-            "bml0EhUKDW1hZ2ljX3VuaXRfaWQYAyABKA0SDQoFbGV2ZWwYBSABKA1CHqoC",
+            "bml0EhUKDW1hZ2ljX3VuaXRfaWQYDiABKA0SDQoFbGV2ZWwYByABKA1CHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "magic_unit_id" field.</summary>
-    public const int MagicUnitIdFieldNumber = 3;
+    public const int MagicUnitIdFieldNumber = 14;
     private uint magicUnitId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 5;
+    public const int LevelFieldNumber = 7;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MagicUnitId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(MagicUnitId);
-      }
       if (Level != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(56);
         output.WriteUInt32(Level);
+      }
+      if (MagicUnitId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(MagicUnitId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MagicUnitId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(MagicUnitId);
-      }
       if (Level != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(56);
         output.WriteUInt32(Level);
+      }
+      if (MagicUnitId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(MagicUnitId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            MagicUnitId = input.ReadUInt32();
+          case 56: {
+            Level = input.ReadUInt32();
             break;
           }
-          case 40: {
-            Level = input.ReadUInt32();
+          case 112: {
+            MagicUnitId = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            MagicUnitId = input.ReadUInt32();
+          case 56: {
+            Level = input.ReadUInt32();
             break;
           }
-          case 40: {
-            Level = input.ReadUInt32();
+          case 112: {
+            MagicUnitId = input.ReadUInt32();
             break;
           }
         }

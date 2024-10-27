@@ -25,21 +25,21 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci1Sb2d1ZUFkdmVudHVyZVJvb21HYW1lcGxheVdvbGZHdW5UYXJnZXQucHJv",
-            "dG8aJVJvZ3VlQWR2ZW50dXJlUm9vbVRhcmdldE1pcmFjbGUucHJvdG8aIlJv",
-            "Z3VlQWR2ZW50dXJlUm9vbVRhcmdldE5vbmUucHJvdG8aJVJvZ3VlQWR2ZW50",
-            "dXJlUm9vbVRhcmdldFJ1YW5tZWkucHJvdG8aIlJvZ3VlQWR2ZW50dXJlUm9v",
-            "bVRhcmdldENvaW4ucHJvdG8igQIKJ1JvZ3VlQWR2ZW50dXJlUm9vbUdhbWVw",
-            "bGF5V29sZkd1blRhcmdldBIxCgpUYXJnZXROb25lGAogASgLMh0uUm9ndWVB",
-            "ZHZlbnR1cmVSb29tVGFyZ2V0Tm9uZRIxCgpUYXJnZXRDb2luGAcgASgLMh0u",
-            "Um9ndWVBZHZlbnR1cmVSb29tVGFyZ2V0Q29pbhI3Cg1UYXJnZXRNaXJhY2xl",
-            "GAMgASgLMiAuUm9ndWVBZHZlbnR1cmVSb29tVGFyZ2V0TWlyYWNsZRI3Cg1U",
-            "YXJnZXRSdWFubWVpGAUgASgLMiAuUm9ndWVBZHZlbnR1cmVSb29tVGFyZ2V0",
-            "UnVhbm1laUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
-            "bzM="));
+            "dG8aJVJvZ3VlQWR2ZW50dXJlUm9vbVRhcmdldFJ1YW5tZWkucHJvdG8aIlJv",
+            "Z3VlQWR2ZW50dXJlUm9vbVRhcmdldE5vbmUucHJvdG8aIlJvZ3VlQWR2ZW50",
+            "dXJlUm9vbVRhcmdldENvaW4ucHJvdG8aJVJvZ3VlQWR2ZW50dXJlUm9vbVRh",
+            "cmdldE1pcmFjbGUucHJvdG8ipAIKJ1JvZ3VlQWR2ZW50dXJlUm9vbUdhbWVw",
+            "bGF5V29sZkd1blRhcmdldBI0Cgt0YXJnZXRfbm9uZRgJIAEoCzIdLlJvZ3Vl",
+            "QWR2ZW50dXJlUm9vbVRhcmdldE5vbmVIABI0Cgt0YXJnZXRfY29pbhgLIAEo",
+            "CzIdLlJvZ3VlQWR2ZW50dXJlUm9vbVRhcmdldENvaW5IABI6Cg50YXJnZXRf",
+            "bWlyYWNsZRgIIAEoCzIgLlJvZ3VlQWR2ZW50dXJlUm9vbVRhcmdldE1pcmFj",
+            "bGVIABI6Cg50YXJnZXRfcnVhbm1laRgHIAEoCzIgLlJvZ3VlQWR2ZW50dXJl",
+            "Um9vbVRhcmdldFJ1YW5tZWlIAEIVChNUYXJnZXRJbXBsT25lb2ZDYXNlQh6q",
+            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetMiracleReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetNoneReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetRuanmeiReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetCoinReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetRuanmeiReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetNoneReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetCoinReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetMiracleReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunTarget), global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunTarget.Parser, new[]{ "TargetNone", "TargetCoin", "TargetMiracle", "TargetRuanmei" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunTarget), global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunTarget.Parser, new[]{ "TargetNone", "TargetCoin", "TargetMiracle", "TargetRuanmei" }, new[]{ "TargetImplOneofCase" }, null, null, null)
           }));
     }
     #endregion
@@ -81,10 +81,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueAdventureRoomGameplayWolfGunTarget(RogueAdventureRoomGameplayWolfGunTarget other) : this() {
-      targetNone_ = other.targetNone_ != null ? other.targetNone_.Clone() : null;
-      targetCoin_ = other.targetCoin_ != null ? other.targetCoin_.Clone() : null;
-      targetMiracle_ = other.targetMiracle_ != null ? other.targetMiracle_.Clone() : null;
-      targetRuanmei_ = other.targetRuanmei_ != null ? other.targetRuanmei_.Clone() : null;
+      switch (other.TargetImplOneofCaseCase) {
+        case TargetImplOneofCaseOneofCase.TargetNone:
+          TargetNone = other.TargetNone.Clone();
+          break;
+        case TargetImplOneofCaseOneofCase.TargetCoin:
+          TargetCoin = other.TargetCoin.Clone();
+          break;
+        case TargetImplOneofCaseOneofCase.TargetMiracle:
+          TargetMiracle = other.TargetMiracle.Clone();
+          break;
+        case TargetImplOneofCaseOneofCase.TargetRuanmei:
+          TargetRuanmei = other.TargetRuanmei.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -94,52 +105,75 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueAdventureRoomGameplayWolfGunTarget(this);
     }
 
-    /// <summary>Field number for the "TargetNone" field.</summary>
-    public const int TargetNoneFieldNumber = 10;
-    private global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetNone targetNone_;
+    /// <summary>Field number for the "target_none" field.</summary>
+    public const int TargetNoneFieldNumber = 9;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetNone TargetNone {
-      get { return targetNone_; }
+      get { return targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetNone ? (global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetNone) targetImplOneofCase_ : null; }
       set {
-        targetNone_ = value;
+        targetImplOneofCase_ = value;
+        targetImplOneofCaseCase_ = value == null ? TargetImplOneofCaseOneofCase.None : TargetImplOneofCaseOneofCase.TargetNone;
       }
     }
 
-    /// <summary>Field number for the "TargetCoin" field.</summary>
-    public const int TargetCoinFieldNumber = 7;
-    private global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetCoin targetCoin_;
+    /// <summary>Field number for the "target_coin" field.</summary>
+    public const int TargetCoinFieldNumber = 11;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetCoin TargetCoin {
-      get { return targetCoin_; }
+      get { return targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetCoin ? (global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetCoin) targetImplOneofCase_ : null; }
       set {
-        targetCoin_ = value;
+        targetImplOneofCase_ = value;
+        targetImplOneofCaseCase_ = value == null ? TargetImplOneofCaseOneofCase.None : TargetImplOneofCaseOneofCase.TargetCoin;
       }
     }
 
-    /// <summary>Field number for the "TargetMiracle" field.</summary>
-    public const int TargetMiracleFieldNumber = 3;
-    private global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetMiracle targetMiracle_;
+    /// <summary>Field number for the "target_miracle" field.</summary>
+    public const int TargetMiracleFieldNumber = 8;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetMiracle TargetMiracle {
-      get { return targetMiracle_; }
+      get { return targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetMiracle ? (global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetMiracle) targetImplOneofCase_ : null; }
       set {
-        targetMiracle_ = value;
+        targetImplOneofCase_ = value;
+        targetImplOneofCaseCase_ = value == null ? TargetImplOneofCaseOneofCase.None : TargetImplOneofCaseOneofCase.TargetMiracle;
       }
     }
 
-    /// <summary>Field number for the "TargetRuanmei" field.</summary>
-    public const int TargetRuanmeiFieldNumber = 5;
-    private global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetRuanmei targetRuanmei_;
+    /// <summary>Field number for the "target_ruanmei" field.</summary>
+    public const int TargetRuanmeiFieldNumber = 7;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetRuanmei TargetRuanmei {
-      get { return targetRuanmei_; }
+      get { return targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetRuanmei ? (global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetRuanmei) targetImplOneofCase_ : null; }
       set {
-        targetRuanmei_ = value;
+        targetImplOneofCase_ = value;
+        targetImplOneofCaseCase_ = value == null ? TargetImplOneofCaseOneofCase.None : TargetImplOneofCaseOneofCase.TargetRuanmei;
       }
+    }
+
+    private object targetImplOneofCase_;
+    /// <summary>Enum of possible cases for the "TargetImplOneofCase" oneof.</summary>
+    public enum TargetImplOneofCaseOneofCase {
+      None = 0,
+      TargetNone = 9,
+      TargetCoin = 11,
+      TargetMiracle = 8,
+      TargetRuanmei = 7,
+    }
+    private TargetImplOneofCaseOneofCase targetImplOneofCaseCase_ = TargetImplOneofCaseOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TargetImplOneofCaseOneofCase TargetImplOneofCaseCase {
+      get { return targetImplOneofCaseCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTargetImplOneofCase() {
+      targetImplOneofCaseCase_ = TargetImplOneofCaseOneofCase.None;
+      targetImplOneofCase_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -161,6 +195,7 @@ namespace EggLink.DanhengServer.Proto {
       if (!object.Equals(TargetCoin, other.TargetCoin)) return false;
       if (!object.Equals(TargetMiracle, other.TargetMiracle)) return false;
       if (!object.Equals(TargetRuanmei, other.TargetRuanmei)) return false;
+      if (TargetImplOneofCaseCase != other.TargetImplOneofCaseCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -168,10 +203,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (targetNone_ != null) hash ^= TargetNone.GetHashCode();
-      if (targetCoin_ != null) hash ^= TargetCoin.GetHashCode();
-      if (targetMiracle_ != null) hash ^= TargetMiracle.GetHashCode();
-      if (targetRuanmei_ != null) hash ^= TargetRuanmei.GetHashCode();
+      if (targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetNone) hash ^= TargetNone.GetHashCode();
+      if (targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetCoin) hash ^= TargetCoin.GetHashCode();
+      if (targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetMiracle) hash ^= TargetMiracle.GetHashCode();
+      if (targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetRuanmei) hash ^= TargetRuanmei.GetHashCode();
+      hash ^= (int) targetImplOneofCaseCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -190,21 +226,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (targetMiracle_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(TargetMiracle);
-      }
-      if (targetRuanmei_ != null) {
-        output.WriteRawTag(42);
+      if (targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetRuanmei) {
+        output.WriteRawTag(58);
         output.WriteMessage(TargetRuanmei);
       }
-      if (targetCoin_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(TargetCoin);
+      if (targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetMiracle) {
+        output.WriteRawTag(66);
+        output.WriteMessage(TargetMiracle);
       }
-      if (targetNone_ != null) {
-        output.WriteRawTag(82);
+      if (targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetNone) {
+        output.WriteRawTag(74);
         output.WriteMessage(TargetNone);
+      }
+      if (targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetCoin) {
+        output.WriteRawTag(90);
+        output.WriteMessage(TargetCoin);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -216,21 +252,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (targetMiracle_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(TargetMiracle);
-      }
-      if (targetRuanmei_ != null) {
-        output.WriteRawTag(42);
+      if (targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetRuanmei) {
+        output.WriteRawTag(58);
         output.WriteMessage(TargetRuanmei);
       }
-      if (targetCoin_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(TargetCoin);
+      if (targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetMiracle) {
+        output.WriteRawTag(66);
+        output.WriteMessage(TargetMiracle);
       }
-      if (targetNone_ != null) {
-        output.WriteRawTag(82);
+      if (targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetNone) {
+        output.WriteRawTag(74);
         output.WriteMessage(TargetNone);
+      }
+      if (targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetCoin) {
+        output.WriteRawTag(90);
+        output.WriteMessage(TargetCoin);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -242,16 +278,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (targetNone_ != null) {
+      if (targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetNone) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TargetNone);
       }
-      if (targetCoin_ != null) {
+      if (targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetCoin) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TargetCoin);
       }
-      if (targetMiracle_ != null) {
+      if (targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetMiracle) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TargetMiracle);
       }
-      if (targetRuanmei_ != null) {
+      if (targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetRuanmei) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TargetRuanmei);
       }
       if (_unknownFields != null) {
@@ -266,30 +302,33 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.targetNone_ != null) {
-        if (targetNone_ == null) {
-          TargetNone = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetNone();
-        }
-        TargetNone.MergeFrom(other.TargetNone);
+      switch (other.TargetImplOneofCaseCase) {
+        case TargetImplOneofCaseOneofCase.TargetNone:
+          if (TargetNone == null) {
+            TargetNone = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetNone();
+          }
+          TargetNone.MergeFrom(other.TargetNone);
+          break;
+        case TargetImplOneofCaseOneofCase.TargetCoin:
+          if (TargetCoin == null) {
+            TargetCoin = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetCoin();
+          }
+          TargetCoin.MergeFrom(other.TargetCoin);
+          break;
+        case TargetImplOneofCaseOneofCase.TargetMiracle:
+          if (TargetMiracle == null) {
+            TargetMiracle = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetMiracle();
+          }
+          TargetMiracle.MergeFrom(other.TargetMiracle);
+          break;
+        case TargetImplOneofCaseOneofCase.TargetRuanmei:
+          if (TargetRuanmei == null) {
+            TargetRuanmei = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetRuanmei();
+          }
+          TargetRuanmei.MergeFrom(other.TargetRuanmei);
+          break;
       }
-      if (other.targetCoin_ != null) {
-        if (targetCoin_ == null) {
-          TargetCoin = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetCoin();
-        }
-        TargetCoin.MergeFrom(other.TargetCoin);
-      }
-      if (other.targetMiracle_ != null) {
-        if (targetMiracle_ == null) {
-          TargetMiracle = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetMiracle();
-        }
-        TargetMiracle.MergeFrom(other.TargetMiracle);
-      }
-      if (other.targetRuanmei_ != null) {
-        if (targetRuanmei_ == null) {
-          TargetRuanmei = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetRuanmei();
-        }
-        TargetRuanmei.MergeFrom(other.TargetRuanmei);
-      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -305,32 +344,40 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26: {
-            if (targetMiracle_ == null) {
-              TargetMiracle = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetMiracle();
-            }
-            input.ReadMessage(TargetMiracle);
-            break;
-          }
-          case 42: {
-            if (targetRuanmei_ == null) {
-              TargetRuanmei = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetRuanmei();
-            }
-            input.ReadMessage(TargetRuanmei);
-            break;
-          }
           case 58: {
-            if (targetCoin_ == null) {
-              TargetCoin = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetCoin();
+            global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetRuanmei subBuilder = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetRuanmei();
+            if (targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetRuanmei) {
+              subBuilder.MergeFrom(TargetRuanmei);
             }
-            input.ReadMessage(TargetCoin);
+            input.ReadMessage(subBuilder);
+            TargetRuanmei = subBuilder;
             break;
           }
-          case 82: {
-            if (targetNone_ == null) {
-              TargetNone = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetNone();
+          case 66: {
+            global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetMiracle subBuilder = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetMiracle();
+            if (targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetMiracle) {
+              subBuilder.MergeFrom(TargetMiracle);
             }
-            input.ReadMessage(TargetNone);
+            input.ReadMessage(subBuilder);
+            TargetMiracle = subBuilder;
+            break;
+          }
+          case 74: {
+            global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetNone subBuilder = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetNone();
+            if (targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetNone) {
+              subBuilder.MergeFrom(TargetNone);
+            }
+            input.ReadMessage(subBuilder);
+            TargetNone = subBuilder;
+            break;
+          }
+          case 90: {
+            global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetCoin subBuilder = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetCoin();
+            if (targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetCoin) {
+              subBuilder.MergeFrom(TargetCoin);
+            }
+            input.ReadMessage(subBuilder);
+            TargetCoin = subBuilder;
             break;
           }
         }
@@ -348,32 +395,40 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26: {
-            if (targetMiracle_ == null) {
-              TargetMiracle = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetMiracle();
-            }
-            input.ReadMessage(TargetMiracle);
-            break;
-          }
-          case 42: {
-            if (targetRuanmei_ == null) {
-              TargetRuanmei = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetRuanmei();
-            }
-            input.ReadMessage(TargetRuanmei);
-            break;
-          }
           case 58: {
-            if (targetCoin_ == null) {
-              TargetCoin = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetCoin();
+            global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetRuanmei subBuilder = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetRuanmei();
+            if (targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetRuanmei) {
+              subBuilder.MergeFrom(TargetRuanmei);
             }
-            input.ReadMessage(TargetCoin);
+            input.ReadMessage(subBuilder);
+            TargetRuanmei = subBuilder;
             break;
           }
-          case 82: {
-            if (targetNone_ == null) {
-              TargetNone = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetNone();
+          case 66: {
+            global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetMiracle subBuilder = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetMiracle();
+            if (targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetMiracle) {
+              subBuilder.MergeFrom(TargetMiracle);
             }
-            input.ReadMessage(TargetNone);
+            input.ReadMessage(subBuilder);
+            TargetMiracle = subBuilder;
+            break;
+          }
+          case 74: {
+            global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetNone subBuilder = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetNone();
+            if (targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetNone) {
+              subBuilder.MergeFrom(TargetNone);
+            }
+            input.ReadMessage(subBuilder);
+            TargetNone = subBuilder;
+            break;
+          }
+          case 90: {
+            global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetCoin subBuilder = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetCoin();
+            if (targetImplOneofCaseCase_ == TargetImplOneofCaseOneofCase.TargetCoin) {
+              subBuilder.MergeFrom(TargetCoin);
+            }
+            input.ReadMessage(subBuilder);
+            TargetCoin = subBuilder;
             break;
           }
         }

@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiZSb2d1ZUNvbW1vbkJ1ZmZSZWZvcmdlU2VsZWN0SW5mby5wcm90bxoVUm9n",
             "dWVDb21tb25CdWZmLnByb3RvImIKIFJvZ3VlQ29tbW9uQnVmZlJlZm9yZ2VT",
-            "ZWxlY3RJbmZvEiYKDHNlbGVjdF9idWZmcxgBIAMoCzIQLlJvZ3VlQ29tbW9u",
-            "QnVmZhIWCg5zZWxlY3RfaGludF9pZBgKIAEoDUIeqgIbRWdnTGluay5EYW5o",
+            "ZWxlY3RJbmZvEhYKDnNlbGVjdF9oaW50X2lkGAwgASgNEiYKDHNlbGVjdF9i",
+            "dWZmcxgBIAMoCzIQLlJvZ3VlQ29tbW9uQnVmZkIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonBuffReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonBuffReforgeSelectInfo), global::EggLink.DanhengServer.Proto.RogueCommonBuffReforgeSelectInfo.Parser, new[]{ "SelectBuffs", "SelectHintId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonBuffReforgeSelectInfo), global::EggLink.DanhengServer.Proto.RogueCommonBuffReforgeSelectInfo.Parser, new[]{ "SelectHintId", "SelectBuffs" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueCommonBuffReforgeSelectInfo(RogueCommonBuffReforgeSelectInfo other) : this() {
-      selectBuffs_ = other.selectBuffs_.Clone();
       selectHintId_ = other.selectHintId_;
+      selectBuffs_ = other.selectBuffs_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,6 +83,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueCommonBuffReforgeSelectInfo Clone() {
       return new RogueCommonBuffReforgeSelectInfo(this);
+    }
+
+    /// <summary>Field number for the "select_hint_id" field.</summary>
+    public const int SelectHintIdFieldNumber = 12;
+    private uint selectHintId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SelectHintId {
+      get { return selectHintId_; }
+      set {
+        selectHintId_ = value;
+      }
     }
 
     /// <summary>Field number for the "select_buffs" field.</summary>
@@ -94,18 +106,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonBuff> SelectBuffs {
       get { return selectBuffs_; }
-    }
-
-    /// <summary>Field number for the "select_hint_id" field.</summary>
-    public const int SelectHintIdFieldNumber = 10;
-    private uint selectHintId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SelectHintId {
-      get { return selectHintId_; }
-      set {
-        selectHintId_ = value;
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!selectBuffs_.Equals(other.selectBuffs_)) return false;
       if (SelectHintId != other.SelectHintId) return false;
+      if(!selectBuffs_.Equals(other.selectBuffs_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= selectBuffs_.GetHashCode();
       if (SelectHintId != 0) hash ^= SelectHintId.GetHashCode();
+      hash ^= selectBuffs_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -154,7 +154,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       selectBuffs_.WriteTo(output, _repeated_selectBuffs_codec);
       if (SelectHintId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(96);
         output.WriteUInt32(SelectHintId);
       }
       if (_unknownFields != null) {
@@ -169,7 +169,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       selectBuffs_.WriteTo(ref output, _repeated_selectBuffs_codec);
       if (SelectHintId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(96);
         output.WriteUInt32(SelectHintId);
       }
       if (_unknownFields != null) {
@@ -182,10 +182,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += selectBuffs_.CalculateSize(_repeated_selectBuffs_codec);
       if (SelectHintId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SelectHintId);
       }
+      size += selectBuffs_.CalculateSize(_repeated_selectBuffs_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -198,10 +198,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      selectBuffs_.Add(other.selectBuffs_);
       if (other.SelectHintId != 0) {
         SelectHintId = other.SelectHintId;
       }
+      selectBuffs_.Add(other.selectBuffs_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -221,7 +221,7 @@ namespace EggLink.DanhengServer.Proto {
             selectBuffs_.AddEntriesFrom(input, _repeated_selectBuffs_codec);
             break;
           }
-          case 80: {
+          case 96: {
             SelectHintId = input.ReadUInt32();
             break;
           }
@@ -244,7 +244,7 @@ namespace EggLink.DanhengServer.Proto {
             selectBuffs_.AddEntriesFrom(ref input, _repeated_selectBuffs_codec);
             break;
           }
-          case 80: {
+          case 96: {
             SelectHintId = input.ReadUInt32();
             break;
           }

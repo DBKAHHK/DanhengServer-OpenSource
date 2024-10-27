@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GoodsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgtHb29kcy5wcm90byJfCgVHb29kcxIQCghCdXlUaW1lcxgBIAEoDRIRCglC",
-            "ZWdpblRpbWUYCyABKAMSDwoHaXRlbV9pZBgIIAEoDRIPCgdHb29kc0lkGAcg",
-            "ASgNEg8KB0VuZFRpbWUYAyABKANCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
-            "ci5Qcm90b2IGcHJvdG8z"));
+            "CgtHb29kcy5wcm90byJjCgVHb29kcxISCgpiZWdpbl90aW1lGAIgASgDEhAK",
+            "CGdvb2RzX2lkGAMgASgNEhEKCWJ1eV90aW1lcxgLIAEoDRIPCgdpdGVtX2lk",
+            "GA4gASgNEhAKCGVuZF90aW1lGA0gASgDQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Goods), global::EggLink.DanhengServer.Proto.Goods.Parser, new[]{ "BuyTimes", "BeginTime", "ItemId", "GoodsId", "EndTime" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Goods), global::EggLink.DanhengServer.Proto.Goods.Parser, new[]{ "BeginTime", "GoodsId", "BuyTimes", "ItemId", "EndTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,10 +73,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Goods(Goods other) : this() {
-      buyTimes_ = other.buyTimes_;
       beginTime_ = other.beginTime_;
-      itemId_ = other.itemId_;
       goodsId_ = other.goodsId_;
+      buyTimes_ = other.buyTimes_;
+      itemId_ = other.itemId_;
       endTime_ = other.endTime_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -87,20 +87,8 @@ namespace EggLink.DanhengServer.Proto {
       return new Goods(this);
     }
 
-    /// <summary>Field number for the "BuyTimes" field.</summary>
-    public const int BuyTimesFieldNumber = 1;
-    private uint buyTimes_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BuyTimes {
-      get { return buyTimes_; }
-      set {
-        buyTimes_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "BeginTime" field.</summary>
-    public const int BeginTimeFieldNumber = 11;
+    /// <summary>Field number for the "begin_time" field.</summary>
+    public const int BeginTimeFieldNumber = 2;
     private long beginTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,20 +99,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "item_id" field.</summary>
-    public const int ItemIdFieldNumber = 8;
-    private uint itemId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ItemId {
-      get { return itemId_; }
-      set {
-        itemId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "GoodsId" field.</summary>
-    public const int GoodsIdFieldNumber = 7;
+    /// <summary>Field number for the "goods_id" field.</summary>
+    public const int GoodsIdFieldNumber = 3;
     private uint goodsId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -135,8 +111,32 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "EndTime" field.</summary>
-    public const int EndTimeFieldNumber = 3;
+    /// <summary>Field number for the "buy_times" field.</summary>
+    public const int BuyTimesFieldNumber = 11;
+    private uint buyTimes_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint BuyTimes {
+      get { return buyTimes_; }
+      set {
+        buyTimes_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "item_id" field.</summary>
+    public const int ItemIdFieldNumber = 14;
+    private uint itemId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ItemId {
+      get { return itemId_; }
+      set {
+        itemId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 13;
     private long endTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -162,10 +162,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (BuyTimes != other.BuyTimes) return false;
       if (BeginTime != other.BeginTime) return false;
-      if (ItemId != other.ItemId) return false;
       if (GoodsId != other.GoodsId) return false;
+      if (BuyTimes != other.BuyTimes) return false;
+      if (ItemId != other.ItemId) return false;
       if (EndTime != other.EndTime) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -174,10 +174,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (BuyTimes != 0) hash ^= BuyTimes.GetHashCode();
       if (BeginTime != 0L) hash ^= BeginTime.GetHashCode();
-      if (ItemId != 0) hash ^= ItemId.GetHashCode();
       if (GoodsId != 0) hash ^= GoodsId.GetHashCode();
+      if (BuyTimes != 0) hash ^= BuyTimes.GetHashCode();
+      if (ItemId != 0) hash ^= ItemId.GetHashCode();
       if (EndTime != 0L) hash ^= EndTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -197,25 +197,25 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (BeginTime != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(BeginTime);
+      }
+      if (GoodsId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(GoodsId);
+      }
       if (BuyTimes != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(88);
         output.WriteUInt32(BuyTimes);
       }
       if (EndTime != 0L) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(104);
         output.WriteInt64(EndTime);
       }
-      if (GoodsId != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(GoodsId);
-      }
       if (ItemId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(112);
         output.WriteUInt32(ItemId);
-      }
-      if (BeginTime != 0L) {
-        output.WriteRawTag(88);
-        output.WriteInt64(BeginTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -227,25 +227,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (BeginTime != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(BeginTime);
+      }
+      if (GoodsId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(GoodsId);
+      }
       if (BuyTimes != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(88);
         output.WriteUInt32(BuyTimes);
       }
       if (EndTime != 0L) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(104);
         output.WriteInt64(EndTime);
       }
-      if (GoodsId != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(GoodsId);
-      }
       if (ItemId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(112);
         output.WriteUInt32(ItemId);
-      }
-      if (BeginTime != 0L) {
-        output.WriteRawTag(88);
-        output.WriteInt64(BeginTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -257,17 +257,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (BuyTimes != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuyTimes);
-      }
       if (BeginTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(BeginTime);
       }
-      if (ItemId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ItemId);
-      }
       if (GoodsId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GoodsId);
+      }
+      if (BuyTimes != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuyTimes);
+      }
+      if (ItemId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ItemId);
       }
       if (EndTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(EndTime);
@@ -284,17 +284,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.BuyTimes != 0) {
-        BuyTimes = other.BuyTimes;
-      }
       if (other.BeginTime != 0L) {
         BeginTime = other.BeginTime;
       }
-      if (other.ItemId != 0) {
-        ItemId = other.ItemId;
-      }
       if (other.GoodsId != 0) {
         GoodsId = other.GoodsId;
+      }
+      if (other.BuyTimes != 0) {
+        BuyTimes = other.BuyTimes;
+      }
+      if (other.ItemId != 0) {
+        ItemId = other.ItemId;
       }
       if (other.EndTime != 0L) {
         EndTime = other.EndTime;
@@ -314,24 +314,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            BuyTimes = input.ReadUInt32();
+          case 16: {
+            BeginTime = input.ReadInt64();
             break;
           }
           case 24: {
-            EndTime = input.ReadInt64();
-            break;
-          }
-          case 56: {
             GoodsId = input.ReadUInt32();
             break;
           }
-          case 64: {
-            ItemId = input.ReadUInt32();
+          case 88: {
+            BuyTimes = input.ReadUInt32();
             break;
           }
-          case 88: {
-            BeginTime = input.ReadInt64();
+          case 104: {
+            EndTime = input.ReadInt64();
+            break;
+          }
+          case 112: {
+            ItemId = input.ReadUInt32();
             break;
           }
         }
@@ -349,24 +349,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            BuyTimes = input.ReadUInt32();
+          case 16: {
+            BeginTime = input.ReadInt64();
             break;
           }
           case 24: {
-            EndTime = input.ReadInt64();
-            break;
-          }
-          case 56: {
             GoodsId = input.ReadUInt32();
             break;
           }
-          case 64: {
-            ItemId = input.ReadUInt32();
+          case 88: {
+            BuyTimes = input.ReadUInt32();
             break;
           }
-          case 88: {
-            BeginTime = input.ReadInt64();
+          case 104: {
+            EndTime = input.ReadInt64();
+            break;
+          }
+          case 112: {
+            ItemId = input.ReadUInt32();
             break;
           }
         }

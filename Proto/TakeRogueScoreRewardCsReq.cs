@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9UYWtlUm9ndWVTY29yZVJld2FyZENzUmVxLnByb3RvIkEKGVRha2VSb2d1",
-            "ZVNjb3JlUmV3YXJkQ3NSZXESDwoHcG9vbF9pZBgDIAEoDRITCgtORkVKTEdF",
-            "RkJQTBgIIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "ZVNjb3JlUmV3YXJkQ3NSZXESEwoLTEpMR0NBR0VGRUQYCCADKA0SDwoHcG9v",
+            "bF9pZBgLIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeRogueScoreRewardCsReq), global::EggLink.DanhengServer.Proto.TakeRogueScoreRewardCsReq.Parser, new[]{ "PoolId", "NFEJLGEFBPL" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeRogueScoreRewardCsReq), global::EggLink.DanhengServer.Proto.TakeRogueScoreRewardCsReq.Parser, new[]{ "LJLGCAGEFED", "PoolId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TakeRogueScoreRewardCsReq(TakeRogueScoreRewardCsReq other) : this() {
+      lJLGCAGEFED_ = other.lJLGCAGEFED_.Clone();
       poolId_ = other.poolId_;
-      nFEJLGEFBPL_ = other.nFEJLGEFBPL_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,8 +84,19 @@ namespace EggLink.DanhengServer.Proto {
       return new TakeRogueScoreRewardCsReq(this);
     }
 
+    /// <summary>Field number for the "LJLGCAGEFED" field.</summary>
+    public const int LJLGCAGEFEDFieldNumber = 8;
+    private static readonly pb::FieldCodec<uint> _repeated_lJLGCAGEFED_codec
+        = pb::FieldCodec.ForUInt32(66);
+    private readonly pbc::RepeatedField<uint> lJLGCAGEFED_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> LJLGCAGEFED {
+      get { return lJLGCAGEFED_; }
+    }
+
     /// <summary>Field number for the "pool_id" field.</summary>
-    public const int PoolIdFieldNumber = 3;
+    public const int PoolIdFieldNumber = 11;
     private uint poolId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -94,17 +105,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         poolId_ = value;
       }
-    }
-
-    /// <summary>Field number for the "NFEJLGEFBPL" field.</summary>
-    public const int NFEJLGEFBPLFieldNumber = 8;
-    private static readonly pb::FieldCodec<uint> _repeated_nFEJLGEFBPL_codec
-        = pb::FieldCodec.ForUInt32(66);
-    private readonly pbc::RepeatedField<uint> nFEJLGEFBPL_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> NFEJLGEFBPL {
-      get { return nFEJLGEFBPL_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if(!lJLGCAGEFED_.Equals(other.lJLGCAGEFED_)) return false;
       if (PoolId != other.PoolId) return false;
-      if(!nFEJLGEFBPL_.Equals(other.nFEJLGEFBPL_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      hash ^= lJLGCAGEFED_.GetHashCode();
       if (PoolId != 0) hash ^= PoolId.GetHashCode();
-      hash ^= nFEJLGEFBPL_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      lJLGCAGEFED_.WriteTo(output, _repeated_lJLGCAGEFED_codec);
       if (PoolId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(88);
         output.WriteUInt32(PoolId);
       }
-      nFEJLGEFBPL_.WriteTo(output, _repeated_nFEJLGEFBPL_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      lJLGCAGEFED_.WriteTo(ref output, _repeated_lJLGCAGEFED_codec);
       if (PoolId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(88);
         output.WriteUInt32(PoolId);
       }
-      nFEJLGEFBPL_.WriteTo(ref output, _repeated_nFEJLGEFBPL_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -181,10 +181,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += lJLGCAGEFED_.CalculateSize(_repeated_lJLGCAGEFED_codec);
       if (PoolId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PoolId);
       }
-      size += nFEJLGEFBPL_.CalculateSize(_repeated_nFEJLGEFBPL_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -197,10 +197,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      lJLGCAGEFED_.Add(other.lJLGCAGEFED_);
       if (other.PoolId != 0) {
         PoolId = other.PoolId;
       }
-      nFEJLGEFBPL_.Add(other.nFEJLGEFBPL_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            PoolId = input.ReadUInt32();
-            break;
-          }
           case 66:
           case 64: {
-            nFEJLGEFBPL_.AddEntriesFrom(input, _repeated_nFEJLGEFBPL_codec);
+            lJLGCAGEFED_.AddEntriesFrom(input, _repeated_lJLGCAGEFED_codec);
+            break;
+          }
+          case 88: {
+            PoolId = input.ReadUInt32();
             break;
           }
         }
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            PoolId = input.ReadUInt32();
-            break;
-          }
           case 66:
           case 64: {
-            nFEJLGEFBPL_.AddEntriesFrom(ref input, _repeated_nFEJLGEFBPL_codec);
+            lJLGCAGEFED_.AddEntriesFrom(ref input, _repeated_lJLGCAGEFED_codec);
+            break;
+          }
+          case 88: {
+            PoolId = input.ReadUInt32();
             break;
           }
         }

@@ -24,18 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static EndDrinkMakerSequenceScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiBFbmREcmlua01ha2VyU2VxdWVuY2VTY1JzcC5wcm90bxoVRHJpbmtNYWtl",
-            "ckd1ZXN0LnByb3RvGhFCS0ZMTE9IRExFTS5wcm90bxoOSXRlbUxpc3QucHJv",
-            "dG8izgEKGkVuZERyaW5rTWFrZXJTZXF1ZW5jZVNjUnNwEhkKBnJld2FyZBgM",
-            "IAEoCzIJLkl0ZW1MaXN0EgwKBFRpcHMYCSABKA0SCwoDRXhwGAQgASgNEhYK",
-            "Dk5leHRTZXF1ZW5jZUlkGAsgASgNEh8KBUd1ZXN0GAMgASgLMhAuRHJpbmtN",
-            "YWtlckd1ZXN0Eg0KBWxldmVsGAogASgNEg8KB3JldGNvZGUYDyABKA0SIQoL",
-            "UmVxdWVzdExpc3QYASADKAsyDC5CS0ZMTE9IRExFTUIeqgIbRWdnTGluay5E",
-            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "CiBFbmREcmlua01ha2VyU2VxdWVuY2VTY1JzcC5wcm90bxoRRkdNSEZDTktO",
+            "QkQucHJvdG8aDkl0ZW1MaXN0LnByb3RvGhVEcmlua01ha2VyR3Vlc3QucHJv",
+            "dG8i0QEKGkVuZERyaW5rTWFrZXJTZXF1ZW5jZVNjUnNwEhgKEG5leHRfc2Vx",
+            "dWVuY2VfaWQYAiABKA0SHwoFZ3Vlc3QYASABKAsyEC5Ecmlua01ha2VyR3Vl",
+            "c3QSDAoEdGlwcxgPIAEoDRILCgNleHAYDiABKA0SDQoFbGV2ZWwYBiABKA0S",
+            "DwoHcmV0Y29kZRgKIAEoDRIiCgxyZXF1ZXN0X2xpc3QYCyADKAsyDC5GR01I",
+            "RkNOS05CRBIZCgZyZXdhcmQYDCABKAsyCS5JdGVtTGlzdEIeqgIbRWdnTGlu",
+            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DrinkMakerGuestReflection.Descriptor, global::EggLink.DanhengServer.Proto.BKFLLOHDLEMReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FGMHFCNKNBDReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.DrinkMakerGuestReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EndDrinkMakerSequenceScRsp), global::EggLink.DanhengServer.Proto.EndDrinkMakerSequenceScRsp.Parser, new[]{ "Reward", "Tips", "Exp", "NextSequenceId", "Guest", "Level", "Retcode", "RequestList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EndDrinkMakerSequenceScRsp), global::EggLink.DanhengServer.Proto.EndDrinkMakerSequenceScRsp.Parser, new[]{ "NextSequenceId", "Guest", "Tips", "Exp", "Level", "Retcode", "RequestList", "Reward" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,14 +77,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EndDrinkMakerSequenceScRsp(EndDrinkMakerSequenceScRsp other) : this() {
-      reward_ = other.reward_ != null ? other.reward_.Clone() : null;
-      tips_ = other.tips_;
-      exp_ = other.exp_;
       nextSequenceId_ = other.nextSequenceId_;
       guest_ = other.guest_ != null ? other.guest_.Clone() : null;
+      tips_ = other.tips_;
+      exp_ = other.exp_;
       level_ = other.level_;
       retcode_ = other.retcode_;
       requestList_ = other.requestList_.Clone();
+      reward_ = other.reward_ != null ? other.reward_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -92,6 +92,89 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EndDrinkMakerSequenceScRsp Clone() {
       return new EndDrinkMakerSequenceScRsp(this);
+    }
+
+    /// <summary>Field number for the "next_sequence_id" field.</summary>
+    public const int NextSequenceIdFieldNumber = 2;
+    private uint nextSequenceId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint NextSequenceId {
+      get { return nextSequenceId_; }
+      set {
+        nextSequenceId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "guest" field.</summary>
+    public const int GuestFieldNumber = 1;
+    private global::EggLink.DanhengServer.Proto.DrinkMakerGuest guest_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.DrinkMakerGuest Guest {
+      get { return guest_; }
+      set {
+        guest_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "tips" field.</summary>
+    public const int TipsFieldNumber = 15;
+    private uint tips_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Tips {
+      get { return tips_; }
+      set {
+        tips_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "exp" field.</summary>
+    public const int ExpFieldNumber = 14;
+    private uint exp_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Exp {
+      get { return exp_; }
+      set {
+        exp_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "level" field.</summary>
+    public const int LevelFieldNumber = 6;
+    private uint level_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Level {
+      get { return level_; }
+      set {
+        level_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 10;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "request_list" field.</summary>
+    public const int RequestListFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.FGMHFCNKNBD> _repeated_requestList_codec
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.FGMHFCNKNBD.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FGMHFCNKNBD> requestList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FGMHFCNKNBD>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FGMHFCNKNBD> RequestList {
+      get { return requestList_; }
     }
 
     /// <summary>Field number for the "reward" field.</summary>
@@ -104,89 +187,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         reward_ = value;
       }
-    }
-
-    /// <summary>Field number for the "Tips" field.</summary>
-    public const int TipsFieldNumber = 9;
-    private uint tips_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Tips {
-      get { return tips_; }
-      set {
-        tips_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "Exp" field.</summary>
-    public const int ExpFieldNumber = 4;
-    private uint exp_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Exp {
-      get { return exp_; }
-      set {
-        exp_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "NextSequenceId" field.</summary>
-    public const int NextSequenceIdFieldNumber = 11;
-    private uint nextSequenceId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NextSequenceId {
-      get { return nextSequenceId_; }
-      set {
-        nextSequenceId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "Guest" field.</summary>
-    public const int GuestFieldNumber = 3;
-    private global::EggLink.DanhengServer.Proto.DrinkMakerGuest guest_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.DrinkMakerGuest Guest {
-      get { return guest_; }
-      set {
-        guest_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 10;
-    private uint level_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Level {
-      get { return level_; }
-      set {
-        level_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 15;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "RequestList" field.</summary>
-    public const int RequestListFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.BKFLLOHDLEM> _repeated_requestList_codec
-        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.BKFLLOHDLEM.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BKFLLOHDLEM> requestList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BKFLLOHDLEM>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BKFLLOHDLEM> RequestList {
-      get { return requestList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -204,14 +204,14 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Reward, other.Reward)) return false;
-      if (Tips != other.Tips) return false;
-      if (Exp != other.Exp) return false;
       if (NextSequenceId != other.NextSequenceId) return false;
       if (!object.Equals(Guest, other.Guest)) return false;
+      if (Tips != other.Tips) return false;
+      if (Exp != other.Exp) return false;
       if (Level != other.Level) return false;
       if (Retcode != other.Retcode) return false;
       if(!requestList_.Equals(other.requestList_)) return false;
+      if (!object.Equals(Reward, other.Reward)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -219,14 +219,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (reward_ != null) hash ^= Reward.GetHashCode();
-      if (Tips != 0) hash ^= Tips.GetHashCode();
-      if (Exp != 0) hash ^= Exp.GetHashCode();
       if (NextSequenceId != 0) hash ^= NextSequenceId.GetHashCode();
       if (guest_ != null) hash ^= Guest.GetHashCode();
+      if (Tips != 0) hash ^= Tips.GetHashCode();
+      if (Exp != 0) hash ^= Exp.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       hash ^= requestList_.GetHashCode();
+      if (reward_ != null) hash ^= Reward.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -245,34 +245,34 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      requestList_.WriteTo(output, _repeated_requestList_codec);
       if (guest_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(10);
         output.WriteMessage(Guest);
       }
-      if (Exp != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Exp);
-      }
-      if (Tips != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(Tips);
-      }
-      if (Level != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Level);
-      }
       if (NextSequenceId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(16);
         output.WriteUInt32(NextSequenceId);
       }
+      if (Level != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(Level);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Retcode);
+      }
+      requestList_.WriteTo(output, _repeated_requestList_codec);
       if (reward_ != null) {
         output.WriteRawTag(98);
         output.WriteMessage(Reward);
       }
-      if (Retcode != 0) {
+      if (Exp != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(Exp);
+      }
+      if (Tips != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(Retcode);
+        output.WriteUInt32(Tips);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -284,34 +284,34 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      requestList_.WriteTo(ref output, _repeated_requestList_codec);
       if (guest_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(10);
         output.WriteMessage(Guest);
       }
-      if (Exp != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Exp);
-      }
-      if (Tips != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(Tips);
-      }
-      if (Level != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Level);
-      }
       if (NextSequenceId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(16);
         output.WriteUInt32(NextSequenceId);
       }
+      if (Level != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(Level);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Retcode);
+      }
+      requestList_.WriteTo(ref output, _repeated_requestList_codec);
       if (reward_ != null) {
         output.WriteRawTag(98);
         output.WriteMessage(Reward);
       }
-      if (Retcode != 0) {
+      if (Exp != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(Exp);
+      }
+      if (Tips != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(Retcode);
+        output.WriteUInt32(Tips);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -323,20 +323,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (reward_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Reward);
+      if (NextSequenceId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NextSequenceId);
+      }
+      if (guest_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Guest);
       }
       if (Tips != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Tips);
       }
       if (Exp != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Exp);
-      }
-      if (NextSequenceId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NextSequenceId);
-      }
-      if (guest_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Guest);
       }
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
@@ -345,6 +342,9 @@ namespace EggLink.DanhengServer.Proto {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       size += requestList_.CalculateSize(_repeated_requestList_codec);
+      if (reward_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Reward);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -357,18 +357,6 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.reward_ != null) {
-        if (reward_ == null) {
-          Reward = new global::EggLink.DanhengServer.Proto.ItemList();
-        }
-        Reward.MergeFrom(other.Reward);
-      }
-      if (other.Tips != 0) {
-        Tips = other.Tips;
-      }
-      if (other.Exp != 0) {
-        Exp = other.Exp;
-      }
       if (other.NextSequenceId != 0) {
         NextSequenceId = other.NextSequenceId;
       }
@@ -378,6 +366,12 @@ namespace EggLink.DanhengServer.Proto {
         }
         Guest.MergeFrom(other.Guest);
       }
+      if (other.Tips != 0) {
+        Tips = other.Tips;
+      }
+      if (other.Exp != 0) {
+        Exp = other.Exp;
+      }
       if (other.Level != 0) {
         Level = other.Level;
       }
@@ -385,6 +379,12 @@ namespace EggLink.DanhengServer.Proto {
         Retcode = other.Retcode;
       }
       requestList_.Add(other.requestList_);
+      if (other.reward_ != null) {
+        if (reward_ == null) {
+          Reward = new global::EggLink.DanhengServer.Proto.ItemList();
+        }
+        Reward.MergeFrom(other.Reward);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -401,30 +401,26 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            requestList_.AddEntriesFrom(input, _repeated_requestList_codec);
-            break;
-          }
-          case 26: {
             if (guest_ == null) {
               Guest = new global::EggLink.DanhengServer.Proto.DrinkMakerGuest();
             }
             input.ReadMessage(Guest);
             break;
           }
-          case 32: {
-            Exp = input.ReadUInt32();
+          case 16: {
+            NextSequenceId = input.ReadUInt32();
             break;
           }
-          case 72: {
-            Tips = input.ReadUInt32();
-            break;
-          }
-          case 80: {
+          case 48: {
             Level = input.ReadUInt32();
             break;
           }
-          case 88: {
-            NextSequenceId = input.ReadUInt32();
+          case 80: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 90: {
+            requestList_.AddEntriesFrom(input, _repeated_requestList_codec);
             break;
           }
           case 98: {
@@ -434,8 +430,12 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(Reward);
             break;
           }
+          case 112: {
+            Exp = input.ReadUInt32();
+            break;
+          }
           case 120: {
-            Retcode = input.ReadUInt32();
+            Tips = input.ReadUInt32();
             break;
           }
         }
@@ -454,30 +454,26 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            requestList_.AddEntriesFrom(ref input, _repeated_requestList_codec);
-            break;
-          }
-          case 26: {
             if (guest_ == null) {
               Guest = new global::EggLink.DanhengServer.Proto.DrinkMakerGuest();
             }
             input.ReadMessage(Guest);
             break;
           }
-          case 32: {
-            Exp = input.ReadUInt32();
+          case 16: {
+            NextSequenceId = input.ReadUInt32();
             break;
           }
-          case 72: {
-            Tips = input.ReadUInt32();
-            break;
-          }
-          case 80: {
+          case 48: {
             Level = input.ReadUInt32();
             break;
           }
-          case 88: {
-            NextSequenceId = input.ReadUInt32();
+          case 80: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 90: {
+            requestList_.AddEntriesFrom(ref input, _repeated_requestList_codec);
             break;
           }
           case 98: {
@@ -487,8 +483,12 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(Reward);
             break;
           }
+          case 112: {
+            Exp = input.ReadUInt32();
+            break;
+          }
           case 120: {
-            Retcode = input.ReadUInt32();
+            Tips = input.ReadUInt32();
             break;
           }
         }
