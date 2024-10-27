@@ -24,13 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GetTrainVisitorBehaviorCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiJHZXRUcmFpblZpc2l0b3JCZWhhdmlvckNzUmVxLnByb3RvIjMKHEdldFRy",
-            "YWluVmlzaXRvckJlaGF2aW9yQ3NSZXESEwoLUExBR0FOTkdNQUkYCSADKA1C",
-            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "CiJHZXRUcmFpblZpc2l0b3JCZWhhdmlvckNzUmVxLnByb3RvIkAKHEdldFRy",
+            "YWluVmlzaXRvckJlaGF2aW9yQ3NSZXESIAoYdmlzaXRvcl9iZWhhdmlvcl9p",
+            "ZF9saXN0GA4gAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetTrainVisitorBehaviorCsReq), global::EggLink.DanhengServer.Proto.GetTrainVisitorBehaviorCsReq.Parser, new[]{ "PLAGANNGMAI" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetTrainVisitorBehaviorCsReq), global::EggLink.DanhengServer.Proto.GetTrainVisitorBehaviorCsReq.Parser, new[]{ "VisitorBehaviorIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetTrainVisitorBehaviorCsReq(GetTrainVisitorBehaviorCsReq other) : this() {
-      pLAGANNGMAI_ = other.pLAGANNGMAI_.Clone();
+      visitorBehaviorIdList_ = other.visitorBehaviorIdList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GetTrainVisitorBehaviorCsReq(this);
     }
 
-    /// <summary>Field number for the "PLAGANNGMAI" field.</summary>
-    public const int PLAGANNGMAIFieldNumber = 9;
-    private static readonly pb::FieldCodec<uint> _repeated_pLAGANNGMAI_codec
-        = pb::FieldCodec.ForUInt32(74);
-    private readonly pbc::RepeatedField<uint> pLAGANNGMAI_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "visitor_behavior_id_list" field.</summary>
+    public const int VisitorBehaviorIdListFieldNumber = 14;
+    private static readonly pb::FieldCodec<uint> _repeated_visitorBehaviorIdList_codec
+        = pb::FieldCodec.ForUInt32(114);
+    private readonly pbc::RepeatedField<uint> visitorBehaviorIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> PLAGANNGMAI {
-      get { return pLAGANNGMAI_; }
+    public pbc::RepeatedField<uint> VisitorBehaviorIdList {
+      get { return visitorBehaviorIdList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -108,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!pLAGANNGMAI_.Equals(other.pLAGANNGMAI_)) return false;
+      if(!visitorBehaviorIdList_.Equals(other.visitorBehaviorIdList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -116,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= pLAGANNGMAI_.GetHashCode();
+      hash ^= visitorBehaviorIdList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -135,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      pLAGANNGMAI_.WriteTo(output, _repeated_pLAGANNGMAI_codec);
+      visitorBehaviorIdList_.WriteTo(output, _repeated_visitorBehaviorIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -146,7 +147,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      pLAGANNGMAI_.WriteTo(ref output, _repeated_pLAGANNGMAI_codec);
+      visitorBehaviorIdList_.WriteTo(ref output, _repeated_visitorBehaviorIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -157,7 +158,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += pLAGANNGMAI_.CalculateSize(_repeated_pLAGANNGMAI_codec);
+      size += visitorBehaviorIdList_.CalculateSize(_repeated_visitorBehaviorIdList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -170,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      pLAGANNGMAI_.Add(other.pLAGANNGMAI_);
+      visitorBehaviorIdList_.Add(other.visitorBehaviorIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -186,9 +187,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 74:
-          case 72: {
-            pLAGANNGMAI_.AddEntriesFrom(input, _repeated_pLAGANNGMAI_codec);
+          case 114:
+          case 112: {
+            visitorBehaviorIdList_.AddEntriesFrom(input, _repeated_visitorBehaviorIdList_codec);
             break;
           }
         }
@@ -206,9 +207,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 74:
-          case 72: {
-            pLAGANNGMAI_.AddEntriesFrom(ref input, _repeated_pLAGANNGMAI_codec);
+          case 114:
+          case 112: {
+            visitorBehaviorIdList_.AddEntriesFrom(ref input, _repeated_visitorBehaviorIdList_codec);
             break;
           }
         }

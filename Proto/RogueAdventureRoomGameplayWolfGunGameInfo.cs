@@ -27,14 +27,14 @@ namespace EggLink.DanhengServer.Proto {
             "Ci9Sb2d1ZUFkdmVudHVyZVJvb21HYW1lcGxheVdvbGZHdW5HYW1lSW5mby5w",
             "cm90bxotUm9ndWVBZHZlbnR1cmVSb29tR2FtZXBsYXlXb2xmR3VuVGFyZ2V0",
             "LnByb3RvIooBCilSb2d1ZUFkdmVudHVyZVJvb21HYW1lcGxheVdvbGZHdW5H",
-            "YW1lSW5mbxIXCg9nYW1lX3RhcmdldF9udW0YBCABKA0SRAoSYmF0dGxlX3Rh",
-            "cmdldF9saXN0GAIgAygLMiguUm9ndWVBZHZlbnR1cmVSb29tR2FtZXBsYXlX",
-            "b2xmR3VuVGFyZ2V0Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "YW1lSW5mbxJEChJiYXR0bGVfdGFyZ2V0X2xpc3QYDCADKAsyKC5Sb2d1ZUFk",
+            "dmVudHVyZVJvb21HYW1lcGxheVdvbGZHdW5UYXJnZXQSFwoPZ2FtZV90YXJn",
+            "ZXRfbnVtGAIgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunTargetReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunGameInfo), global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunGameInfo.Parser, new[]{ "GameTargetNum", "BattleTargetList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunGameInfo), global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunGameInfo.Parser, new[]{ "BattleTargetList", "GameTargetNum" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,8 +76,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueAdventureRoomGameplayWolfGunGameInfo(RogueAdventureRoomGameplayWolfGunGameInfo other) : this() {
-      gameTargetNum_ = other.gameTargetNum_;
       battleTargetList_ = other.battleTargetList_.Clone();
+      gameTargetNum_ = other.gameTargetNum_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,8 +87,19 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueAdventureRoomGameplayWolfGunGameInfo(this);
     }
 
+    /// <summary>Field number for the "battle_target_list" field.</summary>
+    public const int BattleTargetListFieldNumber = 12;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunTarget> _repeated_battleTargetList_codec
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunTarget.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunTarget> battleTargetList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunTarget>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunTarget> BattleTargetList {
+      get { return battleTargetList_; }
+    }
+
     /// <summary>Field number for the "game_target_num" field.</summary>
-    public const int GameTargetNumFieldNumber = 4;
+    public const int GameTargetNumFieldNumber = 2;
     private uint gameTargetNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,17 +108,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         gameTargetNum_ = value;
       }
-    }
-
-    /// <summary>Field number for the "battle_target_list" field.</summary>
-    public const int BattleTargetListFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunTarget> _repeated_battleTargetList_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunTarget.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunTarget> battleTargetList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunTarget>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunTarget> BattleTargetList {
-      get { return battleTargetList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -125,8 +125,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (GameTargetNum != other.GameTargetNum) return false;
       if(!battleTargetList_.Equals(other.battleTargetList_)) return false;
+      if (GameTargetNum != other.GameTargetNum) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -134,8 +134,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (GameTargetNum != 0) hash ^= GameTargetNum.GetHashCode();
       hash ^= battleTargetList_.GetHashCode();
+      if (GameTargetNum != 0) hash ^= GameTargetNum.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -154,11 +154,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      battleTargetList_.WriteTo(output, _repeated_battleTargetList_codec);
       if (GameTargetNum != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(16);
         output.WriteUInt32(GameTargetNum);
       }
+      battleTargetList_.WriteTo(output, _repeated_battleTargetList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -169,11 +169,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      battleTargetList_.WriteTo(ref output, _repeated_battleTargetList_codec);
       if (GameTargetNum != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(16);
         output.WriteUInt32(GameTargetNum);
       }
+      battleTargetList_.WriteTo(ref output, _repeated_battleTargetList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -184,10 +184,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += battleTargetList_.CalculateSize(_repeated_battleTargetList_codec);
       if (GameTargetNum != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GameTargetNum);
       }
-      size += battleTargetList_.CalculateSize(_repeated_battleTargetList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -200,10 +200,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      battleTargetList_.Add(other.battleTargetList_);
       if (other.GameTargetNum != 0) {
         GameTargetNum = other.GameTargetNum;
       }
-      battleTargetList_.Add(other.battleTargetList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -219,12 +219,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
-            battleTargetList_.AddEntriesFrom(input, _repeated_battleTargetList_codec);
+          case 16: {
+            GameTargetNum = input.ReadUInt32();
             break;
           }
-          case 32: {
-            GameTargetNum = input.ReadUInt32();
+          case 98: {
+            battleTargetList_.AddEntriesFrom(input, _repeated_battleTargetList_codec);
             break;
           }
         }
@@ -242,12 +242,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
-            battleTargetList_.AddEntriesFrom(ref input, _repeated_battleTargetList_codec);
+          case 16: {
+            GameTargetNum = input.ReadUInt32();
             break;
           }
-          case 32: {
-            GameTargetNum = input.ReadUInt32();
+          case 98: {
+            battleTargetList_.AddEntriesFrom(ref input, _repeated_battleTargetList_codec);
             break;
           }
         }

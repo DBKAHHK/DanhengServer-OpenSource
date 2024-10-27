@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChZEaXNwbGF5QXZhdGFyVmVjLnByb3RvGhdEaXNwbGF5QXZhdGFyRGF0YS5w",
             "cm90byJXChBEaXNwbGF5QXZhdGFyVmVjEi8KE2Rpc3BsYXlfYXZhdGFyX2xp",
-            "c3QYBSADKAsyEi5EaXNwbGF5QXZhdGFyRGF0YRISCgppc19kaXNwbGF5GAYg",
+            "c3QYBCADKAsyEi5EaXNwbGF5QXZhdGFyRGF0YRISCgppc19kaXNwbGF5GA0g",
             "ASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DisplayAvatarDataReflection.Descriptor, },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "display_avatar_list" field.</summary>
-    public const int DisplayAvatarListFieldNumber = 5;
+    public const int DisplayAvatarListFieldNumber = 4;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DisplayAvatarData> _repeated_displayAvatarList_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.DisplayAvatarData.Parser);
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.DisplayAvatarData.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarData> displayAvatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_display" field.</summary>
-    public const int IsDisplayFieldNumber = 6;
+    public const int IsDisplayFieldNumber = 13;
     private bool isDisplay_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       displayAvatarList_.WriteTo(output, _repeated_displayAvatarList_codec);
       if (IsDisplay != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(104);
         output.WriteBool(IsDisplay);
       }
       if (_unknownFields != null) {
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       displayAvatarList_.WriteTo(ref output, _repeated_displayAvatarList_codec);
       if (IsDisplay != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(104);
         output.WriteBool(IsDisplay);
       }
       if (_unknownFields != null) {
@@ -216,11 +216,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
+          case 34: {
             displayAvatarList_.AddEntriesFrom(input, _repeated_displayAvatarList_codec);
             break;
           }
-          case 48: {
+          case 104: {
             IsDisplay = input.ReadBool();
             break;
           }
@@ -239,11 +239,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
+          case 34: {
             displayAvatarList_.AddEntriesFrom(ref input, _repeated_displayAvatarList_codec);
             break;
           }
-          case 48: {
+          case 104: {
             IsDisplay = input.ReadBool();
             break;
           }

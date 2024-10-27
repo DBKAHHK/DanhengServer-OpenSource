@@ -29,6 +29,7 @@ using EggLink.DanhengServer.GameServer.Game.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.GameServer.Game.Shop;
 using EggLink.DanhengServer.GameServer.Game.Task;
+using EggLink.DanhengServer.GameServer.Game.TrainParty;
 using EggLink.DanhengServer.GameServer.Server;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
@@ -59,6 +60,8 @@ public class PlayerInstance(PlayerData data)
 
     public RaidManager? RaidManager { get; private set; }
     public StoryLineManager? StoryLineManager { get; private set; }
+
+    public TrainPartyManager? TrainPartyManager { get; private set; }
 
     public FriendManager? FriendManager { get; private set; }
     public RogueManager? RogueManager { get; private set; }
@@ -150,6 +153,7 @@ public class PlayerInstance(PlayerData data)
         RaidManager = new RaidManager(this);
         StoryLineManager = new StoryLineManager(this);
         QuestManager = new QuestManager(this);
+        TrainPartyManager = new TrainPartyManager(this);
 
         PlayerUnlockData = InitializeDatabase<PlayerUnlockData>();
         SceneData = InitializeDatabase<SceneData>();

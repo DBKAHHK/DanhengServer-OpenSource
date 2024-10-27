@@ -26,12 +26,12 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ci5UYWtlUm9ndWVFbmRsZXNzQWN0aXZpdHlQb2ludFJld2FyZENzUmVxLnBy",
             "b3RvIk4KKFRha2VSb2d1ZUVuZGxlc3NBY3Rpdml0eVBvaW50UmV3YXJkQ3NS",
-            "ZXESDQoFbGV2ZWwYAiABKA0SEwoLTUdDSUFDRktCRk0YCiABKAhCHqoCG0Vn",
+            "ZXESDQoFbGV2ZWwYAiABKA0SEwoLSUNET0hLUEtNQUgYDSABKAhCHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeRogueEndlessActivityPointRewardCsReq), global::EggLink.DanhengServer.Proto.TakeRogueEndlessActivityPointRewardCsReq.Parser, new[]{ "Level", "MGCIACFKBFM" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeRogueEndlessActivityPointRewardCsReq), global::EggLink.DanhengServer.Proto.TakeRogueEndlessActivityPointRewardCsReq.Parser, new[]{ "Level", "ICDOHKPKMAH" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TakeRogueEndlessActivityPointRewardCsReq(TakeRogueEndlessActivityPointRewardCsReq other) : this() {
       level_ = other.level_;
-      mGCIACFKBFM_ = other.mGCIACFKBFM_;
+      iCDOHKPKMAH_ = other.iCDOHKPKMAH_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "MGCIACFKBFM" field.</summary>
-    public const int MGCIACFKBFMFieldNumber = 10;
-    private bool mGCIACFKBFM_;
+    /// <summary>Field number for the "ICDOHKPKMAH" field.</summary>
+    public const int ICDOHKPKMAHFieldNumber = 13;
+    private bool iCDOHKPKMAH_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool MGCIACFKBFM {
-      get { return mGCIACFKBFM_; }
+    public bool ICDOHKPKMAH {
+      get { return iCDOHKPKMAH_; }
       set {
-        mGCIACFKBFM_ = value;
+        iCDOHKPKMAH_ = value;
       }
     }
 
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Level != other.Level) return false;
-      if (MGCIACFKBFM != other.MGCIACFKBFM) return false;
+      if (ICDOHKPKMAH != other.ICDOHKPKMAH) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Level != 0) hash ^= Level.GetHashCode();
-      if (MGCIACFKBFM != false) hash ^= MGCIACFKBFM.GetHashCode();
+      if (ICDOHKPKMAH != false) hash ^= ICDOHKPKMAH.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -156,9 +156,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt32(Level);
       }
-      if (MGCIACFKBFM != false) {
-        output.WriteRawTag(80);
-        output.WriteBool(MGCIACFKBFM);
+      if (ICDOHKPKMAH != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(ICDOHKPKMAH);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -174,9 +174,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt32(Level);
       }
-      if (MGCIACFKBFM != false) {
-        output.WriteRawTag(80);
-        output.WriteBool(MGCIACFKBFM);
+      if (ICDOHKPKMAH != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(ICDOHKPKMAH);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -191,7 +191,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
       }
-      if (MGCIACFKBFM != false) {
+      if (ICDOHKPKMAH != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -209,8 +209,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Level != 0) {
         Level = other.Level;
       }
-      if (other.MGCIACFKBFM != false) {
-        MGCIACFKBFM = other.MGCIACFKBFM;
+      if (other.ICDOHKPKMAH != false) {
+        ICDOHKPKMAH = other.ICDOHKPKMAH;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,8 +231,8 @@ namespace EggLink.DanhengServer.Proto {
             Level = input.ReadUInt32();
             break;
           }
-          case 80: {
-            MGCIACFKBFM = input.ReadBool();
+          case 104: {
+            ICDOHKPKMAH = input.ReadBool();
             break;
           }
         }
@@ -254,8 +254,8 @@ namespace EggLink.DanhengServer.Proto {
             Level = input.ReadUInt32();
             break;
           }
-          case 80: {
-            MGCIACFKBFM = input.ReadBool();
+          case 104: {
+            ICDOHKPKMAH = input.ReadBool();
             break;
           }
         }

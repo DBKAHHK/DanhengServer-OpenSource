@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static EquipmentReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg9FcXVpcG1lbnQucHJvdG8ilwEKCUVxdWlwbWVudBIMCgRyYW5rGAQgASgN",
-            "EhEKCXByb21vdGlvbhgMIAEoDRILCgN0aWQYByABKA0SFwoPZHJlc3NfYXZh",
-            "dGFyX2lkGAYgASgNEgsKA2V4cBgIIAEoDRIRCgl1bmlxdWVfaWQYCyABKA0S",
-            "DQoFbGV2ZWwYASABKA0SFAoMaXNfcHJvdGVjdGVkGAMgASgIQh6qAhtFZ2dM",
+            "Cg9FcXVpcG1lbnQucHJvdG8ilwEKCUVxdWlwbWVudBIMCgRyYW5rGAcgASgN",
+            "EhEKCXByb21vdGlvbhgFIAEoDRINCgVsZXZlbBgBIAEoDRILCgN0aWQYCCAB",
+            "KA0SCwoDZXhwGAwgASgNEhQKDGlzX3Byb3RlY3RlZBgOIAEoCBIXCg9kcmVz",
+            "c19hdmF0YXJfaWQYAiABKA0SEQoJdW5pcXVlX2lkGAMgASgNQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Equipment), global::EggLink.DanhengServer.Proto.Equipment.Parser, new[]{ "Rank", "Promotion", "Tid", "DressAvatarId", "Exp", "UniqueId", "Level", "IsProtected" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Equipment), global::EggLink.DanhengServer.Proto.Equipment.Parser, new[]{ "Rank", "Promotion", "Level", "Tid", "Exp", "IsProtected", "DressAvatarId", "UniqueId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,12 +76,12 @@ namespace EggLink.DanhengServer.Proto {
     public Equipment(Equipment other) : this() {
       rank_ = other.rank_;
       promotion_ = other.promotion_;
-      tid_ = other.tid_;
-      dressAvatarId_ = other.dressAvatarId_;
-      exp_ = other.exp_;
-      uniqueId_ = other.uniqueId_;
       level_ = other.level_;
+      tid_ = other.tid_;
+      exp_ = other.exp_;
       isProtected_ = other.isProtected_;
+      dressAvatarId_ = other.dressAvatarId_;
+      uniqueId_ = other.uniqueId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -92,7 +92,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rank" field.</summary>
-    public const int RankFieldNumber = 4;
+    public const int RankFieldNumber = 7;
     private uint rank_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,7 +104,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "promotion" field.</summary>
-    public const int PromotionFieldNumber = 12;
+    public const int PromotionFieldNumber = 5;
     private uint promotion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,54 +112,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return promotion_; }
       set {
         promotion_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "tid" field.</summary>
-    public const int TidFieldNumber = 7;
-    private uint tid_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Tid {
-      get { return tid_; }
-      set {
-        tid_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "dress_avatar_id" field.</summary>
-    public const int DressAvatarIdFieldNumber = 6;
-    private uint dressAvatarId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DressAvatarId {
-      get { return dressAvatarId_; }
-      set {
-        dressAvatarId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "exp" field.</summary>
-    public const int ExpFieldNumber = 8;
-    private uint exp_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Exp {
-      get { return exp_; }
-      set {
-        exp_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "unique_id" field.</summary>
-    public const int UniqueIdFieldNumber = 11;
-    private uint uniqueId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint UniqueId {
-      get { return uniqueId_; }
-      set {
-        uniqueId_ = value;
       }
     }
 
@@ -175,8 +127,32 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "tid" field.</summary>
+    public const int TidFieldNumber = 8;
+    private uint tid_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Tid {
+      get { return tid_; }
+      set {
+        tid_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "exp" field.</summary>
+    public const int ExpFieldNumber = 12;
+    private uint exp_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Exp {
+      get { return exp_; }
+      set {
+        exp_ = value;
+      }
+    }
+
     /// <summary>Field number for the "is_protected" field.</summary>
-    public const int IsProtectedFieldNumber = 3;
+    public const int IsProtectedFieldNumber = 14;
     private bool isProtected_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -184,6 +160,30 @@ namespace EggLink.DanhengServer.Proto {
       get { return isProtected_; }
       set {
         isProtected_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "dress_avatar_id" field.</summary>
+    public const int DressAvatarIdFieldNumber = 2;
+    private uint dressAvatarId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DressAvatarId {
+      get { return dressAvatarId_; }
+      set {
+        dressAvatarId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "unique_id" field.</summary>
+    public const int UniqueIdFieldNumber = 3;
+    private uint uniqueId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint UniqueId {
+      get { return uniqueId_; }
+      set {
+        uniqueId_ = value;
       }
     }
 
@@ -204,12 +204,12 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (Rank != other.Rank) return false;
       if (Promotion != other.Promotion) return false;
-      if (Tid != other.Tid) return false;
-      if (DressAvatarId != other.DressAvatarId) return false;
-      if (Exp != other.Exp) return false;
-      if (UniqueId != other.UniqueId) return false;
       if (Level != other.Level) return false;
+      if (Tid != other.Tid) return false;
+      if (Exp != other.Exp) return false;
       if (IsProtected != other.IsProtected) return false;
+      if (DressAvatarId != other.DressAvatarId) return false;
+      if (UniqueId != other.UniqueId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -219,12 +219,12 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (Rank != 0) hash ^= Rank.GetHashCode();
       if (Promotion != 0) hash ^= Promotion.GetHashCode();
-      if (Tid != 0) hash ^= Tid.GetHashCode();
-      if (DressAvatarId != 0) hash ^= DressAvatarId.GetHashCode();
-      if (Exp != 0) hash ^= Exp.GetHashCode();
-      if (UniqueId != 0) hash ^= UniqueId.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
+      if (Tid != 0) hash ^= Tid.GetHashCode();
+      if (Exp != 0) hash ^= Exp.GetHashCode();
       if (IsProtected != false) hash ^= IsProtected.GetHashCode();
+      if (DressAvatarId != 0) hash ^= DressAvatarId.GetHashCode();
+      if (UniqueId != 0) hash ^= UniqueId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -247,33 +247,33 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(Level);
       }
-      if (IsProtected != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(IsProtected);
-      }
-      if (Rank != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Rank);
-      }
       if (DressAvatarId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(16);
         output.WriteUInt32(DressAvatarId);
       }
-      if (Tid != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(Tid);
-      }
-      if (Exp != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(Exp);
-      }
       if (UniqueId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(24);
         output.WriteUInt32(UniqueId);
       }
       if (Promotion != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(40);
         output.WriteUInt32(Promotion);
+      }
+      if (Rank != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(Rank);
+      }
+      if (Tid != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Tid);
+      }
+      if (Exp != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Exp);
+      }
+      if (IsProtected != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(IsProtected);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -289,33 +289,33 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(Level);
       }
-      if (IsProtected != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(IsProtected);
-      }
-      if (Rank != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Rank);
-      }
       if (DressAvatarId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(16);
         output.WriteUInt32(DressAvatarId);
       }
-      if (Tid != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(Tid);
-      }
-      if (Exp != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(Exp);
-      }
       if (UniqueId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(24);
         output.WriteUInt32(UniqueId);
       }
       if (Promotion != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(40);
         output.WriteUInt32(Promotion);
+      }
+      if (Rank != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(Rank);
+      }
+      if (Tid != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Tid);
+      }
+      if (Exp != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Exp);
+      }
+      if (IsProtected != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(IsProtected);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -333,23 +333,23 @@ namespace EggLink.DanhengServer.Proto {
       if (Promotion != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Promotion);
       }
+      if (Level != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
+      }
       if (Tid != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Tid);
-      }
-      if (DressAvatarId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DressAvatarId);
       }
       if (Exp != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Exp);
       }
-      if (UniqueId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UniqueId);
-      }
-      if (Level != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
-      }
       if (IsProtected != false) {
         size += 1 + 1;
+      }
+      if (DressAvatarId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DressAvatarId);
+      }
+      if (UniqueId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UniqueId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -369,23 +369,23 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Promotion != 0) {
         Promotion = other.Promotion;
       }
+      if (other.Level != 0) {
+        Level = other.Level;
+      }
       if (other.Tid != 0) {
         Tid = other.Tid;
-      }
-      if (other.DressAvatarId != 0) {
-        DressAvatarId = other.DressAvatarId;
       }
       if (other.Exp != 0) {
         Exp = other.Exp;
       }
-      if (other.UniqueId != 0) {
-        UniqueId = other.UniqueId;
-      }
-      if (other.Level != 0) {
-        Level = other.Level;
-      }
       if (other.IsProtected != false) {
         IsProtected = other.IsProtected;
+      }
+      if (other.DressAvatarId != 0) {
+        DressAvatarId = other.DressAvatarId;
+      }
+      if (other.UniqueId != 0) {
+        UniqueId = other.UniqueId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -406,32 +406,32 @@ namespace EggLink.DanhengServer.Proto {
             Level = input.ReadUInt32();
             break;
           }
-          case 24: {
-            IsProtected = input.ReadBool();
-            break;
-          }
-          case 32: {
-            Rank = input.ReadUInt32();
-            break;
-          }
-          case 48: {
+          case 16: {
             DressAvatarId = input.ReadUInt32();
             break;
           }
-          case 56: {
-            Tid = input.ReadUInt32();
-            break;
-          }
-          case 64: {
-            Exp = input.ReadUInt32();
-            break;
-          }
-          case 88: {
+          case 24: {
             UniqueId = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 40: {
             Promotion = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            Rank = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            Tid = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            Exp = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            IsProtected = input.ReadBool();
             break;
           }
         }
@@ -453,32 +453,32 @@ namespace EggLink.DanhengServer.Proto {
             Level = input.ReadUInt32();
             break;
           }
-          case 24: {
-            IsProtected = input.ReadBool();
-            break;
-          }
-          case 32: {
-            Rank = input.ReadUInt32();
-            break;
-          }
-          case 48: {
+          case 16: {
             DressAvatarId = input.ReadUInt32();
             break;
           }
-          case 56: {
-            Tid = input.ReadUInt32();
-            break;
-          }
-          case 64: {
-            Exp = input.ReadUInt32();
-            break;
-          }
-          case 88: {
+          case 24: {
             UniqueId = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 40: {
             Promotion = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            Rank = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            Tid = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            Exp = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            IsProtected = input.ReadBool();
             break;
           }
         }

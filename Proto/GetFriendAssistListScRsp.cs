@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5HZXRGcmllbmRBc3Npc3RMaXN0U2NSc3AucHJvdG8aFlBsYXllckFzc2lz",
-            "dEluZm8ucHJvdG8iZwoYR2V0RnJpZW5kQXNzaXN0TGlzdFNjUnNwEhIKCnRh",
-            "cmdldF91aWQYCyABKA0SDwoHcmV0Y29kZRgHIAEoDRImCgthc3Npc3RfbGlz",
-            "dBgFIAMoCzIRLlBsYXllckFzc2lzdEluZm9CHqoCG0VnZ0xpbmsuRGFuaGVu",
-            "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "dEluZm8ucHJvdG8iZgoYR2V0RnJpZW5kQXNzaXN0TGlzdFNjUnNwEiYKC2Fz",
+            "c2lzdF9saXN0GA0gAygLMhEuUGxheWVyQXNzaXN0SW5mbxIRCgl0YXJnZXRf",
+            "aWQYCyABKA0SDwoHcmV0Y29kZRgFIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlayerAssistInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetFriendAssistListScRsp), global::EggLink.DanhengServer.Proto.GetFriendAssistListScRsp.Parser, new[]{ "TargetUid", "Retcode", "AssistList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetFriendAssistListScRsp), global::EggLink.DanhengServer.Proto.GetFriendAssistListScRsp.Parser, new[]{ "AssistList", "TargetId", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetFriendAssistListScRsp(GetFriendAssistListScRsp other) : this() {
-      targetUid_ = other.targetUid_;
-      retcode_ = other.retcode_;
       assistList_ = other.assistList_.Clone();
+      targetId_ = other.targetId_;
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,20 +86,31 @@ namespace EggLink.DanhengServer.Proto {
       return new GetFriendAssistListScRsp(this);
     }
 
-    /// <summary>Field number for the "target_uid" field.</summary>
-    public const int TargetUidFieldNumber = 11;
-    private uint targetUid_;
+    /// <summary>Field number for the "assist_list" field.</summary>
+    public const int AssistListFieldNumber = 13;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.PlayerAssistInfo> _repeated_assistList_codec
+        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.PlayerAssistInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PlayerAssistInfo> assistList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PlayerAssistInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TargetUid {
-      get { return targetUid_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PlayerAssistInfo> AssistList {
+      get { return assistList_; }
+    }
+
+    /// <summary>Field number for the "target_id" field.</summary>
+    public const int TargetIdFieldNumber = 11;
+    private uint targetId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint TargetId {
+      get { return targetId_; }
       set {
-        targetUid_ = value;
+        targetId_ = value;
       }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 7;
+    public const int RetcodeFieldNumber = 5;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -108,17 +119,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         retcode_ = value;
       }
-    }
-
-    /// <summary>Field number for the "assist_list" field.</summary>
-    public const int AssistListFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.PlayerAssistInfo> _repeated_assistList_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.PlayerAssistInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PlayerAssistInfo> assistList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PlayerAssistInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PlayerAssistInfo> AssistList {
-      get { return assistList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (TargetUid != other.TargetUid) return false;
-      if (Retcode != other.Retcode) return false;
       if(!assistList_.Equals(other.assistList_)) return false;
+      if (TargetId != other.TargetId) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (TargetUid != 0) hash ^= TargetUid.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       hash ^= assistList_.GetHashCode();
+      if (TargetId != 0) hash ^= TargetId.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,15 +167,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      assistList_.WriteTo(output, _repeated_assistList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
-      if (TargetUid != 0) {
+      if (TargetId != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(TargetUid);
+        output.WriteUInt32(TargetId);
       }
+      assistList_.WriteTo(output, _repeated_assistList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -186,15 +186,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      assistList_.WriteTo(ref output, _repeated_assistList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
-      if (TargetUid != 0) {
+      if (TargetId != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(TargetUid);
+        output.WriteUInt32(TargetId);
       }
+      assistList_.WriteTo(ref output, _repeated_assistList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -205,13 +205,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (TargetUid != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TargetUid);
+      size += assistList_.CalculateSize(_repeated_assistList_codec);
+      if (TargetId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TargetId);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += assistList_.CalculateSize(_repeated_assistList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -224,13 +224,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.TargetUid != 0) {
-        TargetUid = other.TargetUid;
+      assistList_.Add(other.assistList_);
+      if (other.TargetId != 0) {
+        TargetId = other.TargetId;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      assistList_.Add(other.assistList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -246,16 +246,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
-            assistList_.AddEntriesFrom(input, _repeated_assistList_codec);
-            break;
-          }
-          case 56: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }
           case 88: {
-            TargetUid = input.ReadUInt32();
+            TargetId = input.ReadUInt32();
+            break;
+          }
+          case 106: {
+            assistList_.AddEntriesFrom(input, _repeated_assistList_codec);
             break;
           }
         }
@@ -273,16 +273,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
-            assistList_.AddEntriesFrom(ref input, _repeated_assistList_codec);
-            break;
-          }
-          case 56: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }
           case 88: {
-            TargetUid = input.ReadUInt32();
+            TargetId = input.ReadUInt32();
+            break;
+          }
+          case 106: {
+            assistList_.AddEntriesFrom(ref input, _repeated_assistList_codec);
             break;
           }
         }

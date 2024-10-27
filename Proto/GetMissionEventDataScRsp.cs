@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5HZXRNaXNzaW9uRXZlbnREYXRhU2NSc3AucHJvdG8aDU1pc3Npb24ucHJv",
-            "dG8ibQoYR2V0TWlzc2lvbkV2ZW50RGF0YVNjUnNwEg8KB3JldGNvZGUYCyAB",
-            "KA0SJAoSbWlzc2lvbl9ldmVudF9saXN0GAQgAygLMgguTWlzc2lvbhIaChJj",
-            "aGFsbGVuZ2VfZXZlbnRfaWQYBiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "dG8ibQoYR2V0TWlzc2lvbkV2ZW50RGF0YVNjUnNwEhoKEmNoYWxsZW5nZV9l",
+            "dmVudF9pZBgDIAEoDRIkChJtaXNzaW9uX2V2ZW50X2xpc3QYCyADKAsyCC5N",
+            "aXNzaW9uEg8KB3JldGNvZGUYAiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MissionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMissionEventDataScRsp), global::EggLink.DanhengServer.Proto.GetMissionEventDataScRsp.Parser, new[]{ "Retcode", "MissionEventList", "ChallengeEventId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMissionEventDataScRsp), global::EggLink.DanhengServer.Proto.GetMissionEventDataScRsp.Parser, new[]{ "ChallengeEventId", "MissionEventList", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetMissionEventDataScRsp(GetMissionEventDataScRsp other) : this() {
-      retcode_ = other.retcode_;
-      missionEventList_ = other.missionEventList_.Clone();
       challengeEventId_ = other.challengeEventId_;
+      missionEventList_ = other.missionEventList_.Clone();
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,31 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new GetMissionEventDataScRsp(this);
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 11;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "mission_event_list" field.</summary>
-    public const int MissionEventListFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.Mission> _repeated_missionEventList_codec
-        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.Mission.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Mission> missionEventList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Mission>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Mission> MissionEventList {
-      get { return missionEventList_; }
-    }
-
     /// <summary>Field number for the "challenge_event_id" field.</summary>
-    public const int ChallengeEventIdFieldNumber = 6;
+    public const int ChallengeEventIdFieldNumber = 3;
     private uint challengeEventId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -118,6 +95,29 @@ namespace EggLink.DanhengServer.Proto {
       get { return challengeEventId_; }
       set {
         challengeEventId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "mission_event_list" field.</summary>
+    public const int MissionEventListFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.Mission> _repeated_missionEventList_codec
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.Mission.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Mission> missionEventList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Mission>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Mission> MissionEventList {
+      get { return missionEventList_; }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 2;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
-      if(!missionEventList_.Equals(other.missionEventList_)) return false;
       if (ChallengeEventId != other.ChallengeEventId) return false;
+      if(!missionEventList_.Equals(other.missionEventList_)) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      hash ^= missionEventList_.GetHashCode();
       if (ChallengeEventId != 0) hash ^= ChallengeEventId.GetHashCode();
+      hash ^= missionEventList_.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,15 +167,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      missionEventList_.WriteTo(output, _repeated_missionEventList_codec);
-      if (ChallengeEventId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(ChallengeEventId);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
       }
+      if (ChallengeEventId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(ChallengeEventId);
+      }
+      missionEventList_.WriteTo(output, _repeated_missionEventList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -186,15 +186,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      missionEventList_.WriteTo(ref output, _repeated_missionEventList_codec);
-      if (ChallengeEventId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(ChallengeEventId);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
       }
+      if (ChallengeEventId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(ChallengeEventId);
+      }
+      missionEventList_.WriteTo(ref output, _repeated_missionEventList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -205,12 +205,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
-      size += missionEventList_.CalculateSize(_repeated_missionEventList_codec);
       if (ChallengeEventId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChallengeEventId);
+      }
+      size += missionEventList_.CalculateSize(_repeated_missionEventList_codec);
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -224,12 +224,12 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
-      missionEventList_.Add(other.missionEventList_);
       if (other.ChallengeEventId != 0) {
         ChallengeEventId = other.ChallengeEventId;
+      }
+      missionEventList_.Add(other.missionEventList_);
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -246,16 +246,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
-            missionEventList_.AddEntriesFrom(input, _repeated_missionEventList_codec);
+          case 16: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 24: {
             ChallengeEventId = input.ReadUInt32();
             break;
           }
-          case 88: {
-            Retcode = input.ReadUInt32();
+          case 90: {
+            missionEventList_.AddEntriesFrom(input, _repeated_missionEventList_codec);
             break;
           }
         }
@@ -273,16 +273,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
-            missionEventList_.AddEntriesFrom(ref input, _repeated_missionEventList_codec);
+          case 16: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 24: {
             ChallengeEventId = input.ReadUInt32();
             break;
           }
-          case 88: {
-            Retcode = input.ReadUInt32();
+          case 90: {
+            missionEventList_.AddEntriesFrom(ref input, _repeated_missionEventList_codec);
             break;
           }
         }

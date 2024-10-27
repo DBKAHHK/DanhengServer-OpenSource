@@ -2,6 +2,7 @@
 
 public enum ItemSubTypeEnum
 {
+
     Unknown = 0,
     Virtual = 101,
     GameplayCounter = 102,
@@ -21,6 +22,7 @@ public enum ItemSubTypeEnum
     TravelBrochurePaster = 511,
     ChessRogueDiceSurface = 512,
     RogueMedal = 513,
+    PamSkin = 514,
     Material = 601,
     Eidolon = 602,
     MuseumExhibit = 603,
@@ -28,6 +30,7 @@ public enum ItemSubTypeEnum
     AetherSkill = 605,
     AetherSpirit = 606,
     FightFestSkill = 607,
+    TrainPartyDiyMaterial = 608,
     Mission = 701,
     RelicSetShowOnly = 801,
     RelicRarityShowOnly = 802,

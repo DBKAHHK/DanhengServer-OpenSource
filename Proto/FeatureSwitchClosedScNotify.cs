@@ -26,12 +26,12 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFGZWF0dXJlU3dpdGNoQ2xvc2VkU2NOb3RpZnkucHJvdG8aF0ZlYXR1cmVT",
             "d2l0Y2hUeXBlLnByb3RvIkYKG0ZlYXR1cmVTd2l0Y2hDbG9zZWRTY05vdGlm",
-            "eRInCgtFUEZPQkRBSlBIThgOIAEoDjISLkZlYXR1cmVTd2l0Y2hUeXBlQh6q",
+            "eRInCgtNS0dIUE5BT0NGQhgHIAEoDjISLkZlYXR1cmVTd2l0Y2hUeXBlQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FeatureSwitchTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FeatureSwitchClosedScNotify), global::EggLink.DanhengServer.Proto.FeatureSwitchClosedScNotify.Parser, new[]{ "EPFOBDAJPHN" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FeatureSwitchClosedScNotify), global::EggLink.DanhengServer.Proto.FeatureSwitchClosedScNotify.Parser, new[]{ "MKGHPNAOCFB" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FeatureSwitchClosedScNotify(FeatureSwitchClosedScNotify other) : this() {
-      ePFOBDAJPHN_ = other.ePFOBDAJPHN_;
+      mKGHPNAOCFB_ = other.mKGHPNAOCFB_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new FeatureSwitchClosedScNotify(this);
     }
 
-    /// <summary>Field number for the "EPFOBDAJPHN" field.</summary>
-    public const int EPFOBDAJPHNFieldNumber = 14;
-    private global::EggLink.DanhengServer.Proto.FeatureSwitchType ePFOBDAJPHN_ = global::EggLink.DanhengServer.Proto.FeatureSwitchType.FeatureSwitchNone;
+    /// <summary>Field number for the "MKGHPNAOCFB" field.</summary>
+    public const int MKGHPNAOCFBFieldNumber = 7;
+    private global::EggLink.DanhengServer.Proto.FeatureSwitchType mKGHPNAOCFB_ = global::EggLink.DanhengServer.Proto.FeatureSwitchType.FeatureSwitchNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.FeatureSwitchType EPFOBDAJPHN {
-      get { return ePFOBDAJPHN_; }
+    public global::EggLink.DanhengServer.Proto.FeatureSwitchType MKGHPNAOCFB {
+      get { return mKGHPNAOCFB_; }
       set {
-        ePFOBDAJPHN_ = value;
+        mKGHPNAOCFB_ = value;
       }
     }
 
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (EPFOBDAJPHN != other.EPFOBDAJPHN) return false;
+      if (MKGHPNAOCFB != other.MKGHPNAOCFB) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -118,7 +118,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (EPFOBDAJPHN != global::EggLink.DanhengServer.Proto.FeatureSwitchType.FeatureSwitchNone) hash ^= EPFOBDAJPHN.GetHashCode();
+      if (MKGHPNAOCFB != global::EggLink.DanhengServer.Proto.FeatureSwitchType.FeatureSwitchNone) hash ^= MKGHPNAOCFB.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (EPFOBDAJPHN != global::EggLink.DanhengServer.Proto.FeatureSwitchType.FeatureSwitchNone) {
-        output.WriteRawTag(112);
-        output.WriteEnum((int) EPFOBDAJPHN);
+      if (MKGHPNAOCFB != global::EggLink.DanhengServer.Proto.FeatureSwitchType.FeatureSwitchNone) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) MKGHPNAOCFB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -151,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (EPFOBDAJPHN != global::EggLink.DanhengServer.Proto.FeatureSwitchType.FeatureSwitchNone) {
-        output.WriteRawTag(112);
-        output.WriteEnum((int) EPFOBDAJPHN);
+      if (MKGHPNAOCFB != global::EggLink.DanhengServer.Proto.FeatureSwitchType.FeatureSwitchNone) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) MKGHPNAOCFB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -165,8 +165,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (EPFOBDAJPHN != global::EggLink.DanhengServer.Proto.FeatureSwitchType.FeatureSwitchNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EPFOBDAJPHN);
+      if (MKGHPNAOCFB != global::EggLink.DanhengServer.Proto.FeatureSwitchType.FeatureSwitchNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MKGHPNAOCFB);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -180,8 +180,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.EPFOBDAJPHN != global::EggLink.DanhengServer.Proto.FeatureSwitchType.FeatureSwitchNone) {
-        EPFOBDAJPHN = other.EPFOBDAJPHN;
+      if (other.MKGHPNAOCFB != global::EggLink.DanhengServer.Proto.FeatureSwitchType.FeatureSwitchNone) {
+        MKGHPNAOCFB = other.MKGHPNAOCFB;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -198,8 +198,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 112: {
-            EPFOBDAJPHN = (global::EggLink.DanhengServer.Proto.FeatureSwitchType) input.ReadEnum();
+          case 56: {
+            MKGHPNAOCFB = (global::EggLink.DanhengServer.Proto.FeatureSwitchType) input.ReadEnum();
             break;
           }
         }
@@ -217,8 +217,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 112: {
-            EPFOBDAJPHN = (global::EggLink.DanhengServer.Proto.FeatureSwitchType) input.ReadEnum();
+          case 56: {
+            MKGHPNAOCFB = (global::EggLink.DanhengServer.Proto.FeatureSwitchType) input.ReadEnum();
             break;
           }
         }

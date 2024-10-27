@@ -26,12 +26,12 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFUcmVhc3VyZUR1bmdlb25EYXRhU2NOb3RpZnkucHJvdG8aGlRyZWFzdXJl",
             "RHVuZ2VvbkxldmVsLnByb3RvIkkKG1RyZWFzdXJlRHVuZ2VvbkRhdGFTY05v",
-            "dGlmeRIqCgtMSElFQ0tQSk5GRBgEIAEoCzIVLlRyZWFzdXJlRHVuZ2Vvbkxl",
+            "dGlmeRIqCgtFRFBIT0tIQVBJSxgPIAEoCzIVLlRyZWFzdXJlRHVuZ2Vvbkxl",
             "dmVsQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TreasureDungeonLevelReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TreasureDungeonDataScNotify), global::EggLink.DanhengServer.Proto.TreasureDungeonDataScNotify.Parser, new[]{ "LHIECKPJNFD" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TreasureDungeonDataScNotify), global::EggLink.DanhengServer.Proto.TreasureDungeonDataScNotify.Parser, new[]{ "EDPHOKHAPIK" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TreasureDungeonDataScNotify(TreasureDungeonDataScNotify other) : this() {
-      lHIECKPJNFD_ = other.lHIECKPJNFD_ != null ? other.lHIECKPJNFD_.Clone() : null;
+      eDPHOKHAPIK_ = other.eDPHOKHAPIK_ != null ? other.eDPHOKHAPIK_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new TreasureDungeonDataScNotify(this);
     }
 
-    /// <summary>Field number for the "LHIECKPJNFD" field.</summary>
-    public const int LHIECKPJNFDFieldNumber = 4;
-    private global::EggLink.DanhengServer.Proto.TreasureDungeonLevel lHIECKPJNFD_;
+    /// <summary>Field number for the "EDPHOKHAPIK" field.</summary>
+    public const int EDPHOKHAPIKFieldNumber = 15;
+    private global::EggLink.DanhengServer.Proto.TreasureDungeonLevel eDPHOKHAPIK_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.TreasureDungeonLevel LHIECKPJNFD {
-      get { return lHIECKPJNFD_; }
+    public global::EggLink.DanhengServer.Proto.TreasureDungeonLevel EDPHOKHAPIK {
+      get { return eDPHOKHAPIK_; }
       set {
-        lHIECKPJNFD_ = value;
+        eDPHOKHAPIK_ = value;
       }
     }
 
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(LHIECKPJNFD, other.LHIECKPJNFD)) return false;
+      if (!object.Equals(EDPHOKHAPIK, other.EDPHOKHAPIK)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -118,7 +118,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (lHIECKPJNFD_ != null) hash ^= LHIECKPJNFD.GetHashCode();
+      if (eDPHOKHAPIK_ != null) hash ^= EDPHOKHAPIK.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (lHIECKPJNFD_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(LHIECKPJNFD);
+      if (eDPHOKHAPIK_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(EDPHOKHAPIK);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -151,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (lHIECKPJNFD_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(LHIECKPJNFD);
+      if (eDPHOKHAPIK_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(EDPHOKHAPIK);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -165,8 +165,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (lHIECKPJNFD_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LHIECKPJNFD);
+      if (eDPHOKHAPIK_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EDPHOKHAPIK);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -180,11 +180,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.lHIECKPJNFD_ != null) {
-        if (lHIECKPJNFD_ == null) {
-          LHIECKPJNFD = new global::EggLink.DanhengServer.Proto.TreasureDungeonLevel();
+      if (other.eDPHOKHAPIK_ != null) {
+        if (eDPHOKHAPIK_ == null) {
+          EDPHOKHAPIK = new global::EggLink.DanhengServer.Proto.TreasureDungeonLevel();
         }
-        LHIECKPJNFD.MergeFrom(other.LHIECKPJNFD);
+        EDPHOKHAPIK.MergeFrom(other.EDPHOKHAPIK);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -201,11 +201,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
-            if (lHIECKPJNFD_ == null) {
-              LHIECKPJNFD = new global::EggLink.DanhengServer.Proto.TreasureDungeonLevel();
+          case 122: {
+            if (eDPHOKHAPIK_ == null) {
+              EDPHOKHAPIK = new global::EggLink.DanhengServer.Proto.TreasureDungeonLevel();
             }
-            input.ReadMessage(LHIECKPJNFD);
+            input.ReadMessage(EDPHOKHAPIK);
             break;
           }
         }
@@ -223,11 +223,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
-            if (lHIECKPJNFD_ == null) {
-              LHIECKPJNFD = new global::EggLink.DanhengServer.Proto.TreasureDungeonLevel();
+          case 122: {
+            if (eDPHOKHAPIK_ == null) {
+              EDPHOKHAPIK = new global::EggLink.DanhengServer.Proto.TreasureDungeonLevel();
             }
-            input.ReadMessage(LHIECKPJNFD);
+            input.ReadMessage(EDPHOKHAPIK);
             break;
           }
         }

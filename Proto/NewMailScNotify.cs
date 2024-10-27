@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static NewMailScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVOZXdNYWlsU2NOb3RpZnkucHJvdG8iJQoPTmV3TWFpbFNjTm90aWZ5EhIK",
-            "Ck1haWxJZExpc3QYDSADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
-            "cm90b2IGcHJvdG8z"));
+            "ChVOZXdNYWlsU2NOb3RpZnkucHJvdG8iJwoPTmV3TWFpbFNjTm90aWZ5EhQK",
+            "DG1haWxfaWRfbGlzdBgFIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -82,10 +82,10 @@ namespace EggLink.DanhengServer.Proto {
       return new NewMailScNotify(this);
     }
 
-    /// <summary>Field number for the "MailIdList" field.</summary>
-    public const int MailIdListFieldNumber = 13;
+    /// <summary>Field number for the "mail_id_list" field.</summary>
+    public const int MailIdListFieldNumber = 5;
     private static readonly pb::FieldCodec<uint> _repeated_mailIdList_codec
-        = pb::FieldCodec.ForUInt32(106);
+        = pb::FieldCodec.ForUInt32(42);
     private readonly pbc::RepeatedField<uint> mailIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,8 +186,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 106:
-          case 104: {
+          case 42:
+          case 40: {
             mailIdList_.AddEntriesFrom(input, _repeated_mailIdList_codec);
             break;
           }
@@ -206,8 +206,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 106:
-          case 104: {
+          case 42:
+          case 40: {
             mailIdList_.AddEntriesFrom(ref input, _repeated_mailIdList_codec);
             break;
           }

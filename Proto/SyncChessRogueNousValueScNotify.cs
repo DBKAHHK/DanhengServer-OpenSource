@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiVTeW5jQ2hlc3NSb2d1ZU5vdXNWYWx1ZVNjTm90aWZ5LnByb3RvGh1DaGVz",
             "c1JvZ3VlTm91c1ZhbHVlSW5mby5wcm90byJUCh9TeW5jQ2hlc3NSb2d1ZU5v",
-            "dXNWYWx1ZVNjTm90aWZ5EjEKD25vdXNfdmFsdWVfaW5mbxgDIAEoCzIYLkNo",
+            "dXNWYWx1ZVNjTm90aWZ5EjEKD25vdXNfdmFsdWVfaW5mbxgFIAEoCzIYLkNo",
             "ZXNzUm9ndWVOb3VzVmFsdWVJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "nous_value_info" field.</summary>
-    public const int NousValueInfoFieldNumber = 3;
+    public const int NousValueInfoFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.ChessRogueNousValueInfo nousValueInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -139,7 +139,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (nousValueInfo_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(42);
         output.WriteMessage(NousValueInfo);
       }
       if (_unknownFields != null) {
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (nousValueInfo_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(42);
         output.WriteMessage(NousValueInfo);
       }
       if (_unknownFields != null) {
@@ -202,7 +202,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26: {
+          case 42: {
             if (nousValueInfo_ == null) {
               NousValueInfo = new global::EggLink.DanhengServer.Proto.ChessRogueNousValueInfo();
             }
@@ -224,7 +224,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26: {
+          case 42: {
             if (nousValueInfo_ == null) {
               NousValueInfo = new global::EggLink.DanhengServer.Proto.ChessRogueNousValueInfo();
             }

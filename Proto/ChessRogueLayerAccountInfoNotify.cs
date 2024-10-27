@@ -27,15 +27,15 @@ namespace EggLink.DanhengServer.Proto {
             "CiZDaGVzc1JvZ3VlTGF5ZXJBY2NvdW50SW5mb05vdGlmeS5wcm90bxoZQ2hl",
             "c3NSb2d1ZUxldmVsSW5mby5wcm90bxoaQ2hlc3NSb2d1ZUZpbmlzaEluZm8u",
             "cHJvdG8iuQEKIENoZXNzUm9ndWVMYXllckFjY291bnRJbmZvTm90aWZ5EhAK",
-            "CGxheWVyX2lkGAkgASgNEhMKC0hCTEhQT0xFREdBGAQgAygNEigKCmxldmVs",
-            "X2luZm8YBiABKAsyFC5DaGVzc1JvZ3VlTGV2ZWxJbmZvEhgKEGRpZmZpY3Vs",
-            "dHlfbGV2ZWwYCyABKA0SKgoLZmluaXNoX2luZm8YCCABKAsyFS5DaGVzc1Jv",
+            "CGxheWVyX2lkGAIgASgNEhgKEGRpZmZpY3VsdHlfbGV2ZWwYCCABKA0SEwoL",
+            "TEhQREJBTUhCS0IYDSADKA0SKAoKbGV2ZWxfaW5mbxgEIAEoCzIULkNoZXNz",
+            "Um9ndWVMZXZlbEluZm8SKgoLZmluaXNoX2luZm8YBiABKAsyFS5DaGVzc1Jv",
             "Z3VlRmluaXNoSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueLevelInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueFinishInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueLayerAccountInfoNotify), global::EggLink.DanhengServer.Proto.ChessRogueLayerAccountInfoNotify.Parser, new[]{ "LayerId", "HBLHPOLEDGA", "LevelInfo", "DifficultyLevel", "FinishInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueLayerAccountInfoNotify), global::EggLink.DanhengServer.Proto.ChessRogueLayerAccountInfoNotify.Parser, new[]{ "LayerId", "DifficultyLevel", "LHPDBAMHBKB", "LevelInfo", "FinishInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,9 +78,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueLayerAccountInfoNotify(ChessRogueLayerAccountInfoNotify other) : this() {
       layerId_ = other.layerId_;
-      hBLHPOLEDGA_ = other.hBLHPOLEDGA_.Clone();
-      levelInfo_ = other.levelInfo_ != null ? other.levelInfo_.Clone() : null;
       difficultyLevel_ = other.difficultyLevel_;
+      lHPDBAMHBKB_ = other.lHPDBAMHBKB_.Clone();
+      levelInfo_ = other.levelInfo_ != null ? other.levelInfo_.Clone() : null;
       finishInfo_ = other.finishInfo_ != null ? other.finishInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -92,7 +92,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "layer_id" field.</summary>
-    public const int LayerIdFieldNumber = 9;
+    public const int LayerIdFieldNumber = 2;
     private uint layerId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -103,31 +103,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "HBLHPOLEDGA" field.</summary>
-    public const int HBLHPOLEDGAFieldNumber = 4;
-    private static readonly pb::FieldCodec<uint> _repeated_hBLHPOLEDGA_codec
-        = pb::FieldCodec.ForUInt32(34);
-    private readonly pbc::RepeatedField<uint> hBLHPOLEDGA_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> HBLHPOLEDGA {
-      get { return hBLHPOLEDGA_; }
-    }
-
-    /// <summary>Field number for the "level_info" field.</summary>
-    public const int LevelInfoFieldNumber = 6;
-    private global::EggLink.DanhengServer.Proto.ChessRogueLevelInfo levelInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ChessRogueLevelInfo LevelInfo {
-      get { return levelInfo_; }
-      set {
-        levelInfo_ = value;
-      }
-    }
-
     /// <summary>Field number for the "difficulty_level" field.</summary>
-    public const int DifficultyLevelFieldNumber = 11;
+    public const int DifficultyLevelFieldNumber = 8;
     private uint difficultyLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,8 +115,31 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "LHPDBAMHBKB" field.</summary>
+    public const int LHPDBAMHBKBFieldNumber = 13;
+    private static readonly pb::FieldCodec<uint> _repeated_lHPDBAMHBKB_codec
+        = pb::FieldCodec.ForUInt32(106);
+    private readonly pbc::RepeatedField<uint> lHPDBAMHBKB_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> LHPDBAMHBKB {
+      get { return lHPDBAMHBKB_; }
+    }
+
+    /// <summary>Field number for the "level_info" field.</summary>
+    public const int LevelInfoFieldNumber = 4;
+    private global::EggLink.DanhengServer.Proto.ChessRogueLevelInfo levelInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ChessRogueLevelInfo LevelInfo {
+      get { return levelInfo_; }
+      set {
+        levelInfo_ = value;
+      }
+    }
+
     /// <summary>Field number for the "finish_info" field.</summary>
-    public const int FinishInfoFieldNumber = 8;
+    public const int FinishInfoFieldNumber = 6;
     private global::EggLink.DanhengServer.Proto.ChessRogueFinishInfo finishInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,9 +166,9 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (LayerId != other.LayerId) return false;
-      if(!hBLHPOLEDGA_.Equals(other.hBLHPOLEDGA_)) return false;
-      if (!object.Equals(LevelInfo, other.LevelInfo)) return false;
       if (DifficultyLevel != other.DifficultyLevel) return false;
+      if(!lHPDBAMHBKB_.Equals(other.lHPDBAMHBKB_)) return false;
+      if (!object.Equals(LevelInfo, other.LevelInfo)) return false;
       if (!object.Equals(FinishInfo, other.FinishInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -178,9 +178,9 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (LayerId != 0) hash ^= LayerId.GetHashCode();
-      hash ^= hBLHPOLEDGA_.GetHashCode();
-      if (levelInfo_ != null) hash ^= LevelInfo.GetHashCode();
       if (DifficultyLevel != 0) hash ^= DifficultyLevel.GetHashCode();
+      hash ^= lHPDBAMHBKB_.GetHashCode();
+      if (levelInfo_ != null) hash ^= LevelInfo.GetHashCode();
       if (finishInfo_ != null) hash ^= FinishInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -200,23 +200,23 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      hBLHPOLEDGA_.WriteTo(output, _repeated_hBLHPOLEDGA_codec);
+      if (LayerId != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(LayerId);
+      }
       if (levelInfo_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(34);
         output.WriteMessage(LevelInfo);
       }
       if (finishInfo_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(50);
         output.WriteMessage(FinishInfo);
       }
-      if (LayerId != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(LayerId);
-      }
       if (DifficultyLevel != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(64);
         output.WriteUInt32(DifficultyLevel);
       }
+      lHPDBAMHBKB_.WriteTo(output, _repeated_lHPDBAMHBKB_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -227,23 +227,23 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      hBLHPOLEDGA_.WriteTo(ref output, _repeated_hBLHPOLEDGA_codec);
+      if (LayerId != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(LayerId);
+      }
       if (levelInfo_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(34);
         output.WriteMessage(LevelInfo);
       }
       if (finishInfo_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(50);
         output.WriteMessage(FinishInfo);
       }
-      if (LayerId != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(LayerId);
-      }
       if (DifficultyLevel != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(64);
         output.WriteUInt32(DifficultyLevel);
       }
+      lHPDBAMHBKB_.WriteTo(ref output, _repeated_lHPDBAMHBKB_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -257,12 +257,12 @@ namespace EggLink.DanhengServer.Proto {
       if (LayerId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LayerId);
       }
-      size += hBLHPOLEDGA_.CalculateSize(_repeated_hBLHPOLEDGA_codec);
-      if (levelInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LevelInfo);
-      }
       if (DifficultyLevel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DifficultyLevel);
+      }
+      size += lHPDBAMHBKB_.CalculateSize(_repeated_lHPDBAMHBKB_codec);
+      if (levelInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LevelInfo);
       }
       if (finishInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(FinishInfo);
@@ -282,15 +282,15 @@ namespace EggLink.DanhengServer.Proto {
       if (other.LayerId != 0) {
         LayerId = other.LayerId;
       }
-      hBLHPOLEDGA_.Add(other.hBLHPOLEDGA_);
+      if (other.DifficultyLevel != 0) {
+        DifficultyLevel = other.DifficultyLevel;
+      }
+      lHPDBAMHBKB_.Add(other.lHPDBAMHBKB_);
       if (other.levelInfo_ != null) {
         if (levelInfo_ == null) {
           LevelInfo = new global::EggLink.DanhengServer.Proto.ChessRogueLevelInfo();
         }
         LevelInfo.MergeFrom(other.LevelInfo);
-      }
-      if (other.DifficultyLevel != 0) {
-        DifficultyLevel = other.DifficultyLevel;
       }
       if (other.finishInfo_ != null) {
         if (finishInfo_ == null) {
@@ -313,31 +313,31 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34:
-          case 32: {
-            hBLHPOLEDGA_.AddEntriesFrom(input, _repeated_hBLHPOLEDGA_codec);
+          case 16: {
+            LayerId = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 34: {
             if (levelInfo_ == null) {
               LevelInfo = new global::EggLink.DanhengServer.Proto.ChessRogueLevelInfo();
             }
             input.ReadMessage(LevelInfo);
             break;
           }
-          case 66: {
+          case 50: {
             if (finishInfo_ == null) {
               FinishInfo = new global::EggLink.DanhengServer.Proto.ChessRogueFinishInfo();
             }
             input.ReadMessage(FinishInfo);
             break;
           }
-          case 72: {
-            LayerId = input.ReadUInt32();
+          case 64: {
+            DifficultyLevel = input.ReadUInt32();
             break;
           }
-          case 88: {
-            DifficultyLevel = input.ReadUInt32();
+          case 106:
+          case 104: {
+            lHPDBAMHBKB_.AddEntriesFrom(input, _repeated_lHPDBAMHBKB_codec);
             break;
           }
         }
@@ -355,31 +355,31 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34:
-          case 32: {
-            hBLHPOLEDGA_.AddEntriesFrom(ref input, _repeated_hBLHPOLEDGA_codec);
+          case 16: {
+            LayerId = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 34: {
             if (levelInfo_ == null) {
               LevelInfo = new global::EggLink.DanhengServer.Proto.ChessRogueLevelInfo();
             }
             input.ReadMessage(LevelInfo);
             break;
           }
-          case 66: {
+          case 50: {
             if (finishInfo_ == null) {
               FinishInfo = new global::EggLink.DanhengServer.Proto.ChessRogueFinishInfo();
             }
             input.ReadMessage(FinishInfo);
             break;
           }
-          case 72: {
-            LayerId = input.ReadUInt32();
+          case 64: {
+            DifficultyLevel = input.ReadUInt32();
             break;
           }
-          case 88: {
-            DifficultyLevel = input.ReadUInt32();
+          case 106:
+          case 104: {
+            lHPDBAMHBKB_.AddEntriesFrom(ref input, _repeated_lHPDBAMHBKB_codec);
             break;
           }
         }

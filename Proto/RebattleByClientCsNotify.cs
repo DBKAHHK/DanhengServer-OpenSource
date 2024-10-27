@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static RebattleByClientCsNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5SZWJhdHRsZUJ5Q2xpZW50Q3NOb3RpZnkucHJvdG8aFkJhdHRsZVN0YXRp",
-            "c3RpY3MucHJvdG8aElJlYmF0dGxlVHlwZS5wcm90byJgChhSZWJhdHRsZUJ5",
-            "Q2xpZW50Q3NOb3RpZnkSJAoNcmViYXR0bGVfdHlwZRgFIAEoDjINLlJlYmF0",
-            "dGxlVHlwZRIeCgNzdHQYByABKAsyES5CYXR0bGVTdGF0aXN0aWNzQh6qAhtF",
+            "Ch5SZWJhdHRsZUJ5Q2xpZW50Q3NOb3RpZnkucHJvdG8aElJlYmF0dGxlVHlw",
+            "ZS5wcm90bxoWQmF0dGxlU3RhdGlzdGljcy5wcm90byJgChhSZWJhdHRsZUJ5",
+            "Q2xpZW50Q3NOb3RpZnkSHgoDc3R0GAcgASgLMhEuQmF0dGxlU3RhdGlzdGlj",
+            "cxIkCg1yZWJhdHRsZV90eXBlGAogASgOMg0uUmViYXR0bGVUeXBlQh6qAhtF",
             "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BattleStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.RebattleTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RebattleTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleStatisticsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RebattleByClientCsNotify), global::EggLink.DanhengServer.Proto.RebattleByClientCsNotify.Parser, new[]{ "RebattleType", "Stt" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RebattleByClientCsNotify), global::EggLink.DanhengServer.Proto.RebattleByClientCsNotify.Parser, new[]{ "Stt", "RebattleType" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RebattleByClientCsNotify(RebattleByClientCsNotify other) : this() {
-      rebattleType_ = other.rebattleType_;
       stt_ = other.stt_ != null ? other.stt_.Clone() : null;
+      rebattleType_ = other.rebattleType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,18 +83,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RebattleByClientCsNotify Clone() {
       return new RebattleByClientCsNotify(this);
-    }
-
-    /// <summary>Field number for the "rebattle_type" field.</summary>
-    public const int RebattleTypeFieldNumber = 5;
-    private global::EggLink.DanhengServer.Proto.RebattleType rebattleType_ = global::EggLink.DanhengServer.Proto.RebattleType.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RebattleType RebattleType {
-      get { return rebattleType_; }
-      set {
-        rebattleType_ = value;
-      }
     }
 
     /// <summary>Field number for the "stt" field.</summary>
@@ -106,6 +94,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return stt_; }
       set {
         stt_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rebattle_type" field.</summary>
+    public const int RebattleTypeFieldNumber = 10;
+    private global::EggLink.DanhengServer.Proto.RebattleType rebattleType_ = global::EggLink.DanhengServer.Proto.RebattleType.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RebattleType RebattleType {
+      get { return rebattleType_; }
+      set {
+        rebattleType_ = value;
       }
     }
 
@@ -124,8 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (RebattleType != other.RebattleType) return false;
       if (!object.Equals(Stt, other.Stt)) return false;
+      if (RebattleType != other.RebattleType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (RebattleType != global::EggLink.DanhengServer.Proto.RebattleType.None) hash ^= RebattleType.GetHashCode();
       if (stt_ != null) hash ^= Stt.GetHashCode();
+      if (RebattleType != global::EggLink.DanhengServer.Proto.RebattleType.None) hash ^= RebattleType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (RebattleType != global::EggLink.DanhengServer.Proto.RebattleType.None) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) RebattleType);
-      }
       if (stt_ != null) {
         output.WriteRawTag(58);
         output.WriteMessage(Stt);
+      }
+      if (RebattleType != global::EggLink.DanhengServer.Proto.RebattleType.None) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) RebattleType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (RebattleType != global::EggLink.DanhengServer.Proto.RebattleType.None) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) RebattleType);
-      }
       if (stt_ != null) {
         output.WriteRawTag(58);
         output.WriteMessage(Stt);
+      }
+      if (RebattleType != global::EggLink.DanhengServer.Proto.RebattleType.None) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) RebattleType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -189,11 +189,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (RebattleType != global::EggLink.DanhengServer.Proto.RebattleType.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RebattleType);
-      }
       if (stt_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stt);
+      }
+      if (RebattleType != global::EggLink.DanhengServer.Proto.RebattleType.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RebattleType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -207,14 +207,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.RebattleType != global::EggLink.DanhengServer.Proto.RebattleType.None) {
-        RebattleType = other.RebattleType;
-      }
       if (other.stt_ != null) {
         if (stt_ == null) {
           Stt = new global::EggLink.DanhengServer.Proto.BattleStatistics();
         }
         Stt.MergeFrom(other.Stt);
+      }
+      if (other.RebattleType != global::EggLink.DanhengServer.Proto.RebattleType.None) {
+        RebattleType = other.RebattleType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            RebattleType = (global::EggLink.DanhengServer.Proto.RebattleType) input.ReadEnum();
-            break;
-          }
           case 58: {
             if (stt_ == null) {
               Stt = new global::EggLink.DanhengServer.Proto.BattleStatistics();
             }
             input.ReadMessage(Stt);
+            break;
+          }
+          case 80: {
+            RebattleType = (global::EggLink.DanhengServer.Proto.RebattleType) input.ReadEnum();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            RebattleType = (global::EggLink.DanhengServer.Proto.RebattleType) input.ReadEnum();
-            break;
-          }
           case 58: {
             if (stt_ == null) {
               Stt = new global::EggLink.DanhengServer.Proto.BattleStatistics();
             }
             input.ReadMessage(Stt);
+            break;
+          }
+          case 80: {
+            RebattleType = (global::EggLink.DanhengServer.Proto.RebattleType) input.ReadEnum();
             break;
           }
         }

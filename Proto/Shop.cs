@@ -24,15 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static ShopReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgpTaG9wLnByb3RvGgtHb29kcy5wcm90byKYAQoEU2hvcBIOCgZTaG9wSWQY",
-            "ByABKA0SEQoJQ2l0eUxldmVsGA8gASgNEhEKCUJlZ2luVGltZRgEIAEoAxIP",
-            "CgdDaXR5RXhwGAYgASgNEg8KB0VuZFRpbWUYCiABKAMSGgoKZ29vZHNfbGlz",
-            "dBgNIAMoCzIGLkdvb2RzEhwKFENpdHlUYWtlbkxldmVsUmV3YXJkGAUgASgE",
-            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "CgpTaG9wLnByb3RvGgtHb29kcy5wcm90byKgAQoEU2hvcBIaCgpnb29kc19s",
+            "aXN0GAsgAygLMgYuR29vZHMSEgoKYmVnaW5fdGltZRgBIAEoAxIPCgdzaG9w",
+            "X2lkGAogASgNEhAKCGVuZF90aW1lGA4gASgDEhIKCmNpdHlfbGV2ZWwYAyAB",
+            "KA0SEAoIY2l0eV9leHAYBSABKA0SHwoXY2l0eV90YWtlbl9sZXZlbF9yZXdh",
+            "cmQYByABKARCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GoodsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Shop), global::EggLink.DanhengServer.Proto.Shop.Parser, new[]{ "ShopId", "CityLevel", "BeginTime", "CityExp", "EndTime", "GoodsList", "CityTakenLevelReward" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Shop), global::EggLink.DanhengServer.Proto.Shop.Parser, new[]{ "GoodsList", "BeginTime", "ShopId", "EndTime", "CityLevel", "CityExp", "CityTakenLevelReward" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,12 +75,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Shop(Shop other) : this() {
-      shopId_ = other.shopId_;
-      cityLevel_ = other.cityLevel_;
-      beginTime_ = other.beginTime_;
-      cityExp_ = other.cityExp_;
-      endTime_ = other.endTime_;
       goodsList_ = other.goodsList_.Clone();
+      beginTime_ = other.beginTime_;
+      shopId_ = other.shopId_;
+      endTime_ = other.endTime_;
+      cityLevel_ = other.cityLevel_;
+      cityExp_ = other.cityExp_;
       cityTakenLevelReward_ = other.cityTakenLevelReward_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -90,32 +91,19 @@ namespace EggLink.DanhengServer.Proto {
       return new Shop(this);
     }
 
-    /// <summary>Field number for the "ShopId" field.</summary>
-    public const int ShopIdFieldNumber = 7;
-    private uint shopId_;
+    /// <summary>Field number for the "goods_list" field.</summary>
+    public const int GoodsListFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.Goods> _repeated_goodsList_codec
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.Goods.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Goods> goodsList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Goods>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ShopId {
-      get { return shopId_; }
-      set {
-        shopId_ = value;
-      }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Goods> GoodsList {
+      get { return goodsList_; }
     }
 
-    /// <summary>Field number for the "CityLevel" field.</summary>
-    public const int CityLevelFieldNumber = 15;
-    private uint cityLevel_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CityLevel {
-      get { return cityLevel_; }
-      set {
-        cityLevel_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "BeginTime" field.</summary>
-    public const int BeginTimeFieldNumber = 4;
+    /// <summary>Field number for the "begin_time" field.</summary>
+    public const int BeginTimeFieldNumber = 1;
     private long beginTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -126,20 +114,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CityExp" field.</summary>
-    public const int CityExpFieldNumber = 6;
-    private uint cityExp_;
+    /// <summary>Field number for the "shop_id" field.</summary>
+    public const int ShopIdFieldNumber = 10;
+    private uint shopId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CityExp {
-      get { return cityExp_; }
+    public uint ShopId {
+      get { return shopId_; }
       set {
-        cityExp_ = value;
+        shopId_ = value;
       }
     }
 
-    /// <summary>Field number for the "EndTime" field.</summary>
-    public const int EndTimeFieldNumber = 10;
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 14;
     private long endTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -150,19 +138,32 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "goods_list" field.</summary>
-    public const int GoodsListFieldNumber = 13;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.Goods> _repeated_goodsList_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.Goods.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Goods> goodsList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Goods>();
+    /// <summary>Field number for the "city_level" field.</summary>
+    public const int CityLevelFieldNumber = 3;
+    private uint cityLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Goods> GoodsList {
-      get { return goodsList_; }
+    public uint CityLevel {
+      get { return cityLevel_; }
+      set {
+        cityLevel_ = value;
+      }
     }
 
-    /// <summary>Field number for the "CityTakenLevelReward" field.</summary>
-    public const int CityTakenLevelRewardFieldNumber = 5;
+    /// <summary>Field number for the "city_exp" field.</summary>
+    public const int CityExpFieldNumber = 5;
+    private uint cityExp_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CityExp {
+      get { return cityExp_; }
+      set {
+        cityExp_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "city_taken_level_reward" field.</summary>
+    public const int CityTakenLevelRewardFieldNumber = 7;
     private ulong cityTakenLevelReward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -188,12 +189,12 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ShopId != other.ShopId) return false;
-      if (CityLevel != other.CityLevel) return false;
-      if (BeginTime != other.BeginTime) return false;
-      if (CityExp != other.CityExp) return false;
-      if (EndTime != other.EndTime) return false;
       if(!goodsList_.Equals(other.goodsList_)) return false;
+      if (BeginTime != other.BeginTime) return false;
+      if (ShopId != other.ShopId) return false;
+      if (EndTime != other.EndTime) return false;
+      if (CityLevel != other.CityLevel) return false;
+      if (CityExp != other.CityExp) return false;
       if (CityTakenLevelReward != other.CityTakenLevelReward) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -202,12 +203,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ShopId != 0) hash ^= ShopId.GetHashCode();
-      if (CityLevel != 0) hash ^= CityLevel.GetHashCode();
-      if (BeginTime != 0L) hash ^= BeginTime.GetHashCode();
-      if (CityExp != 0) hash ^= CityExp.GetHashCode();
-      if (EndTime != 0L) hash ^= EndTime.GetHashCode();
       hash ^= goodsList_.GetHashCode();
+      if (BeginTime != 0L) hash ^= BeginTime.GetHashCode();
+      if (ShopId != 0) hash ^= ShopId.GetHashCode();
+      if (EndTime != 0L) hash ^= EndTime.GetHashCode();
+      if (CityLevel != 0) hash ^= CityLevel.GetHashCode();
+      if (CityExp != 0) hash ^= CityExp.GetHashCode();
       if (CityTakenLevelReward != 0UL) hash ^= CityTakenLevelReward.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -228,29 +229,29 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (BeginTime != 0L) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(8);
         output.WriteInt64(BeginTime);
       }
-      if (CityTakenLevelReward != 0UL) {
-        output.WriteRawTag(40);
-        output.WriteUInt64(CityTakenLevelReward);
+      if (CityLevel != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(CityLevel);
       }
       if (CityExp != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(40);
         output.WriteUInt32(CityExp);
       }
-      if (ShopId != 0) {
+      if (CityTakenLevelReward != 0UL) {
         output.WriteRawTag(56);
+        output.WriteUInt64(CityTakenLevelReward);
+      }
+      if (ShopId != 0) {
+        output.WriteRawTag(80);
         output.WriteUInt32(ShopId);
       }
-      if (EndTime != 0L) {
-        output.WriteRawTag(80);
-        output.WriteInt64(EndTime);
-      }
       goodsList_.WriteTo(output, _repeated_goodsList_codec);
-      if (CityLevel != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(CityLevel);
+      if (EndTime != 0L) {
+        output.WriteRawTag(112);
+        output.WriteInt64(EndTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -263,29 +264,29 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (BeginTime != 0L) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(8);
         output.WriteInt64(BeginTime);
       }
-      if (CityTakenLevelReward != 0UL) {
-        output.WriteRawTag(40);
-        output.WriteUInt64(CityTakenLevelReward);
+      if (CityLevel != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(CityLevel);
       }
       if (CityExp != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(40);
         output.WriteUInt32(CityExp);
       }
-      if (ShopId != 0) {
+      if (CityTakenLevelReward != 0UL) {
         output.WriteRawTag(56);
+        output.WriteUInt64(CityTakenLevelReward);
+      }
+      if (ShopId != 0) {
+        output.WriteRawTag(80);
         output.WriteUInt32(ShopId);
       }
-      if (EndTime != 0L) {
-        output.WriteRawTag(80);
-        output.WriteInt64(EndTime);
-      }
       goodsList_.WriteTo(ref output, _repeated_goodsList_codec);
-      if (CityLevel != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(CityLevel);
+      if (EndTime != 0L) {
+        output.WriteRawTag(112);
+        output.WriteInt64(EndTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -297,22 +298,22 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ShopId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ShopId);
-      }
-      if (CityLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CityLevel);
-      }
+      size += goodsList_.CalculateSize(_repeated_goodsList_codec);
       if (BeginTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(BeginTime);
       }
-      if (CityExp != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CityExp);
+      if (ShopId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ShopId);
       }
       if (EndTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(EndTime);
       }
-      size += goodsList_.CalculateSize(_repeated_goodsList_codec);
+      if (CityLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CityLevel);
+      }
+      if (CityExp != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CityExp);
+      }
       if (CityTakenLevelReward != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(CityTakenLevelReward);
       }
@@ -328,22 +329,22 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ShopId != 0) {
-        ShopId = other.ShopId;
-      }
-      if (other.CityLevel != 0) {
-        CityLevel = other.CityLevel;
-      }
+      goodsList_.Add(other.goodsList_);
       if (other.BeginTime != 0L) {
         BeginTime = other.BeginTime;
       }
-      if (other.CityExp != 0) {
-        CityExp = other.CityExp;
+      if (other.ShopId != 0) {
+        ShopId = other.ShopId;
       }
       if (other.EndTime != 0L) {
         EndTime = other.EndTime;
       }
-      goodsList_.Add(other.goodsList_);
+      if (other.CityLevel != 0) {
+        CityLevel = other.CityLevel;
+      }
+      if (other.CityExp != 0) {
+        CityExp = other.CityExp;
+      }
       if (other.CityTakenLevelReward != 0UL) {
         CityTakenLevelReward = other.CityTakenLevelReward;
       }
@@ -362,32 +363,32 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 8: {
             BeginTime = input.ReadInt64();
             break;
           }
-          case 40: {
-            CityTakenLevelReward = input.ReadUInt64();
+          case 24: {
+            CityLevel = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 40: {
             CityExp = input.ReadUInt32();
             break;
           }
           case 56: {
-            ShopId = input.ReadUInt32();
+            CityTakenLevelReward = input.ReadUInt64();
             break;
           }
           case 80: {
-            EndTime = input.ReadInt64();
+            ShopId = input.ReadUInt32();
             break;
           }
-          case 106: {
+          case 90: {
             goodsList_.AddEntriesFrom(input, _repeated_goodsList_codec);
             break;
           }
-          case 120: {
-            CityLevel = input.ReadUInt32();
+          case 112: {
+            EndTime = input.ReadInt64();
             break;
           }
         }
@@ -405,32 +406,32 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 8: {
             BeginTime = input.ReadInt64();
             break;
           }
-          case 40: {
-            CityTakenLevelReward = input.ReadUInt64();
+          case 24: {
+            CityLevel = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 40: {
             CityExp = input.ReadUInt32();
             break;
           }
           case 56: {
-            ShopId = input.ReadUInt32();
+            CityTakenLevelReward = input.ReadUInt64();
             break;
           }
           case 80: {
-            EndTime = input.ReadInt64();
+            ShopId = input.ReadUInt32();
             break;
           }
-          case 106: {
+          case 90: {
             goodsList_.AddEntriesFrom(ref input, _repeated_goodsList_codec);
             break;
           }
-          case 120: {
-            CityLevel = input.ReadUInt32();
+          case 112: {
+            EndTime = input.ReadInt64();
             break;
           }
         }

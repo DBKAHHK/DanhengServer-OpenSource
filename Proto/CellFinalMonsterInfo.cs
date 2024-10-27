@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChpDZWxsRmluYWxNb25zdGVySW5mby5wcm90bxobQ2VsbE1vbnN0ZXJTZWxl",
             "Y3RJbmZvLnByb3RvGhVDZWxsTW9uc3RlckluZm8ucHJvdG8icgoUQ2VsbEZp",
-            "bmFsTW9uc3RlckluZm8SKAoOY2VsbF9ib3NzX2luZm8YAiABKAsyEC5DZWxs",
-            "TW9uc3RlckluZm8SMAoQc2VsZWN0X2Jvc3NfaW5mbxgLIAEoCzIWLkNlbGxN",
+            "bmFsTW9uc3RlckluZm8SKAoOY2VsbF9ib3NzX2luZm8YAyABKAsyEC5DZWxs",
+            "TW9uc3RlckluZm8SMAoQc2VsZWN0X2Jvc3NfaW5mbxgFIAEoCzIWLkNlbGxN",
             "b25zdGVyU2VsZWN0SW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cell_boss_info" field.</summary>
-    public const int CellBossInfoFieldNumber = 2;
+    public const int CellBossInfoFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.CellMonsterInfo cellBossInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_boss_info" field.</summary>
-    public const int SelectBossInfoFieldNumber = 11;
+    public const int SelectBossInfoFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.CellMonsterSelectInfo selectBossInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -155,11 +155,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (cellBossInfo_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteMessage(CellBossInfo);
       }
       if (selectBossInfo_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(42);
         output.WriteMessage(SelectBossInfo);
       }
       if (_unknownFields != null) {
@@ -173,11 +173,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (cellBossInfo_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteMessage(CellBossInfo);
       }
       if (selectBossInfo_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(42);
         output.WriteMessage(SelectBossInfo);
       }
       if (_unknownFields != null) {
@@ -235,14 +235,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 26: {
             if (cellBossInfo_ == null) {
               CellBossInfo = new global::EggLink.DanhengServer.Proto.CellMonsterInfo();
             }
             input.ReadMessage(CellBossInfo);
             break;
           }
-          case 90: {
+          case 42: {
             if (selectBossInfo_ == null) {
               SelectBossInfo = new global::EggLink.DanhengServer.Proto.CellMonsterSelectInfo();
             }
@@ -264,14 +264,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 26: {
             if (cellBossInfo_ == null) {
               CellBossInfo = new global::EggLink.DanhengServer.Proto.CellMonsterInfo();
             }
             input.ReadMessage(CellBossInfo);
             break;
           }
-          case 90: {
+          case 42: {
             if (selectBossInfo_ == null) {
               SelectBossInfo = new global::EggLink.DanhengServer.Proto.CellMonsterSelectInfo();
             }

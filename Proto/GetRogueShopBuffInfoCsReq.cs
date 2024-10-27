@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GetRogueShopBuffInfoCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9HZXRSb2d1ZVNob3BCdWZmSW5mb0NzUmVxLnByb3RvImMKGUdldFJvZ3Vl",
-            "U2hvcEJ1ZmZJbmZvQ3NSZXESIQoZaW50ZXJhY3RlZF9wcm9wX2VudGl0eV9p",
-            "ZBgFIAEoDRIjChtQVU5LX0xPUkRfT1BFUkFUSU9OX1JFRlJFU0gYBCABKAhC",
-            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "Ch9HZXRSb2d1ZVNob3BCdWZmSW5mb0NzUmVxLnByb3RvIlQKGUdldFJvZ3Vl",
+            "U2hvcEJ1ZmZJbmZvQ3NSZXESIwobUFVOS19MT1JEX09QRVJBVElPTl9SRUZS",
+            "RVNIGAwgASgIEhIKCm1vbnN0ZXJfaWQYCCABKA1CHqoCG0VnZ0xpbmsuRGFu",
+            "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRogueShopBuffInfoCsReq), global::EggLink.DanhengServer.Proto.GetRogueShopBuffInfoCsReq.Parser, new[]{ "InteractedPropEntityId", "PUNKLORDOPERATIONREFRESH" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRogueShopBuffInfoCsReq), global::EggLink.DanhengServer.Proto.GetRogueShopBuffInfoCsReq.Parser, new[]{ "PUNKLORDOPERATIONREFRESH", "MonsterId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetRogueShopBuffInfoCsReq(GetRogueShopBuffInfoCsReq other) : this() {
-      interactedPropEntityId_ = other.interactedPropEntityId_;
       pUNKLORDOPERATIONREFRESH_ = other.pUNKLORDOPERATIONREFRESH_;
+      monsterId_ = other.monsterId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new GetRogueShopBuffInfoCsReq(this);
     }
 
-    /// <summary>Field number for the "interacted_prop_entity_id" field.</summary>
-    public const int InteractedPropEntityIdFieldNumber = 5;
-    private uint interactedPropEntityId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint InteractedPropEntityId {
-      get { return interactedPropEntityId_; }
-      set {
-        interactedPropEntityId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "PUNK_LORD_OPERATION_REFRESH" field.</summary>
-    public const int PUNKLORDOPERATIONREFRESHFieldNumber = 4;
+    public const int PUNKLORDOPERATIONREFRESHFieldNumber = 12;
     private bool pUNKLORDOPERATIONREFRESH_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return pUNKLORDOPERATIONREFRESH_; }
       set {
         pUNKLORDOPERATIONREFRESH_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "monster_id" field.</summary>
+    public const int MonsterIdFieldNumber = 8;
+    private uint monsterId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint MonsterId {
+      get { return monsterId_; }
+      set {
+        monsterId_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (InteractedPropEntityId != other.InteractedPropEntityId) return false;
       if (PUNKLORDOPERATIONREFRESH != other.PUNKLORDOPERATIONREFRESH) return false;
+      if (MonsterId != other.MonsterId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (InteractedPropEntityId != 0) hash ^= InteractedPropEntityId.GetHashCode();
       if (PUNKLORDOPERATIONREFRESH != false) hash ^= PUNKLORDOPERATIONREFRESH.GetHashCode();
+      if (MonsterId != 0) hash ^= MonsterId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PUNKLORDOPERATIONREFRESH != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(PUNKLORDOPERATIONREFRESH);
+      if (MonsterId != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(MonsterId);
       }
-      if (InteractedPropEntityId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(InteractedPropEntityId);
+      if (PUNKLORDOPERATIONREFRESH != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(PUNKLORDOPERATIONREFRESH);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PUNKLORDOPERATIONREFRESH != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(PUNKLORDOPERATIONREFRESH);
+      if (MonsterId != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(MonsterId);
       }
-      if (InteractedPropEntityId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(InteractedPropEntityId);
+      if (PUNKLORDOPERATIONREFRESH != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(PUNKLORDOPERATIONREFRESH);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (InteractedPropEntityId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(InteractedPropEntityId);
-      }
       if (PUNKLORDOPERATIONREFRESH != false) {
         size += 1 + 1;
+      }
+      if (MonsterId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MonsterId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.InteractedPropEntityId != 0) {
-        InteractedPropEntityId = other.InteractedPropEntityId;
-      }
       if (other.PUNKLORDOPERATIONREFRESH != false) {
         PUNKLORDOPERATIONREFRESH = other.PUNKLORDOPERATIONREFRESH;
+      }
+      if (other.MonsterId != 0) {
+        MonsterId = other.MonsterId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            PUNKLORDOPERATIONREFRESH = input.ReadBool();
+          case 64: {
+            MonsterId = input.ReadUInt32();
             break;
           }
-          case 40: {
-            InteractedPropEntityId = input.ReadUInt32();
+          case 96: {
+            PUNKLORDOPERATIONREFRESH = input.ReadBool();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            PUNKLORDOPERATIONREFRESH = input.ReadBool();
+          case 64: {
+            MonsterId = input.ReadUInt32();
             break;
           }
-          case 40: {
-            InteractedPropEntityId = input.ReadUInt32();
+          case 96: {
+            PUNKLORDOPERATIONREFRESH = input.ReadBool();
             break;
           }
         }

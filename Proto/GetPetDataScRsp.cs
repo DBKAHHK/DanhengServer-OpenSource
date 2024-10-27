@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GetPetDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVHZXRQZXREYXRhU2NSc3AucHJvdG8iSwoPR2V0UGV0RGF0YVNjUnNwEhMK",
-            "C3BldF9pZF9saXN0GAYgAygNEg8KB3JldGNvZGUYBCABKA0SEgoKY3VyX3Bl",
-            "dF9pZBgKIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "ChVHZXRQZXREYXRhU2NSc3AucHJvdG8iSwoPR2V0UGV0RGF0YVNjUnNwEhIK",
+            "CmN1cl9wZXRfaWQYAiABKA0SDwoHcmV0Y29kZRgEIAEoDRITCgtwZXRfaWRf",
+            "bGlzdBgOIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetPetDataScRsp), global::EggLink.DanhengServer.Proto.GetPetDataScRsp.Parser, new[]{ "PetIdList", "Retcode", "CurPetId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetPetDataScRsp), global::EggLink.DanhengServer.Proto.GetPetDataScRsp.Parser, new[]{ "CurPetId", "Retcode", "PetIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetPetDataScRsp(GetPetDataScRsp other) : this() {
-      petIdList_ = other.petIdList_.Clone();
-      retcode_ = other.retcode_;
       curPetId_ = other.curPetId_;
+      retcode_ = other.retcode_;
+      petIdList_ = other.petIdList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,15 +85,16 @@ namespace EggLink.DanhengServer.Proto {
       return new GetPetDataScRsp(this);
     }
 
-    /// <summary>Field number for the "pet_id_list" field.</summary>
-    public const int PetIdListFieldNumber = 6;
-    private static readonly pb::FieldCodec<uint> _repeated_petIdList_codec
-        = pb::FieldCodec.ForUInt32(50);
-    private readonly pbc::RepeatedField<uint> petIdList_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "cur_pet_id" field.</summary>
+    public const int CurPetIdFieldNumber = 2;
+    private uint curPetId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> PetIdList {
-      get { return petIdList_; }
+    public uint CurPetId {
+      get { return curPetId_; }
+      set {
+        curPetId_ = value;
+      }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
@@ -108,16 +109,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "cur_pet_id" field.</summary>
-    public const int CurPetIdFieldNumber = 10;
-    private uint curPetId_;
+    /// <summary>Field number for the "pet_id_list" field.</summary>
+    public const int PetIdListFieldNumber = 14;
+    private static readonly pb::FieldCodec<uint> _repeated_petIdList_codec
+        = pb::FieldCodec.ForUInt32(114);
+    private readonly pbc::RepeatedField<uint> petIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CurPetId {
-      get { return curPetId_; }
-      set {
-        curPetId_ = value;
-      }
+    public pbc::RepeatedField<uint> PetIdList {
+      get { return petIdList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -135,9 +135,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!petIdList_.Equals(other.petIdList_)) return false;
-      if (Retcode != other.Retcode) return false;
       if (CurPetId != other.CurPetId) return false;
+      if (Retcode != other.Retcode) return false;
+      if(!petIdList_.Equals(other.petIdList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,9 +145,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= petIdList_.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (CurPetId != 0) hash ^= CurPetId.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      hash ^= petIdList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,15 +166,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (CurPetId != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(CurPetId);
+      }
       if (Retcode != 0) {
         output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
       }
       petIdList_.WriteTo(output, _repeated_petIdList_codec);
-      if (CurPetId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(CurPetId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -185,15 +185,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CurPetId != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(CurPetId);
+      }
       if (Retcode != 0) {
         output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
       }
       petIdList_.WriteTo(ref output, _repeated_petIdList_codec);
-      if (CurPetId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(CurPetId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -204,13 +204,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += petIdList_.CalculateSize(_repeated_petIdList_codec);
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
       if (CurPetId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurPetId);
       }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      size += petIdList_.CalculateSize(_repeated_petIdList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -223,13 +223,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      petIdList_.Add(other.petIdList_);
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
       if (other.CurPetId != 0) {
         CurPetId = other.CurPetId;
       }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
+      petIdList_.Add(other.petIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -245,17 +245,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 16: {
+            CurPetId = input.ReadUInt32();
+            break;
+          }
           case 32: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 50:
-          case 48: {
+          case 114:
+          case 112: {
             petIdList_.AddEntriesFrom(input, _repeated_petIdList_codec);
-            break;
-          }
-          case 80: {
-            CurPetId = input.ReadUInt32();
             break;
           }
         }
@@ -273,17 +273,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 16: {
+            CurPetId = input.ReadUInt32();
+            break;
+          }
           case 32: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 50:
-          case 48: {
+          case 114:
+          case 112: {
             petIdList_.AddEntriesFrom(ref input, _repeated_petIdList_codec);
-            break;
-          }
-          case 80: {
-            CurPetId = input.ReadUInt32();
             break;
           }
         }

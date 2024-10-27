@@ -25,6 +25,7 @@ public class SceneEntityLoader(SceneInstance scene)
                  where @group.LoadSide != GroupLoadSideEnum.Client
                  where !@group.GroupName.Contains("DeployPuzzle_Repeat_Area")
                  where !@group.GroupName.Contains("TrainVisitor")
+                 where !@group.GroupName.Contains("TrainVisiter")
                  select @group) await LoadGroup(group);
 
         Scene.IsLoaded = true;
@@ -43,7 +44,8 @@ public class SceneEntityLoader(SceneInstance scene)
         foreach (var group in Scene.FloorInfo!.Groups.Values
                      .Where(group => group.LoadSide != GroupLoadSideEnum.Client)
                      .Where(group => !group.GroupName.Contains("TrainVisitor"))
-                     .Where(group => !group.GroupName.Contains("DeployPuzzle_Repeat_Area")))
+                     .Where(group => !group.GroupName.Contains("DeployPuzzle_Repeat_Area"))
+                     .Where(group => !group.GroupName.Contains("TrainVisiter")))
 
             if (oldGroupId.Contains(group.Id)) // check if it should be unloaded
             {
@@ -91,6 +93,7 @@ public class SceneEntityLoader(SceneInstance scene)
         if (info.LoadSide == GroupLoadSideEnum.Client) return null;
         if (info.GroupName.Contains("TrainVisitor")) return null;
         if (info.GroupName.Contains("DeployPuzzle_Repeat_Area")) return null;
+        if (info.GroupName.Contains("TrainVisiter")) return null;
 
         if (info.SystemUnlockCondition != null)
         {

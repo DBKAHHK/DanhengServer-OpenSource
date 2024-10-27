@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlDaGFsbGVuZ2VTdGF0aXN0aWNzLnByb3RvGh1DaGFsbGVuZ2VTdGFnZVRl",
-            "cnRpbmdnaS5wcm90byJbChNDaGFsbGVuZ2VTdGF0aXN0aWNzEjEKD3N0YWdl",
-            "X3RlcnRpbmdnaRgFIAEoCzIYLkNoYWxsZW5nZVN0YWdlVGVydGluZ2dpEhEK",
-            "CXJlY29yZF9pZBgNIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "cnRpbmdnaS5wcm90byJbChNDaGFsbGVuZ2VTdGF0aXN0aWNzEhEKCXJlY29y",
+            "ZF9pZBgJIAEoDRIxCg9zdGFnZV90ZXJ0aW5nZ2kYASABKAsyGC5DaGFsbGVu",
+            "Z2VTdGFnZVRlcnRpbmdnaUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeStageTertinggiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeStatistics), global::EggLink.DanhengServer.Proto.ChallengeStatistics.Parser, new[]{ "StageTertinggi", "RecordId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeStatistics), global::EggLink.DanhengServer.Proto.ChallengeStatistics.Parser, new[]{ "RecordId", "StageTertinggi" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChallengeStatistics(ChallengeStatistics other) : this() {
-      stageTertinggi_ = other.stageTertinggi_ != null ? other.stageTertinggi_.Clone() : null;
       recordId_ = other.recordId_;
+      stageTertinggi_ = other.stageTertinggi_ != null ? other.stageTertinggi_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new ChallengeStatistics(this);
     }
 
-    /// <summary>Field number for the "stage_tertinggi" field.</summary>
-    public const int StageTertinggiFieldNumber = 5;
-    private global::EggLink.DanhengServer.Proto.ChallengeStageTertinggi stageTertinggi_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ChallengeStageTertinggi StageTertinggi {
-      get { return stageTertinggi_; }
-      set {
-        stageTertinggi_ = value;
-      }
-    }
-
     /// <summary>Field number for the "record_id" field.</summary>
-    public const int RecordIdFieldNumber = 13;
+    public const int RecordIdFieldNumber = 9;
     private uint recordId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,6 +94,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return recordId_; }
       set {
         recordId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "stage_tertinggi" field.</summary>
+    public const int StageTertinggiFieldNumber = 1;
+    private global::EggLink.DanhengServer.Proto.ChallengeStageTertinggi stageTertinggi_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ChallengeStageTertinggi StageTertinggi {
+      get { return stageTertinggi_; }
+      set {
+        stageTertinggi_ = value;
       }
     }
 
@@ -124,8 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(StageTertinggi, other.StageTertinggi)) return false;
       if (RecordId != other.RecordId) return false;
+      if (!object.Equals(StageTertinggi, other.StageTertinggi)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (stageTertinggi_ != null) hash ^= StageTertinggi.GetHashCode();
       if (RecordId != 0) hash ^= RecordId.GetHashCode();
+      if (stageTertinggi_ != null) hash ^= StageTertinggi.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -154,11 +154,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (stageTertinggi_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(10);
         output.WriteMessage(StageTertinggi);
       }
       if (RecordId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(72);
         output.WriteUInt32(RecordId);
       }
       if (_unknownFields != null) {
@@ -172,11 +172,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (stageTertinggi_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(10);
         output.WriteMessage(StageTertinggi);
       }
       if (RecordId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(72);
         output.WriteUInt32(RecordId);
       }
       if (_unknownFields != null) {
@@ -189,11 +189,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (stageTertinggi_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StageTertinggi);
-      }
       if (RecordId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RecordId);
+      }
+      if (stageTertinggi_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StageTertinggi);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -207,14 +207,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.RecordId != 0) {
+        RecordId = other.RecordId;
+      }
       if (other.stageTertinggi_ != null) {
         if (stageTertinggi_ == null) {
           StageTertinggi = new global::EggLink.DanhengServer.Proto.ChallengeStageTertinggi();
         }
         StageTertinggi.MergeFrom(other.StageTertinggi);
-      }
-      if (other.RecordId != 0) {
-        RecordId = other.RecordId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
+          case 10: {
             if (stageTertinggi_ == null) {
               StageTertinggi = new global::EggLink.DanhengServer.Proto.ChallengeStageTertinggi();
             }
             input.ReadMessage(StageTertinggi);
             break;
           }
-          case 104: {
+          case 72: {
             RecordId = input.ReadUInt32();
             break;
           }
@@ -257,14 +257,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
+          case 10: {
             if (stageTertinggi_ == null) {
               StageTertinggi = new global::EggLink.DanhengServer.Proto.ChallengeStageTertinggi();
             }
             input.ReadMessage(StageTertinggi);
             break;
           }
-          case 104: {
+          case 72: {
             RecordId = input.ReadUInt32();
             break;
           }

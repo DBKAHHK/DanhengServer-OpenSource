@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static MarkChatEmojiScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhNYXJrQ2hhdEVtb2ppU2NSc3AucHJvdG8iTQoSTWFya0NoYXRFbW9qaVNj",
-            "UnNwEhAKCGV4dHJhX2lkGAYgASgNEg8KB3JldGNvZGUYCiABKA0SFAoMaXNf",
-            "cmVtb3ZlX2lkGA8gASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
-            "dG9iBnByb3RvMw=="));
+            "ChhNYXJrQ2hhdEVtb2ppU2NSc3AucHJvdG8iTAoSTWFya0NoYXRFbW9qaVNj",
+            "UnNwEg8KB3JldGNvZGUYByABKA0SEAoIZXh0cmFfaWQYBSABKA0SEwoLQUFN",
+            "TURGRUJJTVAYDSABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarkChatEmojiScRsp), global::EggLink.DanhengServer.Proto.MarkChatEmojiScRsp.Parser, new[]{ "ExtraId", "Retcode", "IsRemoveId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarkChatEmojiScRsp), global::EggLink.DanhengServer.Proto.MarkChatEmojiScRsp.Parser, new[]{ "Retcode", "ExtraId", "AAMMDFEBIMP" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MarkChatEmojiScRsp(MarkChatEmojiScRsp other) : this() {
-      extraId_ = other.extraId_;
       retcode_ = other.retcode_;
-      isRemoveId_ = other.isRemoveId_;
+      extraId_ = other.extraId_;
+      aAMMDFEBIMP_ = other.aAMMDFEBIMP_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new MarkChatEmojiScRsp(this);
     }
 
-    /// <summary>Field number for the "extra_id" field.</summary>
-    public const int ExtraIdFieldNumber = 6;
-    private uint extraId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ExtraId {
-      get { return extraId_; }
-      set {
-        extraId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 10;
+    public const int RetcodeFieldNumber = 7;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,15 +97,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "is_remove_id" field.</summary>
-    public const int IsRemoveIdFieldNumber = 15;
-    private bool isRemoveId_;
+    /// <summary>Field number for the "extra_id" field.</summary>
+    public const int ExtraIdFieldNumber = 5;
+    private uint extraId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsRemoveId {
-      get { return isRemoveId_; }
+    public uint ExtraId {
+      get { return extraId_; }
       set {
-        isRemoveId_ = value;
+        extraId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "AAMMDFEBIMP" field.</summary>
+    public const int AAMMDFEBIMPFieldNumber = 13;
+    private bool aAMMDFEBIMP_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AAMMDFEBIMP {
+      get { return aAMMDFEBIMP_; }
+      set {
+        aAMMDFEBIMP_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ExtraId != other.ExtraId) return false;
       if (Retcode != other.Retcode) return false;
-      if (IsRemoveId != other.IsRemoveId) return false;
+      if (ExtraId != other.ExtraId) return false;
+      if (AAMMDFEBIMP != other.AAMMDFEBIMP) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ExtraId != 0) hash ^= ExtraId.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (IsRemoveId != false) hash ^= IsRemoveId.GetHashCode();
+      if (ExtraId != 0) hash ^= ExtraId.GetHashCode();
+      if (AAMMDFEBIMP != false) hash ^= AAMMDFEBIMP.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,16 +168,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (ExtraId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(40);
         output.WriteUInt32(ExtraId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
-      if (IsRemoveId != false) {
-        output.WriteRawTag(120);
-        output.WriteBool(IsRemoveId);
+      if (AAMMDFEBIMP != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(AAMMDFEBIMP);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,16 +190,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ExtraId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(40);
         output.WriteUInt32(ExtraId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
-      if (IsRemoveId != false) {
-        output.WriteRawTag(120);
-        output.WriteBool(IsRemoveId);
+      if (AAMMDFEBIMP != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(AAMMDFEBIMP);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,13 +211,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ExtraId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ExtraId);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (IsRemoveId != false) {
+      if (ExtraId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ExtraId);
+      }
+      if (AAMMDFEBIMP != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -232,14 +232,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ExtraId != 0) {
-        ExtraId = other.ExtraId;
-      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.IsRemoveId != false) {
-        IsRemoveId = other.IsRemoveId;
+      if (other.ExtraId != 0) {
+        ExtraId = other.ExtraId;
+      }
+      if (other.AAMMDFEBIMP != false) {
+        AAMMDFEBIMP = other.AAMMDFEBIMP;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 40: {
             ExtraId = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 56: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 120: {
-            IsRemoveId = input.ReadBool();
+          case 104: {
+            AAMMDFEBIMP = input.ReadBool();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 40: {
             ExtraId = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 56: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 120: {
-            IsRemoveId = input.ReadBool();
+          case 104: {
+            AAMMDFEBIMP = input.ReadBool();
             break;
           }
         }

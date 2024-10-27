@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static AcceptExpeditionCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtBY2NlcHRFeHBlZGl0aW9uQ3NSZXEucHJvdG8aEUpMSEhDSUpQT1BELnBy",
+            "ChtBY2NlcHRFeHBlZGl0aW9uQ3NSZXEucHJvdG8aEU9KR0xHUEdERVBOLnBy",
             "b3RvIkgKFUFjY2VwdEV4cGVkaXRpb25Dc1JlcRIvChlGVU5DX1VOTE9DS19J",
-            "RF9FWFBFRElUSU9OGAsgASgLMgwuSkxISENJSlBPUERCHqoCG0VnZ0xpbmsu",
+            "RF9FWFBFRElUSU9OGAMgASgLMgwuT0pHTEdQR0RFUE5CHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JLHHCIJPOPDReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OJGLGPGDEPNReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AcceptExpeditionCsReq), global::EggLink.DanhengServer.Proto.AcceptExpeditionCsReq.Parser, new[]{ "FUNCUNLOCKIDEXPEDITION" }, null, null, null, null)
           }));
@@ -84,11 +84,11 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "FUNC_UNLOCK_ID_EXPEDITION" field.</summary>
-    public const int FUNCUNLOCKIDEXPEDITIONFieldNumber = 11;
-    private global::EggLink.DanhengServer.Proto.JLHHCIJPOPD fUNCUNLOCKIDEXPEDITION_;
+    public const int FUNCUNLOCKIDEXPEDITIONFieldNumber = 3;
+    private global::EggLink.DanhengServer.Proto.OJGLGPGDEPN fUNCUNLOCKIDEXPEDITION_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.JLHHCIJPOPD FUNCUNLOCKIDEXPEDITION {
+    public global::EggLink.DanhengServer.Proto.OJGLGPGDEPN FUNCUNLOCKIDEXPEDITION {
       get { return fUNCUNLOCKIDEXPEDITION_; }
       set {
         fUNCUNLOCKIDEXPEDITION_ = value;
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (fUNCUNLOCKIDEXPEDITION_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(26);
         output.WriteMessage(FUNCUNLOCKIDEXPEDITION);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (fUNCUNLOCKIDEXPEDITION_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(26);
         output.WriteMessage(FUNCUNLOCKIDEXPEDITION);
       }
       if (_unknownFields != null) {
@@ -182,7 +182,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.fUNCUNLOCKIDEXPEDITION_ != null) {
         if (fUNCUNLOCKIDEXPEDITION_ == null) {
-          FUNCUNLOCKIDEXPEDITION = new global::EggLink.DanhengServer.Proto.JLHHCIJPOPD();
+          FUNCUNLOCKIDEXPEDITION = new global::EggLink.DanhengServer.Proto.OJGLGPGDEPN();
         }
         FUNCUNLOCKIDEXPEDITION.MergeFrom(other.FUNCUNLOCKIDEXPEDITION);
       }
@@ -201,9 +201,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 90: {
+          case 26: {
             if (fUNCUNLOCKIDEXPEDITION_ == null) {
-              FUNCUNLOCKIDEXPEDITION = new global::EggLink.DanhengServer.Proto.JLHHCIJPOPD();
+              FUNCUNLOCKIDEXPEDITION = new global::EggLink.DanhengServer.Proto.OJGLGPGDEPN();
             }
             input.ReadMessage(FUNCUNLOCKIDEXPEDITION);
             break;
@@ -223,9 +223,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 90: {
+          case 26: {
             if (fUNCUNLOCKIDEXPEDITION_ == null) {
-              FUNCUNLOCKIDEXPEDITION = new global::EggLink.DanhengServer.Proto.JLHHCIJPOPD();
+              FUNCUNLOCKIDEXPEDITION = new global::EggLink.DanhengServer.Proto.OJGLGPGDEPN();
             }
             input.ReadMessage(FUNCUNLOCKIDEXPEDITION);
             break;

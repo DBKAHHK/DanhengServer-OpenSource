@@ -25,9 +25,9 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFVcGRhdGVGZWF0dXJlU3dpdGNoU2NOb3RpZnkucHJvdG8aF0ZlYXR1cmVT",
-            "d2l0Y2hJbmZvLnByb3RvIkkKG1VwZGF0ZUZlYXR1cmVTd2l0Y2hTY05vdGlm",
-            "eRIqCg5Td2l0Y2hJbmZvTGlzdBgJIAMoCzISLkZlYXR1cmVTd2l0Y2hJbmZv",
-            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "d2l0Y2hJbmZvLnByb3RvIksKG1VwZGF0ZUZlYXR1cmVTd2l0Y2hTY05vdGlm",
+            "eRIsChBzd2l0Y2hfaW5mb19saXN0GAYgAygLMhIuRmVhdHVyZVN3aXRjaElu",
+            "Zm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FeatureSwitchInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -83,10 +83,10 @@ namespace EggLink.DanhengServer.Proto {
       return new UpdateFeatureSwitchScNotify(this);
     }
 
-    /// <summary>Field number for the "SwitchInfoList" field.</summary>
-    public const int SwitchInfoListFieldNumber = 9;
+    /// <summary>Field number for the "switch_info_list" field.</summary>
+    public const int SwitchInfoListFieldNumber = 6;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.FeatureSwitchInfo> _repeated_switchInfoList_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.FeatureSwitchInfo.Parser);
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.FeatureSwitchInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FeatureSwitchInfo> switchInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FeatureSwitchInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 74: {
+          case 50: {
             switchInfoList_.AddEntriesFrom(input, _repeated_switchInfoList_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 74: {
+          case 50: {
             switchInfoList_.AddEntriesFrom(ref input, _repeated_switchInfoList_codec);
             break;
           }

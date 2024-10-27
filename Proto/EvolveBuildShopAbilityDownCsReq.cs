@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static EvolveBuildShopAbilityDownCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiVFdm9sdmVCdWlsZFNob3BBYmlsaXR5RG93bkNzUmVxLnByb3RvIkUKH0V2",
-            "b2x2ZUJ1aWxkU2hvcEFiaWxpdHlEb3duQ3NSZXESEwoLSUNLT0JMQk9LSUgY",
-            "CSABKA0SDQoFbGV2ZWwYDiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
-            "ci5Qcm90b2IGcHJvdG8z"));
+            "CiVFdm9sdmVCdWlsZFNob3BBYmlsaXR5RG93bkNzUmVxLnByb3RvIkcKH0V2",
+            "b2x2ZUJ1aWxkU2hvcEFiaWxpdHlEb3duQ3NSZXESFQoNc2hvcF9za2lsbF9p",
+            "ZBgHIAEoDRINCgVsZXZlbBgKIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
+            "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EvolveBuildShopAbilityDownCsReq), global::EggLink.DanhengServer.Proto.EvolveBuildShopAbilityDownCsReq.Parser, new[]{ "ICKOBLBOKIH", "Level" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EvolveBuildShopAbilityDownCsReq), global::EggLink.DanhengServer.Proto.EvolveBuildShopAbilityDownCsReq.Parser, new[]{ "ShopSkillId", "Level" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EvolveBuildShopAbilityDownCsReq(EvolveBuildShopAbilityDownCsReq other) : this() {
-      iCKOBLBOKIH_ = other.iCKOBLBOKIH_;
+      shopSkillId_ = other.shopSkillId_;
       level_ = other.level_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,20 +84,20 @@ namespace EggLink.DanhengServer.Proto {
       return new EvolveBuildShopAbilityDownCsReq(this);
     }
 
-    /// <summary>Field number for the "ICKOBLBOKIH" field.</summary>
-    public const int ICKOBLBOKIHFieldNumber = 9;
-    private uint iCKOBLBOKIH_;
+    /// <summary>Field number for the "shop_skill_id" field.</summary>
+    public const int ShopSkillIdFieldNumber = 7;
+    private uint shopSkillId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ICKOBLBOKIH {
-      get { return iCKOBLBOKIH_; }
+    public uint ShopSkillId {
+      get { return shopSkillId_; }
       set {
-        iCKOBLBOKIH_ = value;
+        shopSkillId_ = value;
       }
     }
 
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 14;
+    public const int LevelFieldNumber = 10;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ICKOBLBOKIH != other.ICKOBLBOKIH) return false;
+      if (ShopSkillId != other.ShopSkillId) return false;
       if (Level != other.Level) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -132,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ICKOBLBOKIH != 0) hash ^= ICKOBLBOKIH.GetHashCode();
+      if (ShopSkillId != 0) hash ^= ShopSkillId.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -152,12 +152,12 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ICKOBLBOKIH != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(ICKOBLBOKIH);
+      if (ShopSkillId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(ShopSkillId);
       }
       if (Level != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(80);
         output.WriteUInt32(Level);
       }
       if (_unknownFields != null) {
@@ -170,12 +170,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ICKOBLBOKIH != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(ICKOBLBOKIH);
+      if (ShopSkillId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(ShopSkillId);
       }
       if (Level != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(80);
         output.WriteUInt32(Level);
       }
       if (_unknownFields != null) {
@@ -188,8 +188,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ICKOBLBOKIH != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ICKOBLBOKIH);
+      if (ShopSkillId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ShopSkillId);
       }
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
@@ -206,8 +206,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ICKOBLBOKIH != 0) {
-        ICKOBLBOKIH = other.ICKOBLBOKIH;
+      if (other.ShopSkillId != 0) {
+        ShopSkillId = other.ShopSkillId;
       }
       if (other.Level != 0) {
         Level = other.Level;
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
-            ICKOBLBOKIH = input.ReadUInt32();
+          case 56: {
+            ShopSkillId = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 80: {
             Level = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
-            ICKOBLBOKIH = input.ReadUInt32();
+          case 56: {
+            ShopSkillId = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 80: {
             Level = input.ReadUInt32();
             break;
           }

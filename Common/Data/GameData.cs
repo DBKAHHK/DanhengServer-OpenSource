@@ -122,6 +122,21 @@ public static class GameData
 
     #endregion
 
+    #region Pam
+
+    public static Dictionary<int, PamSkinConfigExcel> PamSkinConfigData { get; private set; } = [];
+
+    #endregion
+
+    #region TrainParty
+
+    public static Dictionary<int, TrainPartyPassengerConfigExcel> TrainPartyPassengerConfigData { get; private set; } = [];
+    public static Dictionary<int, TrainPartyAreaConfigExcel> TrainPartyAreaConfigData { get; private set; } = [];
+    public static Dictionary<int, TrainPartyStepConfigExcel> TrainPartyStepConfigData { get; private set; } = [];
+    public static Dictionary<int, TrainPartyDynamicConfigExcel> TrainPartyDynamicConfigData { get; private set; } = [];
+
+    #endregion
+
     #region Items
 
     public static Dictionary<int, MappingInfoExcel> MappingInfoData { get; private set; } = [];

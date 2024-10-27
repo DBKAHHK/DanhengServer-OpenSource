@@ -25,19 +25,19 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZHZXRDaGFsbGVuZ2VHcm91cFN0YXRpc3RpY3NTY1JzcC5wcm90bxoeQ2hh",
-            "bGxlbmdlU3RvcnlTdGF0aXN0aWNzLnByb3RvGhlDaGFsbGVuZ2VTdGF0aXN0",
-            "aWNzLnByb3RvGh1DaGFsbGVuZ2VCb3NzU3RhdGlzdGljcy5wcm90byLvAQog",
-            "R2V0Q2hhbGxlbmdlR3JvdXBTdGF0aXN0aWNzU2NSc3ASDwoHcmV0Y29kZRgI",
-            "IAEoDRIQCghncm91cF9pZBgOIAEoDRIxChFjaGFsbGVuZ2VfZGVmYXVsdBgM",
+            "bGxlbmdlU3RvcnlTdGF0aXN0aWNzLnByb3RvGh1DaGFsbGVuZ2VCb3NzU3Rh",
+            "dGlzdGljcy5wcm90bxoZQ2hhbGxlbmdlU3RhdGlzdGljcy5wcm90byLvAQog",
+            "R2V0Q2hhbGxlbmdlR3JvdXBTdGF0aXN0aWNzU2NSc3ASEAoIZ3JvdXBfaWQY",
+            "DyABKA0SDwoHcmV0Y29kZRgHIAEoDRIxChFjaGFsbGVuZ2VfZGVmYXVsdBgC",
             "IAEoCzIULkNoYWxsZW5nZVN0YXRpc3RpY3NIABI0Cg9jaGFsbGVuZ2Vfc3Rv",
-            "cnkYBCABKAsyGS5DaGFsbGVuZ2VTdG9yeVN0YXRpc3RpY3NIABIyCg5jaGFs",
-            "bGVuZ2VfYm9zcxgPIAEoCzIYLkNoYWxsZW5nZUJvc3NTdGF0aXN0aWNzSABC",
+            "cnkYBSABKAsyGS5DaGFsbGVuZ2VTdG9yeVN0YXRpc3RpY3NIABIyCg5jaGFs",
+            "bGVuZ2VfYm9zcxgGIAEoCzIYLkNoYWxsZW5nZUJvc3NTdGF0aXN0aWNzSABC",
             "CwoJY2hhbGxlbmdlQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeStoryStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeBossStatisticsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeStoryStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeBossStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStatisticsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetChallengeGroupStatisticsScRsp), global::EggLink.DanhengServer.Proto.GetChallengeGroupStatisticsScRsp.Parser, new[]{ "Retcode", "GroupId", "ChallengeDefault", "ChallengeStory", "ChallengeBoss" }, new[]{ "Challenge" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetChallengeGroupStatisticsScRsp), global::EggLink.DanhengServer.Proto.GetChallengeGroupStatisticsScRsp.Parser, new[]{ "GroupId", "Retcode", "ChallengeDefault", "ChallengeStory", "ChallengeBoss" }, new[]{ "Challenge" }, null, null, null)
           }));
     }
     #endregion
@@ -79,8 +79,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetChallengeGroupStatisticsScRsp(GetChallengeGroupStatisticsScRsp other) : this() {
-      retcode_ = other.retcode_;
       groupId_ = other.groupId_;
+      retcode_ = other.retcode_;
       switch (other.ChallengeCase) {
         case ChallengeOneofCase.ChallengeDefault:
           ChallengeDefault = other.ChallengeDefault.Clone();
@@ -102,20 +102,8 @@ namespace EggLink.DanhengServer.Proto {
       return new GetChallengeGroupStatisticsScRsp(this);
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 8;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
     /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 14;
+    public const int GroupIdFieldNumber = 15;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -126,8 +114,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 7;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
+      }
+    }
+
     /// <summary>Field number for the "challenge_default" field.</summary>
-    public const int ChallengeDefaultFieldNumber = 12;
+    public const int ChallengeDefaultFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.ChallengeStatistics ChallengeDefault {
@@ -139,7 +139,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "challenge_story" field.</summary>
-    public const int ChallengeStoryFieldNumber = 4;
+    public const int ChallengeStoryFieldNumber = 5;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.ChallengeStoryStatistics ChallengeStory {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "challenge_boss" field.</summary>
-    public const int ChallengeBossFieldNumber = 15;
+    public const int ChallengeBossFieldNumber = 6;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.ChallengeBossStatistics ChallengeBoss {
@@ -166,9 +166,9 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "challenge" oneof.</summary>
     public enum ChallengeOneofCase {
       None = 0,
-      ChallengeDefault = 12,
-      ChallengeStory = 4,
-      ChallengeBoss = 15,
+      ChallengeDefault = 2,
+      ChallengeStory = 5,
+      ChallengeBoss = 6,
     }
     private ChallengeOneofCase challengeCase_ = ChallengeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -199,8 +199,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
       if (GroupId != other.GroupId) return false;
+      if (Retcode != other.Retcode) return false;
       if (!object.Equals(ChallengeDefault, other.ChallengeDefault)) return false;
       if (!object.Equals(ChallengeStory, other.ChallengeStory)) return false;
       if (!object.Equals(ChallengeBoss, other.ChallengeBoss)) return false;
@@ -212,8 +212,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (GroupId != 0) hash ^= GroupId.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (challengeCase_ == ChallengeOneofCase.ChallengeDefault) hash ^= ChallengeDefault.GetHashCode();
       if (challengeCase_ == ChallengeOneofCase.ChallengeStory) hash ^= ChallengeStory.GetHashCode();
       if (challengeCase_ == ChallengeOneofCase.ChallengeBoss) hash ^= ChallengeBoss.GetHashCode();
@@ -236,25 +236,25 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (challengeCase_ == ChallengeOneofCase.ChallengeStory) {
-        output.WriteRawTag(34);
-        output.WriteMessage(ChallengeStory);
-      }
-      if (Retcode != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(Retcode);
-      }
       if (challengeCase_ == ChallengeOneofCase.ChallengeDefault) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(18);
         output.WriteMessage(ChallengeDefault);
       }
-      if (GroupId != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(GroupId);
+      if (challengeCase_ == ChallengeOneofCase.ChallengeStory) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ChallengeStory);
       }
       if (challengeCase_ == ChallengeOneofCase.ChallengeBoss) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(50);
         output.WriteMessage(ChallengeBoss);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(Retcode);
+      }
+      if (GroupId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(GroupId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -266,25 +266,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (challengeCase_ == ChallengeOneofCase.ChallengeStory) {
-        output.WriteRawTag(34);
-        output.WriteMessage(ChallengeStory);
-      }
-      if (Retcode != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(Retcode);
-      }
       if (challengeCase_ == ChallengeOneofCase.ChallengeDefault) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(18);
         output.WriteMessage(ChallengeDefault);
       }
-      if (GroupId != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(GroupId);
+      if (challengeCase_ == ChallengeOneofCase.ChallengeStory) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ChallengeStory);
       }
       if (challengeCase_ == ChallengeOneofCase.ChallengeBoss) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(50);
         output.WriteMessage(ChallengeBoss);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(Retcode);
+      }
+      if (GroupId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(GroupId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -296,11 +296,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
       if (GroupId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (challengeCase_ == ChallengeOneofCase.ChallengeDefault) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ChallengeDefault);
@@ -323,11 +323,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
       if (other.GroupId != 0) {
         GroupId = other.GroupId;
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       switch (other.ChallengeCase) {
         case ChallengeOneofCase.ChallengeDefault:
@@ -365,20 +365,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
-            global::EggLink.DanhengServer.Proto.ChallengeStoryStatistics subBuilder = new global::EggLink.DanhengServer.Proto.ChallengeStoryStatistics();
-            if (challengeCase_ == ChallengeOneofCase.ChallengeStory) {
-              subBuilder.MergeFrom(ChallengeStory);
-            }
-            input.ReadMessage(subBuilder);
-            ChallengeStory = subBuilder;
-            break;
-          }
-          case 64: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 98: {
+          case 18: {
             global::EggLink.DanhengServer.Proto.ChallengeStatistics subBuilder = new global::EggLink.DanhengServer.Proto.ChallengeStatistics();
             if (challengeCase_ == ChallengeOneofCase.ChallengeDefault) {
               subBuilder.MergeFrom(ChallengeDefault);
@@ -387,17 +374,30 @@ namespace EggLink.DanhengServer.Proto {
             ChallengeDefault = subBuilder;
             break;
           }
-          case 112: {
-            GroupId = input.ReadUInt32();
+          case 42: {
+            global::EggLink.DanhengServer.Proto.ChallengeStoryStatistics subBuilder = new global::EggLink.DanhengServer.Proto.ChallengeStoryStatistics();
+            if (challengeCase_ == ChallengeOneofCase.ChallengeStory) {
+              subBuilder.MergeFrom(ChallengeStory);
+            }
+            input.ReadMessage(subBuilder);
+            ChallengeStory = subBuilder;
             break;
           }
-          case 122: {
+          case 50: {
             global::EggLink.DanhengServer.Proto.ChallengeBossStatistics subBuilder = new global::EggLink.DanhengServer.Proto.ChallengeBossStatistics();
             if (challengeCase_ == ChallengeOneofCase.ChallengeBoss) {
               subBuilder.MergeFrom(ChallengeBoss);
             }
             input.ReadMessage(subBuilder);
             ChallengeBoss = subBuilder;
+            break;
+          }
+          case 56: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            GroupId = input.ReadUInt32();
             break;
           }
         }
@@ -415,20 +415,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
-            global::EggLink.DanhengServer.Proto.ChallengeStoryStatistics subBuilder = new global::EggLink.DanhengServer.Proto.ChallengeStoryStatistics();
-            if (challengeCase_ == ChallengeOneofCase.ChallengeStory) {
-              subBuilder.MergeFrom(ChallengeStory);
-            }
-            input.ReadMessage(subBuilder);
-            ChallengeStory = subBuilder;
-            break;
-          }
-          case 64: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 98: {
+          case 18: {
             global::EggLink.DanhengServer.Proto.ChallengeStatistics subBuilder = new global::EggLink.DanhengServer.Proto.ChallengeStatistics();
             if (challengeCase_ == ChallengeOneofCase.ChallengeDefault) {
               subBuilder.MergeFrom(ChallengeDefault);
@@ -437,17 +424,30 @@ namespace EggLink.DanhengServer.Proto {
             ChallengeDefault = subBuilder;
             break;
           }
-          case 112: {
-            GroupId = input.ReadUInt32();
+          case 42: {
+            global::EggLink.DanhengServer.Proto.ChallengeStoryStatistics subBuilder = new global::EggLink.DanhengServer.Proto.ChallengeStoryStatistics();
+            if (challengeCase_ == ChallengeOneofCase.ChallengeStory) {
+              subBuilder.MergeFrom(ChallengeStory);
+            }
+            input.ReadMessage(subBuilder);
+            ChallengeStory = subBuilder;
             break;
           }
-          case 122: {
+          case 50: {
             global::EggLink.DanhengServer.Proto.ChallengeBossStatistics subBuilder = new global::EggLink.DanhengServer.Proto.ChallengeBossStatistics();
             if (challengeCase_ == ChallengeOneofCase.ChallengeBoss) {
               subBuilder.MergeFrom(ChallengeBoss);
             }
             input.ReadMessage(subBuilder);
             ChallengeBoss = subBuilder;
+            break;
+          }
+          case 56: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            GroupId = input.ReadUInt32();
             break;
           }
         }

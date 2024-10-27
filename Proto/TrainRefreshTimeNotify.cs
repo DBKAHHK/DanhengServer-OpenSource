@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static TrainRefreshTimeNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxUcmFpblJlZnJlc2hUaW1lTm90aWZ5LnByb3RvIi0KFlRyYWluUmVmcmVz",
-            "aFRpbWVOb3RpZnkSEwoLRENFR01MRU5JTUYYDSABKARCHqoCG0VnZ0xpbmsu",
-            "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChxUcmFpblJlZnJlc2hUaW1lTm90aWZ5LnByb3RvIjYKFlRyYWluUmVmcmVz",
+            "aFRpbWVOb3RpZnkSHAoUcmVmcmVzaF90aW1lc3RhbXBfbXMYDiABKARCHqoC",
+            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainRefreshTimeNotify), global::EggLink.DanhengServer.Proto.TrainRefreshTimeNotify.Parser, new[]{ "DCEGMLENIMF" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainRefreshTimeNotify), global::EggLink.DanhengServer.Proto.TrainRefreshTimeNotify.Parser, new[]{ "RefreshTimestampMs" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainRefreshTimeNotify(TrainRefreshTimeNotify other) : this() {
-      dCEGMLENIMF_ = other.dCEGMLENIMF_;
+      refreshTimestampMs_ = other.refreshTimestampMs_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new TrainRefreshTimeNotify(this);
     }
 
-    /// <summary>Field number for the "DCEGMLENIMF" field.</summary>
-    public const int DCEGMLENIMFFieldNumber = 13;
-    private ulong dCEGMLENIMF_;
+    /// <summary>Field number for the "refresh_timestamp_ms" field.</summary>
+    public const int RefreshTimestampMsFieldNumber = 14;
+    private ulong refreshTimestampMs_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong DCEGMLENIMF {
-      get { return dCEGMLENIMF_; }
+    public ulong RefreshTimestampMs {
+      get { return refreshTimestampMs_; }
       set {
-        dCEGMLENIMF_ = value;
+        refreshTimestampMs_ = value;
       }
     }
 
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DCEGMLENIMF != other.DCEGMLENIMF) return false;
+      if (RefreshTimestampMs != other.RefreshTimestampMs) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (DCEGMLENIMF != 0UL) hash ^= DCEGMLENIMF.GetHashCode();
+      if (RefreshTimestampMs != 0UL) hash ^= RefreshTimestampMs.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (DCEGMLENIMF != 0UL) {
-        output.WriteRawTag(104);
-        output.WriteUInt64(DCEGMLENIMF);
+      if (RefreshTimestampMs != 0UL) {
+        output.WriteRawTag(112);
+        output.WriteUInt64(RefreshTimestampMs);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (DCEGMLENIMF != 0UL) {
-        output.WriteRawTag(104);
-        output.WriteUInt64(DCEGMLENIMF);
+      if (RefreshTimestampMs != 0UL) {
+        output.WriteRawTag(112);
+        output.WriteUInt64(RefreshTimestampMs);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -164,8 +164,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (DCEGMLENIMF != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(DCEGMLENIMF);
+      if (RefreshTimestampMs != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(RefreshTimestampMs);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -179,8 +179,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.DCEGMLENIMF != 0UL) {
-        DCEGMLENIMF = other.DCEGMLENIMF;
+      if (other.RefreshTimestampMs != 0UL) {
+        RefreshTimestampMs = other.RefreshTimestampMs;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -197,8 +197,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 104: {
-            DCEGMLENIMF = input.ReadUInt64();
+          case 112: {
+            RefreshTimestampMs = input.ReadUInt64();
             break;
           }
         }
@@ -216,8 +216,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 104: {
-            DCEGMLENIMF = input.ReadUInt64();
+          case 112: {
+            RefreshTimestampMs = input.ReadUInt64();
             break;
           }
         }

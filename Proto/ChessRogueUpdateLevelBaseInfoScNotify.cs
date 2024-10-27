@@ -27,8 +27,8 @@ namespace EggLink.DanhengServer.Proto {
             "CitDaGVzc1JvZ3VlVXBkYXRlTGV2ZWxCYXNlSW5mb1NjTm90aWZ5LnByb3Rv",
             "GiFDaGVzc1JvZ3VlVXBkYXRlTGV2ZWxTdGF0dXMucHJvdG8aG0NoZXNzUm9n",
             "dWVMZXZlbFN0YXR1cy5wcm90byKDAQolQ2hlc3NSb2d1ZVVwZGF0ZUxldmVs",
-            "QmFzZUluZm9TY05vdGlmeRIsCgxsZXZlbF9zdGF0dXMYDyABKA4yFi5DaGVz",
-            "c1JvZ3VlTGV2ZWxTdGF0dXMSLAoGcmVhc29uGAwgASgOMhwuQ2hlc3NSb2d1",
+            "QmFzZUluZm9TY05vdGlmeRIsCgxsZXZlbF9zdGF0dXMYDCABKA4yFi5DaGVz",
+            "c1JvZ3VlTGV2ZWxTdGF0dXMSLAoGcmVhc29uGAsgASgOMhwuQ2hlc3NSb2d1",
             "ZVVwZGF0ZUxldmVsU3RhdHVzQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -88,7 +88,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level_status" field.</summary>
-    public const int LevelStatusFieldNumber = 15;
+    public const int LevelStatusFieldNumber = 12;
     private global::EggLink.DanhengServer.Proto.ChessRogueLevelStatus levelStatus_ = global::EggLink.DanhengServer.Proto.ChessRogueLevelStatus.ChessRogueLevelIdle;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,7 +100,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "reason" field.</summary>
-    public const int ReasonFieldNumber = 12;
+    public const int ReasonFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.ChessRogueUpdateLevelStatus reason_ = global::EggLink.DanhengServer.Proto.ChessRogueUpdateLevelStatus.ByNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -156,11 +156,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Reason != global::EggLink.DanhengServer.Proto.ChessRogueUpdateLevelStatus.ByNone) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(88);
         output.WriteEnum((int) Reason);
       }
       if (LevelStatus != global::EggLink.DanhengServer.Proto.ChessRogueLevelStatus.ChessRogueLevelIdle) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(96);
         output.WriteEnum((int) LevelStatus);
       }
       if (_unknownFields != null) {
@@ -174,11 +174,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Reason != global::EggLink.DanhengServer.Proto.ChessRogueUpdateLevelStatus.ByNone) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(88);
         output.WriteEnum((int) Reason);
       }
       if (LevelStatus != global::EggLink.DanhengServer.Proto.ChessRogueLevelStatus.ChessRogueLevelIdle) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(96);
         output.WriteEnum((int) LevelStatus);
       }
       if (_unknownFields != null) {
@@ -230,11 +230,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 96: {
+          case 88: {
             Reason = (global::EggLink.DanhengServer.Proto.ChessRogueUpdateLevelStatus) input.ReadEnum();
             break;
           }
-          case 120: {
+          case 96: {
             LevelStatus = (global::EggLink.DanhengServer.Proto.ChessRogueLevelStatus) input.ReadEnum();
             break;
           }
@@ -253,11 +253,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 96: {
+          case 88: {
             Reason = (global::EggLink.DanhengServer.Proto.ChessRogueUpdateLevelStatus) input.ReadEnum();
             break;
           }
-          case 120: {
+          case 96: {
             LevelStatus = (global::EggLink.DanhengServer.Proto.ChessRogueLevelStatus) input.ReadEnum();
             break;
           }

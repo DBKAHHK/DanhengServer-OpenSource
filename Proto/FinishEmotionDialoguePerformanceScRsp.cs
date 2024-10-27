@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CitGaW5pc2hFbW90aW9uRGlhbG9ndWVQZXJmb3JtYW5jZVNjUnNwLnByb3Rv",
             "Gg5JdGVtTGlzdC5wcm90byKAAQolRmluaXNoRW1vdGlvbkRpYWxvZ3VlUGVy",
-            "Zm9ybWFuY2VTY1JzcBIPCgdyZXRjb2RlGAEgASgNEhMKC2RpYWxvZ3VlX2lk",
-            "GAsgASgNEhEKCXNjcmlwdF9pZBgMIAEoDRIeCgtyZXdhcmRfbGlzdBgGIAEo",
+            "Zm9ybWFuY2VTY1JzcBIPCgdyZXRjb2RlGAwgASgNEhMKC2RpYWxvZ3VlX2lk",
+            "GAkgASgNEhEKCXNjcmlwdF9pZBgGIAEoDRIeCgtyZXdhcmRfbGlzdBgLIAEo",
             "CzIJLkl0ZW1MaXN0Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -89,7 +89,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 1;
+    public const int RetcodeFieldNumber = 12;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -101,7 +101,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "dialogue_id" field.</summary>
-    public const int DialogueIdFieldNumber = 11;
+    public const int DialogueIdFieldNumber = 9;
     private uint dialogueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -113,7 +113,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "script_id" field.</summary>
-    public const int ScriptIdFieldNumber = 12;
+    public const int ScriptIdFieldNumber = 6;
     private uint scriptId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -125,7 +125,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "reward_list" field.</summary>
-    public const int RewardListFieldNumber = 6;
+    public const int RewardListFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.ItemList rewardList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -184,21 +184,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Retcode);
-      }
-      if (rewardList_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(RewardList);
+      if (ScriptId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(ScriptId);
       }
       if (DialogueId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(72);
         output.WriteUInt32(DialogueId);
       }
-      if (ScriptId != 0) {
+      if (rewardList_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(RewardList);
+      }
+      if (Retcode != 0) {
         output.WriteRawTag(96);
-        output.WriteUInt32(ScriptId);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -210,21 +210,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Retcode);
-      }
-      if (rewardList_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(RewardList);
+      if (ScriptId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(ScriptId);
       }
       if (DialogueId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(72);
         output.WriteUInt32(DialogueId);
       }
-      if (ScriptId != 0) {
+      if (rewardList_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(RewardList);
+      }
+      if (Retcode != 0) {
         output.WriteRawTag(96);
-        output.WriteUInt32(ScriptId);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -290,23 +290,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Retcode = input.ReadUInt32();
+          case 48: {
+            ScriptId = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 72: {
+            DialogueId = input.ReadUInt32();
+            break;
+          }
+          case 90: {
             if (rewardList_ == null) {
               RewardList = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(RewardList);
             break;
           }
-          case 88: {
-            DialogueId = input.ReadUInt32();
-            break;
-          }
           case 96: {
-            ScriptId = input.ReadUInt32();
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -324,23 +324,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Retcode = input.ReadUInt32();
+          case 48: {
+            ScriptId = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 72: {
+            DialogueId = input.ReadUInt32();
+            break;
+          }
+          case 90: {
             if (rewardList_ == null) {
               RewardList = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(RewardList);
             break;
           }
-          case 88: {
-            DialogueId = input.ReadUInt32();
-            break;
-          }
           case 96: {
-            ScriptId = input.ReadUInt32();
+            Retcode = input.ReadUInt32();
             break;
           }
         }

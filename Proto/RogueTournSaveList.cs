@@ -24,18 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static RogueTournSaveListReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhSb2d1ZVRvdXJuU2F2ZUxpc3QucHJvdG8aGlJvZ3VlVG91cm5TZWFzb25J",
-            "bmZvLnByb3RvGhFOQkFQTEpEQk9DQi5wcm90bxoXUm9ndWVUb3VybkN1cklu",
-            "Zm8ucHJvdG8i1QEKElJvZ3VlVG91cm5TYXZlTGlzdBIMCgR0aW1lGAUgASgD",
-            "EhAKCGVuZF90aW1lGA8gASgDEgwKBG5hbWUYDCABKAkSMAoUcm9ndWVfdG91",
-            "cm5fY3VyX2luZm8YByABKAsyEi5Sb2d1ZVRvdXJuQ3VySW5mbxIRCgltYXhf",
-            "dGltZXMYDSABKA0SMAoRcm9ndWVfc2Vhc29uX2luZm8YBCABKAsyFS5Sb2d1",
-            "ZVRvdXJuU2Vhc29uSW5mbxIaCgRkYXRhGAEgASgLMgwuTkJBUExKREJPQ0JC",
+            "ChhSb2d1ZVRvdXJuU2F2ZUxpc3QucHJvdG8aEUdITkFOR0NHTEdLLnByb3Rv",
+            "GhpSb2d1ZVRvdXJuU2Vhc29uSW5mby5wcm90bxoXUm9ndWVUb3VybkN1cklu",
+            "Zm8ucHJvdG8i1QEKElJvZ3VlVG91cm5TYXZlTGlzdBIMCgRuYW1lGAwgASgJ",
+            "EhAKCGVuZF90aW1lGAcgASgDEhoKBGRhdGEYDyABKAsyDC5HSE5BTkdDR0xH",
+            "SxIwChFyb2d1ZV9zZWFzb25faW5mbxgEIAEoCzIVLlJvZ3VlVG91cm5TZWFz",
+            "b25JbmZvEhEKCW1heF90aW1lcxgIIAEoDRIMCgR0aW1lGAkgASgDEjAKFHJv",
+            "Z3VlX3RvdXJuX2N1cl9pbmZvGAIgASgLMhIuUm9ndWVUb3VybkN1ckluZm9C",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTournSeasonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.NBAPLJDBOCBReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournCurInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GHNANGCGLGKReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournSeasonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournCurInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournSaveList), global::EggLink.DanhengServer.Proto.RogueTournSaveList.Parser, new[]{ "Time", "EndTime", "Name", "RogueTournCurInfo", "MaxTimes", "RogueSeasonInfo", "Data" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournSaveList), global::EggLink.DanhengServer.Proto.RogueTournSaveList.Parser, new[]{ "Name", "EndTime", "Data", "RogueSeasonInfo", "MaxTimes", "Time", "RogueTournCurInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,13 +77,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournSaveList(RogueTournSaveList other) : this() {
-      time_ = other.time_;
-      endTime_ = other.endTime_;
       name_ = other.name_;
-      rogueTournCurInfo_ = other.rogueTournCurInfo_ != null ? other.rogueTournCurInfo_.Clone() : null;
-      maxTimes_ = other.maxTimes_;
-      rogueSeasonInfo_ = other.rogueSeasonInfo_ != null ? other.rogueSeasonInfo_.Clone() : null;
+      endTime_ = other.endTime_;
       data_ = other.data_ != null ? other.data_.Clone() : null;
+      rogueSeasonInfo_ = other.rogueSeasonInfo_ != null ? other.rogueSeasonInfo_.Clone() : null;
+      maxTimes_ = other.maxTimes_;
+      time_ = other.time_;
+      rogueTournCurInfo_ = other.rogueTournCurInfo_ != null ? other.rogueTournCurInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -91,30 +91,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournSaveList Clone() {
       return new RogueTournSaveList(this);
-    }
-
-    /// <summary>Field number for the "time" field.</summary>
-    public const int TimeFieldNumber = 5;
-    private long time_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long Time {
-      get { return time_; }
-      set {
-        time_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "end_time" field.</summary>
-    public const int EndTimeFieldNumber = 15;
-    private long endTime_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long EndTime {
-      get { return endTime_; }
-      set {
-        endTime_ = value;
-      }
     }
 
     /// <summary>Field number for the "name" field.</summary>
@@ -129,27 +105,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "rogue_tourn_cur_info" field.</summary>
-    public const int RogueTournCurInfoFieldNumber = 7;
-    private global::EggLink.DanhengServer.Proto.RogueTournCurInfo rogueTournCurInfo_;
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 7;
+    private long endTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueTournCurInfo RogueTournCurInfo {
-      get { return rogueTournCurInfo_; }
+    public long EndTime {
+      get { return endTime_; }
       set {
-        rogueTournCurInfo_ = value;
+        endTime_ = value;
       }
     }
 
-    /// <summary>Field number for the "max_times" field.</summary>
-    public const int MaxTimesFieldNumber = 13;
-    private uint maxTimes_;
+    /// <summary>Field number for the "data" field.</summary>
+    public const int DataFieldNumber = 15;
+    private global::EggLink.DanhengServer.Proto.GHNANGCGLGK data_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MaxTimes {
-      get { return maxTimes_; }
+    public global::EggLink.DanhengServer.Proto.GHNANGCGLGK Data {
+      get { return data_; }
       set {
-        maxTimes_ = value;
+        data_ = value;
       }
     }
 
@@ -165,15 +141,39 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "data" field.</summary>
-    public const int DataFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.NBAPLJDBOCB data_;
+    /// <summary>Field number for the "max_times" field.</summary>
+    public const int MaxTimesFieldNumber = 8;
+    private uint maxTimes_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.NBAPLJDBOCB Data {
-      get { return data_; }
+    public uint MaxTimes {
+      get { return maxTimes_; }
       set {
-        data_ = value;
+        maxTimes_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "time" field.</summary>
+    public const int TimeFieldNumber = 9;
+    private long time_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Time {
+      get { return time_; }
+      set {
+        time_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rogue_tourn_cur_info" field.</summary>
+    public const int RogueTournCurInfoFieldNumber = 2;
+    private global::EggLink.DanhengServer.Proto.RogueTournCurInfo rogueTournCurInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueTournCurInfo RogueTournCurInfo {
+      get { return rogueTournCurInfo_; }
+      set {
+        rogueTournCurInfo_ = value;
       }
     }
 
@@ -192,13 +192,13 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Time != other.Time) return false;
-      if (EndTime != other.EndTime) return false;
       if (Name != other.Name) return false;
-      if (!object.Equals(RogueTournCurInfo, other.RogueTournCurInfo)) return false;
-      if (MaxTimes != other.MaxTimes) return false;
-      if (!object.Equals(RogueSeasonInfo, other.RogueSeasonInfo)) return false;
+      if (EndTime != other.EndTime) return false;
       if (!object.Equals(Data, other.Data)) return false;
+      if (!object.Equals(RogueSeasonInfo, other.RogueSeasonInfo)) return false;
+      if (MaxTimes != other.MaxTimes) return false;
+      if (Time != other.Time) return false;
+      if (!object.Equals(RogueTournCurInfo, other.RogueTournCurInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -206,13 +206,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Time != 0L) hash ^= Time.GetHashCode();
-      if (EndTime != 0L) hash ^= EndTime.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (rogueTournCurInfo_ != null) hash ^= RogueTournCurInfo.GetHashCode();
-      if (MaxTimes != 0) hash ^= MaxTimes.GetHashCode();
-      if (rogueSeasonInfo_ != null) hash ^= RogueSeasonInfo.GetHashCode();
+      if (EndTime != 0L) hash ^= EndTime.GetHashCode();
       if (data_ != null) hash ^= Data.GetHashCode();
+      if (rogueSeasonInfo_ != null) hash ^= RogueSeasonInfo.GetHashCode();
+      if (MaxTimes != 0) hash ^= MaxTimes.GetHashCode();
+      if (Time != 0L) hash ^= Time.GetHashCode();
+      if (rogueTournCurInfo_ != null) hash ^= RogueTournCurInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -231,33 +231,33 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (data_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Data);
+      if (rogueTournCurInfo_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RogueTournCurInfo);
       }
       if (rogueSeasonInfo_ != null) {
         output.WriteRawTag(34);
         output.WriteMessage(RogueSeasonInfo);
       }
-      if (Time != 0L) {
-        output.WriteRawTag(40);
-        output.WriteInt64(Time);
+      if (EndTime != 0L) {
+        output.WriteRawTag(56);
+        output.WriteInt64(EndTime);
       }
-      if (rogueTournCurInfo_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(RogueTournCurInfo);
+      if (MaxTimes != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(MaxTimes);
+      }
+      if (Time != 0L) {
+        output.WriteRawTag(72);
+        output.WriteInt64(Time);
       }
       if (Name.Length != 0) {
         output.WriteRawTag(98);
         output.WriteString(Name);
       }
-      if (MaxTimes != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(MaxTimes);
-      }
-      if (EndTime != 0L) {
-        output.WriteRawTag(120);
-        output.WriteInt64(EndTime);
+      if (data_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(Data);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -269,33 +269,33 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (data_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Data);
+      if (rogueTournCurInfo_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RogueTournCurInfo);
       }
       if (rogueSeasonInfo_ != null) {
         output.WriteRawTag(34);
         output.WriteMessage(RogueSeasonInfo);
       }
-      if (Time != 0L) {
-        output.WriteRawTag(40);
-        output.WriteInt64(Time);
+      if (EndTime != 0L) {
+        output.WriteRawTag(56);
+        output.WriteInt64(EndTime);
       }
-      if (rogueTournCurInfo_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(RogueTournCurInfo);
+      if (MaxTimes != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(MaxTimes);
+      }
+      if (Time != 0L) {
+        output.WriteRawTag(72);
+        output.WriteInt64(Time);
       }
       if (Name.Length != 0) {
         output.WriteRawTag(98);
         output.WriteString(Name);
       }
-      if (MaxTimes != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(MaxTimes);
-      }
-      if (EndTime != 0L) {
-        output.WriteRawTag(120);
-        output.WriteInt64(EndTime);
+      if (data_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(Data);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -307,26 +307,26 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Time != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Time);
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (EndTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(EndTime);
       }
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (rogueTournCurInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueTournCurInfo);
-      }
-      if (MaxTimes != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxTimes);
+      if (data_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
       }
       if (rogueSeasonInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueSeasonInfo);
       }
-      if (data_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
+      if (MaxTimes != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxTimes);
+      }
+      if (Time != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Time);
+      }
+      if (rogueTournCurInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueTournCurInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -340,23 +340,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Time != 0L) {
-        Time = other.Time;
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       if (other.EndTime != 0L) {
         EndTime = other.EndTime;
       }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
-      if (other.rogueTournCurInfo_ != null) {
-        if (rogueTournCurInfo_ == null) {
-          RogueTournCurInfo = new global::EggLink.DanhengServer.Proto.RogueTournCurInfo();
+      if (other.data_ != null) {
+        if (data_ == null) {
+          Data = new global::EggLink.DanhengServer.Proto.GHNANGCGLGK();
         }
-        RogueTournCurInfo.MergeFrom(other.RogueTournCurInfo);
-      }
-      if (other.MaxTimes != 0) {
-        MaxTimes = other.MaxTimes;
+        Data.MergeFrom(other.Data);
       }
       if (other.rogueSeasonInfo_ != null) {
         if (rogueSeasonInfo_ == null) {
@@ -364,11 +358,17 @@ namespace EggLink.DanhengServer.Proto {
         }
         RogueSeasonInfo.MergeFrom(other.RogueSeasonInfo);
       }
-      if (other.data_ != null) {
-        if (data_ == null) {
-          Data = new global::EggLink.DanhengServer.Proto.NBAPLJDBOCB();
+      if (other.MaxTimes != 0) {
+        MaxTimes = other.MaxTimes;
+      }
+      if (other.Time != 0L) {
+        Time = other.Time;
+      }
+      if (other.rogueTournCurInfo_ != null) {
+        if (rogueTournCurInfo_ == null) {
+          RogueTournCurInfo = new global::EggLink.DanhengServer.Proto.RogueTournCurInfo();
         }
-        Data.MergeFrom(other.Data);
+        RogueTournCurInfo.MergeFrom(other.RogueTournCurInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -385,11 +385,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            if (data_ == null) {
-              Data = new global::EggLink.DanhengServer.Proto.NBAPLJDBOCB();
+          case 18: {
+            if (rogueTournCurInfo_ == null) {
+              RogueTournCurInfo = new global::EggLink.DanhengServer.Proto.RogueTournCurInfo();
             }
-            input.ReadMessage(Data);
+            input.ReadMessage(RogueTournCurInfo);
             break;
           }
           case 34: {
@@ -399,27 +399,27 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(RogueSeasonInfo);
             break;
           }
-          case 40: {
-            Time = input.ReadInt64();
+          case 56: {
+            EndTime = input.ReadInt64();
             break;
           }
-          case 58: {
-            if (rogueTournCurInfo_ == null) {
-              RogueTournCurInfo = new global::EggLink.DanhengServer.Proto.RogueTournCurInfo();
-            }
-            input.ReadMessage(RogueTournCurInfo);
+          case 64: {
+            MaxTimes = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            Time = input.ReadInt64();
             break;
           }
           case 98: {
             Name = input.ReadString();
             break;
           }
-          case 104: {
-            MaxTimes = input.ReadUInt32();
-            break;
-          }
-          case 120: {
-            EndTime = input.ReadInt64();
+          case 122: {
+            if (data_ == null) {
+              Data = new global::EggLink.DanhengServer.Proto.GHNANGCGLGK();
+            }
+            input.ReadMessage(Data);
             break;
           }
         }
@@ -437,11 +437,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            if (data_ == null) {
-              Data = new global::EggLink.DanhengServer.Proto.NBAPLJDBOCB();
+          case 18: {
+            if (rogueTournCurInfo_ == null) {
+              RogueTournCurInfo = new global::EggLink.DanhengServer.Proto.RogueTournCurInfo();
             }
-            input.ReadMessage(Data);
+            input.ReadMessage(RogueTournCurInfo);
             break;
           }
           case 34: {
@@ -451,27 +451,27 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(RogueSeasonInfo);
             break;
           }
-          case 40: {
-            Time = input.ReadInt64();
+          case 56: {
+            EndTime = input.ReadInt64();
             break;
           }
-          case 58: {
-            if (rogueTournCurInfo_ == null) {
-              RogueTournCurInfo = new global::EggLink.DanhengServer.Proto.RogueTournCurInfo();
-            }
-            input.ReadMessage(RogueTournCurInfo);
+          case 64: {
+            MaxTimes = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            Time = input.ReadInt64();
             break;
           }
           case 98: {
             Name = input.ReadString();
             break;
           }
-          case 104: {
-            MaxTimes = input.ReadUInt32();
-            break;
-          }
-          case 120: {
-            EndTime = input.ReadInt64();
+          case 122: {
+            if (data_ == null) {
+              Data = new global::EggLink.DanhengServer.Proto.GHNANGCGLGK();
+            }
+            input.ReadMessage(Data);
             break;
           }
         }

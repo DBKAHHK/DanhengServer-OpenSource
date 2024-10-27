@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChNDaGFsbGVuZ2VMaXN0LnByb3RvIkgKDUNoYWxsZW5nZUxpc3QSFAoMY2hh",
-            "bGxlbmdlX2lkGAwgASgNEhMKC0NGSU1ESEhNS0RKGA0gASgIEgwKBHN0YXIY",
-            "AiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "bGxlbmdlX2lkGAcgASgNEgwKBHN0YXIYCSABKA0SEwoLUE1GSkVDS01BRUkY",
+            "CyABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeList), global::EggLink.DanhengServer.Proto.ChallengeList.Parser, new[]{ "ChallengeId", "CFIMDHHMKDJ", "Star" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeList), global::EggLink.DanhengServer.Proto.ChallengeList.Parser, new[]{ "ChallengeId", "Star", "PMFJECKMAEI" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChallengeList(ChallengeList other) : this() {
       challengeId_ = other.challengeId_;
-      cFIMDHHMKDJ_ = other.cFIMDHHMKDJ_;
       star_ = other.star_;
+      pMFJECKMAEI_ = other.pMFJECKMAEI_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "challenge_id" field.</summary>
-    public const int ChallengeIdFieldNumber = 12;
+    public const int ChallengeIdFieldNumber = 7;
     private uint challengeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,20 +96,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CFIMDHHMKDJ" field.</summary>
-    public const int CFIMDHHMKDJFieldNumber = 13;
-    private bool cFIMDHHMKDJ_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool CFIMDHHMKDJ {
-      get { return cFIMDHHMKDJ_; }
-      set {
-        cFIMDHHMKDJ_ = value;
-      }
-    }
-
     /// <summary>Field number for the "star" field.</summary>
-    public const int StarFieldNumber = 2;
+    public const int StarFieldNumber = 9;
     private uint star_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -117,6 +105,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return star_; }
       set {
         star_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PMFJECKMAEI" field.</summary>
+    public const int PMFJECKMAEIFieldNumber = 11;
+    private bool pMFJECKMAEI_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool PMFJECKMAEI {
+      get { return pMFJECKMAEI_; }
+      set {
+        pMFJECKMAEI_ = value;
       }
     }
 
@@ -136,8 +136,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (ChallengeId != other.ChallengeId) return false;
-      if (CFIMDHHMKDJ != other.CFIMDHHMKDJ) return false;
       if (Star != other.Star) return false;
+      if (PMFJECKMAEI != other.PMFJECKMAEI) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,8 +146,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (ChallengeId != 0) hash ^= ChallengeId.GetHashCode();
-      if (CFIMDHHMKDJ != false) hash ^= CFIMDHHMKDJ.GetHashCode();
       if (Star != 0) hash ^= Star.GetHashCode();
+      if (PMFJECKMAEI != false) hash ^= PMFJECKMAEI.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,17 +166,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Star != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(Star);
-      }
       if (ChallengeId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(56);
         output.WriteUInt32(ChallengeId);
       }
-      if (CFIMDHHMKDJ != false) {
-        output.WriteRawTag(104);
-        output.WriteBool(CFIMDHHMKDJ);
+      if (Star != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(Star);
+      }
+      if (PMFJECKMAEI != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(PMFJECKMAEI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -188,17 +188,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Star != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(Star);
-      }
       if (ChallengeId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(56);
         output.WriteUInt32(ChallengeId);
       }
-      if (CFIMDHHMKDJ != false) {
-        output.WriteRawTag(104);
-        output.WriteBool(CFIMDHHMKDJ);
+      if (Star != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(Star);
+      }
+      if (PMFJECKMAEI != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(PMFJECKMAEI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -213,11 +213,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ChallengeId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChallengeId);
       }
-      if (CFIMDHHMKDJ != false) {
-        size += 1 + 1;
-      }
       if (Star != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Star);
+      }
+      if (PMFJECKMAEI != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -234,11 +234,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.ChallengeId != 0) {
         ChallengeId = other.ChallengeId;
       }
-      if (other.CFIMDHHMKDJ != false) {
-        CFIMDHHMKDJ = other.CFIMDHHMKDJ;
-      }
       if (other.Star != 0) {
         Star = other.Star;
+      }
+      if (other.PMFJECKMAEI != false) {
+        PMFJECKMAEI = other.PMFJECKMAEI;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            Star = input.ReadUInt32();
-            break;
-          }
-          case 96: {
+          case 56: {
             ChallengeId = input.ReadUInt32();
             break;
           }
-          case 104: {
-            CFIMDHHMKDJ = input.ReadBool();
+          case 72: {
+            Star = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            PMFJECKMAEI = input.ReadBool();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            Star = input.ReadUInt32();
-            break;
-          }
-          case 96: {
+          case 56: {
             ChallengeId = input.ReadUInt32();
             break;
           }
-          case 104: {
-            CFIMDHHMKDJ = input.ReadBool();
+          case 72: {
+            Star = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            PMFJECKMAEI = input.ReadBool();
             break;
           }
         }
