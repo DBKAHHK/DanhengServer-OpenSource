@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiJDaGFsbGVuZ2VCb3NzQXZhdGFyUmVsaWNJbmZvLnByb3RvGhxDaGFsbGVu",
             "Z2VCb3NzUmVsaWNJbmZvLnByb3RvIsgBChxDaGFsbGVuZ2VCb3NzQXZhdGFy",
-            "UmVsaWNJbmZvElQKFWF2YXRhcl9yZWxpY19zbG90X21hcBgGIAMoCzI1LkNo",
+            "UmVsaWNJbmZvElQKFWF2YXRhcl9yZWxpY19zbG90X21hcBgEIAMoCzI1LkNo",
             "YWxsZW5nZUJvc3NBdmF0YXJSZWxpY0luZm8uQXZhdGFyUmVsaWNTbG90TWFw",
             "RW50cnkaUgoXQXZhdGFyUmVsaWNTbG90TWFwRW50cnkSCwoDa2V5GAEgASgN",
             "EiYKBXZhbHVlGAIgASgLMhcuQ2hhbGxlbmdlQm9zc1JlbGljSW5mbzoCOAFC",
@@ -87,9 +87,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "avatar_relic_slot_map" field.</summary>
-    public const int AvatarRelicSlotMapFieldNumber = 6;
+    public const int AvatarRelicSlotMapFieldNumber = 4;
     private static readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ChallengeBossRelicInfo>.Codec _map_avatarRelicSlotMap_codec
-        = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ChallengeBossRelicInfo>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.ChallengeBossRelicInfo.Parser), 50);
+        = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ChallengeBossRelicInfo>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.ChallengeBossRelicInfo.Parser), 34);
     private readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ChallengeBossRelicInfo> avatarRelicSlotMap_ = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ChallengeBossRelicInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -190,7 +190,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
+          case 34: {
             avatarRelicSlotMap_.AddEntriesFrom(input, _map_avatarRelicSlotMap_codec);
             break;
           }
@@ -209,7 +209,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
+          case 34: {
             avatarRelicSlotMap_.AddEntriesFrom(ref input, _map_avatarRelicSlotMap_codec);
             break;
           }

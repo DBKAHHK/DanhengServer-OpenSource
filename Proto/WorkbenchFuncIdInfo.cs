@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlXb3JrYmVuY2hGdW5jSWRJbmZvLnByb3RvIkIKE1dvcmtiZW5jaEZ1bmNJ",
-            "ZEluZm8SEAoIaXNfdmFsaWQYByABKAgSGQoRd29ya2JlbmNoX2Z1bmNfaWQY",
-            "CiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ZEluZm8SEAoIaXNfdmFsaWQYBSABKAgSGQoRd29ya2JlbmNoX2Z1bmNfaWQY",
+            "DyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_valid" field.</summary>
-    public const int IsValidFieldNumber = 7;
+    public const int IsValidFieldNumber = 5;
     private bool isValid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "workbench_func_id" field.</summary>
-    public const int WorkbenchFuncIdFieldNumber = 10;
+    public const int WorkbenchFuncIdFieldNumber = 15;
     private uint workbenchFuncId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (IsValid != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(40);
         output.WriteBool(IsValid);
       }
       if (WorkbenchFuncId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(120);
         output.WriteUInt32(WorkbenchFuncId);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IsValid != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(40);
         output.WriteBool(IsValid);
       }
       if (WorkbenchFuncId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(120);
         output.WriteUInt32(WorkbenchFuncId);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
+          case 40: {
             IsValid = input.ReadBool();
             break;
           }
-          case 80: {
+          case 120: {
             WorkbenchFuncId = input.ReadUInt32();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
+          case 40: {
             IsValid = input.ReadBool();
             break;
           }
-          case 80: {
+          case 120: {
             WorkbenchFuncId = input.ReadUInt32();
             break;
           }

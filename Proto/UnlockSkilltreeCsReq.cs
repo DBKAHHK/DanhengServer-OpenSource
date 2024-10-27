@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpVbmxvY2tTa2lsbHRyZWVDc1JlcS5wcm90bxoOSXRlbUNvc3QucHJvdG8i",
-            "VQoUVW5sb2NrU2tpbGx0cmVlQ3NSZXESEAoIcG9pbnRfaWQYCyABKA0SHAoJ",
-            "aXRlbV9saXN0GAogAygLMgkuSXRlbUNvc3QSDQoFbGV2ZWwYBiABKA1CHqoC",
+            "VQoUVW5sb2NrU2tpbGx0cmVlQ3NSZXESEAoIcG9pbnRfaWQYAyABKA0SHAoJ",
+            "aXRlbV9saXN0GAwgAygLMgkuSXRlbUNvc3QSDQoFbGV2ZWwYCSABKA1CHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemCostReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "point_id" field.</summary>
-    public const int PointIdFieldNumber = 11;
+    public const int PointIdFieldNumber = 3;
     private uint pointId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "item_list" field.</summary>
-    public const int ItemListFieldNumber = 10;
+    public const int ItemListFieldNumber = 12;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ItemCost> _repeated_itemList_codec
-        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.ItemCost.Parser);
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.ItemCost.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ItemCost> itemList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ItemCost>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 6;
+    public const int LevelFieldNumber = 9;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,15 +166,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (PointId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(PointId);
+      }
       if (Level != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(72);
         output.WriteUInt32(Level);
       }
       itemList_.WriteTo(output, _repeated_itemList_codec);
-      if (PointId != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(PointId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -185,15 +185,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PointId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(PointId);
+      }
       if (Level != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(72);
         output.WriteUInt32(Level);
       }
       itemList_.WriteTo(ref output, _repeated_itemList_codec);
-      if (PointId != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(PointId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -245,16 +245,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 24: {
+            PointId = input.ReadUInt32();
+            break;
+          }
+          case 72: {
             Level = input.ReadUInt32();
             break;
           }
-          case 82: {
+          case 98: {
             itemList_.AddEntriesFrom(input, _repeated_itemList_codec);
-            break;
-          }
-          case 88: {
-            PointId = input.ReadUInt32();
             break;
           }
         }
@@ -272,16 +272,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 24: {
+            PointId = input.ReadUInt32();
+            break;
+          }
+          case 72: {
             Level = input.ReadUInt32();
             break;
           }
-          case 82: {
+          case 98: {
             itemList_.AddEntriesFrom(ref input, _repeated_itemList_codec);
-            break;
-          }
-          case 88: {
-            PointId = input.ReadUInt32();
             break;
           }
         }

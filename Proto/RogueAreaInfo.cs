@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChNSb2d1ZUFyZWFJbmZvLnByb3RvGg9Sb2d1ZUFyZWEucHJvdG8iNAoNUm9n",
-            "dWVBcmVhSW5mbxIjCg9yb2d1ZV9hcmVhX2xpc3QYDSADKAsyCi5Sb2d1ZUFy",
+            "dWVBcmVhSW5mbxIjCg9yb2d1ZV9hcmVhX2xpc3QYBiADKAsyCi5Sb2d1ZUFy",
             "ZWFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueAreaReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_area_list" field.</summary>
-    public const int RogueAreaListFieldNumber = 13;
+    public const int RogueAreaListFieldNumber = 6;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueArea> _repeated_rogueAreaList_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.RogueArea.Parser);
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.RogueArea.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueArea> rogueAreaList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueArea>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 106: {
+          case 50: {
             rogueAreaList_.AddEntriesFrom(input, _repeated_rogueAreaList_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 106: {
+          case 50: {
             rogueAreaList_.AddEntriesFrom(ref input, _repeated_rogueAreaList_codec);
             break;
           }

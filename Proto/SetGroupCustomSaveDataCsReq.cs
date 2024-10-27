@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFTZXRHcm91cEN1c3RvbVNhdmVEYXRhQ3NSZXEucHJvdG8iVAobU2V0R3Jv",
-            "dXBDdXN0b21TYXZlRGF0YUNzUmVxEhEKCXNhdmVfZGF0YRgFIAEoCRIQCghn",
-            "cm91cF9pZBgMIAEoDRIQCghlbnRyeV9pZBgJIAEoDUIeqgIbRWdnTGluay5E",
+            "dXBDdXN0b21TYXZlRGF0YUNzUmVxEhEKCXNhdmVfZGF0YRgKIAEoCRIQCghn",
+            "cm91cF9pZBgOIAEoDRIQCghlbnRyeV9pZBgGIAEoDUIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "save_data" field.</summary>
-    public const int SaveDataFieldNumber = 5;
+    public const int SaveDataFieldNumber = 10;
     private string saveData_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 12;
+    public const int GroupIdFieldNumber = 14;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "entry_id" field.</summary>
-    public const int EntryIdFieldNumber = 9;
+    public const int EntryIdFieldNumber = 6;
     private uint entryId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,16 +167,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (SaveData.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(SaveData);
-      }
       if (EntryId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(48);
         output.WriteUInt32(EntryId);
       }
+      if (SaveData.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(SaveData);
+      }
       if (GroupId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(112);
         output.WriteUInt32(GroupId);
       }
       if (_unknownFields != null) {
@@ -189,16 +189,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (SaveData.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(SaveData);
-      }
       if (EntryId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(48);
         output.WriteUInt32(EntryId);
       }
+      if (SaveData.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(SaveData);
+      }
       if (GroupId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(112);
         output.WriteUInt32(GroupId);
       }
       if (_unknownFields != null) {
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
-            SaveData = input.ReadString();
-            break;
-          }
-          case 72: {
+          case 48: {
             EntryId = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 82: {
+            SaveData = input.ReadString();
+            break;
+          }
+          case 112: {
             GroupId = input.ReadUInt32();
             break;
           }
@@ -283,15 +283,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
-            SaveData = input.ReadString();
-            break;
-          }
-          case 72: {
+          case 48: {
             EntryId = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 82: {
+            SaveData = input.ReadString();
+            break;
+          }
+          case 112: {
             GroupId = input.ReadUInt32();
             break;
           }

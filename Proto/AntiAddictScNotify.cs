@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhBbnRpQWRkaWN0U2NOb3RpZnkucHJvdG8iQgoSQW50aUFkZGljdFNjTm90",
-            "aWZ5EgsKA21zZxgHIAEoCRIQCghtc2dfdHlwZRgJIAEoDRINCgVsZXZlbBgC",
+            "aWZ5Eg0KBWxldmVsGA8gASgJEhAKCG1zZ190eXBlGAsgASgNEgsKA21zZxgE",
             "IAEoCUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AntiAddictScNotify), global::EggLink.DanhengServer.Proto.AntiAddictScNotify.Parser, new[]{ "Msg", "MsgType", "Level" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AntiAddictScNotify), global::EggLink.DanhengServer.Proto.AntiAddictScNotify.Parser, new[]{ "Level", "MsgType", "Msg" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,9 +72,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AntiAddictScNotify(AntiAddictScNotify other) : this() {
-      msg_ = other.msg_;
-      msgType_ = other.msgType_;
       level_ = other.level_;
+      msgType_ = other.msgType_;
+      msg_ = other.msg_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,20 @@ namespace EggLink.DanhengServer.Proto {
       return new AntiAddictScNotify(this);
     }
 
-    /// <summary>Field number for the "msg" field.</summary>
-    public const int MsgFieldNumber = 7;
-    private string msg_ = "";
+    /// <summary>Field number for the "level" field.</summary>
+    public const int LevelFieldNumber = 15;
+    private string level_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Msg {
-      get { return msg_; }
+    public string Level {
+      get { return level_; }
       set {
-        msg_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        level_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     /// <summary>Field number for the "msg_type" field.</summary>
-    public const int MsgTypeFieldNumber = 9;
+    public const int MsgTypeFieldNumber = 11;
     private uint msgType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -108,15 +108,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 2;
-    private string level_ = "";
+    /// <summary>Field number for the "msg" field.</summary>
+    public const int MsgFieldNumber = 4;
+    private string msg_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Level {
-      get { return level_; }
+    public string Msg {
+      get { return msg_; }
       set {
-        level_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        msg_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -135,9 +135,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Msg != other.Msg) return false;
-      if (MsgType != other.MsgType) return false;
       if (Level != other.Level) return false;
+      if (MsgType != other.MsgType) return false;
+      if (Msg != other.Msg) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,9 +145,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Msg.Length != 0) hash ^= Msg.GetHashCode();
-      if (MsgType != 0) hash ^= MsgType.GetHashCode();
       if (Level.Length != 0) hash ^= Level.GetHashCode();
+      if (MsgType != 0) hash ^= MsgType.GetHashCode();
+      if (Msg.Length != 0) hash ^= Msg.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,17 +166,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Level.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Level);
-      }
       if (Msg.Length != 0) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(34);
         output.WriteString(Msg);
       }
       if (MsgType != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(88);
         output.WriteUInt32(MsgType);
+      }
+      if (Level.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(Level);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -188,17 +188,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Level.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Level);
-      }
       if (Msg.Length != 0) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(34);
         output.WriteString(Msg);
       }
       if (MsgType != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(88);
         output.WriteUInt32(MsgType);
+      }
+      if (Level.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(Level);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -210,14 +210,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Msg.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Msg);
+      if (Level.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Level);
       }
       if (MsgType != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MsgType);
       }
-      if (Level.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Level);
+      if (Msg.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Msg);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -231,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Msg.Length != 0) {
-        Msg = other.Msg;
+      if (other.Level.Length != 0) {
+        Level = other.Level;
       }
       if (other.MsgType != 0) {
         MsgType = other.MsgType;
       }
-      if (other.Level.Length != 0) {
-        Level = other.Level;
+      if (other.Msg.Length != 0) {
+        Msg = other.Msg;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
-            Level = input.ReadString();
-            break;
-          }
-          case 58: {
+          case 34: {
             Msg = input.ReadString();
             break;
           }
-          case 72: {
+          case 88: {
             MsgType = input.ReadUInt32();
+            break;
+          }
+          case 122: {
+            Level = input.ReadString();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
-            Level = input.ReadString();
-            break;
-          }
-          case 58: {
+          case 34: {
             Msg = input.ReadString();
             break;
           }
-          case 72: {
+          case 88: {
             MsgType = input.ReadUInt32();
+            break;
+          }
+          case 122: {
+            Level = input.ReadString();
             break;
           }
         }

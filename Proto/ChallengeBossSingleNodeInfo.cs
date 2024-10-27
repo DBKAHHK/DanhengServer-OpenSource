@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFDaGFsbGVuZ2VCb3NzU2luZ2xlTm9kZUluZm8ucHJvdG8iZgobQ2hhbGxl",
-            "bmdlQm9zc1NpbmdsZU5vZGVJbmZvEhEKCW1heF9zY29yZRgOIAEoDRIPCgdi",
-            "dWZmX2lkGAwgASgNEg4KBmlzX3dpbhgGIAEoCBITCgtOQ0FKRUVGS05ITRgL",
-            "IAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "bmdlQm9zc1NpbmdsZU5vZGVJbmZvEhMKC0hHSURKSEZOQ01BGAUgASgIEg4K",
+            "BmlzX3dpbhgEIAEoCBIRCgltYXhfc2NvcmUYDCABKA0SDwoHYnVmZl9pZBgJ",
+            "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeBossSingleNodeInfo), global::EggLink.DanhengServer.Proto.ChallengeBossSingleNodeInfo.Parser, new[]{ "MaxScore", "BuffId", "IsWin", "NCAJEEFKNHM" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeBossSingleNodeInfo), global::EggLink.DanhengServer.Proto.ChallengeBossSingleNodeInfo.Parser, new[]{ "HGIDJHFNCMA", "IsWin", "MaxScore", "BuffId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,10 +73,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChallengeBossSingleNodeInfo(ChallengeBossSingleNodeInfo other) : this() {
+      hGIDJHFNCMA_ = other.hGIDJHFNCMA_;
+      isWin_ = other.isWin_;
       maxScore_ = other.maxScore_;
       buffId_ = other.buffId_;
-      isWin_ = other.isWin_;
-      nCAJEEFKNHM_ = other.nCAJEEFKNHM_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,8 +86,32 @@ namespace EggLink.DanhengServer.Proto {
       return new ChallengeBossSingleNodeInfo(this);
     }
 
+    /// <summary>Field number for the "HGIDJHFNCMA" field.</summary>
+    public const int HGIDJHFNCMAFieldNumber = 5;
+    private bool hGIDJHFNCMA_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HGIDJHFNCMA {
+      get { return hGIDJHFNCMA_; }
+      set {
+        hGIDJHFNCMA_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_win" field.</summary>
+    public const int IsWinFieldNumber = 4;
+    private bool isWin_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsWin {
+      get { return isWin_; }
+      set {
+        isWin_ = value;
+      }
+    }
+
     /// <summary>Field number for the "max_score" field.</summary>
-    public const int MaxScoreFieldNumber = 14;
+    public const int MaxScoreFieldNumber = 12;
     private uint maxScore_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "buff_id" field.</summary>
-    public const int BuffIdFieldNumber = 12;
+    public const int BuffIdFieldNumber = 9;
     private uint buffId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -107,30 +131,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return buffId_; }
       set {
         buffId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "is_win" field.</summary>
-    public const int IsWinFieldNumber = 6;
-    private bool isWin_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsWin {
-      get { return isWin_; }
-      set {
-        isWin_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "NCAJEEFKNHM" field.</summary>
-    public const int NCAJEEFKNHMFieldNumber = 11;
-    private bool nCAJEEFKNHM_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool NCAJEEFKNHM {
-      get { return nCAJEEFKNHM_; }
-      set {
-        nCAJEEFKNHM_ = value;
       }
     }
 
@@ -149,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (HGIDJHFNCMA != other.HGIDJHFNCMA) return false;
+      if (IsWin != other.IsWin) return false;
       if (MaxScore != other.MaxScore) return false;
       if (BuffId != other.BuffId) return false;
-      if (IsWin != other.IsWin) return false;
-      if (NCAJEEFKNHM != other.NCAJEEFKNHM) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (HGIDJHFNCMA != false) hash ^= HGIDJHFNCMA.GetHashCode();
+      if (IsWin != false) hash ^= IsWin.GetHashCode();
       if (MaxScore != 0) hash ^= MaxScore.GetHashCode();
       if (BuffId != 0) hash ^= BuffId.GetHashCode();
-      if (IsWin != false) hash ^= IsWin.GetHashCode();
-      if (NCAJEEFKNHM != false) hash ^= NCAJEEFKNHM.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,19 +183,19 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (IsWin != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(32);
         output.WriteBool(IsWin);
       }
-      if (NCAJEEFKNHM != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(NCAJEEFKNHM);
+      if (HGIDJHFNCMA != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(HGIDJHFNCMA);
       }
       if (BuffId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(72);
         output.WriteUInt32(BuffId);
       }
       if (MaxScore != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(96);
         output.WriteUInt32(MaxScore);
       }
       if (_unknownFields != null) {
@@ -209,19 +209,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IsWin != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(32);
         output.WriteBool(IsWin);
       }
-      if (NCAJEEFKNHM != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(NCAJEEFKNHM);
+      if (HGIDJHFNCMA != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(HGIDJHFNCMA);
       }
       if (BuffId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(72);
         output.WriteUInt32(BuffId);
       }
       if (MaxScore != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(96);
         output.WriteUInt32(MaxScore);
       }
       if (_unknownFields != null) {
@@ -234,17 +234,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (HGIDJHFNCMA != false) {
+        size += 1 + 1;
+      }
+      if (IsWin != false) {
+        size += 1 + 1;
+      }
       if (MaxScore != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxScore);
       }
       if (BuffId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuffId);
-      }
-      if (IsWin != false) {
-        size += 1 + 1;
-      }
-      if (NCAJEEFKNHM != false) {
-        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -258,17 +258,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.HGIDJHFNCMA != false) {
+        HGIDJHFNCMA = other.HGIDJHFNCMA;
+      }
+      if (other.IsWin != false) {
+        IsWin = other.IsWin;
+      }
       if (other.MaxScore != 0) {
         MaxScore = other.MaxScore;
       }
       if (other.BuffId != 0) {
         BuffId = other.BuffId;
-      }
-      if (other.IsWin != false) {
-        IsWin = other.IsWin;
-      }
-      if (other.NCAJEEFKNHM != false) {
-        NCAJEEFKNHM = other.NCAJEEFKNHM;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -285,19 +285,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 32: {
             IsWin = input.ReadBool();
             break;
           }
-          case 88: {
-            NCAJEEFKNHM = input.ReadBool();
+          case 40: {
+            HGIDJHFNCMA = input.ReadBool();
             break;
           }
-          case 96: {
+          case 72: {
             BuffId = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 96: {
             MaxScore = input.ReadUInt32();
             break;
           }
@@ -316,19 +316,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 32: {
             IsWin = input.ReadBool();
             break;
           }
-          case 88: {
-            NCAJEEFKNHM = input.ReadBool();
+          case 40: {
+            HGIDJHFNCMA = input.ReadBool();
             break;
           }
-          case 96: {
+          case 72: {
             BuffId = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 96: {
             MaxScore = input.ReadUInt32();
             break;
           }

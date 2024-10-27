@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9TaGFyZVB1bmtMb3JkTW9uc3RlclNjUnNwLnByb3RvGhdQdW5rTG9yZFNo",
-            "YXJlVHlwZS5wcm90byJ1ChlTaGFyZVB1bmtMb3JkTW9uc3RlclNjUnNwEgsK",
-            "A3VpZBgLIAEoDRIPCgdyZXRjb2RlGAMgASgNEiYKCnNoYXJlX3R5cGUYDSAB",
-            "KA4yEi5QdW5rTG9yZFNoYXJlVHlwZRISCgptb25zdGVyX2lkGAYgASgNQh6q",
+            "YXJlVHlwZS5wcm90byJ1ChlTaGFyZVB1bmtMb3JkTW9uc3RlclNjUnNwEhIK",
+            "Cm1vbnN0ZXJfaWQYDiABKA0SDwoHcmV0Y29kZRgNIAEoDRImCgpzaGFyZV90",
+            "eXBlGAUgASgOMhIuUHVua0xvcmRTaGFyZVR5cGUSCwoDdWlkGAEgASgNQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PunkLordShareTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SharePunkLordMonsterScRsp), global::EggLink.DanhengServer.Proto.SharePunkLordMonsterScRsp.Parser, new[]{ "Uid", "Retcode", "ShareType", "MonsterId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SharePunkLordMonsterScRsp), global::EggLink.DanhengServer.Proto.SharePunkLordMonsterScRsp.Parser, new[]{ "MonsterId", "Retcode", "ShareType", "Uid" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SharePunkLordMonsterScRsp(SharePunkLordMonsterScRsp other) : this() {
-      uid_ = other.uid_;
+      monsterId_ = other.monsterId_;
       retcode_ = other.retcode_;
       shareType_ = other.shareType_;
-      monsterId_ = other.monsterId_;
+      uid_ = other.uid_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,20 +87,20 @@ namespace EggLink.DanhengServer.Proto {
       return new SharePunkLordMonsterScRsp(this);
     }
 
-    /// <summary>Field number for the "uid" field.</summary>
-    public const int UidFieldNumber = 11;
-    private uint uid_;
+    /// <summary>Field number for the "monster_id" field.</summary>
+    public const int MonsterIdFieldNumber = 14;
+    private uint monsterId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Uid {
-      get { return uid_; }
+    public uint MonsterId {
+      get { return monsterId_; }
       set {
-        uid_ = value;
+        monsterId_ = value;
       }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 3;
+    public const int RetcodeFieldNumber = 13;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "share_type" field.</summary>
-    public const int ShareTypeFieldNumber = 13;
+    public const int ShareTypeFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.PunkLordShareType shareType_ = global::EggLink.DanhengServer.Proto.PunkLordShareType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,15 +123,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "monster_id" field.</summary>
-    public const int MonsterIdFieldNumber = 6;
-    private uint monsterId_;
+    /// <summary>Field number for the "uid" field.</summary>
+    public const int UidFieldNumber = 1;
+    private uint uid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MonsterId {
-      get { return monsterId_; }
+    public uint Uid {
+      get { return uid_; }
       set {
-        monsterId_ = value;
+        uid_ = value;
       }
     }
 
@@ -150,10 +150,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Uid != other.Uid) return false;
+      if (MonsterId != other.MonsterId) return false;
       if (Retcode != other.Retcode) return false;
       if (ShareType != other.ShareType) return false;
-      if (MonsterId != other.MonsterId) return false;
+      if (Uid != other.Uid) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,10 +161,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Uid != 0) hash ^= Uid.GetHashCode();
+      if (MonsterId != 0) hash ^= MonsterId.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (ShareType != global::EggLink.DanhengServer.Proto.PunkLordShareType.None) hash ^= ShareType.GetHashCode();
-      if (MonsterId != 0) hash ^= MonsterId.GetHashCode();
+      if (Uid != 0) hash ^= Uid.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,21 +183,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(Retcode);
-      }
-      if (MonsterId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(MonsterId);
-      }
       if (Uid != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(8);
         output.WriteUInt32(Uid);
       }
       if (ShareType != global::EggLink.DanhengServer.Proto.PunkLordShareType.None) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(40);
         output.WriteEnum((int) ShareType);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(Retcode);
+      }
+      if (MonsterId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(MonsterId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -209,21 +209,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(Retcode);
-      }
-      if (MonsterId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(MonsterId);
-      }
       if (Uid != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(8);
         output.WriteUInt32(Uid);
       }
       if (ShareType != global::EggLink.DanhengServer.Proto.PunkLordShareType.None) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(40);
         output.WriteEnum((int) ShareType);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(Retcode);
+      }
+      if (MonsterId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(MonsterId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -235,8 +235,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Uid != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Uid);
+      if (MonsterId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MonsterId);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
@@ -244,8 +244,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ShareType != global::EggLink.DanhengServer.Proto.PunkLordShareType.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ShareType);
       }
-      if (MonsterId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MonsterId);
+      if (Uid != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Uid);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -259,8 +259,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Uid != 0) {
-        Uid = other.Uid;
+      if (other.MonsterId != 0) {
+        MonsterId = other.MonsterId;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
@@ -268,8 +268,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.ShareType != global::EggLink.DanhengServer.Proto.PunkLordShareType.None) {
         ShareType = other.ShareType;
       }
-      if (other.MonsterId != 0) {
-        MonsterId = other.MonsterId;
+      if (other.Uid != 0) {
+        Uid = other.Uid;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -286,20 +286,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 48: {
-            MonsterId = input.ReadUInt32();
-            break;
-          }
-          case 88: {
+          case 8: {
             Uid = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 40: {
             ShareType = (global::EggLink.DanhengServer.Proto.PunkLordShareType) input.ReadEnum();
+            break;
+          }
+          case 104: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            MonsterId = input.ReadUInt32();
             break;
           }
         }
@@ -317,20 +317,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 48: {
-            MonsterId = input.ReadUInt32();
-            break;
-          }
-          case 88: {
+          case 8: {
             Uid = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 40: {
             ShareType = (global::EggLink.DanhengServer.Proto.PunkLordShareType) input.ReadEnum();
+            break;
+          }
+          case 104: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            MonsterId = input.ReadUInt32();
             break;
           }
         }

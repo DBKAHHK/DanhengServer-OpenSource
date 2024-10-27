@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static AlleyPlacingShipReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZBbGxleVBsYWNpbmdTaGlwLnByb3RvGhFKUE1QTExGQkJGUC5wcm90byJF",
-            "ChBBbGxleVBsYWNpbmdTaGlwEg8KB3NoaXBfaWQYDyABKA0SIAoKZ29vZHNf",
-            "bGlzdBgGIAMoCzIMLkpQTVBMTEZCQkZQQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ChZBbGxleVBsYWNpbmdTaGlwLnByb3RvGhFJTkFNT09KSEVBSi5wcm90byJF",
+            "ChBBbGxleVBsYWNpbmdTaGlwEg8KB3NoaXBfaWQYByABKA0SIAoKZ29vZHNf",
+            "bGlzdBgNIAMoCzIMLklOQU1PT0pIRUFKQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JPMPLLFBBFPReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.INAMOOJHEAJReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AlleyPlacingShip), global::EggLink.DanhengServer.Proto.AlleyPlacingShip.Parser, new[]{ "ShipId", "GoodsList" }, null, null, null, null)
           }));
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "ship_id" field.</summary>
-    public const int ShipIdFieldNumber = 15;
+    public const int ShipIdFieldNumber = 7;
     private uint shipId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,13 +97,13 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "goods_list" field.</summary>
-    public const int GoodsListFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.JPMPLLFBBFP> _repeated_goodsList_codec
-        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.JPMPLLFBBFP.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.JPMPLLFBBFP> goodsList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.JPMPLLFBBFP>();
+    public const int GoodsListFieldNumber = 13;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.INAMOOJHEAJ> _repeated_goodsList_codec
+        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.INAMOOJHEAJ.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.INAMOOJHEAJ> goodsList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.INAMOOJHEAJ>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.JPMPLLFBBFP> GoodsList {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.INAMOOJHEAJ> GoodsList {
       get { return goodsList_; }
     }
 
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      goodsList_.WriteTo(output, _repeated_goodsList_codec);
       if (ShipId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(56);
         output.WriteUInt32(ShipId);
       }
+      goodsList_.WriteTo(output, _repeated_goodsList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      goodsList_.WriteTo(ref output, _repeated_goodsList_codec);
       if (ShipId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(56);
         output.WriteUInt32(ShipId);
       }
+      goodsList_.WriteTo(ref output, _repeated_goodsList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
-            goodsList_.AddEntriesFrom(input, _repeated_goodsList_codec);
+          case 56: {
+            ShipId = input.ReadUInt32();
             break;
           }
-          case 120: {
-            ShipId = input.ReadUInt32();
+          case 106: {
+            goodsList_.AddEntriesFrom(input, _repeated_goodsList_codec);
             break;
           }
         }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
-            goodsList_.AddEntriesFrom(ref input, _repeated_goodsList_codec);
+          case 56: {
+            ShipId = input.ReadUInt32();
             break;
           }
-          case 120: {
-            ShipId = input.ReadUInt32();
+          case 106: {
+            goodsList_.AddEntriesFrom(ref input, _repeated_goodsList_codec);
             break;
           }
         }

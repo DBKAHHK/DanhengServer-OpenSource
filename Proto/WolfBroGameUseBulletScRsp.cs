@@ -24,14 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static WolfBroGameUseBulletScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9Xb2xmQnJvR2FtZVVzZUJ1bGxldFNjUnNwLnByb3RvGhFXb2xmQnJvSW5m",
-            "by5wcm90byJRChlXb2xmQnJvR2FtZVVzZUJ1bGxldFNjUnNwEiMKDXdvbGZf",
-            "YnJvX2luZm8YByABKAsyDC5Xb2xmQnJvSW5mbxIPCgdyZXRjb2RlGAkgASgN",
-            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "Ch9Xb2xmQnJvR2FtZVVzZUJ1bGxldFNjUnNwLnByb3RvGhVXb2xmQnJvR2Ft",
+            "ZURhdGEucHJvdG8iWgoZV29sZkJyb0dhbWVVc2VCdWxsZXRTY1JzcBIsChJ3",
+            "b2xmX2Jyb19nYW1lX2RhdGEYCSABKAsyEC5Xb2xmQnJvR2FtZURhdGESDwoH",
+            "cmV0Y29kZRgKIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.WolfBroInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.WolfBroGameDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.WolfBroGameUseBulletScRsp), global::EggLink.DanhengServer.Proto.WolfBroGameUseBulletScRsp.Parser, new[]{ "WolfBroInfo", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.WolfBroGameUseBulletScRsp), global::EggLink.DanhengServer.Proto.WolfBroGameUseBulletScRsp.Parser, new[]{ "WolfBroGameData", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WolfBroGameUseBulletScRsp(WolfBroGameUseBulletScRsp other) : this() {
-      wolfBroInfo_ = other.wolfBroInfo_ != null ? other.wolfBroInfo_.Clone() : null;
+      wolfBroGameData_ = other.wolfBroGameData_ != null ? other.wolfBroGameData_.Clone() : null;
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,20 +85,20 @@ namespace EggLink.DanhengServer.Proto {
       return new WolfBroGameUseBulletScRsp(this);
     }
 
-    /// <summary>Field number for the "wolf_bro_info" field.</summary>
-    public const int WolfBroInfoFieldNumber = 7;
-    private global::EggLink.DanhengServer.Proto.WolfBroInfo wolfBroInfo_;
+    /// <summary>Field number for the "wolf_bro_game_data" field.</summary>
+    public const int WolfBroGameDataFieldNumber = 9;
+    private global::EggLink.DanhengServer.Proto.WolfBroGameData wolfBroGameData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.WolfBroInfo WolfBroInfo {
-      get { return wolfBroInfo_; }
+    public global::EggLink.DanhengServer.Proto.WolfBroGameData WolfBroGameData {
+      get { return wolfBroGameData_; }
       set {
-        wolfBroInfo_ = value;
+        wolfBroGameData_ = value;
       }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 9;
+    public const int RetcodeFieldNumber = 10;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(WolfBroInfo, other.WolfBroInfo)) return false;
+      if (!object.Equals(WolfBroGameData, other.WolfBroGameData)) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -132,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (wolfBroInfo_ != null) hash ^= WolfBroInfo.GetHashCode();
+      if (wolfBroGameData_ != null) hash ^= WolfBroGameData.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -152,12 +153,12 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (wolfBroInfo_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(WolfBroInfo);
+      if (wolfBroGameData_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(WolfBroGameData);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(80);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -170,12 +171,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (wolfBroInfo_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(WolfBroInfo);
+      if (wolfBroGameData_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(WolfBroGameData);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(80);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -188,8 +189,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (wolfBroInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(WolfBroInfo);
+      if (wolfBroGameData_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(WolfBroGameData);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
@@ -206,11 +207,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.wolfBroInfo_ != null) {
-        if (wolfBroInfo_ == null) {
-          WolfBroInfo = new global::EggLink.DanhengServer.Proto.WolfBroInfo();
+      if (other.wolfBroGameData_ != null) {
+        if (wolfBroGameData_ == null) {
+          WolfBroGameData = new global::EggLink.DanhengServer.Proto.WolfBroGameData();
         }
-        WolfBroInfo.MergeFrom(other.WolfBroInfo);
+        WolfBroGameData.MergeFrom(other.WolfBroGameData);
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
@@ -230,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58: {
-            if (wolfBroInfo_ == null) {
-              WolfBroInfo = new global::EggLink.DanhengServer.Proto.WolfBroInfo();
+          case 74: {
+            if (wolfBroGameData_ == null) {
+              WolfBroGameData = new global::EggLink.DanhengServer.Proto.WolfBroGameData();
             }
-            input.ReadMessage(WolfBroInfo);
+            input.ReadMessage(WolfBroGameData);
             break;
           }
-          case 72: {
+          case 80: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -256,14 +257,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58: {
-            if (wolfBroInfo_ == null) {
-              WolfBroInfo = new global::EggLink.DanhengServer.Proto.WolfBroInfo();
+          case 74: {
+            if (wolfBroGameData_ == null) {
+              WolfBroGameData = new global::EggLink.DanhengServer.Proto.WolfBroGameData();
             }
-            input.ReadMessage(WolfBroInfo);
+            input.ReadMessage(WolfBroGameData);
             break;
           }
-          case 72: {
+          case 80: {
             Retcode = input.ReadUInt32();
             break;
           }

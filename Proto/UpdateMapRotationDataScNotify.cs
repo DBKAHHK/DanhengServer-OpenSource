@@ -24,19 +24,20 @@ namespace EggLink.DanhengServer.Proto {
     static UpdateMapRotationDataScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNVcGRhdGVNYXBSb3RhdGlvbkRhdGFTY05vdGlmeS5wcm90bxoPTmV3TWFw",
-            "Um90LnByb3RvGhFDaGFyZ2VySW5mby5wcm90bxoRUm90YXRlckRhdGEucHJv",
-            "dG8aF1JvdGF0ZXJFbmVyZ3lJbmZvLnByb3RvIuwBCh1VcGRhdGVNYXBSb3Rh",
-            "dGlvbkRhdGFTY05vdGlmeRIhCgtNT09LTk5LT0VITBgCIAMoCzIMLkNoYXJn",
-            "ZXJJbmZvEiEKC1BOQU1GR0xGS0FJGA4gAygLMgwuUm90YXRlckRhdGESJwoL",
-            "ZW5lcmd5X2luZm8YDSABKAsyEi5Sb3RhdGVyRW5lcmd5SW5mbxITCgtMR0NI",
-            "T0lOSExEShgPIAEoBRIdCglyb2d1ZV9tYXAYDCABKAsyCi5OZXdNYXBSb3QS",
-            "EwoLSk9CSkhOSkpOREkYBCABKAgSEwoLRlBIUEVKUE9CR0oYBSABKA1CHqoC",
-            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "CiNVcGRhdGVNYXBSb3RhdGlvbkRhdGFTY05vdGlmeS5wcm90bxoRQ2hhcmdl",
+            "ckluZm8ucHJvdG8aF1JvdGF0ZXJFbmVyZ3lJbmZvLnByb3RvGhFITUJMSUFE",
+            "TktFTy5wcm90bxoRUm90YXRlckRhdGEucHJvdG8i9AEKHVVwZGF0ZU1hcFJv",
+            "dGF0aW9uRGF0YVNjTm90aWZ5EhMKC0NISk1PRElNTERBGAIgASgNEh4KCHJv",
+            "b21fbWFwGAwgASgLMgwuSE1CTElBRE5LRU8SJwoRcm90YXRlcl9kYXRhX2xp",
+            "c3QYBCADKAsyDC5Sb3RhdGVyRGF0YRITCgtIRkpOTkJQRExDSxgIIAEoCBIi",
+            "CgxjaGFyZ2VyX2luZm8YAyADKAsyDC5DaGFyZ2VySW5mbxInCgtlbmVyZ3lf",
+            "aW5mbxgBIAEoCzISLlJvdGF0ZXJFbmVyZ3lJbmZvEhMKC0lQRk9GSEhLSktQ",
+            "GAUgASgFQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NewMapRotReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HMBLIADNKEOReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdateMapRotationDataScNotify), global::EggLink.DanhengServer.Proto.UpdateMapRotationDataScNotify.Parser, new[]{ "MOOKNNKOEHL", "PNAMFGLFKAI", "EnergyInfo", "LGCHOINHLDJ", "RogueMap", "JOBJHNJJNDI", "FPHPEJPOBGJ" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdateMapRotationDataScNotify), global::EggLink.DanhengServer.Proto.UpdateMapRotationDataScNotify.Parser, new[]{ "CHJMODIMLDA", "RoomMap", "RotaterDataList", "HFJNNBPDLCK", "ChargerInfo", "EnergyInfo", "IPFOFHHKJKP" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,13 +79,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateMapRotationDataScNotify(UpdateMapRotationDataScNotify other) : this() {
-      mOOKNNKOEHL_ = other.mOOKNNKOEHL_.Clone();
-      pNAMFGLFKAI_ = other.pNAMFGLFKAI_.Clone();
+      cHJMODIMLDA_ = other.cHJMODIMLDA_;
+      roomMap_ = other.roomMap_ != null ? other.roomMap_.Clone() : null;
+      rotaterDataList_ = other.rotaterDataList_.Clone();
+      hFJNNBPDLCK_ = other.hFJNNBPDLCK_;
+      chargerInfo_ = other.chargerInfo_.Clone();
       energyInfo_ = other.energyInfo_ != null ? other.energyInfo_.Clone() : null;
-      lGCHOINHLDJ_ = other.lGCHOINHLDJ_;
-      rogueMap_ = other.rogueMap_ != null ? other.rogueMap_.Clone() : null;
-      jOBJHNJJNDI_ = other.jOBJHNJJNDI_;
-      fPHPEJPOBGJ_ = other.fPHPEJPOBGJ_;
+      iPFOFHHKJKP_ = other.iPFOFHHKJKP_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -94,30 +95,66 @@ namespace EggLink.DanhengServer.Proto {
       return new UpdateMapRotationDataScNotify(this);
     }
 
-    /// <summary>Field number for the "MOOKNNKOEHL" field.</summary>
-    public const int MOOKNNKOEHLFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChargerInfo> _repeated_mOOKNNKOEHL_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.ChargerInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChargerInfo> mOOKNNKOEHL_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChargerInfo>();
+    /// <summary>Field number for the "CHJMODIMLDA" field.</summary>
+    public const int CHJMODIMLDAFieldNumber = 2;
+    private uint cHJMODIMLDA_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChargerInfo> MOOKNNKOEHL {
-      get { return mOOKNNKOEHL_; }
+    public uint CHJMODIMLDA {
+      get { return cHJMODIMLDA_; }
+      set {
+        cHJMODIMLDA_ = value;
+      }
     }
 
-    /// <summary>Field number for the "PNAMFGLFKAI" field.</summary>
-    public const int PNAMFGLFKAIFieldNumber = 14;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RotaterData> _repeated_pNAMFGLFKAI_codec
-        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.RotaterData.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RotaterData> pNAMFGLFKAI_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RotaterData>();
+    /// <summary>Field number for the "room_map" field.</summary>
+    public const int RoomMapFieldNumber = 12;
+    private global::EggLink.DanhengServer.Proto.HMBLIADNKEO roomMap_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RotaterData> PNAMFGLFKAI {
-      get { return pNAMFGLFKAI_; }
+    public global::EggLink.DanhengServer.Proto.HMBLIADNKEO RoomMap {
+      get { return roomMap_; }
+      set {
+        roomMap_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rotater_data_list" field.</summary>
+    public const int RotaterDataListFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RotaterData> _repeated_rotaterDataList_codec
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.RotaterData.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RotaterData> rotaterDataList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RotaterData>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RotaterData> RotaterDataList {
+      get { return rotaterDataList_; }
+    }
+
+    /// <summary>Field number for the "HFJNNBPDLCK" field.</summary>
+    public const int HFJNNBPDLCKFieldNumber = 8;
+    private bool hFJNNBPDLCK_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HFJNNBPDLCK {
+      get { return hFJNNBPDLCK_; }
+      set {
+        hFJNNBPDLCK_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "charger_info" field.</summary>
+    public const int ChargerInfoFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChargerInfo> _repeated_chargerInfo_codec
+        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.ChargerInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChargerInfo> chargerInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChargerInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChargerInfo> ChargerInfo {
+      get { return chargerInfo_; }
     }
 
     /// <summary>Field number for the "energy_info" field.</summary>
-    public const int EnergyInfoFieldNumber = 13;
+    public const int EnergyInfoFieldNumber = 1;
     private global::EggLink.DanhengServer.Proto.RotaterEnergyInfo energyInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -128,51 +165,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "LGCHOINHLDJ" field.</summary>
-    public const int LGCHOINHLDJFieldNumber = 15;
-    private int lGCHOINHLDJ_;
+    /// <summary>Field number for the "IPFOFHHKJKP" field.</summary>
+    public const int IPFOFHHKJKPFieldNumber = 5;
+    private int iPFOFHHKJKP_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int LGCHOINHLDJ {
-      get { return lGCHOINHLDJ_; }
+    public int IPFOFHHKJKP {
+      get { return iPFOFHHKJKP_; }
       set {
-        lGCHOINHLDJ_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "rogue_map" field.</summary>
-    public const int RogueMapFieldNumber = 12;
-    private global::EggLink.DanhengServer.Proto.NewMapRot rogueMap_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.NewMapRot RogueMap {
-      get { return rogueMap_; }
-      set {
-        rogueMap_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "JOBJHNJJNDI" field.</summary>
-    public const int JOBJHNJJNDIFieldNumber = 4;
-    private bool jOBJHNJJNDI_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool JOBJHNJJNDI {
-      get { return jOBJHNJJNDI_; }
-      set {
-        jOBJHNJJNDI_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "FPHPEJPOBGJ" field.</summary>
-    public const int FPHPEJPOBGJFieldNumber = 5;
-    private uint fPHPEJPOBGJ_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FPHPEJPOBGJ {
-      get { return fPHPEJPOBGJ_; }
-      set {
-        fPHPEJPOBGJ_ = value;
+        iPFOFHHKJKP_ = value;
       }
     }
 
@@ -191,13 +192,13 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!mOOKNNKOEHL_.Equals(other.mOOKNNKOEHL_)) return false;
-      if(!pNAMFGLFKAI_.Equals(other.pNAMFGLFKAI_)) return false;
+      if (CHJMODIMLDA != other.CHJMODIMLDA) return false;
+      if (!object.Equals(RoomMap, other.RoomMap)) return false;
+      if(!rotaterDataList_.Equals(other.rotaterDataList_)) return false;
+      if (HFJNNBPDLCK != other.HFJNNBPDLCK) return false;
+      if(!chargerInfo_.Equals(other.chargerInfo_)) return false;
       if (!object.Equals(EnergyInfo, other.EnergyInfo)) return false;
-      if (LGCHOINHLDJ != other.LGCHOINHLDJ) return false;
-      if (!object.Equals(RogueMap, other.RogueMap)) return false;
-      if (JOBJHNJJNDI != other.JOBJHNJJNDI) return false;
-      if (FPHPEJPOBGJ != other.FPHPEJPOBGJ) return false;
+      if (IPFOFHHKJKP != other.IPFOFHHKJKP) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -205,13 +206,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= mOOKNNKOEHL_.GetHashCode();
-      hash ^= pNAMFGLFKAI_.GetHashCode();
+      if (CHJMODIMLDA != 0) hash ^= CHJMODIMLDA.GetHashCode();
+      if (roomMap_ != null) hash ^= RoomMap.GetHashCode();
+      hash ^= rotaterDataList_.GetHashCode();
+      if (HFJNNBPDLCK != false) hash ^= HFJNNBPDLCK.GetHashCode();
+      hash ^= chargerInfo_.GetHashCode();
       if (energyInfo_ != null) hash ^= EnergyInfo.GetHashCode();
-      if (LGCHOINHLDJ != 0) hash ^= LGCHOINHLDJ.GetHashCode();
-      if (rogueMap_ != null) hash ^= RogueMap.GetHashCode();
-      if (JOBJHNJJNDI != false) hash ^= JOBJHNJJNDI.GetHashCode();
-      if (FPHPEJPOBGJ != 0) hash ^= FPHPEJPOBGJ.GetHashCode();
+      if (IPFOFHHKJKP != 0) hash ^= IPFOFHHKJKP.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -230,27 +231,27 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      mOOKNNKOEHL_.WriteTo(output, _repeated_mOOKNNKOEHL_codec);
-      if (JOBJHNJJNDI != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(JOBJHNJJNDI);
-      }
-      if (FPHPEJPOBGJ != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(FPHPEJPOBGJ);
-      }
-      if (rogueMap_ != null) {
-        output.WriteRawTag(98);
-        output.WriteMessage(RogueMap);
-      }
       if (energyInfo_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(10);
         output.WriteMessage(EnergyInfo);
       }
-      pNAMFGLFKAI_.WriteTo(output, _repeated_pNAMFGLFKAI_codec);
-      if (LGCHOINHLDJ != 0) {
-        output.WriteRawTag(120);
-        output.WriteInt32(LGCHOINHLDJ);
+      if (CHJMODIMLDA != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(CHJMODIMLDA);
+      }
+      chargerInfo_.WriteTo(output, _repeated_chargerInfo_codec);
+      rotaterDataList_.WriteTo(output, _repeated_rotaterDataList_codec);
+      if (IPFOFHHKJKP != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(IPFOFHHKJKP);
+      }
+      if (HFJNNBPDLCK != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(HFJNNBPDLCK);
+      }
+      if (roomMap_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(RoomMap);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -262,27 +263,27 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      mOOKNNKOEHL_.WriteTo(ref output, _repeated_mOOKNNKOEHL_codec);
-      if (JOBJHNJJNDI != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(JOBJHNJJNDI);
-      }
-      if (FPHPEJPOBGJ != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(FPHPEJPOBGJ);
-      }
-      if (rogueMap_ != null) {
-        output.WriteRawTag(98);
-        output.WriteMessage(RogueMap);
-      }
       if (energyInfo_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(10);
         output.WriteMessage(EnergyInfo);
       }
-      pNAMFGLFKAI_.WriteTo(ref output, _repeated_pNAMFGLFKAI_codec);
-      if (LGCHOINHLDJ != 0) {
-        output.WriteRawTag(120);
-        output.WriteInt32(LGCHOINHLDJ);
+      if (CHJMODIMLDA != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(CHJMODIMLDA);
+      }
+      chargerInfo_.WriteTo(ref output, _repeated_chargerInfo_codec);
+      rotaterDataList_.WriteTo(ref output, _repeated_rotaterDataList_codec);
+      if (IPFOFHHKJKP != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(IPFOFHHKJKP);
+      }
+      if (HFJNNBPDLCK != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(HFJNNBPDLCK);
+      }
+      if (roomMap_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(RoomMap);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -294,22 +295,22 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += mOOKNNKOEHL_.CalculateSize(_repeated_mOOKNNKOEHL_codec);
-      size += pNAMFGLFKAI_.CalculateSize(_repeated_pNAMFGLFKAI_codec);
+      if (CHJMODIMLDA != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CHJMODIMLDA);
+      }
+      if (roomMap_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RoomMap);
+      }
+      size += rotaterDataList_.CalculateSize(_repeated_rotaterDataList_codec);
+      if (HFJNNBPDLCK != false) {
+        size += 1 + 1;
+      }
+      size += chargerInfo_.CalculateSize(_repeated_chargerInfo_codec);
       if (energyInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EnergyInfo);
       }
-      if (LGCHOINHLDJ != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(LGCHOINHLDJ);
-      }
-      if (rogueMap_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueMap);
-      }
-      if (JOBJHNJJNDI != false) {
-        size += 1 + 1;
-      }
-      if (FPHPEJPOBGJ != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FPHPEJPOBGJ);
+      if (IPFOFHHKJKP != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(IPFOFHHKJKP);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -323,28 +324,28 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      mOOKNNKOEHL_.Add(other.mOOKNNKOEHL_);
-      pNAMFGLFKAI_.Add(other.pNAMFGLFKAI_);
+      if (other.CHJMODIMLDA != 0) {
+        CHJMODIMLDA = other.CHJMODIMLDA;
+      }
+      if (other.roomMap_ != null) {
+        if (roomMap_ == null) {
+          RoomMap = new global::EggLink.DanhengServer.Proto.HMBLIADNKEO();
+        }
+        RoomMap.MergeFrom(other.RoomMap);
+      }
+      rotaterDataList_.Add(other.rotaterDataList_);
+      if (other.HFJNNBPDLCK != false) {
+        HFJNNBPDLCK = other.HFJNNBPDLCK;
+      }
+      chargerInfo_.Add(other.chargerInfo_);
       if (other.energyInfo_ != null) {
         if (energyInfo_ == null) {
           EnergyInfo = new global::EggLink.DanhengServer.Proto.RotaterEnergyInfo();
         }
         EnergyInfo.MergeFrom(other.EnergyInfo);
       }
-      if (other.LGCHOINHLDJ != 0) {
-        LGCHOINHLDJ = other.LGCHOINHLDJ;
-      }
-      if (other.rogueMap_ != null) {
-        if (rogueMap_ == null) {
-          RogueMap = new global::EggLink.DanhengServer.Proto.NewMapRot();
-        }
-        RogueMap.MergeFrom(other.RogueMap);
-      }
-      if (other.JOBJHNJJNDI != false) {
-        JOBJHNJJNDI = other.JOBJHNJJNDI;
-      }
-      if (other.FPHPEJPOBGJ != 0) {
-        FPHPEJPOBGJ = other.FPHPEJPOBGJ;
+      if (other.IPFOFHHKJKP != 0) {
+        IPFOFHHKJKP = other.IPFOFHHKJKP;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -361,38 +362,38 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
-            mOOKNNKOEHL_.AddEntriesFrom(input, _repeated_mOOKNNKOEHL_codec);
-            break;
-          }
-          case 32: {
-            JOBJHNJJNDI = input.ReadBool();
-            break;
-          }
-          case 40: {
-            FPHPEJPOBGJ = input.ReadUInt32();
-            break;
-          }
-          case 98: {
-            if (rogueMap_ == null) {
-              RogueMap = new global::EggLink.DanhengServer.Proto.NewMapRot();
-            }
-            input.ReadMessage(RogueMap);
-            break;
-          }
-          case 106: {
+          case 10: {
             if (energyInfo_ == null) {
               EnergyInfo = new global::EggLink.DanhengServer.Proto.RotaterEnergyInfo();
             }
             input.ReadMessage(EnergyInfo);
             break;
           }
-          case 114: {
-            pNAMFGLFKAI_.AddEntriesFrom(input, _repeated_pNAMFGLFKAI_codec);
+          case 16: {
+            CHJMODIMLDA = input.ReadUInt32();
             break;
           }
-          case 120: {
-            LGCHOINHLDJ = input.ReadInt32();
+          case 26: {
+            chargerInfo_.AddEntriesFrom(input, _repeated_chargerInfo_codec);
+            break;
+          }
+          case 34: {
+            rotaterDataList_.AddEntriesFrom(input, _repeated_rotaterDataList_codec);
+            break;
+          }
+          case 40: {
+            IPFOFHHKJKP = input.ReadInt32();
+            break;
+          }
+          case 64: {
+            HFJNNBPDLCK = input.ReadBool();
+            break;
+          }
+          case 98: {
+            if (roomMap_ == null) {
+              RoomMap = new global::EggLink.DanhengServer.Proto.HMBLIADNKEO();
+            }
+            input.ReadMessage(RoomMap);
             break;
           }
         }
@@ -410,38 +411,38 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
-            mOOKNNKOEHL_.AddEntriesFrom(ref input, _repeated_mOOKNNKOEHL_codec);
-            break;
-          }
-          case 32: {
-            JOBJHNJJNDI = input.ReadBool();
-            break;
-          }
-          case 40: {
-            FPHPEJPOBGJ = input.ReadUInt32();
-            break;
-          }
-          case 98: {
-            if (rogueMap_ == null) {
-              RogueMap = new global::EggLink.DanhengServer.Proto.NewMapRot();
-            }
-            input.ReadMessage(RogueMap);
-            break;
-          }
-          case 106: {
+          case 10: {
             if (energyInfo_ == null) {
               EnergyInfo = new global::EggLink.DanhengServer.Proto.RotaterEnergyInfo();
             }
             input.ReadMessage(EnergyInfo);
             break;
           }
-          case 114: {
-            pNAMFGLFKAI_.AddEntriesFrom(ref input, _repeated_pNAMFGLFKAI_codec);
+          case 16: {
+            CHJMODIMLDA = input.ReadUInt32();
             break;
           }
-          case 120: {
-            LGCHOINHLDJ = input.ReadInt32();
+          case 26: {
+            chargerInfo_.AddEntriesFrom(ref input, _repeated_chargerInfo_codec);
+            break;
+          }
+          case 34: {
+            rotaterDataList_.AddEntriesFrom(ref input, _repeated_rotaterDataList_codec);
+            break;
+          }
+          case 40: {
+            IPFOFHHKJKP = input.ReadInt32();
+            break;
+          }
+          case 64: {
+            HFJNNBPDLCK = input.ReadBool();
+            break;
+          }
+          case 98: {
+            if (roomMap_ == null) {
+              RoomMap = new global::EggLink.DanhengServer.Proto.HMBLIADNKEO();
+            }
+            input.ReadMessage(RoomMap);
             break;
           }
         }

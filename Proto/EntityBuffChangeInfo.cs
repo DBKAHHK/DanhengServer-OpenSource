@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static EntityBuffChangeInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpFbnRpdHlCdWZmQ2hhbmdlSW5mby5wcm90bxoOQnVmZkluZm8ucHJvdG8a",
-            "H1NjZW5lRW50aXR5QnVmZkNoYW5nZVR5cGUucHJvdG8ikgEKFEVudGl0eUJ1",
-            "ZmZDaGFuZ2VJbmZvEhEKCWVudGl0eV9pZBgDIAEoDRIqCgZyZWFzb24YDCAB",
-            "KA4yGi5TY2VuZUVudGl0eUJ1ZmZDaGFuZ2VUeXBlEiMKEGJ1ZmZfY2hhbmdl",
-            "X2luZm8YBCABKAsyCS5CdWZmSW5mbxIWCg5yZW1vdmVfYnVmZl9pZBgLIAEo",
-            "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChpFbnRpdHlCdWZmQ2hhbmdlSW5mby5wcm90bxofU2NlbmVFbnRpdHlCdWZm",
+            "Q2hhbmdlVHlwZS5wcm90bxoOQnVmZkluZm8ucHJvdG8ikgEKFEVudGl0eUJ1",
+            "ZmZDaGFuZ2VJbmZvEhEKCWVudGl0eV9pZBgKIAEoDRIjChBidWZmX2NoYW5n",
+            "ZV9pbmZvGAYgASgLMgkuQnVmZkluZm8SFgoOcmVtb3ZlX2J1ZmZfaWQYByAB",
+            "KA0SKgoGcmVhc29uGAsgASgOMhouU2NlbmVFbnRpdHlCdWZmQ2hhbmdlVHlw",
+            "ZUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.BuffInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EntityBuffChangeInfo), global::EggLink.DanhengServer.Proto.EntityBuffChangeInfo.Parser, new[]{ "EntityId", "Reason", "BuffChangeInfo", "RemoveBuffId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EntityBuffChangeInfo), global::EggLink.DanhengServer.Proto.EntityBuffChangeInfo.Parser, new[]{ "EntityId", "BuffChangeInfo", "RemoveBuffId", "Reason" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,9 +76,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EntityBuffChangeInfo(EntityBuffChangeInfo other) : this() {
       entityId_ = other.entityId_;
-      reason_ = other.reason_;
       buffChangeInfo_ = other.buffChangeInfo_ != null ? other.buffChangeInfo_.Clone() : null;
       removeBuffId_ = other.removeBuffId_;
+      reason_ = other.reason_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -89,7 +89,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "entity_id" field.</summary>
-    public const int EntityIdFieldNumber = 3;
+    public const int EntityIdFieldNumber = 10;
     private uint entityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,20 +100,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "reason" field.</summary>
-    public const int ReasonFieldNumber = 12;
-    private global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeType reason_ = global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeType.Default;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeType Reason {
-      get { return reason_; }
-      set {
-        reason_ = value;
-      }
-    }
-
     /// <summary>Field number for the "buff_change_info" field.</summary>
-    public const int BuffChangeInfoFieldNumber = 4;
+    public const int BuffChangeInfoFieldNumber = 6;
     private global::EggLink.DanhengServer.Proto.BuffInfo buffChangeInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -125,7 +113,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "remove_buff_id" field.</summary>
-    public const int RemoveBuffIdFieldNumber = 11;
+    public const int RemoveBuffIdFieldNumber = 7;
     private uint removeBuffId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -133,6 +121,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return removeBuffId_; }
       set {
         removeBuffId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "reason" field.</summary>
+    public const int ReasonFieldNumber = 11;
+    private global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeType reason_ = global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeType.Default;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeType Reason {
+      get { return reason_; }
+      set {
+        reason_ = value;
       }
     }
 
@@ -152,9 +152,9 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (EntityId != other.EntityId) return false;
-      if (Reason != other.Reason) return false;
       if (!object.Equals(BuffChangeInfo, other.BuffChangeInfo)) return false;
       if (RemoveBuffId != other.RemoveBuffId) return false;
+      if (Reason != other.Reason) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -163,9 +163,9 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (EntityId != 0) hash ^= EntityId.GetHashCode();
-      if (Reason != global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeType.Default) hash ^= Reason.GetHashCode();
       if (buffChangeInfo_ != null) hash ^= BuffChangeInfo.GetHashCode();
       if (RemoveBuffId != 0) hash ^= RemoveBuffId.GetHashCode();
+      if (Reason != global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeType.Default) hash ^= Reason.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -184,20 +184,20 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (EntityId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(EntityId);
-      }
       if (buffChangeInfo_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(50);
         output.WriteMessage(BuffChangeInfo);
       }
       if (RemoveBuffId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(56);
         output.WriteUInt32(RemoveBuffId);
       }
+      if (EntityId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(EntityId);
+      }
       if (Reason != global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeType.Default) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(88);
         output.WriteEnum((int) Reason);
       }
       if (_unknownFields != null) {
@@ -210,20 +210,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (EntityId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(EntityId);
-      }
       if (buffChangeInfo_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(50);
         output.WriteMessage(BuffChangeInfo);
       }
       if (RemoveBuffId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(56);
         output.WriteUInt32(RemoveBuffId);
       }
+      if (EntityId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(EntityId);
+      }
       if (Reason != global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeType.Default) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(88);
         output.WriteEnum((int) Reason);
       }
       if (_unknownFields != null) {
@@ -239,14 +239,14 @@ namespace EggLink.DanhengServer.Proto {
       if (EntityId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EntityId);
       }
-      if (Reason != global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeType.Default) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Reason);
-      }
       if (buffChangeInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BuffChangeInfo);
       }
       if (RemoveBuffId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RemoveBuffId);
+      }
+      if (Reason != global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeType.Default) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Reason);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -263,9 +263,6 @@ namespace EggLink.DanhengServer.Proto {
       if (other.EntityId != 0) {
         EntityId = other.EntityId;
       }
-      if (other.Reason != global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeType.Default) {
-        Reason = other.Reason;
-      }
       if (other.buffChangeInfo_ != null) {
         if (buffChangeInfo_ == null) {
           BuffChangeInfo = new global::EggLink.DanhengServer.Proto.BuffInfo();
@@ -274,6 +271,9 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.RemoveBuffId != 0) {
         RemoveBuffId = other.RemoveBuffId;
+      }
+      if (other.Reason != global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeType.Default) {
+        Reason = other.Reason;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -290,22 +290,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            EntityId = input.ReadUInt32();
-            break;
-          }
-          case 34: {
+          case 50: {
             if (buffChangeInfo_ == null) {
               BuffChangeInfo = new global::EggLink.DanhengServer.Proto.BuffInfo();
             }
             input.ReadMessage(BuffChangeInfo);
             break;
           }
-          case 88: {
+          case 56: {
             RemoveBuffId = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 80: {
+            EntityId = input.ReadUInt32();
+            break;
+          }
+          case 88: {
             Reason = (global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeType) input.ReadEnum();
             break;
           }
@@ -324,22 +324,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            EntityId = input.ReadUInt32();
-            break;
-          }
-          case 34: {
+          case 50: {
             if (buffChangeInfo_ == null) {
               BuffChangeInfo = new global::EggLink.DanhengServer.Proto.BuffInfo();
             }
             input.ReadMessage(BuffChangeInfo);
             break;
           }
-          case 88: {
+          case 56: {
             RemoveBuffId = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 80: {
+            EntityId = input.ReadUInt32();
+            break;
+          }
+          case 88: {
             Reason = (global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeType) input.ReadEnum();
             break;
           }

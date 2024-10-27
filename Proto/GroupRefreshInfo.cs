@@ -24,18 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static GroupRefreshInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZHcm91cFJlZnJlc2hJbmZvLnByb3RvGhFCTEFPSEFJQkpITC5wcm90bxoc",
-            "U2NlbmVFbnRpdHlSZWZyZXNoSW5mby5wcm90bxobU2NlbmVHcm91cFJlZnJl",
-            "c2hUeXBlLnByb3RvIrUBChBHcm91cFJlZnJlc2hJbmZvEiEKC0ZMRE9ESUFG",
-            "UEpBGAkgAygLMgwuQkxBT0hBSUJKSEwSLAoMcmVmcmVzaF90eXBlGAwgASgO",
-            "MhYuU2NlbmVHcm91cFJlZnJlc2hUeXBlEg0KBXN0YXRlGAMgASgNEi8KDnJl",
-            "ZnJlc2hfZW50aXR5GA8gAygLMhcuU2NlbmVFbnRpdHlSZWZyZXNoSW5mbxIQ",
-            "Cghncm91cF9pZBgKIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
-            "b3RvYgZwcm90bzM="));
+            "ChZHcm91cFJlZnJlc2hJbmZvLnByb3RvGhtTY2VuZUdyb3VwUmVmcmVzaFR5",
+            "cGUucHJvdG8aHFNjZW5lRW50aXR5UmVmcmVzaEluZm8ucHJvdG8ikgEKEEdy",
+            "b3VwUmVmcmVzaEluZm8SLAoMcmVmcmVzaF90eXBlGAsgASgOMhYuU2NlbmVH",
+            "cm91cFJlZnJlc2hUeXBlEg0KBXN0YXRlGAogASgNEhAKCGdyb3VwX2lkGAUg",
+            "ASgNEi8KDnJlZnJlc2hfZW50aXR5GAYgAygLMhcuU2NlbmVFbnRpdHlSZWZy",
+            "ZXNoSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BLAOHAIBJHLReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneGroupRefreshTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneGroupRefreshTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GroupRefreshInfo), global::EggLink.DanhengServer.Proto.GroupRefreshInfo.Parser, new[]{ "FLDODIAFPJA", "RefreshType", "State", "RefreshEntity", "GroupId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GroupRefreshInfo), global::EggLink.DanhengServer.Proto.GroupRefreshInfo.Parser, new[]{ "RefreshType", "State", "GroupId", "RefreshEntity" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,11 +76,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GroupRefreshInfo(GroupRefreshInfo other) : this() {
-      fLDODIAFPJA_ = other.fLDODIAFPJA_.Clone();
       refreshType_ = other.refreshType_;
       state_ = other.state_;
-      refreshEntity_ = other.refreshEntity_.Clone();
       groupId_ = other.groupId_;
+      refreshEntity_ = other.refreshEntity_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -91,19 +89,8 @@ namespace EggLink.DanhengServer.Proto {
       return new GroupRefreshInfo(this);
     }
 
-    /// <summary>Field number for the "FLDODIAFPJA" field.</summary>
-    public const int FLDODIAFPJAFieldNumber = 9;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.BLAOHAIBJHL> _repeated_fLDODIAFPJA_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.BLAOHAIBJHL.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BLAOHAIBJHL> fLDODIAFPJA_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BLAOHAIBJHL>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BLAOHAIBJHL> FLDODIAFPJA {
-      get { return fLDODIAFPJA_; }
-    }
-
     /// <summary>Field number for the "refresh_type" field.</summary>
-    public const int RefreshTypeFieldNumber = 12;
+    public const int RefreshTypeFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.SceneGroupRefreshType refreshType_ = global::EggLink.DanhengServer.Proto.SceneGroupRefreshType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -115,7 +102,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "state" field.</summary>
-    public const int StateFieldNumber = 3;
+    public const int StateFieldNumber = 10;
     private uint state_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -126,19 +113,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "refresh_entity" field.</summary>
-    public const int RefreshEntityFieldNumber = 15;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo> _repeated_refreshEntity_codec
-        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo> refreshEntity_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo> RefreshEntity {
-      get { return refreshEntity_; }
-    }
-
     /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 10;
+    public const int GroupIdFieldNumber = 5;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -147,6 +123,17 @@ namespace EggLink.DanhengServer.Proto {
       set {
         groupId_ = value;
       }
+    }
+
+    /// <summary>Field number for the "refresh_entity" field.</summary>
+    public const int RefreshEntityFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo> _repeated_refreshEntity_codec
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo> refreshEntity_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo> RefreshEntity {
+      get { return refreshEntity_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -164,11 +151,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!fLDODIAFPJA_.Equals(other.fLDODIAFPJA_)) return false;
       if (RefreshType != other.RefreshType) return false;
       if (State != other.State) return false;
-      if(!refreshEntity_.Equals(other.refreshEntity_)) return false;
       if (GroupId != other.GroupId) return false;
+      if(!refreshEntity_.Equals(other.refreshEntity_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -176,11 +162,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= fLDODIAFPJA_.GetHashCode();
       if (RefreshType != global::EggLink.DanhengServer.Proto.SceneGroupRefreshType.None) hash ^= RefreshType.GetHashCode();
       if (State != 0) hash ^= State.GetHashCode();
-      hash ^= refreshEntity_.GetHashCode();
       if (GroupId != 0) hash ^= GroupId.GetHashCode();
+      hash ^= refreshEntity_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -199,20 +184,19 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (State != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(State);
-      }
-      fLDODIAFPJA_.WriteTo(output, _repeated_fLDODIAFPJA_codec);
       if (GroupId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(40);
         output.WriteUInt32(GroupId);
       }
+      refreshEntity_.WriteTo(output, _repeated_refreshEntity_codec);
+      if (State != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(State);
+      }
       if (RefreshType != global::EggLink.DanhengServer.Proto.SceneGroupRefreshType.None) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(88);
         output.WriteEnum((int) RefreshType);
       }
-      refreshEntity_.WriteTo(output, _repeated_refreshEntity_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -223,20 +207,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (State != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(State);
-      }
-      fLDODIAFPJA_.WriteTo(ref output, _repeated_fLDODIAFPJA_codec);
       if (GroupId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(40);
         output.WriteUInt32(GroupId);
       }
+      refreshEntity_.WriteTo(ref output, _repeated_refreshEntity_codec);
+      if (State != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(State);
+      }
       if (RefreshType != global::EggLink.DanhengServer.Proto.SceneGroupRefreshType.None) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(88);
         output.WriteEnum((int) RefreshType);
       }
-      refreshEntity_.WriteTo(ref output, _repeated_refreshEntity_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -247,17 +230,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += fLDODIAFPJA_.CalculateSize(_repeated_fLDODIAFPJA_codec);
       if (RefreshType != global::EggLink.DanhengServer.Proto.SceneGroupRefreshType.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RefreshType);
       }
       if (State != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(State);
       }
-      size += refreshEntity_.CalculateSize(_repeated_refreshEntity_codec);
       if (GroupId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
       }
+      size += refreshEntity_.CalculateSize(_repeated_refreshEntity_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -270,17 +252,16 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      fLDODIAFPJA_.Add(other.fLDODIAFPJA_);
       if (other.RefreshType != global::EggLink.DanhengServer.Proto.SceneGroupRefreshType.None) {
         RefreshType = other.RefreshType;
       }
       if (other.State != 0) {
         State = other.State;
       }
-      refreshEntity_.Add(other.refreshEntity_);
       if (other.GroupId != 0) {
         GroupId = other.GroupId;
       }
+      refreshEntity_.Add(other.refreshEntity_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -296,24 +277,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            State = input.ReadUInt32();
-            break;
-          }
-          case 74: {
-            fLDODIAFPJA_.AddEntriesFrom(input, _repeated_fLDODIAFPJA_codec);
-            break;
-          }
-          case 80: {
+          case 40: {
             GroupId = input.ReadUInt32();
             break;
           }
-          case 96: {
-            RefreshType = (global::EggLink.DanhengServer.Proto.SceneGroupRefreshType) input.ReadEnum();
+          case 50: {
+            refreshEntity_.AddEntriesFrom(input, _repeated_refreshEntity_codec);
             break;
           }
-          case 122: {
-            refreshEntity_.AddEntriesFrom(input, _repeated_refreshEntity_codec);
+          case 80: {
+            State = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            RefreshType = (global::EggLink.DanhengServer.Proto.SceneGroupRefreshType) input.ReadEnum();
             break;
           }
         }
@@ -331,24 +308,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            State = input.ReadUInt32();
-            break;
-          }
-          case 74: {
-            fLDODIAFPJA_.AddEntriesFrom(ref input, _repeated_fLDODIAFPJA_codec);
-            break;
-          }
-          case 80: {
+          case 40: {
             GroupId = input.ReadUInt32();
             break;
           }
-          case 96: {
-            RefreshType = (global::EggLink.DanhengServer.Proto.SceneGroupRefreshType) input.ReadEnum();
+          case 50: {
+            refreshEntity_.AddEntriesFrom(ref input, _repeated_refreshEntity_codec);
             break;
           }
-          case 122: {
-            refreshEntity_.AddEntriesFrom(ref input, _repeated_refreshEntity_codec);
+          case 80: {
+            State = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            RefreshType = (global::EggLink.DanhengServer.Proto.SceneGroupRefreshType) input.ReadEnum();
             break;
           }
         }

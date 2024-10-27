@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtQbGF5ZXJCb2FyZE1vZHVsZVN5bmMucHJvdG8aEkhlYWRJY29uRGF0YS5w",
-            "cm90byJvChVQbGF5ZXJCb2FyZE1vZHVsZVN5bmMSEwoLTUlEQkNESUhOS00Y",
-            "DCABKAgSLgoXdW5sb2NrZWRfaGVhZF9pY29uX2xpc3QYDyADKAsyDS5IZWFk",
-            "SWNvbkRhdGESEQoJc2lnbmF0dXJlGAIgASgJQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "cm90byJvChVQbGF5ZXJCb2FyZE1vZHVsZVN5bmMSLgoXdW5sb2NrZWRfaGVh",
+            "ZF9pY29uX2xpc3QYAiADKAsyDS5IZWFkSWNvbkRhdGESEwoLS09JTUdCTUxP",
+            "UEIYCSABKAgSEQoJc2lnbmF0dXJlGAQgASgJQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeadIconDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerBoardModuleSync), global::EggLink.DanhengServer.Proto.PlayerBoardModuleSync.Parser, new[]{ "MIDBCDIHNKM", "UnlockedHeadIconList", "Signature" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerBoardModuleSync), global::EggLink.DanhengServer.Proto.PlayerBoardModuleSync.Parser, new[]{ "UnlockedHeadIconList", "KOIMGBMLOPB", "Signature" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PlayerBoardModuleSync(PlayerBoardModuleSync other) : this() {
-      mIDBCDIHNKM_ = other.mIDBCDIHNKM_;
       unlockedHeadIconList_ = other.unlockedHeadIconList_.Clone();
+      kOIMGBMLOPB_ = other.kOIMGBMLOPB_;
       signature_ = other.signature_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -86,22 +86,10 @@ namespace EggLink.DanhengServer.Proto {
       return new PlayerBoardModuleSync(this);
     }
 
-    /// <summary>Field number for the "MIDBCDIHNKM" field.</summary>
-    public const int MIDBCDIHNKMFieldNumber = 12;
-    private bool mIDBCDIHNKM_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool MIDBCDIHNKM {
-      get { return mIDBCDIHNKM_; }
-      set {
-        mIDBCDIHNKM_ = value;
-      }
-    }
-
     /// <summary>Field number for the "unlocked_head_icon_list" field.</summary>
-    public const int UnlockedHeadIconListFieldNumber = 15;
+    public const int UnlockedHeadIconListFieldNumber = 2;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.HeadIconData> _repeated_unlockedHeadIconList_codec
-        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.HeadIconData.Parser);
+        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.HeadIconData.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeadIconData> unlockedHeadIconList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeadIconData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,8 +97,20 @@ namespace EggLink.DanhengServer.Proto {
       get { return unlockedHeadIconList_; }
     }
 
+    /// <summary>Field number for the "KOIMGBMLOPB" field.</summary>
+    public const int KOIMGBMLOPBFieldNumber = 9;
+    private bool kOIMGBMLOPB_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool KOIMGBMLOPB {
+      get { return kOIMGBMLOPB_; }
+      set {
+        kOIMGBMLOPB_ = value;
+      }
+    }
+
     /// <summary>Field number for the "signature" field.</summary>
-    public const int SignatureFieldNumber = 2;
+    public const int SignatureFieldNumber = 4;
     private string signature_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,8 +136,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MIDBCDIHNKM != other.MIDBCDIHNKM) return false;
       if(!unlockedHeadIconList_.Equals(other.unlockedHeadIconList_)) return false;
+      if (KOIMGBMLOPB != other.KOIMGBMLOPB) return false;
       if (Signature != other.Signature) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -146,8 +146,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MIDBCDIHNKM != false) hash ^= MIDBCDIHNKM.GetHashCode();
       hash ^= unlockedHeadIconList_.GetHashCode();
+      if (KOIMGBMLOPB != false) hash ^= KOIMGBMLOPB.GetHashCode();
       if (Signature.Length != 0) hash ^= Signature.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -167,15 +167,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      unlockedHeadIconList_.WriteTo(output, _repeated_unlockedHeadIconList_codec);
       if (Signature.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(34);
         output.WriteString(Signature);
       }
-      if (MIDBCDIHNKM != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(MIDBCDIHNKM);
+      if (KOIMGBMLOPB != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(KOIMGBMLOPB);
       }
-      unlockedHeadIconList_.WriteTo(output, _repeated_unlockedHeadIconList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -186,15 +186,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      unlockedHeadIconList_.WriteTo(ref output, _repeated_unlockedHeadIconList_codec);
       if (Signature.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(34);
         output.WriteString(Signature);
       }
-      if (MIDBCDIHNKM != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(MIDBCDIHNKM);
+      if (KOIMGBMLOPB != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(KOIMGBMLOPB);
       }
-      unlockedHeadIconList_.WriteTo(ref output, _repeated_unlockedHeadIconList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -205,10 +205,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MIDBCDIHNKM != false) {
+      size += unlockedHeadIconList_.CalculateSize(_repeated_unlockedHeadIconList_codec);
+      if (KOIMGBMLOPB != false) {
         size += 1 + 1;
       }
-      size += unlockedHeadIconList_.CalculateSize(_repeated_unlockedHeadIconList_codec);
       if (Signature.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Signature);
       }
@@ -224,10 +224,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MIDBCDIHNKM != false) {
-        MIDBCDIHNKM = other.MIDBCDIHNKM;
-      }
       unlockedHeadIconList_.Add(other.unlockedHeadIconList_);
+      if (other.KOIMGBMLOPB != false) {
+        KOIMGBMLOPB = other.KOIMGBMLOPB;
+      }
       if (other.Signature.Length != 0) {
         Signature = other.Signature;
       }
@@ -247,15 +247,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 18: {
+            unlockedHeadIconList_.AddEntriesFrom(input, _repeated_unlockedHeadIconList_codec);
+            break;
+          }
+          case 34: {
             Signature = input.ReadString();
             break;
           }
-          case 96: {
-            MIDBCDIHNKM = input.ReadBool();
-            break;
-          }
-          case 122: {
-            unlockedHeadIconList_.AddEntriesFrom(input, _repeated_unlockedHeadIconList_codec);
+          case 72: {
+            KOIMGBMLOPB = input.ReadBool();
             break;
           }
         }
@@ -274,15 +274,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 18: {
+            unlockedHeadIconList_.AddEntriesFrom(ref input, _repeated_unlockedHeadIconList_codec);
+            break;
+          }
+          case 34: {
             Signature = input.ReadString();
             break;
           }
-          case 96: {
-            MIDBCDIHNKM = input.ReadBool();
-            break;
-          }
-          case 122: {
-            unlockedHeadIconList_.AddEntriesFrom(ref input, _repeated_unlockedHeadIconList_codec);
+          case 72: {
+            KOIMGBMLOPB = input.ReadBool();
             break;
           }
         }

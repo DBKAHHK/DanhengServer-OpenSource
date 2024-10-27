@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static DrinkMakerGuestReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVEcmlua01ha2VyR3Vlc3QucHJvdG8iUwoPRHJpbmtNYWtlckd1ZXN0Eg0K",
-            "BWZhaXRoGAogASgNEhAKCGd1ZXN0X2lkGA8gASgNEh8KF3VubG9ja2VkX2Zh",
-            "dm9yX3RhZ19saXN0GAkgAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
-            "UHJvdG9iBnByb3RvMw=="));
+            "ChVEcmlua01ha2VyR3Vlc3QucHJvdG8iTwoPRHJpbmtNYWtlckd1ZXN0Eg0K",
+            "BUZhaXRoGAggASgNEhwKFFVubG9ja2VkRmF2b3JUYWdMaXN0GAkgAygNEg8K",
+            "B0d1ZXN0SWQYBCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DrinkMakerGuest), global::EggLink.DanhengServer.Proto.DrinkMakerGuest.Parser, new[]{ "Faith", "GuestId", "UnlockedFavorTagList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DrinkMakerGuest), global::EggLink.DanhengServer.Proto.DrinkMakerGuest.Parser, new[]{ "Faith", "UnlockedFavorTagList", "GuestId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DrinkMakerGuest(DrinkMakerGuest other) : this() {
       faith_ = other.faith_;
-      guestId_ = other.guestId_;
       unlockedFavorTagList_ = other.unlockedFavorTagList_.Clone();
+      guestId_ = other.guestId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,8 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new DrinkMakerGuest(this);
     }
 
-    /// <summary>Field number for the "faith" field.</summary>
-    public const int FaithFieldNumber = 10;
+    /// <summary>Field number for the "Faith" field.</summary>
+    public const int FaithFieldNumber = 8;
     private uint faith_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,19 +97,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "guest_id" field.</summary>
-    public const int GuestIdFieldNumber = 15;
-    private uint guestId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GuestId {
-      get { return guestId_; }
-      set {
-        guestId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "unlocked_favor_tag_list" field.</summary>
+    /// <summary>Field number for the "UnlockedFavorTagList" field.</summary>
     public const int UnlockedFavorTagListFieldNumber = 9;
     private static readonly pb::FieldCodec<uint> _repeated_unlockedFavorTagList_codec
         = pb::FieldCodec.ForUInt32(74);
@@ -118,6 +106,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<uint> UnlockedFavorTagList {
       get { return unlockedFavorTagList_; }
+    }
+
+    /// <summary>Field number for the "GuestId" field.</summary>
+    public const int GuestIdFieldNumber = 4;
+    private uint guestId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint GuestId {
+      get { return guestId_; }
+      set {
+        guestId_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -136,8 +136,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Faith != other.Faith) return false;
-      if (GuestId != other.GuestId) return false;
       if(!unlockedFavorTagList_.Equals(other.unlockedFavorTagList_)) return false;
+      if (GuestId != other.GuestId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,8 +146,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Faith != 0) hash ^= Faith.GetHashCode();
-      if (GuestId != 0) hash ^= GuestId.GetHashCode();
       hash ^= unlockedFavorTagList_.GetHashCode();
+      if (GuestId != 0) hash ^= GuestId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,15 +166,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      unlockedFavorTagList_.WriteTo(output, _repeated_unlockedFavorTagList_codec);
-      if (Faith != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Faith);
-      }
       if (GuestId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(32);
         output.WriteUInt32(GuestId);
       }
+      if (Faith != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Faith);
+      }
+      unlockedFavorTagList_.WriteTo(output, _repeated_unlockedFavorTagList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -185,15 +185,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      unlockedFavorTagList_.WriteTo(ref output, _repeated_unlockedFavorTagList_codec);
-      if (Faith != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Faith);
-      }
       if (GuestId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(32);
         output.WriteUInt32(GuestId);
       }
+      if (Faith != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Faith);
+      }
+      unlockedFavorTagList_.WriteTo(ref output, _repeated_unlockedFavorTagList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -207,10 +207,10 @@ namespace EggLink.DanhengServer.Proto {
       if (Faith != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Faith);
       }
+      size += unlockedFavorTagList_.CalculateSize(_repeated_unlockedFavorTagList_codec);
       if (GuestId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GuestId);
       }
-      size += unlockedFavorTagList_.CalculateSize(_repeated_unlockedFavorTagList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -226,10 +226,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Faith != 0) {
         Faith = other.Faith;
       }
+      unlockedFavorTagList_.Add(other.unlockedFavorTagList_);
       if (other.GuestId != 0) {
         GuestId = other.GuestId;
       }
-      unlockedFavorTagList_.Add(other.unlockedFavorTagList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -245,17 +245,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 74:
-          case 72: {
-            unlockedFavorTagList_.AddEntriesFrom(input, _repeated_unlockedFavorTagList_codec);
+          case 32: {
+            GuestId = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 64: {
             Faith = input.ReadUInt32();
             break;
           }
-          case 120: {
-            GuestId = input.ReadUInt32();
+          case 74:
+          case 72: {
+            unlockedFavorTagList_.AddEntriesFrom(input, _repeated_unlockedFavorTagList_codec);
             break;
           }
         }
@@ -273,17 +273,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 74:
-          case 72: {
-            unlockedFavorTagList_.AddEntriesFrom(ref input, _repeated_unlockedFavorTagList_codec);
+          case 32: {
+            GuestId = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 64: {
             Faith = input.ReadUInt32();
             break;
           }
-          case 120: {
-            GuestId = input.ReadUInt32();
+          case 74:
+          case 72: {
+            unlockedFavorTagList_.AddEntriesFrom(ref input, _repeated_unlockedFavorTagList_codec);
             break;
           }
         }

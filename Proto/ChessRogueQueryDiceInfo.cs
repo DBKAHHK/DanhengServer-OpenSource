@@ -24,18 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static ChessRogueQueryDiceInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1DaGVzc1JvZ3VlUXVlcnlEaWNlSW5mby5wcm90bxoUQ2hlc3NSb2d1ZURp",
-            "Y2UucHJvdG8aHUNoZXNzUm9ndWVOb3VzRGljZVBoYXNlLnByb3RvIuABChdD",
-            "aGVzc1JvZ3VlUXVlcnlEaWNlSW5mbxIiCglkaWNlX2xpc3QYCSADKAsyDy5D",
-            "aGVzc1JvZ3VlRGljZRIsCgpkaWNlX3BoYXNlGAogASgOMhguQ2hlc3NSb2d1",
-            "ZU5vdXNEaWNlUGhhc2USLgoDc3VzGA0gAygLMiEuQ2hlc3NSb2d1ZVF1ZXJ5",
-            "RGljZUluZm8uU3VzRW50cnkSFwoPc3VyZmFjZV9pZF9saXN0GA4gAygNGioK",
+            "Ch1DaGVzc1JvZ3VlUXVlcnlEaWNlSW5mby5wcm90bxodQ2hlc3NSb2d1ZU5v",
+            "dXNEaWNlUGhhc2UucHJvdG8aFENoZXNzUm9ndWVEaWNlLnByb3RvIuABChdD",
+            "aGVzc1JvZ3VlUXVlcnlEaWNlSW5mbxIuCgNzdXMYDCADKAsyIS5DaGVzc1Jv",
+            "Z3VlUXVlcnlEaWNlSW5mby5TdXNFbnRyeRIsCgpkaWNlX3BoYXNlGAogASgO",
+            "MhguQ2hlc3NSb2d1ZU5vdXNEaWNlUGhhc2USIgoJZGljZV9saXN0GAEgAygL",
+            "Mg8uQ2hlc3NSb2d1ZURpY2USFwoPc3VyZmFjZV9pZF9saXN0GAMgAygNGioK",
             "CFN1c0VudHJ5EgsKA2tleRgBIAEoDRINCgV2YWx1ZRgCIAEoCDoCOAFCHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueDiceReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueNousDicePhaseReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueNousDicePhaseReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueDiceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueQueryDiceInfo), global::EggLink.DanhengServer.Proto.ChessRogueQueryDiceInfo.Parser, new[]{ "DiceList", "DicePhase", "Sus", "SurfaceIdList" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueQueryDiceInfo), global::EggLink.DanhengServer.Proto.ChessRogueQueryDiceInfo.Parser, new[]{ "Sus", "DicePhase", "DiceList", "SurfaceIdList" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -77,9 +77,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueQueryDiceInfo(ChessRogueQueryDiceInfo other) : this() {
-      diceList_ = other.diceList_.Clone();
-      dicePhase_ = other.dicePhase_;
       sus_ = other.sus_.Clone();
+      dicePhase_ = other.dicePhase_;
+      diceList_ = other.diceList_.Clone();
       surfaceIdList_ = other.surfaceIdList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -90,15 +90,15 @@ namespace EggLink.DanhengServer.Proto {
       return new ChessRogueQueryDiceInfo(this);
     }
 
-    /// <summary>Field number for the "dice_list" field.</summary>
-    public const int DiceListFieldNumber = 9;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChessRogueDice> _repeated_diceList_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.ChessRogueDice.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueDice> diceList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueDice>();
+    /// <summary>Field number for the "sus" field.</summary>
+    public const int SusFieldNumber = 12;
+    private static readonly pbc::MapField<uint, bool>.Codec _map_sus_codec
+        = new pbc::MapField<uint, bool>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForBool(16, false), 98);
+    private readonly pbc::MapField<uint, bool> sus_ = new pbc::MapField<uint, bool>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueDice> DiceList {
-      get { return diceList_; }
+    public pbc::MapField<uint, bool> Sus {
+      get { return sus_; }
     }
 
     /// <summary>Field number for the "dice_phase" field.</summary>
@@ -113,21 +113,21 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "sus" field.</summary>
-    public const int SusFieldNumber = 13;
-    private static readonly pbc::MapField<uint, bool>.Codec _map_sus_codec
-        = new pbc::MapField<uint, bool>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForBool(16, false), 106);
-    private readonly pbc::MapField<uint, bool> sus_ = new pbc::MapField<uint, bool>();
+    /// <summary>Field number for the "dice_list" field.</summary>
+    public const int DiceListFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChessRogueDice> _repeated_diceList_codec
+        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.ChessRogueDice.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueDice> diceList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueDice>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<uint, bool> Sus {
-      get { return sus_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueDice> DiceList {
+      get { return diceList_; }
     }
 
     /// <summary>Field number for the "surface_id_list" field.</summary>
-    public const int SurfaceIdListFieldNumber = 14;
+    public const int SurfaceIdListFieldNumber = 3;
     private static readonly pb::FieldCodec<uint> _repeated_surfaceIdList_codec
-        = pb::FieldCodec.ForUInt32(114);
+        = pb::FieldCodec.ForUInt32(26);
     private readonly pbc::RepeatedField<uint> surfaceIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!diceList_.Equals(other.diceList_)) return false;
-      if (DicePhase != other.DicePhase) return false;
       if (!Sus.Equals(other.Sus)) return false;
+      if (DicePhase != other.DicePhase) return false;
+      if(!diceList_.Equals(other.diceList_)) return false;
       if(!surfaceIdList_.Equals(other.surfaceIdList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -161,9 +161,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= diceList_.GetHashCode();
-      if (DicePhase != global::EggLink.DanhengServer.Proto.ChessRogueNousDicePhase.None) hash ^= DicePhase.GetHashCode();
       hash ^= Sus.GetHashCode();
+      if (DicePhase != global::EggLink.DanhengServer.Proto.ChessRogueNousDicePhase.None) hash ^= DicePhase.GetHashCode();
+      hash ^= diceList_.GetHashCode();
       hash ^= surfaceIdList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -184,12 +184,12 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       diceList_.WriteTo(output, _repeated_diceList_codec);
+      surfaceIdList_.WriteTo(output, _repeated_surfaceIdList_codec);
       if (DicePhase != global::EggLink.DanhengServer.Proto.ChessRogueNousDicePhase.None) {
         output.WriteRawTag(80);
         output.WriteEnum((int) DicePhase);
       }
       sus_.WriteTo(output, _map_sus_codec);
-      surfaceIdList_.WriteTo(output, _repeated_surfaceIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -201,12 +201,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       diceList_.WriteTo(ref output, _repeated_diceList_codec);
+      surfaceIdList_.WriteTo(ref output, _repeated_surfaceIdList_codec);
       if (DicePhase != global::EggLink.DanhengServer.Proto.ChessRogueNousDicePhase.None) {
         output.WriteRawTag(80);
         output.WriteEnum((int) DicePhase);
       }
       sus_.WriteTo(ref output, _map_sus_codec);
-      surfaceIdList_.WriteTo(ref output, _repeated_surfaceIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -217,11 +217,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += diceList_.CalculateSize(_repeated_diceList_codec);
+      size += sus_.CalculateSize(_map_sus_codec);
       if (DicePhase != global::EggLink.DanhengServer.Proto.ChessRogueNousDicePhase.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DicePhase);
       }
-      size += sus_.CalculateSize(_map_sus_codec);
+      size += diceList_.CalculateSize(_repeated_diceList_codec);
       size += surfaceIdList_.CalculateSize(_repeated_surfaceIdList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -235,11 +235,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      diceList_.Add(other.diceList_);
+      sus_.MergeFrom(other.sus_);
       if (other.DicePhase != global::EggLink.DanhengServer.Proto.ChessRogueNousDicePhase.None) {
         DicePhase = other.DicePhase;
       }
-      sus_.MergeFrom(other.sus_);
+      diceList_.Add(other.diceList_);
       surfaceIdList_.Add(other.surfaceIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,21 +256,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 74: {
+          case 10: {
             diceList_.AddEntriesFrom(input, _repeated_diceList_codec);
+            break;
+          }
+          case 26:
+          case 24: {
+            surfaceIdList_.AddEntriesFrom(input, _repeated_surfaceIdList_codec);
             break;
           }
           case 80: {
             DicePhase = (global::EggLink.DanhengServer.Proto.ChessRogueNousDicePhase) input.ReadEnum();
             break;
           }
-          case 106: {
+          case 98: {
             sus_.AddEntriesFrom(input, _map_sus_codec);
-            break;
-          }
-          case 114:
-          case 112: {
-            surfaceIdList_.AddEntriesFrom(input, _repeated_surfaceIdList_codec);
             break;
           }
         }
@@ -288,21 +288,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 74: {
+          case 10: {
             diceList_.AddEntriesFrom(ref input, _repeated_diceList_codec);
+            break;
+          }
+          case 26:
+          case 24: {
+            surfaceIdList_.AddEntriesFrom(ref input, _repeated_surfaceIdList_codec);
             break;
           }
           case 80: {
             DicePhase = (global::EggLink.DanhengServer.Proto.ChessRogueNousDicePhase) input.ReadEnum();
             break;
           }
-          case 106: {
+          case 98: {
             sus_.AddEntriesFrom(ref input, _map_sus_codec);
-            break;
-          }
-          case 114:
-          case 112: {
-            surfaceIdList_.AddEntriesFrom(ref input, _repeated_surfaceIdList_codec);
             break;
           }
         }

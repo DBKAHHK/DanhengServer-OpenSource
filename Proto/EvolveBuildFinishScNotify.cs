@@ -24,18 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static EvolveBuildFinishScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9Fdm9sdmVCdWlsZEZpbmlzaFNjTm90aWZ5LnByb3RvGhFOS0FFQU5BSkhG",
-            "TC5wcm90bxoaRXZvbHZlQnVpbGRMZXZlbEluZm8ucHJvdG8i5AEKGUV2b2x2",
-            "ZUJ1aWxkRmluaXNoU2NOb3RpZnkSDAoEY29pbhgGIAEoDRINCgVzY29yZRgP",
-            "IAEoDRIoChJiYXR0bGVfcmVzdWx0X3R5cGUYByABKA4yDC5OS0FFQU5BSkhG",
-            "TBIpCgpsZXZlbF9pbmZvGAQgASgLMhUuRXZvbHZlQnVpbGRMZXZlbEluZm8S",
-            "FwoPY3VyX3BlcmlvZF90eXBlGAMgASgNEgwKBHdhdmUYASABKA0SDwoHaXNf",
-            "bG9zZRgLIAEoCBILCgNleHAYCiABKA0SEAoIbGV2ZWxfaWQYDiABKA1CHqoC",
-            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "Ch9Fdm9sdmVCdWlsZEZpbmlzaFNjTm90aWZ5LnByb3RvGhFIQkhESUdPUERN",
+            "UC5wcm90bxoaRXZvbHZlQnVpbGRMZXZlbEluZm8ucHJvdG8i3QEKGUV2b2x2",
+            "ZUJ1aWxkRmluaXNoU2NOb3RpZnkSJgoQQmF0dGxlUmVzdWx0VHlwZRgPIAEo",
+            "DjIMLkhCSERJR09QRE1QEgwKBENvaW4YBiABKA0SDQoFU2NvcmUYBSABKA0S",
+            "DgoGSXNMb3NlGAggASgIEgwKBFdhdmUYCiABKA0SKAoJTGV2ZWxJbmZvGAMg",
+            "ASgLMhUuRXZvbHZlQnVpbGRMZXZlbEluZm8SCwoDRXhwGAsgASgNEg8KB0xl",
+            "dmVsSWQYASABKA0SFQoNQ3VyUGVyaW9kVHlwZRgEIAEoDUIeqgIbRWdnTGlu",
+            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NKAEANAJHFLReflection.Descriptor, global::EggLink.DanhengServer.Proto.EvolveBuildLevelInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HBHDIGOPDMPReflection.Descriptor, global::EggLink.DanhengServer.Proto.EvolveBuildLevelInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EvolveBuildFinishScNotify), global::EggLink.DanhengServer.Proto.EvolveBuildFinishScNotify.Parser, new[]{ "Coin", "Score", "BattleResultType", "LevelInfo", "CurPeriodType", "Wave", "IsLose", "Exp", "LevelId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EvolveBuildFinishScNotify), global::EggLink.DanhengServer.Proto.EvolveBuildFinishScNotify.Parser, new[]{ "BattleResultType", "Coin", "Score", "IsLose", "Wave", "LevelInfo", "Exp", "LevelId", "CurPeriodType" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,15 +77,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EvolveBuildFinishScNotify(EvolveBuildFinishScNotify other) : this() {
+      battleResultType_ = other.battleResultType_;
       coin_ = other.coin_;
       score_ = other.score_;
-      battleResultType_ = other.battleResultType_;
-      levelInfo_ = other.levelInfo_ != null ? other.levelInfo_.Clone() : null;
-      curPeriodType_ = other.curPeriodType_;
-      wave_ = other.wave_;
       isLose_ = other.isLose_;
+      wave_ = other.wave_;
+      levelInfo_ = other.levelInfo_ != null ? other.levelInfo_.Clone() : null;
       exp_ = other.exp_;
       levelId_ = other.levelId_;
+      curPeriodType_ = other.curPeriodType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -95,7 +95,19 @@ namespace EggLink.DanhengServer.Proto {
       return new EvolveBuildFinishScNotify(this);
     }
 
-    /// <summary>Field number for the "coin" field.</summary>
+    /// <summary>Field number for the "BattleResultType" field.</summary>
+    public const int BattleResultTypeFieldNumber = 15;
+    private global::EggLink.DanhengServer.Proto.HBHDIGOPDMP battleResultType_ = global::EggLink.DanhengServer.Proto.HBHDIGOPDMP.EvolveBattleResultNone;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.HBHDIGOPDMP BattleResultType {
+      get { return battleResultType_; }
+      set {
+        battleResultType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Coin" field.</summary>
     public const int CoinFieldNumber = 6;
     private uint coin_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -107,8 +119,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "score" field.</summary>
-    public const int ScoreFieldNumber = 15;
+    /// <summary>Field number for the "Score" field.</summary>
+    public const int ScoreFieldNumber = 5;
     private uint score_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -119,56 +131,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "battle_result_type" field.</summary>
-    public const int BattleResultTypeFieldNumber = 7;
-    private global::EggLink.DanhengServer.Proto.NKAEANAJHFL battleResultType_ = global::EggLink.DanhengServer.Proto.NKAEANAJHFL.EvolveBattleResultNone;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.NKAEANAJHFL BattleResultType {
-      get { return battleResultType_; }
-      set {
-        battleResultType_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "level_info" field.</summary>
-    public const int LevelInfoFieldNumber = 4;
-    private global::EggLink.DanhengServer.Proto.EvolveBuildLevelInfo levelInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.EvolveBuildLevelInfo LevelInfo {
-      get { return levelInfo_; }
-      set {
-        levelInfo_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "cur_period_type" field.</summary>
-    public const int CurPeriodTypeFieldNumber = 3;
-    private uint curPeriodType_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CurPeriodType {
-      get { return curPeriodType_; }
-      set {
-        curPeriodType_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "wave" field.</summary>
-    public const int WaveFieldNumber = 1;
-    private uint wave_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Wave {
-      get { return wave_; }
-      set {
-        wave_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "is_lose" field.</summary>
-    public const int IsLoseFieldNumber = 11;
+    /// <summary>Field number for the "IsLose" field.</summary>
+    public const int IsLoseFieldNumber = 8;
     private bool isLose_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -179,8 +143,32 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "exp" field.</summary>
-    public const int ExpFieldNumber = 10;
+    /// <summary>Field number for the "Wave" field.</summary>
+    public const int WaveFieldNumber = 10;
+    private uint wave_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Wave {
+      get { return wave_; }
+      set {
+        wave_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "LevelInfo" field.</summary>
+    public const int LevelInfoFieldNumber = 3;
+    private global::EggLink.DanhengServer.Proto.EvolveBuildLevelInfo levelInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.EvolveBuildLevelInfo LevelInfo {
+      get { return levelInfo_; }
+      set {
+        levelInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Exp" field.</summary>
+    public const int ExpFieldNumber = 11;
     private uint exp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -191,8 +179,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "level_id" field.</summary>
-    public const int LevelIdFieldNumber = 14;
+    /// <summary>Field number for the "LevelId" field.</summary>
+    public const int LevelIdFieldNumber = 1;
     private uint levelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -200,6 +188,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return levelId_; }
       set {
         levelId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "CurPeriodType" field.</summary>
+    public const int CurPeriodTypeFieldNumber = 4;
+    private uint curPeriodType_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CurPeriodType {
+      get { return curPeriodType_; }
+      set {
+        curPeriodType_ = value;
       }
     }
 
@@ -218,15 +218,15 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (BattleResultType != other.BattleResultType) return false;
       if (Coin != other.Coin) return false;
       if (Score != other.Score) return false;
-      if (BattleResultType != other.BattleResultType) return false;
-      if (!object.Equals(LevelInfo, other.LevelInfo)) return false;
-      if (CurPeriodType != other.CurPeriodType) return false;
-      if (Wave != other.Wave) return false;
       if (IsLose != other.IsLose) return false;
+      if (Wave != other.Wave) return false;
+      if (!object.Equals(LevelInfo, other.LevelInfo)) return false;
       if (Exp != other.Exp) return false;
       if (LevelId != other.LevelId) return false;
+      if (CurPeriodType != other.CurPeriodType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -234,15 +234,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (BattleResultType != global::EggLink.DanhengServer.Proto.HBHDIGOPDMP.EvolveBattleResultNone) hash ^= BattleResultType.GetHashCode();
       if (Coin != 0) hash ^= Coin.GetHashCode();
       if (Score != 0) hash ^= Score.GetHashCode();
-      if (BattleResultType != global::EggLink.DanhengServer.Proto.NKAEANAJHFL.EvolveBattleResultNone) hash ^= BattleResultType.GetHashCode();
-      if (levelInfo_ != null) hash ^= LevelInfo.GetHashCode();
-      if (CurPeriodType != 0) hash ^= CurPeriodType.GetHashCode();
-      if (Wave != 0) hash ^= Wave.GetHashCode();
       if (IsLose != false) hash ^= IsLose.GetHashCode();
+      if (Wave != 0) hash ^= Wave.GetHashCode();
+      if (levelInfo_ != null) hash ^= LevelInfo.GetHashCode();
       if (Exp != 0) hash ^= Exp.GetHashCode();
       if (LevelId != 0) hash ^= LevelId.GetHashCode();
+      if (CurPeriodType != 0) hash ^= CurPeriodType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -261,41 +261,41 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Wave != 0) {
+      if (LevelId != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(Wave);
-      }
-      if (CurPeriodType != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(CurPeriodType);
+        output.WriteUInt32(LevelId);
       }
       if (levelInfo_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(26);
         output.WriteMessage(LevelInfo);
+      }
+      if (CurPeriodType != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(CurPeriodType);
+      }
+      if (Score != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Score);
       }
       if (Coin != 0) {
         output.WriteRawTag(48);
         output.WriteUInt32(Coin);
       }
-      if (BattleResultType != global::EggLink.DanhengServer.Proto.NKAEANAJHFL.EvolveBattleResultNone) {
-        output.WriteRawTag(56);
-        output.WriteEnum((int) BattleResultType);
-      }
-      if (Exp != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Exp);
-      }
       if (IsLose != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(64);
         output.WriteBool(IsLose);
       }
-      if (LevelId != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(LevelId);
+      if (Wave != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Wave);
       }
-      if (Score != 0) {
+      if (Exp != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(Exp);
+      }
+      if (BattleResultType != global::EggLink.DanhengServer.Proto.HBHDIGOPDMP.EvolveBattleResultNone) {
         output.WriteRawTag(120);
-        output.WriteUInt32(Score);
+        output.WriteEnum((int) BattleResultType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -307,41 +307,41 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Wave != 0) {
+      if (LevelId != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(Wave);
-      }
-      if (CurPeriodType != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(CurPeriodType);
+        output.WriteUInt32(LevelId);
       }
       if (levelInfo_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(26);
         output.WriteMessage(LevelInfo);
+      }
+      if (CurPeriodType != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(CurPeriodType);
+      }
+      if (Score != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Score);
       }
       if (Coin != 0) {
         output.WriteRawTag(48);
         output.WriteUInt32(Coin);
       }
-      if (BattleResultType != global::EggLink.DanhengServer.Proto.NKAEANAJHFL.EvolveBattleResultNone) {
-        output.WriteRawTag(56);
-        output.WriteEnum((int) BattleResultType);
-      }
-      if (Exp != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Exp);
-      }
       if (IsLose != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(64);
         output.WriteBool(IsLose);
       }
-      if (LevelId != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(LevelId);
+      if (Wave != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Wave);
       }
-      if (Score != 0) {
+      if (Exp != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(Exp);
+      }
+      if (BattleResultType != global::EggLink.DanhengServer.Proto.HBHDIGOPDMP.EvolveBattleResultNone) {
         output.WriteRawTag(120);
-        output.WriteUInt32(Score);
+        output.WriteEnum((int) BattleResultType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -353,32 +353,32 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (BattleResultType != global::EggLink.DanhengServer.Proto.HBHDIGOPDMP.EvolveBattleResultNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BattleResultType);
+      }
       if (Coin != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Coin);
       }
       if (Score != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Score);
       }
-      if (BattleResultType != global::EggLink.DanhengServer.Proto.NKAEANAJHFL.EvolveBattleResultNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BattleResultType);
-      }
-      if (levelInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LevelInfo);
-      }
-      if (CurPeriodType != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurPeriodType);
+      if (IsLose != false) {
+        size += 1 + 1;
       }
       if (Wave != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Wave);
       }
-      if (IsLose != false) {
-        size += 1 + 1;
+      if (levelInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LevelInfo);
       }
       if (Exp != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Exp);
       }
       if (LevelId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LevelId);
+      }
+      if (CurPeriodType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurPeriodType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -392,14 +392,20 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.BattleResultType != global::EggLink.DanhengServer.Proto.HBHDIGOPDMP.EvolveBattleResultNone) {
+        BattleResultType = other.BattleResultType;
+      }
       if (other.Coin != 0) {
         Coin = other.Coin;
       }
       if (other.Score != 0) {
         Score = other.Score;
       }
-      if (other.BattleResultType != global::EggLink.DanhengServer.Proto.NKAEANAJHFL.EvolveBattleResultNone) {
-        BattleResultType = other.BattleResultType;
+      if (other.IsLose != false) {
+        IsLose = other.IsLose;
+      }
+      if (other.Wave != 0) {
+        Wave = other.Wave;
       }
       if (other.levelInfo_ != null) {
         if (levelInfo_ == null) {
@@ -407,20 +413,14 @@ namespace EggLink.DanhengServer.Proto {
         }
         LevelInfo.MergeFrom(other.LevelInfo);
       }
-      if (other.CurPeriodType != 0) {
-        CurPeriodType = other.CurPeriodType;
-      }
-      if (other.Wave != 0) {
-        Wave = other.Wave;
-      }
-      if (other.IsLose != false) {
-        IsLose = other.IsLose;
-      }
       if (other.Exp != 0) {
         Exp = other.Exp;
       }
       if (other.LevelId != 0) {
         LevelId = other.LevelId;
+      }
+      if (other.CurPeriodType != 0) {
+        CurPeriodType = other.CurPeriodType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -438,42 +438,42 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Wave = input.ReadUInt32();
+            LevelId = input.ReadUInt32();
             break;
           }
-          case 24: {
-            CurPeriodType = input.ReadUInt32();
-            break;
-          }
-          case 34: {
+          case 26: {
             if (levelInfo_ == null) {
               LevelInfo = new global::EggLink.DanhengServer.Proto.EvolveBuildLevelInfo();
             }
             input.ReadMessage(LevelInfo);
             break;
           }
+          case 32: {
+            CurPeriodType = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            Score = input.ReadUInt32();
+            break;
+          }
           case 48: {
             Coin = input.ReadUInt32();
             break;
           }
-          case 56: {
-            BattleResultType = (global::EggLink.DanhengServer.Proto.NKAEANAJHFL) input.ReadEnum();
-            break;
-          }
-          case 80: {
-            Exp = input.ReadUInt32();
-            break;
-          }
-          case 88: {
+          case 64: {
             IsLose = input.ReadBool();
             break;
           }
-          case 112: {
-            LevelId = input.ReadUInt32();
+          case 80: {
+            Wave = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            Exp = input.ReadUInt32();
             break;
           }
           case 120: {
-            Score = input.ReadUInt32();
+            BattleResultType = (global::EggLink.DanhengServer.Proto.HBHDIGOPDMP) input.ReadEnum();
             break;
           }
         }
@@ -492,42 +492,42 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Wave = input.ReadUInt32();
+            LevelId = input.ReadUInt32();
             break;
           }
-          case 24: {
-            CurPeriodType = input.ReadUInt32();
-            break;
-          }
-          case 34: {
+          case 26: {
             if (levelInfo_ == null) {
               LevelInfo = new global::EggLink.DanhengServer.Proto.EvolveBuildLevelInfo();
             }
             input.ReadMessage(LevelInfo);
             break;
           }
+          case 32: {
+            CurPeriodType = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            Score = input.ReadUInt32();
+            break;
+          }
           case 48: {
             Coin = input.ReadUInt32();
             break;
           }
-          case 56: {
-            BattleResultType = (global::EggLink.DanhengServer.Proto.NKAEANAJHFL) input.ReadEnum();
-            break;
-          }
-          case 80: {
-            Exp = input.ReadUInt32();
-            break;
-          }
-          case 88: {
+          case 64: {
             IsLose = input.ReadBool();
             break;
           }
-          case 112: {
-            LevelId = input.ReadUInt32();
+          case 80: {
+            Wave = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            Exp = input.ReadUInt32();
             break;
           }
           case 120: {
-            Score = input.ReadUInt32();
+            BattleResultType = (global::EggLink.DanhengServer.Proto.HBHDIGOPDMP) input.ReadEnum();
             break;
           }
         }

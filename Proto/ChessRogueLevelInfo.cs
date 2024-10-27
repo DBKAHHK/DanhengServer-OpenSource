@@ -25,17 +25,17 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlDaGVzc1JvZ3VlTGV2ZWxJbmZvLnByb3RvGhhDaGVzc1JvZ3VlQXJlYUlu",
-            "Zm8ucHJvdG8i5gEKE0NoZXNzUm9ndWVMZXZlbEluZm8SJgoJYXJlYV9pbmZv",
-            "GAQgASgLMhMuQ2hlc3NSb2d1ZUFyZWFJbmZvEgoKAmlkGAEgASgNEhQKDGFj",
-            "dGlvbl9wb2ludBgGIAEoBRIUCgxhcmVhX2lkX2xpc3QYAyADKA0SEwoLR0NH",
-            "QVBBTEROTEsYByABKAUSEAoIbGF5ZXJfaWQYDCABKA0SFAoMbGV2ZWxfc3Rh",
-            "dHVzGA0gASgNEhMKC0hFRURMRk1CTkpIGAsgASgNEh0KFWV4cGxvcmVkX2Fy",
-            "ZWFfaWRfbGlzdBgIIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "Zm8ucHJvdG8i5gEKE0NoZXNzUm9ndWVMZXZlbEluZm8SEAoIbGF5ZXJfaWQY",
+            "CCABKA0SFAoMYWN0aW9uX3BvaW50GAkgASgFEhQKDGxldmVsX3N0YXR1cxgP",
+            "IAEoDRIKCgJpZBgLIAEoDRITCgtPTkRQR0FOT0xKQRgMIAEoBRIUCgxhcmVh",
+            "X2lkX2xpc3QYAiADKA0SEwoLQ05ORU1KSUpORUIYAyABKA0SHQoVZXhwbG9y",
+            "ZWRfYXJlYV9pZF9saXN0GAUgAygNEiYKCWFyZWFfaW5mbxgKIAEoCzITLkNo",
+            "ZXNzUm9ndWVBcmVhSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueAreaInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueLevelInfo), global::EggLink.DanhengServer.Proto.ChessRogueLevelInfo.Parser, new[]{ "AreaInfo", "Id", "ActionPoint", "AreaIdList", "GCGAPALDNLK", "LayerId", "LevelStatus", "HEEDLFMBNJH", "ExploredAreaIdList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueLevelInfo), global::EggLink.DanhengServer.Proto.ChessRogueLevelInfo.Parser, new[]{ "LayerId", "ActionPoint", "LevelStatus", "Id", "ONDPGANOLJA", "AreaIdList", "CNNEMJIJNEB", "ExploredAreaIdList", "AreaInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,15 +77,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueLevelInfo(ChessRogueLevelInfo other) : this() {
-      areaInfo_ = other.areaInfo_ != null ? other.areaInfo_.Clone() : null;
-      id_ = other.id_;
-      actionPoint_ = other.actionPoint_;
-      areaIdList_ = other.areaIdList_.Clone();
-      gCGAPALDNLK_ = other.gCGAPALDNLK_;
       layerId_ = other.layerId_;
+      actionPoint_ = other.actionPoint_;
       levelStatus_ = other.levelStatus_;
-      hEEDLFMBNJH_ = other.hEEDLFMBNJH_;
+      id_ = other.id_;
+      oNDPGANOLJA_ = other.oNDPGANOLJA_;
+      areaIdList_ = other.areaIdList_.Clone();
+      cNNEMJIJNEB_ = other.cNNEMJIJNEB_;
       exploredAreaIdList_ = other.exploredAreaIdList_.Clone();
+      areaInfo_ = other.areaInfo_ != null ? other.areaInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -95,67 +95,8 @@ namespace EggLink.DanhengServer.Proto {
       return new ChessRogueLevelInfo(this);
     }
 
-    /// <summary>Field number for the "area_info" field.</summary>
-    public const int AreaInfoFieldNumber = 4;
-    private global::EggLink.DanhengServer.Proto.ChessRogueAreaInfo areaInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ChessRogueAreaInfo AreaInfo {
-      get { return areaInfo_; }
-      set {
-        areaInfo_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
-    private uint id_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Id {
-      get { return id_; }
-      set {
-        id_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "action_point" field.</summary>
-    public const int ActionPointFieldNumber = 6;
-    private int actionPoint_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int ActionPoint {
-      get { return actionPoint_; }
-      set {
-        actionPoint_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "area_id_list" field.</summary>
-    public const int AreaIdListFieldNumber = 3;
-    private static readonly pb::FieldCodec<uint> _repeated_areaIdList_codec
-        = pb::FieldCodec.ForUInt32(26);
-    private readonly pbc::RepeatedField<uint> areaIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> AreaIdList {
-      get { return areaIdList_; }
-    }
-
-    /// <summary>Field number for the "GCGAPALDNLK" field.</summary>
-    public const int GCGAPALDNLKFieldNumber = 7;
-    private int gCGAPALDNLK_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int GCGAPALDNLK {
-      get { return gCGAPALDNLK_; }
-      set {
-        gCGAPALDNLK_ = value;
-      }
-    }
-
     /// <summary>Field number for the "layer_id" field.</summary>
-    public const int LayerIdFieldNumber = 12;
+    public const int LayerIdFieldNumber = 8;
     private uint layerId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,8 +107,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "action_point" field.</summary>
+    public const int ActionPointFieldNumber = 9;
+    private int actionPoint_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int ActionPoint {
+      get { return actionPoint_; }
+      set {
+        actionPoint_ = value;
+      }
+    }
+
     /// <summary>Field number for the "level_status" field.</summary>
-    public const int LevelStatusFieldNumber = 13;
+    public const int LevelStatusFieldNumber = 15;
     private uint levelStatus_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -178,27 +131,74 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "HEEDLFMBNJH" field.</summary>
-    public const int HEEDLFMBNJHFieldNumber = 11;
-    private uint hEEDLFMBNJH_;
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 11;
+    private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint HEEDLFMBNJH {
-      get { return hEEDLFMBNJH_; }
+    public uint Id {
+      get { return id_; }
       set {
-        hEEDLFMBNJH_ = value;
+        id_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ONDPGANOLJA" field.</summary>
+    public const int ONDPGANOLJAFieldNumber = 12;
+    private int oNDPGANOLJA_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int ONDPGANOLJA {
+      get { return oNDPGANOLJA_; }
+      set {
+        oNDPGANOLJA_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "area_id_list" field.</summary>
+    public const int AreaIdListFieldNumber = 2;
+    private static readonly pb::FieldCodec<uint> _repeated_areaIdList_codec
+        = pb::FieldCodec.ForUInt32(18);
+    private readonly pbc::RepeatedField<uint> areaIdList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> AreaIdList {
+      get { return areaIdList_; }
+    }
+
+    /// <summary>Field number for the "CNNEMJIJNEB" field.</summary>
+    public const int CNNEMJIJNEBFieldNumber = 3;
+    private uint cNNEMJIJNEB_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CNNEMJIJNEB {
+      get { return cNNEMJIJNEB_; }
+      set {
+        cNNEMJIJNEB_ = value;
       }
     }
 
     /// <summary>Field number for the "explored_area_id_list" field.</summary>
-    public const int ExploredAreaIdListFieldNumber = 8;
+    public const int ExploredAreaIdListFieldNumber = 5;
     private static readonly pb::FieldCodec<uint> _repeated_exploredAreaIdList_codec
-        = pb::FieldCodec.ForUInt32(66);
+        = pb::FieldCodec.ForUInt32(42);
     private readonly pbc::RepeatedField<uint> exploredAreaIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<uint> ExploredAreaIdList {
       get { return exploredAreaIdList_; }
+    }
+
+    /// <summary>Field number for the "area_info" field.</summary>
+    public const int AreaInfoFieldNumber = 10;
+    private global::EggLink.DanhengServer.Proto.ChessRogueAreaInfo areaInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ChessRogueAreaInfo AreaInfo {
+      get { return areaInfo_; }
+      set {
+        areaInfo_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -216,15 +216,15 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(AreaInfo, other.AreaInfo)) return false;
-      if (Id != other.Id) return false;
-      if (ActionPoint != other.ActionPoint) return false;
-      if(!areaIdList_.Equals(other.areaIdList_)) return false;
-      if (GCGAPALDNLK != other.GCGAPALDNLK) return false;
       if (LayerId != other.LayerId) return false;
+      if (ActionPoint != other.ActionPoint) return false;
       if (LevelStatus != other.LevelStatus) return false;
-      if (HEEDLFMBNJH != other.HEEDLFMBNJH) return false;
+      if (Id != other.Id) return false;
+      if (ONDPGANOLJA != other.ONDPGANOLJA) return false;
+      if(!areaIdList_.Equals(other.areaIdList_)) return false;
+      if (CNNEMJIJNEB != other.CNNEMJIJNEB) return false;
       if(!exploredAreaIdList_.Equals(other.exploredAreaIdList_)) return false;
+      if (!object.Equals(AreaInfo, other.AreaInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -232,15 +232,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (areaInfo_ != null) hash ^= AreaInfo.GetHashCode();
-      if (Id != 0) hash ^= Id.GetHashCode();
-      if (ActionPoint != 0) hash ^= ActionPoint.GetHashCode();
-      hash ^= areaIdList_.GetHashCode();
-      if (GCGAPALDNLK != 0) hash ^= GCGAPALDNLK.GetHashCode();
       if (LayerId != 0) hash ^= LayerId.GetHashCode();
+      if (ActionPoint != 0) hash ^= ActionPoint.GetHashCode();
       if (LevelStatus != 0) hash ^= LevelStatus.GetHashCode();
-      if (HEEDLFMBNJH != 0) hash ^= HEEDLFMBNJH.GetHashCode();
+      if (Id != 0) hash ^= Id.GetHashCode();
+      if (ONDPGANOLJA != 0) hash ^= ONDPGANOLJA.GetHashCode();
+      hash ^= areaIdList_.GetHashCode();
+      if (CNNEMJIJNEB != 0) hash ^= CNNEMJIJNEB.GetHashCode();
       hash ^= exploredAreaIdList_.GetHashCode();
+      if (areaInfo_ != null) hash ^= AreaInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -259,34 +259,34 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Id != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Id);
-      }
       areaIdList_.WriteTo(output, _repeated_areaIdList_codec);
-      if (areaInfo_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(AreaInfo);
-      }
-      if (ActionPoint != 0) {
-        output.WriteRawTag(48);
-        output.WriteInt32(ActionPoint);
-      }
-      if (GCGAPALDNLK != 0) {
-        output.WriteRawTag(56);
-        output.WriteInt32(GCGAPALDNLK);
+      if (CNNEMJIJNEB != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(CNNEMJIJNEB);
       }
       exploredAreaIdList_.WriteTo(output, _repeated_exploredAreaIdList_codec);
-      if (HEEDLFMBNJH != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(HEEDLFMBNJH);
-      }
       if (LayerId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteUInt32(LayerId);
       }
+      if (ActionPoint != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(ActionPoint);
+      }
+      if (areaInfo_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(AreaInfo);
+      }
+      if (Id != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(Id);
+      }
+      if (ONDPGANOLJA != 0) {
+        output.WriteRawTag(96);
+        output.WriteInt32(ONDPGANOLJA);
+      }
       if (LevelStatus != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(120);
         output.WriteUInt32(LevelStatus);
       }
       if (_unknownFields != null) {
@@ -299,34 +299,34 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Id);
-      }
       areaIdList_.WriteTo(ref output, _repeated_areaIdList_codec);
-      if (areaInfo_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(AreaInfo);
-      }
-      if (ActionPoint != 0) {
-        output.WriteRawTag(48);
-        output.WriteInt32(ActionPoint);
-      }
-      if (GCGAPALDNLK != 0) {
-        output.WriteRawTag(56);
-        output.WriteInt32(GCGAPALDNLK);
+      if (CNNEMJIJNEB != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(CNNEMJIJNEB);
       }
       exploredAreaIdList_.WriteTo(ref output, _repeated_exploredAreaIdList_codec);
-      if (HEEDLFMBNJH != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(HEEDLFMBNJH);
-      }
       if (LayerId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteUInt32(LayerId);
       }
+      if (ActionPoint != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(ActionPoint);
+      }
+      if (areaInfo_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(AreaInfo);
+      }
+      if (Id != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(Id);
+      }
+      if (ONDPGANOLJA != 0) {
+        output.WriteRawTag(96);
+        output.WriteInt32(ONDPGANOLJA);
+      }
       if (LevelStatus != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(120);
         output.WriteUInt32(LevelStatus);
       }
       if (_unknownFields != null) {
@@ -339,29 +339,29 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (areaInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AreaInfo);
-      }
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
+      if (LayerId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LayerId);
       }
       if (ActionPoint != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ActionPoint);
       }
-      size += areaIdList_.CalculateSize(_repeated_areaIdList_codec);
-      if (GCGAPALDNLK != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(GCGAPALDNLK);
-      }
-      if (LayerId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LayerId);
-      }
       if (LevelStatus != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LevelStatus);
       }
-      if (HEEDLFMBNJH != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HEEDLFMBNJH);
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
+      }
+      if (ONDPGANOLJA != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ONDPGANOLJA);
+      }
+      size += areaIdList_.CalculateSize(_repeated_areaIdList_codec);
+      if (CNNEMJIJNEB != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CNNEMJIJNEB);
       }
       size += exploredAreaIdList_.CalculateSize(_repeated_exploredAreaIdList_codec);
+      if (areaInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AreaInfo);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -374,32 +374,32 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.LayerId != 0) {
+        LayerId = other.LayerId;
+      }
+      if (other.ActionPoint != 0) {
+        ActionPoint = other.ActionPoint;
+      }
+      if (other.LevelStatus != 0) {
+        LevelStatus = other.LevelStatus;
+      }
+      if (other.Id != 0) {
+        Id = other.Id;
+      }
+      if (other.ONDPGANOLJA != 0) {
+        ONDPGANOLJA = other.ONDPGANOLJA;
+      }
+      areaIdList_.Add(other.areaIdList_);
+      if (other.CNNEMJIJNEB != 0) {
+        CNNEMJIJNEB = other.CNNEMJIJNEB;
+      }
+      exploredAreaIdList_.Add(other.exploredAreaIdList_);
       if (other.areaInfo_ != null) {
         if (areaInfo_ == null) {
           AreaInfo = new global::EggLink.DanhengServer.Proto.ChessRogueAreaInfo();
         }
         AreaInfo.MergeFrom(other.AreaInfo);
       }
-      if (other.Id != 0) {
-        Id = other.Id;
-      }
-      if (other.ActionPoint != 0) {
-        ActionPoint = other.ActionPoint;
-      }
-      areaIdList_.Add(other.areaIdList_);
-      if (other.GCGAPALDNLK != 0) {
-        GCGAPALDNLK = other.GCGAPALDNLK;
-      }
-      if (other.LayerId != 0) {
-        LayerId = other.LayerId;
-      }
-      if (other.LevelStatus != 0) {
-        LevelStatus = other.LevelStatus;
-      }
-      if (other.HEEDLFMBNJH != 0) {
-        HEEDLFMBNJH = other.HEEDLFMBNJH;
-      }
-      exploredAreaIdList_.Add(other.exploredAreaIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -415,44 +415,44 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Id = input.ReadUInt32();
-            break;
-          }
-          case 26:
-          case 24: {
+          case 18:
+          case 16: {
             areaIdList_.AddEntriesFrom(input, _repeated_areaIdList_codec);
             break;
           }
-          case 34: {
+          case 24: {
+            CNNEMJIJNEB = input.ReadUInt32();
+            break;
+          }
+          case 42:
+          case 40: {
+            exploredAreaIdList_.AddEntriesFrom(input, _repeated_exploredAreaIdList_codec);
+            break;
+          }
+          case 64: {
+            LayerId = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            ActionPoint = input.ReadInt32();
+            break;
+          }
+          case 82: {
             if (areaInfo_ == null) {
               AreaInfo = new global::EggLink.DanhengServer.Proto.ChessRogueAreaInfo();
             }
             input.ReadMessage(AreaInfo);
             break;
           }
-          case 48: {
-            ActionPoint = input.ReadInt32();
-            break;
-          }
-          case 56: {
-            GCGAPALDNLK = input.ReadInt32();
-            break;
-          }
-          case 66:
-          case 64: {
-            exploredAreaIdList_.AddEntriesFrom(input, _repeated_exploredAreaIdList_codec);
-            break;
-          }
           case 88: {
-            HEEDLFMBNJH = input.ReadUInt32();
+            Id = input.ReadUInt32();
             break;
           }
           case 96: {
-            LayerId = input.ReadUInt32();
+            ONDPGANOLJA = input.ReadInt32();
             break;
           }
-          case 104: {
+          case 120: {
             LevelStatus = input.ReadUInt32();
             break;
           }
@@ -471,44 +471,44 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Id = input.ReadUInt32();
-            break;
-          }
-          case 26:
-          case 24: {
+          case 18:
+          case 16: {
             areaIdList_.AddEntriesFrom(ref input, _repeated_areaIdList_codec);
             break;
           }
-          case 34: {
+          case 24: {
+            CNNEMJIJNEB = input.ReadUInt32();
+            break;
+          }
+          case 42:
+          case 40: {
+            exploredAreaIdList_.AddEntriesFrom(ref input, _repeated_exploredAreaIdList_codec);
+            break;
+          }
+          case 64: {
+            LayerId = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            ActionPoint = input.ReadInt32();
+            break;
+          }
+          case 82: {
             if (areaInfo_ == null) {
               AreaInfo = new global::EggLink.DanhengServer.Proto.ChessRogueAreaInfo();
             }
             input.ReadMessage(AreaInfo);
             break;
           }
-          case 48: {
-            ActionPoint = input.ReadInt32();
-            break;
-          }
-          case 56: {
-            GCGAPALDNLK = input.ReadInt32();
-            break;
-          }
-          case 66:
-          case 64: {
-            exploredAreaIdList_.AddEntriesFrom(ref input, _repeated_exploredAreaIdList_codec);
-            break;
-          }
           case 88: {
-            HEEDLFMBNJH = input.ReadUInt32();
+            Id = input.ReadUInt32();
             break;
           }
           case 96: {
-            LayerId = input.ReadUInt32();
+            ONDPGANOLJA = input.ReadInt32();
             break;
           }
-          case 104: {
+          case 120: {
             LevelStatus = input.ReadUInt32();
             break;
           }

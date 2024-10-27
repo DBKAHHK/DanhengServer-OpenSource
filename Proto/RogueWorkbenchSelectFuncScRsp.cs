@@ -27,8 +27,8 @@ namespace EggLink.DanhengServer.Proto {
             "CiNSb2d1ZVdvcmtiZW5jaFNlbGVjdEZ1bmNTY1JzcC5wcm90bxoXV29ya2Jl",
             "bmNoRnVuY0luZm8ucHJvdG8ieQodUm9ndWVXb3JrYmVuY2hTZWxlY3RGdW5j",
             "U2NSc3ASLAoQdGFyZ2V0X2Z1bmNfaW5mbxgHIAEoCzISLldvcmtiZW5jaEZ1",
-            "bmNJbmZvEhkKEXdvcmtiZW5jaF9mdW5jX2lkGA8gASgNEg8KB3JldGNvZGUY",
-            "CSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "bmNJbmZvEhkKEXdvcmtiZW5jaF9mdW5jX2lkGAkgASgNEg8KB3JldGNvZGUY",
+            "BiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.WorkbenchFuncInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "workbench_func_id" field.</summary>
-    public const int WorkbenchFuncIdFieldNumber = 15;
+    public const int WorkbenchFuncIdFieldNumber = 9;
     private uint workbenchFuncId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 9;
+    public const int RetcodeFieldNumber = 6;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -168,16 +168,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (Retcode != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(Retcode);
+      }
       if (targetFuncInfo_ != null) {
         output.WriteRawTag(58);
         output.WriteMessage(TargetFuncInfo);
       }
-      if (Retcode != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(Retcode);
-      }
       if (WorkbenchFuncId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(72);
         output.WriteUInt32(WorkbenchFuncId);
       }
       if (_unknownFields != null) {
@@ -190,16 +190,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Retcode != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(Retcode);
+      }
       if (targetFuncInfo_ != null) {
         output.WriteRawTag(58);
         output.WriteMessage(TargetFuncInfo);
       }
-      if (Retcode != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(Retcode);
-      }
       if (WorkbenchFuncId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(72);
         output.WriteUInt32(WorkbenchFuncId);
       }
       if (_unknownFields != null) {
@@ -260,6 +260,10 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 48: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
           case 58: {
             if (targetFuncInfo_ == null) {
               TargetFuncInfo = new global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo();
@@ -268,10 +272,6 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 72: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 120: {
             WorkbenchFuncId = input.ReadUInt32();
             break;
           }
@@ -290,6 +290,10 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 48: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
           case 58: {
             if (targetFuncInfo_ == null) {
               TargetFuncInfo = new global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo();
@@ -298,10 +302,6 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 72: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 120: {
             WorkbenchFuncId = input.ReadUInt32();
             break;
           }

@@ -24,27 +24,26 @@ namespace EggLink.DanhengServer.Proto {
     static RogueGameInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNSb2d1ZUdhbWVJbmZvLnByb3RvGhhSb2d1ZUdhbWVJdGVtVmFsdWUucHJv",
-            "dG8aG0NoZXNzUm9ndWVNaXJhY2xlSW5mby5wcm90bxoeUm9ndWVEaWZmaWN1",
-            "bHR5TGV2ZWxJbmZvLnByb3RvGhpSb2d1ZVRvdXJuTGluZXVwSW5mby5wcm90",
-            "bxoYS2V5d29yZFVubG9ja1ZhbHVlLnByb3RvGhtSb2d1ZVRvdXJuRm9ybXVs",
-            "YUluZm8ucHJvdG8aGENoZXNzUm9ndWVCdWZmSW5mby5wcm90bxocQ2hlc3NS",
-            "b2d1ZUdhbWVBZW9uSW5mby5wcm90byKwAwoNUm9ndWVHYW1lSW5mbxIuCg9y",
-            "b2d1ZV9idWZmX2luZm8YDCABKAsyEy5DaGVzc1JvZ3VlQnVmZkluZm9IABIz",
-            "ChFnYW1lX21pcmFjbGVfaW5mbxgIIAEoCzIWLkNoZXNzUm9ndWVNaXJhY2xl",
-            "SW5mb0gAEi4KD2dhbWVfaXRlbV92YWx1ZRgBIAEoCzITLlJvZ3VlR2FtZUl0",
-            "ZW1WYWx1ZUgAEjIKD3JvZ3VlX2Flb25faW5mbxgEIAEoCzIXLkNoZXNzUm9n",
-            "dWVHYW1lQWVvbkluZm9IABI6ChVyb2d1ZV9kaWZmaWN1bHR5X2luZm8YDyAB",
-            "KAsyGS5Sb2d1ZURpZmZpY3VsdHlMZXZlbEluZm9IABItCgtJRktETktKSk1B",
-            "QRgKIAEoCzIWLlJvZ3VlVG91cm5Gb3JtdWxhSW5mb0gAEioKC0ZNRUxIT0hE",
-            "SEdQGAsgASgLMhMuS2V5d29yZFVubG9ja1ZhbHVlSAASMgoRcm9ndWVfbGlu",
-            "ZXVwX2luZm8YBSABKAsyFS5Sb2d1ZVRvdXJuTGluZXVwSW5mb0gAQgsKCWdh",
-            "bWVfaW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
-            "bzM="));
+            "ChNSb2d1ZUdhbWVJbmZvLnByb3RvGhhDaGVzc1JvZ3VlQnVmZkluZm8ucHJv",
+            "dG8aGEtleXdvcmRVbmxvY2tWYWx1ZS5wcm90bxoeUm9ndWVEaWZmaWN1bHR5",
+            "TGV2ZWxJbmZvLnByb3RvGhtSb2d1ZVRvdXJuRm9ybXVsYUluZm8ucHJvdG8a",
+            "GlJvZ3VlVG91cm5MaW5ldXBJbmZvLnByb3RvGhhSb2d1ZUdhbWVJdGVtVmFs",
+            "dWUucHJvdG8aHENoZXNzUm9ndWVHYW1lQWVvbkluZm8ucHJvdG8aG0NoZXNz",
+            "Um9ndWVNaXJhY2xlSW5mby5wcm90byKTAwoNUm9ndWVHYW1lSW5mbxIsCg9y",
+            "b2d1ZV9idWZmX2luZm8YCSABKAsyEy5DaGVzc1JvZ3VlQnVmZkluZm8SMQoR",
+            "Z2FtZV9taXJhY2xlX2luZm8YDSABKAsyFi5DaGVzc1JvZ3VlTWlyYWNsZUlu",
+            "Zm8SLAoPZ2FtZV9pdGVtX3ZhbHVlGAEgASgLMhMuUm9ndWVHYW1lSXRlbVZh",
+            "bHVlEjAKD3JvZ3VlX2Flb25faW5mbxgEIAEoCzIXLkNoZXNzUm9ndWVHYW1l",
+            "QWVvbkluZm8SOAoVcm9ndWVfZGlmZmljdWx0eV9pbmZvGA4gASgLMhkuUm9n",
+            "dWVEaWZmaWN1bHR5TGV2ZWxJbmZvEisKC0NITUVMQURFTU1NGA8gASgLMhYu",
+            "Um9ndWVUb3VybkZvcm11bGFJbmZvEigKC01PR0xMTUxFTUlQGAcgASgLMhMu",
+            "S2V5d29yZFVubG9ja1ZhbHVlEjAKEXJvZ3VlX2xpbmV1cF9pbmZvGAggASgL",
+            "MhUuUm9ndWVUb3VybkxpbmV1cEluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueGameItemValueReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueDifficultyLevelInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournLineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KeywordUnlockValueReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournFormulaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueGameAeonInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KeywordUnlockValueReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueDifficultyLevelInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournFormulaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournLineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueGameItemValueReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueGameAeonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueGameInfo), global::EggLink.DanhengServer.Proto.RogueGameInfo.Parser, new[]{ "RogueBuffInfo", "GameMiracleInfo", "GameItemValue", "RogueAeonInfo", "RogueDifficultyInfo", "IFKDNKJJMAA", "FMELHOHDHGP", "RogueLineupInfo" }, new[]{ "GameInfo" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueGameInfo), global::EggLink.DanhengServer.Proto.RogueGameInfo.Parser, new[]{ "RogueBuffInfo", "GameMiracleInfo", "GameItemValue", "RogueAeonInfo", "RogueDifficultyInfo", "CHMELADEMMM", "MOGLLMLEMIP", "RogueLineupInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -86,33 +85,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueGameInfo(RogueGameInfo other) : this() {
-      switch (other.GameInfoCase) {
-        case GameInfoOneofCase.RogueBuffInfo:
-          RogueBuffInfo = other.RogueBuffInfo.Clone();
-          break;
-        case GameInfoOneofCase.GameMiracleInfo:
-          GameMiracleInfo = other.GameMiracleInfo.Clone();
-          break;
-        case GameInfoOneofCase.GameItemValue:
-          GameItemValue = other.GameItemValue.Clone();
-          break;
-        case GameInfoOneofCase.RogueAeonInfo:
-          RogueAeonInfo = other.RogueAeonInfo.Clone();
-          break;
-        case GameInfoOneofCase.RogueDifficultyInfo:
-          RogueDifficultyInfo = other.RogueDifficultyInfo.Clone();
-          break;
-        case GameInfoOneofCase.IFKDNKJJMAA:
-          IFKDNKJJMAA = other.IFKDNKJJMAA.Clone();
-          break;
-        case GameInfoOneofCase.FMELHOHDHGP:
-          FMELHOHDHGP = other.FMELHOHDHGP.Clone();
-          break;
-        case GameInfoOneofCase.RogueLineupInfo:
-          RogueLineupInfo = other.RogueLineupInfo.Clone();
-          break;
-      }
-
+      rogueBuffInfo_ = other.rogueBuffInfo_ != null ? other.rogueBuffInfo_.Clone() : null;
+      gameMiracleInfo_ = other.gameMiracleInfo_ != null ? other.gameMiracleInfo_.Clone() : null;
+      gameItemValue_ = other.gameItemValue_ != null ? other.gameItemValue_.Clone() : null;
+      rogueAeonInfo_ = other.rogueAeonInfo_ != null ? other.rogueAeonInfo_.Clone() : null;
+      rogueDifficultyInfo_ = other.rogueDifficultyInfo_ != null ? other.rogueDifficultyInfo_.Clone() : null;
+      cHMELADEMMM_ = other.cHMELADEMMM_ != null ? other.cHMELADEMMM_.Clone() : null;
+      mOGLLMLEMIP_ = other.mOGLLMLEMIP_ != null ? other.mOGLLMLEMIP_.Clone() : null;
+      rogueLineupInfo_ = other.rogueLineupInfo_ != null ? other.rogueLineupInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -123,126 +103,99 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_buff_info" field.</summary>
-    public const int RogueBuffInfoFieldNumber = 12;
+    public const int RogueBuffInfoFieldNumber = 9;
+    private global::EggLink.DanhengServer.Proto.ChessRogueBuffInfo rogueBuffInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.ChessRogueBuffInfo RogueBuffInfo {
-      get { return gameInfoCase_ == GameInfoOneofCase.RogueBuffInfo ? (global::EggLink.DanhengServer.Proto.ChessRogueBuffInfo) gameInfo_ : null; }
+      get { return rogueBuffInfo_; }
       set {
-        gameInfo_ = value;
-        gameInfoCase_ = value == null ? GameInfoOneofCase.None : GameInfoOneofCase.RogueBuffInfo;
+        rogueBuffInfo_ = value;
       }
     }
 
     /// <summary>Field number for the "game_miracle_info" field.</summary>
-    public const int GameMiracleInfoFieldNumber = 8;
+    public const int GameMiracleInfoFieldNumber = 13;
+    private global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfo gameMiracleInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfo GameMiracleInfo {
-      get { return gameInfoCase_ == GameInfoOneofCase.GameMiracleInfo ? (global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfo) gameInfo_ : null; }
+      get { return gameMiracleInfo_; }
       set {
-        gameInfo_ = value;
-        gameInfoCase_ = value == null ? GameInfoOneofCase.None : GameInfoOneofCase.GameMiracleInfo;
+        gameMiracleInfo_ = value;
       }
     }
 
     /// <summary>Field number for the "game_item_value" field.</summary>
     public const int GameItemValueFieldNumber = 1;
+    private global::EggLink.DanhengServer.Proto.RogueGameItemValue gameItemValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.RogueGameItemValue GameItemValue {
-      get { return gameInfoCase_ == GameInfoOneofCase.GameItemValue ? (global::EggLink.DanhengServer.Proto.RogueGameItemValue) gameInfo_ : null; }
+      get { return gameItemValue_; }
       set {
-        gameInfo_ = value;
-        gameInfoCase_ = value == null ? GameInfoOneofCase.None : GameInfoOneofCase.GameItemValue;
+        gameItemValue_ = value;
       }
     }
 
     /// <summary>Field number for the "rogue_aeon_info" field.</summary>
     public const int RogueAeonInfoFieldNumber = 4;
+    private global::EggLink.DanhengServer.Proto.ChessRogueGameAeonInfo rogueAeonInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.ChessRogueGameAeonInfo RogueAeonInfo {
-      get { return gameInfoCase_ == GameInfoOneofCase.RogueAeonInfo ? (global::EggLink.DanhengServer.Proto.ChessRogueGameAeonInfo) gameInfo_ : null; }
+      get { return rogueAeonInfo_; }
       set {
-        gameInfo_ = value;
-        gameInfoCase_ = value == null ? GameInfoOneofCase.None : GameInfoOneofCase.RogueAeonInfo;
+        rogueAeonInfo_ = value;
       }
     }
 
     /// <summary>Field number for the "rogue_difficulty_info" field.</summary>
-    public const int RogueDifficultyInfoFieldNumber = 15;
+    public const int RogueDifficultyInfoFieldNumber = 14;
+    private global::EggLink.DanhengServer.Proto.RogueDifficultyLevelInfo rogueDifficultyInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.RogueDifficultyLevelInfo RogueDifficultyInfo {
-      get { return gameInfoCase_ == GameInfoOneofCase.RogueDifficultyInfo ? (global::EggLink.DanhengServer.Proto.RogueDifficultyLevelInfo) gameInfo_ : null; }
+      get { return rogueDifficultyInfo_; }
       set {
-        gameInfo_ = value;
-        gameInfoCase_ = value == null ? GameInfoOneofCase.None : GameInfoOneofCase.RogueDifficultyInfo;
+        rogueDifficultyInfo_ = value;
       }
     }
 
-    /// <summary>Field number for the "IFKDNKJJMAA" field.</summary>
-    public const int IFKDNKJJMAAFieldNumber = 10;
+    /// <summary>Field number for the "CHMELADEMMM" field.</summary>
+    public const int CHMELADEMMMFieldNumber = 15;
+    private global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo cHMELADEMMM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo IFKDNKJJMAA {
-      get { return gameInfoCase_ == GameInfoOneofCase.IFKDNKJJMAA ? (global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo) gameInfo_ : null; }
+    public global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo CHMELADEMMM {
+      get { return cHMELADEMMM_; }
       set {
-        gameInfo_ = value;
-        gameInfoCase_ = value == null ? GameInfoOneofCase.None : GameInfoOneofCase.IFKDNKJJMAA;
+        cHMELADEMMM_ = value;
       }
     }
 
-    /// <summary>Field number for the "FMELHOHDHGP" field.</summary>
-    public const int FMELHOHDHGPFieldNumber = 11;
+    /// <summary>Field number for the "MOGLLMLEMIP" field.</summary>
+    public const int MOGLLMLEMIPFieldNumber = 7;
+    private global::EggLink.DanhengServer.Proto.KeywordUnlockValue mOGLLMLEMIP_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.KeywordUnlockValue FMELHOHDHGP {
-      get { return gameInfoCase_ == GameInfoOneofCase.FMELHOHDHGP ? (global::EggLink.DanhengServer.Proto.KeywordUnlockValue) gameInfo_ : null; }
+    public global::EggLink.DanhengServer.Proto.KeywordUnlockValue MOGLLMLEMIP {
+      get { return mOGLLMLEMIP_; }
       set {
-        gameInfo_ = value;
-        gameInfoCase_ = value == null ? GameInfoOneofCase.None : GameInfoOneofCase.FMELHOHDHGP;
+        mOGLLMLEMIP_ = value;
       }
     }
 
     /// <summary>Field number for the "rogue_lineup_info" field.</summary>
-    public const int RogueLineupInfoFieldNumber = 5;
+    public const int RogueLineupInfoFieldNumber = 8;
+    private global::EggLink.DanhengServer.Proto.RogueTournLineupInfo rogueLineupInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.RogueTournLineupInfo RogueLineupInfo {
-      get { return gameInfoCase_ == GameInfoOneofCase.RogueLineupInfo ? (global::EggLink.DanhengServer.Proto.RogueTournLineupInfo) gameInfo_ : null; }
+      get { return rogueLineupInfo_; }
       set {
-        gameInfo_ = value;
-        gameInfoCase_ = value == null ? GameInfoOneofCase.None : GameInfoOneofCase.RogueLineupInfo;
+        rogueLineupInfo_ = value;
       }
-    }
-
-    private object gameInfo_;
-    /// <summary>Enum of possible cases for the "game_info" oneof.</summary>
-    public enum GameInfoOneofCase {
-      None = 0,
-      RogueBuffInfo = 12,
-      GameMiracleInfo = 8,
-      GameItemValue = 1,
-      RogueAeonInfo = 4,
-      RogueDifficultyInfo = 15,
-      IFKDNKJJMAA = 10,
-      FMELHOHDHGP = 11,
-      RogueLineupInfo = 5,
-    }
-    private GameInfoOneofCase gameInfoCase_ = GameInfoOneofCase.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GameInfoOneofCase GameInfoCase {
-      get { return gameInfoCase_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearGameInfo() {
-      gameInfoCase_ = GameInfoOneofCase.None;
-      gameInfo_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -265,10 +218,9 @@ namespace EggLink.DanhengServer.Proto {
       if (!object.Equals(GameItemValue, other.GameItemValue)) return false;
       if (!object.Equals(RogueAeonInfo, other.RogueAeonInfo)) return false;
       if (!object.Equals(RogueDifficultyInfo, other.RogueDifficultyInfo)) return false;
-      if (!object.Equals(IFKDNKJJMAA, other.IFKDNKJJMAA)) return false;
-      if (!object.Equals(FMELHOHDHGP, other.FMELHOHDHGP)) return false;
+      if (!object.Equals(CHMELADEMMM, other.CHMELADEMMM)) return false;
+      if (!object.Equals(MOGLLMLEMIP, other.MOGLLMLEMIP)) return false;
       if (!object.Equals(RogueLineupInfo, other.RogueLineupInfo)) return false;
-      if (GameInfoCase != other.GameInfoCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -276,15 +228,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (gameInfoCase_ == GameInfoOneofCase.RogueBuffInfo) hash ^= RogueBuffInfo.GetHashCode();
-      if (gameInfoCase_ == GameInfoOneofCase.GameMiracleInfo) hash ^= GameMiracleInfo.GetHashCode();
-      if (gameInfoCase_ == GameInfoOneofCase.GameItemValue) hash ^= GameItemValue.GetHashCode();
-      if (gameInfoCase_ == GameInfoOneofCase.RogueAeonInfo) hash ^= RogueAeonInfo.GetHashCode();
-      if (gameInfoCase_ == GameInfoOneofCase.RogueDifficultyInfo) hash ^= RogueDifficultyInfo.GetHashCode();
-      if (gameInfoCase_ == GameInfoOneofCase.IFKDNKJJMAA) hash ^= IFKDNKJJMAA.GetHashCode();
-      if (gameInfoCase_ == GameInfoOneofCase.FMELHOHDHGP) hash ^= FMELHOHDHGP.GetHashCode();
-      if (gameInfoCase_ == GameInfoOneofCase.RogueLineupInfo) hash ^= RogueLineupInfo.GetHashCode();
-      hash ^= (int) gameInfoCase_;
+      if (rogueBuffInfo_ != null) hash ^= RogueBuffInfo.GetHashCode();
+      if (gameMiracleInfo_ != null) hash ^= GameMiracleInfo.GetHashCode();
+      if (gameItemValue_ != null) hash ^= GameItemValue.GetHashCode();
+      if (rogueAeonInfo_ != null) hash ^= RogueAeonInfo.GetHashCode();
+      if (rogueDifficultyInfo_ != null) hash ^= RogueDifficultyInfo.GetHashCode();
+      if (cHMELADEMMM_ != null) hash ^= CHMELADEMMM.GetHashCode();
+      if (mOGLLMLEMIP_ != null) hash ^= MOGLLMLEMIP.GetHashCode();
+      if (rogueLineupInfo_ != null) hash ^= RogueLineupInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -303,37 +254,37 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (gameInfoCase_ == GameInfoOneofCase.GameItemValue) {
+      if (gameItemValue_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(GameItemValue);
       }
-      if (gameInfoCase_ == GameInfoOneofCase.RogueAeonInfo) {
+      if (rogueAeonInfo_ != null) {
         output.WriteRawTag(34);
         output.WriteMessage(RogueAeonInfo);
       }
-      if (gameInfoCase_ == GameInfoOneofCase.RogueLineupInfo) {
-        output.WriteRawTag(42);
+      if (mOGLLMLEMIP_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(MOGLLMLEMIP);
+      }
+      if (rogueLineupInfo_ != null) {
+        output.WriteRawTag(66);
         output.WriteMessage(RogueLineupInfo);
       }
-      if (gameInfoCase_ == GameInfoOneofCase.GameMiracleInfo) {
-        output.WriteRawTag(66);
-        output.WriteMessage(GameMiracleInfo);
-      }
-      if (gameInfoCase_ == GameInfoOneofCase.IFKDNKJJMAA) {
-        output.WriteRawTag(82);
-        output.WriteMessage(IFKDNKJJMAA);
-      }
-      if (gameInfoCase_ == GameInfoOneofCase.FMELHOHDHGP) {
-        output.WriteRawTag(90);
-        output.WriteMessage(FMELHOHDHGP);
-      }
-      if (gameInfoCase_ == GameInfoOneofCase.RogueBuffInfo) {
-        output.WriteRawTag(98);
+      if (rogueBuffInfo_ != null) {
+        output.WriteRawTag(74);
         output.WriteMessage(RogueBuffInfo);
       }
-      if (gameInfoCase_ == GameInfoOneofCase.RogueDifficultyInfo) {
-        output.WriteRawTag(122);
+      if (gameMiracleInfo_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(GameMiracleInfo);
+      }
+      if (rogueDifficultyInfo_ != null) {
+        output.WriteRawTag(114);
         output.WriteMessage(RogueDifficultyInfo);
+      }
+      if (cHMELADEMMM_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(CHMELADEMMM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -345,37 +296,37 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (gameInfoCase_ == GameInfoOneofCase.GameItemValue) {
+      if (gameItemValue_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(GameItemValue);
       }
-      if (gameInfoCase_ == GameInfoOneofCase.RogueAeonInfo) {
+      if (rogueAeonInfo_ != null) {
         output.WriteRawTag(34);
         output.WriteMessage(RogueAeonInfo);
       }
-      if (gameInfoCase_ == GameInfoOneofCase.RogueLineupInfo) {
-        output.WriteRawTag(42);
+      if (mOGLLMLEMIP_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(MOGLLMLEMIP);
+      }
+      if (rogueLineupInfo_ != null) {
+        output.WriteRawTag(66);
         output.WriteMessage(RogueLineupInfo);
       }
-      if (gameInfoCase_ == GameInfoOneofCase.GameMiracleInfo) {
-        output.WriteRawTag(66);
-        output.WriteMessage(GameMiracleInfo);
-      }
-      if (gameInfoCase_ == GameInfoOneofCase.IFKDNKJJMAA) {
-        output.WriteRawTag(82);
-        output.WriteMessage(IFKDNKJJMAA);
-      }
-      if (gameInfoCase_ == GameInfoOneofCase.FMELHOHDHGP) {
-        output.WriteRawTag(90);
-        output.WriteMessage(FMELHOHDHGP);
-      }
-      if (gameInfoCase_ == GameInfoOneofCase.RogueBuffInfo) {
-        output.WriteRawTag(98);
+      if (rogueBuffInfo_ != null) {
+        output.WriteRawTag(74);
         output.WriteMessage(RogueBuffInfo);
       }
-      if (gameInfoCase_ == GameInfoOneofCase.RogueDifficultyInfo) {
-        output.WriteRawTag(122);
+      if (gameMiracleInfo_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(GameMiracleInfo);
+      }
+      if (rogueDifficultyInfo_ != null) {
+        output.WriteRawTag(114);
         output.WriteMessage(RogueDifficultyInfo);
+      }
+      if (cHMELADEMMM_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(CHMELADEMMM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -387,28 +338,28 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (gameInfoCase_ == GameInfoOneofCase.RogueBuffInfo) {
+      if (rogueBuffInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueBuffInfo);
       }
-      if (gameInfoCase_ == GameInfoOneofCase.GameMiracleInfo) {
+      if (gameMiracleInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameMiracleInfo);
       }
-      if (gameInfoCase_ == GameInfoOneofCase.GameItemValue) {
+      if (gameItemValue_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameItemValue);
       }
-      if (gameInfoCase_ == GameInfoOneofCase.RogueAeonInfo) {
+      if (rogueAeonInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueAeonInfo);
       }
-      if (gameInfoCase_ == GameInfoOneofCase.RogueDifficultyInfo) {
+      if (rogueDifficultyInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueDifficultyInfo);
       }
-      if (gameInfoCase_ == GameInfoOneofCase.IFKDNKJJMAA) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IFKDNKJJMAA);
+      if (cHMELADEMMM_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CHMELADEMMM);
       }
-      if (gameInfoCase_ == GameInfoOneofCase.FMELHOHDHGP) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FMELHOHDHGP);
+      if (mOGLLMLEMIP_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MOGLLMLEMIP);
       }
-      if (gameInfoCase_ == GameInfoOneofCase.RogueLineupInfo) {
+      if (rogueLineupInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueLineupInfo);
       }
       if (_unknownFields != null) {
@@ -423,57 +374,54 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      switch (other.GameInfoCase) {
-        case GameInfoOneofCase.RogueBuffInfo:
-          if (RogueBuffInfo == null) {
-            RogueBuffInfo = new global::EggLink.DanhengServer.Proto.ChessRogueBuffInfo();
-          }
-          RogueBuffInfo.MergeFrom(other.RogueBuffInfo);
-          break;
-        case GameInfoOneofCase.GameMiracleInfo:
-          if (GameMiracleInfo == null) {
-            GameMiracleInfo = new global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfo();
-          }
-          GameMiracleInfo.MergeFrom(other.GameMiracleInfo);
-          break;
-        case GameInfoOneofCase.GameItemValue:
-          if (GameItemValue == null) {
-            GameItemValue = new global::EggLink.DanhengServer.Proto.RogueGameItemValue();
-          }
-          GameItemValue.MergeFrom(other.GameItemValue);
-          break;
-        case GameInfoOneofCase.RogueAeonInfo:
-          if (RogueAeonInfo == null) {
-            RogueAeonInfo = new global::EggLink.DanhengServer.Proto.ChessRogueGameAeonInfo();
-          }
-          RogueAeonInfo.MergeFrom(other.RogueAeonInfo);
-          break;
-        case GameInfoOneofCase.RogueDifficultyInfo:
-          if (RogueDifficultyInfo == null) {
-            RogueDifficultyInfo = new global::EggLink.DanhengServer.Proto.RogueDifficultyLevelInfo();
-          }
-          RogueDifficultyInfo.MergeFrom(other.RogueDifficultyInfo);
-          break;
-        case GameInfoOneofCase.IFKDNKJJMAA:
-          if (IFKDNKJJMAA == null) {
-            IFKDNKJJMAA = new global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo();
-          }
-          IFKDNKJJMAA.MergeFrom(other.IFKDNKJJMAA);
-          break;
-        case GameInfoOneofCase.FMELHOHDHGP:
-          if (FMELHOHDHGP == null) {
-            FMELHOHDHGP = new global::EggLink.DanhengServer.Proto.KeywordUnlockValue();
-          }
-          FMELHOHDHGP.MergeFrom(other.FMELHOHDHGP);
-          break;
-        case GameInfoOneofCase.RogueLineupInfo:
-          if (RogueLineupInfo == null) {
-            RogueLineupInfo = new global::EggLink.DanhengServer.Proto.RogueTournLineupInfo();
-          }
-          RogueLineupInfo.MergeFrom(other.RogueLineupInfo);
-          break;
+      if (other.rogueBuffInfo_ != null) {
+        if (rogueBuffInfo_ == null) {
+          RogueBuffInfo = new global::EggLink.DanhengServer.Proto.ChessRogueBuffInfo();
+        }
+        RogueBuffInfo.MergeFrom(other.RogueBuffInfo);
       }
-
+      if (other.gameMiracleInfo_ != null) {
+        if (gameMiracleInfo_ == null) {
+          GameMiracleInfo = new global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfo();
+        }
+        GameMiracleInfo.MergeFrom(other.GameMiracleInfo);
+      }
+      if (other.gameItemValue_ != null) {
+        if (gameItemValue_ == null) {
+          GameItemValue = new global::EggLink.DanhengServer.Proto.RogueGameItemValue();
+        }
+        GameItemValue.MergeFrom(other.GameItemValue);
+      }
+      if (other.rogueAeonInfo_ != null) {
+        if (rogueAeonInfo_ == null) {
+          RogueAeonInfo = new global::EggLink.DanhengServer.Proto.ChessRogueGameAeonInfo();
+        }
+        RogueAeonInfo.MergeFrom(other.RogueAeonInfo);
+      }
+      if (other.rogueDifficultyInfo_ != null) {
+        if (rogueDifficultyInfo_ == null) {
+          RogueDifficultyInfo = new global::EggLink.DanhengServer.Proto.RogueDifficultyLevelInfo();
+        }
+        RogueDifficultyInfo.MergeFrom(other.RogueDifficultyInfo);
+      }
+      if (other.cHMELADEMMM_ != null) {
+        if (cHMELADEMMM_ == null) {
+          CHMELADEMMM = new global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo();
+        }
+        CHMELADEMMM.MergeFrom(other.CHMELADEMMM);
+      }
+      if (other.mOGLLMLEMIP_ != null) {
+        if (mOGLLMLEMIP_ == null) {
+          MOGLLMLEMIP = new global::EggLink.DanhengServer.Proto.KeywordUnlockValue();
+        }
+        MOGLLMLEMIP.MergeFrom(other.MOGLLMLEMIP);
+      }
+      if (other.rogueLineupInfo_ != null) {
+        if (rogueLineupInfo_ == null) {
+          RogueLineupInfo = new global::EggLink.DanhengServer.Proto.RogueTournLineupInfo();
+        }
+        RogueLineupInfo.MergeFrom(other.RogueLineupInfo);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -490,75 +438,59 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            global::EggLink.DanhengServer.Proto.RogueGameItemValue subBuilder = new global::EggLink.DanhengServer.Proto.RogueGameItemValue();
-            if (gameInfoCase_ == GameInfoOneofCase.GameItemValue) {
-              subBuilder.MergeFrom(GameItemValue);
+            if (gameItemValue_ == null) {
+              GameItemValue = new global::EggLink.DanhengServer.Proto.RogueGameItemValue();
             }
-            input.ReadMessage(subBuilder);
-            GameItemValue = subBuilder;
+            input.ReadMessage(GameItemValue);
             break;
           }
           case 34: {
-            global::EggLink.DanhengServer.Proto.ChessRogueGameAeonInfo subBuilder = new global::EggLink.DanhengServer.Proto.ChessRogueGameAeonInfo();
-            if (gameInfoCase_ == GameInfoOneofCase.RogueAeonInfo) {
-              subBuilder.MergeFrom(RogueAeonInfo);
+            if (rogueAeonInfo_ == null) {
+              RogueAeonInfo = new global::EggLink.DanhengServer.Proto.ChessRogueGameAeonInfo();
             }
-            input.ReadMessage(subBuilder);
-            RogueAeonInfo = subBuilder;
+            input.ReadMessage(RogueAeonInfo);
             break;
           }
-          case 42: {
-            global::EggLink.DanhengServer.Proto.RogueTournLineupInfo subBuilder = new global::EggLink.DanhengServer.Proto.RogueTournLineupInfo();
-            if (gameInfoCase_ == GameInfoOneofCase.RogueLineupInfo) {
-              subBuilder.MergeFrom(RogueLineupInfo);
+          case 58: {
+            if (mOGLLMLEMIP_ == null) {
+              MOGLLMLEMIP = new global::EggLink.DanhengServer.Proto.KeywordUnlockValue();
             }
-            input.ReadMessage(subBuilder);
-            RogueLineupInfo = subBuilder;
+            input.ReadMessage(MOGLLMLEMIP);
             break;
           }
           case 66: {
-            global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfo subBuilder = new global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfo();
-            if (gameInfoCase_ == GameInfoOneofCase.GameMiracleInfo) {
-              subBuilder.MergeFrom(GameMiracleInfo);
+            if (rogueLineupInfo_ == null) {
+              RogueLineupInfo = new global::EggLink.DanhengServer.Proto.RogueTournLineupInfo();
             }
-            input.ReadMessage(subBuilder);
-            GameMiracleInfo = subBuilder;
+            input.ReadMessage(RogueLineupInfo);
             break;
           }
-          case 82: {
-            global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo subBuilder = new global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo();
-            if (gameInfoCase_ == GameInfoOneofCase.IFKDNKJJMAA) {
-              subBuilder.MergeFrom(IFKDNKJJMAA);
+          case 74: {
+            if (rogueBuffInfo_ == null) {
+              RogueBuffInfo = new global::EggLink.DanhengServer.Proto.ChessRogueBuffInfo();
             }
-            input.ReadMessage(subBuilder);
-            IFKDNKJJMAA = subBuilder;
+            input.ReadMessage(RogueBuffInfo);
             break;
           }
-          case 90: {
-            global::EggLink.DanhengServer.Proto.KeywordUnlockValue subBuilder = new global::EggLink.DanhengServer.Proto.KeywordUnlockValue();
-            if (gameInfoCase_ == GameInfoOneofCase.FMELHOHDHGP) {
-              subBuilder.MergeFrom(FMELHOHDHGP);
+          case 106: {
+            if (gameMiracleInfo_ == null) {
+              GameMiracleInfo = new global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfo();
             }
-            input.ReadMessage(subBuilder);
-            FMELHOHDHGP = subBuilder;
+            input.ReadMessage(GameMiracleInfo);
             break;
           }
-          case 98: {
-            global::EggLink.DanhengServer.Proto.ChessRogueBuffInfo subBuilder = new global::EggLink.DanhengServer.Proto.ChessRogueBuffInfo();
-            if (gameInfoCase_ == GameInfoOneofCase.RogueBuffInfo) {
-              subBuilder.MergeFrom(RogueBuffInfo);
+          case 114: {
+            if (rogueDifficultyInfo_ == null) {
+              RogueDifficultyInfo = new global::EggLink.DanhengServer.Proto.RogueDifficultyLevelInfo();
             }
-            input.ReadMessage(subBuilder);
-            RogueBuffInfo = subBuilder;
+            input.ReadMessage(RogueDifficultyInfo);
             break;
           }
           case 122: {
-            global::EggLink.DanhengServer.Proto.RogueDifficultyLevelInfo subBuilder = new global::EggLink.DanhengServer.Proto.RogueDifficultyLevelInfo();
-            if (gameInfoCase_ == GameInfoOneofCase.RogueDifficultyInfo) {
-              subBuilder.MergeFrom(RogueDifficultyInfo);
+            if (cHMELADEMMM_ == null) {
+              CHMELADEMMM = new global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo();
             }
-            input.ReadMessage(subBuilder);
-            RogueDifficultyInfo = subBuilder;
+            input.ReadMessage(CHMELADEMMM);
             break;
           }
         }
@@ -577,75 +509,59 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            global::EggLink.DanhengServer.Proto.RogueGameItemValue subBuilder = new global::EggLink.DanhengServer.Proto.RogueGameItemValue();
-            if (gameInfoCase_ == GameInfoOneofCase.GameItemValue) {
-              subBuilder.MergeFrom(GameItemValue);
+            if (gameItemValue_ == null) {
+              GameItemValue = new global::EggLink.DanhengServer.Proto.RogueGameItemValue();
             }
-            input.ReadMessage(subBuilder);
-            GameItemValue = subBuilder;
+            input.ReadMessage(GameItemValue);
             break;
           }
           case 34: {
-            global::EggLink.DanhengServer.Proto.ChessRogueGameAeonInfo subBuilder = new global::EggLink.DanhengServer.Proto.ChessRogueGameAeonInfo();
-            if (gameInfoCase_ == GameInfoOneofCase.RogueAeonInfo) {
-              subBuilder.MergeFrom(RogueAeonInfo);
+            if (rogueAeonInfo_ == null) {
+              RogueAeonInfo = new global::EggLink.DanhengServer.Proto.ChessRogueGameAeonInfo();
             }
-            input.ReadMessage(subBuilder);
-            RogueAeonInfo = subBuilder;
+            input.ReadMessage(RogueAeonInfo);
             break;
           }
-          case 42: {
-            global::EggLink.DanhengServer.Proto.RogueTournLineupInfo subBuilder = new global::EggLink.DanhengServer.Proto.RogueTournLineupInfo();
-            if (gameInfoCase_ == GameInfoOneofCase.RogueLineupInfo) {
-              subBuilder.MergeFrom(RogueLineupInfo);
+          case 58: {
+            if (mOGLLMLEMIP_ == null) {
+              MOGLLMLEMIP = new global::EggLink.DanhengServer.Proto.KeywordUnlockValue();
             }
-            input.ReadMessage(subBuilder);
-            RogueLineupInfo = subBuilder;
+            input.ReadMessage(MOGLLMLEMIP);
             break;
           }
           case 66: {
-            global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfo subBuilder = new global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfo();
-            if (gameInfoCase_ == GameInfoOneofCase.GameMiracleInfo) {
-              subBuilder.MergeFrom(GameMiracleInfo);
+            if (rogueLineupInfo_ == null) {
+              RogueLineupInfo = new global::EggLink.DanhengServer.Proto.RogueTournLineupInfo();
             }
-            input.ReadMessage(subBuilder);
-            GameMiracleInfo = subBuilder;
+            input.ReadMessage(RogueLineupInfo);
             break;
           }
-          case 82: {
-            global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo subBuilder = new global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo();
-            if (gameInfoCase_ == GameInfoOneofCase.IFKDNKJJMAA) {
-              subBuilder.MergeFrom(IFKDNKJJMAA);
+          case 74: {
+            if (rogueBuffInfo_ == null) {
+              RogueBuffInfo = new global::EggLink.DanhengServer.Proto.ChessRogueBuffInfo();
             }
-            input.ReadMessage(subBuilder);
-            IFKDNKJJMAA = subBuilder;
+            input.ReadMessage(RogueBuffInfo);
             break;
           }
-          case 90: {
-            global::EggLink.DanhengServer.Proto.KeywordUnlockValue subBuilder = new global::EggLink.DanhengServer.Proto.KeywordUnlockValue();
-            if (gameInfoCase_ == GameInfoOneofCase.FMELHOHDHGP) {
-              subBuilder.MergeFrom(FMELHOHDHGP);
+          case 106: {
+            if (gameMiracleInfo_ == null) {
+              GameMiracleInfo = new global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfo();
             }
-            input.ReadMessage(subBuilder);
-            FMELHOHDHGP = subBuilder;
+            input.ReadMessage(GameMiracleInfo);
             break;
           }
-          case 98: {
-            global::EggLink.DanhengServer.Proto.ChessRogueBuffInfo subBuilder = new global::EggLink.DanhengServer.Proto.ChessRogueBuffInfo();
-            if (gameInfoCase_ == GameInfoOneofCase.RogueBuffInfo) {
-              subBuilder.MergeFrom(RogueBuffInfo);
+          case 114: {
+            if (rogueDifficultyInfo_ == null) {
+              RogueDifficultyInfo = new global::EggLink.DanhengServer.Proto.RogueDifficultyLevelInfo();
             }
-            input.ReadMessage(subBuilder);
-            RogueBuffInfo = subBuilder;
+            input.ReadMessage(RogueDifficultyInfo);
             break;
           }
           case 122: {
-            global::EggLink.DanhengServer.Proto.RogueDifficultyLevelInfo subBuilder = new global::EggLink.DanhengServer.Proto.RogueDifficultyLevelInfo();
-            if (gameInfoCase_ == GameInfoOneofCase.RogueDifficultyInfo) {
-              subBuilder.MergeFrom(RogueDifficultyInfo);
+            if (cHMELADEMMM_ == null) {
+              CHMELADEMMM = new global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo();
             }
-            input.ReadMessage(subBuilder);
-            RogueDifficultyInfo = subBuilder;
+            input.ReadMessage(CHMELADEMMM);
             break;
           }
         }

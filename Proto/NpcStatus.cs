@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cg9OcGNTdGF0dXMucHJvdG8iLgoJTnBjU3RhdHVzEg4KBm5wY19pZBgEIAEo",
-            "DRIRCglpc19maW5pc2gYCSABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "DRIRCglpc19maW5pc2gYDyABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_finish" field.</summary>
-    public const int IsFinishFieldNumber = 9;
+    public const int IsFinishFieldNumber = 15;
     private bool isFinish_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -156,7 +156,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(NpcId);
       }
       if (IsFinish != false) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(120);
         output.WriteBool(IsFinish);
       }
       if (_unknownFields != null) {
@@ -174,7 +174,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(NpcId);
       }
       if (IsFinish != false) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(120);
         output.WriteBool(IsFinish);
       }
       if (_unknownFields != null) {
@@ -230,7 +230,7 @@ namespace EggLink.DanhengServer.Proto {
             NpcId = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 120: {
             IsFinish = input.ReadBool();
             break;
           }
@@ -253,7 +253,7 @@ namespace EggLink.DanhengServer.Proto {
             NpcId = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 120: {
             IsFinish = input.ReadBool();
             break;
           }

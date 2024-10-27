@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiVHZXRGcmllbmRSZWNvbW1lbmRMaXN0SW5mb1NjUnNwLnByb3RvGhlGcmll",
             "bmRSZWNvbW1lbmRJbmZvLnByb3RvImIKH0dldEZyaWVuZFJlY29tbWVuZExp",
-            "c3RJbmZvU2NSc3ASDwoHcmV0Y29kZRgFIAEoDRIuChBwbGF5ZXJfaW5mb19s",
-            "aXN0GAcgAygLMhQuRnJpZW5kUmVjb21tZW5kSW5mb0IeqgIbRWdnTGluay5E",
+            "c3RJbmZvU2NSc3ASDwoHcmV0Y29kZRgKIAEoDRIuChBwbGF5ZXJfaW5mb19s",
+            "aXN0GA8gAygLMhQuRnJpZW5kUmVjb21tZW5kSW5mb0IeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FriendRecommendInfoReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 5;
+    public const int RetcodeFieldNumber = 10;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "player_info_list" field.</summary>
-    public const int PlayerInfoListFieldNumber = 7;
+    public const int PlayerInfoListFieldNumber = 15;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.FriendRecommendInfo> _repeated_playerInfoList_codec
-        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.FriendRecommendInfo.Parser);
+        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.FriendRecommendInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FriendRecommendInfo> playerInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FriendRecommendInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(80);
         output.WriteUInt32(Retcode);
       }
       playerInfoList_.WriteTo(output, _repeated_playerInfoList_codec);
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(80);
         output.WriteUInt32(Retcode);
       }
       playerInfoList_.WriteTo(ref output, _repeated_playerInfoList_codec);
@@ -217,11 +217,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 80: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 58: {
+          case 122: {
             playerInfoList_.AddEntriesFrom(input, _repeated_playerInfoList_codec);
             break;
           }
@@ -240,11 +240,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 80: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 58: {
+          case 122: {
             playerInfoList_.AddEntriesFrom(ref input, _repeated_playerInfoList_codec);
             break;
           }

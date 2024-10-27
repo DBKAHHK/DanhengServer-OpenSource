@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch5Sb2d1ZUdhbWJsZU1hemVHcm91cEluZm8ucHJvdG8aGVJvZ3VlR2FtYmxl",
             "TWF6ZUluZm8ucHJvdG8iawoYUm9ndWVHYW1ibGVNYXplR3JvdXBJbmZvEhAK",
-            "CGdyb3VwX2lkGAUgASgNEicKCW1hemVfbGlzdBgLIAMoCzIULlJvZ3VlR2Ft",
-            "YmxlTWF6ZUluZm8SFAoMZ3JvdXBfZW5hYmxlGA8gASgIQh6qAhtFZ2dMaW5r",
+            "CGdyb3VwX2lkGAEgASgNEhQKDGdyb3VwX2VuYWJsZRgNIAEoCBInCgltYXpl",
+            "X2xpc3QYCiADKAsyFC5Sb2d1ZUdhbWJsZU1hemVJbmZvQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueGambleMazeInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueGambleMazeGroupInfo), global::EggLink.DanhengServer.Proto.RogueGambleMazeGroupInfo.Parser, new[]{ "GroupId", "MazeList", "GroupEnable" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueGambleMazeGroupInfo), global::EggLink.DanhengServer.Proto.RogueGambleMazeGroupInfo.Parser, new[]{ "GroupId", "GroupEnable", "MazeList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,8 +75,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueGambleMazeGroupInfo(RogueGambleMazeGroupInfo other) : this() {
       groupId_ = other.groupId_;
-      mazeList_ = other.mazeList_.Clone();
       groupEnable_ = other.groupEnable_;
+      mazeList_ = other.mazeList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 5;
+    public const int GroupIdFieldNumber = 1;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,19 +98,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "maze_list" field.</summary>
-    public const int MazeListFieldNumber = 11;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueGambleMazeInfo> _repeated_mazeList_codec
-        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.RogueGambleMazeInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueGambleMazeInfo> mazeList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueGambleMazeInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueGambleMazeInfo> MazeList {
-      get { return mazeList_; }
-    }
-
     /// <summary>Field number for the "group_enable" field.</summary>
-    public const int GroupEnableFieldNumber = 15;
+    public const int GroupEnableFieldNumber = 13;
     private bool groupEnable_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -119,6 +108,17 @@ namespace EggLink.DanhengServer.Proto {
       set {
         groupEnable_ = value;
       }
+    }
+
+    /// <summary>Field number for the "maze_list" field.</summary>
+    public const int MazeListFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueGambleMazeInfo> _repeated_mazeList_codec
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.RogueGambleMazeInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueGambleMazeInfo> mazeList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueGambleMazeInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueGambleMazeInfo> MazeList {
+      get { return mazeList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -137,8 +137,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (GroupId != other.GroupId) return false;
-      if(!mazeList_.Equals(other.mazeList_)) return false;
       if (GroupEnable != other.GroupEnable) return false;
+      if(!mazeList_.Equals(other.mazeList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,8 +147,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (GroupId != 0) hash ^= GroupId.GetHashCode();
-      hash ^= mazeList_.GetHashCode();
       if (GroupEnable != false) hash ^= GroupEnable.GetHashCode();
+      hash ^= mazeList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,12 +168,12 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (GroupId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(8);
         output.WriteUInt32(GroupId);
       }
       mazeList_.WriteTo(output, _repeated_mazeList_codec);
       if (GroupEnable != false) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(104);
         output.WriteBool(GroupEnable);
       }
       if (_unknownFields != null) {
@@ -187,12 +187,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (GroupId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(8);
         output.WriteUInt32(GroupId);
       }
       mazeList_.WriteTo(ref output, _repeated_mazeList_codec);
       if (GroupEnable != false) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(104);
         output.WriteBool(GroupEnable);
       }
       if (_unknownFields != null) {
@@ -208,10 +208,10 @@ namespace EggLink.DanhengServer.Proto {
       if (GroupId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
       }
-      size += mazeList_.CalculateSize(_repeated_mazeList_codec);
       if (GroupEnable != false) {
         size += 1 + 1;
       }
+      size += mazeList_.CalculateSize(_repeated_mazeList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -227,10 +227,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other.GroupId != 0) {
         GroupId = other.GroupId;
       }
-      mazeList_.Add(other.mazeList_);
       if (other.GroupEnable != false) {
         GroupEnable = other.GroupEnable;
       }
+      mazeList_.Add(other.mazeList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -246,15 +246,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 8: {
             GroupId = input.ReadUInt32();
             break;
           }
-          case 90: {
+          case 82: {
             mazeList_.AddEntriesFrom(input, _repeated_mazeList_codec);
             break;
           }
-          case 120: {
+          case 104: {
             GroupEnable = input.ReadBool();
             break;
           }
@@ -273,15 +273,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 8: {
             GroupId = input.ReadUInt32();
             break;
           }
-          case 90: {
+          case 82: {
             mazeList_.AddEntriesFrom(ref input, _repeated_mazeList_codec);
             break;
           }
-          case 120: {
+          case 104: {
             GroupEnable = input.ReadBool();
             break;
           }

@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static BlackInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg9CbGFja0luZm8ucHJvdG8iWwoJQmxhY2tJbmZvEhIKCmJlZ2luX3RpbWUY",
-            "ASABKAMSEAoIZW5kX3RpbWUYAiABKAMSEwoLREhLRUhHRUVETEUYAyABKA0S",
-            "EwoLRk5CQU9BSktNSkEYBCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
-            "ci5Qcm90b2IGcHJvdG8z"));
+            "Cg9CbGFja0luZm8ucHJvdG8iWAoJQmxhY2tJbmZvEhIKCmJlZ2luX3RpbWUY",
+            "ASABKAMSEAoIZW5kX3RpbWUYAiABKAMSEwoLbGltaXRfbGV2ZWwYAyABKA0S",
+            "EAoIYmFuX3R5cGUYBCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BlackInfo), global::EggLink.DanhengServer.Proto.BlackInfo.Parser, new[]{ "BeginTime", "EndTime", "DHKEHGEEDLE", "FNBAOAJKMJA" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BlackInfo), global::EggLink.DanhengServer.Proto.BlackInfo.Parser, new[]{ "BeginTime", "EndTime", "LimitLevel", "BanType" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,8 +75,8 @@ namespace EggLink.DanhengServer.Proto {
     public BlackInfo(BlackInfo other) : this() {
       beginTime_ = other.beginTime_;
       endTime_ = other.endTime_;
-      dHKEHGEEDLE_ = other.dHKEHGEEDLE_;
-      fNBAOAJKMJA_ = other.fNBAOAJKMJA_;
+      limitLevel_ = other.limitLevel_;
+      banType_ = other.banType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -110,27 +110,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "DHKEHGEEDLE" field.</summary>
-    public const int DHKEHGEEDLEFieldNumber = 3;
-    private uint dHKEHGEEDLE_;
+    /// <summary>Field number for the "limit_level" field.</summary>
+    public const int LimitLevelFieldNumber = 3;
+    private uint limitLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DHKEHGEEDLE {
-      get { return dHKEHGEEDLE_; }
+    public uint LimitLevel {
+      get { return limitLevel_; }
       set {
-        dHKEHGEEDLE_ = value;
+        limitLevel_ = value;
       }
     }
 
-    /// <summary>Field number for the "FNBAOAJKMJA" field.</summary>
-    public const int FNBAOAJKMJAFieldNumber = 4;
-    private uint fNBAOAJKMJA_;
+    /// <summary>Field number for the "ban_type" field.</summary>
+    public const int BanTypeFieldNumber = 4;
+    private uint banType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FNBAOAJKMJA {
-      get { return fNBAOAJKMJA_; }
+    public uint BanType {
+      get { return banType_; }
       set {
-        fNBAOAJKMJA_ = value;
+        banType_ = value;
       }
     }
 
@@ -151,8 +151,8 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (BeginTime != other.BeginTime) return false;
       if (EndTime != other.EndTime) return false;
-      if (DHKEHGEEDLE != other.DHKEHGEEDLE) return false;
-      if (FNBAOAJKMJA != other.FNBAOAJKMJA) return false;
+      if (LimitLevel != other.LimitLevel) return false;
+      if (BanType != other.BanType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -162,8 +162,8 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (BeginTime != 0L) hash ^= BeginTime.GetHashCode();
       if (EndTime != 0L) hash ^= EndTime.GetHashCode();
-      if (DHKEHGEEDLE != 0) hash ^= DHKEHGEEDLE.GetHashCode();
-      if (FNBAOAJKMJA != 0) hash ^= FNBAOAJKMJA.GetHashCode();
+      if (LimitLevel != 0) hash ^= LimitLevel.GetHashCode();
+      if (BanType != 0) hash ^= BanType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -190,13 +190,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteInt64(EndTime);
       }
-      if (DHKEHGEEDLE != 0) {
+      if (LimitLevel != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(DHKEHGEEDLE);
+        output.WriteUInt32(LimitLevel);
       }
-      if (FNBAOAJKMJA != 0) {
+      if (BanType != 0) {
         output.WriteRawTag(32);
-        output.WriteUInt32(FNBAOAJKMJA);
+        output.WriteUInt32(BanType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteInt64(EndTime);
       }
-      if (DHKEHGEEDLE != 0) {
+      if (LimitLevel != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(DHKEHGEEDLE);
+        output.WriteUInt32(LimitLevel);
       }
-      if (FNBAOAJKMJA != 0) {
+      if (BanType != 0) {
         output.WriteRawTag(32);
-        output.WriteUInt32(FNBAOAJKMJA);
+        output.WriteUInt32(BanType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -240,11 +240,11 @@ namespace EggLink.DanhengServer.Proto {
       if (EndTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(EndTime);
       }
-      if (DHKEHGEEDLE != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DHKEHGEEDLE);
+      if (LimitLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LimitLevel);
       }
-      if (FNBAOAJKMJA != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FNBAOAJKMJA);
+      if (BanType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BanType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -264,11 +264,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.EndTime != 0L) {
         EndTime = other.EndTime;
       }
-      if (other.DHKEHGEEDLE != 0) {
-        DHKEHGEEDLE = other.DHKEHGEEDLE;
+      if (other.LimitLevel != 0) {
+        LimitLevel = other.LimitLevel;
       }
-      if (other.FNBAOAJKMJA != 0) {
-        FNBAOAJKMJA = other.FNBAOAJKMJA;
+      if (other.BanType != 0) {
+        BanType = other.BanType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -294,11 +294,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 24: {
-            DHKEHGEEDLE = input.ReadUInt32();
+            LimitLevel = input.ReadUInt32();
             break;
           }
           case 32: {
-            FNBAOAJKMJA = input.ReadUInt32();
+            BanType = input.ReadUInt32();
             break;
           }
         }
@@ -325,11 +325,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 24: {
-            DHKEHGEEDLE = input.ReadUInt32();
+            LimitLevel = input.ReadUInt32();
             break;
           }
           case 32: {
-            FNBAOAJKMJA = input.ReadUInt32();
+            BanType = input.ReadUInt32();
             break;
           }
         }

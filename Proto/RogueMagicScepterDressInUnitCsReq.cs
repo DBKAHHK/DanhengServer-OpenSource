@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CidSb2d1ZU1hZ2ljU2NlcHRlckRyZXNzSW5Vbml0Q3NSZXEucHJvdG8icQoh",
-            "Um9ndWVNYWdpY1NjZXB0ZXJEcmVzc0luVW5pdENzUmVxEhQKDGRpY2Vfc2xv",
-            "dF9pZBgDIAEoDRIiChpkcmVzc19tYWdpY191bml0X3VuaXF1ZV9pZBgHIAEo",
-            "DRISCgpzY2VwdGVyX2lkGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "Um9ndWVNYWdpY1NjZXB0ZXJEcmVzc0luVW5pdENzUmVxEiIKGmRyZXNzX21h",
+            "Z2ljX3VuaXRfdW5pcXVlX2lkGAsgASgNEhIKCnNjZXB0ZXJfaWQYDyABKA0S",
+            "FAoMZGljZV9zbG90X2lkGA4gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicScepterDressInUnitCsReq), global::EggLink.DanhengServer.Proto.RogueMagicScepterDressInUnitCsReq.Parser, new[]{ "DiceSlotId", "DressMagicUnitUniqueId", "ScepterId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicScepterDressInUnitCsReq), global::EggLink.DanhengServer.Proto.RogueMagicScepterDressInUnitCsReq.Parser, new[]{ "DressMagicUnitUniqueId", "ScepterId", "DiceSlotId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueMagicScepterDressInUnitCsReq(RogueMagicScepterDressInUnitCsReq other) : this() {
-      diceSlotId_ = other.diceSlotId_;
       dressMagicUnitUniqueId_ = other.dressMagicUnitUniqueId_;
       scepterId_ = other.scepterId_;
+      diceSlotId_ = other.diceSlotId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,20 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueMagicScepterDressInUnitCsReq(this);
     }
 
-    /// <summary>Field number for the "dice_slot_id" field.</summary>
-    public const int DiceSlotIdFieldNumber = 3;
-    private uint diceSlotId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DiceSlotId {
-      get { return diceSlotId_; }
-      set {
-        diceSlotId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "dress_magic_unit_unique_id" field.</summary>
-    public const int DressMagicUnitUniqueIdFieldNumber = 7;
+    public const int DressMagicUnitUniqueIdFieldNumber = 11;
     private uint dressMagicUnitUniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "scepter_id" field.</summary>
-    public const int ScepterIdFieldNumber = 13;
+    public const int ScepterIdFieldNumber = 15;
     private uint scepterId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -119,6 +107,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return scepterId_; }
       set {
         scepterId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "dice_slot_id" field.</summary>
+    public const int DiceSlotIdFieldNumber = 14;
+    private uint diceSlotId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DiceSlotId {
+      get { return diceSlotId_; }
+      set {
+        diceSlotId_ = value;
       }
     }
 
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DiceSlotId != other.DiceSlotId) return false;
       if (DressMagicUnitUniqueId != other.DressMagicUnitUniqueId) return false;
       if (ScepterId != other.ScepterId) return false;
+      if (DiceSlotId != other.DiceSlotId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,9 +147,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (DiceSlotId != 0) hash ^= DiceSlotId.GetHashCode();
       if (DressMagicUnitUniqueId != 0) hash ^= DressMagicUnitUniqueId.GetHashCode();
       if (ScepterId != 0) hash ^= ScepterId.GetHashCode();
+      if (DiceSlotId != 0) hash ^= DiceSlotId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,16 +168,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (DiceSlotId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(DiceSlotId);
-      }
       if (DressMagicUnitUniqueId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(88);
         output.WriteUInt32(DressMagicUnitUniqueId);
       }
+      if (DiceSlotId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(DiceSlotId);
+      }
       if (ScepterId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(120);
         output.WriteUInt32(ScepterId);
       }
       if (_unknownFields != null) {
@@ -190,16 +190,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (DiceSlotId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(DiceSlotId);
-      }
       if (DressMagicUnitUniqueId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(88);
         output.WriteUInt32(DressMagicUnitUniqueId);
       }
+      if (DiceSlotId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(DiceSlotId);
+      }
       if (ScepterId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(120);
         output.WriteUInt32(ScepterId);
       }
       if (_unknownFields != null) {
@@ -212,14 +212,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (DiceSlotId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DiceSlotId);
-      }
       if (DressMagicUnitUniqueId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DressMagicUnitUniqueId);
       }
       if (ScepterId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScepterId);
+      }
+      if (DiceSlotId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DiceSlotId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -233,14 +233,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.DiceSlotId != 0) {
-        DiceSlotId = other.DiceSlotId;
-      }
       if (other.DressMagicUnitUniqueId != 0) {
         DressMagicUnitUniqueId = other.DressMagicUnitUniqueId;
       }
       if (other.ScepterId != 0) {
         ScepterId = other.ScepterId;
+      }
+      if (other.DiceSlotId != 0) {
+        DiceSlotId = other.DiceSlotId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            DiceSlotId = input.ReadUInt32();
-            break;
-          }
-          case 56: {
+          case 88: {
             DressMagicUnitUniqueId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 112: {
+            DiceSlotId = input.ReadUInt32();
+            break;
+          }
+          case 120: {
             ScepterId = input.ReadUInt32();
             break;
           }
@@ -284,15 +284,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            DiceSlotId = input.ReadUInt32();
-            break;
-          }
-          case 56: {
+          case 88: {
             DressMagicUnitUniqueId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 112: {
+            DiceSlotId = input.ReadUInt32();
+            break;
+          }
+          case 120: {
             ScepterId = input.ReadUInt32();
             break;
           }

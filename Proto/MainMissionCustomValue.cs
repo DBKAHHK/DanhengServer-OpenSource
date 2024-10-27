@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChxNYWluTWlzc2lvbkN1c3RvbVZhbHVlLnByb3RvGhxNaXNzaW9uQ3VzdG9t",
             "VmFsdWVMaXN0LnByb3RvImUKFk1haW5NaXNzaW9uQ3VzdG9tVmFsdWUSMgoR",
-            "Y3VzdG9tX3ZhbHVlX2xpc3QYASABKAsyFy5NaXNzaW9uQ3VzdG9tVmFsdWVM",
-            "aXN0EhcKD21haW5fbWlzc2lvbl9pZBgGIAEoDUIeqgIbRWdnTGluay5EYW5o",
+            "Y3VzdG9tX3ZhbHVlX2xpc3QYCyABKAsyFy5NaXNzaW9uQ3VzdG9tVmFsdWVM",
+            "aXN0EhcKD21haW5fbWlzc2lvbl9pZBgKIAEoDUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MissionCustomValueListReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "custom_value_list" field.</summary>
-    public const int CustomValueListFieldNumber = 1;
+    public const int CustomValueListFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.MissionCustomValueList customValueList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "main_mission_id" field.</summary>
-    public const int MainMissionIdFieldNumber = 6;
+    public const int MainMissionIdFieldNumber = 10;
     private uint mainMissionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (customValueList_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(CustomValueList);
-      }
       if (MainMissionId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(80);
         output.WriteUInt32(MainMissionId);
+      }
+      if (customValueList_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(CustomValueList);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (customValueList_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(CustomValueList);
-      }
       if (MainMissionId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(80);
         output.WriteUInt32(MainMissionId);
+      }
+      if (customValueList_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(CustomValueList);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 80: {
+            MainMissionId = input.ReadUInt32();
+            break;
+          }
+          case 90: {
             if (customValueList_ == null) {
               CustomValueList = new global::EggLink.DanhengServer.Proto.MissionCustomValueList();
             }
             input.ReadMessage(CustomValueList);
-            break;
-          }
-          case 48: {
-            MainMissionId = input.ReadUInt32();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 80: {
+            MainMissionId = input.ReadUInt32();
+            break;
+          }
+          case 90: {
             if (customValueList_ == null) {
               CustomValueList = new global::EggLink.DanhengServer.Proto.MissionCustomValueList();
             }
             input.ReadMessage(CustomValueList);
-            break;
-          }
-          case 48: {
-            MainMissionId = input.ReadUInt32();
             break;
           }
         }

@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpSb2d1ZVRvdXJuU2Vhc29uSW5mby5wcm90byJDChRSb2d1ZVRvdXJuU2Vh",
-            "c29uSW5mbxIVCg1tYWluX3RvdXJuX2lkGAMgASgNEhQKDHN1Yl90b3Vybl9p",
-            "ZBgOIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "c29uSW5mbxIUCgxzdWJfdG91cm5faWQYDiABKA0SFQoNbWFpbl90b3Vybl9p",
+            "ZBgEIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournSeasonInfo), global::EggLink.DanhengServer.Proto.RogueTournSeasonInfo.Parser, new[]{ "MainTournId", "SubTournId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournSeasonInfo), global::EggLink.DanhengServer.Proto.RogueTournSeasonInfo.Parser, new[]{ "SubTournId", "MainTournId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournSeasonInfo(RogueTournSeasonInfo other) : this() {
-      mainTournId_ = other.mainTournId_;
       subTournId_ = other.subTournId_;
+      mainTournId_ = other.mainTournId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,18 +82,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournSeasonInfo Clone() {
       return new RogueTournSeasonInfo(this);
-    }
-
-    /// <summary>Field number for the "main_tourn_id" field.</summary>
-    public const int MainTournIdFieldNumber = 3;
-    private uint mainTournId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MainTournId {
-      get { return mainTournId_; }
-      set {
-        mainTournId_ = value;
-      }
     }
 
     /// <summary>Field number for the "sub_tourn_id" field.</summary>
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return subTournId_; }
       set {
         subTournId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "main_tourn_id" field.</summary>
+    public const int MainTournIdFieldNumber = 4;
+    private uint mainTournId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint MainTournId {
+      get { return mainTournId_; }
+      set {
+        mainTournId_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MainTournId != other.MainTournId) return false;
       if (SubTournId != other.SubTournId) return false;
+      if (MainTournId != other.MainTournId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MainTournId != 0) hash ^= MainTournId.GetHashCode();
       if (SubTournId != 0) hash ^= SubTournId.GetHashCode();
+      if (MainTournId != 0) hash ^= MainTournId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (MainTournId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteUInt32(MainTournId);
       }
       if (SubTournId != 0) {
@@ -171,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MainTournId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteUInt32(MainTournId);
       }
       if (SubTournId != 0) {
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MainTournId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MainTournId);
-      }
       if (SubTournId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SubTournId);
+      }
+      if (MainTournId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MainTournId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MainTournId != 0) {
-        MainTournId = other.MainTournId;
-      }
       if (other.SubTournId != 0) {
         SubTournId = other.SubTournId;
+      }
+      if (other.MainTournId != 0) {
+        MainTournId = other.MainTournId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,7 +227,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 32: {
             MainTournId = input.ReadUInt32();
             break;
           }
@@ -250,7 +250,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 32: {
             MainTournId = input.ReadUInt32();
             break;
           }

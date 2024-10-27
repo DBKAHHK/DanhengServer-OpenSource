@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBCYXR0bGVSb2d1ZU1hZ2ljRGV0YWlsSW5mby5wcm90bxoeQmF0dGxlUm9n",
-            "dWVNYWdpY0l0ZW1JbmZvLnByb3RvImgKGkJhdHRsZVJvZ3VlTWFnaWNEZXRh",
-            "aWxJbmZvEjsKFmJhdHRsZV9tYWdpY19pdGVtX2luZm8YASABKAsyGS5CYXR0",
-            "bGVSb2d1ZU1hZ2ljSXRlbUluZm9IAEINCgtGQ0FKQ0NHQUlHSEIeqgIbRWdn",
-            "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "dWVNYWdpY0l0ZW1JbmZvLnByb3RvIlcKGkJhdHRsZVJvZ3VlTWFnaWNEZXRh",
+            "aWxJbmZvEjkKFmJhdHRsZV9tYWdpY19pdGVtX2luZm8YASABKAsyGS5CYXR0",
+            "bGVSb2d1ZU1hZ2ljSXRlbUluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BattleRogueMagicItemInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BattleRogueMagicDetailInfo), global::EggLink.DanhengServer.Proto.BattleRogueMagicDetailInfo.Parser, new[]{ "BattleMagicItemInfo" }, new[]{ "FCAJCCGAIGH" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BattleRogueMagicDetailInfo), global::EggLink.DanhengServer.Proto.BattleRogueMagicDetailInfo.Parser, new[]{ "BattleMagicItemInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,12 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BattleRogueMagicDetailInfo(BattleRogueMagicDetailInfo other) : this() {
-      switch (other.FCAJCCGAIGHCase) {
-        case FCAJCCGAIGHOneofCase.BattleMagicItemInfo:
-          BattleMagicItemInfo = other.BattleMagicItemInfo.Clone();
-          break;
-      }
-
+      battleMagicItemInfo_ = other.battleMagicItemInfo_ != null ? other.battleMagicItemInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -91,34 +86,14 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "battle_magic_item_info" field.</summary>
     public const int BattleMagicItemInfoFieldNumber = 1;
+    private global::EggLink.DanhengServer.Proto.BattleRogueMagicItemInfo battleMagicItemInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.BattleRogueMagicItemInfo BattleMagicItemInfo {
-      get { return fCAJCCGAIGHCase_ == FCAJCCGAIGHOneofCase.BattleMagicItemInfo ? (global::EggLink.DanhengServer.Proto.BattleRogueMagicItemInfo) fCAJCCGAIGH_ : null; }
+      get { return battleMagicItemInfo_; }
       set {
-        fCAJCCGAIGH_ = value;
-        fCAJCCGAIGHCase_ = value == null ? FCAJCCGAIGHOneofCase.None : FCAJCCGAIGHOneofCase.BattleMagicItemInfo;
+        battleMagicItemInfo_ = value;
       }
-    }
-
-    private object fCAJCCGAIGH_;
-    /// <summary>Enum of possible cases for the "FCAJCCGAIGH" oneof.</summary>
-    public enum FCAJCCGAIGHOneofCase {
-      None = 0,
-      BattleMagicItemInfo = 1,
-    }
-    private FCAJCCGAIGHOneofCase fCAJCCGAIGHCase_ = FCAJCCGAIGHOneofCase.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public FCAJCCGAIGHOneofCase FCAJCCGAIGHCase {
-      get { return fCAJCCGAIGHCase_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearFCAJCCGAIGH() {
-      fCAJCCGAIGHCase_ = FCAJCCGAIGHOneofCase.None;
-      fCAJCCGAIGH_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -137,7 +112,6 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(BattleMagicItemInfo, other.BattleMagicItemInfo)) return false;
-      if (FCAJCCGAIGHCase != other.FCAJCCGAIGHCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,8 +119,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (fCAJCCGAIGHCase_ == FCAJCCGAIGHOneofCase.BattleMagicItemInfo) hash ^= BattleMagicItemInfo.GetHashCode();
-      hash ^= (int) fCAJCCGAIGHCase_;
+      if (battleMagicItemInfo_ != null) hash ^= BattleMagicItemInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -165,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (fCAJCCGAIGHCase_ == FCAJCCGAIGHOneofCase.BattleMagicItemInfo) {
+      if (battleMagicItemInfo_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(BattleMagicItemInfo);
       }
@@ -179,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (fCAJCCGAIGHCase_ == FCAJCCGAIGHOneofCase.BattleMagicItemInfo) {
+      if (battleMagicItemInfo_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(BattleMagicItemInfo);
       }
@@ -193,7 +166,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (fCAJCCGAIGHCase_ == FCAJCCGAIGHOneofCase.BattleMagicItemInfo) {
+      if (battleMagicItemInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BattleMagicItemInfo);
       }
       if (_unknownFields != null) {
@@ -208,15 +181,12 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      switch (other.FCAJCCGAIGHCase) {
-        case FCAJCCGAIGHOneofCase.BattleMagicItemInfo:
-          if (BattleMagicItemInfo == null) {
-            BattleMagicItemInfo = new global::EggLink.DanhengServer.Proto.BattleRogueMagicItemInfo();
-          }
-          BattleMagicItemInfo.MergeFrom(other.BattleMagicItemInfo);
-          break;
+      if (other.battleMagicItemInfo_ != null) {
+        if (battleMagicItemInfo_ == null) {
+          BattleMagicItemInfo = new global::EggLink.DanhengServer.Proto.BattleRogueMagicItemInfo();
+        }
+        BattleMagicItemInfo.MergeFrom(other.BattleMagicItemInfo);
       }
-
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -233,12 +203,10 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            global::EggLink.DanhengServer.Proto.BattleRogueMagicItemInfo subBuilder = new global::EggLink.DanhengServer.Proto.BattleRogueMagicItemInfo();
-            if (fCAJCCGAIGHCase_ == FCAJCCGAIGHOneofCase.BattleMagicItemInfo) {
-              subBuilder.MergeFrom(BattleMagicItemInfo);
+            if (battleMagicItemInfo_ == null) {
+              BattleMagicItemInfo = new global::EggLink.DanhengServer.Proto.BattleRogueMagicItemInfo();
             }
-            input.ReadMessage(subBuilder);
-            BattleMagicItemInfo = subBuilder;
+            input.ReadMessage(BattleMagicItemInfo);
             break;
           }
         }
@@ -257,12 +225,10 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            global::EggLink.DanhengServer.Proto.BattleRogueMagicItemInfo subBuilder = new global::EggLink.DanhengServer.Proto.BattleRogueMagicItemInfo();
-            if (fCAJCCGAIGHCase_ == FCAJCCGAIGHOneofCase.BattleMagicItemInfo) {
-              subBuilder.MergeFrom(BattleMagicItemInfo);
+            if (battleMagicItemInfo_ == null) {
+              BattleMagicItemInfo = new global::EggLink.DanhengServer.Proto.BattleRogueMagicItemInfo();
             }
-            input.ReadMessage(subBuilder);
-            BattleMagicItemInfo = subBuilder;
+            input.ReadMessage(BattleMagicItemInfo);
             break;
           }
         }

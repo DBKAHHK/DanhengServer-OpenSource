@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxDaGFsbGVuZ2VTdG9yeUJ1ZmZJbmZvLnByb3RvIjwKFkNoYWxsZW5nZVN0",
-            "b3J5QnVmZkluZm8SEAoIYnVmZl90d28YCCABKA0SEAoIYnVmZl9vbmUYDSAB",
+            "b3J5QnVmZkluZm8SEAoIYnVmZl9vbmUYBCABKA0SEAoIYnVmZl90d28YCCAB",
             "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeStoryBuffInfo), global::EggLink.DanhengServer.Proto.ChallengeStoryBuffInfo.Parser, new[]{ "BuffTwo", "BuffOne" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeStoryBuffInfo), global::EggLink.DanhengServer.Proto.ChallengeStoryBuffInfo.Parser, new[]{ "BuffOne", "BuffTwo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChallengeStoryBuffInfo(ChallengeStoryBuffInfo other) : this() {
-      buffTwo_ = other.buffTwo_;
       buffOne_ = other.buffOne_;
+      buffTwo_ = other.buffTwo_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -81,6 +81,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChallengeStoryBuffInfo Clone() {
       return new ChallengeStoryBuffInfo(this);
+    }
+
+    /// <summary>Field number for the "buff_one" field.</summary>
+    public const int BuffOneFieldNumber = 4;
+    private uint buffOne_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint BuffOne {
+      get { return buffOne_; }
+      set {
+        buffOne_ = value;
+      }
     }
 
     /// <summary>Field number for the "buff_two" field.</summary>
@@ -92,18 +104,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return buffTwo_; }
       set {
         buffTwo_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "buff_one" field.</summary>
-    public const int BuffOneFieldNumber = 13;
-    private uint buffOne_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BuffOne {
-      get { return buffOne_; }
-      set {
-        buffOne_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (BuffTwo != other.BuffTwo) return false;
       if (BuffOne != other.BuffOne) return false;
+      if (BuffTwo != other.BuffTwo) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (BuffTwo != 0) hash ^= BuffTwo.GetHashCode();
       if (BuffOne != 0) hash ^= BuffOne.GetHashCode();
+      if (BuffTwo != 0) hash ^= BuffTwo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (BuffOne != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(BuffOne);
+      }
       if (BuffTwo != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(BuffTwo);
-      }
-      if (BuffOne != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(BuffOne);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (BuffOne != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(BuffOne);
+      }
       if (BuffTwo != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(BuffTwo);
-      }
-      if (BuffOne != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(BuffOne);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (BuffTwo != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuffTwo);
-      }
       if (BuffOne != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuffOne);
+      }
+      if (BuffTwo != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuffTwo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.BuffTwo != 0) {
-        BuffTwo = other.BuffTwo;
-      }
       if (other.BuffOne != 0) {
         BuffOne = other.BuffOne;
+      }
+      if (other.BuffTwo != 0) {
+        BuffTwo = other.BuffTwo;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
-            BuffTwo = input.ReadUInt32();
+          case 32: {
+            BuffOne = input.ReadUInt32();
             break;
           }
-          case 104: {
-            BuffOne = input.ReadUInt32();
+          case 64: {
+            BuffTwo = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
-            BuffTwo = input.ReadUInt32();
+          case 32: {
+            BuffOne = input.ReadUInt32();
             break;
           }
-          case 104: {
-            BuffOne = input.ReadUInt32();
+          case 64: {
+            BuffTwo = input.ReadUInt32();
             break;
           }
         }

@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static StartRaidScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRTdGFydFJhaWRTY1JzcC5wcm90bxoRR0FNTkVQT0VHSE0ucHJvdG8iPgoO",
-            "U3RhcnRSYWlkU2NSc3ASDwoHcmV0Y29kZRgGIAEoDRIbCgVzY2VuZRgBIAEo",
-            "CzIMLkdBTU5FUE9FR0hNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
+            "ChRTdGFydFJhaWRTY1JzcC5wcm90bxoRT0lJT0xDUEJMQ0YucHJvdG8iPgoO",
+            "U3RhcnRSYWlkU2NSc3ASDwoHcmV0Y29kZRgCIAEoDRIbCgVzY2VuZRgKIAEo",
+            "CzIMLk9JSU9MQ1BCTENGQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
             "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GAMNEPOEGHMReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OIIOLCPBLCFReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StartRaidScRsp), global::EggLink.DanhengServer.Proto.StartRaidScRsp.Parser, new[]{ "Retcode", "Scene" }, null, null, null, null)
           }));
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 6;
+    public const int RetcodeFieldNumber = 2;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,11 +97,11 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "scene" field.</summary>
-    public const int SceneFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.GAMNEPOEGHM scene_;
+    public const int SceneFieldNumber = 10;
+    private global::EggLink.DanhengServer.Proto.OIIOLCPBLCF scene_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.GAMNEPOEGHM Scene {
+    public global::EggLink.DanhengServer.Proto.OIIOLCPBLCF Scene {
       get { return scene_; }
       set {
         scene_ = value;
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (scene_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Scene);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
+      }
+      if (scene_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(Scene);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (scene_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Scene);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
+      }
+      if (scene_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(Scene);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,7 +211,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.scene_ != null) {
         if (scene_ == null) {
-          Scene = new global::EggLink.DanhengServer.Proto.GAMNEPOEGHM();
+          Scene = new global::EggLink.DanhengServer.Proto.OIIOLCPBLCF();
         }
         Scene.MergeFrom(other.Scene);
       }
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            if (scene_ == null) {
-              Scene = new global::EggLink.DanhengServer.Proto.GAMNEPOEGHM();
-            }
-            input.ReadMessage(Scene);
+          case 16: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 48: {
-            Retcode = input.ReadUInt32();
+          case 82: {
+            if (scene_ == null) {
+              Scene = new global::EggLink.DanhengServer.Proto.OIIOLCPBLCF();
+            }
+            input.ReadMessage(Scene);
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            if (scene_ == null) {
-              Scene = new global::EggLink.DanhengServer.Proto.GAMNEPOEGHM();
-            }
-            input.ReadMessage(Scene);
+          case 16: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 48: {
-            Retcode = input.ReadUInt32();
+          case 82: {
+            if (scene_ == null) {
+              Scene = new global::EggLink.DanhengServer.Proto.OIIOLCPBLCF();
+            }
+            input.ReadMessage(Scene);
             break;
           }
         }

@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZUcmFpblZpc2l0b3JJbmZvLnByb3RvGhhUcmFpblZpc2l0b3JTdGF0dXMu",
-            "cHJvdG8ilwEKEFRyYWluVmlzaXRvckluZm8SEgoKbWlzc2lvbl9pZBgBIAEo",
-            "DRISCgp2aXNpdG9yX2lkGA0gASgNEhMKC0JLSENMTUpLT0lQGA8gAygNEiEK",
-            "GXRvYXN0X2ZpbmlzaF9tYWluX21pc3Npb24YCSABKAgSIwoGc3RhdHVzGAIg",
-            "ASgOMhMuVHJhaW5WaXNpdG9yU3RhdHVzQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
-            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "cHJvdG8iiwEKEFRyYWluVmlzaXRvckluZm8SEwoLREpMS0NIS01OTUkYBSAB",
+            "KA0SEwoLTkdPTUFMR0NKTkYYDCABKAgSIwoGc3RhdHVzGAEgASgOMhMuVHJh",
+            "aW5WaXNpdG9yU3RhdHVzEhMKC0VDRExGRUFOSk1BGAcgAygNEhMKC0FCUExO",
+            "UE1OREFEGAIgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainVisitorStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainVisitorInfo), global::EggLink.DanhengServer.Proto.TrainVisitorInfo.Parser, new[]{ "MissionId", "VisitorId", "BKHCLMJKOIP", "ToastFinishMainMission", "Status" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainVisitorInfo), global::EggLink.DanhengServer.Proto.TrainVisitorInfo.Parser, new[]{ "DJLKCHKMNMI", "NGOMALGCJNF", "Status", "ECDLFEANJMA", "ABPLNPMNDAD" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,11 +75,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainVisitorInfo(TrainVisitorInfo other) : this() {
-      missionId_ = other.missionId_;
-      visitorId_ = other.visitorId_;
-      bKHCLMJKOIP_ = other.bKHCLMJKOIP_.Clone();
-      toastFinishMainMission_ = other.toastFinishMainMission_;
+      dJLKCHKMNMI_ = other.dJLKCHKMNMI_;
+      nGOMALGCJNF_ = other.nGOMALGCJNF_;
       status_ = other.status_;
+      eCDLFEANJMA_ = other.eCDLFEANJMA_.Clone();
+      aBPLNPMNDAD_ = other.aBPLNPMNDAD_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -89,55 +89,32 @@ namespace EggLink.DanhengServer.Proto {
       return new TrainVisitorInfo(this);
     }
 
-    /// <summary>Field number for the "mission_id" field.</summary>
-    public const int MissionIdFieldNumber = 1;
-    private uint missionId_;
+    /// <summary>Field number for the "DJLKCHKMNMI" field.</summary>
+    public const int DJLKCHKMNMIFieldNumber = 5;
+    private uint dJLKCHKMNMI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MissionId {
-      get { return missionId_; }
+    public uint DJLKCHKMNMI {
+      get { return dJLKCHKMNMI_; }
       set {
-        missionId_ = value;
+        dJLKCHKMNMI_ = value;
       }
     }
 
-    /// <summary>Field number for the "visitor_id" field.</summary>
-    public const int VisitorIdFieldNumber = 13;
-    private uint visitorId_;
+    /// <summary>Field number for the "NGOMALGCJNF" field.</summary>
+    public const int NGOMALGCJNFFieldNumber = 12;
+    private bool nGOMALGCJNF_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint VisitorId {
-      get { return visitorId_; }
+    public bool NGOMALGCJNF {
+      get { return nGOMALGCJNF_; }
       set {
-        visitorId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "BKHCLMJKOIP" field.</summary>
-    public const int BKHCLMJKOIPFieldNumber = 15;
-    private static readonly pb::FieldCodec<uint> _repeated_bKHCLMJKOIP_codec
-        = pb::FieldCodec.ForUInt32(122);
-    private readonly pbc::RepeatedField<uint> bKHCLMJKOIP_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> BKHCLMJKOIP {
-      get { return bKHCLMJKOIP_; }
-    }
-
-    /// <summary>Field number for the "toast_finish_main_mission" field.</summary>
-    public const int ToastFinishMainMissionFieldNumber = 9;
-    private bool toastFinishMainMission_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool ToastFinishMainMission {
-      get { return toastFinishMainMission_; }
-      set {
-        toastFinishMainMission_ = value;
+        nGOMALGCJNF_ = value;
       }
     }
 
     /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 2;
+    public const int StatusFieldNumber = 1;
     private global::EggLink.DanhengServer.Proto.TrainVisitorStatus status_ = global::EggLink.DanhengServer.Proto.TrainVisitorStatus.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -145,6 +122,29 @@ namespace EggLink.DanhengServer.Proto {
       get { return status_; }
       set {
         status_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ECDLFEANJMA" field.</summary>
+    public const int ECDLFEANJMAFieldNumber = 7;
+    private static readonly pb::FieldCodec<uint> _repeated_eCDLFEANJMA_codec
+        = pb::FieldCodec.ForUInt32(58);
+    private readonly pbc::RepeatedField<uint> eCDLFEANJMA_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> ECDLFEANJMA {
+      get { return eCDLFEANJMA_; }
+    }
+
+    /// <summary>Field number for the "ABPLNPMNDAD" field.</summary>
+    public const int ABPLNPMNDADFieldNumber = 2;
+    private uint aBPLNPMNDAD_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ABPLNPMNDAD {
+      get { return aBPLNPMNDAD_; }
+      set {
+        aBPLNPMNDAD_ = value;
       }
     }
 
@@ -163,11 +163,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MissionId != other.MissionId) return false;
-      if (VisitorId != other.VisitorId) return false;
-      if(!bKHCLMJKOIP_.Equals(other.bKHCLMJKOIP_)) return false;
-      if (ToastFinishMainMission != other.ToastFinishMainMission) return false;
+      if (DJLKCHKMNMI != other.DJLKCHKMNMI) return false;
+      if (NGOMALGCJNF != other.NGOMALGCJNF) return false;
       if (Status != other.Status) return false;
+      if(!eCDLFEANJMA_.Equals(other.eCDLFEANJMA_)) return false;
+      if (ABPLNPMNDAD != other.ABPLNPMNDAD) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -175,11 +175,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MissionId != 0) hash ^= MissionId.GetHashCode();
-      if (VisitorId != 0) hash ^= VisitorId.GetHashCode();
-      hash ^= bKHCLMJKOIP_.GetHashCode();
-      if (ToastFinishMainMission != false) hash ^= ToastFinishMainMission.GetHashCode();
+      if (DJLKCHKMNMI != 0) hash ^= DJLKCHKMNMI.GetHashCode();
+      if (NGOMALGCJNF != false) hash ^= NGOMALGCJNF.GetHashCode();
       if (Status != global::EggLink.DanhengServer.Proto.TrainVisitorStatus.None) hash ^= Status.GetHashCode();
+      hash ^= eCDLFEANJMA_.GetHashCode();
+      if (ABPLNPMNDAD != 0) hash ^= ABPLNPMNDAD.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -198,23 +198,23 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MissionId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(MissionId);
-      }
       if (Status != global::EggLink.DanhengServer.Proto.TrainVisitorStatus.None) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(8);
         output.WriteEnum((int) Status);
       }
-      if (ToastFinishMainMission != false) {
-        output.WriteRawTag(72);
-        output.WriteBool(ToastFinishMainMission);
+      if (ABPLNPMNDAD != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(ABPLNPMNDAD);
       }
-      if (VisitorId != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(VisitorId);
+      if (DJLKCHKMNMI != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(DJLKCHKMNMI);
       }
-      bKHCLMJKOIP_.WriteTo(output, _repeated_bKHCLMJKOIP_codec);
+      eCDLFEANJMA_.WriteTo(output, _repeated_eCDLFEANJMA_codec);
+      if (NGOMALGCJNF != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(NGOMALGCJNF);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -225,23 +225,23 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MissionId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(MissionId);
-      }
       if (Status != global::EggLink.DanhengServer.Proto.TrainVisitorStatus.None) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(8);
         output.WriteEnum((int) Status);
       }
-      if (ToastFinishMainMission != false) {
-        output.WriteRawTag(72);
-        output.WriteBool(ToastFinishMainMission);
+      if (ABPLNPMNDAD != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(ABPLNPMNDAD);
       }
-      if (VisitorId != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(VisitorId);
+      if (DJLKCHKMNMI != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(DJLKCHKMNMI);
       }
-      bKHCLMJKOIP_.WriteTo(ref output, _repeated_bKHCLMJKOIP_codec);
+      eCDLFEANJMA_.WriteTo(ref output, _repeated_eCDLFEANJMA_codec);
+      if (NGOMALGCJNF != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(NGOMALGCJNF);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -252,18 +252,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MissionId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MissionId);
+      if (DJLKCHKMNMI != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DJLKCHKMNMI);
       }
-      if (VisitorId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(VisitorId);
-      }
-      size += bKHCLMJKOIP_.CalculateSize(_repeated_bKHCLMJKOIP_codec);
-      if (ToastFinishMainMission != false) {
+      if (NGOMALGCJNF != false) {
         size += 1 + 1;
       }
       if (Status != global::EggLink.DanhengServer.Proto.TrainVisitorStatus.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
+      size += eCDLFEANJMA_.CalculateSize(_repeated_eCDLFEANJMA_codec);
+      if (ABPLNPMNDAD != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ABPLNPMNDAD);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -277,18 +277,18 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MissionId != 0) {
-        MissionId = other.MissionId;
+      if (other.DJLKCHKMNMI != 0) {
+        DJLKCHKMNMI = other.DJLKCHKMNMI;
       }
-      if (other.VisitorId != 0) {
-        VisitorId = other.VisitorId;
-      }
-      bKHCLMJKOIP_.Add(other.bKHCLMJKOIP_);
-      if (other.ToastFinishMainMission != false) {
-        ToastFinishMainMission = other.ToastFinishMainMission;
+      if (other.NGOMALGCJNF != false) {
+        NGOMALGCJNF = other.NGOMALGCJNF;
       }
       if (other.Status != global::EggLink.DanhengServer.Proto.TrainVisitorStatus.None) {
         Status = other.Status;
+      }
+      eCDLFEANJMA_.Add(other.eCDLFEANJMA_);
+      if (other.ABPLNPMNDAD != 0) {
+        ABPLNPMNDAD = other.ABPLNPMNDAD;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -306,24 +306,24 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            MissionId = input.ReadUInt32();
-            break;
-          }
-          case 16: {
             Status = (global::EggLink.DanhengServer.Proto.TrainVisitorStatus) input.ReadEnum();
             break;
           }
-          case 72: {
-            ToastFinishMainMission = input.ReadBool();
+          case 16: {
+            ABPLNPMNDAD = input.ReadUInt32();
             break;
           }
-          case 104: {
-            VisitorId = input.ReadUInt32();
+          case 40: {
+            DJLKCHKMNMI = input.ReadUInt32();
             break;
           }
-          case 122:
-          case 120: {
-            bKHCLMJKOIP_.AddEntriesFrom(input, _repeated_bKHCLMJKOIP_codec);
+          case 58:
+          case 56: {
+            eCDLFEANJMA_.AddEntriesFrom(input, _repeated_eCDLFEANJMA_codec);
+            break;
+          }
+          case 96: {
+            NGOMALGCJNF = input.ReadBool();
             break;
           }
         }
@@ -342,24 +342,24 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            MissionId = input.ReadUInt32();
-            break;
-          }
-          case 16: {
             Status = (global::EggLink.DanhengServer.Proto.TrainVisitorStatus) input.ReadEnum();
             break;
           }
-          case 72: {
-            ToastFinishMainMission = input.ReadBool();
+          case 16: {
+            ABPLNPMNDAD = input.ReadUInt32();
             break;
           }
-          case 104: {
-            VisitorId = input.ReadUInt32();
+          case 40: {
+            DJLKCHKMNMI = input.ReadUInt32();
             break;
           }
-          case 122:
-          case 120: {
-            bKHCLMJKOIP_.AddEntriesFrom(ref input, _repeated_bKHCLMJKOIP_codec);
+          case 58:
+          case 56: {
+            eCDLFEANJMA_.AddEntriesFrom(ref input, _repeated_eCDLFEANJMA_codec);
+            break;
+          }
+          case 96: {
+            NGOMALGCJNF = input.ReadBool();
             break;
           }
         }

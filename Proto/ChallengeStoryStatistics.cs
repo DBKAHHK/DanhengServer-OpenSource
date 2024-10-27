@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch5DaGFsbGVuZ2VTdG9yeVN0YXRpc3RpY3MucHJvdG8aIkNoYWxsZW5nZVN0",
             "b3J5U3RhZ2VUZXJ0aW5nZ2kucHJvdG8iZQoYQ2hhbGxlbmdlU3RvcnlTdGF0",
-            "aXN0aWNzEhEKCXJlY29yZF9pZBgFIAEoDRI2Cg9zdGFnZV90ZXJ0aW5nZ2kY",
-            "AyABKAsyHS5DaGFsbGVuZ2VTdG9yeVN0YWdlVGVydGluZ2dpQh6qAhtFZ2dM",
+            "aXN0aWNzEjYKD3N0YWdlX3RlcnRpbmdnaRgDIAEoCzIdLkNoYWxsZW5nZVN0",
+            "b3J5U3RhZ2VUZXJ0aW5nZ2kSEQoJcmVjb3JkX2lkGAQgASgNQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeStoryStageTertinggiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeStoryStatistics), global::EggLink.DanhengServer.Proto.ChallengeStoryStatistics.Parser, new[]{ "RecordId", "StageTertinggi" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeStoryStatistics), global::EggLink.DanhengServer.Proto.ChallengeStoryStatistics.Parser, new[]{ "StageTertinggi", "RecordId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChallengeStoryStatistics(ChallengeStoryStatistics other) : this() {
-      recordId_ = other.recordId_;
       stageTertinggi_ = other.stageTertinggi_ != null ? other.stageTertinggi_.Clone() : null;
+      recordId_ = other.recordId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,18 +83,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChallengeStoryStatistics Clone() {
       return new ChallengeStoryStatistics(this);
-    }
-
-    /// <summary>Field number for the "record_id" field.</summary>
-    public const int RecordIdFieldNumber = 5;
-    private uint recordId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint RecordId {
-      get { return recordId_; }
-      set {
-        recordId_ = value;
-      }
     }
 
     /// <summary>Field number for the "stage_tertinggi" field.</summary>
@@ -106,6 +94,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return stageTertinggi_; }
       set {
         stageTertinggi_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "record_id" field.</summary>
+    public const int RecordIdFieldNumber = 4;
+    private uint recordId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RecordId {
+      get { return recordId_; }
+      set {
+        recordId_ = value;
       }
     }
 
@@ -124,8 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (RecordId != other.RecordId) return false;
       if (!object.Equals(StageTertinggi, other.StageTertinggi)) return false;
+      if (RecordId != other.RecordId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (RecordId != 0) hash ^= RecordId.GetHashCode();
       if (stageTertinggi_ != null) hash ^= StageTertinggi.GetHashCode();
+      if (RecordId != 0) hash ^= RecordId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -158,7 +158,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteMessage(StageTertinggi);
       }
       if (RecordId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteUInt32(RecordId);
       }
       if (_unknownFields != null) {
@@ -176,7 +176,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteMessage(StageTertinggi);
       }
       if (RecordId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteUInt32(RecordId);
       }
       if (_unknownFields != null) {
@@ -189,11 +189,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (RecordId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RecordId);
-      }
       if (stageTertinggi_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StageTertinggi);
+      }
+      if (RecordId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RecordId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -207,14 +207,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.RecordId != 0) {
-        RecordId = other.RecordId;
-      }
       if (other.stageTertinggi_ != null) {
         if (stageTertinggi_ == null) {
           StageTertinggi = new global::EggLink.DanhengServer.Proto.ChallengeStoryStageTertinggi();
         }
         StageTertinggi.MergeFrom(other.StageTertinggi);
+      }
+      if (other.RecordId != 0) {
+        RecordId = other.RecordId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -238,7 +238,7 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(StageTertinggi);
             break;
           }
-          case 40: {
+          case 32: {
             RecordId = input.ReadUInt32();
             break;
           }
@@ -264,7 +264,7 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(StageTertinggi);
             break;
           }
-          case 40: {
+          case 32: {
             RecordId = input.ReadUInt32();
             break;
           }

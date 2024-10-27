@@ -24,24 +24,23 @@ namespace EggLink.DanhengServer.Proto {
     static RogueCommonBuffSelectInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9Sb2d1ZUNvbW1vbkJ1ZmZTZWxlY3RJbmZvLnByb3RvGiVSb2d1ZUNvbW1v",
-            "bkJ1ZmZTZWxlY3RTb3VyY2VUeXBlLnByb3RvGhVSb2d1ZUNvbW1vbkJ1ZmYu",
-            "cHJvdG8aEkl0ZW1Db3N0RGF0YS5wcm90byLCAwoZUm9ndWVDb21tb25CdWZm",
-            "U2VsZWN0SW5mbxIcChRmaXJzdF9idWZmX3R5cGVfbGlzdBgEIAMoDRIXCg9y",
-            "b2xsX2J1ZmZfY291bnQYDyABKA0SGwoTcm9sbF9idWZmX21heF9jb3VudBgI",
-            "IAEoDRIQCghjYW5fcm9sbBgDIAEoCBI1Cgtzb3VyY2VfdHlwZRgFIAEoDjIg",
-            "LlJvZ3VlQ29tbW9uQnVmZlNlbGVjdFNvdXJjZVR5cGUSFgoOc291cmNlX2hp",
-            "bnRfaWQYDiABKA0SHAoUcm9sbF9idWZmX2ZyZWVfY291bnQYByABKA0SJAoc",
-            "aGFuZGJvb2tfdW5sb2NrX2J1ZmZfaWRfbGlzdBgJIAMoDRIYChBzb3VyY2Vf",
-            "Y3VyX2NvdW50GAIgASgNEhoKEnNvdXJjZV90b3RhbF9jb3VudBgKIAEoDRIq",
-            "ChBzZWxlY3RfYnVmZl9saXN0GA0gAygLMhAuUm9ndWVDb21tb25CdWZmEh4K",
-            "FmNlcnRhaW5fc2VsZWN0X2J1ZmZfaWQYCyABKA0SKgoTcm9sbF9idWZmX2Nv",
-            "c3RfZGF0YRgBIAEoCzINLkl0ZW1Db3N0RGF0YUIeqgIbRWdnTGluay5EYW5o",
-            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Ch9Sb2d1ZUNvbW1vbkJ1ZmZTZWxlY3RJbmZvLnByb3RvGhJJdGVtQ29zdERh",
+            "dGEucHJvdG8aFVJvZ3VlQ29tbW9uQnVmZi5wcm90bxolUm9ndWVDb21tb25C",
+            "dWZmU2VsZWN0U291cmNlVHlwZS5wcm90byKjAwoZUm9ndWVDb21tb25CdWZm",
+            "U2VsZWN0SW5mbxIoCg5TZWxlY3RCdWZmTGlzdBgDIAMoCzIQLlJvZ3VlQ29t",
+            "bW9uQnVmZhIPCgdDYW5Sb2xsGAsgASgIEhkKEUZpcnN0QnVmZlR5cGVMaXN0",
+            "GAcgAygNEhUKDVJvbGxCdWZmQ291bnQYBCABKA0SFAoMU291cmNlSGludElk",
+            "GAggASgNEicKEFJvbGxCdWZmQ29zdERhdGEYBSABKAsyDS5JdGVtQ29zdERh",
+            "dGESGAoQUm9sbEJ1ZmZNYXhDb3VudBgBIAEoDRIYChBTb3VyY2VUb3RhbENv",
+            "dW50GA4gASgNEjQKClNvdXJjZVR5cGUYDCABKA4yIC5Sb2d1ZUNvbW1vbkJ1",
+            "ZmZTZWxlY3RTb3VyY2VUeXBlEhYKDlNvdXJjZUN1ckNvdW50GAYgASgNEhkK",
+            "EVJvbGxCdWZmRnJlZUNvdW50GA0gASgNEhsKE0NlcnRhaW5TZWxlY3RCdWZm",
+            "SWQYAiABKA0SIAoYSGFuZGJvb2tVbmxvY2tCdWZmSWRMaXN0GA8gAygNQh6q",
+            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonBuffReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonBuffReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectInfo), global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectInfo.Parser, new[]{ "FirstBuffTypeList", "RollBuffCount", "RollBuffMaxCount", "CanRoll", "SourceType", "SourceHintId", "RollBuffFreeCount", "HandbookUnlockBuffIdList", "SourceCurCount", "SourceTotalCount", "SelectBuffList", "CertainSelectBuffId", "RollBuffCostData" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectInfo), global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectInfo.Parser, new[]{ "SelectBuffList", "CanRoll", "FirstBuffTypeList", "RollBuffCount", "SourceHintId", "RollBuffCostData", "RollBuffMaxCount", "SourceTotalCount", "SourceType", "SourceCurCount", "RollBuffFreeCount", "CertainSelectBuffId", "HandbookUnlockBuffIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -83,19 +82,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueCommonBuffSelectInfo(RogueCommonBuffSelectInfo other) : this() {
+      selectBuffList_ = other.selectBuffList_.Clone();
+      canRoll_ = other.canRoll_;
       firstBuffTypeList_ = other.firstBuffTypeList_.Clone();
       rollBuffCount_ = other.rollBuffCount_;
-      rollBuffMaxCount_ = other.rollBuffMaxCount_;
-      canRoll_ = other.canRoll_;
-      sourceType_ = other.sourceType_;
       sourceHintId_ = other.sourceHintId_;
-      rollBuffFreeCount_ = other.rollBuffFreeCount_;
-      handbookUnlockBuffIdList_ = other.handbookUnlockBuffIdList_.Clone();
-      sourceCurCount_ = other.sourceCurCount_;
-      sourceTotalCount_ = other.sourceTotalCount_;
-      selectBuffList_ = other.selectBuffList_.Clone();
-      certainSelectBuffId_ = other.certainSelectBuffId_;
       rollBuffCostData_ = other.rollBuffCostData_ != null ? other.rollBuffCostData_.Clone() : null;
+      rollBuffMaxCount_ = other.rollBuffMaxCount_;
+      sourceTotalCount_ = other.sourceTotalCount_;
+      sourceType_ = other.sourceType_;
+      sourceCurCount_ = other.sourceCurCount_;
+      rollBuffFreeCount_ = other.rollBuffFreeCount_;
+      certainSelectBuffId_ = other.certainSelectBuffId_;
+      handbookUnlockBuffIdList_ = other.handbookUnlockBuffIdList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -105,43 +104,19 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueCommonBuffSelectInfo(this);
     }
 
-    /// <summary>Field number for the "first_buff_type_list" field.</summary>
-    public const int FirstBuffTypeListFieldNumber = 4;
-    private static readonly pb::FieldCodec<uint> _repeated_firstBuffTypeList_codec
-        = pb::FieldCodec.ForUInt32(34);
-    private readonly pbc::RepeatedField<uint> firstBuffTypeList_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "SelectBuffList" field.</summary>
+    public const int SelectBuffListFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueCommonBuff> _repeated_selectBuffList_codec
+        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.RogueCommonBuff.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonBuff> selectBuffList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonBuff>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> FirstBuffTypeList {
-      get { return firstBuffTypeList_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonBuff> SelectBuffList {
+      get { return selectBuffList_; }
     }
 
-    /// <summary>Field number for the "roll_buff_count" field.</summary>
-    public const int RollBuffCountFieldNumber = 15;
-    private uint rollBuffCount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint RollBuffCount {
-      get { return rollBuffCount_; }
-      set {
-        rollBuffCount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "roll_buff_max_count" field.</summary>
-    public const int RollBuffMaxCountFieldNumber = 8;
-    private uint rollBuffMaxCount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint RollBuffMaxCount {
-      get { return rollBuffMaxCount_; }
-      set {
-        rollBuffMaxCount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "can_roll" field.</summary>
-    public const int CanRollFieldNumber = 3;
+    /// <summary>Field number for the "CanRoll" field.</summary>
+    public const int CanRollFieldNumber = 11;
     private bool canRoll_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,20 +127,31 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "source_type" field.</summary>
-    public const int SourceTypeFieldNumber = 5;
-    private global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceType sourceType_ = global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceType.None;
+    /// <summary>Field number for the "FirstBuffTypeList" field.</summary>
+    public const int FirstBuffTypeListFieldNumber = 7;
+    private static readonly pb::FieldCodec<uint> _repeated_firstBuffTypeList_codec
+        = pb::FieldCodec.ForUInt32(58);
+    private readonly pbc::RepeatedField<uint> firstBuffTypeList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceType SourceType {
-      get { return sourceType_; }
+    public pbc::RepeatedField<uint> FirstBuffTypeList {
+      get { return firstBuffTypeList_; }
+    }
+
+    /// <summary>Field number for the "RollBuffCount" field.</summary>
+    public const int RollBuffCountFieldNumber = 4;
+    private uint rollBuffCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RollBuffCount {
+      get { return rollBuffCount_; }
       set {
-        sourceType_ = value;
+        rollBuffCount_ = value;
       }
     }
 
-    /// <summary>Field number for the "source_hint_id" field.</summary>
-    public const int SourceHintIdFieldNumber = 14;
+    /// <summary>Field number for the "SourceHintId" field.</summary>
+    public const int SourceHintIdFieldNumber = 8;
     private uint sourceHintId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -176,43 +162,32 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "roll_buff_free_count" field.</summary>
-    public const int RollBuffFreeCountFieldNumber = 7;
-    private uint rollBuffFreeCount_;
+    /// <summary>Field number for the "RollBuffCostData" field.</summary>
+    public const int RollBuffCostDataFieldNumber = 5;
+    private global::EggLink.DanhengServer.Proto.ItemCostData rollBuffCostData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint RollBuffFreeCount {
-      get { return rollBuffFreeCount_; }
+    public global::EggLink.DanhengServer.Proto.ItemCostData RollBuffCostData {
+      get { return rollBuffCostData_; }
       set {
-        rollBuffFreeCount_ = value;
+        rollBuffCostData_ = value;
       }
     }
 
-    /// <summary>Field number for the "handbook_unlock_buff_id_list" field.</summary>
-    public const int HandbookUnlockBuffIdListFieldNumber = 9;
-    private static readonly pb::FieldCodec<uint> _repeated_handbookUnlockBuffIdList_codec
-        = pb::FieldCodec.ForUInt32(74);
-    private readonly pbc::RepeatedField<uint> handbookUnlockBuffIdList_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "RollBuffMaxCount" field.</summary>
+    public const int RollBuffMaxCountFieldNumber = 1;
+    private uint rollBuffMaxCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> HandbookUnlockBuffIdList {
-      get { return handbookUnlockBuffIdList_; }
-    }
-
-    /// <summary>Field number for the "source_cur_count" field.</summary>
-    public const int SourceCurCountFieldNumber = 2;
-    private uint sourceCurCount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SourceCurCount {
-      get { return sourceCurCount_; }
+    public uint RollBuffMaxCount {
+      get { return rollBuffMaxCount_; }
       set {
-        sourceCurCount_ = value;
+        rollBuffMaxCount_ = value;
       }
     }
 
-    /// <summary>Field number for the "source_total_count" field.</summary>
-    public const int SourceTotalCountFieldNumber = 10;
+    /// <summary>Field number for the "SourceTotalCount" field.</summary>
+    public const int SourceTotalCountFieldNumber = 14;
     private uint sourceTotalCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -223,19 +198,44 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "select_buff_list" field.</summary>
-    public const int SelectBuffListFieldNumber = 13;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueCommonBuff> _repeated_selectBuffList_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.RogueCommonBuff.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonBuff> selectBuffList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonBuff>();
+    /// <summary>Field number for the "SourceType" field.</summary>
+    public const int SourceTypeFieldNumber = 12;
+    private global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceType sourceType_ = global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonBuff> SelectBuffList {
-      get { return selectBuffList_; }
+    public global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceType SourceType {
+      get { return sourceType_; }
+      set {
+        sourceType_ = value;
+      }
     }
 
-    /// <summary>Field number for the "certain_select_buff_id" field.</summary>
-    public const int CertainSelectBuffIdFieldNumber = 11;
+    /// <summary>Field number for the "SourceCurCount" field.</summary>
+    public const int SourceCurCountFieldNumber = 6;
+    private uint sourceCurCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SourceCurCount {
+      get { return sourceCurCount_; }
+      set {
+        sourceCurCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "RollBuffFreeCount" field.</summary>
+    public const int RollBuffFreeCountFieldNumber = 13;
+    private uint rollBuffFreeCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RollBuffFreeCount {
+      get { return rollBuffFreeCount_; }
+      set {
+        rollBuffFreeCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "CertainSelectBuffId" field.</summary>
+    public const int CertainSelectBuffIdFieldNumber = 2;
     private uint certainSelectBuffId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -246,16 +246,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "roll_buff_cost_data" field.</summary>
-    public const int RollBuffCostDataFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.ItemCostData rollBuffCostData_;
+    /// <summary>Field number for the "HandbookUnlockBuffIdList" field.</summary>
+    public const int HandbookUnlockBuffIdListFieldNumber = 15;
+    private static readonly pb::FieldCodec<uint> _repeated_handbookUnlockBuffIdList_codec
+        = pb::FieldCodec.ForUInt32(122);
+    private readonly pbc::RepeatedField<uint> handbookUnlockBuffIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ItemCostData RollBuffCostData {
-      get { return rollBuffCostData_; }
-      set {
-        rollBuffCostData_ = value;
-      }
+    public pbc::RepeatedField<uint> HandbookUnlockBuffIdList {
+      get { return handbookUnlockBuffIdList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -273,19 +272,19 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if(!selectBuffList_.Equals(other.selectBuffList_)) return false;
+      if (CanRoll != other.CanRoll) return false;
       if(!firstBuffTypeList_.Equals(other.firstBuffTypeList_)) return false;
       if (RollBuffCount != other.RollBuffCount) return false;
-      if (RollBuffMaxCount != other.RollBuffMaxCount) return false;
-      if (CanRoll != other.CanRoll) return false;
-      if (SourceType != other.SourceType) return false;
       if (SourceHintId != other.SourceHintId) return false;
-      if (RollBuffFreeCount != other.RollBuffFreeCount) return false;
-      if(!handbookUnlockBuffIdList_.Equals(other.handbookUnlockBuffIdList_)) return false;
-      if (SourceCurCount != other.SourceCurCount) return false;
-      if (SourceTotalCount != other.SourceTotalCount) return false;
-      if(!selectBuffList_.Equals(other.selectBuffList_)) return false;
-      if (CertainSelectBuffId != other.CertainSelectBuffId) return false;
       if (!object.Equals(RollBuffCostData, other.RollBuffCostData)) return false;
+      if (RollBuffMaxCount != other.RollBuffMaxCount) return false;
+      if (SourceTotalCount != other.SourceTotalCount) return false;
+      if (SourceType != other.SourceType) return false;
+      if (SourceCurCount != other.SourceCurCount) return false;
+      if (RollBuffFreeCount != other.RollBuffFreeCount) return false;
+      if (CertainSelectBuffId != other.CertainSelectBuffId) return false;
+      if(!handbookUnlockBuffIdList_.Equals(other.handbookUnlockBuffIdList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -293,19 +292,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      hash ^= selectBuffList_.GetHashCode();
+      if (CanRoll != false) hash ^= CanRoll.GetHashCode();
       hash ^= firstBuffTypeList_.GetHashCode();
       if (RollBuffCount != 0) hash ^= RollBuffCount.GetHashCode();
-      if (RollBuffMaxCount != 0) hash ^= RollBuffMaxCount.GetHashCode();
-      if (CanRoll != false) hash ^= CanRoll.GetHashCode();
-      if (SourceType != global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceType.None) hash ^= SourceType.GetHashCode();
       if (SourceHintId != 0) hash ^= SourceHintId.GetHashCode();
-      if (RollBuffFreeCount != 0) hash ^= RollBuffFreeCount.GetHashCode();
-      hash ^= handbookUnlockBuffIdList_.GetHashCode();
-      if (SourceCurCount != 0) hash ^= SourceCurCount.GetHashCode();
-      if (SourceTotalCount != 0) hash ^= SourceTotalCount.GetHashCode();
-      hash ^= selectBuffList_.GetHashCode();
-      if (CertainSelectBuffId != 0) hash ^= CertainSelectBuffId.GetHashCode();
       if (rollBuffCostData_ != null) hash ^= RollBuffCostData.GetHashCode();
+      if (RollBuffMaxCount != 0) hash ^= RollBuffMaxCount.GetHashCode();
+      if (SourceTotalCount != 0) hash ^= SourceTotalCount.GetHashCode();
+      if (SourceType != global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceType.None) hash ^= SourceType.GetHashCode();
+      if (SourceCurCount != 0) hash ^= SourceCurCount.GetHashCode();
+      if (RollBuffFreeCount != 0) hash ^= RollBuffFreeCount.GetHashCode();
+      if (CertainSelectBuffId != 0) hash ^= CertainSelectBuffId.GetHashCode();
+      hash ^= handbookUnlockBuffIdList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -324,49 +323,49 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (rollBuffCostData_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(RollBuffCostData);
-      }
-      if (SourceCurCount != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(SourceCurCount);
-      }
-      if (CanRoll != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(CanRoll);
-      }
-      firstBuffTypeList_.WriteTo(output, _repeated_firstBuffTypeList_codec);
-      if (SourceType != global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceType.None) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) SourceType);
-      }
-      if (RollBuffFreeCount != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(RollBuffFreeCount);
-      }
       if (RollBuffMaxCount != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(8);
         output.WriteUInt32(RollBuffMaxCount);
       }
-      handbookUnlockBuffIdList_.WriteTo(output, _repeated_handbookUnlockBuffIdList_codec);
-      if (SourceTotalCount != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(SourceTotalCount);
-      }
       if (CertainSelectBuffId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(16);
         output.WriteUInt32(CertainSelectBuffId);
       }
       selectBuffList_.WriteTo(output, _repeated_selectBuffList_codec);
-      if (SourceHintId != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(SourceHintId);
-      }
       if (RollBuffCount != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(32);
         output.WriteUInt32(RollBuffCount);
       }
+      if (rollBuffCostData_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(RollBuffCostData);
+      }
+      if (SourceCurCount != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(SourceCurCount);
+      }
+      firstBuffTypeList_.WriteTo(output, _repeated_firstBuffTypeList_codec);
+      if (SourceHintId != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(SourceHintId);
+      }
+      if (CanRoll != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(CanRoll);
+      }
+      if (SourceType != global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceType.None) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) SourceType);
+      }
+      if (RollBuffFreeCount != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(RollBuffFreeCount);
+      }
+      if (SourceTotalCount != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(SourceTotalCount);
+      }
+      handbookUnlockBuffIdList_.WriteTo(output, _repeated_handbookUnlockBuffIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -377,49 +376,49 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (rollBuffCostData_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(RollBuffCostData);
-      }
-      if (SourceCurCount != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(SourceCurCount);
-      }
-      if (CanRoll != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(CanRoll);
-      }
-      firstBuffTypeList_.WriteTo(ref output, _repeated_firstBuffTypeList_codec);
-      if (SourceType != global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceType.None) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) SourceType);
-      }
-      if (RollBuffFreeCount != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(RollBuffFreeCount);
-      }
       if (RollBuffMaxCount != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(8);
         output.WriteUInt32(RollBuffMaxCount);
       }
-      handbookUnlockBuffIdList_.WriteTo(ref output, _repeated_handbookUnlockBuffIdList_codec);
-      if (SourceTotalCount != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(SourceTotalCount);
-      }
       if (CertainSelectBuffId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(16);
         output.WriteUInt32(CertainSelectBuffId);
       }
       selectBuffList_.WriteTo(ref output, _repeated_selectBuffList_codec);
-      if (SourceHintId != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(SourceHintId);
-      }
       if (RollBuffCount != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(32);
         output.WriteUInt32(RollBuffCount);
       }
+      if (rollBuffCostData_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(RollBuffCostData);
+      }
+      if (SourceCurCount != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(SourceCurCount);
+      }
+      firstBuffTypeList_.WriteTo(ref output, _repeated_firstBuffTypeList_codec);
+      if (SourceHintId != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(SourceHintId);
+      }
+      if (CanRoll != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(CanRoll);
+      }
+      if (SourceType != global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceType.None) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) SourceType);
+      }
+      if (RollBuffFreeCount != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(RollBuffFreeCount);
+      }
+      if (SourceTotalCount != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(SourceTotalCount);
+      }
+      handbookUnlockBuffIdList_.WriteTo(ref output, _repeated_handbookUnlockBuffIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -430,39 +429,39 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += selectBuffList_.CalculateSize(_repeated_selectBuffList_codec);
+      if (CanRoll != false) {
+        size += 1 + 1;
+      }
       size += firstBuffTypeList_.CalculateSize(_repeated_firstBuffTypeList_codec);
       if (RollBuffCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RollBuffCount);
       }
-      if (RollBuffMaxCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RollBuffMaxCount);
-      }
-      if (CanRoll != false) {
-        size += 1 + 1;
-      }
-      if (SourceType != global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceType.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SourceType);
-      }
       if (SourceHintId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SourceHintId);
-      }
-      if (RollBuffFreeCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RollBuffFreeCount);
-      }
-      size += handbookUnlockBuffIdList_.CalculateSize(_repeated_handbookUnlockBuffIdList_codec);
-      if (SourceCurCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SourceCurCount);
-      }
-      if (SourceTotalCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SourceTotalCount);
-      }
-      size += selectBuffList_.CalculateSize(_repeated_selectBuffList_codec);
-      if (CertainSelectBuffId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CertainSelectBuffId);
       }
       if (rollBuffCostData_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RollBuffCostData);
       }
+      if (RollBuffMaxCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RollBuffMaxCount);
+      }
+      if (SourceTotalCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SourceTotalCount);
+      }
+      if (SourceType != global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceType.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SourceType);
+      }
+      if (SourceCurCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SourceCurCount);
+      }
+      if (RollBuffFreeCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RollBuffFreeCount);
+      }
+      if (CertainSelectBuffId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CertainSelectBuffId);
+      }
+      size += handbookUnlockBuffIdList_.CalculateSize(_repeated_handbookUnlockBuffIdList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -475,35 +474,16 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      selectBuffList_.Add(other.selectBuffList_);
+      if (other.CanRoll != false) {
+        CanRoll = other.CanRoll;
+      }
       firstBuffTypeList_.Add(other.firstBuffTypeList_);
       if (other.RollBuffCount != 0) {
         RollBuffCount = other.RollBuffCount;
       }
-      if (other.RollBuffMaxCount != 0) {
-        RollBuffMaxCount = other.RollBuffMaxCount;
-      }
-      if (other.CanRoll != false) {
-        CanRoll = other.CanRoll;
-      }
-      if (other.SourceType != global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceType.None) {
-        SourceType = other.SourceType;
-      }
       if (other.SourceHintId != 0) {
         SourceHintId = other.SourceHintId;
-      }
-      if (other.RollBuffFreeCount != 0) {
-        RollBuffFreeCount = other.RollBuffFreeCount;
-      }
-      handbookUnlockBuffIdList_.Add(other.handbookUnlockBuffIdList_);
-      if (other.SourceCurCount != 0) {
-        SourceCurCount = other.SourceCurCount;
-      }
-      if (other.SourceTotalCount != 0) {
-        SourceTotalCount = other.SourceTotalCount;
-      }
-      selectBuffList_.Add(other.selectBuffList_);
-      if (other.CertainSelectBuffId != 0) {
-        CertainSelectBuffId = other.CertainSelectBuffId;
       }
       if (other.rollBuffCostData_ != null) {
         if (rollBuffCostData_ == null) {
@@ -511,6 +491,25 @@ namespace EggLink.DanhengServer.Proto {
         }
         RollBuffCostData.MergeFrom(other.RollBuffCostData);
       }
+      if (other.RollBuffMaxCount != 0) {
+        RollBuffMaxCount = other.RollBuffMaxCount;
+      }
+      if (other.SourceTotalCount != 0) {
+        SourceTotalCount = other.SourceTotalCount;
+      }
+      if (other.SourceType != global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceType.None) {
+        SourceType = other.SourceType;
+      }
+      if (other.SourceCurCount != 0) {
+        SourceCurCount = other.SourceCurCount;
+      }
+      if (other.RollBuffFreeCount != 0) {
+        RollBuffFreeCount = other.RollBuffFreeCount;
+      }
+      if (other.CertainSelectBuffId != 0) {
+        CertainSelectBuffId = other.CertainSelectBuffId;
+      }
+      handbookUnlockBuffIdList_.Add(other.handbookUnlockBuffIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -526,61 +525,61 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 8: {
+            RollBuffMaxCount = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            CertainSelectBuffId = input.ReadUInt32();
+            break;
+          }
+          case 26: {
+            selectBuffList_.AddEntriesFrom(input, _repeated_selectBuffList_codec);
+            break;
+          }
+          case 32: {
+            RollBuffCount = input.ReadUInt32();
+            break;
+          }
+          case 42: {
             if (rollBuffCostData_ == null) {
               RollBuffCostData = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
             input.ReadMessage(RollBuffCostData);
             break;
           }
-          case 16: {
+          case 48: {
             SourceCurCount = input.ReadUInt32();
             break;
           }
-          case 24: {
-            CanRoll = input.ReadBool();
-            break;
-          }
-          case 34:
-          case 32: {
+          case 58:
+          case 56: {
             firstBuffTypeList_.AddEntriesFrom(input, _repeated_firstBuffTypeList_codec);
             break;
           }
-          case 40: {
-            SourceType = (global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceType) input.ReadEnum();
-            break;
-          }
-          case 56: {
-            RollBuffFreeCount = input.ReadUInt32();
-            break;
-          }
           case 64: {
-            RollBuffMaxCount = input.ReadUInt32();
-            break;
-          }
-          case 74:
-          case 72: {
-            handbookUnlockBuffIdList_.AddEntriesFrom(input, _repeated_handbookUnlockBuffIdList_codec);
-            break;
-          }
-          case 80: {
-            SourceTotalCount = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            CertainSelectBuffId = input.ReadUInt32();
-            break;
-          }
-          case 106: {
-            selectBuffList_.AddEntriesFrom(input, _repeated_selectBuffList_codec);
-            break;
-          }
-          case 112: {
             SourceHintId = input.ReadUInt32();
             break;
           }
+          case 88: {
+            CanRoll = input.ReadBool();
+            break;
+          }
+          case 96: {
+            SourceType = (global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceType) input.ReadEnum();
+            break;
+          }
+          case 104: {
+            RollBuffFreeCount = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            SourceTotalCount = input.ReadUInt32();
+            break;
+          }
+          case 122:
           case 120: {
-            RollBuffCount = input.ReadUInt32();
+            handbookUnlockBuffIdList_.AddEntriesFrom(input, _repeated_handbookUnlockBuffIdList_codec);
             break;
           }
         }
@@ -598,61 +597,61 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 8: {
+            RollBuffMaxCount = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            CertainSelectBuffId = input.ReadUInt32();
+            break;
+          }
+          case 26: {
+            selectBuffList_.AddEntriesFrom(ref input, _repeated_selectBuffList_codec);
+            break;
+          }
+          case 32: {
+            RollBuffCount = input.ReadUInt32();
+            break;
+          }
+          case 42: {
             if (rollBuffCostData_ == null) {
               RollBuffCostData = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
             input.ReadMessage(RollBuffCostData);
             break;
           }
-          case 16: {
+          case 48: {
             SourceCurCount = input.ReadUInt32();
             break;
           }
-          case 24: {
-            CanRoll = input.ReadBool();
-            break;
-          }
-          case 34:
-          case 32: {
+          case 58:
+          case 56: {
             firstBuffTypeList_.AddEntriesFrom(ref input, _repeated_firstBuffTypeList_codec);
             break;
           }
-          case 40: {
-            SourceType = (global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceType) input.ReadEnum();
-            break;
-          }
-          case 56: {
-            RollBuffFreeCount = input.ReadUInt32();
-            break;
-          }
           case 64: {
-            RollBuffMaxCount = input.ReadUInt32();
-            break;
-          }
-          case 74:
-          case 72: {
-            handbookUnlockBuffIdList_.AddEntriesFrom(ref input, _repeated_handbookUnlockBuffIdList_codec);
-            break;
-          }
-          case 80: {
-            SourceTotalCount = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            CertainSelectBuffId = input.ReadUInt32();
-            break;
-          }
-          case 106: {
-            selectBuffList_.AddEntriesFrom(ref input, _repeated_selectBuffList_codec);
-            break;
-          }
-          case 112: {
             SourceHintId = input.ReadUInt32();
             break;
           }
+          case 88: {
+            CanRoll = input.ReadBool();
+            break;
+          }
+          case 96: {
+            SourceType = (global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceType) input.ReadEnum();
+            break;
+          }
+          case 104: {
+            RollBuffFreeCount = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            SourceTotalCount = input.ReadUInt32();
+            break;
+          }
+          case 122:
           case 120: {
-            RollBuffCount = input.ReadUInt32();
+            handbookUnlockBuffIdList_.AddEntriesFrom(ref input, _repeated_handbookUnlockBuffIdList_codec);
             break;
           }
         }

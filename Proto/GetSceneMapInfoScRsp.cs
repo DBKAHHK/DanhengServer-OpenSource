@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpHZXRTY2VuZU1hcEluZm9TY1JzcC5wcm90bxoSU2NlbmVNYXBJbmZvLnBy",
-            "b3RvImMKFEdldFNjZW5lTWFwSW5mb1NjUnNwEhMKC0ZMRVBCT01IQ05FGA8g",
-            "ASgIEg8KB3JldGNvZGUYAyABKA0SJQoOc2NlbmVfbWFwX2luZm8YBSADKAsy",
-            "DS5TY2VuZU1hcEluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "b3RvImMKFEdldFNjZW5lTWFwSW5mb1NjUnNwEiUKDnNjZW5lX21hcF9pbmZv",
+            "GAggAygLMg0uU2NlbmVNYXBJbmZvEhMKC1BORlBCSUNHRFBDGAUgASgIEg8K",
+            "B3JldGNvZGUYCSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneMapInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetSceneMapInfoScRsp), global::EggLink.DanhengServer.Proto.GetSceneMapInfoScRsp.Parser, new[]{ "FLEPBOMHCNE", "Retcode", "SceneMapInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetSceneMapInfoScRsp), global::EggLink.DanhengServer.Proto.GetSceneMapInfoScRsp.Parser, new[]{ "SceneMapInfo", "PNFPBICGDPC", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetSceneMapInfoScRsp(GetSceneMapInfoScRsp other) : this() {
-      fLEPBOMHCNE_ = other.fLEPBOMHCNE_;
-      retcode_ = other.retcode_;
       sceneMapInfo_ = other.sceneMapInfo_.Clone();
+      pNFPBICGDPC_ = other.pNFPBICGDPC_;
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,20 +86,31 @@ namespace EggLink.DanhengServer.Proto {
       return new GetSceneMapInfoScRsp(this);
     }
 
-    /// <summary>Field number for the "FLEPBOMHCNE" field.</summary>
-    public const int FLEPBOMHCNEFieldNumber = 15;
-    private bool fLEPBOMHCNE_;
+    /// <summary>Field number for the "scene_map_info" field.</summary>
+    public const int SceneMapInfoFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.SceneMapInfo> _repeated_sceneMapInfo_codec
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.SceneMapInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneMapInfo> sceneMapInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneMapInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool FLEPBOMHCNE {
-      get { return fLEPBOMHCNE_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneMapInfo> SceneMapInfo {
+      get { return sceneMapInfo_; }
+    }
+
+    /// <summary>Field number for the "PNFPBICGDPC" field.</summary>
+    public const int PNFPBICGDPCFieldNumber = 5;
+    private bool pNFPBICGDPC_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool PNFPBICGDPC {
+      get { return pNFPBICGDPC_; }
       set {
-        fLEPBOMHCNE_ = value;
+        pNFPBICGDPC_ = value;
       }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 3;
+    public const int RetcodeFieldNumber = 9;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -108,17 +119,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         retcode_ = value;
       }
-    }
-
-    /// <summary>Field number for the "scene_map_info" field.</summary>
-    public const int SceneMapInfoFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.SceneMapInfo> _repeated_sceneMapInfo_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.SceneMapInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneMapInfo> sceneMapInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneMapInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneMapInfo> SceneMapInfo {
-      get { return sceneMapInfo_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FLEPBOMHCNE != other.FLEPBOMHCNE) return false;
-      if (Retcode != other.Retcode) return false;
       if(!sceneMapInfo_.Equals(other.sceneMapInfo_)) return false;
+      if (PNFPBICGDPC != other.PNFPBICGDPC) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (FLEPBOMHCNE != false) hash ^= FLEPBOMHCNE.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       hash ^= sceneMapInfo_.GetHashCode();
+      if (PNFPBICGDPC != false) hash ^= PNFPBICGDPC.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,14 +167,14 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(Retcode);
+      if (PNFPBICGDPC != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(PNFPBICGDPC);
       }
       sceneMapInfo_.WriteTo(output, _repeated_sceneMapInfo_codec);
-      if (FLEPBOMHCNE != false) {
-        output.WriteRawTag(120);
-        output.WriteBool(FLEPBOMHCNE);
+      if (Retcode != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -186,14 +186,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(Retcode);
+      if (PNFPBICGDPC != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(PNFPBICGDPC);
       }
       sceneMapInfo_.WriteTo(ref output, _repeated_sceneMapInfo_codec);
-      if (FLEPBOMHCNE != false) {
-        output.WriteRawTag(120);
-        output.WriteBool(FLEPBOMHCNE);
+      if (Retcode != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -205,13 +205,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (FLEPBOMHCNE != false) {
+      size += sceneMapInfo_.CalculateSize(_repeated_sceneMapInfo_codec);
+      if (PNFPBICGDPC != false) {
         size += 1 + 1;
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += sceneMapInfo_.CalculateSize(_repeated_sceneMapInfo_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -224,13 +224,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.FLEPBOMHCNE != false) {
-        FLEPBOMHCNE = other.FLEPBOMHCNE;
+      sceneMapInfo_.Add(other.sceneMapInfo_);
+      if (other.PNFPBICGDPC != false) {
+        PNFPBICGDPC = other.PNFPBICGDPC;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      sceneMapInfo_.Add(other.sceneMapInfo_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -246,16 +246,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            Retcode = input.ReadUInt32();
+          case 40: {
+            PNFPBICGDPC = input.ReadBool();
             break;
           }
-          case 42: {
+          case 66: {
             sceneMapInfo_.AddEntriesFrom(input, _repeated_sceneMapInfo_codec);
             break;
           }
-          case 120: {
-            FLEPBOMHCNE = input.ReadBool();
+          case 72: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -273,16 +273,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            Retcode = input.ReadUInt32();
+          case 40: {
+            PNFPBICGDPC = input.ReadBool();
             break;
           }
-          case 42: {
+          case 66: {
             sceneMapInfo_.AddEntriesFrom(ref input, _repeated_sceneMapInfo_codec);
             break;
           }
-          case 120: {
-            FLEPBOMHCNE = input.ReadBool();
+          case 72: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

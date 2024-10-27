@@ -24,16 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static EvolveBuildShopAbilityResetScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiZFdm9sdmVCdWlsZFNob3BBYmlsaXR5UmVzZXRTY1JzcC5wcm90bxoeRXZv",
-            "bHZlQnVpbGRTaG9wU2tpbGxJbmZvLnByb3RvInwKIEV2b2x2ZUJ1aWxkU2hv",
-            "cEFiaWxpdHlSZXNldFNjUnNwEg8KB3JldGNvZGUYDCABKA0SEgoKaXRlbV92",
-            "YWx1ZRgIIAEoDRIzChBzaG9wX3NraWxsX2luZm9zGA4gAygLMhkuRXZvbHZl",
-            "QnVpbGRTaG9wU2tpbGxJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
-            "UHJvdG9iBnByb3RvMw=="));
+            "CiZFdm9sdmVCdWlsZFNob3BBYmlsaXR5UmVzZXRTY1JzcC5wcm90bxoRTkhD",
+            "REhORENKTUkucHJvdG8iagogRXZvbHZlQnVpbGRTaG9wQWJpbGl0eVJlc2V0",
+            "U2NSc3ASIQoLSExHTEZOQUJGT1AYBCADKAsyDC5OSENESE5EQ0pNSRIPCgdy",
+            "ZXRjb2RlGAIgASgNEhIKCml0ZW1fdmFsdWUYBSABKA1CHqoCG0VnZ0xpbmsu",
+            "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EvolveBuildShopSkillInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NHCDHNDCJMIReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EvolveBuildShopAbilityResetScRsp), global::EggLink.DanhengServer.Proto.EvolveBuildShopAbilityResetScRsp.Parser, new[]{ "Retcode", "ItemValue", "ShopSkillInfos" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EvolveBuildShopAbilityResetScRsp), global::EggLink.DanhengServer.Proto.EvolveBuildShopAbilityResetScRsp.Parser, new[]{ "HLGLFNABFOP", "Retcode", "ItemValue" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EvolveBuildShopAbilityResetScRsp(EvolveBuildShopAbilityResetScRsp other) : this() {
+      hLGLFNABFOP_ = other.hLGLFNABFOP_.Clone();
       retcode_ = other.retcode_;
       itemValue_ = other.itemValue_;
-      shopSkillInfos_ = other.shopSkillInfos_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,8 +86,19 @@ namespace EggLink.DanhengServer.Proto {
       return new EvolveBuildShopAbilityResetScRsp(this);
     }
 
+    /// <summary>Field number for the "HLGLFNABFOP" field.</summary>
+    public const int HLGLFNABFOPFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.NHCDHNDCJMI> _repeated_hLGLFNABFOP_codec
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.NHCDHNDCJMI.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NHCDHNDCJMI> hLGLFNABFOP_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NHCDHNDCJMI>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NHCDHNDCJMI> HLGLFNABFOP {
+      get { return hLGLFNABFOP_; }
+    }
+
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 12;
+    public const int RetcodeFieldNumber = 2;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "item_value" field.</summary>
-    public const int ItemValueFieldNumber = 8;
+    public const int ItemValueFieldNumber = 5;
     private uint itemValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,17 +119,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         itemValue_ = value;
       }
-    }
-
-    /// <summary>Field number for the "shop_skill_infos" field.</summary>
-    public const int ShopSkillInfosFieldNumber = 14;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EvolveBuildShopSkillInfo> _repeated_shopSkillInfos_codec
-        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.EvolveBuildShopSkillInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EvolveBuildShopSkillInfo> shopSkillInfos_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EvolveBuildShopSkillInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EvolveBuildShopSkillInfo> ShopSkillInfos {
-      get { return shopSkillInfos_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -137,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if(!hLGLFNABFOP_.Equals(other.hLGLFNABFOP_)) return false;
       if (Retcode != other.Retcode) return false;
       if (ItemValue != other.ItemValue) return false;
-      if(!shopSkillInfos_.Equals(other.shopSkillInfos_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      hash ^= hLGLFNABFOP_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (ItemValue != 0) hash ^= ItemValue.GetHashCode();
-      hash ^= shopSkillInfos_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,15 +167,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ItemValue != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(ItemValue);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
       }
-      shopSkillInfos_.WriteTo(output, _repeated_shopSkillInfos_codec);
+      hLGLFNABFOP_.WriteTo(output, _repeated_hLGLFNABFOP_codec);
+      if (ItemValue != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(ItemValue);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -187,15 +186,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ItemValue != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(ItemValue);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
       }
-      shopSkillInfos_.WriteTo(ref output, _repeated_shopSkillInfos_codec);
+      hLGLFNABFOP_.WriteTo(ref output, _repeated_hLGLFNABFOP_codec);
+      if (ItemValue != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(ItemValue);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -206,13 +205,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += hLGLFNABFOP_.CalculateSize(_repeated_hLGLFNABFOP_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (ItemValue != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ItemValue);
       }
-      size += shopSkillInfos_.CalculateSize(_repeated_shopSkillInfos_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -225,13 +224,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      hLGLFNABFOP_.Add(other.hLGLFNABFOP_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
       if (other.ItemValue != 0) {
         ItemValue = other.ItemValue;
       }
-      shopSkillInfos_.Add(other.shopSkillInfos_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -247,16 +246,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
-            ItemValue = input.ReadUInt32();
-            break;
-          }
-          case 96: {
+          case 16: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 114: {
-            shopSkillInfos_.AddEntriesFrom(input, _repeated_shopSkillInfos_codec);
+          case 34: {
+            hLGLFNABFOP_.AddEntriesFrom(input, _repeated_hLGLFNABFOP_codec);
+            break;
+          }
+          case 40: {
+            ItemValue = input.ReadUInt32();
             break;
           }
         }
@@ -274,16 +273,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
-            ItemValue = input.ReadUInt32();
-            break;
-          }
-          case 96: {
+          case 16: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 114: {
-            shopSkillInfos_.AddEntriesFrom(ref input, _repeated_shopSkillInfos_codec);
+          case 34: {
+            hLGLFNABFOP_.AddEntriesFrom(ref input, _repeated_hLGLFNABFOP_codec);
+            break;
+          }
+          case 40: {
+            ItemValue = input.ReadUInt32();
             break;
           }
         }

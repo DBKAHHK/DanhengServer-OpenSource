@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiVCYXR0bGVDb2xsZWdlRGF0YUNoYW5nZVNjTm90aWZ5LnByb3RvGg5JdGVt",
             "TGlzdC5wcm90byJzCh9CYXR0bGVDb2xsZWdlRGF0YUNoYW5nZVNjTm90aWZ5",
-            "EhkKBnJld2FyZBgJIAEoCzIJLkl0ZW1MaXN0EiAKGGZpbmlzaGVkX2NvbGxl",
-            "Z2VfaWRfbGlzdBgDIAMoDRITCgtJQUdETkVGR0dHTRgEIAEoDUIeqgIbRWdn",
+            "EhMKC0hEREdQTU1OSUNEGAcgASgNEhkKBnJld2FyZBgNIAEoCzIJLkl0ZW1M",
+            "aXN0EiAKGGZpbmlzaGVkX2NvbGxlZ2VfaWRfbGlzdBgDIAMoDUIeqgIbRWdn",
             "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BattleCollegeDataChangeScNotify), global::EggLink.DanhengServer.Proto.BattleCollegeDataChangeScNotify.Parser, new[]{ "Reward", "FinishedCollegeIdList", "IAGDNEFGGGM" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BattleCollegeDataChangeScNotify), global::EggLink.DanhengServer.Proto.BattleCollegeDataChangeScNotify.Parser, new[]{ "HDDGPMMNICD", "Reward", "FinishedCollegeIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BattleCollegeDataChangeScNotify(BattleCollegeDataChangeScNotify other) : this() {
+      hDDGPMMNICD_ = other.hDDGPMMNICD_;
       reward_ = other.reward_ != null ? other.reward_.Clone() : null;
       finishedCollegeIdList_ = other.finishedCollegeIdList_.Clone();
-      iAGDNEFGGGM_ = other.iAGDNEFGGGM_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,8 +86,20 @@ namespace EggLink.DanhengServer.Proto {
       return new BattleCollegeDataChangeScNotify(this);
     }
 
+    /// <summary>Field number for the "HDDGPMMNICD" field.</summary>
+    public const int HDDGPMMNICDFieldNumber = 7;
+    private uint hDDGPMMNICD_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint HDDGPMMNICD {
+      get { return hDDGPMMNICD_; }
+      set {
+        hDDGPMMNICD_ = value;
+      }
+    }
+
     /// <summary>Field number for the "reward" field.</summary>
-    public const int RewardFieldNumber = 9;
+    public const int RewardFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.ItemList reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,18 +121,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return finishedCollegeIdList_; }
     }
 
-    /// <summary>Field number for the "IAGDNEFGGGM" field.</summary>
-    public const int IAGDNEFGGGMFieldNumber = 4;
-    private uint iAGDNEFGGGM_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IAGDNEFGGGM {
-      get { return iAGDNEFGGGM_; }
-      set {
-        iAGDNEFGGGM_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (HDDGPMMNICD != other.HDDGPMMNICD) return false;
       if (!object.Equals(Reward, other.Reward)) return false;
       if(!finishedCollegeIdList_.Equals(other.finishedCollegeIdList_)) return false;
-      if (IAGDNEFGGGM != other.IAGDNEFGGGM) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (HDDGPMMNICD != 0) hash ^= HDDGPMMNICD.GetHashCode();
       if (reward_ != null) hash ^= Reward.GetHashCode();
       hash ^= finishedCollegeIdList_.GetHashCode();
-      if (IAGDNEFGGGM != 0) hash ^= IAGDNEFGGGM.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,12 +168,12 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       finishedCollegeIdList_.WriteTo(output, _repeated_finishedCollegeIdList_codec);
-      if (IAGDNEFGGGM != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(IAGDNEFGGGM);
+      if (HDDGPMMNICD != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(HDDGPMMNICD);
       }
       if (reward_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(106);
         output.WriteMessage(Reward);
       }
       if (_unknownFields != null) {
@@ -187,12 +187,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       finishedCollegeIdList_.WriteTo(ref output, _repeated_finishedCollegeIdList_codec);
-      if (IAGDNEFGGGM != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(IAGDNEFGGGM);
+      if (HDDGPMMNICD != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(HDDGPMMNICD);
       }
       if (reward_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(106);
         output.WriteMessage(Reward);
       }
       if (_unknownFields != null) {
@@ -205,13 +205,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (HDDGPMMNICD != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HDDGPMMNICD);
+      }
       if (reward_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Reward);
       }
       size += finishedCollegeIdList_.CalculateSize(_repeated_finishedCollegeIdList_codec);
-      if (IAGDNEFGGGM != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IAGDNEFGGGM);
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -224,6 +224,9 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.HDDGPMMNICD != 0) {
+        HDDGPMMNICD = other.HDDGPMMNICD;
+      }
       if (other.reward_ != null) {
         if (reward_ == null) {
           Reward = new global::EggLink.DanhengServer.Proto.ItemList();
@@ -231,9 +234,6 @@ namespace EggLink.DanhengServer.Proto {
         Reward.MergeFrom(other.Reward);
       }
       finishedCollegeIdList_.Add(other.finishedCollegeIdList_);
-      if (other.IAGDNEFGGGM != 0) {
-        IAGDNEFGGGM = other.IAGDNEFGGGM;
-      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -254,11 +254,11 @@ namespace EggLink.DanhengServer.Proto {
             finishedCollegeIdList_.AddEntriesFrom(input, _repeated_finishedCollegeIdList_codec);
             break;
           }
-          case 32: {
-            IAGDNEFGGGM = input.ReadUInt32();
+          case 56: {
+            HDDGPMMNICD = input.ReadUInt32();
             break;
           }
-          case 74: {
+          case 106: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
@@ -285,11 +285,11 @@ namespace EggLink.DanhengServer.Proto {
             finishedCollegeIdList_.AddEntriesFrom(ref input, _repeated_finishedCollegeIdList_codec);
             break;
           }
-          case 32: {
-            IAGDNEFGGGM = input.ReadUInt32();
+          case 56: {
+            HDDGPMMNICD = input.ReadUInt32();
             break;
           }
-          case 74: {
+          case 106: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }

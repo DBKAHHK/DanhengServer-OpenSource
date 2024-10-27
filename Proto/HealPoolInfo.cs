@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static HealPoolInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJIZWFsUG9vbEluZm8ucHJvdG8iOAoMSGVhbFBvb2xJbmZvEhMKC09FS09J",
-            "UFBJTURBGA0gASgDEhMKC0FLTEpKTENBRUZGGAkgASgNQh6qAhtFZ2dMaW5r",
-            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChJIZWFsUG9vbEluZm8ucHJvdG8iNwoMSGVhbFBvb2xJbmZvEhQKDHJlZnJl",
+            "c2hfdGltZRgCIAEoAxIRCgloZWFsX3Bvb2wYCiABKA1CHqoCG0VnZ0xpbmsu",
+            "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HealPoolInfo), global::EggLink.DanhengServer.Proto.HealPoolInfo.Parser, new[]{ "OEKOIPPIMDA", "AKLJJLCAEFF" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HealPoolInfo), global::EggLink.DanhengServer.Proto.HealPoolInfo.Parser, new[]{ "RefreshTime", "HealPool" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HealPoolInfo(HealPoolInfo other) : this() {
-      oEKOIPPIMDA_ = other.oEKOIPPIMDA_;
-      aKLJJLCAEFF_ = other.aKLJJLCAEFF_;
+      refreshTime_ = other.refreshTime_;
+      healPool_ = other.healPool_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,27 +83,27 @@ namespace EggLink.DanhengServer.Proto {
       return new HealPoolInfo(this);
     }
 
-    /// <summary>Field number for the "OEKOIPPIMDA" field.</summary>
-    public const int OEKOIPPIMDAFieldNumber = 13;
-    private long oEKOIPPIMDA_;
+    /// <summary>Field number for the "refresh_time" field.</summary>
+    public const int RefreshTimeFieldNumber = 2;
+    private long refreshTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long OEKOIPPIMDA {
-      get { return oEKOIPPIMDA_; }
+    public long RefreshTime {
+      get { return refreshTime_; }
       set {
-        oEKOIPPIMDA_ = value;
+        refreshTime_ = value;
       }
     }
 
-    /// <summary>Field number for the "AKLJJLCAEFF" field.</summary>
-    public const int AKLJJLCAEFFFieldNumber = 9;
-    private uint aKLJJLCAEFF_;
+    /// <summary>Field number for the "heal_pool" field.</summary>
+    public const int HealPoolFieldNumber = 10;
+    private uint healPool_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint AKLJJLCAEFF {
-      get { return aKLJJLCAEFF_; }
+    public uint HealPool {
+      get { return healPool_; }
       set {
-        aKLJJLCAEFF_ = value;
+        healPool_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (OEKOIPPIMDA != other.OEKOIPPIMDA) return false;
-      if (AKLJJLCAEFF != other.AKLJJLCAEFF) return false;
+      if (RefreshTime != other.RefreshTime) return false;
+      if (HealPool != other.HealPool) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (OEKOIPPIMDA != 0L) hash ^= OEKOIPPIMDA.GetHashCode();
-      if (AKLJJLCAEFF != 0) hash ^= AKLJJLCAEFF.GetHashCode();
+      if (RefreshTime != 0L) hash ^= RefreshTime.GetHashCode();
+      if (HealPool != 0) hash ^= HealPool.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (AKLJJLCAEFF != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(AKLJJLCAEFF);
+      if (RefreshTime != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(RefreshTime);
       }
-      if (OEKOIPPIMDA != 0L) {
-        output.WriteRawTag(104);
-        output.WriteInt64(OEKOIPPIMDA);
+      if (HealPool != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(HealPool);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (AKLJJLCAEFF != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(AKLJJLCAEFF);
+      if (RefreshTime != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(RefreshTime);
       }
-      if (OEKOIPPIMDA != 0L) {
-        output.WriteRawTag(104);
-        output.WriteInt64(OEKOIPPIMDA);
+      if (HealPool != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(HealPool);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (OEKOIPPIMDA != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(OEKOIPPIMDA);
+      if (RefreshTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RefreshTime);
       }
-      if (AKLJJLCAEFF != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AKLJJLCAEFF);
+      if (HealPool != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HealPool);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.OEKOIPPIMDA != 0L) {
-        OEKOIPPIMDA = other.OEKOIPPIMDA;
+      if (other.RefreshTime != 0L) {
+        RefreshTime = other.RefreshTime;
       }
-      if (other.AKLJJLCAEFF != 0) {
-        AKLJJLCAEFF = other.AKLJJLCAEFF;
+      if (other.HealPool != 0) {
+        HealPool = other.HealPool;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
-            AKLJJLCAEFF = input.ReadUInt32();
+          case 16: {
+            RefreshTime = input.ReadInt64();
             break;
           }
-          case 104: {
-            OEKOIPPIMDA = input.ReadInt64();
+          case 80: {
+            HealPool = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
-            AKLJJLCAEFF = input.ReadUInt32();
+          case 16: {
+            RefreshTime = input.ReadInt64();
             break;
           }
-          case 104: {
-            OEKOIPPIMDA = input.ReadInt64();
+          case 80: {
+            HealPool = input.ReadUInt32();
             break;
           }
         }

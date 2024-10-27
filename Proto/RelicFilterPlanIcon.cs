@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static RelicFilterPlanIconReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlSZWxpY0ZpbHRlclBsYW5JY29uLnByb3RvIj4KE1JlbGljRmlsdGVyUGxh",
-            "bkljb24SFgoOaXNfYXZhdGFyX2ljb24YByABKAgSDwoHaWNvbl9pZBgDIAEo",
-            "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChlSZWxpY0ZpbHRlclBsYW5JY29uLnByb3RvIjsKE1JlbGljRmlsdGVyUGxh",
+            "bkljb24SFAoMSXNBdmF0YXJJY29uGAsgASgIEg4KBkljb25JZBgEIAEoDUIe",
+            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -83,8 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RelicFilterPlanIcon(this);
     }
 
-    /// <summary>Field number for the "is_avatar_icon" field.</summary>
-    public const int IsAvatarIconFieldNumber = 7;
+    /// <summary>Field number for the "IsAvatarIcon" field.</summary>
+    public const int IsAvatarIconFieldNumber = 11;
     private bool isAvatarIcon_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,8 +95,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "icon_id" field.</summary>
-    public const int IconIdFieldNumber = 3;
+    /// <summary>Field number for the "IconId" field.</summary>
+    public const int IconIdFieldNumber = 4;
     private uint iconId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (IconId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteUInt32(IconId);
       }
       if (IsAvatarIcon != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(88);
         output.WriteBool(IsAvatarIcon);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IconId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteUInt32(IconId);
       }
       if (IsAvatarIcon != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(88);
         output.WriteBool(IsAvatarIcon);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 32: {
             IconId = input.ReadUInt32();
             break;
           }
-          case 56: {
+          case 88: {
             IsAvatarIcon = input.ReadBool();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 32: {
             IconId = input.ReadUInt32();
             break;
           }
-          case 56: {
+          case 88: {
             IsAvatarIcon = input.ReadBool();
             break;
           }

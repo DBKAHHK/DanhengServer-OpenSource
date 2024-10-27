@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhTZXRGcmllbmRNYXJrQ3NSZXEucHJvdG8iRgoSU2V0RnJpZW5kTWFya0Nz",
-            "UmVxEhMKC2lzX3NldF9tYXJrGAYgASgIEgsKA3VpZBgIIAEoDRIOCgZyZWFz",
-            "b24YAiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "UmVxEhMKC0xCSU9LTFBJQUNNGAwgASgIEg4KBnJlYXNvbhgFIAEoDRILCgN1",
+            "aWQYCSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetFriendMarkCsReq), global::EggLink.DanhengServer.Proto.SetFriendMarkCsReq.Parser, new[]{ "IsSetMark", "Uid", "Reason" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetFriendMarkCsReq), global::EggLink.DanhengServer.Proto.SetFriendMarkCsReq.Parser, new[]{ "LBIOKLPIACM", "Reason", "Uid" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SetFriendMarkCsReq(SetFriendMarkCsReq other) : this() {
-      isSetMark_ = other.isSetMark_;
-      uid_ = other.uid_;
+      lBIOKLPIACM_ = other.lBIOKLPIACM_;
       reason_ = other.reason_;
+      uid_ = other.uid_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,32 +85,20 @@ namespace EggLink.DanhengServer.Proto {
       return new SetFriendMarkCsReq(this);
     }
 
-    /// <summary>Field number for the "is_set_mark" field.</summary>
-    public const int IsSetMarkFieldNumber = 6;
-    private bool isSetMark_;
+    /// <summary>Field number for the "LBIOKLPIACM" field.</summary>
+    public const int LBIOKLPIACMFieldNumber = 12;
+    private bool lBIOKLPIACM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsSetMark {
-      get { return isSetMark_; }
+    public bool LBIOKLPIACM {
+      get { return lBIOKLPIACM_; }
       set {
-        isSetMark_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "uid" field.</summary>
-    public const int UidFieldNumber = 8;
-    private uint uid_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Uid {
-      get { return uid_; }
-      set {
-        uid_ = value;
+        lBIOKLPIACM_ = value;
       }
     }
 
     /// <summary>Field number for the "reason" field.</summary>
-    public const int ReasonFieldNumber = 2;
+    public const int ReasonFieldNumber = 5;
     private uint reason_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -118,6 +106,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return reason_; }
       set {
         reason_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "uid" field.</summary>
+    public const int UidFieldNumber = 9;
+    private uint uid_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Uid {
+      get { return uid_; }
+      set {
+        uid_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsSetMark != other.IsSetMark) return false;
-      if (Uid != other.Uid) return false;
+      if (LBIOKLPIACM != other.LBIOKLPIACM) return false;
       if (Reason != other.Reason) return false;
+      if (Uid != other.Uid) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsSetMark != false) hash ^= IsSetMark.GetHashCode();
-      if (Uid != 0) hash ^= Uid.GetHashCode();
+      if (LBIOKLPIACM != false) hash ^= LBIOKLPIACM.GetHashCode();
       if (Reason != 0) hash ^= Reason.GetHashCode();
+      if (Uid != 0) hash ^= Uid.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,16 +168,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Reason != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(40);
         output.WriteUInt32(Reason);
       }
-      if (IsSetMark != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(IsSetMark);
-      }
       if (Uid != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(72);
         output.WriteUInt32(Uid);
+      }
+      if (LBIOKLPIACM != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(LBIOKLPIACM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,16 +190,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Reason != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(40);
         output.WriteUInt32(Reason);
       }
-      if (IsSetMark != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(IsSetMark);
-      }
       if (Uid != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(72);
         output.WriteUInt32(Uid);
+      }
+      if (LBIOKLPIACM != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(LBIOKLPIACM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,14 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsSetMark != false) {
+      if (LBIOKLPIACM != false) {
         size += 1 + 1;
-      }
-      if (Uid != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Uid);
       }
       if (Reason != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Reason);
+      }
+      if (Uid != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Uid);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,14 +232,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsSetMark != false) {
-        IsSetMark = other.IsSetMark;
-      }
-      if (other.Uid != 0) {
-        Uid = other.Uid;
+      if (other.LBIOKLPIACM != false) {
+        LBIOKLPIACM = other.LBIOKLPIACM;
       }
       if (other.Reason != 0) {
         Reason = other.Reason;
+      }
+      if (other.Uid != 0) {
+        Uid = other.Uid;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 40: {
             Reason = input.ReadUInt32();
             break;
           }
-          case 48: {
-            IsSetMark = input.ReadBool();
+          case 72: {
+            Uid = input.ReadUInt32();
             break;
           }
-          case 64: {
-            Uid = input.ReadUInt32();
+          case 96: {
+            LBIOKLPIACM = input.ReadBool();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 40: {
             Reason = input.ReadUInt32();
             break;
           }
-          case 48: {
-            IsSetMark = input.ReadBool();
+          case 72: {
+            Uid = input.ReadUInt32();
             break;
           }
-          case 64: {
-            Uid = input.ReadUInt32();
+          case 96: {
+            LBIOKLPIACM = input.ReadBool();
             break;
           }
         }
