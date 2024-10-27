@@ -21,34 +21,33 @@ public class HandlerSceneCastSkillCsReq : Handler
 
         if (caster != null)
         {
-            // Check if normal attack or technique was used
             if (req.MazeAbilityStr != "")
             {
-                // overwrite whole skill
+                // overwrite
                 AbilityInfo? ability = null;
                 caster.AvatarInfo.Excel?.MazeAbility.TryGetValue(req.MazeAbilityStr, out ability);
                 if (ability != null)
                 {
                     mazeSkill = MazeSkillManager.GetSkill(caster.AvatarInfo.GetAvatarId(), ability, req);
                     mazeSkill.OnCast(caster, player);
-
-                    await connection.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, []));
-                    return;
-                }
-            }
-
-            if (req.SkillIndex > 0)
-            {
-                // Cast skill effects
-                if (caster.AvatarInfo.Excel != null && caster.AvatarInfo.Excel!.MazeSkill != null)
-                {
-                    mazeSkill = MazeSkillManager.GetSkill(caster.AvatarInfo.GetAvatarId(), (int)req.SkillIndex, req);
-                    mazeSkill.OnCast(caster, player);
                 }
             }
             else
             {
-                mazeSkill = MazeSkillManager.GetSkill(caster.AvatarInfo.GetAvatarId(), 0, req);
+                // Check if normal attack or technique was used
+                if (req.SkillIndex > 0)
+                {
+                    // Cast skill effects
+                    if (caster.AvatarInfo.Excel != null && caster.AvatarInfo.Excel!.MazeSkill != null)
+                    {
+                        mazeSkill = MazeSkillManager.GetSkill(caster.AvatarInfo.GetAvatarId(), (int)req.SkillIndex, req);
+                        mazeSkill.OnCast(caster, player);
+                    }
+                }
+                else
+                {
+                    mazeSkill = MazeSkillManager.GetSkill(caster.AvatarInfo.GetAvatarId(), 0, req);
+                }
             }
         }
 
@@ -69,7 +68,7 @@ public class HandlerSceneCastSkillCsReq : Handler
                     foreach (var id in req.HitTargetEntityIdList)
                         hitTargetEntityIdList.Add(id);
                 // Start battle
-                await connection.Player!.BattleManager!.StartBattle(req, mazeSkill!, [.. hitTargetEntityIdList]);
+                await connection.Player!.BattleManager!.StartBattle(req, mazeSkill, [.. hitTargetEntityIdList]);
             }
         }
         else

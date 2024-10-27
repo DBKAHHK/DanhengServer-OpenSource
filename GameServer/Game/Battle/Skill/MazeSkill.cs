@@ -42,7 +42,7 @@ public class MazeSkill
                 Actions.Add(new MazeAddMazeBuff(task.ID, task.LifeTime.GetLifeTime()));
                 break;
             case TaskTypeEnum.RemoveMazeBuff:
-                Actions.RemoveAll(a => a is MazeAddMazeBuff buff && buff.BuffId == task.ID);
+                Actions.Add(new MazeRemoveMazeBuff(task.ID));
                 break;
             case TaskTypeEnum.AdventureModifyTeamPlayerHP:
                 break;

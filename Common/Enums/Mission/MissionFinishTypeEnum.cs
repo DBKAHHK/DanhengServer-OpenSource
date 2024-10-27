@@ -560,5 +560,6 @@ public enum MissionFinishTypeEnum
     RogueUnlockMedalCnt = 260030,
     RogueMagicFinishWithAllScepterFuncType = 260031,
     MusicRhythmFinishAllLevel = 260032,
-    MusicRhythmFinishAnyLevel = 260033
+    MusicRhythmFinishAnyLevel = 260033,
+    RogueMagicFinishExtraLayerWithDifficulty = 260034
 }
