@@ -43,6 +43,7 @@ public class WordTextCHS
     public string Equipment => "光锥";
     public string Talent => "行迹";
     public string Banner => "卡池";
+    public string VideoKeys => "游戏CG密钥";
     public string Activity => "活动";
     public string Buff => "祝福";
     public string Miracle => "奇物";
