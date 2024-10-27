@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static SceneCastSkillCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlTY2VuZUNhc3RTa2lsbENzUmVxLnByb3RvGhBNb3Rpb25JbmZvLnByb3Rv",
-            "Gh1Bc3Npc3RNb25zdGVyRW50aXR5SW5mby5wcm90bxoRQUxERFBIRkNNR0cu",
+            "ChlTY2VuZUNhc3RTa2lsbENzUmVxLnByb3RvGhFBTEREUEhGQ01HRy5wcm90",
+            "bxoQTW90aW9uSW5mby5wcm90bxodQXNzaXN0TW9uc3RlckVudGl0eUluZm8u",
             "cHJvdG8aE1NraWxsRXh0cmFUYWcucHJvdG8ijAMKE1NjZW5lQ2FzdFNraWxs",
             "Q3NSZXESPAoaYXNzaXN0X21vbnN0ZXJfZW50aXR5X2luZm8YCCADKAsyGC5B",
             "c3Npc3RNb25zdGVyRW50aXR5SW5mbxIlCh1hc3Npc3RfbW9uc3Rlcl9lbnRp",
@@ -38,7 +38,7 @@ namespace EggLink.DanhengServer.Proto {
             "IAMoDjIOLlNraWxsRXh0cmFUYWdCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ALDDPHFCMGGReflection.Descriptor, global::EggLink.DanhengServer.Proto.SkillExtraTagReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ALDDPHFCMGGReflection.Descriptor, global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SkillExtraTagReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneCastSkillCsReq), global::EggLink.DanhengServer.Proto.SceneCastSkillCsReq.Parser, new[]{ "AssistMonsterEntityInfo", "AssistMonsterEntityIdList", "AttackedByEntityId", "DynamicValues", "MazeAbilityStr", "CastEntityId", "HitTargetEntityIdList", "SkillIndex", "TargetMotion", "GOJHHBLMAEB", "SkillExtraTags" }, null, null, null, null)
           }));

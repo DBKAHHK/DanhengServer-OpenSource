@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static JMDAEBFHNAIReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFKTURBRUJGSE5BSS5wcm90bxoRQUFBSUZKT0FBR08ucHJvdG8icAoLSk1E",
-            "QUVCRkhOQUkSEwoLRVBKUE1CTU9LQUoYCiABKA0SEwoLTkdLQUJQTEFFR1AY",
-            "CCABKA0SFAoMY2hhbGxlbmdlX2lkGAQgASgNEiEKC0hMSkVMQ05MSktJGAIg",
-            "ASgOMgwuQUFBSUZKT0FBR09CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
-            "cm90b2IGcHJvdG8z"));
+            "ChFKTURBRUJGSE5BSS5wcm90bxoRQUFBSUZKT0FBR08ucHJvdG8idAoLSk1E",
+            "QUVCRkhOQUkSEwoLRVBKUE1CTU9LQUoYCiABKA0SFwoPdHVybl9sZWZ0X2Nv",
+            "dW50GAggASgNEhQKDGNoYWxsZW5nZV9pZBgEIAEoDRIhCgtITEpFTENOTEpL",
+            "SRgCIAEoDjIMLkFBQUlGSk9BQUdPQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AAAIFJOAAGOReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.JMDAEBFHNAI), global::EggLink.DanhengServer.Proto.JMDAEBFHNAI.Parser, new[]{ "EPJPMBMOKAJ", "NGKABPLAEGP", "ChallengeId", "HLJELCNLJKI" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.JMDAEBFHNAI), global::EggLink.DanhengServer.Proto.JMDAEBFHNAI.Parser, new[]{ "EPJPMBMOKAJ", "TurnLeftCount", "ChallengeId", "HLJELCNLJKI" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public JMDAEBFHNAI(JMDAEBFHNAI other) : this() {
       ePJPMBMOKAJ_ = other.ePJPMBMOKAJ_;
-      nGKABPLAEGP_ = other.nGKABPLAEGP_;
+      turnLeftCount_ = other.turnLeftCount_;
       challengeId_ = other.challengeId_;
       hLJELCNLJKI_ = other.hLJELCNLJKI_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -99,15 +99,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "NGKABPLAEGP" field.</summary>
-    public const int NGKABPLAEGPFieldNumber = 8;
-    private uint nGKABPLAEGP_;
+    /// <summary>Field number for the "turn_left_count" field.</summary>
+    public const int TurnLeftCountFieldNumber = 8;
+    private uint turnLeftCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NGKABPLAEGP {
-      get { return nGKABPLAEGP_; }
+    public uint TurnLeftCount {
+      get { return turnLeftCount_; }
       set {
-        nGKABPLAEGP_ = value;
+        turnLeftCount_ = value;
       }
     }
 
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (EPJPMBMOKAJ != other.EPJPMBMOKAJ) return false;
-      if (NGKABPLAEGP != other.NGKABPLAEGP) return false;
+      if (TurnLeftCount != other.TurnLeftCount) return false;
       if (ChallengeId != other.ChallengeId) return false;
       if (HLJELCNLJKI != other.HLJELCNLJKI) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -162,7 +162,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (EPJPMBMOKAJ != 0) hash ^= EPJPMBMOKAJ.GetHashCode();
-      if (NGKABPLAEGP != 0) hash ^= NGKABPLAEGP.GetHashCode();
+      if (TurnLeftCount != 0) hash ^= TurnLeftCount.GetHashCode();
       if (ChallengeId != 0) hash ^= ChallengeId.GetHashCode();
       if (HLJELCNLJKI != global::EggLink.DanhengServer.Proto.AAAIFJOAAGO.FightFestBattleRankC) hash ^= HLJELCNLJKI.GetHashCode();
       if (_unknownFields != null) {
@@ -191,9 +191,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteUInt32(ChallengeId);
       }
-      if (NGKABPLAEGP != 0) {
+      if (TurnLeftCount != 0) {
         output.WriteRawTag(64);
-        output.WriteUInt32(NGKABPLAEGP);
+        output.WriteUInt32(TurnLeftCount);
       }
       if (EPJPMBMOKAJ != 0) {
         output.WriteRawTag(80);
@@ -217,9 +217,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteUInt32(ChallengeId);
       }
-      if (NGKABPLAEGP != 0) {
+      if (TurnLeftCount != 0) {
         output.WriteRawTag(64);
-        output.WriteUInt32(NGKABPLAEGP);
+        output.WriteUInt32(TurnLeftCount);
       }
       if (EPJPMBMOKAJ != 0) {
         output.WriteRawTag(80);
@@ -238,8 +238,8 @@ namespace EggLink.DanhengServer.Proto {
       if (EPJPMBMOKAJ != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EPJPMBMOKAJ);
       }
-      if (NGKABPLAEGP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NGKABPLAEGP);
+      if (TurnLeftCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TurnLeftCount);
       }
       if (ChallengeId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChallengeId);
@@ -262,8 +262,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.EPJPMBMOKAJ != 0) {
         EPJPMBMOKAJ = other.EPJPMBMOKAJ;
       }
-      if (other.NGKABPLAEGP != 0) {
-        NGKABPLAEGP = other.NGKABPLAEGP;
+      if (other.TurnLeftCount != 0) {
+        TurnLeftCount = other.TurnLeftCount;
       }
       if (other.ChallengeId != 0) {
         ChallengeId = other.ChallengeId;
@@ -295,7 +295,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 64: {
-            NGKABPLAEGP = input.ReadUInt32();
+            TurnLeftCount = input.ReadUInt32();
             break;
           }
           case 80: {
@@ -326,7 +326,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 64: {
-            NGKABPLAEGP = input.ReadUInt32();
+            TurnLeftCount = input.ReadUInt32();
             break;
           }
           case 80: {

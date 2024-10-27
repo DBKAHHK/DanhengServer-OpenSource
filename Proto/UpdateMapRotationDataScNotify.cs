@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static UpdateMapRotationDataScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNVcGRhdGVNYXBSb3RhdGlvbkRhdGFTY05vdGlmeS5wcm90bxoRUm90YXRl",
-            "ckRhdGEucHJvdG8aEUNoYXJnZXJJbmZvLnByb3RvGhFITUJMSUFETktFTy5w",
-            "cm90bxoXUm90YXRlckVuZXJneUluZm8ucHJvdG8i9AEKHVVwZGF0ZU1hcFJv",
+            "CiNVcGRhdGVNYXBSb3RhdGlvbkRhdGFTY05vdGlmeS5wcm90bxoRQ2hhcmdl",
+            "ckluZm8ucHJvdG8aF1JvdGF0ZXJFbmVyZ3lJbmZvLnByb3RvGhFITUJMSUFE",
+            "TktFTy5wcm90bxoRUm90YXRlckRhdGEucHJvdG8i9AEKHVVwZGF0ZU1hcFJv",
             "dGF0aW9uRGF0YVNjTm90aWZ5EhMKC0NISk1PRElNTERBGAIgASgNEh4KCHJv",
             "b21fbWFwGAwgASgLMgwuSE1CTElBRE5LRU8SJwoRcm90YXRlcl9kYXRhX2xp",
             "c3QYBCADKAsyDC5Sb3RhdGVyRGF0YRITCgtIRkpOTkJQRExDSxgIIAEoCBIi",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "GAUgASgFQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HMBLIADNKEOReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HMBLIADNKEOReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdateMapRotationDataScNotify), global::EggLink.DanhengServer.Proto.UpdateMapRotationDataScNotify.Parser, new[]{ "CHJMODIMLDA", "RoomMap", "RotaterDataList", "HFJNNBPDLCK", "ChargerInfo", "EnergyInfo", "IPFOFHHKJKP" }, null, null, null, null)
           }));

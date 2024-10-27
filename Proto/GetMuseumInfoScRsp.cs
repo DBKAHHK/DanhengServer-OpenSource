@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static GetMuseumInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhHZXRNdXNldW1JbmZvU2NSc3AucHJvdG8aEUZNREdGQ05PS01OLnByb3Rv",
-            "GhFNQkdGRkNFTEdITy5wcm90bxoRR0ZJQkxIUERHTkUucHJvdG8aEUZEQkRP",
+            "ChhHZXRNdXNldW1JbmZvU2NSc3AucHJvdG8aEUdGSUJMSFBER05FLnByb3Rv",
+            "GhFGTURHRkNOT0tNTi5wcm90bxoRTUJHRkZDRUxHSE8ucHJvdG8aEUZEQkRP",
             "Q1BFSUNOLnByb3RvIuACChJHZXRNdXNldW1JbmZvU2NSc3ASDwoHcmV0Y29k",
             "ZRgIIAEoDRITCgtKQ0JFSEhNQUxOUBgKIAEoDRITCgtHS0ZER0ROTkVFTxgC",
             "IAEoDRIhCgtNR01MSE1GSkNNQhgHIAEoCzIMLkZNREdGQ05PS01OEhMKC09C",
@@ -37,7 +37,7 @@ namespace EggLink.DanhengServer.Proto {
             "ThgFIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FMDGFCNOKMNReflection.Descriptor, global::EggLink.DanhengServer.Proto.MBGFFCELGHOReflection.Descriptor, global::EggLink.DanhengServer.Proto.GFIBLHPDGNEReflection.Descriptor, global::EggLink.DanhengServer.Proto.FDBDOCPEICNReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GFIBLHPDGNEReflection.Descriptor, global::EggLink.DanhengServer.Proto.FMDGFCNOKMNReflection.Descriptor, global::EggLink.DanhengServer.Proto.MBGFFCELGHOReflection.Descriptor, global::EggLink.DanhengServer.Proto.FDBDOCPEICNReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMuseumInfoScRsp), global::EggLink.DanhengServer.Proto.GetMuseumInfoScRsp.Parser, new[]{ "Retcode", "JCBEHHMALNP", "GKFDGDNNEEO", "MGMLHMFJCMB", "OBKJOCMKICE", "FOFHPBEAAFE", "DOAPPNKFLPL", "MMIDJEHMHMP", "Level", "Exp", "DMENOFHEGFK", "NEJENNBOOBH", "PIDAMMINCFB", "IKHGKNMLHCN" }, null, null, null, null)
           }));

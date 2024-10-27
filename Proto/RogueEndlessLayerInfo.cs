@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static RogueEndlessLayerInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtSb2d1ZUVuZGxlc3NMYXllckluZm8ucHJvdG8iuwEKFVJvZ3VlRW5kbGVz",
+            "ChtSb2d1ZUVuZGxlc3NMYXllckluZm8ucHJvdG8ivwEKFVJvZ3VlRW5kbGVz",
             "c0xheWVySW5mbxIRCglpc19yb3RhdGUYDyABKAgSEwoLS0hHSkxKSFBMUE0Y",
             "AiABKA0SEwoLQUxCSUdOR0ZCRk8YBCABKA0SEwoLUEtFSkVPRUJCSkcYCyAB",
-            "KA0SEwoLUEtJTUZNT0dCQkkYCCABKA0SEwoLTkdLQUJQTEFFR1AYBiABKA0S",
-            "EwoLS09ER05DSkZHRUwYDCABKA0SEQoJYmF0dGxlX2lkGAUgASgNQh6qAhtF",
-            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "KA0SEwoLUEtJTUZNT0dCQkkYCCABKA0SFwoPdHVybl9sZWZ0X2NvdW50GAYg",
+            "ASgNEhMKC0tPREdOQ0pGR0VMGAwgASgNEhEKCWJhdHRsZV9pZBgFIAEoDUIe",
+            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueEndlessLayerInfo), global::EggLink.DanhengServer.Proto.RogueEndlessLayerInfo.Parser, new[]{ "IsRotate", "KHGJLJHPLPM", "ALBIGNGFBFO", "PKEJEOEBBJG", "PKIMFMOGBBI", "NGKABPLAEGP", "KODGNCJFGEL", "BattleId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueEndlessLayerInfo), global::EggLink.DanhengServer.Proto.RogueEndlessLayerInfo.Parser, new[]{ "IsRotate", "KHGJLJHPLPM", "ALBIGNGFBFO", "PKEJEOEBBJG", "PKIMFMOGBBI", "TurnLeftCount", "KODGNCJFGEL", "BattleId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -80,7 +80,7 @@ namespace EggLink.DanhengServer.Proto {
       aLBIGNGFBFO_ = other.aLBIGNGFBFO_;
       pKEJEOEBBJG_ = other.pKEJEOEBBJG_;
       pKIMFMOGBBI_ = other.pKIMFMOGBBI_;
-      nGKABPLAEGP_ = other.nGKABPLAEGP_;
+      turnLeftCount_ = other.turnLeftCount_;
       kODGNCJFGEL_ = other.kODGNCJFGEL_;
       battleId_ = other.battleId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -152,15 +152,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "NGKABPLAEGP" field.</summary>
-    public const int NGKABPLAEGPFieldNumber = 6;
-    private uint nGKABPLAEGP_;
+    /// <summary>Field number for the "turn_left_count" field.</summary>
+    public const int TurnLeftCountFieldNumber = 6;
+    private uint turnLeftCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NGKABPLAEGP {
-      get { return nGKABPLAEGP_; }
+    public uint TurnLeftCount {
+      get { return turnLeftCount_; }
       set {
-        nGKABPLAEGP_ = value;
+        turnLeftCount_ = value;
       }
     }
 
@@ -208,7 +208,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ALBIGNGFBFO != other.ALBIGNGFBFO) return false;
       if (PKEJEOEBBJG != other.PKEJEOEBBJG) return false;
       if (PKIMFMOGBBI != other.PKIMFMOGBBI) return false;
-      if (NGKABPLAEGP != other.NGKABPLAEGP) return false;
+      if (TurnLeftCount != other.TurnLeftCount) return false;
       if (KODGNCJFGEL != other.KODGNCJFGEL) return false;
       if (BattleId != other.BattleId) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ALBIGNGFBFO != 0) hash ^= ALBIGNGFBFO.GetHashCode();
       if (PKEJEOEBBJG != 0) hash ^= PKEJEOEBBJG.GetHashCode();
       if (PKIMFMOGBBI != 0) hash ^= PKIMFMOGBBI.GetHashCode();
-      if (NGKABPLAEGP != 0) hash ^= NGKABPLAEGP.GetHashCode();
+      if (TurnLeftCount != 0) hash ^= TurnLeftCount.GetHashCode();
       if (KODGNCJFGEL != 0) hash ^= KODGNCJFGEL.GetHashCode();
       if (BattleId != 0) hash ^= BattleId.GetHashCode();
       if (_unknownFields != null) {
@@ -256,9 +256,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteUInt32(BattleId);
       }
-      if (NGKABPLAEGP != 0) {
+      if (TurnLeftCount != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(NGKABPLAEGP);
+        output.WriteUInt32(TurnLeftCount);
       }
       if (PKIMFMOGBBI != 0) {
         output.WriteRawTag(64);
@@ -298,9 +298,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteUInt32(BattleId);
       }
-      if (NGKABPLAEGP != 0) {
+      if (TurnLeftCount != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(NGKABPLAEGP);
+        output.WriteUInt32(TurnLeftCount);
       }
       if (PKIMFMOGBBI != 0) {
         output.WriteRawTag(64);
@@ -343,8 +343,8 @@ namespace EggLink.DanhengServer.Proto {
       if (PKIMFMOGBBI != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PKIMFMOGBBI);
       }
-      if (NGKABPLAEGP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NGKABPLAEGP);
+      if (TurnLeftCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TurnLeftCount);
       }
       if (KODGNCJFGEL != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KODGNCJFGEL);
@@ -379,8 +379,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.PKIMFMOGBBI != 0) {
         PKIMFMOGBBI = other.PKIMFMOGBBI;
       }
-      if (other.NGKABPLAEGP != 0) {
-        NGKABPLAEGP = other.NGKABPLAEGP;
+      if (other.TurnLeftCount != 0) {
+        TurnLeftCount = other.TurnLeftCount;
       }
       if (other.KODGNCJFGEL != 0) {
         KODGNCJFGEL = other.KODGNCJFGEL;
@@ -416,7 +416,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 48: {
-            NGKABPLAEGP = input.ReadUInt32();
+            TurnLeftCount = input.ReadUInt32();
             break;
           }
           case 64: {
@@ -463,7 +463,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 48: {
-            NGKABPLAEGP = input.ReadUInt32();
+            TurnLeftCount = input.ReadUInt32();
             break;
           }
           case 64: {
