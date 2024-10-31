@@ -643,6 +643,7 @@ public class PlayerInstance(PlayerData data)
         Data.Rot = rot;
         var notSendMove = true;
         SceneInstance instance = new(this, plane, floorId, entryId);
+        InvokeOnPlayerLoadScene(this, instance);
         if (planeId != Data.PlaneId || floorId != Data.FloorId || entryId != Data.EntryId)
         {
             Data.PlaneId = planeId;
