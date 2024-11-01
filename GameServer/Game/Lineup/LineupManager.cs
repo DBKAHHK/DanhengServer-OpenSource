@@ -45,7 +45,6 @@ public class LineupManager : BasePlayerManager
     public LineupInfo? GetCurLineup()
     {
         LineupInfo? lineup = GetLineup(LineupData.GetCurLineupIndex());
-        InvokeOnPlayerSyncLineup(Player, lineup);
         return lineup;
     }
 

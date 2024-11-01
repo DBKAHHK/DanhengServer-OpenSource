@@ -52,7 +52,7 @@ public static class PluginEvent
     {
         OnPlayerQuitBattle?.Invoke(player, result);
     }
-    public static void InvokeOnPlayerEnterChallenge(PlayerInstance player, ChallengeInstance? challenge)
+    public static void InvokeOnPlayerEnterChallenge(PlayerInstance player, ChallengeInstance challenge)
     {
         OnPlayerEnterChallenge?.Invoke(player, challenge);
     }
@@ -89,7 +89,7 @@ public static class PluginEvent
 
     public delegate void OnPlayerQuitBattleHandler(PlayerInstance player, PVEBattleResultCsReq result);
 
-    public delegate void OnPlayerEnterChallengeHandler(PlayerInstance player, ChallengeInstance? challenge);
+    public delegate void OnPlayerEnterChallengeHandler(PlayerInstance player, ChallengeInstance challenge);
 
     public delegate void OnPlayerQuitChallengeHandler(PlayerInstance player, ChallengeInstance? challenge);
 
