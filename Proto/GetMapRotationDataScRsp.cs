@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static GetMapRotationDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1HZXRNYXBSb3RhdGlvbkRhdGFTY1JzcC5wcm90bxoXUm90YXRlckVuZXJn",
-            "eUluZm8ucHJvdG8aD05ld01hcFJvdC5wcm90bxoRQ2hhcmdlckluZm8ucHJv",
-            "dG8aEVJvdGF0ZXJEYXRhLnByb3RvIvcBChdHZXRNYXBSb3RhdGlvbkRhdGFT",
+            "Ch1HZXRNYXBSb3RhdGlvbkRhdGFTY1JzcC5wcm90bxoRQ2hhcmdlckluZm8u",
+            "cHJvdG8aD05ld01hcFJvdC5wcm90bxoRUm90YXRlckRhdGEucHJvdG8aF1Jv",
+            "dGF0ZXJFbmVyZ3lJbmZvLnByb3RvIvcBChdHZXRNYXBSb3RhdGlvbkRhdGFT",
             "Y1JzcBITCgtKT0JKSE5KSk5ESRgIIAEoCBITCgtGUEhQRUpQT0JHShgFIAEo",
             "DRIhCgtQTkFNRkdMRktBSRgJIAMoCzIMLlJvdGF0ZXJEYXRhEh0KCXJvZ3Vl",
             "X21hcBgLIAEoCzIKLk5ld01hcFJvdBITCgtMR0NIT0lOSExEShgHIAEoBRIn",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "dGNvZGUYDCABKA0SIQoLTU9PS05OS09FSEwYDSADKAsyDC5DaGFyZ2VySW5m",
             "b0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.NewMapRotReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.NewMapRotReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMapRotationDataScRsp), global::EggLink.DanhengServer.Proto.GetMapRotationDataScRsp.Parser, new[]{ "JOBJHNJJNDI", "FPHPEJPOBGJ", "PNAMFGLFKAI", "RogueMap", "LGCHOINHLDJ", "EnergyInfo", "Retcode", "MOOKNNKOEHL" }, null, null, null, null)
           }));

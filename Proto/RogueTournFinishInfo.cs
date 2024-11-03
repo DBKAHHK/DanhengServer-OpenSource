@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static RogueTournFinishInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpSb2d1ZVRvdXJuRmluaXNoSW5mby5wcm90bxoRRUhPQ0ZCTE9QS0wucHJv",
-            "dG8aEExpbmV1cEluZm8ucHJvdG8aF1JvZ3VlVG91cm5DdXJJbmZvLnByb3Rv",
+            "ChpSb2d1ZVRvdXJuRmluaXNoSW5mby5wcm90bxoXUm9ndWVUb3VybkN1cklu",
+            "Zm8ucHJvdG8aEExpbmV1cEluZm8ucHJvdG8aEUVIT0NGQkxPUEtMLnByb3Rv",
             "GhFKSERDS0ROSUZJRC5wcm90bxoRTUxKQklGRUxGQ04ucHJvdG8i2QEKFFJv",
             "Z3VlVG91cm5GaW5pc2hJbmZvEiEKC0xCQ0NITUxQQUNEGAEgASgLMgwuTUxK",
             "QklGRUxGQ04SIQoLS0lIRklJTUhOSUYYDyABKAsyDC5FSE9DRkJMT1BLTBIm",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "CgtKQ0JHTktNTElLThgJIAEoCzIMLkpIRENLRE5JRklEQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EHOCFBLOPKLReflection.Descriptor, global::EggLink.DanhengServer.Proto.LineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournCurInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.JHDCKDNIFIDReflection.Descriptor, global::EggLink.DanhengServer.Proto.MLJBIFELFCNReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTournCurInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.EHOCFBLOPKLReflection.Descriptor, global::EggLink.DanhengServer.Proto.JHDCKDNIFIDReflection.Descriptor, global::EggLink.DanhengServer.Proto.MLJBIFELFCNReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournFinishInfo), global::EggLink.DanhengServer.Proto.RogueTournFinishInfo.Parser, new[]{ "LBCCHMLPACD", "KIHFIIMHNIF", "RogueLineupInfo", "RogueTournCurInfo", "JCBGNKMLIKN" }, null, null, null, null)
           }));

@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static BNOCKKLBIABReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFCTk9DS0tMQklBQi5wcm90bxoRTUZBQ05HSU5KSUYucHJvdG8iRQoLQk5P",
-            "Q0tLTEJJQUISEwoLQ0tIT09ETENHUEsYDSABKA0SIQoLTEhFQ0JDR01ER0oY",
-            "DyADKAsyDC5NRkFDTkdJTkpJRkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
-            "LlByb3RvYgZwcm90bzM="));
+            "ChFCTk9DS0tMQklBQi5wcm90bxoZVHJhaW5QYXJ0eUdhbWVTa2lsbC5wcm90",
+            "byJNCgtCTk9DS0tMQklBQhITCgtDS0hPT0RMQ0dQSxgNIAEoDRIpCgtMSEVD",
+            "QkNHTURHShgPIAMoCzIULlRyYWluUGFydHlHYW1lU2tpbGxCHqoCG0VnZ0xp",
+            "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MFACNGINJIFReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyGameSkillReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BNOCKKLBIAB), global::EggLink.DanhengServer.Proto.BNOCKKLBIAB.Parser, new[]{ "CKHOODLCGPK", "LHECBCGMDGJ" }, null, null, null, null)
           }));
@@ -98,12 +98,12 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "LHECBCGMDGJ" field.</summary>
     public const int LHECBCGMDGJFieldNumber = 15;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MFACNGINJIF> _repeated_lHECBCGMDGJ_codec
-        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.MFACNGINJIF.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MFACNGINJIF> lHECBCGMDGJ_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MFACNGINJIF>();
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.TrainPartyGameSkill> _repeated_lHECBCGMDGJ_codec
+        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.TrainPartyGameSkill.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGameSkill> lHECBCGMDGJ_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGameSkill>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MFACNGINJIF> LHECBCGMDGJ {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGameSkill> LHECBCGMDGJ {
       get { return lHECBCGMDGJ_; }
     }
 

@@ -24,14 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static HNDCCFEAGFDReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFITkRDQ0ZFQUdGRC5wcm90byJMCgtITkRDQ0ZFQUdGRBITCgtDQklOSUtN",
-            "RUtNUBgMIAEoDRITCgtDUEZKR0JOSkFCTBgOIAEoDRITCgtERE1HQ09KT09D",
-            "RhgPIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
-            "bzM="));
+            "ChFITkRDQ0ZFQUdGRC5wcm90byJICgtITkRDQ0ZFQUdGRBITCgtDQklOSUtN",
+            "RUtNUBgMIAEoDRIPCgdjYXJkX2lkGA4gASgNEhMKC0RETUdDT0pPT0NGGA8g",
+            "AygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HNDCCFEAGFD), global::EggLink.DanhengServer.Proto.HNDCCFEAGFD.Parser, new[]{ "CBINIKMEKMP", "CPFJGBNJABL", "DDMGCOJOOCF" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HNDCCFEAGFD), global::EggLink.DanhengServer.Proto.HNDCCFEAGFD.Parser, new[]{ "CBINIKMEKMP", "CardId", "DDMGCOJOOCF" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HNDCCFEAGFD(HNDCCFEAGFD other) : this() {
       cBINIKMEKMP_ = other.cBINIKMEKMP_;
-      cPFJGBNJABL_ = other.cPFJGBNJABL_;
+      cardId_ = other.cardId_;
       dDMGCOJOOCF_ = other.dDMGCOJOOCF_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -97,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CPFJGBNJABL" field.</summary>
-    public const int CPFJGBNJABLFieldNumber = 14;
-    private uint cPFJGBNJABL_;
+    /// <summary>Field number for the "card_id" field.</summary>
+    public const int CardIdFieldNumber = 14;
+    private uint cardId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CPFJGBNJABL {
-      get { return cPFJGBNJABL_; }
+    public uint CardId {
+      get { return cardId_; }
       set {
-        cPFJGBNJABL_ = value;
+        cardId_ = value;
       }
     }
 
@@ -136,7 +135,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (CBINIKMEKMP != other.CBINIKMEKMP) return false;
-      if (CPFJGBNJABL != other.CPFJGBNJABL) return false;
+      if (CardId != other.CardId) return false;
       if(!dDMGCOJOOCF_.Equals(other.dDMGCOJOOCF_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -146,7 +145,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (CBINIKMEKMP != 0) hash ^= CBINIKMEKMP.GetHashCode();
-      if (CPFJGBNJABL != 0) hash ^= CPFJGBNJABL.GetHashCode();
+      if (CardId != 0) hash ^= CardId.GetHashCode();
       hash ^= dDMGCOJOOCF_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -170,9 +169,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(96);
         output.WriteUInt32(CBINIKMEKMP);
       }
-      if (CPFJGBNJABL != 0) {
+      if (CardId != 0) {
         output.WriteRawTag(112);
-        output.WriteUInt32(CPFJGBNJABL);
+        output.WriteUInt32(CardId);
       }
       dDMGCOJOOCF_.WriteTo(output, _repeated_dDMGCOJOOCF_codec);
       if (_unknownFields != null) {
@@ -189,9 +188,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(96);
         output.WriteUInt32(CBINIKMEKMP);
       }
-      if (CPFJGBNJABL != 0) {
+      if (CardId != 0) {
         output.WriteRawTag(112);
-        output.WriteUInt32(CPFJGBNJABL);
+        output.WriteUInt32(CardId);
       }
       dDMGCOJOOCF_.WriteTo(ref output, _repeated_dDMGCOJOOCF_codec);
       if (_unknownFields != null) {
@@ -207,8 +206,8 @@ namespace EggLink.DanhengServer.Proto {
       if (CBINIKMEKMP != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CBINIKMEKMP);
       }
-      if (CPFJGBNJABL != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CPFJGBNJABL);
+      if (CardId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CardId);
       }
       size += dDMGCOJOOCF_.CalculateSize(_repeated_dDMGCOJOOCF_codec);
       if (_unknownFields != null) {
@@ -226,8 +225,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.CBINIKMEKMP != 0) {
         CBINIKMEKMP = other.CBINIKMEKMP;
       }
-      if (other.CPFJGBNJABL != 0) {
-        CPFJGBNJABL = other.CPFJGBNJABL;
+      if (other.CardId != 0) {
+        CardId = other.CardId;
       }
       dDMGCOJOOCF_.Add(other.dDMGCOJOOCF_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -250,7 +249,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 112: {
-            CPFJGBNJABL = input.ReadUInt32();
+            CardId = input.ReadUInt32();
             break;
           }
           case 122:
@@ -278,7 +277,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 112: {
-            CPFJGBNJABL = input.ReadUInt32();
+            CardId = input.ReadUInt32();
             break;
           }
           case 122:

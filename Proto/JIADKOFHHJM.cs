@@ -24,11 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static JIADKOFHHJMReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFKSUFES09GSEhKTS5wcm90bxoRTUZBQ05HSU5KSUYucHJvdG8iNgoLSklB",
-            "REtPRkhISk0SJwoRYWV0aGVyX3NraWxsX2xpc3QYByADKAsyDC5NRkFDTkdJ",
-            "TkpJRkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFKSUFES09GSEhKTS5wcm90bxoZVHJhaW5QYXJ0eUdhbWVTa2lsbC5wcm90",
+            "byI+CgtKSUFES09GSEhKTRIvChFhZXRoZXJfc2tpbGxfbGlzdBgHIAMoCzIU",
+            "LlRyYWluUGFydHlHYW1lU2tpbGxCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MFACNGINJIFReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyGameSkillReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.JIADKOFHHJM), global::EggLink.DanhengServer.Proto.JIADKOFHHJM.Parser, new[]{ "AetherSkillList" }, null, null, null, null)
           }));
@@ -84,12 +85,12 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "aether_skill_list" field.</summary>
     public const int AetherSkillListFieldNumber = 7;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MFACNGINJIF> _repeated_aetherSkillList_codec
-        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.MFACNGINJIF.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MFACNGINJIF> aetherSkillList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MFACNGINJIF>();
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.TrainPartyGameSkill> _repeated_aetherSkillList_codec
+        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.TrainPartyGameSkill.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGameSkill> aetherSkillList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGameSkill>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MFACNGINJIF> AetherSkillList {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGameSkill> AetherSkillList {
       get { return aetherSkillList_; }
     }
 

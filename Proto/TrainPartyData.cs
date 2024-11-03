@@ -24,18 +24,19 @@ namespace EggLink.DanhengServer.Proto {
     static TrainPartyDataReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRUcmFpblBhcnR5RGF0YS5wcm90bxoUVHJhaW5QYXJ0eUluZm8ucHJvdG8a",
-            "EU1KS0JOSkFLT0pILnByb3RvGh1UcmFpblBhcnR5UGFzc2VuZ2VySW5mby5w",
-            "cm90byLNAQoOVHJhaW5QYXJ0eURhdGESMAoOcGFzc2VuZ2VyX2luZm8YCyAB",
-            "KAsyGC5UcmFpblBhcnR5UGFzc2VuZ2VySW5mbxITCgtOUEtMTEVISU9BTBgP",
-            "IAEoDRIpChB0cmFpbl9wYXJ0eV9pbmZvGAogASgLMg8uVHJhaW5QYXJ0eUlu",
-            "Zm8SIQoLTEZMTUtQR0pBRE8YCSABKAsyDC5NSktCTkpBS09KSBITCgtEUE9M",
-            "R0JLRUtMRBgGIAEoDRIRCglyZWNvcmRfaWQYAiABKA1CHqoCG0VnZ0xpbmsu",
-            "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChRUcmFpblBhcnR5RGF0YS5wcm90bxoYVHJhaW5QYXJ0eUdhbWVJbmZvLnBy",
+            "b3RvGhRUcmFpblBhcnR5SW5mby5wcm90bxodVHJhaW5QYXJ0eVBhc3Nlbmdl",
+            "ckluZm8ucHJvdG8i3gEKDlRyYWluUGFydHlEYXRhEjAKDnBhc3Nlbmdlcl9p",
+            "bmZvGAsgASgLMhguVHJhaW5QYXJ0eVBhc3NlbmdlckluZm8SEwoLTlBLTExF",
+            "SElPQUwYDyABKA0SKQoQdHJhaW5fcGFydHlfaW5mbxgKIAEoCzIPLlRyYWlu",
+            "UGFydHlJbmZvEjIKFXRyYWluX3BhcnR5X2dhbWVfaW5mbxgJIAEoCzITLlRy",
+            "YWluUGFydHlHYW1lSW5mbxITCgtEUE9MR0JLRUtMRBgGIAEoDRIRCglyZWNv",
+            "cmRfaWQYAiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MJKBNJAKOJHReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyPassengerInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyGameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyPassengerInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyData), global::EggLink.DanhengServer.Proto.TrainPartyData.Parser, new[]{ "PassengerInfo", "NPKLLEHIOAL", "TrainPartyInfo", "LFLMKPGJADO", "DPOLGBKEKLD", "RecordId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyData), global::EggLink.DanhengServer.Proto.TrainPartyData.Parser, new[]{ "PassengerInfo", "NPKLLEHIOAL", "TrainPartyInfo", "TrainPartyGameInfo", "DPOLGBKEKLD", "RecordId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -80,7 +81,7 @@ namespace EggLink.DanhengServer.Proto {
       passengerInfo_ = other.passengerInfo_ != null ? other.passengerInfo_.Clone() : null;
       nPKLLEHIOAL_ = other.nPKLLEHIOAL_;
       trainPartyInfo_ = other.trainPartyInfo_ != null ? other.trainPartyInfo_.Clone() : null;
-      lFLMKPGJADO_ = other.lFLMKPGJADO_ != null ? other.lFLMKPGJADO_.Clone() : null;
+      trainPartyGameInfo_ = other.trainPartyGameInfo_ != null ? other.trainPartyGameInfo_.Clone() : null;
       dPOLGBKEKLD_ = other.dPOLGBKEKLD_;
       recordId_ = other.recordId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -128,15 +129,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "LFLMKPGJADO" field.</summary>
-    public const int LFLMKPGJADOFieldNumber = 9;
-    private global::EggLink.DanhengServer.Proto.MJKBNJAKOJH lFLMKPGJADO_;
+    /// <summary>Field number for the "train_party_game_info" field.</summary>
+    public const int TrainPartyGameInfoFieldNumber = 9;
+    private global::EggLink.DanhengServer.Proto.TrainPartyGameInfo trainPartyGameInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MJKBNJAKOJH LFLMKPGJADO {
-      get { return lFLMKPGJADO_; }
+    public global::EggLink.DanhengServer.Proto.TrainPartyGameInfo TrainPartyGameInfo {
+      get { return trainPartyGameInfo_; }
       set {
-        lFLMKPGJADO_ = value;
+        trainPartyGameInfo_ = value;
       }
     }
 
@@ -182,7 +183,7 @@ namespace EggLink.DanhengServer.Proto {
       if (!object.Equals(PassengerInfo, other.PassengerInfo)) return false;
       if (NPKLLEHIOAL != other.NPKLLEHIOAL) return false;
       if (!object.Equals(TrainPartyInfo, other.TrainPartyInfo)) return false;
-      if (!object.Equals(LFLMKPGJADO, other.LFLMKPGJADO)) return false;
+      if (!object.Equals(TrainPartyGameInfo, other.TrainPartyGameInfo)) return false;
       if (DPOLGBKEKLD != other.DPOLGBKEKLD) return false;
       if (RecordId != other.RecordId) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -195,7 +196,7 @@ namespace EggLink.DanhengServer.Proto {
       if (passengerInfo_ != null) hash ^= PassengerInfo.GetHashCode();
       if (NPKLLEHIOAL != 0) hash ^= NPKLLEHIOAL.GetHashCode();
       if (trainPartyInfo_ != null) hash ^= TrainPartyInfo.GetHashCode();
-      if (lFLMKPGJADO_ != null) hash ^= LFLMKPGJADO.GetHashCode();
+      if (trainPartyGameInfo_ != null) hash ^= TrainPartyGameInfo.GetHashCode();
       if (DPOLGBKEKLD != 0) hash ^= DPOLGBKEKLD.GetHashCode();
       if (RecordId != 0) hash ^= RecordId.GetHashCode();
       if (_unknownFields != null) {
@@ -224,9 +225,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteUInt32(DPOLGBKEKLD);
       }
-      if (lFLMKPGJADO_ != null) {
+      if (trainPartyGameInfo_ != null) {
         output.WriteRawTag(74);
-        output.WriteMessage(LFLMKPGJADO);
+        output.WriteMessage(TrainPartyGameInfo);
       }
       if (trainPartyInfo_ != null) {
         output.WriteRawTag(82);
@@ -258,9 +259,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteUInt32(DPOLGBKEKLD);
       }
-      if (lFLMKPGJADO_ != null) {
+      if (trainPartyGameInfo_ != null) {
         output.WriteRawTag(74);
-        output.WriteMessage(LFLMKPGJADO);
+        output.WriteMessage(TrainPartyGameInfo);
       }
       if (trainPartyInfo_ != null) {
         output.WriteRawTag(82);
@@ -293,8 +294,8 @@ namespace EggLink.DanhengServer.Proto {
       if (trainPartyInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TrainPartyInfo);
       }
-      if (lFLMKPGJADO_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LFLMKPGJADO);
+      if (trainPartyGameInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TrainPartyGameInfo);
       }
       if (DPOLGBKEKLD != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DPOLGBKEKLD);
@@ -329,11 +330,11 @@ namespace EggLink.DanhengServer.Proto {
         }
         TrainPartyInfo.MergeFrom(other.TrainPartyInfo);
       }
-      if (other.lFLMKPGJADO_ != null) {
-        if (lFLMKPGJADO_ == null) {
-          LFLMKPGJADO = new global::EggLink.DanhengServer.Proto.MJKBNJAKOJH();
+      if (other.trainPartyGameInfo_ != null) {
+        if (trainPartyGameInfo_ == null) {
+          TrainPartyGameInfo = new global::EggLink.DanhengServer.Proto.TrainPartyGameInfo();
         }
-        LFLMKPGJADO.MergeFrom(other.LFLMKPGJADO);
+        TrainPartyGameInfo.MergeFrom(other.TrainPartyGameInfo);
       }
       if (other.DPOLGBKEKLD != 0) {
         DPOLGBKEKLD = other.DPOLGBKEKLD;
@@ -365,10 +366,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 74: {
-            if (lFLMKPGJADO_ == null) {
-              LFLMKPGJADO = new global::EggLink.DanhengServer.Proto.MJKBNJAKOJH();
+            if (trainPartyGameInfo_ == null) {
+              TrainPartyGameInfo = new global::EggLink.DanhengServer.Proto.TrainPartyGameInfo();
             }
-            input.ReadMessage(LFLMKPGJADO);
+            input.ReadMessage(TrainPartyGameInfo);
             break;
           }
           case 82: {
@@ -413,10 +414,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 74: {
-            if (lFLMKPGJADO_ == null) {
-              LFLMKPGJADO = new global::EggLink.DanhengServer.Proto.MJKBNJAKOJH();
+            if (trainPartyGameInfo_ == null) {
+              TrainPartyGameInfo = new global::EggLink.DanhengServer.Proto.TrainPartyGameInfo();
             }
-            input.ReadMessage(LFLMKPGJADO);
+            input.ReadMessage(TrainPartyGameInfo);
             break;
           }
           case 82: {

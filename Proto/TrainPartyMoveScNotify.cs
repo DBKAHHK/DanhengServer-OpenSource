@@ -24,12 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static TrainPartyMoveScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxUcmFpblBhcnR5TW92ZVNjTm90aWZ5LnByb3RvGhFJQ0VORUROTUFMQS5w",
-            "cm90byJQChZUcmFpblBhcnR5TW92ZVNjTm90aWZ5EhMKC09OREdOUEtHSkNC",
-            "GAQgASgNEiEKC0FFT0hQTUJFTk1PGAggAygLMgwuSUNFTkVETk1BTEFCHqoC",
-            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChxUcmFpblBhcnR5TW92ZVNjTm90aWZ5LnByb3RvGhhUcmFpblBhcnR5R2Ft",
+            "ZUdyaWQucHJvdG8iVwoWVHJhaW5QYXJ0eU1vdmVTY05vdGlmeRITCgtPTkRH",
+            "TlBLR0pDQhgEIAEoDRIoCgtBRU9IUE1CRU5NTxgIIAMoCzITLlRyYWluUGFy",
+            "dHlHYW1lR3JpZEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ICENEDNMALAReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyGameGridReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyMoveScNotify), global::EggLink.DanhengServer.Proto.TrainPartyMoveScNotify.Parser, new[]{ "ONDGNPKGJCB", "AEOHPMBENMO" }, null, null, null, null)
           }));
@@ -98,12 +99,12 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "AEOHPMBENMO" field.</summary>
     public const int AEOHPMBENMOFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ICENEDNMALA> _repeated_aEOHPMBENMO_codec
-        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.ICENEDNMALA.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ICENEDNMALA> aEOHPMBENMO_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ICENEDNMALA>();
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.TrainPartyGameGrid> _repeated_aEOHPMBENMO_codec
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.TrainPartyGameGrid.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGameGrid> aEOHPMBENMO_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGameGrid>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ICENEDNMALA> AEOHPMBENMO {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGameGrid> AEOHPMBENMO {
       get { return aEOHPMBENMO_; }
     }
 

@@ -24,17 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static PFOONLIJKKKReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFQRk9PTkxJSktLSy5wcm90bxoRQU5PRUJIQU5IRE0ucHJvdG8iwgEKC1BG",
+            "ChFQRk9PTkxJSktLSy5wcm90bxoRQU5PRUJIQU5IRE0ucHJvdG8ivgEKC1BG",
             "T09OTElKS0tLEhMKC0RGQ0NHT0RNTExEGAMgASgIEhMKC1BBR01GSURPTFBE",
-            "GAYgASgIEhMKC0dDSU1NRklEUEpQGAsgASgNEhMKC0FLTEhIRUxCUFBJGAcg",
-            "ASgNEhMKC01OQ0VOTElNSkVCGA0gASgIEhMKC0ZEQkdJQUJITkdDGAggASgI",
-            "EiAKCWJ1ZmZfbGlzdBj9DCADKAsyDC5BTk9FQkhBTkhETRITCgtPTk5PRklJ",
-            "TkNBSBgCIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "GAYgASgIEg8KB2dyaWRfaWQYCyABKA0SEwoLQUtMSEhFTEJQUEkYByABKA0S",
+            "EwoLTU5DRU5MSU1KRUIYDSABKAgSEwoLRkRCR0lBQkhOR0MYCCABKAgSIAoJ",
+            "YnVmZl9saXN0GP0MIAMoCzIMLkFOT0VCSEFOSERNEhMKC09OTk9GSUlOQ0FI",
+            "GAIgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ANOEBHANHDMReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PFOONLIJKKK), global::EggLink.DanhengServer.Proto.PFOONLIJKKK.Parser, new[]{ "DFCCGODMLLD", "PAGMFIDOLPD", "GCIMMFIDPJP", "AKLHHELBPPI", "MNCENLIMJEB", "FDBGIABHNGC", "BuffList", "ONNOFIINCAH" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PFOONLIJKKK), global::EggLink.DanhengServer.Proto.PFOONLIJKKK.Parser, new[]{ "DFCCGODMLLD", "PAGMFIDOLPD", "GridId", "AKLHHELBPPI", "MNCENLIMJEB", "FDBGIABHNGC", "BuffList", "ONNOFIINCAH" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,7 +78,7 @@ namespace EggLink.DanhengServer.Proto {
     public PFOONLIJKKK(PFOONLIJKKK other) : this() {
       dFCCGODMLLD_ = other.dFCCGODMLLD_;
       pAGMFIDOLPD_ = other.pAGMFIDOLPD_;
-      gCIMMFIDPJP_ = other.gCIMMFIDPJP_;
+      gridId_ = other.gridId_;
       aKLHHELBPPI_ = other.aKLHHELBPPI_;
       mNCENLIMJEB_ = other.mNCENLIMJEB_;
       fDBGIABHNGC_ = other.fDBGIABHNGC_;
@@ -117,15 +117,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "GCIMMFIDPJP" field.</summary>
-    public const int GCIMMFIDPJPFieldNumber = 11;
-    private uint gCIMMFIDPJP_;
+    /// <summary>Field number for the "grid_id" field.</summary>
+    public const int GridIdFieldNumber = 11;
+    private uint gridId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GCIMMFIDPJP {
-      get { return gCIMMFIDPJP_; }
+    public uint GridId {
+      get { return gridId_; }
       set {
-        gCIMMFIDPJP_ = value;
+        gridId_ = value;
       }
     }
 
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (DFCCGODMLLD != other.DFCCGODMLLD) return false;
       if (PAGMFIDOLPD != other.PAGMFIDOLPD) return false;
-      if (GCIMMFIDPJP != other.GCIMMFIDPJP) return false;
+      if (GridId != other.GridId) return false;
       if (AKLHHELBPPI != other.AKLHHELBPPI) return false;
       if (MNCENLIMJEB != other.MNCENLIMJEB) return false;
       if (FDBGIABHNGC != other.FDBGIABHNGC) return false;
@@ -220,7 +220,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (DFCCGODMLLD != false) hash ^= DFCCGODMLLD.GetHashCode();
       if (PAGMFIDOLPD != false) hash ^= PAGMFIDOLPD.GetHashCode();
-      if (GCIMMFIDPJP != 0) hash ^= GCIMMFIDPJP.GetHashCode();
+      if (GridId != 0) hash ^= GridId.GetHashCode();
       if (AKLHHELBPPI != 0) hash ^= AKLHHELBPPI.GetHashCode();
       if (MNCENLIMJEB != false) hash ^= MNCENLIMJEB.GetHashCode();
       if (FDBGIABHNGC != false) hash ^= FDBGIABHNGC.GetHashCode();
@@ -264,9 +264,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(64);
         output.WriteBool(FDBGIABHNGC);
       }
-      if (GCIMMFIDPJP != 0) {
+      if (GridId != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(GCIMMFIDPJP);
+        output.WriteUInt32(GridId);
       }
       if (MNCENLIMJEB != false) {
         output.WriteRawTag(104);
@@ -303,9 +303,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(64);
         output.WriteBool(FDBGIABHNGC);
       }
-      if (GCIMMFIDPJP != 0) {
+      if (GridId != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(GCIMMFIDPJP);
+        output.WriteUInt32(GridId);
       }
       if (MNCENLIMJEB != false) {
         output.WriteRawTag(104);
@@ -328,8 +328,8 @@ namespace EggLink.DanhengServer.Proto {
       if (PAGMFIDOLPD != false) {
         size += 1 + 1;
       }
-      if (GCIMMFIDPJP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GCIMMFIDPJP);
+      if (GridId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridId);
       }
       if (AKLHHELBPPI != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AKLHHELBPPI);
@@ -362,8 +362,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.PAGMFIDOLPD != false) {
         PAGMFIDOLPD = other.PAGMFIDOLPD;
       }
-      if (other.GCIMMFIDPJP != 0) {
-        GCIMMFIDPJP = other.GCIMMFIDPJP;
+      if (other.GridId != 0) {
+        GridId = other.GridId;
       }
       if (other.AKLHHELBPPI != 0) {
         AKLHHELBPPI = other.AKLHHELBPPI;
@@ -414,7 +414,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 88: {
-            GCIMMFIDPJP = input.ReadUInt32();
+            GridId = input.ReadUInt32();
             break;
           }
           case 104: {
@@ -461,7 +461,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 88: {
-            GCIMMFIDPJP = input.ReadUInt32();
+            GridId = input.ReadUInt32();
             break;
           }
           case 104: {

@@ -24,13 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static NHNNJJPBOMJReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFOSE5OSkpQQk9NSi5wcm90bxoRT0tGR1BBQktFSkUucHJvdG8aEUFFT0RI",
-            "S0lNUEFGLnByb3RvIn0KC05ITk5KSlBCT01KEhMKC0VDTEJQSFBNR0lOGAEg",
-            "ASgIEiEKC0ZPQUZQQ05KTkFNGAQgASgLMgwuQUVPREhLSU1QQUYSEwoLQUxQ",
-            "RE5QRERQSkMYDyABKA0SIQoLT1BEQUJCTkhIQ0cYCCABKAsyDC5PS0ZHUEFC",
-            "S0VKRUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFOSE5OSkpQQk9NSi5wcm90bxoRT0tGR1BBQktFSkUucHJvdG8aHFRyYWlu",
+            "UGFydHlHYW1lQ2FyZEluZm8ucHJvdG8iiAEKC05ITk5KSlBCT01KEhMKC0VD",
+            "TEJQSFBNR0lOGAEgASgIEiwKC0ZPQUZQQ05KTkFNGAQgASgLMhcuVHJhaW5Q",
+            "YXJ0eUdhbWVDYXJkSW5mbxITCgtBTFBETlBERFBKQxgPIAEoDRIhCgtPUERB",
+            "QkJOSEhDRxgIIAEoCzIMLk9LRkdQQUJLRUpFQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OKFGPABKEJEReflection.Descriptor, global::EggLink.DanhengServer.Proto.AEODHKIMPAFReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OKFGPABKEJEReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyGameCardInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NHNNJJPBOMJ), global::EggLink.DanhengServer.Proto.NHNNJJPBOMJ.Parser, new[]{ "ECLBPHPMGIN", "FOAFPCNJNAM", "ALPDNPDDPJC", "OPDABBNHHCG" }, null, null, null, null)
           }));
@@ -101,10 +102,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "FOAFPCNJNAM" field.</summary>
     public const int FOAFPCNJNAMFieldNumber = 4;
-    private global::EggLink.DanhengServer.Proto.AEODHKIMPAF fOAFPCNJNAM_;
+    private global::EggLink.DanhengServer.Proto.TrainPartyGameCardInfo fOAFPCNJNAM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.AEODHKIMPAF FOAFPCNJNAM {
+    public global::EggLink.DanhengServer.Proto.TrainPartyGameCardInfo FOAFPCNJNAM {
       get { return fOAFPCNJNAM_; }
       set {
         fOAFPCNJNAM_ = value;
@@ -264,7 +265,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.fOAFPCNJNAM_ != null) {
         if (fOAFPCNJNAM_ == null) {
-          FOAFPCNJNAM = new global::EggLink.DanhengServer.Proto.AEODHKIMPAF();
+          FOAFPCNJNAM = new global::EggLink.DanhengServer.Proto.TrainPartyGameCardInfo();
         }
         FOAFPCNJNAM.MergeFrom(other.FOAFPCNJNAM);
       }
@@ -298,7 +299,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 34: {
             if (fOAFPCNJNAM_ == null) {
-              FOAFPCNJNAM = new global::EggLink.DanhengServer.Proto.AEODHKIMPAF();
+              FOAFPCNJNAM = new global::EggLink.DanhengServer.Proto.TrainPartyGameCardInfo();
             }
             input.ReadMessage(FOAFPCNJNAM);
             break;
@@ -335,7 +336,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 34: {
             if (fOAFPCNJNAM_ == null) {
-              FOAFPCNJNAM = new global::EggLink.DanhengServer.Proto.AEODHKIMPAF();
+              FOAFPCNJNAM = new global::EggLink.DanhengServer.Proto.TrainPartyGameCardInfo();
             }
             input.ReadMessage(FOAFPCNJNAM);
             break;

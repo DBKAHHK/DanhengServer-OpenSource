@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZGaWdodFRyZWFzdXJlRHVuZ2Vvbk1vbnN0ZXJDc1JlcS5wcm90bxobVHJl",
-            "YXN1cmVEdW5nZW9uQXZhdGFyLnByb3RvInkKIEZpZ2h0VHJlYXN1cmVEdW5n",
-            "ZW9uTW9uc3RlckNzUmVxEhMKC0hNUFBGR0NJRkpLGAsgASgNEhMKC0dDSU1N",
-            "RklEUEpQGAggASgNEisKC2F2YXRhcl9saXN0GAkgAygLMhYuVHJlYXN1cmVE",
-            "dW5nZW9uQXZhdGFyQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
-            "BnByb3RvMw=="));
+            "YXN1cmVEdW5nZW9uQXZhdGFyLnByb3RvInUKIEZpZ2h0VHJlYXN1cmVEdW5n",
+            "ZW9uTW9uc3RlckNzUmVxEhMKC0hNUFBGR0NJRkpLGAsgASgNEg8KB2dyaWRf",
+            "aWQYCCABKA0SKwoLYXZhdGFyX2xpc3QYCSADKAsyFi5UcmVhc3VyZUR1bmdl",
+            "b25BdmF0YXJCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TreasureDungeonAvatarReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightTreasureDungeonMonsterCsReq), global::EggLink.DanhengServer.Proto.FightTreasureDungeonMonsterCsReq.Parser, new[]{ "HMPPFGCIFJK", "GCIMMFIDPJP", "AvatarList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightTreasureDungeonMonsterCsReq), global::EggLink.DanhengServer.Proto.FightTreasureDungeonMonsterCsReq.Parser, new[]{ "HMPPFGCIFJK", "GridId", "AvatarList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,7 +76,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FightTreasureDungeonMonsterCsReq(FightTreasureDungeonMonsterCsReq other) : this() {
       hMPPFGCIFJK_ = other.hMPPFGCIFJK_;
-      gCIMMFIDPJP_ = other.gCIMMFIDPJP_;
+      gridId_ = other.gridId_;
       avatarList_ = other.avatarList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -99,15 +99,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "GCIMMFIDPJP" field.</summary>
-    public const int GCIMMFIDPJPFieldNumber = 8;
-    private uint gCIMMFIDPJP_;
+    /// <summary>Field number for the "grid_id" field.</summary>
+    public const int GridIdFieldNumber = 8;
+    private uint gridId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GCIMMFIDPJP {
-      get { return gCIMMFIDPJP_; }
+    public uint GridId {
+      get { return gridId_; }
       set {
-        gCIMMFIDPJP_ = value;
+        gridId_ = value;
       }
     }
 
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (HMPPFGCIFJK != other.HMPPFGCIFJK) return false;
-      if (GCIMMFIDPJP != other.GCIMMFIDPJP) return false;
+      if (GridId != other.GridId) return false;
       if(!avatarList_.Equals(other.avatarList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -148,7 +148,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (HMPPFGCIFJK != 0) hash ^= HMPPFGCIFJK.GetHashCode();
-      if (GCIMMFIDPJP != 0) hash ^= GCIMMFIDPJP.GetHashCode();
+      if (GridId != 0) hash ^= GridId.GetHashCode();
       hash ^= avatarList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -168,9 +168,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (GCIMMFIDPJP != 0) {
+      if (GridId != 0) {
         output.WriteRawTag(64);
-        output.WriteUInt32(GCIMMFIDPJP);
+        output.WriteUInt32(GridId);
       }
       avatarList_.WriteTo(output, _repeated_avatarList_codec);
       if (HMPPFGCIFJK != 0) {
@@ -187,9 +187,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (GCIMMFIDPJP != 0) {
+      if (GridId != 0) {
         output.WriteRawTag(64);
-        output.WriteUInt32(GCIMMFIDPJP);
+        output.WriteUInt32(GridId);
       }
       avatarList_.WriteTo(ref output, _repeated_avatarList_codec);
       if (HMPPFGCIFJK != 0) {
@@ -209,8 +209,8 @@ namespace EggLink.DanhengServer.Proto {
       if (HMPPFGCIFJK != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HMPPFGCIFJK);
       }
-      if (GCIMMFIDPJP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GCIMMFIDPJP);
+      if (GridId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridId);
       }
       size += avatarList_.CalculateSize(_repeated_avatarList_codec);
       if (_unknownFields != null) {
@@ -228,8 +228,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.HMPPFGCIFJK != 0) {
         HMPPFGCIFJK = other.HMPPFGCIFJK;
       }
-      if (other.GCIMMFIDPJP != 0) {
-        GCIMMFIDPJP = other.GCIMMFIDPJP;
+      if (other.GridId != 0) {
+        GridId = other.GridId;
       }
       avatarList_.Add(other.avatarList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -248,7 +248,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 64: {
-            GCIMMFIDPJP = input.ReadUInt32();
+            GridId = input.ReadUInt32();
             break;
           }
           case 74: {
@@ -275,7 +275,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 64: {
-            GCIMMFIDPJP = input.ReadUInt32();
+            GridId = input.ReadUInt32();
             break;
           }
           case 74: {

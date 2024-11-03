@@ -24,11 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static LOCAOOGDAMBReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFMT0NBT09HREFNQi5wcm90bxoRTUZBQ05HSU5KSUYucHJvdG8iMAoLTE9D",
-            "QU9PR0RBTUISIQoLTUxNREVCS0lHQkgYDiABKAsyDC5NRkFDTkdJTkpJRkIe",
-            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFMT0NBT09HREFNQi5wcm90bxoZVHJhaW5QYXJ0eUdhbWVTa2lsbC5wcm90",
+            "byI4CgtMT0NBT09HREFNQhIpCgtNTE1ERUJLSUdCSBgOIAEoCzIULlRyYWlu",
+            "UGFydHlHYW1lU2tpbGxCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MFACNGINJIFReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyGameSkillReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LOCAOOGDAMB), global::EggLink.DanhengServer.Proto.LOCAOOGDAMB.Parser, new[]{ "MLMDEBKIGBH" }, null, null, null, null)
           }));
@@ -84,10 +85,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "MLMDEBKIGBH" field.</summary>
     public const int MLMDEBKIGBHFieldNumber = 14;
-    private global::EggLink.DanhengServer.Proto.MFACNGINJIF mLMDEBKIGBH_;
+    private global::EggLink.DanhengServer.Proto.TrainPartyGameSkill mLMDEBKIGBH_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MFACNGINJIF MLMDEBKIGBH {
+    public global::EggLink.DanhengServer.Proto.TrainPartyGameSkill MLMDEBKIGBH {
       get { return mLMDEBKIGBH_; }
       set {
         mLMDEBKIGBH_ = value;
@@ -181,7 +182,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.mLMDEBKIGBH_ != null) {
         if (mLMDEBKIGBH_ == null) {
-          MLMDEBKIGBH = new global::EggLink.DanhengServer.Proto.MFACNGINJIF();
+          MLMDEBKIGBH = new global::EggLink.DanhengServer.Proto.TrainPartyGameSkill();
         }
         MLMDEBKIGBH.MergeFrom(other.MLMDEBKIGBH);
       }
@@ -202,7 +203,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 114: {
             if (mLMDEBKIGBH_ == null) {
-              MLMDEBKIGBH = new global::EggLink.DanhengServer.Proto.MFACNGINJIF();
+              MLMDEBKIGBH = new global::EggLink.DanhengServer.Proto.TrainPartyGameSkill();
             }
             input.ReadMessage(MLMDEBKIGBH);
             break;
@@ -224,7 +225,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 114: {
             if (mLMDEBKIGBH_ == null) {
-              MLMDEBKIGBH = new global::EggLink.DanhengServer.Proto.MFACNGINJIF();
+              MLMDEBKIGBH = new global::EggLink.DanhengServer.Proto.TrainPartyGameSkill();
             }
             input.ReadMessage(MLMDEBKIGBH);
             break;

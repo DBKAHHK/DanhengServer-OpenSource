@@ -24,11 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static MINMHDAEEHHReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFNSU5NSERBRUVISC5wcm90bxoRRUpKQlBIQURBT0MucHJvdG8iMwoLTUlO",
-            "TUhEQUVFSEgSJAoOcGVuZGluZ19hY3Rpb24YASABKAsyDC5FSkpCUEhBREFP",
-            "Q0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFNSU5NSERBRUVISC5wcm90bxoaVHJhaW5QYXJ0eUFjdGlvbkluZm8ucHJv",
+            "dG8iPAoLTUlOTUhEQUVFSEgSLQoOcGVuZGluZ19hY3Rpb24YASABKAsyFS5U",
+            "cmFpblBhcnR5QWN0aW9uSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EJJBPHADAOCReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyActionInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MINMHDAEEHH), global::EggLink.DanhengServer.Proto.MINMHDAEEHH.Parser, new[]{ "PendingAction" }, null, null, null, null)
           }));
@@ -84,10 +85,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "pending_action" field.</summary>
     public const int PendingActionFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.EJJBPHADAOC pendingAction_;
+    private global::EggLink.DanhengServer.Proto.TrainPartyActionInfo pendingAction_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.EJJBPHADAOC PendingAction {
+    public global::EggLink.DanhengServer.Proto.TrainPartyActionInfo PendingAction {
       get { return pendingAction_; }
       set {
         pendingAction_ = value;
@@ -181,7 +182,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.pendingAction_ != null) {
         if (pendingAction_ == null) {
-          PendingAction = new global::EggLink.DanhengServer.Proto.EJJBPHADAOC();
+          PendingAction = new global::EggLink.DanhengServer.Proto.TrainPartyActionInfo();
         }
         PendingAction.MergeFrom(other.PendingAction);
       }
@@ -202,7 +203,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 10: {
             if (pendingAction_ == null) {
-              PendingAction = new global::EggLink.DanhengServer.Proto.EJJBPHADAOC();
+              PendingAction = new global::EggLink.DanhengServer.Proto.TrainPartyActionInfo();
             }
             input.ReadMessage(PendingAction);
             break;
@@ -224,7 +225,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 10: {
             if (pendingAction_ == null) {
-              PendingAction = new global::EggLink.DanhengServer.Proto.EJJBPHADAOC();
+              PendingAction = new global::EggLink.DanhengServer.Proto.TrainPartyActionInfo();
             }
             input.ReadMessage(PendingAction);
             break;

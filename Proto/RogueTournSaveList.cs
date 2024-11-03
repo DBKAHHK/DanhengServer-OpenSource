@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static RogueTournSaveListReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhSb2d1ZVRvdXJuU2F2ZUxpc3QucHJvdG8aEUdITkFOR0NHTEdLLnByb3Rv",
-            "GhpSb2d1ZVRvdXJuU2Vhc29uSW5mby5wcm90bxoXUm9ndWVUb3VybkN1cklu",
-            "Zm8ucHJvdG8i1QEKElJvZ3VlVG91cm5TYXZlTGlzdBIMCgRuYW1lGAwgASgJ",
+            "ChhSb2d1ZVRvdXJuU2F2ZUxpc3QucHJvdG8aF1JvZ3VlVG91cm5DdXJJbmZv",
+            "LnByb3RvGhpSb2d1ZVRvdXJuU2Vhc29uSW5mby5wcm90bxoRR0hOQU5HQ0dM",
+            "R0sucHJvdG8i1QEKElJvZ3VlVG91cm5TYXZlTGlzdBIMCgRuYW1lGAwgASgJ",
             "EhAKCGVuZF90aW1lGAcgASgDEhoKBGRhdGEYDyABKAsyDC5HSE5BTkdDR0xH",
             "SxIwChFyb2d1ZV9zZWFzb25faW5mbxgEIAEoCzIVLlJvZ3VlVG91cm5TZWFz",
             "b25JbmZvEhEKCW1heF90aW1lcxgIIAEoDRIMCgR0aW1lGAkgASgDEjAKFHJv",
             "Z3VlX3RvdXJuX2N1cl9pbmZvGAIgASgLMhIuUm9ndWVUb3VybkN1ckluZm9C",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GHNANGCGLGKReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournSeasonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournCurInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTournCurInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournSeasonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GHNANGCGLGKReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournSaveList), global::EggLink.DanhengServer.Proto.RogueTournSaveList.Parser, new[]{ "Name", "EndTime", "Data", "RogueSeasonInfo", "MaxTimes", "Time", "RogueTournCurInfo" }, null, null, null, null)
           }));

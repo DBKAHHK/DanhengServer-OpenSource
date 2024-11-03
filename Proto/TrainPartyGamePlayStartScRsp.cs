@@ -24,12 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static TrainPartyGamePlayStartScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiJUcmFpblBhcnR5R2FtZVBsYXlTdGFydFNjUnNwLnByb3RvGhFNSktCTkpB",
-            "S09KSC5wcm90byJSChxUcmFpblBhcnR5R2FtZVBsYXlTdGFydFNjUnNwEg8K",
-            "B3JldGNvZGUYAiABKA0SIQoLT05CTENKRUdDS0YYDSABKAsyDC5NSktCTkpB",
-            "S09KSEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "CiJUcmFpblBhcnR5R2FtZVBsYXlTdGFydFNjUnNwLnByb3RvGhhUcmFpblBh",
+            "cnR5R2FtZUluZm8ucHJvdG8iWQocVHJhaW5QYXJ0eUdhbWVQbGF5U3RhcnRT",
+            "Y1JzcBIPCgdyZXRjb2RlGAIgASgNEigKC09OQkxDSkVHQ0tGGA0gASgLMhMu",
+            "VHJhaW5QYXJ0eUdhbWVJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MJKBNJAKOJHReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyGameInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyGamePlayStartScRsp), global::EggLink.DanhengServer.Proto.TrainPartyGamePlayStartScRsp.Parser, new[]{ "Retcode", "ONBLCJEGCKF" }, null, null, null, null)
           }));
@@ -98,10 +99,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "ONBLCJEGCKF" field.</summary>
     public const int ONBLCJEGCKFFieldNumber = 13;
-    private global::EggLink.DanhengServer.Proto.MJKBNJAKOJH oNBLCJEGCKF_;
+    private global::EggLink.DanhengServer.Proto.TrainPartyGameInfo oNBLCJEGCKF_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MJKBNJAKOJH ONBLCJEGCKF {
+    public global::EggLink.DanhengServer.Proto.TrainPartyGameInfo ONBLCJEGCKF {
       get { return oNBLCJEGCKF_; }
       set {
         oNBLCJEGCKF_ = value;
@@ -211,7 +212,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.oNBLCJEGCKF_ != null) {
         if (oNBLCJEGCKF_ == null) {
-          ONBLCJEGCKF = new global::EggLink.DanhengServer.Proto.MJKBNJAKOJH();
+          ONBLCJEGCKF = new global::EggLink.DanhengServer.Proto.TrainPartyGameInfo();
         }
         ONBLCJEGCKF.MergeFrom(other.ONBLCJEGCKF);
       }
@@ -236,7 +237,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 106: {
             if (oNBLCJEGCKF_ == null) {
-              ONBLCJEGCKF = new global::EggLink.DanhengServer.Proto.MJKBNJAKOJH();
+              ONBLCJEGCKF = new global::EggLink.DanhengServer.Proto.TrainPartyGameInfo();
             }
             input.ReadMessage(ONBLCJEGCKF);
             break;
@@ -262,7 +263,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 106: {
             if (oNBLCJEGCKF_ == null) {
-              ONBLCJEGCKF = new global::EggLink.DanhengServer.Proto.MJKBNJAKOJH();
+              ONBLCJEGCKF = new global::EggLink.DanhengServer.Proto.TrainPartyGameInfo();
             }
             input.ReadMessage(ONBLCJEGCKF);
             break;

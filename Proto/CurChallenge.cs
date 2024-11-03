@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static CurChallengeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJDdXJDaGFsbGVuZ2UucHJvdG8aFUV4dHJhTGluZXVwVHlwZS5wcm90bxoY",
-            "Q2hhbGxlbmdlU3RvcnlJbmZvLnByb3RvGhFLaWxsTW9uc3Rlci5wcm90bxoV",
+            "ChJDdXJDaGFsbGVuZ2UucHJvdG8aFUV4dHJhTGluZXVwVHlwZS5wcm90bxoR",
+            "S2lsbE1vbnN0ZXIucHJvdG8aGENoYWxsZW5nZVN0b3J5SW5mby5wcm90bxoV",
             "Q2hhbGxlbmdlU3RhdHVzLnByb3RvIpgCCgxDdXJDaGFsbGVuZ2USFwoPZGVh",
             "ZF9hdmF0YXJfbnVtGAYgASgNEhAKCHNjb3JlX2lkGA0gASgNEiAKBnN0YXR1",
             "cxgPIAEoDjIQLkNoYWxsZW5nZVN0YXR1cxIRCglzY29yZV90d28YASABKA0S",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "ZW5nZV9pZBgCIAEoDRITCgtyb3VuZF9jb3VudBgJIAEoDUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ExtraLineupTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStoryInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KillMonsterReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ExtraLineupTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.KillMonsterReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStoryInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CurChallenge), global::EggLink.DanhengServer.Proto.CurChallenge.Parser, new[]{ "DeadAvatarNum", "ScoreId", "Status", "ScoreTwo", "StageInfo", "KillMonsterList", "ExtraLineupType", "ChallengeId", "RoundCount" }, null, null, null, null)
           }));
