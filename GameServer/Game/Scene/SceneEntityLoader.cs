@@ -1,5 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Config.Scene;
+using EggLink.DanhengServer.Database.Scene;
 using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.Enums.Scene;
@@ -134,6 +135,10 @@ public class SceneEntityLoader(SceneInstance scene)
 
         if ((!info.LoadCondition.IsTrue(missionData) || info.UnloadCondition.IsTrue(missionData, false) ||
              info.ForceUnloadCondition.IsTrue(missionData, false)) && !forceLoad) return null;
+
+        if (!info.SavedValueCondition.IsTrue(
+                Scene.Player.SceneData!.FloorSavedData.GetValueOrDefault(Scene.FloorId, [])) && !forceLoad)
+            return null;
 
         if (Scene.Entities.Values.ToList().FindIndex(x => x.GroupID == info.Id) !=
             -1) // check if group is already loaded

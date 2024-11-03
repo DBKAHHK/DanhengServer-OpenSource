@@ -497,7 +497,7 @@ public class PlayerInstance(PlayerData data)
                 $"JG_ML_{splits[3]}_Puzzle{(config.TargetState == PropStateEnum.Open ? "Started" : "Complete")}";
         }
 
-        if (SceneInstance?.FloorInfo?.SavedValues.Find(x => x.Name == key) != null)
+        if (SceneInstance?.FloorInfo?.FloorSavedValue.Find(x => x.Name == key) != null)
         {
             // should save
             var plane = SceneInstance.PlaneId;

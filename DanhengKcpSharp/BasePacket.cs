@@ -21,6 +21,11 @@ public class BasePacket(ushort cmdId)
         Data = message.ToByteArray();
     }
 
+    public void SetData(string base64)
+    {
+        SetData(Convert.FromBase64String(base64));
+    }
+
     public byte[] BuildPacket()
     {
         using MemoryStream? ms = new();

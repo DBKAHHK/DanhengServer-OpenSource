@@ -31,7 +31,8 @@ public class TrainPartyManager : BasePlayerManager
         var proto = new TrainPartyData
         {
             TrainPartyInfo = ToPartyInfo(),
-            PassengerInfo = ToPassengerInfo()
+            PassengerInfo = ToPassengerInfo(),
+            LFLMKPGJADO = new MJKBNJAKOJH()
         };
 
         return proto;

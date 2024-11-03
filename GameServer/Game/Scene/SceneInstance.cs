@@ -115,7 +115,7 @@ public class SceneInstance
 
         Player.SceneData!.FloorSavedData.TryGetValue(FloorId, out var floorData);
 
-        foreach (var value in FloorInfo?.SavedValues ?? [])
+        foreach (var value in FloorInfo?.FloorSavedValue ?? [])
             if (floorData != null && floorData.TryGetValue(value.Name, out var v))
                 sceneInfo.FloorSavedData[value.Name] = v;
             else
