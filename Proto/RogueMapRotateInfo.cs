@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static RogueMapRotateInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhSb2d1ZU1hcFJvdGF0ZUluZm8ucHJvdG8aEUNoYXJnZXJJbmZvLnByb3Rv",
-            "Gg9OZXdNYXBSb3QucHJvdG8aEVJvdGF0ZXJEYXRhLnByb3RvGhdSb3RhdGVy",
-            "RW5lcmd5SW5mby5wcm90byLhAQoSUm9ndWVNYXBSb3RhdGVJbmZvEhMKC1BF",
+            "ChhSb2d1ZU1hcFJvdGF0ZUluZm8ucHJvdG8aD05ld01hcFJvdC5wcm90bxoR",
+            "Q2hhcmdlckluZm8ucHJvdG8aF1JvdGF0ZXJFbmVyZ3lJbmZvLnByb3RvGhFS",
+            "b3RhdGVyRGF0YS5wcm90byLhAQoSUm9ndWVNYXBSb3RhdGVJbmZvEhMKC1BF",
             "TUhHSEdNSENMGA4gASgIEhMKC0xHQ0hPSU5ITERKGAMgASgFEicKC2VuZXJn",
             "eV9pbmZvGAogASgLMhIuUm90YXRlckVuZXJneUluZm8SIQoLUE5BTUZHTEZL",
             "QUkYBCADKAsyDC5Sb3RhdGVyRGF0YRITCgtGUEhQRUpQT0JHShgPIAEoDRIh",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "cBgFIAEoCzIKLk5ld01hcFJvdEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.NewMapRotReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NewMapRotReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMapRotateInfo), global::EggLink.DanhengServer.Proto.RogueMapRotateInfo.Parser, new[]{ "PEMHGHGMHCL", "LGCHOINHLDJ", "EnergyInfo", "PNAMFGLFKAI", "FPHPEJPOBGJ", "MOOKNNKOEHL", "RogueMap" }, null, null, null, null)
           }));

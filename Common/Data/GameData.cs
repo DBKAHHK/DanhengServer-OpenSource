@@ -132,8 +132,12 @@ public static class GameData
 
     public static Dictionary<int, TrainPartyPassengerConfigExcel> TrainPartyPassengerConfigData { get; private set; } = [];
     public static Dictionary<int, TrainPartyAreaConfigExcel> TrainPartyAreaConfigData { get; private set; } = [];
+    public static Dictionary<int, TrainPartyAreaGoalConfigExcel> TrainPartyAreaGoalConfigData { get; private set; } = [];
+    public static Dictionary<int, TrainPartyTeamExcel> TrainPartyTeamData { get; private set; } = [];
     public static Dictionary<int, TrainPartyStepConfigExcel> TrainPartyStepConfigData { get; private set; } = [];
     public static Dictionary<int, TrainPartyDynamicConfigExcel> TrainPartyDynamicConfigData { get; private set; } = [];
+    public static Dictionary<int, TrainPartyGridConfigExcel> TrainPartyGridConfigData { get; private set; } = [];
+    public static Dictionary<int, TrainPartyCardConfigExcel> TrainPartyCardConfigData { get; private set; } = [];
 
     #endregion
 

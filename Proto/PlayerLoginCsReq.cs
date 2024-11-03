@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static PlayerLoginCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZQbGF5ZXJMb2dpbkNzUmVxLnByb3RvGhJMYW5ndWFnZVR5cGUucHJvdG8a",
-            "ElBsYXRmb3JtVHlwZS5wcm90bxoRREhFSkFJR0RKSU0ucHJvdG8i7QQKEFBs",
+            "ChZQbGF5ZXJMb2dpbkNzUmVxLnByb3RvGhFESEVKQUlHREpJTS5wcm90bxoS",
+            "UGxhdGZvcm1UeXBlLnByb3RvGhJMYW5ndWFnZVR5cGUucHJvdG8i7QQKEFBs",
             "YXllckxvZ2luQ3NSZXESEwoLR0RJTEdGSk5LUEkYCCABKAkSEwoLS09OSUlI",
             "Q0FFUE0YASABKAkSFAoLQkFPSkdBSUpBQU4YiwQgASgJEhMKC0hDSU1MTUNL",
             "QVBGGAogASgJEhMKC0ZLTUhNR09BQkJPGAcgASgJEhQKC0lLQk5KSk1BQ01K",
@@ -42,7 +42,7 @@ namespace EggLink.DanhengServer.Proto {
             "UE1PRhiJByABKAgSEwoLSkxHSEtCRURFSEcYCSABKAlCHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.DHEJAIGDJIMReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DHEJAIGDJIMReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerLoginCsReq), global::EggLink.DanhengServer.Proto.PlayerLoginCsReq.Parser, new[]{ "GDILGFJNKPI", "KONIIHCAEPM", "BAOJGAIJAAN", "HCIMLMCKAPF", "FKMHMGOABBO", "IKBNJJMACMJ", "NMCMPEEJBKC", "LoginRandom", "BOCGEPCDDGF", "Signature", "INPFCEIABOI", "LDPNKABEDMH", "MCJNDNLMDOF", "POOJFEBMGKF", "NJDDJHAPNBO", "RogueGetInfo", "CPEMMCOJKDG", "IODIMANHNLK", "ResVersion", "HLCOHDCKAJO", "NIMOOCECNKB", "Platform", "ClientVersion", "DKNJKIALLGI", "JNDHAINPMOF", "JLGHKBEDEHG" }, null, null, null, null)
           }));

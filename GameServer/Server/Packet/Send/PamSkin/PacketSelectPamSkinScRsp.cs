@@ -11,7 +11,7 @@ public class PacketSelectPamSkinScRsp : BasePacket
         var proto = new SelectPamSkinScRsp
         {
             CurPamSkinId = (uint)player.Data.CurrentPamSkin,
-            PrevPamSkinId = (uint)prevSkinId
+            SelectPamSkinId = (uint)prevSkinId
         };
 
         SetData(proto);

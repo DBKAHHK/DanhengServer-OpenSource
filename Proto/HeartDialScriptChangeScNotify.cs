@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNIZWFydERpYWxTY3JpcHRDaGFuZ2VTY05vdGlmeS5wcm90bxoRSE5HT0pI",
-            "QlBGRUoucHJvdG8aG0hlYXJ0RGlhbERpYWxvZ3VlSW5mby5wcm90bxoZSGVh",
-            "cnREaWFsU2NyaXB0SW5mby5wcm90bxobSGVhcnREaWFsVW5sb2NrU3RhdHVz",
+            "QlBGRUoucHJvdG8aGUhlYXJ0RGlhbFNjcmlwdEluZm8ucHJvdG8aG0hlYXJ0",
+            "RGlhbFVubG9ja1N0YXR1cy5wcm90bxobSGVhcnREaWFsRGlhbG9ndWVJbmZv",
             "LnByb3RvIuUBCh1IZWFydERpYWxTY3JpcHRDaGFuZ2VTY05vdGlmeRI6Chpj",
             "aGFuZ2VkX2RpYWxvZ3VlX2luZm9fbGlzdBgOIAMoCzIWLkhlYXJ0RGlhbERp",
             "YWxvZ3VlSW5mbxI2ChhjaGFuZ2VkX3NjcmlwdF9pbmZvX2xpc3QYDyADKAsy",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "bFVubG9ja1N0YXR1c0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HNGOJHBPFEJReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialDialogueInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialScriptInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialUnlockStatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HNGOJHBPFEJReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialScriptInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialUnlockStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialDialogueInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeartDialScriptChangeScNotify), global::EggLink.DanhengServer.Proto.HeartDialScriptChangeScNotify.Parser, new[]{ "ChangedDialogueInfoList", "ChangedScriptInfoList", "ENELMHEDJII", "UnlockStatus" }, null, null, null, null)
           }));

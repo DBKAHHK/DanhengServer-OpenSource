@@ -24,11 +24,11 @@ namespace EggLink.DanhengServer.Proto {
     static PropExtraInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNQcm9wRXh0cmFJbmZvLnByb3RvGhNQcm9wUm9ndWVJbmZvLnByb3RvGhhQ",
-            "cm9wQ2hlc3NSb2d1ZUluZm8ucHJvdG8aHFJvZ3VlR2FtYmxlTWFjaGluZUlu",
-            "Zm8ucHJvdG8aElByb3BBZW9uSW5mby5wcm90bxoYUm9ndWVUb3VybkRvb3JJ",
-            "bmZvLnByb3RvGhlSb2d1ZUN1cnNlQ2hlc3RJbmZvLnByb3RvGhhSb2d1ZU1h",
-            "Z2ljRG9vckluZm8ucHJvdG8aHVJvZ3VlVG91cm5Xb3JrYmVuY2hJbmZvLnBy",
+            "ChNQcm9wRXh0cmFJbmZvLnByb3RvGhhSb2d1ZVRvdXJuRG9vckluZm8ucHJv",
+            "dG8aElByb3BBZW9uSW5mby5wcm90bxoYUm9ndWVNYWdpY0Rvb3JJbmZvLnBy",
+            "b3RvGhhQcm9wQ2hlc3NSb2d1ZUluZm8ucHJvdG8aGVJvZ3VlQ3Vyc2VDaGVz",
+            "dEluZm8ucHJvdG8aE1Byb3BSb2d1ZUluZm8ucHJvdG8aHVJvZ3VlVG91cm5X",
+            "b3JrYmVuY2hJbmZvLnByb3RvGhxSb2d1ZUdhbWJsZU1hY2hpbmVJbmZvLnBy",
             "b3RvIr0DCg1Qcm9wRXh0cmFJbmZvEiQKCnJvZ3VlX2luZm8YASABKAsyDi5Q",
             "cm9wUm9ndWVJbmZvSAASIgoJYWVvbl9pbmZvGAIgASgLMg0uUHJvcEFlb25J",
             "bmZvSAASLwoQY2hlc3Nfcm9ndWVfaW5mbxgOIAEoCzITLlByb3BDaGVzc1Jv",
@@ -41,7 +41,7 @@ namespace EggLink.DanhengServer.Proto {
             "GAggASgLMhMuUm9ndWVNYWdpY0Rvb3JJbmZvSABCDwoNSW5mb09uZW9mQ2Fz",
             "ZUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PropRogueInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PropChessRogueInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueGambleMachineInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PropAeonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournDoorInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCurseChestInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicDoorInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournWorkbenchInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTournDoorInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PropAeonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicDoorInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PropChessRogueInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCurseChestInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PropRogueInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournWorkbenchInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueGambleMachineInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PropExtraInfo), global::EggLink.DanhengServer.Proto.PropExtraInfo.Parser, new[]{ "RogueInfo", "AeonInfo", "ChessRogueInfo", "RogueTournDoorInfo", "RogueTournWorkbenchInfo", "RogueGambleMachineInfo", "RogueCurseChestInfo", "RogueMagicDoorInfo" }, new[]{ "InfoOneofCase" }, null, null, null)
           }));

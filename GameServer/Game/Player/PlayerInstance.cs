@@ -510,7 +510,7 @@ public class PlayerInstance(PlayerData data)
             }
 
             value[key] = 1; // ParamString[2] is the key
-            await SendPacket(new PacketUpdateFloorSavedValueNotify(key, 1));
+            await SendPacket(new PacketUpdateFloorSavedValueNotify(key, 1, this));
 
             TaskManager?.SceneTaskTrigger.TriggerFloor(plane, floor);
             MissionManager?.HandleFinishType(MissionFinishTypeEnum.FloorSavedValue);

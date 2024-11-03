@@ -47,7 +47,7 @@ public class FloorInfo
         // Cache anchors
         foreach (var group in Groups.Values)
         {
-            foreach (var condition in group.SavedValueCondition.Conditions)
+            foreach (var condition in group.SavedValueCondition.Conditions.Where(x => SavedValues.Find(s => s.Name == x.SavedValueName) == null))
                 FloorSavedValue.Add(new FloorSavedValueInfo
                 {
                     DefaultValue = 0,

@@ -24,14 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static TrainPartyBuildDiyCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1UcmFpblBhcnR5QnVpbGREaXlDc1JlcS5wcm90byJqChdUcmFpblBhcnR5",
-            "QnVpbGREaXlDc1JlcRIPCgdhcmVhX2lkGAogASgNEhMKC0tPQU5PSEZPTUtE",
-            "GAQgASgNEhQKDGRpY2Vfc2xvdF9pZBgOIAEoDRITCgtIRU1PRENGRU5IUBgI",
-            "IAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Ch1UcmFpblBhcnR5QnVpbGREaXlDc1JlcS5wcm90byJtChdUcmFpblBhcnR5",
+            "QnVpbGREaXlDc1JlcRIPCgdhcmVhX2lkGAogASgNEhYKDmRpeV9keW5hbWlj",
+            "X2lkGAQgASgNEhQKDGRpY2Vfc2xvdF9pZBgOIAEoDRITCgtIRU1PRENGRU5I",
+            "UBgIIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyBuildDiyCsReq), global::EggLink.DanhengServer.Proto.TrainPartyBuildDiyCsReq.Parser, new[]{ "AreaId", "KOANOHFOMKD", "DiceSlotId", "HEMODCFENHP" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyBuildDiyCsReq), global::EggLink.DanhengServer.Proto.TrainPartyBuildDiyCsReq.Parser, new[]{ "AreaId", "DiyDynamicId", "DiceSlotId", "HEMODCFENHP" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainPartyBuildDiyCsReq(TrainPartyBuildDiyCsReq other) : this() {
       areaId_ = other.areaId_;
-      kOANOHFOMKD_ = other.kOANOHFOMKD_;
+      diyDynamicId_ = other.diyDynamicId_;
       diceSlotId_ = other.diceSlotId_;
       hEMODCFENHP_ = other.hEMODCFENHP_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -98,15 +99,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "KOANOHFOMKD" field.</summary>
-    public const int KOANOHFOMKDFieldNumber = 4;
-    private uint kOANOHFOMKD_;
+    /// <summary>Field number for the "diy_dynamic_id" field.</summary>
+    public const int DiyDynamicIdFieldNumber = 4;
+    private uint diyDynamicId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint KOANOHFOMKD {
-      get { return kOANOHFOMKD_; }
+    public uint DiyDynamicId {
+      get { return diyDynamicId_; }
       set {
-        kOANOHFOMKD_ = value;
+        diyDynamicId_ = value;
       }
     }
 
@@ -150,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (AreaId != other.AreaId) return false;
-      if (KOANOHFOMKD != other.KOANOHFOMKD) return false;
+      if (DiyDynamicId != other.DiyDynamicId) return false;
       if (DiceSlotId != other.DiceSlotId) return false;
       if (HEMODCFENHP != other.HEMODCFENHP) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -161,7 +162,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (AreaId != 0) hash ^= AreaId.GetHashCode();
-      if (KOANOHFOMKD != 0) hash ^= KOANOHFOMKD.GetHashCode();
+      if (DiyDynamicId != 0) hash ^= DiyDynamicId.GetHashCode();
       if (DiceSlotId != 0) hash ^= DiceSlotId.GetHashCode();
       if (HEMODCFENHP != false) hash ^= HEMODCFENHP.GetHashCode();
       if (_unknownFields != null) {
@@ -182,9 +183,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (KOANOHFOMKD != 0) {
+      if (DiyDynamicId != 0) {
         output.WriteRawTag(32);
-        output.WriteUInt32(KOANOHFOMKD);
+        output.WriteUInt32(DiyDynamicId);
       }
       if (HEMODCFENHP != false) {
         output.WriteRawTag(64);
@@ -208,9 +209,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (KOANOHFOMKD != 0) {
+      if (DiyDynamicId != 0) {
         output.WriteRawTag(32);
-        output.WriteUInt32(KOANOHFOMKD);
+        output.WriteUInt32(DiyDynamicId);
       }
       if (HEMODCFENHP != false) {
         output.WriteRawTag(64);
@@ -237,8 +238,8 @@ namespace EggLink.DanhengServer.Proto {
       if (AreaId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AreaId);
       }
-      if (KOANOHFOMKD != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KOANOHFOMKD);
+      if (DiyDynamicId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DiyDynamicId);
       }
       if (DiceSlotId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DiceSlotId);
@@ -261,8 +262,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.AreaId != 0) {
         AreaId = other.AreaId;
       }
-      if (other.KOANOHFOMKD != 0) {
-        KOANOHFOMKD = other.KOANOHFOMKD;
+      if (other.DiyDynamicId != 0) {
+        DiyDynamicId = other.DiyDynamicId;
       }
       if (other.DiceSlotId != 0) {
         DiceSlotId = other.DiceSlotId;
@@ -286,7 +287,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 32: {
-            KOANOHFOMKD = input.ReadUInt32();
+            DiyDynamicId = input.ReadUInt32();
             break;
           }
           case 64: {
@@ -317,7 +318,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 32: {
-            KOANOHFOMKD = input.ReadUInt32();
+            DiyDynamicId = input.ReadUInt32();
             break;
           }
           case 64: {

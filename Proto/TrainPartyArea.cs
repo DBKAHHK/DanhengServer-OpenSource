@@ -24,17 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static TrainPartyAreaReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRUcmFpblBhcnR5QXJlYS5wcm90bxoSQXJlYVN0ZXBJbmZvLnByb3RvGhFJ",
-            "R0dDSkFOTEtDTC5wcm90byLFAQoOVHJhaW5QYXJ0eUFyZWESDwoHYXJlYV9p",
-            "ZBgNIAEoDRIhCgtITU5MQ0hOTEVBUBgCIAMoCzIMLklHR0NKQU5MS0NMEhQK",
-            "DHN0ZXBfaWRfbGlzdBgLIAMoDRITCgtOT1BKSU5GTUZFSRgPIAMoDRIQCghw",
-            "cm9ncmVzcxgOIAEoDRIlCg5hcmVhX3N0ZXBfaW5mbxgEIAEoCzINLkFyZWFT",
-            "dGVwSW5mbxIbChNzdGF0aWNfcHJvcF9pZF9saXN0GAggAygNQh6qAhtFZ2dM",
-            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChRUcmFpblBhcnR5QXJlYS5wcm90bxoSQXJlYVN0ZXBJbmZvLnByb3RvGhVB",
+            "cmVhRHluYW1pY0luZm8ucHJvdG8iygEKDlRyYWluUGFydHlBcmVhEg8KB2Fy",
+            "ZWFfaWQYDSABKA0SJgoMZHluYW1pY19pbmZvGAIgAygLMhAuQXJlYUR5bmFt",
+            "aWNJbmZvEhQKDHN0ZXBfaWRfbGlzdBgLIAMoDRITCgtOT1BKSU5GTUZFSRgP",
+            "IAMoDRIQCghwcm9ncmVzcxgOIAEoDRIlCg5hcmVhX3N0ZXBfaW5mbxgEIAEo",
+            "CzINLkFyZWFTdGVwSW5mbxIbChNzdGF0aWNfcHJvcF9pZF9saXN0GAggAygN",
+            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AreaStepInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.IGGCJANLKCLReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AreaStepInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AreaDynamicInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyArea), global::EggLink.DanhengServer.Proto.TrainPartyArea.Parser, new[]{ "AreaId", "HMNLCHNLEAP", "StepIdList", "NOPJINFMFEI", "Progress", "AreaStepInfo", "StaticPropIdList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyArea), global::EggLink.DanhengServer.Proto.TrainPartyArea.Parser, new[]{ "AreaId", "DynamicInfo", "StepIdList", "NOPJINFMFEI", "Progress", "AreaStepInfo", "StaticPropIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,7 +77,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainPartyArea(TrainPartyArea other) : this() {
       areaId_ = other.areaId_;
-      hMNLCHNLEAP_ = other.hMNLCHNLEAP_.Clone();
+      dynamicInfo_ = other.dynamicInfo_.Clone();
       stepIdList_ = other.stepIdList_.Clone();
       nOPJINFMFEI_ = other.nOPJINFMFEI_.Clone();
       progress_ = other.progress_;
@@ -104,15 +104,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "HMNLCHNLEAP" field.</summary>
-    public const int HMNLCHNLEAPFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.IGGCJANLKCL> _repeated_hMNLCHNLEAP_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.IGGCJANLKCL.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IGGCJANLKCL> hMNLCHNLEAP_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IGGCJANLKCL>();
+    /// <summary>Field number for the "dynamic_info" field.</summary>
+    public const int DynamicInfoFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.AreaDynamicInfo> _repeated_dynamicInfo_codec
+        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.AreaDynamicInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AreaDynamicInfo> dynamicInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AreaDynamicInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IGGCJANLKCL> HMNLCHNLEAP {
-      get { return hMNLCHNLEAP_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AreaDynamicInfo> DynamicInfo {
+      get { return dynamicInfo_; }
     }
 
     /// <summary>Field number for the "step_id_list" field.</summary>
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (AreaId != other.AreaId) return false;
-      if(!hMNLCHNLEAP_.Equals(other.hMNLCHNLEAP_)) return false;
+      if(!dynamicInfo_.Equals(other.dynamicInfo_)) return false;
       if(!stepIdList_.Equals(other.stepIdList_)) return false;
       if(!nOPJINFMFEI_.Equals(other.nOPJINFMFEI_)) return false;
       if (Progress != other.Progress) return false;
@@ -202,7 +202,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (AreaId != 0) hash ^= AreaId.GetHashCode();
-      hash ^= hMNLCHNLEAP_.GetHashCode();
+      hash ^= dynamicInfo_.GetHashCode();
       hash ^= stepIdList_.GetHashCode();
       hash ^= nOPJINFMFEI_.GetHashCode();
       if (Progress != 0) hash ^= Progress.GetHashCode();
@@ -226,7 +226,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      hMNLCHNLEAP_.WriteTo(output, _repeated_hMNLCHNLEAP_codec);
+      dynamicInfo_.WriteTo(output, _repeated_dynamicInfo_codec);
       if (areaStepInfo_ != null) {
         output.WriteRawTag(34);
         output.WriteMessage(AreaStepInfo);
@@ -252,7 +252,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      hMNLCHNLEAP_.WriteTo(ref output, _repeated_hMNLCHNLEAP_codec);
+      dynamicInfo_.WriteTo(ref output, _repeated_dynamicInfo_codec);
       if (areaStepInfo_ != null) {
         output.WriteRawTag(34);
         output.WriteMessage(AreaStepInfo);
@@ -281,7 +281,7 @@ namespace EggLink.DanhengServer.Proto {
       if (AreaId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AreaId);
       }
-      size += hMNLCHNLEAP_.CalculateSize(_repeated_hMNLCHNLEAP_codec);
+      size += dynamicInfo_.CalculateSize(_repeated_dynamicInfo_codec);
       size += stepIdList_.CalculateSize(_repeated_stepIdList_codec);
       size += nOPJINFMFEI_.CalculateSize(_repeated_nOPJINFMFEI_codec);
       if (Progress != 0) {
@@ -306,7 +306,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.AreaId != 0) {
         AreaId = other.AreaId;
       }
-      hMNLCHNLEAP_.Add(other.hMNLCHNLEAP_);
+      dynamicInfo_.Add(other.dynamicInfo_);
       stepIdList_.Add(other.stepIdList_);
       nOPJINFMFEI_.Add(other.nOPJINFMFEI_);
       if (other.Progress != 0) {
@@ -335,7 +335,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 18: {
-            hMNLCHNLEAP_.AddEntriesFrom(input, _repeated_hMNLCHNLEAP_codec);
+            dynamicInfo_.AddEntriesFrom(input, _repeated_dynamicInfo_codec);
             break;
           }
           case 34: {
@@ -384,7 +384,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 18: {
-            hMNLCHNLEAP_.AddEntriesFrom(ref input, _repeated_hMNLCHNLEAP_codec);
+            dynamicInfo_.AddEntriesFrom(ref input, _repeated_dynamicInfo_codec);
             break;
           }
           case 34: {

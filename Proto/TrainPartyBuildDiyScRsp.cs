@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static TrainPartyBuildDiyScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1UcmFpblBhcnR5QnVpbGREaXlTY1JzcC5wcm90bxoRSUdHQ0pBTkxLQ0wu",
-            "cHJvdG8icwoXVHJhaW5QYXJ0eUJ1aWxkRGl5U2NSc3ASEwoLSEVNT0RDRkVO",
-            "SFAYCyABKAgSIQoLSE1OTENITkxFQVAYCSADKAsyDC5JR0dDSkFOTEtDTBIP",
-            "CgdyZXRjb2RlGAIgASgNEg8KB2FyZWFfaWQYByABKA1CHqoCG0VnZ0xpbmsu",
-            "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "Ch1UcmFpblBhcnR5QnVpbGREaXlTY1JzcC5wcm90bxoVQXJlYUR5bmFtaWNJ",
+            "bmZvLnByb3RvIngKF1RyYWluUGFydHlCdWlsZERpeVNjUnNwEhMKC0hFTU9E",
+            "Q0ZFTkhQGAsgASgIEiYKDGR5bmFtaWNfaW5mbxgJIAMoCzIQLkFyZWFEeW5h",
+            "bWljSW5mbxIPCgdyZXRjb2RlGAIgASgNEg8KB2FyZWFfaWQYByABKA1CHqoC",
+            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IGGCJANLKCLReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AreaDynamicInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyBuildDiyScRsp), global::EggLink.DanhengServer.Proto.TrainPartyBuildDiyScRsp.Parser, new[]{ "HEMODCFENHP", "HMNLCHNLEAP", "Retcode", "AreaId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyBuildDiyScRsp), global::EggLink.DanhengServer.Proto.TrainPartyBuildDiyScRsp.Parser, new[]{ "HEMODCFENHP", "DynamicInfo", "Retcode", "AreaId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainPartyBuildDiyScRsp(TrainPartyBuildDiyScRsp other) : this() {
       hEMODCFENHP_ = other.hEMODCFENHP_;
-      hMNLCHNLEAP_ = other.hMNLCHNLEAP_.Clone();
+      dynamicInfo_ = other.dynamicInfo_.Clone();
       retcode_ = other.retcode_;
       areaId_ = other.areaId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -99,15 +99,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "HMNLCHNLEAP" field.</summary>
-    public const int HMNLCHNLEAPFieldNumber = 9;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.IGGCJANLKCL> _repeated_hMNLCHNLEAP_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.IGGCJANLKCL.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IGGCJANLKCL> hMNLCHNLEAP_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IGGCJANLKCL>();
+    /// <summary>Field number for the "dynamic_info" field.</summary>
+    public const int DynamicInfoFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.AreaDynamicInfo> _repeated_dynamicInfo_codec
+        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.AreaDynamicInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AreaDynamicInfo> dynamicInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AreaDynamicInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IGGCJANLKCL> HMNLCHNLEAP {
-      get { return hMNLCHNLEAP_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AreaDynamicInfo> DynamicInfo {
+      get { return dynamicInfo_; }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
@@ -150,7 +150,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (HEMODCFENHP != other.HEMODCFENHP) return false;
-      if(!hMNLCHNLEAP_.Equals(other.hMNLCHNLEAP_)) return false;
+      if(!dynamicInfo_.Equals(other.dynamicInfo_)) return false;
       if (Retcode != other.Retcode) return false;
       if (AreaId != other.AreaId) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -161,7 +161,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (HEMODCFENHP != false) hash ^= HEMODCFENHP.GetHashCode();
-      hash ^= hMNLCHNLEAP_.GetHashCode();
+      hash ^= dynamicInfo_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (AreaId != 0) hash ^= AreaId.GetHashCode();
       if (_unknownFields != null) {
@@ -190,7 +190,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(56);
         output.WriteUInt32(AreaId);
       }
-      hMNLCHNLEAP_.WriteTo(output, _repeated_hMNLCHNLEAP_codec);
+      dynamicInfo_.WriteTo(output, _repeated_dynamicInfo_codec);
       if (HEMODCFENHP != false) {
         output.WriteRawTag(88);
         output.WriteBool(HEMODCFENHP);
@@ -213,7 +213,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(56);
         output.WriteUInt32(AreaId);
       }
-      hMNLCHNLEAP_.WriteTo(ref output, _repeated_hMNLCHNLEAP_codec);
+      dynamicInfo_.WriteTo(ref output, _repeated_dynamicInfo_codec);
       if (HEMODCFENHP != false) {
         output.WriteRawTag(88);
         output.WriteBool(HEMODCFENHP);
@@ -231,7 +231,7 @@ namespace EggLink.DanhengServer.Proto {
       if (HEMODCFENHP != false) {
         size += 1 + 1;
       }
-      size += hMNLCHNLEAP_.CalculateSize(_repeated_hMNLCHNLEAP_codec);
+      size += dynamicInfo_.CalculateSize(_repeated_dynamicInfo_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
@@ -253,7 +253,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.HEMODCFENHP != false) {
         HEMODCFENHP = other.HEMODCFENHP;
       }
-      hMNLCHNLEAP_.Add(other.hMNLCHNLEAP_);
+      dynamicInfo_.Add(other.dynamicInfo_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
@@ -284,7 +284,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 74: {
-            hMNLCHNLEAP_.AddEntriesFrom(input, _repeated_hMNLCHNLEAP_codec);
+            dynamicInfo_.AddEntriesFrom(input, _repeated_dynamicInfo_codec);
             break;
           }
           case 88: {
@@ -315,7 +315,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 74: {
-            hMNLCHNLEAP_.AddEntriesFrom(ref input, _repeated_hMNLCHNLEAP_codec);
+            dynamicInfo_.AddEntriesFrom(ref input, _repeated_dynamicInfo_codec);
             break;
           }
           case 88: {

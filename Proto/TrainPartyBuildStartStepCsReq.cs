@@ -24,13 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static TrainPartyBuildStartStepCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNUcmFpblBhcnR5QnVpbGRTdGFydFN0ZXBDc1JlcS5wcm90bxoRSUdHQ0pB",
-            "TkxLQ0wucHJvdG8ifAodVHJhaW5QYXJ0eUJ1aWxkU3RhcnRTdGVwQ3NSZXES",
-            "DwoHYXJlYV9pZBgKIAEoDRIhCgtOUEJIRkVGTEdKSxgMIAEoCzIMLklHR0NK",
-            "QU5MS0NMEg8KB3N0ZXBfaWQYDiABKA0SFgoOYXJlYV9nbG9iYWxfaWQYCCAB",
-            "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "CiNUcmFpblBhcnR5QnVpbGRTdGFydFN0ZXBDc1JlcS5wcm90bxoVQXJlYUR5",
+            "bmFtaWNJbmZvLnByb3RvIoABCh1UcmFpblBhcnR5QnVpbGRTdGFydFN0ZXBD",
+            "c1JlcRIPCgdhcmVhX2lkGAogASgNEiUKC05QQkhGRUZMR0pLGAwgASgLMhAu",
+            "QXJlYUR5bmFtaWNJbmZvEg8KB3N0ZXBfaWQYDiABKA0SFgoOYXJlYV9nbG9i",
+            "YWxfaWQYCCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IGGCJANLKCLReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AreaDynamicInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyBuildStartStepCsReq), global::EggLink.DanhengServer.Proto.TrainPartyBuildStartStepCsReq.Parser, new[]{ "AreaId", "NPBHFEFLGJK", "StepId", "AreaGlobalId" }, null, null, null, null)
           }));
@@ -101,10 +102,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "NPBHFEFLGJK" field.</summary>
     public const int NPBHFEFLGJKFieldNumber = 12;
-    private global::EggLink.DanhengServer.Proto.IGGCJANLKCL nPBHFEFLGJK_;
+    private global::EggLink.DanhengServer.Proto.AreaDynamicInfo nPBHFEFLGJK_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.IGGCJANLKCL NPBHFEFLGJK {
+    public global::EggLink.DanhengServer.Proto.AreaDynamicInfo NPBHFEFLGJK {
       get { return nPBHFEFLGJK_; }
       set {
         nPBHFEFLGJK_ = value;
@@ -264,7 +265,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.nPBHFEFLGJK_ != null) {
         if (nPBHFEFLGJK_ == null) {
-          NPBHFEFLGJK = new global::EggLink.DanhengServer.Proto.IGGCJANLKCL();
+          NPBHFEFLGJK = new global::EggLink.DanhengServer.Proto.AreaDynamicInfo();
         }
         NPBHFEFLGJK.MergeFrom(other.NPBHFEFLGJK);
       }
@@ -299,7 +300,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 98: {
             if (nPBHFEFLGJK_ == null) {
-              NPBHFEFLGJK = new global::EggLink.DanhengServer.Proto.IGGCJANLKCL();
+              NPBHFEFLGJK = new global::EggLink.DanhengServer.Proto.AreaDynamicInfo();
             }
             input.ReadMessage(NPBHFEFLGJK);
             break;
@@ -333,7 +334,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 98: {
             if (nPBHFEFLGJK_ == null) {
-              NPBHFEFLGJK = new global::EggLink.DanhengServer.Proto.IGGCJANLKCL();
+              NPBHFEFLGJK = new global::EggLink.DanhengServer.Proto.AreaDynamicInfo();
             }
             input.ReadMessage(NPBHFEFLGJK);
             break;

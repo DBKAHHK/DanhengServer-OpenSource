@@ -3,13 +3,16 @@ using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.TrainParty;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.Proto;
-using System.Numerics;
+using EggLink.DanhengServer.Data.Excel;
+using EggLink.DanhengServer.Util;
+using GameTrainPartyCardInfo = EggLink.DanhengServer.Database.TrainParty.GameTrainPartyCardInfo;
 
 namespace EggLink.DanhengServer.GameServer.Game.TrainParty;
 
 public class TrainPartyManager : BasePlayerManager
 {
     public GameTrainPartyData TrainPartyData { get; }
+    public TrainPartyTeamExcel TeamExcel { get; }
 
     public TrainPartyManager(PlayerInstance player) : base(player)
     {
@@ -24,6 +27,43 @@ public class TrainPartyManager : BasePlayerManager
                 StepList = [excel.Value.FirstStep]
             };
         }
+
+        TeamExcel = GameData.TrainPartyTeamData.Values.ToList().RandomElement();
+    }
+
+    public async ValueTask AddCard(int cardId)
+    {
+        if (TrainPartyData.Cards.Values.FirstOrDefault(x => x.CardId == cardId) != null) return;
+
+        var uniqueId = TrainPartyData.UniqueId++;
+        TrainPartyData.Cards.Add(uniqueId, new GameTrainPartyCardInfo
+        {
+            CardId = cardId,
+            UniqueId = uniqueId
+        });
+
+        await ValueTask.CompletedTask;
+    }
+
+    public async ValueTask AddGrid(int gridId)
+    {
+        var uniqueId = TrainPartyData.UniqueId++;
+        TrainPartyData.Grids.Add(uniqueId, new GameTrainPartyGridInfo
+        {
+            GridId = gridId,
+            UniqueId = uniqueId
+        });
+
+        await ValueTask.CompletedTask;
+    }
+
+    public GameTrainPartyAreaInfo? SetDynamicId(int areaId, int slotId, int dynamicId)
+    {
+        if (!TrainPartyData.Areas.TryGetValue(areaId, out var area)) return null;
+
+        area.DynamicInfo[slotId] = dynamicId;
+
+        return area;
     }
 
     public TrainPartyData ToProto()
@@ -32,7 +72,8 @@ public class TrainPartyManager : BasePlayerManager
         {
             TrainPartyInfo = ToPartyInfo(),
             PassengerInfo = ToPassengerInfo(),
-            LFLMKPGJADO = new MJKBNJAKOJH()
+            TrainPartyGameInfo = ToGameInfo(),
+            DPOLGBKEKLD = 6
         };
 
         return proto;
@@ -60,6 +101,50 @@ public class TrainPartyManager : BasePlayerManager
                 {
                     PassengerId = (uint)x.Key
                 })
+            }
+        };
+    }
+
+    public TrainPartyGameInfo ToGameInfo()
+    {
+        return new TrainPartyGameInfo
+        {
+            TeamId = (uint)TeamExcel.TeamID,
+            TrainActionInfo = new TrainPartyActionInfo(),
+            TrainPassengerInfo = ToGamePassengerInfo(),
+            TrainPartyGridInfo = ToGameGridInfo(),
+            TrainPartyItemInfo = ToGameItemInfo()
+        };
+    }
+
+    public TrainPartyGamePassengerInfo ToGamePassengerInfo()
+    {
+        return new TrainPartyGamePassengerInfo
+        {
+            PassengerList = { TeamExcel.PassengerList.Select(x => new TrainPartyGamePassenger
+            {
+                PassengerId = (uint)x
+            }) },
+            CurPassengerId = (uint)TeamExcel.PassengerList.RandomElement(),
+            MtRankId = 104
+        };
+    }
+
+    public TrainPartyGameGridInfo ToGameGridInfo()
+    {
+        return new TrainPartyGameGridInfo
+        {
+            GridList = { TrainPartyData.Grids.Values.Select(x => x.ToProto()) }
+        };
+    }
+
+    public TrainPartyGameItemInfo ToGameItemInfo()
+    {
+        return new TrainPartyGameItemInfo
+        {
+            TrainPartyCardInfo = new TrainPartyGameCardInfo
+            {
+                TrainPartyCardInfo = { TrainPartyData.Cards.Values.Select(x => x.ToProto()) }
             }
         };
     }
