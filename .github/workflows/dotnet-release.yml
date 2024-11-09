@@ -1,0 +1,90 @@
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: .NET
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Release Name'
+        required: true
+        default: ''
+      body:
+        description: 'Release Body'
+        required: true
+        default: ''
+  
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    permissions:
+      contents: write
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Publish win-x64
+      run: dotnet publish Program\Program.csproj -o Release\win-x64 -r win-x64 --framework net8.0 -p:PublishSingleFile=true
+
+    - name: Publish linux-x64
+      run: dotnet publish Program\Program.csproj -o Release\linux-x64 -r linux-x64 --framework net8.0 -p:PublishSingleFile=true
+
+    - name: Publish linux-arm64
+      run: dotnet publish Program\Program.csproj -o Release\linux-arm64 -r linux-arm64 --framework net8.0 -p:PublishSingleFile=true
+
+    - name: Publish win-x64-self-contained
+      run: dotnet publish Program\Program.csproj -o Release\win-x64-self-contained -r win-x64 --self-contained true --framework net8.0 -p:PublishSingleFile=true
+
+    - name: Publish linux-x64-self-contained
+      run: dotnet publish Program\Program.csproj -o Release\linux-x64-self-contained -r linux-x64 --self-contained true --framework net8.0 -p:PublishSingleFile=true
+
+    - name: Publish linux-arm64-self-contained
+      run: dotnet publish Program\Program.csproj -o Release\linux-arm64-self-contained -r linux-arm64 --self-contained true --framework net8.0 -p:PublishSingleFile=true
+
+    - name: Upload win-x64 Build Artifact
+      uses: actions/upload-artifact@v4.3.1
+      with:
+        name: DanhengServer-win-64
+        path: Release\win-x64
+
+    - name: Upload linux-x64 Build Artifact
+      uses: actions/upload-artifact@v4.3.1
+      with:
+        name: DanhengServer-linux-x64
+        path: Release\linux-x64
+
+    - name: Upload linux-arm64 Build Artifact
+      uses: actions/upload-artifact@v4.3.1
+      with:
+        name: DanhengServer-linux-arm64
+        path: Release\linux-arm64
+
+    - name: Release
+      uses: softprops/action-gh-release@v2
+      with:
+        body_path: ${{ inputs.body }}
+        name: ${{ inputs.name }}
+        repository: EggLinks/DanhengServer
+        # note you'll typically need to create a personal access token
+        # with permissions to create releases in the other repo
+        token: ${{ secrets.GITHUB_TOKEN }}
+        make_latest: true
+        # upload except pdb file
+        files: -|
+            Release/win-x64/*
+            Release/linux-x64/*
+            Release/linux-arm64/*
+            Release/win-x64-self-contained/*
+            Release/linux-x64-self-contained/*
+            Release/linux-arm64-self-contained/*
+            !**/*.pdb
