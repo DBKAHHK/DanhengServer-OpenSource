@@ -93,7 +93,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "pool_refreshed" field.</summary>
-    public const int PoolRefreshedFieldNumber = 12;
+    public const int PoolRefreshedFieldNumber = 4;
     private bool poolRefreshed_;
     /// <summary>
     /// 4
@@ -108,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "has_taken_initial_score" field.</summary>
-    public const int HasTakenInitialScoreFieldNumber = 4;
+    public const int HasTakenInitialScoreFieldNumber = 12;
     private bool hasTakenInitialScore_;
     /// <summary>
     /// 12
