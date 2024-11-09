@@ -51,10 +51,18 @@ jobs:
     - name: Publish linux-arm64-self-contained
       run: dotnet publish Program\Program.csproj -o Release\linux-arm64-self-contained -r linux-arm64 --self-contained true --framework net8.0 -p:PublishSingleFile=true
 
+    - name: Remove PDB File
+      run: |
+           rm -rf Release/win-x64/*.pdb
+           rm -rf Release/linux-x64/*.pdb
+           rm -rf Release/linux-arm64/*.pdb
+           rm -rf Release/win-x64-self-contained/*.pdb
+           rm -rf Release/linux-x64-self-contained/*.pdb
+           rm -rf Release/linux-arm64-self-contained/*.pdb
     - name: Release
       uses: softprops/action-gh-release@v2
       with:
-        body_path: ${{ inputs.body }}
+        body: ${{ inputs.body }}
         name: ${{ inputs.name }}
         tag_name: Release
         repository: EggLinks/DanhengServer
@@ -70,4 +78,3 @@ jobs:
             Release/win-x64-self-contained/*
             Release/linux-x64-self-contained/*
             Release/linux-arm64-self-contained/*
-            !**/*.pdb
