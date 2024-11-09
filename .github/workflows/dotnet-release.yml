@@ -34,22 +34,22 @@ jobs:
       run: dotnet restore
 
     - name: Publish win-x64
-      run: dotnet publish Program/Program.csproj -o Release/win-x64 -r win-x64 --framework net8.0 -p:PublishSingleFile=true
+      run: dotnet publish Program/Program.csproj --no-restore -o Release/win-x64 -r win-x64 --self-contained false --framework net8.0 -p:PublishSingleFile=true
 
     - name: Publish linux-x64
-      run: dotnet publish Program/Program.csproj -o Release/linux-x64 -r linux-x64 --framework net8.0 -p:PublishSingleFile=true
+      run: dotnet publish Program/Program.csproj --no-restore -o Release/linux-x64 -r linux-x64 --self-contained false --framework net8.0 -p:PublishSingleFile=true
 
     - name: Publish linux-arm64
-      run: dotnet publish Program/Program.csproj -o Release/linux-arm64 -r linux-arm64 --framework net8.0 -p:PublishSingleFile=true
+      run: dotnet publish Program/Program.csproj --no-restore -o Release/linux-arm64 -r linux-arm64 --self-contained false --framework net8.0 -p:PublishSingleFile=true
 
     - name: Publish win-x64-self-contained
-      run: dotnet publish Program/Program.csproj -o Release/win-x64-self-contained -r win-x64 --self-contained true --framework net8.0 -p:PublishSingleFile=true
+      run: dotnet publish Program/Program.csproj --no-restore -o Release/win-x64-self-contained -r win-x64 --self-contained true --framework net8.0 -p:PublishSingleFile=true
 
     - name: Publish linux-x64-self-contained
-      run: dotnet publish Program/Program.csproj -o Release/linux-x64-self-contained -r linux-x64 --self-contained true --framework net8.0 -p:PublishSingleFile=true
+      run: dotnet publish Program/Program.csproj --no-restore -o Release/linux-x64-self-contained -r linux-x64 --self-contained true --framework net8.0 -p:PublishSingleFile=true
 
     - name: Publish linux-arm64-self-contained
-      run: dotnet publish Program/Program.csproj -o Release/linux-arm64-self-contained -r linux-arm64 --self-contained true --framework net8.0 -p:PublishSingleFile=true
+      run: dotnet publish Program/Program.csproj --no-restore -o Release/linux-arm64-self-contained -r linux-arm64 --self-contained true --framework net8.0 -p:PublishSingleFile=true
 
     - name: Remove PDB File
       run: |
@@ -82,7 +82,7 @@ jobs:
         body_path: z/body.txt
         name: ${{ inputs.name }}
         tag_name: Release
-        repository: EggLinks/DanhengServer
+        repository: EggLinks/DanhengServer-Public
         # note you'll typically need to create a personal access token
         # with permissions to create releases in the other repo
         token: ${{ secrets.GITHUB_TOKEN }}
