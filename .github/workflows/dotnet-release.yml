@@ -63,12 +63,14 @@ jobs:
     - name: Zip File
       run: |
            mkdir z
-           zip z/win-x64.zip Release/win-x64/
-           zip z/linux-x64.zip Release/linux-x64/
-           zip z/linux-arm64.zip Release/linux-arm64/
-           zip z/win-x64-self-contained.zip Release/win-x64-self-contained/
-           zip z/linux-x64-self-contained.zip Release/linux-x64-self-contained/
-           zip z/linux-arm64-self-contained Release/linux-arm64-self-contained/
+           cd Release
+           zip -r ../z/win-x64.zip win-x64/
+           zip -r ../z/linux-x64.zip linux-x64/
+           zip -r ../z/linux-arm64.zip linux-arm64/
+           zip -r ../z/win-x64-self-contained.zip win-x64-self-contained/
+           zip -r ../z/linux-x64-self-contained.zip linux-x64-self-contained/
+           zip -r ../z/linux-arm64-self-contained linux-arm64-self-contained/
+           cd ..
 
     - name: Body
       run: |
@@ -77,7 +79,7 @@ jobs:
     - name: Release
       uses: softprops/action-gh-release@v2
       with:
-        body-path: z/body.txt
+        body_path: z/body.txt
         name: ${{ inputs.name }}
         tag_name: Release
         repository: EggLinks/DanhengServer
