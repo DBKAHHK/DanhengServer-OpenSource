@@ -51,29 +51,12 @@ jobs:
     - name: Publish linux-arm64-self-contained
       run: dotnet publish Program\Program.csproj -o Release\linux-arm64-self-contained -r linux-arm64 --self-contained true --framework net8.0 -p:PublishSingleFile=true
 
-    - name: Upload win-x64 Build Artifact
-      uses: actions/upload-artifact@v4.3.1
-      with:
-        name: DanhengServer-win-64
-        path: Release\win-x64
-
-    - name: Upload linux-x64 Build Artifact
-      uses: actions/upload-artifact@v4.3.1
-      with:
-        name: DanhengServer-linux-x64
-        path: Release\linux-x64
-
-    - name: Upload linux-arm64 Build Artifact
-      uses: actions/upload-artifact@v4.3.1
-      with:
-        name: DanhengServer-linux-arm64
-        path: Release\linux-arm64
-
     - name: Release
       uses: softprops/action-gh-release@v2
       with:
         body_path: ${{ inputs.body }}
         name: ${{ inputs.name }}
+        tag_name: Release
         repository: EggLinks/DanhengServer
         # note you'll typically need to create a personal access token
         # with permissions to create releases in the other repo
