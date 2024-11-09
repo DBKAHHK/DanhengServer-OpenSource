@@ -43,6 +43,7 @@ public class WordTextCHT
     public string Equipment => "光錐";
     public string Talent => "行跡";
     public string Banner => "卡池";
+    public string VideoKeys => "游戲CGKey";
     public string Activity => "活動";
     public string Buff => "祝福";
     public string Miracle => "奇物";

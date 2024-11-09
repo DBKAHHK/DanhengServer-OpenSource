@@ -21,6 +21,12 @@ public static class GameData
 
     #endregion
 
+    #region VideoKeys
+
+    public static VideoKeysConfig VideoKeysConfig { get; set; } = new();
+
+    #endregion
+
     #region Avatar
 
     public static Dictionary<int, AvatarConfigExcel> AvatarConfigData { get; private set; } = [];

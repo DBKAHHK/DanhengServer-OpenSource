@@ -43,6 +43,7 @@ public class WordTextEN
     public string Equipment => "Light Cone";
     public string Talent => "Talent";
     public string Banner => "Gacha";
+    public string VideoKeys => "CG Keys";
     public string Activity => "Activity";
     public string Buff => "Blessing";
     public string Miracle => "Curio";
