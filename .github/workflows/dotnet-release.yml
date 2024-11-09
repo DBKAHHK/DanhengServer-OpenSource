@@ -70,17 +70,25 @@ jobs:
            zip z/linux-x64-self-contained.zip Release/linux-x64-self-contained/
            zip z/linux-arm64-self-contained Release/linux-arm64-self-contained/
 
+    - name: Body
+      run: |
+           echo -e "${{ inputs.body }}" > z/body.txt
+
     - name: Release
       uses: softprops/action-gh-release@v2
       with:
-        body: ${{ inputs.body }}
+        body-path: z/body.txt
         name: ${{ inputs.name }}
         tag_name: Release
         repository: EggLinks/DanhengServer
         # note you'll typically need to create a personal access token
         # with permissions to create releases in the other repo
         token: ${{ secrets.GITHUB_TOKEN }}
-        make_latest: true
         # upload except pdb file
         files: |
-          z/*.zip
+          z/win-x64.zip
+          z/linux-x64.zip
+          z/linux-arm64.zip
+          z/win-x64-self-contained.zip
+          z/linux-x64-self-contained.zip
+          z/linux-arm64-self-contained.zip
