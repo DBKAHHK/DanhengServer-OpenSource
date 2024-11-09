@@ -59,6 +59,17 @@ jobs:
            rm -rf Release/win-x64-self-contained/*.pdb
            rm -rf Release/linux-x64-self-contained/*.pdb
            rm -rf Release/linux-arm64-self-contained/*.pdb
+
+    - name: Zip File
+      run: |
+           mkdir z
+           zip z/win-x64.zip Release/win-x64/
+           zip z/linux-x64.zip Release/linux-x64/
+           zip z/linux-arm64.zip Release/linux-arm64/
+           zip z/win-x64-self-contained.zip Release/win-x64-self-contained/
+           zip z/linux-x64-self-contained.zip Release/linux-x64-self-contained/
+           zip z/linux-arm64-self-contained Release/linux-arm64-self-contained/
+
     - name: Release
       uses: softprops/action-gh-release@v2
       with:
@@ -72,9 +83,4 @@ jobs:
         make_latest: true
         # upload except pdb file
         files: |
-            Release/win-x64/*
-            Release/linux-x64/*
-            Release/linux-arm64/*
-            Release/win-x64-self-contained/*
-            Release/linux-x64-self-contained/*
-            Release/linux-arm64-self-contained/*
+          z/*.zip
