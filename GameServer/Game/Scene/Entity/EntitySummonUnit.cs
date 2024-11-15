@@ -24,10 +24,7 @@ public class EntitySummonUnit : IGameEntity
         await ValueTask.CompletedTask;
     }
 
-    public async ValueTask ApplyBuff(BattleInstance instance)
-    {
-        await ValueTask.CompletedTask;
-    }
+    public void ApplyBuff(BattleInstance instance) { }
 
     public SceneEntityInfo ToProto()
     {

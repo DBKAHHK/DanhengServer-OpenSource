@@ -26,10 +26,7 @@ public class EntityProp(SceneInstance scene, MazePropExcel excel, GroupInfo grou
         await System.Threading.Tasks.Task.CompletedTask;
     }
 
-    public async ValueTask ApplyBuff(BattleInstance instance)
-    {
-        await System.Threading.Tasks.Task.CompletedTask;
-    }
+    public void ApplyBuff(BattleInstance instance) { }
 
     public virtual SceneEntityInfo ToProto()
     {

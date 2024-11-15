@@ -9,8 +9,7 @@ public interface IGameEntity
     public int GroupID { get; set; }
 
     public ValueTask AddBuff(SceneBuff buff);
-    public ValueTask ApplyBuff(BattleInstance instance);
-
+    public void ApplyBuff(BattleInstance instance);
 
     public SceneEntityInfo ToProto();
 }

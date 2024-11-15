@@ -42,11 +42,21 @@ public class EntityMonster(
     {
         var oldBuff = BuffList.Find(x => x.BuffId == buff.BuffId);
         if (oldBuff != null) BuffList.Remove(oldBuff);
+
         BuffList.Add(buff);
-        await Scene.Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, buff));
+        await Scene.Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, [buff], []));
     }
 
-    public async ValueTask ApplyBuff(BattleInstance instance)
+    public async ValueTask RemoveBuff(int buffId)
+    {
+        var buff = BuffList.Find(x => x.BuffId == buffId);
+        if (buff == null) return;
+
+        BuffList.Remove(buff);
+        await Scene.Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, [], [buff]));
+    }
+
+    public void ApplyBuff(BattleInstance instance)
     {
         if (TempBuff != null)
         {
@@ -61,8 +71,6 @@ public class EntityMonster(
             if (buff.IsExpired()) continue;
             instance.Buffs.Add(new MazeBuff(buff));
         }
-
-        await Scene.Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, BuffList));
 
         BuffList.Clear();
     }
@@ -98,15 +106,6 @@ public class EntityMonster(
             };
 
         return proto;
-    }
-
-    public async ValueTask RemoveBuff(int buffId)
-    {
-        var buff = BuffList.Find(x => x.BuffId == buffId);
-        if (buff == null) return;
-
-        BuffList.Remove(buff);
-        await Scene.Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, [buff]));
     }
 
     public int GetStageId()

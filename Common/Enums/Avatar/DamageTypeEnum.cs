@@ -8,5 +8,6 @@ public enum DamageTypeEnum
     Thunder = 1000114,
     Wind = 1000115,
     Quantum = 1000116,
-    Imaginary = 1000117
+    Imaginary = 1000117,
+    All = 1000119 // Modified for AddAdventureModifier
 }

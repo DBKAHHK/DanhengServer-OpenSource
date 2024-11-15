@@ -28,6 +28,7 @@ public class MazeSkill
     }
 
     public List<IMazeSkillAction> Actions { get; } = [];
+    public HashSet<string> AdventureModifiers { get; } = [];
     public bool TriggerBattle { get; private set; } = true;
     public bool IsMazeSkill { get; } = true;
     public AvatarConfigExcel? Excel { get; private set; }
@@ -43,6 +44,9 @@ public class MazeSkill
                 break;
             case TaskTypeEnum.RemoveMazeBuff:
                 Actions.Add(new MazeRemoveMazeBuff(task.ID));
+                break;
+            case TaskTypeEnum.AddAdventureModifier:
+                AdventureModifiers.Add(task.ModifierName);
                 break;
             case TaskTypeEnum.AdventureModifyTeamPlayerHP:
                 break;

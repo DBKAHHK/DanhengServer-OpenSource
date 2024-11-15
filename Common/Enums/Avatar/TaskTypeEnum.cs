@@ -12,5 +12,6 @@ public enum TaskTypeEnum
     SuccessTaskList = 7,
     AdventureTriggerAttack = 8,
     AdventureFireProjectile = 9,
-    DestroySummonUnit = 10
+    DestroySummonUnit = 10,
+    AddAdventureModifier = 11
 }

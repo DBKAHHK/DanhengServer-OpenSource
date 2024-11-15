@@ -20,10 +20,7 @@ public class EntityNpc(SceneInstance scene, GroupInfo group, NpcInfo npcInfo) : 
         await System.Threading.Tasks.Task.CompletedTask;
     }
 
-    public async ValueTask ApplyBuff(BattleInstance instance)
-    {
-        await System.Threading.Tasks.Task.CompletedTask;
-    }
+    public void ApplyBuff(BattleInstance instance) { }
 
     public virtual SceneEntityInfo ToProto()
     {
