@@ -86,6 +86,7 @@ public class WordTextCHS
     public string SummonUnitInfo => "秘技生成文件";
     public string RogueTournRoom => "差分宇宙";
     public string RogueTournRoomInfo => "差分宇宙房间文件";
+    public string TypesOfRogue => "类型的模拟宇宙";
     public string RogueMagicRoom => "不可知域";
     public string RogueMagicRoomInfo => "不可知域房间文件";
     public string RogueDiceSurface => "骰面效果";
@@ -94,6 +95,7 @@ public class WordTextCHS
     public string AdventureModifierInfo => "AdventureModifier文件";
 
     public string DatabaseAccount => "数据库账号";
+    public string Tutorial => "教程";
 }
 
 #endregion
@@ -215,10 +217,12 @@ public class UnlockAllTextCHS
 {
     public string Desc =>
         "解锁所有在类别内的对象\n" +
-        "使用 /unlockall mission 以完成所有任务，使用后会被踢出，重新登录后可能会被教程卡住，请谨慎使用";
+        "使用 /unlockall mission 以完成所有任务，使用后会被踢出，重新登录后可能会被教程卡住，请谨慎使用\n" +
+        "使用 /unlockall tutorial 以解锁所有教程，使用后会被踢出，用于部分界面卡住无法行动的情况\n" +
+        "使用 /unlockall rogue 以解锁所有类型模拟宇宙，使用后会被踢出，建议与 /unlockall tutorial 搭配使用以获取更好效果";
 
-    public string Usage => "用法：/unlockall mission";
-    public string AllMissionsUnlocked => "所有任务已解锁!";
+    public string Usage => "用法：/unlockall [mission/tutorial/rogue]";
+    public string UnlockedAll => "已解锁/完成所有{0}!";
 }
 
 /// <summary>
