@@ -502,17 +502,31 @@ public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, Playe
             }
             else
             {
-                // Update old buff's duration
                 oldBuff.CreatedTime = Extensions.GetUnixMs();
                 oldBuff.Duration = buff.Duration;
 
-                await player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, [buff], []));
+                await player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, oldBuff));
                 return;
             }
         }
 
         BuffList.Add(buff);
-        await player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, [buff], []));
+        await player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, buff));
+    }
+
+    public async ValueTask ApplyBuff(BattleInstance instance)
+    {
+        if (BuffList.Count == 0) return;
+        foreach (var buff in BuffList.Where(buff => !buff.IsExpired())) instance.Buffs.Add(new MazeBuff(buff));
+
+        await player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, BuffList));
+
+        BuffList.Clear();
+    }
+
+    public SceneEntityInfo ToProto()
+    {
+        return AvatarInfo.ToSceneEntityInfo(AvatarType);
     }
 
     public async ValueTask RemoveBuff(int buffId)
@@ -521,16 +535,6 @@ public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, Playe
         if (buff == null) return;
 
         BuffList.Remove(buff);
-        await player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, [], [buff]));
+        await player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, [buff]));
     }
-
-    public void ApplyBuff(BattleInstance instance)
-    {
-        if (BuffList.Count == 0) return;
-
-        foreach (var buff in BuffList.Where(buff => !buff.IsExpired())) instance.Buffs.Add(new MazeBuff(buff));
-        BuffList.Clear();
-    }
-
-    public SceneEntityInfo ToProto() => AvatarInfo.ToSceneEntityInfo(AvatarType);
 }

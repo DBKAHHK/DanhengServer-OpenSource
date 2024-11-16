@@ -86,6 +86,7 @@ public class WordTextEN
     public string SummonUnitInfo => "Summon Unit File";
     public string RogueTournRoom => "Divergent Rogue Room";
     public string RogueTournRoomInfo => "Divergent Rogue Room File";
+    public string TypesOfRogue => "types of rogue";
     public string RogueMagicRoom => "Unknowable Domain Room";
     public string RogueMagicRoomInfo => "Unknowable Domain Room File";
     public string RogueDiceSurface => "Dice Surface Effect";
@@ -94,6 +95,7 @@ public class WordTextEN
     public string AdventureModifierInfo => "AdventureModifier File";
 
     public string DatabaseAccount => "Database Account";
+    public string Tutorial => "Tutorial";
 }
 
 #endregion
@@ -225,10 +227,12 @@ public class UnlockAllTextEN
 {
     public string Desc =>
         "Unlock the objects in given category\n" +
-        "Use '/unlockall mission' to finish all missions, and the target player will be kicked, after re-login, the player may be stuck in tutorial, please use with caution";
+        "Use '/unlockall mission' to finish all missions, and the target player will be kicked, after re-login, the player may be stuck in tutorial, please use with caution" +
+        "Use '/unlockall tutorial' to unlock all tutorials, and the target player will be kicked, used for being stuck in some pages\n" +
+        "Use '/unlockall rogue' to unlock all types of rogue, and the target player will be kicked, used with '/unlockall tutorial' to get better performance";
 
-    public string Usage => "Usage: /unlockall mission";
-    public string AllMissionsUnlocked => "All missions have been unlocked!";
+    public string Usage => "Usage：/unlockall [mission/tutorial/rogue]";
+    public string UnlockedAll => "Unlocked/Finished All {0}!";
 }
 
 /// <summary>

@@ -232,13 +232,16 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
             proto.BattleAvatarList.Add(avatar.Key.ToBattleProto(Player.LineupManager!.GetCurLineup()!,
                 Player.InventoryManager!.Data, avatar.Value));
 
-        foreach (var monster in EntityMonsters) monster.ApplyBuff(this);
+        System.Threading.Tasks.Task.Run(async () =>
+        {
+            foreach (var monster in EntityMonsters) await monster.ApplyBuff(this);
 
-        foreach (var avatar in AvatarInfo)
-            if (avatars.Keys.FirstOrDefault(x =>
-                    x.GetSpecialAvatarId() == avatar.AvatarInfo.GetSpecialAvatarId()) !=
-                null) // if avatar is in lineup
-            avatar.ApplyBuff(this);
+            foreach (var avatar in AvatarInfo)
+                if (avatars.Keys.FirstOrDefault(x =>
+                        x.GetSpecialAvatarId() == avatar.AvatarInfo.GetSpecialAvatarId()) !=
+                    null) // if avatar is in lineup
+                    await avatar.ApplyBuff(this);
+        }).Wait();
 
         foreach (var eventInstance in BattleEvents.Values) proto.BattleEvent.Add(eventInstance.ToProto());
 
@@ -252,21 +255,18 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
             proto.BattleTargetInfo.Add((uint)i, battleTargetEntry);
         }
 
-        // TODO: Confirm WaveFlag logic
         foreach (var buff in Buffs)
         {
             if (buff.WaveFlag != null) continue;
-
-            // Single buff
             var buffs = Buffs.FindAll(x => x.BuffID == buff.BuffID);
-            if (buffs.Count > 1) continue;
+            if (buffs.Count < 2) continue;
+            var count = 0;
             foreach (var mazeBuff in buffs)
             {
-                mazeBuff.WaveFlag = 3;
+                mazeBuff.WaveFlag = (int)Math.Pow(2, count);
+                count++;
             }
         }
-
-        foreach (var buff in Buffs) buff.WaveFlag ??= -1;
 
         foreach (var buff in Buffs.Clone())
             if (buff.BuffID == 122003) // Fei Xiao Maze Buff

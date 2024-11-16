@@ -20,7 +20,6 @@ public class TaskInfo
     public List<TaskInfo> OnProjectileHit { get; set; } = [];
     public List<TaskInfo> OnProjectileLifetimeFinish { get; set; } = [];
 
-    public string ModifierName { get; set; } = "";
     public LifeTimeInfo LifeTime { get; set; } = new();
 
     [JsonIgnore] public TaskTypeEnum TaskType { get; set; } = TaskTypeEnum.None;
@@ -36,8 +35,6 @@ public class TaskInfo
             TaskType = TaskTypeEnum.AddMazeBuff;
         else if (Type.Contains("RemoveMazeBuff"))
             TaskType = TaskTypeEnum.RemoveMazeBuff;
-        else if (Type.Contains("AddAdventureModifier"))
-            TaskType = TaskTypeEnum.AddAdventureModifier;
         else if (Type.Contains("AdventureModifyTeamPlayerHP"))
             TaskType = TaskTypeEnum.AdventureModifyTeamPlayerHP;
         else if (Type.Contains("AdventureModifyTeamPlayerSP"))
@@ -52,8 +49,7 @@ public class TaskInfo
             TaskType = TaskTypeEnum.SuccessTaskList;
         else if (Type.Contains("AdventureTriggerAttack"))
             TaskType = TaskTypeEnum.AdventureTriggerAttack;
-        else if (Type.Contains("AdventureFireProjectile"))
-            TaskType = TaskTypeEnum.AdventureFireProjectile;
+        else if (Type.Contains("AdventureFireProjectile")) TaskType = TaskTypeEnum.AdventureFireProjectile;
     }
 
     public int GetID()

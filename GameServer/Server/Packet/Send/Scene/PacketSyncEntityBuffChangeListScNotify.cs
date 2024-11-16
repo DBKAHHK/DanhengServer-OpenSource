@@ -7,34 +7,33 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 
 public class PacketSyncEntityBuffChangeListScNotify : BasePacket
 {
-    public PacketSyncEntityBuffChangeListScNotify(
-        IGameEntity entity, List<SceneBuff> addBuffs, List<SceneBuff> removeBuffs) : base(
+    public PacketSyncEntityBuffChangeListScNotify(IGameEntity entity, SceneBuff buff) : base(
         CmdIds.SyncEntityBuffChangeListScNotify)
     {
         var proto = new SyncEntityBuffChangeListScNotify();
-        if (addBuffs!= null)
+        var change = new EntityBuffChangeInfo
         {
-            foreach (var buff in addBuffs)
-            {
-                var add = new EntityBuffChangeInfo
-                {
-                    EntityId = (uint)entity.EntityID,
-                    BuffChangeInfo = buff.ToProto()
-                };
-                proto.EntityBuffChangeList.Add(add);
-            }
-        }
-        if (removeBuffs!= null)
+            EntityId = (uint)entity.EntityID,
+            BuffChangeInfo = buff.ToProto()
+        };
+        proto.EntityBuffChangeList.Add(change);
+
+        SetData(proto);
+    }
+
+    public PacketSyncEntityBuffChangeListScNotify(IGameEntity entity, List<SceneBuff> buffs) : base(
+        CmdIds.SyncEntityBuffChangeListScNotify)
+    {
+        var proto = new SyncEntityBuffChangeListScNotify();
+
+        foreach (var buff in buffs)
         {
-            foreach (var buff in removeBuffs)
+            var change = new EntityBuffChangeInfo
             {
-                var remove = new EntityBuffChangeInfo
-                {
-                    EntityId = (uint)entity.EntityID,
-                    RemoveBuffId = (uint)buff.BuffId
-                };
-                proto.EntityBuffChangeList.Add(remove);
-            }
+                EntityId = (uint)entity.EntityID,
+                RemoveBuffId = (uint)buff.BuffId
+            };
+            proto.EntityBuffChangeList.Add(change);
         }
 
         SetData(proto);

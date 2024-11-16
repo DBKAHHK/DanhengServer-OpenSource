@@ -1,7 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Inventory;
-using EggLink.DanhengServer.Enums.Avatar;
 using EggLink.DanhengServer.GameServer.Game.Battle.Skill;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Game.RogueMagic;
@@ -89,8 +88,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
                 Player.InventoryManager!.HandlePlaneEvent(prop.PropInfo.EventID);
             }
 
-            if (Player.RogueManager!.GetRogueInstance() != null)
-                await Player.RogueManager!.GetRogueInstance()!.OnPropDestruct(prop);
+            Player.RogueManager!.GetRogueInstance()?.OnPropDestruct(prop);
         }
 
         if (targetList.Count > 0)
@@ -153,21 +151,15 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
                 .OfType<AvatarSceneInfo>());
 
             MazeBuff? mazeBuff = null;
-            if (castAvatar != null && skill != null)
+            if (castAvatar != null)
             {
                 var index = battleInstance.Lineup.BaseAvatars!.FindIndex(x =>
                     x.BaseAvatarId == castAvatar.AvatarInfo.AvatarId);
-
                 GameData.AvatarConfigData.TryGetValue(castAvatar.AvatarInfo.GetAvatarId(), out var avatarExcel);
                 if (avatarExcel != null)
                 {
-                    var buffType = avatarExcel.DamageType;
-                    if (skill.AdventureModifiers.Contains("ADV_StageAbility_Maze_IgnoreWeakness_MazeSkillMark"))
-                        buffType = DamageTypeEnum.All;
-
-                    mazeBuff = new MazeBuff((int)buffType, 1, index);
-                    // TODO: Confirm SkillIndex value
-                    mazeBuff.DynamicValues.Add("SkillIndex", 0);
+                    mazeBuff = new MazeBuff((int)avatarExcel.DamageType, 1, index);
+                    mazeBuff.DynamicValues.Add("SkillIndex", skill.IsMazeSkill ? 2 : 1);
                 }
             }
             else
@@ -201,7 +193,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
 
             await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, battleInstance,
                 hitMonsterInstance));
-            if (Player.SceneInstance != null) await Player.SceneInstance!.ClearSummonUnit();
+            Player.SceneInstance?.ClearSummonUnit();
         }
         else
         {
@@ -250,7 +242,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
         InvokeOnPlayerEnterBattle(player, battleInstance);
 
         await Player.SendPacket(new PacketSceneEnterStageScRsp(battleInstance));
-        if (Player.SceneInstance != null) await Player.SceneInstance!.ClearSummonUnit();
+        Player.SceneInstance?.ClearSummonUnit();
     }
 
     public async ValueTask StartCocoonStage(int cocoonId, int wave, int worldLevel)
@@ -309,7 +301,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
         InvokeOnPlayerEnterBattle(player, battleInstance);
 
         await Player.SendPacket(new PacketStartCocoonStageScRsp(battleInstance, cocoonId, wave));
-        if (Player.SceneInstance != null) await Player.SceneInstance!.ClearSummonUnit();
+        Player.SceneInstance?.ClearSummonUnit();
     }
 
     public (Retcode, BattleInstance?) StartBattleCollege(int collegeId)

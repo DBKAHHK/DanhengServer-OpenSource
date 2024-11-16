@@ -306,6 +306,13 @@ public static class GameData
 
     #endregion
 
+    #region Tutorial
+
+    public static Dictionary<int, TutorialDataExcel> TutorialDataData { get; private set; } = [];
+    public static Dictionary<int, TutorialGuideDataExcel> TutorialGuideDataData { get; private set; } = [];
+
+    #endregion
+
     #region Actions
 
     public static void GetFloorInfo(int planeId, int floorId, out FloorInfo outer)
