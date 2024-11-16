@@ -225,7 +225,7 @@ public class EntryPoint
         };
 
         // generate the handbook
-        HandbookGenerator.Generate();
+        new Task(HandbookGenerator.GenerateAll).Start();
 
         if (!DatabaseHelper.LoadAllData)
         {
