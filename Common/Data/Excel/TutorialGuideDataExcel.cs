@@ -12,6 +12,6 @@ public class TutorialGuideDataExcel : ExcelResource
 
     public override void Loaded()
     {
-        GameData.TutorialGuideDataData.Add(ID, this);
+        GameData.TutorialGuideDataData.TryAdd(ID, this);
     }
 }

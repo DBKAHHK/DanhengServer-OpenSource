@@ -13,6 +13,6 @@ public class TutorialDataExcel : ExcelResource
 
     public override void Loaded()
     {
-        GameData.TutorialDataData.Add(TutorialID, this);
+        GameData.TutorialDataData.TryAdd(TutorialID, this);
     }
 }
