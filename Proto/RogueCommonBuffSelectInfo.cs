@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static RogueCommonBuffSelectInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9Sb2d1ZUNvbW1vbkJ1ZmZTZWxlY3RJbmZvLnByb3RvGhJJdGVtQ29zdERh",
-            "dGEucHJvdG8aFVJvZ3VlQ29tbW9uQnVmZi5wcm90bxolUm9ndWVDb21tb25C",
+            "Ch9Sb2d1ZUNvbW1vbkJ1ZmZTZWxlY3RJbmZvLnByb3RvGhVSb2d1ZUNvbW1v",
+            "bkJ1ZmYucHJvdG8aEkl0ZW1Db3N0RGF0YS5wcm90bxolUm9ndWVDb21tb25C",
             "dWZmU2VsZWN0U291cmNlVHlwZS5wcm90byKjAwoZUm9ndWVDb21tb25CdWZm",
             "U2VsZWN0SW5mbxIoCg5TZWxlY3RCdWZmTGlzdBgDIAMoCzIQLlJvZ3VlQ29t",
             "bW9uQnVmZhIPCgdDYW5Sb2xsGAsgASgIEhkKEUZpcnN0QnVmZlR5cGVMaXN0",
@@ -38,7 +38,7 @@ namespace EggLink.DanhengServer.Proto {
             "SWQYAiABKA0SIAoYSGFuZGJvb2tVbmxvY2tCdWZmSWRMaXN0GA8gAygNQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonBuffReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonBuffReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectInfo), global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectInfo.Parser, new[]{ "SelectBuffList", "CanRoll", "FirstBuffTypeList", "RollBuffCount", "SourceHintId", "RollBuffCostData", "RollBuffMaxCount", "SourceTotalCount", "SourceType", "SourceCurCount", "RollBuffFreeCount", "CertainSelectBuffId", "HandbookUnlockBuffIdList" }, null, null, null, null)
           }));

@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static RogueGambleMazeInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlSb2d1ZUdhbWJsZU1hemVJbmZvLnByb3RvGhFPTVBFQkRBT0ZJRy5wcm90",
-            "bxoRRU5ISEdBTUVLTUIucHJvdG8igQEKE1JvZ3VlR2FtYmxlTWF6ZUluZm8S",
+            "ChlSb2d1ZUdhbWJsZU1hemVJbmZvLnByb3RvGhFFTkhIR0FNRUtNQi5wcm90",
+            "bxoRT01QRUJEQU9GSUcucHJvdG8igQEKE1JvZ3VlR2FtYmxlTWF6ZUluZm8S",
             "DwoHbWF6ZV9pZBgOIAEoDRITCgttYXplX2VuYWJsZRgJIAEoCBIhCgtCS05H",
             "Q0JJQlBGSxgDIAEoCzIMLkVOSEhHQU1FS01CEiEKC0FITEFLS0dQSEdEGA0g",
             "ASgLMgwuT01QRUJEQU9GSUdCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
             "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OMPEBDAOFIGReflection.Descriptor, global::EggLink.DanhengServer.Proto.ENHHGAMEKMBReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ENHHGAMEKMBReflection.Descriptor, global::EggLink.DanhengServer.Proto.OMPEBDAOFIGReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueGambleMazeInfo), global::EggLink.DanhengServer.Proto.RogueGambleMazeInfo.Parser, new[]{ "MazeId", "MazeEnable", "BKNGCBIBPFK", "AHLAKKGPHGD" }, null, null, null, null)
           }));

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1HZXRNYXBSb3RhdGlvbkRhdGFTY1JzcC5wcm90bxoRQ2hhcmdlckluZm8u",
-            "cHJvdG8aF1JvdGF0ZXJFbmVyZ3lJbmZvLnByb3RvGhFITUJMSUFETktFTy5w",
-            "cm90bxoRUm90YXRlckRhdGEucHJvdG8i/wEKF0dldE1hcFJvdGF0aW9uRGF0",
+            "cHJvdG8aEVJvdGF0ZXJEYXRhLnByb3RvGhFITUJMSUFETktFTy5wcm90bxoX",
+            "Um90YXRlckVuZXJneUluZm8ucHJvdG8i/wEKF0dldE1hcFJvdGF0aW9uRGF0",
             "YVNjUnNwEh4KCHJvb21fbWFwGAYgASgLMgwuSE1CTElBRE5LRU8SEwoLSEZK",
             "Tk5CUERMQ0sYCyABKAgSDwoHcmV0Y29kZRgNIAEoDRIiCgxjaGFyZ2VyX2lu",
             "Zm8YBSADKAsyDC5DaGFyZ2VySW5mbxITCgtDSEpNT0RJTUxEQRgEIAEoDRIn",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "ckVuZXJneUluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HMBLIADNKEOReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.HMBLIADNKEOReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMapRotationDataScRsp), global::EggLink.DanhengServer.Proto.GetMapRotationDataScRsp.Parser, new[]{ "RoomMap", "HFJNNBPDLCK", "Retcode", "ChargerInfo", "CHJMODIMLDA", "RotaterDataList", "IPFOFHHKJKP", "EnergyInfo" }, null, null, null, null)
           }));

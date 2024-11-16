@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static PlayerSimpleInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZQbGF5ZXJTaW1wbGVJbmZvLnByb3RvGhJQbGF0Zm9ybVR5cGUucHJvdG8a",
-            "FkFzc2lzdFNpbXBsZUluZm8ucHJvdG8aGEZyaWVuZE9ubGluZVN0YXR1cy5w",
+            "ChZQbGF5ZXJTaW1wbGVJbmZvLnByb3RvGhZBc3Npc3RTaW1wbGVJbmZvLnBy",
+            "b3RvGhJQbGF0Zm9ybVR5cGUucHJvdG8aGEZyaWVuZE9ubGluZVN0YXR1cy5w",
             "cm90byLWAgoQUGxheWVyU2ltcGxlSW5mbxIyChdhc3Npc3Rfc2ltcGxlX2lu",
             "Zm9fbGlzdBgBIAMoCzIRLkFzc2lzdFNpbXBsZUluZm8SKgoNb25saW5lX3N0",
             "YXR1cxgDIAEoDjITLkZyaWVuZE9ubGluZVN0YXR1cxIRCgloZWFkX2ljb24Y",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "YmJsZV9pZBgIIAEoDRITCgtIRkhHUExNRUZHShgLIAEoCUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.AssistSimpleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.FriendOnlineStatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AssistSimpleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.FriendOnlineStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerSimpleInfo), global::EggLink.DanhengServer.Proto.PlayerSimpleInfo.Parser, new[]{ "AssistSimpleInfoList", "OnlineStatus", "HeadIcon", "Platform", "Signature", "IsBanned", "Level", "Nickname", "LastActiveTime", "Uid", "FLFKCIHCENF", "ChatBubbleId", "HFHGPLMEFGJ" }, null, null, null, null)
           }));

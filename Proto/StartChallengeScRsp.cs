@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static StartChallengeScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlTdGFydENoYWxsZW5nZVNjUnNwLnByb3RvGhJDdXJDaGFsbGVuZ2UucHJv",
-            "dG8aEExpbmV1cEluZm8ucHJvdG8aD1NjZW5lSW5mby5wcm90bxoYQ2hhbGxl",
-            "bmdlU3RhZ2VJbmZvLnByb3RvIrIBChNTdGFydENoYWxsZW5nZVNjUnNwEicK",
+            "ChlTdGFydENoYWxsZW5nZVNjUnNwLnByb3RvGhBMaW5ldXBJbmZvLnByb3Rv",
+            "GhhDaGFsbGVuZ2VTdGFnZUluZm8ucHJvdG8aEkN1ckNoYWxsZW5nZS5wcm90",
+            "bxoPU2NlbmVJbmZvLnByb3RvIrIBChNTdGFydENoYWxsZW5nZVNjUnNwEicK",
             "CnN0YWdlX2luZm8YCCABKAsyEy5DaGFsbGVuZ2VTdGFnZUluZm8SGQoFc2Nl",
             "bmUYAiABKAsyCi5TY2VuZUluZm8SIAoLbGluZXVwX2xpc3QYDCADKAsyCy5M",
             "aW5ldXBJbmZvEiQKDWN1cl9jaGFsbGVuZ2UYBiABKAsyDS5DdXJDaGFsbGVu",
             "Z2USDwoHcmV0Y29kZRgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CurChallengeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStageInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStageInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CurChallengeReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StartChallengeScRsp), global::EggLink.DanhengServer.Proto.StartChallengeScRsp.Parser, new[]{ "StageInfo", "Scene", "LineupList", "CurChallenge", "Retcode" }, null, null, null, null)
           }));

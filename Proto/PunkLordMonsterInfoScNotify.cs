@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static PunkLordMonsterInfoScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFQdW5rTG9yZE1vbnN0ZXJJbmZvU2NOb3RpZnkucHJvdG8aHlB1bmtMb3Jk",
-            "TW9uc3RlckJhc2ljSW5mby5wcm90bxoaUHVua0xvcmRCYXR0bGVSZWNvcmQu",
-            "cHJvdG8aJVB1bmtMb3JkTW9uc3RlckluZm9Ob3RpZnlSZWFzb24ucHJvdG8i",
+            "CiFQdW5rTG9yZE1vbnN0ZXJJbmZvU2NOb3RpZnkucHJvdG8aJVB1bmtMb3Jk",
+            "TW9uc3RlckluZm9Ob3RpZnlSZWFzb24ucHJvdG8aGlB1bmtMb3JkQmF0dGxl",
+            "UmVjb3JkLnByb3RvGh5QdW5rTG9yZE1vbnN0ZXJCYXNpY0luZm8ucHJvdG8i",
             "vwEKG1B1bmtMb3JkTW9uc3RlckluZm9TY05vdGlmeRIwCgZyZWFzb24YCyAB",
             "KA4yIC5QdW5rTG9yZE1vbnN0ZXJJbmZvTm90aWZ5UmVhc29uEi0KCmJhc2lj",
             "X2luZm8YDiABKAsyGS5QdW5rTG9yZE1vbnN0ZXJCYXNpY0luZm8SEwoLRkRE",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "ZEJhdHRsZVJlY29yZEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PunkLordMonsterBasicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PunkLordBattleRecordReflection.Descriptor, global::EggLink.DanhengServer.Proto.PunkLordMonsterInfoNotifyReasonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PunkLordMonsterInfoNotifyReasonReflection.Descriptor, global::EggLink.DanhengServer.Proto.PunkLordBattleRecordReflection.Descriptor, global::EggLink.DanhengServer.Proto.PunkLordMonsterBasicInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PunkLordMonsterInfoScNotify), global::EggLink.DanhengServer.Proto.PunkLordMonsterInfoScNotify.Parser, new[]{ "Reason", "BasicInfo", "FDDFAKGGPGF", "CDAJGLIIBII" }, null, null, null, null)
           }));
