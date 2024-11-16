@@ -7,7 +7,7 @@ public class TrainPartyTeamExcel : ExcelResource
     public int InitialMeetingSkill { get; set; }
     public int LeaderWorkingBuffID { get; set; }
     public int GridNum { get; set; }
-    public List<int> PassengerList { get; set; }
+    public List<int> PassengerList { get; set; } = [];
 
     public override int GetId()
     {

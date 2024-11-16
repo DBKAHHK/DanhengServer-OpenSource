@@ -120,7 +120,7 @@ public class ChallengeManager(PlayerInstance player) : BasePlayerManager(player)
             instance.BossBuffs.Add((int)bossBuffs.BuffTwo);
         }
 
-        InvokeOnPlayerEnterChallenge(player, instance);
+        InvokeOnPlayerEnterChallenge(Player, instance);
 
         // Send packet
         await Player.SendPacket(new PacketStartChallengeScRsp(Player));

@@ -37,9 +37,7 @@ public class DanhengConnection
         CancelToken = new CancellationTokenSource();
         if (ConfigManager.Config.GameServer.UsePacketEncryption)
         {
-#pragma warning disable CS8602 // CS8602 - Dereference of a possibly null reference.
-            XorKey = Crypto.ClientSecretKey.GetXorKey();
-#pragma warning restore CS8602 // CS8602 - Dereference of a possibly null reference.
+            XorKey = Crypto.ClientSecretKey!.GetXorKey();
         }
 
         Start();
@@ -134,7 +132,7 @@ public class DanhengConnection
         try
         {
             if (ConfigManager.Config.GameServer.UsePacketEncryption)
-                Crypto.Xor(packet, XorKey);
+                Crypto.Xor(packet, XorKey!);
 
             _ = await Conversation.SendAsync(packet, CancelToken.Token);
         }

@@ -189,7 +189,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
             hitMonsterInstance.AddRange(targetList.Where(x => !x.IsAlive).Select(entityMonster =>
                 new HitMonsterInstance(entityMonster.EntityID, MonsterBattleType.DirectDieSkipBattle)));
 
-            InvokeOnPlayerEnterBattle(player, battleInstance);
+            InvokeOnPlayerEnterBattle(Player, battleInstance);
 
             await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, battleInstance,
                 hitMonsterInstance));
@@ -239,7 +239,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
 
         Player.BattleInstance = battleInstance;
 
-        InvokeOnPlayerEnterBattle(player, battleInstance);
+        InvokeOnPlayerEnterBattle(Player, battleInstance);
 
         await Player.SendPacket(new PacketSceneEnterStageScRsp(battleInstance));
         Player.SceneInstance?.ClearSummonUnit();
@@ -298,7 +298,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
         Player.BattleInstance = battleInstance;
         Player.QuestManager!.OnBattleStart(battleInstance);
 
-        InvokeOnPlayerEnterBattle(player, battleInstance);
+        InvokeOnPlayerEnterBattle(Player, battleInstance);
 
         await Player.SendPacket(new PacketStartCocoonStageScRsp(battleInstance, cocoonId, wave));
         Player.SceneInstance?.ClearSummonUnit();
@@ -335,7 +335,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
 
     public async ValueTask EndBattle(PVEBattleResultCsReq req)
     {
-        InvokeOnPlayerQuitBattle(player, req);
+        InvokeOnPlayerQuitBattle(Player, req);
 
         if (Player.BattleInstance == null)
         {
