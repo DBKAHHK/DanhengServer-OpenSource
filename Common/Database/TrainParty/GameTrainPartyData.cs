@@ -65,18 +65,24 @@ public class GameTrainPartyAreaInfo
             AreaStepInfo = new AreaStepInfo
             {
                 AreaGlobalId = (uint)GameData.TrainPartyAreaGoalConfigData.First(x => x.Value.AreaID == AreaId).Key,
-                AreaStepList = { StepList.Select(x => new BuildAreaStep
+                AreaStepList =
                 {
-                    StepId = (uint)x,
-                    Status = BuildGoalStep.Finish
-                }) }
+                    StepList.Select(x => new BuildAreaStep
+                    {
+                        StepId = (uint)x,
+                        Status = BuildGoalStep.Finish
+                    })
+                }
             },
             Progress = 100,
-            DynamicInfo = { DynamicInfo.Select(x => new AreaDynamicInfo
+            DynamicInfo =
             {
-                DiceSlotId = (uint)x.Key,
-                DiyDynamicId = (uint)x.Value
-            }) }
+                DynamicInfo.Select(x => new AreaDynamicInfo
+                {
+                    DiceSlotId = (uint)x.Key,
+                    DiyDynamicId = (uint)x.Value
+                })
+            }
         };
 
         foreach (var step in StepList)

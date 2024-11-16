@@ -25,6 +25,8 @@ public class FloorInfo
 
     [JsonIgnore] public int StartGroupID { get; set; }
 
+    [JsonIgnore] public List<FloorSavedValueInfo> FloorSavedValue { get; set; } = [];
+
     public AnchorInfo? GetAnchorInfo(int groupId, int anchorId)
     {
         Groups.TryGetValue(groupId, out var group);
@@ -32,8 +34,6 @@ public class FloorInfo
 
         return group.AnchorList.Find(info => info.ID == anchorId);
     }
-
-    [JsonIgnore] public List<FloorSavedValueInfo> FloorSavedValue { get; set; } = [];
 
     public void OnLoad()
     {
@@ -47,7 +47,8 @@ public class FloorInfo
         // Cache anchors
         foreach (var group in Groups.Values)
         {
-            foreach (var condition in group.SavedValueCondition.Conditions.Where(x => SavedValues.Find(s => s.Name == x.SavedValueName) == null))
+            foreach (var condition in group.SavedValueCondition.Conditions.Where(x =>
+                         SavedValues.Find(s => s.Name == x.SavedValueName) == null))
                 FloorSavedValue.Add(new FloorSavedValueInfo
                 {
                     DefaultValue = 0,

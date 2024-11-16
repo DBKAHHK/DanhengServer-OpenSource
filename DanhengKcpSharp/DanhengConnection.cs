@@ -35,10 +35,7 @@ public class DanhengConnection
         Conversation = conversation;
         RemoteEndPoint = remote;
         CancelToken = new CancellationTokenSource();
-        if (ConfigManager.Config.GameServer.UsePacketEncryption)
-        {
-            XorKey = Crypto.ClientSecretKey!.GetXorKey();
-        }
+        if (ConfigManager.Config.GameServer.UsePacketEncryption) XorKey = Crypto.ClientSecretKey!.GetXorKey();
 
         Start();
     }

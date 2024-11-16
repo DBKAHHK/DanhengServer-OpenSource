@@ -194,7 +194,7 @@ public class ChessRogueCellInstance
             //BlockType = (uint)BlockType,
             IsUnlock = true,
             RoomId = (uint)RoomId,
-            IsUnlocked = true,
+            IsUnlocked = true
             //PosX = (uint)GetRow(),
             //MarkType = (uint)MarkType
         };

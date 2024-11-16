@@ -8,7 +8,6 @@ public class PacketTrainPartyBuildDiyScRsp : BasePacket
 {
     public PacketTrainPartyBuildDiyScRsp(GameTrainPartyAreaInfo? area) : base(CmdIds.TrainPartyBuildDiyScRsp)
     {
-
         var proto = area == null
             ? new TrainPartyBuildDiyScRsp
             {

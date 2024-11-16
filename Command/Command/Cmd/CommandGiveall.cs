@@ -248,29 +248,19 @@ public class CommandGiveall : ICommand
             return;
         }
 
-        foreach (var grid in GameData.TrainPartyGridConfigData.Keys)
-        {
-            await player.TrainPartyManager!.AddGrid(grid);
-        }
+        foreach (var grid in GameData.TrainPartyGridConfigData.Keys) await player.TrainPartyManager!.AddGrid(grid);
 
-        foreach (var card in GameData.TrainPartyCardConfigData.Keys)
-        {
-            await player.TrainPartyManager!.AddCard(card);
-        }
+        foreach (var card in GameData.TrainPartyCardConfigData.Keys) await player.TrainPartyManager!.AddCard(card);
 
         foreach (var area in player.TrainPartyManager!.TrainPartyData.Areas)
-        {
-            foreach (var step in GameData.TrainPartyStepConfigData.Values.Where(stepExcel => GameData.TrainPartyAreaGoalConfigData.First(x => x.Value.AreaID == area.Value.AreaId).Value
-                         .StepGroupList.Contains(stepExcel.GroupID)))
-            {
-                area.Value.StepList.Add(step.ID);
-            }
-        }
+        foreach (var step in GameData.TrainPartyStepConfigData.Values.Where(stepExcel => GameData
+                     .TrainPartyAreaGoalConfigData.First(x => x.Value.AreaID == area.Value.AreaId).Value
+                     .StepGroupList.Contains(stepExcel.GroupID)))
+            area.Value.StepList.Add(step.ID);
 
         Dictionary<string, int> update = [];
         player.SceneData!.FloorSavedData[player.SceneInstance!.FloorId] = [];
         foreach (var savedValue in player.SceneInstance!.FloorInfo!.FloorSavedValue)
-        {
             if (savedValue.Name.StartsWith("Build_") || savedValue.Name == "Onboarded")
             {
                 player.SceneData!.FloorSavedData[player.SceneInstance!.FloorId][savedValue.Name] = 1;
@@ -281,7 +271,6 @@ public class CommandGiveall : ICommand
                 player.SceneData!.FloorSavedData[player.SceneInstance!.FloorId][savedValue.Name] = 100;
                 update.TryAdd(savedValue.Name, 100);
             }
-        }
 
         await player.SendPacket(new PacketUpdateFloorSavedValueNotify(update, player));
 

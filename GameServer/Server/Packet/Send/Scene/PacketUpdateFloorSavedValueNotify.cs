@@ -6,7 +6,8 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 
 public class PacketUpdateFloorSavedValueNotify : BasePacket
 {
-    public PacketUpdateFloorSavedValueNotify(string name, int savedValue, PlayerInstance player) : base(CmdIds.UpdateFloorSavedValueNotify)
+    public PacketUpdateFloorSavedValueNotify(string name, int savedValue, PlayerInstance player) : base(
+        CmdIds.UpdateFloorSavedValueNotify)
     {
         var proto = new UpdateFloorSavedValueNotify
         {
@@ -19,7 +20,8 @@ public class PacketUpdateFloorSavedValueNotify : BasePacket
         SetData(proto);
     }
 
-    public PacketUpdateFloorSavedValueNotify(Dictionary<string, int> update, PlayerInstance player) : base(CmdIds.UpdateFloorSavedValueNotify)
+    public PacketUpdateFloorSavedValueNotify(Dictionary<string, int> update, PlayerInstance player) : base(
+        CmdIds.UpdateFloorSavedValueNotify)
     {
         var proto = new UpdateFloorSavedValueNotify
         {
@@ -27,10 +29,7 @@ public class PacketUpdateFloorSavedValueNotify : BasePacket
             PlaneId = (uint)player.SceneInstance!.PlaneId
         };
 
-        foreach (var i in update)
-        {
-            proto.SavedValue.Add(i.Key, i.Value);
-        }
+        foreach (var i in update) proto.SavedValue.Add(i.Key, i.Value);
 
         SetData(proto);
     }

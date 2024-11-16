@@ -2,7 +2,6 @@
 
 public enum ItemSubTypeEnum
 {
-
     Unknown = 0,
     Virtual = 101,
     GameplayCounter = 102,

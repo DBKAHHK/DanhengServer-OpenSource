@@ -5,6 +5,7 @@ using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Game.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.Proto;
+using LineupInfo = EggLink.DanhengServer.Database.Lineup.LineupInfo;
 
 namespace EggLink.DanhengServer.GameServer.Plugin.Event;
 
@@ -44,26 +45,32 @@ public static class PluginEvent
     {
         OnPlayerLoadScene?.Invoke(player, scene);
     }
+
     public static void InvokeOnPlayerEnterBattle(PlayerInstance player, BattleInstance battle)
     {
         OnPlayerEnterBattle?.Invoke(player, battle);
     }
+
     public static void InvokeOnPlayerQuitBattle(PlayerInstance player, PVEBattleResultCsReq result)
     {
         OnPlayerQuitBattle?.Invoke(player, result);
     }
+
     public static void InvokeOnPlayerEnterChallenge(PlayerInstance player, ChallengeInstance challenge)
     {
         OnPlayerEnterChallenge?.Invoke(player, challenge);
     }
+
     public static void InvokeOnPlayerQuitChallenge(PlayerInstance player, ChallengeInstance? challenge)
     {
         OnPlayerQuitChallenge?.Invoke(player, challenge);
     }
-    public static void InvokeOnPlayerSyncLineup(PlayerInstance player, Database.Lineup.LineupInfo? lineup)
+
+    public static void InvokeOnPlayerSyncLineup(PlayerInstance player, LineupInfo? lineup)
     {
         OnPlayerSyncLineup?.Invoke(player, lineup);
     }
+
     public static void InvokeOnPlayerUseCommand(ICommandSender sender, string command)
     {
         OnPlayerUseCommand?.Invoke(sender, command);
@@ -93,7 +100,7 @@ public static class PluginEvent
 
     public delegate void OnPlayerQuitChallengeHandler(PlayerInstance player, ChallengeInstance? challenge);
 
-    public delegate void OnPlayerSyncLineupHandler(PlayerInstance player, Database.Lineup.LineupInfo? lineup);
+    public delegate void OnPlayerSyncLineupHandler(PlayerInstance player, LineupInfo? lineup);
 
     public delegate void OnPlayerUseCommandHandler(ICommandSender sender, string command);
 

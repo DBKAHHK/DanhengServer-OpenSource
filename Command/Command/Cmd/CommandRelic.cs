@@ -71,8 +71,8 @@ public class CommandRelic : ICommand
 
         var mainAffixGroup = itemConfig.MainAffixGroup;
         var mainAffixGroupConfig = GameData.RelicMainAffixData[mainAffixGroup];
-        string? mainProperty = mainAffixGroupConfig[mainAffixId].Property;
-        
+        var mainProperty = mainAffixGroupConfig[mainAffixId].Property;
+
         for (var i = 0; i < amount; i++)
         {
             var remainLevel = 5;
@@ -108,7 +108,8 @@ public class CommandRelic : ICommand
                 {
                     var subId = subAffixGroupKeys.RandomElement();
                     if (subAffixes.Any(x => x.Item1 == subId)) continue;
-                    if (subAffixGroupConfig[subId] != null && subAffixGroupConfig[subId].Property == mainProperty) continue;
+                    if (subAffixGroupConfig[subId] != null &&
+                        subAffixGroupConfig[subId].Property == mainProperty) continue;
 
                     if (remainLevel <= 0)
                     {
@@ -142,7 +143,7 @@ public class CommandRelic : ICommand
 
             await player.InventoryManager!.AddItem(itemData, false);
         }
-            
+
 
         await arg.SendMsg(I18NManager.Translate("Game.Command.Relic.RelicGiven", player.Uid.ToString(),
             amount.ToString(), itemConfigExcel.Name ?? arg.BasicArgs[0], mainAffixId.ToString()));

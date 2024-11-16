@@ -1,9 +1,9 @@
 ﻿using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.TrainParty;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Util;
 using GameTrainPartyCardInfo = EggLink.DanhengServer.Database.TrainParty.GameTrainPartyCardInfo;
 
@@ -11,25 +11,24 @@ namespace EggLink.DanhengServer.GameServer.Game.TrainParty;
 
 public class TrainPartyManager : BasePlayerManager
 {
-    public GameTrainPartyData TrainPartyData { get; }
-    public TrainPartyTeamExcel TeamExcel { get; }
-
     public TrainPartyManager(PlayerInstance player) : base(player)
     {
         TrainPartyData =
             DatabaseHelper.Instance!.GetInstanceOrCreateNew<GameTrainPartyData>(player.Uid);
 
-        foreach (var excel in GameData.TrainPartyAreaConfigData.Where(excel => !TrainPartyData.Areas.ContainsKey(excel.Key)))
-        {
+        foreach (var excel in GameData.TrainPartyAreaConfigData.Where(excel =>
+                     !TrainPartyData.Areas.ContainsKey(excel.Key)))
             TrainPartyData.Areas[excel.Key] = new GameTrainPartyAreaInfo
             {
                 AreaId = excel.Key,
                 StepList = [excel.Value.FirstStep]
             };
-        }
 
         TeamExcel = GameData.TrainPartyTeamData.Values.ToList().RandomElement();
     }
+
+    public GameTrainPartyData TrainPartyData { get; }
+    public TrainPartyTeamExcel TeamExcel { get; }
 
     public async ValueTask AddCard(int cardId)
     {
@@ -121,10 +120,13 @@ public class TrainPartyManager : BasePlayerManager
     {
         return new TrainPartyGamePassengerInfo
         {
-            PassengerList = { TeamExcel.PassengerList.Select(x => new TrainPartyGamePassenger
+            PassengerList =
             {
-                PassengerId = (uint)x
-            }) },
+                TeamExcel.PassengerList.Select(x => new TrainPartyGamePassenger
+                {
+                    PassengerId = (uint)x
+                })
+            },
             CurPassengerId = (uint)TeamExcel.PassengerList.RandomElement(),
             MtRankId = 104
         };
