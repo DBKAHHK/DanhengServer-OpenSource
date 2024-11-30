@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static OEMCBINHGOAReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFPRU1DQklOSEdPQS5wcm90byJMCgtPRU1DQklOSEdPQRITCgtJTUZNT0ZK",
-            "R09OQxgBIAEoBBITCgtNR0FJQUpBS1BFSRgCIAEoDRITCgtJR0ZOQ0dJS0FJ",
-            "UBgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
-            "bzM="));
+            "ChFPRU1DQklOSEdPQS5wcm90byJQCgtPRU1DQklOSEdPQRITCgtJTUZNT0ZK",
+            "R09OQxgBIAEoBBIXCg9maWdodF9nYW1lX21vZGUYAiABKA0SEwoLSUdGTkNH",
+            "SUtBSVAYAyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OEMCBINHGOA), global::EggLink.DanhengServer.Proto.OEMCBINHGOA.Parser, new[]{ "IMFMOFJGONC", "MGAIAJAKPEI", "IGFNCGIKAIP" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OEMCBINHGOA), global::EggLink.DanhengServer.Proto.OEMCBINHGOA.Parser, new[]{ "IMFMOFJGONC", "FightGameMode", "IGFNCGIKAIP" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OEMCBINHGOA(OEMCBINHGOA other) : this() {
       iMFMOFJGONC_ = other.iMFMOFJGONC_;
-      mGAIAJAKPEI_ = other.mGAIAJAKPEI_;
+      fightGameMode_ = other.fightGameMode_;
       iGFNCGIKAIP_ = other.iGFNCGIKAIP_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -97,15 +97,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "MGAIAJAKPEI" field.</summary>
-    public const int MGAIAJAKPEIFieldNumber = 2;
-    private uint mGAIAJAKPEI_;
+    /// <summary>Field number for the "fight_game_mode" field.</summary>
+    public const int FightGameModeFieldNumber = 2;
+    private uint fightGameMode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MGAIAJAKPEI {
-      get { return mGAIAJAKPEI_; }
+    public uint FightGameMode {
+      get { return fightGameMode_; }
       set {
-        mGAIAJAKPEI_ = value;
+        fightGameMode_ = value;
       }
     }
 
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (IMFMOFJGONC != other.IMFMOFJGONC) return false;
-      if (MGAIAJAKPEI != other.MGAIAJAKPEI) return false;
+      if (FightGameMode != other.FightGameMode) return false;
       if (IGFNCGIKAIP != other.IGFNCGIKAIP) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -147,7 +147,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (IMFMOFJGONC != 0UL) hash ^= IMFMOFJGONC.GetHashCode();
-      if (MGAIAJAKPEI != 0) hash ^= MGAIAJAKPEI.GetHashCode();
+      if (FightGameMode != 0) hash ^= FightGameMode.GetHashCode();
       if (IGFNCGIKAIP != 0) hash ^= IGFNCGIKAIP.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -171,9 +171,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt64(IMFMOFJGONC);
       }
-      if (MGAIAJAKPEI != 0) {
+      if (FightGameMode != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(MGAIAJAKPEI);
+        output.WriteUInt32(FightGameMode);
       }
       if (IGFNCGIKAIP != 0) {
         output.WriteRawTag(24);
@@ -193,9 +193,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt64(IMFMOFJGONC);
       }
-      if (MGAIAJAKPEI != 0) {
+      if (FightGameMode != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(MGAIAJAKPEI);
+        output.WriteUInt32(FightGameMode);
       }
       if (IGFNCGIKAIP != 0) {
         output.WriteRawTag(24);
@@ -214,8 +214,8 @@ namespace EggLink.DanhengServer.Proto {
       if (IMFMOFJGONC != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(IMFMOFJGONC);
       }
-      if (MGAIAJAKPEI != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MGAIAJAKPEI);
+      if (FightGameMode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FightGameMode);
       }
       if (IGFNCGIKAIP != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IGFNCGIKAIP);
@@ -235,8 +235,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.IMFMOFJGONC != 0UL) {
         IMFMOFJGONC = other.IMFMOFJGONC;
       }
-      if (other.MGAIAJAKPEI != 0) {
-        MGAIAJAKPEI = other.MGAIAJAKPEI;
+      if (other.FightGameMode != 0) {
+        FightGameMode = other.FightGameMode;
       }
       if (other.IGFNCGIKAIP != 0) {
         IGFNCGIKAIP = other.IGFNCGIKAIP;
@@ -261,7 +261,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 16: {
-            MGAIAJAKPEI = input.ReadUInt32();
+            FightGameMode = input.ReadUInt32();
             break;
           }
           case 24: {
@@ -288,7 +288,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 16: {
-            MGAIAJAKPEI = input.ReadUInt32();
+            FightGameMode = input.ReadUInt32();
             break;
           }
           case 24: {

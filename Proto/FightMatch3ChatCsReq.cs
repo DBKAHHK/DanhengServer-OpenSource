@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static FightMatch3ChatCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpGaWdodE1hdGNoM0NoYXRDc1JlcS5wcm90byIrChRGaWdodE1hdGNoM0No",
-            "YXRDc1JlcRITCgtOQlBETkZNT0xHTxgMIAEoDUIeqgIbRWdnTGluay5EYW5o",
-            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChpGaWdodE1hdGNoM0NoYXRDc1JlcS5wcm90byIuChRGaWdodE1hdGNoM0No",
+            "YXRDc1JlcRIWCg5maWdodF9lbW9qaV9pZBgMIAEoDUIeqgIbRWdnTGluay5E",
+            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightMatch3ChatCsReq), global::EggLink.DanhengServer.Proto.FightMatch3ChatCsReq.Parser, new[]{ "NBPDNFMOLGO" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightMatch3ChatCsReq), global::EggLink.DanhengServer.Proto.FightMatch3ChatCsReq.Parser, new[]{ "FightEmojiId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FightMatch3ChatCsReq(FightMatch3ChatCsReq other) : this() {
-      nBPDNFMOLGO_ = other.nBPDNFMOLGO_;
+      fightEmojiId_ = other.fightEmojiId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new FightMatch3ChatCsReq(this);
     }
 
-    /// <summary>Field number for the "NBPDNFMOLGO" field.</summary>
-    public const int NBPDNFMOLGOFieldNumber = 12;
-    private uint nBPDNFMOLGO_;
+    /// <summary>Field number for the "fight_emoji_id" field.</summary>
+    public const int FightEmojiIdFieldNumber = 12;
+    private uint fightEmojiId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NBPDNFMOLGO {
-      get { return nBPDNFMOLGO_; }
+    public uint FightEmojiId {
+      get { return fightEmojiId_; }
       set {
-        nBPDNFMOLGO_ = value;
+        fightEmojiId_ = value;
       }
     }
 
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (NBPDNFMOLGO != other.NBPDNFMOLGO) return false;
+      if (FightEmojiId != other.FightEmojiId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (NBPDNFMOLGO != 0) hash ^= NBPDNFMOLGO.GetHashCode();
+      if (FightEmojiId != 0) hash ^= FightEmojiId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (NBPDNFMOLGO != 0) {
+      if (FightEmojiId != 0) {
         output.WriteRawTag(96);
-        output.WriteUInt32(NBPDNFMOLGO);
+        output.WriteUInt32(FightEmojiId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (NBPDNFMOLGO != 0) {
+      if (FightEmojiId != 0) {
         output.WriteRawTag(96);
-        output.WriteUInt32(NBPDNFMOLGO);
+        output.WriteUInt32(FightEmojiId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -164,8 +164,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (NBPDNFMOLGO != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NBPDNFMOLGO);
+      if (FightEmojiId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FightEmojiId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -179,8 +179,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.NBPDNFMOLGO != 0) {
-        NBPDNFMOLGO = other.NBPDNFMOLGO;
+      if (other.FightEmojiId != 0) {
+        FightEmojiId = other.FightEmojiId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -198,7 +198,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 96: {
-            NBPDNFMOLGO = input.ReadUInt32();
+            FightEmojiId = input.ReadUInt32();
             break;
           }
         }
@@ -217,7 +217,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 96: {
-            NBPDNFMOLGO = input.ReadUInt32();
+            FightEmojiId = input.ReadUInt32();
             break;
           }
         }

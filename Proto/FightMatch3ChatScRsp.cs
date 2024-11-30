@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static FightMatch3ChatScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpGaWdodE1hdGNoM0NoYXRTY1JzcC5wcm90byI8ChRGaWdodE1hdGNoM0No",
-            "YXRTY1JzcBITCgtOQlBETkZNT0xHTxgGIAEoDRIPCgdyZXRjb2RlGAwgASgN",
-            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChpGaWdodE1hdGNoM0NoYXRTY1JzcC5wcm90byI/ChRGaWdodE1hdGNoM0No",
+            "YXRTY1JzcBIWCg5maWdodF9lbW9qaV9pZBgGIAEoDRIPCgdyZXRjb2RlGAwg",
+            "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightMatch3ChatScRsp), global::EggLink.DanhengServer.Proto.FightMatch3ChatScRsp.Parser, new[]{ "NBPDNFMOLGO", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightMatch3ChatScRsp), global::EggLink.DanhengServer.Proto.FightMatch3ChatScRsp.Parser, new[]{ "FightEmojiId", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FightMatch3ChatScRsp(FightMatch3ChatScRsp other) : this() {
-      nBPDNFMOLGO_ = other.nBPDNFMOLGO_;
+      fightEmojiId_ = other.fightEmojiId_;
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -83,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new FightMatch3ChatScRsp(this);
     }
 
-    /// <summary>Field number for the "NBPDNFMOLGO" field.</summary>
-    public const int NBPDNFMOLGOFieldNumber = 6;
-    private uint nBPDNFMOLGO_;
+    /// <summary>Field number for the "fight_emoji_id" field.</summary>
+    public const int FightEmojiIdFieldNumber = 6;
+    private uint fightEmojiId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NBPDNFMOLGO {
-      get { return nBPDNFMOLGO_; }
+    public uint FightEmojiId {
+      get { return fightEmojiId_; }
       set {
-        nBPDNFMOLGO_ = value;
+        fightEmojiId_ = value;
       }
     }
 
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (NBPDNFMOLGO != other.NBPDNFMOLGO) return false;
+      if (FightEmojiId != other.FightEmojiId) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -131,7 +131,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (NBPDNFMOLGO != 0) hash ^= NBPDNFMOLGO.GetHashCode();
+      if (FightEmojiId != 0) hash ^= FightEmojiId.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -151,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (NBPDNFMOLGO != 0) {
+      if (FightEmojiId != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(NBPDNFMOLGO);
+        output.WriteUInt32(FightEmojiId);
       }
       if (Retcode != 0) {
         output.WriteRawTag(96);
@@ -169,9 +169,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (NBPDNFMOLGO != 0) {
+      if (FightEmojiId != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(NBPDNFMOLGO);
+        output.WriteUInt32(FightEmojiId);
       }
       if (Retcode != 0) {
         output.WriteRawTag(96);
@@ -187,8 +187,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (NBPDNFMOLGO != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NBPDNFMOLGO);
+      if (FightEmojiId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FightEmojiId);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
@@ -205,8 +205,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.NBPDNFMOLGO != 0) {
-        NBPDNFMOLGO = other.NBPDNFMOLGO;
+      if (other.FightEmojiId != 0) {
+        FightEmojiId = other.FightEmojiId;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
@@ -227,7 +227,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 48: {
-            NBPDNFMOLGO = input.ReadUInt32();
+            FightEmojiId = input.ReadUInt32();
             break;
           }
           case 96: {
@@ -250,7 +250,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 48: {
-            NBPDNFMOLGO = input.ReadUInt32();
+            FightEmojiId = input.ReadUInt32();
             break;
           }
           case 96: {

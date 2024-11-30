@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static MatchThreeLevelEndScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1NYXRjaFRocmVlTGV2ZWxFbmRTY1JzcC5wcm90byJRChdNYXRjaFRocmVl",
+            "Ch1NYXRjaFRocmVlTGV2ZWxFbmRTY1JzcC5wcm90byJNChdNYXRjaFRocmVl",
             "TGV2ZWxFbmRTY1JzcBIQCghsZXZlbF9pZBgHIAEoDRIPCgdyZXRjb2RlGAwg",
-            "ASgNEhMKC0tJRlBGQ0RFQUFFGAogASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
-            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ASgNEg8KB21vZGVfaWQYCiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MatchThreeLevelEndScRsp), global::EggLink.DanhengServer.Proto.MatchThreeLevelEndScRsp.Parser, new[]{ "LevelId", "Retcode", "KIFPFCDEAAE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MatchThreeLevelEndScRsp), global::EggLink.DanhengServer.Proto.MatchThreeLevelEndScRsp.Parser, new[]{ "LevelId", "Retcode", "ModeId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     public MatchThreeLevelEndScRsp(MatchThreeLevelEndScRsp other) : this() {
       levelId_ = other.levelId_;
       retcode_ = other.retcode_;
-      kIFPFCDEAAE_ = other.kIFPFCDEAAE_;
+      modeId_ = other.modeId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -109,15 +109,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "KIFPFCDEAAE" field.</summary>
-    public const int KIFPFCDEAAEFieldNumber = 10;
-    private uint kIFPFCDEAAE_;
+    /// <summary>Field number for the "mode_id" field.</summary>
+    public const int ModeIdFieldNumber = 10;
+    private uint modeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint KIFPFCDEAAE {
-      get { return kIFPFCDEAAE_; }
+    public uint ModeId {
+      get { return modeId_; }
       set {
-        kIFPFCDEAAE_ = value;
+        modeId_ = value;
       }
     }
 
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (LevelId != other.LevelId) return false;
       if (Retcode != other.Retcode) return false;
-      if (KIFPFCDEAAE != other.KIFPFCDEAAE) return false;
+      if (ModeId != other.ModeId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -148,7 +148,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (LevelId != 0) hash ^= LevelId.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (KIFPFCDEAAE != 0) hash ^= KIFPFCDEAAE.GetHashCode();
+      if (ModeId != 0) hash ^= ModeId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -171,9 +171,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(56);
         output.WriteUInt32(LevelId);
       }
-      if (KIFPFCDEAAE != 0) {
+      if (ModeId != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(KIFPFCDEAAE);
+        output.WriteUInt32(ModeId);
       }
       if (Retcode != 0) {
         output.WriteRawTag(96);
@@ -193,9 +193,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(56);
         output.WriteUInt32(LevelId);
       }
-      if (KIFPFCDEAAE != 0) {
+      if (ModeId != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(KIFPFCDEAAE);
+        output.WriteUInt32(ModeId);
       }
       if (Retcode != 0) {
         output.WriteRawTag(96);
@@ -217,8 +217,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (KIFPFCDEAAE != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KIFPFCDEAAE);
+      if (ModeId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ModeId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -238,8 +238,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.KIFPFCDEAAE != 0) {
-        KIFPFCDEAAE = other.KIFPFCDEAAE;
+      if (other.ModeId != 0) {
+        ModeId = other.ModeId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -261,7 +261,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 80: {
-            KIFPFCDEAAE = input.ReadUInt32();
+            ModeId = input.ReadUInt32();
             break;
           }
           case 96: {
@@ -288,7 +288,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 80: {
-            KIFPFCDEAAE = input.ReadUInt32();
+            ModeId = input.ReadUInt32();
             break;
           }
           case 96: {

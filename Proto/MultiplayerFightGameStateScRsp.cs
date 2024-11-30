@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static MultiplayerFightGameStateScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiRNdWx0aXBsYXllckZpZ2h0R2FtZVN0YXRlU2NSc3AucHJvdG8aEUNDSENQ",
-            "TkxQQkRLLnByb3RvGhFFRERQQUJJR0hCRS5wcm90byJ3Ch5NdWx0aXBsYXll",
-            "ckZpZ2h0R2FtZVN0YXRlU2NSc3ASDwoHcmV0Y29kZRgEIAEoDRIhCgtCQU5O",
-            "QUtETkJGQRgPIAEoCzIMLkVERFBBQklHSEJFEiEKC0VCTU9LUEJLTU1EGAYg",
-            "AygLMgwuQ0NIQ1BOTFBCREtCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
-            "cm90b2IGcHJvdG8z"));
+            "CiRNdWx0aXBsYXllckZpZ2h0R2FtZVN0YXRlU2NSc3AucHJvdG8aHk11bHRp",
+            "cGxheWVyRmlnaHRHYW1lSW5mby5wcm90bxoQTWVtYmVySW5mby5wcm90byKH",
+            "AQoeTXVsdGlwbGF5ZXJGaWdodEdhbWVTdGF0ZVNjUnNwEg8KB3JldGNvZGUY",
+            "BCABKA0SMgoPZmlnaHRfZ2FtZV9pbmZvGA8gASgLMhkuTXVsdGlwbGF5ZXJG",
+            "aWdodEdhbWVJbmZvEiAKC21lbWJlcl9pbmZvGAYgAygLMgsuTWVtYmVySW5m",
+            "b0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CCHCPNLPBDKReflection.Descriptor, global::EggLink.DanhengServer.Proto.EDDPABIGHBEReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MultiplayerFightGameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MemberInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MultiplayerFightGameStateScRsp), global::EggLink.DanhengServer.Proto.MultiplayerFightGameStateScRsp.Parser, new[]{ "Retcode", "BANNAKDNBFA", "EBMOKPBKMMD" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MultiplayerFightGameStateScRsp), global::EggLink.DanhengServer.Proto.MultiplayerFightGameStateScRsp.Parser, new[]{ "Retcode", "FightGameInfo", "MemberInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,8 +76,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MultiplayerFightGameStateScRsp(MultiplayerFightGameStateScRsp other) : this() {
       retcode_ = other.retcode_;
-      bANNAKDNBFA_ = other.bANNAKDNBFA_ != null ? other.bANNAKDNBFA_.Clone() : null;
-      eBMOKPBKMMD_ = other.eBMOKPBKMMD_.Clone();
+      fightGameInfo_ = other.fightGameInfo_ != null ? other.fightGameInfo_.Clone() : null;
+      memberInfo_ = other.memberInfo_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -99,27 +99,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "BANNAKDNBFA" field.</summary>
-    public const int BANNAKDNBFAFieldNumber = 15;
-    private global::EggLink.DanhengServer.Proto.EDDPABIGHBE bANNAKDNBFA_;
+    /// <summary>Field number for the "fight_game_info" field.</summary>
+    public const int FightGameInfoFieldNumber = 15;
+    private global::EggLink.DanhengServer.Proto.MultiplayerFightGameInfo fightGameInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.EDDPABIGHBE BANNAKDNBFA {
-      get { return bANNAKDNBFA_; }
+    public global::EggLink.DanhengServer.Proto.MultiplayerFightGameInfo FightGameInfo {
+      get { return fightGameInfo_; }
       set {
-        bANNAKDNBFA_ = value;
+        fightGameInfo_ = value;
       }
     }
 
-    /// <summary>Field number for the "EBMOKPBKMMD" field.</summary>
-    public const int EBMOKPBKMMDFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.CCHCPNLPBDK> _repeated_eBMOKPBKMMD_codec
-        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.CCHCPNLPBDK.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CCHCPNLPBDK> eBMOKPBKMMD_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CCHCPNLPBDK>();
+    /// <summary>Field number for the "member_info" field.</summary>
+    public const int MemberInfoFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MemberInfo> _repeated_memberInfo_codec
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.MemberInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MemberInfo> memberInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MemberInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CCHCPNLPBDK> EBMOKPBKMMD {
-      get { return eBMOKPBKMMD_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MemberInfo> MemberInfo {
+      get { return memberInfo_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -138,8 +138,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Retcode != other.Retcode) return false;
-      if (!object.Equals(BANNAKDNBFA, other.BANNAKDNBFA)) return false;
-      if(!eBMOKPBKMMD_.Equals(other.eBMOKPBKMMD_)) return false;
+      if (!object.Equals(FightGameInfo, other.FightGameInfo)) return false;
+      if(!memberInfo_.Equals(other.memberInfo_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -148,8 +148,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (bANNAKDNBFA_ != null) hash ^= BANNAKDNBFA.GetHashCode();
-      hash ^= eBMOKPBKMMD_.GetHashCode();
+      if (fightGameInfo_ != null) hash ^= FightGameInfo.GetHashCode();
+      hash ^= memberInfo_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -172,10 +172,10 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
       }
-      eBMOKPBKMMD_.WriteTo(output, _repeated_eBMOKPBKMMD_codec);
-      if (bANNAKDNBFA_ != null) {
+      memberInfo_.WriteTo(output, _repeated_memberInfo_codec);
+      if (fightGameInfo_ != null) {
         output.WriteRawTag(122);
-        output.WriteMessage(BANNAKDNBFA);
+        output.WriteMessage(FightGameInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -191,10 +191,10 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
       }
-      eBMOKPBKMMD_.WriteTo(ref output, _repeated_eBMOKPBKMMD_codec);
-      if (bANNAKDNBFA_ != null) {
+      memberInfo_.WriteTo(ref output, _repeated_memberInfo_codec);
+      if (fightGameInfo_ != null) {
         output.WriteRawTag(122);
-        output.WriteMessage(BANNAKDNBFA);
+        output.WriteMessage(FightGameInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -209,10 +209,10 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (bANNAKDNBFA_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BANNAKDNBFA);
+      if (fightGameInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FightGameInfo);
       }
-      size += eBMOKPBKMMD_.CalculateSize(_repeated_eBMOKPBKMMD_codec);
+      size += memberInfo_.CalculateSize(_repeated_memberInfo_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -228,13 +228,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.bANNAKDNBFA_ != null) {
-        if (bANNAKDNBFA_ == null) {
-          BANNAKDNBFA = new global::EggLink.DanhengServer.Proto.EDDPABIGHBE();
+      if (other.fightGameInfo_ != null) {
+        if (fightGameInfo_ == null) {
+          FightGameInfo = new global::EggLink.DanhengServer.Proto.MultiplayerFightGameInfo();
         }
-        BANNAKDNBFA.MergeFrom(other.BANNAKDNBFA);
+        FightGameInfo.MergeFrom(other.FightGameInfo);
       }
-      eBMOKPBKMMD_.Add(other.eBMOKPBKMMD_);
+      memberInfo_.Add(other.memberInfo_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -255,14 +255,14 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 50: {
-            eBMOKPBKMMD_.AddEntriesFrom(input, _repeated_eBMOKPBKMMD_codec);
+            memberInfo_.AddEntriesFrom(input, _repeated_memberInfo_codec);
             break;
           }
           case 122: {
-            if (bANNAKDNBFA_ == null) {
-              BANNAKDNBFA = new global::EggLink.DanhengServer.Proto.EDDPABIGHBE();
+            if (fightGameInfo_ == null) {
+              FightGameInfo = new global::EggLink.DanhengServer.Proto.MultiplayerFightGameInfo();
             }
-            input.ReadMessage(BANNAKDNBFA);
+            input.ReadMessage(FightGameInfo);
             break;
           }
         }
@@ -285,14 +285,14 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 50: {
-            eBMOKPBKMMD_.AddEntriesFrom(ref input, _repeated_eBMOKPBKMMD_codec);
+            memberInfo_.AddEntriesFrom(ref input, _repeated_memberInfo_codec);
             break;
           }
           case 122: {
-            if (bANNAKDNBFA_ == null) {
-              BANNAKDNBFA = new global::EggLink.DanhengServer.Proto.EDDPABIGHBE();
+            if (fightGameInfo_ == null) {
+              FightGameInfo = new global::EggLink.DanhengServer.Proto.MultiplayerFightGameInfo();
             }
-            input.ReadMessage(BANNAKDNBFA);
+            input.ReadMessage(FightGameInfo);
             break;
           }
         }

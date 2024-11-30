@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static FightMatch3SwapScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpGaWdodE1hdGNoM1N3YXBTY1JzcC5wcm90bxoRS0FLUEhMT1BEQU4ucHJv",
-            "dG8idAoURmlnaHRNYXRjaDNTd2FwU2NSc3ASDwoHcmV0Y29kZRgOIAEoDRIh",
-            "CgtNTEdNREpLQVBEShgDIAEoCzIMLktBS1BITE9QREFOEhMKC0NHT0xLRUdK",
-            "UE9LGAwgASgIEhMKC1BQQklJREtOSURBGAYgASgNQh6qAhtFZ2dMaW5rLkRh",
-            "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChpGaWdodE1hdGNoM1N3YXBTY1JzcC5wcm90bxoYRmlnaHRNYXRjaDNDdXJJ",
+            "bmZvLnByb3RvInsKFEZpZ2h0TWF0Y2gzU3dhcFNjUnNwEg8KB3JldGNvZGUY",
+            "DiABKA0SKAoLTUxHTURKS0FQREoYAyABKAsyEy5GaWdodE1hdGNoM0N1cklu",
+            "Zm8SEwoLQ0dPTEtFR0pQT0sYDCABKAgSEwoLUFBCSUlES05JREEYBiABKA1C",
+            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KAKPHLOPDANReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FightMatch3CurInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightMatch3SwapScRsp), global::EggLink.DanhengServer.Proto.FightMatch3SwapScRsp.Parser, new[]{ "Retcode", "MLGMDJKAPDJ", "CGOLKEGJPOK", "PPBIIDKNIDA" }, null, null, null, null)
           }));
@@ -101,10 +101,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "MLGMDJKAPDJ" field.</summary>
     public const int MLGMDJKAPDJFieldNumber = 3;
-    private global::EggLink.DanhengServer.Proto.KAKPHLOPDAN mLGMDJKAPDJ_;
+    private global::EggLink.DanhengServer.Proto.FightMatch3CurInfo mLGMDJKAPDJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.KAKPHLOPDAN MLGMDJKAPDJ {
+    public global::EggLink.DanhengServer.Proto.FightMatch3CurInfo MLGMDJKAPDJ {
       get { return mLGMDJKAPDJ_; }
       set {
         mLGMDJKAPDJ_ = value;
@@ -264,7 +264,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.mLGMDJKAPDJ_ != null) {
         if (mLGMDJKAPDJ_ == null) {
-          MLGMDJKAPDJ = new global::EggLink.DanhengServer.Proto.KAKPHLOPDAN();
+          MLGMDJKAPDJ = new global::EggLink.DanhengServer.Proto.FightMatch3CurInfo();
         }
         MLGMDJKAPDJ.MergeFrom(other.MLGMDJKAPDJ);
       }
@@ -291,7 +291,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 26: {
             if (mLGMDJKAPDJ_ == null) {
-              MLGMDJKAPDJ = new global::EggLink.DanhengServer.Proto.KAKPHLOPDAN();
+              MLGMDJKAPDJ = new global::EggLink.DanhengServer.Proto.FightMatch3CurInfo();
             }
             input.ReadMessage(MLGMDJKAPDJ);
             break;
@@ -325,7 +325,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 26: {
             if (mLGMDJKAPDJ_ == null) {
-              MLGMDJKAPDJ = new global::EggLink.DanhengServer.Proto.KAKPHLOPDAN();
+              MLGMDJKAPDJ = new global::EggLink.DanhengServer.Proto.FightMatch3CurInfo();
             }
             input.ReadMessage(MLGMDJKAPDJ);
             break;

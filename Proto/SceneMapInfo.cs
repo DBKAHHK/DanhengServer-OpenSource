@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChJTY2VuZU1hcEluZm8ucHJvdG8aD01hemVHcm91cC5wcm90bxoRQktDRUtF",
-            "S0hKQ0EucHJvdG8aE01hemVQcm9wU3RhdGUucHJvdG8aD0NoZXN0SW5mby5w",
+            "S0hKQ0EucHJvdG8aD0NoZXN0SW5mby5wcm90bxoTTWF6ZVByb3BTdGF0ZS5w",
             "cm90byLSAwoMU2NlbmVNYXBJbmZvEh4KCmNoZXN0X2xpc3QYCyADKAsyCi5D",
             "aGVzdEluZm8SEgoKY29udGVudF9pZBgBIAEoDRIcChRsaWdodGVuX3NlY3Rp",
             "b25fbGlzdBgPIAMoDRImCg5tYXplX3Byb3BfbGlzdBgFIAMoCzIOLk1hemVQ",
@@ -39,7 +39,7 @@ namespace EggLink.DanhengServer.Proto {
             "IAEoCRINCgV2YWx1ZRgCIAEoBToCOAFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MazeGroupReflection.Descriptor, global::EggLink.DanhengServer.Proto.BKCEKEKHJCAReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazePropStateReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChestInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MazeGroupReflection.Descriptor, global::EggLink.DanhengServer.Proto.BKCEKEKHJCAReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChestInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazePropStateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneMapInfo), global::EggLink.DanhengServer.Proto.SceneMapInfo.Parser, new[]{ "ChestList", "ContentId", "LightenSectionList", "MazePropList", "DimensionId", "EntryId", "FloorSavedData", "GCELHDACAJK", "UnlockTeleportList", "EntryStoryLineId", "MazeGroupList", "Retcode", "CurMapEntryId" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));

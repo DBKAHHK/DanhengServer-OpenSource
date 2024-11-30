@@ -18,6 +18,7 @@ using EggLink.DanhengServer.GameServer.Game.Gacha;
 using EggLink.DanhengServer.GameServer.Game.Inventory;
 using EggLink.DanhengServer.GameServer.Game.Lineup;
 using EggLink.DanhengServer.GameServer.Game.Mail;
+using EggLink.DanhengServer.GameServer.Game.MatchThree;
 using EggLink.DanhengServer.GameServer.Game.Message;
 using EggLink.DanhengServer.GameServer.Game.Mission;
 using EggLink.DanhengServer.GameServer.Game.Quest;
@@ -55,6 +56,7 @@ public class PlayerInstance(PlayerData data)
     public QuestManager? QuestManager { get; private set; }
     public GachaManager? GachaManager { get; private set; }
     public MessageManager? MessageManager { get; private set; }
+    public MatchThreeManager? MatchThreeManager { get; private set; }
     public MailManager? MailManager { get; private set; }
 
     public RaidManager? RaidManager { get; private set; }
@@ -150,6 +152,7 @@ public class PlayerInstance(PlayerData data)
         RaidManager = new RaidManager(this);
         StoryLineManager = new StoryLineManager(this);
         QuestManager = new QuestManager(this);
+        MatchThreeManager = new MatchThreeManager(this);
 
         PlayerUnlockData = InitializeDatabase<PlayerUnlockData>();
         SceneData = InitializeDatabase<SceneData>();

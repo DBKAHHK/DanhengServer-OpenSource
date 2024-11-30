@@ -287,6 +287,13 @@ public static class GameData
 
     #endregion
 
+    #region MatchThree
+
+    public static Dictionary<int, MatchThreeLevelExcel> MatchThreeLevelData { get; private set; } = [];
+    public static Dictionary<int, MatchThreeBirdExcel> MatchThreeBirdData { get; private set; } = [];
+
+    #endregion
+
     #region Tutorial
 
     public static Dictionary<int, TutorialDataExcel> TutorialDataData { get; private set; } = [];

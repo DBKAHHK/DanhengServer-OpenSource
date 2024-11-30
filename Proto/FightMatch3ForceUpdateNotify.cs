@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static FightMatch3ForceUpdateNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiJGaWdodE1hdGNoM0ZvcmNlVXBkYXRlTm90aWZ5LnByb3RvGhFDRkhQTUJP",
-            "QUhMQS5wcm90byI6ChxGaWdodE1hdGNoM0ZvcmNlVXBkYXRlTm90aWZ5EhoK",
-            "BGRhdGEYDCABKAsyDC5DRkhQTUJPQUhMQUIeqgIbRWdnTGluay5EYW5oZW5n",
-            "U2VydmVyLlByb3RvYgZwcm90bzM="));
+            "CiJGaWdodE1hdGNoM0ZvcmNlVXBkYXRlTm90aWZ5LnByb3RvGhVGaWdodE1h",
+            "dGNoM0RhdGEucHJvdG8iPgocRmlnaHRNYXRjaDNGb3JjZVVwZGF0ZU5vdGlm",
+            "eRIeCgRkYXRhGAwgASgLMhAuRmlnaHRNYXRjaDNEYXRhQh6qAhtFZ2dMaW5r",
+            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CFHPMBOAHLAReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FightMatch3DataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightMatch3ForceUpdateNotify), global::EggLink.DanhengServer.Proto.FightMatch3ForceUpdateNotify.Parser, new[]{ "Data" }, null, null, null, null)
           }));
@@ -85,10 +85,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "data" field.</summary>
     public const int DataFieldNumber = 12;
-    private global::EggLink.DanhengServer.Proto.CFHPMBOAHLA data_;
+    private global::EggLink.DanhengServer.Proto.FightMatch3Data data_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.CFHPMBOAHLA Data {
+    public global::EggLink.DanhengServer.Proto.FightMatch3Data Data {
       get { return data_; }
       set {
         data_ = value;
@@ -182,7 +182,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.data_ != null) {
         if (data_ == null) {
-          Data = new global::EggLink.DanhengServer.Proto.CFHPMBOAHLA();
+          Data = new global::EggLink.DanhengServer.Proto.FightMatch3Data();
         }
         Data.MergeFrom(other.Data);
       }
@@ -203,7 +203,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 98: {
             if (data_ == null) {
-              Data = new global::EggLink.DanhengServer.Proto.CFHPMBOAHLA();
+              Data = new global::EggLink.DanhengServer.Proto.FightMatch3Data();
             }
             input.ReadMessage(Data);
             break;
@@ -225,7 +225,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 98: {
             if (data_ == null) {
-              Data = new global::EggLink.DanhengServer.Proto.CFHPMBOAHLA();
+              Data = new global::EggLink.DanhengServer.Proto.FightMatch3Data();
             }
             input.ReadMessage(Data);
             break;

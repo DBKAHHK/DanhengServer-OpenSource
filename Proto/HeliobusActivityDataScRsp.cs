@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static HeliobusActivityDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9IZWxpb2J1c0FjdGl2aXR5RGF0YVNjUnNwLnByb3RvGhFQQ01ER0RMQU5G",
-            "Ri5wcm90bxoTQ2hhbGxlbmdlTGlzdC5wcm90bxoRTkNJSExMQUVKSksucHJv",
-            "dG8aHUhlbGlvYnVzQ2hhbGxlbmdlTGluZXVwLnByb3RvIqUCChlIZWxpb2J1",
+            "Ch9IZWxpb2J1c0FjdGl2aXR5RGF0YVNjUnNwLnByb3RvGhNDaGFsbGVuZ2VM",
+            "aXN0LnByb3RvGh1IZWxpb2J1c0NoYWxsZW5nZUxpbmV1cC5wcm90bxoRUENN",
+            "REdETEFORkYucHJvdG8aEU5DSUhMTEFFSkpLLnByb3RvIqUCChlIZWxpb2J1",
             "c0FjdGl2aXR5RGF0YVNjUnNwEiAKCnNraWxsX2luZm8YDSABKAsyDC5OQ0lI",
             "TExBRUpKSxItCgtGTUFKRklDRk1GTxgHIAMoCzIYLkhlbGlvYnVzQ2hhbGxl",
             "bmdlTGluZXVwEhMKC0FJSkhISENPQkZGGAUgASgNEg0KBXBoYXNlGAggASgN",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "DQoFbGV2ZWwYDiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PCMDGDLANFFReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeListReflection.Descriptor, global::EggLink.DanhengServer.Proto.NCIHLLAEJJKReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeliobusChallengeLineupReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeListReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeliobusChallengeLineupReflection.Descriptor, global::EggLink.DanhengServer.Proto.PCMDGDLANFFReflection.Descriptor, global::EggLink.DanhengServer.Proto.NCIHLLAEJJKReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeliobusActivityDataScRsp), global::EggLink.DanhengServer.Proto.HeliobusActivityDataScRsp.Parser, new[]{ "SkillInfo", "FMAJFICFMFO", "AIJHHHCOBFF", "Phase", "Retcode", "CBHOAPIBCJM", "ChallengeList", "JGKJJKFBLCF", "IBNHFLHJFEO", "Level" }, null, null, null, null)
           }));

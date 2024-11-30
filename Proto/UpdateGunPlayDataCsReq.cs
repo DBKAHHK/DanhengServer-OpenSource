@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxVcGRhdGVHdW5QbGF5RGF0YUNzUmVxLnByb3RvGhFOTkVPT0tER0RJSy5w",
-            "cm90byJ3ChZVcGRhdGVHdW5QbGF5RGF0YUNzUmVxEhAKCGdyb3VwX2lkGAkg",
-            "ASgNEhMKC05JRVBBT0JCRkpGGAcgASgEEiEKC0dIQ0pLTEZMQ0VNGA0gASgL",
-            "MgwuTk5FT09LREdESUsSEwoLTE1HQkpKS0ZMS0sYCCABKA1CHqoCG0VnZ0xp",
-            "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "cm90byJwChZVcGRhdGVHdW5QbGF5RGF0YUNzUmVxEhAKCGdyb3VwX2lkGAkg",
+            "ASgNEgwKBHV1aWQYByABKAQSIQoLR0hDSktMRkxDRU0YDSABKAsyDC5OTkVP",
+            "T0tER0RJSxITCgtMTUdCSkpLRkxLSxgIIAEoDUIeqgIbRWdnTGluay5EYW5o",
+            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NNEOOKDGDIKReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdateGunPlayDataCsReq), global::EggLink.DanhengServer.Proto.UpdateGunPlayDataCsReq.Parser, new[]{ "GroupId", "NIEPAOBBFJF", "GHCJKLFLCEM", "LMGBJJKFLKK" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdateGunPlayDataCsReq), global::EggLink.DanhengServer.Proto.UpdateGunPlayDataCsReq.Parser, new[]{ "GroupId", "Uuid", "GHCJKLFLCEM", "LMGBJJKFLKK" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateGunPlayDataCsReq(UpdateGunPlayDataCsReq other) : this() {
       groupId_ = other.groupId_;
-      nIEPAOBBFJF_ = other.nIEPAOBBFJF_;
+      uuid_ = other.uuid_;
       gHCJKLFLCEM_ = other.gHCJKLFLCEM_ != null ? other.gHCJKLFLCEM_.Clone() : null;
       lMGBJJKFLKK_ = other.lMGBJJKFLKK_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -99,15 +99,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "NIEPAOBBFJF" field.</summary>
-    public const int NIEPAOBBFJFFieldNumber = 7;
-    private ulong nIEPAOBBFJF_;
+    /// <summary>Field number for the "uuid" field.</summary>
+    public const int UuidFieldNumber = 7;
+    private ulong uuid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong NIEPAOBBFJF {
-      get { return nIEPAOBBFJF_; }
+    public ulong Uuid {
+      get { return uuid_; }
       set {
-        nIEPAOBBFJF_ = value;
+        uuid_ = value;
       }
     }
 
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (GroupId != other.GroupId) return false;
-      if (NIEPAOBBFJF != other.NIEPAOBBFJF) return false;
+      if (Uuid != other.Uuid) return false;
       if (!object.Equals(GHCJKLFLCEM, other.GHCJKLFLCEM)) return false;
       if (LMGBJJKFLKK != other.LMGBJJKFLKK) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -162,7 +162,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (GroupId != 0) hash ^= GroupId.GetHashCode();
-      if (NIEPAOBBFJF != 0UL) hash ^= NIEPAOBBFJF.GetHashCode();
+      if (Uuid != 0UL) hash ^= Uuid.GetHashCode();
       if (gHCJKLFLCEM_ != null) hash ^= GHCJKLFLCEM.GetHashCode();
       if (LMGBJJKFLKK != 0) hash ^= LMGBJJKFLKK.GetHashCode();
       if (_unknownFields != null) {
@@ -183,9 +183,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (NIEPAOBBFJF != 0UL) {
+      if (Uuid != 0UL) {
         output.WriteRawTag(56);
-        output.WriteUInt64(NIEPAOBBFJF);
+        output.WriteUInt64(Uuid);
       }
       if (LMGBJJKFLKK != 0) {
         output.WriteRawTag(64);
@@ -209,9 +209,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (NIEPAOBBFJF != 0UL) {
+      if (Uuid != 0UL) {
         output.WriteRawTag(56);
-        output.WriteUInt64(NIEPAOBBFJF);
+        output.WriteUInt64(Uuid);
       }
       if (LMGBJJKFLKK != 0) {
         output.WriteRawTag(64);
@@ -238,8 +238,8 @@ namespace EggLink.DanhengServer.Proto {
       if (GroupId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
       }
-      if (NIEPAOBBFJF != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(NIEPAOBBFJF);
+      if (Uuid != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Uuid);
       }
       if (gHCJKLFLCEM_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GHCJKLFLCEM);
@@ -262,8 +262,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.GroupId != 0) {
         GroupId = other.GroupId;
       }
-      if (other.NIEPAOBBFJF != 0UL) {
-        NIEPAOBBFJF = other.NIEPAOBBFJF;
+      if (other.Uuid != 0UL) {
+        Uuid = other.Uuid;
       }
       if (other.gHCJKLFLCEM_ != null) {
         if (gHCJKLFLCEM_ == null) {
@@ -290,7 +290,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 56: {
-            NIEPAOBBFJF = input.ReadUInt64();
+            Uuid = input.ReadUInt64();
             break;
           }
           case 64: {
@@ -324,7 +324,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 56: {
-            NIEPAOBBFJF = input.ReadUInt64();
+            Uuid = input.ReadUInt64();
             break;
           }
           case 64: {

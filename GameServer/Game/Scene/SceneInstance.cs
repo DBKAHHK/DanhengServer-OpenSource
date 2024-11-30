@@ -121,6 +121,9 @@ public class SceneInstance
             else
                 sceneInfo.FloorSavedData[value.Name] = value.DefaultValue;
 
+        foreach (var value in floorData ?? [])
+                sceneInfo.FloorSavedData[value.Key] = value.Value;
+
         foreach (var value in FloorInfo?.CustomValues ?? [])
             if (floorData != null && floorData.TryGetValue(value.Name, out var v))
             {

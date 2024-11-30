@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static EvolveBuildFinishScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9Fdm9sdmVCdWlsZEZpbmlzaFNjTm90aWZ5LnByb3RvGhpFdm9sdmVCdWls",
-            "ZExldmVsSW5mby5wcm90bxoRSEJIRElHT1BETVAucHJvdG8i3QEKGUV2b2x2",
+            "Ch9Fdm9sdmVCdWlsZEZpbmlzaFNjTm90aWZ5LnByb3RvGhFIQkhESUdPUERN",
+            "UC5wcm90bxoaRXZvbHZlQnVpbGRMZXZlbEluZm8ucHJvdG8i3QEKGUV2b2x2",
             "ZUJ1aWxkRmluaXNoU2NOb3RpZnkSJgoQQmF0dGxlUmVzdWx0VHlwZRgPIAEo",
             "DjIMLkhCSERJR09QRE1QEgwKBENvaW4YBiABKA0SDQoFU2NvcmUYBSABKA0S",
             "DgoGSXNMb3NlGAggASgIEgwKBFdhdmUYCiABKA0SKAoJTGV2ZWxJbmZvGAMg",
@@ -33,7 +33,7 @@ namespace EggLink.DanhengServer.Proto {
             "dmVsSWQYASABKA0SFQoNQ3VyUGVyaW9kVHlwZRgEIAEoDUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EvolveBuildLevelInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HBHDIGOPDMPReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HBHDIGOPDMPReflection.Descriptor, global::EggLink.DanhengServer.Proto.EvolveBuildLevelInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EvolveBuildFinishScNotify), global::EggLink.DanhengServer.Proto.EvolveBuildFinishScNotify.Parser, new[]{ "BattleResultType", "Coin", "Score", "IsLose", "Wave", "LevelInfo", "Exp", "LevelId", "CurPeriodType" }, null, null, null, null)
           }));
