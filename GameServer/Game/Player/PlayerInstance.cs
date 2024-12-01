@@ -18,6 +18,7 @@ using EggLink.DanhengServer.GameServer.Game.Gacha;
 using EggLink.DanhengServer.GameServer.Game.Inventory;
 using EggLink.DanhengServer.GameServer.Game.Lineup;
 using EggLink.DanhengServer.GameServer.Game.Mail;
+using EggLink.DanhengServer.GameServer.Game.MatchThree;
 using EggLink.DanhengServer.GameServer.Game.Message;
 using EggLink.DanhengServer.GameServer.Game.Mission;
 using EggLink.DanhengServer.GameServer.Game.Quest;
@@ -46,32 +47,59 @@ public class PlayerInstance(PlayerData data)
 {
     #region Managers
 
-    public ActivityManager? ActivityManager { get; private set; }
+    #region Basic Managers
+
     public AvatarManager? AvatarManager { get; private set; }
     public LineupManager? LineupManager { get; private set; }
     public InventoryManager? InventoryManager { get; private set; }
     public BattleManager? BattleManager { get; private set; }
     public BattleInstance? BattleInstance { get; set; }
+
+    #endregion
+
+    #region Shopping Managers
+
+    public GachaManager? GachaManager { get; private set; }
+    public ShopService? ShopService { get; private set; }
+
+    #endregion
+
+
+    #region Quest & Mission Managers
+
     public MissionManager? MissionManager { get; private set; }
     public QuestManager? QuestManager { get; private set; }
-    public GachaManager? GachaManager { get; private set; }
-    public MessageManager? MessageManager { get; private set; }
-    public MailManager? MailManager { get; private set; }
-
     public RaidManager? RaidManager { get; private set; }
     public StoryLineManager? StoryLineManager { get; private set; }
+    public MessageManager? MessageManager { get; private set; }
+    public TaskManager? TaskManager { get; private set; }
 
-    public TrainPartyManager? TrainPartyManager { get; private set; }
+    #endregion
 
-    public FriendManager? FriendManager { get; private set; }
+    #region Rogue Managers
+
     public RogueManager? RogueManager { get; private set; }
     public ChessRogueManager? ChessRogueManager { get; private set; }
     public RogueTournManager? RogueTournManager { get; private set; }
     public RogueMagicManager? RogueMagicManager { get; internal set; }
-    public ShopService? ShopService { get; private set; }
+
+    #endregion
+
+    #region Activity Managers
+
+    public ActivityManager? ActivityManager { get; private set; }
+    public MatchThreeManager? MatchThreeManager { get; private set; }
+    public TrainPartyManager? TrainPartyManager { get; private set; }
+
+    #endregion
+
+    #region Others
+
+    public MailManager? MailManager { get; private set; }
+    public FriendManager? FriendManager { get; private set; }
     public ChallengeManager? ChallengeManager { get; private set; }
 
-    public TaskManager? TaskManager { get; private set; }
+    #endregion
 
     #endregion
 
@@ -154,6 +182,7 @@ public class PlayerInstance(PlayerData data)
         StoryLineManager = new StoryLineManager(this);
         QuestManager = new QuestManager(this);
         TrainPartyManager = new TrainPartyManager(this);
+        MatchThreeManager = new MatchThreeManager(this);
 
         PlayerUnlockData = InitializeDatabase<PlayerUnlockData>();
         SceneData = InitializeDatabase<SceneData>();

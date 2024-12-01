@@ -96,6 +96,15 @@ public class DanhengListener
 
                     await SendDisconnectPacket(con, 5);
                     break;
+                case -934149376:
+                    if (con != null)
+                    {
+                        Logger.Info($"Duplicate handshake from {con.RemoteEndPoint}");
+                        return;
+                    }
+
+                    await AcceptConnection(rcv, enet);
+                    break;
                 default:
                     Logger.Error($"Invalid handshake code received {code}");
                     return;

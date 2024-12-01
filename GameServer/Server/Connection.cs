@@ -1,6 +1,7 @@
 ﻿using System.Buffers;
 using System.Net;
 using System.Reflection;
+using EggLink.DanhengServer.GameServer.Game.MatchThree;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet;
 using EggLink.DanhengServer.Kcp;
@@ -17,6 +18,8 @@ public class Connection(KcpConversation conversation, IPEndPoint remote) : Danhe
     private static readonly Logger Logger = new("GameServer");
 
     public PlayerInstance? Player { get; set; }
+    public MatchThreeGameInstance? GameInstance { get; set; }
+    public int Uid { get; set; }
 
     public override async void Start()
     {
