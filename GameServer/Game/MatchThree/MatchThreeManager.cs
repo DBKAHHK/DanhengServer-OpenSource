@@ -6,7 +6,7 @@ namespace EggLink.DanhengServer.GameServer.Game.MatchThree;
 
 public class MatchThreeManager(PlayerInstance player) : BasePlayerManager(player)
 {
-    public MatchThreeRoomInstance? RoomInstance { get; set; }
+    //public MatchThreeRoomInstance? RoomInstance { get; set; }
 
     public MatchThreeData ToProto()
     {

@@ -140,9 +140,9 @@ public class RogueTournManager(PlayerInstance player) : BasePlayerManager(player
         //foreach (var hexAvatar in GameData.RogueTournHexAvatarBaseTypeData.Keys)
         //    proto.HandbookAvatarBaseList.Add((uint)hexAvatar);
 
-        foreach (var buff in GameData.RogueBuffData.Values)
-            if (buff is RogueTournBuffExcel { IsInHandbook: true })
-                proto.HandbookBuffList.Add((uint)buff.MazeBuffID);
+        //foreach (var buff in GameData.RogueBuffData.Values)
+        //    if (buff is RogueTournBuffExcel { IsInHandbook: true })
+        //        proto.HandbookBuffList.Add((uint)buff.MazeBuffID);
 
         //foreach (var formulaId in GameData.RogueTournFormulaData.Keys) proto.HandbookFormulaList.Add((uint)formulaId);
 

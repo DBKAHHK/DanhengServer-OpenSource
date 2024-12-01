@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CidUYWtlUm9ndWVFdmVudEhhbmRib29rUmV3YXJkU2NSc3AucHJvdG8aDkl0",
-            "ZW1MaXN0LnByb3RvImQKIVRha2VSb2d1ZUV2ZW50SGFuZGJvb2tSZXdhcmRT",
+            "ZW1MaXN0LnByb3RvInMKIVRha2VSb2d1ZUV2ZW50SGFuZGJvb2tSZXdhcmRT",
             "Y1JzcBIZCgZyZXdhcmQYBSABKAsyCS5JdGVtTGlzdBIPCgdyZXRjb2RlGAwg",
-            "ASgNEhMKC0lEUE1BQ1BJTk5LGAogAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
-            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ASgNEiIKGnJld2FyZF9oYW5kYm9va19ldmVudF9saXN0GAogAygNQh6qAhtF",
+            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeRogueEventHandbookRewardScRsp), global::EggLink.DanhengServer.Proto.TakeRogueEventHandbookRewardScRsp.Parser, new[]{ "Reward", "Retcode", "IDPMACPINNK" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeRogueEventHandbookRewardScRsp), global::EggLink.DanhengServer.Proto.TakeRogueEventHandbookRewardScRsp.Parser, new[]{ "Reward", "Retcode", "RewardHandbookEventList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,7 +76,7 @@ namespace EggLink.DanhengServer.Proto {
     public TakeRogueEventHandbookRewardScRsp(TakeRogueEventHandbookRewardScRsp other) : this() {
       reward_ = other.reward_ != null ? other.reward_.Clone() : null;
       retcode_ = other.retcode_;
-      iDPMACPINNK_ = other.iDPMACPINNK_.Clone();
+      rewardHandbookEventList_ = other.rewardHandbookEventList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -110,15 +110,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "IDPMACPINNK" field.</summary>
-    public const int IDPMACPINNKFieldNumber = 10;
-    private static readonly pb::FieldCodec<uint> _repeated_iDPMACPINNK_codec
+    /// <summary>Field number for the "reward_handbook_event_list" field.</summary>
+    public const int RewardHandbookEventListFieldNumber = 10;
+    private static readonly pb::FieldCodec<uint> _repeated_rewardHandbookEventList_codec
         = pb::FieldCodec.ForUInt32(82);
-    private readonly pbc::RepeatedField<uint> iDPMACPINNK_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> rewardHandbookEventList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> IDPMACPINNK {
-      get { return iDPMACPINNK_; }
+    public pbc::RepeatedField<uint> RewardHandbookEventList {
+      get { return rewardHandbookEventList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (!object.Equals(Reward, other.Reward)) return false;
       if (Retcode != other.Retcode) return false;
-      if(!iDPMACPINNK_.Equals(other.iDPMACPINNK_)) return false;
+      if(!rewardHandbookEventList_.Equals(other.rewardHandbookEventList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -148,7 +148,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (reward_ != null) hash ^= Reward.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      hash ^= iDPMACPINNK_.GetHashCode();
+      hash ^= rewardHandbookEventList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -171,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(42);
         output.WriteMessage(Reward);
       }
-      iDPMACPINNK_.WriteTo(output, _repeated_iDPMACPINNK_codec);
+      rewardHandbookEventList_.WriteTo(output, _repeated_rewardHandbookEventList_codec);
       if (Retcode != 0) {
         output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
@@ -190,7 +190,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(42);
         output.WriteMessage(Reward);
       }
-      iDPMACPINNK_.WriteTo(ref output, _repeated_iDPMACPINNK_codec);
+      rewardHandbookEventList_.WriteTo(ref output, _repeated_rewardHandbookEventList_codec);
       if (Retcode != 0) {
         output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
@@ -211,7 +211,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += iDPMACPINNK_.CalculateSize(_repeated_iDPMACPINNK_codec);
+      size += rewardHandbookEventList_.CalculateSize(_repeated_rewardHandbookEventList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -233,7 +233,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      iDPMACPINNK_.Add(other.iDPMACPINNK_);
+      rewardHandbookEventList_.Add(other.rewardHandbookEventList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -258,7 +258,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 82:
           case 80: {
-            iDPMACPINNK_.AddEntriesFrom(input, _repeated_iDPMACPINNK_codec);
+            rewardHandbookEventList_.AddEntriesFrom(input, _repeated_rewardHandbookEventList_codec);
             break;
           }
           case 96: {
@@ -289,7 +289,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 82:
           case 80: {
-            iDPMACPINNK_.AddEntriesFrom(ref input, _repeated_iDPMACPINNK_codec);
+            rewardHandbookEventList_.AddEntriesFrom(ref input, _repeated_rewardHandbookEventList_codec);
             break;
           }
           case 96: {

@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static SceneMapInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJTY2VuZU1hcEluZm8ucHJvdG8aEUtGTEJFQkJOSkVNLnByb3RvGg9NYXpl",
-            "R3JvdXAucHJvdG8aD0NoZXN0SW5mby5wcm90bxoTTWF6ZVByb3BTdGF0ZS5w",
+            "ChJTY2VuZU1hcEluZm8ucHJvdG8aD0NoZXN0SW5mby5wcm90bxoRS0ZMQkVC",
+            "Qk5KRU0ucHJvdG8aE01hemVQcm9wU3RhdGUucHJvdG8aD01hemVHcm91cC5w",
             "cm90byLSAwoMU2NlbmVNYXBJbmZvEh4KCmNoZXN0X2xpc3QYBiADKAsyCi5D",
             "aGVzdEluZm8SHAoUdW5sb2NrX3RlbGVwb3J0X2xpc3QYDiADKA0SJgoObWF6",
             "ZV9wcm9wX2xpc3QYAiADKAsyDi5NYXplUHJvcFN0YXRlEhQKDGRpbWVuc2lv",
@@ -39,7 +39,7 @@ namespace EggLink.DanhengServer.Proto {
             "IAEoCRINCgV2YWx1ZRgCIAEoBToCOAFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KFLBEBBNJEMReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazeGroupReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChestInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazePropStateReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChestInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KFLBEBBNJEMReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazePropStateReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazeGroupReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneMapInfo), global::EggLink.DanhengServer.Proto.SceneMapInfo.Parser, new[]{ "ChestList", "UnlockTeleportList", "MazePropList", "DimensionId", "MazeGroupList", "EntryStoryLineId", "ContentId", "CurMapEntryId", "LightenSectionList", "Retcode", "FloorSavedData", "EntryId", "IIFKPKFLODK" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
