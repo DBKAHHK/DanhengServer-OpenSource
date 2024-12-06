@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static EvolveBuildQueryReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZFdm9sdmVCdWlsZFF1ZXJ5LnByb3RvGhZTdGFnZU1lcmdlZFNjb3JlLnBy",
-            "b3RvGhVTdGFnZU1lcmdlZEluZm8ucHJvdG8aHkV2b2x2ZUJ1aWxkU2hvcFNr",
-            "aWxsSW5mby5wcm90byKvAgoQRXZvbHZlQnVpbGRRdWVyeRITCgtIRkVETExI",
+            "ChZFdm9sdmVCdWlsZFF1ZXJ5LnByb3RvGh5Fdm9sdmVCdWlsZFNob3BTa2ls",
+            "bEluZm8ucHJvdG8aFlN0YWdlTWVyZ2VkU2NvcmUucHJvdG8aFVN0YWdlTWVy",
+            "Z2VkSW5mby5wcm90byKvAgoQRXZvbHZlQnVpbGRRdWVyeRITCgtIRkVETExI",
             "QUVMSxgHIAEoCBILCgNleHAYAyABKA0SEwoLR0pLSEhGQ0JPQ0kYDyADKA0S",
             "LAoSc3RhZ2VfbWVyZ2VkX2luZm9zGAkgAygLMhAuU3RhZ2VNZXJnZWRJbmZv",
             "EjMKEHNob3Bfc2tpbGxfaW5mb3MYBiADKAsyGS5Fdm9sdmVCdWlsZFNob3BT",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "S0QYCiABKAgSEgoKaXRlbV92YWx1ZRgOIAEoDRITCgtLQUJPS0xCTUNMShgF",
             "IAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.StageMergedScoreReflection.Descriptor, global::EggLink.DanhengServer.Proto.StageMergedInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.EvolveBuildShopSkillInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EvolveBuildShopSkillInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.StageMergedScoreReflection.Descriptor, global::EggLink.DanhengServer.Proto.StageMergedInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EvolveBuildQuery), global::EggLink.DanhengServer.Proto.EvolveBuildQuery.Parser, new[]{ "HFEDLLHAELK", "Exp", "GJKHHFCBOCI", "StageMergedInfos", "ShopSkillInfos", "StageMergedScores", "HEMENIBJABH", "LFFJPMCCIKD", "ItemValue", "KABOKLBMCLJ" }, null, null, null, null)
           }));

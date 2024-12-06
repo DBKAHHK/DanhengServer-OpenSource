@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static TrainPartyActionInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpUcmFpblBhcnR5QWN0aW9uSW5mby5wcm90bxoRSUhLQUpGS0xEQkIucHJv",
-            "dG8aEUJPTUpESE1BQUpNLnByb3RvGhVUcmFpblBhcnR5RXZlbnQucHJvdG8a",
-            "EUJOT0NLS0xCSUFCLnByb3RvIuUBChRUcmFpblBhcnR5QWN0aW9uSW5mbxIW",
+            "ChpUcmFpblBhcnR5QWN0aW9uSW5mby5wcm90bxoRQk5PQ0tLTEJJQUIucHJv",
+            "dG8aFVRyYWluUGFydHlFdmVudC5wcm90bxoRSUhLQUpGS0xEQkIucHJvdG8a",
+            "EUJPTUpESE1BQUpNLnByb3RvIuUBChRUcmFpblBhcnR5QWN0aW9uSW5mbxIW",
             "Cg5xdWV1ZV9wb3NpdGlvbhgHIAEoDRIuChF0cmFpbl9wYXJ0eV9ldmVudBjv",
             "CSABKAsyEC5UcmFpblBhcnR5RXZlbnRIABIkCgtIQUtMTU1KRUhQRhjvDCAB",
             "KAsyDC5CT01KREhNQUFKTUgAEiQKC0pKRkdDREVITVBGGJoDIAEoCzIMLklI",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "QUJIAEITChF0cmFpbl9hY3Rpb25fY2FzZUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IHKAJFKLDBBReflection.Descriptor, global::EggLink.DanhengServer.Proto.BOMJDHMAAJMReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyEventReflection.Descriptor, global::EggLink.DanhengServer.Proto.BNOCKKLBIABReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BNOCKKLBIABReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyEventReflection.Descriptor, global::EggLink.DanhengServer.Proto.IHKAJFKLDBBReflection.Descriptor, global::EggLink.DanhengServer.Proto.BOMJDHMAAJMReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyActionInfo), global::EggLink.DanhengServer.Proto.TrainPartyActionInfo.Parser, new[]{ "QueuePosition", "TrainPartyEvent", "HAKLMMJEHPF", "JJFGCDEHMPF", "EPPNHJCNFCI" }, new[]{ "TrainActionCase" }, null, null, null)
           }));

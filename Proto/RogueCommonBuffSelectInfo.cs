@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static RogueCommonBuffSelectInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9Sb2d1ZUNvbW1vbkJ1ZmZTZWxlY3RJbmZvLnByb3RvGiVSb2d1ZUNvbW1v",
-            "bkJ1ZmZTZWxlY3RTb3VyY2VUeXBlLnByb3RvGhJJdGVtQ29zdERhdGEucHJv",
-            "dG8aFVJvZ3VlQ29tbW9uQnVmZi5wcm90byLCAwoZUm9ndWVDb21tb25CdWZm",
+            "Ch9Sb2d1ZUNvbW1vbkJ1ZmZTZWxlY3RJbmZvLnByb3RvGhVSb2d1ZUNvbW1v",
+            "bkJ1ZmYucHJvdG8aJVJvZ3VlQ29tbW9uQnVmZlNlbGVjdFNvdXJjZVR5cGUu",
+            "cHJvdG8aEkl0ZW1Db3N0RGF0YS5wcm90byLCAwoZUm9ndWVDb21tb25CdWZm",
             "U2VsZWN0SW5mbxIcChRmaXJzdF9idWZmX3R5cGVfbGlzdBgEIAMoDRIXCg9y",
             "b2xsX2J1ZmZfY291bnQYDyABKA0SGwoTcm9sbF9idWZmX21heF9jb3VudBgI",
             "IAEoDRIQCghjYW5fcm9sbBgDIAEoCBI1Cgtzb3VyY2VfdHlwZRgFIAEoDjIg",
@@ -39,7 +39,7 @@ namespace EggLink.DanhengServer.Proto {
             "c3RfZGF0YRgBIAEoCzINLkl0ZW1Db3N0RGF0YUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonBuffReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonBuffReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectInfo), global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectInfo.Parser, new[]{ "FirstBuffTypeList", "RollBuffCount", "RollBuffMaxCount", "CanRoll", "SourceType", "SourceHintId", "RollBuffFreeCount", "HandbookUnlockBuffIdList", "SourceCurCount", "SourceTotalCount", "SelectBuffList", "CertainSelectBuffId", "RollBuffCostData" }, null, null, null, null)
           }));

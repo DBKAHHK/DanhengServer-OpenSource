@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static ChessRogueCellReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRDaGVzc1JvZ3VlQ2VsbC5wcm90bxofQ2hlc3NSb2d1ZUNlbGxTcGVjaWFs",
-            "VHlwZS5wcm90bxofQ2hlc3NSb2d1ZUJvYXJkQ2VsbFN0YXR1cy5wcm90bxoV",
-            "Q2VsbEFkdmFuY2VJbmZvLnByb3RvIscCCg5DaGVzc1JvZ3VlQ2VsbBITCgtP",
+            "ChRDaGVzc1JvZ3VlQ2VsbC5wcm90bxofQ2hlc3NSb2d1ZUJvYXJkQ2VsbFN0",
+            "YXR1cy5wcm90bxoVQ2VsbEFkdmFuY2VJbmZvLnByb3RvGh9DaGVzc1JvZ3Vl",
+            "Q2VsbFNwZWNpYWxUeXBlLnByb3RvIscCCg5DaGVzc1JvZ3VlQ2VsbBITCgtP",
             "RU1GTEZFQkpMRxgFIAEoDRITCgtpc191bmxvY2tlZBgHIAEoCBIPCgdyb29t",
             "X2lkGAEgASgNEhMKC0tHTENDQkdPRUJPGAYgASgNEhEKCWlzX3VubG9jaxgI",
             "IAEoCBIKCgJpZBgCIAEoDRIkCgpzdGFnZV9pbmZvGAkgASgLMhAuQ2VsbEFk",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "cGUYDCABKA4yGi5DaGVzc1JvZ3VlQ2VsbFNwZWNpYWxUeXBlQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.CellAdvanceInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.CellAdvanceInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueCell), global::EggLink.DanhengServer.Proto.ChessRogueCell.Parser, new[]{ "OEMFLFEBJLG", "IsUnlocked", "RoomId", "KGLCCBGOEBO", "IsUnlock", "Id", "StageInfo", "JIPFGECHFBM", "AIBMBKDAPFK", "CellStatus", "DBEJIGJNGKH", "SpecialType" }, null, null, null, null)
           }));

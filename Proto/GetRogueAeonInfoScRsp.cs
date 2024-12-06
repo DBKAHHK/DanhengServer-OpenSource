@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtHZXRSb2d1ZUFlb25JbmZvU2NSc3AucHJvdG8aEUVLTERCSk1OT0hPLnBy",
-            "b3RvIkkKFUdldFJvZ3VlQWVvbkluZm9TY1JzcBIPCgdyZXRjb2RlGAcgASgN",
-            "Eh8KCWFlb25fbGlzdBgCIAMoCzIMLkVLTERCSk1OT0hPQh6qAhtFZ2dMaW5r",
-            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "b3RvIksKFUdldFJvZ3VlQWVvbkluZm9TY1JzcBIPCgdyZXRjb2RlGAcgASgN",
+            "EiEKC0VEUEpLSEJER0RCGAIgAygLMgwuRUtMREJKTU5PSE9CHqoCG0VnZ0xp",
+            "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EKLDBJMNOHOReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRogueAeonInfoScRsp), global::EggLink.DanhengServer.Proto.GetRogueAeonInfoScRsp.Parser, new[]{ "Retcode", "AeonList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRogueAeonInfoScRsp), global::EggLink.DanhengServer.Proto.GetRogueAeonInfoScRsp.Parser, new[]{ "Retcode", "EDPJKHBDGDB" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetRogueAeonInfoScRsp(GetRogueAeonInfoScRsp other) : this() {
       retcode_ = other.retcode_;
-      aeonList_ = other.aeonList_.Clone();
+      eDPJKHBDGDB_ = other.eDPJKHBDGDB_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "aeon_list" field.</summary>
-    public const int AeonListFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EKLDBJMNOHO> _repeated_aeonList_codec
+    /// <summary>Field number for the "EDPJKHBDGDB" field.</summary>
+    public const int EDPJKHBDGDBFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EKLDBJMNOHO> _repeated_eDPJKHBDGDB_codec
         = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.EKLDBJMNOHO.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EKLDBJMNOHO> aeonList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EKLDBJMNOHO>();
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EKLDBJMNOHO> eDPJKHBDGDB_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EKLDBJMNOHO>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EKLDBJMNOHO> AeonList {
-      get { return aeonList_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EKLDBJMNOHO> EDPJKHBDGDB {
+      get { return eDPJKHBDGDB_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Retcode != other.Retcode) return false;
-      if(!aeonList_.Equals(other.aeonList_)) return false;
+      if(!eDPJKHBDGDB_.Equals(other.eDPJKHBDGDB_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      hash ^= aeonList_.GetHashCode();
+      hash ^= eDPJKHBDGDB_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      aeonList_.WriteTo(output, _repeated_aeonList_codec);
+      eDPJKHBDGDB_.WriteTo(output, _repeated_eDPJKHBDGDB_codec);
       if (Retcode != 0) {
         output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
@@ -166,7 +166,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      aeonList_.WriteTo(ref output, _repeated_aeonList_codec);
+      eDPJKHBDGDB_.WriteTo(ref output, _repeated_eDPJKHBDGDB_codec);
       if (Retcode != 0) {
         output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
@@ -184,7 +184,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += aeonList_.CalculateSize(_repeated_aeonList_codec);
+      size += eDPJKHBDGDB_.CalculateSize(_repeated_eDPJKHBDGDB_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -200,7 +200,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      aeonList_.Add(other.aeonList_);
+      eDPJKHBDGDB_.Add(other.eDPJKHBDGDB_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -217,7 +217,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 18: {
-            aeonList_.AddEntriesFrom(input, _repeated_aeonList_codec);
+            eDPJKHBDGDB_.AddEntriesFrom(input, _repeated_eDPJKHBDGDB_codec);
             break;
           }
           case 56: {
@@ -240,7 +240,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 18: {
-            aeonList_.AddEntriesFrom(ref input, _repeated_aeonList_codec);
+            eDPJKHBDGDB_.AddEntriesFrom(ref input, _repeated_eDPJKHBDGDB_codec);
             break;
           }
           case 56: {

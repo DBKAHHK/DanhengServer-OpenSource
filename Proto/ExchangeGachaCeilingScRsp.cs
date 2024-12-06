@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static ExchangeGachaCeilingScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9FeGNoYW5nZUdhY2hhQ2VpbGluZ1NjUnNwLnByb3RvGg5JdGVtTGlzdC5w",
-            "cm90bxoSR2FjaGFDZWlsaW5nLnByb3RvIqABChlFeGNoYW5nZUdhY2hhQ2Vp",
+            "Ch9FeGNoYW5nZUdhY2hhQ2VpbGluZ1NjUnNwLnByb3RvGhJHYWNoYUNlaWxp",
+            "bmcucHJvdG8aDkl0ZW1MaXN0LnByb3RvIqABChlFeGNoYW5nZUdhY2hhQ2Vp",
             "bGluZ1NjUnNwEg8KB3JldGNvZGUYCiABKA0SJQoSdHJhbnNmZXJfaXRlbV9s",
             "aXN0GAcgASgLMgkuSXRlbUxpc3QSJAoNZ2FjaGFfY2VpbGluZxgBIAEoCzIN",
             "LkdhY2hhQ2VpbGluZxISCgpnYWNoYV90eXBlGA0gASgNEhEKCWF2YXRhcl9p",
             "ZBgCIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.GachaCeilingReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GachaCeilingReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ExchangeGachaCeilingScRsp), global::EggLink.DanhengServer.Proto.ExchangeGachaCeilingScRsp.Parser, new[]{ "Retcode", "TransferItemList", "GachaCeiling", "GachaType", "AvatarId" }, null, null, null, null)
           }));

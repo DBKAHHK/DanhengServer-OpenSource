@@ -10,7 +10,7 @@ public class PacketSummonPetScRsp : BasePacket
         var proto = new SummonPetScRsp
         {
             CurPetId = (uint)curPetId,
-            SelectPetId = newPetId
+            NewPetId = newPetId
         };
 
         SetData(proto);

@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static TrainPartyGameInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhUcmFpblBhcnR5R2FtZUluZm8ucHJvdG8aHFRyYWluUGFydHlHYW1lR3Jp",
-            "ZEluZm8ucHJvdG8aHFRyYWluUGFydHlHYW1lSXRlbUluZm8ucHJvdG8aIVRy",
-            "YWluUGFydHlHYW1lUGFzc2VuZ2VySW5mby5wcm90bxoaVHJhaW5QYXJ0eUFj",
+            "ChhUcmFpblBhcnR5R2FtZUluZm8ucHJvdG8aHFRyYWluUGFydHlHYW1lSXRl",
+            "bUluZm8ucHJvdG8aIVRyYWluUGFydHlHYW1lUGFzc2VuZ2VySW5mby5wcm90",
+            "bxocVHJhaW5QYXJ0eUdhbWVHcmlkSW5mby5wcm90bxoaVHJhaW5QYXJ0eUFj",
             "dGlvbkluZm8ucHJvdG8igwIKElRyYWluUGFydHlHYW1lSW5mbxI2ChV0cmFp",
             "bl9wYXJ0eV9pdGVtX2luZm8YDyABKAsyFy5UcmFpblBhcnR5R2FtZUl0ZW1J",
             "bmZvEjoKFHRyYWluX3Bhc3Nlbmdlcl9pbmZvGAogASgLMhwuVHJhaW5QYXJ0",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "b25JbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyGameGridInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyGameItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyGamePassengerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyActionInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyGameItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyGamePassengerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyGameGridInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyActionInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyGameInfo), global::EggLink.DanhengServer.Proto.TrainPartyGameInfo.Parser, new[]{ "TrainPartyItemInfo", "TrainPassengerInfo", "TeamId", "TrainPartyGridInfo", "TrainActionInfo" }, null, null, null, null)
           }));

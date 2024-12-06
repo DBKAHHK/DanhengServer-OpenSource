@@ -18,8 +18,8 @@ public class Connection(KcpConversation conversation, IPEndPoint remote) : Danhe
     private static readonly Logger Logger = new("GameServer");
 
     public PlayerInstance? Player { get; set; }
-    //public MatchThreeGameInstance? GameInstance { get; set; }
-    //public int Uid { get; set; }
+    public MatchThreeGameInstance? GameInstance { get; set; }
+    public int Uid { get; set; }
 
     public override async void Start()
     {

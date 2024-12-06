@@ -24,18 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static MatchThreeLevelEndCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1NYXRjaFRocmVlTGV2ZWxFbmRDc1JlcS5wcm90byL8AQoXTWF0Y2hUaHJl",
+            "Ch1NYXRjaFRocmVlTGV2ZWxFbmRDc1JlcS5wcm90byKAAgoXTWF0Y2hUaHJl",
             "ZUxldmVsRW5kQ3NSZXESPgoLR0RJSEJKSkpMS0gYBiADKAsyKS5NYXRjaFRo",
             "cmVlTGV2ZWxFbmRDc1JlcS5HRElIQkpKSkxLSEVudHJ5EgwKBHV1aWQYDCAB",
             "KAkSFgoOYmlyZF90b3Bfc2NvcmUYBSABKA0SEAoIbGV2ZWxfaWQYCSABKA0S",
-            "EwoLT05KT0lPRElQS0kYAiADKA0SDwoHYmlyZF9pZBgEIAEoDRIPCgdtb2Rl",
-            "X2lkGAEgASgNGjIKEEdESUhCSkpKTEtIRW50cnkSCwoDa2V5GAEgASgNEg0K",
-            "BXZhbHVlGAIgASgNOgI4AUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
-            "b3RvYgZwcm90bzM="));
+            "EwoLT05KT0lPRElQS0kYAiADKA0SDwoHYmlyZF9pZBgEIAEoDRITCgtsZXZl",
+            "bF9zY29yZRgBIAEoDRoyChBHRElIQkpKSkxLSEVudHJ5EgsKA2tleRgBIAEo",
+            "DRINCgV2YWx1ZRgCIAEoDToCOAFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MatchThreeLevelEndCsReq), global::EggLink.DanhengServer.Proto.MatchThreeLevelEndCsReq.Parser, new[]{ "GDIHBJJJLKH", "Uuid", "BirdTopScore", "LevelId", "ONJOIODIPKI", "BirdId", "ModeId" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MatchThreeLevelEndCsReq), global::EggLink.DanhengServer.Proto.MatchThreeLevelEndCsReq.Parser, new[]{ "GDIHBJJJLKH", "Uuid", "BirdTopScore", "LevelId", "ONJOIODIPKI", "BirdId", "LevelScore" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
       levelId_ = other.levelId_;
       oNJOIODIPKI_ = other.oNJOIODIPKI_.Clone();
       birdId_ = other.birdId_;
-      modeId_ = other.modeId_;
+      levelScore_ = other.levelScore_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -163,15 +163,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "mode_id" field.</summary>
-    public const int ModeIdFieldNumber = 1;
-    private uint modeId_;
+    /// <summary>Field number for the "level_score" field.</summary>
+    public const int LevelScoreFieldNumber = 1;
+    private uint levelScore_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ModeId {
-      get { return modeId_; }
+    public uint LevelScore {
+      get { return levelScore_; }
       set {
-        modeId_ = value;
+        levelScore_ = value;
       }
     }
 
@@ -196,7 +196,7 @@ namespace EggLink.DanhengServer.Proto {
       if (LevelId != other.LevelId) return false;
       if(!oNJOIODIPKI_.Equals(other.oNJOIODIPKI_)) return false;
       if (BirdId != other.BirdId) return false;
-      if (ModeId != other.ModeId) return false;
+      if (LevelScore != other.LevelScore) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -210,7 +210,7 @@ namespace EggLink.DanhengServer.Proto {
       if (LevelId != 0) hash ^= LevelId.GetHashCode();
       hash ^= oNJOIODIPKI_.GetHashCode();
       if (BirdId != 0) hash ^= BirdId.GetHashCode();
-      if (ModeId != 0) hash ^= ModeId.GetHashCode();
+      if (LevelScore != 0) hash ^= LevelScore.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -229,9 +229,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ModeId != 0) {
+      if (LevelScore != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(ModeId);
+        output.WriteUInt32(LevelScore);
       }
       oNJOIODIPKI_.WriteTo(output, _repeated_oNJOIODIPKI_codec);
       if (BirdId != 0) {
@@ -261,9 +261,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ModeId != 0) {
+      if (LevelScore != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(ModeId);
+        output.WriteUInt32(LevelScore);
       }
       oNJOIODIPKI_.WriteTo(ref output, _repeated_oNJOIODIPKI_codec);
       if (BirdId != 0) {
@@ -307,8 +307,8 @@ namespace EggLink.DanhengServer.Proto {
       if (BirdId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BirdId);
       }
-      if (ModeId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ModeId);
+      if (LevelScore != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LevelScore);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -336,8 +336,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.BirdId != 0) {
         BirdId = other.BirdId;
       }
-      if (other.ModeId != 0) {
-        ModeId = other.ModeId;
+      if (other.LevelScore != 0) {
+        LevelScore = other.LevelScore;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -355,7 +355,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            ModeId = input.ReadUInt32();
+            LevelScore = input.ReadUInt32();
             break;
           }
           case 18:
@@ -399,7 +399,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            ModeId = input.ReadUInt32();
+            LevelScore = input.ReadUInt32();
             break;
           }
           case 18:

@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static MatchThreeLevelEndScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1NYXRjaFRocmVlTGV2ZWxFbmRTY1JzcC5wcm90byJNChdNYXRjaFRocmVl",
-            "TGV2ZWxFbmRTY1JzcBIPCgdtb2RlX2lkGAEgASgNEg8KB3JldGNvZGUYAiAB",
-            "KA0SEAoIbGV2ZWxfaWQYDyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
-            "ci5Qcm90b2IGcHJvdG8z"));
+            "Ch1NYXRjaFRocmVlTGV2ZWxFbmRTY1JzcC5wcm90byJRChdNYXRjaFRocmVl",
+            "TGV2ZWxFbmRTY1JzcBITCgtsZXZlbF9zY29yZRgBIAEoDRIPCgdyZXRjb2Rl",
+            "GAIgASgNEhAKCGxldmVsX2lkGA8gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MatchThreeLevelEndScRsp), global::EggLink.DanhengServer.Proto.MatchThreeLevelEndScRsp.Parser, new[]{ "ModeId", "Retcode", "LevelId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MatchThreeLevelEndScRsp), global::EggLink.DanhengServer.Proto.MatchThreeLevelEndScRsp.Parser, new[]{ "LevelScore", "Retcode", "LevelId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MatchThreeLevelEndScRsp(MatchThreeLevelEndScRsp other) : this() {
-      modeId_ = other.modeId_;
+      levelScore_ = other.levelScore_;
       retcode_ = other.retcode_;
       levelId_ = other.levelId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -85,15 +85,15 @@ namespace EggLink.DanhengServer.Proto {
       return new MatchThreeLevelEndScRsp(this);
     }
 
-    /// <summary>Field number for the "mode_id" field.</summary>
-    public const int ModeIdFieldNumber = 1;
-    private uint modeId_;
+    /// <summary>Field number for the "level_score" field.</summary>
+    public const int LevelScoreFieldNumber = 1;
+    private uint levelScore_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ModeId {
-      get { return modeId_; }
+    public uint LevelScore {
+      get { return levelScore_; }
       set {
-        modeId_ = value;
+        levelScore_ = value;
       }
     }
 
@@ -136,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ModeId != other.ModeId) return false;
+      if (LevelScore != other.LevelScore) return false;
       if (Retcode != other.Retcode) return false;
       if (LevelId != other.LevelId) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -146,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ModeId != 0) hash ^= ModeId.GetHashCode();
+      if (LevelScore != 0) hash ^= LevelScore.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (LevelId != 0) hash ^= LevelId.GetHashCode();
       if (_unknownFields != null) {
@@ -167,9 +167,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ModeId != 0) {
+      if (LevelScore != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(ModeId);
+        output.WriteUInt32(LevelScore);
       }
       if (Retcode != 0) {
         output.WriteRawTag(16);
@@ -189,9 +189,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ModeId != 0) {
+      if (LevelScore != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(ModeId);
+        output.WriteUInt32(LevelScore);
       }
       if (Retcode != 0) {
         output.WriteRawTag(16);
@@ -211,8 +211,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ModeId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ModeId);
+      if (LevelScore != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LevelScore);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
@@ -232,8 +232,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ModeId != 0) {
-        ModeId = other.ModeId;
+      if (other.LevelScore != 0) {
+        LevelScore = other.LevelScore;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
@@ -257,7 +257,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            ModeId = input.ReadUInt32();
+            LevelScore = input.ReadUInt32();
             break;
           }
           case 16: {
@@ -284,7 +284,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            ModeId = input.ReadUInt32();
+            LevelScore = input.ReadUInt32();
             break;
           }
           case 16: {

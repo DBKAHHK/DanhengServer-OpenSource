@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static GetBagScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFHZXRCYWdTY1JzcC5wcm90bxoOTWF0ZXJpYWwucHJvdG8aDlBpbGVJdGVt",
-            "LnByb3RvGg9FcXVpcG1lbnQucHJvdG8aD01hdGVyaWFsMC5wcm90bxoVV2Fp",
-            "dERlbFJlc291cmNlLnByb3RvGhRUdXJuRm9vZFN3aXRjaC5wcm90bxoLUmVs",
-            "aWMucHJvdG8ivgMKC0dldEJhZ1NjUnNwEjAKFndhaXRfZGVsX3Jlc291cmNl",
+            "ChFHZXRCYWdTY1JzcC5wcm90bxoUVHVybkZvb2RTd2l0Y2gucHJvdG8aDlBp",
+            "bGVJdGVtLnByb3RvGg9FcXVpcG1lbnQucHJvdG8aC1JlbGljLnByb3RvGhVX",
+            "YWl0RGVsUmVzb3VyY2UucHJvdG8aDk1hdGVyaWFsLnByb3RvGg9NYXRlcmlh",
+            "bDAucHJvdG8ivgMKC0dldEJhZ1NjUnNwEjAKFndhaXRfZGVsX3Jlc291cmNl",
             "X2xpc3QYByADKAsyEC5XYWl0RGVsUmVzb3VyY2USIgoOZXF1aXBtZW50X2xp",
             "c3QYDCADKAsyCi5FcXVpcG1lbnQSHwoLTExNS0NERURJRlAYASADKAsyCi5N",
             "YXRlcmlhbDASEwoLREpLSEpGSUtNRFAYBCADKA0SDwoHcmV0Y29kZRgDIAEo",
@@ -40,7 +40,7 @@ namespace EggLink.DanhengServer.Proto {
             "Bi5SZWxpY0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MaterialReflection.Descriptor, global::EggLink.DanhengServer.Proto.PileItemReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipmentReflection.Descriptor, global::EggLink.DanhengServer.Proto.Material0Reflection.Descriptor, global::EggLink.DanhengServer.Proto.WaitDelResourceReflection.Descriptor, global::EggLink.DanhengServer.Proto.TurnFoodSwitchReflection.Descriptor, global::EggLink.DanhengServer.Proto.RelicReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TurnFoodSwitchReflection.Descriptor, global::EggLink.DanhengServer.Proto.PileItemReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipmentReflection.Descriptor, global::EggLink.DanhengServer.Proto.RelicReflection.Descriptor, global::EggLink.DanhengServer.Proto.WaitDelResourceReflection.Descriptor, global::EggLink.DanhengServer.Proto.MaterialReflection.Descriptor, global::EggLink.DanhengServer.Proto.Material0Reflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetBagScRsp), global::EggLink.DanhengServer.Proto.GetBagScRsp.Parser, new[]{ "WaitDelResourceList", "EquipmentList", "LLMKCDEDIFP", "DJKHJFIKMDP", "Retcode", "DNMEFONJHKK", "KCFLKFDONPB", "PileItemList", "ONOMLHNJCFN", "MaterialList", "UnlockFormulaList", "PHPMPKOONJD", "TurnFoodSwitch", "RelicList" }, null, null, null, null)
           }));
