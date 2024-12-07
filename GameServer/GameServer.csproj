@@ -20,6 +20,8 @@
     <ProjectReference Include="..\Common\Common.csproj" />
     <ProjectReference Include="..\DanhengKcpSharp\DanhengKcpSharp.csproj" />
     <ProjectReference Include="..\Proto\Proto.csproj" />
+    <PackageReference Include="Google.Protobuf" Version="3.29.1" />
+    <PackageReference Include="Google.Protobuf.Tools" Version="3.29.1" />
     <PackageReference Include="McMaster.NETCore.Plugins" Version="1.4.0" />
     <PackageReference Include="McMaster.NETCore.Plugins.Mvc" Version="1.4.0" />
     <PackageReference Include="System.IO.Pipelines" Version="9.0.0" />
