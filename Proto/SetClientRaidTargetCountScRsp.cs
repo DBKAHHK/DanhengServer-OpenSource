@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNTZXRDbGllbnRSYWlkVGFyZ2V0Q291bnRTY1JzcC5wcm90byJXCh1TZXRD",
-            "bGllbnRSYWlkVGFyZ2V0Q291bnRTY1JzcBIPCgdyZXRjb2RlGAwgASgNEhMK",
-            "C0RLRVBKRFBFSktHGA4gASgNEhAKCHByb2dyZXNzGAogASgNQh6qAhtFZ2dM",
+            "bGllbnRSYWlkVGFyZ2V0Q291bnRTY1JzcBIPCgdyZXRjb2RlGA8gASgNEhMK",
+            "C0FORk5DSENMTENNGAIgASgNEhAKCHByb2dyZXNzGAkgASgNQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetClientRaidTargetCountScRsp), global::EggLink.DanhengServer.Proto.SetClientRaidTargetCountScRsp.Parser, new[]{ "Retcode", "DKEPJDPEJKG", "Progress" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetClientRaidTargetCountScRsp), global::EggLink.DanhengServer.Proto.SetClientRaidTargetCountScRsp.Parser, new[]{ "Retcode", "ANFNCHCLLCM", "Progress" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SetClientRaidTargetCountScRsp(SetClientRaidTargetCountScRsp other) : this() {
       retcode_ = other.retcode_;
-      dKEPJDPEJKG_ = other.dKEPJDPEJKG_;
+      aNFNCHCLLCM_ = other.aNFNCHCLLCM_;
       progress_ = other.progress_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 12;
+    public const int RetcodeFieldNumber = 15;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,20 +97,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "DKEPJDPEJKG" field.</summary>
-    public const int DKEPJDPEJKGFieldNumber = 14;
-    private uint dKEPJDPEJKG_;
+    /// <summary>Field number for the "ANFNCHCLLCM" field.</summary>
+    public const int ANFNCHCLLCMFieldNumber = 2;
+    private uint aNFNCHCLLCM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DKEPJDPEJKG {
-      get { return dKEPJDPEJKG_; }
+    public uint ANFNCHCLLCM {
+      get { return aNFNCHCLLCM_; }
       set {
-        dKEPJDPEJKG_ = value;
+        aNFNCHCLLCM_ = value;
       }
     }
 
     /// <summary>Field number for the "progress" field.</summary>
-    public const int ProgressFieldNumber = 10;
+    public const int ProgressFieldNumber = 9;
     private uint progress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Retcode != other.Retcode) return false;
-      if (DKEPJDPEJKG != other.DKEPJDPEJKG) return false;
+      if (ANFNCHCLLCM != other.ANFNCHCLLCM) return false;
       if (Progress != other.Progress) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -147,7 +147,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (DKEPJDPEJKG != 0) hash ^= DKEPJDPEJKG.GetHashCode();
+      if (ANFNCHCLLCM != 0) hash ^= ANFNCHCLLCM.GetHashCode();
       if (Progress != 0) hash ^= Progress.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (ANFNCHCLLCM != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(ANFNCHCLLCM);
+      }
       if (Progress != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(72);
         output.WriteUInt32(Progress);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(120);
         output.WriteUInt32(Retcode);
-      }
-      if (DKEPJDPEJKG != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(DKEPJDPEJKG);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ANFNCHCLLCM != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(ANFNCHCLLCM);
+      }
       if (Progress != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(72);
         output.WriteUInt32(Progress);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(120);
         output.WriteUInt32(Retcode);
-      }
-      if (DKEPJDPEJKG != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(DKEPJDPEJKG);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -214,8 +214,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (DKEPJDPEJKG != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DKEPJDPEJKG);
+      if (ANFNCHCLLCM != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ANFNCHCLLCM);
       }
       if (Progress != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Progress);
@@ -235,8 +235,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.DKEPJDPEJKG != 0) {
-        DKEPJDPEJKG = other.DKEPJDPEJKG;
+      if (other.ANFNCHCLLCM != 0) {
+        ANFNCHCLLCM = other.ANFNCHCLLCM;
       }
       if (other.Progress != 0) {
         Progress = other.Progress;
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 80: {
+          case 16: {
+            ANFNCHCLLCM = input.ReadUInt32();
+            break;
+          }
+          case 72: {
             Progress = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 120: {
             Retcode = input.ReadUInt32();
-            break;
-          }
-          case 112: {
-            DKEPJDPEJKG = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 80: {
+          case 16: {
+            ANFNCHCLLCM = input.ReadUInt32();
+            break;
+          }
+          case 72: {
             Progress = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 120: {
             Retcode = input.ReadUInt32();
-            break;
-          }
-          case 112: {
-            DKEPJDPEJKG = input.ReadUInt32();
             break;
           }
         }

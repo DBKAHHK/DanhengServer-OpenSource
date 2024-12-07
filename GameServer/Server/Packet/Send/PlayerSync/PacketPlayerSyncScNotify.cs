@@ -104,10 +104,13 @@ public class PacketPlayerSyncScNotify : BasePacket
     public PacketPlayerSyncScNotify(MessageGroupData? groupData, MessageSectionData? sectionData) : base(
         CmdIds.PlayerSyncScNotify)
     {
-        var proto = new PlayerSyncScNotify();
+        var proto = new PlayerSyncScNotify
+        {
+            SyncStatus = new SyncStatus()
+        };
 
         if (groupData != null)
-            proto.MessageGroupStatus.Add(new GroupStatus
+            proto.SyncStatus.MessageGroupStatus.Add(new GroupStatus
             {
                 GroupId = (uint)groupData.GroupId,
                 GroupStatus_ = groupData.Status,
@@ -115,7 +118,7 @@ public class PacketPlayerSyncScNotify : BasePacket
             });
 
         if (sectionData != null)
-            proto.SectionStatus.Add(new SectionStatus
+            proto.SyncStatus.SectionStatus.Add(new SectionStatus
             {
                 SectionId = (uint)sectionData.SectionId,
                 SectionStatus_ = sectionData.Status

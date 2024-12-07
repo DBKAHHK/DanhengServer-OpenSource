@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlPcGVuUm9ndWVDaGVzdENzUmVxLnByb3RvIj4KE09wZW5Sb2d1ZUNoZXN0",
-            "Q3NSZXESEgoKbW9uc3Rlcl9pZBgEIAEoDRITCgtIQkxJS1BJQ0VLRRgOIAEo",
+            "Q3NSZXESEgoKbW9uc3Rlcl9pZBgBIAEoDRITCgtPTkhIUExFS0hLSRgLIAEo",
             "CEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OpenRogueChestCsReq), global::EggLink.DanhengServer.Proto.OpenRogueChestCsReq.Parser, new[]{ "MonsterId", "HBLIKPICEKE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OpenRogueChestCsReq), global::EggLink.DanhengServer.Proto.OpenRogueChestCsReq.Parser, new[]{ "MonsterId", "ONHHPLEKHKI" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OpenRogueChestCsReq(OpenRogueChestCsReq other) : this() {
       monsterId_ = other.monsterId_;
-      hBLIKPICEKE_ = other.hBLIKPICEKE_;
+      oNHHPLEKHKI_ = other.oNHHPLEKHKI_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "monster_id" field.</summary>
-    public const int MonsterIdFieldNumber = 4;
+    public const int MonsterIdFieldNumber = 1;
     private uint monsterId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,15 +95,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "HBLIKPICEKE" field.</summary>
-    public const int HBLIKPICEKEFieldNumber = 14;
-    private bool hBLIKPICEKE_;
+    /// <summary>Field number for the "ONHHPLEKHKI" field.</summary>
+    public const int ONHHPLEKHKIFieldNumber = 11;
+    private bool oNHHPLEKHKI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HBLIKPICEKE {
-      get { return hBLIKPICEKE_; }
+    public bool ONHHPLEKHKI {
+      get { return oNHHPLEKHKI_; }
       set {
-        hBLIKPICEKE_ = value;
+        oNHHPLEKHKI_ = value;
       }
     }
 
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (MonsterId != other.MonsterId) return false;
-      if (HBLIKPICEKE != other.HBLIKPICEKE) return false;
+      if (ONHHPLEKHKI != other.ONHHPLEKHKI) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (MonsterId != 0) hash ^= MonsterId.GetHashCode();
-      if (HBLIKPICEKE != false) hash ^= HBLIKPICEKE.GetHashCode();
+      if (ONHHPLEKHKI != false) hash ^= ONHHPLEKHKI.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,12 +152,12 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (MonsterId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(8);
         output.WriteUInt32(MonsterId);
       }
-      if (HBLIKPICEKE != false) {
-        output.WriteRawTag(112);
-        output.WriteBool(HBLIKPICEKE);
+      if (ONHHPLEKHKI != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(ONHHPLEKHKI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,12 +170,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MonsterId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(8);
         output.WriteUInt32(MonsterId);
       }
-      if (HBLIKPICEKE != false) {
-        output.WriteRawTag(112);
-        output.WriteBool(HBLIKPICEKE);
+      if (ONHHPLEKHKI != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(ONHHPLEKHKI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -190,7 +190,7 @@ namespace EggLink.DanhengServer.Proto {
       if (MonsterId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MonsterId);
       }
-      if (HBLIKPICEKE != false) {
+      if (ONHHPLEKHKI != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -208,8 +208,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.MonsterId != 0) {
         MonsterId = other.MonsterId;
       }
-      if (other.HBLIKPICEKE != false) {
-        HBLIKPICEKE = other.HBLIKPICEKE;
+      if (other.ONHHPLEKHKI != false) {
+        ONHHPLEKHKI = other.ONHHPLEKHKI;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 8: {
             MonsterId = input.ReadUInt32();
             break;
           }
-          case 112: {
-            HBLIKPICEKE = input.ReadBool();
+          case 88: {
+            ONHHPLEKHKI = input.ReadBool();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 8: {
             MonsterId = input.ReadUInt32();
             break;
           }
-          case 112: {
-            HBLIKPICEKE = input.ReadBool();
+          case 88: {
+            ONHHPLEKHKI = input.ReadBool();
             break;
           }
         }

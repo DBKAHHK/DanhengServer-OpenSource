@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CihNdXNpY1JoeXRobVNhdmVTb25nQ29uZmlnRGF0YUNzUmVxLnByb3RvGhZN",
             "dXNpY1JoeXRobUdyb3VwLnByb3RvIkwKIk11c2ljUmh5dGhtU2F2ZVNvbmdD",
-            "b25maWdEYXRhQ3NSZXESJgoLT0dCS0lGUEJCSUQYCyABKAsyES5NdXNpY1Jo",
+            "b25maWdEYXRhQ3NSZXESJgoLQ0hJR0lISU1DUEgYDiABKAsyES5NdXNpY1Jo",
             "eXRobUdyb3VwQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MusicRhythmGroupReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmSaveSongConfigDataCsReq), global::EggLink.DanhengServer.Proto.MusicRhythmSaveSongConfigDataCsReq.Parser, new[]{ "OGBKIFPBBID" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmSaveSongConfigDataCsReq), global::EggLink.DanhengServer.Proto.MusicRhythmSaveSongConfigDataCsReq.Parser, new[]{ "CHIGIHIMCPH" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MusicRhythmSaveSongConfigDataCsReq(MusicRhythmSaveSongConfigDataCsReq other) : this() {
-      oGBKIFPBBID_ = other.oGBKIFPBBID_ != null ? other.oGBKIFPBBID_.Clone() : null;
+      cHIGIHIMCPH_ = other.cHIGIHIMCPH_ != null ? other.cHIGIHIMCPH_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,15 +84,15 @@ namespace EggLink.DanhengServer.Proto {
       return new MusicRhythmSaveSongConfigDataCsReq(this);
     }
 
-    /// <summary>Field number for the "OGBKIFPBBID" field.</summary>
-    public const int OGBKIFPBBIDFieldNumber = 11;
-    private global::EggLink.DanhengServer.Proto.MusicRhythmGroup oGBKIFPBBID_;
+    /// <summary>Field number for the "CHIGIHIMCPH" field.</summary>
+    public const int CHIGIHIMCPHFieldNumber = 14;
+    private global::EggLink.DanhengServer.Proto.MusicRhythmGroup cHIGIHIMCPH_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MusicRhythmGroup OGBKIFPBBID {
-      get { return oGBKIFPBBID_; }
+    public global::EggLink.DanhengServer.Proto.MusicRhythmGroup CHIGIHIMCPH {
+      get { return cHIGIHIMCPH_; }
       set {
-        oGBKIFPBBID_ = value;
+        cHIGIHIMCPH_ = value;
       }
     }
 
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(OGBKIFPBBID, other.OGBKIFPBBID)) return false;
+      if (!object.Equals(CHIGIHIMCPH, other.CHIGIHIMCPH)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -119,7 +119,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (oGBKIFPBBID_ != null) hash ^= OGBKIFPBBID.GetHashCode();
+      if (cHIGIHIMCPH_ != null) hash ^= CHIGIHIMCPH.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -138,9 +138,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (oGBKIFPBBID_ != null) {
-        output.WriteRawTag(90);
-        output.WriteMessage(OGBKIFPBBID);
+      if (cHIGIHIMCPH_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(CHIGIHIMCPH);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -152,9 +152,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (oGBKIFPBBID_ != null) {
-        output.WriteRawTag(90);
-        output.WriteMessage(OGBKIFPBBID);
+      if (cHIGIHIMCPH_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(CHIGIHIMCPH);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -166,8 +166,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (oGBKIFPBBID_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OGBKIFPBBID);
+      if (cHIGIHIMCPH_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CHIGIHIMCPH);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -181,11 +181,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.oGBKIFPBBID_ != null) {
-        if (oGBKIFPBBID_ == null) {
-          OGBKIFPBBID = new global::EggLink.DanhengServer.Proto.MusicRhythmGroup();
+      if (other.cHIGIHIMCPH_ != null) {
+        if (cHIGIHIMCPH_ == null) {
+          CHIGIHIMCPH = new global::EggLink.DanhengServer.Proto.MusicRhythmGroup();
         }
-        OGBKIFPBBID.MergeFrom(other.OGBKIFPBBID);
+        CHIGIHIMCPH.MergeFrom(other.CHIGIHIMCPH);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -202,11 +202,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 90: {
-            if (oGBKIFPBBID_ == null) {
-              OGBKIFPBBID = new global::EggLink.DanhengServer.Proto.MusicRhythmGroup();
+          case 114: {
+            if (cHIGIHIMCPH_ == null) {
+              CHIGIHIMCPH = new global::EggLink.DanhengServer.Proto.MusicRhythmGroup();
             }
-            input.ReadMessage(OGBKIFPBBID);
+            input.ReadMessage(CHIGIHIMCPH);
             break;
           }
         }
@@ -224,11 +224,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 90: {
-            if (oGBKIFPBBID_ == null) {
-              OGBKIFPBBID = new global::EggLink.DanhengServer.Proto.MusicRhythmGroup();
+          case 114: {
+            if (cHIGIHIMCPH_ == null) {
+              CHIGIHIMCPH = new global::EggLink.DanhengServer.Proto.MusicRhythmGroup();
             }
-            input.ReadMessage(OGBKIFPBBID);
+            input.ReadMessage(CHIGIHIMCPH);
             break;
           }
         }

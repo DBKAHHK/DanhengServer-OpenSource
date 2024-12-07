@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJUcmFpblBhcnR5R2FtZVBsYXlTdGFydENzUmVxLnByb3RvIkcKHFRyYWlu",
-            "UGFydHlHYW1lUGxheVN0YXJ0Q3NSZXESFgoOcGFzc2VuZ2VyX2xpc3QYCiAD",
-            "KA0SDwoHdGVhbV9pZBgMIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "UGFydHlHYW1lUGxheVN0YXJ0Q3NSZXESFgoOcGFzc2VuZ2VyX2xpc3QYBSAD",
+            "KA0SDwoHdGVhbV9pZBgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "passenger_list" field.</summary>
-    public const int PassengerListFieldNumber = 10;
+    public const int PassengerListFieldNumber = 5;
     private static readonly pb::FieldCodec<uint> _repeated_passengerList_codec
-        = pb::FieldCodec.ForUInt32(82);
+        = pb::FieldCodec.ForUInt32(42);
     private readonly pbc::RepeatedField<uint> passengerList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "team_id" field.</summary>
-    public const int TeamIdFieldNumber = 12;
+    public const int TeamIdFieldNumber = 9;
     private uint teamId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       passengerList_.WriteTo(output, _repeated_passengerList_codec);
       if (TeamId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(72);
         output.WriteUInt32(TeamId);
       }
       if (_unknownFields != null) {
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       passengerList_.WriteTo(ref output, _repeated_passengerList_codec);
       if (TeamId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(72);
         output.WriteUInt32(TeamId);
       }
       if (_unknownFields != null) {
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 82:
-          case 80: {
+          case 42:
+          case 40: {
             passengerList_.AddEntriesFrom(input, _repeated_passengerList_codec);
             break;
           }
-          case 96: {
+          case 72: {
             TeamId = input.ReadUInt32();
             break;
           }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 82:
-          case 80: {
+          case 42:
+          case 40: {
             passengerList_.AddEntriesFrom(ref input, _repeated_passengerList_codec);
             break;
           }
-          case 96: {
+          case 72: {
             TeamId = input.ReadUInt32();
             break;
           }

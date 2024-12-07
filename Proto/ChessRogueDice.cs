@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRDaGVzc1JvZ3VlRGljZS5wcm90bxofQ2hlc3NSb2d1ZURpY2VTdXJmYWNl",
-            "SW5mby5wcm90byJ/Cg5DaGVzc1JvZ3VlRGljZRITCgtOS0JFRVBLREpHSRgK",
-            "IAEoDRIRCglicmFuY2hfaWQYBSABKA0SMAoMc3VyZmFjZV9saXN0GAkgAygL",
-            "MhouQ2hlc3NSb2d1ZURpY2VTdXJmYWNlSW5mbxITCgtMSUtQT0lLS05LTBgG",
+            "SW5mby5wcm90byJ/Cg5DaGVzc1JvZ3VlRGljZRITCgtMT01FQ0tQRU5DRRgL",
+            "IAEoDRITCgtOTUlQRUVESE1NRBgIIAEoDRIwCgxzdXJmYWNlX2xpc3QYDCAD",
+            "KAsyGi5DaGVzc1JvZ3VlRGljZVN1cmZhY2VJbmZvEhEKCWJyYW5jaF9pZBgD",
             "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueDice), global::EggLink.DanhengServer.Proto.ChessRogueDice.Parser, new[]{ "NKBEEPKDJGI", "BranchId", "SurfaceList", "LIKPOIKKNKL" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueDice), global::EggLink.DanhengServer.Proto.ChessRogueDice.Parser, new[]{ "LOMECKPENCE", "NMIPEEDHMMD", "SurfaceList", "BranchId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueDice(ChessRogueDice other) : this() {
-      nKBEEPKDJGI_ = other.nKBEEPKDJGI_;
-      branchId_ = other.branchId_;
+      lOMECKPENCE_ = other.lOMECKPENCE_;
+      nMIPEEDHMMD_ = other.nMIPEEDHMMD_;
       surfaceList_ = other.surfaceList_.Clone();
-      lIKPOIKKNKL_ = other.lIKPOIKKNKL_;
+      branchId_ = other.branchId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,34 +87,34 @@ namespace EggLink.DanhengServer.Proto {
       return new ChessRogueDice(this);
     }
 
-    /// <summary>Field number for the "NKBEEPKDJGI" field.</summary>
-    public const int NKBEEPKDJGIFieldNumber = 10;
-    private uint nKBEEPKDJGI_;
+    /// <summary>Field number for the "LOMECKPENCE" field.</summary>
+    public const int LOMECKPENCEFieldNumber = 11;
+    private uint lOMECKPENCE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NKBEEPKDJGI {
-      get { return nKBEEPKDJGI_; }
+    public uint LOMECKPENCE {
+      get { return lOMECKPENCE_; }
       set {
-        nKBEEPKDJGI_ = value;
+        lOMECKPENCE_ = value;
       }
     }
 
-    /// <summary>Field number for the "branch_id" field.</summary>
-    public const int BranchIdFieldNumber = 5;
-    private uint branchId_;
+    /// <summary>Field number for the "NMIPEEDHMMD" field.</summary>
+    public const int NMIPEEDHMMDFieldNumber = 8;
+    private uint nMIPEEDHMMD_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BranchId {
-      get { return branchId_; }
+    public uint NMIPEEDHMMD {
+      get { return nMIPEEDHMMD_; }
       set {
-        branchId_ = value;
+        nMIPEEDHMMD_ = value;
       }
     }
 
     /// <summary>Field number for the "surface_list" field.</summary>
-    public const int SurfaceListFieldNumber = 9;
+    public const int SurfaceListFieldNumber = 12;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo> _repeated_surfaceList_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo.Parser);
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo> surfaceList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,15 +122,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return surfaceList_; }
     }
 
-    /// <summary>Field number for the "LIKPOIKKNKL" field.</summary>
-    public const int LIKPOIKKNKLFieldNumber = 6;
-    private uint lIKPOIKKNKL_;
+    /// <summary>Field number for the "branch_id" field.</summary>
+    public const int BranchIdFieldNumber = 3;
+    private uint branchId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LIKPOIKKNKL {
-      get { return lIKPOIKKNKL_; }
+    public uint BranchId {
+      get { return branchId_; }
       set {
-        lIKPOIKKNKL_ = value;
+        branchId_ = value;
       }
     }
 
@@ -149,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (NKBEEPKDJGI != other.NKBEEPKDJGI) return false;
-      if (BranchId != other.BranchId) return false;
+      if (LOMECKPENCE != other.LOMECKPENCE) return false;
+      if (NMIPEEDHMMD != other.NMIPEEDHMMD) return false;
       if(!surfaceList_.Equals(other.surfaceList_)) return false;
-      if (LIKPOIKKNKL != other.LIKPOIKKNKL) return false;
+      if (BranchId != other.BranchId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (NKBEEPKDJGI != 0) hash ^= NKBEEPKDJGI.GetHashCode();
-      if (BranchId != 0) hash ^= BranchId.GetHashCode();
+      if (LOMECKPENCE != 0) hash ^= LOMECKPENCE.GetHashCode();
+      if (NMIPEEDHMMD != 0) hash ^= NMIPEEDHMMD.GetHashCode();
       hash ^= surfaceList_.GetHashCode();
-      if (LIKPOIKKNKL != 0) hash ^= LIKPOIKKNKL.GetHashCode();
+      if (BranchId != 0) hash ^= BranchId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,18 +183,18 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (BranchId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(BranchId);
       }
-      if (LIKPOIKKNKL != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(LIKPOIKKNKL);
+      if (NMIPEEDHMMD != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(NMIPEEDHMMD);
+      }
+      if (LOMECKPENCE != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(LOMECKPENCE);
       }
       surfaceList_.WriteTo(output, _repeated_surfaceList_codec);
-      if (NKBEEPKDJGI != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(NKBEEPKDJGI);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -206,18 +206,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (BranchId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(BranchId);
       }
-      if (LIKPOIKKNKL != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(LIKPOIKKNKL);
+      if (NMIPEEDHMMD != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(NMIPEEDHMMD);
+      }
+      if (LOMECKPENCE != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(LOMECKPENCE);
       }
       surfaceList_.WriteTo(ref output, _repeated_surfaceList_codec);
-      if (NKBEEPKDJGI != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(NKBEEPKDJGI);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -228,15 +228,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (NKBEEPKDJGI != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NKBEEPKDJGI);
+      if (LOMECKPENCE != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LOMECKPENCE);
       }
-      if (BranchId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BranchId);
+      if (NMIPEEDHMMD != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NMIPEEDHMMD);
       }
       size += surfaceList_.CalculateSize(_repeated_surfaceList_codec);
-      if (LIKPOIKKNKL != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LIKPOIKKNKL);
+      if (BranchId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BranchId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -250,15 +250,15 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.NKBEEPKDJGI != 0) {
-        NKBEEPKDJGI = other.NKBEEPKDJGI;
+      if (other.LOMECKPENCE != 0) {
+        LOMECKPENCE = other.LOMECKPENCE;
       }
-      if (other.BranchId != 0) {
-        BranchId = other.BranchId;
+      if (other.NMIPEEDHMMD != 0) {
+        NMIPEEDHMMD = other.NMIPEEDHMMD;
       }
       surfaceList_.Add(other.surfaceList_);
-      if (other.LIKPOIKKNKL != 0) {
-        LIKPOIKKNKL = other.LIKPOIKKNKL;
+      if (other.BranchId != 0) {
+        BranchId = other.BranchId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -275,20 +275,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 24: {
             BranchId = input.ReadUInt32();
             break;
           }
-          case 48: {
-            LIKPOIKKNKL = input.ReadUInt32();
+          case 64: {
+            NMIPEEDHMMD = input.ReadUInt32();
             break;
           }
-          case 74: {
+          case 88: {
+            LOMECKPENCE = input.ReadUInt32();
+            break;
+          }
+          case 98: {
             surfaceList_.AddEntriesFrom(input, _repeated_surfaceList_codec);
-            break;
-          }
-          case 80: {
-            NKBEEPKDJGI = input.ReadUInt32();
             break;
           }
         }
@@ -306,20 +306,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 24: {
             BranchId = input.ReadUInt32();
             break;
           }
-          case 48: {
-            LIKPOIKKNKL = input.ReadUInt32();
+          case 64: {
+            NMIPEEDHMMD = input.ReadUInt32();
             break;
           }
-          case 74: {
+          case 88: {
+            LOMECKPENCE = input.ReadUInt32();
+            break;
+          }
+          case 98: {
             surfaceList_.AddEntriesFrom(ref input, _repeated_surfaceList_codec);
-            break;
-          }
-          case 80: {
-            NKBEEPKDJGI = input.ReadUInt32();
             break;
           }
         }

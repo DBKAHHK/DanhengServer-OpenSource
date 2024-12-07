@@ -25,9 +25,9 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChVDZWxsTW9uc3RlckluZm8ucHJvdG8aEUNlbGxNb25zdGVyLnByb3RvImMK",
-            "D0NlbGxNb25zdGVySW5mbxInChFjZWxsX21vbnN0ZXJfbGlzdBgLIAMoCzIM",
-            "LkNlbGxNb25zdGVyEg8KB2NvbmZpcm0YCCABKAgSFgoOc2VsZWN0X2Jvc3Nf",
-            "aWQYCiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "D0NlbGxNb25zdGVySW5mbxInChFjZWxsX21vbnN0ZXJfbGlzdBgMIAMoCzIM",
+            "LkNlbGxNb25zdGVyEg8KB2NvbmZpcm0YDSABKAgSFgoOc2VsZWN0X2Jvc3Nf",
+            "aWQYCCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CellMonsterReflection.Descriptor, },
@@ -87,9 +87,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cell_monster_list" field.</summary>
-    public const int CellMonsterListFieldNumber = 11;
+    public const int CellMonsterListFieldNumber = 12;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.CellMonster> _repeated_cellMonsterList_codec
-        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.CellMonster.Parser);
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.CellMonster.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CellMonster> cellMonsterList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CellMonster>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "confirm" field.</summary>
-    public const int ConfirmFieldNumber = 8;
+    public const int ConfirmFieldNumber = 13;
     private bool confirm_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_boss_id" field.</summary>
-    public const int SelectBossIdFieldNumber = 10;
+    public const int SelectBossIdFieldNumber = 8;
     private uint selectBossId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,15 +167,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Confirm != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(Confirm);
-      }
       if (SelectBossId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(64);
         output.WriteUInt32(SelectBossId);
       }
       cellMonsterList_.WriteTo(output, _repeated_cellMonsterList_codec);
+      if (Confirm != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(Confirm);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -186,15 +186,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Confirm != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(Confirm);
-      }
       if (SelectBossId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(64);
         output.WriteUInt32(SelectBossId);
       }
       cellMonsterList_.WriteTo(ref output, _repeated_cellMonsterList_codec);
+      if (Confirm != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(Confirm);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -247,15 +247,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 64: {
-            Confirm = input.ReadBool();
-            break;
-          }
-          case 80: {
             SelectBossId = input.ReadUInt32();
             break;
           }
-          case 90: {
+          case 98: {
             cellMonsterList_.AddEntriesFrom(input, _repeated_cellMonsterList_codec);
+            break;
+          }
+          case 104: {
+            Confirm = input.ReadBool();
             break;
           }
         }
@@ -274,15 +274,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 64: {
-            Confirm = input.ReadBool();
-            break;
-          }
-          case 80: {
             SelectBossId = input.ReadUInt32();
             break;
           }
-          case 90: {
+          case 98: {
             cellMonsterList_.AddEntriesFrom(ref input, _repeated_cellMonsterList_codec);
+            break;
+          }
+          case 104: {
+            Confirm = input.ReadBool();
             break;
           }
         }

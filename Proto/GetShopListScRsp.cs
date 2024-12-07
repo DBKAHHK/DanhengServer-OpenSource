@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZHZXRTaG9wTGlzdFNjUnNwLnByb3RvGgpTaG9wLnByb3RvIlAKEEdldFNo",
-            "b3BMaXN0U2NSc3ASGAoJc2hvcF9saXN0GAwgAygLMgUuU2hvcBIRCglzaG9w",
-            "X3R5cGUYBCABKA0SDwoHcmV0Y29kZRgHIAEoDUIeqgIbRWdnTGluay5EYW5o",
+            "b3BMaXN0U2NSc3ASEQoJc2hvcF90eXBlGAcgASgNEhgKCXNob3BfbGlzdBgK",
+            "IAMoCzIFLlNob3ASDwoHcmV0Y29kZRgFIAEoDUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ShopReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetShopListScRsp), global::EggLink.DanhengServer.Proto.GetShopListScRsp.Parser, new[]{ "ShopList", "ShopType", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetShopListScRsp), global::EggLink.DanhengServer.Proto.GetShopListScRsp.Parser, new[]{ "ShopType", "ShopList", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetShopListScRsp(GetShopListScRsp other) : this() {
-      shopList_ = other.shopList_.Clone();
       shopType_ = other.shopType_;
+      shopList_ = other.shopList_.Clone();
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -85,19 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new GetShopListScRsp(this);
     }
 
-    /// <summary>Field number for the "shop_list" field.</summary>
-    public const int ShopListFieldNumber = 12;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.Shop> _repeated_shopList_codec
-        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.Shop.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Shop> shopList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Shop>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Shop> ShopList {
-      get { return shopList_; }
-    }
-
     /// <summary>Field number for the "shop_type" field.</summary>
-    public const int ShopTypeFieldNumber = 4;
+    public const int ShopTypeFieldNumber = 7;
     private uint shopType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -108,8 +97,19 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "shop_list" field.</summary>
+    public const int ShopListFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.Shop> _repeated_shopList_codec
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.Shop.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Shop> shopList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Shop>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Shop> ShopList {
+      get { return shopList_; }
+    }
+
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 7;
+    public const int RetcodeFieldNumber = 5;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -135,8 +135,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!shopList_.Equals(other.shopList_)) return false;
       if (ShopType != other.ShopType) return false;
+      if(!shopList_.Equals(other.shopList_)) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -145,8 +145,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= shopList_.GetHashCode();
       if (ShopType != 0) hash ^= ShopType.GetHashCode();
+      hash ^= shopList_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -166,13 +166,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ShopType != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(ShopType);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
+      }
+      if (ShopType != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(ShopType);
       }
       shopList_.WriteTo(output, _repeated_shopList_codec);
       if (_unknownFields != null) {
@@ -185,13 +185,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ShopType != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(ShopType);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
+      }
+      if (ShopType != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(ShopType);
       }
       shopList_.WriteTo(ref output, _repeated_shopList_codec);
       if (_unknownFields != null) {
@@ -204,10 +204,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += shopList_.CalculateSize(_repeated_shopList_codec);
       if (ShopType != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ShopType);
       }
+      size += shopList_.CalculateSize(_repeated_shopList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
@@ -223,10 +223,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      shopList_.Add(other.shopList_);
       if (other.ShopType != 0) {
         ShopType = other.ShopType;
       }
+      shopList_.Add(other.shopList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
@@ -245,15 +245,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            ShopType = input.ReadUInt32();
-            break;
-          }
-          case 56: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 98: {
+          case 56: {
+            ShopType = input.ReadUInt32();
+            break;
+          }
+          case 82: {
             shopList_.AddEntriesFrom(input, _repeated_shopList_codec);
             break;
           }
@@ -272,15 +272,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            ShopType = input.ReadUInt32();
-            break;
-          }
-          case 56: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 98: {
+          case 56: {
+            ShopType = input.ReadUInt32();
+            break;
+          }
+          case 82: {
             shopList_.AddEntriesFrom(ref input, _repeated_shopList_codec);
             break;
           }

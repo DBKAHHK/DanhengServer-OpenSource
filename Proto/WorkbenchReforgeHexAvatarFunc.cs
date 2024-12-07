@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNXb3JrYmVuY2hSZWZvcmdlSGV4QXZhdGFyRnVuYy5wcm90bxoSSXRlbUNv",
             "c3REYXRhLnByb3RvInoKHVdvcmtiZW5jaFJlZm9yZ2VIZXhBdmF0YXJGdW5j",
-            "Eh0KFWludF9yZWZvcmdlX251bV92YWx1ZRgCIAEoBRIgCgljb3N0X2RhdGEY",
-            "ASABKAsyDS5JdGVtQ29zdERhdGESGAoQZnJlZV9yZWZvcmdlX251bRgKIAEo",
-            "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Eh0KFWludF9yZWZvcmdlX251bV92YWx1ZRgFIAEoBRIYChBmcmVlX3JlZm9y",
+            "Z2VfbnVtGAogASgNEiAKCWNvc3RfZGF0YRgGIAEoCzINLkl0ZW1Db3N0RGF0",
+            "YUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.WorkbenchReforgeHexAvatarFunc), global::EggLink.DanhengServer.Proto.WorkbenchReforgeHexAvatarFunc.Parser, new[]{ "IntReforgeNumValue", "CostData", "FreeReforgeNum" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.WorkbenchReforgeHexAvatarFunc), global::EggLink.DanhengServer.Proto.WorkbenchReforgeHexAvatarFunc.Parser, new[]{ "IntReforgeNumValue", "FreeReforgeNum", "CostData" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,8 +75,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkbenchReforgeHexAvatarFunc(WorkbenchReforgeHexAvatarFunc other) : this() {
       intReforgeNumValue_ = other.intReforgeNumValue_;
-      costData_ = other.costData_ != null ? other.costData_.Clone() : null;
       freeReforgeNum_ = other.freeReforgeNum_;
+      costData_ = other.costData_ != null ? other.costData_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "int_reforge_num_value" field.</summary>
-    public const int IntReforgeNumValueFieldNumber = 2;
+    public const int IntReforgeNumValueFieldNumber = 5;
     private int intReforgeNumValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,18 +95,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return intReforgeNumValue_; }
       set {
         intReforgeNumValue_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "cost_data" field.</summary>
-    public const int CostDataFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.ItemCostData costData_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ItemCostData CostData {
-      get { return costData_; }
-      set {
-        costData_ = value;
       }
     }
 
@@ -119,6 +107,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return freeReforgeNum_; }
       set {
         freeReforgeNum_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cost_data" field.</summary>
+    public const int CostDataFieldNumber = 6;
+    private global::EggLink.DanhengServer.Proto.ItemCostData costData_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ItemCostData CostData {
+      get { return costData_; }
+      set {
+        costData_ = value;
       }
     }
 
@@ -138,8 +138,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (IntReforgeNumValue != other.IntReforgeNumValue) return false;
-      if (!object.Equals(CostData, other.CostData)) return false;
       if (FreeReforgeNum != other.FreeReforgeNum) return false;
+      if (!object.Equals(CostData, other.CostData)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -148,8 +148,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (IntReforgeNumValue != 0) hash ^= IntReforgeNumValue.GetHashCode();
-      if (costData_ != null) hash ^= CostData.GetHashCode();
       if (FreeReforgeNum != 0) hash ^= FreeReforgeNum.GetHashCode();
+      if (costData_ != null) hash ^= CostData.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,13 +168,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (costData_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(CostData);
-      }
       if (IntReforgeNumValue != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(40);
         output.WriteInt32(IntReforgeNumValue);
+      }
+      if (costData_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(CostData);
       }
       if (FreeReforgeNum != 0) {
         output.WriteRawTag(80);
@@ -190,13 +190,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (costData_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(CostData);
-      }
       if (IntReforgeNumValue != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(40);
         output.WriteInt32(IntReforgeNumValue);
+      }
+      if (costData_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(CostData);
       }
       if (FreeReforgeNum != 0) {
         output.WriteRawTag(80);
@@ -215,11 +215,11 @@ namespace EggLink.DanhengServer.Proto {
       if (IntReforgeNumValue != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(IntReforgeNumValue);
       }
-      if (costData_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CostData);
-      }
       if (FreeReforgeNum != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FreeReforgeNum);
+      }
+      if (costData_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CostData);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -236,14 +236,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other.IntReforgeNumValue != 0) {
         IntReforgeNumValue = other.IntReforgeNumValue;
       }
+      if (other.FreeReforgeNum != 0) {
+        FreeReforgeNum = other.FreeReforgeNum;
+      }
       if (other.costData_ != null) {
         if (costData_ == null) {
           CostData = new global::EggLink.DanhengServer.Proto.ItemCostData();
         }
         CostData.MergeFrom(other.CostData);
-      }
-      if (other.FreeReforgeNum != 0) {
-        FreeReforgeNum = other.FreeReforgeNum;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -260,15 +260,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 40: {
+            IntReforgeNumValue = input.ReadInt32();
+            break;
+          }
+          case 50: {
             if (costData_ == null) {
               CostData = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
             input.ReadMessage(CostData);
-            break;
-          }
-          case 16: {
-            IntReforgeNumValue = input.ReadInt32();
             break;
           }
           case 80: {
@@ -290,15 +290,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 40: {
+            IntReforgeNumValue = input.ReadInt32();
+            break;
+          }
+          case 50: {
             if (costData_ == null) {
               CostData = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
             input.ReadMessage(CostData);
-            break;
-          }
-          case 16: {
-            IntReforgeNumValue = input.ReadInt32();
             break;
           }
           case 80: {

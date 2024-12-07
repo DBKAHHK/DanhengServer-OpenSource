@@ -24,22 +24,22 @@ namespace EggLink.DanhengServer.Proto {
     static SyncRogueHandbookDataUpdateScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CilTeW5jUm9ndWVIYW5kYm9va0RhdGFVcGRhdGVTY05vdGlmeS5wcm90bxob",
-            "Um9ndWVIYW5kYm9va01hemVCdWZmLnByb3RvGhxSb2d1ZUhhbmRib29rRXZl",
-            "bnRJbmZvLnByb3RvGhtSb2d1ZU1hZ2ljU2NlcHRlckluZm8ucHJvdG8aHlJv",
-            "Z3VlSGFuZGJvb2tNaXJhY2xlSW5mby5wcm90bxoYUm9ndWVNYWdpY1VuaXRJ",
-            "bmZvLnByb3RvIrACCiNTeW5jUm9ndWVIYW5kYm9va0RhdGFVcGRhdGVTY05v",
-            "dGlmeRIsCg9tYWdpY191bml0X2xpc3QYBCADKAsyEy5Sb2d1ZU1hZ2ljVW5p",
-            "dEluZm8SOAoVaGFuZGJvb2tfbWlyYWNsZV9saXN0GAIgAygLMhkuUm9ndWVI",
-            "YW5kYm9va01pcmFjbGVJbmZvEjQKE2hhbmRib29rX2V2ZW50X2xpc3QYBSAD",
-            "KAsyFy5Sb2d1ZUhhbmRib29rRXZlbnRJbmZvEjcKF2hhbmRib29rX21hemVf",
-            "YnVmZl9saXN0GAogAygLMhYuUm9ndWVIYW5kYm9va01hemVCdWZmEjIKEm1h",
-            "Z2ljX3NjZXB0ZXJfbGlzdBgJIAMoCzIWLlJvZ3VlTWFnaWNTY2VwdGVySW5m",
+            "CilTeW5jUm9ndWVIYW5kYm9va0RhdGFVcGRhdGVTY05vdGlmeS5wcm90bxoe",
+            "Um9ndWVIYW5kYm9va01pcmFjbGVJbmZvLnByb3RvGhxSb2d1ZUhhbmRib29r",
+            "RXZlbnRJbmZvLnByb3RvGhtSb2d1ZU1hZ2ljU2NlcHRlckluZm8ucHJvdG8a",
+            "GFJvZ3VlTWFnaWNVbml0SW5mby5wcm90bxobUm9ndWVIYW5kYm9va01hemVC",
+            "dWZmLnByb3RvIrACCiNTeW5jUm9ndWVIYW5kYm9va0RhdGFVcGRhdGVTY05v",
+            "dGlmeRI0ChNoYW5kYm9va19ldmVudF9saXN0GAggAygLMhcuUm9ndWVIYW5k",
+            "Ym9va0V2ZW50SW5mbxI4ChVoYW5kYm9va19taXJhY2xlX2xpc3QYBiADKAsy",
+            "GS5Sb2d1ZUhhbmRib29rTWlyYWNsZUluZm8SMgoSbWFnaWNfc2NlcHRlcl9s",
+            "aXN0GAkgAygLMhYuUm9ndWVNYWdpY1NjZXB0ZXJJbmZvEjcKF2hhbmRib29r",
+            "X21hemVfYnVmZl9saXN0GAcgAygLMhYuUm9ndWVIYW5kYm9va01hemVCdWZm",
+            "EiwKD21hZ2ljX3VuaXRfbGlzdBgMIAMoCzITLlJvZ3VlTWFnaWNVbml0SW5m",
             "b0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueHandbookMazeBuffReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueHandbookEventInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicScepterInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueHandbookMiracleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicUnitInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueHandbookMiracleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueHandbookEventInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicScepterInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicUnitInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueHandbookMazeBuffReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SyncRogueHandbookDataUpdateScNotify), global::EggLink.DanhengServer.Proto.SyncRogueHandbookDataUpdateScNotify.Parser, new[]{ "MagicUnitList", "HandbookMiracleList", "HandbookEventList", "HandbookMazeBuffList", "MagicScepterList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SyncRogueHandbookDataUpdateScNotify), global::EggLink.DanhengServer.Proto.SyncRogueHandbookDataUpdateScNotify.Parser, new[]{ "HandbookEventList", "HandbookMiracleList", "MagicScepterList", "HandbookMazeBuffList", "MagicUnitList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -81,11 +81,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SyncRogueHandbookDataUpdateScNotify(SyncRogueHandbookDataUpdateScNotify other) : this() {
-      magicUnitList_ = other.magicUnitList_.Clone();
-      handbookMiracleList_ = other.handbookMiracleList_.Clone();
       handbookEventList_ = other.handbookEventList_.Clone();
-      handbookMazeBuffList_ = other.handbookMazeBuffList_.Clone();
+      handbookMiracleList_ = other.handbookMiracleList_.Clone();
       magicScepterList_ = other.magicScepterList_.Clone();
+      handbookMazeBuffList_ = other.handbookMazeBuffList_.Clone();
+      magicUnitList_ = other.magicUnitList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -95,32 +95,10 @@ namespace EggLink.DanhengServer.Proto {
       return new SyncRogueHandbookDataUpdateScNotify(this);
     }
 
-    /// <summary>Field number for the "magic_unit_list" field.</summary>
-    public const int MagicUnitListFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueMagicUnitInfo> _repeated_magicUnitList_codec
-        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.RogueMagicUnitInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicUnitInfo> magicUnitList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicUnitInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicUnitInfo> MagicUnitList {
-      get { return magicUnitList_; }
-    }
-
-    /// <summary>Field number for the "handbook_miracle_list" field.</summary>
-    public const int HandbookMiracleListFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueHandbookMiracleInfo> _repeated_handbookMiracleList_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.RogueHandbookMiracleInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueHandbookMiracleInfo> handbookMiracleList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueHandbookMiracleInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueHandbookMiracleInfo> HandbookMiracleList {
-      get { return handbookMiracleList_; }
-    }
-
     /// <summary>Field number for the "handbook_event_list" field.</summary>
-    public const int HandbookEventListFieldNumber = 5;
+    public const int HandbookEventListFieldNumber = 8;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueHandbookEventInfo> _repeated_handbookEventList_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.RogueHandbookEventInfo.Parser);
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.RogueHandbookEventInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueHandbookEventInfo> handbookEventList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueHandbookEventInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -128,15 +106,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return handbookEventList_; }
     }
 
-    /// <summary>Field number for the "handbook_maze_buff_list" field.</summary>
-    public const int HandbookMazeBuffListFieldNumber = 10;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueHandbookMazeBuff> _repeated_handbookMazeBuffList_codec
-        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.RogueHandbookMazeBuff.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueHandbookMazeBuff> handbookMazeBuffList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueHandbookMazeBuff>();
+    /// <summary>Field number for the "handbook_miracle_list" field.</summary>
+    public const int HandbookMiracleListFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueHandbookMiracleInfo> _repeated_handbookMiracleList_codec
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.RogueHandbookMiracleInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueHandbookMiracleInfo> handbookMiracleList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueHandbookMiracleInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueHandbookMazeBuff> HandbookMazeBuffList {
-      get { return handbookMazeBuffList_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueHandbookMiracleInfo> HandbookMiracleList {
+      get { return handbookMiracleList_; }
     }
 
     /// <summary>Field number for the "magic_scepter_list" field.</summary>
@@ -148,6 +126,28 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicScepterInfo> MagicScepterList {
       get { return magicScepterList_; }
+    }
+
+    /// <summary>Field number for the "handbook_maze_buff_list" field.</summary>
+    public const int HandbookMazeBuffListFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueHandbookMazeBuff> _repeated_handbookMazeBuffList_codec
+        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.RogueHandbookMazeBuff.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueHandbookMazeBuff> handbookMazeBuffList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueHandbookMazeBuff>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueHandbookMazeBuff> HandbookMazeBuffList {
+      get { return handbookMazeBuffList_; }
+    }
+
+    /// <summary>Field number for the "magic_unit_list" field.</summary>
+    public const int MagicUnitListFieldNumber = 12;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueMagicUnitInfo> _repeated_magicUnitList_codec
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.RogueMagicUnitInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicUnitInfo> magicUnitList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicUnitInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicUnitInfo> MagicUnitList {
+      get { return magicUnitList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -165,11 +165,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!magicUnitList_.Equals(other.magicUnitList_)) return false;
-      if(!handbookMiracleList_.Equals(other.handbookMiracleList_)) return false;
       if(!handbookEventList_.Equals(other.handbookEventList_)) return false;
-      if(!handbookMazeBuffList_.Equals(other.handbookMazeBuffList_)) return false;
+      if(!handbookMiracleList_.Equals(other.handbookMiracleList_)) return false;
       if(!magicScepterList_.Equals(other.magicScepterList_)) return false;
+      if(!handbookMazeBuffList_.Equals(other.handbookMazeBuffList_)) return false;
+      if(!magicUnitList_.Equals(other.magicUnitList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -177,11 +177,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= magicUnitList_.GetHashCode();
-      hash ^= handbookMiracleList_.GetHashCode();
       hash ^= handbookEventList_.GetHashCode();
-      hash ^= handbookMazeBuffList_.GetHashCode();
+      hash ^= handbookMiracleList_.GetHashCode();
       hash ^= magicScepterList_.GetHashCode();
+      hash ^= handbookMazeBuffList_.GetHashCode();
+      hash ^= magicUnitList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -201,10 +201,10 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       handbookMiracleList_.WriteTo(output, _repeated_handbookMiracleList_codec);
-      magicUnitList_.WriteTo(output, _repeated_magicUnitList_codec);
+      handbookMazeBuffList_.WriteTo(output, _repeated_handbookMazeBuffList_codec);
       handbookEventList_.WriteTo(output, _repeated_handbookEventList_codec);
       magicScepterList_.WriteTo(output, _repeated_magicScepterList_codec);
-      handbookMazeBuffList_.WriteTo(output, _repeated_handbookMazeBuffList_codec);
+      magicUnitList_.WriteTo(output, _repeated_magicUnitList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -216,10 +216,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       handbookMiracleList_.WriteTo(ref output, _repeated_handbookMiracleList_codec);
-      magicUnitList_.WriteTo(ref output, _repeated_magicUnitList_codec);
+      handbookMazeBuffList_.WriteTo(ref output, _repeated_handbookMazeBuffList_codec);
       handbookEventList_.WriteTo(ref output, _repeated_handbookEventList_codec);
       magicScepterList_.WriteTo(ref output, _repeated_magicScepterList_codec);
-      handbookMazeBuffList_.WriteTo(ref output, _repeated_handbookMazeBuffList_codec);
+      magicUnitList_.WriteTo(ref output, _repeated_magicUnitList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -230,11 +230,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += magicUnitList_.CalculateSize(_repeated_magicUnitList_codec);
-      size += handbookMiracleList_.CalculateSize(_repeated_handbookMiracleList_codec);
       size += handbookEventList_.CalculateSize(_repeated_handbookEventList_codec);
-      size += handbookMazeBuffList_.CalculateSize(_repeated_handbookMazeBuffList_codec);
+      size += handbookMiracleList_.CalculateSize(_repeated_handbookMiracleList_codec);
       size += magicScepterList_.CalculateSize(_repeated_magicScepterList_codec);
+      size += handbookMazeBuffList_.CalculateSize(_repeated_handbookMazeBuffList_codec);
+      size += magicUnitList_.CalculateSize(_repeated_magicUnitList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -247,11 +247,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      magicUnitList_.Add(other.magicUnitList_);
-      handbookMiracleList_.Add(other.handbookMiracleList_);
       handbookEventList_.Add(other.handbookEventList_);
-      handbookMazeBuffList_.Add(other.handbookMazeBuffList_);
+      handbookMiracleList_.Add(other.handbookMiracleList_);
       magicScepterList_.Add(other.magicScepterList_);
+      handbookMazeBuffList_.Add(other.handbookMazeBuffList_);
+      magicUnitList_.Add(other.magicUnitList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -267,15 +267,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 50: {
             handbookMiracleList_.AddEntriesFrom(input, _repeated_handbookMiracleList_codec);
             break;
           }
-          case 34: {
-            magicUnitList_.AddEntriesFrom(input, _repeated_magicUnitList_codec);
+          case 58: {
+            handbookMazeBuffList_.AddEntriesFrom(input, _repeated_handbookMazeBuffList_codec);
             break;
           }
-          case 42: {
+          case 66: {
             handbookEventList_.AddEntriesFrom(input, _repeated_handbookEventList_codec);
             break;
           }
@@ -283,8 +283,8 @@ namespace EggLink.DanhengServer.Proto {
             magicScepterList_.AddEntriesFrom(input, _repeated_magicScepterList_codec);
             break;
           }
-          case 82: {
-            handbookMazeBuffList_.AddEntriesFrom(input, _repeated_handbookMazeBuffList_codec);
+          case 98: {
+            magicUnitList_.AddEntriesFrom(input, _repeated_magicUnitList_codec);
             break;
           }
         }
@@ -302,15 +302,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 50: {
             handbookMiracleList_.AddEntriesFrom(ref input, _repeated_handbookMiracleList_codec);
             break;
           }
-          case 34: {
-            magicUnitList_.AddEntriesFrom(ref input, _repeated_magicUnitList_codec);
+          case 58: {
+            handbookMazeBuffList_.AddEntriesFrom(ref input, _repeated_handbookMazeBuffList_codec);
             break;
           }
-          case 42: {
+          case 66: {
             handbookEventList_.AddEntriesFrom(ref input, _repeated_handbookEventList_codec);
             break;
           }
@@ -318,8 +318,8 @@ namespace EggLink.DanhengServer.Proto {
             magicScepterList_.AddEntriesFrom(ref input, _repeated_magicScepterList_codec);
             break;
           }
-          case 82: {
-            handbookMazeBuffList_.AddEntriesFrom(ref input, _repeated_handbookMazeBuffList_codec);
+          case 98: {
+            magicUnitList_.AddEntriesFrom(ref input, _repeated_magicUnitList_codec);
             break;
           }
         }

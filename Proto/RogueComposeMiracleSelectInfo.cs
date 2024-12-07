@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNSb2d1ZUNvbXBvc2VNaXJhY2xlU2VsZWN0SW5mby5wcm90byJMCh1Sb2d1",
-            "ZUNvbXBvc2VNaXJhY2xlU2VsZWN0SW5mbxITCgtIQUVPTkNDQktFRxgIIAMo",
-            "DRIWCg5zZWxlY3RfaGludF9pZBgKIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "ZUNvbXBvc2VNaXJhY2xlU2VsZWN0SW5mbxIWCg5zZWxlY3RfaGludF9pZBgP",
+            "IAEoDRITCgtQQU1BUEFHQkJKRhgNIAMoDUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueComposeMiracleSelectInfo), global::EggLink.DanhengServer.Proto.RogueComposeMiracleSelectInfo.Parser, new[]{ "HAEONCCBKEG", "SelectHintId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueComposeMiracleSelectInfo), global::EggLink.DanhengServer.Proto.RogueComposeMiracleSelectInfo.Parser, new[]{ "SelectHintId", "PAMAPAGBBJF" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueComposeMiracleSelectInfo(RogueComposeMiracleSelectInfo other) : this() {
-      hAEONCCBKEG_ = other.hAEONCCBKEG_.Clone();
       selectHintId_ = other.selectHintId_;
+      pAMAPAGBBJF_ = other.pAMAPAGBBJF_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,19 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueComposeMiracleSelectInfo(this);
     }
 
-    /// <summary>Field number for the "HAEONCCBKEG" field.</summary>
-    public const int HAEONCCBKEGFieldNumber = 8;
-    private static readonly pb::FieldCodec<uint> _repeated_hAEONCCBKEG_codec
-        = pb::FieldCodec.ForUInt32(66);
-    private readonly pbc::RepeatedField<uint> hAEONCCBKEG_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> HAEONCCBKEG {
-      get { return hAEONCCBKEG_; }
-    }
-
     /// <summary>Field number for the "select_hint_id" field.</summary>
-    public const int SelectHintIdFieldNumber = 10;
+    public const int SelectHintIdFieldNumber = 15;
     private uint selectHintId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +94,17 @@ namespace EggLink.DanhengServer.Proto {
       set {
         selectHintId_ = value;
       }
+    }
+
+    /// <summary>Field number for the "PAMAPAGBBJF" field.</summary>
+    public const int PAMAPAGBBJFFieldNumber = 13;
+    private static readonly pb::FieldCodec<uint> _repeated_pAMAPAGBBJF_codec
+        = pb::FieldCodec.ForUInt32(106);
+    private readonly pbc::RepeatedField<uint> pAMAPAGBBJF_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> PAMAPAGBBJF {
+      get { return pAMAPAGBBJF_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!hAEONCCBKEG_.Equals(other.hAEONCCBKEG_)) return false;
       if (SelectHintId != other.SelectHintId) return false;
+      if(!pAMAPAGBBJF_.Equals(other.pAMAPAGBBJF_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= hAEONCCBKEG_.GetHashCode();
       if (SelectHintId != 0) hash ^= SelectHintId.GetHashCode();
+      hash ^= pAMAPAGBBJF_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      hAEONCCBKEG_.WriteTo(output, _repeated_hAEONCCBKEG_codec);
+      pAMAPAGBBJF_.WriteTo(output, _repeated_pAMAPAGBBJF_codec);
       if (SelectHintId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(120);
         output.WriteUInt32(SelectHintId);
       }
       if (_unknownFields != null) {
@@ -166,9 +166,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      hAEONCCBKEG_.WriteTo(ref output, _repeated_hAEONCCBKEG_codec);
+      pAMAPAGBBJF_.WriteTo(ref output, _repeated_pAMAPAGBBJF_codec);
       if (SelectHintId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(120);
         output.WriteUInt32(SelectHintId);
       }
       if (_unknownFields != null) {
@@ -181,10 +181,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += hAEONCCBKEG_.CalculateSize(_repeated_hAEONCCBKEG_codec);
       if (SelectHintId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SelectHintId);
       }
+      size += pAMAPAGBBJF_.CalculateSize(_repeated_pAMAPAGBBJF_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -197,10 +197,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      hAEONCCBKEG_.Add(other.hAEONCCBKEG_);
       if (other.SelectHintId != 0) {
         SelectHintId = other.SelectHintId;
       }
+      pAMAPAGBBJF_.Add(other.pAMAPAGBBJF_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66:
-          case 64: {
-            hAEONCCBKEG_.AddEntriesFrom(input, _repeated_hAEONCCBKEG_codec);
+          case 106:
+          case 104: {
+            pAMAPAGBBJF_.AddEntriesFrom(input, _repeated_pAMAPAGBBJF_codec);
             break;
           }
-          case 80: {
+          case 120: {
             SelectHintId = input.ReadUInt32();
             break;
           }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66:
-          case 64: {
-            hAEONCCBKEG_.AddEntriesFrom(ref input, _repeated_hAEONCCBKEG_codec);
+          case 106:
+          case 104: {
+            pAMAPAGBBJF_.AddEntriesFrom(ref input, _repeated_pAMAPAGBBJF_codec);
             break;
           }
-          case 80: {
+          case 120: {
             SelectHintId = input.ReadUInt32();
             break;
           }

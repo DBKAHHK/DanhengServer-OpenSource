@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChNDbG9ja1BhcmtJbmZvLnByb3RvIjcKDUNsb2NrUGFya0luZm8SEQoJc2Ny",
-            "aXB0X2lkGAQgASgNEhMKC2NoYXB0ZXJfaWRzGA8gAygNQh6qAhtFZ2dMaW5r",
+            "aXB0X2lkGAIgASgNEhMKC2NoYXB0ZXJfaWRzGAogAygNQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "script_id" field.</summary>
-    public const int ScriptIdFieldNumber = 4;
+    public const int ScriptIdFieldNumber = 2;
     private uint scriptId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,9 +96,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "chapter_ids" field.</summary>
-    public const int ChapterIdsFieldNumber = 15;
+    public const int ChapterIdsFieldNumber = 10;
     private static readonly pb::FieldCodec<uint> _repeated_chapterIds_codec
-        = pb::FieldCodec.ForUInt32(122);
+        = pb::FieldCodec.ForUInt32(82);
     private readonly pbc::RepeatedField<uint> chapterIds_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (ScriptId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(16);
         output.WriteUInt32(ScriptId);
       }
       chapterIds_.WriteTo(output, _repeated_chapterIds_codec);
@@ -166,7 +166,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ScriptId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(16);
         output.WriteUInt32(ScriptId);
       }
       chapterIds_.WriteTo(ref output, _repeated_chapterIds_codec);
@@ -215,12 +215,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 16: {
             ScriptId = input.ReadUInt32();
             break;
           }
-          case 122:
-          case 120: {
+          case 82:
+          case 80: {
             chapterIds_.AddEntriesFrom(input, _repeated_chapterIds_codec);
             break;
           }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 16: {
             ScriptId = input.ReadUInt32();
             break;
           }
-          case 122:
-          case 120: {
+          case 82:
+          case 80: {
             chapterIds_.AddEntriesFrom(ref input, _repeated_chapterIds_codec);
             break;
           }

@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJHZXRSb2d1ZVNob3BNaXJhY2xlSW5mb0NzUmVxLnByb3RvIlcKHEdldFJv",
-            "Z3VlU2hvcE1pcmFjbGVJbmZvQ3NSZXESEgoKbW9uc3Rlcl9pZBgEIAEoDRIj",
-            "ChtQVU5LX0xPUkRfT1BFUkFUSU9OX1JFRlJFU0gYCCABKAhCHqoCG0VnZ0xp",
+            "Z3VlU2hvcE1pcmFjbGVJbmZvQ3NSZXESIwobUFVOS19MT1JEX09QRVJBVElP",
+            "Tl9SRUZSRVNIGAcgASgIEhIKCm1vbnN0ZXJfaWQYBCABKA1CHqoCG0VnZ0xp",
             "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRogueShopMiracleInfoCsReq), global::EggLink.DanhengServer.Proto.GetRogueShopMiracleInfoCsReq.Parser, new[]{ "MonsterId", "PUNKLORDOPERATIONREFRESH" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRogueShopMiracleInfoCsReq), global::EggLink.DanhengServer.Proto.GetRogueShopMiracleInfoCsReq.Parser, new[]{ "PUNKLORDOPERATIONREFRESH", "MonsterId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetRogueShopMiracleInfoCsReq(GetRogueShopMiracleInfoCsReq other) : this() {
-      monsterId_ = other.monsterId_;
       pUNKLORDOPERATIONREFRESH_ = other.pUNKLORDOPERATIONREFRESH_;
+      monsterId_ = other.monsterId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,6 +82,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetRogueShopMiracleInfoCsReq Clone() {
       return new GetRogueShopMiracleInfoCsReq(this);
+    }
+
+    /// <summary>Field number for the "PUNK_LORD_OPERATION_REFRESH" field.</summary>
+    public const int PUNKLORDOPERATIONREFRESHFieldNumber = 7;
+    private bool pUNKLORDOPERATIONREFRESH_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool PUNKLORDOPERATIONREFRESH {
+      get { return pUNKLORDOPERATIONREFRESH_; }
+      set {
+        pUNKLORDOPERATIONREFRESH_ = value;
+      }
     }
 
     /// <summary>Field number for the "monster_id" field.</summary>
@@ -93,18 +105,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return monsterId_; }
       set {
         monsterId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "PUNK_LORD_OPERATION_REFRESH" field.</summary>
-    public const int PUNKLORDOPERATIONREFRESHFieldNumber = 8;
-    private bool pUNKLORDOPERATIONREFRESH_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool PUNKLORDOPERATIONREFRESH {
-      get { return pUNKLORDOPERATIONREFRESH_; }
-      set {
-        pUNKLORDOPERATIONREFRESH_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MonsterId != other.MonsterId) return false;
       if (PUNKLORDOPERATIONREFRESH != other.PUNKLORDOPERATIONREFRESH) return false;
+      if (MonsterId != other.MonsterId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MonsterId != 0) hash ^= MonsterId.GetHashCode();
       if (PUNKLORDOPERATIONREFRESH != false) hash ^= PUNKLORDOPERATIONREFRESH.GetHashCode();
+      if (MonsterId != 0) hash ^= MonsterId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(MonsterId);
       }
       if (PUNKLORDOPERATIONREFRESH != false) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(56);
         output.WriteBool(PUNKLORDOPERATIONREFRESH);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(MonsterId);
       }
       if (PUNKLORDOPERATIONREFRESH != false) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(56);
         output.WriteBool(PUNKLORDOPERATIONREFRESH);
       }
       if (_unknownFields != null) {
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MonsterId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MonsterId);
-      }
       if (PUNKLORDOPERATIONREFRESH != false) {
         size += 1 + 1;
+      }
+      if (MonsterId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MonsterId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MonsterId != 0) {
-        MonsterId = other.MonsterId;
-      }
       if (other.PUNKLORDOPERATIONREFRESH != false) {
         PUNKLORDOPERATIONREFRESH = other.PUNKLORDOPERATIONREFRESH;
+      }
+      if (other.MonsterId != 0) {
+        MonsterId = other.MonsterId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,7 +231,7 @@ namespace EggLink.DanhengServer.Proto {
             MonsterId = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 56: {
             PUNKLORDOPERATIONREFRESH = input.ReadBool();
             break;
           }
@@ -254,7 +254,7 @@ namespace EggLink.DanhengServer.Proto {
             MonsterId = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 56: {
             PUNKLORDOPERATIONREFRESH = input.ReadBool();
             break;
           }

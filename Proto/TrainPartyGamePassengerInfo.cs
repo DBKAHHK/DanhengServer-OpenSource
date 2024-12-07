@@ -24,19 +24,19 @@ namespace EggLink.DanhengServer.Proto {
     static TrainPartyGamePassengerInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFUcmFpblBhcnR5R2FtZVBhc3NlbmdlckluZm8ucHJvdG8aGVRyYWluUGFy",
-            "dHlHYW1lU2tpbGwucHJvdG8aHVRyYWluUGFydHlHYW1lUGFzc2VuZ2VyLnBy",
-            "b3RvIuQBChtUcmFpblBhcnR5R2FtZVBhc3NlbmdlckluZm8SEgoKbXRfcmFu",
-            "a19pZBgPIAEoDRIwCg5wYXNzZW5nZXJfbGlzdBgOIAMoCzIYLlRyYWluUGFy",
-            "dHlHYW1lUGFzc2VuZ2VyEhMKC05BR0tBQ0FDSEdEGAMgASgNEhgKEGN1cl9w",
-            "YXNzZW5nZXJfaWQYBSABKA0SLwoRYWV0aGVyX3NraWxsX2xpc3QYCCADKAsy",
-            "FC5UcmFpblBhcnR5R2FtZVNraWxsEh8KF3Bhc3Nlbmdlcl9kaWFyeV9pZF9s",
-            "aXN0GAcgAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "CiFUcmFpblBhcnR5R2FtZVBhc3NlbmdlckluZm8ucHJvdG8aHVRyYWluUGFy",
+            "dHlHYW1lUGFzc2VuZ2VyLnByb3RvGhlUcmFpblBhcnR5R2FtZVNraWxsLnBy",
+            "b3RvIuQBChtUcmFpblBhcnR5R2FtZVBhc3NlbmdlckluZm8SHwoXcGFzc2Vu",
+            "Z2VyX2RpYXJ5X2lkX2xpc3QYAyADKA0SEgoKbXRfcmFua19pZBgHIAEoDRIT",
+            "CgtMSEZMQ0ZOQU9QQhgLIAEoDRIYChBjdXJfcGFzc2VuZ2VyX2lkGA8gASgN",
+            "EjAKDnBhc3Nlbmdlcl9saXN0GAggAygLMhguVHJhaW5QYXJ0eUdhbWVQYXNz",
+            "ZW5nZXISLwoRYWV0aGVyX3NraWxsX2xpc3QYDCADKAsyFC5UcmFpblBhcnR5",
+            "R2FtZVNraWxsQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyGameSkillReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyGamePassengerReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyGamePassengerReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyGameSkillReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyGamePassengerInfo), global::EggLink.DanhengServer.Proto.TrainPartyGamePassengerInfo.Parser, new[]{ "MtRankId", "PassengerList", "NAGKACACHGD", "CurPassengerId", "AetherSkillList", "PassengerDiaryIdList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyGamePassengerInfo), global::EggLink.DanhengServer.Proto.TrainPartyGamePassengerInfo.Parser, new[]{ "PassengerDiaryIdList", "MtRankId", "LHFLCFNAOPB", "CurPassengerId", "PassengerList", "AetherSkillList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,12 +78,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainPartyGamePassengerInfo(TrainPartyGamePassengerInfo other) : this() {
-      mtRankId_ = other.mtRankId_;
-      passengerList_ = other.passengerList_.Clone();
-      nAGKACACHGD_ = other.nAGKACACHGD_;
-      curPassengerId_ = other.curPassengerId_;
-      aetherSkillList_ = other.aetherSkillList_.Clone();
       passengerDiaryIdList_ = other.passengerDiaryIdList_.Clone();
+      mtRankId_ = other.mtRankId_;
+      lHFLCFNAOPB_ = other.lHFLCFNAOPB_;
+      curPassengerId_ = other.curPassengerId_;
+      passengerList_ = other.passengerList_.Clone();
+      aetherSkillList_ = other.aetherSkillList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -93,9 +93,23 @@ namespace EggLink.DanhengServer.Proto {
       return new TrainPartyGamePassengerInfo(this);
     }
 
+    /// <summary>Field number for the "passenger_diary_id_list" field.</summary>
+    public const int PassengerDiaryIdListFieldNumber = 3;
+    private static readonly pb::FieldCodec<uint> _repeated_passengerDiaryIdList_codec
+        = pb::FieldCodec.ForUInt32(26);
+    private readonly pbc::RepeatedField<uint> passengerDiaryIdList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> PassengerDiaryIdList {
+      get { return passengerDiaryIdList_; }
+    }
+
     /// <summary>Field number for the "mt_rank_id" field.</summary>
-    public const int MtRankIdFieldNumber = 15;
+    public const int MtRankIdFieldNumber = 7;
     private uint mtRankId_;
+    /// <summary>
+    /// 15
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint MtRankId {
@@ -105,32 +119,24 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "passenger_list" field.</summary>
-    public const int PassengerListFieldNumber = 14;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.TrainPartyGamePassenger> _repeated_passengerList_codec
-        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.TrainPartyGamePassenger.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGamePassenger> passengerList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGamePassenger>();
+    /// <summary>Field number for the "LHFLCFNAOPB" field.</summary>
+    public const int LHFLCFNAOPBFieldNumber = 11;
+    private uint lHFLCFNAOPB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGamePassenger> PassengerList {
-      get { return passengerList_; }
-    }
-
-    /// <summary>Field number for the "NAGKACACHGD" field.</summary>
-    public const int NAGKACACHGDFieldNumber = 3;
-    private uint nAGKACACHGD_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NAGKACACHGD {
-      get { return nAGKACACHGD_; }
+    public uint LHFLCFNAOPB {
+      get { return lHFLCFNAOPB_; }
       set {
-        nAGKACACHGD_ = value;
+        lHFLCFNAOPB_ = value;
       }
     }
 
     /// <summary>Field number for the "cur_passenger_id" field.</summary>
-    public const int CurPassengerIdFieldNumber = 5;
+    public const int CurPassengerIdFieldNumber = 15;
     private uint curPassengerId_;
+    /// <summary>
+    /// 7
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint CurPassengerId {
@@ -140,26 +146,26 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "passenger_list" field.</summary>
+    public const int PassengerListFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.TrainPartyGamePassenger> _repeated_passengerList_codec
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.TrainPartyGamePassenger.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGamePassenger> passengerList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGamePassenger>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGamePassenger> PassengerList {
+      get { return passengerList_; }
+    }
+
     /// <summary>Field number for the "aether_skill_list" field.</summary>
-    public const int AetherSkillListFieldNumber = 8;
+    public const int AetherSkillListFieldNumber = 12;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.TrainPartyGameSkill> _repeated_aetherSkillList_codec
-        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.TrainPartyGameSkill.Parser);
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.TrainPartyGameSkill.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGameSkill> aetherSkillList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGameSkill>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGameSkill> AetherSkillList {
       get { return aetherSkillList_; }
-    }
-
-    /// <summary>Field number for the "passenger_diary_id_list" field.</summary>
-    public const int PassengerDiaryIdListFieldNumber = 7;
-    private static readonly pb::FieldCodec<uint> _repeated_passengerDiaryIdList_codec
-        = pb::FieldCodec.ForUInt32(58);
-    private readonly pbc::RepeatedField<uint> passengerDiaryIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> PassengerDiaryIdList {
-      get { return passengerDiaryIdList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -177,12 +183,12 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MtRankId != other.MtRankId) return false;
-      if(!passengerList_.Equals(other.passengerList_)) return false;
-      if (NAGKACACHGD != other.NAGKACACHGD) return false;
-      if (CurPassengerId != other.CurPassengerId) return false;
-      if(!aetherSkillList_.Equals(other.aetherSkillList_)) return false;
       if(!passengerDiaryIdList_.Equals(other.passengerDiaryIdList_)) return false;
+      if (MtRankId != other.MtRankId) return false;
+      if (LHFLCFNAOPB != other.LHFLCFNAOPB) return false;
+      if (CurPassengerId != other.CurPassengerId) return false;
+      if(!passengerList_.Equals(other.passengerList_)) return false;
+      if(!aetherSkillList_.Equals(other.aetherSkillList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -190,12 +196,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MtRankId != 0) hash ^= MtRankId.GetHashCode();
-      hash ^= passengerList_.GetHashCode();
-      if (NAGKACACHGD != 0) hash ^= NAGKACACHGD.GetHashCode();
-      if (CurPassengerId != 0) hash ^= CurPassengerId.GetHashCode();
-      hash ^= aetherSkillList_.GetHashCode();
       hash ^= passengerDiaryIdList_.GetHashCode();
+      if (MtRankId != 0) hash ^= MtRankId.GetHashCode();
+      if (LHFLCFNAOPB != 0) hash ^= LHFLCFNAOPB.GetHashCode();
+      if (CurPassengerId != 0) hash ^= CurPassengerId.GetHashCode();
+      hash ^= passengerList_.GetHashCode();
+      hash ^= aetherSkillList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -214,20 +220,20 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (NAGKACACHGD != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(NAGKACACHGD);
-      }
-      if (CurPassengerId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(CurPassengerId);
-      }
       passengerDiaryIdList_.WriteTo(output, _repeated_passengerDiaryIdList_codec);
-      aetherSkillList_.WriteTo(output, _repeated_aetherSkillList_codec);
-      passengerList_.WriteTo(output, _repeated_passengerList_codec);
       if (MtRankId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(56);
         output.WriteUInt32(MtRankId);
+      }
+      passengerList_.WriteTo(output, _repeated_passengerList_codec);
+      if (LHFLCFNAOPB != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(LHFLCFNAOPB);
+      }
+      aetherSkillList_.WriteTo(output, _repeated_aetherSkillList_codec);
+      if (CurPassengerId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(CurPassengerId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -239,20 +245,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (NAGKACACHGD != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(NAGKACACHGD);
-      }
-      if (CurPassengerId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(CurPassengerId);
-      }
       passengerDiaryIdList_.WriteTo(ref output, _repeated_passengerDiaryIdList_codec);
-      aetherSkillList_.WriteTo(ref output, _repeated_aetherSkillList_codec);
-      passengerList_.WriteTo(ref output, _repeated_passengerList_codec);
       if (MtRankId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(56);
         output.WriteUInt32(MtRankId);
+      }
+      passengerList_.WriteTo(ref output, _repeated_passengerList_codec);
+      if (LHFLCFNAOPB != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(LHFLCFNAOPB);
+      }
+      aetherSkillList_.WriteTo(ref output, _repeated_aetherSkillList_codec);
+      if (CurPassengerId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(CurPassengerId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -264,18 +270,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += passengerDiaryIdList_.CalculateSize(_repeated_passengerDiaryIdList_codec);
       if (MtRankId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MtRankId);
       }
-      size += passengerList_.CalculateSize(_repeated_passengerList_codec);
-      if (NAGKACACHGD != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NAGKACACHGD);
+      if (LHFLCFNAOPB != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LHFLCFNAOPB);
       }
       if (CurPassengerId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurPassengerId);
       }
+      size += passengerList_.CalculateSize(_repeated_passengerList_codec);
       size += aetherSkillList_.CalculateSize(_repeated_aetherSkillList_codec);
-      size += passengerDiaryIdList_.CalculateSize(_repeated_passengerDiaryIdList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -288,18 +294,18 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      passengerDiaryIdList_.Add(other.passengerDiaryIdList_);
       if (other.MtRankId != 0) {
         MtRankId = other.MtRankId;
       }
-      passengerList_.Add(other.passengerList_);
-      if (other.NAGKACACHGD != 0) {
-        NAGKACACHGD = other.NAGKACACHGD;
+      if (other.LHFLCFNAOPB != 0) {
+        LHFLCFNAOPB = other.LHFLCFNAOPB;
       }
       if (other.CurPassengerId != 0) {
         CurPassengerId = other.CurPassengerId;
       }
+      passengerList_.Add(other.passengerList_);
       aetherSkillList_.Add(other.aetherSkillList_);
-      passengerDiaryIdList_.Add(other.passengerDiaryIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -315,29 +321,29 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 26:
           case 24: {
-            NAGKACACHGD = input.ReadUInt32();
-            break;
-          }
-          case 40: {
-            CurPassengerId = input.ReadUInt32();
-            break;
-          }
-          case 58:
-          case 56: {
             passengerDiaryIdList_.AddEntriesFrom(input, _repeated_passengerDiaryIdList_codec);
             break;
           }
-          case 66: {
-            aetherSkillList_.AddEntriesFrom(input, _repeated_aetherSkillList_codec);
+          case 56: {
+            MtRankId = input.ReadUInt32();
             break;
           }
-          case 114: {
+          case 66: {
             passengerList_.AddEntriesFrom(input, _repeated_passengerList_codec);
             break;
           }
+          case 88: {
+            LHFLCFNAOPB = input.ReadUInt32();
+            break;
+          }
+          case 98: {
+            aetherSkillList_.AddEntriesFrom(input, _repeated_aetherSkillList_codec);
+            break;
+          }
           case 120: {
-            MtRankId = input.ReadUInt32();
+            CurPassengerId = input.ReadUInt32();
             break;
           }
         }
@@ -355,29 +361,29 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 26:
           case 24: {
-            NAGKACACHGD = input.ReadUInt32();
-            break;
-          }
-          case 40: {
-            CurPassengerId = input.ReadUInt32();
-            break;
-          }
-          case 58:
-          case 56: {
             passengerDiaryIdList_.AddEntriesFrom(ref input, _repeated_passengerDiaryIdList_codec);
             break;
           }
-          case 66: {
-            aetherSkillList_.AddEntriesFrom(ref input, _repeated_aetherSkillList_codec);
+          case 56: {
+            MtRankId = input.ReadUInt32();
             break;
           }
-          case 114: {
+          case 66: {
             passengerList_.AddEntriesFrom(ref input, _repeated_passengerList_codec);
             break;
           }
+          case 88: {
+            LHFLCFNAOPB = input.ReadUInt32();
+            break;
+          }
+          case 98: {
+            aetherSkillList_.AddEntriesFrom(ref input, _repeated_aetherSkillList_codec);
+            break;
+          }
           case 120: {
-            MtRankId = input.ReadUInt32();
+            CurPassengerId = input.ReadUInt32();
             break;
           }
         }

@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5UYWtlbkNoYWxsZW5nZVJld2FyZEluZm8ucHJvdG8aDkl0ZW1MaXN0LnBy",
-            "b3RvIkkKGFRha2VuQ2hhbGxlbmdlUmV3YXJkSW5mbxISCgpzdGFyX2NvdW50",
-            "GAIgASgNEhkKBnJld2FyZBgGIAEoCzIJLkl0ZW1MaXN0Qh6qAhtFZ2dMaW5r",
+            "b3RvIkkKGFRha2VuQ2hhbGxlbmdlUmV3YXJkSW5mbxIZCgZyZXdhcmQYCCAB",
+            "KAsyCS5JdGVtTGlzdBISCgpzdGFyX2NvdW50GAwgASgNQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakenChallengeRewardInfo), global::EggLink.DanhengServer.Proto.TakenChallengeRewardInfo.Parser, new[]{ "StarCount", "Reward" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakenChallengeRewardInfo), global::EggLink.DanhengServer.Proto.TakenChallengeRewardInfo.Parser, new[]{ "Reward", "StarCount" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TakenChallengeRewardInfo(TakenChallengeRewardInfo other) : this() {
-      starCount_ = other.starCount_;
       reward_ = other.reward_ != null ? other.reward_.Clone() : null;
+      starCount_ = other.starCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new TakenChallengeRewardInfo(this);
     }
 
-    /// <summary>Field number for the "star_count" field.</summary>
-    public const int StarCountFieldNumber = 2;
-    private uint starCount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint StarCount {
-      get { return starCount_; }
-      set {
-        starCount_ = value;
-      }
-    }
-
     /// <summary>Field number for the "reward" field.</summary>
-    public const int RewardFieldNumber = 6;
+    public const int RewardFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.ItemList reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return reward_; }
       set {
         reward_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "star_count" field.</summary>
+    public const int StarCountFieldNumber = 12;
+    private uint starCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint StarCount {
+      get { return starCount_; }
+      set {
+        starCount_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (StarCount != other.StarCount) return false;
       if (!object.Equals(Reward, other.Reward)) return false;
+      if (StarCount != other.StarCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (StarCount != 0) hash ^= StarCount.GetHashCode();
       if (reward_ != null) hash ^= Reward.GetHashCode();
+      if (StarCount != 0) hash ^= StarCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (StarCount != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(StarCount);
-      }
       if (reward_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(66);
         output.WriteMessage(Reward);
+      }
+      if (StarCount != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(StarCount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (StarCount != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(StarCount);
-      }
       if (reward_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(66);
         output.WriteMessage(Reward);
+      }
+      if (StarCount != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(StarCount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (StarCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(StarCount);
-      }
       if (reward_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Reward);
+      }
+      if (StarCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(StarCount);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,14 +206,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.StarCount != 0) {
-        StarCount = other.StarCount;
-      }
       if (other.reward_ != null) {
         if (reward_ == null) {
           Reward = new global::EggLink.DanhengServer.Proto.ItemList();
         }
         Reward.MergeFrom(other.Reward);
+      }
+      if (other.StarCount != 0) {
+        StarCount = other.StarCount;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            StarCount = input.ReadUInt32();
-            break;
-          }
-          case 50: {
+          case 66: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
+            break;
+          }
+          case 96: {
+            StarCount = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            StarCount = input.ReadUInt32();
-            break;
-          }
-          case 50: {
+          case 66: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
+            break;
+          }
+          case 96: {
+            StarCount = input.ReadUInt32();
             break;
           }
         }

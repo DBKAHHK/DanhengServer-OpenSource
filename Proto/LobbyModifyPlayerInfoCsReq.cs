@@ -26,14 +26,14 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiBMb2JieU1vZGlmeVBsYXllckluZm9Dc1JlcS5wcm90bxoVUGxheWVyRXh0",
             "cmFJbmZvLnByb3RvGhVMb2JieU1vZGlmeVR5cGUucHJvdG8ifQoaTG9iYnlN",
-            "b2RpZnlQbGF5ZXJJbmZvQ3NSZXESHgoEdHlwZRgBIAEoDjIQLkxvYmJ5TW9k",
-            "aWZ5VHlwZRIqChBsb2JieV9leHRyYV9pbmZvGAUgASgLMhAuUGxheWVyRXh0",
-            "cmFJbmZvEhMKC05MTkdKQ0pMREZPGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "b2RpZnlQbGF5ZXJJbmZvQ3NSZXESEwoLR09MQ1BBUExPSUcYCyABKA0SKgoQ",
+            "bG9iYnlfZXh0cmFfaW5mbxgPIAEoCzIQLlBsYXllckV4dHJhSW5mbxIeCgR0",
+            "eXBlGAYgASgOMhAuTG9iYnlNb2RpZnlUeXBlQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlayerExtraInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LobbyModifyTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LobbyModifyPlayerInfoCsReq), global::EggLink.DanhengServer.Proto.LobbyModifyPlayerInfoCsReq.Parser, new[]{ "Type", "LobbyExtraInfo", "NLNGJCJLDFO" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LobbyModifyPlayerInfoCsReq), global::EggLink.DanhengServer.Proto.LobbyModifyPlayerInfoCsReq.Parser, new[]{ "GOLCPAPLOIG", "LobbyExtraInfo", "Type" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,9 +75,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LobbyModifyPlayerInfoCsReq(LobbyModifyPlayerInfoCsReq other) : this() {
-      type_ = other.type_;
+      gOLCPAPLOIG_ = other.gOLCPAPLOIG_;
       lobbyExtraInfo_ = other.lobbyExtraInfo_ != null ? other.lobbyExtraInfo_.Clone() : null;
-      nLNGJCJLDFO_ = other.nLNGJCJLDFO_;
+      type_ = other.type_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,20 +87,20 @@ namespace EggLink.DanhengServer.Proto {
       return new LobbyModifyPlayerInfoCsReq(this);
     }
 
-    /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.LobbyModifyType type_ = global::EggLink.DanhengServer.Proto.LobbyModifyType.None;
+    /// <summary>Field number for the "GOLCPAPLOIG" field.</summary>
+    public const int GOLCPAPLOIGFieldNumber = 11;
+    private uint gOLCPAPLOIG_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.LobbyModifyType Type {
-      get { return type_; }
+    public uint GOLCPAPLOIG {
+      get { return gOLCPAPLOIG_; }
       set {
-        type_ = value;
+        gOLCPAPLOIG_ = value;
       }
     }
 
     /// <summary>Field number for the "lobby_extra_info" field.</summary>
-    public const int LobbyExtraInfoFieldNumber = 5;
+    public const int LobbyExtraInfoFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.PlayerExtraInfo lobbyExtraInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,15 +111,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "NLNGJCJLDFO" field.</summary>
-    public const int NLNGJCJLDFOFieldNumber = 13;
-    private uint nLNGJCJLDFO_;
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 6;
+    private global::EggLink.DanhengServer.Proto.LobbyModifyType type_ = global::EggLink.DanhengServer.Proto.LobbyModifyType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NLNGJCJLDFO {
-      get { return nLNGJCJLDFO_; }
+    public global::EggLink.DanhengServer.Proto.LobbyModifyType Type {
+      get { return type_; }
       set {
-        nLNGJCJLDFO_ = value;
+        type_ = value;
       }
     }
 
@@ -138,9 +138,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Type != other.Type) return false;
+      if (GOLCPAPLOIG != other.GOLCPAPLOIG) return false;
       if (!object.Equals(LobbyExtraInfo, other.LobbyExtraInfo)) return false;
-      if (NLNGJCJLDFO != other.NLNGJCJLDFO) return false;
+      if (Type != other.Type) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -148,9 +148,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != global::EggLink.DanhengServer.Proto.LobbyModifyType.None) hash ^= Type.GetHashCode();
+      if (GOLCPAPLOIG != 0) hash ^= GOLCPAPLOIG.GetHashCode();
       if (lobbyExtraInfo_ != null) hash ^= LobbyExtraInfo.GetHashCode();
-      if (NLNGJCJLDFO != 0) hash ^= NLNGJCJLDFO.GetHashCode();
+      if (Type != global::EggLink.DanhengServer.Proto.LobbyModifyType.None) hash ^= Type.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -170,16 +170,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Type != global::EggLink.DanhengServer.Proto.LobbyModifyType.None) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(48);
         output.WriteEnum((int) Type);
       }
-      if (lobbyExtraInfo_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(LobbyExtraInfo);
+      if (GOLCPAPLOIG != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(GOLCPAPLOIG);
       }
-      if (NLNGJCJLDFO != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(NLNGJCJLDFO);
+      if (lobbyExtraInfo_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(LobbyExtraInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -192,16 +192,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Type != global::EggLink.DanhengServer.Proto.LobbyModifyType.None) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(48);
         output.WriteEnum((int) Type);
       }
-      if (lobbyExtraInfo_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(LobbyExtraInfo);
+      if (GOLCPAPLOIG != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(GOLCPAPLOIG);
       }
-      if (NLNGJCJLDFO != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(NLNGJCJLDFO);
+      if (lobbyExtraInfo_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(LobbyExtraInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -213,14 +213,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Type != global::EggLink.DanhengServer.Proto.LobbyModifyType.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      if (GOLCPAPLOIG != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GOLCPAPLOIG);
       }
       if (lobbyExtraInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LobbyExtraInfo);
       }
-      if (NLNGJCJLDFO != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NLNGJCJLDFO);
+      if (Type != global::EggLink.DanhengServer.Proto.LobbyModifyType.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -234,8 +234,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Type != global::EggLink.DanhengServer.Proto.LobbyModifyType.None) {
-        Type = other.Type;
+      if (other.GOLCPAPLOIG != 0) {
+        GOLCPAPLOIG = other.GOLCPAPLOIG;
       }
       if (other.lobbyExtraInfo_ != null) {
         if (lobbyExtraInfo_ == null) {
@@ -243,8 +243,8 @@ namespace EggLink.DanhengServer.Proto {
         }
         LobbyExtraInfo.MergeFrom(other.LobbyExtraInfo);
       }
-      if (other.NLNGJCJLDFO != 0) {
-        NLNGJCJLDFO = other.NLNGJCJLDFO;
+      if (other.Type != global::EggLink.DanhengServer.Proto.LobbyModifyType.None) {
+        Type = other.Type;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -261,19 +261,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 48: {
             Type = (global::EggLink.DanhengServer.Proto.LobbyModifyType) input.ReadEnum();
             break;
           }
-          case 42: {
+          case 88: {
+            GOLCPAPLOIG = input.ReadUInt32();
+            break;
+          }
+          case 122: {
             if (lobbyExtraInfo_ == null) {
               LobbyExtraInfo = new global::EggLink.DanhengServer.Proto.PlayerExtraInfo();
             }
             input.ReadMessage(LobbyExtraInfo);
-            break;
-          }
-          case 104: {
-            NLNGJCJLDFO = input.ReadUInt32();
             break;
           }
         }
@@ -291,19 +291,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 48: {
             Type = (global::EggLink.DanhengServer.Proto.LobbyModifyType) input.ReadEnum();
             break;
           }
-          case 42: {
+          case 88: {
+            GOLCPAPLOIG = input.ReadUInt32();
+            break;
+          }
+          case 122: {
             if (lobbyExtraInfo_ == null) {
               LobbyExtraInfo = new global::EggLink.DanhengServer.Proto.PlayerExtraInfo();
             }
             input.ReadMessage(LobbyExtraInfo);
-            break;
-          }
-          case 104: {
-            NLNGJCJLDFO = input.ReadUInt32();
             break;
           }
         }

@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cg9OZXdNYXBSb3QucHJvdG8aDVZlY3RvcjQucHJvdG8aDFZlY3Rvci5wcm90",
-            "byJACglOZXdNYXBSb3QSGQoHdmVjdG9yNBgIIAEoCzIILlZlY3RvcjQSGAoH",
-            "dmVjdG9yMxgLIAEoCzIHLlZlY3RvckIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
-            "dmVyLlByb3RvYgZwcm90bzM="));
+            "byJECglOZXdNYXBSb3QSHAoLREZQQVBKRUxMSUUYDSABKAsyBy5WZWN0b3IS",
+            "GQoHdmVjdG9yMxgJIAEoCzIILlZlY3RvcjRCHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.Vector4Reflection.Descriptor, global::EggLink.DanhengServer.Proto.VectorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NewMapRot), global::EggLink.DanhengServer.Proto.NewMapRot.Parser, new[]{ "Vector4", "Vector3" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NewMapRot), global::EggLink.DanhengServer.Proto.NewMapRot.Parser, new[]{ "DFPAPJELLIE", "Vector3" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NewMapRot(NewMapRot other) : this() {
-      vector4_ = other.vector4_ != null ? other.vector4_.Clone() : null;
+      dFPAPJELLIE_ = other.dFPAPJELLIE_ != null ? other.dFPAPJELLIE_.Clone() : null;
       vector3_ = other.vector3_ != null ? other.vector3_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,24 +84,24 @@ namespace EggLink.DanhengServer.Proto {
       return new NewMapRot(this);
     }
 
-    /// <summary>Field number for the "vector4" field.</summary>
-    public const int Vector4FieldNumber = 8;
-    private global::EggLink.DanhengServer.Proto.Vector4 vector4_;
+    /// <summary>Field number for the "DFPAPJELLIE" field.</summary>
+    public const int DFPAPJELLIEFieldNumber = 13;
+    private global::EggLink.DanhengServer.Proto.Vector dFPAPJELLIE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.Vector4 Vector4 {
-      get { return vector4_; }
+    public global::EggLink.DanhengServer.Proto.Vector DFPAPJELLIE {
+      get { return dFPAPJELLIE_; }
       set {
-        vector4_ = value;
+        dFPAPJELLIE_ = value;
       }
     }
 
     /// <summary>Field number for the "vector3" field.</summary>
-    public const int Vector3FieldNumber = 11;
-    private global::EggLink.DanhengServer.Proto.Vector vector3_;
+    public const int Vector3FieldNumber = 9;
+    private global::EggLink.DanhengServer.Proto.Vector4 vector3_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.Vector Vector3 {
+    public global::EggLink.DanhengServer.Proto.Vector4 Vector3 {
       get { return vector3_; }
       set {
         vector3_ = value;
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Vector4, other.Vector4)) return false;
+      if (!object.Equals(DFPAPJELLIE, other.DFPAPJELLIE)) return false;
       if (!object.Equals(Vector3, other.Vector3)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -132,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (vector4_ != null) hash ^= Vector4.GetHashCode();
+      if (dFPAPJELLIE_ != null) hash ^= DFPAPJELLIE.GetHashCode();
       if (vector3_ != null) hash ^= Vector3.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (vector4_ != null) {
-        output.WriteRawTag(66);
-        output.WriteMessage(Vector4);
-      }
       if (vector3_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(74);
         output.WriteMessage(Vector3);
+      }
+      if (dFPAPJELLIE_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(DFPAPJELLIE);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (vector4_ != null) {
-        output.WriteRawTag(66);
-        output.WriteMessage(Vector4);
-      }
       if (vector3_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(74);
         output.WriteMessage(Vector3);
+      }
+      if (dFPAPJELLIE_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(DFPAPJELLIE);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,8 +188,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (vector4_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Vector4);
+      if (dFPAPJELLIE_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DFPAPJELLIE);
       }
       if (vector3_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Vector3);
@@ -206,15 +206,15 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.vector4_ != null) {
-        if (vector4_ == null) {
-          Vector4 = new global::EggLink.DanhengServer.Proto.Vector4();
+      if (other.dFPAPJELLIE_ != null) {
+        if (dFPAPJELLIE_ == null) {
+          DFPAPJELLIE = new global::EggLink.DanhengServer.Proto.Vector();
         }
-        Vector4.MergeFrom(other.Vector4);
+        DFPAPJELLIE.MergeFrom(other.DFPAPJELLIE);
       }
       if (other.vector3_ != null) {
         if (vector3_ == null) {
-          Vector3 = new global::EggLink.DanhengServer.Proto.Vector();
+          Vector3 = new global::EggLink.DanhengServer.Proto.Vector4();
         }
         Vector3.MergeFrom(other.Vector3);
       }
@@ -233,18 +233,18 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66: {
-            if (vector4_ == null) {
-              Vector4 = new global::EggLink.DanhengServer.Proto.Vector4();
-            }
-            input.ReadMessage(Vector4);
-            break;
-          }
-          case 90: {
+          case 74: {
             if (vector3_ == null) {
-              Vector3 = new global::EggLink.DanhengServer.Proto.Vector();
+              Vector3 = new global::EggLink.DanhengServer.Proto.Vector4();
             }
             input.ReadMessage(Vector3);
+            break;
+          }
+          case 106: {
+            if (dFPAPJELLIE_ == null) {
+              DFPAPJELLIE = new global::EggLink.DanhengServer.Proto.Vector();
+            }
+            input.ReadMessage(DFPAPJELLIE);
             break;
           }
         }
@@ -262,18 +262,18 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66: {
-            if (vector4_ == null) {
-              Vector4 = new global::EggLink.DanhengServer.Proto.Vector4();
-            }
-            input.ReadMessage(Vector4);
-            break;
-          }
-          case 90: {
+          case 74: {
             if (vector3_ == null) {
-              Vector3 = new global::EggLink.DanhengServer.Proto.Vector();
+              Vector3 = new global::EggLink.DanhengServer.Proto.Vector4();
             }
             input.ReadMessage(Vector3);
+            break;
+          }
+          case 106: {
+            if (dFPAPJELLIE_ == null) {
+              DFPAPJELLIE = new global::EggLink.DanhengServer.Proto.Vector();
+            }
+            input.ReadMessage(DFPAPJELLIE);
             break;
           }
         }

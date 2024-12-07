@@ -26,15 +26,15 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFDaGFsbGVuZ2VCb3NzU3RhZ2VUZXJ0aW5nZ2kucHJvdG8aGUNoYWxsZW5n",
             "ZUxpbmV1cExpc3QucHJvdG8iqgEKG0NoYWxsZW5nZUJvc3NTdGFnZVRlcnRp",
-            "bmdnaRIbChNiYXR0bGVfcmVjb3JkX3N0YXJzGAMgASgNEhAKCGJ1ZmZfb25l",
-            "GAkgASgNEhAKCGJ1ZmZfdHdvGA4gASgNEg0KBWxldmVsGA8gASgNEhAKCHNj",
-            "b3JlX2lkGAcgASgNEikKC2xpbmV1cF9saXN0GAEgAygLMhQuQ2hhbGxlbmdl",
-            "TGluZXVwTGlzdEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "bmdnaRIQCghzY29yZV9pZBgJIAEoDRIpCgtsaW5ldXBfbGlzdBgBIAMoCzIU",
+            "LkNoYWxsZW5nZUxpbmV1cExpc3QSEAoIYnVmZl9vbmUYCyABKA0SEAoIYnVm",
+            "Zl90d28YCCABKA0SGwoTYmF0dGxlX3JlY29yZF9zdGFycxgGIAEoDRINCgVs",
+            "ZXZlbBgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeLineupListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeBossStageTertinggi), global::EggLink.DanhengServer.Proto.ChallengeBossStageTertinggi.Parser, new[]{ "BattleRecordStars", "BuffOne", "BuffTwo", "Level", "ScoreId", "LineupList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeBossStageTertinggi), global::EggLink.DanhengServer.Proto.ChallengeBossStageTertinggi.Parser, new[]{ "ScoreId", "LineupList", "BuffOne", "BuffTwo", "BattleRecordStars", "Level" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,12 +76,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChallengeBossStageTertinggi(ChallengeBossStageTertinggi other) : this() {
-      battleRecordStars_ = other.battleRecordStars_;
-      buffOne_ = other.buffOne_;
-      buffTwo_ = other.buffTwo_;
-      level_ = other.level_;
       scoreId_ = other.scoreId_;
       lineupList_ = other.lineupList_.Clone();
+      buffOne_ = other.buffOne_;
+      buffTwo_ = other.buffTwo_;
+      battleRecordStars_ = other.battleRecordStars_;
+      level_ = other.level_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -91,56 +91,8 @@ namespace EggLink.DanhengServer.Proto {
       return new ChallengeBossStageTertinggi(this);
     }
 
-    /// <summary>Field number for the "battle_record_stars" field.</summary>
-    public const int BattleRecordStarsFieldNumber = 3;
-    private uint battleRecordStars_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BattleRecordStars {
-      get { return battleRecordStars_; }
-      set {
-        battleRecordStars_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "buff_one" field.</summary>
-    public const int BuffOneFieldNumber = 9;
-    private uint buffOne_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BuffOne {
-      get { return buffOne_; }
-      set {
-        buffOne_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "buff_two" field.</summary>
-    public const int BuffTwoFieldNumber = 14;
-    private uint buffTwo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BuffTwo {
-      get { return buffTwo_; }
-      set {
-        buffTwo_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 15;
-    private uint level_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Level {
-      get { return level_; }
-      set {
-        level_ = value;
-      }
-    }
-
     /// <summary>Field number for the "score_id" field.</summary>
-    public const int ScoreIdFieldNumber = 7;
+    public const int ScoreIdFieldNumber = 9;
     private uint scoreId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -162,6 +114,54 @@ namespace EggLink.DanhengServer.Proto {
       get { return lineupList_; }
     }
 
+    /// <summary>Field number for the "buff_one" field.</summary>
+    public const int BuffOneFieldNumber = 11;
+    private uint buffOne_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint BuffOne {
+      get { return buffOne_; }
+      set {
+        buffOne_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "buff_two" field.</summary>
+    public const int BuffTwoFieldNumber = 8;
+    private uint buffTwo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint BuffTwo {
+      get { return buffTwo_; }
+      set {
+        buffTwo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "battle_record_stars" field.</summary>
+    public const int BattleRecordStarsFieldNumber = 6;
+    private uint battleRecordStars_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint BattleRecordStars {
+      get { return battleRecordStars_; }
+      set {
+        battleRecordStars_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "level" field.</summary>
+    public const int LevelFieldNumber = 3;
+    private uint level_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Level {
+      get { return level_; }
+      set {
+        level_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -177,12 +177,12 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (BattleRecordStars != other.BattleRecordStars) return false;
-      if (BuffOne != other.BuffOne) return false;
-      if (BuffTwo != other.BuffTwo) return false;
-      if (Level != other.Level) return false;
       if (ScoreId != other.ScoreId) return false;
       if(!lineupList_.Equals(other.lineupList_)) return false;
+      if (BuffOne != other.BuffOne) return false;
+      if (BuffTwo != other.BuffTwo) return false;
+      if (BattleRecordStars != other.BattleRecordStars) return false;
+      if (Level != other.Level) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -190,12 +190,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (BattleRecordStars != 0) hash ^= BattleRecordStars.GetHashCode();
-      if (BuffOne != 0) hash ^= BuffOne.GetHashCode();
-      if (BuffTwo != 0) hash ^= BuffTwo.GetHashCode();
-      if (Level != 0) hash ^= Level.GetHashCode();
       if (ScoreId != 0) hash ^= ScoreId.GetHashCode();
       hash ^= lineupList_.GetHashCode();
+      if (BuffOne != 0) hash ^= BuffOne.GetHashCode();
+      if (BuffTwo != 0) hash ^= BuffTwo.GetHashCode();
+      if (BattleRecordStars != 0) hash ^= BattleRecordStars.GetHashCode();
+      if (Level != 0) hash ^= Level.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -215,25 +215,25 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       lineupList_.WriteTo(output, _repeated_lineupList_codec);
-      if (BattleRecordStars != 0) {
+      if (Level != 0) {
         output.WriteRawTag(24);
+        output.WriteUInt32(Level);
+      }
+      if (BattleRecordStars != 0) {
+        output.WriteRawTag(48);
         output.WriteUInt32(BattleRecordStars);
       }
+      if (BuffTwo != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(BuffTwo);
+      }
       if (ScoreId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(72);
         output.WriteUInt32(ScoreId);
       }
       if (BuffOne != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(88);
         output.WriteUInt32(BuffOne);
-      }
-      if (BuffTwo != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(BuffTwo);
-      }
-      if (Level != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(Level);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -246,25 +246,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       lineupList_.WriteTo(ref output, _repeated_lineupList_codec);
-      if (BattleRecordStars != 0) {
+      if (Level != 0) {
         output.WriteRawTag(24);
+        output.WriteUInt32(Level);
+      }
+      if (BattleRecordStars != 0) {
+        output.WriteRawTag(48);
         output.WriteUInt32(BattleRecordStars);
       }
+      if (BuffTwo != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(BuffTwo);
+      }
       if (ScoreId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(72);
         output.WriteUInt32(ScoreId);
       }
       if (BuffOne != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(88);
         output.WriteUInt32(BuffOne);
-      }
-      if (BuffTwo != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(BuffTwo);
-      }
-      if (Level != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(Level);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -276,22 +276,22 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (BattleRecordStars != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BattleRecordStars);
+      if (ScoreId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScoreId);
       }
+      size += lineupList_.CalculateSize(_repeated_lineupList_codec);
       if (BuffOne != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuffOne);
       }
       if (BuffTwo != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuffTwo);
       }
+      if (BattleRecordStars != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BattleRecordStars);
+      }
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
       }
-      if (ScoreId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScoreId);
-      }
-      size += lineupList_.CalculateSize(_repeated_lineupList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -304,22 +304,22 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.BattleRecordStars != 0) {
-        BattleRecordStars = other.BattleRecordStars;
+      if (other.ScoreId != 0) {
+        ScoreId = other.ScoreId;
       }
+      lineupList_.Add(other.lineupList_);
       if (other.BuffOne != 0) {
         BuffOne = other.BuffOne;
       }
       if (other.BuffTwo != 0) {
         BuffTwo = other.BuffTwo;
       }
+      if (other.BattleRecordStars != 0) {
+        BattleRecordStars = other.BattleRecordStars;
+      }
       if (other.Level != 0) {
         Level = other.Level;
       }
-      if (other.ScoreId != 0) {
-        ScoreId = other.ScoreId;
-      }
-      lineupList_.Add(other.lineupList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -340,23 +340,23 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 24: {
+            Level = input.ReadUInt32();
+            break;
+          }
+          case 48: {
             BattleRecordStars = input.ReadUInt32();
             break;
           }
-          case 56: {
-            ScoreId = input.ReadUInt32();
-            break;
-          }
-          case 72: {
-            BuffOne = input.ReadUInt32();
-            break;
-          }
-          case 112: {
+          case 64: {
             BuffTwo = input.ReadUInt32();
             break;
           }
-          case 120: {
-            Level = input.ReadUInt32();
+          case 72: {
+            ScoreId = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            BuffOne = input.ReadUInt32();
             break;
           }
         }
@@ -379,23 +379,23 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 24: {
+            Level = input.ReadUInt32();
+            break;
+          }
+          case 48: {
             BattleRecordStars = input.ReadUInt32();
             break;
           }
-          case 56: {
-            ScoreId = input.ReadUInt32();
-            break;
-          }
-          case 72: {
-            BuffOne = input.ReadUInt32();
-            break;
-          }
-          case 112: {
+          case 64: {
             BuffTwo = input.ReadUInt32();
             break;
           }
-          case 120: {
-            Level = input.ReadUInt32();
+          case 72: {
+            ScoreId = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            BuffOne = input.ReadUInt32();
             break;
           }
         }

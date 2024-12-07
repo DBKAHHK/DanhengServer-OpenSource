@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhNYXRlcmlhbFN1Ym1pdEluZm8ucHJvdG8icQoSTWF0ZXJpYWxTdWJtaXRJ",
-            "bmZvEhEKCWNvbXBsZXRlZBgFIAEoCBIXCg9iZWxvYm9nX3Nob3BfaWQYBCAB",
-            "KA0SHQoVaXNfZmlyc3RfcmV3YXJkX3Rha2VuGAYgASgIEhAKCHBhbmVsX2lk",
-            "GA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "bmZvEhAKCHBhbmVsX2lkGAYgASgNEh0KFWlzX2ZpcnN0X3Jld2FyZF90YWtl",
+            "bhgMIAEoCBIRCgljb21wbGV0ZWQYDiABKAgSFwoPYmVsb2JvZ19zaG9wX2lk",
+            "GAIgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MaterialSubmitInfo), global::EggLink.DanhengServer.Proto.MaterialSubmitInfo.Parser, new[]{ "Completed", "BelobogShopId", "IsFirstRewardTaken", "PanelId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MaterialSubmitInfo), global::EggLink.DanhengServer.Proto.MaterialSubmitInfo.Parser, new[]{ "PanelId", "IsFirstRewardTaken", "Completed", "BelobogShopId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MaterialSubmitInfo(MaterialSubmitInfo other) : this() {
+      panelId_ = other.panelId_;
+      isFirstRewardTaken_ = other.isFirstRewardTaken_;
       completed_ = other.completed_;
       belobogShopId_ = other.belobogShopId_;
-      isFirstRewardTaken_ = other.isFirstRewardTaken_;
-      panelId_ = other.panelId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,8 +87,32 @@ namespace EggLink.DanhengServer.Proto {
       return new MaterialSubmitInfo(this);
     }
 
+    /// <summary>Field number for the "panel_id" field.</summary>
+    public const int PanelIdFieldNumber = 6;
+    private uint panelId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PanelId {
+      get { return panelId_; }
+      set {
+        panelId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_first_reward_taken" field.</summary>
+    public const int IsFirstRewardTakenFieldNumber = 12;
+    private bool isFirstRewardTaken_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsFirstRewardTaken {
+      get { return isFirstRewardTaken_; }
+      set {
+        isFirstRewardTaken_ = value;
+      }
+    }
+
     /// <summary>Field number for the "completed" field.</summary>
-    public const int CompletedFieldNumber = 5;
+    public const int CompletedFieldNumber = 14;
     private bool completed_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "belobog_shop_id" field.</summary>
-    public const int BelobogShopIdFieldNumber = 4;
+    public const int BelobogShopIdFieldNumber = 2;
     private uint belobogShopId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -108,30 +132,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return belobogShopId_; }
       set {
         belobogShopId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "is_first_reward_taken" field.</summary>
-    public const int IsFirstRewardTakenFieldNumber = 6;
-    private bool isFirstRewardTaken_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsFirstRewardTaken {
-      get { return isFirstRewardTaken_; }
-      set {
-        isFirstRewardTaken_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "panel_id" field.</summary>
-    public const int PanelIdFieldNumber = 13;
-    private uint panelId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PanelId {
-      get { return panelId_; }
-      set {
-        panelId_ = value;
       }
     }
 
@@ -150,10 +150,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (PanelId != other.PanelId) return false;
+      if (IsFirstRewardTaken != other.IsFirstRewardTaken) return false;
       if (Completed != other.Completed) return false;
       if (BelobogShopId != other.BelobogShopId) return false;
-      if (IsFirstRewardTaken != other.IsFirstRewardTaken) return false;
-      if (PanelId != other.PanelId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,10 +161,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (PanelId != 0) hash ^= PanelId.GetHashCode();
+      if (IsFirstRewardTaken != false) hash ^= IsFirstRewardTaken.GetHashCode();
       if (Completed != false) hash ^= Completed.GetHashCode();
       if (BelobogShopId != 0) hash ^= BelobogShopId.GetHashCode();
-      if (IsFirstRewardTaken != false) hash ^= IsFirstRewardTaken.GetHashCode();
-      if (PanelId != 0) hash ^= PanelId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -184,20 +184,20 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (BelobogShopId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(16);
         output.WriteUInt32(BelobogShopId);
       }
-      if (Completed != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(Completed);
+      if (PanelId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(PanelId);
       }
       if (IsFirstRewardTaken != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(96);
         output.WriteBool(IsFirstRewardTaken);
       }
-      if (PanelId != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(PanelId);
+      if (Completed != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(Completed);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -210,20 +210,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (BelobogShopId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(16);
         output.WriteUInt32(BelobogShopId);
       }
-      if (Completed != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(Completed);
+      if (PanelId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(PanelId);
       }
       if (IsFirstRewardTaken != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(96);
         output.WriteBool(IsFirstRewardTaken);
       }
-      if (PanelId != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(PanelId);
+      if (Completed != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(Completed);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -235,17 +235,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (PanelId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PanelId);
+      }
+      if (IsFirstRewardTaken != false) {
+        size += 1 + 1;
+      }
       if (Completed != false) {
         size += 1 + 1;
       }
       if (BelobogShopId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BelobogShopId);
-      }
-      if (IsFirstRewardTaken != false) {
-        size += 1 + 1;
-      }
-      if (PanelId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PanelId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -259,17 +259,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.PanelId != 0) {
+        PanelId = other.PanelId;
+      }
+      if (other.IsFirstRewardTaken != false) {
+        IsFirstRewardTaken = other.IsFirstRewardTaken;
+      }
       if (other.Completed != false) {
         Completed = other.Completed;
       }
       if (other.BelobogShopId != 0) {
         BelobogShopId = other.BelobogShopId;
-      }
-      if (other.IsFirstRewardTaken != false) {
-        IsFirstRewardTaken = other.IsFirstRewardTaken;
-      }
-      if (other.PanelId != 0) {
-        PanelId = other.PanelId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -286,20 +286,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 16: {
             BelobogShopId = input.ReadUInt32();
             break;
           }
-          case 40: {
-            Completed = input.ReadBool();
+          case 48: {
+            PanelId = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 96: {
             IsFirstRewardTaken = input.ReadBool();
             break;
           }
-          case 104: {
-            PanelId = input.ReadUInt32();
+          case 112: {
+            Completed = input.ReadBool();
             break;
           }
         }
@@ -317,20 +317,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 16: {
             BelobogShopId = input.ReadUInt32();
             break;
           }
-          case 40: {
-            Completed = input.ReadBool();
+          case 48: {
+            PanelId = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 96: {
             IsFirstRewardTaken = input.ReadBool();
             break;
           }
-          case 104: {
-            PanelId = input.ReadUInt32();
+          case 112: {
+            Completed = input.ReadBool();
             break;
           }
         }

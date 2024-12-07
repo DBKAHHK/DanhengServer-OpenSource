@@ -14,25 +14,27 @@ public class PacketGetSceneMapInfoScRsp : BasePacket
     {
         var rsp = new GetSceneMapInfoScRsp
         {
-            FLEPBOMHCNE = req.FLEPBOMHCNE
+            PNBFDKENOJP = req.PNBFDKENOJP
         };
 
-        foreach (var entry in req.EntryIdList)
+        foreach (var floorId in req.FloorIdList)
         {
             var mazeMap = new SceneMapInfo
             {
-                EntryId = entry,
+                FloorId = floorId,
                 EntryStoryLineId = (uint)(player.StoryLineManager?.StoryLineData.CurStoryLineId ?? 0)
                 //DimensionId = (uint)(player.SceneInstance?.EntityLoader is StoryLineEntityLoader loader ? loader.DimensionId
                 //    : 0)
             };
-            GameData.MapEntranceData.TryGetValue((int)entry, out var mapData);
-            if (mapData == null)
+            var mapDatas = GameData.MapEntranceData.Values.Where(x => x.FloorID == floorId).ToList();
+
+            if (mapDatas.Count == 0)
             {
                 rsp.SceneMapInfo.Add(mazeMap);
                 continue;
             }
 
+            var mapData = mapDatas.RandomElement();
             GameData.GetFloorInfo(mapData.PlaneID, mapData.FloorID, out var floorInfo);
             if (floorInfo == null)
             {

@@ -22,11 +22,11 @@ internal class QueryGatewayHandler
             RegionName = config.GameServer.GameServerId,
             Ip = config.GameServer.PublicAddress,
             Port = config.GameServer.Port,
-            Msg = I18NManager.Translate("Server.Web.Maintain"),
+            LoginWhiteMsg = I18NManager.Translate("Server.Web.Maintain"),
             EnableVersionUpdate = true,
             EnableUploadBattleLog = true,
+            EnableDesignDataVersionUpdate = true,
             EnableWatermark = true,
-            PILJCFDPOPM = true,
             EnableAndroidMiddlePackage = true,
             NetworkDiagnostic = true,
             CloseRedeemCode = true

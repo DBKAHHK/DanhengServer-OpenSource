@@ -211,7 +211,7 @@ public class ChessRogueManager(PlayerInstance player) : BasePlayerManager(player
             AreaInfo = new ChessRogueAreaInfo
             {
                 Cell = new CellInfo(),
-                OMMBIAFIGMB = new NDFCFDPNEJB()
+                GOIGDICGLNM = new PHBMAJPCNLB()
             }
         };
 

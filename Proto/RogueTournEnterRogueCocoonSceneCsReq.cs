@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CipSb2d1ZVRvdXJuRW50ZXJSb2d1ZUNvY29vblNjZW5lQ3NSZXEucHJvdG8a",
-            "EUZIQkdDSkRDSktQLnByb3RvIqIBCiRSb2d1ZVRvdXJuRW50ZXJSb2d1ZUNv",
-            "Y29vblNjZW5lQ3NSZXESGAoQZGlmZmljdWx0eV9sZXZlbBgKIAEoDRIhCgth",
-            "dmF0YXJfbGlzdBgDIAMoCzIMLkZIQkdDSkRDSktQEhMKC0hCTElLUElDRUtF",
-            "GAEgASgIEhMKC0REQUNCTU9JR0NBGA8gASgNEhMKC0dFQkxMSEdBS0ZGGAwg",
-            "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "EUNLSEdGQ0FCSUZJLnByb3RvIp0BCiRSb2d1ZVRvdXJuRW50ZXJSb2d1ZUNv",
+            "Y29vblNjZW5lQ3NSZXESEwoLTk9GSkdMRktHRkkYDyABKA0SIQoLYXZhdGFy",
+            "X2xpc3QYByADKAsyDC5DS0hHRkNBQklGSRITCgtMTUNDUElQREhETRgDIAEo",
+            "DRITCgtPQUxPQkJKT0ZCSRgJIAEoDRITCgtPTkhIUExFS0hLSRgEIAEoCEIe",
+            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FHBGCJDCJKPReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CKHGFCABIFIReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournEnterRogueCocoonSceneCsReq), global::EggLink.DanhengServer.Proto.RogueTournEnterRogueCocoonSceneCsReq.Parser, new[]{ "DifficultyLevel", "AvatarList", "HBLIKPICEKE", "DDACBMOIGCA", "GEBLLHGAKFF" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournEnterRogueCocoonSceneCsReq), global::EggLink.DanhengServer.Proto.RogueTournEnterRogueCocoonSceneCsReq.Parser, new[]{ "NOFJGLFKGFI", "AvatarList", "LMCCPIPDHDM", "OALOBBJOFBI", "ONHHPLEKHKI" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,11 +75,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournEnterRogueCocoonSceneCsReq(RogueTournEnterRogueCocoonSceneCsReq other) : this() {
-      difficultyLevel_ = other.difficultyLevel_;
+      nOFJGLFKGFI_ = other.nOFJGLFKGFI_;
       avatarList_ = other.avatarList_.Clone();
-      hBLIKPICEKE_ = other.hBLIKPICEKE_;
-      dDACBMOIGCA_ = other.dDACBMOIGCA_;
-      gEBLLHGAKFF_ = other.gEBLLHGAKFF_;
+      lMCCPIPDHDM_ = other.lMCCPIPDHDM_;
+      oALOBBJOFBI_ = other.oALOBBJOFBI_;
+      oNHHPLEKHKI_ = other.oNHHPLEKHKI_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -89,62 +89,62 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournEnterRogueCocoonSceneCsReq(this);
     }
 
-    /// <summary>Field number for the "difficulty_level" field.</summary>
-    public const int DifficultyLevelFieldNumber = 10;
-    private uint difficultyLevel_;
+    /// <summary>Field number for the "NOFJGLFKGFI" field.</summary>
+    public const int NOFJGLFKGFIFieldNumber = 15;
+    private uint nOFJGLFKGFI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DifficultyLevel {
-      get { return difficultyLevel_; }
+    public uint NOFJGLFKGFI {
+      get { return nOFJGLFKGFI_; }
       set {
-        difficultyLevel_ = value;
+        nOFJGLFKGFI_ = value;
       }
     }
 
     /// <summary>Field number for the "avatar_list" field.</summary>
-    public const int AvatarListFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.FHBGCJDCJKP> _repeated_avatarList_codec
-        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.FHBGCJDCJKP.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FHBGCJDCJKP> avatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FHBGCJDCJKP>();
+    public const int AvatarListFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.CKHGFCABIFI> _repeated_avatarList_codec
+        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.CKHGFCABIFI.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CKHGFCABIFI> avatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CKHGFCABIFI>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FHBGCJDCJKP> AvatarList {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CKHGFCABIFI> AvatarList {
       get { return avatarList_; }
     }
 
-    /// <summary>Field number for the "HBLIKPICEKE" field.</summary>
-    public const int HBLIKPICEKEFieldNumber = 1;
-    private bool hBLIKPICEKE_;
+    /// <summary>Field number for the "LMCCPIPDHDM" field.</summary>
+    public const int LMCCPIPDHDMFieldNumber = 3;
+    private uint lMCCPIPDHDM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HBLIKPICEKE {
-      get { return hBLIKPICEKE_; }
+    public uint LMCCPIPDHDM {
+      get { return lMCCPIPDHDM_; }
       set {
-        hBLIKPICEKE_ = value;
+        lMCCPIPDHDM_ = value;
       }
     }
 
-    /// <summary>Field number for the "DDACBMOIGCA" field.</summary>
-    public const int DDACBMOIGCAFieldNumber = 15;
-    private uint dDACBMOIGCA_;
+    /// <summary>Field number for the "OALOBBJOFBI" field.</summary>
+    public const int OALOBBJOFBIFieldNumber = 9;
+    private uint oALOBBJOFBI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DDACBMOIGCA {
-      get { return dDACBMOIGCA_; }
+    public uint OALOBBJOFBI {
+      get { return oALOBBJOFBI_; }
       set {
-        dDACBMOIGCA_ = value;
+        oALOBBJOFBI_ = value;
       }
     }
 
-    /// <summary>Field number for the "GEBLLHGAKFF" field.</summary>
-    public const int GEBLLHGAKFFFieldNumber = 12;
-    private uint gEBLLHGAKFF_;
+    /// <summary>Field number for the "ONHHPLEKHKI" field.</summary>
+    public const int ONHHPLEKHKIFieldNumber = 4;
+    private bool oNHHPLEKHKI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GEBLLHGAKFF {
-      get { return gEBLLHGAKFF_; }
+    public bool ONHHPLEKHKI {
+      get { return oNHHPLEKHKI_; }
       set {
-        gEBLLHGAKFF_ = value;
+        oNHHPLEKHKI_ = value;
       }
     }
 
@@ -163,11 +163,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DifficultyLevel != other.DifficultyLevel) return false;
+      if (NOFJGLFKGFI != other.NOFJGLFKGFI) return false;
       if(!avatarList_.Equals(other.avatarList_)) return false;
-      if (HBLIKPICEKE != other.HBLIKPICEKE) return false;
-      if (DDACBMOIGCA != other.DDACBMOIGCA) return false;
-      if (GEBLLHGAKFF != other.GEBLLHGAKFF) return false;
+      if (LMCCPIPDHDM != other.LMCCPIPDHDM) return false;
+      if (OALOBBJOFBI != other.OALOBBJOFBI) return false;
+      if (ONHHPLEKHKI != other.ONHHPLEKHKI) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -175,11 +175,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (DifficultyLevel != 0) hash ^= DifficultyLevel.GetHashCode();
+      if (NOFJGLFKGFI != 0) hash ^= NOFJGLFKGFI.GetHashCode();
       hash ^= avatarList_.GetHashCode();
-      if (HBLIKPICEKE != false) hash ^= HBLIKPICEKE.GetHashCode();
-      if (DDACBMOIGCA != 0) hash ^= DDACBMOIGCA.GetHashCode();
-      if (GEBLLHGAKFF != 0) hash ^= GEBLLHGAKFF.GetHashCode();
+      if (LMCCPIPDHDM != 0) hash ^= LMCCPIPDHDM.GetHashCode();
+      if (OALOBBJOFBI != 0) hash ^= OALOBBJOFBI.GetHashCode();
+      if (ONHHPLEKHKI != false) hash ^= ONHHPLEKHKI.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -198,22 +198,22 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (HBLIKPICEKE != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(HBLIKPICEKE);
+      if (LMCCPIPDHDM != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(LMCCPIPDHDM);
+      }
+      if (ONHHPLEKHKI != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ONHHPLEKHKI);
       }
       avatarList_.WriteTo(output, _repeated_avatarList_codec);
-      if (DifficultyLevel != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(DifficultyLevel);
+      if (OALOBBJOFBI != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(OALOBBJOFBI);
       }
-      if (GEBLLHGAKFF != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(GEBLLHGAKFF);
-      }
-      if (DDACBMOIGCA != 0) {
+      if (NOFJGLFKGFI != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(DDACBMOIGCA);
+        output.WriteUInt32(NOFJGLFKGFI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -225,22 +225,22 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HBLIKPICEKE != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(HBLIKPICEKE);
+      if (LMCCPIPDHDM != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(LMCCPIPDHDM);
+      }
+      if (ONHHPLEKHKI != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ONHHPLEKHKI);
       }
       avatarList_.WriteTo(ref output, _repeated_avatarList_codec);
-      if (DifficultyLevel != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(DifficultyLevel);
+      if (OALOBBJOFBI != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(OALOBBJOFBI);
       }
-      if (GEBLLHGAKFF != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(GEBLLHGAKFF);
-      }
-      if (DDACBMOIGCA != 0) {
+      if (NOFJGLFKGFI != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(DDACBMOIGCA);
+        output.WriteUInt32(NOFJGLFKGFI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -252,18 +252,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (DifficultyLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DifficultyLevel);
+      if (NOFJGLFKGFI != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NOFJGLFKGFI);
       }
       size += avatarList_.CalculateSize(_repeated_avatarList_codec);
-      if (HBLIKPICEKE != false) {
+      if (LMCCPIPDHDM != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LMCCPIPDHDM);
+      }
+      if (OALOBBJOFBI != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OALOBBJOFBI);
+      }
+      if (ONHHPLEKHKI != false) {
         size += 1 + 1;
-      }
-      if (DDACBMOIGCA != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DDACBMOIGCA);
-      }
-      if (GEBLLHGAKFF != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GEBLLHGAKFF);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -277,18 +277,18 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.DifficultyLevel != 0) {
-        DifficultyLevel = other.DifficultyLevel;
+      if (other.NOFJGLFKGFI != 0) {
+        NOFJGLFKGFI = other.NOFJGLFKGFI;
       }
       avatarList_.Add(other.avatarList_);
-      if (other.HBLIKPICEKE != false) {
-        HBLIKPICEKE = other.HBLIKPICEKE;
+      if (other.LMCCPIPDHDM != 0) {
+        LMCCPIPDHDM = other.LMCCPIPDHDM;
       }
-      if (other.DDACBMOIGCA != 0) {
-        DDACBMOIGCA = other.DDACBMOIGCA;
+      if (other.OALOBBJOFBI != 0) {
+        OALOBBJOFBI = other.OALOBBJOFBI;
       }
-      if (other.GEBLLHGAKFF != 0) {
-        GEBLLHGAKFF = other.GEBLLHGAKFF;
+      if (other.ONHHPLEKHKI != false) {
+        ONHHPLEKHKI = other.ONHHPLEKHKI;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -305,24 +305,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            HBLIKPICEKE = input.ReadBool();
+          case 24: {
+            LMCCPIPDHDM = input.ReadUInt32();
             break;
           }
-          case 26: {
+          case 32: {
+            ONHHPLEKHKI = input.ReadBool();
+            break;
+          }
+          case 58: {
             avatarList_.AddEntriesFrom(input, _repeated_avatarList_codec);
             break;
           }
-          case 80: {
-            DifficultyLevel = input.ReadUInt32();
-            break;
-          }
-          case 96: {
-            GEBLLHGAKFF = input.ReadUInt32();
+          case 72: {
+            OALOBBJOFBI = input.ReadUInt32();
             break;
           }
           case 120: {
-            DDACBMOIGCA = input.ReadUInt32();
+            NOFJGLFKGFI = input.ReadUInt32();
             break;
           }
         }
@@ -340,24 +340,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            HBLIKPICEKE = input.ReadBool();
+          case 24: {
+            LMCCPIPDHDM = input.ReadUInt32();
             break;
           }
-          case 26: {
+          case 32: {
+            ONHHPLEKHKI = input.ReadBool();
+            break;
+          }
+          case 58: {
             avatarList_.AddEntriesFrom(ref input, _repeated_avatarList_codec);
             break;
           }
-          case 80: {
-            DifficultyLevel = input.ReadUInt32();
-            break;
-          }
-          case 96: {
-            GEBLLHGAKFF = input.ReadUInt32();
+          case 72: {
+            OALOBBJOFBI = input.ReadUInt32();
             break;
           }
           case 120: {
-            DDACBMOIGCA = input.ReadUInt32();
+            NOFJGLFKGFI = input.ReadUInt32();
             break;
           }
         }

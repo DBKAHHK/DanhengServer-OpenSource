@@ -24,21 +24,21 @@ namespace EggLink.DanhengServer.Proto {
     static ChessRogueCellReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRDaGVzc1JvZ3VlQ2VsbC5wcm90bxofQ2hlc3NSb2d1ZUJvYXJkQ2VsbFN0",
-            "YXR1cy5wcm90bxoVQ2VsbEFkdmFuY2VJbmZvLnByb3RvGh9DaGVzc1JvZ3Vl",
-            "Q2VsbFNwZWNpYWxUeXBlLnByb3RvIrgCCg5DaGVzc1JvZ3VlQ2VsbBINCgVw",
-            "b3NfeRgFIAEoDRITCgtpc191bmxvY2tlZBgHIAEoCBIPCgdyb29tX2lkGAEg",
-            "ASgNEhIKCmJsb2NrX3R5cGUYBiABKA0SEQoJaXNfdW5sb2NrGAggASgIEgoK",
-            "AmlkGAIgASgNEiQKCnN0YWdlX2luZm8YCSABKAsyEC5DZWxsQWR2YW5jZUlu",
-            "Zm8SDQoFcG9zX3gYAyABKA0SEwoLQUlCTUJLREFQRksYCyADKA0SLwoLY2Vs",
-            "bF9zdGF0dXMYDiABKA4yGi5DaGVzc1JvZ3VlQm9hcmRDZWxsU3RhdHVzEhEK",
-            "CW1hcmtfdHlwZRgKIAEoDRIwCgxzcGVjaWFsX3R5cGUYDCABKA4yGi5DaGVz",
-            "c1JvZ3VlQ2VsbFNwZWNpYWxUeXBlQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
-            "ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChRDaGVzc1JvZ3VlQ2VsbC5wcm90bxoVQ2VsbEFkdmFuY2VJbmZvLnByb3Rv",
+            "Gh9DaGVzc1JvZ3VlQ2VsbFNwZWNpYWxUeXBlLnByb3RvGh9DaGVzc1JvZ3Vl",
+            "Qm9hcmRDZWxsU3RhdHVzLnByb3RvIsUCCg5DaGVzc1JvZ3VlQ2VsbBIPCgdy",
+            "b29tX2lkGA8gASgNEhMKC05PQklPSUlGTkxGGAcgASgNEjAKDHNwZWNpYWxf",
+            "dHlwZRgCIAEoDjIaLkNoZXNzUm9ndWVDZWxsU3BlY2lhbFR5cGUSLwoLY2Vs",
+            "bF9zdGF0dXMYCiABKA4yGi5DaGVzc1JvZ3VlQm9hcmRDZWxsU3RhdHVzEhMK",
+            "C0tISUdBS0pDTExJGAwgASgNEhMKC0JGQ0JERU5NRUxEGA4gAygNEiQKCnN0",
+            "YWdlX2luZm8YDSABKAsyEC5DZWxsQWR2YW5jZUluZm8SCgoCaWQYBCABKA0S",
+            "EwoLT0JBRU9MQ0tCRkkYBiABKA0SEQoJaXNfdW5sb2NrGAsgASgIEhEKCW1h",
+            "cmtfdHlwZRgIIAEoDRITCgtpc191bmxvY2tlZBgJIAEoCEIeqgIbRWdnTGlu",
+            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.CellAdvanceInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CellAdvanceInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueCell), global::EggLink.DanhengServer.Proto.ChessRogueCell.Parser, new[]{ "PosY", "IsUnlocked", "RoomId", "BlockType", "IsUnlock", "Id", "StageInfo", "PosX", "AIBMBKDAPFK", "CellStatus", "MarkType", "SpecialType" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueCell), global::EggLink.DanhengServer.Proto.ChessRogueCell.Parser, new[]{ "RoomId", "NOBIOIIFNLF", "SpecialType", "CellStatus", "KHIGAKJCLLI", "BFCBDENMELD", "StageInfo", "Id", "OBAEOLCKBFI", "IsUnlock", "MarkType", "IsUnlocked" }, null, null, null, null)
           }));
     }
     #endregion
@@ -80,18 +80,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueCell(ChessRogueCell other) : this() {
-      posY_ = other.posY_;
-      isUnlocked_ = other.isUnlocked_;
       roomId_ = other.roomId_;
-      blockType_ = other.blockType_;
-      isUnlock_ = other.isUnlock_;
-      id_ = other.id_;
-      stageInfo_ = other.stageInfo_ != null ? other.stageInfo_.Clone() : null;
-      posX_ = other.posX_;
-      aIBMBKDAPFK_ = other.aIBMBKDAPFK_.Clone();
-      cellStatus_ = other.cellStatus_;
-      markType_ = other.markType_;
+      nOBIOIIFNLF_ = other.nOBIOIIFNLF_;
       specialType_ = other.specialType_;
+      cellStatus_ = other.cellStatus_;
+      kHIGAKJCLLI_ = other.kHIGAKJCLLI_;
+      bFCBDENMELD_ = other.bFCBDENMELD_.Clone();
+      stageInfo_ = other.stageInfo_ != null ? other.stageInfo_.Clone() : null;
+      id_ = other.id_;
+      oBAEOLCKBFI_ = other.oBAEOLCKBFI_;
+      isUnlock_ = other.isUnlock_;
+      markType_ = other.markType_;
+      isUnlocked_ = other.isUnlocked_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -101,32 +101,8 @@ namespace EggLink.DanhengServer.Proto {
       return new ChessRogueCell(this);
     }
 
-    /// <summary>Field number for the "pos_y" field.</summary>
-    public const int PosYFieldNumber = 5;
-    private uint posY_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PosY {
-      get { return posY_; }
-      set {
-        posY_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "is_unlocked" field.</summary>
-    public const int IsUnlockedFieldNumber = 7;
-    private bool isUnlocked_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsUnlocked {
-      get { return isUnlocked_; }
-      set {
-        isUnlocked_ = value;
-      }
-    }
-
     /// <summary>Field number for the "room_id" field.</summary>
-    public const int RoomIdFieldNumber = 1;
+    public const int RoomIdFieldNumber = 15;
     private uint roomId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,79 +113,32 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "block_type" field.</summary>
-    public const int BlockTypeFieldNumber = 6;
-    private uint blockType_;
+    /// <summary>Field number for the "NOBIOIIFNLF" field.</summary>
+    public const int NOBIOIIFNLFFieldNumber = 7;
+    private uint nOBIOIIFNLF_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BlockType {
-      get { return blockType_; }
+    public uint NOBIOIIFNLF {
+      get { return nOBIOIIFNLF_; }
       set {
-        blockType_ = value;
+        nOBIOIIFNLF_ = value;
       }
     }
 
-    /// <summary>Field number for the "is_unlock" field.</summary>
-    public const int IsUnlockFieldNumber = 8;
-    private bool isUnlock_;
+    /// <summary>Field number for the "special_type" field.</summary>
+    public const int SpecialTypeFieldNumber = 2;
+    private global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialType specialType_ = global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsUnlock {
-      get { return isUnlock_; }
+    public global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialType SpecialType {
+      get { return specialType_; }
       set {
-        isUnlock_ = value;
+        specialType_ = value;
       }
-    }
-
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 2;
-    private uint id_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Id {
-      get { return id_; }
-      set {
-        id_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "stage_info" field.</summary>
-    public const int StageInfoFieldNumber = 9;
-    private global::EggLink.DanhengServer.Proto.CellAdvanceInfo stageInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.CellAdvanceInfo StageInfo {
-      get { return stageInfo_; }
-      set {
-        stageInfo_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "pos_x" field.</summary>
-    public const int PosXFieldNumber = 3;
-    private uint posX_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PosX {
-      get { return posX_; }
-      set {
-        posX_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "AIBMBKDAPFK" field.</summary>
-    public const int AIBMBKDAPFKFieldNumber = 11;
-    private static readonly pb::FieldCodec<uint> _repeated_aIBMBKDAPFK_codec
-        = pb::FieldCodec.ForUInt32(90);
-    private readonly pbc::RepeatedField<uint> aIBMBKDAPFK_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> AIBMBKDAPFK {
-      get { return aIBMBKDAPFK_; }
     }
 
     /// <summary>Field number for the "cell_status" field.</summary>
-    public const int CellStatusFieldNumber = 14;
+    public const int CellStatusFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus cellStatus_ = global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus.Idle;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -220,8 +149,79 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "KHIGAKJCLLI" field.</summary>
+    public const int KHIGAKJCLLIFieldNumber = 12;
+    private uint kHIGAKJCLLI_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint KHIGAKJCLLI {
+      get { return kHIGAKJCLLI_; }
+      set {
+        kHIGAKJCLLI_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "BFCBDENMELD" field.</summary>
+    public const int BFCBDENMELDFieldNumber = 14;
+    private static readonly pb::FieldCodec<uint> _repeated_bFCBDENMELD_codec
+        = pb::FieldCodec.ForUInt32(114);
+    private readonly pbc::RepeatedField<uint> bFCBDENMELD_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> BFCBDENMELD {
+      get { return bFCBDENMELD_; }
+    }
+
+    /// <summary>Field number for the "stage_info" field.</summary>
+    public const int StageInfoFieldNumber = 13;
+    private global::EggLink.DanhengServer.Proto.CellAdvanceInfo stageInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.CellAdvanceInfo StageInfo {
+      get { return stageInfo_; }
+      set {
+        stageInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 4;
+    private uint id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Id {
+      get { return id_; }
+      set {
+        id_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "OBAEOLCKBFI" field.</summary>
+    public const int OBAEOLCKBFIFieldNumber = 6;
+    private uint oBAEOLCKBFI_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint OBAEOLCKBFI {
+      get { return oBAEOLCKBFI_; }
+      set {
+        oBAEOLCKBFI_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_unlock" field.</summary>
+    public const int IsUnlockFieldNumber = 11;
+    private bool isUnlock_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsUnlock {
+      get { return isUnlock_; }
+      set {
+        isUnlock_ = value;
+      }
+    }
+
     /// <summary>Field number for the "mark_type" field.</summary>
-    public const int MarkTypeFieldNumber = 10;
+    public const int MarkTypeFieldNumber = 8;
     private uint markType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -232,15 +232,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "special_type" field.</summary>
-    public const int SpecialTypeFieldNumber = 12;
-    private global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialType specialType_ = global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialType.None;
+    /// <summary>Field number for the "is_unlocked" field.</summary>
+    public const int IsUnlockedFieldNumber = 9;
+    private bool isUnlocked_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialType SpecialType {
-      get { return specialType_; }
+    public bool IsUnlocked {
+      get { return isUnlocked_; }
       set {
-        specialType_ = value;
+        isUnlocked_ = value;
       }
     }
 
@@ -259,18 +259,18 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (PosY != other.PosY) return false;
-      if (IsUnlocked != other.IsUnlocked) return false;
       if (RoomId != other.RoomId) return false;
-      if (BlockType != other.BlockType) return false;
-      if (IsUnlock != other.IsUnlock) return false;
-      if (Id != other.Id) return false;
-      if (!object.Equals(StageInfo, other.StageInfo)) return false;
-      if (PosX != other.PosX) return false;
-      if(!aIBMBKDAPFK_.Equals(other.aIBMBKDAPFK_)) return false;
-      if (CellStatus != other.CellStatus) return false;
-      if (MarkType != other.MarkType) return false;
+      if (NOBIOIIFNLF != other.NOBIOIIFNLF) return false;
       if (SpecialType != other.SpecialType) return false;
+      if (CellStatus != other.CellStatus) return false;
+      if (KHIGAKJCLLI != other.KHIGAKJCLLI) return false;
+      if(!bFCBDENMELD_.Equals(other.bFCBDENMELD_)) return false;
+      if (!object.Equals(StageInfo, other.StageInfo)) return false;
+      if (Id != other.Id) return false;
+      if (OBAEOLCKBFI != other.OBAEOLCKBFI) return false;
+      if (IsUnlock != other.IsUnlock) return false;
+      if (MarkType != other.MarkType) return false;
+      if (IsUnlocked != other.IsUnlocked) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -278,18 +278,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (PosY != 0) hash ^= PosY.GetHashCode();
-      if (IsUnlocked != false) hash ^= IsUnlocked.GetHashCode();
       if (RoomId != 0) hash ^= RoomId.GetHashCode();
-      if (BlockType != 0) hash ^= BlockType.GetHashCode();
-      if (IsUnlock != false) hash ^= IsUnlock.GetHashCode();
-      if (Id != 0) hash ^= Id.GetHashCode();
-      if (stageInfo_ != null) hash ^= StageInfo.GetHashCode();
-      if (PosX != 0) hash ^= PosX.GetHashCode();
-      hash ^= aIBMBKDAPFK_.GetHashCode();
-      if (CellStatus != global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus.Idle) hash ^= CellStatus.GetHashCode();
-      if (MarkType != 0) hash ^= MarkType.GetHashCode();
+      if (NOBIOIIFNLF != 0) hash ^= NOBIOIIFNLF.GetHashCode();
       if (SpecialType != global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialType.None) hash ^= SpecialType.GetHashCode();
+      if (CellStatus != global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus.Idle) hash ^= CellStatus.GetHashCode();
+      if (KHIGAKJCLLI != 0) hash ^= KHIGAKJCLLI.GetHashCode();
+      hash ^= bFCBDENMELD_.GetHashCode();
+      if (stageInfo_ != null) hash ^= StageInfo.GetHashCode();
+      if (Id != 0) hash ^= Id.GetHashCode();
+      if (OBAEOLCKBFI != 0) hash ^= OBAEOLCKBFI.GetHashCode();
+      if (IsUnlock != false) hash ^= IsUnlock.GetHashCode();
+      if (MarkType != 0) hash ^= MarkType.GetHashCode();
+      if (IsUnlocked != false) hash ^= IsUnlocked.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -308,50 +308,50 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (RoomId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(RoomId);
-      }
-      if (Id != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(Id);
-      }
-      if (PosX != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(PosX);
-      }
-      if (PosY != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(PosY);
-      }
-      if (BlockType != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(BlockType);
-      }
-      if (IsUnlocked != false) {
-        output.WriteRawTag(56);
-        output.WriteBool(IsUnlocked);
-      }
-      if (IsUnlock != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(IsUnlock);
-      }
-      if (stageInfo_ != null) {
-        output.WriteRawTag(74);
-        output.WriteMessage(StageInfo);
-      }
-      if (MarkType != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(MarkType);
-      }
-      aIBMBKDAPFK_.WriteTo(output, _repeated_aIBMBKDAPFK_codec);
       if (SpecialType != global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialType.None) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(16);
         output.WriteEnum((int) SpecialType);
       }
+      if (Id != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(Id);
+      }
+      if (OBAEOLCKBFI != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(OBAEOLCKBFI);
+      }
+      if (NOBIOIIFNLF != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(NOBIOIIFNLF);
+      }
+      if (MarkType != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(MarkType);
+      }
+      if (IsUnlocked != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(IsUnlocked);
+      }
       if (CellStatus != global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus.Idle) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(80);
         output.WriteEnum((int) CellStatus);
+      }
+      if (IsUnlock != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(IsUnlock);
+      }
+      if (KHIGAKJCLLI != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(KHIGAKJCLLI);
+      }
+      if (stageInfo_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(StageInfo);
+      }
+      bFCBDENMELD_.WriteTo(output, _repeated_bFCBDENMELD_codec);
+      if (RoomId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(RoomId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -363,50 +363,50 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (RoomId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(RoomId);
-      }
-      if (Id != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(Id);
-      }
-      if (PosX != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(PosX);
-      }
-      if (PosY != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(PosY);
-      }
-      if (BlockType != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(BlockType);
-      }
-      if (IsUnlocked != false) {
-        output.WriteRawTag(56);
-        output.WriteBool(IsUnlocked);
-      }
-      if (IsUnlock != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(IsUnlock);
-      }
-      if (stageInfo_ != null) {
-        output.WriteRawTag(74);
-        output.WriteMessage(StageInfo);
-      }
-      if (MarkType != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(MarkType);
-      }
-      aIBMBKDAPFK_.WriteTo(ref output, _repeated_aIBMBKDAPFK_codec);
       if (SpecialType != global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialType.None) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(16);
         output.WriteEnum((int) SpecialType);
       }
+      if (Id != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(Id);
+      }
+      if (OBAEOLCKBFI != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(OBAEOLCKBFI);
+      }
+      if (NOBIOIIFNLF != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(NOBIOIIFNLF);
+      }
+      if (MarkType != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(MarkType);
+      }
+      if (IsUnlocked != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(IsUnlocked);
+      }
       if (CellStatus != global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus.Idle) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(80);
         output.WriteEnum((int) CellStatus);
+      }
+      if (IsUnlock != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(IsUnlock);
+      }
+      if (KHIGAKJCLLI != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(KHIGAKJCLLI);
+      }
+      if (stageInfo_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(StageInfo);
+      }
+      bFCBDENMELD_.WriteTo(ref output, _repeated_bFCBDENMELD_codec);
+      if (RoomId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(RoomId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -418,39 +418,39 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (PosY != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PosY);
-      }
-      if (IsUnlocked != false) {
-        size += 1 + 1;
-      }
       if (RoomId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RoomId);
       }
-      if (BlockType != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BlockType);
+      if (NOBIOIIFNLF != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NOBIOIIFNLF);
       }
-      if (IsUnlock != false) {
-        size += 1 + 1;
+      if (SpecialType != global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialType.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SpecialType);
+      }
+      if (CellStatus != global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus.Idle) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CellStatus);
+      }
+      if (KHIGAKJCLLI != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KHIGAKJCLLI);
+      }
+      size += bFCBDENMELD_.CalculateSize(_repeated_bFCBDENMELD_codec);
+      if (stageInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StageInfo);
       }
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
       }
-      if (stageInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StageInfo);
+      if (OBAEOLCKBFI != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OBAEOLCKBFI);
       }
-      if (PosX != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PosX);
-      }
-      size += aIBMBKDAPFK_.CalculateSize(_repeated_aIBMBKDAPFK_codec);
-      if (CellStatus != global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus.Idle) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CellStatus);
+      if (IsUnlock != false) {
+        size += 1 + 1;
       }
       if (MarkType != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MarkType);
       }
-      if (SpecialType != global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialType.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SpecialType);
+      if (IsUnlocked != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -464,42 +464,42 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.PosY != 0) {
-        PosY = other.PosY;
-      }
-      if (other.IsUnlocked != false) {
-        IsUnlocked = other.IsUnlocked;
-      }
       if (other.RoomId != 0) {
         RoomId = other.RoomId;
       }
-      if (other.BlockType != 0) {
-        BlockType = other.BlockType;
+      if (other.NOBIOIIFNLF != 0) {
+        NOBIOIIFNLF = other.NOBIOIIFNLF;
       }
-      if (other.IsUnlock != false) {
-        IsUnlock = other.IsUnlock;
+      if (other.SpecialType != global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialType.None) {
+        SpecialType = other.SpecialType;
       }
-      if (other.Id != 0) {
-        Id = other.Id;
+      if (other.CellStatus != global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus.Idle) {
+        CellStatus = other.CellStatus;
       }
+      if (other.KHIGAKJCLLI != 0) {
+        KHIGAKJCLLI = other.KHIGAKJCLLI;
+      }
+      bFCBDENMELD_.Add(other.bFCBDENMELD_);
       if (other.stageInfo_ != null) {
         if (stageInfo_ == null) {
           StageInfo = new global::EggLink.DanhengServer.Proto.CellAdvanceInfo();
         }
         StageInfo.MergeFrom(other.StageInfo);
       }
-      if (other.PosX != 0) {
-        PosX = other.PosX;
+      if (other.Id != 0) {
+        Id = other.Id;
       }
-      aIBMBKDAPFK_.Add(other.aIBMBKDAPFK_);
-      if (other.CellStatus != global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus.Idle) {
-        CellStatus = other.CellStatus;
+      if (other.OBAEOLCKBFI != 0) {
+        OBAEOLCKBFI = other.OBAEOLCKBFI;
+      }
+      if (other.IsUnlock != false) {
+        IsUnlock = other.IsUnlock;
       }
       if (other.MarkType != 0) {
         MarkType = other.MarkType;
       }
-      if (other.SpecialType != global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialType.None) {
-        SpecialType = other.SpecialType;
+      if (other.IsUnlocked != false) {
+        IsUnlocked = other.IsUnlocked;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -516,56 +516,56 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            RoomId = input.ReadUInt32();
+          case 16: {
+            SpecialType = (global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialType) input.ReadEnum();
             break;
           }
-          case 16: {
+          case 32: {
             Id = input.ReadUInt32();
             break;
           }
-          case 24: {
-            PosX = input.ReadUInt32();
-            break;
-          }
-          case 40: {
-            PosY = input.ReadUInt32();
-            break;
-          }
           case 48: {
-            BlockType = input.ReadUInt32();
+            OBAEOLCKBFI = input.ReadUInt32();
             break;
           }
           case 56: {
-            IsUnlocked = input.ReadBool();
+            NOBIOIIFNLF = input.ReadUInt32();
             break;
           }
           case 64: {
+            MarkType = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            IsUnlocked = input.ReadBool();
+            break;
+          }
+          case 80: {
+            CellStatus = (global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus) input.ReadEnum();
+            break;
+          }
+          case 88: {
             IsUnlock = input.ReadBool();
             break;
           }
-          case 74: {
+          case 96: {
+            KHIGAKJCLLI = input.ReadUInt32();
+            break;
+          }
+          case 106: {
             if (stageInfo_ == null) {
               StageInfo = new global::EggLink.DanhengServer.Proto.CellAdvanceInfo();
             }
             input.ReadMessage(StageInfo);
             break;
           }
-          case 80: {
-            MarkType = input.ReadUInt32();
-            break;
-          }
-          case 90:
-          case 88: {
-            aIBMBKDAPFK_.AddEntriesFrom(input, _repeated_aIBMBKDAPFK_codec);
-            break;
-          }
-          case 96: {
-            SpecialType = (global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialType) input.ReadEnum();
-            break;
-          }
+          case 114:
           case 112: {
-            CellStatus = (global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus) input.ReadEnum();
+            bFCBDENMELD_.AddEntriesFrom(input, _repeated_bFCBDENMELD_codec);
+            break;
+          }
+          case 120: {
+            RoomId = input.ReadUInt32();
             break;
           }
         }
@@ -583,56 +583,56 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            RoomId = input.ReadUInt32();
+          case 16: {
+            SpecialType = (global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialType) input.ReadEnum();
             break;
           }
-          case 16: {
+          case 32: {
             Id = input.ReadUInt32();
             break;
           }
-          case 24: {
-            PosX = input.ReadUInt32();
-            break;
-          }
-          case 40: {
-            PosY = input.ReadUInt32();
-            break;
-          }
           case 48: {
-            BlockType = input.ReadUInt32();
+            OBAEOLCKBFI = input.ReadUInt32();
             break;
           }
           case 56: {
-            IsUnlocked = input.ReadBool();
+            NOBIOIIFNLF = input.ReadUInt32();
             break;
           }
           case 64: {
+            MarkType = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            IsUnlocked = input.ReadBool();
+            break;
+          }
+          case 80: {
+            CellStatus = (global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus) input.ReadEnum();
+            break;
+          }
+          case 88: {
             IsUnlock = input.ReadBool();
             break;
           }
-          case 74: {
+          case 96: {
+            KHIGAKJCLLI = input.ReadUInt32();
+            break;
+          }
+          case 106: {
             if (stageInfo_ == null) {
               StageInfo = new global::EggLink.DanhengServer.Proto.CellAdvanceInfo();
             }
             input.ReadMessage(StageInfo);
             break;
           }
-          case 80: {
-            MarkType = input.ReadUInt32();
-            break;
-          }
-          case 90:
-          case 88: {
-            aIBMBKDAPFK_.AddEntriesFrom(ref input, _repeated_aIBMBKDAPFK_codec);
-            break;
-          }
-          case 96: {
-            SpecialType = (global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialType) input.ReadEnum();
-            break;
-          }
+          case 114:
           case 112: {
-            CellStatus = (global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatus) input.ReadEnum();
+            bFCBDENMELD_.AddEntriesFrom(ref input, _repeated_bFCBDENMELD_codec);
+            break;
+          }
+          case 120: {
+            RoomId = input.ReadUInt32();
             break;
           }
         }

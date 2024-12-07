@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhNYXJrQ2hhdEVtb2ppQ3NSZXEucHJvdG8iOwoSTWFya0NoYXRFbW9qaUNz",
-            "UmVxEhMKC0FBTU1ERkVCSU1QGAwgASgIEhAKCGV4dHJhX2lkGAEgASgNQh6q",
+            "UmVxEhMKC0dHSEtPUEJIRkFFGAwgASgIEhAKCGV4dHJhX2lkGAsgASgNQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarkChatEmojiCsReq), global::EggLink.DanhengServer.Proto.MarkChatEmojiCsReq.Parser, new[]{ "AAMMDFEBIMP", "ExtraId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarkChatEmojiCsReq), global::EggLink.DanhengServer.Proto.MarkChatEmojiCsReq.Parser, new[]{ "GGHKOPBHFAE", "ExtraId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MarkChatEmojiCsReq(MarkChatEmojiCsReq other) : this() {
-      aAMMDFEBIMP_ = other.aAMMDFEBIMP_;
+      gGHKOPBHFAE_ = other.gGHKOPBHFAE_;
       extraId_ = other.extraId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -83,20 +83,20 @@ namespace EggLink.DanhengServer.Proto {
       return new MarkChatEmojiCsReq(this);
     }
 
-    /// <summary>Field number for the "AAMMDFEBIMP" field.</summary>
-    public const int AAMMDFEBIMPFieldNumber = 12;
-    private bool aAMMDFEBIMP_;
+    /// <summary>Field number for the "GGHKOPBHFAE" field.</summary>
+    public const int GGHKOPBHFAEFieldNumber = 12;
+    private bool gGHKOPBHFAE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool AAMMDFEBIMP {
-      get { return aAMMDFEBIMP_; }
+    public bool GGHKOPBHFAE {
+      get { return gGHKOPBHFAE_; }
       set {
-        aAMMDFEBIMP_ = value;
+        gGHKOPBHFAE_ = value;
       }
     }
 
     /// <summary>Field number for the "extra_id" field.</summary>
-    public const int ExtraIdFieldNumber = 1;
+    public const int ExtraIdFieldNumber = 11;
     private uint extraId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (AAMMDFEBIMP != other.AAMMDFEBIMP) return false;
+      if (GGHKOPBHFAE != other.GGHKOPBHFAE) return false;
       if (ExtraId != other.ExtraId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -131,7 +131,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (AAMMDFEBIMP != false) hash ^= AAMMDFEBIMP.GetHashCode();
+      if (GGHKOPBHFAE != false) hash ^= GGHKOPBHFAE.GetHashCode();
       if (ExtraId != 0) hash ^= ExtraId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -152,12 +152,12 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (ExtraId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(88);
         output.WriteUInt32(ExtraId);
       }
-      if (AAMMDFEBIMP != false) {
+      if (GGHKOPBHFAE != false) {
         output.WriteRawTag(96);
-        output.WriteBool(AAMMDFEBIMP);
+        output.WriteBool(GGHKOPBHFAE);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,12 +170,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ExtraId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(88);
         output.WriteUInt32(ExtraId);
       }
-      if (AAMMDFEBIMP != false) {
+      if (GGHKOPBHFAE != false) {
         output.WriteRawTag(96);
-        output.WriteBool(AAMMDFEBIMP);
+        output.WriteBool(GGHKOPBHFAE);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (AAMMDFEBIMP != false) {
+      if (GGHKOPBHFAE != false) {
         size += 1 + 1;
       }
       if (ExtraId != 0) {
@@ -205,8 +205,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.AAMMDFEBIMP != false) {
-        AAMMDFEBIMP = other.AAMMDFEBIMP;
+      if (other.GGHKOPBHFAE != false) {
+        GGHKOPBHFAE = other.GGHKOPBHFAE;
       }
       if (other.ExtraId != 0) {
         ExtraId = other.ExtraId;
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 88: {
             ExtraId = input.ReadUInt32();
             break;
           }
           case 96: {
-            AAMMDFEBIMP = input.ReadBool();
+            GGHKOPBHFAE = input.ReadBool();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 88: {
             ExtraId = input.ReadUInt32();
             break;
           }
           case 96: {
-            AAMMDFEBIMP = input.ReadBool();
+            GGHKOPBHFAE = input.ReadBool();
             break;
           }
         }

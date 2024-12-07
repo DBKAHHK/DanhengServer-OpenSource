@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch9HZXRSb2d1ZVNob3BCdWZmSW5mb0NzUmVxLnByb3RvIlQKGUdldFJvZ3Vl",
             "U2hvcEJ1ZmZJbmZvQ3NSZXESIwobUFVOS19MT1JEX09QRVJBVElPTl9SRUZS",
-            "RVNIGAwgASgIEhIKCm1vbnN0ZXJfaWQYCCABKA1CHqoCG0VnZ0xpbmsuRGFu",
+            "RVNIGA8gASgIEhIKCm1vbnN0ZXJfaWQYBSABKA1CHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "PUNK_LORD_OPERATION_REFRESH" field.</summary>
-    public const int PUNKLORDOPERATIONREFRESHFieldNumber = 12;
+    public const int PUNKLORDOPERATIONREFRESHFieldNumber = 15;
     private bool pUNKLORDOPERATIONREFRESH_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "monster_id" field.</summary>
-    public const int MonsterIdFieldNumber = 8;
+    public const int MonsterIdFieldNumber = 5;
     private uint monsterId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (MonsterId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(40);
         output.WriteUInt32(MonsterId);
       }
       if (PUNKLORDOPERATIONREFRESH != false) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(120);
         output.WriteBool(PUNKLORDOPERATIONREFRESH);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MonsterId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(40);
         output.WriteUInt32(MonsterId);
       }
       if (PUNKLORDOPERATIONREFRESH != false) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(120);
         output.WriteBool(PUNKLORDOPERATIONREFRESH);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
+          case 40: {
             MonsterId = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 120: {
             PUNKLORDOPERATIONREFRESH = input.ReadBool();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
+          case 40: {
             MonsterId = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 120: {
             PUNKLORDOPERATIONREFRESH = input.ReadBool();
             break;
           }

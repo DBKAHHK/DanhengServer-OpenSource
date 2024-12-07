@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CixWaXJ0dWFsTGluZXVwVHJpYWxBdmF0YXJDaGFuZ2VTY05vdGlmeS5wcm90",
-            "byJkCiZWaXJ0dWFsTGluZXVwVHJpYWxBdmF0YXJDaGFuZ2VTY05vdGlmeRIT",
-            "CgtITkVMSURDTkNDQxgCIAMoDRITCgtOTEhGTExGUEVIRRgIIAMoDRIQCghw",
-            "bGFuZV9pZBgMIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
-            "YgZwcm90bzM="));
+            "byJ5CiZWaXJ0dWFsTGluZXVwVHJpYWxBdmF0YXJDaGFuZ2VTY05vdGlmeRIT",
+            "CgtDTEdLTENIRU9FQRgBIAEoCBIQCghwbGFuZV9pZBgGIAEoDRITCgtBQUVB",
+            "QUVPTkJPRRgIIAMoDRITCgtDR0tGT1BKQ0dMThgJIAMoDUIeqgIbRWdnTGlu",
+            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.VirtualLineupTrialAvatarChangeScNotify), global::EggLink.DanhengServer.Proto.VirtualLineupTrialAvatarChangeScNotify.Parser, new[]{ "HNELIDCNCCC", "NLHFLLFPEHE", "PlaneId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.VirtualLineupTrialAvatarChangeScNotify), global::EggLink.DanhengServer.Proto.VirtualLineupTrialAvatarChangeScNotify.Parser, new[]{ "CLGKLCHEOEA", "PlaneId", "AAEAAEONBOE", "CGKFOPJCGLN" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VirtualLineupTrialAvatarChangeScNotify(VirtualLineupTrialAvatarChangeScNotify other) : this() {
-      hNELIDCNCCC_ = other.hNELIDCNCCC_.Clone();
-      nLHFLLFPEHE_ = other.nLHFLLFPEHE_.Clone();
+      cLGKLCHEOEA_ = other.cLGKLCHEOEA_;
       planeId_ = other.planeId_;
+      aAEAAEONBOE_ = other.aAEAAEONBOE_.Clone();
+      cGKFOPJCGLN_ = other.cGKFOPJCGLN_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,30 +87,20 @@ namespace EggLink.DanhengServer.Proto {
       return new VirtualLineupTrialAvatarChangeScNotify(this);
     }
 
-    /// <summary>Field number for the "HNELIDCNCCC" field.</summary>
-    public const int HNELIDCNCCCFieldNumber = 2;
-    private static readonly pb::FieldCodec<uint> _repeated_hNELIDCNCCC_codec
-        = pb::FieldCodec.ForUInt32(18);
-    private readonly pbc::RepeatedField<uint> hNELIDCNCCC_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "CLGKLCHEOEA" field.</summary>
+    public const int CLGKLCHEOEAFieldNumber = 1;
+    private bool cLGKLCHEOEA_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> HNELIDCNCCC {
-      get { return hNELIDCNCCC_; }
-    }
-
-    /// <summary>Field number for the "NLHFLLFPEHE" field.</summary>
-    public const int NLHFLLFPEHEFieldNumber = 8;
-    private static readonly pb::FieldCodec<uint> _repeated_nLHFLLFPEHE_codec
-        = pb::FieldCodec.ForUInt32(66);
-    private readonly pbc::RepeatedField<uint> nLHFLLFPEHE_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> NLHFLLFPEHE {
-      get { return nLHFLLFPEHE_; }
+    public bool CLGKLCHEOEA {
+      get { return cLGKLCHEOEA_; }
+      set {
+        cLGKLCHEOEA_ = value;
+      }
     }
 
     /// <summary>Field number for the "plane_id" field.</summary>
-    public const int PlaneIdFieldNumber = 12;
+    public const int PlaneIdFieldNumber = 6;
     private uint planeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -118,6 +109,28 @@ namespace EggLink.DanhengServer.Proto {
       set {
         planeId_ = value;
       }
+    }
+
+    /// <summary>Field number for the "AAEAAEONBOE" field.</summary>
+    public const int AAEAAEONBOEFieldNumber = 8;
+    private static readonly pb::FieldCodec<uint> _repeated_aAEAAEONBOE_codec
+        = pb::FieldCodec.ForUInt32(66);
+    private readonly pbc::RepeatedField<uint> aAEAAEONBOE_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> AAEAAEONBOE {
+      get { return aAEAAEONBOE_; }
+    }
+
+    /// <summary>Field number for the "CGKFOPJCGLN" field.</summary>
+    public const int CGKFOPJCGLNFieldNumber = 9;
+    private static readonly pb::FieldCodec<uint> _repeated_cGKFOPJCGLN_codec
+        = pb::FieldCodec.ForUInt32(74);
+    private readonly pbc::RepeatedField<uint> cGKFOPJCGLN_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> CGKFOPJCGLN {
+      get { return cGKFOPJCGLN_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -135,9 +148,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!hNELIDCNCCC_.Equals(other.hNELIDCNCCC_)) return false;
-      if(!nLHFLLFPEHE_.Equals(other.nLHFLLFPEHE_)) return false;
+      if (CLGKLCHEOEA != other.CLGKLCHEOEA) return false;
       if (PlaneId != other.PlaneId) return false;
+      if(!aAEAAEONBOE_.Equals(other.aAEAAEONBOE_)) return false;
+      if(!cGKFOPJCGLN_.Equals(other.cGKFOPJCGLN_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,9 +159,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= hNELIDCNCCC_.GetHashCode();
-      hash ^= nLHFLLFPEHE_.GetHashCode();
+      if (CLGKLCHEOEA != false) hash ^= CLGKLCHEOEA.GetHashCode();
       if (PlaneId != 0) hash ^= PlaneId.GetHashCode();
+      hash ^= aAEAAEONBOE_.GetHashCode();
+      hash ^= cGKFOPJCGLN_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,12 +181,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      hNELIDCNCCC_.WriteTo(output, _repeated_hNELIDCNCCC_codec);
-      nLHFLLFPEHE_.WriteTo(output, _repeated_nLHFLLFPEHE_codec);
+      if (CLGKLCHEOEA != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(CLGKLCHEOEA);
+      }
       if (PlaneId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(48);
         output.WriteUInt32(PlaneId);
       }
+      aAEAAEONBOE_.WriteTo(output, _repeated_aAEAAEONBOE_codec);
+      cGKFOPJCGLN_.WriteTo(output, _repeated_cGKFOPJCGLN_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -182,12 +201,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      hNELIDCNCCC_.WriteTo(ref output, _repeated_hNELIDCNCCC_codec);
-      nLHFLLFPEHE_.WriteTo(ref output, _repeated_nLHFLLFPEHE_codec);
+      if (CLGKLCHEOEA != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(CLGKLCHEOEA);
+      }
       if (PlaneId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(48);
         output.WriteUInt32(PlaneId);
       }
+      aAEAAEONBOE_.WriteTo(ref output, _repeated_aAEAAEONBOE_codec);
+      cGKFOPJCGLN_.WriteTo(ref output, _repeated_cGKFOPJCGLN_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -198,11 +221,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += hNELIDCNCCC_.CalculateSize(_repeated_hNELIDCNCCC_codec);
-      size += nLHFLLFPEHE_.CalculateSize(_repeated_nLHFLLFPEHE_codec);
+      if (CLGKLCHEOEA != false) {
+        size += 1 + 1;
+      }
       if (PlaneId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PlaneId);
       }
+      size += aAEAAEONBOE_.CalculateSize(_repeated_aAEAAEONBOE_codec);
+      size += cGKFOPJCGLN_.CalculateSize(_repeated_cGKFOPJCGLN_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -215,11 +241,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      hNELIDCNCCC_.Add(other.hNELIDCNCCC_);
-      nLHFLLFPEHE_.Add(other.nLHFLLFPEHE_);
+      if (other.CLGKLCHEOEA != false) {
+        CLGKLCHEOEA = other.CLGKLCHEOEA;
+      }
       if (other.PlaneId != 0) {
         PlaneId = other.PlaneId;
       }
+      aAEAAEONBOE_.Add(other.aAEAAEONBOE_);
+      cGKFOPJCGLN_.Add(other.cGKFOPJCGLN_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -235,18 +264,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18:
-          case 16: {
-            hNELIDCNCCC_.AddEntriesFrom(input, _repeated_hNELIDCNCCC_codec);
+          case 8: {
+            CLGKLCHEOEA = input.ReadBool();
+            break;
+          }
+          case 48: {
+            PlaneId = input.ReadUInt32();
             break;
           }
           case 66:
           case 64: {
-            nLHFLLFPEHE_.AddEntriesFrom(input, _repeated_nLHFLLFPEHE_codec);
+            aAEAAEONBOE_.AddEntriesFrom(input, _repeated_aAEAAEONBOE_codec);
             break;
           }
-          case 96: {
-            PlaneId = input.ReadUInt32();
+          case 74:
+          case 72: {
+            cGKFOPJCGLN_.AddEntriesFrom(input, _repeated_cGKFOPJCGLN_codec);
             break;
           }
         }
@@ -264,18 +297,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18:
-          case 16: {
-            hNELIDCNCCC_.AddEntriesFrom(ref input, _repeated_hNELIDCNCCC_codec);
+          case 8: {
+            CLGKLCHEOEA = input.ReadBool();
+            break;
+          }
+          case 48: {
+            PlaneId = input.ReadUInt32();
             break;
           }
           case 66:
           case 64: {
-            nLHFLLFPEHE_.AddEntriesFrom(ref input, _repeated_nLHFLLFPEHE_codec);
+            aAEAAEONBOE_.AddEntriesFrom(ref input, _repeated_aAEAAEONBOE_codec);
             break;
           }
-          case 96: {
-            PlaneId = input.ReadUInt32();
+          case 74:
+          case 72: {
+            cGKFOPJCGLN_.AddEntriesFrom(ref input, _repeated_cGKFOPJCGLN_codec);
             break;
           }
         }

@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxSb2d1ZU1pcmFjbGVTZWxlY3RJbmZvLnByb3RvImwKFlJvZ3VlTWlyYWNs",
-            "ZVNlbGVjdEluZm8SGwoTc2VsZWN0X21pcmFjbGVfbGlzdBgPIAMoDRIdChVt",
-            "aXJhY2xlX2hhbmRib29rX2xpc3QYDSADKA0SFgoOc2VsZWN0X2hpbnRfaWQY",
-            "BSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ZVNlbGVjdEluZm8SHQoVbWlyYWNsZV9oYW5kYm9va19saXN0GAUgAygNEhsK",
+            "E3NlbGVjdF9taXJhY2xlX2xpc3QYDSADKA0SFgoOc2VsZWN0X2hpbnRfaWQY",
+            "DyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMiracleSelectInfo), global::EggLink.DanhengServer.Proto.RogueMiracleSelectInfo.Parser, new[]{ "SelectMiracleList", "MiracleHandbookList", "SelectHintId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMiracleSelectInfo), global::EggLink.DanhengServer.Proto.RogueMiracleSelectInfo.Parser, new[]{ "MiracleHandbookList", "SelectMiracleList", "SelectHintId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueMiracleSelectInfo(RogueMiracleSelectInfo other) : this() {
-      selectMiracleList_ = other.selectMiracleList_.Clone();
       miracleHandbookList_ = other.miracleHandbookList_.Clone();
+      selectMiracleList_ = other.selectMiracleList_.Clone();
       selectHintId_ = other.selectHintId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -85,21 +85,10 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueMiracleSelectInfo(this);
     }
 
-    /// <summary>Field number for the "select_miracle_list" field.</summary>
-    public const int SelectMiracleListFieldNumber = 15;
-    private static readonly pb::FieldCodec<uint> _repeated_selectMiracleList_codec
-        = pb::FieldCodec.ForUInt32(122);
-    private readonly pbc::RepeatedField<uint> selectMiracleList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> SelectMiracleList {
-      get { return selectMiracleList_; }
-    }
-
     /// <summary>Field number for the "miracle_handbook_list" field.</summary>
-    public const int MiracleHandbookListFieldNumber = 13;
+    public const int MiracleHandbookListFieldNumber = 5;
     private static readonly pb::FieldCodec<uint> _repeated_miracleHandbookList_codec
-        = pb::FieldCodec.ForUInt32(106);
+        = pb::FieldCodec.ForUInt32(42);
     private readonly pbc::RepeatedField<uint> miracleHandbookList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -107,8 +96,19 @@ namespace EggLink.DanhengServer.Proto {
       get { return miracleHandbookList_; }
     }
 
+    /// <summary>Field number for the "select_miracle_list" field.</summary>
+    public const int SelectMiracleListFieldNumber = 13;
+    private static readonly pb::FieldCodec<uint> _repeated_selectMiracleList_codec
+        = pb::FieldCodec.ForUInt32(106);
+    private readonly pbc::RepeatedField<uint> selectMiracleList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> SelectMiracleList {
+      get { return selectMiracleList_; }
+    }
+
     /// <summary>Field number for the "select_hint_id" field.</summary>
-    public const int SelectHintIdFieldNumber = 5;
+    public const int SelectHintIdFieldNumber = 15;
     private uint selectHintId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -134,8 +134,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!selectMiracleList_.Equals(other.selectMiracleList_)) return false;
       if(!miracleHandbookList_.Equals(other.miracleHandbookList_)) return false;
+      if(!selectMiracleList_.Equals(other.selectMiracleList_)) return false;
       if (SelectHintId != other.SelectHintId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -144,8 +144,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= selectMiracleList_.GetHashCode();
       hash ^= miracleHandbookList_.GetHashCode();
+      hash ^= selectMiracleList_.GetHashCode();
       if (SelectHintId != 0) hash ^= SelectHintId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -165,12 +165,12 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (SelectHintId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(SelectHintId);
-      }
       miracleHandbookList_.WriteTo(output, _repeated_miracleHandbookList_codec);
       selectMiracleList_.WriteTo(output, _repeated_selectMiracleList_codec);
+      if (SelectHintId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(SelectHintId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -181,12 +181,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (SelectHintId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(SelectHintId);
-      }
       miracleHandbookList_.WriteTo(ref output, _repeated_miracleHandbookList_codec);
       selectMiracleList_.WriteTo(ref output, _repeated_selectMiracleList_codec);
+      if (SelectHintId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(SelectHintId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -197,8 +197,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += selectMiracleList_.CalculateSize(_repeated_selectMiracleList_codec);
       size += miracleHandbookList_.CalculateSize(_repeated_miracleHandbookList_codec);
+      size += selectMiracleList_.CalculateSize(_repeated_selectMiracleList_codec);
       if (SelectHintId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SelectHintId);
       }
@@ -214,8 +214,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      selectMiracleList_.Add(other.selectMiracleList_);
       miracleHandbookList_.Add(other.miracleHandbookList_);
+      selectMiracleList_.Add(other.selectMiracleList_);
       if (other.SelectHintId != 0) {
         SelectHintId = other.SelectHintId;
       }
@@ -234,18 +234,18 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 42:
           case 40: {
-            SelectHintId = input.ReadUInt32();
+            miracleHandbookList_.AddEntriesFrom(input, _repeated_miracleHandbookList_codec);
             break;
           }
           case 106:
           case 104: {
-            miracleHandbookList_.AddEntriesFrom(input, _repeated_miracleHandbookList_codec);
+            selectMiracleList_.AddEntriesFrom(input, _repeated_selectMiracleList_codec);
             break;
           }
-          case 122:
           case 120: {
-            selectMiracleList_.AddEntriesFrom(input, _repeated_selectMiracleList_codec);
+            SelectHintId = input.ReadUInt32();
             break;
           }
         }
@@ -263,18 +263,18 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 42:
           case 40: {
-            SelectHintId = input.ReadUInt32();
+            miracleHandbookList_.AddEntriesFrom(ref input, _repeated_miracleHandbookList_codec);
             break;
           }
           case 106:
           case 104: {
-            miracleHandbookList_.AddEntriesFrom(ref input, _repeated_miracleHandbookList_codec);
+            selectMiracleList_.AddEntriesFrom(ref input, _repeated_selectMiracleList_codec);
             break;
           }
-          case 122:
           case 120: {
-            selectMiracleList_.AddEntriesFrom(ref input, _repeated_selectMiracleList_codec);
+            SelectHintId = input.ReadUInt32();
             break;
           }
         }

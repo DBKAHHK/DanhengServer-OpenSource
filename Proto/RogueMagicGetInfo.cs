@@ -24,24 +24,24 @@ namespace EggLink.DanhengServer.Proto {
     static RogueMagicGetInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdSb2d1ZU1hZ2ljR2V0SW5mby5wcm90bxobUm9ndWVNYWdpY1NjZXB0ZXJJ",
-            "bmZvLnByb3RvGhlSb2d1ZU1hZ2ljU3RvcnlJbmZvLnByb3RvGhhSb2d1ZU1h",
-            "Z2ljVW5pdEluZm8ucHJvdG8aGFJvZ3VlTWFnaWNBcmVhSW5mby5wcm90bxoa",
-            "Um9ndWVNYWdpY1RhbGVudEluZm8ucHJvdG8aHlJvZ3VlTWFnaWNEaWZmaWN1",
-            "bHR5SW5mby5wcm90byKBAwoRUm9ndWVNYWdpY0dldEluZm8SHgoWdW5sb2Nr",
-            "X3N0eWxlX3R5cGVfbGlzdBgNIAMoDRIoCgpzdG9yeV9pbmZvGAogASgLMhQu",
-            "Um9ndWVNYWdpY1N0b3J5SW5mbxI3Chpyb2d1ZV9tYWdpY191bml0X2luZm9f",
-            "bGlzdBgMIAMoCzITLlJvZ3VlTWFnaWNVbml0SW5mbxIyChVyb2d1ZV90b3Vy",
-            "bl9hcmVhX2luZm8YCSADKAsyEy5Sb2d1ZU1hZ2ljQXJlYUluZm8SNgoXcm9n",
-            "dWVfbWFnaWNfdGFsZW50X2luZm8YBiABKAsyFS5Sb2d1ZU1hZ2ljVGFsZW50",
-            "SW5mbxI9Ch1yb2d1ZV9tYWdpY19zY2VwdGVyX2luZm9fbGlzdBgDIAMoCzIW",
-            "LlJvZ3VlTWFnaWNTY2VwdGVySW5mbxI+Chtyb2d1ZV90b3Vybl9kaWZmaWN1",
-            "bHR5X2luZm8YByADKAsyGS5Sb2d1ZU1hZ2ljRGlmZmljdWx0eUluZm9CHqoC",
+            "ChdSb2d1ZU1hZ2ljR2V0SW5mby5wcm90bxoaUm9ndWVNYWdpY1RhbGVudElu",
+            "Zm8ucHJvdG8aHlJvZ3VlTWFnaWNEaWZmaWN1bHR5SW5mby5wcm90bxoYUm9n",
+            "dWVNYWdpY0FyZWFJbmZvLnByb3RvGhlSb2d1ZU1hZ2ljU3RvcnlJbmZvLnBy",
+            "b3RvGhtSb2d1ZU1hZ2ljU2NlcHRlckluZm8ucHJvdG8aGFJvZ3VlTWFnaWNV",
+            "bml0SW5mby5wcm90byKBAwoRUm9ndWVNYWdpY0dldEluZm8SHgoWdW5sb2Nr",
+            "X3N0eWxlX3R5cGVfbGlzdBgOIAMoDRI2Chdyb2d1ZV9tYWdpY190YWxlbnRf",
+            "aW5mbxgKIAEoCzIVLlJvZ3VlTWFnaWNUYWxlbnRJbmZvEjcKGnJvZ3VlX21h",
+            "Z2ljX3VuaXRfaW5mb19saXN0GAsgAygLMhMuUm9ndWVNYWdpY1VuaXRJbmZv",
+            "Ej0KHXJvZ3VlX21hZ2ljX3NjZXB0ZXJfaW5mb19saXN0GAUgAygLMhYuUm9n",
+            "dWVNYWdpY1NjZXB0ZXJJbmZvEj4KG3JvZ3VlX3RvdXJuX2RpZmZpY3VsdHlf",
+            "aW5mbxgJIAMoCzIZLlJvZ3VlTWFnaWNEaWZmaWN1bHR5SW5mbxIyChVyb2d1",
+            "ZV90b3Vybl9hcmVhX2luZm8YCCADKAsyEy5Sb2d1ZU1hZ2ljQXJlYUluZm8S",
+            "KAoKc3RvcnlfaW5mbxgDIAEoCzIULlJvZ3VlTWFnaWNTdG9yeUluZm9CHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicScepterInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicStoryInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicUnitInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicAreaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicTalentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicDifficultyInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicTalentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicDifficultyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicAreaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicStoryInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicScepterInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicUnitInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicGetInfo), global::EggLink.DanhengServer.Proto.RogueMagicGetInfo.Parser, new[]{ "UnlockStyleTypeList", "StoryInfo", "RogueMagicUnitInfoList", "RogueTournAreaInfo", "RogueMagicTalentInfo", "RogueMagicScepterInfoList", "RogueTournDifficultyInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicGetInfo), global::EggLink.DanhengServer.Proto.RogueMagicGetInfo.Parser, new[]{ "UnlockStyleTypeList", "RogueMagicTalentInfo", "RogueMagicUnitInfoList", "RogueMagicScepterInfoList", "RogueTournDifficultyInfo", "RogueTournAreaInfo", "StoryInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -84,12 +84,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueMagicGetInfo(RogueMagicGetInfo other) : this() {
       unlockStyleTypeList_ = other.unlockStyleTypeList_.Clone();
-      storyInfo_ = other.storyInfo_ != null ? other.storyInfo_.Clone() : null;
-      rogueMagicUnitInfoList_ = other.rogueMagicUnitInfoList_.Clone();
-      rogueTournAreaInfo_ = other.rogueTournAreaInfo_.Clone();
       rogueMagicTalentInfo_ = other.rogueMagicTalentInfo_ != null ? other.rogueMagicTalentInfo_.Clone() : null;
+      rogueMagicUnitInfoList_ = other.rogueMagicUnitInfoList_.Clone();
       rogueMagicScepterInfoList_ = other.rogueMagicScepterInfoList_.Clone();
       rogueTournDifficultyInfo_ = other.rogueTournDifficultyInfo_.Clone();
+      rogueTournAreaInfo_ = other.rogueTournAreaInfo_.Clone();
+      storyInfo_ = other.storyInfo_ != null ? other.storyInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -100,9 +100,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "unlock_style_type_list" field.</summary>
-    public const int UnlockStyleTypeListFieldNumber = 13;
+    public const int UnlockStyleTypeListFieldNumber = 14;
     private static readonly pb::FieldCodec<uint> _repeated_unlockStyleTypeList_codec
-        = pb::FieldCodec.ForUInt32(106);
+        = pb::FieldCodec.ForUInt32(114);
     private readonly pbc::RepeatedField<uint> unlockStyleTypeList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,42 +110,8 @@ namespace EggLink.DanhengServer.Proto {
       get { return unlockStyleTypeList_; }
     }
 
-    /// <summary>Field number for the "story_info" field.</summary>
-    public const int StoryInfoFieldNumber = 10;
-    private global::EggLink.DanhengServer.Proto.RogueMagicStoryInfo storyInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueMagicStoryInfo StoryInfo {
-      get { return storyInfo_; }
-      set {
-        storyInfo_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "rogue_magic_unit_info_list" field.</summary>
-    public const int RogueMagicUnitInfoListFieldNumber = 12;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueMagicUnitInfo> _repeated_rogueMagicUnitInfoList_codec
-        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.RogueMagicUnitInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicUnitInfo> rogueMagicUnitInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicUnitInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicUnitInfo> RogueMagicUnitInfoList {
-      get { return rogueMagicUnitInfoList_; }
-    }
-
-    /// <summary>Field number for the "rogue_tourn_area_info" field.</summary>
-    public const int RogueTournAreaInfoFieldNumber = 9;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueMagicAreaInfo> _repeated_rogueTournAreaInfo_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.RogueMagicAreaInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicAreaInfo> rogueTournAreaInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicAreaInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicAreaInfo> RogueTournAreaInfo {
-      get { return rogueTournAreaInfo_; }
-    }
-
     /// <summary>Field number for the "rogue_magic_talent_info" field.</summary>
-    public const int RogueMagicTalentInfoFieldNumber = 6;
+    public const int RogueMagicTalentInfoFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.RogueMagicTalentInfo rogueMagicTalentInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -156,10 +122,21 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "rogue_magic_unit_info_list" field.</summary>
+    public const int RogueMagicUnitInfoListFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueMagicUnitInfo> _repeated_rogueMagicUnitInfoList_codec
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.RogueMagicUnitInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicUnitInfo> rogueMagicUnitInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicUnitInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicUnitInfo> RogueMagicUnitInfoList {
+      get { return rogueMagicUnitInfoList_; }
+    }
+
     /// <summary>Field number for the "rogue_magic_scepter_info_list" field.</summary>
-    public const int RogueMagicScepterInfoListFieldNumber = 3;
+    public const int RogueMagicScepterInfoListFieldNumber = 5;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueMagicScepterInfo> _repeated_rogueMagicScepterInfoList_codec
-        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.RogueMagicScepterInfo.Parser);
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.RogueMagicScepterInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicScepterInfo> rogueMagicScepterInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicScepterInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -168,14 +145,37 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_tourn_difficulty_info" field.</summary>
-    public const int RogueTournDifficultyInfoFieldNumber = 7;
+    public const int RogueTournDifficultyInfoFieldNumber = 9;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueMagicDifficultyInfo> _repeated_rogueTournDifficultyInfo_codec
-        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.RogueMagicDifficultyInfo.Parser);
+        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.RogueMagicDifficultyInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicDifficultyInfo> rogueTournDifficultyInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicDifficultyInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicDifficultyInfo> RogueTournDifficultyInfo {
       get { return rogueTournDifficultyInfo_; }
+    }
+
+    /// <summary>Field number for the "rogue_tourn_area_info" field.</summary>
+    public const int RogueTournAreaInfoFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueMagicAreaInfo> _repeated_rogueTournAreaInfo_codec
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.RogueMagicAreaInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicAreaInfo> rogueTournAreaInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicAreaInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicAreaInfo> RogueTournAreaInfo {
+      get { return rogueTournAreaInfo_; }
+    }
+
+    /// <summary>Field number for the "story_info" field.</summary>
+    public const int StoryInfoFieldNumber = 3;
+    private global::EggLink.DanhengServer.Proto.RogueMagicStoryInfo storyInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueMagicStoryInfo StoryInfo {
+      get { return storyInfo_; }
+      set {
+        storyInfo_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -194,12 +194,12 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!unlockStyleTypeList_.Equals(other.unlockStyleTypeList_)) return false;
-      if (!object.Equals(StoryInfo, other.StoryInfo)) return false;
-      if(!rogueMagicUnitInfoList_.Equals(other.rogueMagicUnitInfoList_)) return false;
-      if(!rogueTournAreaInfo_.Equals(other.rogueTournAreaInfo_)) return false;
       if (!object.Equals(RogueMagicTalentInfo, other.RogueMagicTalentInfo)) return false;
+      if(!rogueMagicUnitInfoList_.Equals(other.rogueMagicUnitInfoList_)) return false;
       if(!rogueMagicScepterInfoList_.Equals(other.rogueMagicScepterInfoList_)) return false;
       if(!rogueTournDifficultyInfo_.Equals(other.rogueTournDifficultyInfo_)) return false;
+      if(!rogueTournAreaInfo_.Equals(other.rogueTournAreaInfo_)) return false;
+      if (!object.Equals(StoryInfo, other.StoryInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -208,12 +208,12 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= unlockStyleTypeList_.GetHashCode();
-      if (storyInfo_ != null) hash ^= StoryInfo.GetHashCode();
-      hash ^= rogueMagicUnitInfoList_.GetHashCode();
-      hash ^= rogueTournAreaInfo_.GetHashCode();
       if (rogueMagicTalentInfo_ != null) hash ^= RogueMagicTalentInfo.GetHashCode();
+      hash ^= rogueMagicUnitInfoList_.GetHashCode();
       hash ^= rogueMagicScepterInfoList_.GetHashCode();
       hash ^= rogueTournDifficultyInfo_.GetHashCode();
+      hash ^= rogueTournAreaInfo_.GetHashCode();
+      if (storyInfo_ != null) hash ^= StoryInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -232,16 +232,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      rogueMagicScepterInfoList_.WriteTo(output, _repeated_rogueMagicScepterInfoList_codec);
-      if (rogueMagicTalentInfo_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(RogueMagicTalentInfo);
-      }
-      rogueTournDifficultyInfo_.WriteTo(output, _repeated_rogueTournDifficultyInfo_codec);
-      rogueTournAreaInfo_.WriteTo(output, _repeated_rogueTournAreaInfo_codec);
       if (storyInfo_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(26);
         output.WriteMessage(StoryInfo);
+      }
+      rogueMagicScepterInfoList_.WriteTo(output, _repeated_rogueMagicScepterInfoList_codec);
+      rogueTournAreaInfo_.WriteTo(output, _repeated_rogueTournAreaInfo_codec);
+      rogueTournDifficultyInfo_.WriteTo(output, _repeated_rogueTournDifficultyInfo_codec);
+      if (rogueMagicTalentInfo_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(RogueMagicTalentInfo);
       }
       rogueMagicUnitInfoList_.WriteTo(output, _repeated_rogueMagicUnitInfoList_codec);
       unlockStyleTypeList_.WriteTo(output, _repeated_unlockStyleTypeList_codec);
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      rogueMagicScepterInfoList_.WriteTo(ref output, _repeated_rogueMagicScepterInfoList_codec);
-      if (rogueMagicTalentInfo_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(RogueMagicTalentInfo);
-      }
-      rogueTournDifficultyInfo_.WriteTo(ref output, _repeated_rogueTournDifficultyInfo_codec);
-      rogueTournAreaInfo_.WriteTo(ref output, _repeated_rogueTournAreaInfo_codec);
       if (storyInfo_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(26);
         output.WriteMessage(StoryInfo);
+      }
+      rogueMagicScepterInfoList_.WriteTo(ref output, _repeated_rogueMagicScepterInfoList_codec);
+      rogueTournAreaInfo_.WriteTo(ref output, _repeated_rogueTournAreaInfo_codec);
+      rogueTournDifficultyInfo_.WriteTo(ref output, _repeated_rogueTournDifficultyInfo_codec);
+      if (rogueMagicTalentInfo_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(RogueMagicTalentInfo);
       }
       rogueMagicUnitInfoList_.WriteTo(ref output, _repeated_rogueMagicUnitInfoList_codec);
       unlockStyleTypeList_.WriteTo(ref output, _repeated_unlockStyleTypeList_codec);
@@ -279,16 +279,16 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += unlockStyleTypeList_.CalculateSize(_repeated_unlockStyleTypeList_codec);
-      if (storyInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StoryInfo);
-      }
-      size += rogueMagicUnitInfoList_.CalculateSize(_repeated_rogueMagicUnitInfoList_codec);
-      size += rogueTournAreaInfo_.CalculateSize(_repeated_rogueTournAreaInfo_codec);
       if (rogueMagicTalentInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueMagicTalentInfo);
       }
+      size += rogueMagicUnitInfoList_.CalculateSize(_repeated_rogueMagicUnitInfoList_codec);
       size += rogueMagicScepterInfoList_.CalculateSize(_repeated_rogueMagicScepterInfoList_codec);
       size += rogueTournDifficultyInfo_.CalculateSize(_repeated_rogueTournDifficultyInfo_codec);
+      size += rogueTournAreaInfo_.CalculateSize(_repeated_rogueTournAreaInfo_codec);
+      if (storyInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StoryInfo);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -302,22 +302,22 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       unlockStyleTypeList_.Add(other.unlockStyleTypeList_);
-      if (other.storyInfo_ != null) {
-        if (storyInfo_ == null) {
-          StoryInfo = new global::EggLink.DanhengServer.Proto.RogueMagicStoryInfo();
-        }
-        StoryInfo.MergeFrom(other.StoryInfo);
-      }
-      rogueMagicUnitInfoList_.Add(other.rogueMagicUnitInfoList_);
-      rogueTournAreaInfo_.Add(other.rogueTournAreaInfo_);
       if (other.rogueMagicTalentInfo_ != null) {
         if (rogueMagicTalentInfo_ == null) {
           RogueMagicTalentInfo = new global::EggLink.DanhengServer.Proto.RogueMagicTalentInfo();
         }
         RogueMagicTalentInfo.MergeFrom(other.RogueMagicTalentInfo);
       }
+      rogueMagicUnitInfoList_.Add(other.rogueMagicUnitInfoList_);
       rogueMagicScepterInfoList_.Add(other.rogueMagicScepterInfoList_);
       rogueTournDifficultyInfo_.Add(other.rogueTournDifficultyInfo_);
+      rogueTournAreaInfo_.Add(other.rogueTournAreaInfo_);
+      if (other.storyInfo_ != null) {
+        if (storyInfo_ == null) {
+          StoryInfo = new global::EggLink.DanhengServer.Proto.RogueMagicStoryInfo();
+        }
+        StoryInfo.MergeFrom(other.StoryInfo);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -334,37 +334,37 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 26: {
-            rogueMagicScepterInfoList_.AddEntriesFrom(input, _repeated_rogueMagicScepterInfoList_codec);
-            break;
-          }
-          case 50: {
-            if (rogueMagicTalentInfo_ == null) {
-              RogueMagicTalentInfo = new global::EggLink.DanhengServer.Proto.RogueMagicTalentInfo();
-            }
-            input.ReadMessage(RogueMagicTalentInfo);
-            break;
-          }
-          case 58: {
-            rogueTournDifficultyInfo_.AddEntriesFrom(input, _repeated_rogueTournDifficultyInfo_codec);
-            break;
-          }
-          case 74: {
-            rogueTournAreaInfo_.AddEntriesFrom(input, _repeated_rogueTournAreaInfo_codec);
-            break;
-          }
-          case 82: {
             if (storyInfo_ == null) {
               StoryInfo = new global::EggLink.DanhengServer.Proto.RogueMagicStoryInfo();
             }
             input.ReadMessage(StoryInfo);
             break;
           }
-          case 98: {
+          case 42: {
+            rogueMagicScepterInfoList_.AddEntriesFrom(input, _repeated_rogueMagicScepterInfoList_codec);
+            break;
+          }
+          case 66: {
+            rogueTournAreaInfo_.AddEntriesFrom(input, _repeated_rogueTournAreaInfo_codec);
+            break;
+          }
+          case 74: {
+            rogueTournDifficultyInfo_.AddEntriesFrom(input, _repeated_rogueTournDifficultyInfo_codec);
+            break;
+          }
+          case 82: {
+            if (rogueMagicTalentInfo_ == null) {
+              RogueMagicTalentInfo = new global::EggLink.DanhengServer.Proto.RogueMagicTalentInfo();
+            }
+            input.ReadMessage(RogueMagicTalentInfo);
+            break;
+          }
+          case 90: {
             rogueMagicUnitInfoList_.AddEntriesFrom(input, _repeated_rogueMagicUnitInfoList_codec);
             break;
           }
-          case 106:
-          case 104: {
+          case 114:
+          case 112: {
             unlockStyleTypeList_.AddEntriesFrom(input, _repeated_unlockStyleTypeList_codec);
             break;
           }
@@ -384,37 +384,37 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 26: {
-            rogueMagicScepterInfoList_.AddEntriesFrom(ref input, _repeated_rogueMagicScepterInfoList_codec);
-            break;
-          }
-          case 50: {
-            if (rogueMagicTalentInfo_ == null) {
-              RogueMagicTalentInfo = new global::EggLink.DanhengServer.Proto.RogueMagicTalentInfo();
-            }
-            input.ReadMessage(RogueMagicTalentInfo);
-            break;
-          }
-          case 58: {
-            rogueTournDifficultyInfo_.AddEntriesFrom(ref input, _repeated_rogueTournDifficultyInfo_codec);
-            break;
-          }
-          case 74: {
-            rogueTournAreaInfo_.AddEntriesFrom(ref input, _repeated_rogueTournAreaInfo_codec);
-            break;
-          }
-          case 82: {
             if (storyInfo_ == null) {
               StoryInfo = new global::EggLink.DanhengServer.Proto.RogueMagicStoryInfo();
             }
             input.ReadMessage(StoryInfo);
             break;
           }
-          case 98: {
+          case 42: {
+            rogueMagicScepterInfoList_.AddEntriesFrom(ref input, _repeated_rogueMagicScepterInfoList_codec);
+            break;
+          }
+          case 66: {
+            rogueTournAreaInfo_.AddEntriesFrom(ref input, _repeated_rogueTournAreaInfo_codec);
+            break;
+          }
+          case 74: {
+            rogueTournDifficultyInfo_.AddEntriesFrom(ref input, _repeated_rogueTournDifficultyInfo_codec);
+            break;
+          }
+          case 82: {
+            if (rogueMagicTalentInfo_ == null) {
+              RogueMagicTalentInfo = new global::EggLink.DanhengServer.Proto.RogueMagicTalentInfo();
+            }
+            input.ReadMessage(RogueMagicTalentInfo);
+            break;
+          }
+          case 90: {
             rogueMagicUnitInfoList_.AddEntriesFrom(ref input, _repeated_rogueMagicUnitInfoList_codec);
             break;
           }
-          case 106:
-          case 104: {
+          case 114:
+          case 112: {
             unlockStyleTypeList_.AddEntriesFrom(ref input, _repeated_unlockStyleTypeList_codec);
             break;
           }

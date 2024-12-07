@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBNdXNpY1JoeXRobVN0YXJ0TGV2ZWxTY1JzcC5wcm90byJUChpNdXNpY1Jo",
-            "eXRobVN0YXJ0TGV2ZWxTY1JzcBIPCgdyZXRjb2RlGA8gASgNEhMKC0RERUhO",
-            "Q0RIRkVPGA4gASgJEhAKCGxldmVsX2lkGAkgASgNQh6qAhtFZ2dMaW5rLkRh",
+            "eXRobVN0YXJ0TGV2ZWxTY1JzcBIQCghsZXZlbF9pZBgJIAEoDRIPCgdyZXRj",
+            "b2RlGAsgASgNEhMKC0tCRUFEQkxNSUxNGA8gASgJQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmStartLevelScRsp), global::EggLink.DanhengServer.Proto.MusicRhythmStartLevelScRsp.Parser, new[]{ "Retcode", "DDEHNCDHFEO", "LevelId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmStartLevelScRsp), global::EggLink.DanhengServer.Proto.MusicRhythmStartLevelScRsp.Parser, new[]{ "LevelId", "Retcode", "KBEADBLMILM" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MusicRhythmStartLevelScRsp(MusicRhythmStartLevelScRsp other) : this() {
-      retcode_ = other.retcode_;
-      dDEHNCDHFEO_ = other.dDEHNCDHFEO_;
       levelId_ = other.levelId_;
+      retcode_ = other.retcode_;
+      kBEADBLMILM_ = other.kBEADBLMILM_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,30 +83,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MusicRhythmStartLevelScRsp Clone() {
       return new MusicRhythmStartLevelScRsp(this);
-    }
-
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 15;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "DDEHNCDHFEO" field.</summary>
-    public const int DDEHNCDHFEOFieldNumber = 14;
-    private string dDEHNCDHFEO_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string DDEHNCDHFEO {
-      get { return dDEHNCDHFEO_; }
-      set {
-        dDEHNCDHFEO_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
     }
 
     /// <summary>Field number for the "level_id" field.</summary>
@@ -118,6 +94,30 @@ namespace EggLink.DanhengServer.Proto {
       get { return levelId_; }
       set {
         levelId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 11;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "KBEADBLMILM" field.</summary>
+    public const int KBEADBLMILMFieldNumber = 15;
+    private string kBEADBLMILM_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string KBEADBLMILM {
+      get { return kBEADBLMILM_; }
+      set {
+        kBEADBLMILM_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
-      if (DDEHNCDHFEO != other.DDEHNCDHFEO) return false;
       if (LevelId != other.LevelId) return false;
+      if (Retcode != other.Retcode) return false;
+      if (KBEADBLMILM != other.KBEADBLMILM) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (DDEHNCDHFEO.Length != 0) hash ^= DDEHNCDHFEO.GetHashCode();
       if (LevelId != 0) hash ^= LevelId.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (KBEADBLMILM.Length != 0) hash ^= KBEADBLMILM.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteUInt32(LevelId);
       }
-      if (DDEHNCDHFEO.Length != 0) {
-        output.WriteRawTag(114);
-        output.WriteString(DDEHNCDHFEO);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
+      }
+      if (KBEADBLMILM.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(KBEADBLMILM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -193,13 +193,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteUInt32(LevelId);
       }
-      if (DDEHNCDHFEO.Length != 0) {
-        output.WriteRawTag(114);
-        output.WriteString(DDEHNCDHFEO);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
+      }
+      if (KBEADBLMILM.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(KBEADBLMILM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,14 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (LevelId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LevelId);
+      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (DDEHNCDHFEO.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DDEHNCDHFEO);
-      }
-      if (LevelId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LevelId);
+      if (KBEADBLMILM.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KBEADBLMILM);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,14 +232,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.LevelId != 0) {
+        LevelId = other.LevelId;
+      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.DDEHNCDHFEO.Length != 0) {
-        DDEHNCDHFEO = other.DDEHNCDHFEO;
-      }
-      if (other.LevelId != 0) {
-        LevelId = other.LevelId;
+      if (other.KBEADBLMILM.Length != 0) {
+        KBEADBLMILM = other.KBEADBLMILM;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -260,12 +260,12 @@ namespace EggLink.DanhengServer.Proto {
             LevelId = input.ReadUInt32();
             break;
           }
-          case 114: {
-            DDEHNCDHFEO = input.ReadString();
+          case 88: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 120: {
-            Retcode = input.ReadUInt32();
+          case 122: {
+            KBEADBLMILM = input.ReadString();
             break;
           }
         }
@@ -287,12 +287,12 @@ namespace EggLink.DanhengServer.Proto {
             LevelId = input.ReadUInt32();
             break;
           }
-          case 114: {
-            DDEHNCDHFEO = input.ReadString();
+          case 88: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 120: {
-            Retcode = input.ReadUInt32();
+          case 122: {
+            KBEADBLMILM = input.ReadString();
             break;
           }
         }

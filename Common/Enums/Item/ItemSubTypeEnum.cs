@@ -22,6 +22,7 @@ public enum ItemSubTypeEnum
     ChessRogueDiceSurface = 512,
     RogueMedal = 513,
     PamSkin = 514,
+    FindChest = 515,
     Material = 601,
     Eidolon = 602,
     MuseumExhibit = 603,

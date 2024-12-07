@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNXb2xmQnJvR2FtZURhdGFDaGFuZ2VTY05vdGlmeS5wcm90bxoRV29sZkJy",
             "b0luZm8ucHJvdG8iRAodV29sZkJyb0dhbWVEYXRhQ2hhbmdlU2NOb3RpZnkS",
-            "IwoNd29sZl9icm9faW5mbxgPIAEoCzIMLldvbGZCcm9JbmZvQh6qAhtFZ2dM",
+            "IwoNd29sZl9icm9faW5mbxgOIAEoCzIMLldvbGZCcm9JbmZvQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.WolfBroInfoReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "wolf_bro_info" field.</summary>
-    public const int WolfBroInfoFieldNumber = 15;
+    public const int WolfBroInfoFieldNumber = 14;
     private global::EggLink.DanhengServer.Proto.WolfBroInfo wolfBroInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (wolfBroInfo_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(114);
         output.WriteMessage(WolfBroInfo);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (wolfBroInfo_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(114);
         output.WriteMessage(WolfBroInfo);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 122: {
+          case 114: {
             if (wolfBroInfo_ == null) {
               WolfBroInfo = new global::EggLink.DanhengServer.Proto.WolfBroInfo();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 122: {
+          case 114: {
             if (wolfBroInfo_ == null) {
               WolfBroInfo = new global::EggLink.DanhengServer.Proto.WolfBroInfo();
             }

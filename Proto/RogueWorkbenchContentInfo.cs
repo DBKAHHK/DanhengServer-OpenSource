@@ -24,31 +24,31 @@ namespace EggLink.DanhengServer.Proto {
     static RogueWorkbenchContentInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9Sb2d1ZVdvcmtiZW5jaENvbnRlbnRJbmZvLnByb3RvGhFLS0tOQUJPS01L",
+            "Ch9Sb2d1ZVdvcmtiZW5jaENvbnRlbnRJbmZvLnByb3RvGhFOS05CTktHRUVN",
             "SC5wcm90bxonV29ya2JlbmNoUmVmb3JnZUZvcm11bGFUYXJnZXRJbmZvLnBy",
-            "b3RvGhFDTE5DS0VBR0RPSS5wcm90bxonV29ya2JlbmNoQ29tcG9zZU1pcmFj",
-            "bGVUYXJnZXRJbmZvLnByb3RvGhFGRU5DSUVHRkFJRC5wcm90bxoRQ01MSVBQ",
-            "RU1QR04ucHJvdG8aKVdvcmtiZW5jaFJlZm9yZ2VIZXhBdmF0YXJUYXJnZXRJ",
-            "bmZvLnByb3RvGiRXb3JrYmVuY2hFbmhhbmNlQnVmZlRhcmdldEluZm8ucHJv",
-            "dG8aEUFDRlBCQUNJTEpDLnByb3RvGiRXb3JrYmVuY2hSZWZvcmdlQnVmZlRh",
-            "cmdldEluZm8ucHJvdG8itAQKGVJvZ3VlV29ya2JlbmNoQ29udGVudEluZm8S",
-            "PAoRcmVmb3JnZV9idWZmX2Z1bmMYASABKAsyHy5Xb3JrYmVuY2hSZWZvcmdl",
-            "QnVmZlRhcmdldEluZm9IABJCChRyZWZvcmdlX2Zvcm11bGFfZnVuYxgPIAEo",
+            "b3RvGhFPQ0pNRkdGTERFRS5wcm90bxoRT01IRUhMRUxHQk4ucHJvdG8aJFdv",
+            "cmtiZW5jaEVuaGFuY2VCdWZmVGFyZ2V0SW5mby5wcm90bxoRSkpQTU1DSkhH",
+            "TEgucHJvdG8aJFdvcmtiZW5jaFJlZm9yZ2VCdWZmVGFyZ2V0SW5mby5wcm90",
+            "bxopV29ya2JlbmNoUmVmb3JnZUhleEF2YXRhclRhcmdldEluZm8ucHJvdG8a",
+            "EVBLUENJSkpQSUFLLnByb3RvGidXb3JrYmVuY2hDb21wb3NlTWlyYWNsZVRh",
+            "cmdldEluZm8ucHJvdG8iswQKGVJvZ3VlV29ya2JlbmNoQ29udGVudEluZm8S",
+            "PAoRcmVmb3JnZV9idWZmX2Z1bmMYCyABKAsyHy5Xb3JrYmVuY2hSZWZvcmdl",
+            "QnVmZlRhcmdldEluZm9IABJCChRyZWZvcmdlX2Zvcm11bGFfZnVuYxgCIAEo",
             "CzIiLldvcmtiZW5jaFJlZm9yZ2VGb3JtdWxhVGFyZ2V0SW5mb0gAEjwKEWVu",
-            "aGFuY2VfYnVmZl9mdW5jGAYgASgLMh8uV29ya2JlbmNoRW5oYW5jZUJ1ZmZU",
-            "YXJnZXRJbmZvSAASQgoUY29tcG9zZV9taXJhY2xlX2Z1bmMYBCABKAsyIi5X",
+            "aGFuY2VfYnVmZl9mdW5jGAcgASgLMh8uV29ya2JlbmNoRW5oYW5jZUJ1ZmZU",
+            "YXJnZXRJbmZvSAASQgoUY29tcG9zZV9taXJhY2xlX2Z1bmMYAyABKAsyIi5X",
             "b3JrYmVuY2hDb21wb3NlTWlyYWNsZVRhcmdldEluZm9IABJHChdyZWZvcmdl",
-            "X2hleF9hdmF0YXJfZnVuYxgNIAEoCzIkLldvcmtiZW5jaFJlZm9yZ2VIZXhB",
-            "dmF0YXJUYXJnZXRJbmZvSAASIgoKbWFnaWNfaXRlbRgKIAEoCzIMLkNNTElQ",
-            "UEVNUEdOSAASJwoPZ2FtZV9tYWdpY191bml0GA4gASgLMgwuQUNGUEJBQ0lM",
-            "SkNIABIjCgtDQkRFQ1BPQUNKSxgLIAEoCzIMLktLS05BQk9LTUtISAASIwoL",
-            "TUtETUJGQkNDQ0UYAiABKAsyDC5GRU5DSUVHRkFJREgAEiMKC0lKS0ZJSU9E",
-            "SEtIGAcgASgLMgwuQ0xOQ0tFQUdET0lIAEIOCgxjb250ZW50X2luZm9CHqoC",
-            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "X2hleF9hdmF0YXJfZnVuYxgJIAEoCzIkLldvcmtiZW5jaFJlZm9yZ2VIZXhB",
+            "dmF0YXJUYXJnZXRJbmZvSAASIgoKbWFnaWNfaXRlbRgKIAEoCzIMLkpKUE1N",
+            "Q0pIR0xISAASJwoPZ2FtZV9tYWdpY191bml0GA0gASgLMgwuUEtQQ0lKSlBJ",
+            "QUtIABIjCgtHTENHS05JTkFPRxgFIAEoCzIMLk5LTkJOS0dFRU1ISAASIwoL",
+            "SkVPRUpBRE9HREYYDCABKAsyDC5PQ0pNRkdGTERFRUgAEiMKC0JBR0hOSElL",
+            "RkRDGAQgASgLMgwuT01IRUhMRUxHQk5IAEINCgtKQUVPTk9CRURCTEIeqgIb",
+            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KKKNABOKMKHReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchReforgeFormulaTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CLNCKEAGDOIReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchComposeMiracleTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.FENCIEGFAIDReflection.Descriptor, global::EggLink.DanhengServer.Proto.CMLIPPEMPGNReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchReforgeHexAvatarTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchEnhanceBuffTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ACFPBACILJCReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchReforgeBuffTargetInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NKNBNKGEEMHReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchReforgeFormulaTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.OCJMFGFLDEEReflection.Descriptor, global::EggLink.DanhengServer.Proto.OMHEHLELGBNReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchEnhanceBuffTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.JJPMMCJHGLHReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchReforgeBuffTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchReforgeHexAvatarTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PKPCIJJPIAKReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchComposeMiracleTargetInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueWorkbenchContentInfo), global::EggLink.DanhengServer.Proto.RogueWorkbenchContentInfo.Parser, new[]{ "ReforgeBuffFunc", "ReforgeFormulaFunc", "EnhanceBuffFunc", "ComposeMiracleFunc", "ReforgeHexAvatarFunc", "MagicItem", "GameMagicUnit", "CBDECPOACJK", "MKDMBFBCCCE", "IJKFIIODHKH" }, new[]{ "ContentInfo" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueWorkbenchContentInfo), global::EggLink.DanhengServer.Proto.RogueWorkbenchContentInfo.Parser, new[]{ "ReforgeBuffFunc", "ReforgeFormulaFunc", "EnhanceBuffFunc", "ComposeMiracleFunc", "ReforgeHexAvatarFunc", "MagicItem", "GameMagicUnit", "GLCGKNINAOG", "JEOEJADOGDF", "BAGHNHIKFDC" }, new[]{ "JAEONOBEDBL" }, null, null, null)
           }));
     }
     #endregion
@@ -90,36 +90,36 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueWorkbenchContentInfo(RogueWorkbenchContentInfo other) : this() {
-      switch (other.ContentInfoCase) {
-        case ContentInfoOneofCase.ReforgeBuffFunc:
+      switch (other.JAEONOBEDBLCase) {
+        case JAEONOBEDBLOneofCase.ReforgeBuffFunc:
           ReforgeBuffFunc = other.ReforgeBuffFunc.Clone();
           break;
-        case ContentInfoOneofCase.ReforgeFormulaFunc:
+        case JAEONOBEDBLOneofCase.ReforgeFormulaFunc:
           ReforgeFormulaFunc = other.ReforgeFormulaFunc.Clone();
           break;
-        case ContentInfoOneofCase.EnhanceBuffFunc:
+        case JAEONOBEDBLOneofCase.EnhanceBuffFunc:
           EnhanceBuffFunc = other.EnhanceBuffFunc.Clone();
           break;
-        case ContentInfoOneofCase.ComposeMiracleFunc:
+        case JAEONOBEDBLOneofCase.ComposeMiracleFunc:
           ComposeMiracleFunc = other.ComposeMiracleFunc.Clone();
           break;
-        case ContentInfoOneofCase.ReforgeHexAvatarFunc:
+        case JAEONOBEDBLOneofCase.ReforgeHexAvatarFunc:
           ReforgeHexAvatarFunc = other.ReforgeHexAvatarFunc.Clone();
           break;
-        case ContentInfoOneofCase.MagicItem:
+        case JAEONOBEDBLOneofCase.MagicItem:
           MagicItem = other.MagicItem.Clone();
           break;
-        case ContentInfoOneofCase.GameMagicUnit:
+        case JAEONOBEDBLOneofCase.GameMagicUnit:
           GameMagicUnit = other.GameMagicUnit.Clone();
           break;
-        case ContentInfoOneofCase.CBDECPOACJK:
-          CBDECPOACJK = other.CBDECPOACJK.Clone();
+        case JAEONOBEDBLOneofCase.GLCGKNINAOG:
+          GLCGKNINAOG = other.GLCGKNINAOG.Clone();
           break;
-        case ContentInfoOneofCase.MKDMBFBCCCE:
-          MKDMBFBCCCE = other.MKDMBFBCCCE.Clone();
+        case JAEONOBEDBLOneofCase.JEOEJADOGDF:
+          JEOEJADOGDF = other.JEOEJADOGDF.Clone();
           break;
-        case ContentInfoOneofCase.IJKFIIODHKH:
-          IJKFIIODHKH = other.IJKFIIODHKH.Clone();
+        case JAEONOBEDBLOneofCase.BAGHNHIKFDC:
+          BAGHNHIKFDC = other.BAGHNHIKFDC.Clone();
           break;
       }
 
@@ -133,62 +133,62 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "reforge_buff_func" field.</summary>
-    public const int ReforgeBuffFuncFieldNumber = 1;
+    public const int ReforgeBuffFuncFieldNumber = 11;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.WorkbenchReforgeBuffTargetInfo ReforgeBuffFunc {
-      get { return contentInfoCase_ == ContentInfoOneofCase.ReforgeBuffFunc ? (global::EggLink.DanhengServer.Proto.WorkbenchReforgeBuffTargetInfo) contentInfo_ : null; }
+      get { return jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ReforgeBuffFunc ? (global::EggLink.DanhengServer.Proto.WorkbenchReforgeBuffTargetInfo) jAEONOBEDBL_ : null; }
       set {
-        contentInfo_ = value;
-        contentInfoCase_ = value == null ? ContentInfoOneofCase.None : ContentInfoOneofCase.ReforgeBuffFunc;
+        jAEONOBEDBL_ = value;
+        jAEONOBEDBLCase_ = value == null ? JAEONOBEDBLOneofCase.None : JAEONOBEDBLOneofCase.ReforgeBuffFunc;
       }
     }
 
     /// <summary>Field number for the "reforge_formula_func" field.</summary>
-    public const int ReforgeFormulaFuncFieldNumber = 15;
+    public const int ReforgeFormulaFuncFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.WorkbenchReforgeFormulaTargetInfo ReforgeFormulaFunc {
-      get { return contentInfoCase_ == ContentInfoOneofCase.ReforgeFormulaFunc ? (global::EggLink.DanhengServer.Proto.WorkbenchReforgeFormulaTargetInfo) contentInfo_ : null; }
+      get { return jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ReforgeFormulaFunc ? (global::EggLink.DanhengServer.Proto.WorkbenchReforgeFormulaTargetInfo) jAEONOBEDBL_ : null; }
       set {
-        contentInfo_ = value;
-        contentInfoCase_ = value == null ? ContentInfoOneofCase.None : ContentInfoOneofCase.ReforgeFormulaFunc;
+        jAEONOBEDBL_ = value;
+        jAEONOBEDBLCase_ = value == null ? JAEONOBEDBLOneofCase.None : JAEONOBEDBLOneofCase.ReforgeFormulaFunc;
       }
     }
 
     /// <summary>Field number for the "enhance_buff_func" field.</summary>
-    public const int EnhanceBuffFuncFieldNumber = 6;
+    public const int EnhanceBuffFuncFieldNumber = 7;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.WorkbenchEnhanceBuffTargetInfo EnhanceBuffFunc {
-      get { return contentInfoCase_ == ContentInfoOneofCase.EnhanceBuffFunc ? (global::EggLink.DanhengServer.Proto.WorkbenchEnhanceBuffTargetInfo) contentInfo_ : null; }
+      get { return jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.EnhanceBuffFunc ? (global::EggLink.DanhengServer.Proto.WorkbenchEnhanceBuffTargetInfo) jAEONOBEDBL_ : null; }
       set {
-        contentInfo_ = value;
-        contentInfoCase_ = value == null ? ContentInfoOneofCase.None : ContentInfoOneofCase.EnhanceBuffFunc;
+        jAEONOBEDBL_ = value;
+        jAEONOBEDBLCase_ = value == null ? JAEONOBEDBLOneofCase.None : JAEONOBEDBLOneofCase.EnhanceBuffFunc;
       }
     }
 
     /// <summary>Field number for the "compose_miracle_func" field.</summary>
-    public const int ComposeMiracleFuncFieldNumber = 4;
+    public const int ComposeMiracleFuncFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.WorkbenchComposeMiracleTargetInfo ComposeMiracleFunc {
-      get { return contentInfoCase_ == ContentInfoOneofCase.ComposeMiracleFunc ? (global::EggLink.DanhengServer.Proto.WorkbenchComposeMiracleTargetInfo) contentInfo_ : null; }
+      get { return jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ComposeMiracleFunc ? (global::EggLink.DanhengServer.Proto.WorkbenchComposeMiracleTargetInfo) jAEONOBEDBL_ : null; }
       set {
-        contentInfo_ = value;
-        contentInfoCase_ = value == null ? ContentInfoOneofCase.None : ContentInfoOneofCase.ComposeMiracleFunc;
+        jAEONOBEDBL_ = value;
+        jAEONOBEDBLCase_ = value == null ? JAEONOBEDBLOneofCase.None : JAEONOBEDBLOneofCase.ComposeMiracleFunc;
       }
     }
 
     /// <summary>Field number for the "reforge_hex_avatar_func" field.</summary>
-    public const int ReforgeHexAvatarFuncFieldNumber = 13;
+    public const int ReforgeHexAvatarFuncFieldNumber = 9;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.WorkbenchReforgeHexAvatarTargetInfo ReforgeHexAvatarFunc {
-      get { return contentInfoCase_ == ContentInfoOneofCase.ReforgeHexAvatarFunc ? (global::EggLink.DanhengServer.Proto.WorkbenchReforgeHexAvatarTargetInfo) contentInfo_ : null; }
+      get { return jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ReforgeHexAvatarFunc ? (global::EggLink.DanhengServer.Proto.WorkbenchReforgeHexAvatarTargetInfo) jAEONOBEDBL_ : null; }
       set {
-        contentInfo_ = value;
-        contentInfoCase_ = value == null ? ContentInfoOneofCase.None : ContentInfoOneofCase.ReforgeHexAvatarFunc;
+        jAEONOBEDBL_ = value;
+        jAEONOBEDBLCase_ = value == null ? JAEONOBEDBLOneofCase.None : JAEONOBEDBLOneofCase.ReforgeHexAvatarFunc;
       }
     }
 
@@ -196,89 +196,89 @@ namespace EggLink.DanhengServer.Proto {
     public const int MagicItemFieldNumber = 10;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.CMLIPPEMPGN MagicItem {
-      get { return contentInfoCase_ == ContentInfoOneofCase.MagicItem ? (global::EggLink.DanhengServer.Proto.CMLIPPEMPGN) contentInfo_ : null; }
+    public global::EggLink.DanhengServer.Proto.JJPMMCJHGLH MagicItem {
+      get { return jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.MagicItem ? (global::EggLink.DanhengServer.Proto.JJPMMCJHGLH) jAEONOBEDBL_ : null; }
       set {
-        contentInfo_ = value;
-        contentInfoCase_ = value == null ? ContentInfoOneofCase.None : ContentInfoOneofCase.MagicItem;
+        jAEONOBEDBL_ = value;
+        jAEONOBEDBLCase_ = value == null ? JAEONOBEDBLOneofCase.None : JAEONOBEDBLOneofCase.MagicItem;
       }
     }
 
     /// <summary>Field number for the "game_magic_unit" field.</summary>
-    public const int GameMagicUnitFieldNumber = 14;
+    public const int GameMagicUnitFieldNumber = 13;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ACFPBACILJC GameMagicUnit {
-      get { return contentInfoCase_ == ContentInfoOneofCase.GameMagicUnit ? (global::EggLink.DanhengServer.Proto.ACFPBACILJC) contentInfo_ : null; }
+    public global::EggLink.DanhengServer.Proto.PKPCIJJPIAK GameMagicUnit {
+      get { return jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.GameMagicUnit ? (global::EggLink.DanhengServer.Proto.PKPCIJJPIAK) jAEONOBEDBL_ : null; }
       set {
-        contentInfo_ = value;
-        contentInfoCase_ = value == null ? ContentInfoOneofCase.None : ContentInfoOneofCase.GameMagicUnit;
+        jAEONOBEDBL_ = value;
+        jAEONOBEDBLCase_ = value == null ? JAEONOBEDBLOneofCase.None : JAEONOBEDBLOneofCase.GameMagicUnit;
       }
     }
 
-    /// <summary>Field number for the "CBDECPOACJK" field.</summary>
-    public const int CBDECPOACJKFieldNumber = 11;
+    /// <summary>Field number for the "GLCGKNINAOG" field.</summary>
+    public const int GLCGKNINAOGFieldNumber = 5;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.KKKNABOKMKH CBDECPOACJK {
-      get { return contentInfoCase_ == ContentInfoOneofCase.CBDECPOACJK ? (global::EggLink.DanhengServer.Proto.KKKNABOKMKH) contentInfo_ : null; }
+    public global::EggLink.DanhengServer.Proto.NKNBNKGEEMH GLCGKNINAOG {
+      get { return jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.GLCGKNINAOG ? (global::EggLink.DanhengServer.Proto.NKNBNKGEEMH) jAEONOBEDBL_ : null; }
       set {
-        contentInfo_ = value;
-        contentInfoCase_ = value == null ? ContentInfoOneofCase.None : ContentInfoOneofCase.CBDECPOACJK;
+        jAEONOBEDBL_ = value;
+        jAEONOBEDBLCase_ = value == null ? JAEONOBEDBLOneofCase.None : JAEONOBEDBLOneofCase.GLCGKNINAOG;
       }
     }
 
-    /// <summary>Field number for the "MKDMBFBCCCE" field.</summary>
-    public const int MKDMBFBCCCEFieldNumber = 2;
+    /// <summary>Field number for the "JEOEJADOGDF" field.</summary>
+    public const int JEOEJADOGDFFieldNumber = 12;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.FENCIEGFAID MKDMBFBCCCE {
-      get { return contentInfoCase_ == ContentInfoOneofCase.MKDMBFBCCCE ? (global::EggLink.DanhengServer.Proto.FENCIEGFAID) contentInfo_ : null; }
+    public global::EggLink.DanhengServer.Proto.OCJMFGFLDEE JEOEJADOGDF {
+      get { return jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.JEOEJADOGDF ? (global::EggLink.DanhengServer.Proto.OCJMFGFLDEE) jAEONOBEDBL_ : null; }
       set {
-        contentInfo_ = value;
-        contentInfoCase_ = value == null ? ContentInfoOneofCase.None : ContentInfoOneofCase.MKDMBFBCCCE;
+        jAEONOBEDBL_ = value;
+        jAEONOBEDBLCase_ = value == null ? JAEONOBEDBLOneofCase.None : JAEONOBEDBLOneofCase.JEOEJADOGDF;
       }
     }
 
-    /// <summary>Field number for the "IJKFIIODHKH" field.</summary>
-    public const int IJKFIIODHKHFieldNumber = 7;
+    /// <summary>Field number for the "BAGHNHIKFDC" field.</summary>
+    public const int BAGHNHIKFDCFieldNumber = 4;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.CLNCKEAGDOI IJKFIIODHKH {
-      get { return contentInfoCase_ == ContentInfoOneofCase.IJKFIIODHKH ? (global::EggLink.DanhengServer.Proto.CLNCKEAGDOI) contentInfo_ : null; }
+    public global::EggLink.DanhengServer.Proto.OMHEHLELGBN BAGHNHIKFDC {
+      get { return jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.BAGHNHIKFDC ? (global::EggLink.DanhengServer.Proto.OMHEHLELGBN) jAEONOBEDBL_ : null; }
       set {
-        contentInfo_ = value;
-        contentInfoCase_ = value == null ? ContentInfoOneofCase.None : ContentInfoOneofCase.IJKFIIODHKH;
+        jAEONOBEDBL_ = value;
+        jAEONOBEDBLCase_ = value == null ? JAEONOBEDBLOneofCase.None : JAEONOBEDBLOneofCase.BAGHNHIKFDC;
       }
     }
 
-    private object contentInfo_;
-    /// <summary>Enum of possible cases for the "content_info" oneof.</summary>
-    public enum ContentInfoOneofCase {
+    private object jAEONOBEDBL_;
+    /// <summary>Enum of possible cases for the "JAEONOBEDBL" oneof.</summary>
+    public enum JAEONOBEDBLOneofCase {
       None = 0,
-      ReforgeBuffFunc = 1,
-      ReforgeFormulaFunc = 15,
-      EnhanceBuffFunc = 6,
-      ComposeMiracleFunc = 4,
-      ReforgeHexAvatarFunc = 13,
+      ReforgeBuffFunc = 11,
+      ReforgeFormulaFunc = 2,
+      EnhanceBuffFunc = 7,
+      ComposeMiracleFunc = 3,
+      ReforgeHexAvatarFunc = 9,
       MagicItem = 10,
-      GameMagicUnit = 14,
-      CBDECPOACJK = 11,
-      MKDMBFBCCCE = 2,
-      IJKFIIODHKH = 7,
+      GameMagicUnit = 13,
+      GLCGKNINAOG = 5,
+      JEOEJADOGDF = 12,
+      BAGHNHIKFDC = 4,
     }
-    private ContentInfoOneofCase contentInfoCase_ = ContentInfoOneofCase.None;
+    private JAEONOBEDBLOneofCase jAEONOBEDBLCase_ = JAEONOBEDBLOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ContentInfoOneofCase ContentInfoCase {
-      get { return contentInfoCase_; }
+    public JAEONOBEDBLOneofCase JAEONOBEDBLCase {
+      get { return jAEONOBEDBLCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearContentInfo() {
-      contentInfoCase_ = ContentInfoOneofCase.None;
-      contentInfo_ = null;
+    public void ClearJAEONOBEDBL() {
+      jAEONOBEDBLCase_ = JAEONOBEDBLOneofCase.None;
+      jAEONOBEDBL_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -303,10 +303,10 @@ namespace EggLink.DanhengServer.Proto {
       if (!object.Equals(ReforgeHexAvatarFunc, other.ReforgeHexAvatarFunc)) return false;
       if (!object.Equals(MagicItem, other.MagicItem)) return false;
       if (!object.Equals(GameMagicUnit, other.GameMagicUnit)) return false;
-      if (!object.Equals(CBDECPOACJK, other.CBDECPOACJK)) return false;
-      if (!object.Equals(MKDMBFBCCCE, other.MKDMBFBCCCE)) return false;
-      if (!object.Equals(IJKFIIODHKH, other.IJKFIIODHKH)) return false;
-      if (ContentInfoCase != other.ContentInfoCase) return false;
+      if (!object.Equals(GLCGKNINAOG, other.GLCGKNINAOG)) return false;
+      if (!object.Equals(JEOEJADOGDF, other.JEOEJADOGDF)) return false;
+      if (!object.Equals(BAGHNHIKFDC, other.BAGHNHIKFDC)) return false;
+      if (JAEONOBEDBLCase != other.JAEONOBEDBLCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -314,17 +314,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (contentInfoCase_ == ContentInfoOneofCase.ReforgeBuffFunc) hash ^= ReforgeBuffFunc.GetHashCode();
-      if (contentInfoCase_ == ContentInfoOneofCase.ReforgeFormulaFunc) hash ^= ReforgeFormulaFunc.GetHashCode();
-      if (contentInfoCase_ == ContentInfoOneofCase.EnhanceBuffFunc) hash ^= EnhanceBuffFunc.GetHashCode();
-      if (contentInfoCase_ == ContentInfoOneofCase.ComposeMiracleFunc) hash ^= ComposeMiracleFunc.GetHashCode();
-      if (contentInfoCase_ == ContentInfoOneofCase.ReforgeHexAvatarFunc) hash ^= ReforgeHexAvatarFunc.GetHashCode();
-      if (contentInfoCase_ == ContentInfoOneofCase.MagicItem) hash ^= MagicItem.GetHashCode();
-      if (contentInfoCase_ == ContentInfoOneofCase.GameMagicUnit) hash ^= GameMagicUnit.GetHashCode();
-      if (contentInfoCase_ == ContentInfoOneofCase.CBDECPOACJK) hash ^= CBDECPOACJK.GetHashCode();
-      if (contentInfoCase_ == ContentInfoOneofCase.MKDMBFBCCCE) hash ^= MKDMBFBCCCE.GetHashCode();
-      if (contentInfoCase_ == ContentInfoOneofCase.IJKFIIODHKH) hash ^= IJKFIIODHKH.GetHashCode();
-      hash ^= (int) contentInfoCase_;
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ReforgeBuffFunc) hash ^= ReforgeBuffFunc.GetHashCode();
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ReforgeFormulaFunc) hash ^= ReforgeFormulaFunc.GetHashCode();
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.EnhanceBuffFunc) hash ^= EnhanceBuffFunc.GetHashCode();
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ComposeMiracleFunc) hash ^= ComposeMiracleFunc.GetHashCode();
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ReforgeHexAvatarFunc) hash ^= ReforgeHexAvatarFunc.GetHashCode();
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.MagicItem) hash ^= MagicItem.GetHashCode();
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.GameMagicUnit) hash ^= GameMagicUnit.GetHashCode();
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.GLCGKNINAOG) hash ^= GLCGKNINAOG.GetHashCode();
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.JEOEJADOGDF) hash ^= JEOEJADOGDF.GetHashCode();
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.BAGHNHIKFDC) hash ^= BAGHNHIKFDC.GetHashCode();
+      hash ^= (int) jAEONOBEDBLCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -343,45 +343,45 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (contentInfoCase_ == ContentInfoOneofCase.ReforgeBuffFunc) {
-        output.WriteRawTag(10);
-        output.WriteMessage(ReforgeBuffFunc);
-      }
-      if (contentInfoCase_ == ContentInfoOneofCase.MKDMBFBCCCE) {
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ReforgeFormulaFunc) {
         output.WriteRawTag(18);
-        output.WriteMessage(MKDMBFBCCCE);
+        output.WriteMessage(ReforgeFormulaFunc);
       }
-      if (contentInfoCase_ == ContentInfoOneofCase.ComposeMiracleFunc) {
-        output.WriteRawTag(34);
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ComposeMiracleFunc) {
+        output.WriteRawTag(26);
         output.WriteMessage(ComposeMiracleFunc);
       }
-      if (contentInfoCase_ == ContentInfoOneofCase.EnhanceBuffFunc) {
-        output.WriteRawTag(50);
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.BAGHNHIKFDC) {
+        output.WriteRawTag(34);
+        output.WriteMessage(BAGHNHIKFDC);
+      }
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.GLCGKNINAOG) {
+        output.WriteRawTag(42);
+        output.WriteMessage(GLCGKNINAOG);
+      }
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.EnhanceBuffFunc) {
+        output.WriteRawTag(58);
         output.WriteMessage(EnhanceBuffFunc);
       }
-      if (contentInfoCase_ == ContentInfoOneofCase.IJKFIIODHKH) {
-        output.WriteRawTag(58);
-        output.WriteMessage(IJKFIIODHKH);
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ReforgeHexAvatarFunc) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ReforgeHexAvatarFunc);
       }
-      if (contentInfoCase_ == ContentInfoOneofCase.MagicItem) {
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.MagicItem) {
         output.WriteRawTag(82);
         output.WriteMessage(MagicItem);
       }
-      if (contentInfoCase_ == ContentInfoOneofCase.CBDECPOACJK) {
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ReforgeBuffFunc) {
         output.WriteRawTag(90);
-        output.WriteMessage(CBDECPOACJK);
+        output.WriteMessage(ReforgeBuffFunc);
       }
-      if (contentInfoCase_ == ContentInfoOneofCase.ReforgeHexAvatarFunc) {
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.JEOEJADOGDF) {
+        output.WriteRawTag(98);
+        output.WriteMessage(JEOEJADOGDF);
+      }
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.GameMagicUnit) {
         output.WriteRawTag(106);
-        output.WriteMessage(ReforgeHexAvatarFunc);
-      }
-      if (contentInfoCase_ == ContentInfoOneofCase.GameMagicUnit) {
-        output.WriteRawTag(114);
         output.WriteMessage(GameMagicUnit);
-      }
-      if (contentInfoCase_ == ContentInfoOneofCase.ReforgeFormulaFunc) {
-        output.WriteRawTag(122);
-        output.WriteMessage(ReforgeFormulaFunc);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -393,45 +393,45 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (contentInfoCase_ == ContentInfoOneofCase.ReforgeBuffFunc) {
-        output.WriteRawTag(10);
-        output.WriteMessage(ReforgeBuffFunc);
-      }
-      if (contentInfoCase_ == ContentInfoOneofCase.MKDMBFBCCCE) {
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ReforgeFormulaFunc) {
         output.WriteRawTag(18);
-        output.WriteMessage(MKDMBFBCCCE);
+        output.WriteMessage(ReforgeFormulaFunc);
       }
-      if (contentInfoCase_ == ContentInfoOneofCase.ComposeMiracleFunc) {
-        output.WriteRawTag(34);
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ComposeMiracleFunc) {
+        output.WriteRawTag(26);
         output.WriteMessage(ComposeMiracleFunc);
       }
-      if (contentInfoCase_ == ContentInfoOneofCase.EnhanceBuffFunc) {
-        output.WriteRawTag(50);
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.BAGHNHIKFDC) {
+        output.WriteRawTag(34);
+        output.WriteMessage(BAGHNHIKFDC);
+      }
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.GLCGKNINAOG) {
+        output.WriteRawTag(42);
+        output.WriteMessage(GLCGKNINAOG);
+      }
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.EnhanceBuffFunc) {
+        output.WriteRawTag(58);
         output.WriteMessage(EnhanceBuffFunc);
       }
-      if (contentInfoCase_ == ContentInfoOneofCase.IJKFIIODHKH) {
-        output.WriteRawTag(58);
-        output.WriteMessage(IJKFIIODHKH);
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ReforgeHexAvatarFunc) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ReforgeHexAvatarFunc);
       }
-      if (contentInfoCase_ == ContentInfoOneofCase.MagicItem) {
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.MagicItem) {
         output.WriteRawTag(82);
         output.WriteMessage(MagicItem);
       }
-      if (contentInfoCase_ == ContentInfoOneofCase.CBDECPOACJK) {
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ReforgeBuffFunc) {
         output.WriteRawTag(90);
-        output.WriteMessage(CBDECPOACJK);
+        output.WriteMessage(ReforgeBuffFunc);
       }
-      if (contentInfoCase_ == ContentInfoOneofCase.ReforgeHexAvatarFunc) {
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.JEOEJADOGDF) {
+        output.WriteRawTag(98);
+        output.WriteMessage(JEOEJADOGDF);
+      }
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.GameMagicUnit) {
         output.WriteRawTag(106);
-        output.WriteMessage(ReforgeHexAvatarFunc);
-      }
-      if (contentInfoCase_ == ContentInfoOneofCase.GameMagicUnit) {
-        output.WriteRawTag(114);
         output.WriteMessage(GameMagicUnit);
-      }
-      if (contentInfoCase_ == ContentInfoOneofCase.ReforgeFormulaFunc) {
-        output.WriteRawTag(122);
-        output.WriteMessage(ReforgeFormulaFunc);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -443,35 +443,35 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (contentInfoCase_ == ContentInfoOneofCase.ReforgeBuffFunc) {
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ReforgeBuffFunc) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReforgeBuffFunc);
       }
-      if (contentInfoCase_ == ContentInfoOneofCase.ReforgeFormulaFunc) {
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ReforgeFormulaFunc) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReforgeFormulaFunc);
       }
-      if (contentInfoCase_ == ContentInfoOneofCase.EnhanceBuffFunc) {
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.EnhanceBuffFunc) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EnhanceBuffFunc);
       }
-      if (contentInfoCase_ == ContentInfoOneofCase.ComposeMiracleFunc) {
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ComposeMiracleFunc) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ComposeMiracleFunc);
       }
-      if (contentInfoCase_ == ContentInfoOneofCase.ReforgeHexAvatarFunc) {
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ReforgeHexAvatarFunc) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReforgeHexAvatarFunc);
       }
-      if (contentInfoCase_ == ContentInfoOneofCase.MagicItem) {
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.MagicItem) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MagicItem);
       }
-      if (contentInfoCase_ == ContentInfoOneofCase.GameMagicUnit) {
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.GameMagicUnit) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameMagicUnit);
       }
-      if (contentInfoCase_ == ContentInfoOneofCase.CBDECPOACJK) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CBDECPOACJK);
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.GLCGKNINAOG) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GLCGKNINAOG);
       }
-      if (contentInfoCase_ == ContentInfoOneofCase.MKDMBFBCCCE) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MKDMBFBCCCE);
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.JEOEJADOGDF) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(JEOEJADOGDF);
       }
-      if (contentInfoCase_ == ContentInfoOneofCase.IJKFIIODHKH) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IJKFIIODHKH);
+      if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.BAGHNHIKFDC) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BAGHNHIKFDC);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -485,66 +485,66 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      switch (other.ContentInfoCase) {
-        case ContentInfoOneofCase.ReforgeBuffFunc:
+      switch (other.JAEONOBEDBLCase) {
+        case JAEONOBEDBLOneofCase.ReforgeBuffFunc:
           if (ReforgeBuffFunc == null) {
             ReforgeBuffFunc = new global::EggLink.DanhengServer.Proto.WorkbenchReforgeBuffTargetInfo();
           }
           ReforgeBuffFunc.MergeFrom(other.ReforgeBuffFunc);
           break;
-        case ContentInfoOneofCase.ReforgeFormulaFunc:
+        case JAEONOBEDBLOneofCase.ReforgeFormulaFunc:
           if (ReforgeFormulaFunc == null) {
             ReforgeFormulaFunc = new global::EggLink.DanhengServer.Proto.WorkbenchReforgeFormulaTargetInfo();
           }
           ReforgeFormulaFunc.MergeFrom(other.ReforgeFormulaFunc);
           break;
-        case ContentInfoOneofCase.EnhanceBuffFunc:
+        case JAEONOBEDBLOneofCase.EnhanceBuffFunc:
           if (EnhanceBuffFunc == null) {
             EnhanceBuffFunc = new global::EggLink.DanhengServer.Proto.WorkbenchEnhanceBuffTargetInfo();
           }
           EnhanceBuffFunc.MergeFrom(other.EnhanceBuffFunc);
           break;
-        case ContentInfoOneofCase.ComposeMiracleFunc:
+        case JAEONOBEDBLOneofCase.ComposeMiracleFunc:
           if (ComposeMiracleFunc == null) {
             ComposeMiracleFunc = new global::EggLink.DanhengServer.Proto.WorkbenchComposeMiracleTargetInfo();
           }
           ComposeMiracleFunc.MergeFrom(other.ComposeMiracleFunc);
           break;
-        case ContentInfoOneofCase.ReforgeHexAvatarFunc:
+        case JAEONOBEDBLOneofCase.ReforgeHexAvatarFunc:
           if (ReforgeHexAvatarFunc == null) {
             ReforgeHexAvatarFunc = new global::EggLink.DanhengServer.Proto.WorkbenchReforgeHexAvatarTargetInfo();
           }
           ReforgeHexAvatarFunc.MergeFrom(other.ReforgeHexAvatarFunc);
           break;
-        case ContentInfoOneofCase.MagicItem:
+        case JAEONOBEDBLOneofCase.MagicItem:
           if (MagicItem == null) {
-            MagicItem = new global::EggLink.DanhengServer.Proto.CMLIPPEMPGN();
+            MagicItem = new global::EggLink.DanhengServer.Proto.JJPMMCJHGLH();
           }
           MagicItem.MergeFrom(other.MagicItem);
           break;
-        case ContentInfoOneofCase.GameMagicUnit:
+        case JAEONOBEDBLOneofCase.GameMagicUnit:
           if (GameMagicUnit == null) {
-            GameMagicUnit = new global::EggLink.DanhengServer.Proto.ACFPBACILJC();
+            GameMagicUnit = new global::EggLink.DanhengServer.Proto.PKPCIJJPIAK();
           }
           GameMagicUnit.MergeFrom(other.GameMagicUnit);
           break;
-        case ContentInfoOneofCase.CBDECPOACJK:
-          if (CBDECPOACJK == null) {
-            CBDECPOACJK = new global::EggLink.DanhengServer.Proto.KKKNABOKMKH();
+        case JAEONOBEDBLOneofCase.GLCGKNINAOG:
+          if (GLCGKNINAOG == null) {
+            GLCGKNINAOG = new global::EggLink.DanhengServer.Proto.NKNBNKGEEMH();
           }
-          CBDECPOACJK.MergeFrom(other.CBDECPOACJK);
+          GLCGKNINAOG.MergeFrom(other.GLCGKNINAOG);
           break;
-        case ContentInfoOneofCase.MKDMBFBCCCE:
-          if (MKDMBFBCCCE == null) {
-            MKDMBFBCCCE = new global::EggLink.DanhengServer.Proto.FENCIEGFAID();
+        case JAEONOBEDBLOneofCase.JEOEJADOGDF:
+          if (JEOEJADOGDF == null) {
+            JEOEJADOGDF = new global::EggLink.DanhengServer.Proto.OCJMFGFLDEE();
           }
-          MKDMBFBCCCE.MergeFrom(other.MKDMBFBCCCE);
+          JEOEJADOGDF.MergeFrom(other.JEOEJADOGDF);
           break;
-        case ContentInfoOneofCase.IJKFIIODHKH:
-          if (IJKFIIODHKH == null) {
-            IJKFIIODHKH = new global::EggLink.DanhengServer.Proto.CLNCKEAGDOI();
+        case JAEONOBEDBLOneofCase.BAGHNHIKFDC:
+          if (BAGHNHIKFDC == null) {
+            BAGHNHIKFDC = new global::EggLink.DanhengServer.Proto.OMHEHLELGBN();
           }
-          IJKFIIODHKH.MergeFrom(other.IJKFIIODHKH);
+          BAGHNHIKFDC.MergeFrom(other.BAGHNHIKFDC);
           break;
       }
 
@@ -563,54 +563,63 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            global::EggLink.DanhengServer.Proto.WorkbenchReforgeBuffTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.WorkbenchReforgeBuffTargetInfo();
-            if (contentInfoCase_ == ContentInfoOneofCase.ReforgeBuffFunc) {
-              subBuilder.MergeFrom(ReforgeBuffFunc);
-            }
-            input.ReadMessage(subBuilder);
-            ReforgeBuffFunc = subBuilder;
-            break;
-          }
           case 18: {
-            global::EggLink.DanhengServer.Proto.FENCIEGFAID subBuilder = new global::EggLink.DanhengServer.Proto.FENCIEGFAID();
-            if (contentInfoCase_ == ContentInfoOneofCase.MKDMBFBCCCE) {
-              subBuilder.MergeFrom(MKDMBFBCCCE);
+            global::EggLink.DanhengServer.Proto.WorkbenchReforgeFormulaTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.WorkbenchReforgeFormulaTargetInfo();
+            if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ReforgeFormulaFunc) {
+              subBuilder.MergeFrom(ReforgeFormulaFunc);
             }
             input.ReadMessage(subBuilder);
-            MKDMBFBCCCE = subBuilder;
+            ReforgeFormulaFunc = subBuilder;
             break;
           }
-          case 34: {
+          case 26: {
             global::EggLink.DanhengServer.Proto.WorkbenchComposeMiracleTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.WorkbenchComposeMiracleTargetInfo();
-            if (contentInfoCase_ == ContentInfoOneofCase.ComposeMiracleFunc) {
+            if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ComposeMiracleFunc) {
               subBuilder.MergeFrom(ComposeMiracleFunc);
             }
             input.ReadMessage(subBuilder);
             ComposeMiracleFunc = subBuilder;
             break;
           }
-          case 50: {
+          case 34: {
+            global::EggLink.DanhengServer.Proto.OMHEHLELGBN subBuilder = new global::EggLink.DanhengServer.Proto.OMHEHLELGBN();
+            if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.BAGHNHIKFDC) {
+              subBuilder.MergeFrom(BAGHNHIKFDC);
+            }
+            input.ReadMessage(subBuilder);
+            BAGHNHIKFDC = subBuilder;
+            break;
+          }
+          case 42: {
+            global::EggLink.DanhengServer.Proto.NKNBNKGEEMH subBuilder = new global::EggLink.DanhengServer.Proto.NKNBNKGEEMH();
+            if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.GLCGKNINAOG) {
+              subBuilder.MergeFrom(GLCGKNINAOG);
+            }
+            input.ReadMessage(subBuilder);
+            GLCGKNINAOG = subBuilder;
+            break;
+          }
+          case 58: {
             global::EggLink.DanhengServer.Proto.WorkbenchEnhanceBuffTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.WorkbenchEnhanceBuffTargetInfo();
-            if (contentInfoCase_ == ContentInfoOneofCase.EnhanceBuffFunc) {
+            if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.EnhanceBuffFunc) {
               subBuilder.MergeFrom(EnhanceBuffFunc);
             }
             input.ReadMessage(subBuilder);
             EnhanceBuffFunc = subBuilder;
             break;
           }
-          case 58: {
-            global::EggLink.DanhengServer.Proto.CLNCKEAGDOI subBuilder = new global::EggLink.DanhengServer.Proto.CLNCKEAGDOI();
-            if (contentInfoCase_ == ContentInfoOneofCase.IJKFIIODHKH) {
-              subBuilder.MergeFrom(IJKFIIODHKH);
+          case 74: {
+            global::EggLink.DanhengServer.Proto.WorkbenchReforgeHexAvatarTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.WorkbenchReforgeHexAvatarTargetInfo();
+            if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ReforgeHexAvatarFunc) {
+              subBuilder.MergeFrom(ReforgeHexAvatarFunc);
             }
             input.ReadMessage(subBuilder);
-            IJKFIIODHKH = subBuilder;
+            ReforgeHexAvatarFunc = subBuilder;
             break;
           }
           case 82: {
-            global::EggLink.DanhengServer.Proto.CMLIPPEMPGN subBuilder = new global::EggLink.DanhengServer.Proto.CMLIPPEMPGN();
-            if (contentInfoCase_ == ContentInfoOneofCase.MagicItem) {
+            global::EggLink.DanhengServer.Proto.JJPMMCJHGLH subBuilder = new global::EggLink.DanhengServer.Proto.JJPMMCJHGLH();
+            if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.MagicItem) {
               subBuilder.MergeFrom(MagicItem);
             }
             input.ReadMessage(subBuilder);
@@ -618,39 +627,30 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 90: {
-            global::EggLink.DanhengServer.Proto.KKKNABOKMKH subBuilder = new global::EggLink.DanhengServer.Proto.KKKNABOKMKH();
-            if (contentInfoCase_ == ContentInfoOneofCase.CBDECPOACJK) {
-              subBuilder.MergeFrom(CBDECPOACJK);
+            global::EggLink.DanhengServer.Proto.WorkbenchReforgeBuffTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.WorkbenchReforgeBuffTargetInfo();
+            if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ReforgeBuffFunc) {
+              subBuilder.MergeFrom(ReforgeBuffFunc);
             }
             input.ReadMessage(subBuilder);
-            CBDECPOACJK = subBuilder;
+            ReforgeBuffFunc = subBuilder;
+            break;
+          }
+          case 98: {
+            global::EggLink.DanhengServer.Proto.OCJMFGFLDEE subBuilder = new global::EggLink.DanhengServer.Proto.OCJMFGFLDEE();
+            if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.JEOEJADOGDF) {
+              subBuilder.MergeFrom(JEOEJADOGDF);
+            }
+            input.ReadMessage(subBuilder);
+            JEOEJADOGDF = subBuilder;
             break;
           }
           case 106: {
-            global::EggLink.DanhengServer.Proto.WorkbenchReforgeHexAvatarTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.WorkbenchReforgeHexAvatarTargetInfo();
-            if (contentInfoCase_ == ContentInfoOneofCase.ReforgeHexAvatarFunc) {
-              subBuilder.MergeFrom(ReforgeHexAvatarFunc);
-            }
-            input.ReadMessage(subBuilder);
-            ReforgeHexAvatarFunc = subBuilder;
-            break;
-          }
-          case 114: {
-            global::EggLink.DanhengServer.Proto.ACFPBACILJC subBuilder = new global::EggLink.DanhengServer.Proto.ACFPBACILJC();
-            if (contentInfoCase_ == ContentInfoOneofCase.GameMagicUnit) {
+            global::EggLink.DanhengServer.Proto.PKPCIJJPIAK subBuilder = new global::EggLink.DanhengServer.Proto.PKPCIJJPIAK();
+            if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.GameMagicUnit) {
               subBuilder.MergeFrom(GameMagicUnit);
             }
             input.ReadMessage(subBuilder);
             GameMagicUnit = subBuilder;
-            break;
-          }
-          case 122: {
-            global::EggLink.DanhengServer.Proto.WorkbenchReforgeFormulaTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.WorkbenchReforgeFormulaTargetInfo();
-            if (contentInfoCase_ == ContentInfoOneofCase.ReforgeFormulaFunc) {
-              subBuilder.MergeFrom(ReforgeFormulaFunc);
-            }
-            input.ReadMessage(subBuilder);
-            ReforgeFormulaFunc = subBuilder;
             break;
           }
         }
@@ -668,54 +668,63 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            global::EggLink.DanhengServer.Proto.WorkbenchReforgeBuffTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.WorkbenchReforgeBuffTargetInfo();
-            if (contentInfoCase_ == ContentInfoOneofCase.ReforgeBuffFunc) {
-              subBuilder.MergeFrom(ReforgeBuffFunc);
-            }
-            input.ReadMessage(subBuilder);
-            ReforgeBuffFunc = subBuilder;
-            break;
-          }
           case 18: {
-            global::EggLink.DanhengServer.Proto.FENCIEGFAID subBuilder = new global::EggLink.DanhengServer.Proto.FENCIEGFAID();
-            if (contentInfoCase_ == ContentInfoOneofCase.MKDMBFBCCCE) {
-              subBuilder.MergeFrom(MKDMBFBCCCE);
+            global::EggLink.DanhengServer.Proto.WorkbenchReforgeFormulaTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.WorkbenchReforgeFormulaTargetInfo();
+            if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ReforgeFormulaFunc) {
+              subBuilder.MergeFrom(ReforgeFormulaFunc);
             }
             input.ReadMessage(subBuilder);
-            MKDMBFBCCCE = subBuilder;
+            ReforgeFormulaFunc = subBuilder;
             break;
           }
-          case 34: {
+          case 26: {
             global::EggLink.DanhengServer.Proto.WorkbenchComposeMiracleTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.WorkbenchComposeMiracleTargetInfo();
-            if (contentInfoCase_ == ContentInfoOneofCase.ComposeMiracleFunc) {
+            if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ComposeMiracleFunc) {
               subBuilder.MergeFrom(ComposeMiracleFunc);
             }
             input.ReadMessage(subBuilder);
             ComposeMiracleFunc = subBuilder;
             break;
           }
-          case 50: {
+          case 34: {
+            global::EggLink.DanhengServer.Proto.OMHEHLELGBN subBuilder = new global::EggLink.DanhengServer.Proto.OMHEHLELGBN();
+            if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.BAGHNHIKFDC) {
+              subBuilder.MergeFrom(BAGHNHIKFDC);
+            }
+            input.ReadMessage(subBuilder);
+            BAGHNHIKFDC = subBuilder;
+            break;
+          }
+          case 42: {
+            global::EggLink.DanhengServer.Proto.NKNBNKGEEMH subBuilder = new global::EggLink.DanhengServer.Proto.NKNBNKGEEMH();
+            if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.GLCGKNINAOG) {
+              subBuilder.MergeFrom(GLCGKNINAOG);
+            }
+            input.ReadMessage(subBuilder);
+            GLCGKNINAOG = subBuilder;
+            break;
+          }
+          case 58: {
             global::EggLink.DanhengServer.Proto.WorkbenchEnhanceBuffTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.WorkbenchEnhanceBuffTargetInfo();
-            if (contentInfoCase_ == ContentInfoOneofCase.EnhanceBuffFunc) {
+            if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.EnhanceBuffFunc) {
               subBuilder.MergeFrom(EnhanceBuffFunc);
             }
             input.ReadMessage(subBuilder);
             EnhanceBuffFunc = subBuilder;
             break;
           }
-          case 58: {
-            global::EggLink.DanhengServer.Proto.CLNCKEAGDOI subBuilder = new global::EggLink.DanhengServer.Proto.CLNCKEAGDOI();
-            if (contentInfoCase_ == ContentInfoOneofCase.IJKFIIODHKH) {
-              subBuilder.MergeFrom(IJKFIIODHKH);
+          case 74: {
+            global::EggLink.DanhengServer.Proto.WorkbenchReforgeHexAvatarTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.WorkbenchReforgeHexAvatarTargetInfo();
+            if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ReforgeHexAvatarFunc) {
+              subBuilder.MergeFrom(ReforgeHexAvatarFunc);
             }
             input.ReadMessage(subBuilder);
-            IJKFIIODHKH = subBuilder;
+            ReforgeHexAvatarFunc = subBuilder;
             break;
           }
           case 82: {
-            global::EggLink.DanhengServer.Proto.CMLIPPEMPGN subBuilder = new global::EggLink.DanhengServer.Proto.CMLIPPEMPGN();
-            if (contentInfoCase_ == ContentInfoOneofCase.MagicItem) {
+            global::EggLink.DanhengServer.Proto.JJPMMCJHGLH subBuilder = new global::EggLink.DanhengServer.Proto.JJPMMCJHGLH();
+            if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.MagicItem) {
               subBuilder.MergeFrom(MagicItem);
             }
             input.ReadMessage(subBuilder);
@@ -723,39 +732,30 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 90: {
-            global::EggLink.DanhengServer.Proto.KKKNABOKMKH subBuilder = new global::EggLink.DanhengServer.Proto.KKKNABOKMKH();
-            if (contentInfoCase_ == ContentInfoOneofCase.CBDECPOACJK) {
-              subBuilder.MergeFrom(CBDECPOACJK);
+            global::EggLink.DanhengServer.Proto.WorkbenchReforgeBuffTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.WorkbenchReforgeBuffTargetInfo();
+            if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.ReforgeBuffFunc) {
+              subBuilder.MergeFrom(ReforgeBuffFunc);
             }
             input.ReadMessage(subBuilder);
-            CBDECPOACJK = subBuilder;
+            ReforgeBuffFunc = subBuilder;
+            break;
+          }
+          case 98: {
+            global::EggLink.DanhengServer.Proto.OCJMFGFLDEE subBuilder = new global::EggLink.DanhengServer.Proto.OCJMFGFLDEE();
+            if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.JEOEJADOGDF) {
+              subBuilder.MergeFrom(JEOEJADOGDF);
+            }
+            input.ReadMessage(subBuilder);
+            JEOEJADOGDF = subBuilder;
             break;
           }
           case 106: {
-            global::EggLink.DanhengServer.Proto.WorkbenchReforgeHexAvatarTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.WorkbenchReforgeHexAvatarTargetInfo();
-            if (contentInfoCase_ == ContentInfoOneofCase.ReforgeHexAvatarFunc) {
-              subBuilder.MergeFrom(ReforgeHexAvatarFunc);
-            }
-            input.ReadMessage(subBuilder);
-            ReforgeHexAvatarFunc = subBuilder;
-            break;
-          }
-          case 114: {
-            global::EggLink.DanhengServer.Proto.ACFPBACILJC subBuilder = new global::EggLink.DanhengServer.Proto.ACFPBACILJC();
-            if (contentInfoCase_ == ContentInfoOneofCase.GameMagicUnit) {
+            global::EggLink.DanhengServer.Proto.PKPCIJJPIAK subBuilder = new global::EggLink.DanhengServer.Proto.PKPCIJJPIAK();
+            if (jAEONOBEDBLCase_ == JAEONOBEDBLOneofCase.GameMagicUnit) {
               subBuilder.MergeFrom(GameMagicUnit);
             }
             input.ReadMessage(subBuilder);
             GameMagicUnit = subBuilder;
-            break;
-          }
-          case 122: {
-            global::EggLink.DanhengServer.Proto.WorkbenchReforgeFormulaTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.WorkbenchReforgeFormulaTargetInfo();
-            if (contentInfoCase_ == ContentInfoOneofCase.ReforgeFormulaFunc) {
-              subBuilder.MergeFrom(ReforgeFormulaFunc);
-            }
-            input.ReadMessage(subBuilder);
-            ReforgeFormulaFunc = subBuilder;
             break;
           }
         }

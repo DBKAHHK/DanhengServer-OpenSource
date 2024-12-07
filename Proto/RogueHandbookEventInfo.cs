@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxSb2d1ZUhhbmRib29rRXZlbnRJbmZvLnByb3RvIk0KFlJvZ3VlSGFuZGJv",
-            "b2tFdmVudEluZm8SGAoQaGFzX3Rha2VuX3Jld2FyZBgLIAEoCBIZChFldmVu",
-            "dF9oYW5kYm9va19pZBgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "b2tFdmVudEluZm8SGAoQaGFzX3Rha2VuX3Jld2FyZBgPIAEoCBIZChFldmVu",
+            "dF9oYW5kYm9va19pZBgEIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "has_taken_reward" field.</summary>
-    public const int HasTakenRewardFieldNumber = 11;
+    public const int HasTakenRewardFieldNumber = 15;
     private bool hasTakenReward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "event_handbook_id" field.</summary>
-    public const int EventHandbookIdFieldNumber = 9;
+    public const int EventHandbookIdFieldNumber = 4;
     private uint eventHandbookId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (EventHandbookId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(32);
         output.WriteUInt32(EventHandbookId);
       }
       if (HasTakenReward != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(120);
         output.WriteBool(HasTakenReward);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (EventHandbookId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(32);
         output.WriteUInt32(EventHandbookId);
       }
       if (HasTakenReward != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(120);
         output.WriteBool(HasTakenReward);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
+          case 32: {
             EventHandbookId = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 120: {
             HasTakenReward = input.ReadBool();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
+          case 32: {
             EventHandbookId = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 120: {
             HasTakenReward = input.ReadBool();
             break;
           }

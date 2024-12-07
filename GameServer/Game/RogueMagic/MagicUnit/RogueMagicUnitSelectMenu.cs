@@ -91,9 +91,7 @@ public class RogueMagicUnitSelectMenu(BaseRogueInstance rogue) : BaseRogueSelect
                     Level = (uint)x.MagicUnitLevel
                 })
             },
-            SelectHintId = 260002,
-            LGOAHPCLIFI = 1,
-            BOIEEFIPNEG = 1
+            SelectHintId = 260002
         };
     }
 }

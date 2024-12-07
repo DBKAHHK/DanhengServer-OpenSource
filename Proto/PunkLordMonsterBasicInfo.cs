@@ -29,13 +29,13 @@ namespace EggLink.DanhengServer.Proto {
             "dWlkGAEgASgNEhIKCm1vbnN0ZXJfaWQYAiABKA0SEQoJY29uZmlnX2lkGAMg",
             "ASgNEhMKC3dvcmxkX2xldmVsGAQgASgNEhMKC2NyZWF0ZV90aW1lGAUgASgD",
             "Eg8KB2xlZnRfaHAYBiABKA0SFAoMYXR0YWNrZXJfbnVtGAcgASgNEiYKCnNo",
-            "YXJlX3R5cGUYCCABKA4yEi5QdW5rTG9yZFNoYXJlVHlwZRITCgtIR0FJQkVD",
-            "RkNQTBgJIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "YXJlX3R5cGUYCCABKA4yEi5QdW5rTG9yZFNoYXJlVHlwZRITCgtKQ05FREVH",
+            "S0tKQRgJIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PunkLordShareTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PunkLordMonsterBasicInfo), global::EggLink.DanhengServer.Proto.PunkLordMonsterBasicInfo.Parser, new[]{ "Uid", "MonsterId", "ConfigId", "WorldLevel", "CreateTime", "LeftHp", "AttackerNum", "ShareType", "HGAIBECFCPL" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PunkLordMonsterBasicInfo), global::EggLink.DanhengServer.Proto.PunkLordMonsterBasicInfo.Parser, new[]{ "Uid", "MonsterId", "ConfigId", "WorldLevel", "CreateTime", "LeftHp", "AttackerNum", "ShareType", "JCNEDEGKKJA" }, null, null, null, null)
           }));
     }
     #endregion
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
       leftHp_ = other.leftHp_;
       attackerNum_ = other.attackerNum_;
       shareType_ = other.shareType_;
-      hGAIBECFCPL_ = other.hGAIBECFCPL_;
+      jCNEDEGKKJA_ = other.jCNEDEGKKJA_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -191,15 +191,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "HGAIBECFCPL" field.</summary>
-    public const int HGAIBECFCPLFieldNumber = 9;
-    private bool hGAIBECFCPL_;
+    /// <summary>Field number for the "JCNEDEGKKJA" field.</summary>
+    public const int JCNEDEGKKJAFieldNumber = 9;
+    private bool jCNEDEGKKJA_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HGAIBECFCPL {
-      get { return hGAIBECFCPL_; }
+    public bool JCNEDEGKKJA {
+      get { return jCNEDEGKKJA_; }
       set {
-        hGAIBECFCPL_ = value;
+        jCNEDEGKKJA_ = value;
       }
     }
 
@@ -226,7 +226,7 @@ namespace EggLink.DanhengServer.Proto {
       if (LeftHp != other.LeftHp) return false;
       if (AttackerNum != other.AttackerNum) return false;
       if (ShareType != other.ShareType) return false;
-      if (HGAIBECFCPL != other.HGAIBECFCPL) return false;
+      if (JCNEDEGKKJA != other.JCNEDEGKKJA) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -242,7 +242,7 @@ namespace EggLink.DanhengServer.Proto {
       if (LeftHp != 0) hash ^= LeftHp.GetHashCode();
       if (AttackerNum != 0) hash ^= AttackerNum.GetHashCode();
       if (ShareType != global::EggLink.DanhengServer.Proto.PunkLordShareType.None) hash ^= ShareType.GetHashCode();
-      if (HGAIBECFCPL != false) hash ^= HGAIBECFCPL.GetHashCode();
+      if (JCNEDEGKKJA != false) hash ^= JCNEDEGKKJA.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -293,9 +293,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(64);
         output.WriteEnum((int) ShareType);
       }
-      if (HGAIBECFCPL != false) {
+      if (JCNEDEGKKJA != false) {
         output.WriteRawTag(72);
-        output.WriteBool(HGAIBECFCPL);
+        output.WriteBool(JCNEDEGKKJA);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -339,9 +339,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(64);
         output.WriteEnum((int) ShareType);
       }
-      if (HGAIBECFCPL != false) {
+      if (JCNEDEGKKJA != false) {
         output.WriteRawTag(72);
-        output.WriteBool(HGAIBECFCPL);
+        output.WriteBool(JCNEDEGKKJA);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -377,7 +377,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ShareType != global::EggLink.DanhengServer.Proto.PunkLordShareType.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ShareType);
       }
-      if (HGAIBECFCPL != false) {
+      if (JCNEDEGKKJA != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -416,8 +416,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.ShareType != global::EggLink.DanhengServer.Proto.PunkLordShareType.None) {
         ShareType = other.ShareType;
       }
-      if (other.HGAIBECFCPL != false) {
-        HGAIBECFCPL = other.HGAIBECFCPL;
+      if (other.JCNEDEGKKJA != false) {
+        JCNEDEGKKJA = other.JCNEDEGKKJA;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -467,7 +467,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 72: {
-            HGAIBECFCPL = input.ReadBool();
+            JCNEDEGKKJA = input.ReadBool();
             break;
           }
         }
@@ -518,7 +518,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 72: {
-            HGAIBECFCPL = input.ReadBool();
+            JCNEDEGKKJA = input.ReadBool();
             break;
           }
         }

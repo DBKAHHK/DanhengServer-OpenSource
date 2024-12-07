@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChtSb2d1ZVRvdXJuRm9ybXVsYUluZm8ucHJvdG8aFkZvcm11bGFUeXBlVmFs",
             "dWUucHJvdG8aEUZvcm11bGFJbmZvLnByb3RvIm8KFVJvZ3VlVG91cm5Gb3Jt",
-            "dWxhSW5mbxInChFnYW1lX2Zvcm11bGFfaW5mbxgNIAMoCzIMLkZvcm11bGFJ",
-            "bmZvEi0KEmZvcm11bGFfdHlwZV92YWx1ZRgIIAEoCzIRLkZvcm11bGFUeXBl",
+            "dWxhSW5mbxInChFnYW1lX2Zvcm11bGFfaW5mbxgMIAMoCzIMLkZvcm11bGFJ",
+            "bmZvEi0KEmZvcm11bGFfdHlwZV92YWx1ZRgFIAEoCzIRLkZvcm11bGFUeXBl",
             "VmFsdWVCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FormulaTypeValueReflection.Descriptor, global::EggLink.DanhengServer.Proto.FormulaInfoReflection.Descriptor, },
@@ -86,9 +86,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "game_formula_info" field.</summary>
-    public const int GameFormulaInfoFieldNumber = 13;
+    public const int GameFormulaInfoFieldNumber = 12;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.FormulaInfo> _repeated_gameFormulaInfo_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.FormulaInfo.Parser);
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.FormulaInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FormulaInfo> gameFormulaInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FormulaInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "formula_type_value" field.</summary>
-    public const int FormulaTypeValueFieldNumber = 8;
+    public const int FormulaTypeValueFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.FormulaTypeValue formulaTypeValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (formulaTypeValue_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(42);
         output.WriteMessage(FormulaTypeValue);
       }
       gameFormulaInfo_.WriteTo(output, _repeated_gameFormulaInfo_codec);
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (formulaTypeValue_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(42);
         output.WriteMessage(FormulaTypeValue);
       }
       gameFormulaInfo_.WriteTo(ref output, _repeated_gameFormulaInfo_codec);
@@ -220,14 +220,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66: {
+          case 42: {
             if (formulaTypeValue_ == null) {
               FormulaTypeValue = new global::EggLink.DanhengServer.Proto.FormulaTypeValue();
             }
             input.ReadMessage(FormulaTypeValue);
             break;
           }
-          case 106: {
+          case 98: {
             gameFormulaInfo_.AddEntriesFrom(input, _repeated_gameFormulaInfo_codec);
             break;
           }
@@ -246,14 +246,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66: {
+          case 42: {
             if (formulaTypeValue_ == null) {
               FormulaTypeValue = new global::EggLink.DanhengServer.Proto.FormulaTypeValue();
             }
             input.ReadMessage(FormulaTypeValue);
             break;
           }
-          case 106: {
+          case 98: {
             gameFormulaInfo_.AddEntriesFrom(ref input, _repeated_gameFormulaInfo_codec);
             break;
           }

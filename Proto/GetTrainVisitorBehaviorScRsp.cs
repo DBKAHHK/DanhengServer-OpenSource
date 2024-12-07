@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiJHZXRUcmFpblZpc2l0b3JCZWhhdmlvclNjUnNwLnByb3RvGhpUcmFpblZp",
             "c2l0b3JCZWhhdmlvci5wcm90byJlChxHZXRUcmFpblZpc2l0b3JCZWhhdmlv",
-            "clNjUnNwEg8KB3JldGNvZGUYCyABKA0SNAoVdmlzaXRvcl9iZWhhdmlvcl9s",
-            "aXN0GAkgAygLMhUuVHJhaW5WaXNpdG9yQmVoYXZpb3JCHqoCG0VnZ0xpbmsu",
+            "clNjUnNwEg8KB3JldGNvZGUYASABKA0SNAoVdmlzaXRvcl9iZWhhdmlvcl9s",
+            "aXN0GAIgAygLMhUuVHJhaW5WaXNpdG9yQmVoYXZpb3JCHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainVisitorBehaviorReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 11;
+    public const int RetcodeFieldNumber = 1;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "visitor_behavior_list" field.</summary>
-    public const int VisitorBehaviorListFieldNumber = 9;
+    public const int VisitorBehaviorListFieldNumber = 2;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.TrainVisitorBehavior> _repeated_visitorBehaviorList_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.TrainVisitorBehavior.Parser);
+        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.TrainVisitorBehavior.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainVisitorBehavior> visitorBehaviorList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainVisitorBehavior>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      visitorBehaviorList_.WriteTo(output, _repeated_visitorBehaviorList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
       }
+      visitorBehaviorList_.WriteTo(output, _repeated_visitorBehaviorList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      visitorBehaviorList_.WriteTo(ref output, _repeated_visitorBehaviorList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
       }
+      visitorBehaviorList_.WriteTo(ref output, _repeated_visitorBehaviorList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -217,12 +217,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 74: {
-            visitorBehaviorList_.AddEntriesFrom(input, _repeated_visitorBehaviorList_codec);
+          case 8: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 88: {
-            Retcode = input.ReadUInt32();
+          case 18: {
+            visitorBehaviorList_.AddEntriesFrom(input, _repeated_visitorBehaviorList_codec);
             break;
           }
         }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 74: {
-            visitorBehaviorList_.AddEntriesFrom(ref input, _repeated_visitorBehaviorList_codec);
+          case 8: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 88: {
-            Retcode = input.ReadUInt32();
+          case 18: {
+            visitorBehaviorList_.AddEntriesFrom(ref input, _repeated_visitorBehaviorList_codec);
             break;
           }
         }

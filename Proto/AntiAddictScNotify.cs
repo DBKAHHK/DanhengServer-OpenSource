@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhBbnRpQWRkaWN0U2NOb3RpZnkucHJvdG8iQgoSQW50aUFkZGljdFNjTm90",
-            "aWZ5EgsKA21zZxgHIAEoCRIQCghtc2dfdHlwZRgJIAEoDRINCgVsZXZlbBgC",
+            "aWZ5EgsKA21zZxgEIAEoCRIQCghtc2dfdHlwZRgDIAEoDRINCgVsZXZlbBgM",
             "IAEoCUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "msg" field.</summary>
-    public const int MsgFieldNumber = 7;
+    public const int MsgFieldNumber = 4;
     private string msg_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "msg_type" field.</summary>
-    public const int MsgTypeFieldNumber = 9;
+    public const int MsgTypeFieldNumber = 3;
     private uint msgType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 2;
+    public const int LevelFieldNumber = 12;
     private string level_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,17 +166,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Level.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Level);
+      if (MsgType != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(MsgType);
       }
       if (Msg.Length != 0) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(34);
         output.WriteString(Msg);
       }
-      if (MsgType != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(MsgType);
+      if (Level.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(Level);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -188,17 +188,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Level.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Level);
+      if (MsgType != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(MsgType);
       }
       if (Msg.Length != 0) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(34);
         output.WriteString(Msg);
       }
-      if (MsgType != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(MsgType);
+      if (Level.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(Level);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
-            Level = input.ReadString();
+          case 24: {
+            MsgType = input.ReadUInt32();
             break;
           }
-          case 58: {
+          case 34: {
             Msg = input.ReadString();
             break;
           }
-          case 72: {
-            MsgType = input.ReadUInt32();
+          case 98: {
+            Level = input.ReadString();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
-            Level = input.ReadString();
+          case 24: {
+            MsgType = input.ReadUInt32();
             break;
           }
-          case 58: {
+          case 34: {
             Msg = input.ReadString();
             break;
           }
-          case 72: {
-            MsgType = input.ReadUInt32();
+          case 98: {
+            Level = input.ReadString();
             break;
           }
         }

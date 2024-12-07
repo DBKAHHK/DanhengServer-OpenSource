@@ -24,17 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static RogueScoreRewardInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpSb2d1ZVNjb3JlUmV3YXJkSW5mby5wcm90byLPAQoUUm9ndWVTY29yZVJl",
-            "d2FyZEluZm8SFgoOcG9vbF9yZWZyZXNoZWQYDCABKAgSHwoXaGFzX3Rha2Vu",
-            "X2luaXRpYWxfc2NvcmUYBCABKAgSGQoRcmV3YXJkX2JlZ2luX3RpbWUYASAB",
-            "KAMSDwoHcG9vbF9pZBgDIAEoDRIVCg1leHBsb3JlX3Njb3JlGAcgASgNEhcK",
-            "D3Jld2FyZF9lbmRfdGltZRgFIAEoAxIiChp0YWtlbl9ub3JtYWxfZnJlZV9y",
-            "b3dfbGlzdBgGIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
-            "YgZwcm90bzM="));
+            "ChpSb2d1ZVNjb3JlUmV3YXJkSW5mby5wcm90byLAAQoUUm9ndWVTY29yZVJl",
+            "d2FyZEluZm8SFgoOcG9vbF9yZWZyZXNoZWQYBiABKAgSGQoRcmV3YXJkX2Jl",
+            "Z2luX3RpbWUYBSABKAMSEwoLRlBHQUZOQ0JJT0cYDyADKA0SFQoNZXhwbG9y",
+            "ZV9zY29yZRgIIAEoDRIfChdoYXNfdGFrZW5faW5pdGlhbF9zY29yZRgKIAEo",
+            "CBIPCgdwb29sX2lkGAMgASgNEhcKD3Jld2FyZF9lbmRfdGltZRgLIAEoA0Ie",
+            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueScoreRewardInfo), global::EggLink.DanhengServer.Proto.RogueScoreRewardInfo.Parser, new[]{ "PoolRefreshed", "HasTakenInitialScore", "RewardBeginTime", "PoolId", "ExploreScore", "RewardEndTime", "TakenNormalFreeRowList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueScoreRewardInfo), global::EggLink.DanhengServer.Proto.RogueScoreRewardInfo.Parser, new[]{ "PoolRefreshed", "RewardBeginTime", "FPGAFNCBIOG", "ExploreScore", "HasTakenInitialScore", "PoolId", "RewardEndTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,12 +76,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueScoreRewardInfo(RogueScoreRewardInfo other) : this() {
       poolRefreshed_ = other.poolRefreshed_;
-      hasTakenInitialScore_ = other.hasTakenInitialScore_;
       rewardBeginTime_ = other.rewardBeginTime_;
-      poolId_ = other.poolId_;
+      fPGAFNCBIOG_ = other.fPGAFNCBIOG_.Clone();
       exploreScore_ = other.exploreScore_;
+      hasTakenInitialScore_ = other.hasTakenInitialScore_;
+      poolId_ = other.poolId_;
       rewardEndTime_ = other.rewardEndTime_;
-      takenNormalFreeRowList_ = other.takenNormalFreeRowList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -93,10 +92,10 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "pool_refreshed" field.</summary>
-    public const int PoolRefreshedFieldNumber = 12;
+    public const int PoolRefreshedFieldNumber = 6;
     private bool poolRefreshed_;
     /// <summary>
-    /// 4
+    /// 10
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -107,11 +106,49 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "reward_begin_time" field.</summary>
+    public const int RewardBeginTimeFieldNumber = 5;
+    private long rewardBeginTime_;
+    /// <summary>
+    /// 11
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long RewardBeginTime {
+      get { return rewardBeginTime_; }
+      set {
+        rewardBeginTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "FPGAFNCBIOG" field.</summary>
+    public const int FPGAFNCBIOGFieldNumber = 15;
+    private static readonly pb::FieldCodec<uint> _repeated_fPGAFNCBIOG_codec
+        = pb::FieldCodec.ForUInt32(122);
+    private readonly pbc::RepeatedField<uint> fPGAFNCBIOG_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> FPGAFNCBIOG {
+      get { return fPGAFNCBIOG_; }
+    }
+
+    /// <summary>Field number for the "explore_score" field.</summary>
+    public const int ExploreScoreFieldNumber = 8;
+    private uint exploreScore_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ExploreScore {
+      get { return exploreScore_; }
+      set {
+        exploreScore_ = value;
+      }
+    }
+
     /// <summary>Field number for the "has_taken_initial_score" field.</summary>
-    public const int HasTakenInitialScoreFieldNumber = 4;
+    public const int HasTakenInitialScoreFieldNumber = 10;
     private bool hasTakenInitialScore_;
     /// <summary>
-    /// 12
+    /// 6
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -119,18 +156,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return hasTakenInitialScore_; }
       set {
         hasTakenInitialScore_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "reward_begin_time" field.</summary>
-    public const int RewardBeginTimeFieldNumber = 1;
-    private long rewardBeginTime_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long RewardBeginTime {
-      get { return rewardBeginTime_; }
-      set {
-        rewardBeginTime_ = value;
       }
     }
 
@@ -146,21 +171,12 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "explore_score" field.</summary>
-    public const int ExploreScoreFieldNumber = 7;
-    private uint exploreScore_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ExploreScore {
-      get { return exploreScore_; }
-      set {
-        exploreScore_ = value;
-      }
-    }
-
     /// <summary>Field number for the "reward_end_time" field.</summary>
-    public const int RewardEndTimeFieldNumber = 5;
+    public const int RewardEndTimeFieldNumber = 11;
     private long rewardEndTime_;
+    /// <summary>
+    /// 5
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long RewardEndTime {
@@ -168,17 +184,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         rewardEndTime_ = value;
       }
-    }
-
-    /// <summary>Field number for the "taken_normal_free_row_list" field.</summary>
-    public const int TakenNormalFreeRowListFieldNumber = 6;
-    private static readonly pb::FieldCodec<uint> _repeated_takenNormalFreeRowList_codec
-        = pb::FieldCodec.ForUInt32(50);
-    private readonly pbc::RepeatedField<uint> takenNormalFreeRowList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> TakenNormalFreeRowList {
-      get { return takenNormalFreeRowList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -197,12 +202,12 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (PoolRefreshed != other.PoolRefreshed) return false;
-      if (HasTakenInitialScore != other.HasTakenInitialScore) return false;
       if (RewardBeginTime != other.RewardBeginTime) return false;
-      if (PoolId != other.PoolId) return false;
+      if(!fPGAFNCBIOG_.Equals(other.fPGAFNCBIOG_)) return false;
       if (ExploreScore != other.ExploreScore) return false;
+      if (HasTakenInitialScore != other.HasTakenInitialScore) return false;
+      if (PoolId != other.PoolId) return false;
       if (RewardEndTime != other.RewardEndTime) return false;
-      if(!takenNormalFreeRowList_.Equals(other.takenNormalFreeRowList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -211,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (PoolRefreshed != false) hash ^= PoolRefreshed.GetHashCode();
-      if (HasTakenInitialScore != false) hash ^= HasTakenInitialScore.GetHashCode();
       if (RewardBeginTime != 0L) hash ^= RewardBeginTime.GetHashCode();
-      if (PoolId != 0) hash ^= PoolId.GetHashCode();
+      hash ^= fPGAFNCBIOG_.GetHashCode();
       if (ExploreScore != 0) hash ^= ExploreScore.GetHashCode();
+      if (HasTakenInitialScore != false) hash ^= HasTakenInitialScore.GetHashCode();
+      if (PoolId != 0) hash ^= PoolId.GetHashCode();
       if (RewardEndTime != 0L) hash ^= RewardEndTime.GetHashCode();
-      hash ^= takenNormalFreeRowList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -235,31 +240,31 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (RewardBeginTime != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(RewardBeginTime);
-      }
       if (PoolId != 0) {
         output.WriteRawTag(24);
         output.WriteUInt32(PoolId);
       }
+      if (RewardBeginTime != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(RewardBeginTime);
+      }
+      if (PoolRefreshed != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(PoolRefreshed);
+      }
+      if (ExploreScore != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(ExploreScore);
+      }
       if (HasTakenInitialScore != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(80);
         output.WriteBool(HasTakenInitialScore);
       }
       if (RewardEndTime != 0L) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(88);
         output.WriteInt64(RewardEndTime);
       }
-      takenNormalFreeRowList_.WriteTo(output, _repeated_takenNormalFreeRowList_codec);
-      if (ExploreScore != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(ExploreScore);
-      }
-      if (PoolRefreshed != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(PoolRefreshed);
-      }
+      fPGAFNCBIOG_.WriteTo(output, _repeated_fPGAFNCBIOG_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -270,31 +275,31 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (RewardBeginTime != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(RewardBeginTime);
-      }
       if (PoolId != 0) {
         output.WriteRawTag(24);
         output.WriteUInt32(PoolId);
       }
+      if (RewardBeginTime != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(RewardBeginTime);
+      }
+      if (PoolRefreshed != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(PoolRefreshed);
+      }
+      if (ExploreScore != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(ExploreScore);
+      }
       if (HasTakenInitialScore != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(80);
         output.WriteBool(HasTakenInitialScore);
       }
       if (RewardEndTime != 0L) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(88);
         output.WriteInt64(RewardEndTime);
       }
-      takenNormalFreeRowList_.WriteTo(ref output, _repeated_takenNormalFreeRowList_codec);
-      if (ExploreScore != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(ExploreScore);
-      }
-      if (PoolRefreshed != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(PoolRefreshed);
-      }
+      fPGAFNCBIOG_.WriteTo(ref output, _repeated_fPGAFNCBIOG_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -308,22 +313,22 @@ namespace EggLink.DanhengServer.Proto {
       if (PoolRefreshed != false) {
         size += 1 + 1;
       }
-      if (HasTakenInitialScore != false) {
-        size += 1 + 1;
-      }
       if (RewardBeginTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(RewardBeginTime);
+      }
+      size += fPGAFNCBIOG_.CalculateSize(_repeated_fPGAFNCBIOG_codec);
+      if (ExploreScore != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ExploreScore);
+      }
+      if (HasTakenInitialScore != false) {
+        size += 1 + 1;
       }
       if (PoolId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PoolId);
       }
-      if (ExploreScore != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ExploreScore);
-      }
       if (RewardEndTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(RewardEndTime);
       }
-      size += takenNormalFreeRowList_.CalculateSize(_repeated_takenNormalFreeRowList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -339,22 +344,22 @@ namespace EggLink.DanhengServer.Proto {
       if (other.PoolRefreshed != false) {
         PoolRefreshed = other.PoolRefreshed;
       }
-      if (other.HasTakenInitialScore != false) {
-        HasTakenInitialScore = other.HasTakenInitialScore;
-      }
       if (other.RewardBeginTime != 0L) {
         RewardBeginTime = other.RewardBeginTime;
+      }
+      fPGAFNCBIOG_.Add(other.fPGAFNCBIOG_);
+      if (other.ExploreScore != 0) {
+        ExploreScore = other.ExploreScore;
+      }
+      if (other.HasTakenInitialScore != false) {
+        HasTakenInitialScore = other.HasTakenInitialScore;
       }
       if (other.PoolId != 0) {
         PoolId = other.PoolId;
       }
-      if (other.ExploreScore != 0) {
-        ExploreScore = other.ExploreScore;
-      }
       if (other.RewardEndTime != 0L) {
         RewardEndTime = other.RewardEndTime;
       }
-      takenNormalFreeRowList_.Add(other.takenNormalFreeRowList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -370,33 +375,33 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            RewardBeginTime = input.ReadInt64();
-            break;
-          }
           case 24: {
             PoolId = input.ReadUInt32();
             break;
           }
-          case 32: {
-            HasTakenInitialScore = input.ReadBool();
-            break;
-          }
           case 40: {
-            RewardEndTime = input.ReadInt64();
+            RewardBeginTime = input.ReadInt64();
             break;
           }
-          case 50:
           case 48: {
-            takenNormalFreeRowList_.AddEntriesFrom(input, _repeated_takenNormalFreeRowList_codec);
+            PoolRefreshed = input.ReadBool();
             break;
           }
-          case 56: {
+          case 64: {
             ExploreScore = input.ReadUInt32();
             break;
           }
-          case 96: {
-            PoolRefreshed = input.ReadBool();
+          case 80: {
+            HasTakenInitialScore = input.ReadBool();
+            break;
+          }
+          case 88: {
+            RewardEndTime = input.ReadInt64();
+            break;
+          }
+          case 122:
+          case 120: {
+            fPGAFNCBIOG_.AddEntriesFrom(input, _repeated_fPGAFNCBIOG_codec);
             break;
           }
         }
@@ -414,33 +419,33 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            RewardBeginTime = input.ReadInt64();
-            break;
-          }
           case 24: {
             PoolId = input.ReadUInt32();
             break;
           }
-          case 32: {
-            HasTakenInitialScore = input.ReadBool();
-            break;
-          }
           case 40: {
-            RewardEndTime = input.ReadInt64();
+            RewardBeginTime = input.ReadInt64();
             break;
           }
-          case 50:
           case 48: {
-            takenNormalFreeRowList_.AddEntriesFrom(ref input, _repeated_takenNormalFreeRowList_codec);
+            PoolRefreshed = input.ReadBool();
             break;
           }
-          case 56: {
+          case 64: {
             ExploreScore = input.ReadUInt32();
             break;
           }
-          case 96: {
-            PoolRefreshed = input.ReadBool();
+          case 80: {
+            HasTakenInitialScore = input.ReadBool();
+            break;
+          }
+          case 88: {
+            RewardEndTime = input.ReadInt64();
+            break;
+          }
+          case 122:
+          case 120: {
+            fPGAFNCBIOG_.AddEntriesFrom(ref input, _repeated_fPGAFNCBIOG_codec);
             break;
           }
         }

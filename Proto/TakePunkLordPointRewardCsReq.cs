@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJUYWtlUHVua0xvcmRQb2ludFJld2FyZENzUmVxLnByb3RvIkIKHFRha2VQ",
-            "dW5rTG9yZFBvaW50UmV3YXJkQ3NSZXESDQoFbGV2ZWwYAiABKA0SEwoLSUNE",
-            "T0hLUEtNQUgYDCABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "dW5rTG9yZFBvaW50UmV3YXJkQ3NSZXESDQoFbGV2ZWwYByABKA0SEwoLSEdP",
+            "SUpOS05JT0EYCCABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakePunkLordPointRewardCsReq), global::EggLink.DanhengServer.Proto.TakePunkLordPointRewardCsReq.Parser, new[]{ "Level", "ICDOHKPKMAH" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakePunkLordPointRewardCsReq), global::EggLink.DanhengServer.Proto.TakePunkLordPointRewardCsReq.Parser, new[]{ "Level", "HGOIJNKNIOA" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TakePunkLordPointRewardCsReq(TakePunkLordPointRewardCsReq other) : this() {
       level_ = other.level_;
-      iCDOHKPKMAH_ = other.iCDOHKPKMAH_;
+      hGOIJNKNIOA_ = other.hGOIJNKNIOA_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 2;
+    public const int LevelFieldNumber = 7;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ICDOHKPKMAH" field.</summary>
-    public const int ICDOHKPKMAHFieldNumber = 12;
-    private bool iCDOHKPKMAH_;
+    /// <summary>Field number for the "HGOIJNKNIOA" field.</summary>
+    public const int HGOIJNKNIOAFieldNumber = 8;
+    private bool hGOIJNKNIOA_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool ICDOHKPKMAH {
-      get { return iCDOHKPKMAH_; }
+    public bool HGOIJNKNIOA {
+      get { return hGOIJNKNIOA_; }
       set {
-        iCDOHKPKMAH_ = value;
+        hGOIJNKNIOA_ = value;
       }
     }
 
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Level != other.Level) return false;
-      if (ICDOHKPKMAH != other.ICDOHKPKMAH) return false;
+      if (HGOIJNKNIOA != other.HGOIJNKNIOA) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Level != 0) hash ^= Level.GetHashCode();
-      if (ICDOHKPKMAH != false) hash ^= ICDOHKPKMAH.GetHashCode();
+      if (HGOIJNKNIOA != false) hash ^= HGOIJNKNIOA.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,12 +153,12 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Level != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(56);
         output.WriteUInt32(Level);
       }
-      if (ICDOHKPKMAH != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(ICDOHKPKMAH);
+      if (HGOIJNKNIOA != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(HGOIJNKNIOA);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,12 +171,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Level != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(56);
         output.WriteUInt32(Level);
       }
-      if (ICDOHKPKMAH != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(ICDOHKPKMAH);
+      if (HGOIJNKNIOA != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(HGOIJNKNIOA);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -191,7 +191,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
       }
-      if (ICDOHKPKMAH != false) {
+      if (HGOIJNKNIOA != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -209,8 +209,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Level != 0) {
         Level = other.Level;
       }
-      if (other.ICDOHKPKMAH != false) {
-        ICDOHKPKMAH = other.ICDOHKPKMAH;
+      if (other.HGOIJNKNIOA != false) {
+        HGOIJNKNIOA = other.HGOIJNKNIOA;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 56: {
             Level = input.ReadUInt32();
             break;
           }
-          case 96: {
-            ICDOHKPKMAH = input.ReadBool();
+          case 64: {
+            HGOIJNKNIOA = input.ReadBool();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 56: {
             Level = input.ReadUInt32();
             break;
           }
-          case 96: {
-            ICDOHKPKMAH = input.ReadBool();
+          case 64: {
+            HGOIJNKNIOA = input.ReadBool();
             break;
           }
         }

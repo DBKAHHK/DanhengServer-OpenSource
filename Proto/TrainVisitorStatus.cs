@@ -24,11 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static TrainVisitorStatusReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhUcmFpblZpc2l0b3JTdGF0dXMucHJvdG8qlQEKElRyYWluVmlzaXRvclN0",
+            "ChhUcmFpblZpc2l0b3JTdGF0dXMucHJvdG8qvwEKElRyYWluVmlzaXRvclN0",
             "YXR1cxIdChlUUkFJTl9WSVNJVE9SX1NUQVRVU19OT05FEAASHQoZVFJBSU5f",
             "VklTSVRPUl9TVEFUVVNfSU5JVBABEh8KG1RSQUlOX1ZJU0lUT1JfU1RBVFVT",
-            "X0dFVF9PThACEiAKHFRSQUlOX1ZJU0lUT1JfU1RBVFVTX0dFVF9PRkYQA0Ie",
-            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "X0dFVF9PThACEiAKHFRSQUlOX1ZJU0lUT1JfU1RBVFVTX0dFVF9PRkYQAxIo",
+            "CiRUUkFJTl9WSVNJVE9SX1NUQVRVU19CRV9UUkFJTl9NRU1CRVIQBEIeqgIb",
+            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.TrainVisitorStatus), }, null, null));
@@ -42,6 +43,7 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("TRAIN_VISITOR_STATUS_INIT")] Init = 1,
     [pbr::OriginalName("TRAIN_VISITOR_STATUS_GET_ON")] GetOn = 2,
     [pbr::OriginalName("TRAIN_VISITOR_STATUS_GET_OFF")] GetOff = 3,
+    [pbr::OriginalName("TRAIN_VISITOR_STATUS_BE_TRAIN_MEMBER")] BeTrainMember = 4,
   }
 
   #endregion

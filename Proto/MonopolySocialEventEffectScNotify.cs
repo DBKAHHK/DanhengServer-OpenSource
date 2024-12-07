@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CidNb25vcG9seVNvY2lhbEV2ZW50RWZmZWN0U2NOb3RpZnkucHJvdG8aHFNv",
             "Y2lhbEV2ZW50U2VydmVyQ2FjaGUucHJvdG8iUgohTW9ub3BvbHlTb2NpYWxF",
-            "dmVudEVmZmVjdFNjTm90aWZ5Ei0KDHNvY2lhbF9ldmVudBgOIAMoCzIXLlNv",
+            "dmVudEVmZmVjdFNjTm90aWZ5Ei0KDHNvY2lhbF9ldmVudBgFIAMoCzIXLlNv",
             "Y2lhbEV2ZW50U2VydmVyQ2FjaGVCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "social_event" field.</summary>
-    public const int SocialEventFieldNumber = 14;
+    public const int SocialEventFieldNumber = 5;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.SocialEventServerCache> _repeated_socialEvent_codec
-        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.SocialEventServerCache.Parser);
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.SocialEventServerCache.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SocialEventServerCache> socialEvent_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SocialEventServerCache>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 114: {
+          case 42: {
             socialEvent_.AddEntriesFrom(input, _repeated_socialEvent_codec);
             break;
           }
@@ -207,7 +207,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 114: {
+          case 42: {
             socialEvent_.AddEntriesFrom(ref input, _repeated_socialEvent_codec);
             break;
           }

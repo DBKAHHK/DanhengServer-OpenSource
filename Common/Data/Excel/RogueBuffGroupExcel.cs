@@ -7,9 +7,9 @@ namespace EggLink.DanhengServer.Data.Excel;
 [ResourceEntity("RogueBuffGroup.json")]
 public class RogueBuffGroupExcel : BaseRogueBuffGroupExcel
 {
-    [JsonProperty("BHOJPHAJLMI")] public int GroupID { get; set; }
+    [JsonProperty("IKOLKLEFCGO")] public int GroupID { get; set; }
 
-    [JsonProperty("NDFFCMBIOAG")] public List<int> BuffTagList { get; set; } = [];
+    [JsonProperty("DKLEHCPFLFJ")] public List<int> BuffTagList { get; set; } = [];
 
     public override int GetId()
     {

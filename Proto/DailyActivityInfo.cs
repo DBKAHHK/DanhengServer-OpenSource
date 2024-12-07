@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdEYWlseUFjdGl2aXR5SW5mby5wcm90byJpChFEYWlseUFjdGl2aXR5SW5m",
-            "bxIUCgxpc19oYXNfdGFrZW4YBCABKAgSEwoLd29ybGRfbGV2ZWwYDCABKA0S",
-            "DQoFbGV2ZWwYBiABKA0SGgoSZGFpbHlfYWN0aXZlX3BvaW50GA4gASgNQh6q",
+            "bxIUCgxpc19oYXNfdGFrZW4YCSABKAgSEwoLd29ybGRfbGV2ZWwYCCABKA0S",
+            "DQoFbGV2ZWwYBiABKA0SGgoSZGFpbHlfYWN0aXZlX3BvaW50GA0gASgNQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_has_taken" field.</summary>
-    public const int IsHasTakenFieldNumber = 4;
+    public const int IsHasTakenFieldNumber = 9;
     private bool isHasTaken_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "world_level" field.</summary>
-    public const int WorldLevelFieldNumber = 12;
+    public const int WorldLevelFieldNumber = 8;
     private uint worldLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "daily_active_point" field.</summary>
-    public const int DailyActivePointFieldNumber = 14;
+    public const int DailyActivePointFieldNumber = 13;
     private uint dailyActivePoint_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -182,20 +182,20 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsHasTaken != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(IsHasTaken);
-      }
       if (Level != 0) {
         output.WriteRawTag(48);
         output.WriteUInt32(Level);
       }
       if (WorldLevel != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteUInt32(WorldLevel);
       }
+      if (IsHasTaken != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(IsHasTaken);
+      }
       if (DailyActivePoint != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(104);
         output.WriteUInt32(DailyActivePoint);
       }
       if (_unknownFields != null) {
@@ -208,20 +208,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsHasTaken != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(IsHasTaken);
-      }
       if (Level != 0) {
         output.WriteRawTag(48);
         output.WriteUInt32(Level);
       }
       if (WorldLevel != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteUInt32(WorldLevel);
       }
+      if (IsHasTaken != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(IsHasTaken);
+      }
       if (DailyActivePoint != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(104);
         output.WriteUInt32(DailyActivePoint);
       }
       if (_unknownFields != null) {
@@ -285,19 +285,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            IsHasTaken = input.ReadBool();
-            break;
-          }
           case 48: {
             Level = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 64: {
             WorldLevel = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 72: {
+            IsHasTaken = input.ReadBool();
+            break;
+          }
+          case 104: {
             DailyActivePoint = input.ReadUInt32();
             break;
           }
@@ -316,19 +316,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            IsHasTaken = input.ReadBool();
-            break;
-          }
           case 48: {
             Level = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 64: {
             WorldLevel = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 72: {
+            IsHasTaken = input.ReadBool();
+            break;
+          }
+          case 104: {
             DailyActivePoint = input.ReadUInt32();
             break;
           }

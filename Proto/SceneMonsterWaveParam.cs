@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtTY2VuZU1vbnN0ZXJXYXZlUGFyYW0ucHJvdG8iagoVU2NlbmVNb25zdGVy",
-            "V2F2ZVBhcmFtEhMKC1BITEJFQ0xLQkhIGAUgASgNEhMKC2VsaXRlX2dyb3Vw",
-            "GAIgASgNEhgKEGhhcmRfbGV2ZWxfZ3JvdXAYDSABKA0SDQoFbGV2ZWwYDCAB",
+            "V2F2ZVBhcmFtEg0KBWxldmVsGAogASgNEhMKC2VsaXRlX2dyb3VwGAIgASgN",
+            "EhMKC0NCSUFPUExJUEtKGAUgASgNEhgKEGhhcmRfbGV2ZWxfZ3JvdXAYDSAB",
             "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneMonsterWaveParam), global::EggLink.DanhengServer.Proto.SceneMonsterWaveParam.Parser, new[]{ "PHLBECLKBHH", "EliteGroup", "HardLevelGroup", "Level" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneMonsterWaveParam), global::EggLink.DanhengServer.Proto.SceneMonsterWaveParam.Parser, new[]{ "Level", "EliteGroup", "CBIAOPLIPKJ", "HardLevelGroup" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,10 +73,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SceneMonsterWaveParam(SceneMonsterWaveParam other) : this() {
-      pHLBECLKBHH_ = other.pHLBECLKBHH_;
-      eliteGroup_ = other.eliteGroup_;
-      hardLevelGroup_ = other.hardLevelGroup_;
       level_ = other.level_;
+      eliteGroup_ = other.eliteGroup_;
+      cBIAOPLIPKJ_ = other.cBIAOPLIPKJ_;
+      hardLevelGroup_ = other.hardLevelGroup_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,15 +86,15 @@ namespace EggLink.DanhengServer.Proto {
       return new SceneMonsterWaveParam(this);
     }
 
-    /// <summary>Field number for the "PHLBECLKBHH" field.</summary>
-    public const int PHLBECLKBHHFieldNumber = 5;
-    private uint pHLBECLKBHH_;
+    /// <summary>Field number for the "level" field.</summary>
+    public const int LevelFieldNumber = 10;
+    private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PHLBECLKBHH {
-      get { return pHLBECLKBHH_; }
+    public uint Level {
+      get { return level_; }
       set {
-        pHLBECLKBHH_ = value;
+        level_ = value;
       }
     }
 
@@ -110,6 +110,18 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "CBIAOPLIPKJ" field.</summary>
+    public const int CBIAOPLIPKJFieldNumber = 5;
+    private uint cBIAOPLIPKJ_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CBIAOPLIPKJ {
+      get { return cBIAOPLIPKJ_; }
+      set {
+        cBIAOPLIPKJ_ = value;
+      }
+    }
+
     /// <summary>Field number for the "hard_level_group" field.</summary>
     public const int HardLevelGroupFieldNumber = 13;
     private uint hardLevelGroup_;
@@ -119,18 +131,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return hardLevelGroup_; }
       set {
         hardLevelGroup_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 12;
-    private uint level_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Level {
-      get { return level_; }
-      set {
-        level_ = value;
       }
     }
 
@@ -149,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (PHLBECLKBHH != other.PHLBECLKBHH) return false;
-      if (EliteGroup != other.EliteGroup) return false;
-      if (HardLevelGroup != other.HardLevelGroup) return false;
       if (Level != other.Level) return false;
+      if (EliteGroup != other.EliteGroup) return false;
+      if (CBIAOPLIPKJ != other.CBIAOPLIPKJ) return false;
+      if (HardLevelGroup != other.HardLevelGroup) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (PHLBECLKBHH != 0) hash ^= PHLBECLKBHH.GetHashCode();
-      if (EliteGroup != 0) hash ^= EliteGroup.GetHashCode();
-      if (HardLevelGroup != 0) hash ^= HardLevelGroup.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
+      if (EliteGroup != 0) hash ^= EliteGroup.GetHashCode();
+      if (CBIAOPLIPKJ != 0) hash ^= CBIAOPLIPKJ.GetHashCode();
+      if (HardLevelGroup != 0) hash ^= HardLevelGroup.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -186,12 +186,12 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt32(EliteGroup);
       }
-      if (PHLBECLKBHH != 0) {
+      if (CBIAOPLIPKJ != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(PHLBECLKBHH);
+        output.WriteUInt32(CBIAOPLIPKJ);
       }
       if (Level != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(80);
         output.WriteUInt32(Level);
       }
       if (HardLevelGroup != 0) {
@@ -212,12 +212,12 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt32(EliteGroup);
       }
-      if (PHLBECLKBHH != 0) {
+      if (CBIAOPLIPKJ != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(PHLBECLKBHH);
+        output.WriteUInt32(CBIAOPLIPKJ);
       }
       if (Level != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(80);
         output.WriteUInt32(Level);
       }
       if (HardLevelGroup != 0) {
@@ -234,17 +234,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (PHLBECLKBHH != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PHLBECLKBHH);
+      if (Level != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
       }
       if (EliteGroup != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EliteGroup);
       }
+      if (CBIAOPLIPKJ != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CBIAOPLIPKJ);
+      }
       if (HardLevelGroup != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HardLevelGroup);
-      }
-      if (Level != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -258,17 +258,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.PHLBECLKBHH != 0) {
-        PHLBECLKBHH = other.PHLBECLKBHH;
+      if (other.Level != 0) {
+        Level = other.Level;
       }
       if (other.EliteGroup != 0) {
         EliteGroup = other.EliteGroup;
       }
+      if (other.CBIAOPLIPKJ != 0) {
+        CBIAOPLIPKJ = other.CBIAOPLIPKJ;
+      }
       if (other.HardLevelGroup != 0) {
         HardLevelGroup = other.HardLevelGroup;
-      }
-      if (other.Level != 0) {
-        Level = other.Level;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -290,10 +290,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            PHLBECLKBHH = input.ReadUInt32();
+            CBIAOPLIPKJ = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 80: {
             Level = input.ReadUInt32();
             break;
           }
@@ -321,10 +321,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            PHLBECLKBHH = input.ReadUInt32();
+            CBIAOPLIPKJ = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 80: {
             Level = input.ReadUInt32();
             break;
           }

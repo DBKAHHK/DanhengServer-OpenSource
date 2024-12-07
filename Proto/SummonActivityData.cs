@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhTdW1tb25BY3Rpdml0eURhdGEucHJvdG8iTAoSU3VtbW9uQWN0aXZpdHlE",
-            "YXRhEhAKCGdyb3VwX2lkGA0gASgNEgwKBHN0YXIYBCABKA0SFgoOZmlnaHRf",
-            "c3RhZ2VfaWQYCyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "YXRhEhYKDmZpZ2h0X3N0YWdlX2lkGAogASgNEhAKCGdyb3VwX2lkGAIgASgN",
+            "EgwKBHN0YXIYDSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SummonActivityData), global::EggLink.DanhengServer.Proto.SummonActivityData.Parser, new[]{ "GroupId", "Star", "FightStageId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SummonActivityData), global::EggLink.DanhengServer.Proto.SummonActivityData.Parser, new[]{ "FightStageId", "GroupId", "Star" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SummonActivityData(SummonActivityData other) : this() {
+      fightStageId_ = other.fightStageId_;
       groupId_ = other.groupId_;
       star_ = other.star_;
-      fightStageId_ = other.fightStageId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,8 +85,20 @@ namespace EggLink.DanhengServer.Proto {
       return new SummonActivityData(this);
     }
 
+    /// <summary>Field number for the "fight_stage_id" field.</summary>
+    public const int FightStageIdFieldNumber = 10;
+    private uint fightStageId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint FightStageId {
+      get { return fightStageId_; }
+      set {
+        fightStageId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 13;
+    public const int GroupIdFieldNumber = 2;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "star" field.</summary>
-    public const int StarFieldNumber = 4;
+    public const int StarFieldNumber = 13;
     private uint star_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,18 +118,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return star_; }
       set {
         star_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "fight_stage_id" field.</summary>
-    public const int FightStageIdFieldNumber = 11;
-    private uint fightStageId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FightStageId {
-      get { return fightStageId_; }
-      set {
-        fightStageId_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (FightStageId != other.FightStageId) return false;
       if (GroupId != other.GroupId) return false;
       if (Star != other.Star) return false;
-      if (FightStageId != other.FightStageId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (FightStageId != 0) hash ^= FightStageId.GetHashCode();
       if (GroupId != 0) hash ^= GroupId.GetHashCode();
       if (Star != 0) hash ^= Star.GetHashCode();
-      if (FightStageId != 0) hash ^= FightStageId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Star != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Star);
+      if (GroupId != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(GroupId);
       }
       if (FightStageId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(80);
         output.WriteUInt32(FightStageId);
       }
-      if (GroupId != 0) {
+      if (Star != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(GroupId);
+        output.WriteUInt32(Star);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Star != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Star);
+      if (GroupId != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(GroupId);
       }
       if (FightStageId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(80);
         output.WriteUInt32(FightStageId);
       }
-      if (GroupId != 0) {
+      if (Star != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(GroupId);
+        output.WriteUInt32(Star);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,14 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (FightStageId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FightStageId);
+      }
       if (GroupId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
       }
       if (Star != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Star);
-      }
-      if (FightStageId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FightStageId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,14 +232,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.FightStageId != 0) {
+        FightStageId = other.FightStageId;
+      }
       if (other.GroupId != 0) {
         GroupId = other.GroupId;
       }
       if (other.Star != 0) {
         Star = other.Star;
-      }
-      if (other.FightStageId != 0) {
-        FightStageId = other.FightStageId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            Star = input.ReadUInt32();
+          case 16: {
+            GroupId = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 80: {
             FightStageId = input.ReadUInt32();
             break;
           }
           case 104: {
-            GroupId = input.ReadUInt32();
+            Star = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            Star = input.ReadUInt32();
+          case 16: {
+            GroupId = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 80: {
             FightStageId = input.ReadUInt32();
             break;
           }
           case 104: {
-            GroupId = input.ReadUInt32();
+            Star = input.ReadUInt32();
             break;
           }
         }

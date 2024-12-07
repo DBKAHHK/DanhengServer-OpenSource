@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxUcmFpblBhcnR5VXNlQ2FyZENzUmVxLnByb3RvIi0KFlRyYWluUGFydHlV",
-            "c2VDYXJkQ3NSZXESEwoLQUJGREVCREVISkEYDSABKA1CHqoCG0VnZ0xpbmsu",
+            "c2VDYXJkQ3NSZXESEwoLT0NJREZCT0JIRUgYDiABKA1CHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyUseCardCsReq), global::EggLink.DanhengServer.Proto.TrainPartyUseCardCsReq.Parser, new[]{ "ABFDEBDEHJA" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyUseCardCsReq), global::EggLink.DanhengServer.Proto.TrainPartyUseCardCsReq.Parser, new[]{ "OCIDFBOBHEH" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainPartyUseCardCsReq(TrainPartyUseCardCsReq other) : this() {
-      aBFDEBDEHJA_ = other.aBFDEBDEHJA_;
+      oCIDFBOBHEH_ = other.oCIDFBOBHEH_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new TrainPartyUseCardCsReq(this);
     }
 
-    /// <summary>Field number for the "ABFDEBDEHJA" field.</summary>
-    public const int ABFDEBDEHJAFieldNumber = 13;
-    private uint aBFDEBDEHJA_;
+    /// <summary>Field number for the "OCIDFBOBHEH" field.</summary>
+    public const int OCIDFBOBHEHFieldNumber = 14;
+    private uint oCIDFBOBHEH_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ABFDEBDEHJA {
-      get { return aBFDEBDEHJA_; }
+    public uint OCIDFBOBHEH {
+      get { return oCIDFBOBHEH_; }
       set {
-        aBFDEBDEHJA_ = value;
+        oCIDFBOBHEH_ = value;
       }
     }
 
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ABFDEBDEHJA != other.ABFDEBDEHJA) return false;
+      if (OCIDFBOBHEH != other.OCIDFBOBHEH) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ABFDEBDEHJA != 0) hash ^= ABFDEBDEHJA.GetHashCode();
+      if (OCIDFBOBHEH != 0) hash ^= OCIDFBOBHEH.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ABFDEBDEHJA != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(ABFDEBDEHJA);
+      if (OCIDFBOBHEH != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(OCIDFBOBHEH);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ABFDEBDEHJA != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(ABFDEBDEHJA);
+      if (OCIDFBOBHEH != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(OCIDFBOBHEH);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -164,8 +164,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ABFDEBDEHJA != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ABFDEBDEHJA);
+      if (OCIDFBOBHEH != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OCIDFBOBHEH);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -179,8 +179,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ABFDEBDEHJA != 0) {
-        ABFDEBDEHJA = other.ABFDEBDEHJA;
+      if (other.OCIDFBOBHEH != 0) {
+        OCIDFBOBHEH = other.OCIDFBOBHEH;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -197,8 +197,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 104: {
-            ABFDEBDEHJA = input.ReadUInt32();
+          case 112: {
+            OCIDFBOBHEH = input.ReadUInt32();
             break;
           }
         }
@@ -216,8 +216,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 104: {
-            ABFDEBDEHJA = input.ReadUInt32();
+          case 112: {
+            OCIDFBOBHEH = input.ReadUInt32();
             break;
           }
         }

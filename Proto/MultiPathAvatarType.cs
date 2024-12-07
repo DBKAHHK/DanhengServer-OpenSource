@@ -24,13 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static MultiPathAvatarTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlNdWx0aVBhdGhBdmF0YXJUeXBlLnByb3RvKt4BChNNdWx0aVBhdGhBdmF0",
+            "ChlNdWx0aVBhdGhBdmF0YXJUeXBlLnByb3RvKocCChNNdWx0aVBhdGhBdmF0",
             "YXJUeXBlEhsKF011bHRpUGF0aEF2YXRhclR5cGVOb25lEAASFgoRTWFyXzd0",
             "aEtuaWdodFR5cGUQ6QcSFQoQTWFyXzd0aFJvZ3VlVHlwZRDICRITCg5Cb3lX",
             "YXJyaW9yVHlwZRDBPhIUCg9HaXJsV2FycmlvclR5cGUQwj4SEgoNQm95S25p",
             "Z2h0VHlwZRDDPhITCg5HaXJsS25pZ2h0VHlwZRDEPhISCg1Cb3lTaGFtYW5U",
-            "eXBlEMU+EhMKDkdpcmxTaGFtYW5UeXBlEMY+Qh6qAhtFZ2dMaW5rLkRhbmhl",
-            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "eXBlEMU+EhMKDkdpcmxTaGFtYW5UeXBlEMY+EhIKDUJveU1lbW9yeVR5cGUQ",
+            "xz4SEwoOR2lybE1lbW9yeVR5cGUQyD5CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.MultiPathAvatarType), }, null, null));
@@ -49,6 +50,8 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("GirlKnightType")] GirlKnightType = 8004,
     [pbr::OriginalName("BoyShamanType")] BoyShamanType = 8005,
     [pbr::OriginalName("GirlShamanType")] GirlShamanType = 8006,
+    [pbr::OriginalName("BoyMemoryType")] BoyMemoryType = 8007,
+    [pbr::OriginalName("GirlMemoryType")] GirlMemoryType = 8008,
   }
 
   #endregion

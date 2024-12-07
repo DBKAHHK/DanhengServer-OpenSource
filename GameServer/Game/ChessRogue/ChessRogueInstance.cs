@@ -757,9 +757,9 @@ public class ChessRogueInstance : BaseRogueInstance
         {
             //EndAreaId = (uint)AreaExcel.AreaID,
             //LastLayerId = (uint)CurLayer,
-            RogueLineup = CurLineup!.ToProto(),
-            DifficultyLevel =
-                uint.Parse(AreaExcel.AreaID.ToString().Substring(AreaExcel.AreaID.ToString().Length - 1, 1)),
+            //RogueLineup = CurLineup!.ToProto(),
+            //DifficultyLevel =
+            //    uint.Parse(AreaExcel.AreaID.ToString().Substring(AreaExcel.AreaID.ToString().Length - 1, 1)),
             RogueSubMode = (uint)RogueSubMode,
             RogueBuffInfo = new ChessRogueBuff
             {

@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static CellAdvanceInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVDZWxsQWR2YW5jZUluZm8ucHJvdG8aGkNlbGxGaW5hbE1vbnN0ZXJJbmZv",
-            "LnByb3RvGhtDZWxsTW9uc3RlclNlbGVjdEluZm8ucHJvdG8aFUNlbGxNb25z",
-            "dGVySW5mby5wcm90byKzAQoPQ2VsbEFkdmFuY2VJbmZvEioKDmNlbGxfYm9z",
-            "c19pbmZvGA8gASgLMhAuQ2VsbE1vbnN0ZXJJbmZvSAASMgoQc2VsZWN0X2Jv",
-            "c3NfaW5mbxgNIAEoCzIWLkNlbGxNb25zdGVyU2VsZWN0SW5mb0gAEjAKD2Zp",
-            "bmFsX2Jvc3NfaW5mbxgCIAEoCzIVLkNlbGxGaW5hbE1vbnN0ZXJJbmZvSABC",
+            "ChVDZWxsQWR2YW5jZUluZm8ucHJvdG8aFUNlbGxNb25zdGVySW5mby5wcm90",
+            "bxoaQ2VsbEZpbmFsTW9uc3RlckluZm8ucHJvdG8aG0NlbGxNb25zdGVyU2Vs",
+            "ZWN0SW5mby5wcm90byKzAQoPQ2VsbEFkdmFuY2VJbmZvEioKDmNlbGxfYm9z",
+            "c19pbmZvGAsgASgLMhAuQ2VsbE1vbnN0ZXJJbmZvSAASMgoQc2VsZWN0X2Jv",
+            "c3NfaW5mbxgKIAEoCzIWLkNlbGxNb25zdGVyU2VsZWN0SW5mb0gAEjAKD2Zp",
+            "bmFsX2Jvc3NfaW5mbxgMIAEoCzIVLkNlbGxGaW5hbE1vbnN0ZXJJbmZvSABC",
             "DgoMYWR2YW5jZV9pbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
             "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CellFinalMonsterInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CellMonsterSelectInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CellMonsterInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CellMonsterInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CellFinalMonsterInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CellMonsterSelectInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CellAdvanceInfo), global::EggLink.DanhengServer.Proto.CellAdvanceInfo.Parser, new[]{ "CellBossInfo", "SelectBossInfo", "FinalBossInfo" }, new[]{ "AdvanceInfo" }, null, null, null)
           }));
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cell_boss_info" field.</summary>
-    public const int CellBossInfoFieldNumber = 15;
+    public const int CellBossInfoFieldNumber = 11;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.CellMonsterInfo CellBossInfo {
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_boss_info" field.</summary>
-    public const int SelectBossInfoFieldNumber = 13;
+    public const int SelectBossInfoFieldNumber = 10;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.CellMonsterSelectInfo SelectBossInfo {
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "final_boss_info" field.</summary>
-    public const int FinalBossInfoFieldNumber = 2;
+    public const int FinalBossInfoFieldNumber = 12;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.CellFinalMonsterInfo FinalBossInfo {
@@ -138,9 +138,9 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "advance_info" oneof.</summary>
     public enum AdvanceInfoOneofCase {
       None = 0,
-      CellBossInfo = 15,
-      SelectBossInfo = 13,
-      FinalBossInfo = 2,
+      CellBossInfo = 11,
+      SelectBossInfo = 10,
+      FinalBossInfo = 12,
     }
     private AdvanceInfoOneofCase advanceInfoCase_ = AdvanceInfoOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -204,17 +204,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (advanceInfoCase_ == AdvanceInfoOneofCase.FinalBossInfo) {
-        output.WriteRawTag(18);
-        output.WriteMessage(FinalBossInfo);
-      }
       if (advanceInfoCase_ == AdvanceInfoOneofCase.SelectBossInfo) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(82);
         output.WriteMessage(SelectBossInfo);
       }
       if (advanceInfoCase_ == AdvanceInfoOneofCase.CellBossInfo) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(90);
         output.WriteMessage(CellBossInfo);
+      }
+      if (advanceInfoCase_ == AdvanceInfoOneofCase.FinalBossInfo) {
+        output.WriteRawTag(98);
+        output.WriteMessage(FinalBossInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -226,17 +226,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (advanceInfoCase_ == AdvanceInfoOneofCase.FinalBossInfo) {
-        output.WriteRawTag(18);
-        output.WriteMessage(FinalBossInfo);
-      }
       if (advanceInfoCase_ == AdvanceInfoOneofCase.SelectBossInfo) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(82);
         output.WriteMessage(SelectBossInfo);
       }
       if (advanceInfoCase_ == AdvanceInfoOneofCase.CellBossInfo) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(90);
         output.WriteMessage(CellBossInfo);
+      }
+      if (advanceInfoCase_ == AdvanceInfoOneofCase.FinalBossInfo) {
+        output.WriteRawTag(98);
+        output.WriteMessage(FinalBossInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -305,16 +305,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
-            global::EggLink.DanhengServer.Proto.CellFinalMonsterInfo subBuilder = new global::EggLink.DanhengServer.Proto.CellFinalMonsterInfo();
-            if (advanceInfoCase_ == AdvanceInfoOneofCase.FinalBossInfo) {
-              subBuilder.MergeFrom(FinalBossInfo);
-            }
-            input.ReadMessage(subBuilder);
-            FinalBossInfo = subBuilder;
-            break;
-          }
-          case 106: {
+          case 82: {
             global::EggLink.DanhengServer.Proto.CellMonsterSelectInfo subBuilder = new global::EggLink.DanhengServer.Proto.CellMonsterSelectInfo();
             if (advanceInfoCase_ == AdvanceInfoOneofCase.SelectBossInfo) {
               subBuilder.MergeFrom(SelectBossInfo);
@@ -323,13 +314,22 @@ namespace EggLink.DanhengServer.Proto {
             SelectBossInfo = subBuilder;
             break;
           }
-          case 122: {
+          case 90: {
             global::EggLink.DanhengServer.Proto.CellMonsterInfo subBuilder = new global::EggLink.DanhengServer.Proto.CellMonsterInfo();
             if (advanceInfoCase_ == AdvanceInfoOneofCase.CellBossInfo) {
               subBuilder.MergeFrom(CellBossInfo);
             }
             input.ReadMessage(subBuilder);
             CellBossInfo = subBuilder;
+            break;
+          }
+          case 98: {
+            global::EggLink.DanhengServer.Proto.CellFinalMonsterInfo subBuilder = new global::EggLink.DanhengServer.Proto.CellFinalMonsterInfo();
+            if (advanceInfoCase_ == AdvanceInfoOneofCase.FinalBossInfo) {
+              subBuilder.MergeFrom(FinalBossInfo);
+            }
+            input.ReadMessage(subBuilder);
+            FinalBossInfo = subBuilder;
             break;
           }
         }
@@ -347,16 +347,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
-            global::EggLink.DanhengServer.Proto.CellFinalMonsterInfo subBuilder = new global::EggLink.DanhengServer.Proto.CellFinalMonsterInfo();
-            if (advanceInfoCase_ == AdvanceInfoOneofCase.FinalBossInfo) {
-              subBuilder.MergeFrom(FinalBossInfo);
-            }
-            input.ReadMessage(subBuilder);
-            FinalBossInfo = subBuilder;
-            break;
-          }
-          case 106: {
+          case 82: {
             global::EggLink.DanhengServer.Proto.CellMonsterSelectInfo subBuilder = new global::EggLink.DanhengServer.Proto.CellMonsterSelectInfo();
             if (advanceInfoCase_ == AdvanceInfoOneofCase.SelectBossInfo) {
               subBuilder.MergeFrom(SelectBossInfo);
@@ -365,13 +356,22 @@ namespace EggLink.DanhengServer.Proto {
             SelectBossInfo = subBuilder;
             break;
           }
-          case 122: {
+          case 90: {
             global::EggLink.DanhengServer.Proto.CellMonsterInfo subBuilder = new global::EggLink.DanhengServer.Proto.CellMonsterInfo();
             if (advanceInfoCase_ == AdvanceInfoOneofCase.CellBossInfo) {
               subBuilder.MergeFrom(CellBossInfo);
             }
             input.ReadMessage(subBuilder);
             CellBossInfo = subBuilder;
+            break;
+          }
+          case 98: {
+            global::EggLink.DanhengServer.Proto.CellFinalMonsterInfo subBuilder = new global::EggLink.DanhengServer.Proto.CellFinalMonsterInfo();
+            if (advanceInfoCase_ == AdvanceInfoOneofCase.FinalBossInfo) {
+              subBuilder.MergeFrom(FinalBossInfo);
+            }
+            input.ReadMessage(subBuilder);
+            FinalBossInfo = subBuilder;
             break;
           }
         }

@@ -25,14 +25,16 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1UcmFpblBhcnR5QnVpbGREaXlTY1JzcC5wcm90bxoVQXJlYUR5bmFtaWNJ",
-            "bmZvLnByb3RvIngKF1RyYWluUGFydHlCdWlsZERpeVNjUnNwEhMKC0hFTU9E",
-            "Q0ZFTkhQGAsgASgIEiYKDGR5bmFtaWNfaW5mbxgJIAMoCzIQLkFyZWFEeW5h",
-            "bWljSW5mbxIPCgdyZXRjb2RlGAIgASgNEg8KB2FyZWFfaWQYByABKA1CHqoC",
-            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "bmZvLnByb3RvGhFBRU1LTEVHTkhJQS5wcm90byKbAQoXVHJhaW5QYXJ0eUJ1",
+            "aWxkRGl5U2NSc3ASIQoLTktDT01QSElKRkkYAyADKAsyDC5BRU1LTEVHTkhJ",
+            "QRIPCgdyZXRjb2RlGAQgASgNEg8KB2FyZWFfaWQYDiABKA0SEwoLUExHSUJI",
+            "T0NER1AYDCABKAgSJgoMZHluYW1pY19pbmZvGAEgAygLMhAuQXJlYUR5bmFt",
+            "aWNJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AreaDynamicInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AreaDynamicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AEMKLEGNHIAReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyBuildDiyScRsp), global::EggLink.DanhengServer.Proto.TrainPartyBuildDiyScRsp.Parser, new[]{ "HEMODCFENHP", "DynamicInfo", "Retcode", "AreaId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyBuildDiyScRsp), global::EggLink.DanhengServer.Proto.TrainPartyBuildDiyScRsp.Parser, new[]{ "NKCOMPHIJFI", "Retcode", "AreaId", "PLGIBHOCDGP", "DynamicInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +76,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainPartyBuildDiyScRsp(TrainPartyBuildDiyScRsp other) : this() {
-      hEMODCFENHP_ = other.hEMODCFENHP_;
-      dynamicInfo_ = other.dynamicInfo_.Clone();
+      nKCOMPHIJFI_ = other.nKCOMPHIJFI_.Clone();
       retcode_ = other.retcode_;
       areaId_ = other.areaId_;
+      pLGIBHOCDGP_ = other.pLGIBHOCDGP_;
+      dynamicInfo_ = other.dynamicInfo_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,31 +90,19 @@ namespace EggLink.DanhengServer.Proto {
       return new TrainPartyBuildDiyScRsp(this);
     }
 
-    /// <summary>Field number for the "HEMODCFENHP" field.</summary>
-    public const int HEMODCFENHPFieldNumber = 11;
-    private bool hEMODCFENHP_;
+    /// <summary>Field number for the "NKCOMPHIJFI" field.</summary>
+    public const int NKCOMPHIJFIFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.AEMKLEGNHIA> _repeated_nKCOMPHIJFI_codec
+        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.AEMKLEGNHIA.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AEMKLEGNHIA> nKCOMPHIJFI_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AEMKLEGNHIA>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HEMODCFENHP {
-      get { return hEMODCFENHP_; }
-      set {
-        hEMODCFENHP_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "dynamic_info" field.</summary>
-    public const int DynamicInfoFieldNumber = 9;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.AreaDynamicInfo> _repeated_dynamicInfo_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.AreaDynamicInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AreaDynamicInfo> dynamicInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AreaDynamicInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AreaDynamicInfo> DynamicInfo {
-      get { return dynamicInfo_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AEMKLEGNHIA> NKCOMPHIJFI {
+      get { return nKCOMPHIJFI_; }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 2;
+    public const int RetcodeFieldNumber = 4;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,7 +114,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "area_id" field.</summary>
-    public const int AreaIdFieldNumber = 7;
+    public const int AreaIdFieldNumber = 14;
     private uint areaId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -132,6 +123,29 @@ namespace EggLink.DanhengServer.Proto {
       set {
         areaId_ = value;
       }
+    }
+
+    /// <summary>Field number for the "PLGIBHOCDGP" field.</summary>
+    public const int PLGIBHOCDGPFieldNumber = 12;
+    private bool pLGIBHOCDGP_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool PLGIBHOCDGP {
+      get { return pLGIBHOCDGP_; }
+      set {
+        pLGIBHOCDGP_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "dynamic_info" field.</summary>
+    public const int DynamicInfoFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.AreaDynamicInfo> _repeated_dynamicInfo_codec
+        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.AreaDynamicInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AreaDynamicInfo> dynamicInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AreaDynamicInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AreaDynamicInfo> DynamicInfo {
+      get { return dynamicInfo_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -149,10 +163,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (HEMODCFENHP != other.HEMODCFENHP) return false;
-      if(!dynamicInfo_.Equals(other.dynamicInfo_)) return false;
+      if(!nKCOMPHIJFI_.Equals(other.nKCOMPHIJFI_)) return false;
       if (Retcode != other.Retcode) return false;
       if (AreaId != other.AreaId) return false;
+      if (PLGIBHOCDGP != other.PLGIBHOCDGP) return false;
+      if(!dynamicInfo_.Equals(other.dynamicInfo_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +175,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (HEMODCFENHP != false) hash ^= HEMODCFENHP.GetHashCode();
-      hash ^= dynamicInfo_.GetHashCode();
+      hash ^= nKCOMPHIJFI_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (AreaId != 0) hash ^= AreaId.GetHashCode();
+      if (PLGIBHOCDGP != false) hash ^= PLGIBHOCDGP.GetHashCode();
+      hash ^= dynamicInfo_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,18 +198,19 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      dynamicInfo_.WriteTo(output, _repeated_dynamicInfo_codec);
+      nKCOMPHIJFI_.WriteTo(output, _repeated_nKCOMPHIJFI_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
       }
-      if (AreaId != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(AreaId);
+      if (PLGIBHOCDGP != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(PLGIBHOCDGP);
       }
-      dynamicInfo_.WriteTo(output, _repeated_dynamicInfo_codec);
-      if (HEMODCFENHP != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(HEMODCFENHP);
+      if (AreaId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(AreaId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -205,18 +222,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      dynamicInfo_.WriteTo(ref output, _repeated_dynamicInfo_codec);
+      nKCOMPHIJFI_.WriteTo(ref output, _repeated_nKCOMPHIJFI_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
       }
-      if (AreaId != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(AreaId);
+      if (PLGIBHOCDGP != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(PLGIBHOCDGP);
       }
-      dynamicInfo_.WriteTo(ref output, _repeated_dynamicInfo_codec);
-      if (HEMODCFENHP != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(HEMODCFENHP);
+      if (AreaId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(AreaId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -228,16 +246,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (HEMODCFENHP != false) {
-        size += 1 + 1;
-      }
-      size += dynamicInfo_.CalculateSize(_repeated_dynamicInfo_codec);
+      size += nKCOMPHIJFI_.CalculateSize(_repeated_nKCOMPHIJFI_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (AreaId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AreaId);
       }
+      if (PLGIBHOCDGP != false) {
+        size += 1 + 1;
+      }
+      size += dynamicInfo_.CalculateSize(_repeated_dynamicInfo_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -250,16 +269,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.HEMODCFENHP != false) {
-        HEMODCFENHP = other.HEMODCFENHP;
-      }
-      dynamicInfo_.Add(other.dynamicInfo_);
+      nKCOMPHIJFI_.Add(other.nKCOMPHIJFI_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
       if (other.AreaId != 0) {
         AreaId = other.AreaId;
       }
+      if (other.PLGIBHOCDGP != false) {
+        PLGIBHOCDGP = other.PLGIBHOCDGP;
+      }
+      dynamicInfo_.Add(other.dynamicInfo_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -275,20 +295,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            AreaId = input.ReadUInt32();
-            break;
-          }
-          case 74: {
+          case 10: {
             dynamicInfo_.AddEntriesFrom(input, _repeated_dynamicInfo_codec);
             break;
           }
-          case 88: {
-            HEMODCFENHP = input.ReadBool();
+          case 26: {
+            nKCOMPHIJFI_.AddEntriesFrom(input, _repeated_nKCOMPHIJFI_codec);
+            break;
+          }
+          case 32: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            PLGIBHOCDGP = input.ReadBool();
+            break;
+          }
+          case 112: {
+            AreaId = input.ReadUInt32();
             break;
           }
         }
@@ -306,20 +330,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            AreaId = input.ReadUInt32();
-            break;
-          }
-          case 74: {
+          case 10: {
             dynamicInfo_.AddEntriesFrom(ref input, _repeated_dynamicInfo_codec);
             break;
           }
-          case 88: {
-            HEMODCFENHP = input.ReadBool();
+          case 26: {
+            nKCOMPHIJFI_.AddEntriesFrom(ref input, _repeated_nKCOMPHIJFI_codec);
+            break;
+          }
+          case 32: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            PLGIBHOCDGP = input.ReadBool();
+            break;
+          }
+          case 112: {
+            AreaId = input.ReadUInt32();
             break;
           }
         }

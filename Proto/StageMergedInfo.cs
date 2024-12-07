@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChVTdGFnZU1lcmdlZEluZm8ucHJvdG8iZAoPU3RhZ2VNZXJnZWRJbmZvEhMK",
-            "C0FOTEdKTk5JTFBQGAcgASgIEhAKCGxldmVsX2lkGAQgASgNEhUKDXN0YWdl",
-            "X3BlcmlvZHMYDyADKA0SEwoLQklOR0FQQ0lFRk8YCiABKAhCHqoCG0VnZ0xp",
+            "C0hJTk9CSEhJQkFBGA8gASgIEhAKCGxldmVsX2lkGAMgASgNEhMKC09IRExN",
+            "QkVHQ0lCGAggASgIEhUKDXN0YWdlX3BlcmlvZHMYDSADKA1CHqoCG0VnZ0xp",
             "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StageMergedInfo), global::EggLink.DanhengServer.Proto.StageMergedInfo.Parser, new[]{ "ANLGJNNILPP", "LevelId", "StagePeriods", "BINGAPCIEFO" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StageMergedInfo), global::EggLink.DanhengServer.Proto.StageMergedInfo.Parser, new[]{ "HINOBHHIBAA", "LevelId", "OHDLMBEGCIB", "StagePeriods" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,10 +73,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StageMergedInfo(StageMergedInfo other) : this() {
-      aNLGJNNILPP_ = other.aNLGJNNILPP_;
+      hINOBHHIBAA_ = other.hINOBHHIBAA_;
       levelId_ = other.levelId_;
+      oHDLMBEGCIB_ = other.oHDLMBEGCIB_;
       stagePeriods_ = other.stagePeriods_.Clone();
-      bINGAPCIEFO_ = other.bINGAPCIEFO_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,20 +86,20 @@ namespace EggLink.DanhengServer.Proto {
       return new StageMergedInfo(this);
     }
 
-    /// <summary>Field number for the "ANLGJNNILPP" field.</summary>
-    public const int ANLGJNNILPPFieldNumber = 7;
-    private bool aNLGJNNILPP_;
+    /// <summary>Field number for the "HINOBHHIBAA" field.</summary>
+    public const int HINOBHHIBAAFieldNumber = 15;
+    private bool hINOBHHIBAA_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool ANLGJNNILPP {
-      get { return aNLGJNNILPP_; }
+    public bool HINOBHHIBAA {
+      get { return hINOBHHIBAA_; }
       set {
-        aNLGJNNILPP_ = value;
+        hINOBHHIBAA_ = value;
       }
     }
 
     /// <summary>Field number for the "level_id" field.</summary>
-    public const int LevelIdFieldNumber = 4;
+    public const int LevelIdFieldNumber = 3;
     private uint levelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,27 +110,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "OHDLMBEGCIB" field.</summary>
+    public const int OHDLMBEGCIBFieldNumber = 8;
+    private bool oHDLMBEGCIB_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool OHDLMBEGCIB {
+      get { return oHDLMBEGCIB_; }
+      set {
+        oHDLMBEGCIB_ = value;
+      }
+    }
+
     /// <summary>Field number for the "stage_periods" field.</summary>
-    public const int StagePeriodsFieldNumber = 15;
+    public const int StagePeriodsFieldNumber = 13;
     private static readonly pb::FieldCodec<uint> _repeated_stagePeriods_codec
-        = pb::FieldCodec.ForUInt32(122);
+        = pb::FieldCodec.ForUInt32(106);
     private readonly pbc::RepeatedField<uint> stagePeriods_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<uint> StagePeriods {
       get { return stagePeriods_; }
-    }
-
-    /// <summary>Field number for the "BINGAPCIEFO" field.</summary>
-    public const int BINGAPCIEFOFieldNumber = 10;
-    private bool bINGAPCIEFO_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool BINGAPCIEFO {
-      get { return bINGAPCIEFO_; }
-      set {
-        bINGAPCIEFO_ = value;
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -148,10 +148,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ANLGJNNILPP != other.ANLGJNNILPP) return false;
+      if (HINOBHHIBAA != other.HINOBHHIBAA) return false;
       if (LevelId != other.LevelId) return false;
+      if (OHDLMBEGCIB != other.OHDLMBEGCIB) return false;
       if(!stagePeriods_.Equals(other.stagePeriods_)) return false;
-      if (BINGAPCIEFO != other.BINGAPCIEFO) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -159,10 +159,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ANLGJNNILPP != false) hash ^= ANLGJNNILPP.GetHashCode();
+      if (HINOBHHIBAA != false) hash ^= HINOBHHIBAA.GetHashCode();
       if (LevelId != 0) hash ^= LevelId.GetHashCode();
+      if (OHDLMBEGCIB != false) hash ^= OHDLMBEGCIB.GetHashCode();
       hash ^= stagePeriods_.GetHashCode();
-      if (BINGAPCIEFO != false) hash ^= BINGAPCIEFO.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,18 +182,18 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (LevelId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteUInt32(LevelId);
       }
-      if (ANLGJNNILPP != false) {
-        output.WriteRawTag(56);
-        output.WriteBool(ANLGJNNILPP);
-      }
-      if (BINGAPCIEFO != false) {
-        output.WriteRawTag(80);
-        output.WriteBool(BINGAPCIEFO);
+      if (OHDLMBEGCIB != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(OHDLMBEGCIB);
       }
       stagePeriods_.WriteTo(output, _repeated_stagePeriods_codec);
+      if (HINOBHHIBAA != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(HINOBHHIBAA);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -205,18 +205,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (LevelId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteUInt32(LevelId);
       }
-      if (ANLGJNNILPP != false) {
-        output.WriteRawTag(56);
-        output.WriteBool(ANLGJNNILPP);
-      }
-      if (BINGAPCIEFO != false) {
-        output.WriteRawTag(80);
-        output.WriteBool(BINGAPCIEFO);
+      if (OHDLMBEGCIB != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(OHDLMBEGCIB);
       }
       stagePeriods_.WriteTo(ref output, _repeated_stagePeriods_codec);
+      if (HINOBHHIBAA != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(HINOBHHIBAA);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -227,16 +227,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ANLGJNNILPP != false) {
+      if (HINOBHHIBAA != false) {
         size += 1 + 1;
       }
       if (LevelId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LevelId);
       }
-      size += stagePeriods_.CalculateSize(_repeated_stagePeriods_codec);
-      if (BINGAPCIEFO != false) {
+      if (OHDLMBEGCIB != false) {
         size += 1 + 1;
       }
+      size += stagePeriods_.CalculateSize(_repeated_stagePeriods_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -249,16 +249,16 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ANLGJNNILPP != false) {
-        ANLGJNNILPP = other.ANLGJNNILPP;
+      if (other.HINOBHHIBAA != false) {
+        HINOBHHIBAA = other.HINOBHHIBAA;
       }
       if (other.LevelId != 0) {
         LevelId = other.LevelId;
       }
-      stagePeriods_.Add(other.stagePeriods_);
-      if (other.BINGAPCIEFO != false) {
-        BINGAPCIEFO = other.BINGAPCIEFO;
+      if (other.OHDLMBEGCIB != false) {
+        OHDLMBEGCIB = other.OHDLMBEGCIB;
       }
+      stagePeriods_.Add(other.stagePeriods_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -274,21 +274,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 24: {
             LevelId = input.ReadUInt32();
             break;
           }
-          case 56: {
-            ANLGJNNILPP = input.ReadBool();
+          case 64: {
+            OHDLMBEGCIB = input.ReadBool();
             break;
           }
-          case 80: {
-            BINGAPCIEFO = input.ReadBool();
-            break;
-          }
-          case 122:
-          case 120: {
+          case 106:
+          case 104: {
             stagePeriods_.AddEntriesFrom(input, _repeated_stagePeriods_codec);
+            break;
+          }
+          case 120: {
+            HINOBHHIBAA = input.ReadBool();
             break;
           }
         }
@@ -306,21 +306,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 24: {
             LevelId = input.ReadUInt32();
             break;
           }
-          case 56: {
-            ANLGJNNILPP = input.ReadBool();
+          case 64: {
+            OHDLMBEGCIB = input.ReadBool();
             break;
           }
-          case 80: {
-            BINGAPCIEFO = input.ReadBool();
-            break;
-          }
-          case 122:
-          case 120: {
+          case 106:
+          case 104: {
             stagePeriods_.AddEntriesFrom(ref input, _repeated_stagePeriods_codec);
+            break;
+          }
+          case 120: {
+            HINOBHHIBAA = input.ReadBool();
             break;
           }
         }

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5Sb2d1ZUhhbmRib29rTWlyYWNsZUluZm8ucHJvdG8iUQoYUm9ndWVIYW5k",
-            "Ym9va01pcmFjbGVJbmZvEhgKEGhhc190YWtlbl9yZXdhcmQYCSABKAgSGwoT",
-            "bWlyYWNsZV9oYW5kYm9va19pZBgNIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "Ym9va01pcmFjbGVJbmZvEhgKEGhhc190YWtlbl9yZXdhcmQYDCABKAgSGwoT",
+            "bWlyYWNsZV9oYW5kYm9va19pZBgBIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "has_taken_reward" field.</summary>
-    public const int HasTakenRewardFieldNumber = 9;
+    public const int HasTakenRewardFieldNumber = 12;
     private bool hasTakenReward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "miracle_handbook_id" field.</summary>
-    public const int MiracleHandbookIdFieldNumber = 13;
+    public const int MiracleHandbookIdFieldNumber = 1;
     private uint miracleHandbookId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (HasTakenReward != false) {
-        output.WriteRawTag(72);
-        output.WriteBool(HasTakenReward);
-      }
       if (MiracleHandbookId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(8);
         output.WriteUInt32(MiracleHandbookId);
+      }
+      if (HasTakenReward != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(HasTakenReward);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HasTakenReward != false) {
-        output.WriteRawTag(72);
-        output.WriteBool(HasTakenReward);
-      }
       if (MiracleHandbookId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(8);
         output.WriteUInt32(MiracleHandbookId);
+      }
+      if (HasTakenReward != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(HasTakenReward);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
-            HasTakenReward = input.ReadBool();
+          case 8: {
+            MiracleHandbookId = input.ReadUInt32();
             break;
           }
-          case 104: {
-            MiracleHandbookId = input.ReadUInt32();
+          case 96: {
+            HasTakenReward = input.ReadBool();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
-            HasTakenReward = input.ReadBool();
+          case 8: {
+            MiracleHandbookId = input.ReadUInt32();
             break;
           }
-          case 104: {
-            MiracleHandbookId = input.ReadUInt32();
+          case 96: {
+            HasTakenReward = input.ReadBool();
             break;
           }
         }

@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNHZXRGcmllbmREZXZlbG9wbWVudEluZm9TY1JzcC5wcm90bxobRnJpZW5k",
             "RGV2ZWxvcG1lbnRJbmZvLnByb3RvInQKHUdldEZyaWVuZERldmVsb3BtZW50",
-            "SW5mb1NjUnNwEg8KB3JldGNvZGUYCyABKA0SCwoDdWlkGAEgASgNEjUKFWRl",
-            "dmVsb3BtZW50X2luZm9fbGlzdBgKIAMoCzIWLkZyaWVuZERldmVsb3BtZW50",
-            "SW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "SW5mb1NjUnNwEjUKFWRldmVsb3BtZW50X2luZm9fbGlzdBgKIAMoCzIWLkZy",
+            "aWVuZERldmVsb3BtZW50SW5mbxIPCgdyZXRjb2RlGAsgASgNEgsKA3VpZBgB",
+            "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FriendDevelopmentInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetFriendDevelopmentInfoScRsp), global::EggLink.DanhengServer.Proto.GetFriendDevelopmentInfoScRsp.Parser, new[]{ "Retcode", "Uid", "DevelopmentInfoList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetFriendDevelopmentInfoScRsp), global::EggLink.DanhengServer.Proto.GetFriendDevelopmentInfoScRsp.Parser, new[]{ "DevelopmentInfoList", "Retcode", "Uid" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetFriendDevelopmentInfoScRsp(GetFriendDevelopmentInfoScRsp other) : this() {
+      developmentInfoList_ = other.developmentInfoList_.Clone();
       retcode_ = other.retcode_;
       uid_ = other.uid_;
-      developmentInfoList_ = other.developmentInfoList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,6 +84,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetFriendDevelopmentInfoScRsp Clone() {
       return new GetFriendDevelopmentInfoScRsp(this);
+    }
+
+    /// <summary>Field number for the "development_info_list" field.</summary>
+    public const int DevelopmentInfoListFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.FriendDevelopmentInfo> _repeated_developmentInfoList_codec
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.FriendDevelopmentInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FriendDevelopmentInfo> developmentInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FriendDevelopmentInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FriendDevelopmentInfo> DevelopmentInfoList {
+      get { return developmentInfoList_; }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
@@ -110,17 +121,6 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "development_info_list" field.</summary>
-    public const int DevelopmentInfoListFieldNumber = 10;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.FriendDevelopmentInfo> _repeated_developmentInfoList_codec
-        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.FriendDevelopmentInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FriendDevelopmentInfo> developmentInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FriendDevelopmentInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FriendDevelopmentInfo> DevelopmentInfoList {
-      get { return developmentInfoList_; }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if(!developmentInfoList_.Equals(other.developmentInfoList_)) return false;
       if (Retcode != other.Retcode) return false;
       if (Uid != other.Uid) return false;
-      if(!developmentInfoList_.Equals(other.developmentInfoList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      hash ^= developmentInfoList_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (Uid != 0) hash ^= Uid.GetHashCode();
-      hash ^= developmentInfoList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -205,13 +205,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += developmentInfoList_.CalculateSize(_repeated_developmentInfoList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (Uid != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Uid);
       }
-      size += developmentInfoList_.CalculateSize(_repeated_developmentInfoList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -224,13 +224,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      developmentInfoList_.Add(other.developmentInfoList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
       if (other.Uid != 0) {
         Uid = other.Uid;
       }
-      developmentInfoList_.Add(other.developmentInfoList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

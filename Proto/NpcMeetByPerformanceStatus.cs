@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBOcGNNZWV0QnlQZXJmb3JtYW5jZVN0YXR1cy5wcm90byJFChpOcGNNZWV0",
-            "QnlQZXJmb3JtYW5jZVN0YXR1cxIPCgdpc19tZWV0GAYgASgIEhYKDnBlcmZv",
-            "cm1hbmNlX2lkGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
+            "QnlQZXJmb3JtYW5jZVN0YXR1cxIWCg5wZXJmb3JtYW5jZV9pZBgBIAEoDRIP",
+            "Cgdpc19tZWV0GAQgASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
             "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NpcMeetByPerformanceStatus), global::EggLink.DanhengServer.Proto.NpcMeetByPerformanceStatus.Parser, new[]{ "IsMeet", "PerformanceId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NpcMeetByPerformanceStatus), global::EggLink.DanhengServer.Proto.NpcMeetByPerformanceStatus.Parser, new[]{ "PerformanceId", "IsMeet" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NpcMeetByPerformanceStatus(NpcMeetByPerformanceStatus other) : this() {
-      isMeet_ = other.isMeet_;
       performanceId_ = other.performanceId_;
+      isMeet_ = other.isMeet_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new NpcMeetByPerformanceStatus(this);
     }
 
-    /// <summary>Field number for the "is_meet" field.</summary>
-    public const int IsMeetFieldNumber = 6;
-    private bool isMeet_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsMeet {
-      get { return isMeet_; }
-      set {
-        isMeet_ = value;
-      }
-    }
-
     /// <summary>Field number for the "performance_id" field.</summary>
-    public const int PerformanceIdFieldNumber = 13;
+    public const int PerformanceIdFieldNumber = 1;
     private uint performanceId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return performanceId_; }
       set {
         performanceId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_meet" field.</summary>
+    public const int IsMeetFieldNumber = 4;
+    private bool isMeet_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsMeet {
+      get { return isMeet_; }
+      set {
+        isMeet_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsMeet != other.IsMeet) return false;
       if (PerformanceId != other.PerformanceId) return false;
+      if (IsMeet != other.IsMeet) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsMeet != false) hash ^= IsMeet.GetHashCode();
       if (PerformanceId != 0) hash ^= PerformanceId.GetHashCode();
+      if (IsMeet != false) hash ^= IsMeet.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsMeet != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(IsMeet);
-      }
       if (PerformanceId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(8);
         output.WriteUInt32(PerformanceId);
+      }
+      if (IsMeet != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IsMeet);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsMeet != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(IsMeet);
-      }
       if (PerformanceId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(8);
         output.WriteUInt32(PerformanceId);
+      }
+      if (IsMeet != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IsMeet);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsMeet != false) {
-        size += 1 + 1;
-      }
       if (PerformanceId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PerformanceId);
+      }
+      if (IsMeet != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsMeet != false) {
-        IsMeet = other.IsMeet;
-      }
       if (other.PerformanceId != 0) {
         PerformanceId = other.PerformanceId;
+      }
+      if (other.IsMeet != false) {
+        IsMeet = other.IsMeet;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            IsMeet = input.ReadBool();
+          case 8: {
+            PerformanceId = input.ReadUInt32();
             break;
           }
-          case 104: {
-            PerformanceId = input.ReadUInt32();
+          case 32: {
+            IsMeet = input.ReadBool();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            IsMeet = input.ReadBool();
+          case 8: {
+            PerformanceId = input.ReadUInt32();
             break;
           }
-          case 104: {
-            PerformanceId = input.ReadUInt32();
+          case 32: {
+            IsMeet = input.ReadBool();
             break;
           }
         }

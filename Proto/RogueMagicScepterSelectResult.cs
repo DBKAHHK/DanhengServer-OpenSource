@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNSb2d1ZU1hZ2ljU2NlcHRlclNlbGVjdFJlc3VsdC5wcm90bxoXUm9ndWVN",
             "YWdpY1NjZXB0ZXIucHJvdG8iYAodUm9ndWVNYWdpY1NjZXB0ZXJTZWxlY3RS",
-            "ZXN1bHQSKgoOc2VsZWN0X3NjZXB0ZXIYCiABKAsyEi5Sb2d1ZU1hZ2ljU2Nl",
-            "cHRlchITCgtQQUtJQkFQUE5BRhgBIAEoCEIeqgIbRWdnTGluay5EYW5oZW5n",
+            "ZXN1bHQSKgoOc2VsZWN0X3NjZXB0ZXIYCyABKAsyEi5Sb2d1ZU1hZ2ljU2Nl",
+            "cHRlchITCgtOT01DR0RGSk1BSRgMIAEoCEIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicScepterReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicScepterSelectResult), global::EggLink.DanhengServer.Proto.RogueMagicScepterSelectResult.Parser, new[]{ "SelectScepter", "PAKIBAPPNAF" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicScepterSelectResult), global::EggLink.DanhengServer.Proto.RogueMagicScepterSelectResult.Parser, new[]{ "SelectScepter", "NOMCGDFJMAI" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueMagicScepterSelectResult(RogueMagicScepterSelectResult other) : this() {
       selectScepter_ = other.selectScepter_ != null ? other.selectScepter_.Clone() : null;
-      pAKIBAPPNAF_ = other.pAKIBAPPNAF_;
+      nOMCGDFJMAI_ = other.nOMCGDFJMAI_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_scepter" field.</summary>
-    public const int SelectScepterFieldNumber = 10;
+    public const int SelectScepterFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.RogueMagicScepter selectScepter_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,15 +97,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "PAKIBAPPNAF" field.</summary>
-    public const int PAKIBAPPNAFFieldNumber = 1;
-    private bool pAKIBAPPNAF_;
+    /// <summary>Field number for the "NOMCGDFJMAI" field.</summary>
+    public const int NOMCGDFJMAIFieldNumber = 12;
+    private bool nOMCGDFJMAI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool PAKIBAPPNAF {
-      get { return pAKIBAPPNAF_; }
+    public bool NOMCGDFJMAI {
+      get { return nOMCGDFJMAI_; }
       set {
-        pAKIBAPPNAF_ = value;
+        nOMCGDFJMAI_ = value;
       }
     }
 
@@ -125,7 +125,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(SelectScepter, other.SelectScepter)) return false;
-      if (PAKIBAPPNAF != other.PAKIBAPPNAF) return false;
+      if (NOMCGDFJMAI != other.NOMCGDFJMAI) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -134,7 +134,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (selectScepter_ != null) hash ^= SelectScepter.GetHashCode();
-      if (PAKIBAPPNAF != false) hash ^= PAKIBAPPNAF.GetHashCode();
+      if (NOMCGDFJMAI != false) hash ^= NOMCGDFJMAI.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PAKIBAPPNAF != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(PAKIBAPPNAF);
-      }
       if (selectScepter_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(90);
         output.WriteMessage(SelectScepter);
+      }
+      if (NOMCGDFJMAI != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(NOMCGDFJMAI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PAKIBAPPNAF != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(PAKIBAPPNAF);
-      }
       if (selectScepter_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(90);
         output.WriteMessage(SelectScepter);
+      }
+      if (NOMCGDFJMAI != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(NOMCGDFJMAI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -192,7 +192,7 @@ namespace EggLink.DanhengServer.Proto {
       if (selectScepter_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SelectScepter);
       }
-      if (PAKIBAPPNAF != false) {
+      if (NOMCGDFJMAI != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -213,8 +213,8 @@ namespace EggLink.DanhengServer.Proto {
         }
         SelectScepter.MergeFrom(other.SelectScepter);
       }
-      if (other.PAKIBAPPNAF != false) {
-        PAKIBAPPNAF = other.PAKIBAPPNAF;
+      if (other.NOMCGDFJMAI != false) {
+        NOMCGDFJMAI = other.NOMCGDFJMAI;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            PAKIBAPPNAF = input.ReadBool();
-            break;
-          }
-          case 82: {
+          case 90: {
             if (selectScepter_ == null) {
               SelectScepter = new global::EggLink.DanhengServer.Proto.RogueMagicScepter();
             }
             input.ReadMessage(SelectScepter);
+            break;
+          }
+          case 96: {
+            NOMCGDFJMAI = input.ReadBool();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            PAKIBAPPNAF = input.ReadBool();
-            break;
-          }
-          case 82: {
+          case 90: {
             if (selectScepter_ == null) {
               SelectScepter = new global::EggLink.DanhengServer.Proto.RogueMagicScepter();
             }
             input.ReadMessage(SelectScepter);
+            break;
+          }
+          case 96: {
+            NOMCGDFJMAI = input.ReadBool();
             break;
           }
         }

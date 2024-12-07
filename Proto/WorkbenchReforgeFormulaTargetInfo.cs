@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CidXb3JrYmVuY2hSZWZvcmdlRm9ybXVsYVRhcmdldEluZm8ucHJvdG8iRgoh",
             "V29ya2JlbmNoUmVmb3JnZUZvcm11bGFUYXJnZXRJbmZvEiEKGXRhcmdldF9y",
-            "ZWZvcmdlX2Zvcm11bGFfaWQYCyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "ZWZvcmdlX2Zvcm11bGFfaWQYBiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "target_reforge_formula_id" field.</summary>
-    public const int TargetReforgeFormulaIdFieldNumber = 11;
+    public const int TargetReforgeFormulaIdFieldNumber = 6;
     private uint targetReforgeFormulaId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (TargetReforgeFormulaId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(48);
         output.WriteUInt32(TargetReforgeFormulaId);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (TargetReforgeFormulaId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(48);
         output.WriteUInt32(TargetReforgeFormulaId);
       }
       if (_unknownFields != null) {
@@ -198,7 +198,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 88: {
+          case 48: {
             TargetReforgeFormulaId = input.ReadUInt32();
             break;
           }
@@ -217,7 +217,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 88: {
+          case 48: {
             TargetReforgeFormulaId = input.ReadUInt32();
             break;
           }

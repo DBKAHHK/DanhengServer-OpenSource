@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChJVc2VJdGVtQ3NSZXEucHJvdG8aEEF2YXRhclR5cGUucHJvdG8iqgEKDFVz",
-            "ZUl0ZW1Dc1JlcRIWCg5iYXNlX2F2YXRhcl9pZBgIIAEoDRIWCg51c2VfaXRl",
-            "bV9jb3VudBgOIAEoDRITCgt1c2VfaXRlbV9pZBgEIAEoDRITCgtNTEhCSUZJ",
-            "RkhISxgKIAEoCBIaChJvcHRpb25hbF9yZXdhcmRfaWQYBiABKA0SJAoPdXNl",
-            "X2F2YXRhcl90eXBlGA0gASgOMgsuQXZhdGFyVHlwZUIeqgIbRWdnTGluay5E",
+            "ZUl0ZW1Dc1JlcRITCgt1c2VfaXRlbV9pZBgGIAEoDRIWCg5iYXNlX2F2YXRh",
+            "cl9pZBgBIAEoDRIkCg91c2VfYXZhdGFyX3R5cGUYAiABKA4yCy5BdmF0YXJU",
+            "eXBlEhYKDnVzZV9pdGVtX2NvdW50GAkgASgNEhoKEm9wdGlvbmFsX3Jld2Fy",
+            "ZF9pZBgPIAEoDRITCgtEQklPSEZMSkNKRhgOIAEoCEIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AvatarTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UseItemCsReq), global::EggLink.DanhengServer.Proto.UseItemCsReq.Parser, new[]{ "BaseAvatarId", "UseItemCount", "UseItemId", "MLHBIFIFHHK", "OptionalRewardId", "UseAvatarType" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UseItemCsReq), global::EggLink.DanhengServer.Proto.UseItemCsReq.Parser, new[]{ "UseItemId", "BaseAvatarId", "UseAvatarType", "UseItemCount", "OptionalRewardId", "DBIOHFLJCJF" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,12 +75,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UseItemCsReq(UseItemCsReq other) : this() {
-      baseAvatarId_ = other.baseAvatarId_;
-      useItemCount_ = other.useItemCount_;
       useItemId_ = other.useItemId_;
-      mLHBIFIFHHK_ = other.mLHBIFIFHHK_;
-      optionalRewardId_ = other.optionalRewardId_;
+      baseAvatarId_ = other.baseAvatarId_;
       useAvatarType_ = other.useAvatarType_;
+      useItemCount_ = other.useItemCount_;
+      optionalRewardId_ = other.optionalRewardId_;
+      dBIOHFLJCJF_ = other.dBIOHFLJCJF_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -90,8 +90,20 @@ namespace EggLink.DanhengServer.Proto {
       return new UseItemCsReq(this);
     }
 
+    /// <summary>Field number for the "use_item_id" field.</summary>
+    public const int UseItemIdFieldNumber = 6;
+    private uint useItemId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint UseItemId {
+      get { return useItemId_; }
+      set {
+        useItemId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "base_avatar_id" field.</summary>
-    public const int BaseAvatarIdFieldNumber = 8;
+    public const int BaseAvatarIdFieldNumber = 1;
     private uint baseAvatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -102,12 +114,21 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "use_avatar_type" field.</summary>
+    public const int UseAvatarTypeFieldNumber = 2;
+    private global::EggLink.DanhengServer.Proto.AvatarType useAvatarType_ = global::EggLink.DanhengServer.Proto.AvatarType.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.AvatarType UseAvatarType {
+      get { return useAvatarType_; }
+      set {
+        useAvatarType_ = value;
+      }
+    }
+
     /// <summary>Field number for the "use_item_count" field.</summary>
-    public const int UseItemCountFieldNumber = 14;
+    public const int UseItemCountFieldNumber = 9;
     private uint useItemCount_;
-    /// <summary>
-    /// 4
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint UseItemCount {
@@ -117,35 +138,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "use_item_id" field.</summary>
-    public const int UseItemIdFieldNumber = 4;
-    private uint useItemId_;
-    /// <summary>
-    /// 14
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint UseItemId {
-      get { return useItemId_; }
-      set {
-        useItemId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "MLHBIFIFHHK" field.</summary>
-    public const int MLHBIFIFHHKFieldNumber = 10;
-    private bool mLHBIFIFHHK_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool MLHBIFIFHHK {
-      get { return mLHBIFIFHHK_; }
-      set {
-        mLHBIFIFHHK_ = value;
-      }
-    }
-
     /// <summary>Field number for the "optional_reward_id" field.</summary>
-    public const int OptionalRewardIdFieldNumber = 6;
+    public const int OptionalRewardIdFieldNumber = 15;
     private uint optionalRewardId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -156,15 +150,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "use_avatar_type" field.</summary>
-    public const int UseAvatarTypeFieldNumber = 13;
-    private global::EggLink.DanhengServer.Proto.AvatarType useAvatarType_ = global::EggLink.DanhengServer.Proto.AvatarType.None;
+    /// <summary>Field number for the "DBIOHFLJCJF" field.</summary>
+    public const int DBIOHFLJCJFFieldNumber = 14;
+    private bool dBIOHFLJCJF_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.AvatarType UseAvatarType {
-      get { return useAvatarType_; }
+    public bool DBIOHFLJCJF {
+      get { return dBIOHFLJCJF_; }
       set {
-        useAvatarType_ = value;
+        dBIOHFLJCJF_ = value;
       }
     }
 
@@ -183,12 +177,12 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (BaseAvatarId != other.BaseAvatarId) return false;
-      if (UseItemCount != other.UseItemCount) return false;
       if (UseItemId != other.UseItemId) return false;
-      if (MLHBIFIFHHK != other.MLHBIFIFHHK) return false;
-      if (OptionalRewardId != other.OptionalRewardId) return false;
+      if (BaseAvatarId != other.BaseAvatarId) return false;
       if (UseAvatarType != other.UseAvatarType) return false;
+      if (UseItemCount != other.UseItemCount) return false;
+      if (OptionalRewardId != other.OptionalRewardId) return false;
+      if (DBIOHFLJCJF != other.DBIOHFLJCJF) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -196,12 +190,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (BaseAvatarId != 0) hash ^= BaseAvatarId.GetHashCode();
-      if (UseItemCount != 0) hash ^= UseItemCount.GetHashCode();
       if (UseItemId != 0) hash ^= UseItemId.GetHashCode();
-      if (MLHBIFIFHHK != false) hash ^= MLHBIFIFHHK.GetHashCode();
-      if (OptionalRewardId != 0) hash ^= OptionalRewardId.GetHashCode();
+      if (BaseAvatarId != 0) hash ^= BaseAvatarId.GetHashCode();
       if (UseAvatarType != global::EggLink.DanhengServer.Proto.AvatarType.None) hash ^= UseAvatarType.GetHashCode();
+      if (UseItemCount != 0) hash ^= UseItemCount.GetHashCode();
+      if (OptionalRewardId != 0) hash ^= OptionalRewardId.GetHashCode();
+      if (DBIOHFLJCJF != false) hash ^= DBIOHFLJCJF.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -220,29 +214,29 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (UseItemId != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(UseItemId);
-      }
-      if (OptionalRewardId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(OptionalRewardId);
-      }
       if (BaseAvatarId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(8);
         output.WriteUInt32(BaseAvatarId);
       }
-      if (MLHBIFIFHHK != false) {
-        output.WriteRawTag(80);
-        output.WriteBool(MLHBIFIFHHK);
-      }
       if (UseAvatarType != global::EggLink.DanhengServer.Proto.AvatarType.None) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(16);
         output.WriteEnum((int) UseAvatarType);
       }
+      if (UseItemId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(UseItemId);
+      }
       if (UseItemCount != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(72);
         output.WriteUInt32(UseItemCount);
+      }
+      if (DBIOHFLJCJF != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(DBIOHFLJCJF);
+      }
+      if (OptionalRewardId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(OptionalRewardId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -254,29 +248,29 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (UseItemId != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(UseItemId);
-      }
-      if (OptionalRewardId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(OptionalRewardId);
-      }
       if (BaseAvatarId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(8);
         output.WriteUInt32(BaseAvatarId);
       }
-      if (MLHBIFIFHHK != false) {
-        output.WriteRawTag(80);
-        output.WriteBool(MLHBIFIFHHK);
-      }
       if (UseAvatarType != global::EggLink.DanhengServer.Proto.AvatarType.None) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(16);
         output.WriteEnum((int) UseAvatarType);
       }
+      if (UseItemId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(UseItemId);
+      }
       if (UseItemCount != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(72);
         output.WriteUInt32(UseItemCount);
+      }
+      if (DBIOHFLJCJF != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(DBIOHFLJCJF);
+      }
+      if (OptionalRewardId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(OptionalRewardId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -288,23 +282,23 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (UseItemId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UseItemId);
+      }
       if (BaseAvatarId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BaseAvatarId);
+      }
+      if (UseAvatarType != global::EggLink.DanhengServer.Proto.AvatarType.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) UseAvatarType);
       }
       if (UseItemCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UseItemCount);
       }
-      if (UseItemId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UseItemId);
-      }
-      if (MLHBIFIFHHK != false) {
-        size += 1 + 1;
-      }
       if (OptionalRewardId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OptionalRewardId);
       }
-      if (UseAvatarType != global::EggLink.DanhengServer.Proto.AvatarType.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) UseAvatarType);
+      if (DBIOHFLJCJF != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -318,23 +312,23 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.UseItemId != 0) {
+        UseItemId = other.UseItemId;
+      }
       if (other.BaseAvatarId != 0) {
         BaseAvatarId = other.BaseAvatarId;
+      }
+      if (other.UseAvatarType != global::EggLink.DanhengServer.Proto.AvatarType.None) {
+        UseAvatarType = other.UseAvatarType;
       }
       if (other.UseItemCount != 0) {
         UseItemCount = other.UseItemCount;
       }
-      if (other.UseItemId != 0) {
-        UseItemId = other.UseItemId;
-      }
-      if (other.MLHBIFIFHHK != false) {
-        MLHBIFIFHHK = other.MLHBIFIFHHK;
-      }
       if (other.OptionalRewardId != 0) {
         OptionalRewardId = other.OptionalRewardId;
       }
-      if (other.UseAvatarType != global::EggLink.DanhengServer.Proto.AvatarType.None) {
-        UseAvatarType = other.UseAvatarType;
+      if (other.DBIOHFLJCJF != false) {
+        DBIOHFLJCJF = other.DBIOHFLJCJF;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -351,28 +345,28 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            UseItemId = input.ReadUInt32();
-            break;
-          }
-          case 48: {
-            OptionalRewardId = input.ReadUInt32();
-            break;
-          }
-          case 64: {
+          case 8: {
             BaseAvatarId = input.ReadUInt32();
             break;
           }
-          case 80: {
-            MLHBIFIFHHK = input.ReadBool();
-            break;
-          }
-          case 104: {
+          case 16: {
             UseAvatarType = (global::EggLink.DanhengServer.Proto.AvatarType) input.ReadEnum();
             break;
           }
-          case 112: {
+          case 48: {
+            UseItemId = input.ReadUInt32();
+            break;
+          }
+          case 72: {
             UseItemCount = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            DBIOHFLJCJF = input.ReadBool();
+            break;
+          }
+          case 120: {
+            OptionalRewardId = input.ReadUInt32();
             break;
           }
         }
@@ -390,28 +384,28 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            UseItemId = input.ReadUInt32();
-            break;
-          }
-          case 48: {
-            OptionalRewardId = input.ReadUInt32();
-            break;
-          }
-          case 64: {
+          case 8: {
             BaseAvatarId = input.ReadUInt32();
             break;
           }
-          case 80: {
-            MLHBIFIFHHK = input.ReadBool();
-            break;
-          }
-          case 104: {
+          case 16: {
             UseAvatarType = (global::EggLink.DanhengServer.Proto.AvatarType) input.ReadEnum();
             break;
           }
-          case 112: {
+          case 48: {
+            UseItemId = input.ReadUInt32();
+            break;
+          }
+          case 72: {
             UseItemCount = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            DBIOHFLJCJF = input.ReadBool();
+            break;
+          }
+          case 120: {
+            OptionalRewardId = input.ReadUInt32();
             break;
           }
         }

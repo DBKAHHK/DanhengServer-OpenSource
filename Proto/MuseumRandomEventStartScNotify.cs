@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static MuseumRandomEventStartScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiRNdXNldW1SYW5kb21FdmVudFN0YXJ0U2NOb3RpZnkucHJvdG8aEU5OSURN",
-            "SkhBUEtLLnByb3RvIjwKHk11c2V1bVJhbmRvbUV2ZW50U3RhcnRTY05vdGlm",
-            "eRIaCgRpbmZvGAggASgLMgwuTk5JRE1KSEFQS0tCHqoCG0VnZ0xpbmsuRGFu",
+            "CiRNdXNldW1SYW5kb21FdmVudFN0YXJ0U2NOb3RpZnkucHJvdG8aEUlBTEFM",
+            "TUdHREZPLnByb3RvIjwKHk11c2V1bVJhbmRvbUV2ZW50U3RhcnRTY05vdGlm",
+            "eRIaCgRpbmZvGAMgASgLMgwuSUFMQUxNR0dERk9CHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NNIDMJHAPKKReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IALALMGGDFOReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MuseumRandomEventStartScNotify), global::EggLink.DanhengServer.Proto.MuseumRandomEventStartScNotify.Parser, new[]{ "Info" }, null, null, null, null)
           }));
@@ -84,11 +84,11 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "info" field.</summary>
-    public const int InfoFieldNumber = 8;
-    private global::EggLink.DanhengServer.Proto.NNIDMJHAPKK info_;
+    public const int InfoFieldNumber = 3;
+    private global::EggLink.DanhengServer.Proto.IALALMGGDFO info_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.NNIDMJHAPKK Info {
+    public global::EggLink.DanhengServer.Proto.IALALMGGDFO Info {
       get { return info_; }
       set {
         info_ = value;
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (info_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(26);
         output.WriteMessage(Info);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (info_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(26);
         output.WriteMessage(Info);
       }
       if (_unknownFields != null) {
@@ -182,7 +182,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.info_ != null) {
         if (info_ == null) {
-          Info = new global::EggLink.DanhengServer.Proto.NNIDMJHAPKK();
+          Info = new global::EggLink.DanhengServer.Proto.IALALMGGDFO();
         }
         Info.MergeFrom(other.Info);
       }
@@ -201,9 +201,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66: {
+          case 26: {
             if (info_ == null) {
-              Info = new global::EggLink.DanhengServer.Proto.NNIDMJHAPKK();
+              Info = new global::EggLink.DanhengServer.Proto.IALALMGGDFO();
             }
             input.ReadMessage(Info);
             break;
@@ -223,9 +223,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66: {
+          case 26: {
             if (info_ == null) {
-              Info = new global::EggLink.DanhengServer.Proto.NNIDMJHAPKK();
+              Info = new global::EggLink.DanhengServer.Proto.IALALMGGDFO();
             }
             input.ReadMessage(Info);
             break;

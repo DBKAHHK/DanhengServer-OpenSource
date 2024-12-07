@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChxUcmFpblBhcnR5R2FtZUNhcmRJbmZvLnByb3RvGhhUcmFpblBhcnR5R2Ft",
             "ZUNhcmQucHJvdG8iTAoWVHJhaW5QYXJ0eUdhbWVDYXJkSW5mbxIyChV0cmFp",
-            "bl9wYXJ0eV9jYXJkX2luZm8YCyADKAsyEy5UcmFpblBhcnR5R2FtZUNhcmRC",
+            "bl9wYXJ0eV9jYXJkX2luZm8YDyADKAsyEy5UcmFpblBhcnR5R2FtZUNhcmRC",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyGameCardReflection.Descriptor, },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "train_party_card_info" field.</summary>
-    public const int TrainPartyCardInfoFieldNumber = 11;
+    public const int TrainPartyCardInfoFieldNumber = 15;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.TrainPartyGameCard> _repeated_trainPartyCardInfo_codec
-        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.TrainPartyGameCard.Parser);
+        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.TrainPartyGameCard.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGameCard> trainPartyCardInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGameCard>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 90: {
+          case 122: {
             trainPartyCardInfo_.AddEntriesFrom(input, _repeated_trainPartyCardInfo_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 90: {
+          case 122: {
             trainPartyCardInfo_.AddEntriesFrom(ref input, _repeated_trainPartyCardInfo_codec);
             break;
           }

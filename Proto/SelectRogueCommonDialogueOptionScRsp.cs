@@ -26,16 +26,16 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CipTZWxlY3RSb2d1ZUNvbW1vbkRpYWxvZ3VlT3B0aW9uU2NSc3AucHJvdG8a",
             "IVJvZ3VlQ29tbW9uRGlhbG9ndWVEYXRhSW5mby5wcm90byLQAQokU2VsZWN0",
-            "Um9ndWVDb21tb25EaWFsb2d1ZU9wdGlvblNjUnNwEg8KB3JldGNvZGUYBiAB",
-            "KA0SFwoPZXZlbnRfdW5pcXVlX2lkGAcgASgNEhEKCW9wdGlvbl9pZBgFIAEo",
-            "DRIzCg1kaWFsb2d1ZV9kYXRhGA8gASgLMhwuUm9ndWVDb21tb25EaWFsb2d1",
-            "ZURhdGFJbmZvEhgKEGV2ZW50X2hhc19lZmZlY3QYDiABKAgSHAoUZWZmZWN0",
-            "X2V2ZW50X2lkX2xpc3QYASADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "Um9ndWVDb21tb25EaWFsb2d1ZU9wdGlvblNjUnNwEhEKCW9wdGlvbl9pZBgP",
+            "IAEoDRIPCgdyZXRjb2RlGAQgASgNEhwKFGVmZmVjdF9ldmVudF9pZF9saXN0",
+            "GAEgAygNEjMKDWRpYWxvZ3VlX2RhdGEYBiABKAsyHC5Sb2d1ZUNvbW1vbkRp",
+            "YWxvZ3VlRGF0YUluZm8SGAoQZXZlbnRfaGFzX2VmZmVjdBgFIAEoCBIXCg9l",
+            "dmVudF91bmlxdWVfaWQYAyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SelectRogueCommonDialogueOptionScRsp), global::EggLink.DanhengServer.Proto.SelectRogueCommonDialogueOptionScRsp.Parser, new[]{ "Retcode", "EventUniqueId", "OptionId", "DialogueData", "EventHasEffect", "EffectEventIdList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SelectRogueCommonDialogueOptionScRsp), global::EggLink.DanhengServer.Proto.SelectRogueCommonDialogueOptionScRsp.Parser, new[]{ "OptionId", "Retcode", "EffectEventIdList", "DialogueData", "EventHasEffect", "EventUniqueId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,12 +77,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SelectRogueCommonDialogueOptionScRsp(SelectRogueCommonDialogueOptionScRsp other) : this() {
-      retcode_ = other.retcode_;
-      eventUniqueId_ = other.eventUniqueId_;
       optionId_ = other.optionId_;
+      retcode_ = other.retcode_;
+      effectEventIdList_ = other.effectEventIdList_.Clone();
       dialogueData_ = other.dialogueData_ != null ? other.dialogueData_.Clone() : null;
       eventHasEffect_ = other.eventHasEffect_;
-      effectEventIdList_ = other.effectEventIdList_.Clone();
+      eventUniqueId_ = other.eventUniqueId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -92,32 +92,8 @@ namespace EggLink.DanhengServer.Proto {
       return new SelectRogueCommonDialogueOptionScRsp(this);
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 6;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "event_unique_id" field.</summary>
-    public const int EventUniqueIdFieldNumber = 7;
-    private uint eventUniqueId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint EventUniqueId {
-      get { return eventUniqueId_; }
-      set {
-        eventUniqueId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "option_id" field.</summary>
-    public const int OptionIdFieldNumber = 5;
+    public const int OptionIdFieldNumber = 15;
     private uint optionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -128,27 +104,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "dialogue_data" field.</summary>
-    public const int DialogueDataFieldNumber = 15;
-    private global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo dialogueData_;
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 4;
+    private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo DialogueData {
-      get { return dialogueData_; }
+    public uint Retcode {
+      get { return retcode_; }
       set {
-        dialogueData_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "event_has_effect" field.</summary>
-    public const int EventHasEffectFieldNumber = 14;
-    private bool eventHasEffect_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool EventHasEffect {
-      get { return eventHasEffect_; }
-      set {
-        eventHasEffect_ = value;
+        retcode_ = value;
       }
     }
 
@@ -161,6 +125,42 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<uint> EffectEventIdList {
       get { return effectEventIdList_; }
+    }
+
+    /// <summary>Field number for the "dialogue_data" field.</summary>
+    public const int DialogueDataFieldNumber = 6;
+    private global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo dialogueData_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo DialogueData {
+      get { return dialogueData_; }
+      set {
+        dialogueData_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "event_has_effect" field.</summary>
+    public const int EventHasEffectFieldNumber = 5;
+    private bool eventHasEffect_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EventHasEffect {
+      get { return eventHasEffect_; }
+      set {
+        eventHasEffect_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "event_unique_id" field.</summary>
+    public const int EventUniqueIdFieldNumber = 3;
+    private uint eventUniqueId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint EventUniqueId {
+      get { return eventUniqueId_; }
+      set {
+        eventUniqueId_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -178,12 +178,12 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
-      if (EventUniqueId != other.EventUniqueId) return false;
       if (OptionId != other.OptionId) return false;
+      if (Retcode != other.Retcode) return false;
+      if(!effectEventIdList_.Equals(other.effectEventIdList_)) return false;
       if (!object.Equals(DialogueData, other.DialogueData)) return false;
       if (EventHasEffect != other.EventHasEffect) return false;
-      if(!effectEventIdList_.Equals(other.effectEventIdList_)) return false;
+      if (EventUniqueId != other.EventUniqueId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -191,12 +191,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (EventUniqueId != 0) hash ^= EventUniqueId.GetHashCode();
       if (OptionId != 0) hash ^= OptionId.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      hash ^= effectEventIdList_.GetHashCode();
       if (dialogueData_ != null) hash ^= DialogueData.GetHashCode();
       if (EventHasEffect != false) hash ^= EventHasEffect.GetHashCode();
-      hash ^= effectEventIdList_.GetHashCode();
+      if (EventUniqueId != 0) hash ^= EventUniqueId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -216,25 +216,25 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       effectEventIdList_.WriteTo(output, _repeated_effectEventIdList_codec);
-      if (OptionId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(OptionId);
-      }
-      if (Retcode != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(Retcode);
-      }
       if (EventUniqueId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(24);
         output.WriteUInt32(EventUniqueId);
       }
+      if (Retcode != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(Retcode);
+      }
       if (EventHasEffect != false) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(40);
         output.WriteBool(EventHasEffect);
       }
       if (dialogueData_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(50);
         output.WriteMessage(DialogueData);
+      }
+      if (OptionId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(OptionId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -247,25 +247,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       effectEventIdList_.WriteTo(ref output, _repeated_effectEventIdList_codec);
-      if (OptionId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(OptionId);
-      }
-      if (Retcode != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(Retcode);
-      }
       if (EventUniqueId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(24);
         output.WriteUInt32(EventUniqueId);
       }
+      if (Retcode != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(Retcode);
+      }
       if (EventHasEffect != false) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(40);
         output.WriteBool(EventHasEffect);
       }
       if (dialogueData_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(50);
         output.WriteMessage(DialogueData);
+      }
+      if (OptionId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(OptionId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -277,22 +277,22 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
-      if (EventUniqueId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EventUniqueId);
-      }
       if (OptionId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OptionId);
       }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      size += effectEventIdList_.CalculateSize(_repeated_effectEventIdList_codec);
       if (dialogueData_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DialogueData);
       }
       if (EventHasEffect != false) {
         size += 1 + 1;
       }
-      size += effectEventIdList_.CalculateSize(_repeated_effectEventIdList_codec);
+      if (EventUniqueId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EventUniqueId);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -305,15 +305,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
-      if (other.EventUniqueId != 0) {
-        EventUniqueId = other.EventUniqueId;
-      }
       if (other.OptionId != 0) {
         OptionId = other.OptionId;
       }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
+      effectEventIdList_.Add(other.effectEventIdList_);
       if (other.dialogueData_ != null) {
         if (dialogueData_ == null) {
           DialogueData = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo();
@@ -323,7 +321,9 @@ namespace EggLink.DanhengServer.Proto {
       if (other.EventHasEffect != false) {
         EventHasEffect = other.EventHasEffect;
       }
-      effectEventIdList_.Add(other.effectEventIdList_);
+      if (other.EventUniqueId != 0) {
+        EventUniqueId = other.EventUniqueId;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -344,27 +344,27 @@ namespace EggLink.DanhengServer.Proto {
             effectEventIdList_.AddEntriesFrom(input, _repeated_effectEventIdList_codec);
             break;
           }
-          case 40: {
-            OptionId = input.ReadUInt32();
-            break;
-          }
-          case 48: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 56: {
+          case 24: {
             EventUniqueId = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 32: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 40: {
             EventHasEffect = input.ReadBool();
             break;
           }
-          case 122: {
+          case 50: {
             if (dialogueData_ == null) {
               DialogueData = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo();
             }
             input.ReadMessage(DialogueData);
+            break;
+          }
+          case 120: {
+            OptionId = input.ReadUInt32();
             break;
           }
         }
@@ -387,27 +387,27 @@ namespace EggLink.DanhengServer.Proto {
             effectEventIdList_.AddEntriesFrom(ref input, _repeated_effectEventIdList_codec);
             break;
           }
-          case 40: {
-            OptionId = input.ReadUInt32();
-            break;
-          }
-          case 48: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 56: {
+          case 24: {
             EventUniqueId = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 32: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 40: {
             EventHasEffect = input.ReadBool();
             break;
           }
-          case 122: {
+          case 50: {
             if (dialogueData_ == null) {
               DialogueData = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo();
             }
             input.ReadMessage(DialogueData);
+            break;
+          }
+          case 120: {
+            OptionId = input.ReadUInt32();
             break;
           }
         }

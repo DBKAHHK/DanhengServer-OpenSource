@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static GetMissionDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlHZXRNaXNzaW9uRGF0YVNjUnNwLnByb3RvGhFNYWluTWlzc2lvbi5wcm90",
-            "bxoNTWlzc2lvbi5wcm90byKeAQoTR2V0TWlzc2lvbkRhdGFTY1JzcBIeCgxt",
-            "aXNzaW9uX2xpc3QYBSADKAsyCC5NaXNzaW9uEhMKC05LTlBFS09CSEVJGAwg",
-            "AygNEhgKEHRyYWNrX21pc3Npb25faWQYCSABKA0SDwoHcmV0Y29kZRgEIAEo",
-            "DRInChFtYWluX21pc3Npb25fbGlzdBgIIAMoCzIMLk1haW5NaXNzaW9uQh6q",
+            "ChlHZXRNaXNzaW9uRGF0YVNjUnNwLnByb3RvGg1NaXNzaW9uLnByb3RvGhFN",
+            "YWluTWlzc2lvbi5wcm90byKeAQoTR2V0TWlzc2lvbkRhdGFTY1JzcBInChFt",
+            "YWluX21pc3Npb25fbGlzdBgFIAMoCzIMLk1haW5NaXNzaW9uEh4KDG1pc3Np",
+            "b25fbGlzdBgEIAMoCzIILk1pc3Npb24SDwoHcmV0Y29kZRgKIAEoDRITCgtL",
+            "Rk9HTEtIUEFIRxgOIAMoDRIYChB0cmFja19taXNzaW9uX2lkGA0gASgNQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MainMissionReflection.Descriptor, global::EggLink.DanhengServer.Proto.MissionReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MissionReflection.Descriptor, global::EggLink.DanhengServer.Proto.MainMissionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMissionDataScRsp), global::EggLink.DanhengServer.Proto.GetMissionDataScRsp.Parser, new[]{ "MissionList", "NKNPEKOBHEI", "TrackMissionId", "Retcode", "MainMissionList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMissionDataScRsp), global::EggLink.DanhengServer.Proto.GetMissionDataScRsp.Parser, new[]{ "MainMissionList", "MissionList", "Retcode", "KFOGLKHPAHG", "TrackMissionId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,11 +75,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetMissionDataScRsp(GetMissionDataScRsp other) : this() {
-      missionList_ = other.missionList_.Clone();
-      nKNPEKOBHEI_ = other.nKNPEKOBHEI_.Clone();
-      trackMissionId_ = other.trackMissionId_;
-      retcode_ = other.retcode_;
       mainMissionList_ = other.mainMissionList_.Clone();
+      missionList_ = other.missionList_.Clone();
+      retcode_ = other.retcode_;
+      kFOGLKHPAHG_ = other.kFOGLKHPAHG_.Clone();
+      trackMissionId_ = other.trackMissionId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -89,10 +89,21 @@ namespace EggLink.DanhengServer.Proto {
       return new GetMissionDataScRsp(this);
     }
 
+    /// <summary>Field number for the "main_mission_list" field.</summary>
+    public const int MainMissionListFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MainMission> _repeated_mainMissionList_codec
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.MainMission.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MainMission> mainMissionList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MainMission>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MainMission> MainMissionList {
+      get { return mainMissionList_; }
+    }
+
     /// <summary>Field number for the "mission_list" field.</summary>
-    public const int MissionListFieldNumber = 5;
+    public const int MissionListFieldNumber = 4;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.Mission> _repeated_missionList_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.Mission.Parser);
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.Mission.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Mission> missionList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Mission>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,31 +111,8 @@ namespace EggLink.DanhengServer.Proto {
       get { return missionList_; }
     }
 
-    /// <summary>Field number for the "NKNPEKOBHEI" field.</summary>
-    public const int NKNPEKOBHEIFieldNumber = 12;
-    private static readonly pb::FieldCodec<uint> _repeated_nKNPEKOBHEI_codec
-        = pb::FieldCodec.ForUInt32(98);
-    private readonly pbc::RepeatedField<uint> nKNPEKOBHEI_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> NKNPEKOBHEI {
-      get { return nKNPEKOBHEI_; }
-    }
-
-    /// <summary>Field number for the "track_mission_id" field.</summary>
-    public const int TrackMissionIdFieldNumber = 9;
-    private uint trackMissionId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TrackMissionId {
-      get { return trackMissionId_; }
-      set {
-        trackMissionId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 4;
+    public const int RetcodeFieldNumber = 10;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -135,15 +123,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "main_mission_list" field.</summary>
-    public const int MainMissionListFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MainMission> _repeated_mainMissionList_codec
-        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.MainMission.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MainMission> mainMissionList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MainMission>();
+    /// <summary>Field number for the "KFOGLKHPAHG" field.</summary>
+    public const int KFOGLKHPAHGFieldNumber = 14;
+    private static readonly pb::FieldCodec<uint> _repeated_kFOGLKHPAHG_codec
+        = pb::FieldCodec.ForUInt32(114);
+    private readonly pbc::RepeatedField<uint> kFOGLKHPAHG_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MainMission> MainMissionList {
-      get { return mainMissionList_; }
+    public pbc::RepeatedField<uint> KFOGLKHPAHG {
+      get { return kFOGLKHPAHG_; }
+    }
+
+    /// <summary>Field number for the "track_mission_id" field.</summary>
+    public const int TrackMissionIdFieldNumber = 13;
+    private uint trackMissionId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint TrackMissionId {
+      get { return trackMissionId_; }
+      set {
+        trackMissionId_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -161,11 +161,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!missionList_.Equals(other.missionList_)) return false;
-      if(!nKNPEKOBHEI_.Equals(other.nKNPEKOBHEI_)) return false;
-      if (TrackMissionId != other.TrackMissionId) return false;
-      if (Retcode != other.Retcode) return false;
       if(!mainMissionList_.Equals(other.mainMissionList_)) return false;
+      if(!missionList_.Equals(other.missionList_)) return false;
+      if (Retcode != other.Retcode) return false;
+      if(!kFOGLKHPAHG_.Equals(other.kFOGLKHPAHG_)) return false;
+      if (TrackMissionId != other.TrackMissionId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -173,11 +173,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= missionList_.GetHashCode();
-      hash ^= nKNPEKOBHEI_.GetHashCode();
-      if (TrackMissionId != 0) hash ^= TrackMissionId.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       hash ^= mainMissionList_.GetHashCode();
+      hash ^= missionList_.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      hash ^= kFOGLKHPAHG_.GetHashCode();
+      if (TrackMissionId != 0) hash ^= TrackMissionId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -196,17 +196,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Retcode);
-      }
       missionList_.WriteTo(output, _repeated_missionList_codec);
       mainMissionList_.WriteTo(output, _repeated_mainMissionList_codec);
+      if (Retcode != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Retcode);
+      }
       if (TrackMissionId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(104);
         output.WriteUInt32(TrackMissionId);
       }
-      nKNPEKOBHEI_.WriteTo(output, _repeated_nKNPEKOBHEI_codec);
+      kFOGLKHPAHG_.WriteTo(output, _repeated_kFOGLKHPAHG_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -217,17 +217,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Retcode);
-      }
       missionList_.WriteTo(ref output, _repeated_missionList_codec);
       mainMissionList_.WriteTo(ref output, _repeated_mainMissionList_codec);
+      if (Retcode != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Retcode);
+      }
       if (TrackMissionId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(104);
         output.WriteUInt32(TrackMissionId);
       }
-      nKNPEKOBHEI_.WriteTo(ref output, _repeated_nKNPEKOBHEI_codec);
+      kFOGLKHPAHG_.WriteTo(ref output, _repeated_kFOGLKHPAHG_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -238,15 +238,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += mainMissionList_.CalculateSize(_repeated_mainMissionList_codec);
       size += missionList_.CalculateSize(_repeated_missionList_codec);
-      size += nKNPEKOBHEI_.CalculateSize(_repeated_nKNPEKOBHEI_codec);
-      if (TrackMissionId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TrackMissionId);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += mainMissionList_.CalculateSize(_repeated_mainMissionList_codec);
+      size += kFOGLKHPAHG_.CalculateSize(_repeated_kFOGLKHPAHG_codec);
+      if (TrackMissionId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TrackMissionId);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -259,15 +259,15 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      mainMissionList_.Add(other.mainMissionList_);
       missionList_.Add(other.missionList_);
-      nKNPEKOBHEI_.Add(other.nKNPEKOBHEI_);
-      if (other.TrackMissionId != 0) {
-        TrackMissionId = other.TrackMissionId;
-      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      mainMissionList_.Add(other.mainMissionList_);
+      kFOGLKHPAHG_.Add(other.kFOGLKHPAHG_);
+      if (other.TrackMissionId != 0) {
+        TrackMissionId = other.TrackMissionId;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -283,25 +283,25 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 42: {
+          case 34: {
             missionList_.AddEntriesFrom(input, _repeated_missionList_codec);
             break;
           }
-          case 66: {
+          case 42: {
             mainMissionList_.AddEntriesFrom(input, _repeated_mainMissionList_codec);
             break;
           }
-          case 72: {
+          case 80: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 104: {
             TrackMissionId = input.ReadUInt32();
             break;
           }
-          case 98:
-          case 96: {
-            nKNPEKOBHEI_.AddEntriesFrom(input, _repeated_nKNPEKOBHEI_codec);
+          case 114:
+          case 112: {
+            kFOGLKHPAHG_.AddEntriesFrom(input, _repeated_kFOGLKHPAHG_codec);
             break;
           }
         }
@@ -319,25 +319,25 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 42: {
+          case 34: {
             missionList_.AddEntriesFrom(ref input, _repeated_missionList_codec);
             break;
           }
-          case 66: {
+          case 42: {
             mainMissionList_.AddEntriesFrom(ref input, _repeated_mainMissionList_codec);
             break;
           }
-          case 72: {
+          case 80: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 104: {
             TrackMissionId = input.ReadUInt32();
             break;
           }
-          case 98:
-          case 96: {
-            nKNPEKOBHEI_.AddEntriesFrom(ref input, _repeated_nKNPEKOBHEI_codec);
+          case 114:
+          case 112: {
+            kFOGLKHPAHG_.AddEntriesFrom(ref input, _repeated_kFOGLKHPAHG_codec);
             break;
           }
         }

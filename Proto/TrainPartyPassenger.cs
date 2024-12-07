@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlUcmFpblBhcnR5UGFzc2VuZ2VyLnByb3RvImgKE1RyYWluUGFydHlQYXNz",
-            "ZW5nZXISEQoJcmVjb3JkX2lkGAwgASgNEhMKC0ROR0xHT01NRk5QGAsgASgI",
-            "EhMKC0JGR0dNQkFETUhCGAUgAygNEhQKDHBhc3Nlbmdlcl9pZBgIIAEoDUIe",
+            "ZW5nZXISEQoJcmVjb3JkX2lkGAEgASgNEhMKC0NES0xFS0NKQkVKGAggASgI",
+            "EhMKC0JJS0NEQURKSUpKGAMgAygNEhQKDHBhc3Nlbmdlcl9pZBgHIAEoDUIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyPassenger), global::EggLink.DanhengServer.Proto.TrainPartyPassenger.Parser, new[]{ "RecordId", "DNGLGOMMFNP", "BFGGMBADMHB", "PassengerId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyPassenger), global::EggLink.DanhengServer.Proto.TrainPartyPassenger.Parser, new[]{ "RecordId", "CDKLEKCJBEJ", "BIKCDADJIJJ", "PassengerId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainPartyPassenger(TrainPartyPassenger other) : this() {
       recordId_ = other.recordId_;
-      dNGLGOMMFNP_ = other.dNGLGOMMFNP_;
-      bFGGMBADMHB_ = other.bFGGMBADMHB_.Clone();
+      cDKLEKCJBEJ_ = other.cDKLEKCJBEJ_;
+      bIKCDADJIJJ_ = other.bIKCDADJIJJ_.Clone();
       passengerId_ = other.passengerId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "record_id" field.</summary>
-    public const int RecordIdFieldNumber = 12;
+    public const int RecordIdFieldNumber = 1;
     private uint recordId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,31 +98,31 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "DNGLGOMMFNP" field.</summary>
-    public const int DNGLGOMMFNPFieldNumber = 11;
-    private bool dNGLGOMMFNP_;
+    /// <summary>Field number for the "CDKLEKCJBEJ" field.</summary>
+    public const int CDKLEKCJBEJFieldNumber = 8;
+    private bool cDKLEKCJBEJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool DNGLGOMMFNP {
-      get { return dNGLGOMMFNP_; }
+    public bool CDKLEKCJBEJ {
+      get { return cDKLEKCJBEJ_; }
       set {
-        dNGLGOMMFNP_ = value;
+        cDKLEKCJBEJ_ = value;
       }
     }
 
-    /// <summary>Field number for the "BFGGMBADMHB" field.</summary>
-    public const int BFGGMBADMHBFieldNumber = 5;
-    private static readonly pb::FieldCodec<uint> _repeated_bFGGMBADMHB_codec
-        = pb::FieldCodec.ForUInt32(42);
-    private readonly pbc::RepeatedField<uint> bFGGMBADMHB_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "BIKCDADJIJJ" field.</summary>
+    public const int BIKCDADJIJJFieldNumber = 3;
+    private static readonly pb::FieldCodec<uint> _repeated_bIKCDADJIJJ_codec
+        = pb::FieldCodec.ForUInt32(26);
+    private readonly pbc::RepeatedField<uint> bIKCDADJIJJ_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> BFGGMBADMHB {
-      get { return bFGGMBADMHB_; }
+    public pbc::RepeatedField<uint> BIKCDADJIJJ {
+      get { return bIKCDADJIJJ_; }
     }
 
     /// <summary>Field number for the "passenger_id" field.</summary>
-    public const int PassengerIdFieldNumber = 8;
+    public const int PassengerIdFieldNumber = 7;
     private uint passengerId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -149,8 +149,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (RecordId != other.RecordId) return false;
-      if (DNGLGOMMFNP != other.DNGLGOMMFNP) return false;
-      if(!bFGGMBADMHB_.Equals(other.bFGGMBADMHB_)) return false;
+      if (CDKLEKCJBEJ != other.CDKLEKCJBEJ) return false;
+      if(!bIKCDADJIJJ_.Equals(other.bIKCDADJIJJ_)) return false;
       if (PassengerId != other.PassengerId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -160,8 +160,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (RecordId != 0) hash ^= RecordId.GetHashCode();
-      if (DNGLGOMMFNP != false) hash ^= DNGLGOMMFNP.GetHashCode();
-      hash ^= bFGGMBADMHB_.GetHashCode();
+      if (CDKLEKCJBEJ != false) hash ^= CDKLEKCJBEJ.GetHashCode();
+      hash ^= bIKCDADJIJJ_.GetHashCode();
       if (PassengerId != 0) hash ^= PassengerId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -181,18 +181,18 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      bFGGMBADMHB_.WriteTo(output, _repeated_bFGGMBADMHB_codec);
+      if (RecordId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(RecordId);
+      }
+      bIKCDADJIJJ_.WriteTo(output, _repeated_bIKCDADJIJJ_codec);
       if (PassengerId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(56);
         output.WriteUInt32(PassengerId);
       }
-      if (DNGLGOMMFNP != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(DNGLGOMMFNP);
-      }
-      if (RecordId != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(RecordId);
+      if (CDKLEKCJBEJ != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(CDKLEKCJBEJ);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -204,18 +204,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      bFGGMBADMHB_.WriteTo(ref output, _repeated_bFGGMBADMHB_codec);
+      if (RecordId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(RecordId);
+      }
+      bIKCDADJIJJ_.WriteTo(ref output, _repeated_bIKCDADJIJJ_codec);
       if (PassengerId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(56);
         output.WriteUInt32(PassengerId);
       }
-      if (DNGLGOMMFNP != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(DNGLGOMMFNP);
-      }
-      if (RecordId != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(RecordId);
+      if (CDKLEKCJBEJ != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(CDKLEKCJBEJ);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -230,10 +230,10 @@ namespace EggLink.DanhengServer.Proto {
       if (RecordId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RecordId);
       }
-      if (DNGLGOMMFNP != false) {
+      if (CDKLEKCJBEJ != false) {
         size += 1 + 1;
       }
-      size += bFGGMBADMHB_.CalculateSize(_repeated_bFGGMBADMHB_codec);
+      size += bIKCDADJIJJ_.CalculateSize(_repeated_bIKCDADJIJJ_codec);
       if (PassengerId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PassengerId);
       }
@@ -252,10 +252,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other.RecordId != 0) {
         RecordId = other.RecordId;
       }
-      if (other.DNGLGOMMFNP != false) {
-        DNGLGOMMFNP = other.DNGLGOMMFNP;
+      if (other.CDKLEKCJBEJ != false) {
+        CDKLEKCJBEJ = other.CDKLEKCJBEJ;
       }
-      bFGGMBADMHB_.Add(other.bFGGMBADMHB_);
+      bIKCDADJIJJ_.Add(other.bIKCDADJIJJ_);
       if (other.PassengerId != 0) {
         PassengerId = other.PassengerId;
       }
@@ -274,21 +274,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42:
-          case 40: {
-            bFGGMBADMHB_.AddEntriesFrom(input, _repeated_bFGGMBADMHB_codec);
+          case 8: {
+            RecordId = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 26:
+          case 24: {
+            bIKCDADJIJJ_.AddEntriesFrom(input, _repeated_bIKCDADJIJJ_codec);
+            break;
+          }
+          case 56: {
             PassengerId = input.ReadUInt32();
             break;
           }
-          case 88: {
-            DNGLGOMMFNP = input.ReadBool();
-            break;
-          }
-          case 96: {
-            RecordId = input.ReadUInt32();
+          case 64: {
+            CDKLEKCJBEJ = input.ReadBool();
             break;
           }
         }
@@ -306,21 +306,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42:
-          case 40: {
-            bFGGMBADMHB_.AddEntriesFrom(ref input, _repeated_bFGGMBADMHB_codec);
+          case 8: {
+            RecordId = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 26:
+          case 24: {
+            bIKCDADJIJJ_.AddEntriesFrom(ref input, _repeated_bIKCDADJIJJ_codec);
+            break;
+          }
+          case 56: {
             PassengerId = input.ReadUInt32();
             break;
           }
-          case 88: {
-            DNGLGOMMFNP = input.ReadBool();
-            break;
-          }
-          case 96: {
-            RecordId = input.ReadUInt32();
+          case 64: {
+            CDKLEKCJBEJ = input.ReadBool();
             break;
           }
         }

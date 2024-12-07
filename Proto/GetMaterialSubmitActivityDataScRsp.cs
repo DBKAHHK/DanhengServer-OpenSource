@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CihHZXRNYXRlcmlhbFN1Ym1pdEFjdGl2aXR5RGF0YVNjUnNwLnByb3RvGhhN",
             "YXRlcmlhbFN1Ym1pdEluZm8ucHJvdG8iaQoiR2V0TWF0ZXJpYWxTdWJtaXRB",
-            "Y3Rpdml0eURhdGFTY1JzcBIPCgdyZXRjb2RlGAcgASgNEjIKFW1hdGVyaWFs",
-            "X3N1Ym1pdF9pbmZvcxgOIAMoCzITLk1hdGVyaWFsU3VibWl0SW5mb0IeqgIb",
+            "Y3Rpdml0eURhdGFTY1JzcBIyChVtYXRlcmlhbF9zdWJtaXRfaW5mb3MYAyAD",
+            "KAsyEy5NYXRlcmlhbFN1Ym1pdEluZm8SDwoHcmV0Y29kZRgLIAEoDUIeqgIb",
             "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MaterialSubmitInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMaterialSubmitActivityDataScRsp), global::EggLink.DanhengServer.Proto.GetMaterialSubmitActivityDataScRsp.Parser, new[]{ "Retcode", "MaterialSubmitInfos" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMaterialSubmitActivityDataScRsp), global::EggLink.DanhengServer.Proto.GetMaterialSubmitActivityDataScRsp.Parser, new[]{ "MaterialSubmitInfos", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetMaterialSubmitActivityDataScRsp(GetMaterialSubmitActivityDataScRsp other) : this() {
-      retcode_ = other.retcode_;
       materialSubmitInfos_ = other.materialSubmitInfos_.Clone();
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,8 +85,19 @@ namespace EggLink.DanhengServer.Proto {
       return new GetMaterialSubmitActivityDataScRsp(this);
     }
 
+    /// <summary>Field number for the "material_submit_infos" field.</summary>
+    public const int MaterialSubmitInfosFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MaterialSubmitInfo> _repeated_materialSubmitInfos_codec
+        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.MaterialSubmitInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MaterialSubmitInfo> materialSubmitInfos_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MaterialSubmitInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MaterialSubmitInfo> MaterialSubmitInfos {
+      get { return materialSubmitInfos_; }
+    }
+
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 7;
+    public const int RetcodeFieldNumber = 11;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,17 +106,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         retcode_ = value;
       }
-    }
-
-    /// <summary>Field number for the "material_submit_infos" field.</summary>
-    public const int MaterialSubmitInfosFieldNumber = 14;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MaterialSubmitInfo> _repeated_materialSubmitInfos_codec
-        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.MaterialSubmitInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MaterialSubmitInfo> materialSubmitInfos_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MaterialSubmitInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MaterialSubmitInfo> MaterialSubmitInfos {
-      get { return materialSubmitInfos_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
       if(!materialSubmitInfos_.Equals(other.materialSubmitInfos_)) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       hash ^= materialSubmitInfos_.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      materialSubmitInfos_.WriteTo(output, _repeated_materialSubmitInfos_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
       }
-      materialSubmitInfos_.WriteTo(output, _repeated_materialSubmitInfos_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      materialSubmitInfos_.WriteTo(ref output, _repeated_materialSubmitInfos_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
       }
-      materialSubmitInfos_.WriteTo(ref output, _repeated_materialSubmitInfos_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -182,10 +182,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += materialSubmitInfos_.CalculateSize(_repeated_materialSubmitInfos_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += materialSubmitInfos_.CalculateSize(_repeated_materialSubmitInfos_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -198,10 +198,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      materialSubmitInfos_.Add(other.materialSubmitInfos_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      materialSubmitInfos_.Add(other.materialSubmitInfos_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -217,12 +217,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            Retcode = input.ReadUInt32();
+          case 26: {
+            materialSubmitInfos_.AddEntriesFrom(input, _repeated_materialSubmitInfos_codec);
             break;
           }
-          case 114: {
-            materialSubmitInfos_.AddEntriesFrom(input, _repeated_materialSubmitInfos_codec);
+          case 88: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            Retcode = input.ReadUInt32();
+          case 26: {
+            materialSubmitInfos_.AddEntriesFrom(ref input, _repeated_materialSubmitInfos_codec);
             break;
           }
-          case 114: {
-            materialSubmitInfos_.AddEntriesFrom(ref input, _repeated_materialSubmitInfos_codec);
+          case 88: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

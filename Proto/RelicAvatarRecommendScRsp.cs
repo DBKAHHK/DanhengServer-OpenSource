@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static RelicAvatarRecommendScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9SZWxpY0F2YXRhclJlY29tbWVuZFNjUnNwLnByb3RvImoKGVJlbGljQXZh",
-            "dGFyUmVjb21tZW5kU2NSc3ASDgoGZW5hYmxlGAYgASgIEhQKDHJlbGljX3Nl",
-            "dF9pZBgIIAEoDRIPCgdyZXRjb2RlGA8gASgNEhYKDmF2YXRhcl9pZF9saXN0",
-            "GA4gAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
-            "Mw=="));
+            "Ch9SZWxpY0F2YXRhclJlY29tbWVuZFNjUnNwLnByb3RvIn0KGVJlbGljQXZh",
+            "dGFyUmVjb21tZW5kU2NSc3ASIgoaUk9HVUVfVEFMRU5UX1NUQVRVU19FTkFC",
+            "TEUYCyABKAgSEwoLREpMTUFKQk9KTkIYDiABKA0SFgoOYXZhdGFyX2lkX2xp",
+            "c3QYBCADKA0SDwoHcmV0Y29kZRgHIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RelicAvatarRecommendScRsp), global::EggLink.DanhengServer.Proto.RelicAvatarRecommendScRsp.Parser, new[]{ "Enable", "RelicSetId", "Retcode", "AvatarIdList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RelicAvatarRecommendScRsp), global::EggLink.DanhengServer.Proto.RelicAvatarRecommendScRsp.Parser, new[]{ "ROGUETALENTSTATUSENABLE", "DJLMAJBOJNB", "AvatarIdList", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RelicAvatarRecommendScRsp(RelicAvatarRecommendScRsp other) : this() {
-      enable_ = other.enable_;
-      relicSetId_ = other.relicSetId_;
-      retcode_ = other.retcode_;
+      rOGUETALENTSTATUSENABLE_ = other.rOGUETALENTSTATUSENABLE_;
+      dJLMAJBOJNB_ = other.dJLMAJBOJNB_;
       avatarIdList_ = other.avatarIdList_.Clone();
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,32 +87,43 @@ namespace EggLink.DanhengServer.Proto {
       return new RelicAvatarRecommendScRsp(this);
     }
 
-    /// <summary>Field number for the "enable" field.</summary>
-    public const int EnableFieldNumber = 6;
-    private bool enable_;
+    /// <summary>Field number for the "ROGUE_TALENT_STATUS_ENABLE" field.</summary>
+    public const int ROGUETALENTSTATUSENABLEFieldNumber = 11;
+    private bool rOGUETALENTSTATUSENABLE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Enable {
-      get { return enable_; }
+    public bool ROGUETALENTSTATUSENABLE {
+      get { return rOGUETALENTSTATUSENABLE_; }
       set {
-        enable_ = value;
+        rOGUETALENTSTATUSENABLE_ = value;
       }
     }
 
-    /// <summary>Field number for the "relic_set_id" field.</summary>
-    public const int RelicSetIdFieldNumber = 8;
-    private uint relicSetId_;
+    /// <summary>Field number for the "DJLMAJBOJNB" field.</summary>
+    public const int DJLMAJBOJNBFieldNumber = 14;
+    private uint dJLMAJBOJNB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint RelicSetId {
-      get { return relicSetId_; }
+    public uint DJLMAJBOJNB {
+      get { return dJLMAJBOJNB_; }
       set {
-        relicSetId_ = value;
+        dJLMAJBOJNB_ = value;
       }
+    }
+
+    /// <summary>Field number for the "avatar_id_list" field.</summary>
+    public const int AvatarIdListFieldNumber = 4;
+    private static readonly pb::FieldCodec<uint> _repeated_avatarIdList_codec
+        = pb::FieldCodec.ForUInt32(34);
+    private readonly pbc::RepeatedField<uint> avatarIdList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> AvatarIdList {
+      get { return avatarIdList_; }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 15;
+    public const int RetcodeFieldNumber = 7;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -121,17 +132,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         retcode_ = value;
       }
-    }
-
-    /// <summary>Field number for the "avatar_id_list" field.</summary>
-    public const int AvatarIdListFieldNumber = 14;
-    private static readonly pb::FieldCodec<uint> _repeated_avatarIdList_codec
-        = pb::FieldCodec.ForUInt32(114);
-    private readonly pbc::RepeatedField<uint> avatarIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> AvatarIdList {
-      get { return avatarIdList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -149,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Enable != other.Enable) return false;
-      if (RelicSetId != other.RelicSetId) return false;
-      if (Retcode != other.Retcode) return false;
+      if (ROGUETALENTSTATUSENABLE != other.ROGUETALENTSTATUSENABLE) return false;
+      if (DJLMAJBOJNB != other.DJLMAJBOJNB) return false;
       if(!avatarIdList_.Equals(other.avatarIdList_)) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Enable != false) hash ^= Enable.GetHashCode();
-      if (RelicSetId != 0) hash ^= RelicSetId.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (ROGUETALENTSTATUSENABLE != false) hash ^= ROGUETALENTSTATUSENABLE.GetHashCode();
+      if (DJLMAJBOJNB != 0) hash ^= DJLMAJBOJNB.GetHashCode();
       hash ^= avatarIdList_.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,18 +182,18 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Enable != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(Enable);
-      }
-      if (RelicSetId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(RelicSetId);
-      }
       avatarIdList_.WriteTo(output, _repeated_avatarIdList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
+      }
+      if (ROGUETALENTSTATUSENABLE != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(ROGUETALENTSTATUSENABLE);
+      }
+      if (DJLMAJBOJNB != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(DJLMAJBOJNB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -205,18 +205,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Enable != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(Enable);
-      }
-      if (RelicSetId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(RelicSetId);
-      }
       avatarIdList_.WriteTo(ref output, _repeated_avatarIdList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
+      }
+      if (ROGUETALENTSTATUSENABLE != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(ROGUETALENTSTATUSENABLE);
+      }
+      if (DJLMAJBOJNB != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(DJLMAJBOJNB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -228,16 +228,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Enable != false) {
+      if (ROGUETALENTSTATUSENABLE != false) {
         size += 1 + 1;
       }
-      if (RelicSetId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RelicSetId);
+      if (DJLMAJBOJNB != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DJLMAJBOJNB);
       }
+      size += avatarIdList_.CalculateSize(_repeated_avatarIdList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += avatarIdList_.CalculateSize(_repeated_avatarIdList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -250,16 +250,16 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Enable != false) {
-        Enable = other.Enable;
+      if (other.ROGUETALENTSTATUSENABLE != false) {
+        ROGUETALENTSTATUSENABLE = other.ROGUETALENTSTATUSENABLE;
       }
-      if (other.RelicSetId != 0) {
-        RelicSetId = other.RelicSetId;
+      if (other.DJLMAJBOJNB != 0) {
+        DJLMAJBOJNB = other.DJLMAJBOJNB;
       }
+      avatarIdList_.Add(other.avatarIdList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      avatarIdList_.Add(other.avatarIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -275,21 +275,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            Enable = input.ReadBool();
-            break;
-          }
-          case 64: {
-            RelicSetId = input.ReadUInt32();
-            break;
-          }
-          case 114:
-          case 112: {
+          case 34:
+          case 32: {
             avatarIdList_.AddEntriesFrom(input, _repeated_avatarIdList_codec);
             break;
           }
-          case 120: {
+          case 56: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            ROGUETALENTSTATUSENABLE = input.ReadBool();
+            break;
+          }
+          case 112: {
+            DJLMAJBOJNB = input.ReadUInt32();
             break;
           }
         }
@@ -307,21 +307,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            Enable = input.ReadBool();
-            break;
-          }
-          case 64: {
-            RelicSetId = input.ReadUInt32();
-            break;
-          }
-          case 114:
-          case 112: {
+          case 34:
+          case 32: {
             avatarIdList_.AddEntriesFrom(ref input, _repeated_avatarIdList_codec);
             break;
           }
-          case 120: {
+          case 56: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            ROGUETALENTSTATUSENABLE = input.ReadBool();
+            break;
+          }
+          case 112: {
+            DJLMAJBOJNB = input.ReadUInt32();
             break;
           }
         }

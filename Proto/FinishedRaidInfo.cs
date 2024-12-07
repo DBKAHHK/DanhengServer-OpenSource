@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZGaW5pc2hlZFJhaWRJbmZvLnByb3RvIk0KEEZpbmlzaGVkUmFpZEluZm8S",
-            "EwoLRkNCTkhBS0hER1AYDiADKA0SEwoLd29ybGRfbGV2ZWwYBiABKA0SDwoH",
+            "EwoLSEFES0NKQkZHTUQYAyADKA0SEwoLd29ybGRfbGV2ZWwYDSABKA0SDwoH",
             "cmFpZF9pZBgMIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FinishedRaidInfo), global::EggLink.DanhengServer.Proto.FinishedRaidInfo.Parser, new[]{ "FCBNHAKHDGP", "WorldLevel", "RaidId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FinishedRaidInfo), global::EggLink.DanhengServer.Proto.FinishedRaidInfo.Parser, new[]{ "HADKCJBFGMD", "WorldLevel", "RaidId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FinishedRaidInfo(FinishedRaidInfo other) : this() {
-      fCBNHAKHDGP_ = other.fCBNHAKHDGP_.Clone();
+      hADKCJBFGMD_ = other.hADKCJBFGMD_.Clone();
       worldLevel_ = other.worldLevel_;
       raidId_ = other.raidId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -85,19 +85,19 @@ namespace EggLink.DanhengServer.Proto {
       return new FinishedRaidInfo(this);
     }
 
-    /// <summary>Field number for the "FCBNHAKHDGP" field.</summary>
-    public const int FCBNHAKHDGPFieldNumber = 14;
-    private static readonly pb::FieldCodec<uint> _repeated_fCBNHAKHDGP_codec
-        = pb::FieldCodec.ForUInt32(114);
-    private readonly pbc::RepeatedField<uint> fCBNHAKHDGP_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "HADKCJBFGMD" field.</summary>
+    public const int HADKCJBFGMDFieldNumber = 3;
+    private static readonly pb::FieldCodec<uint> _repeated_hADKCJBFGMD_codec
+        = pb::FieldCodec.ForUInt32(26);
+    private readonly pbc::RepeatedField<uint> hADKCJBFGMD_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> FCBNHAKHDGP {
-      get { return fCBNHAKHDGP_; }
+    public pbc::RepeatedField<uint> HADKCJBFGMD {
+      get { return hADKCJBFGMD_; }
     }
 
     /// <summary>Field number for the "world_level" field.</summary>
-    public const int WorldLevelFieldNumber = 6;
+    public const int WorldLevelFieldNumber = 13;
     private uint worldLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -135,7 +135,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!fCBNHAKHDGP_.Equals(other.fCBNHAKHDGP_)) return false;
+      if(!hADKCJBFGMD_.Equals(other.hADKCJBFGMD_)) return false;
       if (WorldLevel != other.WorldLevel) return false;
       if (RaidId != other.RaidId) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -145,7 +145,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= fCBNHAKHDGP_.GetHashCode();
+      hash ^= hADKCJBFGMD_.GetHashCode();
       if (WorldLevel != 0) hash ^= WorldLevel.GetHashCode();
       if (RaidId != 0) hash ^= RaidId.GetHashCode();
       if (_unknownFields != null) {
@@ -166,15 +166,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (WorldLevel != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(WorldLevel);
-      }
+      hADKCJBFGMD_.WriteTo(output, _repeated_hADKCJBFGMD_codec);
       if (RaidId != 0) {
         output.WriteRawTag(96);
         output.WriteUInt32(RaidId);
       }
-      fCBNHAKHDGP_.WriteTo(output, _repeated_fCBNHAKHDGP_codec);
+      if (WorldLevel != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(WorldLevel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -185,15 +185,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (WorldLevel != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(WorldLevel);
-      }
+      hADKCJBFGMD_.WriteTo(ref output, _repeated_hADKCJBFGMD_codec);
       if (RaidId != 0) {
         output.WriteRawTag(96);
         output.WriteUInt32(RaidId);
       }
-      fCBNHAKHDGP_.WriteTo(ref output, _repeated_fCBNHAKHDGP_codec);
+      if (WorldLevel != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(WorldLevel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -204,7 +204,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += fCBNHAKHDGP_.CalculateSize(_repeated_fCBNHAKHDGP_codec);
+      size += hADKCJBFGMD_.CalculateSize(_repeated_hADKCJBFGMD_codec);
       if (WorldLevel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorldLevel);
       }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      fCBNHAKHDGP_.Add(other.fCBNHAKHDGP_);
+      hADKCJBFGMD_.Add(other.hADKCJBFGMD_);
       if (other.WorldLevel != 0) {
         WorldLevel = other.WorldLevel;
       }
@@ -245,17 +245,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            WorldLevel = input.ReadUInt32();
+          case 26:
+          case 24: {
+            hADKCJBFGMD_.AddEntriesFrom(input, _repeated_hADKCJBFGMD_codec);
             break;
           }
           case 96: {
             RaidId = input.ReadUInt32();
             break;
           }
-          case 114:
-          case 112: {
-            fCBNHAKHDGP_.AddEntriesFrom(input, _repeated_fCBNHAKHDGP_codec);
+          case 104: {
+            WorldLevel = input.ReadUInt32();
             break;
           }
         }
@@ -273,17 +273,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            WorldLevel = input.ReadUInt32();
+          case 26:
+          case 24: {
+            hADKCJBFGMD_.AddEntriesFrom(ref input, _repeated_hADKCJBFGMD_codec);
             break;
           }
           case 96: {
             RaidId = input.ReadUInt32();
             break;
           }
-          case 114:
-          case 112: {
-            fCBNHAKHDGP_.AddEntriesFrom(ref input, _repeated_fCBNHAKHDGP_codec);
+          case 104: {
+            WorldLevel = input.ReadUInt32();
             break;
           }
         }

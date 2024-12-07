@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch1DaGFsbGVuZ2VCb3NzU3RhdGlzdGljcy5wcm90bxohQ2hhbGxlbmdlQm9z",
             "c1N0YWdlVGVydGluZ2dpLnByb3RvImMKF0NoYWxsZW5nZUJvc3NTdGF0aXN0",
-            "aWNzEjUKD3N0YWdlX3RlcnRpbmdnaRgKIAEoCzIcLkNoYWxsZW5nZUJvc3NT",
-            "dGFnZVRlcnRpbmdnaRIRCglyZWNvcmRfaWQYBiABKA1CHqoCG0VnZ0xpbmsu",
+            "aWNzEjUKD3N0YWdlX3RlcnRpbmdnaRgBIAEoCzIcLkNoYWxsZW5nZUJvc3NT",
+            "dGFnZVRlcnRpbmdnaRIRCglyZWNvcmRfaWQYDyABKA1CHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeBossStageTertinggiReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "stage_tertinggi" field.</summary>
-    public const int StageTertinggiFieldNumber = 10;
+    public const int StageTertinggiFieldNumber = 1;
     private global::EggLink.DanhengServer.Proto.ChallengeBossStageTertinggi stageTertinggi_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "record_id" field.</summary>
-    public const int RecordIdFieldNumber = 6;
+    public const int RecordIdFieldNumber = 15;
     private uint recordId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (RecordId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(RecordId);
-      }
       if (stageTertinggi_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(10);
         output.WriteMessage(StageTertinggi);
+      }
+      if (RecordId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(RecordId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (RecordId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(RecordId);
-      }
       if (stageTertinggi_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(10);
         output.WriteMessage(StageTertinggi);
+      }
+      if (RecordId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(RecordId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            RecordId = input.ReadUInt32();
-            break;
-          }
-          case 82: {
+          case 10: {
             if (stageTertinggi_ == null) {
               StageTertinggi = new global::EggLink.DanhengServer.Proto.ChallengeBossStageTertinggi();
             }
             input.ReadMessage(StageTertinggi);
+            break;
+          }
+          case 120: {
+            RecordId = input.ReadUInt32();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            RecordId = input.ReadUInt32();
-            break;
-          }
-          case 82: {
+          case 10: {
             if (stageTertinggi_ == null) {
               StageTertinggi = new global::EggLink.DanhengServer.Proto.ChallengeBossStageTertinggi();
             }
             input.ReadMessage(StageTertinggi);
+            break;
+          }
+          case 120: {
+            RecordId = input.ReadUInt32();
             break;
           }
         }

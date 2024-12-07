@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtQbGF5ZXJCb2FyZE1vZHVsZVN5bmMucHJvdG8aEkhlYWRJY29uRGF0YS5w",
-            "cm90byJvChVQbGF5ZXJCb2FyZE1vZHVsZVN5bmMSEwoLTUlEQkNESUhOS00Y",
-            "DCABKAgSLgoXdW5sb2NrZWRfaGVhZF9pY29uX2xpc3QYDyADKAsyDS5IZWFk",
-            "SWNvbkRhdGESEQoJc2lnbmF0dXJlGAIgASgJQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "cm90byJvChVQbGF5ZXJCb2FyZE1vZHVsZVN5bmMSEQoJc2lnbmF0dXJlGAIg",
+            "ASgJEhMKC0JIT0xHRUZDQ01EGAcgASgIEi4KF3VubG9ja2VkX2hlYWRfaWNv",
+            "bl9saXN0GAsgAygLMg0uSGVhZEljb25EYXRhQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeadIconDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerBoardModuleSync), global::EggLink.DanhengServer.Proto.PlayerBoardModuleSync.Parser, new[]{ "MIDBCDIHNKM", "UnlockedHeadIconList", "Signature" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerBoardModuleSync), global::EggLink.DanhengServer.Proto.PlayerBoardModuleSync.Parser, new[]{ "Signature", "BHOLGEFCCMD", "UnlockedHeadIconList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PlayerBoardModuleSync(PlayerBoardModuleSync other) : this() {
-      mIDBCDIHNKM_ = other.mIDBCDIHNKM_;
-      unlockedHeadIconList_ = other.unlockedHeadIconList_.Clone();
       signature_ = other.signature_;
+      bHOLGEFCCMD_ = other.bHOLGEFCCMD_;
+      unlockedHeadIconList_ = other.unlockedHeadIconList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,29 +84,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PlayerBoardModuleSync Clone() {
       return new PlayerBoardModuleSync(this);
-    }
-
-    /// <summary>Field number for the "MIDBCDIHNKM" field.</summary>
-    public const int MIDBCDIHNKMFieldNumber = 12;
-    private bool mIDBCDIHNKM_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool MIDBCDIHNKM {
-      get { return mIDBCDIHNKM_; }
-      set {
-        mIDBCDIHNKM_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "unlocked_head_icon_list" field.</summary>
-    public const int UnlockedHeadIconListFieldNumber = 15;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.HeadIconData> _repeated_unlockedHeadIconList_codec
-        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.HeadIconData.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeadIconData> unlockedHeadIconList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeadIconData>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeadIconData> UnlockedHeadIconList {
-      get { return unlockedHeadIconList_; }
     }
 
     /// <summary>Field number for the "signature" field.</summary>
@@ -119,6 +96,29 @@ namespace EggLink.DanhengServer.Proto {
       set {
         signature_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "BHOLGEFCCMD" field.</summary>
+    public const int BHOLGEFCCMDFieldNumber = 7;
+    private bool bHOLGEFCCMD_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool BHOLGEFCCMD {
+      get { return bHOLGEFCCMD_; }
+      set {
+        bHOLGEFCCMD_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "unlocked_head_icon_list" field.</summary>
+    public const int UnlockedHeadIconListFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.HeadIconData> _repeated_unlockedHeadIconList_codec
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.HeadIconData.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeadIconData> unlockedHeadIconList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeadIconData>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeadIconData> UnlockedHeadIconList {
+      get { return unlockedHeadIconList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MIDBCDIHNKM != other.MIDBCDIHNKM) return false;
-      if(!unlockedHeadIconList_.Equals(other.unlockedHeadIconList_)) return false;
       if (Signature != other.Signature) return false;
+      if (BHOLGEFCCMD != other.BHOLGEFCCMD) return false;
+      if(!unlockedHeadIconList_.Equals(other.unlockedHeadIconList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MIDBCDIHNKM != false) hash ^= MIDBCDIHNKM.GetHashCode();
-      hash ^= unlockedHeadIconList_.GetHashCode();
       if (Signature.Length != 0) hash ^= Signature.GetHashCode();
+      if (BHOLGEFCCMD != false) hash ^= BHOLGEFCCMD.GetHashCode();
+      hash ^= unlockedHeadIconList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -171,9 +171,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(18);
         output.WriteString(Signature);
       }
-      if (MIDBCDIHNKM != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(MIDBCDIHNKM);
+      if (BHOLGEFCCMD != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(BHOLGEFCCMD);
       }
       unlockedHeadIconList_.WriteTo(output, _repeated_unlockedHeadIconList_codec);
       if (_unknownFields != null) {
@@ -190,9 +190,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(18);
         output.WriteString(Signature);
       }
-      if (MIDBCDIHNKM != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(MIDBCDIHNKM);
+      if (BHOLGEFCCMD != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(BHOLGEFCCMD);
       }
       unlockedHeadIconList_.WriteTo(ref output, _repeated_unlockedHeadIconList_codec);
       if (_unknownFields != null) {
@@ -205,13 +205,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MIDBCDIHNKM != false) {
-        size += 1 + 1;
-      }
-      size += unlockedHeadIconList_.CalculateSize(_repeated_unlockedHeadIconList_codec);
       if (Signature.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Signature);
       }
+      if (BHOLGEFCCMD != false) {
+        size += 1 + 1;
+      }
+      size += unlockedHeadIconList_.CalculateSize(_repeated_unlockedHeadIconList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -224,13 +224,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MIDBCDIHNKM != false) {
-        MIDBCDIHNKM = other.MIDBCDIHNKM;
-      }
-      unlockedHeadIconList_.Add(other.unlockedHeadIconList_);
       if (other.Signature.Length != 0) {
         Signature = other.Signature;
       }
+      if (other.BHOLGEFCCMD != false) {
+        BHOLGEFCCMD = other.BHOLGEFCCMD;
+      }
+      unlockedHeadIconList_.Add(other.unlockedHeadIconList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
             Signature = input.ReadString();
             break;
           }
-          case 96: {
-            MIDBCDIHNKM = input.ReadBool();
+          case 56: {
+            BHOLGEFCCMD = input.ReadBool();
             break;
           }
-          case 122: {
+          case 90: {
             unlockedHeadIconList_.AddEntriesFrom(input, _repeated_unlockedHeadIconList_codec);
             break;
           }
@@ -277,11 +277,11 @@ namespace EggLink.DanhengServer.Proto {
             Signature = input.ReadString();
             break;
           }
-          case 96: {
-            MIDBCDIHNKM = input.ReadBool();
+          case 56: {
+            BHOLGEFCCMD = input.ReadBool();
             break;
           }
-          case 122: {
+          case 90: {
             unlockedHeadIconList_.AddEntriesFrom(ref input, _repeated_unlockedHeadIconList_codec);
             break;
           }

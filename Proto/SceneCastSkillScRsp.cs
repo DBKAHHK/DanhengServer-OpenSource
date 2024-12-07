@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static SceneCastSkillScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlTY2VuZUNhc3RTa2lsbFNjUnNwLnByb3RvGhpIaXRNb25zdGVyQmF0dGxl",
-            "SW5mby5wcm90bxoVU2NlbmVCYXR0bGVJbmZvLnByb3RvIpkBChNTY2VuZUNh",
-            "c3RTa2lsbFNjUnNwEiUKC2JhdHRsZV9pbmZvGAEgASgLMhAuU2NlbmVCYXR0",
-            "bGVJbmZvEhYKDmNhc3RfZW50aXR5X2lkGAcgASgNEg8KB3JldGNvZGUYCSAB",
-            "KA0SMgoTbW9uc3Rlcl9iYXR0bGVfaW5mbxgCIAMoCzIVLkhpdE1vbnN0ZXJC",
+            "ChlTY2VuZUNhc3RTa2lsbFNjUnNwLnByb3RvGhVTY2VuZUJhdHRsZUluZm8u",
+            "cHJvdG8aGkhpdE1vbnN0ZXJCYXR0bGVJbmZvLnByb3RvIpkBChNTY2VuZUNh",
+            "c3RTa2lsbFNjUnNwEiUKC2JhdHRsZV9pbmZvGAUgASgLMhAuU2NlbmVCYXR0",
+            "bGVJbmZvEhYKDmNhc3RfZW50aXR5X2lkGAIgASgNEg8KB3JldGNvZGUYDCAB",
+            "KA0SMgoTbW9uc3Rlcl9iYXR0bGVfaW5mbxgPIAMoCzIVLkhpdE1vbnN0ZXJC",
             "YXR0bGVJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HitMonsterBattleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneBattleInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneBattleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HitMonsterBattleInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneCastSkillScRsp), global::EggLink.DanhengServer.Proto.SceneCastSkillScRsp.Parser, new[]{ "BattleInfo", "CastEntityId", "Retcode", "MonsterBattleInfo" }, null, null, null, null)
           }));
@@ -90,7 +90,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "battle_info" field.</summary>
-    public const int BattleInfoFieldNumber = 1;
+    public const int BattleInfoFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.SceneBattleInfo battleInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -102,7 +102,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cast_entity_id" field.</summary>
-    public const int CastEntityIdFieldNumber = 7;
+    public const int CastEntityIdFieldNumber = 2;
     private uint castEntityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -114,7 +114,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 9;
+    public const int RetcodeFieldNumber = 12;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -126,9 +126,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "monster_battle_info" field.</summary>
-    public const int MonsterBattleInfoFieldNumber = 2;
+    public const int MonsterBattleInfoFieldNumber = 15;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.HitMonsterBattleInfo> _repeated_monsterBattleInfo_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.HitMonsterBattleInfo.Parser);
+        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.HitMonsterBattleInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HitMonsterBattleInfo> monsterBattleInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HitMonsterBattleInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -184,19 +184,19 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (battleInfo_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(BattleInfo);
-      }
-      monsterBattleInfo_.WriteTo(output, _repeated_monsterBattleInfo_codec);
       if (CastEntityId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(16);
         output.WriteUInt32(CastEntityId);
       }
+      if (battleInfo_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(BattleInfo);
+      }
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
       }
+      monsterBattleInfo_.WriteTo(output, _repeated_monsterBattleInfo_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -207,19 +207,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (battleInfo_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(BattleInfo);
-      }
-      monsterBattleInfo_.WriteTo(ref output, _repeated_monsterBattleInfo_codec);
       if (CastEntityId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(16);
         output.WriteUInt32(CastEntityId);
       }
+      if (battleInfo_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(BattleInfo);
+      }
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
       }
+      monsterBattleInfo_.WriteTo(ref output, _repeated_monsterBattleInfo_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -280,23 +280,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 16: {
+            CastEntityId = input.ReadUInt32();
+            break;
+          }
+          case 42: {
             if (battleInfo_ == null) {
               BattleInfo = new global::EggLink.DanhengServer.Proto.SceneBattleInfo();
             }
             input.ReadMessage(BattleInfo);
             break;
           }
-          case 18: {
-            monsterBattleInfo_.AddEntriesFrom(input, _repeated_monsterBattleInfo_codec);
-            break;
-          }
-          case 56: {
-            CastEntityId = input.ReadUInt32();
-            break;
-          }
-          case 72: {
+          case 96: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 122: {
+            monsterBattleInfo_.AddEntriesFrom(input, _repeated_monsterBattleInfo_codec);
             break;
           }
         }
@@ -314,23 +314,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 16: {
+            CastEntityId = input.ReadUInt32();
+            break;
+          }
+          case 42: {
             if (battleInfo_ == null) {
               BattleInfo = new global::EggLink.DanhengServer.Proto.SceneBattleInfo();
             }
             input.ReadMessage(BattleInfo);
             break;
           }
-          case 18: {
-            monsterBattleInfo_.AddEntriesFrom(ref input, _repeated_monsterBattleInfo_codec);
-            break;
-          }
-          case 56: {
-            CastEntityId = input.ReadUInt32();
-            break;
-          }
-          case 72: {
+          case 96: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 122: {
+            monsterBattleInfo_.AddEntriesFrom(ref input, _repeated_monsterBattleInfo_codec);
             break;
           }
         }

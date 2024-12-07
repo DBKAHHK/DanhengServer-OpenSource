@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChNQbGF5Q2FyZEJyaWVmLnByb3RvGhRQbGF5U2tpbGxCcmllZi5wcm90byJh",
-            "Cg1QbGF5Q2FyZEJyaWVmEhIKCmJhc2VfdmFsdWUYBiABKA0SEQoJdW5pcXVl",
-            "X2lkGAogASgNEikKEHNraWxsX2JyaWVmX2xpc3QYByADKAsyDy5QbGF5U2tp",
-            "bGxCcmllZkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "Cg1QbGF5Q2FyZEJyaWVmEhIKCmJhc2VfdmFsdWUYDCABKA0SKQoQc2tpbGxf",
+            "YnJpZWZfbGlzdBgHIAMoCzIPLlBsYXlTa2lsbEJyaWVmEhEKCXVuaXF1ZV9p",
+            "ZBgPIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlaySkillBriefReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayCardBrief), global::EggLink.DanhengServer.Proto.PlayCardBrief.Parser, new[]{ "BaseValue", "UniqueId", "SkillBriefList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayCardBrief), global::EggLink.DanhengServer.Proto.PlayCardBrief.Parser, new[]{ "BaseValue", "SkillBriefList", "UniqueId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,8 +75,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PlayCardBrief(PlayCardBrief other) : this() {
       baseValue_ = other.baseValue_;
-      uniqueId_ = other.uniqueId_;
       skillBriefList_ = other.skillBriefList_.Clone();
+      uniqueId_ = other.uniqueId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "base_value" field.</summary>
-    public const int BaseValueFieldNumber = 6;
+    public const int BaseValueFieldNumber = 12;
     private uint baseValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,18 +95,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return baseValue_; }
       set {
         baseValue_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "unique_id" field.</summary>
-    public const int UniqueIdFieldNumber = 10;
-    private uint uniqueId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint UniqueId {
-      get { return uniqueId_; }
-      set {
-        uniqueId_ = value;
       }
     }
 
@@ -119,6 +107,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PlaySkillBrief> SkillBriefList {
       get { return skillBriefList_; }
+    }
+
+    /// <summary>Field number for the "unique_id" field.</summary>
+    public const int UniqueIdFieldNumber = 15;
+    private uint uniqueId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint UniqueId {
+      get { return uniqueId_; }
+      set {
+        uniqueId_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -137,8 +137,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (BaseValue != other.BaseValue) return false;
-      if (UniqueId != other.UniqueId) return false;
       if(!skillBriefList_.Equals(other.skillBriefList_)) return false;
+      if (UniqueId != other.UniqueId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,8 +147,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (BaseValue != 0) hash ^= BaseValue.GetHashCode();
-      if (UniqueId != 0) hash ^= UniqueId.GetHashCode();
       hash ^= skillBriefList_.GetHashCode();
+      if (UniqueId != 0) hash ^= UniqueId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,13 +167,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      skillBriefList_.WriteTo(output, _repeated_skillBriefList_codec);
       if (BaseValue != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(96);
         output.WriteUInt32(BaseValue);
       }
-      skillBriefList_.WriteTo(output, _repeated_skillBriefList_codec);
       if (UniqueId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(120);
         output.WriteUInt32(UniqueId);
       }
       if (_unknownFields != null) {
@@ -186,13 +186,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      skillBriefList_.WriteTo(ref output, _repeated_skillBriefList_codec);
       if (BaseValue != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(96);
         output.WriteUInt32(BaseValue);
       }
-      skillBriefList_.WriteTo(ref output, _repeated_skillBriefList_codec);
       if (UniqueId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(120);
         output.WriteUInt32(UniqueId);
       }
       if (_unknownFields != null) {
@@ -208,10 +208,10 @@ namespace EggLink.DanhengServer.Proto {
       if (BaseValue != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BaseValue);
       }
+      size += skillBriefList_.CalculateSize(_repeated_skillBriefList_codec);
       if (UniqueId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UniqueId);
       }
-      size += skillBriefList_.CalculateSize(_repeated_skillBriefList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -227,10 +227,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other.BaseValue != 0) {
         BaseValue = other.BaseValue;
       }
+      skillBriefList_.Add(other.skillBriefList_);
       if (other.UniqueId != 0) {
         UniqueId = other.UniqueId;
       }
-      skillBriefList_.Add(other.skillBriefList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -246,15 +246,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            BaseValue = input.ReadUInt32();
-            break;
-          }
           case 58: {
             skillBriefList_.AddEntriesFrom(input, _repeated_skillBriefList_codec);
             break;
           }
-          case 80: {
+          case 96: {
+            BaseValue = input.ReadUInt32();
+            break;
+          }
+          case 120: {
             UniqueId = input.ReadUInt32();
             break;
           }
@@ -273,15 +273,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            BaseValue = input.ReadUInt32();
-            break;
-          }
           case 58: {
             skillBriefList_.AddEntriesFrom(ref input, _repeated_skillBriefList_codec);
             break;
           }
-          case 80: {
+          case 96: {
+            BaseValue = input.ReadUInt32();
+            break;
+          }
+          case 120: {
             UniqueId = input.ReadUInt32();
             break;
           }

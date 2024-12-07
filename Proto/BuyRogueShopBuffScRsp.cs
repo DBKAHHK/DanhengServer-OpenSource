@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static BuyRogueShopBuffScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtCdXlSb2d1ZVNob3BCdWZmU2NSc3AucHJvdG8aEUdMQ0NKTUxPREJILnBy",
+            "ChtCdXlSb2d1ZVNob3BCdWZmU2NSc3AucHJvdG8aEUhLRUNJQ0FQSUlJLnBy",
             "b3RvIk8KFUJ1eVJvZ3VlU2hvcEJ1ZmZTY1JzcBIPCgdyZXRjb2RlGA0gASgN",
-            "EiUKD3JvZ3VlX2J1ZmZfaW5mbxgMIAEoCzIMLkdMQ0NKTUxPREJIQh6qAhtF",
+            "EiUKD3JvZ3VlX2J1ZmZfaW5mbxgEIAEoCzIMLkhLRUNJQ0FQSUlJQh6qAhtF",
             "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GLCCJMLODBHReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HKECICAPIIIReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BuyRogueShopBuffScRsp), global::EggLink.DanhengServer.Proto.BuyRogueShopBuffScRsp.Parser, new[]{ "Retcode", "RogueBuffInfo" }, null, null, null, null)
           }));
@@ -97,11 +97,11 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_buff_info" field.</summary>
-    public const int RogueBuffInfoFieldNumber = 12;
-    private global::EggLink.DanhengServer.Proto.GLCCJMLODBH rogueBuffInfo_;
+    public const int RogueBuffInfoFieldNumber = 4;
+    private global::EggLink.DanhengServer.Proto.HKECICAPIII rogueBuffInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.GLCCJMLODBH RogueBuffInfo {
+    public global::EggLink.DanhengServer.Proto.HKECICAPIII RogueBuffInfo {
       get { return rogueBuffInfo_; }
       set {
         rogueBuffInfo_ = value;
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (rogueBuffInfo_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(34);
         output.WriteMessage(RogueBuffInfo);
       }
       if (Retcode != 0) {
@@ -171,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (rogueBuffInfo_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(34);
         output.WriteMessage(RogueBuffInfo);
       }
       if (Retcode != 0) {
@@ -211,7 +211,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.rogueBuffInfo_ != null) {
         if (rogueBuffInfo_ == null) {
-          RogueBuffInfo = new global::EggLink.DanhengServer.Proto.GLCCJMLODBH();
+          RogueBuffInfo = new global::EggLink.DanhengServer.Proto.HKECICAPIII();
         }
         RogueBuffInfo.MergeFrom(other.RogueBuffInfo);
       }
@@ -230,9 +230,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 98: {
+          case 34: {
             if (rogueBuffInfo_ == null) {
-              RogueBuffInfo = new global::EggLink.DanhengServer.Proto.GLCCJMLODBH();
+              RogueBuffInfo = new global::EggLink.DanhengServer.Proto.HKECICAPIII();
             }
             input.ReadMessage(RogueBuffInfo);
             break;
@@ -256,9 +256,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 98: {
+          case 34: {
             if (rogueBuffInfo_ == null) {
-              RogueBuffInfo = new global::EggLink.DanhengServer.Proto.GLCCJMLODBH();
+              RogueBuffInfo = new global::EggLink.DanhengServer.Proto.HKECICAPIII();
             }
             input.ReadMessage(RogueBuffInfo);
             break;

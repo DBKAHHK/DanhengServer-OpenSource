@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CidEZWxldGVTb2NpYWxFdmVudFNlcnZlckNhY2hlQ3NSZXEucHJvdG8iOAoh",
-            "RGVsZXRlU29jaWFsRXZlbnRTZXJ2ZXJDYWNoZUNzUmVxEhMKC0pCTUFLUFBG",
-            "Q0pBGAggAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "RGVsZXRlU29jaWFsRXZlbnRTZXJ2ZXJDYWNoZUNzUmVxEhMKC0NJRkFOSE9D",
+            "QU9LGAQgAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DeleteSocialEventServerCacheCsReq), global::EggLink.DanhengServer.Proto.DeleteSocialEventServerCacheCsReq.Parser, new[]{ "JBMAKPPFCJA" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DeleteSocialEventServerCacheCsReq), global::EggLink.DanhengServer.Proto.DeleteSocialEventServerCacheCsReq.Parser, new[]{ "CIFANHOCAOK" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteSocialEventServerCacheCsReq(DeleteSocialEventServerCacheCsReq other) : this() {
-      jBMAKPPFCJA_ = other.jBMAKPPFCJA_.Clone();
+      cIFANHOCAOK_ = other.cIFANHOCAOK_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new DeleteSocialEventServerCacheCsReq(this);
     }
 
-    /// <summary>Field number for the "JBMAKPPFCJA" field.</summary>
-    public const int JBMAKPPFCJAFieldNumber = 8;
-    private static readonly pb::FieldCodec<uint> _repeated_jBMAKPPFCJA_codec
-        = pb::FieldCodec.ForUInt32(66);
-    private readonly pbc::RepeatedField<uint> jBMAKPPFCJA_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "CIFANHOCAOK" field.</summary>
+    public const int CIFANHOCAOKFieldNumber = 4;
+    private static readonly pb::FieldCodec<uint> _repeated_cIFANHOCAOK_codec
+        = pb::FieldCodec.ForUInt32(34);
+    private readonly pbc::RepeatedField<uint> cIFANHOCAOK_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> JBMAKPPFCJA {
-      get { return jBMAKPPFCJA_; }
+    public pbc::RepeatedField<uint> CIFANHOCAOK {
+      get { return cIFANHOCAOK_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!jBMAKPPFCJA_.Equals(other.jBMAKPPFCJA_)) return false;
+      if(!cIFANHOCAOK_.Equals(other.cIFANHOCAOK_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= jBMAKPPFCJA_.GetHashCode();
+      hash ^= cIFANHOCAOK_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      jBMAKPPFCJA_.WriteTo(output, _repeated_jBMAKPPFCJA_codec);
+      cIFANHOCAOK_.WriteTo(output, _repeated_cIFANHOCAOK_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -147,7 +147,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      jBMAKPPFCJA_.WriteTo(ref output, _repeated_jBMAKPPFCJA_codec);
+      cIFANHOCAOK_.WriteTo(ref output, _repeated_cIFANHOCAOK_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -158,7 +158,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += jBMAKPPFCJA_.CalculateSize(_repeated_jBMAKPPFCJA_codec);
+      size += cIFANHOCAOK_.CalculateSize(_repeated_cIFANHOCAOK_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -171,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      jBMAKPPFCJA_.Add(other.jBMAKPPFCJA_);
+      cIFANHOCAOK_.Add(other.cIFANHOCAOK_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -187,9 +187,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66:
-          case 64: {
-            jBMAKPPFCJA_.AddEntriesFrom(input, _repeated_jBMAKPPFCJA_codec);
+          case 34:
+          case 32: {
+            cIFANHOCAOK_.AddEntriesFrom(input, _repeated_cIFANHOCAOK_codec);
             break;
           }
         }
@@ -207,9 +207,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66:
-          case 64: {
-            jBMAKPPFCJA_.AddEntriesFrom(ref input, _repeated_jBMAKPPFCJA_codec);
+          case 34:
+          case 32: {
+            cIFANHOCAOK_.AddEntriesFrom(ref input, _repeated_cIFANHOCAOK_codec);
             break;
           }
         }

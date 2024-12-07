@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiJHZXRUcmFpblZpc2l0b3JCZWhhdmlvckNzUmVxLnByb3RvIkAKHEdldFRy",
             "YWluVmlzaXRvckJlaGF2aW9yQ3NSZXESIAoYdmlzaXRvcl9iZWhhdmlvcl9p",
-            "ZF9saXN0GA4gAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "ZF9saXN0GAsgAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "visitor_behavior_id_list" field.</summary>
-    public const int VisitorBehaviorIdListFieldNumber = 14;
+    public const int VisitorBehaviorIdListFieldNumber = 11;
     private static readonly pb::FieldCodec<uint> _repeated_visitorBehaviorIdList_codec
-        = pb::FieldCodec.ForUInt32(114);
+        = pb::FieldCodec.ForUInt32(90);
     private readonly pbc::RepeatedField<uint> visitorBehaviorIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,8 +187,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 114:
-          case 112: {
+          case 90:
+          case 88: {
             visitorBehaviorIdList_.AddEntriesFrom(input, _repeated_visitorBehaviorIdList_codec);
             break;
           }
@@ -207,8 +207,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 114:
-          case 112: {
+          case 90:
+          case 88: {
             visitorBehaviorIdList_.AddEntriesFrom(ref input, _repeated_visitorBehaviorIdList_codec);
             break;
           }

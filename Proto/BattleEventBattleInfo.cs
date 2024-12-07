@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtCYXR0bGVFdmVudEJhdHRsZUluZm8ucHJvdG8aGUJhdHRsZUV2ZW50UHJv",
-            "cGVydHkucHJvdG8aEUtNQURNRk9BSkRMLnByb3RvIngKFUJhdHRsZUV2ZW50",
+            "cGVydHkucHJvdG8aEVBKSE5IQUtPSE1KLnByb3RvIngKFUJhdHRsZUV2ZW50",
             "QmF0dGxlSW5mbxIXCg9iYXR0bGVfZXZlbnRfaWQYASABKA0SJAoGc3RhdHVz",
             "GAIgASgLMhQuQmF0dGxlRXZlbnRQcm9wZXJ0eRIgCgpza2lsbF9pbmZvGAMg",
-            "AygLMgwuS01BRE1GT0FKRExCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "AygLMgwuUEpITkhBS09ITUpCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
             "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BattleEventPropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.KMADMFOAJDLReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BattleEventPropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.PJHNHAKOHMJReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BattleEventBattleInfo), global::EggLink.DanhengServer.Proto.BattleEventBattleInfo.Parser, new[]{ "BattleEventId", "Status", "SkillInfo" }, null, null, null, null)
           }));
@@ -113,12 +113,12 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "skill_info" field.</summary>
     public const int SkillInfoFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.KMADMFOAJDL> _repeated_skillInfo_codec
-        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.KMADMFOAJDL.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KMADMFOAJDL> skillInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KMADMFOAJDL>();
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.PJHNHAKOHMJ> _repeated_skillInfo_codec
+        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.PJHNHAKOHMJ.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PJHNHAKOHMJ> skillInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PJHNHAKOHMJ>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KMADMFOAJDL> SkillInfo {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PJHNHAKOHMJ> SkillInfo {
       get { return skillInfo_; }
     }
 

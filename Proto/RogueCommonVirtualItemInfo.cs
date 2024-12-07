@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBSb2d1ZUNvbW1vblZpcnR1YWxJdGVtSW5mby5wcm90byJPChpSb2d1ZUNv",
-            "bW1vblZpcnR1YWxJdGVtSW5mbxIXCg92aXJ0dWFsX2l0ZW1faWQYAiABKA0S",
-            "GAoQdmlydHVhbF9pdGVtX251bRgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "bW1vblZpcnR1YWxJdGVtSW5mbxIXCg92aXJ0dWFsX2l0ZW1faWQYCCABKA0S",
+            "GAoQdmlydHVhbF9pdGVtX251bRgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,10 +85,10 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "virtual_item_id" field.</summary>
-    public const int VirtualItemIdFieldNumber = 2;
+    public const int VirtualItemIdFieldNumber = 8;
     private uint virtualItemId_;
     /// <summary>
-    /// 9
+    /// 3
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,10 +100,10 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "virtual_item_num" field.</summary>
-    public const int VirtualItemNumFieldNumber = 9;
+    public const int VirtualItemNumFieldNumber = 3;
     private uint virtualItemNum_;
     /// <summary>
-    /// 2
+    /// 8
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -158,13 +158,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (VirtualItemId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(VirtualItemId);
-      }
       if (VirtualItemNum != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(24);
         output.WriteUInt32(VirtualItemNum);
+      }
+      if (VirtualItemId != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(VirtualItemId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -176,13 +176,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (VirtualItemId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(VirtualItemId);
-      }
       if (VirtualItemNum != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(24);
         output.WriteUInt32(VirtualItemNum);
+      }
+      if (VirtualItemId != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(VirtualItemId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -233,12 +233,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            VirtualItemId = input.ReadUInt32();
+          case 24: {
+            VirtualItemNum = input.ReadUInt32();
             break;
           }
-          case 72: {
-            VirtualItemNum = input.ReadUInt32();
+          case 64: {
+            VirtualItemId = input.ReadUInt32();
             break;
           }
         }
@@ -256,12 +256,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            VirtualItemId = input.ReadUInt32();
+          case 24: {
+            VirtualItemNum = input.ReadUInt32();
             break;
           }
-          case 72: {
-            VirtualItemNum = input.ReadUInt32();
+          case 64: {
+            VirtualItemId = input.ReadUInt32();
             break;
           }
         }

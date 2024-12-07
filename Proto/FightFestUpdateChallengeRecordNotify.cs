@@ -26,15 +26,15 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CipGaWdodEZlc3RVcGRhdGVDaGFsbGVuZ2VSZWNvcmROb3RpZnkucHJvdG8a",
             "GUZpZ2h0RmVzdEJhdHRsZVJhbmsucHJvdG8isgEKJEZpZ2h0RmVzdFVwZGF0",
-            "ZUNoYWxsZW5nZVJlY29yZE5vdGlmeRITCgtMRUtJRk9DUEdJQhgMIAEoDRIQ",
-            "CghmZXZlcl9pZBgLIAEoDRIiCgRyYW5rGAQgASgOMhQuRmlnaHRGZXN0QmF0",
-            "dGxlUmFuaxIUCgxjaGFsbGVuZ2VfaWQYCCABKA0SKQoLUEVJRkJOQU1LSlAY",
-            "DiABKA4yFC5GaWdodEZlc3RCYXR0bGVSYW5rQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "ZUNoYWxsZW5nZVJlY29yZE5vdGlmeRIQCghmZXZlcl9pZBgJIAEoDRIiCgRy",
+            "YW5rGA0gASgOMhQuRmlnaHRGZXN0QmF0dGxlUmFuaxIpCgtKREZOTEpGTE1G",
+            "ShgCIAEoDjIULkZpZ2h0RmVzdEJhdHRsZVJhbmsSFAoMY2hhbGxlbmdlX2lk",
+            "GAYgASgNEhMKC0JGSkFJRkRFREJFGAQgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FightFestBattleRankReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightFestUpdateChallengeRecordNotify), global::EggLink.DanhengServer.Proto.FightFestUpdateChallengeRecordNotify.Parser, new[]{ "LEKIFOCPGIB", "FeverId", "Rank", "ChallengeId", "PEIFBNAMKJP" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightFestUpdateChallengeRecordNotify), global::EggLink.DanhengServer.Proto.FightFestUpdateChallengeRecordNotify.Parser, new[]{ "FeverId", "Rank", "JDFNLJFLMFJ", "ChallengeId", "BFJAIFDEDBE" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,11 +76,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FightFestUpdateChallengeRecordNotify(FightFestUpdateChallengeRecordNotify other) : this() {
-      lEKIFOCPGIB_ = other.lEKIFOCPGIB_;
       feverId_ = other.feverId_;
       rank_ = other.rank_;
+      jDFNLJFLMFJ_ = other.jDFNLJFLMFJ_;
       challengeId_ = other.challengeId_;
-      pEIFBNAMKJP_ = other.pEIFBNAMKJP_;
+      bFJAIFDEDBE_ = other.bFJAIFDEDBE_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -90,20 +90,8 @@ namespace EggLink.DanhengServer.Proto {
       return new FightFestUpdateChallengeRecordNotify(this);
     }
 
-    /// <summary>Field number for the "LEKIFOCPGIB" field.</summary>
-    public const int LEKIFOCPGIBFieldNumber = 12;
-    private uint lEKIFOCPGIB_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LEKIFOCPGIB {
-      get { return lEKIFOCPGIB_; }
-      set {
-        lEKIFOCPGIB_ = value;
-      }
-    }
-
     /// <summary>Field number for the "fever_id" field.</summary>
-    public const int FeverIdFieldNumber = 11;
+    public const int FeverIdFieldNumber = 9;
     private uint feverId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -115,7 +103,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rank" field.</summary>
-    public const int RankFieldNumber = 4;
+    public const int RankFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.FightFestBattleRank rank_ = global::EggLink.DanhengServer.Proto.FightFestBattleRank.C;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -126,8 +114,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "JDFNLJFLMFJ" field.</summary>
+    public const int JDFNLJFLMFJFieldNumber = 2;
+    private global::EggLink.DanhengServer.Proto.FightFestBattleRank jDFNLJFLMFJ_ = global::EggLink.DanhengServer.Proto.FightFestBattleRank.C;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.FightFestBattleRank JDFNLJFLMFJ {
+      get { return jDFNLJFLMFJ_; }
+      set {
+        jDFNLJFLMFJ_ = value;
+      }
+    }
+
     /// <summary>Field number for the "challenge_id" field.</summary>
-    public const int ChallengeIdFieldNumber = 8;
+    public const int ChallengeIdFieldNumber = 6;
     private uint challengeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,15 +138,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "PEIFBNAMKJP" field.</summary>
-    public const int PEIFBNAMKJPFieldNumber = 14;
-    private global::EggLink.DanhengServer.Proto.FightFestBattleRank pEIFBNAMKJP_ = global::EggLink.DanhengServer.Proto.FightFestBattleRank.C;
+    /// <summary>Field number for the "BFJAIFDEDBE" field.</summary>
+    public const int BFJAIFDEDBEFieldNumber = 4;
+    private uint bFJAIFDEDBE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.FightFestBattleRank PEIFBNAMKJP {
-      get { return pEIFBNAMKJP_; }
+    public uint BFJAIFDEDBE {
+      get { return bFJAIFDEDBE_; }
       set {
-        pEIFBNAMKJP_ = value;
+        bFJAIFDEDBE_ = value;
       }
     }
 
@@ -165,11 +165,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (LEKIFOCPGIB != other.LEKIFOCPGIB) return false;
       if (FeverId != other.FeverId) return false;
       if (Rank != other.Rank) return false;
+      if (JDFNLJFLMFJ != other.JDFNLJFLMFJ) return false;
       if (ChallengeId != other.ChallengeId) return false;
-      if (PEIFBNAMKJP != other.PEIFBNAMKJP) return false;
+      if (BFJAIFDEDBE != other.BFJAIFDEDBE) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -177,11 +177,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (LEKIFOCPGIB != 0) hash ^= LEKIFOCPGIB.GetHashCode();
       if (FeverId != 0) hash ^= FeverId.GetHashCode();
       if (Rank != global::EggLink.DanhengServer.Proto.FightFestBattleRank.C) hash ^= Rank.GetHashCode();
+      if (JDFNLJFLMFJ != global::EggLink.DanhengServer.Proto.FightFestBattleRank.C) hash ^= JDFNLJFLMFJ.GetHashCode();
       if (ChallengeId != 0) hash ^= ChallengeId.GetHashCode();
-      if (PEIFBNAMKJP != global::EggLink.DanhengServer.Proto.FightFestBattleRank.C) hash ^= PEIFBNAMKJP.GetHashCode();
+      if (BFJAIFDEDBE != 0) hash ^= BFJAIFDEDBE.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -200,25 +200,25 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Rank != global::EggLink.DanhengServer.Proto.FightFestBattleRank.C) {
+      if (JDFNLJFLMFJ != global::EggLink.DanhengServer.Proto.FightFestBattleRank.C) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) JDFNLJFLMFJ);
+      }
+      if (BFJAIFDEDBE != 0) {
         output.WriteRawTag(32);
-        output.WriteEnum((int) Rank);
+        output.WriteUInt32(BFJAIFDEDBE);
       }
       if (ChallengeId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(48);
         output.WriteUInt32(ChallengeId);
       }
       if (FeverId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(72);
         output.WriteUInt32(FeverId);
       }
-      if (LEKIFOCPGIB != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(LEKIFOCPGIB);
-      }
-      if (PEIFBNAMKJP != global::EggLink.DanhengServer.Proto.FightFestBattleRank.C) {
-        output.WriteRawTag(112);
-        output.WriteEnum((int) PEIFBNAMKJP);
+      if (Rank != global::EggLink.DanhengServer.Proto.FightFestBattleRank.C) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) Rank);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -230,25 +230,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Rank != global::EggLink.DanhengServer.Proto.FightFestBattleRank.C) {
+      if (JDFNLJFLMFJ != global::EggLink.DanhengServer.Proto.FightFestBattleRank.C) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) JDFNLJFLMFJ);
+      }
+      if (BFJAIFDEDBE != 0) {
         output.WriteRawTag(32);
-        output.WriteEnum((int) Rank);
+        output.WriteUInt32(BFJAIFDEDBE);
       }
       if (ChallengeId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(48);
         output.WriteUInt32(ChallengeId);
       }
       if (FeverId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(72);
         output.WriteUInt32(FeverId);
       }
-      if (LEKIFOCPGIB != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(LEKIFOCPGIB);
-      }
-      if (PEIFBNAMKJP != global::EggLink.DanhengServer.Proto.FightFestBattleRank.C) {
-        output.WriteRawTag(112);
-        output.WriteEnum((int) PEIFBNAMKJP);
+      if (Rank != global::EggLink.DanhengServer.Proto.FightFestBattleRank.C) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) Rank);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -260,20 +260,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (LEKIFOCPGIB != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LEKIFOCPGIB);
-      }
       if (FeverId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FeverId);
       }
       if (Rank != global::EggLink.DanhengServer.Proto.FightFestBattleRank.C) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Rank);
       }
+      if (JDFNLJFLMFJ != global::EggLink.DanhengServer.Proto.FightFestBattleRank.C) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) JDFNLJFLMFJ);
+      }
       if (ChallengeId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChallengeId);
       }
-      if (PEIFBNAMKJP != global::EggLink.DanhengServer.Proto.FightFestBattleRank.C) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PEIFBNAMKJP);
+      if (BFJAIFDEDBE != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BFJAIFDEDBE);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -287,20 +287,20 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.LEKIFOCPGIB != 0) {
-        LEKIFOCPGIB = other.LEKIFOCPGIB;
-      }
       if (other.FeverId != 0) {
         FeverId = other.FeverId;
       }
       if (other.Rank != global::EggLink.DanhengServer.Proto.FightFestBattleRank.C) {
         Rank = other.Rank;
       }
+      if (other.JDFNLJFLMFJ != global::EggLink.DanhengServer.Proto.FightFestBattleRank.C) {
+        JDFNLJFLMFJ = other.JDFNLJFLMFJ;
+      }
       if (other.ChallengeId != 0) {
         ChallengeId = other.ChallengeId;
       }
-      if (other.PEIFBNAMKJP != global::EggLink.DanhengServer.Proto.FightFestBattleRank.C) {
-        PEIFBNAMKJP = other.PEIFBNAMKJP;
+      if (other.BFJAIFDEDBE != 0) {
+        BFJAIFDEDBE = other.BFJAIFDEDBE;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -317,24 +317,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            Rank = (global::EggLink.DanhengServer.Proto.FightFestBattleRank) input.ReadEnum();
+          case 16: {
+            JDFNLJFLMFJ = (global::EggLink.DanhengServer.Proto.FightFestBattleRank) input.ReadEnum();
             break;
           }
-          case 64: {
+          case 32: {
+            BFJAIFDEDBE = input.ReadUInt32();
+            break;
+          }
+          case 48: {
             ChallengeId = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 72: {
             FeverId = input.ReadUInt32();
             break;
           }
-          case 96: {
-            LEKIFOCPGIB = input.ReadUInt32();
-            break;
-          }
-          case 112: {
-            PEIFBNAMKJP = (global::EggLink.DanhengServer.Proto.FightFestBattleRank) input.ReadEnum();
+          case 104: {
+            Rank = (global::EggLink.DanhengServer.Proto.FightFestBattleRank) input.ReadEnum();
             break;
           }
         }
@@ -352,24 +352,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            Rank = (global::EggLink.DanhengServer.Proto.FightFestBattleRank) input.ReadEnum();
+          case 16: {
+            JDFNLJFLMFJ = (global::EggLink.DanhengServer.Proto.FightFestBattleRank) input.ReadEnum();
             break;
           }
-          case 64: {
+          case 32: {
+            BFJAIFDEDBE = input.ReadUInt32();
+            break;
+          }
+          case 48: {
             ChallengeId = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 72: {
             FeverId = input.ReadUInt32();
             break;
           }
-          case 96: {
-            LEKIFOCPGIB = input.ReadUInt32();
-            break;
-          }
-          case 112: {
-            PEIFBNAMKJP = (global::EggLink.DanhengServer.Proto.FightFestBattleRank) input.ReadEnum();
+          case 104: {
+            Rank = (global::EggLink.DanhengServer.Proto.FightFestBattleRank) input.ReadEnum();
             break;
           }
         }

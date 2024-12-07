@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhNaXNzaW9uQ3VzdG9tVmFsdWUucHJvdG8iOQoSTWlzc2lvbkN1c3RvbVZh",
-            "bHVlEg0KBWluZGV4GA4gASgNEhQKDGN1c3RvbV92YWx1ZRgCIAEoDUIeqgIb",
+            "bHVlEg0KBWluZGV4GAcgASgNEhQKDGN1c3RvbV92YWx1ZRgKIAEoDUIeqgIb",
             "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "index" field.</summary>
-    public const int IndexFieldNumber = 14;
+    public const int IndexFieldNumber = 7;
     private uint index_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "custom_value" field.</summary>
-    public const int CustomValueFieldNumber = 2;
+    public const int CustomValueFieldNumber = 10;
     private uint customValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CustomValue != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(CustomValue);
-      }
       if (Index != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(56);
         output.WriteUInt32(Index);
+      }
+      if (CustomValue != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(CustomValue);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CustomValue != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(CustomValue);
-      }
       if (Index != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(56);
         output.WriteUInt32(Index);
+      }
+      if (CustomValue != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(CustomValue);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            CustomValue = input.ReadUInt32();
+          case 56: {
+            Index = input.ReadUInt32();
             break;
           }
-          case 112: {
-            Index = input.ReadUInt32();
+          case 80: {
+            CustomValue = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            CustomValue = input.ReadUInt32();
+          case 56: {
+            Index = input.ReadUInt32();
             break;
           }
-          case 112: {
-            Index = input.ReadUInt32();
+          case 80: {
+            CustomValue = input.ReadUInt32();
             break;
           }
         }

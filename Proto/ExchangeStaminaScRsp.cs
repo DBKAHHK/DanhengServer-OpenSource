@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpFeGNoYW5nZVN0YW1pbmFTY1JzcC5wcm90bxoOSXRlbUNvc3QucHJvdG8i",
-            "kgEKFEV4Y2hhbmdlU3RhbWluYVNjUnNwEiEKDml0ZW1fY29zdF9saXN0GAsg",
-            "AygLMgkuSXRlbUNvc3QSDwoHcmV0Y29kZRgBIAEoDRITCgtzdGFtaW5hX2Fk",
-            "ZBgPIAEoDRIZChFsYXN0X3JlY292ZXJfdGltZRgFIAEoAxIWCg5leGNoYW5n",
-            "ZV90aW1lcxgMIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "kgEKFEV4Y2hhbmdlU3RhbWluYVNjUnNwEhMKC3N0YW1pbmFfYWRkGA4gASgN",
+            "EhYKDmV4Y2hhbmdlX3RpbWVzGAkgASgNEg8KB3JldGNvZGUYASABKA0SGQoR",
+            "bGFzdF9yZWNvdmVyX3RpbWUYBSABKAMSIQoOaXRlbV9jb3N0X2xpc3QYCiAD",
+            "KAsyCS5JdGVtQ29zdEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemCostReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ExchangeStaminaScRsp), global::EggLink.DanhengServer.Proto.ExchangeStaminaScRsp.Parser, new[]{ "ItemCostList", "Retcode", "StaminaAdd", "LastRecoverTime", "ExchangeTimes" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ExchangeStaminaScRsp), global::EggLink.DanhengServer.Proto.ExchangeStaminaScRsp.Parser, new[]{ "StaminaAdd", "ExchangeTimes", "Retcode", "LastRecoverTime", "ItemCostList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,11 +75,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExchangeStaminaScRsp(ExchangeStaminaScRsp other) : this() {
-      itemCostList_ = other.itemCostList_.Clone();
-      retcode_ = other.retcode_;
       staminaAdd_ = other.staminaAdd_;
-      lastRecoverTime_ = other.lastRecoverTime_;
       exchangeTimes_ = other.exchangeTimes_;
+      retcode_ = other.retcode_;
+      lastRecoverTime_ = other.lastRecoverTime_;
+      itemCostList_ = other.itemCostList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -89,15 +89,28 @@ namespace EggLink.DanhengServer.Proto {
       return new ExchangeStaminaScRsp(this);
     }
 
-    /// <summary>Field number for the "item_cost_list" field.</summary>
-    public const int ItemCostListFieldNumber = 11;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ItemCost> _repeated_itemCostList_codec
-        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.ItemCost.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ItemCost> itemCostList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ItemCost>();
+    /// <summary>Field number for the "stamina_add" field.</summary>
+    public const int StaminaAddFieldNumber = 14;
+    private uint staminaAdd_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ItemCost> ItemCostList {
-      get { return itemCostList_; }
+    public uint StaminaAdd {
+      get { return staminaAdd_; }
+      set {
+        staminaAdd_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "exchange_times" field.</summary>
+    public const int ExchangeTimesFieldNumber = 9;
+    private uint exchangeTimes_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ExchangeTimes {
+      get { return exchangeTimes_; }
+      set {
+        exchangeTimes_ = value;
+      }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
@@ -109,18 +122,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "stamina_add" field.</summary>
-    public const int StaminaAddFieldNumber = 15;
-    private uint staminaAdd_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint StaminaAdd {
-      get { return staminaAdd_; }
-      set {
-        staminaAdd_ = value;
       }
     }
 
@@ -136,16 +137,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "exchange_times" field.</summary>
-    public const int ExchangeTimesFieldNumber = 12;
-    private uint exchangeTimes_;
+    /// <summary>Field number for the "item_cost_list" field.</summary>
+    public const int ItemCostListFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ItemCost> _repeated_itemCostList_codec
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.ItemCost.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ItemCost> itemCostList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ItemCost>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ExchangeTimes {
-      get { return exchangeTimes_; }
-      set {
-        exchangeTimes_ = value;
-      }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ItemCost> ItemCostList {
+      get { return itemCostList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -163,11 +163,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!itemCostList_.Equals(other.itemCostList_)) return false;
-      if (Retcode != other.Retcode) return false;
       if (StaminaAdd != other.StaminaAdd) return false;
-      if (LastRecoverTime != other.LastRecoverTime) return false;
       if (ExchangeTimes != other.ExchangeTimes) return false;
+      if (Retcode != other.Retcode) return false;
+      if (LastRecoverTime != other.LastRecoverTime) return false;
+      if(!itemCostList_.Equals(other.itemCostList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -175,11 +175,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= itemCostList_.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (StaminaAdd != 0) hash ^= StaminaAdd.GetHashCode();
-      if (LastRecoverTime != 0L) hash ^= LastRecoverTime.GetHashCode();
       if (ExchangeTimes != 0) hash ^= ExchangeTimes.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (LastRecoverTime != 0L) hash ^= LastRecoverTime.GetHashCode();
+      hash ^= itemCostList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -206,13 +206,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteInt64(LastRecoverTime);
       }
-      itemCostList_.WriteTo(output, _repeated_itemCostList_codec);
       if (ExchangeTimes != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(72);
         output.WriteUInt32(ExchangeTimes);
       }
+      itemCostList_.WriteTo(output, _repeated_itemCostList_codec);
       if (StaminaAdd != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(112);
         output.WriteUInt32(StaminaAdd);
       }
       if (_unknownFields != null) {
@@ -233,13 +233,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteInt64(LastRecoverTime);
       }
-      itemCostList_.WriteTo(ref output, _repeated_itemCostList_codec);
       if (ExchangeTimes != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(72);
         output.WriteUInt32(ExchangeTimes);
       }
+      itemCostList_.WriteTo(ref output, _repeated_itemCostList_codec);
       if (StaminaAdd != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(112);
         output.WriteUInt32(StaminaAdd);
       }
       if (_unknownFields != null) {
@@ -252,19 +252,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += itemCostList_.CalculateSize(_repeated_itemCostList_codec);
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
       if (StaminaAdd != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(StaminaAdd);
-      }
-      if (LastRecoverTime != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(LastRecoverTime);
       }
       if (ExchangeTimes != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ExchangeTimes);
       }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (LastRecoverTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(LastRecoverTime);
+      }
+      size += itemCostList_.CalculateSize(_repeated_itemCostList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -277,19 +277,19 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      itemCostList_.Add(other.itemCostList_);
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
       if (other.StaminaAdd != 0) {
         StaminaAdd = other.StaminaAdd;
-      }
-      if (other.LastRecoverTime != 0L) {
-        LastRecoverTime = other.LastRecoverTime;
       }
       if (other.ExchangeTimes != 0) {
         ExchangeTimes = other.ExchangeTimes;
       }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
+      if (other.LastRecoverTime != 0L) {
+        LastRecoverTime = other.LastRecoverTime;
+      }
+      itemCostList_.Add(other.itemCostList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -313,15 +313,15 @@ namespace EggLink.DanhengServer.Proto {
             LastRecoverTime = input.ReadInt64();
             break;
           }
-          case 90: {
-            itemCostList_.AddEntriesFrom(input, _repeated_itemCostList_codec);
-            break;
-          }
-          case 96: {
+          case 72: {
             ExchangeTimes = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 82: {
+            itemCostList_.AddEntriesFrom(input, _repeated_itemCostList_codec);
+            break;
+          }
+          case 112: {
             StaminaAdd = input.ReadUInt32();
             break;
           }
@@ -348,15 +348,15 @@ namespace EggLink.DanhengServer.Proto {
             LastRecoverTime = input.ReadInt64();
             break;
           }
-          case 90: {
-            itemCostList_.AddEntriesFrom(ref input, _repeated_itemCostList_codec);
-            break;
-          }
-          case 96: {
+          case 72: {
             ExchangeTimes = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 82: {
+            itemCostList_.AddEntriesFrom(ref input, _repeated_itemCostList_codec);
+            break;
+          }
+          case 112: {
             StaminaAdd = input.ReadUInt32();
             break;
           }

@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZTZXROaWNrbmFtZVNjUnNwLnByb3RvIksKEFNldE5pY2tuYW1lU2NSc3AS",
-            "EQoJaXNfbW9kaWZ5GAMgASgIEg8KB3JldGNvZGUYCiABKA0SEwoLSktIT0NI",
-            "SUpQREgYASABKANCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "EwoLR0pLRU1LQVBKQUwYCSABKAMSDwoHcmV0Y29kZRgMIAEoDRIRCglpc19t",
+            "b2RpZnkYBSABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetNicknameScRsp), global::EggLink.DanhengServer.Proto.SetNicknameScRsp.Parser, new[]{ "IsModify", "Retcode", "JKHOCHIJPDH" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetNicknameScRsp), global::EggLink.DanhengServer.Proto.SetNicknameScRsp.Parser, new[]{ "GJKEMKAPJAL", "Retcode", "IsModify" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SetNicknameScRsp(SetNicknameScRsp other) : this() {
-      isModify_ = other.isModify_;
+      gJKEMKAPJAL_ = other.gJKEMKAPJAL_;
       retcode_ = other.retcode_;
-      jKHOCHIJPDH_ = other.jKHOCHIJPDH_;
+      isModify_ = other.isModify_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,20 @@ namespace EggLink.DanhengServer.Proto {
       return new SetNicknameScRsp(this);
     }
 
-    /// <summary>Field number for the "is_modify" field.</summary>
-    public const int IsModifyFieldNumber = 3;
-    private bool isModify_;
+    /// <summary>Field number for the "GJKEMKAPJAL" field.</summary>
+    public const int GJKEMKAPJALFieldNumber = 9;
+    private long gJKEMKAPJAL_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsModify {
-      get { return isModify_; }
+    public long GJKEMKAPJAL {
+      get { return gJKEMKAPJAL_; }
       set {
-        isModify_ = value;
+        gJKEMKAPJAL_ = value;
       }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 10;
+    public const int RetcodeFieldNumber = 12;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,15 +109,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "JKHOCHIJPDH" field.</summary>
-    public const int JKHOCHIJPDHFieldNumber = 1;
-    private long jKHOCHIJPDH_;
+    /// <summary>Field number for the "is_modify" field.</summary>
+    public const int IsModifyFieldNumber = 5;
+    private bool isModify_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long JKHOCHIJPDH {
-      get { return jKHOCHIJPDH_; }
+    public bool IsModify {
+      get { return isModify_; }
       set {
-        jKHOCHIJPDH_ = value;
+        isModify_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsModify != other.IsModify) return false;
+      if (GJKEMKAPJAL != other.GJKEMKAPJAL) return false;
       if (Retcode != other.Retcode) return false;
-      if (JKHOCHIJPDH != other.JKHOCHIJPDH) return false;
+      if (IsModify != other.IsModify) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsModify != false) hash ^= IsModify.GetHashCode();
+      if (GJKEMKAPJAL != 0L) hash ^= GJKEMKAPJAL.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (JKHOCHIJPDH != 0L) hash ^= JKHOCHIJPDH.GetHashCode();
+      if (IsModify != false) hash ^= IsModify.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,16 +167,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (JKHOCHIJPDH != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(JKHOCHIJPDH);
-      }
       if (IsModify != false) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(40);
         output.WriteBool(IsModify);
       }
+      if (GJKEMKAPJAL != 0L) {
+        output.WriteRawTag(72);
+        output.WriteInt64(GJKEMKAPJAL);
+      }
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -189,16 +189,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (JKHOCHIJPDH != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(JKHOCHIJPDH);
-      }
       if (IsModify != false) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(40);
         output.WriteBool(IsModify);
       }
+      if (GJKEMKAPJAL != 0L) {
+        output.WriteRawTag(72);
+        output.WriteInt64(GJKEMKAPJAL);
+      }
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -211,14 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsModify != false) {
-        size += 1 + 1;
+      if (GJKEMKAPJAL != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(GJKEMKAPJAL);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (JKHOCHIJPDH != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(JKHOCHIJPDH);
+      if (IsModify != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,14 +232,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsModify != false) {
-        IsModify = other.IsModify;
+      if (other.GJKEMKAPJAL != 0L) {
+        GJKEMKAPJAL = other.GJKEMKAPJAL;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.JKHOCHIJPDH != 0L) {
-        JKHOCHIJPDH = other.JKHOCHIJPDH;
+      if (other.IsModify != false) {
+        IsModify = other.IsModify;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            JKHOCHIJPDH = input.ReadInt64();
-            break;
-          }
-          case 24: {
+          case 40: {
             IsModify = input.ReadBool();
             break;
           }
-          case 80: {
+          case 72: {
+            GJKEMKAPJAL = input.ReadInt64();
+            break;
+          }
+          case 96: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -283,15 +283,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            JKHOCHIJPDH = input.ReadInt64();
-            break;
-          }
-          case 24: {
+          case 40: {
             IsModify = input.ReadBool();
             break;
           }
-          case 80: {
+          case 72: {
+            GJKEMKAPJAL = input.ReadInt64();
+            break;
+          }
+          case 96: {
             Retcode = input.ReadUInt32();
             break;
           }

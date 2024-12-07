@@ -72,7 +72,7 @@ public class TrainPartyManager : BasePlayerManager
             TrainPartyInfo = ToPartyInfo(),
             PassengerInfo = ToPassengerInfo(),
             TrainPartyGameInfo = ToGameInfo(),
-            DPOLGBKEKLD = 6
+            CMGMGNOMJFN = 6
         };
 
         return proto;

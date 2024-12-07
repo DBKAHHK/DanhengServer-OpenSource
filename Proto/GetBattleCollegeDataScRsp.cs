@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9HZXRCYXR0bGVDb2xsZWdlRGF0YVNjUnNwLnByb3RvImMKGUdldEJhdHRs",
-            "ZUNvbGxlZ2VEYXRhU2NSc3ASDwoHcmV0Y29kZRgJIAEoDRITCgtJQUdETkVG",
-            "R0dHTRgBIAEoDRIgChhmaW5pc2hlZF9jb2xsZWdlX2lkX2xpc3QYCyADKA1C",
+            "ZUNvbGxlZ2VEYXRhU2NSc3ASDwoHcmV0Y29kZRgNIAEoDRIgChhmaW5pc2hl",
+            "ZF9jb2xsZWdlX2lkX2xpc3QYCyADKA0SEwoLTEJETUhPTFBKS0UYBCABKA1C",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetBattleCollegeDataScRsp), global::EggLink.DanhengServer.Proto.GetBattleCollegeDataScRsp.Parser, new[]{ "Retcode", "IAGDNEFGGGM", "FinishedCollegeIdList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetBattleCollegeDataScRsp), global::EggLink.DanhengServer.Proto.GetBattleCollegeDataScRsp.Parser, new[]{ "Retcode", "FinishedCollegeIdList", "LBDMHOLPJKE" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetBattleCollegeDataScRsp(GetBattleCollegeDataScRsp other) : this() {
       retcode_ = other.retcode_;
-      iAGDNEFGGGM_ = other.iAGDNEFGGGM_;
       finishedCollegeIdList_ = other.finishedCollegeIdList_.Clone();
+      lBDMHOLPJKE_ = other.lBDMHOLPJKE_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 9;
+    public const int RetcodeFieldNumber = 13;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -94,18 +94,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "IAGDNEFGGGM" field.</summary>
-    public const int IAGDNEFGGGMFieldNumber = 1;
-    private uint iAGDNEFGGGM_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IAGDNEFGGGM {
-      get { return iAGDNEFGGGM_; }
-      set {
-        iAGDNEFGGGM_ = value;
       }
     }
 
@@ -118,6 +106,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<uint> FinishedCollegeIdList {
       get { return finishedCollegeIdList_; }
+    }
+
+    /// <summary>Field number for the "LBDMHOLPJKE" field.</summary>
+    public const int LBDMHOLPJKEFieldNumber = 4;
+    private uint lBDMHOLPJKE_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint LBDMHOLPJKE {
+      get { return lBDMHOLPJKE_; }
+      set {
+        lBDMHOLPJKE_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -136,8 +136,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Retcode != other.Retcode) return false;
-      if (IAGDNEFGGGM != other.IAGDNEFGGGM) return false;
       if(!finishedCollegeIdList_.Equals(other.finishedCollegeIdList_)) return false;
+      if (LBDMHOLPJKE != other.LBDMHOLPJKE) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,8 +146,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (IAGDNEFGGGM != 0) hash ^= IAGDNEFGGGM.GetHashCode();
       hash ^= finishedCollegeIdList_.GetHashCode();
+      if (LBDMHOLPJKE != 0) hash ^= LBDMHOLPJKE.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,15 +166,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IAGDNEFGGGM != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(IAGDNEFGGGM);
-      }
-      if (Retcode != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(Retcode);
+      if (LBDMHOLPJKE != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(LBDMHOLPJKE);
       }
       finishedCollegeIdList_.WriteTo(output, _repeated_finishedCollegeIdList_codec);
+      if (Retcode != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(Retcode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -185,15 +185,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IAGDNEFGGGM != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(IAGDNEFGGGM);
-      }
-      if (Retcode != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(Retcode);
+      if (LBDMHOLPJKE != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(LBDMHOLPJKE);
       }
       finishedCollegeIdList_.WriteTo(ref output, _repeated_finishedCollegeIdList_codec);
+      if (Retcode != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(Retcode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -207,10 +207,10 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (IAGDNEFGGGM != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IAGDNEFGGGM);
-      }
       size += finishedCollegeIdList_.CalculateSize(_repeated_finishedCollegeIdList_codec);
+      if (LBDMHOLPJKE != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LBDMHOLPJKE);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -226,10 +226,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.IAGDNEFGGGM != 0) {
-        IAGDNEFGGGM = other.IAGDNEFGGGM;
-      }
       finishedCollegeIdList_.Add(other.finishedCollegeIdList_);
+      if (other.LBDMHOLPJKE != 0) {
+        LBDMHOLPJKE = other.LBDMHOLPJKE;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -245,17 +245,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            IAGDNEFGGGM = input.ReadUInt32();
-            break;
-          }
-          case 72: {
-            Retcode = input.ReadUInt32();
+          case 32: {
+            LBDMHOLPJKE = input.ReadUInt32();
             break;
           }
           case 90:
           case 88: {
             finishedCollegeIdList_.AddEntriesFrom(input, _repeated_finishedCollegeIdList_codec);
+            break;
+          }
+          case 104: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -273,17 +273,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            IAGDNEFGGGM = input.ReadUInt32();
-            break;
-          }
-          case 72: {
-            Retcode = input.ReadUInt32();
+          case 32: {
+            LBDMHOLPJKE = input.ReadUInt32();
             break;
           }
           case 90:
           case 88: {
             finishedCollegeIdList_.AddEntriesFrom(ref input, _repeated_finishedCollegeIdList_codec);
+            break;
+          }
+          case 104: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxNYXRjaFRocmVlR2V0RGF0YVNjUnNwLnByb3RvGhRNYXRjaFRocmVlRGF0",
-            "YS5wcm90byJUChZNYXRjaFRocmVlR2V0RGF0YVNjUnNwEikKEG1hdGNoX3Ro",
-            "cmVlX2RhdGEYCyABKAsyDy5NYXRjaFRocmVlRGF0YRIPCgdyZXRjb2RlGAMg",
-            "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "YS5wcm90byJUChZNYXRjaFRocmVlR2V0RGF0YVNjUnNwEg8KB3JldGNvZGUY",
+            "CiABKA0SKQoQbWF0Y2hfdGhyZWVfZGF0YRgFIAEoCzIPLk1hdGNoVGhyZWVE",
+            "YXRhQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MatchThreeDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MatchThreeGetDataScRsp), global::EggLink.DanhengServer.Proto.MatchThreeGetDataScRsp.Parser, new[]{ "MatchThreeData", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MatchThreeGetDataScRsp), global::EggLink.DanhengServer.Proto.MatchThreeGetDataScRsp.Parser, new[]{ "Retcode", "MatchThreeData" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MatchThreeGetDataScRsp(MatchThreeGetDataScRsp other) : this() {
-      matchThreeData_ = other.matchThreeData_ != null ? other.matchThreeData_.Clone() : null;
       retcode_ = other.retcode_;
+      matchThreeData_ = other.matchThreeData_ != null ? other.matchThreeData_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new MatchThreeGetDataScRsp(this);
     }
 
-    /// <summary>Field number for the "match_three_data" field.</summary>
-    public const int MatchThreeDataFieldNumber = 11;
-    private global::EggLink.DanhengServer.Proto.MatchThreeData matchThreeData_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MatchThreeData MatchThreeData {
-      get { return matchThreeData_; }
-      set {
-        matchThreeData_ = value;
-      }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 3;
+    public const int RetcodeFieldNumber = 10;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "match_three_data" field.</summary>
+    public const int MatchThreeDataFieldNumber = 5;
+    private global::EggLink.DanhengServer.Proto.MatchThreeData matchThreeData_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.MatchThreeData MatchThreeData {
+      get { return matchThreeData_; }
+      set {
+        matchThreeData_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(MatchThreeData, other.MatchThreeData)) return false;
       if (Retcode != other.Retcode) return false;
+      if (!object.Equals(MatchThreeData, other.MatchThreeData)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (matchThreeData_ != null) hash ^= MatchThreeData.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (matchThreeData_ != null) hash ^= MatchThreeData.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(Retcode);
-      }
       if (matchThreeData_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(42);
         output.WriteMessage(MatchThreeData);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(Retcode);
-      }
       if (matchThreeData_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(42);
         output.WriteMessage(MatchThreeData);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (matchThreeData_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MatchThreeData);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (matchThreeData_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MatchThreeData);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,14 +206,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
       if (other.matchThreeData_ != null) {
         if (matchThreeData_ == null) {
           MatchThreeData = new global::EggLink.DanhengServer.Proto.MatchThreeData();
         }
         MatchThreeData.MergeFrom(other.MatchThreeData);
-      }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 90: {
+          case 42: {
             if (matchThreeData_ == null) {
               MatchThreeData = new global::EggLink.DanhengServer.Proto.MatchThreeData();
             }
             input.ReadMessage(MatchThreeData);
+            break;
+          }
+          case 80: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 90: {
+          case 42: {
             if (matchThreeData_ == null) {
               MatchThreeData = new global::EggLink.DanhengServer.Proto.MatchThreeData();
             }
             input.ReadMessage(MatchThreeData);
+            break;
+          }
+          case 80: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

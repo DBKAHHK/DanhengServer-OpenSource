@@ -2,7 +2,6 @@
 
 public enum MissionFinishTypeEnum
 {
-
     Unknown = 0,
     AutoFinish = 1,
     Talk = 2,
@@ -154,6 +153,7 @@ public enum MissionFinishTypeEnum
     KillMonsterWithGameMode = 411,
     KillMonsterWithRogue = 412,
     KillMonsterInBattle = 413,
+    KillMonsterInGameModeList = 414,
     HeroPathLevel = 601,
     HeroPathLevelUpCnt = 602,
     WaitDays = 604,
@@ -393,7 +393,6 @@ public enum MissionFinishTypeEnum
     BattleQuit = 200010,
     TelevisionActivityStageScore = 200011,
     TelevisionActivityFisrtStageScore = 200012,
-    KillMonsterInTrackList = 200013,
     HeartDialDialoguePerformanceFinish = 200014,
     HeartDialScriptChangeStepCnt = 200015,
     RaidCollectionIDFinishList = 200016,
@@ -580,5 +579,16 @@ public enum MissionFinishTypeEnum
     TrainPartyPassengerChallengeTimes = 270013,
     TrainPartyUnlockPassengerNum = 270014,
     TrainPartyTrigerEvent = 270015,
-    RogueTournFinishWithDifficultyCompExCnt = 270016
+    RogueTournFinishWithDifficultyCompExCnt = 270016,
+    TimeLineSetState = 300000,
+    TimeLineSetStateCnt = 300001,
+    RideCavalryBeastCnt = 300002,
+    TarotBookUnlockGivenCharacterStoryCnt = 300003,
+    TarotBookFinishStoryCnt = 300004,
+    TarotBookOpenPackCnt = 300005,
+    TarotBookFinishGivenStoryCnt = 300006,
+    TarotBookUnlockGivenStoryCnt = 300007,
+    DestructPropId = 300008,
+    TarotBookFinishInteraction = 300009,
+    TimeRewindPropStayInState = 300010
 }

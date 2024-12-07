@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static Vector4Reflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg1WZWN0b3I0LnByb3RvIjUKB1ZlY3RvcjQSCQoBehgEIAEoAhIJCgF3GAgg",
-            "ASgCEgkKAXkYDiABKAISCQoBeBgJIAEoAkIeqgIbRWdnTGluay5EYW5oZW5n",
+            "Cg1WZWN0b3I0LnByb3RvIjUKB1ZlY3RvcjQSCQoBeRgEIAEoAhIJCgF6GAMg",
+            "ASgCEgkKAXgYDyABKAISCQoBdxgGIAEoAkIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Vector4), global::EggLink.DanhengServer.Proto.Vector4.Parser, new[]{ "Z", "W", "Y", "X" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Vector4), global::EggLink.DanhengServer.Proto.Vector4.Parser, new[]{ "Y", "Z", "X", "W" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,10 +72,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Vector4(Vector4 other) : this() {
-      z_ = other.z_;
-      w_ = other.w_;
       y_ = other.y_;
+      z_ = other.z_;
       x_ = other.x_;
+      w_ = other.w_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,32 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new Vector4(this);
     }
 
-    /// <summary>Field number for the "z" field.</summary>
-    public const int ZFieldNumber = 4;
-    private float z_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float Z {
-      get { return z_; }
-      set {
-        z_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "w" field.</summary>
-    public const int WFieldNumber = 8;
-    private float w_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float W {
-      get { return w_; }
-      set {
-        w_ = value;
-      }
-    }
-
     /// <summary>Field number for the "y" field.</summary>
-    public const int YFieldNumber = 14;
+    public const int YFieldNumber = 4;
     private float y_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -121,8 +97,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "z" field.</summary>
+    public const int ZFieldNumber = 3;
+    private float z_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Z {
+      get { return z_; }
+      set {
+        z_ = value;
+      }
+    }
+
     /// <summary>Field number for the "x" field.</summary>
-    public const int XFieldNumber = 9;
+    public const int XFieldNumber = 15;
     private float x_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -130,6 +118,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return x_; }
       set {
         x_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "w" field.</summary>
+    public const int WFieldNumber = 6;
+    private float w_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float W {
+      get { return w_; }
+      set {
+        w_ = value;
       }
     }
 
@@ -148,10 +148,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Z, other.Z)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(W, other.W)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Y, other.Y)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Z, other.Z)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(X, other.X)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(W, other.W)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -159,10 +159,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Z != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Z);
-      if (W != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(W);
       if (Y != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Y);
+      if (Z != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Z);
       if (X != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(X);
+      if (W != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(W);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,20 +182,20 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Z != 0F) {
-        output.WriteRawTag(37);
+        output.WriteRawTag(29);
         output.WriteFloat(Z);
       }
+      if (Y != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(Y);
+      }
       if (W != 0F) {
-        output.WriteRawTag(69);
+        output.WriteRawTag(53);
         output.WriteFloat(W);
       }
       if (X != 0F) {
-        output.WriteRawTag(77);
+        output.WriteRawTag(125);
         output.WriteFloat(X);
-      }
-      if (Y != 0F) {
-        output.WriteRawTag(117);
-        output.WriteFloat(Y);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -208,20 +208,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Z != 0F) {
-        output.WriteRawTag(37);
+        output.WriteRawTag(29);
         output.WriteFloat(Z);
       }
+      if (Y != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(Y);
+      }
       if (W != 0F) {
-        output.WriteRawTag(69);
+        output.WriteRawTag(53);
         output.WriteFloat(W);
       }
       if (X != 0F) {
-        output.WriteRawTag(77);
+        output.WriteRawTag(125);
         output.WriteFloat(X);
-      }
-      if (Y != 0F) {
-        output.WriteRawTag(117);
-        output.WriteFloat(Y);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -233,16 +233,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Z != 0F) {
-        size += 1 + 4;
-      }
-      if (W != 0F) {
-        size += 1 + 4;
-      }
       if (Y != 0F) {
         size += 1 + 4;
       }
+      if (Z != 0F) {
+        size += 1 + 4;
+      }
       if (X != 0F) {
+        size += 1 + 4;
+      }
+      if (W != 0F) {
         size += 1 + 4;
       }
       if (_unknownFields != null) {
@@ -257,17 +257,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Z != 0F) {
-        Z = other.Z;
-      }
-      if (other.W != 0F) {
-        W = other.W;
-      }
       if (other.Y != 0F) {
         Y = other.Y;
       }
+      if (other.Z != 0F) {
+        Z = other.Z;
+      }
       if (other.X != 0F) {
         X = other.X;
+      }
+      if (other.W != 0F) {
+        W = other.W;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -284,20 +284,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 37: {
+          case 29: {
             Z = input.ReadFloat();
             break;
           }
-          case 69: {
+          case 37: {
+            Y = input.ReadFloat();
+            break;
+          }
+          case 53: {
             W = input.ReadFloat();
             break;
           }
-          case 77: {
+          case 125: {
             X = input.ReadFloat();
-            break;
-          }
-          case 117: {
-            Y = input.ReadFloat();
             break;
           }
         }
@@ -315,20 +315,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 37: {
+          case 29: {
             Z = input.ReadFloat();
             break;
           }
-          case 69: {
+          case 37: {
+            Y = input.ReadFloat();
+            break;
+          }
+          case 53: {
             W = input.ReadFloat();
             break;
           }
-          case 77: {
+          case 125: {
             X = input.ReadFloat();
-            break;
-          }
-          case 117: {
-            Y = input.ReadFloat();
             break;
           }
         }

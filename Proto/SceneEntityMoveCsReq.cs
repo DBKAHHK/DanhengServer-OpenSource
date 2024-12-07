@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpTY2VuZUVudGl0eU1vdmVDc1JlcS5wcm90bxoSRW50aXR5TW90aW9uLnBy",
-            "b3RvImgKFFNjZW5lRW50aXR5TW92ZUNzUmVxEhAKCGVudHJ5X2lkGAEgASgN",
-            "EhMKC0NMRU5CR0lKQUNQGA8gASgEEikKEmVudGl0eV9tb3Rpb25fbGlzdBgO",
+            "b3RvImgKFFNjZW5lRW50aXR5TW92ZUNzUmVxEhAKCGVudHJ5X2lkGAggASgN",
+            "EhMKC0RDTU5DR0RKT0JKGA8gASgEEikKEmVudGl0eV9tb3Rpb25fbGlzdBgJ",
             "IAMoCzINLkVudGl0eU1vdGlvbkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EntityMotionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityMoveCsReq), global::EggLink.DanhengServer.Proto.SceneEntityMoveCsReq.Parser, new[]{ "EntryId", "CLENBGIJACP", "EntityMotionList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityMoveCsReq), global::EggLink.DanhengServer.Proto.SceneEntityMoveCsReq.Parser, new[]{ "EntryId", "DCMNCGDJOBJ", "EntityMotionList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SceneEntityMoveCsReq(SceneEntityMoveCsReq other) : this() {
       entryId_ = other.entryId_;
-      cLENBGIJACP_ = other.cLENBGIJACP_;
+      dCMNCGDJOBJ_ = other.dCMNCGDJOBJ_;
       entityMotionList_ = other.entityMotionList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "entry_id" field.</summary>
-    public const int EntryIdFieldNumber = 1;
+    public const int EntryIdFieldNumber = 8;
     private uint entryId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,22 +98,22 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CLENBGIJACP" field.</summary>
-    public const int CLENBGIJACPFieldNumber = 15;
-    private ulong cLENBGIJACP_;
+    /// <summary>Field number for the "DCMNCGDJOBJ" field.</summary>
+    public const int DCMNCGDJOBJFieldNumber = 15;
+    private ulong dCMNCGDJOBJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong CLENBGIJACP {
-      get { return cLENBGIJACP_; }
+    public ulong DCMNCGDJOBJ {
+      get { return dCMNCGDJOBJ_; }
       set {
-        cLENBGIJACP_ = value;
+        dCMNCGDJOBJ_ = value;
       }
     }
 
     /// <summary>Field number for the "entity_motion_list" field.</summary>
-    public const int EntityMotionListFieldNumber = 14;
+    public const int EntityMotionListFieldNumber = 9;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EntityMotion> _repeated_entityMotionList_codec
-        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.EntityMotion.Parser);
+        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.EntityMotion.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EntityMotion> entityMotionList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EntityMotion>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (EntryId != other.EntryId) return false;
-      if (CLENBGIJACP != other.CLENBGIJACP) return false;
+      if (DCMNCGDJOBJ != other.DCMNCGDJOBJ) return false;
       if(!entityMotionList_.Equals(other.entityMotionList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -147,7 +147,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (EntryId != 0) hash ^= EntryId.GetHashCode();
-      if (CLENBGIJACP != 0UL) hash ^= CLENBGIJACP.GetHashCode();
+      if (DCMNCGDJOBJ != 0UL) hash ^= DCMNCGDJOBJ.GetHashCode();
       hash ^= entityMotionList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -168,13 +168,13 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (EntryId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(64);
         output.WriteUInt32(EntryId);
       }
       entityMotionList_.WriteTo(output, _repeated_entityMotionList_codec);
-      if (CLENBGIJACP != 0UL) {
+      if (DCMNCGDJOBJ != 0UL) {
         output.WriteRawTag(120);
-        output.WriteUInt64(CLENBGIJACP);
+        output.WriteUInt64(DCMNCGDJOBJ);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -187,13 +187,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (EntryId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(64);
         output.WriteUInt32(EntryId);
       }
       entityMotionList_.WriteTo(ref output, _repeated_entityMotionList_codec);
-      if (CLENBGIJACP != 0UL) {
+      if (DCMNCGDJOBJ != 0UL) {
         output.WriteRawTag(120);
-        output.WriteUInt64(CLENBGIJACP);
+        output.WriteUInt64(DCMNCGDJOBJ);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -208,8 +208,8 @@ namespace EggLink.DanhengServer.Proto {
       if (EntryId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EntryId);
       }
-      if (CLENBGIJACP != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(CLENBGIJACP);
+      if (DCMNCGDJOBJ != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(DCMNCGDJOBJ);
       }
       size += entityMotionList_.CalculateSize(_repeated_entityMotionList_codec);
       if (_unknownFields != null) {
@@ -227,8 +227,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.EntryId != 0) {
         EntryId = other.EntryId;
       }
-      if (other.CLENBGIJACP != 0UL) {
-        CLENBGIJACP = other.CLENBGIJACP;
+      if (other.DCMNCGDJOBJ != 0UL) {
+        DCMNCGDJOBJ = other.DCMNCGDJOBJ;
       }
       entityMotionList_.Add(other.entityMotionList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -246,16 +246,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 64: {
             EntryId = input.ReadUInt32();
             break;
           }
-          case 114: {
+          case 74: {
             entityMotionList_.AddEntriesFrom(input, _repeated_entityMotionList_codec);
             break;
           }
           case 120: {
-            CLENBGIJACP = input.ReadUInt64();
+            DCMNCGDJOBJ = input.ReadUInt64();
             break;
           }
         }
@@ -273,16 +273,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 64: {
             EntryId = input.ReadUInt32();
             break;
           }
-          case 114: {
+          case 74: {
             entityMotionList_.AddEntriesFrom(ref input, _repeated_entityMotionList_codec);
             break;
           }
           case 120: {
-            CLENBGIJACP = input.ReadUInt64();
+            DCMNCGDJOBJ = input.ReadUInt64();
             break;
           }
         }

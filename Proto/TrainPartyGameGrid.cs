@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhUcmFpblBhcnR5R2FtZUdyaWQucHJvdG8iZAoSVHJhaW5QYXJ0eUdhbWVH",
-            "cmlkEhMKC0dBRUlPRk9QTEZOGAYgASgNEg8KB2dyaWRfaWQYAiABKA0SFQoN",
-            "ZGlzcGxheV92YWx1ZRgIIAEoDRIRCgl1bmlxdWVfaWQYCyABKA1CHqoCG0Vn",
+            "cmlkEhUKDWRpc3BsYXlfdmFsdWUYCSABKA0SEQoJdW5pcXVlX2lkGAQgASgN",
+            "Eg8KB2dyaWRfaWQYDSABKA0SEwoLSUxPRklNT0RJRU4YByABKA1CHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyGameGrid), global::EggLink.DanhengServer.Proto.TrainPartyGameGrid.Parser, new[]{ "GAEIOFOPLFN", "GridId", "DisplayValue", "UniqueId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyGameGrid), global::EggLink.DanhengServer.Proto.TrainPartyGameGrid.Parser, new[]{ "DisplayValue", "UniqueId", "GridId", "ILOFIMODIEN" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,10 +73,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainPartyGameGrid(TrainPartyGameGrid other) : this() {
-      gAEIOFOPLFN_ = other.gAEIOFOPLFN_;
-      gridId_ = other.gridId_;
       displayValue_ = other.displayValue_;
       uniqueId_ = other.uniqueId_;
+      gridId_ = other.gridId_;
+      iLOFIMODIEN_ = other.iLOFIMODIEN_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,32 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new TrainPartyGameGrid(this);
     }
 
-    /// <summary>Field number for the "GAEIOFOPLFN" field.</summary>
-    public const int GAEIOFOPLFNFieldNumber = 6;
-    private uint gAEIOFOPLFN_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GAEIOFOPLFN {
-      get { return gAEIOFOPLFN_; }
-      set {
-        gAEIOFOPLFN_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "grid_id" field.</summary>
-    public const int GridIdFieldNumber = 2;
-    private uint gridId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GridId {
-      get { return gridId_; }
-      set {
-        gridId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "display_value" field.</summary>
-    public const int DisplayValueFieldNumber = 8;
+    public const int DisplayValueFieldNumber = 9;
     private uint displayValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "unique_id" field.</summary>
-    public const int UniqueIdFieldNumber = 11;
+    public const int UniqueIdFieldNumber = 4;
     private uint uniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -131,6 +107,30 @@ namespace EggLink.DanhengServer.Proto {
       get { return uniqueId_; }
       set {
         uniqueId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "grid_id" field.</summary>
+    public const int GridIdFieldNumber = 13;
+    private uint gridId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint GridId {
+      get { return gridId_; }
+      set {
+        gridId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ILOFIMODIEN" field.</summary>
+    public const int ILOFIMODIENFieldNumber = 7;
+    private uint iLOFIMODIEN_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ILOFIMODIEN {
+      get { return iLOFIMODIEN_; }
+      set {
+        iLOFIMODIEN_ = value;
       }
     }
 
@@ -149,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (GAEIOFOPLFN != other.GAEIOFOPLFN) return false;
-      if (GridId != other.GridId) return false;
       if (DisplayValue != other.DisplayValue) return false;
       if (UniqueId != other.UniqueId) return false;
+      if (GridId != other.GridId) return false;
+      if (ILOFIMODIEN != other.ILOFIMODIEN) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (GAEIOFOPLFN != 0) hash ^= GAEIOFOPLFN.GetHashCode();
-      if (GridId != 0) hash ^= GridId.GetHashCode();
       if (DisplayValue != 0) hash ^= DisplayValue.GetHashCode();
       if (UniqueId != 0) hash ^= UniqueId.GetHashCode();
+      if (GridId != 0) hash ^= GridId.GetHashCode();
+      if (ILOFIMODIEN != 0) hash ^= ILOFIMODIEN.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,21 +182,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (GridId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(GridId);
+      if (UniqueId != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(UniqueId);
       }
-      if (GAEIOFOPLFN != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(GAEIOFOPLFN);
+      if (ILOFIMODIEN != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(ILOFIMODIEN);
       }
       if (DisplayValue != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(72);
         output.WriteUInt32(DisplayValue);
       }
-      if (UniqueId != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(UniqueId);
+      if (GridId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(GridId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -208,21 +208,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (GridId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(GridId);
+      if (UniqueId != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(UniqueId);
       }
-      if (GAEIOFOPLFN != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(GAEIOFOPLFN);
+      if (ILOFIMODIEN != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(ILOFIMODIEN);
       }
       if (DisplayValue != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(72);
         output.WriteUInt32(DisplayValue);
       }
-      if (UniqueId != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(UniqueId);
+      if (GridId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(GridId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -234,17 +234,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (GAEIOFOPLFN != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GAEIOFOPLFN);
-      }
-      if (GridId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridId);
-      }
       if (DisplayValue != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DisplayValue);
       }
       if (UniqueId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UniqueId);
+      }
+      if (GridId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridId);
+      }
+      if (ILOFIMODIEN != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ILOFIMODIEN);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -258,17 +258,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.GAEIOFOPLFN != 0) {
-        GAEIOFOPLFN = other.GAEIOFOPLFN;
-      }
-      if (other.GridId != 0) {
-        GridId = other.GridId;
-      }
       if (other.DisplayValue != 0) {
         DisplayValue = other.DisplayValue;
       }
       if (other.UniqueId != 0) {
         UniqueId = other.UniqueId;
+      }
+      if (other.GridId != 0) {
+        GridId = other.GridId;
+      }
+      if (other.ILOFIMODIEN != 0) {
+        ILOFIMODIEN = other.ILOFIMODIEN;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            GridId = input.ReadUInt32();
+          case 32: {
+            UniqueId = input.ReadUInt32();
             break;
           }
-          case 48: {
-            GAEIOFOPLFN = input.ReadUInt32();
+          case 56: {
+            ILOFIMODIEN = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 72: {
             DisplayValue = input.ReadUInt32();
             break;
           }
-          case 88: {
-            UniqueId = input.ReadUInt32();
+          case 104: {
+            GridId = input.ReadUInt32();
             break;
           }
         }
@@ -316,20 +316,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            GridId = input.ReadUInt32();
+          case 32: {
+            UniqueId = input.ReadUInt32();
             break;
           }
-          case 48: {
-            GAEIOFOPLFN = input.ReadUInt32();
+          case 56: {
+            ILOFIMODIEN = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 72: {
             DisplayValue = input.ReadUInt32();
             break;
           }
-          case 88: {
-            UniqueId = input.ReadUInt32();
+          case 104: {
+            GridId = input.ReadUInt32();
             break;
           }
         }

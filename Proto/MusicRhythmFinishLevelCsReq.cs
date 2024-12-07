@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static MusicRhythmFinishLevelCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFNdXNpY1JoeXRobUZpbmlzaExldmVsQ3NSZXEucHJvdG8iUQobTXVzaWNS",
-            "aHl0aG1GaW5pc2hMZXZlbENzUmVxEhIKCmZ1bGxfY29tYm8YASABKAgSEAoI",
-            "c2NvcmVfaWQYDiABKA0SDAoEc3RhchgJIAEoDUIeqgIbRWdnTGluay5EYW5o",
-            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "CiFNdXNpY1JoeXRobUZpbmlzaExldmVsQ3NSZXEucHJvdG8iXAobTXVzaWNS",
+            "aHl0aG1GaW5pc2hMZXZlbENzUmVxEhYKDk1BSUxfVFlQRV9TVEFSGAYgASgN",
+            "EhAKCHNjb3JlX2lkGAkgASgNEhMKC0pDTU5EREhJS0VQGAggASgIQh6qAhtF",
+            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmFinishLevelCsReq), global::EggLink.DanhengServer.Proto.MusicRhythmFinishLevelCsReq.Parser, new[]{ "FullCombo", "ScoreId", "Star" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmFinishLevelCsReq), global::EggLink.DanhengServer.Proto.MusicRhythmFinishLevelCsReq.Parser, new[]{ "MAILTYPESTAR", "ScoreId", "JCMNDDHIKEP" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MusicRhythmFinishLevelCsReq(MusicRhythmFinishLevelCsReq other) : this() {
-      fullCombo_ = other.fullCombo_;
+      mAILTYPESTAR_ = other.mAILTYPESTAR_;
       scoreId_ = other.scoreId_;
-      star_ = other.star_;
+      jCMNDDHIKEP_ = other.jCMNDDHIKEP_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,20 @@ namespace EggLink.DanhengServer.Proto {
       return new MusicRhythmFinishLevelCsReq(this);
     }
 
-    /// <summary>Field number for the "full_combo" field.</summary>
-    public const int FullComboFieldNumber = 1;
-    private bool fullCombo_;
+    /// <summary>Field number for the "MAIL_TYPE_STAR" field.</summary>
+    public const int MAILTYPESTARFieldNumber = 6;
+    private uint mAILTYPESTAR_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool FullCombo {
-      get { return fullCombo_; }
+    public uint MAILTYPESTAR {
+      get { return mAILTYPESTAR_; }
       set {
-        fullCombo_ = value;
+        mAILTYPESTAR_ = value;
       }
     }
 
     /// <summary>Field number for the "score_id" field.</summary>
-    public const int ScoreIdFieldNumber = 14;
+    public const int ScoreIdFieldNumber = 9;
     private uint scoreId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,15 +109,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "star" field.</summary>
-    public const int StarFieldNumber = 9;
-    private uint star_;
+    /// <summary>Field number for the "JCMNDDHIKEP" field.</summary>
+    public const int JCMNDDHIKEPFieldNumber = 8;
+    private bool jCMNDDHIKEP_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Star {
-      get { return star_; }
+    public bool JCMNDDHIKEP {
+      get { return jCMNDDHIKEP_; }
       set {
-        star_ = value;
+        jCMNDDHIKEP_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FullCombo != other.FullCombo) return false;
+      if (MAILTYPESTAR != other.MAILTYPESTAR) return false;
       if (ScoreId != other.ScoreId) return false;
-      if (Star != other.Star) return false;
+      if (JCMNDDHIKEP != other.JCMNDDHIKEP) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (FullCombo != false) hash ^= FullCombo.GetHashCode();
+      if (MAILTYPESTAR != 0) hash ^= MAILTYPESTAR.GetHashCode();
       if (ScoreId != 0) hash ^= ScoreId.GetHashCode();
-      if (Star != 0) hash ^= Star.GetHashCode();
+      if (JCMNDDHIKEP != false) hash ^= JCMNDDHIKEP.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,16 +167,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FullCombo != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(FullCombo);
+      if (MAILTYPESTAR != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(MAILTYPESTAR);
       }
-      if (Star != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(Star);
+      if (JCMNDDHIKEP != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(JCMNDDHIKEP);
       }
       if (ScoreId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(72);
         output.WriteUInt32(ScoreId);
       }
       if (_unknownFields != null) {
@@ -189,16 +189,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FullCombo != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(FullCombo);
+      if (MAILTYPESTAR != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(MAILTYPESTAR);
       }
-      if (Star != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(Star);
+      if (JCMNDDHIKEP != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(JCMNDDHIKEP);
       }
       if (ScoreId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(72);
         output.WriteUInt32(ScoreId);
       }
       if (_unknownFields != null) {
@@ -211,14 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (FullCombo != false) {
-        size += 1 + 1;
+      if (MAILTYPESTAR != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MAILTYPESTAR);
       }
       if (ScoreId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScoreId);
       }
-      if (Star != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Star);
+      if (JCMNDDHIKEP != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,14 +232,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.FullCombo != false) {
-        FullCombo = other.FullCombo;
+      if (other.MAILTYPESTAR != 0) {
+        MAILTYPESTAR = other.MAILTYPESTAR;
       }
       if (other.ScoreId != 0) {
         ScoreId = other.ScoreId;
       }
-      if (other.Star != 0) {
-        Star = other.Star;
+      if (other.JCMNDDHIKEP != false) {
+        JCMNDDHIKEP = other.JCMNDDHIKEP;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            FullCombo = input.ReadBool();
+          case 48: {
+            MAILTYPESTAR = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            JCMNDDHIKEP = input.ReadBool();
             break;
           }
           case 72: {
-            Star = input.ReadUInt32();
-            break;
-          }
-          case 112: {
             ScoreId = input.ReadUInt32();
             break;
           }
@@ -283,15 +283,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            FullCombo = input.ReadBool();
+          case 48: {
+            MAILTYPESTAR = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            JCMNDDHIKEP = input.ReadBool();
             break;
           }
           case 72: {
-            Star = input.ReadUInt32();
-            break;
-          }
-          case 112: {
             ScoreId = input.ReadUInt32();
             break;
           }

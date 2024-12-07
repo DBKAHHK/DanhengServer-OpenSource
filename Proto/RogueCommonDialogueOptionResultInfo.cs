@@ -26,16 +26,16 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CilSb2d1ZUNvbW1vbkRpYWxvZ3VlT3B0aW9uUmVzdWx0SW5mby5wcm90bxov",
             "Um9ndWVDb21tb25EaWFsb2d1ZU9wdGlvbkJhdHRsZVJlc3VsdEluZm8ucHJv",
-            "dG8aEUdCSUpGQktNT0hMLnByb3RvIqoBCiNSb2d1ZUNvbW1vbkRpYWxvZ3Vl",
-            "T3B0aW9uUmVzdWx0SW5mbxJIChJiYXR0bGVfcmVzdWx0X2luZm8YASABKAsy",
+            "dG8aEUdJSEZHR01DSEtBLnByb3RvIqoBCiNSb2d1ZUNvbW1vbkRpYWxvZ3Vl",
+            "T3B0aW9uUmVzdWx0SW5mbxJIChJiYXR0bGVfcmVzdWx0X2luZm8YByABKAsy",
             "Ki5Sb2d1ZUNvbW1vbkRpYWxvZ3VlT3B0aW9uQmF0dGxlUmVzdWx0SW5mb0gA",
-            "EiMKC09GT09FTUNQRUtIGAwgASgLMgwuR0JJSkZCS01PSExIAEIUChJvcHRp",
+            "EiMKC0pEQkZPQ01KTUpEGAkgASgLMgwuR0lIRkdHTUNIS0FIAEIUChJvcHRp",
             "b25fcmVzdWx0X2luZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionBattleResultInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GBIJFBKMOHLReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionBattleResultInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GIHFGGMCHKAReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionResultInfo), global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionResultInfo.Parser, new[]{ "BattleResultInfo", "OFOOEMCPEKH" }, new[]{ "OptionResultInfo" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionResultInfo), global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionResultInfo.Parser, new[]{ "BattleResultInfo", "JDBFOCMJMJD" }, new[]{ "OptionResultInfo" }, null, null, null)
           }));
     }
     #endregion
@@ -81,8 +81,8 @@ namespace EggLink.DanhengServer.Proto {
         case OptionResultInfoOneofCase.BattleResultInfo:
           BattleResultInfo = other.BattleResultInfo.Clone();
           break;
-        case OptionResultInfoOneofCase.OFOOEMCPEKH:
-          OFOOEMCPEKH = other.OFOOEMCPEKH.Clone();
+        case OptionResultInfoOneofCase.JDBFOCMJMJD:
+          JDBFOCMJMJD = other.JDBFOCMJMJD.Clone();
           break;
       }
 
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "battle_result_info" field.</summary>
-    public const int BattleResultInfoFieldNumber = 1;
+    public const int BattleResultInfoFieldNumber = 7;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionBattleResultInfo BattleResultInfo {
@@ -107,15 +107,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "OFOOEMCPEKH" field.</summary>
-    public const int OFOOEMCPEKHFieldNumber = 12;
+    /// <summary>Field number for the "JDBFOCMJMJD" field.</summary>
+    public const int JDBFOCMJMJDFieldNumber = 9;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.GBIJFBKMOHL OFOOEMCPEKH {
-      get { return optionResultInfoCase_ == OptionResultInfoOneofCase.OFOOEMCPEKH ? (global::EggLink.DanhengServer.Proto.GBIJFBKMOHL) optionResultInfo_ : null; }
+    public global::EggLink.DanhengServer.Proto.GIHFGGMCHKA JDBFOCMJMJD {
+      get { return optionResultInfoCase_ == OptionResultInfoOneofCase.JDBFOCMJMJD ? (global::EggLink.DanhengServer.Proto.GIHFGGMCHKA) optionResultInfo_ : null; }
       set {
         optionResultInfo_ = value;
-        optionResultInfoCase_ = value == null ? OptionResultInfoOneofCase.None : OptionResultInfoOneofCase.OFOOEMCPEKH;
+        optionResultInfoCase_ = value == null ? OptionResultInfoOneofCase.None : OptionResultInfoOneofCase.JDBFOCMJMJD;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "option_result_info" oneof.</summary>
     public enum OptionResultInfoOneofCase {
       None = 0,
-      BattleResultInfo = 1,
-      OFOOEMCPEKH = 12,
+      BattleResultInfo = 7,
+      JDBFOCMJMJD = 9,
     }
     private OptionResultInfoOneofCase optionResultInfoCase_ = OptionResultInfoOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -156,7 +156,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(BattleResultInfo, other.BattleResultInfo)) return false;
-      if (!object.Equals(OFOOEMCPEKH, other.OFOOEMCPEKH)) return false;
+      if (!object.Equals(JDBFOCMJMJD, other.JDBFOCMJMJD)) return false;
       if (OptionResultInfoCase != other.OptionResultInfoCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -166,7 +166,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (optionResultInfoCase_ == OptionResultInfoOneofCase.BattleResultInfo) hash ^= BattleResultInfo.GetHashCode();
-      if (optionResultInfoCase_ == OptionResultInfoOneofCase.OFOOEMCPEKH) hash ^= OFOOEMCPEKH.GetHashCode();
+      if (optionResultInfoCase_ == OptionResultInfoOneofCase.JDBFOCMJMJD) hash ^= JDBFOCMJMJD.GetHashCode();
       hash ^= (int) optionResultInfoCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -187,12 +187,12 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (optionResultInfoCase_ == OptionResultInfoOneofCase.BattleResultInfo) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(58);
         output.WriteMessage(BattleResultInfo);
       }
-      if (optionResultInfoCase_ == OptionResultInfoOneofCase.OFOOEMCPEKH) {
-        output.WriteRawTag(98);
-        output.WriteMessage(OFOOEMCPEKH);
+      if (optionResultInfoCase_ == OptionResultInfoOneofCase.JDBFOCMJMJD) {
+        output.WriteRawTag(74);
+        output.WriteMessage(JDBFOCMJMJD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -205,12 +205,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (optionResultInfoCase_ == OptionResultInfoOneofCase.BattleResultInfo) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(58);
         output.WriteMessage(BattleResultInfo);
       }
-      if (optionResultInfoCase_ == OptionResultInfoOneofCase.OFOOEMCPEKH) {
-        output.WriteRawTag(98);
-        output.WriteMessage(OFOOEMCPEKH);
+      if (optionResultInfoCase_ == OptionResultInfoOneofCase.JDBFOCMJMJD) {
+        output.WriteRawTag(74);
+        output.WriteMessage(JDBFOCMJMJD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -225,8 +225,8 @@ namespace EggLink.DanhengServer.Proto {
       if (optionResultInfoCase_ == OptionResultInfoOneofCase.BattleResultInfo) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BattleResultInfo);
       }
-      if (optionResultInfoCase_ == OptionResultInfoOneofCase.OFOOEMCPEKH) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OFOOEMCPEKH);
+      if (optionResultInfoCase_ == OptionResultInfoOneofCase.JDBFOCMJMJD) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(JDBFOCMJMJD);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -247,11 +247,11 @@ namespace EggLink.DanhengServer.Proto {
           }
           BattleResultInfo.MergeFrom(other.BattleResultInfo);
           break;
-        case OptionResultInfoOneofCase.OFOOEMCPEKH:
-          if (OFOOEMCPEKH == null) {
-            OFOOEMCPEKH = new global::EggLink.DanhengServer.Proto.GBIJFBKMOHL();
+        case OptionResultInfoOneofCase.JDBFOCMJMJD:
+          if (JDBFOCMJMJD == null) {
+            JDBFOCMJMJD = new global::EggLink.DanhengServer.Proto.GIHFGGMCHKA();
           }
-          OFOOEMCPEKH.MergeFrom(other.OFOOEMCPEKH);
+          JDBFOCMJMJD.MergeFrom(other.JDBFOCMJMJD);
           break;
       }
 
@@ -270,7 +270,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 58: {
             global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionBattleResultInfo subBuilder = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionBattleResultInfo();
             if (optionResultInfoCase_ == OptionResultInfoOneofCase.BattleResultInfo) {
               subBuilder.MergeFrom(BattleResultInfo);
@@ -279,13 +279,13 @@ namespace EggLink.DanhengServer.Proto {
             BattleResultInfo = subBuilder;
             break;
           }
-          case 98: {
-            global::EggLink.DanhengServer.Proto.GBIJFBKMOHL subBuilder = new global::EggLink.DanhengServer.Proto.GBIJFBKMOHL();
-            if (optionResultInfoCase_ == OptionResultInfoOneofCase.OFOOEMCPEKH) {
-              subBuilder.MergeFrom(OFOOEMCPEKH);
+          case 74: {
+            global::EggLink.DanhengServer.Proto.GIHFGGMCHKA subBuilder = new global::EggLink.DanhengServer.Proto.GIHFGGMCHKA();
+            if (optionResultInfoCase_ == OptionResultInfoOneofCase.JDBFOCMJMJD) {
+              subBuilder.MergeFrom(JDBFOCMJMJD);
             }
             input.ReadMessage(subBuilder);
-            OFOOEMCPEKH = subBuilder;
+            JDBFOCMJMJD = subBuilder;
             break;
           }
         }
@@ -303,7 +303,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 58: {
             global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionBattleResultInfo subBuilder = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionBattleResultInfo();
             if (optionResultInfoCase_ == OptionResultInfoOneofCase.BattleResultInfo) {
               subBuilder.MergeFrom(BattleResultInfo);
@@ -312,13 +312,13 @@ namespace EggLink.DanhengServer.Proto {
             BattleResultInfo = subBuilder;
             break;
           }
-          case 98: {
-            global::EggLink.DanhengServer.Proto.GBIJFBKMOHL subBuilder = new global::EggLink.DanhengServer.Proto.GBIJFBKMOHL();
-            if (optionResultInfoCase_ == OptionResultInfoOneofCase.OFOOEMCPEKH) {
-              subBuilder.MergeFrom(OFOOEMCPEKH);
+          case 74: {
+            global::EggLink.DanhengServer.Proto.GIHFGGMCHKA subBuilder = new global::EggLink.DanhengServer.Proto.GIHFGGMCHKA();
+            if (optionResultInfoCase_ == OptionResultInfoOneofCase.JDBFOCMJMJD) {
+              subBuilder.MergeFrom(JDBFOCMJMJD);
             }
             input.ReadMessage(subBuilder);
-            OFOOEMCPEKH = subBuilder;
+            JDBFOCMJMJD = subBuilder;
             break;
           }
         }

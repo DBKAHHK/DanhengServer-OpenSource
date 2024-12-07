@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static TrainPartyEventReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVUcmFpblBhcnR5RXZlbnQucHJvdG8aGVRyYWluUGFydHlFdmVudFR5cGUu",
-            "cHJvdG8aFlRyYWluUGFydHlPcHRpb24ucHJvdG8idQoPVHJhaW5QYXJ0eUV2",
-            "ZW50EiYKC29wdGlvbl9saXN0GA4gAygLMhEuVHJhaW5QYXJ0eU9wdGlvbhIo",
-            "CgpldmVudF90eXBlGAwgASgOMhQuVHJhaW5QYXJ0eUV2ZW50VHlwZRIQCghl",
-            "dmVudF9pZBgKIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "ChVUcmFpblBhcnR5RXZlbnQucHJvdG8aFlRyYWluUGFydHlPcHRpb24ucHJv",
+            "dG8aGVRyYWluUGFydHlFdmVudFR5cGUucHJvdG8idQoPVHJhaW5QYXJ0eUV2",
+            "ZW50EhAKCGV2ZW50X2lkGAQgASgNEigKCmV2ZW50X3R5cGUYAyABKA4yFC5U",
+            "cmFpblBhcnR5RXZlbnRUeXBlEiYKC29wdGlvbl9saXN0GAkgAygLMhEuVHJh",
+            "aW5QYXJ0eU9wdGlvbkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyEventTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyOptionReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyOptionReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyEventTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyEvent), global::EggLink.DanhengServer.Proto.TrainPartyEvent.Parser, new[]{ "OptionList", "EventType", "EventId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyEvent), global::EggLink.DanhengServer.Proto.TrainPartyEvent.Parser, new[]{ "EventId", "EventType", "OptionList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,9 +75,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainPartyEvent(TrainPartyEvent other) : this() {
-      optionList_ = other.optionList_.Clone();
-      eventType_ = other.eventType_;
       eventId_ = other.eventId_;
+      eventType_ = other.eventType_;
+      optionList_ = other.optionList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,19 +87,20 @@ namespace EggLink.DanhengServer.Proto {
       return new TrainPartyEvent(this);
     }
 
-    /// <summary>Field number for the "option_list" field.</summary>
-    public const int OptionListFieldNumber = 14;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.TrainPartyOption> _repeated_optionList_codec
-        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.TrainPartyOption.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyOption> optionList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyOption>();
+    /// <summary>Field number for the "event_id" field.</summary>
+    public const int EventIdFieldNumber = 4;
+    private uint eventId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyOption> OptionList {
-      get { return optionList_; }
+    public uint EventId {
+      get { return eventId_; }
+      set {
+        eventId_ = value;
+      }
     }
 
     /// <summary>Field number for the "event_type" field.</summary>
-    public const int EventTypeFieldNumber = 12;
+    public const int EventTypeFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.TrainPartyEventType eventType_ = global::EggLink.DanhengServer.Proto.TrainPartyEventType.KDialogueEventNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,16 +111,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "event_id" field.</summary>
-    public const int EventIdFieldNumber = 10;
-    private uint eventId_;
+    /// <summary>Field number for the "option_list" field.</summary>
+    public const int OptionListFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.TrainPartyOption> _repeated_optionList_codec
+        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.TrainPartyOption.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyOption> optionList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyOption>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint EventId {
-      get { return eventId_; }
-      set {
-        eventId_ = value;
-      }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyOption> OptionList {
+      get { return optionList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!optionList_.Equals(other.optionList_)) return false;
-      if (EventType != other.EventType) return false;
       if (EventId != other.EventId) return false;
+      if (EventType != other.EventType) return false;
+      if(!optionList_.Equals(other.optionList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,9 +147,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= optionList_.GetHashCode();
-      if (EventType != global::EggLink.DanhengServer.Proto.TrainPartyEventType.KDialogueEventNone) hash ^= EventType.GetHashCode();
       if (EventId != 0) hash ^= EventId.GetHashCode();
+      if (EventType != global::EggLink.DanhengServer.Proto.TrainPartyEventType.KDialogueEventNone) hash ^= EventType.GetHashCode();
+      hash ^= optionList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,13 +168,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (EventId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(EventId);
-      }
       if (EventType != global::EggLink.DanhengServer.Proto.TrainPartyEventType.KDialogueEventNone) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(24);
         output.WriteEnum((int) EventType);
+      }
+      if (EventId != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(EventId);
       }
       optionList_.WriteTo(output, _repeated_optionList_codec);
       if (_unknownFields != null) {
@@ -187,13 +187,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (EventId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(EventId);
-      }
       if (EventType != global::EggLink.DanhengServer.Proto.TrainPartyEventType.KDialogueEventNone) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(24);
         output.WriteEnum((int) EventType);
+      }
+      if (EventId != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(EventId);
       }
       optionList_.WriteTo(ref output, _repeated_optionList_codec);
       if (_unknownFields != null) {
@@ -206,13 +206,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += optionList_.CalculateSize(_repeated_optionList_codec);
-      if (EventType != global::EggLink.DanhengServer.Proto.TrainPartyEventType.KDialogueEventNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EventType);
-      }
       if (EventId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EventId);
       }
+      if (EventType != global::EggLink.DanhengServer.Proto.TrainPartyEventType.KDialogueEventNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EventType);
+      }
+      size += optionList_.CalculateSize(_repeated_optionList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -225,13 +225,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      optionList_.Add(other.optionList_);
-      if (other.EventType != global::EggLink.DanhengServer.Proto.TrainPartyEventType.KDialogueEventNone) {
-        EventType = other.EventType;
-      }
       if (other.EventId != 0) {
         EventId = other.EventId;
       }
+      if (other.EventType != global::EggLink.DanhengServer.Proto.TrainPartyEventType.KDialogueEventNone) {
+        EventType = other.EventType;
+      }
+      optionList_.Add(other.optionList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -247,15 +247,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 80: {
-            EventId = input.ReadUInt32();
-            break;
-          }
-          case 96: {
+          case 24: {
             EventType = (global::EggLink.DanhengServer.Proto.TrainPartyEventType) input.ReadEnum();
             break;
           }
-          case 114: {
+          case 32: {
+            EventId = input.ReadUInt32();
+            break;
+          }
+          case 74: {
             optionList_.AddEntriesFrom(input, _repeated_optionList_codec);
             break;
           }
@@ -274,15 +274,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 80: {
-            EventId = input.ReadUInt32();
-            break;
-          }
-          case 96: {
+          case 24: {
             EventType = (global::EggLink.DanhengServer.Proto.TrainPartyEventType) input.ReadEnum();
             break;
           }
-          case 114: {
+          case 32: {
+            EventId = input.ReadUInt32();
+            break;
+          }
+          case 74: {
             optionList_.AddEntriesFrom(ref input, _repeated_optionList_codec);
             break;
           }

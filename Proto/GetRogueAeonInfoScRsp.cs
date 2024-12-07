@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static GetRogueAeonInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtHZXRSb2d1ZUFlb25JbmZvU2NSc3AucHJvdG8aEUVLTERCSk1OT0hPLnBy",
-            "b3RvIkkKFUdldFJvZ3VlQWVvbkluZm9TY1JzcBIPCgdyZXRjb2RlGAcgASgN",
-            "Eh8KCWFlb25fbGlzdBgCIAMoCzIMLkVLTERCSk1OT0hPQh6qAhtFZ2dMaW5r",
+            "ChtHZXRSb2d1ZUFlb25JbmZvU2NSc3AucHJvdG8aEUlOSUJESEdPTUVQLnBy",
+            "b3RvIkkKFUdldFJvZ3VlQWVvbkluZm9TY1JzcBIPCgdyZXRjb2RlGAYgASgN",
+            "Eh8KCWFlb25fbGlzdBgKIAMoCzIMLklOSUJESEdPTUVQQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EKLDBJMNOHOReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.INIBDHGOMEPReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRogueAeonInfoScRsp), global::EggLink.DanhengServer.Proto.GetRogueAeonInfoScRsp.Parser, new[]{ "Retcode", "AeonList" }, null, null, null, null)
           }));
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 7;
+    public const int RetcodeFieldNumber = 6;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,13 +97,13 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "aeon_list" field.</summary>
-    public const int AeonListFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EKLDBJMNOHO> _repeated_aeonList_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.EKLDBJMNOHO.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EKLDBJMNOHO> aeonList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EKLDBJMNOHO>();
+    public const int AeonListFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.INIBDHGOMEP> _repeated_aeonList_codec
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.INIBDHGOMEP.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.INIBDHGOMEP> aeonList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.INIBDHGOMEP>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EKLDBJMNOHO> AeonList {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.INIBDHGOMEP> AeonList {
       get { return aeonList_; }
     }
 
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      aeonList_.WriteTo(output, _repeated_aeonList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
+      aeonList_.WriteTo(output, _repeated_aeonList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      aeonList_.WriteTo(ref output, _repeated_aeonList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
+      aeonList_.WriteTo(ref output, _repeated_aeonList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
-            aeonList_.AddEntriesFrom(input, _repeated_aeonList_codec);
+          case 48: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 56: {
-            Retcode = input.ReadUInt32();
+          case 82: {
+            aeonList_.AddEntriesFrom(input, _repeated_aeonList_codec);
             break;
           }
         }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
-            aeonList_.AddEntriesFrom(ref input, _repeated_aeonList_codec);
+          case 48: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 56: {
-            Retcode = input.ReadUInt32();
+          case 82: {
+            aeonList_.AddEntriesFrom(ref input, _repeated_aeonList_codec);
             break;
           }
         }

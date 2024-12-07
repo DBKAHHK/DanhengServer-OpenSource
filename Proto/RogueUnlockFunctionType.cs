@@ -24,13 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static RogueUnlockFunctionTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1Sb2d1ZVVubG9ja0Z1bmN0aW9uVHlwZS5wcm90byrvAQoXUm9ndWVVbmxv",
+            "Ch1Sb2d1ZVVubG9ja0Z1bmN0aW9uVHlwZS5wcm90byqdAgoXUm9ndWVVbmxv",
             "Y2tGdW5jdGlvblR5cGUSJgoiUk9HVUVfVU5MT0NLX0ZVTkNUSU9OX1RZUEVf",
             "TUlSQUNMRRAAEigKJFJPR1VFX1VOTE9DS19GVU5DVElPTl9UWVBFX1NIT1df",
             "SElOVBABEi4KKlJPR1VFX1VOTE9DS19GVU5DVElPTl9UWVBFX0NPU01PU19C",
             "QU5fQUVPThACEigKJFJPR1VFX1VOTE9DS19GVU5USU9OX1RZUEVfRVhISUJJ",
             "VElPThADEigKJFJPR1VFX1VOTE9DS19GVU5USU9OX1RZUEVfQ09MTEVDVElP",
-            "ThAEQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ThAEEiwKKFJPR1VFX1VOTE9DS19GVU5USU9OX1RZUEVfVE9VUk5fR09EX01P",
+            "REUQBUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.RogueUnlockFunctionType), }, null, null));
@@ -45,6 +46,7 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("ROGUE_UNLOCK_FUNCTION_TYPE_COSMOS_BAN_AEON")] CosmosBanAeon = 2,
     [pbr::OriginalName("ROGUE_UNLOCK_FUNTION_TYPE_EXHIBITION")] RogueUnlockFuntionTypeExhibition = 3,
     [pbr::OriginalName("ROGUE_UNLOCK_FUNTION_TYPE_COLLECTION")] RogueUnlockFuntionTypeCollection = 4,
+    [pbr::OriginalName("ROGUE_UNLOCK_FUNTION_TYPE_TOURN_GOD_MODE")] RogueUnlockFuntionTypeTournGodMode = 5,
   }
 
   #endregion

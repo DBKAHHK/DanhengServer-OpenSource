@@ -26,15 +26,15 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiBSb2d1ZVdvcmtiZW5jaEdldEluZm9TY1JzcC5wcm90bxoXV29ya2JlbmNo",
             "RnVuY0luZm8ucHJvdG8iugEKGlJvZ3VlV29ya2JlbmNoR2V0SW5mb1NjUnNw",
-            "EkMKDWZ1bmNfaW5mb19tYXAYByADKAsyLC5Sb2d1ZVdvcmtiZW5jaEdldElu",
-            "Zm9TY1JzcC5GdW5jSW5mb01hcEVudHJ5Eg8KB3JldGNvZGUYAyABKA0aRgoQ",
+            "Eg8KB3JldGNvZGUYCSABKA0SQwoNZnVuY19pbmZvX21hcBgGIAMoCzIsLlJv",
+            "Z3VlV29ya2JlbmNoR2V0SW5mb1NjUnNwLkZ1bmNJbmZvTWFwRW50cnkaRgoQ",
             "RnVuY0luZm9NYXBFbnRyeRILCgNrZXkYASABKA0SIQoFdmFsdWUYAiABKAsy",
             "Ei5Xb3JrYmVuY2hGdW5jSW5mbzoCOAFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.WorkbenchFuncInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueWorkbenchGetInfoScRsp), global::EggLink.DanhengServer.Proto.RogueWorkbenchGetInfoScRsp.Parser, new[]{ "FuncInfoMap", "Retcode" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueWorkbenchGetInfoScRsp), global::EggLink.DanhengServer.Proto.RogueWorkbenchGetInfoScRsp.Parser, new[]{ "Retcode", "FuncInfoMap" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -76,8 +76,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueWorkbenchGetInfoScRsp(RogueWorkbenchGetInfoScRsp other) : this() {
-      funcInfoMap_ = other.funcInfoMap_.Clone();
       retcode_ = other.retcode_;
+      funcInfoMap_ = other.funcInfoMap_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,19 +87,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueWorkbenchGetInfoScRsp(this);
     }
 
-    /// <summary>Field number for the "func_info_map" field.</summary>
-    public const int FuncInfoMapFieldNumber = 7;
-    private static readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo>.Codec _map_funcInfoMap_codec
-        = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo.Parser), 58);
-    private readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo> funcInfoMap_ = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<uint, global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo> FuncInfoMap {
-      get { return funcInfoMap_; }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 3;
+    public const int RetcodeFieldNumber = 9;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -108,6 +97,17 @@ namespace EggLink.DanhengServer.Proto {
       set {
         retcode_ = value;
       }
+    }
+
+    /// <summary>Field number for the "func_info_map" field.</summary>
+    public const int FuncInfoMapFieldNumber = 6;
+    private static readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo>.Codec _map_funcInfoMap_codec
+        = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo.Parser), 50);
+    private readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo> funcInfoMap_ = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<uint, global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo> FuncInfoMap {
+      get { return funcInfoMap_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -125,8 +125,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!FuncInfoMap.Equals(other.FuncInfoMap)) return false;
       if (Retcode != other.Retcode) return false;
+      if (!FuncInfoMap.Equals(other.FuncInfoMap)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -134,8 +134,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= FuncInfoMap.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      hash ^= FuncInfoMap.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -154,11 +154,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      funcInfoMap_.WriteTo(output, _map_funcInfoMap_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
       }
-      funcInfoMap_.WriteTo(output, _map_funcInfoMap_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -169,11 +169,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      funcInfoMap_.WriteTo(ref output, _map_funcInfoMap_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
       }
-      funcInfoMap_.WriteTo(ref output, _map_funcInfoMap_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -184,10 +184,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += funcInfoMap_.CalculateSize(_map_funcInfoMap_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
+      size += funcInfoMap_.CalculateSize(_map_funcInfoMap_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -200,10 +200,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      funcInfoMap_.MergeFrom(other.funcInfoMap_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
+      funcInfoMap_.MergeFrom(other.funcInfoMap_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -219,12 +219,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            Retcode = input.ReadUInt32();
+          case 50: {
+            funcInfoMap_.AddEntriesFrom(input, _map_funcInfoMap_codec);
             break;
           }
-          case 58: {
-            funcInfoMap_.AddEntriesFrom(input, _map_funcInfoMap_codec);
+          case 72: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -242,12 +242,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            Retcode = input.ReadUInt32();
+          case 50: {
+            funcInfoMap_.AddEntriesFrom(ref input, _map_funcInfoMap_codec);
             break;
           }
-          case 58: {
-            funcInfoMap_.AddEntriesFrom(ref input, _map_funcInfoMap_codec);
+          case 72: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

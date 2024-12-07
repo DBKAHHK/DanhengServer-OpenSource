@@ -26,14 +26,14 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNDaGFuZ2VTdG9yeUxpbmVGaW5pc2hTY05vdGlmeS5wcm90bxobQ2hhbmdl",
             "U3RvcnlMaW5lQWN0aW9uLnByb3RvIowBCh1DaGFuZ2VTdG9yeUxpbmVGaW5p",
-            "c2hTY05vdGlmeRITCgtOQkJMUEtBT0pBTRgNIAEoDRIZChFjdXJfc3Rvcnlf",
-            "bGluZV9pZBgLIAEoDRImCgZhY3Rpb24YBSABKA4yFi5DaGFuZ2VTdG9yeUxp",
-            "bmVBY3Rpb24SEwoLTElKT0NDT0ZDREwYDiABKAhCHqoCG0VnZ0xpbmsuRGFu",
+            "c2hTY05vdGlmeRITCgtHQk5JQkRQRktKThgKIAEoCBITCgtDQ0NIRkRQT05O",
+            "ShgEIAEoDRImCgZhY3Rpb24YDSABKA4yFi5DaGFuZ2VTdG9yeUxpbmVBY3Rp",
+            "b24SGQoRY3VyX3N0b3J5X2xpbmVfaWQYCCABKA1CHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChangeStoryLineActionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChangeStoryLineFinishScNotify), global::EggLink.DanhengServer.Proto.ChangeStoryLineFinishScNotify.Parser, new[]{ "NBBLPKAOJAM", "CurStoryLineId", "Action", "LIJOCCOFCDL" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChangeStoryLineFinishScNotify), global::EggLink.DanhengServer.Proto.ChangeStoryLineFinishScNotify.Parser, new[]{ "GBNIBDPFKJN", "CCCHFDPONNJ", "Action", "CurStoryLineId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,10 +75,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChangeStoryLineFinishScNotify(ChangeStoryLineFinishScNotify other) : this() {
-      nBBLPKAOJAM_ = other.nBBLPKAOJAM_;
-      curStoryLineId_ = other.curStoryLineId_;
+      gBNIBDPFKJN_ = other.gBNIBDPFKJN_;
+      cCCHFDPONNJ_ = other.cCCHFDPONNJ_;
       action_ = other.action_;
-      lIJOCCOFCDL_ = other.lIJOCCOFCDL_;
+      curStoryLineId_ = other.curStoryLineId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,32 +88,32 @@ namespace EggLink.DanhengServer.Proto {
       return new ChangeStoryLineFinishScNotify(this);
     }
 
-    /// <summary>Field number for the "NBBLPKAOJAM" field.</summary>
-    public const int NBBLPKAOJAMFieldNumber = 13;
-    private uint nBBLPKAOJAM_;
+    /// <summary>Field number for the "GBNIBDPFKJN" field.</summary>
+    public const int GBNIBDPFKJNFieldNumber = 10;
+    private bool gBNIBDPFKJN_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NBBLPKAOJAM {
-      get { return nBBLPKAOJAM_; }
+    public bool GBNIBDPFKJN {
+      get { return gBNIBDPFKJN_; }
       set {
-        nBBLPKAOJAM_ = value;
+        gBNIBDPFKJN_ = value;
       }
     }
 
-    /// <summary>Field number for the "cur_story_line_id" field.</summary>
-    public const int CurStoryLineIdFieldNumber = 11;
-    private uint curStoryLineId_;
+    /// <summary>Field number for the "CCCHFDPONNJ" field.</summary>
+    public const int CCCHFDPONNJFieldNumber = 4;
+    private uint cCCHFDPONNJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CurStoryLineId {
-      get { return curStoryLineId_; }
+    public uint CCCHFDPONNJ {
+      get { return cCCHFDPONNJ_; }
       set {
-        curStoryLineId_ = value;
+        cCCHFDPONNJ_ = value;
       }
     }
 
     /// <summary>Field number for the "action" field.</summary>
-    public const int ActionFieldNumber = 5;
+    public const int ActionFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.ChangeStoryLineAction action_ = global::EggLink.DanhengServer.Proto.ChangeStoryLineAction.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -124,15 +124,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "LIJOCCOFCDL" field.</summary>
-    public const int LIJOCCOFCDLFieldNumber = 14;
-    private bool lIJOCCOFCDL_;
+    /// <summary>Field number for the "cur_story_line_id" field.</summary>
+    public const int CurStoryLineIdFieldNumber = 8;
+    private uint curStoryLineId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool LIJOCCOFCDL {
-      get { return lIJOCCOFCDL_; }
+    public uint CurStoryLineId {
+      get { return curStoryLineId_; }
       set {
-        lIJOCCOFCDL_ = value;
+        curStoryLineId_ = value;
       }
     }
 
@@ -151,10 +151,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (NBBLPKAOJAM != other.NBBLPKAOJAM) return false;
-      if (CurStoryLineId != other.CurStoryLineId) return false;
+      if (GBNIBDPFKJN != other.GBNIBDPFKJN) return false;
+      if (CCCHFDPONNJ != other.CCCHFDPONNJ) return false;
       if (Action != other.Action) return false;
-      if (LIJOCCOFCDL != other.LIJOCCOFCDL) return false;
+      if (CurStoryLineId != other.CurStoryLineId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -162,10 +162,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (NBBLPKAOJAM != 0) hash ^= NBBLPKAOJAM.GetHashCode();
-      if (CurStoryLineId != 0) hash ^= CurStoryLineId.GetHashCode();
+      if (GBNIBDPFKJN != false) hash ^= GBNIBDPFKJN.GetHashCode();
+      if (CCCHFDPONNJ != 0) hash ^= CCCHFDPONNJ.GetHashCode();
       if (Action != global::EggLink.DanhengServer.Proto.ChangeStoryLineAction.None) hash ^= Action.GetHashCode();
-      if (LIJOCCOFCDL != false) hash ^= LIJOCCOFCDL.GetHashCode();
+      if (CurStoryLineId != 0) hash ^= CurStoryLineId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -184,21 +184,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Action != global::EggLink.DanhengServer.Proto.ChangeStoryLineAction.None) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) Action);
+      if (CCCHFDPONNJ != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(CCCHFDPONNJ);
       }
       if (CurStoryLineId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(64);
         output.WriteUInt32(CurStoryLineId);
       }
-      if (NBBLPKAOJAM != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(NBBLPKAOJAM);
+      if (GBNIBDPFKJN != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(GBNIBDPFKJN);
       }
-      if (LIJOCCOFCDL != false) {
-        output.WriteRawTag(112);
-        output.WriteBool(LIJOCCOFCDL);
+      if (Action != global::EggLink.DanhengServer.Proto.ChangeStoryLineAction.None) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) Action);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -210,21 +210,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Action != global::EggLink.DanhengServer.Proto.ChangeStoryLineAction.None) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) Action);
+      if (CCCHFDPONNJ != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(CCCHFDPONNJ);
       }
       if (CurStoryLineId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(64);
         output.WriteUInt32(CurStoryLineId);
       }
-      if (NBBLPKAOJAM != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(NBBLPKAOJAM);
+      if (GBNIBDPFKJN != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(GBNIBDPFKJN);
       }
-      if (LIJOCCOFCDL != false) {
-        output.WriteRawTag(112);
-        output.WriteBool(LIJOCCOFCDL);
+      if (Action != global::EggLink.DanhengServer.Proto.ChangeStoryLineAction.None) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) Action);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -236,17 +236,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (NBBLPKAOJAM != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NBBLPKAOJAM);
+      if (GBNIBDPFKJN != false) {
+        size += 1 + 1;
       }
-      if (CurStoryLineId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurStoryLineId);
+      if (CCCHFDPONNJ != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CCCHFDPONNJ);
       }
       if (Action != global::EggLink.DanhengServer.Proto.ChangeStoryLineAction.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Action);
       }
-      if (LIJOCCOFCDL != false) {
-        size += 1 + 1;
+      if (CurStoryLineId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurStoryLineId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -260,17 +260,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.NBBLPKAOJAM != 0) {
-        NBBLPKAOJAM = other.NBBLPKAOJAM;
+      if (other.GBNIBDPFKJN != false) {
+        GBNIBDPFKJN = other.GBNIBDPFKJN;
       }
-      if (other.CurStoryLineId != 0) {
-        CurStoryLineId = other.CurStoryLineId;
+      if (other.CCCHFDPONNJ != 0) {
+        CCCHFDPONNJ = other.CCCHFDPONNJ;
       }
       if (other.Action != global::EggLink.DanhengServer.Proto.ChangeStoryLineAction.None) {
         Action = other.Action;
       }
-      if (other.LIJOCCOFCDL != false) {
-        LIJOCCOFCDL = other.LIJOCCOFCDL;
+      if (other.CurStoryLineId != 0) {
+        CurStoryLineId = other.CurStoryLineId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -287,20 +287,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            Action = (global::EggLink.DanhengServer.Proto.ChangeStoryLineAction) input.ReadEnum();
+          case 32: {
+            CCCHFDPONNJ = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 64: {
             CurStoryLineId = input.ReadUInt32();
             break;
           }
-          case 104: {
-            NBBLPKAOJAM = input.ReadUInt32();
+          case 80: {
+            GBNIBDPFKJN = input.ReadBool();
             break;
           }
-          case 112: {
-            LIJOCCOFCDL = input.ReadBool();
+          case 104: {
+            Action = (global::EggLink.DanhengServer.Proto.ChangeStoryLineAction) input.ReadEnum();
             break;
           }
         }
@@ -318,20 +318,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            Action = (global::EggLink.DanhengServer.Proto.ChangeStoryLineAction) input.ReadEnum();
+          case 32: {
+            CCCHFDPONNJ = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 64: {
             CurStoryLineId = input.ReadUInt32();
             break;
           }
-          case 104: {
-            NBBLPKAOJAM = input.ReadUInt32();
+          case 80: {
+            GBNIBDPFKJN = input.ReadBool();
             break;
           }
-          case 112: {
-            LIJOCCOFCDL = input.ReadBool();
+          case 104: {
+            Action = (global::EggLink.DanhengServer.Proto.ChangeStoryLineAction) input.ReadEnum();
             break;
           }
         }
