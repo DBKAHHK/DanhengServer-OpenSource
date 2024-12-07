@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static RogueMagicGameLevelInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1Sb2d1ZU1hZ2ljR2FtZUxldmVsSW5mby5wcm90bxobUm9ndWVNYWdpY0xl",
-            "dmVsU3RhdHVzLnByb3RvGhxSb2d1ZU1hZ2ljU2V0dGxlUmVhc29uLnByb3Rv",
-            "GhlSb2d1ZU1hZ2ljTGF5ZXJJbmZvLnByb3RvIuIBChdSb2d1ZU1hZ2ljR2Ft",
+            "Ch1Sb2d1ZU1hZ2ljR2FtZUxldmVsSW5mby5wcm90bxoZUm9ndWVNYWdpY0xh",
+            "eWVySW5mby5wcm90bxobUm9ndWVNYWdpY0xldmVsU3RhdHVzLnByb3RvGhxS",
+            "b2d1ZU1hZ2ljU2V0dGxlUmVhc29uLnByb3RvIuIBChdSb2d1ZU1hZ2ljR2Ft",
             "ZUxldmVsSW5mbxItCg9sZXZlbF9pbmZvX2xpc3QYDSADKAsyFC5Sb2d1ZU1h",
             "Z2ljTGF5ZXJJbmZvEhcKD2N1cl9sZXZlbF9pbmRleBgCIAEoDRIZChFleHRy",
             "YV9yb3VuZF9saW1pdBgOIAEoDRImCgZzdGF0dXMYASABKA4yFi5Sb2d1ZU1h",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "dHRsZVJlYXNvbhITCgtERUNLQUlMTUdFShgKIAEoDUIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicLevelStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicSettleReasonReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicLayerInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicLayerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicLevelStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicSettleReasonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicGameLevelInfo), global::EggLink.DanhengServer.Proto.RogueMagicGameLevelInfo.Parser, new[]{ "LevelInfoList", "CurLevelIndex", "ExtraRoundLimit", "Status", "Reason", "DECKAILMGEJ" }, null, null, null, null)
           }));

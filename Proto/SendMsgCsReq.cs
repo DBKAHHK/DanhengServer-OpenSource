@@ -24,7 +24,7 @@ namespace EggLink.DanhengServer.Proto {
     static SendMsgCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJTZW5kTXNnQ3NSZXEucHJvdG8aDkNoYXRUeXBlLnByb3RvGg1Nc2dUeXBl",
+            "ChJTZW5kTXNnQ3NSZXEucHJvdG8aDU1zZ1R5cGUucHJvdG8aDkNoYXRUeXBl",
             "LnByb3RvGhFNTk1FQkRGQUpKUC5wcm90byKsAQoMU2VuZE1zZ0NzUmVxEhAK",
             "CGV4dHJhX2lkGAsgASgNEhQKDG1lc3NhZ2VfdGV4dBgIIAEoCRITCgt0YXJn",
             "ZXRfbGlzdBgGIAMoDRIcCgljaGF0X3R5cGUYASABKA4yCS5DaGF0VHlwZRIe",
@@ -32,7 +32,7 @@ namespace EggLink.DanhengServer.Proto {
             "GAcgASgLMgwuTU5NRUJERkFKSlBCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChatTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.MsgTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.MNMEBDFAJJPReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MsgTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChatTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.MNMEBDFAJJPReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SendMsgCsReq), global::EggLink.DanhengServer.Proto.SendMsgCsReq.Parser, new[]{ "ExtraId", "MessageText", "TargetList", "ChatType", "MessageType", "OHINLDBELBA" }, null, null, null, null)
           }));

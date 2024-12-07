@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CihUcmFpblBhcnR5SGFuZGxlUGVuZGluZ0FjdGlvblNjUnNwLnByb3RvGhFK",
-            "SUFES09GSEhKTS5wcm90bxoRQ0tDTkVHSEFNR00ucHJvdG8aEUpHTkhGSkFH",
-            "SEtBLnByb3RvGhFKTkpLTUJJR01QRS5wcm90byKFAgoiVHJhaW5QYXJ0eUhh",
+            "R05IRkpBR0hLQS5wcm90bxoRSk5KS01CSUdNUEUucHJvdG8aEUNLQ05FR0hB",
+            "TUdNLnByb3RvGhFKSUFES09GSEhKTS5wcm90byKFAgoiVHJhaW5QYXJ0eUhh",
             "bmRsZVBlbmRpbmdBY3Rpb25TY1JzcBITCgtMRkpMSEpIUExHSRgDIAEoCBIh",
             "CgtLSUxIT0tOSEhCRBgNIAEoCzIMLkpOSktNQklHTVBFEhYKDnF1ZXVlX3Bv",
             "c2l0aW9uGAQgASgNEg8KB3JldGNvZGUYBiABKA0SJAoLS1BQRkNIR0RPREwY",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "SEFNR01IAEINCgtFR01CTFBKR0lDTUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JIADKOFHHJMReflection.Descriptor, global::EggLink.DanhengServer.Proto.CKCNEGHAMGMReflection.Descriptor, global::EggLink.DanhengServer.Proto.JGNHFJAGHKAReflection.Descriptor, global::EggLink.DanhengServer.Proto.JNJKMBIGMPEReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JGNHFJAGHKAReflection.Descriptor, global::EggLink.DanhengServer.Proto.JNJKMBIGMPEReflection.Descriptor, global::EggLink.DanhengServer.Proto.CKCNEGHAMGMReflection.Descriptor, global::EggLink.DanhengServer.Proto.JIADKOFHHJMReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyHandlePendingActionScRsp), global::EggLink.DanhengServer.Proto.TrainPartyHandlePendingActionScRsp.Parser, new[]{ "LFJLHJHPLGI", "KILHOKNHHBD", "QueuePosition", "Retcode", "KPPFCHGDODL", "LFCEFFHMLIG", "KIBAIMIKFED" }, new[]{ "EGMBLPJGICM" }, null, null, null)
           }));

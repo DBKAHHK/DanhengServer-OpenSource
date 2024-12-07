@@ -26,9 +26,9 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChpSb2d1ZVNjb3JlUmV3YXJkSW5mby5wcm90byLPAQoUUm9ndWVTY29yZVJl",
             "d2FyZEluZm8SFgoOcG9vbF9yZWZyZXNoZWQYDCABKAgSHwoXaGFzX3Rha2Vu",
-            "X2luaXRpYWxfc2NvcmUYBCABKAgSGQoRcmV3YXJkX2JlZ2luX3RpbWUYBSAB",
+            "X2luaXRpYWxfc2NvcmUYBCABKAgSGQoRcmV3YXJkX2JlZ2luX3RpbWUYASAB",
             "KAMSDwoHcG9vbF9pZBgDIAEoDRIVCg1leHBsb3JlX3Njb3JlGAcgASgNEhcK",
-            "D3Jld2FyZF9lbmRfdGltZRgBIAEoAxIiChp0YWtlbl9ub3JtYWxfZnJlZV9y",
+            "D3Jld2FyZF9lbmRfdGltZRgFIAEoAxIiChp0YWtlbl9ub3JtYWxfZnJlZV9y",
             "b3dfbGlzdBgGIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -93,7 +93,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "pool_refreshed" field.</summary>
-    public const int PoolRefreshedFieldNumber = 4;
+    public const int PoolRefreshedFieldNumber = 12;
     private bool poolRefreshed_;
     /// <summary>
     /// 4
@@ -108,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "has_taken_initial_score" field.</summary>
-    public const int HasTakenInitialScoreFieldNumber = 12;
+    public const int HasTakenInitialScoreFieldNumber = 4;
     private bool hasTakenInitialScore_;
     /// <summary>
     /// 12
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "reward_begin_time" field.</summary>
-    public const int RewardBeginTimeFieldNumber = 5;
+    public const int RewardBeginTimeFieldNumber = 1;
     private long rewardBeginTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -159,7 +159,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "reward_end_time" field.</summary>
-    public const int RewardEndTimeFieldNumber = 1;
+    public const int RewardEndTimeFieldNumber = 5;
     private long rewardEndTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -235,9 +235,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (RewardEndTime != 0L) {
+      if (RewardBeginTime != 0L) {
         output.WriteRawTag(8);
-        output.WriteInt64(RewardEndTime);
+        output.WriteInt64(RewardBeginTime);
       }
       if (PoolId != 0) {
         output.WriteRawTag(24);
@@ -247,9 +247,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteBool(HasTakenInitialScore);
       }
-      if (RewardBeginTime != 0L) {
+      if (RewardEndTime != 0L) {
         output.WriteRawTag(40);
-        output.WriteInt64(RewardBeginTime);
+        output.WriteInt64(RewardEndTime);
       }
       takenNormalFreeRowList_.WriteTo(output, _repeated_takenNormalFreeRowList_codec);
       if (ExploreScore != 0) {
@@ -270,9 +270,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (RewardEndTime != 0L) {
+      if (RewardBeginTime != 0L) {
         output.WriteRawTag(8);
-        output.WriteInt64(RewardEndTime);
+        output.WriteInt64(RewardBeginTime);
       }
       if (PoolId != 0) {
         output.WriteRawTag(24);
@@ -282,9 +282,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteBool(HasTakenInitialScore);
       }
-      if (RewardBeginTime != 0L) {
+      if (RewardEndTime != 0L) {
         output.WriteRawTag(40);
-        output.WriteInt64(RewardBeginTime);
+        output.WriteInt64(RewardEndTime);
       }
       takenNormalFreeRowList_.WriteTo(ref output, _repeated_takenNormalFreeRowList_codec);
       if (ExploreScore != 0) {
@@ -371,7 +371,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            RewardEndTime = input.ReadInt64();
+            RewardBeginTime = input.ReadInt64();
             break;
           }
           case 24: {
@@ -383,7 +383,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            RewardBeginTime = input.ReadInt64();
+            RewardEndTime = input.ReadInt64();
             break;
           }
           case 50:
@@ -415,7 +415,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            RewardEndTime = input.ReadInt64();
+            RewardBeginTime = input.ReadInt64();
             break;
           }
           case 24: {
@@ -427,7 +427,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            RewardBeginTime = input.ReadInt64();
+            RewardEndTime = input.ReadInt64();
             break;
           }
           case 50:

@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdHZXRDcm9zc0luZm9TY1JzcC5wcm90bxoTRmlnaHRHYW1lTW9kZS5wcm90",
-            "byJvChFHZXRDcm9zc0luZm9TY1JzcBIjCgtESk5FTEFCRkpMRhgHIAEoDjIO",
-            "LkZpZ2h0R2FtZU1vZGUSDwoHcmV0Y29kZRgJIAEoDRIPCgdyb29tX2lkGAwg",
-            "ASgEEhMKC0FHRk5CSUxNTkZDGAIgASgEQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
-            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "byJzChFHZXRDcm9zc0luZm9TY1JzcBInCg9maWdodF9nYW1lX21vZGUYByAB",
+            "KA4yDi5GaWdodEdhbWVNb2RlEg8KB3JldGNvZGUYCSABKA0SDwoHcm9vbV9p",
+            "ZBgMIAEoBBITCgtBR0ZOQklMTU5GQxgCIAEoBEIeqgIbRWdnTGluay5EYW5o",
+            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FightGameModeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetCrossInfoScRsp), global::EggLink.DanhengServer.Proto.GetCrossInfoScRsp.Parser, new[]{ "DJNELABFJLF", "Retcode", "RoomId", "AGFNBILMNFC" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetCrossInfoScRsp), global::EggLink.DanhengServer.Proto.GetCrossInfoScRsp.Parser, new[]{ "FightGameMode", "Retcode", "RoomId", "AGFNBILMNFC" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetCrossInfoScRsp(GetCrossInfoScRsp other) : this() {
-      dJNELABFJLF_ = other.dJNELABFJLF_;
+      fightGameMode_ = other.fightGameMode_;
       retcode_ = other.retcode_;
       roomId_ = other.roomId_;
       aGFNBILMNFC_ = other.aGFNBILMNFC_;
@@ -87,15 +87,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GetCrossInfoScRsp(this);
     }
 
-    /// <summary>Field number for the "DJNELABFJLF" field.</summary>
-    public const int DJNELABFJLFFieldNumber = 7;
-    private global::EggLink.DanhengServer.Proto.FightGameMode dJNELABFJLF_ = global::EggLink.DanhengServer.Proto.FightGameMode.None;
+    /// <summary>Field number for the "fight_game_mode" field.</summary>
+    public const int FightGameModeFieldNumber = 7;
+    private global::EggLink.DanhengServer.Proto.FightGameMode fightGameMode_ = global::EggLink.DanhengServer.Proto.FightGameMode.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.FightGameMode DJNELABFJLF {
-      get { return dJNELABFJLF_; }
+    public global::EggLink.DanhengServer.Proto.FightGameMode FightGameMode {
+      get { return fightGameMode_; }
       set {
-        dJNELABFJLF_ = value;
+        fightGameMode_ = value;
       }
     }
 
@@ -150,7 +150,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DJNELABFJLF != other.DJNELABFJLF) return false;
+      if (FightGameMode != other.FightGameMode) return false;
       if (Retcode != other.Retcode) return false;
       if (RoomId != other.RoomId) return false;
       if (AGFNBILMNFC != other.AGFNBILMNFC) return false;
@@ -161,7 +161,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (DJNELABFJLF != global::EggLink.DanhengServer.Proto.FightGameMode.None) hash ^= DJNELABFJLF.GetHashCode();
+      if (FightGameMode != global::EggLink.DanhengServer.Proto.FightGameMode.None) hash ^= FightGameMode.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (RoomId != 0UL) hash ^= RoomId.GetHashCode();
       if (AGFNBILMNFC != 0UL) hash ^= AGFNBILMNFC.GetHashCode();
@@ -187,9 +187,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt64(AGFNBILMNFC);
       }
-      if (DJNELABFJLF != global::EggLink.DanhengServer.Proto.FightGameMode.None) {
+      if (FightGameMode != global::EggLink.DanhengServer.Proto.FightGameMode.None) {
         output.WriteRawTag(56);
-        output.WriteEnum((int) DJNELABFJLF);
+        output.WriteEnum((int) FightGameMode);
       }
       if (Retcode != 0) {
         output.WriteRawTag(72);
@@ -213,9 +213,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt64(AGFNBILMNFC);
       }
-      if (DJNELABFJLF != global::EggLink.DanhengServer.Proto.FightGameMode.None) {
+      if (FightGameMode != global::EggLink.DanhengServer.Proto.FightGameMode.None) {
         output.WriteRawTag(56);
-        output.WriteEnum((int) DJNELABFJLF);
+        output.WriteEnum((int) FightGameMode);
       }
       if (Retcode != 0) {
         output.WriteRawTag(72);
@@ -235,8 +235,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (DJNELABFJLF != global::EggLink.DanhengServer.Proto.FightGameMode.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DJNELABFJLF);
+      if (FightGameMode != global::EggLink.DanhengServer.Proto.FightGameMode.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) FightGameMode);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
@@ -259,8 +259,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.DJNELABFJLF != global::EggLink.DanhengServer.Proto.FightGameMode.None) {
-        DJNELABFJLF = other.DJNELABFJLF;
+      if (other.FightGameMode != global::EggLink.DanhengServer.Proto.FightGameMode.None) {
+        FightGameMode = other.FightGameMode;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
@@ -291,7 +291,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 56: {
-            DJNELABFJLF = (global::EggLink.DanhengServer.Proto.FightGameMode) input.ReadEnum();
+            FightGameMode = (global::EggLink.DanhengServer.Proto.FightGameMode) input.ReadEnum();
             break;
           }
           case 72: {
@@ -322,7 +322,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 56: {
-            DJNELABFJLF = (global::EggLink.DanhengServer.Proto.FightGameMode) input.ReadEnum();
+            FightGameMode = (global::EggLink.DanhengServer.Proto.FightGameMode) input.ReadEnum();
             break;
           }
           case 72: {

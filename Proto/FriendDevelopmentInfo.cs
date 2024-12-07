@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static FriendDevelopmentInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtGcmllbmREZXZlbG9wbWVudEluZm8ucHJvdG8aEUtGRkZMSkhJRk5BLnBy",
-            "b3RvGhFMQUNFS05LR0JMRC5wcm90bxoVRGV2ZWxvcG1lbnRUeXBlLnByb3Rv",
-            "GhFPSk5BSEtQS1BDRC5wcm90byKoAgoVRnJpZW5kRGV2ZWxvcG1lbnRJbmZv",
+            "ChtGcmllbmREZXZlbG9wbWVudEluZm8ucHJvdG8aEU9KTkFIS1BLUENELnBy",
+            "b3RvGhFMQUNFS05LR0JMRC5wcm90bxoRS0ZGRkxKSElGTkEucHJvdG8aFURl",
+            "dmVsb3BtZW50VHlwZS5wcm90byKoAgoVRnJpZW5kRGV2ZWxvcG1lbnRJbmZv",
             "EgwKBHRpbWUYBSABKAMSJQoLSUxJUE5LTEdDTUIYDyABKA4yEC5EZXZlbG9w",
             "bWVudFR5cGUSJAoLRUdLQkFIQ0tQSUkYwg0gASgLMgwuT0pOQUhLUEtQQ0RI",
             "ABIkCgtGTkdDSElJS0lHThjcCiABKAsyDC5MQUNFS05LR0JMREgAEhQKCWF2",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "RkZGTEpISUZOQUgAEhMKCHBhbmVsX2lkGKMIIAEoDUgAQg0KC0tMTk5QUFBD",
             "Q0pMQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KFFFLJHIFNAReflection.Descriptor, global::EggLink.DanhengServer.Proto.LACEKNKGBLDReflection.Descriptor, global::EggLink.DanhengServer.Proto.DevelopmentTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.OJNAHKPKPCDReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OJNAHKPKPCDReflection.Descriptor, global::EggLink.DanhengServer.Proto.LACEKNKGBLDReflection.Descriptor, global::EggLink.DanhengServer.Proto.KFFFLJHIFNAReflection.Descriptor, global::EggLink.DanhengServer.Proto.DevelopmentTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FriendDevelopmentInfo), global::EggLink.DanhengServer.Proto.FriendDevelopmentInfo.Parser, new[]{ "Time", "ILIPNKLGCMB", "EGKBAHCKPII", "FNGCHIIKIGN", "AvatarId", "DCMFEJJJFIA", "BBLHFLGOCOJ", "BPGFFNCJMGD", "PanelId" }, new[]{ "KLNNPPPCCJL" }, null, null, null)
           }));
