@@ -2,6 +2,7 @@
 
 public enum MissionFinishTypeEnum
 {
+
     Unknown = 0,
     AutoFinish = 1,
     Talk = 2,
@@ -562,6 +563,7 @@ public enum MissionFinishTypeEnum
     MusicRhythmFinishAllLevel = 260032,
     MusicRhythmFinishAnyLevel = 260033,
     RogueMagicFinishExtraLayerWithDifficulty = 260034,
+    RogueMagicPassAreaCnt = 260035,
     TrainPartyBuildStepFinish = 270000,
     TrainPartyBuildAreaUnlock = 270001,
     TrainPartyBuildRoomLevel = 270002,
