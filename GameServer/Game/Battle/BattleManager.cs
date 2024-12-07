@@ -245,15 +245,14 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
         Player.SceneInstance?.ClearSummonUnit();
     }
 
-    public async ValueTask StartCocoonStage(int cocoonId, int wave, int worldLevel)
+    public async ValueTask<BattleInstance?> StartCocoonStage(int cocoonId, int wave, int worldLevel)
     {
-        if (Player.BattleInstance != null) return;
+        if (Player.BattleInstance != null) return null;
 
         GameData.CocoonConfigData.TryGetValue(cocoonId * 100 + worldLevel, out var config);
         if (config == null)
         {
-            await Player.SendPacket(new PacketStartCocoonStageScRsp());
-            return;
+            return null;
         }
 
         wave = Math.Min(Math.Max(wave, 1), config.MaxWave);
@@ -261,8 +260,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
         var cost = config.StaminaCost * wave;
         if (Player.Data.Stamina < cost)
         {
-            await Player.SendPacket(new PacketStartCocoonStageScRsp());
-            return;
+            return null;
         }
 
         List<StageConfigExcel> stageConfigExcels = [];
@@ -277,8 +275,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
 
         if (stageConfigExcels.Count == 0)
         {
-            await Player.SendPacket(new PacketStartCocoonStageScRsp());
-            return;
+            return null;
         }
 
         BattleInstance battleInstance = new(Player, Player.LineupManager!.GetCurLineup()!, stageConfigExcels)
@@ -299,9 +296,8 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
         Player.QuestManager!.OnBattleStart(battleInstance);
 
         InvokeOnPlayerEnterBattle(Player, battleInstance);
-
-        await Player.SendPacket(new PacketStartCocoonStageScRsp(battleInstance, cocoonId, wave));
-        Player.SceneInstance?.ClearSummonUnit();
+        await ValueTask.CompletedTask;
+        return battleInstance;
     }
 
     public (Retcode, BattleInstance?) StartBattleCollege(int collegeId)
