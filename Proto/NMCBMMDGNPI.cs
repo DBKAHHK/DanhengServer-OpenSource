@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static NMCBMMDGNPIReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFOTUNCTU1ER05QSS5wcm90bxoZQ2hhbGxlbmdlU3RhdGlzdGljcy5wcm90",
-            "bxodQ2hhbGxlbmdlQm9zc1N0YXRpc3RpY3MucHJvdG8aHkNoYWxsZW5nZVN0",
-            "b3J5U3RhdGlzdGljcy5wcm90byLjAQoLTk1DQk1NREdOUEkSEAoIZ3JvdXBf",
+            "ChFOTUNCTU1ER05QSS5wcm90bxoeQ2hhbGxlbmdlU3RvcnlTdGF0aXN0aWNz",
+            "LnByb3RvGhlDaGFsbGVuZ2VTdGF0aXN0aWNzLnByb3RvGh1DaGFsbGVuZ2VC",
+            "b3NzU3RhdGlzdGljcy5wcm90byLjAQoLTk1DQk1NREdOUEkSEAoIZ3JvdXBf",
             "aWQYDiABKA0SEwoLREtKQkRDSkpKRUgYAyABKA0SMgoRY2hhbGxlbmdlX2Rl",
             "ZmF1bHQYgAsgASgLMhQuQ2hhbGxlbmdlU3RhdGlzdGljc0gAEjUKD2NoYWxs",
             "ZW5nZV9zdG9yeRjdCiABKAsyGS5DaGFsbGVuZ2VTdG9yeVN0YXRpc3RpY3NI",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "dGlzdGljc0gAQg0KC0RKQ0hPQkdLTUtEQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeBossStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStoryStatisticsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeStoryStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeBossStatisticsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NMCBMMDGNPI), global::EggLink.DanhengServer.Proto.NMCBMMDGNPI.Parser, new[]{ "GroupId", "DKJBDCJJJEH", "ChallengeDefault", "ChallengeStory", "ChallengeBoss" }, new[]{ "DJCHOBGKMKD" }, null, null, null)
           }));

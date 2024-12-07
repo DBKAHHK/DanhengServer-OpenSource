@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CihUcmFpblBhcnR5SGFuZGxlUGVuZGluZ0FjdGlvbkNzUmVxLnByb3RvGhFJ",
-            "S0hQR0ZQQkNLSy5wcm90bxoiVHJhaW5QYXJ0eUV2ZW50UGVuZGluZ0FjdGlv",
-            "bi5wcm90bxoRQU1LR0JMSktGS0MucHJvdG8aEUZPT0NGT0RORkhGLnByb3Rv",
+            "S0hQR0ZQQkNLSy5wcm90bxoRRk9PQ0ZPRE5GSEYucHJvdG8aEUFNS0dCTEpL",
+            "RktDLnByb3RvGiJUcmFpblBhcnR5RXZlbnRQZW5kaW5nQWN0aW9uLnByb3Rv",
             "IvoBCiJUcmFpblBhcnR5SGFuZGxlUGVuZGluZ0FjdGlvbkNzUmVxEhYKDnF1",
             "ZXVlX3Bvc2l0aW9uGAQgASgNEjsKEXRyYWluX3BhcnR5X2V2ZW50GIEIIAEo",
             "CzIdLlRyYWluUGFydHlFdmVudFBlbmRpbmdBY3Rpb25IABIkCgtJS0dBSkJK",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "Rk9PQ0ZPRE5GSEZIAEINCgtMR0ZNREpQT0tBTEIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IKHPGFPBCKKReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyEventPendingActionReflection.Descriptor, global::EggLink.DanhengServer.Proto.AMKGBLJKFKCReflection.Descriptor, global::EggLink.DanhengServer.Proto.FOOCFODNFHFReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IKHPGFPBCKKReflection.Descriptor, global::EggLink.DanhengServer.Proto.FOOCFODNFHFReflection.Descriptor, global::EggLink.DanhengServer.Proto.AMKGBLJKFKCReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyEventPendingActionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyHandlePendingActionCsReq), global::EggLink.DanhengServer.Proto.TrainPartyHandlePendingActionCsReq.Parser, new[]{ "QueuePosition", "TrainPartyEvent", "IKGAJBJEJMA", "LJEMHHCEKOJ", "KDMEMGMAHCG" }, new[]{ "LGFMDJPOKAL" }, null, null, null)
           }));

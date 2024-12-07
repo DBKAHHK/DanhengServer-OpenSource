@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static TrainPartyGameInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhUcmFpblBhcnR5R2FtZUluZm8ucHJvdG8aGlRyYWluUGFydHlBY3Rpb25J",
-            "bmZvLnByb3RvGiFUcmFpblBhcnR5R2FtZVBhc3NlbmdlckluZm8ucHJvdG8a",
-            "HFRyYWluUGFydHlHYW1lSXRlbUluZm8ucHJvdG8aHFRyYWluUGFydHlHYW1l",
-            "R3JpZEluZm8ucHJvdG8igwIKElRyYWluUGFydHlHYW1lSW5mbxI2ChV0cmFp",
+            "ChhUcmFpblBhcnR5R2FtZUluZm8ucHJvdG8aHFRyYWluUGFydHlHYW1lSXRl",
+            "bUluZm8ucHJvdG8aHFRyYWluUGFydHlHYW1lR3JpZEluZm8ucHJvdG8aGlRy",
+            "YWluUGFydHlBY3Rpb25JbmZvLnByb3RvGiFUcmFpblBhcnR5R2FtZVBhc3Nl",
+            "bmdlckluZm8ucHJvdG8igwIKElRyYWluUGFydHlHYW1lSW5mbxI2ChV0cmFp",
             "bl9wYXJ0eV9pdGVtX2luZm8YDiABKAsyFy5UcmFpblBhcnR5R2FtZUl0ZW1J",
             "bmZvEjoKFHRyYWluX3Bhc3Nlbmdlcl9pbmZvGA0gASgLMhwuVHJhaW5QYXJ0",
             "eUdhbWVQYXNzZW5nZXJJbmZvEg8KB3RlYW1faWQYDCABKA0SMAoRdHJhaW5f",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "aWRJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyGamePassengerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyGameItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyGameGridInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyGameItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyGameGridInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyGamePassengerInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyGameInfo), global::EggLink.DanhengServer.Proto.TrainPartyGameInfo.Parser, new[]{ "TrainPartyItemInfo", "TrainPassengerInfo", "TeamId", "TrainActionInfo", "TrainPartyGridInfo" }, null, null, null, null)
           }));

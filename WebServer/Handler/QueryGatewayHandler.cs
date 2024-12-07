@@ -29,7 +29,8 @@ internal class QueryGatewayHandler
             EnableWatermark = true,
             EnableAndroidMiddlePackage = true,
             NetworkDiagnostic = true,
-            CloseRedeemCode = true
+            CloseRedeemCode = true,
+            HMAOHIGCMOC = true
         };
         if (ConfigManager.Config.GameServer.UsePacketEncryption)
             gateServer.ClientSecretKey = Convert.ToBase64String(Crypto.ClientSecretKey!.GetBytes());

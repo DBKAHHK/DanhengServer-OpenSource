@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static ChessRogueAreaInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhDaGVzc1JvZ3VlQXJlYUluZm8ucHJvdG8aEVBIQk1BSlBDTkxCLnByb3Rv",
-            "Gh9DaGVzc1JvZ3VlSGlzdG9yeUNlbGxJbmZvLnByb3RvGg5DZWxsSW5mby5w",
-            "cm90bxofQ2hlc3NSb2d1ZUJvYXJkQ2VsbFN0YXR1cy5wcm90byL9AQoSQ2hl",
+            "ChhDaGVzc1JvZ3VlQXJlYUluZm8ucHJvdG8aDkNlbGxJbmZvLnByb3RvGh9D",
+            "aGVzc1JvZ3VlQm9hcmRDZWxsU3RhdHVzLnByb3RvGh9DaGVzc1JvZ3VlSGlz",
+            "dG9yeUNlbGxJbmZvLnByb3RvGhFQSEJNQUpQQ05MQi5wcm90byL9AQoSQ2hl",
             "c3NSb2d1ZUFyZWFJbmZvEiEKC0dPSUdESUNHTE5NGA8gASgLMgwuUEhCTUFK",
             "UENOTEISIQoZYWxsb3dfc2VsZWN0X2NlbGxfaWRfbGlzdBgDIAMoDRIOCgZj",
             "dXJfaWQYByABKA0SMAoMbGF5ZXJfc3RhdHVzGAogASgOMhouQ2hlc3NSb2d1",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "CgRjZWxsGAIgASgLMgkuQ2VsbEluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PHBMAJPCNLBReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueHistoryCellInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CellInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CellInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueHistoryCellInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PHBMAJPCNLBReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueAreaInfo), global::EggLink.DanhengServer.Proto.ChessRogueAreaInfo.Parser, new[]{ "GOIGDICGLNM", "AllowSelectCellIdList", "CurId", "LayerStatus", "HistoryCell", "CurBoardId", "Cell" }, null, null, null, null)
           }));

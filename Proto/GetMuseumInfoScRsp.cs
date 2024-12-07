@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static GetMuseumInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhHZXRNdXNldW1JbmZvU2NSc3AucHJvdG8aEU5LTUpDTU1ESEhKLnByb3Rv",
-            "GhFCSkRBQVBPQVBBSS5wcm90bxoRSk9PTEFET0dIR0UucHJvdG8aEUlHUEZO",
+            "ChhHZXRNdXNldW1JbmZvU2NSc3AucHJvdG8aEUJKREFBUE9BUEFJLnByb3Rv",
+            "GhFOS01KQ01NREhISi5wcm90bxoRSk9PTEFET0dIR0UucHJvdG8aEUlHUEZO",
             "SEtITVBLLnByb3RvItwCChJHZXRNdXNldW1JbmZvU2NSc3ASEwoLRkJDSEtM",
             "TkdKRk0YBCADKA0SEwoLRUhNSVBITk5GTUsYASADKA0SEwoLRk5NSkpNQlBD",
             "SkYYCyABKA0SEwoLRklIUEdFRUhNTUIYDCABKA0SIQoLREFDSE1FQ0pQRUkY",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "cmV0Y29kZRgGIAEoDRIhCgtFQ0hJRElERUNDRxgCIAMoCzIMLkpPT0xBRE9H",
             "SEdFQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NKMJCMMDHHJReflection.Descriptor, global::EggLink.DanhengServer.Proto.BJDAAPOAPAIReflection.Descriptor, global::EggLink.DanhengServer.Proto.JOOLADOGHGEReflection.Descriptor, global::EggLink.DanhengServer.Proto.IGPFNHKHMPKReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BJDAAPOAPAIReflection.Descriptor, global::EggLink.DanhengServer.Proto.NKMJCMMDHHJReflection.Descriptor, global::EggLink.DanhengServer.Proto.JOOLADOGHGEReflection.Descriptor, global::EggLink.DanhengServer.Proto.IGPFNHKHMPKReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMuseumInfoScRsp), global::EggLink.DanhengServer.Proto.GetMuseumInfoScRsp.Parser, new[]{ "FBCHKLNGJFM", "EHMIPHNNFMK", "FNMJJMBPCJF", "FIHPGEEHMMB", "DACHMECJPEI", "Exp", "OAPJALCOECF", "GCNMIIFKHGI", "CoinCost", "MOCHEECBDIJ", "Level", "AreaList", "Retcode", "ECHIDIDECCG" }, null, null, null, null)
           }));
