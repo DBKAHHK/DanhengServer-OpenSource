@@ -1,7 +1,4 @@
-﻿using EggLink.DanhengServer.Data;
-using EggLink.DanhengServer.Database.Inventory;
-using EggLink.DanhengServer.Internationalization;
-using EggLink.DanhengServer.Util;
+﻿using EggLink.DanhengServer.Internationalization;
 
 namespace EggLink.DanhengServer.Command.Command.Cmd;
 
@@ -24,128 +21,61 @@ public class CommandRelic : ICommand
             return;
         }
 
+        // Parse character
         arg.CharacterArgs.TryGetValue("x", out var str);
         arg.CharacterArgs.TryGetValue("l", out var levelStr);
         str ??= "1";
-        levelStr ??= "1";
+        levelStr ??= "0";
         if (!int.TryParse(str, out var amount) || !int.TryParse(levelStr, out var level))
         {
             await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.InvalidArguments"));
             return;
         }
 
-        GameData.RelicConfigData.TryGetValue(int.Parse(arg.BasicArgs[0]), out var itemConfig);
-        GameData.ItemConfigData.TryGetValue(int.Parse(arg.BasicArgs[0]), out var itemConfigExcel);
-        if (itemConfig == null || itemConfigExcel == null)
-        {
-            await arg.SendMsg(I18NManager.Translate("Game.Command.Relic.RelicNotFound"));
-            return;
-        }
-
-        GameData.RelicSubAffixData.TryGetValue(itemConfig.SubAffixGroup, out var subAffixConfig);
-        GameData.RelicMainAffixData.TryGetValue(itemConfig.MainAffixGroup, out var mainAffixConfig);
-        if (subAffixConfig == null || mainAffixConfig == null)
-        {
-            await arg.SendMsg(I18NManager.Translate("Game.Command.Relic.RelicNotFound"));
-            return;
-        }
-
+        // Parse main affix
         var startIndex = 1;
-        int mainAffixId;
-        if (arg.BasicArgs[1].Contains(':'))
-        {
-            // random main affix
-            mainAffixId = mainAffixConfig.Keys.ToList().RandomElement();
-        }
-        else
+        var mainAffixId = 0;
+        if (!arg.BasicArgs[1].Contains(':'))
         {
             mainAffixId = int.Parse(arg.BasicArgs[1]);
-            if (!mainAffixConfig.ContainsKey(mainAffixId))
-            {
-                await arg.SendMsg(I18NManager.Translate("Game.Command.Relic.InvalidMainAffixId"));
-                return;
-            }
-
             startIndex++;
         }
 
-        var mainAffixGroup = itemConfig.MainAffixGroup;
-        var mainAffixGroupConfig = GameData.RelicMainAffixData[mainAffixGroup];
-        var mainProperty = mainAffixGroupConfig[mainAffixId].Property;
+        // Parse sub affixes
+        var subAffixes = new List<(int, int)>();
+        for (var ii = startIndex; ii < arg.BasicArgs.Count; ii++)
+        {
+            var subAffix = arg.BasicArgs[ii].Split(':');
+            if (subAffix.Length != 2 || !int.TryParse(subAffix[0], out var subId) ||
+                !int.TryParse(subAffix[1], out var subLevel))
+            {
+                await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.InvalidArguments"));
+                return;
+            }
+            subAffixes.Add((subId, subLevel));
+        }
 
         for (var i = 0; i < amount; i++)
         {
-            var remainLevel = 5;
-            var subAffixes = new List<(int, int)>();
+            (var ret, var _) = await player.InventoryManager!.HandleRelic(
+                int.Parse(arg.BasicArgs[0]), ++player.InventoryManager!.Data.NextUniqueId,
+                level, mainAffixId, subAffixes);
 
-            for (var ii = startIndex; ii < arg.BasicArgs.Count; ii++)
+            switch (ret)
             {
-                var subAffix = arg.BasicArgs[ii].Split(':');
-                if (subAffix.Length != 2 || !int.TryParse(subAffix[0], out var subId) ||
-                    !int.TryParse(subAffix[1], out var subLevel))
-                {
-                    await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.InvalidArguments"));
+                case 1:
+                    await arg.SendMsg(I18NManager.Translate("Game.Command.Relic.RelicNotFound"));
                     return;
-                }
-
-                if (!subAffixConfig.ContainsKey(subId))
-                {
+                case 2:
+                    await arg.SendMsg(I18NManager.Translate("Game.Command.Relic.InvalidMainAffixId"));
+                    return;
+                case 3:
                     await arg.SendMsg(I18NManager.Translate("Game.Command.Relic.InvalidSubAffixId"));
                     return;
-                }
-
-                subAffixes.Add((subId, subLevel));
-                remainLevel -= subLevel - 1;
             }
-
-            if (subAffixes.Count < 4)
-            {
-                // random sub affix
-                var subAffixGroup = itemConfig.SubAffixGroup;
-                var subAffixGroupConfig = GameData.RelicSubAffixData[subAffixGroup];
-                var subAffixGroupKeys = subAffixGroupConfig.Keys.ToList();
-                while (subAffixes.Count < 4)
-                {
-                    var subId = subAffixGroupKeys.RandomElement();
-                    if (subAffixes.Any(x => x.Item1 == subId)) continue;
-                    if (subAffixGroupConfig[subId] != null &&
-                        subAffixGroupConfig[subId].Property == mainProperty) continue;
-
-                    if (remainLevel <= 0)
-                    {
-                        subAffixes.Add((subId, 1));
-                    }
-                    else
-                    {
-                        var subLevel = Random.Shared.Next(1, Math.Min(remainLevel + 1, 5)) + 1;
-                        subAffixes.Add((subId, subLevel));
-                        remainLevel -= subLevel - 1;
-                    }
-                }
-            }
-
-            var itemData = new ItemData
-            {
-                ItemId = int.Parse(arg.BasicArgs[0]),
-                Level = Math.Max(Math.Min(level, 9999), 1),
-                UniqueId = ++player.InventoryManager!.Data.NextUniqueId,
-                MainAffix = mainAffixId,
-                Count = 1
-            };
-
-            foreach (var (subId, subLevel) in subAffixes)
-            {
-                subAffixConfig.TryGetValue(subId, out var subAffix);
-                var aff = new ItemSubAffix(subAffix!, 1);
-                for (var iii = 1; iii < subLevel; iii++) aff.IncreaseStep(subAffix!.StepNum);
-                itemData.SubAffixes.Add(aff);
-            }
-
-            await player.InventoryManager!.AddItem(itemData, false);
         }
 
-
         await arg.SendMsg(I18NManager.Translate("Game.Command.Relic.RelicGiven", player.Uid.ToString(),
-            amount.ToString(), itemConfigExcel.Name ?? arg.BasicArgs[0], mainAffixId.ToString()));
+            amount.ToString(), arg.BasicArgs[0], mainAffixId.ToString()));
     }
 }

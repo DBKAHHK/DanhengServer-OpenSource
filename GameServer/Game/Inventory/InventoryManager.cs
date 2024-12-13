@@ -504,15 +504,155 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         return items;
     }
 
-    public async ValueTask<ItemData?> ComposeItem(int composeId, int count)
+    public async ValueTask<(int, ItemData?)> HandleRelic(
+        int relicId, int uniqueId, int level, int mainAffixId = 0, List<(int, int)>? subAffixes = null)
     {
+        subAffixes ??= [];
+        GameData.RelicConfigData.TryGetValue(relicId, out var itemConfig);
+        GameData.ItemConfigData.TryGetValue(relicId, out var itemConfigExcel);
+        if (itemConfig == null || itemConfigExcel == null)
+            return (1, null);
+
+        GameData.RelicSubAffixData.TryGetValue(itemConfig.SubAffixGroup, out var subAffixConfig);
+        GameData.RelicMainAffixData.TryGetValue(itemConfig.MainAffixGroup, out var mainAffixConfig);
+        if (subAffixConfig == null || mainAffixConfig == null)
+            return (1, null);
+
+        var startIndex = 1;
+        if (mainAffixId == 0)
+            mainAffixId = mainAffixConfig.Keys.ToList().RandomElement();
+        else
+        {
+            if (!mainAffixConfig.ContainsKey(mainAffixId))
+                return (2, null);
+            startIndex++;
+        }
+
+        var mainAffixGroup = itemConfig.MainAffixGroup;
+        var mainAffixGroupConfig = GameData.RelicMainAffixData[mainAffixGroup];
+        string? mainProperty = mainAffixGroupConfig[mainAffixId].Property;
+
+        var remainLevel = 5;
+        foreach (var (subId, subLevel) in subAffixes)
+        {
+            if (!subAffixConfig.ContainsKey(subId))
+                return (3, null);
+            remainLevel -= subLevel - 1;
+        }
+
+        if (subAffixes.Count < 4)
+        {
+            var subAffixGroup = itemConfig.SubAffixGroup;
+            var subAffixGroupConfig = GameData.RelicSubAffixData[subAffixGroup];
+            var subAffixGroupKeys = subAffixGroupConfig.Keys.ToList();
+            while (subAffixes.Count < 4)
+            {
+                var subId = subAffixGroupKeys.RandomElement();
+                if (subAffixes.Any(x => x.Item1 == subId)) continue;
+                if (subAffixGroupConfig[subId] != null && subAffixGroupConfig[subId].Property == mainProperty) continue;
+
+                if (remainLevel <= 0)
+                    subAffixes.Add((subId, 1));
+                else
+                {
+                    var subLevel = Random.Shared.Next(1, Math.Min(remainLevel + 1, 5)) + 1;
+                    subAffixes.Add((subId, subLevel));
+                    remainLevel -= subLevel - 1;
+                }
+            }
+        }
+
+        var itemData = new ItemData
+        {
+            ItemId = relicId,
+            Level = Math.Max(Math.Min(level, 9999), 0),
+            UniqueId = uniqueId,
+            MainAffix = mainAffixId,
+            Count = 1
+        };
+
+        foreach (var (subId, subLevel) in subAffixes)
+        {
+            subAffixConfig.TryGetValue(subId, out var subAffix);
+            var aff = new ItemSubAffix(subAffix!, 1);
+            for (var i = 1; i < subLevel; i++) aff.IncreaseStep(subAffix!.StepNum);
+            itemData.SubAffixes.Add(aff);
+        }
+
+        await Player.InventoryManager!.AddItem(itemData, false);
+        return (0, itemData);
+    }
+
+    public async ValueTask<ItemData?> ComposeItem(int composeId, int count, List<ItemCost> costData)
+    {
+        // Cost items in req
+        foreach (var cost in costData)
+            await RemoveItem((int)cost.PileItem.ItemId, (int)cost.PileItem.ItemNum);
+
+        // Cost items in excel
         GameData.ItemComposeConfigData.TryGetValue(composeId, out var composeConfig);
         if (composeConfig == null) return null;
-        foreach (var cost in composeConfig.MaterialCost) await RemoveItem(cost.ItemID, cost.ItemNum * count);
+        foreach (var cost in composeConfig.MaterialCost)
+            await RemoveItem(cost.ItemID, cost.ItemNum * count);
 
         await RemoveItem(2, composeConfig.CoinCost * count);
 
         return await AddItem(composeConfig.ItemID, count, false);
+    }
+
+    public async ValueTask<ItemData?> ComposeRelic(ComposeSelectedRelicCsReq req)
+    {
+        // Cost items in req
+        if (req.ComposeItemList != null)
+            foreach (var cost in req.ComposeItemList.ItemList)
+                await RemoveItem((int)cost.PileItem.ItemId, (int)cost.PileItem.ItemNum);
+        if (req.ComposeItemSubList != null)
+            foreach (var subCost in req.ComposeItemSubList.ItemList)
+                await RemoveItem((int)subCost.PileItem.ItemId, (int)subCost.PileItem.ItemNum);
+
+        // Cost items in excel
+        GameData.ItemComposeConfigData.TryGetValue((int)req.ComposeId, out var composeConfig);
+        if (composeConfig == null) return null;
+        foreach (var cost in composeConfig.MaterialCost)
+            await RemoveItem(cost.ItemID, (int)(cost.ItemNum * req.Count));
+
+        await RemoveItem(2, (int)(composeConfig.CoinCost * req.Count));
+
+        // Add relic
+        var subAffixes = new List<(int, int)>();
+        foreach (var subId in req.SubAffixIdList)
+            subAffixes.Add(((int)subId, 1));
+
+        (var _, var relic) = await HandleRelic(
+            (int)req.TargetRelic, ++Data.NextUniqueId, 0, (int)req.MainAffixId, subAffixes);
+
+        return relic;
+    }
+
+    public async ValueTask ReforgeRelic(int uniqueId)
+    {
+        var relic = Data.RelicItems.FirstOrDefault(x => x.UniqueId == uniqueId);
+        await RemoveItem(relic!.ItemId, 1, uniqueId, false);
+
+        var totalCount = 0;
+        var subAffixes = new List<(int, int)>();
+        foreach (var sub in relic.SubAffixes)
+        {
+            totalCount += sub.Count;
+            subAffixes.Add((sub.Id, 0));
+        }
+
+        var remainCount = totalCount;
+        for (var i = 0; i < subAffixes.Count - 1; i++)
+        {
+            var count = new Random().Next(1, remainCount - (subAffixes.Count - i - 1));
+            subAffixes[i] = (subAffixes[i].Item1, count);
+            remainCount -= count;
+        }
+        subAffixes[^1] = (subAffixes[^1].Item1, remainCount);
+
+        await HandleRelic(relic.ItemId, uniqueId, relic.Level, relic.MainAffix, subAffixes);
+        await RemoveItem(238, 1);
     }
 
     public async ValueTask<List<ItemData>> SellItem(ItemCostData costData)
