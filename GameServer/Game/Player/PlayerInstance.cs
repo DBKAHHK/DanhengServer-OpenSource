@@ -33,6 +33,7 @@ using EggLink.DanhengServer.GameServer.Game.Task;
 using EggLink.DanhengServer.GameServer.Game.TrainParty;
 using EggLink.DanhengServer.GameServer.Server;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.MarkChest;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.PlayerSync;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
@@ -457,6 +458,21 @@ public class PlayerInstance(PlayerData data)
                     var items = DropService.CalculateDropsFromProp(prop.PropInfo.ChestID);
                     await InventoryManager!.AddItems(items);
                     await SendPacket(new PacketOpenChestScNotify(prop.PropInfo.ChestID));
+
+                    var notifyMark = false;
+                    foreach (var markedChest in SceneData!.MarkedChestData.Values)
+                    {
+                        var chest = markedChest.Find(x =>
+                            x.FloorId == SceneInstance.FloorId && x.GroupId == prop.GroupID &&
+                            x.ConfigId == prop.PropInfo.ID);
+
+                        if (chest == null) continue;
+                        markedChest.Remove(chest);
+                        notifyMark = true;
+                    }
+
+                    if (notifyMark)
+                        await SendPacket(new PacketMarkChestChangedScNotify(this));
                 }
 
                 break;

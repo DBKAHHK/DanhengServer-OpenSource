@@ -13,13 +13,7 @@ public class HandlerUpdateMarkChestCsReq : Handler
         var req = UpdateMarkChestCsReq.Parser.ParseFrom(data);
         var player = connection.Player!;
 
-        if (!player.SceneData!.MarkedChestData.TryGetValue((int)req.FuncId, out var markedChestData))
-        {
-            markedChestData = [];
-            player.SceneData!.MarkedChestData[(int)req.FuncId] = markedChestData;
-        }
-
-        markedChestData.Clear();  // update instead of appending
+        List<SceneMarkedChestData> markedChestData = [];
 
         foreach (var markChestInfo in req.MarkChestInfoList)
         {
@@ -31,6 +25,8 @@ public class HandlerUpdateMarkChestCsReq : Handler
                 PlaneId = (int)markChestInfo.PlaneId
             });
         }
+
+        player.SceneData!.MarkedChestData[(int)req.FuncId] = markedChestData;
 
         await connection.SendPacket(new PacketUpdateMarkChestScRsp(req.FuncId, player));
     }
