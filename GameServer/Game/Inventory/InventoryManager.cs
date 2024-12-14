@@ -707,7 +707,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
     {
         GameData.ItemConfigData.TryGetValue(itemId, out var itemConfig);
         if (itemConfig == null) return (Retcode.RetItemNotExist, null);
-        var dataId = itemConfig.UseDataID;
+        var dataId = itemConfig.ID;
         GameData.ItemUseBuffDataData.TryGetValue(dataId, out var useConfig);
         if (useConfig == null) return (Retcode.RetItemUseConfigNotExist, null);
 
