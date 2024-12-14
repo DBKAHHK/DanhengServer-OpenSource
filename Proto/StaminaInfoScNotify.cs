@@ -113,9 +113,6 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Field number for the "next_recover_time" field.</summary>
     public const int NextRecoverTimeFieldNumber = 7;
     private long nextRecoverTime_;
-    /// <summary>
-    /// 6
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long NextRecoverTime {

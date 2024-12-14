@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdDaGFsbGVuZ2VCb3NzSW5mby5wcm90bxoiQ2hhbGxlbmdlQm9zc0F2YXRh",
-            "clJlbGljSW5mby5wcm90bxohQ2hhbGxlbmdlQm9zc1NpbmdsZU5vZGVJbmZv",
-            "LnByb3RvGiBDaGFsbGVuZ2VCb3NzRXF1aXBtZW50SW5mby5wcm90byKsBAoR",
+            "clJlbGljSW5mby5wcm90bxogQ2hhbGxlbmdlQm9zc0VxdWlwbWVudEluZm8u",
+            "cHJvdG8aIUNoYWxsZW5nZUJvc3NTaW5nbGVOb2RlSW5mby5wcm90byKsBAoR",
             "Q2hhbGxlbmdlQm9zc0luZm8SMQoLc2Vjb25kX25vZGUYAiABKAsyHC5DaGFs",
             "bGVuZ2VCb3NzU2luZ2xlTm9kZUluZm8SMAoKZmlyc3Rfbm9kZRgOIAEoCzIc",
             "LkNoYWxsZW5nZUJvc3NTaW5nbGVOb2RlSW5mbxIVCg1zZWNvbmRfbGluZXVw",
@@ -42,7 +42,7 @@ namespace EggLink.DanhengServer.Proto {
             "clJlbGljSW5mbzoCOAFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeBossAvatarRelicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeBossSingleNodeInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeBossEquipmentInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeBossAvatarRelicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeBossEquipmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeBossSingleNodeInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeBossInfo), global::EggLink.DanhengServer.Proto.ChallengeBossInfo.Parser, new[]{ "SecondNode", "FirstNode", "SecondLineup", "FirstLineup", "ChallengeAvatarEquipmentMap", "ChallengeAvatarRelicMap", "NJKCJBLOIBK" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));

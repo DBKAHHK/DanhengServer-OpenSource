@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNSb2d1ZVdvcmtiZW5jaEhhbmRsZUZ1bmNTY1JzcC5wcm90bxoXV29ya2Jl",
-            "bmNoRnVuY0luZm8ucHJvdG8ieQodUm9ndWVXb3JrYmVuY2hIYW5kbGVGdW5j",
+            "bmNoRnVuY0luZm8ucHJvdG8ibwodUm9ndWVXb3JrYmVuY2hIYW5kbGVGdW5j",
             "U2NSc3ASLAoQdGFyZ2V0X2Z1bmNfaW5mbxgJIAEoCzISLldvcmtiZW5jaEZ1",
-            "bmNJbmZvEhkKEXdvcmtiZW5jaF9mdW5jX2lkGAEgASgNEg8KB3JldGNvZGUY",
-            "BSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "bmNJbmZvEg8KB2Z1bmNfaWQYASABKA0SDwoHcmV0Y29kZRgFIAEoDUIeqgIb",
+            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.WorkbenchFuncInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueWorkbenchHandleFuncScRsp), global::EggLink.DanhengServer.Proto.RogueWorkbenchHandleFuncScRsp.Parser, new[]{ "TargetFuncInfo", "WorkbenchFuncId", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueWorkbenchHandleFuncScRsp), global::EggLink.DanhengServer.Proto.RogueWorkbenchHandleFuncScRsp.Parser, new[]{ "TargetFuncInfo", "FuncId", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueWorkbenchHandleFuncScRsp(RogueWorkbenchHandleFuncScRsp other) : this() {
       targetFuncInfo_ = other.targetFuncInfo_ != null ? other.targetFuncInfo_.Clone() : null;
-      workbenchFuncId_ = other.workbenchFuncId_;
+      funcId_ = other.funcId_;
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -98,15 +98,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "workbench_func_id" field.</summary>
-    public const int WorkbenchFuncIdFieldNumber = 1;
-    private uint workbenchFuncId_;
+    /// <summary>Field number for the "func_id" field.</summary>
+    public const int FuncIdFieldNumber = 1;
+    private uint funcId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint WorkbenchFuncId {
-      get { return workbenchFuncId_; }
+    public uint FuncId {
+      get { return funcId_; }
       set {
-        workbenchFuncId_ = value;
+        funcId_ = value;
       }
     }
 
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(TargetFuncInfo, other.TargetFuncInfo)) return false;
-      if (WorkbenchFuncId != other.WorkbenchFuncId) return false;
+      if (FuncId != other.FuncId) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -148,7 +148,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (targetFuncInfo_ != null) hash ^= TargetFuncInfo.GetHashCode();
-      if (WorkbenchFuncId != 0) hash ^= WorkbenchFuncId.GetHashCode();
+      if (FuncId != 0) hash ^= FuncId.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -168,9 +168,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (WorkbenchFuncId != 0) {
+      if (FuncId != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(WorkbenchFuncId);
+        output.WriteUInt32(FuncId);
       }
       if (Retcode != 0) {
         output.WriteRawTag(40);
@@ -190,9 +190,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (WorkbenchFuncId != 0) {
+      if (FuncId != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(WorkbenchFuncId);
+        output.WriteUInt32(FuncId);
       }
       if (Retcode != 0) {
         output.WriteRawTag(40);
@@ -215,8 +215,8 @@ namespace EggLink.DanhengServer.Proto {
       if (targetFuncInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TargetFuncInfo);
       }
-      if (WorkbenchFuncId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorkbenchFuncId);
+      if (FuncId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FuncId);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
@@ -239,8 +239,8 @@ namespace EggLink.DanhengServer.Proto {
         }
         TargetFuncInfo.MergeFrom(other.TargetFuncInfo);
       }
-      if (other.WorkbenchFuncId != 0) {
-        WorkbenchFuncId = other.WorkbenchFuncId;
+      if (other.FuncId != 0) {
+        FuncId = other.FuncId;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
@@ -261,7 +261,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            WorkbenchFuncId = input.ReadUInt32();
+            FuncId = input.ReadUInt32();
             break;
           }
           case 40: {
@@ -291,7 +291,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            WorkbenchFuncId = input.ReadUInt32();
+            FuncId = input.ReadUInt32();
             break;
           }
           case 40: {

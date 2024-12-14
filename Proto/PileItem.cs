@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static PileItemReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg5QaWxlSXRlbS5wcm90byIrCghQaWxlSXRlbRIPCgdJdGVtTnVtGA8gASgN",
-            "Eg4KBkl0ZW1JZBgMIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
-            "b3RvYgZwcm90bzM="));
+            "Cg5QaWxlSXRlbS5wcm90byItCghQaWxlSXRlbRIQCghpdGVtX251bRgPIAEo",
+            "DRIPCgdpdGVtX2lkGAwgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
       return new PileItem(this);
     }
 
-    /// <summary>Field number for the "ItemNum" field.</summary>
+    /// <summary>Field number for the "item_num" field.</summary>
     public const int ItemNumFieldNumber = 15;
     private uint itemNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -95,7 +95,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ItemId" field.</summary>
+    /// <summary>Field number for the "item_id" field.</summary>
     public const int ItemIdFieldNumber = 12;
     private uint itemId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

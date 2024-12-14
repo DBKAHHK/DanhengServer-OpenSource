@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static RelicReforgeConfirmCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5SZWxpY1JlZm9yZ2VDb25maXJtQ3NSZXEucHJvdG8iSAoYUmVsaWNSZWZv",
-            "cmdlQ29uZmlybUNzUmVxEhcKD3JlbGljX3VuaXF1ZV9pZBgNIAEoDRITCgtP",
-            "S1BCRlBJTEZNRBgBIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
-            "b3RvYgZwcm90bzM="));
+            "Ch5SZWxpY1JlZm9yZ2VDb25maXJtQ3NSZXEucHJvdG8iRgoYUmVsaWNSZWZv",
+            "cmdlQ29uZmlybUNzUmVxEhcKD3JlbGljX3VuaXF1ZV9pZBgNIAEoDRIRCglp",
+            "c19yZWNhbGwYASABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RelicReforgeConfirmCsReq), global::EggLink.DanhengServer.Proto.RelicReforgeConfirmCsReq.Parser, new[]{ "RelicUniqueId", "OKPBFPILFMD" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RelicReforgeConfirmCsReq), global::EggLink.DanhengServer.Proto.RelicReforgeConfirmCsReq.Parser, new[]{ "RelicUniqueId", "IsRecall" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RelicReforgeConfirmCsReq(RelicReforgeConfirmCsReq other) : this() {
       relicUniqueId_ = other.relicUniqueId_;
-      oKPBFPILFMD_ = other.oKPBFPILFMD_;
+      isRecall_ = other.isRecall_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "OKPBFPILFMD" field.</summary>
-    public const int OKPBFPILFMDFieldNumber = 1;
-    private bool oKPBFPILFMD_;
+    /// <summary>Field number for the "is_recall" field.</summary>
+    public const int IsRecallFieldNumber = 1;
+    private bool isRecall_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool OKPBFPILFMD {
-      get { return oKPBFPILFMD_; }
+    public bool IsRecall {
+      get { return isRecall_; }
       set {
-        oKPBFPILFMD_ = value;
+        isRecall_ = value;
       }
     }
 
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (RelicUniqueId != other.RelicUniqueId) return false;
-      if (OKPBFPILFMD != other.OKPBFPILFMD) return false;
+      if (IsRecall != other.IsRecall) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (RelicUniqueId != 0) hash ^= RelicUniqueId.GetHashCode();
-      if (OKPBFPILFMD != false) hash ^= OKPBFPILFMD.GetHashCode();
+      if (IsRecall != false) hash ^= IsRecall.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,9 +152,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (OKPBFPILFMD != false) {
+      if (IsRecall != false) {
         output.WriteRawTag(8);
-        output.WriteBool(OKPBFPILFMD);
+        output.WriteBool(IsRecall);
       }
       if (RelicUniqueId != 0) {
         output.WriteRawTag(104);
@@ -170,9 +170,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (OKPBFPILFMD != false) {
+      if (IsRecall != false) {
         output.WriteRawTag(8);
-        output.WriteBool(OKPBFPILFMD);
+        output.WriteBool(IsRecall);
       }
       if (RelicUniqueId != 0) {
         output.WriteRawTag(104);
@@ -191,7 +191,7 @@ namespace EggLink.DanhengServer.Proto {
       if (RelicUniqueId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RelicUniqueId);
       }
-      if (OKPBFPILFMD != false) {
+      if (IsRecall != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -209,8 +209,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.RelicUniqueId != 0) {
         RelicUniqueId = other.RelicUniqueId;
       }
-      if (other.OKPBFPILFMD != false) {
-        OKPBFPILFMD = other.OKPBFPILFMD;
+      if (other.IsRecall != false) {
+        IsRecall = other.IsRecall;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -228,7 +228,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            OKPBFPILFMD = input.ReadBool();
+            IsRecall = input.ReadBool();
             break;
           }
           case 104: {
@@ -251,7 +251,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            OKPBFPILFMD = input.ReadBool();
+            IsRecall = input.ReadBool();
             break;
           }
           case 104: {

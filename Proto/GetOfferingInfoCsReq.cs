@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static GetOfferingInfoCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpHZXRPZmZlcmluZ0luZm9Dc1JlcS5wcm90byIrChRHZXRPZmZlcmluZ0lu",
-            "Zm9Dc1JlcRITCgtPS0lLT0NDQ0xCRxgMIAMoDUIeqgIbRWdnTGluay5EYW5o",
-            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChpHZXRPZmZlcmluZ0luZm9Dc1JlcS5wcm90byIwChRHZXRPZmZlcmluZ0lu",
+            "Zm9Dc1JlcRIYChBvZmZlcmluZ19pZF9saXN0GAwgAygNQh6qAhtFZ2dMaW5r",
+            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetOfferingInfoCsReq), global::EggLink.DanhengServer.Proto.GetOfferingInfoCsReq.Parser, new[]{ "OKIKOCCCLBG" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetOfferingInfoCsReq), global::EggLink.DanhengServer.Proto.GetOfferingInfoCsReq.Parser, new[]{ "OfferingIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetOfferingInfoCsReq(GetOfferingInfoCsReq other) : this() {
-      oKIKOCCCLBG_ = other.oKIKOCCCLBG_.Clone();
+      offeringIdList_ = other.offeringIdList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GetOfferingInfoCsReq(this);
     }
 
-    /// <summary>Field number for the "OKIKOCCCLBG" field.</summary>
-    public const int OKIKOCCCLBGFieldNumber = 12;
-    private static readonly pb::FieldCodec<uint> _repeated_oKIKOCCCLBG_codec
+    /// <summary>Field number for the "offering_id_list" field.</summary>
+    public const int OfferingIdListFieldNumber = 12;
+    private static readonly pb::FieldCodec<uint> _repeated_offeringIdList_codec
         = pb::FieldCodec.ForUInt32(98);
-    private readonly pbc::RepeatedField<uint> oKIKOCCCLBG_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> offeringIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> OKIKOCCCLBG {
-      get { return oKIKOCCCLBG_; }
+    public pbc::RepeatedField<uint> OfferingIdList {
+      get { return offeringIdList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -108,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!oKIKOCCCLBG_.Equals(other.oKIKOCCCLBG_)) return false;
+      if(!offeringIdList_.Equals(other.offeringIdList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -116,7 +116,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= oKIKOCCCLBG_.GetHashCode();
+      hash ^= offeringIdList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -135,7 +135,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      oKIKOCCCLBG_.WriteTo(output, _repeated_oKIKOCCCLBG_codec);
+      offeringIdList_.WriteTo(output, _repeated_offeringIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -146,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      oKIKOCCCLBG_.WriteTo(ref output, _repeated_oKIKOCCCLBG_codec);
+      offeringIdList_.WriteTo(ref output, _repeated_offeringIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += oKIKOCCCLBG_.CalculateSize(_repeated_oKIKOCCCLBG_codec);
+      size += offeringIdList_.CalculateSize(_repeated_offeringIdList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -170,7 +170,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      oKIKOCCCLBG_.Add(other.oKIKOCCCLBG_);
+      offeringIdList_.Add(other.offeringIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 98:
           case 96: {
-            oKIKOCCCLBG_.AddEntriesFrom(input, _repeated_oKIKOCCCLBG_codec);
+            offeringIdList_.AddEntriesFrom(input, _repeated_offeringIdList_codec);
             break;
           }
         }
@@ -208,7 +208,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 98:
           case 96: {
-            oKIKOCCCLBG_.AddEntriesFrom(ref input, _repeated_oKIKOCCCLBG_codec);
+            offeringIdList_.AddEntriesFrom(ref input, _repeated_offeringIdList_codec);
             break;
           }
         }

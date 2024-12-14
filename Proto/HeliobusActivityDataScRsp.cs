@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9IZWxpb2J1c0FjdGl2aXR5RGF0YVNjUnNwLnByb3RvGhFOSk9ORkRMTktD",
-            "TS5wcm90bxodSGVsaW9idXNDaGFsbGVuZ2VMaW5ldXAucHJvdG8aE0NoYWxs",
-            "ZW5nZUxpc3QucHJvdG8aEUZISENJRkpPQ0JQLnByb3RvIqUCChlIZWxpb2J1",
+            "TS5wcm90bxoRRkhIQ0lGSk9DQlAucHJvdG8aHUhlbGlvYnVzQ2hhbGxlbmdl",
+            "TGluZXVwLnByb3RvGhNDaGFsbGVuZ2VMaXN0LnByb3RvIqUCChlIZWxpb2J1",
             "c0FjdGl2aXR5RGF0YVNjUnNwEi0KC0JLTEhGTUtFSFBGGA4gAygLMhguSGVs",
             "aW9idXNDaGFsbGVuZ2VMaW5ldXASJgoOY2hhbGxlbmdlX2xpc3QYAiADKAsy",
             "Di5DaGFsbGVuZ2VMaXN0Eg8KB3JldGNvZGUYASABKA0SEwoLTE1CUEtFT0JN",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "MgwuRkhIQ0lGSk9DQlBCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NJONFDLNKCMReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeliobusChallengeLineupReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeListReflection.Descriptor, global::EggLink.DanhengServer.Proto.FHHCIFJOCBPReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NJONFDLNKCMReflection.Descriptor, global::EggLink.DanhengServer.Proto.FHHCIFJOCBPReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeliobusChallengeLineupReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeliobusActivityDataScRsp), global::EggLink.DanhengServer.Proto.HeliobusActivityDataScRsp.Parser, new[]{ "BKLHFMKEHPF", "ChallengeList", "Retcode", "LMBPKEOBMHK", "Phase", "DHGIPOHDOPM", "Level", "KMIOCEODNOM", "SkillInfo", "MCPEJLDGGGH" }, null, null, null, null)
           }));

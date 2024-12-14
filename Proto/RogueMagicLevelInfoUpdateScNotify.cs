@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static RogueMagicLevelInfoUpdateScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CidSb2d1ZU1hZ2ljTGV2ZWxJbmZvVXBkYXRlU2NOb3RpZnkucHJvdG8aG1Jv",
-            "Z3VlTWFnaWNMZXZlbFN0YXR1cy5wcm90bxocUm9ndWVNYWdpY1NldHRsZVJl",
-            "YXNvbi5wcm90bxoZUm9ndWVNYWdpY0xheWVySW5mby5wcm90byLsAQohUm9n",
+            "CidSb2d1ZU1hZ2ljTGV2ZWxJbmZvVXBkYXRlU2NOb3RpZnkucHJvdG8aHFJv",
+            "Z3VlTWFnaWNTZXR0bGVSZWFzb24ucHJvdG8aG1JvZ3VlTWFnaWNMZXZlbFN0",
+            "YXR1cy5wcm90bxoZUm9ndWVNYWdpY0xheWVySW5mby5wcm90byLsAQohUm9n",
             "dWVNYWdpY0xldmVsSW5mb1VwZGF0ZVNjTm90aWZ5EhMKC0pQTkRLRkRHTktL",
             "GAsgASgNEhcKD2N1cl9sZXZlbF9pbmRleBgEIAEoDRItCg9sZXZlbF9pbmZv",
             "X2xpc3QYCCADKAsyFC5Sb2d1ZU1hZ2ljTGF5ZXJJbmZvEicKBnJlYXNvbhgG",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "U3RhdHVzQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicLevelStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicSettleReasonReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicLayerInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicSettleReasonReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicLevelStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicLayerInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicLevelInfoUpdateScNotify), global::EggLink.DanhengServer.Proto.RogueMagicLevelInfoUpdateScNotify.Parser, new[]{ "JPNDKFDGNKK", "CurLevelIndex", "LevelInfoList", "Reason", "ExtraRoundLimit", "Status" }, null, null, null, null)
           }));

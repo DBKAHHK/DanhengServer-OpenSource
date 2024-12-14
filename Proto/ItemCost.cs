@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static ItemCostReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg5JdGVtQ29zdC5wcm90bxoOUGlsZUl0ZW0ucHJvdG8ibAoISXRlbUNvc3QS",
-            "HQoIUGlsZUl0ZW0YCiABKAsyCS5QaWxlSXRlbUgAEhsKEUVxdWlwbWVudFVu",
-            "aXF1ZUlkGAUgASgNSAASFwoNUmVsaWNVbmlxdWVJZBgEIAEoDUgAQgsKCWl0",
-            "ZW1DYXNlX0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
-            "bzM="));
+            "Cg5JdGVtQ29zdC5wcm90bxoOUGlsZUl0ZW0ucHJvdG8idQoISXRlbUNvc3QS",
+            "HgoJcGlsZV9pdGVtGAogASgLMgkuUGlsZUl0ZW1IABIdChNlcXVpcG1lbnRf",
+            "dW5pcXVlX2lkGAUgASgNSAASGQoPcmVsaWNfdW5pcXVlX2lkGAQgASgNSABC",
+            "DwoNSXRlbU9uZW9mQ2FzZUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PileItemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ItemCost), global::EggLink.DanhengServer.Proto.ItemCost.Parser, new[]{ "PileItem", "EquipmentUniqueId", "RelicUniqueId" }, new[]{ "ItemCase" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ItemCost), global::EggLink.DanhengServer.Proto.ItemCost.Parser, new[]{ "PileItem", "EquipmentUniqueId", "RelicUniqueId" }, new[]{ "ItemOneofCase" }, null, null, null)
           }));
     }
     #endregion
@@ -74,14 +74,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ItemCost(ItemCost other) : this() {
-      switch (other.ItemCaseCase) {
-        case ItemCaseOneofCase.PileItem:
+      switch (other.ItemOneofCaseCase) {
+        case ItemOneofCaseOneofCase.PileItem:
           PileItem = other.PileItem.Clone();
           break;
-        case ItemCaseOneofCase.EquipmentUniqueId:
+        case ItemOneofCaseOneofCase.EquipmentUniqueId:
           EquipmentUniqueId = other.EquipmentUniqueId;
           break;
-        case ItemCaseOneofCase.RelicUniqueId:
+        case ItemOneofCaseOneofCase.RelicUniqueId:
           RelicUniqueId = other.RelicUniqueId;
           break;
       }
@@ -95,90 +95,90 @@ namespace EggLink.DanhengServer.Proto {
       return new ItemCost(this);
     }
 
-    /// <summary>Field number for the "PileItem" field.</summary>
+    /// <summary>Field number for the "pile_item" field.</summary>
     public const int PileItemFieldNumber = 10;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.PileItem PileItem {
-      get { return itemCaseCase_ == ItemCaseOneofCase.PileItem ? (global::EggLink.DanhengServer.Proto.PileItem) itemCase_ : null; }
+      get { return itemOneofCaseCase_ == ItemOneofCaseOneofCase.PileItem ? (global::EggLink.DanhengServer.Proto.PileItem) itemOneofCase_ : null; }
       set {
-        itemCase_ = value;
-        itemCaseCase_ = value == null ? ItemCaseOneofCase.None : ItemCaseOneofCase.PileItem;
+        itemOneofCase_ = value;
+        itemOneofCaseCase_ = value == null ? ItemOneofCaseOneofCase.None : ItemOneofCaseOneofCase.PileItem;
       }
     }
 
-    /// <summary>Field number for the "EquipmentUniqueId" field.</summary>
+    /// <summary>Field number for the "equipment_unique_id" field.</summary>
     public const int EquipmentUniqueIdFieldNumber = 5;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint EquipmentUniqueId {
-      get { return HasEquipmentUniqueId ? (uint) itemCase_ : 0; }
+      get { return HasEquipmentUniqueId ? (uint) itemOneofCase_ : 0; }
       set {
-        itemCase_ = value;
-        itemCaseCase_ = ItemCaseOneofCase.EquipmentUniqueId;
+        itemOneofCase_ = value;
+        itemOneofCaseCase_ = ItemOneofCaseOneofCase.EquipmentUniqueId;
       }
     }
-    /// <summary>Gets whether the "EquipmentUniqueId" field is set</summary>
+    /// <summary>Gets whether the "equipment_unique_id" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasEquipmentUniqueId {
-      get { return itemCaseCase_ == ItemCaseOneofCase.EquipmentUniqueId; }
+      get { return itemOneofCaseCase_ == ItemOneofCaseOneofCase.EquipmentUniqueId; }
     }
-    /// <summary> Clears the value of the oneof if it's currently set to "EquipmentUniqueId" </summary>
+    /// <summary> Clears the value of the oneof if it's currently set to "equipment_unique_id" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearEquipmentUniqueId() {
       if (HasEquipmentUniqueId) {
-        ClearItemCase();
+        ClearItemOneofCase();
       }
     }
 
-    /// <summary>Field number for the "RelicUniqueId" field.</summary>
+    /// <summary>Field number for the "relic_unique_id" field.</summary>
     public const int RelicUniqueIdFieldNumber = 4;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint RelicUniqueId {
-      get { return HasRelicUniqueId ? (uint) itemCase_ : 0; }
+      get { return HasRelicUniqueId ? (uint) itemOneofCase_ : 0; }
       set {
-        itemCase_ = value;
-        itemCaseCase_ = ItemCaseOneofCase.RelicUniqueId;
+        itemOneofCase_ = value;
+        itemOneofCaseCase_ = ItemOneofCaseOneofCase.RelicUniqueId;
       }
     }
-    /// <summary>Gets whether the "RelicUniqueId" field is set</summary>
+    /// <summary>Gets whether the "relic_unique_id" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasRelicUniqueId {
-      get { return itemCaseCase_ == ItemCaseOneofCase.RelicUniqueId; }
+      get { return itemOneofCaseCase_ == ItemOneofCaseOneofCase.RelicUniqueId; }
     }
-    /// <summary> Clears the value of the oneof if it's currently set to "RelicUniqueId" </summary>
+    /// <summary> Clears the value of the oneof if it's currently set to "relic_unique_id" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearRelicUniqueId() {
       if (HasRelicUniqueId) {
-        ClearItemCase();
+        ClearItemOneofCase();
       }
     }
 
-    private object itemCase_;
-    /// <summary>Enum of possible cases for the "itemCase_" oneof.</summary>
-    public enum ItemCaseOneofCase {
+    private object itemOneofCase_;
+    /// <summary>Enum of possible cases for the "ItemOneofCase" oneof.</summary>
+    public enum ItemOneofCaseOneofCase {
       None = 0,
       PileItem = 10,
       EquipmentUniqueId = 5,
       RelicUniqueId = 4,
     }
-    private ItemCaseOneofCase itemCaseCase_ = ItemCaseOneofCase.None;
+    private ItemOneofCaseOneofCase itemOneofCaseCase_ = ItemOneofCaseOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ItemCaseOneofCase ItemCaseCase {
-      get { return itemCaseCase_; }
+    public ItemOneofCaseOneofCase ItemOneofCaseCase {
+      get { return itemOneofCaseCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearItemCase() {
-      itemCaseCase_ = ItemCaseOneofCase.None;
-      itemCase_ = null;
+    public void ClearItemOneofCase() {
+      itemOneofCaseCase_ = ItemOneofCaseOneofCase.None;
+      itemOneofCase_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -199,7 +199,7 @@ namespace EggLink.DanhengServer.Proto {
       if (!object.Equals(PileItem, other.PileItem)) return false;
       if (EquipmentUniqueId != other.EquipmentUniqueId) return false;
       if (RelicUniqueId != other.RelicUniqueId) return false;
-      if (ItemCaseCase != other.ItemCaseCase) return false;
+      if (ItemOneofCaseCase != other.ItemOneofCaseCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -207,10 +207,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (itemCaseCase_ == ItemCaseOneofCase.PileItem) hash ^= PileItem.GetHashCode();
+      if (itemOneofCaseCase_ == ItemOneofCaseOneofCase.PileItem) hash ^= PileItem.GetHashCode();
       if (HasEquipmentUniqueId) hash ^= EquipmentUniqueId.GetHashCode();
       if (HasRelicUniqueId) hash ^= RelicUniqueId.GetHashCode();
-      hash ^= (int) itemCaseCase_;
+      hash ^= (int) itemOneofCaseCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -237,7 +237,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteUInt32(EquipmentUniqueId);
       }
-      if (itemCaseCase_ == ItemCaseOneofCase.PileItem) {
+      if (itemOneofCaseCase_ == ItemOneofCaseOneofCase.PileItem) {
         output.WriteRawTag(82);
         output.WriteMessage(PileItem);
       }
@@ -259,7 +259,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteUInt32(EquipmentUniqueId);
       }
-      if (itemCaseCase_ == ItemCaseOneofCase.PileItem) {
+      if (itemOneofCaseCase_ == ItemOneofCaseOneofCase.PileItem) {
         output.WriteRawTag(82);
         output.WriteMessage(PileItem);
       }
@@ -273,7 +273,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (itemCaseCase_ == ItemCaseOneofCase.PileItem) {
+      if (itemOneofCaseCase_ == ItemOneofCaseOneofCase.PileItem) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PileItem);
       }
       if (HasEquipmentUniqueId) {
@@ -294,17 +294,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      switch (other.ItemCaseCase) {
-        case ItemCaseOneofCase.PileItem:
+      switch (other.ItemOneofCaseCase) {
+        case ItemOneofCaseOneofCase.PileItem:
           if (PileItem == null) {
             PileItem = new global::EggLink.DanhengServer.Proto.PileItem();
           }
           PileItem.MergeFrom(other.PileItem);
           break;
-        case ItemCaseOneofCase.EquipmentUniqueId:
+        case ItemOneofCaseOneofCase.EquipmentUniqueId:
           EquipmentUniqueId = other.EquipmentUniqueId;
           break;
-        case ItemCaseOneofCase.RelicUniqueId:
+        case ItemOneofCaseOneofCase.RelicUniqueId:
           RelicUniqueId = other.RelicUniqueId;
           break;
       }
@@ -334,7 +334,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 82: {
             global::EggLink.DanhengServer.Proto.PileItem subBuilder = new global::EggLink.DanhengServer.Proto.PileItem();
-            if (itemCaseCase_ == ItemCaseOneofCase.PileItem) {
+            if (itemOneofCaseCase_ == ItemOneofCaseOneofCase.PileItem) {
               subBuilder.MergeFrom(PileItem);
             }
             input.ReadMessage(subBuilder);
@@ -366,7 +366,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 82: {
             global::EggLink.DanhengServer.Proto.PileItem subBuilder = new global::EggLink.DanhengServer.Proto.PileItem();
-            if (itemCaseCase_ == ItemCaseOneofCase.PileItem) {
+            if (itemOneofCaseCase_ == ItemOneofCaseOneofCase.PileItem) {
               subBuilder.MergeFrom(PileItem);
             }
             input.ReadMessage(subBuilder);

@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static LDPBKMPNJFGReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFMRFBCS01QTkpGRy5wcm90bxoRSUFBT1BETkFDTkIucHJvdG8aHVRyYWlu",
-            "UGFydHlHYW1lUGFzc2VuZ2VyLnByb3RvIncKC0xEUEJLTVBOSkZHEjAKDnBh",
+            "ChFMRFBCS01QTkpGRy5wcm90bxodVHJhaW5QYXJ0eUdhbWVQYXNzZW5nZXIu",
+            "cHJvdG8aEUlBQU9QRE5BQ05CLnByb3RvIncKC0xEUEJLTVBOSkZHEjAKDnBh",
             "c3Nlbmdlcl9saXN0GAggAygLMhguVHJhaW5QYXJ0eUdhbWVQYXNzZW5nZXIS",
             "IQoLS0xIT01NQktMSkwYBCADKAsyDC5JQUFPUEROQUNOQhITCgtES0lISEFN",
             "S0FISxgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IAAOPDNACNBReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyGamePassengerReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyGamePassengerReflection.Descriptor, global::EggLink.DanhengServer.Proto.IAAOPDNACNBReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LDPBKMPNJFG), global::EggLink.DanhengServer.Proto.LDPBKMPNJFG.Parser, new[]{ "PassengerList", "KLHOMMBKLJL", "DKIHHAMKAHK" }, null, null, null, null)
           }));

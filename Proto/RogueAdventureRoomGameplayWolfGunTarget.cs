@@ -25,10 +25,10 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci1Sb2d1ZUFkdmVudHVyZVJvb21HYW1lcGxheVdvbGZHdW5UYXJnZXQucHJv",
-            "dG8aJVJvZ3VlQWR2ZW50dXJlUm9vbVRhcmdldFJ1YW5tZWkucHJvdG8aJVJv",
-            "Z3VlQWR2ZW50dXJlUm9vbVRhcmdldE1pcmFjbGUucHJvdG8aIlJvZ3VlQWR2",
-            "ZW50dXJlUm9vbVRhcmdldENvaW4ucHJvdG8aIlJvZ3VlQWR2ZW50dXJlUm9v",
-            "bVRhcmdldE5vbmUucHJvdG8ipAIKJ1JvZ3VlQWR2ZW50dXJlUm9vbUdhbWVw",
+            "dG8aJVJvZ3VlQWR2ZW50dXJlUm9vbVRhcmdldE1pcmFjbGUucHJvdG8aJVJv",
+            "Z3VlQWR2ZW50dXJlUm9vbVRhcmdldFJ1YW5tZWkucHJvdG8aIlJvZ3VlQWR2",
+            "ZW50dXJlUm9vbVRhcmdldE5vbmUucHJvdG8aIlJvZ3VlQWR2ZW50dXJlUm9v",
+            "bVRhcmdldENvaW4ucHJvdG8ipAIKJ1JvZ3VlQWR2ZW50dXJlUm9vbUdhbWVw",
             "bGF5V29sZkd1blRhcmdldBI0Cgt0YXJnZXRfbm9uZRgMIAEoCzIdLlJvZ3Vl",
             "QWR2ZW50dXJlUm9vbVRhcmdldE5vbmVIABI0Cgt0YXJnZXRfY29pbhgBIAEo",
             "CzIdLlJvZ3VlQWR2ZW50dXJlUm9vbVRhcmdldENvaW5IABI6Cg50YXJnZXRf",
@@ -37,7 +37,7 @@ namespace EggLink.DanhengServer.Proto {
             "Um9vbVRhcmdldFJ1YW5tZWlIAEIVChNUYXJnZXRJbXBsT25lb2ZDYXNlQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetRuanmeiReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetMiracleReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetCoinReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetNoneReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetMiracleReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetRuanmeiReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetNoneReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetCoinReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunTarget), global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunTarget.Parser, new[]{ "TargetNone", "TargetCoin", "TargetMiracle", "TargetRuanmei" }, new[]{ "TargetImplOneofCase" }, null, null, null)
           }));

@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GetMarkChestScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdHZXRNYXJrQ2hlc3RTY1JzcC5wcm90bxoRQUdNQ05FSkFOREsucHJvdG8i",
-            "RwoRR2V0TWFya0NoZXN0U2NSc3ASIQoLTkFKTUVKSkhBRUsYCyADKAsyDC5B",
-            "R01DTkVKQU5ESxIPCgdyZXRjb2RlGAkgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
-            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChdHZXRNYXJrQ2hlc3RTY1JzcC5wcm90bxoXTWFya0NoZXN0RnVuY0luZm8u",
+            "cHJvdG8iVgoRR2V0TWFya0NoZXN0U2NSc3ASMAoUbWFya19jaGVzdF9mdW5j",
+            "X2luZm8YCyADKAsyEi5NYXJrQ2hlc3RGdW5jSW5mbxIPCgdyZXRjb2RlGAkg",
+            "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AGMCNEJANDKReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MarkChestFuncInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMarkChestScRsp), global::EggLink.DanhengServer.Proto.GetMarkChestScRsp.Parser, new[]{ "NAJMEJJHAEK", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMarkChestScRsp), global::EggLink.DanhengServer.Proto.GetMarkChestScRsp.Parser, new[]{ "MarkChestFuncInfo", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetMarkChestScRsp(GetMarkChestScRsp other) : this() {
-      nAJMEJJHAEK_ = other.nAJMEJJHAEK_.Clone();
+      markChestFuncInfo_ = other.markChestFuncInfo_.Clone();
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,15 +84,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GetMarkChestScRsp(this);
     }
 
-    /// <summary>Field number for the "NAJMEJJHAEK" field.</summary>
-    public const int NAJMEJJHAEKFieldNumber = 11;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.AGMCNEJANDK> _repeated_nAJMEJJHAEK_codec
-        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.AGMCNEJANDK.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AGMCNEJANDK> nAJMEJJHAEK_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AGMCNEJANDK>();
+    /// <summary>Field number for the "mark_chest_func_info" field.</summary>
+    public const int MarkChestFuncInfoFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MarkChestFuncInfo> _repeated_markChestFuncInfo_codec
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.MarkChestFuncInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MarkChestFuncInfo> markChestFuncInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MarkChestFuncInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AGMCNEJANDK> NAJMEJJHAEK {
-      get { return nAJMEJJHAEK_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MarkChestFuncInfo> MarkChestFuncInfo {
+      get { return markChestFuncInfo_; }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!nAJMEJJHAEK_.Equals(other.nAJMEJJHAEK_)) return false;
+      if(!markChestFuncInfo_.Equals(other.markChestFuncInfo_)) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -131,7 +131,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= nAJMEJJHAEK_.GetHashCode();
+      hash ^= markChestFuncInfo_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -155,7 +155,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
       }
-      nAJMEJJHAEK_.WriteTo(output, _repeated_nAJMEJJHAEK_codec);
+      markChestFuncInfo_.WriteTo(output, _repeated_markChestFuncInfo_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -170,7 +170,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
       }
-      nAJMEJJHAEK_.WriteTo(ref output, _repeated_nAJMEJJHAEK_codec);
+      markChestFuncInfo_.WriteTo(ref output, _repeated_markChestFuncInfo_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -181,7 +181,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += nAJMEJJHAEK_.CalculateSize(_repeated_nAJMEJJHAEK_codec);
+      size += markChestFuncInfo_.CalculateSize(_repeated_markChestFuncInfo_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      nAJMEJJHAEK_.Add(other.nAJMEJJHAEK_);
+      markChestFuncInfo_.Add(other.markChestFuncInfo_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
@@ -221,7 +221,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 90: {
-            nAJMEJJHAEK_.AddEntriesFrom(input, _repeated_nAJMEJJHAEK_codec);
+            markChestFuncInfo_.AddEntriesFrom(input, _repeated_markChestFuncInfo_codec);
             break;
           }
         }
@@ -244,7 +244,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 90: {
-            nAJMEJJHAEK_.AddEntriesFrom(ref input, _repeated_nAJMEJJHAEK_codec);
+            markChestFuncInfo_.AddEntriesFrom(ref input, _repeated_markChestFuncInfo_codec);
             break;
           }
         }

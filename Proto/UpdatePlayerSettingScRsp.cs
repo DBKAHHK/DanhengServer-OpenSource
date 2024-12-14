@@ -24,15 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static UpdatePlayerSettingScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5VcGRhdGVQbGF5ZXJTZXR0aW5nU2NSc3AucHJvdG8aGVVwZGF0ZVBsYXll",
-            "clNldHRpbmcucHJvdG8iWQoYVXBkYXRlUGxheWVyU2V0dGluZ1NjUnNwEiwK",
-            "DnBsYXllcl9zZXR0aW5nGAggASgLMhQuVXBkYXRlUGxheWVyU2V0dGluZxIP",
-            "CgdyZXRjb2RlGAEgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
-            "dG9iBnByb3RvMw=="));
+            "Ch5VcGRhdGVQbGF5ZXJTZXR0aW5nU2NSc3AucHJvdG8aEUdKT0RBUEZJRk1M",
+            "LnByb3RvIk4KGFVwZGF0ZVBsYXllclNldHRpbmdTY1JzcBIhCgtHRk1JS0JN",
+            "RkdGQRgIIAEoCzIMLkdKT0RBUEZJRk1MEg8KB3JldGNvZGUYASABKA1CHqoC",
+            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.UpdatePlayerSettingReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GJODAPFIFMLReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdatePlayerSettingScRsp), global::EggLink.DanhengServer.Proto.UpdatePlayerSettingScRsp.Parser, new[]{ "PlayerSetting", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdatePlayerSettingScRsp), global::EggLink.DanhengServer.Proto.UpdatePlayerSettingScRsp.Parser, new[]{ "GFMIKBMFGFA", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdatePlayerSettingScRsp(UpdatePlayerSettingScRsp other) : this() {
-      playerSetting_ = other.playerSetting_ != null ? other.playerSetting_.Clone() : null;
+      gFMIKBMFGFA_ = other.gFMIKBMFGFA_ != null ? other.gFMIKBMFGFA_.Clone() : null;
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -85,15 +84,15 @@ namespace EggLink.DanhengServer.Proto {
       return new UpdatePlayerSettingScRsp(this);
     }
 
-    /// <summary>Field number for the "player_setting" field.</summary>
-    public const int PlayerSettingFieldNumber = 8;
-    private global::EggLink.DanhengServer.Proto.UpdatePlayerSetting playerSetting_;
+    /// <summary>Field number for the "GFMIKBMFGFA" field.</summary>
+    public const int GFMIKBMFGFAFieldNumber = 8;
+    private global::EggLink.DanhengServer.Proto.GJODAPFIFML gFMIKBMFGFA_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.UpdatePlayerSetting PlayerSetting {
-      get { return playerSetting_; }
+    public global::EggLink.DanhengServer.Proto.GJODAPFIFML GFMIKBMFGFA {
+      get { return gFMIKBMFGFA_; }
       set {
-        playerSetting_ = value;
+        gFMIKBMFGFA_ = value;
       }
     }
 
@@ -124,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(PlayerSetting, other.PlayerSetting)) return false;
+      if (!object.Equals(GFMIKBMFGFA, other.GFMIKBMFGFA)) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -133,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (playerSetting_ != null) hash ^= PlayerSetting.GetHashCode();
+      if (gFMIKBMFGFA_ != null) hash ^= GFMIKBMFGFA.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -157,9 +156,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
       }
-      if (playerSetting_ != null) {
+      if (gFMIKBMFGFA_ != null) {
         output.WriteRawTag(66);
-        output.WriteMessage(PlayerSetting);
+        output.WriteMessage(GFMIKBMFGFA);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -175,9 +174,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
       }
-      if (playerSetting_ != null) {
+      if (gFMIKBMFGFA_ != null) {
         output.WriteRawTag(66);
-        output.WriteMessage(PlayerSetting);
+        output.WriteMessage(GFMIKBMFGFA);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -189,8 +188,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (playerSetting_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PlayerSetting);
+      if (gFMIKBMFGFA_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GFMIKBMFGFA);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
@@ -207,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.playerSetting_ != null) {
-        if (playerSetting_ == null) {
-          PlayerSetting = new global::EggLink.DanhengServer.Proto.UpdatePlayerSetting();
+      if (other.gFMIKBMFGFA_ != null) {
+        if (gFMIKBMFGFA_ == null) {
+          GFMIKBMFGFA = new global::EggLink.DanhengServer.Proto.GJODAPFIFML();
         }
-        PlayerSetting.MergeFrom(other.PlayerSetting);
+        GFMIKBMFGFA.MergeFrom(other.GFMIKBMFGFA);
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
@@ -236,10 +235,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 66: {
-            if (playerSetting_ == null) {
-              PlayerSetting = new global::EggLink.DanhengServer.Proto.UpdatePlayerSetting();
+            if (gFMIKBMFGFA_ == null) {
+              GFMIKBMFGFA = new global::EggLink.DanhengServer.Proto.GJODAPFIFML();
             }
-            input.ReadMessage(PlayerSetting);
+            input.ReadMessage(GFMIKBMFGFA);
             break;
           }
         }
@@ -262,10 +261,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 66: {
-            if (playerSetting_ == null) {
-              PlayerSetting = new global::EggLink.DanhengServer.Proto.UpdatePlayerSetting();
+            if (gFMIKBMFGFA_ == null) {
+              GFMIKBMFGFA = new global::EggLink.DanhengServer.Proto.GJODAPFIFML();
             }
-            input.ReadMessage(PlayerSetting);
+            input.ReadMessage(GFMIKBMFGFA);
             break;
           }
         }

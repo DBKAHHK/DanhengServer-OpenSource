@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static RogueHandbookReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNSb2d1ZUhhbmRib29rLnByb3RvGh5Sb2d1ZUhhbmRib29rTWlyYWNsZUlu",
-            "Zm8ucHJvdG8aG1JvZ3VlSGFuZGJvb2tBZW9uSW5mby5wcm90bxobUm9ndWVI",
-            "YW5kYm9va01hemVCdWZmLnByb3RvGhxSb2d1ZUhhbmRib29rRXZlbnRJbmZv",
+            "ChNSb2d1ZUhhbmRib29rLnByb3RvGhxSb2d1ZUhhbmRib29rRXZlbnRJbmZv",
+            "LnByb3RvGh5Sb2d1ZUhhbmRib29rTWlyYWNsZUluZm8ucHJvdG8aG1JvZ3Vl",
+            "SGFuZGJvb2tBZW9uSW5mby5wcm90bxobUm9ndWVIYW5kYm9va01hemVCdWZm",
             "LnByb3RvIsMBCg1Sb2d1ZUhhbmRib29rEisKCmV2ZW50X2xpc3QYAyADKAsy",
             "Fy5Sb2d1ZUhhbmRib29rRXZlbnRJbmZvEikKCWJ1ZmZfbGlzdBgHIAMoCzIW",
             "LlJvZ3VlSGFuZGJvb2tNYXplQnVmZhIpCglhZW9uX2xpc3QYCyADKAsyFi5S",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "Um9ndWVIYW5kYm9va01pcmFjbGVJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueHandbookMiracleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueHandbookAeonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueHandbookMazeBuffReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueHandbookEventInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueHandbookEventInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueHandbookMiracleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueHandbookAeonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueHandbookMazeBuffReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueHandbook), global::EggLink.DanhengServer.Proto.RogueHandbook.Parser, new[]{ "EventList", "BuffList", "AeonList", "MiracleList" }, null, null, null, null)
           }));

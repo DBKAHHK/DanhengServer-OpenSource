@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static PlayerLoginCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZQbGF5ZXJMb2dpbkNzUmVxLnByb3RvGhFBUEJQTklKTE9BSC5wcm90bxoS",
-            "TGFuZ3VhZ2VUeXBlLnByb3RvGhJQbGF0Zm9ybVR5cGUucHJvdG8igAUKEFBs",
+            "ChZQbGF5ZXJMb2dpbkNzUmVxLnByb3RvGhJQbGF0Zm9ybVR5cGUucHJvdG8a",
+            "Ekxhbmd1YWdlVHlwZS5wcm90bxoRQVBCUE5JSkxPQUgucHJvdG8igAUKEFBs",
             "YXllckxvZ2luQ3NSZXESFAoLQVBFSkdDR0NETksYkAggASgJEhYKDmNsaWVu",
             "dF92ZXJzaW9uGAQgASgJEhMKC0dFSFBKRE1BRUVPGAMgASgJEhMKC0VBT0lB",
             "RENQTE5JGA0gASgJEhMKC0VKUEdOUE5NTk1FGAYgASgNEhQKC0tFQ0tMTE5Q",
@@ -43,7 +43,7 @@ namespace EggLink.DanhengServer.Proto {
             "sAIgASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.APBPNIJLOAHReflection.Descriptor, global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.APBPNIJLOAHReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerLoginCsReq), global::EggLink.DanhengServer.Proto.PlayerLoginCsReq.Parser, new[]{ "APEJGCGCDNK", "ClientVersion", "GEHPJDMAEEO", "EAOIADCPLNI", "EJPGNPNMNME", "KECKLLNPNMC", "PGGEMCHDKGM", "RogueGetInfo", "GHKPBPDFIJH", "DMBAIMCNHKK", "HJBDIEPMFCC", "LoginRandom", "MJBMNLOIJAN", "PDCILADMJIJ", "AEOHJINGIFK", "BOKAFHIMCEN", "AALPFDJNHME", "ResVersion", "IACJLNHKFJL", "MPLBCOKAIHJ", "Platform", "EDIBGLJNOJG", "NCOLNOCGGPH", "OOHNMKAOGCL", "Signature", "Language", "LNPECCBKBEB" }, null, null, null, null)
           }));
