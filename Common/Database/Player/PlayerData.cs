@@ -31,7 +31,7 @@ public class PlayerData : BaseDatabaseDataHelper
     public int Pet { get; set; } = 0;
     [SugarColumn(IsNullable = true)] public int CurMusicLevel { get; set; }
 
-    public int Stamina { get; set; } = 240;
+    public int Stamina { get; set; } = 300;
     public double StaminaReserve { get; set; } = 0;
     public long NextStaminaRecover { get; set; } = 0;
 
