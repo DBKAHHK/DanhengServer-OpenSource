@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static CurChallengeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJDdXJDaGFsbGVuZ2UucHJvdG8aFUNoYWxsZW5nZVN0YXR1cy5wcm90bxoR",
-            "S2lsbE1vbnN0ZXIucHJvdG8aGENoYWxsZW5nZVN0b3J5SW5mby5wcm90bxoV",
+            "ChJDdXJDaGFsbGVuZ2UucHJvdG8aFUNoYWxsZW5nZVN0YXR1cy5wcm90bxoY",
+            "Q2hhbGxlbmdlU3RvcnlJbmZvLnByb3RvGhFLaWxsTW9uc3Rlci5wcm90bxoV",
             "RXh0cmFMaW5ldXBUeXBlLnByb3RvIpgCCgxDdXJDaGFsbGVuZ2USIAoGc3Rh",
             "dHVzGAggASgOMhAuQ2hhbGxlbmdlU3RhdHVzEicKEWtpbGxfbW9uc3Rlcl9s",
             "aXN0GAEgAygLMgwuS2lsbE1vbnN0ZXISEQoJc2NvcmVfdHdvGA8gASgNEhQK",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "Z2VfaW5mbxgHIAEoCzITLkNoYWxsZW5nZVN0b3J5SW5mb0IeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.KillMonsterReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStoryInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ExtraLineupTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStoryInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KillMonsterReflection.Descriptor, global::EggLink.DanhengServer.Proto.ExtraLineupTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CurChallenge), global::EggLink.DanhengServer.Proto.CurChallenge.Parser, new[]{ "Status", "KillMonsterList", "ScoreTwo", "ChallengeId", "ExtraLineupType", "RoundCount", "DeadAvatarNum", "ScoreId", "StageInfo" }, null, null, null, null)
           }));

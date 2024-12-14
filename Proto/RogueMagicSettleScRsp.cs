@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtSb2d1ZU1hZ2ljU2V0dGxlU2NSc3AucHJvdG8aGlJvZ3VlTWFnaWNGaW5p",
-            "c2hJbmZvLnByb3RvGg5JdGVtTGlzdC5wcm90bxocUm9ndWVNYWdpY0N1clNj",
-            "ZW5lSW5mby5wcm90bxoRSVBFR0pDT0hIQ00ucHJvdG8i2gEKFVJvZ3VlTWFn",
+            "c2hJbmZvLnByb3RvGhFJUEVHSkNPSEhDTS5wcm90bxoOSXRlbUxpc3QucHJv",
+            "dG8aHFJvZ3VlTWFnaWNDdXJTY2VuZUluZm8ucHJvdG8i2gEKFVJvZ3VlTWFn",
             "aWNTZXR0bGVTY1JzcBIhCgtOTk9GSkJCT0ZOSxgOIAEoCzIMLklQRUdKQ09I",
             "SENNEjAKEXRvdXJuX2ZpbmlzaF9pbmZvGAggASgLMhUuUm9ndWVNYWdpY0Zp",
             "bmlzaEluZm8SDwoHcmV0Y29kZRgEIAEoDRIeCgtPT0ZJTU5ESlBDSRgMIAEo",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "ASgLMhcuUm9ndWVNYWdpY0N1clNjZW5lSW5mb0IeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicFinishInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicCurSceneInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.IPEGJCOHHCMReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicFinishInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.IPEGJCOHHCMReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicCurSceneInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicSettleScRsp), global::EggLink.DanhengServer.Proto.RogueMagicSettleScRsp.Parser, new[]{ "NNOFJBBOFNK", "TournFinishInfo", "Retcode", "OOFIMNDJPCI", "RogueTournCurSceneInfo" }, null, null, null, null)
           }));

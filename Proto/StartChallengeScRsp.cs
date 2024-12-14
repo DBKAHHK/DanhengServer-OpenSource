@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static StartChallengeScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlTdGFydENoYWxsZW5nZVNjUnNwLnByb3RvGg9TY2VuZUluZm8ucHJvdG8a",
-            "EkN1ckNoYWxsZW5nZS5wcm90bxoYQ2hhbGxlbmdlU3RhZ2VJbmZvLnByb3Rv",
-            "GhBMaW5ldXBJbmZvLnByb3RvIrIBChNTdGFydENoYWxsZW5nZVNjUnNwEg8K",
+            "ChlTdGFydENoYWxsZW5nZVNjUnNwLnByb3RvGhBMaW5ldXBJbmZvLnByb3Rv",
+            "GhhDaGFsbGVuZ2VTdGFnZUluZm8ucHJvdG8aEkN1ckNoYWxsZW5nZS5wcm90",
+            "bxoPU2NlbmVJbmZvLnByb3RvIrIBChNTdGFydENoYWxsZW5nZVNjUnNwEg8K",
             "B3JldGNvZGUYByABKA0SIAoLbGluZXVwX2xpc3QYASADKAsyCy5MaW5ldXBJ",
             "bmZvEiQKDWN1cl9jaGFsbGVuZ2UYDCABKAsyDS5DdXJDaGFsbGVuZ2USJwoK",
             "c3RhZ2VfaW5mbxgCIAEoCzITLkNoYWxsZW5nZVN0YWdlSW5mbxIZCgVzY2Vu",
             "ZRgIIAEoCzIKLlNjZW5lSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CurChallengeReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStageInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LineupInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStageInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CurChallengeReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StartChallengeScRsp), global::EggLink.DanhengServer.Proto.StartChallengeScRsp.Parser, new[]{ "Retcode", "LineupList", "CurChallenge", "StageInfo", "Scene" }, null, null, null, null)
           }));
