@@ -550,6 +550,49 @@ public class PlayerInstance(PlayerData data)
         return prop;
     }
 
+    public async ValueTask SetPropTimeline(int propEntityId, PropTimelineInfo info)
+    {
+        if (SceneInstance == null) return;
+        SceneInstance.Entities.TryGetValue(propEntityId, out var entity);
+        if (entity is not EntityProp prop) return;
+
+        var data = new ScenePropTimelineData
+        {
+            BoolValue = info.TimelineBoolValue,
+            ByteValue = info.TimelineByteValue.ToBase64(),
+            UintValue = info.TimelineIntValue
+        };
+
+        // save to db
+        SceneData!.PropTimelineData.TryGetValue(Data.FloorId, out var floorData);
+        if (floorData == null)
+        {
+            floorData = new Dictionary<int, Dictionary<int, ScenePropTimelineData>>();
+            SceneData.PropTimelineData[Data.FloorId] = floorData;
+        }
+
+        if (!floorData.ContainsKey(prop.GroupID))
+            floorData[prop.GroupID] = new Dictionary<int, ScenePropTimelineData>();
+
+        floorData[prop.GroupID][prop.PropInfo.ID] = data;
+
+        prop.PropTimelineData = data;
+
+        // handle mission / quest
+        await MissionManager!.HandleFinishType(MissionFinishTypeEnum.TimeLineSetState);
+        await MissionManager!.HandleFinishType(MissionFinishTypeEnum.TimeLineSetStateCnt);
+    }
+
+    public ScenePropTimelineData? GetScenePropTimelineData(int floorId, int groupId, int propId)
+    {
+        SceneData!.PropTimelineData.TryGetValue(floorId, out var floorData);
+        if (floorData == null) return null;
+        floorData.TryGetValue(groupId, out var groupData);
+        if (groupData == null) return null;
+        groupData.TryGetValue(propId, out var data);
+        return data;
+    }
+
     public async ValueTask<bool> EnterScene(int entryId, int teleportId, bool sendPacket, int storyLineId = 0,
         bool mapTp = false)
     {

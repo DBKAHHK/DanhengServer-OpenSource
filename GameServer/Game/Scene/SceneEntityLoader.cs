@@ -276,6 +276,9 @@ public class SceneEntityLoader(SceneInstance scene)
                 prop.State = prop.Excel.PropType == PropTypeEnum.PROP_ELEVATOR ? PropStateEnum.Elevator1 : info.State;
         }
 
+        var timelineData = Scene.Player.GetScenePropTimelineData(Scene.FloorId, group.Id, info.ID);
+        prop.PropTimelineData = timelineData;
+
         if (group.GroupName.Contains("Machine"))
         {
             await prop.SetState(PropStateEnum.Open);

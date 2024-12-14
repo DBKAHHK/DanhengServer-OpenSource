@@ -1,5 +1,6 @@
 ﻿using EggLink.DanhengServer.Data.Config.Scene;
 using EggLink.DanhengServer.Data.Excel;
+using EggLink.DanhengServer.Database.Scene;
 using EggLink.DanhengServer.Enums.Scene;
 using EggLink.DanhengServer.GameServer.Game.Battle;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
@@ -20,6 +21,7 @@ public class EntityProp(SceneInstance scene, MazePropExcel excel, GroupInfo grou
     public GroupInfo Group { get; set; } = group;
     public int EntityID { get; set; }
     public int GroupID { get; set; } = group.Id;
+    public ScenePropTimelineData? PropTimelineData { get; set; }
 
     public async ValueTask AddBuff(SceneBuff buff)
     {
@@ -38,6 +40,11 @@ public class EntityProp(SceneInstance scene, MazePropExcel excel, GroupInfo grou
             PropId = (uint)Excel.ID,
             PropState = (uint)State
         };
+
+        if (PropTimelineData != null)
+        {
+            prop.TimelineInfo = PropTimelineData.ToProto();
+        }
 
         return new SceneEntityInfo
         {

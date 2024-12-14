@@ -1,4 +1,6 @@
 ﻿using EggLink.DanhengServer.Enums.Scene;
+using EggLink.DanhengServer.Proto;
+using Google.Protobuf;
 using SqlSugar;
 
 namespace EggLink.DanhengServer.Database.Scene;
@@ -20,10 +22,31 @@ public class SceneData : BaseDatabaseDataHelper
     [SugarColumn(IsJson = true)]
     public Dictionary<int, Dictionary<string, int>> FloorSavedData { get; set; } =
         []; // Dictionary<FloorId, Dictionary<SaveDataKey, SaveDataValue>>
+
+    [SugarColumn(IsJson = true)]
+    public Dictionary<int, Dictionary<int, Dictionary<int, ScenePropTimelineData>>> PropTimelineData { get; set; } =
+        []; // Dictionary<FloorId, Dictionary<GroupId, Dictionary<PropId, ScenePropTimelineData>>
 }
 
 public class ScenePropData
 {
-    public int PropId;
-    public PropStateEnum State;
+    public int PropId { get; set; }
+    public PropStateEnum State { get; set; }
+}
+
+public class ScenePropTimelineData
+{
+    public uint UintValue { get; set; }
+    public bool BoolValue { get; set; }
+    public string ByteValue { get; set; } = "";  // Base64
+
+    public PropTimelineInfo ToProto()
+    {
+        return new PropTimelineInfo
+        {
+            TimelineIntValue = UintValue,
+            TimelineBoolValue = BoolValue,
+            TimelineByteValue = ByteString.FromBase64(ByteValue)
+        };
+    }
 }
