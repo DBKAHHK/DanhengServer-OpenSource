@@ -19,15 +19,15 @@ public class HandlerRogueWorkbenchHandleFuncCsReq : Handler
         if (entity is not RogueWorkbenchProp prop)
         {
             await connection.SendPacket(new PacketRogueWorkbenchHandleFuncScRsp(Retcode.RetSceneEntityNotExist,
-                req.WorkbenchFuncId, null));
+                req.FuncId, null));
             return;
         }
 
-        var func = prop.WorkbenchFuncs.Find(x => x.FuncId == req.WorkbenchFuncId);
+        var func = prop.WorkbenchFuncs.Find(x => x.FuncId == req.FuncId);
         if (func == null)
         {
             await connection.SendPacket(
-                new PacketRogueWorkbenchHandleFuncScRsp(Retcode.RetFail, req.WorkbenchFuncId, null));
+                new PacketRogueWorkbenchHandleFuncScRsp(Retcode.RetFail, req.FuncId, null));
             return;
         }
 
@@ -35,13 +35,13 @@ public class HandlerRogueWorkbenchHandleFuncCsReq : Handler
         if (instance == null)
         {
             await connection.SendPacket(new PacketRogueWorkbenchHandleFuncScRsp(Retcode.RetTournRogueStatusMismatch,
-                req.WorkbenchFuncId, null));
+                req.FuncId, null));
             return;
         }
 
         await instance.HandleFunc(func, req.WorkbenchContent);
 
         await connection.SendPacket(
-            new PacketRogueWorkbenchHandleFuncScRsp(Retcode.RetSucc, req.WorkbenchFuncId, func));
+            new PacketRogueWorkbenchHandleFuncScRsp(Retcode.RetSucc, req.FuncId, func));
     }
 }

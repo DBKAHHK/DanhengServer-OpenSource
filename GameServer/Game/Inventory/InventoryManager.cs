@@ -606,8 +606,8 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         if (req.ComposeItemList != null)
             foreach (var cost in req.ComposeItemList.ItemList)
                 await RemoveItem((int)cost.PileItem.ItemId, (int)cost.PileItem.ItemNum);
-        if (req.ComposeItemSubList != null)
-            foreach (var subCost in req.ComposeItemSubList.ItemList)
+        if (req.WrItemList != null)
+            foreach (var subCost in req.WrItemList.ItemList)
                 await RemoveItem((int)subCost.PileItem.ItemId, (int)subCost.PileItem.ItemNum);
 
         // Cost items in excel
@@ -619,12 +619,10 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         await RemoveItem(2, (int)(composeConfig.CoinCost * req.Count));
 
         // Add relic
-        var subAffixes = new List<(int, int)>();
-        foreach (var subId in req.SubAffixIdList)
-            subAffixes.Add(((int)subId, 1));
+        var subAffixes = req.SubAffixIdList.Select(subId => ((int)subId, 1)).ToList();
 
-        (var _, var relic) = await HandleRelic(
-            (int)req.TargetRelic, ++Data.NextUniqueId, 0, (int)req.MainAffixId, subAffixes);
+        var (_, relic) = await HandleRelic(
+            (int)req.ComposeRelicId, ++Data.NextUniqueId, 0, (int)req.MainAffixId, subAffixes);
 
         return relic;
     }

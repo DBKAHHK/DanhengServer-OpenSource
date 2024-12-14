@@ -69,7 +69,7 @@ public class RogueWorkbenchFunc(RogueTournWorkbenchFuncExcel excel)
     {
         return new WorkbenchFuncIdInfo
         {
-            WorkbenchFuncId = (uint)FuncId,
+            FuncId = (uint)FuncId,
             IsValid = true
         };
     }

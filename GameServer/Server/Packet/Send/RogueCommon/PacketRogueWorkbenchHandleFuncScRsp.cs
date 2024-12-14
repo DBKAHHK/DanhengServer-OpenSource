@@ -12,7 +12,7 @@ public class PacketRogueWorkbenchHandleFuncScRsp : BasePacket
         var proto = new RogueWorkbenchHandleFuncScRsp
         {
             Retcode = (uint)retcode,
-            WorkbenchFuncId = funcId
+            FuncId = funcId
         };
 
         if (func != null) proto.TargetFuncInfo = func.ToProto();
