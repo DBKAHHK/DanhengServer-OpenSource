@@ -81,7 +81,7 @@ public class PlayerInstance(PlayerData data)
     public RogueManager? RogueManager { get; private set; }
     public ChessRogueManager? ChessRogueManager { get; private set; }
     public RogueTournManager? RogueTournManager { get; private set; }
-    public RogueMagicManager? RogueMagicManager { get; internal set; }
+    public RogueMagicManager? RogueMagicManager { get; private set; }
 
     #endregion
 
@@ -455,7 +455,8 @@ public class PlayerInstance(PlayerData data)
                 {
                     // TODO: Filter treasure chest
                     var items = DropService.CalculateDropsFromProp(prop.PropInfo.ChestID);
-                    await SceneInstance.Player.InventoryManager!.AddItems(items);
+                    await InventoryManager!.AddItems(items);
+                    await SendPacket(new PacketOpenChestScNotify(prop.PropInfo.ChestID));
                 }
 
                 break;

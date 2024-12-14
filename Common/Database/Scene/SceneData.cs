@@ -8,7 +8,7 @@ namespace EggLink.DanhengServer.Database.Scene;
 [SugarTable("Scene")]
 public class SceneData : BaseDatabaseDataHelper
 {
-    [SugarColumn(IsJson = true)]
+    [SugarColumn(IsJson = true, ColumnDataType = "TEXT")]
     public Dictionary<int, Dictionary<int, List<ScenePropData>>> ScenePropData { get; set; } =
         []; // Dictionary<FloorId, Dictionary<GroupId, ScenePropData>>
 
@@ -23,9 +23,13 @@ public class SceneData : BaseDatabaseDataHelper
     public Dictionary<int, Dictionary<string, int>> FloorSavedData { get; set; } =
         []; // Dictionary<FloorId, Dictionary<SaveDataKey, SaveDataValue>>
 
-    [SugarColumn(IsJson = true)]
+    [SugarColumn(IsJson = true, ColumnDataType = "TEXT")]
     public Dictionary<int, Dictionary<int, Dictionary<int, ScenePropTimelineData>>> PropTimelineData { get; set; } =
-        []; // Dictionary<FloorId, Dictionary<GroupId, Dictionary<PropId, ScenePropTimelineData>>
+        []; // Dictionary<FloorId, Dictionary<GroupId, Dictionary<PropId, ScenePropTimelineData>>>
+
+    [SugarColumn(IsJson = true, ColumnDataType = "TEXT")]
+    public Dictionary<int, List<SceneMarkedChestData>> MarkedChestData { get; set; } =
+        []; // Dictionary<FuncId, List<ScenePropTimelineData>>
 }
 
 public class ScenePropData
@@ -47,6 +51,25 @@ public class ScenePropTimelineData
             TimelineIntValue = UintValue,
             TimelineBoolValue = BoolValue,
             TimelineByteValue = ByteString.FromBase64(ByteValue)
+        };
+    }
+}
+
+public class SceneMarkedChestData
+{
+    public int ConfigId { get; set; }
+    public int GroupId { get; set; }
+    public int FloorId { get; set; }
+    public int PlaneId { get; set; }
+
+    public MarkChestInfo ToProto()
+    {
+        return new MarkChestInfo
+        {
+            ConfigId = (uint)ConfigId,
+            FloorId = (uint)FloorId,
+            GroupId = (uint)GroupId,
+            PlaneId = (uint)PlaneId
         };
     }
 }
