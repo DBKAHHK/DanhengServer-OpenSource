@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static ClockParkGetOngoingScriptInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CihDbG9ja1BhcmtHZXRPbmdvaW5nU2NyaXB0SW5mb1NjUnNwLnByb3RvGhFQ",
-            "TktMUENMRU9GQy5wcm90bxoRRU9JQVBFRkVER0UucHJvdG8aEUpKSUlBTktF",
-            "TkhPLnByb3RvIsgCCiJDbG9ja1BhcmtHZXRPbmdvaW5nU2NyaXB0SW5mb1Nj",
+            "CihDbG9ja1BhcmtHZXRPbmdvaW5nU2NyaXB0SW5mb1NjUnNwLnByb3RvGhFK",
+            "SklJQU5LRU5ITy5wcm90bxoRUE5LTFBDTEVPRkMucHJvdG8aEUVPSUFQRUZF",
+            "REdFLnByb3RvIsgCCiJDbG9ja1BhcmtHZXRPbmdvaW5nU2NyaXB0SW5mb1Nj",
             "UnNwEiEKC0ZIRklGUE1JSkNIGA0gASgLMgwuSkpJSUFOS0VOSE8SEwoLTERI",
             "RUFOUE5LTE4YBSABKA0SEwoLR0lHR0hIRkNFT0sYCCABKAkSEwoLSE9JTUhK",
             "SEpDS0UYAyABKA0SEwoLQ09KQkVCSU5DTUwYBCABKA0SIQoLR0NQQUZQTkRQ",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "IAMoDRITCgtOT0hBREdJTU5JUBgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PNKLPCLEOFCReflection.Descriptor, global::EggLink.DanhengServer.Proto.EOIAPEFEDGEReflection.Descriptor, global::EggLink.DanhengServer.Proto.JJIIANKENHOReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JJIIANKENHOReflection.Descriptor, global::EggLink.DanhengServer.Proto.PNKLPCLEOFCReflection.Descriptor, global::EggLink.DanhengServer.Proto.EOIAPEFEDGEReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ClockParkGetOngoingScriptInfoScRsp), global::EggLink.DanhengServer.Proto.ClockParkGetOngoingScriptInfoScRsp.Parser, new[]{ "FHFIFPMIJCH", "LDHEANPNKLN", "GIGGHHFCEOK", "HOIMHJHJCKE", "COJBEBINCML", "GCPAFPNDPDA", "ScriptId", "RogueBuffInfo", "AMBCBCLHIHJ", "Retcode", "FEHDAIOJLPN", "NOHADGIMNIP" }, null, null, null, null)
           }));

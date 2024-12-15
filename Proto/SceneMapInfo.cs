@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChJTY2VuZU1hcEluZm8ucHJvdG8aEUNHR0ZLQkJLQkRELnByb3RvGg9DaGVz",
-            "dEluZm8ucHJvdG8aD01hemVHcm91cC5wcm90bxoTTWF6ZVByb3BTdGF0ZS5w",
+            "dEluZm8ucHJvdG8aE01hemVQcm9wU3RhdGUucHJvdG8aD01hemVHcm91cC5w",
             "cm90byLkAwoMU2NlbmVNYXBJbmZvEhgKEGN1cl9tYXBfZW50cnlfaWQYCSAB",
             "KA0SJgoObWF6ZV9wcm9wX2xpc3QYDCADKAsyDi5NYXplUHJvcFN0YXRlEhIK",
             "CmNvbnRlbnRfaWQYDSABKA0SHAoUdW5sb2NrX3RlbGVwb3J0X2xpc3QYCCAD",
@@ -39,7 +39,7 @@ namespace EggLink.DanhengServer.Proto {
             "RGF0YUVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAFCHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CGGFKBBKBDDReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChestInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazeGroupReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazePropStateReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CGGFKBBKBDDReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChestInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazePropStateReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazeGroupReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneMapInfo), global::EggLink.DanhengServer.Proto.SceneMapInfo.Parser, new[]{ "CurMapEntryId", "MazePropList", "ContentId", "UnlockTeleportList", "EntryStoryLineId", "MazeGroupList", "FloorId", "FloorSavedData", "DimensionId", "LightenSectionList", "Retcode", "EntryId", "EKDOLLECGGM", "ChestList" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
