@@ -30,6 +30,8 @@ public class DropService
             world = ChestTypeEnum.CHEST_WORLD_THREE;
         else if (chest.ChestType.Contains(ChestTypeEnum.CHEST_WORLD_ZERO))
             world = ChestTypeEnum.CHEST_WORLD_ZERO;
+        else if (chest.ChestType.Contains(ChestTypeEnum.CHEST_WORLD_FOUR))
+            world = ChestTypeEnum.CHEST_WORLD_FOUR;
 
         items.Add(new ItemData
         {
@@ -112,6 +114,19 @@ public class DropService
                         ChestTypeEnum.CHEST_MIDDLE_LEVEL => 20,
                         ChestTypeEnum.CHEST_HIGH_LEVEL => 50,
                         _ => 10
+                    }
+                });
+                break;
+            case ChestTypeEnum.CHEST_WORLD_FOUR:
+                items.Add(new ItemData
+                {
+                    ItemId = 120004,
+                    Count = level switch
+                    {
+                        ChestTypeEnum.CHEST_LOW_LEVEL => 60,
+                        ChestTypeEnum.CHEST_MIDDLE_LEVEL => 90,
+                        ChestTypeEnum.CHEST_HIGH_LEVEL => 120,
+                        _ => 60
                     }
                 });
                 break;
