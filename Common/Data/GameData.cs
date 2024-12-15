@@ -111,6 +111,13 @@ public static class GameData
 
     #endregion
 
+    #region Offering
+
+    public static Dictionary<int, OfferingTypeConfigExcel> OfferingTypeConfigData { get; private set; } = [];
+    public static Dictionary<int, Dictionary<int, OfferingLevelConfigExcel>> OfferingLevelConfigData { get; private set; } = [];
+
+    #endregion
+
     #region Maze
 
     public static Dictionary<int, NPCDataExcel> NpcDataData { get; private set; } = [];

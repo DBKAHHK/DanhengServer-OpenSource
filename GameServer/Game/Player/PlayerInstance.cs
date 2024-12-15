@@ -41,6 +41,7 @@ using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 using static EggLink.DanhengServer.GameServer.Plugin.Event.PluginEvent;
+using OfferingManager = EggLink.DanhengServer.GameServer.Game.Inventory.OfferingManager;
 
 namespace EggLink.DanhengServer.GameServer.Game.Player;
 
@@ -62,6 +63,7 @@ public class PlayerInstance(PlayerData data)
 
     public GachaManager? GachaManager { get; private set; }
     public ShopService? ShopService { get; private set; }
+    public OfferingManager? OfferingManager { get; private set; }
 
     #endregion
 
@@ -184,6 +186,7 @@ public class PlayerInstance(PlayerData data)
         QuestManager = new QuestManager(this);
         TrainPartyManager = new TrainPartyManager(this);
         MatchThreeManager = new MatchThreeManager(this);
+        OfferingManager = new OfferingManager(this);
 
         PlayerUnlockData = InitializeDatabase<PlayerUnlockData>();
         SceneData = InitializeDatabase<SceneData>();
@@ -415,6 +418,9 @@ public class PlayerInstance(PlayerData data)
 
         if (SceneInstance != null)
             await SceneInstance.OnHeartBeat();
+
+        if (OfferingManager != null)
+            await OfferingManager.UpdateOfferingData();
 
         DatabaseHelper.ToSaveUidList.SafeAdd(Uid);
     }

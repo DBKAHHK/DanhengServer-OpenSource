@@ -414,7 +414,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         }
     }
 
-    public async ValueTask<List<ItemData>> HandleReward(int rewardId, bool notify = false)
+    public async ValueTask<List<ItemData>> HandleReward(int rewardId, bool notify = false, bool sync = true)
     {
         GameData.RewardDataData.TryGetValue(rewardId, out var rewardData);
         if (rewardData == null) return [];
@@ -426,7 +426,8 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
             if (i != null) items.Add(i);
         }
 
-        await Player.SendPacket(new PacketPlayerSyncScNotify(items));
+        if (sync)
+            await Player.SendPacket(new PacketPlayerSyncScNotify(items));
 
         var hCoin = await AddItem(1, rewardData.Hcoin, notify, sync: false);
         if (hCoin != null)
