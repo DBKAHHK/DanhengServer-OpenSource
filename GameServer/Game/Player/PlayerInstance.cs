@@ -463,13 +463,49 @@ public class PlayerInstance(PlayerData data)
                 if (newState == PropStateEnum.Closed) await prop.SetState(PropStateEnum.Open);
                 break;
             case PropTypeEnum.PROP_MAZE_JIGSAW:
+                switch (newState)
+                {
+                    case PropStateEnum.Closed:
+                    {
+                        foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupID))
+                        {
+                            if (p.Excel.PropType == PropTypeEnum.PROP_TREASURE_CHEST)
+                            {
+                                await p.SetState(PropStateEnum.ChestClosed);
+                            }
+                            else if (p.Excel.PropType == prop.Excel.PropType)
+                            {
+                                // Skip
+                            }
+                            else
+                            {
+                                await p.SetState(PropStateEnum.Open);
+                            }
+                        }
+
+                        break;
+                    }
+                    case PropStateEnum.Open:
+                    {
+                        foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupID).Where(p =>
+                                     p.Excel.PropType is not PropTypeEnum.PROP_TREASURE_CHEST &&
+                                     p.Excel.PropType != prop.Excel.PropType))
+                        {
+                            await p.SetState(PropStateEnum.Open);
+                        }
+
+                        break;
+                    }
+                }
+
+                break;
             case PropTypeEnum.PROP_MAZE_PUZZLE:
-                if (newState == PropStateEnum.Closed || newState == PropStateEnum.Open)
+                if (newState is PropStateEnum.Closed or PropStateEnum.Open)
                     foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupID))
                     {
                         if (p.Excel.PropType == PropTypeEnum.PROP_TREASURE_CHEST)
                         {
-                            await p.SetState(PropStateEnum.ChestUsed);
+                            await p.SetState(PropStateEnum.ChestClosed);
                         }
                         else if (p.Excel.PropType == prop.Excel.PropType)
                         {
@@ -493,6 +529,23 @@ public class PlayerInstance(PlayerData data)
 
                         await MissionManager!.OnPlayerInteractWithProp();
                     }
+
+                if (prop.PropInfo.Name.Contains("Piece"))
+                {
+                    var pieceDone = SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupID)
+                        .Where(p => p.PropInfo.Name.Contains("Piece")).All(p => p.State == PropStateEnum.Closed);
+
+                    if (pieceDone)
+                    {
+                        // set JigsawSir to open
+                        foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupID)
+                                     .Where(p => p.PropInfo.Name.Contains("JigsawSir") &&
+                                                 p.State != PropStateEnum.Closed))
+                        {
+                            await p.SetState(PropStateEnum.TriggerEnable);
+                        }
+                    }
+                }
 
                 break;
         }
