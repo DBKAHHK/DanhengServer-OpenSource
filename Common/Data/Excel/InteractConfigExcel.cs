@@ -1,5 +1,5 @@
-﻿using System.Text.Json.Serialization;
-using EggLink.DanhengServer.Enums.Scene;
+﻿using EggLink.DanhengServer.Enums.Scene;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 namespace EggLink.DanhengServer.Data.Excel;

@@ -1,18 +1,22 @@
 ﻿using System.Collections.Concurrent;
 using EggLink.DanhengServer.Enums.Scene;
+using EggLink.DanhengServer.Util;
 using Newtonsoft.Json;
 
 namespace EggLink.DanhengServer.Data.Config.Scene;
 
 public class FloorInfo
 {
-    [JsonIgnore] public ConcurrentDictionary<int, PropInfo> CachedTeleports = [];
+    [JsonConverter(typeof(ConcurrentDictionaryConverter<int, PropInfo>))]
+    public ConcurrentDictionary<int, PropInfo> CachedTeleports = [];
 
-    [JsonIgnore] public ConcurrentDictionary<int, GroupInfo> Groups = [];
+    [JsonConverter(typeof(ConcurrentDictionaryConverter<int, GroupInfo>))]
+    public ConcurrentDictionary<int, GroupInfo> Groups = [];
 
     [JsonIgnore] public bool Loaded;
 
-    [JsonIgnore] public ConcurrentBag<PropInfo> UnlockedCheckpoints = [];
+    [JsonConverter(typeof(ConcurrentBagConverter<PropInfo>))]
+    public ConcurrentBag<PropInfo> UnlockedCheckpoints = [];
 
     public int FloorID { get; set; }
     public int StartGroupIndex { get; set; }

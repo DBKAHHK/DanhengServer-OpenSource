@@ -23,6 +23,16 @@ public static class HandbookGenerator
         {
             if (langFile.Extension != ".json") return;
             var lang = langFile.Name.Replace("TextMap", "").Replace(".json", "");
+
+            // Check if handbook needs to regenerate
+            var handbookPath = $"GM Handbook/GM Handbook {lang}.txt";
+            if (File.Exists(handbookPath))
+            {
+                var handbookInfo = new FileInfo(handbookPath);
+                if (handbookInfo.LastWriteTime >= langFile.LastWriteTime)
+                    continue; // Skip if handbook is newer than language file
+            }
+
             Generate(lang);
         }
 

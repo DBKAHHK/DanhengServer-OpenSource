@@ -2,8 +2,14 @@
 
 namespace EggLink.DanhengServer.Data.Custom;
 
-public abstract class BaseRogueBuffGroupExcel : ExcelResource
+public class BaseRogueBuffGroupExcel : ExcelResource
 {
+    public int GroupId { get; set; }
     [JsonIgnore] public List<BaseRogueBuffExcel> BuffList { get; set; } = [];
     [JsonIgnore] public bool IsLoaded { get; set; }
+
+    public override int GetId()
+    {
+        return GroupId;
+    }
 }

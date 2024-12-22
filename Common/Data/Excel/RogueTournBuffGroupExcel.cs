@@ -9,13 +9,9 @@ public class RogueTournBuffGroupExcel : BaseRogueBuffGroupExcel
     public int RogueBuffGroupID { get; set; }
     public List<int> RogueBuffDrop { get; set; } = [];
 
-    public override int GetId()
-    {
-        return RogueBuffGroupID;
-    }
-
     public override void Loaded()
     {
+        GroupId = RogueBuffGroupID;
         GameData.RogueBuffGroupData.Add(GetId(), this);
         LoadBuff();
     }

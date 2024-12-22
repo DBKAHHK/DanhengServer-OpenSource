@@ -5,6 +5,8 @@ using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Enums.Rogue;
 using EggLink.DanhengServer.Enums.TournRogue;
+using EggLink.DanhengServer.Util;
+using Newtonsoft.Json;
 
 namespace EggLink.DanhengServer.Data;
 
@@ -41,7 +43,7 @@ public static class GameData
     public static Dictionary<int, AvatarExpItemConfigExcel> AvatarExpItemConfigData { get; private set; } = [];
     public static Dictionary<int, AvatarSkillTreeConfigExcel> AvatarSkillTreeConfigData { get; private set; } = [];
     public static Dictionary<int, AvatarDemoConfigExcel> AvatarDemoConfigData { get; private set; } = [];
-    public static Dictionary<int, ExpTypeExcel> ExpTypeData { get; } = [];
+    public static Dictionary<int, ExpTypeExcel> ExpTypeData { get; private set; } = [];
 
     public static Dictionary<int, MultiplePathAvatarConfigExcel> MultiplePathAvatarConfigData { get; private set; } =
         [];
@@ -106,7 +108,7 @@ public static class GameData
 
     public static Dictionary<int, QuestDataExcel> QuestDataData { get; private set; } = [];
     public static Dictionary<int, FinishWayExcel> FinishWayData { get; private set; } = [];
-    public static Dictionary<int, PlayerLevelConfigExcel> PlayerLevelConfigData { get; } = [];
+    public static Dictionary<int, PlayerLevelConfigExcel> PlayerLevelConfigData { get; private set; } = [];
     public static Dictionary<int, BackGroundMusicExcel> BackGroundMusicData { get; private set; } = [];
     public static Dictionary<int, ChatBubbleConfigExcel> ChatBubbleConfigData { get; private set; } = [];
 
@@ -121,8 +123,10 @@ public static class GameData
 
     #region Maze
 
+    [JsonConverter(typeof(ConcurrentDictionaryConverter<string, FloorInfo>))]
+    public static ConcurrentDictionary<string, FloorInfo> FloorInfoData { get; private set; } = [];
+
     public static Dictionary<int, NPCDataExcel> NpcDataData { get; private set; } = [];
-    public static ConcurrentDictionary<string, FloorInfo> FloorInfoData { get; } = [];
     public static Dictionary<int, MapEntranceExcel> MapEntranceData { get; private set; } = [];
     public static Dictionary<int, MazePlaneExcel> MazePlaneData { get; private set; } = [];
     public static Dictionary<int, MazeChestExcel> MazeChestData { get; private set; } = [];
@@ -166,7 +170,7 @@ public static class GameData
     public static Dictionary<int, ItemConfigExcel> ItemConfigData { get; private set; } = [];
     public static Dictionary<int, ItemUseBuffDataExcel> ItemUseBuffDataData { get; private set; } = [];
     public static Dictionary<int, EquipmentConfigExcel> EquipmentConfigData { get; private set; } = [];
-    public static Dictionary<int, EquipmentExpTypeExcel> EquipmentExpTypeData { get; } = [];
+    public static Dictionary<int, EquipmentExpTypeExcel> EquipmentExpTypeData { get; private set; } = [];
     public static Dictionary<int, EquipmentExpItemConfigExcel> EquipmentExpItemConfigData { get; private set; } = [];
 
     public static Dictionary<int, EquipmentPromotionConfigExcel> EquipmentPromotionConfigData { get; private set; } =

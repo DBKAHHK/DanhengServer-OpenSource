@@ -5,7 +5,7 @@ using Newtonsoft.Json.Converters;
 
 namespace EggLink.DanhengServer.Data.Custom;
 
-public abstract class BaseRogueBuffExcel : ExcelResource
+public class BaseRogueBuffExcel : ExcelResource
 {
     public int MazeBuffID { get; set; }
     public int MazeBuffLevel { get; set; }
@@ -15,6 +15,11 @@ public abstract class BaseRogueBuffExcel : ExcelResource
     public RogueBuffCategoryEnum RogueBuffCategory { get; set; }
 
     public int RogueBuffTag { get; set; }
+
+    public override int GetId()
+    {
+        return MazeBuffID * 100 + MazeBuffLevel;
+    }
 
     public RogueCommonBuff ToProto()
     {

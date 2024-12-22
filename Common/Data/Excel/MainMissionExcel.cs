@@ -25,32 +25,8 @@ public class MainMissionExcel : ExcelResource
     public int RewardID { get; set; }
     public List<int> SubRewardList { get; set; } = [];
 
-    [JsonIgnore] private MissionInfo? InnerMissionInfo { get; set; }
-
-    [JsonIgnore]
-    public MissionInfo? MissionInfo
-    {
-        get => InnerMissionInfo;
-        set
-        {
-            InnerMissionInfo = value;
-            if (value != null)
-                foreach (var sub in value.SubMissionList)
-                {
-                    SubMissionIds.Add(sub.ID);
-                    GameData.SubMissionData.TryGetValue(sub.ID, out var subMission);
-                    if (subMission != null)
-                    {
-                        subMission.MainMissionID = MainMissionID;
-                        subMission.MainMissionInfo = InnerMissionInfo;
-                        subMission.SubMissionInfo = sub;
-                    }
-                }
-        }
-    }
-
+    [JsonIgnore] public MissionInfo MissionInfo { get; protected set; } = new();
     [JsonIgnore] public List<int> SubMissionIds { get; set; } = [];
-
 
     public override int GetId()
     {
@@ -60,6 +36,23 @@ public class MainMissionExcel : ExcelResource
     public override void Loaded()
     {
         GameData.MainMissionData[GetId()] = this;
+    }
+
+    public void SetMissionInfo(MissionInfo missionInfo)
+    {
+        MissionInfo = missionInfo;
+        if (missionInfo != null)
+            foreach (var sub in missionInfo.SubMissionList)
+            {
+                SubMissionIds.Add(sub.ID);
+                GameData.SubMissionData.TryGetValue(sub.ID, out var subMission);
+                if (subMission != null)
+                {
+                    subMission.MainMissionID = MainMissionID;
+                    subMission.MainMissionInfo = MissionInfo;
+                    subMission.SubMissionInfo = sub;
+                }
+            }
     }
 
     public bool IsEqual(MissionData data)

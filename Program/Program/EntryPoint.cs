@@ -127,10 +127,40 @@ public class EntryPoint
         GenerateLogMap();
 
         // Load the game data
-        Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadingItem", I18NManager.Translate("Word.GameData")));
         try
         {
-            ResourceManager.LoadGameData();
+            var isCache = false;
+            if (File.Exists(ResourceCache.CachePath))
+                if (ConfigManager.Config.ServerOption.UseCache)
+                {
+                    Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadingItem", I18NManager.Translate("Word.Cache")));
+                    isCache = ResourceCache.LoadCache();
+
+                    // Clear all game data if cache loading fails
+                    if (!isCache)
+                    {
+                        ResourceCache.ClearGameData();
+                        Logger.Warn(I18NManager.Translate("Server.ServerInfo.CacheLoadFailed"));
+                    }
+                }
+                else
+                {
+                    File.Delete(ResourceCache.CachePath);
+                    Logger.Warn(I18NManager.Translate("Server.ServerInfo.CacheLoadSkip"));
+                }
+
+            if (!isCache)
+            {
+                Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadingItem", I18NManager.Translate("Word.GameData")));
+                ResourceManager.LoadGameData();
+
+                // Async process cache saving
+                if (ConfigManager.Config.ServerOption.UseCache && ResourceCache.IsComplete)
+                {
+                    Logger.Warn(I18NManager.Translate("Server.ServerInfo.WaitingItem", I18NManager.Translate("Word.Cache")));
+                    _ = ResourceCache.SaveCache();
+                }
+            }
         }
         catch (Exception e)
         {

@@ -15,11 +15,6 @@ public class RogueBuffExcel : BaseRogueBuffExcel
 
     public bool IsAeonBuff => BattleEventBuffType != RogueBuffAeonTypeEnum.Normal;
 
-    public override int GetId()
-    {
-        return MazeBuffID * 100 + MazeBuffLevel;
-    }
-
     public override void Loaded()
     {
         GameData.RogueBuffData.Add(GetId(), this);

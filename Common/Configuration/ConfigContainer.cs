@@ -91,6 +91,7 @@ public class ServerOption
     {
         return Math.Max(Math.Min(FarmingDropRate, 999), 1);
     }
+    public bool UseCache { get; set; } = true;
 }
 
 public class ServerAnnounce

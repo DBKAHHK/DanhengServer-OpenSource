@@ -90,6 +90,7 @@ public class ChallengeConfigExcel : ExcelResource
         GameData.ChallengeConfigData[ID] = this;
     }
 
+    [method: JsonConstructor]
     public class ChallengeMonsterInfo(int ConfigId, int NpcMonsterId, int EventId)
     {
         public int ConfigId = ConfigId;

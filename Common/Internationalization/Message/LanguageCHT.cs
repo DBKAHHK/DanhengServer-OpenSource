@@ -54,6 +54,7 @@ public class WordTextCHT
     public string Language => "語言";
     public string Log => "日誌";
     public string GameData => "遊戲數據";
+    public string Cache => "資源緩存";
     public string Database => "數據庫";
     public string Command => "命令";
     public string WebServer => "Web服務器";
@@ -152,6 +153,8 @@ public class ServerInfoTextCHT
     public string CancelKeyPressed => "已按下取消鍵 (Ctrl + C)，服務器即將關閉…";
     public string StartingServer => "正在啟動 DanhengServer…";
     public string LoadingItem => "正在加載 {0}…";
+    public string GeneratingItem => "正在生成 {0}…";
+    public string WaitingItem => "正在等待進程 {0} 完成…";
     public string RegisterItem => "註冊了 {0} 個 {1}。";
     public string FailedToLoadItem => "加載 {0} 失敗。";
     public string NewClientSecretKey => "客戶端密鑰不存在，正在生成新的客戶端密鑰。";
@@ -163,6 +166,7 @@ public class ServerInfoTextCHT
     public string ServerRunning => "{0} 服務器正在監聽 {1}";
     public string ServerStarted => "啟動完成！用時 {0}s，擊敗了99%的用戶，輸入 『help』 來獲取命令幫助"; // 玩梗，考慮英語版本將其本土化
     public string MissionEnabled => "任務系統已啟用，此功能仍在開發中，且可能不會按預期工作，如果遇見任何bug，請匯報給開發者。";
+    public string CacheLoadSkip => "已跳過緩存加載。";
 
     public string ConfigMissing => "{0} 缺失，請檢查你的資源文件夾：{1}，{2} 可能不能使用。";
     public string UnloadedItems => "卸載了所有 {0}。";

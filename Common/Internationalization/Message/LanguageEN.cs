@@ -54,6 +54,7 @@ public class WordTextEN
     public string Language => "Language";
     public string Log => "Log";
     public string GameData => "Game Data";
+    public string Cache => "Resource Cache";
     public string Database => "Database";
     public string Command => "Command";
     public string WebServer => "Web Server";
@@ -152,6 +153,8 @@ public class ServerInfoTextEN
     public string CancelKeyPressed => "Cancel key pressed (Ctrl + C), server shutting down...";
     public string StartingServer => "Starting DanhengServer...";
     public string LoadingItem => "Loading {0}...";
+    public string GeneratingItem => "Building {0}...";
+    public string WaitingItem => "Waiting for process {0} to complete...";
     public string RegisterItem => "Registered {0} {1}(s).";
     public string FailedToLoadItem => "Failed to load {0}.";
 
@@ -170,6 +173,7 @@ public class ServerInfoTextEN
 
     public string MissionEnabled =>
         "Mission system enabled. This feature is still in development and may not work as expected. Please report any bugs to the developers.";
+    public string CacheLoadSkip => "Skipped cache loading.";
 
     public string ConfigMissing => "{0} is missing. Please check your resource folder: {1}, {2} may not be available.";
     public string UnloadedItems => "Unloaded all {0}.";

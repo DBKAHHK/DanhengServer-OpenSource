@@ -89,6 +89,7 @@ public class ResourceManager
                 var file = new FileInfo(path);
                 if (!file.Exists)
                 {
+                    // ResourceCache.IsComplete = false;
                     Logger.Error(I18NManager.Translate("Server.ServerInfo.FailedToReadItem", fileName,
                         I18NManager.Translate("Word.NotFound")));
                     continue;
@@ -154,6 +155,7 @@ public class ResourceManager
             }
             catch (Exception ex)
             {
+                ResourceCache.IsComplete = false;
                 Logger.Error(
                     I18NManager.Translate("Server.ServerInfo.FailedToReadItem", fileName,
                         I18NManager.Translate("Word.Error")), ex);
@@ -231,6 +233,7 @@ public class ResourceManager
                     }
                     catch (Exception ex)
                     {
+                        ResourceCache.IsComplete = false;
                         Logger.Error(
                             I18NManager.Translate("Server.ServerInfo.FailedToReadItem", groupFile.Name,
                                 I18NManager.Translate("Word.Error")), ex);
@@ -243,6 +246,7 @@ public class ResourceManager
             }
             catch (Exception ex)
             {
+                ResourceCache.IsComplete = false;
                 Logger.Error(
                     I18NManager.Translate("Server.ServerInfo.FailedToReadItem", file.Name,
                         I18NManager.Translate("Word.Error")), ex);
@@ -261,7 +265,6 @@ public class ResourceManager
         Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItems", GameData.FloorInfoData.Count.ToString(),
             I18NManager.Translate("Word.FloorInfo")));
     }
-
 
     public static void LoadMissionInfo()
     {
@@ -292,7 +295,7 @@ public class ResourceManager
             var missionInfo = JsonConvert.DeserializeObject<MissionInfo>(json);
             if (missionInfo != null)
             {
-                GameData.MainMissionData[missionExcel.Key].MissionInfo = missionInfo;
+                GameData.MainMissionData[missionExcel.Key].SetMissionInfo(missionInfo);
                 count++;
             }
             else
@@ -335,6 +338,7 @@ public class ResourceManager
         }
         catch (Exception ex)
         {
+            ResourceCache.IsComplete = false;
             Logger.Error("Error in reading " + file.Name, ex);
         }
 
@@ -394,6 +398,7 @@ public class ResourceManager
             }
             catch (Exception ex)
             {
+                ResourceCache.IsComplete = false;
                 Logger.Error(
                     I18NManager.Translate("Server.ServerInfo.FailedToReadItem", adventurePath,
                         I18NManager.Translate("Word.Error")), ex);
@@ -437,6 +442,7 @@ public class ResourceManager
             }
             catch (Exception ex)
             {
+                ResourceCache.IsComplete = false;
                 Logger.Error(
                     I18NManager.Translate("Server.ServerInfo.FailedToReadItem", summonUnit.JsonPath,
                         I18NManager.Translate("Word.Error")), ex);
@@ -478,6 +484,7 @@ public class ResourceManager
             }
             catch (Exception ex)
             {
+                ResourceCache.IsComplete = false;
                 Logger.Error(
                     I18NManager.Translate("Server.ServerInfo.FailedToReadItem", file.Name,
                         I18NManager.Translate("Word.Error")), ex);
@@ -526,6 +533,7 @@ public class ResourceManager
             }
             catch (Exception ex)
             {
+                ResourceCache.IsComplete = false;
                 Logger.Error(
                     I18NManager.Translate("Server.ServerInfo.FailedToReadItem", file.Name,
                         I18NManager.Translate("Word.Error")), ex);
@@ -555,6 +563,7 @@ public class ResourceManager
             }
             catch (Exception ex)
             {
+                ResourceCache.IsComplete = false;
                 Logger.Error(
                     I18NManager.Translate("Server.ServerInfo.FailedToReadItem", file.Name,
                         I18NManager.Translate("Word.Error")), ex);
@@ -598,6 +607,7 @@ public class ResourceManager
             }
             catch (Exception ex)
             {
+                ResourceCache.IsComplete = false;
                 Logger.Error(
                     I18NManager.Translate("Server.ServerInfo.FailedToReadItem", file.Name,
                         I18NManager.Translate("Word.Error")), ex);
@@ -652,6 +662,7 @@ public class ResourceManager
             }
             catch (Exception ex)
             {
+                ResourceCache.IsComplete = false;
                 Logger.Error(
                     I18NManager.Translate("Server.ServerInfo.FailedToReadItem", file.Name,
                         I18NManager.Translate("Word.Error")), ex);
@@ -705,6 +716,7 @@ public class ResourceManager
             }
             catch (Exception ex)
             {
+                ResourceCache.IsComplete = false;
                 Logger.Error(
                     I18NManager.Translate("Server.ServerInfo.FailedToReadItem", file.Name,
                         I18NManager.Translate("Word.Error")), ex);
@@ -782,6 +794,7 @@ public class ResourceManager
         }
         catch (Exception ex)
         {
+            ResourceCache.IsComplete = false;
             Logger.Error("Error in reading " + file.Name, ex);
         }
 
@@ -803,7 +816,6 @@ public class ResourceManager
                 I18NManager.Translate("Word.RogueTournRoomInfo"),
                 $"{ConfigManager.Config.Path.ConfigPath}/TournRogueRoomGen.json",
                 I18NManager.Translate("Word.RogueTournRoom")));
-
             return;
         }
 
@@ -827,6 +839,7 @@ public class ResourceManager
         }
         catch (Exception ex)
         {
+            ResourceCache.IsComplete = false;
             Logger.Error("Error in reading " + file.Name, ex);
         }
 
@@ -872,6 +885,7 @@ public class ResourceManager
         }
         catch (Exception ex)
         {
+            ResourceCache.IsComplete = false;
             Logger.Error("Error in reading " + file.Name, ex);
         }
 
@@ -910,6 +924,7 @@ public class ResourceManager
         }
         catch (Exception ex)
         {
+            ResourceCache.IsComplete = false;
             Logger.Error("Error in reading " + file.Name, ex);
         }
 
