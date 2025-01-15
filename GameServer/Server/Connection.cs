@@ -44,14 +44,6 @@ public class Connection(KcpConversation conversation, IPEndPoint remote) : Danhe
                 break;
             }
 
-            if (result.BytesReceived > MAX_MSG_SIZE)
-            {
-                // The message is too large.
-                Logger.Error("Packet too large");
-                Conversation.SetTransportClosed();
-                break;
-            }
-
             var buffer = ArrayPool<byte>.Shared.Rent(result.BytesReceived);
             try
             {
