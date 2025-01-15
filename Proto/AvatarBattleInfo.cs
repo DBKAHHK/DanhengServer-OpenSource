@@ -24,11 +24,11 @@ namespace EggLink.DanhengServer.Proto {
     static AvatarBattleInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZBdmF0YXJCYXR0bGVJbmZvLnByb3RvGhFTcEFkZFNvdXJjZS5wcm90bxoU",
-            "QXZhdGFyUHJvcGVydHkucHJvdG8aEEF2YXRhclR5cGUucHJvdG8aGkF0dGFj",
-            "a0RhbWFnZVByb3BlcnR5LnByb3RvGhdFcXVpcG1lbnRQcm9wZXJ0eS5wcm90",
-            "bxoRQmF0dGxlUmVsaWMucHJvdG8aFlNraWxsVXNlUHJvcGVydHkucHJvdG8a",
-            "FUF2YXRhclNraWxsVHJlZS5wcm90bxoTQWJpbGl0eVVzZVN0dC5wcm90byK5",
+            "ChZBdmF0YXJCYXR0bGVJbmZvLnByb3RvGhFTcEFkZFNvdXJjZS5wcm90bxoV",
+            "QXZhdGFyU2tpbGxUcmVlLnByb3RvGhpBdHRhY2tEYW1hZ2VQcm9wZXJ0eS5w",
+            "cm90bxoRQmF0dGxlUmVsaWMucHJvdG8aF0VxdWlwbWVudFByb3BlcnR5LnBy",
+            "b3RvGhRBdmF0YXJQcm9wZXJ0eS5wcm90bxoTQWJpbGl0eVVzZVN0dC5wcm90",
+            "bxoQQXZhdGFyVHlwZS5wcm90bxoWU2tpbGxVc2VQcm9wZXJ0eS5wcm90byK5",
             "CwoQQXZhdGFyQmF0dGxlSW5mbxIgCgthdmF0YXJfdHlwZRgBIAEoDjILLkF2",
             "YXRhclR5cGUSCgoCaWQYAiABKA0SFAoMYXZhdGFyX2xldmVsGAMgASgNEhMK",
             "C2F2YXRhcl9yYW5rGAQgASgNEhgKEGF2YXRhcl9wcm9tb3Rpb24YBSABKA0S",
@@ -64,7 +64,7 @@ namespace EggLink.DanhengServer.Proto {
             "NSABKA0SEwoLSUpOSkZGSE9OQUkYNiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SpAddSourceReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarPropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.AttackDamagePropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipmentPropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleRelicReflection.Descriptor, global::EggLink.DanhengServer.Proto.SkillUsePropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, global::EggLink.DanhengServer.Proto.AbilityUseSttReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SpAddSourceReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, global::EggLink.DanhengServer.Proto.AttackDamagePropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleRelicReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipmentPropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarPropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.AbilityUseSttReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.SkillUsePropertyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AvatarBattleInfo), global::EggLink.DanhengServer.Proto.AvatarBattleInfo.Parser, new[]{ "AvatarType", "Id", "AvatarLevel", "AvatarRank", "AvatarPromotion", "AvatarStatus", "AvatarSkill", "AvatarEquipment", "TotalTurns", "TotalDamage", "TotalHeal", "TotalDamageTaken", "TotalHpRecover", "TotalSpCost", "StageId", "StageType", "TotalBreakDamage", "AttackTypeDamage", "AttackTypeBreakDamage", "AttackTypeMaxDamage", "SkillTimes", "DelayCumulate", "TotalSpAdd", "SpAddSource", "TotalBpCost", "DieTimes", "ReviveTimes", "BreakTimes", "ExtraTurns", "TotalShield", "TotalShieldTaken", "TotalShieldDamage", "InitialStatus", "Relics", "AssistUid", "JEABMCJMHKG", "LNAPAONGGII", "DAGBCMAPPEB", "LAMJENICFPI", "FBPNBCCJACL", "HCIIHBFJIFE", "JOOBDAIMBJE", "OAJACKJJCGP", "JKEHIMGBDAF", "HHCMONKJLKC", "OKDNAIPLEAJ", "MJDBAMIKPMM", "BFDDMNHACDO", "NKEEMLHKOOL", "CKLNDLILIPL", "AJFDEDLLAKN", "GBMEBHPDICG", "JHEAHKHKCGJ", "IJNJFFHONAI" }, null, null, null, null)
           }));

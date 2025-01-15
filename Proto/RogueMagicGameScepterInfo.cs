@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static RogueMagicGameScepterInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9Sb2d1ZU1hZ2ljR2FtZVNjZXB0ZXJJbmZvLnByb3RvGhdSb2d1ZU1hZ2lj",
-            "U2NlcHRlci5wcm90bxoYUm9ndWVNYWdpY0dhbWVVbml0LnByb3RvGiBSb2d1",
-            "ZU1hZ2ljU2NlcHRlckRyZXNzSW5mby5wcm90byKuAgoZUm9ndWVNYWdpY0dh",
+            "Ch9Sb2d1ZU1hZ2ljR2FtZVNjZXB0ZXJJbmZvLnByb3RvGiBSb2d1ZU1hZ2lj",
+            "U2NlcHRlckRyZXNzSW5mby5wcm90bxoYUm9ndWVNYWdpY0dhbWVVbml0LnBy",
+            "b3RvGhdSb2d1ZU1hZ2ljU2NlcHRlci5wcm90byKuAgoZUm9ndWVNYWdpY0dh",
             "bWVTY2VwdGVySW5mbxIzChZsb2NrZWRfbWFnaWNfdW5pdF9saXN0GA4gAygL",
             "MhMuUm9ndWVNYWdpY0dhbWVVbml0EjcKEnNjZXB0ZXJfZHJlc3NfaW5mbxgB",
             "IAMoCzIbLlJvZ3VlTWFnaWNTY2VwdGVyRHJlc3NJbmZvEiwKEG1vZGlmaWVy",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "DQoFdmFsdWUYAiABKA06AjgBQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicScepterReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicGameUnitReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicScepterDressInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicScepterDressInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicGameUnitReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicScepterReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicGameScepterInfo), global::EggLink.DanhengServer.Proto.RogueMagicGameScepterInfo.Parser, new[]{ "LockedMagicUnitList", "ScepterDressInfo", "ModifierContent", "TrenchCount" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));

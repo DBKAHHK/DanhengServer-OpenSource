@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static NewMapRotReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg9OZXdNYXBSb3QucHJvdG8aDVZlY3RvcjQucHJvdG8aDFZlY3Rvci5wcm90",
+            "Cg9OZXdNYXBSb3QucHJvdG8aDFZlY3Rvci5wcm90bxoNVmVjdG9yNC5wcm90",
             "byJECglOZXdNYXBSb3QSHAoLREZQQVBKRUxMSUUYDSABKAsyBy5WZWN0b3IS",
             "GQoHdmVjdG9yMxgJIAEoCzIILlZlY3RvcjRCHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.Vector4Reflection.Descriptor, global::EggLink.DanhengServer.Proto.VectorReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.VectorReflection.Descriptor, global::EggLink.DanhengServer.Proto.Vector4Reflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NewMapRot), global::EggLink.DanhengServer.Proto.NewMapRot.Parser, new[]{ "DFPAPJELLIE", "Vector3" }, null, null, null, null)
           }));

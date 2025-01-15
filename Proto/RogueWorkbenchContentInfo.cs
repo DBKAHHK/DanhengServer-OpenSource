@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static RogueWorkbenchContentInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9Sb2d1ZVdvcmtiZW5jaENvbnRlbnRJbmZvLnByb3RvGiRXb3JrYmVuY2hF",
-            "bmhhbmNlQnVmZlRhcmdldEluZm8ucHJvdG8aEU9NSEVITEVMR0JOLnByb3Rv",
-            "GhFOS05CTktHRUVNSC5wcm90bxonV29ya2JlbmNoUmVmb3JnZUZvcm11bGFU",
-            "YXJnZXRJbmZvLnByb3RvGhFPQ0pNRkdGTERFRS5wcm90bxoRSkpQTU1DSkhH",
-            "TEgucHJvdG8aKVdvcmtiZW5jaFJlZm9yZ2VIZXhBdmF0YXJUYXJnZXRJbmZv",
-            "LnByb3RvGhFQS1BDSUpKUElBSy5wcm90bxokV29ya2JlbmNoUmVmb3JnZUJ1",
-            "ZmZUYXJnZXRJbmZvLnByb3RvGidXb3JrYmVuY2hDb21wb3NlTWlyYWNsZVRh",
-            "cmdldEluZm8ucHJvdG8iswQKGVJvZ3VlV29ya2JlbmNoQ29udGVudEluZm8S",
+            "Ch9Sb2d1ZVdvcmtiZW5jaENvbnRlbnRJbmZvLnByb3RvGhFQS1BDSUpKUElB",
+            "Sy5wcm90bxonV29ya2JlbmNoQ29tcG9zZU1pcmFjbGVUYXJnZXRJbmZvLnBy",
+            "b3RvGiRXb3JrYmVuY2hSZWZvcmdlQnVmZlRhcmdldEluZm8ucHJvdG8aEUpK",
+            "UE1NQ0pIR0xILnByb3RvGhFOS05CTktHRUVNSC5wcm90bxopV29ya2JlbmNo",
+            "UmVmb3JnZUhleEF2YXRhclRhcmdldEluZm8ucHJvdG8aJFdvcmtiZW5jaEVu",
+            "aGFuY2VCdWZmVGFyZ2V0SW5mby5wcm90bxoRT0NKTUZHRkxERUUucHJvdG8a",
+            "J1dvcmtiZW5jaFJlZm9yZ2VGb3JtdWxhVGFyZ2V0SW5mby5wcm90bxoRT01I",
+            "RUhMRUxHQk4ucHJvdG8iswQKGVJvZ3VlV29ya2JlbmNoQ29udGVudEluZm8S",
             "PAoRcmVmb3JnZV9idWZmX2Z1bmMYCyABKAsyHy5Xb3JrYmVuY2hSZWZvcmdl",
             "QnVmZlRhcmdldEluZm9IABJCChRyZWZvcmdlX2Zvcm11bGFfZnVuYxgCIAEo",
             "CzIiLldvcmtiZW5jaFJlZm9yZ2VGb3JtdWxhVGFyZ2V0SW5mb0gAEjwKEWVu",
@@ -46,7 +46,7 @@ namespace EggLink.DanhengServer.Proto {
             "RkRDGAQgASgLMgwuT01IRUhMRUxHQk5IAEINCgtKQUVPTk9CRURCTEIeqgIb",
             "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.WorkbenchEnhanceBuffTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.OMHEHLELGBNReflection.Descriptor, global::EggLink.DanhengServer.Proto.NKNBNKGEEMHReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchReforgeFormulaTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.OCJMFGFLDEEReflection.Descriptor, global::EggLink.DanhengServer.Proto.JJPMMCJHGLHReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchReforgeHexAvatarTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PKPCIJJPIAKReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchReforgeBuffTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchComposeMiracleTargetInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PKPCIJJPIAKReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchComposeMiracleTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchReforgeBuffTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.JJPMMCJHGLHReflection.Descriptor, global::EggLink.DanhengServer.Proto.NKNBNKGEEMHReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchReforgeHexAvatarTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchEnhanceBuffTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.OCJMFGFLDEEReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchReforgeFormulaTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.OMHEHLELGBNReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueWorkbenchContentInfo), global::EggLink.DanhengServer.Proto.RogueWorkbenchContentInfo.Parser, new[]{ "ReforgeBuffFunc", "ReforgeFormulaFunc", "EnhanceBuffFunc", "ComposeMiracleFunc", "ReforgeHexAvatarFunc", "MagicItem", "GameMagicUnit", "GLCGKNINAOG", "JEOEJADOGDF", "BAGHNHIKFDC" }, new[]{ "JAEONOBEDBL" }, null, null, null)
           }));

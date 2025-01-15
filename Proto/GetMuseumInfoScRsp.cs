@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhHZXRNdXNldW1JbmZvU2NSc3AucHJvdG8aEUlHUEZOSEtITVBLLnByb3Rv",
-            "GhFKT09MQURPR0hHRS5wcm90bxoRTktNSkNNTURISEoucHJvdG8aEUJKREFB",
-            "UE9BUEFJLnByb3RvItwCChJHZXRNdXNldW1JbmZvU2NSc3ASEwoLRkJDSEtM",
+            "GhFCSkRBQVBPQVBBSS5wcm90bxoRSk9PTEFET0dIR0UucHJvdG8aEU5LTUpD",
+            "TU1ESEhKLnByb3RvItwCChJHZXRNdXNldW1JbmZvU2NSc3ASEwoLRkJDSEtM",
             "TkdKRk0YBCADKA0SEwoLRUhNSVBITk5GTUsYASADKA0SEwoLRk5NSkpNQlBD",
             "SkYYCyABKA0SEwoLRklIUEdFRUhNTUIYDCABKA0SIQoLREFDSE1FQ0pQRUkY",
             "DyABKAsyDC5JR1BGTkhLSE1QSxILCgNleHAYBSABKA0SIQoLT0FQSkFMQ09F",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "cmV0Y29kZRgGIAEoDRIhCgtFQ0hJRElERUNDRxgCIAMoCzIMLkpPT0xBRE9H",
             "SEdFQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IGPFNHKHMPKReflection.Descriptor, global::EggLink.DanhengServer.Proto.JOOLADOGHGEReflection.Descriptor, global::EggLink.DanhengServer.Proto.NKMJCMMDHHJReflection.Descriptor, global::EggLink.DanhengServer.Proto.BJDAAPOAPAIReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IGPFNHKHMPKReflection.Descriptor, global::EggLink.DanhengServer.Proto.BJDAAPOAPAIReflection.Descriptor, global::EggLink.DanhengServer.Proto.JOOLADOGHGEReflection.Descriptor, global::EggLink.DanhengServer.Proto.NKMJCMMDHHJReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMuseumInfoScRsp), global::EggLink.DanhengServer.Proto.GetMuseumInfoScRsp.Parser, new[]{ "FBCHKLNGJFM", "EHMIPHNNFMK", "FNMJJMBPCJF", "FIHPGEEHMMB", "DACHMECJPEI", "Exp", "OAPJALCOECF", "GCNMIIFKHGI", "CoinCost", "MOCHEECBDIJ", "Level", "AreaList", "Retcode", "ECHIDIDECCG" }, null, null, null, null)
           }));
