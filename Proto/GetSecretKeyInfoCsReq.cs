@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static GetSecretKeyInfoCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtHZXRTZWNyZXRLZXlJbmZvQ3NSZXEucHJvdG8iLAoVR2V0U2VjcmV0S2V5",
-            "SW5mb0NzUmVxEhMKC0dER0FDS0hIRUJKGA8gASgMQh6qAhtFZ2dMaW5rLkRh",
-            "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChtHZXRTZWNyZXRLZXlJbmZvQ3NSZXEucHJvdG8iKwoVR2V0U2VjcmV0S2V5",
+            "SW5mb0NzUmVxEhIKCnNlY3JldF9yZXEYDyABKAxCHqoCG0VnZ0xpbmsuRGFu",
+            "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetSecretKeyInfoCsReq), global::EggLink.DanhengServer.Proto.GetSecretKeyInfoCsReq.Parser, new[]{ "GDGACKHHEBJ" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetSecretKeyInfoCsReq), global::EggLink.DanhengServer.Proto.GetSecretKeyInfoCsReq.Parser, new[]{ "SecretReq" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetSecretKeyInfoCsReq(GetSecretKeyInfoCsReq other) : this() {
-      gDGACKHHEBJ_ = other.gDGACKHHEBJ_;
+      secretReq_ = other.secretReq_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GetSecretKeyInfoCsReq(this);
     }
 
-    /// <summary>Field number for the "GDGACKHHEBJ" field.</summary>
-    public const int GDGACKHHEBJFieldNumber = 15;
-    private pb::ByteString gDGACKHHEBJ_ = pb::ByteString.Empty;
+    /// <summary>Field number for the "secret_req" field.</summary>
+    public const int SecretReqFieldNumber = 15;
+    private pb::ByteString secretReq_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pb::ByteString GDGACKHHEBJ {
-      get { return gDGACKHHEBJ_; }
+    public pb::ByteString SecretReq {
+      get { return secretReq_; }
       set {
-        gDGACKHHEBJ_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        secretReq_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (GDGACKHHEBJ != other.GDGACKHHEBJ) return false;
+      if (SecretReq != other.SecretReq) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (GDGACKHHEBJ.Length != 0) hash ^= GDGACKHHEBJ.GetHashCode();
+      if (SecretReq.Length != 0) hash ^= SecretReq.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (GDGACKHHEBJ.Length != 0) {
+      if (SecretReq.Length != 0) {
         output.WriteRawTag(122);
-        output.WriteBytes(GDGACKHHEBJ);
+        output.WriteBytes(SecretReq);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (GDGACKHHEBJ.Length != 0) {
+      if (SecretReq.Length != 0) {
         output.WriteRawTag(122);
-        output.WriteBytes(GDGACKHHEBJ);
+        output.WriteBytes(SecretReq);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -164,8 +164,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (GDGACKHHEBJ.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeBytesSize(GDGACKHHEBJ);
+      if (SecretReq.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(SecretReq);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -179,8 +179,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.GDGACKHHEBJ.Length != 0) {
-        GDGACKHHEBJ = other.GDGACKHHEBJ;
+      if (other.SecretReq.Length != 0) {
+        SecretReq = other.SecretReq;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -198,7 +198,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 122: {
-            GDGACKHHEBJ = input.ReadBytes();
+            SecretReq = input.ReadBytes();
             break;
           }
         }
@@ -217,7 +217,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 122: {
-            GDGACKHHEBJ = input.ReadBytes();
+            SecretReq = input.ReadBytes();
             break;
           }
         }

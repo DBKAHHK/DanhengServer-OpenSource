@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static MarkChatEmojiCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhNYXJrQ2hhdEVtb2ppQ3NSZXEucHJvdG8iOwoSTWFya0NoYXRFbW9qaUNz",
-            "UmVxEhMKC0dHSEtPUEJIRkFFGAwgASgIEhAKCGV4dHJhX2lkGAsgASgNQh6q",
-            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChhNYXJrQ2hhdEVtb2ppQ3NSZXEucHJvdG8iPAoSTWFya0NoYXRFbW9qaUNz",
+            "UmVxEhQKDGlzX3JlbW92ZV9pZBgFIAEoCBIQCghleHRyYV9pZBgMIAEoDUIe",
+            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarkChatEmojiCsReq), global::EggLink.DanhengServer.Proto.MarkChatEmojiCsReq.Parser, new[]{ "GGHKOPBHFAE", "ExtraId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarkChatEmojiCsReq), global::EggLink.DanhengServer.Proto.MarkChatEmojiCsReq.Parser, new[]{ "IsRemoveId", "ExtraId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MarkChatEmojiCsReq(MarkChatEmojiCsReq other) : this() {
-      gGHKOPBHFAE_ = other.gGHKOPBHFAE_;
+      isRemoveId_ = other.isRemoveId_;
       extraId_ = other.extraId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -83,20 +83,20 @@ namespace EggLink.DanhengServer.Proto {
       return new MarkChatEmojiCsReq(this);
     }
 
-    /// <summary>Field number for the "GGHKOPBHFAE" field.</summary>
-    public const int GGHKOPBHFAEFieldNumber = 12;
-    private bool gGHKOPBHFAE_;
+    /// <summary>Field number for the "is_remove_id" field.</summary>
+    public const int IsRemoveIdFieldNumber = 5;
+    private bool isRemoveId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool GGHKOPBHFAE {
-      get { return gGHKOPBHFAE_; }
+    public bool IsRemoveId {
+      get { return isRemoveId_; }
       set {
-        gGHKOPBHFAE_ = value;
+        isRemoveId_ = value;
       }
     }
 
     /// <summary>Field number for the "extra_id" field.</summary>
-    public const int ExtraIdFieldNumber = 11;
+    public const int ExtraIdFieldNumber = 12;
     private uint extraId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (GGHKOPBHFAE != other.GGHKOPBHFAE) return false;
+      if (IsRemoveId != other.IsRemoveId) return false;
       if (ExtraId != other.ExtraId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -131,7 +131,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (GGHKOPBHFAE != false) hash ^= GGHKOPBHFAE.GetHashCode();
+      if (IsRemoveId != false) hash ^= IsRemoveId.GetHashCode();
       if (ExtraId != 0) hash ^= ExtraId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ExtraId != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(ExtraId);
+      if (IsRemoveId != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(IsRemoveId);
       }
-      if (GGHKOPBHFAE != false) {
+      if (ExtraId != 0) {
         output.WriteRawTag(96);
-        output.WriteBool(GGHKOPBHFAE);
+        output.WriteUInt32(ExtraId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ExtraId != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(ExtraId);
+      if (IsRemoveId != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(IsRemoveId);
       }
-      if (GGHKOPBHFAE != false) {
+      if (ExtraId != 0) {
         output.WriteRawTag(96);
-        output.WriteBool(GGHKOPBHFAE);
+        output.WriteUInt32(ExtraId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (GGHKOPBHFAE != false) {
+      if (IsRemoveId != false) {
         size += 1 + 1;
       }
       if (ExtraId != 0) {
@@ -205,8 +205,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.GGHKOPBHFAE != false) {
-        GGHKOPBHFAE = other.GGHKOPBHFAE;
+      if (other.IsRemoveId != false) {
+        IsRemoveId = other.IsRemoveId;
       }
       if (other.ExtraId != 0) {
         ExtraId = other.ExtraId;
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 88: {
-            ExtraId = input.ReadUInt32();
+          case 40: {
+            IsRemoveId = input.ReadBool();
             break;
           }
           case 96: {
-            GGHKOPBHFAE = input.ReadBool();
+            ExtraId = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 88: {
-            ExtraId = input.ReadUInt32();
+          case 40: {
+            IsRemoveId = input.ReadBool();
             break;
           }
           case 96: {
-            GGHKOPBHFAE = input.ReadBool();
+            ExtraId = input.ReadUInt32();
             break;
           }
         }

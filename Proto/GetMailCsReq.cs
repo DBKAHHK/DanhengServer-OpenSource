@@ -24,14 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static GetMailCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJHZXRNYWlsQ3NSZXEucHJvdG8iTAoMR2V0TWFpbENzUmVxEhMKC0FMUEFC",
-            "TUFLQ0ZBGAkgASgNEicKH01VU0VVTV9SQU5ET01fRVZFTlRfU1RBVEVfU1RB",
-            "UlQYBSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
-            "dG8z"));
+            "ChJHZXRNYWlsQ3NSZXEucHJvdG8iOAoMR2V0TWFpbENzUmVxEhMKC0RBUENE",
+            "TkVMQ01BGAcgASgNEhMKC0NJSkVGTk9PSkpLGAwgASgNQh6qAhtFZ2dMaW5r",
+            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMailCsReq), global::EggLink.DanhengServer.Proto.GetMailCsReq.Parser, new[]{ "ALPABMAKCFA", "MUSEUMRANDOMEVENTSTATESTART" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMailCsReq), global::EggLink.DanhengServer.Proto.GetMailCsReq.Parser, new[]{ "DAPCDNELCMA", "CIJEFNOOJJK" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetMailCsReq(GetMailCsReq other) : this() {
-      aLPABMAKCFA_ = other.aLPABMAKCFA_;
-      mUSEUMRANDOMEVENTSTATESTART_ = other.mUSEUMRANDOMEVENTSTATESTART_;
+      dAPCDNELCMA_ = other.dAPCDNELCMA_;
+      cIJEFNOOJJK_ = other.cIJEFNOOJJK_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,27 +83,27 @@ namespace EggLink.DanhengServer.Proto {
       return new GetMailCsReq(this);
     }
 
-    /// <summary>Field number for the "ALPABMAKCFA" field.</summary>
-    public const int ALPABMAKCFAFieldNumber = 9;
-    private uint aLPABMAKCFA_;
+    /// <summary>Field number for the "DAPCDNELCMA" field.</summary>
+    public const int DAPCDNELCMAFieldNumber = 7;
+    private uint dAPCDNELCMA_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ALPABMAKCFA {
-      get { return aLPABMAKCFA_; }
+    public uint DAPCDNELCMA {
+      get { return dAPCDNELCMA_; }
       set {
-        aLPABMAKCFA_ = value;
+        dAPCDNELCMA_ = value;
       }
     }
 
-    /// <summary>Field number for the "MUSEUM_RANDOM_EVENT_STATE_START" field.</summary>
-    public const int MUSEUMRANDOMEVENTSTATESTARTFieldNumber = 5;
-    private uint mUSEUMRANDOMEVENTSTATESTART_;
+    /// <summary>Field number for the "CIJEFNOOJJK" field.</summary>
+    public const int CIJEFNOOJJKFieldNumber = 12;
+    private uint cIJEFNOOJJK_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MUSEUMRANDOMEVENTSTATESTART {
-      get { return mUSEUMRANDOMEVENTSTATESTART_; }
+    public uint CIJEFNOOJJK {
+      get { return cIJEFNOOJJK_; }
       set {
-        mUSEUMRANDOMEVENTSTATESTART_ = value;
+        cIJEFNOOJJK_ = value;
       }
     }
 
@@ -123,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ALPABMAKCFA != other.ALPABMAKCFA) return false;
-      if (MUSEUMRANDOMEVENTSTATESTART != other.MUSEUMRANDOMEVENTSTATESTART) return false;
+      if (DAPCDNELCMA != other.DAPCDNELCMA) return false;
+      if (CIJEFNOOJJK != other.CIJEFNOOJJK) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ALPABMAKCFA != 0) hash ^= ALPABMAKCFA.GetHashCode();
-      if (MUSEUMRANDOMEVENTSTATESTART != 0) hash ^= MUSEUMRANDOMEVENTSTATESTART.GetHashCode();
+      if (DAPCDNELCMA != 0) hash ^= DAPCDNELCMA.GetHashCode();
+      if (CIJEFNOOJJK != 0) hash ^= CIJEFNOOJJK.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MUSEUMRANDOMEVENTSTATESTART != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(MUSEUMRANDOMEVENTSTATESTART);
+      if (DAPCDNELCMA != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(DAPCDNELCMA);
       }
-      if (ALPABMAKCFA != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(ALPABMAKCFA);
+      if (CIJEFNOOJJK != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(CIJEFNOOJJK);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MUSEUMRANDOMEVENTSTATESTART != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(MUSEUMRANDOMEVENTSTATESTART);
+      if (DAPCDNELCMA != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(DAPCDNELCMA);
       }
-      if (ALPABMAKCFA != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(ALPABMAKCFA);
+      if (CIJEFNOOJJK != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(CIJEFNOOJJK);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ALPABMAKCFA != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ALPABMAKCFA);
+      if (DAPCDNELCMA != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DAPCDNELCMA);
       }
-      if (MUSEUMRANDOMEVENTSTATESTART != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MUSEUMRANDOMEVENTSTATESTART);
+      if (CIJEFNOOJJK != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CIJEFNOOJJK);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ALPABMAKCFA != 0) {
-        ALPABMAKCFA = other.ALPABMAKCFA;
+      if (other.DAPCDNELCMA != 0) {
+        DAPCDNELCMA = other.DAPCDNELCMA;
       }
-      if (other.MUSEUMRANDOMEVENTSTATESTART != 0) {
-        MUSEUMRANDOMEVENTSTATESTART = other.MUSEUMRANDOMEVENTSTATESTART;
+      if (other.CIJEFNOOJJK != 0) {
+        CIJEFNOOJJK = other.CIJEFNOOJJK;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            MUSEUMRANDOMEVENTSTATESTART = input.ReadUInt32();
+          case 56: {
+            DAPCDNELCMA = input.ReadUInt32();
             break;
           }
-          case 72: {
-            ALPABMAKCFA = input.ReadUInt32();
+          case 96: {
+            CIJEFNOOJJK = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            MUSEUMRANDOMEVENTSTATESTART = input.ReadUInt32();
+          case 56: {
+            DAPCDNELCMA = input.ReadUInt32();
             break;
           }
-          case 72: {
-            ALPABMAKCFA = input.ReadUInt32();
+          case 96: {
+            CIJEFNOOJJK = input.ReadUInt32();
             break;
           }
         }

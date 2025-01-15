@@ -26,9 +26,9 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFSZWZyZXNoVHJpZ2dlckJ5Q2xpZW50Q3NSZXEucHJvdG8aEE1vdGlvbklu",
             "Zm8ucHJvdG8ikwEKG1JlZnJlc2hUcmlnZ2VyQnlDbGllbnRDc1JlcRIjCg50",
-            "cmlnZ2VyX21vdGlvbhgGIAEoCzILLk1vdGlvbkluZm8SHgoWdHJpZ2dlcl90",
-            "YXJnZXRfaWRfbGlzdBgOIAMoDRIUCgx0cmlnZ2VyX25hbWUYDSABKAkSGQoR",
-            "dHJpZ2dlcl9lbnRpdHlfaWQYBSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "cmlnZ2VyX21vdGlvbhgIIAEoCzILLk1vdGlvbkluZm8SHgoWdHJpZ2dlcl90",
+            "YXJnZXRfaWRfbGlzdBgNIAMoDRIUCgx0cmlnZ2VyX25hbWUYAyABKAkSGQoR",
+            "dHJpZ2dlcl9lbnRpdHlfaWQYAiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, },
@@ -89,7 +89,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "trigger_motion" field.</summary>
-    public const int TriggerMotionFieldNumber = 6;
+    public const int TriggerMotionFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.MotionInfo triggerMotion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -101,9 +101,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "trigger_target_id_list" field.</summary>
-    public const int TriggerTargetIdListFieldNumber = 14;
+    public const int TriggerTargetIdListFieldNumber = 13;
     private static readonly pb::FieldCodec<uint> _repeated_triggerTargetIdList_codec
-        = pb::FieldCodec.ForUInt32(114);
+        = pb::FieldCodec.ForUInt32(106);
     private readonly pbc::RepeatedField<uint> triggerTargetIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "trigger_name" field.</summary>
-    public const int TriggerNameFieldNumber = 13;
+    public const int TriggerNameFieldNumber = 3;
     private string triggerName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "trigger_entity_id" field.</summary>
-    public const int TriggerEntityIdFieldNumber = 5;
+    public const int TriggerEntityIdFieldNumber = 2;
     private uint triggerEntityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -184,16 +184,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (TriggerEntityId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(16);
         output.WriteUInt32(TriggerEntityId);
       }
-      if (triggerMotion_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(TriggerMotion);
-      }
       if (TriggerName.Length != 0) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(26);
         output.WriteString(TriggerName);
+      }
+      if (triggerMotion_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(TriggerMotion);
       }
       triggerTargetIdList_.WriteTo(output, _repeated_triggerTargetIdList_codec);
       if (_unknownFields != null) {
@@ -207,16 +207,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (TriggerEntityId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(16);
         output.WriteUInt32(TriggerEntityId);
       }
-      if (triggerMotion_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(TriggerMotion);
-      }
       if (TriggerName.Length != 0) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(26);
         output.WriteString(TriggerName);
+      }
+      if (triggerMotion_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(TriggerMotion);
       }
       triggerTargetIdList_.WriteTo(ref output, _repeated_triggerTargetIdList_codec);
       if (_unknownFields != null) {
@@ -279,23 +279,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 16: {
             TriggerEntityId = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 26: {
+            TriggerName = input.ReadString();
+            break;
+          }
+          case 66: {
             if (triggerMotion_ == null) {
               TriggerMotion = new global::EggLink.DanhengServer.Proto.MotionInfo();
             }
             input.ReadMessage(TriggerMotion);
             break;
           }
-          case 106: {
-            TriggerName = input.ReadString();
-            break;
-          }
-          case 114:
-          case 112: {
+          case 106:
+          case 104: {
             triggerTargetIdList_.AddEntriesFrom(input, _repeated_triggerTargetIdList_codec);
             break;
           }
@@ -314,23 +314,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 16: {
             TriggerEntityId = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 26: {
+            TriggerName = input.ReadString();
+            break;
+          }
+          case 66: {
             if (triggerMotion_ == null) {
               TriggerMotion = new global::EggLink.DanhengServer.Proto.MotionInfo();
             }
             input.ReadMessage(TriggerMotion);
             break;
           }
-          case 106: {
-            TriggerName = input.ReadString();
-            break;
-          }
-          case 114:
-          case 112: {
+          case 106:
+          case 104: {
             triggerTargetIdList_.AddEntriesFrom(ref input, _repeated_triggerTargetIdList_codec);
             break;
           }

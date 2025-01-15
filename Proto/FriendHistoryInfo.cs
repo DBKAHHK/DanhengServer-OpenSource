@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdGcmllbmRIaXN0b3J5SW5mby5wcm90byI/ChFGcmllbmRIaXN0b3J5SW5m",
-            "bxIWCg5sYXN0X3NlbmRfdGltZRgDIAEoAxISCgpjb250YWN0X2lkGAcgASgN",
+            "bxISCgpjb250YWN0X2lkGAIgASgNEhYKDmxhc3Rfc2VuZF90aW1lGAEgASgD",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FriendHistoryInfo), global::EggLink.DanhengServer.Proto.FriendHistoryInfo.Parser, new[]{ "LastSendTime", "ContactId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FriendHistoryInfo), global::EggLink.DanhengServer.Proto.FriendHistoryInfo.Parser, new[]{ "ContactId", "LastSendTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FriendHistoryInfo(FriendHistoryInfo other) : this() {
-      lastSendTime_ = other.lastSendTime_;
       contactId_ = other.contactId_;
+      lastSendTime_ = other.lastSendTime_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,20 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new FriendHistoryInfo(this);
     }
 
-    /// <summary>Field number for the "last_send_time" field.</summary>
-    public const int LastSendTimeFieldNumber = 3;
-    private long lastSendTime_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long LastSendTime {
-      get { return lastSendTime_; }
-      set {
-        lastSendTime_ = value;
-      }
-    }
-
     /// <summary>Field number for the "contact_id" field.</summary>
-    public const int ContactIdFieldNumber = 7;
+    public const int ContactIdFieldNumber = 2;
     private uint contactId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,6 +92,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return contactId_; }
       set {
         contactId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "last_send_time" field.</summary>
+    public const int LastSendTimeFieldNumber = 1;
+    private long lastSendTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long LastSendTime {
+      get { return lastSendTime_; }
+      set {
+        lastSendTime_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (LastSendTime != other.LastSendTime) return false;
       if (ContactId != other.ContactId) return false;
+      if (LastSendTime != other.LastSendTime) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (LastSendTime != 0L) hash ^= LastSendTime.GetHashCode();
       if (ContactId != 0) hash ^= ContactId.GetHashCode();
+      if (LastSendTime != 0L) hash ^= LastSendTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (LastSendTime != 0L) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteInt64(LastSendTime);
       }
       if (ContactId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(16);
         output.WriteUInt32(ContactId);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (LastSendTime != 0L) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteInt64(LastSendTime);
       }
       if (ContactId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(16);
         output.WriteUInt32(ContactId);
       }
       if (_unknownFields != null) {
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (LastSendTime != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(LastSendTime);
-      }
       if (ContactId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ContactId);
+      }
+      if (LastSendTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(LastSendTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.LastSendTime != 0L) {
-        LastSendTime = other.LastSendTime;
-      }
       if (other.ContactId != 0) {
         ContactId = other.ContactId;
+      }
+      if (other.LastSendTime != 0L) {
+        LastSendTime = other.LastSendTime;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 8: {
             LastSendTime = input.ReadInt64();
             break;
           }
-          case 56: {
+          case 16: {
             ContactId = input.ReadUInt32();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 8: {
             LastSendTime = input.ReadInt64();
             break;
           }
-          case 56: {
+          case 16: {
             ContactId = input.ReadUInt32();
             break;
           }

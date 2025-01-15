@@ -25,17 +25,17 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFXb3JrYmVuY2hDb21wb3NlTWlyYWNsZUZ1bmMucHJvdG8aEkl0ZW1Db3N0",
-            "RGF0YS5wcm90byLwAQobV29ya2JlbmNoQ29tcG9zZU1pcmFjbGVGdW5jEkIK",
-            "C1BOQ01ORUtNQklHGA4gAygLMi0uV29ya2JlbmNoQ29tcG9zZU1pcmFjbGVG",
-            "dW5jLlBOQ01ORUtNQklHRW50cnkSGAoQZnJlZV9yZWZvcmdlX251bRgKIAEo",
-            "DRIgCgljb3N0X2RhdGEYDSABKAsyDS5JdGVtQ29zdERhdGESHQoVaW50X3Jl",
-            "Zm9yZ2VfbnVtX3ZhbHVlGAMgASgFGjIKEFBOQ01ORUtNQklHRW50cnkSCwoD",
-            "a2V5GAEgASgNEg0KBXZhbHVlGAIgASgIOgI4AUIeqgIbRWdnTGluay5EYW5o",
-            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "RGF0YS5wcm90byKFAgobV29ya2JlbmNoQ29tcG9zZU1pcmFjbGVGdW5jEh0K",
+            "FWludF9yZWZvcmdlX251bV92YWx1ZRgNIAEoBRJRChRhbGxvd190b19jb21w",
+            "b3NlX21hcBgLIAMoCzIzLldvcmtiZW5jaENvbXBvc2VNaXJhY2xlRnVuYy5B",
+            "bGxvd1RvQ29tcG9zZU1hcEVudHJ5EhgKEGZyZWVfcmVmb3JnZV9udW0YBiAB",
+            "KA0SIAoJY29zdF9kYXRhGAggASgLMg0uSXRlbUNvc3REYXRhGjgKFkFsbG93",
+            "VG9Db21wb3NlTWFwRW50cnkSCwoDa2V5GAEgASgNEg0KBXZhbHVlGAIgASgI",
+            "OgI4AUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.WorkbenchComposeMiracleFunc), global::EggLink.DanhengServer.Proto.WorkbenchComposeMiracleFunc.Parser, new[]{ "PNCMNEKMBIG", "FreeReforgeNum", "CostData", "IntReforgeNumValue" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.WorkbenchComposeMiracleFunc), global::EggLink.DanhengServer.Proto.WorkbenchComposeMiracleFunc.Parser, new[]{ "IntReforgeNumValue", "AllowToComposeMap", "FreeReforgeNum", "CostData" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -77,10 +77,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkbenchComposeMiracleFunc(WorkbenchComposeMiracleFunc other) : this() {
-      pNCMNEKMBIG_ = other.pNCMNEKMBIG_.Clone();
+      intReforgeNumValue_ = other.intReforgeNumValue_;
+      allowToComposeMap_ = other.allowToComposeMap_.Clone();
       freeReforgeNum_ = other.freeReforgeNum_;
       costData_ = other.costData_ != null ? other.costData_.Clone() : null;
-      intReforgeNumValue_ = other.intReforgeNumValue_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -90,19 +90,31 @@ namespace EggLink.DanhengServer.Proto {
       return new WorkbenchComposeMiracleFunc(this);
     }
 
-    /// <summary>Field number for the "PNCMNEKMBIG" field.</summary>
-    public const int PNCMNEKMBIGFieldNumber = 14;
-    private static readonly pbc::MapField<uint, bool>.Codec _map_pNCMNEKMBIG_codec
-        = new pbc::MapField<uint, bool>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForBool(16, false), 114);
-    private readonly pbc::MapField<uint, bool> pNCMNEKMBIG_ = new pbc::MapField<uint, bool>();
+    /// <summary>Field number for the "int_reforge_num_value" field.</summary>
+    public const int IntReforgeNumValueFieldNumber = 13;
+    private int intReforgeNumValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<uint, bool> PNCMNEKMBIG {
-      get { return pNCMNEKMBIG_; }
+    public int IntReforgeNumValue {
+      get { return intReforgeNumValue_; }
+      set {
+        intReforgeNumValue_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "allow_to_compose_map" field.</summary>
+    public const int AllowToComposeMapFieldNumber = 11;
+    private static readonly pbc::MapField<uint, bool>.Codec _map_allowToComposeMap_codec
+        = new pbc::MapField<uint, bool>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForBool(16, false), 90);
+    private readonly pbc::MapField<uint, bool> allowToComposeMap_ = new pbc::MapField<uint, bool>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<uint, bool> AllowToComposeMap {
+      get { return allowToComposeMap_; }
     }
 
     /// <summary>Field number for the "free_reforge_num" field.</summary>
-    public const int FreeReforgeNumFieldNumber = 10;
+    public const int FreeReforgeNumFieldNumber = 6;
     private uint freeReforgeNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -114,7 +126,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cost_data" field.</summary>
-    public const int CostDataFieldNumber = 13;
+    public const int CostDataFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.ItemCostData costData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,18 +134,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return costData_; }
       set {
         costData_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "int_reforge_num_value" field.</summary>
-    public const int IntReforgeNumValueFieldNumber = 3;
-    private int intReforgeNumValue_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int IntReforgeNumValue {
-      get { return intReforgeNumValue_; }
-      set {
-        intReforgeNumValue_ = value;
       }
     }
 
@@ -152,10 +152,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!PNCMNEKMBIG.Equals(other.PNCMNEKMBIG)) return false;
+      if (IntReforgeNumValue != other.IntReforgeNumValue) return false;
+      if (!AllowToComposeMap.Equals(other.AllowToComposeMap)) return false;
       if (FreeReforgeNum != other.FreeReforgeNum) return false;
       if (!object.Equals(CostData, other.CostData)) return false;
-      if (IntReforgeNumValue != other.IntReforgeNumValue) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -163,10 +163,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= PNCMNEKMBIG.GetHashCode();
+      if (IntReforgeNumValue != 0) hash ^= IntReforgeNumValue.GetHashCode();
+      hash ^= AllowToComposeMap.GetHashCode();
       if (FreeReforgeNum != 0) hash ^= FreeReforgeNum.GetHashCode();
       if (costData_ != null) hash ^= CostData.GetHashCode();
-      if (IntReforgeNumValue != 0) hash ^= IntReforgeNumValue.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -185,19 +185,19 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IntReforgeNumValue != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(IntReforgeNumValue);
-      }
       if (FreeReforgeNum != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(48);
         output.WriteUInt32(FreeReforgeNum);
       }
       if (costData_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(66);
         output.WriteMessage(CostData);
       }
-      pNCMNEKMBIG_.WriteTo(output, _map_pNCMNEKMBIG_codec);
+      allowToComposeMap_.WriteTo(output, _map_allowToComposeMap_codec);
+      if (IntReforgeNumValue != 0) {
+        output.WriteRawTag(104);
+        output.WriteInt32(IntReforgeNumValue);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -208,19 +208,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IntReforgeNumValue != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(IntReforgeNumValue);
-      }
       if (FreeReforgeNum != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(48);
         output.WriteUInt32(FreeReforgeNum);
       }
       if (costData_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(66);
         output.WriteMessage(CostData);
       }
-      pNCMNEKMBIG_.WriteTo(ref output, _map_pNCMNEKMBIG_codec);
+      allowToComposeMap_.WriteTo(ref output, _map_allowToComposeMap_codec);
+      if (IntReforgeNumValue != 0) {
+        output.WriteRawTag(104);
+        output.WriteInt32(IntReforgeNumValue);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += pNCMNEKMBIG_.CalculateSize(_map_pNCMNEKMBIG_codec);
+      if (IntReforgeNumValue != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(IntReforgeNumValue);
+      }
+      size += allowToComposeMap_.CalculateSize(_map_allowToComposeMap_codec);
       if (FreeReforgeNum != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FreeReforgeNum);
       }
       if (costData_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CostData);
-      }
-      if (IntReforgeNumValue != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(IntReforgeNumValue);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -253,7 +253,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      pNCMNEKMBIG_.MergeFrom(other.pNCMNEKMBIG_);
+      if (other.IntReforgeNumValue != 0) {
+        IntReforgeNumValue = other.IntReforgeNumValue;
+      }
+      allowToComposeMap_.MergeFrom(other.allowToComposeMap_);
       if (other.FreeReforgeNum != 0) {
         FreeReforgeNum = other.FreeReforgeNum;
       }
@@ -262,9 +265,6 @@ namespace EggLink.DanhengServer.Proto {
           CostData = new global::EggLink.DanhengServer.Proto.ItemCostData();
         }
         CostData.MergeFrom(other.CostData);
-      }
-      if (other.IntReforgeNumValue != 0) {
-        IntReforgeNumValue = other.IntReforgeNumValue;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -281,23 +281,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            IntReforgeNumValue = input.ReadInt32();
-            break;
-          }
-          case 80: {
+          case 48: {
             FreeReforgeNum = input.ReadUInt32();
             break;
           }
-          case 106: {
+          case 66: {
             if (costData_ == null) {
               CostData = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
             input.ReadMessage(CostData);
             break;
           }
-          case 114: {
-            pNCMNEKMBIG_.AddEntriesFrom(input, _map_pNCMNEKMBIG_codec);
+          case 90: {
+            allowToComposeMap_.AddEntriesFrom(input, _map_allowToComposeMap_codec);
+            break;
+          }
+          case 104: {
+            IntReforgeNumValue = input.ReadInt32();
             break;
           }
         }
@@ -315,23 +315,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            IntReforgeNumValue = input.ReadInt32();
-            break;
-          }
-          case 80: {
+          case 48: {
             FreeReforgeNum = input.ReadUInt32();
             break;
           }
-          case 106: {
+          case 66: {
             if (costData_ == null) {
               CostData = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
             input.ReadMessage(CostData);
             break;
           }
-          case 114: {
-            pNCMNEKMBIG_.AddEntriesFrom(ref input, _map_pNCMNEKMBIG_codec);
+          case 90: {
+            allowToComposeMap_.AddEntriesFrom(ref input, _map_allowToComposeMap_codec);
+            break;
+          }
+          case 104: {
+            IntReforgeNumValue = input.ReadInt32();
             break;
           }
         }

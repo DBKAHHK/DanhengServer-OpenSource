@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChxNYWluTWlzc2lvbkN1c3RvbVZhbHVlLnByb3RvGhxNaXNzaW9uQ3VzdG9t",
             "VmFsdWVMaXN0LnByb3RvImUKFk1haW5NaXNzaW9uQ3VzdG9tVmFsdWUSFwoP",
-            "bWFpbl9taXNzaW9uX2lkGAQgASgNEjIKEWN1c3RvbV92YWx1ZV9saXN0GAcg",
+            "bWFpbl9taXNzaW9uX2lkGAUgASgNEjIKEWN1c3RvbV92YWx1ZV9saXN0GAog",
             "ASgLMhcuTWlzc2lvbkN1c3RvbVZhbHVlTGlzdEIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "main_mission_id" field.</summary>
-    public const int MainMissionIdFieldNumber = 4;
+    public const int MainMissionIdFieldNumber = 5;
     private uint mainMissionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "custom_value_list" field.</summary>
-    public const int CustomValueListFieldNumber = 7;
+    public const int CustomValueListFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.MissionCustomValueList customValueList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -154,11 +154,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (MainMissionId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteUInt32(MainMissionId);
       }
       if (customValueList_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(82);
         output.WriteMessage(CustomValueList);
       }
       if (_unknownFields != null) {
@@ -172,11 +172,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MainMissionId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteUInt32(MainMissionId);
       }
       if (customValueList_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(82);
         output.WriteMessage(CustomValueList);
       }
       if (_unknownFields != null) {
@@ -231,11 +231,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 40: {
             MainMissionId = input.ReadUInt32();
             break;
           }
-          case 58: {
+          case 82: {
             if (customValueList_ == null) {
               CustomValueList = new global::EggLink.DanhengServer.Proto.MissionCustomValueList();
             }
@@ -257,11 +257,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 40: {
             MainMissionId = input.ReadUInt32();
             break;
           }
-          case 58: {
+          case 82: {
             if (customValueList_ == null) {
               CustomValueList = new global::EggLink.DanhengServer.Proto.MissionCustomValueList();
             }

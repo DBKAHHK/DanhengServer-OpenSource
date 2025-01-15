@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5Sb2d1ZVRvdXJuRGlmZmljdWx0eUluZm8ucHJvdG8iRgoYUm9ndWVUb3Vy",
-            "bkRpZmZpY3VsdHlJbmZvEhUKDWRpZmZpY3VsdHlfaWQYASABKA0SEwoLaXNf",
-            "dW5sb2NrZWQYBSABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "bkRpZmZpY3VsdHlJbmZvEhUKDWRpZmZpY3VsdHlfaWQYBSABKA0SEwoLaXNf",
+            "dW5sb2NrZWQYCyABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "difficulty_id" field.</summary>
-    public const int DifficultyIdFieldNumber = 1;
+    public const int DifficultyIdFieldNumber = 5;
     private uint difficultyId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_unlocked" field.</summary>
-    public const int IsUnlockedFieldNumber = 5;
+    public const int IsUnlockedFieldNumber = 11;
     private bool isUnlocked_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (DifficultyId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(40);
         output.WriteUInt32(DifficultyId);
       }
       if (IsUnlocked != false) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(88);
         output.WriteBool(IsUnlocked);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (DifficultyId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(40);
         output.WriteUInt32(DifficultyId);
       }
       if (IsUnlocked != false) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(88);
         output.WriteBool(IsUnlocked);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 40: {
             DifficultyId = input.ReadUInt32();
             break;
           }
-          case 40: {
+          case 88: {
             IsUnlocked = input.ReadBool();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 40: {
             DifficultyId = input.ReadUInt32();
             break;
           }
-          case 40: {
+          case 88: {
             IsUnlocked = input.ReadBool();
             break;
           }

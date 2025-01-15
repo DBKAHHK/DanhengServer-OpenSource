@@ -169,7 +169,7 @@ public class ChallengeInstance
                 {
                     BuffId = (uint)BossBuffs[1]
                 },
-                NJKCJBLOIBK = true
+                NCBDNPGPEAI = true
             };
 
             foreach (var lineupAvatar in Player.LineupManager?.GetExtraLineup(ExtraLineupType.LineupChallenge)

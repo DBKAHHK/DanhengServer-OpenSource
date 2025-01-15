@@ -12,8 +12,7 @@ public class RogueTournManager(PlayerInstance player) : BasePlayerManager(player
 {
     public RogueTournInstance? RogueTournInstance { get; set; }
 
-    public async ValueTask<(Retcode, RogueTournInstance?)> StartRogueTourn(List<int> avatars, int area, int week,
-        List<int> difficulty)
+    public async ValueTask<(Retcode, RogueTournInstance?)> StartRogueTourn(List<int> avatars, int area)
     {
         RogueTournInstance = null;
         var areaExcel = GameData.RogueTournAreaData.GetValueOrDefault(area);

@@ -635,8 +635,7 @@ public class PlayerInstance(PlayerData data)
         var data = new ScenePropTimelineData
         {
             BoolValue = info.TimelineBoolValue,
-            ByteValue = info.TimelineByteValue.ToBase64(),
-            UintValue = info.TimelineIntValue
+            ByteValue = info.TimelineByteValue.ToBase64()
         };
 
         // save to db

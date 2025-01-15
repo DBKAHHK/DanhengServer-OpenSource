@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChpHZXRPZmZlcmluZ0luZm9TY1JzcC5wcm90bxoST2ZmZXJpbmdJbmZvLnBy",
             "b3RvIlIKFEdldE9mZmVyaW5nSW5mb1NjUnNwEikKEm9mZmVyaW5nX2luZm9f",
-            "bGlzdBgBIAMoCzINLk9mZmVyaW5nSW5mbxIPCgdyZXRjb2RlGAUgASgNQh6q",
+            "bGlzdBgKIAMoCzINLk9mZmVyaW5nSW5mbxIPCgdyZXRjb2RlGAYgASgNQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OfferingInfoReflection.Descriptor, },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "offering_info_list" field.</summary>
-    public const int OfferingInfoListFieldNumber = 1;
+    public const int OfferingInfoListFieldNumber = 10;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.OfferingInfo> _repeated_offeringInfoList_codec
-        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.OfferingInfo.Parser);
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.OfferingInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OfferingInfo> offeringInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OfferingInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 5;
+    public const int RetcodeFieldNumber = 6;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      offeringInfoList_.WriteTo(output, _repeated_offeringInfoList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
+      offeringInfoList_.WriteTo(output, _repeated_offeringInfoList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      offeringInfoList_.WriteTo(ref output, _repeated_offeringInfoList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
+      offeringInfoList_.WriteTo(ref output, _repeated_offeringInfoList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            offeringInfoList_.AddEntriesFrom(input, _repeated_offeringInfoList_codec);
+          case 48: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 40: {
-            Retcode = input.ReadUInt32();
+          case 82: {
+            offeringInfoList_.AddEntriesFrom(input, _repeated_offeringInfoList_codec);
             break;
           }
         }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            offeringInfoList_.AddEntriesFrom(ref input, _repeated_offeringInfoList_codec);
+          case 48: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 40: {
-            Retcode = input.ReadUInt32();
+          case 82: {
+            offeringInfoList_.AddEntriesFrom(ref input, _repeated_offeringInfoList_codec);
             break;
           }
         }

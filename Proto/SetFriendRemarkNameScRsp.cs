@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5TZXRGcmllbmRSZW1hcmtOYW1lU2NSc3AucHJvdG8iTQoYU2V0RnJpZW5k",
-            "UmVtYXJrTmFtZVNjUnNwEhMKC3JlbWFya19uYW1lGA8gASgJEg8KB3JldGNv",
-            "ZGUYAiABKA0SCwoDdWlkGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "UmVtYXJrTmFtZVNjUnNwEhMKC3JlbWFya19uYW1lGA0gASgJEgsKA3VpZBgP",
+            "IAEoDRIPCgdyZXRjb2RlGAkgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetFriendRemarkNameScRsp), global::EggLink.DanhengServer.Proto.SetFriendRemarkNameScRsp.Parser, new[]{ "RemarkName", "Retcode", "Uid" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetFriendRemarkNameScRsp), global::EggLink.DanhengServer.Proto.SetFriendRemarkNameScRsp.Parser, new[]{ "RemarkName", "Uid", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SetFriendRemarkNameScRsp(SetFriendRemarkNameScRsp other) : this() {
       remarkName_ = other.remarkName_;
-      retcode_ = other.retcode_;
       uid_ = other.uid_;
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "remark_name" field.</summary>
-    public const int RemarkNameFieldNumber = 15;
+    public const int RemarkNameFieldNumber = 13;
     private string remarkName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,20 +97,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 2;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
     /// <summary>Field number for the "uid" field.</summary>
-    public const int UidFieldNumber = 13;
+    public const int UidFieldNumber = 15;
     private uint uid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -118,6 +106,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return uid_; }
       set {
         uid_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 9;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
       }
     }
 
@@ -137,8 +137,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (RemarkName != other.RemarkName) return false;
-      if (Retcode != other.Retcode) return false;
       if (Uid != other.Uid) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,8 +147,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (RemarkName.Length != 0) hash ^= RemarkName.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (Uid != 0) hash ^= Uid.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,16 +168,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
       }
-      if (Uid != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(Uid);
-      }
       if (RemarkName.Length != 0) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(106);
         output.WriteString(RemarkName);
+      }
+      if (Uid != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(Uid);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,16 +190,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
       }
-      if (Uid != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(Uid);
-      }
       if (RemarkName.Length != 0) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(106);
         output.WriteString(RemarkName);
+      }
+      if (Uid != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(Uid);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -214,11 +214,11 @@ namespace EggLink.DanhengServer.Proto {
       if (RemarkName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RemarkName);
       }
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
       if (Uid != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Uid);
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -235,11 +235,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.RemarkName.Length != 0) {
         RemarkName = other.RemarkName;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
       if (other.Uid != 0) {
         Uid = other.Uid;
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 72: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 104: {
-            Uid = input.ReadUInt32();
+          case 106: {
+            RemarkName = input.ReadString();
             break;
           }
-          case 122: {
-            RemarkName = input.ReadString();
+          case 120: {
+            Uid = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 72: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 104: {
-            Uid = input.ReadUInt32();
+          case 106: {
+            RemarkName = input.ReadString();
             break;
           }
-          case 122: {
-            RemarkName = input.ReadString();
+          case 120: {
+            Uid = input.ReadUInt32();
             break;
           }
         }

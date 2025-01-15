@@ -26,14 +26,14 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CitSb2d1ZUFkdmVudHVyZVJvb21HYW1lcGxheVdvbGZHdW5JbmZvLnByb3Rv",
             "Gi9Sb2d1ZUFkdmVudHVyZVJvb21HYW1lcGxheVdvbGZHdW5HYW1lSW5mby5w",
-            "cm90byJ+CiVSb2d1ZUFkdmVudHVyZVJvb21HYW1lcGxheVdvbGZHdW5JbmZv",
+            "cm90byJ1CiVSb2d1ZUFkdmVudHVyZVJvb21HYW1lcGxheVdvbGZHdW5JbmZv",
             "Ej8KCWdhbWVfaW5mbxgOIAEoCzIqLlJvZ3VlQWR2ZW50dXJlUm9vbUdhbWVw",
-            "bGF5V29sZkd1bkdhbWVJbmZvSABCFAoSZ2FtZXBsYXlfZ2FtZV9pbmZvQh6q",
-            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "bGF5V29sZkd1bkdhbWVJbmZvSABCCwoJaW5mb19jYXNlQh6qAhtFZ2dMaW5r",
+            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunGameInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunInfo), global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunInfo.Parser, new[]{ "GameInfo" }, new[]{ "GameplayGameInfo" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunInfo), global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunInfo.Parser, new[]{ "GameInfo" }, new[]{ "InfoCase" }, null, null, null)
           }));
     }
     #endregion
@@ -75,8 +75,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueAdventureRoomGameplayWolfGunInfo(RogueAdventureRoomGameplayWolfGunInfo other) : this() {
-      switch (other.GameplayGameInfoCase) {
-        case GameplayGameInfoOneofCase.GameInfo:
+      switch (other.InfoCaseCase) {
+        case InfoCaseOneofCase.GameInfo:
           GameInfo = other.GameInfo.Clone();
           break;
       }
@@ -95,31 +95,31 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunGameInfo GameInfo {
-      get { return gameplayGameInfoCase_ == GameplayGameInfoOneofCase.GameInfo ? (global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunGameInfo) gameplayGameInfo_ : null; }
+      get { return infoCaseCase_ == InfoCaseOneofCase.GameInfo ? (global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunGameInfo) infoCase_ : null; }
       set {
-        gameplayGameInfo_ = value;
-        gameplayGameInfoCase_ = value == null ? GameplayGameInfoOneofCase.None : GameplayGameInfoOneofCase.GameInfo;
+        infoCase_ = value;
+        infoCaseCase_ = value == null ? InfoCaseOneofCase.None : InfoCaseOneofCase.GameInfo;
       }
     }
 
-    private object gameplayGameInfo_;
-    /// <summary>Enum of possible cases for the "gameplay_game_info" oneof.</summary>
-    public enum GameplayGameInfoOneofCase {
+    private object infoCase_;
+    /// <summary>Enum of possible cases for the "info_case" oneof.</summary>
+    public enum InfoCaseOneofCase {
       None = 0,
       GameInfo = 14,
     }
-    private GameplayGameInfoOneofCase gameplayGameInfoCase_ = GameplayGameInfoOneofCase.None;
+    private InfoCaseOneofCase infoCaseCase_ = InfoCaseOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GameplayGameInfoOneofCase GameplayGameInfoCase {
-      get { return gameplayGameInfoCase_; }
+    public InfoCaseOneofCase InfoCaseCase {
+      get { return infoCaseCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearGameplayGameInfo() {
-      gameplayGameInfoCase_ = GameplayGameInfoOneofCase.None;
-      gameplayGameInfo_ = null;
+    public void ClearInfoCase() {
+      infoCaseCase_ = InfoCaseOneofCase.None;
+      infoCase_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(GameInfo, other.GameInfo)) return false;
-      if (GameplayGameInfoCase != other.GameplayGameInfoCase) return false;
+      if (InfoCaseCase != other.InfoCaseCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,8 +146,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (gameplayGameInfoCase_ == GameplayGameInfoOneofCase.GameInfo) hash ^= GameInfo.GetHashCode();
-      hash ^= (int) gameplayGameInfoCase_;
+      if (infoCaseCase_ == InfoCaseOneofCase.GameInfo) hash ^= GameInfo.GetHashCode();
+      hash ^= (int) infoCaseCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,7 +166,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (gameplayGameInfoCase_ == GameplayGameInfoOneofCase.GameInfo) {
+      if (infoCaseCase_ == InfoCaseOneofCase.GameInfo) {
         output.WriteRawTag(114);
         output.WriteMessage(GameInfo);
       }
@@ -180,7 +180,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (gameplayGameInfoCase_ == GameplayGameInfoOneofCase.GameInfo) {
+      if (infoCaseCase_ == InfoCaseOneofCase.GameInfo) {
         output.WriteRawTag(114);
         output.WriteMessage(GameInfo);
       }
@@ -194,7 +194,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (gameplayGameInfoCase_ == GameplayGameInfoOneofCase.GameInfo) {
+      if (infoCaseCase_ == InfoCaseOneofCase.GameInfo) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameInfo);
       }
       if (_unknownFields != null) {
@@ -209,8 +209,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      switch (other.GameplayGameInfoCase) {
-        case GameplayGameInfoOneofCase.GameInfo:
+      switch (other.InfoCaseCase) {
+        case InfoCaseOneofCase.GameInfo:
           if (GameInfo == null) {
             GameInfo = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunGameInfo();
           }
@@ -235,7 +235,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 114: {
             global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunGameInfo subBuilder = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunGameInfo();
-            if (gameplayGameInfoCase_ == GameplayGameInfoOneofCase.GameInfo) {
+            if (infoCaseCase_ == InfoCaseOneofCase.GameInfo) {
               subBuilder.MergeFrom(GameInfo);
             }
             input.ReadMessage(subBuilder);
@@ -259,7 +259,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 114: {
             global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunGameInfo subBuilder = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunGameInfo();
-            if (gameplayGameInfoCase_ == GameplayGameInfoOneofCase.GameInfo) {
+            if (infoCaseCase_ == InfoCaseOneofCase.GameInfo) {
               subBuilder.MergeFrom(GameInfo);
             }
             input.ReadMessage(subBuilder);

@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static StopRogueAdventureRoomCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFTdG9wUm9ndWVBZHZlbnR1cmVSb29tQ3NSZXEucHJvdG8iUAobU3RvcFJv",
-            "Z3VlQWR2ZW50dXJlUm9vbUNzUmVxEhIKCmdhbWVfc2NvcmUYAiABKA0SHQoV",
-            "aGl0X3RhcmdldF9pbmRleF9saXN0GAcgAygNQh6qAhtFZ2dMaW5rLkRhbmhl",
-            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "CiFTdG9wUm9ndWVBZHZlbnR1cmVSb29tQ3NSZXEucHJvdG8iUQobU3RvcFJv",
+            "Z3VlQWR2ZW50dXJlUm9vbUNzUmVxEh0KFWhpdF90YXJnZXRfaW5kZXhfbGlz",
+            "dBgNIAMoDRITCgtNTUhNREhJSENBQhgHIAEoDUIeqgIbRWdnTGluay5EYW5o",
+            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StopRogueAdventureRoomCsReq), global::EggLink.DanhengServer.Proto.StopRogueAdventureRoomCsReq.Parser, new[]{ "GameScore", "HitTargetIndexList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StopRogueAdventureRoomCsReq), global::EggLink.DanhengServer.Proto.StopRogueAdventureRoomCsReq.Parser, new[]{ "HitTargetIndexList", "MMHMDHIHCAB" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StopRogueAdventureRoomCsReq(StopRogueAdventureRoomCsReq other) : this() {
-      gameScore_ = other.gameScore_;
       hitTargetIndexList_ = other.hitTargetIndexList_.Clone();
+      mMHMDHIHCAB_ = other.mMHMDHIHCAB_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,27 +84,27 @@ namespace EggLink.DanhengServer.Proto {
       return new StopRogueAdventureRoomCsReq(this);
     }
 
-    /// <summary>Field number for the "game_score" field.</summary>
-    public const int GameScoreFieldNumber = 2;
-    private uint gameScore_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GameScore {
-      get { return gameScore_; }
-      set {
-        gameScore_ = value;
-      }
-    }
-
     /// <summary>Field number for the "hit_target_index_list" field.</summary>
-    public const int HitTargetIndexListFieldNumber = 7;
+    public const int HitTargetIndexListFieldNumber = 13;
     private static readonly pb::FieldCodec<uint> _repeated_hitTargetIndexList_codec
-        = pb::FieldCodec.ForUInt32(58);
+        = pb::FieldCodec.ForUInt32(106);
     private readonly pbc::RepeatedField<uint> hitTargetIndexList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<uint> HitTargetIndexList {
       get { return hitTargetIndexList_; }
+    }
+
+    /// <summary>Field number for the "MMHMDHIHCAB" field.</summary>
+    public const int MMHMDHIHCABFieldNumber = 7;
+    private uint mMHMDHIHCAB_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint MMHMDHIHCAB {
+      get { return mMHMDHIHCAB_; }
+      set {
+        mMHMDHIHCAB_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (GameScore != other.GameScore) return false;
       if(!hitTargetIndexList_.Equals(other.hitTargetIndexList_)) return false;
+      if (MMHMDHIHCAB != other.MMHMDHIHCAB) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (GameScore != 0) hash ^= GameScore.GetHashCode();
       hash ^= hitTargetIndexList_.GetHashCode();
+      if (MMHMDHIHCAB != 0) hash ^= MMHMDHIHCAB.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (GameScore != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(GameScore);
+      if (MMHMDHIHCAB != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(MMHMDHIHCAB);
       }
       hitTargetIndexList_.WriteTo(output, _repeated_hitTargetIndexList_codec);
       if (_unknownFields != null) {
@@ -166,9 +166,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (GameScore != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(GameScore);
+      if (MMHMDHIHCAB != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(MMHMDHIHCAB);
       }
       hitTargetIndexList_.WriteTo(ref output, _repeated_hitTargetIndexList_codec);
       if (_unknownFields != null) {
@@ -181,10 +181,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (GameScore != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GameScore);
-      }
       size += hitTargetIndexList_.CalculateSize(_repeated_hitTargetIndexList_codec);
+      if (MMHMDHIHCAB != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MMHMDHIHCAB);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -197,10 +197,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.GameScore != 0) {
-        GameScore = other.GameScore;
-      }
       hitTargetIndexList_.Add(other.hitTargetIndexList_);
+      if (other.MMHMDHIHCAB != 0) {
+        MMHMDHIHCAB = other.MMHMDHIHCAB;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            GameScore = input.ReadUInt32();
+          case 56: {
+            MMHMDHIHCAB = input.ReadUInt32();
             break;
           }
-          case 58:
-          case 56: {
+          case 106:
+          case 104: {
             hitTargetIndexList_.AddEntriesFrom(input, _repeated_hitTargetIndexList_codec);
             break;
           }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            GameScore = input.ReadUInt32();
+          case 56: {
+            MMHMDHIHCAB = input.ReadUInt32();
             break;
           }
-          case 58:
-          case 56: {
+          case 106:
+          case 104: {
             hitTargetIndexList_.AddEntriesFrom(ref input, _repeated_hitTargetIndexList_codec);
             break;
           }

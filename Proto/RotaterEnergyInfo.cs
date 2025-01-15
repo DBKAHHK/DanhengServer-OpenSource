@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdSb3RhdGVyRW5lcmd5SW5mby5wcm90byI1ChFSb3RhdGVyRW5lcmd5SW5m",
-            "bxIPCgdjdXJfbnVtGA0gASgNEg8KB21heF9udW0YASABKA1CHqoCG0VnZ0xp",
+            "bxIPCgdjdXJfbnVtGAcgASgNEg8KB21heF9udW0YDiABKA1CHqoCG0VnZ0xp",
             "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,11 +84,8 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cur_num" field.</summary>
-    public const int CurNumFieldNumber = 13;
+    public const int CurNumFieldNumber = 7;
     private uint curNum_;
-    /// <summary>
-    /// 1
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint CurNum {
@@ -99,11 +96,8 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "max_num" field.</summary>
-    public const int MaxNumFieldNumber = 1;
+    public const int MaxNumFieldNumber = 14;
     private uint maxNum_;
-    /// <summary>
-    /// 13
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint MaxNum {
@@ -157,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MaxNum != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(MaxNum);
-      }
       if (CurNum != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(56);
         output.WriteUInt32(CurNum);
+      }
+      if (MaxNum != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(MaxNum);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -175,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MaxNum != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(MaxNum);
-      }
       if (CurNum != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(56);
         output.WriteUInt32(CurNum);
+      }
+      if (MaxNum != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(MaxNum);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -232,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            MaxNum = input.ReadUInt32();
+          case 56: {
+            CurNum = input.ReadUInt32();
             break;
           }
-          case 104: {
-            CurNum = input.ReadUInt32();
+          case 112: {
+            MaxNum = input.ReadUInt32();
             break;
           }
         }
@@ -255,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            MaxNum = input.ReadUInt32();
+          case 56: {
+            CurNum = input.ReadUInt32();
             break;
           }
-          case 104: {
-            CurNum = input.ReadUInt32();
+          case 112: {
+            MaxNum = input.ReadUInt32();
             break;
           }
         }

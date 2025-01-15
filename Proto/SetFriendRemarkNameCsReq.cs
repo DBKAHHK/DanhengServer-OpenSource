@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5TZXRGcmllbmRSZW1hcmtOYW1lQ3NSZXEucHJvdG8iTAoYU2V0RnJpZW5k",
-            "UmVtYXJrTmFtZUNzUmVxEgsKA3VpZBgNIAEoDRIOCgZyZWFzb24YAyABKA0S",
-            "EwoLcmVtYXJrX25hbWUYBiABKAlCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "UmVtYXJrTmFtZUNzUmVxEgsKA3VpZBgIIAEoDRIOCgZyZWFzb24YDCABKA0S",
+            "EwoLcmVtYXJrX25hbWUYBSABKAlCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "uid" field.</summary>
-    public const int UidFieldNumber = 13;
+    public const int UidFieldNumber = 8;
     private uint uid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "reason" field.</summary>
-    public const int ReasonFieldNumber = 3;
+    public const int ReasonFieldNumber = 12;
     private uint reason_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "remark_name" field.</summary>
-    public const int RemarkNameFieldNumber = 6;
+    public const int RemarkNameFieldNumber = 5;
     private string remarkName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Reason != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(Reason);
-      }
       if (RemarkName.Length != 0) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(42);
         output.WriteString(RemarkName);
       }
       if (Uid != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(64);
         output.WriteUInt32(Uid);
+      }
+      if (Reason != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Reason);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Reason != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(Reason);
-      }
       if (RemarkName.Length != 0) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(42);
         output.WriteString(RemarkName);
       }
       if (Uid != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(64);
         output.WriteUInt32(Uid);
+      }
+      if (Reason != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Reason);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            Reason = input.ReadUInt32();
-            break;
-          }
-          case 50: {
+          case 42: {
             RemarkName = input.ReadString();
             break;
           }
-          case 104: {
+          case 64: {
             Uid = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            Reason = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            Reason = input.ReadUInt32();
-            break;
-          }
-          case 50: {
+          case 42: {
             RemarkName = input.ReadString();
             break;
           }
-          case 104: {
+          case 64: {
             Uid = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            Reason = input.ReadUInt32();
             break;
           }
         }

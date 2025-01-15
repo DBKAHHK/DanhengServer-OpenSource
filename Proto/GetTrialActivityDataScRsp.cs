@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9HZXRUcmlhbEFjdGl2aXR5RGF0YVNjUnNwLnByb3RvGhdUcmlhbEFjdGl2",
-            "aXR5SW5mby5wcm90byJ9ChlHZXRUcmlhbEFjdGl2aXR5RGF0YVNjUnNwEg8K",
-            "B3JldGNvZGUYCCABKA0SGQoRYWN0aXZpdHlfc3RhZ2VfaWQYBSABKA0SNAoY",
-            "dHJpYWxfYWN0aXZpdHlfaW5mb19saXN0GA0gAygLMhIuVHJpYWxBY3Rpdml0",
-            "eUluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "aXR5SW5mby5wcm90byJ9ChlHZXRUcmlhbEFjdGl2aXR5RGF0YVNjUnNwEjQK",
+            "GHRyaWFsX2FjdGl2aXR5X2luZm9fbGlzdBgDIAMoCzISLlRyaWFsQWN0aXZp",
+            "dHlJbmZvEg8KB3JldGNvZGUYCiABKA0SGQoRYWN0aXZpdHlfc3RhZ2VfaWQY",
+            "CyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrialActivityInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetTrialActivityDataScRsp), global::EggLink.DanhengServer.Proto.GetTrialActivityDataScRsp.Parser, new[]{ "Retcode", "ActivityStageId", "TrialActivityInfoList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetTrialActivityDataScRsp), global::EggLink.DanhengServer.Proto.GetTrialActivityDataScRsp.Parser, new[]{ "TrialActivityInfoList", "Retcode", "ActivityStageId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetTrialActivityDataScRsp(GetTrialActivityDataScRsp other) : this() {
+      trialActivityInfoList_ = other.trialActivityInfoList_.Clone();
       retcode_ = other.retcode_;
       activityStageId_ = other.activityStageId_;
-      trialActivityInfoList_ = other.trialActivityInfoList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,8 +86,19 @@ namespace EggLink.DanhengServer.Proto {
       return new GetTrialActivityDataScRsp(this);
     }
 
+    /// <summary>Field number for the "trial_activity_info_list" field.</summary>
+    public const int TrialActivityInfoListFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.TrialActivityInfo> _repeated_trialActivityInfoList_codec
+        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.TrialActivityInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrialActivityInfo> trialActivityInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrialActivityInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrialActivityInfo> TrialActivityInfoList {
+      get { return trialActivityInfoList_; }
+    }
+
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 8;
+    public const int RetcodeFieldNumber = 10;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "activity_stage_id" field.</summary>
-    public const int ActivityStageIdFieldNumber = 5;
+    public const int ActivityStageIdFieldNumber = 11;
     private uint activityStageId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -108,17 +119,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         activityStageId_ = value;
       }
-    }
-
-    /// <summary>Field number for the "trial_activity_info_list" field.</summary>
-    public const int TrialActivityInfoListFieldNumber = 13;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.TrialActivityInfo> _repeated_trialActivityInfoList_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.TrialActivityInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrialActivityInfo> trialActivityInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrialActivityInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrialActivityInfo> TrialActivityInfoList {
-      get { return trialActivityInfoList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if(!trialActivityInfoList_.Equals(other.trialActivityInfoList_)) return false;
       if (Retcode != other.Retcode) return false;
       if (ActivityStageId != other.ActivityStageId) return false;
-      if(!trialActivityInfoList_.Equals(other.trialActivityInfoList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      hash ^= trialActivityInfoList_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (ActivityStageId != 0) hash ^= ActivityStageId.GetHashCode();
-      hash ^= trialActivityInfoList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,15 +167,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ActivityStageId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(ActivityStageId);
-      }
+      trialActivityInfoList_.WriteTo(output, _repeated_trialActivityInfoList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(80);
         output.WriteUInt32(Retcode);
       }
-      trialActivityInfoList_.WriteTo(output, _repeated_trialActivityInfoList_codec);
+      if (ActivityStageId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(ActivityStageId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -186,15 +186,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ActivityStageId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(ActivityStageId);
-      }
+      trialActivityInfoList_.WriteTo(ref output, _repeated_trialActivityInfoList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(80);
         output.WriteUInt32(Retcode);
       }
-      trialActivityInfoList_.WriteTo(ref output, _repeated_trialActivityInfoList_codec);
+      if (ActivityStageId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(ActivityStageId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -205,13 +205,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += trialActivityInfoList_.CalculateSize(_repeated_trialActivityInfoList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (ActivityStageId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ActivityStageId);
       }
-      size += trialActivityInfoList_.CalculateSize(_repeated_trialActivityInfoList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -224,13 +224,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      trialActivityInfoList_.Add(other.trialActivityInfoList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
       if (other.ActivityStageId != 0) {
         ActivityStageId = other.ActivityStageId;
       }
-      trialActivityInfoList_.Add(other.trialActivityInfoList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -246,16 +246,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            ActivityStageId = input.ReadUInt32();
+          case 26: {
+            trialActivityInfoList_.AddEntriesFrom(input, _repeated_trialActivityInfoList_codec);
             break;
           }
-          case 64: {
+          case 80: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 106: {
-            trialActivityInfoList_.AddEntriesFrom(input, _repeated_trialActivityInfoList_codec);
+          case 88: {
+            ActivityStageId = input.ReadUInt32();
             break;
           }
         }
@@ -273,16 +273,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            ActivityStageId = input.ReadUInt32();
+          case 26: {
+            trialActivityInfoList_.AddEntriesFrom(ref input, _repeated_trialActivityInfoList_codec);
             break;
           }
-          case 64: {
+          case 80: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 106: {
-            trialActivityInfoList_.AddEntriesFrom(ref input, _repeated_trialActivityInfoList_codec);
+          case 88: {
+            ActivityStageId = input.ReadUInt32();
             break;
           }
         }

@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBHZXRNaXNzaW9uTWVzc2FnZUluZm9TY1JzcC5wcm90byKkAQoaR2V0TWlz",
-            "c2lvbk1lc3NhZ2VJbmZvU2NSc3ASQQoLS0VDT0xKQUJBRk0YBCADKAsyLC5H",
-            "ZXRNaXNzaW9uTWVzc2FnZUluZm9TY1JzcC5LRUNPTEpBQkFGTUVudHJ5Eg8K",
-            "B3JldGNvZGUYCiABKA0aMgoQS0VDT0xKQUJBRk1FbnRyeRILCgNrZXkYASAB",
+            "c2lvbk1lc3NhZ2VJbmZvU2NSc3ASQQoLQVBPTERMR1BLT1AYAyADKAsyLC5H",
+            "ZXRNaXNzaW9uTWVzc2FnZUluZm9TY1JzcC5BUE9MRExHUEtPUEVudHJ5Eg8K",
+            "B3JldGNvZGUYDiABKA0aMgoQQVBPTERMR1BLT1BFbnRyeRILCgNrZXkYASAB",
             "KA0SDQoFdmFsdWUYAiABKA06AjgBQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMissionMessageInfoScRsp), global::EggLink.DanhengServer.Proto.GetMissionMessageInfoScRsp.Parser, new[]{ "KECOLJABAFM", "Retcode" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMissionMessageInfoScRsp), global::EggLink.DanhengServer.Proto.GetMissionMessageInfoScRsp.Parser, new[]{ "APOLDLGPKOP", "Retcode" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -75,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetMissionMessageInfoScRsp(GetMissionMessageInfoScRsp other) : this() {
-      kECOLJABAFM_ = other.kECOLJABAFM_.Clone();
+      aPOLDLGPKOP_ = other.aPOLDLGPKOP_.Clone();
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -86,19 +86,19 @@ namespace EggLink.DanhengServer.Proto {
       return new GetMissionMessageInfoScRsp(this);
     }
 
-    /// <summary>Field number for the "KECOLJABAFM" field.</summary>
-    public const int KECOLJABAFMFieldNumber = 4;
-    private static readonly pbc::MapField<uint, uint>.Codec _map_kECOLJABAFM_codec
-        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 34);
-    private readonly pbc::MapField<uint, uint> kECOLJABAFM_ = new pbc::MapField<uint, uint>();
+    /// <summary>Field number for the "APOLDLGPKOP" field.</summary>
+    public const int APOLDLGPKOPFieldNumber = 3;
+    private static readonly pbc::MapField<uint, uint>.Codec _map_aPOLDLGPKOP_codec
+        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 26);
+    private readonly pbc::MapField<uint, uint> aPOLDLGPKOP_ = new pbc::MapField<uint, uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<uint, uint> KECOLJABAFM {
-      get { return kECOLJABAFM_; }
+    public pbc::MapField<uint, uint> APOLDLGPKOP {
+      get { return aPOLDLGPKOP_; }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 10;
+    public const int RetcodeFieldNumber = 14;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!KECOLJABAFM.Equals(other.KECOLJABAFM)) return false;
+      if (!APOLDLGPKOP.Equals(other.APOLDLGPKOP)) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= KECOLJABAFM.GetHashCode();
+      hash ^= APOLDLGPKOP.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -153,9 +153,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      kECOLJABAFM_.WriteTo(output, _map_kECOLJABAFM_codec);
+      aPOLDLGPKOP_.WriteTo(output, _map_aPOLDLGPKOP_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -168,9 +168,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      kECOLJABAFM_.WriteTo(ref output, _map_kECOLJABAFM_codec);
+      aPOLDLGPKOP_.WriteTo(ref output, _map_aPOLDLGPKOP_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -183,7 +183,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += kECOLJABAFM_.CalculateSize(_map_kECOLJABAFM_codec);
+      size += aPOLDLGPKOP_.CalculateSize(_map_aPOLDLGPKOP_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
@@ -199,7 +199,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      kECOLJABAFM_.MergeFrom(other.kECOLJABAFM_);
+      aPOLDLGPKOP_.MergeFrom(other.aPOLDLGPKOP_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
@@ -218,11 +218,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
-            kECOLJABAFM_.AddEntriesFrom(input, _map_kECOLJABAFM_codec);
+          case 26: {
+            aPOLDLGPKOP_.AddEntriesFrom(input, _map_aPOLDLGPKOP_codec);
             break;
           }
-          case 80: {
+          case 112: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -241,11 +241,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
-            kECOLJABAFM_.AddEntriesFrom(ref input, _map_kECOLJABAFM_codec);
+          case 26: {
+            aPOLDLGPKOP_.AddEntriesFrom(ref input, _map_aPOLDLGPKOP_codec);
             break;
           }
-          case 80: {
+          case 112: {
             Retcode = input.ReadUInt32();
             break;
           }

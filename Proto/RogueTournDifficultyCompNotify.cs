@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiRSb2d1ZVRvdXJuRGlmZmljdWx0eUNvbXBOb3RpZnkucHJvdG8iNQoeUm9n",
-            "dWVUb3VybkRpZmZpY3VsdHlDb21wTm90aWZ5EhMKC0lBQUNCRU9NRUFOGAkg",
+            "dWVUb3VybkRpZmZpY3VsdHlDb21wTm90aWZ5EhMKC0dHR0ZJR0NQS0xGGAsg",
             "AygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournDifficultyCompNotify), global::EggLink.DanhengServer.Proto.RogueTournDifficultyCompNotify.Parser, new[]{ "IAACBEOMEAN" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournDifficultyCompNotify), global::EggLink.DanhengServer.Proto.RogueTournDifficultyCompNotify.Parser, new[]{ "GGGFIGCPKLF" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournDifficultyCompNotify(RogueTournDifficultyCompNotify other) : this() {
-      iAACBEOMEAN_ = other.iAACBEOMEAN_.Clone();
+      gGGFIGCPKLF_ = other.gGGFIGCPKLF_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournDifficultyCompNotify(this);
     }
 
-    /// <summary>Field number for the "IAACBEOMEAN" field.</summary>
-    public const int IAACBEOMEANFieldNumber = 9;
-    private static readonly pb::FieldCodec<uint> _repeated_iAACBEOMEAN_codec
-        = pb::FieldCodec.ForUInt32(74);
-    private readonly pbc::RepeatedField<uint> iAACBEOMEAN_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "GGGFIGCPKLF" field.</summary>
+    public const int GGGFIGCPKLFFieldNumber = 11;
+    private static readonly pb::FieldCodec<uint> _repeated_gGGFIGCPKLF_codec
+        = pb::FieldCodec.ForUInt32(90);
+    private readonly pbc::RepeatedField<uint> gGGFIGCPKLF_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> IAACBEOMEAN {
-      get { return iAACBEOMEAN_; }
+    public pbc::RepeatedField<uint> GGGFIGCPKLF {
+      get { return gGGFIGCPKLF_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -108,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!iAACBEOMEAN_.Equals(other.iAACBEOMEAN_)) return false;
+      if(!gGGFIGCPKLF_.Equals(other.gGGFIGCPKLF_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -116,7 +116,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= iAACBEOMEAN_.GetHashCode();
+      hash ^= gGGFIGCPKLF_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -135,7 +135,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      iAACBEOMEAN_.WriteTo(output, _repeated_iAACBEOMEAN_codec);
+      gGGFIGCPKLF_.WriteTo(output, _repeated_gGGFIGCPKLF_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -146,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      iAACBEOMEAN_.WriteTo(ref output, _repeated_iAACBEOMEAN_codec);
+      gGGFIGCPKLF_.WriteTo(ref output, _repeated_gGGFIGCPKLF_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += iAACBEOMEAN_.CalculateSize(_repeated_iAACBEOMEAN_codec);
+      size += gGGFIGCPKLF_.CalculateSize(_repeated_gGGFIGCPKLF_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -170,7 +170,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      iAACBEOMEAN_.Add(other.iAACBEOMEAN_);
+      gGGFIGCPKLF_.Add(other.gGGFIGCPKLF_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -186,9 +186,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 74:
-          case 72: {
-            iAACBEOMEAN_.AddEntriesFrom(input, _repeated_iAACBEOMEAN_codec);
+          case 90:
+          case 88: {
+            gGGFIGCPKLF_.AddEntriesFrom(input, _repeated_gGGFIGCPKLF_codec);
             break;
           }
         }
@@ -206,9 +206,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 74:
-          case 72: {
-            iAACBEOMEAN_.AddEntriesFrom(ref input, _repeated_iAACBEOMEAN_codec);
+          case 90:
+          case 88: {
+            gGGFIGCPKLF_.AddEntriesFrom(ref input, _repeated_gGGFIGCPKLF_codec);
             break;
           }
         }

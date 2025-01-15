@@ -30,7 +30,7 @@ public class GameTrainPartyGridInfo
         {
             GridId = (uint)GridId,
             UniqueId = (uint)UniqueId,
-            ILOFIMODIEN = (uint)UniqueId
+            GHFAIHLCELN = (uint)UniqueId
         };
     }
 }

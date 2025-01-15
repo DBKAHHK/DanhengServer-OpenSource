@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBBbGxleVNoaXBVc2VkQ291bnRTY05vdGlmeS5wcm90byKTAQoaQWxsZXlT",
-            "aGlwVXNlZENvdW50U2NOb3RpZnkSQQoLT0FNT0ZOQ01ESEoYDyADKAsyLC5B",
-            "bGxleVNoaXBVc2VkQ291bnRTY05vdGlmeS5PQU1PRk5DTURISkVudHJ5GjIK",
-            "EE9BTU9GTkNNREhKRW50cnkSCwoDa2V5GAEgASgNEg0KBXZhbHVlGAIgASgN",
+            "aGlwVXNlZENvdW50U2NOb3RpZnkSQQoLTlBMQUtFT0tFS0IYDyADKAsyLC5B",
+            "bGxleVNoaXBVc2VkQ291bnRTY05vdGlmeS5OUExBS0VPS0VLQkVudHJ5GjIK",
+            "EE5QTEFLRU9LRUtCRW50cnkSCwoDa2V5GAEgASgNEg0KBXZhbHVlGAIgASgN",
             "OgI4AUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AlleyShipUsedCountScNotify), global::EggLink.DanhengServer.Proto.AlleyShipUsedCountScNotify.Parser, new[]{ "OAMOFNCMDHJ" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AlleyShipUsedCountScNotify), global::EggLink.DanhengServer.Proto.AlleyShipUsedCountScNotify.Parser, new[]{ "NPLAKEOKEKB" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AlleyShipUsedCountScNotify(AlleyShipUsedCountScNotify other) : this() {
-      oAMOFNCMDHJ_ = other.oAMOFNCMDHJ_.Clone();
+      nPLAKEOKEKB_ = other.nPLAKEOKEKB_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,15 +84,15 @@ namespace EggLink.DanhengServer.Proto {
       return new AlleyShipUsedCountScNotify(this);
     }
 
-    /// <summary>Field number for the "OAMOFNCMDHJ" field.</summary>
-    public const int OAMOFNCMDHJFieldNumber = 15;
-    private static readonly pbc::MapField<uint, uint>.Codec _map_oAMOFNCMDHJ_codec
+    /// <summary>Field number for the "NPLAKEOKEKB" field.</summary>
+    public const int NPLAKEOKEKBFieldNumber = 15;
+    private static readonly pbc::MapField<uint, uint>.Codec _map_nPLAKEOKEKB_codec
         = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 122);
-    private readonly pbc::MapField<uint, uint> oAMOFNCMDHJ_ = new pbc::MapField<uint, uint>();
+    private readonly pbc::MapField<uint, uint> nPLAKEOKEKB_ = new pbc::MapField<uint, uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<uint, uint> OAMOFNCMDHJ {
-      get { return oAMOFNCMDHJ_; }
+    public pbc::MapField<uint, uint> NPLAKEOKEKB {
+      get { return nPLAKEOKEKB_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!OAMOFNCMDHJ.Equals(other.OAMOFNCMDHJ)) return false;
+      if (!NPLAKEOKEKB.Equals(other.NPLAKEOKEKB)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -118,7 +118,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= OAMOFNCMDHJ.GetHashCode();
+      hash ^= NPLAKEOKEKB.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      oAMOFNCMDHJ_.WriteTo(output, _map_oAMOFNCMDHJ_codec);
+      nPLAKEOKEKB_.WriteTo(output, _map_nPLAKEOKEKB_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -148,7 +148,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      oAMOFNCMDHJ_.WriteTo(ref output, _map_oAMOFNCMDHJ_codec);
+      nPLAKEOKEKB_.WriteTo(ref output, _map_nPLAKEOKEKB_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -159,7 +159,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += oAMOFNCMDHJ_.CalculateSize(_map_oAMOFNCMDHJ_codec);
+      size += nPLAKEOKEKB_.CalculateSize(_map_nPLAKEOKEKB_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -172,7 +172,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      oAMOFNCMDHJ_.MergeFrom(other.oAMOFNCMDHJ_);
+      nPLAKEOKEKB_.MergeFrom(other.nPLAKEOKEKB_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -189,7 +189,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 122: {
-            oAMOFNCMDHJ_.AddEntriesFrom(input, _map_oAMOFNCMDHJ_codec);
+            nPLAKEOKEKB_.AddEntriesFrom(input, _map_nPLAKEOKEKB_codec);
             break;
           }
         }
@@ -208,7 +208,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 122: {
-            oAMOFNCMDHJ_.AddEntriesFrom(ref input, _map_oAMOFNCMDHJ_codec);
+            nPLAKEOKEKB_.AddEntriesFrom(ref input, _map_nPLAKEOKEKB_codec);
             break;
           }
         }

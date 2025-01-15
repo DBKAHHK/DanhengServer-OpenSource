@@ -43,7 +43,10 @@ public class EntityProp(SceneInstance scene, MazePropExcel excel, GroupInfo grou
 
         if (PropTimelineData != null)
         {
-            prop.TimelineInfo = PropTimelineData.ToProto();
+            prop.ExtraInfo = new PropExtraInfo
+            {
+                TimelineInfo = PropTimelineData.ToProto()
+            };
         }
 
         return new SceneEntityInfo

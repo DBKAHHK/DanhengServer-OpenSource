@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhGYXJtU3RhZ2VHYWNoYUluZm8ucHJvdG8iTAoSRmFybVN0YWdlR2FjaGFJ",
-            "bmZvEhAKCGVuZF90aW1lGA8gASgDEhAKCGdhY2hhX2lkGAMgASgNEhIKCmJl",
-            "Z2luX3RpbWUYCSABKANCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "bmZvEhIKCmJlZ2luX3RpbWUYBiABKAMSEAoIZW5kX3RpbWUYDyABKAMSEAoI",
+            "Z2FjaGFfaWQYAyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FarmStageGachaInfo), global::EggLink.DanhengServer.Proto.FarmStageGachaInfo.Parser, new[]{ "EndTime", "GachaId", "BeginTime" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FarmStageGachaInfo), global::EggLink.DanhengServer.Proto.FarmStageGachaInfo.Parser, new[]{ "BeginTime", "EndTime", "GachaId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FarmStageGachaInfo(FarmStageGachaInfo other) : this() {
+      beginTime_ = other.beginTime_;
       endTime_ = other.endTime_;
       gachaId_ = other.gachaId_;
-      beginTime_ = other.beginTime_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,6 +83,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FarmStageGachaInfo Clone() {
       return new FarmStageGachaInfo(this);
+    }
+
+    /// <summary>Field number for the "begin_time" field.</summary>
+    public const int BeginTimeFieldNumber = 6;
+    private long beginTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long BeginTime {
+      get { return beginTime_; }
+      set {
+        beginTime_ = value;
+      }
     }
 
     /// <summary>Field number for the "end_time" field.</summary>
@@ -109,18 +121,6 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "begin_time" field.</summary>
-    public const int BeginTimeFieldNumber = 9;
-    private long beginTime_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long BeginTime {
-      get { return beginTime_; }
-      set {
-        beginTime_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (BeginTime != other.BeginTime) return false;
       if (EndTime != other.EndTime) return false;
       if (GachaId != other.GachaId) return false;
-      if (BeginTime != other.BeginTime) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (BeginTime != 0L) hash ^= BeginTime.GetHashCode();
       if (EndTime != 0L) hash ^= EndTime.GetHashCode();
       if (GachaId != 0) hash ^= GachaId.GetHashCode();
-      if (BeginTime != 0L) hash ^= BeginTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -172,7 +172,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(GachaId);
       }
       if (BeginTime != 0L) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(48);
         output.WriteInt64(BeginTime);
       }
       if (EndTime != 0L) {
@@ -194,7 +194,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(GachaId);
       }
       if (BeginTime != 0L) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(48);
         output.WriteInt64(BeginTime);
       }
       if (EndTime != 0L) {
@@ -211,14 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (BeginTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(BeginTime);
+      }
       if (EndTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(EndTime);
       }
       if (GachaId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GachaId);
-      }
-      if (BeginTime != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(BeginTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,14 +232,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.BeginTime != 0L) {
+        BeginTime = other.BeginTime;
+      }
       if (other.EndTime != 0L) {
         EndTime = other.EndTime;
       }
       if (other.GachaId != 0) {
         GachaId = other.GachaId;
-      }
-      if (other.BeginTime != 0L) {
-        BeginTime = other.BeginTime;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -260,7 +260,7 @@ namespace EggLink.DanhengServer.Proto {
             GachaId = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 48: {
             BeginTime = input.ReadInt64();
             break;
           }
@@ -287,7 +287,7 @@ namespace EggLink.DanhengServer.Proto {
             GachaId = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 48: {
             BeginTime = input.ReadInt64();
             break;
           }

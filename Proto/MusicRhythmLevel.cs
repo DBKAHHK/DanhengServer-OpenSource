@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZNdXNpY1JoeXRobUxldmVsLnByb3RvIk4KEE11c2ljUmh5dGhtTGV2ZWwS",
-            "EgoKZnVsbF9jb21ibxgGIAEoCBIUCgx1bmxvY2tfbGV2ZWwYCSABKA0SEAoI",
-            "bGV2ZWxfaWQYCiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "EgoKZnVsbF9jb21ibxgOIAEoCBIUCgx1bmxvY2tfbGV2ZWwYDCABKA0SEAoI",
+            "bGV2ZWxfaWQYBCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "full_combo" field.</summary>
-    public const int FullComboFieldNumber = 6;
+    public const int FullComboFieldNumber = 14;
     private bool fullCombo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "unlock_level" field.</summary>
-    public const int UnlockLevelFieldNumber = 9;
+    public const int UnlockLevelFieldNumber = 12;
     private uint unlockLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level_id" field.</summary>
-    public const int LevelIdFieldNumber = 10;
+    public const int LevelIdFieldNumber = 4;
     private uint levelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FullCombo != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(FullCombo);
+      if (LevelId != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(LevelId);
       }
       if (UnlockLevel != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(96);
         output.WriteUInt32(UnlockLevel);
       }
-      if (LevelId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(LevelId);
+      if (FullCombo != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(FullCombo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FullCombo != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(FullCombo);
+      if (LevelId != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(LevelId);
       }
       if (UnlockLevel != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(96);
         output.WriteUInt32(UnlockLevel);
       }
-      if (LevelId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(LevelId);
+      if (FullCombo != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(FullCombo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            FullCombo = input.ReadBool();
+          case 32: {
+            LevelId = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 96: {
             UnlockLevel = input.ReadUInt32();
             break;
           }
-          case 80: {
-            LevelId = input.ReadUInt32();
+          case 112: {
+            FullCombo = input.ReadBool();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            FullCombo = input.ReadBool();
+          case 32: {
+            LevelId = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 96: {
             UnlockLevel = input.ReadUInt32();
             break;
           }
-          case 80: {
-            LevelId = input.ReadUInt32();
+          case 112: {
+            FullCombo = input.ReadBool();
             break;
           }
         }

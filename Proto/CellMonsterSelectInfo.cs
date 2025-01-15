@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtDZWxsTW9uc3RlclNlbGVjdEluZm8ucHJvdG8iSAoVQ2VsbE1vbnN0ZXJT",
-            "ZWxlY3RJbmZvEhYKDm1hemVfYnVmZl9saXN0GAkgAygNEhcKD3NlbGVjdF9k",
+            "ZWxlY3RJbmZvEhYKDm1hemVfYnVmZl9saXN0GAQgAygNEhcKD3NlbGVjdF9k",
             "ZWNheV9pZBgDIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "maze_buff_list" field.</summary>
-    public const int MazeBuffListFieldNumber = 9;
+    public const int MazeBuffListFieldNumber = 4;
     private static readonly pb::FieldCodec<uint> _repeated_mazeBuffList_codec
-        = pb::FieldCodec.ForUInt32(74);
+        = pb::FieldCodec.ForUInt32(34);
     private readonly pbc::RepeatedField<uint> mazeBuffList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -210,8 +210,8 @@ namespace EggLink.DanhengServer.Proto {
             selectDecayId_.AddEntriesFrom(input, _repeated_selectDecayId_codec);
             break;
           }
-          case 74:
-          case 72: {
+          case 34:
+          case 32: {
             mazeBuffList_.AddEntriesFrom(input, _repeated_mazeBuffList_codec);
             break;
           }
@@ -235,8 +235,8 @@ namespace EggLink.DanhengServer.Proto {
             selectDecayId_.AddEntriesFrom(ref input, _repeated_selectDecayId_codec);
             break;
           }
-          case 74:
-          case 72: {
+          case 34:
+          case 32: {
             mazeBuffList_.AddEntriesFrom(ref input, _repeated_mazeBuffList_codec);
             break;
           }

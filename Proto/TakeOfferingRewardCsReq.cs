@@ -24,14 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static TakeOfferingRewardCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1UYWtlT2ZmZXJpbmdSZXdhcmRDc1JlcS5wcm90byJoChdUYWtlT2ZmZXJp",
+            "Ch1UYWtlT2ZmZXJpbmdSZXdhcmRDc1JlcS5wcm90byJ3ChdUYWtlT2ZmZXJp",
             "bmdSZXdhcmRDc1JlcRIkChx0YWtlX29mZmVyaW5nX3Jld2FyZF9pZF9saXN0",
-            "GAcgAygNEhMKC29mZmVyaW5nX2lkGAIgASgNEhIKCm1vbnN0ZXJfaWQYCyAB",
-            "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "GAEgAygNEhMKC29mZmVyaW5nX2lkGAYgASgNEiEKGWludGVyYWN0ZWRfcHJv",
+            "cF9lbnRpdHlfaWQYDSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeOfferingRewardCsReq), global::EggLink.DanhengServer.Proto.TakeOfferingRewardCsReq.Parser, new[]{ "TakeOfferingRewardIdList", "OfferingId", "MonsterId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeOfferingRewardCsReq), global::EggLink.DanhengServer.Proto.TakeOfferingRewardCsReq.Parser, new[]{ "TakeOfferingRewardIdList", "OfferingId", "InteractedPropEntityId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +76,7 @@ namespace EggLink.DanhengServer.Proto {
     public TakeOfferingRewardCsReq(TakeOfferingRewardCsReq other) : this() {
       takeOfferingRewardIdList_ = other.takeOfferingRewardIdList_.Clone();
       offeringId_ = other.offeringId_;
-      monsterId_ = other.monsterId_;
+      interactedPropEntityId_ = other.interactedPropEntityId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,9 +87,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "take_offering_reward_id_list" field.</summary>
-    public const int TakeOfferingRewardIdListFieldNumber = 7;
+    public const int TakeOfferingRewardIdListFieldNumber = 1;
     private static readonly pb::FieldCodec<uint> _repeated_takeOfferingRewardIdList_codec
-        = pb::FieldCodec.ForUInt32(58);
+        = pb::FieldCodec.ForUInt32(10);
     private readonly pbc::RepeatedField<uint> takeOfferingRewardIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "offering_id" field.</summary>
-    public const int OfferingIdFieldNumber = 2;
+    public const int OfferingIdFieldNumber = 6;
     private uint offeringId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -108,15 +109,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "monster_id" field.</summary>
-    public const int MonsterIdFieldNumber = 11;
-    private uint monsterId_;
+    /// <summary>Field number for the "interacted_prop_entity_id" field.</summary>
+    public const int InteractedPropEntityIdFieldNumber = 13;
+    private uint interactedPropEntityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MonsterId {
-      get { return monsterId_; }
+    public uint InteractedPropEntityId {
+      get { return interactedPropEntityId_; }
       set {
-        monsterId_ = value;
+        interactedPropEntityId_ = value;
       }
     }
 
@@ -137,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if(!takeOfferingRewardIdList_.Equals(other.takeOfferingRewardIdList_)) return false;
       if (OfferingId != other.OfferingId) return false;
-      if (MonsterId != other.MonsterId) return false;
+      if (InteractedPropEntityId != other.InteractedPropEntityId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,7 +148,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       hash ^= takeOfferingRewardIdList_.GetHashCode();
       if (OfferingId != 0) hash ^= OfferingId.GetHashCode();
-      if (MonsterId != 0) hash ^= MonsterId.GetHashCode();
+      if (InteractedPropEntityId != 0) hash ^= InteractedPropEntityId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,14 +167,14 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      takeOfferingRewardIdList_.WriteTo(output, _repeated_takeOfferingRewardIdList_codec);
       if (OfferingId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(48);
         output.WriteUInt32(OfferingId);
       }
-      takeOfferingRewardIdList_.WriteTo(output, _repeated_takeOfferingRewardIdList_codec);
-      if (MonsterId != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(MonsterId);
+      if (InteractedPropEntityId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(InteractedPropEntityId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -185,14 +186,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      takeOfferingRewardIdList_.WriteTo(ref output, _repeated_takeOfferingRewardIdList_codec);
       if (OfferingId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(48);
         output.WriteUInt32(OfferingId);
       }
-      takeOfferingRewardIdList_.WriteTo(ref output, _repeated_takeOfferingRewardIdList_codec);
-      if (MonsterId != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(MonsterId);
+      if (InteractedPropEntityId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(InteractedPropEntityId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -208,8 +209,8 @@ namespace EggLink.DanhengServer.Proto {
       if (OfferingId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OfferingId);
       }
-      if (MonsterId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MonsterId);
+      if (InteractedPropEntityId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(InteractedPropEntityId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -227,8 +228,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.OfferingId != 0) {
         OfferingId = other.OfferingId;
       }
-      if (other.MonsterId != 0) {
-        MonsterId = other.MonsterId;
+      if (other.InteractedPropEntityId != 0) {
+        InteractedPropEntityId = other.InteractedPropEntityId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -245,17 +246,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            OfferingId = input.ReadUInt32();
-            break;
-          }
-          case 58:
-          case 56: {
+          case 10:
+          case 8: {
             takeOfferingRewardIdList_.AddEntriesFrom(input, _repeated_takeOfferingRewardIdList_codec);
             break;
           }
-          case 88: {
-            MonsterId = input.ReadUInt32();
+          case 48: {
+            OfferingId = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            InteractedPropEntityId = input.ReadUInt32();
             break;
           }
         }
@@ -273,17 +274,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            OfferingId = input.ReadUInt32();
-            break;
-          }
-          case 58:
-          case 56: {
+          case 10:
+          case 8: {
             takeOfferingRewardIdList_.AddEntriesFrom(ref input, _repeated_takeOfferingRewardIdList_codec);
             break;
           }
-          case 88: {
-            MonsterId = input.ReadUInt32();
+          case 48: {
+            OfferingId = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            InteractedPropEntityId = input.ReadUInt32();
             break;
           }
         }

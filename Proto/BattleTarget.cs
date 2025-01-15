@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static BattleTargetReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJCYXR0bGVUYXJnZXQucHJvdG8iRAoMQmF0dGxlVGFyZ2V0EgoKAmlkGAEg",
-            "ASgNEhAKCHByb2dyZXNzGAIgASgNEhYKDnRvdGFsX3Byb2dyZXNzGAMgASgN",
-            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChJCYXR0bGVUYXJnZXQucHJvdG8iQwoMQmF0dGxlVGFyZ2V0EgoKAklkGAEg",
+            "ASgNEhAKCFByb2dyZXNzGAIgASgNEhUKDVRvdGFsUHJvZ3Jlc3MYAyABKA1C",
+            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
       return new BattleTarget(this);
     }
 
-    /// <summary>Field number for the "id" field.</summary>
+    /// <summary>Field number for the "Id" field.</summary>
     public const int IdFieldNumber = 1;
     private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "progress" field.</summary>
+    /// <summary>Field number for the "Progress" field.</summary>
     public const int ProgressFieldNumber = 2;
     private uint progress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -108,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "total_progress" field.</summary>
+    /// <summary>Field number for the "TotalProgress" field.</summary>
     public const int TotalProgressFieldNumber = 3;
     private uint totalProgress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

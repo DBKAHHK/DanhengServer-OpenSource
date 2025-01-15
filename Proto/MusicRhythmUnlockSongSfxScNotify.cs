@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiZNdXNpY1JoeXRobVVubG9ja1NvbmdTZnhTY05vdGlmeS5wcm90byI9CiBN",
             "dXNpY1JoeXRobVVubG9ja1NvbmdTZnhTY05vdGlmeRIZChFtdXNpY191bmxv",
-            "Y2tfbGlzdBgEIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "Y2tfbGlzdBgMIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "music_unlock_list" field.</summary>
-    public const int MusicUnlockListFieldNumber = 4;
+    public const int MusicUnlockListFieldNumber = 12;
     private static readonly pb::FieldCodec<uint> _repeated_musicUnlockList_codec
-        = pb::FieldCodec.ForUInt32(34);
+        = pb::FieldCodec.ForUInt32(98);
     private readonly pbc::RepeatedField<uint> musicUnlockList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,8 +187,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34:
-          case 32: {
+          case 98:
+          case 96: {
             musicUnlockList_.AddEntriesFrom(input, _repeated_musicUnlockList_codec);
             break;
           }
@@ -207,8 +207,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34:
-          case 32: {
+          case 98:
+          case 96: {
             musicUnlockList_.AddEntriesFrom(ref input, _repeated_musicUnlockList_codec);
             break;
           }

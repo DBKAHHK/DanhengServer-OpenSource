@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiRXb2xmQnJvR2FtZUFjdGl2YXRlQnVsbGV0Q3NSZXEucHJvdG8iRQoeV29s",
-            "ZkJyb0dhbWVBY3RpdmF0ZUJ1bGxldENzUmVxEhAKCGdyb3VwX2lkGA0gASgN",
-            "EhEKCWNvbmZpZ19pZBgPIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "ZkJyb0dhbWVBY3RpdmF0ZUJ1bGxldENzUmVxEhAKCGdyb3VwX2lkGAkgASgN",
+            "EhEKCWNvbmZpZ19pZBgBIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 13;
+    public const int GroupIdFieldNumber = 9;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "config_id" field.</summary>
-    public const int ConfigIdFieldNumber = 15;
+    public const int ConfigIdFieldNumber = 1;
     private uint configId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (GroupId != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(GroupId);
-      }
       if (ConfigId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(8);
         output.WriteUInt32(ConfigId);
+      }
+      if (GroupId != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(GroupId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (GroupId != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(GroupId);
-      }
       if (ConfigId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(8);
         output.WriteUInt32(ConfigId);
+      }
+      if (GroupId != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(GroupId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 104: {
-            GroupId = input.ReadUInt32();
+          case 8: {
+            ConfigId = input.ReadUInt32();
             break;
           }
-          case 120: {
-            ConfigId = input.ReadUInt32();
+          case 72: {
+            GroupId = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 104: {
-            GroupId = input.ReadUInt32();
+          case 8: {
+            ConfigId = input.ReadUInt32();
             break;
           }
-          case 120: {
-            ConfigId = input.ReadUInt32();
+          case 72: {
+            GroupId = input.ReadUInt32();
             break;
           }
         }

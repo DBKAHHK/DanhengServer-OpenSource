@@ -24,18 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static FriendSimpleInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZGcmllbmRTaW1wbGVJbmZvLnByb3RvGhFBUE9JQkJHTElQTS5wcm90bxoW",
-            "UGxheWVyU2ltcGxlSW5mby5wcm90bxoSUGxheWluZ1N0YXRlLnByb3RvIsAB",
-            "ChBGcmllbmRTaW1wbGVJbmZvEiEKC05MQUhNT0JGUElCGAUgASgLMgwuQVBP",
-            "SUJCR0xJUE0SJAoNcGxheWluZ19zdGF0ZRgPIAEoDjINLlBsYXlpbmdTdGF0",
-            "ZRIRCglpc19tYXJrZWQYAiABKAgSJgoLcGxheWVyX2luZm8YCiABKAsyES5Q",
-            "bGF5ZXJTaW1wbGVJbmZvEhMKC2NyZWF0ZV90aW1lGAsgASgDEhMKC3JlbWFy",
-            "a19uYW1lGAwgASgJQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "ChZGcmllbmRTaW1wbGVJbmZvLnByb3RvGhZQbGF5ZXJTaW1wbGVJbmZvLnBy",
+            "b3RvGhJQbGF5aW5nU3RhdGUucHJvdG8aEUhJRUpKQkROQ05ILnByb3RvIsAB",
+            "ChBGcmllbmRTaW1wbGVJbmZvEiYKC3BsYXllcl9pbmZvGAogASgLMhEuUGxh",
+            "eWVyU2ltcGxlSW5mbxIhCgtJTENIQUpDRkZCRhgDIAEoCzIMLkhJRUpKQkRO",
+            "Q05IEhEKCWlzX21hcmtlZBgHIAEoCBITCgtjcmVhdGVfdGltZRgEIAEoAxIk",
+            "Cg1wbGF5aW5nX3N0YXRlGA0gASgOMg0uUGxheWluZ1N0YXRlEhMKC3JlbWFy",
+            "a19uYW1lGAYgASgJQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.APOIBBGLIPMReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerSimpleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayingStateReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlayerSimpleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayingStateReflection.Descriptor, global::EggLink.DanhengServer.Proto.HIEJJBDNCNHReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FriendSimpleInfo), global::EggLink.DanhengServer.Proto.FriendSimpleInfo.Parser, new[]{ "NLAHMOBFPIB", "PlayingState", "IsMarked", "PlayerInfo", "CreateTime", "RemarkName" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FriendSimpleInfo), global::EggLink.DanhengServer.Proto.FriendSimpleInfo.Parser, new[]{ "PlayerInfo", "ILCHAJCFFBF", "IsMarked", "CreateTime", "PlayingState", "RemarkName" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,11 +77,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FriendSimpleInfo(FriendSimpleInfo other) : this() {
-      nLAHMOBFPIB_ = other.nLAHMOBFPIB_ != null ? other.nLAHMOBFPIB_.Clone() : null;
-      playingState_ = other.playingState_;
-      isMarked_ = other.isMarked_;
       playerInfo_ = other.playerInfo_ != null ? other.playerInfo_.Clone() : null;
+      iLCHAJCFFBF_ = other.iLCHAJCFFBF_ != null ? other.iLCHAJCFFBF_.Clone() : null;
+      isMarked_ = other.isMarked_;
       createTime_ = other.createTime_;
+      playingState_ = other.playingState_;
       remarkName_ = other.remarkName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -90,42 +90,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FriendSimpleInfo Clone() {
       return new FriendSimpleInfo(this);
-    }
-
-    /// <summary>Field number for the "NLAHMOBFPIB" field.</summary>
-    public const int NLAHMOBFPIBFieldNumber = 5;
-    private global::EggLink.DanhengServer.Proto.APOIBBGLIPM nLAHMOBFPIB_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.APOIBBGLIPM NLAHMOBFPIB {
-      get { return nLAHMOBFPIB_; }
-      set {
-        nLAHMOBFPIB_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "playing_state" field.</summary>
-    public const int PlayingStateFieldNumber = 15;
-    private global::EggLink.DanhengServer.Proto.PlayingState playingState_ = global::EggLink.DanhengServer.Proto.PlayingState.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.PlayingState PlayingState {
-      get { return playingState_; }
-      set {
-        playingState_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "is_marked" field.</summary>
-    public const int IsMarkedFieldNumber = 2;
-    private bool isMarked_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsMarked {
-      get { return isMarked_; }
-      set {
-        isMarked_ = value;
-      }
     }
 
     /// <summary>Field number for the "player_info" field.</summary>
@@ -140,8 +104,32 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "ILCHAJCFFBF" field.</summary>
+    public const int ILCHAJCFFBFFieldNumber = 3;
+    private global::EggLink.DanhengServer.Proto.HIEJJBDNCNH iLCHAJCFFBF_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.HIEJJBDNCNH ILCHAJCFFBF {
+      get { return iLCHAJCFFBF_; }
+      set {
+        iLCHAJCFFBF_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_marked" field.</summary>
+    public const int IsMarkedFieldNumber = 7;
+    private bool isMarked_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsMarked {
+      get { return isMarked_; }
+      set {
+        isMarked_ = value;
+      }
+    }
+
     /// <summary>Field number for the "create_time" field.</summary>
-    public const int CreateTimeFieldNumber = 11;
+    public const int CreateTimeFieldNumber = 4;
     private long createTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,8 +140,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "playing_state" field.</summary>
+    public const int PlayingStateFieldNumber = 13;
+    private global::EggLink.DanhengServer.Proto.PlayingState playingState_ = global::EggLink.DanhengServer.Proto.PlayingState.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.PlayingState PlayingState {
+      get { return playingState_; }
+      set {
+        playingState_ = value;
+      }
+    }
+
     /// <summary>Field number for the "remark_name" field.</summary>
-    public const int RemarkNameFieldNumber = 12;
+    public const int RemarkNameFieldNumber = 6;
     private string remarkName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -179,11 +179,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(NLAHMOBFPIB, other.NLAHMOBFPIB)) return false;
-      if (PlayingState != other.PlayingState) return false;
-      if (IsMarked != other.IsMarked) return false;
       if (!object.Equals(PlayerInfo, other.PlayerInfo)) return false;
+      if (!object.Equals(ILCHAJCFFBF, other.ILCHAJCFFBF)) return false;
+      if (IsMarked != other.IsMarked) return false;
       if (CreateTime != other.CreateTime) return false;
+      if (PlayingState != other.PlayingState) return false;
       if (RemarkName != other.RemarkName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -192,11 +192,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (nLAHMOBFPIB_ != null) hash ^= NLAHMOBFPIB.GetHashCode();
-      if (PlayingState != global::EggLink.DanhengServer.Proto.PlayingState.None) hash ^= PlayingState.GetHashCode();
-      if (IsMarked != false) hash ^= IsMarked.GetHashCode();
       if (playerInfo_ != null) hash ^= PlayerInfo.GetHashCode();
+      if (iLCHAJCFFBF_ != null) hash ^= ILCHAJCFFBF.GetHashCode();
+      if (IsMarked != false) hash ^= IsMarked.GetHashCode();
       if (CreateTime != 0L) hash ^= CreateTime.GetHashCode();
+      if (PlayingState != global::EggLink.DanhengServer.Proto.PlayingState.None) hash ^= PlayingState.GetHashCode();
       if (RemarkName.Length != 0) hash ^= RemarkName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -216,28 +216,28 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsMarked != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(IsMarked);
+      if (iLCHAJCFFBF_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ILCHAJCFFBF);
       }
-      if (nLAHMOBFPIB_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(NLAHMOBFPIB);
+      if (CreateTime != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(CreateTime);
+      }
+      if (RemarkName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(RemarkName);
+      }
+      if (IsMarked != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(IsMarked);
       }
       if (playerInfo_ != null) {
         output.WriteRawTag(82);
         output.WriteMessage(PlayerInfo);
       }
-      if (CreateTime != 0L) {
-        output.WriteRawTag(88);
-        output.WriteInt64(CreateTime);
-      }
-      if (RemarkName.Length != 0) {
-        output.WriteRawTag(98);
-        output.WriteString(RemarkName);
-      }
       if (PlayingState != global::EggLink.DanhengServer.Proto.PlayingState.None) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(104);
         output.WriteEnum((int) PlayingState);
       }
       if (_unknownFields != null) {
@@ -250,28 +250,28 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsMarked != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(IsMarked);
+      if (iLCHAJCFFBF_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ILCHAJCFFBF);
       }
-      if (nLAHMOBFPIB_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(NLAHMOBFPIB);
+      if (CreateTime != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(CreateTime);
+      }
+      if (RemarkName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(RemarkName);
+      }
+      if (IsMarked != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(IsMarked);
       }
       if (playerInfo_ != null) {
         output.WriteRawTag(82);
         output.WriteMessage(PlayerInfo);
       }
-      if (CreateTime != 0L) {
-        output.WriteRawTag(88);
-        output.WriteInt64(CreateTime);
-      }
-      if (RemarkName.Length != 0) {
-        output.WriteRawTag(98);
-        output.WriteString(RemarkName);
-      }
       if (PlayingState != global::EggLink.DanhengServer.Proto.PlayingState.None) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(104);
         output.WriteEnum((int) PlayingState);
       }
       if (_unknownFields != null) {
@@ -284,20 +284,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (nLAHMOBFPIB_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NLAHMOBFPIB);
+      if (playerInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PlayerInfo);
       }
-      if (PlayingState != global::EggLink.DanhengServer.Proto.PlayingState.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PlayingState);
+      if (iLCHAJCFFBF_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ILCHAJCFFBF);
       }
       if (IsMarked != false) {
         size += 1 + 1;
       }
-      if (playerInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PlayerInfo);
-      }
       if (CreateTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(CreateTime);
+      }
+      if (PlayingState != global::EggLink.DanhengServer.Proto.PlayingState.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PlayingState);
       }
       if (RemarkName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RemarkName);
@@ -314,26 +314,26 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.nLAHMOBFPIB_ != null) {
-        if (nLAHMOBFPIB_ == null) {
-          NLAHMOBFPIB = new global::EggLink.DanhengServer.Proto.APOIBBGLIPM();
-        }
-        NLAHMOBFPIB.MergeFrom(other.NLAHMOBFPIB);
-      }
-      if (other.PlayingState != global::EggLink.DanhengServer.Proto.PlayingState.None) {
-        PlayingState = other.PlayingState;
-      }
-      if (other.IsMarked != false) {
-        IsMarked = other.IsMarked;
-      }
       if (other.playerInfo_ != null) {
         if (playerInfo_ == null) {
           PlayerInfo = new global::EggLink.DanhengServer.Proto.PlayerSimpleInfo();
         }
         PlayerInfo.MergeFrom(other.PlayerInfo);
       }
+      if (other.iLCHAJCFFBF_ != null) {
+        if (iLCHAJCFFBF_ == null) {
+          ILCHAJCFFBF = new global::EggLink.DanhengServer.Proto.HIEJJBDNCNH();
+        }
+        ILCHAJCFFBF.MergeFrom(other.ILCHAJCFFBF);
+      }
+      if (other.IsMarked != false) {
+        IsMarked = other.IsMarked;
+      }
       if (other.CreateTime != 0L) {
         CreateTime = other.CreateTime;
+      }
+      if (other.PlayingState != global::EggLink.DanhengServer.Proto.PlayingState.None) {
+        PlayingState = other.PlayingState;
       }
       if (other.RemarkName.Length != 0) {
         RemarkName = other.RemarkName;
@@ -353,15 +353,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            IsMarked = input.ReadBool();
+          case 26: {
+            if (iLCHAJCFFBF_ == null) {
+              ILCHAJCFFBF = new global::EggLink.DanhengServer.Proto.HIEJJBDNCNH();
+            }
+            input.ReadMessage(ILCHAJCFFBF);
             break;
           }
-          case 42: {
-            if (nLAHMOBFPIB_ == null) {
-              NLAHMOBFPIB = new global::EggLink.DanhengServer.Proto.APOIBBGLIPM();
-            }
-            input.ReadMessage(NLAHMOBFPIB);
+          case 32: {
+            CreateTime = input.ReadInt64();
+            break;
+          }
+          case 50: {
+            RemarkName = input.ReadString();
+            break;
+          }
+          case 56: {
+            IsMarked = input.ReadBool();
             break;
           }
           case 82: {
@@ -371,15 +379,7 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(PlayerInfo);
             break;
           }
-          case 88: {
-            CreateTime = input.ReadInt64();
-            break;
-          }
-          case 98: {
-            RemarkName = input.ReadString();
-            break;
-          }
-          case 120: {
+          case 104: {
             PlayingState = (global::EggLink.DanhengServer.Proto.PlayingState) input.ReadEnum();
             break;
           }
@@ -398,15 +398,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            IsMarked = input.ReadBool();
+          case 26: {
+            if (iLCHAJCFFBF_ == null) {
+              ILCHAJCFFBF = new global::EggLink.DanhengServer.Proto.HIEJJBDNCNH();
+            }
+            input.ReadMessage(ILCHAJCFFBF);
             break;
           }
-          case 42: {
-            if (nLAHMOBFPIB_ == null) {
-              NLAHMOBFPIB = new global::EggLink.DanhengServer.Proto.APOIBBGLIPM();
-            }
-            input.ReadMessage(NLAHMOBFPIB);
+          case 32: {
+            CreateTime = input.ReadInt64();
+            break;
+          }
+          case 50: {
+            RemarkName = input.ReadString();
+            break;
+          }
+          case 56: {
+            IsMarked = input.ReadBool();
             break;
           }
           case 82: {
@@ -416,15 +424,7 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(PlayerInfo);
             break;
           }
-          case 88: {
-            CreateTime = input.ReadInt64();
-            break;
-          }
-          case 98: {
-            RemarkName = input.ReadString();
-            break;
-          }
-          case 120: {
+          case 104: {
             PlayingState = (global::EggLink.DanhengServer.Proto.PlayingState) input.ReadEnum();
             break;
           }

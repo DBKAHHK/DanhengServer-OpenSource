@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVUcmF2ZWxCcm9jaHVyZVJlbW92ZVBhc3RlckNzUmVxLnByb3RvIloKH1Ry",
-            "YXZlbEJyb2NodXJlUmVtb3ZlUGFzdGVyQ3NSZXESEQoJdW5pcXVlX2lkGAkg",
-            "ASgEEhMKC0NKQUVCT0xQSUZQGAcgASgNEg8KB2l0ZW1faWQYAiABKA1CHqoC",
+            "YXZlbEJyb2NodXJlUmVtb3ZlUGFzdGVyQ3NSZXESEQoJdW5pcXVlX2lkGA4g",
+            "ASgEEhMKC0NQT0RFSk9GUEREGAIgASgNEg8KB2l0ZW1faWQYCyABKA1CHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TravelBrochureRemovePasterCsReq), global::EggLink.DanhengServer.Proto.TravelBrochureRemovePasterCsReq.Parser, new[]{ "UniqueId", "CJAEBOLPIFP", "ItemId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TravelBrochureRemovePasterCsReq), global::EggLink.DanhengServer.Proto.TravelBrochureRemovePasterCsReq.Parser, new[]{ "UniqueId", "CPODEJOFPDD", "ItemId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TravelBrochureRemovePasterCsReq(TravelBrochureRemovePasterCsReq other) : this() {
       uniqueId_ = other.uniqueId_;
-      cJAEBOLPIFP_ = other.cJAEBOLPIFP_;
+      cPODEJOFPDD_ = other.cPODEJOFPDD_;
       itemId_ = other.itemId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "unique_id" field.</summary>
-    public const int UniqueIdFieldNumber = 9;
+    public const int UniqueIdFieldNumber = 14;
     private ulong uniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,20 +97,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CJAEBOLPIFP" field.</summary>
-    public const int CJAEBOLPIFPFieldNumber = 7;
-    private uint cJAEBOLPIFP_;
+    /// <summary>Field number for the "CPODEJOFPDD" field.</summary>
+    public const int CPODEJOFPDDFieldNumber = 2;
+    private uint cPODEJOFPDD_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CJAEBOLPIFP {
-      get { return cJAEBOLPIFP_; }
+    public uint CPODEJOFPDD {
+      get { return cPODEJOFPDD_; }
       set {
-        cJAEBOLPIFP_ = value;
+        cPODEJOFPDD_ = value;
       }
     }
 
     /// <summary>Field number for the "item_id" field.</summary>
-    public const int ItemIdFieldNumber = 2;
+    public const int ItemIdFieldNumber = 11;
     private uint itemId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (UniqueId != other.UniqueId) return false;
-      if (CJAEBOLPIFP != other.CJAEBOLPIFP) return false;
+      if (CPODEJOFPDD != other.CPODEJOFPDD) return false;
       if (ItemId != other.ItemId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -147,7 +147,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (UniqueId != 0UL) hash ^= UniqueId.GetHashCode();
-      if (CJAEBOLPIFP != 0) hash ^= CJAEBOLPIFP.GetHashCode();
+      if (CPODEJOFPDD != 0) hash ^= CPODEJOFPDD.GetHashCode();
       if (ItemId != 0) hash ^= ItemId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -167,16 +167,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ItemId != 0) {
+      if (CPODEJOFPDD != 0) {
         output.WriteRawTag(16);
+        output.WriteUInt32(CPODEJOFPDD);
+      }
+      if (ItemId != 0) {
+        output.WriteRawTag(88);
         output.WriteUInt32(ItemId);
       }
-      if (CJAEBOLPIFP != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(CJAEBOLPIFP);
-      }
       if (UniqueId != 0UL) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(112);
         output.WriteUInt64(UniqueId);
       }
       if (_unknownFields != null) {
@@ -189,16 +189,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ItemId != 0) {
+      if (CPODEJOFPDD != 0) {
         output.WriteRawTag(16);
+        output.WriteUInt32(CPODEJOFPDD);
+      }
+      if (ItemId != 0) {
+        output.WriteRawTag(88);
         output.WriteUInt32(ItemId);
       }
-      if (CJAEBOLPIFP != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(CJAEBOLPIFP);
-      }
       if (UniqueId != 0UL) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(112);
         output.WriteUInt64(UniqueId);
       }
       if (_unknownFields != null) {
@@ -214,8 +214,8 @@ namespace EggLink.DanhengServer.Proto {
       if (UniqueId != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(UniqueId);
       }
-      if (CJAEBOLPIFP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CJAEBOLPIFP);
+      if (CPODEJOFPDD != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CPODEJOFPDD);
       }
       if (ItemId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ItemId);
@@ -235,8 +235,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.UniqueId != 0UL) {
         UniqueId = other.UniqueId;
       }
-      if (other.CJAEBOLPIFP != 0) {
-        CJAEBOLPIFP = other.CJAEBOLPIFP;
+      if (other.CPODEJOFPDD != 0) {
+        CPODEJOFPDD = other.CPODEJOFPDD;
       }
       if (other.ItemId != 0) {
         ItemId = other.ItemId;
@@ -257,14 +257,14 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 16: {
+            CPODEJOFPDD = input.ReadUInt32();
+            break;
+          }
+          case 88: {
             ItemId = input.ReadUInt32();
             break;
           }
-          case 56: {
-            CJAEBOLPIFP = input.ReadUInt32();
-            break;
-          }
-          case 72: {
+          case 112: {
             UniqueId = input.ReadUInt64();
             break;
           }
@@ -284,14 +284,14 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 16: {
+            CPODEJOFPDD = input.ReadUInt32();
+            break;
+          }
+          case 88: {
             ItemId = input.ReadUInt32();
             break;
           }
-          case 56: {
-            CJAEBOLPIFP = input.ReadUInt32();
-            break;
-          }
-          case 72: {
+          case 112: {
             UniqueId = input.ReadUInt64();
             break;
           }

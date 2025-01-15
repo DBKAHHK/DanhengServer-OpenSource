@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5Sb2d1ZVRvdXJuRW50ZXJSb29tQ3NSZXEucHJvdG8iSgoYUm9ndWVUb3Vy",
-            "bkVudGVyUm9vbUNzUmVxEhYKDm5leHRfcm9vbV90eXBlGAYgASgNEhYKDmN1",
+            "bkVudGVyUm9vbUNzUmVxEhYKDm5leHRfcm9vbV90eXBlGAMgASgNEhYKDmN1",
             "cl9yb29tX2luZGV4GAogASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "next_room_type" field.</summary>
-    public const int NextRoomTypeFieldNumber = 6;
+    public const int NextRoomTypeFieldNumber = 3;
     private uint nextRoomType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (NextRoomType != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(24);
         output.WriteUInt32(NextRoomType);
       }
       if (CurRoomIndex != 0) {
@@ -171,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (NextRoomType != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(24);
         output.WriteUInt32(NextRoomType);
       }
       if (CurRoomIndex != 0) {
@@ -227,7 +227,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 24: {
             NextRoomType = input.ReadUInt32();
             break;
           }
@@ -250,7 +250,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 24: {
             NextRoomType = input.ReadUInt32();
             break;
           }

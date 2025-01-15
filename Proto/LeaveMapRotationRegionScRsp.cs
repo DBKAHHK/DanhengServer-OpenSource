@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFMZWF2ZU1hcFJvdGF0aW9uUmVnaW9uU2NSc3AucHJvdG8aEE1vdGlvbklu",
-            "Zm8ucHJvdG8iZwobTGVhdmVNYXBSb3RhdGlvblJlZ2lvblNjUnNwEhoKEmNs",
-            "aWVudF9wb3NfdmVyc2lvbhgEIAEoDRIbCgZtb3Rpb24YASABKAsyCy5Nb3Rp",
-            "b25JbmZvEg8KB3JldGNvZGUYDiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "Zm8ucHJvdG8iZwobTGVhdmVNYXBSb3RhdGlvblJlZ2lvblNjUnNwEg8KB3Jl",
+            "dGNvZGUYAiABKA0SGgoSY2xpZW50X3Bvc192ZXJzaW9uGAwgASgNEhsKBm1v",
+            "dGlvbhgBIAEoCzILLk1vdGlvbkluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LeaveMapRotationRegionScRsp), global::EggLink.DanhengServer.Proto.LeaveMapRotationRegionScRsp.Parser, new[]{ "ClientPosVersion", "Motion", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LeaveMapRotationRegionScRsp), global::EggLink.DanhengServer.Proto.LeaveMapRotationRegionScRsp.Parser, new[]{ "Retcode", "ClientPosVersion", "Motion" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LeaveMapRotationRegionScRsp(LeaveMapRotationRegionScRsp other) : this() {
+      retcode_ = other.retcode_;
       clientPosVersion_ = other.clientPosVersion_;
       motion_ = other.motion_ != null ? other.motion_.Clone() : null;
-      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,8 +86,20 @@ namespace EggLink.DanhengServer.Proto {
       return new LeaveMapRotationRegionScRsp(this);
     }
 
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 2;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
+      }
+    }
+
     /// <summary>Field number for the "client_pos_version" field.</summary>
-    public const int ClientPosVersionFieldNumber = 4;
+    public const int ClientPosVersionFieldNumber = 12;
     private uint clientPosVersion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,18 +122,6 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 14;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Retcode != other.Retcode) return false;
       if (ClientPosVersion != other.ClientPosVersion) return false;
       if (!object.Equals(Motion, other.Motion)) return false;
-      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,9 +147,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (ClientPosVersion != 0) hash ^= ClientPosVersion.GetHashCode();
       if (motion_ != null) hash ^= Motion.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -172,13 +172,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(10);
         output.WriteMessage(Motion);
       }
-      if (ClientPosVersion != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(ClientPosVersion);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
+      }
+      if (ClientPosVersion != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(ClientPosVersion);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -194,13 +194,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(10);
         output.WriteMessage(Motion);
       }
-      if (ClientPosVersion != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(ClientPosVersion);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
+      }
+      if (ClientPosVersion != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(ClientPosVersion);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -212,14 +212,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
       if (ClientPosVersion != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ClientPosVersion);
       }
       if (motion_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Motion);
-      }
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -233,6 +233,9 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
       if (other.ClientPosVersion != 0) {
         ClientPosVersion = other.ClientPosVersion;
       }
@@ -241,9 +244,6 @@ namespace EggLink.DanhengServer.Proto {
           Motion = new global::EggLink.DanhengServer.Proto.MotionInfo();
         }
         Motion.MergeFrom(other.Motion);
-      }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -267,12 +267,12 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(Motion);
             break;
           }
-          case 32: {
-            ClientPosVersion = input.ReadUInt32();
+          case 16: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 112: {
-            Retcode = input.ReadUInt32();
+          case 96: {
+            ClientPosVersion = input.ReadUInt32();
             break;
           }
         }
@@ -297,12 +297,12 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(Motion);
             break;
           }
-          case 32: {
-            ClientPosVersion = input.ReadUInt32();
+          case 16: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 112: {
-            Retcode = input.ReadUInt32();
+          case 96: {
+            ClientPosVersion = input.ReadUInt32();
             break;
           }
         }

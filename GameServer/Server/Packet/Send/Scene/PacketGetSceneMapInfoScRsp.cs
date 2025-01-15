@@ -14,15 +14,15 @@ public class PacketGetSceneMapInfoScRsp : BasePacket
     {
         var rsp = new GetSceneMapInfoScRsp
         {
-            PNBFDKENOJP = req.PNBFDKENOJP
+            IGFIKGHLLNO = req.IGFIKGHLLNO,
+            EntryStoryLineId = req.EntryStoryLineId
         };
 
         foreach (var floorId in req.FloorIdList)
         {
             var mazeMap = new SceneMapInfo
             {
-                FloorId = floorId,
-                EntryStoryLineId = (uint)(player.StoryLineManager?.StoryLineData.CurStoryLineId ?? 0)
+                FloorId = floorId
                 //DimensionId = (uint)(player.SceneInstance?.EntityLoader is StoryLineEntityLoader loader ? loader.DimensionId
                 //    : 0)
             };

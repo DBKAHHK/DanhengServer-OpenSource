@@ -25,14 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpVcGRhdGVNYXJrQ2hlc3RTY1JzcC5wcm90bxoXTWFya0NoZXN0RnVuY0lu",
-            "Zm8ucHJvdG8ifwoUVXBkYXRlTWFya0NoZXN0U2NSc3ASDwoHcmV0Y29kZRgB",
-            "IAEoDRIwChRtYXJrX2NoZXN0X2Z1bmNfaW5mbxgGIAMoCzISLk1hcmtDaGVz",
-            "dEZ1bmNJbmZvEhMKC09NQkVDSU1OR0VFGAggASgNEg8KB2Z1bmNfaWQYDiAB",
-            "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "Zm8ucHJvdG8ihAEKFFVwZGF0ZU1hcmtDaGVzdFNjUnNwEg8KB2Z1bmNfaWQY",
+            "DCABKA0SMAoUbWFya19jaGVzdF9mdW5jX2luZm8YBCADKAsyEi5NYXJrQ2hl",
+            "c3RGdW5jSW5mbxIYChB0cmlnZ2VyX3BhcmFtX2lkGAMgASgNEg8KB3JldGNv",
+            "ZGUYBSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MarkChestFuncInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdateMarkChestScRsp), global::EggLink.DanhengServer.Proto.UpdateMarkChestScRsp.Parser, new[]{ "Retcode", "MarkChestFuncInfo", "OMBECIMNGEE", "FuncId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdateMarkChestScRsp), global::EggLink.DanhengServer.Proto.UpdateMarkChestScRsp.Parser, new[]{ "FuncId", "MarkChestFuncInfo", "TriggerParamId", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +75,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateMarkChestScRsp(UpdateMarkChestScRsp other) : this() {
-      retcode_ = other.retcode_;
-      markChestFuncInfo_ = other.markChestFuncInfo_.Clone();
-      oMBECIMNGEE_ = other.oMBECIMNGEE_;
       funcId_ = other.funcId_;
+      markChestFuncInfo_ = other.markChestFuncInfo_.Clone();
+      triggerParamId_ = other.triggerParamId_;
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,43 +88,8 @@ namespace EggLink.DanhengServer.Proto {
       return new UpdateMarkChestScRsp(this);
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 1;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "mark_chest_func_info" field.</summary>
-    public const int MarkChestFuncInfoFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MarkChestFuncInfo> _repeated_markChestFuncInfo_codec
-        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.MarkChestFuncInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MarkChestFuncInfo> markChestFuncInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MarkChestFuncInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MarkChestFuncInfo> MarkChestFuncInfo {
-      get { return markChestFuncInfo_; }
-    }
-
-    /// <summary>Field number for the "OMBECIMNGEE" field.</summary>
-    public const int OMBECIMNGEEFieldNumber = 8;
-    private uint oMBECIMNGEE_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint OMBECIMNGEE {
-      get { return oMBECIMNGEE_; }
-      set {
-        oMBECIMNGEE_ = value;
-      }
-    }
-
     /// <summary>Field number for the "func_id" field.</summary>
-    public const int FuncIdFieldNumber = 14;
+    public const int FuncIdFieldNumber = 12;
     private uint funcId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -131,6 +97,41 @@ namespace EggLink.DanhengServer.Proto {
       get { return funcId_; }
       set {
         funcId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "mark_chest_func_info" field.</summary>
+    public const int MarkChestFuncInfoFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MarkChestFuncInfo> _repeated_markChestFuncInfo_codec
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.MarkChestFuncInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MarkChestFuncInfo> markChestFuncInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MarkChestFuncInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MarkChestFuncInfo> MarkChestFuncInfo {
+      get { return markChestFuncInfo_; }
+    }
+
+    /// <summary>Field number for the "trigger_param_id" field.</summary>
+    public const int TriggerParamIdFieldNumber = 3;
+    private uint triggerParamId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint TriggerParamId {
+      get { return triggerParamId_; }
+      set {
+        triggerParamId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 5;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
       }
     }
 
@@ -149,10 +150,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
-      if(!markChestFuncInfo_.Equals(other.markChestFuncInfo_)) return false;
-      if (OMBECIMNGEE != other.OMBECIMNGEE) return false;
       if (FuncId != other.FuncId) return false;
+      if(!markChestFuncInfo_.Equals(other.markChestFuncInfo_)) return false;
+      if (TriggerParamId != other.TriggerParamId) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +161,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      hash ^= markChestFuncInfo_.GetHashCode();
-      if (OMBECIMNGEE != 0) hash ^= OMBECIMNGEE.GetHashCode();
       if (FuncId != 0) hash ^= FuncId.GetHashCode();
+      hash ^= markChestFuncInfo_.GetHashCode();
+      if (TriggerParamId != 0) hash ^= TriggerParamId.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,17 +183,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Retcode);
+      if (TriggerParamId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(TriggerParamId);
       }
       markChestFuncInfo_.WriteTo(output, _repeated_markChestFuncInfo_codec);
-      if (OMBECIMNGEE != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(OMBECIMNGEE);
+      if (Retcode != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Retcode);
       }
       if (FuncId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(96);
         output.WriteUInt32(FuncId);
       }
       if (_unknownFields != null) {
@@ -205,17 +206,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Retcode);
+      if (TriggerParamId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(TriggerParamId);
       }
       markChestFuncInfo_.WriteTo(ref output, _repeated_markChestFuncInfo_codec);
-      if (OMBECIMNGEE != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(OMBECIMNGEE);
+      if (Retcode != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Retcode);
       }
       if (FuncId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(96);
         output.WriteUInt32(FuncId);
       }
       if (_unknownFields != null) {
@@ -228,15 +229,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
-      size += markChestFuncInfo_.CalculateSize(_repeated_markChestFuncInfo_codec);
-      if (OMBECIMNGEE != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OMBECIMNGEE);
-      }
       if (FuncId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FuncId);
+      }
+      size += markChestFuncInfo_.CalculateSize(_repeated_markChestFuncInfo_codec);
+      if (TriggerParamId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TriggerParamId);
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -250,15 +251,15 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
-      markChestFuncInfo_.Add(other.markChestFuncInfo_);
-      if (other.OMBECIMNGEE != 0) {
-        OMBECIMNGEE = other.OMBECIMNGEE;
-      }
       if (other.FuncId != 0) {
         FuncId = other.FuncId;
+      }
+      markChestFuncInfo_.Add(other.markChestFuncInfo_);
+      if (other.TriggerParamId != 0) {
+        TriggerParamId = other.TriggerParamId;
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -275,19 +276,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Retcode = input.ReadUInt32();
+          case 24: {
+            TriggerParamId = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 34: {
             markChestFuncInfo_.AddEntriesFrom(input, _repeated_markChestFuncInfo_codec);
             break;
           }
-          case 64: {
-            OMBECIMNGEE = input.ReadUInt32();
+          case 40: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 96: {
             FuncId = input.ReadUInt32();
             break;
           }
@@ -306,19 +307,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Retcode = input.ReadUInt32();
+          case 24: {
+            TriggerParamId = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 34: {
             markChestFuncInfo_.AddEntriesFrom(ref input, _repeated_markChestFuncInfo_codec);
             break;
           }
-          case 64: {
-            OMBECIMNGEE = input.ReadUInt32();
+          case 40: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 96: {
             FuncId = input.ReadUInt32();
             break;
           }

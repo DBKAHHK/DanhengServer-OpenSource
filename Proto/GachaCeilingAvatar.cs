@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static GachaCeilingAvatarReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhHYWNoYUNlaWxpbmdBdmF0YXIucHJvdG8iPQoSR2FjaGFDZWlsaW5nQXZh",
-            "dGFyEhQKDHJlcGVhdGVkX2NudBgJIAEoDRIRCglhdmF0YXJfaWQYDCABKA1C",
-            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChhHYWNoYUNlaWxpbmdBdmF0YXIucHJvdG8iOwoSR2FjaGFDZWlsaW5nQXZh",
+            "dGFyEhMKC1JlcGVhdGVkQ250GAogASgNEhAKCEF2YXRhcklkGAQgASgNQh6q",
+            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -83,8 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new GachaCeilingAvatar(this);
     }
 
-    /// <summary>Field number for the "repeated_cnt" field.</summary>
-    public const int RepeatedCntFieldNumber = 9;
+    /// <summary>Field number for the "RepeatedCnt" field.</summary>
+    public const int RepeatedCntFieldNumber = 10;
     private uint repeatedCnt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,8 +95,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "avatar_id" field.</summary>
-    public const int AvatarIdFieldNumber = 12;
+    /// <summary>Field number for the "AvatarId" field.</summary>
+    public const int AvatarIdFieldNumber = 4;
     private uint avatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (RepeatedCnt != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(RepeatedCnt);
-      }
       if (AvatarId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(32);
         output.WriteUInt32(AvatarId);
+      }
+      if (RepeatedCnt != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(RepeatedCnt);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (RepeatedCnt != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(RepeatedCnt);
-      }
       if (AvatarId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(32);
         output.WriteUInt32(AvatarId);
+      }
+      if (RepeatedCnt != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(RepeatedCnt);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
-            RepeatedCnt = input.ReadUInt32();
+          case 32: {
+            AvatarId = input.ReadUInt32();
             break;
           }
-          case 96: {
-            AvatarId = input.ReadUInt32();
+          case 80: {
+            RepeatedCnt = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
-            RepeatedCnt = input.ReadUInt32();
+          case 32: {
+            AvatarId = input.ReadUInt32();
             break;
           }
-          case 96: {
-            AvatarId = input.ReadUInt32();
+          case 80: {
+            RepeatedCnt = input.ReadUInt32();
             break;
           }
         }

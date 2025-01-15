@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChJSb2d1ZU1hcEluZm8ucHJvdG8aD1JvZ3VlUm9vbS5wcm90byJ4CgxSb2d1",
-            "ZU1hcEluZm8SDgoGbWFwX2lkGAYgASgNEh0KCXJvb21fbGlzdBgKIAMoCzIK",
-            "LlJvZ3VlUm9vbRITCgtjdXJfcm9vbV9pZBgIIAEoDRITCgtjdXJfc2l0ZV9p",
-            "ZBgFIAEoDRIPCgdhcmVhX2lkGAMgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZU1hcEluZm8SDwoHYXJlYV9pZBgOIAEoDRIOCgZtYXBfaWQYDyABKA0SEwoL",
+            "Y3VyX3Jvb21faWQYCyABKA0SEwoLY3VyX3NpdGVfaWQYBSABKA0SHQoJcm9v",
+            "bV9saXN0GAogAygLMgouUm9ndWVSb29tQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueRoomReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMapInfo), global::EggLink.DanhengServer.Proto.RogueMapInfo.Parser, new[]{ "MapId", "RoomList", "CurRoomId", "CurSiteId", "AreaId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMapInfo), global::EggLink.DanhengServer.Proto.RogueMapInfo.Parser, new[]{ "AreaId", "MapId", "CurRoomId", "CurSiteId", "RoomList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,11 +74,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueMapInfo(RogueMapInfo other) : this() {
+      areaId_ = other.areaId_;
       mapId_ = other.mapId_;
-      roomList_ = other.roomList_.Clone();
       curRoomId_ = other.curRoomId_;
       curSiteId_ = other.curSiteId_;
-      areaId_ = other.areaId_;
+      roomList_ = other.roomList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,8 +88,20 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueMapInfo(this);
     }
 
+    /// <summary>Field number for the "area_id" field.</summary>
+    public const int AreaIdFieldNumber = 14;
+    private uint areaId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint AreaId {
+      get { return areaId_; }
+      set {
+        areaId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "map_id" field.</summary>
-    public const int MapIdFieldNumber = 6;
+    public const int MapIdFieldNumber = 15;
     private uint mapId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,19 +112,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "room_list" field.</summary>
-    public const int RoomListFieldNumber = 10;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueRoom> _repeated_roomList_codec
-        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.RogueRoom.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueRoom> roomList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueRoom>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueRoom> RoomList {
-      get { return roomList_; }
-    }
-
     /// <summary>Field number for the "cur_room_id" field.</summary>
-    public const int CurRoomIdFieldNumber = 8;
+    public const int CurRoomIdFieldNumber = 11;
     private uint curRoomId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -135,16 +136,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "area_id" field.</summary>
-    public const int AreaIdFieldNumber = 3;
-    private uint areaId_;
+    /// <summary>Field number for the "room_list" field.</summary>
+    public const int RoomListFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueRoom> _repeated_roomList_codec
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.RogueRoom.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueRoom> roomList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueRoom>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint AreaId {
-      get { return areaId_; }
-      set {
-        areaId_ = value;
-      }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueRoom> RoomList {
+      get { return roomList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -162,11 +162,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (AreaId != other.AreaId) return false;
       if (MapId != other.MapId) return false;
-      if(!roomList_.Equals(other.roomList_)) return false;
       if (CurRoomId != other.CurRoomId) return false;
       if (CurSiteId != other.CurSiteId) return false;
-      if (AreaId != other.AreaId) return false;
+      if(!roomList_.Equals(other.roomList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -174,11 +174,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (AreaId != 0) hash ^= AreaId.GetHashCode();
       if (MapId != 0) hash ^= MapId.GetHashCode();
-      hash ^= roomList_.GetHashCode();
       if (CurRoomId != 0) hash ^= CurRoomId.GetHashCode();
       if (CurSiteId != 0) hash ^= CurSiteId.GetHashCode();
-      if (AreaId != 0) hash ^= AreaId.GetHashCode();
+      hash ^= roomList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -197,23 +197,23 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (AreaId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(AreaId);
-      }
       if (CurSiteId != 0) {
         output.WriteRawTag(40);
         output.WriteUInt32(CurSiteId);
       }
-      if (MapId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(MapId);
-      }
+      roomList_.WriteTo(output, _repeated_roomList_codec);
       if (CurRoomId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(88);
         output.WriteUInt32(CurRoomId);
       }
-      roomList_.WriteTo(output, _repeated_roomList_codec);
+      if (AreaId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(AreaId);
+      }
+      if (MapId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(MapId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -224,23 +224,23 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (AreaId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(AreaId);
-      }
       if (CurSiteId != 0) {
         output.WriteRawTag(40);
         output.WriteUInt32(CurSiteId);
       }
-      if (MapId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(MapId);
-      }
+      roomList_.WriteTo(ref output, _repeated_roomList_codec);
       if (CurRoomId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(88);
         output.WriteUInt32(CurRoomId);
       }
-      roomList_.WriteTo(ref output, _repeated_roomList_codec);
+      if (AreaId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(AreaId);
+      }
+      if (MapId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(MapId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -251,19 +251,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (AreaId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AreaId);
+      }
       if (MapId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MapId);
       }
-      size += roomList_.CalculateSize(_repeated_roomList_codec);
       if (CurRoomId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurRoomId);
       }
       if (CurSiteId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurSiteId);
       }
-      if (AreaId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AreaId);
-      }
+      size += roomList_.CalculateSize(_repeated_roomList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -276,19 +276,19 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.AreaId != 0) {
+        AreaId = other.AreaId;
+      }
       if (other.MapId != 0) {
         MapId = other.MapId;
       }
-      roomList_.Add(other.roomList_);
       if (other.CurRoomId != 0) {
         CurRoomId = other.CurRoomId;
       }
       if (other.CurSiteId != 0) {
         CurSiteId = other.CurSiteId;
       }
-      if (other.AreaId != 0) {
-        AreaId = other.AreaId;
-      }
+      roomList_.Add(other.roomList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -304,24 +304,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            AreaId = input.ReadUInt32();
-            break;
-          }
           case 40: {
             CurSiteId = input.ReadUInt32();
             break;
           }
-          case 48: {
-            MapId = input.ReadUInt32();
+          case 82: {
+            roomList_.AddEntriesFrom(input, _repeated_roomList_codec);
             break;
           }
-          case 64: {
+          case 88: {
             CurRoomId = input.ReadUInt32();
             break;
           }
-          case 82: {
-            roomList_.AddEntriesFrom(input, _repeated_roomList_codec);
+          case 112: {
+            AreaId = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            MapId = input.ReadUInt32();
             break;
           }
         }
@@ -339,24 +339,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            AreaId = input.ReadUInt32();
-            break;
-          }
           case 40: {
             CurSiteId = input.ReadUInt32();
             break;
           }
-          case 48: {
-            MapId = input.ReadUInt32();
+          case 82: {
+            roomList_.AddEntriesFrom(ref input, _repeated_roomList_codec);
             break;
           }
-          case 64: {
+          case 88: {
             CurRoomId = input.ReadUInt32();
             break;
           }
-          case 82: {
-            roomList_.AddEntriesFrom(ref input, _repeated_roomList_codec);
+          case 112: {
+            AreaId = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            MapId = input.ReadUInt32();
             break;
           }
         }

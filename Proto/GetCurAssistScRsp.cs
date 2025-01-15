@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdHZXRDdXJBc3Npc3RTY1JzcC5wcm90bxoWUGxheWVyQXNzaXN0SW5mby5w",
-            "cm90byJHChFHZXRDdXJBc3Npc3RTY1JzcBIPCgdyZXRjb2RlGAsgASgNEiEK",
-            "BmFzc2lzdBgPIAEoCzIRLlBsYXllckFzc2lzdEluZm9CHqoCG0VnZ0xpbmsu",
-            "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "cm90byJMChFHZXRDdXJBc3Npc3RTY1JzcBIPCgdyZXRjb2RlGAkgASgNEiYK",
+            "C2Fzc2lzdF9pbmZvGAEgASgLMhEuUGxheWVyQXNzaXN0SW5mb0IeqgIbRWdn",
+            "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlayerAssistInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetCurAssistScRsp), global::EggLink.DanhengServer.Proto.GetCurAssistScRsp.Parser, new[]{ "Retcode", "Assist" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetCurAssistScRsp), global::EggLink.DanhengServer.Proto.GetCurAssistScRsp.Parser, new[]{ "Retcode", "AssistInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetCurAssistScRsp(GetCurAssistScRsp other) : this() {
       retcode_ = other.retcode_;
-      assist_ = other.assist_ != null ? other.assist_.Clone() : null;
+      assistInfo_ = other.assistInfo_ != null ? other.assistInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 11;
+    public const int RetcodeFieldNumber = 9;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "assist" field.</summary>
-    public const int AssistFieldNumber = 15;
-    private global::EggLink.DanhengServer.Proto.PlayerAssistInfo assist_;
+    /// <summary>Field number for the "assist_info" field.</summary>
+    public const int AssistInfoFieldNumber = 1;
+    private global::EggLink.DanhengServer.Proto.PlayerAssistInfo assistInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.PlayerAssistInfo Assist {
-      get { return assist_; }
+    public global::EggLink.DanhengServer.Proto.PlayerAssistInfo AssistInfo {
+      get { return assistInfo_; }
       set {
-        assist_ = value;
+        assistInfo_ = value;
       }
     }
 
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Retcode != other.Retcode) return false;
-      if (!object.Equals(Assist, other.Assist)) return false;
+      if (!object.Equals(AssistInfo, other.AssistInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (assist_ != null) hash ^= Assist.GetHashCode();
+      if (assistInfo_ != null) hash ^= AssistInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(Retcode);
+      if (assistInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(AssistInfo);
       }
-      if (assist_ != null) {
-        output.WriteRawTag(122);
-        output.WriteMessage(Assist);
+      if (Retcode != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(Retcode);
+      if (assistInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(AssistInfo);
       }
-      if (assist_ != null) {
-        output.WriteRawTag(122);
-        output.WriteMessage(Assist);
+      if (Retcode != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -191,8 +191,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (assist_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Assist);
+      if (assistInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AssistInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -209,11 +209,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.assist_ != null) {
-        if (assist_ == null) {
-          Assist = new global::EggLink.DanhengServer.Proto.PlayerAssistInfo();
+      if (other.assistInfo_ != null) {
+        if (assistInfo_ == null) {
+          AssistInfo = new global::EggLink.DanhengServer.Proto.PlayerAssistInfo();
         }
-        Assist.MergeFrom(other.Assist);
+        AssistInfo.MergeFrom(other.AssistInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 88: {
-            Retcode = input.ReadUInt32();
+          case 10: {
+            if (assistInfo_ == null) {
+              AssistInfo = new global::EggLink.DanhengServer.Proto.PlayerAssistInfo();
+            }
+            input.ReadMessage(AssistInfo);
             break;
           }
-          case 122: {
-            if (assist_ == null) {
-              Assist = new global::EggLink.DanhengServer.Proto.PlayerAssistInfo();
-            }
-            input.ReadMessage(Assist);
+          case 72: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 88: {
-            Retcode = input.ReadUInt32();
+          case 10: {
+            if (assistInfo_ == null) {
+              AssistInfo = new global::EggLink.DanhengServer.Proto.PlayerAssistInfo();
+            }
+            input.ReadMessage(AssistInfo);
             break;
           }
-          case 122: {
-            if (assist_ == null) {
-              Assist = new global::EggLink.DanhengServer.Proto.PlayerAssistInfo();
-            }
-            input.ReadMessage(Assist);
+          case 72: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

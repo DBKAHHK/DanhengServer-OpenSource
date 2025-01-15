@@ -26,9 +26,9 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChhSZW1vdmVSb3RhdGVyU2NSc3AucHJvdG8aEVJvdGF0ZXJEYXRhLnByb3Rv",
             "GhdSb3RhdGVyRW5lcmd5SW5mby5wcm90byJyChJSZW1vdmVSb3RhdGVyU2NS",
-            "c3ASIgoMcm90YXRlcl9kYXRhGAUgASgLMgwuUm90YXRlckRhdGESJwoLZW5l",
-            "cmd5X2luZm8YAiABKAsyEi5Sb3RhdGVyRW5lcmd5SW5mbxIPCgdyZXRjb2Rl",
-            "GAogASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "c3ASIgoMcm90YXRlcl9kYXRhGAggASgLMgwuUm90YXRlckRhdGESJwoLZW5l",
+            "cmd5X2luZm8YCyABKAsyEi5Sb3RhdGVyRW5lcmd5SW5mbxIPCgdyZXRjb2Rl",
+            "GAMgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, },
@@ -88,7 +88,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rotater_data" field.</summary>
-    public const int RotaterDataFieldNumber = 5;
+    public const int RotaterDataFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.RotaterData rotaterData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,7 +100,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "energy_info" field.</summary>
-    public const int EnergyInfoFieldNumber = 2;
+    public const int EnergyInfoFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.RotaterEnergyInfo energyInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 10;
+    public const int RetcodeFieldNumber = 3;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -169,17 +169,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (energyInfo_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(EnergyInfo);
+      if (Retcode != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Retcode);
       }
       if (rotaterData_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(66);
         output.WriteMessage(RotaterData);
       }
-      if (Retcode != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Retcode);
+      if (energyInfo_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(EnergyInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -191,17 +191,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (energyInfo_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(EnergyInfo);
+      if (Retcode != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Retcode);
       }
       if (rotaterData_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(66);
         output.WriteMessage(RotaterData);
       }
-      if (Retcode != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Retcode);
+      if (energyInfo_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(EnergyInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -264,22 +264,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
-            if (energyInfo_ == null) {
-              EnergyInfo = new global::EggLink.DanhengServer.Proto.RotaterEnergyInfo();
-            }
-            input.ReadMessage(EnergyInfo);
+          case 24: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 42: {
+          case 66: {
             if (rotaterData_ == null) {
               RotaterData = new global::EggLink.DanhengServer.Proto.RotaterData();
             }
             input.ReadMessage(RotaterData);
             break;
           }
-          case 80: {
-            Retcode = input.ReadUInt32();
+          case 90: {
+            if (energyInfo_ == null) {
+              EnergyInfo = new global::EggLink.DanhengServer.Proto.RotaterEnergyInfo();
+            }
+            input.ReadMessage(EnergyInfo);
             break;
           }
         }
@@ -297,22 +297,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
-            if (energyInfo_ == null) {
-              EnergyInfo = new global::EggLink.DanhengServer.Proto.RotaterEnergyInfo();
-            }
-            input.ReadMessage(EnergyInfo);
+          case 24: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 42: {
+          case 66: {
             if (rotaterData_ == null) {
               RotaterData = new global::EggLink.DanhengServer.Proto.RotaterData();
             }
             input.ReadMessage(RotaterData);
             break;
           }
-          case 80: {
-            Retcode = input.ReadUInt32();
+          case 90: {
+            if (energyInfo_ == null) {
+              EnergyInfo = new global::EggLink.DanhengServer.Proto.RotaterEnergyInfo();
+            }
+            input.ReadMessage(EnergyInfo);
             break;
           }
         }

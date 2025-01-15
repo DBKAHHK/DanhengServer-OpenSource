@@ -24,7 +24,7 @@ namespace EggLink.DanhengServer.Proto {
     static FeatureSwitchTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdGZWF0dXJlU3dpdGNoVHlwZS5wcm90byqlDgoRRmVhdHVyZVN3aXRjaFR5",
+            "ChdGZWF0dXJlU3dpdGNoVHlwZS5wcm90byrLDwoRRmVhdHVyZVN3aXRjaFR5",
             "cGUSFwoTRkVBVFVSRV9TV0lUQ0hfTk9ORRAAEhcKE0ZFQVRVUkVfU1dJVENI",
             "X1NIT1AQARIeChpGRUFUVVJFX1NXSVRDSF9MSU5FVVBfTkFNRRACEiAKHEZF",
             "QVRVUkVfU1dJVENIX1JFQ0hBUkdFX1NIT1AQAxIbChdGRUFUVVJFX1NXSVRD",
@@ -65,8 +65,11 @@ namespace EggLink.DanhengServer.Proto {
             "VFVSRV9TV0lUQ0hfUkVMSUNfRklMVEVSX1BMQU5fTkFNRRAyEioKJkZFQVRV",
             "UkVfU1dJVENIX01BWkVfSVRFTV9VU0VfQlVGRl9EUk9QEDMSGgoWRkVBVFVS",
             "RV9TV0lUQ0hfUkVEX0RPVBA0EiUKIUZFQVRVUkVfU1dJVENIX0dBTUVfU1RB",
-            "VEVfU0VSVklDRRA1Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
-            "BnByb3RvMw=="));
+            "VEVfU0VSVklDRRA1EiAKHEZFQVRVUkVfU1dJVENIX0JFTkVGSVRfSU5ERVgQ",
+            "NhIoCiRGRUFUVVJFX1NXSVRDSF9ST0dVRV9UT1VSTl9CVUlMRF9SRUYQNxIv",
+            "CitGRUFUVVJFX1NXSVRDSF9QUkVfQVZBVEFSX1NFVF9HUk9XVEhfVEFSR0VU",
+            "EDgSJwojRkVBVFVSRV9TV0lUQ0hfTUFSU0VWRU5USF9TS0lOX0hJTlQQOUIe",
+            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.FeatureSwitchType), }, null, null));
@@ -129,6 +132,10 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("FEATURE_SWITCH_MAZE_ITEM_USE_BUFF_DROP")] FeatureSwitchMazeItemUseBuffDrop = 51,
     [pbr::OriginalName("FEATURE_SWITCH_RED_DOT")] FeatureSwitchRedDot = 52,
     [pbr::OriginalName("FEATURE_SWITCH_GAME_STATE_SERVICE")] FeatureSwitchGameStateService = 53,
+    [pbr::OriginalName("FEATURE_SWITCH_BENEFIT_INDEX")] FeatureSwitchBenefitIndex = 54,
+    [pbr::OriginalName("FEATURE_SWITCH_ROGUE_TOURN_BUILD_REF")] FeatureSwitchRogueTournBuildRef = 55,
+    [pbr::OriginalName("FEATURE_SWITCH_PRE_AVATAR_SET_GROWTH_TARGET")] FeatureSwitchPreAvatarSetGrowthTarget = 56,
+    [pbr::OriginalName("FEATURE_SWITCH_MARSEVENTH_SKIN_HINT")] FeatureSwitchMarseventhSkinHint = 57,
   }
 
   #endregion

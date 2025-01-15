@@ -40,7 +40,6 @@ public class ScenePropData
 
 public class ScenePropTimelineData
 {
-    public uint UintValue { get; set; }
     public bool BoolValue { get; set; }
     public string ByteValue { get; set; } = "";  // Base64
 
@@ -48,7 +47,6 @@ public class ScenePropTimelineData
     {
         return new PropTimelineInfo
         {
-            TimelineIntValue = UintValue,
             TimelineBoolValue = BoolValue,
             TimelineByteValue = ByteString.FromBase64(ByteValue)
         };

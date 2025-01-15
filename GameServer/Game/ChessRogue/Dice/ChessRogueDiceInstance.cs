@@ -65,7 +65,7 @@ public class ChessRogueDiceInstance(ChessRogueInstance instance, ChessRogueNousD
             CurSurfaceSlotId = (uint)(index > 0 ? index : 0),
             CanRerollDice = RerollTimes > 0,
             DiceModifier = Modifier?.ToProto() ?? new RogueModifier(),
-            OLGAOIBGCHH = new EBOIOIKFLFJ()
+            EDPHLDEGJLM = new EENDHPKPFLP()
         };
     }
 }

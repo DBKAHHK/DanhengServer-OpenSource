@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static GetFightFestDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtHZXRGaWdodEZlc3REYXRhU2NSc3AucHJvdG8aHUZpZ2h0RmVzdENoYWxs",
-            "ZW5nZUxldmVsLnByb3RvIp8BChVHZXRGaWdodEZlc3REYXRhU2NSc3ASDwoH",
-            "cmV0Y29kZRgBIAEoDRIdChV1bmxvY2tlZF9jb2FjaF9za2lsbHMYCiADKA0S",
-            "EgoKaXRlbV92YWx1ZRgNIAEoDRIwCg5jaGFsbGVuZ2VfbGlzdBgDIAMoCzIY",
-            "LkZpZ2h0RmVzdENoYWxsZW5nZUxldmVsEhAKCHNjb3JlX2lkGA4gASgNQh6q",
-            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChtHZXRGaWdodEZlc3REYXRhU2NSc3AucHJvdG8aEUlLTE5JTEtQRU5BLnBy",
+            "b3RvIokBChVHZXRGaWdodEZlc3REYXRhU2NSc3ASJAoOY2hhbGxlbmdlX2xp",
+            "c3QYBCADKAsyDC5JS0xOSUxLUEVOQRISCgppdGVtX3ZhbHVlGAEgASgNEhAK",
+            "CHNjb3JlX2lkGA8gASgNEg8KB3JldGNvZGUYDCABKA0SEwoLTUZHT05ISkdJ",
+            "UFAYBiADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FightFestChallengeLevelReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IKLNILKPENAReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetFightFestDataScRsp), global::EggLink.DanhengServer.Proto.GetFightFestDataScRsp.Parser, new[]{ "Retcode", "UnlockedCoachSkills", "ItemValue", "ChallengeList", "ScoreId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetFightFestDataScRsp), global::EggLink.DanhengServer.Proto.GetFightFestDataScRsp.Parser, new[]{ "ChallengeList", "ItemValue", "ScoreId", "Retcode", "MFGONHJGIPP" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,11 +75,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetFightFestDataScRsp(GetFightFestDataScRsp other) : this() {
-      retcode_ = other.retcode_;
-      unlockedCoachSkills_ = other.unlockedCoachSkills_.Clone();
-      itemValue_ = other.itemValue_;
       challengeList_ = other.challengeList_.Clone();
+      itemValue_ = other.itemValue_;
       scoreId_ = other.scoreId_;
+      retcode_ = other.retcode_;
+      mFGONHJGIPP_ = other.mFGONHJGIPP_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -89,31 +89,19 @@ namespace EggLink.DanhengServer.Proto {
       return new GetFightFestDataScRsp(this);
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 1;
-    private uint retcode_;
+    /// <summary>Field number for the "challenge_list" field.</summary>
+    public const int ChallengeListFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.IKLNILKPENA> _repeated_challengeList_codec
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.IKLNILKPENA.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IKLNILKPENA> challengeList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IKLNILKPENA>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "unlocked_coach_skills" field.</summary>
-    public const int UnlockedCoachSkillsFieldNumber = 10;
-    private static readonly pb::FieldCodec<uint> _repeated_unlockedCoachSkills_codec
-        = pb::FieldCodec.ForUInt32(82);
-    private readonly pbc::RepeatedField<uint> unlockedCoachSkills_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> UnlockedCoachSkills {
-      get { return unlockedCoachSkills_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IKLNILKPENA> ChallengeList {
+      get { return challengeList_; }
     }
 
     /// <summary>Field number for the "item_value" field.</summary>
-    public const int ItemValueFieldNumber = 13;
+    public const int ItemValueFieldNumber = 1;
     private uint itemValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -124,19 +112,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "challenge_list" field.</summary>
-    public const int ChallengeListFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.FightFestChallengeLevel> _repeated_challengeList_codec
-        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.FightFestChallengeLevel.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FightFestChallengeLevel> challengeList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FightFestChallengeLevel>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FightFestChallengeLevel> ChallengeList {
-      get { return challengeList_; }
-    }
-
     /// <summary>Field number for the "score_id" field.</summary>
-    public const int ScoreIdFieldNumber = 14;
+    public const int ScoreIdFieldNumber = 15;
     private uint scoreId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -145,6 +122,29 @@ namespace EggLink.DanhengServer.Proto {
       set {
         scoreId_ = value;
       }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 12;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "MFGONHJGIPP" field.</summary>
+    public const int MFGONHJGIPPFieldNumber = 6;
+    private static readonly pb::FieldCodec<uint> _repeated_mFGONHJGIPP_codec
+        = pb::FieldCodec.ForUInt32(50);
+    private readonly pbc::RepeatedField<uint> mFGONHJGIPP_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> MFGONHJGIPP {
+      get { return mFGONHJGIPP_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -162,11 +162,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
-      if(!unlockedCoachSkills_.Equals(other.unlockedCoachSkills_)) return false;
-      if (ItemValue != other.ItemValue) return false;
       if(!challengeList_.Equals(other.challengeList_)) return false;
+      if (ItemValue != other.ItemValue) return false;
       if (ScoreId != other.ScoreId) return false;
+      if (Retcode != other.Retcode) return false;
+      if(!mFGONHJGIPP_.Equals(other.mFGONHJGIPP_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -174,11 +174,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      hash ^= unlockedCoachSkills_.GetHashCode();
-      if (ItemValue != 0) hash ^= ItemValue.GetHashCode();
       hash ^= challengeList_.GetHashCode();
+      if (ItemValue != 0) hash ^= ItemValue.GetHashCode();
       if (ScoreId != 0) hash ^= ScoreId.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      hash ^= mFGONHJGIPP_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -197,18 +197,18 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Retcode);
-      }
-      challengeList_.WriteTo(output, _repeated_challengeList_codec);
-      unlockedCoachSkills_.WriteTo(output, _repeated_unlockedCoachSkills_codec);
       if (ItemValue != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(8);
         output.WriteUInt32(ItemValue);
       }
+      challengeList_.WriteTo(output, _repeated_challengeList_codec);
+      mFGONHJGIPP_.WriteTo(output, _repeated_mFGONHJGIPP_codec);
+      if (Retcode != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Retcode);
+      }
       if (ScoreId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(120);
         output.WriteUInt32(ScoreId);
       }
       if (_unknownFields != null) {
@@ -221,18 +221,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Retcode);
-      }
-      challengeList_.WriteTo(ref output, _repeated_challengeList_codec);
-      unlockedCoachSkills_.WriteTo(ref output, _repeated_unlockedCoachSkills_codec);
       if (ItemValue != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(8);
         output.WriteUInt32(ItemValue);
       }
+      challengeList_.WriteTo(ref output, _repeated_challengeList_codec);
+      mFGONHJGIPP_.WriteTo(ref output, _repeated_mFGONHJGIPP_codec);
+      if (Retcode != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Retcode);
+      }
       if (ScoreId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(120);
         output.WriteUInt32(ScoreId);
       }
       if (_unknownFields != null) {
@@ -245,17 +245,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
-      size += unlockedCoachSkills_.CalculateSize(_repeated_unlockedCoachSkills_codec);
+      size += challengeList_.CalculateSize(_repeated_challengeList_codec);
       if (ItemValue != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ItemValue);
       }
-      size += challengeList_.CalculateSize(_repeated_challengeList_codec);
       if (ScoreId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScoreId);
       }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      size += mFGONHJGIPP_.CalculateSize(_repeated_mFGONHJGIPP_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -268,17 +268,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
-      unlockedCoachSkills_.Add(other.unlockedCoachSkills_);
+      challengeList_.Add(other.challengeList_);
       if (other.ItemValue != 0) {
         ItemValue = other.ItemValue;
       }
-      challengeList_.Add(other.challengeList_);
       if (other.ScoreId != 0) {
         ScoreId = other.ScoreId;
       }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
+      mFGONHJGIPP_.Add(other.mFGONHJGIPP_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -295,23 +295,23 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 26: {
-            challengeList_.AddEntriesFrom(input, _repeated_challengeList_codec);
-            break;
-          }
-          case 82:
-          case 80: {
-            unlockedCoachSkills_.AddEntriesFrom(input, _repeated_unlockedCoachSkills_codec);
-            break;
-          }
-          case 104: {
             ItemValue = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 34: {
+            challengeList_.AddEntriesFrom(input, _repeated_challengeList_codec);
+            break;
+          }
+          case 50:
+          case 48: {
+            mFGONHJGIPP_.AddEntriesFrom(input, _repeated_mFGONHJGIPP_codec);
+            break;
+          }
+          case 96: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 120: {
             ScoreId = input.ReadUInt32();
             break;
           }
@@ -331,23 +331,23 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 26: {
-            challengeList_.AddEntriesFrom(ref input, _repeated_challengeList_codec);
-            break;
-          }
-          case 82:
-          case 80: {
-            unlockedCoachSkills_.AddEntriesFrom(ref input, _repeated_unlockedCoachSkills_codec);
-            break;
-          }
-          case 104: {
             ItemValue = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 34: {
+            challengeList_.AddEntriesFrom(ref input, _repeated_challengeList_codec);
+            break;
+          }
+          case 50:
+          case 48: {
+            mFGONHJGIPP_.AddEntriesFrom(ref input, _repeated_mFGONHJGIPP_codec);
+            break;
+          }
+          case 96: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 120: {
             ScoreId = input.ReadUInt32();
             break;
           }

@@ -24,14 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static GetTrainVisitorBehaviorCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiJHZXRUcmFpblZpc2l0b3JCZWhhdmlvckNzUmVxLnByb3RvIkAKHEdldFRy",
-            "YWluVmlzaXRvckJlaGF2aW9yQ3NSZXESIAoYdmlzaXRvcl9iZWhhdmlvcl9p",
-            "ZF9saXN0GAsgAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
-            "BnByb3RvMw=="));
+            "CiJHZXRUcmFpblZpc2l0b3JCZWhhdmlvckNzUmVxLnByb3RvIjMKHEdldFRy",
+            "YWluVmlzaXRvckJlaGF2aW9yQ3NSZXESEwoLT0lGTkxOQktETUEYDyADKA1C",
+            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetTrainVisitorBehaviorCsReq), global::EggLink.DanhengServer.Proto.GetTrainVisitorBehaviorCsReq.Parser, new[]{ "VisitorBehaviorIdList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetTrainVisitorBehaviorCsReq), global::EggLink.DanhengServer.Proto.GetTrainVisitorBehaviorCsReq.Parser, new[]{ "OIFNLNBKDMA" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetTrainVisitorBehaviorCsReq(GetTrainVisitorBehaviorCsReq other) : this() {
-      visitorBehaviorIdList_ = other.visitorBehaviorIdList_.Clone();
+      oIFNLNBKDMA_ = other.oIFNLNBKDMA_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GetTrainVisitorBehaviorCsReq(this);
     }
 
-    /// <summary>Field number for the "visitor_behavior_id_list" field.</summary>
-    public const int VisitorBehaviorIdListFieldNumber = 11;
-    private static readonly pb::FieldCodec<uint> _repeated_visitorBehaviorIdList_codec
-        = pb::FieldCodec.ForUInt32(90);
-    private readonly pbc::RepeatedField<uint> visitorBehaviorIdList_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "OIFNLNBKDMA" field.</summary>
+    public const int OIFNLNBKDMAFieldNumber = 15;
+    private static readonly pb::FieldCodec<uint> _repeated_oIFNLNBKDMA_codec
+        = pb::FieldCodec.ForUInt32(122);
+    private readonly pbc::RepeatedField<uint> oIFNLNBKDMA_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> VisitorBehaviorIdList {
-      get { return visitorBehaviorIdList_; }
+    public pbc::RepeatedField<uint> OIFNLNBKDMA {
+      get { return oIFNLNBKDMA_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -109,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!visitorBehaviorIdList_.Equals(other.visitorBehaviorIdList_)) return false;
+      if(!oIFNLNBKDMA_.Equals(other.oIFNLNBKDMA_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +116,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= visitorBehaviorIdList_.GetHashCode();
+      hash ^= oIFNLNBKDMA_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,7 +135,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      visitorBehaviorIdList_.WriteTo(output, _repeated_visitorBehaviorIdList_codec);
+      oIFNLNBKDMA_.WriteTo(output, _repeated_oIFNLNBKDMA_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -147,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      visitorBehaviorIdList_.WriteTo(ref output, _repeated_visitorBehaviorIdList_codec);
+      oIFNLNBKDMA_.WriteTo(ref output, _repeated_oIFNLNBKDMA_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -158,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += visitorBehaviorIdList_.CalculateSize(_repeated_visitorBehaviorIdList_codec);
+      size += oIFNLNBKDMA_.CalculateSize(_repeated_oIFNLNBKDMA_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -171,7 +170,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      visitorBehaviorIdList_.Add(other.visitorBehaviorIdList_);
+      oIFNLNBKDMA_.Add(other.oIFNLNBKDMA_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -187,9 +186,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 90:
-          case 88: {
-            visitorBehaviorIdList_.AddEntriesFrom(input, _repeated_visitorBehaviorIdList_codec);
+          case 122:
+          case 120: {
+            oIFNLNBKDMA_.AddEntriesFrom(input, _repeated_oIFNLNBKDMA_codec);
             break;
           }
         }
@@ -207,9 +206,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 90:
-          case 88: {
-            visitorBehaviorIdList_.AddEntriesFrom(ref input, _repeated_visitorBehaviorIdList_codec);
+          case 122:
+          case 120: {
+            oIFNLNBKDMA_.AddEntriesFrom(ref input, _repeated_oIFNLNBKDMA_codec);
             break;
           }
         }

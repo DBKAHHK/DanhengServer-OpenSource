@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChtNaXNzaW9uUmV3YXJkU2NOb3RpZnkucHJvdG8aDkl0ZW1MaXN0LnByb3Rv",
             "ImMKFU1pc3Npb25SZXdhcmRTY05vdGlmeRIZCgZyZXdhcmQYCCABKAsyCS5J",
-            "dGVtTGlzdBIWCg5zdWJfbWlzc2lvbl9pZBgMIAEoDRIXCg9tYWluX21pc3Np",
-            "b25faWQYCiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "dGVtTGlzdBIWCg5zdWJfbWlzc2lvbl9pZBgKIAEoDRIXCg9tYWluX21pc3Np",
+            "b25faWQYByABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "sub_mission_id" field.</summary>
-    public const int SubMissionIdFieldNumber = 12;
+    public const int SubMissionIdFieldNumber = 10;
     private uint subMissionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "main_mission_id" field.</summary>
-    public const int MainMissionIdFieldNumber = 10;
+    public const int MainMissionIdFieldNumber = 7;
     private uint mainMissionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -168,16 +168,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (MainMissionId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(MainMissionId);
+      }
       if (reward_ != null) {
         output.WriteRawTag(66);
         output.WriteMessage(Reward);
       }
-      if (MainMissionId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(MainMissionId);
-      }
       if (SubMissionId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(80);
         output.WriteUInt32(SubMissionId);
       }
       if (_unknownFields != null) {
@@ -190,16 +190,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (MainMissionId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(MainMissionId);
+      }
       if (reward_ != null) {
         output.WriteRawTag(66);
         output.WriteMessage(Reward);
       }
-      if (MainMissionId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(MainMissionId);
-      }
       if (SubMissionId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(80);
         output.WriteUInt32(SubMissionId);
       }
       if (_unknownFields != null) {
@@ -260,6 +260,10 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 56: {
+            MainMissionId = input.ReadUInt32();
+            break;
+          }
           case 66: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
@@ -268,10 +272,6 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 80: {
-            MainMissionId = input.ReadUInt32();
-            break;
-          }
-          case 96: {
             SubMissionId = input.ReadUInt32();
             break;
           }
@@ -290,6 +290,10 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 56: {
+            MainMissionId = input.ReadUInt32();
+            break;
+          }
           case 66: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
@@ -298,10 +302,6 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 80: {
-            MainMissionId = input.ReadUInt32();
-            break;
-          }
-          case 96: {
             SubMissionId = input.ReadUInt32();
             break;
           }

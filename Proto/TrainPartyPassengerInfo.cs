@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1UcmFpblBhcnR5UGFzc2VuZ2VySW5mby5wcm90bxoZVHJhaW5QYXJ0eVBh",
-            "c3Nlbmdlci5wcm90byJhChdUcmFpblBhcnR5UGFzc2VuZ2VySW5mbxIxChNw",
-            "YXNzZW5nZXJfaW5mb19saXN0GAwgAygLMhQuVHJhaW5QYXJ0eVBhc3Nlbmdl",
-            "chITCgtCSUtDREFESklKShgBIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
+            "c3Nlbmdlci5wcm90byJhChdUcmFpblBhcnR5UGFzc2VuZ2VySW5mbxITCgtQ",
+            "Q0xNTkJJTEFQSBgEIAMoDRIxChNwYXNzZW5nZXJfaW5mb19saXN0GAggAygL",
+            "MhQuVHJhaW5QYXJ0eVBhc3NlbmdlckIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyPassengerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyPassengerInfo), global::EggLink.DanhengServer.Proto.TrainPartyPassengerInfo.Parser, new[]{ "PassengerInfoList", "BIKCDADJIJJ" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyPassengerInfo), global::EggLink.DanhengServer.Proto.TrainPartyPassengerInfo.Parser, new[]{ "PCLMNBILAPH", "PassengerInfoList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainPartyPassengerInfo(TrainPartyPassengerInfo other) : this() {
+      pCLMNBILAPH_ = other.pCLMNBILAPH_.Clone();
       passengerInfoList_ = other.passengerInfoList_.Clone();
-      bIKCDADJIJJ_ = other.bIKCDADJIJJ_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,26 +85,26 @@ namespace EggLink.DanhengServer.Proto {
       return new TrainPartyPassengerInfo(this);
     }
 
+    /// <summary>Field number for the "PCLMNBILAPH" field.</summary>
+    public const int PCLMNBILAPHFieldNumber = 4;
+    private static readonly pb::FieldCodec<uint> _repeated_pCLMNBILAPH_codec
+        = pb::FieldCodec.ForUInt32(34);
+    private readonly pbc::RepeatedField<uint> pCLMNBILAPH_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> PCLMNBILAPH {
+      get { return pCLMNBILAPH_; }
+    }
+
     /// <summary>Field number for the "passenger_info_list" field.</summary>
-    public const int PassengerInfoListFieldNumber = 12;
+    public const int PassengerInfoListFieldNumber = 8;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.TrainPartyPassenger> _repeated_passengerInfoList_codec
-        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.TrainPartyPassenger.Parser);
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.TrainPartyPassenger.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyPassenger> passengerInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyPassenger>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyPassenger> PassengerInfoList {
       get { return passengerInfoList_; }
-    }
-
-    /// <summary>Field number for the "BIKCDADJIJJ" field.</summary>
-    public const int BIKCDADJIJJFieldNumber = 1;
-    private static readonly pb::FieldCodec<uint> _repeated_bIKCDADJIJJ_codec
-        = pb::FieldCodec.ForUInt32(10);
-    private readonly pbc::RepeatedField<uint> bIKCDADJIJJ_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> BIKCDADJIJJ {
-      get { return bIKCDADJIJJ_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if(!pCLMNBILAPH_.Equals(other.pCLMNBILAPH_)) return false;
       if(!passengerInfoList_.Equals(other.passengerInfoList_)) return false;
-      if(!bIKCDADJIJJ_.Equals(other.bIKCDADJIJJ_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      hash ^= pCLMNBILAPH_.GetHashCode();
       hash ^= passengerInfoList_.GetHashCode();
-      hash ^= bIKCDADJIJJ_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      bIKCDADJIJJ_.WriteTo(output, _repeated_bIKCDADJIJJ_codec);
+      pCLMNBILAPH_.WriteTo(output, _repeated_pCLMNBILAPH_codec);
       passengerInfoList_.WriteTo(output, _repeated_passengerInfoList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -163,7 +163,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      bIKCDADJIJJ_.WriteTo(ref output, _repeated_bIKCDADJIJJ_codec);
+      pCLMNBILAPH_.WriteTo(ref output, _repeated_pCLMNBILAPH_codec);
       passengerInfoList_.WriteTo(ref output, _repeated_passengerInfoList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -175,8 +175,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += pCLMNBILAPH_.CalculateSize(_repeated_pCLMNBILAPH_codec);
       size += passengerInfoList_.CalculateSize(_repeated_passengerInfoList_codec);
-      size += bIKCDADJIJJ_.CalculateSize(_repeated_bIKCDADJIJJ_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -189,8 +189,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      pCLMNBILAPH_.Add(other.pCLMNBILAPH_);
       passengerInfoList_.Add(other.passengerInfoList_);
-      bIKCDADJIJJ_.Add(other.bIKCDADJIJJ_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -206,12 +206,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10:
-          case 8: {
-            bIKCDADJIJJ_.AddEntriesFrom(input, _repeated_bIKCDADJIJJ_codec);
+          case 34:
+          case 32: {
+            pCLMNBILAPH_.AddEntriesFrom(input, _repeated_pCLMNBILAPH_codec);
             break;
           }
-          case 98: {
+          case 66: {
             passengerInfoList_.AddEntriesFrom(input, _repeated_passengerInfoList_codec);
             break;
           }
@@ -230,12 +230,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10:
-          case 8: {
-            bIKCDADJIJJ_.AddEntriesFrom(ref input, _repeated_bIKCDADJIJJ_codec);
+          case 34:
+          case 32: {
+            pCLMNBILAPH_.AddEntriesFrom(ref input, _repeated_pCLMNBILAPH_codec);
             break;
           }
-          case 98: {
+          case 66: {
             passengerInfoList_.AddEntriesFrom(ref input, _repeated_passengerInfoList_codec);
             break;
           }

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlSb2d1ZU1hZ2ljU3RvcnlJbmZvLnByb3RvIjgKE1JvZ3VlTWFnaWNTdG9y",
-            "eUluZm8SIQoZZmluaXNoZWRfbWFnaWNfc3RvcnlfbGlzdBgCIAMoDUIeqgIb",
+            "eUluZm8SIQoZZmluaXNoZWRfbWFnaWNfc3RvcnlfbGlzdBgLIAMoDUIeqgIb",
             "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "finished_magic_story_list" field.</summary>
-    public const int FinishedMagicStoryListFieldNumber = 2;
+    public const int FinishedMagicStoryListFieldNumber = 11;
     private static readonly pb::FieldCodec<uint> _repeated_finishedMagicStoryList_codec
-        = pb::FieldCodec.ForUInt32(18);
+        = pb::FieldCodec.ForUInt32(90);
     private readonly pbc::RepeatedField<uint> finishedMagicStoryList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,8 +186,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18:
-          case 16: {
+          case 90:
+          case 88: {
             finishedMagicStoryList_.AddEntriesFrom(input, _repeated_finishedMagicStoryList_codec);
             break;
           }
@@ -206,8 +206,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18:
-          case 16: {
+          case 90:
+          case 88: {
             finishedMagicStoryList_.AddEntriesFrom(ref input, _repeated_finishedMagicStoryList_codec);
             break;
           }

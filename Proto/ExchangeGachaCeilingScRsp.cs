@@ -26,15 +26,15 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch9FeGNoYW5nZUdhY2hhQ2VpbGluZ1NjUnNwLnByb3RvGhJHYWNoYUNlaWxp",
             "bmcucHJvdG8aDkl0ZW1MaXN0LnByb3RvIqABChlFeGNoYW5nZUdhY2hhQ2Vp",
-            "bGluZ1NjUnNwEg8KB3JldGNvZGUYCiABKA0SJQoSdHJhbnNmZXJfaXRlbV9s",
-            "aXN0GAIgASgLMgkuSXRlbUxpc3QSEgoKZ2FjaGFfdHlwZRgDIAEoDRIRCglh",
-            "dmF0YXJfaWQYDiABKA0SJAoNZ2FjaGFfY2VpbGluZxgFIAEoCzINLkdhY2hh",
-            "Q2VpbGluZ0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "bGluZ1NjUnNwEg8KB3JldGNvZGUYDSABKA0SJAoNZ2FjaGFfY2VpbGluZxgM",
+            "IAEoCzINLkdhY2hhQ2VpbGluZxISCgpnYWNoYV90eXBlGAsgASgNEiUKEnRy",
+            "YW5zZmVyX2l0ZW1fbGlzdBgPIAEoCzIJLkl0ZW1MaXN0EhEKCWF2YXRhcl9p",
+            "ZBgBIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GachaCeilingReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ExchangeGachaCeilingScRsp), global::EggLink.DanhengServer.Proto.ExchangeGachaCeilingScRsp.Parser, new[]{ "Retcode", "TransferItemList", "GachaType", "AvatarId", "GachaCeiling" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ExchangeGachaCeilingScRsp), global::EggLink.DanhengServer.Proto.ExchangeGachaCeilingScRsp.Parser, new[]{ "Retcode", "GachaCeiling", "GachaType", "TransferItemList", "AvatarId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,10 +77,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExchangeGachaCeilingScRsp(ExchangeGachaCeilingScRsp other) : this() {
       retcode_ = other.retcode_;
-      transferItemList_ = other.transferItemList_ != null ? other.transferItemList_.Clone() : null;
-      gachaType_ = other.gachaType_;
-      avatarId_ = other.avatarId_;
       gachaCeiling_ = other.gachaCeiling_ != null ? other.gachaCeiling_.Clone() : null;
+      gachaType_ = other.gachaType_;
+      transferItemList_ = other.transferItemList_ != null ? other.transferItemList_.Clone() : null;
+      avatarId_ = other.avatarId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -91,7 +91,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 10;
+    public const int RetcodeFieldNumber = 13;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -102,20 +102,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "transfer_item_list" field.</summary>
-    public const int TransferItemListFieldNumber = 2;
-    private global::EggLink.DanhengServer.Proto.ItemList transferItemList_;
+    /// <summary>Field number for the "gacha_ceiling" field.</summary>
+    public const int GachaCeilingFieldNumber = 12;
+    private global::EggLink.DanhengServer.Proto.GachaCeiling gachaCeiling_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ItemList TransferItemList {
-      get { return transferItemList_; }
+    public global::EggLink.DanhengServer.Proto.GachaCeiling GachaCeiling {
+      get { return gachaCeiling_; }
       set {
-        transferItemList_ = value;
+        gachaCeiling_ = value;
       }
     }
 
     /// <summary>Field number for the "gacha_type" field.</summary>
-    public const int GachaTypeFieldNumber = 3;
+    public const int GachaTypeFieldNumber = 11;
     private uint gachaType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -126,8 +126,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "transfer_item_list" field.</summary>
+    public const int TransferItemListFieldNumber = 15;
+    private global::EggLink.DanhengServer.Proto.ItemList transferItemList_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ItemList TransferItemList {
+      get { return transferItemList_; }
+      set {
+        transferItemList_ = value;
+      }
+    }
+
     /// <summary>Field number for the "avatar_id" field.</summary>
-    public const int AvatarIdFieldNumber = 14;
+    public const int AvatarIdFieldNumber = 1;
     private uint avatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -135,18 +147,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return avatarId_; }
       set {
         avatarId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "gacha_ceiling" field.</summary>
-    public const int GachaCeilingFieldNumber = 5;
-    private global::EggLink.DanhengServer.Proto.GachaCeiling gachaCeiling_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.GachaCeiling GachaCeiling {
-      get { return gachaCeiling_; }
-      set {
-        gachaCeiling_ = value;
       }
     }
 
@@ -166,10 +166,10 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Retcode != other.Retcode) return false;
-      if (!object.Equals(TransferItemList, other.TransferItemList)) return false;
-      if (GachaType != other.GachaType) return false;
-      if (AvatarId != other.AvatarId) return false;
       if (!object.Equals(GachaCeiling, other.GachaCeiling)) return false;
+      if (GachaType != other.GachaType) return false;
+      if (!object.Equals(TransferItemList, other.TransferItemList)) return false;
+      if (AvatarId != other.AvatarId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -178,10 +178,10 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (transferItemList_ != null) hash ^= TransferItemList.GetHashCode();
-      if (GachaType != 0) hash ^= GachaType.GetHashCode();
-      if (AvatarId != 0) hash ^= AvatarId.GetHashCode();
       if (gachaCeiling_ != null) hash ^= GachaCeiling.GetHashCode();
+      if (GachaType != 0) hash ^= GachaType.GetHashCode();
+      if (transferItemList_ != null) hash ^= TransferItemList.GetHashCode();
+      if (AvatarId != 0) hash ^= AvatarId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -200,25 +200,25 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (transferItemList_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(TransferItemList);
+      if (AvatarId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(AvatarId);
       }
       if (GachaType != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(88);
         output.WriteUInt32(GachaType);
       }
       if (gachaCeiling_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(98);
         output.WriteMessage(GachaCeiling);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(104);
         output.WriteUInt32(Retcode);
       }
-      if (AvatarId != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(AvatarId);
+      if (transferItemList_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(TransferItemList);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -230,25 +230,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (transferItemList_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(TransferItemList);
+      if (AvatarId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(AvatarId);
       }
       if (GachaType != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(88);
         output.WriteUInt32(GachaType);
       }
       if (gachaCeiling_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(98);
         output.WriteMessage(GachaCeiling);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(104);
         output.WriteUInt32(Retcode);
       }
-      if (AvatarId != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(AvatarId);
+      if (transferItemList_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(TransferItemList);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -263,17 +263,17 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (transferItemList_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TransferItemList);
+      if (gachaCeiling_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GachaCeiling);
       }
       if (GachaType != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GachaType);
       }
+      if (transferItemList_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TransferItemList);
+      }
       if (AvatarId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AvatarId);
-      }
-      if (gachaCeiling_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GachaCeiling);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -290,23 +290,23 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
+      if (other.gachaCeiling_ != null) {
+        if (gachaCeiling_ == null) {
+          GachaCeiling = new global::EggLink.DanhengServer.Proto.GachaCeiling();
+        }
+        GachaCeiling.MergeFrom(other.GachaCeiling);
+      }
+      if (other.GachaType != 0) {
+        GachaType = other.GachaType;
+      }
       if (other.transferItemList_ != null) {
         if (transferItemList_ == null) {
           TransferItemList = new global::EggLink.DanhengServer.Proto.ItemList();
         }
         TransferItemList.MergeFrom(other.TransferItemList);
       }
-      if (other.GachaType != 0) {
-        GachaType = other.GachaType;
-      }
       if (other.AvatarId != 0) {
         AvatarId = other.AvatarId;
-      }
-      if (other.gachaCeiling_ != null) {
-        if (gachaCeiling_ == null) {
-          GachaCeiling = new global::EggLink.DanhengServer.Proto.GachaCeiling();
-        }
-        GachaCeiling.MergeFrom(other.GachaCeiling);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -323,30 +323,30 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
-            if (transferItemList_ == null) {
-              TransferItemList = new global::EggLink.DanhengServer.Proto.ItemList();
-            }
-            input.ReadMessage(TransferItemList);
+          case 8: {
+            AvatarId = input.ReadUInt32();
             break;
           }
-          case 24: {
+          case 88: {
             GachaType = input.ReadUInt32();
             break;
           }
-          case 42: {
+          case 98: {
             if (gachaCeiling_ == null) {
               GachaCeiling = new global::EggLink.DanhengServer.Proto.GachaCeiling();
             }
             input.ReadMessage(GachaCeiling);
             break;
           }
-          case 80: {
+          case 104: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 112: {
-            AvatarId = input.ReadUInt32();
+          case 122: {
+            if (transferItemList_ == null) {
+              TransferItemList = new global::EggLink.DanhengServer.Proto.ItemList();
+            }
+            input.ReadMessage(TransferItemList);
             break;
           }
         }
@@ -364,30 +364,30 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
-            if (transferItemList_ == null) {
-              TransferItemList = new global::EggLink.DanhengServer.Proto.ItemList();
-            }
-            input.ReadMessage(TransferItemList);
+          case 8: {
+            AvatarId = input.ReadUInt32();
             break;
           }
-          case 24: {
+          case 88: {
             GachaType = input.ReadUInt32();
             break;
           }
-          case 42: {
+          case 98: {
             if (gachaCeiling_ == null) {
               GachaCeiling = new global::EggLink.DanhengServer.Proto.GachaCeiling();
             }
             input.ReadMessage(GachaCeiling);
             break;
           }
-          case 80: {
+          case 104: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 112: {
-            AvatarId = input.ReadUInt32();
+          case 122: {
+            if (transferItemList_ == null) {
+              TransferItemList = new global::EggLink.DanhengServer.Proto.ItemList();
+            }
+            input.ReadMessage(TransferItemList);
             break;
           }
         }

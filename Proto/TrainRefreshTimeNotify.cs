@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxUcmFpblJlZnJlc2hUaW1lTm90aWZ5LnByb3RvIjYKFlRyYWluUmVmcmVz",
-            "aFRpbWVOb3RpZnkSHAoUcmVmcmVzaF90aW1lc3RhbXBfbXMYBCABKARCHqoC",
+            "aFRpbWVOb3RpZnkSHAoUcmVmcmVzaF90aW1lc3RhbXBfbXMYDCABKARCHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "refresh_timestamp_ms" field.</summary>
-    public const int RefreshTimestampMsFieldNumber = 4;
+    public const int RefreshTimestampMsFieldNumber = 12;
     private ulong refreshTimestampMs_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (RefreshTimestampMs != 0UL) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(96);
         output.WriteUInt64(RefreshTimestampMs);
       }
       if (_unknownFields != null) {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (RefreshTimestampMs != 0UL) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(96);
         output.WriteUInt64(RefreshTimestampMs);
       }
       if (_unknownFields != null) {
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 96: {
             RefreshTimestampMs = input.ReadUInt64();
             break;
           }
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 96: {
             RefreshTimestampMs = input.ReadUInt64();
             break;
           }

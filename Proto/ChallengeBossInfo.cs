@@ -24,27 +24,27 @@ namespace EggLink.DanhengServer.Proto {
     static ChallengeBossInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdDaGFsbGVuZ2VCb3NzSW5mby5wcm90bxohQ2hhbGxlbmdlQm9zc1Npbmds",
-            "ZU5vZGVJbmZvLnByb3RvGiBDaGFsbGVuZ2VCb3NzRXF1aXBtZW50SW5mby5w",
-            "cm90bxoiQ2hhbGxlbmdlQm9zc0F2YXRhclJlbGljSW5mby5wcm90byKsBAoR",
-            "Q2hhbGxlbmdlQm9zc0luZm8SMQoLc2Vjb25kX25vZGUYAiABKAsyHC5DaGFs",
-            "bGVuZ2VCb3NzU2luZ2xlTm9kZUluZm8SMAoKZmlyc3Rfbm9kZRgOIAEoCzIc",
-            "LkNoYWxsZW5nZUJvc3NTaW5nbGVOb2RlSW5mbxIVCg1zZWNvbmRfbGluZXVw",
-            "GAwgAygNEhQKDGZpcnN0X2xpbmV1cBgIIAMoDRJbCh5jaGFsbGVuZ2VfYXZh",
-            "dGFyX2VxdWlwbWVudF9tYXAYBCADKAsyMy5DaGFsbGVuZ2VCb3NzSW5mby5D",
-            "aGFsbGVuZ2VBdmF0YXJFcXVpcG1lbnRNYXBFbnRyeRJTChpjaGFsbGVuZ2Vf",
-            "YXZhdGFyX3JlbGljX21hcBgKIAMoCzIvLkNoYWxsZW5nZUJvc3NJbmZvLkNo",
-            "YWxsZW5nZUF2YXRhclJlbGljTWFwRW50cnkSEwoLTkpLQ0pCTE9JQksYByAB",
-            "KAgaXwogQ2hhbGxlbmdlQXZhdGFyRXF1aXBtZW50TWFwRW50cnkSCwoDa2V5",
+            "ChdDaGFsbGVuZ2VCb3NzSW5mby5wcm90bxogQ2hhbGxlbmdlQm9zc0VxdWlw",
+            "bWVudEluZm8ucHJvdG8aIkNoYWxsZW5nZUJvc3NBdmF0YXJSZWxpY0luZm8u",
+            "cHJvdG8aIUNoYWxsZW5nZUJvc3NTaW5nbGVOb2RlSW5mby5wcm90byKsBAoR",
+            "Q2hhbGxlbmdlQm9zc0luZm8SFAoMZmlyc3RfbGluZXVwGA8gAygNEhUKDXNl",
+            "Y29uZF9saW5ldXAYBCADKA0SEwoLTkNCRE5QR1BFQUkYAyABKAgSMQoLc2Vj",
+            "b25kX25vZGUYAiABKAsyHC5DaGFsbGVuZ2VCb3NzU2luZ2xlTm9kZUluZm8S",
+            "WwoeY2hhbGxlbmdlX2F2YXRhcl9lcXVpcG1lbnRfbWFwGAggAygLMjMuQ2hh",
+            "bGxlbmdlQm9zc0luZm8uQ2hhbGxlbmdlQXZhdGFyRXF1aXBtZW50TWFwRW50",
+            "cnkSMAoKZmlyc3Rfbm9kZRgKIAEoCzIcLkNoYWxsZW5nZUJvc3NTaW5nbGVO",
+            "b2RlSW5mbxJTChpjaGFsbGVuZ2VfYXZhdGFyX3JlbGljX21hcBgJIAMoCzIv",
+            "LkNoYWxsZW5nZUJvc3NJbmZvLkNoYWxsZW5nZUF2YXRhclJlbGljTWFwRW50",
+            "cnkaXwogQ2hhbGxlbmdlQXZhdGFyRXF1aXBtZW50TWFwRW50cnkSCwoDa2V5",
             "GAEgASgNEioKBXZhbHVlGAIgASgLMhsuQ2hhbGxlbmdlQm9zc0VxdWlwbWVu",
             "dEluZm86AjgBGl0KHENoYWxsZW5nZUF2YXRhclJlbGljTWFwRW50cnkSCwoD",
             "a2V5GAEgASgNEiwKBXZhbHVlGAIgASgLMh0uQ2hhbGxlbmdlQm9zc0F2YXRh",
             "clJlbGljSW5mbzoCOAFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeBossSingleNodeInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeBossEquipmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeBossAvatarRelicInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeBossEquipmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeBossAvatarRelicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeBossSingleNodeInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeBossInfo), global::EggLink.DanhengServer.Proto.ChallengeBossInfo.Parser, new[]{ "SecondNode", "FirstNode", "SecondLineup", "FirstLineup", "ChallengeAvatarEquipmentMap", "ChallengeAvatarRelicMap", "NJKCJBLOIBK" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeBossInfo), global::EggLink.DanhengServer.Proto.ChallengeBossInfo.Parser, new[]{ "FirstLineup", "SecondLineup", "NCBDNPGPEAI", "SecondNode", "ChallengeAvatarEquipmentMap", "FirstNode", "ChallengeAvatarRelicMap" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -86,13 +86,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChallengeBossInfo(ChallengeBossInfo other) : this() {
-      secondNode_ = other.secondNode_ != null ? other.secondNode_.Clone() : null;
-      firstNode_ = other.firstNode_ != null ? other.firstNode_.Clone() : null;
-      secondLineup_ = other.secondLineup_.Clone();
       firstLineup_ = other.firstLineup_.Clone();
+      secondLineup_ = other.secondLineup_.Clone();
+      nCBDNPGPEAI_ = other.nCBDNPGPEAI_;
+      secondNode_ = other.secondNode_ != null ? other.secondNode_.Clone() : null;
       challengeAvatarEquipmentMap_ = other.challengeAvatarEquipmentMap_.Clone();
+      firstNode_ = other.firstNode_ != null ? other.firstNode_.Clone() : null;
       challengeAvatarRelicMap_ = other.challengeAvatarRelicMap_.Clone();
-      nJKCJBLOIBK_ = other.nJKCJBLOIBK_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -102,12 +102,43 @@ namespace EggLink.DanhengServer.Proto {
       return new ChallengeBossInfo(this);
     }
 
+    /// <summary>Field number for the "first_lineup" field.</summary>
+    public const int FirstLineupFieldNumber = 15;
+    private static readonly pb::FieldCodec<uint> _repeated_firstLineup_codec
+        = pb::FieldCodec.ForUInt32(122);
+    private readonly pbc::RepeatedField<uint> firstLineup_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> FirstLineup {
+      get { return firstLineup_; }
+    }
+
+    /// <summary>Field number for the "second_lineup" field.</summary>
+    public const int SecondLineupFieldNumber = 4;
+    private static readonly pb::FieldCodec<uint> _repeated_secondLineup_codec
+        = pb::FieldCodec.ForUInt32(34);
+    private readonly pbc::RepeatedField<uint> secondLineup_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> SecondLineup {
+      get { return secondLineup_; }
+    }
+
+    /// <summary>Field number for the "NCBDNPGPEAI" field.</summary>
+    public const int NCBDNPGPEAIFieldNumber = 3;
+    private bool nCBDNPGPEAI_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool NCBDNPGPEAI {
+      get { return nCBDNPGPEAI_; }
+      set {
+        nCBDNPGPEAI_ = value;
+      }
+    }
+
     /// <summary>Field number for the "second_node" field.</summary>
     public const int SecondNodeFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.ChallengeBossSingleNodeInfo secondNode_;
-    /// <summary>
-    /// 14
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.ChallengeBossSingleNodeInfo SecondNode {
@@ -117,12 +148,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "challenge_avatar_equipment_map" field.</summary>
+    public const int ChallengeAvatarEquipmentMapFieldNumber = 8;
+    private static readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ChallengeBossEquipmentInfo>.Codec _map_challengeAvatarEquipmentMap_codec
+        = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ChallengeBossEquipmentInfo>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.ChallengeBossEquipmentInfo.Parser), 66);
+    private readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ChallengeBossEquipmentInfo> challengeAvatarEquipmentMap_ = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ChallengeBossEquipmentInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ChallengeBossEquipmentInfo> ChallengeAvatarEquipmentMap {
+      get { return challengeAvatarEquipmentMap_; }
+    }
+
     /// <summary>Field number for the "first_node" field.</summary>
-    public const int FirstNodeFieldNumber = 14;
+    public const int FirstNodeFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.ChallengeBossSingleNodeInfo firstNode_;
-    /// <summary>
-    /// 2
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.ChallengeBossSingleNodeInfo FirstNode {
@@ -132,60 +171,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "second_lineup" field.</summary>
-    public const int SecondLineupFieldNumber = 12;
-    private static readonly pb::FieldCodec<uint> _repeated_secondLineup_codec
-        = pb::FieldCodec.ForUInt32(98);
-    private readonly pbc::RepeatedField<uint> secondLineup_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> SecondLineup {
-      get { return secondLineup_; }
-    }
-
-    /// <summary>Field number for the "first_lineup" field.</summary>
-    public const int FirstLineupFieldNumber = 8;
-    private static readonly pb::FieldCodec<uint> _repeated_firstLineup_codec
-        = pb::FieldCodec.ForUInt32(66);
-    private readonly pbc::RepeatedField<uint> firstLineup_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> FirstLineup {
-      get { return firstLineup_; }
-    }
-
-    /// <summary>Field number for the "challenge_avatar_equipment_map" field.</summary>
-    public const int ChallengeAvatarEquipmentMapFieldNumber = 4;
-    private static readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ChallengeBossEquipmentInfo>.Codec _map_challengeAvatarEquipmentMap_codec
-        = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ChallengeBossEquipmentInfo>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.ChallengeBossEquipmentInfo.Parser), 34);
-    private readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ChallengeBossEquipmentInfo> challengeAvatarEquipmentMap_ = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ChallengeBossEquipmentInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ChallengeBossEquipmentInfo> ChallengeAvatarEquipmentMap {
-      get { return challengeAvatarEquipmentMap_; }
-    }
-
     /// <summary>Field number for the "challenge_avatar_relic_map" field.</summary>
-    public const int ChallengeAvatarRelicMapFieldNumber = 10;
+    public const int ChallengeAvatarRelicMapFieldNumber = 9;
     private static readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ChallengeBossAvatarRelicInfo>.Codec _map_challengeAvatarRelicMap_codec
-        = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ChallengeBossAvatarRelicInfo>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.ChallengeBossAvatarRelicInfo.Parser), 82);
+        = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ChallengeBossAvatarRelicInfo>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.ChallengeBossAvatarRelicInfo.Parser), 74);
     private readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ChallengeBossAvatarRelicInfo> challengeAvatarRelicMap_ = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ChallengeBossAvatarRelicInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ChallengeBossAvatarRelicInfo> ChallengeAvatarRelicMap {
       get { return challengeAvatarRelicMap_; }
-    }
-
-    /// <summary>Field number for the "NJKCJBLOIBK" field.</summary>
-    public const int NJKCJBLOIBKFieldNumber = 7;
-    private bool nJKCJBLOIBK_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool NJKCJBLOIBK {
-      get { return nJKCJBLOIBK_; }
-      set {
-        nJKCJBLOIBK_ = value;
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -203,13 +197,13 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(SecondNode, other.SecondNode)) return false;
-      if (!object.Equals(FirstNode, other.FirstNode)) return false;
-      if(!secondLineup_.Equals(other.secondLineup_)) return false;
       if(!firstLineup_.Equals(other.firstLineup_)) return false;
+      if(!secondLineup_.Equals(other.secondLineup_)) return false;
+      if (NCBDNPGPEAI != other.NCBDNPGPEAI) return false;
+      if (!object.Equals(SecondNode, other.SecondNode)) return false;
       if (!ChallengeAvatarEquipmentMap.Equals(other.ChallengeAvatarEquipmentMap)) return false;
+      if (!object.Equals(FirstNode, other.FirstNode)) return false;
       if (!ChallengeAvatarRelicMap.Equals(other.ChallengeAvatarRelicMap)) return false;
-      if (NJKCJBLOIBK != other.NJKCJBLOIBK) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -217,13 +211,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (secondNode_ != null) hash ^= SecondNode.GetHashCode();
-      if (firstNode_ != null) hash ^= FirstNode.GetHashCode();
-      hash ^= secondLineup_.GetHashCode();
       hash ^= firstLineup_.GetHashCode();
+      hash ^= secondLineup_.GetHashCode();
+      if (NCBDNPGPEAI != false) hash ^= NCBDNPGPEAI.GetHashCode();
+      if (secondNode_ != null) hash ^= SecondNode.GetHashCode();
       hash ^= ChallengeAvatarEquipmentMap.GetHashCode();
+      if (firstNode_ != null) hash ^= FirstNode.GetHashCode();
       hash ^= ChallengeAvatarRelicMap.GetHashCode();
-      if (NJKCJBLOIBK != false) hash ^= NJKCJBLOIBK.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -246,18 +240,18 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(18);
         output.WriteMessage(SecondNode);
       }
-      challengeAvatarEquipmentMap_.WriteTo(output, _map_challengeAvatarEquipmentMap_codec);
-      if (NJKCJBLOIBK != false) {
-        output.WriteRawTag(56);
-        output.WriteBool(NJKCJBLOIBK);
+      if (NCBDNPGPEAI != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(NCBDNPGPEAI);
       }
-      firstLineup_.WriteTo(output, _repeated_firstLineup_codec);
-      challengeAvatarRelicMap_.WriteTo(output, _map_challengeAvatarRelicMap_codec);
       secondLineup_.WriteTo(output, _repeated_secondLineup_codec);
+      challengeAvatarEquipmentMap_.WriteTo(output, _map_challengeAvatarEquipmentMap_codec);
+      challengeAvatarRelicMap_.WriteTo(output, _map_challengeAvatarRelicMap_codec);
       if (firstNode_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(82);
         output.WriteMessage(FirstNode);
       }
+      firstLineup_.WriteTo(output, _repeated_firstLineup_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -272,18 +266,18 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(18);
         output.WriteMessage(SecondNode);
       }
-      challengeAvatarEquipmentMap_.WriteTo(ref output, _map_challengeAvatarEquipmentMap_codec);
-      if (NJKCJBLOIBK != false) {
-        output.WriteRawTag(56);
-        output.WriteBool(NJKCJBLOIBK);
+      if (NCBDNPGPEAI != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(NCBDNPGPEAI);
       }
-      firstLineup_.WriteTo(ref output, _repeated_firstLineup_codec);
-      challengeAvatarRelicMap_.WriteTo(ref output, _map_challengeAvatarRelicMap_codec);
       secondLineup_.WriteTo(ref output, _repeated_secondLineup_codec);
+      challengeAvatarEquipmentMap_.WriteTo(ref output, _map_challengeAvatarEquipmentMap_codec);
+      challengeAvatarRelicMap_.WriteTo(ref output, _map_challengeAvatarRelicMap_codec);
       if (firstNode_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(82);
         output.WriteMessage(FirstNode);
       }
+      firstLineup_.WriteTo(ref output, _repeated_firstLineup_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -294,19 +288,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += firstLineup_.CalculateSize(_repeated_firstLineup_codec);
+      size += secondLineup_.CalculateSize(_repeated_secondLineup_codec);
+      if (NCBDNPGPEAI != false) {
+        size += 1 + 1;
+      }
       if (secondNode_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SecondNode);
       }
+      size += challengeAvatarEquipmentMap_.CalculateSize(_map_challengeAvatarEquipmentMap_codec);
       if (firstNode_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(FirstNode);
       }
-      size += secondLineup_.CalculateSize(_repeated_secondLineup_codec);
-      size += firstLineup_.CalculateSize(_repeated_firstLineup_codec);
-      size += challengeAvatarEquipmentMap_.CalculateSize(_map_challengeAvatarEquipmentMap_codec);
       size += challengeAvatarRelicMap_.CalculateSize(_map_challengeAvatarRelicMap_codec);
-      if (NJKCJBLOIBK != false) {
-        size += 1 + 1;
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -319,25 +313,25 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      firstLineup_.Add(other.firstLineup_);
+      secondLineup_.Add(other.secondLineup_);
+      if (other.NCBDNPGPEAI != false) {
+        NCBDNPGPEAI = other.NCBDNPGPEAI;
+      }
       if (other.secondNode_ != null) {
         if (secondNode_ == null) {
           SecondNode = new global::EggLink.DanhengServer.Proto.ChallengeBossSingleNodeInfo();
         }
         SecondNode.MergeFrom(other.SecondNode);
       }
+      challengeAvatarEquipmentMap_.MergeFrom(other.challengeAvatarEquipmentMap_);
       if (other.firstNode_ != null) {
         if (firstNode_ == null) {
           FirstNode = new global::EggLink.DanhengServer.Proto.ChallengeBossSingleNodeInfo();
         }
         FirstNode.MergeFrom(other.FirstNode);
       }
-      secondLineup_.Add(other.secondLineup_);
-      firstLineup_.Add(other.firstLineup_);
-      challengeAvatarEquipmentMap_.MergeFrom(other.challengeAvatarEquipmentMap_);
       challengeAvatarRelicMap_.MergeFrom(other.challengeAvatarRelicMap_);
-      if (other.NJKCJBLOIBK != false) {
-        NJKCJBLOIBK = other.NJKCJBLOIBK;
-      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -360,33 +354,33 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(SecondNode);
             break;
           }
-          case 34: {
-            challengeAvatarEquipmentMap_.AddEntriesFrom(input, _map_challengeAvatarEquipmentMap_codec);
+          case 24: {
+            NCBDNPGPEAI = input.ReadBool();
             break;
           }
-          case 56: {
-            NJKCJBLOIBK = input.ReadBool();
-            break;
-          }
-          case 66:
-          case 64: {
-            firstLineup_.AddEntriesFrom(input, _repeated_firstLineup_codec);
-            break;
-          }
-          case 82: {
-            challengeAvatarRelicMap_.AddEntriesFrom(input, _map_challengeAvatarRelicMap_codec);
-            break;
-          }
-          case 98:
-          case 96: {
+          case 34:
+          case 32: {
             secondLineup_.AddEntriesFrom(input, _repeated_secondLineup_codec);
             break;
           }
-          case 114: {
+          case 66: {
+            challengeAvatarEquipmentMap_.AddEntriesFrom(input, _map_challengeAvatarEquipmentMap_codec);
+            break;
+          }
+          case 74: {
+            challengeAvatarRelicMap_.AddEntriesFrom(input, _map_challengeAvatarRelicMap_codec);
+            break;
+          }
+          case 82: {
             if (firstNode_ == null) {
               FirstNode = new global::EggLink.DanhengServer.Proto.ChallengeBossSingleNodeInfo();
             }
             input.ReadMessage(FirstNode);
+            break;
+          }
+          case 122:
+          case 120: {
+            firstLineup_.AddEntriesFrom(input, _repeated_firstLineup_codec);
             break;
           }
         }
@@ -411,33 +405,33 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(SecondNode);
             break;
           }
-          case 34: {
-            challengeAvatarEquipmentMap_.AddEntriesFrom(ref input, _map_challengeAvatarEquipmentMap_codec);
+          case 24: {
+            NCBDNPGPEAI = input.ReadBool();
             break;
           }
-          case 56: {
-            NJKCJBLOIBK = input.ReadBool();
-            break;
-          }
-          case 66:
-          case 64: {
-            firstLineup_.AddEntriesFrom(ref input, _repeated_firstLineup_codec);
-            break;
-          }
-          case 82: {
-            challengeAvatarRelicMap_.AddEntriesFrom(ref input, _map_challengeAvatarRelicMap_codec);
-            break;
-          }
-          case 98:
-          case 96: {
+          case 34:
+          case 32: {
             secondLineup_.AddEntriesFrom(ref input, _repeated_secondLineup_codec);
             break;
           }
-          case 114: {
+          case 66: {
+            challengeAvatarEquipmentMap_.AddEntriesFrom(ref input, _map_challengeAvatarEquipmentMap_codec);
+            break;
+          }
+          case 74: {
+            challengeAvatarRelicMap_.AddEntriesFrom(ref input, _map_challengeAvatarRelicMap_codec);
+            break;
+          }
+          case 82: {
             if (firstNode_ == null) {
               FirstNode = new global::EggLink.DanhengServer.Proto.ChallengeBossSingleNodeInfo();
             }
             input.ReadMessage(FirstNode);
+            break;
+          }
+          case 122:
+          case 120: {
+            firstLineup_.AddEntriesFrom(ref input, _repeated_firstLineup_codec);
             break;
           }
         }

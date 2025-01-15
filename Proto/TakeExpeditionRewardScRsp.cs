@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9UYWtlRXhwZWRpdGlvblJld2FyZFNjUnNwLnByb3RvGg5JdGVtTGlzdC5w",
-            "cm90byJ8ChlUYWtlRXhwZWRpdGlvblJld2FyZFNjUnNwEhkKBnJld2FyZBgD",
-            "IAEoCzIJLkl0ZW1MaXN0Eh4KC0xBS0VCQ0tPUExPGAwgASgLMgkuSXRlbUxp",
-            "c3QSDwoHcmV0Y29kZRgCIAEoDRITCgtLTEpMTklPR0JDShgGIAEoDUIeqgIb",
-            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "cm90byJ/ChlUYWtlRXhwZWRpdGlvblJld2FyZFNjUnNwEg8KB3JldGNvZGUY",
+            "AyABKA0SGQoGcmV3YXJkGAkgASgLMgkuSXRlbUxpc3QSFQoNZXhwZWRpdGlv",
+            "bl9pZBgKIAEoDRIfCgxleHRyYV9yZXdhcmQYByABKAsyCS5JdGVtTGlzdEIe",
+            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeExpeditionRewardScRsp), global::EggLink.DanhengServer.Proto.TakeExpeditionRewardScRsp.Parser, new[]{ "Reward", "LAKEBCKOPLO", "Retcode", "KLJLNIOGBCJ" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeExpeditionRewardScRsp), global::EggLink.DanhengServer.Proto.TakeExpeditionRewardScRsp.Parser, new[]{ "Retcode", "Reward", "ExpeditionId", "ExtraReward" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TakeExpeditionRewardScRsp(TakeExpeditionRewardScRsp other) : this() {
-      reward_ = other.reward_ != null ? other.reward_.Clone() : null;
-      lAKEBCKOPLO_ = other.lAKEBCKOPLO_ != null ? other.lAKEBCKOPLO_.Clone() : null;
       retcode_ = other.retcode_;
-      kLJLNIOGBCJ_ = other.kLJLNIOGBCJ_;
+      reward_ = other.reward_ != null ? other.reward_.Clone() : null;
+      expeditionId_ = other.expeditionId_;
+      extraReward_ = other.extraReward_ != null ? other.extraReward_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,32 +87,8 @@ namespace EggLink.DanhengServer.Proto {
       return new TakeExpeditionRewardScRsp(this);
     }
 
-    /// <summary>Field number for the "reward" field.</summary>
-    public const int RewardFieldNumber = 3;
-    private global::EggLink.DanhengServer.Proto.ItemList reward_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ItemList Reward {
-      get { return reward_; }
-      set {
-        reward_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "LAKEBCKOPLO" field.</summary>
-    public const int LAKEBCKOPLOFieldNumber = 12;
-    private global::EggLink.DanhengServer.Proto.ItemList lAKEBCKOPLO_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ItemList LAKEBCKOPLO {
-      get { return lAKEBCKOPLO_; }
-      set {
-        lAKEBCKOPLO_ = value;
-      }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 2;
+    public const int RetcodeFieldNumber = 3;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,15 +99,39 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "KLJLNIOGBCJ" field.</summary>
-    public const int KLJLNIOGBCJFieldNumber = 6;
-    private uint kLJLNIOGBCJ_;
+    /// <summary>Field number for the "reward" field.</summary>
+    public const int RewardFieldNumber = 9;
+    private global::EggLink.DanhengServer.Proto.ItemList reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint KLJLNIOGBCJ {
-      get { return kLJLNIOGBCJ_; }
+    public global::EggLink.DanhengServer.Proto.ItemList Reward {
+      get { return reward_; }
       set {
-        kLJLNIOGBCJ_ = value;
+        reward_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "expedition_id" field.</summary>
+    public const int ExpeditionIdFieldNumber = 10;
+    private uint expeditionId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ExpeditionId {
+      get { return expeditionId_; }
+      set {
+        expeditionId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "extra_reward" field.</summary>
+    public const int ExtraRewardFieldNumber = 7;
+    private global::EggLink.DanhengServer.Proto.ItemList extraReward_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ItemList ExtraReward {
+      get { return extraReward_; }
+      set {
+        extraReward_ = value;
       }
     }
 
@@ -150,10 +150,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Reward, other.Reward)) return false;
-      if (!object.Equals(LAKEBCKOPLO, other.LAKEBCKOPLO)) return false;
       if (Retcode != other.Retcode) return false;
-      if (KLJLNIOGBCJ != other.KLJLNIOGBCJ) return false;
+      if (!object.Equals(Reward, other.Reward)) return false;
+      if (ExpeditionId != other.ExpeditionId) return false;
+      if (!object.Equals(ExtraReward, other.ExtraReward)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,10 +161,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (reward_ != null) hash ^= Reward.GetHashCode();
-      if (lAKEBCKOPLO_ != null) hash ^= LAKEBCKOPLO.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (KLJLNIOGBCJ != 0) hash ^= KLJLNIOGBCJ.GetHashCode();
+      if (reward_ != null) hash ^= Reward.GetHashCode();
+      if (ExpeditionId != 0) hash ^= ExpeditionId.GetHashCode();
+      if (extraReward_ != null) hash ^= ExtraReward.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -184,20 +184,20 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
+      if (extraReward_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ExtraReward);
+      }
       if (reward_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(74);
         output.WriteMessage(Reward);
       }
-      if (KLJLNIOGBCJ != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(KLJLNIOGBCJ);
-      }
-      if (lAKEBCKOPLO_ != null) {
-        output.WriteRawTag(98);
-        output.WriteMessage(LAKEBCKOPLO);
+      if (ExpeditionId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(ExpeditionId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -210,20 +210,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
+      if (extraReward_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ExtraReward);
+      }
       if (reward_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(74);
         output.WriteMessage(Reward);
       }
-      if (KLJLNIOGBCJ != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(KLJLNIOGBCJ);
-      }
-      if (lAKEBCKOPLO_ != null) {
-        output.WriteRawTag(98);
-        output.WriteMessage(LAKEBCKOPLO);
+      if (ExpeditionId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(ExpeditionId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -235,17 +235,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (reward_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Reward);
-      }
-      if (lAKEBCKOPLO_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LAKEBCKOPLO);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (KLJLNIOGBCJ != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KLJLNIOGBCJ);
+      if (reward_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Reward);
+      }
+      if (ExpeditionId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ExpeditionId);
+      }
+      if (extraReward_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExtraReward);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -259,23 +259,23 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
       if (other.reward_ != null) {
         if (reward_ == null) {
           Reward = new global::EggLink.DanhengServer.Proto.ItemList();
         }
         Reward.MergeFrom(other.Reward);
       }
-      if (other.lAKEBCKOPLO_ != null) {
-        if (lAKEBCKOPLO_ == null) {
-          LAKEBCKOPLO = new global::EggLink.DanhengServer.Proto.ItemList();
+      if (other.ExpeditionId != 0) {
+        ExpeditionId = other.ExpeditionId;
+      }
+      if (other.extraReward_ != null) {
+        if (extraReward_ == null) {
+          ExtraReward = new global::EggLink.DanhengServer.Proto.ItemList();
         }
-        LAKEBCKOPLO.MergeFrom(other.LAKEBCKOPLO);
-      }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
-      if (other.KLJLNIOGBCJ != 0) {
-        KLJLNIOGBCJ = other.KLJLNIOGBCJ;
+        ExtraReward.MergeFrom(other.ExtraReward);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -292,26 +292,26 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 24: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 26: {
+          case 58: {
+            if (extraReward_ == null) {
+              ExtraReward = new global::EggLink.DanhengServer.Proto.ItemList();
+            }
+            input.ReadMessage(ExtraReward);
+            break;
+          }
+          case 74: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
             break;
           }
-          case 48: {
-            KLJLNIOGBCJ = input.ReadUInt32();
-            break;
-          }
-          case 98: {
-            if (lAKEBCKOPLO_ == null) {
-              LAKEBCKOPLO = new global::EggLink.DanhengServer.Proto.ItemList();
-            }
-            input.ReadMessage(LAKEBCKOPLO);
+          case 80: {
+            ExpeditionId = input.ReadUInt32();
             break;
           }
         }
@@ -329,26 +329,26 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 24: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 26: {
+          case 58: {
+            if (extraReward_ == null) {
+              ExtraReward = new global::EggLink.DanhengServer.Proto.ItemList();
+            }
+            input.ReadMessage(ExtraReward);
+            break;
+          }
+          case 74: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
             break;
           }
-          case 48: {
-            KLJLNIOGBCJ = input.ReadUInt32();
-            break;
-          }
-          case 98: {
-            if (lAKEBCKOPLO_ == null) {
-              LAKEBCKOPLO = new global::EggLink.DanhengServer.Proto.ItemList();
-            }
-            input.ReadMessage(LAKEBCKOPLO);
+          case 80: {
+            ExpeditionId = input.ReadUInt32();
             break;
           }
         }

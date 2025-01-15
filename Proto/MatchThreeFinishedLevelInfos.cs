@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJNYXRjaFRocmVlRmluaXNoZWRMZXZlbEluZm9zLnByb3RvIkEKHE1hdGNo",
-            "VGhyZWVGaW5pc2hlZExldmVsSW5mb3MSEAoIbGV2ZWxfaWQYCCABKA0SDwoH",
-            "bW9kZV9pZBgLIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "VGhyZWVGaW5pc2hlZExldmVsSW5mb3MSEAoIbGV2ZWxfaWQYBSABKA0SDwoH",
+            "bW9kZV9pZBgCIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level_id" field.</summary>
-    public const int LevelIdFieldNumber = 8;
+    public const int LevelIdFieldNumber = 5;
     private uint levelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "mode_id" field.</summary>
-    public const int ModeIdFieldNumber = 11;
+    public const int ModeIdFieldNumber = 2;
     private uint modeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (LevelId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(LevelId);
-      }
       if (ModeId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(16);
         output.WriteUInt32(ModeId);
+      }
+      if (LevelId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(LevelId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (LevelId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(LevelId);
-      }
       if (ModeId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(16);
         output.WriteUInt32(ModeId);
+      }
+      if (LevelId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(LevelId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
-            LevelId = input.ReadUInt32();
+          case 16: {
+            ModeId = input.ReadUInt32();
             break;
           }
-          case 88: {
-            ModeId = input.ReadUInt32();
+          case 40: {
+            LevelId = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
-            LevelId = input.ReadUInt32();
+          case 16: {
+            ModeId = input.ReadUInt32();
             break;
           }
-          case 88: {
-            ModeId = input.ReadUInt32();
+          case 40: {
+            LevelId = input.ReadUInt32();
             break;
           }
         }

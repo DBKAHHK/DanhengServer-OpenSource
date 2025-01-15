@@ -13,11 +13,9 @@ public class HandlerRogueTournStartCsReq : Handler
 
         var avatars = req.BaseAvatarIdList.Select(x => (int)x);
         var area = (int)req.AreaId;
-        var week = (int)req.Week;
-        var difficulty = req.StartDifficultyIdList.Select(x => (int)x);
 
         var player = connection.Player!;
-        var rsp = await player.RogueTournManager!.StartRogueTourn(avatars.ToList(), area, week, difficulty.ToList());
+        var rsp = await player.RogueTournManager!.StartRogueTourn(avatars.ToList(), area);
         await connection.SendPacket(new PacketRogueTournStartScRsp(rsp.Item1, rsp.Item2));
     }
 }

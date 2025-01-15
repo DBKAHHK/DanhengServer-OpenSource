@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlHZXRBcmNoaXZlRGF0YVNjUnNwLnByb3RvGhFBcmNoaXZlRGF0YS5wcm90",
-            "byJKChNHZXRBcmNoaXZlRGF0YVNjUnNwEiIKDGFyY2hpdmVfZGF0YRgGIAEo",
-            "CzIMLkFyY2hpdmVEYXRhEg8KB3JldGNvZGUYByABKA1CHqoCG0VnZ0xpbmsu",
+            "byJKChNHZXRBcmNoaXZlRGF0YVNjUnNwEiIKDGFyY2hpdmVfZGF0YRgHIAEo",
+            "CzIMLkFyY2hpdmVEYXRhEg8KB3JldGNvZGUYAyABKA1CHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ArchiveDataReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "archive_data" field.</summary>
-    public const int ArchiveDataFieldNumber = 6;
+    public const int ArchiveDataFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.ArchiveData archiveData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 7;
+    public const int RetcodeFieldNumber = 3;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (archiveData_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(ArchiveData);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
+      }
+      if (archiveData_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ArchiveData);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (archiveData_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(ArchiveData);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
+      }
+      if (archiveData_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ArchiveData);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
+          case 24: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 58: {
             if (archiveData_ == null) {
               ArchiveData = new global::EggLink.DanhengServer.Proto.ArchiveData();
             }
             input.ReadMessage(ArchiveData);
-            break;
-          }
-          case 56: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
+          case 24: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 58: {
             if (archiveData_ == null) {
               ArchiveData = new global::EggLink.DanhengServer.Proto.ArchiveData();
             }
             input.ReadMessage(ArchiveData);
-            break;
-          }
-          case 56: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }

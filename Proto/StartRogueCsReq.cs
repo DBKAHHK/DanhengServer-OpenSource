@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static StartRogueCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVTdGFydFJvZ3VlQ3NSZXEucHJvdG8ioAEKD1N0YXJ0Um9ndWVDc1JlcRIc",
-            "ChRkaXNhYmxlX2Flb25faWRfbGlzdBgEIAMoDRIbChNiYXNlX2F2YXRhcl9p",
-            "ZF9saXN0GA8gAygNEhIKCm1vbnN0ZXJfaWQYAyABKA0SDwoHYXJlYV9pZBgB",
-            "IAEoDRIPCgdhZW9uX2lkGA4gASgNEhwKFHRyaWFsX2F2YXRhcl9pZF9saXN0",
-            "GAkgAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
-            "Mw=="));
+            "ChVTdGFydFJvZ3VlQ3NSZXEucHJvdG8irwEKD1N0YXJ0Um9ndWVDc1JlcRIh",
+            "ChlpbnRlcmFjdGVkX3Byb3BfZW50aXR5X2lkGAcgASgNEhwKFGRpc2FibGVf",
+            "YWVvbl9pZF9saXN0GAQgAygNEg8KB2Flb25faWQYAyABKA0SDwoHYXJlYV9p",
+            "ZBgCIAEoDRIbChNiYXNlX2F2YXRhcl9pZF9saXN0GAsgAygNEhwKFHRyaWFs",
+            "X2F2YXRhcl9pZF9saXN0GAwgAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StartRogueCsReq), global::EggLink.DanhengServer.Proto.StartRogueCsReq.Parser, new[]{ "DisableAeonIdList", "BaseAvatarIdList", "MonsterId", "AreaId", "AeonId", "TrialAvatarIdList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StartRogueCsReq), global::EggLink.DanhengServer.Proto.StartRogueCsReq.Parser, new[]{ "InteractedPropEntityId", "DisableAeonIdList", "AeonId", "AreaId", "BaseAvatarIdList", "TrialAvatarIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,11 +75,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StartRogueCsReq(StartRogueCsReq other) : this() {
+      interactedPropEntityId_ = other.interactedPropEntityId_;
       disableAeonIdList_ = other.disableAeonIdList_.Clone();
-      baseAvatarIdList_ = other.baseAvatarIdList_.Clone();
-      monsterId_ = other.monsterId_;
-      areaId_ = other.areaId_;
       aeonId_ = other.aeonId_;
+      areaId_ = other.areaId_;
+      baseAvatarIdList_ = other.baseAvatarIdList_.Clone();
       trialAvatarIdList_ = other.trialAvatarIdList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -88,6 +88,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StartRogueCsReq Clone() {
       return new StartRogueCsReq(this);
+    }
+
+    /// <summary>Field number for the "interacted_prop_entity_id" field.</summary>
+    public const int InteractedPropEntityIdFieldNumber = 7;
+    private uint interactedPropEntityId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint InteractedPropEntityId {
+      get { return interactedPropEntityId_; }
+      set {
+        interactedPropEntityId_ = value;
+      }
     }
 
     /// <summary>Field number for the "disable_aeon_id_list" field.</summary>
@@ -101,43 +113,8 @@ namespace EggLink.DanhengServer.Proto {
       get { return disableAeonIdList_; }
     }
 
-    /// <summary>Field number for the "base_avatar_id_list" field.</summary>
-    public const int BaseAvatarIdListFieldNumber = 15;
-    private static readonly pb::FieldCodec<uint> _repeated_baseAvatarIdList_codec
-        = pb::FieldCodec.ForUInt32(122);
-    private readonly pbc::RepeatedField<uint> baseAvatarIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> BaseAvatarIdList {
-      get { return baseAvatarIdList_; }
-    }
-
-    /// <summary>Field number for the "monster_id" field.</summary>
-    public const int MonsterIdFieldNumber = 3;
-    private uint monsterId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MonsterId {
-      get { return monsterId_; }
-      set {
-        monsterId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "area_id" field.</summary>
-    public const int AreaIdFieldNumber = 1;
-    private uint areaId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint AreaId {
-      get { return areaId_; }
-      set {
-        areaId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "aeon_id" field.</summary>
-    public const int AeonIdFieldNumber = 14;
+    public const int AeonIdFieldNumber = 3;
     private uint aeonId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -148,10 +125,33 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "area_id" field.</summary>
+    public const int AreaIdFieldNumber = 2;
+    private uint areaId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint AreaId {
+      get { return areaId_; }
+      set {
+        areaId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "base_avatar_id_list" field.</summary>
+    public const int BaseAvatarIdListFieldNumber = 11;
+    private static readonly pb::FieldCodec<uint> _repeated_baseAvatarIdList_codec
+        = pb::FieldCodec.ForUInt32(90);
+    private readonly pbc::RepeatedField<uint> baseAvatarIdList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> BaseAvatarIdList {
+      get { return baseAvatarIdList_; }
+    }
+
     /// <summary>Field number for the "trial_avatar_id_list" field.</summary>
-    public const int TrialAvatarIdListFieldNumber = 9;
+    public const int TrialAvatarIdListFieldNumber = 12;
     private static readonly pb::FieldCodec<uint> _repeated_trialAvatarIdList_codec
-        = pb::FieldCodec.ForUInt32(74);
+        = pb::FieldCodec.ForUInt32(98);
     private readonly pbc::RepeatedField<uint> trialAvatarIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -174,11 +174,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (InteractedPropEntityId != other.InteractedPropEntityId) return false;
       if(!disableAeonIdList_.Equals(other.disableAeonIdList_)) return false;
-      if(!baseAvatarIdList_.Equals(other.baseAvatarIdList_)) return false;
-      if (MonsterId != other.MonsterId) return false;
-      if (AreaId != other.AreaId) return false;
       if (AeonId != other.AeonId) return false;
+      if (AreaId != other.AreaId) return false;
+      if(!baseAvatarIdList_.Equals(other.baseAvatarIdList_)) return false;
       if(!trialAvatarIdList_.Equals(other.trialAvatarIdList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (InteractedPropEntityId != 0) hash ^= InteractedPropEntityId.GetHashCode();
       hash ^= disableAeonIdList_.GetHashCode();
-      hash ^= baseAvatarIdList_.GetHashCode();
-      if (MonsterId != 0) hash ^= MonsterId.GetHashCode();
-      if (AreaId != 0) hash ^= AreaId.GetHashCode();
       if (AeonId != 0) hash ^= AeonId.GetHashCode();
+      if (AreaId != 0) hash ^= AreaId.GetHashCode();
+      hash ^= baseAvatarIdList_.GetHashCode();
       hash ^= trialAvatarIdList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -212,20 +212,20 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (AreaId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(16);
         output.WriteUInt32(AreaId);
       }
-      if (MonsterId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(MonsterId);
-      }
-      disableAeonIdList_.WriteTo(output, _repeated_disableAeonIdList_codec);
-      trialAvatarIdList_.WriteTo(output, _repeated_trialAvatarIdList_codec);
       if (AeonId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(24);
         output.WriteUInt32(AeonId);
       }
+      disableAeonIdList_.WriteTo(output, _repeated_disableAeonIdList_codec);
+      if (InteractedPropEntityId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(InteractedPropEntityId);
+      }
       baseAvatarIdList_.WriteTo(output, _repeated_baseAvatarIdList_codec);
+      trialAvatarIdList_.WriteTo(output, _repeated_trialAvatarIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -237,20 +237,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (AreaId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(16);
         output.WriteUInt32(AreaId);
       }
-      if (MonsterId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(MonsterId);
-      }
-      disableAeonIdList_.WriteTo(ref output, _repeated_disableAeonIdList_codec);
-      trialAvatarIdList_.WriteTo(ref output, _repeated_trialAvatarIdList_codec);
       if (AeonId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(24);
         output.WriteUInt32(AeonId);
       }
+      disableAeonIdList_.WriteTo(ref output, _repeated_disableAeonIdList_codec);
+      if (InteractedPropEntityId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(InteractedPropEntityId);
+      }
       baseAvatarIdList_.WriteTo(ref output, _repeated_baseAvatarIdList_codec);
+      trialAvatarIdList_.WriteTo(ref output, _repeated_trialAvatarIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -261,17 +261,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (InteractedPropEntityId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(InteractedPropEntityId);
+      }
       size += disableAeonIdList_.CalculateSize(_repeated_disableAeonIdList_codec);
-      size += baseAvatarIdList_.CalculateSize(_repeated_baseAvatarIdList_codec);
-      if (MonsterId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MonsterId);
+      if (AeonId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AeonId);
       }
       if (AreaId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AreaId);
       }
-      if (AeonId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AeonId);
-      }
+      size += baseAvatarIdList_.CalculateSize(_repeated_baseAvatarIdList_codec);
       size += trialAvatarIdList_.CalculateSize(_repeated_trialAvatarIdList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -285,17 +285,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.InteractedPropEntityId != 0) {
+        InteractedPropEntityId = other.InteractedPropEntityId;
+      }
       disableAeonIdList_.Add(other.disableAeonIdList_);
-      baseAvatarIdList_.Add(other.baseAvatarIdList_);
-      if (other.MonsterId != 0) {
-        MonsterId = other.MonsterId;
+      if (other.AeonId != 0) {
+        AeonId = other.AeonId;
       }
       if (other.AreaId != 0) {
         AreaId = other.AreaId;
       }
-      if (other.AeonId != 0) {
-        AeonId = other.AeonId;
-      }
+      baseAvatarIdList_.Add(other.baseAvatarIdList_);
       trialAvatarIdList_.Add(other.trialAvatarIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -312,12 +312,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 16: {
             AreaId = input.ReadUInt32();
             break;
           }
           case 24: {
-            MonsterId = input.ReadUInt32();
+            AeonId = input.ReadUInt32();
             break;
           }
           case 34:
@@ -325,18 +325,18 @@ namespace EggLink.DanhengServer.Proto {
             disableAeonIdList_.AddEntriesFrom(input, _repeated_disableAeonIdList_codec);
             break;
           }
-          case 74:
-          case 72: {
-            trialAvatarIdList_.AddEntriesFrom(input, _repeated_trialAvatarIdList_codec);
+          case 56: {
+            InteractedPropEntityId = input.ReadUInt32();
             break;
           }
-          case 112: {
-            AeonId = input.ReadUInt32();
-            break;
-          }
-          case 122:
-          case 120: {
+          case 90:
+          case 88: {
             baseAvatarIdList_.AddEntriesFrom(input, _repeated_baseAvatarIdList_codec);
+            break;
+          }
+          case 98:
+          case 96: {
+            trialAvatarIdList_.AddEntriesFrom(input, _repeated_trialAvatarIdList_codec);
             break;
           }
         }
@@ -354,12 +354,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 16: {
             AreaId = input.ReadUInt32();
             break;
           }
           case 24: {
-            MonsterId = input.ReadUInt32();
+            AeonId = input.ReadUInt32();
             break;
           }
           case 34:
@@ -367,18 +367,18 @@ namespace EggLink.DanhengServer.Proto {
             disableAeonIdList_.AddEntriesFrom(ref input, _repeated_disableAeonIdList_codec);
             break;
           }
-          case 74:
-          case 72: {
-            trialAvatarIdList_.AddEntriesFrom(ref input, _repeated_trialAvatarIdList_codec);
+          case 56: {
+            InteractedPropEntityId = input.ReadUInt32();
             break;
           }
-          case 112: {
-            AeonId = input.ReadUInt32();
-            break;
-          }
-          case 122:
-          case 120: {
+          case 90:
+          case 88: {
             baseAvatarIdList_.AddEntriesFrom(ref input, _repeated_baseAvatarIdList_codec);
+            break;
+          }
+          case 98:
+          case 96: {
+            trialAvatarIdList_.AddEntriesFrom(ref input, _repeated_trialAvatarIdList_codec);
             break;
           }
         }

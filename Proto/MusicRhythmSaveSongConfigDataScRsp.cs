@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CihNdXNpY1JoeXRobVNhdmVTb25nQ29uZmlnRGF0YVNjUnNwLnByb3RvIl8K",
-            "Ik11c2ljUmh5dGhtU2F2ZVNvbmdDb25maWdEYXRhU2NSc3ASDwoHcmV0Y29k",
-            "ZRgLIAEoDRITCgtjdXJfc29uZ19pZBgBIAEoDRITCgtOUExLS0xCR0pDRBgO",
+            "Ik11c2ljUmh5dGhtU2F2ZVNvbmdDb25maWdEYXRhU2NSc3ASEwoLY3VyX3Nv",
+            "bmdfaWQYASABKA0SEwoLTUJMREZITERDUEkYBCABKA0SDwoHcmV0Y29kZRgL",
             "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmSaveSongConfigDataScRsp), global::EggLink.DanhengServer.Proto.MusicRhythmSaveSongConfigDataScRsp.Parser, new[]{ "Retcode", "CurSongId", "NPLKKLBGJCD" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmSaveSongConfigDataScRsp), global::EggLink.DanhengServer.Proto.MusicRhythmSaveSongConfigDataScRsp.Parser, new[]{ "CurSongId", "MBLDFHLDCPI", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MusicRhythmSaveSongConfigDataScRsp(MusicRhythmSaveSongConfigDataScRsp other) : this() {
-      retcode_ = other.retcode_;
       curSongId_ = other.curSongId_;
-      nPLKKLBGJCD_ = other.nPLKKLBGJCD_;
+      mBLDFHLDCPI_ = other.mBLDFHLDCPI_;
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,18 +83,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MusicRhythmSaveSongConfigDataScRsp Clone() {
       return new MusicRhythmSaveSongConfigDataScRsp(this);
-    }
-
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 11;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
     }
 
     /// <summary>Field number for the "cur_song_id" field.</summary>
@@ -109,15 +97,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "NPLKKLBGJCD" field.</summary>
-    public const int NPLKKLBGJCDFieldNumber = 14;
-    private uint nPLKKLBGJCD_;
+    /// <summary>Field number for the "MBLDFHLDCPI" field.</summary>
+    public const int MBLDFHLDCPIFieldNumber = 4;
+    private uint mBLDFHLDCPI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NPLKKLBGJCD {
-      get { return nPLKKLBGJCD_; }
+    public uint MBLDFHLDCPI {
+      get { return mBLDFHLDCPI_; }
       set {
-        nPLKKLBGJCD_ = value;
+        mBLDFHLDCPI_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 11;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
       if (CurSongId != other.CurSongId) return false;
-      if (NPLKKLBGJCD != other.NPLKKLBGJCD) return false;
+      if (MBLDFHLDCPI != other.MBLDFHLDCPI) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (CurSongId != 0) hash ^= CurSongId.GetHashCode();
-      if (NPLKKLBGJCD != 0) hash ^= NPLKKLBGJCD.GetHashCode();
+      if (MBLDFHLDCPI != 0) hash ^= MBLDFHLDCPI.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(CurSongId);
       }
+      if (MBLDFHLDCPI != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(MBLDFHLDCPI);
+      }
       if (Retcode != 0) {
         output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
-      }
-      if (NPLKKLBGJCD != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(NPLKKLBGJCD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -193,13 +193,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(CurSongId);
       }
+      if (MBLDFHLDCPI != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(MBLDFHLDCPI);
+      }
       if (Retcode != 0) {
         output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
-      }
-      if (NPLKKLBGJCD != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(NPLKKLBGJCD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,14 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
       if (CurSongId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurSongId);
       }
-      if (NPLKKLBGJCD != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NPLKKLBGJCD);
+      if (MBLDFHLDCPI != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MBLDFHLDCPI);
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,14 +232,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
       if (other.CurSongId != 0) {
         CurSongId = other.CurSongId;
       }
-      if (other.NPLKKLBGJCD != 0) {
-        NPLKKLBGJCD = other.NPLKKLBGJCD;
+      if (other.MBLDFHLDCPI != 0) {
+        MBLDFHLDCPI = other.MBLDFHLDCPI;
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -260,12 +260,12 @@ namespace EggLink.DanhengServer.Proto {
             CurSongId = input.ReadUInt32();
             break;
           }
-          case 88: {
-            Retcode = input.ReadUInt32();
+          case 32: {
+            MBLDFHLDCPI = input.ReadUInt32();
             break;
           }
-          case 112: {
-            NPLKKLBGJCD = input.ReadUInt32();
+          case 88: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -287,12 +287,12 @@ namespace EggLink.DanhengServer.Proto {
             CurSongId = input.ReadUInt32();
             break;
           }
-          case 88: {
-            Retcode = input.ReadUInt32();
+          case 32: {
+            MBLDFHLDCPI = input.ReadUInt32();
             break;
           }
-          case 112: {
-            NPLKKLBGJCD = input.ReadUInt32();
+          case 88: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

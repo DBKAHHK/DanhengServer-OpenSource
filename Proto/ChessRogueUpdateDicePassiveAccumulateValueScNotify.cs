@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjhDaGVzc1JvZ3VlVXBkYXRlRGljZVBhc3NpdmVBY2N1bXVsYXRlVmFsdWVT",
-            "Y05vdGlmeS5wcm90byJJCjJDaGVzc1JvZ3VlVXBkYXRlRGljZVBhc3NpdmVB",
-            "Y2N1bXVsYXRlVmFsdWVTY05vdGlmeRITCgtOUEVNSUxJQUJBRRgLIAEoBUIe",
-            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Y05vdGlmeS5wcm90byJLCjJDaGVzc1JvZ3VlVXBkYXRlRGljZVBhc3NpdmVB",
+            "Y2N1bXVsYXRlVmFsdWVTY05vdGlmeRIVCg1wYXNzaXZlX3ZhbHVlGAwgASgF",
+            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueUpdateDicePassiveAccumulateValueScNotify), global::EggLink.DanhengServer.Proto.ChessRogueUpdateDicePassiveAccumulateValueScNotify.Parser, new[]{ "NPEMILIABAE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueUpdateDicePassiveAccumulateValueScNotify), global::EggLink.DanhengServer.Proto.ChessRogueUpdateDicePassiveAccumulateValueScNotify.Parser, new[]{ "PassiveValue" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueUpdateDicePassiveAccumulateValueScNotify(ChessRogueUpdateDicePassiveAccumulateValueScNotify other) : this() {
-      nPEMILIABAE_ = other.nPEMILIABAE_;
+      passiveValue_ = other.passiveValue_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new ChessRogueUpdateDicePassiveAccumulateValueScNotify(this);
     }
 
-    /// <summary>Field number for the "NPEMILIABAE" field.</summary>
-    public const int NPEMILIABAEFieldNumber = 11;
-    private int nPEMILIABAE_;
+    /// <summary>Field number for the "passive_value" field.</summary>
+    public const int PassiveValueFieldNumber = 12;
+    private int passiveValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int NPEMILIABAE {
-      get { return nPEMILIABAE_; }
+    public int PassiveValue {
+      get { return passiveValue_; }
       set {
-        nPEMILIABAE_ = value;
+        passiveValue_ = value;
       }
     }
 
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (NPEMILIABAE != other.NPEMILIABAE) return false;
+      if (PassiveValue != other.PassiveValue) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -118,7 +118,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (NPEMILIABAE != 0) hash ^= NPEMILIABAE.GetHashCode();
+      if (PassiveValue != 0) hash ^= PassiveValue.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (NPEMILIABAE != 0) {
-        output.WriteRawTag(88);
-        output.WriteInt32(NPEMILIABAE);
+      if (PassiveValue != 0) {
+        output.WriteRawTag(96);
+        output.WriteInt32(PassiveValue);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -151,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (NPEMILIABAE != 0) {
-        output.WriteRawTag(88);
-        output.WriteInt32(NPEMILIABAE);
+      if (PassiveValue != 0) {
+        output.WriteRawTag(96);
+        output.WriteInt32(PassiveValue);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -165,8 +165,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (NPEMILIABAE != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(NPEMILIABAE);
+      if (PassiveValue != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PassiveValue);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -180,8 +180,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.NPEMILIABAE != 0) {
-        NPEMILIABAE = other.NPEMILIABAE;
+      if (other.PassiveValue != 0) {
+        PassiveValue = other.PassiveValue;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -198,8 +198,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 88: {
-            NPEMILIABAE = input.ReadInt32();
+          case 96: {
+            PassiveValue = input.ReadInt32();
             break;
           }
         }
@@ -217,8 +217,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 88: {
-            NPEMILIABAE = input.ReadInt32();
+          case 96: {
+            PassiveValue = input.ReadInt32();
             break;
           }
         }

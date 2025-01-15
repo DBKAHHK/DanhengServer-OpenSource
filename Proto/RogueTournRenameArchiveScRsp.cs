@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJSb2d1ZVRvdXJuUmVuYW1lQXJjaGl2ZVNjUnNwLnByb3RvIlAKHFJvZ3Vl",
-            "VG91cm5SZW5hbWVBcmNoaXZlU2NSc3ASDwoHcmV0Y29kZRgNIAEoDRIRCglt",
-            "YXhfdGltZXMYAyABKA0SDAoEbmFtZRgJIAEoCUIeqgIbRWdnTGluay5EYW5o",
+            "VG91cm5SZW5hbWVBcmNoaXZlU2NSc3ASEQoJbWF4X3RpbWVzGAwgASgNEg8K",
+            "B3JldGNvZGUYCyABKA0SDAoEbmFtZRgHIAEoCUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournRenameArchiveScRsp), global::EggLink.DanhengServer.Proto.RogueTournRenameArchiveScRsp.Parser, new[]{ "Retcode", "MaxTimes", "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournRenameArchiveScRsp), global::EggLink.DanhengServer.Proto.RogueTournRenameArchiveScRsp.Parser, new[]{ "MaxTimes", "Retcode", "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournRenameArchiveScRsp(RogueTournRenameArchiveScRsp other) : this() {
-      retcode_ = other.retcode_;
       maxTimes_ = other.maxTimes_;
+      retcode_ = other.retcode_;
       name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournRenameArchiveScRsp(this);
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 13;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
     /// <summary>Field number for the "max_times" field.</summary>
-    public const int MaxTimesFieldNumber = 3;
+    public const int MaxTimesFieldNumber = 12;
     private uint maxTimes_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,8 +97,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 11;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
+      }
+    }
+
     /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 9;
+    public const int NameFieldNumber = 7;
     private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,8 +136,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
       if (MaxTimes != other.MaxTimes) return false;
+      if (Retcode != other.Retcode) return false;
       if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -146,8 +146,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (MaxTimes != 0) hash ^= MaxTimes.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MaxTimes != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(MaxTimes);
-      }
       if (Name.Length != 0) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(58);
         output.WriteString(Name);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
+      }
+      if (MaxTimes != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(MaxTimes);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MaxTimes != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(MaxTimes);
-      }
       if (Name.Length != 0) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(58);
         output.WriteString(Name);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
+      }
+      if (MaxTimes != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(MaxTimes);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,11 +211,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
       if (MaxTimes != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxTimes);
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
@@ -232,11 +232,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
       if (other.MaxTimes != 0) {
         MaxTimes = other.MaxTimes;
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            MaxTimes = input.ReadUInt32();
-            break;
-          }
-          case 74: {
+          case 58: {
             Name = input.ReadString();
             break;
           }
-          case 104: {
+          case 88: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            MaxTimes = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            MaxTimes = input.ReadUInt32();
-            break;
-          }
-          case 74: {
+          case 58: {
             Name = input.ReadString();
             break;
           }
-          case 104: {
+          case 88: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            MaxTimes = input.ReadUInt32();
             break;
           }
         }

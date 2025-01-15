@@ -26,14 +26,14 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNHZXRGcmllbmRDaGFsbGVuZ2VEZXRhaWxTY1JzcC5wcm90bxodRGlzcGxh",
             "eUF2YXRhckRldGFpbEluZm8ucHJvdG8iggEKHUdldEZyaWVuZENoYWxsZW5n",
-            "ZURldGFpbFNjUnNwEg8KB3JldGNvZGUYDCABKA0SLQoLTUVBSkxMQU9GQU0Y",
-            "BCADKAsyGC5EaXNwbGF5QXZhdGFyRGV0YWlsSW5mbxILCgN1aWQYAyABKA0S",
-            "FAoMY2hhbGxlbmdlX2lkGA8gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "ZURldGFpbFNjUnNwEi0KC0NDR0RNT09MSEhCGAUgAygLMhguRGlzcGxheUF2",
+            "YXRhckRldGFpbEluZm8SFAoMY2hhbGxlbmdlX2lkGAMgASgNEgsKA3VpZBgH",
+            "IAEoDRIPCgdyZXRjb2RlGAsgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetFriendChallengeDetailScRsp), global::EggLink.DanhengServer.Proto.GetFriendChallengeDetailScRsp.Parser, new[]{ "Retcode", "MEAJLLAOFAM", "Uid", "ChallengeId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetFriendChallengeDetailScRsp), global::EggLink.DanhengServer.Proto.GetFriendChallengeDetailScRsp.Parser, new[]{ "CCGDMOOLHHB", "ChallengeId", "Uid", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,10 +75,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetFriendChallengeDetailScRsp(GetFriendChallengeDetailScRsp other) : this() {
-      retcode_ = other.retcode_;
-      mEAJLLAOFAM_ = other.mEAJLLAOFAM_.Clone();
-      uid_ = other.uid_;
+      cCGDMOOLHHB_ = other.cCGDMOOLHHB_.Clone();
       challengeId_ = other.challengeId_;
+      uid_ = other.uid_;
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,31 +88,31 @@ namespace EggLink.DanhengServer.Proto {
       return new GetFriendChallengeDetailScRsp(this);
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 12;
-    private uint retcode_;
+    /// <summary>Field number for the "CCGDMOOLHHB" field.</summary>
+    public const int CCGDMOOLHHBFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> _repeated_cCGDMOOLHHB_codec
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> cCGDMOOLHHB_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> CCGDMOOLHHB {
+      get { return cCGDMOOLHHB_; }
+    }
+
+    /// <summary>Field number for the "challenge_id" field.</summary>
+    public const int ChallengeIdFieldNumber = 3;
+    private uint challengeId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ChallengeId {
+      get { return challengeId_; }
       set {
-        retcode_ = value;
+        challengeId_ = value;
       }
     }
 
-    /// <summary>Field number for the "MEAJLLAOFAM" field.</summary>
-    public const int MEAJLLAOFAMFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> _repeated_mEAJLLAOFAM_codec
-        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> mEAJLLAOFAM_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> MEAJLLAOFAM {
-      get { return mEAJLLAOFAM_; }
-    }
-
     /// <summary>Field number for the "uid" field.</summary>
-    public const int UidFieldNumber = 3;
+    public const int UidFieldNumber = 7;
     private uint uid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,15 +123,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "challenge_id" field.</summary>
-    public const int ChallengeIdFieldNumber = 15;
-    private uint challengeId_;
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 11;
+    private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ChallengeId {
-      get { return challengeId_; }
+    public uint Retcode {
+      get { return retcode_; }
       set {
-        challengeId_ = value;
+        retcode_ = value;
       }
     }
 
@@ -150,10 +150,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
-      if(!mEAJLLAOFAM_.Equals(other.mEAJLLAOFAM_)) return false;
-      if (Uid != other.Uid) return false;
+      if(!cCGDMOOLHHB_.Equals(other.cCGDMOOLHHB_)) return false;
       if (ChallengeId != other.ChallengeId) return false;
+      if (Uid != other.Uid) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,10 +161,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      hash ^= mEAJLLAOFAM_.GetHashCode();
-      if (Uid != 0) hash ^= Uid.GetHashCode();
+      hash ^= cCGDMOOLHHB_.GetHashCode();
       if (ChallengeId != 0) hash ^= ChallengeId.GetHashCode();
+      if (Uid != 0) hash ^= Uid.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,18 +183,18 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Uid != 0) {
+      if (ChallengeId != 0) {
         output.WriteRawTag(24);
+        output.WriteUInt32(ChallengeId);
+      }
+      cCGDMOOLHHB_.WriteTo(output, _repeated_cCGDMOOLHHB_codec);
+      if (Uid != 0) {
+        output.WriteRawTag(56);
         output.WriteUInt32(Uid);
       }
-      mEAJLLAOFAM_.WriteTo(output, _repeated_mEAJLLAOFAM_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
-      }
-      if (ChallengeId != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(ChallengeId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -206,18 +206,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Uid != 0) {
+      if (ChallengeId != 0) {
         output.WriteRawTag(24);
+        output.WriteUInt32(ChallengeId);
+      }
+      cCGDMOOLHHB_.WriteTo(ref output, _repeated_cCGDMOOLHHB_codec);
+      if (Uid != 0) {
+        output.WriteRawTag(56);
         output.WriteUInt32(Uid);
       }
-      mEAJLLAOFAM_.WriteTo(ref output, _repeated_mEAJLLAOFAM_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
-      }
-      if (ChallengeId != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(ChallengeId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -229,15 +229,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      size += cCGDMOOLHHB_.CalculateSize(_repeated_cCGDMOOLHHB_codec);
+      if (ChallengeId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChallengeId);
       }
-      size += mEAJLLAOFAM_.CalculateSize(_repeated_mEAJLLAOFAM_codec);
       if (Uid != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Uid);
       }
-      if (ChallengeId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChallengeId);
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -251,15 +251,15 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
+      cCGDMOOLHHB_.Add(other.cCGDMOOLHHB_);
+      if (other.ChallengeId != 0) {
+        ChallengeId = other.ChallengeId;
       }
-      mEAJLLAOFAM_.Add(other.mEAJLLAOFAM_);
       if (other.Uid != 0) {
         Uid = other.Uid;
       }
-      if (other.ChallengeId != 0) {
-        ChallengeId = other.ChallengeId;
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -277,19 +277,19 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 24: {
+            ChallengeId = input.ReadUInt32();
+            break;
+          }
+          case 42: {
+            cCGDMOOLHHB_.AddEntriesFrom(input, _repeated_cCGDMOOLHHB_codec);
+            break;
+          }
+          case 56: {
             Uid = input.ReadUInt32();
             break;
           }
-          case 34: {
-            mEAJLLAOFAM_.AddEntriesFrom(input, _repeated_mEAJLLAOFAM_codec);
-            break;
-          }
-          case 96: {
+          case 88: {
             Retcode = input.ReadUInt32();
-            break;
-          }
-          case 120: {
-            ChallengeId = input.ReadUInt32();
             break;
           }
         }
@@ -308,19 +308,19 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 24: {
+            ChallengeId = input.ReadUInt32();
+            break;
+          }
+          case 42: {
+            cCGDMOOLHHB_.AddEntriesFrom(ref input, _repeated_cCGDMOOLHHB_codec);
+            break;
+          }
+          case 56: {
             Uid = input.ReadUInt32();
             break;
           }
-          case 34: {
-            mEAJLLAOFAM_.AddEntriesFrom(ref input, _repeated_mEAJLLAOFAM_codec);
-            break;
-          }
-          case 96: {
+          case 88: {
             Retcode = input.ReadUInt32();
-            break;
-          }
-          case 120: {
-            ChallengeId = input.ReadUInt32();
             break;
           }
         }

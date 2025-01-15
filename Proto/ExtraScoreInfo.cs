@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static ExtraScoreInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRFeHRyYVNjb3JlSW5mby5wcm90byJZCg5FeHRyYVNjb3JlSW5mbxIMCgR3",
-            "ZWVrGA8gASgNEhIKCmhhc19nYWluZWQYAyABKAgSEwoLS0JFS0FDQU1GT08Y",
-            "BCABKA0SEAoIZW5kX3RpbWUYDSABKANCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
-            "cnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChRFeHRyYVNjb3JlSW5mby5wcm90byJaCg5FeHRyYVNjb3JlSW5mbxITCgtH",
+            "UE9ESEhBT0hOUBgOIAEoCBITCgtMRlBDQ1BPTEpQQxgIIAEoDRIMCgR3ZWVr",
+            "GAUgASgNEhAKCGVuZF90aW1lGAwgASgDQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ExtraScoreInfo), global::EggLink.DanhengServer.Proto.ExtraScoreInfo.Parser, new[]{ "Week", "HasGained", "KBEKACAMFOO", "EndTime" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ExtraScoreInfo), global::EggLink.DanhengServer.Proto.ExtraScoreInfo.Parser, new[]{ "GPODHHAOHNP", "LFPCCPOLJPC", "Week", "EndTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExtraScoreInfo(ExtraScoreInfo other) : this() {
+      gPODHHAOHNP_ = other.gPODHHAOHNP_;
+      lFPCCPOLJPC_ = other.lFPCCPOLJPC_;
       week_ = other.week_;
-      hasGained_ = other.hasGained_;
-      kBEKACAMFOO_ = other.kBEKACAMFOO_;
       endTime_ = other.endTime_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -86,8 +86,32 @@ namespace EggLink.DanhengServer.Proto {
       return new ExtraScoreInfo(this);
     }
 
+    /// <summary>Field number for the "GPODHHAOHNP" field.</summary>
+    public const int GPODHHAOHNPFieldNumber = 14;
+    private bool gPODHHAOHNP_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool GPODHHAOHNP {
+      get { return gPODHHAOHNP_; }
+      set {
+        gPODHHAOHNP_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "LFPCCPOLJPC" field.</summary>
+    public const int LFPCCPOLJPCFieldNumber = 8;
+    private uint lFPCCPOLJPC_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint LFPCCPOLJPC {
+      get { return lFPCCPOLJPC_; }
+      set {
+        lFPCCPOLJPC_ = value;
+      }
+    }
+
     /// <summary>Field number for the "week" field.</summary>
-    public const int WeekFieldNumber = 15;
+    public const int WeekFieldNumber = 5;
     private uint week_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,32 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "has_gained" field.</summary>
-    public const int HasGainedFieldNumber = 3;
-    private bool hasGained_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasGained {
-      get { return hasGained_; }
-      set {
-        hasGained_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "KBEKACAMFOO" field.</summary>
-    public const int KBEKACAMFOOFieldNumber = 4;
-    private uint kBEKACAMFOO_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint KBEKACAMFOO {
-      get { return kBEKACAMFOO_; }
-      set {
-        kBEKACAMFOO_ = value;
-      }
-    }
-
     /// <summary>Field number for the "end_time" field.</summary>
-    public const int EndTimeFieldNumber = 13;
+    public const int EndTimeFieldNumber = 12;
     private long endTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -149,9 +149,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (GPODHHAOHNP != other.GPODHHAOHNP) return false;
+      if (LFPCCPOLJPC != other.LFPCCPOLJPC) return false;
       if (Week != other.Week) return false;
-      if (HasGained != other.HasGained) return false;
-      if (KBEKACAMFOO != other.KBEKACAMFOO) return false;
       if (EndTime != other.EndTime) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -160,9 +160,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (GPODHHAOHNP != false) hash ^= GPODHHAOHNP.GetHashCode();
+      if (LFPCCPOLJPC != 0) hash ^= LFPCCPOLJPC.GetHashCode();
       if (Week != 0) hash ^= Week.GetHashCode();
-      if (HasGained != false) hash ^= HasGained.GetHashCode();
-      if (KBEKACAMFOO != 0) hash ^= KBEKACAMFOO.GetHashCode();
       if (EndTime != 0L) hash ^= EndTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -182,21 +182,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (HasGained != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(HasGained);
+      if (Week != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Week);
       }
-      if (KBEKACAMFOO != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(KBEKACAMFOO);
+      if (LFPCCPOLJPC != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(LFPCCPOLJPC);
       }
       if (EndTime != 0L) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(96);
         output.WriteInt64(EndTime);
       }
-      if (Week != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(Week);
+      if (GPODHHAOHNP != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(GPODHHAOHNP);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -208,21 +208,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HasGained != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(HasGained);
+      if (Week != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Week);
       }
-      if (KBEKACAMFOO != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(KBEKACAMFOO);
+      if (LFPCCPOLJPC != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(LFPCCPOLJPC);
       }
       if (EndTime != 0L) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(96);
         output.WriteInt64(EndTime);
       }
-      if (Week != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(Week);
+      if (GPODHHAOHNP != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(GPODHHAOHNP);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -234,14 +234,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Week != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Week);
-      }
-      if (HasGained != false) {
+      if (GPODHHAOHNP != false) {
         size += 1 + 1;
       }
-      if (KBEKACAMFOO != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KBEKACAMFOO);
+      if (LFPCCPOLJPC != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LFPCCPOLJPC);
+      }
+      if (Week != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Week);
       }
       if (EndTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(EndTime);
@@ -258,14 +258,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.GPODHHAOHNP != false) {
+        GPODHHAOHNP = other.GPODHHAOHNP;
+      }
+      if (other.LFPCCPOLJPC != 0) {
+        LFPCCPOLJPC = other.LFPCCPOLJPC;
+      }
       if (other.Week != 0) {
         Week = other.Week;
-      }
-      if (other.HasGained != false) {
-        HasGained = other.HasGained;
-      }
-      if (other.KBEKACAMFOO != 0) {
-        KBEKACAMFOO = other.KBEKACAMFOO;
       }
       if (other.EndTime != 0L) {
         EndTime = other.EndTime;
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            HasGained = input.ReadBool();
+          case 40: {
+            Week = input.ReadUInt32();
             break;
           }
-          case 32: {
-            KBEKACAMFOO = input.ReadUInt32();
+          case 64: {
+            LFPCCPOLJPC = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 96: {
             EndTime = input.ReadInt64();
             break;
           }
-          case 120: {
-            Week = input.ReadUInt32();
+          case 112: {
+            GPODHHAOHNP = input.ReadBool();
             break;
           }
         }
@@ -316,20 +316,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            HasGained = input.ReadBool();
+          case 40: {
+            Week = input.ReadUInt32();
             break;
           }
-          case 32: {
-            KBEKACAMFOO = input.ReadUInt32();
+          case 64: {
+            LFPCCPOLJPC = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 96: {
             EndTime = input.ReadInt64();
             break;
           }
-          case 120: {
-            Week = input.ReadUInt32();
+          case 112: {
+            GPODHHAOHNP = input.ReadBool();
             break;
           }
         }

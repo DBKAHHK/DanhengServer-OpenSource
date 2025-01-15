@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1UcmFpblBhcnR5QnVpbGREaXlDc1JlcS5wcm90byJtChdUcmFpblBhcnR5",
-            "QnVpbGREaXlDc1JlcRIWCg5kaXlfZHluYW1pY19pZBgPIAEoDRIUCgxkaWNl",
-            "X3Nsb3RfaWQYDiABKA0SEwoLUExHSUJIT0NER1AYByABKAgSDwoHYXJlYV9p",
-            "ZBgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "QnVpbGREaXlDc1JlcRIPCgdhcmVhX2lkGAggASgNEhYKDmRpeV9keW5hbWlj",
+            "X2lkGAEgASgNEhQKDGRpY2Vfc2xvdF9pZBgKIAEoDRITCgtHQU5IS0xOUEFQ",
+            "SRgFIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyBuildDiyCsReq), global::EggLink.DanhengServer.Proto.TrainPartyBuildDiyCsReq.Parser, new[]{ "DiyDynamicId", "DiceSlotId", "PLGIBHOCDGP", "AreaId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyBuildDiyCsReq), global::EggLink.DanhengServer.Proto.TrainPartyBuildDiyCsReq.Parser, new[]{ "AreaId", "DiyDynamicId", "DiceSlotId", "GANHKLNPAPI" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainPartyBuildDiyCsReq(TrainPartyBuildDiyCsReq other) : this() {
+      areaId_ = other.areaId_;
       diyDynamicId_ = other.diyDynamicId_;
       diceSlotId_ = other.diceSlotId_;
-      pLGIBHOCDGP_ = other.pLGIBHOCDGP_;
-      areaId_ = other.areaId_;
+      gANHKLNPAPI_ = other.gANHKLNPAPI_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,8 +87,20 @@ namespace EggLink.DanhengServer.Proto {
       return new TrainPartyBuildDiyCsReq(this);
     }
 
+    /// <summary>Field number for the "area_id" field.</summary>
+    public const int AreaIdFieldNumber = 8;
+    private uint areaId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint AreaId {
+      get { return areaId_; }
+      set {
+        areaId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "diy_dynamic_id" field.</summary>
-    public const int DiyDynamicIdFieldNumber = 15;
+    public const int DiyDynamicIdFieldNumber = 1;
     private uint diyDynamicId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "dice_slot_id" field.</summary>
-    public const int DiceSlotIdFieldNumber = 14;
+    public const int DiceSlotIdFieldNumber = 10;
     private uint diceSlotId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,27 +123,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "PLGIBHOCDGP" field.</summary>
-    public const int PLGIBHOCDGPFieldNumber = 7;
-    private bool pLGIBHOCDGP_;
+    /// <summary>Field number for the "GANHKLNPAPI" field.</summary>
+    public const int GANHKLNPAPIFieldNumber = 5;
+    private bool gANHKLNPAPI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool PLGIBHOCDGP {
-      get { return pLGIBHOCDGP_; }
+    public bool GANHKLNPAPI {
+      get { return gANHKLNPAPI_; }
       set {
-        pLGIBHOCDGP_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "area_id" field.</summary>
-    public const int AreaIdFieldNumber = 3;
-    private uint areaId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint AreaId {
-      get { return areaId_; }
-      set {
-        areaId_ = value;
+        gANHKLNPAPI_ = value;
       }
     }
 
@@ -150,10 +150,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (AreaId != other.AreaId) return false;
       if (DiyDynamicId != other.DiyDynamicId) return false;
       if (DiceSlotId != other.DiceSlotId) return false;
-      if (PLGIBHOCDGP != other.PLGIBHOCDGP) return false;
-      if (AreaId != other.AreaId) return false;
+      if (GANHKLNPAPI != other.GANHKLNPAPI) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,10 +161,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (AreaId != 0) hash ^= AreaId.GetHashCode();
       if (DiyDynamicId != 0) hash ^= DiyDynamicId.GetHashCode();
       if (DiceSlotId != 0) hash ^= DiceSlotId.GetHashCode();
-      if (PLGIBHOCDGP != false) hash ^= PLGIBHOCDGP.GetHashCode();
-      if (AreaId != 0) hash ^= AreaId.GetHashCode();
+      if (GANHKLNPAPI != false) hash ^= GANHKLNPAPI.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,21 +183,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (DiyDynamicId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(DiyDynamicId);
+      }
+      if (GANHKLNPAPI != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(GANHKLNPAPI);
+      }
       if (AreaId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(64);
         output.WriteUInt32(AreaId);
       }
-      if (PLGIBHOCDGP != false) {
-        output.WriteRawTag(56);
-        output.WriteBool(PLGIBHOCDGP);
-      }
       if (DiceSlotId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(80);
         output.WriteUInt32(DiceSlotId);
-      }
-      if (DiyDynamicId != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(DiyDynamicId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -209,21 +209,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DiyDynamicId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(DiyDynamicId);
+      }
+      if (GANHKLNPAPI != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(GANHKLNPAPI);
+      }
       if (AreaId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(64);
         output.WriteUInt32(AreaId);
       }
-      if (PLGIBHOCDGP != false) {
-        output.WriteRawTag(56);
-        output.WriteBool(PLGIBHOCDGP);
-      }
       if (DiceSlotId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(80);
         output.WriteUInt32(DiceSlotId);
-      }
-      if (DiyDynamicId != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(DiyDynamicId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -235,17 +235,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (AreaId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AreaId);
+      }
       if (DiyDynamicId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DiyDynamicId);
       }
       if (DiceSlotId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DiceSlotId);
       }
-      if (PLGIBHOCDGP != false) {
+      if (GANHKLNPAPI != false) {
         size += 1 + 1;
-      }
-      if (AreaId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AreaId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -259,17 +259,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.AreaId != 0) {
+        AreaId = other.AreaId;
+      }
       if (other.DiyDynamicId != 0) {
         DiyDynamicId = other.DiyDynamicId;
       }
       if (other.DiceSlotId != 0) {
         DiceSlotId = other.DiceSlotId;
       }
-      if (other.PLGIBHOCDGP != false) {
-        PLGIBHOCDGP = other.PLGIBHOCDGP;
-      }
-      if (other.AreaId != 0) {
-        AreaId = other.AreaId;
+      if (other.GANHKLNPAPI != false) {
+        GANHKLNPAPI = other.GANHKLNPAPI;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -286,20 +286,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 8: {
+            DiyDynamicId = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            GANHKLNPAPI = input.ReadBool();
+            break;
+          }
+          case 64: {
             AreaId = input.ReadUInt32();
             break;
           }
-          case 56: {
-            PLGIBHOCDGP = input.ReadBool();
-            break;
-          }
-          case 112: {
+          case 80: {
             DiceSlotId = input.ReadUInt32();
-            break;
-          }
-          case 120: {
-            DiyDynamicId = input.ReadUInt32();
             break;
           }
         }
@@ -317,20 +317,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 8: {
+            DiyDynamicId = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            GANHKLNPAPI = input.ReadBool();
+            break;
+          }
+          case 64: {
             AreaId = input.ReadUInt32();
             break;
           }
-          case 56: {
-            PLGIBHOCDGP = input.ReadBool();
-            break;
-          }
-          case 112: {
+          case 80: {
             DiceSlotId = input.ReadUInt32();
-            break;
-          }
-          case 120: {
-            DiyDynamicId = input.ReadUInt32();
             break;
           }
         }

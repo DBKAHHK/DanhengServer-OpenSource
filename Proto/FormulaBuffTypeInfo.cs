@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlGb3JtdWxhQnVmZlR5cGVJbmZvLnByb3RvIjwKE0Zvcm11bGFCdWZmVHlw",
-            "ZUluZm8SCwoDa2V5GAkgASgNEhgKEGZvcm11bGFfYnVmZl9udW0YAyABKAVC",
+            "ZUluZm8SCwoDa2V5GAQgASgNEhgKEGZvcm11bGFfYnVmZl9udW0YAyABKAVC",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "key" field.</summary>
-    public const int KeyFieldNumber = 9;
+    public const int KeyFieldNumber = 4;
     private uint key_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -156,7 +156,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteInt32(FormulaBuffNum);
       }
       if (Key != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(32);
         output.WriteUInt32(Key);
       }
       if (_unknownFields != null) {
@@ -174,7 +174,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteInt32(FormulaBuffNum);
       }
       if (Key != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(32);
         output.WriteUInt32(Key);
       }
       if (_unknownFields != null) {
@@ -230,7 +230,7 @@ namespace EggLink.DanhengServer.Proto {
             FormulaBuffNum = input.ReadInt32();
             break;
           }
-          case 72: {
+          case 32: {
             Key = input.ReadUInt32();
             break;
           }
@@ -253,7 +253,7 @@ namespace EggLink.DanhengServer.Proto {
             FormulaBuffNum = input.ReadInt32();
             break;
           }
-          case 72: {
+          case 32: {
             Key = input.ReadUInt32();
             break;
           }

@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static RogueMagicEnterScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpSb2d1ZU1hZ2ljRW50ZXJTY1JzcC5wcm90bxoXUm9ndWVNYWdpY0N1cklu",
-            "Zm8ucHJvdG8aHFJvZ3VlTWFnaWNDdXJTY2VuZUluZm8ucHJvdG8ilgEKFFJv",
-            "Z3VlTWFnaWNFbnRlclNjUnNwEg8KB3JldGNvZGUYBiABKA0SMAoUcm9ndWVf",
+            "ChpSb2d1ZU1hZ2ljRW50ZXJTY1JzcC5wcm90bxocUm9ndWVNYWdpY0N1clNj",
+            "ZW5lSW5mby5wcm90bxoXUm9ndWVNYWdpY0N1ckluZm8ucHJvdG8ilgEKFFJv",
+            "Z3VlTWFnaWNFbnRlclNjUnNwEg8KB3JldGNvZGUYDSABKA0SMAoUcm9ndWVf",
             "dG91cm5fY3VyX2luZm8YAyABKAsyEi5Sb2d1ZU1hZ2ljQ3VySW5mbxI7Chpy",
-            "b2d1ZV90b3Vybl9jdXJfc2NlbmVfaW5mbxgLIAEoCzIXLlJvZ3VlTWFnaWND",
+            "b2d1ZV90b3Vybl9jdXJfc2NlbmVfaW5mbxgGIAEoCzIXLlJvZ3VlTWFnaWND",
             "dXJTY2VuZUluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicCurInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicCurSceneInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicCurSceneInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicCurInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicEnterScRsp), global::EggLink.DanhengServer.Proto.RogueMagicEnterScRsp.Parser, new[]{ "Retcode", "RogueTournCurInfo", "RogueTournCurSceneInfo" }, null, null, null, null)
           }));
@@ -89,7 +89,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 6;
+    public const int RetcodeFieldNumber = 13;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -113,7 +113,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_tourn_cur_scene_info" field.</summary>
-    public const int RogueTournCurSceneInfoFieldNumber = 11;
+    public const int RogueTournCurSceneInfoFieldNumber = 6;
     private global::EggLink.DanhengServer.Proto.RogueMagicCurSceneInfo rogueTournCurSceneInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -174,13 +174,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(26);
         output.WriteMessage(RogueTournCurInfo);
       }
-      if (Retcode != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(Retcode);
-      }
       if (rogueTournCurSceneInfo_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(50);
         output.WriteMessage(RogueTournCurSceneInfo);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -196,13 +196,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(26);
         output.WriteMessage(RogueTournCurInfo);
       }
-      if (Retcode != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(Retcode);
-      }
       if (rogueTournCurSceneInfo_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(50);
         output.WriteMessage(RogueTournCurSceneInfo);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -272,15 +272,15 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(RogueTournCurInfo);
             break;
           }
-          case 48: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 90: {
+          case 50: {
             if (rogueTournCurSceneInfo_ == null) {
               RogueTournCurSceneInfo = new global::EggLink.DanhengServer.Proto.RogueMagicCurSceneInfo();
             }
             input.ReadMessage(RogueTournCurSceneInfo);
+            break;
+          }
+          case 104: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -305,15 +305,15 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(RogueTournCurInfo);
             break;
           }
-          case 48: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 90: {
+          case 50: {
             if (rogueTournCurSceneInfo_ == null) {
               RogueTournCurSceneInfo = new global::EggLink.DanhengServer.Proto.RogueMagicCurSceneInfo();
             }
             input.ReadMessage(RogueTournCurSceneInfo);
+            break;
+          }
+          case 104: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

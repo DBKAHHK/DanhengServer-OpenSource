@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiBFbnRlcmVkU2NlbmVDaGFuZ2VTY05vdGlmeS5wcm90bxoWRW50ZXJlZFNj",
             "ZW5lSW5mby5wcm90byJQChpFbnRlcmVkU2NlbmVDaGFuZ2VTY05vdGlmeRIy",
-            "ChdlbnRlcmVkX3NjZW5lX2luZm9fbGlzdBgMIAMoCzIRLkVudGVyZWRTY2Vu",
+            "ChdlbnRlcmVkX3NjZW5lX2luZm9fbGlzdBgHIAMoCzIRLkVudGVyZWRTY2Vu",
             "ZUluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EnteredSceneInfoReflection.Descriptor, },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "entered_scene_info_list" field.</summary>
-    public const int EnteredSceneInfoListFieldNumber = 12;
+    public const int EnteredSceneInfoListFieldNumber = 7;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EnteredSceneInfo> _repeated_enteredSceneInfoList_codec
-        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.EnteredSceneInfo.Parser);
+        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.EnteredSceneInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EnteredSceneInfo> enteredSceneInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EnteredSceneInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 98: {
+          case 58: {
             enteredSceneInfoList_.AddEntriesFrom(input, _repeated_enteredSceneInfoList_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 98: {
+          case 58: {
             enteredSceneInfoList_.AddEntriesFrom(ref input, _repeated_enteredSceneInfoList_codec);
             break;
           }

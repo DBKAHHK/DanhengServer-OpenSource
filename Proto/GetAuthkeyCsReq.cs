@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GetAuthkeyCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVHZXRBdXRoa2V5Q3NSZXEucHJvdG8iUAoPR2V0QXV0aGtleUNzUmVxEhMK",
-            "C0lNTEhBS09ET1BEGA8gASgJEhMKC0hEQktKUEFJT0tLGAwgASgNEhMKC0RM",
-            "UEhLREJPUEVKGAYgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
-            "dG9iBnByb3RvMw=="));
+            "ChVHZXRBdXRoa2V5Q3NSZXEucHJvdG8iTQoPR2V0QXV0aGtleUNzUmVxEhEK",
+            "CXNpZ25fdHlwZRgBIAEoDRISCgphdXRoX2FwcGlkGA8gASgJEhMKC2F1dGhr",
+            "ZXlfdmVyGAIgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetAuthkeyCsReq), global::EggLink.DanhengServer.Proto.GetAuthkeyCsReq.Parser, new[]{ "IMLHAKODOPD", "HDBKJPAIOKK", "DLPHKDBOPEJ" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetAuthkeyCsReq), global::EggLink.DanhengServer.Proto.GetAuthkeyCsReq.Parser, new[]{ "SignType", "AuthAppid", "AuthkeyVer" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetAuthkeyCsReq(GetAuthkeyCsReq other) : this() {
-      iMLHAKODOPD_ = other.iMLHAKODOPD_;
-      hDBKJPAIOKK_ = other.hDBKJPAIOKK_;
-      dLPHKDBOPEJ_ = other.dLPHKDBOPEJ_;
+      signType_ = other.signType_;
+      authAppid_ = other.authAppid_;
+      authkeyVer_ = other.authkeyVer_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,39 +85,39 @@ namespace EggLink.DanhengServer.Proto {
       return new GetAuthkeyCsReq(this);
     }
 
-    /// <summary>Field number for the "IMLHAKODOPD" field.</summary>
-    public const int IMLHAKODOPDFieldNumber = 15;
-    private string iMLHAKODOPD_ = "";
+    /// <summary>Field number for the "sign_type" field.</summary>
+    public const int SignTypeFieldNumber = 1;
+    private uint signType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string IMLHAKODOPD {
-      get { return iMLHAKODOPD_; }
+    public uint SignType {
+      get { return signType_; }
       set {
-        iMLHAKODOPD_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        signType_ = value;
       }
     }
 
-    /// <summary>Field number for the "HDBKJPAIOKK" field.</summary>
-    public const int HDBKJPAIOKKFieldNumber = 12;
-    private uint hDBKJPAIOKK_;
+    /// <summary>Field number for the "auth_appid" field.</summary>
+    public const int AuthAppidFieldNumber = 15;
+    private string authAppid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint HDBKJPAIOKK {
-      get { return hDBKJPAIOKK_; }
+    public string AuthAppid {
+      get { return authAppid_; }
       set {
-        hDBKJPAIOKK_ = value;
+        authAppid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "DLPHKDBOPEJ" field.</summary>
-    public const int DLPHKDBOPEJFieldNumber = 6;
-    private uint dLPHKDBOPEJ_;
+    /// <summary>Field number for the "authkey_ver" field.</summary>
+    public const int AuthkeyVerFieldNumber = 2;
+    private uint authkeyVer_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DLPHKDBOPEJ {
-      get { return dLPHKDBOPEJ_; }
+    public uint AuthkeyVer {
+      get { return authkeyVer_; }
       set {
-        dLPHKDBOPEJ_ = value;
+        authkeyVer_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IMLHAKODOPD != other.IMLHAKODOPD) return false;
-      if (HDBKJPAIOKK != other.HDBKJPAIOKK) return false;
-      if (DLPHKDBOPEJ != other.DLPHKDBOPEJ) return false;
+      if (SignType != other.SignType) return false;
+      if (AuthAppid != other.AuthAppid) return false;
+      if (AuthkeyVer != other.AuthkeyVer) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IMLHAKODOPD.Length != 0) hash ^= IMLHAKODOPD.GetHashCode();
-      if (HDBKJPAIOKK != 0) hash ^= HDBKJPAIOKK.GetHashCode();
-      if (DLPHKDBOPEJ != 0) hash ^= DLPHKDBOPEJ.GetHashCode();
+      if (SignType != 0) hash ^= SignType.GetHashCode();
+      if (AuthAppid.Length != 0) hash ^= AuthAppid.GetHashCode();
+      if (AuthkeyVer != 0) hash ^= AuthkeyVer.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (DLPHKDBOPEJ != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(DLPHKDBOPEJ);
+      if (SignType != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(SignType);
       }
-      if (HDBKJPAIOKK != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(HDBKJPAIOKK);
+      if (AuthkeyVer != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(AuthkeyVer);
       }
-      if (IMLHAKODOPD.Length != 0) {
+      if (AuthAppid.Length != 0) {
         output.WriteRawTag(122);
-        output.WriteString(IMLHAKODOPD);
+        output.WriteString(AuthAppid);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (DLPHKDBOPEJ != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(DLPHKDBOPEJ);
+      if (SignType != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(SignType);
       }
-      if (HDBKJPAIOKK != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(HDBKJPAIOKK);
+      if (AuthkeyVer != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(AuthkeyVer);
       }
-      if (IMLHAKODOPD.Length != 0) {
+      if (AuthAppid.Length != 0) {
         output.WriteRawTag(122);
-        output.WriteString(IMLHAKODOPD);
+        output.WriteString(AuthAppid);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,14 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IMLHAKODOPD.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(IMLHAKODOPD);
+      if (SignType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SignType);
       }
-      if (HDBKJPAIOKK != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HDBKJPAIOKK);
+      if (AuthAppid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AuthAppid);
       }
-      if (DLPHKDBOPEJ != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DLPHKDBOPEJ);
+      if (AuthkeyVer != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AuthkeyVer);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,14 +232,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IMLHAKODOPD.Length != 0) {
-        IMLHAKODOPD = other.IMLHAKODOPD;
+      if (other.SignType != 0) {
+        SignType = other.SignType;
       }
-      if (other.HDBKJPAIOKK != 0) {
-        HDBKJPAIOKK = other.HDBKJPAIOKK;
+      if (other.AuthAppid.Length != 0) {
+        AuthAppid = other.AuthAppid;
       }
-      if (other.DLPHKDBOPEJ != 0) {
-        DLPHKDBOPEJ = other.DLPHKDBOPEJ;
+      if (other.AuthkeyVer != 0) {
+        AuthkeyVer = other.AuthkeyVer;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            DLPHKDBOPEJ = input.ReadUInt32();
+          case 8: {
+            SignType = input.ReadUInt32();
             break;
           }
-          case 96: {
-            HDBKJPAIOKK = input.ReadUInt32();
+          case 16: {
+            AuthkeyVer = input.ReadUInt32();
             break;
           }
           case 122: {
-            IMLHAKODOPD = input.ReadString();
+            AuthAppid = input.ReadString();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            DLPHKDBOPEJ = input.ReadUInt32();
+          case 8: {
+            SignType = input.ReadUInt32();
             break;
           }
-          case 96: {
-            HDBKJPAIOKK = input.ReadUInt32();
+          case 16: {
+            AuthkeyVer = input.ReadUInt32();
             break;
           }
           case 122: {
-            IMLHAKODOPD = input.ReadString();
+            AuthAppid = input.ReadString();
             break;
           }
         }

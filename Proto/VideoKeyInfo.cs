@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static VideoKeyInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJWaWRlb0tleUluZm8ucHJvdG8iLQoMVmlkZW9LZXlJbmZvEgoKAmlkGAgg",
-            "ASgNEhEKCXZpZGVvX2tleRgMIAEoBEIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
+            "ChJWaWRlb0tleUluZm8ucHJvdG8iLQoMVmlkZW9LZXlJbmZvEhEKCXZpZGVv",
+            "X2tleRgKIAEoBBIKCgJpZBgIIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.VideoKeyInfo), global::EggLink.DanhengServer.Proto.VideoKeyInfo.Parser, new[]{ "Id", "VideoKey" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.VideoKeyInfo), global::EggLink.DanhengServer.Proto.VideoKeyInfo.Parser, new[]{ "VideoKey", "Id" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoKeyInfo(VideoKeyInfo other) : this() {
-      id_ = other.id_;
       videoKey_ = other.videoKey_;
+      id_ = other.id_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -81,6 +81,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoKeyInfo Clone() {
       return new VideoKeyInfo(this);
+    }
+
+    /// <summary>Field number for the "video_key" field.</summary>
+    public const int VideoKeyFieldNumber = 10;
+    private ulong videoKey_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong VideoKey {
+      get { return videoKey_; }
+      set {
+        videoKey_ = value;
+      }
     }
 
     /// <summary>Field number for the "id" field.</summary>
@@ -92,18 +104,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return id_; }
       set {
         id_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "video_key" field.</summary>
-    public const int VideoKeyFieldNumber = 12;
-    private ulong videoKey_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong VideoKey {
-      get { return videoKey_; }
-      set {
-        videoKey_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Id != other.Id) return false;
       if (VideoKey != other.VideoKey) return false;
+      if (Id != other.Id) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id != 0) hash ^= Id.GetHashCode();
       if (VideoKey != 0UL) hash ^= VideoKey.GetHashCode();
+      if (Id != 0) hash ^= Id.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -156,7 +156,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Id);
       }
       if (VideoKey != 0UL) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(80);
         output.WriteUInt64(VideoKey);
       }
       if (_unknownFields != null) {
@@ -174,7 +174,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Id);
       }
       if (VideoKey != 0UL) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(80);
         output.WriteUInt64(VideoKey);
       }
       if (_unknownFields != null) {
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
-      }
       if (VideoKey != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(VideoKey);
+      }
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Id != 0) {
-        Id = other.Id;
-      }
       if (other.VideoKey != 0UL) {
         VideoKey = other.VideoKey;
+      }
+      if (other.Id != 0) {
+        Id = other.Id;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -230,7 +230,7 @@ namespace EggLink.DanhengServer.Proto {
             Id = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 80: {
             VideoKey = input.ReadUInt64();
             break;
           }
@@ -253,7 +253,7 @@ namespace EggLink.DanhengServer.Proto {
             Id = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 80: {
             VideoKey = input.ReadUInt64();
             break;
           }

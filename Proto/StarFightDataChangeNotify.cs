@@ -24,15 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static StarFightDataChangeNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9TdGFyRmlnaHREYXRhQ2hhbmdlTm90aWZ5LnByb3RvGhhTdGFyRmlnaHRH",
-            "cm91cEluZm8ucHJvdG8iVwoZU3RhckZpZ2h0RGF0YUNoYW5nZU5vdGlmeRIQ",
-            "Cghncm91cF9pZBgEIAEoDRIoCgtESUJPTkpEUExDRRgHIAEoCzITLlN0YXJG",
-            "aWdodEdyb3VwSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
-            "YgZwcm90bzM="));
+            "Ch9TdGFyRmlnaHREYXRhQ2hhbmdlTm90aWZ5LnByb3RvGhFNSkNKQUlLUExM",
+            "TS5wcm90byJQChlTdGFyRmlnaHREYXRhQ2hhbmdlTm90aWZ5EhAKCGdyb3Vw",
+            "X2lkGA4gASgNEiEKC0ZNQ0RBTEFMRklBGAIgASgLMgwuTUpDSkFJS1BMTE1C",
+            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.StarFightGroupInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MJCJAIKPLLMReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StarFightDataChangeNotify), global::EggLink.DanhengServer.Proto.StarFightDataChangeNotify.Parser, new[]{ "GroupId", "DIBONJDPLCE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StarFightDataChangeNotify), global::EggLink.DanhengServer.Proto.StarFightDataChangeNotify.Parser, new[]{ "GroupId", "FMCDALALFIA" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StarFightDataChangeNotify(StarFightDataChangeNotify other) : this() {
       groupId_ = other.groupId_;
-      dIBONJDPLCE_ = other.dIBONJDPLCE_ != null ? other.dIBONJDPLCE_.Clone() : null;
+      fMCDALALFIA_ = other.fMCDALALFIA_ != null ? other.fMCDALALFIA_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 4;
+    public const int GroupIdFieldNumber = 14;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "DIBONJDPLCE" field.</summary>
-    public const int DIBONJDPLCEFieldNumber = 7;
-    private global::EggLink.DanhengServer.Proto.StarFightGroupInfo dIBONJDPLCE_;
+    /// <summary>Field number for the "FMCDALALFIA" field.</summary>
+    public const int FMCDALALFIAFieldNumber = 2;
+    private global::EggLink.DanhengServer.Proto.MJCJAIKPLLM fMCDALALFIA_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.StarFightGroupInfo DIBONJDPLCE {
-      get { return dIBONJDPLCE_; }
+    public global::EggLink.DanhengServer.Proto.MJCJAIKPLLM FMCDALALFIA {
+      get { return fMCDALALFIA_; }
       set {
-        dIBONJDPLCE_ = value;
+        fMCDALALFIA_ = value;
       }
     }
 
@@ -125,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (GroupId != other.GroupId) return false;
-      if (!object.Equals(DIBONJDPLCE, other.DIBONJDPLCE)) return false;
+      if (!object.Equals(FMCDALALFIA, other.FMCDALALFIA)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -134,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (GroupId != 0) hash ^= GroupId.GetHashCode();
-      if (dIBONJDPLCE_ != null) hash ^= DIBONJDPLCE.GetHashCode();
+      if (fMCDALALFIA_ != null) hash ^= FMCDALALFIA.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (GroupId != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(GroupId);
+      if (fMCDALALFIA_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(FMCDALALFIA);
       }
-      if (dIBONJDPLCE_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(DIBONJDPLCE);
+      if (GroupId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(GroupId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (GroupId != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(GroupId);
+      if (fMCDALALFIA_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(FMCDALALFIA);
       }
-      if (dIBONJDPLCE_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(DIBONJDPLCE);
+      if (GroupId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(GroupId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -192,8 +191,8 @@ namespace EggLink.DanhengServer.Proto {
       if (GroupId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
       }
-      if (dIBONJDPLCE_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DIBONJDPLCE);
+      if (fMCDALALFIA_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FMCDALALFIA);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -210,11 +209,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.GroupId != 0) {
         GroupId = other.GroupId;
       }
-      if (other.dIBONJDPLCE_ != null) {
-        if (dIBONJDPLCE_ == null) {
-          DIBONJDPLCE = new global::EggLink.DanhengServer.Proto.StarFightGroupInfo();
+      if (other.fMCDALALFIA_ != null) {
+        if (fMCDALALFIA_ == null) {
+          FMCDALALFIA = new global::EggLink.DanhengServer.Proto.MJCJAIKPLLM();
         }
-        DIBONJDPLCE.MergeFrom(other.DIBONJDPLCE);
+        FMCDALALFIA.MergeFrom(other.FMCDALALFIA);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            GroupId = input.ReadUInt32();
+          case 18: {
+            if (fMCDALALFIA_ == null) {
+              FMCDALALFIA = new global::EggLink.DanhengServer.Proto.MJCJAIKPLLM();
+            }
+            input.ReadMessage(FMCDALALFIA);
             break;
           }
-          case 58: {
-            if (dIBONJDPLCE_ == null) {
-              DIBONJDPLCE = new global::EggLink.DanhengServer.Proto.StarFightGroupInfo();
-            }
-            input.ReadMessage(DIBONJDPLCE);
+          case 112: {
+            GroupId = input.ReadUInt32();
             break;
           }
         }
@@ -257,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            GroupId = input.ReadUInt32();
+          case 18: {
+            if (fMCDALALFIA_ == null) {
+              FMCDALALFIA = new global::EggLink.DanhengServer.Proto.MJCJAIKPLLM();
+            }
+            input.ReadMessage(FMCDALALFIA);
             break;
           }
-          case 58: {
-            if (dIBONJDPLCE_ == null) {
-              DIBONJDPLCE = new global::EggLink.DanhengServer.Proto.StarFightGroupInfo();
-            }
-            input.ReadMessage(DIBONJDPLCE);
+          case 112: {
+            GroupId = input.ReadUInt32();
             break;
           }
         }

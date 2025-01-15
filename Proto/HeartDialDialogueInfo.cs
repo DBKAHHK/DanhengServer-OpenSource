@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtIZWFydERpYWxEaWFsb2d1ZUluZm8ucHJvdG8iQQoVSGVhcnREaWFsRGlh",
-            "bG9ndWVJbmZvEhMKC0FETEVQTExJRkdNGAMgASgIEhMKC2RpYWxvZ3VlX2lk",
+            "bG9ndWVJbmZvEhMKC0ZCS0VLQ0dFTEJFGA8gASgIEhMKC2RpYWxvZ3VlX2lk",
             "GAogASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeartDialDialogueInfo), global::EggLink.DanhengServer.Proto.HeartDialDialogueInfo.Parser, new[]{ "ADLEPLLIFGM", "DialogueId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeartDialDialogueInfo), global::EggLink.DanhengServer.Proto.HeartDialDialogueInfo.Parser, new[]{ "FBKEKCGELBE", "DialogueId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HeartDialDialogueInfo(HeartDialDialogueInfo other) : this() {
-      aDLEPLLIFGM_ = other.aDLEPLLIFGM_;
+      fBKEKCGELBE_ = other.fBKEKCGELBE_;
       dialogueId_ = other.dialogueId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,15 +84,15 @@ namespace EggLink.DanhengServer.Proto {
       return new HeartDialDialogueInfo(this);
     }
 
-    /// <summary>Field number for the "ADLEPLLIFGM" field.</summary>
-    public const int ADLEPLLIFGMFieldNumber = 3;
-    private bool aDLEPLLIFGM_;
+    /// <summary>Field number for the "FBKEKCGELBE" field.</summary>
+    public const int FBKEKCGELBEFieldNumber = 15;
+    private bool fBKEKCGELBE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool ADLEPLLIFGM {
-      get { return aDLEPLLIFGM_; }
+    public bool FBKEKCGELBE {
+      get { return fBKEKCGELBE_; }
       set {
-        aDLEPLLIFGM_ = value;
+        fBKEKCGELBE_ = value;
       }
     }
 
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ADLEPLLIFGM != other.ADLEPLLIFGM) return false;
+      if (FBKEKCGELBE != other.FBKEKCGELBE) return false;
       if (DialogueId != other.DialogueId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -132,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ADLEPLLIFGM != false) hash ^= ADLEPLLIFGM.GetHashCode();
+      if (FBKEKCGELBE != false) hash ^= FBKEKCGELBE.GetHashCode();
       if (DialogueId != 0) hash ^= DialogueId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ADLEPLLIFGM != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(ADLEPLLIFGM);
-      }
       if (DialogueId != 0) {
         output.WriteRawTag(80);
         output.WriteUInt32(DialogueId);
+      }
+      if (FBKEKCGELBE != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(FBKEKCGELBE);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ADLEPLLIFGM != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(ADLEPLLIFGM);
-      }
       if (DialogueId != 0) {
         output.WriteRawTag(80);
         output.WriteUInt32(DialogueId);
+      }
+      if (FBKEKCGELBE != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(FBKEKCGELBE);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ADLEPLLIFGM != false) {
+      if (FBKEKCGELBE != false) {
         size += 1 + 1;
       }
       if (DialogueId != 0) {
@@ -206,8 +206,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ADLEPLLIFGM != false) {
-        ADLEPLLIFGM = other.ADLEPLLIFGM;
+      if (other.FBKEKCGELBE != false) {
+        FBKEKCGELBE = other.FBKEKCGELBE;
       }
       if (other.DialogueId != 0) {
         DialogueId = other.DialogueId;
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            ADLEPLLIFGM = input.ReadBool();
-            break;
-          }
           case 80: {
             DialogueId = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            FBKEKCGELBE = input.ReadBool();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            ADLEPLLIFGM = input.ReadBool();
-            break;
-          }
           case 80: {
             DialogueId = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            FBKEKCGELBE = input.ReadBool();
             break;
           }
         }

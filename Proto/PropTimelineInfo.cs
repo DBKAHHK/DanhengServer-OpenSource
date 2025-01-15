@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static PropTimelineInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZQcm9wVGltZWxpbmVJbmZvLnByb3RvImgKEFByb3BUaW1lbGluZUluZm8S",
-            "GwoTdGltZWxpbmVfYm9vbF92YWx1ZRgKIAEoCBIaChJ0aW1lbGluZV9pbnRf",
-            "dmFsdWUYBCABKA0SGwoTdGltZWxpbmVfYnl0ZV92YWx1ZRgJIAEoDEIeqgIb",
-            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChZQcm9wVGltZWxpbmVJbmZvLnByb3RvIkwKEFByb3BUaW1lbGluZUluZm8S",
+            "GwoTdGltZWxpbmVfYnl0ZV92YWx1ZRgLIAEoDBIbChN0aW1lbGluZV9ib29s",
+            "X3ZhbHVlGA8gASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PropTimelineInfo), global::EggLink.DanhengServer.Proto.PropTimelineInfo.Parser, new[]{ "TimelineBoolValue", "TimelineIntValue", "TimelineByteValue" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PropTimelineInfo), global::EggLink.DanhengServer.Proto.PropTimelineInfo.Parser, new[]{ "TimelineByteValue", "TimelineBoolValue" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PropTimelineInfo(PropTimelineInfo other) : this() {
-      timelineBoolValue_ = other.timelineBoolValue_;
-      timelineIntValue_ = other.timelineIntValue_;
       timelineByteValue_ = other.timelineByteValue_;
+      timelineBoolValue_ = other.timelineBoolValue_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,32 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new PropTimelineInfo(this);
     }
 
-    /// <summary>Field number for the "timeline_bool_value" field.</summary>
-    public const int TimelineBoolValueFieldNumber = 10;
-    private bool timelineBoolValue_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool TimelineBoolValue {
-      get { return timelineBoolValue_; }
-      set {
-        timelineBoolValue_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "timeline_int_value" field.</summary>
-    public const int TimelineIntValueFieldNumber = 4;
-    private uint timelineIntValue_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TimelineIntValue {
-      get { return timelineIntValue_; }
-      set {
-        timelineIntValue_ = value;
-      }
-    }
-
     /// <summary>Field number for the "timeline_byte_value" field.</summary>
-    public const int TimelineByteValueFieldNumber = 9;
+    public const int TimelineByteValueFieldNumber = 11;
     private pb::ByteString timelineByteValue_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -118,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return timelineByteValue_; }
       set {
         timelineByteValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "timeline_bool_value" field.</summary>
+    public const int TimelineBoolValueFieldNumber = 15;
+    private bool timelineBoolValue_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool TimelineBoolValue {
+      get { return timelineBoolValue_; }
+      set {
+        timelineBoolValue_ = value;
       }
     }
 
@@ -136,9 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (TimelineBoolValue != other.TimelineBoolValue) return false;
-      if (TimelineIntValue != other.TimelineIntValue) return false;
       if (TimelineByteValue != other.TimelineByteValue) return false;
+      if (TimelineBoolValue != other.TimelineBoolValue) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (TimelineBoolValue != false) hash ^= TimelineBoolValue.GetHashCode();
-      if (TimelineIntValue != 0) hash ^= TimelineIntValue.GetHashCode();
       if (TimelineByteValue.Length != 0) hash ^= TimelineByteValue.GetHashCode();
+      if (TimelineBoolValue != false) hash ^= TimelineBoolValue.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,16 +152,12 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (TimelineIntValue != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(TimelineIntValue);
-      }
       if (TimelineByteValue.Length != 0) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(90);
         output.WriteBytes(TimelineByteValue);
       }
       if (TimelineBoolValue != false) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(120);
         output.WriteBool(TimelineBoolValue);
       }
       if (_unknownFields != null) {
@@ -189,16 +170,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TimelineIntValue != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(TimelineIntValue);
-      }
       if (TimelineByteValue.Length != 0) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(90);
         output.WriteBytes(TimelineByteValue);
       }
       if (TimelineBoolValue != false) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(120);
         output.WriteBool(TimelineBoolValue);
       }
       if (_unknownFields != null) {
@@ -211,14 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (TimelineBoolValue != false) {
-        size += 1 + 1;
-      }
-      if (TimelineIntValue != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TimelineIntValue);
-      }
       if (TimelineByteValue.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(TimelineByteValue);
+      }
+      if (TimelineBoolValue != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,14 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.TimelineBoolValue != false) {
-        TimelineBoolValue = other.TimelineBoolValue;
-      }
-      if (other.TimelineIntValue != 0) {
-        TimelineIntValue = other.TimelineIntValue;
-      }
       if (other.TimelineByteValue.Length != 0) {
         TimelineByteValue = other.TimelineByteValue;
+      }
+      if (other.TimelineBoolValue != false) {
+        TimelineBoolValue = other.TimelineBoolValue;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,15 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            TimelineIntValue = input.ReadUInt32();
-            break;
-          }
-          case 74: {
+          case 90: {
             TimelineByteValue = input.ReadBytes();
             break;
           }
-          case 80: {
+          case 120: {
             TimelineBoolValue = input.ReadBool();
             break;
           }
@@ -283,15 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            TimelineIntValue = input.ReadUInt32();
-            break;
-          }
-          case 74: {
+          case 90: {
             TimelineByteValue = input.ReadBytes();
             break;
           }
-          case 80: {
+          case 120: {
             TimelineBoolValue = input.ReadBool();
             break;
           }

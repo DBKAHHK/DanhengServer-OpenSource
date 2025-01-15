@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxSb2d1ZU1vZGlmaWVyRGVsTm90aWZ5LnByb3RvIi0KFlJvZ3VlTW9kaWZp",
-            "ZXJEZWxOb3RpZnkSEwoLbW9kaWZpZXJfaWQYDCABKARCHqoCG0VnZ0xpbmsu",
+            "ZXJEZWxOb3RpZnkSEwoLbW9kaWZpZXJfaWQYDSABKARCHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "modifier_id" field.</summary>
-    public const int ModifierIdFieldNumber = 12;
+    public const int ModifierIdFieldNumber = 13;
     private ulong modifierId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (ModifierId != 0UL) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(104);
         output.WriteUInt64(ModifierId);
       }
       if (_unknownFields != null) {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ModifierId != 0UL) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(104);
         output.WriteUInt64(ModifierId);
       }
       if (_unknownFields != null) {
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 96: {
+          case 104: {
             ModifierId = input.ReadUInt64();
             break;
           }
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 96: {
+          case 104: {
             ModifierId = input.ReadUInt64();
             break;
           }

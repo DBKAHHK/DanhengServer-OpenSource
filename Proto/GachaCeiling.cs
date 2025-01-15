@@ -25,9 +25,9 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChJHYWNoYUNlaWxpbmcucHJvdG8aGEdhY2hhQ2VpbGluZ0F2YXRhci5wcm90",
-            "byJhCgxHYWNoYUNlaWxpbmcSEgoKaXNfY2xhaW1lZBgOIAEoCBIoCgthdmF0",
+            "byJhCgxHYWNoYUNlaWxpbmcSEgoKaXNfY2xhaW1lZBgPIAEoCBIoCgthdmF0",
             "YXJfbGlzdBgJIAMoCzITLkdhY2hhQ2VpbGluZ0F2YXRhchITCgtjZWlsaW5n",
-            "X251bRgLIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "X251bRgMIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GachaCeilingAvatarReflection.Descriptor, },
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_claimed" field.</summary>
-    public const int IsClaimedFieldNumber = 14;
+    public const int IsClaimedFieldNumber = 15;
     private bool isClaimed_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "ceiling_num" field.</summary>
-    public const int CeilingNumFieldNumber = 11;
+    public const int CeilingNumFieldNumber = 12;
     private uint ceilingNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -169,11 +169,11 @@ namespace EggLink.DanhengServer.Proto {
     #else
       avatarList_.WriteTo(output, _repeated_avatarList_codec);
       if (CeilingNum != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(96);
         output.WriteUInt32(CeilingNum);
       }
       if (IsClaimed != false) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(120);
         output.WriteBool(IsClaimed);
       }
       if (_unknownFields != null) {
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       avatarList_.WriteTo(ref output, _repeated_avatarList_codec);
       if (CeilingNum != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(96);
         output.WriteUInt32(CeilingNum);
       }
       if (IsClaimed != false) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(120);
         output.WriteBool(IsClaimed);
       }
       if (_unknownFields != null) {
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
             avatarList_.AddEntriesFrom(input, _repeated_avatarList_codec);
             break;
           }
-          case 88: {
+          case 96: {
             CeilingNum = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 120: {
             IsClaimed = input.ReadBool();
             break;
           }
@@ -277,11 +277,11 @@ namespace EggLink.DanhengServer.Proto {
             avatarList_.AddEntriesFrom(ref input, _repeated_avatarList_codec);
             break;
           }
-          case 88: {
+          case 96: {
             CeilingNum = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 120: {
             IsClaimed = input.ReadBool();
             break;
           }

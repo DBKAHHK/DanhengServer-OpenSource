@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static PunkLordBattleAvatarReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpQdW5rTG9yZEJhdHRsZUF2YXRhci5wcm90byI/ChRQdW5rTG9yZEJhdHRs",
-            "ZUF2YXRhchIRCglhdmF0YXJfaWQYASABKA0SFAoMYXZhdGFyX2xldmVsGAIg",
-            "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChpQdW5rTG9yZEJhdHRsZUF2YXRhci5wcm90byI9ChRQdW5rTG9yZEJhdHRs",
+            "ZUF2YXRhchIQCghBdmF0YXJJZBgBIAEoDRITCgtBdmF0YXJMZXZlbBgCIAEo",
+            "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
       return new PunkLordBattleAvatar(this);
     }
 
-    /// <summary>Field number for the "avatar_id" field.</summary>
+    /// <summary>Field number for the "AvatarId" field.</summary>
     public const int AvatarIdFieldNumber = 1;
     private uint avatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -95,7 +95,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "avatar_level" field.</summary>
+    /// <summary>Field number for the "AvatarLevel" field.</summary>
     public const int AvatarLevelFieldNumber = 2;
     private uint avatarLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

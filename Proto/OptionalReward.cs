@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static OptionalRewardReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRPcHRpb25hbFJld2FyZC5wcm90byI7Cg5PcHRpb25hbFJld2FyZBINCgVs",
-            "ZXZlbBgHIAEoDRIaChJvcHRpb25hbF9yZXdhcmRfaWQYASABKA1CHqoCG0Vn",
-            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChRPcHRpb25hbFJld2FyZC5wcm90byI5Cg5PcHRpb25hbFJld2FyZBINCgVM",
+            "ZXZlbBgGIAEoDRIYChBPcHRpb25hbFJld2FyZElkGAwgASgNQh6qAhtFZ2dM",
+            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -83,8 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new OptionalReward(this);
     }
 
-    /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 7;
+    /// <summary>Field number for the "Level" field.</summary>
+    public const int LevelFieldNumber = 6;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,8 +95,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "optional_reward_id" field.</summary>
-    public const int OptionalRewardIdFieldNumber = 1;
+    /// <summary>Field number for the "OptionalRewardId" field.</summary>
+    public const int OptionalRewardIdFieldNumber = 12;
     private uint optionalRewardId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (OptionalRewardId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(OptionalRewardId);
-      }
       if (Level != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(48);
         output.WriteUInt32(Level);
+      }
+      if (OptionalRewardId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(OptionalRewardId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (OptionalRewardId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(OptionalRewardId);
-      }
       if (Level != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(48);
         output.WriteUInt32(Level);
+      }
+      if (OptionalRewardId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(OptionalRewardId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            OptionalRewardId = input.ReadUInt32();
+          case 48: {
+            Level = input.ReadUInt32();
             break;
           }
-          case 56: {
-            Level = input.ReadUInt32();
+          case 96: {
+            OptionalRewardId = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            OptionalRewardId = input.ReadUInt32();
+          case 48: {
+            Level = input.ReadUInt32();
             break;
           }
-          case 56: {
-            Level = input.ReadUInt32();
+          case 96: {
+            OptionalRewardId = input.ReadUInt32();
             break;
           }
         }

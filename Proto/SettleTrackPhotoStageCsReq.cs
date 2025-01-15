@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static SettleTrackPhotoStageCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiBTZXR0bGVUcmFja1Bob3RvU3RhZ2VDc1JlcS5wcm90bxoRSExDQ05FSEZE",
-            "QkEucHJvdG8iZAoaU2V0dGxlVHJhY2tQaG90b1N0YWdlQ3NSZXESIQoLS0NO",
-            "TktOSUFFS0EYCCADKAsyDC5ITENDTkVIRkRCQRIRCgljb3N0X3RpbWUYDiAB",
-            "KA0SEAoIc3RhZ2VfaWQYAyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "CiBTZXR0bGVUcmFja1Bob3RvU3RhZ2VDc1JlcS5wcm90bxoRR0VPQUVPRkpP",
+            "R0MucHJvdG8iZAoaU2V0dGxlVHJhY2tQaG90b1N0YWdlQ3NSZXESEAoIc3Rh",
+            "Z2VfaWQYDyABKA0SEQoJY29zdF90aW1lGA0gASgNEiEKC0xQSUhBTklPSkZJ",
+            "GAogAygLMgwuR0VPQUVPRkpPR0NCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HLCCNEHFDBAReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GEOAEOFJOGCReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SettleTrackPhotoStageCsReq), global::EggLink.DanhengServer.Proto.SettleTrackPhotoStageCsReq.Parser, new[]{ "KCNNKNIAEKA", "CostTime", "StageId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SettleTrackPhotoStageCsReq), global::EggLink.DanhengServer.Proto.SettleTrackPhotoStageCsReq.Parser, new[]{ "StageId", "CostTime", "LPIHANIOJFI" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SettleTrackPhotoStageCsReq(SettleTrackPhotoStageCsReq other) : this() {
-      kCNNKNIAEKA_ = other.kCNNKNIAEKA_.Clone();
-      costTime_ = other.costTime_;
       stageId_ = other.stageId_;
+      costTime_ = other.costTime_;
+      lPIHANIOJFI_ = other.lPIHANIOJFI_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,19 +86,20 @@ namespace EggLink.DanhengServer.Proto {
       return new SettleTrackPhotoStageCsReq(this);
     }
 
-    /// <summary>Field number for the "KCNNKNIAEKA" field.</summary>
-    public const int KCNNKNIAEKAFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.HLCCNEHFDBA> _repeated_kCNNKNIAEKA_codec
-        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.HLCCNEHFDBA.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HLCCNEHFDBA> kCNNKNIAEKA_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HLCCNEHFDBA>();
+    /// <summary>Field number for the "stage_id" field.</summary>
+    public const int StageIdFieldNumber = 15;
+    private uint stageId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HLCCNEHFDBA> KCNNKNIAEKA {
-      get { return kCNNKNIAEKA_; }
+    public uint StageId {
+      get { return stageId_; }
+      set {
+        stageId_ = value;
+      }
     }
 
     /// <summary>Field number for the "cost_time" field.</summary>
-    public const int CostTimeFieldNumber = 14;
+    public const int CostTimeFieldNumber = 13;
     private uint costTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,16 +110,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "stage_id" field.</summary>
-    public const int StageIdFieldNumber = 3;
-    private uint stageId_;
+    /// <summary>Field number for the "LPIHANIOJFI" field.</summary>
+    public const int LPIHANIOJFIFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GEOAEOFJOGC> _repeated_lPIHANIOJFI_codec
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.GEOAEOFJOGC.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GEOAEOFJOGC> lPIHANIOJFI_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GEOAEOFJOGC>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint StageId {
-      get { return stageId_; }
-      set {
-        stageId_ = value;
-      }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GEOAEOFJOGC> LPIHANIOJFI {
+      get { return lPIHANIOJFI_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!kCNNKNIAEKA_.Equals(other.kCNNKNIAEKA_)) return false;
-      if (CostTime != other.CostTime) return false;
       if (StageId != other.StageId) return false;
+      if (CostTime != other.CostTime) return false;
+      if(!lPIHANIOJFI_.Equals(other.lPIHANIOJFI_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= kCNNKNIAEKA_.GetHashCode();
-      if (CostTime != 0) hash ^= CostTime.GetHashCode();
       if (StageId != 0) hash ^= StageId.GetHashCode();
+      if (CostTime != 0) hash ^= CostTime.GetHashCode();
+      hash ^= lPIHANIOJFI_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,14 +167,14 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (StageId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(StageId);
-      }
-      kCNNKNIAEKA_.WriteTo(output, _repeated_kCNNKNIAEKA_codec);
+      lPIHANIOJFI_.WriteTo(output, _repeated_lPIHANIOJFI_codec);
       if (CostTime != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(104);
         output.WriteUInt32(CostTime);
+      }
+      if (StageId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(StageId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -186,14 +186,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (StageId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(StageId);
-      }
-      kCNNKNIAEKA_.WriteTo(ref output, _repeated_kCNNKNIAEKA_codec);
+      lPIHANIOJFI_.WriteTo(ref output, _repeated_lPIHANIOJFI_codec);
       if (CostTime != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(104);
         output.WriteUInt32(CostTime);
+      }
+      if (StageId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(StageId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -205,13 +205,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += kCNNKNIAEKA_.CalculateSize(_repeated_kCNNKNIAEKA_codec);
-      if (CostTime != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CostTime);
-      }
       if (StageId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(StageId);
       }
+      if (CostTime != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CostTime);
+      }
+      size += lPIHANIOJFI_.CalculateSize(_repeated_lPIHANIOJFI_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -224,13 +224,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      kCNNKNIAEKA_.Add(other.kCNNKNIAEKA_);
-      if (other.CostTime != 0) {
-        CostTime = other.CostTime;
-      }
       if (other.StageId != 0) {
         StageId = other.StageId;
       }
+      if (other.CostTime != 0) {
+        CostTime = other.CostTime;
+      }
+      lPIHANIOJFI_.Add(other.lPIHANIOJFI_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -246,16 +246,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            StageId = input.ReadUInt32();
+          case 82: {
+            lPIHANIOJFI_.AddEntriesFrom(input, _repeated_lPIHANIOJFI_codec);
             break;
           }
-          case 66: {
-            kCNNKNIAEKA_.AddEntriesFrom(input, _repeated_kCNNKNIAEKA_codec);
-            break;
-          }
-          case 112: {
+          case 104: {
             CostTime = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            StageId = input.ReadUInt32();
             break;
           }
         }
@@ -273,16 +273,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            StageId = input.ReadUInt32();
+          case 82: {
+            lPIHANIOJFI_.AddEntriesFrom(ref input, _repeated_lPIHANIOJFI_codec);
             break;
           }
-          case 66: {
-            kCNNKNIAEKA_.AddEntriesFrom(ref input, _repeated_kCNNKNIAEKA_codec);
-            break;
-          }
-          case 112: {
+          case 104: {
             CostTime = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            StageId = input.ReadUInt32();
             break;
           }
         }

@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpQdW5rTG9yZEJhdHRsZVJlY29yZC5wcm90bxoaUHVua0xvcmRCYXR0bGVB",
-            "dmF0YXIucHJvdG8i9QEKFFB1bmtMb3JkQmF0dGxlUmVjb3JkEgsKA3VpZBgB",
-            "IAEoDRIRCglkYW1hZ2VfaHAYAiABKA0SFAoMaXNfZmluYWxfaGl0GAMgASgI",
-            "EhsKE292ZXJfa2lsbF9kYW1hZ2VfaHAYBCABKA0SGQoRYmF0dGxlX3JlcGxh",
-            "eV9rZXkYBSABKAkSKgoLYXZhdGFyX2xpc3QYBiADKAsyFS5QdW5rTG9yZEJh",
-            "dHRsZUF2YXRhchIUCgxhc3Npc3Rfc2NvcmUYByABKA0SFAoMZGFtYWdlX3Nj",
-            "b3JlGAggASgNEhcKD2ZpbmFsX2hpdF9zY29yZRgJIAEoDUIeqgIbRWdnTGlu",
-            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "dmF0YXIucHJvdG8i6AEKFFB1bmtMb3JkQmF0dGxlUmVjb3JkEgsKA1VpZBgB",
+            "IAEoDRIQCghEYW1hZ2VIcBgCIAEoDRISCgpJc0ZpbmFsSGl0GAMgASgIEhgK",
+            "EE92ZXJLaWxsRGFtYWdlSHAYBCABKA0SFwoPQmF0dGxlUmVwbGF5S2V5GAUg",
+            "ASgJEikKCkF2YXRhckxpc3QYBiADKAsyFS5QdW5rTG9yZEJhdHRsZUF2YXRh",
+            "chITCgtBc3Npc3RTY29yZRgHIAEoDRITCgtEYW1hZ2VTY29yZRgIIAEoDRIV",
+            "Cg1GaW5hbEhpdFNjb3JlGAkgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PunkLordBattleAvatarReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -95,7 +95,7 @@ namespace EggLink.DanhengServer.Proto {
       return new PunkLordBattleRecord(this);
     }
 
-    /// <summary>Field number for the "uid" field.</summary>
+    /// <summary>Field number for the "Uid" field.</summary>
     public const int UidFieldNumber = 1;
     private uint uid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -107,7 +107,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "damage_hp" field.</summary>
+    /// <summary>Field number for the "DamageHp" field.</summary>
     public const int DamageHpFieldNumber = 2;
     private uint damageHp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -119,7 +119,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "is_final_hit" field.</summary>
+    /// <summary>Field number for the "IsFinalHit" field.</summary>
     public const int IsFinalHitFieldNumber = 3;
     private bool isFinalHit_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -131,7 +131,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "over_kill_damage_hp" field.</summary>
+    /// <summary>Field number for the "OverKillDamageHp" field.</summary>
     public const int OverKillDamageHpFieldNumber = 4;
     private uint overKillDamageHp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -143,7 +143,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "battle_replay_key" field.</summary>
+    /// <summary>Field number for the "BattleReplayKey" field.</summary>
     public const int BattleReplayKeyFieldNumber = 5;
     private string battleReplayKey_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -155,7 +155,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "avatar_list" field.</summary>
+    /// <summary>Field number for the "AvatarList" field.</summary>
     public const int AvatarListFieldNumber = 6;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.PunkLordBattleAvatar> _repeated_avatarList_codec
         = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.PunkLordBattleAvatar.Parser);
@@ -166,7 +166,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return avatarList_; }
     }
 
-    /// <summary>Field number for the "assist_score" field.</summary>
+    /// <summary>Field number for the "AssistScore" field.</summary>
     public const int AssistScoreFieldNumber = 7;
     private uint assistScore_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -178,7 +178,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "damage_score" field.</summary>
+    /// <summary>Field number for the "DamageScore" field.</summary>
     public const int DamageScoreFieldNumber = 8;
     private uint damageScore_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -190,7 +190,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "final_hit_score" field.</summary>
+    /// <summary>Field number for the "FinalHitScore" field.</summary>
     public const int FinalHitScoreFieldNumber = 9;
     private uint finalHitScore_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

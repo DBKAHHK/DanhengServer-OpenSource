@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlTdGFtaW5hSW5mb1NjTm90aWZ5LnByb3RvIm8KE1N0YW1pbmFJbmZvU2NO",
-            "b3RpZnkSDwoHc3RhbWluYRgPIAEoDRIXCg9yZXNlcnZlX3N0YW1pbmEYASAB",
-            "KA0SGQoRbmV4dF9yZWNvdmVyX3RpbWUYByABKAMSEwoLT0xETUxNRENJRkQY",
-            "BiABKANCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "b3RpZnkSFwoPcmVzZXJ2ZV9zdGFtaW5hGAIgASgNEhMKC0RQSU1IRU1KS09F",
+            "GAYgASgDEhkKEW5leHRfcmVjb3Zlcl90aW1lGA4gASgDEg8KB3N0YW1pbmEY",
+            "ASABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StaminaInfoScNotify), global::EggLink.DanhengServer.Proto.StaminaInfoScNotify.Parser, new[]{ "Stamina", "ReserveStamina", "NextRecoverTime", "OLDMLMDCIFD" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StaminaInfoScNotify), global::EggLink.DanhengServer.Proto.StaminaInfoScNotify.Parser, new[]{ "ReserveStamina", "DPIMHEMJKOE", "NextRecoverTime", "Stamina" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,10 +73,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StaminaInfoScNotify(StaminaInfoScNotify other) : this() {
-      stamina_ = other.stamina_;
       reserveStamina_ = other.reserveStamina_;
+      dPIMHEMJKOE_ = other.dPIMHEMJKOE_;
       nextRecoverTime_ = other.nextRecoverTime_;
-      oLDMLMDCIFD_ = other.oLDMLMDCIFD_;
+      stamina_ = other.stamina_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,20 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new StaminaInfoScNotify(this);
     }
 
-    /// <summary>Field number for the "stamina" field.</summary>
-    public const int StaminaFieldNumber = 15;
-    private uint stamina_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Stamina {
-      get { return stamina_; }
-      set {
-        stamina_ = value;
-      }
-    }
-
     /// <summary>Field number for the "reserve_stamina" field.</summary>
-    public const int ReserveStaminaFieldNumber = 1;
+    public const int ReserveStaminaFieldNumber = 2;
     private uint reserveStamina_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,8 +98,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "DPIMHEMJKOE" field.</summary>
+    public const int DPIMHEMJKOEFieldNumber = 6;
+    private long dPIMHEMJKOE_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long DPIMHEMJKOE {
+      get { return dPIMHEMJKOE_; }
+      set {
+        dPIMHEMJKOE_ = value;
+      }
+    }
+
     /// <summary>Field number for the "next_recover_time" field.</summary>
-    public const int NextRecoverTimeFieldNumber = 7;
+    public const int NextRecoverTimeFieldNumber = 14;
     private long nextRecoverTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,15 +122,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "OLDMLMDCIFD" field.</summary>
-    public const int OLDMLMDCIFDFieldNumber = 6;
-    private long oLDMLMDCIFD_;
+    /// <summary>Field number for the "stamina" field.</summary>
+    public const int StaminaFieldNumber = 1;
+    private uint stamina_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long OLDMLMDCIFD {
-      get { return oLDMLMDCIFD_; }
+    public uint Stamina {
+      get { return stamina_; }
       set {
-        oLDMLMDCIFD_ = value;
+        stamina_ = value;
       }
     }
 
@@ -149,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Stamina != other.Stamina) return false;
       if (ReserveStamina != other.ReserveStamina) return false;
+      if (DPIMHEMJKOE != other.DPIMHEMJKOE) return false;
       if (NextRecoverTime != other.NextRecoverTime) return false;
-      if (OLDMLMDCIFD != other.OLDMLMDCIFD) return false;
+      if (Stamina != other.Stamina) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Stamina != 0) hash ^= Stamina.GetHashCode();
       if (ReserveStamina != 0) hash ^= ReserveStamina.GetHashCode();
+      if (DPIMHEMJKOE != 0L) hash ^= DPIMHEMJKOE.GetHashCode();
       if (NextRecoverTime != 0L) hash ^= NextRecoverTime.GetHashCode();
-      if (OLDMLMDCIFD != 0L) hash ^= OLDMLMDCIFD.GetHashCode();
+      if (Stamina != 0) hash ^= Stamina.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,21 +182,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ReserveStamina != 0) {
+      if (Stamina != 0) {
         output.WriteRawTag(8);
+        output.WriteUInt32(Stamina);
+      }
+      if (ReserveStamina != 0) {
+        output.WriteRawTag(16);
         output.WriteUInt32(ReserveStamina);
       }
-      if (OLDMLMDCIFD != 0L) {
+      if (DPIMHEMJKOE != 0L) {
         output.WriteRawTag(48);
-        output.WriteInt64(OLDMLMDCIFD);
+        output.WriteInt64(DPIMHEMJKOE);
       }
       if (NextRecoverTime != 0L) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(112);
         output.WriteInt64(NextRecoverTime);
-      }
-      if (Stamina != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(Stamina);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -208,21 +208,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ReserveStamina != 0) {
+      if (Stamina != 0) {
         output.WriteRawTag(8);
+        output.WriteUInt32(Stamina);
+      }
+      if (ReserveStamina != 0) {
+        output.WriteRawTag(16);
         output.WriteUInt32(ReserveStamina);
       }
-      if (OLDMLMDCIFD != 0L) {
+      if (DPIMHEMJKOE != 0L) {
         output.WriteRawTag(48);
-        output.WriteInt64(OLDMLMDCIFD);
+        output.WriteInt64(DPIMHEMJKOE);
       }
       if (NextRecoverTime != 0L) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(112);
         output.WriteInt64(NextRecoverTime);
-      }
-      if (Stamina != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(Stamina);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -234,17 +234,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Stamina != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Stamina);
-      }
       if (ReserveStamina != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ReserveStamina);
+      }
+      if (DPIMHEMJKOE != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(DPIMHEMJKOE);
       }
       if (NextRecoverTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(NextRecoverTime);
       }
-      if (OLDMLMDCIFD != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(OLDMLMDCIFD);
+      if (Stamina != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Stamina);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -258,17 +258,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Stamina != 0) {
-        Stamina = other.Stamina;
-      }
       if (other.ReserveStamina != 0) {
         ReserveStamina = other.ReserveStamina;
+      }
+      if (other.DPIMHEMJKOE != 0L) {
+        DPIMHEMJKOE = other.DPIMHEMJKOE;
       }
       if (other.NextRecoverTime != 0L) {
         NextRecoverTime = other.NextRecoverTime;
       }
-      if (other.OLDMLMDCIFD != 0L) {
-        OLDMLMDCIFD = other.OLDMLMDCIFD;
+      if (other.Stamina != 0) {
+        Stamina = other.Stamina;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -286,19 +286,19 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
+            Stamina = input.ReadUInt32();
+            break;
+          }
+          case 16: {
             ReserveStamina = input.ReadUInt32();
             break;
           }
           case 48: {
-            OLDMLMDCIFD = input.ReadInt64();
+            DPIMHEMJKOE = input.ReadInt64();
             break;
           }
-          case 56: {
+          case 112: {
             NextRecoverTime = input.ReadInt64();
-            break;
-          }
-          case 120: {
-            Stamina = input.ReadUInt32();
             break;
           }
         }
@@ -317,19 +317,19 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
+            Stamina = input.ReadUInt32();
+            break;
+          }
+          case 16: {
             ReserveStamina = input.ReadUInt32();
             break;
           }
           case 48: {
-            OLDMLMDCIFD = input.ReadInt64();
+            DPIMHEMJKOE = input.ReadInt64();
             break;
           }
-          case 56: {
+          case 112: {
             NextRecoverTime = input.ReadInt64();
-            break;
-          }
-          case 120: {
-            Stamina = input.ReadUInt32();
             break;
           }
         }

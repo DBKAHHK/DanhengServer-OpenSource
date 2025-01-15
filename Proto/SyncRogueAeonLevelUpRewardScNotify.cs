@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CihTeW5jUm9ndWVBZW9uTGV2ZWxVcFJld2FyZFNjTm90aWZ5LnByb3RvGg5J",
             "dGVtTGlzdC5wcm90byJfCiJTeW5jUm9ndWVBZW9uTGV2ZWxVcFJld2FyZFNj",
-            "Tm90aWZ5EhkKBnJld2FyZBgCIAEoCzIJLkl0ZW1MaXN0Eg8KB2Flb25faWQY",
-            "BCABKA0SDQoFbGV2ZWwYDiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "Tm90aWZ5Eg8KB2Flb25faWQYBCABKA0SGQoGcmV3YXJkGAEgASgLMgkuSXRl",
+            "bUxpc3QSDQoFbGV2ZWwYCyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SyncRogueAeonLevelUpRewardScNotify), global::EggLink.DanhengServer.Proto.SyncRogueAeonLevelUpRewardScNotify.Parser, new[]{ "Reward", "AeonId", "Level" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SyncRogueAeonLevelUpRewardScNotify), global::EggLink.DanhengServer.Proto.SyncRogueAeonLevelUpRewardScNotify.Parser, new[]{ "AeonId", "Reward", "Level" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SyncRogueAeonLevelUpRewardScNotify(SyncRogueAeonLevelUpRewardScNotify other) : this() {
-      reward_ = other.reward_ != null ? other.reward_.Clone() : null;
       aeonId_ = other.aeonId_;
+      reward_ = other.reward_ != null ? other.reward_.Clone() : null;
       level_ = other.level_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,18 +84,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SyncRogueAeonLevelUpRewardScNotify Clone() {
       return new SyncRogueAeonLevelUpRewardScNotify(this);
-    }
-
-    /// <summary>Field number for the "reward" field.</summary>
-    public const int RewardFieldNumber = 2;
-    private global::EggLink.DanhengServer.Proto.ItemList reward_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ItemList Reward {
-      get { return reward_; }
-      set {
-        reward_ = value;
-      }
     }
 
     /// <summary>Field number for the "aeon_id" field.</summary>
@@ -110,8 +98,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "reward" field.</summary>
+    public const int RewardFieldNumber = 1;
+    private global::EggLink.DanhengServer.Proto.ItemList reward_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ItemList Reward {
+      get { return reward_; }
+      set {
+        reward_ = value;
+      }
+    }
+
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 14;
+    public const int LevelFieldNumber = 11;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,8 +137,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Reward, other.Reward)) return false;
       if (AeonId != other.AeonId) return false;
+      if (!object.Equals(Reward, other.Reward)) return false;
       if (Level != other.Level) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -147,8 +147,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (reward_ != null) hash ^= Reward.GetHashCode();
       if (AeonId != 0) hash ^= AeonId.GetHashCode();
+      if (reward_ != null) hash ^= Reward.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -169,7 +169,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (reward_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(Reward);
       }
       if (AeonId != 0) {
@@ -177,7 +177,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(AeonId);
       }
       if (Level != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(88);
         output.WriteUInt32(Level);
       }
       if (_unknownFields != null) {
@@ -191,7 +191,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (reward_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(Reward);
       }
       if (AeonId != 0) {
@@ -199,7 +199,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(AeonId);
       }
       if (Level != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(88);
         output.WriteUInt32(Level);
       }
       if (_unknownFields != null) {
@@ -212,11 +212,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (reward_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Reward);
-      }
       if (AeonId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AeonId);
+      }
+      if (reward_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Reward);
       }
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
@@ -233,14 +233,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.AeonId != 0) {
+        AeonId = other.AeonId;
+      }
       if (other.reward_ != null) {
         if (reward_ == null) {
           Reward = new global::EggLink.DanhengServer.Proto.ItemList();
         }
         Reward.MergeFrom(other.Reward);
-      }
-      if (other.AeonId != 0) {
-        AeonId = other.AeonId;
       }
       if (other.Level != 0) {
         Level = other.Level;
@@ -260,7 +260,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 10: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
@@ -271,7 +271,7 @@ namespace EggLink.DanhengServer.Proto {
             AeonId = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 88: {
             Level = input.ReadUInt32();
             break;
           }
@@ -290,7 +290,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 10: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
@@ -301,7 +301,7 @@ namespace EggLink.DanhengServer.Proto {
             AeonId = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 88: {
             Level = input.ReadUInt32();
             break;
           }

@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static RelicAvatarRecommendScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9SZWxpY0F2YXRhclJlY29tbWVuZFNjUnNwLnByb3RvIn0KGVJlbGljQXZh",
-            "dGFyUmVjb21tZW5kU2NSc3ASIgoaUk9HVUVfVEFMRU5UX1NUQVRVU19FTkFC",
-            "TEUYCyABKAgSEwoLREpMTUFKQk9KTkIYDiABKA0SFgoOYXZhdGFyX2lkX2xp",
-            "c3QYBCADKA0SDwoHcmV0Y29kZRgHIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
-            "U2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Ch9SZWxpY0F2YXRhclJlY29tbWVuZFNjUnNwLnByb3RvIm4KGVJlbGljQXZh",
+            "dGFyUmVjb21tZW5kU2NSc3ASEwoLT0dFR0tPS0dQUEoYAiABKAgSDwoHcmV0",
+            "Y29kZRgLIAEoDRITCgtESEpISUJDRE5CQRgEIAEoDRIWCg5hdmF0YXJfaWRf",
+            "bGlzdBgJIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RelicAvatarRecommendScRsp), global::EggLink.DanhengServer.Proto.RelicAvatarRecommendScRsp.Parser, new[]{ "ROGUETALENTSTATUSENABLE", "DJLMAJBOJNB", "AvatarIdList", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RelicAvatarRecommendScRsp), global::EggLink.DanhengServer.Proto.RelicAvatarRecommendScRsp.Parser, new[]{ "OGEGKOKGPPJ", "Retcode", "DHJHIBCDNBA", "AvatarIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RelicAvatarRecommendScRsp(RelicAvatarRecommendScRsp other) : this() {
-      rOGUETALENTSTATUSENABLE_ = other.rOGUETALENTSTATUSENABLE_;
-      dJLMAJBOJNB_ = other.dJLMAJBOJNB_;
-      avatarIdList_ = other.avatarIdList_.Clone();
+      oGEGKOKGPPJ_ = other.oGEGKOKGPPJ_;
       retcode_ = other.retcode_;
+      dHJHIBCDNBA_ = other.dHJHIBCDNBA_;
+      avatarIdList_ = other.avatarIdList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,43 +87,20 @@ namespace EggLink.DanhengServer.Proto {
       return new RelicAvatarRecommendScRsp(this);
     }
 
-    /// <summary>Field number for the "ROGUE_TALENT_STATUS_ENABLE" field.</summary>
-    public const int ROGUETALENTSTATUSENABLEFieldNumber = 11;
-    private bool rOGUETALENTSTATUSENABLE_;
+    /// <summary>Field number for the "OGEGKOKGPPJ" field.</summary>
+    public const int OGEGKOKGPPJFieldNumber = 2;
+    private bool oGEGKOKGPPJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool ROGUETALENTSTATUSENABLE {
-      get { return rOGUETALENTSTATUSENABLE_; }
+    public bool OGEGKOKGPPJ {
+      get { return oGEGKOKGPPJ_; }
       set {
-        rOGUETALENTSTATUSENABLE_ = value;
+        oGEGKOKGPPJ_ = value;
       }
-    }
-
-    /// <summary>Field number for the "DJLMAJBOJNB" field.</summary>
-    public const int DJLMAJBOJNBFieldNumber = 14;
-    private uint dJLMAJBOJNB_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DJLMAJBOJNB {
-      get { return dJLMAJBOJNB_; }
-      set {
-        dJLMAJBOJNB_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "avatar_id_list" field.</summary>
-    public const int AvatarIdListFieldNumber = 4;
-    private static readonly pb::FieldCodec<uint> _repeated_avatarIdList_codec
-        = pb::FieldCodec.ForUInt32(34);
-    private readonly pbc::RepeatedField<uint> avatarIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> AvatarIdList {
-      get { return avatarIdList_; }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 7;
+    public const int RetcodeFieldNumber = 11;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -132,6 +109,29 @@ namespace EggLink.DanhengServer.Proto {
       set {
         retcode_ = value;
       }
+    }
+
+    /// <summary>Field number for the "DHJHIBCDNBA" field.</summary>
+    public const int DHJHIBCDNBAFieldNumber = 4;
+    private uint dHJHIBCDNBA_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DHJHIBCDNBA {
+      get { return dHJHIBCDNBA_; }
+      set {
+        dHJHIBCDNBA_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "avatar_id_list" field.</summary>
+    public const int AvatarIdListFieldNumber = 9;
+    private static readonly pb::FieldCodec<uint> _repeated_avatarIdList_codec
+        = pb::FieldCodec.ForUInt32(74);
+    private readonly pbc::RepeatedField<uint> avatarIdList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> AvatarIdList {
+      get { return avatarIdList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -149,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ROGUETALENTSTATUSENABLE != other.ROGUETALENTSTATUSENABLE) return false;
-      if (DJLMAJBOJNB != other.DJLMAJBOJNB) return false;
-      if(!avatarIdList_.Equals(other.avatarIdList_)) return false;
+      if (OGEGKOKGPPJ != other.OGEGKOKGPPJ) return false;
       if (Retcode != other.Retcode) return false;
+      if (DHJHIBCDNBA != other.DHJHIBCDNBA) return false;
+      if(!avatarIdList_.Equals(other.avatarIdList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ROGUETALENTSTATUSENABLE != false) hash ^= ROGUETALENTSTATUSENABLE.GetHashCode();
-      if (DJLMAJBOJNB != 0) hash ^= DJLMAJBOJNB.GetHashCode();
-      hash ^= avatarIdList_.GetHashCode();
+      if (OGEGKOKGPPJ != false) hash ^= OGEGKOKGPPJ.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (DHJHIBCDNBA != 0) hash ^= DHJHIBCDNBA.GetHashCode();
+      hash ^= avatarIdList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,18 +182,18 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (OGEGKOKGPPJ != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(OGEGKOKGPPJ);
+      }
+      if (DHJHIBCDNBA != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(DHJHIBCDNBA);
+      }
       avatarIdList_.WriteTo(output, _repeated_avatarIdList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(Retcode);
-      }
-      if (ROGUETALENTSTATUSENABLE != false) {
         output.WriteRawTag(88);
-        output.WriteBool(ROGUETALENTSTATUSENABLE);
-      }
-      if (DJLMAJBOJNB != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(DJLMAJBOJNB);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -205,18 +205,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (OGEGKOKGPPJ != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(OGEGKOKGPPJ);
+      }
+      if (DHJHIBCDNBA != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(DHJHIBCDNBA);
+      }
       avatarIdList_.WriteTo(ref output, _repeated_avatarIdList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(Retcode);
-      }
-      if (ROGUETALENTSTATUSENABLE != false) {
         output.WriteRawTag(88);
-        output.WriteBool(ROGUETALENTSTATUSENABLE);
-      }
-      if (DJLMAJBOJNB != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(DJLMAJBOJNB);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -228,16 +228,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ROGUETALENTSTATUSENABLE != false) {
+      if (OGEGKOKGPPJ != false) {
         size += 1 + 1;
       }
-      if (DJLMAJBOJNB != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DJLMAJBOJNB);
-      }
-      size += avatarIdList_.CalculateSize(_repeated_avatarIdList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
+      if (DHJHIBCDNBA != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DHJHIBCDNBA);
+      }
+      size += avatarIdList_.CalculateSize(_repeated_avatarIdList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -250,16 +250,16 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ROGUETALENTSTATUSENABLE != false) {
-        ROGUETALENTSTATUSENABLE = other.ROGUETALENTSTATUSENABLE;
+      if (other.OGEGKOKGPPJ != false) {
+        OGEGKOKGPPJ = other.OGEGKOKGPPJ;
       }
-      if (other.DJLMAJBOJNB != 0) {
-        DJLMAJBOJNB = other.DJLMAJBOJNB;
-      }
-      avatarIdList_.Add(other.avatarIdList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
+      if (other.DHJHIBCDNBA != 0) {
+        DHJHIBCDNBA = other.DHJHIBCDNBA;
+      }
+      avatarIdList_.Add(other.avatarIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -275,21 +275,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34:
+          case 16: {
+            OGEGKOKGPPJ = input.ReadBool();
+            break;
+          }
           case 32: {
+            DHJHIBCDNBA = input.ReadUInt32();
+            break;
+          }
+          case 74:
+          case 72: {
             avatarIdList_.AddEntriesFrom(input, _repeated_avatarIdList_codec);
             break;
           }
-          case 56: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
           case 88: {
-            ROGUETALENTSTATUSENABLE = input.ReadBool();
-            break;
-          }
-          case 112: {
-            DJLMAJBOJNB = input.ReadUInt32();
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -307,21 +307,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34:
+          case 16: {
+            OGEGKOKGPPJ = input.ReadBool();
+            break;
+          }
           case 32: {
+            DHJHIBCDNBA = input.ReadUInt32();
+            break;
+          }
+          case 74:
+          case 72: {
             avatarIdList_.AddEntriesFrom(ref input, _repeated_avatarIdList_codec);
             break;
           }
-          case 56: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
           case 88: {
-            ROGUETALENTSTATUSENABLE = input.ReadBool();
-            break;
-          }
-          case 112: {
-            DJLMAJBOJNB = input.ReadUInt32();
+            Retcode = input.ReadUInt32();
             break;
           }
         }

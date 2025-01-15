@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxTY2VuZUVudGl0eVJlZnJlc2hJbmZvLnByb3RvGhVTY2VuZUVudGl0eUlu",
-            "Zm8ucHJvdG8iewoWU2NlbmVFbnRpdHlSZWZyZXNoSW5mbxImCgphZGRfZW50",
-            "aXR5GAggASgLMhAuU2NlbmVFbnRpdHlJbmZvSAASFQoLS0dMTUlNQklDSU4Y",
-            "DCABKA1IABIXCg1kZWxldGVfZW50aXR5GA0gASgNSABCCQoHcmVmcmVzaEIe",
-            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Zm8ucHJvdG8ifwoWU2NlbmVFbnRpdHlSZWZyZXNoSW5mbxImCgphZGRfZW50",
+            "aXR5GA8gASgLMhAuU2NlbmVFbnRpdHlJbmZvSAASFwoNZGVsZXRlX2VudGl0",
+            "eRgGIAEoDUgAEhUKC01ISE9BQUhER0FPGA0gASgNSABCDQoLZW50aXR5X2Nh",
+            "c2VCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneEntityInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo), global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo.Parser, new[]{ "AddEntity", "KGLMIMBICIN", "DeleteEntity" }, new[]{ "Refresh" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo), global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo.Parser, new[]{ "AddEntity", "DeleteEntity", "MHHOAAHDGAO" }, new[]{ "EntityCase" }, null, null, null)
           }));
     }
     #endregion
@@ -74,15 +74,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SceneEntityRefreshInfo(SceneEntityRefreshInfo other) : this() {
-      switch (other.RefreshCase) {
-        case RefreshOneofCase.AddEntity:
+      switch (other.EntityCaseCase) {
+        case EntityCaseOneofCase.AddEntity:
           AddEntity = other.AddEntity.Clone();
           break;
-        case RefreshOneofCase.KGLMIMBICIN:
-          KGLMIMBICIN = other.KGLMIMBICIN;
-          break;
-        case RefreshOneofCase.DeleteEntity:
+        case EntityCaseOneofCase.DeleteEntity:
           DeleteEntity = other.DeleteEntity;
+          break;
+        case EntityCaseOneofCase.MHHOAAHDGAO:
+          MHHOAAHDGAO = other.MHHOAAHDGAO;
           break;
       }
 
@@ -96,95 +96,89 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "add_entity" field.</summary>
-    public const int AddEntityFieldNumber = 8;
+    public const int AddEntityFieldNumber = 15;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.SceneEntityInfo AddEntity {
-      get { return refreshCase_ == RefreshOneofCase.AddEntity ? (global::EggLink.DanhengServer.Proto.SceneEntityInfo) refresh_ : null; }
+      get { return entityCaseCase_ == EntityCaseOneofCase.AddEntity ? (global::EggLink.DanhengServer.Proto.SceneEntityInfo) entityCase_ : null; }
       set {
-        refresh_ = value;
-        refreshCase_ = value == null ? RefreshOneofCase.None : RefreshOneofCase.AddEntity;
-      }
-    }
-
-    /// <summary>Field number for the "KGLMIMBICIN" field.</summary>
-    public const int KGLMIMBICINFieldNumber = 12;
-    /// <summary>
-    /// 13
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint KGLMIMBICIN {
-      get { return HasKGLMIMBICIN ? (uint) refresh_ : 0; }
-      set {
-        refresh_ = value;
-        refreshCase_ = RefreshOneofCase.KGLMIMBICIN;
-      }
-    }
-    /// <summary>Gets whether the "KGLMIMBICIN" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasKGLMIMBICIN {
-      get { return refreshCase_ == RefreshOneofCase.KGLMIMBICIN; }
-    }
-    /// <summary> Clears the value of the oneof if it's currently set to "KGLMIMBICIN" </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearKGLMIMBICIN() {
-      if (HasKGLMIMBICIN) {
-        ClearRefresh();
+        entityCase_ = value;
+        entityCaseCase_ = value == null ? EntityCaseOneofCase.None : EntityCaseOneofCase.AddEntity;
       }
     }
 
     /// <summary>Field number for the "delete_entity" field.</summary>
-    public const int DeleteEntityFieldNumber = 13;
-    /// <summary>
-    /// 12
-    /// </summary>
+    public const int DeleteEntityFieldNumber = 6;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint DeleteEntity {
-      get { return HasDeleteEntity ? (uint) refresh_ : 0; }
+      get { return HasDeleteEntity ? (uint) entityCase_ : 0; }
       set {
-        refresh_ = value;
-        refreshCase_ = RefreshOneofCase.DeleteEntity;
+        entityCase_ = value;
+        entityCaseCase_ = EntityCaseOneofCase.DeleteEntity;
       }
     }
     /// <summary>Gets whether the "delete_entity" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasDeleteEntity {
-      get { return refreshCase_ == RefreshOneofCase.DeleteEntity; }
+      get { return entityCaseCase_ == EntityCaseOneofCase.DeleteEntity; }
     }
     /// <summary> Clears the value of the oneof if it's currently set to "delete_entity" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearDeleteEntity() {
       if (HasDeleteEntity) {
-        ClearRefresh();
+        ClearEntityCase();
       }
     }
 
-    private object refresh_;
-    /// <summary>Enum of possible cases for the "refresh" oneof.</summary>
-    public enum RefreshOneofCase {
-      None = 0,
-      AddEntity = 8,
-      KGLMIMBICIN = 12,
-      DeleteEntity = 13,
-    }
-    private RefreshOneofCase refreshCase_ = RefreshOneofCase.None;
+    /// <summary>Field number for the "MHHOAAHDGAO" field.</summary>
+    public const int MHHOAAHDGAOFieldNumber = 13;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public RefreshOneofCase RefreshCase {
-      get { return refreshCase_; }
+    public uint MHHOAAHDGAO {
+      get { return HasMHHOAAHDGAO ? (uint) entityCase_ : 0; }
+      set {
+        entityCase_ = value;
+        entityCaseCase_ = EntityCaseOneofCase.MHHOAAHDGAO;
+      }
+    }
+    /// <summary>Gets whether the "MHHOAAHDGAO" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMHHOAAHDGAO {
+      get { return entityCaseCase_ == EntityCaseOneofCase.MHHOAAHDGAO; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "MHHOAAHDGAO" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMHHOAAHDGAO() {
+      if (HasMHHOAAHDGAO) {
+        ClearEntityCase();
+      }
+    }
+
+    private object entityCase_;
+    /// <summary>Enum of possible cases for the "entity_case" oneof.</summary>
+    public enum EntityCaseOneofCase {
+      None = 0,
+      AddEntity = 15,
+      DeleteEntity = 6,
+      MHHOAAHDGAO = 13,
+    }
+    private EntityCaseOneofCase entityCaseCase_ = EntityCaseOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EntityCaseOneofCase EntityCaseCase {
+      get { return entityCaseCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearRefresh() {
-      refreshCase_ = RefreshOneofCase.None;
-      refresh_ = null;
+    public void ClearEntityCase() {
+      entityCaseCase_ = EntityCaseOneofCase.None;
+      entityCase_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -203,9 +197,9 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(AddEntity, other.AddEntity)) return false;
-      if (KGLMIMBICIN != other.KGLMIMBICIN) return false;
       if (DeleteEntity != other.DeleteEntity) return false;
-      if (RefreshCase != other.RefreshCase) return false;
+      if (MHHOAAHDGAO != other.MHHOAAHDGAO) return false;
+      if (EntityCaseCase != other.EntityCaseCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -213,10 +207,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (refreshCase_ == RefreshOneofCase.AddEntity) hash ^= AddEntity.GetHashCode();
-      if (HasKGLMIMBICIN) hash ^= KGLMIMBICIN.GetHashCode();
+      if (entityCaseCase_ == EntityCaseOneofCase.AddEntity) hash ^= AddEntity.GetHashCode();
       if (HasDeleteEntity) hash ^= DeleteEntity.GetHashCode();
-      hash ^= (int) refreshCase_;
+      if (HasMHHOAAHDGAO) hash ^= MHHOAAHDGAO.GetHashCode();
+      hash ^= (int) entityCaseCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -235,17 +229,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (refreshCase_ == RefreshOneofCase.AddEntity) {
-        output.WriteRawTag(66);
-        output.WriteMessage(AddEntity);
-      }
-      if (HasKGLMIMBICIN) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(KGLMIMBICIN);
-      }
       if (HasDeleteEntity) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(48);
         output.WriteUInt32(DeleteEntity);
+      }
+      if (HasMHHOAAHDGAO) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(MHHOAAHDGAO);
+      }
+      if (entityCaseCase_ == EntityCaseOneofCase.AddEntity) {
+        output.WriteRawTag(122);
+        output.WriteMessage(AddEntity);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -257,17 +251,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (refreshCase_ == RefreshOneofCase.AddEntity) {
-        output.WriteRawTag(66);
-        output.WriteMessage(AddEntity);
-      }
-      if (HasKGLMIMBICIN) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(KGLMIMBICIN);
-      }
       if (HasDeleteEntity) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(48);
         output.WriteUInt32(DeleteEntity);
+      }
+      if (HasMHHOAAHDGAO) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(MHHOAAHDGAO);
+      }
+      if (entityCaseCase_ == EntityCaseOneofCase.AddEntity) {
+        output.WriteRawTag(122);
+        output.WriteMessage(AddEntity);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -279,14 +273,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (refreshCase_ == RefreshOneofCase.AddEntity) {
+      if (entityCaseCase_ == EntityCaseOneofCase.AddEntity) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AddEntity);
-      }
-      if (HasKGLMIMBICIN) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KGLMIMBICIN);
       }
       if (HasDeleteEntity) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DeleteEntity);
+      }
+      if (HasMHHOAAHDGAO) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MHHOAAHDGAO);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -300,18 +294,18 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      switch (other.RefreshCase) {
-        case RefreshOneofCase.AddEntity:
+      switch (other.EntityCaseCase) {
+        case EntityCaseOneofCase.AddEntity:
           if (AddEntity == null) {
             AddEntity = new global::EggLink.DanhengServer.Proto.SceneEntityInfo();
           }
           AddEntity.MergeFrom(other.AddEntity);
           break;
-        case RefreshOneofCase.KGLMIMBICIN:
-          KGLMIMBICIN = other.KGLMIMBICIN;
-          break;
-        case RefreshOneofCase.DeleteEntity:
+        case EntityCaseOneofCase.DeleteEntity:
           DeleteEntity = other.DeleteEntity;
+          break;
+        case EntityCaseOneofCase.MHHOAAHDGAO:
+          MHHOAAHDGAO = other.MHHOAAHDGAO;
           break;
       }
 
@@ -330,21 +324,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66: {
+          case 48: {
+            DeleteEntity = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            MHHOAAHDGAO = input.ReadUInt32();
+            break;
+          }
+          case 122: {
             global::EggLink.DanhengServer.Proto.SceneEntityInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneEntityInfo();
-            if (refreshCase_ == RefreshOneofCase.AddEntity) {
+            if (entityCaseCase_ == EntityCaseOneofCase.AddEntity) {
               subBuilder.MergeFrom(AddEntity);
             }
             input.ReadMessage(subBuilder);
             AddEntity = subBuilder;
-            break;
-          }
-          case 96: {
-            KGLMIMBICIN = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            DeleteEntity = input.ReadUInt32();
             break;
           }
         }
@@ -362,21 +356,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66: {
+          case 48: {
+            DeleteEntity = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            MHHOAAHDGAO = input.ReadUInt32();
+            break;
+          }
+          case 122: {
             global::EggLink.DanhengServer.Proto.SceneEntityInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneEntityInfo();
-            if (refreshCase_ == RefreshOneofCase.AddEntity) {
+            if (entityCaseCase_ == EntityCaseOneofCase.AddEntity) {
               subBuilder.MergeFrom(AddEntity);
             }
             input.ReadMessage(subBuilder);
             AddEntity = subBuilder;
-            break;
-          }
-          case 96: {
-            KGLMIMBICIN = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            DeleteEntity = input.ReadUInt32();
             break;
           }
         }

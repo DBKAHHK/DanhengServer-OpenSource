@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GetNpcTakenRewardScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxHZXROcGNUYWtlblJld2FyZFNjUnNwLnByb3RvIk4KFkdldE5wY1Rha2Vu",
-            "UmV3YXJkU2NSc3ASDwoHcmV0Y29kZRgJIAEoDRITCgtBUElCRkVPQ0hORBgP",
-            "IAMoDRIOCgZucGNfaWQYAyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
-            "ci5Qcm90b2IGcHJvdG8z"));
+            "ChxHZXROcGNUYWtlblJld2FyZFNjUnNwLnByb3RvIlIKFkdldE5wY1Rha2Vu",
+            "UmV3YXJkU2NSc3ASDwoHcmV0Y29kZRgJIAEoDRIOCgZucGNfaWQYDSABKA0S",
+            "FwoPdGFsa19ldmVudF9saXN0GAUgAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetNpcTakenRewardScRsp), global::EggLink.DanhengServer.Proto.GetNpcTakenRewardScRsp.Parser, new[]{ "Retcode", "APIBFEOCHND", "NpcId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetNpcTakenRewardScRsp), global::EggLink.DanhengServer.Proto.GetNpcTakenRewardScRsp.Parser, new[]{ "Retcode", "NpcId", "TalkEventList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetNpcTakenRewardScRsp(GetNpcTakenRewardScRsp other) : this() {
       retcode_ = other.retcode_;
-      aPIBFEOCHND_ = other.aPIBFEOCHND_.Clone();
       npcId_ = other.npcId_;
+      talkEventList_ = other.talkEventList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -97,19 +97,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "APIBFEOCHND" field.</summary>
-    public const int APIBFEOCHNDFieldNumber = 15;
-    private static readonly pb::FieldCodec<uint> _repeated_aPIBFEOCHND_codec
-        = pb::FieldCodec.ForUInt32(122);
-    private readonly pbc::RepeatedField<uint> aPIBFEOCHND_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> APIBFEOCHND {
-      get { return aPIBFEOCHND_; }
-    }
-
     /// <summary>Field number for the "npc_id" field.</summary>
-    public const int NpcIdFieldNumber = 3;
+    public const int NpcIdFieldNumber = 13;
     private uint npcId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -118,6 +107,17 @@ namespace EggLink.DanhengServer.Proto {
       set {
         npcId_ = value;
       }
+    }
+
+    /// <summary>Field number for the "talk_event_list" field.</summary>
+    public const int TalkEventListFieldNumber = 5;
+    private static readonly pb::FieldCodec<uint> _repeated_talkEventList_codec
+        = pb::FieldCodec.ForUInt32(42);
+    private readonly pbc::RepeatedField<uint> talkEventList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> TalkEventList {
+      get { return talkEventList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -136,8 +136,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Retcode != other.Retcode) return false;
-      if(!aPIBFEOCHND_.Equals(other.aPIBFEOCHND_)) return false;
       if (NpcId != other.NpcId) return false;
+      if(!talkEventList_.Equals(other.talkEventList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,8 +146,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      hash ^= aPIBFEOCHND_.GetHashCode();
       if (NpcId != 0) hash ^= NpcId.GetHashCode();
+      hash ^= talkEventList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,15 +166,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (NpcId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(NpcId);
-      }
+      talkEventList_.WriteTo(output, _repeated_talkEventList_codec);
       if (Retcode != 0) {
         output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
       }
-      aPIBFEOCHND_.WriteTo(output, _repeated_aPIBFEOCHND_codec);
+      if (NpcId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(NpcId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -185,15 +185,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (NpcId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(NpcId);
-      }
+      talkEventList_.WriteTo(ref output, _repeated_talkEventList_codec);
       if (Retcode != 0) {
         output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
       }
-      aPIBFEOCHND_.WriteTo(ref output, _repeated_aPIBFEOCHND_codec);
+      if (NpcId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(NpcId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -207,10 +207,10 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += aPIBFEOCHND_.CalculateSize(_repeated_aPIBFEOCHND_codec);
       if (NpcId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NpcId);
       }
+      size += talkEventList_.CalculateSize(_repeated_talkEventList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -226,10 +226,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      aPIBFEOCHND_.Add(other.aPIBFEOCHND_);
       if (other.NpcId != 0) {
         NpcId = other.NpcId;
       }
+      talkEventList_.Add(other.talkEventList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -245,17 +245,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            NpcId = input.ReadUInt32();
+          case 42:
+          case 40: {
+            talkEventList_.AddEntriesFrom(input, _repeated_talkEventList_codec);
             break;
           }
           case 72: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 122:
-          case 120: {
-            aPIBFEOCHND_.AddEntriesFrom(input, _repeated_aPIBFEOCHND_codec);
+          case 104: {
+            NpcId = input.ReadUInt32();
             break;
           }
         }
@@ -273,17 +273,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            NpcId = input.ReadUInt32();
+          case 42:
+          case 40: {
+            talkEventList_.AddEntriesFrom(ref input, _repeated_talkEventList_codec);
             break;
           }
           case 72: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 122:
-          case 120: {
-            aPIBFEOCHND_.AddEntriesFrom(ref input, _repeated_aPIBFEOCHND_codec);
+          case 104: {
+            NpcId = input.ReadUInt32();
             break;
           }
         }

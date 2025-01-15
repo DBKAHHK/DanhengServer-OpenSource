@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChlDaGFsbGVuZ2VTdGF0aXN0aWNzLnByb3RvGh1DaGFsbGVuZ2VTdGFnZVRl",
             "cnRpbmdnaS5wcm90byJbChNDaGFsbGVuZ2VTdGF0aXN0aWNzEjEKD3N0YWdl",
-            "X3RlcnRpbmdnaRgNIAEoCzIYLkNoYWxsZW5nZVN0YWdlVGVydGluZ2dpEhEK",
-            "CXJlY29yZF9pZBgHIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "X3RlcnRpbmdnaRgCIAEoCzIYLkNoYWxsZW5nZVN0YWdlVGVydGluZ2dpEhEK",
+            "CXJlY29yZF9pZBgFIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeStageTertinggiReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "stage_tertinggi" field.</summary>
-    public const int StageTertinggiFieldNumber = 13;
+    public const int StageTertinggiFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.ChallengeStageTertinggi stageTertinggi_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "record_id" field.</summary>
-    public const int RecordIdFieldNumber = 7;
+    public const int RecordIdFieldNumber = 5;
     private uint recordId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (RecordId != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(RecordId);
-      }
       if (stageTertinggi_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(18);
         output.WriteMessage(StageTertinggi);
+      }
+      if (RecordId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(RecordId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (RecordId != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(RecordId);
-      }
       if (stageTertinggi_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(18);
         output.WriteMessage(StageTertinggi);
+      }
+      if (RecordId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(RecordId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            RecordId = input.ReadUInt32();
-            break;
-          }
-          case 106: {
+          case 18: {
             if (stageTertinggi_ == null) {
               StageTertinggi = new global::EggLink.DanhengServer.Proto.ChallengeStageTertinggi();
             }
             input.ReadMessage(StageTertinggi);
+            break;
+          }
+          case 40: {
+            RecordId = input.ReadUInt32();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            RecordId = input.ReadUInt32();
-            break;
-          }
-          case 106: {
+          case 18: {
             if (stageTertinggi_ == null) {
               StageTertinggi = new global::EggLink.DanhengServer.Proto.ChallengeStageTertinggi();
             }
             input.ReadMessage(StageTertinggi);
+            break;
+          }
+          case 40: {
+            RecordId = input.ReadUInt32();
             break;
           }
         }

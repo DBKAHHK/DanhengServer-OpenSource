@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRMZWF2ZVJhaWRDc1JlcS5wcm90byI3Cg5MZWF2ZVJhaWRDc1JlcRIUCgxp",
-            "c19zYXZlX2RhdGEYAiABKAgSDwoHcmFpZF9pZBgMIAEoDUIeqgIbRWdnTGlu",
+            "c19zYXZlX2RhdGEYDCABKAgSDwoHcmFpZF9pZBgJIAEoDUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_save_data" field.</summary>
-    public const int IsSaveDataFieldNumber = 2;
+    public const int IsSaveDataFieldNumber = 12;
     private bool isSaveData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "raid_id" field.</summary>
-    public const int RaidIdFieldNumber = 12;
+    public const int RaidIdFieldNumber = 9;
     private uint raidId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsSaveData != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(IsSaveData);
-      }
       if (RaidId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(72);
         output.WriteUInt32(RaidId);
+      }
+      if (IsSaveData != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(IsSaveData);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsSaveData != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(IsSaveData);
-      }
       if (RaidId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(72);
         output.WriteUInt32(RaidId);
+      }
+      if (IsSaveData != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(IsSaveData);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            IsSaveData = input.ReadBool();
+          case 72: {
+            RaidId = input.ReadUInt32();
             break;
           }
           case 96: {
-            RaidId = input.ReadUInt32();
+            IsSaveData = input.ReadBool();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            IsSaveData = input.ReadBool();
+          case 72: {
+            RaidId = input.ReadUInt32();
             break;
           }
           case 96: {
-            RaidId = input.ReadUInt32();
+            IsSaveData = input.ReadBool();
             break;
           }
         }

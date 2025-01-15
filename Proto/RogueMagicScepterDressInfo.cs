@@ -26,12 +26,12 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiBSb2d1ZU1hZ2ljU2NlcHRlckRyZXNzSW5mby5wcm90byJcChpSb2d1ZU1h",
             "Z2ljU2NlcHRlckRyZXNzSW5mbxIiChpkcmVzc19tYWdpY191bml0X3VuaXF1",
-            "ZV9pZBgGIAEoDRIMCgRzbG90GAEgASgNEgwKBHR5cGUYDSABKA1CHqoCG0Vn",
+            "ZV9pZBgOIAEoDRIMCgR0eXBlGAEgASgNEgwKBHNsb3QYDSABKA1CHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicScepterDressInfo), global::EggLink.DanhengServer.Proto.RogueMagicScepterDressInfo.Parser, new[]{ "DressMagicUnitUniqueId", "Slot", "Type" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicScepterDressInfo), global::EggLink.DanhengServer.Proto.RogueMagicScepterDressInfo.Parser, new[]{ "DressMagicUnitUniqueId", "Type", "Slot" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueMagicScepterDressInfo(RogueMagicScepterDressInfo other) : this() {
       dressMagicUnitUniqueId_ = other.dressMagicUnitUniqueId_;
-      slot_ = other.slot_;
       type_ = other.type_;
+      slot_ = other.slot_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "dress_magic_unit_unique_id" field.</summary>
-    public const int DressMagicUnitUniqueIdFieldNumber = 6;
+    public const int DressMagicUnitUniqueIdFieldNumber = 14;
     private uint dressMagicUnitUniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,20 +97,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "slot" field.</summary>
-    public const int SlotFieldNumber = 1;
-    private uint slot_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Slot {
-      get { return slot_; }
-      set {
-        slot_ = value;
-      }
-    }
-
     /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 13;
+    public const int TypeFieldNumber = 1;
     private uint type_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -118,6 +106,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return type_; }
       set {
         type_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "slot" field.</summary>
+    public const int SlotFieldNumber = 13;
+    private uint slot_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Slot {
+      get { return slot_; }
+      set {
+        slot_ = value;
       }
     }
 
@@ -137,8 +137,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (DressMagicUnitUniqueId != other.DressMagicUnitUniqueId) return false;
-      if (Slot != other.Slot) return false;
       if (Type != other.Type) return false;
+      if (Slot != other.Slot) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,8 +147,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (DressMagicUnitUniqueId != 0) hash ^= DressMagicUnitUniqueId.GetHashCode();
-      if (Slot != 0) hash ^= Slot.GetHashCode();
       if (Type != 0) hash ^= Type.GetHashCode();
+      if (Slot != 0) hash ^= Slot.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Slot != 0) {
+      if (Type != 0) {
         output.WriteRawTag(8);
+        output.WriteUInt32(Type);
+      }
+      if (Slot != 0) {
+        output.WriteRawTag(104);
         output.WriteUInt32(Slot);
       }
       if (DressMagicUnitUniqueId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(112);
         output.WriteUInt32(DressMagicUnitUniqueId);
-      }
-      if (Type != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(Type);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Slot != 0) {
+      if (Type != 0) {
         output.WriteRawTag(8);
+        output.WriteUInt32(Type);
+      }
+      if (Slot != 0) {
+        output.WriteRawTag(104);
         output.WriteUInt32(Slot);
       }
       if (DressMagicUnitUniqueId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(112);
         output.WriteUInt32(DressMagicUnitUniqueId);
-      }
-      if (Type != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(Type);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -214,11 +214,11 @@ namespace EggLink.DanhengServer.Proto {
       if (DressMagicUnitUniqueId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DressMagicUnitUniqueId);
       }
-      if (Slot != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Slot);
-      }
       if (Type != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Type);
+      }
+      if (Slot != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Slot);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -235,11 +235,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.DressMagicUnitUniqueId != 0) {
         DressMagicUnitUniqueId = other.DressMagicUnitUniqueId;
       }
-      if (other.Slot != 0) {
-        Slot = other.Slot;
-      }
       if (other.Type != 0) {
         Type = other.Type;
+      }
+      if (other.Slot != 0) {
+        Slot = other.Slot;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Slot = input.ReadUInt32();
-            break;
-          }
-          case 48: {
-            DressMagicUnitUniqueId = input.ReadUInt32();
+            Type = input.ReadUInt32();
             break;
           }
           case 104: {
-            Type = input.ReadUInt32();
+            Slot = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            DressMagicUnitUniqueId = input.ReadUInt32();
             break;
           }
         }
@@ -284,15 +284,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Slot = input.ReadUInt32();
-            break;
-          }
-          case 48: {
-            DressMagicUnitUniqueId = input.ReadUInt32();
+            Type = input.ReadUInt32();
             break;
           }
           case 104: {
-            Type = input.ReadUInt32();
+            Slot = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            DressMagicUnitUniqueId = input.ReadUInt32();
             break;
           }
         }

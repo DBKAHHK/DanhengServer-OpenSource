@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxUcmFpblBhcnR5R2FtZUl0ZW1JbmZvLnByb3RvGhxUcmFpblBhcnR5R2Ft",
-            "ZUNhcmRJbmZvLnByb3RvInoKFlRyYWluUGFydHlHYW1lSXRlbUluZm8SEwoL",
-            "TkVGT0xIT05JTEoYCCABKAgSNgoVdHJhaW5fcGFydHlfY2FyZF9pbmZvGAog",
-            "ASgLMhcuVHJhaW5QYXJ0eUdhbWVDYXJkSW5mbxITCgtLRUJMR0VMTE1FRBgO",
+            "ZUNhcmRJbmZvLnByb3RvInoKFlRyYWluUGFydHlHYW1lSXRlbUluZm8SNgoV",
+            "dHJhaW5fcGFydHlfY2FyZF9pbmZvGAMgASgLMhcuVHJhaW5QYXJ0eUdhbWVD",
+            "YXJkSW5mbxITCgtMS0xMTVBPS09HSBgKIAEoCBITCgtIQUZDS09ORUhGTRgJ",
             "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyGameCardInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyGameItemInfo), global::EggLink.DanhengServer.Proto.TrainPartyGameItemInfo.Parser, new[]{ "NEFOLHONILJ", "TrainPartyCardInfo", "KEBLGELLMED" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyGameItemInfo), global::EggLink.DanhengServer.Proto.TrainPartyGameItemInfo.Parser, new[]{ "TrainPartyCardInfo", "LKLLMPOKOGH", "HAFCKONEHFM" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainPartyGameItemInfo(TrainPartyGameItemInfo other) : this() {
-      nEFOLHONILJ_ = other.nEFOLHONILJ_;
       trainPartyCardInfo_ = other.trainPartyCardInfo_ != null ? other.trainPartyCardInfo_.Clone() : null;
-      kEBLGELLMED_ = other.kEBLGELLMED_;
+      lKLLMPOKOGH_ = other.lKLLMPOKOGH_;
+      hAFCKONEHFM_ = other.hAFCKONEHFM_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,20 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new TrainPartyGameItemInfo(this);
     }
 
-    /// <summary>Field number for the "NEFOLHONILJ" field.</summary>
-    public const int NEFOLHONILJFieldNumber = 8;
-    private bool nEFOLHONILJ_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool NEFOLHONILJ {
-      get { return nEFOLHONILJ_; }
-      set {
-        nEFOLHONILJ_ = value;
-      }
-    }
-
     /// <summary>Field number for the "train_party_card_info" field.</summary>
-    public const int TrainPartyCardInfoFieldNumber = 10;
+    public const int TrainPartyCardInfoFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.TrainPartyGameCardInfo trainPartyCardInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,15 +98,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "KEBLGELLMED" field.</summary>
-    public const int KEBLGELLMEDFieldNumber = 14;
-    private uint kEBLGELLMED_;
+    /// <summary>Field number for the "LKLLMPOKOGH" field.</summary>
+    public const int LKLLMPOKOGHFieldNumber = 10;
+    private bool lKLLMPOKOGH_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint KEBLGELLMED {
-      get { return kEBLGELLMED_; }
+    public bool LKLLMPOKOGH {
+      get { return lKLLMPOKOGH_; }
       set {
-        kEBLGELLMED_ = value;
+        lKLLMPOKOGH_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "HAFCKONEHFM" field.</summary>
+    public const int HAFCKONEHFMFieldNumber = 9;
+    private uint hAFCKONEHFM_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint HAFCKONEHFM {
+      get { return hAFCKONEHFM_; }
+      set {
+        hAFCKONEHFM_ = value;
       }
     }
 
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (NEFOLHONILJ != other.NEFOLHONILJ) return false;
       if (!object.Equals(TrainPartyCardInfo, other.TrainPartyCardInfo)) return false;
-      if (KEBLGELLMED != other.KEBLGELLMED) return false;
+      if (LKLLMPOKOGH != other.LKLLMPOKOGH) return false;
+      if (HAFCKONEHFM != other.HAFCKONEHFM) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,9 +147,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (NEFOLHONILJ != false) hash ^= NEFOLHONILJ.GetHashCode();
       if (trainPartyCardInfo_ != null) hash ^= TrainPartyCardInfo.GetHashCode();
-      if (KEBLGELLMED != 0) hash ^= KEBLGELLMED.GetHashCode();
+      if (LKLLMPOKOGH != false) hash ^= LKLLMPOKOGH.GetHashCode();
+      if (HAFCKONEHFM != 0) hash ^= HAFCKONEHFM.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,17 +168,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (NEFOLHONILJ != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(NEFOLHONILJ);
-      }
       if (trainPartyCardInfo_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(26);
         output.WriteMessage(TrainPartyCardInfo);
       }
-      if (KEBLGELLMED != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(KEBLGELLMED);
+      if (HAFCKONEHFM != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(HAFCKONEHFM);
+      }
+      if (LKLLMPOKOGH != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(LKLLMPOKOGH);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,17 +190,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (NEFOLHONILJ != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(NEFOLHONILJ);
-      }
       if (trainPartyCardInfo_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(26);
         output.WriteMessage(TrainPartyCardInfo);
       }
-      if (KEBLGELLMED != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(KEBLGELLMED);
+      if (HAFCKONEHFM != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(HAFCKONEHFM);
+      }
+      if (LKLLMPOKOGH != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(LKLLMPOKOGH);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -212,14 +212,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (NEFOLHONILJ != false) {
-        size += 1 + 1;
-      }
       if (trainPartyCardInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TrainPartyCardInfo);
       }
-      if (KEBLGELLMED != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KEBLGELLMED);
+      if (LKLLMPOKOGH != false) {
+        size += 1 + 1;
+      }
+      if (HAFCKONEHFM != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HAFCKONEHFM);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -233,17 +233,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.NEFOLHONILJ != false) {
-        NEFOLHONILJ = other.NEFOLHONILJ;
-      }
       if (other.trainPartyCardInfo_ != null) {
         if (trainPartyCardInfo_ == null) {
           TrainPartyCardInfo = new global::EggLink.DanhengServer.Proto.TrainPartyGameCardInfo();
         }
         TrainPartyCardInfo.MergeFrom(other.TrainPartyCardInfo);
       }
-      if (other.KEBLGELLMED != 0) {
-        KEBLGELLMED = other.KEBLGELLMED;
+      if (other.LKLLMPOKOGH != false) {
+        LKLLMPOKOGH = other.LKLLMPOKOGH;
+      }
+      if (other.HAFCKONEHFM != 0) {
+        HAFCKONEHFM = other.HAFCKONEHFM;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -260,19 +260,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
-            NEFOLHONILJ = input.ReadBool();
-            break;
-          }
-          case 82: {
+          case 26: {
             if (trainPartyCardInfo_ == null) {
               TrainPartyCardInfo = new global::EggLink.DanhengServer.Proto.TrainPartyGameCardInfo();
             }
             input.ReadMessage(TrainPartyCardInfo);
             break;
           }
-          case 112: {
-            KEBLGELLMED = input.ReadUInt32();
+          case 72: {
+            HAFCKONEHFM = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            LKLLMPOKOGH = input.ReadBool();
             break;
           }
         }
@@ -290,19 +290,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
-            NEFOLHONILJ = input.ReadBool();
-            break;
-          }
-          case 82: {
+          case 26: {
             if (trainPartyCardInfo_ == null) {
               TrainPartyCardInfo = new global::EggLink.DanhengServer.Proto.TrainPartyGameCardInfo();
             }
             input.ReadMessage(TrainPartyCardInfo);
             break;
           }
-          case 112: {
-            KEBLGELLMED = input.ReadUInt32();
+          case 72: {
+            HAFCKONEHFM = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            LKLLMPOKOGH = input.ReadBool();
             break;
           }
         }

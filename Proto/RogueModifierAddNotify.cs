@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChxSb2d1ZU1vZGlmaWVyQWRkTm90aWZ5LnByb3RvGhNSb2d1ZU1vZGlmaWVy",
             "LnByb3RvIjoKFlJvZ3VlTW9kaWZpZXJBZGROb3RpZnkSIAoIbW9kaWZpZXIY",
-            "AiABKAsyDi5Sb2d1ZU1vZGlmaWVyQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "ASABKAsyDi5Sb2d1ZU1vZGlmaWVyQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueModifierReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "modifier" field.</summary>
-    public const int ModifierFieldNumber = 2;
+    public const int ModifierFieldNumber = 1;
     private global::EggLink.DanhengServer.Proto.RogueModifier modifier_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (modifier_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(Modifier);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (modifier_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(Modifier);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 10: {
             if (modifier_ == null) {
               Modifier = new global::EggLink.DanhengServer.Proto.RogueModifier();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 10: {
             if (modifier_ == null) {
               Modifier = new global::EggLink.DanhengServer.Proto.RogueModifier();
             }

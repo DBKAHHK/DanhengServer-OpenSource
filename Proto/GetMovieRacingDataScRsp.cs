@@ -24,15 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GetMovieRacingDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1HZXRNb3ZpZVJhY2luZ0RhdGFTY1JzcC5wcm90bxoVTW92aWVSYWNpbmdE",
-            "YXRhLnByb3RvIlwKF0dldE1vdmllUmFjaW5nRGF0YVNjUnNwEjAKFm1vdmll",
-            "X3JhY2luZ19kYXRhX2xpc3QYCyADKAsyEC5Nb3ZpZVJhY2luZ0RhdGESDwoH",
-            "cmV0Y29kZRgHIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
-            "YgZwcm90bzM="));
+            "Ch1HZXRNb3ZpZVJhY2luZ0RhdGFTY1JzcC5wcm90bxoQUmFjaW5nRGF0YS5w",
+            "cm90byJMChdHZXRNb3ZpZVJhY2luZ0RhdGFTY1JzcBIgCgtPREpJR0VCRUhH",
+            "QxgDIAMoCzILLlJhY2luZ0RhdGESDwoHcmV0Y29kZRgIIAEoDUIeqgIbRWdn",
+            "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MovieRacingDataReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RacingDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMovieRacingDataScRsp), global::EggLink.DanhengServer.Proto.GetMovieRacingDataScRsp.Parser, new[]{ "MovieRacingDataList", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMovieRacingDataScRsp), global::EggLink.DanhengServer.Proto.GetMovieRacingDataScRsp.Parser, new[]{ "ODJIGEBEHGC", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetMovieRacingDataScRsp(GetMovieRacingDataScRsp other) : this() {
-      movieRacingDataList_ = other.movieRacingDataList_.Clone();
+      oDJIGEBEHGC_ = other.oDJIGEBEHGC_.Clone();
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -85,19 +84,19 @@ namespace EggLink.DanhengServer.Proto {
       return new GetMovieRacingDataScRsp(this);
     }
 
-    /// <summary>Field number for the "movie_racing_data_list" field.</summary>
-    public const int MovieRacingDataListFieldNumber = 11;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MovieRacingData> _repeated_movieRacingDataList_codec
-        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.MovieRacingData.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MovieRacingData> movieRacingDataList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MovieRacingData>();
+    /// <summary>Field number for the "ODJIGEBEHGC" field.</summary>
+    public const int ODJIGEBEHGCFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RacingData> _repeated_oDJIGEBEHGC_codec
+        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.RacingData.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RacingData> oDJIGEBEHGC_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RacingData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MovieRacingData> MovieRacingDataList {
-      get { return movieRacingDataList_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RacingData> ODJIGEBEHGC {
+      get { return oDJIGEBEHGC_; }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 7;
+    public const int RetcodeFieldNumber = 8;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!movieRacingDataList_.Equals(other.movieRacingDataList_)) return false;
+      if(!oDJIGEBEHGC_.Equals(other.oDJIGEBEHGC_)) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -132,7 +131,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= movieRacingDataList_.GetHashCode();
+      hash ^= oDJIGEBEHGC_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -152,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      oDJIGEBEHGC_.WriteTo(output, _repeated_oDJIGEBEHGC_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
-      movieRacingDataList_.WriteTo(output, _repeated_movieRacingDataList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -167,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      oDJIGEBEHGC_.WriteTo(ref output, _repeated_oDJIGEBEHGC_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
-      movieRacingDataList_.WriteTo(ref output, _repeated_movieRacingDataList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -182,7 +181,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += movieRacingDataList_.CalculateSize(_repeated_movieRacingDataList_codec);
+      size += oDJIGEBEHGC_.CalculateSize(_repeated_oDJIGEBEHGC_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
@@ -198,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      movieRacingDataList_.Add(other.movieRacingDataList_);
+      oDJIGEBEHGC_.Add(other.oDJIGEBEHGC_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
@@ -217,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            Retcode = input.ReadUInt32();
+          case 26: {
+            oDJIGEBEHGC_.AddEntriesFrom(input, _repeated_oDJIGEBEHGC_codec);
             break;
           }
-          case 90: {
-            movieRacingDataList_.AddEntriesFrom(input, _repeated_movieRacingDataList_codec);
+          case 64: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -240,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            Retcode = input.ReadUInt32();
+          case 26: {
+            oDJIGEBEHGC_.AddEntriesFrom(ref input, _repeated_oDJIGEBEHGC_codec);
             break;
           }
-          case 90: {
-            movieRacingDataList_.AddEntriesFrom(ref input, _repeated_movieRacingDataList_codec);
+          case 64: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

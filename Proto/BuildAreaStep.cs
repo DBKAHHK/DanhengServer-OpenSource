@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChNCdWlsZEFyZWFTdGVwLnByb3RvGhNCdWlsZEdvYWxTdGVwLnByb3RvIlUK",
-            "DUJ1aWxkQXJlYVN0ZXASDwoHc3RlcF9pZBgKIAEoDRIeCgZzdGF0dXMYASAB",
-            "KA4yDi5CdWlsZEdvYWxTdGVwEhMKC0tFQkVLTUdESktFGAQgASgNQh6qAhtF",
+            "DUJ1aWxkQXJlYVN0ZXASHgoGc3RhdHVzGAMgASgOMg4uQnVpbGRHb2FsU3Rl",
+            "cBIPCgdzdGVwX2lkGAIgASgNEhMKC0pMSERLT0xNRURBGAQgASgNQh6qAhtF",
             "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BuildGoalStepReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BuildAreaStep), global::EggLink.DanhengServer.Proto.BuildAreaStep.Parser, new[]{ "StepId", "Status", "KEBEKMGDJKE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BuildAreaStep), global::EggLink.DanhengServer.Proto.BuildAreaStep.Parser, new[]{ "Status", "StepId", "JLHDKOLMEDA" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BuildAreaStep(BuildAreaStep other) : this() {
-      stepId_ = other.stepId_;
       status_ = other.status_;
-      kEBEKMGDJKE_ = other.kEBEKMGDJKE_;
+      stepId_ = other.stepId_;
+      jLHDKOLMEDA_ = other.jLHDKOLMEDA_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new BuildAreaStep(this);
     }
 
-    /// <summary>Field number for the "step_id" field.</summary>
-    public const int StepIdFieldNumber = 10;
-    private uint stepId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint StepId {
-      get { return stepId_; }
-      set {
-        stepId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 1;
+    public const int StatusFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.BuildGoalStep status_ = global::EggLink.DanhengServer.Proto.BuildGoalStep.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,15 +97,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "KEBEKMGDJKE" field.</summary>
-    public const int KEBEKMGDJKEFieldNumber = 4;
-    private uint kEBEKMGDJKE_;
+    /// <summary>Field number for the "step_id" field.</summary>
+    public const int StepIdFieldNumber = 2;
+    private uint stepId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint KEBEKMGDJKE {
-      get { return kEBEKMGDJKE_; }
+    public uint StepId {
+      get { return stepId_; }
       set {
-        kEBEKMGDJKE_ = value;
+        stepId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "JLHDKOLMEDA" field.</summary>
+    public const int JLHDKOLMEDAFieldNumber = 4;
+    private uint jLHDKOLMEDA_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint JLHDKOLMEDA {
+      get { return jLHDKOLMEDA_; }
+      set {
+        jLHDKOLMEDA_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (StepId != other.StepId) return false;
       if (Status != other.Status) return false;
-      if (KEBEKMGDJKE != other.KEBEKMGDJKE) return false;
+      if (StepId != other.StepId) return false;
+      if (JLHDKOLMEDA != other.JLHDKOLMEDA) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (StepId != 0) hash ^= StepId.GetHashCode();
       if (Status != global::EggLink.DanhengServer.Proto.BuildGoalStep.None) hash ^= Status.GetHashCode();
-      if (KEBEKMGDJKE != 0) hash ^= KEBEKMGDJKE.GetHashCode();
+      if (StepId != 0) hash ^= StepId.GetHashCode();
+      if (JLHDKOLMEDA != 0) hash ^= JLHDKOLMEDA.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (StepId != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(StepId);
+      }
       if (Status != global::EggLink.DanhengServer.Proto.BuildGoalStep.None) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(24);
         output.WriteEnum((int) Status);
       }
-      if (KEBEKMGDJKE != 0) {
+      if (JLHDKOLMEDA != 0) {
         output.WriteRawTag(32);
-        output.WriteUInt32(KEBEKMGDJKE);
-      }
-      if (StepId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(StepId);
+        output.WriteUInt32(JLHDKOLMEDA);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (StepId != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(StepId);
+      }
       if (Status != global::EggLink.DanhengServer.Proto.BuildGoalStep.None) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(24);
         output.WriteEnum((int) Status);
       }
-      if (KEBEKMGDJKE != 0) {
+      if (JLHDKOLMEDA != 0) {
         output.WriteRawTag(32);
-        output.WriteUInt32(KEBEKMGDJKE);
-      }
-      if (StepId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(StepId);
+        output.WriteUInt32(JLHDKOLMEDA);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,14 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (StepId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(StepId);
-      }
       if (Status != global::EggLink.DanhengServer.Proto.BuildGoalStep.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
-      if (KEBEKMGDJKE != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KEBEKMGDJKE);
+      if (StepId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(StepId);
+      }
+      if (JLHDKOLMEDA != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JLHDKOLMEDA);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,14 +232,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.StepId != 0) {
-        StepId = other.StepId;
-      }
       if (other.Status != global::EggLink.DanhengServer.Proto.BuildGoalStep.None) {
         Status = other.Status;
       }
-      if (other.KEBEKMGDJKE != 0) {
-        KEBEKMGDJKE = other.KEBEKMGDJKE;
+      if (other.StepId != 0) {
+        StepId = other.StepId;
+      }
+      if (other.JLHDKOLMEDA != 0) {
+        JLHDKOLMEDA = other.JLHDKOLMEDA;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 16: {
+            StepId = input.ReadUInt32();
+            break;
+          }
+          case 24: {
             Status = (global::EggLink.DanhengServer.Proto.BuildGoalStep) input.ReadEnum();
             break;
           }
           case 32: {
-            KEBEKMGDJKE = input.ReadUInt32();
-            break;
-          }
-          case 80: {
-            StepId = input.ReadUInt32();
+            JLHDKOLMEDA = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 16: {
+            StepId = input.ReadUInt32();
+            break;
+          }
+          case 24: {
             Status = (global::EggLink.DanhengServer.Proto.BuildGoalStep) input.ReadEnum();
             break;
           }
           case 32: {
-            KEBEKMGDJKE = input.ReadUInt32();
-            break;
-          }
-          case 80: {
-            StepId = input.ReadUInt32();
+            JLHDKOLMEDA = input.ReadUInt32();
             break;
           }
         }

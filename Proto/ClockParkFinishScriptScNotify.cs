@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static ClockParkFinishScriptScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNDbG9ja1BhcmtGaW5pc2hTY3JpcHRTY05vdGlmeS5wcm90bxoRTlBBRk1Q",
-            "UEtOREQucHJvdG8iSAodQ2xvY2tQYXJrRmluaXNoU2NyaXB0U2NOb3RpZnkS",
-            "JwoRcm9ndWVfZmluaXNoX2luZm8YBCABKAsyDC5OUEFGTVBQS05EREIeqgIb",
+            "CiNDbG9ja1BhcmtGaW5pc2hTY3JpcHRTY05vdGlmeS5wcm90bxoRTURKTE9K",
+            "Rk1FTUMucHJvdG8iSAodQ2xvY2tQYXJrRmluaXNoU2NyaXB0U2NOb3RpZnkS",
+            "JwoRcm9ndWVfZmluaXNoX2luZm8YCyABKAsyDC5NREpMT0pGTUVNQ0IeqgIb",
             "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NPAFMPPKNDDReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MDJLOJFMEMCReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ClockParkFinishScriptScNotify), global::EggLink.DanhengServer.Proto.ClockParkFinishScriptScNotify.Parser, new[]{ "RogueFinishInfo" }, null, null, null, null)
           }));
@@ -84,11 +84,11 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_finish_info" field.</summary>
-    public const int RogueFinishInfoFieldNumber = 4;
-    private global::EggLink.DanhengServer.Proto.NPAFMPPKNDD rogueFinishInfo_;
+    public const int RogueFinishInfoFieldNumber = 11;
+    private global::EggLink.DanhengServer.Proto.MDJLOJFMEMC rogueFinishInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.NPAFMPPKNDD RogueFinishInfo {
+    public global::EggLink.DanhengServer.Proto.MDJLOJFMEMC RogueFinishInfo {
       get { return rogueFinishInfo_; }
       set {
         rogueFinishInfo_ = value;
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (rogueFinishInfo_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(90);
         output.WriteMessage(RogueFinishInfo);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (rogueFinishInfo_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(90);
         output.WriteMessage(RogueFinishInfo);
       }
       if (_unknownFields != null) {
@@ -182,7 +182,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.rogueFinishInfo_ != null) {
         if (rogueFinishInfo_ == null) {
-          RogueFinishInfo = new global::EggLink.DanhengServer.Proto.NPAFMPPKNDD();
+          RogueFinishInfo = new global::EggLink.DanhengServer.Proto.MDJLOJFMEMC();
         }
         RogueFinishInfo.MergeFrom(other.RogueFinishInfo);
       }
@@ -201,9 +201,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
+          case 90: {
             if (rogueFinishInfo_ == null) {
-              RogueFinishInfo = new global::EggLink.DanhengServer.Proto.NPAFMPPKNDD();
+              RogueFinishInfo = new global::EggLink.DanhengServer.Proto.MDJLOJFMEMC();
             }
             input.ReadMessage(RogueFinishInfo);
             break;
@@ -223,9 +223,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
+          case 90: {
             if (rogueFinishInfo_ == null) {
-              RogueFinishInfo = new global::EggLink.DanhengServer.Proto.NPAFMPPKNDD();
+              RogueFinishInfo = new global::EggLink.DanhengServer.Proto.MDJLOJFMEMC();
             }
             input.ReadMessage(RogueFinishInfo);
             break;

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtEZWxldGVTdW1tb25Vbml0U2NSc3AucHJvdG8iQAoVRGVsZXRlU3VtbW9u",
-            "VW5pdFNjUnNwEhYKDmVudGl0eV9pZF9saXN0GAsgAygNEg8KB3JldGNvZGUY",
-            "ASABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "VW5pdFNjUnNwEhYKDmVudGl0eV9pZF9saXN0GAggAygNEg8KB3JldGNvZGUY",
+            "DiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "entity_id_list" field.</summary>
-    public const int EntityIdListFieldNumber = 11;
+    public const int EntityIdListFieldNumber = 8;
     private static readonly pb::FieldCodec<uint> _repeated_entityIdList_codec
-        = pb::FieldCodec.ForUInt32(90);
+        = pb::FieldCodec.ForUInt32(66);
     private readonly pbc::RepeatedField<uint> entityIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,7 +95,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 1;
+    public const int RetcodeFieldNumber = 14;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -150,11 +150,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      entityIdList_.WriteTo(output, _repeated_entityIdList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
       }
-      entityIdList_.WriteTo(output, _repeated_entityIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -165,11 +165,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      entityIdList_.WriteTo(ref output, _repeated_entityIdList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
       }
-      entityIdList_.WriteTo(ref output, _repeated_entityIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -215,13 +215,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Retcode = input.ReadUInt32();
+          case 66:
+          case 64: {
+            entityIdList_.AddEntriesFrom(input, _repeated_entityIdList_codec);
             break;
           }
-          case 90:
-          case 88: {
-            entityIdList_.AddEntriesFrom(input, _repeated_entityIdList_codec);
+          case 112: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -239,13 +239,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Retcode = input.ReadUInt32();
+          case 66:
+          case 64: {
+            entityIdList_.AddEntriesFrom(ref input, _repeated_entityIdList_codec);
             break;
           }
-          case 90:
-          case 88: {
-            entityIdList_.AddEntriesFrom(ref input, _repeated_entityIdList_codec);
+          case 112: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

@@ -25,14 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtRdWVyeVByb2R1Y3RJbmZvU2NSc3AucHJvdG8aDVByb2R1Y3QucHJvdG8i",
-            "hgEKFVF1ZXJ5UHJvZHVjdEluZm9TY1JzcBITCgtMRE1FRUhFRUdQSBgMIAEo",
-            "DRIPCgdyZXRjb2RlGAggASgNEhMKC0dLREJHSkVDR0hLGAkgASgNEhMKC09N",
-            "TExHSFBPTEFIGAMgASgEEh0KC0JQSElIR09FS0JCGAEgAygLMgguUHJvZHVj",
-            "dEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "lAEKFVF1ZXJ5UHJvZHVjdEluZm9TY1JzcBIPCgdyZXRjb2RlGAkgASgNEh4K",
+            "DHByb2R1Y3RfbGlzdBgPIAMoCzIILlByb2R1Y3QSIAoYbW9udGhfY2FyZF9v",
+            "dXRfZGF0ZV90aW1lGAsgASgEEhMKC0NNR0hETVBFQUtPGA4gASgNEhMKC09E",
+            "TkZJQUFIS0NJGAogASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
+            "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ProductReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.QueryProductInfoScRsp), global::EggLink.DanhengServer.Proto.QueryProductInfoScRsp.Parser, new[]{ "LDMEEHEEGPH", "Retcode", "GKDBGJECGHK", "OMLLGHPOLAH", "BPHIHGOEKBB" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.QueryProductInfoScRsp), global::EggLink.DanhengServer.Proto.QueryProductInfoScRsp.Parser, new[]{ "Retcode", "ProductList", "MonthCardOutDateTime", "CMGHDMPEAKO", "ODNFIAAHKCI" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,11 +75,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public QueryProductInfoScRsp(QueryProductInfoScRsp other) : this() {
-      lDMEEHEEGPH_ = other.lDMEEHEEGPH_;
       retcode_ = other.retcode_;
-      gKDBGJECGHK_ = other.gKDBGJECGHK_;
-      oMLLGHPOLAH_ = other.oMLLGHPOLAH_;
-      bPHIHGOEKBB_ = other.bPHIHGOEKBB_.Clone();
+      productList_ = other.productList_.Clone();
+      monthCardOutDateTime_ = other.monthCardOutDateTime_;
+      cMGHDMPEAKO_ = other.cMGHDMPEAKO_;
+      oDNFIAAHKCI_ = other.oDNFIAAHKCI_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,20 +89,8 @@ namespace EggLink.DanhengServer.Proto {
       return new QueryProductInfoScRsp(this);
     }
 
-    /// <summary>Field number for the "LDMEEHEEGPH" field.</summary>
-    public const int LDMEEHEEGPHFieldNumber = 12;
-    private uint lDMEEHEEGPH_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LDMEEHEEGPH {
-      get { return lDMEEHEEGPH_; }
-      set {
-        lDMEEHEEGPH_ = value;
-      }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 8;
+    public const int RetcodeFieldNumber = 9;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,39 +101,51 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "GKDBGJECGHK" field.</summary>
-    public const int GKDBGJECGHKFieldNumber = 9;
-    private uint gKDBGJECGHK_;
+    /// <summary>Field number for the "product_list" field.</summary>
+    public const int ProductListFieldNumber = 15;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.Product> _repeated_productList_codec
+        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.Product.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Product> productList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Product>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GKDBGJECGHK {
-      get { return gKDBGJECGHK_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Product> ProductList {
+      get { return productList_; }
+    }
+
+    /// <summary>Field number for the "month_card_out_date_time" field.</summary>
+    public const int MonthCardOutDateTimeFieldNumber = 11;
+    private ulong monthCardOutDateTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong MonthCardOutDateTime {
+      get { return monthCardOutDateTime_; }
       set {
-        gKDBGJECGHK_ = value;
+        monthCardOutDateTime_ = value;
       }
     }
 
-    /// <summary>Field number for the "OMLLGHPOLAH" field.</summary>
-    public const int OMLLGHPOLAHFieldNumber = 3;
-    private ulong oMLLGHPOLAH_;
+    /// <summary>Field number for the "CMGHDMPEAKO" field.</summary>
+    public const int CMGHDMPEAKOFieldNumber = 14;
+    private uint cMGHDMPEAKO_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong OMLLGHPOLAH {
-      get { return oMLLGHPOLAH_; }
+    public uint CMGHDMPEAKO {
+      get { return cMGHDMPEAKO_; }
       set {
-        oMLLGHPOLAH_ = value;
+        cMGHDMPEAKO_ = value;
       }
     }
 
-    /// <summary>Field number for the "BPHIHGOEKBB" field.</summary>
-    public const int BPHIHGOEKBBFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.Product> _repeated_bPHIHGOEKBB_codec
-        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.Product.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Product> bPHIHGOEKBB_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Product>();
+    /// <summary>Field number for the "ODNFIAAHKCI" field.</summary>
+    public const int ODNFIAAHKCIFieldNumber = 10;
+    private uint oDNFIAAHKCI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Product> BPHIHGOEKBB {
-      get { return bPHIHGOEKBB_; }
+    public uint ODNFIAAHKCI {
+      get { return oDNFIAAHKCI_; }
+      set {
+        oDNFIAAHKCI_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -162,11 +163,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (LDMEEHEEGPH != other.LDMEEHEEGPH) return false;
       if (Retcode != other.Retcode) return false;
-      if (GKDBGJECGHK != other.GKDBGJECGHK) return false;
-      if (OMLLGHPOLAH != other.OMLLGHPOLAH) return false;
-      if(!bPHIHGOEKBB_.Equals(other.bPHIHGOEKBB_)) return false;
+      if(!productList_.Equals(other.productList_)) return false;
+      if (MonthCardOutDateTime != other.MonthCardOutDateTime) return false;
+      if (CMGHDMPEAKO != other.CMGHDMPEAKO) return false;
+      if (ODNFIAAHKCI != other.ODNFIAAHKCI) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -174,11 +175,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (LDMEEHEEGPH != 0) hash ^= LDMEEHEEGPH.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (GKDBGJECGHK != 0) hash ^= GKDBGJECGHK.GetHashCode();
-      if (OMLLGHPOLAH != 0UL) hash ^= OMLLGHPOLAH.GetHashCode();
-      hash ^= bPHIHGOEKBB_.GetHashCode();
+      hash ^= productList_.GetHashCode();
+      if (MonthCardOutDateTime != 0UL) hash ^= MonthCardOutDateTime.GetHashCode();
+      if (CMGHDMPEAKO != 0) hash ^= CMGHDMPEAKO.GetHashCode();
+      if (ODNFIAAHKCI != 0) hash ^= ODNFIAAHKCI.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -197,23 +198,23 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      bPHIHGOEKBB_.WriteTo(output, _repeated_bPHIHGOEKBB_codec);
-      if (OMLLGHPOLAH != 0UL) {
-        output.WriteRawTag(24);
-        output.WriteUInt64(OMLLGHPOLAH);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
       }
-      if (GKDBGJECGHK != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(GKDBGJECGHK);
+      if (ODNFIAAHKCI != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(ODNFIAAHKCI);
       }
-      if (LDMEEHEEGPH != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(LDMEEHEEGPH);
+      if (MonthCardOutDateTime != 0UL) {
+        output.WriteRawTag(88);
+        output.WriteUInt64(MonthCardOutDateTime);
       }
+      if (CMGHDMPEAKO != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(CMGHDMPEAKO);
+      }
+      productList_.WriteTo(output, _repeated_productList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -224,23 +225,23 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      bPHIHGOEKBB_.WriteTo(ref output, _repeated_bPHIHGOEKBB_codec);
-      if (OMLLGHPOLAH != 0UL) {
-        output.WriteRawTag(24);
-        output.WriteUInt64(OMLLGHPOLAH);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
       }
-      if (GKDBGJECGHK != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(GKDBGJECGHK);
+      if (ODNFIAAHKCI != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(ODNFIAAHKCI);
       }
-      if (LDMEEHEEGPH != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(LDMEEHEEGPH);
+      if (MonthCardOutDateTime != 0UL) {
+        output.WriteRawTag(88);
+        output.WriteUInt64(MonthCardOutDateTime);
       }
+      if (CMGHDMPEAKO != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(CMGHDMPEAKO);
+      }
+      productList_.WriteTo(ref output, _repeated_productList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -251,19 +252,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (LDMEEHEEGPH != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LDMEEHEEGPH);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (GKDBGJECGHK != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GKDBGJECGHK);
+      size += productList_.CalculateSize(_repeated_productList_codec);
+      if (MonthCardOutDateTime != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(MonthCardOutDateTime);
       }
-      if (OMLLGHPOLAH != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(OMLLGHPOLAH);
+      if (CMGHDMPEAKO != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CMGHDMPEAKO);
       }
-      size += bPHIHGOEKBB_.CalculateSize(_repeated_bPHIHGOEKBB_codec);
+      if (ODNFIAAHKCI != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ODNFIAAHKCI);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -276,19 +277,19 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.LDMEEHEEGPH != 0) {
-        LDMEEHEEGPH = other.LDMEEHEEGPH;
-      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.GKDBGJECGHK != 0) {
-        GKDBGJECGHK = other.GKDBGJECGHK;
+      productList_.Add(other.productList_);
+      if (other.MonthCardOutDateTime != 0UL) {
+        MonthCardOutDateTime = other.MonthCardOutDateTime;
       }
-      if (other.OMLLGHPOLAH != 0UL) {
-        OMLLGHPOLAH = other.OMLLGHPOLAH;
+      if (other.CMGHDMPEAKO != 0) {
+        CMGHDMPEAKO = other.CMGHDMPEAKO;
       }
-      bPHIHGOEKBB_.Add(other.bPHIHGOEKBB_);
+      if (other.ODNFIAAHKCI != 0) {
+        ODNFIAAHKCI = other.ODNFIAAHKCI;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -304,24 +305,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            bPHIHGOEKBB_.AddEntriesFrom(input, _repeated_bPHIHGOEKBB_codec);
-            break;
-          }
-          case 24: {
-            OMLLGHPOLAH = input.ReadUInt64();
-            break;
-          }
-          case 64: {
+          case 72: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 72: {
-            GKDBGJECGHK = input.ReadUInt32();
+          case 80: {
+            ODNFIAAHKCI = input.ReadUInt32();
             break;
           }
-          case 96: {
-            LDMEEHEEGPH = input.ReadUInt32();
+          case 88: {
+            MonthCardOutDateTime = input.ReadUInt64();
+            break;
+          }
+          case 112: {
+            CMGHDMPEAKO = input.ReadUInt32();
+            break;
+          }
+          case 122: {
+            productList_.AddEntriesFrom(input, _repeated_productList_codec);
             break;
           }
         }
@@ -339,24 +340,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            bPHIHGOEKBB_.AddEntriesFrom(ref input, _repeated_bPHIHGOEKBB_codec);
-            break;
-          }
-          case 24: {
-            OMLLGHPOLAH = input.ReadUInt64();
-            break;
-          }
-          case 64: {
+          case 72: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 72: {
-            GKDBGJECGHK = input.ReadUInt32();
+          case 80: {
+            ODNFIAAHKCI = input.ReadUInt32();
             break;
           }
-          case 96: {
-            LDMEEHEEGPH = input.ReadUInt32();
+          case 88: {
+            MonthCardOutDateTime = input.ReadUInt64();
+            break;
+          }
+          case 112: {
+            CMGHDMPEAKO = input.ReadUInt32();
+            break;
+          }
+          case 122: {
+            productList_.AddEntriesFrom(ref input, _repeated_productList_codec);
             break;
           }
         }

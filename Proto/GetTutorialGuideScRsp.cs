@@ -25,9 +25,9 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtHZXRUdXRvcmlhbEd1aWRlU2NSc3AucHJvdG8aE1R1dG9yaWFsR3VpZGUu",
-            "cHJvdG8iVQoVR2V0VHV0b3JpYWxHdWlkZVNjUnNwEg8KB3JldGNvZGUYAiAB",
-            "KA0SKwoTdHV0b3JpYWxfZ3VpZGVfbGlzdBgFIAMoCzIOLlR1dG9yaWFsR3Vp",
-            "ZGVCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "cHJvdG8iUwoVR2V0VHV0b3JpYWxHdWlkZVNjUnNwEg8KB1JldGNvZGUYBSAB",
+            "KA0SKQoRVHV0b3JpYWxHdWlkZUxpc3QYCyADKAsyDi5UdXRvcmlhbEd1aWRl",
+            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TutorialGuideReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -84,8 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new GetTutorialGuideScRsp(this);
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 2;
+    /// <summary>Field number for the "Retcode" field.</summary>
+    public const int RetcodeFieldNumber = 5;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,10 +96,10 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "tutorial_guide_list" field.</summary>
-    public const int TutorialGuideListFieldNumber = 5;
+    /// <summary>Field number for the "TutorialGuideList" field.</summary>
+    public const int TutorialGuideListFieldNumber = 11;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.TutorialGuide> _repeated_tutorialGuideList_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.TutorialGuide.Parser);
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.TutorialGuide.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TutorialGuide> tutorialGuideList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TutorialGuide>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
       tutorialGuideList_.WriteTo(output, _repeated_tutorialGuideList_codec);
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
       tutorialGuideList_.WriteTo(ref output, _repeated_tutorialGuideList_codec);
@@ -216,11 +216,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 42: {
+          case 90: {
             tutorialGuideList_.AddEntriesFrom(input, _repeated_tutorialGuideList_codec);
             break;
           }
@@ -239,11 +239,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 42: {
+          case 90: {
             tutorialGuideList_.AddEntriesFrom(ref input, _repeated_tutorialGuideList_codec);
             break;
           }

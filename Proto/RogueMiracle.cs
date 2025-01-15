@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChJSb2d1ZU1pcmFjbGUucHJvdG8ixQEKDFJvZ3VlTWlyYWNsZRIRCgljdXJf",
-            "dGltZXMYAiABKA0SEgoKbWlyYWNsZV9pZBgHIAEoDRISCgpkdXJhYmlsaXR5",
-            "GAEgASgNEhEKCW1heF90aW1lcxgKIAEoDRIzCgtFRUJOQ0lORkRNQhgIIAMo",
-            "CzIeLlJvZ3VlTWlyYWNsZS5FRUJOQ0lORkRNQkVudHJ5GjIKEEVFQk5DSU5G",
-            "RE1CRW50cnkSCwoDa2V5GAEgASgNEg0KBXZhbHVlGAIgASgNOgI4AUIeqgIb",
+            "dGltZXMYDyABKA0SEgoKZHVyYWJpbGl0eRgBIAEoDRIzCgtHTUFGRUpFSkJI",
+            "TxgKIAMoCzIeLlJvZ3VlTWlyYWNsZS5HTUFGRUpFSkJIT0VudHJ5EhEKCW1h",
+            "eF90aW1lcxgOIAEoDRISCgptaXJhY2xlX2lkGAQgASgNGjIKEEdNQUZFSkVK",
+            "QkhPRW50cnkSCwoDa2V5GAEgASgNEg0KBXZhbHVlGAIgASgNOgI4AUIeqgIb",
             "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMiracle), global::EggLink.DanhengServer.Proto.RogueMiracle.Parser, new[]{ "CurTimes", "MiracleId", "Durability", "MaxTimes", "EEBNCINFDMB" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMiracle), global::EggLink.DanhengServer.Proto.RogueMiracle.Parser, new[]{ "CurTimes", "Durability", "GMAFEJEJBHO", "MaxTimes", "MiracleId" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -76,10 +76,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueMiracle(RogueMiracle other) : this() {
       curTimes_ = other.curTimes_;
-      miracleId_ = other.miracleId_;
       durability_ = other.durability_;
+      gMAFEJEJBHO_ = other.gMAFEJEJBHO_.Clone();
       maxTimes_ = other.maxTimes_;
-      eEBNCINFDMB_ = other.eEBNCINFDMB_.Clone();
+      miracleId_ = other.miracleId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -90,7 +90,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cur_times" field.</summary>
-    public const int CurTimesFieldNumber = 2;
+    public const int CurTimesFieldNumber = 15;
     private uint curTimes_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,18 +98,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return curTimes_; }
       set {
         curTimes_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "miracle_id" field.</summary>
-    public const int MiracleIdFieldNumber = 7;
-    private uint miracleId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MiracleId {
-      get { return miracleId_; }
-      set {
-        miracleId_ = value;
       }
     }
 
@@ -125,8 +113,19 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "GMAFEJEJBHO" field.</summary>
+    public const int GMAFEJEJBHOFieldNumber = 10;
+    private static readonly pbc::MapField<uint, uint>.Codec _map_gMAFEJEJBHO_codec
+        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 82);
+    private readonly pbc::MapField<uint, uint> gMAFEJEJBHO_ = new pbc::MapField<uint, uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<uint, uint> GMAFEJEJBHO {
+      get { return gMAFEJEJBHO_; }
+    }
+
     /// <summary>Field number for the "max_times" field.</summary>
-    public const int MaxTimesFieldNumber = 10;
+    public const int MaxTimesFieldNumber = 14;
     private uint maxTimes_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,15 +136,16 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "EEBNCINFDMB" field.</summary>
-    public const int EEBNCINFDMBFieldNumber = 8;
-    private static readonly pbc::MapField<uint, uint>.Codec _map_eEBNCINFDMB_codec
-        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 66);
-    private readonly pbc::MapField<uint, uint> eEBNCINFDMB_ = new pbc::MapField<uint, uint>();
+    /// <summary>Field number for the "miracle_id" field.</summary>
+    public const int MiracleIdFieldNumber = 4;
+    private uint miracleId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<uint, uint> EEBNCINFDMB {
-      get { return eEBNCINFDMB_; }
+    public uint MiracleId {
+      get { return miracleId_; }
+      set {
+        miracleId_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -164,10 +164,10 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (CurTimes != other.CurTimes) return false;
-      if (MiracleId != other.MiracleId) return false;
       if (Durability != other.Durability) return false;
+      if (!GMAFEJEJBHO.Equals(other.GMAFEJEJBHO)) return false;
       if (MaxTimes != other.MaxTimes) return false;
-      if (!EEBNCINFDMB.Equals(other.EEBNCINFDMB)) return false;
+      if (MiracleId != other.MiracleId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -176,10 +176,10 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (CurTimes != 0) hash ^= CurTimes.GetHashCode();
-      if (MiracleId != 0) hash ^= MiracleId.GetHashCode();
       if (Durability != 0) hash ^= Durability.GetHashCode();
+      hash ^= GMAFEJEJBHO.GetHashCode();
       if (MaxTimes != 0) hash ^= MaxTimes.GetHashCode();
-      hash ^= EEBNCINFDMB.GetHashCode();
+      if (MiracleId != 0) hash ^= MiracleId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -202,18 +202,18 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(Durability);
       }
-      if (CurTimes != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(CurTimes);
-      }
       if (MiracleId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(32);
         output.WriteUInt32(MiracleId);
       }
-      eEBNCINFDMB_.WriteTo(output, _map_eEBNCINFDMB_codec);
+      gMAFEJEJBHO_.WriteTo(output, _map_gMAFEJEJBHO_codec);
       if (MaxTimes != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(112);
         output.WriteUInt32(MaxTimes);
+      }
+      if (CurTimes != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(CurTimes);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -229,18 +229,18 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(Durability);
       }
-      if (CurTimes != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(CurTimes);
-      }
       if (MiracleId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(32);
         output.WriteUInt32(MiracleId);
       }
-      eEBNCINFDMB_.WriteTo(ref output, _map_eEBNCINFDMB_codec);
+      gMAFEJEJBHO_.WriteTo(ref output, _map_gMAFEJEJBHO_codec);
       if (MaxTimes != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(112);
         output.WriteUInt32(MaxTimes);
+      }
+      if (CurTimes != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(CurTimes);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
       if (CurTimes != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurTimes);
       }
-      if (MiracleId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MiracleId);
-      }
       if (Durability != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Durability);
       }
+      size += gMAFEJEJBHO_.CalculateSize(_map_gMAFEJEJBHO_codec);
       if (MaxTimes != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxTimes);
       }
-      size += eEBNCINFDMB_.CalculateSize(_map_eEBNCINFDMB_codec);
+      if (MiracleId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MiracleId);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -280,16 +280,16 @@ namespace EggLink.DanhengServer.Proto {
       if (other.CurTimes != 0) {
         CurTimes = other.CurTimes;
       }
-      if (other.MiracleId != 0) {
-        MiracleId = other.MiracleId;
-      }
       if (other.Durability != 0) {
         Durability = other.Durability;
       }
+      gMAFEJEJBHO_.MergeFrom(other.gMAFEJEJBHO_);
       if (other.MaxTimes != 0) {
         MaxTimes = other.MaxTimes;
       }
-      eEBNCINFDMB_.MergeFrom(other.eEBNCINFDMB_);
+      if (other.MiracleId != 0) {
+        MiracleId = other.MiracleId;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -309,20 +309,20 @@ namespace EggLink.DanhengServer.Proto {
             Durability = input.ReadUInt32();
             break;
           }
-          case 16: {
-            CurTimes = input.ReadUInt32();
-            break;
-          }
-          case 56: {
+          case 32: {
             MiracleId = input.ReadUInt32();
             break;
           }
-          case 66: {
-            eEBNCINFDMB_.AddEntriesFrom(input, _map_eEBNCINFDMB_codec);
+          case 82: {
+            gMAFEJEJBHO_.AddEntriesFrom(input, _map_gMAFEJEJBHO_codec);
             break;
           }
-          case 80: {
+          case 112: {
             MaxTimes = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            CurTimes = input.ReadUInt32();
             break;
           }
         }
@@ -344,20 +344,20 @@ namespace EggLink.DanhengServer.Proto {
             Durability = input.ReadUInt32();
             break;
           }
-          case 16: {
-            CurTimes = input.ReadUInt32();
-            break;
-          }
-          case 56: {
+          case 32: {
             MiracleId = input.ReadUInt32();
             break;
           }
-          case 66: {
-            eEBNCINFDMB_.AddEntriesFrom(ref input, _map_eEBNCINFDMB_codec);
+          case 82: {
+            gMAFEJEJBHO_.AddEntriesFrom(ref input, _map_gMAFEJEJBHO_codec);
             break;
           }
-          case 80: {
+          case 112: {
             MaxTimes = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            CurTimes = input.ReadUInt32();
             break;
           }
         }

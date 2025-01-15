@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CitUYWtlTWF0ZXJpYWxTdWJtaXRBY3Rpdml0eVJld2FyZENzUmVxLnByb3Rv",
-            "IkAKJVRha2VNYXRlcmlhbFN1Ym1pdEFjdGl2aXR5UmV3YXJkQ3NSZXESFwoP",
-            "YmVsb2JvZ19zaG9wX2lkGAggASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
-            "ZXIuUHJvdG9iBnByb3RvMw=="));
+            "IjwKJVRha2VNYXRlcmlhbFN1Ym1pdEFjdGl2aXR5UmV3YXJkQ3NSZXESEwoL",
+            "UEVIT0ZCQkROSUMYBCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeMaterialSubmitActivityRewardCsReq), global::EggLink.DanhengServer.Proto.TakeMaterialSubmitActivityRewardCsReq.Parser, new[]{ "BelobogShopId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeMaterialSubmitActivityRewardCsReq), global::EggLink.DanhengServer.Proto.TakeMaterialSubmitActivityRewardCsReq.Parser, new[]{ "PEHOFBBDNIC" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TakeMaterialSubmitActivityRewardCsReq(TakeMaterialSubmitActivityRewardCsReq other) : this() {
-      belobogShopId_ = other.belobogShopId_;
+      pEHOFBBDNIC_ = other.pEHOFBBDNIC_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new TakeMaterialSubmitActivityRewardCsReq(this);
     }
 
-    /// <summary>Field number for the "belobog_shop_id" field.</summary>
-    public const int BelobogShopIdFieldNumber = 8;
-    private uint belobogShopId_;
+    /// <summary>Field number for the "PEHOFBBDNIC" field.</summary>
+    public const int PEHOFBBDNICFieldNumber = 4;
+    private uint pEHOFBBDNIC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BelobogShopId {
-      get { return belobogShopId_; }
+    public uint PEHOFBBDNIC {
+      get { return pEHOFBBDNIC_; }
       set {
-        belobogShopId_ = value;
+        pEHOFBBDNIC_ = value;
       }
     }
 
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (BelobogShopId != other.BelobogShopId) return false;
+      if (PEHOFBBDNIC != other.PEHOFBBDNIC) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -118,7 +118,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (BelobogShopId != 0) hash ^= BelobogShopId.GetHashCode();
+      if (PEHOFBBDNIC != 0) hash ^= PEHOFBBDNIC.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (BelobogShopId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(BelobogShopId);
+      if (PEHOFBBDNIC != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(PEHOFBBDNIC);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -151,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BelobogShopId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(BelobogShopId);
+      if (PEHOFBBDNIC != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(PEHOFBBDNIC);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -165,8 +165,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (BelobogShopId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BelobogShopId);
+      if (PEHOFBBDNIC != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PEHOFBBDNIC);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -180,8 +180,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.BelobogShopId != 0) {
-        BelobogShopId = other.BelobogShopId;
+      if (other.PEHOFBBDNIC != 0) {
+        PEHOFBBDNIC = other.PEHOFBBDNIC;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -198,8 +198,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
-            BelobogShopId = input.ReadUInt32();
+          case 32: {
+            PEHOFBBDNIC = input.ReadUInt32();
             break;
           }
         }
@@ -217,8 +217,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
-            BelobogShopId = input.ReadUInt32();
+          case 32: {
+            PEHOFBBDNIC = input.ReadUInt32();
             break;
           }
         }

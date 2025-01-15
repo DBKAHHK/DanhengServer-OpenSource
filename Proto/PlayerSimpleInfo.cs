@@ -26,19 +26,19 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChZQbGF5ZXJTaW1wbGVJbmZvLnByb3RvGhJQbGF0Zm9ybVR5cGUucHJvdG8a",
             "GEZyaWVuZE9ubGluZVN0YXR1cy5wcm90bxoWQXNzaXN0U2ltcGxlSW5mby5w",
-            "cm90byLWAgoQUGxheWVyU2ltcGxlSW5mbxIYChBsYXN0X2FjdGl2ZV90aW1l",
-            "GAEgASgDEhAKCG5pY2tuYW1lGAwgASgJEhMKC0FFT0hKSU5HSUZLGA8gASgJ",
-            "Eh8KCHBsYXRmb3JtGA0gASgOMg0uUGxhdGZvcm1UeXBlEg0KBWxldmVsGAQg",
-            "ASgNEhEKCWlzX2Jhbm5lZBgFIAEoCBIWCg5jaGF0X2J1YmJsZV9pZBgOIAEo",
-            "DRIRCglzaWduYXR1cmUYCCABKAkSEwoLUERDSUxBRE1KSUoYBiABKAkSMgoX",
-            "YXNzaXN0X3NpbXBsZV9pbmZvX2xpc3QYByADKAsyES5Bc3Npc3RTaW1wbGVJ",
-            "bmZvEhEKCWhlYWRfaWNvbhgLIAEoDRIqCg1vbmxpbmVfc3RhdHVzGAIgASgO",
-            "MhMuRnJpZW5kT25saW5lU3RhdHVzEgsKA3VpZBgKIAEoDUIeqgIbRWdnTGlu",
+            "cm90byLWAgoQUGxheWVyU2ltcGxlSW5mbxIWCg5jaGF0X2J1YmJsZV9pZBgL",
+            "IAEoDRIRCgloZWFkX2ljb24YDyABKA0SKgoNb25saW5lX3N0YXR1cxgHIAEo",
+            "DjITLkZyaWVuZE9ubGluZVN0YXR1cxINCgVsZXZlbBgOIAEoDRILCgN1aWQY",
+            "CSABKA0SEwoLR01BTENQTk9IQkYYASABKAkSEAoIbmlja25hbWUYDCABKAkS",
+            "EQoJaXNfYmFubmVkGAUgASgIEh8KCHBsYXRmb3JtGAggASgOMg0uUGxhdGZv",
+            "cm1UeXBlEhMKC0FLQ0VKRkNGQkFOGAYgASgJEjIKF2Fzc2lzdF9zaW1wbGVf",
+            "aW5mb19saXN0GAogAygLMhEuQXNzaXN0U2ltcGxlSW5mbxIRCglzaWduYXR1",
+            "cmUYAyABKAkSGAoQbGFzdF9hY3RpdmVfdGltZRgEIAEoA0IeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.FriendOnlineStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.AssistSimpleInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerSimpleInfo), global::EggLink.DanhengServer.Proto.PlayerSimpleInfo.Parser, new[]{ "LastActiveTime", "Nickname", "AEOHJINGIFK", "Platform", "Level", "IsBanned", "ChatBubbleId", "Signature", "PDCILADMJIJ", "AssistSimpleInfoList", "HeadIcon", "OnlineStatus", "Uid" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerSimpleInfo), global::EggLink.DanhengServer.Proto.PlayerSimpleInfo.Parser, new[]{ "ChatBubbleId", "HeadIcon", "OnlineStatus", "Level", "Uid", "GMALCPNOHBF", "Nickname", "IsBanned", "Platform", "AKCEJFCFBAN", "AssistSimpleInfoList", "Signature", "LastActiveTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -80,19 +80,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PlayerSimpleInfo(PlayerSimpleInfo other) : this() {
-      lastActiveTime_ = other.lastActiveTime_;
-      nickname_ = other.nickname_;
-      aEOHJINGIFK_ = other.aEOHJINGIFK_;
-      platform_ = other.platform_;
-      level_ = other.level_;
-      isBanned_ = other.isBanned_;
       chatBubbleId_ = other.chatBubbleId_;
-      signature_ = other.signature_;
-      pDCILADMJIJ_ = other.pDCILADMJIJ_;
-      assistSimpleInfoList_ = other.assistSimpleInfoList_.Clone();
       headIcon_ = other.headIcon_;
       onlineStatus_ = other.onlineStatus_;
+      level_ = other.level_;
       uid_ = other.uid_;
+      gMALCPNOHBF_ = other.gMALCPNOHBF_;
+      nickname_ = other.nickname_;
+      isBanned_ = other.isBanned_;
+      platform_ = other.platform_;
+      aKCEJFCFBAN_ = other.aKCEJFCFBAN_;
+      assistSimpleInfoList_ = other.assistSimpleInfoList_.Clone();
+      signature_ = other.signature_;
+      lastActiveTime_ = other.lastActiveTime_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -102,15 +102,75 @@ namespace EggLink.DanhengServer.Proto {
       return new PlayerSimpleInfo(this);
     }
 
-    /// <summary>Field number for the "last_active_time" field.</summary>
-    public const int LastActiveTimeFieldNumber = 1;
-    private long lastActiveTime_;
+    /// <summary>Field number for the "chat_bubble_id" field.</summary>
+    public const int ChatBubbleIdFieldNumber = 11;
+    private uint chatBubbleId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long LastActiveTime {
-      get { return lastActiveTime_; }
+    public uint ChatBubbleId {
+      get { return chatBubbleId_; }
       set {
-        lastActiveTime_ = value;
+        chatBubbleId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "head_icon" field.</summary>
+    public const int HeadIconFieldNumber = 15;
+    private uint headIcon_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint HeadIcon {
+      get { return headIcon_; }
+      set {
+        headIcon_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "online_status" field.</summary>
+    public const int OnlineStatusFieldNumber = 7;
+    private global::EggLink.DanhengServer.Proto.FriendOnlineStatus onlineStatus_ = global::EggLink.DanhengServer.Proto.FriendOnlineStatus.Offline;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.FriendOnlineStatus OnlineStatus {
+      get { return onlineStatus_; }
+      set {
+        onlineStatus_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "level" field.</summary>
+    public const int LevelFieldNumber = 14;
+    private uint level_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Level {
+      get { return level_; }
+      set {
+        level_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "uid" field.</summary>
+    public const int UidFieldNumber = 9;
+    private uint uid_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Uid {
+      get { return uid_; }
+      set {
+        uid_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "GMALCPNOHBF" field.</summary>
+    public const int GMALCPNOHBFFieldNumber = 1;
+    private string gMALCPNOHBF_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string GMALCPNOHBF {
+      get { return gMALCPNOHBF_; }
+      set {
+        gMALCPNOHBF_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -126,42 +186,6 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "AEOHJINGIFK" field.</summary>
-    public const int AEOHJINGIFKFieldNumber = 15;
-    private string aEOHJINGIFK_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string AEOHJINGIFK {
-      get { return aEOHJINGIFK_; }
-      set {
-        aEOHJINGIFK_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "platform" field.</summary>
-    public const int PlatformFieldNumber = 13;
-    private global::EggLink.DanhengServer.Proto.PlatformType platform_ = global::EggLink.DanhengServer.Proto.PlatformType.Editor;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.PlatformType Platform {
-      get { return platform_; }
-      set {
-        platform_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 4;
-    private uint level_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Level {
-      get { return level_; }
-      set {
-        level_ = value;
-      }
-    }
-
     /// <summary>Field number for the "is_banned" field.</summary>
     public const int IsBannedFieldNumber = 5;
     private bool isBanned_;
@@ -174,20 +198,43 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "chat_bubble_id" field.</summary>
-    public const int ChatBubbleIdFieldNumber = 14;
-    private uint chatBubbleId_;
+    /// <summary>Field number for the "platform" field.</summary>
+    public const int PlatformFieldNumber = 8;
+    private global::EggLink.DanhengServer.Proto.PlatformType platform_ = global::EggLink.DanhengServer.Proto.PlatformType.Editor;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ChatBubbleId {
-      get { return chatBubbleId_; }
+    public global::EggLink.DanhengServer.Proto.PlatformType Platform {
+      get { return platform_; }
       set {
-        chatBubbleId_ = value;
+        platform_ = value;
       }
     }
 
+    /// <summary>Field number for the "AKCEJFCFBAN" field.</summary>
+    public const int AKCEJFCFBANFieldNumber = 6;
+    private string aKCEJFCFBAN_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AKCEJFCFBAN {
+      get { return aKCEJFCFBAN_; }
+      set {
+        aKCEJFCFBAN_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "assist_simple_info_list" field.</summary>
+    public const int AssistSimpleInfoListFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.AssistSimpleInfo> _repeated_assistSimpleInfoList_codec
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.AssistSimpleInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AssistSimpleInfo> assistSimpleInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AssistSimpleInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AssistSimpleInfo> AssistSimpleInfoList {
+      get { return assistSimpleInfoList_; }
+    }
+
     /// <summary>Field number for the "signature" field.</summary>
-    public const int SignatureFieldNumber = 8;
+    public const int SignatureFieldNumber = 3;
     private string signature_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -198,62 +245,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "PDCILADMJIJ" field.</summary>
-    public const int PDCILADMJIJFieldNumber = 6;
-    private string pDCILADMJIJ_ = "";
+    /// <summary>Field number for the "last_active_time" field.</summary>
+    public const int LastActiveTimeFieldNumber = 4;
+    private long lastActiveTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string PDCILADMJIJ {
-      get { return pDCILADMJIJ_; }
+    public long LastActiveTime {
+      get { return lastActiveTime_; }
       set {
-        pDCILADMJIJ_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "assist_simple_info_list" field.</summary>
-    public const int AssistSimpleInfoListFieldNumber = 7;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.AssistSimpleInfo> _repeated_assistSimpleInfoList_codec
-        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.AssistSimpleInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AssistSimpleInfo> assistSimpleInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AssistSimpleInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AssistSimpleInfo> AssistSimpleInfoList {
-      get { return assistSimpleInfoList_; }
-    }
-
-    /// <summary>Field number for the "head_icon" field.</summary>
-    public const int HeadIconFieldNumber = 11;
-    private uint headIcon_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint HeadIcon {
-      get { return headIcon_; }
-      set {
-        headIcon_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "online_status" field.</summary>
-    public const int OnlineStatusFieldNumber = 2;
-    private global::EggLink.DanhengServer.Proto.FriendOnlineStatus onlineStatus_ = global::EggLink.DanhengServer.Proto.FriendOnlineStatus.Offline;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.FriendOnlineStatus OnlineStatus {
-      get { return onlineStatus_; }
-      set {
-        onlineStatus_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "uid" field.</summary>
-    public const int UidFieldNumber = 10;
-    private uint uid_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Uid {
-      get { return uid_; }
-      set {
-        uid_ = value;
+        lastActiveTime_ = value;
       }
     }
 
@@ -272,19 +272,19 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (LastActiveTime != other.LastActiveTime) return false;
-      if (Nickname != other.Nickname) return false;
-      if (AEOHJINGIFK != other.AEOHJINGIFK) return false;
-      if (Platform != other.Platform) return false;
-      if (Level != other.Level) return false;
-      if (IsBanned != other.IsBanned) return false;
       if (ChatBubbleId != other.ChatBubbleId) return false;
-      if (Signature != other.Signature) return false;
-      if (PDCILADMJIJ != other.PDCILADMJIJ) return false;
-      if(!assistSimpleInfoList_.Equals(other.assistSimpleInfoList_)) return false;
       if (HeadIcon != other.HeadIcon) return false;
       if (OnlineStatus != other.OnlineStatus) return false;
+      if (Level != other.Level) return false;
       if (Uid != other.Uid) return false;
+      if (GMALCPNOHBF != other.GMALCPNOHBF) return false;
+      if (Nickname != other.Nickname) return false;
+      if (IsBanned != other.IsBanned) return false;
+      if (Platform != other.Platform) return false;
+      if (AKCEJFCFBAN != other.AKCEJFCFBAN) return false;
+      if(!assistSimpleInfoList_.Equals(other.assistSimpleInfoList_)) return false;
+      if (Signature != other.Signature) return false;
+      if (LastActiveTime != other.LastActiveTime) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -292,19 +292,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (LastActiveTime != 0L) hash ^= LastActiveTime.GetHashCode();
-      if (Nickname.Length != 0) hash ^= Nickname.GetHashCode();
-      if (AEOHJINGIFK.Length != 0) hash ^= AEOHJINGIFK.GetHashCode();
-      if (Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) hash ^= Platform.GetHashCode();
-      if (Level != 0) hash ^= Level.GetHashCode();
-      if (IsBanned != false) hash ^= IsBanned.GetHashCode();
       if (ChatBubbleId != 0) hash ^= ChatBubbleId.GetHashCode();
-      if (Signature.Length != 0) hash ^= Signature.GetHashCode();
-      if (PDCILADMJIJ.Length != 0) hash ^= PDCILADMJIJ.GetHashCode();
-      hash ^= assistSimpleInfoList_.GetHashCode();
       if (HeadIcon != 0) hash ^= HeadIcon.GetHashCode();
       if (OnlineStatus != global::EggLink.DanhengServer.Proto.FriendOnlineStatus.Offline) hash ^= OnlineStatus.GetHashCode();
+      if (Level != 0) hash ^= Level.GetHashCode();
       if (Uid != 0) hash ^= Uid.GetHashCode();
+      if (GMALCPNOHBF.Length != 0) hash ^= GMALCPNOHBF.GetHashCode();
+      if (Nickname.Length != 0) hash ^= Nickname.GetHashCode();
+      if (IsBanned != false) hash ^= IsBanned.GetHashCode();
+      if (Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) hash ^= Platform.GetHashCode();
+      if (AKCEJFCFBAN.Length != 0) hash ^= AKCEJFCFBAN.GetHashCode();
+      hash ^= assistSimpleInfoList_.GetHashCode();
+      if (Signature.Length != 0) hash ^= Signature.GetHashCode();
+      if (LastActiveTime != 0L) hash ^= LastActiveTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -323,54 +323,54 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (GMALCPNOHBF.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(GMALCPNOHBF);
+      }
+      if (Signature.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Signature);
+      }
       if (LastActiveTime != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(LastActiveTime);
-      }
-      if (OnlineStatus != global::EggLink.DanhengServer.Proto.FriendOnlineStatus.Offline) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) OnlineStatus);
-      }
-      if (Level != 0) {
         output.WriteRawTag(32);
-        output.WriteUInt32(Level);
+        output.WriteInt64(LastActiveTime);
       }
       if (IsBanned != false) {
         output.WriteRawTag(40);
         output.WriteBool(IsBanned);
       }
-      if (PDCILADMJIJ.Length != 0) {
+      if (AKCEJFCFBAN.Length != 0) {
         output.WriteRawTag(50);
-        output.WriteString(PDCILADMJIJ);
+        output.WriteString(AKCEJFCFBAN);
       }
-      assistSimpleInfoList_.WriteTo(output, _repeated_assistSimpleInfoList_codec);
-      if (Signature.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(Signature);
+      if (OnlineStatus != global::EggLink.DanhengServer.Proto.FriendOnlineStatus.Offline) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) OnlineStatus);
+      }
+      if (Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) Platform);
       }
       if (Uid != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(72);
         output.WriteUInt32(Uid);
       }
-      if (HeadIcon != 0) {
+      assistSimpleInfoList_.WriteTo(output, _repeated_assistSimpleInfoList_codec);
+      if (ChatBubbleId != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(HeadIcon);
+        output.WriteUInt32(ChatBubbleId);
       }
       if (Nickname.Length != 0) {
         output.WriteRawTag(98);
         output.WriteString(Nickname);
       }
-      if (Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) {
-        output.WriteRawTag(104);
-        output.WriteEnum((int) Platform);
-      }
-      if (ChatBubbleId != 0) {
+      if (Level != 0) {
         output.WriteRawTag(112);
-        output.WriteUInt32(ChatBubbleId);
+        output.WriteUInt32(Level);
       }
-      if (AEOHJINGIFK.Length != 0) {
-        output.WriteRawTag(122);
-        output.WriteString(AEOHJINGIFK);
+      if (HeadIcon != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(HeadIcon);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -382,54 +382,54 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (GMALCPNOHBF.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(GMALCPNOHBF);
+      }
+      if (Signature.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Signature);
+      }
       if (LastActiveTime != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(LastActiveTime);
-      }
-      if (OnlineStatus != global::EggLink.DanhengServer.Proto.FriendOnlineStatus.Offline) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) OnlineStatus);
-      }
-      if (Level != 0) {
         output.WriteRawTag(32);
-        output.WriteUInt32(Level);
+        output.WriteInt64(LastActiveTime);
       }
       if (IsBanned != false) {
         output.WriteRawTag(40);
         output.WriteBool(IsBanned);
       }
-      if (PDCILADMJIJ.Length != 0) {
+      if (AKCEJFCFBAN.Length != 0) {
         output.WriteRawTag(50);
-        output.WriteString(PDCILADMJIJ);
+        output.WriteString(AKCEJFCFBAN);
       }
-      assistSimpleInfoList_.WriteTo(ref output, _repeated_assistSimpleInfoList_codec);
-      if (Signature.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(Signature);
+      if (OnlineStatus != global::EggLink.DanhengServer.Proto.FriendOnlineStatus.Offline) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) OnlineStatus);
+      }
+      if (Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) Platform);
       }
       if (Uid != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(72);
         output.WriteUInt32(Uid);
       }
-      if (HeadIcon != 0) {
+      assistSimpleInfoList_.WriteTo(ref output, _repeated_assistSimpleInfoList_codec);
+      if (ChatBubbleId != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(HeadIcon);
+        output.WriteUInt32(ChatBubbleId);
       }
       if (Nickname.Length != 0) {
         output.WriteRawTag(98);
         output.WriteString(Nickname);
       }
-      if (Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) {
-        output.WriteRawTag(104);
-        output.WriteEnum((int) Platform);
-      }
-      if (ChatBubbleId != 0) {
+      if (Level != 0) {
         output.WriteRawTag(112);
-        output.WriteUInt32(ChatBubbleId);
+        output.WriteUInt32(Level);
       }
-      if (AEOHJINGIFK.Length != 0) {
-        output.WriteRawTag(122);
-        output.WriteString(AEOHJINGIFK);
+      if (HeadIcon != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(HeadIcon);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -441,42 +441,42 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (LastActiveTime != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(LastActiveTime);
-      }
-      if (Nickname.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Nickname);
-      }
-      if (AEOHJINGIFK.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(AEOHJINGIFK);
-      }
-      if (Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Platform);
-      }
-      if (Level != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
-      }
-      if (IsBanned != false) {
-        size += 1 + 1;
-      }
       if (ChatBubbleId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChatBubbleId);
       }
-      if (Signature.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Signature);
-      }
-      if (PDCILADMJIJ.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PDCILADMJIJ);
-      }
-      size += assistSimpleInfoList_.CalculateSize(_repeated_assistSimpleInfoList_codec);
       if (HeadIcon != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HeadIcon);
       }
       if (OnlineStatus != global::EggLink.DanhengServer.Proto.FriendOnlineStatus.Offline) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OnlineStatus);
       }
+      if (Level != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
+      }
       if (Uid != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Uid);
+      }
+      if (GMALCPNOHBF.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GMALCPNOHBF);
+      }
+      if (Nickname.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Nickname);
+      }
+      if (IsBanned != false) {
+        size += 1 + 1;
+      }
+      if (Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Platform);
+      }
+      if (AKCEJFCFBAN.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AKCEJFCFBAN);
+      }
+      size += assistSimpleInfoList_.CalculateSize(_repeated_assistSimpleInfoList_codec);
+      if (Signature.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Signature);
+      }
+      if (LastActiveTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(LastActiveTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -490,42 +490,42 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.LastActiveTime != 0L) {
-        LastActiveTime = other.LastActiveTime;
-      }
-      if (other.Nickname.Length != 0) {
-        Nickname = other.Nickname;
-      }
-      if (other.AEOHJINGIFK.Length != 0) {
-        AEOHJINGIFK = other.AEOHJINGIFK;
-      }
-      if (other.Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) {
-        Platform = other.Platform;
-      }
-      if (other.Level != 0) {
-        Level = other.Level;
-      }
-      if (other.IsBanned != false) {
-        IsBanned = other.IsBanned;
-      }
       if (other.ChatBubbleId != 0) {
         ChatBubbleId = other.ChatBubbleId;
       }
-      if (other.Signature.Length != 0) {
-        Signature = other.Signature;
-      }
-      if (other.PDCILADMJIJ.Length != 0) {
-        PDCILADMJIJ = other.PDCILADMJIJ;
-      }
-      assistSimpleInfoList_.Add(other.assistSimpleInfoList_);
       if (other.HeadIcon != 0) {
         HeadIcon = other.HeadIcon;
       }
       if (other.OnlineStatus != global::EggLink.DanhengServer.Proto.FriendOnlineStatus.Offline) {
         OnlineStatus = other.OnlineStatus;
       }
+      if (other.Level != 0) {
+        Level = other.Level;
+      }
       if (other.Uid != 0) {
         Uid = other.Uid;
+      }
+      if (other.GMALCPNOHBF.Length != 0) {
+        GMALCPNOHBF = other.GMALCPNOHBF;
+      }
+      if (other.Nickname.Length != 0) {
+        Nickname = other.Nickname;
+      }
+      if (other.IsBanned != false) {
+        IsBanned = other.IsBanned;
+      }
+      if (other.Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) {
+        Platform = other.Platform;
+      }
+      if (other.AKCEJFCFBAN.Length != 0) {
+        AKCEJFCFBAN = other.AKCEJFCFBAN;
+      }
+      assistSimpleInfoList_.Add(other.assistSimpleInfoList_);
+      if (other.Signature.Length != 0) {
+        Signature = other.Signature;
+      }
+      if (other.LastActiveTime != 0L) {
+        LastActiveTime = other.LastActiveTime;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -542,16 +542,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            LastActiveTime = input.ReadInt64();
+          case 10: {
+            GMALCPNOHBF = input.ReadString();
             break;
           }
-          case 16: {
-            OnlineStatus = (global::EggLink.DanhengServer.Proto.FriendOnlineStatus) input.ReadEnum();
+          case 26: {
+            Signature = input.ReadString();
             break;
           }
           case 32: {
-            Level = input.ReadUInt32();
+            LastActiveTime = input.ReadInt64();
             break;
           }
           case 40: {
@@ -559,39 +559,39 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 50: {
-            PDCILADMJIJ = input.ReadString();
+            AKCEJFCFBAN = input.ReadString();
             break;
           }
-          case 58: {
-            assistSimpleInfoList_.AddEntriesFrom(input, _repeated_assistSimpleInfoList_codec);
+          case 56: {
+            OnlineStatus = (global::EggLink.DanhengServer.Proto.FriendOnlineStatus) input.ReadEnum();
             break;
           }
-          case 66: {
-            Signature = input.ReadString();
+          case 64: {
+            Platform = (global::EggLink.DanhengServer.Proto.PlatformType) input.ReadEnum();
             break;
           }
-          case 80: {
+          case 72: {
             Uid = input.ReadUInt32();
             break;
           }
+          case 82: {
+            assistSimpleInfoList_.AddEntriesFrom(input, _repeated_assistSimpleInfoList_codec);
+            break;
+          }
           case 88: {
-            HeadIcon = input.ReadUInt32();
+            ChatBubbleId = input.ReadUInt32();
             break;
           }
           case 98: {
             Nickname = input.ReadString();
             break;
           }
-          case 104: {
-            Platform = (global::EggLink.DanhengServer.Proto.PlatformType) input.ReadEnum();
-            break;
-          }
           case 112: {
-            ChatBubbleId = input.ReadUInt32();
+            Level = input.ReadUInt32();
             break;
           }
-          case 122: {
-            AEOHJINGIFK = input.ReadString();
+          case 120: {
+            HeadIcon = input.ReadUInt32();
             break;
           }
         }
@@ -609,16 +609,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            LastActiveTime = input.ReadInt64();
+          case 10: {
+            GMALCPNOHBF = input.ReadString();
             break;
           }
-          case 16: {
-            OnlineStatus = (global::EggLink.DanhengServer.Proto.FriendOnlineStatus) input.ReadEnum();
+          case 26: {
+            Signature = input.ReadString();
             break;
           }
           case 32: {
-            Level = input.ReadUInt32();
+            LastActiveTime = input.ReadInt64();
             break;
           }
           case 40: {
@@ -626,39 +626,39 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 50: {
-            PDCILADMJIJ = input.ReadString();
+            AKCEJFCFBAN = input.ReadString();
             break;
           }
-          case 58: {
-            assistSimpleInfoList_.AddEntriesFrom(ref input, _repeated_assistSimpleInfoList_codec);
+          case 56: {
+            OnlineStatus = (global::EggLink.DanhengServer.Proto.FriendOnlineStatus) input.ReadEnum();
             break;
           }
-          case 66: {
-            Signature = input.ReadString();
+          case 64: {
+            Platform = (global::EggLink.DanhengServer.Proto.PlatformType) input.ReadEnum();
             break;
           }
-          case 80: {
+          case 72: {
             Uid = input.ReadUInt32();
             break;
           }
+          case 82: {
+            assistSimpleInfoList_.AddEntriesFrom(ref input, _repeated_assistSimpleInfoList_codec);
+            break;
+          }
           case 88: {
-            HeadIcon = input.ReadUInt32();
+            ChatBubbleId = input.ReadUInt32();
             break;
           }
           case 98: {
             Nickname = input.ReadString();
             break;
           }
-          case 104: {
-            Platform = (global::EggLink.DanhengServer.Proto.PlatformType) input.ReadEnum();
-            break;
-          }
           case 112: {
-            ChatBubbleId = input.ReadUInt32();
+            Level = input.ReadUInt32();
             break;
           }
-          case 122: {
-            AEOHJINGIFK = input.ReadString();
+          case 120: {
+            HeadIcon = input.ReadUInt32();
             break;
           }
         }

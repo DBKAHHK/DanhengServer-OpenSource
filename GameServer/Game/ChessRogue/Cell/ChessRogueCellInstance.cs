@@ -192,7 +192,7 @@ public class ChessRogueCellInstance
             PosY = (uint)PosY,
             Id = (uint)GetCellId(),
             BlockType = (uint)BlockType,
-            IsUnlock = true,
+            Unlock = true,
             RoomId = (uint)RoomId,
             IsUnlocked = true,
             PosX = (uint)GetRow(),

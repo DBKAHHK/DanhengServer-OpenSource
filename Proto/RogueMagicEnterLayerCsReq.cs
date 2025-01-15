@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9Sb2d1ZU1hZ2ljRW50ZXJMYXllckNzUmVxLnByb3RvIkwKGVJvZ3VlTWFn",
-            "aWNFbnRlckxheWVyQ3NSZXESFgoObmV4dF9yb29tX3R5cGUYAyABKA0SFwoP",
-            "Y3VyX2xldmVsX2luZGV4GAogASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "aWNFbnRlckxheWVyQ3NSZXESFgoObmV4dF9yb29tX3R5cGUYCCABKA0SFwoP",
+            "Y3VyX2xldmVsX2luZGV4GA4gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "next_room_type" field.</summary>
-    public const int NextRoomTypeFieldNumber = 3;
+    public const int NextRoomTypeFieldNumber = 8;
     private uint nextRoomType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cur_level_index" field.</summary>
-    public const int CurLevelIndexFieldNumber = 10;
+    public const int CurLevelIndexFieldNumber = 14;
     private uint curLevelIndex_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (NextRoomType != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(64);
         output.WriteUInt32(NextRoomType);
       }
       if (CurLevelIndex != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(112);
         output.WriteUInt32(CurLevelIndex);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (NextRoomType != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(64);
         output.WriteUInt32(NextRoomType);
       }
       if (CurLevelIndex != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(112);
         output.WriteUInt32(CurLevelIndex);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 64: {
             NextRoomType = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 112: {
             CurLevelIndex = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 64: {
             NextRoomType = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 112: {
             CurLevelIndex = input.ReadUInt32();
             break;
           }

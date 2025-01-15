@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpIaXRNb25zdGVyQmF0dGxlSW5mby5wcm90bxoXTW9uc3RlckJhdHRsZVR5",
-            "cGUucHJvdG8iaQoUSGl0TW9uc3RlckJhdHRsZUluZm8SLwoTbW9uc3Rlcl9i",
-            "YXR0bGVfdHlwZRgNIAEoDjISLk1vbnN0ZXJCYXR0bGVUeXBlEiAKGHRhcmdl",
-            "dF9tb25zdGVyX2VudGl0eV9pZBgBIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "cGUucHJvdG8iaQoUSGl0TW9uc3RlckJhdHRsZUluZm8SIAoYdGFyZ2V0X21v",
+            "bnN0ZXJfZW50aXR5X2lkGAQgASgNEi8KE21vbnN0ZXJfYmF0dGxlX3R5cGUY",
+            "CiABKA4yEi5Nb25zdGVyQmF0dGxlVHlwZUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MonsterBattleTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HitMonsterBattleInfo), global::EggLink.DanhengServer.Proto.HitMonsterBattleInfo.Parser, new[]{ "MonsterBattleType", "TargetMonsterEntityId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HitMonsterBattleInfo), global::EggLink.DanhengServer.Proto.HitMonsterBattleInfo.Parser, new[]{ "TargetMonsterEntityId", "MonsterBattleType" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HitMonsterBattleInfo(HitMonsterBattleInfo other) : this() {
-      monsterBattleType_ = other.monsterBattleType_;
       targetMonsterEntityId_ = other.targetMonsterEntityId_;
+      monsterBattleType_ = other.monsterBattleType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new HitMonsterBattleInfo(this);
     }
 
-    /// <summary>Field number for the "monster_battle_type" field.</summary>
-    public const int MonsterBattleTypeFieldNumber = 13;
-    private global::EggLink.DanhengServer.Proto.MonsterBattleType monsterBattleType_ = global::EggLink.DanhengServer.Proto.MonsterBattleType.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MonsterBattleType MonsterBattleType {
-      get { return monsterBattleType_; }
-      set {
-        monsterBattleType_ = value;
-      }
-    }
-
     /// <summary>Field number for the "target_monster_entity_id" field.</summary>
-    public const int TargetMonsterEntityIdFieldNumber = 1;
+    public const int TargetMonsterEntityIdFieldNumber = 4;
     private uint targetMonsterEntityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,6 +94,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return targetMonsterEntityId_; }
       set {
         targetMonsterEntityId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "monster_battle_type" field.</summary>
+    public const int MonsterBattleTypeFieldNumber = 10;
+    private global::EggLink.DanhengServer.Proto.MonsterBattleType monsterBattleType_ = global::EggLink.DanhengServer.Proto.MonsterBattleType.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.MonsterBattleType MonsterBattleType {
+      get { return monsterBattleType_; }
+      set {
+        monsterBattleType_ = value;
       }
     }
 
@@ -124,8 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MonsterBattleType != other.MonsterBattleType) return false;
       if (TargetMonsterEntityId != other.TargetMonsterEntityId) return false;
+      if (MonsterBattleType != other.MonsterBattleType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MonsterBattleType != global::EggLink.DanhengServer.Proto.MonsterBattleType.None) hash ^= MonsterBattleType.GetHashCode();
       if (TargetMonsterEntityId != 0) hash ^= TargetMonsterEntityId.GetHashCode();
+      if (MonsterBattleType != global::EggLink.DanhengServer.Proto.MonsterBattleType.None) hash ^= MonsterBattleType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -154,11 +154,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (TargetMonsterEntityId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(32);
         output.WriteUInt32(TargetMonsterEntityId);
       }
       if (MonsterBattleType != global::EggLink.DanhengServer.Proto.MonsterBattleType.None) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(80);
         output.WriteEnum((int) MonsterBattleType);
       }
       if (_unknownFields != null) {
@@ -172,11 +172,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (TargetMonsterEntityId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(32);
         output.WriteUInt32(TargetMonsterEntityId);
       }
       if (MonsterBattleType != global::EggLink.DanhengServer.Proto.MonsterBattleType.None) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(80);
         output.WriteEnum((int) MonsterBattleType);
       }
       if (_unknownFields != null) {
@@ -189,11 +189,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MonsterBattleType != global::EggLink.DanhengServer.Proto.MonsterBattleType.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MonsterBattleType);
-      }
       if (TargetMonsterEntityId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TargetMonsterEntityId);
+      }
+      if (MonsterBattleType != global::EggLink.DanhengServer.Proto.MonsterBattleType.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MonsterBattleType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -207,11 +207,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MonsterBattleType != global::EggLink.DanhengServer.Proto.MonsterBattleType.None) {
-        MonsterBattleType = other.MonsterBattleType;
-      }
       if (other.TargetMonsterEntityId != 0) {
         TargetMonsterEntityId = other.TargetMonsterEntityId;
+      }
+      if (other.MonsterBattleType != global::EggLink.DanhengServer.Proto.MonsterBattleType.None) {
+        MonsterBattleType = other.MonsterBattleType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -228,11 +228,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 32: {
             TargetMonsterEntityId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 80: {
             MonsterBattleType = (global::EggLink.DanhengServer.Proto.MonsterBattleType) input.ReadEnum();
             break;
           }
@@ -251,11 +251,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 32: {
             TargetMonsterEntityId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 80: {
             MonsterBattleType = (global::EggLink.DanhengServer.Proto.MonsterBattleType) input.ReadEnum();
             break;
           }
