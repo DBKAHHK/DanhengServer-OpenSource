@@ -1,4 +1,6 @@
-﻿using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
+﻿using EggLink.DanhengServer.GameServer.Game.Mission;
+using EggLink.DanhengServer.GameServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
 
@@ -6,10 +8,14 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 
 public class PacketSceneGroupRefreshScNotify : BasePacket
 {
-    public PacketSceneGroupRefreshScNotify(List<IGameEntity>? addEntity = null, List<IGameEntity>? removeEntity = null)
+    public PacketSceneGroupRefreshScNotify(PlayerInstance player, List<IGameEntity>? addEntity = null, List<IGameEntity>? removeEntity = null)
         : base(CmdIds.SceneGroupRefreshScNotify)
     {
-        var proto = new SceneGroupRefreshScNotify();
+        var proto = new SceneGroupRefreshScNotify
+        {
+            FloorId = (uint)player.Data.FloorId,
+            DimensionId = (uint)((player.SceneInstance!.EntityLoader as StoryLineEntityLoader)?.DimensionId ?? 0)
+        };
         Dictionary<int, GroupRefreshInfo> refreshInfo = [];
 
         foreach (var e in removeEntity ?? [])
@@ -53,8 +59,8 @@ public class PacketSceneGroupRefreshScNotify : BasePacket
         SetData(proto);
     }
 
-    public PacketSceneGroupRefreshScNotify(IGameEntity? addEntity = null, IGameEntity? removeEntity = null) :
-        this(addEntity == null ? [] : [addEntity], removeEntity == null ? [] : [removeEntity])
+    public PacketSceneGroupRefreshScNotify(PlayerInstance player, IGameEntity? addEntity = null, IGameEntity? removeEntity = null) :
+        this(player, addEntity == null ? [] : [addEntity], removeEntity == null ? [] : [removeEntity])
     {
     }
 }

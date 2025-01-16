@@ -5,7 +5,7 @@ using Newtonsoft.Json.Converters;
 
 namespace EggLink.DanhengServer.Data.Excel;
 
-[ResourceEntity("FinishWay.json,FinishWayRogue.json,FinishWayEventMission.json,RogueDLCFinishWay.json", true)]
+[ResourceEntity("FinishWay.json,FinishWayRogue.json,RogueDLCFinishWay.json", true)]
 public class FinishWayExcel : ExcelResource
 {
     public List<int> ParamIntList { get; set; } = [];

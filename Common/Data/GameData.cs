@@ -283,9 +283,6 @@ public static class GameData
     public static Dictionary<int, RogueTournHandbookMiracleExcel> RogueTournHandbookMiracleData { get; private set; } =
         [];
 
-    public static Dictionary<int, RogueTournDifficultyCompExcel> RogueTournDifficultyCompData { get; private set; } =
-        [];
-
     public static Dictionary<int, RogueTournRoomExcel> RogueTournRoomData { get; private set; } = [];
     public static Dictionary<int, RogueTournDifficultyExcel> RogueTournDifficultyData { get; private set; } = [];
 

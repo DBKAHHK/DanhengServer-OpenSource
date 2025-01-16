@@ -20,7 +20,8 @@ public class RogueMiracleExcel : ExcelResource
 
     public override void AfterAllDone()
     {
-        MiracleName = GameData.RogueMiracleDisplayData[MiracleDisplayID].MiracleName;
+        if (MiracleDisplayID != 0)
+            MiracleName = GameData.RogueMiracleDisplayData[MiracleDisplayID].MiracleName;
         GameData.RogueMiracleData[MiracleID] = this;
     }
 }

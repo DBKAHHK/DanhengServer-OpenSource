@@ -79,6 +79,11 @@ public static class HandbookGenerator
         GenerateItem(builder, textMap, fallbackTextMap, lang == config.ServerOption.Language);
 
         builder.AppendLine();
+        builder.AppendLine("#StageId");
+        builder.AppendLine();
+        GenerateStageId(builder, textMap, fallbackTextMap);
+
+        builder.AppendLine();
         builder.AppendLine("#MainMission");
         builder.AppendLine();
         GenerateMainMissionId(builder, textMap, fallbackTextMap);
@@ -164,6 +169,17 @@ public static class HandbookGenerator
             var name = map.TryGetValue(mission.TargetText.Hash, out var value) ? value :
                 fallback.TryGetValue(mission.TargetText.Hash, out value) ? value : $"[{mission.TargetText.Hash}]";
             builder.AppendLine(mission.SubMissionID + ": " + name);
+        }
+    }
+
+    public static void GenerateStageId(StringBuilder builder, Dictionary<long, string> map,
+        Dictionary<long, string> fallback)
+    {
+        foreach (var stage in GameData.StageConfigData.Values)
+        {
+            var name = map.TryGetValue(stage.StageName.Hash, out var value) ? value :
+                fallback.TryGetValue(stage.StageName.Hash, out value) ? value : $"[{stage.StageName.Hash}]";
+            builder.AppendLine(stage.StageID + ": " + name);
         }
     }
 

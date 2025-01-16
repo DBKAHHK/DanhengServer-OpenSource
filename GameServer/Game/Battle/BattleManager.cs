@@ -17,6 +17,7 @@ namespace EggLink.DanhengServer.GameServer.Game.Battle;
 
 public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
 {
+    public StageConfigExcel? NextBattleStageConfig { get; set; } = null;
     public async ValueTask StartBattle(SceneCastSkillCsReq req, MazeSkill skill, List<uint> hitTargetEntityIdList)
     {
         if (Player.BattleInstance != null) return;
@@ -144,6 +145,15 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
                     WorldLevel = Player.Data.WorldLevel
                 };
 
+            if (NextBattleStageConfig != null)
+            {
+                battleInstance = new BattleInstance(Player, Player.LineupManager!.GetCurLineup()!, [NextBattleStageConfig])
+                {
+                    WorldLevel = Player.Data.WorldLevel,
+                };
+                NextBattleStageConfig = null;
+            }
+
             avatarList.AddRange(Player.LineupManager!.GetCurLineup()!.BaseAvatars!
                 .Select(item =>
                     Player.SceneInstance!.AvatarInfo.Values.FirstOrDefault(x =>
@@ -220,6 +230,12 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
             }
         }
 
+        if (NextBattleStageConfig != null)
+        {
+            stageConfig = NextBattleStageConfig;
+            NextBattleStageConfig = null;
+        }
+
         BattleInstance battleInstance = new(Player, Player.LineupManager!.GetCurLineup()!, [stageConfig])
         {
             WorldLevel = Player.Data.WorldLevel,
@@ -285,6 +301,15 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
             CocoonWave = wave,
             MappingInfoId = config.MappingInfoID
         };
+
+        if (NextBattleStageConfig != null)
+        {
+            battleInstance = new BattleInstance(Player, Player.LineupManager!.GetCurLineup()!, [NextBattleStageConfig])
+            {
+                WorldLevel = Player.Data.WorldLevel,
+            };
+            NextBattleStageConfig = null;
+        }
 
         var avatarList = Player.LineupManager!.GetCurLineup()!.BaseAvatars!.Select(item =>
                 Player.SceneInstance!.AvatarInfo.Values.FirstOrDefault(x => x.AvatarInfo.AvatarId == item.BaseAvatarId))

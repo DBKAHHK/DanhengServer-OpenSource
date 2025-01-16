@@ -85,7 +85,7 @@ public class SceneEntityLoader(SceneInstance scene)
             }
 
         if (refreshed && (addList.Count > 0 || removeList.Count > 0))
-            await Scene.Player.SendPacket(new PacketSceneGroupRefreshScNotify(addList, removeList));
+            await Scene.Player.SendPacket(new PacketSceneGroupRefreshScNotify(Scene.Player, addList, removeList));
     }
 
     public virtual async ValueTask<List<IGameEntity>?> LoadGroup(GroupInfo info, bool forceLoad = false)
@@ -194,7 +194,7 @@ public class SceneEntityLoader(SceneInstance scene)
         var entities = await LoadGroup(group, true);
 
         if (sendPacket && entities is { Count: > 0 })
-            await Scene.Player.SendPacket(new PacketSceneGroupRefreshScNotify(entities));
+            await Scene.Player.SendPacket(new PacketSceneGroupRefreshScNotify(Scene.Player, entities));
 
         return entities;
     }
@@ -217,7 +217,7 @@ public class SceneEntityLoader(SceneInstance scene)
 
         Scene.Groups.Remove(group.Id);
 
-        if (refreshed) await Scene.Player.SendPacket(new PacketSceneGroupRefreshScNotify(removeEntity: removeList));
+        if (refreshed) await Scene.Player.SendPacket(new PacketSceneGroupRefreshScNotify(Scene.Player, removeEntity: removeList));
     }
 
     public virtual async ValueTask<EntityNpc?> LoadNpc(NpcInfo info, GroupInfo group, bool sendPacket = false)

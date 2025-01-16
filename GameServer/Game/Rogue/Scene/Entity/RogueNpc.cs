@@ -18,7 +18,7 @@ public class RogueNpc(SceneInstance scene, GroupInfo group, NpcInfo npcInfo) : E
     public async ValueTask FinishDialogue()
     {
         IsFinish = true;
-        await Scene.Player.SendPacket(new PacketSceneGroupRefreshScNotify(this));
+        await Scene.Player.SendPacket(new PacketSceneGroupRefreshScNotify(Scene.Player, this));
     }
 
     public override SceneEntityInfo ToProto()

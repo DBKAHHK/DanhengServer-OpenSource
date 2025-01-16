@@ -297,7 +297,7 @@ public class SceneInstance
         var info = AvatarInfo.Values.ToList()[leaderAvatarSlot ?? 0];
         LeaderEntityId = info.AvatarInfo.EntityId;
         if (sendPacket && !notSendPacket)
-            await Player.SendPacket(new PacketSceneGroupRefreshScNotify(addAvatar, removeAvatar));
+            await Player.SendPacket(new PacketSceneGroupRefreshScNotify(Player, addAvatar, removeAvatar));
     }
 
     public void SyncGroupInfo()
@@ -320,7 +320,7 @@ public class SceneInstance
         entity.EntityID = ++LastEntityId;
 
         Entities.Add(entity.EntityID, entity);
-        if (sendPacket) await Player.SendPacket(new PacketSceneGroupRefreshScNotify(entity));
+        if (sendPacket) await Player.SendPacket(new PacketSceneGroupRefreshScNotify(Player, entity));
     }
 
     public async ValueTask AddSummonUnitEntity(EntitySummonUnit entity)
@@ -340,7 +340,7 @@ public class SceneInstance
                     await monster.RemoveBuff(sceneBuff.BuffId);
         }
 
-        await Player.SendPacket(new PacketSceneGroupRefreshScNotify(entity, SummonUnit));
+        await Player.SendPacket(new PacketSceneGroupRefreshScNotify(Player, entity, SummonUnit));
         SummonUnit = entity;
     }
 
@@ -353,7 +353,7 @@ public class SceneInstance
     {
         Entities.Remove(monster.EntityID);
 
-        if (sendPacket) await Player.SendPacket(new PacketSceneGroupRefreshScNotify(null, monster));
+        if (sendPacket) await Player.SendPacket(new PacketSceneGroupRefreshScNotify(Player, null, monster));
     }
 
     public List<T> GetEntitiesInGroup<T>(int groupID)
@@ -444,7 +444,7 @@ public class SceneInstance
     public async ValueTask ClearSummonUnit()
     {
         if (SummonUnit == null) return;
-        await Player.SendPacket(new PacketSceneGroupRefreshScNotify(null, SummonUnit));
+        await Player.SendPacket(new PacketSceneGroupRefreshScNotify(Player, null, SummonUnit));
 
         SummonUnit = null;
 

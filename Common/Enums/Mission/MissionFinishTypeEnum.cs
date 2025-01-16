@@ -590,5 +590,21 @@ public enum MissionFinishTypeEnum
     TarotBookUnlockGivenStoryCnt = 300007,
     DestructPropId = 300008,
     TarotBookFinishInteraction = 300009,
-    TimeRewindPropStayInState = 300010
+    TimeRewindPropStayInState = 300010,
+    RogueTournReachDivisionLevel = 310000,
+    RogueTournFinishCntByDifficultyDivision = 310001,
+    ChimeraFinishRound = 310002,
+    ChimeraFinishPhase = 310003,
+    ChimeraGetChimera = 310004,
+    ChimeraGetChimeraCnt = 310005,
+    ChimeraFinishWorkValue = 310006,
+    ChimeraReachRank = 310007,
+    RogueTournTitanGetTitanBless = 310008,
+    RogueTournFinishWithBuffCnt = 310009,
+    RogueTournFinishLayerWithLineupAvatarCnt = 310010,
+    RogueTournFinishWithTitanBless = 310011,
+    RogueTournTitanGetTitanBlessCnt = 310012,
+    RogueTournEnableSeasonTalent = 310013,
+    PropListStayInState = 310014,
+    ChimeraEndlessHighestWorkValue = 310015
 }

@@ -112,9 +112,7 @@ public class RogueTournManager(PlayerInstance player) : BasePlayerManager(player
 
     public List<RogueTournDifficultyInfo> ToDifficultyProtoList()
     {
-        return (from difficultyExcel in GameData.RogueTournDifficultyCompData.Values
-            select new RogueTournDifficultyInfo
-                { DifficultyId = (uint)difficultyExcel.DifficultyCompID, IsUnlocked = true }).ToList();
+        return [];
     }
 
     public RogueTournExpInfo ToExpProto()
