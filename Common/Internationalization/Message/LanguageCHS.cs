@@ -314,11 +314,13 @@ public class MissionTextCHS
     public string Desc =>
         "管理玩家的任务\n" +
         "使用 pass 完成当前正在进行的所有任务，此命令易造成严重卡顿，请尽量使用 /mission finish 替代\n" +
-        "使用 running 获取正在进行的任务以及可能卡住的任务，使用后可能会出现较长任务列表，请注意甄别\n" +
-        "使用 reaccept 可重新进行指定主任务，请浏览 handbook 来获取主任务ID";
+        "使用 finish [子任务ID] 完成指定子任务，请浏览 handbook 来获取子任务ID\n" +
+        "使用 finishmain [主任务ID] 完成指定主任务，请浏览 handbook 来获取主任务ID\n" +
+        "使用 running <-all> 获取正在追踪的任务，增加'-all'则显示所有正在进行的任务以及可能卡住的任务，使用后可能会出现较长任务列表，请注意甄别\n" +
+        "使用 reaccept [主任务ID] 可重新进行指定主任务，请浏览 handbook 来获取主任务ID";
 
     public string Usage =>
-        "用法：/mission pass\n\n用法：/mission finish [子任务ID]\n\n用法：/mission running\n\n用法：/mission reaccept [主任务ID]";
+        "用法：/mission pass\n\n用法：/mission finish [子任务ID]\n\n用法：/mission running <-all>\n\n用法：/mission reaccept [主任务ID]\n\n用法：/mission finishmain [主任务ID]";
 
     public string AllMissionsFinished => "所有任务已完成!";
     public string AllRunningMissionsFinished => "共 {0} 个进行中的任务已完成!";
@@ -435,7 +437,7 @@ public class RaidTextCHS
 public class AccountTextCHS
 {
     public string Desc => "创建账号\n注意：此命令未经测试，请谨慎使用！";
-    public string Usage => "用法：/account create <用户名>";
+    public string Usage => "用法：/account create [用户名]";
     public string InvalidUid => "无效UID参数！";
     public string CreateError => "出现内部错误 {0} ";
     public string CreateSuccess => "新账号 {0} 创建成功!";
@@ -450,7 +452,7 @@ public class AccountTextCHS
 public class UnstuckTextCHS
 {
     public string Desc => "将玩家传送回默认场景";
-    public string Usage => "用法：/unstuck <UID>";
+    public string Usage => "用法：/unstuck [UID]";
     public string UnstuckSuccess => "已成功将该玩家传送回默认场景";
     public string UidNotExist => "该UID不存在！";
     public string PlayerIsOnline => "该玩家目前在线上！";
@@ -462,7 +464,7 @@ public class UnstuckTextCHS
 public class SetlevelTextCHS
 {
     public string Desc => "设定玩家等级";
-    public string Usage => "用法：/setlevel <等级>";
+    public string Usage => "用法：/setlevel [等级]";
     public string SetlevelSuccess => "等级设定成功！";
 }
 

@@ -260,7 +260,7 @@ public class AvatarTextEN
 public class GiveTextEN
 {
     public string Desc => "Give player items, item id can be avatar id, but cant set level, talent, rank";
-    public string Usage => "Usage: /give <item ID> l<level> x<amount> r<rank>";
+    public string Usage => "Usage: /give [item ID] l<level> x<amount> r<rank>";
     public string ItemNotFound => "Item not found!";
     public string GiveItem => "Gave @{0} {1} item(s) {2}";
 }
@@ -321,7 +321,9 @@ public class MissionTextEN
     public string Desc =>
         "Manage player's missions\n" +
         "Use 'pass' to finish all running mission, this command will cause severe lagging, please use '/mission finish' instead\n" +
-        "Use 'running' to get the running mission and possible stuck missions, after use, a longer mission list may appear, please note that\n" +
+        "Use 'finish [SubMissionID]' to finish certain sub-mission，please find sub-mission id in handbook\n" +
+        "Use 'finishmain [MainMissionID]' to finish certain main mission，please find main mission id in handbook\n" +
+        "Use 'running <-all>' to get the tracking mission, adding '-all' shows all running mission and possible stuck missions, after use, a longer mission list may appear, please note that\n" +
         "Use 'reaccept' to re-accept given main mission, please find main mission id in handbook";
 
     public string Usage =>
