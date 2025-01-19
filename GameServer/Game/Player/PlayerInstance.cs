@@ -245,6 +245,14 @@ public class PlayerInstance(PlayerData data)
             }
         }
 
+        foreach (var relic in InventoryManager.Data.RelicItems)
+        {
+            if (relic.MainAffix != 0) continue; // fix relic main affix
+
+            var groupId = GameData.RelicConfigData.GetValueOrDefault(relic.ItemId)?.MainAffixGroup ?? 0;
+            relic.MainAffix = UtilTools.GetRandomRelicMainAffix(groupId);
+        }
+
         foreach (var avatar in AvatarManager?.AvatarData.Avatars ?? [])
         foreach (var skill in avatar.GetSkillTree())
         {
