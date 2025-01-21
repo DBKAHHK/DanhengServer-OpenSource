@@ -127,7 +127,9 @@ public class CommandGiveall : ICommand
         var materialList = GameData.ItemConfigData.Values;
         var items = new List<ItemData>();
         foreach (var material in materialList)
-            if (material.ItemMainType == ItemMainTypeEnum.Material || material.ItemSubType == ItemSubTypeEnum.Food)
+            if (material.ItemMainType == ItemMainTypeEnum.Material ||
+                material.ItemSubType == ItemSubTypeEnum.Food ||
+                material.ItemSubType == ItemSubTypeEnum.FindChest)
                 items.Add(new ItemData
                 {
                     ItemId = material.ID,

@@ -76,6 +76,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
                         break;
                     case ItemSubTypeEnum.Food:
                     case ItemSubTypeEnum.Book:
+                    case ItemSubTypeEnum.FindChest:
                         itemData = await PutItem(itemId, count);
                         break;
                 }
