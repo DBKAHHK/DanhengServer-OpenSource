@@ -82,7 +82,7 @@ public class CommandMission : ICommand
             value.Add(m.ID);
         }
         
-        if (arg.BasicArgs.Count == 1 && arg.BasicArgs[0] == "-all")
+        if ((arg.BasicArgs.Count == 1 && arg.BasicArgs[0] == "-all") || mission.Data.TrackingMainMissionId == 0)
         {
             //Show all the missions
             await ShowMissionList(mission, missionMap, arg);
