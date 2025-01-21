@@ -235,12 +235,6 @@
       "panelId": 30008
     },
     {
-      "activityId": 3001301,
-      "beginTime": "1736712000",
-      "endTime": "1740340799",
-      "panelId": 30013
-    },
-    {
       "activityId": 4000208,
       "beginTime": "1689912000",
       "endTime": "4294967295",
@@ -287,36 +281,6 @@
       "beginTime": "1701835200",
       "endTime": "4294967295",
       "panelId": 40003
-    },
-    {
-      "activityId": 4000602,
-      "beginTime": "1738612800",
-      "endTime": "1740340799",
-      "panelId": 40006
-    },
-    {
-      "activityId": 4000603,
-      "beginTime": "1738555200",
-      "endTime": "1740340799",
-      "panelId": 40006
-    },
-    {
-      "activityId": 4000601,
-      "beginTime": "1738699200",
-      "endTime": "1740340799",
-      "panelId": 40006
-    },
-    {
-      "activityId": 4000605,
-      "beginTime": "1738872000",
-      "endTime": "1740340799",
-      "panelId": 40006
-    },
-    {
-      "activityId": 4000604,
-      "beginTime": "1738785600",
-      "endTime": "1740340799",
-      "panelId": 40006
     },
     {
       "activityId": 5000010,
@@ -571,12 +535,6 @@
       "panelId": 50024
     },
     {
-      "activityId": 5002601,
-      "beginTime": "1737518400",
-      "endTime": "1740340799",
-      "panelId": 50026
-    },
-    {
       "activityId": 5002602,
       "beginTime": "1737518400",
       "endTime": "4294967295",
@@ -653,6 +611,78 @@
       "beginTime": "1736895600",
       "endTime": "1747778400",
       "panelId": 80015
+    },
+    {
+      "activityId": 6001701,
+      "beginTime": "1736895600",
+      "endTime": "1740524399",
+      "panelId": 60017
+    },
+    {
+      "activityId": 8001401,
+      "beginTime": "1736895600",
+      "endTime": "1740524399",
+      "panelId": 80014
+    },
+    {
+      "activityId": 2005401,
+      "beginTime": "1736895600",
+      "endTime": "1740524399",
+      "panelId": 20056
+    },
+    {
+      "activityId": 2005501,
+      "beginTime": "1736895600",
+      "endTime": "1740524399",
+      "panelId": 20056
+    },
+    {
+      "activityId": 3001401,
+      "beginTime": "1736895600",
+      "endTime": "1740524399",
+      "panelId": 30014
+    },
+    {
+      "activityId": 3001402,
+      "beginTime": "1736895600",
+      "endTime": "1740524399",
+      "panelId": 30014
+    },
+    {
+      "activityId": 3001403,
+      "beginTime": "1736895600",
+      "endTime": "1740524399",
+      "panelId": 30014
+    },
+    {
+      "activityId": 3001404,
+      "beginTime": "1736895600",
+      "endTime": "1740524399",
+      "panelId": 30014
+    },
+    {
+      "activityId": 3001405,
+      "beginTime": "1736895600",
+      "endTime": "1740524399",
+      "panelId": 30014
+    },
+    {
+      "activityId": 3001406,
+      "beginTime": "1736895600",
+      "endTime": "1740524399",
+      "panelId": 30014
+    },
+    {
+      "activityId": 3001407,
+      "beginTime": "1736895600",
+      "endTime": "1740524399",
+      "panelId": 30014
+    },
+    {
+      "activityId": 5003401,
+      "beginTime": "1736895600",
+      "endTime": "1740524399",
+      "panelId": 50034
     }
   ]
 }
