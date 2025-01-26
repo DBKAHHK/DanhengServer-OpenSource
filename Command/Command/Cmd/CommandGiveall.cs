@@ -234,7 +234,8 @@ public class CommandGiveall : ICommand
             if (material.ItemMainType == ItemMainTypeEnum.Usable)
                 if (material.ItemSubType == ItemSubTypeEnum.HeadIcon ||
                     material.ItemSubType == ItemSubTypeEnum.PhoneTheme ||
-                    material.ItemSubType == ItemSubTypeEnum.ChatBubble)
+                    material.ItemSubType == ItemSubTypeEnum.ChatBubble ||
+                    material.ItemSubType == ItemSubTypeEnum.AvatarSkin)
                     await player.InventoryManager!.AddItem(material.ID, 1, false);
 
         await arg.SendMsg(I18NManager.Translate("Game.Command.GiveAll.GiveAllItems",

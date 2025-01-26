@@ -6,6 +6,7 @@ using EggLink.DanhengServer.Enums.Item;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Game.Scene;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Avatar;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.PlayerSync;
@@ -76,6 +77,16 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
                         break;
                     case ItemSubTypeEnum.PhoneTheme:
                         Player.PlayerUnlockData!.PhoneThemes.Add(itemId);
+                        break;
+                    case ItemSubTypeEnum.AvatarSkin:
+                        var avatarId = GameData.AvatarSkinData[itemId].AvatarID;
+                        if (!Player.PlayerUnlockData!.Skins.TryGetValue(avatarId, out var value))
+                        {
+                            value = [];
+                            Player.PlayerUnlockData.Skins[avatarId] = value;
+                        }
+                        value.Add(itemId);
+                        await Player.SendPacket(new PacketUnlockAvatarSkinScNotify(itemId));
                         break;
                     case ItemSubTypeEnum.Food:
                     case ItemSubTypeEnum.Book:

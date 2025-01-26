@@ -305,6 +305,17 @@ public class PlayerInstance(PlayerData data)
         await SendPacket(new PacketPlayerSyncScNotify(avatar));
     }
 
+    public async ValueTask ChangeAvatarSkin(int avatarId, int skinId)
+    {
+        PlayerUnlockData!.Skins.TryGetValue(avatarId, out var skins);
+        if (skins != null && (skins.Contains(skinId) || skinId == 0))
+        {
+            var avatar = AvatarManager!.GetAvatar(avatarId)!;
+            avatar.GetPathInfo(avatarId)!.Skin = skinId;
+            await SendPacket(new PacketPlayerSyncScNotify(avatar));
+        }
+    }
+
     public async ValueTask<AvatarInfo> MarkAvatar(int avatarId, bool isMarked, bool sendPacket = true)
     {
         var avatar = AvatarManager!.GetAvatar(avatarId)!;

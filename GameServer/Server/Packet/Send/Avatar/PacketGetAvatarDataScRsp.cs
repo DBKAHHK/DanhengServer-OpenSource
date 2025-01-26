@@ -14,6 +14,9 @@ public class PacketGetAvatarDataScRsp : BasePacket
             IsGetAll = true
         };
 
+        player.PlayerUnlockData!.Skins.Values.ToList().ForEach(skin =>
+            proto.SkinList.AddRange(skin.Select(x => (uint)x)));
+
         player.AvatarManager?.AvatarData?.Avatars?.ForEach(avatar =>
         {
             GameData.MultiplePathAvatarConfigData.TryGetValue(avatar.BaseAvatarId, out var multiPathAvatar);

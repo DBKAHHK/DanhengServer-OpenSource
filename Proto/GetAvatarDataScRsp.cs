@@ -33,7 +33,7 @@ namespace EggLink.DanhengServer.Proto {
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BCMLJCFOEFMReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetAvatarDataScRsp), global::EggLink.DanhengServer.Proto.GetAvatarDataScRsp.Parser, new[]{ "IsGetAll", "Retcode", "ANKHENIIACH", "JPNLPOPMKEJ", "AvatarList", "PNKCFEALAMI" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetAvatarDataScRsp), global::EggLink.DanhengServer.Proto.GetAvatarDataScRsp.Parser, new[]{ "IsGetAll", "Retcode", "SkinList", "JPNLPOPMKEJ", "AvatarList", "PNKCFEALAMI" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,7 +77,7 @@ namespace EggLink.DanhengServer.Proto {
     public GetAvatarDataScRsp(GetAvatarDataScRsp other) : this() {
       isGetAll_ = other.isGetAll_;
       retcode_ = other.retcode_;
-      aNKHENIIACH_ = other.aNKHENIIACH_.Clone();
+      skinList_ = other.skinList_.Clone();
       jPNLPOPMKEJ_ = other.jPNLPOPMKEJ_;
       avatarList_ = other.avatarList_.Clone();
       pNKCFEALAMI_ = other.pNKCFEALAMI_.Clone();
@@ -114,15 +114,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ANKHENIIACH" field.</summary>
-    public const int ANKHENIIACHFieldNumber = 9;
-    private static readonly pb::FieldCodec<uint> _repeated_aNKHENIIACH_codec
+    /// <summary>Field number for the "skin_list" field.</summary>
+    public const int SkinListFieldNumber = 9;
+    private static readonly pb::FieldCodec<uint> _repeated_skinList_codec
         = pb::FieldCodec.ForUInt32(74);
-    private readonly pbc::RepeatedField<uint> aNKHENIIACH_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> skinList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> ANKHENIIACH {
-      get { return aNKHENIIACH_; }
+    public pbc::RepeatedField<uint> SkinList {
+      get { return skinList_; }
     }
 
     /// <summary>Field number for the "JPNLPOPMKEJ" field.</summary>
@@ -176,7 +176,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (IsGetAll != other.IsGetAll) return false;
       if (Retcode != other.Retcode) return false;
-      if(!aNKHENIIACH_.Equals(other.aNKHENIIACH_)) return false;
+      if(!skinList_.Equals(other.skinList_)) return false;
       if (JPNLPOPMKEJ != other.JPNLPOPMKEJ) return false;
       if(!avatarList_.Equals(other.avatarList_)) return false;
       if(!pNKCFEALAMI_.Equals(other.pNKCFEALAMI_)) return false;
@@ -189,7 +189,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (IsGetAll != false) hash ^= IsGetAll.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      hash ^= aNKHENIIACH_.GetHashCode();
+      hash ^= skinList_.GetHashCode();
       if (JPNLPOPMKEJ != 0) hash ^= JPNLPOPMKEJ.GetHashCode();
       hash ^= avatarList_.GetHashCode();
       hash ^= pNKCFEALAMI_.GetHashCode();
@@ -220,7 +220,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(64);
         output.WriteUInt32(JPNLPOPMKEJ);
       }
-      aNKHENIIACH_.WriteTo(output, _repeated_aNKHENIIACH_codec);
+      skinList_.WriteTo(output, _repeated_skinList_codec);
       pNKCFEALAMI_.WriteTo(output, _repeated_pNKCFEALAMI_codec);
       if (IsGetAll != false) {
         output.WriteRawTag(104);
@@ -245,7 +245,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(64);
         output.WriteUInt32(JPNLPOPMKEJ);
       }
-      aNKHENIIACH_.WriteTo(ref output, _repeated_aNKHENIIACH_codec);
+      skinList_.WriteTo(ref output, _repeated_skinList_codec);
       pNKCFEALAMI_.WriteTo(ref output, _repeated_pNKCFEALAMI_codec);
       if (IsGetAll != false) {
         output.WriteRawTag(104);
@@ -267,7 +267,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += aNKHENIIACH_.CalculateSize(_repeated_aNKHENIIACH_codec);
+      size += skinList_.CalculateSize(_repeated_skinList_codec);
       if (JPNLPOPMKEJ != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JPNLPOPMKEJ);
       }
@@ -291,7 +291,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      aNKHENIIACH_.Add(other.aNKHENIIACH_);
+      skinList_.Add(other.skinList_);
       if (other.JPNLPOPMKEJ != 0) {
         JPNLPOPMKEJ = other.JPNLPOPMKEJ;
       }
@@ -326,7 +326,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 74:
           case 72: {
-            aNKHENIIACH_.AddEntriesFrom(input, _repeated_aNKHENIIACH_codec);
+            skinList_.AddEntriesFrom(input, _repeated_skinList_codec);
             break;
           }
           case 90:
@@ -367,7 +367,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 74:
           case 72: {
-            aNKHENIIACH_.AddEntriesFrom(ref input, _repeated_aNKHENIIACH_codec);
+            skinList_.AddEntriesFrom(ref input, _repeated_skinList_codec);
             break;
           }
           case 90:
