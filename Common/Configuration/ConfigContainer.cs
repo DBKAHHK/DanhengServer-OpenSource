@@ -1,4 +1,6 @@
-﻿namespace EggLink.DanhengServer.Configuration;
+﻿using EggLink.DanhengServer.Proto;
+
+namespace EggLink.DanhengServer.Configuration;
 
 public class ConfigContainer
 {
@@ -77,6 +79,7 @@ public class ServerOption
     public bool AutoUpgradeWorldLevel { get; set; } = true;
     public bool EnableMission { get; set; } = true; // experimental
     public bool AutoLightSection { get; set; } = true;
+    public string DefaultGender { get; set; } = "Woman";
     public string Language { get; set; } = "EN";
     public string FallbackLanguage { get; set; } = "EN";
     public HashSet<string> DefaultPermissions { get; set; } = ["*"];

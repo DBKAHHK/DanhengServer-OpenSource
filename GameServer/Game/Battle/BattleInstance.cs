@@ -127,16 +127,10 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
         if (list.Count > 0)
         {
             List<int> tempList = [.. list];
-            if (Player.Data.CurrentGender == Gender.Man)
-                foreach (var avatar in tempList.Where(avatar =>
-                             GameData.SpecialAvatarData.TryGetValue(avatar * 10 + 0, out var specialAvatarExcel) &&
-                             specialAvatarExcel.AvatarID is 8002 or 8004 or 8006))
-                    list.Remove(avatar);
-            else
-                foreach (var avatar in tempList.Where(avatar =>
-                             GameData.SpecialAvatarData.TryGetValue(avatar * 10 + 0, out var specialAvatarExcel) &&
-                             specialAvatarExcel.AvatarID is 8001 or 8003 or 8005))
-                    list.Remove(avatar);
+            foreach (var avatar in tempList.Where(avatar =>
+                GameData.SpecialAvatarData.TryGetValue(avatar * 10 + 0, out var specialAvatarExcel) &&
+                specialAvatarExcel.AvatarID > 8000 && specialAvatarExcel.AvatarID % 2 != (int)Player.Data.CurrentGender))
+                list.Remove(avatar);
         }
 
         if (list.Count > 0) // if list is not empty
@@ -179,7 +173,7 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
                     var player = DatabaseHelper.Instance!.GetInstance<AvatarData>(avatar.AssistUid);
                     if (player != null)
                     {
-                        avatarInstance = player.Avatars.Find(item => item.GetAvatarId() == avatar.BaseAvatarId);
+                        avatarInstance = player.Avatars.Find(item => item.CurAvatarId == avatar.BaseAvatarId);
                         avatarType = AvatarType.AvatarAssistType;
                     }
                 }
@@ -229,7 +223,8 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
 
         var avatars = GetBattleAvatars();
         foreach (var avatar in avatars)
-            proto.BattleAvatarList.Add(avatar.Key.ToBattleProto(Player.LineupManager!.GetCurLineup()!,
+            proto.BattleAvatarList.Add(avatar.Key.ToBattleProto(
+                Player.Data.WorldLevel, Player.LineupManager!.GetCurLineup()!,
                 Player.InventoryManager!.Data, avatar.Value));
 
         System.Threading.Tasks.Task.Run(async () =>

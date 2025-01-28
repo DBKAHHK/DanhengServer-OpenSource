@@ -11,7 +11,7 @@ public class HandlerSetAssistAvatarCsReq : Handler
     {
         var req = SetAssistAvatarCsReq.Parser.ParseFrom(data);
         var player = connection.Player!;
-        var avatars = player.AvatarManager!.AvatarData!.AssistAvatars;
+        var avatars = player.Data.AssistAvatars;
         avatars.Clear();
         foreach (var id in req.AvatarIdList)
         {

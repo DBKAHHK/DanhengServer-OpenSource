@@ -1,8 +1,8 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Inventory;
-using EggLink.DanhengServer.Database.Player;
 using EggLink.DanhengServer.Proto;
+using EggLink.DanhengServer.Util;
 using Newtonsoft.Json;
 using SqlSugar;
 using LineupInfo = EggLink.DanhengServer.Database.Lineup.LineupInfo;
@@ -13,41 +13,13 @@ namespace EggLink.DanhengServer.Database.Avatar;
 public class AvatarData : BaseDatabaseDataHelper
 {
     [SugarColumn(IsJson = true)] public List<AvatarInfo> Avatars { get; set; } = [];
-
-    [SugarColumn(IsJson = true)] public List<int> AssistAvatars { get; set; } = [];
-
-    [SugarColumn(IsJson = true)] public List<int> DisplayAvatars { get; set; } = [];
 }
 
 public class AvatarInfo
 {
-    [JsonIgnore] public AvatarConfigExcel? Excel;
-
-    [JsonIgnore] public PlayerData? PlayerData;
-
-    public AvatarInfo()
-    {
-        // only for db
-    }
-
-    public AvatarInfo(AvatarConfigExcel excel)
-    {
-        Excel = excel;
-        SkillTree = [];
-        if (AvatarId == 8001)
-        {
-        }
-        else
-        {
-            excel.DefaultSkillTree.ForEach(skill => { SkillTree.Add(skill.PointID, skill.Level); });
-        }
-    }
-
-    public int AvatarId { get; set; }
-
+    public int CurAvatarId { get; set; }
+    public int BaseAvatarId { get; set; }
     [JsonIgnore] public int SpecialBaseAvatarId { get; set; }
-
-    public int PathId { get; set; }
     public int Level { get; set; }
     public int Exp { get; set; }
     public int Promotion { get; set; }
@@ -58,53 +30,35 @@ public class AvatarInfo
     public int ExtraLineupHp { get; set; } = 10000;
     public int ExtraLineupSp { get; set; }
     public bool IsMarked { get; set; } = false;
-    public Dictionary<int, int> SkillTree { get; set; } = [];
-
-    public Dictionary<int, Dictionary<int, int>> SkillTreeExtra { get; set; } =
-        []; // for hero  heroId -> skillId -> level
-
-    public Dictionary<int, PathInfo> PathInfoes { get; set; } = [];
-
+    public Dictionary<int, MultiPathData> PathInfo { get; set; } = [];
     [JsonIgnore] public int InternalEntityId { get; set; }
 
-    [JsonIgnore]
-    public int EntityId
+    public AvatarInfo()
     {
-        get => InternalEntityId;
-        set
-        {
-            if (SpecialBaseAvatarId > 0 && PlayerData != null)
-            {
-                // set in SpecialAvatarExcel
-                GameData.SpecialAvatarData.TryGetValue(SpecialBaseAvatarId * 10 + PlayerData.WorldLevel,
-                    out var specialAvatar);
-                if (specialAvatar != null)
-                {
-                    specialAvatar.EntityId[PlayerData.Uid] = value;
-                    InternalEntityId = value;
-                }
-            }
-
-            InternalEntityId = value;
-        }
+        // For db only
     }
 
-    public void ValidateHero()
+    public AvatarInfo(int baseAvatarId, int? curAvatarId = null)
     {
-        if (PathId == 0) return;
+        BaseAvatarId = baseAvatarId;
+        CurAvatarId = curAvatarId ?? baseAvatarId;
+        PathInfo.Add(CurAvatarId, new()); // Security add cur pathinfo
+    }
 
-        var isWoman = PathId % 2 == 0;
+    public void SetEntityId(int uid, int entityId, int worldLevel = 0)
+    {
+        if (SpecialBaseAvatarId > 0)
+        {
+            // set in SpecialAvatarExcel
+            GameData.SpecialAvatarData.TryGetValue(SpecialBaseAvatarId * 10 + worldLevel,
+                out var specialAvatar);
+            if (specialAvatar != null)
+            {
+                specialAvatar.EntityId[uid] = entityId;
+            }
+        }
 
-        var shouldRemove = new List<int>();
-        foreach (var skill in SkillTreeExtra.Keys)
-            if (skill % 2 == 0 != isWoman) // remove
-                shouldRemove.Add(skill);
-
-        foreach (var skill in shouldRemove) SkillTreeExtra.Remove(skill);
-
-        foreach (var path in PathInfoes.Keys)
-            if (path % 2 == 0 != isWoman) // remove
-                PathInfoes.Remove(path);
+        InternalEntityId = entityId;
     }
 
     public bool HasTakenReward(int promotion)
@@ -127,82 +81,35 @@ public class AvatarInfo
         return isExtraLineup ? ExtraLineupSp : CurrentSp;
     }
 
-    public int GetAvatarId()
-    {
-        return PathId > 0 ? PathId : AvatarId;
-    }
-
-    public int GetBaseAvatarId()
-    {
-        if (PathId > 0)
-            return PathId > 8000 ? 8001 : AvatarId;
-        return AvatarId;
-    }
-
     public int GetSpecialAvatarId()
     {
-        return SpecialBaseAvatarId > 0 ? SpecialBaseAvatarId : GetAvatarId();
+        return SpecialBaseAvatarId > 0 ? SpecialBaseAvatarId : CurAvatarId;
     }
 
     public int GetUniqueAvatarId()
     {
-        return SpecialBaseAvatarId > 0 ? SpecialBaseAvatarId : GetBaseAvatarId();
+        return SpecialBaseAvatarId > 0 ? SpecialBaseAvatarId : BaseAvatarId;
     }
 
-    public PathInfo GetCurPathInfo()
+    public MultiPathData GetCurAvatarInfo()
     {
-        if (PathInfoes.ContainsKey(GetAvatarId())) return PathInfoes[GetAvatarId()];
-
-        PathInfoes.Add(GetAvatarId(), new PathInfo(PathId));
-        return PathInfoes[GetAvatarId()];
+        return GetPathInfo(CurAvatarId)!;
     }
 
-    public PathInfo? GetPathInfo(int pathId)
+    public MultiPathData? GetPathInfo(int avatarId)
     {
-        if (PathInfoes.TryGetValue(pathId, out var value)) return value;
-        return null;
+        return PathInfo.TryGetValue(avatarId, out var pathInfo) ? pathInfo : null;
     }
 
-    public Dictionary<int, int> GetSkillTree(int pathId = 0)
+    public AvatarConfigExcel GetCurAvatarConfig()
     {
-        if (pathId == 0) pathId = PathId;
-
-        if (pathId == 0 && AvatarId == 1001)
-        {
-            PathId = 1001;
-            pathId = 1001; // march 7th
-        }
-
-        var value = SkillTree;
-        if (pathId > 0)
-            if (!SkillTreeExtra.TryGetValue(pathId, out value))
-            {
-                value = [];
-                // for old data
-                SkillTreeExtra[pathId] = value;
-                var excel = GameData.AvatarConfigData[pathId];
-                excel.DefaultSkillTree.ForEach(skill => { SkillTreeExtra[pathId].Add(skill.PointID, skill.Level); });
-            }
-
-        return value;
+        return GetAvatarConfig(CurAvatarId);
     }
 
-    public void VaildateSkillTree()
+    public AvatarConfigExcel GetAvatarConfig(int avatarId)
     {
-        if (AvatarId < 8000)
-            foreach (var avatar in GameData.MultiplePathAvatarConfigData.Values)
-                if (avatar.AvatarID == AvatarId)
-                    if (!SkillTreeExtra.TryGetValue(avatar.AvatarID, out var value))
-                    {
-                        value = [];
-                        // for old data
-                        SkillTreeExtra[avatar.AvatarID] = value;
-                        var excel = GameData.AvatarConfigData[avatar.AvatarID];
-                        excel.DefaultSkillTree.ForEach(skill =>
-                        {
-                            SkillTreeExtra[avatar.AvatarID].Add(skill.PointID, skill.Level);
-                        });
-                    }
+        return GameData.AvatarConfigData.Values.FirstOrDefault(x =>
+            x.AvatarID == avatarId)!;
     }
 
     public void SetCurHp(int value, bool isExtraLineup)
@@ -229,21 +136,22 @@ public class AvatarInfo
             Level = (uint)Level,
             Exp = (uint)Exp,
             Promotion = (uint)Promotion,
-            Rank = (uint)GetCurPathInfo().Rank,
+            Rank = (uint)GetCurAvatarInfo().Rank,
+            DressedSkinId = (uint)GetCurAvatarInfo().Skin,
             FirstMetTimeStamp = (ulong)Timestamp,
             IsMarked = IsMarked
         };
 
-        foreach (var item in GetCurPathInfo().Relic)
+        foreach (var item in GetCurAvatarInfo().Relic)
             proto.EquipRelicList.Add(new EquipRelic
             {
                 RelicUniqueId = (uint)item.Value,
                 Type = (uint)item.Key
             });
 
-        if (GetCurPathInfo().EquipId != 0) proto.EquipmentUniqueId = (uint)GetCurPathInfo().EquipId;
+        if (GetCurAvatarInfo().EquipId != 0) proto.EquipmentUniqueId = (uint)GetCurAvatarInfo().EquipId;
 
-        foreach (var skill in GetSkillTree())
+        foreach (var skill in GetCurAvatarInfo().SkillTree)
             proto.SkilltreeList.Add(new AvatarSkillTree
             {
                 PointId = (uint)skill.Key,
@@ -257,19 +165,19 @@ public class AvatarInfo
         return proto;
     }
 
-    public SceneEntityInfo ToSceneEntityInfo(AvatarType avatarType = AvatarType.AvatarFormalType)
+    public SceneEntityInfo ToSceneEntityInfo(Position? pos, Position? rot, AvatarType avatarType = AvatarType.AvatarFormalType)
     {
         return new SceneEntityInfo
         {
-            EntityId = (uint)EntityId,
+            EntityId = (uint)InternalEntityId,
             Motion = new MotionInfo
             {
-                Pos = PlayerData?.Pos?.ToProto() ?? new Vector(),
-                Rot = PlayerData?.Rot?.ToProto() ?? new Vector()
+                Pos = pos?.ToProto() ?? new Vector(),
+                Rot = rot?.ToProto() ?? new Vector()
             },
             Actor = new SceneActorInfo
             {
-                BaseAvatarId = (uint)GetBaseAvatarId(),
+                BaseAvatarId = (uint)BaseAvatarId,
                 AvatarType = avatarType
             }
         };
@@ -291,8 +199,8 @@ public class AvatarInfo
         };
     }
 
-    public BattleAvatar ToBattleProto(LineupInfo lineup, InventoryData inventory,
-        AvatarType avatarType = AvatarType.AvatarFormalType)
+    public BattleAvatar ToBattleProto(int worldLevel, LineupInfo lineup,
+        InventoryData inventory, AvatarType avatarType = AvatarType.AvatarFormalType)
     {
         var proto = new BattleAvatar
         {
@@ -300,25 +208,25 @@ public class AvatarInfo
             AvatarType = avatarType,
             Level = (uint)Level,
             Promotion = (uint)Promotion,
-            Rank = (uint)GetCurPathInfo().Rank,
-            Index = (uint)lineup.GetSlot(GetBaseAvatarId()),
+            Rank = (uint)GetCurAvatarInfo().Rank,
+            Index = (uint)lineup.GetSlot(BaseAvatarId),
             Hp = (uint)GetCurHp(lineup.LineupType != 0),
             SpBar = new SpBarInfo
             {
                 CurSp = (uint)GetCurSp(lineup.LineupType != 0),
                 MaxSp = 10000
             },
-            WorldLevel = (uint)(PlayerData?.WorldLevel ?? 0)
+            WorldLevel = (uint)worldLevel
         };
 
-        foreach (var skill in GetSkillTree())
+        foreach (var skill in GetCurAvatarInfo().SkillTree)
             proto.SkilltreeList.Add(new AvatarSkillTree
             {
                 PointId = (uint)skill.Key,
                 Level = (uint)skill.Value
             });
 
-        foreach (var relic in GetCurPathInfo().Relic)
+        foreach (var relic in GetCurAvatarInfo().Relic)
         {
             var item = inventory.RelicItems?.Find(item => item.UniqueId == relic.Value);
             if (item != null)
@@ -339,9 +247,9 @@ public class AvatarInfo
             }
         }
 
-        if (GetCurPathInfo().EquipId != 0)
+        if (GetCurAvatarInfo().EquipId != 0)
         {
-            var item = inventory.EquipmentItems?.Find(item => item.UniqueId == GetCurPathInfo().EquipId);
+            var item = inventory.EquipmentItems?.Find(item => item.UniqueId == GetCurAvatarInfo().EquipId);
             if (item != null)
                 proto.EquipmentList.Add(new BattleEquipment
                 {
@@ -351,14 +259,14 @@ public class AvatarInfo
                     Rank = (uint)item.Rank
                 });
         }
-        else if (GetCurPathInfo().EquipData != null)
+        else if (GetCurAvatarInfo().EquipData != null)
         {
             proto.EquipmentList.Add(new BattleEquipment
             {
-                Id = (uint)GetCurPathInfo().EquipData!.ItemId,
-                Level = (uint)GetCurPathInfo().EquipData!.Level,
-                Promotion = (uint)GetCurPathInfo().EquipData!.Promotion,
-                Rank = (uint)GetCurPathInfo().EquipData!.Rank
+                Id = (uint)GetCurAvatarInfo().EquipData!.ItemId,
+                Level = (uint)GetCurAvatarInfo().EquipData!.Level,
+                Promotion = (uint)GetCurAvatarInfo().EquipData!.Promotion,
+                Rank = (uint)GetCurAvatarInfo().EquipData!.Rank
             });
         }
 
@@ -369,34 +277,26 @@ public class AvatarInfo
     {
         var res = new List<MultiPathAvatarInfo>();
 
-        GetSkillTree();
-        VaildateSkillTree();
-
-        foreach (var path in SkillTreeExtra)
+        foreach (var path in PathInfo)
         {
-            PathInfoes.TryGetValue(path.Key, out var pathInfo);
-
-            if (pathInfo == null)
-            {
-                PathInfoes.Add(path.Key, new PathInfo(path.Key));
-                pathInfo = PathInfoes[path.Key];
-            }
+            if (path.Key > 8000 && path.Key % 2 != CurAvatarId % 2) continue;
 
             var proto = new MultiPathAvatarInfo
             {
                 AvatarId = (MultiPathAvatarType)path.Key,
-                Rank = (uint)GetCurPathInfo().Rank,
-                PathEquipmentId = (uint)pathInfo.EquipId
+                Rank = (uint)path.Value.Rank,
+                PathEquipmentId = (uint)path.Value.EquipId,
+                DressedSkinId = (uint)path.Value.Skin
             };
 
-            foreach (var skill in path.Value)
+            foreach (var skillTree in path.Value.SkillTree)
                 proto.MultiPathSkillTree.Add(new AvatarSkillTree
                 {
-                    PointId = (uint)skill.Key,
-                    Level = (uint)skill.Value
+                    PointId = (uint)skillTree.Key,
+                    Level = (uint)skillTree.Value
                 });
 
-            foreach (var relic in pathInfo.Relic)
+            foreach (var relic in path.Value.Relic)
                 proto.EquipRelicList.Add(new EquipRelic
                 {
                     Type = (uint)relic.Key,
@@ -409,47 +309,48 @@ public class AvatarInfo
         return res;
     }
 
-    public DisplayAvatarDetailInfo ToDetailProto(int pos)
+    public DisplayAvatarDetailInfo ToDetailProto(int playerUid, int pos)
     {
         var proto = new DisplayAvatarDetailInfo
         {
-            AvatarId = (uint)GetAvatarId(),
+            AvatarId = (uint)CurAvatarId,
             Level = (uint)Level,
             Exp = (uint)Exp,
             Promotion = (uint)Promotion,
-            Rank = (uint)GetCurPathInfo().Rank,
+            Rank = (uint)GetCurAvatarInfo().Rank,
             Pos = (uint)pos
         };
 
-        var inventory = DatabaseHelper.Instance!.GetInstance<InventoryData>(PlayerData!.Uid)!;
-        foreach (var item in GetCurPathInfo().Relic)
+        var inventory = DatabaseHelper.Instance!.GetInstance<InventoryData>(playerUid)!;
+        foreach (var item in GetCurAvatarInfo().Relic)
         {
             var relic = inventory.RelicItems.Find(x => x.UniqueId == item.Value)!;
             proto.RelicList.Add(relic.ToDisplayRelicProto());
         }
 
-        if (GetCurPathInfo().EquipId != 0)
+        if (GetCurAvatarInfo().EquipId != 0)
         {
-            var equip = inventory.EquipmentItems.Find(x => x.UniqueId == GetCurPathInfo().EquipId)!;
+            var equip = inventory.EquipmentItems.Find(x => x.UniqueId == GetCurAvatarInfo().EquipId)!;
             proto.Equipment = equip.ToDisplayEquipmentProto();
         }
 
-        foreach (var skill in GetSkillTree())
+        foreach (var skillTree in GetCurAvatarInfo().SkillTree)
             proto.SkilltreeList.Add(new AvatarSkillTree
             {
-                PointId = (uint)skill.Key,
-                Level = (uint)skill.Value
+                PointId = (uint)skillTree.Key,
+                Level = (uint)skillTree.Value
             });
 
         return proto;
     }
 }
 
-public class PathInfo(int pathId)
+public class MultiPathData
 {
-    public int PathId { get; set; } = pathId;
-    public int Rank { get; set; }
+    public int Rank { get; set; } = 0;
     public int EquipId { get; set; } = 0;
+    public int Skin { get; set; } = 0;
+    public Dictionary<int, int> SkillTree { get; set; } = [];
     public Dictionary<int, int> Relic { get; set; } = [];
     public ItemData? EquipData { get; set; } // for special avatar
 }

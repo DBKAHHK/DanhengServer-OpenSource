@@ -28,7 +28,7 @@ public class RogueMagicManager(PlayerInstance player) : BasePlayerManager(player
 
             avatar.SetCurHp(10000, true);
             avatar.SetCurSp(5000, true);
-            baseAvatarIds.Add(avatar.GetBaseAvatarId());
+            baseAvatarIds.Add(avatar.BaseAvatarId);
         }
 
         Player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupMagicRogue, baseAvatarIds);

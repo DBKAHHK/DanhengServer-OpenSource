@@ -63,12 +63,13 @@ public class SceneInstance
 
         var playerGroupInfo = new SceneEntityGroupInfo(); // avatar group
         foreach (var avatar in AvatarInfo)
-            playerGroupInfo.EntityList.Add(avatar.Value.AvatarInfo.ToSceneEntityInfo(avatar.Value.AvatarType));
+            playerGroupInfo.EntityList.Add(avatar.Value.AvatarInfo
+                .ToSceneEntityInfo(Player.Data.Pos, Player.Data.Rot, avatar.Value.AvatarType));
         if (playerGroupInfo.EntityList.Count > 0)
         {
             if (LeaderEntityId == 0)
             {
-                LeaderEntityId = AvatarInfo.Values.First().AvatarInfo.EntityId;
+                LeaderEntityId = AvatarInfo.Values.First().AvatarInfo.InternalEntityId;
                 sceneInfo.LeaderEntityId = (uint)LeaderEntityId;
             }
             else
@@ -252,40 +253,33 @@ public class SceneInstance
         var removeAvatar = new List<IGameEntity>();
         foreach (var avatar in Player.LineupManager?.GetAvatarsFromCurTeam() ?? [])
         {
-            avatar.AvatarInfo.PlayerData = Player.Data;
-            if (forceSetEntityId && avatar.AvatarInfo.EntityId != 0)
+            if (forceSetEntityId && avatar.AvatarInfo.InternalEntityId != 0)
             {
-                removeAvatar.Add(new AvatarSceneInfo(new AvatarInfo
-                {
-                    EntityId = avatar.AvatarInfo.EntityId
-                }, AvatarType.AvatarFormalType, Player));
-                avatar.AvatarInfo.EntityId = 0;
+                removeAvatar.Add(new AvatarSceneInfo(new AvatarInfo(), AvatarType.AvatarFormalType, Player));
+                avatar.AvatarInfo.SetEntityId(Player.Uid, 0);
                 sendPacket = true;
             }
 
-            var avatarInstance = oldAvatarInfo.Find(x => x.AvatarInfo.AvatarId == avatar.AvatarInfo.AvatarId);
+            var avatarInstance = oldAvatarInfo.Find(x => x.AvatarInfo.BaseAvatarId == avatar.AvatarInfo.BaseAvatarId);
             if (avatarInstance == null)
             {
-                if (avatar.AvatarInfo.EntityId == 0) avatar.AvatarInfo.EntityId = ++LastEntityId;
+                if (avatar.AvatarInfo.InternalEntityId == 0) avatar.AvatarInfo.SetEntityId(Player.Uid, ++LastEntityId);
                 addAvatar.Add(avatar);
-                AvatarInfo.Add(avatar.AvatarInfo.EntityId, avatar);
+                AvatarInfo.Add(avatar.AvatarInfo.InternalEntityId, avatar);
                 sendPacket = true;
             }
             else
             {
-                AvatarInfo.Add(avatarInstance.AvatarInfo.EntityId, avatarInstance);
+                AvatarInfo.Add(avatarInstance.AvatarInfo.InternalEntityId, avatarInstance);
             }
         }
 
         foreach (var avatar in oldAvatarInfo.Where(avatar =>
-                     AvatarInfo.Values.ToList().FindIndex(x => x.AvatarInfo.AvatarId == avatar.AvatarInfo.AvatarId) ==
-                     -1))
+            AvatarInfo.Values.ToList().FindIndex(x =>
+            x.AvatarInfo.BaseAvatarId == avatar.AvatarInfo.BaseAvatarId) == -1))
         {
-            removeAvatar.Add(new AvatarSceneInfo(new AvatarInfo
-            {
-                EntityId = avatar.AvatarInfo.EntityId
-            }, AvatarType.AvatarFormalType, Player));
-            avatar.AvatarInfo.EntityId = 0;
+            removeAvatar.Add(new AvatarSceneInfo(new(), AvatarType.AvatarFormalType, Player));
+            avatar.AvatarInfo.SetEntityId(Player.Uid, 0);
             sendPacket = true;
         }
 
@@ -295,7 +289,7 @@ public class SceneInstance
         if (leaderAvatarSlot == -1) leaderAvatarSlot = 0;
         if (AvatarInfo.Count == 0) return;
         var info = AvatarInfo.Values.ToList()[leaderAvatarSlot ?? 0];
-        LeaderEntityId = info.AvatarInfo.EntityId;
+        LeaderEntityId = info.AvatarInfo.InternalEntityId;
         if (sendPacket && !notSendPacket)
             await Player.SendPacket(new PacketSceneGroupRefreshScNotify(Player, addAvatar, removeAvatar));
     }
@@ -487,8 +481,8 @@ public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, Playe
 
     public int EntityID
     {
-        get => AvatarInfo.EntityId;
-        set => AvatarInfo.EntityId = value;
+        get => AvatarInfo.InternalEntityId;
+        set => AvatarInfo.SetEntityId(player.Uid, player.Data.WorldLevel, value);
     }
 
     public int GroupID { get; set; } = 0;
@@ -528,9 +522,7 @@ public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, Playe
     }
 
     public SceneEntityInfo ToProto()
-    {
-        return AvatarInfo.ToSceneEntityInfo(AvatarType);
-    }
+        => AvatarInfo.ToSceneEntityInfo(player.Data.Pos, player.Data.Rot, AvatarType);
 
     public async ValueTask RemoveBuff(int buffId)
     {

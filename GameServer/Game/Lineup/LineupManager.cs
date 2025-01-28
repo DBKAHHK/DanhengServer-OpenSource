@@ -71,7 +71,7 @@ public class LineupManager : BasePlayerManager
                 avatarType = AvatarType.AvatarAssistType;
                 if (avatarStorage == null) continue;
                 foreach (var avatarData in avatarStorage.Avatars.Where(avatarData =>
-                             avatarData.AvatarId == avatar.BaseAvatarId))
+                             avatarData.BaseAvatarId == avatar.BaseAvatarId))
                 {
                     avatarInfo = avatarData;
                     break;

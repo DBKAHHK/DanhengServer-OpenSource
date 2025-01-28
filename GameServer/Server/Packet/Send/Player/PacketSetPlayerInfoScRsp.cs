@@ -10,7 +10,7 @@ public class PacketSetPlayerInfoScRsp : BasePacket
     {
         var proto = new SetPlayerInfoScRsp
         {
-            CurAvatarPath = (MultiPathAvatarType)player.Data.CurBasicType,
+            CurAvatarPath = (MultiPathAvatarType)player.AvatarManager!.GetAvatar(8001)!.CurAvatarId,
             IsModify = IsModify
         };
 

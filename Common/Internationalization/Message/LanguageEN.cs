@@ -112,7 +112,7 @@ public class CommandTextEN
 {
     public NoticeTextEN Notice { get; } = new();
 
-    public HeroTextEN Hero { get; } = new();
+    public GenderTextEN Gender { get; } = new();
     public AvatarTextEN Avatar { get; } = new();
     public GiveTextEN Give { get; } = new();
     public GiveAllTextEN GiveAll { get; } = new();
@@ -210,19 +210,19 @@ public class NoticeTextEN
 }
 
 /// <summary>
-///     path: Game.Command.Hero
+///     path: Game.Command.Gender
 /// </summary>
-public class HeroTextEN
+public class GenderTextEN
 {
     public string Desc =>
         "Switch the gender/type of the main character\nWhen switch the gender, 1 means male, 2 means female\nWhen switch the type(path), 8001 means Destruction, 8003 means Preservation, 8005 means Harmony.\nNotice: Switch gender will clear all the paths and talents of main character, this operation is irreversible!";
 
-    public string Usage => "Usage: /hero gender [genderId]\n\nUsage: /hero type [typeId]";
+    public string Usage => "Usage: /Gender gender [genderId]\n\nUsage: /Gender type [typeId]";
 
     public string GenderNotSpecified => "Gender does not exist!";
-    public string HeroTypeNotSpecified => "Main character type does not exist!";
+    public string GenderTypeNotSpecified => "Main character type does not exist!";
     public string GenderChanged => "Gender has been changed!";
-    public string HeroTypeChanged => "Main character type has been changed!";
+    public string GenderTypeChanged => "Main character type has been changed!";
 }
 
 /// <summary>

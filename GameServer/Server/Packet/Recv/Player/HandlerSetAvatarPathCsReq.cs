@@ -1,5 +1,4 @@
 ﻿using EggLink.DanhengServer.Data;
-using EggLink.DanhengServer.Enums.Avatar;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
@@ -15,19 +14,12 @@ public class HandlerSetAvatarPathCsReq : Handler
 
         GameData.MultiplePathAvatarConfigData.TryGetValue((int)req.AvatarId, out var avatar);
 
-        if (avatar != null)
-        {
-            if (avatar.BaseAvatarID == 8001)
-                await connection.Player!.ChangeAvatarPathType(avatar.BaseAvatarID,
-                    (MultiPathAvatarTypeEnum)(avatar.AvatarID - (connection.Player.Data.CurrentGender - 1)));
-            else
-                await connection.Player!.ChangeAvatarPathType(avatar.BaseAvatarID,
-                    (MultiPathAvatarTypeEnum)avatar.AvatarID);
-            await connection.SendPacket(new PacketSetAvatarPathScRsp(avatar.AvatarID));
-        }
+        if (avatar == null)
+            await connection.SendPacket(CmdIds.SetAvatarPathScRsp);
         else
         {
-            await connection.SendPacket(CmdIds.SetAvatarPathScRsp);
+            await connection.Player!.ChangeAvatarPathType(avatar.BaseAvatarID, (MultiPathAvatarType)avatar.AvatarID);
+            await connection.SendPacket(new PacketSetAvatarPathScRsp(avatar.AvatarID));
         }
     }
 }

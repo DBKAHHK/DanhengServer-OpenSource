@@ -44,7 +44,7 @@ public class LineupInfo
         if (BaseAvatars != null && AvatarData != null)
             foreach (var avatar in BaseAvatars)
             {
-                var avatarInfo = AvatarData?.Avatars?.Find(item => item.GetBaseAvatarId() == avatar.BaseAvatarId);
+                var avatarInfo = AvatarData?.Avatars?.Find(item => item.BaseAvatarId == avatar.BaseAvatarId);
                 if (avatarInfo != null)
                 {
                     if (avatarInfo.GetCurHp(IsExtraLineup()) <= 0 && !allowRevive) continue;
@@ -65,7 +65,7 @@ public class LineupInfo
         if (BaseAvatars != null && AvatarData != null)
             foreach (var avatar in BaseAvatars)
             {
-                var avatarInfo = AvatarData?.Avatars?.Find(item => item.GetAvatarId() == avatar.BaseAvatarId);
+                var avatarInfo = AvatarData?.Avatars?.Find(item => item.CurAvatarId == avatar.BaseAvatarId);
                 if (avatarInfo != null)
                 {
                     if (avatarInfo.CurrentHp <= 0) continue;
@@ -84,7 +84,7 @@ public class LineupInfo
         if (BaseAvatars != null && AvatarData != null)
             foreach (var avatar in BaseAvatars)
             {
-                var avatarInfo = AvatarData?.Avatars?.Find(item => item.GetAvatarId() == avatar.BaseAvatarId);
+                var avatarInfo = AvatarData?.Avatars?.Find(item => item.CurAvatarId == avatar.BaseAvatarId);
                 if (avatarInfo != null)
                 {
                     if (avatarInfo.CurrentHp <= 0) continue;
@@ -125,10 +125,10 @@ public class LineupInfo
             foreach (var avatar in BaseAvatars)
                 if (avatar.AssistUid != 0) // assist avatar
                 {
-                    var assistPlayer = DatabaseHelper.Instance?.GetInstance<AvatarData>(avatar.AssistUid);
+                    var assistPlayer = DatabaseHelper.Instance!.GetInstance<AvatarData>(avatar.AssistUid);
                     if (assistPlayer != null)
                         info.AvatarList.Add(assistPlayer?.Avatars
-                            ?.Find(item => item.GetAvatarId() == avatar.BaseAvatarId)
+                            ?.Find(item => item.CurAvatarId == avatar.BaseAvatarId)
                             ?.ToLineupInfo(BaseAvatars.IndexOf(avatar), this,
                                 AvatarType.AvatarAssistType)); // assist avatar may not work
                 }
@@ -141,7 +141,7 @@ public class LineupInfo
                 }
                 else // normal avatar
                 {
-                    info.AvatarList.Add(AvatarData?.Avatars?.Find(item => item.AvatarId == avatar.BaseAvatarId)
+                    info.AvatarList.Add(AvatarData?.Avatars?.Find(item => item.BaseAvatarId == avatar.BaseAvatarId)
                         ?.ToLineupInfo(BaseAvatars.IndexOf(avatar), this));
                 }
 

@@ -16,7 +16,7 @@ public class PacketGetAvatarDataScRsp : BasePacket
 
         player.AvatarManager?.AvatarData?.Avatars?.ForEach(avatar =>
         {
-            GameData.MultiplePathAvatarConfigData.TryGetValue(avatar.AvatarId, out var multiPathAvatar);
+            GameData.MultiplePathAvatarConfigData.TryGetValue(avatar.BaseAvatarId, out var multiPathAvatar);
 
             if (multiPathAvatar == null)
             {
@@ -26,7 +26,7 @@ public class PacketGetAvatarDataScRsp : BasePacket
             else
             {
                 // Multiple path avatar
-                if (avatar.AvatarId == multiPathAvatar.BaseAvatarID) proto.AvatarList.Add(avatar.ToProto());
+                if (avatar.BaseAvatarId == multiPathAvatar.BaseAvatarID) proto.AvatarList.Add(avatar.ToProto());
             }
         });
 

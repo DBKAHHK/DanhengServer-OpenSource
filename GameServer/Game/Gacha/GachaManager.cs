@@ -132,24 +132,21 @@ public class GachaManager(PlayerInstance player) : BasePlayerManager(player)
                     if (avatar != null)
                     {
                         star += 40;
-                        var rankUpItemId = avatar.Excel?.RankUpItemId;
-                        if (rankUpItemId != null)
+                        var rankUpItemId = avatar.GetCurAvatarConfig().RankUpItemId;
+                        var rankUpItem = Player.InventoryManager!.GetItem(rankUpItemId);
+                        if (avatar.PathInfo[item].Rank + rankUpItem?.Count >= 6)
                         {
-                            var rankUpItem = Player.InventoryManager!.GetItem(rankUpItemId.Value);
-                            if (avatar.PathInfoes[item].Rank + rankUpItem?.Count >= 6)
+                            star += 60;
+                        }
+                        else
+                        {
+                            var dupeItem = new ItemList();
+                            dupeItem.ItemList_.Add(new Item
                             {
-                                star += 60;
-                            }
-                            else
-                            {
-                                var dupeItem = new ItemList();
-                                dupeItem.ItemList_.Add(new Item
-                                {
-                                    ItemId = (uint)rankUpItemId.Value,
-                                    Num = 1
-                                });
-                                gachaItem.TransferItemList = dupeItem;
-                            }
+                                ItemId = (uint)rankUpItemId,
+                                Num = 1
+                            });
+                            gachaItem.TransferItemList = dupeItem;
                         }
                     }
                 }
@@ -167,24 +164,21 @@ public class GachaManager(PlayerInstance player) : BasePlayerManager(player)
                     if (avatar != null)
                     {
                         star += 8;
-                        var rankUpItemId = avatar.Excel?.RankUpItemId;
-                        if (rankUpItemId != null)
+                        var rankUpItemId = avatar.GetCurAvatarConfig().RankUpItemId;
+                        var rankUpItem = Player.InventoryManager!.GetItem(rankUpItemId);
+                        if (avatar.PathInfo[item].Rank + rankUpItem?.Count >= 6)
                         {
-                            var rankUpItem = Player.InventoryManager!.GetItem(rankUpItemId.Value);
-                            if (avatar.PathInfoes[item].Rank + rankUpItem?.Count >= 6)
+                            star += 12;
+                        }
+                        else
+                        {
+                            var dupeItem = new ItemList();
+                            dupeItem.ItemList_.Add(new Item
                             {
-                                star += 12;
-                            }
-                            else
-                            {
-                                var dupeItem = new ItemList();
-                                dupeItem.ItemList_.Add(new Item
-                                {
-                                    ItemId = (uint)rankUpItemId.Value,
-                                    Num = 1
-                                });
-                                gachaItem.TransferItemList = dupeItem;
-                            }
+                                ItemId = (uint)rankUpItemId,
+                                Num = 1
+                            });
+                            gachaItem.TransferItemList = dupeItem;
                         }
                     }
                 }

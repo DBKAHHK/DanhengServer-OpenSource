@@ -3,6 +3,7 @@ using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.Internationalization;
 using EggLink.DanhengServer.Proto;
+using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.Command.Command.Cmd;
 
@@ -27,21 +28,21 @@ public class CommandUnlockAll : ICommand
         foreach (var mission in GameData.MainMissionData.Values)
             missionManager.Data.SetMainMissionStatus(mission.MainMissionID, MissionPhaseEnum.Finish);
 
-        if (player.Data.CurrentGender == Gender.Man)
-        {
-            player.Data.CurrentGender = Gender.Man;
-            player.Data.CurBasicType = 8001;
-        }
-        else
-        {
-            player.Data.CurrentGender = Gender.Woman;
-            player.Data.CurBasicType = 8002;
-            player.AvatarManager!.GetHero()!.PathId = 8002;
-        }
+        var initHero = player.Data.CurrentGender == Gender.Man ? 8001 : 8002;
+        player.AvatarManager!.GetAvatar(8001)!.CurAvatarId = initHero;
+
+        // Handle scene and lineup
+        await player.LineupManager!.SetCurLineup(0);
+        await player.LineupManager!.ReplaceLineup(0, [initHero]);
+        player.Data.Pos = new Position(99, 62, -4800);
+        player.Data.Rot = new Position();
+        player.Data.PlaneId = 20001;
+        player.Data.FloorId = 20001001;
+        player.Data.EntryId = 2000101;
 
         await arg.SendMsg(I18NManager.Translate("Game.Command.UnlockAll.UnlockedAll",
             I18NManager.Translate("Word.Mission")));
-        await arg.Target!.Player!.SendPacket(new PacketPlayerKickOutScNotify());
+        await arg.Target!.Player!.SendPacket(new PacketPlayerKickOutScNotify(KickType.KickLoginWhiteTimeout));
         arg.Target!.Stop();
     }
 
@@ -64,7 +65,7 @@ public class CommandUnlockAll : ICommand
 
         await arg.SendMsg(I18NManager.Translate("Game.Command.UnlockAll.UnlockedAll",
             I18NManager.Translate("Word.Tutorial")));
-        await arg.Target!.Player!.SendPacket(new PacketPlayerKickOutScNotify());
+        await arg.Target!.Player!.SendPacket(new PacketPlayerKickOutScNotify(KickType.KickLoginWhiteTimeout));
         arg.Target!.Stop();
     }
 
@@ -95,7 +96,8 @@ public class CommandUnlockAll : ICommand
 
         await arg.SendMsg(I18NManager.Translate("Game.Command.UnlockAll.UnlockedAll",
             I18NManager.Translate("Word.TypesOfRogue")));
-        await arg.Target!.Player!.SendPacket(new PacketPlayerKickOutScNotify());
+
+        await player.SendPacket(new PacketPlayerKickOutScNotify(KickType.KickLoginWhiteTimeout));
         arg.Target!.Stop();
     }
 }

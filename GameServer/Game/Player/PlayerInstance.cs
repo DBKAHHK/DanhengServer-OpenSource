@@ -135,6 +135,7 @@ public class PlayerInstance(PlayerData data)
         IsNewPlayer = true;
         Data.NextStaminaRecover = Extensions.GetUnixSec() + GameConstants.STAMINA_RESERVE_RECOVERY_TIME;
         Data.Level = ConfigManager.Config.ServerOption.StartTrailblazerLevel;
+        Data.CurrentGender = Enum.Parse<Gender>(ConfigManager.Config.ServerOption.DefaultGender);
 
         DatabaseHelper.SaveInstance(Data);
 
@@ -143,7 +144,7 @@ public class PlayerInstance(PlayerData data)
         {
             await InitialPlayerManager();
 
-            await AddAvatar(8001);
+            await AddAvatar(8000 + (int)Data.CurrentGender);
             await AddAvatar(1001);
             if (ConfigManager.Config.ServerOption.EnableMission)
             {
@@ -152,8 +153,7 @@ public class PlayerInstance(PlayerData data)
             else
             {
                 await LineupManager!.AddAvatarToCurTeam(8001);
-                Data.CurrentGender = Gender.Man;
-                Data.CurBasicType = 8001;
+                await LineupManager!.AddAvatarToCurTeam(1001);
             }
         });
         t.Wait();
@@ -245,22 +245,6 @@ public class PlayerInstance(PlayerData data)
             }
         }
 
-        foreach (var relic in InventoryManager.Data.RelicItems)
-        {
-            if (relic.MainAffix != 0) continue; // fix relic main affix
-
-            var groupId = GameData.RelicConfigData.GetValueOrDefault(relic.ItemId)?.MainAffixGroup ?? 0;
-            relic.MainAffix = UtilTools.GetRandomRelicMainAffix(groupId);
-        }
-
-        foreach (var avatar in AvatarManager?.AvatarData.Avatars ?? [])
-        foreach (var skill in avatar.GetSkillTree())
-        {
-            GameData.AvatarSkillTreeConfigData.TryGetValue(skill.Key * 10 + 1, out var config);
-            if (config == null) continue;
-            avatar.GetSkillTree()[skill.Key] = Math.Min(skill.Value, config.MaxLevel); // limit skill level
-        }
-
         await LoadScene(Data.PlaneId, Data.FloorId, Data.EntryId, Data.Pos!, Data.Rot!, false);
         if (SceneInstance == null) await EnterScene(2000101, 0, false);
 
@@ -312,33 +296,13 @@ public class PlayerInstance(PlayerData data)
 
     #region Actions
 
-    public async ValueTask ChangeAvatarPathType(int baseAvatarId, MultiPathAvatarTypeEnum type)
+    public async ValueTask ChangeAvatarPathType(int baseAvatarId, MultiPathAvatarType type)
     {
-        if (baseAvatarId == 8001)
-        {
-            var id = (int)((int)type + Data.CurrentGender - 1);
-            if (Data.CurBasicType == id) return;
-            Data.CurBasicType = id;
-            var avatar = AvatarManager!.GetHero()!;
-            // Set avatar path
-            avatar.PathId = id;
-            avatar.ValidateHero();
-            avatar.SetCurSp(0, LineupManager!.GetCurLineup()!.IsExtraLineup());
-            // Save new skill tree
-            avatar.GetSkillTree();
-            await SendPacket(new PacketAvatarPathChangedNotify(8001, (MultiPathAvatarType)id));
-            await SendPacket(new PacketPlayerSyncScNotify(AvatarManager!.GetHero()!));
-        }
-        else
-        {
-            var avatar = AvatarManager!.GetAvatar(baseAvatarId)!;
-            avatar.PathId = (int)type;
-            avatar.SetCurSp(0, LineupManager!.GetCurLineup()!.IsExtraLineup());
-            // Save new skill tree
-            avatar.GetSkillTree();
-            await SendPacket(new PacketAvatarPathChangedNotify((uint)avatar.AvatarId, (MultiPathAvatarType)type));
-            await SendPacket(new PacketPlayerSyncScNotify(avatar));
-        }
+        var avatar = AvatarManager!.GetAvatar(baseAvatarId)!;
+        avatar.CurAvatarId = (int)type;
+        avatar.SetCurSp(0, LineupManager!.GetCurLineup()!.IsExtraLineup());
+        await SendPacket(new PacketAvatarPathChangedNotify((uint)avatar.BaseAvatarId, type));
+        await SendPacket(new PacketPlayerSyncScNotify(avatar));
     }
 
     public async ValueTask<AvatarInfo> MarkAvatar(int avatarId, bool isMarked, bool sendPacket = true)
@@ -924,11 +888,6 @@ public class PlayerInstance(PlayerData data)
     public PlayerBasicInfo ToProto()
     {
         return Data.ToProto();
-    }
-
-    public PlayerSimpleInfo ToSimpleProto()
-    {
-        return Data.ToSimpleProto(FriendOnlineStatus.Online);
     }
 
     #endregion

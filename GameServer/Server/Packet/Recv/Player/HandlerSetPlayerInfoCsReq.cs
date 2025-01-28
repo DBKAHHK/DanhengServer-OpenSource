@@ -1,5 +1,4 @@
-﻿using EggLink.DanhengServer.Enums.Avatar;
-using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.PlayerSync;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
@@ -26,7 +25,8 @@ public class HandlerSetPlayerInfoCsReq : Handler
         else
             player.Data.CurrentGender = Gender.Man;
         player.Data.IsGenderSet = true;
-        await player.ChangeAvatarPathType(8001, MultiPathAvatarTypeEnum.Warrior);
+        await player.ChangeAvatarPathType(8001, req.Gender == Gender.Man ?
+            MultiPathAvatarType.BoyWarriorType : MultiPathAvatarType.GirlWarriorType);
 
         await player.LineupManager!.AddAvatarToCurTeam(8001);
         await player.LineupManager!.AddAvatarToCurTeam(1001);

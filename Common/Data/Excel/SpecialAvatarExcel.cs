@@ -1,7 +1,5 @@
-﻿using EggLink.DanhengServer.Database;
-using EggLink.DanhengServer.Database.Avatar;
+﻿using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Inventory;
-using EggLink.DanhengServer.Database.Player;
 using EggLink.DanhengServer.Enums.Avatar;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -57,37 +55,32 @@ public class SpecialAvatarExcel : ExcelResource
 
         GameData.AvatarConfigData.TryGetValue(PlayerID, out var avatarConfig);
 
-        var instance = new AvatarInfo
+        var instance = new AvatarInfo(AvatarID)
         {
-            AvatarId = AvatarID,
             SpecialBaseAvatarId = SpecialAvatarID,
             Level = Level,
             Promotion = Promotion,
-            PathInfoes = new Dictionary<int, PathInfo>(),
             CurrentHp = hp == 0 ? 10000 : hp,
             CurrentSp = sp,
-            InternalEntityId = Id,
-            PlayerData = DatabaseHelper.Instance!.GetInstance<PlayerData>(uid)
+            InternalEntityId = Id
         };
-
-        instance.PathInfoes.Add(AvatarID, new PathInfo(AvatarID)
-        {
-            Rank = Rank,
-            EquipData = new ItemData
-            {
-                ItemId = EquipmentID,
-                Level = EquipmentLevel,
-                Promotion = EquipmentPromotion,
-                Rank = EquipmentRank
-            }
-        });
 
         if (avatarConfig != null)
         {
-            foreach (var skill in avatarConfig.DefaultSkillTree)
-                instance.SkillTree.Add(skill.PointID, skill.Level);
+            instance.PathInfo[avatarConfig.AvatarID] = new()
+            {
+                Rank = Rank,
+                EquipData = new ItemData
+                {
+                    ItemId = EquipmentID,
+                    Level = EquipmentLevel,
+                    Promotion = EquipmentPromotion,
+                    Rank = EquipmentRank
+                }
+            };
 
-            instance.Excel = avatarConfig;
+            foreach (var skill in avatarConfig.DefaultSkillTree)
+                instance.GetCurAvatarInfo().SkillTree.Add(skill.PointID, skill.Level);
         }
 
         return instance;
