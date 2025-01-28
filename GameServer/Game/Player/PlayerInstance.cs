@@ -123,7 +123,6 @@ public class PlayerInstance(PlayerData data)
     public bool IsNewPlayer { get; set; }
     public int NextBattleId { get; set; } = 0;
     public int ChargerNum { get; set; } = 0;
-    public int LastWorldId { get; set; } = 101;
 
     #endregion
 
@@ -666,9 +665,6 @@ public class PlayerInstance(PlayerData data)
         if (entrance == null) return false;
 
         GameData.GetFloorInfo(entrance.PlaneID, entrance.FloorID, out var floorInfo);
-
-        // Record last plane id for train view
-        if (entrance.PlaneID != 10000) LastWorldId = GameData.MazePlaneData[entrance.PlaneID].WorldID;
 
         var startGroup = entrance.StartGroupID;
         var startAnchor = entrance.StartAnchorID;
