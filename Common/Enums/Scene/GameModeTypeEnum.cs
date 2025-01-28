@@ -22,5 +22,6 @@ public enum GameModeTypeEnum
     TournRogue = 17,
     RelicRogue = 18,
     ArcadeRogue = 19,
-    MagicRogue = 20
+    MagicRogue = 20,
+    TrainParty = 21
 }

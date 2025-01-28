@@ -51,7 +51,7 @@ public class SceneInstance
     {
         SceneInfo sceneInfo = new()
         {
-            WorldId = (uint)(Excel.WorldID == 100 ? Player.LastWorldId : Excel.WorldID),
+            WorldId = (uint)(Excel.WorldID == 100 ? GameConstants.LAST_TRAIN_WORLD_ID : Excel.WorldID),
             GameModeType = (uint)GameModeType,
             PlaneId = (uint)PlaneId,
             FloorId = (uint)FloorId,
@@ -124,17 +124,6 @@ public class SceneInstance
 
         foreach (var value in floorData ?? [])
                 sceneInfo.FloorSavedData[value.Key] = value.Value;
-
-        foreach (var value in FloorInfo?.CustomValues ?? [])
-            if (floorData != null && floorData.TryGetValue(value.Name, out var v))
-            {
-                sceneInfo.FloorSavedData[value.Name] = v;
-            }
-            else
-            {
-                _ = int.TryParse(value.DefaultValue, out var x);
-                sceneInfo.FloorSavedData[value.Name] = x;
-            }
 
         // mission
         Player.MissionManager!.OnLoadScene(sceneInfo);

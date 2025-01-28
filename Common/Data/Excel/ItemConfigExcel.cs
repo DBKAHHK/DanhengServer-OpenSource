@@ -6,7 +6,8 @@ namespace EggLink.DanhengServer.Data.Excel;
 
 [ResourceEntity("ItemConfig.json,ItemConfigAvatar.json,ItemConfigAvatarPlayerIcon.json," +
                 "ItemConfigAvatarRank.json,ItemConfigBook.json,ItemConfigDisk.json," +
-                "ItemConfigEquipment.json,ItemConfigRelic.json,ItemPlayerCard.json", true)]
+                "ItemConfigEquipment.json,ItemConfigRelic.json,ItemPlayerCard.json," +
+                "ItemConfigTrainDynamic.json", true)]
 public class ItemConfigExcel : ExcelResource
 {
     // General item data

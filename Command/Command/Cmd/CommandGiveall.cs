@@ -1,9 +1,9 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Inventory;
+using EggLink.DanhengServer.Database.TrainParty;
 using EggLink.DanhengServer.Enums.Item;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.PlayerSync;
-using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Internationalization;
 
 namespace EggLink.DanhengServer.Command.Command.Cmd;
@@ -252,34 +252,44 @@ public class CommandGiveall : ICommand
             return;
         }
 
-        foreach (var grid in GameData.TrainPartyGridConfigData.Keys) await player.TrainPartyManager!.AddGrid(grid);
+        // Reset
+        player.TrainPartyManager!.Data.Fund = 1000000;
+        player.TrainPartyManager!.Data.Areas.Clear();
 
-        foreach (var card in GameData.TrainPartyCardConfigData.Keys) await player.TrainPartyManager!.AddCard(card);
-
-        foreach (var area in player.TrainPartyManager!.TrainPartyData.Areas)
-        foreach (var step in GameData.TrainPartyStepConfigData.Values.Where(stepExcel => GameData
-                     .TrainPartyAreaGoalConfigData.First(x => x.Value.AreaID == area.Value.AreaId).Value
-                     .StepGroupList.Contains(stepExcel.GroupID)))
-            area.Value.StepList.Add(step.ID);
-
-        Dictionary<string, int> update = [];
-        player.SceneData!.FloorSavedData[player.SceneInstance!.FloorId] = [];
-        foreach (var savedValue in player.SceneInstance!.FloorInfo!.FloorSavedValue)
-            if (savedValue.Name.StartsWith("Build_") || savedValue.Name == "Onboarded")
+        foreach (var excel in GameData.TrainPartyAreaConfigData.Where(excel =>
+            !player.TrainPartyManager!.Data.Areas.ContainsKey(excel.Key)))
+            player.TrainPartyManager!.Data.Areas[excel.Key] = new TrainAreaInfo
             {
-                player.SceneData!.FloorSavedData[player.SceneInstance!.FloorId][savedValue.Name] = 1;
-                update.TryAdd(savedValue.Name, 1);
-            }
-            else if (savedValue.Name.StartsWith("Progress_"))
+                AreaId = excel.Key,
+                StepList = []
+            };
+
+        foreach (var area in player.TrainPartyManager!.Data.Areas)
+            foreach (var step in GameData.TrainPartyStepConfigData.Values.Where(stepExcel =>
+                GameData.TrainPartyAreaGoalConfigData.FirstOrDefault(x =>
+                x.Value.AreaID == area.Value.AreaId).Value.StepGroupList.Contains(stepExcel.GroupID)))
+                area.Value.StepList.Add(step.ID);
+
+        foreach (var floorInfo in GameData.FloorInfoData.Values)
+        {
+            var savedData = new Dictionary<string, int>();
+
+            foreach (var floorSavedValue in floorInfo.FloorSavedValue)
             {
-                player.SceneData!.FloorSavedData[player.SceneInstance!.FloorId][savedValue.Name] = 100;
-                update.TryAdd(savedValue.Name, 100);
+                if (floorSavedValue.Name.StartsWith("Build_") || floorSavedValue.Name == "Onboarded")
+                    savedData[floorSavedValue.Name] = 1;
+                else if (floorSavedValue.Name.StartsWith("Progress_"))
+                    savedData[floorSavedValue.Name] = 100;
+                else if (floorSavedValue.Name.StartsWith("Connection_") || floorSavedValue.Name.StartsWith("Utility_"))
+                    savedData[floorSavedValue.Name] = 0;
             }
 
-        await player.SendPacket(new PacketUpdateFloorSavedValueNotify(update, player));
+            if (savedData.Count > 0)
+                player.SceneData!.FloorSavedData[floorInfo.FloorID] = savedData;
+        }
 
         await arg.SendMsg(I18NManager.Translate("Game.Command.GiveAll.GiveAllItems",
-            I18NManager.Translate("Word.TrainItem"), "1"));
+            I18NManager.Translate("Word.TrainParty"), "1"));
     }
 
     [CommandMethod("0 path")]

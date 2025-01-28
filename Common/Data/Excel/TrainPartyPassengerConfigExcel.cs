@@ -4,7 +4,6 @@
 public class TrainPartyPassengerConfigExcel : ExcelResource
 {
     public int PassengerID { get; set; }
-    public int PassengerQuest { get; set; }
 
     public override int GetId()
     {
