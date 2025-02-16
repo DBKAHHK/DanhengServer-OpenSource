@@ -129,7 +129,7 @@ public class SceneInstance
         Player.MissionManager!.OnLoadScene(sceneInfo);
 
         // unlock section
-        if (!ConfigManager.Config.ServerOption.AutoLightSection)
+        if (ConfigManager.Config.ServerOption.EnableMission)
         {
             Player.SceneData!.UnlockSectionIdList.TryGetValue(FloorId, out var unlockSectionList);
             if (unlockSectionList != null)
@@ -138,7 +138,8 @@ public class SceneInstance
         }
         else
         {
-            for (uint i = 1; i <= 100; i++) sceneInfo.LightenSectionList.Add(i);
+            GameData.GetFloorInfo(PlaneId, FloorId, out var floorInfo);
+            sceneInfo.LightenSectionList.AddRange(floorInfo.MapSections.Select(x => (uint)x));
         }
 
         return sceneInfo;

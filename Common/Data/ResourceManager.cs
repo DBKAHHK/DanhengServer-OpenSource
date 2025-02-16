@@ -196,6 +196,30 @@ public class ResourceManager
                 if (info == null) return;
                 GameData.FloorInfoData[name] = info;
 
+                // Load navmap infos
+                FileInfo navmapFile = new(ConfigManager.Config.Path.ResourcePath + "/" + info.NavmapConfigPath);
+                if (navmapFile.Exists)
+                {
+                    try
+                    {
+                        using var navmapReader = navmapFile.OpenRead();
+                        using StreamReader navmapReader2 = new(navmapReader);
+                        var navmapText = navmapReader2.ReadToEnd();
+                        var navmap = JsonConvert.DeserializeObject<MapInfo>(navmapText);
+                        if (navmap != null)
+                            foreach (var area in navmap.AreaList)
+                                foreach (var section in area.MinimapVolume.Sections)
+                                    info.MapSections.Add(section.ID);
+                    }
+                    catch (Exception ex)
+                    {
+                        ResourceCache.IsComplete = false;
+                        Logger.Error(
+                            I18NManager.Translate("Server.ServerInfo.FailedToReadItem", navmapFile.Name,
+                                I18NManager.Translate("Word.Error")), ex);
+                    }
+                }
+
                 // Load group infos sequentially to maintain order
                 foreach (var groupInfo in info.GroupInstanceList)
                 {

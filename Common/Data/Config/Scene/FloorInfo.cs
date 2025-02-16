@@ -10,8 +10,12 @@ public class FloorInfo
     public int FloorID { get; set; }
     public int StartGroupIndex { get; set; }
     public int StartAnchorID { get; set; }
+    public string NavmapConfigPath { get; set; } = "";
     public List<FloorGroupInfo> GroupInstanceList { get; set; } = [];
     public List<FloorDimensionInfo> DimensionList { get; set; } = [];
+
+    [JsonConverter(typeof(ConcurrentBagConverter<int>))]
+    public ConcurrentBag<int> MapSections = [];
 
     [JsonConverter(typeof(ConcurrentDictionaryConverter<int, PropInfo>))]
     public ConcurrentDictionary<int, PropInfo> CachedTeleports = [];
