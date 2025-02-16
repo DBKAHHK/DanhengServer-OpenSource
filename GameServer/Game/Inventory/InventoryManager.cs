@@ -28,7 +28,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
             itemData.Rank, itemData.Promotion,
             itemData.Level, itemData.Exp, itemData.TotalExp,
             itemData.MainAffix, itemData.SubAffixes,
-            itemData.UniqueId);
+            itemData.ReforgeSubAffixes, itemData.UniqueId);
 
         await Player.SendPacket(new PacketPlayerSyncScNotify(itemData));
         if (notify) await Player.SendPacket(new PacketScenePlaneEventScNotify(itemData));
@@ -109,11 +109,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
                     break;
                 }
 
-                var item = await PutItem(itemId, 1, 1, level: 0, uniqueId: ++Data.NextUniqueId);
-                item.AddRandomRelicMainAffix();
-                item.InitRandomRelicSubAffixesByRarity();
-                Data.RelicItems.Find(x => x.UniqueId == item.UniqueId)!.SubAffixes = item.SubAffixes;
-                itemData = item;
+                (_, itemData) = await HandleRelic(itemId, ++Data.NextUniqueId, 0);
                 break;
             case ItemMainTypeEnum.Virtual:
                 var actualCount = 0;
@@ -197,7 +193,8 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
     }
 
     public async ValueTask<ItemData> PutItem(int itemId, int count, int rank = 0, int promotion = 0, int level = 0,
-        int exp = 0, int totalExp = 0, int mainAffix = 0, List<ItemSubAffix>? subAffixes = null, int uniqueId = 0)
+        int exp = 0, int totalExp = 0, int mainAffix = 0, List<ItemSubAffix>? subAffixes = null,
+        List<ItemSubAffix>? regorgeSubAffixes = null, int uniqueId = 0)
     {
         if (promotion == 0 && level > 10) promotion = GameData.GetMinPromotionForLevel(level);
         var item = new ItemData
@@ -210,7 +207,8 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
             Exp = exp,
             TotalExp = totalExp,
             MainAffix = mainAffix,
-            SubAffixes = subAffixes ?? []
+            SubAffixes = subAffixes ?? [],
+            ReforgeSubAffixes = regorgeSubAffixes ?? []
         };
 
         if (uniqueId > 0) item.UniqueId = uniqueId;
@@ -500,7 +498,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
     public async ValueTask<(int, ItemData?)> HandleRelic(
         int relicId, int uniqueId, int level, int mainAffixId = 0, List<(int, int)>? subAffixes = null)
     {
-        subAffixes ??= [];
+        // Excel
         GameData.RelicConfigData.TryGetValue(relicId, out var itemConfig);
         GameData.ItemConfigData.TryGetValue(relicId, out var itemConfigExcel);
         if (itemConfig == null || itemConfigExcel == null)
@@ -511,69 +509,34 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         if (subAffixConfig == null || mainAffixConfig == null)
             return (1, null);
 
-        var startIndex = 1;
-        if (mainAffixId == 0)
-            mainAffixId = mainAffixConfig.Keys.ToList().RandomElement();
-        else
-        {
-            if (!mainAffixConfig.ContainsKey(mainAffixId))
-                return (2, null);
-            startIndex++;
-        }
-
-        var mainAffixGroup = itemConfig.MainAffixGroup;
-        var mainAffixGroupConfig = GameData.RelicMainAffixData[mainAffixGroup];
-        string? mainProperty = mainAffixGroupConfig[mainAffixId].Property;
-
-        var remainLevel = 5;
-        foreach (var (subId, subLevel) in subAffixes)
-        {
-            if (!subAffixConfig.ContainsKey(subId))
-                return (3, null);
-            remainLevel -= subLevel - 1;
-        }
-
-        if (subAffixes.Count < 4)
-        {
-            var subAffixGroup = itemConfig.SubAffixGroup;
-            var subAffixGroupConfig = GameData.RelicSubAffixData[subAffixGroup];
-            var subAffixGroupKeys = subAffixGroupConfig.Keys.ToList();
-            while (subAffixes.Count < 4)
-            {
-                var subId = subAffixGroupKeys.RandomElement();
-                if (subAffixes.Any(x => x.Item1 == subId)) continue;
-                if (subAffixGroupConfig[subId] != null && subAffixGroupConfig[subId].Property == mainProperty) continue;
-
-                if (remainLevel <= 0)
-                    subAffixes.Add((subId, 1));
-                else
-                {
-                    var subLevel = Random.Shared.Next(1, Math.Min(remainLevel + 1, 5)) + 1;
-                    subAffixes.Add((subId, subLevel));
-                    remainLevel -= subLevel - 1;
-                }
-            }
-        }
-
-        var itemData = new ItemData
+        var relic = new ItemData
         {
             ItemId = relicId,
             Level = Math.Max(Math.Min(level, 9999), 0),
             UniqueId = uniqueId,
-            MainAffix = mainAffixId,
             Count = 1
         };
 
-        foreach (var (subId, subLevel) in subAffixes)
-        {
-            subAffixConfig.TryGetValue(subId, out var subAffix);
-            var aff = new ItemSubAffix(subAffix!, 1);
-            for (var i = 1; i < subLevel; i++) aff.IncreaseStep(subAffix!.StepNum);
-            itemData.SubAffixes.Add(aff);
-        }
+        // MainAffixId
+        if (mainAffixId == 0 || !mainAffixConfig.TryGetValue(mainAffixId, out _))
+            relic.AddRandomRelicMainAffix();
+        else
+            relic.MainAffix = mainAffixId;
 
-        await Player.InventoryManager!.AddItem(itemData, false);
-        return (0, itemData);
+        // SubAffixes
+        subAffixes ??= [];
+        if (subAffixes.Count > 4) return (3, null);
+        relic.AddRelicSubAffix(subAffixes); // Add from input
+
+        var initSubCnt = new Random().Next(3, 5);
+        relic.AddRandomRelicSubAffix(initSubCnt - subAffixes.Count);
+        if (initSubCnt == 3 && level / 3 > 0) relic.AddRandomRelicSubAffix(1); // Random add init subAffixes
+
+        var remainUpCnt = level / 3 - (4 - initSubCnt) - subAffixes.Sum(x => x.Item2);
+        relic.IncreaseRandomRelicSubAffix(remainUpCnt); // Level up
+
+        await Player.InventoryManager!.AddItem(relic, false);
+        return (0, relic);
     }
 
     public async ValueTask<ItemData?> ComposeItem(int composeId, int count, List<ItemCost> costData)
@@ -635,46 +598,37 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
 
     public async ValueTask ReforgeRelic(int uniqueId)
     {
-        var relic = Data.RelicItems.First(x => x.UniqueId == uniqueId);
-
-        var totalCount = 0;
-        var subAffixes = new List<(int, int)>();
-        foreach (var sub in relic.SubAffixes)
-        {
-            totalCount = totalCount + sub.Count - 1;
-            subAffixes.Add((sub.Id, 1));
-        }
-
-        while (totalCount > 0)
-        {
-            var idx = Random.Shared.Next(subAffixes.Count);
-            var cur = subAffixes[idx];
-            subAffixes[idx] = (cur.Item1, cur.Item2 + 1);
-            totalCount--;
-        }
-
-        GameData.RelicConfigData.TryGetValue(relic.ItemId, out var itemConfig);
-        GameData.RelicSubAffixData.TryGetValue(itemConfig!.SubAffixGroup, out var subAffixConfig);
-        
-        for (var i = 0; i < subAffixes.Count; i++)
-        {
-            var (subId, subLevel) = subAffixes[i];
-            subAffixConfig!.TryGetValue(subId, out var subAffix);
-            var aff = new ItemSubAffix(subAffix!, subLevel);
-            relic.SubAffixes[i] = aff;
-        }
-
-        if (relic.EquipAvatar > 0)
-        {
-            var avatar = Player.AvatarManager!.GetAvatar(relic.EquipAvatar);
-            await Player.SendPacket(new PacketPlayerSyncScNotify(avatar!, relic));
-        }
-        else
-        {
-            await Player.SendPacket(new PacketPlayerSyncScNotify(relic));
-        }
-
+        var relic = Data.RelicItems.FirstOrDefault(x => x.UniqueId == uniqueId);
+        if (relic == null) return;
         await RemoveItem(238, 1);
+
+        var subAffixesClone = relic.SubAffixes.Select(x => x.Clone()).ToList();
+
+        var levelUpCnt = 0;
+        foreach (var subAffix in relic.SubAffixes)
+        {
+            levelUpCnt += subAffix.Count - 1;
+            subAffix.Count = 1;
+            subAffix.Step = 0;
+        }
+        relic.IncreaseRandomRelicSubAffix(levelUpCnt);
+        relic.ReforgeSubAffixes = relic.SubAffixes;
+        relic.SubAffixes = subAffixesClone;
+
+        await Player.SendPacket(new PacketPlayerSyncScNotify(relic));
+    }
+
+    public async ValueTask ConfirmReforgeRelic(int uniqueId, bool isCancel)
+    {
+        var relic = Data.RelicItems.FirstOrDefault(x => x.UniqueId == uniqueId);
+        if (relic == null) return;
+        if (relic.ReforgeSubAffixes.Count == 0) return;
+
+        if (!isCancel)
+            relic.SubAffixes = relic.ReforgeSubAffixes;
+        relic.ReforgeSubAffixes = [];
+
+        await Player.SendPacket(new PacketPlayerSyncScNotify(relic));
     }
 
     public async ValueTask<List<ItemData>> SellItem(ItemCostData costData, bool toMaterial = false)
@@ -1387,7 +1341,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         }
 
         if (items.Count <= 0) return false;
-        await player.SendPacket(new PacketPlayerSyncScNotify(items));
+        await Player.SendPacket(new PacketPlayerSyncScNotify(items));
         return true;
     }
 
@@ -1424,7 +1378,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         }
         
         if (items.Count <= 0) return false;
-        await player.SendPacket(new PacketPlayerSyncScNotify(items));
+        await Player.SendPacket(new PacketPlayerSyncScNotify(items));
         return true;
     }
     #endregion

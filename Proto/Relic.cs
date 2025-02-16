@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
       mainAffixId_ = other.mainAffixId_;
       isDiscarded_ = other.isDiscarded_;
       isProtected_ = other.isProtected_;
-      dPABGHGABDK_ = other.dPABGHGABDK_.Clone();
+      reforgeSubAffixList_ = other.reforgeSubAffixList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -203,14 +203,14 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "DPABGHGABDK" field.</summary>
-    public const int DPABGHGABDKFieldNumber = 14;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RelicAffix> _repeated_dPABGHGABDK_codec
+    public const int ReforgeSubAffixListFieldNumber = 14;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RelicAffix> _repeated_reforgeSubAffixList_codec
         = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.RelicAffix.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RelicAffix> dPABGHGABDK_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RelicAffix>();
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RelicAffix> reforgeSubAffixList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RelicAffix>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RelicAffix> DPABGHGABDK {
-      get { return dPABGHGABDK_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RelicAffix> ReforgeSubAffixList {
+      get { return reforgeSubAffixList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -237,7 +237,7 @@ namespace EggLink.DanhengServer.Proto {
       if (MainAffixId != other.MainAffixId) return false;
       if (IsDiscarded != other.IsDiscarded) return false;
       if (IsProtected != other.IsProtected) return false;
-      if(!dPABGHGABDK_.Equals(other.dPABGHGABDK_)) return false;
+      if(!reforgeSubAffixList_.Equals(other.reforgeSubAffixList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -254,7 +254,7 @@ namespace EggLink.DanhengServer.Proto {
       if (MainAffixId != 0) hash ^= MainAffixId.GetHashCode();
       if (IsDiscarded != false) hash ^= IsDiscarded.GetHashCode();
       if (IsProtected != false) hash ^= IsProtected.GetHashCode();
-      hash ^= dPABGHGABDK_.GetHashCode();
+      hash ^= reforgeSubAffixList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -302,7 +302,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(104);
         output.WriteUInt32(DressAvatarId);
       }
-      dPABGHGABDK_.WriteTo(output, _repeated_dPABGHGABDK_codec);
+      reforgeSubAffixList_.WriteTo(output, _repeated_reforgeSubAffixList_codec);
       if (Tid != 0) {
         output.WriteRawTag(120);
         output.WriteUInt32(Tid);
@@ -346,7 +346,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(104);
         output.WriteUInt32(DressAvatarId);
       }
-      dPABGHGABDK_.WriteTo(ref output, _repeated_dPABGHGABDK_codec);
+      reforgeSubAffixList_.WriteTo(ref output, _repeated_reforgeSubAffixList_codec);
       if (Tid != 0) {
         output.WriteRawTag(120);
         output.WriteUInt32(Tid);
@@ -386,7 +386,7 @@ namespace EggLink.DanhengServer.Proto {
       if (IsProtected != false) {
         size += 1 + 1;
       }
-      size += dPABGHGABDK_.CalculateSize(_repeated_dPABGHGABDK_codec);
+      size += reforgeSubAffixList_.CalculateSize(_repeated_reforgeSubAffixList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -424,7 +424,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.IsProtected != false) {
         IsProtected = other.IsProtected;
       }
-      dPABGHGABDK_.Add(other.dPABGHGABDK_);
+      reforgeSubAffixList_.Add(other.reforgeSubAffixList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -473,7 +473,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 114: {
-            dPABGHGABDK_.AddEntriesFrom(input, _repeated_dPABGHGABDK_codec);
+            reforgeSubAffixList_.AddEntriesFrom(input, _repeated_reforgeSubAffixList_codec);
             break;
           }
           case 120: {
@@ -528,7 +528,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 114: {
-            dPABGHGABDK_.AddEntriesFrom(ref input, _repeated_dPABGHGABDK_codec);
+            reforgeSubAffixList_.AddEntriesFrom(ref input, _repeated_reforgeSubAffixList_codec);
             break;
           }
           case 120: {

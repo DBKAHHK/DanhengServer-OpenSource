@@ -34,6 +34,7 @@ public class ItemData
 
     public int MainAffix { get; set; }
     public List<ItemSubAffix> SubAffixes { get; set; } = [];
+    public List<ItemSubAffix> ReforgeSubAffixes { get; set; } = [];
 
     public int EquipAvatar { get; set; }
 
@@ -43,49 +44,64 @@ public class ItemData
     {
         GameData.RelicConfigData.TryGetValue(ItemId, out var config);
         if (config == null) return;
-        var affixId = UtilTools.GetRandomRelicMainAffix(config.MainAffixGroup);
-        MainAffix = affixId;
+        GameData.RelicMainAffixData.TryGetValue(config.MainAffixGroup, out var affixes);
+        if (affixes == null) return;
+        List<int> affixList = [];
+        affixList.AddRange(from affix in affixes.Values select affix.AffixID);
+        MainAffix = affixList.RandomElement();
     }
 
-    public void IncreaseRandomRelicSubAffix()
+    public void AddRelicSubAffix(List<(int, int)> subAffixes)
     {
         GameData.RelicConfigData.TryGetValue(ItemId, out var config);
         if (config == null) return;
-        GameData.RelicSubAffixData.TryGetValue(config.SubAffixGroup, out var affixes);
-        if (affixes == null) return;
-        var element = SubAffixes.RandomElement();
-        var affix = affixes.Values.ToList().Find(x => x.AffixID == element.Id);
-        if (affix == null) return;
-        element.IncreaseStep(affix.StepNum);
+
+        var subAffixConfig = GameData.RelicSubAffixData[config.SubAffixGroup];
+
+        foreach (var (subId, subCnt) in subAffixes)
+        {
+            if (!subAffixConfig.TryGetValue(subId, out var excel)) continue;
+            SubAffixes.Add(new ItemSubAffix(excel, subCnt));
+        }
     }
 
     public void AddRandomRelicSubAffix(int count = 1)
     {
-        // Avoid illegal count of relic sub affixes
-        if (count is < 1 or > 4 || SubAffixes.Count >= 4) return;
+        if (count <= 0 || MainAffix == 0) return;
+        GameData.RelicConfigData.TryGetValue(ItemId, out var config);
+        if (config == null) return;
+
+        var mainAffixConfig = GameData.RelicMainAffixData[config.MainAffixGroup];
+        var mainProperty = mainAffixConfig[MainAffix].Property;
+        var subAffixConfig = GameData.RelicSubAffixData[config.SubAffixGroup];
+        var subAffixKeys = subAffixConfig.Keys.ToList();
+
+        while (count > 0)
+        {
+            var subId = subAffixKeys.RandomElement();
+            if (SubAffixes.Any(x => x.Id == subId)) continue;
+            if (subAffixConfig[subId] != null &&
+                subAffixConfig[subId].Property == mainProperty) continue;
+
+            SubAffixes.Add(new ItemSubAffix(subAffixConfig[subId], 1));
+            count--;
+        }
+    }
+
+    public void IncreaseRandomRelicSubAffix(int times = 1)
+    {
+        if (times <= 0) return;
         GameData.RelicConfigData.TryGetValue(ItemId, out var config);
         if (config == null) return;
         GameData.RelicSubAffixData.TryGetValue(config.SubAffixGroup, out var affixes);
-
         if (affixes == null) return;
 
-        // Avoid same property on both main affix and sub affixes
-        GameData.RelicMainAffixData.TryGetValue(config.MainAffixGroup, out var mainAffixes);
-        if (mainAffixes == null) return;
-        var mainProperty = mainAffixes[MainAffix].Property;
-
-        var rollPool = new List<RelicSubAffixConfigExcel>();
-        foreach (var affix in affixes.Values)
-            if (affix.Property != mainProperty & SubAffixes.Find(x => x.Id == affix.AffixID) == null)
-                rollPool.Add(affix);
-
-        for (var i = 0; i < count; i++)
+        for (var i = 0; i < times; i++)
         {
-            var affixConfig = rollPool.RandomElement();
-            ItemSubAffix subAffix = new(affixConfig, 1);
-            SubAffixes.Add(subAffix);
-            rollPool.Remove(affixConfig);
-            if (SubAffixes.Count >= 4) break;
+            var element = SubAffixes.RandomElement();
+            var affix = affixes.Values.ToList().Find(x => x.AffixID == element.Id);
+            if (affix == null) return;
+            element.IncreaseStep(affix.StepNum);
         }
     }
 
@@ -171,9 +187,12 @@ public class ItemData
             DressAvatarId = (uint)EquipAvatar,
             MainAffixId = (uint)MainAffix
         };
-        if (SubAffixes.Count >= 1)
+        if (SubAffixes.Count > 0)
             foreach (var subAffix in SubAffixes)
                 relic.SubAffixList.Add(subAffix.ToProto());
+        if (ReforgeSubAffixes.Count > 0)
+            foreach (var subAffix in ReforgeSubAffixes)
+                relic.ReforgeSubAffixList.Add(subAffix.ToProto());
         return relic;
     }
 
@@ -288,7 +307,8 @@ public class ItemData
             Locked = Locked,
             Discarded = Discarded,
             MainAffix = MainAffix,
-            SubAffixes = SubAffixes.Select(x => x.Clone()).ToList(),
+            SubAffixes = [.. SubAffixes.Select(x => x.Clone())],
+            ReforgeSubAffixes = [.. ReforgeSubAffixes.Select(x => x.Clone())],
             EquipAvatar = EquipAvatar
         };
     }
@@ -298,6 +318,10 @@ public class ItemData
 
 public class ItemSubAffix
 {
+    public int Id { get; set; }
+    public int Count { get; set; }
+    public int Step { get; set; }
+
     public ItemSubAffix()
     {
     }
@@ -308,18 +332,6 @@ public class ItemSubAffix
         Count = count;
         Step = Extensions.RandomInt(0, excel.StepNum * count + 1);
     }
-
-    public ItemSubAffix(int id, int count, int step)
-    {
-        Id = id;
-        Count = count;
-        Step = step;
-    }
-
-    public int Id { get; set; } // Affix id
-
-    public int Count { get; set; }
-    public int Step { get; set; }
 
     public void IncreaseStep(int stepNum)
     {
