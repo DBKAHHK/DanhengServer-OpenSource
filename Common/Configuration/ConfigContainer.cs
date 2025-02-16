@@ -8,7 +8,6 @@ public class ConfigContainer
     public PathConfig Path { get; set; } = new();
     public DatabaseConfig Database { get; set; } = new();
     public ServerOption ServerOption { get; set; } = new();
-    public DownloadUrlConfig DownloadUrl { get; set; } = new();
     public MuipServerConfig MuipServer { get; set; } = new();
 }
 
@@ -110,14 +109,6 @@ public class ServerProfile
     public int ChatBubbleId { get; set; } = 220001;
     public int DisplayAvatarId { get; set; } = 1001;
     public int DisplayAvatarLevel { get; set; } = 1;
-}
-
-public class DownloadUrlConfig
-{
-    public string? AssetBundleUrl { get; set; } = null;
-    public string? ExResourceUrl { get; set; } = null;
-    public string? LuaUrl { get; set; } = null;
-    public string? IfixUrl { get; set; } = null;
 }
 
 public class MuipServerConfig

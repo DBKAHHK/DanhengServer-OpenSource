@@ -151,6 +151,7 @@ public class ServerInfoTextEN
 {
     public string Shutdown => "Shutting down...";
     public string CancelKeyPressed => "Cancel key pressed (Ctrl + C), server shutting down...";
+    public string CurrentVersion => "Server supported versions: {0}";
     public string StartingServer => "Starting DanhengServer...";
     public string LoadingItem => "Loading {0}...";
     public string GeneratingItem => "Building {0}...";

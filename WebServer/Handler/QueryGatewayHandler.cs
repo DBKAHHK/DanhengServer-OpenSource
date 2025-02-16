@@ -1,4 +1,7 @@
-﻿using EggLink.DanhengServer.Data;
+﻿using System.Text.RegularExpressions;
+using EggLink.DanhengServer.Configuration;
+using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Internationalization;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
@@ -6,15 +9,14 @@ using Google.Protobuf;
 
 namespace EggLink.DanhengServer.WebServer.Handler;
 
-internal class QueryGatewayHandler
+internal partial class QueryGatewayHandler
 {
     public static Logger Logger = new("GatewayServer");
     public string Data;
 
-    public QueryGatewayHandler()
+    public QueryGatewayHandler(string version)
     {
         var config = ConfigManager.Config;
-        var urlData = config.DownloadUrl;
 
         // build gateway proto
         var gateServer = new GateServer
@@ -34,28 +36,36 @@ internal class QueryGatewayHandler
         if (ConfigManager.Config.GameServer.UsePacketEncryption)
             gateServer.ClientSecretKey = Convert.ToBase64String(Crypto.ClientSecretKey!.GetBytes());
 
+        var region = ConfigManager.Hotfix.Region;
+        if (region == BaseRegionEnum.None)
+            _ = Enum.TryParse(version[..2], out region);
+        var baseUrl = region switch
+        {
+            BaseRegionEnum.CN => BaseUrl.CN,
+            BaseRegionEnum.OS => BaseUrl.OS,
+            _ => BaseUrl.OS
+        };
+
+        var ver = VersionRegex().Replace(version, "");
+        ConfigManager.Hotfix.HotfixData.TryGetValue(ver, out var urls);
+        if (urls != null)
+        {
+            if (urls.AssetBundleUrl != "")
+                gateServer.AssetBundleUrl = baseUrl + urls.AssetBundleUrl;
+            if (urls.ExResourceUrl != "")
+                gateServer.ExResourceUrl = baseUrl + urls.ExResourceUrl;
+            if (urls.LuaUrl != "")
+                gateServer.LuaUrl = baseUrl + urls.LuaUrl;
+            if (urls.IfixUrl != "")
+                gateServer.IfixUrl = baseUrl + urls.IfixUrl;
+        }
+
         if (!ResourceManager.IsLoaded) gateServer.Retcode = 2;
-
-        if (urlData.AssetBundleUrl != null && urlData.AssetBundleUrl.Length > 0)
-            gateServer.AssetBundleUrl = urlData.AssetBundleUrl;
-
-        if (urlData.ExResourceUrl != null && urlData.ExResourceUrl.Length > 0)
-            gateServer.ExResourceUrl = urlData.ExResourceUrl;
-
-        if (urlData.LuaUrl != null && urlData.LuaUrl.Length > 0)
-        {
-            gateServer.LuaUrl = urlData.LuaUrl;
-            gateServer.MdkResVersion = urlData.LuaUrl.Split('/')[^1].Split('_')[1];
-        }
-
-        if (urlData.IfixUrl != null && urlData.IfixUrl.Length > 0)
-        {
-            gateServer.IfixUrl = urlData.IfixUrl;
-            gateServer.IfixVersion = urlData.IfixUrl.Split('/')[^1].Split('_')[1];
-        }
-
         Logger.Info("Client request: query_gateway");
 
         Data = Convert.ToBase64String(gateServer.ToByteArray());
     }
+
+    [GeneratedRegex(@"CN|OS|BETA|PROD|Android|Win|iOS")]
+    private static partial Regex VersionRegex();
 }

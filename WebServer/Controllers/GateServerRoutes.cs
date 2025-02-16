@@ -8,9 +8,9 @@ namespace EggLink.DanhengServer.WebServer.Controllers;
 public class GateServerRoutes
 {
     [HttpGet("/query_gateway")]
-    public async ValueTask<string> QueryGateway()
+    public async ValueTask<string> QueryGateway([FromQuery] string version)
     {
         await ValueTask.CompletedTask;
-        return new QueryGatewayHandler().Data;
+        return new QueryGatewayHandler(version).Data;
     }
 }

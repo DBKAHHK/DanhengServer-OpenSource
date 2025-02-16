@@ -152,6 +152,7 @@ public class ServerInfoTextCHT
     public string Shutdown => "關閉中…";
     public string CancelKeyPressed => "已按下取消鍵 (Ctrl + C)，服務器即將關閉…";
     public string StartingServer => "正在啟動 DanhengServer…";
+    public string CurrentVersion => "當前服務端支援的版本: {0}";
     public string LoadingItem => "正在加載 {0}…";
     public string GeneratingItem => "正在生成 {0}…";
     public string WaitingItem => "正在等待進程 {0} 完成…";

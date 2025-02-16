@@ -2,14 +2,7 @@
 
 public static class GameConstants
 {
-    public const int INVENTORY_MAX_EQUIPMENT = 1500;
-    public const int INVENTORY_MAX_RELIC = 2000;
-    public const int INVENTORY_MAX_MATERIAL = 2000;
-
-    public const int MAX_LINEUP_COUNT = 9;
-
-    public const int AMBUSH_BUFF_ID = 1000102;
-
+    public const string GAME_VERSION = "3.0.5";
     public const int MAX_STAMINA = 300;
     public const int MAX_STAMINA_RESERVE = 2400;
     public const int STAMINA_RECOVERY_TIME = 360; // 6 minutes

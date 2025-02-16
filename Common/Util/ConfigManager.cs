@@ -1,21 +1,29 @@
 ﻿using EggLink.DanhengServer.Configuration;
+using EggLink.DanhengServer.Internationalization;
 using Newtonsoft.Json;
 
 namespace EggLink.DanhengServer.Util;
 
 public static class ConfigManager
 {
-    public static Logger Logger = new("ConfigManager");
+    public static readonly Logger Logger = new("ConfigManager");
     public static ConfigContainer Config { get; private set; } = new();
+    private static readonly string ConfigFilePath = Config.Path.ConfigPath + "/Config.json";
+    public static HotfixContainer Hotfix { get; private set; } = new();
+    private static readonly string HotfixFilePath = Config.Path.ConfigPath + "/Hotfix.json";
 
     public static void LoadConfig()
     {
-        var file = new FileInfo("config.json");
+        LoadConfigData();
+        LoadHotfixData();
+    }
+
+    private static void LoadConfigData()
+    {
+        var file = new FileInfo(ConfigFilePath);
         if (!file.Exists)
         {
-            Logger.Warn("Config file not found, creating a new one");
-
-            Config = new ConfigContainer
+            Config = new()
             {
                 MuipServer =
                 {
@@ -29,20 +37,72 @@ public static class ConfigManager
 
             Logger.Info("Current Language is " + Config.ServerOption.Language);
             Logger.Info("Muipserver Admin key: " + Config.MuipServer.AdminKey);
-            SaveConfig();
+            SaveData(Config, ConfigFilePath);
         }
 
-        using var reader = new StreamReader(file.OpenRead());
-        var json = reader.ReadToEnd();
-        Config = JsonConvert.DeserializeObject<ConfigContainer>(json)!;
-        // save it again to make sure all fields are present
-        reader.Close();
-        SaveConfig();
+        using (var stream = file.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+        using (var reader = new StreamReader(stream))
+        {
+            var json = reader.ReadToEnd();
+            Config = JsonConvert.DeserializeObject<ConfigContainer>(json)!;
+        }
+
+        SaveData(Config, ConfigFilePath);
     }
 
-    public static void SaveConfig()
+    private static void LoadHotfixData()
     {
-        var json = JsonConvert.SerializeObject(Config, Formatting.Indented);
-        File.WriteAllText("config.json", json);
+        var file = new FileInfo(HotfixFilePath);
+
+        // Generate all necessary versions
+        var verList = new List<string>();
+        if (GameConstants.GAME_VERSION.Length > 4)
+            for (var i = 1; i < 6; i++)
+                verList.Add(GameConstants.GAME_VERSION + i.ToString());
+        else
+            verList.Add(GameConstants.GAME_VERSION);
+
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.CurrentVersion",
+            verList.Aggregate((current, next) => $"{current}, {next}")));
+
+        if (!file.Exists)
+        {
+            Hotfix = new HotfixContainer();
+            SaveData(Hotfix, HotfixFilePath);
+            file.Refresh();
+        }
+
+        using (var stream = file.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+        using (var reader = new StreamReader(stream))
+        {
+            var json = reader.ReadToEnd();
+            Hotfix = JsonConvert.DeserializeObject<HotfixContainer>(json)!;
+        }
+
+        foreach (var version in verList)
+            if (!Hotfix.HotfixData.TryGetValue(version, out var _))
+                Hotfix.HotfixData[version] = new();
+
+        SaveData(Hotfix, HotfixFilePath);
+    }
+
+    private static void SaveData(object data, string path)
+    {
+        var json = JsonConvert.SerializeObject(data, Formatting.Indented);
+        using var stream = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+        using var writer = new StreamWriter(stream);
+        writer.Write(json);
+    }
+
+    public static void InitDirectories()
+    {
+        foreach (var property in Config.Path.GetType().GetProperties())
+        {
+            var dir = property.GetValue(Config.Path)?.ToString();
+
+            if (!string.IsNullOrEmpty(dir))
+                if (!string.IsNullOrEmpty(dir) && !Directory.Exists(dir))
+                    Directory.CreateDirectory(dir);
+        }
     }
 }
