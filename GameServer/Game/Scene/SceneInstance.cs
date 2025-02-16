@@ -119,6 +119,8 @@ public class SceneInstance
         foreach (var value in FloorInfo?.FloorSavedValue ?? [])
             if (floorData != null && floorData.TryGetValue(value.Name, out var v))
                 sceneInfo.FloorSavedData[value.Name] = v;
+            else if (value.Name.Contains("_IsHidden"))
+                sceneInfo.FloorSavedData[value.Name] = 0;
             else
                 sceneInfo.FloorSavedData[value.Name] = value.DefaultValue;
 

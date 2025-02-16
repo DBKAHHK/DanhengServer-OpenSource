@@ -141,10 +141,10 @@ public class SceneEntityLoader(SceneInstance scene)
              info.ForceUnloadCondition.IsTrue(missionData, false)) &&
             !forceLoad) return null; // check if group should be loaded forcefully
 
-        if (!info.SavedValueCondition.IsTrue(
-                Scene.Player.SceneData!.FloorSavedData.GetValueOrDefault(Scene.FloorId, [])) &&
-            !forceLoad) // condition: Saved Value Condition
-            return null;
+        // if (!info.SavedValueCondition.IsTrue(
+        //         Scene.Player.SceneData!.FloorSavedData.GetValueOrDefault(Scene.FloorId, [])) &&
+        //     !forceLoad) // condition: Saved Value Condition
+        //     return null;
 
         if (Scene.Entities.Values.ToList().FindIndex(x => x.GroupID == info.Id) !=
             -1) // check if group is already loaded
