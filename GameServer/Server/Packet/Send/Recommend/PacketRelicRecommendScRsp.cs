@@ -5,11 +5,12 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Item;
 
 public class PacketRelicRecommendScRsp : BasePacket
 {
-    public PacketRelicRecommendScRsp(uint avatar) : base(CmdIds.RelicRecommendScRsp)
+    public PacketRelicRecommendScRsp(uint avatarId) : base(CmdIds.RelicRecommendScRsp)
     {
         var proto = new RelicRecommendScRsp
         {
-            AvatarId = avatar
+            AvatarId = avatarId,
+            HasRecommand = true
         };
 
         SetData(proto);

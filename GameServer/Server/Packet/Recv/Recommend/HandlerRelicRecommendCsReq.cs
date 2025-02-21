@@ -2,7 +2,7 @@
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
 
-namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Item;
+namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Recommend;
 
 [Opcode(CmdIds.RelicRecommendCsReq)]
 public class HandlerRelicRecommendCsReq : Handler

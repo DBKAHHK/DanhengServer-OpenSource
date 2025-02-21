@@ -16,6 +16,8 @@ public class InventoryData : BaseDatabaseDataHelper
 
     [SugarColumn(IsJson = true)] public List<ItemData> RelicItems { get; set; } = [];
 
+    [SugarColumn(IsJson = true)] public Dictionary<int, RelicPlanData> RelicPlans { get; set; } = [];
+
     public int NextUniqueId { get; set; } = 100;
 }
 
@@ -358,4 +360,11 @@ public class ItemSubAffix
             Step = Step
         };
     }
+}
+
+public class RelicPlanData
+{
+    public int EquipAvatar { get; set; }
+    public List<int> InsideRelic { get; set; } = [];
+    public List<int> OutsideRelic { get; set; } = [];
 }

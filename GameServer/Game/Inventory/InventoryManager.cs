@@ -596,42 +596,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         return itemData;
     }
 
-    public async ValueTask ReforgeRelic(int uniqueId)
-    {
-        var relic = Data.RelicItems.FirstOrDefault(x => x.UniqueId == uniqueId);
-        if (relic == null) return;
-        await RemoveItem(238, 1);
-
-        var subAffixesClone = relic.SubAffixes.Select(x => x.Clone()).ToList();
-
-        var levelUpCnt = 0;
-        foreach (var subAffix in relic.SubAffixes)
-        {
-            levelUpCnt += subAffix.Count - 1;
-            subAffix.Count = 1;
-            subAffix.Step = 0;
-        }
-        relic.IncreaseRandomRelicSubAffix(levelUpCnt);
-        relic.ReforgeSubAffixes = relic.SubAffixes;
-        relic.SubAffixes = subAffixesClone;
-
-        await Player.SendPacket(new PacketPlayerSyncScNotify(relic));
-    }
-
-    public async ValueTask ConfirmReforgeRelic(int uniqueId, bool isCancel)
-    {
-        var relic = Data.RelicItems.FirstOrDefault(x => x.UniqueId == uniqueId);
-        if (relic == null) return;
-        if (relic.ReforgeSubAffixes.Count == 0) return;
-
-        if (!isCancel)
-            relic.SubAffixes = relic.ReforgeSubAffixes;
-        relic.ReforgeSubAffixes = [];
-
-        await Player.SendPacket(new PacketPlayerSyncScNotify(relic));
-    }
-
-    public async ValueTask<List<ItemData>> SellItem(ItemCostData costData, bool toMaterial = false)
+    public async ValueTask<List<ItemData>> SellItem(ItemCostData costData, bool toMaterial)
     {
         List<ItemData> items = [];
         Dictionary<int, int> itemMap = [];
