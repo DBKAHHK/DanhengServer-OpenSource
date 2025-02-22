@@ -54,7 +54,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         switch (itemConfig.ItemMainType)
         {
             case ItemMainTypeEnum.Equipment:
-                if (Data.RelicItems.Count + 1 > GameConstants.INVENTORY_MAX_EQUIPMENT) // get the max equipment
+                if (Data.EquipmentItems.Count + 1 > GameConstants.INVENTORY_MAX_EQUIPMENT) // get the max equipment
                 {
                     await Player.SendPacket(new PacketRetcodeNotify(Retcode.RetEquipmentExceedLimit));
                     break;
@@ -87,9 +87,8 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
                 };
                 break;
             case ItemMainTypeEnum.Relic:
-                if (Data.RelicItems.Count + 1 >
-                    GameConstants
-                        .INVENTORY_MAX_RELIC) // get the max relic, i dont think one player can have more than max count of relic until i see a player get 50000 relic and the client crashed :(
+                //I dont think one player can have more than max count of relic until i see a player get 50000 relic and the client crashed :(
+                if (Data.RelicItems.Count + 1 > GameConstants.INVENTORY_MAX_RELIC) // get the max relic
                 {
                     await Player.SendPacket(new PacketRetcodeNotify(Retcode.RetRelicExceedLimit));
                     break;
@@ -218,7 +217,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
                 Data.MaterialItems.Add(item);
                 break;
             case ItemMainTypeEnum.Equipment:
-                if (Data.RelicItems.Count + 1 > GameConstants.INVENTORY_MAX_EQUIPMENT)
+                if (Data.EquipmentItems.Count + 1 > GameConstants.INVENTORY_MAX_EQUIPMENT)
                 {
                     await Player.SendPacket(new PacketRetcodeNotify(Retcode.RetEquipmentExceedLimit));
                     return item;
