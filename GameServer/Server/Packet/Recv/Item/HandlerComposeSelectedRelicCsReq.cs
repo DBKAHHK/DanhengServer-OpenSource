@@ -1,6 +1,7 @@
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Item;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
+using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Item;
 
@@ -11,10 +12,15 @@ public class HandlerComposeSelectedRelicCsReq : Handler
     {
         var req = ComposeSelectedRelicCsReq.Parser.ParseFrom(data);
         var player = connection.Player!;
-        var item = await player.InventoryManager!.ComposeRelic(req);
+        if (player.InventoryManager!.Data.RelicItems.Count >= GameConstants.INVENTORY_MAX_RELIC)
+        {
+            await connection.SendPacket(new PacketComposeSelectedRelicScRsp(req.ComposeId, Retcode.RetRelicExceedLimit));
+            return;
+        }
+        var item = await player.InventoryManager.ComposeRelic(req);
         if (item == null)
         {
-            await connection.SendPacket(new PacketComposeSelectedRelicScRsp());
+            await connection.SendPacket(new PacketComposeSelectedRelicScRsp(req.ComposeId));
             return;
         }
 

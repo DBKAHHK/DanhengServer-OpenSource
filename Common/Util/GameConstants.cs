@@ -3,7 +3,7 @@
 public static class GameConstants
 {
     public const int INVENTORY_MAX_EQUIPMENT = 1500;
-    public const int INVENTORY_MAX_RELIC = 1500;
+    public const int INVENTORY_MAX_RELIC = 2000;
     public const int INVENTORY_MAX_MATERIAL = 2000;
 
     public const int MAX_LINEUP_COUNT = 9;
