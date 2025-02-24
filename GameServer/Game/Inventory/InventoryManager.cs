@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.Data;
+﻿using System.Collections.Frozen;
+using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Enums.Item;
@@ -11,6 +12,7 @@ using EggLink.DanhengServer.GameServer.Server.Packet.Send.PlayerSync;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
+using Google.Protobuf.Collections;
 
 namespace EggLink.DanhengServer.GameServer.Game.Inventory;
 
@@ -1292,5 +1294,81 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         await Player.SendPacket(new PacketPlayerSyncScNotify(itemData));
     }
 
+    #endregion
+    
+    #region Mark
+    public async ValueTask<bool> LockItems(RepeatedField<uint> ids, bool isLocked, ItemMainTypeEnum itemType = ItemMainTypeEnum.Unknown)
+    {
+        List<ItemData> targetItems;
+        switch (itemType)
+        {
+            case ItemMainTypeEnum.Equipment:
+                targetItems = Data.EquipmentItems;
+                break;
+            case ItemMainTypeEnum.Relic:
+                targetItems = Data.RelicItems;
+                break;
+            case ItemMainTypeEnum.Unknown:
+            case ItemMainTypeEnum.Virtual:
+            case ItemMainTypeEnum.AvatarCard:
+            case ItemMainTypeEnum.Usable:
+            case ItemMainTypeEnum.Material:
+            case ItemMainTypeEnum.Mission:
+            case ItemMainTypeEnum.Display:
+            case ItemMainTypeEnum.Pet:
+            default:
+                return false;
+        }
+        if (targetItems.Count == 0) return false;
+        var idPool = ids.ToList().ConvertAll(x => (int)x).ToFrozenSet();
+        var items = new List<ItemData>();
+        foreach (var x in targetItems)
+        {
+            if (x.Discarded || !idPool.Contains(x.UniqueId)) continue;
+            x.Locked = isLocked;
+            items.Add(x);
+        }
+
+        if (items.Count <= 0) return false;
+        await player.SendPacket(new PacketPlayerSyncScNotify(items));
+        return true;
+    }
+
+    public async ValueTask<bool> DiscardItems(RepeatedField<uint> ids, bool discarded, ItemMainTypeEnum itemType = ItemMainTypeEnum.Unknown)
+    {
+        List<ItemData> targetItems;
+        switch (itemType)
+        {
+            case ItemMainTypeEnum.Equipment:
+                targetItems = Data.EquipmentItems;
+                break;
+            case ItemMainTypeEnum.Relic:
+                targetItems = Data.RelicItems;
+                break;
+            case ItemMainTypeEnum.Unknown:
+            case ItemMainTypeEnum.Virtual:
+            case ItemMainTypeEnum.AvatarCard:
+            case ItemMainTypeEnum.Usable:
+            case ItemMainTypeEnum.Material:
+            case ItemMainTypeEnum.Mission:
+            case ItemMainTypeEnum.Display:
+            case ItemMainTypeEnum.Pet:
+            default:
+                return false;
+        }
+        if (targetItems.Count == 0) return false;
+        var idPool = ids.ToList().ConvertAll(x => (int)x).ToFrozenSet();
+        var items = new List<ItemData>();
+        foreach (var x in targetItems)
+        {
+            if (x.Locked || !idPool.Contains(x.UniqueId)) continue;
+            x.Discarded = discarded;
+            items.Add(x);
+        }
+        
+        if (items.Count <= 0) return false;
+        await player.SendPacket(new PacketPlayerSyncScNotify(items));
+        return true;
+    }
     #endregion
 }
