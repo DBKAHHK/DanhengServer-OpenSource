@@ -11,44 +11,57 @@
 </table>
 </div>
 
-##💡API支援です
+## 💡APIヘルプ
 
--バージョン2.3から、外部API呼び出しインタフェースをサポートします。
--全体のインタフェースはDispatchインタフェースに入口を加えます。例えば、Dispatchはhttp://127.0.0.1:8080、要求パラメータとリターンはjson形式です。
--(1)ライセンスインタフェース:http://127.0.0.1:8080/muip/auth_admin(支持ポスト/ get)
-- -必須引数1:admin_key (config.phpでのMuipServer/AdminKey構成)
-- -必須パラメータ2:key_type(タイプ、例えばPEM)です。
-- -リターン例です:
-```json
+- バージョン2.3以降、外部API呼び出しをサポート
+- 総インターフェースはDispatchインターフェースにエントリを加えたもので、例えばあなたのDispatchが http://127.0.0.1:8080 の場合、リクエストパラメータと返り値はjson形式です
+- (1)セッション作成インターフェース: http://127.0.0.1:8080/muip/create_session (POSTサポート)
+  - -オプションパラメータ：key_type (タイプ、PEMまたはデフォルトのXMLのみサポート)
+  - -返り値の例：
+  ```json
   {
     "code": 0,
-    "message": "Authorized admin key successfully!",
+    "message": "Created!",
     "data": {
         "rsaPublicKey": "***",
         "sessionId": "***",
         "expireTimeStamp": ***
     }
   }
-```
-—(2)提出命令インタフェース:http://127.0.0.1:8080/muip/exec_cmd(支持ポスト/ get)
-- -必伝パラメータ1:SessionId(ライセンスインターフェース要求後に取得します)
-- -必須引数2:Command(実行するコマンドをrsaPublicKey[ライセンスインターフェース取得]でRSA[pacs#1]で暗号化します)
-- -必伝パラメータ3:TargetUid(コマンドを実行するプレイヤーUID)です
-- -リターン例です:
-```json
+  ```
+- (2)認証インターフェース: http://127.0.0.1:8080/muip/auth_admin (POSTサポート)
+  - -必須パラメータ1：SessionId (セッション作成インターフェースのリクエスト後に取得)
+  - -必須パラメータ2：admin_key (config.jsonのMuipServer.AdminKey設定で、rsaPublicKey[セッション作成インターフェースで取得]下でRSA[pacs#1]暗号化)
+  - -返り値の例：
+  ```json
+  {
+    "code": 0,
+    "message": "Authorized admin key successfully!",
+    "data": {
+        "sessionId": "***",
+        "expireTimeStamp": ***
+    }
+  }
+  ```
+- (3)コマンド送信インターフェース: http://127.0.0.1:8080/muip/exec_cmd (POST/GETサポート)
+  - -必須パラメータ1：SessionId (セッション作成インターフェースのリクエスト後に取得)
+  - -必須パラメータ2：Command (実行するコマンドはrsaPublicKey[セッション作成インターフェースで取得]下でRSA[pacs#1]暗号化)
+  - -必須パラメータ3：TargetUid (コマンドを実行するプレイヤーのUID)
+  - -返り値の例：
+    ```json
     {
       "code": 0,
       "message": "Success",
       "data": {
           "sessionId": "***",
-          "message": "*** //base64编码后
+          "message": "*** //base64エンコード後
       }
     }
-```
-—(3)サーバーの状態をインタフェース:http://127.0.0.1:8080/muip/server_information(支持get)だけ
-- -必伝パラメータ1:SessionId(ライセンスインターフェース要求後に取得します)
-- -リターン例です:
-```json
+    ```
+- (4)サーバー状態取得インターフェース: http://127.0.0.1:8080/muip/server_information (POST/GETサポート)
+  - -必須パラメータ1：SessionId (セッション作成インターフェースのリクエスト後に取得)
+  - -返り値の例：
+   ```json
     {
       "code": 0,
       "message": "Success",
@@ -67,12 +80,12 @@
          "programUsedMemory": 323
       }
     }
-```
-—(4)プレイヤー情報を盗み出すインタフェース:http://127.0.0.1:8080/muip/player_information(支持get)だけ
-- -必伝パラメータ1:SessionId(ライセンスインターフェース要求後に取得します)
-- -必伝パラメーター2:Uid(プレイヤーUid)
-- -リターン例です:
-```json
+    ```
+- (5)プレイヤー情報取得インターフェース: http://127.0.0.1:8080/muip/player_information (POST/GETサポート)
+  - -必須パラメータ1：SessionId (セッション作成インターフェースのリクエスト後に取得)
+  - -必須パラメータ2：Uid (プレイヤーUID)
+  - -返り値の例：
+   ```json
     {
       "code": 0,
       "message": "Success",
@@ -94,4 +107,4 @@
           "acceptedSubMissionIdList": Array[169]
       }
   }
-```
+  ```

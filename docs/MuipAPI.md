@@ -12,17 +12,16 @@
 </div>
 
 ## 💡API Help
-- Since version 2.3, external APIs are supported
-- For example, your Dispatch is http://127.0.0.1:8080, and the request parameters and returns are in json format
-- (1) Authorization interface: http://127.0.0.1:8080/muip/auth_admin (support POST)
-   - -Required parameter 1: admin_key (MuipServer/AdminKey configuration in config.php)
-   - -Required parameter 2: key_type (type, e.g. PEM or XML)
-  - -Return example:
+
+- External API call interfaces are supported starting from version 2.3.
+- The main interface is the Dispatch interface with an entry point. For example, if your Dispatch is http://127.0.0.1:8080, the request parameters and responses are in JSON format.
+- (1) Create Session Interface: http://127.0.0.1:8080/muip/create_session (supports POST)
+  - -Optional parameter: key_type (type, only supports PEM or default XML)
+  - -Response example:
   ```json
   {
     "code": 0,
-  //codeResponse: `code`: `0 -> Success` `1 -> Token incorrect or not enable`
-    "message": "Authorized admin key successfully!",
+    "message": "Created!",
     "data": {
         "rsaPublicKey": "***",
         "sessionId": "***",
@@ -30,29 +29,41 @@
     }
   }
   ```
-- (2)Submit command interface: http://127.0.0.1:8080/muip/exec_cmd (support POST/GET)
-  - -Required parameter 1: SessionId (obtained after authorization API request)
-  - -Required parameter 2: Command (the command to be executed is encrypted by RSA[pacs#1] under rsaPublicKey)
+- (2) Authorization Interface: http://127.0.0.1:8080/muip/auth_admin (supports POST)
+  - -Required parameter 1: SessionId (obtained after requesting the Create Session Interface)
+  - -Required parameter 2: admin_key (configured in config.json's MuipServer.AdminKey and encrypted under rsaPublicKey [obtained from Create Session Interface] using RSA [pacs#1])
+  - -Response example:
+  ```json
+  {
+    "code": 0,
+    "message": "Authorized admin key successfully!",
+    "data": {
+        "sessionId": "***",
+        "expireTimeStamp": ***
+    }
+  }
+  ```
+- (3) Command Submission Interface: http://127.0.0.1:8080/muip/exec_cmd (supports POST/GET)
+  - -Required parameter 1: SessionId (obtained after requesting the Create Session Interface)
+  - -Required parameter 2: Command (the command to be executed, encrypted under rsaPublicKey [obtained from Create Session Interface] using RSA [pacs#1])
   - -Required parameter 3: TargetUid (UID of the player executing the command)
-  - -Return example:
+  - -Response example:
     ```json
     {
       "code": 0,
-    //codeResponse: `code`: `0 -> Success` `1 -> Session expired` `2 -> session not found` `3 -> encryption error`
       "message": "Success",
       "data": {
           "sessionId": "***",
-          "message": "*** //base64
+          "message": "*** //after base64 encoding
       }
     }
     ```
-- (3)Interface to get server status: http://127.0.0.1:8080/muip/server_information (support POST/GET)
-  - -Required parameter 1: SessionId (obtained after authorization API request)
-  - -Return example:
+- (4) Get Server Status Interface: http://127.0.0.1:8080/muip/server_information (supports POST/GET)
+  - -Required parameter 1: SessionId (obtained after requesting the Create Session Interface)
+  - -Response example:
    ```json
     {
       "code": 0,
-   //codeResponse: `code`: `0 -> Success` `1 -> Session expired` `2 -> session not found` 
       "message": "Success",
       "data": {
           "onlinePlayers": [
@@ -70,14 +81,13 @@
       }
     }
     ```
-- (4)Interface to get player information: http://127.0.0.1:8080/muip/player_information (support POST/GET)
-  - -Required parameter 1: SessionId (obtained after authorization API request)
+- (5) Get Player Information Interface: http://127.0.0.1:8080/muip/player_information (supports POST/GET)
+  - -Required parameter 1: SessionId (obtained after requesting the Create Session Interface)
   - -Required parameter 2: Uid (player UID)
-  - -Return example:
+  - -Response example:
    ```json
     {
       "code": 0,
-   //Response: `code`: `0 -> Success` `1 -> Session expired` `2 -> player not exist` `3 -> session not found` 
       "message": "Success",
       "data": {
           "uid": 10001,
