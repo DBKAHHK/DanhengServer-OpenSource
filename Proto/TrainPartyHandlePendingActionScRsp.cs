@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static TrainPartyHandlePendingActionScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CihUcmFpblBhcnR5SGFuZGxlUGVuZGluZ0FjdGlvblNjUnNwLnByb3RvGhFK",
-            "Qk9DSkhOREFNQy5wcm90bxoRTUJJTk1BT05CQ0QucHJvdG8aEUJGSUZBTkFP",
-            "Q1BDLnByb3RvGhFGS01CRkxNRUdFQi5wcm90bxoRRkJHTExETkxHUEUucHJv",
+            "CihUcmFpblBhcnR5SGFuZGxlUGVuZGluZ0FjdGlvblNjUnNwLnByb3RvGhFG",
+            "QkdMTEROTEdQRS5wcm90bxoRRktNQkZMTUVHRUIucHJvdG8aEUJGSUZBTkFP",
+            "Q1BDLnByb3RvGhFNQklOTUFPTkJDRC5wcm90bxoRSkJPQ0pITkRBTUMucHJv",
             "dG8irAIKIlRyYWluUGFydHlIYW5kbGVQZW5kaW5nQWN0aW9uU2NSc3ASDwoH",
             "cmV0Y29kZRgEIAEoDRIWCg5xdWV1ZV9wb3NpdGlvbhgNIAEoDRITCgtETE5D",
             "QkpGR0tBQRgGIAEoCBIhCgtISUxPTUVLQUZCUBgHIAEoCzIMLkZLTUJGTE1F",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "IAEoCzIMLkZCR0xMRE5MR1BFSABCDQoLUEhLR0NCTkVKQ09CHqoCG0VnZ0xp",
             "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JBOCJHNDAMCReflection.Descriptor, global::EggLink.DanhengServer.Proto.MBINMAONBCDReflection.Descriptor, global::EggLink.DanhengServer.Proto.BFIFANAOCPCReflection.Descriptor, global::EggLink.DanhengServer.Proto.FKMBFLMEGEBReflection.Descriptor, global::EggLink.DanhengServer.Proto.FBGLLDNLGPEReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FBGLLDNLGPEReflection.Descriptor, global::EggLink.DanhengServer.Proto.FKMBFLMEGEBReflection.Descriptor, global::EggLink.DanhengServer.Proto.BFIFANAOCPCReflection.Descriptor, global::EggLink.DanhengServer.Proto.MBINMAONBCDReflection.Descriptor, global::EggLink.DanhengServer.Proto.JBOCJHNDAMCReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyHandlePendingActionScRsp), global::EggLink.DanhengServer.Proto.TrainPartyHandlePendingActionScRsp.Parser, new[]{ "Retcode", "QueuePosition", "DLNCBJFGKAA", "HILOMEKAFBP", "LAELPNHHJIK", "PMOJBJMKFAN", "AFDNDBADDKP", "LEDFNCDFAMK" }, new[]{ "PHKGCBNEJCO" }, null, null, null)
           }));

@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static CHKIICNAPHAReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFDSEtJSUNOQVBIQS5wcm90bxodQ2hhbGxlbmdlQm9zc1N0YXRpc3RpY3Mu",
-            "cHJvdG8aHkNoYWxsZW5nZVN0b3J5U3RhdGlzdGljcy5wcm90bxoZQ2hhbGxl",
-            "bmdlU3RhdGlzdGljcy5wcm90byLqAQoLQ0hLSUlDTkFQSEESEwoLS0hDTkFK",
+            "ChFDSEtJSUNOQVBIQS5wcm90bxoZQ2hhbGxlbmdlU3RhdGlzdGljcy5wcm90",
+            "bxoeQ2hhbGxlbmdlU3RvcnlTdGF0aXN0aWNzLnByb3RvGh1DaGFsbGVuZ2VC",
+            "b3NzU3RhdGlzdGljcy5wcm90byLqAQoLQ0hLSUlDTkFQSEESEwoLS0hDTkFK",
             "T0tKSEoYCSABKA0SEAoIZ3JvdXBfaWQYAiABKA0SMgoRY2hhbGxlbmdlX2Rl",
             "ZmF1bHQY2g4gASgLMhQuQ2hhbGxlbmdlU3RhdGlzdGljc0gAEjUKD2NoYWxs",
             "ZW5nZV9zdG9yeRifDSABKAsyGS5DaGFsbGVuZ2VTdG9yeVN0YXRpc3RpY3NI",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "dGlzdGljc0gAQhQKEmNoYWxsZW5nZV9zdHRfY2FzZUIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeBossStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStoryStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStatisticsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStoryStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeBossStatisticsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CHKIICNAPHA), global::EggLink.DanhengServer.Proto.CHKIICNAPHA.Parser, new[]{ "KHCNAJOKJHJ", "GroupId", "ChallengeDefault", "ChallengeStory", "ChallengeBoss" }, new[]{ "ChallengeSttCase" }, null, null, null)
           }));

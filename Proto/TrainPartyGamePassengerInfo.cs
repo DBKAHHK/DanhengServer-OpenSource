@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static TrainPartyGamePassengerInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFUcmFpblBhcnR5R2FtZVBhc3NlbmdlckluZm8ucHJvdG8aGVRyYWluUGFy",
-            "dHlHYW1lU2tpbGwucHJvdG8aHVRyYWluUGFydHlHYW1lUGFzc2VuZ2VyLnBy",
+            "CiFUcmFpblBhcnR5R2FtZVBhc3NlbmdlckluZm8ucHJvdG8aHVRyYWluUGFy",
+            "dHlHYW1lUGFzc2VuZ2VyLnByb3RvGhlUcmFpblBhcnR5R2FtZVNraWxsLnBy",
             "b3RvItsBChtUcmFpblBhcnR5R2FtZVBhc3NlbmdlckluZm8SEgoKbXRfcmFu",
             "a19pZBgNIAEoDRIoCgpza2lsbF9saXN0GAUgAygLMhQuVHJhaW5QYXJ0eUdh",
             "bWVTa2lsbBIRCgljdXJfaW5kZXgYCyABKA0SHwoXcGFzc2VuZ2VyX2RpYXJ5",
@@ -33,7 +33,7 @@ namespace EggLink.DanhengServer.Proto {
             "YXNzZW5nZXJfbGlzdBgJIAMoCzIYLlRyYWluUGFydHlHYW1lUGFzc2VuZ2Vy",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyGameSkillReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyGamePassengerReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyGamePassengerReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyGameSkillReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyGamePassengerInfo), global::EggLink.DanhengServer.Proto.TrainPartyGamePassengerInfo.Parser, new[]{ "MtRankId", "SkillList", "CurIndex", "PassengerDiaryIdList", "CurPassengerId", "PassengerList" }, null, null, null, null)
           }));

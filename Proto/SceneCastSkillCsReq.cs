@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static SceneCastSkillCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlTY2VuZUNhc3RTa2lsbENzUmVxLnByb3RvGhNEeW5hbWljVmFsdWVzLnBy",
+            "ChlTY2VuZUNhc3RTa2lsbENzUmVxLnByb3RvGhNTa2lsbEV4dHJhVGFnLnBy",
             "b3RvGh1Bc3Npc3RNb25zdGVyRW50aXR5SW5mby5wcm90bxoQTW90aW9uSW5m",
-            "by5wcm90bxoTU2tpbGxFeHRyYVRhZy5wcm90byKOAwoTU2NlbmVDYXN0U2tp",
+            "by5wcm90bxoTRHluYW1pY1ZhbHVlcy5wcm90byKOAwoTU2NlbmVDYXN0U2tp",
             "bGxDc1JlcRITCgtIQ0hESExKQ0lKRRgBIAEoDRIhChloaXRfdGFyZ2V0X2Vu",
             "dGl0eV9pZF9saXN0GAQgAygNEhYKDmNhc3RfZW50aXR5X2lkGA4gASgNEjwK",
             "GmFzc2lzdF9tb25zdGVyX2VudGl0eV9pbmZvGAogAygLMhguQXNzaXN0TW9u",
@@ -38,7 +38,7 @@ namespace EggLink.DanhengServer.Proto {
             "ChBtYXplX2FiaWxpdHlfc3RyGA8gASgJQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DynamicValuesReflection.Descriptor, global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SkillExtraTagReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SkillExtraTagReflection.Descriptor, global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DynamicValuesReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneCastSkillCsReq), global::EggLink.DanhengServer.Proto.SceneCastSkillCsReq.Parser, new[]{ "HCHDHLJCIJE", "HitTargetEntityIdList", "CastEntityId", "AssistMonsterEntityInfo", "SkillExtraTags", "SkillIndex", "AttackedByEntityId", "TargetMotion", "DynamicValues", "AssistMonsterEntityIdList", "MazeAbilityStr" }, null, null, null, null)
           }));

@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static RogueTournGetMiscRealTimeDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CihSb2d1ZVRvdXJuR2V0TWlzY1JlYWxUaW1lRGF0YVNjUnNwLnByb3RvGhFO",
-            "TklKQ0RLSFBLTC5wcm90bxoRRkJITkZKQ05ITUwucHJvdG8aEUtDTENISk1O",
-            "UEdMLnByb3RvGhFHUE5KTUVITkRNTi5wcm90bxoRTktQS0lBQU1PREcucHJv",
+            "CihSb2d1ZVRvdXJuR2V0TWlzY1JlYWxUaW1lRGF0YVNjUnNwLnByb3RvGhFL",
+            "Q0xDSEpNTlBHTC5wcm90bxoRRkJITkZKQ05ITUwucHJvdG8aEU5LUEtJQUFN",
+            "T0RHLnByb3RvGhFHUE5KTUVITkRNTi5wcm90bxoRTk5JSkNES0hQS0wucHJv",
             "dG8i5AEKIlJvZ3VlVG91cm5HZXRNaXNjUmVhbFRpbWVEYXRhU2NSc3ASIQoL",
             "S0dDSUFJQUZJQkUYBSABKAsyDC5HUE5KTUVITkRNThIhCgtQRk9FUEZQSEZO",
             "ShgPIAEoCzIMLkZCSE5GSkNOSE1MEiEKC0NKQ09KQU1MRUVMGAQgASgLMgwu",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "Q0hKTU5QR0xCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NNIJCDKHPKLReflection.Descriptor, global::EggLink.DanhengServer.Proto.FBHNFJCNHMLReflection.Descriptor, global::EggLink.DanhengServer.Proto.KCLCHJMNPGLReflection.Descriptor, global::EggLink.DanhengServer.Proto.GPNJMEHNDMNReflection.Descriptor, global::EggLink.DanhengServer.Proto.NKPKIAAMODGReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KCLCHJMNPGLReflection.Descriptor, global::EggLink.DanhengServer.Proto.FBHNFJCNHMLReflection.Descriptor, global::EggLink.DanhengServer.Proto.NKPKIAAMODGReflection.Descriptor, global::EggLink.DanhengServer.Proto.GPNJMEHNDMNReflection.Descriptor, global::EggLink.DanhengServer.Proto.NNIJCDKHPKLReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournGetMiscRealTimeDataScRsp), global::EggLink.DanhengServer.Proto.RogueTournGetMiscRealTimeDataScRsp.Parser, new[]{ "KGCIAIAFIBE", "PFOEPFPHFNJ", "CJCOJAMLEEL", "Retcode", "GCGLNKFDKKN", "CLKHPONDDDO" }, null, null, null, null)
           }));

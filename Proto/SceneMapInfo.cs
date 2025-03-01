@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static SceneMapInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJTY2VuZU1hcEluZm8ucHJvdG8aEU5QQU9HS0ZLQUFFLnByb3RvGg9NYXpl",
-            "R3JvdXAucHJvdG8aD0NoZXN0SW5mby5wcm90bxoTTWF6ZVByb3BTdGF0ZS5w",
+            "ChJTY2VuZU1hcEluZm8ucHJvdG8aD01hemVHcm91cC5wcm90bxoTTWF6ZVBy",
+            "b3BTdGF0ZS5wcm90bxoPQ2hlc3RJbmZvLnByb3RvGhFOUEFPR0tGS0FBRS5w",
             "cm90byKzAwoMU2NlbmVNYXBJbmZvEiYKDm1hemVfcHJvcF9saXN0GAUgAygL",
             "Mg4uTWF6ZVByb3BTdGF0ZRIQCghmbG9vcl9pZBgDIAEoDRIcChR1bmxvY2tf",
             "dGVsZXBvcnRfbGlzdBgMIAMoDRIYChBjdXJfbWFwX2VudHJ5X2lkGAogASgN",
@@ -38,7 +38,7 @@ namespace EggLink.DanhengServer.Proto {
             "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgFOgI4AUIeqgIbRWdn",
             "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NPAOGKFKAAEReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazeGroupReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChestInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazePropStateReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MazeGroupReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazePropStateReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChestInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.NPAOGKFKAAEReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneMapInfo), global::EggLink.DanhengServer.Proto.SceneMapInfo.Parser, new[]{ "MazePropList", "FloorId", "UnlockTeleportList", "CurMapEntryId", "MazeGroupList", "JMLDMOCNMHM", "Retcode", "LightenSectionList", "ChestList", "EntryId", "DimensionId", "FloorSavedData" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));

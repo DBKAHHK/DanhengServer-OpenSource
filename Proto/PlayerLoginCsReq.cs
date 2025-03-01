@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static PlayerLoginCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZQbGF5ZXJMb2dpbkNzUmVxLnByb3RvGhJQbGF0Zm9ybVR5cGUucHJvdG8a",
-            "Ekxhbmd1YWdlVHlwZS5wcm90bxoRSkdGS0lDRENGTEoucHJvdG8igwUKEFBs",
+            "ChZQbGF5ZXJMb2dpbkNzUmVxLnByb3RvGhFKR0ZLSUNEQ0ZMSi5wcm90bxoS",
+            "UGxhdGZvcm1UeXBlLnByb3RvGhJMYW5ndWFnZVR5cGUucHJvdG8igwUKEFBs",
             "YXllckxvZ2luQ3NSZXESFAoLR0VIQVBOSUhDRE8YjwIgASgIEhMKC0tJQkJO",
             "Qk5HSUpEGAMgASgJEhQKDGxvZ2luX3JhbmRvbRgIIAEoBBIUCgtBS0NFSkZD",
             "RkJBThjnCiABKAkSEwoLQk5JR1BET09JTEkYCiABKAkSFAoLSUdORkJMR0pJ",
@@ -43,7 +43,7 @@ namespace EggLink.DanhengServer.Proto {
             "UEFFGAIgASgJQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.JGFKICDCFLJReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JGFKICDCFLJReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerLoginCsReq), global::EggLink.DanhengServer.Proto.PlayerLoginCsReq.Parser, new[]{ "GEHAPNIHCDO", "KIBBNBNGIJD", "LoginRandom", "AKCEJFCFBAN", "BNIGPDOOILI", "IGNFBLGJIOJ", "OEENCFMCAHD", "Platform", "KFDJEIEOBBN", "ClientVersion", "MIOHKAOIDNK", "Signature", "OHPCKCNAEIK", "HAEHHCPOAPP", "DMPMHCCFBKG", "OEHJLODAHFN", "OCDACJNNJNJ", "BPCKJKDENCB", "GMALCPNOHBF", "MLNABEPINDB", "ResVersion", "JMKHDHAIOIM", "HJDMJPEBPPM", "FADPDIBKNBI", "NHBHBALHJML", "RogueGetInfo", "BNBOALIAPAE" }, null, null, null, null)
           }));
