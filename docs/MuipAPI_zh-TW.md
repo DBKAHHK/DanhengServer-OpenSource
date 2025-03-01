@@ -15,14 +15,13 @@
 
 - 自2.3版本開始，支持外部API調用接口
 - 總接口為Dispatch接口加上入口，比如你的Dispatch為 http://127.0.0.1:8080 ，請求參數和返回都為json格式
-- (1)授權接口: http://127.0.0.1:8080/muip/auth_admin (支持POST)
-   - -必傳參數1：admin_key (在config.php的MuipServer/AdminKey配置)
-   - -必傳參數2：key_type (類型，比如PEM)
+- (1)創建會話接口: http://127.0.0.1:8080/muip/create_session (支持POST)
+  - -可選參數：key_type (類型，僅支持PEM或默認XML)
   - -返回示例：
   ```json
   {
     "code": 0,
-    "message": "Authorized admin key successfully!",
+    "message": "Created!",
     "data": {
         "rsaPublicKey": "***",
         "sessionId": "***",
@@ -30,9 +29,23 @@
     }
   }
   ```
-- (2)提交命令接口: http://127.0.0.1:8080/muip/exec_cmd (支持POST/GET)
-  - -必傳參數1：SessionId (在授權接口請求後獲得)
-  - -必傳參數2：Command (需要執行的命令經過rsaPublicKey[授權接口獲取]下RSA[pacs#1]加密)
+- (2)授權接口: http://127.0.0.1:8080/muip/auth_admin (支持POST)
+  - -必傳參數1：SessionId (在創建會話接口請求後獲得)
+  - -必傳參數2：admin_key (在config.json的MuipServer.AdminKey配置，並且經過rsaPublicKey[創建會話接口獲取]下RSA[pacs#1]加密)
+  - -返回示例：
+  ```json
+  {
+    "code": 0,
+    "message": "Authorized admin key successfully!",
+    "data": {
+        "sessionId": "***",
+        "expireTimeStamp": ***
+    }
+  }
+  ```
+- (3)提交命令接口: http://127.0.0.1:8080/muip/exec_cmd (支持POST/GET)
+  - -必傳參數1：SessionId (在創建會話接口請求後獲得)
+  - -必傳參數2：Command (需要執行的命令經過rsaPublicKey[創建會話接口獲取]下RSA[pacs#1]加密)
   - -必傳參數3：TargetUid (執行命令的玩家UID)
   - -返回示例：
     ```json
@@ -45,8 +58,8 @@
       }
     }
     ```
-- (3)獲取服務器狀態接口: http://127.0.0.1:8080/muip/server_information (支持POST/GET)
-  - -必傳參數1：SessionId (在授權接口請求後獲得)
+- (4)獲取伺服器狀態接口: http://127.0.0.1:8080/muip/server_information (支持POST/GET)
+  - -必傳參數1：SessionId (在創建會話接口請求後獲得)
   - -返回示例：
    ```json
     {
@@ -68,10 +81,10 @@
       }
     }
     ```
-- (4)獲取玩家信息接口: http://127.0.0.1:8080/muip/player_information (支持POST/GET)
-  - -必傳參數1：SessionId (在授權接口請求後獲得)
+- (5)獲取玩家信息接口: http://127.0.0.1:8080/muip/player_information (支持POST/GET)
+  - -必傳參數1：SessionId (在創建會話接口請求後獲得)
   - -必傳參數2：Uid (玩家UID)
-  - - -返回示例：
+  - -返回示例：
    ```json
     {
       "code": 0,

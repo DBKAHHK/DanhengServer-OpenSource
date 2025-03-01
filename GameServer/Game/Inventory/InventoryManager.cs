@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.Data;
+﻿using System.Collections.Frozen;
+using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Enums.Item;
@@ -11,6 +12,8 @@ using EggLink.DanhengServer.GameServer.Server.Packet.Send.PlayerSync;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
+using Google.Protobuf.Collections;
+using Microsoft.Net.Http.Headers;
 
 namespace EggLink.DanhengServer.GameServer.Game.Inventory;
 
@@ -54,7 +57,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         switch (itemConfig.ItemMainType)
         {
             case ItemMainTypeEnum.Equipment:
-                if (Data.RelicItems.Count + 1 > GameConstants.INVENTORY_MAX_EQUIPMENT) // get the max equipment
+                if (Data.EquipmentItems.Count + 1 > GameConstants.INVENTORY_MAX_EQUIPMENT) // get the max equipment
                 {
                     await Player.SendPacket(new PacketRetcodeNotify(Retcode.RetEquipmentExceedLimit));
                     break;
@@ -88,9 +91,8 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
                 };
                 break;
             case ItemMainTypeEnum.Relic:
-                if (Data.RelicItems.Count + 1 >
-                    GameConstants
-                        .INVENTORY_MAX_RELIC) // get the max relic, i dont think one player can have more than max count of relic until i see a player get 50000 relic and the client crashed :(
+                //I dont think one player can have more than max count of relic until i see a player get 50000 relic and the client crashed :(
+                if (Data.RelicItems.Count + 1 > GameConstants.INVENTORY_MAX_RELIC) // get the max relic
                 {
                     await Player.SendPacket(new PacketRetcodeNotify(Retcode.RetRelicExceedLimit));
                     break;
@@ -98,7 +100,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
 
                 var item = await PutItem(itemId, 1, 1, level: 0, uniqueId: ++Data.NextUniqueId);
                 item.AddRandomRelicMainAffix();
-                item.AddRandomRelicSubAffix(3);
+                item.InitRandomRelicSubAffixesByRarity();
                 Data.RelicItems.Find(x => x.UniqueId == item.UniqueId)!.SubAffixes = item.SubAffixes;
                 itemData = item;
                 break;
@@ -219,7 +221,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
                 Data.MaterialItems.Add(item);
                 break;
             case ItemMainTypeEnum.Equipment:
-                if (Data.RelicItems.Count + 1 > GameConstants.INVENTORY_MAX_EQUIPMENT)
+                if (Data.EquipmentItems.Count + 1 > GameConstants.INVENTORY_MAX_EQUIPMENT)
                 {
                     await Player.SendPacket(new PacketRetcodeNotify(Retcode.RetEquipmentExceedLimit));
                     return item;
@@ -458,43 +460,20 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
                     items.Add(new ItemData
                     {
                         ItemId = item.ItemID,
-                        Count = amount
+                        Count = amount * (item.ItemID == 22
+                            ? 1
+                            : ConfigManager.Config.ServerOption.ValidFarmingDropRate())
                     });
                 }
             }
 
-            // randomize the order of the relics
-            var relics = mapping.DropRelicItemList.OrderBy(x => Random.Shared.Next()).ToList();
-
-            var relic5Count = Random.Shared.Next(worldLevel - 4, worldLevel - 2);
-            var relic4Count = worldLevel - 2;
-            foreach (var relic in relics)
-            {
-                var random = Random.Shared.Next(0, 101);
-
-                if (random <= relic.Chance)
-                {
-                    var amount = relic.ItemNum > 0
-                        ? relic.ItemNum
-                        : Random.Shared.Next(relic.MinCount, relic.MaxCount + 1);
-
-                    GameData.ItemConfigData.TryGetValue(relic.ItemID, out var itemData);
-                    if (itemData == null) continue;
-
-                    if (itemData.Rarity == ItemRarityEnum.SuperRare && relic5Count > 0)
-                        relic5Count--;
-                    else if (itemData.Rarity == ItemRarityEnum.VeryRare && relic4Count > 0)
-                        relic4Count--;
-                    else
-                        continue;
-
-                    items.Add(new ItemData
-                    {
-                        ItemId = relic.ItemID,
-                        Count = 1
-                    });
-                }
-            }
+            // Generate relics
+            var relicDrops = mapping.GenerateRelicDrops();
+            
+            // Let AddItem notify relics count exceeding limit 
+            items.AddRange(Data.RelicItems.Count + relicDrops.Count - 1 > GameConstants.INVENTORY_MAX_RELIC
+                ? relicDrops[..(GameConstants.INVENTORY_MAX_RELIC - Data.RelicItems.Count + 1)]
+                : relicDrops);
 
             foreach (var item in items)
             {
@@ -620,42 +599,73 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
 
         await RemoveItem(2, (int)(composeConfig.CoinCost * req.Count));
 
+        var relicId = (int)req.ComposeRelicId;
+        GameData.RelicConfigData.TryGetValue(relicId, out var itemConfig);
+        GameData.RelicSubAffixData.TryGetValue(itemConfig!.SubAffixGroup, out var subAffixConfig);
+        
         // Add relic
-        var subAffixes = req.SubAffixIdList.Select(subId => ((int)subId, 1)).ToList();
+        var mainAffix = (int)req.MainAffixId;
+        var itemData = new ItemData
+        {
+            ItemId = relicId,
+            Level = 0,
+            UniqueId = ++Data.NextUniqueId,
+            MainAffix = mainAffix,
+            SubAffixes = req.SubAffixIdList.Select(subId => new ItemSubAffix(subAffixConfig![(int)subId], 1)).ToList(),
+            Count = 1
+        };
+        if (mainAffix == 0) itemData.AddRandomRelicMainAffix();
+        itemData.AddRandomRelicSubAffix(3 - itemData.SubAffixes.Count + itemData.LuckyRelicSubAffixCount());
+        await AddItem(itemData, notify: false);
 
-        var (_, relic) = await HandleRelic(
-            (int)req.ComposeRelicId, ++Data.NextUniqueId, 0, (int)req.MainAffixId, subAffixes);
-
-        return relic;
+        return itemData;
     }
 
     public async ValueTask ReforgeRelic(int uniqueId)
     {
-        var relic = Data.RelicItems.FirstOrDefault(x => x.UniqueId == uniqueId);
-        await RemoveItem(relic!.ItemId, 1, uniqueId, false);
+        var relic = Data.RelicItems.First(x => x.UniqueId == uniqueId);
 
         var totalCount = 0;
         var subAffixes = new List<(int, int)>();
         foreach (var sub in relic.SubAffixes)
         {
-            totalCount += sub.Count;
-            subAffixes.Add((sub.Id, 0));
+            totalCount = totalCount + sub.Count - 1;
+            subAffixes.Add((sub.Id, 1));
         }
 
-        var remainCount = totalCount;
-        for (var i = 0; i < subAffixes.Count - 1; i++)
+        while (totalCount > 0)
         {
-            var count = new Random().Next(1, remainCount - (subAffixes.Count - i - 1));
-            subAffixes[i] = (subAffixes[i].Item1, count);
-            remainCount -= count;
+            var idx = Random.Shared.Next(subAffixes.Count);
+            var cur = subAffixes[idx];
+            subAffixes[idx] = (cur.Item1, cur.Item2 + 1);
+            totalCount--;
         }
-        subAffixes[^1] = (subAffixes[^1].Item1, remainCount);
 
-        await HandleRelic(relic.ItemId, uniqueId, relic.Level, relic.MainAffix, subAffixes);
+        GameData.RelicConfigData.TryGetValue(relic.ItemId, out var itemConfig);
+        GameData.RelicSubAffixData.TryGetValue(itemConfig!.SubAffixGroup, out var subAffixConfig);
+        
+        for (var i = 0; i < subAffixes.Count; i++)
+        {
+            var (subId, subLevel) = subAffixes[i];
+            subAffixConfig!.TryGetValue(subId, out var subAffix);
+            var aff = new ItemSubAffix(subAffix!, subLevel);
+            relic.SubAffixes[i] = aff;
+        }
+
+        if (relic.EquipAvatar > 0)
+        {
+            var avatar = Player.AvatarManager!.GetAvatar(relic.EquipAvatar);
+            await Player.SendPacket(new PacketPlayerSyncScNotify(avatar!, relic));
+        }
+        else
+        {
+            await Player.SendPacket(new PacketPlayerSyncScNotify(relic));
+        }
+
         await RemoveItem(238, 1);
     }
 
-    public async ValueTask<List<ItemData>> SellItem(ItemCostData costData)
+    public async ValueTask<List<ItemData>> SellItem(ItemCostData costData, bool toMaterial = false)
     {
         List<ItemData> items = [];
         Dictionary<int, int> itemMap = [];
@@ -682,10 +692,46 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
                 removeItems.Add((itemData.ItemId, 1, (int)cost.RelicUniqueId));
                 GameData.ItemConfigData.TryGetValue(itemData.ItemId, out var itemConfig);
                 if (itemConfig == null) continue;
-                foreach (var returnItem in itemConfig.ReturnItemIDList) // return items
+                if (itemConfig.Rarity != ItemRarityEnum.SuperRare || toMaterial)
                 {
-                    if (!itemMap.ContainsKey(returnItem.ItemID)) itemMap[returnItem.ItemID] = 0;
-                    itemMap[returnItem.ItemID] += returnItem.ItemNum;
+                    foreach (var returnItem in itemConfig.ReturnItemIDList) // basic return items
+                    {
+                        itemMap.TryAdd(returnItem.ItemID, 0);
+                        itemMap[returnItem.ItemID] += returnItem.ItemNum;
+                    }
+
+                    var expReturned = (int)(itemData.CalcTotalExpGained() * 0.8);
+
+                    var credit = (int)(expReturned * 1.5);
+                    if (credit > 0)
+                    {
+                        itemMap.TryAdd(2, 0);
+                        itemMap[2] += (int)(expReturned * 1.5);
+                    }
+
+                    var lostGoldFragCnt = expReturned / 500;
+                    if (lostGoldFragCnt > 0)
+                    {
+                        itemMap.TryAdd(232, 0);
+                        itemMap[232] += lostGoldFragCnt;
+                    }
+
+                    var lostGoldLightdust = expReturned % 500 / 100;
+                    if (lostGoldLightdust > 0)
+                    {
+                        itemMap.TryAdd(231, 0);
+                        itemMap[231] += lostGoldLightdust;
+                    }
+                }
+                else
+                {
+                    var expGained = itemData.CalcTotalExpGained();
+                    var remainsCnt = (int)(10 + expGained * 0.005144);
+                    if (remainsCnt > 0)
+                    {
+                        itemMap.TryAdd(235, 0);
+                        itemMap[235] += remainsCnt;
+                    }
                 }
             }
             else
@@ -1293,5 +1339,81 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         await Player.SendPacket(new PacketPlayerSyncScNotify(itemData));
     }
 
+    #endregion
+    
+    #region Mark
+    public async ValueTask<bool> LockItems(RepeatedField<uint> ids, bool isLocked, ItemMainTypeEnum itemType = ItemMainTypeEnum.Unknown)
+    {
+        List<ItemData> targetItems;
+        switch (itemType)
+        {
+            case ItemMainTypeEnum.Equipment:
+                targetItems = Data.EquipmentItems;
+                break;
+            case ItemMainTypeEnum.Relic:
+                targetItems = Data.RelicItems;
+                break;
+            case ItemMainTypeEnum.Unknown:
+            case ItemMainTypeEnum.Virtual:
+            case ItemMainTypeEnum.AvatarCard:
+            case ItemMainTypeEnum.Usable:
+            case ItemMainTypeEnum.Material:
+            case ItemMainTypeEnum.Mission:
+            case ItemMainTypeEnum.Display:
+            case ItemMainTypeEnum.Pet:
+            default:
+                return false;
+        }
+        if (targetItems.Count == 0) return false;
+        var idPool = ids.ToList().ConvertAll(x => (int)x).ToFrozenSet();
+        var items = new List<ItemData>();
+        foreach (var x in targetItems)
+        {
+            if (x.Discarded || !idPool.Contains(x.UniqueId)) continue;
+            x.Locked = isLocked;
+            items.Add(x);
+        }
+
+        if (items.Count <= 0) return false;
+        await player.SendPacket(new PacketPlayerSyncScNotify(items));
+        return true;
+    }
+
+    public async ValueTask<bool> DiscardItems(RepeatedField<uint> ids, bool discarded, ItemMainTypeEnum itemType = ItemMainTypeEnum.Unknown)
+    {
+        List<ItemData> targetItems;
+        switch (itemType)
+        {
+            case ItemMainTypeEnum.Equipment:
+                targetItems = Data.EquipmentItems;
+                break;
+            case ItemMainTypeEnum.Relic:
+                targetItems = Data.RelicItems;
+                break;
+            case ItemMainTypeEnum.Unknown:
+            case ItemMainTypeEnum.Virtual:
+            case ItemMainTypeEnum.AvatarCard:
+            case ItemMainTypeEnum.Usable:
+            case ItemMainTypeEnum.Material:
+            case ItemMainTypeEnum.Mission:
+            case ItemMainTypeEnum.Display:
+            case ItemMainTypeEnum.Pet:
+            default:
+                return false;
+        }
+        if (targetItems.Count == 0) return false;
+        var idPool = ids.ToList().ConvertAll(x => (int)x).ToFrozenSet();
+        var items = new List<ItemData>();
+        foreach (var x in targetItems)
+        {
+            if (x.Locked || !idPool.Contains(x.UniqueId)) continue;
+            x.Discarded = discarded;
+            items.Add(x);
+        }
+        
+        if (items.Count <= 0) return false;
+        await player.SendPacket(new PacketPlayerSyncScNotify(items));
+        return true;
+    }
     #endregion
 }

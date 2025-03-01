@@ -10,7 +10,7 @@ public static class UtilTools
         GameData.RelicMainAffixData.TryGetValue(groupId, out var affixes);
         if (affixes == null) return 0;
         List<int> affixList = [];
-        affixList.AddRange(from affix in affixes.Values where affix.IsAvailable select affix.AffixID);
+        affixList.AddRange(from affix in affixes.Values select affix.AffixID);
         return affixList.Count == 0 ? 0 : affixList.RandomElement();
     }
 

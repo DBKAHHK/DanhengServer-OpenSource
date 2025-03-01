@@ -15,7 +15,7 @@ public class CommandRelic : ICommand
             return;
         }
 
-        if (arg.BasicArgs.Count < 3)
+        if (arg.BasicArgs.Count < 2)
         {
             await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.InvalidArguments"));
             return;

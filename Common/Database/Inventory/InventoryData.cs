@@ -1,5 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Excel;
+using EggLink.DanhengServer.Enums.Item;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 using SqlSugar;
@@ -60,15 +61,22 @@ public class ItemData
 
     public void AddRandomRelicSubAffix(int count = 1)
     {
+        // Avoid illegal count of relic sub affixes
+        if (count is < 1 or > 4 || SubAffixes.Count >= 4) return;
         GameData.RelicConfigData.TryGetValue(ItemId, out var config);
         if (config == null) return;
         GameData.RelicSubAffixData.TryGetValue(config.SubAffixGroup, out var affixes);
 
         if (affixes == null) return;
 
+        // Avoid same property on both main affix and sub affixes
+        GameData.RelicMainAffixData.TryGetValue(config.MainAffixGroup, out var mainAffixes);
+        if (mainAffixes == null) return;
+        var mainProperty = mainAffixes[MainAffix].Property;
+
         var rollPool = new List<RelicSubAffixConfigExcel>();
         foreach (var affix in affixes.Values)
-            if (SubAffixes.Find(x => x.Id == affix.AffixID) == null)
+            if (affix.Property != mainProperty & SubAffixes.Find(x => x.Id == affix.AffixID) == null)
                 rollPool.Add(affix);
 
         for (var i = 0; i < count; i++)
@@ -77,10 +85,67 @@ public class ItemData
             ItemSubAffix subAffix = new(affixConfig, 1);
             SubAffixes.Add(subAffix);
             rollPool.Remove(affixConfig);
+            if (SubAffixes.Count >= 4) break;
         }
     }
 
+    /**
+     * Init relic sub affixes based on rarity
+     * 20% chance to get one more affix
+     * r3 1-2
+     * r4 2-3
+     * r5 3-4
+     */
+    public void InitRandomRelicSubAffixesByRarity(ItemRarityEnum rarity = ItemRarityEnum.Unknown)
+    {
+        if (rarity == ItemRarityEnum.Unknown)
+        {
+            GameData.ItemConfigData.TryGetValue(ItemId, out var config);
+            if (config == null) return;
+            rarity = config.Rarity;
+        }
+
+        int initSubAffixesCount;
+        switch (rarity)
+        {
+            case ItemRarityEnum.Rare:
+                initSubAffixesCount = 1 + LuckyRelicSubAffixCount();
+                break;
+            case ItemRarityEnum.VeryRare:
+                initSubAffixesCount = 2 + LuckyRelicSubAffixCount();
+                break;
+            case ItemRarityEnum.SuperRare:
+                initSubAffixesCount = 3 + LuckyRelicSubAffixCount();
+                break;
+            default:
+                return;
+        }
+
+        AddRandomRelicSubAffix(initSubAffixesCount);
+    }
+    
+    public int LuckyRelicSubAffixCount()
+    {
+        return Random.Shared.Next(100) < 20 ? 1 : 0;
+    }
+
     #endregion
+
+    public int CalcTotalExpGained()
+    {
+        if (Level <= 0) return Exp;
+        GameData.RelicConfigData.TryGetValue(ItemId, out var costExcel);
+        if (costExcel == null) return 0;
+        var exp = 0;
+        for (var i = 0; i < Level; i++)
+        {
+            GameData.RelicExpTypeData.TryGetValue(costExcel.ExpType * 100 + i, out var typeExcel);
+            if (typeExcel != null)
+                exp += typeExcel.Exp;
+        }
+
+        return exp + Exp;
+    }
 
     #region Serialization
 

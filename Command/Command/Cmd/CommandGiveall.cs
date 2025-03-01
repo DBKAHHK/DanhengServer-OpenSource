@@ -23,7 +23,7 @@ public class CommandGiveall : ICommand
 
         arg.CharacterArgs.TryGetValue("r", out var rankStr);
         arg.CharacterArgs.TryGetValue("l", out var levelStr);
-        rankStr ??= "1";
+        rankStr ??= "0";
         levelStr ??= "1";
         if (!int.TryParse(rankStr, out var rank) || !int.TryParse(levelStr, out var level))
         {

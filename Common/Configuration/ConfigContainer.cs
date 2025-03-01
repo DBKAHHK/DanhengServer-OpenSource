@@ -85,6 +85,12 @@ public class ServerOption
     public ServerProfile ServerProfile { get; set; } = new();
     public bool AutoCreateUser { get; set; } = true;
     public bool SavePersonalDebugFile { get; set; } = false;
+    public int FarmingDropRate { get; set; } = 1;
+
+    public int ValidFarmingDropRate()
+    {
+        return Math.Max(Math.Min(FarmingDropRate, 999), 1);
+    }
 }
 
 public class ServerAnnounce
