@@ -1,4 +1,7 @@
-﻿using EggLink.DanhengServer.Enums.Item;
+﻿using EggLink.DanhengServer.Database.Inventory;
+using EggLink.DanhengServer.Enums.Item;
+using EggLink.DanhengServer.Util;
+using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
@@ -182,6 +185,129 @@ public class MappingInfoExcel : ExcelResource
                     }
                 }
         }
+    }
+
+    public List<ItemData> GenerateRelicDrops()
+    {
+        var relicsMap = new Dictionary<int, List<MappingInfoItem>>();
+        foreach (var relic in DropRelicItemList)
+        {
+            GameData.ItemConfigData.TryGetValue(relic.ItemID, out var itemData);
+            if (itemData == null) continue;
+            switch (itemData.Rarity)
+            {
+                case ItemRarityEnum.NotNormal:
+                    AddRelicToMap(relic, 2, relicsMap);
+                    break;
+                case ItemRarityEnum.Rare:
+                    AddRelicToMap(relic, 3, relicsMap);
+                    break;
+                case ItemRarityEnum.VeryRare:
+                    AddRelicToMap(relic, 4, relicsMap);
+                    break;
+                case ItemRarityEnum.SuperRare:
+                    AddRelicToMap(relic, 5, relicsMap);
+                    break;
+                default:
+                    continue;
+            }
+        }
+
+        List<ItemData> drops = [];
+        // Add higher rarity relics first
+        for (var rarity = 5; rarity >= 2; rarity--)
+        {
+            var count = GetRelicCountByWorldLevel(rarity) *
+                        ConfigManager.Config.ServerOption.ValidFarmingDropRate();
+            if (count <= 0) continue;
+            if (!relicsMap.TryGetValue(rarity, out var value)) continue;
+            if (value.IsNullOrEmpty()) continue;
+            while (count > 0)
+            {
+                var relic = value.RandomElement();
+                drops.Add(new ItemData
+                {
+                    ItemId = relic.ItemID,
+                    Count = 1
+                });
+                count--;
+            }
+        }
+
+        return drops;
+    }
+
+    private void AddRelicToMap(MappingInfoItem relic, int rarity, Dictionary<int, List<MappingInfoItem>> relicsMap)
+    {
+        if (relicsMap.TryGetValue(rarity, out var value))
+        {
+            value.Add(relic);
+        }
+        else
+        {
+            relicsMap.Add(rarity, [relic]);
+        }
+    }
+    
+    private int GetRelicCountByWorldLevel(int rarity)
+    {
+        return WorldLevel switch
+        {
+            1 => rarity switch
+            {
+                2 => 6,
+                3 => 3,
+                4 => 1,
+                5 => 0,
+                _ => 0
+            },
+            2 => rarity switch
+            {
+                2 => 2,
+                3 => 4,
+                4 => 2 + LuckyRelicDropped(),
+                5 => 0,
+                _ => 0
+            },
+            3 => rarity switch
+            {
+                2 => 0,
+                3 => 4,
+                4 => 2,
+                5 => 1,
+                _ => 0
+            },
+            4 => rarity switch
+            {
+                2 => 0,
+                3 => 3,
+                4 => 2 + LuckyRelicDropped(),
+                5 => 1 + LuckyRelicDropped(),
+                _ => 0
+            },
+            5 => rarity switch
+            {
+                2 => 0,
+                3 => 1 + LuckyRelicDropped(),
+                4 => 3,
+                5 => 2,
+                _ => 0
+            },
+            6 => rarity switch
+            {
+                2 => 0,
+                3 => 0,
+                4 => 5,
+                5 => 2 + LuckyRelicDropped(),
+                _ => 0
+            },
+            _ => 0
+        };
+    }
+    
+    private int LuckyRelicDropped()
+    {
+        return Random.Shared.Next(100) < 25 ? 1 : 0;
     }
 }
 

@@ -1,4 +1,5 @@
 ﻿using EggLink.DanhengServer.Database.Inventory;
+using EggLink.DanhengServer.Util;
 using Newtonsoft.Json;
 
 namespace EggLink.DanhengServer.Data.Excel;
@@ -54,7 +55,7 @@ public class MonsterDropExcel : ExcelResource
             result.Add(new ItemData
             {
                 ItemId = item.ItemID,
-                Count = count
+                Count = count * ConfigManager.Config.ServerOption.ValidFarmingDropRate()
             });
         }
 

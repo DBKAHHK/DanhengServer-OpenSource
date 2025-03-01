@@ -10,7 +10,7 @@ public class HandlerDestroyItemCsReq : Handler
     {
         var req = DestroyItemCsReq.Parser.ParseFrom(data);
 
-        await connection.Player!.InventoryManager!.RemoveItem((int)req.ItemCount, (int)req.ItemCount);
+        await connection.Player!.InventoryManager!.RemoveItem((int)req.ItemId, (int)req.ItemCount);
         await connection.SendPacket(CmdIds.DestroyItemScRsp);
     }
 }
