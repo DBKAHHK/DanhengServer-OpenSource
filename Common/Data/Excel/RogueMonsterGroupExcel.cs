@@ -3,7 +3,7 @@
 [ResourceEntity("RogueMonsterGroup.json")]
 public class RogueMonsterGroupExcel : ExcelResource
 {
-    public Dictionary<string, int> RogueMonsterListAndWeight { get; set; } = [];
+    public Dictionary<string, double> RogueMonsterListAndWeight { get; set; } = [];
     public int RogueMonsterGroupID { get; set; }
     public int EliteGroup { get; set; }
 

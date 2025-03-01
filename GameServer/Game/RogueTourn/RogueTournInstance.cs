@@ -9,6 +9,7 @@ using EggLink.DanhengServer.GameServer.Game.Rogue.Buff;
 using EggLink.DanhengServer.GameServer.Game.Rogue.Event;
 using EggLink.DanhengServer.GameServer.Game.RogueTourn.Formula;
 using EggLink.DanhengServer.GameServer.Game.RogueTourn.Scene;
+using EggLink.DanhengServer.GameServer.Game.RogueTourn.Titan;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueCommon;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueTourn;
@@ -25,23 +26,27 @@ public class RogueTournInstance : BaseRogueInstance
     public RogueTournInstance(PlayerInstance player, int areaId) : base(player, RogueSubModeEnum.TournRogue, 0)
     {
         // generate levels
-        foreach (var index in Enumerable.Range(1, 3))
-        {
-            var levelInstance = new RogueTournLevelInstance(index);
-            Levels.Add(levelInstance.LayerId, levelInstance);
-        }
-
         AreaExcel = GameData.RogueTournAreaData.GetValueOrDefault(areaId) ??
                     throw new Exception("Invalid area id"); // wont be null because of validation in RogueTournManager
+
+        var index = 0;
+        foreach (var id in AreaExcel.LayerIDList)
+        {
+            var levelInstance = new RogueTournLevelInstance(++index, id);
+            Levels.Add(levelInstance.LayerId, levelInstance);
+        }
 
         foreach (var difficulty in AreaExcel.DifficultyIDList)
             if (GameData.RogueTournDifficultyData.TryGetValue(difficulty, out var diff))
                 DifficultyExcels.Add(diff);
 
-        CurLayerId = 1101;
+        CurLayerId = AreaExcel.LayerIDList.FirstOrDefault();
         EventManager = new RogueEventManager(player, this);
 
         BaseRerollCount = 0;
+        var t1 = RollTitanBless(1,true);
+        t1.AsTask().Wait();
+
         var t = RollFormula(1, [RogueFormulaCategoryEnum.Epic]);
         t.AsTask().Wait();
     }
@@ -55,6 +60,7 @@ public class RogueTournInstance : BaseRogueInstance
     public Dictionary<int, RogueTournLevelInstance> Levels { get; set; } = [];
     public List<RogueTournDifficultyExcel> DifficultyExcels { get; set; } = [];
     public int CurLayerId { get; set; }
+    public int TitanProgress { get; set; } = -1;
     public RogueTournAreaExcel AreaExcel { get; set; }
     public RogueTournLevelStatus LevelStatus { get; set; } = RogueTournLevelStatus.Processing;
 
@@ -118,6 +124,14 @@ public class RogueTournInstance : BaseRogueInstance
 
         // sync
         await Player.SendPacket(new PacketRogueTournLevelInfoUpdateScNotify(this, [CurLevel]));
+
+        TitanProgress++;
+        await Player.SendPacket(new PacketRogueTournTitanUpdateTitanBlessProgressScNotify(this));
+
+        if (TitanProgress >= 4)
+        {
+            await RollTitanBless(1, RogueTitanBlessInstance.EnhanceBlessList.Count / 3 >= RogueTitanBlessInstance.BlessTypeExcel.Count);
+        }
     }
 
 
@@ -132,6 +146,71 @@ public class RogueTournInstance : BaseRogueInstance
         await Player.EnterMissionScene(1034102, 0, 0, false);
 
         Player.RogueTournManager!.RogueTournInstance = null;
+    }
+
+    #endregion
+
+    #region Titan
+
+    public RogueTitanCategoryEnum TitanCategory { get; set; } = RogueTitanCategoryEnum.None;
+    public RogueTitanBlessInstance RogueTitanBlessInstance { get; set; } = new();
+
+    public async ValueTask RollTitanBless(int amount, bool selectType)
+    {
+        for (var i = 0; i < amount; i++)
+        {
+            var menu = new RogueTitanBlessSelectMenu(this);
+            menu.RollTitanBless(typeSelect:selectType);
+            var action = menu.GetActionInstance();
+            RogueActions.Add(action.QueuePosition, action);
+        }
+
+        await UpdateMenu();
+
+        TitanProgress = 0;
+        await Player.SendPacket(new PacketRogueTournTitanUpdateTitanBlessProgressScNotify(this));
+    }
+
+    public async ValueTask HandleTitanBlessSelect(int blessId, int location)
+    {
+        if (RogueActions.Count == 0) return;
+        var action = RogueActions.First().Value;
+        if (action.RogueTitanBlessSelectMenu != null)
+        {
+            var bless = action.RogueTitanBlessSelectMenu.Blesses.Find(x => x.TitanBlessID == blessId);
+            if (bless != null) // check if bless is in the list
+            {
+                if (!RogueTitanBlessInstance.BlessTypeExcel.Exists(x =>
+                        x.TitanBlessID == blessId)) // check if bless already exists
+                {
+                    if (action.RogueTitanBlessSelectMenu.TypeSelect)
+                    {
+                        RogueTitanBlessInstance.BlessTypeExcel.Add(bless);
+                        TitanCategory =
+                            GameData.RogueTournTitanTypeData.GetValueOrDefault(bless.TitanType)?.RogueTitanCategory ??
+                            RogueTitanCategoryEnum.Day;
+                    }
+                    else
+                    {
+                        RogueTitanBlessInstance.EnhanceBlessList.Add(bless);
+                    }
+
+                    await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode,
+                        bless.ToResultProto(RogueCommonActionResultSourceType.Select)));
+                }
+            }
+
+            RogueActions.Remove(action.QueuePosition);
+            if (action.RogueTitanBlessSelectMenu.TypeSelect)
+                await Player.SendPacket(
+                    new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, location, selectTitanBlessType: true));
+            else
+                await Player.SendPacket(
+                    new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, location,
+                        selectTitanBlessEnhance: true));
+        }
+
+        await UpdateMenu();
     }
 
     #endregion
@@ -317,6 +396,21 @@ public class RogueTournInstance : BaseRogueInstance
     {
         base.OnBattleStart(battle);
 
+        battle.MagicInfo = new BattleRogueMagicInfo
+        {
+            ModifierContent = new BattleRogueMagicModifierInfo
+            {
+                RogueMagicBattleConst = 3
+            },
+            DetailInfo = new BattleRogueMagicDetailInfo
+            {
+                ENNPJGLCBEM = new FKOCBOOCDNL
+                {
+                    POIIAIAKILF = (uint)TitanCategory
+                }
+            }
+        };
+
         if (DifficultyExcels.Count > 0)
         {
             var diff = DifficultyExcels.RandomElement();
@@ -332,6 +426,8 @@ public class RogueTournInstance : BaseRogueInstance
             {
                 WaveFlag = -1
             });
+
+        RogueTitanBlessInstance.OnBattleStart(battle);
     }
 
     public override async ValueTask OnBattleEnd(BattleInstance battle, PVEBattleResultCsReq req)

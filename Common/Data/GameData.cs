@@ -4,6 +4,7 @@ using EggLink.DanhengServer.Data.Config.Scene;
 using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Enums.Rogue;
+using EggLink.DanhengServer.Enums.TournRogue;
 
 namespace EggLink.DanhengServer.Data;
 
@@ -271,6 +272,10 @@ public static class GameData
     public static Dictionary<int, RogueTournWorkbenchExcel> RogueTournWorkbenchData { get; private set; } = [];
     public static Dictionary<int, RogueTournWorkbenchFuncExcel> RogueTournWorkbenchFuncData { get; private set; } = [];
     public static Dictionary<int, RogueTournFormulaExcel> RogueTournFormulaData { get; private set; } = [];
+    public static Dictionary<int, RogueTournTitanTalentExcel> RogueTournTitanTalentData { get; private set; } = [];
+    public static Dictionary<RogueTitanTypeEnum, RogueTournTitanTypeExcel> RogueTournTitanTypeData { get; private set; } =
+        [];
+    public static Dictionary<int, RogueTournTitanBlessExcel> RogueTournTitanBlessData { get; private set; } = [];
 
     public static Dictionary<int, RogueTournHexAvatarBaseTypeExcel> RogueTournHexAvatarBaseTypeData
     {

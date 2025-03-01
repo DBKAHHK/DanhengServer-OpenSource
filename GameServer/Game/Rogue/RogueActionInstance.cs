@@ -3,6 +3,7 @@ using EggLink.DanhengServer.GameServer.Game.Rogue.Miracle;
 using EggLink.DanhengServer.GameServer.Game.RogueMagic.MagicUnit;
 using EggLink.DanhengServer.GameServer.Game.RogueMagic.Scepter;
 using EggLink.DanhengServer.GameServer.Game.RogueTourn.Formula;
+using EggLink.DanhengServer.GameServer.Game.RogueTourn.Titan;
 using EggLink.DanhengServer.Proto;
 
 namespace EggLink.DanhengServer.GameServer.Game.Rogue;
@@ -16,6 +17,7 @@ public class RogueActionInstance
     public RogueFormulaSelectMenu? RogueFormulaSelectMenu { get; set; }
     public RogueMagicUnitSelectMenu? RogueMagicUnitSelectMenu { get; set; }
     public RogueScepterSelectMenu? RogueScepterSelectMenu { get; set; }
+    public RogueTitanBlessSelectMenu? RogueTitanBlessSelectMenu { get; set; }
 
     public bool IsReforge { get; set; }
 
@@ -45,6 +47,8 @@ public class RogueActionInstance
         if (RogueMagicUnitSelectMenu != null) action.MagicUnitSelectInfo = RogueMagicUnitSelectMenu.ToProto();
 
         if (RogueScepterSelectMenu != null) action.ScepterSelectInfo = RogueScepterSelectMenu.ToProto();
+
+        if (RogueTitanBlessSelectMenu != null) action.TitanBlessSelectInfo = RogueTitanBlessSelectMenu.ToProto();
 
         return new RogueCommonPendingAction
         {

@@ -6,8 +6,8 @@ public class RogueMapExcel : ExcelResource
     public int RogueMapID { get; set; }
     public int SiteID { get; set; }
     public bool IsStart { get; set; }
-    public int PosX { get; set; }
-    public int PosY { get; set; }
+    public double PosX { get; set; }
+    public double PosY { get; set; }
 
     public List<int> NextSiteIDList { get; set; } = [];
     public List<int> LevelList { get; set; } = [];

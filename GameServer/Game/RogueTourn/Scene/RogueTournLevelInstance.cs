@@ -7,10 +7,10 @@ namespace EggLink.DanhengServer.GameServer.Game.RogueTourn.Scene;
 
 public class RogueTournLevelInstance
 {
-    public RogueTournLevelInstance(int levelIndex)
+    public RogueTournLevelInstance(int levelIndex, int layerId)
     {
         LevelIndex = levelIndex;
-        LayerId = levelIndex * 100 + 1001; // temp
+        LayerId = layerId;
         EntranceId = GameData.RogueTournRoomGenData.Where(x => x.RoomType != RogueTournRoomTypeEnum.Adventure)
             .Select(x => x.EntranceId).ToHashSet().ToList()
             .RandomElement();

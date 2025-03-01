@@ -128,7 +128,7 @@ public class RogueMagicEntityLoader(SceneInstance scene, PlayerInstance player) 
             {
                 var dict = GameData.RogueMonsterGroupData[FinalRoomBossGroup].RogueMonsterListAndWeight;
                 var random = new RandomList<int>();
-                foreach (var i in dict) random.Add(int.Parse(i.Key), i.Value);
+                foreach (var i in dict) random.Add(int.Parse(i.Key), (int)i.Value);
 
                 rogueMonster = GameData.RogueMonsterData[random.GetRandom()];
             }
@@ -136,7 +136,7 @@ public class RogueMagicEntityLoader(SceneInstance scene, PlayerInstance player) 
             {
                 var dict = GameData.RogueMonsterGroupData[LayerNormalBossGroup2].RogueMonsterListAndWeight;
                 var random = new RandomList<int>();
-                foreach (var i in dict) random.Add(int.Parse(i.Key), i.Value);
+                foreach (var i in dict) random.Add(int.Parse(i.Key), (int)i.Value);
 
                 rogueMonster = GameData.RogueMonsterData[random.GetRandom()];
             }
@@ -144,7 +144,7 @@ public class RogueMagicEntityLoader(SceneInstance scene, PlayerInstance player) 
             {
                 var dict = GameData.RogueMonsterGroupData[LayerNormalBossGroup1].RogueMonsterListAndWeight;
                 var random = new RandomList<int>();
-                foreach (var i in dict) random.Add(int.Parse(i.Key), i.Value);
+                foreach (var i in dict) random.Add(int.Parse(i.Key), (int)i.Value);
 
                 rogueMonster = GameData.RogueMonsterData[random.GetRandom()];
             }

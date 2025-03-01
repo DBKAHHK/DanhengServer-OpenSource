@@ -58,10 +58,30 @@ public class RogueTournManager(PlayerInstance player) : BasePlayerManager(player
             RogueTournSaveList =
             {
                 Capacity = 0
-            }
+            },
+            SeasonTalentInfo = ToSeasonTalentProto(),
+            LKCEFCLJCBM = new KCLCHJMNPGL()
         };
 
         return proto;
+    }
+
+    public RogueTournSeasonTalent ToSeasonTalentProto()
+    {
+        return new RogueTournSeasonTalent
+        {
+            TalentInfoList = new RogueTalentInfoList
+            {
+                TalentInfo =
+                {
+                    GameData.RogueTournTitanTalentData.Values.Select(x => new RogueTalentInfo
+                    {
+                        TalentId = (uint)x.ID,
+                        Status = RogueTalentStatus.Enable
+                    })
+                }
+            }
+        };
     }
 
     public ExtraScoreInfo ToExtraScoreProto()
@@ -103,7 +123,8 @@ public class RogueTournManager(PlayerInstance player) : BasePlayerManager(player
     public List<RogueTournAreaInfo> ToAreaProtoList()
     {
         return (from areaExcel in GameData.RogueTournAreaData
-                where areaExcel.Value.AreaGroupID != RogueTournAreaGroupIDEnum.WeekChallenge
+                where areaExcel.Value.AreaGroupID != RogueTournAreaGroupIDEnum.WeekChallenge &&
+                      areaExcel.Value.TournMode != RogueTournModeEnum.Tourn1
                 select new RogueTournAreaInfo
                 {
                     AreaId = (uint)areaExcel.Value.AreaID, Completed = true, IsTakenReward = true, IsUnlocked = true
@@ -135,17 +156,19 @@ public class RogueTournManager(PlayerInstance player) : BasePlayerManager(player
             RogueTournHandbookSeasonId = GameConstants.CURRENT_ROGUE_TOURN_SEASON
         };
 
-        //foreach (var hexAvatar in GameData.RogueTournHexAvatarBaseTypeData.Keys)
-        //    proto.HandbookAvatarBaseList.Add((uint)hexAvatar);
+        foreach (var hexAvatar in GameData.RogueTournHexAvatarBaseTypeData.Keys)
+            proto.HandbookHexAvatarList.Add((uint)hexAvatar);
 
-        //foreach (var buff in GameData.RogueBuffData.Values)
-        //    if (buff is RogueTournBuffExcel { IsInHandbook: true })
-        //        proto.HandbookBuffList.Add((uint)buff.MazeBuffID);
+        foreach (var buff in GameData.RogueBuffData.Values)
+            if (buff is RogueTournBuffExcel { IsInHandbook: true })
+                proto.HandbookBuffList.Add((uint)buff.MazeBuffID);
 
-        //foreach (var formulaId in GameData.RogueTournFormulaData.Keys) proto.HandbookFormulaList.Add((uint)formulaId);
+        foreach (var formulaId in GameData.RogueTournFormulaData.Keys) proto.HandbookFormulaList.Add((uint)formulaId);
 
-        //foreach (var miracleId in GameData.RogueTournHandbookMiracleData.Keys)
-        //    proto.HandbookMiracleList.Add((uint)miracleId);
+        foreach (var miracleId in GameData.RogueTournHandbookMiracleData.Keys)
+            proto.HandbookMiracleList.Add((uint)miracleId);
+
+        foreach (var blessId in GameData.RogueTournTitanBlessData.Keys) proto.HandbookTitanBlessList.Add((uint)blessId);
 
         //foreach (var eventId in GameData.RogueTournHandBookEventData.Keys) proto.HandbookEventList.Add((uint)eventId);
 
