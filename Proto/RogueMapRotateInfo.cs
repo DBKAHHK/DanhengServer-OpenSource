@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static RogueMapRotateInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhSb2d1ZU1hcFJvdGF0ZUluZm8ucHJvdG8aEVJvdGF0ZXJEYXRhLnByb3Rv",
+            "ChhSb2d1ZU1hcFJvdGF0ZUluZm8ucHJvdG8aEUNoYXJnZXJJbmZvLnByb3Rv",
             "GhdSb3RhdGVyRW5lcmd5SW5mby5wcm90bxoRSUNJTUFLQkFKR0IucHJvdG8a",
-            "EUNoYXJnZXJJbmZvLnByb3RvIugBChJSb2d1ZU1hcFJvdGF0ZUluZm8SIgoM",
+            "EVJvdGF0ZXJEYXRhLnByb3RvIugBChJSb2d1ZU1hcFJvdGF0ZUluZm8SIgoM",
             "Y2hhcmdlcl9pbmZvGAcgAygLMgwuQ2hhcmdlckluZm8SEQoJaXNfcm90YXRl",
             "GAYgASgIEicKEXJvdGF0ZXJfZGF0YV9saXN0GAggAygLMgwuUm90YXRlckRh",
             "dGESJwoLZW5lcmd5X2luZm8YCSABKAsyEi5Sb3RhdGVyRW5lcmd5SW5mbxIT",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "b2d1ZV9tYXAYCyABKAsyDC5JQ0lNQUtCQUpHQkIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ICIMAKBAJGBReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ICIMAKBAJGBReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMapRotateInfo), global::EggLink.DanhengServer.Proto.RogueMapRotateInfo.Parser, new[]{ "ChargerInfo", "IsRotate", "RotaterDataList", "EnergyInfo", "NFLBONDJAIE", "ACNPBBNLMIE", "RogueMap" }, null, null, null, null)
           }));

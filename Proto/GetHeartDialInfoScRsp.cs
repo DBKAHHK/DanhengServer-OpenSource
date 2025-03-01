@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtHZXRIZWFydERpYWxJbmZvU2NSc3AucHJvdG8aEU1NRUlORk1ESkZHLnBy",
-            "b3RvGhtIZWFydERpYWxVbmxvY2tTdGF0dXMucHJvdG8aGUhlYXJ0RGlhbFNj",
-            "cmlwdEluZm8ucHJvdG8aG0hlYXJ0RGlhbERpYWxvZ3VlSW5mby5wcm90byLe",
+            "b3RvGhtIZWFydERpYWxEaWFsb2d1ZUluZm8ucHJvdG8aG0hlYXJ0RGlhbFVu",
+            "bG9ja1N0YXR1cy5wcm90bxoZSGVhcnREaWFsU2NyaXB0SW5mby5wcm90byLe",
             "AQoVR2V0SGVhcnREaWFsSW5mb1NjUnNwEi4KEHNjcmlwdF9pbmZvX2xpc3QY",
             "DiADKAsyFC5IZWFydERpYWxTY3JpcHRJbmZvEg8KB3JldGNvZGUYCyABKA0S",
             "IQoLT0NNT0VKSURMQU0YBSADKAsyDC5NTUVJTkZNREpGRxItCg11bmxvY2tf",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "Z3VlX2luZm9fbGlzdBgPIAMoCzIWLkhlYXJ0RGlhbERpYWxvZ3VlSW5mb0Ie",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MMEINFMDJFGReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialUnlockStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialScriptInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialDialogueInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MMEINFMDJFGReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialDialogueInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialUnlockStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialScriptInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetHeartDialInfoScRsp), global::EggLink.DanhengServer.Proto.GetHeartDialInfoScRsp.Parser, new[]{ "ScriptInfoList", "Retcode", "OCMOEJIDLAM", "UnlockStatus", "DialogueInfoList" }, null, null, null, null)
           }));

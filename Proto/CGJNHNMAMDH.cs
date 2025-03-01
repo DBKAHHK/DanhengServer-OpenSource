@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static CGJNHNMAMDHReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFDR0pOSE5NQU1ESC5wcm90byJMCgtDR0pOSE5NQU1ESBITCgtLREFPSU1Q",
-            "UFBLSRgHIAMoDRITCgtMREZHSUZERlBDRhgFIAEoDRITCgtKTUNFTUJFSENP",
-            "ShgDIAEoBUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
-            "bzM="));
+            "ChFDR0pOSE5NQU1ESC5wcm90byJVCgtDR0pOSE5NQU1ESBITCgtLREFPSU1Q",
+            "UFBLSRgHIAMoDRIcChR0aXRhbl9ibGVzc19wcm9ncmVzcxgFIAEoDRITCgtK",
+            "TUNFTUJFSENPShgDIAEoBUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CGJNHNMAMDH), global::EggLink.DanhengServer.Proto.CGJNHNMAMDH.Parser, new[]{ "KDAOIMPPPKI", "LDFGIFDFPCF", "JMCEMBEHCOJ" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CGJNHNMAMDH), global::EggLink.DanhengServer.Proto.CGJNHNMAMDH.Parser, new[]{ "KDAOIMPPPKI", "TitanBlessProgress", "JMCEMBEHCOJ" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CGJNHNMAMDH(CGJNHNMAMDH other) : this() {
       kDAOIMPPPKI_ = other.kDAOIMPPPKI_.Clone();
-      lDFGIFDFPCF_ = other.lDFGIFDFPCF_;
+      titanBlessProgress_ = other.titanBlessProgress_;
       jMCEMBEHCOJ_ = other.jMCEMBEHCOJ_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return kDAOIMPPPKI_; }
     }
 
-    /// <summary>Field number for the "LDFGIFDFPCF" field.</summary>
-    public const int LDFGIFDFPCFFieldNumber = 5;
-    private uint lDFGIFDFPCF_;
+    /// <summary>Field number for the "titan_bless_progress" field.</summary>
+    public const int TitanBlessProgressFieldNumber = 5;
+    private uint titanBlessProgress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LDFGIFDFPCF {
-      get { return lDFGIFDFPCF_; }
+    public uint TitanBlessProgress {
+      get { return titanBlessProgress_; }
       set {
-        lDFGIFDFPCF_ = value;
+        titanBlessProgress_ = value;
       }
     }
 
@@ -136,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!kDAOIMPPPKI_.Equals(other.kDAOIMPPPKI_)) return false;
-      if (LDFGIFDFPCF != other.LDFGIFDFPCF) return false;
+      if (TitanBlessProgress != other.TitanBlessProgress) return false;
       if (JMCEMBEHCOJ != other.JMCEMBEHCOJ) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -146,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= kDAOIMPPPKI_.GetHashCode();
-      if (LDFGIFDFPCF != 0) hash ^= LDFGIFDFPCF.GetHashCode();
+      if (TitanBlessProgress != 0) hash ^= TitanBlessProgress.GetHashCode();
       if (JMCEMBEHCOJ != 0) hash ^= JMCEMBEHCOJ.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -170,9 +170,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(24);
         output.WriteInt32(JMCEMBEHCOJ);
       }
-      if (LDFGIFDFPCF != 0) {
+      if (TitanBlessProgress != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(LDFGIFDFPCF);
+        output.WriteUInt32(TitanBlessProgress);
       }
       kDAOIMPPPKI_.WriteTo(output, _repeated_kDAOIMPPPKI_codec);
       if (_unknownFields != null) {
@@ -189,9 +189,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(24);
         output.WriteInt32(JMCEMBEHCOJ);
       }
-      if (LDFGIFDFPCF != 0) {
+      if (TitanBlessProgress != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(LDFGIFDFPCF);
+        output.WriteUInt32(TitanBlessProgress);
       }
       kDAOIMPPPKI_.WriteTo(ref output, _repeated_kDAOIMPPPKI_codec);
       if (_unknownFields != null) {
@@ -205,8 +205,8 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += kDAOIMPPPKI_.CalculateSize(_repeated_kDAOIMPPPKI_codec);
-      if (LDFGIFDFPCF != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LDFGIFDFPCF);
+      if (TitanBlessProgress != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TitanBlessProgress);
       }
       if (JMCEMBEHCOJ != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(JMCEMBEHCOJ);
@@ -224,8 +224,8 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       kDAOIMPPPKI_.Add(other.kDAOIMPPPKI_);
-      if (other.LDFGIFDFPCF != 0) {
-        LDFGIFDFPCF = other.LDFGIFDFPCF;
+      if (other.TitanBlessProgress != 0) {
+        TitanBlessProgress = other.TitanBlessProgress;
       }
       if (other.JMCEMBEHCOJ != 0) {
         JMCEMBEHCOJ = other.JMCEMBEHCOJ;
@@ -250,7 +250,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            LDFGIFDFPCF = input.ReadUInt32();
+            TitanBlessProgress = input.ReadUInt32();
             break;
           }
           case 58:
@@ -278,7 +278,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            LDFGIFDFPCF = input.ReadUInt32();
+            TitanBlessProgress = input.ReadUInt32();
             break;
           }
           case 58:

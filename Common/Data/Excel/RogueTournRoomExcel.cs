@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.Enums.TournRogue;
+﻿using EggLink.DanhengServer.Enums.Rogue;
+using EggLink.DanhengServer.Enums.TournRogue;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
@@ -11,6 +12,14 @@ public class RogueTournRoomExcel : ExcelResource
 
     [JsonConverter(typeof(StringEnumConverter))]
     public RogueTournRoomTypeEnum RogueRoomType { get; set; }
+
+
+    [JsonConverter(typeof(StringEnumConverter))]
+    public RogueTournModeEnum RogueTournMode { get; set; }
+
+
+    [JsonConverter(typeof(StringEnumConverter))]
+    public RogueTournVariantTypeEnum VariantType { get; set; }
 
 
     public override int GetId()

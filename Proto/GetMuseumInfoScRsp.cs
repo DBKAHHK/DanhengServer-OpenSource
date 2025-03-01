@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhHZXRNdXNldW1JbmZvU2NSc3AucHJvdG8aEUpOQkNQTkNOT0hPLnByb3Rv",
-            "GhFKTUVBT0NQRkVPTC5wcm90bxoRRE9MR0ZOTEhFQUUucHJvdG8aEU9MS01M",
-            "RkVFRkNKLnByb3RvItwCChJHZXRNdXNldW1JbmZvU2NSc3ASIQoLSlBJQk1C",
+            "GhFPTEtNTEZFRUZDSi5wcm90bxoRRE9MR0ZOTEhFQUUucHJvdG8aEUpNRUFP",
+            "Q1BGRU9MLnByb3RvItwCChJHZXRNdXNldW1JbmZvU2NSc3ASIQoLSlBJQk1C",
             "QktHTkQYCSABKAsyDC5ET0xHRk5MSEVBRRINCgVsZXZlbBgNIAEoDRITCgtK",
             "QkpMRFBQREJCQxgBIAEoDRILCgNleHAYDyABKA0SIQoLRUtLT0xDQ0NOTksY",
             "CyABKAsyDC5KTkJDUE5DTk9ITxIhCgtCT0pNTkFGREpLSBgOIAMoCzIMLk9M",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "RkNDTBgFIAEoDRIPCgdyZXRjb2RlGAIgASgNEhMKC0VKS0dIQkVNT09CGAcg",
             "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JNBCPNCNOHOReflection.Descriptor, global::EggLink.DanhengServer.Proto.JMEAOCPFEOLReflection.Descriptor, global::EggLink.DanhengServer.Proto.DOLGFNLHEAEReflection.Descriptor, global::EggLink.DanhengServer.Proto.OLKMLFEEFCJReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JNBCPNCNOHOReflection.Descriptor, global::EggLink.DanhengServer.Proto.OLKMLFEEFCJReflection.Descriptor, global::EggLink.DanhengServer.Proto.DOLGFNLHEAEReflection.Descriptor, global::EggLink.DanhengServer.Proto.JMEAOCPFEOLReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMuseumInfoScRsp), global::EggLink.DanhengServer.Proto.GetMuseumInfoScRsp.Parser, new[]{ "JPIBMBBKGND", "Level", "JBJLDPPDBBC", "Exp", "EKKOLCCCNNK", "BOJMNAFDJKH", "HPNMPDOCJMA", "AreaList", "KNDJAPNPAPK", "KNDMDPEFADC", "CoinCost", "EJNKMKFFCCL", "Retcode", "EJKGHBEMOOB" }, null, null, null, null)
           }));

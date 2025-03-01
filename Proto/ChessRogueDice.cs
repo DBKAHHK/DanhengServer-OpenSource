@@ -90,9 +90,6 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Field number for the "surface_id" field.</summary>
     public const int SurfaceIdFieldNumber = 3;
     private uint surfaceId_;
-    /// <summary>
-    ///?
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint SurfaceId {
@@ -105,9 +102,6 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Field number for the "slot_id" field.</summary>
     public const int SlotIdFieldNumber = 4;
     private uint slotId_;
-    /// <summary>
-    ///?
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint SlotId {

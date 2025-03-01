@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhQcm9wQ2hlc3NSb2d1ZUluZm8ucHJvdG8iQgoSUHJvcENoZXNzUm9ndWVJ",
-            "bmZvEhcKD2VudGVyX25leHRfY2VsbBgDIAEoCBITCgtBS0NHSEJGR0JDQxgN",
+            "bmZvEhMKC0FMR0FGT01OSUlBGAMgASgIEhcKD2VudGVyX25leHRfY2VsbBgN",
             "IAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PropChessRogueInfo), global::EggLink.DanhengServer.Proto.PropChessRogueInfo.Parser, new[]{ "EnterNextCell", "AKCGHBFGBCC" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PropChessRogueInfo), global::EggLink.DanhengServer.Proto.PropChessRogueInfo.Parser, new[]{ "ALGAFOMNIIA", "EnterNextCell" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PropChessRogueInfo(PropChessRogueInfo other) : this() {
+      aLGAFOMNIIA_ = other.aLGAFOMNIIA_;
       enterNextCell_ = other.enterNextCell_;
-      aKCGHBFGBCC_ = other.aKCGHBFGBCC_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,30 +83,27 @@ namespace EggLink.DanhengServer.Proto {
       return new PropChessRogueInfo(this);
     }
 
+    /// <summary>Field number for the "ALGAFOMNIIA" field.</summary>
+    public const int ALGAFOMNIIAFieldNumber = 3;
+    private bool aLGAFOMNIIA_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ALGAFOMNIIA {
+      get { return aLGAFOMNIIA_; }
+      set {
+        aLGAFOMNIIA_ = value;
+      }
+    }
+
     /// <summary>Field number for the "enter_next_cell" field.</summary>
-    public const int EnterNextCellFieldNumber = 3;
+    public const int EnterNextCellFieldNumber = 13;
     private bool enterNextCell_;
-    /// <summary>
-    ///? ALGAFOMNIIA
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool EnterNextCell {
       get { return enterNextCell_; }
       set {
         enterNextCell_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "AKCGHBFGBCC" field.</summary>
-    public const int AKCGHBFGBCCFieldNumber = 13;
-    private bool aKCGHBFGBCC_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool AKCGHBFGBCC {
-      get { return aKCGHBFGBCC_; }
-      set {
-        aKCGHBFGBCC_ = value;
       }
     }
 
@@ -125,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (ALGAFOMNIIA != other.ALGAFOMNIIA) return false;
       if (EnterNextCell != other.EnterNextCell) return false;
-      if (AKCGHBFGBCC != other.AKCGHBFGBCC) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -134,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (ALGAFOMNIIA != false) hash ^= ALGAFOMNIIA.GetHashCode();
       if (EnterNextCell != false) hash ^= EnterNextCell.GetHashCode();
-      if (AKCGHBFGBCC != false) hash ^= AKCGHBFGBCC.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -154,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (EnterNextCell != false) {
+      if (ALGAFOMNIIA != false) {
         output.WriteRawTag(24);
-        output.WriteBool(EnterNextCell);
+        output.WriteBool(ALGAFOMNIIA);
       }
-      if (AKCGHBFGBCC != false) {
+      if (EnterNextCell != false) {
         output.WriteRawTag(104);
-        output.WriteBool(AKCGHBFGBCC);
+        output.WriteBool(EnterNextCell);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -172,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (EnterNextCell != false) {
+      if (ALGAFOMNIIA != false) {
         output.WriteRawTag(24);
-        output.WriteBool(EnterNextCell);
+        output.WriteBool(ALGAFOMNIIA);
       }
-      if (AKCGHBFGBCC != false) {
+      if (EnterNextCell != false) {
         output.WriteRawTag(104);
-        output.WriteBool(AKCGHBFGBCC);
+        output.WriteBool(EnterNextCell);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -190,10 +187,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (EnterNextCell != false) {
+      if (ALGAFOMNIIA != false) {
         size += 1 + 1;
       }
-      if (AKCGHBFGBCC != false) {
+      if (EnterNextCell != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -208,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.ALGAFOMNIIA != false) {
+        ALGAFOMNIIA = other.ALGAFOMNIIA;
+      }
       if (other.EnterNextCell != false) {
         EnterNextCell = other.EnterNextCell;
-      }
-      if (other.AKCGHBFGBCC != false) {
-        AKCGHBFGBCC = other.AKCGHBFGBCC;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -230,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 24: {
-            EnterNextCell = input.ReadBool();
+            ALGAFOMNIIA = input.ReadBool();
             break;
           }
           case 104: {
-            AKCGHBFGBCC = input.ReadBool();
+            EnterNextCell = input.ReadBool();
             break;
           }
         }
@@ -253,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 24: {
-            EnterNextCell = input.ReadBool();
+            ALGAFOMNIIA = input.ReadBool();
             break;
           }
           case 104: {
-            AKCGHBFGBCC = input.ReadBool();
+            EnterNextCell = input.ReadBool();
             break;
           }
         }

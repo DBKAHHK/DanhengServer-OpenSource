@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtSb2d1ZU1hZ2ljU2V0dGxlU2NSc3AucHJvdG8aGlJvZ3VlTWFnaWNGaW5p",
-            "c2hJbmZvLnByb3RvGhxSb2d1ZU1hZ2ljQ3VyU2NlbmVJbmZvLnByb3RvGg5J",
-            "dGVtTGlzdC5wcm90bxoRSENKR1BNREdCSk8ucHJvdG8i2gEKFVJvZ3VlTWFn",
+            "c2hJbmZvLnByb3RvGg5JdGVtTGlzdC5wcm90bxocUm9ndWVNYWdpY0N1clNj",
+            "ZW5lSW5mby5wcm90bxoRSENKR1BNREdCSk8ucHJvdG8i2gEKFVJvZ3VlTWFn",
             "aWNTZXR0bGVTY1JzcBI7Chpyb2d1ZV90b3Vybl9jdXJfc2NlbmVfaW5mbxgM",
             "IAEoCzIXLlJvZ3VlTWFnaWNDdXJTY2VuZUluZm8SHgoLR0ZPTkZEQkZCTkEY",
             "CSABKAsyCS5JdGVtTGlzdBIwChF0b3Vybl9maW5pc2hfaW5mbxgFIAEoCzIV",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "Rk9HTEtNQ0gYCCABKAsyDC5IQ0pHUE1ER0JKT0IeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicFinishInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicCurSceneInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.HCJGPMDGBJOReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicFinishInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicCurSceneInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HCJGPMDGBJOReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicSettleScRsp), global::EggLink.DanhengServer.Proto.RogueMagicSettleScRsp.Parser, new[]{ "RogueTournCurSceneInfo", "GFONFDBFBNA", "TournFinishInfo", "Retcode", "MGCFOGLKMCH" }, null, null, null, null)
           }));

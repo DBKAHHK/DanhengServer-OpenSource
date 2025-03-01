@@ -93,9 +93,6 @@ namespace EggLink.DanhengServer.Proto {
     private static readonly pb::FieldCodec<uint> _repeated_friendUidList_codec
         = pb::FieldCodec.ForUInt32(98);
     private readonly pbc::RepeatedField<uint> friendUidList_ = new pbc::RepeatedField<uint>();
-    /// <summary>
-    ///?
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<uint> FriendUidList {

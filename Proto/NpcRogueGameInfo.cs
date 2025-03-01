@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChZOcGNSb2d1ZUdhbWVJbmZvLnByb3RvGhtOcGNEaWFsb2d1ZUV2ZW50UGFy",
             "YW0ucHJvdG8i2wIKEE5wY1JvZ3VlR2FtZUluZm8SOQoZZGlhbG9ndWVfZXZl",
-            "bnRfcGFyYW1fbGlzdBgJIAMoCzIWLk5wY0RpYWxvZ3VlRXZlbnRQYXJhbRIX",
-            "Cg9maW5pc2hfZGlhbG9ndWUYBSABKAgSEwoLTE9NSUxPTUNBT00YAiABKAgS",
+            "bnRfcGFyYW1fbGlzdBgJIAMoCzIWLk5wY0RpYWxvZ3VlRXZlbnRQYXJhbRIT",
+            "CgtFQ0NER0xCS0VKRRgFIAEoCBIXCg9maW5pc2hfZGlhbG9ndWUYAiABKAgS",
             "FwoPZXZlbnRfdW5pcXVlX2lkGAggASgNEhMKC0tBUE1LSkdISUVJGAwgASgN",
             "EhQKDGFlb25fdGFsa19pZBgHIAEoDRIYChB0YWxrX2RpYWxvZ3VlX2lkGA4g",
             "ASgNEhMKC0pFTkZIT01CS0tFGA8gASgIEjcKC0tKQ0JORUlOREhMGAogAygL",
@@ -37,7 +37,7 @@ namespace EggLink.DanhengServer.Proto {
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NpcDialogueEventParamReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NpcRogueGameInfo), global::EggLink.DanhengServer.Proto.NpcRogueGameInfo.Parser, new[]{ "DialogueEventParamList", "FinishDialogue", "LOMILOMCAOM", "EventUniqueId", "KAPMKJGHIEI", "AeonTalkId", "TalkDialogueId", "JENFHOMBKKE", "KJCBNEINDHL" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NpcRogueGameInfo), global::EggLink.DanhengServer.Proto.NpcRogueGameInfo.Parser, new[]{ "DialogueEventParamList", "ECCDGLBKEJE", "FinishDialogue", "EventUniqueId", "KAPMKJGHIEI", "AeonTalkId", "TalkDialogueId", "JENFHOMBKKE", "KJCBNEINDHL" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -80,8 +80,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NpcRogueGameInfo(NpcRogueGameInfo other) : this() {
       dialogueEventParamList_ = other.dialogueEventParamList_.Clone();
+      eCCDGLBKEJE_ = other.eCCDGLBKEJE_;
       finishDialogue_ = other.finishDialogue_;
-      lOMILOMCAOM_ = other.lOMILOMCAOM_;
       eventUniqueId_ = other.eventUniqueId_;
       kAPMKJGHIEI_ = other.kAPMKJGHIEI_;
       aeonTalkId_ = other.aeonTalkId_;
@@ -108,30 +108,27 @@ namespace EggLink.DanhengServer.Proto {
       get { return dialogueEventParamList_; }
     }
 
+    /// <summary>Field number for the "ECCDGLBKEJE" field.</summary>
+    public const int ECCDGLBKEJEFieldNumber = 5;
+    private bool eCCDGLBKEJE_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ECCDGLBKEJE {
+      get { return eCCDGLBKEJE_; }
+      set {
+        eCCDGLBKEJE_ = value;
+      }
+    }
+
     /// <summary>Field number for the "finish_dialogue" field.</summary>
-    public const int FinishDialogueFieldNumber = 5;
+    public const int FinishDialogueFieldNumber = 2;
     private bool finishDialogue_;
-    /// <summary>
-    ///? ECCDGLBKEJE
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool FinishDialogue {
       get { return finishDialogue_; }
       set {
         finishDialogue_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "LOMILOMCAOM" field.</summary>
-    public const int LOMILOMCAOMFieldNumber = 2;
-    private bool lOMILOMCAOM_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool LOMILOMCAOM {
-      get { return lOMILOMCAOM_; }
-      set {
-        lOMILOMCAOM_ = value;
       }
     }
 
@@ -222,8 +219,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!dialogueEventParamList_.Equals(other.dialogueEventParamList_)) return false;
+      if (ECCDGLBKEJE != other.ECCDGLBKEJE) return false;
       if (FinishDialogue != other.FinishDialogue) return false;
-      if (LOMILOMCAOM != other.LOMILOMCAOM) return false;
       if (EventUniqueId != other.EventUniqueId) return false;
       if (KAPMKJGHIEI != other.KAPMKJGHIEI) return false;
       if (AeonTalkId != other.AeonTalkId) return false;
@@ -238,8 +235,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= dialogueEventParamList_.GetHashCode();
+      if (ECCDGLBKEJE != false) hash ^= ECCDGLBKEJE.GetHashCode();
       if (FinishDialogue != false) hash ^= FinishDialogue.GetHashCode();
-      if (LOMILOMCAOM != false) hash ^= LOMILOMCAOM.GetHashCode();
       if (EventUniqueId != 0) hash ^= EventUniqueId.GetHashCode();
       if (KAPMKJGHIEI != 0) hash ^= KAPMKJGHIEI.GetHashCode();
       if (AeonTalkId != 0) hash ^= AeonTalkId.GetHashCode();
@@ -264,13 +261,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (LOMILOMCAOM != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(LOMILOMCAOM);
-      }
       if (FinishDialogue != false) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(16);
         output.WriteBool(FinishDialogue);
+      }
+      if (ECCDGLBKEJE != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(ECCDGLBKEJE);
       }
       if (AeonTalkId != 0) {
         output.WriteRawTag(56);
@@ -304,13 +301,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (LOMILOMCAOM != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(LOMILOMCAOM);
-      }
       if (FinishDialogue != false) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(16);
         output.WriteBool(FinishDialogue);
+      }
+      if (ECCDGLBKEJE != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(ECCDGLBKEJE);
       }
       if (AeonTalkId != 0) {
         output.WriteRawTag(56);
@@ -345,10 +342,10 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += dialogueEventParamList_.CalculateSize(_repeated_dialogueEventParamList_codec);
-      if (FinishDialogue != false) {
+      if (ECCDGLBKEJE != false) {
         size += 1 + 1;
       }
-      if (LOMILOMCAOM != false) {
+      if (FinishDialogue != false) {
         size += 1 + 1;
       }
       if (EventUniqueId != 0) {
@@ -380,11 +377,11 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       dialogueEventParamList_.Add(other.dialogueEventParamList_);
+      if (other.ECCDGLBKEJE != false) {
+        ECCDGLBKEJE = other.ECCDGLBKEJE;
+      }
       if (other.FinishDialogue != false) {
         FinishDialogue = other.FinishDialogue;
-      }
-      if (other.LOMILOMCAOM != false) {
-        LOMILOMCAOM = other.LOMILOMCAOM;
       }
       if (other.EventUniqueId != 0) {
         EventUniqueId = other.EventUniqueId;
@@ -418,11 +415,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 16: {
-            LOMILOMCAOM = input.ReadBool();
+            FinishDialogue = input.ReadBool();
             break;
           }
           case 40: {
-            FinishDialogue = input.ReadBool();
+            ECCDGLBKEJE = input.ReadBool();
             break;
           }
           case 56: {
@@ -469,11 +466,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 16: {
-            LOMILOMCAOM = input.ReadBool();
+            FinishDialogue = input.ReadBool();
             break;
           }
           case 40: {
-            FinishDialogue = input.ReadBool();
+            ECCDGLBKEJE = input.ReadBool();
             break;
           }
           case 56: {

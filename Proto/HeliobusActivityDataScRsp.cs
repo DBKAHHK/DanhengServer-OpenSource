@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static HeliobusActivityDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9IZWxpb2J1c0FjdGl2aXR5RGF0YVNjUnNwLnByb3RvGhFERUpBS1BPRVBL",
-            "Ti5wcm90bxoRR0JKS0tGSFBGRk4ucHJvdG8aEUpNSUpKSEtJQkxCLnByb3Rv",
-            "Gh1IZWxpb2J1c0NoYWxsZW5nZUxpbmV1cC5wcm90byKjAgoZSGVsaW9idXNB",
+            "Ch9IZWxpb2J1c0FjdGl2aXR5RGF0YVNjUnNwLnByb3RvGh1IZWxpb2J1c0No",
+            "YWxsZW5nZUxpbmV1cC5wcm90bxoRR0JKS0tGSFBGRk4ucHJvdG8aEURFSkFL",
+            "UE9FUEtOLnByb3RvGhFKTUlKSkhLSUJMQi5wcm90byKjAgoZSGVsaW9idXNB",
             "Y3Rpdml0eURhdGFTY1JzcBINCgVsZXZlbBgBIAEoDRIgCgpza2lsbF9pbmZv",
             "GA0gASgLMgwuREVKQUtQT0VQS04SLQoLR0NMSkVOR0pJQ00YBCADKAsyGC5I",
             "ZWxpb2J1c0NoYWxsZW5nZUxpbmV1cBITCgtJUEhLREVMTU9JSBgPIAEoDRIT",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "Y29kZRgHIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DEJAKPOEPKNReflection.Descriptor, global::EggLink.DanhengServer.Proto.GBJKKFHPFFNReflection.Descriptor, global::EggLink.DanhengServer.Proto.JMIJJHKIBLBReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeliobusChallengeLineupReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeliobusChallengeLineupReflection.Descriptor, global::EggLink.DanhengServer.Proto.GBJKKFHPFFNReflection.Descriptor, global::EggLink.DanhengServer.Proto.DEJAKPOEPKNReflection.Descriptor, global::EggLink.DanhengServer.Proto.JMIJJHKIBLBReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeliobusActivityDataScRsp), global::EggLink.DanhengServer.Proto.HeliobusActivityDataScRsp.Parser, new[]{ "Level", "SkillInfo", "GCLJENGJICM", "IPHKDELMOIH", "EENJBPMNDOL", "ChallengeList", "NFDBMHPPFIP", "Phase", "IBHAAEJEEHC", "Retcode" }, null, null, null, null)
           }));

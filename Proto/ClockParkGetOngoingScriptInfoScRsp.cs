@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static ClockParkGetOngoingScriptInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CihDbG9ja1BhcmtHZXRPbmdvaW5nU2NyaXB0SW5mb1NjUnNwLnByb3RvGhFF",
-            "Q01JTEhDS09NTy5wcm90bxoRTEtCQktPSkREUEQucHJvdG8aEUJNTE9GUENO",
-            "R0tOLnByb3RvIsgCCiJDbG9ja1BhcmtHZXRPbmdvaW5nU2NyaXB0SW5mb1Nj",
+            "CihDbG9ja1BhcmtHZXRPbmdvaW5nU2NyaXB0SW5mb1NjUnNwLnByb3RvGhFM",
+            "S0JCS09KRERQRC5wcm90bxoRQk1MT0ZQQ05HS04ucHJvdG8aEUVDTUlMSENL",
+            "T01PLnByb3RvIsgCCiJDbG9ja1BhcmtHZXRPbmdvaW5nU2NyaXB0SW5mb1Nj",
             "UnNwEhMKC0NIT0JBT0dNTEZOGAYgASgNEhMKC0NNR0tFT0xDQklQGAogASgJ",
             "EhMKC09CUEZCTE5CRktJGAkgASgNEhMKC0FJR0VISE5IS1BNGAwgASgNEhEK",
             "CXNjcmlwdF9pZBgOIAEoDRIhCgtJRU5QSEVGQU5HTBgLIAEoCzIMLkxLQkJL",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "IAMoDRITCgtCTEhHQkVETkZJQhgEIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ECMILHCKOMOReflection.Descriptor, global::EggLink.DanhengServer.Proto.LKBBKOJDDPDReflection.Descriptor, global::EggLink.DanhengServer.Proto.BMLOFPCNGKNReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LKBBKOJDDPDReflection.Descriptor, global::EggLink.DanhengServer.Proto.BMLOFPCNGKNReflection.Descriptor, global::EggLink.DanhengServer.Proto.ECMILHCKOMOReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ClockParkGetOngoingScriptInfoScRsp), global::EggLink.DanhengServer.Proto.ClockParkGetOngoingScriptInfoScRsp.Parser, new[]{ "CHOBAOGMLFN", "CMGKEOLCBIP", "OBPFBLNBFKI", "AIGEHHNHKPM", "ScriptId", "IENPHEFANGL", "RogueBuffInfo", "Retcode", "KIEKJEFFPHK", "MJDOGPBOJIP", "EIDLLEOLFGM", "BLHGBEDNFIB" }, null, null, null, null)
           }));

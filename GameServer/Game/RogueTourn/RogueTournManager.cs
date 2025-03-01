@@ -5,6 +5,7 @@ using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Game.Rogue;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.Proto;
+using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Game.RogueTourn;
 
@@ -94,7 +95,7 @@ public class RogueTournManager(PlayerInstance player) : BasePlayerManager(player
     {
         return new RogueTournSeasonInfo
         {
-            SubTournId = 1,
+            SubTournId = GameConstants.CURRENT_ROGUE_TOURN_SEASON,
             MainTournId = 1
         };
     }
@@ -131,7 +132,7 @@ public class RogueTournManager(PlayerInstance player) : BasePlayerManager(player
     {
         var proto = new RogueTournHandbookInfo
         {
-            RogueTournHandbookConst = 1
+            RogueTournHandbookSeasonId = GameConstants.CURRENT_ROGUE_TOURN_SEASON
         };
 
         //foreach (var hexAvatar in GameData.RogueTournHexAvatarBaseTypeData.Keys)

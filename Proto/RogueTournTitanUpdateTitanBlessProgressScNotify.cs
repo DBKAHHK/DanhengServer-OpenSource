@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjVSb2d1ZVRvdXJuVGl0YW5VcGRhdGVUaXRhbkJsZXNzUHJvZ3Jlc3NTY05v",
-            "dGlmeS5wcm90byJGCi9Sb2d1ZVRvdXJuVGl0YW5VcGRhdGVUaXRhbkJsZXNz",
-            "UHJvZ3Jlc3NTY05vdGlmeRITCgtMREZHSUZERlBDRhgFIAEoDUIeqgIbRWdn",
-            "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "dGlmeS5wcm90byJPCi9Sb2d1ZVRvdXJuVGl0YW5VcGRhdGVUaXRhbkJsZXNz",
+            "UHJvZ3Jlc3NTY05vdGlmeRIcChR0aXRhbl9ibGVzc19wcm9ncmVzcxgFIAEo",
+            "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournTitanUpdateTitanBlessProgressScNotify), global::EggLink.DanhengServer.Proto.RogueTournTitanUpdateTitanBlessProgressScNotify.Parser, new[]{ "LDFGIFDFPCF" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournTitanUpdateTitanBlessProgressScNotify), global::EggLink.DanhengServer.Proto.RogueTournTitanUpdateTitanBlessProgressScNotify.Parser, new[]{ "TitanBlessProgress" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournTitanUpdateTitanBlessProgressScNotify(RogueTournTitanUpdateTitanBlessProgressScNotify other) : this() {
-      lDFGIFDFPCF_ = other.lDFGIFDFPCF_;
+      titanBlessProgress_ = other.titanBlessProgress_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournTitanUpdateTitanBlessProgressScNotify(this);
     }
 
-    /// <summary>Field number for the "LDFGIFDFPCF" field.</summary>
-    public const int LDFGIFDFPCFFieldNumber = 5;
-    private uint lDFGIFDFPCF_;
+    /// <summary>Field number for the "titan_bless_progress" field.</summary>
+    public const int TitanBlessProgressFieldNumber = 5;
+    private uint titanBlessProgress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LDFGIFDFPCF {
-      get { return lDFGIFDFPCF_; }
+    public uint TitanBlessProgress {
+      get { return titanBlessProgress_; }
       set {
-        lDFGIFDFPCF_ = value;
+        titanBlessProgress_ = value;
       }
     }
 
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (LDFGIFDFPCF != other.LDFGIFDFPCF) return false;
+      if (TitanBlessProgress != other.TitanBlessProgress) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -118,7 +118,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (LDFGIFDFPCF != 0) hash ^= LDFGIFDFPCF.GetHashCode();
+      if (TitanBlessProgress != 0) hash ^= TitanBlessProgress.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (LDFGIFDFPCF != 0) {
+      if (TitanBlessProgress != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(LDFGIFDFPCF);
+        output.WriteUInt32(TitanBlessProgress);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -151,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (LDFGIFDFPCF != 0) {
+      if (TitanBlessProgress != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(LDFGIFDFPCF);
+        output.WriteUInt32(TitanBlessProgress);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -165,8 +165,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (LDFGIFDFPCF != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LDFGIFDFPCF);
+      if (TitanBlessProgress != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TitanBlessProgress);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -180,8 +180,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.LDFGIFDFPCF != 0) {
-        LDFGIFDFPCF = other.LDFGIFDFPCF;
+      if (other.TitanBlessProgress != 0) {
+        TitanBlessProgress = other.TitanBlessProgress;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -199,7 +199,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 40: {
-            LDFGIFDFPCF = input.ReadUInt32();
+            TitanBlessProgress = input.ReadUInt32();
             break;
           }
         }
@@ -218,7 +218,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 40: {
-            LDFGIFDFPCF = input.ReadUInt32();
+            TitanBlessProgress = input.ReadUInt32();
             break;
           }
         }

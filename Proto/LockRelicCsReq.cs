@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static LockRelicCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRMb2NrUmVsaWNDc1JlcS5wcm90byJPCg5Mb2NrUmVsaWNDc1JlcRITCgtJ",
-            "RU1OUEdPTUpDTxgOIAEoCBITCgtLR0VGSE9FQ01NThgEIAMoDRITCgtPQUhO",
-            "QkRESUFKTBgIIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
-            "YgZwcm90bzM="));
+            "ChRMb2NrUmVsaWNDc1JlcS5wcm90byJZCg5Mb2NrUmVsaWNDc1JlcRITCgtJ",
+            "RU1OUEdPTUpDTxgOIAEoCBIcChRyZWxpY191bmlxdWVfaWRfbGlzdBgEIAMo",
+            "DRIUCgxpc19wcm90ZWN0ZWQYCCABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LockRelicCsReq), global::EggLink.DanhengServer.Proto.LockRelicCsReq.Parser, new[]{ "IEMNPGOMJCO", "KGEFHOECMMN", "OAHNBDDIAJL" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LockRelicCsReq), global::EggLink.DanhengServer.Proto.LockRelicCsReq.Parser, new[]{ "IEMNPGOMJCO", "RelicUniqueIdList", "IsProtected" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LockRelicCsReq(LockRelicCsReq other) : this() {
       iEMNPGOMJCO_ = other.iEMNPGOMJCO_;
-      kGEFHOECMMN_ = other.kGEFHOECMMN_.Clone();
-      oAHNBDDIAJL_ = other.oAHNBDDIAJL_;
+      relicUniqueIdList_ = other.relicUniqueIdList_.Clone();
+      isProtected_ = other.isProtected_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -97,26 +97,26 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "KGEFHOECMMN" field.</summary>
-    public const int KGEFHOECMMNFieldNumber = 4;
-    private static readonly pb::FieldCodec<uint> _repeated_kGEFHOECMMN_codec
+    /// <summary>Field number for the "relic_unique_id_list" field.</summary>
+    public const int RelicUniqueIdListFieldNumber = 4;
+    private static readonly pb::FieldCodec<uint> _repeated_relicUniqueIdList_codec
         = pb::FieldCodec.ForUInt32(34);
-    private readonly pbc::RepeatedField<uint> kGEFHOECMMN_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> relicUniqueIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> KGEFHOECMMN {
-      get { return kGEFHOECMMN_; }
+    public pbc::RepeatedField<uint> RelicUniqueIdList {
+      get { return relicUniqueIdList_; }
     }
 
-    /// <summary>Field number for the "OAHNBDDIAJL" field.</summary>
-    public const int OAHNBDDIAJLFieldNumber = 8;
-    private bool oAHNBDDIAJL_;
+    /// <summary>Field number for the "is_protected" field.</summary>
+    public const int IsProtectedFieldNumber = 8;
+    private bool isProtected_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool OAHNBDDIAJL {
-      get { return oAHNBDDIAJL_; }
+    public bool IsProtected {
+      get { return isProtected_; }
       set {
-        oAHNBDDIAJL_ = value;
+        isProtected_ = value;
       }
     }
 
@@ -136,8 +136,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (IEMNPGOMJCO != other.IEMNPGOMJCO) return false;
-      if(!kGEFHOECMMN_.Equals(other.kGEFHOECMMN_)) return false;
-      if (OAHNBDDIAJL != other.OAHNBDDIAJL) return false;
+      if(!relicUniqueIdList_.Equals(other.relicUniqueIdList_)) return false;
+      if (IsProtected != other.IsProtected) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,8 +146,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (IEMNPGOMJCO != false) hash ^= IEMNPGOMJCO.GetHashCode();
-      hash ^= kGEFHOECMMN_.GetHashCode();
-      if (OAHNBDDIAJL != false) hash ^= OAHNBDDIAJL.GetHashCode();
+      hash ^= relicUniqueIdList_.GetHashCode();
+      if (IsProtected != false) hash ^= IsProtected.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,10 +166,10 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      kGEFHOECMMN_.WriteTo(output, _repeated_kGEFHOECMMN_codec);
-      if (OAHNBDDIAJL != false) {
+      relicUniqueIdList_.WriteTo(output, _repeated_relicUniqueIdList_codec);
+      if (IsProtected != false) {
         output.WriteRawTag(64);
-        output.WriteBool(OAHNBDDIAJL);
+        output.WriteBool(IsProtected);
       }
       if (IEMNPGOMJCO != false) {
         output.WriteRawTag(112);
@@ -185,10 +185,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      kGEFHOECMMN_.WriteTo(ref output, _repeated_kGEFHOECMMN_codec);
-      if (OAHNBDDIAJL != false) {
+      relicUniqueIdList_.WriteTo(ref output, _repeated_relicUniqueIdList_codec);
+      if (IsProtected != false) {
         output.WriteRawTag(64);
-        output.WriteBool(OAHNBDDIAJL);
+        output.WriteBool(IsProtected);
       }
       if (IEMNPGOMJCO != false) {
         output.WriteRawTag(112);
@@ -207,8 +207,8 @@ namespace EggLink.DanhengServer.Proto {
       if (IEMNPGOMJCO != false) {
         size += 1 + 1;
       }
-      size += kGEFHOECMMN_.CalculateSize(_repeated_kGEFHOECMMN_codec);
-      if (OAHNBDDIAJL != false) {
+      size += relicUniqueIdList_.CalculateSize(_repeated_relicUniqueIdList_codec);
+      if (IsProtected != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -226,9 +226,9 @@ namespace EggLink.DanhengServer.Proto {
       if (other.IEMNPGOMJCO != false) {
         IEMNPGOMJCO = other.IEMNPGOMJCO;
       }
-      kGEFHOECMMN_.Add(other.kGEFHOECMMN_);
-      if (other.OAHNBDDIAJL != false) {
-        OAHNBDDIAJL = other.OAHNBDDIAJL;
+      relicUniqueIdList_.Add(other.relicUniqueIdList_);
+      if (other.IsProtected != false) {
+        IsProtected = other.IsProtected;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -247,11 +247,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 34:
           case 32: {
-            kGEFHOECMMN_.AddEntriesFrom(input, _repeated_kGEFHOECMMN_codec);
+            relicUniqueIdList_.AddEntriesFrom(input, _repeated_relicUniqueIdList_codec);
             break;
           }
           case 64: {
-            OAHNBDDIAJL = input.ReadBool();
+            IsProtected = input.ReadBool();
             break;
           }
           case 112: {
@@ -275,11 +275,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 34:
           case 32: {
-            kGEFHOECMMN_.AddEntriesFrom(ref input, _repeated_kGEFHOECMMN_codec);
+            relicUniqueIdList_.AddEntriesFrom(ref input, _repeated_relicUniqueIdList_codec);
             break;
           }
           case 64: {
-            OAHNBDDIAJL = input.ReadBool();
+            IsProtected = input.ReadBool();
             break;
           }
           case 112: {

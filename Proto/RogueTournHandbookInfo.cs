@@ -24,16 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static RogueTournHandbookInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxSb2d1ZVRvdXJuSGFuZGJvb2tJbmZvLnByb3RvIsEBChZSb2d1ZVRvdXJu",
-            "SGFuZGJvb2tJbmZvEhMKC0tDRExNTklOQ0dFGAQgAygNEiIKGnJvZ3VlX3Rv",
-            "dXJuX2hhbmRib29rX2NvbnN0GAIgASgNEhMKC0JLR0pQQ0NMSUROGAEgAygN",
-            "EhMKC1BQQ09OS0tQSVBNGA8gAygNEhoKEmhhbmRib29rX2J1ZmZfbGlzdBgG",
-            "IAMoDRITCgtGQUpDTk1FS0tOThgNIAMoDRITCgtORkZCSkJCQ0RNRxgHIAMo",
-            "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChxSb2d1ZVRvdXJuSGFuZGJvb2tJbmZvLnByb3RvIoQCChZSb2d1ZVRvdXJu",
+            "SGFuZGJvb2tJbmZvEiEKGWhhbmRib29rX3RpdGFuX2JsZXNzX2xpc3QYBCAD",
+            "KA0SJgoecm9ndWVfdG91cm5faGFuZGJvb2tfc2Vhc29uX2lkGAIgASgNEiAK",
+            "GGhhbmRib29rX2hleF9hdmF0YXJfbGlzdBgBIAMoDRIjChtoYW5kYm9va190",
+            "b3Vybl9taXJhY2xlX2xpc3QYDyADKA0SHQoVaGFuZGJvb2tfbWlyYWNsZV9s",
+            "aXN0GAYgAygNEh0KFWhhbmRib29rX2Zvcm11bGFfbGlzdBgNIAMoDRIaChJo",
+            "YW5kYm9va19idWZmX2xpc3QYByADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournHandbookInfo), global::EggLink.DanhengServer.Proto.RogueTournHandbookInfo.Parser, new[]{ "KCDLMNINCGE", "RogueTournHandbookConst", "BKGJPCCLIDN", "PPCONKKPIPM", "HandbookBuffList", "FAJCNMEKKNN", "NFFBJBBCDMG" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournHandbookInfo), global::EggLink.DanhengServer.Proto.RogueTournHandbookInfo.Parser, new[]{ "HandbookTitanBlessList", "RogueTournHandbookSeasonId", "HandbookHexAvatarList", "HandbookTournMiracleList", "HandbookMiracleList", "HandbookFormulaList", "HandbookBuffList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,13 +77,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournHandbookInfo(RogueTournHandbookInfo other) : this() {
-      kCDLMNINCGE_ = other.kCDLMNINCGE_.Clone();
-      rogueTournHandbookConst_ = other.rogueTournHandbookConst_;
-      bKGJPCCLIDN_ = other.bKGJPCCLIDN_.Clone();
-      pPCONKKPIPM_ = other.pPCONKKPIPM_.Clone();
+      handbookTitanBlessList_ = other.handbookTitanBlessList_.Clone();
+      rogueTournHandbookSeasonId_ = other.rogueTournHandbookSeasonId_;
+      handbookHexAvatarList_ = other.handbookHexAvatarList_.Clone();
+      handbookTournMiracleList_ = other.handbookTournMiracleList_.Clone();
+      handbookMiracleList_ = other.handbookMiracleList_.Clone();
+      handbookFormulaList_ = other.handbookFormulaList_.Clone();
       handbookBuffList_ = other.handbookBuffList_.Clone();
-      fAJCNMEKKNN_ = other.fAJCNMEKKNN_.Clone();
-      nFFBJBBCDMG_ = other.nFFBJBBCDMG_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -91,82 +93,82 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournHandbookInfo(this);
     }
 
-    /// <summary>Field number for the "KCDLMNINCGE" field.</summary>
-    public const int KCDLMNINCGEFieldNumber = 4;
-    private static readonly pb::FieldCodec<uint> _repeated_kCDLMNINCGE_codec
+    /// <summary>Field number for the "handbook_titan_bless_list" field.</summary>
+    public const int HandbookTitanBlessListFieldNumber = 4;
+    private static readonly pb::FieldCodec<uint> _repeated_handbookTitanBlessList_codec
         = pb::FieldCodec.ForUInt32(34);
-    private readonly pbc::RepeatedField<uint> kCDLMNINCGE_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> handbookTitanBlessList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> KCDLMNINCGE {
-      get { return kCDLMNINCGE_; }
+    public pbc::RepeatedField<uint> HandbookTitanBlessList {
+      get { return handbookTitanBlessList_; }
     }
 
-    /// <summary>Field number for the "rogue_tourn_handbook_const" field.</summary>
-    public const int RogueTournHandbookConstFieldNumber = 2;
-    private uint rogueTournHandbookConst_;
+    /// <summary>Field number for the "rogue_tourn_handbook_season_id" field.</summary>
+    public const int RogueTournHandbookSeasonIdFieldNumber = 2;
+    private uint rogueTournHandbookSeasonId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint RogueTournHandbookConst {
-      get { return rogueTournHandbookConst_; }
+    public uint RogueTournHandbookSeasonId {
+      get { return rogueTournHandbookSeasonId_; }
       set {
-        rogueTournHandbookConst_ = value;
+        rogueTournHandbookSeasonId_ = value;
       }
     }
 
-    /// <summary>Field number for the "BKGJPCCLIDN" field.</summary>
-    public const int BKGJPCCLIDNFieldNumber = 1;
-    private static readonly pb::FieldCodec<uint> _repeated_bKGJPCCLIDN_codec
+    /// <summary>Field number for the "handbook_hex_avatar_list" field.</summary>
+    public const int HandbookHexAvatarListFieldNumber = 1;
+    private static readonly pb::FieldCodec<uint> _repeated_handbookHexAvatarList_codec
         = pb::FieldCodec.ForUInt32(10);
-    private readonly pbc::RepeatedField<uint> bKGJPCCLIDN_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> handbookHexAvatarList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> BKGJPCCLIDN {
-      get { return bKGJPCCLIDN_; }
+    public pbc::RepeatedField<uint> HandbookHexAvatarList {
+      get { return handbookHexAvatarList_; }
     }
 
-    /// <summary>Field number for the "PPCONKKPIPM" field.</summary>
-    public const int PPCONKKPIPMFieldNumber = 15;
-    private static readonly pb::FieldCodec<uint> _repeated_pPCONKKPIPM_codec
+    /// <summary>Field number for the "handbook_tourn_miracle_list" field.</summary>
+    public const int HandbookTournMiracleListFieldNumber = 15;
+    private static readonly pb::FieldCodec<uint> _repeated_handbookTournMiracleList_codec
         = pb::FieldCodec.ForUInt32(122);
-    private readonly pbc::RepeatedField<uint> pPCONKKPIPM_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> handbookTournMiracleList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> PPCONKKPIPM {
-      get { return pPCONKKPIPM_; }
+    public pbc::RepeatedField<uint> HandbookTournMiracleList {
+      get { return handbookTournMiracleList_; }
+    }
+
+    /// <summary>Field number for the "handbook_miracle_list" field.</summary>
+    public const int HandbookMiracleListFieldNumber = 6;
+    private static readonly pb::FieldCodec<uint> _repeated_handbookMiracleList_codec
+        = pb::FieldCodec.ForUInt32(50);
+    private readonly pbc::RepeatedField<uint> handbookMiracleList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> HandbookMiracleList {
+      get { return handbookMiracleList_; }
+    }
+
+    /// <summary>Field number for the "handbook_formula_list" field.</summary>
+    public const int HandbookFormulaListFieldNumber = 13;
+    private static readonly pb::FieldCodec<uint> _repeated_handbookFormulaList_codec
+        = pb::FieldCodec.ForUInt32(106);
+    private readonly pbc::RepeatedField<uint> handbookFormulaList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> HandbookFormulaList {
+      get { return handbookFormulaList_; }
     }
 
     /// <summary>Field number for the "handbook_buff_list" field.</summary>
-    public const int HandbookBuffListFieldNumber = 6;
+    public const int HandbookBuffListFieldNumber = 7;
     private static readonly pb::FieldCodec<uint> _repeated_handbookBuffList_codec
-        = pb::FieldCodec.ForUInt32(50);
+        = pb::FieldCodec.ForUInt32(58);
     private readonly pbc::RepeatedField<uint> handbookBuffList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<uint> HandbookBuffList {
       get { return handbookBuffList_; }
-    }
-
-    /// <summary>Field number for the "FAJCNMEKKNN" field.</summary>
-    public const int FAJCNMEKKNNFieldNumber = 13;
-    private static readonly pb::FieldCodec<uint> _repeated_fAJCNMEKKNN_codec
-        = pb::FieldCodec.ForUInt32(106);
-    private readonly pbc::RepeatedField<uint> fAJCNMEKKNN_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> FAJCNMEKKNN {
-      get { return fAJCNMEKKNN_; }
-    }
-
-    /// <summary>Field number for the "NFFBJBBCDMG" field.</summary>
-    public const int NFFBJBBCDMGFieldNumber = 7;
-    private static readonly pb::FieldCodec<uint> _repeated_nFFBJBBCDMG_codec
-        = pb::FieldCodec.ForUInt32(58);
-    private readonly pbc::RepeatedField<uint> nFFBJBBCDMG_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> NFFBJBBCDMG {
-      get { return nFFBJBBCDMG_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -184,13 +186,13 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!kCDLMNINCGE_.Equals(other.kCDLMNINCGE_)) return false;
-      if (RogueTournHandbookConst != other.RogueTournHandbookConst) return false;
-      if(!bKGJPCCLIDN_.Equals(other.bKGJPCCLIDN_)) return false;
-      if(!pPCONKKPIPM_.Equals(other.pPCONKKPIPM_)) return false;
+      if(!handbookTitanBlessList_.Equals(other.handbookTitanBlessList_)) return false;
+      if (RogueTournHandbookSeasonId != other.RogueTournHandbookSeasonId) return false;
+      if(!handbookHexAvatarList_.Equals(other.handbookHexAvatarList_)) return false;
+      if(!handbookTournMiracleList_.Equals(other.handbookTournMiracleList_)) return false;
+      if(!handbookMiracleList_.Equals(other.handbookMiracleList_)) return false;
+      if(!handbookFormulaList_.Equals(other.handbookFormulaList_)) return false;
       if(!handbookBuffList_.Equals(other.handbookBuffList_)) return false;
-      if(!fAJCNMEKKNN_.Equals(other.fAJCNMEKKNN_)) return false;
-      if(!nFFBJBBCDMG_.Equals(other.nFFBJBBCDMG_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -198,13 +200,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= kCDLMNINCGE_.GetHashCode();
-      if (RogueTournHandbookConst != 0) hash ^= RogueTournHandbookConst.GetHashCode();
-      hash ^= bKGJPCCLIDN_.GetHashCode();
-      hash ^= pPCONKKPIPM_.GetHashCode();
+      hash ^= handbookTitanBlessList_.GetHashCode();
+      if (RogueTournHandbookSeasonId != 0) hash ^= RogueTournHandbookSeasonId.GetHashCode();
+      hash ^= handbookHexAvatarList_.GetHashCode();
+      hash ^= handbookTournMiracleList_.GetHashCode();
+      hash ^= handbookMiracleList_.GetHashCode();
+      hash ^= handbookFormulaList_.GetHashCode();
       hash ^= handbookBuffList_.GetHashCode();
-      hash ^= fAJCNMEKKNN_.GetHashCode();
-      hash ^= nFFBJBBCDMG_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -223,16 +225,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      bKGJPCCLIDN_.WriteTo(output, _repeated_bKGJPCCLIDN_codec);
-      if (RogueTournHandbookConst != 0) {
+      handbookHexAvatarList_.WriteTo(output, _repeated_handbookHexAvatarList_codec);
+      if (RogueTournHandbookSeasonId != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(RogueTournHandbookConst);
+        output.WriteUInt32(RogueTournHandbookSeasonId);
       }
-      kCDLMNINCGE_.WriteTo(output, _repeated_kCDLMNINCGE_codec);
+      handbookTitanBlessList_.WriteTo(output, _repeated_handbookTitanBlessList_codec);
+      handbookMiracleList_.WriteTo(output, _repeated_handbookMiracleList_codec);
       handbookBuffList_.WriteTo(output, _repeated_handbookBuffList_codec);
-      nFFBJBBCDMG_.WriteTo(output, _repeated_nFFBJBBCDMG_codec);
-      fAJCNMEKKNN_.WriteTo(output, _repeated_fAJCNMEKKNN_codec);
-      pPCONKKPIPM_.WriteTo(output, _repeated_pPCONKKPIPM_codec);
+      handbookFormulaList_.WriteTo(output, _repeated_handbookFormulaList_codec);
+      handbookTournMiracleList_.WriteTo(output, _repeated_handbookTournMiracleList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -243,16 +245,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      bKGJPCCLIDN_.WriteTo(ref output, _repeated_bKGJPCCLIDN_codec);
-      if (RogueTournHandbookConst != 0) {
+      handbookHexAvatarList_.WriteTo(ref output, _repeated_handbookHexAvatarList_codec);
+      if (RogueTournHandbookSeasonId != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(RogueTournHandbookConst);
+        output.WriteUInt32(RogueTournHandbookSeasonId);
       }
-      kCDLMNINCGE_.WriteTo(ref output, _repeated_kCDLMNINCGE_codec);
+      handbookTitanBlessList_.WriteTo(ref output, _repeated_handbookTitanBlessList_codec);
+      handbookMiracleList_.WriteTo(ref output, _repeated_handbookMiracleList_codec);
       handbookBuffList_.WriteTo(ref output, _repeated_handbookBuffList_codec);
-      nFFBJBBCDMG_.WriteTo(ref output, _repeated_nFFBJBBCDMG_codec);
-      fAJCNMEKKNN_.WriteTo(ref output, _repeated_fAJCNMEKKNN_codec);
-      pPCONKKPIPM_.WriteTo(ref output, _repeated_pPCONKKPIPM_codec);
+      handbookFormulaList_.WriteTo(ref output, _repeated_handbookFormulaList_codec);
+      handbookTournMiracleList_.WriteTo(ref output, _repeated_handbookTournMiracleList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -263,15 +265,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += kCDLMNINCGE_.CalculateSize(_repeated_kCDLMNINCGE_codec);
-      if (RogueTournHandbookConst != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RogueTournHandbookConst);
+      size += handbookTitanBlessList_.CalculateSize(_repeated_handbookTitanBlessList_codec);
+      if (RogueTournHandbookSeasonId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RogueTournHandbookSeasonId);
       }
-      size += bKGJPCCLIDN_.CalculateSize(_repeated_bKGJPCCLIDN_codec);
-      size += pPCONKKPIPM_.CalculateSize(_repeated_pPCONKKPIPM_codec);
+      size += handbookHexAvatarList_.CalculateSize(_repeated_handbookHexAvatarList_codec);
+      size += handbookTournMiracleList_.CalculateSize(_repeated_handbookTournMiracleList_codec);
+      size += handbookMiracleList_.CalculateSize(_repeated_handbookMiracleList_codec);
+      size += handbookFormulaList_.CalculateSize(_repeated_handbookFormulaList_codec);
       size += handbookBuffList_.CalculateSize(_repeated_handbookBuffList_codec);
-      size += fAJCNMEKKNN_.CalculateSize(_repeated_fAJCNMEKKNN_codec);
-      size += nFFBJBBCDMG_.CalculateSize(_repeated_nFFBJBBCDMG_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -284,15 +286,15 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      kCDLMNINCGE_.Add(other.kCDLMNINCGE_);
-      if (other.RogueTournHandbookConst != 0) {
-        RogueTournHandbookConst = other.RogueTournHandbookConst;
+      handbookTitanBlessList_.Add(other.handbookTitanBlessList_);
+      if (other.RogueTournHandbookSeasonId != 0) {
+        RogueTournHandbookSeasonId = other.RogueTournHandbookSeasonId;
       }
-      bKGJPCCLIDN_.Add(other.bKGJPCCLIDN_);
-      pPCONKKPIPM_.Add(other.pPCONKKPIPM_);
+      handbookHexAvatarList_.Add(other.handbookHexAvatarList_);
+      handbookTournMiracleList_.Add(other.handbookTournMiracleList_);
+      handbookMiracleList_.Add(other.handbookMiracleList_);
+      handbookFormulaList_.Add(other.handbookFormulaList_);
       handbookBuffList_.Add(other.handbookBuffList_);
-      fAJCNMEKKNN_.Add(other.fAJCNMEKKNN_);
-      nFFBJBBCDMG_.Add(other.nFFBJBBCDMG_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -310,36 +312,36 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 10:
           case 8: {
-            bKGJPCCLIDN_.AddEntriesFrom(input, _repeated_bKGJPCCLIDN_codec);
+            handbookHexAvatarList_.AddEntriesFrom(input, _repeated_handbookHexAvatarList_codec);
             break;
           }
           case 16: {
-            RogueTournHandbookConst = input.ReadUInt32();
+            RogueTournHandbookSeasonId = input.ReadUInt32();
             break;
           }
           case 34:
           case 32: {
-            kCDLMNINCGE_.AddEntriesFrom(input, _repeated_kCDLMNINCGE_codec);
+            handbookTitanBlessList_.AddEntriesFrom(input, _repeated_handbookTitanBlessList_codec);
             break;
           }
           case 50:
           case 48: {
-            handbookBuffList_.AddEntriesFrom(input, _repeated_handbookBuffList_codec);
+            handbookMiracleList_.AddEntriesFrom(input, _repeated_handbookMiracleList_codec);
             break;
           }
           case 58:
           case 56: {
-            nFFBJBBCDMG_.AddEntriesFrom(input, _repeated_nFFBJBBCDMG_codec);
+            handbookBuffList_.AddEntriesFrom(input, _repeated_handbookBuffList_codec);
             break;
           }
           case 106:
           case 104: {
-            fAJCNMEKKNN_.AddEntriesFrom(input, _repeated_fAJCNMEKKNN_codec);
+            handbookFormulaList_.AddEntriesFrom(input, _repeated_handbookFormulaList_codec);
             break;
           }
           case 122:
           case 120: {
-            pPCONKKPIPM_.AddEntriesFrom(input, _repeated_pPCONKKPIPM_codec);
+            handbookTournMiracleList_.AddEntriesFrom(input, _repeated_handbookTournMiracleList_codec);
             break;
           }
         }
@@ -359,36 +361,36 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 10:
           case 8: {
-            bKGJPCCLIDN_.AddEntriesFrom(ref input, _repeated_bKGJPCCLIDN_codec);
+            handbookHexAvatarList_.AddEntriesFrom(ref input, _repeated_handbookHexAvatarList_codec);
             break;
           }
           case 16: {
-            RogueTournHandbookConst = input.ReadUInt32();
+            RogueTournHandbookSeasonId = input.ReadUInt32();
             break;
           }
           case 34:
           case 32: {
-            kCDLMNINCGE_.AddEntriesFrom(ref input, _repeated_kCDLMNINCGE_codec);
+            handbookTitanBlessList_.AddEntriesFrom(ref input, _repeated_handbookTitanBlessList_codec);
             break;
           }
           case 50:
           case 48: {
-            handbookBuffList_.AddEntriesFrom(ref input, _repeated_handbookBuffList_codec);
+            handbookMiracleList_.AddEntriesFrom(ref input, _repeated_handbookMiracleList_codec);
             break;
           }
           case 58:
           case 56: {
-            nFFBJBBCDMG_.AddEntriesFrom(ref input, _repeated_nFFBJBBCDMG_codec);
+            handbookBuffList_.AddEntriesFrom(ref input, _repeated_handbookBuffList_codec);
             break;
           }
           case 106:
           case 104: {
-            fAJCNMEKKNN_.AddEntriesFrom(ref input, _repeated_fAJCNMEKKNN_codec);
+            handbookFormulaList_.AddEntriesFrom(ref input, _repeated_handbookFormulaList_codec);
             break;
           }
           case 122:
           case 120: {
-            pPCONKKPIPM_.AddEntriesFrom(ref input, _repeated_pPCONKKPIPM_codec);
+            handbookTournMiracleList_.AddEntriesFrom(ref input, _repeated_handbookTournMiracleList_codec);
             break;
           }
         }

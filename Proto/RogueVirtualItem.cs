@@ -89,9 +89,6 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Field number for the "rogue_money" field.</summary>
     public const int RogueMoneyFieldNumber = 13;
     private uint rogueMoney_;
-    /// <summary>
-    ///? MNKENIAMHDD
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint RogueMoney {

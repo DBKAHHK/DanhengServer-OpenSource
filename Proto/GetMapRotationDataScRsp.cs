@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static GetMapRotationDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1HZXRNYXBSb3RhdGlvbkRhdGFTY1JzcC5wcm90bxoRUm90YXRlckRhdGEu",
-            "cHJvdG8aEUlDSU1BS0JBSkdCLnByb3RvGhdSb3RhdGVyRW5lcmd5SW5mby5w",
-            "cm90bxoRQ2hhcmdlckluZm8ucHJvdG8igAIKF0dldE1hcFJvdGF0aW9uRGF0",
+            "Ch1HZXRNYXBSb3RhdGlvbkRhdGFTY1JzcC5wcm90bxoRSUNJTUFLQkFKR0Iu",
+            "cHJvdG8aF1JvdGF0ZXJFbmVyZ3lJbmZvLnByb3RvGhFDaGFyZ2VySW5mby5w",
+            "cm90bxoRUm90YXRlckRhdGEucHJvdG8igAIKF0dldE1hcFJvdGF0aW9uRGF0",
             "YVNjUnNwEg8KB3JldGNvZGUYDyABKA0SHwoJcm9ndWVfbWFwGAYgASgLMgwu",
             "SUNJTUFLQkFKR0ISEwoLTkZMQk9OREpBSUUYBSABKA0SJwoLZW5lcmd5X2lu",
             "Zm8YASABKAsyEi5Sb3RhdGVyRW5lcmd5SW5mbxIiCgxjaGFyZ2VyX2luZm8Y",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "LlJvdGF0ZXJEYXRhQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.ICIMAKBAJGBReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ICIMAKBAJGBReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMapRotationDataScRsp), global::EggLink.DanhengServer.Proto.GetMapRotationDataScRsp.Parser, new[]{ "Retcode", "RogueMap", "NFLBONDJAIE", "EnergyInfo", "ChargerInfo", "ACNPBBNLMIE", "OMEJLLMNPCN", "RotaterDataList" }, null, null, null, null)
           }));

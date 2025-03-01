@@ -41,9 +41,6 @@ namespace EggLink.DanhengServer.Proto {
 
   }
   #region Messages
-  /// <summary>
-  ///?
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RogueScoreRewardInfo : pb::IMessage<RogueScoreRewardInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
