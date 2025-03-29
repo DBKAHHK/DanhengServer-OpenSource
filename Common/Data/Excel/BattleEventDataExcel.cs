@@ -18,17 +18,8 @@ public partial class BattleEventDataExcel : ExcelResource
 
     public override void Loaded()
     {
-        try
-        {
-            var match = RegexConfig().Match(Config);
-            if (match.Success)
-            {
-                var rogueBuffType = int.Parse(match.Value);
-                GameData.RogueBattleEventData.Add(rogueBuffType, this);
-            }
-        }
-        catch
-        {
-        }
+        var match = RegexConfig().Match(Config);
+        if (match.Success && int.TryParse(match.Value, out var rogueBuffType))
+            GameData.RogueBattleEventData.TryAdd(rogueBuffType, this);
     }
 }

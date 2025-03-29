@@ -33,65 +33,55 @@ public class PropInfo : PositionInfo
 
     public void Load(GroupInfo info)
     {
-        if (ValueSource != null)
+        if (ValueSource == null) return;
+
+        if (Name.StartsWith("Button_") &&
+            ValueSource.Values.Find(x => x["Key"]?.ToString() == "AnchorName") != null)
+            IsLevelBtn = true;
+
+        foreach (var v in ValueSource.Values)
         {
-            if (Name.StartsWith("Button_") &&
-                ValueSource.Values.Find(x => x["Key"]?.ToString() == "AnchorName") != null)
-                IsLevelBtn = true;
+            var key = v["Key"];
+            var value = v["Value"];
+            if (value == null || key == null) continue;
 
-            foreach (var v in ValueSource.Values)
-                try
+            if (key.ToString() == "ListenTriggerCustomString")
+            {
+                if (!info.PropTriggerCustomString.TryGetValue(value.ToString(), out var list))
                 {
-                    var key = v["Key"];
-                    var value = v["Value"];
-                    if (value != null && key != null)
-                    {
-                        if (key.ToString() == "ListenTriggerCustomString")
-                        {
-                            info.PropTriggerCustomString.TryGetValue(value.ToString(), out var list);
-                            if (list == null)
-                            {
-                                list = [];
-                                info.PropTriggerCustomString.Add(value.ToString(), list);
-                            }
-
-                            list.Add(ID);
-                        }
-                        else if (key.ToString().Contains("Door") ||
-                                 key.ToString().Contains("Bridge") ||
-                                 key.ToString().Contains("UnlockTarget") ||
-                                 key.ToString().Contains("Rootcontamination") ||
-                                 key.ToString().Contains("Portal"))
-                        {
-                            try
-                            {
-                                if (UnlockDoorID.ContainsKey(int.Parse(value.ToString().Split(",")[0])) == false)
-                                    UnlockDoorID.Add(int.Parse(value.ToString().Split(",")[0]), []);
-                                UnlockDoorID[int.Parse(value.ToString().Split(",")[0])]
-                                    .Add(int.Parse(value.ToString().Split(",")[1]));
-                            }
-                            catch
-                            {
-                            }
-                        }
-                        else if (key.ToString().Contains("Controller"))
-                        {
-                            try
-                            {
-                                if (UnlockControllerID.ContainsKey(int.Parse(value.ToString().Split(",")[0])) == false)
-                                    UnlockControllerID.Add(int.Parse(value.ToString().Split(",")[0]), []);
-                                UnlockControllerID[int.Parse(value.ToString().Split(",")[0])]
-                                    .Add(int.Parse(value.ToString().Split(",")[1]));
-                            }
-                            catch
-                            {
-                            }
-                        }
-                    }
+                    list = [];
+                    info.PropTriggerCustomString.Add(value.ToString(), list);
                 }
-                catch
+                list.Add(ID);
+            }
+            else if (key.ToString().Contains("Door") ||
+                key.ToString().Contains("Bridge") ||
+                key.ToString().Contains("UnlockTarget") ||
+                key.ToString().Contains("Rootcontamination") ||
+                key.ToString().Contains("Portal"))
+            {
+                var parts = value.ToString().Split(',');
+                if (parts.Length >= 2 && 
+                    int.TryParse(parts[0], out var keyId) && 
+                    int.TryParse(parts[1], out var valueId))
                 {
+                    if (!UnlockDoorID.ContainsKey(keyId))
+                        UnlockDoorID.Add(keyId, []);
+                    UnlockDoorID[keyId].Add(valueId);
                 }
+            }
+            else if (key.ToString().Contains("Controller"))
+            {
+                var parts = value.ToString().Split(',');
+                if (parts.Length >= 2 && 
+                    int.TryParse(parts[0], out var keyId) && 
+                    int.TryParse(parts[1], out var valueId))
+                {
+                    if (!UnlockControllerID.ContainsKey(keyId))
+                        UnlockControllerID.Add(keyId, []);
+                    UnlockControllerID[keyId].Add(valueId);
+                }
+            }
         }
     }
 }
