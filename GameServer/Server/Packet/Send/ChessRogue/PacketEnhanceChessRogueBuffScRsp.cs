@@ -11,7 +11,7 @@ public class PacketEnhanceChessRogueBuffScRsp : BasePacket
     {
         var proto = new EnhanceChessRogueBuffScRsp
         {
-            IsSuccess = true,
+            IsSucc = true,
             RogueBuff = new RogueCommonBuff
             {
                 BuffId = buffId,

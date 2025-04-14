@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxTdWJtaXRPcmlnYW1pSXRlbVNjUnNwLnByb3RvIj4KFlN1Ym1pdE9yaWdh",
-            "bWlJdGVtU2NSc3ASEwoLTENCT0ZNT1BHS0UYAyABKA0SDwoHcmV0Y29kZRgE",
+            "bWlJdGVtU2NSc3ASEwoLTENCT0ZNT1BHS0UYCSABKA0SDwoHcmV0Y29kZRgE",
             "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "LCBOFMOPGKE" field.</summary>
-    public const int LCBOFMOPGKEFieldNumber = 3;
+    public const int LCBOFMOPGKEFieldNumber = 9;
     private uint lCBOFMOPGKE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (LCBOFMOPGKE != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(LCBOFMOPGKE);
-      }
       if (Retcode != 0) {
         output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
+      }
+      if (LCBOFMOPGKE != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(LCBOFMOPGKE);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (LCBOFMOPGKE != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(LCBOFMOPGKE);
-      }
       if (Retcode != 0) {
         output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
+      }
+      if (LCBOFMOPGKE != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(LCBOFMOPGKE);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            LCBOFMOPGKE = input.ReadUInt32();
-            break;
-          }
           case 32: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            LCBOFMOPGKE = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            LCBOFMOPGKE = input.ReadUInt32();
-            break;
-          }
           case 32: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            LCBOFMOPGKE = input.ReadUInt32();
             break;
           }
         }

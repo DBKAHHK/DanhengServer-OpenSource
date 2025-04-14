@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxUZWxldmlzaW9uQWN0aXZpdHlEYXRhLnByb3RvIlUKFlRlbGV2aXNpb25B",
-            "Y3Rpdml0eURhdGESEQoJbWF4X3Njb3JlGAMgASgNEhMKC0tFR0NKUFBPS0JL",
-            "GAkgASgNEhMKC05JTkxGQkdMQkxMGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "Y3Rpdml0eURhdGESEwoLS0VHQ0pQUE9LQksYDCABKA0SEQoJbWF4X3Njb3Jl",
+            "GAkgASgNEhMKC05JTkxGQkdMQkxMGAogASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TelevisionActivityData), global::EggLink.DanhengServer.Proto.TelevisionActivityData.Parser, new[]{ "MaxScore", "KEGCJPPOKBK", "NINLFBGLBLL" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TelevisionActivityData), global::EggLink.DanhengServer.Proto.TelevisionActivityData.Parser, new[]{ "KEGCJPPOKBK", "MaxScore", "NINLFBGLBLL" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TelevisionActivityData(TelevisionActivityData other) : this() {
-      maxScore_ = other.maxScore_;
       kEGCJPPOKBK_ = other.kEGCJPPOKBK_;
+      maxScore_ = other.maxScore_;
       nINLFBGLBLL_ = other.nINLFBGLBLL_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new TelevisionActivityData(this);
     }
 
-    /// <summary>Field number for the "max_score" field.</summary>
-    public const int MaxScoreFieldNumber = 3;
-    private uint maxScore_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MaxScore {
-      get { return maxScore_; }
-      set {
-        maxScore_ = value;
-      }
-    }
-
     /// <summary>Field number for the "KEGCJPPOKBK" field.</summary>
-    public const int KEGCJPPOKBKFieldNumber = 9;
+    public const int KEGCJPPOKBKFieldNumber = 12;
     private uint kEGCJPPOKBK_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,8 +97,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "max_score" field.</summary>
+    public const int MaxScoreFieldNumber = 9;
+    private uint maxScore_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint MaxScore {
+      get { return maxScore_; }
+      set {
+        maxScore_ = value;
+      }
+    }
+
     /// <summary>Field number for the "NINLFBGLBLL" field.</summary>
-    public const int NINLFBGLBLLFieldNumber = 13;
+    public const int NINLFBGLBLLFieldNumber = 10;
     private uint nINLFBGLBLL_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,8 +136,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MaxScore != other.MaxScore) return false;
       if (KEGCJPPOKBK != other.KEGCJPPOKBK) return false;
+      if (MaxScore != other.MaxScore) return false;
       if (NINLFBGLBLL != other.NINLFBGLBLL) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -146,8 +146,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MaxScore != 0) hash ^= MaxScore.GetHashCode();
       if (KEGCJPPOKBK != 0) hash ^= KEGCJPPOKBK.GetHashCode();
+      if (MaxScore != 0) hash ^= MaxScore.GetHashCode();
       if (NINLFBGLBLL != 0) hash ^= NINLFBGLBLL.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -168,16 +168,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (MaxScore != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(72);
         output.WriteUInt32(MaxScore);
       }
-      if (KEGCJPPOKBK != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(KEGCJPPOKBK);
-      }
       if (NINLFBGLBLL != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(80);
         output.WriteUInt32(NINLFBGLBLL);
+      }
+      if (KEGCJPPOKBK != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(KEGCJPPOKBK);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,16 +190,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MaxScore != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(72);
         output.WriteUInt32(MaxScore);
       }
-      if (KEGCJPPOKBK != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(KEGCJPPOKBK);
-      }
       if (NINLFBGLBLL != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(80);
         output.WriteUInt32(NINLFBGLBLL);
+      }
+      if (KEGCJPPOKBK != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(KEGCJPPOKBK);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,11 +211,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MaxScore != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxScore);
-      }
       if (KEGCJPPOKBK != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KEGCJPPOKBK);
+      }
+      if (MaxScore != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxScore);
       }
       if (NINLFBGLBLL != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NINLFBGLBLL);
@@ -232,11 +232,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MaxScore != 0) {
-        MaxScore = other.MaxScore;
-      }
       if (other.KEGCJPPOKBK != 0) {
         KEGCJPPOKBK = other.KEGCJPPOKBK;
+      }
+      if (other.MaxScore != 0) {
+        MaxScore = other.MaxScore;
       }
       if (other.NINLFBGLBLL != 0) {
         NINLFBGLBLL = other.NINLFBGLBLL;
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 72: {
             MaxScore = input.ReadUInt32();
             break;
           }
-          case 72: {
-            KEGCJPPOKBK = input.ReadUInt32();
+          case 80: {
+            NINLFBGLBLL = input.ReadUInt32();
             break;
           }
-          case 104: {
-            NINLFBGLBLL = input.ReadUInt32();
+          case 96: {
+            KEGCJPPOKBK = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 72: {
             MaxScore = input.ReadUInt32();
             break;
           }
-          case 72: {
-            KEGCJPPOKBK = input.ReadUInt32();
+          case 80: {
+            NINLFBGLBLL = input.ReadUInt32();
             break;
           }
-          case 104: {
-            NINLFBGLBLL = input.ReadUInt32();
+          case 96: {
+            KEGCJPPOKBK = input.ReadUInt32();
             break;
           }
         }

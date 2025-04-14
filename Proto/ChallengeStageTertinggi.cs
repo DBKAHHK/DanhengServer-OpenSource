@@ -27,8 +27,8 @@ namespace EggLink.DanhengServer.Proto {
             "Ch1DaGFsbGVuZ2VTdGFnZVRlcnRpbmdnaS5wcm90bxoZQ2hhbGxlbmdlTGlu",
             "ZXVwTGlzdC5wcm90byJ9ChdDaGFsbGVuZ2VTdGFnZVRlcnRpbmdnaRIpCgts",
             "aW5ldXBfbGlzdBgHIAMoCzIULkNoYWxsZW5nZUxpbmV1cExpc3QSEwoLSU5I",
-            "REROTlBCREIYCiABKA0SEwoLcm91bmRfY291bnQYBiABKA0SDQoFbGV2ZWwY",
-            "DSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "REROTlBCREIYAiABKA0SEwoLcm91bmRfY291bnQYDiABKA0SDQoFbGV2ZWwY",
+            "CiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeLineupListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "INHDDNNPBDB" field.</summary>
-    public const int INHDDNNPBDBFieldNumber = 10;
+    public const int INHDDNNPBDBFieldNumber = 2;
     private uint iNHDDNNPBDB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "round_count" field.</summary>
-    public const int RoundCountFieldNumber = 6;
+    public const int RoundCountFieldNumber = 14;
     private uint roundCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 13;
+    public const int LevelFieldNumber = 10;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -182,18 +182,18 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (RoundCount != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(RoundCount);
-      }
-      lineupList_.WriteTo(output, _repeated_lineupList_codec);
       if (INHDDNNPBDB != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(16);
         output.WriteUInt32(INHDDNNPBDB);
       }
+      lineupList_.WriteTo(output, _repeated_lineupList_codec);
       if (Level != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(80);
         output.WriteUInt32(Level);
+      }
+      if (RoundCount != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(RoundCount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -205,18 +205,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (RoundCount != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(RoundCount);
-      }
-      lineupList_.WriteTo(ref output, _repeated_lineupList_codec);
       if (INHDDNNPBDB != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(16);
         output.WriteUInt32(INHDDNNPBDB);
       }
+      lineupList_.WriteTo(ref output, _repeated_lineupList_codec);
       if (Level != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(80);
         output.WriteUInt32(Level);
+      }
+      if (RoundCount != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(RoundCount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -275,8 +275,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            RoundCount = input.ReadUInt32();
+          case 16: {
+            INHDDNNPBDB = input.ReadUInt32();
             break;
           }
           case 58: {
@@ -284,11 +284,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 80: {
-            INHDDNNPBDB = input.ReadUInt32();
+            Level = input.ReadUInt32();
             break;
           }
-          case 104: {
-            Level = input.ReadUInt32();
+          case 112: {
+            RoundCount = input.ReadUInt32();
             break;
           }
         }
@@ -306,8 +306,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            RoundCount = input.ReadUInt32();
+          case 16: {
+            INHDDNNPBDB = input.ReadUInt32();
             break;
           }
           case 58: {
@@ -315,11 +315,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 80: {
-            INHDDNNPBDB = input.ReadUInt32();
+            Level = input.ReadUInt32();
             break;
           }
-          case 104: {
-            Level = input.ReadUInt32();
+          case 112: {
+            RoundCount = input.ReadUInt32();
             break;
           }
         }

@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CitTd29yZFRyYWluaW5nQWN0aW9uVHVyblNldHRsZVNjTm90aWZ5LnByb3Rv",
             "GhFNTU9JQkFDQlBLQS5wcm90byJfCiVTd29yZFRyYWluaW5nQWN0aW9uVHVy",
-            "blNldHRsZVNjTm90aWZ5EhMKC0NHRkNNS05DQ0RDGA0gASgNEiEKC01DQ0NO",
-            "TElJSUJDGAwgAygLMgwuTU1PSUJBQ0JQS0FCHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "blNldHRsZVNjTm90aWZ5EhMKC0NHRkNNS05DQ0RDGAMgASgNEiEKC01DQ0NO",
+            "TElJSUJDGA4gAygLMgwuTU1PSUJBQ0JQS0FCHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MMOIBACBPKAReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "CGFCMKNCCDC" field.</summary>
-    public const int CGFCMKNCCDCFieldNumber = 13;
+    public const int CGFCMKNCCDCFieldNumber = 3;
     private uint cGFCMKNCCDC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MCCCNLIIIBC" field.</summary>
-    public const int MCCCNLIIIBCFieldNumber = 12;
+    public const int MCCCNLIIIBCFieldNumber = 14;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MMOIBACBPKA> _repeated_mCCCNLIIIBC_codec
-        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.MMOIBACBPKA.Parser);
+        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.MMOIBACBPKA.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MMOIBACBPKA> mCCCNLIIIBC_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MMOIBACBPKA>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      mCCCNLIIIBC_.WriteTo(output, _repeated_mCCCNLIIIBC_codec);
       if (CGFCMKNCCDC != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(24);
         output.WriteUInt32(CGFCMKNCCDC);
       }
+      mCCCNLIIIBC_.WriteTo(output, _repeated_mCCCNLIIIBC_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      mCCCNLIIIBC_.WriteTo(ref output, _repeated_mCCCNLIIIBC_codec);
       if (CGFCMKNCCDC != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(24);
         output.WriteUInt32(CGFCMKNCCDC);
       }
+      mCCCNLIIIBC_.WriteTo(ref output, _repeated_mCCCNLIIIBC_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -217,12 +217,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 98: {
-            mCCCNLIIIBC_.AddEntriesFrom(input, _repeated_mCCCNLIIIBC_codec);
+          case 24: {
+            CGFCMKNCCDC = input.ReadUInt32();
             break;
           }
-          case 104: {
-            CGFCMKNCCDC = input.ReadUInt32();
+          case 114: {
+            mCCCNLIIIBC_.AddEntriesFrom(input, _repeated_mCCCNLIIIBC_codec);
             break;
           }
         }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 98: {
-            mCCCNLIIIBC_.AddEntriesFrom(ref input, _repeated_mCCCNLIIIBC_codec);
+          case 24: {
+            CGFCMKNCCDC = input.ReadUInt32();
             break;
           }
-          case 104: {
-            CGFCMKNCCDC = input.ReadUInt32();
+          case 114: {
+            mCCCNLIIIBC_.AddEntriesFrom(ref input, _repeated_mCCCNLIIIBC_codec);
             break;
           }
         }

@@ -24,57 +24,58 @@ namespace EggLink.DanhengServer.Proto {
     static GateServerReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChBHYXRlU2VydmVyLnByb3RvIuUPCgpHYXRlU2VydmVyEhgKD3JlZGVlbV9j",
-            "b2RlX3VybBibCiABKAkSGwoSdXNlX25ld19uZXR3b3JraW5nGKUOIAEoCBI4",
-            "CjByb2d1ZV90b3Vybl9idWlsZF9yZWZfYXBpX3JlcV9jb2xvcl9oZWFkZXJf",
-            "dmFsdWUYKSABKAkSIQoYZGVzaWduX2RhdGFfcmVsb2dpbl9kZXNjGMQKIAEo",
-            "CRIUCgtPQU9ISUVDREdDQxj8DiADKAkSGQoQZW5hYmxlX3dhdGVybWFyaxjl",
-            "ByABKAgSIgoZdGhpcmRfcHJpdmFjeV9pbl9nYW1lX3VybBitDCABKAkSFQoN",
-            "c3RvcF9lbmRfdGltZRgKIAEoAxIRCghpZml4X3VybBjZDiABKAkSKgohcGxh",
-            "eWVyX3JldHVybl9xdWVzdGlvbm5haXJlX2FfdXJsGOAEIAEoCRIVCgxpcHY2",
-            "X2FkZHJlc3MYmgwgASgJEhsKEm5ldHdvcmtfZGlhZ25vc3RpYxizAyABKAgS",
-            "IQoYb25saW5lX3JlcGxheV91cGxvYWRfdXJsGPwJIAEoCRIPCgd1c2VfdGNw",
-            "GBMgASgIEhgKD2VuYWJsZV9jZG5faXB2NhjnDyABKA0SKgohcGxheWVyX3Jl",
-            "dHVybl9xdWVzdGlvbm5haXJlX2JfdXJsGJMIIAEoCRIUCgtFQ0JGRUhGUE9G",
-            "ShjyAyABKAgSHAoTcHJpdmFjeV9pbl9nYW1lX3VybBieDCABKAkSNwoucm9n",
-            "dWVfdG91cm5fYnVpbGRfcmVmX2FwaV9yZXFfY29sb3JfaGVhZGVyX2tleRjN",
-            "CiABKAkSGwoSdXNlcl9hZ3JlZW1lbnRfdXJsGN4PIAEoCRIYCg9tZGtfcmVz",
-            "X3ZlcnNpb24YrQogASgJEhcKD2V4X3Jlc291cmNlX3VybBgNIAEoCRIjChpv",
-            "bmxpbmVfcmVwbGF5X2Rvd25sb2FkX3VybBi1DCABKAkSGQoQcHJlX2Rvd25s",
-            "b2FkX3VybBiJBiABKAkSGwoSc2VydmVyX2Rlc2NyaXB0aW9uGPAKIAEoCRIp",
-            "CiBwZXJzb25hbF9pbmZvcm1hdGlvbl9pbl9nYW1lX3VybBiEBiABKAkSHwoW",
-            "b3BlcmF0aW9uX2ZlZWRiYWNrX3VybBiRBiABKAkSEQoJc3RvcF9kZXNjGAUg",
-            "ASgJEhUKDGlmaXhfdmVyc2lvbhj8BSABKAkSHwoWY29tbXVuaXR5X2FjdGl2",
-            "aXR5X3VybBj/ByABKAkSFAoLTVBOSklLUEtPSEoY9w0gASgJEhEKCGlvc19l",
-            "eGFtGPsOIAEoCBIYCg9sb2dpbl93aGl0ZV9tc2cY0AcgASgJEh0KFWVuYWJs",
-            "ZV92ZXJzaW9uX3VwZGF0ZRgHIAEoCBIoCh9nYW1lX3N0YXJ0X2N1c3RvbWVy",
-            "X3NlcnZpY2VfdXJsGMUDIAEoCRITCgtyZWdpb25fbmFtZRgOIAEoCRITCgpt",
-            "dHBfc3dpdGNoGIkHIAEoCBIlChx0ZWVuYWdlcl9wcml2YWN5X2luX2dhbWVf",
-            "dXJsGMsCIAEoCRIhChhlbmFibGVfdXBsb2FkX2JhdHRsZV9sb2cY7AEgASgI",
-            "EiUKHHJvZ3VlX3RvdXJuX2J1aWxkX3JlZl9oNV91cmwYjQIgASgJEiIKGXRl",
-            "bXBvcmFyeV9tYWludGVuYW5jZV91cmwY0wUgASgJEjUKLHJvZ3VlX3RvdXJu",
-            "X2J1aWxkX3JlZl9zdGF0aWNfZGF0YV91cmxfcHJlZml4GKkOIAEoCRIWCg1o",
-            "b3RfcG9pbnRfdXJsGOwLIAEoCRIkChtyb2d1ZV90b3Vybl9ub3RpY2VfcGlj",
-            "X3R5cGUY3AogASgNEh8KFm9mZmljaWFsX2NvbW11bml0eV91cmwYrw8gASgJ",
-            "EhgKEGFzYl9yZWxvZ2luX3R5cGUYAiABKA0SIAoYZGVzaWduX2RhdGFfcmVs",
-            "b2dpbl90eXBlGA8gASgNEhoKEWNsaWVudF9zZWNyZXRfa2V5GMcJIAEoCRIp",
-            "CiFlbmFibGVfZGVzaWduX2RhdGFfdmVyc2lvbl91cGRhdGUYCyABKAgSJgod",
-            "ZW5hYmxlX2FuZHJvaWRfbWlkZGxlX3BhY2thZ2UYkwcgASgIEhsKEnJvZ3Vl",
-            "X21hZ2ljX2g1X3VybBibDiABKAkSDwoHcmV0Y29kZRgIIAEoDRIXCg5jbG91",
-            "ZF9nYW1lX3VybBjrByABKAkSGAoQYXNiX3JlbG9naW5fZGVzYxgEIAEoCRIg",
-            "ChdlbmFibGVfc2F2ZV9yZXBsYXlfZmlsZRiTAyABKAgSFQoMd2ViX3Rvb2xf",
-            "dXJsGMkNIAEoCRIKCgJpcBgDIAEoCRIYChBhc3NldF9idW5kbGVfdXJsGAkg",
-            "ASgJEgwKBHBvcnQYDCABKA0SDwoHbHVhX3VybBgBIAEoCRIkChtwbGF5ZXJf",
-            "cmV0dXJuX2ludml0ZV9oNV91cmwYhg0gASgJEhsKEmN1c3RvbV9zZXJ2aWNl",
-            "X3VybBiECiABKAkSGAoPZm9yYmlkX3JlY2hhcmdlGKoPIAEoCBIeChVyb2d1",
-            "ZV90b3Vybl9ub3RpY2VfaWQY/QggASgNEhoKEWNsb3NlX3JlZGVlbV9jb2Rl",
-            "GNEDIAEoCBIcChNldmVudF90cmFja2luZ19vcGVuGLYJIAEoCBIXCg9zdG9w",
-            "X2JlZ2luX3RpbWUYBiABKANCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
-            "cm90b2IGcHJvdG8z"));
+            "ChBHYXRlU2VydmVyLnByb3RvIpkQCgpHYXRlU2VydmVyEhcKD2V4X3Jlc291",
+            "cmNlX3VybBgDIAEoCRIYCg9lbmFibGVfY2RuX2lwdjYYngkgASgNEhsKEnNl",
+            "cnZlcl9kZXNjcmlwdGlvbhjnDSABKAkSKgohcGxheWVyX3JldHVybl9xdWVz",
+            "dGlvbm5haXJlX2JfdXJsGN8KIAEoCRIVCgxpcHY2X2FkZHJlc3MY8w0gASgJ",
+            "EiYKHWVuYWJsZV9hbmRyb2lkX21pZGRsZV9wYWNrYWdlGJkCIAEoCBIbChJ1",
+            "c2VfbmV3X25ldHdvcmtpbmcY2QEgASgIEhUKDHdlYl90b29sX3VybBiGBSAB",
+            "KAkSHAoTZXZlbnRfdHJhY2tpbmdfb3Blbhi4DSABKAgSHwoWY29tbXVuaXR5",
+            "X2FjdGl2aXR5X3VybBiyAyABKAkSGgoRY2xvc2VfcmVkZWVtX2NvZGUYiQwg",
+            "ASgIEhcKD3N0b3BfYmVnaW5fdGltZRgMIAEoAxIbChJuZXR3b3JrX2RpYWdu",
+            "b3N0aWMYwAwgASgIEiIKGXRlbXBvcmFyeV9tYWludGVuYW5jZV91cmwYmQEg",
+            "ASgJEh0KFWVuYWJsZV92ZXJzaW9uX3VwZGF0ZRgKIAEoCBIbChJ1c2VyX2Fn",
+            "cmVlbWVudF91cmwY1AsgASgJEg8KB3JldGNvZGUYAiABKA0SGQoQY2RrZXlf",
+            "cmVjYWxsX3VybBjvASABKAkSEwoLcmVnaW9uX25hbWUYBiABKAkSGAoQYXNz",
+            "ZXRfYnVuZGxlX3VybBgJIAEoCRILCgNtc2cYCyABKAkSNwoucm9ndWVfdG91",
+            "cm5fYnVpbGRfcmVmX2FwaV9yZXFfY29sb3JfaGVhZGVyX2tleRj6AyABKAkS",
+            "GwoSY3VzdG9tX3NlcnZpY2VfdXJsGIEOIAEoCRIVCg1zdG9wX2VuZF90aW1l",
+            "GAEgASgDEhgKEGFzYl9yZWxvZ2luX3R5cGUYBCABKA0SOQowcm9ndWVfdG91",
+            "cm5fYnVpbGRfcmVmX2FwaV9yZXFfY29sb3JfaGVhZGVyX3ZhbHVlGOEBIAEo",
+            "CRITCgptdHBfc3dpdGNoGN8EIAEoCBIUCgtNUE5KSUtQS09IShirBCABKAkS",
+            "GQoQcHJlX2Rvd25sb2FkX3VybBjOAiABKAkSGwoScm9ndWVfbWFnaWNfaDVf",
+            "dXJsGIsCIAEoCRIUCgtFQ0JGRUhGUE9GShiuDyABKAgSFAoLT0FPSElFQ0RH",
+            "Q0MY6g8gAygJEiUKHHJvZ3VlX3RvdXJuX2J1aWxkX3JlZl9oNV91cmwYmAog",
+            "ASgJEhkKEGVuYWJsZV93YXRlcm1hcmsY8gkgASgIEiQKG3BsYXllcl9yZXR1",
+            "cm5faW52aXRlX2g1X3VybBixBSABKAkSIAoXZW5hYmxlX3NhdmVfcmVwbGF5",
+            "X2ZpbGUY6QEgASgIEgwKBHBvcnQYDiABKA0SGAoQYXNiX3JlbG9naW5fZGVz",
+            "YxgIIAEoCRIoCh9nYW1lX3N0YXJ0X2N1c3RvbWVyX3NlcnZpY2VfdXJsGKIH",
+            "IAEoCRIXCg5jbG91ZF9nYW1lX3VybBilBiABKAkSIQoYZGVzaWduX2RhdGFf",
+            "cmVsb2dpbl9kZXNjGJYNIAEoCRIpCiFlbmFibGVfZGVzaWduX2RhdGFfdmVy",
+            "c2lvbl91cGRhdGUYDyABKAgSEQoIaW9zX2V4YW0YtAwgASgIEhQKC05HQ0lN",
+            "SE9MSkJBGMsFIAEoCRIcChNwcml2YWN5X2luX2dhbWVfdXJsGLcKIAEoCRIh",
+            "ChhlbmFibGVfdXBsb2FkX2JhdHRsZV9sb2cYvgkgASgIEiQKG3JvZ3VlX3Rv",
+            "dXJuX25vdGljZV9waWNfdHlwZRi/DSABKA0SEwoLUE9PT0xHRktLSkwYTSAB",
+            "KAkSJQocdGVlbmFnZXJfcHJpdmFjeV9pbl9nYW1lX3VybBjjCCABKAkSKgoh",
+            "cGxheWVyX3JldHVybl9xdWVzdGlvbm5haXJlX2FfdXJsGLwEIAEoCRIiChl0",
+            "aGlyZF9wcml2YWN5X2luX2dhbWVfdXJsGLAMIAEoCRIjChpvbmxpbmVfcmVw",
+            "bGF5X2Rvd25sb2FkX3VybBiUCCABKAkSFgoNaG90X3BvaW50X3VybBjXCiAB",
+            "KAkSGgoRY2xpZW50X3NlY3JldF9rZXkYkwIgASgJEikKIHBlcnNvbmFsX2lu",
+            "Zm9ybWF0aW9uX2luX2dhbWVfdXJsGLQFIAEoCRIYCg9mb3JiaWRfcmVjaGFy",
+            "Z2UYlA0gASgIEgoKAmlwGAcgASgJEh8KFm9wZXJhdGlvbl9mZWVkYmFja191",
+            "cmwYxQMgASgJEhUKDGlmaXhfdmVyc2lvbhiLDCABKAkSEAoHdXNlX3RjcBiI",
+            "DiABKAgSIQoYb25saW5lX3JlcGxheV91cGxvYWRfdXJsGPIHIAEoCRIgChhk",
+            "ZXNpZ25fZGF0YV9yZWxvZ2luX3R5cGUYBSABKA0SHwoWb2ZmaWNpYWxfY29t",
+            "bXVuaXR5X3VybBiEBCABKAkSNQoscm9ndWVfdG91cm5fYnVpbGRfcmVmX3N0",
+            "YXRpY19kYXRhX3VybF9wcmVmaXgYpAYgASgJEg8KB2x1YV91cmwYDSABKAkS",
+            "EQoIaWZpeF91cmwYrwkgASgJEhgKD2xvZ2luX3doaXRlX21zZxi6DSABKAkS",
+            "GAoPbWRrX3Jlc192ZXJzaW9uGMoBIAEoCRIUCgtFSkNGQkRETExNRRiOCCAB",
+            "KAkSFAoLTEhPT0ZNQUlIUEMYlAMgASgJQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GateServer), global::EggLink.DanhengServer.Proto.GateServer.Parser, new[]{ "RedeemCodeUrl", "UseNewNetworking", "RogueTournBuildRefApiReqColorHeaderValue", "DesignDataReloginDesc", "OAOHIECDGCC", "EnableWatermark", "ThirdPrivacyInGameUrl", "StopEndTime", "IfixUrl", "PlayerReturnQuestionnaireAUrl", "Ipv6Address", "NetworkDiagnostic", "OnlineReplayUploadUrl", "UseTcp", "EnableCdnIpv6", "PlayerReturnQuestionnaireBUrl", "ECBFEHFPOFJ", "PrivacyInGameUrl", "RogueTournBuildRefApiReqColorHeaderKey", "UserAgreementUrl", "MdkResVersion", "ExResourceUrl", "OnlineReplayDownloadUrl", "PreDownloadUrl", "ServerDescription", "PersonalInformationInGameUrl", "OperationFeedbackUrl", "StopDesc", "IfixVersion", "CommunityActivityUrl", "MPNJIKPKOHJ", "IosExam", "LoginWhiteMsg", "EnableVersionUpdate", "GameStartCustomerServiceUrl", "RegionName", "MtpSwitch", "TeenagerPrivacyInGameUrl", "EnableUploadBattleLog", "RogueTournBuildRefH5Url", "TemporaryMaintenanceUrl", "RogueTournBuildRefStaticDataUrlPrefix", "HotPointUrl", "RogueTournNoticePicType", "OfficialCommunityUrl", "AsbReloginType", "DesignDataReloginType", "ClientSecretKey", "EnableDesignDataVersionUpdate", "EnableAndroidMiddlePackage", "RogueMagicH5Url", "Retcode", "CloudGameUrl", "AsbReloginDesc", "EnableSaveReplayFile", "WebToolUrl", "Ip", "AssetBundleUrl", "Port", "LuaUrl", "PlayerReturnInviteH5Url", "CustomServiceUrl", "ForbidRecharge", "RogueTournNoticeId", "CloseRedeemCode", "EventTrackingOpen", "StopBeginTime" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GateServer), global::EggLink.DanhengServer.Proto.GateServer.Parser, new[]{ "ExResourceUrl", "EnableCdnIpv6", "ServerDescription", "PlayerReturnQuestionnaireBUrl", "Ipv6Address", "EnableAndroidMiddlePackage", "UseNewNetworking", "WebToolUrl", "EventTrackingOpen", "CommunityActivityUrl", "CloseRedeemCode", "StopBeginTime", "NetworkDiagnostic", "TemporaryMaintenanceUrl", "EnableVersionUpdate", "UserAgreementUrl", "Retcode", "CdkeyRecallUrl", "RegionName", "AssetBundleUrl", "Msg", "RogueTournBuildRefApiReqColorHeaderKey", "CustomServiceUrl", "StopEndTime", "AsbReloginType", "RogueTournBuildRefApiReqColorHeaderValue", "MtpSwitch", "MPNJIKPKOHJ", "PreDownloadUrl", "RogueMagicH5Url", "ECBFEHFPOFJ", "OAOHIECDGCC", "RogueTournBuildRefH5Url", "EnableWatermark", "PlayerReturnInviteH5Url", "EnableSaveReplayFile", "Port", "AsbReloginDesc", "GameStartCustomerServiceUrl", "CloudGameUrl", "DesignDataReloginDesc", "EnableDesignDataVersionUpdate", "IosExam", "NGCIMHOLJBA", "PrivacyInGameUrl", "EnableUploadBattleLog", "RogueTournNoticePicType", "POOOLGFKKJL", "TeenagerPrivacyInGameUrl", "PlayerReturnQuestionnaireAUrl", "ThirdPrivacyInGameUrl", "OnlineReplayDownloadUrl", "HotPointUrl", "ClientSecretKey", "PersonalInformationInGameUrl", "ForbidRecharge", "Ip", "OperationFeedbackUrl", "IfixVersion", "UseTcp", "OnlineReplayUploadUrl", "DesignDataReloginType", "OfficialCommunityUrl", "RogueTournBuildRefStaticDataUrlPrefix", "LuaUrl", "IfixUrl", "LoginWhiteMsg", "MdkResVersion", "EJCFBDDLLME", "LHOOFMAIHPC" }, null, null, null, null)
           }));
     }
     #endregion
@@ -116,73 +117,76 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GateServer(GateServer other) : this() {
-      redeemCodeUrl_ = other.redeemCodeUrl_;
-      useNewNetworking_ = other.useNewNetworking_;
-      rogueTournBuildRefApiReqColorHeaderValue_ = other.rogueTournBuildRefApiReqColorHeaderValue_;
-      designDataReloginDesc_ = other.designDataReloginDesc_;
-      oAOHIECDGCC_ = other.oAOHIECDGCC_.Clone();
-      enableWatermark_ = other.enableWatermark_;
-      thirdPrivacyInGameUrl_ = other.thirdPrivacyInGameUrl_;
-      stopEndTime_ = other.stopEndTime_;
-      ifixUrl_ = other.ifixUrl_;
-      playerReturnQuestionnaireAUrl_ = other.playerReturnQuestionnaireAUrl_;
-      ipv6Address_ = other.ipv6Address_;
-      networkDiagnostic_ = other.networkDiagnostic_;
-      onlineReplayUploadUrl_ = other.onlineReplayUploadUrl_;
-      useTcp_ = other.useTcp_;
-      enableCdnIpv6_ = other.enableCdnIpv6_;
-      playerReturnQuestionnaireBUrl_ = other.playerReturnQuestionnaireBUrl_;
-      eCBFEHFPOFJ_ = other.eCBFEHFPOFJ_;
-      privacyInGameUrl_ = other.privacyInGameUrl_;
-      rogueTournBuildRefApiReqColorHeaderKey_ = other.rogueTournBuildRefApiReqColorHeaderKey_;
-      userAgreementUrl_ = other.userAgreementUrl_;
-      mdkResVersion_ = other.mdkResVersion_;
       exResourceUrl_ = other.exResourceUrl_;
-      onlineReplayDownloadUrl_ = other.onlineReplayDownloadUrl_;
-      preDownloadUrl_ = other.preDownloadUrl_;
+      enableCdnIpv6_ = other.enableCdnIpv6_;
       serverDescription_ = other.serverDescription_;
-      personalInformationInGameUrl_ = other.personalInformationInGameUrl_;
-      operationFeedbackUrl_ = other.operationFeedbackUrl_;
-      stopDesc_ = other.stopDesc_;
-      ifixVersion_ = other.ifixVersion_;
-      communityActivityUrl_ = other.communityActivityUrl_;
-      mPNJIKPKOHJ_ = other.mPNJIKPKOHJ_;
-      iosExam_ = other.iosExam_;
-      loginWhiteMsg_ = other.loginWhiteMsg_;
-      enableVersionUpdate_ = other.enableVersionUpdate_;
-      gameStartCustomerServiceUrl_ = other.gameStartCustomerServiceUrl_;
-      regionName_ = other.regionName_;
-      mtpSwitch_ = other.mtpSwitch_;
-      teenagerPrivacyInGameUrl_ = other.teenagerPrivacyInGameUrl_;
-      enableUploadBattleLog_ = other.enableUploadBattleLog_;
-      rogueTournBuildRefH5Url_ = other.rogueTournBuildRefH5Url_;
-      temporaryMaintenanceUrl_ = other.temporaryMaintenanceUrl_;
-      rogueTournBuildRefStaticDataUrlPrefix_ = other.rogueTournBuildRefStaticDataUrlPrefix_;
-      hotPointUrl_ = other.hotPointUrl_;
-      rogueTournNoticePicType_ = other.rogueTournNoticePicType_;
-      officialCommunityUrl_ = other.officialCommunityUrl_;
-      asbReloginType_ = other.asbReloginType_;
-      designDataReloginType_ = other.designDataReloginType_;
-      clientSecretKey_ = other.clientSecretKey_;
-      enableDesignDataVersionUpdate_ = other.enableDesignDataVersionUpdate_;
+      playerReturnQuestionnaireBUrl_ = other.playerReturnQuestionnaireBUrl_;
+      ipv6Address_ = other.ipv6Address_;
       enableAndroidMiddlePackage_ = other.enableAndroidMiddlePackage_;
-      rogueMagicH5Url_ = other.rogueMagicH5Url_;
-      retcode_ = other.retcode_;
-      cloudGameUrl_ = other.cloudGameUrl_;
-      asbReloginDesc_ = other.asbReloginDesc_;
-      enableSaveReplayFile_ = other.enableSaveReplayFile_;
+      useNewNetworking_ = other.useNewNetworking_;
       webToolUrl_ = other.webToolUrl_;
-      ip_ = other.ip_;
-      assetBundleUrl_ = other.assetBundleUrl_;
-      port_ = other.port_;
-      luaUrl_ = other.luaUrl_;
-      playerReturnInviteH5Url_ = other.playerReturnInviteH5Url_;
-      customServiceUrl_ = other.customServiceUrl_;
-      forbidRecharge_ = other.forbidRecharge_;
-      rogueTournNoticeId_ = other.rogueTournNoticeId_;
-      closeRedeemCode_ = other.closeRedeemCode_;
       eventTrackingOpen_ = other.eventTrackingOpen_;
+      communityActivityUrl_ = other.communityActivityUrl_;
+      closeRedeemCode_ = other.closeRedeemCode_;
       stopBeginTime_ = other.stopBeginTime_;
+      networkDiagnostic_ = other.networkDiagnostic_;
+      temporaryMaintenanceUrl_ = other.temporaryMaintenanceUrl_;
+      enableVersionUpdate_ = other.enableVersionUpdate_;
+      userAgreementUrl_ = other.userAgreementUrl_;
+      retcode_ = other.retcode_;
+      cdkeyRecallUrl_ = other.cdkeyRecallUrl_;
+      regionName_ = other.regionName_;
+      assetBundleUrl_ = other.assetBundleUrl_;
+      msg_ = other.msg_;
+      rogueTournBuildRefApiReqColorHeaderKey_ = other.rogueTournBuildRefApiReqColorHeaderKey_;
+      customServiceUrl_ = other.customServiceUrl_;
+      stopEndTime_ = other.stopEndTime_;
+      asbReloginType_ = other.asbReloginType_;
+      rogueTournBuildRefApiReqColorHeaderValue_ = other.rogueTournBuildRefApiReqColorHeaderValue_;
+      mtpSwitch_ = other.mtpSwitch_;
+      mPNJIKPKOHJ_ = other.mPNJIKPKOHJ_;
+      preDownloadUrl_ = other.preDownloadUrl_;
+      rogueMagicH5Url_ = other.rogueMagicH5Url_;
+      eCBFEHFPOFJ_ = other.eCBFEHFPOFJ_;
+      oAOHIECDGCC_ = other.oAOHIECDGCC_.Clone();
+      rogueTournBuildRefH5Url_ = other.rogueTournBuildRefH5Url_;
+      enableWatermark_ = other.enableWatermark_;
+      playerReturnInviteH5Url_ = other.playerReturnInviteH5Url_;
+      enableSaveReplayFile_ = other.enableSaveReplayFile_;
+      port_ = other.port_;
+      asbReloginDesc_ = other.asbReloginDesc_;
+      gameStartCustomerServiceUrl_ = other.gameStartCustomerServiceUrl_;
+      cloudGameUrl_ = other.cloudGameUrl_;
+      designDataReloginDesc_ = other.designDataReloginDesc_;
+      enableDesignDataVersionUpdate_ = other.enableDesignDataVersionUpdate_;
+      iosExam_ = other.iosExam_;
+      nGCIMHOLJBA_ = other.nGCIMHOLJBA_;
+      privacyInGameUrl_ = other.privacyInGameUrl_;
+      enableUploadBattleLog_ = other.enableUploadBattleLog_;
+      rogueTournNoticePicType_ = other.rogueTournNoticePicType_;
+      pOOOLGFKKJL_ = other.pOOOLGFKKJL_;
+      teenagerPrivacyInGameUrl_ = other.teenagerPrivacyInGameUrl_;
+      playerReturnQuestionnaireAUrl_ = other.playerReturnQuestionnaireAUrl_;
+      thirdPrivacyInGameUrl_ = other.thirdPrivacyInGameUrl_;
+      onlineReplayDownloadUrl_ = other.onlineReplayDownloadUrl_;
+      hotPointUrl_ = other.hotPointUrl_;
+      clientSecretKey_ = other.clientSecretKey_;
+      personalInformationInGameUrl_ = other.personalInformationInGameUrl_;
+      forbidRecharge_ = other.forbidRecharge_;
+      ip_ = other.ip_;
+      operationFeedbackUrl_ = other.operationFeedbackUrl_;
+      ifixVersion_ = other.ifixVersion_;
+      useTcp_ = other.useTcp_;
+      onlineReplayUploadUrl_ = other.onlineReplayUploadUrl_;
+      designDataReloginType_ = other.designDataReloginType_;
+      officialCommunityUrl_ = other.officialCommunityUrl_;
+      rogueTournBuildRefStaticDataUrlPrefix_ = other.rogueTournBuildRefStaticDataUrlPrefix_;
+      luaUrl_ = other.luaUrl_;
+      ifixUrl_ = other.ifixUrl_;
+      loginWhiteMsg_ = other.loginWhiteMsg_;
+      mdkResVersion_ = other.mdkResVersion_;
+      eJCFBDDLLME_ = other.eJCFBDDLLME_;
+      lHOOFMAIHPC_ = other.lHOOFMAIHPC_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -192,259 +196,8 @@ namespace EggLink.DanhengServer.Proto {
       return new GateServer(this);
     }
 
-    /// <summary>Field number for the "redeem_code_url" field.</summary>
-    public const int RedeemCodeUrlFieldNumber = 1307;
-    private string redeemCodeUrl_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string RedeemCodeUrl {
-      get { return redeemCodeUrl_; }
-      set {
-        redeemCodeUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "use_new_networking" field.</summary>
-    public const int UseNewNetworkingFieldNumber = 1829;
-    private bool useNewNetworking_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool UseNewNetworking {
-      get { return useNewNetworking_; }
-      set {
-        useNewNetworking_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "rogue_tourn_build_ref_api_req_color_header_value" field.</summary>
-    public const int RogueTournBuildRefApiReqColorHeaderValueFieldNumber = 41;
-    private string rogueTournBuildRefApiReqColorHeaderValue_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string RogueTournBuildRefApiReqColorHeaderValue {
-      get { return rogueTournBuildRefApiReqColorHeaderValue_; }
-      set {
-        rogueTournBuildRefApiReqColorHeaderValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "design_data_relogin_desc" field.</summary>
-    public const int DesignDataReloginDescFieldNumber = 1348;
-    private string designDataReloginDesc_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string DesignDataReloginDesc {
-      get { return designDataReloginDesc_; }
-      set {
-        designDataReloginDesc_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "OAOHIECDGCC" field.</summary>
-    public const int OAOHIECDGCCFieldNumber = 1916;
-    private static readonly pb::FieldCodec<string> _repeated_oAOHIECDGCC_codec
-        = pb::FieldCodec.ForString(15330);
-    private readonly pbc::RepeatedField<string> oAOHIECDGCC_ = new pbc::RepeatedField<string>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> OAOHIECDGCC {
-      get { return oAOHIECDGCC_; }
-    }
-
-    /// <summary>Field number for the "enable_watermark" field.</summary>
-    public const int EnableWatermarkFieldNumber = 997;
-    private bool enableWatermark_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool EnableWatermark {
-      get { return enableWatermark_; }
-      set {
-        enableWatermark_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "third_privacy_in_game_url" field.</summary>
-    public const int ThirdPrivacyInGameUrlFieldNumber = 1581;
-    private string thirdPrivacyInGameUrl_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string ThirdPrivacyInGameUrl {
-      get { return thirdPrivacyInGameUrl_; }
-      set {
-        thirdPrivacyInGameUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "stop_end_time" field.</summary>
-    public const int StopEndTimeFieldNumber = 10;
-    private long stopEndTime_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long StopEndTime {
-      get { return stopEndTime_; }
-      set {
-        stopEndTime_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "ifix_url" field.</summary>
-    public const int IfixUrlFieldNumber = 1881;
-    private string ifixUrl_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string IfixUrl {
-      get { return ifixUrl_; }
-      set {
-        ifixUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "player_return_questionnaire_a_url" field.</summary>
-    public const int PlayerReturnQuestionnaireAUrlFieldNumber = 608;
-    private string playerReturnQuestionnaireAUrl_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string PlayerReturnQuestionnaireAUrl {
-      get { return playerReturnQuestionnaireAUrl_; }
-      set {
-        playerReturnQuestionnaireAUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "ipv6_address" field.</summary>
-    public const int Ipv6AddressFieldNumber = 1562;
-    private string ipv6Address_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Ipv6Address {
-      get { return ipv6Address_; }
-      set {
-        ipv6Address_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "network_diagnostic" field.</summary>
-    public const int NetworkDiagnosticFieldNumber = 435;
-    private bool networkDiagnostic_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool NetworkDiagnostic {
-      get { return networkDiagnostic_; }
-      set {
-        networkDiagnostic_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "online_replay_upload_url" field.</summary>
-    public const int OnlineReplayUploadUrlFieldNumber = 1276;
-    private string onlineReplayUploadUrl_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string OnlineReplayUploadUrl {
-      get { return onlineReplayUploadUrl_; }
-      set {
-        onlineReplayUploadUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "use_tcp" field.</summary>
-    public const int UseTcpFieldNumber = 19;
-    private bool useTcp_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool UseTcp {
-      get { return useTcp_; }
-      set {
-        useTcp_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "enable_cdn_ipv6" field.</summary>
-    public const int EnableCdnIpv6FieldNumber = 2023;
-    private uint enableCdnIpv6_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint EnableCdnIpv6 {
-      get { return enableCdnIpv6_; }
-      set {
-        enableCdnIpv6_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "player_return_questionnaire_b_url" field.</summary>
-    public const int PlayerReturnQuestionnaireBUrlFieldNumber = 1043;
-    private string playerReturnQuestionnaireBUrl_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string PlayerReturnQuestionnaireBUrl {
-      get { return playerReturnQuestionnaireBUrl_; }
-      set {
-        playerReturnQuestionnaireBUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "ECBFEHFPOFJ" field.</summary>
-    public const int ECBFEHFPOFJFieldNumber = 498;
-    private bool eCBFEHFPOFJ_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool ECBFEHFPOFJ {
-      get { return eCBFEHFPOFJ_; }
-      set {
-        eCBFEHFPOFJ_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "privacy_in_game_url" field.</summary>
-    public const int PrivacyInGameUrlFieldNumber = 1566;
-    private string privacyInGameUrl_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string PrivacyInGameUrl {
-      get { return privacyInGameUrl_; }
-      set {
-        privacyInGameUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "rogue_tourn_build_ref_api_req_color_header_key" field.</summary>
-    public const int RogueTournBuildRefApiReqColorHeaderKeyFieldNumber = 1357;
-    private string rogueTournBuildRefApiReqColorHeaderKey_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string RogueTournBuildRefApiReqColorHeaderKey {
-      get { return rogueTournBuildRefApiReqColorHeaderKey_; }
-      set {
-        rogueTournBuildRefApiReqColorHeaderKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "user_agreement_url" field.</summary>
-    public const int UserAgreementUrlFieldNumber = 2014;
-    private string userAgreementUrl_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string UserAgreementUrl {
-      get { return userAgreementUrl_; }
-      set {
-        userAgreementUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "mdk_res_version" field.</summary>
-    public const int MdkResVersionFieldNumber = 1325;
-    private string mdkResVersion_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string MdkResVersion {
-      get { return mdkResVersion_; }
-      set {
-        mdkResVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "ex_resource_url" field.</summary>
-    public const int ExResourceUrlFieldNumber = 13;
+    public const int ExResourceUrlFieldNumber = 3;
     private string exResourceUrl_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -455,32 +208,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "online_replay_download_url" field.</summary>
-    public const int OnlineReplayDownloadUrlFieldNumber = 1589;
-    private string onlineReplayDownloadUrl_ = "";
+    /// <summary>Field number for the "enable_cdn_ipv6" field.</summary>
+    public const int EnableCdnIpv6FieldNumber = 1182;
+    private uint enableCdnIpv6_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string OnlineReplayDownloadUrl {
-      get { return onlineReplayDownloadUrl_; }
+    public uint EnableCdnIpv6 {
+      get { return enableCdnIpv6_; }
       set {
-        onlineReplayDownloadUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "pre_download_url" field.</summary>
-    public const int PreDownloadUrlFieldNumber = 777;
-    private string preDownloadUrl_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string PreDownloadUrl {
-      get { return preDownloadUrl_; }
-      set {
-        preDownloadUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        enableCdnIpv6_ = value;
       }
     }
 
     /// <summary>Field number for the "server_description" field.</summary>
-    public const int ServerDescriptionFieldNumber = 1392;
+    public const int ServerDescriptionFieldNumber = 1767;
     private string serverDescription_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -491,296 +232,32 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "personal_information_in_game_url" field.</summary>
-    public const int PersonalInformationInGameUrlFieldNumber = 772;
-    private string personalInformationInGameUrl_ = "";
+    /// <summary>Field number for the "player_return_questionnaire_b_url" field.</summary>
+    public const int PlayerReturnQuestionnaireBUrlFieldNumber = 1375;
+    private string playerReturnQuestionnaireBUrl_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string PersonalInformationInGameUrl {
-      get { return personalInformationInGameUrl_; }
+    public string PlayerReturnQuestionnaireBUrl {
+      get { return playerReturnQuestionnaireBUrl_; }
       set {
-        personalInformationInGameUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        playerReturnQuestionnaireBUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "operation_feedback_url" field.</summary>
-    public const int OperationFeedbackUrlFieldNumber = 785;
-    private string operationFeedbackUrl_ = "";
+    /// <summary>Field number for the "ipv6_address" field.</summary>
+    public const int Ipv6AddressFieldNumber = 1779;
+    private string ipv6Address_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string OperationFeedbackUrl {
-      get { return operationFeedbackUrl_; }
+    public string Ipv6Address {
+      get { return ipv6Address_; }
       set {
-        operationFeedbackUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "stop_desc" field.</summary>
-    public const int StopDescFieldNumber = 5;
-    private string stopDesc_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string StopDesc {
-      get { return stopDesc_; }
-      set {
-        stopDesc_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "ifix_version" field.</summary>
-    public const int IfixVersionFieldNumber = 764;
-    private string ifixVersion_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string IfixVersion {
-      get { return ifixVersion_; }
-      set {
-        ifixVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "community_activity_url" field.</summary>
-    public const int CommunityActivityUrlFieldNumber = 1023;
-    private string communityActivityUrl_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string CommunityActivityUrl {
-      get { return communityActivityUrl_; }
-      set {
-        communityActivityUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "MPNJIKPKOHJ" field.</summary>
-    public const int MPNJIKPKOHJFieldNumber = 1783;
-    private string mPNJIKPKOHJ_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string MPNJIKPKOHJ {
-      get { return mPNJIKPKOHJ_; }
-      set {
-        mPNJIKPKOHJ_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "ios_exam" field.</summary>
-    public const int IosExamFieldNumber = 1915;
-    private bool iosExam_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IosExam {
-      get { return iosExam_; }
-      set {
-        iosExam_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "login_white_msg" field.</summary>
-    public const int LoginWhiteMsgFieldNumber = 976;
-    private string loginWhiteMsg_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string LoginWhiteMsg {
-      get { return loginWhiteMsg_; }
-      set {
-        loginWhiteMsg_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "enable_version_update" field.</summary>
-    public const int EnableVersionUpdateFieldNumber = 7;
-    private bool enableVersionUpdate_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool EnableVersionUpdate {
-      get { return enableVersionUpdate_; }
-      set {
-        enableVersionUpdate_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "game_start_customer_service_url" field.</summary>
-    public const int GameStartCustomerServiceUrlFieldNumber = 453;
-    private string gameStartCustomerServiceUrl_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string GameStartCustomerServiceUrl {
-      get { return gameStartCustomerServiceUrl_; }
-      set {
-        gameStartCustomerServiceUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "region_name" field.</summary>
-    public const int RegionNameFieldNumber = 14;
-    private string regionName_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string RegionName {
-      get { return regionName_; }
-      set {
-        regionName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "mtp_switch" field.</summary>
-    public const int MtpSwitchFieldNumber = 905;
-    private bool mtpSwitch_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool MtpSwitch {
-      get { return mtpSwitch_; }
-      set {
-        mtpSwitch_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "teenager_privacy_in_game_url" field.</summary>
-    public const int TeenagerPrivacyInGameUrlFieldNumber = 331;
-    private string teenagerPrivacyInGameUrl_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string TeenagerPrivacyInGameUrl {
-      get { return teenagerPrivacyInGameUrl_; }
-      set {
-        teenagerPrivacyInGameUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "enable_upload_battle_log" field.</summary>
-    public const int EnableUploadBattleLogFieldNumber = 236;
-    private bool enableUploadBattleLog_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool EnableUploadBattleLog {
-      get { return enableUploadBattleLog_; }
-      set {
-        enableUploadBattleLog_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "rogue_tourn_build_ref_h5_url" field.</summary>
-    public const int RogueTournBuildRefH5UrlFieldNumber = 269;
-    private string rogueTournBuildRefH5Url_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string RogueTournBuildRefH5Url {
-      get { return rogueTournBuildRefH5Url_; }
-      set {
-        rogueTournBuildRefH5Url_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "temporary_maintenance_url" field.</summary>
-    public const int TemporaryMaintenanceUrlFieldNumber = 723;
-    private string temporaryMaintenanceUrl_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string TemporaryMaintenanceUrl {
-      get { return temporaryMaintenanceUrl_; }
-      set {
-        temporaryMaintenanceUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "rogue_tourn_build_ref_static_data_url_prefix" field.</summary>
-    public const int RogueTournBuildRefStaticDataUrlPrefixFieldNumber = 1833;
-    private string rogueTournBuildRefStaticDataUrlPrefix_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string RogueTournBuildRefStaticDataUrlPrefix {
-      get { return rogueTournBuildRefStaticDataUrlPrefix_; }
-      set {
-        rogueTournBuildRefStaticDataUrlPrefix_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "hot_point_url" field.</summary>
-    public const int HotPointUrlFieldNumber = 1516;
-    private string hotPointUrl_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string HotPointUrl {
-      get { return hotPointUrl_; }
-      set {
-        hotPointUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "rogue_tourn_notice_pic_type" field.</summary>
-    public const int RogueTournNoticePicTypeFieldNumber = 1372;
-    private uint rogueTournNoticePicType_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint RogueTournNoticePicType {
-      get { return rogueTournNoticePicType_; }
-      set {
-        rogueTournNoticePicType_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "official_community_url" field.</summary>
-    public const int OfficialCommunityUrlFieldNumber = 1967;
-    private string officialCommunityUrl_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string OfficialCommunityUrl {
-      get { return officialCommunityUrl_; }
-      set {
-        officialCommunityUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "asb_relogin_type" field.</summary>
-    public const int AsbReloginTypeFieldNumber = 2;
-    private uint asbReloginType_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint AsbReloginType {
-      get { return asbReloginType_; }
-      set {
-        asbReloginType_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "design_data_relogin_type" field.</summary>
-    public const int DesignDataReloginTypeFieldNumber = 15;
-    private uint designDataReloginType_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DesignDataReloginType {
-      get { return designDataReloginType_; }
-      set {
-        designDataReloginType_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "client_secret_key" field.</summary>
-    public const int ClientSecretKeyFieldNumber = 1223;
-    private string clientSecretKey_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string ClientSecretKey {
-      get { return clientSecretKey_; }
-      set {
-        clientSecretKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "enable_design_data_version_update" field.</summary>
-    public const int EnableDesignDataVersionUpdateFieldNumber = 11;
-    private bool enableDesignDataVersionUpdate_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool EnableDesignDataVersionUpdate {
-      get { return enableDesignDataVersionUpdate_; }
-      set {
-        enableDesignDataVersionUpdate_ = value;
+        ipv6Address_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     /// <summary>Field number for the "enable_android_middle_package" field.</summary>
-    public const int EnableAndroidMiddlePackageFieldNumber = 915;
+    public const int EnableAndroidMiddlePackageFieldNumber = 281;
     private bool enableAndroidMiddlePackage_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -791,68 +268,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "rogue_magic_h5_url" field.</summary>
-    public const int RogueMagicH5UrlFieldNumber = 1819;
-    private string rogueMagicH5Url_ = "";
+    /// <summary>Field number for the "use_new_networking" field.</summary>
+    public const int UseNewNetworkingFieldNumber = 217;
+    private bool useNewNetworking_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string RogueMagicH5Url {
-      get { return rogueMagicH5Url_; }
+    public bool UseNewNetworking {
+      get { return useNewNetworking_; }
       set {
-        rogueMagicH5Url_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 8;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "cloud_game_url" field.</summary>
-    public const int CloudGameUrlFieldNumber = 1003;
-    private string cloudGameUrl_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string CloudGameUrl {
-      get { return cloudGameUrl_; }
-      set {
-        cloudGameUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "asb_relogin_desc" field.</summary>
-    public const int AsbReloginDescFieldNumber = 4;
-    private string asbReloginDesc_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string AsbReloginDesc {
-      get { return asbReloginDesc_; }
-      set {
-        asbReloginDesc_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "enable_save_replay_file" field.</summary>
-    public const int EnableSaveReplayFileFieldNumber = 403;
-    private bool enableSaveReplayFile_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool EnableSaveReplayFile {
-      get { return enableSaveReplayFile_; }
-      set {
-        enableSaveReplayFile_ = value;
+        useNewNetworking_ = value;
       }
     }
 
     /// <summary>Field number for the "web_tool_url" field.</summary>
-    public const int WebToolUrlFieldNumber = 1737;
+    public const int WebToolUrlFieldNumber = 646;
     private string webToolUrl_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -863,15 +292,135 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ip" field.</summary>
-    public const int IpFieldNumber = 3;
-    private string ip_ = "";
+    /// <summary>Field number for the "event_tracking_open" field.</summary>
+    public const int EventTrackingOpenFieldNumber = 1720;
+    private bool eventTrackingOpen_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Ip {
-      get { return ip_; }
+    public bool EventTrackingOpen {
+      get { return eventTrackingOpen_; }
       set {
-        ip_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        eventTrackingOpen_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "community_activity_url" field.</summary>
+    public const int CommunityActivityUrlFieldNumber = 434;
+    private string communityActivityUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CommunityActivityUrl {
+      get { return communityActivityUrl_; }
+      set {
+        communityActivityUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "close_redeem_code" field.</summary>
+    public const int CloseRedeemCodeFieldNumber = 1545;
+    private bool closeRedeemCode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool CloseRedeemCode {
+      get { return closeRedeemCode_; }
+      set {
+        closeRedeemCode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "stop_begin_time" field.</summary>
+    public const int StopBeginTimeFieldNumber = 12;
+    private long stopBeginTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long StopBeginTime {
+      get { return stopBeginTime_; }
+      set {
+        stopBeginTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "network_diagnostic" field.</summary>
+    public const int NetworkDiagnosticFieldNumber = 1600;
+    private bool networkDiagnostic_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool NetworkDiagnostic {
+      get { return networkDiagnostic_; }
+      set {
+        networkDiagnostic_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "temporary_maintenance_url" field.</summary>
+    public const int TemporaryMaintenanceUrlFieldNumber = 153;
+    private string temporaryMaintenanceUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TemporaryMaintenanceUrl {
+      get { return temporaryMaintenanceUrl_; }
+      set {
+        temporaryMaintenanceUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "enable_version_update" field.</summary>
+    public const int EnableVersionUpdateFieldNumber = 10;
+    private bool enableVersionUpdate_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnableVersionUpdate {
+      get { return enableVersionUpdate_; }
+      set {
+        enableVersionUpdate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "user_agreement_url" field.</summary>
+    public const int UserAgreementUrlFieldNumber = 1492;
+    private string userAgreementUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UserAgreementUrl {
+      get { return userAgreementUrl_; }
+      set {
+        userAgreementUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 2;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cdkey_recall_url" field.</summary>
+    public const int CdkeyRecallUrlFieldNumber = 239;
+    private string cdkeyRecallUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CdkeyRecallUrl {
+      get { return cdkeyRecallUrl_; }
+      set {
+        cdkeyRecallUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "region_name" field.</summary>
+    public const int RegionNameFieldNumber = 6;
+    private string regionName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RegionName {
+      get { return regionName_; }
+      set {
+        regionName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -887,44 +436,32 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "port" field.</summary>
-    public const int PortFieldNumber = 12;
-    private uint port_;
+    /// <summary>Field number for the "msg" field.</summary>
+    public const int MsgFieldNumber = 11;
+    private string msg_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Port {
-      get { return port_; }
+    public string Msg {
+      get { return msg_; }
       set {
-        port_ = value;
+        msg_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "lua_url" field.</summary>
-    public const int LuaUrlFieldNumber = 1;
-    private string luaUrl_ = "";
+    /// <summary>Field number for the "rogue_tourn_build_ref_api_req_color_header_key" field.</summary>
+    public const int RogueTournBuildRefApiReqColorHeaderKeyFieldNumber = 506;
+    private string rogueTournBuildRefApiReqColorHeaderKey_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string LuaUrl {
-      get { return luaUrl_; }
+    public string RogueTournBuildRefApiReqColorHeaderKey {
+      get { return rogueTournBuildRefApiReqColorHeaderKey_; }
       set {
-        luaUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "player_return_invite_h5_url" field.</summary>
-    public const int PlayerReturnInviteH5UrlFieldNumber = 1670;
-    private string playerReturnInviteH5Url_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string PlayerReturnInviteH5Url {
-      get { return playerReturnInviteH5Url_; }
-      set {
-        playerReturnInviteH5Url_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        rogueTournBuildRefApiReqColorHeaderKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     /// <summary>Field number for the "custom_service_url" field.</summary>
-    public const int CustomServiceUrlFieldNumber = 1284;
+    public const int CustomServiceUrlFieldNumber = 1793;
     private string customServiceUrl_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -935,8 +472,391 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "stop_end_time" field.</summary>
+    public const int StopEndTimeFieldNumber = 1;
+    private long stopEndTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long StopEndTime {
+      get { return stopEndTime_; }
+      set {
+        stopEndTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "asb_relogin_type" field.</summary>
+    public const int AsbReloginTypeFieldNumber = 4;
+    private uint asbReloginType_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint AsbReloginType {
+      get { return asbReloginType_; }
+      set {
+        asbReloginType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rogue_tourn_build_ref_api_req_color_header_value" field.</summary>
+    public const int RogueTournBuildRefApiReqColorHeaderValueFieldNumber = 225;
+    private string rogueTournBuildRefApiReqColorHeaderValue_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RogueTournBuildRefApiReqColorHeaderValue {
+      get { return rogueTournBuildRefApiReqColorHeaderValue_; }
+      set {
+        rogueTournBuildRefApiReqColorHeaderValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "mtp_switch" field.</summary>
+    public const int MtpSwitchFieldNumber = 607;
+    private bool mtpSwitch_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool MtpSwitch {
+      get { return mtpSwitch_; }
+      set {
+        mtpSwitch_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "MPNJIKPKOHJ" field.</summary>
+    public const int MPNJIKPKOHJFieldNumber = 555;
+    private string mPNJIKPKOHJ_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MPNJIKPKOHJ {
+      get { return mPNJIKPKOHJ_; }
+      set {
+        mPNJIKPKOHJ_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "pre_download_url" field.</summary>
+    public const int PreDownloadUrlFieldNumber = 334;
+    private string preDownloadUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PreDownloadUrl {
+      get { return preDownloadUrl_; }
+      set {
+        preDownloadUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "rogue_magic_h5_url" field.</summary>
+    public const int RogueMagicH5UrlFieldNumber = 267;
+    private string rogueMagicH5Url_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RogueMagicH5Url {
+      get { return rogueMagicH5Url_; }
+      set {
+        rogueMagicH5Url_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ECBFEHFPOFJ" field.</summary>
+    public const int ECBFEHFPOFJFieldNumber = 1966;
+    private bool eCBFEHFPOFJ_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ECBFEHFPOFJ {
+      get { return eCBFEHFPOFJ_; }
+      set {
+        eCBFEHFPOFJ_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "OAOHIECDGCC" field.</summary>
+    public const int OAOHIECDGCCFieldNumber = 2026;
+    private static readonly pb::FieldCodec<string> _repeated_oAOHIECDGCC_codec
+        = pb::FieldCodec.ForString(16210);
+    private readonly pbc::RepeatedField<string> oAOHIECDGCC_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> OAOHIECDGCC {
+      get { return oAOHIECDGCC_; }
+    }
+
+    /// <summary>Field number for the "rogue_tourn_build_ref_h5_url" field.</summary>
+    public const int RogueTournBuildRefH5UrlFieldNumber = 1304;
+    private string rogueTournBuildRefH5Url_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RogueTournBuildRefH5Url {
+      get { return rogueTournBuildRefH5Url_; }
+      set {
+        rogueTournBuildRefH5Url_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "enable_watermark" field.</summary>
+    public const int EnableWatermarkFieldNumber = 1266;
+    private bool enableWatermark_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnableWatermark {
+      get { return enableWatermark_; }
+      set {
+        enableWatermark_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "player_return_invite_h5_url" field.</summary>
+    public const int PlayerReturnInviteH5UrlFieldNumber = 689;
+    private string playerReturnInviteH5Url_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PlayerReturnInviteH5Url {
+      get { return playerReturnInviteH5Url_; }
+      set {
+        playerReturnInviteH5Url_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "enable_save_replay_file" field.</summary>
+    public const int EnableSaveReplayFileFieldNumber = 233;
+    private bool enableSaveReplayFile_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnableSaveReplayFile {
+      get { return enableSaveReplayFile_; }
+      set {
+        enableSaveReplayFile_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "port" field.</summary>
+    public const int PortFieldNumber = 14;
+    private uint port_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Port {
+      get { return port_; }
+      set {
+        port_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "asb_relogin_desc" field.</summary>
+    public const int AsbReloginDescFieldNumber = 8;
+    private string asbReloginDesc_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AsbReloginDesc {
+      get { return asbReloginDesc_; }
+      set {
+        asbReloginDesc_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "game_start_customer_service_url" field.</summary>
+    public const int GameStartCustomerServiceUrlFieldNumber = 930;
+    private string gameStartCustomerServiceUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string GameStartCustomerServiceUrl {
+      get { return gameStartCustomerServiceUrl_; }
+      set {
+        gameStartCustomerServiceUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "cloud_game_url" field.</summary>
+    public const int CloudGameUrlFieldNumber = 805;
+    private string cloudGameUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CloudGameUrl {
+      get { return cloudGameUrl_; }
+      set {
+        cloudGameUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "design_data_relogin_desc" field.</summary>
+    public const int DesignDataReloginDescFieldNumber = 1686;
+    private string designDataReloginDesc_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DesignDataReloginDesc {
+      get { return designDataReloginDesc_; }
+      set {
+        designDataReloginDesc_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "enable_design_data_version_update" field.</summary>
+    public const int EnableDesignDataVersionUpdateFieldNumber = 15;
+    private bool enableDesignDataVersionUpdate_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnableDesignDataVersionUpdate {
+      get { return enableDesignDataVersionUpdate_; }
+      set {
+        enableDesignDataVersionUpdate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ios_exam" field.</summary>
+    public const int IosExamFieldNumber = 1588;
+    private bool iosExam_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IosExam {
+      get { return iosExam_; }
+      set {
+        iosExam_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "NGCIMHOLJBA" field.</summary>
+    public const int NGCIMHOLJBAFieldNumber = 715;
+    private string nGCIMHOLJBA_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NGCIMHOLJBA {
+      get { return nGCIMHOLJBA_; }
+      set {
+        nGCIMHOLJBA_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "privacy_in_game_url" field.</summary>
+    public const int PrivacyInGameUrlFieldNumber = 1335;
+    private string privacyInGameUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PrivacyInGameUrl {
+      get { return privacyInGameUrl_; }
+      set {
+        privacyInGameUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "enable_upload_battle_log" field.</summary>
+    public const int EnableUploadBattleLogFieldNumber = 1214;
+    private bool enableUploadBattleLog_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnableUploadBattleLog {
+      get { return enableUploadBattleLog_; }
+      set {
+        enableUploadBattleLog_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rogue_tourn_notice_pic_type" field.</summary>
+    public const int RogueTournNoticePicTypeFieldNumber = 1727;
+    private uint rogueTournNoticePicType_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RogueTournNoticePicType {
+      get { return rogueTournNoticePicType_; }
+      set {
+        rogueTournNoticePicType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "POOOLGFKKJL" field.</summary>
+    public const int POOOLGFKKJLFieldNumber = 77;
+    private string pOOOLGFKKJL_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string POOOLGFKKJL {
+      get { return pOOOLGFKKJL_; }
+      set {
+        pOOOLGFKKJL_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "teenager_privacy_in_game_url" field.</summary>
+    public const int TeenagerPrivacyInGameUrlFieldNumber = 1123;
+    private string teenagerPrivacyInGameUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TeenagerPrivacyInGameUrl {
+      get { return teenagerPrivacyInGameUrl_; }
+      set {
+        teenagerPrivacyInGameUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "player_return_questionnaire_a_url" field.</summary>
+    public const int PlayerReturnQuestionnaireAUrlFieldNumber = 572;
+    private string playerReturnQuestionnaireAUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PlayerReturnQuestionnaireAUrl {
+      get { return playerReturnQuestionnaireAUrl_; }
+      set {
+        playerReturnQuestionnaireAUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "third_privacy_in_game_url" field.</summary>
+    public const int ThirdPrivacyInGameUrlFieldNumber = 1584;
+    private string thirdPrivacyInGameUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ThirdPrivacyInGameUrl {
+      get { return thirdPrivacyInGameUrl_; }
+      set {
+        thirdPrivacyInGameUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "online_replay_download_url" field.</summary>
+    public const int OnlineReplayDownloadUrlFieldNumber = 1044;
+    private string onlineReplayDownloadUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OnlineReplayDownloadUrl {
+      get { return onlineReplayDownloadUrl_; }
+      set {
+        onlineReplayDownloadUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "hot_point_url" field.</summary>
+    public const int HotPointUrlFieldNumber = 1367;
+    private string hotPointUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string HotPointUrl {
+      get { return hotPointUrl_; }
+      set {
+        hotPointUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "client_secret_key" field.</summary>
+    public const int ClientSecretKeyFieldNumber = 275;
+    private string clientSecretKey_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ClientSecretKey {
+      get { return clientSecretKey_; }
+      set {
+        clientSecretKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "personal_information_in_game_url" field.</summary>
+    public const int PersonalInformationInGameUrlFieldNumber = 692;
+    private string personalInformationInGameUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PersonalInformationInGameUrl {
+      get { return personalInformationInGameUrl_; }
+      set {
+        personalInformationInGameUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "forbid_recharge" field.</summary>
-    public const int ForbidRechargeFieldNumber = 1962;
+    public const int ForbidRechargeFieldNumber = 1684;
     private bool forbidRecharge_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -947,51 +867,171 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "rogue_tourn_notice_id" field.</summary>
-    public const int RogueTournNoticeIdFieldNumber = 1149;
-    private uint rogueTournNoticeId_;
+    /// <summary>Field number for the "ip" field.</summary>
+    public const int IpFieldNumber = 7;
+    private string ip_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint RogueTournNoticeId {
-      get { return rogueTournNoticeId_; }
+    public string Ip {
+      get { return ip_; }
       set {
-        rogueTournNoticeId_ = value;
+        ip_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "close_redeem_code" field.</summary>
-    public const int CloseRedeemCodeFieldNumber = 465;
-    private bool closeRedeemCode_;
+    /// <summary>Field number for the "operation_feedback_url" field.</summary>
+    public const int OperationFeedbackUrlFieldNumber = 453;
+    private string operationFeedbackUrl_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool CloseRedeemCode {
-      get { return closeRedeemCode_; }
+    public string OperationFeedbackUrl {
+      get { return operationFeedbackUrl_; }
       set {
-        closeRedeemCode_ = value;
+        operationFeedbackUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "event_tracking_open" field.</summary>
-    public const int EventTrackingOpenFieldNumber = 1206;
-    private bool eventTrackingOpen_;
+    /// <summary>Field number for the "ifix_version" field.</summary>
+    public const int IfixVersionFieldNumber = 1547;
+    private string ifixVersion_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool EventTrackingOpen {
-      get { return eventTrackingOpen_; }
+    public string IfixVersion {
+      get { return ifixVersion_; }
       set {
-        eventTrackingOpen_ = value;
+        ifixVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "stop_begin_time" field.</summary>
-    public const int StopBeginTimeFieldNumber = 6;
-    private long stopBeginTime_;
+    /// <summary>Field number for the "use_tcp" field.</summary>
+    public const int UseTcpFieldNumber = 1800;
+    private bool useTcp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long StopBeginTime {
-      get { return stopBeginTime_; }
+    public bool UseTcp {
+      get { return useTcp_; }
       set {
-        stopBeginTime_ = value;
+        useTcp_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "online_replay_upload_url" field.</summary>
+    public const int OnlineReplayUploadUrlFieldNumber = 1010;
+    private string onlineReplayUploadUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OnlineReplayUploadUrl {
+      get { return onlineReplayUploadUrl_; }
+      set {
+        onlineReplayUploadUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "design_data_relogin_type" field.</summary>
+    public const int DesignDataReloginTypeFieldNumber = 5;
+    private uint designDataReloginType_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DesignDataReloginType {
+      get { return designDataReloginType_; }
+      set {
+        designDataReloginType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "official_community_url" field.</summary>
+    public const int OfficialCommunityUrlFieldNumber = 516;
+    private string officialCommunityUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OfficialCommunityUrl {
+      get { return officialCommunityUrl_; }
+      set {
+        officialCommunityUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "rogue_tourn_build_ref_static_data_url_prefix" field.</summary>
+    public const int RogueTournBuildRefStaticDataUrlPrefixFieldNumber = 804;
+    private string rogueTournBuildRefStaticDataUrlPrefix_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RogueTournBuildRefStaticDataUrlPrefix {
+      get { return rogueTournBuildRefStaticDataUrlPrefix_; }
+      set {
+        rogueTournBuildRefStaticDataUrlPrefix_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "lua_url" field.</summary>
+    public const int LuaUrlFieldNumber = 13;
+    private string luaUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LuaUrl {
+      get { return luaUrl_; }
+      set {
+        luaUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ifix_url" field.</summary>
+    public const int IfixUrlFieldNumber = 1199;
+    private string ifixUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string IfixUrl {
+      get { return ifixUrl_; }
+      set {
+        ifixUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "login_white_msg" field.</summary>
+    public const int LoginWhiteMsgFieldNumber = 1722;
+    private string loginWhiteMsg_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LoginWhiteMsg {
+      get { return loginWhiteMsg_; }
+      set {
+        loginWhiteMsg_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "mdk_res_version" field.</summary>
+    public const int MdkResVersionFieldNumber = 202;
+    private string mdkResVersion_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MdkResVersion {
+      get { return mdkResVersion_; }
+      set {
+        mdkResVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "EJCFBDDLLME" field.</summary>
+    public const int EJCFBDDLLMEFieldNumber = 1038;
+    private string eJCFBDDLLME_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EJCFBDDLLME {
+      get { return eJCFBDDLLME_; }
+      set {
+        eJCFBDDLLME_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "LHOOFMAIHPC" field.</summary>
+    public const int LHOOFMAIHPCFieldNumber = 404;
+    private string lHOOFMAIHPC_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LHOOFMAIHPC {
+      get { return lHOOFMAIHPC_; }
+      set {
+        lHOOFMAIHPC_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1010,73 +1050,76 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (RedeemCodeUrl != other.RedeemCodeUrl) return false;
-      if (UseNewNetworking != other.UseNewNetworking) return false;
-      if (RogueTournBuildRefApiReqColorHeaderValue != other.RogueTournBuildRefApiReqColorHeaderValue) return false;
-      if (DesignDataReloginDesc != other.DesignDataReloginDesc) return false;
-      if(!oAOHIECDGCC_.Equals(other.oAOHIECDGCC_)) return false;
-      if (EnableWatermark != other.EnableWatermark) return false;
-      if (ThirdPrivacyInGameUrl != other.ThirdPrivacyInGameUrl) return false;
-      if (StopEndTime != other.StopEndTime) return false;
-      if (IfixUrl != other.IfixUrl) return false;
-      if (PlayerReturnQuestionnaireAUrl != other.PlayerReturnQuestionnaireAUrl) return false;
-      if (Ipv6Address != other.Ipv6Address) return false;
-      if (NetworkDiagnostic != other.NetworkDiagnostic) return false;
-      if (OnlineReplayUploadUrl != other.OnlineReplayUploadUrl) return false;
-      if (UseTcp != other.UseTcp) return false;
-      if (EnableCdnIpv6 != other.EnableCdnIpv6) return false;
-      if (PlayerReturnQuestionnaireBUrl != other.PlayerReturnQuestionnaireBUrl) return false;
-      if (ECBFEHFPOFJ != other.ECBFEHFPOFJ) return false;
-      if (PrivacyInGameUrl != other.PrivacyInGameUrl) return false;
-      if (RogueTournBuildRefApiReqColorHeaderKey != other.RogueTournBuildRefApiReqColorHeaderKey) return false;
-      if (UserAgreementUrl != other.UserAgreementUrl) return false;
-      if (MdkResVersion != other.MdkResVersion) return false;
       if (ExResourceUrl != other.ExResourceUrl) return false;
-      if (OnlineReplayDownloadUrl != other.OnlineReplayDownloadUrl) return false;
-      if (PreDownloadUrl != other.PreDownloadUrl) return false;
+      if (EnableCdnIpv6 != other.EnableCdnIpv6) return false;
       if (ServerDescription != other.ServerDescription) return false;
-      if (PersonalInformationInGameUrl != other.PersonalInformationInGameUrl) return false;
-      if (OperationFeedbackUrl != other.OperationFeedbackUrl) return false;
-      if (StopDesc != other.StopDesc) return false;
-      if (IfixVersion != other.IfixVersion) return false;
-      if (CommunityActivityUrl != other.CommunityActivityUrl) return false;
-      if (MPNJIKPKOHJ != other.MPNJIKPKOHJ) return false;
-      if (IosExam != other.IosExam) return false;
-      if (LoginWhiteMsg != other.LoginWhiteMsg) return false;
-      if (EnableVersionUpdate != other.EnableVersionUpdate) return false;
-      if (GameStartCustomerServiceUrl != other.GameStartCustomerServiceUrl) return false;
-      if (RegionName != other.RegionName) return false;
-      if (MtpSwitch != other.MtpSwitch) return false;
-      if (TeenagerPrivacyInGameUrl != other.TeenagerPrivacyInGameUrl) return false;
-      if (EnableUploadBattleLog != other.EnableUploadBattleLog) return false;
-      if (RogueTournBuildRefH5Url != other.RogueTournBuildRefH5Url) return false;
-      if (TemporaryMaintenanceUrl != other.TemporaryMaintenanceUrl) return false;
-      if (RogueTournBuildRefStaticDataUrlPrefix != other.RogueTournBuildRefStaticDataUrlPrefix) return false;
-      if (HotPointUrl != other.HotPointUrl) return false;
-      if (RogueTournNoticePicType != other.RogueTournNoticePicType) return false;
-      if (OfficialCommunityUrl != other.OfficialCommunityUrl) return false;
-      if (AsbReloginType != other.AsbReloginType) return false;
-      if (DesignDataReloginType != other.DesignDataReloginType) return false;
-      if (ClientSecretKey != other.ClientSecretKey) return false;
-      if (EnableDesignDataVersionUpdate != other.EnableDesignDataVersionUpdate) return false;
+      if (PlayerReturnQuestionnaireBUrl != other.PlayerReturnQuestionnaireBUrl) return false;
+      if (Ipv6Address != other.Ipv6Address) return false;
       if (EnableAndroidMiddlePackage != other.EnableAndroidMiddlePackage) return false;
-      if (RogueMagicH5Url != other.RogueMagicH5Url) return false;
-      if (Retcode != other.Retcode) return false;
-      if (CloudGameUrl != other.CloudGameUrl) return false;
-      if (AsbReloginDesc != other.AsbReloginDesc) return false;
-      if (EnableSaveReplayFile != other.EnableSaveReplayFile) return false;
+      if (UseNewNetworking != other.UseNewNetworking) return false;
       if (WebToolUrl != other.WebToolUrl) return false;
-      if (Ip != other.Ip) return false;
-      if (AssetBundleUrl != other.AssetBundleUrl) return false;
-      if (Port != other.Port) return false;
-      if (LuaUrl != other.LuaUrl) return false;
-      if (PlayerReturnInviteH5Url != other.PlayerReturnInviteH5Url) return false;
-      if (CustomServiceUrl != other.CustomServiceUrl) return false;
-      if (ForbidRecharge != other.ForbidRecharge) return false;
-      if (RogueTournNoticeId != other.RogueTournNoticeId) return false;
-      if (CloseRedeemCode != other.CloseRedeemCode) return false;
       if (EventTrackingOpen != other.EventTrackingOpen) return false;
+      if (CommunityActivityUrl != other.CommunityActivityUrl) return false;
+      if (CloseRedeemCode != other.CloseRedeemCode) return false;
       if (StopBeginTime != other.StopBeginTime) return false;
+      if (NetworkDiagnostic != other.NetworkDiagnostic) return false;
+      if (TemporaryMaintenanceUrl != other.TemporaryMaintenanceUrl) return false;
+      if (EnableVersionUpdate != other.EnableVersionUpdate) return false;
+      if (UserAgreementUrl != other.UserAgreementUrl) return false;
+      if (Retcode != other.Retcode) return false;
+      if (CdkeyRecallUrl != other.CdkeyRecallUrl) return false;
+      if (RegionName != other.RegionName) return false;
+      if (AssetBundleUrl != other.AssetBundleUrl) return false;
+      if (Msg != other.Msg) return false;
+      if (RogueTournBuildRefApiReqColorHeaderKey != other.RogueTournBuildRefApiReqColorHeaderKey) return false;
+      if (CustomServiceUrl != other.CustomServiceUrl) return false;
+      if (StopEndTime != other.StopEndTime) return false;
+      if (AsbReloginType != other.AsbReloginType) return false;
+      if (RogueTournBuildRefApiReqColorHeaderValue != other.RogueTournBuildRefApiReqColorHeaderValue) return false;
+      if (MtpSwitch != other.MtpSwitch) return false;
+      if (MPNJIKPKOHJ != other.MPNJIKPKOHJ) return false;
+      if (PreDownloadUrl != other.PreDownloadUrl) return false;
+      if (RogueMagicH5Url != other.RogueMagicH5Url) return false;
+      if (ECBFEHFPOFJ != other.ECBFEHFPOFJ) return false;
+      if(!oAOHIECDGCC_.Equals(other.oAOHIECDGCC_)) return false;
+      if (RogueTournBuildRefH5Url != other.RogueTournBuildRefH5Url) return false;
+      if (EnableWatermark != other.EnableWatermark) return false;
+      if (PlayerReturnInviteH5Url != other.PlayerReturnInviteH5Url) return false;
+      if (EnableSaveReplayFile != other.EnableSaveReplayFile) return false;
+      if (Port != other.Port) return false;
+      if (AsbReloginDesc != other.AsbReloginDesc) return false;
+      if (GameStartCustomerServiceUrl != other.GameStartCustomerServiceUrl) return false;
+      if (CloudGameUrl != other.CloudGameUrl) return false;
+      if (DesignDataReloginDesc != other.DesignDataReloginDesc) return false;
+      if (EnableDesignDataVersionUpdate != other.EnableDesignDataVersionUpdate) return false;
+      if (IosExam != other.IosExam) return false;
+      if (NGCIMHOLJBA != other.NGCIMHOLJBA) return false;
+      if (PrivacyInGameUrl != other.PrivacyInGameUrl) return false;
+      if (EnableUploadBattleLog != other.EnableUploadBattleLog) return false;
+      if (RogueTournNoticePicType != other.RogueTournNoticePicType) return false;
+      if (POOOLGFKKJL != other.POOOLGFKKJL) return false;
+      if (TeenagerPrivacyInGameUrl != other.TeenagerPrivacyInGameUrl) return false;
+      if (PlayerReturnQuestionnaireAUrl != other.PlayerReturnQuestionnaireAUrl) return false;
+      if (ThirdPrivacyInGameUrl != other.ThirdPrivacyInGameUrl) return false;
+      if (OnlineReplayDownloadUrl != other.OnlineReplayDownloadUrl) return false;
+      if (HotPointUrl != other.HotPointUrl) return false;
+      if (ClientSecretKey != other.ClientSecretKey) return false;
+      if (PersonalInformationInGameUrl != other.PersonalInformationInGameUrl) return false;
+      if (ForbidRecharge != other.ForbidRecharge) return false;
+      if (Ip != other.Ip) return false;
+      if (OperationFeedbackUrl != other.OperationFeedbackUrl) return false;
+      if (IfixVersion != other.IfixVersion) return false;
+      if (UseTcp != other.UseTcp) return false;
+      if (OnlineReplayUploadUrl != other.OnlineReplayUploadUrl) return false;
+      if (DesignDataReloginType != other.DesignDataReloginType) return false;
+      if (OfficialCommunityUrl != other.OfficialCommunityUrl) return false;
+      if (RogueTournBuildRefStaticDataUrlPrefix != other.RogueTournBuildRefStaticDataUrlPrefix) return false;
+      if (LuaUrl != other.LuaUrl) return false;
+      if (IfixUrl != other.IfixUrl) return false;
+      if (LoginWhiteMsg != other.LoginWhiteMsg) return false;
+      if (MdkResVersion != other.MdkResVersion) return false;
+      if (EJCFBDDLLME != other.EJCFBDDLLME) return false;
+      if (LHOOFMAIHPC != other.LHOOFMAIHPC) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1084,73 +1127,76 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (RedeemCodeUrl.Length != 0) hash ^= RedeemCodeUrl.GetHashCode();
-      if (UseNewNetworking != false) hash ^= UseNewNetworking.GetHashCode();
-      if (RogueTournBuildRefApiReqColorHeaderValue.Length != 0) hash ^= RogueTournBuildRefApiReqColorHeaderValue.GetHashCode();
-      if (DesignDataReloginDesc.Length != 0) hash ^= DesignDataReloginDesc.GetHashCode();
-      hash ^= oAOHIECDGCC_.GetHashCode();
-      if (EnableWatermark != false) hash ^= EnableWatermark.GetHashCode();
-      if (ThirdPrivacyInGameUrl.Length != 0) hash ^= ThirdPrivacyInGameUrl.GetHashCode();
-      if (StopEndTime != 0L) hash ^= StopEndTime.GetHashCode();
-      if (IfixUrl.Length != 0) hash ^= IfixUrl.GetHashCode();
-      if (PlayerReturnQuestionnaireAUrl.Length != 0) hash ^= PlayerReturnQuestionnaireAUrl.GetHashCode();
-      if (Ipv6Address.Length != 0) hash ^= Ipv6Address.GetHashCode();
-      if (NetworkDiagnostic != false) hash ^= NetworkDiagnostic.GetHashCode();
-      if (OnlineReplayUploadUrl.Length != 0) hash ^= OnlineReplayUploadUrl.GetHashCode();
-      if (UseTcp != false) hash ^= UseTcp.GetHashCode();
-      if (EnableCdnIpv6 != 0) hash ^= EnableCdnIpv6.GetHashCode();
-      if (PlayerReturnQuestionnaireBUrl.Length != 0) hash ^= PlayerReturnQuestionnaireBUrl.GetHashCode();
-      if (ECBFEHFPOFJ != false) hash ^= ECBFEHFPOFJ.GetHashCode();
-      if (PrivacyInGameUrl.Length != 0) hash ^= PrivacyInGameUrl.GetHashCode();
-      if (RogueTournBuildRefApiReqColorHeaderKey.Length != 0) hash ^= RogueTournBuildRefApiReqColorHeaderKey.GetHashCode();
-      if (UserAgreementUrl.Length != 0) hash ^= UserAgreementUrl.GetHashCode();
-      if (MdkResVersion.Length != 0) hash ^= MdkResVersion.GetHashCode();
       if (ExResourceUrl.Length != 0) hash ^= ExResourceUrl.GetHashCode();
-      if (OnlineReplayDownloadUrl.Length != 0) hash ^= OnlineReplayDownloadUrl.GetHashCode();
-      if (PreDownloadUrl.Length != 0) hash ^= PreDownloadUrl.GetHashCode();
+      if (EnableCdnIpv6 != 0) hash ^= EnableCdnIpv6.GetHashCode();
       if (ServerDescription.Length != 0) hash ^= ServerDescription.GetHashCode();
-      if (PersonalInformationInGameUrl.Length != 0) hash ^= PersonalInformationInGameUrl.GetHashCode();
-      if (OperationFeedbackUrl.Length != 0) hash ^= OperationFeedbackUrl.GetHashCode();
-      if (StopDesc.Length != 0) hash ^= StopDesc.GetHashCode();
-      if (IfixVersion.Length != 0) hash ^= IfixVersion.GetHashCode();
-      if (CommunityActivityUrl.Length != 0) hash ^= CommunityActivityUrl.GetHashCode();
-      if (MPNJIKPKOHJ.Length != 0) hash ^= MPNJIKPKOHJ.GetHashCode();
-      if (IosExam != false) hash ^= IosExam.GetHashCode();
-      if (LoginWhiteMsg.Length != 0) hash ^= LoginWhiteMsg.GetHashCode();
-      if (EnableVersionUpdate != false) hash ^= EnableVersionUpdate.GetHashCode();
-      if (GameStartCustomerServiceUrl.Length != 0) hash ^= GameStartCustomerServiceUrl.GetHashCode();
-      if (RegionName.Length != 0) hash ^= RegionName.GetHashCode();
-      if (MtpSwitch != false) hash ^= MtpSwitch.GetHashCode();
-      if (TeenagerPrivacyInGameUrl.Length != 0) hash ^= TeenagerPrivacyInGameUrl.GetHashCode();
-      if (EnableUploadBattleLog != false) hash ^= EnableUploadBattleLog.GetHashCode();
-      if (RogueTournBuildRefH5Url.Length != 0) hash ^= RogueTournBuildRefH5Url.GetHashCode();
-      if (TemporaryMaintenanceUrl.Length != 0) hash ^= TemporaryMaintenanceUrl.GetHashCode();
-      if (RogueTournBuildRefStaticDataUrlPrefix.Length != 0) hash ^= RogueTournBuildRefStaticDataUrlPrefix.GetHashCode();
-      if (HotPointUrl.Length != 0) hash ^= HotPointUrl.GetHashCode();
-      if (RogueTournNoticePicType != 0) hash ^= RogueTournNoticePicType.GetHashCode();
-      if (OfficialCommunityUrl.Length != 0) hash ^= OfficialCommunityUrl.GetHashCode();
-      if (AsbReloginType != 0) hash ^= AsbReloginType.GetHashCode();
-      if (DesignDataReloginType != 0) hash ^= DesignDataReloginType.GetHashCode();
-      if (ClientSecretKey.Length != 0) hash ^= ClientSecretKey.GetHashCode();
-      if (EnableDesignDataVersionUpdate != false) hash ^= EnableDesignDataVersionUpdate.GetHashCode();
+      if (PlayerReturnQuestionnaireBUrl.Length != 0) hash ^= PlayerReturnQuestionnaireBUrl.GetHashCode();
+      if (Ipv6Address.Length != 0) hash ^= Ipv6Address.GetHashCode();
       if (EnableAndroidMiddlePackage != false) hash ^= EnableAndroidMiddlePackage.GetHashCode();
-      if (RogueMagicH5Url.Length != 0) hash ^= RogueMagicH5Url.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (CloudGameUrl.Length != 0) hash ^= CloudGameUrl.GetHashCode();
-      if (AsbReloginDesc.Length != 0) hash ^= AsbReloginDesc.GetHashCode();
-      if (EnableSaveReplayFile != false) hash ^= EnableSaveReplayFile.GetHashCode();
+      if (UseNewNetworking != false) hash ^= UseNewNetworking.GetHashCode();
       if (WebToolUrl.Length != 0) hash ^= WebToolUrl.GetHashCode();
-      if (Ip.Length != 0) hash ^= Ip.GetHashCode();
-      if (AssetBundleUrl.Length != 0) hash ^= AssetBundleUrl.GetHashCode();
-      if (Port != 0) hash ^= Port.GetHashCode();
-      if (LuaUrl.Length != 0) hash ^= LuaUrl.GetHashCode();
-      if (PlayerReturnInviteH5Url.Length != 0) hash ^= PlayerReturnInviteH5Url.GetHashCode();
-      if (CustomServiceUrl.Length != 0) hash ^= CustomServiceUrl.GetHashCode();
-      if (ForbidRecharge != false) hash ^= ForbidRecharge.GetHashCode();
-      if (RogueTournNoticeId != 0) hash ^= RogueTournNoticeId.GetHashCode();
-      if (CloseRedeemCode != false) hash ^= CloseRedeemCode.GetHashCode();
       if (EventTrackingOpen != false) hash ^= EventTrackingOpen.GetHashCode();
+      if (CommunityActivityUrl.Length != 0) hash ^= CommunityActivityUrl.GetHashCode();
+      if (CloseRedeemCode != false) hash ^= CloseRedeemCode.GetHashCode();
       if (StopBeginTime != 0L) hash ^= StopBeginTime.GetHashCode();
+      if (NetworkDiagnostic != false) hash ^= NetworkDiagnostic.GetHashCode();
+      if (TemporaryMaintenanceUrl.Length != 0) hash ^= TemporaryMaintenanceUrl.GetHashCode();
+      if (EnableVersionUpdate != false) hash ^= EnableVersionUpdate.GetHashCode();
+      if (UserAgreementUrl.Length != 0) hash ^= UserAgreementUrl.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (CdkeyRecallUrl.Length != 0) hash ^= CdkeyRecallUrl.GetHashCode();
+      if (RegionName.Length != 0) hash ^= RegionName.GetHashCode();
+      if (AssetBundleUrl.Length != 0) hash ^= AssetBundleUrl.GetHashCode();
+      if (Msg.Length != 0) hash ^= Msg.GetHashCode();
+      if (RogueTournBuildRefApiReqColorHeaderKey.Length != 0) hash ^= RogueTournBuildRefApiReqColorHeaderKey.GetHashCode();
+      if (CustomServiceUrl.Length != 0) hash ^= CustomServiceUrl.GetHashCode();
+      if (StopEndTime != 0L) hash ^= StopEndTime.GetHashCode();
+      if (AsbReloginType != 0) hash ^= AsbReloginType.GetHashCode();
+      if (RogueTournBuildRefApiReqColorHeaderValue.Length != 0) hash ^= RogueTournBuildRefApiReqColorHeaderValue.GetHashCode();
+      if (MtpSwitch != false) hash ^= MtpSwitch.GetHashCode();
+      if (MPNJIKPKOHJ.Length != 0) hash ^= MPNJIKPKOHJ.GetHashCode();
+      if (PreDownloadUrl.Length != 0) hash ^= PreDownloadUrl.GetHashCode();
+      if (RogueMagicH5Url.Length != 0) hash ^= RogueMagicH5Url.GetHashCode();
+      if (ECBFEHFPOFJ != false) hash ^= ECBFEHFPOFJ.GetHashCode();
+      hash ^= oAOHIECDGCC_.GetHashCode();
+      if (RogueTournBuildRefH5Url.Length != 0) hash ^= RogueTournBuildRefH5Url.GetHashCode();
+      if (EnableWatermark != false) hash ^= EnableWatermark.GetHashCode();
+      if (PlayerReturnInviteH5Url.Length != 0) hash ^= PlayerReturnInviteH5Url.GetHashCode();
+      if (EnableSaveReplayFile != false) hash ^= EnableSaveReplayFile.GetHashCode();
+      if (Port != 0) hash ^= Port.GetHashCode();
+      if (AsbReloginDesc.Length != 0) hash ^= AsbReloginDesc.GetHashCode();
+      if (GameStartCustomerServiceUrl.Length != 0) hash ^= GameStartCustomerServiceUrl.GetHashCode();
+      if (CloudGameUrl.Length != 0) hash ^= CloudGameUrl.GetHashCode();
+      if (DesignDataReloginDesc.Length != 0) hash ^= DesignDataReloginDesc.GetHashCode();
+      if (EnableDesignDataVersionUpdate != false) hash ^= EnableDesignDataVersionUpdate.GetHashCode();
+      if (IosExam != false) hash ^= IosExam.GetHashCode();
+      if (NGCIMHOLJBA.Length != 0) hash ^= NGCIMHOLJBA.GetHashCode();
+      if (PrivacyInGameUrl.Length != 0) hash ^= PrivacyInGameUrl.GetHashCode();
+      if (EnableUploadBattleLog != false) hash ^= EnableUploadBattleLog.GetHashCode();
+      if (RogueTournNoticePicType != 0) hash ^= RogueTournNoticePicType.GetHashCode();
+      if (POOOLGFKKJL.Length != 0) hash ^= POOOLGFKKJL.GetHashCode();
+      if (TeenagerPrivacyInGameUrl.Length != 0) hash ^= TeenagerPrivacyInGameUrl.GetHashCode();
+      if (PlayerReturnQuestionnaireAUrl.Length != 0) hash ^= PlayerReturnQuestionnaireAUrl.GetHashCode();
+      if (ThirdPrivacyInGameUrl.Length != 0) hash ^= ThirdPrivacyInGameUrl.GetHashCode();
+      if (OnlineReplayDownloadUrl.Length != 0) hash ^= OnlineReplayDownloadUrl.GetHashCode();
+      if (HotPointUrl.Length != 0) hash ^= HotPointUrl.GetHashCode();
+      if (ClientSecretKey.Length != 0) hash ^= ClientSecretKey.GetHashCode();
+      if (PersonalInformationInGameUrl.Length != 0) hash ^= PersonalInformationInGameUrl.GetHashCode();
+      if (ForbidRecharge != false) hash ^= ForbidRecharge.GetHashCode();
+      if (Ip.Length != 0) hash ^= Ip.GetHashCode();
+      if (OperationFeedbackUrl.Length != 0) hash ^= OperationFeedbackUrl.GetHashCode();
+      if (IfixVersion.Length != 0) hash ^= IfixVersion.GetHashCode();
+      if (UseTcp != false) hash ^= UseTcp.GetHashCode();
+      if (OnlineReplayUploadUrl.Length != 0) hash ^= OnlineReplayUploadUrl.GetHashCode();
+      if (DesignDataReloginType != 0) hash ^= DesignDataReloginType.GetHashCode();
+      if (OfficialCommunityUrl.Length != 0) hash ^= OfficialCommunityUrl.GetHashCode();
+      if (RogueTournBuildRefStaticDataUrlPrefix.Length != 0) hash ^= RogueTournBuildRefStaticDataUrlPrefix.GetHashCode();
+      if (LuaUrl.Length != 0) hash ^= LuaUrl.GetHashCode();
+      if (IfixUrl.Length != 0) hash ^= IfixUrl.GetHashCode();
+      if (LoginWhiteMsg.Length != 0) hash ^= LoginWhiteMsg.GetHashCode();
+      if (MdkResVersion.Length != 0) hash ^= MdkResVersion.GetHashCode();
+      if (EJCFBDDLLME.Length != 0) hash ^= EJCFBDDLLME.GetHashCode();
+      if (LHOOFMAIHPC.Length != 0) hash ^= LHOOFMAIHPC.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1169,271 +1215,283 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (LuaUrl.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(LuaUrl);
+      if (StopEndTime != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(StopEndTime);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(Retcode);
+      }
+      if (ExResourceUrl.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ExResourceUrl);
       }
       if (AsbReloginType != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(32);
         output.WriteUInt32(AsbReloginType);
       }
+      if (DesignDataReloginType != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(DesignDataReloginType);
+      }
+      if (RegionName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(RegionName);
+      }
       if (Ip.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(58);
         output.WriteString(Ip);
       }
       if (AsbReloginDesc.Length != 0) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(66);
         output.WriteString(AsbReloginDesc);
-      }
-      if (StopDesc.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(StopDesc);
-      }
-      if (StopBeginTime != 0L) {
-        output.WriteRawTag(48);
-        output.WriteInt64(StopBeginTime);
-      }
-      if (EnableVersionUpdate != false) {
-        output.WriteRawTag(56);
-        output.WriteBool(EnableVersionUpdate);
-      }
-      if (Retcode != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(Retcode);
       }
       if (AssetBundleUrl.Length != 0) {
         output.WriteRawTag(74);
         output.WriteString(AssetBundleUrl);
       }
-      if (StopEndTime != 0L) {
+      if (EnableVersionUpdate != false) {
         output.WriteRawTag(80);
-        output.WriteInt64(StopEndTime);
+        output.WriteBool(EnableVersionUpdate);
       }
-      if (EnableDesignDataVersionUpdate != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(EnableDesignDataVersionUpdate);
+      if (Msg.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(Msg);
+      }
+      if (StopBeginTime != 0L) {
+        output.WriteRawTag(96);
+        output.WriteInt64(StopBeginTime);
+      }
+      if (LuaUrl.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(LuaUrl);
       }
       if (Port != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(112);
         output.WriteUInt32(Port);
       }
-      if (ExResourceUrl.Length != 0) {
-        output.WriteRawTag(106);
-        output.WriteString(ExResourceUrl);
-      }
-      if (RegionName.Length != 0) {
-        output.WriteRawTag(114);
-        output.WriteString(RegionName);
-      }
-      if (DesignDataReloginType != 0) {
+      if (EnableDesignDataVersionUpdate != false) {
         output.WriteRawTag(120);
-        output.WriteUInt32(DesignDataReloginType);
+        output.WriteBool(EnableDesignDataVersionUpdate);
       }
-      if (UseTcp != false) {
-        output.WriteRawTag(152, 1);
-        output.WriteBool(UseTcp);
-      }
-      if (RogueTournBuildRefApiReqColorHeaderValue.Length != 0) {
-        output.WriteRawTag(202, 2);
-        output.WriteString(RogueTournBuildRefApiReqColorHeaderValue);
-      }
-      if (EnableUploadBattleLog != false) {
-        output.WriteRawTag(224, 14);
-        output.WriteBool(EnableUploadBattleLog);
-      }
-      if (RogueTournBuildRefH5Url.Length != 0) {
-        output.WriteRawTag(234, 16);
-        output.WriteString(RogueTournBuildRefH5Url);
-      }
-      if (TeenagerPrivacyInGameUrl.Length != 0) {
-        output.WriteRawTag(218, 20);
-        output.WriteString(TeenagerPrivacyInGameUrl);
-      }
-      if (EnableSaveReplayFile != false) {
-        output.WriteRawTag(152, 25);
-        output.WriteBool(EnableSaveReplayFile);
-      }
-      if (NetworkDiagnostic != false) {
-        output.WriteRawTag(152, 27);
-        output.WriteBool(NetworkDiagnostic);
-      }
-      if (GameStartCustomerServiceUrl.Length != 0) {
-        output.WriteRawTag(170, 28);
-        output.WriteString(GameStartCustomerServiceUrl);
-      }
-      if (CloseRedeemCode != false) {
-        output.WriteRawTag(136, 29);
-        output.WriteBool(CloseRedeemCode);
-      }
-      if (ECBFEHFPOFJ != false) {
-        output.WriteRawTag(144, 31);
-        output.WriteBool(ECBFEHFPOFJ);
-      }
-      if (PlayerReturnQuestionnaireAUrl.Length != 0) {
-        output.WriteRawTag(130, 38);
-        output.WriteString(PlayerReturnQuestionnaireAUrl);
+      if (POOOLGFKKJL.Length != 0) {
+        output.WriteRawTag(234, 4);
+        output.WriteString(POOOLGFKKJL);
       }
       if (TemporaryMaintenanceUrl.Length != 0) {
-        output.WriteRawTag(154, 45);
+        output.WriteRawTag(202, 9);
         output.WriteString(TemporaryMaintenanceUrl);
       }
-      if (IfixVersion.Length != 0) {
-        output.WriteRawTag(226, 47);
-        output.WriteString(IfixVersion);
-      }
-      if (PersonalInformationInGameUrl.Length != 0) {
-        output.WriteRawTag(162, 48);
-        output.WriteString(PersonalInformationInGameUrl);
-      }
-      if (PreDownloadUrl.Length != 0) {
-        output.WriteRawTag(202, 48);
-        output.WriteString(PreDownloadUrl);
-      }
-      if (OperationFeedbackUrl.Length != 0) {
-        output.WriteRawTag(138, 49);
-        output.WriteString(OperationFeedbackUrl);
-      }
-      if (MtpSwitch != false) {
-        output.WriteRawTag(200, 56);
-        output.WriteBool(MtpSwitch);
-      }
-      if (EnableAndroidMiddlePackage != false) {
-        output.WriteRawTag(152, 57);
-        output.WriteBool(EnableAndroidMiddlePackage);
-      }
-      if (LoginWhiteMsg.Length != 0) {
-        output.WriteRawTag(130, 61);
-        output.WriteString(LoginWhiteMsg);
-      }
-      if (EnableWatermark != false) {
-        output.WriteRawTag(168, 62);
-        output.WriteBool(EnableWatermark);
-      }
-      if (CloudGameUrl.Length != 0) {
-        output.WriteRawTag(218, 62);
-        output.WriteString(CloudGameUrl);
-      }
-      if (CommunityActivityUrl.Length != 0) {
-        output.WriteRawTag(250, 63);
-        output.WriteString(CommunityActivityUrl);
-      }
-      if (PlayerReturnQuestionnaireBUrl.Length != 0) {
-        output.WriteRawTag(154, 65);
-        output.WriteString(PlayerReturnQuestionnaireBUrl);
-      }
-      if (RogueTournNoticeId != 0) {
-        output.WriteRawTag(232, 71);
-        output.WriteUInt32(RogueTournNoticeId);
-      }
-      if (EventTrackingOpen != false) {
-        output.WriteRawTag(176, 75);
-        output.WriteBool(EventTrackingOpen);
-      }
-      if (ClientSecretKey.Length != 0) {
-        output.WriteRawTag(186, 76);
-        output.WriteString(ClientSecretKey);
-      }
-      if (OnlineReplayUploadUrl.Length != 0) {
-        output.WriteRawTag(226, 79);
-        output.WriteString(OnlineReplayUploadUrl);
-      }
-      if (CustomServiceUrl.Length != 0) {
-        output.WriteRawTag(162, 80);
-        output.WriteString(CustomServiceUrl);
-      }
-      if (RedeemCodeUrl.Length != 0) {
-        output.WriteRawTag(218, 81);
-        output.WriteString(RedeemCodeUrl);
-      }
       if (MdkResVersion.Length != 0) {
-        output.WriteRawTag(234, 82);
+        output.WriteRawTag(210, 12);
         output.WriteString(MdkResVersion);
       }
-      if (DesignDataReloginDesc.Length != 0) {
-        output.WriteRawTag(162, 84);
-        output.WriteString(DesignDataReloginDesc);
+      if (UseNewNetworking != false) {
+        output.WriteRawTag(200, 13);
+        output.WriteBool(UseNewNetworking);
+      }
+      if (RogueTournBuildRefApiReqColorHeaderValue.Length != 0) {
+        output.WriteRawTag(138, 14);
+        output.WriteString(RogueTournBuildRefApiReqColorHeaderValue);
+      }
+      if (EnableSaveReplayFile != false) {
+        output.WriteRawTag(200, 14);
+        output.WriteBool(EnableSaveReplayFile);
+      }
+      if (CdkeyRecallUrl.Length != 0) {
+        output.WriteRawTag(250, 14);
+        output.WriteString(CdkeyRecallUrl);
+      }
+      if (RogueMagicH5Url.Length != 0) {
+        output.WriteRawTag(218, 16);
+        output.WriteString(RogueMagicH5Url);
+      }
+      if (ClientSecretKey.Length != 0) {
+        output.WriteRawTag(154, 17);
+        output.WriteString(ClientSecretKey);
+      }
+      if (EnableAndroidMiddlePackage != false) {
+        output.WriteRawTag(200, 17);
+        output.WriteBool(EnableAndroidMiddlePackage);
+      }
+      if (PreDownloadUrl.Length != 0) {
+        output.WriteRawTag(242, 20);
+        output.WriteString(PreDownloadUrl);
+      }
+      if (LHOOFMAIHPC.Length != 0) {
+        output.WriteRawTag(162, 25);
+        output.WriteString(LHOOFMAIHPC);
+      }
+      if (CommunityActivityUrl.Length != 0) {
+        output.WriteRawTag(146, 27);
+        output.WriteString(CommunityActivityUrl);
+      }
+      if (OperationFeedbackUrl.Length != 0) {
+        output.WriteRawTag(170, 28);
+        output.WriteString(OperationFeedbackUrl);
       }
       if (RogueTournBuildRefApiReqColorHeaderKey.Length != 0) {
-        output.WriteRawTag(234, 84);
+        output.WriteRawTag(210, 31);
         output.WriteString(RogueTournBuildRefApiReqColorHeaderKey);
       }
+      if (OfficialCommunityUrl.Length != 0) {
+        output.WriteRawTag(162, 32);
+        output.WriteString(OfficialCommunityUrl);
+      }
+      if (MPNJIKPKOHJ.Length != 0) {
+        output.WriteRawTag(218, 34);
+        output.WriteString(MPNJIKPKOHJ);
+      }
+      if (PlayerReturnQuestionnaireAUrl.Length != 0) {
+        output.WriteRawTag(226, 35);
+        output.WriteString(PlayerReturnQuestionnaireAUrl);
+      }
+      if (MtpSwitch != false) {
+        output.WriteRawTag(248, 37);
+        output.WriteBool(MtpSwitch);
+      }
+      if (WebToolUrl.Length != 0) {
+        output.WriteRawTag(178, 40);
+        output.WriteString(WebToolUrl);
+      }
+      if (PlayerReturnInviteH5Url.Length != 0) {
+        output.WriteRawTag(138, 43);
+        output.WriteString(PlayerReturnInviteH5Url);
+      }
+      if (PersonalInformationInGameUrl.Length != 0) {
+        output.WriteRawTag(162, 43);
+        output.WriteString(PersonalInformationInGameUrl);
+      }
+      if (NGCIMHOLJBA.Length != 0) {
+        output.WriteRawTag(218, 44);
+        output.WriteString(NGCIMHOLJBA);
+      }
+      if (RogueTournBuildRefStaticDataUrlPrefix.Length != 0) {
+        output.WriteRawTag(162, 50);
+        output.WriteString(RogueTournBuildRefStaticDataUrlPrefix);
+      }
+      if (CloudGameUrl.Length != 0) {
+        output.WriteRawTag(170, 50);
+        output.WriteString(CloudGameUrl);
+      }
+      if (GameStartCustomerServiceUrl.Length != 0) {
+        output.WriteRawTag(146, 58);
+        output.WriteString(GameStartCustomerServiceUrl);
+      }
+      if (OnlineReplayUploadUrl.Length != 0) {
+        output.WriteRawTag(146, 63);
+        output.WriteString(OnlineReplayUploadUrl);
+      }
+      if (EJCFBDDLLME.Length != 0) {
+        output.WriteRawTag(242, 64);
+        output.WriteString(EJCFBDDLLME);
+      }
+      if (OnlineReplayDownloadUrl.Length != 0) {
+        output.WriteRawTag(162, 65);
+        output.WriteString(OnlineReplayDownloadUrl);
+      }
+      if (TeenagerPrivacyInGameUrl.Length != 0) {
+        output.WriteRawTag(154, 70);
+        output.WriteString(TeenagerPrivacyInGameUrl);
+      }
+      if (EnableCdnIpv6 != 0) {
+        output.WriteRawTag(240, 73);
+        output.WriteUInt32(EnableCdnIpv6);
+      }
+      if (IfixUrl.Length != 0) {
+        output.WriteRawTag(250, 74);
+        output.WriteString(IfixUrl);
+      }
+      if (EnableUploadBattleLog != false) {
+        output.WriteRawTag(240, 75);
+        output.WriteBool(EnableUploadBattleLog);
+      }
+      if (EnableWatermark != false) {
+        output.WriteRawTag(144, 79);
+        output.WriteBool(EnableWatermark);
+      }
+      if (RogueTournBuildRefH5Url.Length != 0) {
+        output.WriteRawTag(194, 81);
+        output.WriteString(RogueTournBuildRefH5Url);
+      }
+      if (PrivacyInGameUrl.Length != 0) {
+        output.WriteRawTag(186, 83);
+        output.WriteString(PrivacyInGameUrl);
+      }
+      if (HotPointUrl.Length != 0) {
+        output.WriteRawTag(186, 85);
+        output.WriteString(HotPointUrl);
+      }
+      if (PlayerReturnQuestionnaireBUrl.Length != 0) {
+        output.WriteRawTag(250, 85);
+        output.WriteString(PlayerReturnQuestionnaireBUrl);
+      }
+      if (UserAgreementUrl.Length != 0) {
+        output.WriteRawTag(162, 93);
+        output.WriteString(UserAgreementUrl);
+      }
+      if (CloseRedeemCode != false) {
+        output.WriteRawTag(200, 96);
+        output.WriteBool(CloseRedeemCode);
+      }
+      if (IfixVersion.Length != 0) {
+        output.WriteRawTag(218, 96);
+        output.WriteString(IfixVersion);
+      }
+      if (ThirdPrivacyInGameUrl.Length != 0) {
+        output.WriteRawTag(130, 99);
+        output.WriteString(ThirdPrivacyInGameUrl);
+      }
+      if (IosExam != false) {
+        output.WriteRawTag(160, 99);
+        output.WriteBool(IosExam);
+      }
+      if (NetworkDiagnostic != false) {
+        output.WriteRawTag(128, 100);
+        output.WriteBool(NetworkDiagnostic);
+      }
+      if (ForbidRecharge != false) {
+        output.WriteRawTag(160, 105);
+        output.WriteBool(ForbidRecharge);
+      }
+      if (DesignDataReloginDesc.Length != 0) {
+        output.WriteRawTag(178, 105);
+        output.WriteString(DesignDataReloginDesc);
+      }
+      if (EventTrackingOpen != false) {
+        output.WriteRawTag(192, 107);
+        output.WriteBool(EventTrackingOpen);
+      }
+      if (LoginWhiteMsg.Length != 0) {
+        output.WriteRawTag(210, 107);
+        output.WriteString(LoginWhiteMsg);
+      }
       if (RogueTournNoticePicType != 0) {
-        output.WriteRawTag(224, 85);
+        output.WriteRawTag(248, 107);
         output.WriteUInt32(RogueTournNoticePicType);
       }
       if (ServerDescription.Length != 0) {
-        output.WriteRawTag(130, 87);
+        output.WriteRawTag(186, 110);
         output.WriteString(ServerDescription);
       }
-      if (HotPointUrl.Length != 0) {
-        output.WriteRawTag(226, 94);
-        output.WriteString(HotPointUrl);
-      }
       if (Ipv6Address.Length != 0) {
-        output.WriteRawTag(210, 97);
+        output.WriteRawTag(154, 111);
         output.WriteString(Ipv6Address);
       }
-      if (PrivacyInGameUrl.Length != 0) {
-        output.WriteRawTag(242, 97);
-        output.WriteString(PrivacyInGameUrl);
+      if (CustomServiceUrl.Length != 0) {
+        output.WriteRawTag(138, 112);
+        output.WriteString(CustomServiceUrl);
       }
-      if (ThirdPrivacyInGameUrl.Length != 0) {
-        output.WriteRawTag(234, 98);
-        output.WriteString(ThirdPrivacyInGameUrl);
+      if (UseTcp != false) {
+        output.WriteRawTag(192, 112);
+        output.WriteBool(UseTcp);
       }
-      if (OnlineReplayDownloadUrl.Length != 0) {
-        output.WriteRawTag(170, 99);
-        output.WriteString(OnlineReplayDownloadUrl);
-      }
-      if (PlayerReturnInviteH5Url.Length != 0) {
-        output.WriteRawTag(178, 104);
-        output.WriteString(PlayerReturnInviteH5Url);
-      }
-      if (WebToolUrl.Length != 0) {
-        output.WriteRawTag(202, 108);
-        output.WriteString(WebToolUrl);
-      }
-      if (MPNJIKPKOHJ.Length != 0) {
-        output.WriteRawTag(186, 111);
-        output.WriteString(MPNJIKPKOHJ);
-      }
-      if (RogueMagicH5Url.Length != 0) {
-        output.WriteRawTag(218, 113);
-        output.WriteString(RogueMagicH5Url);
-      }
-      if (UseNewNetworking != false) {
-        output.WriteRawTag(168, 114);
-        output.WriteBool(UseNewNetworking);
-      }
-      if (RogueTournBuildRefStaticDataUrlPrefix.Length != 0) {
-        output.WriteRawTag(202, 114);
-        output.WriteString(RogueTournBuildRefStaticDataUrlPrefix);
-      }
-      if (IfixUrl.Length != 0) {
-        output.WriteRawTag(202, 117);
-        output.WriteString(IfixUrl);
-      }
-      if (IosExam != false) {
-        output.WriteRawTag(216, 119);
-        output.WriteBool(IosExam);
+      if (ECBFEHFPOFJ != false) {
+        output.WriteRawTag(240, 122);
+        output.WriteBool(ECBFEHFPOFJ);
       }
       oAOHIECDGCC_.WriteTo(output, _repeated_oAOHIECDGCC_codec);
-      if (ForbidRecharge != false) {
-        output.WriteRawTag(208, 122);
-        output.WriteBool(ForbidRecharge);
-      }
-      if (OfficialCommunityUrl.Length != 0) {
-        output.WriteRawTag(250, 122);
-        output.WriteString(OfficialCommunityUrl);
-      }
-      if (UserAgreementUrl.Length != 0) {
-        output.WriteRawTag(242, 125);
-        output.WriteString(UserAgreementUrl);
-      }
-      if (EnableCdnIpv6 != 0) {
-        output.WriteRawTag(184, 126);
-        output.WriteUInt32(EnableCdnIpv6);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1444,271 +1502,283 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (LuaUrl.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(LuaUrl);
+      if (StopEndTime != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(StopEndTime);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(Retcode);
+      }
+      if (ExResourceUrl.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ExResourceUrl);
       }
       if (AsbReloginType != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(32);
         output.WriteUInt32(AsbReloginType);
       }
+      if (DesignDataReloginType != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(DesignDataReloginType);
+      }
+      if (RegionName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(RegionName);
+      }
       if (Ip.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(58);
         output.WriteString(Ip);
       }
       if (AsbReloginDesc.Length != 0) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(66);
         output.WriteString(AsbReloginDesc);
-      }
-      if (StopDesc.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(StopDesc);
-      }
-      if (StopBeginTime != 0L) {
-        output.WriteRawTag(48);
-        output.WriteInt64(StopBeginTime);
-      }
-      if (EnableVersionUpdate != false) {
-        output.WriteRawTag(56);
-        output.WriteBool(EnableVersionUpdate);
-      }
-      if (Retcode != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(Retcode);
       }
       if (AssetBundleUrl.Length != 0) {
         output.WriteRawTag(74);
         output.WriteString(AssetBundleUrl);
       }
-      if (StopEndTime != 0L) {
+      if (EnableVersionUpdate != false) {
         output.WriteRawTag(80);
-        output.WriteInt64(StopEndTime);
+        output.WriteBool(EnableVersionUpdate);
       }
-      if (EnableDesignDataVersionUpdate != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(EnableDesignDataVersionUpdate);
+      if (Msg.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(Msg);
+      }
+      if (StopBeginTime != 0L) {
+        output.WriteRawTag(96);
+        output.WriteInt64(StopBeginTime);
+      }
+      if (LuaUrl.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(LuaUrl);
       }
       if (Port != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(112);
         output.WriteUInt32(Port);
       }
-      if (ExResourceUrl.Length != 0) {
-        output.WriteRawTag(106);
-        output.WriteString(ExResourceUrl);
-      }
-      if (RegionName.Length != 0) {
-        output.WriteRawTag(114);
-        output.WriteString(RegionName);
-      }
-      if (DesignDataReloginType != 0) {
+      if (EnableDesignDataVersionUpdate != false) {
         output.WriteRawTag(120);
-        output.WriteUInt32(DesignDataReloginType);
+        output.WriteBool(EnableDesignDataVersionUpdate);
       }
-      if (UseTcp != false) {
-        output.WriteRawTag(152, 1);
-        output.WriteBool(UseTcp);
-      }
-      if (RogueTournBuildRefApiReqColorHeaderValue.Length != 0) {
-        output.WriteRawTag(202, 2);
-        output.WriteString(RogueTournBuildRefApiReqColorHeaderValue);
-      }
-      if (EnableUploadBattleLog != false) {
-        output.WriteRawTag(224, 14);
-        output.WriteBool(EnableUploadBattleLog);
-      }
-      if (RogueTournBuildRefH5Url.Length != 0) {
-        output.WriteRawTag(234, 16);
-        output.WriteString(RogueTournBuildRefH5Url);
-      }
-      if (TeenagerPrivacyInGameUrl.Length != 0) {
-        output.WriteRawTag(218, 20);
-        output.WriteString(TeenagerPrivacyInGameUrl);
-      }
-      if (EnableSaveReplayFile != false) {
-        output.WriteRawTag(152, 25);
-        output.WriteBool(EnableSaveReplayFile);
-      }
-      if (NetworkDiagnostic != false) {
-        output.WriteRawTag(152, 27);
-        output.WriteBool(NetworkDiagnostic);
-      }
-      if (GameStartCustomerServiceUrl.Length != 0) {
-        output.WriteRawTag(170, 28);
-        output.WriteString(GameStartCustomerServiceUrl);
-      }
-      if (CloseRedeemCode != false) {
-        output.WriteRawTag(136, 29);
-        output.WriteBool(CloseRedeemCode);
-      }
-      if (ECBFEHFPOFJ != false) {
-        output.WriteRawTag(144, 31);
-        output.WriteBool(ECBFEHFPOFJ);
-      }
-      if (PlayerReturnQuestionnaireAUrl.Length != 0) {
-        output.WriteRawTag(130, 38);
-        output.WriteString(PlayerReturnQuestionnaireAUrl);
+      if (POOOLGFKKJL.Length != 0) {
+        output.WriteRawTag(234, 4);
+        output.WriteString(POOOLGFKKJL);
       }
       if (TemporaryMaintenanceUrl.Length != 0) {
-        output.WriteRawTag(154, 45);
+        output.WriteRawTag(202, 9);
         output.WriteString(TemporaryMaintenanceUrl);
       }
-      if (IfixVersion.Length != 0) {
-        output.WriteRawTag(226, 47);
-        output.WriteString(IfixVersion);
-      }
-      if (PersonalInformationInGameUrl.Length != 0) {
-        output.WriteRawTag(162, 48);
-        output.WriteString(PersonalInformationInGameUrl);
-      }
-      if (PreDownloadUrl.Length != 0) {
-        output.WriteRawTag(202, 48);
-        output.WriteString(PreDownloadUrl);
-      }
-      if (OperationFeedbackUrl.Length != 0) {
-        output.WriteRawTag(138, 49);
-        output.WriteString(OperationFeedbackUrl);
-      }
-      if (MtpSwitch != false) {
-        output.WriteRawTag(200, 56);
-        output.WriteBool(MtpSwitch);
-      }
-      if (EnableAndroidMiddlePackage != false) {
-        output.WriteRawTag(152, 57);
-        output.WriteBool(EnableAndroidMiddlePackage);
-      }
-      if (LoginWhiteMsg.Length != 0) {
-        output.WriteRawTag(130, 61);
-        output.WriteString(LoginWhiteMsg);
-      }
-      if (EnableWatermark != false) {
-        output.WriteRawTag(168, 62);
-        output.WriteBool(EnableWatermark);
-      }
-      if (CloudGameUrl.Length != 0) {
-        output.WriteRawTag(218, 62);
-        output.WriteString(CloudGameUrl);
-      }
-      if (CommunityActivityUrl.Length != 0) {
-        output.WriteRawTag(250, 63);
-        output.WriteString(CommunityActivityUrl);
-      }
-      if (PlayerReturnQuestionnaireBUrl.Length != 0) {
-        output.WriteRawTag(154, 65);
-        output.WriteString(PlayerReturnQuestionnaireBUrl);
-      }
-      if (RogueTournNoticeId != 0) {
-        output.WriteRawTag(232, 71);
-        output.WriteUInt32(RogueTournNoticeId);
-      }
-      if (EventTrackingOpen != false) {
-        output.WriteRawTag(176, 75);
-        output.WriteBool(EventTrackingOpen);
-      }
-      if (ClientSecretKey.Length != 0) {
-        output.WriteRawTag(186, 76);
-        output.WriteString(ClientSecretKey);
-      }
-      if (OnlineReplayUploadUrl.Length != 0) {
-        output.WriteRawTag(226, 79);
-        output.WriteString(OnlineReplayUploadUrl);
-      }
-      if (CustomServiceUrl.Length != 0) {
-        output.WriteRawTag(162, 80);
-        output.WriteString(CustomServiceUrl);
-      }
-      if (RedeemCodeUrl.Length != 0) {
-        output.WriteRawTag(218, 81);
-        output.WriteString(RedeemCodeUrl);
-      }
       if (MdkResVersion.Length != 0) {
-        output.WriteRawTag(234, 82);
+        output.WriteRawTag(210, 12);
         output.WriteString(MdkResVersion);
       }
-      if (DesignDataReloginDesc.Length != 0) {
-        output.WriteRawTag(162, 84);
-        output.WriteString(DesignDataReloginDesc);
+      if (UseNewNetworking != false) {
+        output.WriteRawTag(200, 13);
+        output.WriteBool(UseNewNetworking);
+      }
+      if (RogueTournBuildRefApiReqColorHeaderValue.Length != 0) {
+        output.WriteRawTag(138, 14);
+        output.WriteString(RogueTournBuildRefApiReqColorHeaderValue);
+      }
+      if (EnableSaveReplayFile != false) {
+        output.WriteRawTag(200, 14);
+        output.WriteBool(EnableSaveReplayFile);
+      }
+      if (CdkeyRecallUrl.Length != 0) {
+        output.WriteRawTag(250, 14);
+        output.WriteString(CdkeyRecallUrl);
+      }
+      if (RogueMagicH5Url.Length != 0) {
+        output.WriteRawTag(218, 16);
+        output.WriteString(RogueMagicH5Url);
+      }
+      if (ClientSecretKey.Length != 0) {
+        output.WriteRawTag(154, 17);
+        output.WriteString(ClientSecretKey);
+      }
+      if (EnableAndroidMiddlePackage != false) {
+        output.WriteRawTag(200, 17);
+        output.WriteBool(EnableAndroidMiddlePackage);
+      }
+      if (PreDownloadUrl.Length != 0) {
+        output.WriteRawTag(242, 20);
+        output.WriteString(PreDownloadUrl);
+      }
+      if (LHOOFMAIHPC.Length != 0) {
+        output.WriteRawTag(162, 25);
+        output.WriteString(LHOOFMAIHPC);
+      }
+      if (CommunityActivityUrl.Length != 0) {
+        output.WriteRawTag(146, 27);
+        output.WriteString(CommunityActivityUrl);
+      }
+      if (OperationFeedbackUrl.Length != 0) {
+        output.WriteRawTag(170, 28);
+        output.WriteString(OperationFeedbackUrl);
       }
       if (RogueTournBuildRefApiReqColorHeaderKey.Length != 0) {
-        output.WriteRawTag(234, 84);
+        output.WriteRawTag(210, 31);
         output.WriteString(RogueTournBuildRefApiReqColorHeaderKey);
       }
+      if (OfficialCommunityUrl.Length != 0) {
+        output.WriteRawTag(162, 32);
+        output.WriteString(OfficialCommunityUrl);
+      }
+      if (MPNJIKPKOHJ.Length != 0) {
+        output.WriteRawTag(218, 34);
+        output.WriteString(MPNJIKPKOHJ);
+      }
+      if (PlayerReturnQuestionnaireAUrl.Length != 0) {
+        output.WriteRawTag(226, 35);
+        output.WriteString(PlayerReturnQuestionnaireAUrl);
+      }
+      if (MtpSwitch != false) {
+        output.WriteRawTag(248, 37);
+        output.WriteBool(MtpSwitch);
+      }
+      if (WebToolUrl.Length != 0) {
+        output.WriteRawTag(178, 40);
+        output.WriteString(WebToolUrl);
+      }
+      if (PlayerReturnInviteH5Url.Length != 0) {
+        output.WriteRawTag(138, 43);
+        output.WriteString(PlayerReturnInviteH5Url);
+      }
+      if (PersonalInformationInGameUrl.Length != 0) {
+        output.WriteRawTag(162, 43);
+        output.WriteString(PersonalInformationInGameUrl);
+      }
+      if (NGCIMHOLJBA.Length != 0) {
+        output.WriteRawTag(218, 44);
+        output.WriteString(NGCIMHOLJBA);
+      }
+      if (RogueTournBuildRefStaticDataUrlPrefix.Length != 0) {
+        output.WriteRawTag(162, 50);
+        output.WriteString(RogueTournBuildRefStaticDataUrlPrefix);
+      }
+      if (CloudGameUrl.Length != 0) {
+        output.WriteRawTag(170, 50);
+        output.WriteString(CloudGameUrl);
+      }
+      if (GameStartCustomerServiceUrl.Length != 0) {
+        output.WriteRawTag(146, 58);
+        output.WriteString(GameStartCustomerServiceUrl);
+      }
+      if (OnlineReplayUploadUrl.Length != 0) {
+        output.WriteRawTag(146, 63);
+        output.WriteString(OnlineReplayUploadUrl);
+      }
+      if (EJCFBDDLLME.Length != 0) {
+        output.WriteRawTag(242, 64);
+        output.WriteString(EJCFBDDLLME);
+      }
+      if (OnlineReplayDownloadUrl.Length != 0) {
+        output.WriteRawTag(162, 65);
+        output.WriteString(OnlineReplayDownloadUrl);
+      }
+      if (TeenagerPrivacyInGameUrl.Length != 0) {
+        output.WriteRawTag(154, 70);
+        output.WriteString(TeenagerPrivacyInGameUrl);
+      }
+      if (EnableCdnIpv6 != 0) {
+        output.WriteRawTag(240, 73);
+        output.WriteUInt32(EnableCdnIpv6);
+      }
+      if (IfixUrl.Length != 0) {
+        output.WriteRawTag(250, 74);
+        output.WriteString(IfixUrl);
+      }
+      if (EnableUploadBattleLog != false) {
+        output.WriteRawTag(240, 75);
+        output.WriteBool(EnableUploadBattleLog);
+      }
+      if (EnableWatermark != false) {
+        output.WriteRawTag(144, 79);
+        output.WriteBool(EnableWatermark);
+      }
+      if (RogueTournBuildRefH5Url.Length != 0) {
+        output.WriteRawTag(194, 81);
+        output.WriteString(RogueTournBuildRefH5Url);
+      }
+      if (PrivacyInGameUrl.Length != 0) {
+        output.WriteRawTag(186, 83);
+        output.WriteString(PrivacyInGameUrl);
+      }
+      if (HotPointUrl.Length != 0) {
+        output.WriteRawTag(186, 85);
+        output.WriteString(HotPointUrl);
+      }
+      if (PlayerReturnQuestionnaireBUrl.Length != 0) {
+        output.WriteRawTag(250, 85);
+        output.WriteString(PlayerReturnQuestionnaireBUrl);
+      }
+      if (UserAgreementUrl.Length != 0) {
+        output.WriteRawTag(162, 93);
+        output.WriteString(UserAgreementUrl);
+      }
+      if (CloseRedeemCode != false) {
+        output.WriteRawTag(200, 96);
+        output.WriteBool(CloseRedeemCode);
+      }
+      if (IfixVersion.Length != 0) {
+        output.WriteRawTag(218, 96);
+        output.WriteString(IfixVersion);
+      }
+      if (ThirdPrivacyInGameUrl.Length != 0) {
+        output.WriteRawTag(130, 99);
+        output.WriteString(ThirdPrivacyInGameUrl);
+      }
+      if (IosExam != false) {
+        output.WriteRawTag(160, 99);
+        output.WriteBool(IosExam);
+      }
+      if (NetworkDiagnostic != false) {
+        output.WriteRawTag(128, 100);
+        output.WriteBool(NetworkDiagnostic);
+      }
+      if (ForbidRecharge != false) {
+        output.WriteRawTag(160, 105);
+        output.WriteBool(ForbidRecharge);
+      }
+      if (DesignDataReloginDesc.Length != 0) {
+        output.WriteRawTag(178, 105);
+        output.WriteString(DesignDataReloginDesc);
+      }
+      if (EventTrackingOpen != false) {
+        output.WriteRawTag(192, 107);
+        output.WriteBool(EventTrackingOpen);
+      }
+      if (LoginWhiteMsg.Length != 0) {
+        output.WriteRawTag(210, 107);
+        output.WriteString(LoginWhiteMsg);
+      }
       if (RogueTournNoticePicType != 0) {
-        output.WriteRawTag(224, 85);
+        output.WriteRawTag(248, 107);
         output.WriteUInt32(RogueTournNoticePicType);
       }
       if (ServerDescription.Length != 0) {
-        output.WriteRawTag(130, 87);
+        output.WriteRawTag(186, 110);
         output.WriteString(ServerDescription);
       }
-      if (HotPointUrl.Length != 0) {
-        output.WriteRawTag(226, 94);
-        output.WriteString(HotPointUrl);
-      }
       if (Ipv6Address.Length != 0) {
-        output.WriteRawTag(210, 97);
+        output.WriteRawTag(154, 111);
         output.WriteString(Ipv6Address);
       }
-      if (PrivacyInGameUrl.Length != 0) {
-        output.WriteRawTag(242, 97);
-        output.WriteString(PrivacyInGameUrl);
+      if (CustomServiceUrl.Length != 0) {
+        output.WriteRawTag(138, 112);
+        output.WriteString(CustomServiceUrl);
       }
-      if (ThirdPrivacyInGameUrl.Length != 0) {
-        output.WriteRawTag(234, 98);
-        output.WriteString(ThirdPrivacyInGameUrl);
+      if (UseTcp != false) {
+        output.WriteRawTag(192, 112);
+        output.WriteBool(UseTcp);
       }
-      if (OnlineReplayDownloadUrl.Length != 0) {
-        output.WriteRawTag(170, 99);
-        output.WriteString(OnlineReplayDownloadUrl);
-      }
-      if (PlayerReturnInviteH5Url.Length != 0) {
-        output.WriteRawTag(178, 104);
-        output.WriteString(PlayerReturnInviteH5Url);
-      }
-      if (WebToolUrl.Length != 0) {
-        output.WriteRawTag(202, 108);
-        output.WriteString(WebToolUrl);
-      }
-      if (MPNJIKPKOHJ.Length != 0) {
-        output.WriteRawTag(186, 111);
-        output.WriteString(MPNJIKPKOHJ);
-      }
-      if (RogueMagicH5Url.Length != 0) {
-        output.WriteRawTag(218, 113);
-        output.WriteString(RogueMagicH5Url);
-      }
-      if (UseNewNetworking != false) {
-        output.WriteRawTag(168, 114);
-        output.WriteBool(UseNewNetworking);
-      }
-      if (RogueTournBuildRefStaticDataUrlPrefix.Length != 0) {
-        output.WriteRawTag(202, 114);
-        output.WriteString(RogueTournBuildRefStaticDataUrlPrefix);
-      }
-      if (IfixUrl.Length != 0) {
-        output.WriteRawTag(202, 117);
-        output.WriteString(IfixUrl);
-      }
-      if (IosExam != false) {
-        output.WriteRawTag(216, 119);
-        output.WriteBool(IosExam);
+      if (ECBFEHFPOFJ != false) {
+        output.WriteRawTag(240, 122);
+        output.WriteBool(ECBFEHFPOFJ);
       }
       oAOHIECDGCC_.WriteTo(ref output, _repeated_oAOHIECDGCC_codec);
-      if (ForbidRecharge != false) {
-        output.WriteRawTag(208, 122);
-        output.WriteBool(ForbidRecharge);
-      }
-      if (OfficialCommunityUrl.Length != 0) {
-        output.WriteRawTag(250, 122);
-        output.WriteString(OfficialCommunityUrl);
-      }
-      if (UserAgreementUrl.Length != 0) {
-        output.WriteRawTag(242, 125);
-        output.WriteString(UserAgreementUrl);
-      }
-      if (EnableCdnIpv6 != 0) {
-        output.WriteRawTag(184, 126);
-        output.WriteUInt32(EnableCdnIpv6);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1719,204 +1789,213 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (RedeemCodeUrl.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(RedeemCodeUrl);
-      }
-      if (UseNewNetworking != false) {
-        size += 2 + 1;
-      }
-      if (RogueTournBuildRefApiReqColorHeaderValue.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(RogueTournBuildRefApiReqColorHeaderValue);
-      }
-      if (DesignDataReloginDesc.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(DesignDataReloginDesc);
-      }
-      size += oAOHIECDGCC_.CalculateSize(_repeated_oAOHIECDGCC_codec);
-      if (EnableWatermark != false) {
-        size += 2 + 1;
-      }
-      if (ThirdPrivacyInGameUrl.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(ThirdPrivacyInGameUrl);
-      }
-      if (StopEndTime != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(StopEndTime);
-      }
-      if (IfixUrl.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(IfixUrl);
-      }
-      if (PlayerReturnQuestionnaireAUrl.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(PlayerReturnQuestionnaireAUrl);
-      }
-      if (Ipv6Address.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(Ipv6Address);
-      }
-      if (NetworkDiagnostic != false) {
-        size += 2 + 1;
-      }
-      if (OnlineReplayUploadUrl.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(OnlineReplayUploadUrl);
-      }
-      if (UseTcp != false) {
-        size += 2 + 1;
+      if (ExResourceUrl.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ExResourceUrl);
       }
       if (EnableCdnIpv6 != 0) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(EnableCdnIpv6);
       }
-      if (PlayerReturnQuestionnaireBUrl.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(PlayerReturnQuestionnaireBUrl);
-      }
-      if (ECBFEHFPOFJ != false) {
-        size += 2 + 1;
-      }
-      if (PrivacyInGameUrl.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(PrivacyInGameUrl);
-      }
-      if (RogueTournBuildRefApiReqColorHeaderKey.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(RogueTournBuildRefApiReqColorHeaderKey);
-      }
-      if (UserAgreementUrl.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(UserAgreementUrl);
-      }
-      if (MdkResVersion.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(MdkResVersion);
-      }
-      if (ExResourceUrl.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ExResourceUrl);
-      }
-      if (OnlineReplayDownloadUrl.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(OnlineReplayDownloadUrl);
-      }
-      if (PreDownloadUrl.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(PreDownloadUrl);
-      }
       if (ServerDescription.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(ServerDescription);
       }
-      if (PersonalInformationInGameUrl.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(PersonalInformationInGameUrl);
+      if (PlayerReturnQuestionnaireBUrl.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(PlayerReturnQuestionnaireBUrl);
       }
-      if (OperationFeedbackUrl.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(OperationFeedbackUrl);
-      }
-      if (StopDesc.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(StopDesc);
-      }
-      if (IfixVersion.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(IfixVersion);
-      }
-      if (CommunityActivityUrl.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(CommunityActivityUrl);
-      }
-      if (MPNJIKPKOHJ.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(MPNJIKPKOHJ);
-      }
-      if (IosExam != false) {
-        size += 2 + 1;
-      }
-      if (LoginWhiteMsg.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(LoginWhiteMsg);
-      }
-      if (EnableVersionUpdate != false) {
-        size += 1 + 1;
-      }
-      if (GameStartCustomerServiceUrl.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(GameStartCustomerServiceUrl);
-      }
-      if (RegionName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(RegionName);
-      }
-      if (MtpSwitch != false) {
-        size += 2 + 1;
-      }
-      if (TeenagerPrivacyInGameUrl.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(TeenagerPrivacyInGameUrl);
-      }
-      if (EnableUploadBattleLog != false) {
-        size += 2 + 1;
-      }
-      if (RogueTournBuildRefH5Url.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(RogueTournBuildRefH5Url);
-      }
-      if (TemporaryMaintenanceUrl.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(TemporaryMaintenanceUrl);
-      }
-      if (RogueTournBuildRefStaticDataUrlPrefix.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(RogueTournBuildRefStaticDataUrlPrefix);
-      }
-      if (HotPointUrl.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(HotPointUrl);
-      }
-      if (RogueTournNoticePicType != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(RogueTournNoticePicType);
-      }
-      if (OfficialCommunityUrl.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(OfficialCommunityUrl);
-      }
-      if (AsbReloginType != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AsbReloginType);
-      }
-      if (DesignDataReloginType != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DesignDataReloginType);
-      }
-      if (ClientSecretKey.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(ClientSecretKey);
-      }
-      if (EnableDesignDataVersionUpdate != false) {
-        size += 1 + 1;
+      if (Ipv6Address.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Ipv6Address);
       }
       if (EnableAndroidMiddlePackage != false) {
         size += 2 + 1;
       }
-      if (RogueMagicH5Url.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(RogueMagicH5Url);
-      }
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
-      if (CloudGameUrl.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(CloudGameUrl);
-      }
-      if (AsbReloginDesc.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(AsbReloginDesc);
-      }
-      if (EnableSaveReplayFile != false) {
+      if (UseNewNetworking != false) {
         size += 2 + 1;
       }
       if (WebToolUrl.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(WebToolUrl);
       }
-      if (Ip.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Ip);
-      }
-      if (AssetBundleUrl.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(AssetBundleUrl);
-      }
-      if (Port != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Port);
-      }
-      if (LuaUrl.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(LuaUrl);
-      }
-      if (PlayerReturnInviteH5Url.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(PlayerReturnInviteH5Url);
-      }
-      if (CustomServiceUrl.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(CustomServiceUrl);
-      }
-      if (ForbidRecharge != false) {
+      if (EventTrackingOpen != false) {
         size += 2 + 1;
       }
-      if (RogueTournNoticeId != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(RogueTournNoticeId);
+      if (CommunityActivityUrl.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(CommunityActivityUrl);
       }
       if (CloseRedeemCode != false) {
         size += 2 + 1;
       }
-      if (EventTrackingOpen != false) {
-        size += 2 + 1;
-      }
       if (StopBeginTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(StopBeginTime);
+      }
+      if (NetworkDiagnostic != false) {
+        size += 2 + 1;
+      }
+      if (TemporaryMaintenanceUrl.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(TemporaryMaintenanceUrl);
+      }
+      if (EnableVersionUpdate != false) {
+        size += 1 + 1;
+      }
+      if (UserAgreementUrl.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(UserAgreementUrl);
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (CdkeyRecallUrl.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(CdkeyRecallUrl);
+      }
+      if (RegionName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RegionName);
+      }
+      if (AssetBundleUrl.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AssetBundleUrl);
+      }
+      if (Msg.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Msg);
+      }
+      if (RogueTournBuildRefApiReqColorHeaderKey.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(RogueTournBuildRefApiReqColorHeaderKey);
+      }
+      if (CustomServiceUrl.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(CustomServiceUrl);
+      }
+      if (StopEndTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(StopEndTime);
+      }
+      if (AsbReloginType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AsbReloginType);
+      }
+      if (RogueTournBuildRefApiReqColorHeaderValue.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(RogueTournBuildRefApiReqColorHeaderValue);
+      }
+      if (MtpSwitch != false) {
+        size += 2 + 1;
+      }
+      if (MPNJIKPKOHJ.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(MPNJIKPKOHJ);
+      }
+      if (PreDownloadUrl.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(PreDownloadUrl);
+      }
+      if (RogueMagicH5Url.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(RogueMagicH5Url);
+      }
+      if (ECBFEHFPOFJ != false) {
+        size += 2 + 1;
+      }
+      size += oAOHIECDGCC_.CalculateSize(_repeated_oAOHIECDGCC_codec);
+      if (RogueTournBuildRefH5Url.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(RogueTournBuildRefH5Url);
+      }
+      if (EnableWatermark != false) {
+        size += 2 + 1;
+      }
+      if (PlayerReturnInviteH5Url.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(PlayerReturnInviteH5Url);
+      }
+      if (EnableSaveReplayFile != false) {
+        size += 2 + 1;
+      }
+      if (Port != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Port);
+      }
+      if (AsbReloginDesc.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AsbReloginDesc);
+      }
+      if (GameStartCustomerServiceUrl.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(GameStartCustomerServiceUrl);
+      }
+      if (CloudGameUrl.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(CloudGameUrl);
+      }
+      if (DesignDataReloginDesc.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(DesignDataReloginDesc);
+      }
+      if (EnableDesignDataVersionUpdate != false) {
+        size += 1 + 1;
+      }
+      if (IosExam != false) {
+        size += 2 + 1;
+      }
+      if (NGCIMHOLJBA.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(NGCIMHOLJBA);
+      }
+      if (PrivacyInGameUrl.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(PrivacyInGameUrl);
+      }
+      if (EnableUploadBattleLog != false) {
+        size += 2 + 1;
+      }
+      if (RogueTournNoticePicType != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(RogueTournNoticePicType);
+      }
+      if (POOOLGFKKJL.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(POOOLGFKKJL);
+      }
+      if (TeenagerPrivacyInGameUrl.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(TeenagerPrivacyInGameUrl);
+      }
+      if (PlayerReturnQuestionnaireAUrl.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(PlayerReturnQuestionnaireAUrl);
+      }
+      if (ThirdPrivacyInGameUrl.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ThirdPrivacyInGameUrl);
+      }
+      if (OnlineReplayDownloadUrl.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(OnlineReplayDownloadUrl);
+      }
+      if (HotPointUrl.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(HotPointUrl);
+      }
+      if (ClientSecretKey.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ClientSecretKey);
+      }
+      if (PersonalInformationInGameUrl.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(PersonalInformationInGameUrl);
+      }
+      if (ForbidRecharge != false) {
+        size += 2 + 1;
+      }
+      if (Ip.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Ip);
+      }
+      if (OperationFeedbackUrl.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(OperationFeedbackUrl);
+      }
+      if (IfixVersion.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(IfixVersion);
+      }
+      if (UseTcp != false) {
+        size += 2 + 1;
+      }
+      if (OnlineReplayUploadUrl.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(OnlineReplayUploadUrl);
+      }
+      if (DesignDataReloginType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DesignDataReloginType);
+      }
+      if (OfficialCommunityUrl.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(OfficialCommunityUrl);
+      }
+      if (RogueTournBuildRefStaticDataUrlPrefix.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(RogueTournBuildRefStaticDataUrlPrefix);
+      }
+      if (LuaUrl.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LuaUrl);
+      }
+      if (IfixUrl.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(IfixUrl);
+      }
+      if (LoginWhiteMsg.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(LoginWhiteMsg);
+      }
+      if (MdkResVersion.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(MdkResVersion);
+      }
+      if (EJCFBDDLLME.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(EJCFBDDLLME);
+      }
+      if (LHOOFMAIHPC.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(LHOOFMAIHPC);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1930,204 +2009,213 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.RedeemCodeUrl.Length != 0) {
-        RedeemCodeUrl = other.RedeemCodeUrl;
-      }
-      if (other.UseNewNetworking != false) {
-        UseNewNetworking = other.UseNewNetworking;
-      }
-      if (other.RogueTournBuildRefApiReqColorHeaderValue.Length != 0) {
-        RogueTournBuildRefApiReqColorHeaderValue = other.RogueTournBuildRefApiReqColorHeaderValue;
-      }
-      if (other.DesignDataReloginDesc.Length != 0) {
-        DesignDataReloginDesc = other.DesignDataReloginDesc;
-      }
-      oAOHIECDGCC_.Add(other.oAOHIECDGCC_);
-      if (other.EnableWatermark != false) {
-        EnableWatermark = other.EnableWatermark;
-      }
-      if (other.ThirdPrivacyInGameUrl.Length != 0) {
-        ThirdPrivacyInGameUrl = other.ThirdPrivacyInGameUrl;
-      }
-      if (other.StopEndTime != 0L) {
-        StopEndTime = other.StopEndTime;
-      }
-      if (other.IfixUrl.Length != 0) {
-        IfixUrl = other.IfixUrl;
-      }
-      if (other.PlayerReturnQuestionnaireAUrl.Length != 0) {
-        PlayerReturnQuestionnaireAUrl = other.PlayerReturnQuestionnaireAUrl;
-      }
-      if (other.Ipv6Address.Length != 0) {
-        Ipv6Address = other.Ipv6Address;
-      }
-      if (other.NetworkDiagnostic != false) {
-        NetworkDiagnostic = other.NetworkDiagnostic;
-      }
-      if (other.OnlineReplayUploadUrl.Length != 0) {
-        OnlineReplayUploadUrl = other.OnlineReplayUploadUrl;
-      }
-      if (other.UseTcp != false) {
-        UseTcp = other.UseTcp;
+      if (other.ExResourceUrl.Length != 0) {
+        ExResourceUrl = other.ExResourceUrl;
       }
       if (other.EnableCdnIpv6 != 0) {
         EnableCdnIpv6 = other.EnableCdnIpv6;
       }
-      if (other.PlayerReturnQuestionnaireBUrl.Length != 0) {
-        PlayerReturnQuestionnaireBUrl = other.PlayerReturnQuestionnaireBUrl;
-      }
-      if (other.ECBFEHFPOFJ != false) {
-        ECBFEHFPOFJ = other.ECBFEHFPOFJ;
-      }
-      if (other.PrivacyInGameUrl.Length != 0) {
-        PrivacyInGameUrl = other.PrivacyInGameUrl;
-      }
-      if (other.RogueTournBuildRefApiReqColorHeaderKey.Length != 0) {
-        RogueTournBuildRefApiReqColorHeaderKey = other.RogueTournBuildRefApiReqColorHeaderKey;
-      }
-      if (other.UserAgreementUrl.Length != 0) {
-        UserAgreementUrl = other.UserAgreementUrl;
-      }
-      if (other.MdkResVersion.Length != 0) {
-        MdkResVersion = other.MdkResVersion;
-      }
-      if (other.ExResourceUrl.Length != 0) {
-        ExResourceUrl = other.ExResourceUrl;
-      }
-      if (other.OnlineReplayDownloadUrl.Length != 0) {
-        OnlineReplayDownloadUrl = other.OnlineReplayDownloadUrl;
-      }
-      if (other.PreDownloadUrl.Length != 0) {
-        PreDownloadUrl = other.PreDownloadUrl;
-      }
       if (other.ServerDescription.Length != 0) {
         ServerDescription = other.ServerDescription;
       }
-      if (other.PersonalInformationInGameUrl.Length != 0) {
-        PersonalInformationInGameUrl = other.PersonalInformationInGameUrl;
+      if (other.PlayerReturnQuestionnaireBUrl.Length != 0) {
+        PlayerReturnQuestionnaireBUrl = other.PlayerReturnQuestionnaireBUrl;
       }
-      if (other.OperationFeedbackUrl.Length != 0) {
-        OperationFeedbackUrl = other.OperationFeedbackUrl;
-      }
-      if (other.StopDesc.Length != 0) {
-        StopDesc = other.StopDesc;
-      }
-      if (other.IfixVersion.Length != 0) {
-        IfixVersion = other.IfixVersion;
-      }
-      if (other.CommunityActivityUrl.Length != 0) {
-        CommunityActivityUrl = other.CommunityActivityUrl;
-      }
-      if (other.MPNJIKPKOHJ.Length != 0) {
-        MPNJIKPKOHJ = other.MPNJIKPKOHJ;
-      }
-      if (other.IosExam != false) {
-        IosExam = other.IosExam;
-      }
-      if (other.LoginWhiteMsg.Length != 0) {
-        LoginWhiteMsg = other.LoginWhiteMsg;
-      }
-      if (other.EnableVersionUpdate != false) {
-        EnableVersionUpdate = other.EnableVersionUpdate;
-      }
-      if (other.GameStartCustomerServiceUrl.Length != 0) {
-        GameStartCustomerServiceUrl = other.GameStartCustomerServiceUrl;
-      }
-      if (other.RegionName.Length != 0) {
-        RegionName = other.RegionName;
-      }
-      if (other.MtpSwitch != false) {
-        MtpSwitch = other.MtpSwitch;
-      }
-      if (other.TeenagerPrivacyInGameUrl.Length != 0) {
-        TeenagerPrivacyInGameUrl = other.TeenagerPrivacyInGameUrl;
-      }
-      if (other.EnableUploadBattleLog != false) {
-        EnableUploadBattleLog = other.EnableUploadBattleLog;
-      }
-      if (other.RogueTournBuildRefH5Url.Length != 0) {
-        RogueTournBuildRefH5Url = other.RogueTournBuildRefH5Url;
-      }
-      if (other.TemporaryMaintenanceUrl.Length != 0) {
-        TemporaryMaintenanceUrl = other.TemporaryMaintenanceUrl;
-      }
-      if (other.RogueTournBuildRefStaticDataUrlPrefix.Length != 0) {
-        RogueTournBuildRefStaticDataUrlPrefix = other.RogueTournBuildRefStaticDataUrlPrefix;
-      }
-      if (other.HotPointUrl.Length != 0) {
-        HotPointUrl = other.HotPointUrl;
-      }
-      if (other.RogueTournNoticePicType != 0) {
-        RogueTournNoticePicType = other.RogueTournNoticePicType;
-      }
-      if (other.OfficialCommunityUrl.Length != 0) {
-        OfficialCommunityUrl = other.OfficialCommunityUrl;
-      }
-      if (other.AsbReloginType != 0) {
-        AsbReloginType = other.AsbReloginType;
-      }
-      if (other.DesignDataReloginType != 0) {
-        DesignDataReloginType = other.DesignDataReloginType;
-      }
-      if (other.ClientSecretKey.Length != 0) {
-        ClientSecretKey = other.ClientSecretKey;
-      }
-      if (other.EnableDesignDataVersionUpdate != false) {
-        EnableDesignDataVersionUpdate = other.EnableDesignDataVersionUpdate;
+      if (other.Ipv6Address.Length != 0) {
+        Ipv6Address = other.Ipv6Address;
       }
       if (other.EnableAndroidMiddlePackage != false) {
         EnableAndroidMiddlePackage = other.EnableAndroidMiddlePackage;
       }
-      if (other.RogueMagicH5Url.Length != 0) {
-        RogueMagicH5Url = other.RogueMagicH5Url;
-      }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
-      if (other.CloudGameUrl.Length != 0) {
-        CloudGameUrl = other.CloudGameUrl;
-      }
-      if (other.AsbReloginDesc.Length != 0) {
-        AsbReloginDesc = other.AsbReloginDesc;
-      }
-      if (other.EnableSaveReplayFile != false) {
-        EnableSaveReplayFile = other.EnableSaveReplayFile;
+      if (other.UseNewNetworking != false) {
+        UseNewNetworking = other.UseNewNetworking;
       }
       if (other.WebToolUrl.Length != 0) {
         WebToolUrl = other.WebToolUrl;
       }
-      if (other.Ip.Length != 0) {
-        Ip = other.Ip;
+      if (other.EventTrackingOpen != false) {
+        EventTrackingOpen = other.EventTrackingOpen;
       }
-      if (other.AssetBundleUrl.Length != 0) {
-        AssetBundleUrl = other.AssetBundleUrl;
-      }
-      if (other.Port != 0) {
-        Port = other.Port;
-      }
-      if (other.LuaUrl.Length != 0) {
-        LuaUrl = other.LuaUrl;
-      }
-      if (other.PlayerReturnInviteH5Url.Length != 0) {
-        PlayerReturnInviteH5Url = other.PlayerReturnInviteH5Url;
-      }
-      if (other.CustomServiceUrl.Length != 0) {
-        CustomServiceUrl = other.CustomServiceUrl;
-      }
-      if (other.ForbidRecharge != false) {
-        ForbidRecharge = other.ForbidRecharge;
-      }
-      if (other.RogueTournNoticeId != 0) {
-        RogueTournNoticeId = other.RogueTournNoticeId;
+      if (other.CommunityActivityUrl.Length != 0) {
+        CommunityActivityUrl = other.CommunityActivityUrl;
       }
       if (other.CloseRedeemCode != false) {
         CloseRedeemCode = other.CloseRedeemCode;
       }
-      if (other.EventTrackingOpen != false) {
-        EventTrackingOpen = other.EventTrackingOpen;
-      }
       if (other.StopBeginTime != 0L) {
         StopBeginTime = other.StopBeginTime;
+      }
+      if (other.NetworkDiagnostic != false) {
+        NetworkDiagnostic = other.NetworkDiagnostic;
+      }
+      if (other.TemporaryMaintenanceUrl.Length != 0) {
+        TemporaryMaintenanceUrl = other.TemporaryMaintenanceUrl;
+      }
+      if (other.EnableVersionUpdate != false) {
+        EnableVersionUpdate = other.EnableVersionUpdate;
+      }
+      if (other.UserAgreementUrl.Length != 0) {
+        UserAgreementUrl = other.UserAgreementUrl;
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
+      if (other.CdkeyRecallUrl.Length != 0) {
+        CdkeyRecallUrl = other.CdkeyRecallUrl;
+      }
+      if (other.RegionName.Length != 0) {
+        RegionName = other.RegionName;
+      }
+      if (other.AssetBundleUrl.Length != 0) {
+        AssetBundleUrl = other.AssetBundleUrl;
+      }
+      if (other.Msg.Length != 0) {
+        Msg = other.Msg;
+      }
+      if (other.RogueTournBuildRefApiReqColorHeaderKey.Length != 0) {
+        RogueTournBuildRefApiReqColorHeaderKey = other.RogueTournBuildRefApiReqColorHeaderKey;
+      }
+      if (other.CustomServiceUrl.Length != 0) {
+        CustomServiceUrl = other.CustomServiceUrl;
+      }
+      if (other.StopEndTime != 0L) {
+        StopEndTime = other.StopEndTime;
+      }
+      if (other.AsbReloginType != 0) {
+        AsbReloginType = other.AsbReloginType;
+      }
+      if (other.RogueTournBuildRefApiReqColorHeaderValue.Length != 0) {
+        RogueTournBuildRefApiReqColorHeaderValue = other.RogueTournBuildRefApiReqColorHeaderValue;
+      }
+      if (other.MtpSwitch != false) {
+        MtpSwitch = other.MtpSwitch;
+      }
+      if (other.MPNJIKPKOHJ.Length != 0) {
+        MPNJIKPKOHJ = other.MPNJIKPKOHJ;
+      }
+      if (other.PreDownloadUrl.Length != 0) {
+        PreDownloadUrl = other.PreDownloadUrl;
+      }
+      if (other.RogueMagicH5Url.Length != 0) {
+        RogueMagicH5Url = other.RogueMagicH5Url;
+      }
+      if (other.ECBFEHFPOFJ != false) {
+        ECBFEHFPOFJ = other.ECBFEHFPOFJ;
+      }
+      oAOHIECDGCC_.Add(other.oAOHIECDGCC_);
+      if (other.RogueTournBuildRefH5Url.Length != 0) {
+        RogueTournBuildRefH5Url = other.RogueTournBuildRefH5Url;
+      }
+      if (other.EnableWatermark != false) {
+        EnableWatermark = other.EnableWatermark;
+      }
+      if (other.PlayerReturnInviteH5Url.Length != 0) {
+        PlayerReturnInviteH5Url = other.PlayerReturnInviteH5Url;
+      }
+      if (other.EnableSaveReplayFile != false) {
+        EnableSaveReplayFile = other.EnableSaveReplayFile;
+      }
+      if (other.Port != 0) {
+        Port = other.Port;
+      }
+      if (other.AsbReloginDesc.Length != 0) {
+        AsbReloginDesc = other.AsbReloginDesc;
+      }
+      if (other.GameStartCustomerServiceUrl.Length != 0) {
+        GameStartCustomerServiceUrl = other.GameStartCustomerServiceUrl;
+      }
+      if (other.CloudGameUrl.Length != 0) {
+        CloudGameUrl = other.CloudGameUrl;
+      }
+      if (other.DesignDataReloginDesc.Length != 0) {
+        DesignDataReloginDesc = other.DesignDataReloginDesc;
+      }
+      if (other.EnableDesignDataVersionUpdate != false) {
+        EnableDesignDataVersionUpdate = other.EnableDesignDataVersionUpdate;
+      }
+      if (other.IosExam != false) {
+        IosExam = other.IosExam;
+      }
+      if (other.NGCIMHOLJBA.Length != 0) {
+        NGCIMHOLJBA = other.NGCIMHOLJBA;
+      }
+      if (other.PrivacyInGameUrl.Length != 0) {
+        PrivacyInGameUrl = other.PrivacyInGameUrl;
+      }
+      if (other.EnableUploadBattleLog != false) {
+        EnableUploadBattleLog = other.EnableUploadBattleLog;
+      }
+      if (other.RogueTournNoticePicType != 0) {
+        RogueTournNoticePicType = other.RogueTournNoticePicType;
+      }
+      if (other.POOOLGFKKJL.Length != 0) {
+        POOOLGFKKJL = other.POOOLGFKKJL;
+      }
+      if (other.TeenagerPrivacyInGameUrl.Length != 0) {
+        TeenagerPrivacyInGameUrl = other.TeenagerPrivacyInGameUrl;
+      }
+      if (other.PlayerReturnQuestionnaireAUrl.Length != 0) {
+        PlayerReturnQuestionnaireAUrl = other.PlayerReturnQuestionnaireAUrl;
+      }
+      if (other.ThirdPrivacyInGameUrl.Length != 0) {
+        ThirdPrivacyInGameUrl = other.ThirdPrivacyInGameUrl;
+      }
+      if (other.OnlineReplayDownloadUrl.Length != 0) {
+        OnlineReplayDownloadUrl = other.OnlineReplayDownloadUrl;
+      }
+      if (other.HotPointUrl.Length != 0) {
+        HotPointUrl = other.HotPointUrl;
+      }
+      if (other.ClientSecretKey.Length != 0) {
+        ClientSecretKey = other.ClientSecretKey;
+      }
+      if (other.PersonalInformationInGameUrl.Length != 0) {
+        PersonalInformationInGameUrl = other.PersonalInformationInGameUrl;
+      }
+      if (other.ForbidRecharge != false) {
+        ForbidRecharge = other.ForbidRecharge;
+      }
+      if (other.Ip.Length != 0) {
+        Ip = other.Ip;
+      }
+      if (other.OperationFeedbackUrl.Length != 0) {
+        OperationFeedbackUrl = other.OperationFeedbackUrl;
+      }
+      if (other.IfixVersion.Length != 0) {
+        IfixVersion = other.IfixVersion;
+      }
+      if (other.UseTcp != false) {
+        UseTcp = other.UseTcp;
+      }
+      if (other.OnlineReplayUploadUrl.Length != 0) {
+        OnlineReplayUploadUrl = other.OnlineReplayUploadUrl;
+      }
+      if (other.DesignDataReloginType != 0) {
+        DesignDataReloginType = other.DesignDataReloginType;
+      }
+      if (other.OfficialCommunityUrl.Length != 0) {
+        OfficialCommunityUrl = other.OfficialCommunityUrl;
+      }
+      if (other.RogueTournBuildRefStaticDataUrlPrefix.Length != 0) {
+        RogueTournBuildRefStaticDataUrlPrefix = other.RogueTournBuildRefStaticDataUrlPrefix;
+      }
+      if (other.LuaUrl.Length != 0) {
+        LuaUrl = other.LuaUrl;
+      }
+      if (other.IfixUrl.Length != 0) {
+        IfixUrl = other.IfixUrl;
+      }
+      if (other.LoginWhiteMsg.Length != 0) {
+        LoginWhiteMsg = other.LoginWhiteMsg;
+      }
+      if (other.MdkResVersion.Length != 0) {
+        MdkResVersion = other.MdkResVersion;
+      }
+      if (other.EJCFBDDLLME.Length != 0) {
+        EJCFBDDLLME = other.EJCFBDDLLME;
+      }
+      if (other.LHOOFMAIHPC.Length != 0) {
+        LHOOFMAIHPC = other.LHOOFMAIHPC;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2144,36 +2232,36 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            LuaUrl = input.ReadString();
+          case 8: {
+            StopEndTime = input.ReadInt64();
             break;
           }
           case 16: {
-            AsbReloginType = input.ReadUInt32();
+            Retcode = input.ReadUInt32();
             break;
           }
           case 26: {
+            ExResourceUrl = input.ReadString();
+            break;
+          }
+          case 32: {
+            AsbReloginType = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            DesignDataReloginType = input.ReadUInt32();
+            break;
+          }
+          case 50: {
+            RegionName = input.ReadString();
+            break;
+          }
+          case 58: {
             Ip = input.ReadString();
             break;
           }
-          case 34: {
+          case 66: {
             AsbReloginDesc = input.ReadString();
-            break;
-          }
-          case 42: {
-            StopDesc = input.ReadString();
-            break;
-          }
-          case 48: {
-            StopBeginTime = input.ReadInt64();
-            break;
-          }
-          case 56: {
-            EnableVersionUpdate = input.ReadBool();
-            break;
-          }
-          case 64: {
-            Retcode = input.ReadUInt32();
             break;
           }
           case 74: {
@@ -2181,235 +2269,247 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 80: {
-            StopEndTime = input.ReadInt64();
+            EnableVersionUpdate = input.ReadBool();
             break;
           }
-          case 88: {
-            EnableDesignDataVersionUpdate = input.ReadBool();
+          case 90: {
+            Msg = input.ReadString();
             break;
           }
           case 96: {
-            Port = input.ReadUInt32();
+            StopBeginTime = input.ReadInt64();
             break;
           }
           case 106: {
-            ExResourceUrl = input.ReadString();
+            LuaUrl = input.ReadString();
             break;
           }
-          case 114: {
-            RegionName = input.ReadString();
+          case 112: {
+            Port = input.ReadUInt32();
             break;
           }
           case 120: {
-            DesignDataReloginType = input.ReadUInt32();
+            EnableDesignDataVersionUpdate = input.ReadBool();
             break;
           }
-          case 152: {
-            UseTcp = input.ReadBool();
+          case 618: {
+            POOOLGFKKJL = input.ReadString();
             break;
           }
-          case 330: {
-            RogueTournBuildRefApiReqColorHeaderValue = input.ReadString();
-            break;
-          }
-          case 1888: {
-            EnableUploadBattleLog = input.ReadBool();
-            break;
-          }
-          case 2154: {
-            RogueTournBuildRefH5Url = input.ReadString();
-            break;
-          }
-          case 2650: {
-            TeenagerPrivacyInGameUrl = input.ReadString();
-            break;
-          }
-          case 3224: {
-            EnableSaveReplayFile = input.ReadBool();
-            break;
-          }
-          case 3480: {
-            NetworkDiagnostic = input.ReadBool();
-            break;
-          }
-          case 3626: {
-            GameStartCustomerServiceUrl = input.ReadString();
-            break;
-          }
-          case 3720: {
-            CloseRedeemCode = input.ReadBool();
-            break;
-          }
-          case 3984: {
-            ECBFEHFPOFJ = input.ReadBool();
-            break;
-          }
-          case 4866: {
-            PlayerReturnQuestionnaireAUrl = input.ReadString();
-            break;
-          }
-          case 5786: {
+          case 1226: {
             TemporaryMaintenanceUrl = input.ReadString();
             break;
           }
-          case 6114: {
-            IfixVersion = input.ReadString();
-            break;
-          }
-          case 6178: {
-            PersonalInformationInGameUrl = input.ReadString();
-            break;
-          }
-          case 6218: {
-            PreDownloadUrl = input.ReadString();
-            break;
-          }
-          case 6282: {
-            OperationFeedbackUrl = input.ReadString();
-            break;
-          }
-          case 7240: {
-            MtpSwitch = input.ReadBool();
-            break;
-          }
-          case 7320: {
-            EnableAndroidMiddlePackage = input.ReadBool();
-            break;
-          }
-          case 7810: {
-            LoginWhiteMsg = input.ReadString();
-            break;
-          }
-          case 7976: {
-            EnableWatermark = input.ReadBool();
-            break;
-          }
-          case 8026: {
-            CloudGameUrl = input.ReadString();
-            break;
-          }
-          case 8186: {
-            CommunityActivityUrl = input.ReadString();
-            break;
-          }
-          case 8346: {
-            PlayerReturnQuestionnaireBUrl = input.ReadString();
-            break;
-          }
-          case 9192: {
-            RogueTournNoticeId = input.ReadUInt32();
-            break;
-          }
-          case 9648: {
-            EventTrackingOpen = input.ReadBool();
-            break;
-          }
-          case 9786: {
-            ClientSecretKey = input.ReadString();
-            break;
-          }
-          case 10210: {
-            OnlineReplayUploadUrl = input.ReadString();
-            break;
-          }
-          case 10274: {
-            CustomServiceUrl = input.ReadString();
-            break;
-          }
-          case 10458: {
-            RedeemCodeUrl = input.ReadString();
-            break;
-          }
-          case 10602: {
+          case 1618: {
             MdkResVersion = input.ReadString();
             break;
           }
-          case 10786: {
-            DesignDataReloginDesc = input.ReadString();
-            break;
-          }
-          case 10858: {
-            RogueTournBuildRefApiReqColorHeaderKey = input.ReadString();
-            break;
-          }
-          case 10976: {
-            RogueTournNoticePicType = input.ReadUInt32();
-            break;
-          }
-          case 11138: {
-            ServerDescription = input.ReadString();
-            break;
-          }
-          case 12130: {
-            HotPointUrl = input.ReadString();
-            break;
-          }
-          case 12498: {
-            Ipv6Address = input.ReadString();
-            break;
-          }
-          case 12530: {
-            PrivacyInGameUrl = input.ReadString();
-            break;
-          }
-          case 12650: {
-            ThirdPrivacyInGameUrl = input.ReadString();
-            break;
-          }
-          case 12714: {
-            OnlineReplayDownloadUrl = input.ReadString();
-            break;
-          }
-          case 13362: {
-            PlayerReturnInviteH5Url = input.ReadString();
-            break;
-          }
-          case 13898: {
-            WebToolUrl = input.ReadString();
-            break;
-          }
-          case 14266: {
-            MPNJIKPKOHJ = input.ReadString();
-            break;
-          }
-          case 14554: {
-            RogueMagicH5Url = input.ReadString();
-            break;
-          }
-          case 14632: {
+          case 1736: {
             UseNewNetworking = input.ReadBool();
             break;
           }
-          case 14666: {
-            RogueTournBuildRefStaticDataUrlPrefix = input.ReadString();
+          case 1802: {
+            RogueTournBuildRefApiReqColorHeaderValue = input.ReadString();
             break;
           }
-          case 15050: {
-            IfixUrl = input.ReadString();
+          case 1864: {
+            EnableSaveReplayFile = input.ReadBool();
             break;
           }
-          case 15320: {
-            IosExam = input.ReadBool();
+          case 1914: {
+            CdkeyRecallUrl = input.ReadString();
             break;
           }
-          case 15330: {
-            oAOHIECDGCC_.AddEntriesFrom(input, _repeated_oAOHIECDGCC_codec);
+          case 2138: {
+            RogueMagicH5Url = input.ReadString();
             break;
           }
-          case 15696: {
-            ForbidRecharge = input.ReadBool();
+          case 2202: {
+            ClientSecretKey = input.ReadString();
             break;
           }
-          case 15738: {
+          case 2248: {
+            EnableAndroidMiddlePackage = input.ReadBool();
+            break;
+          }
+          case 2674: {
+            PreDownloadUrl = input.ReadString();
+            break;
+          }
+          case 3234: {
+            LHOOFMAIHPC = input.ReadString();
+            break;
+          }
+          case 3474: {
+            CommunityActivityUrl = input.ReadString();
+            break;
+          }
+          case 3626: {
+            OperationFeedbackUrl = input.ReadString();
+            break;
+          }
+          case 4050: {
+            RogueTournBuildRefApiReqColorHeaderKey = input.ReadString();
+            break;
+          }
+          case 4130: {
             OfficialCommunityUrl = input.ReadString();
             break;
           }
-          case 16114: {
+          case 4442: {
+            MPNJIKPKOHJ = input.ReadString();
+            break;
+          }
+          case 4578: {
+            PlayerReturnQuestionnaireAUrl = input.ReadString();
+            break;
+          }
+          case 4856: {
+            MtpSwitch = input.ReadBool();
+            break;
+          }
+          case 5170: {
+            WebToolUrl = input.ReadString();
+            break;
+          }
+          case 5514: {
+            PlayerReturnInviteH5Url = input.ReadString();
+            break;
+          }
+          case 5538: {
+            PersonalInformationInGameUrl = input.ReadString();
+            break;
+          }
+          case 5722: {
+            NGCIMHOLJBA = input.ReadString();
+            break;
+          }
+          case 6434: {
+            RogueTournBuildRefStaticDataUrlPrefix = input.ReadString();
+            break;
+          }
+          case 6442: {
+            CloudGameUrl = input.ReadString();
+            break;
+          }
+          case 7442: {
+            GameStartCustomerServiceUrl = input.ReadString();
+            break;
+          }
+          case 8082: {
+            OnlineReplayUploadUrl = input.ReadString();
+            break;
+          }
+          case 8306: {
+            EJCFBDDLLME = input.ReadString();
+            break;
+          }
+          case 8354: {
+            OnlineReplayDownloadUrl = input.ReadString();
+            break;
+          }
+          case 8986: {
+            TeenagerPrivacyInGameUrl = input.ReadString();
+            break;
+          }
+          case 9456: {
+            EnableCdnIpv6 = input.ReadUInt32();
+            break;
+          }
+          case 9594: {
+            IfixUrl = input.ReadString();
+            break;
+          }
+          case 9712: {
+            EnableUploadBattleLog = input.ReadBool();
+            break;
+          }
+          case 10128: {
+            EnableWatermark = input.ReadBool();
+            break;
+          }
+          case 10434: {
+            RogueTournBuildRefH5Url = input.ReadString();
+            break;
+          }
+          case 10682: {
+            PrivacyInGameUrl = input.ReadString();
+            break;
+          }
+          case 10938: {
+            HotPointUrl = input.ReadString();
+            break;
+          }
+          case 11002: {
+            PlayerReturnQuestionnaireBUrl = input.ReadString();
+            break;
+          }
+          case 11938: {
             UserAgreementUrl = input.ReadString();
             break;
           }
-          case 16184: {
-            EnableCdnIpv6 = input.ReadUInt32();
+          case 12360: {
+            CloseRedeemCode = input.ReadBool();
+            break;
+          }
+          case 12378: {
+            IfixVersion = input.ReadString();
+            break;
+          }
+          case 12674: {
+            ThirdPrivacyInGameUrl = input.ReadString();
+            break;
+          }
+          case 12704: {
+            IosExam = input.ReadBool();
+            break;
+          }
+          case 12800: {
+            NetworkDiagnostic = input.ReadBool();
+            break;
+          }
+          case 13472: {
+            ForbidRecharge = input.ReadBool();
+            break;
+          }
+          case 13490: {
+            DesignDataReloginDesc = input.ReadString();
+            break;
+          }
+          case 13760: {
+            EventTrackingOpen = input.ReadBool();
+            break;
+          }
+          case 13778: {
+            LoginWhiteMsg = input.ReadString();
+            break;
+          }
+          case 13816: {
+            RogueTournNoticePicType = input.ReadUInt32();
+            break;
+          }
+          case 14138: {
+            ServerDescription = input.ReadString();
+            break;
+          }
+          case 14234: {
+            Ipv6Address = input.ReadString();
+            break;
+          }
+          case 14346: {
+            CustomServiceUrl = input.ReadString();
+            break;
+          }
+          case 14400: {
+            UseTcp = input.ReadBool();
+            break;
+          }
+          case 15728: {
+            ECBFEHFPOFJ = input.ReadBool();
+            break;
+          }
+          case 16210: {
+            oAOHIECDGCC_.AddEntriesFrom(input, _repeated_oAOHIECDGCC_codec);
             break;
           }
         }
@@ -2427,36 +2527,36 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            LuaUrl = input.ReadString();
+          case 8: {
+            StopEndTime = input.ReadInt64();
             break;
           }
           case 16: {
-            AsbReloginType = input.ReadUInt32();
+            Retcode = input.ReadUInt32();
             break;
           }
           case 26: {
+            ExResourceUrl = input.ReadString();
+            break;
+          }
+          case 32: {
+            AsbReloginType = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            DesignDataReloginType = input.ReadUInt32();
+            break;
+          }
+          case 50: {
+            RegionName = input.ReadString();
+            break;
+          }
+          case 58: {
             Ip = input.ReadString();
             break;
           }
-          case 34: {
+          case 66: {
             AsbReloginDesc = input.ReadString();
-            break;
-          }
-          case 42: {
-            StopDesc = input.ReadString();
-            break;
-          }
-          case 48: {
-            StopBeginTime = input.ReadInt64();
-            break;
-          }
-          case 56: {
-            EnableVersionUpdate = input.ReadBool();
-            break;
-          }
-          case 64: {
-            Retcode = input.ReadUInt32();
             break;
           }
           case 74: {
@@ -2464,235 +2564,247 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 80: {
-            StopEndTime = input.ReadInt64();
+            EnableVersionUpdate = input.ReadBool();
             break;
           }
-          case 88: {
-            EnableDesignDataVersionUpdate = input.ReadBool();
+          case 90: {
+            Msg = input.ReadString();
             break;
           }
           case 96: {
-            Port = input.ReadUInt32();
+            StopBeginTime = input.ReadInt64();
             break;
           }
           case 106: {
-            ExResourceUrl = input.ReadString();
+            LuaUrl = input.ReadString();
             break;
           }
-          case 114: {
-            RegionName = input.ReadString();
+          case 112: {
+            Port = input.ReadUInt32();
             break;
           }
           case 120: {
-            DesignDataReloginType = input.ReadUInt32();
+            EnableDesignDataVersionUpdate = input.ReadBool();
             break;
           }
-          case 152: {
-            UseTcp = input.ReadBool();
+          case 618: {
+            POOOLGFKKJL = input.ReadString();
             break;
           }
-          case 330: {
-            RogueTournBuildRefApiReqColorHeaderValue = input.ReadString();
-            break;
-          }
-          case 1888: {
-            EnableUploadBattleLog = input.ReadBool();
-            break;
-          }
-          case 2154: {
-            RogueTournBuildRefH5Url = input.ReadString();
-            break;
-          }
-          case 2650: {
-            TeenagerPrivacyInGameUrl = input.ReadString();
-            break;
-          }
-          case 3224: {
-            EnableSaveReplayFile = input.ReadBool();
-            break;
-          }
-          case 3480: {
-            NetworkDiagnostic = input.ReadBool();
-            break;
-          }
-          case 3626: {
-            GameStartCustomerServiceUrl = input.ReadString();
-            break;
-          }
-          case 3720: {
-            CloseRedeemCode = input.ReadBool();
-            break;
-          }
-          case 3984: {
-            ECBFEHFPOFJ = input.ReadBool();
-            break;
-          }
-          case 4866: {
-            PlayerReturnQuestionnaireAUrl = input.ReadString();
-            break;
-          }
-          case 5786: {
+          case 1226: {
             TemporaryMaintenanceUrl = input.ReadString();
             break;
           }
-          case 6114: {
-            IfixVersion = input.ReadString();
-            break;
-          }
-          case 6178: {
-            PersonalInformationInGameUrl = input.ReadString();
-            break;
-          }
-          case 6218: {
-            PreDownloadUrl = input.ReadString();
-            break;
-          }
-          case 6282: {
-            OperationFeedbackUrl = input.ReadString();
-            break;
-          }
-          case 7240: {
-            MtpSwitch = input.ReadBool();
-            break;
-          }
-          case 7320: {
-            EnableAndroidMiddlePackage = input.ReadBool();
-            break;
-          }
-          case 7810: {
-            LoginWhiteMsg = input.ReadString();
-            break;
-          }
-          case 7976: {
-            EnableWatermark = input.ReadBool();
-            break;
-          }
-          case 8026: {
-            CloudGameUrl = input.ReadString();
-            break;
-          }
-          case 8186: {
-            CommunityActivityUrl = input.ReadString();
-            break;
-          }
-          case 8346: {
-            PlayerReturnQuestionnaireBUrl = input.ReadString();
-            break;
-          }
-          case 9192: {
-            RogueTournNoticeId = input.ReadUInt32();
-            break;
-          }
-          case 9648: {
-            EventTrackingOpen = input.ReadBool();
-            break;
-          }
-          case 9786: {
-            ClientSecretKey = input.ReadString();
-            break;
-          }
-          case 10210: {
-            OnlineReplayUploadUrl = input.ReadString();
-            break;
-          }
-          case 10274: {
-            CustomServiceUrl = input.ReadString();
-            break;
-          }
-          case 10458: {
-            RedeemCodeUrl = input.ReadString();
-            break;
-          }
-          case 10602: {
+          case 1618: {
             MdkResVersion = input.ReadString();
             break;
           }
-          case 10786: {
-            DesignDataReloginDesc = input.ReadString();
-            break;
-          }
-          case 10858: {
-            RogueTournBuildRefApiReqColorHeaderKey = input.ReadString();
-            break;
-          }
-          case 10976: {
-            RogueTournNoticePicType = input.ReadUInt32();
-            break;
-          }
-          case 11138: {
-            ServerDescription = input.ReadString();
-            break;
-          }
-          case 12130: {
-            HotPointUrl = input.ReadString();
-            break;
-          }
-          case 12498: {
-            Ipv6Address = input.ReadString();
-            break;
-          }
-          case 12530: {
-            PrivacyInGameUrl = input.ReadString();
-            break;
-          }
-          case 12650: {
-            ThirdPrivacyInGameUrl = input.ReadString();
-            break;
-          }
-          case 12714: {
-            OnlineReplayDownloadUrl = input.ReadString();
-            break;
-          }
-          case 13362: {
-            PlayerReturnInviteH5Url = input.ReadString();
-            break;
-          }
-          case 13898: {
-            WebToolUrl = input.ReadString();
-            break;
-          }
-          case 14266: {
-            MPNJIKPKOHJ = input.ReadString();
-            break;
-          }
-          case 14554: {
-            RogueMagicH5Url = input.ReadString();
-            break;
-          }
-          case 14632: {
+          case 1736: {
             UseNewNetworking = input.ReadBool();
             break;
           }
-          case 14666: {
-            RogueTournBuildRefStaticDataUrlPrefix = input.ReadString();
+          case 1802: {
+            RogueTournBuildRefApiReqColorHeaderValue = input.ReadString();
             break;
           }
-          case 15050: {
-            IfixUrl = input.ReadString();
+          case 1864: {
+            EnableSaveReplayFile = input.ReadBool();
             break;
           }
-          case 15320: {
-            IosExam = input.ReadBool();
+          case 1914: {
+            CdkeyRecallUrl = input.ReadString();
             break;
           }
-          case 15330: {
-            oAOHIECDGCC_.AddEntriesFrom(ref input, _repeated_oAOHIECDGCC_codec);
+          case 2138: {
+            RogueMagicH5Url = input.ReadString();
             break;
           }
-          case 15696: {
-            ForbidRecharge = input.ReadBool();
+          case 2202: {
+            ClientSecretKey = input.ReadString();
             break;
           }
-          case 15738: {
+          case 2248: {
+            EnableAndroidMiddlePackage = input.ReadBool();
+            break;
+          }
+          case 2674: {
+            PreDownloadUrl = input.ReadString();
+            break;
+          }
+          case 3234: {
+            LHOOFMAIHPC = input.ReadString();
+            break;
+          }
+          case 3474: {
+            CommunityActivityUrl = input.ReadString();
+            break;
+          }
+          case 3626: {
+            OperationFeedbackUrl = input.ReadString();
+            break;
+          }
+          case 4050: {
+            RogueTournBuildRefApiReqColorHeaderKey = input.ReadString();
+            break;
+          }
+          case 4130: {
             OfficialCommunityUrl = input.ReadString();
             break;
           }
-          case 16114: {
+          case 4442: {
+            MPNJIKPKOHJ = input.ReadString();
+            break;
+          }
+          case 4578: {
+            PlayerReturnQuestionnaireAUrl = input.ReadString();
+            break;
+          }
+          case 4856: {
+            MtpSwitch = input.ReadBool();
+            break;
+          }
+          case 5170: {
+            WebToolUrl = input.ReadString();
+            break;
+          }
+          case 5514: {
+            PlayerReturnInviteH5Url = input.ReadString();
+            break;
+          }
+          case 5538: {
+            PersonalInformationInGameUrl = input.ReadString();
+            break;
+          }
+          case 5722: {
+            NGCIMHOLJBA = input.ReadString();
+            break;
+          }
+          case 6434: {
+            RogueTournBuildRefStaticDataUrlPrefix = input.ReadString();
+            break;
+          }
+          case 6442: {
+            CloudGameUrl = input.ReadString();
+            break;
+          }
+          case 7442: {
+            GameStartCustomerServiceUrl = input.ReadString();
+            break;
+          }
+          case 8082: {
+            OnlineReplayUploadUrl = input.ReadString();
+            break;
+          }
+          case 8306: {
+            EJCFBDDLLME = input.ReadString();
+            break;
+          }
+          case 8354: {
+            OnlineReplayDownloadUrl = input.ReadString();
+            break;
+          }
+          case 8986: {
+            TeenagerPrivacyInGameUrl = input.ReadString();
+            break;
+          }
+          case 9456: {
+            EnableCdnIpv6 = input.ReadUInt32();
+            break;
+          }
+          case 9594: {
+            IfixUrl = input.ReadString();
+            break;
+          }
+          case 9712: {
+            EnableUploadBattleLog = input.ReadBool();
+            break;
+          }
+          case 10128: {
+            EnableWatermark = input.ReadBool();
+            break;
+          }
+          case 10434: {
+            RogueTournBuildRefH5Url = input.ReadString();
+            break;
+          }
+          case 10682: {
+            PrivacyInGameUrl = input.ReadString();
+            break;
+          }
+          case 10938: {
+            HotPointUrl = input.ReadString();
+            break;
+          }
+          case 11002: {
+            PlayerReturnQuestionnaireBUrl = input.ReadString();
+            break;
+          }
+          case 11938: {
             UserAgreementUrl = input.ReadString();
             break;
           }
-          case 16184: {
-            EnableCdnIpv6 = input.ReadUInt32();
+          case 12360: {
+            CloseRedeemCode = input.ReadBool();
+            break;
+          }
+          case 12378: {
+            IfixVersion = input.ReadString();
+            break;
+          }
+          case 12674: {
+            ThirdPrivacyInGameUrl = input.ReadString();
+            break;
+          }
+          case 12704: {
+            IosExam = input.ReadBool();
+            break;
+          }
+          case 12800: {
+            NetworkDiagnostic = input.ReadBool();
+            break;
+          }
+          case 13472: {
+            ForbidRecharge = input.ReadBool();
+            break;
+          }
+          case 13490: {
+            DesignDataReloginDesc = input.ReadString();
+            break;
+          }
+          case 13760: {
+            EventTrackingOpen = input.ReadBool();
+            break;
+          }
+          case 13778: {
+            LoginWhiteMsg = input.ReadString();
+            break;
+          }
+          case 13816: {
+            RogueTournNoticePicType = input.ReadUInt32();
+            break;
+          }
+          case 14138: {
+            ServerDescription = input.ReadString();
+            break;
+          }
+          case 14234: {
+            Ipv6Address = input.ReadString();
+            break;
+          }
+          case 14346: {
+            CustomServiceUrl = input.ReadString();
+            break;
+          }
+          case 14400: {
+            UseTcp = input.ReadBool();
+            break;
+          }
+          case 15728: {
+            ECBFEHFPOFJ = input.ReadBool();
+            break;
+          }
+          case 16210: {
+            oAOHIECDGCC_.AddEntriesFrom(ref input, _repeated_oAOHIECDGCC_codec);
             break;
           }
         }

@@ -11,7 +11,7 @@ public class HandlerTakeOfferingRewardCsReq : Handler
     {
         var req = TakeOfferingRewardCsReq.Parser.ParseFrom(data);
         var res = await connection.Player!.OfferingManager!.TakeOfferingReward((int)req.OfferingId,
-            req.TakeOfferingRewardIdList.Select(x => (int)x).ToList());
+            req.TakeRewardLevelList.Select(x => (int)x).ToList());
 
         await connection.SendPacket(new PacketTakeOfferingRewardScRsp(res.Item1, res.data, res.reward));
     }

@@ -25,14 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CipHZXRDaGFsbGVuZ2VSZWNvbW1lbmRMaW5ldXBMaXN0U2NSc3AucHJvdG8a",
-            "EUFIS0dHR0dJQklGLnByb3RvInAKJEdldENoYWxsZW5nZVJlY29tbWVuZExp",
-            "bmV1cExpc3RTY1JzcBIhCgtKQUVKSk1KUE1OQxgLIAMoCzIMLkFIS0dHR0dJ",
-            "QklGEg8KB3JldGNvZGUYDyABKA0SFAoMY2hhbGxlbmdlX2lkGA0gASgNQh6q",
-            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "HkNoYWxsZW5nZVJlY29tbWVuZExpbmV1cC5wcm90byKKAQokR2V0Q2hhbGxl",
+            "bmdlUmVjb21tZW5kTGluZXVwTGlzdFNjUnNwEjsKGGNoYWxsZW5nZV9yZWNv",
+            "bW1lbmRfbGlzdBgIIAMoCzIZLkNoYWxsZW5nZVJlY29tbWVuZExpbmV1cBIP",
+            "CgdyZXRjb2RlGA8gASgNEhQKDGNoYWxsZW5nZV9pZBgCIAEoDUIeqgIbRWdn",
+            "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AHKGGGGIBIFReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeRecommendLineupReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetChallengeRecommendLineupListScRsp), global::EggLink.DanhengServer.Proto.GetChallengeRecommendLineupListScRsp.Parser, new[]{ "JAEJJMJPMNC", "Retcode", "ChallengeId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetChallengeRecommendLineupListScRsp), global::EggLink.DanhengServer.Proto.GetChallengeRecommendLineupListScRsp.Parser, new[]{ "ChallengeRecommendList", "Retcode", "ChallengeId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetChallengeRecommendLineupListScRsp(GetChallengeRecommendLineupListScRsp other) : this() {
-      jAEJJMJPMNC_ = other.jAEJJMJPMNC_.Clone();
+      challengeRecommendList_ = other.challengeRecommendList_.Clone();
       retcode_ = other.retcode_;
       challengeId_ = other.challengeId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -86,15 +87,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GetChallengeRecommendLineupListScRsp(this);
     }
 
-    /// <summary>Field number for the "JAEJJMJPMNC" field.</summary>
-    public const int JAEJJMJPMNCFieldNumber = 11;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.AHKGGGGIBIF> _repeated_jAEJJMJPMNC_codec
-        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.AHKGGGGIBIF.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AHKGGGGIBIF> jAEJJMJPMNC_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AHKGGGGIBIF>();
+    /// <summary>Field number for the "challenge_recommend_list" field.</summary>
+    public const int ChallengeRecommendListFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChallengeRecommendLineup> _repeated_challengeRecommendList_codec
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.ChallengeRecommendLineup.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengeRecommendLineup> challengeRecommendList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengeRecommendLineup>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AHKGGGGIBIF> JAEJJMJPMNC {
-      get { return jAEJJMJPMNC_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengeRecommendLineup> ChallengeRecommendList {
+      get { return challengeRecommendList_; }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
@@ -110,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "challenge_id" field.</summary>
-    public const int ChallengeIdFieldNumber = 13;
+    public const int ChallengeIdFieldNumber = 2;
     private uint challengeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!jAEJJMJPMNC_.Equals(other.jAEJJMJPMNC_)) return false;
+      if(!challengeRecommendList_.Equals(other.challengeRecommendList_)) return false;
       if (Retcode != other.Retcode) return false;
       if (ChallengeId != other.ChallengeId) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -146,7 +147,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= jAEJJMJPMNC_.GetHashCode();
+      hash ^= challengeRecommendList_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (ChallengeId != 0) hash ^= ChallengeId.GetHashCode();
       if (_unknownFields != null) {
@@ -167,11 +168,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      jAEJJMJPMNC_.WriteTo(output, _repeated_jAEJJMJPMNC_codec);
       if (ChallengeId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(16);
         output.WriteUInt32(ChallengeId);
       }
+      challengeRecommendList_.WriteTo(output, _repeated_challengeRecommendList_codec);
       if (Retcode != 0) {
         output.WriteRawTag(120);
         output.WriteUInt32(Retcode);
@@ -186,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      jAEJJMJPMNC_.WriteTo(ref output, _repeated_jAEJJMJPMNC_codec);
       if (ChallengeId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(16);
         output.WriteUInt32(ChallengeId);
       }
+      challengeRecommendList_.WriteTo(ref output, _repeated_challengeRecommendList_codec);
       if (Retcode != 0) {
         output.WriteRawTag(120);
         output.WriteUInt32(Retcode);
@@ -205,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += jAEJJMJPMNC_.CalculateSize(_repeated_jAEJJMJPMNC_codec);
+      size += challengeRecommendList_.CalculateSize(_repeated_challengeRecommendList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
@@ -224,7 +225,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      jAEJJMJPMNC_.Add(other.jAEJJMJPMNC_);
+      challengeRecommendList_.Add(other.challengeRecommendList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
@@ -246,12 +247,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 90: {
-            jAEJJMJPMNC_.AddEntriesFrom(input, _repeated_jAEJJMJPMNC_codec);
+          case 16: {
+            ChallengeId = input.ReadUInt32();
             break;
           }
-          case 104: {
-            ChallengeId = input.ReadUInt32();
+          case 66: {
+            challengeRecommendList_.AddEntriesFrom(input, _repeated_challengeRecommendList_codec);
             break;
           }
           case 120: {
@@ -273,12 +274,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 90: {
-            jAEJJMJPMNC_.AddEntriesFrom(ref input, _repeated_jAEJJMJPMNC_codec);
+          case 16: {
+            ChallengeId = input.ReadUInt32();
             break;
           }
-          case 104: {
-            ChallengeId = input.ReadUInt32();
+          case 66: {
+            challengeRecommendList_.AddEntriesFrom(ref input, _repeated_challengeRecommendList_codec);
             break;
           }
           case 120: {

@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static MakeDrinkScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRNYWtlRHJpbmtTY1JzcC5wcm90byJFCg5NYWtlRHJpbmtTY1JzcBIPCgdS",
-            "ZXRjb2RlGAQgASgNEhIKCk5leHRDaGF0SWQYAyABKA0SDgoGSXNTdWNjGAgg",
-            "ASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChRNYWtlRHJpbmtTY1JzcC5wcm90byJFCg5NYWtlRHJpbmtTY1JzcBIOCgZJ",
+            "c1N1Y2MYASABKAgSEgoKTmV4dENoYXRJZBgDIAEoDRIPCgdSZXRjb2RlGAcg",
+            "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MakeDrinkScRsp), global::EggLink.DanhengServer.Proto.MakeDrinkScRsp.Parser, new[]{ "Retcode", "NextChatId", "IsSucc" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MakeDrinkScRsp), global::EggLink.DanhengServer.Proto.MakeDrinkScRsp.Parser, new[]{ "IsSucc", "NextChatId", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,9 +72,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MakeDrinkScRsp(MakeDrinkScRsp other) : this() {
-      retcode_ = other.retcode_;
-      nextChatId_ = other.nextChatId_;
       isSucc_ = other.isSucc_;
+      nextChatId_ = other.nextChatId_;
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,15 +84,15 @@ namespace EggLink.DanhengServer.Proto {
       return new MakeDrinkScRsp(this);
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
-    public const int RetcodeFieldNumber = 4;
-    private uint retcode_;
+    /// <summary>Field number for the "IsSucc" field.</summary>
+    public const int IsSuccFieldNumber = 1;
+    private bool isSucc_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
+    public bool IsSucc {
+      get { return isSucc_; }
       set {
-        retcode_ = value;
+        isSucc_ = value;
       }
     }
 
@@ -108,15 +108,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "IsSucc" field.</summary>
-    public const int IsSuccFieldNumber = 8;
-    private bool isSucc_;
+    /// <summary>Field number for the "Retcode" field.</summary>
+    public const int RetcodeFieldNumber = 7;
+    private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsSucc {
-      get { return isSucc_; }
+    public uint Retcode {
+      get { return retcode_; }
       set {
-        isSucc_ = value;
+        retcode_ = value;
       }
     }
 
@@ -135,9 +135,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
-      if (NextChatId != other.NextChatId) return false;
       if (IsSucc != other.IsSucc) return false;
+      if (NextChatId != other.NextChatId) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,9 +145,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (NextChatId != 0) hash ^= NextChatId.GetHashCode();
       if (IsSucc != false) hash ^= IsSucc.GetHashCode();
+      if (NextChatId != 0) hash ^= NextChatId.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,17 +166,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (IsSucc != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(IsSucc);
+      }
       if (NextChatId != 0) {
         output.WriteRawTag(24);
         output.WriteUInt32(NextChatId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
-      }
-      if (IsSucc != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(IsSucc);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -188,17 +188,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (IsSucc != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(IsSucc);
+      }
       if (NextChatId != 0) {
         output.WriteRawTag(24);
         output.WriteUInt32(NextChatId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
-      }
-      if (IsSucc != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(IsSucc);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -210,14 +210,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      if (IsSucc != false) {
+        size += 1 + 1;
       }
       if (NextChatId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NextChatId);
       }
-      if (IsSucc != false) {
-        size += 1 + 1;
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -231,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
+      if (other.IsSucc != false) {
+        IsSucc = other.IsSucc;
       }
       if (other.NextChatId != 0) {
         NextChatId = other.NextChatId;
       }
-      if (other.IsSucc != false) {
-        IsSucc = other.IsSucc;
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 8: {
+            IsSucc = input.ReadBool();
+            break;
+          }
           case 24: {
             NextChatId = input.ReadUInt32();
             break;
           }
-          case 32: {
+          case 56: {
             Retcode = input.ReadUInt32();
-            break;
-          }
-          case 64: {
-            IsSucc = input.ReadBool();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 8: {
+            IsSucc = input.ReadBool();
+            break;
+          }
           case 24: {
             NextChatId = input.ReadUInt32();
             break;
           }
-          case 32: {
+          case 56: {
             Retcode = input.ReadUInt32();
-            break;
-          }
-          case 64: {
-            IsSucc = input.ReadBool();
             break;
           }
         }

@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static TakeOfferingRewardCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1UYWtlT2ZmZXJpbmdSZXdhcmRDc1JlcS5wcm90byJ3ChdUYWtlT2ZmZXJp",
-            "bmdSZXdhcmRDc1JlcRIkChx0YWtlX29mZmVyaW5nX3Jld2FyZF9pZF9saXN0",
-            "GAEgAygNEhMKC29mZmVyaW5nX2lkGAYgASgNEiEKGWludGVyYWN0ZWRfcHJv",
-            "cF9lbnRpdHlfaWQYDSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
-            "cm90b2IGcHJvdG8z"));
+            "Ch1UYWtlT2ZmZXJpbmdSZXdhcmRDc1JlcS5wcm90byJxChdUYWtlT2ZmZXJp",
+            "bmdSZXdhcmRDc1JlcRIeChZ0YWtlX3Jld2FyZF9sZXZlbF9saXN0GAQgAygN",
+            "EiEKGWludGVyYWN0ZWRfcHJvcF9lbnRpdHlfaWQYDyABKA0SEwoLb2ZmZXJp",
+            "bmdfaWQYBiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeOfferingRewardCsReq), global::EggLink.DanhengServer.Proto.TakeOfferingRewardCsReq.Parser, new[]{ "TakeOfferingRewardIdList", "OfferingId", "InteractedPropEntityId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeOfferingRewardCsReq), global::EggLink.DanhengServer.Proto.TakeOfferingRewardCsReq.Parser, new[]{ "TakeRewardLevelList", "InteractedPropEntityId", "OfferingId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TakeOfferingRewardCsReq(TakeOfferingRewardCsReq other) : this() {
-      takeOfferingRewardIdList_ = other.takeOfferingRewardIdList_.Clone();
-      offeringId_ = other.offeringId_;
+      takeRewardLevelList_ = other.takeRewardLevelList_.Clone();
       interactedPropEntityId_ = other.interactedPropEntityId_;
+      offeringId_ = other.offeringId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,15 +86,27 @@ namespace EggLink.DanhengServer.Proto {
       return new TakeOfferingRewardCsReq(this);
     }
 
-    /// <summary>Field number for the "take_offering_reward_id_list" field.</summary>
-    public const int TakeOfferingRewardIdListFieldNumber = 1;
-    private static readonly pb::FieldCodec<uint> _repeated_takeOfferingRewardIdList_codec
-        = pb::FieldCodec.ForUInt32(10);
-    private readonly pbc::RepeatedField<uint> takeOfferingRewardIdList_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "take_reward_level_list" field.</summary>
+    public const int TakeRewardLevelListFieldNumber = 4;
+    private static readonly pb::FieldCodec<uint> _repeated_takeRewardLevelList_codec
+        = pb::FieldCodec.ForUInt32(34);
+    private readonly pbc::RepeatedField<uint> takeRewardLevelList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> TakeOfferingRewardIdList {
-      get { return takeOfferingRewardIdList_; }
+    public pbc::RepeatedField<uint> TakeRewardLevelList {
+      get { return takeRewardLevelList_; }
+    }
+
+    /// <summary>Field number for the "interacted_prop_entity_id" field.</summary>
+    public const int InteractedPropEntityIdFieldNumber = 15;
+    private uint interactedPropEntityId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint InteractedPropEntityId {
+      get { return interactedPropEntityId_; }
+      set {
+        interactedPropEntityId_ = value;
+      }
     }
 
     /// <summary>Field number for the "offering_id" field.</summary>
@@ -106,18 +118,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return offeringId_; }
       set {
         offeringId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "interacted_prop_entity_id" field.</summary>
-    public const int InteractedPropEntityIdFieldNumber = 13;
-    private uint interactedPropEntityId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint InteractedPropEntityId {
-      get { return interactedPropEntityId_; }
-      set {
-        interactedPropEntityId_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!takeOfferingRewardIdList_.Equals(other.takeOfferingRewardIdList_)) return false;
-      if (OfferingId != other.OfferingId) return false;
+      if(!takeRewardLevelList_.Equals(other.takeRewardLevelList_)) return false;
       if (InteractedPropEntityId != other.InteractedPropEntityId) return false;
+      if (OfferingId != other.OfferingId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= takeOfferingRewardIdList_.GetHashCode();
-      if (OfferingId != 0) hash ^= OfferingId.GetHashCode();
+      hash ^= takeRewardLevelList_.GetHashCode();
       if (InteractedPropEntityId != 0) hash ^= InteractedPropEntityId.GetHashCode();
+      if (OfferingId != 0) hash ^= OfferingId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,13 +167,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      takeOfferingRewardIdList_.WriteTo(output, _repeated_takeOfferingRewardIdList_codec);
+      takeRewardLevelList_.WriteTo(output, _repeated_takeRewardLevelList_codec);
       if (OfferingId != 0) {
         output.WriteRawTag(48);
         output.WriteUInt32(OfferingId);
       }
       if (InteractedPropEntityId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(120);
         output.WriteUInt32(InteractedPropEntityId);
       }
       if (_unknownFields != null) {
@@ -186,13 +186,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      takeOfferingRewardIdList_.WriteTo(ref output, _repeated_takeOfferingRewardIdList_codec);
+      takeRewardLevelList_.WriteTo(ref output, _repeated_takeRewardLevelList_codec);
       if (OfferingId != 0) {
         output.WriteRawTag(48);
         output.WriteUInt32(OfferingId);
       }
       if (InteractedPropEntityId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(120);
         output.WriteUInt32(InteractedPropEntityId);
       }
       if (_unknownFields != null) {
@@ -205,12 +205,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += takeOfferingRewardIdList_.CalculateSize(_repeated_takeOfferingRewardIdList_codec);
-      if (OfferingId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OfferingId);
-      }
+      size += takeRewardLevelList_.CalculateSize(_repeated_takeRewardLevelList_codec);
       if (InteractedPropEntityId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(InteractedPropEntityId);
+      }
+      if (OfferingId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OfferingId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -224,12 +224,12 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      takeOfferingRewardIdList_.Add(other.takeOfferingRewardIdList_);
-      if (other.OfferingId != 0) {
-        OfferingId = other.OfferingId;
-      }
+      takeRewardLevelList_.Add(other.takeRewardLevelList_);
       if (other.InteractedPropEntityId != 0) {
         InteractedPropEntityId = other.InteractedPropEntityId;
+      }
+      if (other.OfferingId != 0) {
+        OfferingId = other.OfferingId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -246,16 +246,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10:
-          case 8: {
-            takeOfferingRewardIdList_.AddEntriesFrom(input, _repeated_takeOfferingRewardIdList_codec);
+          case 34:
+          case 32: {
+            takeRewardLevelList_.AddEntriesFrom(input, _repeated_takeRewardLevelList_codec);
             break;
           }
           case 48: {
             OfferingId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 120: {
             InteractedPropEntityId = input.ReadUInt32();
             break;
           }
@@ -274,16 +274,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10:
-          case 8: {
-            takeOfferingRewardIdList_.AddEntriesFrom(ref input, _repeated_takeOfferingRewardIdList_codec);
+          case 34:
+          case 32: {
+            takeRewardLevelList_.AddEntriesFrom(ref input, _repeated_takeRewardLevelList_codec);
             break;
           }
           case 48: {
             OfferingId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 120: {
             InteractedPropEntityId = input.ReadUInt32();
             break;
           }

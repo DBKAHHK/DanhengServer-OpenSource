@@ -24,30 +24,30 @@ namespace EggLink.DanhengServer.Proto {
     static RogueTournCurGameInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtSb2d1ZVRvdXJuQ3VyR2FtZUluZm8ucHJvdG8aG1JvZ3VlVG91cm5Gb3Jt",
-            "dWxhSW5mby5wcm90bxoYQ2hlc3NSb2d1ZUJ1ZmZJbmZvLnByb3RvGhhLZXl3",
-            "b3JkVW5sb2NrVmFsdWUucHJvdG8aIlJvZ3VlVG91cm5HYW1lRGlmZmljdWx0",
-            "eUluZm8ucHJvdG8aGFJvZ3VlR2FtZUl0ZW1WYWx1ZS5wcm90bxoaUm9ndWVU",
-            "b3Vybk1vZHVsZUluZm8ucHJvdG8aGlJvZ3VlVG91cm5MaW5ldXBJbmZvLnBy",
-            "b3RvGhlSb2d1ZVRvdXJuTGV2ZWxJbmZvLnByb3RvGhtDaGVzc1JvZ3VlTWly",
-            "YWNsZUluZm8ucHJvdG8aEUNHSk5ITk1BTURILnByb3RvGhxSb2d1ZVRvdXJu",
-            "R2FtZUFyZWFJbmZvLnByb3RvIosEChVSb2d1ZVRvdXJuQ3VyR2FtZUluZm8S",
-            "IQoLSk1JRExMREtKQkkYCyABKAsyDC5DR0pOSE5NQU1ESBIsCgxtaXJhY2xl",
-            "X2luZm8YBSABKAsyFi5DaGVzc1JvZ3VlTWlyYWNsZUluZm8SOwoacm9ndWVf",
-            "dG91cm5fZ2FtZV9hcmVhX2luZm8YDiABKAsyFy5Sb2d1ZVRvdXJuR2FtZUFy",
-            "ZWFJbmZvEjAKEXRvdXJuX21vZHVsZV9pbmZvGAcgASgLMhUuUm9ndWVUb3Vy",
-            "bk1vZHVsZUluZm8SKQoMdW5sb2NrX3ZhbHVlGAYgASgLMhMuS2V5d29yZFVu",
-            "bG9ja1ZhbHVlEiUKBmxpbmV1cBgEIAEoCzIVLlJvZ3VlVG91cm5MaW5ldXBJ",
-            "bmZvEjsKFGdhbWVfZGlmZmljdWx0eV9pbmZvGAMgASgLMh0uUm9ndWVUb3Vy",
-            "bkdhbWVEaWZmaWN1bHR5SW5mbxIyChJ0b3Vybl9mb3JtdWxhX2luZm8YDCAB",
-            "KAsyFi5Sb2d1ZVRvdXJuRm9ybXVsYUluZm8SIwoFbGV2ZWwYAiABKAsyFC5S",
-            "b2d1ZVRvdXJuTGV2ZWxJbmZvEiEKBGJ1ZmYYCCABKAsyEy5DaGVzc1JvZ3Vl",
-            "QnVmZkluZm8SJwoKaXRlbV92YWx1ZRgPIAEoCzITLlJvZ3VlR2FtZUl0ZW1W",
-            "YWx1ZUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChtSb2d1ZVRvdXJuQ3VyR2FtZUluZm8ucHJvdG8aIlJvZ3VlVG91cm5HYW1l",
+            "RGlmZmljdWx0eUluZm8ucHJvdG8aGlJvZ3VlVG91cm5MaW5ldXBJbmZvLnBy",
+            "b3RvGhhDaGVzc1JvZ3VlQnVmZkluZm8ucHJvdG8aGFJvZ3VlR2FtZUl0ZW1W",
+            "YWx1ZS5wcm90bxoRQ0dKTkhOTUFNREgucHJvdG8aGEtleXdvcmRVbmxvY2tW",
+            "YWx1ZS5wcm90bxoaUm9ndWVUb3Vybk1vZHVsZUluZm8ucHJvdG8aGVJvZ3Vl",
+            "VG91cm5MZXZlbEluZm8ucHJvdG8aG0NoZXNzUm9ndWVNaXJhY2xlSW5mby5w",
+            "cm90bxocUm9ndWVUb3VybkdhbWVBcmVhSW5mby5wcm90bxobUm9ndWVUb3Vy",
+            "bkZvcm11bGFJbmZvLnByb3RvIoUEChVSb2d1ZVRvdXJuQ3VyR2FtZUluZm8S",
+            "OwoUZ2FtZV9kaWZmaWN1bHR5X2luZm8YCSABKAsyHS5Sb2d1ZVRvdXJuR2Ft",
+            "ZURpZmZpY3VsdHlJbmZvEikKDHVubG9ja192YWx1ZRgNIAEoCzITLktleXdv",
+            "cmRVbmxvY2tWYWx1ZRIhCgRjb2luGAggASgLMhMuUm9ndWVHYW1lSXRlbVZh",
+            "bHVlEjAKEXRvdXJuX21vZHVsZV9pbmZvGAUgASgLMhUuUm9ndWVUb3Vybk1v",
+            "ZHVsZUluZm8SLAoMbWlyYWNsZV9pbmZvGAwgASgLMhYuQ2hlc3NSb2d1ZU1p",
+            "cmFjbGVJbmZvEiUKBmxpbmV1cBgPIAEoCzIVLlJvZ3VlVG91cm5MaW5ldXBJ",
+            "bmZvEiEKBGJ1ZmYYBCABKAsyEy5DaGVzc1JvZ3VlQnVmZkluZm8SIwoFbGV2",
+            "ZWwYASABKAsyFC5Sb2d1ZVRvdXJuTGV2ZWxJbmZvEiEKC0pNSURMTERLSkJJ",
+            "GA4gASgLMgwuQ0dKTkhOTUFNREgSMgoSdG91cm5fZm9ybXVsYV9pbmZvGAIg",
+            "ASgLMhYuUm9ndWVUb3VybkZvcm11bGFJbmZvEjsKGnJvZ3VlX3RvdXJuX2dh",
+            "bWVfYXJlYV9pbmZvGAogASgLMhcuUm9ndWVUb3VybkdhbWVBcmVhSW5mb0Ie",
+            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTournFormulaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KeywordUnlockValueReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournGameDifficultyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueGameItemValueReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournModuleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournLineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournLevelInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CGJNHNMAMDHReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournGameAreaInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTournGameDifficultyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournLineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueGameItemValueReflection.Descriptor, global::EggLink.DanhengServer.Proto.CGJNHNMAMDHReflection.Descriptor, global::EggLink.DanhengServer.Proto.KeywordUnlockValueReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournModuleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournLevelInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournGameAreaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournFormulaInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournCurGameInfo), global::EggLink.DanhengServer.Proto.RogueTournCurGameInfo.Parser, new[]{ "JMIDLLDKJBI", "MiracleInfo", "RogueTournGameAreaInfo", "TournModuleInfo", "UnlockValue", "Lineup", "GameDifficultyInfo", "TournFormulaInfo", "Level", "Buff", "ItemValue" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournCurGameInfo), global::EggLink.DanhengServer.Proto.RogueTournCurGameInfo.Parser, new[]{ "GameDifficultyInfo", "UnlockValue", "Coin", "TournModuleInfo", "MiracleInfo", "Lineup", "Buff", "Level", "JMIDLLDKJBI", "TournFormulaInfo", "RogueTournGameAreaInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -89,17 +89,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournCurGameInfo(RogueTournCurGameInfo other) : this() {
-      jMIDLLDKJBI_ = other.jMIDLLDKJBI_ != null ? other.jMIDLLDKJBI_.Clone() : null;
-      miracleInfo_ = other.miracleInfo_ != null ? other.miracleInfo_.Clone() : null;
-      rogueTournGameAreaInfo_ = other.rogueTournGameAreaInfo_ != null ? other.rogueTournGameAreaInfo_.Clone() : null;
-      tournModuleInfo_ = other.tournModuleInfo_ != null ? other.tournModuleInfo_.Clone() : null;
-      unlockValue_ = other.unlockValue_ != null ? other.unlockValue_.Clone() : null;
-      lineup_ = other.lineup_ != null ? other.lineup_.Clone() : null;
       gameDifficultyInfo_ = other.gameDifficultyInfo_ != null ? other.gameDifficultyInfo_.Clone() : null;
-      tournFormulaInfo_ = other.tournFormulaInfo_ != null ? other.tournFormulaInfo_.Clone() : null;
-      level_ = other.level_ != null ? other.level_.Clone() : null;
+      unlockValue_ = other.unlockValue_ != null ? other.unlockValue_.Clone() : null;
+      coin_ = other.coin_ != null ? other.coin_.Clone() : null;
+      tournModuleInfo_ = other.tournModuleInfo_ != null ? other.tournModuleInfo_.Clone() : null;
+      miracleInfo_ = other.miracleInfo_ != null ? other.miracleInfo_.Clone() : null;
+      lineup_ = other.lineup_ != null ? other.lineup_.Clone() : null;
       buff_ = other.buff_ != null ? other.buff_.Clone() : null;
-      itemValue_ = other.itemValue_ != null ? other.itemValue_.Clone() : null;
+      level_ = other.level_ != null ? other.level_.Clone() : null;
+      jMIDLLDKJBI_ = other.jMIDLLDKJBI_ != null ? other.jMIDLLDKJBI_.Clone() : null;
+      tournFormulaInfo_ = other.tournFormulaInfo_ != null ? other.tournFormulaInfo_.Clone() : null;
+      rogueTournGameAreaInfo_ = other.rogueTournGameAreaInfo_ != null ? other.rogueTournGameAreaInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -109,80 +109,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournCurGameInfo(this);
     }
 
-    /// <summary>Field number for the "JMIDLLDKJBI" field.</summary>
-    public const int JMIDLLDKJBIFieldNumber = 11;
-    private global::EggLink.DanhengServer.Proto.CGJNHNMAMDH jMIDLLDKJBI_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.CGJNHNMAMDH JMIDLLDKJBI {
-      get { return jMIDLLDKJBI_; }
-      set {
-        jMIDLLDKJBI_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "miracle_info" field.</summary>
-    public const int MiracleInfoFieldNumber = 5;
-    private global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfo miracleInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfo MiracleInfo {
-      get { return miracleInfo_; }
-      set {
-        miracleInfo_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "rogue_tourn_game_area_info" field.</summary>
-    public const int RogueTournGameAreaInfoFieldNumber = 14;
-    private global::EggLink.DanhengServer.Proto.RogueTournGameAreaInfo rogueTournGameAreaInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueTournGameAreaInfo RogueTournGameAreaInfo {
-      get { return rogueTournGameAreaInfo_; }
-      set {
-        rogueTournGameAreaInfo_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "tourn_module_info" field.</summary>
-    public const int TournModuleInfoFieldNumber = 7;
-    private global::EggLink.DanhengServer.Proto.RogueTournModuleInfo tournModuleInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueTournModuleInfo TournModuleInfo {
-      get { return tournModuleInfo_; }
-      set {
-        tournModuleInfo_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "unlock_value" field.</summary>
-    public const int UnlockValueFieldNumber = 6;
-    private global::EggLink.DanhengServer.Proto.KeywordUnlockValue unlockValue_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.KeywordUnlockValue UnlockValue {
-      get { return unlockValue_; }
-      set {
-        unlockValue_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "lineup" field.</summary>
-    public const int LineupFieldNumber = 4;
-    private global::EggLink.DanhengServer.Proto.RogueTournLineupInfo lineup_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueTournLineupInfo Lineup {
-      get { return lineup_; }
-      set {
-        lineup_ = value;
-      }
-    }
-
     /// <summary>Field number for the "game_difficulty_info" field.</summary>
-    public const int GameDifficultyInfoFieldNumber = 3;
+    public const int GameDifficultyInfoFieldNumber = 9;
     private global::EggLink.DanhengServer.Proto.RogueTournGameDifficultyInfo gameDifficultyInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -193,32 +121,68 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "tourn_formula_info" field.</summary>
-    public const int TournFormulaInfoFieldNumber = 12;
-    private global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo tournFormulaInfo_;
+    /// <summary>Field number for the "unlock_value" field.</summary>
+    public const int UnlockValueFieldNumber = 13;
+    private global::EggLink.DanhengServer.Proto.KeywordUnlockValue unlockValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo TournFormulaInfo {
-      get { return tournFormulaInfo_; }
+    public global::EggLink.DanhengServer.Proto.KeywordUnlockValue UnlockValue {
+      get { return unlockValue_; }
       set {
-        tournFormulaInfo_ = value;
+        unlockValue_ = value;
       }
     }
 
-    /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 2;
-    private global::EggLink.DanhengServer.Proto.RogueTournLevelInfo level_;
+    /// <summary>Field number for the "coin" field.</summary>
+    public const int CoinFieldNumber = 8;
+    private global::EggLink.DanhengServer.Proto.RogueGameItemValue coin_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueTournLevelInfo Level {
-      get { return level_; }
+    public global::EggLink.DanhengServer.Proto.RogueGameItemValue Coin {
+      get { return coin_; }
       set {
-        level_ = value;
+        coin_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "tourn_module_info" field.</summary>
+    public const int TournModuleInfoFieldNumber = 5;
+    private global::EggLink.DanhengServer.Proto.RogueTournModuleInfo tournModuleInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueTournModuleInfo TournModuleInfo {
+      get { return tournModuleInfo_; }
+      set {
+        tournModuleInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "miracle_info" field.</summary>
+    public const int MiracleInfoFieldNumber = 12;
+    private global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfo miracleInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfo MiracleInfo {
+      get { return miracleInfo_; }
+      set {
+        miracleInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "lineup" field.</summary>
+    public const int LineupFieldNumber = 15;
+    private global::EggLink.DanhengServer.Proto.RogueTournLineupInfo lineup_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueTournLineupInfo Lineup {
+      get { return lineup_; }
+      set {
+        lineup_ = value;
       }
     }
 
     /// <summary>Field number for the "buff" field.</summary>
-    public const int BuffFieldNumber = 8;
+    public const int BuffFieldNumber = 4;
     private global::EggLink.DanhengServer.Proto.ChessRogueBuffInfo buff_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -229,15 +193,51 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "item_value" field.</summary>
-    public const int ItemValueFieldNumber = 15;
-    private global::EggLink.DanhengServer.Proto.RogueGameItemValue itemValue_;
+    /// <summary>Field number for the "level" field.</summary>
+    public const int LevelFieldNumber = 1;
+    private global::EggLink.DanhengServer.Proto.RogueTournLevelInfo level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueGameItemValue ItemValue {
-      get { return itemValue_; }
+    public global::EggLink.DanhengServer.Proto.RogueTournLevelInfo Level {
+      get { return level_; }
       set {
-        itemValue_ = value;
+        level_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "JMIDLLDKJBI" field.</summary>
+    public const int JMIDLLDKJBIFieldNumber = 14;
+    private global::EggLink.DanhengServer.Proto.CGJNHNMAMDH jMIDLLDKJBI_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.CGJNHNMAMDH JMIDLLDKJBI {
+      get { return jMIDLLDKJBI_; }
+      set {
+        jMIDLLDKJBI_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "tourn_formula_info" field.</summary>
+    public const int TournFormulaInfoFieldNumber = 2;
+    private global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo tournFormulaInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo TournFormulaInfo {
+      get { return tournFormulaInfo_; }
+      set {
+        tournFormulaInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rogue_tourn_game_area_info" field.</summary>
+    public const int RogueTournGameAreaInfoFieldNumber = 10;
+    private global::EggLink.DanhengServer.Proto.RogueTournGameAreaInfo rogueTournGameAreaInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueTournGameAreaInfo RogueTournGameAreaInfo {
+      get { return rogueTournGameAreaInfo_; }
+      set {
+        rogueTournGameAreaInfo_ = value;
       }
     }
 
@@ -256,17 +256,17 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(JMIDLLDKJBI, other.JMIDLLDKJBI)) return false;
-      if (!object.Equals(MiracleInfo, other.MiracleInfo)) return false;
-      if (!object.Equals(RogueTournGameAreaInfo, other.RogueTournGameAreaInfo)) return false;
-      if (!object.Equals(TournModuleInfo, other.TournModuleInfo)) return false;
-      if (!object.Equals(UnlockValue, other.UnlockValue)) return false;
-      if (!object.Equals(Lineup, other.Lineup)) return false;
       if (!object.Equals(GameDifficultyInfo, other.GameDifficultyInfo)) return false;
-      if (!object.Equals(TournFormulaInfo, other.TournFormulaInfo)) return false;
-      if (!object.Equals(Level, other.Level)) return false;
+      if (!object.Equals(UnlockValue, other.UnlockValue)) return false;
+      if (!object.Equals(Coin, other.Coin)) return false;
+      if (!object.Equals(TournModuleInfo, other.TournModuleInfo)) return false;
+      if (!object.Equals(MiracleInfo, other.MiracleInfo)) return false;
+      if (!object.Equals(Lineup, other.Lineup)) return false;
       if (!object.Equals(Buff, other.Buff)) return false;
-      if (!object.Equals(ItemValue, other.ItemValue)) return false;
+      if (!object.Equals(Level, other.Level)) return false;
+      if (!object.Equals(JMIDLLDKJBI, other.JMIDLLDKJBI)) return false;
+      if (!object.Equals(TournFormulaInfo, other.TournFormulaInfo)) return false;
+      if (!object.Equals(RogueTournGameAreaInfo, other.RogueTournGameAreaInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -274,17 +274,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (jMIDLLDKJBI_ != null) hash ^= JMIDLLDKJBI.GetHashCode();
-      if (miracleInfo_ != null) hash ^= MiracleInfo.GetHashCode();
-      if (rogueTournGameAreaInfo_ != null) hash ^= RogueTournGameAreaInfo.GetHashCode();
-      if (tournModuleInfo_ != null) hash ^= TournModuleInfo.GetHashCode();
-      if (unlockValue_ != null) hash ^= UnlockValue.GetHashCode();
-      if (lineup_ != null) hash ^= Lineup.GetHashCode();
       if (gameDifficultyInfo_ != null) hash ^= GameDifficultyInfo.GetHashCode();
-      if (tournFormulaInfo_ != null) hash ^= TournFormulaInfo.GetHashCode();
-      if (level_ != null) hash ^= Level.GetHashCode();
+      if (unlockValue_ != null) hash ^= UnlockValue.GetHashCode();
+      if (coin_ != null) hash ^= Coin.GetHashCode();
+      if (tournModuleInfo_ != null) hash ^= TournModuleInfo.GetHashCode();
+      if (miracleInfo_ != null) hash ^= MiracleInfo.GetHashCode();
+      if (lineup_ != null) hash ^= Lineup.GetHashCode();
       if (buff_ != null) hash ^= Buff.GetHashCode();
-      if (itemValue_ != null) hash ^= ItemValue.GetHashCode();
+      if (level_ != null) hash ^= Level.GetHashCode();
+      if (jMIDLLDKJBI_ != null) hash ^= JMIDLLDKJBI.GetHashCode();
+      if (tournFormulaInfo_ != null) hash ^= TournFormulaInfo.GetHashCode();
+      if (rogueTournGameAreaInfo_ != null) hash ^= RogueTournGameAreaInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -304,48 +304,48 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (level_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(Level);
       }
+      if (tournFormulaInfo_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(TournFormulaInfo);
+      }
+      if (buff_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Buff);
+      }
+      if (tournModuleInfo_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(TournModuleInfo);
+      }
+      if (coin_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(Coin);
+      }
       if (gameDifficultyInfo_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(74);
         output.WriteMessage(GameDifficultyInfo);
       }
-      if (lineup_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(Lineup);
+      if (rogueTournGameAreaInfo_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(RogueTournGameAreaInfo);
       }
       if (miracleInfo_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(98);
         output.WriteMessage(MiracleInfo);
       }
       if (unlockValue_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(106);
         output.WriteMessage(UnlockValue);
       }
-      if (tournModuleInfo_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(TournModuleInfo);
-      }
-      if (buff_ != null) {
-        output.WriteRawTag(66);
-        output.WriteMessage(Buff);
-      }
       if (jMIDLLDKJBI_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(114);
         output.WriteMessage(JMIDLLDKJBI);
       }
-      if (tournFormulaInfo_ != null) {
-        output.WriteRawTag(98);
-        output.WriteMessage(TournFormulaInfo);
-      }
-      if (rogueTournGameAreaInfo_ != null) {
-        output.WriteRawTag(114);
-        output.WriteMessage(RogueTournGameAreaInfo);
-      }
-      if (itemValue_ != null) {
+      if (lineup_ != null) {
         output.WriteRawTag(122);
-        output.WriteMessage(ItemValue);
+        output.WriteMessage(Lineup);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -358,48 +358,48 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (level_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(Level);
       }
+      if (tournFormulaInfo_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(TournFormulaInfo);
+      }
+      if (buff_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Buff);
+      }
+      if (tournModuleInfo_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(TournModuleInfo);
+      }
+      if (coin_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(Coin);
+      }
       if (gameDifficultyInfo_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(74);
         output.WriteMessage(GameDifficultyInfo);
       }
-      if (lineup_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(Lineup);
+      if (rogueTournGameAreaInfo_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(RogueTournGameAreaInfo);
       }
       if (miracleInfo_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(98);
         output.WriteMessage(MiracleInfo);
       }
       if (unlockValue_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(106);
         output.WriteMessage(UnlockValue);
       }
-      if (tournModuleInfo_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(TournModuleInfo);
-      }
-      if (buff_ != null) {
-        output.WriteRawTag(66);
-        output.WriteMessage(Buff);
-      }
       if (jMIDLLDKJBI_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(114);
         output.WriteMessage(JMIDLLDKJBI);
       }
-      if (tournFormulaInfo_ != null) {
-        output.WriteRawTag(98);
-        output.WriteMessage(TournFormulaInfo);
-      }
-      if (rogueTournGameAreaInfo_ != null) {
-        output.WriteRawTag(114);
-        output.WriteMessage(RogueTournGameAreaInfo);
-      }
-      if (itemValue_ != null) {
+      if (lineup_ != null) {
         output.WriteRawTag(122);
-        output.WriteMessage(ItemValue);
+        output.WriteMessage(Lineup);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -411,38 +411,38 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (jMIDLLDKJBI_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(JMIDLLDKJBI);
-      }
-      if (miracleInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MiracleInfo);
-      }
-      if (rogueTournGameAreaInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueTournGameAreaInfo);
-      }
-      if (tournModuleInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TournModuleInfo);
+      if (gameDifficultyInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameDifficultyInfo);
       }
       if (unlockValue_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UnlockValue);
       }
+      if (coin_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Coin);
+      }
+      if (tournModuleInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TournModuleInfo);
+      }
+      if (miracleInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MiracleInfo);
+      }
       if (lineup_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Lineup);
-      }
-      if (gameDifficultyInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameDifficultyInfo);
-      }
-      if (tournFormulaInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TournFormulaInfo);
-      }
-      if (level_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Level);
       }
       if (buff_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Buff);
       }
-      if (itemValue_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ItemValue);
+      if (level_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Level);
+      }
+      if (jMIDLLDKJBI_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(JMIDLLDKJBI);
+      }
+      if (tournFormulaInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TournFormulaInfo);
+      }
+      if (rogueTournGameAreaInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueTournGameAreaInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -456,29 +456,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.jMIDLLDKJBI_ != null) {
-        if (jMIDLLDKJBI_ == null) {
-          JMIDLLDKJBI = new global::EggLink.DanhengServer.Proto.CGJNHNMAMDH();
+      if (other.gameDifficultyInfo_ != null) {
+        if (gameDifficultyInfo_ == null) {
+          GameDifficultyInfo = new global::EggLink.DanhengServer.Proto.RogueTournGameDifficultyInfo();
         }
-        JMIDLLDKJBI.MergeFrom(other.JMIDLLDKJBI);
-      }
-      if (other.miracleInfo_ != null) {
-        if (miracleInfo_ == null) {
-          MiracleInfo = new global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfo();
-        }
-        MiracleInfo.MergeFrom(other.MiracleInfo);
-      }
-      if (other.rogueTournGameAreaInfo_ != null) {
-        if (rogueTournGameAreaInfo_ == null) {
-          RogueTournGameAreaInfo = new global::EggLink.DanhengServer.Proto.RogueTournGameAreaInfo();
-        }
-        RogueTournGameAreaInfo.MergeFrom(other.RogueTournGameAreaInfo);
-      }
-      if (other.tournModuleInfo_ != null) {
-        if (tournModuleInfo_ == null) {
-          TournModuleInfo = new global::EggLink.DanhengServer.Proto.RogueTournModuleInfo();
-        }
-        TournModuleInfo.MergeFrom(other.TournModuleInfo);
+        GameDifficultyInfo.MergeFrom(other.GameDifficultyInfo);
       }
       if (other.unlockValue_ != null) {
         if (unlockValue_ == null) {
@@ -486,29 +468,29 @@ namespace EggLink.DanhengServer.Proto {
         }
         UnlockValue.MergeFrom(other.UnlockValue);
       }
+      if (other.coin_ != null) {
+        if (coin_ == null) {
+          Coin = new global::EggLink.DanhengServer.Proto.RogueGameItemValue();
+        }
+        Coin.MergeFrom(other.Coin);
+      }
+      if (other.tournModuleInfo_ != null) {
+        if (tournModuleInfo_ == null) {
+          TournModuleInfo = new global::EggLink.DanhengServer.Proto.RogueTournModuleInfo();
+        }
+        TournModuleInfo.MergeFrom(other.TournModuleInfo);
+      }
+      if (other.miracleInfo_ != null) {
+        if (miracleInfo_ == null) {
+          MiracleInfo = new global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfo();
+        }
+        MiracleInfo.MergeFrom(other.MiracleInfo);
+      }
       if (other.lineup_ != null) {
         if (lineup_ == null) {
           Lineup = new global::EggLink.DanhengServer.Proto.RogueTournLineupInfo();
         }
         Lineup.MergeFrom(other.Lineup);
-      }
-      if (other.gameDifficultyInfo_ != null) {
-        if (gameDifficultyInfo_ == null) {
-          GameDifficultyInfo = new global::EggLink.DanhengServer.Proto.RogueTournGameDifficultyInfo();
-        }
-        GameDifficultyInfo.MergeFrom(other.GameDifficultyInfo);
-      }
-      if (other.tournFormulaInfo_ != null) {
-        if (tournFormulaInfo_ == null) {
-          TournFormulaInfo = new global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo();
-        }
-        TournFormulaInfo.MergeFrom(other.TournFormulaInfo);
-      }
-      if (other.level_ != null) {
-        if (level_ == null) {
-          Level = new global::EggLink.DanhengServer.Proto.RogueTournLevelInfo();
-        }
-        Level.MergeFrom(other.Level);
       }
       if (other.buff_ != null) {
         if (buff_ == null) {
@@ -516,11 +498,29 @@ namespace EggLink.DanhengServer.Proto {
         }
         Buff.MergeFrom(other.Buff);
       }
-      if (other.itemValue_ != null) {
-        if (itemValue_ == null) {
-          ItemValue = new global::EggLink.DanhengServer.Proto.RogueGameItemValue();
+      if (other.level_ != null) {
+        if (level_ == null) {
+          Level = new global::EggLink.DanhengServer.Proto.RogueTournLevelInfo();
         }
-        ItemValue.MergeFrom(other.ItemValue);
+        Level.MergeFrom(other.Level);
+      }
+      if (other.jMIDLLDKJBI_ != null) {
+        if (jMIDLLDKJBI_ == null) {
+          JMIDLLDKJBI = new global::EggLink.DanhengServer.Proto.CGJNHNMAMDH();
+        }
+        JMIDLLDKJBI.MergeFrom(other.JMIDLLDKJBI);
+      }
+      if (other.tournFormulaInfo_ != null) {
+        if (tournFormulaInfo_ == null) {
+          TournFormulaInfo = new global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo();
+        }
+        TournFormulaInfo.MergeFrom(other.TournFormulaInfo);
+      }
+      if (other.rogueTournGameAreaInfo_ != null) {
+        if (rogueTournGameAreaInfo_ == null) {
+          RogueTournGameAreaInfo = new global::EggLink.DanhengServer.Proto.RogueTournGameAreaInfo();
+        }
+        RogueTournGameAreaInfo.MergeFrom(other.RogueTournGameAreaInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -537,42 +537,28 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 10: {
             if (level_ == null) {
               Level = new global::EggLink.DanhengServer.Proto.RogueTournLevelInfo();
             }
             input.ReadMessage(Level);
             break;
           }
-          case 26: {
-            if (gameDifficultyInfo_ == null) {
-              GameDifficultyInfo = new global::EggLink.DanhengServer.Proto.RogueTournGameDifficultyInfo();
+          case 18: {
+            if (tournFormulaInfo_ == null) {
+              TournFormulaInfo = new global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo();
             }
-            input.ReadMessage(GameDifficultyInfo);
+            input.ReadMessage(TournFormulaInfo);
             break;
           }
           case 34: {
-            if (lineup_ == null) {
-              Lineup = new global::EggLink.DanhengServer.Proto.RogueTournLineupInfo();
+            if (buff_ == null) {
+              Buff = new global::EggLink.DanhengServer.Proto.ChessRogueBuffInfo();
             }
-            input.ReadMessage(Lineup);
+            input.ReadMessage(Buff);
             break;
           }
           case 42: {
-            if (miracleInfo_ == null) {
-              MiracleInfo = new global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfo();
-            }
-            input.ReadMessage(MiracleInfo);
-            break;
-          }
-          case 50: {
-            if (unlockValue_ == null) {
-              UnlockValue = new global::EggLink.DanhengServer.Proto.KeywordUnlockValue();
-            }
-            input.ReadMessage(UnlockValue);
-            break;
-          }
-          case 58: {
             if (tournModuleInfo_ == null) {
               TournModuleInfo = new global::EggLink.DanhengServer.Proto.RogueTournModuleInfo();
             }
@@ -580,38 +566,52 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 66: {
-            if (buff_ == null) {
-              Buff = new global::EggLink.DanhengServer.Proto.ChessRogueBuffInfo();
+            if (coin_ == null) {
+              Coin = new global::EggLink.DanhengServer.Proto.RogueGameItemValue();
             }
-            input.ReadMessage(Buff);
+            input.ReadMessage(Coin);
             break;
           }
-          case 90: {
-            if (jMIDLLDKJBI_ == null) {
-              JMIDLLDKJBI = new global::EggLink.DanhengServer.Proto.CGJNHNMAMDH();
+          case 74: {
+            if (gameDifficultyInfo_ == null) {
+              GameDifficultyInfo = new global::EggLink.DanhengServer.Proto.RogueTournGameDifficultyInfo();
             }
-            input.ReadMessage(JMIDLLDKJBI);
+            input.ReadMessage(GameDifficultyInfo);
             break;
           }
-          case 98: {
-            if (tournFormulaInfo_ == null) {
-              TournFormulaInfo = new global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo();
-            }
-            input.ReadMessage(TournFormulaInfo);
-            break;
-          }
-          case 114: {
+          case 82: {
             if (rogueTournGameAreaInfo_ == null) {
               RogueTournGameAreaInfo = new global::EggLink.DanhengServer.Proto.RogueTournGameAreaInfo();
             }
             input.ReadMessage(RogueTournGameAreaInfo);
             break;
           }
-          case 122: {
-            if (itemValue_ == null) {
-              ItemValue = new global::EggLink.DanhengServer.Proto.RogueGameItemValue();
+          case 98: {
+            if (miracleInfo_ == null) {
+              MiracleInfo = new global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfo();
             }
-            input.ReadMessage(ItemValue);
+            input.ReadMessage(MiracleInfo);
+            break;
+          }
+          case 106: {
+            if (unlockValue_ == null) {
+              UnlockValue = new global::EggLink.DanhengServer.Proto.KeywordUnlockValue();
+            }
+            input.ReadMessage(UnlockValue);
+            break;
+          }
+          case 114: {
+            if (jMIDLLDKJBI_ == null) {
+              JMIDLLDKJBI = new global::EggLink.DanhengServer.Proto.CGJNHNMAMDH();
+            }
+            input.ReadMessage(JMIDLLDKJBI);
+            break;
+          }
+          case 122: {
+            if (lineup_ == null) {
+              Lineup = new global::EggLink.DanhengServer.Proto.RogueTournLineupInfo();
+            }
+            input.ReadMessage(Lineup);
             break;
           }
         }
@@ -629,42 +629,28 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 10: {
             if (level_ == null) {
               Level = new global::EggLink.DanhengServer.Proto.RogueTournLevelInfo();
             }
             input.ReadMessage(Level);
             break;
           }
-          case 26: {
-            if (gameDifficultyInfo_ == null) {
-              GameDifficultyInfo = new global::EggLink.DanhengServer.Proto.RogueTournGameDifficultyInfo();
+          case 18: {
+            if (tournFormulaInfo_ == null) {
+              TournFormulaInfo = new global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo();
             }
-            input.ReadMessage(GameDifficultyInfo);
+            input.ReadMessage(TournFormulaInfo);
             break;
           }
           case 34: {
-            if (lineup_ == null) {
-              Lineup = new global::EggLink.DanhengServer.Proto.RogueTournLineupInfo();
+            if (buff_ == null) {
+              Buff = new global::EggLink.DanhengServer.Proto.ChessRogueBuffInfo();
             }
-            input.ReadMessage(Lineup);
+            input.ReadMessage(Buff);
             break;
           }
           case 42: {
-            if (miracleInfo_ == null) {
-              MiracleInfo = new global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfo();
-            }
-            input.ReadMessage(MiracleInfo);
-            break;
-          }
-          case 50: {
-            if (unlockValue_ == null) {
-              UnlockValue = new global::EggLink.DanhengServer.Proto.KeywordUnlockValue();
-            }
-            input.ReadMessage(UnlockValue);
-            break;
-          }
-          case 58: {
             if (tournModuleInfo_ == null) {
               TournModuleInfo = new global::EggLink.DanhengServer.Proto.RogueTournModuleInfo();
             }
@@ -672,38 +658,52 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 66: {
-            if (buff_ == null) {
-              Buff = new global::EggLink.DanhengServer.Proto.ChessRogueBuffInfo();
+            if (coin_ == null) {
+              Coin = new global::EggLink.DanhengServer.Proto.RogueGameItemValue();
             }
-            input.ReadMessage(Buff);
+            input.ReadMessage(Coin);
             break;
           }
-          case 90: {
-            if (jMIDLLDKJBI_ == null) {
-              JMIDLLDKJBI = new global::EggLink.DanhengServer.Proto.CGJNHNMAMDH();
+          case 74: {
+            if (gameDifficultyInfo_ == null) {
+              GameDifficultyInfo = new global::EggLink.DanhengServer.Proto.RogueTournGameDifficultyInfo();
             }
-            input.ReadMessage(JMIDLLDKJBI);
+            input.ReadMessage(GameDifficultyInfo);
             break;
           }
-          case 98: {
-            if (tournFormulaInfo_ == null) {
-              TournFormulaInfo = new global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo();
-            }
-            input.ReadMessage(TournFormulaInfo);
-            break;
-          }
-          case 114: {
+          case 82: {
             if (rogueTournGameAreaInfo_ == null) {
               RogueTournGameAreaInfo = new global::EggLink.DanhengServer.Proto.RogueTournGameAreaInfo();
             }
             input.ReadMessage(RogueTournGameAreaInfo);
             break;
           }
-          case 122: {
-            if (itemValue_ == null) {
-              ItemValue = new global::EggLink.DanhengServer.Proto.RogueGameItemValue();
+          case 98: {
+            if (miracleInfo_ == null) {
+              MiracleInfo = new global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfo();
             }
-            input.ReadMessage(ItemValue);
+            input.ReadMessage(MiracleInfo);
+            break;
+          }
+          case 106: {
+            if (unlockValue_ == null) {
+              UnlockValue = new global::EggLink.DanhengServer.Proto.KeywordUnlockValue();
+            }
+            input.ReadMessage(UnlockValue);
+            break;
+          }
+          case 114: {
+            if (jMIDLLDKJBI_ == null) {
+              JMIDLLDKJBI = new global::EggLink.DanhengServer.Proto.CGJNHNMAMDH();
+            }
+            input.ReadMessage(JMIDLLDKJBI);
+            break;
+          }
+          case 122: {
+            if (lineup_ == null) {
+              Lineup = new global::EggLink.DanhengServer.Proto.RogueTournLineupInfo();
+            }
+            input.ReadMessage(Lineup);
             break;
           }
         }

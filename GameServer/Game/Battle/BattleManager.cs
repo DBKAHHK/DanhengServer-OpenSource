@@ -42,7 +42,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
                 }
             }
 
-            foreach (var info in req.AssistMonsterEntityInfo)
+            foreach (var info in req.AssistEntityInfo)
             foreach (var entity in info.EntityIdList)
             {
                 Player.SceneInstance!.Entities.TryGetValue((int)entity, out var entityInstance);

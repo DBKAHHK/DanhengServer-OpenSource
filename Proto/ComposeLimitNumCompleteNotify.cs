@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNDb21wb3NlTGltaXROdW1Db21wbGV0ZU5vdGlmeS5wcm90bxoRRk5ITU1N",
             "S0pHUEIucHJvdG8iQgodQ29tcG9zZUxpbWl0TnVtQ29tcGxldGVOb3RpZnkS",
-            "IQoLRENITkFFRElOTU0YCSADKAsyDC5GTkhNTU1LSkdQQkIeqgIbRWdnTGlu",
+            "IQoLRENITkFFRElOTU0YDSADKAsyDC5GTkhNTU1LSkdQQkIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FNHMMMKJGPBReflection.Descriptor, },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "DCHNAEDINMM" field.</summary>
-    public const int DCHNAEDINMMFieldNumber = 9;
+    public const int DCHNAEDINMMFieldNumber = 13;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.FNHMMMKJGPB> _repeated_dCHNAEDINMM_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.FNHMMMKJGPB.Parser);
+        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.FNHMMMKJGPB.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FNHMMMKJGPB> dCHNAEDINMM_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FNHMMMKJGPB>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 74: {
+          case 106: {
             dCHNAEDINMM_.AddEntriesFrom(input, _repeated_dCHNAEDINMM_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 74: {
+          case 106: {
             dCHNAEDINMM_.AddEntriesFrom(ref input, _repeated_dCHNAEDINMM_codec);
             break;
           }

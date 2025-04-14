@@ -24,30 +24,30 @@ namespace EggLink.DanhengServer.Proto {
     static RogueTournInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRSb2d1ZVRvdXJuSW5mby5wcm90bxoURXh0cmFTY29yZUluZm8ucHJvdG8a",
-            "EUtDTENISk1OUEdMLnByb3RvGhhSb2d1ZVRvdXJuQXJlYUluZm8ucHJvdG8a",
-            "HlJvZ3VlVG91cm5EaWZmaWN1bHR5SW5mby5wcm90bxoYUm9ndWVUb3VyblNh",
-            "dmVMaXN0LnByb3RvGiNSb2d1ZVRvdXJuUGVybWFuZW50VGFsZW50SW5mby5w",
-            "cm90bxocUm9ndWVUb3VybkhhbmRib29rSW5mby5wcm90bxoaUm9ndWVUb3Vy",
-            "blNlYXNvbkluZm8ucHJvdG8aHFJvZ3VlVG91cm5TZWFzb25UYWxlbnQucHJv",
-            "dG8aF1JvZ3VlVG91cm5FeHBJbmZvLnByb3RvIo4ECg5Sb2d1ZVRvdXJuSW5m",
-            "bxIpChBleHRyYV9zY29yZV9pbmZvGAkgASgLMg8uRXh0cmFTY29yZUluZm8S",
-            "MgoVcm9ndWVfdG91cm5fc2F2ZV9saXN0GAYgAygLMhMuUm9ndWVUb3VyblNh",
-            "dmVMaXN0EjAKFHJvZ3VlX3RvdXJuX2V4cF9pbmZvGA0gASgLMhIuUm9ndWVU",
-            "b3VybkV4cEluZm8SNgoOcGVybWFuZW50X2luZm8YASABKAsyHi5Sb2d1ZVRv",
-            "dXJuUGVybWFuZW50VGFsZW50SW5mbxIhCgtMS0NFRkNMSkNCTRgLIAEoCzIM",
-            "LktDTENISk1OUEdMEj4KG3JvZ3VlX3RvdXJuX2RpZmZpY3VsdHlfaW5mbxgF",
-            "IAMoCzIZLlJvZ3VlVG91cm5EaWZmaWN1bHR5SW5mbxIyChVyb2d1ZV90b3Vy",
-            "bl9hcmVhX2luZm8YBCADKAsyEy5Sb2d1ZVRvdXJuQXJlYUluZm8SMwoSc2Vh",
-            "c29uX3RhbGVudF9pbmZvGAwgASgLMhcuUm9ndWVUb3VyblNlYXNvblRhbGVu",
-            "dBI1ChRyb2d1ZV90b3Vybl9oYW5kYm9vaxgCIAEoCzIXLlJvZ3VlVG91cm5I",
-            "YW5kYm9va0luZm8SMAoRcm9ndWVfc2Vhc29uX2luZm8YDyABKAsyFS5Sb2d1",
-            "ZVRvdXJuU2Vhc29uSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "ChRSb2d1ZVRvdXJuSW5mby5wcm90bxocUm9ndWVUb3VybkhhbmRib29rSW5m",
+            "by5wcm90bxoXUm9ndWVUb3VybkV4cEluZm8ucHJvdG8aGFJvZ3VlVG91cm5B",
+            "cmVhSW5mby5wcm90bxocUm9ndWVUb3VyblNlYXNvblRhbGVudC5wcm90bxoU",
+            "RXh0cmFTY29yZUluZm8ucHJvdG8aGFJvZ3VlVG91cm5TYXZlTGlzdC5wcm90",
+            "bxoeUm9ndWVUb3VybkRpZmZpY3VsdHlJbmZvLnByb3RvGhpSb2d1ZVRvdXJu",
+            "U2Vhc29uSW5mby5wcm90bxoRS0NMQ0hKTU5QR0wucHJvdG8aI1JvZ3VlVG91",
+            "cm5QZXJtYW5lbnRUYWxlbnRJbmZvLnByb3RvIo4ECg5Sb2d1ZVRvdXJuSW5m",
+            "bxI1ChRyb2d1ZV90b3Vybl9oYW5kYm9vaxgJIAEoCzIXLlJvZ3VlVG91cm5I",
+            "YW5kYm9va0luZm8SMwoSc2Vhc29uX3RhbGVudF9pbmZvGAMgASgLMhcuUm9n",
+            "dWVUb3VyblNlYXNvblRhbGVudBIwChRyb2d1ZV90b3Vybl9leHBfaW5mbxgF",
+            "IAEoCzISLlJvZ3VlVG91cm5FeHBJbmZvEjAKEXJvZ3VlX3NlYXNvbl9pbmZv",
+            "GAQgASgLMhUuUm9ndWVUb3VyblNlYXNvbkluZm8SIQoLTEtDRUZDTEpDQk0Y",
+            "DiABKAsyDC5LQ0xDSEpNTlBHTBI+Chtyb2d1ZV90b3Vybl9kaWZmaWN1bHR5",
+            "X2luZm8YCyADKAsyGS5Sb2d1ZVRvdXJuRGlmZmljdWx0eUluZm8SMgoVcm9n",
+            "dWVfdG91cm5fYXJlYV9pbmZvGA0gAygLMhMuUm9ndWVUb3VybkFyZWFJbmZv",
+            "EjYKDnBlcm1hbmVudF9pbmZvGA8gASgLMh4uUm9ndWVUb3VyblBlcm1hbmVu",
+            "dFRhbGVudEluZm8SMgoVcm9ndWVfdG91cm5fc2F2ZV9saXN0GAogAygLMhMu",
+            "Um9ndWVUb3VyblNhdmVMaXN0EikKEGV4dHJhX3Njb3JlX2luZm8YByABKAsy",
+            "Dy5FeHRyYVNjb3JlSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ExtraScoreInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KCLCHJMNPGLReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournAreaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournDifficultyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournSaveListReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournPermanentTalentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournHandbookInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournSeasonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournSeasonTalentReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournExpInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTournHandbookInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournExpInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournAreaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournSeasonTalentReflection.Descriptor, global::EggLink.DanhengServer.Proto.ExtraScoreInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournSaveListReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournDifficultyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournSeasonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KCLCHJMNPGLReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournPermanentTalentInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournInfo), global::EggLink.DanhengServer.Proto.RogueTournInfo.Parser, new[]{ "ExtraScoreInfo", "RogueTournSaveList", "RogueTournExpInfo", "PermanentInfo", "LKCEFCLJCBM", "RogueTournDifficultyInfo", "RogueTournAreaInfo", "SeasonTalentInfo", "RogueTournHandbook", "RogueSeasonInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournInfo), global::EggLink.DanhengServer.Proto.RogueTournInfo.Parser, new[]{ "RogueTournHandbook", "SeasonTalentInfo", "RogueTournExpInfo", "RogueSeasonInfo", "LKCEFCLJCBM", "RogueTournDifficultyInfo", "RogueTournAreaInfo", "PermanentInfo", "RogueTournSaveList", "ExtraScoreInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -89,16 +89,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournInfo(RogueTournInfo other) : this() {
-      extraScoreInfo_ = other.extraScoreInfo_ != null ? other.extraScoreInfo_.Clone() : null;
-      rogueTournSaveList_ = other.rogueTournSaveList_.Clone();
+      rogueTournHandbook_ = other.rogueTournHandbook_ != null ? other.rogueTournHandbook_.Clone() : null;
+      seasonTalentInfo_ = other.seasonTalentInfo_ != null ? other.seasonTalentInfo_.Clone() : null;
       rogueTournExpInfo_ = other.rogueTournExpInfo_ != null ? other.rogueTournExpInfo_.Clone() : null;
-      permanentInfo_ = other.permanentInfo_ != null ? other.permanentInfo_.Clone() : null;
+      rogueSeasonInfo_ = other.rogueSeasonInfo_ != null ? other.rogueSeasonInfo_.Clone() : null;
       lKCEFCLJCBM_ = other.lKCEFCLJCBM_ != null ? other.lKCEFCLJCBM_.Clone() : null;
       rogueTournDifficultyInfo_ = other.rogueTournDifficultyInfo_.Clone();
       rogueTournAreaInfo_ = other.rogueTournAreaInfo_.Clone();
-      seasonTalentInfo_ = other.seasonTalentInfo_ != null ? other.seasonTalentInfo_.Clone() : null;
-      rogueTournHandbook_ = other.rogueTournHandbook_ != null ? other.rogueTournHandbook_.Clone() : null;
-      rogueSeasonInfo_ = other.rogueSeasonInfo_ != null ? other.rogueSeasonInfo_.Clone() : null;
+      permanentInfo_ = other.permanentInfo_ != null ? other.permanentInfo_.Clone() : null;
+      rogueTournSaveList_ = other.rogueTournSaveList_.Clone();
+      extraScoreInfo_ = other.extraScoreInfo_ != null ? other.extraScoreInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -108,31 +108,32 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournInfo(this);
     }
 
-    /// <summary>Field number for the "extra_score_info" field.</summary>
-    public const int ExtraScoreInfoFieldNumber = 9;
-    private global::EggLink.DanhengServer.Proto.ExtraScoreInfo extraScoreInfo_;
+    /// <summary>Field number for the "rogue_tourn_handbook" field.</summary>
+    public const int RogueTournHandbookFieldNumber = 9;
+    private global::EggLink.DanhengServer.Proto.RogueTournHandbookInfo rogueTournHandbook_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ExtraScoreInfo ExtraScoreInfo {
-      get { return extraScoreInfo_; }
+    public global::EggLink.DanhengServer.Proto.RogueTournHandbookInfo RogueTournHandbook {
+      get { return rogueTournHandbook_; }
       set {
-        extraScoreInfo_ = value;
+        rogueTournHandbook_ = value;
       }
     }
 
-    /// <summary>Field number for the "rogue_tourn_save_list" field.</summary>
-    public const int RogueTournSaveListFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueTournSaveList> _repeated_rogueTournSaveList_codec
-        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.RogueTournSaveList.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueTournSaveList> rogueTournSaveList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueTournSaveList>();
+    /// <summary>Field number for the "season_talent_info" field.</summary>
+    public const int SeasonTalentInfoFieldNumber = 3;
+    private global::EggLink.DanhengServer.Proto.RogueTournSeasonTalent seasonTalentInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueTournSaveList> RogueTournSaveList {
-      get { return rogueTournSaveList_; }
+    public global::EggLink.DanhengServer.Proto.RogueTournSeasonTalent SeasonTalentInfo {
+      get { return seasonTalentInfo_; }
+      set {
+        seasonTalentInfo_ = value;
+      }
     }
 
     /// <summary>Field number for the "rogue_tourn_exp_info" field.</summary>
-    public const int RogueTournExpInfoFieldNumber = 13;
+    public const int RogueTournExpInfoFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.RogueTournExpInfo rogueTournExpInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -143,20 +144,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "permanent_info" field.</summary>
-    public const int PermanentInfoFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.RogueTournPermanentTalentInfo permanentInfo_;
+    /// <summary>Field number for the "rogue_season_info" field.</summary>
+    public const int RogueSeasonInfoFieldNumber = 4;
+    private global::EggLink.DanhengServer.Proto.RogueTournSeasonInfo rogueSeasonInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueTournPermanentTalentInfo PermanentInfo {
-      get { return permanentInfo_; }
+    public global::EggLink.DanhengServer.Proto.RogueTournSeasonInfo RogueSeasonInfo {
+      get { return rogueSeasonInfo_; }
       set {
-        permanentInfo_ = value;
+        rogueSeasonInfo_ = value;
       }
     }
 
     /// <summary>Field number for the "LKCEFCLJCBM" field.</summary>
-    public const int LKCEFCLJCBMFieldNumber = 11;
+    public const int LKCEFCLJCBMFieldNumber = 14;
     private global::EggLink.DanhengServer.Proto.KCLCHJMNPGL lKCEFCLJCBM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -168,9 +169,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_tourn_difficulty_info" field.</summary>
-    public const int RogueTournDifficultyInfoFieldNumber = 5;
+    public const int RogueTournDifficultyInfoFieldNumber = 11;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueTournDifficultyInfo> _repeated_rogueTournDifficultyInfo_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.RogueTournDifficultyInfo.Parser);
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.RogueTournDifficultyInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueTournDifficultyInfo> rogueTournDifficultyInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueTournDifficultyInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -179,9 +180,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_tourn_area_info" field.</summary>
-    public const int RogueTournAreaInfoFieldNumber = 4;
+    public const int RogueTournAreaInfoFieldNumber = 13;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueTournAreaInfo> _repeated_rogueTournAreaInfo_codec
-        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.RogueTournAreaInfo.Parser);
+        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.RogueTournAreaInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueTournAreaInfo> rogueTournAreaInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueTournAreaInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -189,39 +190,38 @@ namespace EggLink.DanhengServer.Proto {
       get { return rogueTournAreaInfo_; }
     }
 
-    /// <summary>Field number for the "season_talent_info" field.</summary>
-    public const int SeasonTalentInfoFieldNumber = 12;
-    private global::EggLink.DanhengServer.Proto.RogueTournSeasonTalent seasonTalentInfo_;
+    /// <summary>Field number for the "permanent_info" field.</summary>
+    public const int PermanentInfoFieldNumber = 15;
+    private global::EggLink.DanhengServer.Proto.RogueTournPermanentTalentInfo permanentInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueTournSeasonTalent SeasonTalentInfo {
-      get { return seasonTalentInfo_; }
+    public global::EggLink.DanhengServer.Proto.RogueTournPermanentTalentInfo PermanentInfo {
+      get { return permanentInfo_; }
       set {
-        seasonTalentInfo_ = value;
+        permanentInfo_ = value;
       }
     }
 
-    /// <summary>Field number for the "rogue_tourn_handbook" field.</summary>
-    public const int RogueTournHandbookFieldNumber = 2;
-    private global::EggLink.DanhengServer.Proto.RogueTournHandbookInfo rogueTournHandbook_;
+    /// <summary>Field number for the "rogue_tourn_save_list" field.</summary>
+    public const int RogueTournSaveListFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueTournSaveList> _repeated_rogueTournSaveList_codec
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.RogueTournSaveList.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueTournSaveList> rogueTournSaveList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueTournSaveList>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueTournHandbookInfo RogueTournHandbook {
-      get { return rogueTournHandbook_; }
-      set {
-        rogueTournHandbook_ = value;
-      }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueTournSaveList> RogueTournSaveList {
+      get { return rogueTournSaveList_; }
     }
 
-    /// <summary>Field number for the "rogue_season_info" field.</summary>
-    public const int RogueSeasonInfoFieldNumber = 15;
-    private global::EggLink.DanhengServer.Proto.RogueTournSeasonInfo rogueSeasonInfo_;
+    /// <summary>Field number for the "extra_score_info" field.</summary>
+    public const int ExtraScoreInfoFieldNumber = 7;
+    private global::EggLink.DanhengServer.Proto.ExtraScoreInfo extraScoreInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueTournSeasonInfo RogueSeasonInfo {
-      get { return rogueSeasonInfo_; }
+    public global::EggLink.DanhengServer.Proto.ExtraScoreInfo ExtraScoreInfo {
+      get { return extraScoreInfo_; }
       set {
-        rogueSeasonInfo_ = value;
+        extraScoreInfo_ = value;
       }
     }
 
@@ -240,16 +240,16 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(ExtraScoreInfo, other.ExtraScoreInfo)) return false;
-      if(!rogueTournSaveList_.Equals(other.rogueTournSaveList_)) return false;
+      if (!object.Equals(RogueTournHandbook, other.RogueTournHandbook)) return false;
+      if (!object.Equals(SeasonTalentInfo, other.SeasonTalentInfo)) return false;
       if (!object.Equals(RogueTournExpInfo, other.RogueTournExpInfo)) return false;
-      if (!object.Equals(PermanentInfo, other.PermanentInfo)) return false;
+      if (!object.Equals(RogueSeasonInfo, other.RogueSeasonInfo)) return false;
       if (!object.Equals(LKCEFCLJCBM, other.LKCEFCLJCBM)) return false;
       if(!rogueTournDifficultyInfo_.Equals(other.rogueTournDifficultyInfo_)) return false;
       if(!rogueTournAreaInfo_.Equals(other.rogueTournAreaInfo_)) return false;
-      if (!object.Equals(SeasonTalentInfo, other.SeasonTalentInfo)) return false;
-      if (!object.Equals(RogueTournHandbook, other.RogueTournHandbook)) return false;
-      if (!object.Equals(RogueSeasonInfo, other.RogueSeasonInfo)) return false;
+      if (!object.Equals(PermanentInfo, other.PermanentInfo)) return false;
+      if(!rogueTournSaveList_.Equals(other.rogueTournSaveList_)) return false;
+      if (!object.Equals(ExtraScoreInfo, other.ExtraScoreInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -257,16 +257,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (extraScoreInfo_ != null) hash ^= ExtraScoreInfo.GetHashCode();
-      hash ^= rogueTournSaveList_.GetHashCode();
+      if (rogueTournHandbook_ != null) hash ^= RogueTournHandbook.GetHashCode();
+      if (seasonTalentInfo_ != null) hash ^= SeasonTalentInfo.GetHashCode();
       if (rogueTournExpInfo_ != null) hash ^= RogueTournExpInfo.GetHashCode();
-      if (permanentInfo_ != null) hash ^= PermanentInfo.GetHashCode();
+      if (rogueSeasonInfo_ != null) hash ^= RogueSeasonInfo.GetHashCode();
       if (lKCEFCLJCBM_ != null) hash ^= LKCEFCLJCBM.GetHashCode();
       hash ^= rogueTournDifficultyInfo_.GetHashCode();
       hash ^= rogueTournAreaInfo_.GetHashCode();
-      if (seasonTalentInfo_ != null) hash ^= SeasonTalentInfo.GetHashCode();
-      if (rogueTournHandbook_ != null) hash ^= RogueTournHandbook.GetHashCode();
-      if (rogueSeasonInfo_ != null) hash ^= RogueSeasonInfo.GetHashCode();
+      if (permanentInfo_ != null) hash ^= PermanentInfo.GetHashCode();
+      hash ^= rogueTournSaveList_.GetHashCode();
+      if (extraScoreInfo_ != null) hash ^= ExtraScoreInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -285,36 +285,36 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (permanentInfo_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(PermanentInfo);
-      }
-      if (rogueTournHandbook_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(RogueTournHandbook);
-      }
-      rogueTournAreaInfo_.WriteTo(output, _repeated_rogueTournAreaInfo_codec);
-      rogueTournDifficultyInfo_.WriteTo(output, _repeated_rogueTournDifficultyInfo_codec);
-      rogueTournSaveList_.WriteTo(output, _repeated_rogueTournSaveList_codec);
-      if (extraScoreInfo_ != null) {
-        output.WriteRawTag(74);
-        output.WriteMessage(ExtraScoreInfo);
-      }
-      if (lKCEFCLJCBM_ != null) {
-        output.WriteRawTag(90);
-        output.WriteMessage(LKCEFCLJCBM);
-      }
       if (seasonTalentInfo_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(26);
         output.WriteMessage(SeasonTalentInfo);
       }
+      if (rogueSeasonInfo_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(RogueSeasonInfo);
+      }
       if (rogueTournExpInfo_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(42);
         output.WriteMessage(RogueTournExpInfo);
       }
-      if (rogueSeasonInfo_ != null) {
+      if (extraScoreInfo_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ExtraScoreInfo);
+      }
+      if (rogueTournHandbook_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(RogueTournHandbook);
+      }
+      rogueTournSaveList_.WriteTo(output, _repeated_rogueTournSaveList_codec);
+      rogueTournDifficultyInfo_.WriteTo(output, _repeated_rogueTournDifficultyInfo_codec);
+      rogueTournAreaInfo_.WriteTo(output, _repeated_rogueTournAreaInfo_codec);
+      if (lKCEFCLJCBM_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(LKCEFCLJCBM);
+      }
+      if (permanentInfo_ != null) {
         output.WriteRawTag(122);
-        output.WriteMessage(RogueSeasonInfo);
+        output.WriteMessage(PermanentInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -326,36 +326,36 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (permanentInfo_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(PermanentInfo);
-      }
-      if (rogueTournHandbook_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(RogueTournHandbook);
-      }
-      rogueTournAreaInfo_.WriteTo(ref output, _repeated_rogueTournAreaInfo_codec);
-      rogueTournDifficultyInfo_.WriteTo(ref output, _repeated_rogueTournDifficultyInfo_codec);
-      rogueTournSaveList_.WriteTo(ref output, _repeated_rogueTournSaveList_codec);
-      if (extraScoreInfo_ != null) {
-        output.WriteRawTag(74);
-        output.WriteMessage(ExtraScoreInfo);
-      }
-      if (lKCEFCLJCBM_ != null) {
-        output.WriteRawTag(90);
-        output.WriteMessage(LKCEFCLJCBM);
-      }
       if (seasonTalentInfo_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(26);
         output.WriteMessage(SeasonTalentInfo);
       }
+      if (rogueSeasonInfo_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(RogueSeasonInfo);
+      }
       if (rogueTournExpInfo_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(42);
         output.WriteMessage(RogueTournExpInfo);
       }
-      if (rogueSeasonInfo_ != null) {
+      if (extraScoreInfo_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ExtraScoreInfo);
+      }
+      if (rogueTournHandbook_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(RogueTournHandbook);
+      }
+      rogueTournSaveList_.WriteTo(ref output, _repeated_rogueTournSaveList_codec);
+      rogueTournDifficultyInfo_.WriteTo(ref output, _repeated_rogueTournDifficultyInfo_codec);
+      rogueTournAreaInfo_.WriteTo(ref output, _repeated_rogueTournAreaInfo_codec);
+      if (lKCEFCLJCBM_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(LKCEFCLJCBM);
+      }
+      if (permanentInfo_ != null) {
         output.WriteRawTag(122);
-        output.WriteMessage(RogueSeasonInfo);
+        output.WriteMessage(PermanentInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -367,29 +367,29 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (extraScoreInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExtraScoreInfo);
+      if (rogueTournHandbook_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueTournHandbook);
       }
-      size += rogueTournSaveList_.CalculateSize(_repeated_rogueTournSaveList_codec);
+      if (seasonTalentInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SeasonTalentInfo);
+      }
       if (rogueTournExpInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueTournExpInfo);
       }
-      if (permanentInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PermanentInfo);
+      if (rogueSeasonInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueSeasonInfo);
       }
       if (lKCEFCLJCBM_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LKCEFCLJCBM);
       }
       size += rogueTournDifficultyInfo_.CalculateSize(_repeated_rogueTournDifficultyInfo_codec);
       size += rogueTournAreaInfo_.CalculateSize(_repeated_rogueTournAreaInfo_codec);
-      if (seasonTalentInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SeasonTalentInfo);
+      if (permanentInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PermanentInfo);
       }
-      if (rogueTournHandbook_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueTournHandbook);
-      }
-      if (rogueSeasonInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueSeasonInfo);
+      size += rogueTournSaveList_.CalculateSize(_repeated_rogueTournSaveList_codec);
+      if (extraScoreInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExtraScoreInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -403,24 +403,29 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.extraScoreInfo_ != null) {
-        if (extraScoreInfo_ == null) {
-          ExtraScoreInfo = new global::EggLink.DanhengServer.Proto.ExtraScoreInfo();
+      if (other.rogueTournHandbook_ != null) {
+        if (rogueTournHandbook_ == null) {
+          RogueTournHandbook = new global::EggLink.DanhengServer.Proto.RogueTournHandbookInfo();
         }
-        ExtraScoreInfo.MergeFrom(other.ExtraScoreInfo);
+        RogueTournHandbook.MergeFrom(other.RogueTournHandbook);
       }
-      rogueTournSaveList_.Add(other.rogueTournSaveList_);
+      if (other.seasonTalentInfo_ != null) {
+        if (seasonTalentInfo_ == null) {
+          SeasonTalentInfo = new global::EggLink.DanhengServer.Proto.RogueTournSeasonTalent();
+        }
+        SeasonTalentInfo.MergeFrom(other.SeasonTalentInfo);
+      }
       if (other.rogueTournExpInfo_ != null) {
         if (rogueTournExpInfo_ == null) {
           RogueTournExpInfo = new global::EggLink.DanhengServer.Proto.RogueTournExpInfo();
         }
         RogueTournExpInfo.MergeFrom(other.RogueTournExpInfo);
       }
-      if (other.permanentInfo_ != null) {
-        if (permanentInfo_ == null) {
-          PermanentInfo = new global::EggLink.DanhengServer.Proto.RogueTournPermanentTalentInfo();
+      if (other.rogueSeasonInfo_ != null) {
+        if (rogueSeasonInfo_ == null) {
+          RogueSeasonInfo = new global::EggLink.DanhengServer.Proto.RogueTournSeasonInfo();
         }
-        PermanentInfo.MergeFrom(other.PermanentInfo);
+        RogueSeasonInfo.MergeFrom(other.RogueSeasonInfo);
       }
       if (other.lKCEFCLJCBM_ != null) {
         if (lKCEFCLJCBM_ == null) {
@@ -430,23 +435,18 @@ namespace EggLink.DanhengServer.Proto {
       }
       rogueTournDifficultyInfo_.Add(other.rogueTournDifficultyInfo_);
       rogueTournAreaInfo_.Add(other.rogueTournAreaInfo_);
-      if (other.seasonTalentInfo_ != null) {
-        if (seasonTalentInfo_ == null) {
-          SeasonTalentInfo = new global::EggLink.DanhengServer.Proto.RogueTournSeasonTalent();
+      if (other.permanentInfo_ != null) {
+        if (permanentInfo_ == null) {
+          PermanentInfo = new global::EggLink.DanhengServer.Proto.RogueTournPermanentTalentInfo();
         }
-        SeasonTalentInfo.MergeFrom(other.SeasonTalentInfo);
+        PermanentInfo.MergeFrom(other.PermanentInfo);
       }
-      if (other.rogueTournHandbook_ != null) {
-        if (rogueTournHandbook_ == null) {
-          RogueTournHandbook = new global::EggLink.DanhengServer.Proto.RogueTournHandbookInfo();
+      rogueTournSaveList_.Add(other.rogueTournSaveList_);
+      if (other.extraScoreInfo_ != null) {
+        if (extraScoreInfo_ == null) {
+          ExtraScoreInfo = new global::EggLink.DanhengServer.Proto.ExtraScoreInfo();
         }
-        RogueTournHandbook.MergeFrom(other.RogueTournHandbook);
-      }
-      if (other.rogueSeasonInfo_ != null) {
-        if (rogueSeasonInfo_ == null) {
-          RogueSeasonInfo = new global::EggLink.DanhengServer.Proto.RogueTournSeasonInfo();
-        }
-        RogueSeasonInfo.MergeFrom(other.RogueSeasonInfo);
+        ExtraScoreInfo.MergeFrom(other.ExtraScoreInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -463,65 +463,65 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            if (permanentInfo_ == null) {
-              PermanentInfo = new global::EggLink.DanhengServer.Proto.RogueTournPermanentTalentInfo();
-            }
-            input.ReadMessage(PermanentInfo);
-            break;
-          }
-          case 18: {
-            if (rogueTournHandbook_ == null) {
-              RogueTournHandbook = new global::EggLink.DanhengServer.Proto.RogueTournHandbookInfo();
-            }
-            input.ReadMessage(RogueTournHandbook);
-            break;
-          }
-          case 34: {
-            rogueTournAreaInfo_.AddEntriesFrom(input, _repeated_rogueTournAreaInfo_codec);
-            break;
-          }
-          case 42: {
-            rogueTournDifficultyInfo_.AddEntriesFrom(input, _repeated_rogueTournDifficultyInfo_codec);
-            break;
-          }
-          case 50: {
-            rogueTournSaveList_.AddEntriesFrom(input, _repeated_rogueTournSaveList_codec);
-            break;
-          }
-          case 74: {
-            if (extraScoreInfo_ == null) {
-              ExtraScoreInfo = new global::EggLink.DanhengServer.Proto.ExtraScoreInfo();
-            }
-            input.ReadMessage(ExtraScoreInfo);
-            break;
-          }
-          case 90: {
-            if (lKCEFCLJCBM_ == null) {
-              LKCEFCLJCBM = new global::EggLink.DanhengServer.Proto.KCLCHJMNPGL();
-            }
-            input.ReadMessage(LKCEFCLJCBM);
-            break;
-          }
-          case 98: {
+          case 26: {
             if (seasonTalentInfo_ == null) {
               SeasonTalentInfo = new global::EggLink.DanhengServer.Proto.RogueTournSeasonTalent();
             }
             input.ReadMessage(SeasonTalentInfo);
             break;
           }
-          case 106: {
+          case 34: {
+            if (rogueSeasonInfo_ == null) {
+              RogueSeasonInfo = new global::EggLink.DanhengServer.Proto.RogueTournSeasonInfo();
+            }
+            input.ReadMessage(RogueSeasonInfo);
+            break;
+          }
+          case 42: {
             if (rogueTournExpInfo_ == null) {
               RogueTournExpInfo = new global::EggLink.DanhengServer.Proto.RogueTournExpInfo();
             }
             input.ReadMessage(RogueTournExpInfo);
             break;
           }
-          case 122: {
-            if (rogueSeasonInfo_ == null) {
-              RogueSeasonInfo = new global::EggLink.DanhengServer.Proto.RogueTournSeasonInfo();
+          case 58: {
+            if (extraScoreInfo_ == null) {
+              ExtraScoreInfo = new global::EggLink.DanhengServer.Proto.ExtraScoreInfo();
             }
-            input.ReadMessage(RogueSeasonInfo);
+            input.ReadMessage(ExtraScoreInfo);
+            break;
+          }
+          case 74: {
+            if (rogueTournHandbook_ == null) {
+              RogueTournHandbook = new global::EggLink.DanhengServer.Proto.RogueTournHandbookInfo();
+            }
+            input.ReadMessage(RogueTournHandbook);
+            break;
+          }
+          case 82: {
+            rogueTournSaveList_.AddEntriesFrom(input, _repeated_rogueTournSaveList_codec);
+            break;
+          }
+          case 90: {
+            rogueTournDifficultyInfo_.AddEntriesFrom(input, _repeated_rogueTournDifficultyInfo_codec);
+            break;
+          }
+          case 106: {
+            rogueTournAreaInfo_.AddEntriesFrom(input, _repeated_rogueTournAreaInfo_codec);
+            break;
+          }
+          case 114: {
+            if (lKCEFCLJCBM_ == null) {
+              LKCEFCLJCBM = new global::EggLink.DanhengServer.Proto.KCLCHJMNPGL();
+            }
+            input.ReadMessage(LKCEFCLJCBM);
+            break;
+          }
+          case 122: {
+            if (permanentInfo_ == null) {
+              PermanentInfo = new global::EggLink.DanhengServer.Proto.RogueTournPermanentTalentInfo();
+            }
+            input.ReadMessage(PermanentInfo);
             break;
           }
         }
@@ -539,65 +539,65 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            if (permanentInfo_ == null) {
-              PermanentInfo = new global::EggLink.DanhengServer.Proto.RogueTournPermanentTalentInfo();
-            }
-            input.ReadMessage(PermanentInfo);
-            break;
-          }
-          case 18: {
-            if (rogueTournHandbook_ == null) {
-              RogueTournHandbook = new global::EggLink.DanhengServer.Proto.RogueTournHandbookInfo();
-            }
-            input.ReadMessage(RogueTournHandbook);
-            break;
-          }
-          case 34: {
-            rogueTournAreaInfo_.AddEntriesFrom(ref input, _repeated_rogueTournAreaInfo_codec);
-            break;
-          }
-          case 42: {
-            rogueTournDifficultyInfo_.AddEntriesFrom(ref input, _repeated_rogueTournDifficultyInfo_codec);
-            break;
-          }
-          case 50: {
-            rogueTournSaveList_.AddEntriesFrom(ref input, _repeated_rogueTournSaveList_codec);
-            break;
-          }
-          case 74: {
-            if (extraScoreInfo_ == null) {
-              ExtraScoreInfo = new global::EggLink.DanhengServer.Proto.ExtraScoreInfo();
-            }
-            input.ReadMessage(ExtraScoreInfo);
-            break;
-          }
-          case 90: {
-            if (lKCEFCLJCBM_ == null) {
-              LKCEFCLJCBM = new global::EggLink.DanhengServer.Proto.KCLCHJMNPGL();
-            }
-            input.ReadMessage(LKCEFCLJCBM);
-            break;
-          }
-          case 98: {
+          case 26: {
             if (seasonTalentInfo_ == null) {
               SeasonTalentInfo = new global::EggLink.DanhengServer.Proto.RogueTournSeasonTalent();
             }
             input.ReadMessage(SeasonTalentInfo);
             break;
           }
-          case 106: {
+          case 34: {
+            if (rogueSeasonInfo_ == null) {
+              RogueSeasonInfo = new global::EggLink.DanhengServer.Proto.RogueTournSeasonInfo();
+            }
+            input.ReadMessage(RogueSeasonInfo);
+            break;
+          }
+          case 42: {
             if (rogueTournExpInfo_ == null) {
               RogueTournExpInfo = new global::EggLink.DanhengServer.Proto.RogueTournExpInfo();
             }
             input.ReadMessage(RogueTournExpInfo);
             break;
           }
-          case 122: {
-            if (rogueSeasonInfo_ == null) {
-              RogueSeasonInfo = new global::EggLink.DanhengServer.Proto.RogueTournSeasonInfo();
+          case 58: {
+            if (extraScoreInfo_ == null) {
+              ExtraScoreInfo = new global::EggLink.DanhengServer.Proto.ExtraScoreInfo();
             }
-            input.ReadMessage(RogueSeasonInfo);
+            input.ReadMessage(ExtraScoreInfo);
+            break;
+          }
+          case 74: {
+            if (rogueTournHandbook_ == null) {
+              RogueTournHandbook = new global::EggLink.DanhengServer.Proto.RogueTournHandbookInfo();
+            }
+            input.ReadMessage(RogueTournHandbook);
+            break;
+          }
+          case 82: {
+            rogueTournSaveList_.AddEntriesFrom(ref input, _repeated_rogueTournSaveList_codec);
+            break;
+          }
+          case 90: {
+            rogueTournDifficultyInfo_.AddEntriesFrom(ref input, _repeated_rogueTournDifficultyInfo_codec);
+            break;
+          }
+          case 106: {
+            rogueTournAreaInfo_.AddEntriesFrom(ref input, _repeated_rogueTournAreaInfo_codec);
+            break;
+          }
+          case 114: {
+            if (lKCEFCLJCBM_ == null) {
+              LKCEFCLJCBM = new global::EggLink.DanhengServer.Proto.KCLCHJMNPGL();
+            }
+            input.ReadMessage(LKCEFCLJCBM);
+            break;
+          }
+          case 122: {
+            if (permanentInfo_ == null) {
+              PermanentInfo = new global::EggLink.DanhengServer.Proto.RogueTournPermanentTalentInfo();
+            }
+            input.ReadMessage(PermanentInfo);
             break;
           }
         }

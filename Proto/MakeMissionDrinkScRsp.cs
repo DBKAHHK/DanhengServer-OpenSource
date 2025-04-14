@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtNYWtlTWlzc2lvbkRyaW5rU2NSc3AucHJvdG8aEUVFS0ZFQ0RJSEpFLnBy",
-            "b3RvImsKFU1ha2VNaXNzaW9uRHJpbmtTY1JzcBIPCgdSZXRjb2RlGAsgASgN",
-            "Eg4KBklzU2F2ZRgPIAEoCBIOCgZJc1N1Y2MYBCABKAgSIQoLQ3VzdG9tRHJp",
-            "bmsYBiABKAsyDC5FRUtGRUNESUhKRUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
+            "b3RvImsKFU1ha2VNaXNzaW9uRHJpbmtTY1JzcBIhCgtDdXN0b21EcmluaxgI",
+            "IAEoCzIMLkVFS0ZFQ0RJSEpFEg4KBklzU3VjYxgJIAEoCBIOCgZJc1NhdmUY",
+            "ByABKAgSDwoHUmV0Y29kZRgGIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EEKFECDIHJEReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MakeMissionDrinkScRsp), global::EggLink.DanhengServer.Proto.MakeMissionDrinkScRsp.Parser, new[]{ "Retcode", "IsSave", "IsSucc", "CustomDrink" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MakeMissionDrinkScRsp), global::EggLink.DanhengServer.Proto.MakeMissionDrinkScRsp.Parser, new[]{ "CustomDrink", "IsSucc", "IsSave", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MakeMissionDrinkScRsp(MakeMissionDrinkScRsp other) : this() {
-      retcode_ = other.retcode_;
-      isSave_ = other.isSave_;
-      isSucc_ = other.isSucc_;
       customDrink_ = other.customDrink_ != null ? other.customDrink_.Clone() : null;
+      isSucc_ = other.isSucc_;
+      isSave_ = other.isSave_;
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,32 +87,20 @@ namespace EggLink.DanhengServer.Proto {
       return new MakeMissionDrinkScRsp(this);
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
-    public const int RetcodeFieldNumber = 11;
-    private uint retcode_;
+    /// <summary>Field number for the "CustomDrink" field.</summary>
+    public const int CustomDrinkFieldNumber = 8;
+    private global::EggLink.DanhengServer.Proto.EEKFECDIHJE customDrink_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
+    public global::EggLink.DanhengServer.Proto.EEKFECDIHJE CustomDrink {
+      get { return customDrink_; }
       set {
-        retcode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "IsSave" field.</summary>
-    public const int IsSaveFieldNumber = 15;
-    private bool isSave_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsSave {
-      get { return isSave_; }
-      set {
-        isSave_ = value;
+        customDrink_ = value;
       }
     }
 
     /// <summary>Field number for the "IsSucc" field.</summary>
-    public const int IsSuccFieldNumber = 4;
+    public const int IsSuccFieldNumber = 9;
     private bool isSucc_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,15 +111,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CustomDrink" field.</summary>
-    public const int CustomDrinkFieldNumber = 6;
-    private global::EggLink.DanhengServer.Proto.EEKFECDIHJE customDrink_;
+    /// <summary>Field number for the "IsSave" field.</summary>
+    public const int IsSaveFieldNumber = 7;
+    private bool isSave_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.EEKFECDIHJE CustomDrink {
-      get { return customDrink_; }
+    public bool IsSave {
+      get { return isSave_; }
       set {
-        customDrink_ = value;
+        isSave_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Retcode" field.</summary>
+    public const int RetcodeFieldNumber = 6;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
       }
     }
 
@@ -150,10 +150,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
-      if (IsSave != other.IsSave) return false;
-      if (IsSucc != other.IsSucc) return false;
       if (!object.Equals(CustomDrink, other.CustomDrink)) return false;
+      if (IsSucc != other.IsSucc) return false;
+      if (IsSave != other.IsSave) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,10 +161,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (IsSave != false) hash ^= IsSave.GetHashCode();
-      if (IsSucc != false) hash ^= IsSucc.GetHashCode();
       if (customDrink_ != null) hash ^= CustomDrink.GetHashCode();
+      if (IsSucc != false) hash ^= IsSucc.GetHashCode();
+      if (IsSave != false) hash ^= IsSave.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,21 +183,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsSucc != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(IsSucc);
-      }
-      if (customDrink_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(CustomDrink);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
       if (IsSave != false) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(56);
         output.WriteBool(IsSave);
+      }
+      if (customDrink_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(CustomDrink);
+      }
+      if (IsSucc != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(IsSucc);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -209,21 +209,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsSucc != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(IsSucc);
-      }
-      if (customDrink_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(CustomDrink);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
       if (IsSave != false) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(56);
         output.WriteBool(IsSave);
+      }
+      if (customDrink_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(CustomDrink);
+      }
+      if (IsSucc != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(IsSucc);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -235,17 +235,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
-      if (IsSave != false) {
-        size += 1 + 1;
+      if (customDrink_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomDrink);
       }
       if (IsSucc != false) {
         size += 1 + 1;
       }
-      if (customDrink_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomDrink);
+      if (IsSave != false) {
+        size += 1 + 1;
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -259,20 +259,20 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
-      if (other.IsSave != false) {
-        IsSave = other.IsSave;
-      }
-      if (other.IsSucc != false) {
-        IsSucc = other.IsSucc;
-      }
       if (other.customDrink_ != null) {
         if (customDrink_ == null) {
           CustomDrink = new global::EggLink.DanhengServer.Proto.EEKFECDIHJE();
         }
         CustomDrink.MergeFrom(other.CustomDrink);
+      }
+      if (other.IsSucc != false) {
+        IsSucc = other.IsSucc;
+      }
+      if (other.IsSave != false) {
+        IsSave = other.IsSave;
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -289,23 +289,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            IsSucc = input.ReadBool();
+          case 48: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 56: {
+            IsSave = input.ReadBool();
+            break;
+          }
+          case 66: {
             if (customDrink_ == null) {
               CustomDrink = new global::EggLink.DanhengServer.Proto.EEKFECDIHJE();
             }
             input.ReadMessage(CustomDrink);
             break;
           }
-          case 88: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 120: {
-            IsSave = input.ReadBool();
+          case 72: {
+            IsSucc = input.ReadBool();
             break;
           }
         }
@@ -323,23 +323,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            IsSucc = input.ReadBool();
+          case 48: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 56: {
+            IsSave = input.ReadBool();
+            break;
+          }
+          case 66: {
             if (customDrink_ == null) {
               CustomDrink = new global::EggLink.DanhengServer.Proto.EEKFECDIHJE();
             }
             input.ReadMessage(CustomDrink);
             break;
           }
-          case 88: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 120: {
-            IsSave = input.ReadBool();
+          case 72: {
+            IsSucc = input.ReadBool();
             break;
           }
         }

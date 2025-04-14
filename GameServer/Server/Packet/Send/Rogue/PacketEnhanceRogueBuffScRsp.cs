@@ -14,7 +14,7 @@ public class PacketEnhanceRogueBuffScRsp : BasePacket
                 BuffId = buffId,
                 Level = 2
             },
-            IsSuccess = true
+            IsSucc = true
         };
 
         SetData(proto);

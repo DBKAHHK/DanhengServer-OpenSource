@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9UYWtlUm9ndWVTY29yZVJld2FyZENzUmVxLnByb3RvIkEKGVRha2VSb2d1",
-            "ZVNjb3JlUmV3YXJkQ3NSZXESDwoHcG9vbF9pZBgFIAEoDRITCgtMTU1GUENP",
-            "S0hFRRgIIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "ZVNjb3JlUmV3YXJkQ3NSZXESDwoHcG9vbF9pZBgCIAEoDRITCgtMTU1GUENP",
+            "S0hFRRgMIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "pool_id" field.</summary>
-    public const int PoolIdFieldNumber = 5;
+    public const int PoolIdFieldNumber = 2;
     private uint poolId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,9 +97,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "LMMFPCOKHEE" field.</summary>
-    public const int LMMFPCOKHEEFieldNumber = 8;
+    public const int LMMFPCOKHEEFieldNumber = 12;
     private static readonly pb::FieldCodec<uint> _repeated_lMMFPCOKHEE_codec
-        = pb::FieldCodec.ForUInt32(66);
+        = pb::FieldCodec.ForUInt32(98);
     private readonly pbc::RepeatedField<uint> lMMFPCOKHEE_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (PoolId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(16);
         output.WriteUInt32(PoolId);
       }
       lMMFPCOKHEE_.WriteTo(output, _repeated_lMMFPCOKHEE_codec);
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PoolId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(16);
         output.WriteUInt32(PoolId);
       }
       lMMFPCOKHEE_.WriteTo(ref output, _repeated_lMMFPCOKHEE_codec);
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 16: {
             PoolId = input.ReadUInt32();
             break;
           }
-          case 66:
-          case 64: {
+          case 98:
+          case 96: {
             lMMFPCOKHEE_.AddEntriesFrom(input, _repeated_lMMFPCOKHEE_codec);
             break;
           }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 16: {
             PoolId = input.ReadUInt32();
             break;
           }
-          case 66:
-          case 64: {
+          case 98:
+          case 96: {
             lMMFPCOKHEE_.AddEntriesFrom(ref input, _repeated_lMMFPCOKHEE_codec);
             break;
           }

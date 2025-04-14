@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static ChangeEraFlipperDataCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9DaGFuZ2VFcmFGbGlwcGVyRGF0YUNzUmVxLnByb3RvGhFLS0VBRU5ORE1L",
-            "Qi5wcm90byI3ChlDaGFuZ2VFcmFGbGlwcGVyRGF0YUNzUmVxEhoKBGRhdGEY",
-            "CSABKAsyDC5LS0VBRU5ORE1LQkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
-            "LlByb3RvYgZwcm90bzM="));
+            "Ch9DaGFuZ2VFcmFGbGlwcGVyRGF0YUNzUmVxLnByb3RvGhhFcmFGbGlwcGVy",
+            "RGF0YUxpc3QucHJvdG8iPgoZQ2hhbmdlRXJhRmxpcHBlckRhdGFDc1JlcRIh",
+            "CgRkYXRhGA0gASgLMhMuRXJhRmxpcHBlckRhdGFMaXN0Qh6qAhtFZ2dMaW5r",
+            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KKEAENNDMKBReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EraFlipperDataListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChangeEraFlipperDataCsReq), global::EggLink.DanhengServer.Proto.ChangeEraFlipperDataCsReq.Parser, new[]{ "Data" }, null, null, null, null)
           }));
@@ -84,11 +84,11 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "data" field.</summary>
-    public const int DataFieldNumber = 9;
-    private global::EggLink.DanhengServer.Proto.KKEAENNDMKB data_;
+    public const int DataFieldNumber = 13;
+    private global::EggLink.DanhengServer.Proto.EraFlipperDataList data_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.KKEAENNDMKB Data {
+    public global::EggLink.DanhengServer.Proto.EraFlipperDataList Data {
       get { return data_; }
       set {
         data_ = value;
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (data_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(106);
         output.WriteMessage(Data);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (data_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(106);
         output.WriteMessage(Data);
       }
       if (_unknownFields != null) {
@@ -182,7 +182,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.data_ != null) {
         if (data_ == null) {
-          Data = new global::EggLink.DanhengServer.Proto.KKEAENNDMKB();
+          Data = new global::EggLink.DanhengServer.Proto.EraFlipperDataList();
         }
         Data.MergeFrom(other.Data);
       }
@@ -201,9 +201,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 74: {
+          case 106: {
             if (data_ == null) {
-              Data = new global::EggLink.DanhengServer.Proto.KKEAENNDMKB();
+              Data = new global::EggLink.DanhengServer.Proto.EraFlipperDataList();
             }
             input.ReadMessage(Data);
             break;
@@ -223,9 +223,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 74: {
+          case 106: {
             if (data_ == null) {
-              Data = new global::EggLink.DanhengServer.Proto.KKEAENNDMKB();
+              Data = new global::EggLink.DanhengServer.Proto.EraFlipperDataList();
             }
             input.ReadMessage(Data);
             break;

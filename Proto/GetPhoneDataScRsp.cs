@@ -24,15 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static GetPhoneDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdHZXRQaG9uZURhdGFTY1JzcC5wcm90byKOAQoRR2V0UGhvbmVEYXRhU2NS",
-            "c3ASGgoSb3duZWRfY2hhdF9idWJibGVzGAkgAygNEg8KB3JldGNvZGUYAyAB",
-            "KA0SFwoPY3VyX3Bob25lX3RoZW1lGAcgASgNEhoKEm93bmVkX3Bob25lX3Ro",
-            "ZW1lcxgBIAMoDRIXCg9jdXJfY2hhdF9idWJibGUYDyABKA1CHqoCG0VnZ0xp",
-            "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChdHZXRQaG9uZURhdGFTY1JzcC5wcm90byK4AQoRR2V0UGhvbmVEYXRhU2NS",
+            "c3ASEwoLS0tORUVHREtFTUQYCCADKA0SGgoSb3duZWRfcGhvbmVfdGhlbWVz",
+            "GA4gAygNEhcKD2N1cl9waG9uZV90aGVtZRgMIAEoDRIPCgdyZXRjb2RlGAMg",
+            "ASgNEhcKD2N1cl9jaGF0X2J1YmJsZRgJIAEoDRITCgtMTU9DQU1LTEtQSRgE",
+            "IAEoDRIaChJvd25lZF9jaGF0X2J1YmJsZXMYDyADKA1CHqoCG0VnZ0xpbmsu",
+            "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetPhoneDataScRsp), global::EggLink.DanhengServer.Proto.GetPhoneDataScRsp.Parser, new[]{ "OwnedChatBubbles", "Retcode", "CurPhoneTheme", "OwnedPhoneThemes", "CurChatBubble" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetPhoneDataScRsp), global::EggLink.DanhengServer.Proto.GetPhoneDataScRsp.Parser, new[]{ "KKNEEGDKEMD", "OwnedPhoneThemes", "CurPhoneTheme", "Retcode", "CurChatBubble", "LMOCAMKLKPI", "OwnedChatBubbles" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,11 +75,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetPhoneDataScRsp(GetPhoneDataScRsp other) : this() {
-      ownedChatBubbles_ = other.ownedChatBubbles_.Clone();
-      retcode_ = other.retcode_;
-      curPhoneTheme_ = other.curPhoneTheme_;
+      kKNEEGDKEMD_ = other.kKNEEGDKEMD_.Clone();
       ownedPhoneThemes_ = other.ownedPhoneThemes_.Clone();
+      curPhoneTheme_ = other.curPhoneTheme_;
+      retcode_ = other.retcode_;
       curChatBubble_ = other.curChatBubble_;
+      lMOCAMKLKPI_ = other.lMOCAMKLKPI_;
+      ownedChatBubbles_ = other.ownedChatBubbles_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,15 +91,38 @@ namespace EggLink.DanhengServer.Proto {
       return new GetPhoneDataScRsp(this);
     }
 
-    /// <summary>Field number for the "owned_chat_bubbles" field.</summary>
-    public const int OwnedChatBubblesFieldNumber = 9;
-    private static readonly pb::FieldCodec<uint> _repeated_ownedChatBubbles_codec
-        = pb::FieldCodec.ForUInt32(74);
-    private readonly pbc::RepeatedField<uint> ownedChatBubbles_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "KKNEEGDKEMD" field.</summary>
+    public const int KKNEEGDKEMDFieldNumber = 8;
+    private static readonly pb::FieldCodec<uint> _repeated_kKNEEGDKEMD_codec
+        = pb::FieldCodec.ForUInt32(66);
+    private readonly pbc::RepeatedField<uint> kKNEEGDKEMD_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> OwnedChatBubbles {
-      get { return ownedChatBubbles_; }
+    public pbc::RepeatedField<uint> KKNEEGDKEMD {
+      get { return kKNEEGDKEMD_; }
+    }
+
+    /// <summary>Field number for the "owned_phone_themes" field.</summary>
+    public const int OwnedPhoneThemesFieldNumber = 14;
+    private static readonly pb::FieldCodec<uint> _repeated_ownedPhoneThemes_codec
+        = pb::FieldCodec.ForUInt32(114);
+    private readonly pbc::RepeatedField<uint> ownedPhoneThemes_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> OwnedPhoneThemes {
+      get { return ownedPhoneThemes_; }
+    }
+
+    /// <summary>Field number for the "cur_phone_theme" field.</summary>
+    public const int CurPhoneThemeFieldNumber = 12;
+    private uint curPhoneTheme_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CurPhoneTheme {
+      get { return curPhoneTheme_; }
+      set {
+        curPhoneTheme_ = value;
+      }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
@@ -111,31 +137,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "cur_phone_theme" field.</summary>
-    public const int CurPhoneThemeFieldNumber = 7;
-    private uint curPhoneTheme_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CurPhoneTheme {
-      get { return curPhoneTheme_; }
-      set {
-        curPhoneTheme_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "owned_phone_themes" field.</summary>
-    public const int OwnedPhoneThemesFieldNumber = 1;
-    private static readonly pb::FieldCodec<uint> _repeated_ownedPhoneThemes_codec
-        = pb::FieldCodec.ForUInt32(10);
-    private readonly pbc::RepeatedField<uint> ownedPhoneThemes_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> OwnedPhoneThemes {
-      get { return ownedPhoneThemes_; }
-    }
-
     /// <summary>Field number for the "cur_chat_bubble" field.</summary>
-    public const int CurChatBubbleFieldNumber = 15;
+    public const int CurChatBubbleFieldNumber = 9;
     private uint curChatBubble_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -144,6 +147,29 @@ namespace EggLink.DanhengServer.Proto {
       set {
         curChatBubble_ = value;
       }
+    }
+
+    /// <summary>Field number for the "LMOCAMKLKPI" field.</summary>
+    public const int LMOCAMKLKPIFieldNumber = 4;
+    private uint lMOCAMKLKPI_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint LMOCAMKLKPI {
+      get { return lMOCAMKLKPI_; }
+      set {
+        lMOCAMKLKPI_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "owned_chat_bubbles" field.</summary>
+    public const int OwnedChatBubblesFieldNumber = 15;
+    private static readonly pb::FieldCodec<uint> _repeated_ownedChatBubbles_codec
+        = pb::FieldCodec.ForUInt32(122);
+    private readonly pbc::RepeatedField<uint> ownedChatBubbles_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> OwnedChatBubbles {
+      get { return ownedChatBubbles_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -161,11 +187,13 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!ownedChatBubbles_.Equals(other.ownedChatBubbles_)) return false;
-      if (Retcode != other.Retcode) return false;
-      if (CurPhoneTheme != other.CurPhoneTheme) return false;
+      if(!kKNEEGDKEMD_.Equals(other.kKNEEGDKEMD_)) return false;
       if(!ownedPhoneThemes_.Equals(other.ownedPhoneThemes_)) return false;
+      if (CurPhoneTheme != other.CurPhoneTheme) return false;
+      if (Retcode != other.Retcode) return false;
       if (CurChatBubble != other.CurChatBubble) return false;
+      if (LMOCAMKLKPI != other.LMOCAMKLKPI) return false;
+      if(!ownedChatBubbles_.Equals(other.ownedChatBubbles_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -173,11 +201,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= ownedChatBubbles_.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (CurPhoneTheme != 0) hash ^= CurPhoneTheme.GetHashCode();
+      hash ^= kKNEEGDKEMD_.GetHashCode();
       hash ^= ownedPhoneThemes_.GetHashCode();
+      if (CurPhoneTheme != 0) hash ^= CurPhoneTheme.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (CurChatBubble != 0) hash ^= CurChatBubble.GetHashCode();
+      if (LMOCAMKLKPI != 0) hash ^= LMOCAMKLKPI.GetHashCode();
+      hash ^= ownedChatBubbles_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -196,20 +226,25 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      ownedPhoneThemes_.WriteTo(output, _repeated_ownedPhoneThemes_codec);
       if (Retcode != 0) {
         output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
-      if (CurPhoneTheme != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(CurPhoneTheme);
+      if (LMOCAMKLKPI != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(LMOCAMKLKPI);
       }
-      ownedChatBubbles_.WriteTo(output, _repeated_ownedChatBubbles_codec);
+      kKNEEGDKEMD_.WriteTo(output, _repeated_kKNEEGDKEMD_codec);
       if (CurChatBubble != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(72);
         output.WriteUInt32(CurChatBubble);
       }
+      if (CurPhoneTheme != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(CurPhoneTheme);
+      }
+      ownedPhoneThemes_.WriteTo(output, _repeated_ownedPhoneThemes_codec);
+      ownedChatBubbles_.WriteTo(output, _repeated_ownedChatBubbles_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -220,20 +255,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      ownedPhoneThemes_.WriteTo(ref output, _repeated_ownedPhoneThemes_codec);
       if (Retcode != 0) {
         output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
-      if (CurPhoneTheme != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(CurPhoneTheme);
+      if (LMOCAMKLKPI != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(LMOCAMKLKPI);
       }
-      ownedChatBubbles_.WriteTo(ref output, _repeated_ownedChatBubbles_codec);
+      kKNEEGDKEMD_.WriteTo(ref output, _repeated_kKNEEGDKEMD_codec);
       if (CurChatBubble != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(72);
         output.WriteUInt32(CurChatBubble);
       }
+      if (CurPhoneTheme != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(CurPhoneTheme);
+      }
+      ownedPhoneThemes_.WriteTo(ref output, _repeated_ownedPhoneThemes_codec);
+      ownedChatBubbles_.WriteTo(ref output, _repeated_ownedChatBubbles_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -244,17 +284,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += ownedChatBubbles_.CalculateSize(_repeated_ownedChatBubbles_codec);
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
+      size += kKNEEGDKEMD_.CalculateSize(_repeated_kKNEEGDKEMD_codec);
+      size += ownedPhoneThemes_.CalculateSize(_repeated_ownedPhoneThemes_codec);
       if (CurPhoneTheme != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurPhoneTheme);
       }
-      size += ownedPhoneThemes_.CalculateSize(_repeated_ownedPhoneThemes_codec);
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
       if (CurChatBubble != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurChatBubble);
       }
+      if (LMOCAMKLKPI != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LMOCAMKLKPI);
+      }
+      size += ownedChatBubbles_.CalculateSize(_repeated_ownedChatBubbles_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -267,17 +311,21 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      ownedChatBubbles_.Add(other.ownedChatBubbles_);
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
+      kKNEEGDKEMD_.Add(other.kKNEEGDKEMD_);
+      ownedPhoneThemes_.Add(other.ownedPhoneThemes_);
       if (other.CurPhoneTheme != 0) {
         CurPhoneTheme = other.CurPhoneTheme;
       }
-      ownedPhoneThemes_.Add(other.ownedPhoneThemes_);
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
       if (other.CurChatBubble != 0) {
         CurChatBubble = other.CurChatBubble;
       }
+      if (other.LMOCAMKLKPI != 0) {
+        LMOCAMKLKPI = other.LMOCAMKLKPI;
+      }
+      ownedChatBubbles_.Add(other.ownedChatBubbles_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -293,26 +341,35 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10:
-          case 8: {
-            ownedPhoneThemes_.AddEntriesFrom(input, _repeated_ownedPhoneThemes_codec);
-            break;
-          }
           case 24: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 56: {
+          case 32: {
+            LMOCAMKLKPI = input.ReadUInt32();
+            break;
+          }
+          case 66:
+          case 64: {
+            kKNEEGDKEMD_.AddEntriesFrom(input, _repeated_kKNEEGDKEMD_codec);
+            break;
+          }
+          case 72: {
+            CurChatBubble = input.ReadUInt32();
+            break;
+          }
+          case 96: {
             CurPhoneTheme = input.ReadUInt32();
             break;
           }
-          case 74:
-          case 72: {
-            ownedChatBubbles_.AddEntriesFrom(input, _repeated_ownedChatBubbles_codec);
+          case 114:
+          case 112: {
+            ownedPhoneThemes_.AddEntriesFrom(input, _repeated_ownedPhoneThemes_codec);
             break;
           }
+          case 122:
           case 120: {
-            CurChatBubble = input.ReadUInt32();
+            ownedChatBubbles_.AddEntriesFrom(input, _repeated_ownedChatBubbles_codec);
             break;
           }
         }
@@ -330,26 +387,35 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10:
-          case 8: {
-            ownedPhoneThemes_.AddEntriesFrom(ref input, _repeated_ownedPhoneThemes_codec);
-            break;
-          }
           case 24: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 56: {
+          case 32: {
+            LMOCAMKLKPI = input.ReadUInt32();
+            break;
+          }
+          case 66:
+          case 64: {
+            kKNEEGDKEMD_.AddEntriesFrom(ref input, _repeated_kKNEEGDKEMD_codec);
+            break;
+          }
+          case 72: {
+            CurChatBubble = input.ReadUInt32();
+            break;
+          }
+          case 96: {
             CurPhoneTheme = input.ReadUInt32();
             break;
           }
-          case 74:
-          case 72: {
-            ownedChatBubbles_.AddEntriesFrom(ref input, _repeated_ownedChatBubbles_codec);
+          case 114:
+          case 112: {
+            ownedPhoneThemes_.AddEntriesFrom(ref input, _repeated_ownedPhoneThemes_codec);
             break;
           }
+          case 122:
           case 120: {
-            CurChatBubble = input.ReadUInt32();
+            ownedChatBubbles_.AddEntriesFrom(ref input, _repeated_ownedChatBubbles_codec);
             break;
           }
         }

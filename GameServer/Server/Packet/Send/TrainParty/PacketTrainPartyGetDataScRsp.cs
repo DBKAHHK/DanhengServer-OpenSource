@@ -10,7 +10,7 @@ public class PacketTrainPartyGetDataScRsp : BasePacket
     {
         var proto = new TrainPartyGetDataScRsp
         {
-            TrainPartyData = player.TrainPartyManager!.ToProto()
+            TrainPartyInfo = player.TrainPartyManager!.ToProto()
         };
 
         SetData(proto);

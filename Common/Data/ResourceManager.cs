@@ -521,7 +521,7 @@ public class ResourceManager
         if (count < GameData.RogueNPCData.Count)
             Logger.Warn(I18NManager.Translate("Server.ServerInfo.ConfigMissing",
                 I18NManager.Translate("Word.DialogueInfo"),
-                $"{ConfigManager.Config.Path.ResourcePath}/Config/Level/Rogue/Dialogue",
+                $"{ConfigManager.Config.Path.ResourcePath}/Config/Level/Rogue",
                 I18NManager.Translate("Word.Dialogue")));
 
         Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItems", count.ToString(),

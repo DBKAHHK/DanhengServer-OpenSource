@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CipUcmF2ZWxCcm9jaHVyZVNldFBhZ2VEZXNjU3RhdHVzQ3NSZXEucHJvdG8a",
             "EURDSkFPUERJTk9JLnByb3RvIl4KJFRyYXZlbEJyb2NodXJlU2V0UGFnZURl",
-            "c2NTdGF0dXNDc1JlcRIhCgtHRUlCR0ZERU5KQRgOIAEoDjIMLkRDSkFPUERJ",
-            "Tk9JEhMKC0NQT0RFSk9GUEREGAggASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "c2NTdGF0dXNDc1JlcRIhCgtHRUlCR0ZERU5KQRgIIAEoDjIMLkRDSkFPUERJ",
+            "Tk9JEhMKC0NQT0RFSk9GUEREGAkgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DCJAOPDINOIReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "GEIBGFDENJA" field.</summary>
-    public const int GEIBGFDENJAFieldNumber = 14;
+    public const int GEIBGFDENJAFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.DCJAOPDINOI gEIBGFDENJA_ = global::EggLink.DanhengServer.Proto.DCJAOPDINOI.PageDescNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "CPODEJOFPDD" field.</summary>
-    public const int CPODEJOFPDDFieldNumber = 8;
+    public const int CPODEJOFPDDFieldNumber = 9;
     private uint cPODEJOFPDD_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CPODEJOFPDD != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(CPODEJOFPDD);
-      }
       if (GEIBGFDENJA != global::EggLink.DanhengServer.Proto.DCJAOPDINOI.PageDescNone) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(64);
         output.WriteEnum((int) GEIBGFDENJA);
+      }
+      if (CPODEJOFPDD != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(CPODEJOFPDD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CPODEJOFPDD != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(CPODEJOFPDD);
-      }
       if (GEIBGFDENJA != global::EggLink.DanhengServer.Proto.DCJAOPDINOI.PageDescNone) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(64);
         output.WriteEnum((int) GEIBGFDENJA);
+      }
+      if (CPODEJOFPDD != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(CPODEJOFPDD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -229,11 +229,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 64: {
-            CPODEJOFPDD = input.ReadUInt32();
+            GEIBGFDENJA = (global::EggLink.DanhengServer.Proto.DCJAOPDINOI) input.ReadEnum();
             break;
           }
-          case 112: {
-            GEIBGFDENJA = (global::EggLink.DanhengServer.Proto.DCJAOPDINOI) input.ReadEnum();
+          case 72: {
+            CPODEJOFPDD = input.ReadUInt32();
             break;
           }
         }
@@ -252,11 +252,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 64: {
-            CPODEJOFPDD = input.ReadUInt32();
+            GEIBGFDENJA = (global::EggLink.DanhengServer.Proto.DCJAOPDINOI) input.ReadEnum();
             break;
           }
-          case 112: {
-            GEIBGFDENJA = (global::EggLink.DanhengServer.Proto.DCJAOPDINOI) input.ReadEnum();
+          case 72: {
+            CPODEJOFPDD = input.ReadUInt32();
             break;
           }
         }

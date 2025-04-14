@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFJSVBFR0hES0hHRC5wcm90bxocUm9ndWVNYWdpY0dhbWVVbml0SW5mby5w",
-            "cm90byJBCgtJSVBFR0hES0hHRBIyChFzZWxlY3RfbWFnaWNfdW5pdBgDIAEo",
+            "cm90byJBCgtJSVBFR0hES0hHRBIyChFzZWxlY3RfbWFnaWNfdW5pdBgKIAEo",
             "CzIXLlJvZ3VlTWFnaWNHYW1lVW5pdEluZm9CHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_magic_unit" field.</summary>
-    public const int SelectMagicUnitFieldNumber = 3;
+    public const int SelectMagicUnitFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.RogueMagicGameUnitInfo selectMagicUnit_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (selectMagicUnit_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(82);
         output.WriteMessage(SelectMagicUnit);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (selectMagicUnit_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(82);
         output.WriteMessage(SelectMagicUnit);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26: {
+          case 82: {
             if (selectMagicUnit_ == null) {
               SelectMagicUnit = new global::EggLink.DanhengServer.Proto.RogueMagicGameUnitInfo();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26: {
+          case 82: {
             if (selectMagicUnit_ == null) {
               SelectMagicUnit = new global::EggLink.DanhengServer.Proto.RogueMagicGameUnitInfo();
             }

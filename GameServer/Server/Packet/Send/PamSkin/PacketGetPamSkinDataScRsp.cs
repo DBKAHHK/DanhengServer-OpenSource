@@ -11,8 +11,8 @@ public class PacketGetPamSkinDataScRsp : BasePacket
     {
         var proto = new GetPamSkinDataScRsp
         {
-            CurPamSkinId = (uint)player.Data.CurrentPamSkin,
-            UnlockedPamSkinId = { GameData.PamSkinConfigData.Select(x => (uint)x.Key) }
+            CurSkin = (uint)player.Data.CurrentPamSkin,
+            UnlockSkinList = { GameData.PamSkinConfigData.Select(x => (uint)x.Key) }
         };
 
         SetData(proto);

@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static INNNICFOLIIReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFJTk5OSUNGT0xJSS5wcm90byI4CgtJTk5OSUNGT0xJSRITCgtKQ05PREFN",
-            "RkZGQxgGIAEoCBIUCgxnYWNoYV9yYW5kb20YCCABKA1CHqoCG0VnZ0xpbmsu",
+            "ChFJTk5OSUNGT0xJSS5wcm90byI4CgtJTk5OSUNGT0xJSRIUCgxnYWNoYV9y",
+            "YW5kb20YBCABKA0SEwoLSkNOT0RBTUZGRkMYCyABKAhCHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.INNNICFOLII), global::EggLink.DanhengServer.Proto.INNNICFOLII.Parser, new[]{ "JCNODAMFFFC", "GachaRandom" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.INNNICFOLII), global::EggLink.DanhengServer.Proto.INNNICFOLII.Parser, new[]{ "GachaRandom", "JCNODAMFFFC" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public INNNICFOLII(INNNICFOLII other) : this() {
-      jCNODAMFFFC_ = other.jCNODAMFFFC_;
       gachaRandom_ = other.gachaRandom_;
+      jCNODAMFFFC_ = other.jCNODAMFFFC_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,20 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new INNNICFOLII(this);
     }
 
-    /// <summary>Field number for the "JCNODAMFFFC" field.</summary>
-    public const int JCNODAMFFFCFieldNumber = 6;
-    private bool jCNODAMFFFC_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool JCNODAMFFFC {
-      get { return jCNODAMFFFC_; }
-      set {
-        jCNODAMFFFC_ = value;
-      }
-    }
-
     /// <summary>Field number for the "gacha_random" field.</summary>
-    public const int GachaRandomFieldNumber = 8;
+    public const int GachaRandomFieldNumber = 4;
     private uint gachaRandom_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,6 +92,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return gachaRandom_; }
       set {
         gachaRandom_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "JCNODAMFFFC" field.</summary>
+    public const int JCNODAMFFFCFieldNumber = 11;
+    private bool jCNODAMFFFC_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool JCNODAMFFFC {
+      get { return jCNODAMFFFC_; }
+      set {
+        jCNODAMFFFC_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (JCNODAMFFFC != other.JCNODAMFFFC) return false;
       if (GachaRandom != other.GachaRandom) return false;
+      if (JCNODAMFFFC != other.JCNODAMFFFC) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (JCNODAMFFFC != false) hash ^= JCNODAMFFFC.GetHashCode();
       if (GachaRandom != 0) hash ^= GachaRandom.GetHashCode();
+      if (JCNODAMFFFC != false) hash ^= JCNODAMFFFC.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (JCNODAMFFFC != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(JCNODAMFFFC);
-      }
       if (GachaRandom != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(32);
         output.WriteUInt32(GachaRandom);
+      }
+      if (JCNODAMFFFC != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(JCNODAMFFFC);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (JCNODAMFFFC != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(JCNODAMFFFC);
-      }
       if (GachaRandom != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(32);
         output.WriteUInt32(GachaRandom);
+      }
+      if (JCNODAMFFFC != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(JCNODAMFFFC);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (JCNODAMFFFC != false) {
-        size += 1 + 1;
-      }
       if (GachaRandom != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GachaRandom);
+      }
+      if (JCNODAMFFFC != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.JCNODAMFFFC != false) {
-        JCNODAMFFFC = other.JCNODAMFFFC;
-      }
       if (other.GachaRandom != 0) {
         GachaRandom = other.GachaRandom;
+      }
+      if (other.JCNODAMFFFC != false) {
+        JCNODAMFFFC = other.JCNODAMFFFC;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            JCNODAMFFFC = input.ReadBool();
+          case 32: {
+            GachaRandom = input.ReadUInt32();
             break;
           }
-          case 64: {
-            GachaRandom = input.ReadUInt32();
+          case 88: {
+            JCNODAMFFFC = input.ReadBool();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            JCNODAMFFFC = input.ReadBool();
+          case 32: {
+            GachaRandom = input.ReadUInt32();
             break;
           }
-          case 64: {
-            GachaRandom = input.ReadUInt32();
+          case 88: {
+            JCNODAMFFFC = input.ReadBool();
             break;
           }
         }

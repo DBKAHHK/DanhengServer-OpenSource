@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFDSUtPSEpOQUdPTi5wcm90bxoVQXJlYUR5bmFtaWNJbmZvLnByb3RvIkUK",
-            "C0NJS09ISk5BR09OEiUKC0tDSkJNS0pMRkJBGA4gASgLMhAuQXJlYUR5bmFt",
-            "aWNJbmZvEg8KB2FyZWFfaWQYBSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "C0NJS09ISk5BR09OEiUKC0tDSkJNS0pMRkJBGAYgASgLMhAuQXJlYUR5bmFt",
+            "aWNJbmZvEg8KB2FyZWFfaWQYAyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AreaDynamicInfoReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "KCJBMKJLFBA" field.</summary>
-    public const int KCJBMKJLFBAFieldNumber = 14;
+    public const int KCJBMKJLFBAFieldNumber = 6;
     private global::EggLink.DanhengServer.Proto.AreaDynamicInfo kCJBMKJLFBA_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "area_id" field.</summary>
-    public const int AreaIdFieldNumber = 5;
+    public const int AreaIdFieldNumber = 3;
     private uint areaId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (AreaId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(AreaId);
       }
       if (kCJBMKJLFBA_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(50);
         output.WriteMessage(KCJBMKJLFBA);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (AreaId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(AreaId);
       }
       if (kCJBMKJLFBA_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(50);
         output.WriteMessage(KCJBMKJLFBA);
       }
       if (_unknownFields != null) {
@@ -230,11 +230,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 24: {
             AreaId = input.ReadUInt32();
             break;
           }
-          case 114: {
+          case 50: {
             if (kCJBMKJLFBA_ == null) {
               KCJBMKJLFBA = new global::EggLink.DanhengServer.Proto.AreaDynamicInfo();
             }
@@ -256,11 +256,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 24: {
             AreaId = input.ReadUInt32();
             break;
           }
-          case 114: {
+          case 50: {
             if (kCJBMKJLFBA_ == null) {
               KCJBMKJLFBA = new global::EggLink.DanhengServer.Proto.AreaDynamicInfo();
             }

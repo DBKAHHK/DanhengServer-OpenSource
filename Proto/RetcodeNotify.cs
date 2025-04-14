@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChNSZXRjb2RlTm90aWZ5LnByb3RvGg1SZXRjb2RlLnByb3RvIj8KDVJldGNv",
-            "ZGVOb3RpZnkSEwoLSk9KUFBPRE9NQUgYDiADKA0SGQoHcmV0Y29kZRgHIAEo",
+            "ZGVOb3RpZnkSEwoLSk9KUFBPRE9NQUgYCCADKA0SGQoHcmV0Y29kZRgOIAEo",
             "DjIILlJldGNvZGVCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "JOJPPODOMAH" field.</summary>
-    public const int JOJPPODOMAHFieldNumber = 14;
+    public const int JOJPPODOMAHFieldNumber = 8;
     private static readonly pb::FieldCodec<uint> _repeated_jOJPPODOMAH_codec
-        = pb::FieldCodec.ForUInt32(114);
+        = pb::FieldCodec.ForUInt32(66);
     private readonly pbc::RepeatedField<uint> jOJPPODOMAH_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 7;
+    public const int RetcodeFieldNumber = 14;
     private global::EggLink.DanhengServer.Proto.Retcode retcode_ = global::EggLink.DanhengServer.Proto.Retcode.RetSucc;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      jOJPPODOMAH_.WriteTo(output, _repeated_jOJPPODOMAH_codec);
       if (Retcode != global::EggLink.DanhengServer.Proto.Retcode.RetSucc) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(112);
         output.WriteEnum((int) Retcode);
       }
-      jOJPPODOMAH_.WriteTo(output, _repeated_jOJPPODOMAH_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      jOJPPODOMAH_.WriteTo(ref output, _repeated_jOJPPODOMAH_codec);
       if (Retcode != global::EggLink.DanhengServer.Proto.Retcode.RetSucc) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(112);
         output.WriteEnum((int) Retcode);
       }
-      jOJPPODOMAH_.WriteTo(ref output, _repeated_jOJPPODOMAH_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            Retcode = (global::EggLink.DanhengServer.Proto.Retcode) input.ReadEnum();
+          case 66:
+          case 64: {
+            jOJPPODOMAH_.AddEntriesFrom(input, _repeated_jOJPPODOMAH_codec);
             break;
           }
-          case 114:
           case 112: {
-            jOJPPODOMAH_.AddEntriesFrom(input, _repeated_jOJPPODOMAH_codec);
+            Retcode = (global::EggLink.DanhengServer.Proto.Retcode) input.ReadEnum();
             break;
           }
         }
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            Retcode = (global::EggLink.DanhengServer.Proto.Retcode) input.ReadEnum();
+          case 66:
+          case 64: {
+            jOJPPODOMAH_.AddEntriesFrom(ref input, _repeated_jOJPPODOMAH_codec);
             break;
           }
-          case 114:
           case 112: {
-            jOJPPODOMAH_.AddEntriesFrom(ref input, _repeated_jOJPPODOMAH_codec);
+            Retcode = (global::EggLink.DanhengServer.Proto.Retcode) input.ReadEnum();
             break;
           }
         }

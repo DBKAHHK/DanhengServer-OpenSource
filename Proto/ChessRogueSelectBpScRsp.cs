@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1DaGVzc1JvZ3VlU2VsZWN0QnBTY1JzcC5wcm90bxoRTFBOS01FTU9PQkUu",
-            "cHJvdG8iYgoXQ2hlc3NSb2d1ZVNlbGVjdEJwU2NSc3ASDwoHcmV0Y29kZRgN",
-            "IAEoDRIhCgtJTkFDRENFQUlDUBgHIAEoCzIMLkxQTktNRU1PT0JFEhMKC0ZC",
+            "cHJvdG8iYgoXQ2hlc3NSb2d1ZVNlbGVjdEJwU2NSc3ASDwoHcmV0Y29kZRgI",
+            "IAEoDRIhCgtJTkFDRENFQUlDUBgOIAEoCzIMLkxQTktNRU1PT0JFEhMKC0ZC",
             "Q0VJRkRLRUdBGAogASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
             "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 13;
+    public const int RetcodeFieldNumber = 8;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "INACDCEAICP" field.</summary>
-    public const int INACDCEAICPFieldNumber = 7;
+    public const int INACDCEAICPFieldNumber = 14;
     private global::EggLink.DanhengServer.Proto.LPNKMEMOOBE iNACDCEAICP_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -168,17 +168,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (iNACDCEAICP_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(INACDCEAICP);
+      if (Retcode != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Retcode);
       }
       if (FBCEIFDKEGA != 0) {
         output.WriteRawTag(80);
         output.WriteUInt32(FBCEIFDKEGA);
       }
-      if (Retcode != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(Retcode);
+      if (iNACDCEAICP_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(INACDCEAICP);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,17 +190,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (iNACDCEAICP_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(INACDCEAICP);
+      if (Retcode != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Retcode);
       }
       if (FBCEIFDKEGA != 0) {
         output.WriteRawTag(80);
         output.WriteUInt32(FBCEIFDKEGA);
       }
-      if (Retcode != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(Retcode);
+      if (iNACDCEAICP_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(INACDCEAICP);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -260,19 +260,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58: {
-            if (iNACDCEAICP_ == null) {
-              INACDCEAICP = new global::EggLink.DanhengServer.Proto.LPNKMEMOOBE();
-            }
-            input.ReadMessage(INACDCEAICP);
+          case 64: {
+            Retcode = input.ReadUInt32();
             break;
           }
           case 80: {
             FBCEIFDKEGA = input.ReadUInt32();
             break;
           }
-          case 104: {
-            Retcode = input.ReadUInt32();
+          case 114: {
+            if (iNACDCEAICP_ == null) {
+              INACDCEAICP = new global::EggLink.DanhengServer.Proto.LPNKMEMOOBE();
+            }
+            input.ReadMessage(INACDCEAICP);
             break;
           }
         }
@@ -290,19 +290,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58: {
-            if (iNACDCEAICP_ == null) {
-              INACDCEAICP = new global::EggLink.DanhengServer.Proto.LPNKMEMOOBE();
-            }
-            input.ReadMessage(INACDCEAICP);
+          case 64: {
+            Retcode = input.ReadUInt32();
             break;
           }
           case 80: {
             FBCEIFDKEGA = input.ReadUInt32();
             break;
           }
-          case 104: {
-            Retcode = input.ReadUInt32();
+          case 114: {
+            if (iNACDCEAICP_ == null) {
+              INACDCEAICP = new global::EggLink.DanhengServer.Proto.LPNKMEMOOBE();
+            }
+            input.ReadMessage(INACDCEAICP);
             break;
           }
         }

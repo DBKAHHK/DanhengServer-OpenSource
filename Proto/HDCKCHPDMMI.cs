@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static HDCKCHPDMMIReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFIRENLQ0hQRE1NSS5wcm90bxoRQUNDQklHRkFOT0EucHJvdG8iTwoLSERD",
-            "S0NIUERNTUkSKwoVdHJhaW5fcGFydHlfY2FyZF9pbmZvGAYgAygLMgwuQUND",
-            "QklHRkFOT0ESEwoLUE5FT09MRkxOTEsYCyADKA1CHqoCG0VnZ0xpbmsuRGFu",
-            "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChFIRENLQ0hQRE1NSS5wcm90bxoRQUNDQklHRkFOT0EucHJvdG8iRQoLSERD",
+            "S0NIUERNTUkSEwoLUE5FT09MRkxOTEsYCiADKA0SIQoLRk9EUERNUEJBTkQY",
+            "DSADKAsyDC5BQ0NCSUdGQU5PQUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ACCBIGFANOAReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HDCKCHPDMMI), global::EggLink.DanhengServer.Proto.HDCKCHPDMMI.Parser, new[]{ "TrainPartyCardInfo", "PNEOOLFLNLK" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HDCKCHPDMMI), global::EggLink.DanhengServer.Proto.HDCKCHPDMMI.Parser, new[]{ "PNEOOLFLNLK", "FODPDMPBAND" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HDCKCHPDMMI(HDCKCHPDMMI other) : this() {
-      trainPartyCardInfo_ = other.trainPartyCardInfo_.Clone();
       pNEOOLFLNLK_ = other.pNEOOLFLNLK_.Clone();
+      fODPDMPBAND_ = other.fODPDMPBAND_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,26 +84,26 @@ namespace EggLink.DanhengServer.Proto {
       return new HDCKCHPDMMI(this);
     }
 
-    /// <summary>Field number for the "train_party_card_info" field.</summary>
-    public const int TrainPartyCardInfoFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ACCBIGFANOA> _repeated_trainPartyCardInfo_codec
-        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.ACCBIGFANOA.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ACCBIGFANOA> trainPartyCardInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ACCBIGFANOA>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ACCBIGFANOA> TrainPartyCardInfo {
-      get { return trainPartyCardInfo_; }
-    }
-
     /// <summary>Field number for the "PNEOOLFLNLK" field.</summary>
-    public const int PNEOOLFLNLKFieldNumber = 11;
+    public const int PNEOOLFLNLKFieldNumber = 10;
     private static readonly pb::FieldCodec<uint> _repeated_pNEOOLFLNLK_codec
-        = pb::FieldCodec.ForUInt32(90);
+        = pb::FieldCodec.ForUInt32(82);
     private readonly pbc::RepeatedField<uint> pNEOOLFLNLK_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<uint> PNEOOLFLNLK {
       get { return pNEOOLFLNLK_; }
+    }
+
+    /// <summary>Field number for the "FODPDMPBAND" field.</summary>
+    public const int FODPDMPBANDFieldNumber = 13;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ACCBIGFANOA> _repeated_fODPDMPBAND_codec
+        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.ACCBIGFANOA.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ACCBIGFANOA> fODPDMPBAND_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ACCBIGFANOA>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ACCBIGFANOA> FODPDMPBAND {
+      get { return fODPDMPBAND_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -121,8 +121,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!trainPartyCardInfo_.Equals(other.trainPartyCardInfo_)) return false;
       if(!pNEOOLFLNLK_.Equals(other.pNEOOLFLNLK_)) return false;
+      if(!fODPDMPBAND_.Equals(other.fODPDMPBAND_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -130,8 +130,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= trainPartyCardInfo_.GetHashCode();
       hash ^= pNEOOLFLNLK_.GetHashCode();
+      hash ^= fODPDMPBAND_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -150,8 +150,8 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      trainPartyCardInfo_.WriteTo(output, _repeated_trainPartyCardInfo_codec);
       pNEOOLFLNLK_.WriteTo(output, _repeated_pNEOOLFLNLK_codec);
+      fODPDMPBAND_.WriteTo(output, _repeated_fODPDMPBAND_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -162,8 +162,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      trainPartyCardInfo_.WriteTo(ref output, _repeated_trainPartyCardInfo_codec);
       pNEOOLFLNLK_.WriteTo(ref output, _repeated_pNEOOLFLNLK_codec);
+      fODPDMPBAND_.WriteTo(ref output, _repeated_fODPDMPBAND_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -174,8 +174,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += trainPartyCardInfo_.CalculateSize(_repeated_trainPartyCardInfo_codec);
       size += pNEOOLFLNLK_.CalculateSize(_repeated_pNEOOLFLNLK_codec);
+      size += fODPDMPBAND_.CalculateSize(_repeated_fODPDMPBAND_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -188,8 +188,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      trainPartyCardInfo_.Add(other.trainPartyCardInfo_);
       pNEOOLFLNLK_.Add(other.pNEOOLFLNLK_);
+      fODPDMPBAND_.Add(other.fODPDMPBAND_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -205,13 +205,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
-            trainPartyCardInfo_.AddEntriesFrom(input, _repeated_trainPartyCardInfo_codec);
+          case 82:
+          case 80: {
+            pNEOOLFLNLK_.AddEntriesFrom(input, _repeated_pNEOOLFLNLK_codec);
             break;
           }
-          case 90:
-          case 88: {
-            pNEOOLFLNLK_.AddEntriesFrom(input, _repeated_pNEOOLFLNLK_codec);
+          case 106: {
+            fODPDMPBAND_.AddEntriesFrom(input, _repeated_fODPDMPBAND_codec);
             break;
           }
         }
@@ -229,13 +229,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
-            trainPartyCardInfo_.AddEntriesFrom(ref input, _repeated_trainPartyCardInfo_codec);
+          case 82:
+          case 80: {
+            pNEOOLFLNLK_.AddEntriesFrom(ref input, _repeated_pNEOOLFLNLK_codec);
             break;
           }
-          case 90:
-          case 88: {
-            pNEOOLFLNLK_.AddEntriesFrom(ref input, _repeated_pNEOOLFLNLK_codec);
+          case 106: {
+            fODPDMPBAND_.AddEntriesFrom(ref input, _repeated_fODPDMPBAND_codec);
             break;
           }
         }

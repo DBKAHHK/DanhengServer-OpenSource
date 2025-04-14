@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static SceneGroupStateReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVTY2VuZUdyb3VwU3RhdGUucHJvdG8iRgoPU2NlbmVHcm91cFN0YXRlEhAK",
-            "CGdyb3VwX2lkGAwgASgNEg0KBXN0YXRlGAUgASgNEhIKCmlzX2RlZmF1bHQY",
-            "CiABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChVTY2VuZUdyb3VwU3RhdGUucHJvdG8iRgoPU2NlbmVHcm91cFN0YXRlEhIK",
+            "CmlzX2RlZmF1bHQYBiABKAgSEAoIZ3JvdXBfaWQYDCABKA0SDQoFc3RhdGUY",
+            "BSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneGroupState), global::EggLink.DanhengServer.Proto.SceneGroupState.Parser, new[]{ "GroupId", "State", "IsDefault" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneGroupState), global::EggLink.DanhengServer.Proto.SceneGroupState.Parser, new[]{ "IsDefault", "GroupId", "State" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,9 +72,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SceneGroupState(SceneGroupState other) : this() {
+      isDefault_ = other.isDefault_;
       groupId_ = other.groupId_;
       state_ = other.state_;
-      isDefault_ = other.isDefault_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,6 +82,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SceneGroupState Clone() {
       return new SceneGroupState(this);
+    }
+
+    /// <summary>Field number for the "is_default" field.</summary>
+    public const int IsDefaultFieldNumber = 6;
+    private bool isDefault_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsDefault {
+      get { return isDefault_; }
+      set {
+        isDefault_ = value;
+      }
     }
 
     /// <summary>Field number for the "group_id" field.</summary>
@@ -108,18 +120,6 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "is_default" field.</summary>
-    public const int IsDefaultFieldNumber = 10;
-    private bool isDefault_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsDefault {
-      get { return isDefault_; }
-      set {
-        isDefault_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -135,9 +135,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (IsDefault != other.IsDefault) return false;
       if (GroupId != other.GroupId) return false;
       if (State != other.State) return false;
-      if (IsDefault != other.IsDefault) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,9 +145,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (IsDefault != false) hash ^= IsDefault.GetHashCode();
       if (GroupId != 0) hash ^= GroupId.GetHashCode();
       if (State != 0) hash ^= State.GetHashCode();
-      if (IsDefault != false) hash ^= IsDefault.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -171,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(State);
       }
       if (IsDefault != false) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(48);
         output.WriteBool(IsDefault);
       }
       if (GroupId != 0) {
@@ -193,7 +193,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(State);
       }
       if (IsDefault != false) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(48);
         output.WriteBool(IsDefault);
       }
       if (GroupId != 0) {
@@ -210,14 +210,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (IsDefault != false) {
+        size += 1 + 1;
+      }
       if (GroupId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
       }
       if (State != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(State);
-      }
-      if (IsDefault != false) {
-        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -231,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.IsDefault != false) {
+        IsDefault = other.IsDefault;
+      }
       if (other.GroupId != 0) {
         GroupId = other.GroupId;
       }
       if (other.State != 0) {
         State = other.State;
-      }
-      if (other.IsDefault != false) {
-        IsDefault = other.IsDefault;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -259,7 +259,7 @@ namespace EggLink.DanhengServer.Proto {
             State = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 48: {
             IsDefault = input.ReadBool();
             break;
           }
@@ -286,7 +286,7 @@ namespace EggLink.DanhengServer.Proto {
             State = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 48: {
             IsDefault = input.ReadBool();
             break;
           }

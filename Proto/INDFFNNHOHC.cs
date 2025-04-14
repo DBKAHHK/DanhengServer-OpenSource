@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFJTkRGRk5OSE9IQy5wcm90byI0CgtJTkRGRk5OSE9IQxIUCgxzdGVwX2lk",
-            "X2xpc3QYAiADKA0SDwoHYXJlYV9pZBgDIAEoDUIeqgIbRWdnTGluay5EYW5o",
+            "X2xpc3QYCSADKA0SDwoHYXJlYV9pZBgOIAEoDUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "step_id_list" field.</summary>
-    public const int StepIdListFieldNumber = 2;
+    public const int StepIdListFieldNumber = 9;
     private static readonly pb::FieldCodec<uint> _repeated_stepIdList_codec
-        = pb::FieldCodec.ForUInt32(18);
+        = pb::FieldCodec.ForUInt32(74);
     private readonly pbc::RepeatedField<uint> stepIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,7 +95,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "area_id" field.</summary>
-    public const int AreaIdFieldNumber = 3;
+    public const int AreaIdFieldNumber = 14;
     private uint areaId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       stepIdList_.WriteTo(output, _repeated_stepIdList_codec);
       if (AreaId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(112);
         output.WriteUInt32(AreaId);
       }
       if (_unknownFields != null) {
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       stepIdList_.WriteTo(ref output, _repeated_stepIdList_codec);
       if (AreaId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(112);
         output.WriteUInt32(AreaId);
       }
       if (_unknownFields != null) {
@@ -215,12 +215,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18:
-          case 16: {
+          case 74:
+          case 72: {
             stepIdList_.AddEntriesFrom(input, _repeated_stepIdList_codec);
             break;
           }
-          case 24: {
+          case 112: {
             AreaId = input.ReadUInt32();
             break;
           }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18:
-          case 16: {
+          case 74:
+          case 72: {
             stepIdList_.AddEntriesFrom(ref input, _repeated_stepIdList_codec);
             break;
           }
-          case 24: {
+          case 112: {
             AreaId = input.ReadUInt32();
             break;
           }

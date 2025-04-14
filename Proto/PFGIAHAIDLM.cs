@@ -24,12 +24,11 @@ namespace EggLink.DanhengServer.Proto {
     static PFGIAHAIDLMReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFQRkdJQUhBSURMTS5wcm90bxoZVHJhaW5QYXJ0eUdhbWVTa2lsbC5wcm90",
-            "byI3CgtQRkdJQUhBSURMTRIoCgpza2lsbF9saXN0GAcgAygLMhQuVHJhaW5Q",
-            "YXJ0eUdhbWVTa2lsbEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
-            "YgZwcm90bzM="));
+            "ChFQRkdJQUhBSURMTS5wcm90bxoRR09DS0JMTkpJQkcucHJvdG8iLwoLUEZH",
+            "SUFIQUlETE0SIAoKc2tpbGxfbGlzdBgIIAMoCzIMLkdPQ0tCTE5KSUJHQh6q",
+            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyGameSkillReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GOCKBLNJIBGReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PFGIAHAIDLM), global::EggLink.DanhengServer.Proto.PFGIAHAIDLM.Parser, new[]{ "SkillList" }, null, null, null, null)
           }));
@@ -84,13 +83,13 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "skill_list" field.</summary>
-    public const int SkillListFieldNumber = 7;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.TrainPartyGameSkill> _repeated_skillList_codec
-        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.TrainPartyGameSkill.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGameSkill> skillList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGameSkill>();
+    public const int SkillListFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GOCKBLNJIBG> _repeated_skillList_codec
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.GOCKBLNJIBG.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GOCKBLNJIBG> skillList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GOCKBLNJIBG>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGameSkill> SkillList {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GOCKBLNJIBG> SkillList {
       get { return skillList_; }
     }
 
@@ -187,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58: {
+          case 66: {
             skillList_.AddEntriesFrom(input, _repeated_skillList_codec);
             break;
           }
@@ -206,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58: {
+          case 66: {
             skillList_.AddEntriesFrom(ref input, _repeated_skillList_codec);
             break;
           }

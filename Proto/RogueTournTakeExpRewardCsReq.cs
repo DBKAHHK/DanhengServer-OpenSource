@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJSb2d1ZVRvdXJuVGFrZUV4cFJld2FyZENzUmVxLnByb3RvIkkKHFJvZ3Vl",
-            "VG91cm5UYWtlRXhwUmV3YXJkQ3NSZXESFAoMc3ViX3RvdXJuX2lkGAUgASgN",
-            "EhMKC0xPUE1ISkZCSElNGA8gAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "VG91cm5UYWtlRXhwUmV3YXJkQ3NSZXESEwoLTE9QTUhKRkJISU0YCyADKA0S",
+            "FAoMc3ViX3RvdXJuX2lkGAQgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournTakeExpRewardCsReq), global::EggLink.DanhengServer.Proto.RogueTournTakeExpRewardCsReq.Parser, new[]{ "SubTournId", "LOPMHJFBHIM" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournTakeExpRewardCsReq), global::EggLink.DanhengServer.Proto.RogueTournTakeExpRewardCsReq.Parser, new[]{ "LOPMHJFBHIM", "SubTournId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournTakeExpRewardCsReq(RogueTournTakeExpRewardCsReq other) : this() {
-      subTournId_ = other.subTournId_;
       lOPMHJFBHIM_ = other.lOPMHJFBHIM_.Clone();
+      subTournId_ = other.subTournId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,8 +84,19 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournTakeExpRewardCsReq(this);
     }
 
+    /// <summary>Field number for the "LOPMHJFBHIM" field.</summary>
+    public const int LOPMHJFBHIMFieldNumber = 11;
+    private static readonly pb::FieldCodec<uint> _repeated_lOPMHJFBHIM_codec
+        = pb::FieldCodec.ForUInt32(90);
+    private readonly pbc::RepeatedField<uint> lOPMHJFBHIM_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> LOPMHJFBHIM {
+      get { return lOPMHJFBHIM_; }
+    }
+
     /// <summary>Field number for the "sub_tourn_id" field.</summary>
-    public const int SubTournIdFieldNumber = 5;
+    public const int SubTournIdFieldNumber = 4;
     private uint subTournId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -94,17 +105,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         subTournId_ = value;
       }
-    }
-
-    /// <summary>Field number for the "LOPMHJFBHIM" field.</summary>
-    public const int LOPMHJFBHIMFieldNumber = 15;
-    private static readonly pb::FieldCodec<uint> _repeated_lOPMHJFBHIM_codec
-        = pb::FieldCodec.ForUInt32(122);
-    private readonly pbc::RepeatedField<uint> lOPMHJFBHIM_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> LOPMHJFBHIM {
-      get { return lOPMHJFBHIM_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (SubTournId != other.SubTournId) return false;
       if(!lOPMHJFBHIM_.Equals(other.lOPMHJFBHIM_)) return false;
+      if (SubTournId != other.SubTournId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (SubTournId != 0) hash ^= SubTournId.GetHashCode();
       hash ^= lOPMHJFBHIM_.GetHashCode();
+      if (SubTournId != 0) hash ^= SubTournId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (SubTournId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteUInt32(SubTournId);
       }
       lOPMHJFBHIM_.WriteTo(output, _repeated_lOPMHJFBHIM_codec);
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (SubTournId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteUInt32(SubTournId);
       }
       lOPMHJFBHIM_.WriteTo(ref output, _repeated_lOPMHJFBHIM_codec);
@@ -181,10 +181,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += lOPMHJFBHIM_.CalculateSize(_repeated_lOPMHJFBHIM_codec);
       if (SubTournId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SubTournId);
       }
-      size += lOPMHJFBHIM_.CalculateSize(_repeated_lOPMHJFBHIM_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -197,10 +197,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      lOPMHJFBHIM_.Add(other.lOPMHJFBHIM_);
       if (other.SubTournId != 0) {
         SubTournId = other.SubTournId;
       }
-      lOPMHJFBHIM_.Add(other.lOPMHJFBHIM_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 32: {
             SubTournId = input.ReadUInt32();
             break;
           }
-          case 122:
-          case 120: {
+          case 90:
+          case 88: {
             lOPMHJFBHIM_.AddEntriesFrom(input, _repeated_lOPMHJFBHIM_codec);
             break;
           }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 32: {
             SubTournId = input.ReadUInt32();
             break;
           }
-          case 122:
-          case 120: {
+          case 90:
+          case 88: {
             lOPMHJFBHIM_.AddEntriesFrom(ref input, _repeated_lOPMHJFBHIM_codec);
             break;
           }

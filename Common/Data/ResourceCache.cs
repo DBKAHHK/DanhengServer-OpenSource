@@ -137,14 +137,13 @@ public class ResourceCache
         var cacheData = JsonConvert.DeserializeObject<ResourceCacheData>(Encoding.UTF8.GetString(buffer));
         if (cacheData == null) return false;
 
-        Parallel.ForEachAsync(
+        Parallel.ForEach(
             typeof(GameData).GetProperties(BindingFlags.Public | BindingFlags.Static),
-            async (prop, token) => {
+            prop => {
                 if (cacheData.GameDataValues.TryGetValue(prop.Name, out var valueBytes))
-                    prop.SetValue(null, await Task.Run(() => JsonConvert.DeserializeObject(
-                            Encoding.UTF8.GetString(
-                                CompressionHelper.Decompress(valueBytes)), prop.PropertyType, Serializer
-                            )
+                    prop.SetValue(null, JsonConvert.DeserializeObject(
+                        Encoding.UTF8.GetString(
+                            CompressionHelper.Decompress(valueBytes)), prop.PropertyType, Serializer
                         )
                     );
             }

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFOTkpPTEtKTFBKRy5wcm90bxoRQUhDTE5NSlBNSUoucHJvdG8iMQoLTk5K",
-            "T0xLSkxQSkcSIgoMbWlyYWNsZV9saXN0GA4gAygLMgwuQUhDTE5NSlBNSUpC",
+            "T0xLSkxQSkcSIgoMbWlyYWNsZV9saXN0GAsgAygLMgwuQUhDTE5NSlBNSUpC",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AHCLNMJPMIJReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "miracle_list" field.</summary>
-    public const int MiracleListFieldNumber = 14;
+    public const int MiracleListFieldNumber = 11;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.AHCLNMJPMIJ> _repeated_miracleList_codec
-        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.AHCLNMJPMIJ.Parser);
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.AHCLNMJPMIJ.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AHCLNMJPMIJ> miracleList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AHCLNMJPMIJ>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 114: {
+          case 90: {
             miracleList_.AddEntriesFrom(input, _repeated_miracleList_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 114: {
+          case 90: {
             miracleList_.AddEntriesFrom(ref input, _repeated_miracleList_codec);
             break;
           }

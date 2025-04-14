@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static Material0Reflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg9NYXRlcmlhbDAucHJvdG8iOgoJTWF0ZXJpYWwwEgsKA3RpZBgKIAEoDRIL",
-            "CgNudW0YCyABKA0SEwoLZXhwaXJlX3RpbWUYCSABKARCHqoCG0VnZ0xpbmsu",
+            "Cg9NYXRlcmlhbDAucHJvdG8iOgoJTWF0ZXJpYWwwEgsKA3RpZBgOIAEoDRIL",
+            "CgNudW0YCSABKA0SEwoLZXhwaXJlX3RpbWUYByABKARCHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "tid" field.</summary>
-    public const int TidFieldNumber = 10;
+    public const int TidFieldNumber = 14;
     private uint tid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "num" field.</summary>
-    public const int NumFieldNumber = 11;
+    public const int NumFieldNumber = 9;
     private uint num_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "expire_time" field.</summary>
-    public const int ExpireTimeFieldNumber = 9;
+    public const int ExpireTimeFieldNumber = 7;
     private ulong expireTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,16 +167,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (ExpireTime != 0UL) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(56);
         output.WriteUInt64(ExpireTime);
       }
-      if (Tid != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Tid);
-      }
       if (Num != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(72);
         output.WriteUInt32(Num);
+      }
+      if (Tid != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(Tid);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,16 +189,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ExpireTime != 0UL) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(56);
         output.WriteUInt64(ExpireTime);
       }
-      if (Tid != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Tid);
-      }
       if (Num != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(72);
         output.WriteUInt32(Num);
+      }
+      if (Tid != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(Tid);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
+          case 56: {
             ExpireTime = input.ReadUInt64();
             break;
           }
-          case 80: {
-            Tid = input.ReadUInt32();
+          case 72: {
+            Num = input.ReadUInt32();
             break;
           }
-          case 88: {
-            Num = input.ReadUInt32();
+          case 112: {
+            Tid = input.ReadUInt32();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
+          case 56: {
             ExpireTime = input.ReadUInt64();
             break;
           }
-          case 80: {
-            Tid = input.ReadUInt32();
+          case 72: {
+            Num = input.ReadUInt32();
             break;
           }
-          case 88: {
-            Num = input.ReadUInt32();
+          case 112: {
+            Tid = input.ReadUInt32();
             break;
           }
         }

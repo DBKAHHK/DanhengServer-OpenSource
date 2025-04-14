@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFTdG9wUm9ndWVBZHZlbnR1cmVSb29tQ3NSZXEucHJvdG8iUQobU3RvcFJv",
             "Z3VlQWR2ZW50dXJlUm9vbUNzUmVxEh0KFWhpdF90YXJnZXRfaW5kZXhfbGlz",
-            "dBgNIAMoDRITCgtNTUhNREhJSENBQhgHIAEoDUIeqgIbRWdnTGluay5EYW5o",
+            "dBgGIAMoDRITCgtNTUhNREhJSENBQhgMIAEoDUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "hit_target_index_list" field.</summary>
-    public const int HitTargetIndexListFieldNumber = 13;
+    public const int HitTargetIndexListFieldNumber = 6;
     private static readonly pb::FieldCodec<uint> _repeated_hitTargetIndexList_codec
-        = pb::FieldCodec.ForUInt32(106);
+        = pb::FieldCodec.ForUInt32(50);
     private readonly pbc::RepeatedField<uint> hitTargetIndexList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MMHMDHIHCAB" field.</summary>
-    public const int MMHMDHIHCABFieldNumber = 7;
+    public const int MMHMDHIHCABFieldNumber = 12;
     private uint mMHMDHIHCAB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      hitTargetIndexList_.WriteTo(output, _repeated_hitTargetIndexList_codec);
       if (MMHMDHIHCAB != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(96);
         output.WriteUInt32(MMHMDHIHCAB);
       }
-      hitTargetIndexList_.WriteTo(output, _repeated_hitTargetIndexList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      hitTargetIndexList_.WriteTo(ref output, _repeated_hitTargetIndexList_codec);
       if (MMHMDHIHCAB != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(96);
         output.WriteUInt32(MMHMDHIHCAB);
       }
-      hitTargetIndexList_.WriteTo(ref output, _repeated_hitTargetIndexList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            MMHMDHIHCAB = input.ReadUInt32();
+          case 50:
+          case 48: {
+            hitTargetIndexList_.AddEntriesFrom(input, _repeated_hitTargetIndexList_codec);
             break;
           }
-          case 106:
-          case 104: {
-            hitTargetIndexList_.AddEntriesFrom(input, _repeated_hitTargetIndexList_codec);
+          case 96: {
+            MMHMDHIHCAB = input.ReadUInt32();
             break;
           }
         }
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            MMHMDHIHCAB = input.ReadUInt32();
+          case 50:
+          case 48: {
+            hitTargetIndexList_.AddEntriesFrom(ref input, _repeated_hitTargetIndexList_codec);
             break;
           }
-          case 106:
-          case 104: {
-            hitTargetIndexList_.AddEntriesFrom(ref input, _repeated_hitTargetIndexList_codec);
+          case 96: {
+            MMHMDHIHCAB = input.ReadUInt32();
             break;
           }
         }

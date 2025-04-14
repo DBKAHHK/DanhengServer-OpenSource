@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CitSb2d1ZVRvdXJuV2Vla0NoYWxsZW5nZVVwZGF0ZVNjTm90aWZ5LnByb3Rv",
             "GhRFeHRyYVNjb3JlSW5mby5wcm90byJSCiVSb2d1ZVRvdXJuV2Vla0NoYWxs",
-            "ZW5nZVVwZGF0ZVNjTm90aWZ5EikKEGV4dHJhX3Njb3JlX2luZm8YCyABKAsy",
+            "ZW5nZVVwZGF0ZVNjTm90aWZ5EikKEGV4dHJhX3Njb3JlX2luZm8YBCABKAsy",
             "Dy5FeHRyYVNjb3JlSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "extra_score_info" field.</summary>
-    public const int ExtraScoreInfoFieldNumber = 11;
+    public const int ExtraScoreInfoFieldNumber = 4;
     private global::EggLink.DanhengServer.Proto.ExtraScoreInfo extraScoreInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -139,7 +139,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (extraScoreInfo_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(34);
         output.WriteMessage(ExtraScoreInfo);
       }
       if (_unknownFields != null) {
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (extraScoreInfo_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(34);
         output.WriteMessage(ExtraScoreInfo);
       }
       if (_unknownFields != null) {
@@ -202,7 +202,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 90: {
+          case 34: {
             if (extraScoreInfo_ == null) {
               ExtraScoreInfo = new global::EggLink.DanhengServer.Proto.ExtraScoreInfo();
             }
@@ -224,7 +224,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 90: {
+          case 34: {
             if (extraScoreInfo_ == null) {
               ExtraScoreInfo = new global::EggLink.DanhengServer.Proto.ExtraScoreInfo();
             }

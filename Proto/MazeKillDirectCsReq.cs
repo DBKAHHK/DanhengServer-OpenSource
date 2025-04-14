@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlNYXplS2lsbERpcmVjdENzUmVxLnByb3RvGhFNTklKSE1FUEdOTi5wcm90",
-            "byJrChNNYXplS2lsbERpcmVjdENzUmVxEhMKC2VudGl0eV9saXN0GAggAygN",
-            "EioKFG1vZGlmaWVyX3NvdXJjZV90eXBlGA8gASgOMgwuTU5JSkhNRVBHTk4S",
-            "EwoLTU1LT0dPS05QS0wYDiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "byJrChNNYXplS2lsbERpcmVjdENzUmVxEhMKC01NS09HT0tOUEtMGAYgASgN",
+            "EioKFG1vZGlmaWVyX3NvdXJjZV90eXBlGAwgASgOMgwuTU5JSkhNRVBHTk4S",
+            "EwoLZW50aXR5X2xpc3QYDyADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MNIJHMEPGNNReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MazeKillDirectCsReq), global::EggLink.DanhengServer.Proto.MazeKillDirectCsReq.Parser, new[]{ "EntityList", "ModifierSourceType", "MMKOGOKNPKL" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MazeKillDirectCsReq), global::EggLink.DanhengServer.Proto.MazeKillDirectCsReq.Parser, new[]{ "MMKOGOKNPKL", "ModifierSourceType", "EntityList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MazeKillDirectCsReq(MazeKillDirectCsReq other) : this() {
-      entityList_ = other.entityList_.Clone();
-      modifierSourceType_ = other.modifierSourceType_;
       mMKOGOKNPKL_ = other.mMKOGOKNPKL_;
+      modifierSourceType_ = other.modifierSourceType_;
+      entityList_ = other.entityList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,19 +86,20 @@ namespace EggLink.DanhengServer.Proto {
       return new MazeKillDirectCsReq(this);
     }
 
-    /// <summary>Field number for the "entity_list" field.</summary>
-    public const int EntityListFieldNumber = 8;
-    private static readonly pb::FieldCodec<uint> _repeated_entityList_codec
-        = pb::FieldCodec.ForUInt32(66);
-    private readonly pbc::RepeatedField<uint> entityList_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "MMKOGOKNPKL" field.</summary>
+    public const int MMKOGOKNPKLFieldNumber = 6;
+    private uint mMKOGOKNPKL_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> EntityList {
-      get { return entityList_; }
+    public uint MMKOGOKNPKL {
+      get { return mMKOGOKNPKL_; }
+      set {
+        mMKOGOKNPKL_ = value;
+      }
     }
 
     /// <summary>Field number for the "modifier_source_type" field.</summary>
-    public const int ModifierSourceTypeFieldNumber = 15;
+    public const int ModifierSourceTypeFieldNumber = 12;
     private global::EggLink.DanhengServer.Proto.MNIJHMEPGNN modifierSourceType_ = global::EggLink.DanhengServer.Proto.MNIJHMEPGNN.MazeKillSourceNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,16 +110,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "MMKOGOKNPKL" field.</summary>
-    public const int MMKOGOKNPKLFieldNumber = 14;
-    private uint mMKOGOKNPKL_;
+    /// <summary>Field number for the "entity_list" field.</summary>
+    public const int EntityListFieldNumber = 15;
+    private static readonly pb::FieldCodec<uint> _repeated_entityList_codec
+        = pb::FieldCodec.ForUInt32(122);
+    private readonly pbc::RepeatedField<uint> entityList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MMKOGOKNPKL {
-      get { return mMKOGOKNPKL_; }
-      set {
-        mMKOGOKNPKL_ = value;
-      }
+    public pbc::RepeatedField<uint> EntityList {
+      get { return entityList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!entityList_.Equals(other.entityList_)) return false;
-      if (ModifierSourceType != other.ModifierSourceType) return false;
       if (MMKOGOKNPKL != other.MMKOGOKNPKL) return false;
+      if (ModifierSourceType != other.ModifierSourceType) return false;
+      if(!entityList_.Equals(other.entityList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= entityList_.GetHashCode();
-      if (ModifierSourceType != global::EggLink.DanhengServer.Proto.MNIJHMEPGNN.MazeKillSourceNone) hash ^= ModifierSourceType.GetHashCode();
       if (MMKOGOKNPKL != 0) hash ^= MMKOGOKNPKL.GetHashCode();
+      if (ModifierSourceType != global::EggLink.DanhengServer.Proto.MNIJHMEPGNN.MazeKillSourceNone) hash ^= ModifierSourceType.GetHashCode();
+      hash ^= entityList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,15 +167,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      entityList_.WriteTo(output, _repeated_entityList_codec);
       if (MMKOGOKNPKL != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(48);
         output.WriteUInt32(MMKOGOKNPKL);
       }
       if (ModifierSourceType != global::EggLink.DanhengServer.Proto.MNIJHMEPGNN.MazeKillSourceNone) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(96);
         output.WriteEnum((int) ModifierSourceType);
       }
+      entityList_.WriteTo(output, _repeated_entityList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -186,15 +186,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      entityList_.WriteTo(ref output, _repeated_entityList_codec);
       if (MMKOGOKNPKL != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(48);
         output.WriteUInt32(MMKOGOKNPKL);
       }
       if (ModifierSourceType != global::EggLink.DanhengServer.Proto.MNIJHMEPGNN.MazeKillSourceNone) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(96);
         output.WriteEnum((int) ModifierSourceType);
       }
+      entityList_.WriteTo(ref output, _repeated_entityList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -205,13 +205,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += entityList_.CalculateSize(_repeated_entityList_codec);
-      if (ModifierSourceType != global::EggLink.DanhengServer.Proto.MNIJHMEPGNN.MazeKillSourceNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ModifierSourceType);
-      }
       if (MMKOGOKNPKL != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MMKOGOKNPKL);
       }
+      if (ModifierSourceType != global::EggLink.DanhengServer.Proto.MNIJHMEPGNN.MazeKillSourceNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ModifierSourceType);
+      }
+      size += entityList_.CalculateSize(_repeated_entityList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -224,13 +224,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      entityList_.Add(other.entityList_);
-      if (other.ModifierSourceType != global::EggLink.DanhengServer.Proto.MNIJHMEPGNN.MazeKillSourceNone) {
-        ModifierSourceType = other.ModifierSourceType;
-      }
       if (other.MMKOGOKNPKL != 0) {
         MMKOGOKNPKL = other.MMKOGOKNPKL;
       }
+      if (other.ModifierSourceType != global::EggLink.DanhengServer.Proto.MNIJHMEPGNN.MazeKillSourceNone) {
+        ModifierSourceType = other.ModifierSourceType;
+      }
+      entityList_.Add(other.entityList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -246,17 +246,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66:
-          case 64: {
-            entityList_.AddEntriesFrom(input, _repeated_entityList_codec);
-            break;
-          }
-          case 112: {
+          case 48: {
             MMKOGOKNPKL = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 96: {
             ModifierSourceType = (global::EggLink.DanhengServer.Proto.MNIJHMEPGNN) input.ReadEnum();
+            break;
+          }
+          case 122:
+          case 120: {
+            entityList_.AddEntriesFrom(input, _repeated_entityList_codec);
             break;
           }
         }
@@ -274,17 +274,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66:
-          case 64: {
-            entityList_.AddEntriesFrom(ref input, _repeated_entityList_codec);
-            break;
-          }
-          case 112: {
+          case 48: {
             MMKOGOKNPKL = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 96: {
             ModifierSourceType = (global::EggLink.DanhengServer.Proto.MNIJHMEPGNN) input.ReadEnum();
+            break;
+          }
+          case 122:
+          case 120: {
+            entityList_.AddEntriesFrom(ref input, _repeated_entityList_codec);
             break;
           }
         }

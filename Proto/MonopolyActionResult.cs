@@ -24,17 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static MonopolyActionResultReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpNb25vcG9seUFjdGlvblJlc3VsdC5wcm90bxoRTklCSkFNRk1FRkQucHJv",
-            "dG8aEUdLRUpGS0FLRU5NLnByb3RvIsABChRNb25vcG9seUFjdGlvblJlc3Vs",
-            "dBIUCgxUcmlnZ2VyTWFwSWQYDSABKA0SEgoKQ2xpY2tNYXBJZBgKIAEoDRIc",
-            "CgZEZXRhaWwYBiABKAsyDC5OSUJKQU1GTUVGRBITCgtDbGlja0NlbGxJZBgM",
-            "IAEoDRISCgpFZmZlY3RUeXBlGA4gASgNEiAKClNvdXJjZVR5cGUYByABKA4y",
-            "DC5HS0VKRktBS0VOTRIVCg1UcmlnZ2VyQ2VsbElkGAsgASgNQh6qAhtFZ2dM",
+            "ChpNb25vcG9seUFjdGlvblJlc3VsdC5wcm90bxoRR0tFSkZLQUtFTk0ucHJv",
+            "dG8aEU5JQkpBTUZNRUZELnByb3RvIsABChRNb25vcG9seUFjdGlvblJlc3Vs",
+            "dBITCgtDbGlja0NlbGxJZBgGIAEoDRISCgpDbGlja01hcElkGAcgASgNEhwK",
+            "BkRldGFpbBgLIAEoCzIMLk5JQkpBTUZNRUZEEhUKDVRyaWdnZXJDZWxsSWQY",
+            "DSABKA0SIAoKU291cmNlVHlwZRgOIAEoDjIMLkdLRUpGS0FLRU5NEhIKCkVm",
+            "ZmVjdFR5cGUYAiABKA0SFAoMVHJpZ2dlck1hcElkGAMgASgNQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NIBJAMFMEFDReflection.Descriptor, global::EggLink.DanhengServer.Proto.GKEJFKAKENMReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GKEJFKAKENMReflection.Descriptor, global::EggLink.DanhengServer.Proto.NIBJAMFMEFDReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonopolyActionResult), global::EggLink.DanhengServer.Proto.MonopolyActionResult.Parser, new[]{ "TriggerMapId", "ClickMapId", "Detail", "ClickCellId", "EffectType", "SourceType", "TriggerCellId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonopolyActionResult), global::EggLink.DanhengServer.Proto.MonopolyActionResult.Parser, new[]{ "ClickCellId", "ClickMapId", "Detail", "TriggerCellId", "SourceType", "EffectType", "TriggerMapId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,13 +76,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MonopolyActionResult(MonopolyActionResult other) : this() {
-      triggerMapId_ = other.triggerMapId_;
+      clickCellId_ = other.clickCellId_;
       clickMapId_ = other.clickMapId_;
       detail_ = other.detail_ != null ? other.detail_.Clone() : null;
-      clickCellId_ = other.clickCellId_;
-      effectType_ = other.effectType_;
-      sourceType_ = other.sourceType_;
       triggerCellId_ = other.triggerCellId_;
+      sourceType_ = other.sourceType_;
+      effectType_ = other.effectType_;
+      triggerMapId_ = other.triggerMapId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -92,20 +92,20 @@ namespace EggLink.DanhengServer.Proto {
       return new MonopolyActionResult(this);
     }
 
-    /// <summary>Field number for the "TriggerMapId" field.</summary>
-    public const int TriggerMapIdFieldNumber = 13;
-    private uint triggerMapId_;
+    /// <summary>Field number for the "ClickCellId" field.</summary>
+    public const int ClickCellIdFieldNumber = 6;
+    private uint clickCellId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TriggerMapId {
-      get { return triggerMapId_; }
+    public uint ClickCellId {
+      get { return clickCellId_; }
       set {
-        triggerMapId_ = value;
+        clickCellId_ = value;
       }
     }
 
     /// <summary>Field number for the "ClickMapId" field.</summary>
-    public const int ClickMapIdFieldNumber = 10;
+    public const int ClickMapIdFieldNumber = 7;
     private uint clickMapId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "Detail" field.</summary>
-    public const int DetailFieldNumber = 6;
+    public const int DetailFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.NIBJAMFMEFD detail_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -128,32 +128,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ClickCellId" field.</summary>
-    public const int ClickCellIdFieldNumber = 12;
-    private uint clickCellId_;
+    /// <summary>Field number for the "TriggerCellId" field.</summary>
+    public const int TriggerCellIdFieldNumber = 13;
+    private uint triggerCellId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ClickCellId {
-      get { return clickCellId_; }
+    public uint TriggerCellId {
+      get { return triggerCellId_; }
       set {
-        clickCellId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "EffectType" field.</summary>
-    public const int EffectTypeFieldNumber = 14;
-    private uint effectType_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint EffectType {
-      get { return effectType_; }
-      set {
-        effectType_ = value;
+        triggerCellId_ = value;
       }
     }
 
     /// <summary>Field number for the "SourceType" field.</summary>
-    public const int SourceTypeFieldNumber = 7;
+    public const int SourceTypeFieldNumber = 14;
     private global::EggLink.DanhengServer.Proto.GKEJFKAKENM sourceType_ = global::EggLink.DanhengServer.Proto.GKEJFKAKENM.MonopolyActionResultSourceTypeNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -164,15 +152,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "TriggerCellId" field.</summary>
-    public const int TriggerCellIdFieldNumber = 11;
-    private uint triggerCellId_;
+    /// <summary>Field number for the "EffectType" field.</summary>
+    public const int EffectTypeFieldNumber = 2;
+    private uint effectType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TriggerCellId {
-      get { return triggerCellId_; }
+    public uint EffectType {
+      get { return effectType_; }
       set {
-        triggerCellId_ = value;
+        effectType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "TriggerMapId" field.</summary>
+    public const int TriggerMapIdFieldNumber = 3;
+    private uint triggerMapId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint TriggerMapId {
+      get { return triggerMapId_; }
+      set {
+        triggerMapId_ = value;
       }
     }
 
@@ -191,13 +191,13 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (TriggerMapId != other.TriggerMapId) return false;
+      if (ClickCellId != other.ClickCellId) return false;
       if (ClickMapId != other.ClickMapId) return false;
       if (!object.Equals(Detail, other.Detail)) return false;
-      if (ClickCellId != other.ClickCellId) return false;
-      if (EffectType != other.EffectType) return false;
-      if (SourceType != other.SourceType) return false;
       if (TriggerCellId != other.TriggerCellId) return false;
+      if (SourceType != other.SourceType) return false;
+      if (EffectType != other.EffectType) return false;
+      if (TriggerMapId != other.TriggerMapId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -205,13 +205,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (TriggerMapId != 0) hash ^= TriggerMapId.GetHashCode();
+      if (ClickCellId != 0) hash ^= ClickCellId.GetHashCode();
       if (ClickMapId != 0) hash ^= ClickMapId.GetHashCode();
       if (detail_ != null) hash ^= Detail.GetHashCode();
-      if (ClickCellId != 0) hash ^= ClickCellId.GetHashCode();
-      if (EffectType != 0) hash ^= EffectType.GetHashCode();
-      if (SourceType != global::EggLink.DanhengServer.Proto.GKEJFKAKENM.MonopolyActionResultSourceTypeNone) hash ^= SourceType.GetHashCode();
       if (TriggerCellId != 0) hash ^= TriggerCellId.GetHashCode();
+      if (SourceType != global::EggLink.DanhengServer.Proto.GKEJFKAKENM.MonopolyActionResultSourceTypeNone) hash ^= SourceType.GetHashCode();
+      if (EffectType != 0) hash ^= EffectType.GetHashCode();
+      if (TriggerMapId != 0) hash ^= TriggerMapId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -230,33 +230,33 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (detail_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(Detail);
-      }
-      if (SourceType != global::EggLink.DanhengServer.Proto.GKEJFKAKENM.MonopolyActionResultSourceTypeNone) {
-        output.WriteRawTag(56);
-        output.WriteEnum((int) SourceType);
-      }
-      if (ClickMapId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(ClickMapId);
-      }
-      if (TriggerCellId != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(TriggerCellId);
-      }
-      if (ClickCellId != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(ClickCellId);
+      if (EffectType != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(EffectType);
       }
       if (TriggerMapId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(24);
         output.WriteUInt32(TriggerMapId);
       }
-      if (EffectType != 0) {
+      if (ClickCellId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(ClickCellId);
+      }
+      if (ClickMapId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(ClickMapId);
+      }
+      if (detail_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(Detail);
+      }
+      if (TriggerCellId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(TriggerCellId);
+      }
+      if (SourceType != global::EggLink.DanhengServer.Proto.GKEJFKAKENM.MonopolyActionResultSourceTypeNone) {
         output.WriteRawTag(112);
-        output.WriteUInt32(EffectType);
+        output.WriteEnum((int) SourceType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -268,33 +268,33 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (detail_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(Detail);
-      }
-      if (SourceType != global::EggLink.DanhengServer.Proto.GKEJFKAKENM.MonopolyActionResultSourceTypeNone) {
-        output.WriteRawTag(56);
-        output.WriteEnum((int) SourceType);
-      }
-      if (ClickMapId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(ClickMapId);
-      }
-      if (TriggerCellId != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(TriggerCellId);
-      }
-      if (ClickCellId != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(ClickCellId);
+      if (EffectType != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(EffectType);
       }
       if (TriggerMapId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(24);
         output.WriteUInt32(TriggerMapId);
       }
-      if (EffectType != 0) {
+      if (ClickCellId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(ClickCellId);
+      }
+      if (ClickMapId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(ClickMapId);
+      }
+      if (detail_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(Detail);
+      }
+      if (TriggerCellId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(TriggerCellId);
+      }
+      if (SourceType != global::EggLink.DanhengServer.Proto.GKEJFKAKENM.MonopolyActionResultSourceTypeNone) {
         output.WriteRawTag(112);
-        output.WriteUInt32(EffectType);
+        output.WriteEnum((int) SourceType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -306,8 +306,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (TriggerMapId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TriggerMapId);
+      if (ClickCellId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ClickCellId);
       }
       if (ClickMapId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ClickMapId);
@@ -315,17 +315,17 @@ namespace EggLink.DanhengServer.Proto {
       if (detail_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Detail);
       }
-      if (ClickCellId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ClickCellId);
-      }
-      if (EffectType != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EffectType);
+      if (TriggerCellId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TriggerCellId);
       }
       if (SourceType != global::EggLink.DanhengServer.Proto.GKEJFKAKENM.MonopolyActionResultSourceTypeNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SourceType);
       }
-      if (TriggerCellId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TriggerCellId);
+      if (EffectType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EffectType);
+      }
+      if (TriggerMapId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TriggerMapId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -339,8 +339,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.TriggerMapId != 0) {
-        TriggerMapId = other.TriggerMapId;
+      if (other.ClickCellId != 0) {
+        ClickCellId = other.ClickCellId;
       }
       if (other.ClickMapId != 0) {
         ClickMapId = other.ClickMapId;
@@ -351,17 +351,17 @@ namespace EggLink.DanhengServer.Proto {
         }
         Detail.MergeFrom(other.Detail);
       }
-      if (other.ClickCellId != 0) {
-        ClickCellId = other.ClickCellId;
-      }
-      if (other.EffectType != 0) {
-        EffectType = other.EffectType;
+      if (other.TriggerCellId != 0) {
+        TriggerCellId = other.TriggerCellId;
       }
       if (other.SourceType != global::EggLink.DanhengServer.Proto.GKEJFKAKENM.MonopolyActionResultSourceTypeNone) {
         SourceType = other.SourceType;
       }
-      if (other.TriggerCellId != 0) {
-        TriggerCellId = other.TriggerCellId;
+      if (other.EffectType != 0) {
+        EffectType = other.EffectType;
+      }
+      if (other.TriggerMapId != 0) {
+        TriggerMapId = other.TriggerMapId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -378,35 +378,35 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
+          case 16: {
+            EffectType = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            TriggerMapId = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            ClickCellId = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            ClickMapId = input.ReadUInt32();
+            break;
+          }
+          case 90: {
             if (detail_ == null) {
               Detail = new global::EggLink.DanhengServer.Proto.NIBJAMFMEFD();
             }
             input.ReadMessage(Detail);
             break;
           }
-          case 56: {
-            SourceType = (global::EggLink.DanhengServer.Proto.GKEJFKAKENM) input.ReadEnum();
-            break;
-          }
-          case 80: {
-            ClickMapId = input.ReadUInt32();
-            break;
-          }
-          case 88: {
+          case 104: {
             TriggerCellId = input.ReadUInt32();
             break;
           }
-          case 96: {
-            ClickCellId = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            TriggerMapId = input.ReadUInt32();
-            break;
-          }
           case 112: {
-            EffectType = input.ReadUInt32();
+            SourceType = (global::EggLink.DanhengServer.Proto.GKEJFKAKENM) input.ReadEnum();
             break;
           }
         }
@@ -424,35 +424,35 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
+          case 16: {
+            EffectType = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            TriggerMapId = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            ClickCellId = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            ClickMapId = input.ReadUInt32();
+            break;
+          }
+          case 90: {
             if (detail_ == null) {
               Detail = new global::EggLink.DanhengServer.Proto.NIBJAMFMEFD();
             }
             input.ReadMessage(Detail);
             break;
           }
-          case 56: {
-            SourceType = (global::EggLink.DanhengServer.Proto.GKEJFKAKENM) input.ReadEnum();
-            break;
-          }
-          case 80: {
-            ClickMapId = input.ReadUInt32();
-            break;
-          }
-          case 88: {
+          case 104: {
             TriggerCellId = input.ReadUInt32();
             break;
           }
-          case 96: {
-            ClickCellId = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            TriggerMapId = input.ReadUInt32();
-            break;
-          }
           case 112: {
-            EffectType = input.ReadUInt32();
+            SourceType = (global::EggLink.DanhengServer.Proto.GKEJFKAKENM) input.ReadEnum();
             break;
           }
         }

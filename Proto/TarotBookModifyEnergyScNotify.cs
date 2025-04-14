@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNUYXJvdEJvb2tNb2RpZnlFbmVyZ3lTY05vdGlmeS5wcm90byJMCh1UYXJv",
-            "dEJvb2tNb2RpZnlFbmVyZ3lTY05vdGlmeRITCgtlbmVyZ3lfaW5mbxgPIAEo",
-            "DRIWCg5zdWJfbWlzc2lvbl9pZBgFIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "dEJvb2tNb2RpZnlFbmVyZ3lTY05vdGlmeRITCgtlbmVyZ3lfaW5mbxgMIAEo",
+            "DRIWCg5zdWJfbWlzc2lvbl9pZBgPIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "energy_info" field.</summary>
-    public const int EnergyInfoFieldNumber = 15;
+    public const int EnergyInfoFieldNumber = 12;
     private uint energyInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "sub_mission_id" field.</summary>
-    public const int SubMissionIdFieldNumber = 5;
+    public const int SubMissionIdFieldNumber = 15;
     private uint subMissionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (SubMissionId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(SubMissionId);
-      }
       if (EnergyInfo != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(96);
         output.WriteUInt32(EnergyInfo);
+      }
+      if (SubMissionId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(SubMissionId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (SubMissionId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(SubMissionId);
-      }
       if (EnergyInfo != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(96);
         output.WriteUInt32(EnergyInfo);
+      }
+      if (SubMissionId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(SubMissionId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            SubMissionId = input.ReadUInt32();
+          case 96: {
+            EnergyInfo = input.ReadUInt32();
             break;
           }
           case 120: {
-            EnergyInfo = input.ReadUInt32();
+            SubMissionId = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            SubMissionId = input.ReadUInt32();
+          case 96: {
+            EnergyInfo = input.ReadUInt32();
             break;
           }
           case 120: {
-            EnergyInfo = input.ReadUInt32();
+            SubMissionId = input.ReadUInt32();
             break;
           }
         }

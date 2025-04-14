@@ -24,18 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static GetCurBattleInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtHZXRDdXJCYXR0bGVJbmZvU2NSc3AucHJvdG8aHEFldGhlckRpdmlkZUJh",
-            "dHRsZUluZm8ucHJvdG8aFVNjZW5lQmF0dGxlSW5mby5wcm90bxoVQmF0dGxl",
-            "RW5kU3RhdHVzLnByb3RvIr0BChVHZXRDdXJCYXR0bGVJbmZvU2NSc3ASLAoL",
-            "UEJQSEpCQUZHQkIYCiABKAsyFy5BZXRoZXJEaXZpZGVCYXR0bGVJbmZvEikK",
-            "D2xhc3RfZW5kX3N0YXR1cxgLIAEoDjIQLkJhdHRsZUVuZFN0YXR1cxITCgtJ",
-            "QlBKS0ZGRkxORxgFIAEoDRIPCgdyZXRjb2RlGAMgASgNEiUKC2JhdHRsZV9p",
-            "bmZvGAcgASgLMhAuU2NlbmVCYXR0bGVJbmZvQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "ChtHZXRDdXJCYXR0bGVJbmZvU2NSc3AucHJvdG8aFUJhdHRsZUVuZFN0YXR1",
+            "cy5wcm90bxocQWV0aGVyRGl2aWRlQmF0dGxlSW5mby5wcm90bxoVU2NlbmVC",
+            "YXR0bGVJbmZvLnByb3RvIr0BChVHZXRDdXJCYXR0bGVJbmZvU2NSc3ASLAoL",
+            "UEJQSEpCQUZHQkIYBiABKAsyFy5BZXRoZXJEaXZpZGVCYXR0bGVJbmZvEikK",
+            "D2xhc3RfZW5kX3N0YXR1cxgIIAEoDjIQLkJhdHRsZUVuZFN0YXR1cxIPCgdy",
+            "ZXRjb2RlGAwgASgNEhMKC0lCUEpLRkZGTE5HGAQgASgNEiUKC2JhdHRsZV9p",
+            "bmZvGAIgASgLMhAuU2NlbmVCYXR0bGVJbmZvQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AetherDivideBattleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneBattleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleEndStatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BattleEndStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.AetherDivideBattleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneBattleInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetCurBattleInfoScRsp), global::EggLink.DanhengServer.Proto.GetCurBattleInfoScRsp.Parser, new[]{ "PBPHJBAFGBB", "LastEndStatus", "IBPJKFFFLNG", "Retcode", "BattleInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetCurBattleInfoScRsp), global::EggLink.DanhengServer.Proto.GetCurBattleInfoScRsp.Parser, new[]{ "PBPHJBAFGBB", "LastEndStatus", "Retcode", "IBPJKFFFLNG", "BattleInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -79,8 +79,8 @@ namespace EggLink.DanhengServer.Proto {
     public GetCurBattleInfoScRsp(GetCurBattleInfoScRsp other) : this() {
       pBPHJBAFGBB_ = other.pBPHJBAFGBB_ != null ? other.pBPHJBAFGBB_.Clone() : null;
       lastEndStatus_ = other.lastEndStatus_;
-      iBPJKFFFLNG_ = other.iBPJKFFFLNG_;
       retcode_ = other.retcode_;
+      iBPJKFFFLNG_ = other.iBPJKFFFLNG_;
       battleInfo_ = other.battleInfo_ != null ? other.battleInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -92,7 +92,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "PBPHJBAFGBB" field.</summary>
-    public const int PBPHJBAFGBBFieldNumber = 10;
+    public const int PBPHJBAFGBBFieldNumber = 6;
     private global::EggLink.DanhengServer.Proto.AetherDivideBattleInfo pBPHJBAFGBB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,7 +104,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "last_end_status" field.</summary>
-    public const int LastEndStatusFieldNumber = 11;
+    public const int LastEndStatusFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.BattleEndStatus lastEndStatus_ = global::EggLink.DanhengServer.Proto.BattleEndStatus.BattleEndNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -115,20 +115,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "IBPJKFFFLNG" field.</summary>
-    public const int IBPJKFFFLNGFieldNumber = 5;
-    private uint iBPJKFFFLNG_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IBPJKFFFLNG {
-      get { return iBPJKFFFLNG_; }
-      set {
-        iBPJKFFFLNG_ = value;
-      }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 3;
+    public const int RetcodeFieldNumber = 12;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -139,8 +127,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "IBPJKFFFLNG" field.</summary>
+    public const int IBPJKFFFLNGFieldNumber = 4;
+    private uint iBPJKFFFLNG_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint IBPJKFFFLNG {
+      get { return iBPJKFFFLNG_; }
+      set {
+        iBPJKFFFLNG_ = value;
+      }
+    }
+
     /// <summary>Field number for the "battle_info" field.</summary>
-    public const int BattleInfoFieldNumber = 7;
+    public const int BattleInfoFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.SceneBattleInfo battleInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -168,8 +168,8 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (!object.Equals(PBPHJBAFGBB, other.PBPHJBAFGBB)) return false;
       if (LastEndStatus != other.LastEndStatus) return false;
-      if (IBPJKFFFLNG != other.IBPJKFFFLNG) return false;
       if (Retcode != other.Retcode) return false;
+      if (IBPJKFFFLNG != other.IBPJKFFFLNG) return false;
       if (!object.Equals(BattleInfo, other.BattleInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -180,8 +180,8 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (pBPHJBAFGBB_ != null) hash ^= PBPHJBAFGBB.GetHashCode();
       if (LastEndStatus != global::EggLink.DanhengServer.Proto.BattleEndStatus.BattleEndNone) hash ^= LastEndStatus.GetHashCode();
-      if (IBPJKFFFLNG != 0) hash ^= IBPJKFFFLNG.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (IBPJKFFFLNG != 0) hash ^= IBPJKFFFLNG.GetHashCode();
       if (battleInfo_ != null) hash ^= BattleInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -201,25 +201,25 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(Retcode);
-      }
-      if (IBPJKFFFLNG != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(IBPJKFFFLNG);
-      }
       if (battleInfo_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(18);
         output.WriteMessage(BattleInfo);
       }
+      if (IBPJKFFFLNG != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(IBPJKFFFLNG);
+      }
       if (pBPHJBAFGBB_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(50);
         output.WriteMessage(PBPHJBAFGBB);
       }
       if (LastEndStatus != global::EggLink.DanhengServer.Proto.BattleEndStatus.BattleEndNone) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(64);
         output.WriteEnum((int) LastEndStatus);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -231,25 +231,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(Retcode);
-      }
-      if (IBPJKFFFLNG != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(IBPJKFFFLNG);
-      }
       if (battleInfo_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(18);
         output.WriteMessage(BattleInfo);
       }
+      if (IBPJKFFFLNG != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(IBPJKFFFLNG);
+      }
       if (pBPHJBAFGBB_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(50);
         output.WriteMessage(PBPHJBAFGBB);
       }
       if (LastEndStatus != global::EggLink.DanhengServer.Proto.BattleEndStatus.BattleEndNone) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(64);
         output.WriteEnum((int) LastEndStatus);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -267,11 +267,11 @@ namespace EggLink.DanhengServer.Proto {
       if (LastEndStatus != global::EggLink.DanhengServer.Proto.BattleEndStatus.BattleEndNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LastEndStatus);
       }
-      if (IBPJKFFFLNG != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IBPJKFFFLNG);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (IBPJKFFFLNG != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IBPJKFFFLNG);
       }
       if (battleInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BattleInfo);
@@ -297,11 +297,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.LastEndStatus != global::EggLink.DanhengServer.Proto.BattleEndStatus.BattleEndNone) {
         LastEndStatus = other.LastEndStatus;
       }
-      if (other.IBPJKFFFLNG != 0) {
-        IBPJKFFFLNG = other.IBPJKFFFLNG;
-      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
+      }
+      if (other.IBPJKFFFLNG != 0) {
+        IBPJKFFFLNG = other.IBPJKFFFLNG;
       }
       if (other.battleInfo_ != null) {
         if (battleInfo_ == null) {
@@ -324,30 +324,30 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 40: {
-            IBPJKFFFLNG = input.ReadUInt32();
-            break;
-          }
-          case 58: {
+          case 18: {
             if (battleInfo_ == null) {
               BattleInfo = new global::EggLink.DanhengServer.Proto.SceneBattleInfo();
             }
             input.ReadMessage(BattleInfo);
             break;
           }
-          case 82: {
+          case 32: {
+            IBPJKFFFLNG = input.ReadUInt32();
+            break;
+          }
+          case 50: {
             if (pBPHJBAFGBB_ == null) {
               PBPHJBAFGBB = new global::EggLink.DanhengServer.Proto.AetherDivideBattleInfo();
             }
             input.ReadMessage(PBPHJBAFGBB);
             break;
           }
-          case 88: {
+          case 64: {
             LastEndStatus = (global::EggLink.DanhengServer.Proto.BattleEndStatus) input.ReadEnum();
+            break;
+          }
+          case 96: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -365,30 +365,30 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 40: {
-            IBPJKFFFLNG = input.ReadUInt32();
-            break;
-          }
-          case 58: {
+          case 18: {
             if (battleInfo_ == null) {
               BattleInfo = new global::EggLink.DanhengServer.Proto.SceneBattleInfo();
             }
             input.ReadMessage(BattleInfo);
             break;
           }
-          case 82: {
+          case 32: {
+            IBPJKFFFLNG = input.ReadUInt32();
+            break;
+          }
+          case 50: {
             if (pBPHJBAFGBB_ == null) {
               PBPHJBAFGBB = new global::EggLink.DanhengServer.Proto.AetherDivideBattleInfo();
             }
             input.ReadMessage(PBPHJBAFGBB);
             break;
           }
-          case 88: {
+          case 64: {
             LastEndStatus = (global::EggLink.DanhengServer.Proto.BattleEndStatus) input.ReadEnum();
+            break;
+          }
+          case 96: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

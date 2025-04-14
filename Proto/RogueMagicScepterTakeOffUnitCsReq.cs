@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CidSb2d1ZU1hZ2ljU2NlcHRlclRha2VPZmZVbml0Q3NSZXEucHJvdG8iUwoh",
-            "Um9ndWVNYWdpY1NjZXB0ZXJUYWtlT2ZmVW5pdENzUmVxEhIKCnNjZXB0ZXJf",
-            "aWQYBCABKA0SGgoSbWFnaWNfdW5pdF9pZF9saXN0GA4gAygNQh6qAhtFZ2dM",
+            "Um9ndWVNYWdpY1NjZXB0ZXJUYWtlT2ZmVW5pdENzUmVxEhoKEm1hZ2ljX3Vu",
+            "aXRfaWRfbGlzdBgDIAMoDRISCgpzY2VwdGVyX2lkGA0gASgNQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicScepterTakeOffUnitCsReq), global::EggLink.DanhengServer.Proto.RogueMagicScepterTakeOffUnitCsReq.Parser, new[]{ "ScepterId", "MagicUnitIdList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicScepterTakeOffUnitCsReq), global::EggLink.DanhengServer.Proto.RogueMagicScepterTakeOffUnitCsReq.Parser, new[]{ "MagicUnitIdList", "ScepterId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueMagicScepterTakeOffUnitCsReq(RogueMagicScepterTakeOffUnitCsReq other) : this() {
-      scepterId_ = other.scepterId_;
       magicUnitIdList_ = other.magicUnitIdList_.Clone();
+      scepterId_ = other.scepterId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,8 +84,19 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueMagicScepterTakeOffUnitCsReq(this);
     }
 
+    /// <summary>Field number for the "magic_unit_id_list" field.</summary>
+    public const int MagicUnitIdListFieldNumber = 3;
+    private static readonly pb::FieldCodec<uint> _repeated_magicUnitIdList_codec
+        = pb::FieldCodec.ForUInt32(26);
+    private readonly pbc::RepeatedField<uint> magicUnitIdList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> MagicUnitIdList {
+      get { return magicUnitIdList_; }
+    }
+
     /// <summary>Field number for the "scepter_id" field.</summary>
-    public const int ScepterIdFieldNumber = 4;
+    public const int ScepterIdFieldNumber = 13;
     private uint scepterId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -94,17 +105,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         scepterId_ = value;
       }
-    }
-
-    /// <summary>Field number for the "magic_unit_id_list" field.</summary>
-    public const int MagicUnitIdListFieldNumber = 14;
-    private static readonly pb::FieldCodec<uint> _repeated_magicUnitIdList_codec
-        = pb::FieldCodec.ForUInt32(114);
-    private readonly pbc::RepeatedField<uint> magicUnitIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> MagicUnitIdList {
-      get { return magicUnitIdList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ScepterId != other.ScepterId) return false;
       if(!magicUnitIdList_.Equals(other.magicUnitIdList_)) return false;
+      if (ScepterId != other.ScepterId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ScepterId != 0) hash ^= ScepterId.GetHashCode();
       hash ^= magicUnitIdList_.GetHashCode();
+      if (ScepterId != 0) hash ^= ScepterId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      magicUnitIdList_.WriteTo(output, _repeated_magicUnitIdList_codec);
       if (ScepterId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(104);
         output.WriteUInt32(ScepterId);
       }
-      magicUnitIdList_.WriteTo(output, _repeated_magicUnitIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      magicUnitIdList_.WriteTo(ref output, _repeated_magicUnitIdList_codec);
       if (ScepterId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(104);
         output.WriteUInt32(ScepterId);
       }
-      magicUnitIdList_.WriteTo(ref output, _repeated_magicUnitIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -181,10 +181,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += magicUnitIdList_.CalculateSize(_repeated_magicUnitIdList_codec);
       if (ScepterId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScepterId);
       }
-      size += magicUnitIdList_.CalculateSize(_repeated_magicUnitIdList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -197,10 +197,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      magicUnitIdList_.Add(other.magicUnitIdList_);
       if (other.ScepterId != 0) {
         ScepterId = other.ScepterId;
       }
-      magicUnitIdList_.Add(other.magicUnitIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            ScepterId = input.ReadUInt32();
+          case 26:
+          case 24: {
+            magicUnitIdList_.AddEntriesFrom(input, _repeated_magicUnitIdList_codec);
             break;
           }
-          case 114:
-          case 112: {
-            magicUnitIdList_.AddEntriesFrom(input, _repeated_magicUnitIdList_codec);
+          case 104: {
+            ScepterId = input.ReadUInt32();
             break;
           }
         }
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            ScepterId = input.ReadUInt32();
+          case 26:
+          case 24: {
+            magicUnitIdList_.AddEntriesFrom(ref input, _repeated_magicUnitIdList_codec);
             break;
           }
-          case 114:
-          case 112: {
-            magicUnitIdList_.AddEntriesFrom(ref input, _repeated_magicUnitIdList_codec);
+          case 104: {
+            ScepterId = input.ReadUInt32();
             break;
           }
         }

@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNDaGVzc1JvZ3VlVXBkYXRlQm9hcmRTY05vdGlmeS5wcm90bxoOQ2VsbElu",
             "Zm8ucHJvdG8iPwodQ2hlc3NSb2d1ZVVwZGF0ZUJvYXJkU2NOb3RpZnkSHgoL",
-            "REhES05NRk1HQkMYBiABKAsyCS5DZWxsSW5mb0IeqgIbRWdnTGluay5EYW5o",
+            "REhES05NRk1HQkMYDiABKAsyCS5DZWxsSW5mb0IeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CellInfoReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "DHDKNMFMGBC" field.</summary>
-    public const int DHDKNMFMGBCFieldNumber = 6;
+    public const int DHDKNMFMGBCFieldNumber = 14;
     private global::EggLink.DanhengServer.Proto.CellInfo dHDKNMFMGBC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (dHDKNMFMGBC_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(114);
         output.WriteMessage(DHDKNMFMGBC);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (dHDKNMFMGBC_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(114);
         output.WriteMessage(DHDKNMFMGBC);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
+          case 114: {
             if (dHDKNMFMGBC_ == null) {
               DHDKNMFMGBC = new global::EggLink.DanhengServer.Proto.CellInfo();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
+          case 114: {
             if (dHDKNMFMGBC_ == null) {
               DHDKNMFMGBC = new global::EggLink.DanhengServer.Proto.CellInfo();
             }

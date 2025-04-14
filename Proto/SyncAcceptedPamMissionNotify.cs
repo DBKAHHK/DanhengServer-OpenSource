@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJTeW5jQWNjZXB0ZWRQYW1NaXNzaW9uTm90aWZ5LnByb3RvIkwKHFN5bmNB",
-            "Y2NlcHRlZFBhbU1pc3Npb25Ob3RpZnkSEwoLUEFNQkpCRk5HUE8YBCABKAQS",
-            "FwoPbWFpbl9taXNzaW9uX2lkGAkgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "Y2NlcHRlZFBhbU1pc3Npb25Ob3RpZnkSEwoLUEFNQkpCRk5HUE8YCiABKAQS",
+            "FwoPbWFpbl9taXNzaW9uX2lkGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "PAMBJBFNGPO" field.</summary>
-    public const int PAMBJBFNGPOFieldNumber = 4;
+    public const int PAMBJBFNGPOFieldNumber = 10;
     private ulong pAMBJBFNGPO_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "main_mission_id" field.</summary>
-    public const int MainMissionIdFieldNumber = 9;
+    public const int MainMissionIdFieldNumber = 13;
     private uint mainMissionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (PAMBJBFNGPO != 0UL) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(80);
         output.WriteUInt64(PAMBJBFNGPO);
       }
       if (MainMissionId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(104);
         output.WriteUInt32(MainMissionId);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PAMBJBFNGPO != 0UL) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(80);
         output.WriteUInt64(PAMBJBFNGPO);
       }
       if (MainMissionId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(104);
         output.WriteUInt32(MainMissionId);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 80: {
             PAMBJBFNGPO = input.ReadUInt64();
             break;
           }
-          case 72: {
+          case 104: {
             MainMissionId = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 80: {
             PAMBJBFNGPO = input.ReadUInt64();
             break;
           }
-          case 72: {
+          case 104: {
             MainMissionId = input.ReadUInt32();
             break;
           }

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtBY2NlcHRFeHBlZGl0aW9uU2NSc3AucHJvdG8aFEV4cGVkaXRpb25JbmZv",
-            "LnByb3RvIlQKFUFjY2VwdEV4cGVkaXRpb25TY1JzcBIPCgdyZXRjb2RlGAUg",
-            "ASgNEioKEWFjY2VwdF9leHBlZGl0aW9uGAMgASgLMg8uRXhwZWRpdGlvbklu",
+            "LnByb3RvIlQKFUFjY2VwdEV4cGVkaXRpb25TY1JzcBIPCgdyZXRjb2RlGAkg",
+            "ASgNEioKEWFjY2VwdF9leHBlZGl0aW9uGAUgASgLMg8uRXhwZWRpdGlvbklu",
             "Zm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ExpeditionInfoReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 5;
+    public const int RetcodeFieldNumber = 9;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "accept_expedition" field.</summary>
-    public const int AcceptExpeditionFieldNumber = 3;
+    public const int AcceptExpeditionFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.ExpeditionInfo acceptExpedition_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (acceptExpedition_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(42);
         output.WriteMessage(AcceptExpedition);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (acceptExpedition_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(42);
         output.WriteMessage(AcceptExpedition);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -230,14 +230,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26: {
+          case 42: {
             if (acceptExpedition_ == null) {
               AcceptExpedition = new global::EggLink.DanhengServer.Proto.ExpeditionInfo();
             }
             input.ReadMessage(AcceptExpedition);
             break;
           }
-          case 40: {
+          case 72: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -256,14 +256,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26: {
+          case 42: {
             if (acceptExpedition_ == null) {
               AcceptExpedition = new global::EggLink.DanhengServer.Proto.ExpeditionInfo();
             }
             input.ReadMessage(AcceptExpedition);
             break;
           }
-          case 40: {
+          case 72: {
             Retcode = input.ReadUInt32();
             break;
           }

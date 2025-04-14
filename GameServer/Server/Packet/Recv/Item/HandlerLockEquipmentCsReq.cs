@@ -12,7 +12,7 @@ public class HandlerLockEquipmentCsReq : Handler
     {
         var req = LockEquipmentCsReq.Parser.ParseFrom(data);
         var result =
-            await connection.Player!.InventoryManager!.LockItems(req.EquipmentIdList, req.IsProtected,
+            await connection.Player!.InventoryManager!.LockItems(req.EquipmentUniqueIdList, req.IsLocked,
                 ItemMainTypeEnum.Equipment);
         await connection.SendPacket(new PacketLockEquipmentScRsp(result));
     }

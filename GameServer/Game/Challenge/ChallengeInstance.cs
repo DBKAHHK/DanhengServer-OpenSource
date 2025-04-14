@@ -133,7 +133,7 @@ public class ChallengeInstance
             ScoreTwo = (uint)ScoreStage2,
             RoundCount = (uint)GetRoundsElapsed(),
             ExtraLineupType = (ExtraLineupType)CurrentExtraLineup,
-            StageInfo = new ChallengeStoryInfo()
+            StageInfo = new ChallengeCurBuffInfo()
         };
 
         if (Excel.IsBoss())

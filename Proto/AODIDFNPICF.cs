@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFBT0RJREZOUElDRi5wcm90bxoRTkRIT1BFRE9GT0MucHJvdG8iLgoLQU9E",
-            "SURGTlBJQ0YSHwoJaXRlbV9saXN0GAMgAygLMgwuTkRIT1BFRE9GT0NCHqoC",
+            "SURGTlBJQ0YSHwoJaXRlbV9saXN0GAQgAygLMgwuTkRIT1BFRE9GT0NCHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NDHOPEDOFOCReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "item_list" field.</summary>
-    public const int ItemListFieldNumber = 3;
+    public const int ItemListFieldNumber = 4;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.NDHOPEDOFOC> _repeated_itemList_codec
-        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.NDHOPEDOFOC.Parser);
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.NDHOPEDOFOC.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NDHOPEDOFOC> itemList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NDHOPEDOFOC>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26: {
+          case 34: {
             itemList_.AddEntriesFrom(input, _repeated_itemList_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26: {
+          case 34: {
             itemList_.AddEntriesFrom(ref input, _repeated_itemList_codec);
             break;
           }

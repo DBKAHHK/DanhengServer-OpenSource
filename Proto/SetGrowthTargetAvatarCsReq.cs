@@ -24,16 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static SetGrowthTargetAvatarCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiBTZXRHcm93dGhUYXJnZXRBdmF0YXJDc1JlcS5wcm90bxoRR0lGSkRPQklJ",
-            "SUsucHJvdG8aEUJDTUxKQ0ZPRUZNLnByb3RvIoUBChpTZXRHcm93dGhUYXJn",
-            "ZXRBdmF0YXJDc1JlcRIcCgZzb3VyY2UYCSABKA4yDC5HSUZKRE9CSUlJSxIh",
-            "CgtFSkJKQk9DT0lOQhgNIAMoDjIMLkJDTUxKQ0ZPRUZNEhEKCWF2YXRhcl9p",
-            "ZBgCIAEoDRITCgtJRE5NRUtOSExQTxgLIAEoDUIeqgIbRWdnTGluay5EYW5o",
-            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "CiBTZXRHcm93dGhUYXJnZXRBdmF0YXJDc1JlcS5wcm90bxobR3Jvd3RoVGFy",
+            "dGdldEZ1bmNUeXBlLnByb3RvGhdHcm93dGhUYXJnZXRTdGF0ZS5wcm90byKf",
+            "AQoaU2V0R3Jvd3RoVGFyZ2V0QXZhdGFyQ3NSZXESNwoXZ3Jvd3RoX3Rhcmdl",
+            "dF90eXBlX2xpc3QYASADKA4yFi5Hcm93dGhUYXJ0Z2V0RnVuY1R5cGUSEQoJ",
+            "aXNfdGFyZ2V0GA4gASgNEiIKBnNvdXJjZRgFIAEoDjISLkdyb3d0aFRhcmdl",
+            "dFN0YXRlEhEKCWF2YXRhcl9pZBgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GIFJDOBIIIKReflection.Descriptor, global::EggLink.DanhengServer.Proto.BCMLJCFOEFMReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GrowthTartgetFuncTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.GrowthTargetStateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetGrowthTargetAvatarCsReq), global::EggLink.DanhengServer.Proto.SetGrowthTargetAvatarCsReq.Parser, new[]{ "Source", "EJBJBOCOINB", "AvatarId", "IDNMEKNHLPO" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetGrowthTargetAvatarCsReq), global::EggLink.DanhengServer.Proto.SetGrowthTargetAvatarCsReq.Parser, new[]{ "GrowthTargetTypeList", "IsTarget", "Source", "AvatarId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,10 +76,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SetGrowthTargetAvatarCsReq(SetGrowthTargetAvatarCsReq other) : this() {
+      growthTargetTypeList_ = other.growthTargetTypeList_.Clone();
+      isTarget_ = other.isTarget_;
       source_ = other.source_;
-      eJBJBOCOINB_ = other.eJBJBOCOINB_.Clone();
       avatarId_ = other.avatarId_;
-      iDNMEKNHLPO_ = other.iDNMEKNHLPO_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,31 +89,43 @@ namespace EggLink.DanhengServer.Proto {
       return new SetGrowthTargetAvatarCsReq(this);
     }
 
-    /// <summary>Field number for the "source" field.</summary>
-    public const int SourceFieldNumber = 9;
-    private global::EggLink.DanhengServer.Proto.GIFJDOBIIIK source_ = global::EggLink.DanhengServer.Proto.GIFJDOBIIIK.GrowthTargetAvatarNone;
+    /// <summary>Field number for the "growth_target_type_list" field.</summary>
+    public const int GrowthTargetTypeListFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType> _repeated_growthTargetTypeList_codec
+        = pb::FieldCodec.ForEnum(10, x => (int) x, x => (global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType) x);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType> growthTargetTypeList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.GIFJDOBIIIK Source {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType> GrowthTargetTypeList {
+      get { return growthTargetTypeList_; }
+    }
+
+    /// <summary>Field number for the "is_target" field.</summary>
+    public const int IsTargetFieldNumber = 14;
+    private uint isTarget_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint IsTarget {
+      get { return isTarget_; }
+      set {
+        isTarget_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "source" field.</summary>
+    public const int SourceFieldNumber = 5;
+    private global::EggLink.DanhengServer.Proto.GrowthTargetState source_ = global::EggLink.DanhengServer.Proto.GrowthTargetState.GrowthTargetAvatarNone;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.GrowthTargetState Source {
       get { return source_; }
       set {
         source_ = value;
       }
     }
 
-    /// <summary>Field number for the "EJBJBOCOINB" field.</summary>
-    public const int EJBJBOCOINBFieldNumber = 13;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.BCMLJCFOEFM> _repeated_eJBJBOCOINB_codec
-        = pb::FieldCodec.ForEnum(106, x => (int) x, x => (global::EggLink.DanhengServer.Proto.BCMLJCFOEFM) x);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BCMLJCFOEFM> eJBJBOCOINB_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BCMLJCFOEFM>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BCMLJCFOEFM> EJBJBOCOINB {
-      get { return eJBJBOCOINB_; }
-    }
-
     /// <summary>Field number for the "avatar_id" field.</summary>
-    public const int AvatarIdFieldNumber = 2;
+    public const int AvatarIdFieldNumber = 3;
     private uint avatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -120,18 +133,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return avatarId_; }
       set {
         avatarId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "IDNMEKNHLPO" field.</summary>
-    public const int IDNMEKNHLPOFieldNumber = 11;
-    private uint iDNMEKNHLPO_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IDNMEKNHLPO {
-      get { return iDNMEKNHLPO_; }
-      set {
-        iDNMEKNHLPO_ = value;
       }
     }
 
@@ -150,10 +151,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if(!growthTargetTypeList_.Equals(other.growthTargetTypeList_)) return false;
+      if (IsTarget != other.IsTarget) return false;
       if (Source != other.Source) return false;
-      if(!eJBJBOCOINB_.Equals(other.eJBJBOCOINB_)) return false;
       if (AvatarId != other.AvatarId) return false;
-      if (IDNMEKNHLPO != other.IDNMEKNHLPO) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,10 +162,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Source != global::EggLink.DanhengServer.Proto.GIFJDOBIIIK.GrowthTargetAvatarNone) hash ^= Source.GetHashCode();
-      hash ^= eJBJBOCOINB_.GetHashCode();
+      hash ^= growthTargetTypeList_.GetHashCode();
+      if (IsTarget != 0) hash ^= IsTarget.GetHashCode();
+      if (Source != global::EggLink.DanhengServer.Proto.GrowthTargetState.GrowthTargetAvatarNone) hash ^= Source.GetHashCode();
       if (AvatarId != 0) hash ^= AvatarId.GetHashCode();
-      if (IDNMEKNHLPO != 0) hash ^= IDNMEKNHLPO.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,19 +184,19 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      growthTargetTypeList_.WriteTo(output, _repeated_growthTargetTypeList_codec);
       if (AvatarId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteUInt32(AvatarId);
       }
-      if (Source != global::EggLink.DanhengServer.Proto.GIFJDOBIIIK.GrowthTargetAvatarNone) {
-        output.WriteRawTag(72);
+      if (Source != global::EggLink.DanhengServer.Proto.GrowthTargetState.GrowthTargetAvatarNone) {
+        output.WriteRawTag(40);
         output.WriteEnum((int) Source);
       }
-      if (IDNMEKNHLPO != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(IDNMEKNHLPO);
+      if (IsTarget != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(IsTarget);
       }
-      eJBJBOCOINB_.WriteTo(output, _repeated_eJBJBOCOINB_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -206,19 +207,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      growthTargetTypeList_.WriteTo(ref output, _repeated_growthTargetTypeList_codec);
       if (AvatarId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteUInt32(AvatarId);
       }
-      if (Source != global::EggLink.DanhengServer.Proto.GIFJDOBIIIK.GrowthTargetAvatarNone) {
-        output.WriteRawTag(72);
+      if (Source != global::EggLink.DanhengServer.Proto.GrowthTargetState.GrowthTargetAvatarNone) {
+        output.WriteRawTag(40);
         output.WriteEnum((int) Source);
       }
-      if (IDNMEKNHLPO != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(IDNMEKNHLPO);
+      if (IsTarget != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(IsTarget);
       }
-      eJBJBOCOINB_.WriteTo(ref output, _repeated_eJBJBOCOINB_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -229,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Source != global::EggLink.DanhengServer.Proto.GIFJDOBIIIK.GrowthTargetAvatarNone) {
+      size += growthTargetTypeList_.CalculateSize(_repeated_growthTargetTypeList_codec);
+      if (IsTarget != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IsTarget);
+      }
+      if (Source != global::EggLink.DanhengServer.Proto.GrowthTargetState.GrowthTargetAvatarNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Source);
       }
-      size += eJBJBOCOINB_.CalculateSize(_repeated_eJBJBOCOINB_codec);
       if (AvatarId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AvatarId);
-      }
-      if (IDNMEKNHLPO != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IDNMEKNHLPO);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -251,15 +252,15 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Source != global::EggLink.DanhengServer.Proto.GIFJDOBIIIK.GrowthTargetAvatarNone) {
+      growthTargetTypeList_.Add(other.growthTargetTypeList_);
+      if (other.IsTarget != 0) {
+        IsTarget = other.IsTarget;
+      }
+      if (other.Source != global::EggLink.DanhengServer.Proto.GrowthTargetState.GrowthTargetAvatarNone) {
         Source = other.Source;
       }
-      eJBJBOCOINB_.Add(other.eJBJBOCOINB_);
       if (other.AvatarId != 0) {
         AvatarId = other.AvatarId;
-      }
-      if (other.IDNMEKNHLPO != 0) {
-        IDNMEKNHLPO = other.IDNMEKNHLPO;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -276,21 +277,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 10:
+          case 8: {
+            growthTargetTypeList_.AddEntriesFrom(input, _repeated_growthTargetTypeList_codec);
+            break;
+          }
+          case 24: {
             AvatarId = input.ReadUInt32();
             break;
           }
-          case 72: {
-            Source = (global::EggLink.DanhengServer.Proto.GIFJDOBIIIK) input.ReadEnum();
+          case 40: {
+            Source = (global::EggLink.DanhengServer.Proto.GrowthTargetState) input.ReadEnum();
             break;
           }
-          case 88: {
-            IDNMEKNHLPO = input.ReadUInt32();
-            break;
-          }
-          case 106:
-          case 104: {
-            eJBJBOCOINB_.AddEntriesFrom(input, _repeated_eJBJBOCOINB_codec);
+          case 112: {
+            IsTarget = input.ReadUInt32();
             break;
           }
         }
@@ -308,21 +309,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 10:
+          case 8: {
+            growthTargetTypeList_.AddEntriesFrom(ref input, _repeated_growthTargetTypeList_codec);
+            break;
+          }
+          case 24: {
             AvatarId = input.ReadUInt32();
             break;
           }
-          case 72: {
-            Source = (global::EggLink.DanhengServer.Proto.GIFJDOBIIIK) input.ReadEnum();
+          case 40: {
+            Source = (global::EggLink.DanhengServer.Proto.GrowthTargetState) input.ReadEnum();
             break;
           }
-          case 88: {
-            IDNMEKNHLPO = input.ReadUInt32();
-            break;
-          }
-          case 106:
-          case 104: {
-            eJBJBOCOINB_.AddEntriesFrom(ref input, _repeated_eJBJBOCOINB_codec);
+          case 112: {
+            IsTarget = input.ReadUInt32();
             break;
           }
         }

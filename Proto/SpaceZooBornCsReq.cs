@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdTcGFjZVpvb0Jvcm5Dc1JlcS5wcm90byI9ChFTcGFjZVpvb0Jvcm5Dc1Jl",
-            "cRITCgtMSEVPTlBIR0JOQhgEIAEoDRITCgtIRENCQUNPT0lORBgKIAMoDUIe",
+            "cRITCgtMSEVPTlBIR0JOQhgBIAEoDRITCgtIRENCQUNPT0lORBgHIAMoDUIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "LHEONPHGBNB" field.</summary>
-    public const int LHEONPHGBNBFieldNumber = 4;
+    public const int LHEONPHGBNBFieldNumber = 1;
     private uint lHEONPHGBNB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,9 +96,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "HDCBACOOIND" field.</summary>
-    public const int HDCBACOOINDFieldNumber = 10;
+    public const int HDCBACOOINDFieldNumber = 7;
     private static readonly pb::FieldCodec<uint> _repeated_hDCBACOOIND_codec
-        = pb::FieldCodec.ForUInt32(82);
+        = pb::FieldCodec.ForUInt32(58);
     private readonly pbc::RepeatedField<uint> hDCBACOOIND_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (LHEONPHGBNB != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(8);
         output.WriteUInt32(LHEONPHGBNB);
       }
       hDCBACOOIND_.WriteTo(output, _repeated_hDCBACOOIND_codec);
@@ -166,7 +166,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (LHEONPHGBNB != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(8);
         output.WriteUInt32(LHEONPHGBNB);
       }
       hDCBACOOIND_.WriteTo(ref output, _repeated_hDCBACOOIND_codec);
@@ -215,12 +215,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 8: {
             LHEONPHGBNB = input.ReadUInt32();
             break;
           }
-          case 82:
-          case 80: {
+          case 58:
+          case 56: {
             hDCBACOOIND_.AddEntriesFrom(input, _repeated_hDCBACOOIND_codec);
             break;
           }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 8: {
             LHEONPHGBNB = input.ReadUInt32();
             break;
           }
-          case 82:
-          case 80: {
+          case 58:
+          case 56: {
             hDCBACOOIND_.AddEntriesFrom(ref input, _repeated_hDCBACOOIND_codec);
             break;
           }

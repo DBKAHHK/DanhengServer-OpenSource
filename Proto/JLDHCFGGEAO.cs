@@ -24,12 +24,11 @@ namespace EggLink.DanhengServer.Proto {
     static JLDHCFGGEAOReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFKTERIQ0ZHR0VBTy5wcm90bxoZVHJhaW5QYXJ0eUdhbWVTa2lsbC5wcm90",
-            "byI4CgtKTERIQ0ZHR0VBTxIpCgtNSE1FRERFSEJISRgNIAEoCzIULlRyYWlu",
-            "UGFydHlHYW1lU2tpbGxCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
-            "b2IGcHJvdG8z"));
+            "ChFKTERIQ0ZHR0VBTy5wcm90bxoRR09DS0JMTkpJQkcucHJvdG8iMAoLSkxE",
+            "SENGR0dFQU8SIQoLTUhNRURERUhCSEkYBSABKAsyDC5HT0NLQkxOSklCR0Ie",
+            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyGameSkillReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GOCKBLNJIBGReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.JLDHCFGGEAO), global::EggLink.DanhengServer.Proto.JLDHCFGGEAO.Parser, new[]{ "MHMEDDEHBHI" }, null, null, null, null)
           }));
@@ -84,11 +83,11 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MHMEDDEHBHI" field.</summary>
-    public const int MHMEDDEHBHIFieldNumber = 13;
-    private global::EggLink.DanhengServer.Proto.TrainPartyGameSkill mHMEDDEHBHI_;
+    public const int MHMEDDEHBHIFieldNumber = 5;
+    private global::EggLink.DanhengServer.Proto.GOCKBLNJIBG mHMEDDEHBHI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.TrainPartyGameSkill MHMEDDEHBHI {
+    public global::EggLink.DanhengServer.Proto.GOCKBLNJIBG MHMEDDEHBHI {
       get { return mHMEDDEHBHI_; }
       set {
         mHMEDDEHBHI_ = value;
@@ -138,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (mHMEDDEHBHI_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(42);
         output.WriteMessage(MHMEDDEHBHI);
       }
       if (_unknownFields != null) {
@@ -152,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (mHMEDDEHBHI_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(42);
         output.WriteMessage(MHMEDDEHBHI);
       }
       if (_unknownFields != null) {
@@ -182,7 +181,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.mHMEDDEHBHI_ != null) {
         if (mHMEDDEHBHI_ == null) {
-          MHMEDDEHBHI = new global::EggLink.DanhengServer.Proto.TrainPartyGameSkill();
+          MHMEDDEHBHI = new global::EggLink.DanhengServer.Proto.GOCKBLNJIBG();
         }
         MHMEDDEHBHI.MergeFrom(other.MHMEDDEHBHI);
       }
@@ -201,9 +200,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 106: {
+          case 42: {
             if (mHMEDDEHBHI_ == null) {
-              MHMEDDEHBHI = new global::EggLink.DanhengServer.Proto.TrainPartyGameSkill();
+              MHMEDDEHBHI = new global::EggLink.DanhengServer.Proto.GOCKBLNJIBG();
             }
             input.ReadMessage(MHMEDDEHBHI);
             break;
@@ -223,9 +222,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 106: {
+          case 42: {
             if (mHMEDDEHBHI_ == null) {
-              MHMEDDEHBHI = new global::EggLink.DanhengServer.Proto.TrainPartyGameSkill();
+              MHMEDDEHBHI = new global::EggLink.DanhengServer.Proto.GOCKBLNJIBG();
             }
             input.ReadMessage(MHMEDDEHBHI);
             break;

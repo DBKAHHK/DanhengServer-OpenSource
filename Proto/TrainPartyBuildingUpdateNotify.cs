@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiRUcmFpblBhcnR5QnVpbGRpbmdVcGRhdGVOb3RpZnkucHJvdG8aEVBQS0dK",
             "S0lGRUxLLnByb3RvIkMKHlRyYWluUGFydHlCdWlsZGluZ1VwZGF0ZU5vdGlm",
-            "eRIhCgtCSkRGS0VNS0FPTBgIIAMoCzIMLlBQS0dKS0lGRUxLQh6qAhtFZ2dM",
+            "eRIhCgtCSkRGS0VNS0FPTBgFIAMoCzIMLlBQS0dKS0lGRUxLQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PPKGJKIFELKReflection.Descriptor, },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "BJDFKEMKAOL" field.</summary>
-    public const int BJDFKEMKAOLFieldNumber = 8;
+    public const int BJDFKEMKAOLFieldNumber = 5;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.PPKGJKIFELK> _repeated_bJDFKEMKAOL_codec
-        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.PPKGJKIFELK.Parser);
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.PPKGJKIFELK.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PPKGJKIFELK> bJDFKEMKAOL_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PPKGJKIFELK>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66: {
+          case 42: {
             bJDFKEMKAOL_.AddEntriesFrom(input, _repeated_bJDFKEMKAOL_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66: {
+          case 42: {
             bJDFKEMKAOL_.AddEntriesFrom(ref input, _repeated_bJDFKEMKAOL_codec);
             break;
           }

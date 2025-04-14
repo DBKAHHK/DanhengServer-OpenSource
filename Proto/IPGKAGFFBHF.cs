@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFJUEdLQUdGRkJIRi5wcm90bxoVUm9ndWVDb21tb25CdWZmLnByb3RvIkwK",
-            "C0lQR0tBR0ZGQkhGEhYKDnNlbGVjdF9oaW50X2lkGAUgASgNEiUKC0RMRk1H",
-            "S1BHTUhMGAEgAygLMhAuUm9ndWVDb21tb25CdWZmQh6qAhtFZ2dMaW5rLkRh",
+            "C0lQR0tBR0ZGQkhGEhYKDnNlbGVjdF9oaW50X2lkGAIgASgNEiUKC0RMRk1H",
+            "S1BHTUhMGAMgAygLMhAuUm9ndWVDb21tb25CdWZmQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonBuffReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_hint_id" field.</summary>
-    public const int SelectHintIdFieldNumber = 5;
+    public const int SelectHintIdFieldNumber = 2;
     private uint selectHintId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,9 +97,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "DLFMGKPGMHL" field.</summary>
-    public const int DLFMGKPGMHLFieldNumber = 1;
+    public const int DLFMGKPGMHLFieldNumber = 3;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueCommonBuff> _repeated_dLFMGKPGMHL_codec
-        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.RogueCommonBuff.Parser);
+        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.RogueCommonBuff.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonBuff> dLFMGKPGMHL_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonBuff>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      dLFMGKPGMHL_.WriteTo(output, _repeated_dLFMGKPGMHL_codec);
       if (SelectHintId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(16);
         output.WriteUInt32(SelectHintId);
       }
+      dLFMGKPGMHL_.WriteTo(output, _repeated_dLFMGKPGMHL_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      dLFMGKPGMHL_.WriteTo(ref output, _repeated_dLFMGKPGMHL_codec);
       if (SelectHintId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(16);
         output.WriteUInt32(SelectHintId);
       }
+      dLFMGKPGMHL_.WriteTo(ref output, _repeated_dLFMGKPGMHL_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            dLFMGKPGMHL_.AddEntriesFrom(input, _repeated_dLFMGKPGMHL_codec);
+          case 16: {
+            SelectHintId = input.ReadUInt32();
             break;
           }
-          case 40: {
-            SelectHintId = input.ReadUInt32();
+          case 26: {
+            dLFMGKPGMHL_.AddEntriesFrom(input, _repeated_dLFMGKPGMHL_codec);
             break;
           }
         }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            dLFMGKPGMHL_.AddEntriesFrom(ref input, _repeated_dLFMGKPGMHL_codec);
+          case 16: {
+            SelectHintId = input.ReadUInt32();
             break;
           }
-          case 40: {
-            SelectHintId = input.ReadUInt32();
+          case 26: {
+            dLFMGKPGMHL_.AddEntriesFrom(ref input, _repeated_dLFMGKPGMHL_codec);
             break;
           }
         }

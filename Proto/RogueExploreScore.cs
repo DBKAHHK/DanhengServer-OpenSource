@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdSb2d1ZUV4cGxvcmVTY29yZS5wcm90byJPChFSb2d1ZUV4cGxvcmVTY29y",
-            "ZRITCgtGSkpERlBLR09QQxgBIAEoDRIQCghzY29yZV9pZBgJIAEoDRITCgtL",
-            "T0JGQ09NSEdDRRgNIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "ZRITCgtLT0JGQ09NSEdDRRgGIAEoDRIQCghzY29yZV9pZBgJIAEoDRITCgtG",
+            "SkpERlBLR09QQxgEIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueExploreScore), global::EggLink.DanhengServer.Proto.RogueExploreScore.Parser, new[]{ "FJJDFPKGOPC", "ScoreId", "KOBFCOMHGCE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueExploreScore), global::EggLink.DanhengServer.Proto.RogueExploreScore.Parser, new[]{ "KOBFCOMHGCE", "ScoreId", "FJJDFPKGOPC" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueExploreScore(RogueExploreScore other) : this() {
-      fJJDFPKGOPC_ = other.fJJDFPKGOPC_;
-      scoreId_ = other.scoreId_;
       kOBFCOMHGCE_ = other.kOBFCOMHGCE_;
+      scoreId_ = other.scoreId_;
+      fJJDFPKGOPC_ = other.fJJDFPKGOPC_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,15 +85,15 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueExploreScore(this);
     }
 
-    /// <summary>Field number for the "FJJDFPKGOPC" field.</summary>
-    public const int FJJDFPKGOPCFieldNumber = 1;
-    private uint fJJDFPKGOPC_;
+    /// <summary>Field number for the "KOBFCOMHGCE" field.</summary>
+    public const int KOBFCOMHGCEFieldNumber = 6;
+    private uint kOBFCOMHGCE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FJJDFPKGOPC {
-      get { return fJJDFPKGOPC_; }
+    public uint KOBFCOMHGCE {
+      get { return kOBFCOMHGCE_; }
       set {
-        fJJDFPKGOPC_ = value;
+        kOBFCOMHGCE_ = value;
       }
     }
 
@@ -109,15 +109,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "KOBFCOMHGCE" field.</summary>
-    public const int KOBFCOMHGCEFieldNumber = 13;
-    private uint kOBFCOMHGCE_;
+    /// <summary>Field number for the "FJJDFPKGOPC" field.</summary>
+    public const int FJJDFPKGOPCFieldNumber = 4;
+    private uint fJJDFPKGOPC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint KOBFCOMHGCE {
-      get { return kOBFCOMHGCE_; }
+    public uint FJJDFPKGOPC {
+      get { return fJJDFPKGOPC_; }
       set {
-        kOBFCOMHGCE_ = value;
+        fJJDFPKGOPC_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FJJDFPKGOPC != other.FJJDFPKGOPC) return false;
-      if (ScoreId != other.ScoreId) return false;
       if (KOBFCOMHGCE != other.KOBFCOMHGCE) return false;
+      if (ScoreId != other.ScoreId) return false;
+      if (FJJDFPKGOPC != other.FJJDFPKGOPC) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (FJJDFPKGOPC != 0) hash ^= FJJDFPKGOPC.GetHashCode();
-      if (ScoreId != 0) hash ^= ScoreId.GetHashCode();
       if (KOBFCOMHGCE != 0) hash ^= KOBFCOMHGCE.GetHashCode();
+      if (ScoreId != 0) hash ^= ScoreId.GetHashCode();
+      if (FJJDFPKGOPC != 0) hash ^= FJJDFPKGOPC.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,16 +168,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (FJJDFPKGOPC != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(32);
         output.WriteUInt32(FJJDFPKGOPC);
+      }
+      if (KOBFCOMHGCE != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(KOBFCOMHGCE);
       }
       if (ScoreId != 0) {
         output.WriteRawTag(72);
         output.WriteUInt32(ScoreId);
-      }
-      if (KOBFCOMHGCE != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(KOBFCOMHGCE);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,16 +190,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (FJJDFPKGOPC != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(32);
         output.WriteUInt32(FJJDFPKGOPC);
+      }
+      if (KOBFCOMHGCE != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(KOBFCOMHGCE);
       }
       if (ScoreId != 0) {
         output.WriteRawTag(72);
         output.WriteUInt32(ScoreId);
-      }
-      if (KOBFCOMHGCE != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(KOBFCOMHGCE);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,14 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (FJJDFPKGOPC != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FJJDFPKGOPC);
+      if (KOBFCOMHGCE != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KOBFCOMHGCE);
       }
       if (ScoreId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScoreId);
       }
-      if (KOBFCOMHGCE != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KOBFCOMHGCE);
+      if (FJJDFPKGOPC != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FJJDFPKGOPC);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,14 +232,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.FJJDFPKGOPC != 0) {
-        FJJDFPKGOPC = other.FJJDFPKGOPC;
+      if (other.KOBFCOMHGCE != 0) {
+        KOBFCOMHGCE = other.KOBFCOMHGCE;
       }
       if (other.ScoreId != 0) {
         ScoreId = other.ScoreId;
       }
-      if (other.KOBFCOMHGCE != 0) {
-        KOBFCOMHGCE = other.KOBFCOMHGCE;
+      if (other.FJJDFPKGOPC != 0) {
+        FJJDFPKGOPC = other.FJJDFPKGOPC;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 32: {
             FJJDFPKGOPC = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            KOBFCOMHGCE = input.ReadUInt32();
             break;
           }
           case 72: {
             ScoreId = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            KOBFCOMHGCE = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 32: {
             FJJDFPKGOPC = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            KOBFCOMHGCE = input.ReadUInt32();
             break;
           }
           case 72: {
             ScoreId = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            KOBFCOMHGCE = input.ReadUInt32();
             break;
           }
         }

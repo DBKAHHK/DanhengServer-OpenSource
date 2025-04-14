@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static AreaStepInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJBcmVhU3RlcEluZm8ucHJvdG8aE0J1aWxkQXJlYVN0ZXAucHJvdG8iTgoM",
-            "QXJlYVN0ZXBJbmZvEiYKDmFyZWFfc3RlcF9saXN0GA0gAygLMg4uQnVpbGRB",
-            "cmVhU3RlcBIWCg5hcmVhX2dsb2JhbF9pZBgIIAEoDUIeqgIbRWdnTGluay5E",
-            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChJBcmVhU3RlcEluZm8ucHJvdG8aEVBQS0RQQUpQQUdGLnByb3RvIkYKDEFy",
+            "ZWFTdGVwSW5mbxIhCgtJTUVLSEdDSUVEThgBIAMoCzIMLlBQS0RQQUpQQUdG",
+            "EhMKC0hFSURDSUtFRFBEGAIgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BuildAreaStepReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PPKDPAJPAGFReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AreaStepInfo), global::EggLink.DanhengServer.Proto.AreaStepInfo.Parser, new[]{ "AreaStepList", "AreaGlobalId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AreaStepInfo), global::EggLink.DanhengServer.Proto.AreaStepInfo.Parser, new[]{ "IMEKHGCIEDN", "HEIDCIKEDPD" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AreaStepInfo(AreaStepInfo other) : this() {
-      areaStepList_ = other.areaStepList_.Clone();
-      areaGlobalId_ = other.areaGlobalId_;
+      iMEKHGCIEDN_ = other.iMEKHGCIEDN_.Clone();
+      hEIDCIKEDPD_ = other.hEIDCIKEDPD_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,26 +84,26 @@ namespace EggLink.DanhengServer.Proto {
       return new AreaStepInfo(this);
     }
 
-    /// <summary>Field number for the "area_step_list" field.</summary>
-    public const int AreaStepListFieldNumber = 13;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.BuildAreaStep> _repeated_areaStepList_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.BuildAreaStep.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BuildAreaStep> areaStepList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BuildAreaStep>();
+    /// <summary>Field number for the "IMEKHGCIEDN" field.</summary>
+    public const int IMEKHGCIEDNFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.PPKDPAJPAGF> _repeated_iMEKHGCIEDN_codec
+        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.PPKDPAJPAGF.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PPKDPAJPAGF> iMEKHGCIEDN_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PPKDPAJPAGF>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BuildAreaStep> AreaStepList {
-      get { return areaStepList_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PPKDPAJPAGF> IMEKHGCIEDN {
+      get { return iMEKHGCIEDN_; }
     }
 
-    /// <summary>Field number for the "area_global_id" field.</summary>
-    public const int AreaGlobalIdFieldNumber = 8;
-    private uint areaGlobalId_;
+    /// <summary>Field number for the "HEIDCIKEDPD" field.</summary>
+    public const int HEIDCIKEDPDFieldNumber = 2;
+    private uint hEIDCIKEDPD_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint AreaGlobalId {
-      get { return areaGlobalId_; }
+    public uint HEIDCIKEDPD {
+      get { return hEIDCIKEDPD_; }
       set {
-        areaGlobalId_ = value;
+        hEIDCIKEDPD_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!areaStepList_.Equals(other.areaStepList_)) return false;
-      if (AreaGlobalId != other.AreaGlobalId) return false;
+      if(!iMEKHGCIEDN_.Equals(other.iMEKHGCIEDN_)) return false;
+      if (HEIDCIKEDPD != other.HEIDCIKEDPD) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= areaStepList_.GetHashCode();
-      if (AreaGlobalId != 0) hash ^= AreaGlobalId.GetHashCode();
+      hash ^= iMEKHGCIEDN_.GetHashCode();
+      if (HEIDCIKEDPD != 0) hash ^= HEIDCIKEDPD.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (AreaGlobalId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(AreaGlobalId);
+      iMEKHGCIEDN_.WriteTo(output, _repeated_iMEKHGCIEDN_codec);
+      if (HEIDCIKEDPD != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(HEIDCIKEDPD);
       }
-      areaStepList_.WriteTo(output, _repeated_areaStepList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (AreaGlobalId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(AreaGlobalId);
+      iMEKHGCIEDN_.WriteTo(ref output, _repeated_iMEKHGCIEDN_codec);
+      if (HEIDCIKEDPD != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(HEIDCIKEDPD);
       }
-      areaStepList_.WriteTo(ref output, _repeated_areaStepList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -181,9 +181,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += areaStepList_.CalculateSize(_repeated_areaStepList_codec);
-      if (AreaGlobalId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AreaGlobalId);
+      size += iMEKHGCIEDN_.CalculateSize(_repeated_iMEKHGCIEDN_codec);
+      if (HEIDCIKEDPD != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HEIDCIKEDPD);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -197,9 +197,9 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      areaStepList_.Add(other.areaStepList_);
-      if (other.AreaGlobalId != 0) {
-        AreaGlobalId = other.AreaGlobalId;
+      iMEKHGCIEDN_.Add(other.iMEKHGCIEDN_);
+      if (other.HEIDCIKEDPD != 0) {
+        HEIDCIKEDPD = other.HEIDCIKEDPD;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
-            AreaGlobalId = input.ReadUInt32();
+          case 10: {
+            iMEKHGCIEDN_.AddEntriesFrom(input, _repeated_iMEKHGCIEDN_codec);
             break;
           }
-          case 106: {
-            areaStepList_.AddEntriesFrom(input, _repeated_areaStepList_codec);
+          case 16: {
+            HEIDCIKEDPD = input.ReadUInt32();
             break;
           }
         }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
-            AreaGlobalId = input.ReadUInt32();
+          case 10: {
+            iMEKHGCIEDN_.AddEntriesFrom(ref input, _repeated_iMEKHGCIEDN_codec);
             break;
           }
-          case 106: {
-            areaStepList_.AddEntriesFrom(ref input, _repeated_areaStepList_codec);
+          case 16: {
+            HEIDCIKEDPD = input.ReadUInt32();
             break;
           }
         }

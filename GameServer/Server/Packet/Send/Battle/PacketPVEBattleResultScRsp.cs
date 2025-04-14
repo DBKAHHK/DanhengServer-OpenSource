@@ -23,14 +23,12 @@ public class PacketPVEBattleResultScRsp : BasePacket
         var proto = new PVEBattleResultScRsp
         {
             DropData = battle.GetDropItemList(),
-            ResVersion = req.ResVersion.ToString(),
-            BinVersion = "",
             StageId = req.StageId,
             BattleId = req.BattleId,
             EndStatus = req.EndStatus,
             CheckIdentical = true,
-            Unk1 = new ItemList(),
-            Unk2 = new ItemList(),
+            ItemListUnk1 = new ItemList(),
+            ItemListUnk2 = new ItemList(),
             MultipleDropData = new ItemList(),
             EventId = (uint)battle.EventId
         };

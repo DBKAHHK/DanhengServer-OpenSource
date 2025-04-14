@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFMTU1FQk1CR0xETi5wcm90byI3CgtMTU1FQk1CR0xEThITCgtIS01JSEVK",
-            "Q0FFTRgGIAEoDRITCgtCTEhET0hNQUNCTRgCIAEoCEIeqgIbRWdnTGluay5E",
+            "Q0FFTRgIIAEoDRITCgtCTEhET0hNQUNCTRgCIAEoCEIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "HKMIHEJCAEM" field.</summary>
-    public const int HKMIHEJCAEMFieldNumber = 6;
+    public const int HKMIHEJCAEMFieldNumber = 8;
     private uint hKMIHEJCAEM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -156,7 +156,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteBool(BLHDOHMACBM);
       }
       if (HKMIHEJCAEM != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(64);
         output.WriteUInt32(HKMIHEJCAEM);
       }
       if (_unknownFields != null) {
@@ -174,7 +174,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteBool(BLHDOHMACBM);
       }
       if (HKMIHEJCAEM != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(64);
         output.WriteUInt32(HKMIHEJCAEM);
       }
       if (_unknownFields != null) {
@@ -230,7 +230,7 @@ namespace EggLink.DanhengServer.Proto {
             BLHDOHMACBM = input.ReadBool();
             break;
           }
-          case 48: {
+          case 64: {
             HKMIHEJCAEM = input.ReadUInt32();
             break;
           }
@@ -253,7 +253,7 @@ namespace EggLink.DanhengServer.Proto {
             BLHDOHMACBM = input.ReadBool();
             break;
           }
-          case 48: {
+          case 64: {
             HKMIHEJCAEM = input.ReadUInt32();
             break;
           }

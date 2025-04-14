@@ -24,7 +24,7 @@ namespace EggLink.DanhengServer.Proto {
     static ProductGiftTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVQcm9kdWN0R2lmdFR5cGUucHJvdG8qwwMKD1Byb2R1Y3RHaWZ0VHlwZRIV",
+            "ChVQcm9kdWN0R2lmdFR5cGUucHJvdG8qmgQKD1Byb2R1Y3RHaWZ0VHlwZRIV",
             "ChFQUk9EVUNUX0dJRlRfTk9ORRAAEhUKEVBST0RVQ1RfR0lGVF9DT0lOEAES",
             "GwoXUFJPRFVDVF9HSUZUX01PTlRIX0NBUkQQAhIWChJQUk9EVUNUX0dJRlRf",
             "QlBfNjgQAxIXChNQUk9EVUNUX0dJRlRfQlBfMTI4EAQSIQodUFJPRFVDVF9H",
@@ -34,8 +34,10 @@ namespace EggLink.DanhengServer.Proto {
             "T09HTEVfUE9JTlRTXzEwMBAJEiIKHlBST0RVQ1RfR0lGVF9HT09HTEVfUE9J",
             "TlRTXzE1MBAKEiIKHlBST0RVQ1RfR0lGVF9QU19QT0lOVF9DQVJEXzAzMBAL",
             "EiIKHlBST0RVQ1RfR0lGVF9QU19QT0lOVF9DQVJEXzA1MBAMEiIKHlBST0RV",
-            "Q1RfR0lGVF9QU19QT0lOVF9DQVJEXzEwMBANQh6qAhtFZ2dMaW5rLkRhbmhl",
-            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "Q1RfR0lGVF9QU19QT0lOVF9DQVJEXzEwMBANEhkKFVBST0RVQ1RfR0lGVF9Q",
+            "U05fUExVUxAOEhkKFVBST0RVQ1RfR0lGVF9TSU5HTEVfNhAPEh8KG1BST0RV",
+            "Q1RfR0lGVF9EQUlMWV9MT0dJTl8zMBAQQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.ProductGiftType), }, null, null));
@@ -59,6 +61,9 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("PRODUCT_GIFT_PS_POINT_CARD_030")] ProductGiftPsPointCard030 = 11,
     [pbr::OriginalName("PRODUCT_GIFT_PS_POINT_CARD_050")] ProductGiftPsPointCard050 = 12,
     [pbr::OriginalName("PRODUCT_GIFT_PS_POINT_CARD_100")] ProductGiftPsPointCard100 = 13,
+    [pbr::OriginalName("PRODUCT_GIFT_PSN_PLUS")] ProductGiftPsnPlus = 14,
+    [pbr::OriginalName("PRODUCT_GIFT_SINGLE_6")] ProductGiftSingle6 = 15,
+    [pbr::OriginalName("PRODUCT_GIFT_DAILY_LOGIN_30")] ProductGiftDailyLogin30 = 16,
   }
 
   #endregion

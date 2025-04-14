@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiRHZXRBY3Rpdml0eVNjaGVkdWxlQ29uZmlnU2NSc3AucHJvdG8aGkFjdGl2",
             "aXR5U2NoZWR1bGVEYXRhLnByb3RvIl8KHkdldEFjdGl2aXR5U2NoZWR1bGVD",
-            "b25maWdTY1JzcBIPCgdyZXRjb2RlGA0gASgNEiwKDXNjaGVkdWxlX2RhdGEY",
-            "BiADKAsyFS5BY3Rpdml0eVNjaGVkdWxlRGF0YUIeqgIbRWdnTGluay5EYW5o",
+            "b25maWdTY1JzcBIPCgdyZXRjb2RlGA4gASgNEiwKDXNjaGVkdWxlX2RhdGEY",
+            "BSADKAsyFS5BY3Rpdml0eVNjaGVkdWxlRGF0YUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ActivityScheduleDataReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 13;
+    public const int RetcodeFieldNumber = 14;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "schedule_data" field.</summary>
-    public const int ScheduleDataFieldNumber = 6;
+    public const int ScheduleDataFieldNumber = 5;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ActivityScheduleData> _repeated_scheduleData_codec
-        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.ActivityScheduleData.Parser);
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.ActivityScheduleData.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ActivityScheduleData> scheduleData_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ActivityScheduleData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -154,7 +154,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       scheduleData_.WriteTo(output, _repeated_scheduleData_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -169,7 +169,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       scheduleData_.WriteTo(ref output, _repeated_scheduleData_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -217,11 +217,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
+          case 42: {
             scheduleData_.AddEntriesFrom(input, _repeated_scheduleData_codec);
             break;
           }
-          case 104: {
+          case 112: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -240,11 +240,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
+          case 42: {
             scheduleData_.AddEntriesFrom(ref input, _repeated_scheduleData_codec);
             break;
           }
-          case 104: {
+          case 112: {
             Retcode = input.ReadUInt32();
             break;
           }

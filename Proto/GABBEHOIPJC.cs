@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFHQUJCRUhPSVBKQy5wcm90byI6CgtHQUJCRUhPSVBKQxIWCg5zZWxlY3Rf",
-            "aGludF9pZBgKIAEoDRITCgtEQ0pFR0dKUENERhgOIAMoDUIeqgIbRWdnTGlu",
+            "aGludF9pZBgDIAEoDRITCgtEQ0pFR0dKUENERhgIIAMoDUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_hint_id" field.</summary>
-    public const int SelectHintIdFieldNumber = 10;
+    public const int SelectHintIdFieldNumber = 3;
     private uint selectHintId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,9 +96,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "DCJEGGJPCDF" field.</summary>
-    public const int DCJEGGJPCDFFieldNumber = 14;
+    public const int DCJEGGJPCDFFieldNumber = 8;
     private static readonly pb::FieldCodec<uint> _repeated_dCJEGGJPCDF_codec
-        = pb::FieldCodec.ForUInt32(114);
+        = pb::FieldCodec.ForUInt32(66);
     private readonly pbc::RepeatedField<uint> dCJEGGJPCDF_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (SelectHintId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(24);
         output.WriteUInt32(SelectHintId);
       }
       dCJEGGJPCDF_.WriteTo(output, _repeated_dCJEGGJPCDF_codec);
@@ -166,7 +166,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (SelectHintId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(24);
         output.WriteUInt32(SelectHintId);
       }
       dCJEGGJPCDF_.WriteTo(ref output, _repeated_dCJEGGJPCDF_codec);
@@ -215,12 +215,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 80: {
+          case 24: {
             SelectHintId = input.ReadUInt32();
             break;
           }
-          case 114:
-          case 112: {
+          case 66:
+          case 64: {
             dCJEGGJPCDF_.AddEntriesFrom(input, _repeated_dCJEGGJPCDF_codec);
             break;
           }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 80: {
+          case 24: {
             SelectHintId = input.ReadUInt32();
             break;
           }
-          case 114:
-          case 112: {
+          case 66:
+          case 64: {
             dCJEGGJPCDF_.AddEntriesFrom(ref input, _repeated_dCJEGGJPCDF_codec);
             break;
           }

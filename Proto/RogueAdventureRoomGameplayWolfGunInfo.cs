@@ -27,7 +27,7 @@ namespace EggLink.DanhengServer.Proto {
             "CitSb2d1ZUFkdmVudHVyZVJvb21HYW1lcGxheVdvbGZHdW5JbmZvLnByb3Rv",
             "Gi9Sb2d1ZUFkdmVudHVyZVJvb21HYW1lcGxheVdvbGZHdW5HYW1lSW5mby5w",
             "cm90byJ1CiVSb2d1ZUFkdmVudHVyZVJvb21HYW1lcGxheVdvbGZHdW5JbmZv",
-            "Ej8KCWdhbWVfaW5mbxgOIAEoCzIqLlJvZ3VlQWR2ZW50dXJlUm9vbUdhbWVw",
+            "Ej8KCWdhbWVfaW5mbxgJIAEoCzIqLlJvZ3VlQWR2ZW50dXJlUm9vbUdhbWVw",
             "bGF5V29sZkd1bkdhbWVJbmZvSABCCwoJaW5mb19jYXNlQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -91,7 +91,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "game_info" field.</summary>
-    public const int GameInfoFieldNumber = 14;
+    public const int GameInfoFieldNumber = 9;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunGameInfo GameInfo {
@@ -106,7 +106,7 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "info_case" oneof.</summary>
     public enum InfoCaseOneofCase {
       None = 0,
-      GameInfo = 14,
+      GameInfo = 9,
     }
     private InfoCaseOneofCase infoCaseCase_ = InfoCaseOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (infoCaseCase_ == InfoCaseOneofCase.GameInfo) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(74);
         output.WriteMessage(GameInfo);
       }
       if (_unknownFields != null) {
@@ -181,7 +181,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (infoCaseCase_ == InfoCaseOneofCase.GameInfo) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(74);
         output.WriteMessage(GameInfo);
       }
       if (_unknownFields != null) {
@@ -233,7 +233,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 114: {
+          case 74: {
             global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunGameInfo subBuilder = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunGameInfo();
             if (infoCaseCase_ == InfoCaseOneofCase.GameInfo) {
               subBuilder.MergeFrom(GameInfo);
@@ -257,7 +257,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 114: {
+          case 74: {
             global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunGameInfo subBuilder = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunGameInfo();
             if (infoCaseCase_ == InfoCaseOneofCase.GameInfo) {
               subBuilder.MergeFrom(GameInfo);

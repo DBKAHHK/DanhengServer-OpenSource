@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlSb2d1ZVRhbGVudEluZm9MaXN0LnByb3RvGhVSb2d1ZVRhbGVudEluZm8u",
-            "cHJvdG8iPAoTUm9ndWVUYWxlbnRJbmZvTGlzdBIlCgt0YWxlbnRfaW5mbxgG",
+            "cHJvdG8iPAoTUm9ndWVUYWxlbnRJbmZvTGlzdBIlCgt0YWxlbnRfaW5mbxgF",
             "IAMoCzIQLlJvZ3VlVGFsZW50SW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "talent_info" field.</summary>
-    public const int TalentInfoFieldNumber = 6;
+    public const int TalentInfoFieldNumber = 5;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueTalentInfo> _repeated_talentInfo_codec
-        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.RogueTalentInfo.Parser);
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.RogueTalentInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueTalentInfo> talentInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueTalentInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
+          case 42: {
             talentInfo_.AddEntriesFrom(input, _repeated_talentInfo_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
+          case 42: {
             talentInfo_.AddEntriesFrom(ref input, _repeated_talentInfo_codec);
             break;
           }

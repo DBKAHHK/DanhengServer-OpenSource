@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static TakeQuestRewardCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpUYWtlUXVlc3RSZXdhcmRDc1JlcS5wcm90byItChRUYWtlUXVlc3RSZXdh",
-            "cmRDc1JlcRIVCg1xdWVzdF9pZF9saXN0GAQgAygNQh6qAhtFZ2dMaW5rLkRh",
-            "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChpUYWtlUXVlc3RSZXdhcmRDc1JlcS5wcm90byIyChRUYWtlUXVlc3RSZXdh",
+            "cmRDc1JlcRIaChJzdWNjX3F1ZXN0X2lkX2xpc3QYDSADKA1CHqoCG0VnZ0xp",
+            "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeQuestRewardCsReq), global::EggLink.DanhengServer.Proto.TakeQuestRewardCsReq.Parser, new[]{ "QuestIdList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeQuestRewardCsReq), global::EggLink.DanhengServer.Proto.TakeQuestRewardCsReq.Parser, new[]{ "SuccQuestIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TakeQuestRewardCsReq(TakeQuestRewardCsReq other) : this() {
-      questIdList_ = other.questIdList_.Clone();
+      succQuestIdList_ = other.succQuestIdList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new TakeQuestRewardCsReq(this);
     }
 
-    /// <summary>Field number for the "quest_id_list" field.</summary>
-    public const int QuestIdListFieldNumber = 4;
-    private static readonly pb::FieldCodec<uint> _repeated_questIdList_codec
-        = pb::FieldCodec.ForUInt32(34);
-    private readonly pbc::RepeatedField<uint> questIdList_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "succ_quest_id_list" field.</summary>
+    public const int SuccQuestIdListFieldNumber = 13;
+    private static readonly pb::FieldCodec<uint> _repeated_succQuestIdList_codec
+        = pb::FieldCodec.ForUInt32(106);
+    private readonly pbc::RepeatedField<uint> succQuestIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> QuestIdList {
-      get { return questIdList_; }
+    public pbc::RepeatedField<uint> SuccQuestIdList {
+      get { return succQuestIdList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -108,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!questIdList_.Equals(other.questIdList_)) return false;
+      if(!succQuestIdList_.Equals(other.succQuestIdList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -116,7 +116,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= questIdList_.GetHashCode();
+      hash ^= succQuestIdList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -135,7 +135,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      questIdList_.WriteTo(output, _repeated_questIdList_codec);
+      succQuestIdList_.WriteTo(output, _repeated_succQuestIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -146,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      questIdList_.WriteTo(ref output, _repeated_questIdList_codec);
+      succQuestIdList_.WriteTo(ref output, _repeated_succQuestIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += questIdList_.CalculateSize(_repeated_questIdList_codec);
+      size += succQuestIdList_.CalculateSize(_repeated_succQuestIdList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -170,7 +170,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      questIdList_.Add(other.questIdList_);
+      succQuestIdList_.Add(other.succQuestIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -186,9 +186,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34:
-          case 32: {
-            questIdList_.AddEntriesFrom(input, _repeated_questIdList_codec);
+          case 106:
+          case 104: {
+            succQuestIdList_.AddEntriesFrom(input, _repeated_succQuestIdList_codec);
             break;
           }
         }
@@ -206,9 +206,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34:
-          case 32: {
-            questIdList_.AddEntriesFrom(ref input, _repeated_questIdList_codec);
+          case 106:
+          case 104: {
+            succQuestIdList_.AddEntriesFrom(ref input, _repeated_succQuestIdList_codec);
             break;
           }
         }

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtNb25vcG9seUJ1eUdvb2RzU2NSc3AucHJvdG8iSwoVTW9ub3BvbHlCdXlH",
-            "b29kc1NjUnNwEg8KB3JldGNvZGUYBiABKA0SEAoIZ29vZHNfaWQYDSABKA0S",
-            "DwoHc2hvcF9pZBgEIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "b29kc1NjUnNwEg8KB3JldGNvZGUYBiABKA0SEAoIZ29vZHNfaWQYCSABKA0S",
+            "DwoHc2hvcF9pZBgKIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "goods_id" field.</summary>
-    public const int GoodsIdFieldNumber = 13;
+    public const int GoodsIdFieldNumber = 9;
     private uint goodsId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "shop_id" field.</summary>
-    public const int ShopIdFieldNumber = 4;
+    public const int ShopIdFieldNumber = 10;
     private uint shopId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ShopId != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(ShopId);
-      }
       if (Retcode != 0) {
         output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
       if (GoodsId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(72);
         output.WriteUInt32(GoodsId);
+      }
+      if (ShopId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(ShopId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ShopId != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(ShopId);
-      }
       if (Retcode != 0) {
         output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
       if (GoodsId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(72);
         output.WriteUInt32(GoodsId);
+      }
+      if (ShopId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(ShopId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            ShopId = input.ReadUInt32();
-            break;
-          }
           case 48: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 72: {
             GoodsId = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            ShopId = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            ShopId = input.ReadUInt32();
-            break;
-          }
           case 48: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 72: {
             GoodsId = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            ShopId = input.ReadUInt32();
             break;
           }
         }

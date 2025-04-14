@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxBZXRoZXJEaXZpZGVMaW5ldXBJbmZvLnByb3RvIkIKFkFldGhlckRpdmlk",
-            "ZUxpbmV1cEluZm8SDAoEc2xvdBgMIAEoDRIaChJhZXRoZXJfYXZhdGFyX2xp",
+            "ZUxpbmV1cEluZm8SDAoEc2xvdBgDIAEoDRIaChJhZXRoZXJfYXZhdGFyX2xp",
             "c3QYASADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "slot" field.</summary>
-    public const int SlotFieldNumber = 12;
+    public const int SlotFieldNumber = 3;
     private uint slot_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       aetherAvatarList_.WriteTo(output, _repeated_aetherAvatarList_codec);
       if (Slot != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(24);
         output.WriteUInt32(Slot);
       }
       if (_unknownFields != null) {
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       aetherAvatarList_.WriteTo(ref output, _repeated_aetherAvatarList_codec);
       if (Slot != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(24);
         output.WriteUInt32(Slot);
       }
       if (_unknownFields != null) {
@@ -221,7 +221,7 @@ namespace EggLink.DanhengServer.Proto {
             aetherAvatarList_.AddEntriesFrom(input, _repeated_aetherAvatarList_codec);
             break;
           }
-          case 96: {
+          case 24: {
             Slot = input.ReadUInt32();
             break;
           }
@@ -245,7 +245,7 @@ namespace EggLink.DanhengServer.Proto {
             aetherAvatarList_.AddEntriesFrom(ref input, _repeated_aetherAvatarList_codec);
             break;
           }
-          case 96: {
+          case 24: {
             Slot = input.ReadUInt32();
             break;
           }

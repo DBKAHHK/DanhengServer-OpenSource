@@ -24,14 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static HAKMEBIAJCFReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFIQUtNRUJJQUpDRi5wcm90bxoYVHJhaW5QYXJ0eUdhbWVHcmlkLnByb3Rv",
-            "IjUKC0hBS01FQklBSkNGEiYKCWdyaWRfbGlzdBgFIAMoCzITLlRyYWluUGFy",
-            "dHlHYW1lR3JpZEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "ChFIQUtNRUJJQUpDRi5wcm90bxoRS0tOTE1DSklHQUYucHJvdG8iMAoLSEFL",
+            "TUVCSUFKQ0YSIQoLTUtPQU1CTUtESUQYBiADKAsyDC5LS05MTUNKSUdBRkIe",
+            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyGameGridReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KKNLMCJIGAFReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HAKMEBIAJCF), global::EggLink.DanhengServer.Proto.HAKMEBIAJCF.Parser, new[]{ "GridList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HAKMEBIAJCF), global::EggLink.DanhengServer.Proto.HAKMEBIAJCF.Parser, new[]{ "MKOAMBMKDID" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HAKMEBIAJCF(HAKMEBIAJCF other) : this() {
-      gridList_ = other.gridList_.Clone();
+      mKOAMBMKDID_ = other.mKOAMBMKDID_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new HAKMEBIAJCF(this);
     }
 
-    /// <summary>Field number for the "grid_list" field.</summary>
-    public const int GridListFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.TrainPartyGameGrid> _repeated_gridList_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.TrainPartyGameGrid.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGameGrid> gridList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGameGrid>();
+    /// <summary>Field number for the "MKOAMBMKDID" field.</summary>
+    public const int MKOAMBMKDIDFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.KKNLMCJIGAF> _repeated_mKOAMBMKDID_codec
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.KKNLMCJIGAF.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KKNLMCJIGAF> mKOAMBMKDID_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KKNLMCJIGAF>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrainPartyGameGrid> GridList {
-      get { return gridList_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KKNLMCJIGAF> MKOAMBMKDID {
+      get { return mKOAMBMKDID_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -109,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!gridList_.Equals(other.gridList_)) return false;
+      if(!mKOAMBMKDID_.Equals(other.mKOAMBMKDID_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +116,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= gridList_.GetHashCode();
+      hash ^= mKOAMBMKDID_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,7 +135,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      gridList_.WriteTo(output, _repeated_gridList_codec);
+      mKOAMBMKDID_.WriteTo(output, _repeated_mKOAMBMKDID_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -147,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      gridList_.WriteTo(ref output, _repeated_gridList_codec);
+      mKOAMBMKDID_.WriteTo(ref output, _repeated_mKOAMBMKDID_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -158,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += gridList_.CalculateSize(_repeated_gridList_codec);
+      size += mKOAMBMKDID_.CalculateSize(_repeated_mKOAMBMKDID_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -171,7 +170,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      gridList_.Add(other.gridList_);
+      mKOAMBMKDID_.Add(other.mKOAMBMKDID_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -187,8 +186,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
-            gridList_.AddEntriesFrom(input, _repeated_gridList_codec);
+          case 50: {
+            mKOAMBMKDID_.AddEntriesFrom(input, _repeated_mKOAMBMKDID_codec);
             break;
           }
         }
@@ -206,8 +205,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
-            gridList_.AddEntriesFrom(ref input, _repeated_gridList_codec);
+          case 50: {
+            mKOAMBMKDID_.AddEntriesFrom(ref input, _repeated_mKOAMBMKDID_codec);
             break;
           }
         }

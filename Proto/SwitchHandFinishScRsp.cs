@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static SwitchHandFinishScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtTd2l0Y2hIYW5kRmluaXNoU2NSc3AucHJvdG8aEUZQUFBKQ1BJSkpGLnBy",
-            "b3RvIksKFVN3aXRjaEhhbmRGaW5pc2hTY1JzcBIPCgdyZXRjb2RlGAUgASgN",
-            "EiEKC0NNRk1BQ01JUEVFGA4gASgLMgwuRlBQUEpDUElKSkZCHqoCG0VnZ0xp",
-            "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChtTd2l0Y2hIYW5kRmluaXNoU2NSc3AucHJvdG8aDkhhbmRJbmZvLnByb3Rv",
+            "IkgKFVN3aXRjaEhhbmRGaW5pc2hTY1JzcBIPCgdyZXRjb2RlGAQgASgNEh4K",
+            "C0NNRk1BQ01JUEVFGAsgASgLMgkuSGFuZEluZm9CHqoCG0VnZ0xpbmsuRGFu",
+            "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FPPPJCPIJJFReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HandInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SwitchHandFinishScRsp), global::EggLink.DanhengServer.Proto.SwitchHandFinishScRsp.Parser, new[]{ "Retcode", "CMFMACMIPEE" }, null, null, null, null)
           }));
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 5;
+    public const int RetcodeFieldNumber = 4;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,11 +97,11 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "CMFMACMIPEE" field.</summary>
-    public const int CMFMACMIPEEFieldNumber = 14;
-    private global::EggLink.DanhengServer.Proto.FPPPJCPIJJF cMFMACMIPEE_;
+    public const int CMFMACMIPEEFieldNumber = 11;
+    private global::EggLink.DanhengServer.Proto.HandInfo cMFMACMIPEE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.FPPPJCPIJJF CMFMACMIPEE {
+    public global::EggLink.DanhengServer.Proto.HandInfo CMFMACMIPEE {
       get { return cMFMACMIPEE_; }
       set {
         cMFMACMIPEE_ = value;
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
       }
       if (cMFMACMIPEE_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(90);
         output.WriteMessage(CMFMACMIPEE);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
       }
       if (cMFMACMIPEE_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(90);
         output.WriteMessage(CMFMACMIPEE);
       }
       if (_unknownFields != null) {
@@ -211,7 +211,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.cMFMACMIPEE_ != null) {
         if (cMFMACMIPEE_ == null) {
-          CMFMACMIPEE = new global::EggLink.DanhengServer.Proto.FPPPJCPIJJF();
+          CMFMACMIPEE = new global::EggLink.DanhengServer.Proto.HandInfo();
         }
         CMFMACMIPEE.MergeFrom(other.CMFMACMIPEE);
       }
@@ -230,13 +230,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 32: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 114: {
+          case 90: {
             if (cMFMACMIPEE_ == null) {
-              CMFMACMIPEE = new global::EggLink.DanhengServer.Proto.FPPPJCPIJJF();
+              CMFMACMIPEE = new global::EggLink.DanhengServer.Proto.HandInfo();
             }
             input.ReadMessage(CMFMACMIPEE);
             break;
@@ -256,13 +256,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 32: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 114: {
+          case 90: {
             if (cMFMACMIPEE_ == null) {
-              CMFMACMIPEE = new global::EggLink.DanhengServer.Proto.FPPPJCPIJJF();
+              CMFMACMIPEE = new global::EggLink.DanhengServer.Proto.HandInfo();
             }
             input.ReadMessage(CMFMACMIPEE);
             break;

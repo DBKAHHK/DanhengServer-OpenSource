@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5BY3RpdmF0ZUZhcm1FbGVtZW50U2NSc3AucHJvdG8iUwoYQWN0aXZhdGVG",
-            "YXJtRWxlbWVudFNjUnNwEg8KB3JldGNvZGUYCCABKA0SEwoLd29ybGRfbGV2",
-            "ZWwYCSABKA0SEQoJZW50aXR5X2lkGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "YXJtRWxlbWVudFNjUnNwEg8KB3JldGNvZGUYDSABKA0SEwoLd29ybGRfbGV2",
+            "ZWwYCSABKA0SEQoJZW50aXR5X2lkGA4gASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 8;
+    public const int RetcodeFieldNumber = 13;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "entity_id" field.</summary>
-    public const int EntityIdFieldNumber = 13;
+    public const int EntityIdFieldNumber = 14;
     private uint entityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,16 +167,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(Retcode);
-      }
       if (WorldLevel != 0) {
         output.WriteRawTag(72);
         output.WriteUInt32(WorldLevel);
       }
-      if (EntityId != 0) {
+      if (Retcode != 0) {
         output.WriteRawTag(104);
+        output.WriteUInt32(Retcode);
+      }
+      if (EntityId != 0) {
+        output.WriteRawTag(112);
         output.WriteUInt32(EntityId);
       }
       if (_unknownFields != null) {
@@ -189,16 +189,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(Retcode);
-      }
       if (WorldLevel != 0) {
         output.WriteRawTag(72);
         output.WriteUInt32(WorldLevel);
       }
-      if (EntityId != 0) {
+      if (Retcode != 0) {
         output.WriteRawTag(104);
+        output.WriteUInt32(Retcode);
+      }
+      if (EntityId != 0) {
+        output.WriteRawTag(112);
         output.WriteUInt32(EntityId);
       }
       if (_unknownFields != null) {
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
           case 72: {
             WorldLevel = input.ReadUInt32();
             break;
           }
           case 104: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 112: {
             EntityId = input.ReadUInt32();
             break;
           }
@@ -283,15 +283,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
           case 72: {
             WorldLevel = input.ReadUInt32();
             break;
           }
           case 104: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 112: {
             EntityId = input.ReadUInt32();
             break;
           }

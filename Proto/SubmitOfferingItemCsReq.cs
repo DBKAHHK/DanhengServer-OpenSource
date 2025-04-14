@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1TdWJtaXRPZmZlcmluZ0l0ZW1Dc1JlcS5wcm90byJRChdTdWJtaXRPZmZl",
-            "cmluZ0l0ZW1Dc1JlcRITCgtvZmZlcmluZ19pZBgBIAEoDRIhChlpbnRlcmFj",
-            "dGVkX3Byb3BfZW50aXR5X2lkGAYgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "cmluZ0l0ZW1Dc1JlcRIhChlpbnRlcmFjdGVkX3Byb3BfZW50aXR5X2lkGAsg",
+            "ASgNEhMKC29mZmVyaW5nX2lkGA8gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SubmitOfferingItemCsReq), global::EggLink.DanhengServer.Proto.SubmitOfferingItemCsReq.Parser, new[]{ "OfferingId", "InteractedPropEntityId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SubmitOfferingItemCsReq), global::EggLink.DanhengServer.Proto.SubmitOfferingItemCsReq.Parser, new[]{ "InteractedPropEntityId", "OfferingId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SubmitOfferingItemCsReq(SubmitOfferingItemCsReq other) : this() {
-      offeringId_ = other.offeringId_;
       interactedPropEntityId_ = other.interactedPropEntityId_;
+      offeringId_ = other.offeringId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new SubmitOfferingItemCsReq(this);
     }
 
-    /// <summary>Field number for the "offering_id" field.</summary>
-    public const int OfferingIdFieldNumber = 1;
-    private uint offeringId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint OfferingId {
-      get { return offeringId_; }
-      set {
-        offeringId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "interacted_prop_entity_id" field.</summary>
-    public const int InteractedPropEntityIdFieldNumber = 6;
+    public const int InteractedPropEntityIdFieldNumber = 11;
     private uint interactedPropEntityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return interactedPropEntityId_; }
       set {
         interactedPropEntityId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "offering_id" field.</summary>
+    public const int OfferingIdFieldNumber = 15;
+    private uint offeringId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint OfferingId {
+      get { return offeringId_; }
+      set {
+        offeringId_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (OfferingId != other.OfferingId) return false;
       if (InteractedPropEntityId != other.InteractedPropEntityId) return false;
+      if (OfferingId != other.OfferingId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (OfferingId != 0) hash ^= OfferingId.GetHashCode();
       if (InteractedPropEntityId != 0) hash ^= InteractedPropEntityId.GetHashCode();
+      if (OfferingId != 0) hash ^= OfferingId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (OfferingId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(OfferingId);
-      }
       if (InteractedPropEntityId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(88);
         output.WriteUInt32(InteractedPropEntityId);
+      }
+      if (OfferingId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(OfferingId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (OfferingId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(OfferingId);
-      }
       if (InteractedPropEntityId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(88);
         output.WriteUInt32(InteractedPropEntityId);
+      }
+      if (OfferingId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(OfferingId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (OfferingId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OfferingId);
-      }
       if (InteractedPropEntityId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(InteractedPropEntityId);
+      }
+      if (OfferingId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OfferingId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.OfferingId != 0) {
-        OfferingId = other.OfferingId;
-      }
       if (other.InteractedPropEntityId != 0) {
         InteractedPropEntityId = other.InteractedPropEntityId;
+      }
+      if (other.OfferingId != 0) {
+        OfferingId = other.OfferingId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            OfferingId = input.ReadUInt32();
+          case 88: {
+            InteractedPropEntityId = input.ReadUInt32();
             break;
           }
-          case 48: {
-            InteractedPropEntityId = input.ReadUInt32();
+          case 120: {
+            OfferingId = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            OfferingId = input.ReadUInt32();
+          case 88: {
+            InteractedPropEntityId = input.ReadUInt32();
             break;
           }
-          case 48: {
-            InteractedPropEntityId = input.ReadUInt32();
+          case 120: {
+            OfferingId = input.ReadUInt32();
             break;
           }
         }

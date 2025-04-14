@@ -24,12 +24,11 @@ namespace EggLink.DanhengServer.Proto {
     static ENJHDLHKINOReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFFTkpIRExIS0lOTy5wcm90bxoaVHJhaW5QYXJ0eUFjdGlvbkluZm8ucHJv",
-            "dG8iPAoLRU5KSERMSEtJTk8SLQoOcGVuZGluZ19hY3Rpb24YCiABKAsyFS5U",
-            "cmFpblBhcnR5QWN0aW9uSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
-            "LlByb3RvYgZwcm90bzM="));
+            "ChFFTkpIRExIS0lOTy5wcm90bxoRR0NGRUhNRU5PTk0ucHJvdG8iMwoLRU5K",
+            "SERMSEtJTk8SJAoOcGVuZGluZ19hY3Rpb24YASABKAsyDC5HQ0ZFSE1FTk9O",
+            "TUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyActionInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GCFEHMENONMReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ENJHDLHKINO), global::EggLink.DanhengServer.Proto.ENJHDLHKINO.Parser, new[]{ "PendingAction" }, null, null, null, null)
           }));
@@ -84,11 +83,11 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "pending_action" field.</summary>
-    public const int PendingActionFieldNumber = 10;
-    private global::EggLink.DanhengServer.Proto.TrainPartyActionInfo pendingAction_;
+    public const int PendingActionFieldNumber = 1;
+    private global::EggLink.DanhengServer.Proto.GCFEHMENONM pendingAction_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.TrainPartyActionInfo PendingAction {
+    public global::EggLink.DanhengServer.Proto.GCFEHMENONM PendingAction {
       get { return pendingAction_; }
       set {
         pendingAction_ = value;
@@ -138,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (pendingAction_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(10);
         output.WriteMessage(PendingAction);
       }
       if (_unknownFields != null) {
@@ -152,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (pendingAction_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(10);
         output.WriteMessage(PendingAction);
       }
       if (_unknownFields != null) {
@@ -182,7 +181,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.pendingAction_ != null) {
         if (pendingAction_ == null) {
-          PendingAction = new global::EggLink.DanhengServer.Proto.TrainPartyActionInfo();
+          PendingAction = new global::EggLink.DanhengServer.Proto.GCFEHMENONM();
         }
         PendingAction.MergeFrom(other.PendingAction);
       }
@@ -201,9 +200,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 82: {
+          case 10: {
             if (pendingAction_ == null) {
-              PendingAction = new global::EggLink.DanhengServer.Proto.TrainPartyActionInfo();
+              PendingAction = new global::EggLink.DanhengServer.Proto.GCFEHMENONM();
             }
             input.ReadMessage(PendingAction);
             break;
@@ -223,9 +222,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 82: {
+          case 10: {
             if (pendingAction_ == null) {
-              PendingAction = new global::EggLink.DanhengServer.Proto.TrainPartyActionInfo();
+              PendingAction = new global::EggLink.DanhengServer.Proto.GCFEHMENONM();
             }
             input.ReadMessage(PendingAction);
             break;

@@ -24,13 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static RegionStopScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhSZWdpb25TdG9wU2NOb3RpZnkucHJvdG8iPgoSUmVnaW9uU3RvcFNjTm90",
-            "aWZ5EhMKC0ZMSEVQUEdCRUlKGAMgASgDEhMKC0NOT0pBSkFCTU5GGAYgASgD",
-            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChhSZWdpb25TdG9wU2NOb3RpZnkucHJvdG8iRAoSUmVnaW9uU3RvcFNjTm90",
+            "aWZ5EhUKDXN0b3BfZW5kX3RpbWUYByABKAMSFwoPc3RvcF9iZWdpbl90aW1l",
+            "GAggASgDQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RegionStopScNotify), global::EggLink.DanhengServer.Proto.RegionStopScNotify.Parser, new[]{ "FLHEPPGBEIJ", "CNOJAJABMNF" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RegionStopScNotify), global::EggLink.DanhengServer.Proto.RegionStopScNotify.Parser, new[]{ "StopEndTime", "StopBeginTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RegionStopScNotify(RegionStopScNotify other) : this() {
-      fLHEPPGBEIJ_ = other.fLHEPPGBEIJ_;
-      cNOJAJABMNF_ = other.cNOJAJABMNF_;
+      stopEndTime_ = other.stopEndTime_;
+      stopBeginTime_ = other.stopBeginTime_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,27 +84,27 @@ namespace EggLink.DanhengServer.Proto {
       return new RegionStopScNotify(this);
     }
 
-    /// <summary>Field number for the "FLHEPPGBEIJ" field.</summary>
-    public const int FLHEPPGBEIJFieldNumber = 3;
-    private long fLHEPPGBEIJ_;
+    /// <summary>Field number for the "stop_end_time" field.</summary>
+    public const int StopEndTimeFieldNumber = 7;
+    private long stopEndTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long FLHEPPGBEIJ {
-      get { return fLHEPPGBEIJ_; }
+    public long StopEndTime {
+      get { return stopEndTime_; }
       set {
-        fLHEPPGBEIJ_ = value;
+        stopEndTime_ = value;
       }
     }
 
-    /// <summary>Field number for the "CNOJAJABMNF" field.</summary>
-    public const int CNOJAJABMNFFieldNumber = 6;
-    private long cNOJAJABMNF_;
+    /// <summary>Field number for the "stop_begin_time" field.</summary>
+    public const int StopBeginTimeFieldNumber = 8;
+    private long stopBeginTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long CNOJAJABMNF {
-      get { return cNOJAJABMNF_; }
+    public long StopBeginTime {
+      get { return stopBeginTime_; }
       set {
-        cNOJAJABMNF_ = value;
+        stopBeginTime_ = value;
       }
     }
 
@@ -122,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FLHEPPGBEIJ != other.FLHEPPGBEIJ) return false;
-      if (CNOJAJABMNF != other.CNOJAJABMNF) return false;
+      if (StopEndTime != other.StopEndTime) return false;
+      if (StopBeginTime != other.StopBeginTime) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (FLHEPPGBEIJ != 0L) hash ^= FLHEPPGBEIJ.GetHashCode();
-      if (CNOJAJABMNF != 0L) hash ^= CNOJAJABMNF.GetHashCode();
+      if (StopEndTime != 0L) hash ^= StopEndTime.GetHashCode();
+      if (StopBeginTime != 0L) hash ^= StopBeginTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FLHEPPGBEIJ != 0L) {
-        output.WriteRawTag(24);
-        output.WriteInt64(FLHEPPGBEIJ);
+      if (StopEndTime != 0L) {
+        output.WriteRawTag(56);
+        output.WriteInt64(StopEndTime);
       }
-      if (CNOJAJABMNF != 0L) {
-        output.WriteRawTag(48);
-        output.WriteInt64(CNOJAJABMNF);
+      if (StopBeginTime != 0L) {
+        output.WriteRawTag(64);
+        output.WriteInt64(StopBeginTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FLHEPPGBEIJ != 0L) {
-        output.WriteRawTag(24);
-        output.WriteInt64(FLHEPPGBEIJ);
+      if (StopEndTime != 0L) {
+        output.WriteRawTag(56);
+        output.WriteInt64(StopEndTime);
       }
-      if (CNOJAJABMNF != 0L) {
-        output.WriteRawTag(48);
-        output.WriteInt64(CNOJAJABMNF);
+      if (StopBeginTime != 0L) {
+        output.WriteRawTag(64);
+        output.WriteInt64(StopBeginTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (FLHEPPGBEIJ != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(FLHEPPGBEIJ);
+      if (StopEndTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(StopEndTime);
       }
-      if (CNOJAJABMNF != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(CNOJAJABMNF);
+      if (StopBeginTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(StopBeginTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.FLHEPPGBEIJ != 0L) {
-        FLHEPPGBEIJ = other.FLHEPPGBEIJ;
+      if (other.StopEndTime != 0L) {
+        StopEndTime = other.StopEndTime;
       }
-      if (other.CNOJAJABMNF != 0L) {
-        CNOJAJABMNF = other.CNOJAJABMNF;
+      if (other.StopBeginTime != 0L) {
+        StopBeginTime = other.StopBeginTime;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            FLHEPPGBEIJ = input.ReadInt64();
+          case 56: {
+            StopEndTime = input.ReadInt64();
             break;
           }
-          case 48: {
-            CNOJAJABMNF = input.ReadInt64();
+          case 64: {
+            StopBeginTime = input.ReadInt64();
             break;
           }
         }
@@ -249,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            FLHEPPGBEIJ = input.ReadInt64();
+          case 56: {
+            StopEndTime = input.ReadInt64();
             break;
           }
-          case 48: {
-            CNOJAJABMNF = input.ReadInt64();
+          case 64: {
+            StopBeginTime = input.ReadInt64();
             break;
           }
         }

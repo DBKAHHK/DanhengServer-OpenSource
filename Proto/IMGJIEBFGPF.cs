@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static IMGJIEBFGPFReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFJTUdKSUVCRkdQRi5wcm90byIxCgtJTUdKSUVCRkdQRhINCgVsZXZlbBgH",
-            "IAEoDRITCgtORUNJTEpPSkdBThgEIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "ChFJTUdKSUVCRkdQRi5wcm90byIxCgtJTUdKSUVCRkdQRhITCgtORUNJTEpP",
+            "SkdBThgNIAEoDRINCgVsZXZlbBgHIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.IMGJIEBFGPF), global::EggLink.DanhengServer.Proto.IMGJIEBFGPF.Parser, new[]{ "Level", "NECILJOJGAN" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.IMGJIEBFGPF), global::EggLink.DanhengServer.Proto.IMGJIEBFGPF.Parser, new[]{ "NECILJOJGAN", "Level" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IMGJIEBFGPF(IMGJIEBFGPF other) : this() {
-      level_ = other.level_;
       nECILJOJGAN_ = other.nECILJOJGAN_;
+      level_ = other.level_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -81,6 +81,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IMGJIEBFGPF Clone() {
       return new IMGJIEBFGPF(this);
+    }
+
+    /// <summary>Field number for the "NECILJOJGAN" field.</summary>
+    public const int NECILJOJGANFieldNumber = 13;
+    private uint nECILJOJGAN_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint NECILJOJGAN {
+      get { return nECILJOJGAN_; }
+      set {
+        nECILJOJGAN_ = value;
+      }
     }
 
     /// <summary>Field number for the "level" field.</summary>
@@ -92,18 +104,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return level_; }
       set {
         level_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "NECILJOJGAN" field.</summary>
-    public const int NECILJOJGANFieldNumber = 4;
-    private uint nECILJOJGAN_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NECILJOJGAN {
-      get { return nECILJOJGAN_; }
-      set {
-        nECILJOJGAN_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Level != other.Level) return false;
       if (NECILJOJGAN != other.NECILJOJGAN) return false;
+      if (Level != other.Level) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Level != 0) hash ^= Level.GetHashCode();
       if (NECILJOJGAN != 0) hash ^= NECILJOJGAN.GetHashCode();
+      if (Level != 0) hash ^= Level.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (NECILJOJGAN != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(NECILJOJGAN);
-      }
       if (Level != 0) {
         output.WriteRawTag(56);
         output.WriteUInt32(Level);
+      }
+      if (NECILJOJGAN != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(NECILJOJGAN);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (NECILJOJGAN != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(NECILJOJGAN);
-      }
       if (Level != 0) {
         output.WriteRawTag(56);
         output.WriteUInt32(Level);
+      }
+      if (NECILJOJGAN != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(NECILJOJGAN);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Level != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
-      }
       if (NECILJOJGAN != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NECILJOJGAN);
+      }
+      if (Level != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Level != 0) {
-        Level = other.Level;
-      }
       if (other.NECILJOJGAN != 0) {
         NECILJOJGAN = other.NECILJOJGAN;
+      }
+      if (other.Level != 0) {
+        Level = other.Level;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            NECILJOJGAN = input.ReadUInt32();
-            break;
-          }
           case 56: {
             Level = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            NECILJOJGAN = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            NECILJOJGAN = input.ReadUInt32();
-            break;
-          }
           case 56: {
             Level = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            NECILJOJGAN = input.ReadUInt32();
             break;
           }
         }

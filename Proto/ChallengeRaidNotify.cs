@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChlDaGFsbGVuZ2VSYWlkTm90aWZ5LnByb3RvGhNDaGFsbGVuZ2VSYWlkLnBy",
             "b3RvIj0KE0NoYWxsZW5nZVJhaWROb3RpZnkSJgoOY2hhbGxlbmdlX3JhaWQY",
-            "CCABKAsyDi5DaGFsbGVuZ2VSYWlkQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "ByABKAsyDi5DaGFsbGVuZ2VSYWlkQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeRaidReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "challenge_raid" field.</summary>
-    public const int ChallengeRaidFieldNumber = 8;
+    public const int ChallengeRaidFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.ChallengeRaid challengeRaid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (challengeRaid_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(58);
         output.WriteMessage(ChallengeRaid);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (challengeRaid_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(58);
         output.WriteMessage(ChallengeRaid);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66: {
+          case 58: {
             if (challengeRaid_ == null) {
               ChallengeRaid = new global::EggLink.DanhengServer.Proto.ChallengeRaid();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66: {
+          case 58: {
             if (challengeRaid_ == null) {
               ChallengeRaid = new global::EggLink.DanhengServer.Proto.ChallengeRaid();
             }

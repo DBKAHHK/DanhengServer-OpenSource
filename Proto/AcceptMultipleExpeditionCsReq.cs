@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNBY2NlcHRNdWx0aXBsZUV4cGVkaXRpb25Dc1JlcS5wcm90bxoURXhwZWRp",
             "dGlvbkluZm8ucHJvdG8iRAodQWNjZXB0TXVsdGlwbGVFeHBlZGl0aW9uQ3NS",
-            "ZXESIwoKZXhwZWRpdGlvbhgBIAMoCzIPLkV4cGVkaXRpb25JbmZvQh6qAhtF",
+            "ZXESIwoKZXhwZWRpdGlvbhgCIAMoCzIPLkV4cGVkaXRpb25JbmZvQh6qAhtF",
             "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ExpeditionInfoReflection.Descriptor, },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "expedition" field.</summary>
-    public const int ExpeditionFieldNumber = 1;
+    public const int ExpeditionFieldNumber = 2;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ExpeditionInfo> _repeated_expedition_codec
-        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.ExpeditionInfo.Parser);
+        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.ExpeditionInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ExpeditionInfo> expedition_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ExpeditionInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 18: {
             expedition_.AddEntriesFrom(input, _repeated_expedition_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 18: {
             expedition_.AddEntriesFrom(ref input, _repeated_expedition_codec);
             break;
           }

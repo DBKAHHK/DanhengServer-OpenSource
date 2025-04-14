@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CilTd29yZFRyYWluaW5nRGFpbHlQaGFzZUNvbmZpcm1Dc1JlcS5wcm90bxoh",
             "U3dvcmRUcmFpbmluZ0RhaWx5UGhhc2VUeXBlLnByb3RvIlgKI1N3b3JkVHJh",
-            "aW5pbmdEYWlseVBoYXNlQ29uZmlybUNzUmVxEjEKC0lGRU5MTkhMQkFCGAsg",
+            "aW5pbmdEYWlseVBoYXNlQ29uZmlybUNzUmVxEjEKC0lGRU5MTkhMQkFCGA8g",
             "ASgOMhwuU3dvcmRUcmFpbmluZ0RhaWx5UGhhc2VUeXBlQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "IFENLNHLBAB" field.</summary>
-    public const int IFENLNHLBABFieldNumber = 11;
+    public const int IFENLNHLBABFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType iFENLNHLBAB_ = global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -139,7 +139,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (IFENLNHLBAB != global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType.None) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(120);
         output.WriteEnum((int) IFENLNHLBAB);
       }
       if (_unknownFields != null) {
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IFENLNHLBAB != global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType.None) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(120);
         output.WriteEnum((int) IFENLNHLBAB);
       }
       if (_unknownFields != null) {
@@ -199,7 +199,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 88: {
+          case 120: {
             IFENLNHLBAB = (global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType) input.ReadEnum();
             break;
           }
@@ -218,7 +218,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 88: {
+          case 120: {
             IFENLNHLBAB = (global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType) input.ReadEnum();
             break;
           }

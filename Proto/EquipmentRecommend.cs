@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChhFcXVpcG1lbnRSZWNvbW1lbmQucHJvdG8aHEVxdWlwbWVudFJlY29tbWVu",
             "ZEluZm8ucHJvdG8iRQoSRXF1aXBtZW50UmVjb21tZW5kEi8KDmVxdWlwbWVu",
-            "dF9saXN0GAogAygLMhcuRXF1aXBtZW50UmVjb21tZW5kSW5mb0IeqgIbRWdn",
+            "dF9saXN0GAYgAygLMhcuRXF1aXBtZW50UmVjb21tZW5kSW5mb0IeqgIbRWdn",
             "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EquipmentRecommendInfoReflection.Descriptor, },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "equipment_list" field.</summary>
-    public const int EquipmentListFieldNumber = 10;
+    public const int EquipmentListFieldNumber = 6;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EquipmentRecommendInfo> _repeated_equipmentList_codec
-        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.EquipmentRecommendInfo.Parser);
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.EquipmentRecommendInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EquipmentRecommendInfo> equipmentList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EquipmentRecommendInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 82: {
+          case 50: {
             equipmentList_.AddEntriesFrom(input, _repeated_equipmentList_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 82: {
+          case 50: {
             equipmentList_.AddEntriesFrom(ref input, _repeated_equipmentList_codec);
             break;
           }

@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1HZXRSZWxpY0ZpbHRlclBsYW5TY1JzcC5wcm90bxoVUmVsaWNGaWx0ZXJQ",
-            "bGFuLnByb3RvIlkKF0dldFJlbGljRmlsdGVyUGxhblNjUnNwEg8KB1JldGNv",
-            "ZGUYCSABKA0SLQoTUmVsaWNGaWx0ZXJQbGFuTGlzdBgIIAMoCzIQLlJlbGlj",
-            "RmlsdGVyUGxhbkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "bGFuLnByb3RvIlkKF0dldFJlbGljRmlsdGVyUGxhblNjUnNwEi0KE1JlbGlj",
+            "RmlsdGVyUGxhbkxpc3QYAiADKAsyEC5SZWxpY0ZpbHRlclBsYW4SDwoHUmV0",
+            "Y29kZRgFIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RelicFilterPlanReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRelicFilterPlanScRsp), global::EggLink.DanhengServer.Proto.GetRelicFilterPlanScRsp.Parser, new[]{ "Retcode", "RelicFilterPlanList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRelicFilterPlanScRsp), global::EggLink.DanhengServer.Proto.GetRelicFilterPlanScRsp.Parser, new[]{ "RelicFilterPlanList", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetRelicFilterPlanScRsp(GetRelicFilterPlanScRsp other) : this() {
-      retcode_ = other.retcode_;
       relicFilterPlanList_ = other.relicFilterPlanList_.Clone();
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,8 +85,19 @@ namespace EggLink.DanhengServer.Proto {
       return new GetRelicFilterPlanScRsp(this);
     }
 
+    /// <summary>Field number for the "RelicFilterPlanList" field.</summary>
+    public const int RelicFilterPlanListFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RelicFilterPlan> _repeated_relicFilterPlanList_codec
+        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.RelicFilterPlan.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RelicFilterPlan> relicFilterPlanList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RelicFilterPlan>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RelicFilterPlan> RelicFilterPlanList {
+      get { return relicFilterPlanList_; }
+    }
+
     /// <summary>Field number for the "Retcode" field.</summary>
-    public const int RetcodeFieldNumber = 9;
+    public const int RetcodeFieldNumber = 5;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,17 +106,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         retcode_ = value;
       }
-    }
-
-    /// <summary>Field number for the "RelicFilterPlanList" field.</summary>
-    public const int RelicFilterPlanListFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RelicFilterPlan> _repeated_relicFilterPlanList_codec
-        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.RelicFilterPlan.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RelicFilterPlan> relicFilterPlanList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RelicFilterPlan>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RelicFilterPlan> RelicFilterPlanList {
-      get { return relicFilterPlanList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
       if(!relicFilterPlanList_.Equals(other.relicFilterPlanList_)) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       hash ^= relicFilterPlanList_.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -154,7 +154,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       relicFilterPlanList_.WriteTo(output, _repeated_relicFilterPlanList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -169,7 +169,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       relicFilterPlanList_.WriteTo(ref output, _repeated_relicFilterPlanList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -182,10 +182,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += relicFilterPlanList_.CalculateSize(_repeated_relicFilterPlanList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += relicFilterPlanList_.CalculateSize(_repeated_relicFilterPlanList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -198,10 +198,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      relicFilterPlanList_.Add(other.relicFilterPlanList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      relicFilterPlanList_.Add(other.relicFilterPlanList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -217,11 +217,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66: {
+          case 18: {
             relicFilterPlanList_.AddEntriesFrom(input, _repeated_relicFilterPlanList_codec);
             break;
           }
-          case 72: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -240,11 +240,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66: {
+          case 18: {
             relicFilterPlanList_.AddEntriesFrom(ref input, _repeated_relicFilterPlanList_codec);
             break;
           }
-          case 72: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }

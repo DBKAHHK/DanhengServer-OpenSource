@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFETU9ESU5MR0NDQi5wcm90bxoWUm9ndWVCb290aFN0YXR1cy5wcm90byJa",
-            "CgtETU9ESU5MR0NDQhITCgtFT05MTURDQk5NRRgKIAEoDRIhCgZzdGF0dXMY",
-            "BiABKA4yES5Sb2d1ZUJvb3RoU3RhdHVzEhMKC0tCREZCR0lOTkJKGA4gASgN",
+            "CgtETU9ESU5MR0NDQhITCgtLQkRGQkdJTk5CShgOIAEoDRITCgtFT05MTURD",
+            "Qk5NRRgGIAEoDRIhCgZzdGF0dXMYByABKA4yES5Sb2d1ZUJvb3RoU3RhdHVz",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueBoothStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DMODINLGCCB), global::EggLink.DanhengServer.Proto.DMODINLGCCB.Parser, new[]{ "EONLMDCBNME", "Status", "KBDFBGINNBJ" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DMODINLGCCB), global::EggLink.DanhengServer.Proto.DMODINLGCCB.Parser, new[]{ "KBDFBGINNBJ", "EONLMDCBNME", "Status" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DMODINLGCCB(DMODINLGCCB other) : this() {
+      kBDFBGINNBJ_ = other.kBDFBGINNBJ_;
       eONLMDCBNME_ = other.eONLMDCBNME_;
       status_ = other.status_;
-      kBDFBGINNBJ_ = other.kBDFBGINNBJ_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,30 +83,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DMODINLGCCB Clone() {
       return new DMODINLGCCB(this);
-    }
-
-    /// <summary>Field number for the "EONLMDCBNME" field.</summary>
-    public const int EONLMDCBNMEFieldNumber = 10;
-    private uint eONLMDCBNME_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint EONLMDCBNME {
-      get { return eONLMDCBNME_; }
-      set {
-        eONLMDCBNME_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 6;
-    private global::EggLink.DanhengServer.Proto.RogueBoothStatus status_ = global::EggLink.DanhengServer.Proto.RogueBoothStatus.RogueBoothNone;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueBoothStatus Status {
-      get { return status_; }
-      set {
-        status_ = value;
-      }
     }
 
     /// <summary>Field number for the "KBDFBGINNBJ" field.</summary>
@@ -118,6 +94,30 @@ namespace EggLink.DanhengServer.Proto {
       get { return kBDFBGINNBJ_; }
       set {
         kBDFBGINNBJ_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "EONLMDCBNME" field.</summary>
+    public const int EONLMDCBNMEFieldNumber = 6;
+    private uint eONLMDCBNME_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint EONLMDCBNME {
+      get { return eONLMDCBNME_; }
+      set {
+        eONLMDCBNME_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 7;
+    private global::EggLink.DanhengServer.Proto.RogueBoothStatus status_ = global::EggLink.DanhengServer.Proto.RogueBoothStatus.RogueBoothNone;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueBoothStatus Status {
+      get { return status_; }
+      set {
+        status_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (KBDFBGINNBJ != other.KBDFBGINNBJ) return false;
       if (EONLMDCBNME != other.EONLMDCBNME) return false;
       if (Status != other.Status) return false;
-      if (KBDFBGINNBJ != other.KBDFBGINNBJ) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (KBDFBGINNBJ != 0) hash ^= KBDFBGINNBJ.GetHashCode();
       if (EONLMDCBNME != 0) hash ^= EONLMDCBNME.GetHashCode();
       if (Status != global::EggLink.DanhengServer.Proto.RogueBoothStatus.RogueBoothNone) hash ^= Status.GetHashCode();
-      if (KBDFBGINNBJ != 0) hash ^= KBDFBGINNBJ.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,13 +167,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Status != global::EggLink.DanhengServer.Proto.RogueBoothStatus.RogueBoothNone) {
-        output.WriteRawTag(48);
-        output.WriteEnum((int) Status);
-      }
       if (EONLMDCBNME != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(48);
         output.WriteUInt32(EONLMDCBNME);
+      }
+      if (Status != global::EggLink.DanhengServer.Proto.RogueBoothStatus.RogueBoothNone) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) Status);
       }
       if (KBDFBGINNBJ != 0) {
         output.WriteRawTag(112);
@@ -189,13 +189,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Status != global::EggLink.DanhengServer.Proto.RogueBoothStatus.RogueBoothNone) {
-        output.WriteRawTag(48);
-        output.WriteEnum((int) Status);
-      }
       if (EONLMDCBNME != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(48);
         output.WriteUInt32(EONLMDCBNME);
+      }
+      if (Status != global::EggLink.DanhengServer.Proto.RogueBoothStatus.RogueBoothNone) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) Status);
       }
       if (KBDFBGINNBJ != 0) {
         output.WriteRawTag(112);
@@ -211,14 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (KBDFBGINNBJ != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KBDFBGINNBJ);
+      }
       if (EONLMDCBNME != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EONLMDCBNME);
       }
       if (Status != global::EggLink.DanhengServer.Proto.RogueBoothStatus.RogueBoothNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
-      }
-      if (KBDFBGINNBJ != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KBDFBGINNBJ);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,14 +232,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.KBDFBGINNBJ != 0) {
+        KBDFBGINNBJ = other.KBDFBGINNBJ;
+      }
       if (other.EONLMDCBNME != 0) {
         EONLMDCBNME = other.EONLMDCBNME;
       }
       if (other.Status != global::EggLink.DanhengServer.Proto.RogueBoothStatus.RogueBoothNone) {
         Status = other.Status;
-      }
-      if (other.KBDFBGINNBJ != 0) {
-        KBDFBGINNBJ = other.KBDFBGINNBJ;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -257,11 +257,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 48: {
-            Status = (global::EggLink.DanhengServer.Proto.RogueBoothStatus) input.ReadEnum();
+            EONLMDCBNME = input.ReadUInt32();
             break;
           }
-          case 80: {
-            EONLMDCBNME = input.ReadUInt32();
+          case 56: {
+            Status = (global::EggLink.DanhengServer.Proto.RogueBoothStatus) input.ReadEnum();
             break;
           }
           case 112: {
@@ -284,11 +284,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 48: {
-            Status = (global::EggLink.DanhengServer.Proto.RogueBoothStatus) input.ReadEnum();
+            EONLMDCBNME = input.ReadUInt32();
             break;
           }
-          case 80: {
-            EONLMDCBNME = input.ReadUInt32();
+          case 56: {
+            Status = (global::EggLink.DanhengServer.Proto.RogueBoothStatus) input.ReadEnum();
             break;
           }
           case 112: {

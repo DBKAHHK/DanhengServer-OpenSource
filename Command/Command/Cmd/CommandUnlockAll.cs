@@ -4,6 +4,7 @@ using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.Internationalization;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
+using static EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Types;
 
 namespace EggLink.DanhengServer.Command.Command.Cmd;
 

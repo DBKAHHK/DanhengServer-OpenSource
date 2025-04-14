@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFHYW1lcGxheUNvdW50ZXJSZWNvdmVyQ3NSZXEucHJvdG8iRwobR2FtZXBs",
-            "YXlDb3VudGVyUmVjb3ZlckNzUmVxEhMKC05NR0xOSFBBTkFIGAUgASgNEhMK",
-            "C0xBQk9PRERBTE9FGAIgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "YXlDb3VudGVyUmVjb3ZlckNzUmVxEhMKC0xBQk9PRERBTE9FGAEgASgNEhMK",
+            "C05NR0xOSFBBTkFIGAUgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GameplayCounterRecoverCsReq), global::EggLink.DanhengServer.Proto.GameplayCounterRecoverCsReq.Parser, new[]{ "NMGLNHPANAH", "LABOODDALOE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GameplayCounterRecoverCsReq), global::EggLink.DanhengServer.Proto.GameplayCounterRecoverCsReq.Parser, new[]{ "LABOODDALOE", "NMGLNHPANAH" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GameplayCounterRecoverCsReq(GameplayCounterRecoverCsReq other) : this() {
-      nMGLNHPANAH_ = other.nMGLNHPANAH_;
       lABOODDALOE_ = other.lABOODDALOE_;
+      nMGLNHPANAH_ = other.nMGLNHPANAH_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,6 +82,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GameplayCounterRecoverCsReq Clone() {
       return new GameplayCounterRecoverCsReq(this);
+    }
+
+    /// <summary>Field number for the "LABOODDALOE" field.</summary>
+    public const int LABOODDALOEFieldNumber = 1;
+    private uint lABOODDALOE_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint LABOODDALOE {
+      get { return lABOODDALOE_; }
+      set {
+        lABOODDALOE_ = value;
+      }
     }
 
     /// <summary>Field number for the "NMGLNHPANAH" field.</summary>
@@ -93,18 +105,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return nMGLNHPANAH_; }
       set {
         nMGLNHPANAH_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "LABOODDALOE" field.</summary>
-    public const int LABOODDALOEFieldNumber = 2;
-    private uint lABOODDALOE_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LABOODDALOE {
-      get { return lABOODDALOE_; }
-      set {
-        lABOODDALOE_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (NMGLNHPANAH != other.NMGLNHPANAH) return false;
       if (LABOODDALOE != other.LABOODDALOE) return false;
+      if (NMGLNHPANAH != other.NMGLNHPANAH) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (NMGLNHPANAH != 0) hash ^= NMGLNHPANAH.GetHashCode();
       if (LABOODDALOE != 0) hash ^= LABOODDALOE.GetHashCode();
+      if (NMGLNHPANAH != 0) hash ^= NMGLNHPANAH.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (LABOODDALOE != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(8);
         output.WriteUInt32(LABOODDALOE);
       }
       if (NMGLNHPANAH != 0) {
@@ -171,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (LABOODDALOE != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(8);
         output.WriteUInt32(LABOODDALOE);
       }
       if (NMGLNHPANAH != 0) {
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (NMGLNHPANAH != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NMGLNHPANAH);
-      }
       if (LABOODDALOE != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LABOODDALOE);
+      }
+      if (NMGLNHPANAH != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NMGLNHPANAH);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.NMGLNHPANAH != 0) {
-        NMGLNHPANAH = other.NMGLNHPANAH;
-      }
       if (other.LABOODDALOE != 0) {
         LABOODDALOE = other.LABOODDALOE;
+      }
+      if (other.NMGLNHPANAH != 0) {
+        NMGLNHPANAH = other.NMGLNHPANAH;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,7 +227,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 8: {
             LABOODDALOE = input.ReadUInt32();
             break;
           }
@@ -250,7 +250,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 8: {
             LABOODDALOE = input.ReadUInt32();
             break;
           }

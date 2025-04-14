@@ -26,14 +26,14 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNVcGRhdGVUcmFja01haW5NaXNzaW9uSWRDc1JlcS5wcm90bxokVHJhY2tN",
             "YWluTWlzc2lvblVwZGF0ZVJlYXNvbklkLnByb3RvIoQBCh1VcGRhdGVUcmFj",
-            "a01haW5NaXNzaW9uSWRDc1JlcRIYChB0cmFja19taXNzaW9uX2lkGA8gASgN",
-            "EhMKC0xNQkNFT1BDSUdDGAEgASgNEjQKC0lKREpNTkpCT0JJGAsgASgOMh8u",
+            "a01haW5NaXNzaW9uSWRDc1JlcRITCgtMTUJDRU9QQ0lHQxgGIAEoDRIYChB0",
+            "cmFja19taXNzaW9uX2lkGAogASgNEjQKC0lKREpNTkpCT0JJGA8gASgOMh8u",
             "VHJhY2tNYWluTWlzc2lvblVwZGF0ZVJlYXNvbklkQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonIdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdateTrackMainMissionIdCsReq), global::EggLink.DanhengServer.Proto.UpdateTrackMainMissionIdCsReq.Parser, new[]{ "TrackMissionId", "LMBCEOPCIGC", "IJDJMNJBOBI" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdateTrackMainMissionIdCsReq), global::EggLink.DanhengServer.Proto.UpdateTrackMainMissionIdCsReq.Parser, new[]{ "LMBCEOPCIGC", "TrackMissionId", "IJDJMNJBOBI" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,8 +75,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateTrackMainMissionIdCsReq(UpdateTrackMainMissionIdCsReq other) : this() {
-      trackMissionId_ = other.trackMissionId_;
       lMBCEOPCIGC_ = other.lMBCEOPCIGC_;
+      trackMissionId_ = other.trackMissionId_;
       iJDJMNJBOBI_ = other.iJDJMNJBOBI_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -87,20 +87,8 @@ namespace EggLink.DanhengServer.Proto {
       return new UpdateTrackMainMissionIdCsReq(this);
     }
 
-    /// <summary>Field number for the "track_mission_id" field.</summary>
-    public const int TrackMissionIdFieldNumber = 15;
-    private uint trackMissionId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TrackMissionId {
-      get { return trackMissionId_; }
-      set {
-        trackMissionId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "LMBCEOPCIGC" field.</summary>
-    public const int LMBCEOPCIGCFieldNumber = 1;
+    public const int LMBCEOPCIGCFieldNumber = 6;
     private uint lMBCEOPCIGC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,8 +99,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "track_mission_id" field.</summary>
+    public const int TrackMissionIdFieldNumber = 10;
+    private uint trackMissionId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint TrackMissionId {
+      get { return trackMissionId_; }
+      set {
+        trackMissionId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "IJDJMNJBOBI" field.</summary>
-    public const int IJDJMNJBOBIFieldNumber = 11;
+    public const int IJDJMNJBOBIFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonId iJDJMNJBOBI_ = global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonId.TrackMainMissionUpdateNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,8 +138,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (TrackMissionId != other.TrackMissionId) return false;
       if (LMBCEOPCIGC != other.LMBCEOPCIGC) return false;
+      if (TrackMissionId != other.TrackMissionId) return false;
       if (IJDJMNJBOBI != other.IJDJMNJBOBI) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -148,8 +148,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (TrackMissionId != 0) hash ^= TrackMissionId.GetHashCode();
       if (LMBCEOPCIGC != 0) hash ^= LMBCEOPCIGC.GetHashCode();
+      if (TrackMissionId != 0) hash ^= TrackMissionId.GetHashCode();
       if (IJDJMNJBOBI != global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonId.TrackMainMissionUpdateNone) hash ^= IJDJMNJBOBI.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -170,16 +170,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (LMBCEOPCIGC != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(48);
         output.WriteUInt32(LMBCEOPCIGC);
       }
-      if (IJDJMNJBOBI != global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonId.TrackMainMissionUpdateNone) {
-        output.WriteRawTag(88);
-        output.WriteEnum((int) IJDJMNJBOBI);
-      }
       if (TrackMissionId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(80);
         output.WriteUInt32(TrackMissionId);
+      }
+      if (IJDJMNJBOBI != global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonId.TrackMainMissionUpdateNone) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) IJDJMNJBOBI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -192,16 +192,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (LMBCEOPCIGC != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(48);
         output.WriteUInt32(LMBCEOPCIGC);
       }
-      if (IJDJMNJBOBI != global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonId.TrackMainMissionUpdateNone) {
-        output.WriteRawTag(88);
-        output.WriteEnum((int) IJDJMNJBOBI);
-      }
       if (TrackMissionId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(80);
         output.WriteUInt32(TrackMissionId);
+      }
+      if (IJDJMNJBOBI != global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonId.TrackMainMissionUpdateNone) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) IJDJMNJBOBI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -213,11 +213,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (TrackMissionId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TrackMissionId);
-      }
       if (LMBCEOPCIGC != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LMBCEOPCIGC);
+      }
+      if (TrackMissionId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TrackMissionId);
       }
       if (IJDJMNJBOBI != global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonId.TrackMainMissionUpdateNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IJDJMNJBOBI);
@@ -234,11 +234,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.TrackMissionId != 0) {
-        TrackMissionId = other.TrackMissionId;
-      }
       if (other.LMBCEOPCIGC != 0) {
         LMBCEOPCIGC = other.LMBCEOPCIGC;
+      }
+      if (other.TrackMissionId != 0) {
+        TrackMissionId = other.TrackMissionId;
       }
       if (other.IJDJMNJBOBI != global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonId.TrackMainMissionUpdateNone) {
         IJDJMNJBOBI = other.IJDJMNJBOBI;
@@ -258,16 +258,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 48: {
             LMBCEOPCIGC = input.ReadUInt32();
             break;
           }
-          case 88: {
-            IJDJMNJBOBI = (global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonId) input.ReadEnum();
+          case 80: {
+            TrackMissionId = input.ReadUInt32();
             break;
           }
           case 120: {
-            TrackMissionId = input.ReadUInt32();
+            IJDJMNJBOBI = (global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonId) input.ReadEnum();
             break;
           }
         }
@@ -285,16 +285,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 48: {
             LMBCEOPCIGC = input.ReadUInt32();
             break;
           }
-          case 88: {
-            IJDJMNJBOBI = (global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonId) input.ReadEnum();
+          case 80: {
+            TrackMissionId = input.ReadUInt32();
             break;
           }
           case 120: {
-            TrackMissionId = input.ReadUInt32();
+            IJDJMNJBOBI = (global::EggLink.DanhengServer.Proto.TrackMainMissionUpdateReasonId) input.ReadEnum();
             break;
           }
         }

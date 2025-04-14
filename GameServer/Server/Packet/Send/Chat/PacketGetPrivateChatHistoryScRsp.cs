@@ -11,7 +11,7 @@ public class PacketGetPrivateChatHistoryScRsp : BasePacket
     {
         var proto = new GetPrivateChatHistoryScRsp
         {
-            ContactId = contactId
+            ContactSide = contactId
         };
 
         var infos = player.FriendManager!.GetHistoryInfo((int)contactId);

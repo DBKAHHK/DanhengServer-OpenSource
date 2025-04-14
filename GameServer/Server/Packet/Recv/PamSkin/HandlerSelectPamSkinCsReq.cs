@@ -14,7 +14,7 @@ public class HandlerSelectPamSkinCsReq : Handler
         var player = connection.Player!;
 
         // Check if the skin is valid
-        if (GameData.PamSkinConfigData.ContainsKey((int)req.PamSkinId)) player.Data.CurrentPamSkin = (int)req.PamSkinId;
+        if (GameData.PamSkinConfigData.ContainsKey((int)req.PamSkin)) player.Data.CurrentPamSkin = (int)req.PamSkin;
         var prevSkinId = player.Data.CurrentPamSkin;
 
         await connection.SendPacket(new PacketSelectPamSkinScRsp(player, prevSkinId));

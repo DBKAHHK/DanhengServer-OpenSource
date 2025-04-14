@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFGSVBGUEhCUEhMSC5wcm90bxoRTUxQS05MTEFPSUYucHJvdG8iMAoLRklQ",
-            "RlBIQlBITEgSIQoLSUxCS01OQUpHTU8YCyADKAsyDC5NTFBLTkxMQU9JRkIe",
+            "RlBIQlBITEgSIQoLSUxCS01OQUpHTU8YCiADKAsyDC5NTFBLTkxMQU9JRkIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MLPKNLLAOIFReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "ILBKMNAJGMO" field.</summary>
-    public const int ILBKMNAJGMOFieldNumber = 11;
+    public const int ILBKMNAJGMOFieldNumber = 10;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MLPKNLLAOIF> _repeated_iLBKMNAJGMO_codec
-        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.MLPKNLLAOIF.Parser);
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.MLPKNLLAOIF.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MLPKNLLAOIF> iLBKMNAJGMO_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MLPKNLLAOIF>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 90: {
+          case 82: {
             iLBKMNAJGMO_.AddEntriesFrom(input, _repeated_iLBKMNAJGMO_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 90: {
+          case 82: {
             iLBKMNAJGMO_.AddEntriesFrom(ref input, _repeated_iLBKMNAJGMO_codec);
             break;
           }

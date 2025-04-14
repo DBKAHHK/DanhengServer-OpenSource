@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpVcGdyYWRlQXJlYVN0YXRDc1JlcS5wcm90bxoOU3RhdFR5cGUucHJvdG8i",
-            "VgoUVXBncmFkZUFyZWFTdGF0Q3NSZXESDQoFbGV2ZWwYCSABKA0SHgoLQk9K",
-            "QlBPRUxGQ0kYBSABKA4yCS5TdGF0VHlwZRIPCgdhcmVhX2lkGA0gASgNQh6q",
+            "VgoUVXBncmFkZUFyZWFTdGF0Q3NSZXESDQoFbGV2ZWwYCCABKA0SHgoLQk9K",
+            "QlBPRUxGQ0kYCiABKA4yCS5TdGF0VHlwZRIPCgdhcmVhX2lkGAwgASgNQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.StatTypeReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 9;
+    public const int LevelFieldNumber = 8;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "BOJBPOELFCI" field.</summary>
-    public const int BOJBPOELFCIFieldNumber = 5;
+    public const int BOJBPOELFCIFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.StatType bOJBPOELFCI_ = global::EggLink.DanhengServer.Proto.StatType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "area_id" field.</summary>
-    public const int AreaIdFieldNumber = 13;
+    public const int AreaIdFieldNumber = 12;
     private uint areaId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,16 +167,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (BOJBPOELFCI != global::EggLink.DanhengServer.Proto.StatType.None) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) BOJBPOELFCI);
-      }
       if (Level != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(64);
         output.WriteUInt32(Level);
       }
+      if (BOJBPOELFCI != global::EggLink.DanhengServer.Proto.StatType.None) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) BOJBPOELFCI);
+      }
       if (AreaId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(96);
         output.WriteUInt32(AreaId);
       }
       if (_unknownFields != null) {
@@ -189,16 +189,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BOJBPOELFCI != global::EggLink.DanhengServer.Proto.StatType.None) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) BOJBPOELFCI);
-      }
       if (Level != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(64);
         output.WriteUInt32(Level);
       }
+      if (BOJBPOELFCI != global::EggLink.DanhengServer.Proto.StatType.None) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) BOJBPOELFCI);
+      }
       if (AreaId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(96);
         output.WriteUInt32(AreaId);
       }
       if (_unknownFields != null) {
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            BOJBPOELFCI = (global::EggLink.DanhengServer.Proto.StatType) input.ReadEnum();
-            break;
-          }
-          case 72: {
+          case 64: {
             Level = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 80: {
+            BOJBPOELFCI = (global::EggLink.DanhengServer.Proto.StatType) input.ReadEnum();
+            break;
+          }
+          case 96: {
             AreaId = input.ReadUInt32();
             break;
           }
@@ -283,15 +283,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            BOJBPOELFCI = (global::EggLink.DanhengServer.Proto.StatType) input.ReadEnum();
-            break;
-          }
-          case 72: {
+          case 64: {
             Level = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 80: {
+            BOJBPOELFCI = (global::EggLink.DanhengServer.Proto.StatType) input.ReadEnum();
+            break;
+          }
+          case 96: {
             AreaId = input.ReadUInt32();
             break;
           }

@@ -12,7 +12,7 @@ public class HandlerLockRelicCsReq : Handler
     {
         var req = LockRelicCsReq.Parser.ParseFrom(data);
         var result =
-            await connection.Player!.InventoryManager!.LockItems(req.RelicUniqueIdList, req.IsProtected,
+            await connection.Player!.InventoryManager!.LockItems(req.RelicUniqueIdList, req.IsLocked,
                 ItemMainTypeEnum.Relic);
         await connection.SendPacket(new PacketLockRelicScRsp(result));
     }

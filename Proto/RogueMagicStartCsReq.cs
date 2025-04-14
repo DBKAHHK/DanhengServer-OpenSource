@@ -25,9 +25,9 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpSb2d1ZU1hZ2ljU3RhcnRDc1JlcS5wcm90byKBAQoUUm9ndWVNYWdpY1N0",
-            "YXJ0Q3NSZXESGQoRc2VsZWN0X3N0eWxlX3R5cGUYCCABKA0SDwoHYXJlYV9p",
-            "ZBgCIAEoDRIbChNiYXNlX2F2YXRhcl9pZF9saXN0GA0gAygNEiAKGHN0YXJ0",
-            "X2RpZmZpY3VsdHlfaWRfbGlzdBgPIAMoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "YXJ0Q3NSZXESGQoRc2VsZWN0X3N0eWxlX3R5cGUYCSABKA0SDwoHYXJlYV9p",
+            "ZBgEIAEoDRIbChNiYXNlX2F2YXRhcl9pZF9saXN0GA8gAygNEiAKGHN0YXJ0",
+            "X2RpZmZpY3VsdHlfaWRfbGlzdBgLIAMoDUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -88,7 +88,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_style_type" field.</summary>
-    public const int SelectStyleTypeFieldNumber = 8;
+    public const int SelectStyleTypeFieldNumber = 9;
     private uint selectStyleType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,7 +100,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "area_id" field.</summary>
-    public const int AreaIdFieldNumber = 2;
+    public const int AreaIdFieldNumber = 4;
     private uint areaId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,9 +112,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "base_avatar_id_list" field.</summary>
-    public const int BaseAvatarIdListFieldNumber = 13;
+    public const int BaseAvatarIdListFieldNumber = 15;
     private static readonly pb::FieldCodec<uint> _repeated_baseAvatarIdList_codec
-        = pb::FieldCodec.ForUInt32(106);
+        = pb::FieldCodec.ForUInt32(122);
     private readonly pbc::RepeatedField<uint> baseAvatarIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,9 +123,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "start_difficulty_id_list" field.</summary>
-    public const int StartDifficultyIdListFieldNumber = 15;
+    public const int StartDifficultyIdListFieldNumber = 11;
     private static readonly pb::FieldCodec<uint> _repeated_startDifficultyIdList_codec
-        = pb::FieldCodec.ForUInt32(122);
+        = pb::FieldCodec.ForUInt32(90);
     private readonly pbc::RepeatedField<uint> startDifficultyIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -182,15 +182,15 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (AreaId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(32);
         output.WriteUInt32(AreaId);
       }
       if (SelectStyleType != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(72);
         output.WriteUInt32(SelectStyleType);
       }
-      baseAvatarIdList_.WriteTo(output, _repeated_baseAvatarIdList_codec);
       startDifficultyIdList_.WriteTo(output, _repeated_startDifficultyIdList_codec);
+      baseAvatarIdList_.WriteTo(output, _repeated_baseAvatarIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -202,15 +202,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (AreaId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(32);
         output.WriteUInt32(AreaId);
       }
       if (SelectStyleType != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(72);
         output.WriteUInt32(SelectStyleType);
       }
-      baseAvatarIdList_.WriteTo(ref output, _repeated_baseAvatarIdList_codec);
       startDifficultyIdList_.WriteTo(ref output, _repeated_startDifficultyIdList_codec);
+      baseAvatarIdList_.WriteTo(ref output, _repeated_baseAvatarIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -264,22 +264,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 32: {
             AreaId = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 72: {
             SelectStyleType = input.ReadUInt32();
             break;
           }
-          case 106:
-          case 104: {
-            baseAvatarIdList_.AddEntriesFrom(input, _repeated_baseAvatarIdList_codec);
+          case 90:
+          case 88: {
+            startDifficultyIdList_.AddEntriesFrom(input, _repeated_startDifficultyIdList_codec);
             break;
           }
           case 122:
           case 120: {
-            startDifficultyIdList_.AddEntriesFrom(input, _repeated_startDifficultyIdList_codec);
+            baseAvatarIdList_.AddEntriesFrom(input, _repeated_baseAvatarIdList_codec);
             break;
           }
         }
@@ -297,22 +297,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 32: {
             AreaId = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 72: {
             SelectStyleType = input.ReadUInt32();
             break;
           }
-          case 106:
-          case 104: {
-            baseAvatarIdList_.AddEntriesFrom(ref input, _repeated_baseAvatarIdList_codec);
+          case 90:
+          case 88: {
+            startDifficultyIdList_.AddEntriesFrom(ref input, _repeated_startDifficultyIdList_codec);
             break;
           }
           case 122:
           case 120: {
-            startDifficultyIdList_.AddEntriesFrom(ref input, _repeated_startDifficultyIdList_codec);
+            baseAvatarIdList_.AddEntriesFrom(ref input, _repeated_baseAvatarIdList_codec);
             break;
           }
         }

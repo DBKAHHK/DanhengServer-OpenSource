@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxTcGFjZVpvb09wQ2F0dGVyeUNzUmVxLnByb3RvIlMKFlNwYWNlWm9vT3BD",
-            "YXR0ZXJ5Q3NSZXESEwoLTklMRUVESkxHSU4YByABKA0SDwoHb3BfdHlwZRgL",
-            "IAEoDRITCgtBTEdFSUVOSU9BThgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "YXR0ZXJ5Q3NSZXESEwoLTklMRUVESkxHSU4YCSABKA0SDwoHb3BfdHlwZRgD",
+            "IAEoDRITCgtBTEdFSUVOSU9BThgPIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NILEEDJLGIN" field.</summary>
-    public const int NILEEDJLGINFieldNumber = 7;
+    public const int NILEEDJLGINFieldNumber = 9;
     private uint nILEEDJLGIN_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "op_type" field.</summary>
-    public const int OpTypeFieldNumber = 11;
+    public const int OpTypeFieldNumber = 3;
     private uint opType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "ALGEIENIOAN" field.</summary>
-    public const int ALGEIENIOANFieldNumber = 9;
+    public const int ALGEIENIOANFieldNumber = 15;
     private uint aLGEIENIOAN_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (OpType != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(OpType);
+      }
       if (NILEEDJLGIN != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(72);
         output.WriteUInt32(NILEEDJLGIN);
       }
       if (ALGEIENIOAN != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(120);
         output.WriteUInt32(ALGEIENIOAN);
-      }
-      if (OpType != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(OpType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (OpType != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(OpType);
+      }
       if (NILEEDJLGIN != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(72);
         output.WriteUInt32(NILEEDJLGIN);
       }
       if (ALGEIENIOAN != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(120);
         output.WriteUInt32(ALGEIENIOAN);
-      }
-      if (OpType != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(OpType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            NILEEDJLGIN = input.ReadUInt32();
+          case 24: {
+            OpType = input.ReadUInt32();
             break;
           }
           case 72: {
-            ALGEIENIOAN = input.ReadUInt32();
+            NILEEDJLGIN = input.ReadUInt32();
             break;
           }
-          case 88: {
-            OpType = input.ReadUInt32();
+          case 120: {
+            ALGEIENIOAN = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            NILEEDJLGIN = input.ReadUInt32();
+          case 24: {
+            OpType = input.ReadUInt32();
             break;
           }
           case 72: {
-            ALGEIENIOAN = input.ReadUInt32();
+            NILEEDJLGIN = input.ReadUInt32();
             break;
           }
-          case 88: {
-            OpType = input.ReadUInt32();
+          case 120: {
+            ALGEIENIOAN = input.ReadUInt32();
             break;
           }
         }

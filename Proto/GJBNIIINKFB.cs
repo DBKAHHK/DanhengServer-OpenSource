@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFHSkJOSUlJTktGQi5wcm90byJMCgtHSkJOSUlJTktGQhITCgtCSUxFR0VM",
-            "S01DQhgFIAEoDRITCgtDQ0tIS0JOTUFQThgEIAMoDRITCgtNQ0VHQUlCTk1H",
-            "QhgNIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "S01DQhgCIAEoDRITCgtDQ0tIS0JOTUFQThgDIAMoDRITCgtNQ0VHQUlCTk1H",
+            "QhgBIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "BILEGELKMCB" field.</summary>
-    public const int BILEGELKMCBFieldNumber = 5;
+    public const int BILEGELKMCBFieldNumber = 2;
     private uint bILEGELKMCB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "CCKHKBNMAPN" field.</summary>
-    public const int CCKHKBNMAPNFieldNumber = 4;
+    public const int CCKHKBNMAPNFieldNumber = 3;
     private static readonly pb::FieldCodec<uint> _repeated_cCKHKBNMAPN_codec
-        = pb::FieldCodec.ForUInt32(34);
+        = pb::FieldCodec.ForUInt32(26);
     private readonly pbc::RepeatedField<uint> cCKHKBNMAPN_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MCEGAIBNMGB" field.</summary>
-    public const int MCEGAIBNMGBFieldNumber = 13;
+    public const int MCEGAIBNMGBFieldNumber = 1;
     private uint mCEGAIBNMGB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,15 +166,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      cCKHKBNMAPN_.WriteTo(output, _repeated_cCKHKBNMAPN_codec);
-      if (BILEGELKMCB != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(BILEGELKMCB);
-      }
       if (MCEGAIBNMGB != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(8);
         output.WriteUInt32(MCEGAIBNMGB);
       }
+      if (BILEGELKMCB != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(BILEGELKMCB);
+      }
+      cCKHKBNMAPN_.WriteTo(output, _repeated_cCKHKBNMAPN_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -185,15 +185,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      cCKHKBNMAPN_.WriteTo(ref output, _repeated_cCKHKBNMAPN_codec);
-      if (BILEGELKMCB != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(BILEGELKMCB);
-      }
       if (MCEGAIBNMGB != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(8);
         output.WriteUInt32(MCEGAIBNMGB);
       }
+      if (BILEGELKMCB != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(BILEGELKMCB);
+      }
+      cCKHKBNMAPN_.WriteTo(ref output, _repeated_cCKHKBNMAPN_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -245,17 +245,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34:
-          case 32: {
-            cCKHKBNMAPN_.AddEntriesFrom(input, _repeated_cCKHKBNMAPN_codec);
+          case 8: {
+            MCEGAIBNMGB = input.ReadUInt32();
             break;
           }
-          case 40: {
+          case 16: {
             BILEGELKMCB = input.ReadUInt32();
             break;
           }
-          case 104: {
-            MCEGAIBNMGB = input.ReadUInt32();
+          case 26:
+          case 24: {
+            cCKHKBNMAPN_.AddEntriesFrom(input, _repeated_cCKHKBNMAPN_codec);
             break;
           }
         }
@@ -273,17 +273,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34:
-          case 32: {
-            cCKHKBNMAPN_.AddEntriesFrom(ref input, _repeated_cCKHKBNMAPN_codec);
+          case 8: {
+            MCEGAIBNMGB = input.ReadUInt32();
             break;
           }
-          case 40: {
+          case 16: {
             BILEGELKMCB = input.ReadUInt32();
             break;
           }
-          case 104: {
-            MCEGAIBNMGB = input.ReadUInt32();
+          case 26:
+          case 24: {
+            cCKHKBNMAPN_.AddEntriesFrom(ref input, _repeated_cCKHKBNMAPN_codec);
             break;
           }
         }

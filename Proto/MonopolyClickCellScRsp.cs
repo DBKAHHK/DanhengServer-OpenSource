@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxNb25vcG9seUNsaWNrQ2VsbFNjUnNwLnByb3RvIkoKFk1vbm9wb2x5Q2xp",
-            "Y2tDZWxsU2NSc3ASDwoHcmV0Y29kZRgNIAEoDRIPCgdjZWxsX2lkGA4gASgN",
-            "Eg4KBm1hcF9pZBgCIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "Y2tDZWxsU2NSc3ASDwoHcmV0Y29kZRgNIAEoDRIPCgdjZWxsX2lkGAcgASgN",
+            "Eg4KBm1hcF9pZBgOIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cell_id" field.</summary>
-    public const int CellIdFieldNumber = 14;
+    public const int CellIdFieldNumber = 7;
     private uint cellId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "map_id" field.</summary>
-    public const int MapIdFieldNumber = 2;
+    public const int MapIdFieldNumber = 14;
     private uint mapId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MapId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(MapId);
+      if (CellId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(CellId);
       }
       if (Retcode != 0) {
         output.WriteRawTag(104);
         output.WriteUInt32(Retcode);
       }
-      if (CellId != 0) {
+      if (MapId != 0) {
         output.WriteRawTag(112);
-        output.WriteUInt32(CellId);
+        output.WriteUInt32(MapId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MapId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(MapId);
+      if (CellId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(CellId);
       }
       if (Retcode != 0) {
         output.WriteRawTag(104);
         output.WriteUInt32(Retcode);
       }
-      if (CellId != 0) {
+      if (MapId != 0) {
         output.WriteRawTag(112);
-        output.WriteUInt32(CellId);
+        output.WriteUInt32(MapId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -256,8 +256,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            MapId = input.ReadUInt32();
+          case 56: {
+            CellId = input.ReadUInt32();
             break;
           }
           case 104: {
@@ -265,7 +265,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 112: {
-            CellId = input.ReadUInt32();
+            MapId = input.ReadUInt32();
             break;
           }
         }
@@ -283,8 +283,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            MapId = input.ReadUInt32();
+          case 56: {
+            CellId = input.ReadUInt32();
             break;
           }
           case 104: {
@@ -292,7 +292,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 112: {
-            CellId = input.ReadUInt32();
+            MapId = input.ReadUInt32();
             break;
           }
         }

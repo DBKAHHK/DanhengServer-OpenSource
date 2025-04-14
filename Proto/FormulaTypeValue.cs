@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZGb3JtdWxhVHlwZVZhbHVlLnByb3RvIooBChBGb3JtdWxhVHlwZVZhbHVl",
-            "Ej8KEGZvcm11bGFfdHlwZV9tYXAYCiADKAsyJS5Gb3JtdWxhVHlwZVZhbHVl",
+            "Ej8KEGZvcm11bGFfdHlwZV9tYXAYBiADKAsyJS5Gb3JtdWxhVHlwZVZhbHVl",
             "LkZvcm11bGFUeXBlTWFwRW50cnkaNQoTRm9ybXVsYVR5cGVNYXBFbnRyeRIL",
             "CgNrZXkYASABKA0SDQoFdmFsdWUYAiABKAU6AjgBQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "formula_type_map" field.</summary>
-    public const int FormulaTypeMapFieldNumber = 10;
+    public const int FormulaTypeMapFieldNumber = 6;
     private static readonly pbc::MapField<uint, int>.Codec _map_formulaTypeMap_codec
-        = new pbc::MapField<uint, int>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForInt32(16, 0), 82);
+        = new pbc::MapField<uint, int>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForInt32(16, 0), 50);
     private readonly pbc::MapField<uint, int> formulaTypeMap_ = new pbc::MapField<uint, int>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 82: {
+          case 50: {
             formulaTypeMap_.AddEntriesFrom(input, _map_formulaTypeMap_codec);
             break;
           }
@@ -207,7 +207,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 82: {
+          case 50: {
             formulaTypeMap_.AddEntriesFrom(ref input, _map_formulaTypeMap_codec);
             break;
           }

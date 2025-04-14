@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFNRkZLSkROREtJTy5wcm90bxoRTFBOS01FTU9PQkUucHJvdG8iMAoLTUZG",
-            "S0pETkRLSU8SIQoLTkdGRkdCQ0JCT04YAiADKAsyDC5MUE5LTUVNT09CRUIe",
+            "S0pETkRLSU8SIQoLTkdGRkdCQ0JCT04YBiADKAsyDC5MUE5LTUVNT09CRUIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LPNKMEMOOBEReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NGFFGBCBBON" field.</summary>
-    public const int NGFFGBCBBONFieldNumber = 2;
+    public const int NGFFGBCBBONFieldNumber = 6;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.LPNKMEMOOBE> _repeated_nGFFGBCBBON_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.LPNKMEMOOBE.Parser);
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.LPNKMEMOOBE.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LPNKMEMOOBE> nGFFGBCBBON_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LPNKMEMOOBE>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 50: {
             nGFFGBCBBON_.AddEntriesFrom(input, _repeated_nGFFGBCBBON_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 50: {
             nGFFGBCBBON_.AddEntriesFrom(ref input, _repeated_nGFFGBCBBON_codec);
             break;
           }

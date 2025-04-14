@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChxTY2VuZUVudGl0eVJlZnJlc2hJbmZvLnByb3RvGhVTY2VuZUVudGl0eUlu",
             "Zm8ucHJvdG8ifwoWU2NlbmVFbnRpdHlSZWZyZXNoSW5mbxImCgphZGRfZW50",
-            "aXR5GA8gASgLMhAuU2NlbmVFbnRpdHlJbmZvSAASFwoNZGVsZXRlX2VudGl0",
-            "eRgGIAEoDUgAEhUKC01ISE9BQUhER0FPGA0gASgNSABCDQoLZW50aXR5X2Nh",
+            "aXR5GAsgASgLMhAuU2NlbmVFbnRpdHlJbmZvSAASFwoNZGVsZXRlX2VudGl0",
+            "eRgDIAEoDUgAEhUKC01ISE9BQUhER0FPGAwgASgNSABCDQoLZW50aXR5X2Nh",
             "c2VCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneEntityInfoReflection.Descriptor, },
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "add_entity" field.</summary>
-    public const int AddEntityFieldNumber = 15;
+    public const int AddEntityFieldNumber = 11;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.SceneEntityInfo AddEntity {
@@ -108,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "delete_entity" field.</summary>
-    public const int DeleteEntityFieldNumber = 6;
+    public const int DeleteEntityFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint DeleteEntity {
@@ -134,7 +134,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MHHOAAHDGAO" field.</summary>
-    public const int MHHOAAHDGAOFieldNumber = 13;
+    public const int MHHOAAHDGAOFieldNumber = 12;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint MHHOAAHDGAO {
@@ -163,9 +163,9 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "entity_case" oneof.</summary>
     public enum EntityCaseOneofCase {
       None = 0,
-      AddEntity = 15,
-      DeleteEntity = 6,
-      MHHOAAHDGAO = 13,
+      AddEntity = 11,
+      DeleteEntity = 3,
+      MHHOAAHDGAO = 12,
     }
     private EntityCaseOneofCase entityCaseCase_ = EntityCaseOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -230,16 +230,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (HasDeleteEntity) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(24);
         output.WriteUInt32(DeleteEntity);
       }
-      if (HasMHHOAAHDGAO) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(MHHOAAHDGAO);
-      }
       if (entityCaseCase_ == EntityCaseOneofCase.AddEntity) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(90);
         output.WriteMessage(AddEntity);
+      }
+      if (HasMHHOAAHDGAO) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(MHHOAAHDGAO);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -252,16 +252,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (HasDeleteEntity) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(24);
         output.WriteUInt32(DeleteEntity);
       }
-      if (HasMHHOAAHDGAO) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(MHHOAAHDGAO);
-      }
       if (entityCaseCase_ == EntityCaseOneofCase.AddEntity) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(90);
         output.WriteMessage(AddEntity);
+      }
+      if (HasMHHOAAHDGAO) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(MHHOAAHDGAO);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -324,21 +324,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 24: {
             DeleteEntity = input.ReadUInt32();
             break;
           }
-          case 104: {
-            MHHOAAHDGAO = input.ReadUInt32();
-            break;
-          }
-          case 122: {
+          case 90: {
             global::EggLink.DanhengServer.Proto.SceneEntityInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneEntityInfo();
             if (entityCaseCase_ == EntityCaseOneofCase.AddEntity) {
               subBuilder.MergeFrom(AddEntity);
             }
             input.ReadMessage(subBuilder);
             AddEntity = subBuilder;
+            break;
+          }
+          case 96: {
+            MHHOAAHDGAO = input.ReadUInt32();
             break;
           }
         }
@@ -356,21 +356,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 24: {
             DeleteEntity = input.ReadUInt32();
             break;
           }
-          case 104: {
-            MHHOAAHDGAO = input.ReadUInt32();
-            break;
-          }
-          case 122: {
+          case 90: {
             global::EggLink.DanhengServer.Proto.SceneEntityInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneEntityInfo();
             if (entityCaseCase_ == EntityCaseOneofCase.AddEntity) {
               subBuilder.MergeFrom(AddEntity);
             }
             input.ReadMessage(subBuilder);
             AddEntity = subBuilder;
+            break;
+          }
+          case 96: {
+            MHHOAAHDGAO = input.ReadUInt32();
             break;
           }
         }

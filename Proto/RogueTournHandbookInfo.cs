@@ -25,23 +25,26 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxSb2d1ZVRvdXJuSGFuZGJvb2tJbmZvLnByb3RvIoQCChZSb2d1ZVRvdXJu",
-            "SGFuZGJvb2tJbmZvEiEKGWhhbmRib29rX3RpdGFuX2JsZXNzX2xpc3QYBCAD",
-            "KA0SJgoecm9ndWVfdG91cm5faGFuZGJvb2tfc2Vhc29uX2lkGAIgASgNEiAK",
-            "GGhhbmRib29rX2hleF9hdmF0YXJfbGlzdBgBIAMoDRIjChtoYW5kYm9va190",
-            "b3Vybl9taXJhY2xlX2xpc3QYDyADKA0SHQoVaGFuZGJvb2tfbWlyYWNsZV9s",
-            "aXN0GAYgAygNEh0KFWhhbmRib29rX2Zvcm11bGFfbGlzdBgNIAMoDRIaChJo",
-            "YW5kYm9va19idWZmX2xpc3QYByADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "SGFuZGJvb2tJbmZvEiEKGWhhbmRib29rX3RpdGFuX2JsZXNzX2xpc3QYAyAD",
+            "KA0SIAoYaGFuZGJvb2tfaGV4X2F2YXRhcl9saXN0GA4gAygNEiMKG2hhbmRi",
+            "b29rX3RvdXJuX21pcmFjbGVfbGlzdBgKIAMoDRIaChJoYW5kYm9va19idWZm",
+            "X2xpc3QYBiADKA0SJgoecm9ndWVfdG91cm5faGFuZGJvb2tfc2Vhc29uX2lk",
+            "GAcgASgNEh0KFWhhbmRib29rX21pcmFjbGVfbGlzdBgJIAMoDRIdChVoYW5k",
+            "Ym9va19mb3JtdWxhX2xpc3QYDSADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournHandbookInfo), global::EggLink.DanhengServer.Proto.RogueTournHandbookInfo.Parser, new[]{ "HandbookTitanBlessList", "RogueTournHandbookSeasonId", "HandbookHexAvatarList", "HandbookTournMiracleList", "HandbookMiracleList", "HandbookFormulaList", "HandbookBuffList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournHandbookInfo), global::EggLink.DanhengServer.Proto.RogueTournHandbookInfo.Parser, new[]{ "HandbookTitanBlessList", "HandbookHexAvatarList", "HandbookTournMiracleList", "HandbookBuffList", "RogueTournHandbookSeasonId", "HandbookMiracleList", "HandbookFormulaList" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
+  /// <summary>
+  ///?
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RogueTournHandbookInfo : pb::IMessage<RogueTournHandbookInfo>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -78,12 +81,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournHandbookInfo(RogueTournHandbookInfo other) : this() {
       handbookTitanBlessList_ = other.handbookTitanBlessList_.Clone();
-      rogueTournHandbookSeasonId_ = other.rogueTournHandbookSeasonId_;
       handbookHexAvatarList_ = other.handbookHexAvatarList_.Clone();
       handbookTournMiracleList_ = other.handbookTournMiracleList_.Clone();
+      handbookBuffList_ = other.handbookBuffList_.Clone();
+      rogueTournHandbookSeasonId_ = other.rogueTournHandbookSeasonId_;
       handbookMiracleList_ = other.handbookMiracleList_.Clone();
       handbookFormulaList_ = other.handbookFormulaList_.Clone();
-      handbookBuffList_ = other.handbookBuffList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -94,9 +97,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "handbook_titan_bless_list" field.</summary>
-    public const int HandbookTitanBlessListFieldNumber = 4;
+    public const int HandbookTitanBlessListFieldNumber = 3;
     private static readonly pb::FieldCodec<uint> _repeated_handbookTitanBlessList_codec
-        = pb::FieldCodec.ForUInt32(34);
+        = pb::FieldCodec.ForUInt32(26);
     private readonly pbc::RepeatedField<uint> handbookTitanBlessList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,8 +107,41 @@ namespace EggLink.DanhengServer.Proto {
       get { return handbookTitanBlessList_; }
     }
 
+    /// <summary>Field number for the "handbook_hex_avatar_list" field.</summary>
+    public const int HandbookHexAvatarListFieldNumber = 14;
+    private static readonly pb::FieldCodec<uint> _repeated_handbookHexAvatarList_codec
+        = pb::FieldCodec.ForUInt32(114);
+    private readonly pbc::RepeatedField<uint> handbookHexAvatarList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> HandbookHexAvatarList {
+      get { return handbookHexAvatarList_; }
+    }
+
+    /// <summary>Field number for the "handbook_tourn_miracle_list" field.</summary>
+    public const int HandbookTournMiracleListFieldNumber = 10;
+    private static readonly pb::FieldCodec<uint> _repeated_handbookTournMiracleList_codec
+        = pb::FieldCodec.ForUInt32(82);
+    private readonly pbc::RepeatedField<uint> handbookTournMiracleList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> HandbookTournMiracleList {
+      get { return handbookTournMiracleList_; }
+    }
+
+    /// <summary>Field number for the "handbook_buff_list" field.</summary>
+    public const int HandbookBuffListFieldNumber = 6;
+    private static readonly pb::FieldCodec<uint> _repeated_handbookBuffList_codec
+        = pb::FieldCodec.ForUInt32(50);
+    private readonly pbc::RepeatedField<uint> handbookBuffList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> HandbookBuffList {
+      get { return handbookBuffList_; }
+    }
+
     /// <summary>Field number for the "rogue_tourn_handbook_season_id" field.</summary>
-    public const int RogueTournHandbookSeasonIdFieldNumber = 2;
+    public const int RogueTournHandbookSeasonIdFieldNumber = 7;
     private uint rogueTournHandbookSeasonId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -116,32 +152,10 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "handbook_hex_avatar_list" field.</summary>
-    public const int HandbookHexAvatarListFieldNumber = 1;
-    private static readonly pb::FieldCodec<uint> _repeated_handbookHexAvatarList_codec
-        = pb::FieldCodec.ForUInt32(10);
-    private readonly pbc::RepeatedField<uint> handbookHexAvatarList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> HandbookHexAvatarList {
-      get { return handbookHexAvatarList_; }
-    }
-
-    /// <summary>Field number for the "handbook_tourn_miracle_list" field.</summary>
-    public const int HandbookTournMiracleListFieldNumber = 15;
-    private static readonly pb::FieldCodec<uint> _repeated_handbookTournMiracleList_codec
-        = pb::FieldCodec.ForUInt32(122);
-    private readonly pbc::RepeatedField<uint> handbookTournMiracleList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> HandbookTournMiracleList {
-      get { return handbookTournMiracleList_; }
-    }
-
     /// <summary>Field number for the "handbook_miracle_list" field.</summary>
-    public const int HandbookMiracleListFieldNumber = 6;
+    public const int HandbookMiracleListFieldNumber = 9;
     private static readonly pb::FieldCodec<uint> _repeated_handbookMiracleList_codec
-        = pb::FieldCodec.ForUInt32(50);
+        = pb::FieldCodec.ForUInt32(74);
     private readonly pbc::RepeatedField<uint> handbookMiracleList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -160,17 +174,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return handbookFormulaList_; }
     }
 
-    /// <summary>Field number for the "handbook_buff_list" field.</summary>
-    public const int HandbookBuffListFieldNumber = 7;
-    private static readonly pb::FieldCodec<uint> _repeated_handbookBuffList_codec
-        = pb::FieldCodec.ForUInt32(58);
-    private readonly pbc::RepeatedField<uint> handbookBuffList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> HandbookBuffList {
-      get { return handbookBuffList_; }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -187,12 +190,12 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!handbookTitanBlessList_.Equals(other.handbookTitanBlessList_)) return false;
-      if (RogueTournHandbookSeasonId != other.RogueTournHandbookSeasonId) return false;
       if(!handbookHexAvatarList_.Equals(other.handbookHexAvatarList_)) return false;
       if(!handbookTournMiracleList_.Equals(other.handbookTournMiracleList_)) return false;
+      if(!handbookBuffList_.Equals(other.handbookBuffList_)) return false;
+      if (RogueTournHandbookSeasonId != other.RogueTournHandbookSeasonId) return false;
       if(!handbookMiracleList_.Equals(other.handbookMiracleList_)) return false;
       if(!handbookFormulaList_.Equals(other.handbookFormulaList_)) return false;
-      if(!handbookBuffList_.Equals(other.handbookBuffList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -201,12 +204,12 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= handbookTitanBlessList_.GetHashCode();
-      if (RogueTournHandbookSeasonId != 0) hash ^= RogueTournHandbookSeasonId.GetHashCode();
       hash ^= handbookHexAvatarList_.GetHashCode();
       hash ^= handbookTournMiracleList_.GetHashCode();
+      hash ^= handbookBuffList_.GetHashCode();
+      if (RogueTournHandbookSeasonId != 0) hash ^= RogueTournHandbookSeasonId.GetHashCode();
       hash ^= handbookMiracleList_.GetHashCode();
       hash ^= handbookFormulaList_.GetHashCode();
-      hash ^= handbookBuffList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -225,16 +228,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      handbookHexAvatarList_.WriteTo(output, _repeated_handbookHexAvatarList_codec);
+      handbookTitanBlessList_.WriteTo(output, _repeated_handbookTitanBlessList_codec);
+      handbookBuffList_.WriteTo(output, _repeated_handbookBuffList_codec);
       if (RogueTournHandbookSeasonId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(56);
         output.WriteUInt32(RogueTournHandbookSeasonId);
       }
-      handbookTitanBlessList_.WriteTo(output, _repeated_handbookTitanBlessList_codec);
       handbookMiracleList_.WriteTo(output, _repeated_handbookMiracleList_codec);
-      handbookBuffList_.WriteTo(output, _repeated_handbookBuffList_codec);
-      handbookFormulaList_.WriteTo(output, _repeated_handbookFormulaList_codec);
       handbookTournMiracleList_.WriteTo(output, _repeated_handbookTournMiracleList_codec);
+      handbookFormulaList_.WriteTo(output, _repeated_handbookFormulaList_codec);
+      handbookHexAvatarList_.WriteTo(output, _repeated_handbookHexAvatarList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -245,16 +248,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      handbookHexAvatarList_.WriteTo(ref output, _repeated_handbookHexAvatarList_codec);
+      handbookTitanBlessList_.WriteTo(ref output, _repeated_handbookTitanBlessList_codec);
+      handbookBuffList_.WriteTo(ref output, _repeated_handbookBuffList_codec);
       if (RogueTournHandbookSeasonId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(56);
         output.WriteUInt32(RogueTournHandbookSeasonId);
       }
-      handbookTitanBlessList_.WriteTo(ref output, _repeated_handbookTitanBlessList_codec);
       handbookMiracleList_.WriteTo(ref output, _repeated_handbookMiracleList_codec);
-      handbookBuffList_.WriteTo(ref output, _repeated_handbookBuffList_codec);
-      handbookFormulaList_.WriteTo(ref output, _repeated_handbookFormulaList_codec);
       handbookTournMiracleList_.WriteTo(ref output, _repeated_handbookTournMiracleList_codec);
+      handbookFormulaList_.WriteTo(ref output, _repeated_handbookFormulaList_codec);
+      handbookHexAvatarList_.WriteTo(ref output, _repeated_handbookHexAvatarList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -266,14 +269,14 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += handbookTitanBlessList_.CalculateSize(_repeated_handbookTitanBlessList_codec);
+      size += handbookHexAvatarList_.CalculateSize(_repeated_handbookHexAvatarList_codec);
+      size += handbookTournMiracleList_.CalculateSize(_repeated_handbookTournMiracleList_codec);
+      size += handbookBuffList_.CalculateSize(_repeated_handbookBuffList_codec);
       if (RogueTournHandbookSeasonId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RogueTournHandbookSeasonId);
       }
-      size += handbookHexAvatarList_.CalculateSize(_repeated_handbookHexAvatarList_codec);
-      size += handbookTournMiracleList_.CalculateSize(_repeated_handbookTournMiracleList_codec);
       size += handbookMiracleList_.CalculateSize(_repeated_handbookMiracleList_codec);
       size += handbookFormulaList_.CalculateSize(_repeated_handbookFormulaList_codec);
-      size += handbookBuffList_.CalculateSize(_repeated_handbookBuffList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -287,14 +290,14 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       handbookTitanBlessList_.Add(other.handbookTitanBlessList_);
+      handbookHexAvatarList_.Add(other.handbookHexAvatarList_);
+      handbookTournMiracleList_.Add(other.handbookTournMiracleList_);
+      handbookBuffList_.Add(other.handbookBuffList_);
       if (other.RogueTournHandbookSeasonId != 0) {
         RogueTournHandbookSeasonId = other.RogueTournHandbookSeasonId;
       }
-      handbookHexAvatarList_.Add(other.handbookHexAvatarList_);
-      handbookTournMiracleList_.Add(other.handbookTournMiracleList_);
       handbookMiracleList_.Add(other.handbookMiracleList_);
       handbookFormulaList_.Add(other.handbookFormulaList_);
-      handbookBuffList_.Add(other.handbookBuffList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -310,28 +313,28 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10:
-          case 8: {
-            handbookHexAvatarList_.AddEntriesFrom(input, _repeated_handbookHexAvatarList_codec);
-            break;
-          }
-          case 16: {
-            RogueTournHandbookSeasonId = input.ReadUInt32();
-            break;
-          }
-          case 34:
-          case 32: {
+          case 26:
+          case 24: {
             handbookTitanBlessList_.AddEntriesFrom(input, _repeated_handbookTitanBlessList_codec);
             break;
           }
           case 50:
           case 48: {
+            handbookBuffList_.AddEntriesFrom(input, _repeated_handbookBuffList_codec);
+            break;
+          }
+          case 56: {
+            RogueTournHandbookSeasonId = input.ReadUInt32();
+            break;
+          }
+          case 74:
+          case 72: {
             handbookMiracleList_.AddEntriesFrom(input, _repeated_handbookMiracleList_codec);
             break;
           }
-          case 58:
-          case 56: {
-            handbookBuffList_.AddEntriesFrom(input, _repeated_handbookBuffList_codec);
+          case 82:
+          case 80: {
+            handbookTournMiracleList_.AddEntriesFrom(input, _repeated_handbookTournMiracleList_codec);
             break;
           }
           case 106:
@@ -339,9 +342,9 @@ namespace EggLink.DanhengServer.Proto {
             handbookFormulaList_.AddEntriesFrom(input, _repeated_handbookFormulaList_codec);
             break;
           }
-          case 122:
-          case 120: {
-            handbookTournMiracleList_.AddEntriesFrom(input, _repeated_handbookTournMiracleList_codec);
+          case 114:
+          case 112: {
+            handbookHexAvatarList_.AddEntriesFrom(input, _repeated_handbookHexAvatarList_codec);
             break;
           }
         }
@@ -359,28 +362,28 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10:
-          case 8: {
-            handbookHexAvatarList_.AddEntriesFrom(ref input, _repeated_handbookHexAvatarList_codec);
-            break;
-          }
-          case 16: {
-            RogueTournHandbookSeasonId = input.ReadUInt32();
-            break;
-          }
-          case 34:
-          case 32: {
+          case 26:
+          case 24: {
             handbookTitanBlessList_.AddEntriesFrom(ref input, _repeated_handbookTitanBlessList_codec);
             break;
           }
           case 50:
           case 48: {
+            handbookBuffList_.AddEntriesFrom(ref input, _repeated_handbookBuffList_codec);
+            break;
+          }
+          case 56: {
+            RogueTournHandbookSeasonId = input.ReadUInt32();
+            break;
+          }
+          case 74:
+          case 72: {
             handbookMiracleList_.AddEntriesFrom(ref input, _repeated_handbookMiracleList_codec);
             break;
           }
-          case 58:
-          case 56: {
-            handbookBuffList_.AddEntriesFrom(ref input, _repeated_handbookBuffList_codec);
+          case 82:
+          case 80: {
+            handbookTournMiracleList_.AddEntriesFrom(ref input, _repeated_handbookTournMiracleList_codec);
             break;
           }
           case 106:
@@ -388,9 +391,9 @@ namespace EggLink.DanhengServer.Proto {
             handbookFormulaList_.AddEntriesFrom(ref input, _repeated_handbookFormulaList_codec);
             break;
           }
-          case 122:
-          case 120: {
-            handbookTournMiracleList_.AddEntriesFrom(ref input, _repeated_handbookTournMiracleList_codec);
+          case 114:
+          case 112: {
+            handbookHexAvatarList_.AddEntriesFrom(ref input, _repeated_handbookHexAvatarList_codec);
             break;
           }
         }

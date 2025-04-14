@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static MsgTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg1Nc2dUeXBlLnByb3RvKl8KB01zZ1R5cGUSEQoNTVNHX1RZUEVfTk9ORRAA",
+            "Cg1Nc2dUeXBlLnByb3RvKngKB01zZ1R5cGUSEQoNTVNHX1RZUEVfTk9ORRAA",
             "EhgKFE1TR19UWVBFX0NVU1RPTV9URVhUEAESEgoOTVNHX1RZUEVfRU1PSkkQ",
-            "AhITCg9NU0dfVFlQRV9JTlZJVEUQA0IeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
-            "dmVyLlByb3RvYgZwcm90bzM="));
+            "AhITCg9NU0dfVFlQRV9JTlZJVEUQAxIXChNNU0dfVFlQRV9QTEFORVRfRkVT",
+            "EARCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.MsgType), }, null, null));
@@ -41,6 +41,7 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("MSG_TYPE_CUSTOM_TEXT")] CustomText = 1,
     [pbr::OriginalName("MSG_TYPE_EMOJI")] Emoji = 2,
     [pbr::OriginalName("MSG_TYPE_INVITE")] Invite = 3,
+    [pbr::OriginalName("MSG_TYPE_PLANET_FES")] PlanetFes = 4,
   }
 
   #endregion

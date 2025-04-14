@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNBY2NlcHRNdWx0aXBsZUV4cGVkaXRpb25TY1JzcC5wcm90bxoURXhwZWRp",
             "dGlvbkluZm8ucHJvdG8iYgodQWNjZXB0TXVsdGlwbGVFeHBlZGl0aW9uU2NS",
-            "c3ASDwoHcmV0Y29kZRgGIAEoDRIwChdhY2NlcHRfbXVsdGlfZXhwZWRpdGlv",
-            "bhgHIAMoCzIPLkV4cGVkaXRpb25JbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "c3ASDwoHcmV0Y29kZRgBIAEoDRIwChdhY2NlcHRfbXVsdGlfZXhwZWRpdGlv",
+            "bhgMIAMoCzIPLkV4cGVkaXRpb25JbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ExpeditionInfoReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 6;
+    public const int RetcodeFieldNumber = 1;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "accept_multi_expedition" field.</summary>
-    public const int AcceptMultiExpeditionFieldNumber = 7;
+    public const int AcceptMultiExpeditionFieldNumber = 12;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ExpeditionInfo> _repeated_acceptMultiExpedition_codec
-        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.ExpeditionInfo.Parser);
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.ExpeditionInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ExpeditionInfo> acceptMultiExpedition_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ExpeditionInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
       }
       acceptMultiExpedition_.WriteTo(output, _repeated_acceptMultiExpedition_codec);
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
       }
       acceptMultiExpedition_.WriteTo(ref output, _repeated_acceptMultiExpedition_codec);
@@ -217,11 +217,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 8: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 58: {
+          case 98: {
             acceptMultiExpedition_.AddEntriesFrom(input, _repeated_acceptMultiExpedition_codec);
             break;
           }
@@ -240,11 +240,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 8: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 58: {
+          case 98: {
             acceptMultiExpedition_.AddEntriesFrom(ref input, _repeated_acceptMultiExpedition_codec);
             break;
           }

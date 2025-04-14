@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static PGBHMOLFBMMReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFQR0JITU9MRkJNTS5wcm90byJCCgtQR0JITU9MRkJNTRIMCgRzdGFyGA8g",
-            "ASgNEhAKCGdyb3VwX2lkGA0gASgNEhMKC05FREZJQk9OTEtCGAogASgNQh6q",
+            "ChFQR0JITU9MRkJNTS5wcm90byJCCgtQR0JITU9MRkJNTRIMCgRzdGFyGAgg",
+            "ASgNEhAKCGdyb3VwX2lkGAwgASgNEhMKC05FREZJQk9OTEtCGAMgASgNQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "star" field.</summary>
-    public const int StarFieldNumber = 15;
+    public const int StarFieldNumber = 8;
     private uint star_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 13;
+    public const int GroupIdFieldNumber = 12;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NEDFIBONLKB" field.</summary>
-    public const int NEDFIBONLKBFieldNumber = 10;
+    public const int NEDFIBONLKBFieldNumber = 3;
     private uint nEDFIBONLKB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,16 +167,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (NEDFIBONLKB != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(24);
         output.WriteUInt32(NEDFIBONLKB);
       }
-      if (GroupId != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(GroupId);
-      }
       if (Star != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(64);
         output.WriteUInt32(Star);
+      }
+      if (GroupId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(GroupId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,16 +189,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (NEDFIBONLKB != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(24);
         output.WriteUInt32(NEDFIBONLKB);
       }
-      if (GroupId != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(GroupId);
-      }
       if (Star != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(64);
         output.WriteUInt32(Star);
+      }
+      if (GroupId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(GroupId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 80: {
+          case 24: {
             NEDFIBONLKB = input.ReadUInt32();
             break;
           }
-          case 104: {
-            GroupId = input.ReadUInt32();
+          case 64: {
+            Star = input.ReadUInt32();
             break;
           }
-          case 120: {
-            Star = input.ReadUInt32();
+          case 96: {
+            GroupId = input.ReadUInt32();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 80: {
+          case 24: {
             NEDFIBONLKB = input.ReadUInt32();
             break;
           }
-          case 104: {
-            GroupId = input.ReadUInt32();
+          case 64: {
+            Star = input.ReadUInt32();
             break;
           }
-          case 120: {
-            Star = input.ReadUInt32();
+          case 96: {
+            GroupId = input.ReadUInt32();
             break;
           }
         }
