@@ -10,28 +10,24 @@ public class PacketGetPlayerBoardDataScRsp : BasePacket
     {
         var proto = new GetPlayerBoardDataScRsp
         {
-            CurrentHeadIconId = (uint)player.Data.HeadIcon,
-            Signature = player.Data.Signature
+            Signature = player.Data.Signature,
+            CurHeadIcon = (uint)player.Data.HeadIcon,
+            CurPersonalCard = (uint)player.Data.PersonalCard,
+            UnlockedPersonalCard = { player.PlayerUnlockData!.PersonalCards.Select(x => (uint)x) },
+            UnlockedHeadIcon = { player.PlayerUnlockData!.HeadIcons.Select(x => new HeadIconData { Id = (uint)x }) },
+            AssistAvatarIdList = { player.Data.AssistAvatars.Select(x => (uint)x) },
+            DisplayAvatarVec = new DisplayAvatarVec()
         };
 
-        player.PlayerUnlockData?.HeadIcons.ForEach(id =>
-        {
-            HeadIconData headIcon = new() { Id = (uint)id };
-            proto.UnlockedHeadIconList.Add(headIcon);
-        });
-
-        proto.DisplayAvatarVec = new DisplayAvatarVec();
         var pos = 0;
         player.Data.DisplayAvatars.ForEach(avatar =>
         {
-            DisplayAvatarData displayAvatar = new()
+            proto.DisplayAvatarVec.DisplayAvatarList.Add(new DisplayAvatarData
             {
                 AvatarId = (uint)avatar,
                 Pos = (uint)pos++
-            };
-            proto.DisplayAvatarVec.DisplayAvatarList.Add(displayAvatar);
+            });
         });
-        player.Data.AssistAvatars.ForEach(x => proto.AssistAvatarIdList.Add((uint)x));
 
         SetData(proto);
     }

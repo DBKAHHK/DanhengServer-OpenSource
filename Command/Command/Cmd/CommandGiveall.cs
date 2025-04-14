@@ -235,6 +235,8 @@ public class CommandGiveall : ICommand
                 if (material.ItemSubType == ItemSubTypeEnum.HeadIcon ||
                     material.ItemSubType == ItemSubTypeEnum.PhoneTheme ||
                     material.ItemSubType == ItemSubTypeEnum.ChatBubble ||
+                    material.ItemSubType == ItemSubTypeEnum.PersonalCard ||
+                    material.ItemSubType == ItemSubTypeEnum.PhoneCase ||
                     material.ItemSubType == ItemSubTypeEnum.AvatarSkin)
                     await player.InventoryManager!.AddItem(material.ID, 1, false);
 

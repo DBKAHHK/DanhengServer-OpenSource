@@ -27,24 +27,24 @@ namespace EggLink.DanhengServer.Proto {
             "ChZQbGF5ZXJEZXRhaWxJbmZvLnByb3RvGhVQcml2YWN5U2V0dGluZ3MucHJv",
             "dG8aElBsYXRmb3JtVHlwZS5wcm90bxodRGlzcGxheUF2YXRhckRldGFpbElu",
             "Zm8ucHJvdG8aFlBsYXllclJlY29yZEluZm8ucHJvdG8aG1BsYXllckRpc3Bs",
-            "YXlTZXR0aW5ncy5wcm90byKfBAoQUGxheWVyRGV0YWlsSW5mbxImCgtyZWNv",
+            "YXlTZXR0aW5ncy5wcm90byKhBAoQUGxheWVyRGV0YWlsSW5mbxImCgtyZWNv",
             "cmRfaW5mbxgGIAEoCzIRLlBsYXllclJlY29yZEluZm8SEAoIbmlja25hbWUY",
-            "CyABKAkSFAoLQU5QTExBT0JGSkkY/Q8gASgNEhMKC0FLQ0VKRkNGQkFOGAMg",
-            "ASgJEhEKCWhlYWRfaWNvbhgFIAEoDRITCgtPT09QQkhJTU5GRBgEIAEoDRI1",
-            "ChJhc3Npc3RfYXZhdGFyX2xpc3QY8wkgAygLMhguRGlzcGxheUF2YXRhckRl",
-            "dGFpbEluZm8SEQoJaXNfYmFubmVkGAggASgIEh8KCHBsYXRmb3JtGA0gASgO",
-            "Mg0uUGxhdGZvcm1UeXBlEhMKC0dNQUxDUE5PSEJGGAEgASgJEhMKC3dvcmxk",
-            "X2xldmVsGAwgASgNEhMKC0tCTUdCTklORkJLGA8gASgNEhMKC0VNT0JJSkJE",
-            "S0VJGAogASgIEgsKA3VpZBgCIAEoDRINCgVsZXZlbBgOIAEoDRIrChBwcml2",
-            "YWN5X3NldHRpbmdzGOsBIAEoCzIQLlByaXZhY3lTZXR0aW5ncxIRCglzaWdu",
-            "YXR1cmUYCSABKAkSNQoTZGlzcGxheV9hdmF0YXJfbGlzdBgHIAMoCzIYLkRp",
-            "c3BsYXlBdmF0YXJEZXRhaWxJbmZvEiwKC09OS0hMSE9KSEdOGKUNIAEoCzIW",
-            "LlBsYXllckRpc3BsYXlTZXR0aW5nc0IeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
-            "dmVyLlByb3RvYgZwcm90bzM="));
+            "CyABKAkSFgoNcGVyc29uYWxfY2FyZBj9DyABKA0SEwoLQUtDRUpGQ0ZCQU4Y",
+            "AyABKAkSEQoJaGVhZF9pY29uGAUgASgNEhMKC09PT1BCSElNTkZEGAQgASgN",
+            "EjUKEmFzc2lzdF9hdmF0YXJfbGlzdBjzCSADKAsyGC5EaXNwbGF5QXZhdGFy",
+            "RGV0YWlsSW5mbxIRCglpc19iYW5uZWQYCCABKAgSHwoIcGxhdGZvcm0YDSAB",
+            "KA4yDS5QbGF0Zm9ybVR5cGUSEwoLR01BTENQTk9IQkYYASABKAkSEwoLd29y",
+            "bGRfbGV2ZWwYDCABKA0SEwoLS0JNR0JOSU5GQksYDyABKA0SEwoLRU1PQklK",
+            "QkRLRUkYCiABKAgSCwoDdWlkGAIgASgNEg0KBWxldmVsGA4gASgNEisKEHBy",
+            "aXZhY3lfc2V0dGluZ3MY6wEgASgLMhAuUHJpdmFjeVNldHRpbmdzEhEKCXNp",
+            "Z25hdHVyZRgJIAEoCRI1ChNkaXNwbGF5X2F2YXRhcl9saXN0GAcgAygLMhgu",
+            "RGlzcGxheUF2YXRhckRldGFpbEluZm8SLAoLT05LSExIT0pIR04YpQ0gASgL",
+            "MhYuUGxheWVyRGlzcGxheVNldHRpbmdzQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PrivacySettingsReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerRecordInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerDisplaySettingsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerDetailInfo), global::EggLink.DanhengServer.Proto.PlayerDetailInfo.Parser, new[]{ "RecordInfo", "Nickname", "ANPLLAOBFJI", "AKCEJFCFBAN", "HeadIcon", "OOOPBHIMNFD", "AssistAvatarList", "IsBanned", "Platform", "GMALCPNOHBF", "WorldLevel", "KBMGBNINFBK", "EMOBIJBDKEI", "Uid", "Level", "PrivacySettings", "Signature", "DisplayAvatarList", "ONKHLHOJHGN" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerDetailInfo), global::EggLink.DanhengServer.Proto.PlayerDetailInfo.Parser, new[]{ "RecordInfo", "Nickname", "PersonalCard", "AKCEJFCFBAN", "HeadIcon", "OOOPBHIMNFD", "AssistAvatarList", "IsBanned", "Platform", "GMALCPNOHBF", "WorldLevel", "KBMGBNINFBK", "EMOBIJBDKEI", "Uid", "Level", "PrivacySettings", "Signature", "DisplayAvatarList", "ONKHLHOJHGN" }, null, null, null, null)
           }));
     }
     #endregion
@@ -88,7 +88,7 @@ namespace EggLink.DanhengServer.Proto {
     public PlayerDetailInfo(PlayerDetailInfo other) : this() {
       recordInfo_ = other.recordInfo_ != null ? other.recordInfo_.Clone() : null;
       nickname_ = other.nickname_;
-      aNPLLAOBFJI_ = other.aNPLLAOBFJI_;
+      personalCard_ = other.personalCard_;
       aKCEJFCFBAN_ = other.aKCEJFCFBAN_;
       headIcon_ = other.headIcon_;
       oOOPBHIMNFD_ = other.oOOPBHIMNFD_;
@@ -138,15 +138,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ANPLLAOBFJI" field.</summary>
-    public const int ANPLLAOBFJIFieldNumber = 2045;
-    private uint aNPLLAOBFJI_;
+    /// <summary>Field number for the "personal_card" field.</summary>
+    public const int PersonalCardFieldNumber = 2045;
+    private uint personalCard_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ANPLLAOBFJI {
-      get { return aNPLLAOBFJI_; }
+    public uint PersonalCard {
+      get { return personalCard_; }
       set {
-        aNPLLAOBFJI_ = value;
+        personalCard_ = value;
       }
     }
 
@@ -357,7 +357,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (!object.Equals(RecordInfo, other.RecordInfo)) return false;
       if (Nickname != other.Nickname) return false;
-      if (ANPLLAOBFJI != other.ANPLLAOBFJI) return false;
+      if (PersonalCard != other.PersonalCard) return false;
       if (AKCEJFCFBAN != other.AKCEJFCFBAN) return false;
       if (HeadIcon != other.HeadIcon) return false;
       if (OOOPBHIMNFD != other.OOOPBHIMNFD) return false;
@@ -383,7 +383,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (recordInfo_ != null) hash ^= RecordInfo.GetHashCode();
       if (Nickname.Length != 0) hash ^= Nickname.GetHashCode();
-      if (ANPLLAOBFJI != 0) hash ^= ANPLLAOBFJI.GetHashCode();
+      if (PersonalCard != 0) hash ^= PersonalCard.GetHashCode();
       if (AKCEJFCFBAN.Length != 0) hash ^= AKCEJFCFBAN.GetHashCode();
       if (HeadIcon != 0) hash ^= HeadIcon.GetHashCode();
       if (OOOPBHIMNFD != 0) hash ^= OOOPBHIMNFD.GetHashCode();
@@ -484,9 +484,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(170, 106);
         output.WriteMessage(ONKHLHOJHGN);
       }
-      if (ANPLLAOBFJI != 0) {
+      if (PersonalCard != 0) {
         output.WriteRawTag(232, 127);
-        output.WriteUInt32(ANPLLAOBFJI);
+        output.WriteUInt32(PersonalCard);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -564,9 +564,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(170, 106);
         output.WriteMessage(ONKHLHOJHGN);
       }
-      if (ANPLLAOBFJI != 0) {
+      if (PersonalCard != 0) {
         output.WriteRawTag(232, 127);
-        output.WriteUInt32(ANPLLAOBFJI);
+        output.WriteUInt32(PersonalCard);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -584,8 +584,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Nickname.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Nickname);
       }
-      if (ANPLLAOBFJI != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(ANPLLAOBFJI);
+      if (PersonalCard != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(PersonalCard);
       }
       if (AKCEJFCFBAN.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AKCEJFCFBAN);
@@ -652,8 +652,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Nickname.Length != 0) {
         Nickname = other.Nickname;
       }
-      if (other.ANPLLAOBFJI != 0) {
-        ANPLLAOBFJI = other.ANPLLAOBFJI;
+      if (other.PersonalCard != 0) {
+        PersonalCard = other.PersonalCard;
       }
       if (other.AKCEJFCFBAN.Length != 0) {
         AKCEJFCFBAN = other.AKCEJFCFBAN;
@@ -802,7 +802,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 16360: {
-            ANPLLAOBFJI = input.ReadUInt32();
+            PersonalCard = input.ReadUInt32();
             break;
           }
         }
@@ -902,7 +902,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 16360: {
-            ANPLLAOBFJI = input.ReadUInt32();
+            PersonalCard = input.ReadUInt32();
             break;
           }
         }

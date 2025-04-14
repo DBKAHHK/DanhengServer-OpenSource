@@ -28,7 +28,8 @@ public class HandlerGetPlayerDetailInfoCsReq : Handler
                     Level = serverProfile.Level,
                     WorldLevel = 0,
                     Name = serverProfile.Name,
-                    ChatBubble = serverProfile.ChatBubbleId
+                    ChatBubble = serverProfile.ChatBubbleId,
+                    PersonalCard = serverProfile.PersonalCardId
                 };
             }
             else

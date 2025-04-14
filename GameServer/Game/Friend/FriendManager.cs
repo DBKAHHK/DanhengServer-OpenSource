@@ -269,6 +269,7 @@ public class FriendManager(PlayerInstance player) : BasePlayerManager(player)
                 Level = (uint)serverProfile.Level,
                 Nickname = serverProfile.Name,
                 ChatBubbleId = (uint)serverProfile.ChatBubbleId,
+                PersonalCard = (uint)serverProfile.PersonalCardId,
                 OnlineStatus = FriendOnlineStatus.Online,
                 Platform = PlatformType.Pc,
                 Signature = serverProfile.Signature

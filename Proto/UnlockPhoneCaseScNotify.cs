@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static UnlockPhoneCaseScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1VbmxvY2tQaG9uZUNhc2VTY05vdGlmeS5wcm90byIuChdVbmxvY2tQaG9u",
-            "ZUNhc2VTY05vdGlmeRITCgtHSUFOSExJSUtJQRgIIAEoDUIeqgIbRWdnTGlu",
-            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Ch1VbmxvY2tQaG9uZUNhc2VTY05vdGlmeS5wcm90byItChdVbmxvY2tQaG9u",
+            "ZUNhc2VTY05vdGlmeRISCgpwaG9uZV9jYXNlGAggASgNQh6qAhtFZ2dMaW5r",
+            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UnlockPhoneCaseScNotify), global::EggLink.DanhengServer.Proto.UnlockPhoneCaseScNotify.Parser, new[]{ "GIANHLIIKIA" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UnlockPhoneCaseScNotify), global::EggLink.DanhengServer.Proto.UnlockPhoneCaseScNotify.Parser, new[]{ "PhoneCase" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UnlockPhoneCaseScNotify(UnlockPhoneCaseScNotify other) : this() {
-      gIANHLIIKIA_ = other.gIANHLIIKIA_;
+      phoneCase_ = other.phoneCase_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new UnlockPhoneCaseScNotify(this);
     }
 
-    /// <summary>Field number for the "GIANHLIIKIA" field.</summary>
-    public const int GIANHLIIKIAFieldNumber = 8;
-    private uint gIANHLIIKIA_;
+    /// <summary>Field number for the "phone_case" field.</summary>
+    public const int PhoneCaseFieldNumber = 8;
+    private uint phoneCase_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GIANHLIIKIA {
-      get { return gIANHLIIKIA_; }
+    public uint PhoneCase {
+      get { return phoneCase_; }
       set {
-        gIANHLIIKIA_ = value;
+        phoneCase_ = value;
       }
     }
 
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (GIANHLIIKIA != other.GIANHLIIKIA) return false;
+      if (PhoneCase != other.PhoneCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (GIANHLIIKIA != 0) hash ^= GIANHLIIKIA.GetHashCode();
+      if (PhoneCase != 0) hash ^= PhoneCase.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (GIANHLIIKIA != 0) {
+      if (PhoneCase != 0) {
         output.WriteRawTag(64);
-        output.WriteUInt32(GIANHLIIKIA);
+        output.WriteUInt32(PhoneCase);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (GIANHLIIKIA != 0) {
+      if (PhoneCase != 0) {
         output.WriteRawTag(64);
-        output.WriteUInt32(GIANHLIIKIA);
+        output.WriteUInt32(PhoneCase);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -164,8 +164,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (GIANHLIIKIA != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GIANHLIIKIA);
+      if (PhoneCase != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PhoneCase);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -179,8 +179,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.GIANHLIIKIA != 0) {
-        GIANHLIIKIA = other.GIANHLIIKIA;
+      if (other.PhoneCase != 0) {
+        PhoneCase = other.PhoneCase;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -198,7 +198,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 64: {
-            GIANHLIIKIA = input.ReadUInt32();
+            PhoneCase = input.ReadUInt32();
             break;
           }
         }
@@ -217,7 +217,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 64: {
-            GIANHLIIKIA = input.ReadUInt32();
+            PhoneCase = input.ReadUInt32();
             break;
           }
         }
