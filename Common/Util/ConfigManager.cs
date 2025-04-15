@@ -56,14 +56,13 @@ public static class ConfigManager
 
         // Generate all necessary versions
         var verList = new List<string>();
-        if (GameConstants.GAME_VERSION.Length > 4)
-            for (var i = 1; i < 6; i++)
-                verList.Add(GameConstants.GAME_VERSION + i.ToString());
-        else
-            verList.Add(GameConstants.GAME_VERSION);
-
-        Logger.Info(I18NManager.Translate("Server.ServerInfo.CurrentVersion",
-            verList.Aggregate((current, next) => $"{current}, {next}")));
+        var prefix = new List<string> { "CN", "OS" };
+        foreach (var pre in prefix)
+            if (GameConstants.GAME_VERSION[^1] == '5')
+                for (var i = 1; i < 6; i++)
+                    verList.Add(pre + GameConstants.GAME_VERSION + i.ToString());
+            else
+                verList.Add(pre + GameConstants.GAME_VERSION);
 
         if (!file.Exists)
         {
@@ -82,6 +81,8 @@ public static class ConfigManager
         foreach (var version in verList)
             if (!Hotfix.HotfixData.TryGetValue(version, out var _))
                 Hotfix.HotfixData[version] = new();
+
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.CurrentVersion", GameConstants.GAME_VERSION));
 
         SaveData(Hotfix, HotfixFilePath);
     }
