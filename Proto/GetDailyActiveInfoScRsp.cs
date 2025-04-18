@@ -25,14 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1HZXREYWlseUFjdGl2ZUluZm9TY1JzcC5wcm90bxoXRGFpbHlBY3Rpdml0",
-            "eUluZm8ucHJvdG8ifQoXR2V0RGFpbHlBY3RpdmVJbmZvU2NSc3ASJwoLSUhP",
-            "RUxMR0JCS04YAiADKAsyEi5EYWlseUFjdGl2aXR5SW5mbxITCgtNQklCQUJL",
-            "SUFORhgPIAMoDRIPCgdyZXRjb2RlGAUgASgNEhMKC0lJTUpDTEJPUE5DGAwg",
-            "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "eUluZm8ucHJvdG8ilgEKF0dldERhaWx5QWN0aXZlSW5mb1NjUnNwEhYKDmRh",
+            "aWx5X3Byb2dyZXNzGAwgASgNEg8KB3JldGNvZGUYDSABKA0SHQoVZGFpbHlf",
+            "bWlzc2lvbl9pZF9saXN0GAMgAygNEjMKF2RhaWx5X21pc3Npb25faW5mb19s",
+            "aXN0GAIgAygLMhIuRGFpbHlBY3Rpdml0eUluZm9CHqoCG0VnZ0xpbmsuRGFu",
+            "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DailyActivityInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetDailyActiveInfoScRsp), global::EggLink.DanhengServer.Proto.GetDailyActiveInfoScRsp.Parser, new[]{ "IHOELLGBBKN", "MBIBABKIANF", "Retcode", "IIMJCLBOPNC" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetDailyActiveInfoScRsp), global::EggLink.DanhengServer.Proto.GetDailyActiveInfoScRsp.Parser, new[]{ "DailyProgress", "Retcode", "DailyMissionIdList", "DailyMissionInfoList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +75,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetDailyActiveInfoScRsp(GetDailyActiveInfoScRsp other) : this() {
-      iHOELLGBBKN_ = other.iHOELLGBBKN_.Clone();
-      mBIBABKIANF_ = other.mBIBABKIANF_.Clone();
+      dailyProgress_ = other.dailyProgress_;
       retcode_ = other.retcode_;
-      iIMJCLBOPNC_ = other.iIMJCLBOPNC_;
+      dailyMissionIdList_ = other.dailyMissionIdList_.Clone();
+      dailyMissionInfoList_ = other.dailyMissionInfoList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,30 +88,20 @@ namespace EggLink.DanhengServer.Proto {
       return new GetDailyActiveInfoScRsp(this);
     }
 
-    /// <summary>Field number for the "IHOELLGBBKN" field.</summary>
-    public const int IHOELLGBBKNFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DailyActivityInfo> _repeated_iHOELLGBBKN_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.DailyActivityInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DailyActivityInfo> iHOELLGBBKN_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DailyActivityInfo>();
+    /// <summary>Field number for the "daily_progress" field.</summary>
+    public const int DailyProgressFieldNumber = 12;
+    private uint dailyProgress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DailyActivityInfo> IHOELLGBBKN {
-      get { return iHOELLGBBKN_; }
-    }
-
-    /// <summary>Field number for the "MBIBABKIANF" field.</summary>
-    public const int MBIBABKIANFFieldNumber = 15;
-    private static readonly pb::FieldCodec<uint> _repeated_mBIBABKIANF_codec
-        = pb::FieldCodec.ForUInt32(122);
-    private readonly pbc::RepeatedField<uint> mBIBABKIANF_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> MBIBABKIANF {
-      get { return mBIBABKIANF_; }
+    public uint DailyProgress {
+      get { return dailyProgress_; }
+      set {
+        dailyProgress_ = value;
+      }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 5;
+    public const int RetcodeFieldNumber = 13;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -121,16 +112,26 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "IIMJCLBOPNC" field.</summary>
-    public const int IIMJCLBOPNCFieldNumber = 12;
-    private uint iIMJCLBOPNC_;
+    /// <summary>Field number for the "daily_mission_id_list" field.</summary>
+    public const int DailyMissionIdListFieldNumber = 3;
+    private static readonly pb::FieldCodec<uint> _repeated_dailyMissionIdList_codec
+        = pb::FieldCodec.ForUInt32(26);
+    private readonly pbc::RepeatedField<uint> dailyMissionIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IIMJCLBOPNC {
-      get { return iIMJCLBOPNC_; }
-      set {
-        iIMJCLBOPNC_ = value;
-      }
+    public pbc::RepeatedField<uint> DailyMissionIdList {
+      get { return dailyMissionIdList_; }
+    }
+
+    /// <summary>Field number for the "daily_mission_info_list" field.</summary>
+    public const int DailyMissionInfoListFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DailyActivityInfo> _repeated_dailyMissionInfoList_codec
+        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.DailyActivityInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DailyActivityInfo> dailyMissionInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DailyActivityInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DailyActivityInfo> DailyMissionInfoList {
+      get { return dailyMissionInfoList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -148,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!iHOELLGBBKN_.Equals(other.iHOELLGBBKN_)) return false;
-      if(!mBIBABKIANF_.Equals(other.mBIBABKIANF_)) return false;
+      if (DailyProgress != other.DailyProgress) return false;
       if (Retcode != other.Retcode) return false;
-      if (IIMJCLBOPNC != other.IIMJCLBOPNC) return false;
+      if(!dailyMissionIdList_.Equals(other.dailyMissionIdList_)) return false;
+      if(!dailyMissionInfoList_.Equals(other.dailyMissionInfoList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -159,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= iHOELLGBBKN_.GetHashCode();
-      hash ^= mBIBABKIANF_.GetHashCode();
+      if (DailyProgress != 0) hash ^= DailyProgress.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (IIMJCLBOPNC != 0) hash ^= IIMJCLBOPNC.GetHashCode();
+      hash ^= dailyMissionIdList_.GetHashCode();
+      hash ^= dailyMissionInfoList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -181,16 +182,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      iHOELLGBBKN_.WriteTo(output, _repeated_iHOELLGBBKN_codec);
+      dailyMissionInfoList_.WriteTo(output, _repeated_dailyMissionInfoList_codec);
+      dailyMissionIdList_.WriteTo(output, _repeated_dailyMissionIdList_codec);
+      if (DailyProgress != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(DailyProgress);
+      }
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(104);
         output.WriteUInt32(Retcode);
       }
-      if (IIMJCLBOPNC != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(IIMJCLBOPNC);
-      }
-      mBIBABKIANF_.WriteTo(output, _repeated_mBIBABKIANF_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -201,16 +202,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      iHOELLGBBKN_.WriteTo(ref output, _repeated_iHOELLGBBKN_codec);
+      dailyMissionInfoList_.WriteTo(ref output, _repeated_dailyMissionInfoList_codec);
+      dailyMissionIdList_.WriteTo(ref output, _repeated_dailyMissionIdList_codec);
+      if (DailyProgress != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(DailyProgress);
+      }
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(104);
         output.WriteUInt32(Retcode);
       }
-      if (IIMJCLBOPNC != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(IIMJCLBOPNC);
-      }
-      mBIBABKIANF_.WriteTo(ref output, _repeated_mBIBABKIANF_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -221,14 +222,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += iHOELLGBBKN_.CalculateSize(_repeated_iHOELLGBBKN_codec);
-      size += mBIBABKIANF_.CalculateSize(_repeated_mBIBABKIANF_codec);
+      if (DailyProgress != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DailyProgress);
+      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (IIMJCLBOPNC != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IIMJCLBOPNC);
-      }
+      size += dailyMissionIdList_.CalculateSize(_repeated_dailyMissionIdList_codec);
+      size += dailyMissionInfoList_.CalculateSize(_repeated_dailyMissionInfoList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -241,14 +242,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      iHOELLGBBKN_.Add(other.iHOELLGBBKN_);
-      mBIBABKIANF_.Add(other.mBIBABKIANF_);
+      if (other.DailyProgress != 0) {
+        DailyProgress = other.DailyProgress;
+      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.IIMJCLBOPNC != 0) {
-        IIMJCLBOPNC = other.IIMJCLBOPNC;
-      }
+      dailyMissionIdList_.Add(other.dailyMissionIdList_);
+      dailyMissionInfoList_.Add(other.dailyMissionInfoList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -265,20 +266,20 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 18: {
-            iHOELLGBBKN_.AddEntriesFrom(input, _repeated_iHOELLGBBKN_codec);
+            dailyMissionInfoList_.AddEntriesFrom(input, _repeated_dailyMissionInfoList_codec);
             break;
           }
-          case 40: {
-            Retcode = input.ReadUInt32();
+          case 26:
+          case 24: {
+            dailyMissionIdList_.AddEntriesFrom(input, _repeated_dailyMissionIdList_codec);
             break;
           }
           case 96: {
-            IIMJCLBOPNC = input.ReadUInt32();
+            DailyProgress = input.ReadUInt32();
             break;
           }
-          case 122:
-          case 120: {
-            mBIBABKIANF_.AddEntriesFrom(input, _repeated_mBIBABKIANF_codec);
+          case 104: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -297,20 +298,20 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 18: {
-            iHOELLGBBKN_.AddEntriesFrom(ref input, _repeated_iHOELLGBBKN_codec);
+            dailyMissionInfoList_.AddEntriesFrom(ref input, _repeated_dailyMissionInfoList_codec);
             break;
           }
-          case 40: {
-            Retcode = input.ReadUInt32();
+          case 26:
+          case 24: {
+            dailyMissionIdList_.AddEntriesFrom(ref input, _repeated_dailyMissionIdList_codec);
             break;
           }
           case 96: {
-            IIMJCLBOPNC = input.ReadUInt32();
+            DailyProgress = input.ReadUInt32();
             break;
           }
-          case 122:
-          case 120: {
-            mBIBABKIANF_.AddEntriesFrom(ref input, _repeated_mBIBABKIANF_codec);
+          case 104: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

@@ -24,7 +24,7 @@ namespace EggLink.DanhengServer.Proto {
     static LobbyModifyTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVMb2JieU1vZGlmeVR5cGUucHJvdG8q/QMKD0xvYmJ5TW9kaWZ5VHlwZRIY",
+            "ChVMb2JieU1vZGlmeVR5cGUucHJvdG8qzgQKD0xvYmJ5TW9kaWZ5VHlwZRIY",
             "ChRMb2JieU1vZGlmeVR5cGVfTm9uZRAAEhgKFExvYmJ5TW9kaWZ5VHlwZV9J",
             "ZGxlEAESGQoVTG9iYnlNb2RpZnlUeXBlX1JlYWR5EAISHQoZTG9iYnlNb2Rp",
             "ZnlUeXBlX09wZXJhdGluZxADEh8KG0xvYmJ5TW9kaWZ5VHlwZV9DYW5jZWxN",
@@ -35,8 +35,10 @@ namespace EggLink.DanhengServer.Proto {
             "c21pc3MQChIgChxMb2JieU1vZGlmeVR5cGVfTWF0Y2hUaW1lT3V0EAsSHgoa",
             "TG9iYnlNb2RpZnlUeXBlX0ZpZ2h0U3RhcnQQDBIaChZMb2JieU1vZGlmeVR5",
             "cGVfTG9nb3V0EA0SHAoYTG9iYnlNb2RpZnlUeXBlX0ZpZ2h0RW5kEA4SKgom",
-            "TG9iYnlNb2RpZnlUeXBlX0ZpZ2h0Um9vbURlc3Ryb3lJbkluaXQQD0IeqgIb",
-            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "TG9iYnlNb2RpZnlUeXBlX0ZpZ2h0Um9vbURlc3Ryb3lJbkluaXQQDxIjCh9M",
+            "b2JieU1vZGlmeVR5cGVfTG9iYnlTdGFydEZpZ2h0EBASKgomTG9iYnlNb2Rp",
+            "ZnlUeXBlX0xvYmJ5U3RhcnRGaWdodFRpbWVvdXQQEUIeqgIbRWdnTGluay5E",
+            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.LobbyModifyType), }, null, null));
@@ -62,6 +64,8 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("LobbyModifyType_Logout")] Logout = 13,
     [pbr::OriginalName("LobbyModifyType_FightEnd")] FightEnd = 14,
     [pbr::OriginalName("LobbyModifyType_FightRoomDestroyInInit")] FightRoomDestroyInInit = 15,
+    [pbr::OriginalName("LobbyModifyType_LobbyStartFight")] LobbyStartFight = 16,
+    [pbr::OriginalName("LobbyModifyType_LobbyStartFightTimeout")] LobbyStartFightTimeout = 17,
   }
 
   #endregion

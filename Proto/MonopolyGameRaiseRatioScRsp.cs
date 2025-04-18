@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFNb25vcG9seUdhbWVSYWlzZVJhdGlvU2NSc3AucHJvdG8iPQobTW9ub3Bv",
-            "bHlHYW1lUmFpc2VSYXRpb1NjUnNwEg0KBVJhdGlvGAsgASgNEg8KB1JldGNv",
-            "ZGUYBSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "bHlHYW1lUmFpc2VSYXRpb1NjUnNwEg8KB1JldGNvZGUYAiABKA0SDQoFUmF0",
+            "aW8YCSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonopolyGameRaiseRatioScRsp), global::EggLink.DanhengServer.Proto.MonopolyGameRaiseRatioScRsp.Parser, new[]{ "Ratio", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonopolyGameRaiseRatioScRsp), global::EggLink.DanhengServer.Proto.MonopolyGameRaiseRatioScRsp.Parser, new[]{ "Retcode", "Ratio" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MonopolyGameRaiseRatioScRsp(MonopolyGameRaiseRatioScRsp other) : this() {
-      ratio_ = other.ratio_;
       retcode_ = other.retcode_;
+      ratio_ = other.ratio_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new MonopolyGameRaiseRatioScRsp(this);
     }
 
-    /// <summary>Field number for the "Ratio" field.</summary>
-    public const int RatioFieldNumber = 11;
-    private uint ratio_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Ratio {
-      get { return ratio_; }
-      set {
-        ratio_ = value;
-      }
-    }
-
     /// <summary>Field number for the "Retcode" field.</summary>
-    public const int RetcodeFieldNumber = 5;
+    public const int RetcodeFieldNumber = 2;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Ratio" field.</summary>
+    public const int RatioFieldNumber = 9;
+    private uint ratio_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Ratio {
+      get { return ratio_; }
+      set {
+        ratio_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Ratio != other.Ratio) return false;
       if (Retcode != other.Retcode) return false;
+      if (Ratio != other.Ratio) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Ratio != 0) hash ^= Ratio.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (Ratio != 0) hash ^= Ratio.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
       }
       if (Ratio != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(72);
         output.WriteUInt32(Ratio);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
       }
       if (Ratio != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(72);
         output.WriteUInt32(Ratio);
       }
       if (_unknownFields != null) {
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Ratio != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Ratio);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (Ratio != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Ratio);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Ratio != 0) {
-        Ratio = other.Ratio;
-      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
+      }
+      if (other.Ratio != 0) {
+        Ratio = other.Ratio;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 16: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 72: {
             Ratio = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 16: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 72: {
             Ratio = input.ReadUInt32();
             break;
           }

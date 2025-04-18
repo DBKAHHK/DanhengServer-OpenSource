@@ -18,8 +18,9 @@ public class PacketChallengeBossPhaseSettleNotify : BasePacket
             ScoreTwo = (uint)challenge.ScoreStage2,
             Star = (uint)challenge.Stars,
             Phase = (uint)challenge.CurrentStage,
-            IsRemainingAction = true,
-            IsReward = true
+            IsReward = true,
+            IsSecondHalf = challenge.CurrentStage == challenge.Excel.StageNum,
+            PageType = 1
         };
 
         proto.BattleTargetList.AddRange(targetLists?.BattleTargetList_ ?? []);

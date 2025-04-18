@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBOcGNNZWV0QnlQZXJmb3JtYW5jZVN0YXR1cy5wcm90byJFChpOcGNNZWV0",
-            "QnlQZXJmb3JtYW5jZVN0YXR1cxIWCg5wZXJmb3JtYW5jZV9pZBgIIAEoDRIP",
-            "Cgdpc19tZWV0GA8gASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
+            "QnlQZXJmb3JtYW5jZVN0YXR1cxIWCg5wZXJmb3JtYW5jZV9pZBgMIAEoDRIP",
+            "Cgdpc19tZWV0GAYgASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
             "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "performance_id" field.</summary>
-    public const int PerformanceIdFieldNumber = 8;
+    public const int PerformanceIdFieldNumber = 12;
     private uint performanceId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_meet" field.</summary>
-    public const int IsMeetFieldNumber = 15;
+    public const int IsMeetFieldNumber = 6;
     private bool isMeet_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PerformanceId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(PerformanceId);
-      }
       if (IsMeet != false) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(48);
         output.WriteBool(IsMeet);
+      }
+      if (PerformanceId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(PerformanceId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PerformanceId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(PerformanceId);
-      }
       if (IsMeet != false) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(48);
         output.WriteBool(IsMeet);
+      }
+      if (PerformanceId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(PerformanceId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
-            PerformanceId = input.ReadUInt32();
+          case 48: {
+            IsMeet = input.ReadBool();
             break;
           }
-          case 120: {
-            IsMeet = input.ReadBool();
+          case 96: {
+            PerformanceId = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
-            PerformanceId = input.ReadUInt32();
+          case 48: {
+            IsMeet = input.ReadBool();
             break;
           }
-          case 120: {
-            IsMeet = input.ReadBool();
+          case 96: {
+            PerformanceId = input.ReadUInt32();
             break;
           }
         }

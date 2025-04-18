@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static DDCELCOJGNPReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFERENFTENPSkdOUC5wcm90byJHCgtERENFTENPSkdOUBITCgtMR0lJQUhJ",
-            "RExNRxgNIAEoDRIQCghldmVudF9pZBgLIAEoDRIRCglvcHRpb25faWQYByAB",
+            "ChFERENFTENPSkdOUC5wcm90byJHCgtERENFTENPSkdOUBIRCglvcHRpb25f",
+            "aWQYCiABKA0SEwoLTEdJSUFISURMTUcYCSABKA0SEAoIZXZlbnRfaWQYDiAB",
             "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DDCELCOJGNP), global::EggLink.DanhengServer.Proto.DDCELCOJGNP.Parser, new[]{ "LGIIAHIDLMG", "EventId", "OptionId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DDCELCOJGNP), global::EggLink.DanhengServer.Proto.DDCELCOJGNP.Parser, new[]{ "OptionId", "LGIIAHIDLMG", "EventId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,9 +72,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DDCELCOJGNP(DDCELCOJGNP other) : this() {
+      optionId_ = other.optionId_;
       lGIIAHIDLMG_ = other.lGIIAHIDLMG_;
       eventId_ = other.eventId_;
-      optionId_ = other.optionId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,8 +84,20 @@ namespace EggLink.DanhengServer.Proto {
       return new DDCELCOJGNP(this);
     }
 
+    /// <summary>Field number for the "option_id" field.</summary>
+    public const int OptionIdFieldNumber = 10;
+    private uint optionId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint OptionId {
+      get { return optionId_; }
+      set {
+        optionId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "LGIIAHIDLMG" field.</summary>
-    public const int LGIIAHIDLMGFieldNumber = 13;
+    public const int LGIIAHIDLMGFieldNumber = 9;
     private uint lGIIAHIDLMG_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "event_id" field.</summary>
-    public const int EventIdFieldNumber = 11;
+    public const int EventIdFieldNumber = 14;
     private uint eventId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,18 +117,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return eventId_; }
       set {
         eventId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "option_id" field.</summary>
-    public const int OptionIdFieldNumber = 7;
-    private uint optionId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint OptionId {
-      get { return optionId_; }
-      set {
-        optionId_ = value;
       }
     }
 
@@ -135,9 +135,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (OptionId != other.OptionId) return false;
       if (LGIIAHIDLMG != other.LGIIAHIDLMG) return false;
       if (EventId != other.EventId) return false;
-      if (OptionId != other.OptionId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,9 +145,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (OptionId != 0) hash ^= OptionId.GetHashCode();
       if (LGIIAHIDLMG != 0) hash ^= LGIIAHIDLMG.GetHashCode();
       if (EventId != 0) hash ^= EventId.GetHashCode();
-      if (OptionId != 0) hash ^= OptionId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,17 +166,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (LGIIAHIDLMG != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(LGIIAHIDLMG);
+      }
       if (OptionId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(80);
         output.WriteUInt32(OptionId);
       }
       if (EventId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(112);
         output.WriteUInt32(EventId);
-      }
-      if (LGIIAHIDLMG != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(LGIIAHIDLMG);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -188,17 +188,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (LGIIAHIDLMG != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(LGIIAHIDLMG);
+      }
       if (OptionId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(80);
         output.WriteUInt32(OptionId);
       }
       if (EventId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(112);
         output.WriteUInt32(EventId);
-      }
-      if (LGIIAHIDLMG != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(LGIIAHIDLMG);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -210,14 +210,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (OptionId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OptionId);
+      }
       if (LGIIAHIDLMG != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LGIIAHIDLMG);
       }
       if (EventId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EventId);
-      }
-      if (OptionId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OptionId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -231,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.OptionId != 0) {
+        OptionId = other.OptionId;
+      }
       if (other.LGIIAHIDLMG != 0) {
         LGIIAHIDLMG = other.LGIIAHIDLMG;
       }
       if (other.EventId != 0) {
         EventId = other.EventId;
-      }
-      if (other.OptionId != 0) {
-        OptionId = other.OptionId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
+          case 72: {
+            LGIIAHIDLMG = input.ReadUInt32();
+            break;
+          }
+          case 80: {
             OptionId = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 112: {
             EventId = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            LGIIAHIDLMG = input.ReadUInt32();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
+          case 72: {
+            LGIIAHIDLMG = input.ReadUInt32();
+            break;
+          }
+          case 80: {
             OptionId = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 112: {
             EventId = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            LGIIAHIDLMG = input.ReadUInt32();
             break;
           }
         }

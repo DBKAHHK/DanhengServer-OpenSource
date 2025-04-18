@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFLSUZJTENKT0xDSC5wcm90bxoSSXRlbUNvc3REYXRhLnByb3RvIkMKC0tJ",
-            "RklMQ0pPTENIEiAKCWNvc3RfZGF0YRgJIAEoCzINLkl0ZW1Db3N0RGF0YRIS",
+            "RklMQ0pPTENIEiAKCWNvc3RfZGF0YRgHIAEoCzINLkl0ZW1Db3N0RGF0YRIS",
             "CgpzY2VwdGVyX2lkGAYgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cost_data" field.</summary>
-    public const int CostDataFieldNumber = 9;
+    public const int CostDataFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.ItemCostData costData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(ScepterId);
       }
       if (costData_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(58);
         output.WriteMessage(CostData);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(ScepterId);
       }
       if (costData_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(58);
         output.WriteMessage(CostData);
       }
       if (_unknownFields != null) {
@@ -234,7 +234,7 @@ namespace EggLink.DanhengServer.Proto {
             ScepterId = input.ReadUInt32();
             break;
           }
-          case 74: {
+          case 58: {
             if (costData_ == null) {
               CostData = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
@@ -260,7 +260,7 @@ namespace EggLink.DanhengServer.Proto {
             ScepterId = input.ReadUInt32();
             break;
           }
-          case 74: {
+          case 58: {
             if (costData_ == null) {
               CostData = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }

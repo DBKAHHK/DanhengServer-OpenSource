@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFGaW5pc2hQZXJmb3JtU2VjdGlvbklkQ3NSZXEucHJvdG8aEU1lc3NhZ2VJ",
             "dGVtLnByb3RvIlIKG0ZpbmlzaFBlcmZvcm1TZWN0aW9uSWRDc1JlcRISCgpz",
-            "ZWN0aW9uX2lkGAIgASgNEh8KCWl0ZW1fbGlzdBgJIAMoCzIMLk1lc3NhZ2VJ",
+            "ZWN0aW9uX2lkGA8gASgNEh8KCWl0ZW1fbGlzdBgMIAMoCzIMLk1lc3NhZ2VJ",
             "dGVtQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MessageItemReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "section_id" field.</summary>
-    public const int SectionIdFieldNumber = 2;
+    public const int SectionIdFieldNumber = 15;
     private uint sectionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,9 +97,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "item_list" field.</summary>
-    public const int ItemListFieldNumber = 9;
+    public const int ItemListFieldNumber = 12;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MessageItem> _repeated_itemList_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.MessageItem.Parser);
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.MessageItem.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MessageItem> itemList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MessageItem>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      itemList_.WriteTo(output, _repeated_itemList_codec);
       if (SectionId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(120);
         output.WriteUInt32(SectionId);
       }
-      itemList_.WriteTo(output, _repeated_itemList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      itemList_.WriteTo(ref output, _repeated_itemList_codec);
       if (SectionId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(120);
         output.WriteUInt32(SectionId);
       }
-      itemList_.WriteTo(ref output, _repeated_itemList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            SectionId = input.ReadUInt32();
+          case 98: {
+            itemList_.AddEntriesFrom(input, _repeated_itemList_codec);
             break;
           }
-          case 74: {
-            itemList_.AddEntriesFrom(input, _repeated_itemList_codec);
+          case 120: {
+            SectionId = input.ReadUInt32();
             break;
           }
         }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            SectionId = input.ReadUInt32();
+          case 98: {
+            itemList_.AddEntriesFrom(ref input, _repeated_itemList_codec);
             break;
           }
-          case 74: {
-            itemList_.AddEntriesFrom(ref input, _repeated_itemList_codec);
+          case 120: {
+            SectionId = input.ReadUInt32();
             break;
           }
         }

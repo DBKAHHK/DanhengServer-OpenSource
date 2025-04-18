@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch9TdGFyRmlnaHREYXRhQ2hhbmdlTm90aWZ5LnByb3RvGhFNSkNKQUlLUExM",
             "TS5wcm90byJQChlTdGFyRmlnaHREYXRhQ2hhbmdlTm90aWZ5EhAKCGdyb3Vw",
-            "X2lkGA4gASgNEiEKC0ZNQ0RBTEFMRklBGAIgASgLMgwuTUpDSkFJS1BMTE1C",
+            "X2lkGAQgASgNEiEKC0ZNQ0RBTEFMRklBGAkgASgLMgwuTUpDSkFJS1BMTE1C",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MJCJAIKPLLMReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 14;
+    public const int GroupIdFieldNumber = 4;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "FMCDALALFIA" field.</summary>
-    public const int FMCDALALFIAFieldNumber = 2;
+    public const int FMCDALALFIAFieldNumber = 9;
     private global::EggLink.DanhengServer.Proto.MJCJAIKPLLM fMCDALALFIA_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (fMCDALALFIA_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(FMCDALALFIA);
-      }
       if (GroupId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(32);
         output.WriteUInt32(GroupId);
+      }
+      if (fMCDALALFIA_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(FMCDALALFIA);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (fMCDALALFIA_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(FMCDALALFIA);
-      }
       if (GroupId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(32);
         output.WriteUInt32(GroupId);
+      }
+      if (fMCDALALFIA_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(FMCDALALFIA);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 32: {
+            GroupId = input.ReadUInt32();
+            break;
+          }
+          case 74: {
             if (fMCDALALFIA_ == null) {
               FMCDALALFIA = new global::EggLink.DanhengServer.Proto.MJCJAIKPLLM();
             }
             input.ReadMessage(FMCDALALFIA);
-            break;
-          }
-          case 112: {
-            GroupId = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 32: {
+            GroupId = input.ReadUInt32();
+            break;
+          }
+          case 74: {
             if (fMCDALALFIA_ == null) {
               FMCDALALFIA = new global::EggLink.DanhengServer.Proto.MJCJAIKPLLM();
             }
             input.ReadMessage(FMCDALALFIA);
-            break;
-          }
-          case 112: {
-            GroupId = input.ReadUInt32();
             break;
           }
         }

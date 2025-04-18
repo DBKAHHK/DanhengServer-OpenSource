@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpSb2d1ZVRvdXJuTW9kdWxlSW5mby5wcm90byIqChRSb2d1ZVRvdXJuTW9k",
-            "dWxlSW5mbxISCgphbGxvd19mb29kGA4gASgIQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "dWxlSW5mbxISCgphbGxvd19mb29kGAMgASgIQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "allow_food" field.</summary>
-    public const int AllowFoodFieldNumber = 14;
+    public const int AllowFoodFieldNumber = 3;
     private bool allowFood_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (AllowFood != false) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(24);
         output.WriteBool(AllowFood);
       }
       if (_unknownFields != null) {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (AllowFood != false) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(24);
         output.WriteBool(AllowFood);
       }
       if (_unknownFields != null) {
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 112: {
+          case 24: {
             AllowFood = input.ReadBool();
             break;
           }
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 112: {
+          case 24: {
             AllowFood = input.ReadBool();
             break;
           }

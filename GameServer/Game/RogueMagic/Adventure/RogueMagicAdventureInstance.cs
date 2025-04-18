@@ -65,7 +65,7 @@ public class RogueMagicAdventureInstance(RogueMagicAdventureRoomExcel excel)
             RemainMonsterNum = (uint)RemainMonsterNum,
             CaughtMonsterNum = (uint)CaughtMonsterNum,
             Sus = 1,
-            Status = Status,
+            Status = (uint)Status,
             ScoreId = (uint)Score
         };
 

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFHTFBQRExFQ0NMSS5wcm90bxoRSUlMSE9BS0pETkgucHJvdG8iNgoLR0xQ",
-            "UERMRUNDTEkSJwoRZ2FtZV9mb3JtdWxhX2luZm8YDiADKAsyDC5JSUxIT0FL",
+            "UERMRUNDTEkSJwoRZ2FtZV9mb3JtdWxhX2luZm8YCCADKAsyDC5JSUxIT0FL",
             "SkROSEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IILHOAKJDNHReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "game_formula_info" field.</summary>
-    public const int GameFormulaInfoFieldNumber = 14;
+    public const int GameFormulaInfoFieldNumber = 8;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.IILHOAKJDNH> _repeated_gameFormulaInfo_codec
-        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.IILHOAKJDNH.Parser);
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.IILHOAKJDNH.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IILHOAKJDNH> gameFormulaInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IILHOAKJDNH>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 114: {
+          case 66: {
             gameFormulaInfo_.AddEntriesFrom(input, _repeated_gameFormulaInfo_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 114: {
+          case 66: {
             gameFormulaInfo_.AddEntriesFrom(ref input, _repeated_gameFormulaInfo_codec);
             break;
           }

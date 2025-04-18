@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJSb2d1ZUNvbW1vbkRpYWxvZ3VlQmFzaWNJbmZvLnByb3RvIk4KHFJvZ3Vl",
-            "Q29tbW9uRGlhbG9ndWVCYXNpY0luZm8SGAoQdGFsa19kaWFsb2d1ZV9pZBgP",
-            "IAEoDRIUCgxhZW9uX3RhbGtfaWQYBSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "Q29tbW9uRGlhbG9ndWVCYXNpY0luZm8SGAoQdGFsa19kaWFsb2d1ZV9pZBgD",
+            "IAEoDRIUCgxhZW9uX3RhbGtfaWQYDiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "talk_dialogue_id" field.</summary>
-    public const int TalkDialogueIdFieldNumber = 15;
+    public const int TalkDialogueIdFieldNumber = 3;
     private uint talkDialogueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "aeon_talk_id" field.</summary>
-    public const int AeonTalkIdFieldNumber = 5;
+    public const int AeonTalkIdFieldNumber = 14;
     private uint aeonTalkId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (AeonTalkId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(AeonTalkId);
-      }
       if (TalkDialogueId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(24);
         output.WriteUInt32(TalkDialogueId);
+      }
+      if (AeonTalkId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(AeonTalkId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (AeonTalkId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(AeonTalkId);
-      }
       if (TalkDialogueId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(24);
         output.WriteUInt32(TalkDialogueId);
+      }
+      if (AeonTalkId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(AeonTalkId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            AeonTalkId = input.ReadUInt32();
+          case 24: {
+            TalkDialogueId = input.ReadUInt32();
             break;
           }
-          case 120: {
-            TalkDialogueId = input.ReadUInt32();
+          case 112: {
+            AeonTalkId = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            AeonTalkId = input.ReadUInt32();
+          case 24: {
+            TalkDialogueId = input.ReadUInt32();
             break;
           }
-          case 120: {
-            TalkDialogueId = input.ReadUInt32();
+          case 112: {
+            AeonTalkId = input.ReadUInt32();
             break;
           }
         }

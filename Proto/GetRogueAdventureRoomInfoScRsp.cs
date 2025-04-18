@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiRHZXRSb2d1ZUFkdmVudHVyZVJvb21JbmZvU2NSc3AucHJvdG8aF0FkdmVu",
             "dHVyZVJvb21JbmZvLnByb3RvImIKHkdldFJvZ3VlQWR2ZW50dXJlUm9vbUlu",
-            "Zm9TY1JzcBIPCgdyZXRjb2RlGAwgASgNEi8KE2FkdmVudHVyZV9yb29tX2lu",
-            "Zm8YBiABKAsyEi5BZHZlbnR1cmVSb29tSW5mb0IeqgIbRWdnTGluay5EYW5o",
+            "Zm9TY1JzcBIPCgdyZXRjb2RlGAYgASgNEi8KE2FkdmVudHVyZV9yb29tX2lu",
+            "Zm8YCyABKAsyEi5BZHZlbnR1cmVSb29tSW5mb0IeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AdventureRoomInfoReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 12;
+    public const int RetcodeFieldNumber = 6;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "adventure_room_info" field.</summary>
-    public const int AdventureRoomInfoFieldNumber = 6;
+    public const int AdventureRoomInfoFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.AdventureRoomInfo adventureRoomInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (adventureRoomInfo_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(AdventureRoomInfo);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
+      }
+      if (adventureRoomInfo_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(AdventureRoomInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (adventureRoomInfo_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(AdventureRoomInfo);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
+      }
+      if (adventureRoomInfo_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(AdventureRoomInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
+          case 48: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 90: {
             if (adventureRoomInfo_ == null) {
               AdventureRoomInfo = new global::EggLink.DanhengServer.Proto.AdventureRoomInfo();
             }
             input.ReadMessage(AdventureRoomInfo);
-            break;
-          }
-          case 96: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
+          case 48: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 90: {
             if (adventureRoomInfo_ == null) {
               AdventureRoomInfo = new global::EggLink.DanhengServer.Proto.AdventureRoomInfo();
             }
             input.ReadMessage(AdventureRoomInfo);
-            break;
-          }
-          case 96: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }

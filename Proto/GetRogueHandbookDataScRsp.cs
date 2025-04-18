@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch9HZXRSb2d1ZUhhbmRib29rRGF0YVNjUnNwLnByb3RvGhNSb2d1ZUhhbmRi",
             "b29rLnByb3RvIlIKGUdldFJvZ3VlSGFuZGJvb2tEYXRhU2NSc3ASJAoMSGFu",
-            "ZGJvb2tJbmZvGAkgASgLMg4uUm9ndWVIYW5kYm9vaxIPCgdSZXRjb2RlGAYg",
+            "ZGJvb2tJbmZvGAwgASgLMg4uUm9ndWVIYW5kYm9vaxIPCgdSZXRjb2RlGAgg",
             "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueHandbookReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "HandbookInfo" field.</summary>
-    public const int HandbookInfoFieldNumber = 9;
+    public const int HandbookInfoFieldNumber = 12;
     private global::EggLink.DanhengServer.Proto.RogueHandbook handbookInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "Retcode" field.</summary>
-    public const int RetcodeFieldNumber = 6;
+    public const int RetcodeFieldNumber = 8;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
       if (handbookInfo_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(98);
         output.WriteMessage(HandbookInfo);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
       if (handbookInfo_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(98);
         output.WriteMessage(HandbookInfo);
       }
       if (_unknownFields != null) {
@@ -230,11 +230,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 64: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 74: {
+          case 98: {
             if (handbookInfo_ == null) {
               HandbookInfo = new global::EggLink.DanhengServer.Proto.RogueHandbook();
             }
@@ -256,11 +256,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 64: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 74: {
+          case 98: {
             if (handbookInfo_ == null) {
               HandbookInfo = new global::EggLink.DanhengServer.Proto.RogueHandbook();
             }

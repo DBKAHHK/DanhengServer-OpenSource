@@ -24,18 +24,19 @@ namespace EggLink.DanhengServer.Proto {
     static GetPlayerBoardDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1HZXRQbGF5ZXJCb2FyZERhdGFTY1JzcC5wcm90bxoSSGVhZEljb25EYXRh",
-            "LnByb3RvGhZEaXNwbGF5QXZhdGFyVmVjLnByb3RvItkBChdHZXRQbGF5ZXJC",
-            "b2FyZERhdGFTY1JzcBIcChRjdXJyZW50X2hlYWRfaWNvbl9pZBgIIAEoDRId",
-            "ChVhc3Npc3RfYXZhdGFyX2lkX2xpc3QYBiADKA0SLgoXdW5sb2NrZWRfaGVh",
-            "ZF9pY29uX2xpc3QYBSADKAsyDS5IZWFkSWNvbkRhdGESEQoJc2lnbmF0dXJl",
-            "GAEgASgJEi0KEmRpc3BsYXlfYXZhdGFyX3ZlYxgPIAEoCzIRLkRpc3BsYXlB",
-            "dmF0YXJWZWMSDwoHcmV0Y29kZRgMIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
-            "U2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Ch1HZXRQbGF5ZXJCb2FyZERhdGFTY1JzcC5wcm90bxoWRGlzcGxheUF2YXRh",
+            "clZlYy5wcm90bxoSSGVhZEljb25EYXRhLnByb3RvIogCChdHZXRQbGF5ZXJC",
+            "b2FyZERhdGFTY1JzcBIRCglzaWduYXR1cmUYBCABKAkSHgoWdW5sb2NrZWRf",
+            "cGVyc29uYWxfY2FyZBgLIAMoDRIdChVhc3Npc3RfYXZhdGFyX2lkX2xpc3QY",
+            "BSADKA0SLQoSZGlzcGxheV9hdmF0YXJfdmVjGAwgASgLMhEuRGlzcGxheUF2",
+            "YXRhclZlYxIVCg1jdXJfaGVhZF9pY29uGAkgASgNEg8KB3JldGNvZGUYCCAB",
+            "KA0SGQoRY3VyX3BlcnNvbmFsX2NhcmQYDyABKA0SKQoSdW5sb2NrZWRfaGVh",
+            "ZF9pY29uGAEgAygLMg0uSGVhZEljb25EYXRhQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeadIconDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayAvatarVecReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DisplayAvatarVecReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeadIconDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetPlayerBoardDataScRsp), global::EggLink.DanhengServer.Proto.GetPlayerBoardDataScRsp.Parser, new[]{ "CurrentHeadIconId", "AssistAvatarIdList", "UnlockedHeadIconList", "Signature", "DisplayAvatarVec", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetPlayerBoardDataScRsp), global::EggLink.DanhengServer.Proto.GetPlayerBoardDataScRsp.Parser, new[]{ "Signature", "UnlockedPersonalCard", "AssistAvatarIdList", "DisplayAvatarVec", "CurHeadIcon", "Retcode", "CurPersonalCard", "UnlockedHeadIcon" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,12 +78,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetPlayerBoardDataScRsp(GetPlayerBoardDataScRsp other) : this() {
-      currentHeadIconId_ = other.currentHeadIconId_;
-      assistAvatarIdList_ = other.assistAvatarIdList_.Clone();
-      unlockedHeadIconList_ = other.unlockedHeadIconList_.Clone();
       signature_ = other.signature_;
+      unlockedPersonalCard_ = other.unlockedPersonalCard_.Clone();
+      assistAvatarIdList_ = other.assistAvatarIdList_.Clone();
       displayAvatarVec_ = other.displayAvatarVec_ != null ? other.displayAvatarVec_.Clone() : null;
+      curHeadIcon_ = other.curHeadIcon_;
       retcode_ = other.retcode_;
+      curPersonalCard_ = other.curPersonalCard_;
+      unlockedHeadIcon_ = other.unlockedHeadIcon_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -92,42 +95,8 @@ namespace EggLink.DanhengServer.Proto {
       return new GetPlayerBoardDataScRsp(this);
     }
 
-    /// <summary>Field number for the "current_head_icon_id" field.</summary>
-    public const int CurrentHeadIconIdFieldNumber = 8;
-    private uint currentHeadIconId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CurrentHeadIconId {
-      get { return currentHeadIconId_; }
-      set {
-        currentHeadIconId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "assist_avatar_id_list" field.</summary>
-    public const int AssistAvatarIdListFieldNumber = 6;
-    private static readonly pb::FieldCodec<uint> _repeated_assistAvatarIdList_codec
-        = pb::FieldCodec.ForUInt32(50);
-    private readonly pbc::RepeatedField<uint> assistAvatarIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> AssistAvatarIdList {
-      get { return assistAvatarIdList_; }
-    }
-
-    /// <summary>Field number for the "unlocked_head_icon_list" field.</summary>
-    public const int UnlockedHeadIconListFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.HeadIconData> _repeated_unlockedHeadIconList_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.HeadIconData.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeadIconData> unlockedHeadIconList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeadIconData>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeadIconData> UnlockedHeadIconList {
-      get { return unlockedHeadIconList_; }
-    }
-
     /// <summary>Field number for the "signature" field.</summary>
-    public const int SignatureFieldNumber = 1;
+    public const int SignatureFieldNumber = 4;
     private string signature_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,8 +107,30 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "unlocked_personal_card" field.</summary>
+    public const int UnlockedPersonalCardFieldNumber = 11;
+    private static readonly pb::FieldCodec<uint> _repeated_unlockedPersonalCard_codec
+        = pb::FieldCodec.ForUInt32(90);
+    private readonly pbc::RepeatedField<uint> unlockedPersonalCard_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> UnlockedPersonalCard {
+      get { return unlockedPersonalCard_; }
+    }
+
+    /// <summary>Field number for the "assist_avatar_id_list" field.</summary>
+    public const int AssistAvatarIdListFieldNumber = 5;
+    private static readonly pb::FieldCodec<uint> _repeated_assistAvatarIdList_codec
+        = pb::FieldCodec.ForUInt32(42);
+    private readonly pbc::RepeatedField<uint> assistAvatarIdList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> AssistAvatarIdList {
+      get { return assistAvatarIdList_; }
+    }
+
     /// <summary>Field number for the "display_avatar_vec" field.</summary>
-    public const int DisplayAvatarVecFieldNumber = 15;
+    public const int DisplayAvatarVecFieldNumber = 12;
     private global::EggLink.DanhengServer.Proto.DisplayAvatarVec displayAvatarVec_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -150,8 +141,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "cur_head_icon" field.</summary>
+    public const int CurHeadIconFieldNumber = 9;
+    private uint curHeadIcon_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CurHeadIcon {
+      get { return curHeadIcon_; }
+      set {
+        curHeadIcon_ = value;
+      }
+    }
+
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 12;
+    public const int RetcodeFieldNumber = 8;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -160,6 +163,29 @@ namespace EggLink.DanhengServer.Proto {
       set {
         retcode_ = value;
       }
+    }
+
+    /// <summary>Field number for the "cur_personal_card" field.</summary>
+    public const int CurPersonalCardFieldNumber = 15;
+    private uint curPersonalCard_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CurPersonalCard {
+      get { return curPersonalCard_; }
+      set {
+        curPersonalCard_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "unlocked_head_icon" field.</summary>
+    public const int UnlockedHeadIconFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.HeadIconData> _repeated_unlockedHeadIcon_codec
+        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.HeadIconData.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeadIconData> unlockedHeadIcon_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeadIconData>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HeadIconData> UnlockedHeadIcon {
+      get { return unlockedHeadIcon_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -177,12 +203,14 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CurrentHeadIconId != other.CurrentHeadIconId) return false;
-      if(!assistAvatarIdList_.Equals(other.assistAvatarIdList_)) return false;
-      if(!unlockedHeadIconList_.Equals(other.unlockedHeadIconList_)) return false;
       if (Signature != other.Signature) return false;
+      if(!unlockedPersonalCard_.Equals(other.unlockedPersonalCard_)) return false;
+      if(!assistAvatarIdList_.Equals(other.assistAvatarIdList_)) return false;
       if (!object.Equals(DisplayAvatarVec, other.DisplayAvatarVec)) return false;
+      if (CurHeadIcon != other.CurHeadIcon) return false;
       if (Retcode != other.Retcode) return false;
+      if (CurPersonalCard != other.CurPersonalCard) return false;
+      if(!unlockedHeadIcon_.Equals(other.unlockedHeadIcon_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -190,12 +218,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CurrentHeadIconId != 0) hash ^= CurrentHeadIconId.GetHashCode();
-      hash ^= assistAvatarIdList_.GetHashCode();
-      hash ^= unlockedHeadIconList_.GetHashCode();
       if (Signature.Length != 0) hash ^= Signature.GetHashCode();
+      hash ^= unlockedPersonalCard_.GetHashCode();
+      hash ^= assistAvatarIdList_.GetHashCode();
       if (displayAvatarVec_ != null) hash ^= DisplayAvatarVec.GetHashCode();
+      if (CurHeadIcon != 0) hash ^= CurHeadIcon.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (CurPersonalCard != 0) hash ^= CurPersonalCard.GetHashCode();
+      hash ^= unlockedHeadIcon_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -214,23 +244,28 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      unlockedHeadIcon_.WriteTo(output, _repeated_unlockedHeadIcon_codec);
       if (Signature.Length != 0) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(34);
         output.WriteString(Signature);
       }
-      unlockedHeadIconList_.WriteTo(output, _repeated_unlockedHeadIconList_codec);
       assistAvatarIdList_.WriteTo(output, _repeated_assistAvatarIdList_codec);
-      if (CurrentHeadIconId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(CurrentHeadIconId);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
+      if (CurHeadIcon != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(CurHeadIcon);
+      }
+      unlockedPersonalCard_.WriteTo(output, _repeated_unlockedPersonalCard_codec);
       if (displayAvatarVec_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(98);
         output.WriteMessage(DisplayAvatarVec);
+      }
+      if (CurPersonalCard != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(CurPersonalCard);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -242,23 +277,28 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      unlockedHeadIcon_.WriteTo(ref output, _repeated_unlockedHeadIcon_codec);
       if (Signature.Length != 0) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(34);
         output.WriteString(Signature);
       }
-      unlockedHeadIconList_.WriteTo(ref output, _repeated_unlockedHeadIconList_codec);
       assistAvatarIdList_.WriteTo(ref output, _repeated_assistAvatarIdList_codec);
-      if (CurrentHeadIconId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(CurrentHeadIconId);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
+      if (CurHeadIcon != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(CurHeadIcon);
+      }
+      unlockedPersonalCard_.WriteTo(ref output, _repeated_unlockedPersonalCard_codec);
       if (displayAvatarVec_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(98);
         output.WriteMessage(DisplayAvatarVec);
+      }
+      if (CurPersonalCard != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(CurPersonalCard);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -270,20 +310,24 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CurrentHeadIconId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurrentHeadIconId);
-      }
-      size += assistAvatarIdList_.CalculateSize(_repeated_assistAvatarIdList_codec);
-      size += unlockedHeadIconList_.CalculateSize(_repeated_unlockedHeadIconList_codec);
       if (Signature.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Signature);
       }
+      size += unlockedPersonalCard_.CalculateSize(_repeated_unlockedPersonalCard_codec);
+      size += assistAvatarIdList_.CalculateSize(_repeated_assistAvatarIdList_codec);
       if (displayAvatarVec_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DisplayAvatarVec);
+      }
+      if (CurHeadIcon != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurHeadIcon);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
+      if (CurPersonalCard != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurPersonalCard);
+      }
+      size += unlockedHeadIcon_.CalculateSize(_repeated_unlockedHeadIcon_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -296,23 +340,27 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.CurrentHeadIconId != 0) {
-        CurrentHeadIconId = other.CurrentHeadIconId;
-      }
-      assistAvatarIdList_.Add(other.assistAvatarIdList_);
-      unlockedHeadIconList_.Add(other.unlockedHeadIconList_);
       if (other.Signature.Length != 0) {
         Signature = other.Signature;
       }
+      unlockedPersonalCard_.Add(other.unlockedPersonalCard_);
+      assistAvatarIdList_.Add(other.assistAvatarIdList_);
       if (other.displayAvatarVec_ != null) {
         if (displayAvatarVec_ == null) {
           DisplayAvatarVec = new global::EggLink.DanhengServer.Proto.DisplayAvatarVec();
         }
         DisplayAvatarVec.MergeFrom(other.DisplayAvatarVec);
       }
+      if (other.CurHeadIcon != 0) {
+        CurHeadIcon = other.CurHeadIcon;
+      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
+      if (other.CurPersonalCard != 0) {
+        CurPersonalCard = other.CurPersonalCard;
+      }
+      unlockedHeadIcon_.Add(other.unlockedHeadIcon_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -329,31 +377,40 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
+            unlockedHeadIcon_.AddEntriesFrom(input, _repeated_unlockedHeadIcon_codec);
+            break;
+          }
+          case 34: {
             Signature = input.ReadString();
             break;
           }
-          case 42: {
-            unlockedHeadIconList_.AddEntriesFrom(input, _repeated_unlockedHeadIconList_codec);
-            break;
-          }
-          case 50:
-          case 48: {
+          case 42:
+          case 40: {
             assistAvatarIdList_.AddEntriesFrom(input, _repeated_assistAvatarIdList_codec);
             break;
           }
           case 64: {
-            CurrentHeadIconId = input.ReadUInt32();
-            break;
-          }
-          case 96: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 122: {
+          case 72: {
+            CurHeadIcon = input.ReadUInt32();
+            break;
+          }
+          case 90:
+          case 88: {
+            unlockedPersonalCard_.AddEntriesFrom(input, _repeated_unlockedPersonalCard_codec);
+            break;
+          }
+          case 98: {
             if (displayAvatarVec_ == null) {
               DisplayAvatarVec = new global::EggLink.DanhengServer.Proto.DisplayAvatarVec();
             }
             input.ReadMessage(DisplayAvatarVec);
+            break;
+          }
+          case 120: {
+            CurPersonalCard = input.ReadUInt32();
             break;
           }
         }
@@ -372,31 +429,40 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
+            unlockedHeadIcon_.AddEntriesFrom(ref input, _repeated_unlockedHeadIcon_codec);
+            break;
+          }
+          case 34: {
             Signature = input.ReadString();
             break;
           }
-          case 42: {
-            unlockedHeadIconList_.AddEntriesFrom(ref input, _repeated_unlockedHeadIconList_codec);
-            break;
-          }
-          case 50:
-          case 48: {
+          case 42:
+          case 40: {
             assistAvatarIdList_.AddEntriesFrom(ref input, _repeated_assistAvatarIdList_codec);
             break;
           }
           case 64: {
-            CurrentHeadIconId = input.ReadUInt32();
-            break;
-          }
-          case 96: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 122: {
+          case 72: {
+            CurHeadIcon = input.ReadUInt32();
+            break;
+          }
+          case 90:
+          case 88: {
+            unlockedPersonalCard_.AddEntriesFrom(ref input, _repeated_unlockedPersonalCard_codec);
+            break;
+          }
+          case 98: {
             if (displayAvatarVec_ == null) {
               DisplayAvatarVec = new global::EggLink.DanhengServer.Proto.DisplayAvatarVec();
             }
             input.ReadMessage(DisplayAvatarVec);
+            break;
+          }
+          case 120: {
+            CurPersonalCard = input.ReadUInt32();
             break;
           }
         }

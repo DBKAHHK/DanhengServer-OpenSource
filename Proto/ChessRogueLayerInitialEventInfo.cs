@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiVDaGVzc1JvZ3VlTGF5ZXJJbml0aWFsRXZlbnRJbmZvLnByb3RvGhRDaGVz",
             "c1JvZ3VlQ2VsbC5wcm90byJaCh9DaGVzc1JvZ3VlTGF5ZXJJbml0aWFsRXZl",
-            "bnRJbmZvEiIKCWNlbGxfbGlzdBgJIAMoCzIPLkNoZXNzUm9ndWVDZWxsEhMK",
-            "C0hCQ01HSUlDSk1LGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "bnRJbmZvEiIKCWNlbGxfbGlzdBgKIAMoCzIPLkNoZXNzUm9ndWVDZWxsEhMK",
+            "C0hCQ01HSUlDSk1LGAUgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueCellReflection.Descriptor, },
@@ -86,9 +86,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cell_list" field.</summary>
-    public const int CellListFieldNumber = 9;
+    public const int CellListFieldNumber = 10;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChessRogueCell> _repeated_cellList_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.ChessRogueCell.Parser);
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.ChessRogueCell.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueCell> cellList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueCell>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "HBCMGIICJMK" field.</summary>
-    public const int HBCMGIICJMKFieldNumber = 13;
+    public const int HBCMGIICJMKFieldNumber = 5;
     private uint hBCMGIICJMK_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      cellList_.WriteTo(output, _repeated_cellList_codec);
       if (HBCMGIICJMK != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(40);
         output.WriteUInt32(HBCMGIICJMK);
       }
+      cellList_.WriteTo(output, _repeated_cellList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      cellList_.WriteTo(ref output, _repeated_cellList_codec);
       if (HBCMGIICJMK != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(40);
         output.WriteUInt32(HBCMGIICJMK);
       }
+      cellList_.WriteTo(ref output, _repeated_cellList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -217,12 +217,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 74: {
-            cellList_.AddEntriesFrom(input, _repeated_cellList_codec);
+          case 40: {
+            HBCMGIICJMK = input.ReadUInt32();
             break;
           }
-          case 104: {
-            HBCMGIICJMK = input.ReadUInt32();
+          case 82: {
+            cellList_.AddEntriesFrom(input, _repeated_cellList_codec);
             break;
           }
         }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 74: {
-            cellList_.AddEntriesFrom(ref input, _repeated_cellList_codec);
+          case 40: {
+            HBCMGIICJMK = input.ReadUInt32();
             break;
           }
-          case 104: {
-            HBCMGIICJMK = input.ReadUInt32();
+          case 82: {
+            cellList_.AddEntriesFrom(ref input, _repeated_cellList_codec);
             break;
           }
         }

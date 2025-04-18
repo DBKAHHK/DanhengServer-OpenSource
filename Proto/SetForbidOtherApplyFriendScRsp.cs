@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiRTZXRGb3JiaWRPdGhlckFwcGx5RnJpZW5kU2NSc3AucHJvdG8iRgoeU2V0",
-            "Rm9yYmlkT3RoZXJBcHBseUZyaWVuZFNjUnNwEhMKC01KUEZMSUtBRkVKGAcg",
-            "ASgIEg8KB3JldGNvZGUYBiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "Rm9yYmlkT3RoZXJBcHBseUZyaWVuZFNjUnNwEhMKC01KUEZMSUtBRkVKGAYg",
+            "ASgIEg8KB3JldGNvZGUYCSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MJPFLIKAFEJ" field.</summary>
-    public const int MJPFLIKAFEJFieldNumber = 7;
+    public const int MJPFLIKAFEJFieldNumber = 6;
     private bool mJPFLIKAFEJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 6;
+    public const int RetcodeFieldNumber = 9;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(Retcode);
-      }
       if (MJPFLIKAFEJ != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(48);
         output.WriteBool(MJPFLIKAFEJ);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(Retcode);
-      }
       if (MJPFLIKAFEJ != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(48);
         output.WriteBool(MJPFLIKAFEJ);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -228,11 +228,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 48: {
-            Retcode = input.ReadUInt32();
+            MJPFLIKAFEJ = input.ReadBool();
             break;
           }
-          case 56: {
-            MJPFLIKAFEJ = input.ReadBool();
+          case 72: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -251,11 +251,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 48: {
-            Retcode = input.ReadUInt32();
+            MJPFLIKAFEJ = input.ReadBool();
             break;
           }
-          case 56: {
-            MJPFLIKAFEJ = input.ReadBool();
+          case 72: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

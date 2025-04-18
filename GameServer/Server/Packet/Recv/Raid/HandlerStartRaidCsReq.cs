@@ -13,7 +13,7 @@ public class HandlerStartRaidCsReq : Handler
 
         await player.RaidManager!.EnterRaid((int)req.RaidId, (int)req.WorldLevel,
             req.AvatarList.Select(x => (int)x).ToList(),
-            req.IsSaveData == 1);
+            req.IsSave == 1);
 
         await connection.SendPacket(CmdIds.StartRaidScRsp);
     }

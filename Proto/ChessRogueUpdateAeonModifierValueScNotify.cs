@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ci9DaGVzc1JvZ3VlVXBkYXRlQWVvbk1vZGlmaWVyVmFsdWVTY05vdGlmeS5w",
             "cm90byJRCilDaGVzc1JvZ3VlVXBkYXRlQWVvbk1vZGlmaWVyVmFsdWVTY05v",
-            "dGlmeRIPCgdhZW9uX2lkGAMgASgNEhMKC0lDSkFCUEdNQUNKGAIgASgFQh6q",
+            "dGlmeRIPCgdhZW9uX2lkGAcgASgNEhMKC0lDSkFCUEdNQUNKGAUgASgFQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "aeon_id" field.</summary>
-    public const int AeonIdFieldNumber = 3;
+    public const int AeonIdFieldNumber = 7;
     private uint aeonId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "ICJABPGMACJ" field.</summary>
-    public const int ICJABPGMACJFieldNumber = 2;
+    public const int ICJABPGMACJFieldNumber = 5;
     private int iCJABPGMACJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (ICJABPGMACJ != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(40);
         output.WriteInt32(ICJABPGMACJ);
       }
       if (AeonId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(56);
         output.WriteUInt32(AeonId);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ICJABPGMACJ != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(40);
         output.WriteInt32(ICJABPGMACJ);
       }
       if (AeonId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(56);
         output.WriteUInt32(AeonId);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 40: {
             ICJABPGMACJ = input.ReadInt32();
             break;
           }
-          case 24: {
+          case 56: {
             AeonId = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 40: {
             ICJABPGMACJ = input.ReadInt32();
             break;
           }
-          case 24: {
+          case 56: {
             AeonId = input.ReadUInt32();
             break;
           }

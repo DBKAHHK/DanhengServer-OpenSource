@@ -24,14 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static DiscardRelicCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdEaXNjYXJkUmVsaWNDc1JlcS5wcm90byJaChFEaXNjYXJkUmVsaWNDc1Jl",
-            "cRIcChRyZWxpY191bmlxdWVfaWRfbGlzdBgGIAMoDRITCgtJRU1OUEdPTUpD",
-            "TxgPIAEoCBISCgppc19kaXNjYXJkGAwgASgIQh6qAhtFZ2dMaW5rLkRhbmhl",
-            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChdEaXNjYXJkUmVsaWNDc1JlcS5wcm90bxoRSUNQSU5FSE9MTUwucHJvdG8i",
+            "fQoRRGlzY2FyZFJlbGljQ3NSZXESEgoKaXNfZGlzY2FyZBgNIAEoCBIhCgtO",
+            "TFBDT05OSk9ORhgMIAEoDjIMLklDUElORUhPTE1MEhMKC0hOSEZETURJQklP",
+            "GAMgASgEEhwKFHJlbGljX3VuaXF1ZV9pZF9saXN0GAkgAygNQh6qAhtFZ2dM",
+            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ICPINEHOLMLReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DiscardRelicCsReq), global::EggLink.DanhengServer.Proto.DiscardRelicCsReq.Parser, new[]{ "RelicUniqueIdList", "IEMNPGOMJCO", "IsDiscard" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DiscardRelicCsReq), global::EggLink.DanhengServer.Proto.DiscardRelicCsReq.Parser, new[]{ "IsDiscard", "NLPCONNJONF", "HNHFDMDIBIO", "RelicUniqueIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DiscardRelicCsReq(DiscardRelicCsReq other) : this() {
-      relicUniqueIdList_ = other.relicUniqueIdList_.Clone();
-      iEMNPGOMJCO_ = other.iEMNPGOMJCO_;
       isDiscard_ = other.isDiscard_;
+      nLPCONNJONF_ = other.nLPCONNJONF_;
+      hNHFDMDIBIO_ = other.hNHFDMDIBIO_;
+      relicUniqueIdList_ = other.relicUniqueIdList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,31 +87,8 @@ namespace EggLink.DanhengServer.Proto {
       return new DiscardRelicCsReq(this);
     }
 
-    /// <summary>Field number for the "relic_unique_id_list" field.</summary>
-    public const int RelicUniqueIdListFieldNumber = 6;
-    private static readonly pb::FieldCodec<uint> _repeated_relicUniqueIdList_codec
-        = pb::FieldCodec.ForUInt32(50);
-    private readonly pbc::RepeatedField<uint> relicUniqueIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> RelicUniqueIdList {
-      get { return relicUniqueIdList_; }
-    }
-
-    /// <summary>Field number for the "IEMNPGOMJCO" field.</summary>
-    public const int IEMNPGOMJCOFieldNumber = 15;
-    private bool iEMNPGOMJCO_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IEMNPGOMJCO {
-      get { return iEMNPGOMJCO_; }
-      set {
-        iEMNPGOMJCO_ = value;
-      }
-    }
-
     /// <summary>Field number for the "is_discard" field.</summary>
-    public const int IsDiscardFieldNumber = 12;
+    public const int IsDiscardFieldNumber = 13;
     private bool isDiscard_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -118,6 +97,41 @@ namespace EggLink.DanhengServer.Proto {
       set {
         isDiscard_ = value;
       }
+    }
+
+    /// <summary>Field number for the "NLPCONNJONF" field.</summary>
+    public const int NLPCONNJONFFieldNumber = 12;
+    private global::EggLink.DanhengServer.Proto.ICPINEHOLML nLPCONNJONF_ = global::EggLink.DanhengServer.Proto.ICPINEHOLML.RelicDiscardTypeSingle;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ICPINEHOLML NLPCONNJONF {
+      get { return nLPCONNJONF_; }
+      set {
+        nLPCONNJONF_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "HNHFDMDIBIO" field.</summary>
+    public const int HNHFDMDIBIOFieldNumber = 3;
+    private ulong hNHFDMDIBIO_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong HNHFDMDIBIO {
+      get { return hNHFDMDIBIO_; }
+      set {
+        hNHFDMDIBIO_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "relic_unique_id_list" field.</summary>
+    public const int RelicUniqueIdListFieldNumber = 9;
+    private static readonly pb::FieldCodec<uint> _repeated_relicUniqueIdList_codec
+        = pb::FieldCodec.ForUInt32(74);
+    private readonly pbc::RepeatedField<uint> relicUniqueIdList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> RelicUniqueIdList {
+      get { return relicUniqueIdList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -135,9 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!relicUniqueIdList_.Equals(other.relicUniqueIdList_)) return false;
-      if (IEMNPGOMJCO != other.IEMNPGOMJCO) return false;
       if (IsDiscard != other.IsDiscard) return false;
+      if (NLPCONNJONF != other.NLPCONNJONF) return false;
+      if (HNHFDMDIBIO != other.HNHFDMDIBIO) return false;
+      if(!relicUniqueIdList_.Equals(other.relicUniqueIdList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,9 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= relicUniqueIdList_.GetHashCode();
-      if (IEMNPGOMJCO != false) hash ^= IEMNPGOMJCO.GetHashCode();
       if (IsDiscard != false) hash ^= IsDiscard.GetHashCode();
+      if (NLPCONNJONF != global::EggLink.DanhengServer.Proto.ICPINEHOLML.RelicDiscardTypeSingle) hash ^= NLPCONNJONF.GetHashCode();
+      if (HNHFDMDIBIO != 0UL) hash ^= HNHFDMDIBIO.GetHashCode();
+      hash ^= relicUniqueIdList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,14 +182,18 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      relicUniqueIdList_.WriteTo(output, _repeated_relicUniqueIdList_codec);
-      if (IsDiscard != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(IsDiscard);
+      if (HNHFDMDIBIO != 0UL) {
+        output.WriteRawTag(24);
+        output.WriteUInt64(HNHFDMDIBIO);
       }
-      if (IEMNPGOMJCO != false) {
-        output.WriteRawTag(120);
-        output.WriteBool(IEMNPGOMJCO);
+      relicUniqueIdList_.WriteTo(output, _repeated_relicUniqueIdList_codec);
+      if (NLPCONNJONF != global::EggLink.DanhengServer.Proto.ICPINEHOLML.RelicDiscardTypeSingle) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) NLPCONNJONF);
+      }
+      if (IsDiscard != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(IsDiscard);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -185,14 +205,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      relicUniqueIdList_.WriteTo(ref output, _repeated_relicUniqueIdList_codec);
-      if (IsDiscard != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(IsDiscard);
+      if (HNHFDMDIBIO != 0UL) {
+        output.WriteRawTag(24);
+        output.WriteUInt64(HNHFDMDIBIO);
       }
-      if (IEMNPGOMJCO != false) {
-        output.WriteRawTag(120);
-        output.WriteBool(IEMNPGOMJCO);
+      relicUniqueIdList_.WriteTo(ref output, _repeated_relicUniqueIdList_codec);
+      if (NLPCONNJONF != global::EggLink.DanhengServer.Proto.ICPINEHOLML.RelicDiscardTypeSingle) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) NLPCONNJONF);
+      }
+      if (IsDiscard != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(IsDiscard);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -204,13 +228,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += relicUniqueIdList_.CalculateSize(_repeated_relicUniqueIdList_codec);
-      if (IEMNPGOMJCO != false) {
-        size += 1 + 1;
-      }
       if (IsDiscard != false) {
         size += 1 + 1;
       }
+      if (NLPCONNJONF != global::EggLink.DanhengServer.Proto.ICPINEHOLML.RelicDiscardTypeSingle) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) NLPCONNJONF);
+      }
+      if (HNHFDMDIBIO != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(HNHFDMDIBIO);
+      }
+      size += relicUniqueIdList_.CalculateSize(_repeated_relicUniqueIdList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -223,13 +250,16 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      relicUniqueIdList_.Add(other.relicUniqueIdList_);
-      if (other.IEMNPGOMJCO != false) {
-        IEMNPGOMJCO = other.IEMNPGOMJCO;
-      }
       if (other.IsDiscard != false) {
         IsDiscard = other.IsDiscard;
       }
+      if (other.NLPCONNJONF != global::EggLink.DanhengServer.Proto.ICPINEHOLML.RelicDiscardTypeSingle) {
+        NLPCONNJONF = other.NLPCONNJONF;
+      }
+      if (other.HNHFDMDIBIO != 0UL) {
+        HNHFDMDIBIO = other.HNHFDMDIBIO;
+      }
+      relicUniqueIdList_.Add(other.relicUniqueIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -245,17 +275,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50:
-          case 48: {
+          case 24: {
+            HNHFDMDIBIO = input.ReadUInt64();
+            break;
+          }
+          case 74:
+          case 72: {
             relicUniqueIdList_.AddEntriesFrom(input, _repeated_relicUniqueIdList_codec);
             break;
           }
           case 96: {
-            IsDiscard = input.ReadBool();
+            NLPCONNJONF = (global::EggLink.DanhengServer.Proto.ICPINEHOLML) input.ReadEnum();
             break;
           }
-          case 120: {
-            IEMNPGOMJCO = input.ReadBool();
+          case 104: {
+            IsDiscard = input.ReadBool();
             break;
           }
         }
@@ -273,17 +307,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50:
-          case 48: {
+          case 24: {
+            HNHFDMDIBIO = input.ReadUInt64();
+            break;
+          }
+          case 74:
+          case 72: {
             relicUniqueIdList_.AddEntriesFrom(ref input, _repeated_relicUniqueIdList_codec);
             break;
           }
           case 96: {
-            IsDiscard = input.ReadBool();
+            NLPCONNJONF = (global::EggLink.DanhengServer.Proto.ICPINEHOLML) input.ReadEnum();
             break;
           }
-          case 120: {
-            IEMNPGOMJCO = input.ReadBool();
+          case 104: {
+            IsDiscard = input.ReadBool();
             break;
           }
         }

@@ -24,20 +24,20 @@ namespace EggLink.DanhengServer.Proto {
     static CurChallengeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJDdXJDaGFsbGVuZ2UucHJvdG8aFUNoYWxsZW5nZVN0YXR1cy5wcm90bxoR",
-            "S2lsbE1vbnN0ZXIucHJvdG8aFUV4dHJhTGluZXVwVHlwZS5wcm90bxoYQ2hh",
-            "bGxlbmdlU3RvcnlJbmZvLnByb3RvIpgCCgxDdXJDaGFsbGVuZ2USEQoJc2Nv",
-            "cmVfdHdvGAsgASgNEisKEWV4dHJhX2xpbmV1cF90eXBlGAwgASgOMhAuRXh0",
-            "cmFMaW5ldXBUeXBlEhMKC3JvdW5kX2NvdW50GAggASgNEicKEWtpbGxfbW9u",
-            "c3Rlcl9saXN0GAQgAygLMgwuS2lsbE1vbnN0ZXISFAoMY2hhbGxlbmdlX2lk",
-            "GAMgASgNEhcKD2RlYWRfYXZhdGFyX251bRgCIAEoDRIQCghzY29yZV9pZBgF",
-            "IAEoDRInCgpzdGFnZV9pbmZvGAYgASgLMhMuQ2hhbGxlbmdlU3RvcnlJbmZv",
-            "EiAKBnN0YXR1cxgJIAEoDjIQLkNoYWxsZW5nZVN0YXR1c0IeqgIbRWdnTGlu",
-            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChJDdXJDaGFsbGVuZ2UucHJvdG8aEUtpbGxNb25zdGVyLnByb3RvGhpDaGFs",
+            "bGVuZ2VDdXJCdWZmSW5mby5wcm90bxoVRXh0cmFMaW5ldXBUeXBlLnByb3Rv",
+            "GhVDaGFsbGVuZ2VTdGF0dXMucHJvdG8imgIKDEN1ckNoYWxsZW5nZRIrChFl",
+            "eHRyYV9saW5ldXBfdHlwZRgIIAEoDjIQLkV4dHJhTGluZXVwVHlwZRIXCg9k",
+            "ZWFkX2F2YXRhcl9udW0YAyABKA0SJwoRa2lsbF9tb25zdGVyX2xpc3QYCSAD",
+            "KAsyDC5LaWxsTW9uc3RlchIgCgZzdGF0dXMYDCABKA4yEC5DaGFsbGVuZ2VT",
+            "dGF0dXMSEwoLcm91bmRfY291bnQYBCABKA0SFAoMY2hhbGxlbmdlX2lkGAsg",
+            "ASgNEhEKCXNjb3JlX3R3bxgCIAEoDRIQCghzY29yZV9pZBgBIAEoDRIpCgpz",
+            "dGFnZV9pbmZvGA8gASgLMhUuQ2hhbGxlbmdlQ3VyQnVmZkluZm9CHqoCG0Vn",
+            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.KillMonsterReflection.Descriptor, global::EggLink.DanhengServer.Proto.ExtraLineupTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStoryInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KillMonsterReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeCurBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ExtraLineupTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CurChallenge), global::EggLink.DanhengServer.Proto.CurChallenge.Parser, new[]{ "ScoreTwo", "ExtraLineupType", "RoundCount", "KillMonsterList", "ChallengeId", "DeadAvatarNum", "ScoreId", "StageInfo", "Status" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CurChallenge), global::EggLink.DanhengServer.Proto.CurChallenge.Parser, new[]{ "ExtraLineupType", "DeadAvatarNum", "KillMonsterList", "Status", "RoundCount", "ChallengeId", "ScoreTwo", "ScoreId", "StageInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -79,15 +79,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CurChallenge(CurChallenge other) : this() {
-      scoreTwo_ = other.scoreTwo_;
       extraLineupType_ = other.extraLineupType_;
-      roundCount_ = other.roundCount_;
-      killMonsterList_ = other.killMonsterList_.Clone();
-      challengeId_ = other.challengeId_;
       deadAvatarNum_ = other.deadAvatarNum_;
+      killMonsterList_ = other.killMonsterList_.Clone();
+      status_ = other.status_;
+      roundCount_ = other.roundCount_;
+      challengeId_ = other.challengeId_;
+      scoreTwo_ = other.scoreTwo_;
       scoreId_ = other.scoreId_;
       stageInfo_ = other.stageInfo_ != null ? other.stageInfo_.Clone() : null;
-      status_ = other.status_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -97,20 +97,8 @@ namespace EggLink.DanhengServer.Proto {
       return new CurChallenge(this);
     }
 
-    /// <summary>Field number for the "score_two" field.</summary>
-    public const int ScoreTwoFieldNumber = 11;
-    private uint scoreTwo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ScoreTwo {
-      get { return scoreTwo_; }
-      set {
-        scoreTwo_ = value;
-      }
-    }
-
     /// <summary>Field number for the "extra_lineup_type" field.</summary>
-    public const int ExtraLineupTypeFieldNumber = 12;
+    public const int ExtraLineupTypeFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.ExtraLineupType extraLineupType_ = global::EggLink.DanhengServer.Proto.ExtraLineupType.LineupNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -121,43 +109,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "round_count" field.</summary>
-    public const int RoundCountFieldNumber = 8;
-    private uint roundCount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint RoundCount {
-      get { return roundCount_; }
-      set {
-        roundCount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "kill_monster_list" field.</summary>
-    public const int KillMonsterListFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.KillMonster> _repeated_killMonsterList_codec
-        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.KillMonster.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KillMonster> killMonsterList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KillMonster>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KillMonster> KillMonsterList {
-      get { return killMonsterList_; }
-    }
-
-    /// <summary>Field number for the "challenge_id" field.</summary>
-    public const int ChallengeIdFieldNumber = 3;
-    private uint challengeId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ChallengeId {
-      get { return challengeId_; }
-      set {
-        challengeId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "dead_avatar_num" field.</summary>
-    public const int DeadAvatarNumFieldNumber = 2;
+    public const int DeadAvatarNumFieldNumber = 3;
     private uint deadAvatarNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -168,8 +121,67 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "kill_monster_list" field.</summary>
+    public const int KillMonsterListFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.KillMonster> _repeated_killMonsterList_codec
+        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.KillMonster.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KillMonster> killMonsterList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KillMonster>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KillMonster> KillMonsterList {
+      get { return killMonsterList_; }
+    }
+
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 12;
+    private global::EggLink.DanhengServer.Proto.ChallengeStatus status_ = global::EggLink.DanhengServer.Proto.ChallengeStatus.ChallengeUnknown;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ChallengeStatus Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "round_count" field.</summary>
+    public const int RoundCountFieldNumber = 4;
+    private uint roundCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RoundCount {
+      get { return roundCount_; }
+      set {
+        roundCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "challenge_id" field.</summary>
+    public const int ChallengeIdFieldNumber = 11;
+    private uint challengeId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ChallengeId {
+      get { return challengeId_; }
+      set {
+        challengeId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "score_two" field.</summary>
+    public const int ScoreTwoFieldNumber = 2;
+    private uint scoreTwo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ScoreTwo {
+      get { return scoreTwo_; }
+      set {
+        scoreTwo_ = value;
+      }
+    }
+
     /// <summary>Field number for the "score_id" field.</summary>
-    public const int ScoreIdFieldNumber = 5;
+    public const int ScoreIdFieldNumber = 1;
     private uint scoreId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -181,26 +193,14 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "stage_info" field.</summary>
-    public const int StageInfoFieldNumber = 6;
-    private global::EggLink.DanhengServer.Proto.ChallengeStoryInfo stageInfo_;
+    public const int StageInfoFieldNumber = 15;
+    private global::EggLink.DanhengServer.Proto.ChallengeCurBuffInfo stageInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ChallengeStoryInfo StageInfo {
+    public global::EggLink.DanhengServer.Proto.ChallengeCurBuffInfo StageInfo {
       get { return stageInfo_; }
       set {
         stageInfo_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 9;
-    private global::EggLink.DanhengServer.Proto.ChallengeStatus status_ = global::EggLink.DanhengServer.Proto.ChallengeStatus.ChallengeUnknown;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ChallengeStatus Status {
-      get { return status_; }
-      set {
-        status_ = value;
       }
     }
 
@@ -219,15 +219,15 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ScoreTwo != other.ScoreTwo) return false;
       if (ExtraLineupType != other.ExtraLineupType) return false;
-      if (RoundCount != other.RoundCount) return false;
-      if(!killMonsterList_.Equals(other.killMonsterList_)) return false;
-      if (ChallengeId != other.ChallengeId) return false;
       if (DeadAvatarNum != other.DeadAvatarNum) return false;
+      if(!killMonsterList_.Equals(other.killMonsterList_)) return false;
+      if (Status != other.Status) return false;
+      if (RoundCount != other.RoundCount) return false;
+      if (ChallengeId != other.ChallengeId) return false;
+      if (ScoreTwo != other.ScoreTwo) return false;
       if (ScoreId != other.ScoreId) return false;
       if (!object.Equals(StageInfo, other.StageInfo)) return false;
-      if (Status != other.Status) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -235,15 +235,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ScoreTwo != 0) hash ^= ScoreTwo.GetHashCode();
       if (ExtraLineupType != global::EggLink.DanhengServer.Proto.ExtraLineupType.LineupNone) hash ^= ExtraLineupType.GetHashCode();
-      if (RoundCount != 0) hash ^= RoundCount.GetHashCode();
-      hash ^= killMonsterList_.GetHashCode();
-      if (ChallengeId != 0) hash ^= ChallengeId.GetHashCode();
       if (DeadAvatarNum != 0) hash ^= DeadAvatarNum.GetHashCode();
+      hash ^= killMonsterList_.GetHashCode();
+      if (Status != global::EggLink.DanhengServer.Proto.ChallengeStatus.ChallengeUnknown) hash ^= Status.GetHashCode();
+      if (RoundCount != 0) hash ^= RoundCount.GetHashCode();
+      if (ChallengeId != 0) hash ^= ChallengeId.GetHashCode();
+      if (ScoreTwo != 0) hash ^= ScoreTwo.GetHashCode();
       if (ScoreId != 0) hash ^= ScoreId.GetHashCode();
       if (stageInfo_ != null) hash ^= StageInfo.GetHashCode();
-      if (Status != global::EggLink.DanhengServer.Proto.ChallengeStatus.ChallengeUnknown) hash ^= Status.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -262,38 +262,38 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (DeadAvatarNum != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(DeadAvatarNum);
-      }
-      if (ChallengeId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(ChallengeId);
-      }
-      killMonsterList_.WriteTo(output, _repeated_killMonsterList_codec);
       if (ScoreId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(8);
         output.WriteUInt32(ScoreId);
       }
-      if (stageInfo_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(StageInfo);
-      }
-      if (RoundCount != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(RoundCount);
-      }
-      if (Status != global::EggLink.DanhengServer.Proto.ChallengeStatus.ChallengeUnknown) {
-        output.WriteRawTag(72);
-        output.WriteEnum((int) Status);
-      }
       if (ScoreTwo != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(16);
         output.WriteUInt32(ScoreTwo);
       }
+      if (DeadAvatarNum != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(DeadAvatarNum);
+      }
+      if (RoundCount != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(RoundCount);
+      }
       if (ExtraLineupType != global::EggLink.DanhengServer.Proto.ExtraLineupType.LineupNone) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteEnum((int) ExtraLineupType);
+      }
+      killMonsterList_.WriteTo(output, _repeated_killMonsterList_codec);
+      if (ChallengeId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(ChallengeId);
+      }
+      if (Status != global::EggLink.DanhengServer.Proto.ChallengeStatus.ChallengeUnknown) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) Status);
+      }
+      if (stageInfo_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(StageInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -305,38 +305,38 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (DeadAvatarNum != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(DeadAvatarNum);
-      }
-      if (ChallengeId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(ChallengeId);
-      }
-      killMonsterList_.WriteTo(ref output, _repeated_killMonsterList_codec);
       if (ScoreId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(8);
         output.WriteUInt32(ScoreId);
       }
-      if (stageInfo_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(StageInfo);
-      }
-      if (RoundCount != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(RoundCount);
-      }
-      if (Status != global::EggLink.DanhengServer.Proto.ChallengeStatus.ChallengeUnknown) {
-        output.WriteRawTag(72);
-        output.WriteEnum((int) Status);
-      }
       if (ScoreTwo != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(16);
         output.WriteUInt32(ScoreTwo);
       }
+      if (DeadAvatarNum != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(DeadAvatarNum);
+      }
+      if (RoundCount != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(RoundCount);
+      }
       if (ExtraLineupType != global::EggLink.DanhengServer.Proto.ExtraLineupType.LineupNone) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteEnum((int) ExtraLineupType);
+      }
+      killMonsterList_.WriteTo(ref output, _repeated_killMonsterList_codec);
+      if (ChallengeId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(ChallengeId);
+      }
+      if (Status != global::EggLink.DanhengServer.Proto.ChallengeStatus.ChallengeUnknown) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) Status);
+      }
+      if (stageInfo_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(StageInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -348,30 +348,30 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ScoreTwo != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScoreTwo);
-      }
       if (ExtraLineupType != global::EggLink.DanhengServer.Proto.ExtraLineupType.LineupNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExtraLineupType);
+      }
+      if (DeadAvatarNum != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DeadAvatarNum);
+      }
+      size += killMonsterList_.CalculateSize(_repeated_killMonsterList_codec);
+      if (Status != global::EggLink.DanhengServer.Proto.ChallengeStatus.ChallengeUnknown) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (RoundCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RoundCount);
       }
-      size += killMonsterList_.CalculateSize(_repeated_killMonsterList_codec);
       if (ChallengeId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChallengeId);
       }
-      if (DeadAvatarNum != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DeadAvatarNum);
+      if (ScoreTwo != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScoreTwo);
       }
       if (ScoreId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScoreId);
       }
       if (stageInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StageInfo);
-      }
-      if (Status != global::EggLink.DanhengServer.Proto.ChallengeStatus.ChallengeUnknown) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -385,33 +385,33 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ScoreTwo != 0) {
-        ScoreTwo = other.ScoreTwo;
-      }
       if (other.ExtraLineupType != global::EggLink.DanhengServer.Proto.ExtraLineupType.LineupNone) {
         ExtraLineupType = other.ExtraLineupType;
+      }
+      if (other.DeadAvatarNum != 0) {
+        DeadAvatarNum = other.DeadAvatarNum;
+      }
+      killMonsterList_.Add(other.killMonsterList_);
+      if (other.Status != global::EggLink.DanhengServer.Proto.ChallengeStatus.ChallengeUnknown) {
+        Status = other.Status;
       }
       if (other.RoundCount != 0) {
         RoundCount = other.RoundCount;
       }
-      killMonsterList_.Add(other.killMonsterList_);
       if (other.ChallengeId != 0) {
         ChallengeId = other.ChallengeId;
       }
-      if (other.DeadAvatarNum != 0) {
-        DeadAvatarNum = other.DeadAvatarNum;
+      if (other.ScoreTwo != 0) {
+        ScoreTwo = other.ScoreTwo;
       }
       if (other.ScoreId != 0) {
         ScoreId = other.ScoreId;
       }
       if (other.stageInfo_ != null) {
         if (stageInfo_ == null) {
-          StageInfo = new global::EggLink.DanhengServer.Proto.ChallengeStoryInfo();
+          StageInfo = new global::EggLink.DanhengServer.Proto.ChallengeCurBuffInfo();
         }
         StageInfo.MergeFrom(other.StageInfo);
-      }
-      if (other.Status != global::EggLink.DanhengServer.Proto.ChallengeStatus.ChallengeUnknown) {
-        Status = other.Status;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -428,43 +428,43 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            DeadAvatarNum = input.ReadUInt32();
-            break;
-          }
-          case 24: {
-            ChallengeId = input.ReadUInt32();
-            break;
-          }
-          case 34: {
-            killMonsterList_.AddEntriesFrom(input, _repeated_killMonsterList_codec);
-            break;
-          }
-          case 40: {
+          case 8: {
             ScoreId = input.ReadUInt32();
             break;
           }
-          case 50: {
-            if (stageInfo_ == null) {
-              StageInfo = new global::EggLink.DanhengServer.Proto.ChallengeStoryInfo();
-            }
-            input.ReadMessage(StageInfo);
-            break;
-          }
-          case 64: {
-            RoundCount = input.ReadUInt32();
-            break;
-          }
-          case 72: {
-            Status = (global::EggLink.DanhengServer.Proto.ChallengeStatus) input.ReadEnum();
-            break;
-          }
-          case 88: {
+          case 16: {
             ScoreTwo = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 24: {
+            DeadAvatarNum = input.ReadUInt32();
+            break;
+          }
+          case 32: {
+            RoundCount = input.ReadUInt32();
+            break;
+          }
+          case 64: {
             ExtraLineupType = (global::EggLink.DanhengServer.Proto.ExtraLineupType) input.ReadEnum();
+            break;
+          }
+          case 74: {
+            killMonsterList_.AddEntriesFrom(input, _repeated_killMonsterList_codec);
+            break;
+          }
+          case 88: {
+            ChallengeId = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            Status = (global::EggLink.DanhengServer.Proto.ChallengeStatus) input.ReadEnum();
+            break;
+          }
+          case 122: {
+            if (stageInfo_ == null) {
+              StageInfo = new global::EggLink.DanhengServer.Proto.ChallengeCurBuffInfo();
+            }
+            input.ReadMessage(StageInfo);
             break;
           }
         }
@@ -482,43 +482,43 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            DeadAvatarNum = input.ReadUInt32();
-            break;
-          }
-          case 24: {
-            ChallengeId = input.ReadUInt32();
-            break;
-          }
-          case 34: {
-            killMonsterList_.AddEntriesFrom(ref input, _repeated_killMonsterList_codec);
-            break;
-          }
-          case 40: {
+          case 8: {
             ScoreId = input.ReadUInt32();
             break;
           }
-          case 50: {
-            if (stageInfo_ == null) {
-              StageInfo = new global::EggLink.DanhengServer.Proto.ChallengeStoryInfo();
-            }
-            input.ReadMessage(StageInfo);
-            break;
-          }
-          case 64: {
-            RoundCount = input.ReadUInt32();
-            break;
-          }
-          case 72: {
-            Status = (global::EggLink.DanhengServer.Proto.ChallengeStatus) input.ReadEnum();
-            break;
-          }
-          case 88: {
+          case 16: {
             ScoreTwo = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 24: {
+            DeadAvatarNum = input.ReadUInt32();
+            break;
+          }
+          case 32: {
+            RoundCount = input.ReadUInt32();
+            break;
+          }
+          case 64: {
             ExtraLineupType = (global::EggLink.DanhengServer.Proto.ExtraLineupType) input.ReadEnum();
+            break;
+          }
+          case 74: {
+            killMonsterList_.AddEntriesFrom(ref input, _repeated_killMonsterList_codec);
+            break;
+          }
+          case 88: {
+            ChallengeId = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            Status = (global::EggLink.DanhengServer.Proto.ChallengeStatus) input.ReadEnum();
+            break;
+          }
+          case 122: {
+            if (stageInfo_ == null) {
+              StageInfo = new global::EggLink.DanhengServer.Proto.ChallengeCurBuffInfo();
+            }
+            input.ReadMessage(StageInfo);
             break;
           }
         }

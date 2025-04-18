@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtTZWxlY3RQaG9uZVRoZW1lU2NSc3AucHJvdG8iVgoVU2VsZWN0UGhvbmVU",
-            "aGVtZVNjUnNwEhMKC0FDSE9QT0pMQ0NFGAkgASgNEhcKD2N1cl9waG9uZV90",
-            "aGVtZRgPIAEoDRIPCgdyZXRjb2RlGAUgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "aGVtZVNjUnNwEhMKC0FDSE9QT0pMQ0NFGAcgASgNEhcKD2N1cl9waG9uZV90",
+            "aGVtZRgGIAEoDRIPCgdyZXRjb2RlGAkgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "ACHOPOJLCCE" field.</summary>
-    public const int ACHOPOJLCCEFieldNumber = 9;
+    public const int ACHOPOJLCCEFieldNumber = 7;
     private uint aCHOPOJLCCE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cur_phone_theme" field.</summary>
-    public const int CurPhoneThemeFieldNumber = 15;
+    public const int CurPhoneThemeFieldNumber = 6;
     private uint curPhoneTheme_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 5;
+    public const int RetcodeFieldNumber = 9;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(Retcode);
+      if (CurPhoneTheme != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(CurPhoneTheme);
       }
       if (ACHOPOJLCCE != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(56);
         output.WriteUInt32(ACHOPOJLCCE);
       }
-      if (CurPhoneTheme != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(CurPhoneTheme);
+      if (Retcode != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(Retcode);
+      if (CurPhoneTheme != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(CurPhoneTheme);
       }
       if (ACHOPOJLCCE != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(56);
         output.WriteUInt32(ACHOPOJLCCE);
       }
-      if (CurPhoneTheme != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(CurPhoneTheme);
+      if (Retcode != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            Retcode = input.ReadUInt32();
+          case 48: {
+            CurPhoneTheme = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 56: {
             ACHOPOJLCCE = input.ReadUInt32();
             break;
           }
-          case 120: {
-            CurPhoneTheme = input.ReadUInt32();
+          case 72: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            Retcode = input.ReadUInt32();
+          case 48: {
+            CurPhoneTheme = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 56: {
             ACHOPOJLCCE = input.ReadUInt32();
             break;
           }
-          case 120: {
-            CurPhoneTheme = input.ReadUInt32();
+          case 72: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

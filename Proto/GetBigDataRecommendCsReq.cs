@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch5HZXRCaWdEYXRhUmVjb21tZW5kQ3NSZXEucHJvdG8aGkJpZ0RhdGFSZWNv",
             "bW1lbmRUeXBlLnByb3RvImgKGEdldEJpZ0RhdGFSZWNvbW1lbmRDc1JlcRI2",
-            "ChdiaWdfZGF0YV9yZWNvbW1lbmRfdHlwZRgKIAEoDjIVLkJpZ0RhdGFSZWNv",
-            "bW1lbmRUeXBlEhQKDGVxdWlwX2F2YXRhchgEIAEoDUIeqgIbRWdnTGluay5E",
+            "ChdiaWdfZGF0YV9yZWNvbW1lbmRfdHlwZRgPIAEoDjIVLkJpZ0RhdGFSZWNv",
+            "bW1lbmRUeXBlEhQKDGVxdWlwX2F2YXRhchgBIAEoDUIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BigDataRecommendTypeReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "big_data_recommend_type" field.</summary>
-    public const int BigDataRecommendTypeFieldNumber = 10;
+    public const int BigDataRecommendTypeFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.BigDataRecommendType bigDataRecommendType_ = global::EggLink.DanhengServer.Proto.BigDataRecommendType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "equip_avatar" field.</summary>
-    public const int EquipAvatarFieldNumber = 4;
+    public const int EquipAvatarFieldNumber = 1;
     private uint equipAvatar_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -154,11 +154,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (EquipAvatar != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(8);
         output.WriteUInt32(EquipAvatar);
       }
       if (BigDataRecommendType != global::EggLink.DanhengServer.Proto.BigDataRecommendType.None) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(120);
         output.WriteEnum((int) BigDataRecommendType);
       }
       if (_unknownFields != null) {
@@ -172,11 +172,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (EquipAvatar != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(8);
         output.WriteUInt32(EquipAvatar);
       }
       if (BigDataRecommendType != global::EggLink.DanhengServer.Proto.BigDataRecommendType.None) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(120);
         output.WriteEnum((int) BigDataRecommendType);
       }
       if (_unknownFields != null) {
@@ -228,11 +228,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 8: {
             EquipAvatar = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 120: {
             BigDataRecommendType = (global::EggLink.DanhengServer.Proto.BigDataRecommendType) input.ReadEnum();
             break;
           }
@@ -251,11 +251,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 8: {
             EquipAvatar = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 120: {
             BigDataRecommendType = (global::EggLink.DanhengServer.Proto.BigDataRecommendType) input.ReadEnum();
             break;
           }

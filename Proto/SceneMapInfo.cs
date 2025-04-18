@@ -24,23 +24,23 @@ namespace EggLink.DanhengServer.Proto {
     static SceneMapInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJTY2VuZU1hcEluZm8ucHJvdG8aD01hemVHcm91cC5wcm90bxoTTWF6ZVBy",
-            "b3BTdGF0ZS5wcm90bxoPQ2hlc3RJbmZvLnByb3RvGhFOUEFPR0tGS0FBRS5w",
-            "cm90byKzAwoMU2NlbmVNYXBJbmZvEiYKDm1hemVfcHJvcF9saXN0GAUgAygL",
-            "Mg4uTWF6ZVByb3BTdGF0ZRIQCghmbG9vcl9pZBgDIAEoDRIcChR1bmxvY2tf",
-            "dGVsZXBvcnRfbGlzdBgMIAMoDRIYChBjdXJfbWFwX2VudHJ5X2lkGAogASgN",
-            "EiMKD21hemVfZ3JvdXBfbGlzdBgLIAMoCzIKLk1hemVHcm91cBIhCgtKTUxE",
-            "TU9DTk1ITRgIIAMoCzIMLk5QQU9HS0ZLQUFFEg8KB3JldGNvZGUYDiABKA0S",
-            "HAoUbGlnaHRlbl9zZWN0aW9uX2xpc3QYBCADKA0SHgoKY2hlc3RfbGlzdBgP",
-            "IAMoCzIKLkNoZXN0SW5mbxIQCghlbnRyeV9pZBgHIAEoDRIUCgxkaW1lbnNp",
-            "b25faWQYCSABKA0SOwoQZmxvb3Jfc2F2ZWRfZGF0YRgGIAMoCzIhLlNjZW5l",
-            "TWFwSW5mby5GbG9vclNhdmVkRGF0YUVudHJ5GjUKE0Zsb29yU2F2ZWREYXRh",
+            "ChJTY2VuZU1hcEluZm8ucHJvdG8aEU5QQU9HS0ZLQUFFLnByb3RvGg9NYXpl",
+            "R3JvdXAucHJvdG8aE01hemVQcm9wU3RhdGUucHJvdG8aD0NoZXN0SW5mby5w",
+            "cm90byKzAwoMU2NlbmVNYXBJbmZvEhAKCGZsb29yX2lkGAogASgNEhAKCGVu",
+            "dHJ5X2lkGAIgASgNEjsKEGZsb29yX3NhdmVkX2RhdGEYCyADKAsyIS5TY2Vu",
+            "ZU1hcEluZm8uRmxvb3JTYXZlZERhdGFFbnRyeRIjCg9tYXplX2dyb3VwX2xp",
+            "c3QYASADKAsyCi5NYXplR3JvdXASFAoMZGltZW5zaW9uX2lkGAwgASgNEh4K",
+            "CmNoZXN0X2xpc3QYBCADKAsyCi5DaGVzdEluZm8SGAoQY3VyX21hcF9lbnRy",
+            "eV9pZBgIIAEoDRIPCgdyZXRjb2RlGA4gASgNEiYKDm1hemVfcHJvcF9saXN0",
+            "GAMgAygLMg4uTWF6ZVByb3BTdGF0ZRIcChRsaWdodGVuX3NlY3Rpb25fbGlz",
+            "dBgPIAMoDRIhCgtKTUxETU9DTk1ITRgFIAMoCzIMLk5QQU9HS0ZLQUFFEhwK",
+            "FHVubG9ja190ZWxlcG9ydF9saXN0GAYgAygNGjUKE0Zsb29yU2F2ZWREYXRh",
             "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgFOgI4AUIeqgIbRWdn",
             "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MazeGroupReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazePropStateReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChestInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.NPAOGKFKAAEReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NPAOGKFKAAEReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazeGroupReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazePropStateReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChestInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneMapInfo), global::EggLink.DanhengServer.Proto.SceneMapInfo.Parser, new[]{ "MazePropList", "FloorId", "UnlockTeleportList", "CurMapEntryId", "MazeGroupList", "JMLDMOCNMHM", "Retcode", "LightenSectionList", "ChestList", "EntryId", "DimensionId", "FloorSavedData" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneMapInfo), global::EggLink.DanhengServer.Proto.SceneMapInfo.Parser, new[]{ "FloorId", "EntryId", "FloorSavedData", "MazeGroupList", "DimensionId", "ChestList", "CurMapEntryId", "Retcode", "MazePropList", "LightenSectionList", "JMLDMOCNMHM", "UnlockTeleportList" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -82,18 +82,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SceneMapInfo(SceneMapInfo other) : this() {
-      mazePropList_ = other.mazePropList_.Clone();
       floorId_ = other.floorId_;
-      unlockTeleportList_ = other.unlockTeleportList_.Clone();
-      curMapEntryId_ = other.curMapEntryId_;
-      mazeGroupList_ = other.mazeGroupList_.Clone();
-      jMLDMOCNMHM_ = other.jMLDMOCNMHM_.Clone();
-      retcode_ = other.retcode_;
-      lightenSectionList_ = other.lightenSectionList_.Clone();
-      chestList_ = other.chestList_.Clone();
       entryId_ = other.entryId_;
-      dimensionId_ = other.dimensionId_;
       floorSavedData_ = other.floorSavedData_.Clone();
+      mazeGroupList_ = other.mazeGroupList_.Clone();
+      dimensionId_ = other.dimensionId_;
+      chestList_ = other.chestList_.Clone();
+      curMapEntryId_ = other.curMapEntryId_;
+      retcode_ = other.retcode_;
+      mazePropList_ = other.mazePropList_.Clone();
+      lightenSectionList_ = other.lightenSectionList_.Clone();
+      jMLDMOCNMHM_ = other.jMLDMOCNMHM_.Clone();
+      unlockTeleportList_ = other.unlockTeleportList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -103,19 +103,8 @@ namespace EggLink.DanhengServer.Proto {
       return new SceneMapInfo(this);
     }
 
-    /// <summary>Field number for the "maze_prop_list" field.</summary>
-    public const int MazePropListFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MazePropState> _repeated_mazePropList_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.MazePropState.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MazePropState> mazePropList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MazePropState>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MazePropState> MazePropList {
-      get { return mazePropList_; }
-    }
-
     /// <summary>Field number for the "floor_id" field.</summary>
-    public const int FloorIdFieldNumber = 3;
+    public const int FloorIdFieldNumber = 10;
     private uint floorId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -126,19 +115,65 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "unlock_teleport_list" field.</summary>
-    public const int UnlockTeleportListFieldNumber = 12;
-    private static readonly pb::FieldCodec<uint> _repeated_unlockTeleportList_codec
-        = pb::FieldCodec.ForUInt32(98);
-    private readonly pbc::RepeatedField<uint> unlockTeleportList_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "entry_id" field.</summary>
+    public const int EntryIdFieldNumber = 2;
+    private uint entryId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> UnlockTeleportList {
-      get { return unlockTeleportList_; }
+    public uint EntryId {
+      get { return entryId_; }
+      set {
+        entryId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "floor_saved_data" field.</summary>
+    public const int FloorSavedDataFieldNumber = 11;
+    private static readonly pbc::MapField<string, int>.Codec _map_floorSavedData_codec
+        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 90);
+    private readonly pbc::MapField<string, int> floorSavedData_ = new pbc::MapField<string, int>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, int> FloorSavedData {
+      get { return floorSavedData_; }
+    }
+
+    /// <summary>Field number for the "maze_group_list" field.</summary>
+    public const int MazeGroupListFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MazeGroup> _repeated_mazeGroupList_codec
+        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.MazeGroup.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MazeGroup> mazeGroupList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MazeGroup>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MazeGroup> MazeGroupList {
+      get { return mazeGroupList_; }
+    }
+
+    /// <summary>Field number for the "dimension_id" field.</summary>
+    public const int DimensionIdFieldNumber = 12;
+    private uint dimensionId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DimensionId {
+      get { return dimensionId_; }
+      set {
+        dimensionId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "chest_list" field.</summary>
+    public const int ChestListFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChestInfo> _repeated_chestList_codec
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.ChestInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChestInfo> chestList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChestInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChestInfo> ChestList {
+      get { return chestList_; }
     }
 
     /// <summary>Field number for the "cur_map_entry_id" field.</summary>
-    public const int CurMapEntryIdFieldNumber = 10;
+    public const int CurMapEntryIdFieldNumber = 8;
     private uint curMapEntryId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -147,28 +182,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         curMapEntryId_ = value;
       }
-    }
-
-    /// <summary>Field number for the "maze_group_list" field.</summary>
-    public const int MazeGroupListFieldNumber = 11;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MazeGroup> _repeated_mazeGroupList_codec
-        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.MazeGroup.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MazeGroup> mazeGroupList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MazeGroup>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MazeGroup> MazeGroupList {
-      get { return mazeGroupList_; }
-    }
-
-    /// <summary>Field number for the "JMLDMOCNMHM" field.</summary>
-    public const int JMLDMOCNMHMFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.NPAOGKFKAAE> _repeated_jMLDMOCNMHM_codec
-        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.NPAOGKFKAAE.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NPAOGKFKAAE> jMLDMOCNMHM_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NPAOGKFKAAE>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NPAOGKFKAAE> JMLDMOCNMHM {
-      get { return jMLDMOCNMHM_; }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
@@ -183,10 +196,21 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "maze_prop_list" field.</summary>
+    public const int MazePropListFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MazePropState> _repeated_mazePropList_codec
+        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.MazePropState.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MazePropState> mazePropList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MazePropState>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MazePropState> MazePropList {
+      get { return mazePropList_; }
+    }
+
     /// <summary>Field number for the "lighten_section_list" field.</summary>
-    public const int LightenSectionListFieldNumber = 4;
+    public const int LightenSectionListFieldNumber = 15;
     private static readonly pb::FieldCodec<uint> _repeated_lightenSectionList_codec
-        = pb::FieldCodec.ForUInt32(34);
+        = pb::FieldCodec.ForUInt32(122);
     private readonly pbc::RepeatedField<uint> lightenSectionList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -194,50 +218,26 @@ namespace EggLink.DanhengServer.Proto {
       get { return lightenSectionList_; }
     }
 
-    /// <summary>Field number for the "chest_list" field.</summary>
-    public const int ChestListFieldNumber = 15;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChestInfo> _repeated_chestList_codec
-        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.ChestInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChestInfo> chestList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChestInfo>();
+    /// <summary>Field number for the "JMLDMOCNMHM" field.</summary>
+    public const int JMLDMOCNMHMFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.NPAOGKFKAAE> _repeated_jMLDMOCNMHM_codec
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.NPAOGKFKAAE.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NPAOGKFKAAE> jMLDMOCNMHM_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NPAOGKFKAAE>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChestInfo> ChestList {
-      get { return chestList_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NPAOGKFKAAE> JMLDMOCNMHM {
+      get { return jMLDMOCNMHM_; }
     }
 
-    /// <summary>Field number for the "entry_id" field.</summary>
-    public const int EntryIdFieldNumber = 7;
-    private uint entryId_;
+    /// <summary>Field number for the "unlock_teleport_list" field.</summary>
+    public const int UnlockTeleportListFieldNumber = 6;
+    private static readonly pb::FieldCodec<uint> _repeated_unlockTeleportList_codec
+        = pb::FieldCodec.ForUInt32(50);
+    private readonly pbc::RepeatedField<uint> unlockTeleportList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint EntryId {
-      get { return entryId_; }
-      set {
-        entryId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "dimension_id" field.</summary>
-    public const int DimensionIdFieldNumber = 9;
-    private uint dimensionId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DimensionId {
-      get { return dimensionId_; }
-      set {
-        dimensionId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "floor_saved_data" field.</summary>
-    public const int FloorSavedDataFieldNumber = 6;
-    private static readonly pbc::MapField<string, int>.Codec _map_floorSavedData_codec
-        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 50);
-    private readonly pbc::MapField<string, int> floorSavedData_ = new pbc::MapField<string, int>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<string, int> FloorSavedData {
-      get { return floorSavedData_; }
+    public pbc::RepeatedField<uint> UnlockTeleportList {
+      get { return unlockTeleportList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -255,18 +255,18 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!mazePropList_.Equals(other.mazePropList_)) return false;
       if (FloorId != other.FloorId) return false;
-      if(!unlockTeleportList_.Equals(other.unlockTeleportList_)) return false;
-      if (CurMapEntryId != other.CurMapEntryId) return false;
-      if(!mazeGroupList_.Equals(other.mazeGroupList_)) return false;
-      if(!jMLDMOCNMHM_.Equals(other.jMLDMOCNMHM_)) return false;
-      if (Retcode != other.Retcode) return false;
-      if(!lightenSectionList_.Equals(other.lightenSectionList_)) return false;
-      if(!chestList_.Equals(other.chestList_)) return false;
       if (EntryId != other.EntryId) return false;
-      if (DimensionId != other.DimensionId) return false;
       if (!FloorSavedData.Equals(other.FloorSavedData)) return false;
+      if(!mazeGroupList_.Equals(other.mazeGroupList_)) return false;
+      if (DimensionId != other.DimensionId) return false;
+      if(!chestList_.Equals(other.chestList_)) return false;
+      if (CurMapEntryId != other.CurMapEntryId) return false;
+      if (Retcode != other.Retcode) return false;
+      if(!mazePropList_.Equals(other.mazePropList_)) return false;
+      if(!lightenSectionList_.Equals(other.lightenSectionList_)) return false;
+      if(!jMLDMOCNMHM_.Equals(other.jMLDMOCNMHM_)) return false;
+      if(!unlockTeleportList_.Equals(other.unlockTeleportList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -274,18 +274,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= mazePropList_.GetHashCode();
       if (FloorId != 0) hash ^= FloorId.GetHashCode();
-      hash ^= unlockTeleportList_.GetHashCode();
-      if (CurMapEntryId != 0) hash ^= CurMapEntryId.GetHashCode();
-      hash ^= mazeGroupList_.GetHashCode();
-      hash ^= jMLDMOCNMHM_.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      hash ^= lightenSectionList_.GetHashCode();
-      hash ^= chestList_.GetHashCode();
       if (EntryId != 0) hash ^= EntryId.GetHashCode();
-      if (DimensionId != 0) hash ^= DimensionId.GetHashCode();
       hash ^= FloorSavedData.GetHashCode();
+      hash ^= mazeGroupList_.GetHashCode();
+      if (DimensionId != 0) hash ^= DimensionId.GetHashCode();
+      hash ^= chestList_.GetHashCode();
+      if (CurMapEntryId != 0) hash ^= CurMapEntryId.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      hash ^= mazePropList_.GetHashCode();
+      hash ^= lightenSectionList_.GetHashCode();
+      hash ^= jMLDMOCNMHM_.GetHashCode();
+      hash ^= unlockTeleportList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -304,33 +304,33 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FloorId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(FloorId);
-      }
-      lightenSectionList_.WriteTo(output, _repeated_lightenSectionList_codec);
-      mazePropList_.WriteTo(output, _repeated_mazePropList_codec);
-      floorSavedData_.WriteTo(output, _map_floorSavedData_codec);
+      mazeGroupList_.WriteTo(output, _repeated_mazeGroupList_codec);
       if (EntryId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(16);
         output.WriteUInt32(EntryId);
       }
+      mazePropList_.WriteTo(output, _repeated_mazePropList_codec);
+      chestList_.WriteTo(output, _repeated_chestList_codec);
       jMLDMOCNMHM_.WriteTo(output, _repeated_jMLDMOCNMHM_codec);
-      if (DimensionId != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(DimensionId);
-      }
+      unlockTeleportList_.WriteTo(output, _repeated_unlockTeleportList_codec);
       if (CurMapEntryId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(64);
         output.WriteUInt32(CurMapEntryId);
       }
-      mazeGroupList_.WriteTo(output, _repeated_mazeGroupList_codec);
-      unlockTeleportList_.WriteTo(output, _repeated_unlockTeleportList_codec);
+      if (FloorId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(FloorId);
+      }
+      floorSavedData_.WriteTo(output, _map_floorSavedData_codec);
+      if (DimensionId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(DimensionId);
+      }
       if (Retcode != 0) {
         output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
       }
-      chestList_.WriteTo(output, _repeated_chestList_codec);
+      lightenSectionList_.WriteTo(output, _repeated_lightenSectionList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -341,33 +341,33 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FloorId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(FloorId);
-      }
-      lightenSectionList_.WriteTo(ref output, _repeated_lightenSectionList_codec);
-      mazePropList_.WriteTo(ref output, _repeated_mazePropList_codec);
-      floorSavedData_.WriteTo(ref output, _map_floorSavedData_codec);
+      mazeGroupList_.WriteTo(ref output, _repeated_mazeGroupList_codec);
       if (EntryId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(16);
         output.WriteUInt32(EntryId);
       }
+      mazePropList_.WriteTo(ref output, _repeated_mazePropList_codec);
+      chestList_.WriteTo(ref output, _repeated_chestList_codec);
       jMLDMOCNMHM_.WriteTo(ref output, _repeated_jMLDMOCNMHM_codec);
-      if (DimensionId != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(DimensionId);
-      }
+      unlockTeleportList_.WriteTo(ref output, _repeated_unlockTeleportList_codec);
       if (CurMapEntryId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(64);
         output.WriteUInt32(CurMapEntryId);
       }
-      mazeGroupList_.WriteTo(ref output, _repeated_mazeGroupList_codec);
-      unlockTeleportList_.WriteTo(ref output, _repeated_unlockTeleportList_codec);
+      if (FloorId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(FloorId);
+      }
+      floorSavedData_.WriteTo(ref output, _map_floorSavedData_codec);
+      if (DimensionId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(DimensionId);
+      }
       if (Retcode != 0) {
         output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
       }
-      chestList_.WriteTo(ref output, _repeated_chestList_codec);
+      lightenSectionList_.WriteTo(ref output, _repeated_lightenSectionList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -378,28 +378,28 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += mazePropList_.CalculateSize(_repeated_mazePropList_codec);
       if (FloorId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FloorId);
       }
-      size += unlockTeleportList_.CalculateSize(_repeated_unlockTeleportList_codec);
-      if (CurMapEntryId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurMapEntryId);
-      }
-      size += mazeGroupList_.CalculateSize(_repeated_mazeGroupList_codec);
-      size += jMLDMOCNMHM_.CalculateSize(_repeated_jMLDMOCNMHM_codec);
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
-      size += lightenSectionList_.CalculateSize(_repeated_lightenSectionList_codec);
-      size += chestList_.CalculateSize(_repeated_chestList_codec);
       if (EntryId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EntryId);
       }
+      size += floorSavedData_.CalculateSize(_map_floorSavedData_codec);
+      size += mazeGroupList_.CalculateSize(_repeated_mazeGroupList_codec);
       if (DimensionId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DimensionId);
       }
-      size += floorSavedData_.CalculateSize(_map_floorSavedData_codec);
+      size += chestList_.CalculateSize(_repeated_chestList_codec);
+      if (CurMapEntryId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurMapEntryId);
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      size += mazePropList_.CalculateSize(_repeated_mazePropList_codec);
+      size += lightenSectionList_.CalculateSize(_repeated_lightenSectionList_codec);
+      size += jMLDMOCNMHM_.CalculateSize(_repeated_jMLDMOCNMHM_codec);
+      size += unlockTeleportList_.CalculateSize(_repeated_unlockTeleportList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -412,28 +412,28 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      mazePropList_.Add(other.mazePropList_);
       if (other.FloorId != 0) {
         FloorId = other.FloorId;
       }
-      unlockTeleportList_.Add(other.unlockTeleportList_);
-      if (other.CurMapEntryId != 0) {
-        CurMapEntryId = other.CurMapEntryId;
-      }
-      mazeGroupList_.Add(other.mazeGroupList_);
-      jMLDMOCNMHM_.Add(other.jMLDMOCNMHM_);
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
-      lightenSectionList_.Add(other.lightenSectionList_);
-      chestList_.Add(other.chestList_);
       if (other.EntryId != 0) {
         EntryId = other.EntryId;
       }
+      floorSavedData_.MergeFrom(other.floorSavedData_);
+      mazeGroupList_.Add(other.mazeGroupList_);
       if (other.DimensionId != 0) {
         DimensionId = other.DimensionId;
       }
-      floorSavedData_.MergeFrom(other.floorSavedData_);
+      chestList_.Add(other.chestList_);
+      if (other.CurMapEntryId != 0) {
+        CurMapEntryId = other.CurMapEntryId;
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
+      mazePropList_.Add(other.mazePropList_);
+      lightenSectionList_.Add(other.lightenSectionList_);
+      jMLDMOCNMHM_.Add(other.jMLDMOCNMHM_);
+      unlockTeleportList_.Add(other.unlockTeleportList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -449,54 +449,54 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            FloorId = input.ReadUInt32();
-            break;
-          }
-          case 34:
-          case 32: {
-            lightenSectionList_.AddEntriesFrom(input, _repeated_lightenSectionList_codec);
-            break;
-          }
-          case 42: {
-            mazePropList_.AddEntriesFrom(input, _repeated_mazePropList_codec);
-            break;
-          }
-          case 50: {
-            floorSavedData_.AddEntriesFrom(input, _map_floorSavedData_codec);
-            break;
-          }
-          case 56: {
-            EntryId = input.ReadUInt32();
-            break;
-          }
-          case 66: {
-            jMLDMOCNMHM_.AddEntriesFrom(input, _repeated_jMLDMOCNMHM_codec);
-            break;
-          }
-          case 72: {
-            DimensionId = input.ReadUInt32();
-            break;
-          }
-          case 80: {
-            CurMapEntryId = input.ReadUInt32();
-            break;
-          }
-          case 90: {
+          case 10: {
             mazeGroupList_.AddEntriesFrom(input, _repeated_mazeGroupList_codec);
             break;
           }
-          case 98:
-          case 96: {
+          case 16: {
+            EntryId = input.ReadUInt32();
+            break;
+          }
+          case 26: {
+            mazePropList_.AddEntriesFrom(input, _repeated_mazePropList_codec);
+            break;
+          }
+          case 34: {
+            chestList_.AddEntriesFrom(input, _repeated_chestList_codec);
+            break;
+          }
+          case 42: {
+            jMLDMOCNMHM_.AddEntriesFrom(input, _repeated_jMLDMOCNMHM_codec);
+            break;
+          }
+          case 50:
+          case 48: {
             unlockTeleportList_.AddEntriesFrom(input, _repeated_unlockTeleportList_codec);
+            break;
+          }
+          case 64: {
+            CurMapEntryId = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            FloorId = input.ReadUInt32();
+            break;
+          }
+          case 90: {
+            floorSavedData_.AddEntriesFrom(input, _map_floorSavedData_codec);
+            break;
+          }
+          case 96: {
+            DimensionId = input.ReadUInt32();
             break;
           }
           case 112: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 122: {
-            chestList_.AddEntriesFrom(input, _repeated_chestList_codec);
+          case 122:
+          case 120: {
+            lightenSectionList_.AddEntriesFrom(input, _repeated_lightenSectionList_codec);
             break;
           }
         }
@@ -514,54 +514,54 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            FloorId = input.ReadUInt32();
-            break;
-          }
-          case 34:
-          case 32: {
-            lightenSectionList_.AddEntriesFrom(ref input, _repeated_lightenSectionList_codec);
-            break;
-          }
-          case 42: {
-            mazePropList_.AddEntriesFrom(ref input, _repeated_mazePropList_codec);
-            break;
-          }
-          case 50: {
-            floorSavedData_.AddEntriesFrom(ref input, _map_floorSavedData_codec);
-            break;
-          }
-          case 56: {
-            EntryId = input.ReadUInt32();
-            break;
-          }
-          case 66: {
-            jMLDMOCNMHM_.AddEntriesFrom(ref input, _repeated_jMLDMOCNMHM_codec);
-            break;
-          }
-          case 72: {
-            DimensionId = input.ReadUInt32();
-            break;
-          }
-          case 80: {
-            CurMapEntryId = input.ReadUInt32();
-            break;
-          }
-          case 90: {
+          case 10: {
             mazeGroupList_.AddEntriesFrom(ref input, _repeated_mazeGroupList_codec);
             break;
           }
-          case 98:
-          case 96: {
+          case 16: {
+            EntryId = input.ReadUInt32();
+            break;
+          }
+          case 26: {
+            mazePropList_.AddEntriesFrom(ref input, _repeated_mazePropList_codec);
+            break;
+          }
+          case 34: {
+            chestList_.AddEntriesFrom(ref input, _repeated_chestList_codec);
+            break;
+          }
+          case 42: {
+            jMLDMOCNMHM_.AddEntriesFrom(ref input, _repeated_jMLDMOCNMHM_codec);
+            break;
+          }
+          case 50:
+          case 48: {
             unlockTeleportList_.AddEntriesFrom(ref input, _repeated_unlockTeleportList_codec);
+            break;
+          }
+          case 64: {
+            CurMapEntryId = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            FloorId = input.ReadUInt32();
+            break;
+          }
+          case 90: {
+            floorSavedData_.AddEntriesFrom(ref input, _map_floorSavedData_codec);
+            break;
+          }
+          case 96: {
+            DimensionId = input.ReadUInt32();
             break;
           }
           case 112: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 122: {
-            chestList_.AddEntriesFrom(ref input, _repeated_chestList_codec);
+          case 122:
+          case 120: {
+            lightenSectionList_.AddEntriesFrom(ref input, _repeated_lightenSectionList_codec);
             break;
           }
         }

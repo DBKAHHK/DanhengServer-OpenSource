@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static MainMissionReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFNYWluTWlzc2lvbi5wcm90bxoYTWlzc2lvbkN1c3RvbVZhbHVlLnByb3Rv",
-            "GhNNaXNzaW9uU3RhdHVzLnByb3RvImkKC01haW5NaXNzaW9uEgoKAmlkGAgg",
-            "ASgNEh4KBnN0YXR1cxgFIAEoDjIOLk1pc3Npb25TdGF0dXMSLgoRY3VzdG9t",
-            "X3ZhbHVlX2xpc3QYDSADKAsyEy5NaXNzaW9uQ3VzdG9tVmFsdWVCHqoCG0Vn",
+            "ChFNYWluTWlzc2lvbi5wcm90bxoTTWlzc2lvblN0YXR1cy5wcm90bxoYTWlz",
+            "c2lvbkN1c3RvbVZhbHVlLnByb3RvImkKC01haW5NaXNzaW9uEi4KEWN1c3Rv",
+            "bV92YWx1ZV9saXN0GAIgAygLMhMuTWlzc2lvbkN1c3RvbVZhbHVlEh4KBnN0",
+            "YXR1cxgIIAEoDjIOLk1pc3Npb25TdGF0dXMSCgoCaWQYCSABKA1CHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MissionCustomValueReflection.Descriptor, global::EggLink.DanhengServer.Proto.MissionStatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MissionStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.MissionCustomValueReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MainMission), global::EggLink.DanhengServer.Proto.MainMission.Parser, new[]{ "Id", "Status", "CustomValueList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MainMission), global::EggLink.DanhengServer.Proto.MainMission.Parser, new[]{ "CustomValueList", "Status", "Id" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MainMission(MainMission other) : this() {
-      id_ = other.id_;
-      status_ = other.status_;
       customValueList_ = other.customValueList_.Clone();
+      status_ = other.status_;
+      id_ = other.id_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,20 +86,19 @@ namespace EggLink.DanhengServer.Proto {
       return new MainMission(this);
     }
 
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 8;
-    private uint id_;
+    /// <summary>Field number for the "custom_value_list" field.</summary>
+    public const int CustomValueListFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MissionCustomValue> _repeated_customValueList_codec
+        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.MissionCustomValue.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MissionCustomValue> customValueList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MissionCustomValue>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Id {
-      get { return id_; }
-      set {
-        id_ = value;
-      }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MissionCustomValue> CustomValueList {
+      get { return customValueList_; }
     }
 
     /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 5;
+    public const int StatusFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.MissionStatus status_ = global::EggLink.DanhengServer.Proto.MissionStatus.MissionNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,15 +109,16 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "custom_value_list" field.</summary>
-    public const int CustomValueListFieldNumber = 13;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MissionCustomValue> _repeated_customValueList_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.MissionCustomValue.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MissionCustomValue> customValueList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MissionCustomValue>();
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 9;
+    private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MissionCustomValue> CustomValueList {
-      get { return customValueList_; }
+    public uint Id {
+      get { return id_; }
+      set {
+        id_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Id != other.Id) return false;
-      if (Status != other.Status) return false;
       if(!customValueList_.Equals(other.customValueList_)) return false;
+      if (Status != other.Status) return false;
+      if (Id != other.Id) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id != 0) hash ^= Id.GetHashCode();
-      if (Status != global::EggLink.DanhengServer.Proto.MissionStatus.MissionNone) hash ^= Status.GetHashCode();
       hash ^= customValueList_.GetHashCode();
+      if (Status != global::EggLink.DanhengServer.Proto.MissionStatus.MissionNone) hash ^= Status.GetHashCode();
+      if (Id != 0) hash ^= Id.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,15 +167,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      customValueList_.WriteTo(output, _repeated_customValueList_codec);
       if (Status != global::EggLink.DanhengServer.Proto.MissionStatus.MissionNone) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(64);
         output.WriteEnum((int) Status);
       }
       if (Id != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(72);
         output.WriteUInt32(Id);
       }
-      customValueList_.WriteTo(output, _repeated_customValueList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -186,15 +186,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      customValueList_.WriteTo(ref output, _repeated_customValueList_codec);
       if (Status != global::EggLink.DanhengServer.Proto.MissionStatus.MissionNone) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(64);
         output.WriteEnum((int) Status);
       }
       if (Id != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(72);
         output.WriteUInt32(Id);
       }
-      customValueList_.WriteTo(ref output, _repeated_customValueList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -205,13 +205,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
-      }
+      size += customValueList_.CalculateSize(_repeated_customValueList_codec);
       if (Status != global::EggLink.DanhengServer.Proto.MissionStatus.MissionNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
-      size += customValueList_.CalculateSize(_repeated_customValueList_codec);
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -224,13 +224,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Id != 0) {
-        Id = other.Id;
-      }
+      customValueList_.Add(other.customValueList_);
       if (other.Status != global::EggLink.DanhengServer.Proto.MissionStatus.MissionNone) {
         Status = other.Status;
       }
-      customValueList_.Add(other.customValueList_);
+      if (other.Id != 0) {
+        Id = other.Id;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -246,16 +246,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            Status = (global::EggLink.DanhengServer.Proto.MissionStatus) input.ReadEnum();
+          case 18: {
+            customValueList_.AddEntriesFrom(input, _repeated_customValueList_codec);
             break;
           }
           case 64: {
-            Id = input.ReadUInt32();
+            Status = (global::EggLink.DanhengServer.Proto.MissionStatus) input.ReadEnum();
             break;
           }
-          case 106: {
-            customValueList_.AddEntriesFrom(input, _repeated_customValueList_codec);
+          case 72: {
+            Id = input.ReadUInt32();
             break;
           }
         }
@@ -273,16 +273,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            Status = (global::EggLink.DanhengServer.Proto.MissionStatus) input.ReadEnum();
+          case 18: {
+            customValueList_.AddEntriesFrom(ref input, _repeated_customValueList_codec);
             break;
           }
           case 64: {
-            Id = input.ReadUInt32();
+            Status = (global::EggLink.DanhengServer.Proto.MissionStatus) input.ReadEnum();
             break;
           }
-          case 106: {
-            customValueList_.AddEntriesFrom(ref input, _repeated_customValueList_codec);
+          case 72: {
+            Id = input.ReadUInt32();
             break;
           }
         }

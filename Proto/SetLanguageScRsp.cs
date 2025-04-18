@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZTZXRMYW5ndWFnZVNjUnNwLnByb3RvGhJMYW5ndWFnZVR5cGUucHJvdG8i",
-            "RwoQU2V0TGFuZ3VhZ2VTY1JzcBIiCgtGQURQRElCS05CSRgMIAEoDjINLkxh",
-            "bmd1YWdlVHlwZRIPCgdyZXRjb2RlGAggASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "RwoQU2V0TGFuZ3VhZ2VTY1JzcBIiCgtGQURQRElCS05CSRgPIAEoDjINLkxh",
+            "bmd1YWdlVHlwZRIPCgdyZXRjb2RlGAQgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "FADPDIBKNBI" field.</summary>
-    public const int FADPDIBKNBIFieldNumber = 12;
+    public const int FADPDIBKNBIFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.LanguageType fADPDIBKNBI_ = global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 8;
+    public const int RetcodeFieldNumber = 4;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
       }
       if (FADPDIBKNBI != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(120);
         output.WriteEnum((int) FADPDIBKNBI);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
       }
       if (FADPDIBKNBI != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(120);
         output.WriteEnum((int) FADPDIBKNBI);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
+          case 32: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 120: {
             FADPDIBKNBI = (global::EggLink.DanhengServer.Proto.LanguageType) input.ReadEnum();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
+          case 32: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 120: {
             FADPDIBKNBI = (global::EggLink.DanhengServer.Proto.LanguageType) input.ReadEnum();
             break;
           }

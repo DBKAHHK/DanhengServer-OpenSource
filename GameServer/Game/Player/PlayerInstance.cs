@@ -4,7 +4,6 @@ using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Player;
 using EggLink.DanhengServer.Database.Scene;
 using EggLink.DanhengServer.Database.Tutorial;
-using EggLink.DanhengServer.Enums.Avatar;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.Enums.Scene;
 using EggLink.DanhengServer.GameServer.Game.Activity;
@@ -18,7 +17,6 @@ using EggLink.DanhengServer.GameServer.Game.Gacha;
 using EggLink.DanhengServer.GameServer.Game.Inventory;
 using EggLink.DanhengServer.GameServer.Game.Lineup;
 using EggLink.DanhengServer.GameServer.Game.Mail;
-using EggLink.DanhengServer.GameServer.Game.MatchThree;
 using EggLink.DanhengServer.GameServer.Game.Message;
 using EggLink.DanhengServer.GameServer.Game.Mission;
 using EggLink.DanhengServer.GameServer.Game.Quest;
@@ -91,7 +89,6 @@ public class PlayerInstance(PlayerData data)
     #region Activity Managers
 
     public ActivityManager? ActivityManager { get; private set; }
-    public MatchThreeManager? MatchThreeManager { get; private set; }
     public TrainPartyManager? TrainPartyManager { get; private set; }
 
     #endregion
@@ -184,7 +181,6 @@ public class PlayerInstance(PlayerData data)
         StoryLineManager = new StoryLineManager(this);
         QuestManager = new QuestManager(this);
         TrainPartyManager = new TrainPartyManager(this);
-        MatchThreeManager = new MatchThreeManager(this);
         OfferingManager = new OfferingManager(this);
 
         PlayerUnlockData = InitializeDatabase<PlayerUnlockData>();

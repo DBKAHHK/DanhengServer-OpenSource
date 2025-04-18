@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static LuckyKoiInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJMdWNreUtvaUluZm8ucHJvdG8iQQoMTHVja3lLb2lJbmZvEg4KBlVpZFN0",
-            "chgPIAEoCRIQCghIZWFkSWNvbhgBIAEoDRIPCgdOYW1lU3RyGAkgASgJQh6q",
+            "ChJMdWNreUtvaUluZm8ucHJvdG8iQQoMTHVja3lLb2lJbmZvEhAKCEhlYWRJ",
+            "Y29uGAUgASgNEg8KB05hbWVTdHIYASABKAkSDgoGVWlkU3RyGA0gASgJQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LuckyKoiInfo), global::EggLink.DanhengServer.Proto.LuckyKoiInfo.Parser, new[]{ "UidStr", "HeadIcon", "NameStr" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LuckyKoiInfo), global::EggLink.DanhengServer.Proto.LuckyKoiInfo.Parser, new[]{ "HeadIcon", "NameStr", "UidStr" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,9 +72,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LuckyKoiInfo(LuckyKoiInfo other) : this() {
-      uidStr_ = other.uidStr_;
       headIcon_ = other.headIcon_;
       nameStr_ = other.nameStr_;
+      uidStr_ = other.uidStr_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new LuckyKoiInfo(this);
     }
 
-    /// <summary>Field number for the "UidStr" field.</summary>
-    public const int UidStrFieldNumber = 15;
-    private string uidStr_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string UidStr {
-      get { return uidStr_; }
-      set {
-        uidStr_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "HeadIcon" field.</summary>
-    public const int HeadIconFieldNumber = 1;
+    public const int HeadIconFieldNumber = 5;
     private uint headIcon_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NameStr" field.</summary>
-    public const int NameStrFieldNumber = 9;
+    public const int NameStrFieldNumber = 1;
     private string nameStr_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -117,6 +105,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return nameStr_; }
       set {
         nameStr_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "UidStr" field.</summary>
+    public const int UidStrFieldNumber = 13;
+    private string uidStr_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UidStr {
+      get { return uidStr_; }
+      set {
+        uidStr_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -135,9 +135,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (UidStr != other.UidStr) return false;
       if (HeadIcon != other.HeadIcon) return false;
       if (NameStr != other.NameStr) return false;
+      if (UidStr != other.UidStr) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,9 +145,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (UidStr.Length != 0) hash ^= UidStr.GetHashCode();
       if (HeadIcon != 0) hash ^= HeadIcon.GetHashCode();
       if (NameStr.Length != 0) hash ^= NameStr.GetHashCode();
+      if (UidStr.Length != 0) hash ^= UidStr.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,16 +166,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (HeadIcon != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(HeadIcon);
-      }
       if (NameStr.Length != 0) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(10);
         output.WriteString(NameStr);
       }
+      if (HeadIcon != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(HeadIcon);
+      }
       if (UidStr.Length != 0) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(106);
         output.WriteString(UidStr);
       }
       if (_unknownFields != null) {
@@ -188,16 +188,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HeadIcon != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(HeadIcon);
-      }
       if (NameStr.Length != 0) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(10);
         output.WriteString(NameStr);
       }
+      if (HeadIcon != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(HeadIcon);
+      }
       if (UidStr.Length != 0) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(106);
         output.WriteString(UidStr);
       }
       if (_unknownFields != null) {
@@ -210,14 +210,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (UidStr.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(UidStr);
-      }
       if (HeadIcon != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HeadIcon);
       }
       if (NameStr.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NameStr);
+      }
+      if (UidStr.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UidStr);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -231,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.UidStr.Length != 0) {
-        UidStr = other.UidStr;
-      }
       if (other.HeadIcon != 0) {
         HeadIcon = other.HeadIcon;
       }
       if (other.NameStr.Length != 0) {
         NameStr = other.NameStr;
+      }
+      if (other.UidStr.Length != 0) {
+        UidStr = other.UidStr;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -255,15 +255,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            HeadIcon = input.ReadUInt32();
-            break;
-          }
-          case 74: {
+          case 10: {
             NameStr = input.ReadString();
             break;
           }
-          case 122: {
+          case 40: {
+            HeadIcon = input.ReadUInt32();
+            break;
+          }
+          case 106: {
             UidStr = input.ReadString();
             break;
           }
@@ -282,15 +282,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            HeadIcon = input.ReadUInt32();
-            break;
-          }
-          case 74: {
+          case 10: {
             NameStr = input.ReadString();
             break;
           }
-          case 122: {
+          case 40: {
+            HeadIcon = input.ReadUInt32();
+            break;
+          }
+          case 106: {
             UidStr = input.ReadString();
             break;
           }

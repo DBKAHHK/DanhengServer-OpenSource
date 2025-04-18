@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFKQ0RMSkJQSE9NRC5wcm90bxoXUm9ndWVNYWdpY1NjZXB0ZXIucHJvdG8i",
-            "SwoLSkNETEpCUEhPTUQSJwoLR0hFTEJPQkZQQU0YCCABKAsyEi5Sb2d1ZU1h",
-            "Z2ljU2NlcHRlchITCgtCTENJTEpFTkVMTxgOIAEoCEIeqgIbRWdnTGluay5E",
+            "SwoLSkNETEpCUEhPTUQSJwoLR0hFTEJPQkZQQU0YAyABKAsyEi5Sb2d1ZU1h",
+            "Z2ljU2NlcHRlchITCgtCTENJTEpFTkVMTxgJIAEoCEIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicScepterReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "GHELBOBFPAM" field.</summary>
-    public const int GHELBOBFPAMFieldNumber = 8;
+    public const int GHELBOBFPAMFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.RogueMagicScepter gHELBOBFPAM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "BLCILJENELO" field.</summary>
-    public const int BLCILJENELOFieldNumber = 14;
+    public const int BLCILJENELOFieldNumber = 9;
     private bool bLCILJENELO_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (gHELBOBFPAM_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(26);
         output.WriteMessage(GHELBOBFPAM);
       }
       if (BLCILJENELO != false) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(72);
         output.WriteBool(BLCILJENELO);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (gHELBOBFPAM_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(26);
         output.WriteMessage(GHELBOBFPAM);
       }
       if (BLCILJENELO != false) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(72);
         output.WriteBool(BLCILJENELO);
       }
       if (_unknownFields != null) {
@@ -230,14 +230,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66: {
+          case 26: {
             if (gHELBOBFPAM_ == null) {
               GHELBOBFPAM = new global::EggLink.DanhengServer.Proto.RogueMagicScepter();
             }
             input.ReadMessage(GHELBOBFPAM);
             break;
           }
-          case 112: {
+          case 72: {
             BLCILJENELO = input.ReadBool();
             break;
           }
@@ -256,14 +256,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66: {
+          case 26: {
             if (gHELBOBFPAM_ == null) {
               GHELBOBFPAM = new global::EggLink.DanhengServer.Proto.RogueMagicScepter();
             }
             input.ReadMessage(GHELBOBFPAM);
             break;
           }
-          case 112: {
+          case 72: {
             BLCILJENELO = input.ReadBool();
             break;
           }

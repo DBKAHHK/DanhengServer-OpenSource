@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdHZXRRdWVzdERhdGFTY1JzcC5wcm90bxoLUXVlc3QucHJvdG8iXwoRR2V0",
-            "UXVlc3REYXRhU2NSc3ASHQoVdG90YWxfYWNoaWV2ZW1lbnRfZXhwGAQgASgN",
-            "Eg8KB3JldGNvZGUYBiABKA0SGgoKcXVlc3RfbGlzdBgLIAMoCzIGLlF1ZXN0",
+            "UXVlc3REYXRhU2NSc3ASHQoVdG90YWxfYWNoaWV2ZW1lbnRfZXhwGAwgASgN",
+            "Eg8KB3JldGNvZGUYAyABKA0SGgoKcXVlc3RfbGlzdBgLIAMoCzIGLlF1ZXN0",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.QuestReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "total_achievement_exp" field.</summary>
-    public const int TotalAchievementExpFieldNumber = 4;
+    public const int TotalAchievementExpFieldNumber = 12;
     private uint totalAchievementExp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 6;
+    public const int RetcodeFieldNumber = 3;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,15 +166,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (TotalAchievementExp != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(TotalAchievementExp);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
       questList_.WriteTo(output, _repeated_questList_codec);
+      if (TotalAchievementExp != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(TotalAchievementExp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -185,15 +185,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TotalAchievementExp != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(TotalAchievementExp);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
       questList_.WriteTo(ref output, _repeated_questList_codec);
+      if (TotalAchievementExp != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(TotalAchievementExp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -245,16 +245,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            TotalAchievementExp = input.ReadUInt32();
-            break;
-          }
-          case 48: {
+          case 24: {
             Retcode = input.ReadUInt32();
             break;
           }
           case 90: {
             questList_.AddEntriesFrom(input, _repeated_questList_codec);
+            break;
+          }
+          case 96: {
+            TotalAchievementExp = input.ReadUInt32();
             break;
           }
         }
@@ -272,16 +272,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            TotalAchievementExp = input.ReadUInt32();
-            break;
-          }
-          case 48: {
+          case 24: {
             Retcode = input.ReadUInt32();
             break;
           }
           case 90: {
             questList_.AddEntriesFrom(ref input, _repeated_questList_codec);
+            break;
+          }
+          case 96: {
+            TotalAchievementExp = input.ReadUInt32();
             break;
           }
         }

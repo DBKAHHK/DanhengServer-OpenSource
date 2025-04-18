@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static RogueEndlessAreaDataReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpSb2d1ZUVuZGxlc3NBcmVhRGF0YS5wcm90bxobUm9ndWVFbmRsZXNzTGF5",
-            "ZXJJbmZvLnByb3RvGhFKTkZFTENLSU9DTS5wcm90byKJAQoUUm9ndWVFbmRs",
+            "ChpSb2d1ZUVuZGxlc3NBcmVhRGF0YS5wcm90bxoRSk5GRUxDS0lPQ00ucHJv",
+            "dG8aG1JvZ3VlRW5kbGVzc0xheWVySW5mby5wcm90byKJAQoUUm9ndWVFbmRs",
             "ZXNzQXJlYURhdGESKwoLQk9QQUFOR0tPR0gYAiABKAsyFi5Sb2d1ZUVuZGxl",
-            "c3NMYXllckluZm8SIQoLQUVMT0lQR0ZPREIYBiABKAsyDC5KTkZFTENLSU9D",
-            "TRIPCgdhcmVhX2lkGAMgASgNEhAKCHBhbmVsX2lkGAcgASgNQh6qAhtFZ2dM",
+            "c3NMYXllckluZm8SDwoHYXJlYV9pZBgHIAEoDRIQCghwYW5lbF9pZBgIIAEo",
+            "DRIhCgtBRUxPSVBHRk9EQhgNIAEoCzIMLkpORkVMQ0tJT0NNQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueEndlessLayerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.JNFELCKIOCMReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JNFELCKIOCMReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueEndlessLayerInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueEndlessAreaData), global::EggLink.DanhengServer.Proto.RogueEndlessAreaData.Parser, new[]{ "BOPAANGKOGH", "AELOIPGFODB", "AreaId", "PanelId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueEndlessAreaData), global::EggLink.DanhengServer.Proto.RogueEndlessAreaData.Parser, new[]{ "BOPAANGKOGH", "AreaId", "PanelId", "AELOIPGFODB" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,9 +76,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueEndlessAreaData(RogueEndlessAreaData other) : this() {
       bOPAANGKOGH_ = other.bOPAANGKOGH_ != null ? other.bOPAANGKOGH_.Clone() : null;
-      aELOIPGFODB_ = other.aELOIPGFODB_ != null ? other.aELOIPGFODB_.Clone() : null;
       areaId_ = other.areaId_;
       panelId_ = other.panelId_;
+      aELOIPGFODB_ = other.aELOIPGFODB_ != null ? other.aELOIPGFODB_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -100,20 +100,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "AELOIPGFODB" field.</summary>
-    public const int AELOIPGFODBFieldNumber = 6;
-    private global::EggLink.DanhengServer.Proto.JNFELCKIOCM aELOIPGFODB_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.JNFELCKIOCM AELOIPGFODB {
-      get { return aELOIPGFODB_; }
-      set {
-        aELOIPGFODB_ = value;
-      }
-    }
-
     /// <summary>Field number for the "area_id" field.</summary>
-    public const int AreaIdFieldNumber = 3;
+    public const int AreaIdFieldNumber = 7;
     private uint areaId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -125,7 +113,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "panel_id" field.</summary>
-    public const int PanelIdFieldNumber = 7;
+    public const int PanelIdFieldNumber = 8;
     private uint panelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -133,6 +121,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return panelId_; }
       set {
         panelId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "AELOIPGFODB" field.</summary>
+    public const int AELOIPGFODBFieldNumber = 13;
+    private global::EggLink.DanhengServer.Proto.JNFELCKIOCM aELOIPGFODB_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.JNFELCKIOCM AELOIPGFODB {
+      get { return aELOIPGFODB_; }
+      set {
+        aELOIPGFODB_ = value;
       }
     }
 
@@ -152,9 +152,9 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(BOPAANGKOGH, other.BOPAANGKOGH)) return false;
-      if (!object.Equals(AELOIPGFODB, other.AELOIPGFODB)) return false;
       if (AreaId != other.AreaId) return false;
       if (PanelId != other.PanelId) return false;
+      if (!object.Equals(AELOIPGFODB, other.AELOIPGFODB)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -163,9 +163,9 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (bOPAANGKOGH_ != null) hash ^= BOPAANGKOGH.GetHashCode();
-      if (aELOIPGFODB_ != null) hash ^= AELOIPGFODB.GetHashCode();
       if (AreaId != 0) hash ^= AreaId.GetHashCode();
       if (PanelId != 0) hash ^= PanelId.GetHashCode();
+      if (aELOIPGFODB_ != null) hash ^= AELOIPGFODB.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -189,16 +189,16 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteMessage(BOPAANGKOGH);
       }
       if (AreaId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(56);
         output.WriteUInt32(AreaId);
       }
-      if (aELOIPGFODB_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(AELOIPGFODB);
-      }
       if (PanelId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(64);
         output.WriteUInt32(PanelId);
+      }
+      if (aELOIPGFODB_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(AELOIPGFODB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -215,16 +215,16 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteMessage(BOPAANGKOGH);
       }
       if (AreaId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(56);
         output.WriteUInt32(AreaId);
       }
-      if (aELOIPGFODB_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(AELOIPGFODB);
-      }
       if (PanelId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(64);
         output.WriteUInt32(PanelId);
+      }
+      if (aELOIPGFODB_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(AELOIPGFODB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -239,14 +239,14 @@ namespace EggLink.DanhengServer.Proto {
       if (bOPAANGKOGH_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BOPAANGKOGH);
       }
-      if (aELOIPGFODB_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AELOIPGFODB);
-      }
       if (AreaId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AreaId);
       }
       if (PanelId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PanelId);
+      }
+      if (aELOIPGFODB_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AELOIPGFODB);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -266,17 +266,17 @@ namespace EggLink.DanhengServer.Proto {
         }
         BOPAANGKOGH.MergeFrom(other.BOPAANGKOGH);
       }
-      if (other.aELOIPGFODB_ != null) {
-        if (aELOIPGFODB_ == null) {
-          AELOIPGFODB = new global::EggLink.DanhengServer.Proto.JNFELCKIOCM();
-        }
-        AELOIPGFODB.MergeFrom(other.AELOIPGFODB);
-      }
       if (other.AreaId != 0) {
         AreaId = other.AreaId;
       }
       if (other.PanelId != 0) {
         PanelId = other.PanelId;
+      }
+      if (other.aELOIPGFODB_ != null) {
+        if (aELOIPGFODB_ == null) {
+          AELOIPGFODB = new global::EggLink.DanhengServer.Proto.JNFELCKIOCM();
+        }
+        AELOIPGFODB.MergeFrom(other.AELOIPGFODB);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -300,19 +300,19 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(BOPAANGKOGH);
             break;
           }
-          case 24: {
+          case 56: {
             AreaId = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 64: {
+            PanelId = input.ReadUInt32();
+            break;
+          }
+          case 106: {
             if (aELOIPGFODB_ == null) {
               AELOIPGFODB = new global::EggLink.DanhengServer.Proto.JNFELCKIOCM();
             }
             input.ReadMessage(AELOIPGFODB);
-            break;
-          }
-          case 56: {
-            PanelId = input.ReadUInt32();
             break;
           }
         }
@@ -337,19 +337,19 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(BOPAANGKOGH);
             break;
           }
-          case 24: {
+          case 56: {
             AreaId = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 64: {
+            PanelId = input.ReadUInt32();
+            break;
+          }
+          case 106: {
             if (aELOIPGFODB_ == null) {
               AELOIPGFODB = new global::EggLink.DanhengServer.Proto.JNFELCKIOCM();
             }
             input.ReadMessage(AELOIPGFODB);
-            break;
-          }
-          case 56: {
-            PanelId = input.ReadUInt32();
             break;
           }
         }

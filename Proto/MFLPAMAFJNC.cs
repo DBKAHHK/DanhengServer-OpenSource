@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static MFLPAMAFJNCReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFNRkxQQU1BRkpOQy5wcm90byI2CgtNRkxQQU1BRkpOQxITCgtLQ0ZQSUVD",
-            "TUdCRBgLIAEoDRISCgppc19zdWNjZXNzGAIgASgIQh6qAhtFZ2dMaW5rLkRh",
-            "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChFNRkxQQU1BRkpOQy5wcm90byIzCgtNRkxQQU1BRkpOQxIPCgdpc19zdWNj",
+            "GAggASgIEhMKC0tDRlBJRUNNR0JEGAUgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MFLPAMAFJNC), global::EggLink.DanhengServer.Proto.MFLPAMAFJNC.Parser, new[]{ "KCFPIECMGBD", "IsSuccess" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MFLPAMAFJNC), global::EggLink.DanhengServer.Proto.MFLPAMAFJNC.Parser, new[]{ "IsSucc", "KCFPIECMGBD" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MFLPAMAFJNC(MFLPAMAFJNC other) : this() {
+      isSucc_ = other.isSucc_;
       kCFPIECMGBD_ = other.kCFPIECMGBD_;
-      isSuccess_ = other.isSuccess_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,8 +83,20 @@ namespace EggLink.DanhengServer.Proto {
       return new MFLPAMAFJNC(this);
     }
 
+    /// <summary>Field number for the "is_succ" field.</summary>
+    public const int IsSuccFieldNumber = 8;
+    private bool isSucc_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsSucc {
+      get { return isSucc_; }
+      set {
+        isSucc_ = value;
+      }
+    }
+
     /// <summary>Field number for the "KCFPIECMGBD" field.</summary>
-    public const int KCFPIECMGBDFieldNumber = 11;
+    public const int KCFPIECMGBDFieldNumber = 5;
     private uint kCFPIECMGBD_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -92,18 +104,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return kCFPIECMGBD_; }
       set {
         kCFPIECMGBD_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "is_success" field.</summary>
-    public const int IsSuccessFieldNumber = 2;
-    private bool isSuccess_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsSuccess {
-      get { return isSuccess_; }
-      set {
-        isSuccess_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (IsSucc != other.IsSucc) return false;
       if (KCFPIECMGBD != other.KCFPIECMGBD) return false;
-      if (IsSuccess != other.IsSuccess) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (IsSucc != false) hash ^= IsSucc.GetHashCode();
       if (KCFPIECMGBD != 0) hash ^= KCFPIECMGBD.GetHashCode();
-      if (IsSuccess != false) hash ^= IsSuccess.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsSuccess != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(IsSuccess);
-      }
       if (KCFPIECMGBD != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(40);
         output.WriteUInt32(KCFPIECMGBD);
+      }
+      if (IsSucc != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(IsSucc);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsSuccess != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(IsSuccess);
-      }
       if (KCFPIECMGBD != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(40);
         output.WriteUInt32(KCFPIECMGBD);
+      }
+      if (IsSucc != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(IsSucc);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (IsSucc != false) {
+        size += 1 + 1;
+      }
       if (KCFPIECMGBD != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KCFPIECMGBD);
-      }
-      if (IsSuccess != false) {
-        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.IsSucc != false) {
+        IsSucc = other.IsSucc;
+      }
       if (other.KCFPIECMGBD != 0) {
         KCFPIECMGBD = other.KCFPIECMGBD;
-      }
-      if (other.IsSuccess != false) {
-        IsSuccess = other.IsSuccess;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            IsSuccess = input.ReadBool();
+          case 40: {
+            KCFPIECMGBD = input.ReadUInt32();
             break;
           }
-          case 88: {
-            KCFPIECMGBD = input.ReadUInt32();
+          case 64: {
+            IsSucc = input.ReadBool();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            IsSuccess = input.ReadBool();
+          case 40: {
+            KCFPIECMGBD = input.ReadUInt32();
             break;
           }
-          case 88: {
-            KCFPIECMGBD = input.ReadUInt32();
+          case 64: {
+            IsSucc = input.ReadBool();
             break;
           }
         }

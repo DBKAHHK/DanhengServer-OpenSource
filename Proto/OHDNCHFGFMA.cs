@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static OHDNCHFGFMAReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFPSEROQ0hGR0ZNQS5wcm90byJdCgtPSEROQ0hGR0ZNQRISCgpkdXJhYmls",
-            "aXR5GAEgASgNEhMKC0JKRkJHTEJKQk5OGA8gASgNEhMKC0xDTE1IRUdER0dC",
-            "GAogASgNEhAKCHBhbmVsX2lkGAcgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ChFPSEROQ0hGR0ZNQS5wcm90byJdCgtPSEROQ0hGR0ZNQRIQCghwYW5lbF9p",
+            "ZBgJIAEoDRISCgpkdXJhYmlsaXR5GAwgASgNEhMKC0JKRkJHTEJKQk5OGAUg",
+            "ASgNEhMKC0xDTE1IRUdER0dCGA8gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OHDNCHFGFMA), global::EggLink.DanhengServer.Proto.OHDNCHFGFMA.Parser, new[]{ "Durability", "BJFBGLBJBNN", "LCLMHEGDGGB", "PanelId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OHDNCHFGFMA), global::EggLink.DanhengServer.Proto.OHDNCHFGFMA.Parser, new[]{ "PanelId", "Durability", "BJFBGLBJBNN", "LCLMHEGDGGB" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,10 +73,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OHDNCHFGFMA(OHDNCHFGFMA other) : this() {
+      panelId_ = other.panelId_;
       durability_ = other.durability_;
       bJFBGLBJBNN_ = other.bJFBGLBJBNN_;
       lCLMHEGDGGB_ = other.lCLMHEGDGGB_;
-      panelId_ = other.panelId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,8 +86,20 @@ namespace EggLink.DanhengServer.Proto {
       return new OHDNCHFGFMA(this);
     }
 
+    /// <summary>Field number for the "panel_id" field.</summary>
+    public const int PanelIdFieldNumber = 9;
+    private uint panelId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PanelId {
+      get { return panelId_; }
+      set {
+        panelId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "durability" field.</summary>
-    public const int DurabilityFieldNumber = 1;
+    public const int DurabilityFieldNumber = 12;
     private uint durability_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "BJFBGLBJBNN" field.</summary>
-    public const int BJFBGLBJBNNFieldNumber = 15;
+    public const int BJFBGLBJBNNFieldNumber = 5;
     private uint bJFBGLBJBNN_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "LCLMHEGDGGB" field.</summary>
-    public const int LCLMHEGDGGBFieldNumber = 10;
+    public const int LCLMHEGDGGBFieldNumber = 15;
     private uint lCLMHEGDGGB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -119,18 +131,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return lCLMHEGDGGB_; }
       set {
         lCLMHEGDGGB_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "panel_id" field.</summary>
-    public const int PanelIdFieldNumber = 7;
-    private uint panelId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PanelId {
-      get { return panelId_; }
-      set {
-        panelId_ = value;
       }
     }
 
@@ -149,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (PanelId != other.PanelId) return false;
       if (Durability != other.Durability) return false;
       if (BJFBGLBJBNN != other.BJFBGLBJBNN) return false;
       if (LCLMHEGDGGB != other.LCLMHEGDGGB) return false;
-      if (PanelId != other.PanelId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (PanelId != 0) hash ^= PanelId.GetHashCode();
       if (Durability != 0) hash ^= Durability.GetHashCode();
       if (BJFBGLBJBNN != 0) hash ^= BJFBGLBJBNN.GetHashCode();
       if (LCLMHEGDGGB != 0) hash ^= LCLMHEGDGGB.GetHashCode();
-      if (PanelId != 0) hash ^= PanelId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,21 +182,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Durability != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Durability);
+      if (BJFBGLBJBNN != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(BJFBGLBJBNN);
       }
       if (PanelId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(72);
         output.WriteUInt32(PanelId);
       }
-      if (LCLMHEGDGGB != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(LCLMHEGDGGB);
+      if (Durability != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Durability);
       }
-      if (BJFBGLBJBNN != 0) {
+      if (LCLMHEGDGGB != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(BJFBGLBJBNN);
+        output.WriteUInt32(LCLMHEGDGGB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -208,21 +208,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Durability != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Durability);
+      if (BJFBGLBJBNN != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(BJFBGLBJBNN);
       }
       if (PanelId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(72);
         output.WriteUInt32(PanelId);
       }
-      if (LCLMHEGDGGB != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(LCLMHEGDGGB);
+      if (Durability != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Durability);
       }
-      if (BJFBGLBJBNN != 0) {
+      if (LCLMHEGDGGB != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(BJFBGLBJBNN);
+        output.WriteUInt32(LCLMHEGDGGB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -234,6 +234,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (PanelId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PanelId);
+      }
       if (Durability != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Durability);
       }
@@ -242,9 +245,6 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (LCLMHEGDGGB != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LCLMHEGDGGB);
-      }
-      if (PanelId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PanelId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -258,6 +258,9 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.PanelId != 0) {
+        PanelId = other.PanelId;
+      }
       if (other.Durability != 0) {
         Durability = other.Durability;
       }
@@ -266,9 +269,6 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.LCLMHEGDGGB != 0) {
         LCLMHEGDGGB = other.LCLMHEGDGGB;
-      }
-      if (other.PanelId != 0) {
-        PanelId = other.PanelId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Durability = input.ReadUInt32();
+          case 40: {
+            BJFBGLBJBNN = input.ReadUInt32();
             break;
           }
-          case 56: {
+          case 72: {
             PanelId = input.ReadUInt32();
             break;
           }
-          case 80: {
-            LCLMHEGDGGB = input.ReadUInt32();
+          case 96: {
+            Durability = input.ReadUInt32();
             break;
           }
           case 120: {
-            BJFBGLBJBNN = input.ReadUInt32();
+            LCLMHEGDGGB = input.ReadUInt32();
             break;
           }
         }
@@ -316,20 +316,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Durability = input.ReadUInt32();
+          case 40: {
+            BJFBGLBJBNN = input.ReadUInt32();
             break;
           }
-          case 56: {
+          case 72: {
             PanelId = input.ReadUInt32();
             break;
           }
-          case 80: {
-            LCLMHEGDGGB = input.ReadUInt32();
+          case 96: {
+            Durability = input.ReadUInt32();
             break;
           }
           case 120: {
-            BJFBGLBJBNN = input.ReadUInt32();
+            LCLMHEGDGGB = input.ReadUInt32();
             break;
           }
         }

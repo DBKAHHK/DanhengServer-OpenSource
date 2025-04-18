@@ -15,7 +15,7 @@ public class HandlerTakeQuestRewardCsReq : Handler
         var ret = Retcode.RetSucc;
         List<int> succQuestIds = [];
 
-        foreach (var quest in req.QuestIdList)
+        foreach (var quest in req.SuccQuestIdList)
         {
             var (retCode, items) = await connection.Player!.QuestManager!.TakeQuestReward((int)quest);
             if (retCode != Retcode.RetSucc)

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJSb2d1ZVRvdXJuUmVuYW1lQXJjaGl2ZUNzUmVxLnByb3RvIj8KHFJvZ3Vl",
-            "VG91cm5SZW5hbWVBcmNoaXZlQ3NSZXESEQoJbWF4X3RpbWVzGA4gASgNEgwK",
-            "BG5hbWUYDSABKAlCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "VG91cm5SZW5hbWVBcmNoaXZlQ3NSZXESEQoJbWF4X3RpbWVzGA8gASgNEgwK",
+            "BG5hbWUYDCABKAlCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "max_times" field.</summary>
-    public const int MaxTimesFieldNumber = 14;
+    public const int MaxTimesFieldNumber = 15;
     private uint maxTimes_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 13;
+    public const int NameFieldNumber = 12;
     private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Name.Length != 0) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(98);
         output.WriteString(Name);
       }
       if (MaxTimes != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(120);
         output.WriteUInt32(MaxTimes);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(98);
         output.WriteString(Name);
       }
       if (MaxTimes != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(120);
         output.WriteUInt32(MaxTimes);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 106: {
+          case 98: {
             Name = input.ReadString();
             break;
           }
-          case 112: {
+          case 120: {
             MaxTimes = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 106: {
+          case 98: {
             Name = input.ReadString();
             break;
           }
-          case 112: {
+          case 120: {
             MaxTimes = input.ReadUInt32();
             break;
           }

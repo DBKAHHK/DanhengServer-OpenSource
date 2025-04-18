@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhSb2d1ZU1hZ2ljRG9vckluZm8ucHJvdG8iZgoSUm9ndWVNYWdpY0Rvb3JJ",
-            "bmZvEhgKEGVudGVyX25leHRfbGF5ZXIYDCABKAgSIQoZcm9ndWVfZG9vcl9u",
-            "ZXh0X3Jvb21fdHlwZRgLIAEoDRITCgtFSVBOTkVKTk5LShgNIAEoDUIeqgIb",
+            "bmZvEhgKEGVudGVyX25leHRfbGF5ZXIYCSABKAgSEwoLRUlQTk5FSk5OS0oY",
+            "ByABKA0SIQoZcm9ndWVfZG9vcl9uZXh0X3Jvb21fdHlwZRgGIAEoDUIeqgIb",
             "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicDoorInfo), global::EggLink.DanhengServer.Proto.RogueMagicDoorInfo.Parser, new[]{ "EnterNextLayer", "RogueDoorNextRoomType", "EIPNNEJNNKJ" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicDoorInfo), global::EggLink.DanhengServer.Proto.RogueMagicDoorInfo.Parser, new[]{ "EnterNextLayer", "EIPNNEJNNKJ", "RogueDoorNextRoomType" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueMagicDoorInfo(RogueMagicDoorInfo other) : this() {
       enterNextLayer_ = other.enterNextLayer_;
-      rogueDoorNextRoomType_ = other.rogueDoorNextRoomType_;
       eIPNNEJNNKJ_ = other.eIPNNEJNNKJ_;
+      rogueDoorNextRoomType_ = other.rogueDoorNextRoomType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "enter_next_layer" field.</summary>
-    public const int EnterNextLayerFieldNumber = 12;
+    public const int EnterNextLayerFieldNumber = 9;
     private bool enterNextLayer_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,20 +97,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "rogue_door_next_room_type" field.</summary>
-    public const int RogueDoorNextRoomTypeFieldNumber = 11;
-    private uint rogueDoorNextRoomType_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint RogueDoorNextRoomType {
-      get { return rogueDoorNextRoomType_; }
-      set {
-        rogueDoorNextRoomType_ = value;
-      }
-    }
-
     /// <summary>Field number for the "EIPNNEJNNKJ" field.</summary>
-    public const int EIPNNEJNNKJFieldNumber = 13;
+    public const int EIPNNEJNNKJFieldNumber = 7;
     private uint eIPNNEJNNKJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -118,6 +106,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return eIPNNEJNNKJ_; }
       set {
         eIPNNEJNNKJ_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rogue_door_next_room_type" field.</summary>
+    public const int RogueDoorNextRoomTypeFieldNumber = 6;
+    private uint rogueDoorNextRoomType_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RogueDoorNextRoomType {
+      get { return rogueDoorNextRoomType_; }
+      set {
+        rogueDoorNextRoomType_ = value;
       }
     }
 
@@ -137,8 +137,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (EnterNextLayer != other.EnterNextLayer) return false;
-      if (RogueDoorNextRoomType != other.RogueDoorNextRoomType) return false;
       if (EIPNNEJNNKJ != other.EIPNNEJNNKJ) return false;
+      if (RogueDoorNextRoomType != other.RogueDoorNextRoomType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,8 +147,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (EnterNextLayer != false) hash ^= EnterNextLayer.GetHashCode();
-      if (RogueDoorNextRoomType != 0) hash ^= RogueDoorNextRoomType.GetHashCode();
       if (EIPNNEJNNKJ != 0) hash ^= EIPNNEJNNKJ.GetHashCode();
+      if (RogueDoorNextRoomType != 0) hash ^= RogueDoorNextRoomType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,16 +168,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (RogueDoorNextRoomType != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(48);
         output.WriteUInt32(RogueDoorNextRoomType);
       }
-      if (EnterNextLayer != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(EnterNextLayer);
-      }
       if (EIPNNEJNNKJ != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(56);
         output.WriteUInt32(EIPNNEJNNKJ);
+      }
+      if (EnterNextLayer != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(EnterNextLayer);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,16 +190,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (RogueDoorNextRoomType != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(48);
         output.WriteUInt32(RogueDoorNextRoomType);
       }
-      if (EnterNextLayer != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(EnterNextLayer);
-      }
       if (EIPNNEJNNKJ != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(56);
         output.WriteUInt32(EIPNNEJNNKJ);
+      }
+      if (EnterNextLayer != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(EnterNextLayer);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -214,11 +214,11 @@ namespace EggLink.DanhengServer.Proto {
       if (EnterNextLayer != false) {
         size += 1 + 1;
       }
-      if (RogueDoorNextRoomType != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RogueDoorNextRoomType);
-      }
       if (EIPNNEJNNKJ != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EIPNNEJNNKJ);
+      }
+      if (RogueDoorNextRoomType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RogueDoorNextRoomType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -235,11 +235,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.EnterNextLayer != false) {
         EnterNextLayer = other.EnterNextLayer;
       }
-      if (other.RogueDoorNextRoomType != 0) {
-        RogueDoorNextRoomType = other.RogueDoorNextRoomType;
-      }
       if (other.EIPNNEJNNKJ != 0) {
         EIPNNEJNNKJ = other.EIPNNEJNNKJ;
+      }
+      if (other.RogueDoorNextRoomType != 0) {
+        RogueDoorNextRoomType = other.RogueDoorNextRoomType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 88: {
+          case 48: {
             RogueDoorNextRoomType = input.ReadUInt32();
             break;
           }
-          case 96: {
-            EnterNextLayer = input.ReadBool();
+          case 56: {
+            EIPNNEJNNKJ = input.ReadUInt32();
             break;
           }
-          case 104: {
-            EIPNNEJNNKJ = input.ReadUInt32();
+          case 72: {
+            EnterNextLayer = input.ReadBool();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 88: {
+          case 48: {
             RogueDoorNextRoomType = input.ReadUInt32();
             break;
           }
-          case 96: {
-            EnterNextLayer = input.ReadBool();
+          case 56: {
+            EIPNNEJNNKJ = input.ReadUInt32();
             break;
           }
-          case 104: {
-            EIPNNEJNNKJ = input.ReadUInt32();
+          case 72: {
+            EnterNextLayer = input.ReadBool();
             break;
           }
         }

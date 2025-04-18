@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static TrainPartyGamePlayStartCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiJUcmFpblBhcnR5R2FtZVBsYXlTdGFydENzUmVxLnByb3RvIkcKHFRyYWlu",
-            "UGFydHlHYW1lUGxheVN0YXJ0Q3NSZXESDwoHdGVhbV9pZBgMIAEoDRIWCg5w",
-            "YXNzZW5nZXJfbGlzdBgLIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
-            "LlByb3RvYgZwcm90bzM="));
+            "CiJUcmFpblBhcnR5R2FtZVBsYXlTdGFydENzUmVxLnByb3RvIkgKHFRyYWlu",
+            "UGFydHlHYW1lUGxheVN0YXJ0Q3NSZXESEwoLR09ORUFLQkRHRUsYCCABKA0S",
+            "EwoLS0JHRENFSElGRkoYDCADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyGamePlayStartCsReq), global::EggLink.DanhengServer.Proto.TrainPartyGamePlayStartCsReq.Parser, new[]{ "TeamId", "PassengerList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyGamePlayStartCsReq), global::EggLink.DanhengServer.Proto.TrainPartyGamePlayStartCsReq.Parser, new[]{ "GONEAKBDGEK", "KBGDCEHIFFJ" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainPartyGamePlayStartCsReq(TrainPartyGamePlayStartCsReq other) : this() {
-      teamId_ = other.teamId_;
-      passengerList_ = other.passengerList_.Clone();
+      gONEAKBDGEK_ = other.gONEAKBDGEK_;
+      kBGDCEHIFFJ_ = other.kBGDCEHIFFJ_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,27 +84,27 @@ namespace EggLink.DanhengServer.Proto {
       return new TrainPartyGamePlayStartCsReq(this);
     }
 
-    /// <summary>Field number for the "team_id" field.</summary>
-    public const int TeamIdFieldNumber = 12;
-    private uint teamId_;
+    /// <summary>Field number for the "GONEAKBDGEK" field.</summary>
+    public const int GONEAKBDGEKFieldNumber = 8;
+    private uint gONEAKBDGEK_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TeamId {
-      get { return teamId_; }
+    public uint GONEAKBDGEK {
+      get { return gONEAKBDGEK_; }
       set {
-        teamId_ = value;
+        gONEAKBDGEK_ = value;
       }
     }
 
-    /// <summary>Field number for the "passenger_list" field.</summary>
-    public const int PassengerListFieldNumber = 11;
-    private static readonly pb::FieldCodec<uint> _repeated_passengerList_codec
-        = pb::FieldCodec.ForUInt32(90);
-    private readonly pbc::RepeatedField<uint> passengerList_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "KBGDCEHIFFJ" field.</summary>
+    public const int KBGDCEHIFFJFieldNumber = 12;
+    private static readonly pb::FieldCodec<uint> _repeated_kBGDCEHIFFJ_codec
+        = pb::FieldCodec.ForUInt32(98);
+    private readonly pbc::RepeatedField<uint> kBGDCEHIFFJ_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> PassengerList {
-      get { return passengerList_; }
+    public pbc::RepeatedField<uint> KBGDCEHIFFJ {
+      get { return kBGDCEHIFFJ_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (TeamId != other.TeamId) return false;
-      if(!passengerList_.Equals(other.passengerList_)) return false;
+      if (GONEAKBDGEK != other.GONEAKBDGEK) return false;
+      if(!kBGDCEHIFFJ_.Equals(other.kBGDCEHIFFJ_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (TeamId != 0) hash ^= TeamId.GetHashCode();
-      hash ^= passengerList_.GetHashCode();
+      if (GONEAKBDGEK != 0) hash ^= GONEAKBDGEK.GetHashCode();
+      hash ^= kBGDCEHIFFJ_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      passengerList_.WriteTo(output, _repeated_passengerList_codec);
-      if (TeamId != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(TeamId);
+      if (GONEAKBDGEK != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(GONEAKBDGEK);
       }
+      kBGDCEHIFFJ_.WriteTo(output, _repeated_kBGDCEHIFFJ_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      passengerList_.WriteTo(ref output, _repeated_passengerList_codec);
-      if (TeamId != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(TeamId);
+      if (GONEAKBDGEK != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(GONEAKBDGEK);
       }
+      kBGDCEHIFFJ_.WriteTo(ref output, _repeated_kBGDCEHIFFJ_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -181,10 +181,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (TeamId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TeamId);
+      if (GONEAKBDGEK != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GONEAKBDGEK);
       }
-      size += passengerList_.CalculateSize(_repeated_passengerList_codec);
+      size += kBGDCEHIFFJ_.CalculateSize(_repeated_kBGDCEHIFFJ_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -197,10 +197,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.TeamId != 0) {
-        TeamId = other.TeamId;
+      if (other.GONEAKBDGEK != 0) {
+        GONEAKBDGEK = other.GONEAKBDGEK;
       }
-      passengerList_.Add(other.passengerList_);
+      kBGDCEHIFFJ_.Add(other.kBGDCEHIFFJ_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 90:
-          case 88: {
-            passengerList_.AddEntriesFrom(input, _repeated_passengerList_codec);
+          case 64: {
+            GONEAKBDGEK = input.ReadUInt32();
             break;
           }
+          case 98:
           case 96: {
-            TeamId = input.ReadUInt32();
+            kBGDCEHIFFJ_.AddEntriesFrom(input, _repeated_kBGDCEHIFFJ_codec);
             break;
           }
         }
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 90:
-          case 88: {
-            passengerList_.AddEntriesFrom(ref input, _repeated_passengerList_codec);
+          case 64: {
+            GONEAKBDGEK = input.ReadUInt32();
             break;
           }
+          case 98:
           case 96: {
-            TeamId = input.ReadUInt32();
+            kBGDCEHIFFJ_.AddEntriesFrom(ref input, _repeated_kBGDCEHIFFJ_codec);
             break;
           }
         }

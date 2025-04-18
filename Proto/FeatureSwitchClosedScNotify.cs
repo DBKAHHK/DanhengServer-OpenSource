@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFGZWF0dXJlU3dpdGNoQ2xvc2VkU2NOb3RpZnkucHJvdG8aF0ZlYXR1cmVT",
             "d2l0Y2hUeXBlLnByb3RvIkYKG0ZlYXR1cmVTd2l0Y2hDbG9zZWRTY05vdGlm",
-            "eRInCgtLSU1OS0ZQRkJERxgJIAEoDjISLkZlYXR1cmVTd2l0Y2hUeXBlQh6q",
+            "eRInCgtLSU1OS0ZQRkJERxgOIAEoDjISLkZlYXR1cmVTd2l0Y2hUeXBlQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FeatureSwitchTypeReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "KIMNKFPFBDG" field.</summary>
-    public const int KIMNKFPFBDGFieldNumber = 9;
+    public const int KIMNKFPFBDGFieldNumber = 14;
     private global::EggLink.DanhengServer.Proto.FeatureSwitchType kIMNKFPFBDG_ = global::EggLink.DanhengServer.Proto.FeatureSwitchType.FeatureSwitchNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (KIMNKFPFBDG != global::EggLink.DanhengServer.Proto.FeatureSwitchType.FeatureSwitchNone) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(112);
         output.WriteEnum((int) KIMNKFPFBDG);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (KIMNKFPFBDG != global::EggLink.DanhengServer.Proto.FeatureSwitchType.FeatureSwitchNone) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(112);
         output.WriteEnum((int) KIMNKFPFBDG);
       }
       if (_unknownFields != null) {
@@ -198,7 +198,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
+          case 112: {
             KIMNKFPFBDG = (global::EggLink.DanhengServer.Proto.FeatureSwitchType) input.ReadEnum();
             break;
           }
@@ -217,7 +217,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
+          case 112: {
             KIMNKFPFBDG = (global::EggLink.DanhengServer.Proto.FeatureSwitchType) input.ReadEnum();
             break;
           }

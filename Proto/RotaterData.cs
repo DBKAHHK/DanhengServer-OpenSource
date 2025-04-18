@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFSb3RhdGVyRGF0YS5wcm90byJJCgtSb3RhdGVyRGF0YRITCgtHTEhBR0pH",
-            "QUVIRRgLIAEoDRITCgtMS0VGT0xDR0ZHRBgIIAEoAhIQCghncm91cF9pZBgC",
-            "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "QUVIRRgEIAEoDRIQCghncm91cF9pZBgPIAEoDRITCgtMS0VGT0xDR0ZHRBgF",
+            "IAEoAkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RotaterData), global::EggLink.DanhengServer.Proto.RotaterData.Parser, new[]{ "GLHAGJGAEHE", "LKEFOLCGFGD", "GroupId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RotaterData), global::EggLink.DanhengServer.Proto.RotaterData.Parser, new[]{ "GLHAGJGAEHE", "GroupId", "LKEFOLCGFGD" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RotaterData(RotaterData other) : this() {
       gLHAGJGAEHE_ = other.gLHAGJGAEHE_;
-      lKEFOLCGFGD_ = other.lKEFOLCGFGD_;
       groupId_ = other.groupId_;
+      lKEFOLCGFGD_ = other.lKEFOLCGFGD_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "GLHAGJGAEHE" field.</summary>
-    public const int GLHAGJGAEHEFieldNumber = 11;
+    public const int GLHAGJGAEHEFieldNumber = 4;
     private uint gLHAGJGAEHE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,20 +96,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "LKEFOLCGFGD" field.</summary>
-    public const int LKEFOLCGFGDFieldNumber = 8;
-    private float lKEFOLCGFGD_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float LKEFOLCGFGD {
-      get { return lKEFOLCGFGD_; }
-      set {
-        lKEFOLCGFGD_ = value;
-      }
-    }
-
     /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 2;
+    public const int GroupIdFieldNumber = 15;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -117,6 +105,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return groupId_; }
       set {
         groupId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "LKEFOLCGFGD" field.</summary>
+    public const int LKEFOLCGFGDFieldNumber = 5;
+    private float lKEFOLCGFGD_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float LKEFOLCGFGD {
+      get { return lKEFOLCGFGD_; }
+      set {
+        lKEFOLCGFGD_ = value;
       }
     }
 
@@ -136,8 +136,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (GLHAGJGAEHE != other.GLHAGJGAEHE) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(LKEFOLCGFGD, other.LKEFOLCGFGD)) return false;
       if (GroupId != other.GroupId) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(LKEFOLCGFGD, other.LKEFOLCGFGD)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,8 +146,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (GLHAGJGAEHE != 0) hash ^= GLHAGJGAEHE.GetHashCode();
-      if (LKEFOLCGFGD != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(LKEFOLCGFGD);
       if (GroupId != 0) hash ^= GroupId.GetHashCode();
+      if (LKEFOLCGFGD != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(LKEFOLCGFGD);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,17 +166,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (GroupId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(GroupId);
+      if (GLHAGJGAEHE != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(GLHAGJGAEHE);
       }
       if (LKEFOLCGFGD != 0F) {
-        output.WriteRawTag(69);
+        output.WriteRawTag(45);
         output.WriteFloat(LKEFOLCGFGD);
       }
-      if (GLHAGJGAEHE != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(GLHAGJGAEHE);
+      if (GroupId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(GroupId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -188,17 +188,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (GroupId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(GroupId);
+      if (GLHAGJGAEHE != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(GLHAGJGAEHE);
       }
       if (LKEFOLCGFGD != 0F) {
-        output.WriteRawTag(69);
+        output.WriteRawTag(45);
         output.WriteFloat(LKEFOLCGFGD);
       }
-      if (GLHAGJGAEHE != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(GLHAGJGAEHE);
+      if (GroupId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(GroupId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -213,11 +213,11 @@ namespace EggLink.DanhengServer.Proto {
       if (GLHAGJGAEHE != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GLHAGJGAEHE);
       }
-      if (LKEFOLCGFGD != 0F) {
-        size += 1 + 4;
-      }
       if (GroupId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
+      }
+      if (LKEFOLCGFGD != 0F) {
+        size += 1 + 4;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -234,11 +234,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.GLHAGJGAEHE != 0) {
         GLHAGJGAEHE = other.GLHAGJGAEHE;
       }
-      if (other.LKEFOLCGFGD != 0F) {
-        LKEFOLCGFGD = other.LKEFOLCGFGD;
-      }
       if (other.GroupId != 0) {
         GroupId = other.GroupId;
+      }
+      if (other.LKEFOLCGFGD != 0F) {
+        LKEFOLCGFGD = other.LKEFOLCGFGD;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            GroupId = input.ReadUInt32();
+          case 32: {
+            GLHAGJGAEHE = input.ReadUInt32();
             break;
           }
-          case 69: {
+          case 45: {
             LKEFOLCGFGD = input.ReadFloat();
             break;
           }
-          case 88: {
-            GLHAGJGAEHE = input.ReadUInt32();
+          case 120: {
+            GroupId = input.ReadUInt32();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            GroupId = input.ReadUInt32();
+          case 32: {
+            GLHAGJGAEHE = input.ReadUInt32();
             break;
           }
-          case 69: {
+          case 45: {
             LKEFOLCGFGD = input.ReadFloat();
             break;
           }
-          case 88: {
-            GLHAGJGAEHE = input.ReadUInt32();
+          case 120: {
+            GroupId = input.ReadUInt32();
             break;
           }
         }

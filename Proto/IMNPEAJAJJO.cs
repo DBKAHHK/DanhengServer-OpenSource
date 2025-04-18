@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static IMNPEAJAJJOReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFJTU5QRUFKQUpKTy5wcm90byLQAQoLSU1OUEVBSkFKSk8SEwoLRkZNREJE",
-            "RUhIRUcYCSABKA0SEwoLT0JMSEJPRU9MQUYYAyADKA0SEwoLRU1MTEVDR0VQ",
-            "Q0sYBSADKA0SIAoYY2hlc3Nfcm9ndWVfc3ViX3N0b3J5X2lkGAQgASgNEhMK",
-            "C0lMTU9PS0JKSEhDGAYgAygNEhMKC0ZKS0dLQUVLQktKGAogASgIEhMKC0ZG",
-            "SEVFSURCSEVBGAwgASgIEiEKGWNoZXNzX3JvZ3VlX21haW5fc3RvcnlfaWQY",
-            "DyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChFJTU5QRUFKQUpKTy5wcm90byLQAQoLSU1OUEVBSkFKSk8SEwoLRU1MTEVD",
+            "R0VQQ0sYAiADKA0SEwoLT0JMSEJPRU9MQUYYBCADKA0SIAoYY2hlc3Nfcm9n",
+            "dWVfc3ViX3N0b3J5X2lkGA0gASgNEiEKGWNoZXNzX3JvZ3VlX21haW5fc3Rv",
+            "cnlfaWQYBSABKA0SEwoLRkpLR0tBRUtCS0oYCCABKAgSEwoLRkZNREJERUhI",
+            "RUcYCyABKA0SEwoLSUxNT09LQkpISEMYByADKA0SEwoLRkZIRUVJREJIRUEY",
+            "AyABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.IMNPEAJAJJO), global::EggLink.DanhengServer.Proto.IMNPEAJAJJO.Parser, new[]{ "FFMDBDEHHEG", "OBLHBOEOLAF", "EMLLECGEPCK", "ChessRogueSubStoryId", "ILMOOKBJHHC", "FJKGKAEKBKJ", "FFHEEIDBHEA", "ChessRogueMainStoryId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.IMNPEAJAJJO), global::EggLink.DanhengServer.Proto.IMNPEAJAJJO.Parser, new[]{ "EMLLECGEPCK", "OBLHBOEOLAF", "ChessRogueSubStoryId", "ChessRogueMainStoryId", "FJKGKAEKBKJ", "FFMDBDEHHEG", "ILMOOKBJHHC", "FFHEEIDBHEA" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,14 +75,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IMNPEAJAJJO(IMNPEAJAJJO other) : this() {
-      fFMDBDEHHEG_ = other.fFMDBDEHHEG_;
-      oBLHBOEOLAF_ = other.oBLHBOEOLAF_.Clone();
       eMLLECGEPCK_ = other.eMLLECGEPCK_.Clone();
+      oBLHBOEOLAF_ = other.oBLHBOEOLAF_.Clone();
       chessRogueSubStoryId_ = other.chessRogueSubStoryId_;
-      iLMOOKBJHHC_ = other.iLMOOKBJHHC_.Clone();
-      fJKGKAEKBKJ_ = other.fJKGKAEKBKJ_;
-      fFHEEIDBHEA_ = other.fFHEEIDBHEA_;
       chessRogueMainStoryId_ = other.chessRogueMainStoryId_;
+      fJKGKAEKBKJ_ = other.fJKGKAEKBKJ_;
+      fFMDBDEHHEG_ = other.fFMDBDEHHEG_;
+      iLMOOKBJHHC_ = other.iLMOOKBJHHC_.Clone();
+      fFHEEIDBHEA_ = other.fFHEEIDBHEA_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -92,33 +92,10 @@ namespace EggLink.DanhengServer.Proto {
       return new IMNPEAJAJJO(this);
     }
 
-    /// <summary>Field number for the "FFMDBDEHHEG" field.</summary>
-    public const int FFMDBDEHHEGFieldNumber = 9;
-    private uint fFMDBDEHHEG_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FFMDBDEHHEG {
-      get { return fFMDBDEHHEG_; }
-      set {
-        fFMDBDEHHEG_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "OBLHBOEOLAF" field.</summary>
-    public const int OBLHBOEOLAFFieldNumber = 3;
-    private static readonly pb::FieldCodec<uint> _repeated_oBLHBOEOLAF_codec
-        = pb::FieldCodec.ForUInt32(26);
-    private readonly pbc::RepeatedField<uint> oBLHBOEOLAF_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> OBLHBOEOLAF {
-      get { return oBLHBOEOLAF_; }
-    }
-
     /// <summary>Field number for the "EMLLECGEPCK" field.</summary>
-    public const int EMLLECGEPCKFieldNumber = 5;
+    public const int EMLLECGEPCKFieldNumber = 2;
     private static readonly pb::FieldCodec<uint> _repeated_eMLLECGEPCK_codec
-        = pb::FieldCodec.ForUInt32(42);
+        = pb::FieldCodec.ForUInt32(18);
     private readonly pbc::RepeatedField<uint> eMLLECGEPCK_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -126,8 +103,19 @@ namespace EggLink.DanhengServer.Proto {
       get { return eMLLECGEPCK_; }
     }
 
+    /// <summary>Field number for the "OBLHBOEOLAF" field.</summary>
+    public const int OBLHBOEOLAFFieldNumber = 4;
+    private static readonly pb::FieldCodec<uint> _repeated_oBLHBOEOLAF_codec
+        = pb::FieldCodec.ForUInt32(34);
+    private readonly pbc::RepeatedField<uint> oBLHBOEOLAF_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> OBLHBOEOLAF {
+      get { return oBLHBOEOLAF_; }
+    }
+
     /// <summary>Field number for the "chess_rogue_sub_story_id" field.</summary>
-    public const int ChessRogueSubStoryIdFieldNumber = 4;
+    public const int ChessRogueSubStoryIdFieldNumber = 13;
     private uint chessRogueSubStoryId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,19 +126,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ILMOOKBJHHC" field.</summary>
-    public const int ILMOOKBJHHCFieldNumber = 6;
-    private static readonly pb::FieldCodec<uint> _repeated_iLMOOKBJHHC_codec
-        = pb::FieldCodec.ForUInt32(50);
-    private readonly pbc::RepeatedField<uint> iLMOOKBJHHC_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "chess_rogue_main_story_id" field.</summary>
+    public const int ChessRogueMainStoryIdFieldNumber = 5;
+    private uint chessRogueMainStoryId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> ILMOOKBJHHC {
-      get { return iLMOOKBJHHC_; }
+    public uint ChessRogueMainStoryId {
+      get { return chessRogueMainStoryId_; }
+      set {
+        chessRogueMainStoryId_ = value;
+      }
     }
 
     /// <summary>Field number for the "FJKGKAEKBKJ" field.</summary>
-    public const int FJKGKAEKBKJFieldNumber = 10;
+    public const int FJKGKAEKBKJFieldNumber = 8;
     private bool fJKGKAEKBKJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -161,8 +150,31 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "FFMDBDEHHEG" field.</summary>
+    public const int FFMDBDEHHEGFieldNumber = 11;
+    private uint fFMDBDEHHEG_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint FFMDBDEHHEG {
+      get { return fFMDBDEHHEG_; }
+      set {
+        fFMDBDEHHEG_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ILMOOKBJHHC" field.</summary>
+    public const int ILMOOKBJHHCFieldNumber = 7;
+    private static readonly pb::FieldCodec<uint> _repeated_iLMOOKBJHHC_codec
+        = pb::FieldCodec.ForUInt32(58);
+    private readonly pbc::RepeatedField<uint> iLMOOKBJHHC_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> ILMOOKBJHHC {
+      get { return iLMOOKBJHHC_; }
+    }
+
     /// <summary>Field number for the "FFHEEIDBHEA" field.</summary>
-    public const int FFHEEIDBHEAFieldNumber = 12;
+    public const int FFHEEIDBHEAFieldNumber = 3;
     private bool fFHEEIDBHEA_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -170,18 +182,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return fFHEEIDBHEA_; }
       set {
         fFHEEIDBHEA_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "chess_rogue_main_story_id" field.</summary>
-    public const int ChessRogueMainStoryIdFieldNumber = 15;
-    private uint chessRogueMainStoryId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ChessRogueMainStoryId {
-      get { return chessRogueMainStoryId_; }
-      set {
-        chessRogueMainStoryId_ = value;
       }
     }
 
@@ -200,14 +200,14 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FFMDBDEHHEG != other.FFMDBDEHHEG) return false;
-      if(!oBLHBOEOLAF_.Equals(other.oBLHBOEOLAF_)) return false;
       if(!eMLLECGEPCK_.Equals(other.eMLLECGEPCK_)) return false;
+      if(!oBLHBOEOLAF_.Equals(other.oBLHBOEOLAF_)) return false;
       if (ChessRogueSubStoryId != other.ChessRogueSubStoryId) return false;
-      if(!iLMOOKBJHHC_.Equals(other.iLMOOKBJHHC_)) return false;
-      if (FJKGKAEKBKJ != other.FJKGKAEKBKJ) return false;
-      if (FFHEEIDBHEA != other.FFHEEIDBHEA) return false;
       if (ChessRogueMainStoryId != other.ChessRogueMainStoryId) return false;
+      if (FJKGKAEKBKJ != other.FJKGKAEKBKJ) return false;
+      if (FFMDBDEHHEG != other.FFMDBDEHHEG) return false;
+      if(!iLMOOKBJHHC_.Equals(other.iLMOOKBJHHC_)) return false;
+      if (FFHEEIDBHEA != other.FFHEEIDBHEA) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -215,14 +215,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (FFMDBDEHHEG != 0) hash ^= FFMDBDEHHEG.GetHashCode();
-      hash ^= oBLHBOEOLAF_.GetHashCode();
       hash ^= eMLLECGEPCK_.GetHashCode();
+      hash ^= oBLHBOEOLAF_.GetHashCode();
       if (ChessRogueSubStoryId != 0) hash ^= ChessRogueSubStoryId.GetHashCode();
-      hash ^= iLMOOKBJHHC_.GetHashCode();
-      if (FJKGKAEKBKJ != false) hash ^= FJKGKAEKBKJ.GetHashCode();
-      if (FFHEEIDBHEA != false) hash ^= FFHEEIDBHEA.GetHashCode();
       if (ChessRogueMainStoryId != 0) hash ^= ChessRogueMainStoryId.GetHashCode();
+      if (FJKGKAEKBKJ != false) hash ^= FJKGKAEKBKJ.GetHashCode();
+      if (FFMDBDEHHEG != 0) hash ^= FFMDBDEHHEG.GetHashCode();
+      hash ^= iLMOOKBJHHC_.GetHashCode();
+      if (FFHEEIDBHEA != false) hash ^= FFHEEIDBHEA.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -241,28 +241,28 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      oBLHBOEOLAF_.WriteTo(output, _repeated_oBLHBOEOLAF_codec);
-      if (ChessRogueSubStoryId != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(ChessRogueSubStoryId);
-      }
       eMLLECGEPCK_.WriteTo(output, _repeated_eMLLECGEPCK_codec);
-      iLMOOKBJHHC_.WriteTo(output, _repeated_iLMOOKBJHHC_codec);
-      if (FFMDBDEHHEG != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(FFMDBDEHHEG);
-      }
-      if (FJKGKAEKBKJ != false) {
-        output.WriteRawTag(80);
-        output.WriteBool(FJKGKAEKBKJ);
-      }
       if (FFHEEIDBHEA != false) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(24);
         output.WriteBool(FFHEEIDBHEA);
       }
+      oBLHBOEOLAF_.WriteTo(output, _repeated_oBLHBOEOLAF_codec);
       if (ChessRogueMainStoryId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(40);
         output.WriteUInt32(ChessRogueMainStoryId);
+      }
+      iLMOOKBJHHC_.WriteTo(output, _repeated_iLMOOKBJHHC_codec);
+      if (FJKGKAEKBKJ != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(FJKGKAEKBKJ);
+      }
+      if (FFMDBDEHHEG != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(FFMDBDEHHEG);
+      }
+      if (ChessRogueSubStoryId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(ChessRogueSubStoryId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -274,28 +274,28 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      oBLHBOEOLAF_.WriteTo(ref output, _repeated_oBLHBOEOLAF_codec);
-      if (ChessRogueSubStoryId != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(ChessRogueSubStoryId);
-      }
       eMLLECGEPCK_.WriteTo(ref output, _repeated_eMLLECGEPCK_codec);
-      iLMOOKBJHHC_.WriteTo(ref output, _repeated_iLMOOKBJHHC_codec);
-      if (FFMDBDEHHEG != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(FFMDBDEHHEG);
-      }
-      if (FJKGKAEKBKJ != false) {
-        output.WriteRawTag(80);
-        output.WriteBool(FJKGKAEKBKJ);
-      }
       if (FFHEEIDBHEA != false) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(24);
         output.WriteBool(FFHEEIDBHEA);
       }
+      oBLHBOEOLAF_.WriteTo(ref output, _repeated_oBLHBOEOLAF_codec);
       if (ChessRogueMainStoryId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(40);
         output.WriteUInt32(ChessRogueMainStoryId);
+      }
+      iLMOOKBJHHC_.WriteTo(ref output, _repeated_iLMOOKBJHHC_codec);
+      if (FJKGKAEKBKJ != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(FJKGKAEKBKJ);
+      }
+      if (FFMDBDEHHEG != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(FFMDBDEHHEG);
+      }
+      if (ChessRogueSubStoryId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(ChessRogueSubStoryId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -307,23 +307,23 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (FFMDBDEHHEG != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FFMDBDEHHEG);
-      }
-      size += oBLHBOEOLAF_.CalculateSize(_repeated_oBLHBOEOLAF_codec);
       size += eMLLECGEPCK_.CalculateSize(_repeated_eMLLECGEPCK_codec);
+      size += oBLHBOEOLAF_.CalculateSize(_repeated_oBLHBOEOLAF_codec);
       if (ChessRogueSubStoryId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChessRogueSubStoryId);
       }
-      size += iLMOOKBJHHC_.CalculateSize(_repeated_iLMOOKBJHHC_codec);
+      if (ChessRogueMainStoryId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChessRogueMainStoryId);
+      }
       if (FJKGKAEKBKJ != false) {
         size += 1 + 1;
       }
+      if (FFMDBDEHHEG != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FFMDBDEHHEG);
+      }
+      size += iLMOOKBJHHC_.CalculateSize(_repeated_iLMOOKBJHHC_codec);
       if (FFHEEIDBHEA != false) {
         size += 1 + 1;
-      }
-      if (ChessRogueMainStoryId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChessRogueMainStoryId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -337,23 +337,23 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.FFMDBDEHHEG != 0) {
-        FFMDBDEHHEG = other.FFMDBDEHHEG;
-      }
-      oBLHBOEOLAF_.Add(other.oBLHBOEOLAF_);
       eMLLECGEPCK_.Add(other.eMLLECGEPCK_);
+      oBLHBOEOLAF_.Add(other.oBLHBOEOLAF_);
       if (other.ChessRogueSubStoryId != 0) {
         ChessRogueSubStoryId = other.ChessRogueSubStoryId;
       }
-      iLMOOKBJHHC_.Add(other.iLMOOKBJHHC_);
+      if (other.ChessRogueMainStoryId != 0) {
+        ChessRogueMainStoryId = other.ChessRogueMainStoryId;
+      }
       if (other.FJKGKAEKBKJ != false) {
         FJKGKAEKBKJ = other.FJKGKAEKBKJ;
       }
+      if (other.FFMDBDEHHEG != 0) {
+        FFMDBDEHHEG = other.FFMDBDEHHEG;
+      }
+      iLMOOKBJHHC_.Add(other.iLMOOKBJHHC_);
       if (other.FFHEEIDBHEA != false) {
         FFHEEIDBHEA = other.FFHEEIDBHEA;
-      }
-      if (other.ChessRogueMainStoryId != 0) {
-        ChessRogueMainStoryId = other.ChessRogueMainStoryId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -370,39 +370,39 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26:
-          case 24: {
-            oBLHBOEOLAF_.AddEntriesFrom(input, _repeated_oBLHBOEOLAF_codec);
-            break;
-          }
-          case 32: {
-            ChessRogueSubStoryId = input.ReadUInt32();
-            break;
-          }
-          case 42:
-          case 40: {
+          case 18:
+          case 16: {
             eMLLECGEPCK_.AddEntriesFrom(input, _repeated_eMLLECGEPCK_codec);
             break;
           }
-          case 50:
-          case 48: {
-            iLMOOKBJHHC_.AddEntriesFrom(input, _repeated_iLMOOKBJHHC_codec);
-            break;
-          }
-          case 72: {
-            FFMDBDEHHEG = input.ReadUInt32();
-            break;
-          }
-          case 80: {
-            FJKGKAEKBKJ = input.ReadBool();
-            break;
-          }
-          case 96: {
+          case 24: {
             FFHEEIDBHEA = input.ReadBool();
             break;
           }
-          case 120: {
+          case 34:
+          case 32: {
+            oBLHBOEOLAF_.AddEntriesFrom(input, _repeated_oBLHBOEOLAF_codec);
+            break;
+          }
+          case 40: {
             ChessRogueMainStoryId = input.ReadUInt32();
+            break;
+          }
+          case 58:
+          case 56: {
+            iLMOOKBJHHC_.AddEntriesFrom(input, _repeated_iLMOOKBJHHC_codec);
+            break;
+          }
+          case 64: {
+            FJKGKAEKBKJ = input.ReadBool();
+            break;
+          }
+          case 88: {
+            FFMDBDEHHEG = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            ChessRogueSubStoryId = input.ReadUInt32();
             break;
           }
         }
@@ -420,39 +420,39 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26:
-          case 24: {
-            oBLHBOEOLAF_.AddEntriesFrom(ref input, _repeated_oBLHBOEOLAF_codec);
-            break;
-          }
-          case 32: {
-            ChessRogueSubStoryId = input.ReadUInt32();
-            break;
-          }
-          case 42:
-          case 40: {
+          case 18:
+          case 16: {
             eMLLECGEPCK_.AddEntriesFrom(ref input, _repeated_eMLLECGEPCK_codec);
             break;
           }
-          case 50:
-          case 48: {
-            iLMOOKBJHHC_.AddEntriesFrom(ref input, _repeated_iLMOOKBJHHC_codec);
-            break;
-          }
-          case 72: {
-            FFMDBDEHHEG = input.ReadUInt32();
-            break;
-          }
-          case 80: {
-            FJKGKAEKBKJ = input.ReadBool();
-            break;
-          }
-          case 96: {
+          case 24: {
             FFHEEIDBHEA = input.ReadBool();
             break;
           }
-          case 120: {
+          case 34:
+          case 32: {
+            oBLHBOEOLAF_.AddEntriesFrom(ref input, _repeated_oBLHBOEOLAF_codec);
+            break;
+          }
+          case 40: {
             ChessRogueMainStoryId = input.ReadUInt32();
+            break;
+          }
+          case 58:
+          case 56: {
+            iLMOOKBJHHC_.AddEntriesFrom(ref input, _repeated_iLMOOKBJHHC_codec);
+            break;
+          }
+          case 64: {
+            FJKGKAEKBKJ = input.ReadBool();
+            break;
+          }
+          case 88: {
+            FFMDBDEHHEG = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            ChessRogueSubStoryId = input.ReadUInt32();
             break;
           }
         }

@@ -26,16 +26,16 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChhSZXBsYWNlTGluZXVwQ3NSZXEucHJvdG8aFUV4dHJhTGluZXVwVHlwZS5w",
             "cm90bxoUTGluZXVwU2xvdERhdGEucHJvdG8i0gEKElJlcGxhY2VMaW5ldXBD",
-            "c1JlcRIpChBsaW5ldXBfc2xvdF9saXN0GAwgAygLMg8uTGluZXVwU2xvdERh",
-            "dGESGgoSZ2FtZV9zdG9yeV9saW5lX2lkGAUgASgNEhAKCHBsYW5lX2lkGAkg",
-            "ASgNEhIKCmlzX3ZpcnR1YWwYCyABKAgSDQoFaW5kZXgYCCABKA0SKwoRZXh0",
-            "cmFfbGluZXVwX3R5cGUYASABKA4yEC5FeHRyYUxpbmV1cFR5cGUSEwoLbGVh",
-            "ZGVyX3Nsb3QYAiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "c1JlcRIrChFleHRyYV9saW5ldXBfdHlwZRgDIAEoDjIQLkV4dHJhTGluZXVw",
+            "VHlwZRITCgtsZWFkZXJfc2xvdBgIIAEoDRINCgVpbmRleBgEIAEoDRIpChBs",
+            "aW5ldXBfc2xvdF9saXN0GAwgAygLMg8uTGluZXVwU2xvdERhdGESEAoIcGxh",
+            "bmVfaWQYCyABKA0SEgoKaXNfdmlydHVhbBgJIAEoCBIaChJnYW1lX3N0b3J5",
+            "X2xpbmVfaWQYBSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ExtraLineupTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LineupSlotDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ReplaceLineupCsReq), global::EggLink.DanhengServer.Proto.ReplaceLineupCsReq.Parser, new[]{ "LineupSlotList", "GameStoryLineId", "PlaneId", "IsVirtual", "Index", "ExtraLineupType", "LeaderSlot" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ReplaceLineupCsReq), global::EggLink.DanhengServer.Proto.ReplaceLineupCsReq.Parser, new[]{ "ExtraLineupType", "LeaderSlot", "Index", "LineupSlotList", "PlaneId", "IsVirtual", "GameStoryLineId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,13 +77,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReplaceLineupCsReq(ReplaceLineupCsReq other) : this() {
-      lineupSlotList_ = other.lineupSlotList_.Clone();
-      gameStoryLineId_ = other.gameStoryLineId_;
-      planeId_ = other.planeId_;
-      isVirtual_ = other.isVirtual_;
-      index_ = other.index_;
       extraLineupType_ = other.extraLineupType_;
       leaderSlot_ = other.leaderSlot_;
+      index_ = other.index_;
+      lineupSlotList_ = other.lineupSlotList_.Clone();
+      planeId_ = other.planeId_;
+      isVirtual_ = other.isVirtual_;
+      gameStoryLineId_ = other.gameStoryLineId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -91,6 +91,42 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReplaceLineupCsReq Clone() {
       return new ReplaceLineupCsReq(this);
+    }
+
+    /// <summary>Field number for the "extra_lineup_type" field.</summary>
+    public const int ExtraLineupTypeFieldNumber = 3;
+    private global::EggLink.DanhengServer.Proto.ExtraLineupType extraLineupType_ = global::EggLink.DanhengServer.Proto.ExtraLineupType.LineupNone;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ExtraLineupType ExtraLineupType {
+      get { return extraLineupType_; }
+      set {
+        extraLineupType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "leader_slot" field.</summary>
+    public const int LeaderSlotFieldNumber = 8;
+    private uint leaderSlot_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint LeaderSlot {
+      get { return leaderSlot_; }
+      set {
+        leaderSlot_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "index" field.</summary>
+    public const int IndexFieldNumber = 4;
+    private uint index_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Index {
+      get { return index_; }
+      set {
+        index_ = value;
+      }
     }
 
     /// <summary>Field number for the "lineup_slot_list" field.</summary>
@@ -104,20 +140,8 @@ namespace EggLink.DanhengServer.Proto {
       get { return lineupSlotList_; }
     }
 
-    /// <summary>Field number for the "game_story_line_id" field.</summary>
-    public const int GameStoryLineIdFieldNumber = 5;
-    private uint gameStoryLineId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GameStoryLineId {
-      get { return gameStoryLineId_; }
-      set {
-        gameStoryLineId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "plane_id" field.</summary>
-    public const int PlaneIdFieldNumber = 9;
+    public const int PlaneIdFieldNumber = 11;
     private uint planeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -129,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_virtual" field.</summary>
-    public const int IsVirtualFieldNumber = 11;
+    public const int IsVirtualFieldNumber = 9;
     private bool isVirtual_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -140,39 +164,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "index" field.</summary>
-    public const int IndexFieldNumber = 8;
-    private uint index_;
+    /// <summary>Field number for the "game_story_line_id" field.</summary>
+    public const int GameStoryLineIdFieldNumber = 5;
+    private uint gameStoryLineId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Index {
-      get { return index_; }
+    public uint GameStoryLineId {
+      get { return gameStoryLineId_; }
       set {
-        index_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "extra_lineup_type" field.</summary>
-    public const int ExtraLineupTypeFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.ExtraLineupType extraLineupType_ = global::EggLink.DanhengServer.Proto.ExtraLineupType.LineupNone;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ExtraLineupType ExtraLineupType {
-      get { return extraLineupType_; }
-      set {
-        extraLineupType_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "leader_slot" field.</summary>
-    public const int LeaderSlotFieldNumber = 2;
-    private uint leaderSlot_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LeaderSlot {
-      get { return leaderSlot_; }
-      set {
-        leaderSlot_ = value;
+        gameStoryLineId_ = value;
       }
     }
 
@@ -191,13 +191,13 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!lineupSlotList_.Equals(other.lineupSlotList_)) return false;
-      if (GameStoryLineId != other.GameStoryLineId) return false;
-      if (PlaneId != other.PlaneId) return false;
-      if (IsVirtual != other.IsVirtual) return false;
-      if (Index != other.Index) return false;
       if (ExtraLineupType != other.ExtraLineupType) return false;
       if (LeaderSlot != other.LeaderSlot) return false;
+      if (Index != other.Index) return false;
+      if(!lineupSlotList_.Equals(other.lineupSlotList_)) return false;
+      if (PlaneId != other.PlaneId) return false;
+      if (IsVirtual != other.IsVirtual) return false;
+      if (GameStoryLineId != other.GameStoryLineId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -205,13 +205,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= lineupSlotList_.GetHashCode();
-      if (GameStoryLineId != 0) hash ^= GameStoryLineId.GetHashCode();
-      if (PlaneId != 0) hash ^= PlaneId.GetHashCode();
-      if (IsVirtual != false) hash ^= IsVirtual.GetHashCode();
-      if (Index != 0) hash ^= Index.GetHashCode();
       if (ExtraLineupType != global::EggLink.DanhengServer.Proto.ExtraLineupType.LineupNone) hash ^= ExtraLineupType.GetHashCode();
       if (LeaderSlot != 0) hash ^= LeaderSlot.GetHashCode();
+      if (Index != 0) hash ^= Index.GetHashCode();
+      hash ^= lineupSlotList_.GetHashCode();
+      if (PlaneId != 0) hash ^= PlaneId.GetHashCode();
+      if (IsVirtual != false) hash ^= IsVirtual.GetHashCode();
+      if (GameStoryLineId != 0) hash ^= GameStoryLineId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -231,28 +231,28 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (ExtraLineupType != global::EggLink.DanhengServer.Proto.ExtraLineupType.LineupNone) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(24);
         output.WriteEnum((int) ExtraLineupType);
       }
-      if (LeaderSlot != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(LeaderSlot);
+      if (Index != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(Index);
       }
       if (GameStoryLineId != 0) {
         output.WriteRawTag(40);
         output.WriteUInt32(GameStoryLineId);
       }
-      if (Index != 0) {
+      if (LeaderSlot != 0) {
         output.WriteRawTag(64);
-        output.WriteUInt32(Index);
-      }
-      if (PlaneId != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(PlaneId);
+        output.WriteUInt32(LeaderSlot);
       }
       if (IsVirtual != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(72);
         output.WriteBool(IsVirtual);
+      }
+      if (PlaneId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(PlaneId);
       }
       lineupSlotList_.WriteTo(output, _repeated_lineupSlotList_codec);
       if (_unknownFields != null) {
@@ -266,28 +266,28 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ExtraLineupType != global::EggLink.DanhengServer.Proto.ExtraLineupType.LineupNone) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(24);
         output.WriteEnum((int) ExtraLineupType);
       }
-      if (LeaderSlot != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(LeaderSlot);
+      if (Index != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(Index);
       }
       if (GameStoryLineId != 0) {
         output.WriteRawTag(40);
         output.WriteUInt32(GameStoryLineId);
       }
-      if (Index != 0) {
+      if (LeaderSlot != 0) {
         output.WriteRawTag(64);
-        output.WriteUInt32(Index);
-      }
-      if (PlaneId != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(PlaneId);
+        output.WriteUInt32(LeaderSlot);
       }
       if (IsVirtual != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(72);
         output.WriteBool(IsVirtual);
+      }
+      if (PlaneId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(PlaneId);
       }
       lineupSlotList_.WriteTo(ref output, _repeated_lineupSlotList_codec);
       if (_unknownFields != null) {
@@ -300,24 +300,24 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += lineupSlotList_.CalculateSize(_repeated_lineupSlotList_codec);
-      if (GameStoryLineId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GameStoryLineId);
+      if (ExtraLineupType != global::EggLink.DanhengServer.Proto.ExtraLineupType.LineupNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExtraLineupType);
       }
+      if (LeaderSlot != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LeaderSlot);
+      }
+      if (Index != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Index);
+      }
+      size += lineupSlotList_.CalculateSize(_repeated_lineupSlotList_codec);
       if (PlaneId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PlaneId);
       }
       if (IsVirtual != false) {
         size += 1 + 1;
       }
-      if (Index != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Index);
-      }
-      if (ExtraLineupType != global::EggLink.DanhengServer.Proto.ExtraLineupType.LineupNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExtraLineupType);
-      }
-      if (LeaderSlot != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LeaderSlot);
+      if (GameStoryLineId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GameStoryLineId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -331,24 +331,24 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      lineupSlotList_.Add(other.lineupSlotList_);
-      if (other.GameStoryLineId != 0) {
-        GameStoryLineId = other.GameStoryLineId;
+      if (other.ExtraLineupType != global::EggLink.DanhengServer.Proto.ExtraLineupType.LineupNone) {
+        ExtraLineupType = other.ExtraLineupType;
       }
+      if (other.LeaderSlot != 0) {
+        LeaderSlot = other.LeaderSlot;
+      }
+      if (other.Index != 0) {
+        Index = other.Index;
+      }
+      lineupSlotList_.Add(other.lineupSlotList_);
       if (other.PlaneId != 0) {
         PlaneId = other.PlaneId;
       }
       if (other.IsVirtual != false) {
         IsVirtual = other.IsVirtual;
       }
-      if (other.Index != 0) {
-        Index = other.Index;
-      }
-      if (other.ExtraLineupType != global::EggLink.DanhengServer.Proto.ExtraLineupType.LineupNone) {
-        ExtraLineupType = other.ExtraLineupType;
-      }
-      if (other.LeaderSlot != 0) {
-        LeaderSlot = other.LeaderSlot;
+      if (other.GameStoryLineId != 0) {
+        GameStoryLineId = other.GameStoryLineId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -365,12 +365,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 24: {
             ExtraLineupType = (global::EggLink.DanhengServer.Proto.ExtraLineupType) input.ReadEnum();
             break;
           }
-          case 16: {
-            LeaderSlot = input.ReadUInt32();
+          case 32: {
+            Index = input.ReadUInt32();
             break;
           }
           case 40: {
@@ -378,15 +378,15 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 64: {
-            Index = input.ReadUInt32();
+            LeaderSlot = input.ReadUInt32();
             break;
           }
           case 72: {
-            PlaneId = input.ReadUInt32();
+            IsVirtual = input.ReadBool();
             break;
           }
           case 88: {
-            IsVirtual = input.ReadBool();
+            PlaneId = input.ReadUInt32();
             break;
           }
           case 98: {
@@ -408,12 +408,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 24: {
             ExtraLineupType = (global::EggLink.DanhengServer.Proto.ExtraLineupType) input.ReadEnum();
             break;
           }
-          case 16: {
-            LeaderSlot = input.ReadUInt32();
+          case 32: {
+            Index = input.ReadUInt32();
             break;
           }
           case 40: {
@@ -421,15 +421,15 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 64: {
-            Index = input.ReadUInt32();
+            LeaderSlot = input.ReadUInt32();
             break;
           }
           case 72: {
-            PlaneId = input.ReadUInt32();
+            IsVirtual = input.ReadBool();
             break;
           }
           case 88: {
-            IsVirtual = input.ReadBool();
+            PlaneId = input.ReadUInt32();
             break;
           }
           case 98: {

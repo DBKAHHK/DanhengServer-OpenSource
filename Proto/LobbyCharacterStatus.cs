@@ -24,14 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static LobbyCharacterStatusReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpMb2JieUNoYXJhY3RlclN0YXR1cy5wcm90byqBAgoUTG9iYnlDaGFyYWN0",
+            "ChpMb2JieUNoYXJhY3RlclN0YXR1cy5wcm90byqrAgoUTG9iYnlDaGFyYWN0",
             "ZXJTdGF0dXMSHQoZTG9iYnlDaGFyYWN0ZXJTdGF0dXNfTm9uZRAAEh0KGUxv",
             "YmJ5Q2hhcmFjdGVyU3RhdHVzX0lkbGUQARIiCh5Mb2JieUNoYXJhY3RlclN0",
             "YXR1c19PcGVyYXRpbmcQAhIeChpMb2JieUNoYXJhY3RlclN0YXR1c19SZWFk",
             "eRADEiEKHUxvYmJ5Q2hhcmFjdGVyU3RhdHVzX0ZpZ2h0aW5nEAQSIQodTG9i",
             "YnlDaGFyYWN0ZXJTdGF0dXNfV2F0Y2hpbmcQBRIhCh1Mb2JieUNoYXJhY3Rl",
-            "clN0YXR1c19NYXRjaGluZxAGQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
-            "UHJvdG9iBnByb3RvMw=="));
+            "clN0YXR1c19NYXRjaGluZxAGEigKJExvYmJ5Q2hhcmFjdGVyU3RhdHVzX0xv",
+            "YmJ5U3RhcnRGaWdodBAHQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
+            "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.LobbyCharacterStatus), }, null, null));
@@ -48,6 +49,7 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("LobbyCharacterStatus_Fighting")] Fighting = 4,
     [pbr::OriginalName("LobbyCharacterStatus_Watching")] Watching = 5,
     [pbr::OriginalName("LobbyCharacterStatus_Matching")] Matching = 6,
+    [pbr::OriginalName("LobbyCharacterStatus_LobbyStartFight")] LobbyStartFight = 7,
   }
 
   #endregion

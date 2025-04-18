@@ -27,5 +27,8 @@ public enum FinishActionTypeEnum
     ActivateAnchor = 22,
     TeleportRotatableRegion = 23,
     ChangeHeroBasicTypeAndSetLeader = 24,
-    UpdateFloorSavedValue = 25
+    UpdateFloorSavedValue = 25,
+    SetGroupProperty = 26,
+    ChangeTrainWorldId = 27,
+    SetRaidValue = 28
 }

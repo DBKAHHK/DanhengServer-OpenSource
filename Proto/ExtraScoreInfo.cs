@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRFeHRyYVNjb3JlSW5mby5wcm90byJaCg5FeHRyYVNjb3JlSW5mbxITCgtH",
-            "UE9ESEhBT0hOUBgOIAEoCBITCgtMRlBDQ1BPTEpQQxgIIAEoDRIMCgR3ZWVr",
-            "GAUgASgNEhAKCGVuZF90aW1lGAwgASgDQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "UE9ESEhBT0hOUBgEIAEoCBIMCgR3ZWVrGAogASgNEhMKC0xGUENDUE9MSlBD",
+            "GAkgASgNEhAKCGVuZF90aW1lGAcgASgDQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ExtraScoreInfo), global::EggLink.DanhengServer.Proto.ExtraScoreInfo.Parser, new[]{ "GPODHHAOHNP", "LFPCCPOLJPC", "Week", "EndTime" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ExtraScoreInfo), global::EggLink.DanhengServer.Proto.ExtraScoreInfo.Parser, new[]{ "GPODHHAOHNP", "Week", "LFPCCPOLJPC", "EndTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExtraScoreInfo(ExtraScoreInfo other) : this() {
       gPODHHAOHNP_ = other.gPODHHAOHNP_;
-      lFPCCPOLJPC_ = other.lFPCCPOLJPC_;
       week_ = other.week_;
+      lFPCCPOLJPC_ = other.lFPCCPOLJPC_;
       endTime_ = other.endTime_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "GPODHHAOHNP" field.</summary>
-    public const int GPODHHAOHNPFieldNumber = 14;
+    public const int GPODHHAOHNPFieldNumber = 4;
     private bool gPODHHAOHNP_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,20 +98,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "LFPCCPOLJPC" field.</summary>
-    public const int LFPCCPOLJPCFieldNumber = 8;
-    private uint lFPCCPOLJPC_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LFPCCPOLJPC {
-      get { return lFPCCPOLJPC_; }
-      set {
-        lFPCCPOLJPC_ = value;
-      }
-    }
-
     /// <summary>Field number for the "week" field.</summary>
-    public const int WeekFieldNumber = 5;
+    public const int WeekFieldNumber = 10;
     private uint week_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,8 +110,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "LFPCCPOLJPC" field.</summary>
+    public const int LFPCCPOLJPCFieldNumber = 9;
+    private uint lFPCCPOLJPC_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint LFPCCPOLJPC {
+      get { return lFPCCPOLJPC_; }
+      set {
+        lFPCCPOLJPC_ = value;
+      }
+    }
+
     /// <summary>Field number for the "end_time" field.</summary>
-    public const int EndTimeFieldNumber = 12;
+    public const int EndTimeFieldNumber = 7;
     private long endTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -150,8 +150,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (GPODHHAOHNP != other.GPODHHAOHNP) return false;
-      if (LFPCCPOLJPC != other.LFPCCPOLJPC) return false;
       if (Week != other.Week) return false;
+      if (LFPCCPOLJPC != other.LFPCCPOLJPC) return false;
       if (EndTime != other.EndTime) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -161,8 +161,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (GPODHHAOHNP != false) hash ^= GPODHHAOHNP.GetHashCode();
-      if (LFPCCPOLJPC != 0) hash ^= LFPCCPOLJPC.GetHashCode();
       if (Week != 0) hash ^= Week.GetHashCode();
+      if (LFPCCPOLJPC != 0) hash ^= LFPCCPOLJPC.GetHashCode();
       if (EndTime != 0L) hash ^= EndTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -182,21 +182,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Week != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(Week);
-      }
-      if (LFPCCPOLJPC != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(LFPCCPOLJPC);
+      if (GPODHHAOHNP != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(GPODHHAOHNP);
       }
       if (EndTime != 0L) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(56);
         output.WriteInt64(EndTime);
       }
-      if (GPODHHAOHNP != false) {
-        output.WriteRawTag(112);
-        output.WriteBool(GPODHHAOHNP);
+      if (LFPCCPOLJPC != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(LFPCCPOLJPC);
+      }
+      if (Week != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Week);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -208,21 +208,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Week != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(Week);
-      }
-      if (LFPCCPOLJPC != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(LFPCCPOLJPC);
+      if (GPODHHAOHNP != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(GPODHHAOHNP);
       }
       if (EndTime != 0L) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(56);
         output.WriteInt64(EndTime);
       }
-      if (GPODHHAOHNP != false) {
-        output.WriteRawTag(112);
-        output.WriteBool(GPODHHAOHNP);
+      if (LFPCCPOLJPC != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(LFPCCPOLJPC);
+      }
+      if (Week != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Week);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -237,11 +237,11 @@ namespace EggLink.DanhengServer.Proto {
       if (GPODHHAOHNP != false) {
         size += 1 + 1;
       }
-      if (LFPCCPOLJPC != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LFPCCPOLJPC);
-      }
       if (Week != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Week);
+      }
+      if (LFPCCPOLJPC != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LFPCCPOLJPC);
       }
       if (EndTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(EndTime);
@@ -261,11 +261,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.GPODHHAOHNP != false) {
         GPODHHAOHNP = other.GPODHHAOHNP;
       }
-      if (other.LFPCCPOLJPC != 0) {
-        LFPCCPOLJPC = other.LFPCCPOLJPC;
-      }
       if (other.Week != 0) {
         Week = other.Week;
+      }
+      if (other.LFPCCPOLJPC != 0) {
+        LFPCCPOLJPC = other.LFPCCPOLJPC;
       }
       if (other.EndTime != 0L) {
         EndTime = other.EndTime;
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            Week = input.ReadUInt32();
+          case 32: {
+            GPODHHAOHNP = input.ReadBool();
             break;
           }
-          case 64: {
-            LFPCCPOLJPC = input.ReadUInt32();
-            break;
-          }
-          case 96: {
+          case 56: {
             EndTime = input.ReadInt64();
             break;
           }
-          case 112: {
-            GPODHHAOHNP = input.ReadBool();
+          case 72: {
+            LFPCCPOLJPC = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            Week = input.ReadUInt32();
             break;
           }
         }
@@ -316,20 +316,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            Week = input.ReadUInt32();
+          case 32: {
+            GPODHHAOHNP = input.ReadBool();
             break;
           }
-          case 64: {
-            LFPCCPOLJPC = input.ReadUInt32();
-            break;
-          }
-          case 96: {
+          case 56: {
             EndTime = input.ReadInt64();
             break;
           }
-          case 112: {
-            GPODHHAOHNP = input.ReadBool();
+          case 72: {
+            LFPCCPOLJPC = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            Week = input.ReadUInt32();
             break;
           }
         }

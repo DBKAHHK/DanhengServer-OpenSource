@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5IZWxpb2J1c0VudGVyQmF0dGxlQ3NSZXEucHJvdG8iVgoYSGVsaW9idXNF",
-            "bnRlckJhdHRsZUNzUmVxEhAKCHNraWxsX2lkGAsgASgNEhYKDmF2YXRhcl9p",
-            "ZF9saXN0GAogAygNEhAKCGV2ZW50X2lkGAUgASgNQh6qAhtFZ2dMaW5rLkRh",
+            "bnRlckJhdHRsZUNzUmVxEhAKCHNraWxsX2lkGAkgASgNEhYKDmF2YXRhcl9p",
+            "ZF9saXN0GAogAygNEhAKCGV2ZW50X2lkGAsgASgNQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "skill_id" field.</summary>
-    public const int SkillIdFieldNumber = 11;
+    public const int SkillIdFieldNumber = 9;
     private uint skillId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "event_id" field.</summary>
-    public const int EventIdFieldNumber = 5;
+    public const int EventIdFieldNumber = 11;
     private uint eventId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,14 +166,14 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (EventId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(EventId);
+      if (SkillId != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(SkillId);
       }
       avatarIdList_.WriteTo(output, _repeated_avatarIdList_codec);
-      if (SkillId != 0) {
+      if (EventId != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(SkillId);
+        output.WriteUInt32(EventId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -185,14 +185,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (EventId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(EventId);
+      if (SkillId != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(SkillId);
       }
       avatarIdList_.WriteTo(ref output, _repeated_avatarIdList_codec);
-      if (SkillId != 0) {
+      if (EventId != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(SkillId);
+        output.WriteUInt32(EventId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -245,8 +245,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            EventId = input.ReadUInt32();
+          case 72: {
+            SkillId = input.ReadUInt32();
             break;
           }
           case 82:
@@ -255,7 +255,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 88: {
-            SkillId = input.ReadUInt32();
+            EventId = input.ReadUInt32();
             break;
           }
         }
@@ -273,8 +273,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            EventId = input.ReadUInt32();
+          case 72: {
+            SkillId = input.ReadUInt32();
             break;
           }
           case 82:
@@ -283,7 +283,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 88: {
-            SkillId = input.ReadUInt32();
+            EventId = input.ReadUInt32();
             break;
           }
         }

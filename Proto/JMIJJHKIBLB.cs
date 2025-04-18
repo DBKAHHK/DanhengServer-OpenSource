@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static JMIJJHKIBLBReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFKTUlKSkhLSUJMQi5wcm90byJGCgtKTUlKSkhLSUJMQhIMCgRzdGFyGAQg",
-            "ASgNEhQKDGNoYWxsZW5nZV9pZBgIIAEoDRITCgtHSklFQUhEQk5OSRgDIAEo",
-            "CEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFKTUlKSkhLSUJMQi5wcm90byJGCgtKTUlKSkhLSUJMQhITCgtHSklFQUhE",
+            "Qk5OSRgOIAEoCBIMCgRzdGFyGAkgASgNEhQKDGNoYWxsZW5nZV9pZBgNIAEo",
+            "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.JMIJJHKIBLB), global::EggLink.DanhengServer.Proto.JMIJJHKIBLB.Parser, new[]{ "Star", "ChallengeId", "GJIEAHDBNNI" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.JMIJJHKIBLB), global::EggLink.DanhengServer.Proto.JMIJJHKIBLB.Parser, new[]{ "GJIEAHDBNNI", "Star", "ChallengeId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,9 +72,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public JMIJJHKIBLB(JMIJJHKIBLB other) : this() {
+      gJIEAHDBNNI_ = other.gJIEAHDBNNI_;
       star_ = other.star_;
       challengeId_ = other.challengeId_;
-      gJIEAHDBNNI_ = other.gJIEAHDBNNI_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,8 +84,20 @@ namespace EggLink.DanhengServer.Proto {
       return new JMIJJHKIBLB(this);
     }
 
+    /// <summary>Field number for the "GJIEAHDBNNI" field.</summary>
+    public const int GJIEAHDBNNIFieldNumber = 14;
+    private bool gJIEAHDBNNI_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool GJIEAHDBNNI {
+      get { return gJIEAHDBNNI_; }
+      set {
+        gJIEAHDBNNI_ = value;
+      }
+    }
+
     /// <summary>Field number for the "star" field.</summary>
-    public const int StarFieldNumber = 4;
+    public const int StarFieldNumber = 9;
     private uint star_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "challenge_id" field.</summary>
-    public const int ChallengeIdFieldNumber = 8;
+    public const int ChallengeIdFieldNumber = 13;
     private uint challengeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,18 +117,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return challengeId_; }
       set {
         challengeId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "GJIEAHDBNNI" field.</summary>
-    public const int GJIEAHDBNNIFieldNumber = 3;
-    private bool gJIEAHDBNNI_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool GJIEAHDBNNI {
-      get { return gJIEAHDBNNI_; }
-      set {
-        gJIEAHDBNNI_ = value;
       }
     }
 
@@ -135,9 +135,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (GJIEAHDBNNI != other.GJIEAHDBNNI) return false;
       if (Star != other.Star) return false;
       if (ChallengeId != other.ChallengeId) return false;
-      if (GJIEAHDBNNI != other.GJIEAHDBNNI) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,9 +145,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (GJIEAHDBNNI != false) hash ^= GJIEAHDBNNI.GetHashCode();
       if (Star != 0) hash ^= Star.GetHashCode();
       if (ChallengeId != 0) hash ^= ChallengeId.GetHashCode();
-      if (GJIEAHDBNNI != false) hash ^= GJIEAHDBNNI.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,17 +166,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (GJIEAHDBNNI != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(GJIEAHDBNNI);
-      }
       if (Star != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(72);
         output.WriteUInt32(Star);
       }
       if (ChallengeId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(104);
         output.WriteUInt32(ChallengeId);
+      }
+      if (GJIEAHDBNNI != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(GJIEAHDBNNI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -188,17 +188,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (GJIEAHDBNNI != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(GJIEAHDBNNI);
-      }
       if (Star != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(72);
         output.WriteUInt32(Star);
       }
       if (ChallengeId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(104);
         output.WriteUInt32(ChallengeId);
+      }
+      if (GJIEAHDBNNI != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(GJIEAHDBNNI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -210,14 +210,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (GJIEAHDBNNI != false) {
+        size += 1 + 1;
+      }
       if (Star != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Star);
       }
       if (ChallengeId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChallengeId);
-      }
-      if (GJIEAHDBNNI != false) {
-        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -231,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.GJIEAHDBNNI != false) {
+        GJIEAHDBNNI = other.GJIEAHDBNNI;
+      }
       if (other.Star != 0) {
         Star = other.Star;
       }
       if (other.ChallengeId != 0) {
         ChallengeId = other.ChallengeId;
-      }
-      if (other.GJIEAHDBNNI != false) {
-        GJIEAHDBNNI = other.GJIEAHDBNNI;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            GJIEAHDBNNI = input.ReadBool();
-            break;
-          }
-          case 32: {
+          case 72: {
             Star = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 104: {
             ChallengeId = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            GJIEAHDBNNI = input.ReadBool();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            GJIEAHDBNNI = input.ReadBool();
-            break;
-          }
-          case 32: {
+          case 72: {
             Star = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 104: {
             ChallengeId = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            GJIEAHDBNNI = input.ReadBool();
             break;
           }
         }

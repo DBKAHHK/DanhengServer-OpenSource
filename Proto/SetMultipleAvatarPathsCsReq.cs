@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFTZXRNdWx0aXBsZUF2YXRhclBhdGhzQ3NSZXEucHJvdG8aGU11bHRpUGF0",
             "aEF2YXRhclR5cGUucHJvdG8iSwobU2V0TXVsdGlwbGVBdmF0YXJQYXRoc0Nz",
-            "UmVxEiwKDmF2YXRhcl9pZF9saXN0GAMgAygOMhQuTXVsdGlQYXRoQXZhdGFy",
+            "UmVxEiwKDmF2YXRhcl9pZF9saXN0GAsgAygOMhQuTXVsdGlQYXRoQXZhdGFy",
             "VHlwZUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MultiPathAvatarTypeReflection.Descriptor, },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "avatar_id_list" field.</summary>
-    public const int AvatarIdListFieldNumber = 3;
+    public const int AvatarIdListFieldNumber = 11;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MultiPathAvatarType> _repeated_avatarIdList_codec
-        = pb::FieldCodec.ForEnum(26, x => (int) x, x => (global::EggLink.DanhengServer.Proto.MultiPathAvatarType) x);
+        = pb::FieldCodec.ForEnum(90, x => (int) x, x => (global::EggLink.DanhengServer.Proto.MultiPathAvatarType) x);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MultiPathAvatarType> avatarIdList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MultiPathAvatarType>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,8 +187,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26:
-          case 24: {
+          case 90:
+          case 88: {
             avatarIdList_.AddEntriesFrom(input, _repeated_avatarIdList_codec);
             break;
           }
@@ -207,8 +207,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26:
-          case 24: {
+          case 90:
+          case 88: {
             avatarIdList_.AddEntriesFrom(ref input, _repeated_avatarIdList_codec);
             break;
           }

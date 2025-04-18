@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CilHZXRUcmVhc3VyZUR1bmdlb25BY3Rpdml0eURhdGFTY1JzcC5wcm90bxoR",
             "QUJIRkFCRkdQT0YucHJvdG8iWQojR2V0VHJlYXN1cmVEdW5nZW9uQWN0aXZp",
-            "dHlEYXRhU2NSc3ASIQoLSElPT0tNT0FORE4YCSADKAsyDC5BQkhGQUJGR1BP",
-            "RhIPCgdyZXRjb2RlGAwgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "dHlEYXRhU2NSc3ASIQoLSElPT0tNT0FORE4YDSADKAsyDC5BQkhGQUJGR1BP",
+            "RhIPCgdyZXRjb2RlGAUgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ABHFABFGPOFReflection.Descriptor, },
@@ -86,9 +86,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "HIOOKMOANDN" field.</summary>
-    public const int HIOOKMOANDNFieldNumber = 9;
+    public const int HIOOKMOANDNFieldNumber = 13;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ABHFABFGPOF> _repeated_hIOOKMOANDN_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.ABHFABFGPOF.Parser);
+        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.ABHFABFGPOF.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ABHFABFGPOF> hIOOKMOANDN_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ABHFABFGPOF>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 12;
+    public const int RetcodeFieldNumber = 5;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      hIOOKMOANDN_.WriteTo(output, _repeated_hIOOKMOANDN_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
+      hIOOKMOANDN_.WriteTo(output, _repeated_hIOOKMOANDN_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      hIOOKMOANDN_.WriteTo(ref output, _repeated_hIOOKMOANDN_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
+      hIOOKMOANDN_.WriteTo(ref output, _repeated_hIOOKMOANDN_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -217,12 +217,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 74: {
-            hIOOKMOANDN_.AddEntriesFrom(input, _repeated_hIOOKMOANDN_codec);
+          case 40: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 96: {
-            Retcode = input.ReadUInt32();
+          case 106: {
+            hIOOKMOANDN_.AddEntriesFrom(input, _repeated_hIOOKMOANDN_codec);
             break;
           }
         }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 74: {
-            hIOOKMOANDN_.AddEntriesFrom(ref input, _repeated_hIOOKMOANDN_codec);
+          case 40: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 96: {
-            Retcode = input.ReadUInt32();
+          case 106: {
+            hIOOKMOANDN_.AddEntriesFrom(ref input, _repeated_hIOOKMOANDN_codec);
             break;
           }
         }

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFESE1GQ0lESkJGRC5wcm90bxoRS0lGSUxDSk9MQ0gucHJvdG8iPAoLREhN",
-            "RkNJREpCRkQSLQoXbWFnaWNfc2NlcHRlcl9pbmZvX2xpc3QYAyADKAsyDC5L",
+            "RkNJREpCRkQSLQoXbWFnaWNfc2NlcHRlcl9pbmZvX2xpc3QYByADKAsyDC5L",
             "SUZJTENKT0xDSEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "magic_scepter_info_list" field.</summary>
-    public const int MagicScepterInfoListFieldNumber = 3;
+    public const int MagicScepterInfoListFieldNumber = 7;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.KIFILCJOLCH> _repeated_magicScepterInfoList_codec
-        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.KIFILCJOLCH.Parser);
+        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.KIFILCJOLCH.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KIFILCJOLCH> magicScepterInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KIFILCJOLCH>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26: {
+          case 58: {
             magicScepterInfoList_.AddEntriesFrom(input, _repeated_magicScepterInfoList_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26: {
+          case 58: {
             magicScepterInfoList_.AddEntriesFrom(ref input, _repeated_magicScepterInfoList_codec);
             break;
           }

@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CitTdGFydEFldGhlckRpdmlkZUNoYWxsZW5nZUJhdHRsZUNzUmVxLnByb3Rv",
             "IlMKJVN0YXJ0QWV0aGVyRGl2aWRlQ2hhbGxlbmdlQmF0dGxlQ3NSZXESFAoM",
-            "bGluZXVwX2luZGV4GAsgASgNEhQKDGNoYWxsZW5nZV9pZBgOIAEoDUIeqgIb",
+            "bGluZXVwX2luZGV4GAUgASgNEhQKDGNoYWxsZW5nZV9pZBgIIAEoDUIeqgIb",
             "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "lineup_index" field.</summary>
-    public const int LineupIndexFieldNumber = 11;
+    public const int LineupIndexFieldNumber = 5;
     private uint lineupIndex_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "challenge_id" field.</summary>
-    public const int ChallengeIdFieldNumber = 14;
+    public const int ChallengeIdFieldNumber = 8;
     private uint challengeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (LineupIndex != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(40);
         output.WriteUInt32(LineupIndex);
       }
       if (ChallengeId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(64);
         output.WriteUInt32(ChallengeId);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (LineupIndex != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(40);
         output.WriteUInt32(LineupIndex);
       }
       if (ChallengeId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(64);
         output.WriteUInt32(ChallengeId);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 88: {
+          case 40: {
             LineupIndex = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 64: {
             ChallengeId = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 88: {
+          case 40: {
             LineupIndex = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 64: {
             ChallengeId = input.ReadUInt32();
             break;
           }

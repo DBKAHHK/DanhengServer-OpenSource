@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJSb2d1ZVRvdXJuUmVuYW1lQXJjaGl2ZVNjUnNwLnByb3RvIlAKHFJvZ3Vl",
-            "VG91cm5SZW5hbWVBcmNoaXZlU2NSc3ASEQoJbWF4X3RpbWVzGAwgASgNEg8K",
-            "B3JldGNvZGUYCyABKA0SDAoEbmFtZRgHIAEoCUIeqgIbRWdnTGluay5EYW5o",
+            "VG91cm5SZW5hbWVBcmNoaXZlU2NSc3ASEQoJbWF4X3RpbWVzGAQgASgNEg8K",
+            "B3JldGNvZGUYCyABKA0SDAoEbmFtZRgOIAEoCUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "max_times" field.</summary>
-    public const int MaxTimesFieldNumber = 12;
+    public const int MaxTimesFieldNumber = 4;
     private uint maxTimes_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 7;
+    public const int NameFieldNumber = 14;
     private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Name.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(Name);
+      if (MaxTimes != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(MaxTimes);
       }
       if (Retcode != 0) {
         output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
       }
-      if (MaxTimes != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(MaxTimes);
+      if (Name.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(Name);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Name.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(Name);
+      if (MaxTimes != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(MaxTimes);
       }
       if (Retcode != 0) {
         output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
       }
-      if (MaxTimes != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(MaxTimes);
+      if (Name.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(Name);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58: {
-            Name = input.ReadString();
+          case 32: {
+            MaxTimes = input.ReadUInt32();
             break;
           }
           case 88: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 96: {
-            MaxTimes = input.ReadUInt32();
+          case 114: {
+            Name = input.ReadString();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58: {
-            Name = input.ReadString();
+          case 32: {
+            MaxTimes = input.ReadUInt32();
             break;
           }
           case 88: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 96: {
-            MaxTimes = input.ReadUInt32();
+          case 114: {
+            Name = input.ReadString();
             break;
           }
         }

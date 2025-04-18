@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5NYXJrUmVsaWNGaWx0ZXJQbGFuQ3NSZXEucHJvdG8iVAoYTWFya1JlbGlj",
-            "RmlsdGVyUGxhbkNzUmVxEhUKDVNsb3RJbmRleExpc3QYDSADKA0SEQoJSXNC",
-            "YXRjaE9wGAMgASgIEg4KBklzTWFyaxgLIAEoCEIeqgIbRWdnTGluay5EYW5o",
+            "RmlsdGVyUGxhbkNzUmVxEg4KBklzTWFyaxgDIAEoCBIVCg1TbG90SW5kZXhM",
+            "aXN0GAsgAygNEhEKCUlzQmF0Y2hPcBgJIAEoCEIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarkRelicFilterPlanCsReq), global::EggLink.DanhengServer.Proto.MarkRelicFilterPlanCsReq.Parser, new[]{ "SlotIndexList", "IsBatchOp", "IsMark" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarkRelicFilterPlanCsReq), global::EggLink.DanhengServer.Proto.MarkRelicFilterPlanCsReq.Parser, new[]{ "IsMark", "SlotIndexList", "IsBatchOp" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MarkRelicFilterPlanCsReq(MarkRelicFilterPlanCsReq other) : this() {
+      isMark_ = other.isMark_;
       slotIndexList_ = other.slotIndexList_.Clone();
       isBatchOp_ = other.isBatchOp_;
-      isMark_ = other.isMark_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,10 +85,22 @@ namespace EggLink.DanhengServer.Proto {
       return new MarkRelicFilterPlanCsReq(this);
     }
 
+    /// <summary>Field number for the "IsMark" field.</summary>
+    public const int IsMarkFieldNumber = 3;
+    private bool isMark_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsMark {
+      get { return isMark_; }
+      set {
+        isMark_ = value;
+      }
+    }
+
     /// <summary>Field number for the "SlotIndexList" field.</summary>
-    public const int SlotIndexListFieldNumber = 13;
+    public const int SlotIndexListFieldNumber = 11;
     private static readonly pb::FieldCodec<uint> _repeated_slotIndexList_codec
-        = pb::FieldCodec.ForUInt32(106);
+        = pb::FieldCodec.ForUInt32(90);
     private readonly pbc::RepeatedField<uint> slotIndexList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "IsBatchOp" field.</summary>
-    public const int IsBatchOpFieldNumber = 3;
+    public const int IsBatchOpFieldNumber = 9;
     private bool isBatchOp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,18 +117,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return isBatchOp_; }
       set {
         isBatchOp_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "IsMark" field.</summary>
-    public const int IsMarkFieldNumber = 11;
-    private bool isMark_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsMark {
-      get { return isMark_; }
-      set {
-        isMark_ = value;
       }
     }
 
@@ -135,9 +135,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (IsMark != other.IsMark) return false;
       if(!slotIndexList_.Equals(other.slotIndexList_)) return false;
       if (IsBatchOp != other.IsBatchOp) return false;
-      if (IsMark != other.IsMark) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,9 +145,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (IsMark != false) hash ^= IsMark.GetHashCode();
       hash ^= slotIndexList_.GetHashCode();
       if (IsBatchOp != false) hash ^= IsBatchOp.GetHashCode();
-      if (IsMark != false) hash ^= IsMark.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,13 +166,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsBatchOp != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(IsBatchOp);
-      }
       if (IsMark != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(24);
         output.WriteBool(IsMark);
+      }
+      if (IsBatchOp != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(IsBatchOp);
       }
       slotIndexList_.WriteTo(output, _repeated_slotIndexList_codec);
       if (_unknownFields != null) {
@@ -185,13 +185,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsBatchOp != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(IsBatchOp);
-      }
       if (IsMark != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(24);
         output.WriteBool(IsMark);
+      }
+      if (IsBatchOp != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(IsBatchOp);
       }
       slotIndexList_.WriteTo(ref output, _repeated_slotIndexList_codec);
       if (_unknownFields != null) {
@@ -204,11 +204,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += slotIndexList_.CalculateSize(_repeated_slotIndexList_codec);
-      if (IsBatchOp != false) {
+      if (IsMark != false) {
         size += 1 + 1;
       }
-      if (IsMark != false) {
+      size += slotIndexList_.CalculateSize(_repeated_slotIndexList_codec);
+      if (IsBatchOp != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -223,12 +223,12 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.IsMark != false) {
+        IsMark = other.IsMark;
+      }
       slotIndexList_.Add(other.slotIndexList_);
       if (other.IsBatchOp != false) {
         IsBatchOp = other.IsBatchOp;
-      }
-      if (other.IsMark != false) {
-        IsMark = other.IsMark;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -246,15 +246,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 24: {
-            IsBatchOp = input.ReadBool();
-            break;
-          }
-          case 88: {
             IsMark = input.ReadBool();
             break;
           }
-          case 106:
-          case 104: {
+          case 72: {
+            IsBatchOp = input.ReadBool();
+            break;
+          }
+          case 90:
+          case 88: {
             slotIndexList_.AddEntriesFrom(input, _repeated_slotIndexList_codec);
             break;
           }
@@ -274,15 +274,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 24: {
-            IsBatchOp = input.ReadBool();
-            break;
-          }
-          case 88: {
             IsMark = input.ReadBool();
             break;
           }
-          case 106:
-          case 104: {
+          case 72: {
+            IsBatchOp = input.ReadBool();
+            break;
+          }
+          case 90:
+          case 88: {
             slotIndexList_.AddEntriesFrom(ref input, _repeated_slotIndexList_codec);
             break;
           }

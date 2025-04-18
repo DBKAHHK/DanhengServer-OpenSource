@@ -109,6 +109,7 @@ public class ServerProfile
     public int Level { get; set; } = 1;
     public int HeadIcon { get; set; } = 200105;
     public int ChatBubbleId { get; set; } = 220001;
+    public int PersonalCardId { get; set; } = 253001;
     public int DisplayAvatarId { get; set; } = 1001;
     public int DisplayAvatarLevel { get; set; } = 1;
 }

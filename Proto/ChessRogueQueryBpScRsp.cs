@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChxDaGVzc1JvZ3VlUXVlcnlCcFNjUnNwLnByb3RvGhFNRkZLSkROREtJTy5w",
             "cm90byJFChZDaGVzc1JvZ3VlUXVlcnlCcFNjUnNwEg8KB3JldGNvZGUYASAB",
-            "KA0SGgoEaW5mbxgLIAEoCzIMLk1GRktKRE5ES0lPQh6qAhtFZ2dMaW5rLkRh",
+            "KA0SGgoEaW5mbxgNIAEoCzIMLk1GRktKRE5ES0lPQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MFFKJDNDKIOReflection.Descriptor, },
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "info" field.</summary>
-    public const int InfoFieldNumber = 11;
+    public const int InfoFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.MFFKJDNDKIO info_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Retcode);
       }
       if (info_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(106);
         output.WriteMessage(Info);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Retcode);
       }
       if (info_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(106);
         output.WriteMessage(Info);
       }
       if (_unknownFields != null) {
@@ -234,7 +234,7 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 90: {
+          case 106: {
             if (info_ == null) {
               Info = new global::EggLink.DanhengServer.Proto.MFFKJDNDKIO();
             }
@@ -260,7 +260,7 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 90: {
+          case 106: {
             if (info_ == null) {
               Info = new global::EggLink.DanhengServer.Proto.MFFKJDNDKIO();
             }

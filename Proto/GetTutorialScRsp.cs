@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChZHZXRUdXRvcmlhbFNjUnNwLnByb3RvGg5UdXRvcmlhbC5wcm90byJEChBH",
             "ZXRUdXRvcmlhbFNjUnNwEg8KB1JldGNvZGUYAyABKA0SHwoMVHV0b3JpYWxM",
-            "aXN0GAYgAygLMgkuVHV0b3JpYWxCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "aXN0GAEgAygLMgkuVHV0b3JpYWxCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TutorialReflection.Descriptor, },
@@ -97,9 +97,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "TutorialList" field.</summary>
-    public const int TutorialListFieldNumber = 6;
+    public const int TutorialListFieldNumber = 1;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.Tutorial> _repeated_tutorialList_codec
-        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.Tutorial.Parser);
+        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.Tutorial.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Tutorial> tutorialList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Tutorial>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      tutorialList_.WriteTo(output, _repeated_tutorialList_codec);
       if (Retcode != 0) {
         output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
-      tutorialList_.WriteTo(output, _repeated_tutorialList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      tutorialList_.WriteTo(ref output, _repeated_tutorialList_codec);
       if (Retcode != 0) {
         output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
-      tutorialList_.WriteTo(ref output, _repeated_tutorialList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            Retcode = input.ReadUInt32();
+          case 10: {
+            tutorialList_.AddEntriesFrom(input, _repeated_tutorialList_codec);
             break;
           }
-          case 50: {
-            tutorialList_.AddEntriesFrom(input, _repeated_tutorialList_codec);
+          case 24: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            Retcode = input.ReadUInt32();
+          case 10: {
+            tutorialList_.AddEntriesFrom(ref input, _repeated_tutorialList_codec);
             break;
           }
-          case 50: {
-            tutorialList_.AddEntriesFrom(ref input, _repeated_tutorialList_codec);
+          case 24: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

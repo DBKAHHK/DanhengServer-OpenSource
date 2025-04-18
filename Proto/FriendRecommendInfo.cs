@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChlGcmllbmRSZWNvbW1lbmRJbmZvLnByb3RvGhZQbGF5ZXJTaW1wbGVJbmZv",
             "LnByb3RvIlIKE0ZyaWVuZFJlY29tbWVuZEluZm8SEwoLSkhPTEJMUEVHTEoY",
-            "BiABKAgSJgoLcGxheWVyX2luZm8YCSABKAsyES5QbGF5ZXJTaW1wbGVJbmZv",
+            "CyABKAgSJgoLcGxheWVyX2luZm8YCiABKAsyES5QbGF5ZXJTaW1wbGVJbmZv",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlayerSimpleInfoReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "JHOLBLPEGLJ" field.</summary>
-    public const int JHOLBLPEGLJFieldNumber = 6;
+    public const int JHOLBLPEGLJFieldNumber = 11;
     private bool jHOLBLPEGLJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "player_info" field.</summary>
-    public const int PlayerInfoFieldNumber = 9;
+    public const int PlayerInfoFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.PlayerSimpleInfo playerInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (JHOLBLPEGLJ != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(JHOLBLPEGLJ);
-      }
       if (playerInfo_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(82);
         output.WriteMessage(PlayerInfo);
+      }
+      if (JHOLBLPEGLJ != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(JHOLBLPEGLJ);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (JHOLBLPEGLJ != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(JHOLBLPEGLJ);
-      }
       if (playerInfo_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(82);
         output.WriteMessage(PlayerInfo);
+      }
+      if (JHOLBLPEGLJ != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(JHOLBLPEGLJ);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            JHOLBLPEGLJ = input.ReadBool();
-            break;
-          }
-          case 74: {
+          case 82: {
             if (playerInfo_ == null) {
               PlayerInfo = new global::EggLink.DanhengServer.Proto.PlayerSimpleInfo();
             }
             input.ReadMessage(PlayerInfo);
+            break;
+          }
+          case 88: {
+            JHOLBLPEGLJ = input.ReadBool();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            JHOLBLPEGLJ = input.ReadBool();
-            break;
-          }
-          case 74: {
+          case 82: {
             if (playerInfo_ == null) {
               PlayerInfo = new global::EggLink.DanhengServer.Proto.PlayerSimpleInfo();
             }
             input.ReadMessage(PlayerInfo);
+            break;
+          }
+          case 88: {
+            JHOLBLPEGLJ = input.ReadBool();
             break;
           }
         }

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZQcm9wVGltZWxpbmVJbmZvLnByb3RvIkwKEFByb3BUaW1lbGluZUluZm8S",
-            "GwoTdGltZWxpbmVfYnl0ZV92YWx1ZRgLIAEoDBIbChN0aW1lbGluZV9ib29s",
-            "X3ZhbHVlGA8gASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "GwoTdGltZWxpbmVfYnl0ZV92YWx1ZRgFIAEoDBIbChN0aW1lbGluZV9ib29s",
+            "X3ZhbHVlGAYgASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "timeline_byte_value" field.</summary>
-    public const int TimelineByteValueFieldNumber = 11;
+    public const int TimelineByteValueFieldNumber = 5;
     private pb::ByteString timelineByteValue_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "timeline_bool_value" field.</summary>
-    public const int TimelineBoolValueFieldNumber = 15;
+    public const int TimelineBoolValueFieldNumber = 6;
     private bool timelineBoolValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (TimelineByteValue.Length != 0) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(42);
         output.WriteBytes(TimelineByteValue);
       }
       if (TimelineBoolValue != false) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(48);
         output.WriteBool(TimelineBoolValue);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (TimelineByteValue.Length != 0) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(42);
         output.WriteBytes(TimelineByteValue);
       }
       if (TimelineBoolValue != false) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(48);
         output.WriteBool(TimelineBoolValue);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 90: {
+          case 42: {
             TimelineByteValue = input.ReadBytes();
             break;
           }
-          case 120: {
+          case 48: {
             TimelineBoolValue = input.ReadBool();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 90: {
+          case 42: {
             TimelineByteValue = input.ReadBytes();
             break;
           }
-          case 120: {
+          case 48: {
             TimelineBoolValue = input.ReadBool();
             break;
           }

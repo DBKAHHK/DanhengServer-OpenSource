@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZSb2d1ZVZpcnR1YWxJdGVtLnByb3RvImYKEFJvZ3VlVmlydHVhbEl0ZW0S",
-            "EwoLcm9ndWVfbW9uZXkYDSABKA0SEwoLQlBKT0FQRkFGS0sYBiABKA0SEwoL",
-            "QU1OS01CTUhLREYYBSABKA0SEwoLREFGQUxBT0FPT0kYCyABKA1CHqoCG0Vn",
+            "EwoLQU1OS01CTUhLREYYByABKA0SEwoLREFGQUxBT0FPT0kYCCABKA0SEwoL",
+            "cm9ndWVfbW9uZXkYCyABKA0SEwoLQlBKT0FQRkFGS0sYDSABKA1CHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueVirtualItem), global::EggLink.DanhengServer.Proto.RogueVirtualItem.Parser, new[]{ "RogueMoney", "BPJOAPFAFKK", "AMNKMBMHKDF", "DAFALAOAOOI" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueVirtualItem), global::EggLink.DanhengServer.Proto.RogueVirtualItem.Parser, new[]{ "AMNKMBMHKDF", "DAFALAOAOOI", "RogueMoney", "BPJOAPFAFKK" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,10 +73,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueVirtualItem(RogueVirtualItem other) : this() {
-      rogueMoney_ = other.rogueMoney_;
-      bPJOAPFAFKK_ = other.bPJOAPFAFKK_;
       aMNKMBMHKDF_ = other.aMNKMBMHKDF_;
       dAFALAOAOOI_ = other.dAFALAOAOOI_;
+      rogueMoney_ = other.rogueMoney_;
+      bPJOAPFAFKK_ = other.bPJOAPFAFKK_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,32 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueVirtualItem(this);
     }
 
-    /// <summary>Field number for the "rogue_money" field.</summary>
-    public const int RogueMoneyFieldNumber = 13;
-    private uint rogueMoney_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint RogueMoney {
-      get { return rogueMoney_; }
-      set {
-        rogueMoney_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "BPJOAPFAFKK" field.</summary>
-    public const int BPJOAPFAFKKFieldNumber = 6;
-    private uint bPJOAPFAFKK_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BPJOAPFAFKK {
-      get { return bPJOAPFAFKK_; }
-      set {
-        bPJOAPFAFKK_ = value;
-      }
-    }
-
     /// <summary>Field number for the "AMNKMBMHKDF" field.</summary>
-    public const int AMNKMBMHKDFFieldNumber = 5;
+    public const int AMNKMBMHKDFFieldNumber = 7;
     private uint aMNKMBMHKDF_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "DAFALAOAOOI" field.</summary>
-    public const int DAFALAOAOOIFieldNumber = 11;
+    public const int DAFALAOAOOIFieldNumber = 8;
     private uint dAFALAOAOOI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -131,6 +107,30 @@ namespace EggLink.DanhengServer.Proto {
       get { return dAFALAOAOOI_; }
       set {
         dAFALAOAOOI_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rogue_money" field.</summary>
+    public const int RogueMoneyFieldNumber = 11;
+    private uint rogueMoney_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RogueMoney {
+      get { return rogueMoney_; }
+      set {
+        rogueMoney_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "BPJOAPFAFKK" field.</summary>
+    public const int BPJOAPFAFKKFieldNumber = 13;
+    private uint bPJOAPFAFKK_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint BPJOAPFAFKK {
+      get { return bPJOAPFAFKK_; }
+      set {
+        bPJOAPFAFKK_ = value;
       }
     }
 
@@ -149,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (RogueMoney != other.RogueMoney) return false;
-      if (BPJOAPFAFKK != other.BPJOAPFAFKK) return false;
       if (AMNKMBMHKDF != other.AMNKMBMHKDF) return false;
       if (DAFALAOAOOI != other.DAFALAOAOOI) return false;
+      if (RogueMoney != other.RogueMoney) return false;
+      if (BPJOAPFAFKK != other.BPJOAPFAFKK) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (RogueMoney != 0) hash ^= RogueMoney.GetHashCode();
-      if (BPJOAPFAFKK != 0) hash ^= BPJOAPFAFKK.GetHashCode();
       if (AMNKMBMHKDF != 0) hash ^= AMNKMBMHKDF.GetHashCode();
       if (DAFALAOAOOI != 0) hash ^= DAFALAOAOOI.GetHashCode();
+      if (RogueMoney != 0) hash ^= RogueMoney.GetHashCode();
+      if (BPJOAPFAFKK != 0) hash ^= BPJOAPFAFKK.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,20 +183,20 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (AMNKMBMHKDF != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(56);
         output.WriteUInt32(AMNKMBMHKDF);
       }
-      if (BPJOAPFAFKK != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(BPJOAPFAFKK);
-      }
       if (DAFALAOAOOI != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(64);
         output.WriteUInt32(DAFALAOAOOI);
       }
       if (RogueMoney != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(88);
         output.WriteUInt32(RogueMoney);
+      }
+      if (BPJOAPFAFKK != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(BPJOAPFAFKK);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -209,20 +209,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (AMNKMBMHKDF != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(56);
         output.WriteUInt32(AMNKMBMHKDF);
       }
-      if (BPJOAPFAFKK != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(BPJOAPFAFKK);
-      }
       if (DAFALAOAOOI != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(64);
         output.WriteUInt32(DAFALAOAOOI);
       }
       if (RogueMoney != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(88);
         output.WriteUInt32(RogueMoney);
+      }
+      if (BPJOAPFAFKK != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(BPJOAPFAFKK);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -234,17 +234,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (RogueMoney != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RogueMoney);
-      }
-      if (BPJOAPFAFKK != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BPJOAPFAFKK);
-      }
       if (AMNKMBMHKDF != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AMNKMBMHKDF);
       }
       if (DAFALAOAOOI != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DAFALAOAOOI);
+      }
+      if (RogueMoney != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RogueMoney);
+      }
+      if (BPJOAPFAFKK != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BPJOAPFAFKK);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -258,17 +258,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.RogueMoney != 0) {
-        RogueMoney = other.RogueMoney;
-      }
-      if (other.BPJOAPFAFKK != 0) {
-        BPJOAPFAFKK = other.BPJOAPFAFKK;
-      }
       if (other.AMNKMBMHKDF != 0) {
         AMNKMBMHKDF = other.AMNKMBMHKDF;
       }
       if (other.DAFALAOAOOI != 0) {
         DAFALAOAOOI = other.DAFALAOAOOI;
+      }
+      if (other.RogueMoney != 0) {
+        RogueMoney = other.RogueMoney;
+      }
+      if (other.BPJOAPFAFKK != 0) {
+        BPJOAPFAFKK = other.BPJOAPFAFKK;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 56: {
             AMNKMBMHKDF = input.ReadUInt32();
             break;
           }
-          case 48: {
-            BPJOAPFAFKK = input.ReadUInt32();
-            break;
-          }
-          case 88: {
+          case 64: {
             DAFALAOAOOI = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 88: {
             RogueMoney = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            BPJOAPFAFKK = input.ReadUInt32();
             break;
           }
         }
@@ -316,20 +316,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 56: {
             AMNKMBMHKDF = input.ReadUInt32();
             break;
           }
-          case 48: {
-            BPJOAPFAFKK = input.ReadUInt32();
-            break;
-          }
-          case 88: {
+          case 64: {
             DAFALAOAOOI = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 88: {
             RogueMoney = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            BPJOAPFAFKK = input.ReadUInt32();
             break;
           }
         }

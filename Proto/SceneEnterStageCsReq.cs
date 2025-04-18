@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpTY2VuZUVudGVyU3RhZ2VDc1JlcS5wcm90bxoSUmViYXR0bGVUeXBlLnBy",
-            "b3RvImMKFFNjZW5lRW50ZXJTdGFnZUNzUmVxEhMKC1BNSkFISUxCTEZMGA8g",
-            "ASgIEhAKCGV2ZW50X2lkGAEgASgNEiQKDXJlYmF0dGxlX3R5cGUYAyABKA4y",
+            "b3RvImMKFFNjZW5lRW50ZXJTdGFnZUNzUmVxEhMKC1BNSkFISUxCTEZMGA4g",
+            "ASgIEhAKCGV2ZW50X2lkGAYgASgNEiQKDXJlYmF0dGxlX3R5cGUYAyABKA4y",
             "DS5SZWJhdHRsZVR5cGVCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "PMJAHILBLFL" field.</summary>
-    public const int PMJAHILBLFLFieldNumber = 15;
+    public const int PMJAHILBLFLFieldNumber = 14;
     private bool pMJAHILBLFL_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "event_id" field.</summary>
-    public const int EventIdFieldNumber = 1;
+    public const int EventIdFieldNumber = 6;
     private uint eventId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -168,16 +168,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (EventId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(EventId);
-      }
       if (RebattleType != global::EggLink.DanhengServer.Proto.RebattleType.None) {
         output.WriteRawTag(24);
         output.WriteEnum((int) RebattleType);
       }
+      if (EventId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(EventId);
+      }
       if (PMJAHILBLFL != false) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(112);
         output.WriteBool(PMJAHILBLFL);
       }
       if (_unknownFields != null) {
@@ -190,16 +190,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (EventId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(EventId);
-      }
       if (RebattleType != global::EggLink.DanhengServer.Proto.RebattleType.None) {
         output.WriteRawTag(24);
         output.WriteEnum((int) RebattleType);
       }
+      if (EventId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(EventId);
+      }
       if (PMJAHILBLFL != false) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(112);
         output.WriteBool(PMJAHILBLFL);
       }
       if (_unknownFields != null) {
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            EventId = input.ReadUInt32();
-            break;
-          }
           case 24: {
             RebattleType = (global::EggLink.DanhengServer.Proto.RebattleType) input.ReadEnum();
             break;
           }
-          case 120: {
+          case 48: {
+            EventId = input.ReadUInt32();
+            break;
+          }
+          case 112: {
             PMJAHILBLFL = input.ReadBool();
             break;
           }
@@ -284,15 +284,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            EventId = input.ReadUInt32();
-            break;
-          }
           case 24: {
             RebattleType = (global::EggLink.DanhengServer.Proto.RebattleType) input.ReadEnum();
             break;
           }
-          case 120: {
+          case 48: {
+            EventId = input.ReadUInt32();
+            break;
+          }
+          case 112: {
             PMJAHILBLFL = input.ReadBool();
             break;
           }

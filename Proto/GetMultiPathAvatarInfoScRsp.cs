@@ -27,17 +27,17 @@ namespace EggLink.DanhengServer.Proto {
             "CiFHZXRNdWx0aVBhdGhBdmF0YXJJbmZvU2NSc3AucHJvdG8aGU11bHRpUGF0",
             "aEF2YXRhclR5cGUucHJvdG8aGU11bHRpUGF0aEF2YXRhckluZm8ucHJvdG8i",
             "mwIKG0dldE11bHRpUGF0aEF2YXRhckluZm9TY1JzcBJICg9jdXJfYXZhdGFy",
-            "X3BhdGgYBCADKAsyLy5HZXRNdWx0aVBhdGhBdmF0YXJJbmZvU2NSc3AuQ3Vy",
-            "QXZhdGFyUGF0aEVudHJ5Eg8KB3JldGNvZGUYCiABKA0SGgoSYmFzaWNfdHlw",
-            "ZV9pZF9saXN0GAUgAygNEjkKG211bHRpX3BhdGhfYXZhdGFyX2luZm9fbGlz",
-            "dBgLIAMoCzIULk11bHRpUGF0aEF2YXRhckluZm8aSgoSQ3VyQXZhdGFyUGF0",
+            "X3BhdGgYASADKAsyLy5HZXRNdWx0aVBhdGhBdmF0YXJJbmZvU2NSc3AuQ3Vy",
+            "QXZhdGFyUGF0aEVudHJ5EjkKG211bHRpX3BhdGhfYXZhdGFyX2luZm9fbGlz",
+            "dBgDIAMoCzIULk11bHRpUGF0aEF2YXRhckluZm8SGgoSYmFzaWNfdHlwZV9p",
+            "ZF9saXN0GAkgAygNEg8KB3JldGNvZGUYBiABKA0aSgoSQ3VyQXZhdGFyUGF0",
             "aEVudHJ5EgsKA2tleRgBIAEoDRIjCgV2YWx1ZRgCIAEoDjIULk11bHRpUGF0",
             "aEF2YXRhclR5cGU6AjgBQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
             "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MultiPathAvatarTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.MultiPathAvatarInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMultiPathAvatarInfoScRsp), global::EggLink.DanhengServer.Proto.GetMultiPathAvatarInfoScRsp.Parser, new[]{ "CurAvatarPath", "Retcode", "BasicTypeIdList", "MultiPathAvatarInfoList" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMultiPathAvatarInfoScRsp), global::EggLink.DanhengServer.Proto.GetMultiPathAvatarInfoScRsp.Parser, new[]{ "CurAvatarPath", "MultiPathAvatarInfoList", "BasicTypeIdList", "Retcode" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -80,9 +80,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetMultiPathAvatarInfoScRsp(GetMultiPathAvatarInfoScRsp other) : this() {
       curAvatarPath_ = other.curAvatarPath_.Clone();
-      retcode_ = other.retcode_;
-      basicTypeIdList_ = other.basicTypeIdList_.Clone();
       multiPathAvatarInfoList_ = other.multiPathAvatarInfoList_.Clone();
+      basicTypeIdList_ = other.basicTypeIdList_.Clone();
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -93,9 +93,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cur_avatar_path" field.</summary>
-    public const int CurAvatarPathFieldNumber = 4;
+    public const int CurAvatarPathFieldNumber = 1;
     private static readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.MultiPathAvatarType>.Codec _map_curAvatarPath_codec
-        = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.MultiPathAvatarType>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForEnum(16, x => (int) x, x => (global::EggLink.DanhengServer.Proto.MultiPathAvatarType) x, global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None), 34);
+        = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.MultiPathAvatarType>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForEnum(16, x => (int) x, x => (global::EggLink.DanhengServer.Proto.MultiPathAvatarType) x, global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None), 10);
     private readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.MultiPathAvatarType> curAvatarPath_ = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.MultiPathAvatarType>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -103,8 +103,30 @@ namespace EggLink.DanhengServer.Proto {
       get { return curAvatarPath_; }
     }
 
+    /// <summary>Field number for the "multi_path_avatar_info_list" field.</summary>
+    public const int MultiPathAvatarInfoListFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo> _repeated_multiPathAvatarInfoList_codec
+        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo> multiPathAvatarInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo> MultiPathAvatarInfoList {
+      get { return multiPathAvatarInfoList_; }
+    }
+
+    /// <summary>Field number for the "basic_type_id_list" field.</summary>
+    public const int BasicTypeIdListFieldNumber = 9;
+    private static readonly pb::FieldCodec<uint> _repeated_basicTypeIdList_codec
+        = pb::FieldCodec.ForUInt32(74);
+    private readonly pbc::RepeatedField<uint> basicTypeIdList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> BasicTypeIdList {
+      get { return basicTypeIdList_; }
+    }
+
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 10;
+    public const int RetcodeFieldNumber = 6;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -113,28 +135,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         retcode_ = value;
       }
-    }
-
-    /// <summary>Field number for the "basic_type_id_list" field.</summary>
-    public const int BasicTypeIdListFieldNumber = 5;
-    private static readonly pb::FieldCodec<uint> _repeated_basicTypeIdList_codec
-        = pb::FieldCodec.ForUInt32(42);
-    private readonly pbc::RepeatedField<uint> basicTypeIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> BasicTypeIdList {
-      get { return basicTypeIdList_; }
-    }
-
-    /// <summary>Field number for the "multi_path_avatar_info_list" field.</summary>
-    public const int MultiPathAvatarInfoListFieldNumber = 11;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo> _repeated_multiPathAvatarInfoList_codec
-        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo> multiPathAvatarInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo> MultiPathAvatarInfoList {
-      get { return multiPathAvatarInfoList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -153,9 +153,9 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!CurAvatarPath.Equals(other.CurAvatarPath)) return false;
-      if (Retcode != other.Retcode) return false;
-      if(!basicTypeIdList_.Equals(other.basicTypeIdList_)) return false;
       if(!multiPathAvatarInfoList_.Equals(other.multiPathAvatarInfoList_)) return false;
+      if(!basicTypeIdList_.Equals(other.basicTypeIdList_)) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -164,9 +164,9 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= CurAvatarPath.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      hash ^= basicTypeIdList_.GetHashCode();
       hash ^= multiPathAvatarInfoList_.GetHashCode();
+      hash ^= basicTypeIdList_.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -186,12 +186,12 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       curAvatarPath_.WriteTo(output, _map_curAvatarPath_codec);
-      basicTypeIdList_.WriteTo(output, _repeated_basicTypeIdList_codec);
+      multiPathAvatarInfoList_.WriteTo(output, _repeated_multiPathAvatarInfoList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
-      multiPathAvatarInfoList_.WriteTo(output, _repeated_multiPathAvatarInfoList_codec);
+      basicTypeIdList_.WriteTo(output, _repeated_basicTypeIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -203,12 +203,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       curAvatarPath_.WriteTo(ref output, _map_curAvatarPath_codec);
-      basicTypeIdList_.WriteTo(ref output, _repeated_basicTypeIdList_codec);
+      multiPathAvatarInfoList_.WriteTo(ref output, _repeated_multiPathAvatarInfoList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
-      multiPathAvatarInfoList_.WriteTo(ref output, _repeated_multiPathAvatarInfoList_codec);
+      basicTypeIdList_.WriteTo(ref output, _repeated_basicTypeIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -220,11 +220,11 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += curAvatarPath_.CalculateSize(_map_curAvatarPath_codec);
+      size += multiPathAvatarInfoList_.CalculateSize(_repeated_multiPathAvatarInfoList_codec);
+      size += basicTypeIdList_.CalculateSize(_repeated_basicTypeIdList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += basicTypeIdList_.CalculateSize(_repeated_basicTypeIdList_codec);
-      size += multiPathAvatarInfoList_.CalculateSize(_repeated_multiPathAvatarInfoList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -238,11 +238,11 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       curAvatarPath_.MergeFrom(other.curAvatarPath_);
+      multiPathAvatarInfoList_.Add(other.multiPathAvatarInfoList_);
+      basicTypeIdList_.Add(other.basicTypeIdList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      basicTypeIdList_.Add(other.basicTypeIdList_);
-      multiPathAvatarInfoList_.Add(other.multiPathAvatarInfoList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -258,21 +258,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
+          case 10: {
             curAvatarPath_.AddEntriesFrom(input, _map_curAvatarPath_codec);
             break;
           }
-          case 42:
-          case 40: {
-            basicTypeIdList_.AddEntriesFrom(input, _repeated_basicTypeIdList_codec);
+          case 26: {
+            multiPathAvatarInfoList_.AddEntriesFrom(input, _repeated_multiPathAvatarInfoList_codec);
             break;
           }
-          case 80: {
+          case 48: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 90: {
-            multiPathAvatarInfoList_.AddEntriesFrom(input, _repeated_multiPathAvatarInfoList_codec);
+          case 74:
+          case 72: {
+            basicTypeIdList_.AddEntriesFrom(input, _repeated_basicTypeIdList_codec);
             break;
           }
         }
@@ -290,21 +290,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
+          case 10: {
             curAvatarPath_.AddEntriesFrom(ref input, _map_curAvatarPath_codec);
             break;
           }
-          case 42:
-          case 40: {
-            basicTypeIdList_.AddEntriesFrom(ref input, _repeated_basicTypeIdList_codec);
+          case 26: {
+            multiPathAvatarInfoList_.AddEntriesFrom(ref input, _repeated_multiPathAvatarInfoList_codec);
             break;
           }
-          case 80: {
+          case 48: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 90: {
-            multiPathAvatarInfoList_.AddEntriesFrom(ref input, _repeated_multiPathAvatarInfoList_codec);
+          case 74:
+          case 72: {
+            basicTypeIdList_.AddEntriesFrom(ref input, _repeated_basicTypeIdList_codec);
             break;
           }
         }

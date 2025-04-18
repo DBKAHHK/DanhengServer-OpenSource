@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static SummonPetScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRTdW1tb25QZXRTY1JzcC5wcm90byJMCg5TdW1tb25QZXRTY1JzcBISCgpj",
-            "dXJfcGV0X2lkGAggASgNEg8KB3JldGNvZGUYDSABKA0SFQoNc2VsZWN0X3Bl",
-            "dF9pZBgBIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "ChRTdW1tb25QZXRTY1JzcC5wcm90byJMCg5TdW1tb25QZXRTY1JzcBIVCg1z",
+            "ZWxlY3RfcGV0X2lkGAcgASgNEhIKCmN1cl9wZXRfaWQYCyABKA0SDwoHcmV0",
+            "Y29kZRgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SummonPetScRsp), global::EggLink.DanhengServer.Proto.SummonPetScRsp.Parser, new[]{ "CurPetId", "Retcode", "SelectPetId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SummonPetScRsp), global::EggLink.DanhengServer.Proto.SummonPetScRsp.Parser, new[]{ "SelectPetId", "CurPetId", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SummonPetScRsp(SummonPetScRsp other) : this() {
+      selectPetId_ = other.selectPetId_;
       curPetId_ = other.curPetId_;
       retcode_ = other.retcode_;
-      selectPetId_ = other.selectPetId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,8 +85,20 @@ namespace EggLink.DanhengServer.Proto {
       return new SummonPetScRsp(this);
     }
 
+    /// <summary>Field number for the "select_pet_id" field.</summary>
+    public const int SelectPetIdFieldNumber = 7;
+    private uint selectPetId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SelectPetId {
+      get { return selectPetId_; }
+      set {
+        selectPetId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "cur_pet_id" field.</summary>
-    public const int CurPetIdFieldNumber = 8;
+    public const int CurPetIdFieldNumber = 11;
     private uint curPetId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 13;
+    public const int RetcodeFieldNumber = 3;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,18 +118,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "select_pet_id" field.</summary>
-    public const int SelectPetIdFieldNumber = 1;
-    private uint selectPetId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SelectPetId {
-      get { return selectPetId_; }
-      set {
-        selectPetId_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (SelectPetId != other.SelectPetId) return false;
       if (CurPetId != other.CurPetId) return false;
       if (Retcode != other.Retcode) return false;
-      if (SelectPetId != other.SelectPetId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (SelectPetId != 0) hash ^= SelectPetId.GetHashCode();
       if (CurPetId != 0) hash ^= CurPetId.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (SelectPetId != 0) hash ^= SelectPetId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (Retcode != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Retcode);
+      }
       if (SelectPetId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(56);
         output.WriteUInt32(SelectPetId);
       }
       if (CurPetId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(88);
         output.WriteUInt32(CurPetId);
-      }
-      if (Retcode != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Retcode != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Retcode);
+      }
       if (SelectPetId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(56);
         output.WriteUInt32(SelectPetId);
       }
       if (CurPetId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(88);
         output.WriteUInt32(CurPetId);
-      }
-      if (Retcode != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,14 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (SelectPetId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SelectPetId);
+      }
       if (CurPetId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurPetId);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
-      if (SelectPetId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SelectPetId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,14 +232,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.SelectPetId != 0) {
+        SelectPetId = other.SelectPetId;
+      }
       if (other.CurPetId != 0) {
         CurPetId = other.CurPetId;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
-      }
-      if (other.SelectPetId != 0) {
-        SelectPetId = other.SelectPetId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 24: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 56: {
             SelectPetId = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 88: {
             CurPetId = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 24: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 56: {
             SelectPetId = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 88: {
             CurPetId = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }

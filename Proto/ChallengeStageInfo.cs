@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhDaGFsbGVuZ2VTdGFnZUluZm8ucHJvdG8aF0NoYWxsZW5nZUJvc3NJbmZv",
-            "LnByb3RvIkoKEkNoYWxsZW5nZVN0YWdlSW5mbxInCglib3NzX2luZm8YBSAB",
+            "LnByb3RvIkoKEkNoYWxsZW5nZVN0YWdlSW5mbxInCglib3NzX2luZm8YByAB",
             "KAsyEi5DaGFsbGVuZ2VCb3NzSW5mb0gAQgsKCWluZm9fY2FzZUIeqgIbRWdn",
             "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -89,7 +89,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "boss_info" field.</summary>
-    public const int BossInfoFieldNumber = 5;
+    public const int BossInfoFieldNumber = 7;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.ChallengeBossInfo BossInfo {
@@ -104,7 +104,7 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "info_case" oneof.</summary>
     public enum InfoCaseOneofCase {
       None = 0,
-      BossInfo = 5,
+      BossInfo = 7,
     }
     private InfoCaseOneofCase infoCaseCase_ = InfoCaseOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -165,7 +165,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (infoCaseCase_ == InfoCaseOneofCase.BossInfo) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(58);
         output.WriteMessage(BossInfo);
       }
       if (_unknownFields != null) {
@@ -179,7 +179,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (infoCaseCase_ == InfoCaseOneofCase.BossInfo) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(58);
         output.WriteMessage(BossInfo);
       }
       if (_unknownFields != null) {
@@ -231,7 +231,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
+          case 58: {
             global::EggLink.DanhengServer.Proto.ChallengeBossInfo subBuilder = new global::EggLink.DanhengServer.Proto.ChallengeBossInfo();
             if (infoCaseCase_ == InfoCaseOneofCase.BossInfo) {
               subBuilder.MergeFrom(BossInfo);
@@ -255,7 +255,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
+          case 58: {
             global::EggLink.DanhengServer.Proto.ChallengeBossInfo subBuilder = new global::EggLink.DanhengServer.Proto.ChallengeBossInfo();
             if (infoCaseCase_ == InfoCaseOneofCase.BossInfo) {
               subBuilder.MergeFrom(BossInfo);

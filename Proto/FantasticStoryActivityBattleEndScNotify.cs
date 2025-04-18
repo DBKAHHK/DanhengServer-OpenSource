@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ci1GYW50YXN0aWNTdG9yeUFjdGl2aXR5QmF0dGxlRW5kU2NOb3RpZnkucHJv",
             "dG8iZgonRmFudGFzdGljU3RvcnlBY3Rpdml0eUJhdHRsZUVuZFNjTm90aWZ5",
-            "EhMKC0JFSkNBTERJTE5DGAkgASgNEhEKCWJhdHRsZV9pZBgDIAEoDRITCgtQ",
+            "EhMKC0JFSkNBTERJTE5DGAUgASgNEhEKCWJhdHRsZV9pZBgKIAEoDRITCgtQ",
             "S0tMUEJCTk5DRRgGIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "BEJCALDILNC" field.</summary>
-    public const int BEJCALDILNCFieldNumber = 9;
+    public const int BEJCALDILNCFieldNumber = 5;
     private uint bEJCALDILNC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "battle_id" field.</summary>
-    public const int BattleIdFieldNumber = 3;
+    public const int BattleIdFieldNumber = 10;
     private uint battleId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -168,17 +168,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (BattleId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(BattleId);
+      if (BEJCALDILNC != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(BEJCALDILNC);
       }
       if (PKKLPBBNNCE != 0) {
         output.WriteRawTag(48);
         output.WriteUInt32(PKKLPBBNNCE);
       }
-      if (BEJCALDILNC != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(BEJCALDILNC);
+      if (BattleId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(BattleId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,17 +190,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BattleId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(BattleId);
+      if (BEJCALDILNC != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(BEJCALDILNC);
       }
       if (PKKLPBBNNCE != 0) {
         output.WriteRawTag(48);
         output.WriteUInt32(PKKLPBBNNCE);
       }
-      if (BEJCALDILNC != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(BEJCALDILNC);
+      if (BattleId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(BattleId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -257,16 +257,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            BattleId = input.ReadUInt32();
+          case 40: {
+            BEJCALDILNC = input.ReadUInt32();
             break;
           }
           case 48: {
             PKKLPBBNNCE = input.ReadUInt32();
             break;
           }
-          case 72: {
-            BEJCALDILNC = input.ReadUInt32();
+          case 80: {
+            BattleId = input.ReadUInt32();
             break;
           }
         }
@@ -284,16 +284,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            BattleId = input.ReadUInt32();
+          case 40: {
+            BEJCALDILNC = input.ReadUInt32();
             break;
           }
           case 48: {
             PKKLPBBNNCE = input.ReadUInt32();
             break;
           }
-          case 72: {
-            BEJCALDILNC = input.ReadUInt32();
+          case 80: {
+            BattleId = input.ReadUInt32();
             break;
           }
         }

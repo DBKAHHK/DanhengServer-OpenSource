@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFHZXRNb25vcG9seURhaWx5UmVwb3J0U2NSc3AucHJvdG8aEUFFREtQQkZD",
-            "S0dPLnByb3RvIlEKG0dldE1vbm9wb2x5RGFpbHlSZXBvcnRTY1JzcBIhCgtM",
-            "SkFPR0FQREZIQRgGIAEoCzIMLkFFREtQQkZDS0dPEg8KB3JldGNvZGUYCCAB",
-            "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "S0dPLnByb3RvIlEKG0dldE1vbm9wb2x5RGFpbHlSZXBvcnRTY1JzcBIPCgdy",
+            "ZXRjb2RlGAwgASgNEiEKC0xKQU9HQVBERkhBGAYgASgLMgwuQUVES1BCRkNL",
+            "R09CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AEDKPBFCKGOReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMonopolyDailyReportScRsp), global::EggLink.DanhengServer.Proto.GetMonopolyDailyReportScRsp.Parser, new[]{ "LJAOGAPDFHA", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMonopolyDailyReportScRsp), global::EggLink.DanhengServer.Proto.GetMonopolyDailyReportScRsp.Parser, new[]{ "Retcode", "LJAOGAPDFHA" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetMonopolyDailyReportScRsp(GetMonopolyDailyReportScRsp other) : this() {
-      lJAOGAPDFHA_ = other.lJAOGAPDFHA_ != null ? other.lJAOGAPDFHA_.Clone() : null;
       retcode_ = other.retcode_;
+      lJAOGAPDFHA_ = other.lJAOGAPDFHA_ != null ? other.lJAOGAPDFHA_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,6 +82,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetMonopolyDailyReportScRsp Clone() {
       return new GetMonopolyDailyReportScRsp(this);
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 12;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
+      }
     }
 
     /// <summary>Field number for the "LJAOGAPDFHA" field.</summary>
@@ -93,18 +105,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return lJAOGAPDFHA_; }
       set {
         lJAOGAPDFHA_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 8;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(LJAOGAPDFHA, other.LJAOGAPDFHA)) return false;
       if (Retcode != other.Retcode) return false;
+      if (!object.Equals(LJAOGAPDFHA, other.LJAOGAPDFHA)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (lJAOGAPDFHA_ != null) hash ^= LJAOGAPDFHA.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (lJAOGAPDFHA_ != null) hash ^= LJAOGAPDFHA.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteMessage(LJAOGAPDFHA);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteMessage(LJAOGAPDFHA);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (lJAOGAPDFHA_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LJAOGAPDFHA);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (lJAOGAPDFHA_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LJAOGAPDFHA);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,14 +206,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
       if (other.lJAOGAPDFHA_ != null) {
         if (lJAOGAPDFHA_ == null) {
           LJAOGAPDFHA = new global::EggLink.DanhengServer.Proto.AEDKPBFCKGO();
         }
         LJAOGAPDFHA.MergeFrom(other.LJAOGAPDFHA);
-      }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -237,7 +237,7 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(LJAOGAPDFHA);
             break;
           }
-          case 64: {
+          case 96: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -263,7 +263,7 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(LJAOGAPDFHA);
             break;
           }
-          case 64: {
+          case 96: {
             Retcode = input.ReadUInt32();
             break;
           }

@@ -78,6 +78,12 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
                     case ItemSubTypeEnum.PhoneTheme:
                         Player.PlayerUnlockData!.PhoneThemes.Add(itemId);
                         break;
+                    case ItemSubTypeEnum.PersonalCard:
+                        Player.PlayerUnlockData!.PersonalCards.Add(itemId);
+                        break;
+                    case ItemSubTypeEnum.PhoneCase:
+                        Player.PlayerUnlockData!.PhoneCases.Add(itemId);
+                        break;
                     case ItemSubTypeEnum.AvatarSkin:
                         var avatarId = GameData.AvatarSkinData[itemId].AvatarID;
                         if (!Player.PlayerUnlockData!.Skins.TryGetValue(avatarId, out var value))

@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFNdXNpY1JoeXRobUZpbmlzaExldmVsQ3NSZXEucHJvdG8iWQobTXVzaWNS",
-            "aHl0aG1GaW5pc2hMZXZlbENzUmVxEhQKDGZpbmlzaF9sZXZlbBgEIAEoDRIS",
-            "CgpmdWxsX2NvbWJvGAggASgIEhAKCHNjb3JlX2lkGAogASgNQh6qAhtFZ2dM",
+            "aHl0aG1GaW5pc2hMZXZlbENzUmVxEhAKCHNjb3JlX2lkGAMgASgNEhQKDGZp",
+            "bmlzaF9sZXZlbBgMIAEoDRISCgpmdWxsX2NvbWJvGA0gASgIQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmFinishLevelCsReq), global::EggLink.DanhengServer.Proto.MusicRhythmFinishLevelCsReq.Parser, new[]{ "FinishLevel", "FullCombo", "ScoreId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmFinishLevelCsReq), global::EggLink.DanhengServer.Proto.MusicRhythmFinishLevelCsReq.Parser, new[]{ "ScoreId", "FinishLevel", "FullCombo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MusicRhythmFinishLevelCsReq(MusicRhythmFinishLevelCsReq other) : this() {
+      scoreId_ = other.scoreId_;
       finishLevel_ = other.finishLevel_;
       fullCombo_ = other.fullCombo_;
-      scoreId_ = other.scoreId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,8 +85,20 @@ namespace EggLink.DanhengServer.Proto {
       return new MusicRhythmFinishLevelCsReq(this);
     }
 
+    /// <summary>Field number for the "score_id" field.</summary>
+    public const int ScoreIdFieldNumber = 3;
+    private uint scoreId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ScoreId {
+      get { return scoreId_; }
+      set {
+        scoreId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "finish_level" field.</summary>
-    public const int FinishLevelFieldNumber = 4;
+    public const int FinishLevelFieldNumber = 12;
     private uint finishLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "full_combo" field.</summary>
-    public const int FullComboFieldNumber = 8;
+    public const int FullComboFieldNumber = 13;
     private bool fullCombo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,18 +118,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return fullCombo_; }
       set {
         fullCombo_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "score_id" field.</summary>
-    public const int ScoreIdFieldNumber = 10;
-    private uint scoreId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ScoreId {
-      get { return scoreId_; }
-      set {
-        scoreId_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (ScoreId != other.ScoreId) return false;
       if (FinishLevel != other.FinishLevel) return false;
       if (FullCombo != other.FullCombo) return false;
-      if (ScoreId != other.ScoreId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (ScoreId != 0) hash ^= ScoreId.GetHashCode();
       if (FinishLevel != 0) hash ^= FinishLevel.GetHashCode();
       if (FullCombo != false) hash ^= FullCombo.GetHashCode();
-      if (ScoreId != 0) hash ^= ScoreId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (ScoreId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(ScoreId);
+      }
       if (FinishLevel != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(96);
         output.WriteUInt32(FinishLevel);
       }
       if (FullCombo != false) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(104);
         output.WriteBool(FullCombo);
-      }
-      if (ScoreId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(ScoreId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ScoreId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(ScoreId);
+      }
       if (FinishLevel != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(96);
         output.WriteUInt32(FinishLevel);
       }
       if (FullCombo != false) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(104);
         output.WriteBool(FullCombo);
-      }
-      if (ScoreId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(ScoreId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,14 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (ScoreId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScoreId);
+      }
       if (FinishLevel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FinishLevel);
       }
       if (FullCombo != false) {
         size += 1 + 1;
-      }
-      if (ScoreId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScoreId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,14 +232,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.ScoreId != 0) {
+        ScoreId = other.ScoreId;
+      }
       if (other.FinishLevel != 0) {
         FinishLevel = other.FinishLevel;
       }
       if (other.FullCombo != false) {
         FullCombo = other.FullCombo;
-      }
-      if (other.ScoreId != 0) {
-        ScoreId = other.ScoreId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 24: {
+            ScoreId = input.ReadUInt32();
+            break;
+          }
+          case 96: {
             FinishLevel = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 104: {
             FullCombo = input.ReadBool();
-            break;
-          }
-          case 80: {
-            ScoreId = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 24: {
+            ScoreId = input.ReadUInt32();
+            break;
+          }
+          case 96: {
             FinishLevel = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 104: {
             FullCombo = input.ReadBool();
-            break;
-          }
-          case 80: {
-            ScoreId = input.ReadUInt32();
             break;
           }
         }

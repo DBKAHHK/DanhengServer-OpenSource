@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChFKQ0ROTUJDS1BMRi5wcm90bxoRR0lJTEVOTUtDQUgucHJvdG8aHkRpZmZp",
             "Y3VsdHlBZGp1c3RtZW50VHlwZS5wcm90byJ1CgtKQ0ROTUJDS1BMRhIKCgJp",
-            "ZBgEIAEoDRIuCgtLQ01KS0dBRFBJUBgDIAEoDjIZLkRpZmZpY3VsdHlBZGp1",
+            "ZBgEIAEoDRIuCgtLQ01KS0dBRFBJUBgPIAEoDjIZLkRpZmZpY3VsdHlBZGp1",
             "c3RtZW50VHlwZRIqChRtb2RpZmllcl9zb3VyY2VfdHlwZRgFIAEoDjIMLkdJ",
             "SUxFTk1LQ0FIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
@@ -100,7 +100,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "KCMJKGADPIP" field.</summary>
-    public const int KCMJKGADPIPFieldNumber = 3;
+    public const int KCMJKGADPIPFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.DifficultyAdjustmentType kCMJKGADPIP_ = global::EggLink.DanhengServer.Proto.DifficultyAdjustmentType.DifficultyAjustmentTypeDefault;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -169,10 +169,6 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (KCMJKGADPIP != global::EggLink.DanhengServer.Proto.DifficultyAdjustmentType.DifficultyAjustmentTypeDefault) {
-        output.WriteRawTag(24);
-        output.WriteEnum((int) KCMJKGADPIP);
-      }
       if (Id != 0) {
         output.WriteRawTag(32);
         output.WriteUInt32(Id);
@@ -180,6 +176,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ModifierSourceType != global::EggLink.DanhengServer.Proto.GIILENMKCAH.DifficultyAjustmentSourceNone) {
         output.WriteRawTag(40);
         output.WriteEnum((int) ModifierSourceType);
+      }
+      if (KCMJKGADPIP != global::EggLink.DanhengServer.Proto.DifficultyAdjustmentType.DifficultyAjustmentTypeDefault) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) KCMJKGADPIP);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -191,10 +191,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (KCMJKGADPIP != global::EggLink.DanhengServer.Proto.DifficultyAdjustmentType.DifficultyAjustmentTypeDefault) {
-        output.WriteRawTag(24);
-        output.WriteEnum((int) KCMJKGADPIP);
-      }
       if (Id != 0) {
         output.WriteRawTag(32);
         output.WriteUInt32(Id);
@@ -202,6 +198,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ModifierSourceType != global::EggLink.DanhengServer.Proto.GIILENMKCAH.DifficultyAjustmentSourceNone) {
         output.WriteRawTag(40);
         output.WriteEnum((int) ModifierSourceType);
+      }
+      if (KCMJKGADPIP != global::EggLink.DanhengServer.Proto.DifficultyAdjustmentType.DifficultyAjustmentTypeDefault) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) KCMJKGADPIP);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -258,16 +258,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            KCMJKGADPIP = (global::EggLink.DanhengServer.Proto.DifficultyAdjustmentType) input.ReadEnum();
-            break;
-          }
           case 32: {
             Id = input.ReadUInt32();
             break;
           }
           case 40: {
             ModifierSourceType = (global::EggLink.DanhengServer.Proto.GIILENMKCAH) input.ReadEnum();
+            break;
+          }
+          case 120: {
+            KCMJKGADPIP = (global::EggLink.DanhengServer.Proto.DifficultyAdjustmentType) input.ReadEnum();
             break;
           }
         }
@@ -285,16 +285,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            KCMJKGADPIP = (global::EggLink.DanhengServer.Proto.DifficultyAdjustmentType) input.ReadEnum();
-            break;
-          }
           case 32: {
             Id = input.ReadUInt32();
             break;
           }
           case 40: {
             ModifierSourceType = (global::EggLink.DanhengServer.Proto.GIILENMKCAH) input.ReadEnum();
+            break;
+          }
+          case 120: {
+            KCMJKGADPIP = (global::EggLink.DanhengServer.Proto.DifficultyAdjustmentType) input.ReadEnum();
             break;
           }
         }

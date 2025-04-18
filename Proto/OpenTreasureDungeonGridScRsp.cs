@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiJPcGVuVHJlYXN1cmVEdW5nZW9uR3JpZFNjUnNwLnByb3RvGhpUcmVhc3Vy",
             "ZUR1bmdlb25MZXZlbC5wcm90byJbChxPcGVuVHJlYXN1cmVEdW5nZW9uR3Jp",
-            "ZFNjUnNwEioKC0RMRUpQSkpDRUxKGAEgASgLMhUuVHJlYXN1cmVEdW5nZW9u",
-            "TGV2ZWwSDwoHcmV0Y29kZRgOIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
+            "ZFNjUnNwEioKC0RMRUpQSkpDRUxKGAogASgLMhUuVHJlYXN1cmVEdW5nZW9u",
+            "TGV2ZWwSDwoHcmV0Y29kZRgGIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TreasureDungeonLevelReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "DLEJPJJCELJ" field.</summary>
-    public const int DLEJPJJCELJFieldNumber = 1;
+    public const int DLEJPJJCELJFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.TreasureDungeonLevel dLEJPJJCELJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 14;
+    public const int RetcodeFieldNumber = 6;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (dLEJPJJCELJ_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(DLEJPJJCELJ);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
+      }
+      if (dLEJPJJCELJ_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(DLEJPJJCELJ);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (dLEJPJJCELJ_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(DLEJPJJCELJ);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
+      }
+      if (dLEJPJJCELJ_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(DLEJPJJCELJ);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 48: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 82: {
             if (dLEJPJJCELJ_ == null) {
               DLEJPJJCELJ = new global::EggLink.DanhengServer.Proto.TreasureDungeonLevel();
             }
             input.ReadMessage(DLEJPJJCELJ);
-            break;
-          }
-          case 112: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 48: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 82: {
             if (dLEJPJJCELJ_ == null) {
               DLEJPJJCELJ = new global::EggLink.DanhengServer.Proto.TreasureDungeonLevel();
             }
             input.ReadMessage(DLEJPJJCELJ);
-            break;
-          }
-          case 112: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }

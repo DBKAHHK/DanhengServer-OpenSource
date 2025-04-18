@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static GetMailCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJHZXRNYWlsQ3NSZXEucHJvdG8iOAoMR2V0TWFpbENzUmVxEhMKC0RBUENE",
-            "TkVMQ01BGAcgASgNEhMKC0NJSkVGTk9PSkpLGAwgASgNQh6qAhtFZ2dMaW5r",
+            "ChJHZXRNYWlsQ3NSZXEucHJvdG8iOAoMR2V0TWFpbENzUmVxEhMKC0NJSkVG",
+            "Tk9PSkpLGAkgASgNEhMKC0RBUENETkVMQ01BGA8gASgNQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMailCsReq), global::EggLink.DanhengServer.Proto.GetMailCsReq.Parser, new[]{ "DAPCDNELCMA", "CIJEFNOOJJK" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMailCsReq), global::EggLink.DanhengServer.Proto.GetMailCsReq.Parser, new[]{ "CIJEFNOOJJK", "DAPCDNELCMA" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetMailCsReq(GetMailCsReq other) : this() {
-      dAPCDNELCMA_ = other.dAPCDNELCMA_;
       cIJEFNOOJJK_ = other.cIJEFNOOJJK_;
+      dAPCDNELCMA_ = other.dAPCDNELCMA_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,20 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new GetMailCsReq(this);
     }
 
-    /// <summary>Field number for the "DAPCDNELCMA" field.</summary>
-    public const int DAPCDNELCMAFieldNumber = 7;
-    private uint dAPCDNELCMA_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DAPCDNELCMA {
-      get { return dAPCDNELCMA_; }
-      set {
-        dAPCDNELCMA_ = value;
-      }
-    }
-
     /// <summary>Field number for the "CIJEFNOOJJK" field.</summary>
-    public const int CIJEFNOOJJKFieldNumber = 12;
+    public const int CIJEFNOOJJKFieldNumber = 9;
     private uint cIJEFNOOJJK_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,6 +92,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return cIJEFNOOJJK_; }
       set {
         cIJEFNOOJJK_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "DAPCDNELCMA" field.</summary>
+    public const int DAPCDNELCMAFieldNumber = 15;
+    private uint dAPCDNELCMA_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DAPCDNELCMA {
+      get { return dAPCDNELCMA_; }
+      set {
+        dAPCDNELCMA_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DAPCDNELCMA != other.DAPCDNELCMA) return false;
       if (CIJEFNOOJJK != other.CIJEFNOOJJK) return false;
+      if (DAPCDNELCMA != other.DAPCDNELCMA) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (DAPCDNELCMA != 0) hash ^= DAPCDNELCMA.GetHashCode();
       if (CIJEFNOOJJK != 0) hash ^= CIJEFNOOJJK.GetHashCode();
+      if (DAPCDNELCMA != 0) hash ^= DAPCDNELCMA.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (DAPCDNELCMA != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(DAPCDNELCMA);
-      }
       if (CIJEFNOOJJK != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(72);
         output.WriteUInt32(CIJEFNOOJJK);
+      }
+      if (DAPCDNELCMA != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(DAPCDNELCMA);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (DAPCDNELCMA != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(DAPCDNELCMA);
-      }
       if (CIJEFNOOJJK != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(72);
         output.WriteUInt32(CIJEFNOOJJK);
+      }
+      if (DAPCDNELCMA != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(DAPCDNELCMA);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (DAPCDNELCMA != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DAPCDNELCMA);
-      }
       if (CIJEFNOOJJK != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CIJEFNOOJJK);
+      }
+      if (DAPCDNELCMA != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DAPCDNELCMA);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.DAPCDNELCMA != 0) {
-        DAPCDNELCMA = other.DAPCDNELCMA;
-      }
       if (other.CIJEFNOOJJK != 0) {
         CIJEFNOOJJK = other.CIJEFNOOJJK;
+      }
+      if (other.DAPCDNELCMA != 0) {
+        DAPCDNELCMA = other.DAPCDNELCMA;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            DAPCDNELCMA = input.ReadUInt32();
+          case 72: {
+            CIJEFNOOJJK = input.ReadUInt32();
             break;
           }
-          case 96: {
-            CIJEFNOOJJK = input.ReadUInt32();
+          case 120: {
+            DAPCDNELCMA = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            DAPCDNELCMA = input.ReadUInt32();
+          case 72: {
+            CIJEFNOOJJK = input.ReadUInt32();
             break;
           }
-          case 96: {
-            CIJEFNOOJJK = input.ReadUInt32();
+          case 120: {
+            DAPCDNELCMA = input.ReadUInt32();
             break;
           }
         }

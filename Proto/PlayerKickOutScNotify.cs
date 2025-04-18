@@ -25,14 +25,17 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtQbGF5ZXJLaWNrT3V0U2NOb3RpZnkucHJvdG8aD0JsYWNrSW5mby5wcm90",
-            "bxoOS2lja1R5cGUucHJvdG8iVQoVUGxheWVyS2lja091dFNjTm90aWZ5Eh4K",
-            "CmJsYWNrX2luZm8YBCABKAsyCi5CbGFja0luZm8SHAoJa2lja190eXBlGA8g",
-            "ASgOMgkuS2lja1R5cGVCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
-            "b2IGcHJvdG8z"));
+            "byL5AQoVUGxheWVyS2lja091dFNjTm90aWZ5EjIKCWtpY2tfdHlwZRgOIAEo",
+            "DjIfLlBsYXllcktpY2tPdXRTY05vdGlmeS5LaWNrVHlwZRIeCgpibGFja19p",
+            "bmZvGA0gASgLMgouQmxhY2tJbmZvIosBCghLaWNrVHlwZRIRCg1LSUNLX1NR",
+            "VUVFWkVEEAASDgoKS0lDS19CTEFDSxABEhMKD0tJQ0tfQ0hBTkdFX1BXRBAC",
+            "EhwKGEtJQ0tfTE9HSU5fV0hJVEVfVElNRU9VVBADEhkKFUtJQ0tfQUNFX0FO",
+            "VElfQ0hFQVRFUhAEEg4KCktJQ0tfQllfR00QBUIeqgIbRWdnTGluay5EYW5o",
+            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BlackInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KickTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BlackInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify), global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Parser, new[]{ "BlackInfo", "KickType" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify), global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Parser, new[]{ "KickType", "BlackInfo" }, null, new[]{ typeof(global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Types.KickType) }, null, null)
           }));
     }
     #endregion
@@ -74,8 +77,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PlayerKickOutScNotify(PlayerKickOutScNotify other) : this() {
-      blackInfo_ = other.blackInfo_ != null ? other.blackInfo_.Clone() : null;
       kickType_ = other.kickType_;
+      blackInfo_ = other.blackInfo_ != null ? other.blackInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,8 +88,20 @@ namespace EggLink.DanhengServer.Proto {
       return new PlayerKickOutScNotify(this);
     }
 
+    /// <summary>Field number for the "kick_type" field.</summary>
+    public const int KickTypeFieldNumber = 14;
+    private global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Types.KickType kickType_ = global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Types.KickType.KickSqueezed;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Types.KickType KickType {
+      get { return kickType_; }
+      set {
+        kickType_ = value;
+      }
+    }
+
     /// <summary>Field number for the "black_info" field.</summary>
-    public const int BlackInfoFieldNumber = 4;
+    public const int BlackInfoFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.BlackInfo blackInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -94,18 +109,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return blackInfo_; }
       set {
         blackInfo_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "kick_type" field.</summary>
-    public const int KickTypeFieldNumber = 15;
-    private global::EggLink.DanhengServer.Proto.KickType kickType_ = global::EggLink.DanhengServer.Proto.KickType.KickSqueezed;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.KickType KickType {
-      get { return kickType_; }
-      set {
-        kickType_ = value;
       }
     }
 
@@ -124,8 +127,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(BlackInfo, other.BlackInfo)) return false;
       if (KickType != other.KickType) return false;
+      if (!object.Equals(BlackInfo, other.BlackInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,8 +136,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (KickType != global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Types.KickType.KickSqueezed) hash ^= KickType.GetHashCode();
       if (blackInfo_ != null) hash ^= BlackInfo.GetHashCode();
-      if (KickType != global::EggLink.DanhengServer.Proto.KickType.KickSqueezed) hash ^= KickType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -154,11 +157,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (blackInfo_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(106);
         output.WriteMessage(BlackInfo);
       }
-      if (KickType != global::EggLink.DanhengServer.Proto.KickType.KickSqueezed) {
-        output.WriteRawTag(120);
+      if (KickType != global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Types.KickType.KickSqueezed) {
+        output.WriteRawTag(112);
         output.WriteEnum((int) KickType);
       }
       if (_unknownFields != null) {
@@ -172,11 +175,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (blackInfo_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(106);
         output.WriteMessage(BlackInfo);
       }
-      if (KickType != global::EggLink.DanhengServer.Proto.KickType.KickSqueezed) {
-        output.WriteRawTag(120);
+      if (KickType != global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Types.KickType.KickSqueezed) {
+        output.WriteRawTag(112);
         output.WriteEnum((int) KickType);
       }
       if (_unknownFields != null) {
@@ -189,11 +192,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (KickType != global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Types.KickType.KickSqueezed) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) KickType);
+      }
       if (blackInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BlackInfo);
-      }
-      if (KickType != global::EggLink.DanhengServer.Proto.KickType.KickSqueezed) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) KickType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -207,14 +210,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.KickType != global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Types.KickType.KickSqueezed) {
+        KickType = other.KickType;
+      }
       if (other.blackInfo_ != null) {
         if (blackInfo_ == null) {
           BlackInfo = new global::EggLink.DanhengServer.Proto.BlackInfo();
         }
         BlackInfo.MergeFrom(other.BlackInfo);
-      }
-      if (other.KickType != global::EggLink.DanhengServer.Proto.KickType.KickSqueezed) {
-        KickType = other.KickType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,15 +234,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
+          case 106: {
             if (blackInfo_ == null) {
               BlackInfo = new global::EggLink.DanhengServer.Proto.BlackInfo();
             }
             input.ReadMessage(BlackInfo);
             break;
           }
-          case 120: {
-            KickType = (global::EggLink.DanhengServer.Proto.KickType) input.ReadEnum();
+          case 112: {
+            KickType = (global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Types.KickType) input.ReadEnum();
             break;
           }
         }
@@ -257,21 +260,38 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
+          case 106: {
             if (blackInfo_ == null) {
               BlackInfo = new global::EggLink.DanhengServer.Proto.BlackInfo();
             }
             input.ReadMessage(BlackInfo);
             break;
           }
-          case 120: {
-            KickType = (global::EggLink.DanhengServer.Proto.KickType) input.ReadEnum();
+          case 112: {
+            KickType = (global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Types.KickType) input.ReadEnum();
             break;
           }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the PlayerKickOutScNotify message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      public enum KickType {
+        [pbr::OriginalName("KICK_SQUEEZED")] KickSqueezed = 0,
+        [pbr::OriginalName("KICK_BLACK")] KickBlack = 1,
+        [pbr::OriginalName("KICK_CHANGE_PWD")] KickChangePwd = 2,
+        [pbr::OriginalName("KICK_LOGIN_WHITE_TIMEOUT")] KickLoginWhiteTimeout = 3,
+        [pbr::OriginalName("KICK_ACE_ANTI_CHEATER")] KickAceAntiCheater = 4,
+        [pbr::OriginalName("KICK_BY_GM")] KickByGm = 5,
+      }
+
+    }
+    #endregion
 
   }
 

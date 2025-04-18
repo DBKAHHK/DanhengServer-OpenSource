@@ -10,8 +10,8 @@ public class PacketSelectPamSkinScRsp : BasePacket
     {
         var proto = new SelectPamSkinScRsp
         {
-            CurPamSkinId = (uint)player.Data.CurrentPamSkin,
-            SelectPamSkinId = (uint)prevSkinId
+            CurSkin = (uint)player.Data.CurrentPamSkin,
+            SetSkin = (uint)prevSkinId
         };
 
         SetData(proto);

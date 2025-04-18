@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static BKMGDPHACKEReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFCS01HRFBIQUNLRS5wcm90byIuCgtCS01HRFBIQUNLRRITCgtCSUlOTkNO",
-            "RFBDRxgJIAEoCBIKCgJpZBgPIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
+            "ChFCS01HRFBIQUNLRS5wcm90byIuCgtCS01HRFBIQUNLRRIKCgJpZBgLIAEo",
+            "DRITCgtCSUlOTkNORFBDRxgIIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BKMGDPHACKE), global::EggLink.DanhengServer.Proto.BKMGDPHACKE.Parser, new[]{ "BIINNCNDPCG", "Id" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BKMGDPHACKE), global::EggLink.DanhengServer.Proto.BKMGDPHACKE.Parser, new[]{ "Id", "BIINNCNDPCG" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BKMGDPHACKE(BKMGDPHACKE other) : this() {
-      bIINNCNDPCG_ = other.bIINNCNDPCG_;
       id_ = other.id_;
+      bIINNCNDPCG_ = other.bIINNCNDPCG_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,20 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new BKMGDPHACKE(this);
     }
 
-    /// <summary>Field number for the "BIINNCNDPCG" field.</summary>
-    public const int BIINNCNDPCGFieldNumber = 9;
-    private bool bIINNCNDPCG_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool BIINNCNDPCG {
-      get { return bIINNCNDPCG_; }
-      set {
-        bIINNCNDPCG_ = value;
-      }
-    }
-
     /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 15;
+    public const int IdFieldNumber = 11;
     private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,6 +92,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return id_; }
       set {
         id_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "BIINNCNDPCG" field.</summary>
+    public const int BIINNCNDPCGFieldNumber = 8;
+    private bool bIINNCNDPCG_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool BIINNCNDPCG {
+      get { return bIINNCNDPCG_; }
+      set {
+        bIINNCNDPCG_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (BIINNCNDPCG != other.BIINNCNDPCG) return false;
       if (Id != other.Id) return false;
+      if (BIINNCNDPCG != other.BIINNCNDPCG) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (BIINNCNDPCG != false) hash ^= BIINNCNDPCG.GetHashCode();
       if (Id != 0) hash ^= Id.GetHashCode();
+      if (BIINNCNDPCG != false) hash ^= BIINNCNDPCG.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (BIINNCNDPCG != false) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(64);
         output.WriteBool(BIINNCNDPCG);
       }
       if (Id != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(88);
         output.WriteUInt32(Id);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (BIINNCNDPCG != false) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(64);
         output.WriteBool(BIINNCNDPCG);
       }
       if (Id != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(88);
         output.WriteUInt32(Id);
       }
       if (_unknownFields != null) {
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (BIINNCNDPCG != false) {
-        size += 1 + 1;
-      }
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
+      }
+      if (BIINNCNDPCG != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.BIINNCNDPCG != false) {
-        BIINNCNDPCG = other.BIINNCNDPCG;
-      }
       if (other.Id != 0) {
         Id = other.Id;
+      }
+      if (other.BIINNCNDPCG != false) {
+        BIINNCNDPCG = other.BIINNCNDPCG;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
+          case 64: {
             BIINNCNDPCG = input.ReadBool();
             break;
           }
-          case 120: {
+          case 88: {
             Id = input.ReadUInt32();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
+          case 64: {
             BIINNCNDPCG = input.ReadBool();
             break;
           }
-          case 120: {
+          case 88: {
             Id = input.ReadUInt32();
             break;
           }

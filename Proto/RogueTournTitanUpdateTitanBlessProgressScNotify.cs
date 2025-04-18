@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CjVSb2d1ZVRvdXJuVGl0YW5VcGRhdGVUaXRhbkJsZXNzUHJvZ3Jlc3NTY05v",
             "dGlmeS5wcm90byJPCi9Sb2d1ZVRvdXJuVGl0YW5VcGRhdGVUaXRhbkJsZXNz",
-            "UHJvZ3Jlc3NTY05vdGlmeRIcChR0aXRhbl9ibGVzc19wcm9ncmVzcxgFIAEo",
+            "UHJvZ3Jlc3NTY05vdGlmeRIcChR0aXRhbl9ibGVzc19wcm9ncmVzcxgIIAEo",
             "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "titan_bless_progress" field.</summary>
-    public const int TitanBlessProgressFieldNumber = 5;
+    public const int TitanBlessProgressFieldNumber = 8;
     private uint titanBlessProgress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (TitanBlessProgress != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(64);
         output.WriteUInt32(TitanBlessProgress);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (TitanBlessProgress != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(64);
         output.WriteUInt32(TitanBlessProgress);
       }
       if (_unknownFields != null) {
@@ -198,7 +198,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 64: {
             TitanBlessProgress = input.ReadUInt32();
             break;
           }
@@ -217,7 +217,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 64: {
             TitanBlessProgress = input.ReadUInt32();
             break;
           }

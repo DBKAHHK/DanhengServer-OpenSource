@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static NALPJMLJPNPReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFOQUxQSk1MSlBOUC5wcm90byI5CgtOQUxQSk1MSlBOUBIVCg1nZXRfaXRl",
-            "bV9saXN0GAIgASgNEhMKC09FRkhNQkpCTEdDGAEgASgNQh6qAhtFZ2dMaW5r",
+            "ChFOQUxQSk1MSlBOUC5wcm90byI5CgtOQUxQSk1MSlBOUBITCgtPRUZITUJK",
+            "QkxHQxgEIAEoDRIVCg1nZXRfaXRlbV9saXN0GAogASgNQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NALPJMLJPNP), global::EggLink.DanhengServer.Proto.NALPJMLJPNP.Parser, new[]{ "GetItemList", "OEFHMBJBLGC" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NALPJMLJPNP), global::EggLink.DanhengServer.Proto.NALPJMLJPNP.Parser, new[]{ "OEFHMBJBLGC", "GetItemList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NALPJMLJPNP(NALPJMLJPNP other) : this() {
-      getItemList_ = other.getItemList_;
       oEFHMBJBLGC_ = other.oEFHMBJBLGC_;
+      getItemList_ = other.getItemList_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,20 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new NALPJMLJPNP(this);
     }
 
-    /// <summary>Field number for the "get_item_list" field.</summary>
-    public const int GetItemListFieldNumber = 2;
-    private uint getItemList_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GetItemList {
-      get { return getItemList_; }
-      set {
-        getItemList_ = value;
-      }
-    }
-
     /// <summary>Field number for the "OEFHMBJBLGC" field.</summary>
-    public const int OEFHMBJBLGCFieldNumber = 1;
+    public const int OEFHMBJBLGCFieldNumber = 4;
     private uint oEFHMBJBLGC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,6 +92,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return oEFHMBJBLGC_; }
       set {
         oEFHMBJBLGC_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "get_item_list" field.</summary>
+    public const int GetItemListFieldNumber = 10;
+    private uint getItemList_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint GetItemList {
+      get { return getItemList_; }
+      set {
+        getItemList_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (GetItemList != other.GetItemList) return false;
       if (OEFHMBJBLGC != other.OEFHMBJBLGC) return false;
+      if (GetItemList != other.GetItemList) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (GetItemList != 0) hash ^= GetItemList.GetHashCode();
       if (OEFHMBJBLGC != 0) hash ^= OEFHMBJBLGC.GetHashCode();
+      if (GetItemList != 0) hash ^= GetItemList.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (OEFHMBJBLGC != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(32);
         output.WriteUInt32(OEFHMBJBLGC);
       }
       if (GetItemList != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(80);
         output.WriteUInt32(GetItemList);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (OEFHMBJBLGC != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(32);
         output.WriteUInt32(OEFHMBJBLGC);
       }
       if (GetItemList != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(80);
         output.WriteUInt32(GetItemList);
       }
       if (_unknownFields != null) {
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (GetItemList != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GetItemList);
-      }
       if (OEFHMBJBLGC != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OEFHMBJBLGC);
+      }
+      if (GetItemList != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GetItemList);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.GetItemList != 0) {
-        GetItemList = other.GetItemList;
-      }
       if (other.OEFHMBJBLGC != 0) {
         OEFHMBJBLGC = other.OEFHMBJBLGC;
+      }
+      if (other.GetItemList != 0) {
+        GetItemList = other.GetItemList;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 32: {
             OEFHMBJBLGC = input.ReadUInt32();
             break;
           }
-          case 16: {
+          case 80: {
             GetItemList = input.ReadUInt32();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 32: {
             OEFHMBJBLGC = input.ReadUInt32();
             break;
           }
-          case 16: {
+          case 80: {
             GetItemList = input.ReadUInt32();
             break;
           }

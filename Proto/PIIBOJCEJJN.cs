@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static PIIBOJCEJJNReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFQSUlCT0pDRUpKTi5wcm90byI3CgtQSUlCT0pDRUpKThITCgtDT0xCR0VK",
-            "RUxHSRgDIAEoDRITCgtHSU1MTkRMT0ZGQRgGIAEoDUIeqgIbRWdnTGluay5E",
+            "ChFQSUlCT0pDRUpKTi5wcm90byI3CgtQSUlCT0pDRUpKThITCgtkYWlseV9p",
+            "bmRleBgNIAEoDRITCgtHSU1MTkRMT0ZGQRgKIAEoDUIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PIIBOJCEJJN), global::EggLink.DanhengServer.Proto.PIIBOJCEJJN.Parser, new[]{ "COLBGEJELGI", "GIMLNDLOFFA" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PIIBOJCEJJN), global::EggLink.DanhengServer.Proto.PIIBOJCEJJN.Parser, new[]{ "DailyIndex", "GIMLNDLOFFA" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PIIBOJCEJJN(PIIBOJCEJJN other) : this() {
-      cOLBGEJELGI_ = other.cOLBGEJELGI_;
+      dailyIndex_ = other.dailyIndex_;
       gIMLNDLOFFA_ = other.gIMLNDLOFFA_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -83,20 +83,20 @@ namespace EggLink.DanhengServer.Proto {
       return new PIIBOJCEJJN(this);
     }
 
-    /// <summary>Field number for the "COLBGEJELGI" field.</summary>
-    public const int COLBGEJELGIFieldNumber = 3;
-    private uint cOLBGEJELGI_;
+    /// <summary>Field number for the "daily_index" field.</summary>
+    public const int DailyIndexFieldNumber = 13;
+    private uint dailyIndex_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint COLBGEJELGI {
-      get { return cOLBGEJELGI_; }
+    public uint DailyIndex {
+      get { return dailyIndex_; }
       set {
-        cOLBGEJELGI_ = value;
+        dailyIndex_ = value;
       }
     }
 
     /// <summary>Field number for the "GIMLNDLOFFA" field.</summary>
-    public const int GIMLNDLOFFAFieldNumber = 6;
+    public const int GIMLNDLOFFAFieldNumber = 10;
     private uint gIMLNDLOFFA_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (COLBGEJELGI != other.COLBGEJELGI) return false;
+      if (DailyIndex != other.DailyIndex) return false;
       if (GIMLNDLOFFA != other.GIMLNDLOFFA) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -131,7 +131,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (COLBGEJELGI != 0) hash ^= COLBGEJELGI.GetHashCode();
+      if (DailyIndex != 0) hash ^= DailyIndex.GetHashCode();
       if (GIMLNDLOFFA != 0) hash ^= GIMLNDLOFFA.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (COLBGEJELGI != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(COLBGEJELGI);
-      }
       if (GIMLNDLOFFA != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(80);
         output.WriteUInt32(GIMLNDLOFFA);
+      }
+      if (DailyIndex != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(DailyIndex);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (COLBGEJELGI != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(COLBGEJELGI);
-      }
       if (GIMLNDLOFFA != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(80);
         output.WriteUInt32(GIMLNDLOFFA);
+      }
+      if (DailyIndex != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(DailyIndex);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,8 +187,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (COLBGEJELGI != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(COLBGEJELGI);
+      if (DailyIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DailyIndex);
       }
       if (GIMLNDLOFFA != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GIMLNDLOFFA);
@@ -205,8 +205,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.COLBGEJELGI != 0) {
-        COLBGEJELGI = other.COLBGEJELGI;
+      if (other.DailyIndex != 0) {
+        DailyIndex = other.DailyIndex;
       }
       if (other.GIMLNDLOFFA != 0) {
         GIMLNDLOFFA = other.GIMLNDLOFFA;
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            COLBGEJELGI = input.ReadUInt32();
+          case 80: {
+            GIMLNDLOFFA = input.ReadUInt32();
             break;
           }
-          case 48: {
-            GIMLNDLOFFA = input.ReadUInt32();
+          case 104: {
+            DailyIndex = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            COLBGEJELGI = input.ReadUInt32();
+          case 80: {
+            GIMLNDLOFFA = input.ReadUInt32();
             break;
           }
-          case 48: {
-            GIMLNDLOFFA = input.ReadUInt32();
+          case 104: {
+            DailyIndex = input.ReadUInt32();
             break;
           }
         }

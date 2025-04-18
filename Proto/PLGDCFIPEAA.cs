@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFQTEdEQ0ZJUEVBQS5wcm90bxodUm9ndWVVbmxvY2tGdW5jdGlvblR5cGUu",
-            "cHJvdG8iPAoLUExHRENGSVBFQUESLQoLSlBHQ0RKREdEQkkYCSADKA4yGC5S",
+            "cHJvdG8iPAoLUExHRENGSVBFQUESLQoLSlBHQ0RKREdEQkkYCCADKA4yGC5S",
             "b2d1ZVVubG9ja0Z1bmN0aW9uVHlwZUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "JPGCDJDGDBI" field.</summary>
-    public const int JPGCDJDGDBIFieldNumber = 9;
+    public const int JPGCDJDGDBIFieldNumber = 8;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueUnlockFunctionType> _repeated_jPGCDJDGDBI_codec
-        = pb::FieldCodec.ForEnum(74, x => (int) x, x => (global::EggLink.DanhengServer.Proto.RogueUnlockFunctionType) x);
+        = pb::FieldCodec.ForEnum(66, x => (int) x, x => (global::EggLink.DanhengServer.Proto.RogueUnlockFunctionType) x);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueUnlockFunctionType> jPGCDJDGDBI_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueUnlockFunctionType>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,8 +187,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 74:
-          case 72: {
+          case 66:
+          case 64: {
             jPGCDJDGDBI_.AddEntriesFrom(input, _repeated_jPGCDJDGDBI_codec);
             break;
           }
@@ -207,8 +207,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 74:
-          case 72: {
+          case 66:
+          case 64: {
             jPGCDJDGDBI_.AddEntriesFrom(ref input, _repeated_jPGCDJDGDBI_codec);
             break;
           }

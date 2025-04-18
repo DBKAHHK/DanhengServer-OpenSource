@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiVHZXRSb2d1ZUNvbW1vbkRpYWxvZ3VlRGF0YVNjUnNwLnByb3RvGiFSb2d1",
             "ZUNvbW1vbkRpYWxvZ3VlRGF0YUluZm8ucHJvdG8ibAofR2V0Um9ndWVDb21t",
-            "b25EaWFsb2d1ZURhdGFTY1JzcBIPCgdyZXRjb2RlGAEgASgNEjgKEmRpYWxv",
-            "Z3VlX2RhdGFfbGlzdBgPIAMoCzIcLlJvZ3VlQ29tbW9uRGlhbG9ndWVEYXRh",
+            "b25EaWFsb2d1ZURhdGFTY1JzcBIPCgdyZXRjb2RlGAYgASgNEjgKEmRpYWxv",
+            "Z3VlX2RhdGFfbGlzdBgOIAMoCzIcLlJvZ3VlQ29tbW9uRGlhbG9ndWVEYXRh",
             "SW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfoReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 1;
+    public const int RetcodeFieldNumber = 6;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "dialogue_data_list" field.</summary>
-    public const int DialogueDataListFieldNumber = 15;
+    public const int DialogueDataListFieldNumber = 14;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo> _repeated_dialogueDataList_codec
-        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo.Parser);
+        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo> dialogueDataList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
       dialogueDataList_.WriteTo(output, _repeated_dialogueDataList_codec);
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
       dialogueDataList_.WriteTo(ref output, _repeated_dialogueDataList_codec);
@@ -217,11 +217,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 48: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 122: {
+          case 114: {
             dialogueDataList_.AddEntriesFrom(input, _repeated_dialogueDataList_codec);
             break;
           }
@@ -240,11 +240,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 48: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 122: {
+          case 114: {
             dialogueDataList_.AddEntriesFrom(ref input, _repeated_dialogueDataList_codec);
             break;
           }

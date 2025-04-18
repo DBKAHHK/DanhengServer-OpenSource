@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpDbGllbnRPYmpVcGxvYWRDc1JlcS5wcm90byJAChRDbGllbnRPYmpVcGxv",
-            "YWRDc1JlcRITCgtMS0pNSkdERUJFRRgPIAEoDBITCgtKQlBFTU9GTkVERxgC",
+            "YWRDc1JlcRITCgtMS0pNSkdERUJFRRgNIAEoDBITCgtKQlBFTU9GTkVERxgB",
             "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "LKJMJGDEBEE" field.</summary>
-    public const int LKJMJGDEBEEFieldNumber = 15;
+    public const int LKJMJGDEBEEFieldNumber = 13;
     private pb::ByteString lKJMJGDEBEE_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "JBPEMOFNEDG" field.</summary>
-    public const int JBPEMOFNEDGFieldNumber = 2;
+    public const int JBPEMOFNEDGFieldNumber = 1;
     private uint jBPEMOFNEDG_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (JBPEMOFNEDG != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(8);
         output.WriteUInt32(JBPEMOFNEDG);
       }
       if (LKJMJGDEBEE.Length != 0) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(106);
         output.WriteBytes(LKJMJGDEBEE);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (JBPEMOFNEDG != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(8);
         output.WriteUInt32(JBPEMOFNEDG);
       }
       if (LKJMJGDEBEE.Length != 0) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(106);
         output.WriteBytes(LKJMJGDEBEE);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 8: {
             JBPEMOFNEDG = input.ReadUInt32();
             break;
           }
-          case 122: {
+          case 106: {
             LKJMJGDEBEE = input.ReadBytes();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 8: {
             JBPEMOFNEDG = input.ReadUInt32();
             break;
           }
-          case 122: {
+          case 106: {
             LKJMJGDEBEE = input.ReadBytes();
             break;
           }

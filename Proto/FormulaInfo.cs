@@ -25,9 +25,9 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFGb3JtdWxhSW5mby5wcm90bxoZRm9ybXVsYUJ1ZmZUeXBlSW5mby5wcm90",
-            "byJqCgtGb3JtdWxhSW5mbxISCgpmb3JtdWxhX2lkGAUgASgNEjQKFmZvcm11",
-            "bGFfYnVmZl90eXBlX2xpc3QYCCADKAsyFC5Gb3JtdWxhQnVmZlR5cGVJbmZv",
-            "EhEKCWlzX2V4cGFuZBgDIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "byJqCgtGb3JtdWxhSW5mbxISCgpmb3JtdWxhX2lkGA8gASgNEjQKFmZvcm11",
+            "bGFfYnVmZl90eXBlX2xpc3QYAiADKAsyFC5Gb3JtdWxhQnVmZlR5cGVJbmZv",
+            "EhEKCWlzX2V4cGFuZBgGIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FormulaBuffTypeInfoReflection.Descriptor, },
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "formula_id" field.</summary>
-    public const int FormulaIdFieldNumber = 5;
+    public const int FormulaIdFieldNumber = 15;
     private uint formulaId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,9 +99,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "formula_buff_type_list" field.</summary>
-    public const int FormulaBuffTypeListFieldNumber = 8;
+    public const int FormulaBuffTypeListFieldNumber = 2;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.FormulaBuffTypeInfo> _repeated_formulaBuffTypeList_codec
-        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.FormulaBuffTypeInfo.Parser);
+        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.FormulaBuffTypeInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FormulaBuffTypeInfo> formulaBuffTypeList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FormulaBuffTypeInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_expand" field.</summary>
-    public const int IsExpandFieldNumber = 3;
+    public const int IsExpandFieldNumber = 6;
     private bool isExpand_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,15 +167,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      formulaBuffTypeList_.WriteTo(output, _repeated_formulaBuffTypeList_codec);
       if (IsExpand != false) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(48);
         output.WriteBool(IsExpand);
       }
       if (FormulaId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(120);
         output.WriteUInt32(FormulaId);
       }
-      formulaBuffTypeList_.WriteTo(output, _repeated_formulaBuffTypeList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -186,15 +186,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      formulaBuffTypeList_.WriteTo(ref output, _repeated_formulaBuffTypeList_codec);
       if (IsExpand != false) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(48);
         output.WriteBool(IsExpand);
       }
       if (FormulaId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(120);
         output.WriteUInt32(FormulaId);
       }
-      formulaBuffTypeList_.WriteTo(ref output, _repeated_formulaBuffTypeList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -246,16 +246,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 18: {
+            formulaBuffTypeList_.AddEntriesFrom(input, _repeated_formulaBuffTypeList_codec);
+            break;
+          }
+          case 48: {
             IsExpand = input.ReadBool();
             break;
           }
-          case 40: {
+          case 120: {
             FormulaId = input.ReadUInt32();
-            break;
-          }
-          case 66: {
-            formulaBuffTypeList_.AddEntriesFrom(input, _repeated_formulaBuffTypeList_codec);
             break;
           }
         }
@@ -273,16 +273,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 18: {
+            formulaBuffTypeList_.AddEntriesFrom(ref input, _repeated_formulaBuffTypeList_codec);
+            break;
+          }
+          case 48: {
             IsExpand = input.ReadBool();
             break;
           }
-          case 40: {
+          case 120: {
             FormulaId = input.ReadUInt32();
-            break;
-          }
-          case 66: {
-            formulaBuffTypeList_.AddEntriesFrom(ref input, _repeated_formulaBuffTypeList_codec);
             break;
           }
         }

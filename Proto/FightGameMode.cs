@@ -24,9 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static FightGameModeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNGaWdodEdhbWVNb2RlLnByb3RvKkUKDUZpZ2h0R2FtZU1vZGUSGAoURklH",
+            "ChNGaWdodEdhbWVNb2RlLnByb3RvKmEKDUZpZ2h0R2FtZU1vZGUSGAoURklH",
             "SFRfR0FNRV9NT0RFX05PTkUQABIaChZGSUdIVF9HQU1FX01PREVfTUFUQ0gz",
-            "EAFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "EAESGgoWRklHSFRfR0FNRV9NT0RFX01BUkJMRRACQh6qAhtFZ2dMaW5rLkRh",
+            "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.FightGameMode), }, null, null));
@@ -38,6 +39,7 @@ namespace EggLink.DanhengServer.Proto {
   public enum FightGameMode {
     [pbr::OriginalName("FIGHT_GAME_MODE_NONE")] None = 0,
     [pbr::OriginalName("FIGHT_GAME_MODE_MATCH3")] Match3 = 1,
+    [pbr::OriginalName("FIGHT_GAME_MODE_MARBLE")] Marble = 2,
   }
 
   #endregion

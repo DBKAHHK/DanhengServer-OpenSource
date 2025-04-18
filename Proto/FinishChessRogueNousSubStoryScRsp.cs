@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CidGaW5pc2hDaGVzc1JvZ3VlTm91c1N1YlN0b3J5U2NSc3AucHJvdG8iawoh",
             "RmluaXNoQ2hlc3NSb2d1ZU5vdXNTdWJTdG9yeVNjUnNwEiAKGGNoZXNzX3Jv",
-            "Z3VlX3N1Yl9zdG9yeV9pZBgBIAEoDRITCgtJRklJSkdOR09HUBgOIAEoDRIP",
-            "CgdyZXRjb2RlGAkgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
+            "Z3VlX3N1Yl9zdG9yeV9pZBgGIAEoDRITCgtJRklJSkdOR09HUBgMIAEoDRIP",
+            "CgdyZXRjb2RlGAsgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
             "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "chess_rogue_sub_story_id" field.</summary>
-    public const int ChessRogueSubStoryIdFieldNumber = 1;
+    public const int ChessRogueSubStoryIdFieldNumber = 6;
     private uint chessRogueSubStoryId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "IFIIJGNGOGP" field.</summary>
-    public const int IFIIJGNGOGPFieldNumber = 14;
+    public const int IFIIJGNGOGPFieldNumber = 12;
     private uint iFIIJGNGOGP_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 9;
+    public const int RetcodeFieldNumber = 11;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -169,15 +169,15 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (ChessRogueSubStoryId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(48);
         output.WriteUInt32(ChessRogueSubStoryId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
       }
       if (IFIIJGNGOGP != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(96);
         output.WriteUInt32(IFIIJGNGOGP);
       }
       if (_unknownFields != null) {
@@ -191,15 +191,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ChessRogueSubStoryId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(48);
         output.WriteUInt32(ChessRogueSubStoryId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
       }
       if (IFIIJGNGOGP != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(96);
         output.WriteUInt32(IFIIJGNGOGP);
       }
       if (_unknownFields != null) {
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 48: {
             ChessRogueSubStoryId = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 88: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 96: {
             IFIIJGNGOGP = input.ReadUInt32();
             break;
           }
@@ -284,15 +284,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 48: {
             ChessRogueSubStoryId = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 88: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 96: {
             IFIIJGNGOGP = input.ReadUInt32();
             break;
           }

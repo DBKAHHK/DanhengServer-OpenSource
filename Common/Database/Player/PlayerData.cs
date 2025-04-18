@@ -15,6 +15,8 @@ public class PlayerData : BaseDatabaseDataHelper
     public int HeadIcon { get; set; } = 208001;
     public int PhoneTheme { get; set; } = 221000;
     public int ChatBubble { get; set; } = 220000;
+    public int PersonalCard { get; set; } = 253000;
+    public int PhoneCase { get; set; } = 254000;
     public int CurrentBgm { get; set; } = 210007;
     public int CurrentPamSkin { get; set; } = 252000;
     public int Pet { get; set; } = 0;
@@ -77,9 +79,6 @@ public class PlayerData : BaseDatabaseDataHelper
 
     public PlayerSimpleInfo ToSimpleProto(FriendOnlineStatus status)
     {
-        if (!GameData.ChatBubbleConfigData.ContainsKey(ChatBubble)) // to avoid npe
-            ChatBubble = 220000;
-
         var info = new PlayerSimpleInfo
         {
             Nickname = Name,
@@ -90,7 +89,8 @@ public class PlayerData : BaseDatabaseDataHelper
             HeadIcon = (uint)HeadIcon,
             Platform = PlatformType.Pc,
             LastActiveTime = LastActiveTime,
-            ChatBubbleId = (uint)ChatBubble
+            ChatBubbleId = (uint)ChatBubble,
+            PersonalCard = (uint)PersonalCard
         };
 
         var pos = 0;
@@ -116,6 +116,7 @@ public class PlayerData : BaseDatabaseDataHelper
             Signature = Signature,
             IsBanned = false,
             HeadIcon = (uint)HeadIcon,
+            PersonalCard = (uint)PersonalCard,
             Platform = PlatformType.Pc,
             Uid = (uint)Uid,
             WorldLevel = (uint)WorldLevel,

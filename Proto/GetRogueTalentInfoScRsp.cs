@@ -27,7 +27,7 @@ namespace EggLink.DanhengServer.Proto {
             "Ch1HZXRSb2d1ZVRhbGVudEluZm9TY1JzcC5wcm90bxoZUm9ndWVUYWxlbnRJ",
             "bmZvTGlzdC5wcm90byJaChdHZXRSb2d1ZVRhbGVudEluZm9TY1JzcBIuChB0",
             "YWxlbnRfaW5mb19saXN0GAggASgLMhQuUm9ndWVUYWxlbnRJbmZvTGlzdBIP",
-            "CgdyZXRjb2RlGAogASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
+            "CgdyZXRjb2RlGAsgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
             "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTalentInfoListReflection.Descriptor, },
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 10;
+    public const int RetcodeFieldNumber = 11;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -158,7 +158,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteMessage(TalentInfoList);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -176,7 +176,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteMessage(TalentInfoList);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -238,7 +238,7 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(TalentInfoList);
             break;
           }
-          case 80: {
+          case 88: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -264,7 +264,7 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(TalentInfoList);
             break;
           }
-          case 80: {
+          case 88: {
             Retcode = input.ReadUInt32();
             break;
           }

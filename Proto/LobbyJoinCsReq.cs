@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRMb2JieUpvaW5Dc1JlcS5wcm90bxoRRVBFR0hDR0NNSFAucHJvdG8iRAoO",
-            "TG9iYnlKb2luQ3NSZXESDwoHcm9vbV9pZBgMIAEoBBIhCgtFSk9GQ05BRURI",
-            "SxgHIAEoCzIMLkVQRUdIQ0dDTUhQQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "TG9iYnlKb2luQ3NSZXESDwoHcm9vbV9pZBgLIAEoBBIhCgtFSk9GQ05BRURI",
+            "SxgEIAEoCzIMLkVQRUdIQ0dDTUhQQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EPEGHCGCMHPReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "room_id" field.</summary>
-    public const int RoomIdFieldNumber = 12;
+    public const int RoomIdFieldNumber = 11;
     private ulong roomId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "EJOFCNAEDHK" field.</summary>
-    public const int EJOFCNAEDHKFieldNumber = 7;
+    public const int EJOFCNAEDHKFieldNumber = 4;
     private global::EggLink.DanhengServer.Proto.EPEGHCGCMHP eJOFCNAEDHK_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (eJOFCNAEDHK_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(34);
         output.WriteMessage(EJOFCNAEDHK);
       }
       if (RoomId != 0UL) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(88);
         output.WriteUInt64(RoomId);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (eJOFCNAEDHK_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(34);
         output.WriteMessage(EJOFCNAEDHK);
       }
       if (RoomId != 0UL) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(88);
         output.WriteUInt64(RoomId);
       }
       if (_unknownFields != null) {
@@ -230,14 +230,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58: {
+          case 34: {
             if (eJOFCNAEDHK_ == null) {
               EJOFCNAEDHK = new global::EggLink.DanhengServer.Proto.EPEGHCGCMHP();
             }
             input.ReadMessage(EJOFCNAEDHK);
             break;
           }
-          case 96: {
+          case 88: {
             RoomId = input.ReadUInt64();
             break;
           }
@@ -256,14 +256,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58: {
+          case 34: {
             if (eJOFCNAEDHK_ == null) {
               EJOFCNAEDHK = new global::EggLink.DanhengServer.Proto.EPEGHCGCMHP();
             }
             input.ReadMessage(EJOFCNAEDHK);
             break;
           }
-          case 96: {
+          case 88: {
             RoomId = input.ReadUInt64();
             break;
           }

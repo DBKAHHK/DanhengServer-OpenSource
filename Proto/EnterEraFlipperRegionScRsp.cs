@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static EnterEraFlipperRegionScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiBFbnRlckVyYUZsaXBwZXJSZWdpb25TY1JzcC5wcm90byJCChpFbnRlckVy",
-            "YUZsaXBwZXJSZWdpb25TY1JzcBIPCgdyZXRjb2RlGAYgASgNEhMKC0FDTlBC",
-            "Qk5MTUlFGA4gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
-            "BnByb3RvMw=="));
+            "CiBFbnRlckVyYUZsaXBwZXJSZWdpb25TY1JzcC5wcm90byJMChpFbnRlckVy",
+            "YUZsaXBwZXJSZWdpb25TY1JzcBIPCgdyZXRjb2RlGAggASgNEh0KFWVyYV9m",
+            "bGlwcGVyX3JlZ2lvbl9pZBgMIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
+            "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EnterEraFlipperRegionScRsp), global::EggLink.DanhengServer.Proto.EnterEraFlipperRegionScRsp.Parser, new[]{ "Retcode", "ACNPBBNLMIE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EnterEraFlipperRegionScRsp), global::EggLink.DanhengServer.Proto.EnterEraFlipperRegionScRsp.Parser, new[]{ "Retcode", "EraFlipperRegionId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EnterEraFlipperRegionScRsp(EnterEraFlipperRegionScRsp other) : this() {
       retcode_ = other.retcode_;
-      aCNPBBNLMIE_ = other.aCNPBBNLMIE_;
+      eraFlipperRegionId_ = other.eraFlipperRegionId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 6;
+    public const int RetcodeFieldNumber = 8;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ACNPBBNLMIE" field.</summary>
-    public const int ACNPBBNLMIEFieldNumber = 14;
-    private uint aCNPBBNLMIE_;
+    /// <summary>Field number for the "era_flipper_region_id" field.</summary>
+    public const int EraFlipperRegionIdFieldNumber = 12;
+    private uint eraFlipperRegionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ACNPBBNLMIE {
-      get { return aCNPBBNLMIE_; }
+    public uint EraFlipperRegionId {
+      get { return eraFlipperRegionId_; }
       set {
-        aCNPBBNLMIE_ = value;
+        eraFlipperRegionId_ = value;
       }
     }
 
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Retcode != other.Retcode) return false;
-      if (ACNPBBNLMIE != other.ACNPBBNLMIE) return false;
+      if (EraFlipperRegionId != other.EraFlipperRegionId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (ACNPBBNLMIE != 0) hash ^= ACNPBBNLMIE.GetHashCode();
+      if (EraFlipperRegionId != 0) hash ^= EraFlipperRegionId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,12 +153,12 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
-      if (ACNPBBNLMIE != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(ACNPBBNLMIE);
+      if (EraFlipperRegionId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(EraFlipperRegionId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,12 +171,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
-      if (ACNPBBNLMIE != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(ACNPBBNLMIE);
+      if (EraFlipperRegionId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(EraFlipperRegionId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -191,8 +191,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (ACNPBBNLMIE != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ACNPBBNLMIE);
+      if (EraFlipperRegionId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EraFlipperRegionId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -209,8 +209,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.ACNPBBNLMIE != 0) {
-        ACNPBBNLMIE = other.ACNPBBNLMIE;
+      if (other.EraFlipperRegionId != 0) {
+        EraFlipperRegionId = other.EraFlipperRegionId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 64: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 112: {
-            ACNPBBNLMIE = input.ReadUInt32();
+          case 96: {
+            EraFlipperRegionId = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 64: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 112: {
-            ACNPBBNLMIE = input.ReadUInt32();
+          case 96: {
+            EraFlipperRegionId = input.ReadUInt32();
             break;
           }
         }

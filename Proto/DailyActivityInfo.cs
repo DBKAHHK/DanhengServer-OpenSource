@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static DailyActivityInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdEYWlseUFjdGl2aXR5SW5mby5wcm90byJhChFEYWlseUFjdGl2aXR5SW5m",
-            "bxITCgt3b3JsZF9sZXZlbBgIIAEoDRITCgtOT1BNRU5JQUZKTRgNIAEoCBIT",
-            "CgtJSU1KQ0xCT1BOQxgJIAEoDRINCgVsZXZlbBgFIAEoDUIeqgIbRWdnTGlu",
-            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChdEYWlseUFjdGl2aXR5SW5mby5wcm90byJoChFEYWlseUFjdGl2aXR5SW5m",
+            "bxIWCg5kYWlseV9wcm9ncmVzcxgHIAEoDRITCgt3b3JsZF9sZXZlbBgKIAEo",
+            "DRIXCg9pc190YWtlbl9yZXdhcmQYDCABKAgSDQoFbGV2ZWwYCSABKA1CHqoC",
+            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DailyActivityInfo), global::EggLink.DanhengServer.Proto.DailyActivityInfo.Parser, new[]{ "WorldLevel", "NOPMENIAFJM", "IIMJCLBOPNC", "Level" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DailyActivityInfo), global::EggLink.DanhengServer.Proto.DailyActivityInfo.Parser, new[]{ "DailyProgress", "WorldLevel", "IsTakenReward", "Level" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DailyActivityInfo(DailyActivityInfo other) : this() {
+      dailyProgress_ = other.dailyProgress_;
       worldLevel_ = other.worldLevel_;
-      nOPMENIAFJM_ = other.nOPMENIAFJM_;
-      iIMJCLBOPNC_ = other.iIMJCLBOPNC_;
+      isTakenReward_ = other.isTakenReward_;
       level_ = other.level_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -86,8 +86,20 @@ namespace EggLink.DanhengServer.Proto {
       return new DailyActivityInfo(this);
     }
 
+    /// <summary>Field number for the "daily_progress" field.</summary>
+    public const int DailyProgressFieldNumber = 7;
+    private uint dailyProgress_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DailyProgress {
+      get { return dailyProgress_; }
+      set {
+        dailyProgress_ = value;
+      }
+    }
+
     /// <summary>Field number for the "world_level" field.</summary>
-    public const int WorldLevelFieldNumber = 8;
+    public const int WorldLevelFieldNumber = 10;
     private uint worldLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,32 +110,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "NOPMENIAFJM" field.</summary>
-    public const int NOPMENIAFJMFieldNumber = 13;
-    private bool nOPMENIAFJM_;
+    /// <summary>Field number for the "is_taken_reward" field.</summary>
+    public const int IsTakenRewardFieldNumber = 12;
+    private bool isTakenReward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool NOPMENIAFJM {
-      get { return nOPMENIAFJM_; }
+    public bool IsTakenReward {
+      get { return isTakenReward_; }
       set {
-        nOPMENIAFJM_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "IIMJCLBOPNC" field.</summary>
-    public const int IIMJCLBOPNCFieldNumber = 9;
-    private uint iIMJCLBOPNC_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IIMJCLBOPNC {
-      get { return iIMJCLBOPNC_; }
-      set {
-        iIMJCLBOPNC_ = value;
+        isTakenReward_ = value;
       }
     }
 
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 5;
+    public const int LevelFieldNumber = 9;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -149,9 +149,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (DailyProgress != other.DailyProgress) return false;
       if (WorldLevel != other.WorldLevel) return false;
-      if (NOPMENIAFJM != other.NOPMENIAFJM) return false;
-      if (IIMJCLBOPNC != other.IIMJCLBOPNC) return false;
+      if (IsTakenReward != other.IsTakenReward) return false;
       if (Level != other.Level) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -160,9 +160,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (DailyProgress != 0) hash ^= DailyProgress.GetHashCode();
       if (WorldLevel != 0) hash ^= WorldLevel.GetHashCode();
-      if (NOPMENIAFJM != false) hash ^= NOPMENIAFJM.GetHashCode();
-      if (IIMJCLBOPNC != 0) hash ^= IIMJCLBOPNC.GetHashCode();
+      if (IsTakenReward != false) hash ^= IsTakenReward.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -182,21 +182,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (DailyProgress != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(DailyProgress);
+      }
       if (Level != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(72);
         output.WriteUInt32(Level);
       }
       if (WorldLevel != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(80);
         output.WriteUInt32(WorldLevel);
       }
-      if (IIMJCLBOPNC != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(IIMJCLBOPNC);
-      }
-      if (NOPMENIAFJM != false) {
-        output.WriteRawTag(104);
-        output.WriteBool(NOPMENIAFJM);
+      if (IsTakenReward != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(IsTakenReward);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -208,21 +208,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DailyProgress != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(DailyProgress);
+      }
       if (Level != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(72);
         output.WriteUInt32(Level);
       }
       if (WorldLevel != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(80);
         output.WriteUInt32(WorldLevel);
       }
-      if (IIMJCLBOPNC != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(IIMJCLBOPNC);
-      }
-      if (NOPMENIAFJM != false) {
-        output.WriteRawTag(104);
-        output.WriteBool(NOPMENIAFJM);
+      if (IsTakenReward != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(IsTakenReward);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -234,14 +234,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (DailyProgress != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DailyProgress);
+      }
       if (WorldLevel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorldLevel);
       }
-      if (NOPMENIAFJM != false) {
+      if (IsTakenReward != false) {
         size += 1 + 1;
-      }
-      if (IIMJCLBOPNC != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IIMJCLBOPNC);
       }
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
@@ -258,14 +258,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.DailyProgress != 0) {
+        DailyProgress = other.DailyProgress;
+      }
       if (other.WorldLevel != 0) {
         WorldLevel = other.WorldLevel;
       }
-      if (other.NOPMENIAFJM != false) {
-        NOPMENIAFJM = other.NOPMENIAFJM;
-      }
-      if (other.IIMJCLBOPNC != 0) {
-        IIMJCLBOPNC = other.IIMJCLBOPNC;
+      if (other.IsTakenReward != false) {
+        IsTakenReward = other.IsTakenReward;
       }
       if (other.Level != 0) {
         Level = other.Level;
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            Level = input.ReadUInt32();
-            break;
-          }
-          case 64: {
-            WorldLevel = input.ReadUInt32();
+          case 56: {
+            DailyProgress = input.ReadUInt32();
             break;
           }
           case 72: {
-            IIMJCLBOPNC = input.ReadUInt32();
+            Level = input.ReadUInt32();
             break;
           }
-          case 104: {
-            NOPMENIAFJM = input.ReadBool();
+          case 80: {
+            WorldLevel = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            IsTakenReward = input.ReadBool();
             break;
           }
         }
@@ -316,20 +316,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            Level = input.ReadUInt32();
-            break;
-          }
-          case 64: {
-            WorldLevel = input.ReadUInt32();
+          case 56: {
+            DailyProgress = input.ReadUInt32();
             break;
           }
           case 72: {
-            IIMJCLBOPNC = input.ReadUInt32();
+            Level = input.ReadUInt32();
             break;
           }
-          case 104: {
-            NOPMENIAFJM = input.ReadBool();
+          case 80: {
+            WorldLevel = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            IsTakenReward = input.ReadBool();
             break;
           }
         }

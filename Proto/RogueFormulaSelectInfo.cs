@@ -25,17 +25,17 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxSb2d1ZUZvcm11bGFTZWxlY3RJbmZvLnByb3RvGhJJdGVtQ29zdERhdGEu",
-            "cHJvdG8i/AEKFlJvZ3VlRm9ybXVsYVNlbGVjdEluZm8SHAoUUm9sbEZvcm11",
-            "bGFGcmVlQ291bnQYAyABKA0SGwoTUm9sbEZvcm11bGFNYXhDb3VudBgCIAEo",
-            "DRIqChNSb2xsRm9ybXVsYUNvc3REYXRhGA8gASgLMg0uSXRlbUNvc3REYXRh",
-            "EhsKE1NlbGVjdEZvcm11bGFJZExpc3QYByADKA0SIwobSGFuZGJvb2tVbmxv",
-            "Y2tGb3JtdWxhSWRMaXN0GAUgAygNEg4KBkhpbnRJZBgMIAEoDRIYChBSb2xs",
-            "Rm9ybXVsYUNvdW50GAggASgNEg8KB0NhblJvbGwYCyABKAhCHqoCG0VnZ0xp",
+            "cHJvdG8i/AEKFlJvZ3VlRm9ybXVsYVNlbGVjdEluZm8SIwobSGFuZGJvb2tV",
+            "bmxvY2tGb3JtdWxhSWRMaXN0GAEgAygNEhwKFFJvbGxGb3JtdWxhRnJlZUNv",
+            "dW50GAYgASgNEg4KBkhpbnRJZBgCIAEoDRIbChNSb2xsRm9ybXVsYU1heENv",
+            "dW50GAMgASgNEhgKEFJvbGxGb3JtdWxhQ291bnQYBCABKA0SKgoTUm9sbEZv",
+            "cm11bGFDb3N0RGF0YRgKIAEoCzINLkl0ZW1Db3N0RGF0YRIPCgdDYW5Sb2xs",
+            "GAsgASgIEhsKE1NlbGVjdEZvcm11bGFJZExpc3QYByADKA1CHqoCG0VnZ0xp",
             "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueFormulaSelectInfo), global::EggLink.DanhengServer.Proto.RogueFormulaSelectInfo.Parser, new[]{ "RollFormulaFreeCount", "RollFormulaMaxCount", "RollFormulaCostData", "SelectFormulaIdList", "HandbookUnlockFormulaIdList", "HintId", "RollFormulaCount", "CanRoll" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueFormulaSelectInfo), global::EggLink.DanhengServer.Proto.RogueFormulaSelectInfo.Parser, new[]{ "HandbookUnlockFormulaIdList", "RollFormulaFreeCount", "HintId", "RollFormulaMaxCount", "RollFormulaCount", "RollFormulaCostData", "CanRoll", "SelectFormulaIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,14 +77,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueFormulaSelectInfo(RogueFormulaSelectInfo other) : this() {
-      rollFormulaFreeCount_ = other.rollFormulaFreeCount_;
-      rollFormulaMaxCount_ = other.rollFormulaMaxCount_;
-      rollFormulaCostData_ = other.rollFormulaCostData_ != null ? other.rollFormulaCostData_.Clone() : null;
-      selectFormulaIdList_ = other.selectFormulaIdList_.Clone();
       handbookUnlockFormulaIdList_ = other.handbookUnlockFormulaIdList_.Clone();
+      rollFormulaFreeCount_ = other.rollFormulaFreeCount_;
       hintId_ = other.hintId_;
+      rollFormulaMaxCount_ = other.rollFormulaMaxCount_;
       rollFormulaCount_ = other.rollFormulaCount_;
+      rollFormulaCostData_ = other.rollFormulaCostData_ != null ? other.rollFormulaCostData_.Clone() : null;
       canRoll_ = other.canRoll_;
+      selectFormulaIdList_ = other.selectFormulaIdList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -94,8 +94,19 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueFormulaSelectInfo(this);
     }
 
+    /// <summary>Field number for the "HandbookUnlockFormulaIdList" field.</summary>
+    public const int HandbookUnlockFormulaIdListFieldNumber = 1;
+    private static readonly pb::FieldCodec<uint> _repeated_handbookUnlockFormulaIdList_codec
+        = pb::FieldCodec.ForUInt32(10);
+    private readonly pbc::RepeatedField<uint> handbookUnlockFormulaIdList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> HandbookUnlockFormulaIdList {
+      get { return handbookUnlockFormulaIdList_; }
+    }
+
     /// <summary>Field number for the "RollFormulaFreeCount" field.</summary>
-    public const int RollFormulaFreeCountFieldNumber = 3;
+    public const int RollFormulaFreeCountFieldNumber = 6;
     private uint rollFormulaFreeCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,54 +117,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "RollFormulaMaxCount" field.</summary>
-    public const int RollFormulaMaxCountFieldNumber = 2;
-    private uint rollFormulaMaxCount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint RollFormulaMaxCount {
-      get { return rollFormulaMaxCount_; }
-      set {
-        rollFormulaMaxCount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "RollFormulaCostData" field.</summary>
-    public const int RollFormulaCostDataFieldNumber = 15;
-    private global::EggLink.DanhengServer.Proto.ItemCostData rollFormulaCostData_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ItemCostData RollFormulaCostData {
-      get { return rollFormulaCostData_; }
-      set {
-        rollFormulaCostData_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "SelectFormulaIdList" field.</summary>
-    public const int SelectFormulaIdListFieldNumber = 7;
-    private static readonly pb::FieldCodec<uint> _repeated_selectFormulaIdList_codec
-        = pb::FieldCodec.ForUInt32(58);
-    private readonly pbc::RepeatedField<uint> selectFormulaIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> SelectFormulaIdList {
-      get { return selectFormulaIdList_; }
-    }
-
-    /// <summary>Field number for the "HandbookUnlockFormulaIdList" field.</summary>
-    public const int HandbookUnlockFormulaIdListFieldNumber = 5;
-    private static readonly pb::FieldCodec<uint> _repeated_handbookUnlockFormulaIdList_codec
-        = pb::FieldCodec.ForUInt32(42);
-    private readonly pbc::RepeatedField<uint> handbookUnlockFormulaIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> HandbookUnlockFormulaIdList {
-      get { return handbookUnlockFormulaIdList_; }
-    }
-
     /// <summary>Field number for the "HintId" field.</summary>
-    public const int HintIdFieldNumber = 12;
+    public const int HintIdFieldNumber = 2;
     private uint hintId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -164,8 +129,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "RollFormulaMaxCount" field.</summary>
+    public const int RollFormulaMaxCountFieldNumber = 3;
+    private uint rollFormulaMaxCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RollFormulaMaxCount {
+      get { return rollFormulaMaxCount_; }
+      set {
+        rollFormulaMaxCount_ = value;
+      }
+    }
+
     /// <summary>Field number for the "RollFormulaCount" field.</summary>
-    public const int RollFormulaCountFieldNumber = 8;
+    public const int RollFormulaCountFieldNumber = 4;
     private uint rollFormulaCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -173,6 +150,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return rollFormulaCount_; }
       set {
         rollFormulaCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "RollFormulaCostData" field.</summary>
+    public const int RollFormulaCostDataFieldNumber = 10;
+    private global::EggLink.DanhengServer.Proto.ItemCostData rollFormulaCostData_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ItemCostData RollFormulaCostData {
+      get { return rollFormulaCostData_; }
+      set {
+        rollFormulaCostData_ = value;
       }
     }
 
@@ -186,6 +175,17 @@ namespace EggLink.DanhengServer.Proto {
       set {
         canRoll_ = value;
       }
+    }
+
+    /// <summary>Field number for the "SelectFormulaIdList" field.</summary>
+    public const int SelectFormulaIdListFieldNumber = 7;
+    private static readonly pb::FieldCodec<uint> _repeated_selectFormulaIdList_codec
+        = pb::FieldCodec.ForUInt32(58);
+    private readonly pbc::RepeatedField<uint> selectFormulaIdList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> SelectFormulaIdList {
+      get { return selectFormulaIdList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -203,14 +203,14 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (RollFormulaFreeCount != other.RollFormulaFreeCount) return false;
-      if (RollFormulaMaxCount != other.RollFormulaMaxCount) return false;
-      if (!object.Equals(RollFormulaCostData, other.RollFormulaCostData)) return false;
-      if(!selectFormulaIdList_.Equals(other.selectFormulaIdList_)) return false;
       if(!handbookUnlockFormulaIdList_.Equals(other.handbookUnlockFormulaIdList_)) return false;
+      if (RollFormulaFreeCount != other.RollFormulaFreeCount) return false;
       if (HintId != other.HintId) return false;
+      if (RollFormulaMaxCount != other.RollFormulaMaxCount) return false;
       if (RollFormulaCount != other.RollFormulaCount) return false;
+      if (!object.Equals(RollFormulaCostData, other.RollFormulaCostData)) return false;
       if (CanRoll != other.CanRoll) return false;
+      if(!selectFormulaIdList_.Equals(other.selectFormulaIdList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -218,14 +218,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (RollFormulaFreeCount != 0) hash ^= RollFormulaFreeCount.GetHashCode();
-      if (RollFormulaMaxCount != 0) hash ^= RollFormulaMaxCount.GetHashCode();
-      if (rollFormulaCostData_ != null) hash ^= RollFormulaCostData.GetHashCode();
-      hash ^= selectFormulaIdList_.GetHashCode();
       hash ^= handbookUnlockFormulaIdList_.GetHashCode();
+      if (RollFormulaFreeCount != 0) hash ^= RollFormulaFreeCount.GetHashCode();
       if (HintId != 0) hash ^= HintId.GetHashCode();
+      if (RollFormulaMaxCount != 0) hash ^= RollFormulaMaxCount.GetHashCode();
       if (RollFormulaCount != 0) hash ^= RollFormulaCount.GetHashCode();
+      if (rollFormulaCostData_ != null) hash ^= RollFormulaCostData.GetHashCode();
       if (CanRoll != false) hash ^= CanRoll.GetHashCode();
+      hash ^= selectFormulaIdList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -244,31 +244,31 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (RollFormulaMaxCount != 0) {
+      handbookUnlockFormulaIdList_.WriteTo(output, _repeated_handbookUnlockFormulaIdList_codec);
+      if (HintId != 0) {
         output.WriteRawTag(16);
+        output.WriteUInt32(HintId);
+      }
+      if (RollFormulaMaxCount != 0) {
+        output.WriteRawTag(24);
         output.WriteUInt32(RollFormulaMaxCount);
       }
+      if (RollFormulaCount != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(RollFormulaCount);
+      }
       if (RollFormulaFreeCount != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(48);
         output.WriteUInt32(RollFormulaFreeCount);
       }
-      handbookUnlockFormulaIdList_.WriteTo(output, _repeated_handbookUnlockFormulaIdList_codec);
       selectFormulaIdList_.WriteTo(output, _repeated_selectFormulaIdList_codec);
-      if (RollFormulaCount != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(RollFormulaCount);
+      if (rollFormulaCostData_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(RollFormulaCostData);
       }
       if (CanRoll != false) {
         output.WriteRawTag(88);
         output.WriteBool(CanRoll);
-      }
-      if (HintId != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(HintId);
-      }
-      if (rollFormulaCostData_ != null) {
-        output.WriteRawTag(122);
-        output.WriteMessage(RollFormulaCostData);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -280,31 +280,31 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (RollFormulaMaxCount != 0) {
+      handbookUnlockFormulaIdList_.WriteTo(ref output, _repeated_handbookUnlockFormulaIdList_codec);
+      if (HintId != 0) {
         output.WriteRawTag(16);
+        output.WriteUInt32(HintId);
+      }
+      if (RollFormulaMaxCount != 0) {
+        output.WriteRawTag(24);
         output.WriteUInt32(RollFormulaMaxCount);
       }
+      if (RollFormulaCount != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(RollFormulaCount);
+      }
       if (RollFormulaFreeCount != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(48);
         output.WriteUInt32(RollFormulaFreeCount);
       }
-      handbookUnlockFormulaIdList_.WriteTo(ref output, _repeated_handbookUnlockFormulaIdList_codec);
       selectFormulaIdList_.WriteTo(ref output, _repeated_selectFormulaIdList_codec);
-      if (RollFormulaCount != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(RollFormulaCount);
+      if (rollFormulaCostData_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(RollFormulaCostData);
       }
       if (CanRoll != false) {
         output.WriteRawTag(88);
         output.WriteBool(CanRoll);
-      }
-      if (HintId != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(HintId);
-      }
-      if (rollFormulaCostData_ != null) {
-        output.WriteRawTag(122);
-        output.WriteMessage(RollFormulaCostData);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -316,26 +316,26 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += handbookUnlockFormulaIdList_.CalculateSize(_repeated_handbookUnlockFormulaIdList_codec);
       if (RollFormulaFreeCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RollFormulaFreeCount);
+      }
+      if (HintId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HintId);
       }
       if (RollFormulaMaxCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RollFormulaMaxCount);
       }
-      if (rollFormulaCostData_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RollFormulaCostData);
-      }
-      size += selectFormulaIdList_.CalculateSize(_repeated_selectFormulaIdList_codec);
-      size += handbookUnlockFormulaIdList_.CalculateSize(_repeated_handbookUnlockFormulaIdList_codec);
-      if (HintId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HintId);
-      }
       if (RollFormulaCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RollFormulaCount);
+      }
+      if (rollFormulaCostData_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RollFormulaCostData);
       }
       if (CanRoll != false) {
         size += 1 + 1;
       }
+      size += selectFormulaIdList_.CalculateSize(_repeated_selectFormulaIdList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -348,11 +348,18 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      handbookUnlockFormulaIdList_.Add(other.handbookUnlockFormulaIdList_);
       if (other.RollFormulaFreeCount != 0) {
         RollFormulaFreeCount = other.RollFormulaFreeCount;
       }
+      if (other.HintId != 0) {
+        HintId = other.HintId;
+      }
       if (other.RollFormulaMaxCount != 0) {
         RollFormulaMaxCount = other.RollFormulaMaxCount;
+      }
+      if (other.RollFormulaCount != 0) {
+        RollFormulaCount = other.RollFormulaCount;
       }
       if (other.rollFormulaCostData_ != null) {
         if (rollFormulaCostData_ == null) {
@@ -360,17 +367,10 @@ namespace EggLink.DanhengServer.Proto {
         }
         RollFormulaCostData.MergeFrom(other.RollFormulaCostData);
       }
-      selectFormulaIdList_.Add(other.selectFormulaIdList_);
-      handbookUnlockFormulaIdList_.Add(other.handbookUnlockFormulaIdList_);
-      if (other.HintId != 0) {
-        HintId = other.HintId;
-      }
-      if (other.RollFormulaCount != 0) {
-        RollFormulaCount = other.RollFormulaCount;
-      }
       if (other.CanRoll != false) {
         CanRoll = other.CanRoll;
       }
+      selectFormulaIdList_.Add(other.selectFormulaIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -386,17 +386,25 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10:
+          case 8: {
+            handbookUnlockFormulaIdList_.AddEntriesFrom(input, _repeated_handbookUnlockFormulaIdList_codec);
+            break;
+          }
           case 16: {
-            RollFormulaMaxCount = input.ReadUInt32();
+            HintId = input.ReadUInt32();
             break;
           }
           case 24: {
-            RollFormulaFreeCount = input.ReadUInt32();
+            RollFormulaMaxCount = input.ReadUInt32();
             break;
           }
-          case 42:
-          case 40: {
-            handbookUnlockFormulaIdList_.AddEntriesFrom(input, _repeated_handbookUnlockFormulaIdList_codec);
+          case 32: {
+            RollFormulaCount = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            RollFormulaFreeCount = input.ReadUInt32();
             break;
           }
           case 58:
@@ -404,23 +412,15 @@ namespace EggLink.DanhengServer.Proto {
             selectFormulaIdList_.AddEntriesFrom(input, _repeated_selectFormulaIdList_codec);
             break;
           }
-          case 64: {
-            RollFormulaCount = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            CanRoll = input.ReadBool();
-            break;
-          }
-          case 96: {
-            HintId = input.ReadUInt32();
-            break;
-          }
-          case 122: {
+          case 82: {
             if (rollFormulaCostData_ == null) {
               RollFormulaCostData = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
             input.ReadMessage(RollFormulaCostData);
+            break;
+          }
+          case 88: {
+            CanRoll = input.ReadBool();
             break;
           }
         }
@@ -438,17 +438,25 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10:
+          case 8: {
+            handbookUnlockFormulaIdList_.AddEntriesFrom(ref input, _repeated_handbookUnlockFormulaIdList_codec);
+            break;
+          }
           case 16: {
-            RollFormulaMaxCount = input.ReadUInt32();
+            HintId = input.ReadUInt32();
             break;
           }
           case 24: {
-            RollFormulaFreeCount = input.ReadUInt32();
+            RollFormulaMaxCount = input.ReadUInt32();
             break;
           }
-          case 42:
-          case 40: {
-            handbookUnlockFormulaIdList_.AddEntriesFrom(ref input, _repeated_handbookUnlockFormulaIdList_codec);
+          case 32: {
+            RollFormulaCount = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            RollFormulaFreeCount = input.ReadUInt32();
             break;
           }
           case 58:
@@ -456,23 +464,15 @@ namespace EggLink.DanhengServer.Proto {
             selectFormulaIdList_.AddEntriesFrom(ref input, _repeated_selectFormulaIdList_codec);
             break;
           }
-          case 64: {
-            RollFormulaCount = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            CanRoll = input.ReadBool();
-            break;
-          }
-          case 96: {
-            HintId = input.ReadUInt32();
-            break;
-          }
-          case 122: {
+          case 82: {
             if (rollFormulaCostData_ == null) {
               RollFormulaCostData = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
             input.ReadMessage(RollFormulaCostData);
+            break;
+          }
+          case 88: {
+            CanRoll = input.ReadBool();
             break;
           }
         }

@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch9TdGFydFRyYWNrUGhvdG9TdGFnZUNzUmVxLnByb3RvIkIKGVN0YXJ0VHJh",
             "Y2tQaG90b1N0YWdlQ3NSZXESEAoIc3RhZ2VfaWQYBCABKA0SEwoLREpGQ01M",
-            "SVBEQUIYDiABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "SVBEQUIYBiABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "DJFCMLIPDAB" field.</summary>
-    public const int DJFCMLIPDABFieldNumber = 14;
+    public const int DJFCMLIPDABFieldNumber = 6;
     private bool dJFCMLIPDAB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(StageId);
       }
       if (DJFCMLIPDAB != false) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(48);
         output.WriteBool(DJFCMLIPDAB);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(StageId);
       }
       if (DJFCMLIPDAB != false) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(48);
         output.WriteBool(DJFCMLIPDAB);
       }
       if (_unknownFields != null) {
@@ -231,7 +231,7 @@ namespace EggLink.DanhengServer.Proto {
             StageId = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 48: {
             DJFCMLIPDAB = input.ReadBool();
             break;
           }
@@ -254,7 +254,7 @@ namespace EggLink.DanhengServer.Proto {
             StageId = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 48: {
             DJFCMLIPDAB = input.ReadBool();
             break;
           }

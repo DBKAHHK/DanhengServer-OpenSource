@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static TrainPartyBuildStartStepScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNUcmFpblBhcnR5QnVpbGRTdGFydFN0ZXBTY1JzcC5wcm90byJDCh1UcmFp",
-            "blBhcnR5QnVpbGRTdGFydFN0ZXBTY1JzcBIPCgdyZXRjb2RlGA0gASgNEhEK",
-            "CWNvaW5fY29zdBgHIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
-            "b3RvYgZwcm90bzM="));
+            "CiNUcmFpblBhcnR5QnVpbGRTdGFydFN0ZXBTY1JzcC5wcm90byJCCh1UcmFp",
+            "blBhcnR5QnVpbGRTdGFydFN0ZXBTY1JzcBIPCgdyZXRjb2RlGAsgASgNEhAK",
+            "CGN1cl9mdW5kGA4gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
+            "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyBuildStartStepScRsp), global::EggLink.DanhengServer.Proto.TrainPartyBuildStartStepScRsp.Parser, new[]{ "Retcode", "CoinCost" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyBuildStartStepScRsp), global::EggLink.DanhengServer.Proto.TrainPartyBuildStartStepScRsp.Parser, new[]{ "Retcode", "CurFund" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainPartyBuildStartStepScRsp(TrainPartyBuildStartStepScRsp other) : this() {
       retcode_ = other.retcode_;
-      coinCost_ = other.coinCost_;
+      curFund_ = other.curFund_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 13;
+    public const int RetcodeFieldNumber = 11;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "coin_cost" field.</summary>
-    public const int CoinCostFieldNumber = 7;
-    private uint coinCost_;
+    /// <summary>Field number for the "cur_fund" field.</summary>
+    public const int CurFundFieldNumber = 14;
+    private uint curFund_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CoinCost {
-      get { return coinCost_; }
+    public uint CurFund {
+      get { return curFund_; }
       set {
-        coinCost_ = value;
+        curFund_ = value;
       }
     }
 
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Retcode != other.Retcode) return false;
-      if (CoinCost != other.CoinCost) return false;
+      if (CurFund != other.CurFund) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (CoinCost != 0) hash ^= CoinCost.GetHashCode();
+      if (CurFund != 0) hash ^= CurFund.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CoinCost != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(CoinCost);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
+      }
+      if (CurFund != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(CurFund);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CoinCost != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(CoinCost);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
+      }
+      if (CurFund != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(CurFund);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -191,8 +191,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (CoinCost != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CoinCost);
+      if (CurFund != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurFund);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -209,8 +209,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.CoinCost != 0) {
-        CoinCost = other.CoinCost;
+      if (other.CurFund != 0) {
+        CurFund = other.CurFund;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            CoinCost = input.ReadUInt32();
+          case 88: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 104: {
-            Retcode = input.ReadUInt32();
+          case 112: {
+            CurFund = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            CoinCost = input.ReadUInt32();
+          case 88: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 104: {
-            Retcode = input.ReadUInt32();
+          case 112: {
+            CurFund = input.ReadUInt32();
             break;
           }
         }

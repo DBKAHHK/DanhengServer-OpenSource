@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static KillMonsterReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFLaWxsTW9uc3Rlci5wcm90byIzCgtLaWxsTW9uc3RlchIQCghraWxsX251",
-            "bRgBIAEoDRISCgptb25zdGVyX2lkGAIgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "ChFLaWxsTW9uc3Rlci5wcm90byIzCgtLaWxsTW9uc3RlchISCgptb25zdGVy",
+            "X2lkGA0gASgNEhAKCGtpbGxfbnVtGAEgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.KillMonster), global::EggLink.DanhengServer.Proto.KillMonster.Parser, new[]{ "KillNum", "MonsterId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.KillMonster), global::EggLink.DanhengServer.Proto.KillMonster.Parser, new[]{ "MonsterId", "KillNum" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public KillMonster(KillMonster other) : this() {
-      killNum_ = other.killNum_;
       monsterId_ = other.monsterId_;
+      killNum_ = other.killNum_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -81,6 +81,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public KillMonster Clone() {
       return new KillMonster(this);
+    }
+
+    /// <summary>Field number for the "monster_id" field.</summary>
+    public const int MonsterIdFieldNumber = 13;
+    private uint monsterId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint MonsterId {
+      get { return monsterId_; }
+      set {
+        monsterId_ = value;
+      }
     }
 
     /// <summary>Field number for the "kill_num" field.</summary>
@@ -92,18 +104,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return killNum_; }
       set {
         killNum_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "monster_id" field.</summary>
-    public const int MonsterIdFieldNumber = 2;
-    private uint monsterId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MonsterId {
-      get { return monsterId_; }
-      set {
-        monsterId_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (KillNum != other.KillNum) return false;
       if (MonsterId != other.MonsterId) return false;
+      if (KillNum != other.KillNum) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (KillNum != 0) hash ^= KillNum.GetHashCode();
       if (MonsterId != 0) hash ^= MonsterId.GetHashCode();
+      if (KillNum != 0) hash ^= KillNum.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -156,7 +156,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(KillNum);
       }
       if (MonsterId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(104);
         output.WriteUInt32(MonsterId);
       }
       if (_unknownFields != null) {
@@ -174,7 +174,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(KillNum);
       }
       if (MonsterId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(104);
         output.WriteUInt32(MonsterId);
       }
       if (_unknownFields != null) {
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (KillNum != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KillNum);
-      }
       if (MonsterId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MonsterId);
+      }
+      if (KillNum != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KillNum);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.KillNum != 0) {
-        KillNum = other.KillNum;
-      }
       if (other.MonsterId != 0) {
         MonsterId = other.MonsterId;
+      }
+      if (other.KillNum != 0) {
+        KillNum = other.KillNum;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -230,7 +230,7 @@ namespace EggLink.DanhengServer.Proto {
             KillNum = input.ReadUInt32();
             break;
           }
-          case 16: {
+          case 104: {
             MonsterId = input.ReadUInt32();
             break;
           }
@@ -253,7 +253,7 @@ namespace EggLink.DanhengServer.Proto {
             KillNum = input.ReadUInt32();
             break;
           }
-          case 16: {
+          case 104: {
             MonsterId = input.ReadUInt32();
             break;
           }

@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5Sb2d1ZVRvdXJuRGlmZmljdWx0eUluZm8ucHJvdG8iRgoYUm9ndWVUb3Vy",
-            "bkRpZmZpY3VsdHlJbmZvEhUKDWRpZmZpY3VsdHlfaWQYBSABKA0SEwoLaXNf",
-            "dW5sb2NrZWQYCyABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "bkRpZmZpY3VsdHlJbmZvEhMKC2lzX3VubG9ja2VkGA8gASgIEhUKDWRpZmZp",
+            "Y3VsdHlfaWQYBSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournDifficultyInfo), global::EggLink.DanhengServer.Proto.RogueTournDifficultyInfo.Parser, new[]{ "DifficultyId", "IsUnlocked" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournDifficultyInfo), global::EggLink.DanhengServer.Proto.RogueTournDifficultyInfo.Parser, new[]{ "IsUnlocked", "DifficultyId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournDifficultyInfo(RogueTournDifficultyInfo other) : this() {
-      difficultyId_ = other.difficultyId_;
       isUnlocked_ = other.isUnlocked_;
+      difficultyId_ = other.difficultyId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,6 +82,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournDifficultyInfo Clone() {
       return new RogueTournDifficultyInfo(this);
+    }
+
+    /// <summary>Field number for the "is_unlocked" field.</summary>
+    public const int IsUnlockedFieldNumber = 15;
+    private bool isUnlocked_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsUnlocked {
+      get { return isUnlocked_; }
+      set {
+        isUnlocked_ = value;
+      }
     }
 
     /// <summary>Field number for the "difficulty_id" field.</summary>
@@ -93,18 +105,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return difficultyId_; }
       set {
         difficultyId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "is_unlocked" field.</summary>
-    public const int IsUnlockedFieldNumber = 11;
-    private bool isUnlocked_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsUnlocked {
-      get { return isUnlocked_; }
-      set {
-        isUnlocked_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DifficultyId != other.DifficultyId) return false;
       if (IsUnlocked != other.IsUnlocked) return false;
+      if (DifficultyId != other.DifficultyId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (DifficultyId != 0) hash ^= DifficultyId.GetHashCode();
       if (IsUnlocked != false) hash ^= IsUnlocked.GetHashCode();
+      if (DifficultyId != 0) hash ^= DifficultyId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(DifficultyId);
       }
       if (IsUnlocked != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(120);
         output.WriteBool(IsUnlocked);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(DifficultyId);
       }
       if (IsUnlocked != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(120);
         output.WriteBool(IsUnlocked);
       }
       if (_unknownFields != null) {
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (DifficultyId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DifficultyId);
-      }
       if (IsUnlocked != false) {
         size += 1 + 1;
+      }
+      if (DifficultyId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DifficultyId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.DifficultyId != 0) {
-        DifficultyId = other.DifficultyId;
-      }
       if (other.IsUnlocked != false) {
         IsUnlocked = other.IsUnlocked;
+      }
+      if (other.DifficultyId != 0) {
+        DifficultyId = other.DifficultyId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,7 +231,7 @@ namespace EggLink.DanhengServer.Proto {
             DifficultyId = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 120: {
             IsUnlocked = input.ReadBool();
             break;
           }
@@ -254,7 +254,7 @@ namespace EggLink.DanhengServer.Proto {
             DifficultyId = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 120: {
             IsUnlocked = input.ReadBool();
             break;
           }

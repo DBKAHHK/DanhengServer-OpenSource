@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5DaGVzc1JvZ3VlRW50ZXJDZWxsQ3NSZXEucHJvdG8iRgoYQ2hlc3NSb2d1",
-            "ZUVudGVyQ2VsbENzUmVxEg8KB2NlbGxfaWQYCiABKA0SGQoRc2VsZWN0X21v",
-            "bnN0ZXJfaWQYDyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "ZUVudGVyQ2VsbENzUmVxEg8KB2NlbGxfaWQYCCABKA0SGQoRc2VsZWN0X21v",
+            "bnN0ZXJfaWQYBSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cell_id" field.</summary>
-    public const int CellIdFieldNumber = 10;
+    public const int CellIdFieldNumber = 8;
     private uint cellId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_monster_id" field.</summary>
-    public const int SelectMonsterIdFieldNumber = 15;
+    public const int SelectMonsterIdFieldNumber = 5;
     private uint selectMonsterId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CellId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(CellId);
-      }
       if (SelectMonsterId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(40);
         output.WriteUInt32(SelectMonsterId);
+      }
+      if (CellId != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(CellId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CellId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(CellId);
-      }
       if (SelectMonsterId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(40);
         output.WriteUInt32(SelectMonsterId);
+      }
+      if (CellId != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(CellId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 80: {
-            CellId = input.ReadUInt32();
+          case 40: {
+            SelectMonsterId = input.ReadUInt32();
             break;
           }
-          case 120: {
-            SelectMonsterId = input.ReadUInt32();
+          case 64: {
+            CellId = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 80: {
-            CellId = input.ReadUInt32();
+          case 40: {
+            SelectMonsterId = input.ReadUInt32();
             break;
           }
-          case 120: {
-            SelectMonsterId = input.ReadUInt32();
+          case 64: {
+            CellId = input.ReadUInt32();
             break;
           }
         }

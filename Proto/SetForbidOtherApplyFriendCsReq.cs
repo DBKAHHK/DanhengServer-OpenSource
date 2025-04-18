@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiRTZXRGb3JiaWRPdGhlckFwcGx5RnJpZW5kQ3NSZXEucHJvdG8iNQoeU2V0",
-            "Rm9yYmlkT3RoZXJBcHBseUZyaWVuZENzUmVxEhMKC01KUEZMSUtBRkVKGAog",
+            "Rm9yYmlkT3RoZXJBcHBseUZyaWVuZENzUmVxEhMKC01KUEZMSUtBRkVKGAUg",
             "ASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MJPFLIKAFEJ" field.</summary>
-    public const int MJPFLIKAFEJFieldNumber = 10;
+    public const int MJPFLIKAFEJFieldNumber = 5;
     private bool mJPFLIKAFEJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (MJPFLIKAFEJ != false) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(40);
         output.WriteBool(MJPFLIKAFEJ);
       }
       if (_unknownFields != null) {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MJPFLIKAFEJ != false) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(40);
         output.WriteBool(MJPFLIKAFEJ);
       }
       if (_unknownFields != null) {
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 80: {
+          case 40: {
             MJPFLIKAFEJ = input.ReadBool();
             break;
           }
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 80: {
+          case 40: {
             MJPFLIKAFEJ = input.ReadBool();
             break;
           }

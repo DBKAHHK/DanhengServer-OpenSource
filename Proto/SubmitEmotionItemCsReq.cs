@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxTdWJtaXRFbW90aW9uSXRlbUNzUmVxLnByb3RvGg5JdGVtTGlzdC5wcm90",
-            "byJeChZTdWJtaXRFbW90aW9uSXRlbUNzUmVxEhMKC0ZJSE5DT0FCRUxBGAgg",
-            "ASgNEhwKCWl0ZW1fbGlzdBgMIAEoCzIJLkl0ZW1MaXN0EhEKCXNjcmlwdF9p",
-            "ZBgKIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "byJeChZTdWJtaXRFbW90aW9uSXRlbUNzUmVxEhwKCWl0ZW1fbGlzdBgDIAEo",
+            "CzIJLkl0ZW1MaXN0EhMKC0ZJSE5DT0FCRUxBGAsgASgNEhEKCXNjcmlwdF9p",
+            "ZBgMIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SubmitEmotionItemCsReq), global::EggLink.DanhengServer.Proto.SubmitEmotionItemCsReq.Parser, new[]{ "FIHNCOABELA", "ItemList", "ScriptId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SubmitEmotionItemCsReq), global::EggLink.DanhengServer.Proto.SubmitEmotionItemCsReq.Parser, new[]{ "ItemList", "FIHNCOABELA", "ScriptId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SubmitEmotionItemCsReq(SubmitEmotionItemCsReq other) : this() {
-      fIHNCOABELA_ = other.fIHNCOABELA_;
       itemList_ = other.itemList_ != null ? other.itemList_.Clone() : null;
+      fIHNCOABELA_ = other.fIHNCOABELA_;
       scriptId_ = other.scriptId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -86,20 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new SubmitEmotionItemCsReq(this);
     }
 
-    /// <summary>Field number for the "FIHNCOABELA" field.</summary>
-    public const int FIHNCOABELAFieldNumber = 8;
-    private uint fIHNCOABELA_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FIHNCOABELA {
-      get { return fIHNCOABELA_; }
-      set {
-        fIHNCOABELA_ = value;
-      }
-    }
-
     /// <summary>Field number for the "item_list" field.</summary>
-    public const int ItemListFieldNumber = 12;
+    public const int ItemListFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.ItemList itemList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,8 +98,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "FIHNCOABELA" field.</summary>
+    public const int FIHNCOABELAFieldNumber = 11;
+    private uint fIHNCOABELA_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint FIHNCOABELA {
+      get { return fIHNCOABELA_; }
+      set {
+        fIHNCOABELA_ = value;
+      }
+    }
+
     /// <summary>Field number for the "script_id" field.</summary>
-    public const int ScriptIdFieldNumber = 10;
+    public const int ScriptIdFieldNumber = 12;
     private uint scriptId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,8 +137,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FIHNCOABELA != other.FIHNCOABELA) return false;
       if (!object.Equals(ItemList, other.ItemList)) return false;
+      if (FIHNCOABELA != other.FIHNCOABELA) return false;
       if (ScriptId != other.ScriptId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -147,8 +147,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (FIHNCOABELA != 0) hash ^= FIHNCOABELA.GetHashCode();
       if (itemList_ != null) hash ^= ItemList.GetHashCode();
+      if (FIHNCOABELA != 0) hash ^= FIHNCOABELA.GetHashCode();
       if (ScriptId != 0) hash ^= ScriptId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -168,17 +168,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (itemList_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ItemList);
+      }
       if (FIHNCOABELA != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(88);
         output.WriteUInt32(FIHNCOABELA);
       }
       if (ScriptId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(96);
         output.WriteUInt32(ScriptId);
-      }
-      if (itemList_ != null) {
-        output.WriteRawTag(98);
-        output.WriteMessage(ItemList);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,17 +190,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (itemList_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ItemList);
+      }
       if (FIHNCOABELA != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(88);
         output.WriteUInt32(FIHNCOABELA);
       }
       if (ScriptId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(96);
         output.WriteUInt32(ScriptId);
-      }
-      if (itemList_ != null) {
-        output.WriteRawTag(98);
-        output.WriteMessage(ItemList);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -212,11 +212,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (FIHNCOABELA != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FIHNCOABELA);
-      }
       if (itemList_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ItemList);
+      }
+      if (FIHNCOABELA != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FIHNCOABELA);
       }
       if (ScriptId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScriptId);
@@ -233,14 +233,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.FIHNCOABELA != 0) {
-        FIHNCOABELA = other.FIHNCOABELA;
-      }
       if (other.itemList_ != null) {
         if (itemList_ == null) {
           ItemList = new global::EggLink.DanhengServer.Proto.ItemList();
         }
         ItemList.MergeFrom(other.ItemList);
+      }
+      if (other.FIHNCOABELA != 0) {
+        FIHNCOABELA = other.FIHNCOABELA;
       }
       if (other.ScriptId != 0) {
         ScriptId = other.ScriptId;
@@ -260,19 +260,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
-            FIHNCOABELA = input.ReadUInt32();
-            break;
-          }
-          case 80: {
-            ScriptId = input.ReadUInt32();
-            break;
-          }
-          case 98: {
+          case 26: {
             if (itemList_ == null) {
               ItemList = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(ItemList);
+            break;
+          }
+          case 88: {
+            FIHNCOABELA = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            ScriptId = input.ReadUInt32();
             break;
           }
         }
@@ -290,19 +290,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
-            FIHNCOABELA = input.ReadUInt32();
-            break;
-          }
-          case 80: {
-            ScriptId = input.ReadUInt32();
-            break;
-          }
-          case 98: {
+          case 26: {
             if (itemList_ == null) {
               ItemList = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(ItemList);
+            break;
+          }
+          case 88: {
+            FIHNCOABELA = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            ScriptId = input.ReadUInt32();
             break;
           }
         }

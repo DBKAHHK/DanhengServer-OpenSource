@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch5TeW5jUm9ndWVHZXRJdGVtU2NOb3RpZnkucHJvdG8aDkl0ZW1MaXN0LnBy",
             "b3RvIlwKGFN5bmNSb2d1ZUdldEl0ZW1TY05vdGlmeRIeCgtJT0RGR0ZPTUdP",
-            "RBgCIAEoCzIJLkl0ZW1MaXN0EiAKDWdldF9pdGVtX2xpc3QYBSABKAsyCS5J",
+            "RBgFIAEoCzIJLkl0ZW1MaXN0EiAKDWdldF9pdGVtX2xpc3QYAiABKAsyCS5J",
             "dGVtTGlzdEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "IODFGFOMGOD" field.</summary>
-    public const int IODFGFOMGODFieldNumber = 2;
+    public const int IODFGFOMGODFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.ItemList iODFGFOMGOD_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "get_item_list" field.</summary>
-    public const int GetItemListFieldNumber = 5;
+    public const int GetItemListFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.ItemList getItemList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (iODFGFOMGOD_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(IODFGFOMGOD);
-      }
       if (getItemList_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(18);
         output.WriteMessage(GetItemList);
+      }
+      if (iODFGFOMGOD_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(IODFGFOMGOD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (iODFGFOMGOD_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(IODFGFOMGOD);
-      }
       if (getItemList_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(18);
         output.WriteMessage(GetItemList);
+      }
+      if (iODFGFOMGOD_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(IODFGFOMGOD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -235,17 +235,17 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 18: {
-            if (iODFGFOMGOD_ == null) {
-              IODFGFOMGOD = new global::EggLink.DanhengServer.Proto.ItemList();
-            }
-            input.ReadMessage(IODFGFOMGOD);
-            break;
-          }
-          case 42: {
             if (getItemList_ == null) {
               GetItemList = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(GetItemList);
+            break;
+          }
+          case 42: {
+            if (iODFGFOMGOD_ == null) {
+              IODFGFOMGOD = new global::EggLink.DanhengServer.Proto.ItemList();
+            }
+            input.ReadMessage(IODFGFOMGOD);
             break;
           }
         }
@@ -264,17 +264,17 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 18: {
-            if (iODFGFOMGOD_ == null) {
-              IODFGFOMGOD = new global::EggLink.DanhengServer.Proto.ItemList();
-            }
-            input.ReadMessage(IODFGFOMGOD);
-            break;
-          }
-          case 42: {
             if (getItemList_ == null) {
               GetItemList = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(GetItemList);
+            break;
+          }
+          case 42: {
+            if (iODFGFOMGOD_ == null) {
+              IODFGFOMGOD = new global::EggLink.DanhengServer.Proto.ItemList();
+            }
+            input.ReadMessage(IODFGFOMGOD);
             break;
           }
         }

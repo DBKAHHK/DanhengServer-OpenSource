@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cg5JdGVtQ29zdC5wcm90bxoOUGlsZUl0ZW0ucHJvdG8ibAoISXRlbUNvc3QS",
-            "HQoIUGlsZUl0ZW0YBiABKAsyCS5QaWxlSXRlbUgAEhsKEUVxdWlwbWVudFVu",
-            "aXF1ZUlkGA0gASgNSAASFwoNUmVsaWNVbmlxdWVJZBgJIAEoDUgAQgsKCWl0",
+            "HQoIUGlsZUl0ZW0YCiABKAsyCS5QaWxlSXRlbUgAEhsKEUVxdWlwbWVudFVu",
+            "aXF1ZUlkGAggASgNSAASFwoNUmVsaWNVbmlxdWVJZBgGIAEoDUgAQgsKCWl0",
             "ZW1DYXNlX0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "PileItem" field.</summary>
-    public const int PileItemFieldNumber = 6;
+    public const int PileItemFieldNumber = 10;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.PileItem PileItem {
@@ -108,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "EquipmentUniqueId" field.</summary>
-    public const int EquipmentUniqueIdFieldNumber = 13;
+    public const int EquipmentUniqueIdFieldNumber = 8;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint EquipmentUniqueId {
@@ -134,7 +134,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "RelicUniqueId" field.</summary>
-    public const int RelicUniqueIdFieldNumber = 9;
+    public const int RelicUniqueIdFieldNumber = 6;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint RelicUniqueId {
@@ -163,9 +163,9 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "itemCase_" oneof.</summary>
     public enum ItemCaseOneofCase {
       None = 0,
-      PileItem = 6,
-      EquipmentUniqueId = 13,
-      RelicUniqueId = 9,
+      PileItem = 10,
+      EquipmentUniqueId = 8,
+      RelicUniqueId = 6,
     }
     private ItemCaseOneofCase itemCaseCase_ = ItemCaseOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -229,17 +229,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (itemCaseCase_ == ItemCaseOneofCase.PileItem) {
-        output.WriteRawTag(50);
-        output.WriteMessage(PileItem);
-      }
       if (HasRelicUniqueId) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(48);
         output.WriteUInt32(RelicUniqueId);
       }
       if (HasEquipmentUniqueId) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(64);
         output.WriteUInt32(EquipmentUniqueId);
+      }
+      if (itemCaseCase_ == ItemCaseOneofCase.PileItem) {
+        output.WriteRawTag(82);
+        output.WriteMessage(PileItem);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -251,17 +251,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (itemCaseCase_ == ItemCaseOneofCase.PileItem) {
-        output.WriteRawTag(50);
-        output.WriteMessage(PileItem);
-      }
       if (HasRelicUniqueId) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(48);
         output.WriteUInt32(RelicUniqueId);
       }
       if (HasEquipmentUniqueId) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(64);
         output.WriteUInt32(EquipmentUniqueId);
+      }
+      if (itemCaseCase_ == ItemCaseOneofCase.PileItem) {
+        output.WriteRawTag(82);
+        output.WriteMessage(PileItem);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -324,21 +324,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
+          case 48: {
+            RelicUniqueId = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            EquipmentUniqueId = input.ReadUInt32();
+            break;
+          }
+          case 82: {
             global::EggLink.DanhengServer.Proto.PileItem subBuilder = new global::EggLink.DanhengServer.Proto.PileItem();
             if (itemCaseCase_ == ItemCaseOneofCase.PileItem) {
               subBuilder.MergeFrom(PileItem);
             }
             input.ReadMessage(subBuilder);
             PileItem = subBuilder;
-            break;
-          }
-          case 72: {
-            RelicUniqueId = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            EquipmentUniqueId = input.ReadUInt32();
             break;
           }
         }
@@ -356,21 +356,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
+          case 48: {
+            RelicUniqueId = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            EquipmentUniqueId = input.ReadUInt32();
+            break;
+          }
+          case 82: {
             global::EggLink.DanhengServer.Proto.PileItem subBuilder = new global::EggLink.DanhengServer.Proto.PileItem();
             if (itemCaseCase_ == ItemCaseOneofCase.PileItem) {
               subBuilder.MergeFrom(PileItem);
             }
             input.ReadMessage(subBuilder);
             PileItem = subBuilder;
-            break;
-          }
-          case 72: {
-            RelicUniqueId = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            EquipmentUniqueId = input.ReadUInt32();
             break;
           }
         }

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdUcmlhbEFjdGl2aXR5SW5mby5wcm90byI7ChFUcmlhbEFjdGl2aXR5SW5m",
-            "bxIQCghzdGFnZV9pZBgCIAEoDRIUCgx0YWtlbl9yZXdhcmQYAyABKAhCHqoC",
+            "bxIQCghzdGFnZV9pZBgKIAEoDRIUCgx0YWtlbl9yZXdhcmQYByABKAhCHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "stage_id" field.</summary>
-    public const int StageIdFieldNumber = 2;
+    public const int StageIdFieldNumber = 10;
     private uint stageId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "taken_reward" field.</summary>
-    public const int TakenRewardFieldNumber = 3;
+    public const int TakenRewardFieldNumber = 7;
     private bool takenReward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (StageId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(StageId);
-      }
       if (TakenReward != false) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(56);
         output.WriteBool(TakenReward);
+      }
+      if (StageId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(StageId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (StageId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(StageId);
-      }
       if (TakenReward != false) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(56);
         output.WriteBool(TakenReward);
+      }
+      if (StageId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(StageId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            StageId = input.ReadUInt32();
+          case 56: {
+            TakenReward = input.ReadBool();
             break;
           }
-          case 24: {
-            TakenReward = input.ReadBool();
+          case 80: {
+            StageId = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            StageId = input.ReadUInt32();
+          case 56: {
+            TakenReward = input.ReadBool();
             break;
           }
-          case 24: {
-            TakenReward = input.ReadBool();
+          case 80: {
+            StageId = input.ReadUInt32();
             break;
           }
         }

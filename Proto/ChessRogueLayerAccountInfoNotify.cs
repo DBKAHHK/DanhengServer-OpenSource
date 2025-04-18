@@ -26,16 +26,16 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiZDaGVzc1JvZ3VlTGF5ZXJBY2NvdW50SW5mb05vdGlmeS5wcm90bxoaQ2hl",
             "c3NSb2d1ZUZpbmlzaEluZm8ucHJvdG8aGUNoZXNzUm9ndWVMZXZlbEluZm8u",
-            "cHJvdG8iuQEKIENoZXNzUm9ndWVMYXllckFjY291bnRJbmZvTm90aWZ5EioK",
-            "C2ZpbmlzaF9pbmZvGAYgASgLMhUuQ2hlc3NSb2d1ZUZpbmlzaEluZm8SEAoI",
-            "bGF5ZXJfaWQYAyABKA0SEwoLT0pHR01PT1BHSUwYBCADKA0SGAoQZGlmZmlj",
-            "dWx0eV9sZXZlbBgJIAEoDRIoCgpsZXZlbF9pbmZvGAIgASgLMhQuQ2hlc3NS",
-            "b2d1ZUxldmVsSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "cHJvdG8iuQEKIENoZXNzUm9ndWVMYXllckFjY291bnRJbmZvTm90aWZ5EhAK",
+            "CGxheWVyX2lkGAggASgNEhMKC09KR0dNT09QR0lMGAcgAygNEigKCmxldmVs",
+            "X2luZm8YASABKAsyFC5DaGVzc1JvZ3VlTGV2ZWxJbmZvEhgKEGRpZmZpY3Vs",
+            "dHlfbGV2ZWwYBiABKA0SKgoLZmluaXNoX2luZm8YCSABKAsyFS5DaGVzc1Jv",
+            "Z3VlRmluaXNoSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueFinishInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueLevelInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueLayerAccountInfoNotify), global::EggLink.DanhengServer.Proto.ChessRogueLayerAccountInfoNotify.Parser, new[]{ "FinishInfo", "LayerId", "OJGGMOOPGIL", "DifficultyLevel", "LevelInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueLayerAccountInfoNotify), global::EggLink.DanhengServer.Proto.ChessRogueLayerAccountInfoNotify.Parser, new[]{ "LayerId", "OJGGMOOPGIL", "LevelInfo", "DifficultyLevel", "FinishInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,11 +77,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueLayerAccountInfoNotify(ChessRogueLayerAccountInfoNotify other) : this() {
-      finishInfo_ = other.finishInfo_ != null ? other.finishInfo_.Clone() : null;
       layerId_ = other.layerId_;
       oJGGMOOPGIL_ = other.oJGGMOOPGIL_.Clone();
-      difficultyLevel_ = other.difficultyLevel_;
       levelInfo_ = other.levelInfo_ != null ? other.levelInfo_.Clone() : null;
+      difficultyLevel_ = other.difficultyLevel_;
+      finishInfo_ = other.finishInfo_ != null ? other.finishInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -91,20 +91,8 @@ namespace EggLink.DanhengServer.Proto {
       return new ChessRogueLayerAccountInfoNotify(this);
     }
 
-    /// <summary>Field number for the "finish_info" field.</summary>
-    public const int FinishInfoFieldNumber = 6;
-    private global::EggLink.DanhengServer.Proto.ChessRogueFinishInfo finishInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ChessRogueFinishInfo FinishInfo {
-      get { return finishInfo_; }
-      set {
-        finishInfo_ = value;
-      }
-    }
-
     /// <summary>Field number for the "layer_id" field.</summary>
-    public const int LayerIdFieldNumber = 3;
+    public const int LayerIdFieldNumber = 8;
     private uint layerId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -116,9 +104,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "OJGGMOOPGIL" field.</summary>
-    public const int OJGGMOOPGILFieldNumber = 4;
+    public const int OJGGMOOPGILFieldNumber = 7;
     private static readonly pb::FieldCodec<uint> _repeated_oJGGMOOPGIL_codec
-        = pb::FieldCodec.ForUInt32(34);
+        = pb::FieldCodec.ForUInt32(58);
     private readonly pbc::RepeatedField<uint> oJGGMOOPGIL_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -126,8 +114,20 @@ namespace EggLink.DanhengServer.Proto {
       get { return oJGGMOOPGIL_; }
     }
 
+    /// <summary>Field number for the "level_info" field.</summary>
+    public const int LevelInfoFieldNumber = 1;
+    private global::EggLink.DanhengServer.Proto.ChessRogueLevelInfo levelInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ChessRogueLevelInfo LevelInfo {
+      get { return levelInfo_; }
+      set {
+        levelInfo_ = value;
+      }
+    }
+
     /// <summary>Field number for the "difficulty_level" field.</summary>
-    public const int DifficultyLevelFieldNumber = 9;
+    public const int DifficultyLevelFieldNumber = 6;
     private uint difficultyLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,15 +138,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "level_info" field.</summary>
-    public const int LevelInfoFieldNumber = 2;
-    private global::EggLink.DanhengServer.Proto.ChessRogueLevelInfo levelInfo_;
+    /// <summary>Field number for the "finish_info" field.</summary>
+    public const int FinishInfoFieldNumber = 9;
+    private global::EggLink.DanhengServer.Proto.ChessRogueFinishInfo finishInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ChessRogueLevelInfo LevelInfo {
-      get { return levelInfo_; }
+    public global::EggLink.DanhengServer.Proto.ChessRogueFinishInfo FinishInfo {
+      get { return finishInfo_; }
       set {
-        levelInfo_ = value;
+        finishInfo_ = value;
       }
     }
 
@@ -165,11 +165,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(FinishInfo, other.FinishInfo)) return false;
       if (LayerId != other.LayerId) return false;
       if(!oJGGMOOPGIL_.Equals(other.oJGGMOOPGIL_)) return false;
-      if (DifficultyLevel != other.DifficultyLevel) return false;
       if (!object.Equals(LevelInfo, other.LevelInfo)) return false;
+      if (DifficultyLevel != other.DifficultyLevel) return false;
+      if (!object.Equals(FinishInfo, other.FinishInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -177,11 +177,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (finishInfo_ != null) hash ^= FinishInfo.GetHashCode();
       if (LayerId != 0) hash ^= LayerId.GetHashCode();
       hash ^= oJGGMOOPGIL_.GetHashCode();
-      if (DifficultyLevel != 0) hash ^= DifficultyLevel.GetHashCode();
       if (levelInfo_ != null) hash ^= LevelInfo.GetHashCode();
+      if (DifficultyLevel != 0) hash ^= DifficultyLevel.GetHashCode();
+      if (finishInfo_ != null) hash ^= FinishInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -201,21 +201,21 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (levelInfo_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(LevelInfo);
       }
-      if (LayerId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(LayerId);
+      if (DifficultyLevel != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(DifficultyLevel);
       }
       oJGGMOOPGIL_.WriteTo(output, _repeated_oJGGMOOPGIL_codec);
-      if (finishInfo_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(FinishInfo);
+      if (LayerId != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(LayerId);
       }
-      if (DifficultyLevel != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(DifficultyLevel);
+      if (finishInfo_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(FinishInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -228,21 +228,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (levelInfo_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(LevelInfo);
       }
-      if (LayerId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(LayerId);
+      if (DifficultyLevel != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(DifficultyLevel);
       }
       oJGGMOOPGIL_.WriteTo(ref output, _repeated_oJGGMOOPGIL_codec);
-      if (finishInfo_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(FinishInfo);
+      if (LayerId != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(LayerId);
       }
-      if (DifficultyLevel != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(DifficultyLevel);
+      if (finishInfo_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(FinishInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -254,18 +254,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (finishInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FinishInfo);
-      }
       if (LayerId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LayerId);
       }
       size += oJGGMOOPGIL_.CalculateSize(_repeated_oJGGMOOPGIL_codec);
+      if (levelInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LevelInfo);
+      }
       if (DifficultyLevel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DifficultyLevel);
       }
-      if (levelInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LevelInfo);
+      if (finishInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FinishInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -279,24 +279,24 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.finishInfo_ != null) {
-        if (finishInfo_ == null) {
-          FinishInfo = new global::EggLink.DanhengServer.Proto.ChessRogueFinishInfo();
-        }
-        FinishInfo.MergeFrom(other.FinishInfo);
-      }
       if (other.LayerId != 0) {
         LayerId = other.LayerId;
       }
       oJGGMOOPGIL_.Add(other.oJGGMOOPGIL_);
-      if (other.DifficultyLevel != 0) {
-        DifficultyLevel = other.DifficultyLevel;
-      }
       if (other.levelInfo_ != null) {
         if (levelInfo_ == null) {
           LevelInfo = new global::EggLink.DanhengServer.Proto.ChessRogueLevelInfo();
         }
         LevelInfo.MergeFrom(other.LevelInfo);
+      }
+      if (other.DifficultyLevel != 0) {
+        DifficultyLevel = other.DifficultyLevel;
+      }
+      if (other.finishInfo_ != null) {
+        if (finishInfo_ == null) {
+          FinishInfo = new global::EggLink.DanhengServer.Proto.ChessRogueFinishInfo();
+        }
+        FinishInfo.MergeFrom(other.FinishInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -313,31 +313,31 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 10: {
             if (levelInfo_ == null) {
               LevelInfo = new global::EggLink.DanhengServer.Proto.ChessRogueLevelInfo();
             }
             input.ReadMessage(LevelInfo);
             break;
           }
-          case 24: {
-            LayerId = input.ReadUInt32();
+          case 48: {
+            DifficultyLevel = input.ReadUInt32();
             break;
           }
-          case 34:
-          case 32: {
+          case 58:
+          case 56: {
             oJGGMOOPGIL_.AddEntriesFrom(input, _repeated_oJGGMOOPGIL_codec);
             break;
           }
-          case 50: {
+          case 64: {
+            LayerId = input.ReadUInt32();
+            break;
+          }
+          case 74: {
             if (finishInfo_ == null) {
               FinishInfo = new global::EggLink.DanhengServer.Proto.ChessRogueFinishInfo();
             }
             input.ReadMessage(FinishInfo);
-            break;
-          }
-          case 72: {
-            DifficultyLevel = input.ReadUInt32();
             break;
           }
         }
@@ -355,31 +355,31 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 10: {
             if (levelInfo_ == null) {
               LevelInfo = new global::EggLink.DanhengServer.Proto.ChessRogueLevelInfo();
             }
             input.ReadMessage(LevelInfo);
             break;
           }
-          case 24: {
-            LayerId = input.ReadUInt32();
+          case 48: {
+            DifficultyLevel = input.ReadUInt32();
             break;
           }
-          case 34:
-          case 32: {
+          case 58:
+          case 56: {
             oJGGMOOPGIL_.AddEntriesFrom(ref input, _repeated_oJGGMOOPGIL_codec);
             break;
           }
-          case 50: {
+          case 64: {
+            LayerId = input.ReadUInt32();
+            break;
+          }
+          case 74: {
             if (finishInfo_ == null) {
               FinishInfo = new global::EggLink.DanhengServer.Proto.ChessRogueFinishInfo();
             }
             input.ReadMessage(FinishInfo);
-            break;
-          }
-          case 72: {
-            DifficultyLevel = input.ReadUInt32();
             break;
           }
         }

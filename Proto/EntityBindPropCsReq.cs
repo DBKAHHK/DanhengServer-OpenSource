@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlFbnRpdHlCaW5kUHJvcENzUmVxLnByb3RvGhBNb3Rpb25JbmZvLnByb3Rv",
-            "IkcKE0VudGl0eUJpbmRQcm9wQ3NSZXESEwoLTUpKTVBJRkxNS0YYByABKAgS",
-            "GwoGbW90aW9uGA0gASgLMgsuTW90aW9uSW5mb0IeqgIbRWdnTGluay5EYW5o",
+            "IkcKE0VudGl0eUJpbmRQcm9wQ3NSZXESEwoLTUpKTVBJRkxNS0YYCiABKAgS",
+            "GwoGbW90aW9uGA8gASgLMgsuTW90aW9uSW5mb0IeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MJJMPIFLMKF" field.</summary>
-    public const int MJJMPIFLMKFFieldNumber = 7;
+    public const int MJJMPIFLMKFFieldNumber = 10;
     private bool mJJMPIFLMKF_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "motion" field.</summary>
-    public const int MotionFieldNumber = 13;
+    public const int MotionFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.MotionInfo motion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (MJJMPIFLMKF != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(80);
         output.WriteBool(MJJMPIFLMKF);
       }
       if (motion_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(122);
         output.WriteMessage(Motion);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MJJMPIFLMKF != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(80);
         output.WriteBool(MJJMPIFLMKF);
       }
       if (motion_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(122);
         output.WriteMessage(Motion);
       }
       if (_unknownFields != null) {
@@ -230,11 +230,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
+          case 80: {
             MJJMPIFLMKF = input.ReadBool();
             break;
           }
-          case 106: {
+          case 122: {
             if (motion_ == null) {
               Motion = new global::EggLink.DanhengServer.Proto.MotionInfo();
             }
@@ -256,11 +256,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
+          case 80: {
             MJJMPIFLMKF = input.ReadBool();
             break;
           }
-          case 106: {
+          case 122: {
             if (motion_ == null) {
               Motion = new global::EggLink.DanhengServer.Proto.MotionInfo();
             }

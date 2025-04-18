@@ -26,15 +26,15 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiVXb3JrYmVuY2hSZWZvcmdlRm9ybXVsYUZ1bmNJbmZvLnByb3RvGhJJdGVt",
             "Q29zdERhdGEucHJvdG8itgEKH1dvcmtiZW5jaFJlZm9yZ2VGb3JtdWxhRnVu",
-            "Y0luZm8SHgoWdWludF9yZWZvcmdlX251bV92YWx1ZRgOIAEoDRIgCgljb3N0",
-            "X2RhdGEYDSABKAsyDS5JdGVtQ29zdERhdGESHQoVaW50X3JlZm9yZ2VfbnVt",
-            "X3ZhbHVlGAggASgFEhgKEGZyZWVfcmVmb3JnZV9udW0YByABKA0SGAoQY2Fu",
-            "X2ZyZWVfcmVmb3JnZRgMIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "Y0luZm8SIAoJY29zdF9kYXRhGAcgASgLMg0uSXRlbUNvc3REYXRhEhgKEGZy",
+            "ZWVfcmVmb3JnZV9udW0YDSABKA0SHgoWdWludF9yZWZvcmdlX251bV92YWx1",
+            "ZRgCIAEoDRIYChBjYW5fZnJlZV9yZWZvcmdlGAUgASgIEh0KFWludF9yZWZv",
+            "cmdlX251bV92YWx1ZRgKIAEoBUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.WorkbenchReforgeFormulaFuncInfo), global::EggLink.DanhengServer.Proto.WorkbenchReforgeFormulaFuncInfo.Parser, new[]{ "UintReforgeNumValue", "CostData", "IntReforgeNumValue", "FreeReforgeNum", "CanFreeReforge" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.WorkbenchReforgeFormulaFuncInfo), global::EggLink.DanhengServer.Proto.WorkbenchReforgeFormulaFuncInfo.Parser, new[]{ "CostData", "FreeReforgeNum", "UintReforgeNumValue", "CanFreeReforge", "IntReforgeNumValue" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,11 +76,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkbenchReforgeFormulaFuncInfo(WorkbenchReforgeFormulaFuncInfo other) : this() {
-      uintReforgeNumValue_ = other.uintReforgeNumValue_;
       costData_ = other.costData_ != null ? other.costData_.Clone() : null;
-      intReforgeNumValue_ = other.intReforgeNumValue_;
       freeReforgeNum_ = other.freeReforgeNum_;
+      uintReforgeNumValue_ = other.uintReforgeNumValue_;
       canFreeReforge_ = other.canFreeReforge_;
+      intReforgeNumValue_ = other.intReforgeNumValue_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -90,20 +90,8 @@ namespace EggLink.DanhengServer.Proto {
       return new WorkbenchReforgeFormulaFuncInfo(this);
     }
 
-    /// <summary>Field number for the "uint_reforge_num_value" field.</summary>
-    public const int UintReforgeNumValueFieldNumber = 14;
-    private uint uintReforgeNumValue_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint UintReforgeNumValue {
-      get { return uintReforgeNumValue_; }
-      set {
-        uintReforgeNumValue_ = value;
-      }
-    }
-
     /// <summary>Field number for the "cost_data" field.</summary>
-    public const int CostDataFieldNumber = 13;
+    public const int CostDataFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.ItemCostData costData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -114,20 +102,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "int_reforge_num_value" field.</summary>
-    public const int IntReforgeNumValueFieldNumber = 8;
-    private int intReforgeNumValue_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int IntReforgeNumValue {
-      get { return intReforgeNumValue_; }
-      set {
-        intReforgeNumValue_ = value;
-      }
-    }
-
     /// <summary>Field number for the "free_reforge_num" field.</summary>
-    public const int FreeReforgeNumFieldNumber = 7;
+    public const int FreeReforgeNumFieldNumber = 13;
     private uint freeReforgeNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,8 +114,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "uint_reforge_num_value" field.</summary>
+    public const int UintReforgeNumValueFieldNumber = 2;
+    private uint uintReforgeNumValue_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint UintReforgeNumValue {
+      get { return uintReforgeNumValue_; }
+      set {
+        uintReforgeNumValue_ = value;
+      }
+    }
+
     /// <summary>Field number for the "can_free_reforge" field.</summary>
-    public const int CanFreeReforgeFieldNumber = 12;
+    public const int CanFreeReforgeFieldNumber = 5;
     private bool canFreeReforge_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -147,6 +135,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return canFreeReforge_; }
       set {
         canFreeReforge_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "int_reforge_num_value" field.</summary>
+    public const int IntReforgeNumValueFieldNumber = 10;
+    private int intReforgeNumValue_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int IntReforgeNumValue {
+      get { return intReforgeNumValue_; }
+      set {
+        intReforgeNumValue_ = value;
       }
     }
 
@@ -165,11 +165,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (UintReforgeNumValue != other.UintReforgeNumValue) return false;
       if (!object.Equals(CostData, other.CostData)) return false;
-      if (IntReforgeNumValue != other.IntReforgeNumValue) return false;
       if (FreeReforgeNum != other.FreeReforgeNum) return false;
+      if (UintReforgeNumValue != other.UintReforgeNumValue) return false;
       if (CanFreeReforge != other.CanFreeReforge) return false;
+      if (IntReforgeNumValue != other.IntReforgeNumValue) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -177,11 +177,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (UintReforgeNumValue != 0) hash ^= UintReforgeNumValue.GetHashCode();
       if (costData_ != null) hash ^= CostData.GetHashCode();
-      if (IntReforgeNumValue != 0) hash ^= IntReforgeNumValue.GetHashCode();
       if (FreeReforgeNum != 0) hash ^= FreeReforgeNum.GetHashCode();
+      if (UintReforgeNumValue != 0) hash ^= UintReforgeNumValue.GetHashCode();
       if (CanFreeReforge != false) hash ^= CanFreeReforge.GetHashCode();
+      if (IntReforgeNumValue != 0) hash ^= IntReforgeNumValue.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -200,25 +200,25 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FreeReforgeNum != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(FreeReforgeNum);
-      }
-      if (IntReforgeNumValue != 0) {
-        output.WriteRawTag(64);
-        output.WriteInt32(IntReforgeNumValue);
+      if (UintReforgeNumValue != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(UintReforgeNumValue);
       }
       if (CanFreeReforge != false) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(40);
         output.WriteBool(CanFreeReforge);
       }
       if (costData_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(58);
         output.WriteMessage(CostData);
       }
-      if (UintReforgeNumValue != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(UintReforgeNumValue);
+      if (IntReforgeNumValue != 0) {
+        output.WriteRawTag(80);
+        output.WriteInt32(IntReforgeNumValue);
+      }
+      if (FreeReforgeNum != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(FreeReforgeNum);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -230,25 +230,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FreeReforgeNum != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(FreeReforgeNum);
-      }
-      if (IntReforgeNumValue != 0) {
-        output.WriteRawTag(64);
-        output.WriteInt32(IntReforgeNumValue);
+      if (UintReforgeNumValue != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(UintReforgeNumValue);
       }
       if (CanFreeReforge != false) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(40);
         output.WriteBool(CanFreeReforge);
       }
       if (costData_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(58);
         output.WriteMessage(CostData);
       }
-      if (UintReforgeNumValue != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(UintReforgeNumValue);
+      if (IntReforgeNumValue != 0) {
+        output.WriteRawTag(80);
+        output.WriteInt32(IntReforgeNumValue);
+      }
+      if (FreeReforgeNum != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(FreeReforgeNum);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -260,20 +260,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (UintReforgeNumValue != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UintReforgeNumValue);
-      }
       if (costData_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CostData);
-      }
-      if (IntReforgeNumValue != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(IntReforgeNumValue);
       }
       if (FreeReforgeNum != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FreeReforgeNum);
       }
+      if (UintReforgeNumValue != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UintReforgeNumValue);
+      }
       if (CanFreeReforge != false) {
         size += 1 + 1;
+      }
+      if (IntReforgeNumValue != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(IntReforgeNumValue);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -287,23 +287,23 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.UintReforgeNumValue != 0) {
-        UintReforgeNumValue = other.UintReforgeNumValue;
-      }
       if (other.costData_ != null) {
         if (costData_ == null) {
           CostData = new global::EggLink.DanhengServer.Proto.ItemCostData();
         }
         CostData.MergeFrom(other.CostData);
       }
-      if (other.IntReforgeNumValue != 0) {
-        IntReforgeNumValue = other.IntReforgeNumValue;
-      }
       if (other.FreeReforgeNum != 0) {
         FreeReforgeNum = other.FreeReforgeNum;
       }
+      if (other.UintReforgeNumValue != 0) {
+        UintReforgeNumValue = other.UintReforgeNumValue;
+      }
       if (other.CanFreeReforge != false) {
         CanFreeReforge = other.CanFreeReforge;
+      }
+      if (other.IntReforgeNumValue != 0) {
+        IntReforgeNumValue = other.IntReforgeNumValue;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -320,27 +320,27 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            FreeReforgeNum = input.ReadUInt32();
+          case 16: {
+            UintReforgeNumValue = input.ReadUInt32();
             break;
           }
-          case 64: {
-            IntReforgeNumValue = input.ReadInt32();
-            break;
-          }
-          case 96: {
+          case 40: {
             CanFreeReforge = input.ReadBool();
             break;
           }
-          case 106: {
+          case 58: {
             if (costData_ == null) {
               CostData = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
             input.ReadMessage(CostData);
             break;
           }
-          case 112: {
-            UintReforgeNumValue = input.ReadUInt32();
+          case 80: {
+            IntReforgeNumValue = input.ReadInt32();
+            break;
+          }
+          case 104: {
+            FreeReforgeNum = input.ReadUInt32();
             break;
           }
         }
@@ -358,27 +358,27 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            FreeReforgeNum = input.ReadUInt32();
+          case 16: {
+            UintReforgeNumValue = input.ReadUInt32();
             break;
           }
-          case 64: {
-            IntReforgeNumValue = input.ReadInt32();
-            break;
-          }
-          case 96: {
+          case 40: {
             CanFreeReforge = input.ReadBool();
             break;
           }
-          case 106: {
+          case 58: {
             if (costData_ == null) {
               CostData = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
             input.ReadMessage(CostData);
             break;
           }
-          case 112: {
-            UintReforgeNumValue = input.ReadUInt32();
+          case 80: {
+            IntReforgeNumValue = input.ReadInt32();
+            break;
+          }
+          case 104: {
+            FreeReforgeNum = input.ReadUInt32();
             break;
           }
         }

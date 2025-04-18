@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChNTY2VuZVByb3BJbmZvLnByb3RvGhNQcm9wRXh0cmFJbmZvLnByb3RvIqEB",
-            "Cg1TY2VuZVByb3BJbmZvEhYKDmNyZWF0ZV90aW1lX21zGA4gASgEEg8KB3By",
-            "b3BfaWQYByABKA0SIgoKZXh0cmFfaW5mbxgBIAEoCzIOLlByb3BFeHRyYUlu",
-            "Zm8SEgoKcHJvcF9zdGF0ZRgCIAEoDRIUCgxsaWZlX3RpbWVfbXMYCSABKA0S",
-            "GQoRdHJpZ2dlcl9uYW1lX2xpc3QYDyADKAlCHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "Cg1TY2VuZVByb3BJbmZvEhYKDmNyZWF0ZV90aW1lX21zGAYgASgEEg8KB3By",
+            "b3BfaWQYDyABKA0SIgoKZXh0cmFfaW5mbxgIIAEoCzIOLlByb3BFeHRyYUlu",
+            "Zm8SFAoMbGlmZV90aW1lX21zGAIgASgNEhIKCnByb3Bfc3RhdGUYCyABKA0S",
+            "GQoRdHJpZ2dlcl9uYW1lX2xpc3QYDiADKAlCHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PropExtraInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ScenePropInfo), global::EggLink.DanhengServer.Proto.ScenePropInfo.Parser, new[]{ "CreateTimeMs", "PropId", "ExtraInfo", "PropState", "LifeTimeMs", "TriggerNameList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ScenePropInfo), global::EggLink.DanhengServer.Proto.ScenePropInfo.Parser, new[]{ "CreateTimeMs", "PropId", "ExtraInfo", "LifeTimeMs", "PropState", "TriggerNameList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,8 +78,8 @@ namespace EggLink.DanhengServer.Proto {
       createTimeMs_ = other.createTimeMs_;
       propId_ = other.propId_;
       extraInfo_ = other.extraInfo_ != null ? other.extraInfo_.Clone() : null;
-      propState_ = other.propState_;
       lifeTimeMs_ = other.lifeTimeMs_;
+      propState_ = other.propState_;
       triggerNameList_ = other.triggerNameList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -91,7 +91,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "create_time_ms" field.</summary>
-    public const int CreateTimeMsFieldNumber = 14;
+    public const int CreateTimeMsFieldNumber = 6;
     private ulong createTimeMs_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -103,7 +103,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "prop_id" field.</summary>
-    public const int PropIdFieldNumber = 7;
+    public const int PropIdFieldNumber = 15;
     private uint propId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -115,7 +115,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "extra_info" field.</summary>
-    public const int ExtraInfoFieldNumber = 1;
+    public const int ExtraInfoFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.PropExtraInfo extraInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -126,20 +126,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "prop_state" field.</summary>
-    public const int PropStateFieldNumber = 2;
-    private uint propState_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PropState {
-      get { return propState_; }
-      set {
-        propState_ = value;
-      }
-    }
-
     /// <summary>Field number for the "life_time_ms" field.</summary>
-    public const int LifeTimeMsFieldNumber = 9;
+    public const int LifeTimeMsFieldNumber = 2;
     private uint lifeTimeMs_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -150,10 +138,22 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "prop_state" field.</summary>
+    public const int PropStateFieldNumber = 11;
+    private uint propState_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PropState {
+      get { return propState_; }
+      set {
+        propState_ = value;
+      }
+    }
+
     /// <summary>Field number for the "trigger_name_list" field.</summary>
-    public const int TriggerNameListFieldNumber = 15;
+    public const int TriggerNameListFieldNumber = 14;
     private static readonly pb::FieldCodec<string> _repeated_triggerNameList_codec
-        = pb::FieldCodec.ForString(122);
+        = pb::FieldCodec.ForString(114);
     private readonly pbc::RepeatedField<string> triggerNameList_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -179,8 +179,8 @@ namespace EggLink.DanhengServer.Proto {
       if (CreateTimeMs != other.CreateTimeMs) return false;
       if (PropId != other.PropId) return false;
       if (!object.Equals(ExtraInfo, other.ExtraInfo)) return false;
-      if (PropState != other.PropState) return false;
       if (LifeTimeMs != other.LifeTimeMs) return false;
+      if (PropState != other.PropState) return false;
       if(!triggerNameList_.Equals(other.triggerNameList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -192,8 +192,8 @@ namespace EggLink.DanhengServer.Proto {
       if (CreateTimeMs != 0UL) hash ^= CreateTimeMs.GetHashCode();
       if (PropId != 0) hash ^= PropId.GetHashCode();
       if (extraInfo_ != null) hash ^= ExtraInfo.GetHashCode();
-      if (PropState != 0) hash ^= PropState.GetHashCode();
       if (LifeTimeMs != 0) hash ^= LifeTimeMs.GetHashCode();
+      if (PropState != 0) hash ^= PropState.GetHashCode();
       hash ^= triggerNameList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -213,27 +213,27 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (extraInfo_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(ExtraInfo);
-      }
-      if (PropState != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(PropState);
-      }
-      if (PropId != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(PropId);
-      }
       if (LifeTimeMs != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(16);
         output.WriteUInt32(LifeTimeMs);
       }
       if (CreateTimeMs != 0UL) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(48);
         output.WriteUInt64(CreateTimeMs);
       }
+      if (extraInfo_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(ExtraInfo);
+      }
+      if (PropState != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(PropState);
+      }
       triggerNameList_.WriteTo(output, _repeated_triggerNameList_codec);
+      if (PropId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(PropId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -244,27 +244,27 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (extraInfo_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(ExtraInfo);
-      }
-      if (PropState != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(PropState);
-      }
-      if (PropId != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(PropId);
-      }
       if (LifeTimeMs != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(16);
         output.WriteUInt32(LifeTimeMs);
       }
       if (CreateTimeMs != 0UL) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(48);
         output.WriteUInt64(CreateTimeMs);
       }
+      if (extraInfo_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(ExtraInfo);
+      }
+      if (PropState != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(PropState);
+      }
       triggerNameList_.WriteTo(ref output, _repeated_triggerNameList_codec);
+      if (PropId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(PropId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -284,11 +284,11 @@ namespace EggLink.DanhengServer.Proto {
       if (extraInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExtraInfo);
       }
-      if (PropState != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PropState);
-      }
       if (LifeTimeMs != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LifeTimeMs);
+      }
+      if (PropState != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PropState);
       }
       size += triggerNameList_.CalculateSize(_repeated_triggerNameList_codec);
       if (_unknownFields != null) {
@@ -315,11 +315,11 @@ namespace EggLink.DanhengServer.Proto {
         }
         ExtraInfo.MergeFrom(other.ExtraInfo);
       }
-      if (other.PropState != 0) {
-        PropState = other.PropState;
-      }
       if (other.LifeTimeMs != 0) {
         LifeTimeMs = other.LifeTimeMs;
+      }
+      if (other.PropState != 0) {
+        PropState = other.PropState;
       }
       triggerNameList_.Add(other.triggerNameList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -337,31 +337,31 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 16: {
+            LifeTimeMs = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            CreateTimeMs = input.ReadUInt64();
+            break;
+          }
+          case 66: {
             if (extraInfo_ == null) {
               ExtraInfo = new global::EggLink.DanhengServer.Proto.PropExtraInfo();
             }
             input.ReadMessage(ExtraInfo);
             break;
           }
-          case 16: {
+          case 88: {
             PropState = input.ReadUInt32();
             break;
           }
-          case 56: {
-            PropId = input.ReadUInt32();
-            break;
-          }
-          case 72: {
-            LifeTimeMs = input.ReadUInt32();
-            break;
-          }
-          case 112: {
-            CreateTimeMs = input.ReadUInt64();
-            break;
-          }
-          case 122: {
+          case 114: {
             triggerNameList_.AddEntriesFrom(input, _repeated_triggerNameList_codec);
+            break;
+          }
+          case 120: {
+            PropId = input.ReadUInt32();
             break;
           }
         }
@@ -379,31 +379,31 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 16: {
+            LifeTimeMs = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            CreateTimeMs = input.ReadUInt64();
+            break;
+          }
+          case 66: {
             if (extraInfo_ == null) {
               ExtraInfo = new global::EggLink.DanhengServer.Proto.PropExtraInfo();
             }
             input.ReadMessage(ExtraInfo);
             break;
           }
-          case 16: {
+          case 88: {
             PropState = input.ReadUInt32();
             break;
           }
-          case 56: {
-            PropId = input.ReadUInt32();
-            break;
-          }
-          case 72: {
-            LifeTimeMs = input.ReadUInt32();
-            break;
-          }
-          case 112: {
-            CreateTimeMs = input.ReadUInt64();
-            break;
-          }
-          case 122: {
+          case 114: {
             triggerNameList_.AddEntriesFrom(ref input, _repeated_triggerNameList_codec);
+            break;
+          }
+          case 120: {
+            PropId = input.ReadUInt32();
             break;
           }
         }

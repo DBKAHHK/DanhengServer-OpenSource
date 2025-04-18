@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFJQk9NSEtIQkFBTy5wcm90bxoRSURCRU9NTUNLSUsucHJvdG8iMAoLSUJP",
-            "TUhLSEJBQU8SIQoLTkZFT0xOQU9HREsYASADKAsyDC5JREJFT01NQ0tJS0Ie",
+            "TUhLSEJBQU8SIQoLTkZFT0xOQU9HREsYCCADKAsyDC5JREJFT01NQ0tJS0Ie",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IDBEOMMCKIKReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NFEOLNAOGDK" field.</summary>
-    public const int NFEOLNAOGDKFieldNumber = 1;
+    public const int NFEOLNAOGDKFieldNumber = 8;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.IDBEOMMCKIK> _repeated_nFEOLNAOGDK_codec
-        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.IDBEOMMCKIK.Parser);
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.IDBEOMMCKIK.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IDBEOMMCKIK> nFEOLNAOGDK_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IDBEOMMCKIK>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 66: {
             nFEOLNAOGDK_.AddEntriesFrom(input, _repeated_nFEOLNAOGDK_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 66: {
             nFEOLNAOGDK_.AddEntriesFrom(ref input, _repeated_nFEOLNAOGDK_codec);
             break;
           }

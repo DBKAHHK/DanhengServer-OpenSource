@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChxUcmFpblBhcnR5U2V0dGxlTm90aWZ5LnByb3RvGhFGS01CRkxNRUdFQi5w",
             "cm90byJQChZUcmFpblBhcnR5U2V0dGxlTm90aWZ5EiEKC0hJTE9NRUtBRkJQ",
-            "GA0gASgLMgwuRktNQkZMTUVHRUISEwoLRUVHSEhIS0NHSEIYAiABKA1CHqoC",
+            "GAQgASgLMgwuRktNQkZMTUVHRUISEwoLRUVHSEhIS0NHSEIYCiABKA1CHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FKMBFLMEGEBReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "HILOMEKAFBP" field.</summary>
-    public const int HILOMEKAFBPFieldNumber = 13;
+    public const int HILOMEKAFBPFieldNumber = 4;
     private global::EggLink.DanhengServer.Proto.FKMBFLMEGEB hILOMEKAFBP_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "EEGHHHKCGHB" field.</summary>
-    public const int EEGHHHKCGHBFieldNumber = 2;
+    public const int EEGHHHKCGHBFieldNumber = 10;
     private uint eEGHHHKCGHB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (EEGHHHKCGHB != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(EEGHHHKCGHB);
-      }
       if (hILOMEKAFBP_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(34);
         output.WriteMessage(HILOMEKAFBP);
+      }
+      if (EEGHHHKCGHB != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(EEGHHHKCGHB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (EEGHHHKCGHB != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(EEGHHHKCGHB);
-      }
       if (hILOMEKAFBP_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(34);
         output.WriteMessage(HILOMEKAFBP);
+      }
+      if (EEGHHHKCGHB != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(EEGHHHKCGHB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            EEGHHHKCGHB = input.ReadUInt32();
-            break;
-          }
-          case 106: {
+          case 34: {
             if (hILOMEKAFBP_ == null) {
               HILOMEKAFBP = new global::EggLink.DanhengServer.Proto.FKMBFLMEGEB();
             }
             input.ReadMessage(HILOMEKAFBP);
+            break;
+          }
+          case 80: {
+            EEGHHHKCGHB = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            EEGHHHKCGHB = input.ReadUInt32();
-            break;
-          }
-          case 106: {
+          case 34: {
             if (hILOMEKAFBP_ == null) {
               HILOMEKAFBP = new global::EggLink.DanhengServer.Proto.FKMBFLMEGEB();
             }
             input.ReadMessage(HILOMEKAFBP);
+            break;
+          }
+          case 80: {
+            EEGHHHKCGHB = input.ReadUInt32();
             break;
           }
         }

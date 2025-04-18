@@ -36,9 +36,9 @@ internal partial class QueryGatewayHandler
         if (ConfigManager.Config.GameServer.UsePacketEncryption)
             gateServer.ClientSecretKey = Convert.ToBase64String(Crypto.ClientSecretKey!.GetBytes());
 
+        // Auto separate CN/OS prefix
         var region = ConfigManager.Hotfix.Region;
-        if (region == BaseRegionEnum.None)
-            _ = Enum.TryParse(version[..2], out region);
+        if (region == BaseRegionEnum.None) _ = Enum.TryParse(version[..2], out region);
         var baseUrl = region switch
         {
             BaseRegionEnum.CN => BaseUrl.CN,
@@ -46,6 +46,7 @@ internal partial class QueryGatewayHandler
             _ => BaseUrl.OS
         };
 
+        // Separate CN/OS hotfix by client
         var ver = VersionRegex().Replace(version, "");
         ConfigManager.Hotfix.HotfixData.TryGetValue(ver, out var urls);
         if (urls != null)
@@ -66,6 +67,6 @@ internal partial class QueryGatewayHandler
         Data = Convert.ToBase64String(gateServer.ToByteArray());
     }
 
-    [GeneratedRegex(@"CN|OS|BETA|PROD|Android|Win|iOS")]
+    [GeneratedRegex(@"BETA|PROD|CECREATION|Android|Win|iOS")]
     private static partial Regex VersionRegex();
 }
