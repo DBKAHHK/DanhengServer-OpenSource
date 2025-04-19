@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static UpdateMapRotationDataScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNVcGRhdGVNYXBSb3RhdGlvbkRhdGFTY05vdGlmeS5wcm90bxoRQ2hhcmdl",
-            "ckluZm8ucHJvdG8aEVJvdGF0ZXJEYXRhLnByb3RvGhFJQ0lNQUtCQUpHQi5w",
-            "cm90bxoXUm90YXRlckVuZXJneUluZm8ucHJvdG8i/wEKHVVwZGF0ZU1hcFJv",
+            "CiNVcGRhdGVNYXBSb3RhdGlvbkRhdGFTY05vdGlmeS5wcm90bxoXUm90YXRl",
+            "ckVuZXJneUluZm8ucHJvdG8aEUNoYXJnZXJJbmZvLnByb3RvGhFSb3RhdGVy",
+            "RGF0YS5wcm90bxoRSUNJTUFLQkFKR0IucHJvdG8i/wEKHVVwZGF0ZU1hcFJv",
             "dGF0aW9uRGF0YVNjTm90aWZ5Eh8KCXJvZ3VlX21hcBgMIAEoCzIMLklDSU1B",
             "S0JBSkdCEhMKC09NRUpMTE1OUENOGAQgASgIEiIKDGNoYXJnZXJfaW5mbxgN",
             "IAMoCzIMLkNoYXJnZXJJbmZvEicKEXJvdGF0ZXJfZGF0YV9saXN0GA4gAygL",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "TkZMQk9OREpBSUUYCSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
             "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.ICIMAKBAJGBReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.ICIMAKBAJGBReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdateMapRotationDataScNotify), global::EggLink.DanhengServer.Proto.UpdateMapRotationDataScNotify.Parser, new[]{ "RogueMap", "OMEJLLMNPCN", "ChargerInfo", "RotaterDataList", "EraFlipperRegionId", "EnergyInfo", "NFLBONDJAIE" }, null, null, null, null)
           }));

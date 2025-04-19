@@ -9,7 +9,7 @@ public class PacketSetPersonalCardScRsp : BasePacket
     {
         var proto = new SetPersonalCardScRsp
         {
-            CurPersonalCard = id
+            PersonalCardId = id
         };
 
         SetData(proto);

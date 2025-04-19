@@ -24,23 +24,23 @@ namespace EggLink.DanhengServer.Proto {
     static GetPreAvatarGrowthInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFHZXRQcmVBdmF0YXJHcm93dGhJbmZvU2NSc3AucHJvdG8i2QMKG0dldFBy",
+            "CiFHZXRQcmVBdmF0YXJHcm93dGhJbmZvU2NSc3AucHJvdG8i1wMKG0dldFBy",
             "ZUF2YXRhckdyb3d0aEluZm9TY1JzcBIUCgtLSUVKQUNNT0dBThjdBCABKA0S",
             "EwoLTEtLQU1MTEFGQUUYBCABKA0SEwoLREJJSkZLT0JLS0gYASABKA0SEwoL",
             "Rk9KQ0NLQUNESEgYByABKA0SEwoLRExBUEtCRERCQkMYBSABKA0SEwoLRUJQ",
-            "UEJQTUhESEkYPiABKAkSFQoNcHJlX2F2YXRhcl9pZBgJIAEoDRITCgtMSUpD",
-            "TkdPSEtIRhgNIAEoDRITCgtFR0RETlBFT05LQxgLIAEoDRIPCgdyZXRjb2Rl",
-            "GAMgASgNEhQKC01LSExETEZPTktOGKMGIAEoCRITCgtJSE9LSExGSE9DQxgG",
-            "IAEoDRITCgtQTU1DRkdNUExCQRgMIAEoDRITCgtIRE5JS0NCTEtJTBgCIAEo",
-            "DRIUCgtPQU5QTkZKSkZIRxiADCABKAkSEwoLSkpNS0VBRENJQUcYCCABKA0S",
-            "EwoLRkxBQUdOQVBESFAYCiABKA0SFAoLS1BKSEJFSUxBSVAY/wYgASgJEhMK",
-            "C0FFS0ZKS0VOUEhOGA8gASgNEhMKC1BISUJOS01JT0dQGA4gASgNEhQKC0RH",
-            "R05OQkNKT0NDGLYBIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
-            "b3RvYgZwcm90bzM="));
+            "UEJQTUhESEkYPiABKAkSEwoLS0pBRU9KQkpPSkQYCSABKA0SEwoLTElKQ05H",
+            "T0hLSEYYDSABKA0SEwoLRUdERE5QRU9OS0MYCyABKA0SDwoHcmV0Y29kZRgD",
+            "IAEoDRIUCgtNS0hMRExGT05LThijBiABKAkSEwoLSUhPS0hMRkhPQ0MYBiAB",
+            "KA0SEwoLUE1NQ0ZHTVBMQkEYDCABKA0SEwoLSEROSUtDQkxLSUwYAiABKA0S",
+            "FAoLT0FOUE5GSkpGSEcYgAwgASgJEhMKC0pKTUtFQURDSUFHGAggASgNEhMK",
+            "C0ZMQUFHTkFQREhQGAogASgNEhQKC0tQSkhCRUlMQUlQGP8GIAEoCRITCgtB",
+            "RUtGSktFTlBIThgPIAEoDRITCgtQSElCTktNSU9HUBgOIAEoDRIUCgtER0dO",
+            "TkJDSk9DQxi2ASABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetPreAvatarGrowthInfoScRsp), global::EggLink.DanhengServer.Proto.GetPreAvatarGrowthInfoScRsp.Parser, new[]{ "KIEJACMOGAN", "LKKAMLLAFAE", "DBIJFKOBKKH", "FOJCCKACDHH", "DLAPKBDDBBC", "EBPPBPMHDHI", "PreAvatarId", "LIJCNGOHKHF", "EGDDNPEONKC", "Retcode", "MKHLDLFONKN", "IHOKHLFHOCC", "PMMCFGMPLBA", "HDNIKCBLKIL", "OANPNFJJFHG", "JJMKEADCIAG", "FLAAGNAPDHP", "KPJHBEILAIP", "AEKFJKENPHN", "PHIBNKMIOGP", "DGGNNBCJOCC" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetPreAvatarGrowthInfoScRsp), global::EggLink.DanhengServer.Proto.GetPreAvatarGrowthInfoScRsp.Parser, new[]{ "KIEJACMOGAN", "LKKAMLLAFAE", "DBIJFKOBKKH", "FOJCCKACDHH", "DLAPKBDDBBC", "EBPPBPMHDHI", "KJAEOJBJOJD", "LIJCNGOHKHF", "EGDDNPEONKC", "Retcode", "MKHLDLFONKN", "IHOKHLFHOCC", "PMMCFGMPLBA", "HDNIKCBLKIL", "OANPNFJJFHG", "JJMKEADCIAG", "FLAAGNAPDHP", "KPJHBEILAIP", "AEKFJKENPHN", "PHIBNKMIOGP", "DGGNNBCJOCC" }, null, null, null, null)
           }));
     }
     #endregion
@@ -88,7 +88,7 @@ namespace EggLink.DanhengServer.Proto {
       fOJCCKACDHH_ = other.fOJCCKACDHH_;
       dLAPKBDDBBC_ = other.dLAPKBDDBBC_;
       eBPPBPMHDHI_ = other.eBPPBPMHDHI_;
-      preAvatarId_ = other.preAvatarId_;
+      kJAEOJBJOJD_ = other.kJAEOJBJOJD_;
       lIJCNGOHKHF_ = other.lIJCNGOHKHF_;
       eGDDNPEONKC_ = other.eGDDNPEONKC_;
       retcode_ = other.retcode_;
@@ -184,15 +184,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "pre_avatar_id" field.</summary>
-    public const int PreAvatarIdFieldNumber = 9;
-    private uint preAvatarId_;
+    /// <summary>Field number for the "KJAEOJBJOJD" field.</summary>
+    public const int KJAEOJBJOJDFieldNumber = 9;
+    private uint kJAEOJBJOJD_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PreAvatarId {
-      get { return preAvatarId_; }
+    public uint KJAEOJBJOJD {
+      get { return kJAEOJBJOJD_; }
       set {
-        preAvatarId_ = value;
+        kJAEOJBJOJD_ = value;
       }
     }
 
@@ -385,7 +385,7 @@ namespace EggLink.DanhengServer.Proto {
       if (FOJCCKACDHH != other.FOJCCKACDHH) return false;
       if (DLAPKBDDBBC != other.DLAPKBDDBBC) return false;
       if (EBPPBPMHDHI != other.EBPPBPMHDHI) return false;
-      if (PreAvatarId != other.PreAvatarId) return false;
+      if (KJAEOJBJOJD != other.KJAEOJBJOJD) return false;
       if (LIJCNGOHKHF != other.LIJCNGOHKHF) return false;
       if (EGDDNPEONKC != other.EGDDNPEONKC) return false;
       if (Retcode != other.Retcode) return false;
@@ -413,7 +413,7 @@ namespace EggLink.DanhengServer.Proto {
       if (FOJCCKACDHH != 0) hash ^= FOJCCKACDHH.GetHashCode();
       if (DLAPKBDDBBC != 0) hash ^= DLAPKBDDBBC.GetHashCode();
       if (EBPPBPMHDHI.Length != 0) hash ^= EBPPBPMHDHI.GetHashCode();
-      if (PreAvatarId != 0) hash ^= PreAvatarId.GetHashCode();
+      if (KJAEOJBJOJD != 0) hash ^= KJAEOJBJOJD.GetHashCode();
       if (LIJCNGOHKHF != 0) hash ^= LIJCNGOHKHF.GetHashCode();
       if (EGDDNPEONKC != 0) hash ^= EGDDNPEONKC.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
@@ -478,9 +478,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(64);
         output.WriteUInt32(JJMKEADCIAG);
       }
-      if (PreAvatarId != 0) {
+      if (KJAEOJBJOJD != 0) {
         output.WriteRawTag(72);
-        output.WriteUInt32(PreAvatarId);
+        output.WriteUInt32(KJAEOJBJOJD);
       }
       if (FLAAGNAPDHP != 0) {
         output.WriteRawTag(80);
@@ -572,9 +572,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(64);
         output.WriteUInt32(JJMKEADCIAG);
       }
-      if (PreAvatarId != 0) {
+      if (KJAEOJBJOJD != 0) {
         output.WriteRawTag(72);
-        output.WriteUInt32(PreAvatarId);
+        output.WriteUInt32(KJAEOJBJOJD);
       }
       if (FLAAGNAPDHP != 0) {
         output.WriteRawTag(80);
@@ -652,8 +652,8 @@ namespace EggLink.DanhengServer.Proto {
       if (EBPPBPMHDHI.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(EBPPBPMHDHI);
       }
-      if (PreAvatarId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PreAvatarId);
+      if (KJAEOJBJOJD != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KJAEOJBJOJD);
       }
       if (LIJCNGOHKHF != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LIJCNGOHKHF);
@@ -727,8 +727,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.EBPPBPMHDHI.Length != 0) {
         EBPPBPMHDHI = other.EBPPBPMHDHI;
       }
-      if (other.PreAvatarId != 0) {
-        PreAvatarId = other.PreAvatarId;
+      if (other.KJAEOJBJOJD != 0) {
+        KJAEOJBJOJD = other.KJAEOJBJOJD;
       }
       if (other.LIJCNGOHKHF != 0) {
         LIJCNGOHKHF = other.LIJCNGOHKHF;
@@ -820,7 +820,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 72: {
-            PreAvatarId = input.ReadUInt32();
+            KJAEOJBJOJD = input.ReadUInt32();
             break;
           }
           case 80: {
@@ -919,7 +919,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 72: {
-            PreAvatarId = input.ReadUInt32();
+            KJAEOJBJOJD = input.ReadUInt32();
             break;
           }
           case 80: {

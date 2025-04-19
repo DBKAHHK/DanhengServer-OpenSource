@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhDaGFsbGVuZ2VTdGFnZUluZm8ucHJvdG8aF0NoYWxsZW5nZUJvc3NJbmZv",
-            "LnByb3RvIkoKEkNoYWxsZW5nZVN0YWdlSW5mbxInCglib3NzX2luZm8YByAB",
-            "KAsyEi5DaGFsbGVuZ2VCb3NzSW5mb0gAQgsKCWluZm9fY2FzZUIeqgIbRWdn",
-            "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "LnByb3RvIkwKEkNoYWxsZW5nZVN0YWdlSW5mbxInCglib3NzX2luZm8YByAB",
+            "KAsyEi5DaGFsbGVuZ2VCb3NzSW5mb0gAQg0KC01LSk1LQkRETE9CQh6qAhtF",
+            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeBossInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeStageInfo), global::EggLink.DanhengServer.Proto.ChallengeStageInfo.Parser, new[]{ "BossInfo" }, new[]{ "InfoCase" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeStageInfo), global::EggLink.DanhengServer.Proto.ChallengeStageInfo.Parser, new[]{ "BossInfo" }, new[]{ "MKJMKBDDLOB" }, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChallengeStageInfo(ChallengeStageInfo other) : this() {
-      switch (other.InfoCaseCase) {
-        case InfoCaseOneofCase.BossInfo:
+      switch (other.MKJMKBDDLOBCase) {
+        case MKJMKBDDLOBOneofCase.BossInfo:
           BossInfo = other.BossInfo.Clone();
           break;
       }
@@ -93,31 +93,31 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.ChallengeBossInfo BossInfo {
-      get { return infoCaseCase_ == InfoCaseOneofCase.BossInfo ? (global::EggLink.DanhengServer.Proto.ChallengeBossInfo) infoCase_ : null; }
+      get { return mKJMKBDDLOBCase_ == MKJMKBDDLOBOneofCase.BossInfo ? (global::EggLink.DanhengServer.Proto.ChallengeBossInfo) mKJMKBDDLOB_ : null; }
       set {
-        infoCase_ = value;
-        infoCaseCase_ = value == null ? InfoCaseOneofCase.None : InfoCaseOneofCase.BossInfo;
+        mKJMKBDDLOB_ = value;
+        mKJMKBDDLOBCase_ = value == null ? MKJMKBDDLOBOneofCase.None : MKJMKBDDLOBOneofCase.BossInfo;
       }
     }
 
-    private object infoCase_;
-    /// <summary>Enum of possible cases for the "info_case" oneof.</summary>
-    public enum InfoCaseOneofCase {
+    private object mKJMKBDDLOB_;
+    /// <summary>Enum of possible cases for the "MKJMKBDDLOB" oneof.</summary>
+    public enum MKJMKBDDLOBOneofCase {
       None = 0,
       BossInfo = 7,
     }
-    private InfoCaseOneofCase infoCaseCase_ = InfoCaseOneofCase.None;
+    private MKJMKBDDLOBOneofCase mKJMKBDDLOBCase_ = MKJMKBDDLOBOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InfoCaseOneofCase InfoCaseCase {
-      get { return infoCaseCase_; }
+    public MKJMKBDDLOBOneofCase MKJMKBDDLOBCase {
+      get { return mKJMKBDDLOBCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearInfoCase() {
-      infoCaseCase_ = InfoCaseOneofCase.None;
-      infoCase_ = null;
+    public void ClearMKJMKBDDLOB() {
+      mKJMKBDDLOBCase_ = MKJMKBDDLOBOneofCase.None;
+      mKJMKBDDLOB_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -136,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(BossInfo, other.BossInfo)) return false;
-      if (InfoCaseCase != other.InfoCaseCase) return false;
+      if (MKJMKBDDLOBCase != other.MKJMKBDDLOBCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -144,8 +144,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (infoCaseCase_ == InfoCaseOneofCase.BossInfo) hash ^= BossInfo.GetHashCode();
-      hash ^= (int) infoCaseCase_;
+      if (mKJMKBDDLOBCase_ == MKJMKBDDLOBOneofCase.BossInfo) hash ^= BossInfo.GetHashCode();
+      hash ^= (int) mKJMKBDDLOBCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -164,7 +164,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (infoCaseCase_ == InfoCaseOneofCase.BossInfo) {
+      if (mKJMKBDDLOBCase_ == MKJMKBDDLOBOneofCase.BossInfo) {
         output.WriteRawTag(58);
         output.WriteMessage(BossInfo);
       }
@@ -178,7 +178,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (infoCaseCase_ == InfoCaseOneofCase.BossInfo) {
+      if (mKJMKBDDLOBCase_ == MKJMKBDDLOBOneofCase.BossInfo) {
         output.WriteRawTag(58);
         output.WriteMessage(BossInfo);
       }
@@ -192,7 +192,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (infoCaseCase_ == InfoCaseOneofCase.BossInfo) {
+      if (mKJMKBDDLOBCase_ == MKJMKBDDLOBOneofCase.BossInfo) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BossInfo);
       }
       if (_unknownFields != null) {
@@ -207,8 +207,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      switch (other.InfoCaseCase) {
-        case InfoCaseOneofCase.BossInfo:
+      switch (other.MKJMKBDDLOBCase) {
+        case MKJMKBDDLOBOneofCase.BossInfo:
           if (BossInfo == null) {
             BossInfo = new global::EggLink.DanhengServer.Proto.ChallengeBossInfo();
           }
@@ -233,7 +233,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 58: {
             global::EggLink.DanhengServer.Proto.ChallengeBossInfo subBuilder = new global::EggLink.DanhengServer.Proto.ChallengeBossInfo();
-            if (infoCaseCase_ == InfoCaseOneofCase.BossInfo) {
+            if (mKJMKBDDLOBCase_ == MKJMKBDDLOBOneofCase.BossInfo) {
               subBuilder.MergeFrom(BossInfo);
             }
             input.ReadMessage(subBuilder);
@@ -257,7 +257,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 58: {
             global::EggLink.DanhengServer.Proto.ChallengeBossInfo subBuilder = new global::EggLink.DanhengServer.Proto.ChallengeBossInfo();
-            if (infoCaseCase_ == InfoCaseOneofCase.BossInfo) {
+            if (mKJMKBDDLOBCase_ == MKJMKBDDLOBOneofCase.BossInfo) {
               subBuilder.MergeFrom(BossInfo);
             }
             input.ReadMessage(subBuilder);

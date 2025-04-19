@@ -1,6 +1,5 @@
 ﻿using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
-using static EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Types;
 
 namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 

@@ -26,12 +26,12 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiBFbmREcmlua01ha2VyU2VxdWVuY2VTY1JzcC5wcm90bxoOSXRlbUxpc3Qu",
             "cHJvdG8aEU1GTFBBTUFGSk5DLnByb3RvGhVEcmlua01ha2VyR3Vlc3QucHJv",
-            "dG8izgEKGkVuZERyaW5rTWFrZXJTZXF1ZW5jZVNjUnNwEhkKBlJld2FyZBgP",
-            "IAEoCzIJLkl0ZW1MaXN0EgwKBFRpcHMYCyABKA0SDQoFTGV2ZWwYBiABKA0S",
-            "CwoDRXhwGA4gASgNEh8KBUd1ZXN0GAMgASgLMhAuRHJpbmtNYWtlckd1ZXN0",
-            "EiEKC1JlcXVlc3RMaXN0GAcgAygLMgwuTUZMUEFNQUZKTkMSDwoHUmV0Y29k",
-            "ZRgIIAEoDRIWCg5OZXh0U2VxdWVuY2VJZBgEIAEoDUIeqgIbRWdnTGluay5E",
-            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "dG8i0QEKGkVuZERyaW5rTWFrZXJTZXF1ZW5jZVNjUnNwEhkKBnJld2FyZBgP",
+            "IAEoCzIJLkl0ZW1MaXN0EgwKBHRpcHMYCyABKA0SDQoFbGV2ZWwYBiABKA0S",
+            "CwoDZXhwGA4gASgNEh8KBWd1ZXN0GAMgASgLMhAuRHJpbmtNYWtlckd1ZXN0",
+            "EiIKDHJlcXVlc3RfbGlzdBgHIAMoCzIMLk1GTFBBTUFGSk5DEg8KB3JldGNv",
+            "ZGUYCCABKA0SGAoQbmV4dF9zZXF1ZW5jZV9pZBgEIAEoDUIeqgIbRWdnTGlu",
+            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.MFLPAMAFJNCReflection.Descriptor, global::EggLink.DanhengServer.Proto.DrinkMakerGuestReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -94,7 +94,7 @@ namespace EggLink.DanhengServer.Proto {
       return new EndDrinkMakerSequenceScRsp(this);
     }
 
-    /// <summary>Field number for the "Reward" field.</summary>
+    /// <summary>Field number for the "reward" field.</summary>
     public const int RewardFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.ItemList reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -106,7 +106,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Tips" field.</summary>
+    /// <summary>Field number for the "tips" field.</summary>
     public const int TipsFieldNumber = 11;
     private uint tips_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -118,7 +118,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Level" field.</summary>
+    /// <summary>Field number for the "level" field.</summary>
     public const int LevelFieldNumber = 6;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -130,7 +130,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Exp" field.</summary>
+    /// <summary>Field number for the "exp" field.</summary>
     public const int ExpFieldNumber = 14;
     private uint exp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -142,7 +142,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Guest" field.</summary>
+    /// <summary>Field number for the "guest" field.</summary>
     public const int GuestFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.DrinkMakerGuest guest_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -154,7 +154,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "RequestList" field.</summary>
+    /// <summary>Field number for the "request_list" field.</summary>
     public const int RequestListFieldNumber = 7;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MFLPAMAFJNC> _repeated_requestList_codec
         = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.MFLPAMAFJNC.Parser);
@@ -165,7 +165,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return requestList_; }
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 8;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -177,7 +177,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "NextSequenceId" field.</summary>
+    /// <summary>Field number for the "next_sequence_id" field.</summary>
     public const int NextSequenceIdFieldNumber = 4;
     private uint nextSequenceId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFFeGNoYW5nZVJvZ3VlUmV3YXJkS2V5U2NSc3AucHJvdG8iPQobRXhjaGFu",
-            "Z2VSb2d1ZVJld2FyZEtleVNjUnNwEg0KBUNvdW50GAwgASgNEg8KB1JldGNv",
+            "Z2VSb2d1ZVJld2FyZEtleVNjUnNwEg0KBWNvdW50GAwgASgNEg8KB3JldGNv",
             "ZGUYCCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
       return new ExchangeRogueRewardKeyScRsp(this);
     }
 
-    /// <summary>Field number for the "Count" field.</summary>
+    /// <summary>Field number for the "count" field.</summary>
     public const int CountFieldNumber = 12;
     private uint count_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 8;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static SocialEventServerCacheReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxTb2NpYWxFdmVudFNlcnZlckNhY2hlLnByb3RvIlYKFlNvY2lhbEV2ZW50",
-            "U2VydmVyQ2FjaGUSCgoCSWQYCSABKA0SDwoHQWRkQ29pbhgDIAEoDRIOCgZT",
-            "cmNVaWQYDCABKA0SDwoHU3ViQ29pbhgEIAEoDUIeqgIbRWdnTGluay5EYW5o",
-            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChxTb2NpYWxFdmVudFNlcnZlckNhY2hlLnByb3RvIlkKFlNvY2lhbEV2ZW50",
+            "U2VydmVyQ2FjaGUSCgoCaWQYCSABKA0SEAoIYWRkX2NvaW4YAyABKA0SDwoH",
+            "c3JjX3VpZBgMIAEoDRIQCghzdWJfY29pbhgEIAEoDUIeqgIbRWdnTGluay5E",
+            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
       return new SocialEventServerCache(this);
     }
 
-    /// <summary>Field number for the "Id" field.</summary>
+    /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 9;
     private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "AddCoin" field.</summary>
+    /// <summary>Field number for the "add_coin" field.</summary>
     public const int AddCoinFieldNumber = 3;
     private uint addCoin_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "SrcUid" field.</summary>
+    /// <summary>Field number for the "src_uid" field.</summary>
     public const int SrcUidFieldNumber = 12;
     private uint srcUid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "SubCoin" field.</summary>
+    /// <summary>Field number for the "sub_coin" field.</summary>
     public const int SubCoinFieldNumber = 4;
     private uint subCoin_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

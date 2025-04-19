@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static PlanetFesUseItemScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtQbGFuZXRGZXNVc2VJdGVtU2NSc3AucHJvdG8aFVBsYW5ldEZlc1Jld2Fy",
-            "ZC5wcm90byJKChVQbGFuZXRGZXNVc2VJdGVtU2NSc3ASIAoGcmV3YXJkGAsg",
-            "ASgLMhAuUGxhbmV0RmVzUmV3YXJkEg8KB3JldGNvZGUYByABKA1CHqoCG0Vn",
-            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChtQbGFuZXRGZXNVc2VJdGVtU2NSc3AucHJvdG8aEURJQUhOTU5DUEJELnBy",
+            "b3RvIkYKFVBsYW5ldEZlc1VzZUl0ZW1TY1JzcBIcCgZyZXdhcmQYCyABKAsy",
+            "DC5ESUFITk1OQ1BCRBIPCgdyZXRjb2RlGAcgASgNQh6qAhtFZ2dMaW5rLkRh",
+            "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlanetFesRewardReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DIAHNMNCPBDReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlanetFesUseItemScRsp), global::EggLink.DanhengServer.Proto.PlanetFesUseItemScRsp.Parser, new[]{ "Reward", "Retcode" }, null, null, null, null)
           }));
@@ -86,10 +86,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "reward" field.</summary>
     public const int RewardFieldNumber = 11;
-    private global::EggLink.DanhengServer.Proto.PlanetFesReward reward_;
+    private global::EggLink.DanhengServer.Proto.DIAHNMNCPBD reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.PlanetFesReward Reward {
+    public global::EggLink.DanhengServer.Proto.DIAHNMNCPBD Reward {
       get { return reward_; }
       set {
         reward_ = value;
@@ -208,7 +208,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.reward_ != null) {
         if (reward_ == null) {
-          Reward = new global::EggLink.DanhengServer.Proto.PlanetFesReward();
+          Reward = new global::EggLink.DanhengServer.Proto.DIAHNMNCPBD();
         }
         Reward.MergeFrom(other.Reward);
       }
@@ -236,7 +236,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 90: {
             if (reward_ == null) {
-              Reward = new global::EggLink.DanhengServer.Proto.PlanetFesReward();
+              Reward = new global::EggLink.DanhengServer.Proto.DIAHNMNCPBD();
             }
             input.ReadMessage(Reward);
             break;
@@ -262,7 +262,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 90: {
             if (reward_ == null) {
-              Reward = new global::EggLink.DanhengServer.Proto.PlanetFesReward();
+              Reward = new global::EggLink.DanhengServer.Proto.DIAHNMNCPBD();
             }
             input.ReadMessage(Reward);
             break;

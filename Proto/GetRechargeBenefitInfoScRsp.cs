@@ -24,14 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static GetRechargeBenefitInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFHZXRSZWNoYXJnZUJlbmVmaXRJbmZvU2NSc3AucHJvdG8aEUpNSE9KS0tH",
-            "TklGLnByb3RvIlEKG0dldFJlY2hhcmdlQmVuZWZpdEluZm9TY1JzcBIPCgdy",
-            "ZXRjb2RlGAogASgNEiEKC0VITkRNTEZGTUhJGAQgAygLMgwuSk1IT0pLS0dO",
-            "SUZCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "CiFHZXRSZWNoYXJnZUJlbmVmaXRJbmZvU2NSc3AucHJvdG8aGVJlY2hhcmdl",
+            "QmVuZWZpdEluZm8ucHJvdG8iYwobR2V0UmVjaGFyZ2VCZW5lZml0SW5mb1Nj",
+            "UnNwEg8KB3JldGNvZGUYCiABKA0SMwoVcmVjaGFyZ2VfYmVuZWZpdF9saXN0",
+            "GAQgAygLMhQuUmVjaGFyZ2VCZW5lZml0SW5mb0IeqgIbRWdnTGluay5EYW5o",
+            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JMHOJKKGNIFReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RechargeBenefitInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRechargeBenefitInfoScRsp), global::EggLink.DanhengServer.Proto.GetRechargeBenefitInfoScRsp.Parser, new[]{ "Retcode", "EHNDMLFFMHI" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRechargeBenefitInfoScRsp), global::EggLink.DanhengServer.Proto.GetRechargeBenefitInfoScRsp.Parser, new[]{ "Retcode", "RechargeBenefitList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetRechargeBenefitInfoScRsp(GetRechargeBenefitInfoScRsp other) : this() {
       retcode_ = other.retcode_;
-      eHNDMLFFMHI_ = other.eHNDMLFFMHI_.Clone();
+      rechargeBenefitList_ = other.rechargeBenefitList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -96,15 +97,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "EHNDMLFFMHI" field.</summary>
-    public const int EHNDMLFFMHIFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.JMHOJKKGNIF> _repeated_eHNDMLFFMHI_codec
-        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.JMHOJKKGNIF.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.JMHOJKKGNIF> eHNDMLFFMHI_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.JMHOJKKGNIF>();
+    /// <summary>Field number for the "recharge_benefit_list" field.</summary>
+    public const int RechargeBenefitListFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RechargeBenefitInfo> _repeated_rechargeBenefitList_codec
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.RechargeBenefitInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RechargeBenefitInfo> rechargeBenefitList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RechargeBenefitInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.JMHOJKKGNIF> EHNDMLFFMHI {
-      get { return eHNDMLFFMHI_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RechargeBenefitInfo> RechargeBenefitList {
+      get { return rechargeBenefitList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Retcode != other.Retcode) return false;
-      if(!eHNDMLFFMHI_.Equals(other.eHNDMLFFMHI_)) return false;
+      if(!rechargeBenefitList_.Equals(other.rechargeBenefitList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      hash ^= eHNDMLFFMHI_.GetHashCode();
+      hash ^= rechargeBenefitList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      eHNDMLFFMHI_.WriteTo(output, _repeated_eHNDMLFFMHI_codec);
+      rechargeBenefitList_.WriteTo(output, _repeated_rechargeBenefitList_codec);
       if (Retcode != 0) {
         output.WriteRawTag(80);
         output.WriteUInt32(Retcode);
@@ -166,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      eHNDMLFFMHI_.WriteTo(ref output, _repeated_eHNDMLFFMHI_codec);
+      rechargeBenefitList_.WriteTo(ref output, _repeated_rechargeBenefitList_codec);
       if (Retcode != 0) {
         output.WriteRawTag(80);
         output.WriteUInt32(Retcode);
@@ -184,7 +185,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += eHNDMLFFMHI_.CalculateSize(_repeated_eHNDMLFFMHI_codec);
+      size += rechargeBenefitList_.CalculateSize(_repeated_rechargeBenefitList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -200,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      eHNDMLFFMHI_.Add(other.eHNDMLFFMHI_);
+      rechargeBenefitList_.Add(other.rechargeBenefitList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -217,7 +218,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 34: {
-            eHNDMLFFMHI_.AddEntriesFrom(input, _repeated_eHNDMLFFMHI_codec);
+            rechargeBenefitList_.AddEntriesFrom(input, _repeated_rechargeBenefitList_codec);
             break;
           }
           case 80: {
@@ -240,7 +241,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 34: {
-            eHNDMLFFMHI_.AddEntriesFrom(ref input, _repeated_eHNDMLFFMHI_codec);
+            rechargeBenefitList_.AddEntriesFrom(ref input, _repeated_rechargeBenefitList_codec);
             break;
           }
           case 80: {

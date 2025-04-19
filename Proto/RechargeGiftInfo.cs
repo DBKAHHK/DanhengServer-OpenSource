@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static RechargeGiftInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZSZWNoYXJnZUdpZnRJbmZvLnByb3RvGhdSZWNoYXJnZVN0YXRlSW5mby5w",
-            "cm90byJ0ChBSZWNoYXJnZUdpZnRJbmZvEhEKCWdpZnRfdHlwZRgHIAEoDRIT",
-            "CgtDT0lGSEZQRUdQSBgOIAEoAxIQCghlbmRfdGltZRgMIAEoAxImCgpzdGF0",
-            "ZV9pbmZvGA0gAygLMhIuUmVjaGFyZ2VTdGF0ZUluZm9CHqoCG0VnZ0xpbmsu",
-            "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChZSZWNoYXJnZUdpZnRJbmZvLnByb3RvGhZSZWNoYXJnZUdpZnREYXRhLnBy",
+            "b3RvIncKEFJlY2hhcmdlR2lmdEluZm8SEQoJZ2lmdF90eXBlGAcgASgNEhMK",
+            "C0NPSUZIRlBFR1BIGA4gASgDEhAKCGVuZF90aW1lGAwgASgDEikKDmdpZnRf",
+            "ZGF0YV9saXN0GA0gAygLMhEuUmVjaGFyZ2VHaWZ0RGF0YUIeqgIbRWdnTGlu",
+            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RechargeStateInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RechargeGiftDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RechargeGiftInfo), global::EggLink.DanhengServer.Proto.RechargeGiftInfo.Parser, new[]{ "GiftType", "COIFHFPEGPH", "EndTime", "StateInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RechargeGiftInfo), global::EggLink.DanhengServer.Proto.RechargeGiftInfo.Parser, new[]{ "GiftType", "COIFHFPEGPH", "EndTime", "GiftDataList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,7 +77,7 @@ namespace EggLink.DanhengServer.Proto {
       giftType_ = other.giftType_;
       cOIFHFPEGPH_ = other.cOIFHFPEGPH_;
       endTime_ = other.endTime_;
-      stateInfo_ = other.stateInfo_.Clone();
+      giftDataList_ = other.giftDataList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -123,15 +123,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "state_info" field.</summary>
-    public const int StateInfoFieldNumber = 13;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RechargeStateInfo> _repeated_stateInfo_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.RechargeStateInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RechargeStateInfo> stateInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RechargeStateInfo>();
+    /// <summary>Field number for the "gift_data_list" field.</summary>
+    public const int GiftDataListFieldNumber = 13;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RechargeGiftData> _repeated_giftDataList_codec
+        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.RechargeGiftData.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RechargeGiftData> giftDataList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RechargeGiftData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RechargeStateInfo> StateInfo {
-      get { return stateInfo_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RechargeGiftData> GiftDataList {
+      get { return giftDataList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
       if (GiftType != other.GiftType) return false;
       if (COIFHFPEGPH != other.COIFHFPEGPH) return false;
       if (EndTime != other.EndTime) return false;
-      if(!stateInfo_.Equals(other.stateInfo_)) return false;
+      if(!giftDataList_.Equals(other.giftDataList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -163,7 +163,7 @@ namespace EggLink.DanhengServer.Proto {
       if (GiftType != 0) hash ^= GiftType.GetHashCode();
       if (COIFHFPEGPH != 0L) hash ^= COIFHFPEGPH.GetHashCode();
       if (EndTime != 0L) hash ^= EndTime.GetHashCode();
-      hash ^= stateInfo_.GetHashCode();
+      hash ^= giftDataList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -190,7 +190,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(96);
         output.WriteInt64(EndTime);
       }
-      stateInfo_.WriteTo(output, _repeated_stateInfo_codec);
+      giftDataList_.WriteTo(output, _repeated_giftDataList_codec);
       if (COIFHFPEGPH != 0L) {
         output.WriteRawTag(112);
         output.WriteInt64(COIFHFPEGPH);
@@ -213,7 +213,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(96);
         output.WriteInt64(EndTime);
       }
-      stateInfo_.WriteTo(ref output, _repeated_stateInfo_codec);
+      giftDataList_.WriteTo(ref output, _repeated_giftDataList_codec);
       if (COIFHFPEGPH != 0L) {
         output.WriteRawTag(112);
         output.WriteInt64(COIFHFPEGPH);
@@ -237,7 +237,7 @@ namespace EggLink.DanhengServer.Proto {
       if (EndTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(EndTime);
       }
-      size += stateInfo_.CalculateSize(_repeated_stateInfo_codec);
+      size += giftDataList_.CalculateSize(_repeated_giftDataList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -259,7 +259,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.EndTime != 0L) {
         EndTime = other.EndTime;
       }
-      stateInfo_.Add(other.stateInfo_);
+      giftDataList_.Add(other.giftDataList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -284,7 +284,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 106: {
-            stateInfo_.AddEntriesFrom(input, _repeated_stateInfo_codec);
+            giftDataList_.AddEntriesFrom(input, _repeated_giftDataList_codec);
             break;
           }
           case 112: {
@@ -315,7 +315,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 106: {
-            stateInfo_.AddEntriesFrom(ref input, _repeated_stateInfo_codec);
+            giftDataList_.AddEntriesFrom(ref input, _repeated_giftDataList_codec);
             break;
           }
           case 112: {

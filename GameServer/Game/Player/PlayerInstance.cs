@@ -4,6 +4,7 @@ using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Player;
 using EggLink.DanhengServer.Database.Scene;
 using EggLink.DanhengServer.Database.Tutorial;
+using EggLink.DanhengServer.Enums.Avatar;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.Enums.Scene;
 using EggLink.DanhengServer.GameServer.Game.Activity;
@@ -238,14 +239,6 @@ public class PlayerInstance(PlayerData data)
                     // revive
                     avatarData.CurrentHp = 2000;
             }
-        }
-
-        foreach (var relic in InventoryManager.Data.RelicItems)
-        {
-            if (relic.MainAffix != 0) continue; // fix relic main affix
-
-            var groupId = GameData.RelicConfigData.GetValueOrDefault(relic.ItemId)?.MainAffixGroup ?? 0;
-            relic.MainAffix = UtilTools.GetRandomRelicMainAffix(groupId);
         }
 
         foreach (var avatar in AvatarManager?.AvatarData.Avatars ?? [])

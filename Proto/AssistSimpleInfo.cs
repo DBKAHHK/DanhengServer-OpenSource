@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static AssistSimpleInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZBc3Npc3RTaW1wbGVJbmZvLnByb3RvIlcKEEFzc2lzdFNpbXBsZUluZm8S",
-            "DQoFTGV2ZWwYDiABKA0SEAoIQXZhdGFySWQYCyABKA0SFQoNRHJlc3NlZFNr",
-            "aW5JZBgGIAEoDRILCgNQb3MYDCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
-            "cnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChZBc3Npc3RTaW1wbGVJbmZvLnByb3RvIloKEEFzc2lzdFNpbXBsZUluZm8S",
+            "DQoFbGV2ZWwYDiABKA0SEQoJYXZhdGFyX2lkGAsgASgNEhcKD2RyZXNzZWRf",
+            "c2tpbl9pZBgGIAEoDRILCgNwb3MYDCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
       return new AssistSimpleInfo(this);
     }
 
-    /// <summary>Field number for the "Level" field.</summary>
+    /// <summary>Field number for the "level" field.</summary>
     public const int LevelFieldNumber = 14;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "AvatarId" field.</summary>
+    /// <summary>Field number for the "avatar_id" field.</summary>
     public const int AvatarIdFieldNumber = 11;
     private uint avatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "DressedSkinId" field.</summary>
+    /// <summary>Field number for the "dressed_skin_id" field.</summary>
     public const int DressedSkinIdFieldNumber = 6;
     private uint dressedSkinId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Pos" field.</summary>
+    /// <summary>Field number for the "pos" field.</summary>
     public const int PosFieldNumber = 12;
     private uint pos_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

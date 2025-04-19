@@ -1,3 +1,4 @@
+using EggLink.DanhengServer.Enums.Avatar;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
 
@@ -13,9 +14,9 @@ public class HandlerSetMultipleAvatarPathsCsReq : Handler
         foreach (var targetAvatarType in req.AvatarIdList)
         {
             var avatarId = (int)targetAvatarType;
-            var baseAvatarId = connection.Player!.AvatarManager!.GetAvatar(avatarId)!.BaseAvatarId;
+            var baseAvatarId = connection.Player!.AvatarManager!.GetAvatar(avatarId)!.GetBaseAvatarId();
             if (avatarId % 2 == 0) avatarId--;
-            await connection.Player!.ChangeAvatarPathType(baseAvatarId, (MultiPathAvatarType)avatarId);
+            await connection.Player!.ChangeAvatarPathType(baseAvatarId, (MultiPathAvatarTypeEnum)avatarId);
         }
 
         await connection.SendPacket(CmdIds.SetMultipleAvatarPathsScRsp);

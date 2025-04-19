@@ -26,11 +26,11 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch1BZGRSZWxpY0ZpbHRlclBsYW5Dc1JlcS5wcm90bxodUmVsaWNGaWx0ZXJQ",
             "bGFuU2V0dGluZ3MucHJvdG8aGVJlbGljRmlsdGVyUGxhbkljb24ucHJvdG8i",
-            "owEKF0FkZFJlbGljRmlsdGVyUGxhbkNzUmVxEiIKBEljb24YByABKAsyFC5S",
-            "ZWxpY0ZpbHRlclBsYW5JY29uEhAKCElzTWFya2VkGAUgASgIEioKCFNldHRp",
-            "bmdzGAwgASgLMhguUmVsaWNGaWx0ZXJQbGFuU2V0dGluZ3MSGAoQQXZhdGFy",
-            "SWRPbkNyZWF0ZRgNIAEoDRIMCgROYW1lGAogASgJQh6qAhtFZ2dMaW5rLkRh",
-            "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "pwEKF0FkZFJlbGljRmlsdGVyUGxhbkNzUmVxEiIKBGljb24YByABKAsyFC5S",
+            "ZWxpY0ZpbHRlclBsYW5JY29uEhEKCWlzX21hcmtlZBgFIAEoCBIqCghzZXR0",
+            "aW5ncxgMIAEoCzIYLlJlbGljRmlsdGVyUGxhblNldHRpbmdzEhsKE2F2YXRh",
+            "cl9pZF9vbl9jcmVhdGUYDSABKA0SDAoEbmFtZRgKIAEoCUIeqgIbRWdnTGlu",
+            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RelicFilterPlanSettingsReflection.Descriptor, global::EggLink.DanhengServer.Proto.RelicFilterPlanIconReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -90,7 +90,7 @@ namespace EggLink.DanhengServer.Proto {
       return new AddRelicFilterPlanCsReq(this);
     }
 
-    /// <summary>Field number for the "Icon" field.</summary>
+    /// <summary>Field number for the "icon" field.</summary>
     public const int IconFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon icon_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -102,7 +102,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "IsMarked" field.</summary>
+    /// <summary>Field number for the "is_marked" field.</summary>
     public const int IsMarkedFieldNumber = 5;
     private bool isMarked_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -114,7 +114,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Settings" field.</summary>
+    /// <summary>Field number for the "settings" field.</summary>
     public const int SettingsFieldNumber = 12;
     private global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings settings_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -126,7 +126,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "AvatarIdOnCreate" field.</summary>
+    /// <summary>Field number for the "avatar_id_on_create" field.</summary>
     public const int AvatarIdOnCreateFieldNumber = 13;
     private uint avatarIdOnCreate_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Name" field.</summary>
+    /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 10;
     private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

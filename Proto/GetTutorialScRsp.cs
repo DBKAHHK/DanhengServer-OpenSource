@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static GetTutorialScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZHZXRUdXRvcmlhbFNjUnNwLnByb3RvGg5UdXRvcmlhbC5wcm90byJEChBH",
-            "ZXRUdXRvcmlhbFNjUnNwEg8KB1JldGNvZGUYAyABKA0SHwoMVHV0b3JpYWxM",
-            "aXN0GAEgAygLMgkuVHV0b3JpYWxCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
-            "ci5Qcm90b2IGcHJvdG8z"));
+            "ChZHZXRUdXRvcmlhbFNjUnNwLnByb3RvGg5UdXRvcmlhbC5wcm90byJFChBH",
+            "ZXRUdXRvcmlhbFNjUnNwEg8KB3JldGNvZGUYAyABKA0SIAoNdHV0b3JpYWxf",
+            "bGlzdBgBIAMoCzIJLlR1dG9yaWFsQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TutorialReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
       return new GetTutorialScRsp(this);
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 3;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "TutorialList" field.</summary>
+    /// <summary>Field number for the "tutorial_list" field.</summary>
     public const int TutorialListFieldNumber = 1;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.Tutorial> _repeated_tutorialList_codec
         = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.Tutorial.Parser);

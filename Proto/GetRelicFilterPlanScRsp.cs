@@ -25,10 +25,10 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1HZXRSZWxpY0ZpbHRlclBsYW5TY1JzcC5wcm90bxoVUmVsaWNGaWx0ZXJQ",
-            "bGFuLnByb3RvIlkKF0dldFJlbGljRmlsdGVyUGxhblNjUnNwEi0KE1JlbGlj",
-            "RmlsdGVyUGxhbkxpc3QYAiADKAsyEC5SZWxpY0ZpbHRlclBsYW4SDwoHUmV0",
-            "Y29kZRgFIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "bGFuLnByb3RvIlwKF0dldFJlbGljRmlsdGVyUGxhblNjUnNwEjAKFnJlbGlj",
+            "X2ZpbHRlcl9wbGFuX2xpc3QYAiADKAsyEC5SZWxpY0ZpbHRlclBsYW4SDwoH",
+            "cmV0Y29kZRgFIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RelicFilterPlanReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
       return new GetRelicFilterPlanScRsp(this);
     }
 
-    /// <summary>Field number for the "RelicFilterPlanList" field.</summary>
+    /// <summary>Field number for the "relic_filter_plan_list" field.</summary>
     public const int RelicFilterPlanListFieldNumber = 2;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RelicFilterPlan> _repeated_relicFilterPlanList_codec
         = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.RelicFilterPlan.Parser);
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return relicFilterPlanList_; }
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 5;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

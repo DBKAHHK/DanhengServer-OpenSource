@@ -25,17 +25,18 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdQbGF5ZXJTZXR0aW5nSW5mby5wcm90bxoRT0dGSU9EUElMRUwucHJvdG8i",
-            "8wEKEVBsYXllclNldHRpbmdJbmZvEiEKC0dIS0NNRE5LT1BOGAcgASgLMgwu",
+            "kgIKEVBsYXllclNldHRpbmdJbmZvEiEKC0dIS0NNRE5LT1BOGAcgASgLMgwu",
             "T0dGSU9EUElMRUwSEwoLS0FQRElNR0pMTkYYCiABKAgSEwoLTkpGTUlMSk9G",
             "T0sYDiABKAgSEwoLQVBPTkVJRE1QSEwYASABKAgSEwoLR01KQU5PSk1LQ0UY",
             "CCABKAgSEwoLS0pOQ0NLSEpGSEUYBSABKAgSEwoLQUlDTkZBT0JDUEkYCSAB",
             "KAgSEwoLTU1NTkpDSEVNRk4YBiABKAgSEwoLTktFS0lCTkpNUEEYBCABKAgS",
-            "EwoLUEJLQkdMSEhLUEUYCyABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
-            "ci5Qcm90b2IGcHJvdG8z"));
+            "HQoVaW5jbHVkZV91cGdyYWRlX3JlbGljGAMgASgIEhMKC1BCS0JHTEhIS1BF",
+            "GAsgASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OGFIODPILELReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerSettingInfo), global::EggLink.DanhengServer.Proto.PlayerSettingInfo.Parser, new[]{ "GHKCMDNKOPN", "KAPDIMGJLNF", "NJFMILJOFOK", "APONEIDMPHL", "GMJANOJMKCE", "KJNCCKHJFHE", "AICNFAOBCPI", "MMMNJCHEMFN", "NKEKIBNJMPA", "PBKBGLHHKPE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerSettingInfo), global::EggLink.DanhengServer.Proto.PlayerSettingInfo.Parser, new[]{ "GHKCMDNKOPN", "KAPDIMGJLNF", "NJFMILJOFOK", "APONEIDMPHL", "GMJANOJMKCE", "KJNCCKHJFHE", "AICNFAOBCPI", "MMMNJCHEMFN", "NKEKIBNJMPA", "IncludeUpgradeRelic", "PBKBGLHHKPE" }, null, null, null, null)
           }));
     }
     #endregion
@@ -86,6 +87,7 @@ namespace EggLink.DanhengServer.Proto {
       aICNFAOBCPI_ = other.aICNFAOBCPI_;
       mMMNJCHEMFN_ = other.mMMNJCHEMFN_;
       nKEKIBNJMPA_ = other.nKEKIBNJMPA_;
+      includeUpgradeRelic_ = other.includeUpgradeRelic_;
       pBKBGLHHKPE_ = other.pBKBGLHHKPE_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -204,6 +206,18 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "include_upgrade_relic" field.</summary>
+    public const int IncludeUpgradeRelicFieldNumber = 3;
+    private bool includeUpgradeRelic_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IncludeUpgradeRelic {
+      get { return includeUpgradeRelic_; }
+      set {
+        includeUpgradeRelic_ = value;
+      }
+    }
+
     /// <summary>Field number for the "PBKBGLHHKPE" field.</summary>
     public const int PBKBGLHHKPEFieldNumber = 11;
     private bool pBKBGLHHKPE_;
@@ -240,6 +254,7 @@ namespace EggLink.DanhengServer.Proto {
       if (AICNFAOBCPI != other.AICNFAOBCPI) return false;
       if (MMMNJCHEMFN != other.MMMNJCHEMFN) return false;
       if (NKEKIBNJMPA != other.NKEKIBNJMPA) return false;
+      if (IncludeUpgradeRelic != other.IncludeUpgradeRelic) return false;
       if (PBKBGLHHKPE != other.PBKBGLHHKPE) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -257,6 +272,7 @@ namespace EggLink.DanhengServer.Proto {
       if (AICNFAOBCPI != false) hash ^= AICNFAOBCPI.GetHashCode();
       if (MMMNJCHEMFN != false) hash ^= MMMNJCHEMFN.GetHashCode();
       if (NKEKIBNJMPA != false) hash ^= NKEKIBNJMPA.GetHashCode();
+      if (IncludeUpgradeRelic != false) hash ^= IncludeUpgradeRelic.GetHashCode();
       if (PBKBGLHHKPE != false) hash ^= PBKBGLHHKPE.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -279,6 +295,10 @@ namespace EggLink.DanhengServer.Proto {
       if (APONEIDMPHL != false) {
         output.WriteRawTag(8);
         output.WriteBool(APONEIDMPHL);
+      }
+      if (IncludeUpgradeRelic != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(IncludeUpgradeRelic);
       }
       if (NKEKIBNJMPA != false) {
         output.WriteRawTag(32);
@@ -329,6 +349,10 @@ namespace EggLink.DanhengServer.Proto {
       if (APONEIDMPHL != false) {
         output.WriteRawTag(8);
         output.WriteBool(APONEIDMPHL);
+      }
+      if (IncludeUpgradeRelic != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(IncludeUpgradeRelic);
       }
       if (NKEKIBNJMPA != false) {
         output.WriteRawTag(32);
@@ -403,6 +427,9 @@ namespace EggLink.DanhengServer.Proto {
       if (NKEKIBNJMPA != false) {
         size += 1 + 1;
       }
+      if (IncludeUpgradeRelic != false) {
+        size += 1 + 1;
+      }
       if (PBKBGLHHKPE != false) {
         size += 1 + 1;
       }
@@ -448,6 +475,9 @@ namespace EggLink.DanhengServer.Proto {
       if (other.NKEKIBNJMPA != false) {
         NKEKIBNJMPA = other.NKEKIBNJMPA;
       }
+      if (other.IncludeUpgradeRelic != false) {
+        IncludeUpgradeRelic = other.IncludeUpgradeRelic;
+      }
       if (other.PBKBGLHHKPE != false) {
         PBKBGLHHKPE = other.PBKBGLHHKPE;
       }
@@ -468,6 +498,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 8: {
             APONEIDMPHL = input.ReadBool();
+            break;
+          }
+          case 24: {
+            IncludeUpgradeRelic = input.ReadBool();
             break;
           }
           case 32: {
@@ -526,6 +560,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 8: {
             APONEIDMPHL = input.ReadBool();
+            break;
+          }
+          case 24: {
+            IncludeUpgradeRelic = input.ReadBool();
             break;
           }
           case 32: {

@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static StartPunkLordRaidScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxTdGFydFB1bmtMb3JkUmFpZFNjUnNwLnByb3RvGhFGTkxHUExOQ1BDTC5w",
-            "cm90bxoRS0FPQUhLQU9IRkkucHJvdG8iqAEKFlN0YXJ0UHVua0xvcmRSYWlk",
-            "U2NSc3ASDwoHcmV0Y29kZRgLIAEoDRIbCgVzY2VuZRgDIAEoCzIMLkZOTEdQ",
-            "TE5DUENMEhMKC0RNSUxDRkhMSUhQGAcgAygNEiEKC0RQTUtBTU1JT0xCGAwg",
-            "ASgLMgwuS0FPQUhLQU9IRkkSEwoLQ0xPTU1GS0pQTU0YBiABKAgSEwoLQUdF",
-            "R0RNR05QREsYCSABKANCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
-            "b2IGcHJvdG8z"));
+            "ChxTdGFydFB1bmtMb3JkUmFpZFNjUnNwLnByb3RvGhFLQU9BSEtBT0hGSS5w",
+            "cm90bxoUUmFpZFBsYXllckRhdGEucHJvdG8iqwEKFlN0YXJ0UHVua0xvcmRS",
+            "YWlkU2NSc3ASDwoHcmV0Y29kZRgLIAEoDRIeCgVzY2VuZRgDIAEoCzIPLlJh",
+            "aWRQbGF5ZXJEYXRhEhMKC0RNSUxDRkhMSUhQGAcgAygNEiEKC0RQTUtBTU1J",
+            "T0xCGAwgASgLMgwuS0FPQUhLQU9IRkkSEwoLQ0xPTU1GS0pQTU0YBiABKAgS",
+            "EwoLQUdFR0RNR05QREsYCSABKANCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FNLGPLNCPCLReflection.Descriptor, global::EggLink.DanhengServer.Proto.KAOAHKAOHFIReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KAOAHKAOHFIReflection.Descriptor, global::EggLink.DanhengServer.Proto.RaidPlayerDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StartPunkLordRaidScRsp), global::EggLink.DanhengServer.Proto.StartPunkLordRaidScRsp.Parser, new[]{ "Retcode", "Scene", "DMILCFHLIHP", "DPMKAMMIOLB", "CLOMMFKJPMM", "AGEGDMGNPDK" }, null, null, null, null)
           }));
@@ -105,10 +105,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "scene" field.</summary>
     public const int SceneFieldNumber = 3;
-    private global::EggLink.DanhengServer.Proto.FNLGPLNCPCL scene_;
+    private global::EggLink.DanhengServer.Proto.RaidPlayerData scene_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.FNLGPLNCPCL Scene {
+    public global::EggLink.DanhengServer.Proto.RaidPlayerData Scene {
       get { return scene_; }
       set {
         scene_ = value;
@@ -309,7 +309,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.scene_ != null) {
         if (scene_ == null) {
-          Scene = new global::EggLink.DanhengServer.Proto.FNLGPLNCPCL();
+          Scene = new global::EggLink.DanhengServer.Proto.RaidPlayerData();
         }
         Scene.MergeFrom(other.Scene);
       }
@@ -343,7 +343,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 26: {
             if (scene_ == null) {
-              Scene = new global::EggLink.DanhengServer.Proto.FNLGPLNCPCL();
+              Scene = new global::EggLink.DanhengServer.Proto.RaidPlayerData();
             }
             input.ReadMessage(Scene);
             break;
@@ -389,7 +389,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 26: {
             if (scene_ == null) {
-              Scene = new global::EggLink.DanhengServer.Proto.FNLGPLNCPCL();
+              Scene = new global::EggLink.DanhengServer.Proto.RaidPlayerData();
             }
             input.ReadMessage(Scene);
             break;

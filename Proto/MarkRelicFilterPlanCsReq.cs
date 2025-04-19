@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static MarkRelicFilterPlanCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5NYXJrUmVsaWNGaWx0ZXJQbGFuQ3NSZXEucHJvdG8iVAoYTWFya1JlbGlj",
-            "RmlsdGVyUGxhbkNzUmVxEg4KBklzTWFyaxgDIAEoCBIVCg1TbG90SW5kZXhM",
-            "aXN0GAsgAygNEhEKCUlzQmF0Y2hPcBgJIAEoCEIeqgIbRWdnTGluay5EYW5o",
-            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Ch5NYXJrUmVsaWNGaWx0ZXJQbGFuQ3NSZXEucHJvdG8iWQoYTWFya1JlbGlj",
+            "RmlsdGVyUGxhbkNzUmVxEg8KB2lzX21hcmsYAyABKAgSFwoPc2xvdF9pbmRl",
+            "eF9saXN0GAsgAygNEhMKC2lzX2JhdGNoX29wGAkgASgIQh6qAhtFZ2dMaW5r",
+            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
       return new MarkRelicFilterPlanCsReq(this);
     }
 
-    /// <summary>Field number for the "IsMark" field.</summary>
+    /// <summary>Field number for the "is_mark" field.</summary>
     public const int IsMarkFieldNumber = 3;
     private bool isMark_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "SlotIndexList" field.</summary>
+    /// <summary>Field number for the "slot_index_list" field.</summary>
     public const int SlotIndexListFieldNumber = 11;
     private static readonly pb::FieldCodec<uint> _repeated_slotIndexList_codec
         = pb::FieldCodec.ForUInt32(90);
@@ -108,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return slotIndexList_; }
     }
 
-    /// <summary>Field number for the "IsBatchOp" field.</summary>
+    /// <summary>Field number for the "is_batch_op" field.</summary>
     public const int IsBatchOpFieldNumber = 9;
     private bool isBatchOp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

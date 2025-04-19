@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static AlleyPlacingShipReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZBbGxleVBsYWNpbmdTaGlwLnByb3RvGhFLR0NBTkxKSUtDUC5wcm90byJD",
-            "ChBBbGxleVBsYWNpbmdTaGlwEg4KBlNoaXBJZBgBIAEoDRIfCglHb29kc0xp",
-            "c3QYDCADKAsyDC5LR0NBTkxKSUtDUEIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
-            "dmVyLlByb3RvYgZwcm90bzM="));
+            "ChZBbGxleVBsYWNpbmdTaGlwLnByb3RvGhFLR0NBTkxKSUtDUC5wcm90byJF",
+            "ChBBbGxleVBsYWNpbmdTaGlwEg8KB3NoaXBfaWQYASABKA0SIAoKZ29vZHNf",
+            "bGlzdBgMIAMoCzIMLktHQ0FOTEpJS0NQQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KGCANLJIKCPReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
       return new AlleyPlacingShip(this);
     }
 
-    /// <summary>Field number for the "ShipId" field.</summary>
+    /// <summary>Field number for the "ship_id" field.</summary>
     public const int ShipIdFieldNumber = 1;
     private uint shipId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "GoodsList" field.</summary>
+    /// <summary>Field number for the "goods_list" field.</summary>
     public const int GoodsListFieldNumber = 12;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.KGCANLJIKCP> _repeated_goodsList_codec
         = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.KGCANLJIKCP.Parser);

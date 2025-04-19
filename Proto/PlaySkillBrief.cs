@@ -25,10 +25,10 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRQbGF5U2tpbGxCcmllZi5wcm90bxogVHJhaW5QYXJ0eU10U2tpbGxCcmll",
-            "ZlR5cGUucHJvdG8iZQoOUGxheVNraWxsQnJpZWYSLgoJU2tpbGxUeXBlGAgg",
-            "ASgOMhsuVHJhaW5QYXJ0eU10U2tpbGxCcmllZlR5cGUSEgoKU2tpbGxQYXJh",
-            "bRgHIAEoDRIPCgdTa2lsbElkGAkgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
-            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ZlR5cGUucHJvdG8iaAoOUGxheVNraWxsQnJpZWYSLwoKc2tpbGxfdHlwZRgI",
+            "IAEoDjIbLlRyYWluUGFydHlNdFNraWxsQnJpZWZUeXBlEhMKC3NraWxsX3Bh",
+            "cmFtGAcgASgNEhAKCHNraWxsX2lkGAkgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyMtSkillBriefTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
       return new PlaySkillBrief(this);
     }
 
-    /// <summary>Field number for the "SkillType" field.</summary>
+    /// <summary>Field number for the "skill_type" field.</summary>
     public const int SkillTypeFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.TrainPartyMtSkillBriefType skillType_ = global::EggLink.DanhengServer.Proto.TrainPartyMtSkillBriefType.KMtSkillNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "SkillParam" field.</summary>
+    /// <summary>Field number for the "skill_param" field.</summary>
     public const int SkillParamFieldNumber = 7;
     private uint skillParam_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "SkillId" field.</summary>
+    /// <summary>Field number for the "skill_id" field.</summary>
     public const int SkillIdFieldNumber = 9;
     private uint skillId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -1,5 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database.Inventory;
+using EggLink.DanhengServer.Database.TrainParty;
 using EggLink.DanhengServer.Enums.Avatar;
 using EggLink.DanhengServer.Enums.Item;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.PlayerSync;

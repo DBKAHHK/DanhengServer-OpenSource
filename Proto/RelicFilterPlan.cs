@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChVSZWxpY0ZpbHRlclBsYW4ucHJvdG8aHVJlbGljRmlsdGVyUGxhblNldHRp",
-            "bmdzLnByb3RvGhlSZWxpY0ZpbHRlclBsYW5JY29uLnByb3RvIscBCg9SZWxp",
-            "Y0ZpbHRlclBsYW4SKgoIU2V0dGluZ3MYAiABKAsyGC5SZWxpY0ZpbHRlclBs",
-            "YW5TZXR0aW5ncxIMCgROYW1lGAsgASgJEhgKEEF2YXRhcklkT25DcmVhdGUY",
-            "BCABKA0SEAoISXNNYXJrZWQYCCABKAgSEQoJU2xvdEluZGV4GAkgASgNEiIK",
-            "BEljb24YDyABKAsyFC5SZWxpY0ZpbHRlclBsYW5JY29uEhcKD1VwZGF0ZVRp",
-            "bWVzdGFtcBgNIAEoA0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
-            "YgZwcm90bzM="));
+            "bmdzLnByb3RvGhlSZWxpY0ZpbHRlclBsYW5JY29uLnByb3RvIs0BCg9SZWxp",
+            "Y0ZpbHRlclBsYW4SKgoIc2V0dGluZ3MYAiABKAsyGC5SZWxpY0ZpbHRlclBs",
+            "YW5TZXR0aW5ncxIMCgRuYW1lGAsgASgJEhsKE2F2YXRhcl9pZF9vbl9jcmVh",
+            "dGUYBCABKA0SEQoJaXNfbWFya2VkGAggASgIEhIKCnNsb3RfaW5kZXgYCSAB",
+            "KA0SIgoEaWNvbhgPIAEoCzIULlJlbGljRmlsdGVyUGxhbkljb24SGAoQdXBk",
+            "YXRlX3RpbWVzdGFtcBgNIAEoA0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RelicFilterPlanSettingsReflection.Descriptor, global::EggLink.DanhengServer.Proto.RelicFilterPlanIconReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -93,7 +93,7 @@ namespace EggLink.DanhengServer.Proto {
       return new RelicFilterPlan(this);
     }
 
-    /// <summary>Field number for the "Settings" field.</summary>
+    /// <summary>Field number for the "settings" field.</summary>
     public const int SettingsFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings settings_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -105,7 +105,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Name" field.</summary>
+    /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 11;
     private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "AvatarIdOnCreate" field.</summary>
+    /// <summary>Field number for the "avatar_id_on_create" field.</summary>
     public const int AvatarIdOnCreateFieldNumber = 4;
     private uint avatarIdOnCreate_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -129,7 +129,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "IsMarked" field.</summary>
+    /// <summary>Field number for the "is_marked" field.</summary>
     public const int IsMarkedFieldNumber = 8;
     private bool isMarked_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -141,7 +141,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "SlotIndex" field.</summary>
+    /// <summary>Field number for the "slot_index" field.</summary>
     public const int SlotIndexFieldNumber = 9;
     private uint slotIndex_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Icon" field.</summary>
+    /// <summary>Field number for the "icon" field.</summary>
     public const int IconFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon icon_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -165,7 +165,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "UpdateTimestamp" field.</summary>
+    /// <summary>Field number for the "update_timestamp" field.</summary>
     public const int UpdateTimestampFieldNumber = 13;
     private long updateTimestamp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

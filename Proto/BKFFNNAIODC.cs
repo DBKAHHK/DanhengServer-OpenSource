@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static BKFFNNAIODCReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFCS0ZGTk5BSU9EQy5wcm90bxoVUm9ndWVDb21tb25CdWZmLnByb3RvGhZH",
-            "YW1lUm9ndWVNaXJhY2xlLnByb3RvImkKC0JLRkZOTkFJT0RDEicKDG1pcmFj",
-            "bGVfbGlzdBgHIAMoCzIRLkdhbWVSb2d1ZU1pcmFjbGUSDAoEY29pbhgGIAEo",
-            "DRIjCglidWZmX2xpc3QYCCADKAsyEC5Sb2d1ZUNvbW1vbkJ1ZmZCHqoCG0Vn",
-            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChFCS0ZGTk5BSU9EQy5wcm90bxoWR2FtZVJvZ3VlTWlyYWNsZS5wcm90bxoV",
+            "Um9ndWVDb21tb25CdWZmLnByb3RvIm8KC0JLRkZOTkFJT0RDEicKDG1pcmFj",
+            "bGVfbGlzdBgHIAMoCzIRLkdhbWVSb2d1ZU1pcmFjbGUSEgoKaXRlbV92YWx1",
+            "ZRgGIAEoDRIjCglidWZmX2xpc3QYCCADKAsyEC5Sb2d1ZUNvbW1vbkJ1ZmZC",
+            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonBuffReflection.Descriptor, global::EggLink.DanhengServer.Proto.GameRogueMiracleReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GameRogueMiracleReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonBuffReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BKFFNNAIODC), global::EggLink.DanhengServer.Proto.BKFFNNAIODC.Parser, new[]{ "MiracleList", "Coin", "BuffList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BKFFNNAIODC), global::EggLink.DanhengServer.Proto.BKFFNNAIODC.Parser, new[]{ "MiracleList", "ItemValue", "BuffList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BKFFNNAIODC(BKFFNNAIODC other) : this() {
       miracleList_ = other.miracleList_.Clone();
-      coin_ = other.coin_;
+      itemValue_ = other.itemValue_;
       buffList_ = other.buffList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -97,15 +97,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return miracleList_; }
     }
 
-    /// <summary>Field number for the "coin" field.</summary>
-    public const int CoinFieldNumber = 6;
-    private uint coin_;
+    /// <summary>Field number for the "item_value" field.</summary>
+    public const int ItemValueFieldNumber = 6;
+    private uint itemValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Coin {
-      get { return coin_; }
+    public uint ItemValue {
+      get { return itemValue_; }
       set {
-        coin_ = value;
+        itemValue_ = value;
       }
     }
 
@@ -136,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!miracleList_.Equals(other.miracleList_)) return false;
-      if (Coin != other.Coin) return false;
+      if (ItemValue != other.ItemValue) return false;
       if(!buffList_.Equals(other.buffList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -146,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= miracleList_.GetHashCode();
-      if (Coin != 0) hash ^= Coin.GetHashCode();
+      if (ItemValue != 0) hash ^= ItemValue.GetHashCode();
       hash ^= buffList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -166,9 +166,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Coin != 0) {
+      if (ItemValue != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(Coin);
+        output.WriteUInt32(ItemValue);
       }
       miracleList_.WriteTo(output, _repeated_miracleList_codec);
       buffList_.WriteTo(output, _repeated_buffList_codec);
@@ -182,9 +182,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Coin != 0) {
+      if (ItemValue != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(Coin);
+        output.WriteUInt32(ItemValue);
       }
       miracleList_.WriteTo(ref output, _repeated_miracleList_codec);
       buffList_.WriteTo(ref output, _repeated_buffList_codec);
@@ -199,8 +199,8 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += miracleList_.CalculateSize(_repeated_miracleList_codec);
-      if (Coin != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Coin);
+      if (ItemValue != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ItemValue);
       }
       size += buffList_.CalculateSize(_repeated_buffList_codec);
       if (_unknownFields != null) {
@@ -216,8 +216,8 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       miracleList_.Add(other.miracleList_);
-      if (other.Coin != 0) {
-        Coin = other.Coin;
+      if (other.ItemValue != 0) {
+        ItemValue = other.ItemValue;
       }
       buffList_.Add(other.buffList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -236,7 +236,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 48: {
-            Coin = input.ReadUInt32();
+            ItemValue = input.ReadUInt32();
             break;
           }
           case 58: {
@@ -263,7 +263,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 48: {
-            Coin = input.ReadUInt32();
+            ItemValue = input.ReadUInt32();
             break;
           }
           case 58: {

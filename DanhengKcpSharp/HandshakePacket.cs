@@ -5,7 +5,7 @@ namespace EggLink.DanhengServer.Kcp;
 
 public class HandshakePacket : BasePacket
 {
-    public HandshakePacket(byte[] data) : base(CmdIds.HandShakeScNotify)
+    public HandshakePacket(byte[] data) : base(CmdIds.ClientDownloadDataScNotify)
     {
         var downloadData = new ClientDownloadData
         {
@@ -21,7 +21,7 @@ public class HandshakePacket : BasePacket
         SetData(notify);
     }
 
-    public HandshakePacket(string base64) : base(CmdIds.HandShakeScNotify)
+    public HandshakePacket(string base64) : base(CmdIds.ClientDownloadDataScNotify)
     {
         SetData(Convert.FromBase64String(base64));
     }

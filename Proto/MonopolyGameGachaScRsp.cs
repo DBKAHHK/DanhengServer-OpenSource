@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static MonopolyGameGachaScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxNb25vcG9seUdhbWVHYWNoYVNjUnNwLnByb3RvIj0KFk1vbm9wb2x5R2Ft",
-            "ZUdhY2hhU2NSc3ASEgoKUmVzdWx0TGlzdBgMIAMoDRIPCgdSZXRjb2RlGAUg",
-            "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChxNb25vcG9seUdhbWVHYWNoYVNjUnNwLnByb3RvIj4KFk1vbm9wb2x5R2Ft",
+            "ZUdhY2hhU2NSc3ASEwoLcmVzdWx0X2xpc3QYDCADKA0SDwoHcmV0Y29kZRgF",
+            "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
       return new MonopolyGameGachaScRsp(this);
     }
 
-    /// <summary>Field number for the "ResultList" field.</summary>
+    /// <summary>Field number for the "result_list" field.</summary>
     public const int ResultListFieldNumber = 12;
     private static readonly pb::FieldCodec<uint> _repeated_resultList_codec
         = pb::FieldCodec.ForUInt32(98);
@@ -94,7 +94,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return resultList_; }
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 5;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static LogisticsScoreReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRMb2dpc3RpY3NTY29yZS5wcm90bxoOSXRlbUxpc3QucHJvdG8inAEKDkxv",
-            "Z2lzdGljc1Njb3JlEhQKDExhc3RNYXhTY29yZRgPIAEoDRINCgVNYXBJZBgG",
-            "IAEoDRIZCgZSZXdhcmQYCiABKAsyCS5JdGVtTGlzdBIRCglMYXN0TGV2ZWwY",
-            "AiABKA0SEAoITWF4U2NvcmUYCyABKA0SEwoLVW5sb2NrTGV2ZWwYASABKA0S",
-            "EAoIQ3VyU2NvcmUYAyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
-            "cm90b2IGcHJvdG8z"));
+            "ChRMb2dpc3RpY3NTY29yZS5wcm90bxoOSXRlbUxpc3QucHJvdG8iowEKDkxv",
+            "Z2lzdGljc1Njb3JlEhYKDmxhc3RfbWF4X3Njb3JlGA8gASgNEg4KBm1hcF9p",
+            "ZBgGIAEoDRIZCgZyZXdhcmQYCiABKAsyCS5JdGVtTGlzdBISCgpsYXN0X2xl",
+            "dmVsGAIgASgNEhEKCW1heF9zY29yZRgLIAEoDRIUCgx1bmxvY2tfbGV2ZWwY",
+            "ASABKA0SEQoJY3VyX3Njb3JlGAMgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -91,7 +91,7 @@ namespace EggLink.DanhengServer.Proto {
       return new LogisticsScore(this);
     }
 
-    /// <summary>Field number for the "LastMaxScore" field.</summary>
+    /// <summary>Field number for the "last_max_score" field.</summary>
     public const int LastMaxScoreFieldNumber = 15;
     private uint lastMaxScore_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -103,7 +103,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "MapId" field.</summary>
+    /// <summary>Field number for the "map_id" field.</summary>
     public const int MapIdFieldNumber = 6;
     private uint mapId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -115,7 +115,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Reward" field.</summary>
+    /// <summary>Field number for the "reward" field.</summary>
     public const int RewardFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.ItemList reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -127,7 +127,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "LastLevel" field.</summary>
+    /// <summary>Field number for the "last_level" field.</summary>
     public const int LastLevelFieldNumber = 2;
     private uint lastLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -139,7 +139,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "MaxScore" field.</summary>
+    /// <summary>Field number for the "max_score" field.</summary>
     public const int MaxScoreFieldNumber = 11;
     private uint maxScore_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "UnlockLevel" field.</summary>
+    /// <summary>Field number for the "unlock_level" field.</summary>
     public const int UnlockLevelFieldNumber = 1;
     private uint unlockLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -163,7 +163,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CurScore" field.</summary>
+    /// <summary>Field number for the "cur_score" field.</summary>
     public const int CurScoreFieldNumber = 3;
     private uint curScore_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

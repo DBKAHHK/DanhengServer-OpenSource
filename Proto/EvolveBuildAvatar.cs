@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static EvolveBuildAvatarReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdFdm9sdmVCdWlsZEF2YXRhci5wcm90bxoQQXZhdGFyVHlwZS5wcm90byJW",
-            "ChFFdm9sdmVCdWlsZEF2YXRhchIQCghBdmF0YXJJZBgBIAEoDRIfCgpBdmF0",
-            "YXJUeXBlGA8gASgOMgsuQXZhdGFyVHlwZRIOCgZEYW1hZ2UYCCABKAFCHqoC",
-            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChdFdm9sdmVCdWlsZEF2YXRhci5wcm90bxoQQXZhdGFyVHlwZS5wcm90byJY",
+            "ChFFdm9sdmVCdWlsZEF2YXRhchIRCglhdmF0YXJfaWQYASABKA0SIAoLYXZh",
+            "dGFyX3R5cGUYDyABKA4yCy5BdmF0YXJUeXBlEg4KBmRhbWFnZRgIIAEoAUIe",
+            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AvatarTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
       return new EvolveBuildAvatar(this);
     }
 
-    /// <summary>Field number for the "AvatarId" field.</summary>
+    /// <summary>Field number for the "avatar_id" field.</summary>
     public const int AvatarIdFieldNumber = 1;
     private uint avatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "AvatarType" field.</summary>
+    /// <summary>Field number for the "avatar_type" field.</summary>
     public const int AvatarTypeFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.AvatarType avatarType_ = global::EggLink.DanhengServer.Proto.AvatarType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Damage" field.</summary>
+    /// <summary>Field number for the "damage" field.</summary>
     public const int DamageFieldNumber = 8;
     private double damage_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

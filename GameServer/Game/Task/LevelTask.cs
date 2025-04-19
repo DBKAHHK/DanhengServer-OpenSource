@@ -230,7 +230,7 @@ public class LevelTask(PlayerInstance player)
 
         if (subMission.SubMissionInfo?.FinishType == MissionFinishTypeEnum.GetTrialAvatarList)
         {
-            List<int> list = [.. subMission.SubMissionInfo.ParamIntList];
+            List<int> list = [.. subMission.SubMissionInfo.ParamIntList ?? []];
 
             if (list.Count > 0)
             {

@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static EvolveBuildGearDamageInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9Fdm9sdmVCdWlsZEdlYXJEYW1hZ2VJbmZvLnByb3RvIk0KGUV2b2x2ZUJ1",
-            "aWxkR2VhckRhbWFnZUluZm8SDgoGR2VhcklkGAEgASgNEg4KBkRhbWFnZRgC",
-            "IAEoARIQCghIcERhbWFnZRgDIAEoAUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
-            "dmVyLlByb3RvYgZwcm90bzM="));
+            "Ch9Fdm9sdmVCdWlsZEdlYXJEYW1hZ2VJbmZvLnByb3RvIk8KGUV2b2x2ZUJ1",
+            "aWxkR2VhckRhbWFnZUluZm8SDwoHZ2Vhcl9pZBgBIAEoDRIOCgZkYW1hZ2UY",
+            "AiABKAESEQoJaHBfZGFtYWdlGAMgASgBQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
       return new EvolveBuildGearDamageInfo(this);
     }
 
-    /// <summary>Field number for the "GearId" field.</summary>
+    /// <summary>Field number for the "gear_id" field.</summary>
     public const int GearIdFieldNumber = 1;
     private uint gearId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Damage" field.</summary>
+    /// <summary>Field number for the "damage" field.</summary>
     public const int DamageFieldNumber = 2;
     private double damage_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "HpDamage" field.</summary>
+    /// <summary>Field number for the "hp_damage" field.</summary>
     public const int HpDamageFieldNumber = 3;
     private double hpDamage_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

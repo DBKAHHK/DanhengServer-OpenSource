@@ -24,14 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static MatchThreeSetBirdPosCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9NYXRjaFRocmVlU2V0QmlyZFBvc0NzUmVxLnByb3RvIj0KGU1hdGNoVGhy",
-            "ZWVTZXRCaXJkUG9zQ3NSZXESEwoLQktNUEZFT0NGSUIYAiABKA0SCwoDcG9z",
-            "GA8gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
-            "Mw=="));
+            "Ch9NYXRjaFRocmVlU2V0QmlyZFBvc0NzUmVxLnByb3RvIjkKGU1hdGNoVGhy",
+            "ZWVTZXRCaXJkUG9zQ3NSZXESDwoHYmlyZF9pZBgCIAEoDRILCgNwb3MYDyAB",
+            "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MatchThreeSetBirdPosCsReq), global::EggLink.DanhengServer.Proto.MatchThreeSetBirdPosCsReq.Parser, new[]{ "BKMPFEOCFIB", "Pos" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MatchThreeSetBirdPosCsReq), global::EggLink.DanhengServer.Proto.MatchThreeSetBirdPosCsReq.Parser, new[]{ "BirdId", "Pos" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MatchThreeSetBirdPosCsReq(MatchThreeSetBirdPosCsReq other) : this() {
-      bKMPFEOCFIB_ = other.bKMPFEOCFIB_;
+      birdId_ = other.birdId_;
       pos_ = other.pos_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new MatchThreeSetBirdPosCsReq(this);
     }
 
-    /// <summary>Field number for the "BKMPFEOCFIB" field.</summary>
-    public const int BKMPFEOCFIBFieldNumber = 2;
-    private uint bKMPFEOCFIB_;
+    /// <summary>Field number for the "bird_id" field.</summary>
+    public const int BirdIdFieldNumber = 2;
+    private uint birdId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BKMPFEOCFIB {
-      get { return bKMPFEOCFIB_; }
+    public uint BirdId {
+      get { return birdId_; }
       set {
-        bKMPFEOCFIB_ = value;
+        birdId_ = value;
       }
     }
 
@@ -123,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (BKMPFEOCFIB != other.BKMPFEOCFIB) return false;
+      if (BirdId != other.BirdId) return false;
       if (Pos != other.Pos) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -132,7 +131,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (BKMPFEOCFIB != 0) hash ^= BKMPFEOCFIB.GetHashCode();
+      if (BirdId != 0) hash ^= BirdId.GetHashCode();
       if (Pos != 0) hash ^= Pos.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -152,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (BKMPFEOCFIB != 0) {
+      if (BirdId != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(BKMPFEOCFIB);
+        output.WriteUInt32(BirdId);
       }
       if (Pos != 0) {
         output.WriteRawTag(120);
@@ -170,9 +169,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BKMPFEOCFIB != 0) {
+      if (BirdId != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(BKMPFEOCFIB);
+        output.WriteUInt32(BirdId);
       }
       if (Pos != 0) {
         output.WriteRawTag(120);
@@ -188,8 +187,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (BKMPFEOCFIB != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BKMPFEOCFIB);
+      if (BirdId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BirdId);
       }
       if (Pos != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Pos);
@@ -206,8 +205,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.BKMPFEOCFIB != 0) {
-        BKMPFEOCFIB = other.BKMPFEOCFIB;
+      if (other.BirdId != 0) {
+        BirdId = other.BirdId;
       }
       if (other.Pos != 0) {
         Pos = other.Pos;
@@ -228,7 +227,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 16: {
-            BKMPFEOCFIB = input.ReadUInt32();
+            BirdId = input.ReadUInt32();
             break;
           }
           case 120: {
@@ -251,7 +250,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 16: {
-            BKMPFEOCFIB = input.ReadUInt32();
+            BirdId = input.ReadUInt32();
             break;
           }
           case 120: {

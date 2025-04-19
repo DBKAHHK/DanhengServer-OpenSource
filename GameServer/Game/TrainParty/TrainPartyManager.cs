@@ -20,11 +20,11 @@ public class TrainPartyManager(PlayerInstance player) : BasePlayerManager(player
         return area;
     }
 
-    public TrainPartyInfo ToProto()
+    public TrainPartyData ToProto()
     {
-        var proto = new TrainPartyInfo
+        var proto = new TrainPartyData
         {
-            TrainPartyDetail = ToPartyInfo(),
+            TrainPartyInfo = ToPartyInfo(),
             PassengerInfo = ToPassenger(),
             UnlockAreaNum = 6
         };
@@ -32,9 +32,9 @@ public class TrainPartyManager(PlayerInstance player) : BasePlayerManager(player
         return proto;
     }
 
-    public TrainPartyDetail ToPartyInfo()
+    public TrainPartyInfo ToPartyInfo()
     {
-        var proto = new TrainPartyDetail
+        var proto = new TrainPartyInfo
         {
             EEBNAAPBKCN = 30,
             CurFund = (uint)Data.Fund,
@@ -49,12 +49,9 @@ public class TrainPartyManager(PlayerInstance player) : BasePlayerManager(player
     {
         var info = new TrainPartyPassengerInfo();
         info.PassengerInfoList.AddRange(
-            GameData.TrainPartyPassengerConfigData.Select(x =>
+            GameData.TrainPartyPassengerConfigData.Select(x => new TrainPartyPassenger
             {
-                return new TrainPartyPassenger
-                {
-                    PassengerId = (uint)x.Key
-                };
+                PassengerId = (uint)x.Key
             })
         );
         return info;

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlGaW5pc2hUdXRvcmlhbFNjUnNwLnByb3RvGg5UdXRvcmlhbC5wcm90byJD",
-            "ChNGaW5pc2hUdXRvcmlhbFNjUnNwEhsKCFR1dG9yaWFsGAwgASgLMgkuVHV0",
-            "b3JpYWwSDwoHUmV0Y29kZRgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
+            "ChNGaW5pc2hUdXRvcmlhbFNjUnNwEhsKCHR1dG9yaWFsGAwgASgLMgkuVHV0",
+            "b3JpYWwSDwoHcmV0Y29kZRgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TutorialReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
       return new FinishTutorialScRsp(this);
     }
 
-    /// <summary>Field number for the "Tutorial" field.</summary>
+    /// <summary>Field number for the "tutorial" field.</summary>
     public const int TutorialFieldNumber = 12;
     private global::EggLink.DanhengServer.Proto.Tutorial tutorial_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 3;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

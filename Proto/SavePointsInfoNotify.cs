@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static SavePointsInfoNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpTYXZlUG9pbnRzSW5mb05vdGlmeS5wcm90byI/ChRTYXZlUG9pbnRzSW5m",
-            "b05vdGlmeRISCgpWYWxpZFRpbWVzGAYgASgNEhMKC1JlZnJlc2hUaW1lGA4g",
-            "ASgDQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChpTYXZlUG9pbnRzSW5mb05vdGlmeS5wcm90byJBChRTYXZlUG9pbnRzSW5m",
+            "b05vdGlmeRITCgt2YWxpZF90aW1lcxgGIAEoDRIUCgxyZWZyZXNoX3RpbWUY",
+            "DiABKANCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
       return new SavePointsInfoNotify(this);
     }
 
-    /// <summary>Field number for the "ValidTimes" field.</summary>
+    /// <summary>Field number for the "valid_times" field.</summary>
     public const int ValidTimesFieldNumber = 6;
     private uint validTimes_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -95,7 +95,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "RefreshTime" field.</summary>
+    /// <summary>Field number for the "refresh_time" field.</summary>
     public const int RefreshTimeFieldNumber = 14;
     private long refreshTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

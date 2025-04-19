@@ -25,10 +25,10 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1UYWtlQ2l0eVNob3BSZXdhcmRTY1JzcC5wcm90bxoOSXRlbUxpc3QucHJv",
-            "dG8iZAoXVGFrZUNpdHlTaG9wUmV3YXJkU2NSc3ASDgoGU2hvcElkGAggASgN",
-            "Eg0KBUxldmVsGAUgASgNEg8KB1JldGNvZGUYBCABKA0SGQoGUmV3YXJkGA8g",
-            "ASgLMgkuSXRlbUxpc3RCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
-            "b2IGcHJvdG8z"));
+            "dG8iZQoXVGFrZUNpdHlTaG9wUmV3YXJkU2NSc3ASDwoHc2hvcF9pZBgIIAEo",
+            "DRINCgVsZXZlbBgFIAEoDRIPCgdyZXRjb2RlGAQgASgNEhkKBnJld2FyZBgP",
+            "IAEoCzIJLkl0ZW1MaXN0Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
+            "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
       return new TakeCityShopRewardScRsp(this);
     }
 
-    /// <summary>Field number for the "ShopId" field.</summary>
+    /// <summary>Field number for the "shop_id" field.</summary>
     public const int ShopIdFieldNumber = 8;
     private uint shopId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Level" field.</summary>
+    /// <summary>Field number for the "level" field.</summary>
     public const int LevelFieldNumber = 5;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 4;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Reward" field.</summary>
+    /// <summary>Field number for the "reward" field.</summary>
     public const int RewardFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.ItemList reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

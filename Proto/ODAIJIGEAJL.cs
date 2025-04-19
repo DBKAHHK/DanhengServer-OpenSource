@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static ODAIJIGEAJLReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFPREFJSklHRUFKTC5wcm90byKEAQoLT0RBSUpJR0VBSkwSEwoLRkxKQkpQ",
+            "ChFPREFJSklHRUFKTC5wcm90byKKAQoLT0RBSUpJR0VBSkwSEwoLRkxKQkpQ",
             "QUhKSUYYCyABKA0SEwoLSEdNTUNISEJLUEIYBCABKAgSEwoLRUpIRENORUVH",
-            "TUkYByABKA0SEwoLRU5HSkZJQ0hETUwYCSABKA0SDAoEY29pbhgMIAEoDRIT",
-            "CgtMSkZHSUZCREFOQxgDIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
-            "LlByb3RvYgZwcm90bzM="));
+            "TUkYByABKA0SEwoLRU5HSkZJQ0hETUwYCSABKA0SEgoKaXRlbV92YWx1ZRgM",
+            "IAEoDRITCgtMSkZHSUZCREFOQxgDIAEoCEIeqgIbRWdnTGluay5EYW5oZW5n",
+            "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ODAIJIGEAJL), global::EggLink.DanhengServer.Proto.ODAIJIGEAJL.Parser, new[]{ "FLJBJPAHJIF", "HGMMCHHBKPB", "EJHDCNEEGMI", "ENGJFICHDML", "Coin", "LJFGIFBDANC" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ODAIJIGEAJL), global::EggLink.DanhengServer.Proto.ODAIJIGEAJL.Parser, new[]{ "FLJBJPAHJIF", "HGMMCHHBKPB", "EJHDCNEEGMI", "ENGJFICHDML", "ItemValue", "LJFGIFBDANC" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,7 +78,7 @@ namespace EggLink.DanhengServer.Proto {
       hGMMCHHBKPB_ = other.hGMMCHHBKPB_;
       eJHDCNEEGMI_ = other.eJHDCNEEGMI_;
       eNGJFICHDML_ = other.eNGJFICHDML_;
-      coin_ = other.coin_;
+      itemValue_ = other.itemValue_;
       lJFGIFBDANC_ = other.lJFGIFBDANC_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -137,15 +137,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "coin" field.</summary>
-    public const int CoinFieldNumber = 12;
-    private uint coin_;
+    /// <summary>Field number for the "item_value" field.</summary>
+    public const int ItemValueFieldNumber = 12;
+    private uint itemValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Coin {
-      get { return coin_; }
+    public uint ItemValue {
+      get { return itemValue_; }
       set {
-        coin_ = value;
+        itemValue_ = value;
       }
     }
 
@@ -180,7 +180,7 @@ namespace EggLink.DanhengServer.Proto {
       if (HGMMCHHBKPB != other.HGMMCHHBKPB) return false;
       if (EJHDCNEEGMI != other.EJHDCNEEGMI) return false;
       if (ENGJFICHDML != other.ENGJFICHDML) return false;
-      if (Coin != other.Coin) return false;
+      if (ItemValue != other.ItemValue) return false;
       if (LJFGIFBDANC != other.LJFGIFBDANC) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -193,7 +193,7 @@ namespace EggLink.DanhengServer.Proto {
       if (HGMMCHHBKPB != false) hash ^= HGMMCHHBKPB.GetHashCode();
       if (EJHDCNEEGMI != 0) hash ^= EJHDCNEEGMI.GetHashCode();
       if (ENGJFICHDML != 0) hash ^= ENGJFICHDML.GetHashCode();
-      if (Coin != 0) hash ^= Coin.GetHashCode();
+      if (ItemValue != 0) hash ^= ItemValue.GetHashCode();
       if (LJFGIFBDANC != false) hash ^= LJFGIFBDANC.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -233,9 +233,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(88);
         output.WriteUInt32(FLJBJPAHJIF);
       }
-      if (Coin != 0) {
+      if (ItemValue != 0) {
         output.WriteRawTag(96);
-        output.WriteUInt32(Coin);
+        output.WriteUInt32(ItemValue);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -267,9 +267,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(88);
         output.WriteUInt32(FLJBJPAHJIF);
       }
-      if (Coin != 0) {
+      if (ItemValue != 0) {
         output.WriteRawTag(96);
-        output.WriteUInt32(Coin);
+        output.WriteUInt32(ItemValue);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -293,8 +293,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ENGJFICHDML != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ENGJFICHDML);
       }
-      if (Coin != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Coin);
+      if (ItemValue != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ItemValue);
       }
       if (LJFGIFBDANC != false) {
         size += 1 + 1;
@@ -323,8 +323,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.ENGJFICHDML != 0) {
         ENGJFICHDML = other.ENGJFICHDML;
       }
-      if (other.Coin != 0) {
-        Coin = other.Coin;
+      if (other.ItemValue != 0) {
+        ItemValue = other.ItemValue;
       }
       if (other.LJFGIFBDANC != false) {
         LJFGIFBDANC = other.LJFGIFBDANC;
@@ -365,7 +365,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 96: {
-            Coin = input.ReadUInt32();
+            ItemValue = input.ReadUInt32();
             break;
           }
         }
@@ -404,7 +404,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 96: {
-            Coin = input.ReadUInt32();
+            ItemValue = input.ReadUInt32();
             break;
           }
         }

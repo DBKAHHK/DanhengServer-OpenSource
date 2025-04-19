@@ -24,11 +24,11 @@ namespace EggLink.DanhengServer.Proto {
     static RogueCurrentInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZSb2d1ZUN1cnJlbnRJbmZvLnByb3RvGh5Sb2d1ZUNvbW1vblBlbmRpbmdB",
-            "Y3Rpb24ucHJvdG8aEkdhbWVBZW9uSW5mby5wcm90bxoRUm9ndWVTdGF0dXMu",
-            "cHJvdG8aElJvZ3VlTWFwSW5mby5wcm90bxoVR2FtZU1pcmFjbGVJbmZvLnBy",
-            "b3RvGhNSb2d1ZUJ1ZmZJbmZvLnByb3RvGhVSb2d1ZU1vZHVsZUluZm8ucHJv",
-            "dG8aFlJvZ3VlVmlydHVhbEl0ZW0ucHJvdG8aFVJvZ3VlTGluZXVwSW5mby5w",
+            "ChZSb2d1ZUN1cnJlbnRJbmZvLnByb3RvGhVHYW1lTWlyYWNsZUluZm8ucHJv",
+            "dG8aHlJvZ3VlQ29tbW9uUGVuZGluZ0FjdGlvbi5wcm90bxoSR2FtZUFlb25J",
+            "bmZvLnByb3RvGhZSb2d1ZVZpcnR1YWxJdGVtLnByb3RvGhVSb2d1ZUxpbmV1",
+            "cEluZm8ucHJvdG8aE1JvZ3VlQnVmZkluZm8ucHJvdG8aElJvZ3VlTWFwSW5m",
+            "by5wcm90bxoRUm9ndWVTdGF0dXMucHJvdG8aFVJvZ3VlTW9kdWxlSW5mby5w",
             "cm90byKdAwoQUm9ndWVDdXJyZW50SW5mbxIrChFyb2d1ZV9saW5ldXBfaW5m",
             "bxgDIAEoCzIQLlJvZ3VlTGluZXVwSW5mbxImCg9yb2d1ZV9hZW9uX2luZm8Y",
             "AiABKAsyDS5HYW1lQWVvbkluZm8SFgoOaXNfZXhwbG9yZV93aW4YDiABKAgS",
@@ -41,7 +41,7 @@ namespace EggLink.DanhengServer.Proto {
             "b25QZW5kaW5nQWN0aW9uQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
             "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonPendingActionReflection.Descriptor, global::EggLink.DanhengServer.Proto.GameAeonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMapInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GameMiracleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueModuleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueVirtualItemReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueLineupInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GameMiracleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonPendingActionReflection.Descriptor, global::EggLink.DanhengServer.Proto.GameAeonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueVirtualItemReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueLineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMapInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueModuleInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCurrentInfo), global::EggLink.DanhengServer.Proto.RogueCurrentInfo.Parser, new[]{ "RogueLineupInfo", "RogueAeonInfo", "IsExploreWin", "Status", "VirtualItemInfo", "GameMiracleInfo", "ModuleInfo", "RogueMap", "RogueBuffInfo", "PendingAction" }, null, null, null, null)
           }));

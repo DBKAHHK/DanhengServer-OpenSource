@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiJVcGRhdGVTZXJ2ZXJMb2dTZXR0aW5nc0NzUmVxLnByb3RvGhdTZXJ2ZXJM",
             "b2dTZXR0aW5ncy5wcm90byJEChxVcGRhdGVTZXJ2ZXJMb2dTZXR0aW5nc0Nz",
-            "UmVxEiQKCFNldHRpbmdzGAUgASgLMhIuU2VydmVyTG9nU2V0dGluZ3NCHqoC",
+            "UmVxEiQKCHNldHRpbmdzGAUgASgLMhIuU2VydmVyTG9nU2V0dGluZ3NCHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ServerLogSettingsReflection.Descriptor, },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
       return new UpdateServerLogSettingsCsReq(this);
     }
 
-    /// <summary>Field number for the "Settings" field.</summary>
+    /// <summary>Field number for the "settings" field.</summary>
     public const int SettingsFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.ServerLogSettings settings_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

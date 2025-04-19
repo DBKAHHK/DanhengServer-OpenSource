@@ -25,11 +25,11 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpFeGNoYW5nZVN0YW1pbmFTY1JzcC5wcm90bxoOSXRlbUNvc3QucHJvdG8i",
-            "jAEKFEV4Y2hhbmdlU3RhbWluYVNjUnNwEhIKClN0YW1pbmFBZGQYCyABKA0S",
-            "DwoHUmV0Y29kZRgHIAEoDRIVCg1FeGNoYW5nZVRpbWVzGA4gASgNEhcKD0xh",
-            "c3RSZWNvdmVyVGltZRgPIAEoAxIfCgxJdGVtQ29zdExpc3QYAyADKAsyCS5J",
-            "dGVtQ29zdEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
-            "bzM="));
+            "kgEKFEV4Y2hhbmdlU3RhbWluYVNjUnNwEhMKC3N0YW1pbmFfYWRkGAsgASgN",
+            "Eg8KB3JldGNvZGUYByABKA0SFgoOZXhjaGFuZ2VfdGltZXMYDiABKA0SGQoR",
+            "bGFzdF9yZWNvdmVyX3RpbWUYDyABKAMSIQoOaXRlbV9jb3N0X2xpc3QYAyAD",
+            "KAsyCS5JdGVtQ29zdEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemCostReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -89,7 +89,7 @@ namespace EggLink.DanhengServer.Proto {
       return new ExchangeStaminaScRsp(this);
     }
 
-    /// <summary>Field number for the "StaminaAdd" field.</summary>
+    /// <summary>Field number for the "stamina_add" field.</summary>
     public const int StaminaAddFieldNumber = 11;
     private uint staminaAdd_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -101,7 +101,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 7;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -113,7 +113,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ExchangeTimes" field.</summary>
+    /// <summary>Field number for the "exchange_times" field.</summary>
     public const int ExchangeTimesFieldNumber = 14;
     private uint exchangeTimes_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -125,7 +125,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "LastRecoverTime" field.</summary>
+    /// <summary>Field number for the "last_recover_time" field.</summary>
     public const int LastRecoverTimeFieldNumber = 15;
     private long lastRecoverTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ItemCostList" field.</summary>
+    /// <summary>Field number for the "item_cost_list" field.</summary>
     public const int ItemCostListFieldNumber = 3;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ItemCost> _repeated_itemCostList_codec
         = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.ItemCost.Parser);

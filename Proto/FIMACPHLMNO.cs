@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static FIMACPHLMNOReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFGSU1BQ1BITE1OTy5wcm90byIxCgtGSU1BQ1BITE1OTxIVCgtLQkVGQ01J",
-            "SUlJThgNIAEoA0gAQgsKCWluZm9fY2FzZUIeqgIbRWdnTGluay5EYW5oZW5n",
-            "U2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFGSU1BQ1BITE1OTy5wcm90byIzCgtGSU1BQ1BITE1OTxIVCgtLQkVGQ01J",
+            "SUlJThgNIAEoA0gAQg0KC0FJTkNPSU9ORkRKQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FIMACPHLMNO), global::EggLink.DanhengServer.Proto.FIMACPHLMNO.Parser, new[]{ "KBEFCMIIIIN" }, new[]{ "InfoCase" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FIMACPHLMNO), global::EggLink.DanhengServer.Proto.FIMACPHLMNO.Parser, new[]{ "KBEFCMIIIIN" }, new[]{ "AINCOIONFDJ" }, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FIMACPHLMNO(FIMACPHLMNO other) : this() {
-      switch (other.InfoCaseCase) {
-        case InfoCaseOneofCase.KBEFCMIIIIN:
+      switch (other.AINCOIONFDJCase) {
+        case AINCOIONFDJOneofCase.KBEFCMIIIIN:
           KBEFCMIIIIN = other.KBEFCMIIIIN;
           break;
       }
@@ -92,45 +92,45 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long KBEFCMIIIIN {
-      get { return HasKBEFCMIIIIN ? (long) infoCase_ : 0L; }
+      get { return HasKBEFCMIIIIN ? (long) aINCOIONFDJ_ : 0L; }
       set {
-        infoCase_ = value;
-        infoCaseCase_ = InfoCaseOneofCase.KBEFCMIIIIN;
+        aINCOIONFDJ_ = value;
+        aINCOIONFDJCase_ = AINCOIONFDJOneofCase.KBEFCMIIIIN;
       }
     }
     /// <summary>Gets whether the "KBEFCMIIIIN" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasKBEFCMIIIIN {
-      get { return infoCaseCase_ == InfoCaseOneofCase.KBEFCMIIIIN; }
+      get { return aINCOIONFDJCase_ == AINCOIONFDJOneofCase.KBEFCMIIIIN; }
     }
     /// <summary> Clears the value of the oneof if it's currently set to "KBEFCMIIIIN" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearKBEFCMIIIIN() {
       if (HasKBEFCMIIIIN) {
-        ClearInfoCase();
+        ClearAINCOIONFDJ();
       }
     }
 
-    private object infoCase_;
-    /// <summary>Enum of possible cases for the "info_case" oneof.</summary>
-    public enum InfoCaseOneofCase {
+    private object aINCOIONFDJ_;
+    /// <summary>Enum of possible cases for the "AINCOIONFDJ" oneof.</summary>
+    public enum AINCOIONFDJOneofCase {
       None = 0,
       KBEFCMIIIIN = 13,
     }
-    private InfoCaseOneofCase infoCaseCase_ = InfoCaseOneofCase.None;
+    private AINCOIONFDJOneofCase aINCOIONFDJCase_ = AINCOIONFDJOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InfoCaseOneofCase InfoCaseCase {
-      get { return infoCaseCase_; }
+    public AINCOIONFDJOneofCase AINCOIONFDJCase {
+      get { return aINCOIONFDJCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearInfoCase() {
-      infoCaseCase_ = InfoCaseOneofCase.None;
-      infoCase_ = null;
+    public void ClearAINCOIONFDJ() {
+      aINCOIONFDJCase_ = AINCOIONFDJOneofCase.None;
+      aINCOIONFDJ_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -149,7 +149,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (KBEFCMIIIIN != other.KBEFCMIIIIN) return false;
-      if (InfoCaseCase != other.InfoCaseCase) return false;
+      if (AINCOIONFDJCase != other.AINCOIONFDJCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -158,7 +158,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (HasKBEFCMIIIIN) hash ^= KBEFCMIIIIN.GetHashCode();
-      hash ^= (int) infoCaseCase_;
+      hash ^= (int) aINCOIONFDJCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -220,8 +220,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      switch (other.InfoCaseCase) {
-        case InfoCaseOneofCase.KBEFCMIIIIN:
+      switch (other.AINCOIONFDJCase) {
+        case AINCOIONFDJOneofCase.KBEFCMIIIIN:
           KBEFCMIIIIN = other.KBEFCMIIIIN;
           break;
       }

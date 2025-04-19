@@ -25,10 +25,10 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5GaW5pc2hUdXRvcmlhbEd1aWRlU2NSc3AucHJvdG8aDkl0ZW1MaXN0LnBy",
-            "b3RvGhNUdXRvcmlhbEd1aWRlLnByb3RvIm0KGEZpbmlzaFR1dG9yaWFsR3Vp",
-            "ZGVTY1JzcBIPCgdSZXRjb2RlGAYgASgNEiUKDVR1dG9yaWFsR3VpZGUYBCAB",
-            "KAsyDi5UdXRvcmlhbEd1aWRlEhkKBlJld2FyZBgOIAEoCzIJLkl0ZW1MaXN0",
-            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "b3RvGhNUdXRvcmlhbEd1aWRlLnByb3RvIm4KGEZpbmlzaFR1dG9yaWFsR3Vp",
+            "ZGVTY1JzcBIPCgdyZXRjb2RlGAYgASgNEiYKDnR1dG9yaWFsX2d1aWRlGAQg",
+            "ASgLMg4uVHV0b3JpYWxHdWlkZRIZCgZyZXdhcmQYDiABKAsyCS5JdGVtTGlz",
+            "dEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.TutorialGuideReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
       return new FinishTutorialGuideScRsp(this);
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 6;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "TutorialGuide" field.</summary>
+    /// <summary>Field number for the "tutorial_guide" field.</summary>
     public const int TutorialGuideFieldNumber = 4;
     private global::EggLink.DanhengServer.Proto.TutorialGuide tutorialGuide_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Reward" field.</summary>
+    /// <summary>Field number for the "reward" field.</summary>
     public const int RewardFieldNumber = 14;
     private global::EggLink.DanhengServer.Proto.ItemList reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -24,9 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static PropAeonInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJQcm9wQWVvbkluZm8ucHJvdG8iRwoMUHJvcEFlb25JbmZvEhcKD0RpYWxv",
-            "Z3VlR3JvdXBJZBgGIAEoDRIOCgZBZGRFeHAYDCABKA0SDgoGQWVvbklkGAcg",
-            "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChJQcm9wQWVvbkluZm8ucHJvdG8iSwoMUHJvcEFlb25JbmZvEhkKEWRpYWxv",
+            "Z3VlX2dyb3VwX2lkGAYgASgNEg8KB2FkZF9leHAYDCABKA0SDwoHYWVvbl9p",
+            "ZBgHIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -84,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
       return new PropAeonInfo(this);
     }
 
-    /// <summary>Field number for the "DialogueGroupId" field.</summary>
+    /// <summary>Field number for the "dialogue_group_id" field.</summary>
     public const int DialogueGroupIdFieldNumber = 6;
     private uint dialogueGroupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -96,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "AddExp" field.</summary>
+    /// <summary>Field number for the "add_exp" field.</summary>
     public const int AddExpFieldNumber = 12;
     private uint addExp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -108,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "AeonId" field.</summary>
+    /// <summary>Field number for the "aeon_id" field.</summary>
     public const int AeonIdFieldNumber = 7;
     private uint aeonId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -24,19 +24,20 @@ namespace EggLink.DanhengServer.Proto {
     static GetBigDataRecommendScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5HZXRCaWdEYXRhUmVjb21tZW5kU2NSc3AucHJvdG8aFFJlbGljUmVjb21t",
-            "ZW5kLnByb3RvGhhFcXVpcG1lbnRSZWNvbW1lbmQucHJvdG8aGkJpZ0RhdGFS",
-            "ZWNvbW1lbmRUeXBlLnByb3RvIv0BChhHZXRCaWdEYXRhUmVjb21tZW5kU2NS",
-            "c3ASMgoTZXF1aXBtZW50X3JlY29tbWVuZBgPIAEoCzITLkVxdWlwbWVudFJl",
-            "Y29tbWVuZEgAEioKD3JlbGljX3JlY29tbWVuZBgKIAEoCzIPLlJlbGljUmVj",
-            "b21tZW5kSAASDwoHcmV0Y29kZRgLIAEoDRI2ChdiaWdfZGF0YV9yZWNvbW1l",
-            "bmRfdHlwZRgMIAEoDjIVLkJpZ0RhdGFSZWNvbW1lbmRUeXBlEhUKDWhhc19y",
-            "ZWNvbW1hbmQYCCABKAgSFAoMZXF1aXBfYXZhdGFyGAQgASgNQgsKCWRhdGFf",
-            "Y2FzZUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Ch5HZXRCaWdEYXRhUmVjb21tZW5kU2NSc3AucHJvdG8aGEVxdWlwbWVudFJl",
+            "Y29tbWVuZC5wcm90bxoUUmVsaWNSZWNvbW1lbmQucHJvdG8aGkJpZ0RhdGFS",
+            "ZWNvbW1lbmRUeXBlLnByb3RvIv8BChhHZXRCaWdEYXRhUmVjb21tZW5kU2NS",
+            "c3ASDwoHcmV0Y29kZRgLIAEoDRI2ChdiaWdfZGF0YV9yZWNvbW1lbmRfdHlw",
+            "ZRgMIAEoDjIVLkJpZ0RhdGFSZWNvbW1lbmRUeXBlEhUKDWhhc19yZWNvbW1h",
+            "bmQYCCABKAgSFAoMZXF1aXBfYXZhdGFyGAQgASgNEjIKE2VxdWlwbWVudF9y",
+            "ZWNvbW1lbmQYDyABKAsyEy5FcXVpcG1lbnRSZWNvbW1lbmRIABIqCg9yZWxp",
+            "Y19yZWNvbW1lbmQYCiABKAsyDy5SZWxpY1JlY29tbWVuZEgAQg0KC0RQQ05K",
+            "SUxMRUhKQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RelicRecommendReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipmentRecommendReflection.Descriptor, global::EggLink.DanhengServer.Proto.BigDataRecommendTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EquipmentRecommendReflection.Descriptor, global::EggLink.DanhengServer.Proto.RelicRecommendReflection.Descriptor, global::EggLink.DanhengServer.Proto.BigDataRecommendTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetBigDataRecommendScRsp), global::EggLink.DanhengServer.Proto.GetBigDataRecommendScRsp.Parser, new[]{ "EquipmentRecommend", "RelicRecommend", "Retcode", "BigDataRecommendType", "HasRecommand", "EquipAvatar" }, new[]{ "DataCase" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetBigDataRecommendScRsp), global::EggLink.DanhengServer.Proto.GetBigDataRecommendScRsp.Parser, new[]{ "Retcode", "BigDataRecommendType", "HasRecommand", "EquipAvatar", "EquipmentRecommend", "RelicRecommend" }, new[]{ "DPCNJILLEHJ" }, null, null, null)
           }));
     }
     #endregion
@@ -82,11 +83,11 @@ namespace EggLink.DanhengServer.Proto {
       bigDataRecommendType_ = other.bigDataRecommendType_;
       hasRecommand_ = other.hasRecommand_;
       equipAvatar_ = other.equipAvatar_;
-      switch (other.DataCaseCase) {
-        case DataCaseOneofCase.EquipmentRecommend:
+      switch (other.DPCNJILLEHJCase) {
+        case DPCNJILLEHJOneofCase.EquipmentRecommend:
           EquipmentRecommend = other.EquipmentRecommend.Clone();
           break;
-        case DataCaseOneofCase.RelicRecommend:
+        case DPCNJILLEHJOneofCase.RelicRecommend:
           RelicRecommend = other.RelicRecommend.Clone();
           break;
       }
@@ -98,30 +99,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetBigDataRecommendScRsp Clone() {
       return new GetBigDataRecommendScRsp(this);
-    }
-
-    /// <summary>Field number for the "equipment_recommend" field.</summary>
-    public const int EquipmentRecommendFieldNumber = 15;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.EquipmentRecommend EquipmentRecommend {
-      get { return dataCaseCase_ == DataCaseOneofCase.EquipmentRecommend ? (global::EggLink.DanhengServer.Proto.EquipmentRecommend) dataCase_ : null; }
-      set {
-        dataCase_ = value;
-        dataCaseCase_ = value == null ? DataCaseOneofCase.None : DataCaseOneofCase.EquipmentRecommend;
-      }
-    }
-
-    /// <summary>Field number for the "relic_recommend" field.</summary>
-    public const int RelicRecommendFieldNumber = 10;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RelicRecommend RelicRecommend {
-      get { return dataCaseCase_ == DataCaseOneofCase.RelicRecommend ? (global::EggLink.DanhengServer.Proto.RelicRecommend) dataCase_ : null; }
-      set {
-        dataCase_ = value;
-        dataCaseCase_ = value == null ? DataCaseOneofCase.None : DataCaseOneofCase.RelicRecommend;
-      }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
@@ -172,25 +149,49 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    private object dataCase_;
-    /// <summary>Enum of possible cases for the "data_case" oneof.</summary>
-    public enum DataCaseOneofCase {
+    /// <summary>Field number for the "equipment_recommend" field.</summary>
+    public const int EquipmentRecommendFieldNumber = 15;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.EquipmentRecommend EquipmentRecommend {
+      get { return dPCNJILLEHJCase_ == DPCNJILLEHJOneofCase.EquipmentRecommend ? (global::EggLink.DanhengServer.Proto.EquipmentRecommend) dPCNJILLEHJ_ : null; }
+      set {
+        dPCNJILLEHJ_ = value;
+        dPCNJILLEHJCase_ = value == null ? DPCNJILLEHJOneofCase.None : DPCNJILLEHJOneofCase.EquipmentRecommend;
+      }
+    }
+
+    /// <summary>Field number for the "relic_recommend" field.</summary>
+    public const int RelicRecommendFieldNumber = 10;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RelicRecommend RelicRecommend {
+      get { return dPCNJILLEHJCase_ == DPCNJILLEHJOneofCase.RelicRecommend ? (global::EggLink.DanhengServer.Proto.RelicRecommend) dPCNJILLEHJ_ : null; }
+      set {
+        dPCNJILLEHJ_ = value;
+        dPCNJILLEHJCase_ = value == null ? DPCNJILLEHJOneofCase.None : DPCNJILLEHJOneofCase.RelicRecommend;
+      }
+    }
+
+    private object dPCNJILLEHJ_;
+    /// <summary>Enum of possible cases for the "DPCNJILLEHJ" oneof.</summary>
+    public enum DPCNJILLEHJOneofCase {
       None = 0,
       EquipmentRecommend = 15,
       RelicRecommend = 10,
     }
-    private DataCaseOneofCase dataCaseCase_ = DataCaseOneofCase.None;
+    private DPCNJILLEHJOneofCase dPCNJILLEHJCase_ = DPCNJILLEHJOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public DataCaseOneofCase DataCaseCase {
-      get { return dataCaseCase_; }
+    public DPCNJILLEHJOneofCase DPCNJILLEHJCase {
+      get { return dPCNJILLEHJCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearDataCase() {
-      dataCaseCase_ = DataCaseOneofCase.None;
-      dataCase_ = null;
+    public void ClearDPCNJILLEHJ() {
+      dPCNJILLEHJCase_ = DPCNJILLEHJOneofCase.None;
+      dPCNJILLEHJ_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -208,13 +209,13 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(EquipmentRecommend, other.EquipmentRecommend)) return false;
-      if (!object.Equals(RelicRecommend, other.RelicRecommend)) return false;
       if (Retcode != other.Retcode) return false;
       if (BigDataRecommendType != other.BigDataRecommendType) return false;
       if (HasRecommand != other.HasRecommand) return false;
       if (EquipAvatar != other.EquipAvatar) return false;
-      if (DataCaseCase != other.DataCaseCase) return false;
+      if (!object.Equals(EquipmentRecommend, other.EquipmentRecommend)) return false;
+      if (!object.Equals(RelicRecommend, other.RelicRecommend)) return false;
+      if (DPCNJILLEHJCase != other.DPCNJILLEHJCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -222,13 +223,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (dataCaseCase_ == DataCaseOneofCase.EquipmentRecommend) hash ^= EquipmentRecommend.GetHashCode();
-      if (dataCaseCase_ == DataCaseOneofCase.RelicRecommend) hash ^= RelicRecommend.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (BigDataRecommendType != global::EggLink.DanhengServer.Proto.BigDataRecommendType.None) hash ^= BigDataRecommendType.GetHashCode();
       if (HasRecommand != false) hash ^= HasRecommand.GetHashCode();
       if (EquipAvatar != 0) hash ^= EquipAvatar.GetHashCode();
-      hash ^= (int) dataCaseCase_;
+      if (dPCNJILLEHJCase_ == DPCNJILLEHJOneofCase.EquipmentRecommend) hash ^= EquipmentRecommend.GetHashCode();
+      if (dPCNJILLEHJCase_ == DPCNJILLEHJOneofCase.RelicRecommend) hash ^= RelicRecommend.GetHashCode();
+      hash ^= (int) dPCNJILLEHJCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -255,7 +256,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(64);
         output.WriteBool(HasRecommand);
       }
-      if (dataCaseCase_ == DataCaseOneofCase.RelicRecommend) {
+      if (dPCNJILLEHJCase_ == DPCNJILLEHJOneofCase.RelicRecommend) {
         output.WriteRawTag(82);
         output.WriteMessage(RelicRecommend);
       }
@@ -267,7 +268,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(96);
         output.WriteEnum((int) BigDataRecommendType);
       }
-      if (dataCaseCase_ == DataCaseOneofCase.EquipmentRecommend) {
+      if (dPCNJILLEHJCase_ == DPCNJILLEHJOneofCase.EquipmentRecommend) {
         output.WriteRawTag(122);
         output.WriteMessage(EquipmentRecommend);
       }
@@ -289,7 +290,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(64);
         output.WriteBool(HasRecommand);
       }
-      if (dataCaseCase_ == DataCaseOneofCase.RelicRecommend) {
+      if (dPCNJILLEHJCase_ == DPCNJILLEHJOneofCase.RelicRecommend) {
         output.WriteRawTag(82);
         output.WriteMessage(RelicRecommend);
       }
@@ -301,7 +302,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(96);
         output.WriteEnum((int) BigDataRecommendType);
       }
-      if (dataCaseCase_ == DataCaseOneofCase.EquipmentRecommend) {
+      if (dPCNJILLEHJCase_ == DPCNJILLEHJOneofCase.EquipmentRecommend) {
         output.WriteRawTag(122);
         output.WriteMessage(EquipmentRecommend);
       }
@@ -315,12 +316,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (dataCaseCase_ == DataCaseOneofCase.EquipmentRecommend) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EquipmentRecommend);
-      }
-      if (dataCaseCase_ == DataCaseOneofCase.RelicRecommend) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RelicRecommend);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
@@ -332,6 +327,12 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (EquipAvatar != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EquipAvatar);
+      }
+      if (dPCNJILLEHJCase_ == DPCNJILLEHJOneofCase.EquipmentRecommend) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EquipmentRecommend);
+      }
+      if (dPCNJILLEHJCase_ == DPCNJILLEHJOneofCase.RelicRecommend) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RelicRecommend);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -357,14 +358,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other.EquipAvatar != 0) {
         EquipAvatar = other.EquipAvatar;
       }
-      switch (other.DataCaseCase) {
-        case DataCaseOneofCase.EquipmentRecommend:
+      switch (other.DPCNJILLEHJCase) {
+        case DPCNJILLEHJOneofCase.EquipmentRecommend:
           if (EquipmentRecommend == null) {
             EquipmentRecommend = new global::EggLink.DanhengServer.Proto.EquipmentRecommend();
           }
           EquipmentRecommend.MergeFrom(other.EquipmentRecommend);
           break;
-        case DataCaseOneofCase.RelicRecommend:
+        case DPCNJILLEHJOneofCase.RelicRecommend:
           if (RelicRecommend == null) {
             RelicRecommend = new global::EggLink.DanhengServer.Proto.RelicRecommend();
           }
@@ -397,7 +398,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 82: {
             global::EggLink.DanhengServer.Proto.RelicRecommend subBuilder = new global::EggLink.DanhengServer.Proto.RelicRecommend();
-            if (dataCaseCase_ == DataCaseOneofCase.RelicRecommend) {
+            if (dPCNJILLEHJCase_ == DPCNJILLEHJOneofCase.RelicRecommend) {
               subBuilder.MergeFrom(RelicRecommend);
             }
             input.ReadMessage(subBuilder);
@@ -414,7 +415,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 122: {
             global::EggLink.DanhengServer.Proto.EquipmentRecommend subBuilder = new global::EggLink.DanhengServer.Proto.EquipmentRecommend();
-            if (dataCaseCase_ == DataCaseOneofCase.EquipmentRecommend) {
+            if (dPCNJILLEHJCase_ == DPCNJILLEHJOneofCase.EquipmentRecommend) {
               subBuilder.MergeFrom(EquipmentRecommend);
             }
             input.ReadMessage(subBuilder);
@@ -446,7 +447,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 82: {
             global::EggLink.DanhengServer.Proto.RelicRecommend subBuilder = new global::EggLink.DanhengServer.Proto.RelicRecommend();
-            if (dataCaseCase_ == DataCaseOneofCase.RelicRecommend) {
+            if (dPCNJILLEHJCase_ == DPCNJILLEHJOneofCase.RelicRecommend) {
               subBuilder.MergeFrom(RelicRecommend);
             }
             input.ReadMessage(subBuilder);
@@ -463,7 +464,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 122: {
             global::EggLink.DanhengServer.Proto.EquipmentRecommend subBuilder = new global::EggLink.DanhengServer.Proto.EquipmentRecommend();
-            if (dataCaseCase_ == DataCaseOneofCase.EquipmentRecommend) {
+            if (dPCNJILLEHJCase_ == DPCNJILLEHJOneofCase.EquipmentRecommend) {
               subBuilder.MergeFrom(EquipmentRecommend);
             }
             input.ReadMessage(subBuilder);

@@ -527,7 +527,7 @@ public class RogueMagicInstance : BaseRogueInstance
         {
             Lineup = ToLineupInfo(),
             Level = ToLevelInfo(),
-            Coin = ToGameItemValueInfo(),
+            ItemValue = ToGameItemValueInfo(),
             MiracleInfo = ToMiracleInfo(),
             GameDifficultyInfo = ToDifficultyInfo(),
             MagicItem = ToMagicItemInfo(),

@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static AntiAddictScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhBbnRpQWRkaWN0U2NOb3RpZnkucHJvdG8iQQoSQW50aUFkZGljdFNjTm90",
-            "aWZ5Eg0KBUxldmVsGAUgASgJEgsKA01zZxgJIAEoCRIPCgdNc2dUeXBlGA8g",
-            "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChhBbnRpQWRkaWN0U2NOb3RpZnkucHJvdG8iQgoSQW50aUFkZGljdFNjTm90",
+            "aWZ5Eg0KBWxldmVsGAUgASgJEgsKA21zZxgJIAEoCRIQCghtc2dfdHlwZRgP",
+            "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
       return new AntiAddictScNotify(this);
     }
 
-    /// <summary>Field number for the "Level" field.</summary>
+    /// <summary>Field number for the "level" field.</summary>
     public const int LevelFieldNumber = 5;
     private string level_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Msg" field.</summary>
+    /// <summary>Field number for the "msg" field.</summary>
     public const int MsgFieldNumber = 9;
     private string msg_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -108,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "MsgType" field.</summary>
+    /// <summary>Field number for the "msg_type" field.</summary>
     public const int MsgTypeFieldNumber = 15;
     private uint msgType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

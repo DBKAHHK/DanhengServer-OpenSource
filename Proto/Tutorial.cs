@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cg5UdXRvcmlhbC5wcm90bxoUVHV0b3JpYWxTdGF0dXMucHJvdG8iNwoIVHV0",
-            "b3JpYWwSHwoGU3RhdHVzGAggASgOMg8uVHV0b3JpYWxTdGF0dXMSCgoCSWQY",
+            "b3JpYWwSHwoGc3RhdHVzGAggASgOMg8uVHV0b3JpYWxTdGF0dXMSCgoCaWQY",
             "CiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TutorialStatusReflection.Descriptor, },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
       return new Tutorial(this);
     }
 
-    /// <summary>Field number for the "Status" field.</summary>
+    /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.TutorialStatus status_ = global::EggLink.DanhengServer.Proto.TutorialStatus.TutorialNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -95,7 +95,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Id" field.</summary>
+    /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 10;
     private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

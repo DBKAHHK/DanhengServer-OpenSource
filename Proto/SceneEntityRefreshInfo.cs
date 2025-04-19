@@ -27,12 +27,12 @@ namespace EggLink.DanhengServer.Proto {
             "ChxTY2VuZUVudGl0eVJlZnJlc2hJbmZvLnByb3RvGhVTY2VuZUVudGl0eUlu",
             "Zm8ucHJvdG8ifwoWU2NlbmVFbnRpdHlSZWZyZXNoSW5mbxImCgphZGRfZW50",
             "aXR5GAsgASgLMhAuU2NlbmVFbnRpdHlJbmZvSAASFwoNZGVsZXRlX2VudGl0",
-            "eRgDIAEoDUgAEhUKC01ISE9BQUhER0FPGAwgASgNSABCDQoLZW50aXR5X2Nh",
-            "c2VCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "eRgDIAEoDUgAEhUKC01ISE9BQUhER0FPGAwgASgNSABCDQoLRUVPQkNQRUpF",
+            "Sk5CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneEntityInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo), global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo.Parser, new[]{ "AddEntity", "DeleteEntity", "MHHOAAHDGAO" }, new[]{ "EntityCase" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo), global::EggLink.DanhengServer.Proto.SceneEntityRefreshInfo.Parser, new[]{ "AddEntity", "DeleteEntity", "MHHOAAHDGAO" }, new[]{ "EEOBCPEJEJN" }, null, null, null)
           }));
     }
     #endregion
@@ -74,14 +74,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SceneEntityRefreshInfo(SceneEntityRefreshInfo other) : this() {
-      switch (other.EntityCaseCase) {
-        case EntityCaseOneofCase.AddEntity:
+      switch (other.EEOBCPEJEJNCase) {
+        case EEOBCPEJEJNOneofCase.AddEntity:
           AddEntity = other.AddEntity.Clone();
           break;
-        case EntityCaseOneofCase.DeleteEntity:
+        case EEOBCPEJEJNOneofCase.DeleteEntity:
           DeleteEntity = other.DeleteEntity;
           break;
-        case EntityCaseOneofCase.MHHOAAHDGAO:
+        case EEOBCPEJEJNOneofCase.MHHOAAHDGAO:
           MHHOAAHDGAO = other.MHHOAAHDGAO;
           break;
       }
@@ -100,10 +100,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.SceneEntityInfo AddEntity {
-      get { return entityCaseCase_ == EntityCaseOneofCase.AddEntity ? (global::EggLink.DanhengServer.Proto.SceneEntityInfo) entityCase_ : null; }
+      get { return eEOBCPEJEJNCase_ == EEOBCPEJEJNOneofCase.AddEntity ? (global::EggLink.DanhengServer.Proto.SceneEntityInfo) eEOBCPEJEJN_ : null; }
       set {
-        entityCase_ = value;
-        entityCaseCase_ = value == null ? EntityCaseOneofCase.None : EntityCaseOneofCase.AddEntity;
+        eEOBCPEJEJN_ = value;
+        eEOBCPEJEJNCase_ = value == null ? EEOBCPEJEJNOneofCase.None : EEOBCPEJEJNOneofCase.AddEntity;
       }
     }
 
@@ -112,24 +112,24 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint DeleteEntity {
-      get { return HasDeleteEntity ? (uint) entityCase_ : 0; }
+      get { return HasDeleteEntity ? (uint) eEOBCPEJEJN_ : 0; }
       set {
-        entityCase_ = value;
-        entityCaseCase_ = EntityCaseOneofCase.DeleteEntity;
+        eEOBCPEJEJN_ = value;
+        eEOBCPEJEJNCase_ = EEOBCPEJEJNOneofCase.DeleteEntity;
       }
     }
     /// <summary>Gets whether the "delete_entity" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasDeleteEntity {
-      get { return entityCaseCase_ == EntityCaseOneofCase.DeleteEntity; }
+      get { return eEOBCPEJEJNCase_ == EEOBCPEJEJNOneofCase.DeleteEntity; }
     }
     /// <summary> Clears the value of the oneof if it's currently set to "delete_entity" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearDeleteEntity() {
       if (HasDeleteEntity) {
-        ClearEntityCase();
+        ClearEEOBCPEJEJN();
       }
     }
 
@@ -138,47 +138,47 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint MHHOAAHDGAO {
-      get { return HasMHHOAAHDGAO ? (uint) entityCase_ : 0; }
+      get { return HasMHHOAAHDGAO ? (uint) eEOBCPEJEJN_ : 0; }
       set {
-        entityCase_ = value;
-        entityCaseCase_ = EntityCaseOneofCase.MHHOAAHDGAO;
+        eEOBCPEJEJN_ = value;
+        eEOBCPEJEJNCase_ = EEOBCPEJEJNOneofCase.MHHOAAHDGAO;
       }
     }
     /// <summary>Gets whether the "MHHOAAHDGAO" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasMHHOAAHDGAO {
-      get { return entityCaseCase_ == EntityCaseOneofCase.MHHOAAHDGAO; }
+      get { return eEOBCPEJEJNCase_ == EEOBCPEJEJNOneofCase.MHHOAAHDGAO; }
     }
     /// <summary> Clears the value of the oneof if it's currently set to "MHHOAAHDGAO" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearMHHOAAHDGAO() {
       if (HasMHHOAAHDGAO) {
-        ClearEntityCase();
+        ClearEEOBCPEJEJN();
       }
     }
 
-    private object entityCase_;
-    /// <summary>Enum of possible cases for the "entity_case" oneof.</summary>
-    public enum EntityCaseOneofCase {
+    private object eEOBCPEJEJN_;
+    /// <summary>Enum of possible cases for the "EEOBCPEJEJN" oneof.</summary>
+    public enum EEOBCPEJEJNOneofCase {
       None = 0,
       AddEntity = 11,
       DeleteEntity = 3,
       MHHOAAHDGAO = 12,
     }
-    private EntityCaseOneofCase entityCaseCase_ = EntityCaseOneofCase.None;
+    private EEOBCPEJEJNOneofCase eEOBCPEJEJNCase_ = EEOBCPEJEJNOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public EntityCaseOneofCase EntityCaseCase {
-      get { return entityCaseCase_; }
+    public EEOBCPEJEJNOneofCase EEOBCPEJEJNCase {
+      get { return eEOBCPEJEJNCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearEntityCase() {
-      entityCaseCase_ = EntityCaseOneofCase.None;
-      entityCase_ = null;
+    public void ClearEEOBCPEJEJN() {
+      eEOBCPEJEJNCase_ = EEOBCPEJEJNOneofCase.None;
+      eEOBCPEJEJN_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -199,7 +199,7 @@ namespace EggLink.DanhengServer.Proto {
       if (!object.Equals(AddEntity, other.AddEntity)) return false;
       if (DeleteEntity != other.DeleteEntity) return false;
       if (MHHOAAHDGAO != other.MHHOAAHDGAO) return false;
-      if (EntityCaseCase != other.EntityCaseCase) return false;
+      if (EEOBCPEJEJNCase != other.EEOBCPEJEJNCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -207,10 +207,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (entityCaseCase_ == EntityCaseOneofCase.AddEntity) hash ^= AddEntity.GetHashCode();
+      if (eEOBCPEJEJNCase_ == EEOBCPEJEJNOneofCase.AddEntity) hash ^= AddEntity.GetHashCode();
       if (HasDeleteEntity) hash ^= DeleteEntity.GetHashCode();
       if (HasMHHOAAHDGAO) hash ^= MHHOAAHDGAO.GetHashCode();
-      hash ^= (int) entityCaseCase_;
+      hash ^= (int) eEOBCPEJEJNCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -233,7 +233,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(24);
         output.WriteUInt32(DeleteEntity);
       }
-      if (entityCaseCase_ == EntityCaseOneofCase.AddEntity) {
+      if (eEOBCPEJEJNCase_ == EEOBCPEJEJNOneofCase.AddEntity) {
         output.WriteRawTag(90);
         output.WriteMessage(AddEntity);
       }
@@ -255,7 +255,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(24);
         output.WriteUInt32(DeleteEntity);
       }
-      if (entityCaseCase_ == EntityCaseOneofCase.AddEntity) {
+      if (eEOBCPEJEJNCase_ == EEOBCPEJEJNOneofCase.AddEntity) {
         output.WriteRawTag(90);
         output.WriteMessage(AddEntity);
       }
@@ -273,7 +273,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (entityCaseCase_ == EntityCaseOneofCase.AddEntity) {
+      if (eEOBCPEJEJNCase_ == EEOBCPEJEJNOneofCase.AddEntity) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AddEntity);
       }
       if (HasDeleteEntity) {
@@ -294,17 +294,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      switch (other.EntityCaseCase) {
-        case EntityCaseOneofCase.AddEntity:
+      switch (other.EEOBCPEJEJNCase) {
+        case EEOBCPEJEJNOneofCase.AddEntity:
           if (AddEntity == null) {
             AddEntity = new global::EggLink.DanhengServer.Proto.SceneEntityInfo();
           }
           AddEntity.MergeFrom(other.AddEntity);
           break;
-        case EntityCaseOneofCase.DeleteEntity:
+        case EEOBCPEJEJNOneofCase.DeleteEntity:
           DeleteEntity = other.DeleteEntity;
           break;
-        case EntityCaseOneofCase.MHHOAAHDGAO:
+        case EEOBCPEJEJNOneofCase.MHHOAAHDGAO:
           MHHOAAHDGAO = other.MHHOAAHDGAO;
           break;
       }
@@ -330,7 +330,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 90: {
             global::EggLink.DanhengServer.Proto.SceneEntityInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneEntityInfo();
-            if (entityCaseCase_ == EntityCaseOneofCase.AddEntity) {
+            if (eEOBCPEJEJNCase_ == EEOBCPEJEJNOneofCase.AddEntity) {
               subBuilder.MergeFrom(AddEntity);
             }
             input.ReadMessage(subBuilder);
@@ -362,7 +362,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 90: {
             global::EggLink.DanhengServer.Proto.SceneEntityInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneEntityInfo();
-            if (entityCaseCase_ == EntityCaseOneofCase.AddEntity) {
+            if (eEOBCPEJEJNCase_ == EEOBCPEJEJNOneofCase.AddEntity) {
               subBuilder.MergeFrom(AddEntity);
             }
             input.ReadMessage(subBuilder);

@@ -134,8 +134,6 @@ public class AvatarInfo
 
     public int GetBaseAvatarId()
     {
-        if (PathId > 0)
-            return PathId > 8000 ? 8001 : AvatarId;
         return AvatarId;
     }
 
@@ -231,7 +229,8 @@ public class AvatarInfo
             Promotion = (uint)Promotion,
             Rank = (uint)GetCurPathInfo().Rank,
             FirstMetTimeStamp = (ulong)Timestamp,
-            IsMarked = IsMarked
+            IsMarked = IsMarked,
+            DressedSkinId = (uint)GetCurPathInfo().Skin
         };
 
         foreach (var item in GetCurPathInfo().Relic)
@@ -385,8 +384,9 @@ public class AvatarInfo
             var proto = new MultiPathAvatarInfo
             {
                 AvatarId = (MultiPathAvatarType)path.Key,
-                Rank = (uint)GetCurPathInfo().Rank,
-                PathEquipmentId = (uint)pathInfo.EquipId
+                Rank = (uint)pathInfo.Rank,
+                PathEquipmentId = (uint)pathInfo.EquipId,
+                DressedSkinId = (uint)pathInfo.Skin
             };
 
             foreach (var skill in path.Value)
@@ -418,7 +418,8 @@ public class AvatarInfo
             Exp = (uint)Exp,
             Promotion = (uint)Promotion,
             Rank = (uint)GetCurPathInfo().Rank,
-            Pos = (uint)pos
+            Pos = (uint)pos,
+            DressedSkinId = (uint)GetCurPathInfo().Skin
         };
 
         var inventory = DatabaseHelper.Instance!.GetInstance<InventoryData>(PlayerData!.Uid)!;
@@ -448,6 +449,7 @@ public class AvatarInfo
 public class PathInfo(int pathId)
 {
     public int PathId { get; set; } = pathId;
+    public int Skin { get; set; }
     public int Rank { get; set; }
     public int EquipId { get; set; } = 0;
     public Dictionary<int, int> Relic { get; set; } = [];

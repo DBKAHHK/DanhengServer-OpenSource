@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static LuckyKoiInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJMdWNreUtvaUluZm8ucHJvdG8iQQoMTHVja3lLb2lJbmZvEhAKCEhlYWRJ",
-            "Y29uGAUgASgNEg8KB05hbWVTdHIYASABKAkSDgoGVWlkU3RyGA0gASgJQh6q",
-            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChJMdWNreUtvaUluZm8ucHJvdG8iRAoMTHVja3lLb2lJbmZvEhEKCWhlYWRf",
+            "aWNvbhgFIAEoDRIQCghuYW1lX3N0chgBIAEoCRIPCgd1aWRfc3RyGA0gASgJ",
+            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
       return new LuckyKoiInfo(this);
     }
 
-    /// <summary>Field number for the "HeadIcon" field.</summary>
+    /// <summary>Field number for the "head_icon" field.</summary>
     public const int HeadIconFieldNumber = 5;
     private uint headIcon_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "NameStr" field.</summary>
+    /// <summary>Field number for the "name_str" field.</summary>
     public const int NameStrFieldNumber = 1;
     private string nameStr_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -108,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "UidStr" field.</summary>
+    /// <summary>Field number for the "uid_str" field.</summary>
     public const int UidStrFieldNumber = 13;
     private string uidStr_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

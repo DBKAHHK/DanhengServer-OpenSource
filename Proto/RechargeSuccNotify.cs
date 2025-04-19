@@ -24,11 +24,11 @@ namespace EggLink.DanhengServer.Proto {
     static RechargeSuccNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhSZWNoYXJnZVN1Y2NOb3RpZnkucHJvdG8aDkl0ZW1MaXN0LnByb3RvInoK",
-            "ElJlY2hhcmdlU3VjY05vdGlmeRIbCghJdGVtTGlzdBgEIAEoCzIJLkl0ZW1M",
-            "aXN0EhwKFE1vbnRoQ2FyZE91dGRhdGVUaW1lGAwgASgEEhEKCVByb2R1Y3RJ",
-            "ZBgNIAEoCRIWCg5DaGFubmVsT3JkZXJObxgDIAEoCUIeqgIbRWdnTGluay5E",
-            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChhSZWNoYXJnZVN1Y2NOb3RpZnkucHJvdG8aDkl0ZW1MaXN0LnByb3RvIoEB",
+            "ChJSZWNoYXJnZVN1Y2NOb3RpZnkSHAoJaXRlbV9saXN0GAQgASgLMgkuSXRl",
+            "bUxpc3QSHwoXbW9udGhfY2FyZF9vdXRkYXRlX3RpbWUYDCABKAQSEgoKcHJv",
+            "ZHVjdF9pZBgNIAEoCRIYChBjaGFubmVsX29yZGVyX25vGAMgASgJQh6qAhtF",
+            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
       return new RechargeSuccNotify(this);
     }
 
-    /// <summary>Field number for the "ItemList" field.</summary>
+    /// <summary>Field number for the "item_list" field.</summary>
     public const int ItemListFieldNumber = 4;
     private global::EggLink.DanhengServer.Proto.ItemList itemList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "MonthCardOutdateTime" field.</summary>
+    /// <summary>Field number for the "month_card_outdate_time" field.</summary>
     public const int MonthCardOutdateTimeFieldNumber = 12;
     private ulong monthCardOutdateTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ProductId" field.</summary>
+    /// <summary>Field number for the "product_id" field.</summary>
     public const int ProductIdFieldNumber = 13;
     private string productId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ChannelOrderNo" field.</summary>
+    /// <summary>Field number for the "channel_order_no" field.</summary>
     public const int ChannelOrderNoFieldNumber = 3;
     private string channelOrderNo_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

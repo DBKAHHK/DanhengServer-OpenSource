@@ -539,7 +539,7 @@ public class RogueTournInstance : BaseRogueInstance
         return new RogueTournCurGameInfo
         {
             Buff = ToBuffInfo(),
-            Coin = ToGameItemValueInfo(),
+            ItemValue = ToGameItemValueInfo(),
             Level = ToLevelInfo(),
             Lineup = ToLineupInfo(),
             MiracleInfo = ToMiracleInfo(),

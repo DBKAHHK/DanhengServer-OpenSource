@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static DelMailScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJEZWxNYWlsU2NSc3AucHJvdG8iLwoMRGVsTWFpbFNjUnNwEg4KBklkTGlz",
-            "dBgJIAMoDRIPCgdSZXRjb2RlGA8gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
-            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChJEZWxNYWlsU2NSc3AucHJvdG8iMAoMRGVsTWFpbFNjUnNwEg8KB2lkX2xp",
+            "c3QYCSADKA0SDwoHcmV0Y29kZRgPIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
       return new DelMailScRsp(this);
     }
 
-    /// <summary>Field number for the "IdList" field.</summary>
+    /// <summary>Field number for the "id_list" field.</summary>
     public const int IdListFieldNumber = 9;
     private static readonly pb::FieldCodec<uint> _repeated_idList_codec
         = pb::FieldCodec.ForUInt32(74);
@@ -94,7 +94,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return idList_; }
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 15;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFNb25vcG9seUdhbWVSYWlzZVJhdGlvU2NSc3AucHJvdG8iPQobTW9ub3Bv",
-            "bHlHYW1lUmFpc2VSYXRpb1NjUnNwEg8KB1JldGNvZGUYAiABKA0SDQoFUmF0",
+            "bHlHYW1lUmFpc2VSYXRpb1NjUnNwEg8KB3JldGNvZGUYAiABKA0SDQoFcmF0",
             "aW8YCSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
       return new MonopolyGameRaiseRatioScRsp(this);
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 2;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Ratio" field.</summary>
+    /// <summary>Field number for the "ratio" field.</summary>
     public const int RatioFieldNumber = 9;
     private uint ratio_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

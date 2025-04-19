@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static MarbleLevelFinishScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxNYXJibGVMZXZlbEZpbmlzaFNjUnNwLnByb3RvIj8KFk1hcmJsZUxldmVs",
-            "RmluaXNoU2NSc3ASFAoMbWFyYmxlX2xldmVsGAUgASgNEg8KB3JldGNvZGUY",
-            "ASABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChxNYXJibGVMZXZlbEZpbmlzaFNjUnNwLnByb3RvIj4KFk1hcmJsZUxldmVs",
+            "RmluaXNoU2NSc3ASEwoLTkxJQktBQkZHQ0MYBSABKA0SDwoHcmV0Y29kZRgB",
+            "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleLevelFinishScRsp), global::EggLink.DanhengServer.Proto.MarbleLevelFinishScRsp.Parser, new[]{ "MarbleLevel", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleLevelFinishScRsp), global::EggLink.DanhengServer.Proto.MarbleLevelFinishScRsp.Parser, new[]{ "NLIBKABFGCC", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MarbleLevelFinishScRsp(MarbleLevelFinishScRsp other) : this() {
-      marbleLevel_ = other.marbleLevel_;
+      nLIBKABFGCC_ = other.nLIBKABFGCC_;
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -83,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new MarbleLevelFinishScRsp(this);
     }
 
-    /// <summary>Field number for the "marble_level" field.</summary>
-    public const int MarbleLevelFieldNumber = 5;
-    private uint marbleLevel_;
+    /// <summary>Field number for the "NLIBKABFGCC" field.</summary>
+    public const int NLIBKABFGCCFieldNumber = 5;
+    private uint nLIBKABFGCC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MarbleLevel {
-      get { return marbleLevel_; }
+    public uint NLIBKABFGCC {
+      get { return nLIBKABFGCC_; }
       set {
-        marbleLevel_ = value;
+        nLIBKABFGCC_ = value;
       }
     }
 
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MarbleLevel != other.MarbleLevel) return false;
+      if (NLIBKABFGCC != other.NLIBKABFGCC) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -131,7 +131,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MarbleLevel != 0) hash ^= MarbleLevel.GetHashCode();
+      if (NLIBKABFGCC != 0) hash ^= NLIBKABFGCC.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -155,9 +155,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
       }
-      if (MarbleLevel != 0) {
+      if (NLIBKABFGCC != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(MarbleLevel);
+        output.WriteUInt32(NLIBKABFGCC);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -173,9 +173,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
       }
-      if (MarbleLevel != 0) {
+      if (NLIBKABFGCC != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(MarbleLevel);
+        output.WriteUInt32(NLIBKABFGCC);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,8 +187,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MarbleLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MarbleLevel);
+      if (NLIBKABFGCC != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NLIBKABFGCC);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
@@ -205,8 +205,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MarbleLevel != 0) {
-        MarbleLevel = other.MarbleLevel;
+      if (other.NLIBKABFGCC != 0) {
+        NLIBKABFGCC = other.NLIBKABFGCC;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
@@ -231,7 +231,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            MarbleLevel = input.ReadUInt32();
+            NLIBKABFGCC = input.ReadUInt32();
             break;
           }
         }
@@ -254,7 +254,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            MarbleLevel = input.ReadUInt32();
+            NLIBKABFGCC = input.ReadUInt32();
             break;
           }
         }

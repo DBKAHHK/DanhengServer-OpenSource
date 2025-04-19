@@ -25,11 +25,11 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtTdGFydENvY29vblN0YWdlU2NSc3AucHJvdG8aFVNjZW5lQmF0dGxlSW5m",
-            "by5wcm90byKEAQoVU3RhcnRDb2Nvb25TdGFnZVNjUnNwEgwKBFdhdmUYASAB",
-            "KA0SDwoHUmV0Y29kZRgMIAEoDRIUCgxQcm9wRW50aXR5SWQYBSABKA0SJAoK",
-            "QmF0dGxlSW5mbxgHIAEoCzIQLlNjZW5lQmF0dGxlSW5mbxIQCghDb2Nvb25J",
-            "ZBgIIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
-            "bzM="));
+            "by5wcm90byKIAQoVU3RhcnRDb2Nvb25TdGFnZVNjUnNwEgwKBHdhdmUYASAB",
+            "KA0SDwoHcmV0Y29kZRgMIAEoDRIWCg5wcm9wX2VudGl0eV9pZBgFIAEoDRIl",
+            "CgtiYXR0bGVfaW5mbxgHIAEoCzIQLlNjZW5lQmF0dGxlSW5mbxIRCgljb2Nv",
+            "b25faWQYCCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneBattleInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -89,7 +89,7 @@ namespace EggLink.DanhengServer.Proto {
       return new StartCocoonStageScRsp(this);
     }
 
-    /// <summary>Field number for the "Wave" field.</summary>
+    /// <summary>Field number for the "wave" field.</summary>
     public const int WaveFieldNumber = 1;
     private uint wave_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -101,7 +101,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 12;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -113,7 +113,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "PropEntityId" field.</summary>
+    /// <summary>Field number for the "prop_entity_id" field.</summary>
     public const int PropEntityIdFieldNumber = 5;
     private uint propEntityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -125,7 +125,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "BattleInfo" field.</summary>
+    /// <summary>Field number for the "battle_info" field.</summary>
     public const int BattleInfoFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.SceneBattleInfo battleInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CocoonId" field.</summary>
+    /// <summary>Field number for the "cocoon_id" field.</summary>
     public const int CocoonIdFieldNumber = 8;
     private uint cocoonId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

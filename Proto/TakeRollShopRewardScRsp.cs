@@ -25,10 +25,10 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1UYWtlUm9sbFNob3BSZXdhcmRTY1JzcC5wcm90bxoOSXRlbUxpc3QucHJv",
-            "dG8ibAoXVGFrZVJvbGxTaG9wUmV3YXJkU2NSc3ASGQoGUmV3YXJkGA8gASgL",
-            "MgkuSXRlbUxpc3QSDwoHUmV0Y29kZRgGIAEoDRIRCglHcm91cFR5cGUYBCAB",
-            "KA0SEgoKUm9sbFNob3BJZBgLIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
-            "dmVyLlByb3RvYgZwcm90bzM="));
+            "dG8ibwoXVGFrZVJvbGxTaG9wUmV3YXJkU2NSc3ASGQoGcmV3YXJkGA8gASgL",
+            "MgkuSXRlbUxpc3QSDwoHcmV0Y29kZRgGIAEoDRISCgpncm91cF90eXBlGAQg",
+            "ASgNEhQKDHJvbGxfc2hvcF9pZBgLIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
       return new TakeRollShopRewardScRsp(this);
     }
 
-    /// <summary>Field number for the "Reward" field.</summary>
+    /// <summary>Field number for the "reward" field.</summary>
     public const int RewardFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.ItemList reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 6;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "GroupType" field.</summary>
+    /// <summary>Field number for the "group_type" field.</summary>
     public const int GroupTypeFieldNumber = 4;
     private uint groupType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "RollShopId" field.</summary>
+    /// <summary>Field number for the "roll_shop_id" field.</summary>
     public const int RollShopIdFieldNumber = 11;
     private uint rollShopId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

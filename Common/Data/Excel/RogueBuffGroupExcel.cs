@@ -1,13 +1,14 @@
 ﻿using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Util;
+using Newtonsoft.Json;
 
 namespace EggLink.DanhengServer.Data.Excel;
 
 [ResourceEntity("RogueBuffGroup.json")]
 public class RogueBuffGroupExcel : BaseRogueBuffGroupExcel
 {
-    public int GroupID { get; set; }
-    public List<int> BuffTagList { get; set; } = [];
+    [JsonProperty("IDLBMIHBAPB")] public int GroupID { get; set; }
+    [JsonProperty("GNGDPDOMDFH")] public List<int> BuffTagList { get; set; } = [];
 
     public override int GetId()
     {

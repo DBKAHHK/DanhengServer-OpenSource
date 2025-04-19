@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdHZXRCYXNpY0luZm9TY1JzcC5wcm90bxoXUGxheWVyU2V0dGluZ0luZm8u",
-            "cHJvdG8ikAIKEUdldEJhc2ljSW5mb1NjUnNwEhMKC0lzR2VuZGVyU2V0GAgg",
-            "ASgIEhcKD05leHRSZWNvdmVyVGltZRgOIAEoAxIOCgZHZW5kZXIYCiABKA0S",
-            "DwoHUmV0Y29kZRgGIAEoDRIfChdXZWVrQ29jb29uRmluaXNoZWRDb3VudBgP",
-            "IAEoDRIbChNMYXN0U2V0Tmlja25hbWVUaW1lGAsgASgDEhUKDUV4Y2hhbmdl",
-            "VGltZXMYAiABKA0SLQoRUGxheWVyU2V0dGluZ0luZm8YAyABKAsyEi5QbGF5",
-            "ZXJTZXR0aW5nSW5mbxIYChBHYW1lcGxheUJpcnRoZGF5GAcgASgNEg4KBkN1",
-            "ckRheRgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "cHJvdG8inwIKEUdldEJhc2ljSW5mb1NjUnNwEhUKDWlzX2dlbmRlcl9zZXQY",
+            "CCABKAgSGQoRbmV4dF9yZWNvdmVyX3RpbWUYDiABKAMSDgoGZ2VuZGVyGAog",
+            "ASgNEg8KB3JldGNvZGUYBiABKA0SIgoad2Vla19jb2Nvb25fZmluaXNoZWRf",
+            "Y291bnQYDyABKA0SHgoWbGFzdF9zZXRfbmlja25hbWVfdGltZRgLIAEoAxIW",
+            "Cg5leGNoYW5nZV90aW1lcxgCIAEoDRIvChNwbGF5ZXJfc2V0dGluZ19pbmZv",
+            "GAMgASgLMhIuUGxheWVyU2V0dGluZ0luZm8SGQoRZ2FtZXBsYXlfYmlydGhk",
+            "YXkYByABKA0SDwoHY3VyX2RheRgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlayerSettingInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
       return new GetBasicInfoScRsp(this);
     }
 
-    /// <summary>Field number for the "IsGenderSet" field.</summary>
+    /// <summary>Field number for the "is_gender_set" field.</summary>
     public const int IsGenderSetFieldNumber = 8;
     private bool isGenderSet_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "NextRecoverTime" field.</summary>
+    /// <summary>Field number for the "next_recover_time" field.</summary>
     public const int NextRecoverTimeFieldNumber = 14;
     private long nextRecoverTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -121,7 +121,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Gender" field.</summary>
+    /// <summary>Field number for the "gender" field.</summary>
     public const int GenderFieldNumber = 10;
     private uint gender_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 6;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -145,7 +145,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "WeekCocoonFinishedCount" field.</summary>
+    /// <summary>Field number for the "week_cocoon_finished_count" field.</summary>
     public const int WeekCocoonFinishedCountFieldNumber = 15;
     private uint weekCocoonFinishedCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "LastSetNicknameTime" field.</summary>
+    /// <summary>Field number for the "last_set_nickname_time" field.</summary>
     public const int LastSetNicknameTimeFieldNumber = 11;
     private long lastSetNicknameTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -169,7 +169,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ExchangeTimes" field.</summary>
+    /// <summary>Field number for the "exchange_times" field.</summary>
     public const int ExchangeTimesFieldNumber = 2;
     private uint exchangeTimes_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -181,7 +181,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "PlayerSettingInfo" field.</summary>
+    /// <summary>Field number for the "player_setting_info" field.</summary>
     public const int PlayerSettingInfoFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.PlayerSettingInfo playerSettingInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -193,7 +193,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "GameplayBirthday" field.</summary>
+    /// <summary>Field number for the "gameplay_birthday" field.</summary>
     public const int GameplayBirthdayFieldNumber = 7;
     private uint gameplayBirthday_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CurDay" field.</summary>
+    /// <summary>Field number for the "cur_day" field.</summary>
     public const int CurDayFieldNumber = 9;
     private uint curDay_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

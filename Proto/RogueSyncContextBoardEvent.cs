@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static RogueSyncContextBoardEventReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiBSb2d1ZVN5bmNDb250ZXh0Qm9hcmRFdmVudC5wcm90byJOChpSb2d1ZVN5",
-            "bmNDb250ZXh0Qm9hcmRFdmVudBIUCgxCb2FyZEV2ZW50SWQYDCABKA0SGgoS",
-            "TW9kaWZpZXJFZmZlY3RUeXBlGAYgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
-            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "CiBSb2d1ZVN5bmNDb250ZXh0Qm9hcmRFdmVudC5wcm90byJSChpSb2d1ZVN5",
+            "bmNDb250ZXh0Qm9hcmRFdmVudBIWCg5ib2FyZF9ldmVudF9pZBgMIAEoDRIc",
+            "ChRtb2RpZmllcl9lZmZlY3RfdHlwZRgGIAEoDUIeqgIbRWdnTGluay5EYW5o",
+            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueSyncContextBoardEvent(this);
     }
 
-    /// <summary>Field number for the "BoardEventId" field.</summary>
+    /// <summary>Field number for the "board_event_id" field.</summary>
     public const int BoardEventIdFieldNumber = 12;
     private uint boardEventId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ModifierEffectType" field.</summary>
+    /// <summary>Field number for the "modifier_effect_type" field.</summary>
     public const int ModifierEffectTypeFieldNumber = 6;
     private uint modifierEffectType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

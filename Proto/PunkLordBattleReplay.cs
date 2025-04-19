@@ -25,9 +25,9 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpQdW5rTG9yZEJhdHRsZVJlcGxheS5wcm90bxoQUmVwbGF5SW5mby5wcm90",
-            "byJQChRQdW5rTG9yZEJhdHRsZVJlcGxheRIXCg9CYXR0bGVSZXBsYXlLZXkY",
-            "ASABKAkSHwoKUmVwbGF5SW5mbxgCIAEoCzILLlJlcGxheUluZm9CHqoCG0Vn",
-            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "byJTChRQdW5rTG9yZEJhdHRsZVJlcGxheRIZChFiYXR0bGVfcmVwbGF5X2tl",
+            "eRgBIAEoCRIgCgtyZXBsYXlfaW5mbxgCIAEoCzILLlJlcGxheUluZm9CHqoC",
+            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ReplayInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
       return new PunkLordBattleReplay(this);
     }
 
-    /// <summary>Field number for the "BattleReplayKey" field.</summary>
+    /// <summary>Field number for the "battle_replay_key" field.</summary>
     public const int BattleReplayKeyFieldNumber = 1;
     private string battleReplayKey_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ReplayInfo" field.</summary>
+    /// <summary>Field number for the "replay_info" field.</summary>
     public const int ReplayInfoFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.ReplayInfo replayInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

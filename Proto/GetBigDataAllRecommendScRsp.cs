@@ -24,19 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static GetBigDataAllRecommendScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFHZXRCaWdEYXRhQWxsUmVjb21tZW5kU2NSc3AucHJvdG8aH0JpZ0RhdGFB",
-            "bGxSZWxpY0F2YXRhckxpc3QucHJvdG8aH0JpZ0RhdGFBbGxBdmF0YXJSZWxp",
-            "Y0xpc3QucHJvdG8aGkJpZ0RhdGFSZWNvbW1lbmRUeXBlLnByb3RvItsBChtH",
-            "ZXRCaWdEYXRhQWxsUmVjb21tZW5kU2NSc3ASMgoMcmVsaWNfYXZhdGFyGAog",
-            "ASgLMhouQmlnRGF0YUFsbFJlbGljQXZhdGFyTGlzdEgAEjIKDGF2YXRhcl9y",
-            "ZWxpYxgHIAEoCzIaLkJpZ0RhdGFBbGxBdmF0YXJSZWxpY0xpc3RIABI2Chdi",
-            "aWdfZGF0YV9yZWNvbW1lbmRfdHlwZRgFIAEoDjIVLkJpZ0RhdGFSZWNvbW1l",
-            "bmRUeXBlEg8KB3JldGNvZGUYDyABKA1CCwoJZGF0YV9jYXNlQh6qAhtFZ2dM",
-            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "CiFHZXRCaWdEYXRhQWxsUmVjb21tZW5kU2NSc3AucHJvdG8aEU1LSkFMTUtN",
+            "UEdMLnByb3RvGhFQSUlJUEhFRkRKTy5wcm90bxoaQmlnRGF0YVJlY29tbWVu",
+            "ZFR5cGUucHJvdG8ivwEKG0dldEJpZ0RhdGFBbGxSZWNvbW1lbmRTY1JzcBI2",
+            "ChdiaWdfZGF0YV9yZWNvbW1lbmRfdHlwZRgFIAEoDjIVLkJpZ0RhdGFSZWNv",
+            "bW1lbmRUeXBlEg8KB3JldGNvZGUYDyABKA0SIwoLREtMQk5CRFBNUE8YCiAB",
+            "KAsyDC5QSUlJUEhFRkRKT0gAEiMKC1BGT1BKUEpLS0xLGAcgASgLMgwuTUtK",
+            "QUxNS01QR0xIAEINCgtOSk5JT05NQk1LRUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BigDataAllRelicAvatarListReflection.Descriptor, global::EggLink.DanhengServer.Proto.BigDataAllAvatarRelicListReflection.Descriptor, global::EggLink.DanhengServer.Proto.BigDataRecommendTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MKJALMKMPGLReflection.Descriptor, global::EggLink.DanhengServer.Proto.PIIIPHEFDJOReflection.Descriptor, global::EggLink.DanhengServer.Proto.BigDataRecommendTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetBigDataAllRecommendScRsp), global::EggLink.DanhengServer.Proto.GetBigDataAllRecommendScRsp.Parser, new[]{ "RelicAvatar", "AvatarRelic", "BigDataRecommendType", "Retcode" }, new[]{ "DataCase" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetBigDataAllRecommendScRsp), global::EggLink.DanhengServer.Proto.GetBigDataAllRecommendScRsp.Parser, new[]{ "BigDataRecommendType", "Retcode", "DKLBNBDPMPO", "PFOPJPJKKLK" }, new[]{ "NJNIONMBMKE" }, null, null, null)
           }));
     }
     #endregion
@@ -80,12 +79,12 @@ namespace EggLink.DanhengServer.Proto {
     public GetBigDataAllRecommendScRsp(GetBigDataAllRecommendScRsp other) : this() {
       bigDataRecommendType_ = other.bigDataRecommendType_;
       retcode_ = other.retcode_;
-      switch (other.DataCaseCase) {
-        case DataCaseOneofCase.RelicAvatar:
-          RelicAvatar = other.RelicAvatar.Clone();
+      switch (other.NJNIONMBMKECase) {
+        case NJNIONMBMKEOneofCase.DKLBNBDPMPO:
+          DKLBNBDPMPO = other.DKLBNBDPMPO.Clone();
           break;
-        case DataCaseOneofCase.AvatarRelic:
-          AvatarRelic = other.AvatarRelic.Clone();
+        case NJNIONMBMKEOneofCase.PFOPJPJKKLK:
+          PFOPJPJKKLK = other.PFOPJPJKKLK.Clone();
           break;
       }
 
@@ -96,30 +95,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetBigDataAllRecommendScRsp Clone() {
       return new GetBigDataAllRecommendScRsp(this);
-    }
-
-    /// <summary>Field number for the "relic_avatar" field.</summary>
-    public const int RelicAvatarFieldNumber = 10;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.BigDataAllRelicAvatarList RelicAvatar {
-      get { return dataCaseCase_ == DataCaseOneofCase.RelicAvatar ? (global::EggLink.DanhengServer.Proto.BigDataAllRelicAvatarList) dataCase_ : null; }
-      set {
-        dataCase_ = value;
-        dataCaseCase_ = value == null ? DataCaseOneofCase.None : DataCaseOneofCase.RelicAvatar;
-      }
-    }
-
-    /// <summary>Field number for the "avatar_relic" field.</summary>
-    public const int AvatarRelicFieldNumber = 7;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.BigDataAllAvatarRelicList AvatarRelic {
-      get { return dataCaseCase_ == DataCaseOneofCase.AvatarRelic ? (global::EggLink.DanhengServer.Proto.BigDataAllAvatarRelicList) dataCase_ : null; }
-      set {
-        dataCase_ = value;
-        dataCaseCase_ = value == null ? DataCaseOneofCase.None : DataCaseOneofCase.AvatarRelic;
-      }
     }
 
     /// <summary>Field number for the "big_data_recommend_type" field.</summary>
@@ -146,25 +121,49 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    private object dataCase_;
-    /// <summary>Enum of possible cases for the "data_case" oneof.</summary>
-    public enum DataCaseOneofCase {
-      None = 0,
-      RelicAvatar = 10,
-      AvatarRelic = 7,
-    }
-    private DataCaseOneofCase dataCaseCase_ = DataCaseOneofCase.None;
+    /// <summary>Field number for the "DKLBNBDPMPO" field.</summary>
+    public const int DKLBNBDPMPOFieldNumber = 10;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public DataCaseOneofCase DataCaseCase {
-      get { return dataCaseCase_; }
+    public global::EggLink.DanhengServer.Proto.PIIIPHEFDJO DKLBNBDPMPO {
+      get { return nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.DKLBNBDPMPO ? (global::EggLink.DanhengServer.Proto.PIIIPHEFDJO) nJNIONMBMKE_ : null; }
+      set {
+        nJNIONMBMKE_ = value;
+        nJNIONMBMKECase_ = value == null ? NJNIONMBMKEOneofCase.None : NJNIONMBMKEOneofCase.DKLBNBDPMPO;
+      }
+    }
+
+    /// <summary>Field number for the "PFOPJPJKKLK" field.</summary>
+    public const int PFOPJPJKKLKFieldNumber = 7;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.MKJALMKMPGL PFOPJPJKKLK {
+      get { return nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.PFOPJPJKKLK ? (global::EggLink.DanhengServer.Proto.MKJALMKMPGL) nJNIONMBMKE_ : null; }
+      set {
+        nJNIONMBMKE_ = value;
+        nJNIONMBMKECase_ = value == null ? NJNIONMBMKEOneofCase.None : NJNIONMBMKEOneofCase.PFOPJPJKKLK;
+      }
+    }
+
+    private object nJNIONMBMKE_;
+    /// <summary>Enum of possible cases for the "NJNIONMBMKE" oneof.</summary>
+    public enum NJNIONMBMKEOneofCase {
+      None = 0,
+      DKLBNBDPMPO = 10,
+      PFOPJPJKKLK = 7,
+    }
+    private NJNIONMBMKEOneofCase nJNIONMBMKECase_ = NJNIONMBMKEOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NJNIONMBMKEOneofCase NJNIONMBMKECase {
+      get { return nJNIONMBMKECase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearDataCase() {
-      dataCaseCase_ = DataCaseOneofCase.None;
-      dataCase_ = null;
+    public void ClearNJNIONMBMKE() {
+      nJNIONMBMKECase_ = NJNIONMBMKEOneofCase.None;
+      nJNIONMBMKE_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -182,11 +181,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(RelicAvatar, other.RelicAvatar)) return false;
-      if (!object.Equals(AvatarRelic, other.AvatarRelic)) return false;
       if (BigDataRecommendType != other.BigDataRecommendType) return false;
       if (Retcode != other.Retcode) return false;
-      if (DataCaseCase != other.DataCaseCase) return false;
+      if (!object.Equals(DKLBNBDPMPO, other.DKLBNBDPMPO)) return false;
+      if (!object.Equals(PFOPJPJKKLK, other.PFOPJPJKKLK)) return false;
+      if (NJNIONMBMKECase != other.NJNIONMBMKECase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -194,11 +193,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (dataCaseCase_ == DataCaseOneofCase.RelicAvatar) hash ^= RelicAvatar.GetHashCode();
-      if (dataCaseCase_ == DataCaseOneofCase.AvatarRelic) hash ^= AvatarRelic.GetHashCode();
       if (BigDataRecommendType != global::EggLink.DanhengServer.Proto.BigDataRecommendType.None) hash ^= BigDataRecommendType.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      hash ^= (int) dataCaseCase_;
+      if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.DKLBNBDPMPO) hash ^= DKLBNBDPMPO.GetHashCode();
+      if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.PFOPJPJKKLK) hash ^= PFOPJPJKKLK.GetHashCode();
+      hash ^= (int) nJNIONMBMKECase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -221,13 +220,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteEnum((int) BigDataRecommendType);
       }
-      if (dataCaseCase_ == DataCaseOneofCase.AvatarRelic) {
+      if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.PFOPJPJKKLK) {
         output.WriteRawTag(58);
-        output.WriteMessage(AvatarRelic);
+        output.WriteMessage(PFOPJPJKKLK);
       }
-      if (dataCaseCase_ == DataCaseOneofCase.RelicAvatar) {
+      if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.DKLBNBDPMPO) {
         output.WriteRawTag(82);
-        output.WriteMessage(RelicAvatar);
+        output.WriteMessage(DKLBNBDPMPO);
       }
       if (Retcode != 0) {
         output.WriteRawTag(120);
@@ -247,13 +246,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteEnum((int) BigDataRecommendType);
       }
-      if (dataCaseCase_ == DataCaseOneofCase.AvatarRelic) {
+      if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.PFOPJPJKKLK) {
         output.WriteRawTag(58);
-        output.WriteMessage(AvatarRelic);
+        output.WriteMessage(PFOPJPJKKLK);
       }
-      if (dataCaseCase_ == DataCaseOneofCase.RelicAvatar) {
+      if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.DKLBNBDPMPO) {
         output.WriteRawTag(82);
-        output.WriteMessage(RelicAvatar);
+        output.WriteMessage(DKLBNBDPMPO);
       }
       if (Retcode != 0) {
         output.WriteRawTag(120);
@@ -269,17 +268,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (dataCaseCase_ == DataCaseOneofCase.RelicAvatar) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RelicAvatar);
-      }
-      if (dataCaseCase_ == DataCaseOneofCase.AvatarRelic) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AvatarRelic);
-      }
       if (BigDataRecommendType != global::EggLink.DanhengServer.Proto.BigDataRecommendType.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BigDataRecommendType);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.DKLBNBDPMPO) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DKLBNBDPMPO);
+      }
+      if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.PFOPJPJKKLK) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PFOPJPJKKLK);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -299,18 +298,18 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      switch (other.DataCaseCase) {
-        case DataCaseOneofCase.RelicAvatar:
-          if (RelicAvatar == null) {
-            RelicAvatar = new global::EggLink.DanhengServer.Proto.BigDataAllRelicAvatarList();
+      switch (other.NJNIONMBMKECase) {
+        case NJNIONMBMKEOneofCase.DKLBNBDPMPO:
+          if (DKLBNBDPMPO == null) {
+            DKLBNBDPMPO = new global::EggLink.DanhengServer.Proto.PIIIPHEFDJO();
           }
-          RelicAvatar.MergeFrom(other.RelicAvatar);
+          DKLBNBDPMPO.MergeFrom(other.DKLBNBDPMPO);
           break;
-        case DataCaseOneofCase.AvatarRelic:
-          if (AvatarRelic == null) {
-            AvatarRelic = new global::EggLink.DanhengServer.Proto.BigDataAllAvatarRelicList();
+        case NJNIONMBMKEOneofCase.PFOPJPJKKLK:
+          if (PFOPJPJKKLK == null) {
+            PFOPJPJKKLK = new global::EggLink.DanhengServer.Proto.MKJALMKMPGL();
           }
-          AvatarRelic.MergeFrom(other.AvatarRelic);
+          PFOPJPJKKLK.MergeFrom(other.PFOPJPJKKLK);
           break;
       }
 
@@ -334,21 +333,21 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 58: {
-            global::EggLink.DanhengServer.Proto.BigDataAllAvatarRelicList subBuilder = new global::EggLink.DanhengServer.Proto.BigDataAllAvatarRelicList();
-            if (dataCaseCase_ == DataCaseOneofCase.AvatarRelic) {
-              subBuilder.MergeFrom(AvatarRelic);
+            global::EggLink.DanhengServer.Proto.MKJALMKMPGL subBuilder = new global::EggLink.DanhengServer.Proto.MKJALMKMPGL();
+            if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.PFOPJPJKKLK) {
+              subBuilder.MergeFrom(PFOPJPJKKLK);
             }
             input.ReadMessage(subBuilder);
-            AvatarRelic = subBuilder;
+            PFOPJPJKKLK = subBuilder;
             break;
           }
           case 82: {
-            global::EggLink.DanhengServer.Proto.BigDataAllRelicAvatarList subBuilder = new global::EggLink.DanhengServer.Proto.BigDataAllRelicAvatarList();
-            if (dataCaseCase_ == DataCaseOneofCase.RelicAvatar) {
-              subBuilder.MergeFrom(RelicAvatar);
+            global::EggLink.DanhengServer.Proto.PIIIPHEFDJO subBuilder = new global::EggLink.DanhengServer.Proto.PIIIPHEFDJO();
+            if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.DKLBNBDPMPO) {
+              subBuilder.MergeFrom(DKLBNBDPMPO);
             }
             input.ReadMessage(subBuilder);
-            RelicAvatar = subBuilder;
+            DKLBNBDPMPO = subBuilder;
             break;
           }
           case 120: {
@@ -375,21 +374,21 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 58: {
-            global::EggLink.DanhengServer.Proto.BigDataAllAvatarRelicList subBuilder = new global::EggLink.DanhengServer.Proto.BigDataAllAvatarRelicList();
-            if (dataCaseCase_ == DataCaseOneofCase.AvatarRelic) {
-              subBuilder.MergeFrom(AvatarRelic);
+            global::EggLink.DanhengServer.Proto.MKJALMKMPGL subBuilder = new global::EggLink.DanhengServer.Proto.MKJALMKMPGL();
+            if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.PFOPJPJKKLK) {
+              subBuilder.MergeFrom(PFOPJPJKKLK);
             }
             input.ReadMessage(subBuilder);
-            AvatarRelic = subBuilder;
+            PFOPJPJKKLK = subBuilder;
             break;
           }
           case 82: {
-            global::EggLink.DanhengServer.Proto.BigDataAllRelicAvatarList subBuilder = new global::EggLink.DanhengServer.Proto.BigDataAllRelicAvatarList();
-            if (dataCaseCase_ == DataCaseOneofCase.RelicAvatar) {
-              subBuilder.MergeFrom(RelicAvatar);
+            global::EggLink.DanhengServer.Proto.PIIIPHEFDJO subBuilder = new global::EggLink.DanhengServer.Proto.PIIIPHEFDJO();
+            if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.DKLBNBDPMPO) {
+              subBuilder.MergeFrom(DKLBNBDPMPO);
             }
             input.ReadMessage(subBuilder);
-            RelicAvatar = subBuilder;
+            DKLBNBDPMPO = subBuilder;
             break;
           }
           case 120: {

@@ -24,10 +24,11 @@ namespace EggLink.DanhengServer.Proto {
     static PlayCardBriefReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNQbGF5Q2FyZEJyaWVmLnByb3RvGhRQbGF5U2tpbGxCcmllZi5wcm90byJd",
-            "Cg1QbGF5Q2FyZEJyaWVmEhAKCFVuaXF1ZUlkGA0gASgNEicKDlNraWxsQnJp",
-            "ZWZMaXN0GAIgAygLMg8uUGxheVNraWxsQnJpZWYSEQoJQmFzZVZhbHVlGAcg",
-            "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChNQbGF5Q2FyZEJyaWVmLnByb3RvGhRQbGF5U2tpbGxCcmllZi5wcm90byJh",
+            "Cg1QbGF5Q2FyZEJyaWVmEhEKCXVuaXF1ZV9pZBgNIAEoDRIpChBza2lsbF9i",
+            "cmllZl9saXN0GAIgAygLMg8uUGxheVNraWxsQnJpZWYSEgoKYmFzZV92YWx1",
+            "ZRgHIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlaySkillBriefReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -85,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
       return new PlayCardBrief(this);
     }
 
-    /// <summary>Field number for the "UniqueId" field.</summary>
+    /// <summary>Field number for the "unique_id" field.</summary>
     public const int UniqueIdFieldNumber = 13;
     private uint uniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -97,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "SkillBriefList" field.</summary>
+    /// <summary>Field number for the "skill_brief_list" field.</summary>
     public const int SkillBriefListFieldNumber = 2;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.PlaySkillBrief> _repeated_skillBriefList_codec
         = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.PlaySkillBrief.Parser);
@@ -108,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return skillBriefList_; }
     }
 
-    /// <summary>Field number for the "BaseValue" field.</summary>
+    /// <summary>Field number for the "base_value" field.</summary>
     public const int BaseValueFieldNumber = 7;
     private uint baseValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

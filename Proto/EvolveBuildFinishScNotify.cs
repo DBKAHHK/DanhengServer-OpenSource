@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static EvolveBuildFinishScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9Fdm9sdmVCdWlsZEZpbmlzaFNjTm90aWZ5LnByb3RvGhpFdm9sdmVCdWls",
-            "ZExldmVsSW5mby5wcm90bxoRRExIQ01DTklISUkucHJvdG8i3QEKGUV2b2x2",
-            "ZUJ1aWxkRmluaXNoU2NOb3RpZnkSDQoFU2NvcmUYCyABKA0SCwoDRXhwGAUg",
-            "ASgNEiYKEEJhdHRsZVJlc3VsdFR5cGUYAiABKA4yDC5ETEhDTUNOSUhJSRIM",
-            "CgRXYXZlGAkgASgNEhUKDUN1clBlcmlvZFR5cGUYCCABKA0SDgoGSXNMb3Nl",
-            "GAcgASgIEg8KB0xldmVsSWQYDCABKA0SDAoEQ29pbhgBIAEoDRIoCglMZXZl",
-            "bEluZm8YDyABKAsyFS5Fdm9sdmVCdWlsZExldmVsSW5mb0IeqgIbRWdnTGlu",
-            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Ch9Fdm9sdmVCdWlsZEZpbmlzaFNjTm90aWZ5LnByb3RvGhFETEhDTUNOSUhJ",
+            "SS5wcm90bxoaRXZvbHZlQnVpbGRMZXZlbEluZm8ucHJvdG8i5AEKGUV2b2x2",
+            "ZUJ1aWxkRmluaXNoU2NOb3RpZnkSDQoFc2NvcmUYCyABKA0SCwoDZXhwGAUg",
+            "ASgNEigKEmJhdHRsZV9yZXN1bHRfdHlwZRgCIAEoDjIMLkRMSENNQ05JSElJ",
+            "EgwKBHdhdmUYCSABKA0SFwoPY3VyX3BlcmlvZF90eXBlGAggASgNEg8KB2lz",
+            "X2xvc2UYByABKAgSEAoIbGV2ZWxfaWQYDCABKA0SDAoEY29pbhgBIAEoDRIp",
+            "CgpsZXZlbF9pbmZvGA8gASgLMhUuRXZvbHZlQnVpbGRMZXZlbEluZm9CHqoC",
+            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EvolveBuildLevelInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DLHCMCNIHIIReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DLHCMCNIHIIReflection.Descriptor, global::EggLink.DanhengServer.Proto.EvolveBuildLevelInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EvolveBuildFinishScNotify), global::EggLink.DanhengServer.Proto.EvolveBuildFinishScNotify.Parser, new[]{ "Score", "Exp", "BattleResultType", "Wave", "CurPeriodType", "IsLose", "LevelId", "Coin", "LevelInfo" }, null, null, null, null)
           }));
@@ -95,7 +95,7 @@ namespace EggLink.DanhengServer.Proto {
       return new EvolveBuildFinishScNotify(this);
     }
 
-    /// <summary>Field number for the "Score" field.</summary>
+    /// <summary>Field number for the "score" field.</summary>
     public const int ScoreFieldNumber = 11;
     private uint score_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -107,7 +107,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Exp" field.</summary>
+    /// <summary>Field number for the "exp" field.</summary>
     public const int ExpFieldNumber = 5;
     private uint exp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -119,7 +119,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "BattleResultType" field.</summary>
+    /// <summary>Field number for the "battle_result_type" field.</summary>
     public const int BattleResultTypeFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.DLHCMCNIHII battleResultType_ = global::EggLink.DanhengServer.Proto.DLHCMCNIHII.EvolveBattleResultNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -131,7 +131,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Wave" field.</summary>
+    /// <summary>Field number for the "wave" field.</summary>
     public const int WaveFieldNumber = 9;
     private uint wave_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -143,7 +143,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CurPeriodType" field.</summary>
+    /// <summary>Field number for the "cur_period_type" field.</summary>
     public const int CurPeriodTypeFieldNumber = 8;
     private uint curPeriodType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -155,7 +155,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "IsLose" field.</summary>
+    /// <summary>Field number for the "is_lose" field.</summary>
     public const int IsLoseFieldNumber = 7;
     private bool isLose_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "LevelId" field.</summary>
+    /// <summary>Field number for the "level_id" field.</summary>
     public const int LevelIdFieldNumber = 12;
     private uint levelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -179,7 +179,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Coin" field.</summary>
+    /// <summary>Field number for the "coin" field.</summary>
     public const int CoinFieldNumber = 1;
     private uint coin_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -191,7 +191,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "LevelInfo" field.</summary>
+    /// <summary>Field number for the "level_info" field.</summary>
     public const int LevelInfoFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.EvolveBuildLevelInfo levelInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

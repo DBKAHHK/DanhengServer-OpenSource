@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static GetRogueShopMiracleInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiJHZXRSb2d1ZVNob3BNaXJhY2xlSW5mb1NjUnNwLnByb3RvGhFOTkpPTEtK",
-            "TFBKRy5wcm90bxoSSXRlbUNvc3REYXRhLnByb3RvIqYBChxHZXRSb2d1ZVNo",
-            "b3BNaXJhY2xlSW5mb1NjUnNwEhMKC0FFRkhLQU5CRk5DGAggASgFEiIKC0lI",
-            "SkhDQ0ZNSUZEGAwgASgLMg0uSXRlbUNvc3REYXRhEhMKC0VGT0pPQ0ZHSURK",
-            "GAUgASgFEg8KB3JldGNvZGUYDiABKA0SJwoRZ2FtZV9taXJhY2xlX2luZm8Y",
-            "CSABKAsyDC5OTkpPTEtKTFBKR0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
-            "LlByb3RvYgZwcm90bzM="));
+            "CiJHZXRSb2d1ZVNob3BNaXJhY2xlSW5mb1NjUnNwLnByb3RvGhRCdXlNaXJh",
+            "Y2xlSW5mby5wcm90bxoSSXRlbUNvc3REYXRhLnByb3RvIqkBChxHZXRSb2d1",
+            "ZVNob3BNaXJhY2xlSW5mb1NjUnNwEhMKC0FFRkhLQU5CRk5DGAggASgFEiIK",
+            "C0lISkhDQ0ZNSUZEGAwgASgLMg0uSXRlbUNvc3REYXRhEhMKC0VGT0pPQ0ZH",
+            "SURKGAUgASgFEg8KB3JldGNvZGUYDiABKA0SKgoRZ2FtZV9taXJhY2xlX2lu",
+            "Zm8YCSABKAsyDy5CdXlNaXJhY2xlSW5mb0IeqgIbRWdnTGluay5EYW5oZW5n",
+            "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NNJOLKJLPJGReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BuyMiracleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRogueShopMiracleInfoScRsp), global::EggLink.DanhengServer.Proto.GetRogueShopMiracleInfoScRsp.Parser, new[]{ "AEFHKANBFNC", "IHJHCCFMIFD", "EFOJOCFGIDJ", "Retcode", "GameMiracleInfo" }, null, null, null, null)
           }));
@@ -140,10 +140,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "game_miracle_info" field.</summary>
     public const int GameMiracleInfoFieldNumber = 9;
-    private global::EggLink.DanhengServer.Proto.NNJOLKJLPJG gameMiracleInfo_;
+    private global::EggLink.DanhengServer.Proto.BuyMiracleInfo gameMiracleInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.NNJOLKJLPJG GameMiracleInfo {
+    public global::EggLink.DanhengServer.Proto.BuyMiracleInfo GameMiracleInfo {
       get { return gameMiracleInfo_; }
       set {
         gameMiracleInfo_ = value;
@@ -304,7 +304,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.gameMiracleInfo_ != null) {
         if (gameMiracleInfo_ == null) {
-          GameMiracleInfo = new global::EggLink.DanhengServer.Proto.NNJOLKJLPJG();
+          GameMiracleInfo = new global::EggLink.DanhengServer.Proto.BuyMiracleInfo();
         }
         GameMiracleInfo.MergeFrom(other.GameMiracleInfo);
       }
@@ -333,7 +333,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 74: {
             if (gameMiracleInfo_ == null) {
-              GameMiracleInfo = new global::EggLink.DanhengServer.Proto.NNJOLKJLPJG();
+              GameMiracleInfo = new global::EggLink.DanhengServer.Proto.BuyMiracleInfo();
             }
             input.ReadMessage(GameMiracleInfo);
             break;
@@ -374,7 +374,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 74: {
             if (gameMiracleInfo_ == null) {
-              GameMiracleInfo = new global::EggLink.DanhengServer.Proto.NNJOLKJLPJG();
+              GameMiracleInfo = new global::EggLink.DanhengServer.Proto.BuyMiracleInfo();
             }
             input.ReadMessage(GameMiracleInfo);
             break;

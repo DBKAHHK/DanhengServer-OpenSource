@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpDaGVzc1JvZ3VlTGVhdmVTY1JzcC5wcm90bxoUQ2hlc3NSb2d1ZUluZm8u",
-            "cHJvdG8aF0NoZXNzUm9ndWVHZXRJbmZvLnByb3RvGhhDaGVzc1JvZ3VlQWVv",
-            "bkluZm8ucHJvdG8aGUNoZXNzUm9ndWVRdWVyeUluZm8ucHJvdG8i0AEKFENo",
+            "cHJvdG8aGUNoZXNzUm9ndWVRdWVyeUluZm8ucHJvdG8aF0NoZXNzUm9ndWVH",
+            "ZXRJbmZvLnByb3RvGhhDaGVzc1JvZ3VlQWVvbkluZm8ucHJvdG8i0AEKFENo",
             "ZXNzUm9ndWVMZWF2ZVNjUnNwEigKCnF1ZXJ5X2luZm8YByABKAsyFC5DaGVz",
             "c1JvZ3VlUXVlcnlJbmZvEioKDnJvZ3VlX2dldF9pbmZvGAggASgLMhIuQ2hl",
             "c3NSb2d1ZUdldEluZm8SIwoKc3RhZ2VfaW5mbxgGIAEoCzIPLkNoZXNzUm9n",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "ZW9uSW5mbxIPCgdyZXRjb2RlGAsgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueGetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueAeonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueQueryInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueQueryInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueGetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueAeonInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueLeaveScRsp), global::EggLink.DanhengServer.Proto.ChessRogueLeaveScRsp.Parser, new[]{ "QueryInfo", "RogueGetInfo", "StageInfo", "RogueAeonInfo", "Retcode" }, null, null, null, null)
           }));

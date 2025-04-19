@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static CityShopInfoScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpDaXR5U2hvcEluZm9TY05vdGlmeS5wcm90byJcChRDaXR5U2hvcEluZm9T",
-            "Y05vdGlmeRIYChBUYWtlbkxldmVsUmV3YXJkGA4gASgEEgsKA0V4cBgGIAEo",
-            "DRIOCgZTaG9wSWQYDCABKA0SDQoFTGV2ZWwYAiABKA1CHqoCG0VnZ0xpbmsu",
-            "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChpDaXR5U2hvcEluZm9TY05vdGlmeS5wcm90byJfChRDaXR5U2hvcEluZm9T",
+            "Y05vdGlmeRIaChJ0YWtlbl9sZXZlbF9yZXdhcmQYDiABKAQSCwoDZXhwGAYg",
+            "ASgNEg8KB3Nob3BfaWQYDCABKA0SDQoFbGV2ZWwYAiABKA1CHqoCG0VnZ0xp",
+            "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
       return new CityShopInfoScNotify(this);
     }
 
-    /// <summary>Field number for the "TakenLevelReward" field.</summary>
+    /// <summary>Field number for the "taken_level_reward" field.</summary>
     public const int TakenLevelRewardFieldNumber = 14;
     private ulong takenLevelReward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Exp" field.</summary>
+    /// <summary>Field number for the "exp" field.</summary>
     public const int ExpFieldNumber = 6;
     private uint exp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ShopId" field.</summary>
+    /// <summary>Field number for the "shop_id" field.</summary>
     public const int ShopIdFieldNumber = 12;
     private uint shopId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Level" field.</summary>
+    /// <summary>Field number for the "level" field.</summary>
     public const int LevelFieldNumber = 2;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static ItemReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgpJdGVtLnByb3RvInoKBEl0ZW0SEAoIVW5pcXVlSWQYAyABKA0SDAoEUmFu",
-            "axgHIAEoDRIRCglQcm9tb3Rpb24YDSABKA0SEwoLTWFpbkFmZml4SWQYDCAB",
-            "KA0SCwoDTnVtGAUgASgNEg0KBUxldmVsGA8gASgNEg4KBkl0ZW1JZBgKIAEo",
-            "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "CgpJdGVtLnByb3RvIn4KBEl0ZW0SEQoJdW5pcXVlX2lkGAMgASgNEgwKBHJh",
+            "bmsYByABKA0SEQoJcHJvbW90aW9uGA0gASgNEhUKDW1haW5fYWZmaXhfaWQY",
+            "DCABKA0SCwoDbnVtGAUgASgNEg0KBWxldmVsGA8gASgNEg8KB2l0ZW1faWQY",
+            "CiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -89,7 +89,7 @@ namespace EggLink.DanhengServer.Proto {
       return new Item(this);
     }
 
-    /// <summary>Field number for the "UniqueId" field.</summary>
+    /// <summary>Field number for the "unique_id" field.</summary>
     public const int UniqueIdFieldNumber = 3;
     private uint uniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -101,7 +101,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Rank" field.</summary>
+    /// <summary>Field number for the "rank" field.</summary>
     public const int RankFieldNumber = 7;
     private uint rank_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -113,7 +113,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Promotion" field.</summary>
+    /// <summary>Field number for the "promotion" field.</summary>
     public const int PromotionFieldNumber = 13;
     private uint promotion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -125,7 +125,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "MainAffixId" field.</summary>
+    /// <summary>Field number for the "main_affix_id" field.</summary>
     public const int MainAffixIdFieldNumber = 12;
     private uint mainAffixId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Num" field.</summary>
+    /// <summary>Field number for the "num" field.</summary>
     public const int NumFieldNumber = 5;
     private uint num_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -149,7 +149,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Level" field.</summary>
+    /// <summary>Field number for the "level" field.</summary>
     public const int LevelFieldNumber = 15;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -161,7 +161,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ItemId" field.</summary>
+    /// <summary>Field number for the "item_id" field.</summary>
     public const int ItemIdFieldNumber = 10;
     private uint itemId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

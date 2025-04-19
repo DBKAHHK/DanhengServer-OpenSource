@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static GetShopListScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZHZXRTaG9wTGlzdFNjUnNwLnByb3RvGgpTaG9wLnByb3RvIk4KEEdldFNo",
-            "b3BMaXN0U2NSc3ASFwoIU2hvcExpc3QYCCADKAsyBS5TaG9wEg8KB1JldGNv",
-            "ZGUYBSABKA0SEAoIU2hvcFR5cGUYCiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
-            "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChZHZXRTaG9wTGlzdFNjUnNwLnByb3RvGgpTaG9wLnByb3RvIlAKEEdldFNo",
+            "b3BMaXN0U2NSc3ASGAoJc2hvcF9saXN0GAggAygLMgUuU2hvcBIPCgdyZXRj",
+            "b2RlGAUgASgNEhEKCXNob3BfdHlwZRgKIAEoDUIeqgIbRWdnTGluay5EYW5o",
+            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ShopReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
       return new GetShopListScRsp(this);
     }
 
-    /// <summary>Field number for the "ShopList" field.</summary>
+    /// <summary>Field number for the "shop_list" field.</summary>
     public const int ShopListFieldNumber = 8;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.Shop> _repeated_shopList_codec
         = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.Shop.Parser);
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return shopList_; }
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 5;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -108,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ShopType" field.</summary>
+    /// <summary>Field number for the "shop_type" field.</summary>
     public const int ShopTypeFieldNumber = 10;
     private uint shopType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

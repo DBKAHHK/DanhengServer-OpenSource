@@ -24,11 +24,11 @@ namespace EggLink.DanhengServer.Proto {
     static BuyGoodsScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNCdXlHb29kc1NjUnNwLnByb3RvGg5JdGVtTGlzdC5wcm90byJ7Cg1CdXlH",
-            "b29kc1NjUnNwEiEKDlJldHVybkl0ZW1MaXN0GAggASgLMgkuSXRlbUxpc3QS",
-            "FQoNR29vZHNCdXlUaW1lcxgBIAEoDRIOCgZTaG9wSWQYCSABKA0SDwoHR29v",
-            "ZHNJZBgPIAEoDRIPCgdSZXRjb2RlGAwgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
-            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChNCdXlHb29kc1NjUnNwLnByb3RvGg5JdGVtTGlzdC5wcm90byKBAQoNQnV5",
+            "R29vZHNTY1JzcBIjChByZXR1cm5faXRlbV9saXN0GAggASgLMgkuSXRlbUxp",
+            "c3QSFwoPZ29vZHNfYnV5X3RpbWVzGAEgASgNEg8KB3Nob3BfaWQYCSABKA0S",
+            "EAoIZ29vZHNfaWQYDyABKA0SDwoHcmV0Y29kZRgMIAEoDUIeqgIbRWdnTGlu",
+            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -88,7 +88,7 @@ namespace EggLink.DanhengServer.Proto {
       return new BuyGoodsScRsp(this);
     }
 
-    /// <summary>Field number for the "ReturnItemList" field.</summary>
+    /// <summary>Field number for the "return_item_list" field.</summary>
     public const int ReturnItemListFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.ItemList returnItemList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -100,7 +100,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "GoodsBuyTimes" field.</summary>
+    /// <summary>Field number for the "goods_buy_times" field.</summary>
     public const int GoodsBuyTimesFieldNumber = 1;
     private uint goodsBuyTimes_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -112,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ShopId" field.</summary>
+    /// <summary>Field number for the "shop_id" field.</summary>
     public const int ShopIdFieldNumber = 9;
     private uint shopId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "GoodsId" field.</summary>
+    /// <summary>Field number for the "goods_id" field.</summary>
     public const int GoodsIdFieldNumber = 15;
     private uint goodsId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -136,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 12;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

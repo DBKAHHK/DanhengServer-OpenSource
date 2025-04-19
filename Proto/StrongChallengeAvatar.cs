@@ -25,9 +25,9 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtTdHJvbmdDaGFsbGVuZ2VBdmF0YXIucHJvdG8aEEF2YXRhclR5cGUucHJv",
-            "dG8iSgoVU3Ryb25nQ2hhbGxlbmdlQXZhdGFyEh8KCkF2YXRhclR5cGUYDiAB",
-            "KA4yCy5BdmF0YXJUeXBlEhAKCEF2YXRhcklkGA0gASgNQh6qAhtFZ2dMaW5r",
-            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "dG8iTAoVU3Ryb25nQ2hhbGxlbmdlQXZhdGFyEiAKC2F2YXRhcl90eXBlGA4g",
+            "ASgOMgsuQXZhdGFyVHlwZRIRCglhdmF0YXJfaWQYDSABKA1CHqoCG0VnZ0xp",
+            "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AvatarTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
       return new StrongChallengeAvatar(this);
     }
 
-    /// <summary>Field number for the "AvatarType" field.</summary>
+    /// <summary>Field number for the "avatar_type" field.</summary>
     public const int AvatarTypeFieldNumber = 14;
     private global::EggLink.DanhengServer.Proto.AvatarType avatarType_ = global::EggLink.DanhengServer.Proto.AvatarType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "AvatarId" field.</summary>
+    /// <summary>Field number for the "avatar_id" field.</summary>
     public const int AvatarIdFieldNumber = 13;
     private uint avatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

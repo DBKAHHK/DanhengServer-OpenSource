@@ -25,12 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChBDbGllbnRNYWlsLnByb3RvGg5JdGVtTGlzdC5wcm90bxoOTWFpbFR5cGUu",
-            "cHJvdG8i3AEKCkNsaWVudE1haWwSDAoEVGltZRgFIAEoAxISCgpFeHBpcmVU",
-            "aW1lGAogASgDEg4KBlNlbmRlchgGIAEoCRIQCghQYXJhTGlzdBgNIAMoCRIN",
-            "CgVUaXRsZRgEIAEoCRIdCgpBdHRhY2htZW50GA8gASgLMgkuSXRlbUxpc3QS",
-            "CgoCSWQYDCABKA0SDwoHQ29udGVudBgIIAEoCRISCgpUZW1wbGF0ZUlkGAsg",
-            "ASgNEhsKCE1haWxUeXBlGAkgASgOMgkuTWFpbFR5cGUSDgoGSXNSZWFkGAcg",
-            "ASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "cHJvdG8i4QEKCkNsaWVudE1haWwSDAoEdGltZRgFIAEoAxITCgtleHBpcmVf",
+            "dGltZRgKIAEoAxIOCgZzZW5kZXIYBiABKAkSEQoJcGFyYV9saXN0GA0gAygJ",
+            "Eg0KBXRpdGxlGAQgASgJEh0KCmF0dGFjaG1lbnQYDyABKAsyCS5JdGVtTGlz",
+            "dBIKCgJpZBgMIAEoDRIPCgdjb250ZW50GAggASgJEhMKC3RlbXBsYXRlX2lk",
+            "GAsgASgNEhwKCW1haWxfdHlwZRgJIAEoDjIJLk1haWxUeXBlEg8KB2lzX3Jl",
+            "YWQYByABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.MailTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -96,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
       return new ClientMail(this);
     }
 
-    /// <summary>Field number for the "Time" field.</summary>
+    /// <summary>Field number for the "time" field.</summary>
     public const int TimeFieldNumber = 5;
     private long time_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -108,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ExpireTime" field.</summary>
+    /// <summary>Field number for the "expire_time" field.</summary>
     public const int ExpireTimeFieldNumber = 10;
     private long expireTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -120,7 +121,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Sender" field.</summary>
+    /// <summary>Field number for the "sender" field.</summary>
     public const int SenderFieldNumber = 6;
     private string sender_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -132,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ParaList" field.</summary>
+    /// <summary>Field number for the "para_list" field.</summary>
     public const int ParaListFieldNumber = 13;
     private static readonly pb::FieldCodec<string> _repeated_paraList_codec
         = pb::FieldCodec.ForString(106);
@@ -143,7 +144,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return paraList_; }
     }
 
-    /// <summary>Field number for the "Title" field.</summary>
+    /// <summary>Field number for the "title" field.</summary>
     public const int TitleFieldNumber = 4;
     private string title_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -155,7 +156,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Attachment" field.</summary>
+    /// <summary>Field number for the "attachment" field.</summary>
     public const int AttachmentFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.ItemList attachment_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -167,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Id" field.</summary>
+    /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 12;
     private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -179,7 +180,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Content" field.</summary>
+    /// <summary>Field number for the "content" field.</summary>
     public const int ContentFieldNumber = 8;
     private string content_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -191,7 +192,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "TemplateId" field.</summary>
+    /// <summary>Field number for the "template_id" field.</summary>
     public const int TemplateIdFieldNumber = 11;
     private uint templateId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -203,7 +204,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "MailType" field.</summary>
+    /// <summary>Field number for the "mail_type" field.</summary>
     public const int MailTypeFieldNumber = 9;
     private global::EggLink.DanhengServer.Proto.MailType mailType_ = global::EggLink.DanhengServer.Proto.MailType.Normal;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -215,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "IsRead" field.</summary>
+    /// <summary>Field number for the "is_read" field.</summary>
     public const int IsReadFieldNumber = 7;
     private bool isRead_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

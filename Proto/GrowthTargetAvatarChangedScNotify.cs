@@ -25,15 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CidHcm93dGhUYXJnZXRBdmF0YXJDaGFuZ2VkU2NOb3RpZnkucHJvdG8aG0dy",
-            "b3d0aFRhcnRnZXRGdW5jVHlwZS5wcm90byJ2CiFHcm93dGhUYXJnZXRBdmF0",
+            "b3d0aFRhcnRnZXRGdW5jVHlwZS5wcm90byJxCiFHcm93dGhUYXJnZXRBdmF0",
             "YXJDaGFuZ2VkU2NOb3RpZnkSNwoXZ3Jvd3RoX3RhcmdldF90eXBlX2xpc3QY",
-            "CCADKA4yFi5Hcm93dGhUYXJ0Z2V0RnVuY1R5cGUSGAoQdGFyZ2V0X2F2YXRh",
-            "cl9pZBgHIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "CCADKA4yFi5Hcm93dGhUYXJ0Z2V0RnVuY1R5cGUSEwoLSlBOTFBPUE1LRUoY",
+            "ByABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GrowthTartgetFuncTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GrowthTargetAvatarChangedScNotify), global::EggLink.DanhengServer.Proto.GrowthTargetAvatarChangedScNotify.Parser, new[]{ "GrowthTargetTypeList", "TargetAvatarId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GrowthTargetAvatarChangedScNotify), global::EggLink.DanhengServer.Proto.GrowthTargetAvatarChangedScNotify.Parser, new[]{ "GrowthTargetTypeList", "JPNLPOPMKEJ" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GrowthTargetAvatarChangedScNotify(GrowthTargetAvatarChangedScNotify other) : this() {
       growthTargetTypeList_ = other.growthTargetTypeList_.Clone();
-      targetAvatarId_ = other.targetAvatarId_;
+      jPNLPOPMKEJ_ = other.jPNLPOPMKEJ_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -97,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return growthTargetTypeList_; }
     }
 
-    /// <summary>Field number for the "target_avatar_id" field.</summary>
-    public const int TargetAvatarIdFieldNumber = 7;
-    private uint targetAvatarId_;
+    /// <summary>Field number for the "JPNLPOPMKEJ" field.</summary>
+    public const int JPNLPOPMKEJFieldNumber = 7;
+    private uint jPNLPOPMKEJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TargetAvatarId {
-      get { return targetAvatarId_; }
+    public uint JPNLPOPMKEJ {
+      get { return jPNLPOPMKEJ_; }
       set {
-        targetAvatarId_ = value;
+        jPNLPOPMKEJ_ = value;
       }
     }
 
@@ -125,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!growthTargetTypeList_.Equals(other.growthTargetTypeList_)) return false;
-      if (TargetAvatarId != other.TargetAvatarId) return false;
+      if (JPNLPOPMKEJ != other.JPNLPOPMKEJ) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -134,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= growthTargetTypeList_.GetHashCode();
-      if (TargetAvatarId != 0) hash ^= TargetAvatarId.GetHashCode();
+      if (JPNLPOPMKEJ != 0) hash ^= JPNLPOPMKEJ.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,9 +152,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (TargetAvatarId != 0) {
+      if (JPNLPOPMKEJ != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(TargetAvatarId);
+        output.WriteUInt32(JPNLPOPMKEJ);
       }
       growthTargetTypeList_.WriteTo(output, _repeated_growthTargetTypeList_codec);
       if (_unknownFields != null) {
@@ -168,9 +167,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TargetAvatarId != 0) {
+      if (JPNLPOPMKEJ != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(TargetAvatarId);
+        output.WriteUInt32(JPNLPOPMKEJ);
       }
       growthTargetTypeList_.WriteTo(ref output, _repeated_growthTargetTypeList_codec);
       if (_unknownFields != null) {
@@ -184,8 +183,8 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += growthTargetTypeList_.CalculateSize(_repeated_growthTargetTypeList_codec);
-      if (TargetAvatarId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TargetAvatarId);
+      if (JPNLPOPMKEJ != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JPNLPOPMKEJ);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -200,8 +199,8 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       growthTargetTypeList_.Add(other.growthTargetTypeList_);
-      if (other.TargetAvatarId != 0) {
-        TargetAvatarId = other.TargetAvatarId;
+      if (other.JPNLPOPMKEJ != 0) {
+        JPNLPOPMKEJ = other.JPNLPOPMKEJ;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -219,7 +218,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 56: {
-            TargetAvatarId = input.ReadUInt32();
+            JPNLPOPMKEJ = input.ReadUInt32();
             break;
           }
           case 66:
@@ -243,7 +242,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 56: {
-            TargetAvatarId = input.ReadUInt32();
+            JPNLPOPMKEJ = input.ReadUInt32();
             break;
           }
           case 66:

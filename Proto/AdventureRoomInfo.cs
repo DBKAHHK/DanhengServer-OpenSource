@@ -24,15 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static AdventureRoomInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdBZHZlbnR1cmVSb29tSW5mby5wcm90bxorUm9ndWVBZHZlbnR1cmVSb29t",
-            "R2FtZXBsYXlXb2xmR3VuSW5mby5wcm90byK2AQoRQWR2ZW50dXJlUm9vbUlu",
-            "Zm8SCwoDc3VzGA0gASgBEhoKEmNhdWdodF9tb25zdGVyX251bRgPIAEoDRIa",
-            "ChJyZW1haW5fbW9uc3Rlcl9udW0YBSABKA0SDgoGc3RhdHVzGAIgASgNEjoK",
-            "CnF1ZXJ5X2luZm8YCSABKAsyJi5Sb2d1ZUFkdmVudHVyZVJvb21HYW1lcGxh",
-            "eVdvbGZHdW5JbmZvEhAKCHNjb3JlX2lkGAogASgNQh6qAhtFZ2dMaW5rLkRh",
-            "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChdBZHZlbnR1cmVSb29tSW5mby5wcm90bxoeUm9ndWVBZHZlbnR1cmVSb29t",
+            "U3RhdHVzLnByb3RvGitSb2d1ZUFkdmVudHVyZVJvb21HYW1lcGxheVdvbGZH",
+            "dW5JbmZvLnByb3RvItEBChFBZHZlbnR1cmVSb29tSW5mbxILCgNzdXMYDSAB",
+            "KAESGgoSY2F1Z2h0X21vbnN0ZXJfbnVtGA8gASgNEhoKEnJlbWFpbl9tb25z",
+            "dGVyX251bRgFIAEoDRIpCgZzdGF0dXMYAiABKA4yGS5Sb2d1ZUFkdmVudHVy",
+            "ZVJvb21TdGF0dXMSOgoKcXVlcnlfaW5mbxgJIAEoCzImLlJvZ3VlQWR2ZW50",
+            "dXJlUm9vbUdhbWVwbGF5V29sZkd1bkluZm8SEAoIc2NvcmVfaWQYCiABKA1C",
+            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AdventureRoomInfo), global::EggLink.DanhengServer.Proto.AdventureRoomInfo.Parser, new[]{ "Sus", "CaughtMonsterNum", "RemainMonsterNum", "Status", "QueryInfo", "ScoreId" }, null, null, null, null)
           }));
@@ -129,10 +130,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 2;
-    private uint status_;
+    private global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatus status_ = global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatus.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Status {
+    public global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatus Status {
       get { return status_; }
       set {
         status_ = value;
@@ -194,7 +195,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Sus != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Sus);
       if (CaughtMonsterNum != 0) hash ^= CaughtMonsterNum.GetHashCode();
       if (RemainMonsterNum != 0) hash ^= RemainMonsterNum.GetHashCode();
-      if (Status != 0) hash ^= Status.GetHashCode();
+      if (Status != global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatus.None) hash ^= Status.GetHashCode();
       if (queryInfo_ != null) hash ^= QueryInfo.GetHashCode();
       if (ScoreId != 0) hash ^= ScoreId.GetHashCode();
       if (_unknownFields != null) {
@@ -215,9 +216,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Status != 0) {
+      if (Status != global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatus.None) {
         output.WriteRawTag(16);
-        output.WriteUInt32(Status);
+        output.WriteEnum((int) Status);
       }
       if (RemainMonsterNum != 0) {
         output.WriteRawTag(40);
@@ -249,9 +250,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Status != 0) {
+      if (Status != global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatus.None) {
         output.WriteRawTag(16);
-        output.WriteUInt32(Status);
+        output.WriteEnum((int) Status);
       }
       if (RemainMonsterNum != 0) {
         output.WriteRawTag(40);
@@ -292,8 +293,8 @@ namespace EggLink.DanhengServer.Proto {
       if (RemainMonsterNum != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RemainMonsterNum);
       }
-      if (Status != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Status);
+      if (Status != global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatus.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (queryInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(QueryInfo);
@@ -322,7 +323,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.RemainMonsterNum != 0) {
         RemainMonsterNum = other.RemainMonsterNum;
       }
-      if (other.Status != 0) {
+      if (other.Status != global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatus.None) {
         Status = other.Status;
       }
       if (other.queryInfo_ != null) {
@@ -350,7 +351,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 16: {
-            Status = input.ReadUInt32();
+            Status = (global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatus) input.ReadEnum();
             break;
           }
           case 40: {
@@ -392,7 +393,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 16: {
-            Status = input.ReadUInt32();
+            Status = (global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatus) input.ReadEnum();
             break;
           }
           case 40: {

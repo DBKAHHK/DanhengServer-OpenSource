@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static MarkRelicFilterPlanScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5NYXJrUmVsaWNGaWx0ZXJQbGFuU2NSc3AucHJvdG8iZQoYTWFya1JlbGlj",
-            "RmlsdGVyUGxhblNjUnNwEg4KBklzTWFyaxgEIAEoCBIVCg1TbG90SW5kZXhM",
-            "aXN0GA0gAygNEhEKCUlzQmF0Y2hPcBgCIAEoCBIPCgdSZXRjb2RlGAEgASgN",
-            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "Ch5NYXJrUmVsaWNGaWx0ZXJQbGFuU2NSc3AucHJvdG8iagoYTWFya1JlbGlj",
+            "RmlsdGVyUGxhblNjUnNwEg8KB2lzX21hcmsYBCABKAgSFwoPc2xvdF9pbmRl",
+            "eF9saXN0GA0gAygNEhMKC2lzX2JhdGNoX29wGAIgASgIEg8KB3JldGNvZGUY",
+            "ASABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
       return new MarkRelicFilterPlanScRsp(this);
     }
 
-    /// <summary>Field number for the "IsMark" field.</summary>
+    /// <summary>Field number for the "is_mark" field.</summary>
     public const int IsMarkFieldNumber = 4;
     private bool isMark_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "SlotIndexList" field.</summary>
+    /// <summary>Field number for the "slot_index_list" field.</summary>
     public const int SlotIndexListFieldNumber = 13;
     private static readonly pb::FieldCodec<uint> _repeated_slotIndexList_codec
         = pb::FieldCodec.ForUInt32(106);
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return slotIndexList_; }
     }
 
-    /// <summary>Field number for the "IsBatchOp" field.</summary>
+    /// <summary>Field number for the "is_batch_op" field.</summary>
     public const int IsBatchOpFieldNumber = 2;
     private bool isBatchOp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -121,7 +121,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 1;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

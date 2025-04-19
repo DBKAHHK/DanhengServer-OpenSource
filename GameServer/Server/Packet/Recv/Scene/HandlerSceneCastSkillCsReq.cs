@@ -56,7 +56,7 @@ public class HandlerSceneCastSkillCsReq : Handler
             }
         }
 
-        if (req.AssistEntityIdList.Count > 0)
+        if (req.AssistMonsterEntityIdList.Count > 0)
         {
             if (caster != null && caster.AvatarInfo.AvatarId == 1218 && req.SkillIndex == 1)
             {
@@ -66,8 +66,8 @@ public class HandlerSceneCastSkillCsReq : Handler
             else
             {
                 var hitTargetEntityIdList = new List<uint>();
-                if (req.AssistEntityIdList.Count > 0)
-                    foreach (var id in req.AssistEntityIdList)
+                if (req.AssistMonsterEntityIdList.Count > 0)
+                    foreach (var id in req.AssistMonsterEntityIdList)
                         hitTargetEntityIdList.Add(id);
                 else
                     foreach (var id in req.HitTargetEntityIdList)

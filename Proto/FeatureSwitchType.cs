@@ -24,7 +24,7 @@ namespace EggLink.DanhengServer.Proto {
     static FeatureSwitchTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdGZWF0dXJlU3dpdGNoVHlwZS5wcm90byrOEQoRRmVhdHVyZVN3aXRjaFR5",
+            "ChdGZWF0dXJlU3dpdGNoVHlwZS5wcm90byqTEAoRRmVhdHVyZVN3aXRjaFR5",
             "cGUSFwoTRkVBVFVSRV9TV0lUQ0hfTk9ORRAAEhcKE0ZFQVRVUkVfU1dJVENI",
             "X1NIT1AQARIeChpGRUFUVVJFX1NXSVRDSF9MSU5FVVBfTkFNRRACEiAKHEZF",
             "QVRVUkVfU1dJVENIX1JFQ0hBUkdFX1NIT1AQAxIbChdGRUFUVVJFX1NXSVRD",
@@ -70,12 +70,8 @@ namespace EggLink.DanhengServer.Proto {
             "CitGRUFUVVJFX1NXSVRDSF9QUkVfQVZBVEFSX1NFVF9HUk9XVEhfVEFSR0VU",
             "EDgSKwonRkVBVFVSRV9TV0lUQ0hfSU1QT1JUX1JFTElDX0ZJTFRFUl9QTEFO",
             "EDoSJAogRkVBVFVSRV9TV0lUQ0hfR0FDSEFfREVDSURFX0lURU0QOxIcChhG",
-            "RUFUVVJFX1NXSVRDSF9JVEVNX1NZTkMQPBIjCh9GRUFUVVJFX1NXSVRDSF9S",
-            "RUNIQVJHRV9CRU5FRklUED0SIAocRkVBVFVSRV9TV0lUQ0hfUkVDSEFSR0Vf",
-            "R0lGVBA+EiUKIUZFQVRVUkVfU1dJVENIX0dBQ0hBX0FWQVRBUl9UT0FTVBBA",
-            "EiYKIkZFQVRVUkVfU1dJVENIX1JFTElDX1NNQVJUX0RJU0NBUkQQQhIjCh9G",
-            "RUFUVVJFX1NXSVRDSF9QTEFORVRGRVNfU09DSUFMEENCHqoCG0VnZ0xpbmsu",
-            "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "RUFUVVJFX1NXSVRDSF9JVEVNX1NZTkMQPEIeqgIbRWdnTGluay5EYW5oZW5n",
+            "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.FeatureSwitchType), }, null, null));
@@ -144,11 +140,6 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("FEATURE_SWITCH_IMPORT_RELIC_FILTER_PLAN")] FeatureSwitchImportRelicFilterPlan = 58,
     [pbr::OriginalName("FEATURE_SWITCH_GACHA_DECIDE_ITEM")] FeatureSwitchGachaDecideItem = 59,
     [pbr::OriginalName("FEATURE_SWITCH_ITEM_SYNC")] FeatureSwitchItemSync = 60,
-    [pbr::OriginalName("FEATURE_SWITCH_RECHARGE_BENEFIT")] FeatureSwitchRechargeBenefit = 61,
-    [pbr::OriginalName("FEATURE_SWITCH_RECHARGE_GIFT")] FeatureSwitchRechargeGift = 62,
-    [pbr::OriginalName("FEATURE_SWITCH_GACHA_AVATAR_TOAST")] FeatureSwitchGachaAvatarToast = 64,
-    [pbr::OriginalName("FEATURE_SWITCH_RELIC_SMART_DISCARD")] FeatureSwitchRelicSmartDiscard = 66,
-    [pbr::OriginalName("FEATURE_SWITCH_PLANETFES_SOCIAL")] FeatureSwitchPlanetfesSocial = 67,
   }
 
   #endregion

@@ -24,11 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static ShopReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgpTaG9wLnByb3RvGgtHb29kcy5wcm90byKXAQoEU2hvcBIZCglHb29kc0xp",
-            "c3QYAiADKAsyBi5Hb29kcxIRCglCZWdpblRpbWUYDCABKAMSHAoUQ2l0eVRh",
-            "a2VuTGV2ZWxSZXdhcmQYDiABKAQSDwoHRW5kVGltZRgJIAEoAxIPCgdDaXR5",
-            "RXhwGAMgASgNEhEKCUNpdHlMZXZlbBgEIAEoDRIOCgZTaG9wSWQYCiABKA1C",
-            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "CgpTaG9wLnByb3RvGgtHb29kcy5wcm90byKgAQoEU2hvcBIaCgpnb29kc19s",
+            "aXN0GAIgAygLMgYuR29vZHMSEgoKYmVnaW5fdGltZRgMIAEoAxIfChdjaXR5",
+            "X3Rha2VuX2xldmVsX3Jld2FyZBgOIAEoBBIQCghlbmRfdGltZRgJIAEoAxIQ",
+            "CghjaXR5X2V4cBgDIAEoDRISCgpjaXR5X2xldmVsGAQgASgNEg8KB3Nob3Bf",
+            "aWQYCiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GoodsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -90,7 +91,7 @@ namespace EggLink.DanhengServer.Proto {
       return new Shop(this);
     }
 
-    /// <summary>Field number for the "GoodsList" field.</summary>
+    /// <summary>Field number for the "goods_list" field.</summary>
     public const int GoodsListFieldNumber = 2;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.Goods> _repeated_goodsList_codec
         = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.Goods.Parser);
@@ -101,7 +102,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return goodsList_; }
     }
 
-    /// <summary>Field number for the "BeginTime" field.</summary>
+    /// <summary>Field number for the "begin_time" field.</summary>
     public const int BeginTimeFieldNumber = 12;
     private long beginTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -113,7 +114,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CityTakenLevelReward" field.</summary>
+    /// <summary>Field number for the "city_taken_level_reward" field.</summary>
     public const int CityTakenLevelRewardFieldNumber = 14;
     private ulong cityTakenLevelReward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -125,7 +126,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "EndTime" field.</summary>
+    /// <summary>Field number for the "end_time" field.</summary>
     public const int EndTimeFieldNumber = 9;
     private long endTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -137,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CityExp" field.</summary>
+    /// <summary>Field number for the "city_exp" field.</summary>
     public const int CityExpFieldNumber = 3;
     private uint cityExp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -149,7 +150,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CityLevel" field.</summary>
+    /// <summary>Field number for the "city_level" field.</summary>
     public const int CityLevelFieldNumber = 4;
     private uint cityLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -161,7 +162,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ShopId" field.</summary>
+    /// <summary>Field number for the "shop_id" field.</summary>
     public const int ShopIdFieldNumber = 10;
     private uint shopId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

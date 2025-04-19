@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5SZXNldEVyYUZsaXBwZXJEYXRhU2NSc3AucHJvdG8aGEVyYUZsaXBwZXJE",
-            "YXRhTGlzdC5wcm90byJgChhSZXNldEVyYUZsaXBwZXJEYXRhU2NSc3ASDwoH",
+            "YXRhTGlzdC5wcm90byJjChhSZXNldEVyYUZsaXBwZXJEYXRhU2NSc3ASDwoH",
             "cmV0Y29kZRgCIAEoDRIhCgRkYXRhGA4gASgLMhMuRXJhRmxpcHBlckRhdGFM",
-            "aXN0EhAKCGlzX3Jlc2V0GAcgASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
-            "ZXIuUHJvdG9iBnByb3RvMw=="));
+            "aXN0EhMKC1BBSE1BR1BGRERKGAcgASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EraFlipperDataListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ResetEraFlipperDataScRsp), global::EggLink.DanhengServer.Proto.ResetEraFlipperDataScRsp.Parser, new[]{ "Retcode", "Data", "IsReset" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ResetEraFlipperDataScRsp), global::EggLink.DanhengServer.Proto.ResetEraFlipperDataScRsp.Parser, new[]{ "Retcode", "Data", "PAHMAGPFDDJ" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,7 +76,7 @@ namespace EggLink.DanhengServer.Proto {
     public ResetEraFlipperDataScRsp(ResetEraFlipperDataScRsp other) : this() {
       retcode_ = other.retcode_;
       data_ = other.data_ != null ? other.data_.Clone() : null;
-      isReset_ = other.isReset_;
+      pAHMAGPFDDJ_ = other.pAHMAGPFDDJ_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -110,15 +110,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "is_reset" field.</summary>
-    public const int IsResetFieldNumber = 7;
-    private bool isReset_;
+    /// <summary>Field number for the "PAHMAGPFDDJ" field.</summary>
+    public const int PAHMAGPFDDJFieldNumber = 7;
+    private bool pAHMAGPFDDJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsReset {
-      get { return isReset_; }
+    public bool PAHMAGPFDDJ {
+      get { return pAHMAGPFDDJ_; }
       set {
-        isReset_ = value;
+        pAHMAGPFDDJ_ = value;
       }
     }
 
@@ -139,7 +139,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (Retcode != other.Retcode) return false;
       if (!object.Equals(Data, other.Data)) return false;
-      if (IsReset != other.IsReset) return false;
+      if (PAHMAGPFDDJ != other.PAHMAGPFDDJ) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -149,7 +149,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (data_ != null) hash ^= Data.GetHashCode();
-      if (IsReset != false) hash ^= IsReset.GetHashCode();
+      if (PAHMAGPFDDJ != false) hash ^= PAHMAGPFDDJ.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -172,9 +172,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
       }
-      if (IsReset != false) {
+      if (PAHMAGPFDDJ != false) {
         output.WriteRawTag(56);
-        output.WriteBool(IsReset);
+        output.WriteBool(PAHMAGPFDDJ);
       }
       if (data_ != null) {
         output.WriteRawTag(114);
@@ -194,9 +194,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
       }
-      if (IsReset != false) {
+      if (PAHMAGPFDDJ != false) {
         output.WriteRawTag(56);
-        output.WriteBool(IsReset);
+        output.WriteBool(PAHMAGPFDDJ);
       }
       if (data_ != null) {
         output.WriteRawTag(114);
@@ -218,7 +218,7 @@ namespace EggLink.DanhengServer.Proto {
       if (data_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
       }
-      if (IsReset != false) {
+      if (PAHMAGPFDDJ != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -242,8 +242,8 @@ namespace EggLink.DanhengServer.Proto {
         }
         Data.MergeFrom(other.Data);
       }
-      if (other.IsReset != false) {
-        IsReset = other.IsReset;
+      if (other.PAHMAGPFDDJ != false) {
+        PAHMAGPFDDJ = other.PAHMAGPFDDJ;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -265,7 +265,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 56: {
-            IsReset = input.ReadBool();
+            PAHMAGPFDDJ = input.ReadBool();
             break;
           }
           case 114: {
@@ -295,7 +295,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 56: {
-            IsReset = input.ReadBool();
+            PAHMAGPFDDJ = input.ReadBool();
             break;
           }
           case 114: {

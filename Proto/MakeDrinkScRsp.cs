@@ -24,9 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static MakeDrinkScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRNYWtlRHJpbmtTY1JzcC5wcm90byJFCg5NYWtlRHJpbmtTY1JzcBIOCgZJ",
-            "c1N1Y2MYASABKAgSEgoKTmV4dENoYXRJZBgDIAEoDRIPCgdSZXRjb2RlGAcg",
-            "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChRNYWtlRHJpbmtTY1JzcC5wcm90byJICg5NYWtlRHJpbmtTY1JzcBIPCgdp",
+            "c19zdWNjGAEgASgIEhQKDG5leHRfY2hhdF9pZBgDIAEoDRIPCgdyZXRjb2Rl",
+            "GAcgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -84,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
       return new MakeDrinkScRsp(this);
     }
 
-    /// <summary>Field number for the "IsSucc" field.</summary>
+    /// <summary>Field number for the "is_succ" field.</summary>
     public const int IsSuccFieldNumber = 1;
     private bool isSucc_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -96,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "NextChatId" field.</summary>
+    /// <summary>Field number for the "next_chat_id" field.</summary>
     public const int NextChatIdFieldNumber = 3;
     private uint nextChatId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -108,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 7;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

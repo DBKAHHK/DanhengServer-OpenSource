@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlVbmxvY2tUdXRvcmlhbFNjUnNwLnByb3RvGg5UdXRvcmlhbC5wcm90byJD",
-            "ChNVbmxvY2tUdXRvcmlhbFNjUnNwEg8KB1JldGNvZGUYDCABKA0SGwoIVHV0",
+            "ChNVbmxvY2tUdXRvcmlhbFNjUnNwEg8KB3JldGNvZGUYDCABKA0SGwoIdHV0",
             "b3JpYWwYBCABKAsyCS5UdXRvcmlhbEIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
       return new UnlockTutorialScRsp(this);
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 12;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Tutorial" field.</summary>
+    /// <summary>Field number for the "tutorial" field.</summary>
     public const int TutorialFieldNumber = 4;
     private global::EggLink.DanhengServer.Proto.Tutorial tutorial_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

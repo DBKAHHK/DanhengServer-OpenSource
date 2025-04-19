@@ -24,14 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static RaidTargetInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRSYWlkVGFyZ2V0SW5mby5wcm90bxoRRk9DSERGSkFOUEMucHJvdG8iXQoO",
-            "UmFpZFRhcmdldEluZm8SIQoLTURET0ZNQ0pKSEgYBSABKA4yDC5GT0NIREZK",
-            "QU5QQxITCgtIRkFMSklIS0VDThgBIAEoDRITCgtETFBQRFBCSklJTRgGIAEo",
-            "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChRSYWlkVGFyZ2V0SW5mby5wcm90bxoWUmFpZFRhcmdldFN0YXR1cy5wcm90",
+            "byJpCg5SYWlkVGFyZ2V0SW5mbxItChJyYWlkX3RhcmdldF9zdGF0dXMYBSAB",
+            "KA4yES5SYWlkVGFyZ2V0U3RhdHVzEhMKC0hGQUxKSUhLRUNOGAEgASgNEhMK",
+            "C0RMUFBEUEJKSUlNGAYgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FOCHDFJANPCReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RaidTargetStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RaidTargetInfo), global::EggLink.DanhengServer.Proto.RaidTargetInfo.Parser, new[]{ "MDDOFMCJJHH", "HFALJIHKECN", "DLPPDPBJIIM" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RaidTargetInfo), global::EggLink.DanhengServer.Proto.RaidTargetInfo.Parser, new[]{ "RaidTargetStatus", "HFALJIHKECN", "DLPPDPBJIIM" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RaidTargetInfo(RaidTargetInfo other) : this() {
-      mDDOFMCJJHH_ = other.mDDOFMCJJHH_;
+      raidTargetStatus_ = other.raidTargetStatus_;
       hFALJIHKECN_ = other.hFALJIHKECN_;
       dLPPDPBJIIM_ = other.dLPPDPBJIIM_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -85,15 +86,15 @@ namespace EggLink.DanhengServer.Proto {
       return new RaidTargetInfo(this);
     }
 
-    /// <summary>Field number for the "MDDOFMCJJHH" field.</summary>
-    public const int MDDOFMCJJHHFieldNumber = 5;
-    private global::EggLink.DanhengServer.Proto.FOCHDFJANPC mDDOFMCJJHH_ = global::EggLink.DanhengServer.Proto.FOCHDFJANPC.RaidTargetStatusNone;
+    /// <summary>Field number for the "raid_target_status" field.</summary>
+    public const int RaidTargetStatusFieldNumber = 5;
+    private global::EggLink.DanhengServer.Proto.RaidTargetStatus raidTargetStatus_ = global::EggLink.DanhengServer.Proto.RaidTargetStatus.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.FOCHDFJANPC MDDOFMCJJHH {
-      get { return mDDOFMCJJHH_; }
+    public global::EggLink.DanhengServer.Proto.RaidTargetStatus RaidTargetStatus {
+      get { return raidTargetStatus_; }
       set {
-        mDDOFMCJJHH_ = value;
+        raidTargetStatus_ = value;
       }
     }
 
@@ -136,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MDDOFMCJJHH != other.MDDOFMCJJHH) return false;
+      if (RaidTargetStatus != other.RaidTargetStatus) return false;
       if (HFALJIHKECN != other.HFALJIHKECN) return false;
       if (DLPPDPBJIIM != other.DLPPDPBJIIM) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -146,7 +147,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MDDOFMCJJHH != global::EggLink.DanhengServer.Proto.FOCHDFJANPC.RaidTargetStatusNone) hash ^= MDDOFMCJJHH.GetHashCode();
+      if (RaidTargetStatus != global::EggLink.DanhengServer.Proto.RaidTargetStatus.None) hash ^= RaidTargetStatus.GetHashCode();
       if (HFALJIHKECN != 0) hash ^= HFALJIHKECN.GetHashCode();
       if (DLPPDPBJIIM != 0) hash ^= DLPPDPBJIIM.GetHashCode();
       if (_unknownFields != null) {
@@ -171,9 +172,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(HFALJIHKECN);
       }
-      if (MDDOFMCJJHH != global::EggLink.DanhengServer.Proto.FOCHDFJANPC.RaidTargetStatusNone) {
+      if (RaidTargetStatus != global::EggLink.DanhengServer.Proto.RaidTargetStatus.None) {
         output.WriteRawTag(40);
-        output.WriteEnum((int) MDDOFMCJJHH);
+        output.WriteEnum((int) RaidTargetStatus);
       }
       if (DLPPDPBJIIM != 0) {
         output.WriteRawTag(48);
@@ -193,9 +194,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(HFALJIHKECN);
       }
-      if (MDDOFMCJJHH != global::EggLink.DanhengServer.Proto.FOCHDFJANPC.RaidTargetStatusNone) {
+      if (RaidTargetStatus != global::EggLink.DanhengServer.Proto.RaidTargetStatus.None) {
         output.WriteRawTag(40);
-        output.WriteEnum((int) MDDOFMCJJHH);
+        output.WriteEnum((int) RaidTargetStatus);
       }
       if (DLPPDPBJIIM != 0) {
         output.WriteRawTag(48);
@@ -211,8 +212,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MDDOFMCJJHH != global::EggLink.DanhengServer.Proto.FOCHDFJANPC.RaidTargetStatusNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MDDOFMCJJHH);
+      if (RaidTargetStatus != global::EggLink.DanhengServer.Proto.RaidTargetStatus.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RaidTargetStatus);
       }
       if (HFALJIHKECN != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HFALJIHKECN);
@@ -232,8 +233,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MDDOFMCJJHH != global::EggLink.DanhengServer.Proto.FOCHDFJANPC.RaidTargetStatusNone) {
-        MDDOFMCJJHH = other.MDDOFMCJJHH;
+      if (other.RaidTargetStatus != global::EggLink.DanhengServer.Proto.RaidTargetStatus.None) {
+        RaidTargetStatus = other.RaidTargetStatus;
       }
       if (other.HFALJIHKECN != 0) {
         HFALJIHKECN = other.HFALJIHKECN;
@@ -261,7 +262,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            MDDOFMCJJHH = (global::EggLink.DanhengServer.Proto.FOCHDFJANPC) input.ReadEnum();
+            RaidTargetStatus = (global::EggLink.DanhengServer.Proto.RaidTargetStatus) input.ReadEnum();
             break;
           }
           case 48: {
@@ -288,7 +289,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            MDDOFMCJJHH = (global::EggLink.DanhengServer.Proto.FOCHDFJANPC) input.ReadEnum();
+            RaidTargetStatus = (global::EggLink.DanhengServer.Proto.RaidTargetStatus) input.ReadEnum();
             break;
           }
           case 48: {

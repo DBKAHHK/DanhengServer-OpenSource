@@ -25,16 +25,16 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpFbnRpdHlCdWZmQ2hhbmdlSW5mby5wcm90bxofU2NlbmVFbnRpdHlCdWZm",
-            "Q2hhbmdlVHlwZS5wcm90bxoOQnVmZkluZm8ucHJvdG8iuwEKFEVudGl0eUJ1",
-            "ZmZDaGFuZ2VJbmZvEiUKEGJ1ZmZfY2hhbmdlX2luZm8YAiABKAsyCS5CdWZm",
-            "SW5mb0gAEhgKDnJlbW92ZV9idWZmX2lkGAUgASgNSAASFgoOY2FzdF9lbnRp",
-            "dHlfaWQYBCABKA0SKgoGcmVhc29uGAogASgOMhouU2NlbmVFbnRpdHlCdWZm",
-            "Q2hhbmdlVHlwZRIRCgllbnRpdHlfaWQYCCABKA1CCwoJaW5mb19jYXNlQh6q",
-            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "Q2hhbmdlVHlwZS5wcm90bxoOQnVmZkluZm8ucHJvdG8ivQEKFEVudGl0eUJ1",
+            "ZmZDaGFuZ2VJbmZvEhYKDmNhc3RfZW50aXR5X2lkGAQgASgNEioKBnJlYXNv",
+            "bhgKIAEoDjIaLlNjZW5lRW50aXR5QnVmZkNoYW5nZVR5cGUSEQoJZW50aXR5",
+            "X2lkGAggASgNEiUKEGJ1ZmZfY2hhbmdlX2luZm8YAiABKAsyCS5CdWZmSW5m",
+            "b0gAEhgKDnJlbW92ZV9idWZmX2lkGAUgASgNSABCDQoLYnVmZl9jaGFuZ2VC",
+            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.BuffInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EntityBuffChangeInfo), global::EggLink.DanhengServer.Proto.EntityBuffChangeInfo.Parser, new[]{ "BuffChangeInfo", "RemoveBuffId", "CastEntityId", "Reason", "EntityId" }, new[]{ "InfoCase" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EntityBuffChangeInfo), global::EggLink.DanhengServer.Proto.EntityBuffChangeInfo.Parser, new[]{ "CastEntityId", "Reason", "EntityId", "BuffChangeInfo", "RemoveBuffId" }, new[]{ "BuffChange" }, null, null, null)
           }));
     }
     #endregion
@@ -79,11 +79,11 @@ namespace EggLink.DanhengServer.Proto {
       castEntityId_ = other.castEntityId_;
       reason_ = other.reason_;
       entityId_ = other.entityId_;
-      switch (other.InfoCaseCase) {
-        case InfoCaseOneofCase.BuffChangeInfo:
+      switch (other.BuffChangeCase) {
+        case BuffChangeOneofCase.BuffChangeInfo:
           BuffChangeInfo = other.BuffChangeInfo.Clone();
           break;
-        case InfoCaseOneofCase.RemoveBuffId:
+        case BuffChangeOneofCase.RemoveBuffId:
           RemoveBuffId = other.RemoveBuffId;
           break;
       }
@@ -95,44 +95,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EntityBuffChangeInfo Clone() {
       return new EntityBuffChangeInfo(this);
-    }
-
-    /// <summary>Field number for the "buff_change_info" field.</summary>
-    public const int BuffChangeInfoFieldNumber = 2;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.BuffInfo BuffChangeInfo {
-      get { return infoCaseCase_ == InfoCaseOneofCase.BuffChangeInfo ? (global::EggLink.DanhengServer.Proto.BuffInfo) infoCase_ : null; }
-      set {
-        infoCase_ = value;
-        infoCaseCase_ = value == null ? InfoCaseOneofCase.None : InfoCaseOneofCase.BuffChangeInfo;
-      }
-    }
-
-    /// <summary>Field number for the "remove_buff_id" field.</summary>
-    public const int RemoveBuffIdFieldNumber = 5;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint RemoveBuffId {
-      get { return HasRemoveBuffId ? (uint) infoCase_ : 0; }
-      set {
-        infoCase_ = value;
-        infoCaseCase_ = InfoCaseOneofCase.RemoveBuffId;
-      }
-    }
-    /// <summary>Gets whether the "remove_buff_id" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasRemoveBuffId {
-      get { return infoCaseCase_ == InfoCaseOneofCase.RemoveBuffId; }
-    }
-    /// <summary> Clears the value of the oneof if it's currently set to "remove_buff_id" </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearRemoveBuffId() {
-      if (HasRemoveBuffId) {
-        ClearInfoCase();
-      }
     }
 
     /// <summary>Field number for the "cast_entity_id" field.</summary>
@@ -171,25 +133,63 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    private object infoCase_;
-    /// <summary>Enum of possible cases for the "info_case" oneof.</summary>
-    public enum InfoCaseOneofCase {
+    /// <summary>Field number for the "buff_change_info" field.</summary>
+    public const int BuffChangeInfoFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.BuffInfo BuffChangeInfo {
+      get { return buffChangeCase_ == BuffChangeOneofCase.BuffChangeInfo ? (global::EggLink.DanhengServer.Proto.BuffInfo) buffChange_ : null; }
+      set {
+        buffChange_ = value;
+        buffChangeCase_ = value == null ? BuffChangeOneofCase.None : BuffChangeOneofCase.BuffChangeInfo;
+      }
+    }
+
+    /// <summary>Field number for the "remove_buff_id" field.</summary>
+    public const int RemoveBuffIdFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RemoveBuffId {
+      get { return HasRemoveBuffId ? (uint) buffChange_ : 0; }
+      set {
+        buffChange_ = value;
+        buffChangeCase_ = BuffChangeOneofCase.RemoveBuffId;
+      }
+    }
+    /// <summary>Gets whether the "remove_buff_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRemoveBuffId {
+      get { return buffChangeCase_ == BuffChangeOneofCase.RemoveBuffId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "remove_buff_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRemoveBuffId() {
+      if (HasRemoveBuffId) {
+        ClearBuffChange();
+      }
+    }
+
+    private object buffChange_;
+    /// <summary>Enum of possible cases for the "buff_change" oneof.</summary>
+    public enum BuffChangeOneofCase {
       None = 0,
       BuffChangeInfo = 2,
       RemoveBuffId = 5,
     }
-    private InfoCaseOneofCase infoCaseCase_ = InfoCaseOneofCase.None;
+    private BuffChangeOneofCase buffChangeCase_ = BuffChangeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InfoCaseOneofCase InfoCaseCase {
-      get { return infoCaseCase_; }
+    public BuffChangeOneofCase BuffChangeCase {
+      get { return buffChangeCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearInfoCase() {
-      infoCaseCase_ = InfoCaseOneofCase.None;
-      infoCase_ = null;
+    public void ClearBuffChange() {
+      buffChangeCase_ = BuffChangeOneofCase.None;
+      buffChange_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -207,12 +207,12 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(BuffChangeInfo, other.BuffChangeInfo)) return false;
-      if (RemoveBuffId != other.RemoveBuffId) return false;
       if (CastEntityId != other.CastEntityId) return false;
       if (Reason != other.Reason) return false;
       if (EntityId != other.EntityId) return false;
-      if (InfoCaseCase != other.InfoCaseCase) return false;
+      if (!object.Equals(BuffChangeInfo, other.BuffChangeInfo)) return false;
+      if (RemoveBuffId != other.RemoveBuffId) return false;
+      if (BuffChangeCase != other.BuffChangeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -220,12 +220,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (infoCaseCase_ == InfoCaseOneofCase.BuffChangeInfo) hash ^= BuffChangeInfo.GetHashCode();
-      if (HasRemoveBuffId) hash ^= RemoveBuffId.GetHashCode();
       if (CastEntityId != 0) hash ^= CastEntityId.GetHashCode();
       if (Reason != global::EggLink.DanhengServer.Proto.SceneEntityBuffChangeType.Default) hash ^= Reason.GetHashCode();
       if (EntityId != 0) hash ^= EntityId.GetHashCode();
-      hash ^= (int) infoCaseCase_;
+      if (buffChangeCase_ == BuffChangeOneofCase.BuffChangeInfo) hash ^= BuffChangeInfo.GetHashCode();
+      if (HasRemoveBuffId) hash ^= RemoveBuffId.GetHashCode();
+      hash ^= (int) buffChangeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -244,7 +244,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (infoCaseCase_ == InfoCaseOneofCase.BuffChangeInfo) {
+      if (buffChangeCase_ == BuffChangeOneofCase.BuffChangeInfo) {
         output.WriteRawTag(18);
         output.WriteMessage(BuffChangeInfo);
       }
@@ -274,7 +274,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (infoCaseCase_ == InfoCaseOneofCase.BuffChangeInfo) {
+      if (buffChangeCase_ == BuffChangeOneofCase.BuffChangeInfo) {
         output.WriteRawTag(18);
         output.WriteMessage(BuffChangeInfo);
       }
@@ -304,12 +304,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (infoCaseCase_ == InfoCaseOneofCase.BuffChangeInfo) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BuffChangeInfo);
-      }
-      if (HasRemoveBuffId) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RemoveBuffId);
-      }
       if (CastEntityId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CastEntityId);
       }
@@ -318,6 +312,12 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (EntityId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EntityId);
+      }
+      if (buffChangeCase_ == BuffChangeOneofCase.BuffChangeInfo) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BuffChangeInfo);
+      }
+      if (HasRemoveBuffId) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RemoveBuffId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -340,14 +340,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other.EntityId != 0) {
         EntityId = other.EntityId;
       }
-      switch (other.InfoCaseCase) {
-        case InfoCaseOneofCase.BuffChangeInfo:
+      switch (other.BuffChangeCase) {
+        case BuffChangeOneofCase.BuffChangeInfo:
           if (BuffChangeInfo == null) {
             BuffChangeInfo = new global::EggLink.DanhengServer.Proto.BuffInfo();
           }
           BuffChangeInfo.MergeFrom(other.BuffChangeInfo);
           break;
-        case InfoCaseOneofCase.RemoveBuffId:
+        case BuffChangeOneofCase.RemoveBuffId:
           RemoveBuffId = other.RemoveBuffId;
           break;
       }
@@ -369,7 +369,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 18: {
             global::EggLink.DanhengServer.Proto.BuffInfo subBuilder = new global::EggLink.DanhengServer.Proto.BuffInfo();
-            if (infoCaseCase_ == InfoCaseOneofCase.BuffChangeInfo) {
+            if (buffChangeCase_ == BuffChangeOneofCase.BuffChangeInfo) {
               subBuilder.MergeFrom(BuffChangeInfo);
             }
             input.ReadMessage(subBuilder);
@@ -409,7 +409,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 18: {
             global::EggLink.DanhengServer.Proto.BuffInfo subBuilder = new global::EggLink.DanhengServer.Proto.BuffInfo();
-            if (infoCaseCase_ == InfoCaseOneofCase.BuffChangeInfo) {
+            if (buffChangeCase_ == BuffChangeOneofCase.BuffChangeInfo) {
               subBuilder.MergeFrom(BuffChangeInfo);
             }
             input.ReadMessage(subBuilder);

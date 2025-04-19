@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static GetRogueShopBuffInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9HZXRSb2d1ZVNob3BCdWZmSW5mb1NjUnNwLnByb3RvGhFBTkpES0ZKT0VF",
-            "SS5wcm90bxoSSXRlbUNvc3REYXRhLnByb3RvIqEBChlHZXRSb2d1ZVNob3BC",
+            "Ch9HZXRSb2d1ZVNob3BCdWZmSW5mb1NjUnNwLnByb3RvGhFCdXlCdWZmSW5m",
+            "by5wcm90bxoSSXRlbUNvc3REYXRhLnByb3RvIqEBChlHZXRSb2d1ZVNob3BC",
             "dWZmSW5mb1NjUnNwEiIKC0lISkhDQ0ZNSUZEGAkgASgLMg0uSXRlbUNvc3RE",
             "YXRhEg8KB3JldGNvZGUYCiABKA0SEwoLQUVGSEtBTkJGTkMYByABKAUSEwoL",
             "RUZPSk9DRkdJREoYBSABKAUSJQoPcm9ndWVfYnVmZl9pbmZvGAwgASgLMgwu",
-            "QU5KREtGSk9FRUlCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "QnV5QnVmZkluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ANJDKFJOEEIReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BuyBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRogueShopBuffInfoScRsp), global::EggLink.DanhengServer.Proto.GetRogueShopBuffInfoScRsp.Parser, new[]{ "IHJHCCFMIFD", "Retcode", "AEFHKANBFNC", "EFOJOCFGIDJ", "RogueBuffInfo" }, null, null, null, null)
           }));
@@ -140,10 +140,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "rogue_buff_info" field.</summary>
     public const int RogueBuffInfoFieldNumber = 12;
-    private global::EggLink.DanhengServer.Proto.ANJDKFJOEEI rogueBuffInfo_;
+    private global::EggLink.DanhengServer.Proto.BuyBuffInfo rogueBuffInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ANJDKFJOEEI RogueBuffInfo {
+    public global::EggLink.DanhengServer.Proto.BuyBuffInfo RogueBuffInfo {
       get { return rogueBuffInfo_; }
       set {
         rogueBuffInfo_ = value;
@@ -304,7 +304,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.rogueBuffInfo_ != null) {
         if (rogueBuffInfo_ == null) {
-          RogueBuffInfo = new global::EggLink.DanhengServer.Proto.ANJDKFJOEEI();
+          RogueBuffInfo = new global::EggLink.DanhengServer.Proto.BuyBuffInfo();
         }
         RogueBuffInfo.MergeFrom(other.RogueBuffInfo);
       }
@@ -344,7 +344,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 98: {
             if (rogueBuffInfo_ == null) {
-              RogueBuffInfo = new global::EggLink.DanhengServer.Proto.ANJDKFJOEEI();
+              RogueBuffInfo = new global::EggLink.DanhengServer.Proto.BuyBuffInfo();
             }
             input.ReadMessage(RogueBuffInfo);
             break;
@@ -385,7 +385,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 98: {
             if (rogueBuffInfo_ == null) {
-              RogueBuffInfo = new global::EggLink.DanhengServer.Proto.ANJDKFJOEEI();
+              RogueBuffInfo = new global::EggLink.DanhengServer.Proto.BuyBuffInfo();
             }
             input.ReadMessage(RogueBuffInfo);
             break;

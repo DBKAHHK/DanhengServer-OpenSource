@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static GachaCeilingAvatarReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhHYWNoYUNlaWxpbmdBdmF0YXIucHJvdG8iOwoSR2FjaGFDZWlsaW5nQXZh",
-            "dGFyEhAKCEF2YXRhcklkGA4gASgNEhMKC1JlcGVhdGVkQ250GAsgASgNQh6q",
-            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChhHYWNoYUNlaWxpbmdBdmF0YXIucHJvdG8iPQoSR2FjaGFDZWlsaW5nQXZh",
+            "dGFyEhEKCWF2YXRhcl9pZBgOIAEoDRIUCgxyZXBlYXRlZF9jbnQYCyABKA1C",
+            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
       return new GachaCeilingAvatar(this);
     }
 
-    /// <summary>Field number for the "AvatarId" field.</summary>
+    /// <summary>Field number for the "avatar_id" field.</summary>
     public const int AvatarIdFieldNumber = 14;
     private uint avatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -95,7 +95,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "RepeatedCnt" field.</summary>
+    /// <summary>Field number for the "repeated_cnt" field.</summary>
     public const int RepeatedCntFieldNumber = 11;
     private uint repeatedCnt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

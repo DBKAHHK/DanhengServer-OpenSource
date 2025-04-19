@@ -156,7 +156,6 @@ public class AvatarManager : BasePlayerManager
 
     public void UpdateRelicPlan(RelicSmartWearPlan plan)
     {
-        var avatar = GetAvatar((int)plan.AvatarId)!.GetCurAvatarInfo();
         Player.InventoryManager!.Data.RelicPlans[(int)plan.UniqueId] = new RelicPlanData
         {
             EquipAvatar = (int)plan.AvatarId,

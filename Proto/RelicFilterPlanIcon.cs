@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static RelicFilterPlanIconReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlSZWxpY0ZpbHRlclBsYW5JY29uLnByb3RvIjsKE1JlbGljRmlsdGVyUGxh",
-            "bkljb24SDgoGSWNvbklkGAUgASgNEhQKDElzQXZhdGFySWNvbhgLIAEoCEIe",
-            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChlSZWxpY0ZpbHRlclBsYW5JY29uLnByb3RvIj4KE1JlbGljRmlsdGVyUGxh",
+            "bkljb24SDwoHaWNvbl9pZBgFIAEoDRIWCg5pc19hdmF0YXJfaWNvbhgLIAEo",
+            "CEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
       return new RelicFilterPlanIcon(this);
     }
 
-    /// <summary>Field number for the "IconId" field.</summary>
+    /// <summary>Field number for the "icon_id" field.</summary>
     public const int IconIdFieldNumber = 5;
     private uint iconId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -95,7 +95,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "IsAvatarIcon" field.</summary>
+    /// <summary>Field number for the "is_avatar_icon" field.</summary>
     public const int IsAvatarIconFieldNumber = 11;
     private bool isAvatarIcon_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

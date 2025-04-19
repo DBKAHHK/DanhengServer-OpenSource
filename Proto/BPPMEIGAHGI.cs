@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static BPPMEIGAHGIReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFCUFBNRUlHQUhHSS5wcm90bxoRTU1PSUJBQ0JQS0EucHJvdG8iWQoLQlBQ",
-            "TUVJR0FIR0kSIAoKc3RhdGVfaW5mbxgJIAMoCzIMLk1NT0lCQUNCUEtBEhMK",
-            "C0lPTUdESUtFTElBGAUgASgNEhMKC1BETURLQVBDT0pNGAsgASgNQh6qAhtF",
-            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChFCUFBNRUlHQUhHSS5wcm90bxoRTU1PSUJBQ0JQS0EucHJvdG8iXQoLQlBQ",
+            "TUVJR0FIR0kSJAoOZ2lmdF9kYXRhX2xpc3QYCSADKAsyDC5NTU9JQkFDQlBL",
+            "QRITCgtJT01HRElLRUxJQRgFIAEoDRITCgtQRE1ES0FQQ09KTRgLIAEoDUIe",
+            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MMOIBACBPKAReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BPPMEIGAHGI), global::EggLink.DanhengServer.Proto.BPPMEIGAHGI.Parser, new[]{ "StateInfo", "IOMGDIKELIA", "PDMDKAPCOJM" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BPPMEIGAHGI), global::EggLink.DanhengServer.Proto.BPPMEIGAHGI.Parser, new[]{ "GiftDataList", "IOMGDIKELIA", "PDMDKAPCOJM" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BPPMEIGAHGI(BPPMEIGAHGI other) : this() {
-      stateInfo_ = other.stateInfo_.Clone();
+      giftDataList_ = other.giftDataList_.Clone();
       iOMGDIKELIA_ = other.iOMGDIKELIA_;
       pDMDKAPCOJM_ = other.pDMDKAPCOJM_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -85,15 +85,15 @@ namespace EggLink.DanhengServer.Proto {
       return new BPPMEIGAHGI(this);
     }
 
-    /// <summary>Field number for the "state_info" field.</summary>
-    public const int StateInfoFieldNumber = 9;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MMOIBACBPKA> _repeated_stateInfo_codec
+    /// <summary>Field number for the "gift_data_list" field.</summary>
+    public const int GiftDataListFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MMOIBACBPKA> _repeated_giftDataList_codec
         = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.MMOIBACBPKA.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MMOIBACBPKA> stateInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MMOIBACBPKA>();
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MMOIBACBPKA> giftDataList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MMOIBACBPKA>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MMOIBACBPKA> StateInfo {
-      get { return stateInfo_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MMOIBACBPKA> GiftDataList {
+      get { return giftDataList_; }
     }
 
     /// <summary>Field number for the "IOMGDIKELIA" field.</summary>
@@ -135,7 +135,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!stateInfo_.Equals(other.stateInfo_)) return false;
+      if(!giftDataList_.Equals(other.giftDataList_)) return false;
       if (IOMGDIKELIA != other.IOMGDIKELIA) return false;
       if (PDMDKAPCOJM != other.PDMDKAPCOJM) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -145,7 +145,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= stateInfo_.GetHashCode();
+      hash ^= giftDataList_.GetHashCode();
       if (IOMGDIKELIA != 0) hash ^= IOMGDIKELIA.GetHashCode();
       if (PDMDKAPCOJM != 0) hash ^= PDMDKAPCOJM.GetHashCode();
       if (_unknownFields != null) {
@@ -170,7 +170,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteUInt32(IOMGDIKELIA);
       }
-      stateInfo_.WriteTo(output, _repeated_stateInfo_codec);
+      giftDataList_.WriteTo(output, _repeated_giftDataList_codec);
       if (PDMDKAPCOJM != 0) {
         output.WriteRawTag(88);
         output.WriteUInt32(PDMDKAPCOJM);
@@ -189,7 +189,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteUInt32(IOMGDIKELIA);
       }
-      stateInfo_.WriteTo(ref output, _repeated_stateInfo_codec);
+      giftDataList_.WriteTo(ref output, _repeated_giftDataList_codec);
       if (PDMDKAPCOJM != 0) {
         output.WriteRawTag(88);
         output.WriteUInt32(PDMDKAPCOJM);
@@ -204,7 +204,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += stateInfo_.CalculateSize(_repeated_stateInfo_codec);
+      size += giftDataList_.CalculateSize(_repeated_giftDataList_codec);
       if (IOMGDIKELIA != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IOMGDIKELIA);
       }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      stateInfo_.Add(other.stateInfo_);
+      giftDataList_.Add(other.giftDataList_);
       if (other.IOMGDIKELIA != 0) {
         IOMGDIKELIA = other.IOMGDIKELIA;
       }
@@ -250,7 +250,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 74: {
-            stateInfo_.AddEntriesFrom(input, _repeated_stateInfo_codec);
+            giftDataList_.AddEntriesFrom(input, _repeated_giftDataList_codec);
             break;
           }
           case 88: {
@@ -277,7 +277,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 74: {
-            stateInfo_.AddEntriesFrom(ref input, _repeated_stateInfo_codec);
+            giftDataList_.AddEntriesFrom(ref input, _repeated_giftDataList_codec);
             break;
           }
           case 88: {

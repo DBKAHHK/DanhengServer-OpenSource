@@ -10,7 +10,7 @@ public class PacketSetHeadIconScRsp : BasePacket
     {
         var proto = new SetHeadIconScRsp
         {
-            CurHeadIcon = (uint)player.Data.HeadIcon
+            CurrentHeadIconId = (uint)player.Data.HeadIcon
         };
         SetData(proto);
     }

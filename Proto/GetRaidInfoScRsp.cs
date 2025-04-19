@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZHZXRSYWlkSW5mb1NjUnNwLnByb3RvGhZGaW5pc2hlZFJhaWRJbmZvLnBy",
-            "b3RvGhNDaGFsbGVuZ2VSYWlkLnByb3RvIqMBChBHZXRSYWlkSW5mb1NjUnNw",
-            "EikKEUNoYWxsZW5nZVJhaWRMaXN0GAUgAygLMg4uQ2hhbGxlbmdlUmFpZBIi",
-            "ChpDaGFsbGVuZ2VUYWtlblJld2FyZElkTGlzdBgGIAMoDRIPCgdSZXRjb2Rl",
-            "GAwgASgNEi8KFEZpbmlzaGVkUmFpZEluZm9MaXN0GAQgAygLMhEuRmluaXNo",
-            "ZWRSYWlkSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "b3RvGhNDaGFsbGVuZ2VSYWlkLnByb3RvIqwBChBHZXRSYWlkSW5mb1NjUnNw",
+            "EisKE2NoYWxsZW5nZV9yYWlkX2xpc3QYBSADKAsyDi5DaGFsbGVuZ2VSYWlk",
+            "EiYKHmNoYWxsZW5nZV90YWtlbl9yZXdhcmRfaWRfbGlzdBgGIAMoDRIPCgdy",
+            "ZXRjb2RlGAwgASgNEjIKF2ZpbmlzaGVkX3JhaWRfaW5mb19saXN0GAQgAygL",
+            "MhEuRmluaXNoZWRSYWlkSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FinishedRaidInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeRaidReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -89,7 +89,7 @@ namespace EggLink.DanhengServer.Proto {
       return new GetRaidInfoScRsp(this);
     }
 
-    /// <summary>Field number for the "ChallengeRaidList" field.</summary>
+    /// <summary>Field number for the "challenge_raid_list" field.</summary>
     public const int ChallengeRaidListFieldNumber = 5;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChallengeRaid> _repeated_challengeRaidList_codec
         = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.ChallengeRaid.Parser);
@@ -100,7 +100,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return challengeRaidList_; }
     }
 
-    /// <summary>Field number for the "ChallengeTakenRewardIdList" field.</summary>
+    /// <summary>Field number for the "challenge_taken_reward_id_list" field.</summary>
     public const int ChallengeTakenRewardIdListFieldNumber = 6;
     private static readonly pb::FieldCodec<uint> _repeated_challengeTakenRewardIdList_codec
         = pb::FieldCodec.ForUInt32(50);
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return challengeTakenRewardIdList_; }
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 12;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "FinishedRaidInfoList" field.</summary>
+    /// <summary>Field number for the "finished_raid_info_list" field.</summary>
     public const int FinishedRaidInfoListFieldNumber = 4;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.FinishedRaidInfo> _repeated_finishedRaidInfoList_codec
         = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.FinishedRaidInfo.Parser);

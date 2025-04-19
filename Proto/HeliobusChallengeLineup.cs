@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static HeliobusChallengeLineupReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1IZWxpb2J1c0NoYWxsZW5nZUxpbmV1cC5wcm90byJRChdIZWxpb2J1c0No",
-            "YWxsZW5nZUxpbmV1cBIPCgdHcm91cElkGAkgASgNEhQKDEF2YXRhcklkTGlz",
-            "dBgGIAMoDRIPCgdTa2lsbElkGAwgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
-            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "Ch1IZWxpb2J1c0NoYWxsZW5nZUxpbmV1cC5wcm90byJVChdIZWxpb2J1c0No",
+            "YWxsZW5nZUxpbmV1cBIQCghncm91cF9pZBgJIAEoDRIWCg5hdmF0YXJfaWRf",
+            "bGlzdBgGIAMoDRIQCghza2lsbF9pZBgMIAEoDUIeqgIbRWdnTGluay5EYW5o",
+            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
       return new HeliobusChallengeLineup(this);
     }
 
-    /// <summary>Field number for the "GroupId" field.</summary>
+    /// <summary>Field number for the "group_id" field.</summary>
     public const int GroupIdFieldNumber = 9;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "AvatarIdList" field.</summary>
+    /// <summary>Field number for the "avatar_id_list" field.</summary>
     public const int AvatarIdListFieldNumber = 6;
     private static readonly pb::FieldCodec<uint> _repeated_avatarIdList_codec
         = pb::FieldCodec.ForUInt32(50);
@@ -108,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return avatarIdList_; }
     }
 
-    /// <summary>Field number for the "SkillId" field.</summary>
+    /// <summary>Field number for the "skill_id" field.</summary>
     public const int SkillIdFieldNumber = 12;
     private uint skillId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

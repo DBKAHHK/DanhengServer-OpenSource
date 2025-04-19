@@ -25,13 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxSb2d1ZUZvcm11bGFTZWxlY3RJbmZvLnByb3RvGhJJdGVtQ29zdERhdGEu",
-            "cHJvdG8i/AEKFlJvZ3VlRm9ybXVsYVNlbGVjdEluZm8SIwobSGFuZGJvb2tV",
-            "bmxvY2tGb3JtdWxhSWRMaXN0GAEgAygNEhwKFFJvbGxGb3JtdWxhRnJlZUNv",
-            "dW50GAYgASgNEg4KBkhpbnRJZBgCIAEoDRIbChNSb2xsRm9ybXVsYU1heENv",
-            "dW50GAMgASgNEhgKEFJvbGxGb3JtdWxhQ291bnQYBCABKA0SKgoTUm9sbEZv",
-            "cm11bGFDb3N0RGF0YRgKIAEoCzINLkl0ZW1Db3N0RGF0YRIPCgdDYW5Sb2xs",
-            "GAsgASgIEhsKE1NlbGVjdEZvcm11bGFJZExpc3QYByADKA1CHqoCG0VnZ0xp",
-            "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "cHJvdG8ikAIKFlJvZ3VlRm9ybXVsYVNlbGVjdEluZm8SJwofaGFuZGJvb2tf",
+            "dW5sb2NrX2Zvcm11bGFfaWRfbGlzdBgBIAMoDRIfChdyb2xsX2Zvcm11bGFf",
+            "ZnJlZV9jb3VudBgGIAEoDRIPCgdoaW50X2lkGAIgASgNEh4KFnJvbGxfZm9y",
+            "bXVsYV9tYXhfY291bnQYAyABKA0SGgoScm9sbF9mb3JtdWxhX2NvdW50GAQg",
+            "ASgNEi0KFnJvbGxfZm9ybXVsYV9jb3N0X2RhdGEYCiABKAsyDS5JdGVtQ29z",
+            "dERhdGESEAoIY2FuX3JvbGwYCyABKAgSHgoWc2VsZWN0X2Zvcm11bGFfaWRf",
+            "bGlzdBgHIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -94,7 +95,7 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueFormulaSelectInfo(this);
     }
 
-    /// <summary>Field number for the "HandbookUnlockFormulaIdList" field.</summary>
+    /// <summary>Field number for the "handbook_unlock_formula_id_list" field.</summary>
     public const int HandbookUnlockFormulaIdListFieldNumber = 1;
     private static readonly pb::FieldCodec<uint> _repeated_handbookUnlockFormulaIdList_codec
         = pb::FieldCodec.ForUInt32(10);
@@ -105,7 +106,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return handbookUnlockFormulaIdList_; }
     }
 
-    /// <summary>Field number for the "RollFormulaFreeCount" field.</summary>
+    /// <summary>Field number for the "roll_formula_free_count" field.</summary>
     public const int RollFormulaFreeCountFieldNumber = 6;
     private uint rollFormulaFreeCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -117,7 +118,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "HintId" field.</summary>
+    /// <summary>Field number for the "hint_id" field.</summary>
     public const int HintIdFieldNumber = 2;
     private uint hintId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -129,7 +130,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "RollFormulaMaxCount" field.</summary>
+    /// <summary>Field number for the "roll_formula_max_count" field.</summary>
     public const int RollFormulaMaxCountFieldNumber = 3;
     private uint rollFormulaMaxCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -141,7 +142,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "RollFormulaCount" field.</summary>
+    /// <summary>Field number for the "roll_formula_count" field.</summary>
     public const int RollFormulaCountFieldNumber = 4;
     private uint rollFormulaCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -153,7 +154,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "RollFormulaCostData" field.</summary>
+    /// <summary>Field number for the "roll_formula_cost_data" field.</summary>
     public const int RollFormulaCostDataFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.ItemCostData rollFormulaCostData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -165,7 +166,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CanRoll" field.</summary>
+    /// <summary>Field number for the "can_roll" field.</summary>
     public const int CanRollFieldNumber = 11;
     private bool canRoll_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -177,7 +178,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "SelectFormulaIdList" field.</summary>
+    /// <summary>Field number for the "select_formula_id_list" field.</summary>
     public const int SelectFormulaIdListFieldNumber = 7;
     private static readonly pb::FieldCodec<uint> _repeated_selectFormulaIdList_codec
         = pb::FieldCodec.ForUInt32(58);

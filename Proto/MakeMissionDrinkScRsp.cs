@@ -25,10 +25,10 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtNYWtlTWlzc2lvbkRyaW5rU2NSc3AucHJvdG8aEUVFS0ZFQ0RJSEpFLnBy",
-            "b3RvImsKFU1ha2VNaXNzaW9uRHJpbmtTY1JzcBIhCgtDdXN0b21EcmluaxgI",
-            "IAEoCzIMLkVFS0ZFQ0RJSEpFEg4KBklzU3VjYxgJIAEoCBIOCgZJc1NhdmUY",
-            "ByABKAgSDwoHUmV0Y29kZRgGIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
-            "dmVyLlByb3RvYgZwcm90bzM="));
+            "b3RvIm4KFU1ha2VNaXNzaW9uRHJpbmtTY1JzcBIiCgxjdXN0b21fZHJpbmsY",
+            "CCABKAsyDC5FRUtGRUNESUhKRRIPCgdpc19zdWNjGAkgASgIEg8KB2lzX3Nh",
+            "dmUYByABKAgSDwoHcmV0Y29kZRgGIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EEKFECDIHJEReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
       return new MakeMissionDrinkScRsp(this);
     }
 
-    /// <summary>Field number for the "CustomDrink" field.</summary>
+    /// <summary>Field number for the "custom_drink" field.</summary>
     public const int CustomDrinkFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.EEKFECDIHJE customDrink_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "IsSucc" field.</summary>
+    /// <summary>Field number for the "is_succ" field.</summary>
     public const int IsSuccFieldNumber = 9;
     private bool isSucc_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "IsSave" field.</summary>
+    /// <summary>Field number for the "is_save" field.</summary>
     public const int IsSaveFieldNumber = 7;
     private bool isSave_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 6;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static OEDDOIJLGFGReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFPRURET0lKTEdGRy5wcm90bxoRTENNSkZFSE1DTkYucHJvdG8ibQoLT0VE",
+            "ChFPRURET0lKTEdGRy5wcm90bxoRTENNSkZFSE1DTkYucHJvdG8ibwoLT0VE",
             "RE9JSkxHRkcSFQoLRkZCRkNDTE9ES0sYByABKA1IABIVCgtLQUNFTEtHQ05F",
             "SRgEIAEoDUgAEiMKC0ZBT01GTU1MTUhEGAsgASgLMgwuTENNSkZFSE1DTkZI",
-            "AEILCglpbmZvX2Nhc2VCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
-            "b2IGcHJvdG8z"));
+            "AEINCgtFRU9ERExPSE5FREIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LCMJFEHMCNFReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OEDDOIJLGFG), global::EggLink.DanhengServer.Proto.OEDDOIJLGFG.Parser, new[]{ "FFBFCCLODKK", "KACELKGCNEI", "FAOMFMMLMHD" }, new[]{ "InfoCase" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OEDDOIJLGFG), global::EggLink.DanhengServer.Proto.OEDDOIJLGFG.Parser, new[]{ "FFBFCCLODKK", "KACELKGCNEI", "FAOMFMMLMHD" }, new[]{ "EEODDLOHNED" }, null, null, null)
           }));
     }
     #endregion
@@ -74,14 +74,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OEDDOIJLGFG(OEDDOIJLGFG other) : this() {
-      switch (other.InfoCaseCase) {
-        case InfoCaseOneofCase.FFBFCCLODKK:
+      switch (other.EEODDLOHNEDCase) {
+        case EEODDLOHNEDOneofCase.FFBFCCLODKK:
           FFBFCCLODKK = other.FFBFCCLODKK;
           break;
-        case InfoCaseOneofCase.KACELKGCNEI:
+        case EEODDLOHNEDOneofCase.KACELKGCNEI:
           KACELKGCNEI = other.KACELKGCNEI;
           break;
-        case InfoCaseOneofCase.FAOMFMMLMHD:
+        case EEODDLOHNEDOneofCase.FAOMFMMLMHD:
           FAOMFMMLMHD = other.FAOMFMMLMHD.Clone();
           break;
       }
@@ -100,24 +100,24 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint FFBFCCLODKK {
-      get { return HasFFBFCCLODKK ? (uint) infoCase_ : 0; }
+      get { return HasFFBFCCLODKK ? (uint) eEODDLOHNED_ : 0; }
       set {
-        infoCase_ = value;
-        infoCaseCase_ = InfoCaseOneofCase.FFBFCCLODKK;
+        eEODDLOHNED_ = value;
+        eEODDLOHNEDCase_ = EEODDLOHNEDOneofCase.FFBFCCLODKK;
       }
     }
     /// <summary>Gets whether the "FFBFCCLODKK" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasFFBFCCLODKK {
-      get { return infoCaseCase_ == InfoCaseOneofCase.FFBFCCLODKK; }
+      get { return eEODDLOHNEDCase_ == EEODDLOHNEDOneofCase.FFBFCCLODKK; }
     }
     /// <summary> Clears the value of the oneof if it's currently set to "FFBFCCLODKK" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearFFBFCCLODKK() {
       if (HasFFBFCCLODKK) {
-        ClearInfoCase();
+        ClearEEODDLOHNED();
       }
     }
 
@@ -126,24 +126,24 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint KACELKGCNEI {
-      get { return HasKACELKGCNEI ? (uint) infoCase_ : 0; }
+      get { return HasKACELKGCNEI ? (uint) eEODDLOHNED_ : 0; }
       set {
-        infoCase_ = value;
-        infoCaseCase_ = InfoCaseOneofCase.KACELKGCNEI;
+        eEODDLOHNED_ = value;
+        eEODDLOHNEDCase_ = EEODDLOHNEDOneofCase.KACELKGCNEI;
       }
     }
     /// <summary>Gets whether the "KACELKGCNEI" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasKACELKGCNEI {
-      get { return infoCaseCase_ == InfoCaseOneofCase.KACELKGCNEI; }
+      get { return eEODDLOHNEDCase_ == EEODDLOHNEDOneofCase.KACELKGCNEI; }
     }
     /// <summary> Clears the value of the oneof if it's currently set to "KACELKGCNEI" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearKACELKGCNEI() {
       if (HasKACELKGCNEI) {
-        ClearInfoCase();
+        ClearEEODDLOHNED();
       }
     }
 
@@ -152,33 +152,33 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.LCMJFEHMCNF FAOMFMMLMHD {
-      get { return infoCaseCase_ == InfoCaseOneofCase.FAOMFMMLMHD ? (global::EggLink.DanhengServer.Proto.LCMJFEHMCNF) infoCase_ : null; }
+      get { return eEODDLOHNEDCase_ == EEODDLOHNEDOneofCase.FAOMFMMLMHD ? (global::EggLink.DanhengServer.Proto.LCMJFEHMCNF) eEODDLOHNED_ : null; }
       set {
-        infoCase_ = value;
-        infoCaseCase_ = value == null ? InfoCaseOneofCase.None : InfoCaseOneofCase.FAOMFMMLMHD;
+        eEODDLOHNED_ = value;
+        eEODDLOHNEDCase_ = value == null ? EEODDLOHNEDOneofCase.None : EEODDLOHNEDOneofCase.FAOMFMMLMHD;
       }
     }
 
-    private object infoCase_;
-    /// <summary>Enum of possible cases for the "info_case" oneof.</summary>
-    public enum InfoCaseOneofCase {
+    private object eEODDLOHNED_;
+    /// <summary>Enum of possible cases for the "EEODDLOHNED" oneof.</summary>
+    public enum EEODDLOHNEDOneofCase {
       None = 0,
       FFBFCCLODKK = 7,
       KACELKGCNEI = 4,
       FAOMFMMLMHD = 11,
     }
-    private InfoCaseOneofCase infoCaseCase_ = InfoCaseOneofCase.None;
+    private EEODDLOHNEDOneofCase eEODDLOHNEDCase_ = EEODDLOHNEDOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InfoCaseOneofCase InfoCaseCase {
-      get { return infoCaseCase_; }
+    public EEODDLOHNEDOneofCase EEODDLOHNEDCase {
+      get { return eEODDLOHNEDCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearInfoCase() {
-      infoCaseCase_ = InfoCaseOneofCase.None;
-      infoCase_ = null;
+    public void ClearEEODDLOHNED() {
+      eEODDLOHNEDCase_ = EEODDLOHNEDOneofCase.None;
+      eEODDLOHNED_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -199,7 +199,7 @@ namespace EggLink.DanhengServer.Proto {
       if (FFBFCCLODKK != other.FFBFCCLODKK) return false;
       if (KACELKGCNEI != other.KACELKGCNEI) return false;
       if (!object.Equals(FAOMFMMLMHD, other.FAOMFMMLMHD)) return false;
-      if (InfoCaseCase != other.InfoCaseCase) return false;
+      if (EEODDLOHNEDCase != other.EEODDLOHNEDCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -209,8 +209,8 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (HasFFBFCCLODKK) hash ^= FFBFCCLODKK.GetHashCode();
       if (HasKACELKGCNEI) hash ^= KACELKGCNEI.GetHashCode();
-      if (infoCaseCase_ == InfoCaseOneofCase.FAOMFMMLMHD) hash ^= FAOMFMMLMHD.GetHashCode();
-      hash ^= (int) infoCaseCase_;
+      if (eEODDLOHNEDCase_ == EEODDLOHNEDOneofCase.FAOMFMMLMHD) hash ^= FAOMFMMLMHD.GetHashCode();
+      hash ^= (int) eEODDLOHNEDCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -237,7 +237,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(56);
         output.WriteUInt32(FFBFCCLODKK);
       }
-      if (infoCaseCase_ == InfoCaseOneofCase.FAOMFMMLMHD) {
+      if (eEODDLOHNEDCase_ == EEODDLOHNEDOneofCase.FAOMFMMLMHD) {
         output.WriteRawTag(90);
         output.WriteMessage(FAOMFMMLMHD);
       }
@@ -259,7 +259,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(56);
         output.WriteUInt32(FFBFCCLODKK);
       }
-      if (infoCaseCase_ == InfoCaseOneofCase.FAOMFMMLMHD) {
+      if (eEODDLOHNEDCase_ == EEODDLOHNEDOneofCase.FAOMFMMLMHD) {
         output.WriteRawTag(90);
         output.WriteMessage(FAOMFMMLMHD);
       }
@@ -279,7 +279,7 @@ namespace EggLink.DanhengServer.Proto {
       if (HasKACELKGCNEI) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KACELKGCNEI);
       }
-      if (infoCaseCase_ == InfoCaseOneofCase.FAOMFMMLMHD) {
+      if (eEODDLOHNEDCase_ == EEODDLOHNEDOneofCase.FAOMFMMLMHD) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(FAOMFMMLMHD);
       }
       if (_unknownFields != null) {
@@ -294,14 +294,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      switch (other.InfoCaseCase) {
-        case InfoCaseOneofCase.FFBFCCLODKK:
+      switch (other.EEODDLOHNEDCase) {
+        case EEODDLOHNEDOneofCase.FFBFCCLODKK:
           FFBFCCLODKK = other.FFBFCCLODKK;
           break;
-        case InfoCaseOneofCase.KACELKGCNEI:
+        case EEODDLOHNEDOneofCase.KACELKGCNEI:
           KACELKGCNEI = other.KACELKGCNEI;
           break;
-        case InfoCaseOneofCase.FAOMFMMLMHD:
+        case EEODDLOHNEDOneofCase.FAOMFMMLMHD:
           if (FAOMFMMLMHD == null) {
             FAOMFMMLMHD = new global::EggLink.DanhengServer.Proto.LCMJFEHMCNF();
           }
@@ -334,7 +334,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 90: {
             global::EggLink.DanhengServer.Proto.LCMJFEHMCNF subBuilder = new global::EggLink.DanhengServer.Proto.LCMJFEHMCNF();
-            if (infoCaseCase_ == InfoCaseOneofCase.FAOMFMMLMHD) {
+            if (eEODDLOHNEDCase_ == EEODDLOHNEDOneofCase.FAOMFMMLMHD) {
               subBuilder.MergeFrom(FAOMFMMLMHD);
             }
             input.ReadMessage(subBuilder);
@@ -366,7 +366,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 90: {
             global::EggLink.DanhengServer.Proto.LCMJFEHMCNF subBuilder = new global::EggLink.DanhengServer.Proto.LCMJFEHMCNF();
-            if (infoCaseCase_ == InfoCaseOneofCase.FAOMFMMLMHD) {
+            if (eEODDLOHNEDCase_ == EEODDLOHNEDOneofCase.FAOMFMMLMHD) {
               subBuilder.MergeFrom(FAOMFMMLMHD);
             }
             input.ReadMessage(subBuilder);

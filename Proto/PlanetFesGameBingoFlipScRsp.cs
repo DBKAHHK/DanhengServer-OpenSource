@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static PlanetFesGameBingoFlipScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFQbGFuZXRGZXNHYW1lQmluZ29GbGlwU2NSc3AucHJvdG8aFVBsYW5ldEZl",
-            "c1Jld2FyZC5wcm90byJ6ChtQbGFuZXRGZXNHYW1lQmluZ29GbGlwU2NSc3AS",
-            "IAoGcmV3YXJkGAEgASgLMhAuUGxhbmV0RmVzUmV3YXJkEhMKC05GRUFETUZO",
-            "RkxLGAUgASgIEhMKC0hDRlBPRk1ER0tOGA0gASgNEg8KB3JldGNvZGUYCiAB",
-            "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "CiFQbGFuZXRGZXNHYW1lQmluZ29GbGlwU2NSc3AucHJvdG8aEURJQUhOTU5D",
+            "UEJELnByb3RvInYKG1BsYW5ldEZlc0dhbWVCaW5nb0ZsaXBTY1JzcBIcCgZy",
+            "ZXdhcmQYASABKAsyDC5ESUFITk1OQ1BCRBITCgtORkVBRE1GTkZMSxgFIAEo",
+            "CBITCgtIQ0ZQT0ZNREdLThgNIAEoDRIPCgdyZXRjb2RlGAogASgNQh6qAhtF",
+            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlanetFesRewardReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DIAHNMNCPBDReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlanetFesGameBingoFlipScRsp), global::EggLink.DanhengServer.Proto.PlanetFesGameBingoFlipScRsp.Parser, new[]{ "Reward", "NFEADMFNFLK", "HCFPOFMDGKN", "Retcode" }, null, null, null, null)
           }));
@@ -89,10 +89,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "reward" field.</summary>
     public const int RewardFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.PlanetFesReward reward_;
+    private global::EggLink.DanhengServer.Proto.DIAHNMNCPBD reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.PlanetFesReward Reward {
+    public global::EggLink.DanhengServer.Proto.DIAHNMNCPBD Reward {
       get { return reward_; }
       set {
         reward_ = value;
@@ -261,7 +261,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.reward_ != null) {
         if (reward_ == null) {
-          Reward = new global::EggLink.DanhengServer.Proto.PlanetFesReward();
+          Reward = new global::EggLink.DanhengServer.Proto.DIAHNMNCPBD();
         }
         Reward.MergeFrom(other.Reward);
       }
@@ -291,7 +291,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 10: {
             if (reward_ == null) {
-              Reward = new global::EggLink.DanhengServer.Proto.PlanetFesReward();
+              Reward = new global::EggLink.DanhengServer.Proto.DIAHNMNCPBD();
             }
             input.ReadMessage(Reward);
             break;
@@ -325,7 +325,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 10: {
             if (reward_ == null) {
-              Reward = new global::EggLink.DanhengServer.Proto.PlanetFesReward();
+              Reward = new global::EggLink.DanhengServer.Proto.DIAHNMNCPBD();
             }
             input.ReadMessage(Reward);
             break;

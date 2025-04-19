@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch9HZXRTZXJ2ZXJMb2dTZXR0aW5nc1NjUnNwLnByb3RvGhdTZXJ2ZXJMb2dT",
             "ZXR0aW5ncy5wcm90byJSChlHZXRTZXJ2ZXJMb2dTZXR0aW5nc1NjUnNwEiQK",
-            "CFNldHRpbmdzGA0gASgLMhIuU2VydmVyTG9nU2V0dGluZ3MSDwoHUmV0Y29k",
+            "CHNldHRpbmdzGA0gASgLMhIuU2VydmVyTG9nU2V0dGluZ3MSDwoHcmV0Y29k",
             "ZRgMIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
       return new GetServerLogSettingsScRsp(this);
     }
 
-    /// <summary>Field number for the "Settings" field.</summary>
+    /// <summary>Field number for the "settings" field.</summary>
     public const int SettingsFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.ServerLogSettings settings_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 12;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

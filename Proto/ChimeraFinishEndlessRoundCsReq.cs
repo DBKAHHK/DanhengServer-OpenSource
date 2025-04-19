@@ -24,18 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static ChimeraFinishEndlessRoundCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiRDaGltZXJhRmluaXNoRW5kbGVzc1JvdW5kQ3NSZXEucHJvdG8aEUpNQUFO",
-            "TVBBTkhNLnByb3RvGhFFR0RHSEZMTE1HTi5wcm90bxoRTVBKRElCQ0NPSEYu",
-            "cHJvdG8iuAEKHkNoaW1lcmFGaW5pc2hFbmRsZXNzUm91bmRDc1JlcRIcCgZs",
+            "CiRDaGltZXJhRmluaXNoRW5kbGVzc1JvdW5kQ3NSZXEucHJvdG8aEU1QSkRJ",
+            "QkNDT0hGLnByb3RvGhFFR0RHSEZMTE1HTi5wcm90bxoRSk1BQU5NUEFOSE0u",
+            "cHJvdG8iuwEKHkNoaW1lcmFGaW5pc2hFbmRsZXNzUm91bmRDc1JlcRIcCgZs",
             "aW5ldXAYAyABKAsyDC5NUEpESUJDQ09IRhIZCgNzdHQYASABKAsyDC5FR0RH",
-            "SEZMTE1HThITCgtIR09ER0RFQUFKTxgCIAMoDRIQCghpc19yZXNldBgNIAEo",
-            "CBITCgtDUEJEQkFJREFFSBgMIAEoDRIhCgtPUEFNQUVJSkNPSBgKIAMoCzIM",
-            "LkpNQUFOTVBBTkhNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
-            "BnByb3RvMw=="));
+            "SEZMTE1HThITCgtIR09ER0RFQUFKTxgCIAMoDRITCgtQQUhNQUdQRkREShgN",
+            "IAEoCBITCgtDUEJEQkFJREFFSBgMIAEoDRIhCgtPUEFNQUVJSkNPSBgKIAMo",
+            "CzIMLkpNQUFOTVBBTkhNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
+            "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JMAANMPANHMReflection.Descriptor, global::EggLink.DanhengServer.Proto.EGDGHFLLMGNReflection.Descriptor, global::EggLink.DanhengServer.Proto.MPJDIBCCOHFReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MPJDIBCCOHFReflection.Descriptor, global::EggLink.DanhengServer.Proto.EGDGHFLLMGNReflection.Descriptor, global::EggLink.DanhengServer.Proto.JMAANMPANHMReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChimeraFinishEndlessRoundCsReq), global::EggLink.DanhengServer.Proto.ChimeraFinishEndlessRoundCsReq.Parser, new[]{ "Lineup", "Stt", "HGODGDEAAJO", "IsReset", "CPBDBAIDAEH", "OPAMAEIJCOH" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChimeraFinishEndlessRoundCsReq), global::EggLink.DanhengServer.Proto.ChimeraFinishEndlessRoundCsReq.Parser, new[]{ "Lineup", "Stt", "HGODGDEAAJO", "PAHMAGPFDDJ", "CPBDBAIDAEH", "OPAMAEIJCOH" }, null, null, null, null)
           }));
     }
     #endregion
@@ -80,7 +80,7 @@ namespace EggLink.DanhengServer.Proto {
       lineup_ = other.lineup_ != null ? other.lineup_.Clone() : null;
       stt_ = other.stt_ != null ? other.stt_.Clone() : null;
       hGODGDEAAJO_ = other.hGODGDEAAJO_.Clone();
-      isReset_ = other.isReset_;
+      pAHMAGPFDDJ_ = other.pAHMAGPFDDJ_;
       cPBDBAIDAEH_ = other.cPBDBAIDAEH_;
       oPAMAEIJCOH_ = other.oPAMAEIJCOH_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -127,15 +127,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return hGODGDEAAJO_; }
     }
 
-    /// <summary>Field number for the "is_reset" field.</summary>
-    public const int IsResetFieldNumber = 13;
-    private bool isReset_;
+    /// <summary>Field number for the "PAHMAGPFDDJ" field.</summary>
+    public const int PAHMAGPFDDJFieldNumber = 13;
+    private bool pAHMAGPFDDJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsReset {
-      get { return isReset_; }
+    public bool PAHMAGPFDDJ {
+      get { return pAHMAGPFDDJ_; }
       set {
-        isReset_ = value;
+        pAHMAGPFDDJ_ = value;
       }
     }
 
@@ -180,7 +180,7 @@ namespace EggLink.DanhengServer.Proto {
       if (!object.Equals(Lineup, other.Lineup)) return false;
       if (!object.Equals(Stt, other.Stt)) return false;
       if(!hGODGDEAAJO_.Equals(other.hGODGDEAAJO_)) return false;
-      if (IsReset != other.IsReset) return false;
+      if (PAHMAGPFDDJ != other.PAHMAGPFDDJ) return false;
       if (CPBDBAIDAEH != other.CPBDBAIDAEH) return false;
       if(!oPAMAEIJCOH_.Equals(other.oPAMAEIJCOH_)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -193,7 +193,7 @@ namespace EggLink.DanhengServer.Proto {
       if (lineup_ != null) hash ^= Lineup.GetHashCode();
       if (stt_ != null) hash ^= Stt.GetHashCode();
       hash ^= hGODGDEAAJO_.GetHashCode();
-      if (IsReset != false) hash ^= IsReset.GetHashCode();
+      if (PAHMAGPFDDJ != false) hash ^= PAHMAGPFDDJ.GetHashCode();
       if (CPBDBAIDAEH != 0) hash ^= CPBDBAIDAEH.GetHashCode();
       hash ^= oPAMAEIJCOH_.GetHashCode();
       if (_unknownFields != null) {
@@ -228,9 +228,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(96);
         output.WriteUInt32(CPBDBAIDAEH);
       }
-      if (IsReset != false) {
+      if (PAHMAGPFDDJ != false) {
         output.WriteRawTag(104);
-        output.WriteBool(IsReset);
+        output.WriteBool(PAHMAGPFDDJ);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -256,9 +256,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(96);
         output.WriteUInt32(CPBDBAIDAEH);
       }
-      if (IsReset != false) {
+      if (PAHMAGPFDDJ != false) {
         output.WriteRawTag(104);
-        output.WriteBool(IsReset);
+        output.WriteBool(PAHMAGPFDDJ);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -277,7 +277,7 @@ namespace EggLink.DanhengServer.Proto {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stt);
       }
       size += hGODGDEAAJO_.CalculateSize(_repeated_hGODGDEAAJO_codec);
-      if (IsReset != false) {
+      if (PAHMAGPFDDJ != false) {
         size += 1 + 1;
       }
       if (CPBDBAIDAEH != 0) {
@@ -309,8 +309,8 @@ namespace EggLink.DanhengServer.Proto {
         Stt.MergeFrom(other.Stt);
       }
       hGODGDEAAJO_.Add(other.hGODGDEAAJO_);
-      if (other.IsReset != false) {
-        IsReset = other.IsReset;
+      if (other.PAHMAGPFDDJ != false) {
+        PAHMAGPFDDJ = other.PAHMAGPFDDJ;
       }
       if (other.CPBDBAIDAEH != 0) {
         CPBDBAIDAEH = other.CPBDBAIDAEH;
@@ -359,7 +359,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 104: {
-            IsReset = input.ReadBool();
+            PAHMAGPFDDJ = input.ReadBool();
             break;
           }
         }
@@ -405,7 +405,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 104: {
-            IsReset = input.ReadBool();
+            PAHMAGPFDDJ = input.ReadBool();
             break;
           }
         }

@@ -24,11 +24,11 @@ namespace EggLink.DanhengServer.Proto {
     static FightActivityGroupReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhGaWdodEFjdGl2aXR5R3JvdXAucHJvdG8ihwEKEkZpZ2h0QWN0aXZpdHlH",
-            "cm91cBIPCgdHcm91cElkGAMgASgNEiAKGFBhc3NlZE1heERpZmZpY3VsdHlM",
-            "ZXZlbBgFIAEoDRImCh5UYWtlbkRpZmZpY3VsdHlMZXZlbFJld2FyZExpc3QY",
-            "CSADKA0SFgoORW5kbGVzc01heFdhdmUYCCABKA1CHqoCG0VnZ0xpbmsuRGFu",
-            "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChhGaWdodEFjdGl2aXR5R3JvdXAucHJvdG8ikQEKEkZpZ2h0QWN0aXZpdHlH",
+            "cm91cBIQCghncm91cF9pZBgDIAEoDRIjChtwYXNzZWRfbWF4X2RpZmZpY3Vs",
+            "dHlfbGV2ZWwYBSABKA0SKgoidGFrZW5fZGlmZmljdWx0eV9sZXZlbF9yZXdh",
+            "cmRfbGlzdBgJIAMoDRIYChBlbmRsZXNzX21heF93YXZlGAggASgNQh6qAhtF",
+            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
       return new FightActivityGroup(this);
     }
 
-    /// <summary>Field number for the "GroupId" field.</summary>
+    /// <summary>Field number for the "group_id" field.</summary>
     public const int GroupIdFieldNumber = 3;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "PassedMaxDifficultyLevel" field.</summary>
+    /// <summary>Field number for the "passed_max_difficulty_level" field.</summary>
     public const int PassedMaxDifficultyLevelFieldNumber = 5;
     private uint passedMaxDifficultyLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "TakenDifficultyLevelRewardList" field.</summary>
+    /// <summary>Field number for the "taken_difficulty_level_reward_list" field.</summary>
     public const int TakenDifficultyLevelRewardListFieldNumber = 9;
     private static readonly pb::FieldCodec<uint> _repeated_takenDifficultyLevelRewardList_codec
         = pb::FieldCodec.ForUInt32(74);
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return takenDifficultyLevelRewardList_; }
     }
 
-    /// <summary>Field number for the "EndlessMaxWave" field.</summary>
+    /// <summary>Field number for the "endless_max_wave" field.</summary>
     public const int EndlessMaxWaveFieldNumber = 8;
     private uint endlessMaxWave_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

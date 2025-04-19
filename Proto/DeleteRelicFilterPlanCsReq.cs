@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static DeleteRelicFilterPlanCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiBEZWxldGVSZWxpY0ZpbHRlclBsYW5Dc1JlcS5wcm90byJGChpEZWxldGVS",
-            "ZWxpY0ZpbHRlclBsYW5Dc1JlcRIRCglJc0JhdGNoT3AYDSABKAgSFQoNU2xv",
-            "dEluZGV4TGlzdBgIIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
-            "b3RvYgZwcm90bzM="));
+            "CiBEZWxldGVSZWxpY0ZpbHRlclBsYW5Dc1JlcS5wcm90byJKChpEZWxldGVS",
+            "ZWxpY0ZpbHRlclBsYW5Dc1JlcRITCgtpc19iYXRjaF9vcBgNIAEoCBIXCg9z",
+            "bG90X2luZGV4X2xpc3QYCCADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
       return new DeleteRelicFilterPlanCsReq(this);
     }
 
-    /// <summary>Field number for the "IsBatchOp" field.</summary>
+    /// <summary>Field number for the "is_batch_op" field.</summary>
     public const int IsBatchOpFieldNumber = 13;
     private bool isBatchOp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "SlotIndexList" field.</summary>
+    /// <summary>Field number for the "slot_index_list" field.</summary>
     public const int SlotIndexListFieldNumber = 8;
     private static readonly pb::FieldCodec<uint> _repeated_slotIndexList_codec
         = pb::FieldCodec.ForUInt32(66);

@@ -25,14 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtHZXRGaWdodEZlc3REYXRhU2NSc3AucHJvdG8aEUlLTE5JTEtQRU5BLnBy",
-            "b3RvIoMBChVHZXRGaWdodEZlc3REYXRhU2NSc3ASJAoOY2hhbGxlbmdlX2xp",
+            "b3RvIokBChVHZXRGaWdodEZlc3REYXRhU2NSc3ASJAoOY2hhbGxlbmdlX2xp",
             "c3QYCiADKAsyDC5JS0xOSUxLUEVOQRITCgtNRkdPTkhKR0lQUBgJIAMoDRIP",
-            "CgdyZXRjb2RlGAQgASgNEgwKBGNvaW4YDyABKA0SEAoIc2NvcmVfaWQYAyAB",
-            "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "CgdyZXRjb2RlGAQgASgNEhIKCml0ZW1fdmFsdWUYDyABKA0SEAoIc2NvcmVf",
+            "aWQYAyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IKLNILKPENAReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetFightFestDataScRsp), global::EggLink.DanhengServer.Proto.GetFightFestDataScRsp.Parser, new[]{ "ChallengeList", "MFGONHJGIPP", "Retcode", "Coin", "ScoreId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetFightFestDataScRsp), global::EggLink.DanhengServer.Proto.GetFightFestDataScRsp.Parser, new[]{ "ChallengeList", "MFGONHJGIPP", "Retcode", "ItemValue", "ScoreId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,7 +78,7 @@ namespace EggLink.DanhengServer.Proto {
       challengeList_ = other.challengeList_.Clone();
       mFGONHJGIPP_ = other.mFGONHJGIPP_.Clone();
       retcode_ = other.retcode_;
-      coin_ = other.coin_;
+      itemValue_ = other.itemValue_;
       scoreId_ = other.scoreId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -122,15 +123,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "coin" field.</summary>
-    public const int CoinFieldNumber = 15;
-    private uint coin_;
+    /// <summary>Field number for the "item_value" field.</summary>
+    public const int ItemValueFieldNumber = 15;
+    private uint itemValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Coin {
-      get { return coin_; }
+    public uint ItemValue {
+      get { return itemValue_; }
       set {
-        coin_ = value;
+        itemValue_ = value;
       }
     }
 
@@ -164,7 +165,7 @@ namespace EggLink.DanhengServer.Proto {
       if(!challengeList_.Equals(other.challengeList_)) return false;
       if(!mFGONHJGIPP_.Equals(other.mFGONHJGIPP_)) return false;
       if (Retcode != other.Retcode) return false;
-      if (Coin != other.Coin) return false;
+      if (ItemValue != other.ItemValue) return false;
       if (ScoreId != other.ScoreId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -176,7 +177,7 @@ namespace EggLink.DanhengServer.Proto {
       hash ^= challengeList_.GetHashCode();
       hash ^= mFGONHJGIPP_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (Coin != 0) hash ^= Coin.GetHashCode();
+      if (ItemValue != 0) hash ^= ItemValue.GetHashCode();
       if (ScoreId != 0) hash ^= ScoreId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -206,9 +207,9 @@ namespace EggLink.DanhengServer.Proto {
       }
       mFGONHJGIPP_.WriteTo(output, _repeated_mFGONHJGIPP_codec);
       challengeList_.WriteTo(output, _repeated_challengeList_codec);
-      if (Coin != 0) {
+      if (ItemValue != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(Coin);
+        output.WriteUInt32(ItemValue);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -230,9 +231,9 @@ namespace EggLink.DanhengServer.Proto {
       }
       mFGONHJGIPP_.WriteTo(ref output, _repeated_mFGONHJGIPP_codec);
       challengeList_.WriteTo(ref output, _repeated_challengeList_codec);
-      if (Coin != 0) {
+      if (ItemValue != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(Coin);
+        output.WriteUInt32(ItemValue);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -249,8 +250,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (Coin != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Coin);
+      if (ItemValue != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ItemValue);
       }
       if (ScoreId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScoreId);
@@ -272,8 +273,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.Coin != 0) {
-        Coin = other.Coin;
+      if (other.ItemValue != 0) {
+        ItemValue = other.ItemValue;
       }
       if (other.ScoreId != 0) {
         ScoreId = other.ScoreId;
@@ -311,7 +312,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 120: {
-            Coin = input.ReadUInt32();
+            ItemValue = input.ReadUInt32();
             break;
           }
         }
@@ -347,7 +348,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 120: {
-            Coin = input.ReadUInt32();
+            ItemValue = input.ReadUInt32();
             break;
           }
         }

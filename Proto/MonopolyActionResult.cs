@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpNb25vcG9seUFjdGlvblJlc3VsdC5wcm90bxoRR0tFSkZLQUtFTk0ucHJv",
-            "dG8aEU5JQkpBTUZNRUZELnByb3RvIsABChRNb25vcG9seUFjdGlvblJlc3Vs",
-            "dBITCgtDbGlja0NlbGxJZBgGIAEoDRISCgpDbGlja01hcElkGAcgASgNEhwK",
-            "BkRldGFpbBgLIAEoCzIMLk5JQkpBTUZNRUZEEhUKDVRyaWdnZXJDZWxsSWQY",
-            "DSABKA0SIAoKU291cmNlVHlwZRgOIAEoDjIMLkdLRUpGS0FLRU5NEhIKCkVm",
-            "ZmVjdFR5cGUYAiABKA0SFAoMVHJpZ2dlck1hcElkGAMgASgNQh6qAhtFZ2dM",
-            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "dG8aEU5JQkpBTUZNRUZELnByb3RvIsoBChRNb25vcG9seUFjdGlvblJlc3Vs",
+            "dBIVCg1jbGlja19jZWxsX2lkGAYgASgNEhQKDGNsaWNrX21hcF9pZBgHIAEo",
+            "DRIcCgZkZXRhaWwYCyABKAsyDC5OSUJKQU1GTUVGRBIXCg90cmlnZ2VyX2Nl",
+            "bGxfaWQYDSABKA0SIQoLc291cmNlX3R5cGUYDiABKA4yDC5HS0VKRktBS0VO",
+            "TRITCgtlZmZlY3RfdHlwZRgCIAEoDRIWCg50cmlnZ2VyX21hcF9pZBgDIAEo",
+            "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GKEJFKAKENMReflection.Descriptor, global::EggLink.DanhengServer.Proto.NIBJAMFMEFDReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -92,7 +92,7 @@ namespace EggLink.DanhengServer.Proto {
       return new MonopolyActionResult(this);
     }
 
-    /// <summary>Field number for the "ClickCellId" field.</summary>
+    /// <summary>Field number for the "click_cell_id" field.</summary>
     public const int ClickCellIdFieldNumber = 6;
     private uint clickCellId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -104,7 +104,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ClickMapId" field.</summary>
+    /// <summary>Field number for the "click_map_id" field.</summary>
     public const int ClickMapIdFieldNumber = 7;
     private uint clickMapId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -116,7 +116,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Detail" field.</summary>
+    /// <summary>Field number for the "detail" field.</summary>
     public const int DetailFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.NIBJAMFMEFD detail_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -128,7 +128,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "TriggerCellId" field.</summary>
+    /// <summary>Field number for the "trigger_cell_id" field.</summary>
     public const int TriggerCellIdFieldNumber = 13;
     private uint triggerCellId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -140,7 +140,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "SourceType" field.</summary>
+    /// <summary>Field number for the "source_type" field.</summary>
     public const int SourceTypeFieldNumber = 14;
     private global::EggLink.DanhengServer.Proto.GKEJFKAKENM sourceType_ = global::EggLink.DanhengServer.Proto.GKEJFKAKENM.MonopolyActionResultSourceTypeNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "EffectType" field.</summary>
+    /// <summary>Field number for the "effect_type" field.</summary>
     public const int EffectTypeFieldNumber = 2;
     private uint effectType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -164,7 +164,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "TriggerMapId" field.</summary>
+    /// <summary>Field number for the "trigger_map_id" field.</summary>
     public const int TriggerMapIdFieldNumber = 3;
     private uint triggerMapId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -24,14 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static LKAPFHAHNEMReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFMS0FQRkhBSE5FTS5wcm90byJTCgtMS0FQRkhBSE5FTRIQCghwYW5lbF9p",
-            "ZBgBIAEoDRIdChVtb2RpZmllcl9jb250ZW50X3R5cGUYAiABKA0SEwoLQ0ZE",
-            "QU5NT01IUEkYAyABKARCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
-            "b2IGcHJvdG8z"));
+            "ChFMS0FQRkhBSE5FTS5wcm90byI+CgtMS0FQRkhBSE5FTRIQCghwYW5lbF9p",
+            "ZBgBIAEoDRIdChVtb2RpZmllcl9jb250ZW50X3R5cGUYAiABKA1CHqoCG0Vn",
+            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LKAPFHAHNEM), global::EggLink.DanhengServer.Proto.LKAPFHAHNEM.Parser, new[]{ "PanelId", "ModifierContentType", "CFDANMOMHPI" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LKAPFHAHNEM), global::EggLink.DanhengServer.Proto.LKAPFHAHNEM.Parser, new[]{ "PanelId", "ModifierContentType" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +74,6 @@ namespace EggLink.DanhengServer.Proto {
     public LKAPFHAHNEM(LKAPFHAHNEM other) : this() {
       panelId_ = other.panelId_;
       modifierContentType_ = other.modifierContentType_;
-      cFDANMOMHPI_ = other.cFDANMOMHPI_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -109,18 +107,6 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CFDANMOMHPI" field.</summary>
-    public const int CFDANMOMHPIFieldNumber = 3;
-    private ulong cFDANMOMHPI_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong CFDANMOMHPI {
-      get { return cFDANMOMHPI_; }
-      set {
-        cFDANMOMHPI_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -138,7 +124,6 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (PanelId != other.PanelId) return false;
       if (ModifierContentType != other.ModifierContentType) return false;
-      if (CFDANMOMHPI != other.CFDANMOMHPI) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -148,7 +133,6 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (PanelId != 0) hash ^= PanelId.GetHashCode();
       if (ModifierContentType != 0) hash ^= ModifierContentType.GetHashCode();
-      if (CFDANMOMHPI != 0UL) hash ^= CFDANMOMHPI.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -175,10 +159,6 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt32(ModifierContentType);
       }
-      if (CFDANMOMHPI != 0UL) {
-        output.WriteRawTag(24);
-        output.WriteUInt64(CFDANMOMHPI);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -197,10 +177,6 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt32(ModifierContentType);
       }
-      if (CFDANMOMHPI != 0UL) {
-        output.WriteRawTag(24);
-        output.WriteUInt64(CFDANMOMHPI);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,9 +192,6 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (ModifierContentType != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ModifierContentType);
-      }
-      if (CFDANMOMHPI != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(CFDANMOMHPI);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -237,9 +210,6 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.ModifierContentType != 0) {
         ModifierContentType = other.ModifierContentType;
-      }
-      if (other.CFDANMOMHPI != 0UL) {
-        CFDANMOMHPI = other.CFDANMOMHPI;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -264,10 +234,6 @@ namespace EggLink.DanhengServer.Proto {
             ModifierContentType = input.ReadUInt32();
             break;
           }
-          case 24: {
-            CFDANMOMHPI = input.ReadUInt64();
-            break;
-          }
         }
       }
     #endif
@@ -289,10 +255,6 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 16: {
             ModifierContentType = input.ReadUInt32();
-            break;
-          }
-          case 24: {
-            CFDANMOMHPI = input.ReadUInt64();
             break;
           }
         }

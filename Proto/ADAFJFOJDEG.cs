@@ -25,16 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFBREFGSkZPSkRFRy5wcm90bxoRR01GRUpFRklCQkkucHJvdG8aEUlJS05H",
-            "TkhETUZJLnByb3RvIq8BCgtBREFGSkZPSkRFRxIVCgtCT05BR0hCQklDRhgI",
-            "IAEoDUgAEiMKC05OSFBDT0lJS0ZGGAIgASgLMgwuSUlLTkdOSERNRklIABIQ",
-            "Cghwcm9ncmVzcxgPIAEoDRIQCghxdWVzdF9pZBgHIAEoDRITCgtNRkFOTkNB",
-            "R0RNUBgDIAEoDRIcCgZzdGF0dXMYDSABKA4yDC5HTUZFSkVGSUJCSUINCgtH",
-            "TklPSExDTFBNUEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "TkhETUZJLnByb3RvIpoBCgtBREFGSkZPSkRFRxIQCghwcm9ncmVzcxgPIAEo",
+            "DRIcCgZzdGF0dXMYDSABKA4yDC5HTUZFSkVGSUJCSRIQCghxdWVzdF9pZBgH",
+            "IAEoDRIVCgtCT05BR0hCQklDRhgIIAEoDUgAEiMKC05OSFBDT0lJS0ZGGAIg",
+            "ASgLMgwuSUlLTkdOSERNRklIAEINCgtEQURKSkJIT0dNQ0IeqgIbRWdnTGlu",
+            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GMFEJEFIBBIReflection.Descriptor, global::EggLink.DanhengServer.Proto.IIKNGNHDMFIReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ADAFJFOJDEG), global::EggLink.DanhengServer.Proto.ADAFJFOJDEG.Parser, new[]{ "BONAGHBBICF", "NNHPCOIIKFF", "Progress", "QuestId", "MFANNCAGDMP", "Status" }, new[]{ "GNIOHLCLPMP" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ADAFJFOJDEG), global::EggLink.DanhengServer.Proto.ADAFJFOJDEG.Parser, new[]{ "Progress", "Status", "QuestId", "BONAGHBBICF", "NNHPCOIIKFF" }, new[]{ "DADJJBHOGMC" }, null, null, null)
           }));
     }
     #endregion
@@ -77,14 +76,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ADAFJFOJDEG(ADAFJFOJDEG other) : this() {
       progress_ = other.progress_;
-      questId_ = other.questId_;
-      mFANNCAGDMP_ = other.mFANNCAGDMP_;
       status_ = other.status_;
-      switch (other.GNIOHLCLPMPCase) {
-        case GNIOHLCLPMPOneofCase.BONAGHBBICF:
+      questId_ = other.questId_;
+      switch (other.DADJJBHOGMCCase) {
+        case DADJJBHOGMCOneofCase.BONAGHBBICF:
           BONAGHBBICF = other.BONAGHBBICF;
           break;
-        case GNIOHLCLPMPOneofCase.NNHPCOIIKFF:
+        case DADJJBHOGMCOneofCase.NNHPCOIIKFF:
           NNHPCOIIKFF = other.NNHPCOIIKFF.Clone();
           break;
       }
@@ -98,44 +96,6 @@ namespace EggLink.DanhengServer.Proto {
       return new ADAFJFOJDEG(this);
     }
 
-    /// <summary>Field number for the "BONAGHBBICF" field.</summary>
-    public const int BONAGHBBICFFieldNumber = 8;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BONAGHBBICF {
-      get { return HasBONAGHBBICF ? (uint) gNIOHLCLPMP_ : 0; }
-      set {
-        gNIOHLCLPMP_ = value;
-        gNIOHLCLPMPCase_ = GNIOHLCLPMPOneofCase.BONAGHBBICF;
-      }
-    }
-    /// <summary>Gets whether the "BONAGHBBICF" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasBONAGHBBICF {
-      get { return gNIOHLCLPMPCase_ == GNIOHLCLPMPOneofCase.BONAGHBBICF; }
-    }
-    /// <summary> Clears the value of the oneof if it's currently set to "BONAGHBBICF" </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearBONAGHBBICF() {
-      if (HasBONAGHBBICF) {
-        ClearGNIOHLCLPMP();
-      }
-    }
-
-    /// <summary>Field number for the "NNHPCOIIKFF" field.</summary>
-    public const int NNHPCOIIKFFFieldNumber = 2;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.IIKNGNHDMFI NNHPCOIIKFF {
-      get { return gNIOHLCLPMPCase_ == GNIOHLCLPMPOneofCase.NNHPCOIIKFF ? (global::EggLink.DanhengServer.Proto.IIKNGNHDMFI) gNIOHLCLPMP_ : null; }
-      set {
-        gNIOHLCLPMP_ = value;
-        gNIOHLCLPMPCase_ = value == null ? GNIOHLCLPMPOneofCase.None : GNIOHLCLPMPOneofCase.NNHPCOIIKFF;
-      }
-    }
-
     /// <summary>Field number for the "progress" field.</summary>
     public const int ProgressFieldNumber = 15;
     private uint progress_;
@@ -145,30 +105,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return progress_; }
       set {
         progress_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "quest_id" field.</summary>
-    public const int QuestIdFieldNumber = 7;
-    private uint questId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint QuestId {
-      get { return questId_; }
-      set {
-        questId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "MFANNCAGDMP" field.</summary>
-    public const int MFANNCAGDMPFieldNumber = 3;
-    private uint mFANNCAGDMP_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MFANNCAGDMP {
-      get { return mFANNCAGDMP_; }
-      set {
-        mFANNCAGDMP_ = value;
       }
     }
 
@@ -184,25 +120,75 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    private object gNIOHLCLPMP_;
-    /// <summary>Enum of possible cases for the "GNIOHLCLPMP" oneof.</summary>
-    public enum GNIOHLCLPMPOneofCase {
+    /// <summary>Field number for the "quest_id" field.</summary>
+    public const int QuestIdFieldNumber = 7;
+    private uint questId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint QuestId {
+      get { return questId_; }
+      set {
+        questId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "BONAGHBBICF" field.</summary>
+    public const int BONAGHBBICFFieldNumber = 8;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint BONAGHBBICF {
+      get { return HasBONAGHBBICF ? (uint) dADJJBHOGMC_ : 0; }
+      set {
+        dADJJBHOGMC_ = value;
+        dADJJBHOGMCCase_ = DADJJBHOGMCOneofCase.BONAGHBBICF;
+      }
+    }
+    /// <summary>Gets whether the "BONAGHBBICF" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBONAGHBBICF {
+      get { return dADJJBHOGMCCase_ == DADJJBHOGMCOneofCase.BONAGHBBICF; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "BONAGHBBICF" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBONAGHBBICF() {
+      if (HasBONAGHBBICF) {
+        ClearDADJJBHOGMC();
+      }
+    }
+
+    /// <summary>Field number for the "NNHPCOIIKFF" field.</summary>
+    public const int NNHPCOIIKFFFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.IIKNGNHDMFI NNHPCOIIKFF {
+      get { return dADJJBHOGMCCase_ == DADJJBHOGMCOneofCase.NNHPCOIIKFF ? (global::EggLink.DanhengServer.Proto.IIKNGNHDMFI) dADJJBHOGMC_ : null; }
+      set {
+        dADJJBHOGMC_ = value;
+        dADJJBHOGMCCase_ = value == null ? DADJJBHOGMCOneofCase.None : DADJJBHOGMCOneofCase.NNHPCOIIKFF;
+      }
+    }
+
+    private object dADJJBHOGMC_;
+    /// <summary>Enum of possible cases for the "DADJJBHOGMC" oneof.</summary>
+    public enum DADJJBHOGMCOneofCase {
       None = 0,
       BONAGHBBICF = 8,
       NNHPCOIIKFF = 2,
     }
-    private GNIOHLCLPMPOneofCase gNIOHLCLPMPCase_ = GNIOHLCLPMPOneofCase.None;
+    private DADJJBHOGMCOneofCase dADJJBHOGMCCase_ = DADJJBHOGMCOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GNIOHLCLPMPOneofCase GNIOHLCLPMPCase {
-      get { return gNIOHLCLPMPCase_; }
+    public DADJJBHOGMCOneofCase DADJJBHOGMCCase {
+      get { return dADJJBHOGMCCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearGNIOHLCLPMP() {
-      gNIOHLCLPMPCase_ = GNIOHLCLPMPOneofCase.None;
-      gNIOHLCLPMP_ = null;
+    public void ClearDADJJBHOGMC() {
+      dADJJBHOGMCCase_ = DADJJBHOGMCOneofCase.None;
+      dADJJBHOGMC_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -220,13 +206,12 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Progress != other.Progress) return false;
+      if (Status != other.Status) return false;
+      if (QuestId != other.QuestId) return false;
       if (BONAGHBBICF != other.BONAGHBBICF) return false;
       if (!object.Equals(NNHPCOIIKFF, other.NNHPCOIIKFF)) return false;
-      if (Progress != other.Progress) return false;
-      if (QuestId != other.QuestId) return false;
-      if (MFANNCAGDMP != other.MFANNCAGDMP) return false;
-      if (Status != other.Status) return false;
-      if (GNIOHLCLPMPCase != other.GNIOHLCLPMPCase) return false;
+      if (DADJJBHOGMCCase != other.DADJJBHOGMCCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -234,13 +219,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (HasBONAGHBBICF) hash ^= BONAGHBBICF.GetHashCode();
-      if (gNIOHLCLPMPCase_ == GNIOHLCLPMPOneofCase.NNHPCOIIKFF) hash ^= NNHPCOIIKFF.GetHashCode();
       if (Progress != 0) hash ^= Progress.GetHashCode();
-      if (QuestId != 0) hash ^= QuestId.GetHashCode();
-      if (MFANNCAGDMP != 0) hash ^= MFANNCAGDMP.GetHashCode();
       if (Status != global::EggLink.DanhengServer.Proto.GMFEJEFIBBI.PlanetFesQuestNone) hash ^= Status.GetHashCode();
-      hash ^= (int) gNIOHLCLPMPCase_;
+      if (QuestId != 0) hash ^= QuestId.GetHashCode();
+      if (HasBONAGHBBICF) hash ^= BONAGHBBICF.GetHashCode();
+      if (dADJJBHOGMCCase_ == DADJJBHOGMCOneofCase.NNHPCOIIKFF) hash ^= NNHPCOIIKFF.GetHashCode();
+      hash ^= (int) dADJJBHOGMCCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -259,13 +243,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (gNIOHLCLPMPCase_ == GNIOHLCLPMPOneofCase.NNHPCOIIKFF) {
+      if (dADJJBHOGMCCase_ == DADJJBHOGMCOneofCase.NNHPCOIIKFF) {
         output.WriteRawTag(18);
         output.WriteMessage(NNHPCOIIKFF);
-      }
-      if (MFANNCAGDMP != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(MFANNCAGDMP);
       }
       if (QuestId != 0) {
         output.WriteRawTag(56);
@@ -293,13 +273,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (gNIOHLCLPMPCase_ == GNIOHLCLPMPOneofCase.NNHPCOIIKFF) {
+      if (dADJJBHOGMCCase_ == DADJJBHOGMCOneofCase.NNHPCOIIKFF) {
         output.WriteRawTag(18);
         output.WriteMessage(NNHPCOIIKFF);
-      }
-      if (MFANNCAGDMP != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(MFANNCAGDMP);
       }
       if (QuestId != 0) {
         output.WriteRawTag(56);
@@ -327,23 +303,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (HasBONAGHBBICF) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BONAGHBBICF);
-      }
-      if (gNIOHLCLPMPCase_ == GNIOHLCLPMPOneofCase.NNHPCOIIKFF) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NNHPCOIIKFF);
-      }
       if (Progress != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Progress);
+      }
+      if (Status != global::EggLink.DanhengServer.Proto.GMFEJEFIBBI.PlanetFesQuestNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (QuestId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(QuestId);
       }
-      if (MFANNCAGDMP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MFANNCAGDMP);
+      if (HasBONAGHBBICF) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BONAGHBBICF);
       }
-      if (Status != global::EggLink.DanhengServer.Proto.GMFEJEFIBBI.PlanetFesQuestNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      if (dADJJBHOGMCCase_ == DADJJBHOGMCOneofCase.NNHPCOIIKFF) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NNHPCOIIKFF);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -360,20 +333,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Progress != 0) {
         Progress = other.Progress;
       }
-      if (other.QuestId != 0) {
-        QuestId = other.QuestId;
-      }
-      if (other.MFANNCAGDMP != 0) {
-        MFANNCAGDMP = other.MFANNCAGDMP;
-      }
       if (other.Status != global::EggLink.DanhengServer.Proto.GMFEJEFIBBI.PlanetFesQuestNone) {
         Status = other.Status;
       }
-      switch (other.GNIOHLCLPMPCase) {
-        case GNIOHLCLPMPOneofCase.BONAGHBBICF:
+      if (other.QuestId != 0) {
+        QuestId = other.QuestId;
+      }
+      switch (other.DADJJBHOGMCCase) {
+        case DADJJBHOGMCOneofCase.BONAGHBBICF:
           BONAGHBBICF = other.BONAGHBBICF;
           break;
-        case GNIOHLCLPMPOneofCase.NNHPCOIIKFF:
+        case DADJJBHOGMCOneofCase.NNHPCOIIKFF:
           if (NNHPCOIIKFF == null) {
             NNHPCOIIKFF = new global::EggLink.DanhengServer.Proto.IIKNGNHDMFI();
           }
@@ -398,15 +368,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 18: {
             global::EggLink.DanhengServer.Proto.IIKNGNHDMFI subBuilder = new global::EggLink.DanhengServer.Proto.IIKNGNHDMFI();
-            if (gNIOHLCLPMPCase_ == GNIOHLCLPMPOneofCase.NNHPCOIIKFF) {
+            if (dADJJBHOGMCCase_ == DADJJBHOGMCOneofCase.NNHPCOIIKFF) {
               subBuilder.MergeFrom(NNHPCOIIKFF);
             }
             input.ReadMessage(subBuilder);
             NNHPCOIIKFF = subBuilder;
-            break;
-          }
-          case 24: {
-            MFANNCAGDMP = input.ReadUInt32();
             break;
           }
           case 56: {
@@ -442,15 +408,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 18: {
             global::EggLink.DanhengServer.Proto.IIKNGNHDMFI subBuilder = new global::EggLink.DanhengServer.Proto.IIKNGNHDMFI();
-            if (gNIOHLCLPMPCase_ == GNIOHLCLPMPOneofCase.NNHPCOIIKFF) {
+            if (dADJJBHOGMCCase_ == DADJJBHOGMCOneofCase.NNHPCOIIKFF) {
               subBuilder.MergeFrom(NNHPCOIIKFF);
             }
             input.ReadMessage(subBuilder);
             NNHPCOIIKFF = subBuilder;
-            break;
-          }
-          case 24: {
-            MFANNCAGDMP = input.ReadUInt32();
             break;
           }
           case 56: {

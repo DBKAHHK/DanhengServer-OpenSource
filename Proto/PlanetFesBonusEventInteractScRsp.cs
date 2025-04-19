@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static PlanetFesBonusEventInteractScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiZQbGFuZXRGZXNCb251c0V2ZW50SW50ZXJhY3RTY1JzcC5wcm90bxoVUGxh",
-            "bmV0RmVzUmV3YXJkLnByb3RvGhFKT0ZHREFJQURCTy5wcm90byKNAQogUGxh",
-            "bmV0RmVzQm9udXNFdmVudEludGVyYWN0U2NSc3ASIAoGcmV3YXJkGA8gASgL",
-            "MhAuUGxhbmV0RmVzUmV3YXJkEhMKC0hPSU9LQktHRkROGAwgASgNEiEKC05G",
-            "SkxGTkJQUFBHGAUgASgLMgwuSk9GR0RBSUFEQk8SDwoHcmV0Y29kZRgBIAEo",
-            "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "CiZQbGFuZXRGZXNCb251c0V2ZW50SW50ZXJhY3RTY1JzcC5wcm90bxoRSk9G",
+            "R0RBSUFEQk8ucHJvdG8aEURJQUhOTU5DUEJELnByb3RvIokBCiBQbGFuZXRG",
+            "ZXNCb251c0V2ZW50SW50ZXJhY3RTY1JzcBIcCgZyZXdhcmQYDyABKAsyDC5E",
+            "SUFITk1OQ1BCRBITCgtIT0lPS0JLR0ZEThgMIAEoDRIhCgtORkpMRk5CUFBQ",
+            "RxgFIAEoCzIMLkpPRkdEQUlBREJPEg8KB3JldGNvZGUYASABKA1CHqoCG0Vn",
+            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlanetFesRewardReflection.Descriptor, global::EggLink.DanhengServer.Proto.JOFGDAIADBOReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JOFGDAIADBOReflection.Descriptor, global::EggLink.DanhengServer.Proto.DIAHNMNCPBDReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlanetFesBonusEventInteractScRsp), global::EggLink.DanhengServer.Proto.PlanetFesBonusEventInteractScRsp.Parser, new[]{ "Reward", "HOIOKBKGFDN", "NFJLFNBPPPG", "Retcode" }, null, null, null, null)
           }));
@@ -90,10 +90,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "reward" field.</summary>
     public const int RewardFieldNumber = 15;
-    private global::EggLink.DanhengServer.Proto.PlanetFesReward reward_;
+    private global::EggLink.DanhengServer.Proto.DIAHNMNCPBD reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.PlanetFesReward Reward {
+    public global::EggLink.DanhengServer.Proto.DIAHNMNCPBD Reward {
       get { return reward_; }
       set {
         reward_ = value;
@@ -262,7 +262,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.reward_ != null) {
         if (reward_ == null) {
-          Reward = new global::EggLink.DanhengServer.Proto.PlanetFesReward();
+          Reward = new global::EggLink.DanhengServer.Proto.DIAHNMNCPBD();
         }
         Reward.MergeFrom(other.Reward);
       }
@@ -310,7 +310,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 122: {
             if (reward_ == null) {
-              Reward = new global::EggLink.DanhengServer.Proto.PlanetFesReward();
+              Reward = new global::EggLink.DanhengServer.Proto.DIAHNMNCPBD();
             }
             input.ReadMessage(Reward);
             break;
@@ -347,7 +347,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 122: {
             if (reward_ == null) {
-              Reward = new global::EggLink.DanhengServer.Proto.PlanetFesReward();
+              Reward = new global::EggLink.DanhengServer.Proto.DIAHNMNCPBD();
             }
             input.ReadMessage(Reward);
             break;

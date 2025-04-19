@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static TakeBpRewardCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdUYWtlQnBSZXdhcmRDc1JlcS5wcm90bxoTQnBSZXdhcmFkVHlwZS5wcm90",
-            "byJcChFUYWtlQnBSZXdhcmRDc1JlcRIcCgR0eXBlGAQgASgOMg4uQnBSZXdh",
-            "cmFkVHlwZRINCgVsZXZlbBgGIAEoDRIaChJvcHRpb25hbF9yZXdhcmRfaWQY",
-            "ByABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChdUYWtlQnBSZXdhcmRDc1JlcS5wcm90bxoSQnBSZXdhcmRUeXBlLnByb3Rv",
+            "IlsKEVRha2VCcFJld2FyZENzUmVxEhsKBHR5cGUYBCABKA4yDS5CcFJld2Fy",
+            "ZFR5cGUSDQoFbGV2ZWwYBiABKA0SGgoSb3B0aW9uYWxfcmV3YXJkX2lkGAcg",
+            "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BpRewaradTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BpRewardTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeBpRewardCsReq), global::EggLink.DanhengServer.Proto.TakeBpRewardCsReq.Parser, new[]{ "Type", "Level", "OptionalRewardId" }, null, null, null, null)
           }));
@@ -87,10 +87,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 4;
-    private global::EggLink.DanhengServer.Proto.BpRewaradType type_ = global::EggLink.DanhengServer.Proto.BpRewaradType.None;
+    private global::EggLink.DanhengServer.Proto.BpRewardType type_ = global::EggLink.DanhengServer.Proto.BpRewardType.BpRewaradTypeNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.BpRewaradType Type {
+    public global::EggLink.DanhengServer.Proto.BpRewardType Type {
       get { return type_; }
       set {
         type_ = value;
@@ -146,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != global::EggLink.DanhengServer.Proto.BpRewaradType.None) hash ^= Type.GetHashCode();
+      if (Type != global::EggLink.DanhengServer.Proto.BpRewardType.BpRewaradTypeNone) hash ^= Type.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
       if (OptionalRewardId != 0) hash ^= OptionalRewardId.GetHashCode();
       if (_unknownFields != null) {
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Type != global::EggLink.DanhengServer.Proto.BpRewaradType.None) {
+      if (Type != global::EggLink.DanhengServer.Proto.BpRewardType.BpRewaradTypeNone) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Type);
       }
@@ -189,7 +189,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Type != global::EggLink.DanhengServer.Proto.BpRewaradType.None) {
+      if (Type != global::EggLink.DanhengServer.Proto.BpRewardType.BpRewaradTypeNone) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Type);
       }
@@ -211,7 +211,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Type != global::EggLink.DanhengServer.Proto.BpRewaradType.None) {
+      if (Type != global::EggLink.DanhengServer.Proto.BpRewardType.BpRewaradTypeNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (Level != 0) {
@@ -232,7 +232,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Type != global::EggLink.DanhengServer.Proto.BpRewaradType.None) {
+      if (other.Type != global::EggLink.DanhengServer.Proto.BpRewardType.BpRewaradTypeNone) {
         Type = other.Type;
       }
       if (other.Level != 0) {
@@ -257,7 +257,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 32: {
-            Type = (global::EggLink.DanhengServer.Proto.BpRewaradType) input.ReadEnum();
+            Type = (global::EggLink.DanhengServer.Proto.BpRewardType) input.ReadEnum();
             break;
           }
           case 48: {
@@ -284,7 +284,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 32: {
-            Type = (global::EggLink.DanhengServer.Proto.BpRewaradType) input.ReadEnum();
+            Type = (global::EggLink.DanhengServer.Proto.BpRewardType) input.ReadEnum();
             break;
           }
           case 48: {

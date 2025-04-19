@@ -11,11 +11,11 @@ public class PacketGetPlayerBoardDataScRsp : BasePacket
         var proto = new GetPlayerBoardDataScRsp
         {
             Signature = player.Data.Signature,
-            CurHeadIcon = (uint)player.Data.HeadIcon,
-            CurPersonalCard = (uint)player.Data.PersonalCard,
-            UnlockedPersonalCard = { player.PlayerUnlockData!.PersonalCards.Select(x => (uint)x) },
-            UnlockedHeadIcon = { player.PlayerUnlockData!.HeadIcons.Select(x => new HeadIconData { Id = (uint)x }) },
-            AssistAvatarIdList = { player.Data.AssistAvatars.Select(x => (uint)x) },
+            CurrentHeadIconId = (uint)player.Data.HeadIcon,
+            PersonalCardId = (uint)player.Data.PersonalCard,
+            UnlockedPersonalCardList = { player.PlayerUnlockData!.PersonalCards.Select(x => (uint)x) },
+            UnlockedHeadIconList = { player.PlayerUnlockData!.HeadIcons.Select(x => new HeadIconData { Id = (uint)x }) },
+            AssistAvatarIdList = { player.AvatarManager!.AvatarData.AssistAvatars.Select(x => (uint)x) },
             DisplayAvatarVec = new DisplayAvatarVec()
         };
 

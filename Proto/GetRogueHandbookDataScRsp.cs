@@ -25,9 +25,9 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9HZXRSb2d1ZUhhbmRib29rRGF0YVNjUnNwLnByb3RvGhNSb2d1ZUhhbmRi",
-            "b29rLnByb3RvIlIKGUdldFJvZ3VlSGFuZGJvb2tEYXRhU2NSc3ASJAoMSGFu",
-            "ZGJvb2tJbmZvGAwgASgLMg4uUm9ndWVIYW5kYm9vaxIPCgdSZXRjb2RlGAgg",
-            "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "b29rLnByb3RvIlMKGUdldFJvZ3VlSGFuZGJvb2tEYXRhU2NSc3ASJQoNaGFu",
+            "ZGJvb2tfaW5mbxgMIAEoCzIOLlJvZ3VlSGFuZGJvb2sSDwoHcmV0Y29kZRgI",
+            "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueHandbookReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
       return new GetRogueHandbookDataScRsp(this);
     }
 
-    /// <summary>Field number for the "HandbookInfo" field.</summary>
+    /// <summary>Field number for the "handbook_info" field.</summary>
     public const int HandbookInfoFieldNumber = 12;
     private global::EggLink.DanhengServer.Proto.RogueHandbook handbookInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 8;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

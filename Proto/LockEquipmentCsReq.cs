@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static LockEquipmentCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhMb2NrRXF1aXBtZW50Q3NSZXEucHJvdG8iSQoSTG9ja0VxdWlwbWVudENz",
-            "UmVxEhEKCWlzX2xvY2tlZBgLIAEoCBIgChhlcXVpcG1lbnRfdW5pcXVlX2lk",
-            "X2xpc3QYCiADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
-            "cHJvdG8z"));
+            "ChhMb2NrRXF1aXBtZW50Q3NSZXEucHJvdG8iRQoSTG9ja0VxdWlwbWVudENz",
+            "UmVxEhQKDGlzX3Byb3RlY3RlZBgLIAEoCBIZChFlcXVpcG1lbnRfaWRfbGlz",
+            "dBgKIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LockEquipmentCsReq), global::EggLink.DanhengServer.Proto.LockEquipmentCsReq.Parser, new[]{ "IsLocked", "EquipmentUniqueIdList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LockEquipmentCsReq), global::EggLink.DanhengServer.Proto.LockEquipmentCsReq.Parser, new[]{ "IsProtected", "EquipmentIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LockEquipmentCsReq(LockEquipmentCsReq other) : this() {
-      isLocked_ = other.isLocked_;
-      equipmentUniqueIdList_ = other.equipmentUniqueIdList_.Clone();
+      isProtected_ = other.isProtected_;
+      equipmentIdList_ = other.equipmentIdList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,27 +84,27 @@ namespace EggLink.DanhengServer.Proto {
       return new LockEquipmentCsReq(this);
     }
 
-    /// <summary>Field number for the "is_locked" field.</summary>
-    public const int IsLockedFieldNumber = 11;
-    private bool isLocked_;
+    /// <summary>Field number for the "is_protected" field.</summary>
+    public const int IsProtectedFieldNumber = 11;
+    private bool isProtected_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsLocked {
-      get { return isLocked_; }
+    public bool IsProtected {
+      get { return isProtected_; }
       set {
-        isLocked_ = value;
+        isProtected_ = value;
       }
     }
 
-    /// <summary>Field number for the "equipment_unique_id_list" field.</summary>
-    public const int EquipmentUniqueIdListFieldNumber = 10;
-    private static readonly pb::FieldCodec<uint> _repeated_equipmentUniqueIdList_codec
+    /// <summary>Field number for the "equipment_id_list" field.</summary>
+    public const int EquipmentIdListFieldNumber = 10;
+    private static readonly pb::FieldCodec<uint> _repeated_equipmentIdList_codec
         = pb::FieldCodec.ForUInt32(82);
-    private readonly pbc::RepeatedField<uint> equipmentUniqueIdList_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> equipmentIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> EquipmentUniqueIdList {
-      get { return equipmentUniqueIdList_; }
+    public pbc::RepeatedField<uint> EquipmentIdList {
+      get { return equipmentIdList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsLocked != other.IsLocked) return false;
-      if(!equipmentUniqueIdList_.Equals(other.equipmentUniqueIdList_)) return false;
+      if (IsProtected != other.IsProtected) return false;
+      if(!equipmentIdList_.Equals(other.equipmentIdList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsLocked != false) hash ^= IsLocked.GetHashCode();
-      hash ^= equipmentUniqueIdList_.GetHashCode();
+      if (IsProtected != false) hash ^= IsProtected.GetHashCode();
+      hash ^= equipmentIdList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,10 +151,10 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      equipmentUniqueIdList_.WriteTo(output, _repeated_equipmentUniqueIdList_codec);
-      if (IsLocked != false) {
+      equipmentIdList_.WriteTo(output, _repeated_equipmentIdList_codec);
+      if (IsProtected != false) {
         output.WriteRawTag(88);
-        output.WriteBool(IsLocked);
+        output.WriteBool(IsProtected);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -166,10 +166,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      equipmentUniqueIdList_.WriteTo(ref output, _repeated_equipmentUniqueIdList_codec);
-      if (IsLocked != false) {
+      equipmentIdList_.WriteTo(ref output, _repeated_equipmentIdList_codec);
+      if (IsProtected != false) {
         output.WriteRawTag(88);
-        output.WriteBool(IsLocked);
+        output.WriteBool(IsProtected);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -181,10 +181,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsLocked != false) {
+      if (IsProtected != false) {
         size += 1 + 1;
       }
-      size += equipmentUniqueIdList_.CalculateSize(_repeated_equipmentUniqueIdList_codec);
+      size += equipmentIdList_.CalculateSize(_repeated_equipmentIdList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -197,10 +197,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsLocked != false) {
-        IsLocked = other.IsLocked;
+      if (other.IsProtected != false) {
+        IsProtected = other.IsProtected;
       }
-      equipmentUniqueIdList_.Add(other.equipmentUniqueIdList_);
+      equipmentIdList_.Add(other.equipmentIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -218,11 +218,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 82:
           case 80: {
-            equipmentUniqueIdList_.AddEntriesFrom(input, _repeated_equipmentUniqueIdList_codec);
+            equipmentIdList_.AddEntriesFrom(input, _repeated_equipmentIdList_codec);
             break;
           }
           case 88: {
-            IsLocked = input.ReadBool();
+            IsProtected = input.ReadBool();
             break;
           }
         }
@@ -242,11 +242,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 82:
           case 80: {
-            equipmentUniqueIdList_.AddEntriesFrom(ref input, _repeated_equipmentUniqueIdList_codec);
+            equipmentIdList_.AddEntriesFrom(ref input, _repeated_equipmentIdList_codec);
             break;
           }
           case 88: {
-            IsLocked = input.ReadBool();
+            IsProtected = input.ReadBool();
             break;
           }
         }

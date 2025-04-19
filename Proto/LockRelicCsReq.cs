@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static LockRelicCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRMb2NrUmVsaWNDc1JlcS5wcm90byJWCg5Mb2NrUmVsaWNDc1JlcRIRCglp",
-            "c19sb2NrZWQYASABKAgSHAoUcmVsaWNfdW5pcXVlX2lkX2xpc3QYCiADKA0S",
-            "EwoLSUVNTlBHT01KQ08YBSABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
-            "ci5Qcm90b2IGcHJvdG8z"));
+            "ChRMb2NrUmVsaWNDc1JlcS5wcm90byJZCg5Mb2NrUmVsaWNDc1JlcRIUCgxp",
+            "c19wcm90ZWN0ZWQYASABKAgSHAoUcmVsaWNfdW5pcXVlX2lkX2xpc3QYCiAD",
+            "KA0SEwoLSUVNTlBHT01KQ08YBSABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LockRelicCsReq), global::EggLink.DanhengServer.Proto.LockRelicCsReq.Parser, new[]{ "IsLocked", "RelicUniqueIdList", "IEMNPGOMJCO" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LockRelicCsReq), global::EggLink.DanhengServer.Proto.LockRelicCsReq.Parser, new[]{ "IsProtected", "RelicUniqueIdList", "IEMNPGOMJCO" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LockRelicCsReq(LockRelicCsReq other) : this() {
-      isLocked_ = other.isLocked_;
+      isProtected_ = other.isProtected_;
       relicUniqueIdList_ = other.relicUniqueIdList_.Clone();
       iEMNPGOMJCO_ = other.iEMNPGOMJCO_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -85,15 +85,15 @@ namespace EggLink.DanhengServer.Proto {
       return new LockRelicCsReq(this);
     }
 
-    /// <summary>Field number for the "is_locked" field.</summary>
-    public const int IsLockedFieldNumber = 1;
-    private bool isLocked_;
+    /// <summary>Field number for the "is_protected" field.</summary>
+    public const int IsProtectedFieldNumber = 1;
+    private bool isProtected_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsLocked {
-      get { return isLocked_; }
+    public bool IsProtected {
+      get { return isProtected_; }
       set {
-        isLocked_ = value;
+        isProtected_ = value;
       }
     }
 
@@ -135,7 +135,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsLocked != other.IsLocked) return false;
+      if (IsProtected != other.IsProtected) return false;
       if(!relicUniqueIdList_.Equals(other.relicUniqueIdList_)) return false;
       if (IEMNPGOMJCO != other.IEMNPGOMJCO) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -145,7 +145,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsLocked != false) hash ^= IsLocked.GetHashCode();
+      if (IsProtected != false) hash ^= IsProtected.GetHashCode();
       hash ^= relicUniqueIdList_.GetHashCode();
       if (IEMNPGOMJCO != false) hash ^= IEMNPGOMJCO.GetHashCode();
       if (_unknownFields != null) {
@@ -166,9 +166,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsLocked != false) {
+      if (IsProtected != false) {
         output.WriteRawTag(8);
-        output.WriteBool(IsLocked);
+        output.WriteBool(IsProtected);
       }
       if (IEMNPGOMJCO != false) {
         output.WriteRawTag(40);
@@ -185,9 +185,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsLocked != false) {
+      if (IsProtected != false) {
         output.WriteRawTag(8);
-        output.WriteBool(IsLocked);
+        output.WriteBool(IsProtected);
       }
       if (IEMNPGOMJCO != false) {
         output.WriteRawTag(40);
@@ -204,7 +204,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsLocked != false) {
+      if (IsProtected != false) {
         size += 1 + 1;
       }
       size += relicUniqueIdList_.CalculateSize(_repeated_relicUniqueIdList_codec);
@@ -223,8 +223,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsLocked != false) {
-        IsLocked = other.IsLocked;
+      if (other.IsProtected != false) {
+        IsProtected = other.IsProtected;
       }
       relicUniqueIdList_.Add(other.relicUniqueIdList_);
       if (other.IEMNPGOMJCO != false) {
@@ -246,7 +246,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            IsLocked = input.ReadBool();
+            IsProtected = input.ReadBool();
             break;
           }
           case 40: {
@@ -274,7 +274,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            IsLocked = input.ReadBool();
+            IsProtected = input.ReadBool();
             break;
           }
           case 40: {

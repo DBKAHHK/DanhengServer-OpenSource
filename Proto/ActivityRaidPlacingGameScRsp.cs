@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJBY3Rpdml0eVJhaWRQbGFjaW5nR2FtZVNjUnNwLnByb3RvImwKHEFjdGl2",
-            "aXR5UmFpZFBsYWNpbmdHYW1lU2NSc3ASFQoLQ0pFTU1EUElDTEoYBSABKA1I",
-            "ABIVCgtGSkRBQlBQQU5EQxgCIAEoDUgAEg8KB3JldGNvZGUYCSABKA1CDQoL",
-            "REdFUEhLTkVQQk1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "aXR5UmFpZFBsYWNpbmdHYW1lU2NSc3ASDwoHcmV0Y29kZRgJIAEoDRIVCgtD",
+            "SkVNTURQSUNMShgFIAEoDUgAEhUKC0ZKREFCUFBBTkRDGAIgASgNSABCDQoL",
+            "SVBDTUVKS09FREFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ActivityRaidPlacingGameScRsp), global::EggLink.DanhengServer.Proto.ActivityRaidPlacingGameScRsp.Parser, new[]{ "CJEMMDPICLJ", "FJDABPPANDC", "Retcode" }, new[]{ "DGEPHKNEPBM" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ActivityRaidPlacingGameScRsp), global::EggLink.DanhengServer.Proto.ActivityRaidPlacingGameScRsp.Parser, new[]{ "Retcode", "CJEMMDPICLJ", "FJDABPPANDC" }, new[]{ "IPCMEJKOEDA" }, null, null, null)
           }));
     }
     #endregion
@@ -75,11 +75,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ActivityRaidPlacingGameScRsp(ActivityRaidPlacingGameScRsp other) : this() {
       retcode_ = other.retcode_;
-      switch (other.DGEPHKNEPBMCase) {
-        case DGEPHKNEPBMOneofCase.CJEMMDPICLJ:
+      switch (other.IPCMEJKOEDACase) {
+        case IPCMEJKOEDAOneofCase.CJEMMDPICLJ:
           CJEMMDPICLJ = other.CJEMMDPICLJ;
           break;
-        case DGEPHKNEPBMOneofCase.FJDABPPANDC:
+        case IPCMEJKOEDAOneofCase.FJDABPPANDC:
           FJDABPPANDC = other.FJDABPPANDC;
           break;
       }
@@ -91,58 +91,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ActivityRaidPlacingGameScRsp Clone() {
       return new ActivityRaidPlacingGameScRsp(this);
-    }
-
-    /// <summary>Field number for the "CJEMMDPICLJ" field.</summary>
-    public const int CJEMMDPICLJFieldNumber = 5;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CJEMMDPICLJ {
-      get { return HasCJEMMDPICLJ ? (uint) dGEPHKNEPBM_ : 0; }
-      set {
-        dGEPHKNEPBM_ = value;
-        dGEPHKNEPBMCase_ = DGEPHKNEPBMOneofCase.CJEMMDPICLJ;
-      }
-    }
-    /// <summary>Gets whether the "CJEMMDPICLJ" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasCJEMMDPICLJ {
-      get { return dGEPHKNEPBMCase_ == DGEPHKNEPBMOneofCase.CJEMMDPICLJ; }
-    }
-    /// <summary> Clears the value of the oneof if it's currently set to "CJEMMDPICLJ" </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearCJEMMDPICLJ() {
-      if (HasCJEMMDPICLJ) {
-        ClearDGEPHKNEPBM();
-      }
-    }
-
-    /// <summary>Field number for the "FJDABPPANDC" field.</summary>
-    public const int FJDABPPANDCFieldNumber = 2;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FJDABPPANDC {
-      get { return HasFJDABPPANDC ? (uint) dGEPHKNEPBM_ : 0; }
-      set {
-        dGEPHKNEPBM_ = value;
-        dGEPHKNEPBMCase_ = DGEPHKNEPBMOneofCase.FJDABPPANDC;
-      }
-    }
-    /// <summary>Gets whether the "FJDABPPANDC" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasFJDABPPANDC {
-      get { return dGEPHKNEPBMCase_ == DGEPHKNEPBMOneofCase.FJDABPPANDC; }
-    }
-    /// <summary> Clears the value of the oneof if it's currently set to "FJDABPPANDC" </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearFJDABPPANDC() {
-      if (HasFJDABPPANDC) {
-        ClearDGEPHKNEPBM();
-      }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
@@ -157,25 +105,77 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    private object dGEPHKNEPBM_;
-    /// <summary>Enum of possible cases for the "DGEPHKNEPBM" oneof.</summary>
-    public enum DGEPHKNEPBMOneofCase {
+    /// <summary>Field number for the "CJEMMDPICLJ" field.</summary>
+    public const int CJEMMDPICLJFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CJEMMDPICLJ {
+      get { return HasCJEMMDPICLJ ? (uint) iPCMEJKOEDA_ : 0; }
+      set {
+        iPCMEJKOEDA_ = value;
+        iPCMEJKOEDACase_ = IPCMEJKOEDAOneofCase.CJEMMDPICLJ;
+      }
+    }
+    /// <summary>Gets whether the "CJEMMDPICLJ" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCJEMMDPICLJ {
+      get { return iPCMEJKOEDACase_ == IPCMEJKOEDAOneofCase.CJEMMDPICLJ; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "CJEMMDPICLJ" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCJEMMDPICLJ() {
+      if (HasCJEMMDPICLJ) {
+        ClearIPCMEJKOEDA();
+      }
+    }
+
+    /// <summary>Field number for the "FJDABPPANDC" field.</summary>
+    public const int FJDABPPANDCFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint FJDABPPANDC {
+      get { return HasFJDABPPANDC ? (uint) iPCMEJKOEDA_ : 0; }
+      set {
+        iPCMEJKOEDA_ = value;
+        iPCMEJKOEDACase_ = IPCMEJKOEDAOneofCase.FJDABPPANDC;
+      }
+    }
+    /// <summary>Gets whether the "FJDABPPANDC" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFJDABPPANDC {
+      get { return iPCMEJKOEDACase_ == IPCMEJKOEDAOneofCase.FJDABPPANDC; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "FJDABPPANDC" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFJDABPPANDC() {
+      if (HasFJDABPPANDC) {
+        ClearIPCMEJKOEDA();
+      }
+    }
+
+    private object iPCMEJKOEDA_;
+    /// <summary>Enum of possible cases for the "IPCMEJKOEDA" oneof.</summary>
+    public enum IPCMEJKOEDAOneofCase {
       None = 0,
       CJEMMDPICLJ = 5,
       FJDABPPANDC = 2,
     }
-    private DGEPHKNEPBMOneofCase dGEPHKNEPBMCase_ = DGEPHKNEPBMOneofCase.None;
+    private IPCMEJKOEDAOneofCase iPCMEJKOEDACase_ = IPCMEJKOEDAOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public DGEPHKNEPBMOneofCase DGEPHKNEPBMCase {
-      get { return dGEPHKNEPBMCase_; }
+    public IPCMEJKOEDAOneofCase IPCMEJKOEDACase {
+      get { return iPCMEJKOEDACase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearDGEPHKNEPBM() {
-      dGEPHKNEPBMCase_ = DGEPHKNEPBMOneofCase.None;
-      dGEPHKNEPBM_ = null;
+    public void ClearIPCMEJKOEDA() {
+      iPCMEJKOEDACase_ = IPCMEJKOEDAOneofCase.None;
+      iPCMEJKOEDA_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -193,10 +193,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Retcode != other.Retcode) return false;
       if (CJEMMDPICLJ != other.CJEMMDPICLJ) return false;
       if (FJDABPPANDC != other.FJDABPPANDC) return false;
-      if (Retcode != other.Retcode) return false;
-      if (DGEPHKNEPBMCase != other.DGEPHKNEPBMCase) return false;
+      if (IPCMEJKOEDACase != other.IPCMEJKOEDACase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -204,10 +204,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (HasCJEMMDPICLJ) hash ^= CJEMMDPICLJ.GetHashCode();
       if (HasFJDABPPANDC) hash ^= FJDABPPANDC.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      hash ^= (int) dGEPHKNEPBMCase_;
+      hash ^= (int) iPCMEJKOEDACase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -270,14 +270,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
       if (HasCJEMMDPICLJ) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CJEMMDPICLJ);
       }
       if (HasFJDABPPANDC) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FJDABPPANDC);
-      }
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -294,11 +294,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      switch (other.DGEPHKNEPBMCase) {
-        case DGEPHKNEPBMOneofCase.CJEMMDPICLJ:
+      switch (other.IPCMEJKOEDACase) {
+        case IPCMEJKOEDAOneofCase.CJEMMDPICLJ:
           CJEMMDPICLJ = other.CJEMMDPICLJ;
           break;
-        case DGEPHKNEPBMOneofCase.FJDABPPANDC:
+        case IPCMEJKOEDAOneofCase.FJDABPPANDC:
           FJDABPPANDC = other.FJDABPPANDC;
           break;
       }

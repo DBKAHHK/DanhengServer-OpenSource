@@ -25,17 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtQbGF5ZXJLaWNrT3V0U2NOb3RpZnkucHJvdG8aD0JsYWNrSW5mby5wcm90",
-            "byL5AQoVUGxheWVyS2lja091dFNjTm90aWZ5EjIKCWtpY2tfdHlwZRgOIAEo",
-            "DjIfLlBsYXllcktpY2tPdXRTY05vdGlmeS5LaWNrVHlwZRIeCgpibGFja19p",
-            "bmZvGA0gASgLMgouQmxhY2tJbmZvIosBCghLaWNrVHlwZRIRCg1LSUNLX1NR",
-            "VUVFWkVEEAASDgoKS0lDS19CTEFDSxABEhMKD0tJQ0tfQ0hBTkdFX1BXRBAC",
-            "EhwKGEtJQ0tfTE9HSU5fV0hJVEVfVElNRU9VVBADEhkKFUtJQ0tfQUNFX0FO",
-            "VElfQ0hFQVRFUhAEEg4KCktJQ0tfQllfR00QBUIeqgIbRWdnTGluay5EYW5o",
-            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "bxoOS2lja1R5cGUucHJvdG8iVQoVUGxheWVyS2lja091dFNjTm90aWZ5EhwK",
+            "CWtpY2tfdHlwZRgOIAEoDjIJLktpY2tUeXBlEh4KCmJsYWNrX2luZm8YDSAB",
+            "KAsyCi5CbGFja0luZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BlackInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BlackInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KickTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify), global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Parser, new[]{ "KickType", "BlackInfo" }, null, new[]{ typeof(global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Types.KickType) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify), global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Parser, new[]{ "KickType", "BlackInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -90,10 +87,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "kick_type" field.</summary>
     public const int KickTypeFieldNumber = 14;
-    private global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Types.KickType kickType_ = global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Types.KickType.KickSqueezed;
+    private global::EggLink.DanhengServer.Proto.KickType kickType_ = global::EggLink.DanhengServer.Proto.KickType.KickSqueezed;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Types.KickType KickType {
+    public global::EggLink.DanhengServer.Proto.KickType KickType {
       get { return kickType_; }
       set {
         kickType_ = value;
@@ -136,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (KickType != global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Types.KickType.KickSqueezed) hash ^= KickType.GetHashCode();
+      if (KickType != global::EggLink.DanhengServer.Proto.KickType.KickSqueezed) hash ^= KickType.GetHashCode();
       if (blackInfo_ != null) hash ^= BlackInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -160,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(106);
         output.WriteMessage(BlackInfo);
       }
-      if (KickType != global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Types.KickType.KickSqueezed) {
+      if (KickType != global::EggLink.DanhengServer.Proto.KickType.KickSqueezed) {
         output.WriteRawTag(112);
         output.WriteEnum((int) KickType);
       }
@@ -178,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(106);
         output.WriteMessage(BlackInfo);
       }
-      if (KickType != global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Types.KickType.KickSqueezed) {
+      if (KickType != global::EggLink.DanhengServer.Proto.KickType.KickSqueezed) {
         output.WriteRawTag(112);
         output.WriteEnum((int) KickType);
       }
@@ -192,7 +189,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (KickType != global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Types.KickType.KickSqueezed) {
+      if (KickType != global::EggLink.DanhengServer.Proto.KickType.KickSqueezed) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) KickType);
       }
       if (blackInfo_ != null) {
@@ -210,7 +207,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.KickType != global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Types.KickType.KickSqueezed) {
+      if (other.KickType != global::EggLink.DanhengServer.Proto.KickType.KickSqueezed) {
         KickType = other.KickType;
       }
       if (other.blackInfo_ != null) {
@@ -242,7 +239,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 112: {
-            KickType = (global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Types.KickType) input.ReadEnum();
+            KickType = (global::EggLink.DanhengServer.Proto.KickType) input.ReadEnum();
             break;
           }
         }
@@ -268,30 +265,13 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 112: {
-            KickType = (global::EggLink.DanhengServer.Proto.PlayerKickOutScNotify.Types.KickType) input.ReadEnum();
+            KickType = (global::EggLink.DanhengServer.Proto.KickType) input.ReadEnum();
             break;
           }
         }
       }
     }
     #endif
-
-    #region Nested types
-    /// <summary>Container for nested types declared in the PlayerKickOutScNotify message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static partial class Types {
-      public enum KickType {
-        [pbr::OriginalName("KICK_SQUEEZED")] KickSqueezed = 0,
-        [pbr::OriginalName("KICK_BLACK")] KickBlack = 1,
-        [pbr::OriginalName("KICK_CHANGE_PWD")] KickChangePwd = 2,
-        [pbr::OriginalName("KICK_LOGIN_WHITE_TIMEOUT")] KickLoginWhiteTimeout = 3,
-        [pbr::OriginalName("KICK_ACE_ANTI_CHEATER")] KickAceAntiCheater = 4,
-        [pbr::OriginalName("KICK_BY_GM")] KickByGm = 5,
-      }
-
-    }
-    #endregion
 
   }
 

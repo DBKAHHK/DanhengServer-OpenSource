@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1TZXRHYWNoYURlY2lkZUl0ZW1TY1JzcC5wcm90bxoRTE9QREpBSEZQSE4u",
-            "cHJvdG8iZwoXU2V0R2FjaGFEZWNpZGVJdGVtU2NSc3ASDwoHcmV0Y29kZRgO",
-            "IAEoDRIhCgtHRFBPRUVKTk1IThgCIAEoCzIMLkxPUERKQUhGUEhOEhgKEGRl",
-            "Y2lkZV9pdGVtX2xpc3QYCSADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
-            "ci5Qcm90b2IGcHJvdG8z"));
+            "cHJvdG8iXwoXU2V0R2FjaGFEZWNpZGVJdGVtU2NSc3ASDwoHcmV0Y29kZRgO",
+            "IAEoDRIhCgtHRFBPRUVKTk1IThgCIAEoCzIMLkxPUERKQUhGUEhOEhAKCGdh",
+            "Y2hhX2lkGAkgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LOPDJAHFPHNReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetGachaDecideItemScRsp), global::EggLink.DanhengServer.Proto.SetGachaDecideItemScRsp.Parser, new[]{ "Retcode", "GDPOEEJNMHN", "DecideItemList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetGachaDecideItemScRsp), global::EggLink.DanhengServer.Proto.SetGachaDecideItemScRsp.Parser, new[]{ "Retcode", "GDPOEEJNMHN", "GachaId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,7 +76,7 @@ namespace EggLink.DanhengServer.Proto {
     public SetGachaDecideItemScRsp(SetGachaDecideItemScRsp other) : this() {
       retcode_ = other.retcode_;
       gDPOEEJNMHN_ = other.gDPOEEJNMHN_ != null ? other.gDPOEEJNMHN_.Clone() : null;
-      decideItemList_ = other.decideItemList_.Clone();
+      gachaId_ = other.gachaId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -110,15 +110,16 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "decide_item_list" field.</summary>
-    public const int DecideItemListFieldNumber = 9;
-    private static readonly pb::FieldCodec<uint> _repeated_decideItemList_codec
-        = pb::FieldCodec.ForUInt32(74);
-    private readonly pbc::RepeatedField<uint> decideItemList_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "gacha_id" field.</summary>
+    public const int GachaIdFieldNumber = 9;
+    private uint gachaId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> DecideItemList {
-      get { return decideItemList_; }
+    public uint GachaId {
+      get { return gachaId_; }
+      set {
+        gachaId_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -138,7 +139,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (Retcode != other.Retcode) return false;
       if (!object.Equals(GDPOEEJNMHN, other.GDPOEEJNMHN)) return false;
-      if(!decideItemList_.Equals(other.decideItemList_)) return false;
+      if (GachaId != other.GachaId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -148,7 +149,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (gDPOEEJNMHN_ != null) hash ^= GDPOEEJNMHN.GetHashCode();
-      hash ^= decideItemList_.GetHashCode();
+      if (GachaId != 0) hash ^= GachaId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -171,7 +172,10 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(18);
         output.WriteMessage(GDPOEEJNMHN);
       }
-      decideItemList_.WriteTo(output, _repeated_decideItemList_codec);
+      if (GachaId != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(GachaId);
+      }
       if (Retcode != 0) {
         output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
@@ -190,7 +194,10 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(18);
         output.WriteMessage(GDPOEEJNMHN);
       }
-      decideItemList_.WriteTo(ref output, _repeated_decideItemList_codec);
+      if (GachaId != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(GachaId);
+      }
       if (Retcode != 0) {
         output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
@@ -211,7 +218,9 @@ namespace EggLink.DanhengServer.Proto {
       if (gDPOEEJNMHN_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GDPOEEJNMHN);
       }
-      size += decideItemList_.CalculateSize(_repeated_decideItemList_codec);
+      if (GachaId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GachaId);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -233,7 +242,9 @@ namespace EggLink.DanhengServer.Proto {
         }
         GDPOEEJNMHN.MergeFrom(other.GDPOEEJNMHN);
       }
-      decideItemList_.Add(other.decideItemList_);
+      if (other.GachaId != 0) {
+        GachaId = other.GachaId;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -256,9 +267,8 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(GDPOEEJNMHN);
             break;
           }
-          case 74:
           case 72: {
-            decideItemList_.AddEntriesFrom(input, _repeated_decideItemList_codec);
+            GachaId = input.ReadUInt32();
             break;
           }
           case 112: {
@@ -287,9 +297,8 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(GDPOEEJNMHN);
             break;
           }
-          case 74:
           case 72: {
-            decideItemList_.AddEntriesFrom(ref input, _repeated_decideItemList_codec);
+            GachaId = input.ReadUInt32();
             break;
           }
           case 112: {

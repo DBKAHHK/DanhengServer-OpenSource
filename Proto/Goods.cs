@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static GoodsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgtHb29kcy5wcm90byJeCgVHb29kcxIPCgdHb29kc0lkGAIgASgNEg8KB0Vu",
-            "ZFRpbWUYBSABKAMSDgoGSXRlbUlkGA4gASgNEhEKCUJlZ2luVGltZRgJIAEo",
-            "AxIQCghCdXlUaW1lcxgEIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
-            "LlByb3RvYgZwcm90bzM="));
+            "CgtHb29kcy5wcm90byJjCgVHb29kcxIQCghnb29kc19pZBgCIAEoDRIQCghl",
+            "bmRfdGltZRgFIAEoAxIPCgdpdGVtX2lkGA4gASgNEhIKCmJlZ2luX3RpbWUY",
+            "CSABKAMSEQoJYnV5X3RpbWVzGAQgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
       return new Goods(this);
     }
 
-    /// <summary>Field number for the "GoodsId" field.</summary>
+    /// <summary>Field number for the "goods_id" field.</summary>
     public const int GoodsIdFieldNumber = 2;
     private uint goodsId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "EndTime" field.</summary>
+    /// <summary>Field number for the "end_time" field.</summary>
     public const int EndTimeFieldNumber = 5;
     private long endTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ItemId" field.</summary>
+    /// <summary>Field number for the "item_id" field.</summary>
     public const int ItemIdFieldNumber = 14;
     private uint itemId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "BeginTime" field.</summary>
+    /// <summary>Field number for the "begin_time" field.</summary>
     public const int BeginTimeFieldNumber = 9;
     private long beginTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -135,7 +135,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "BuyTimes" field.</summary>
+    /// <summary>Field number for the "buy_times" field.</summary>
     public const int BuyTimesFieldNumber = 4;
     private uint buyTimes_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

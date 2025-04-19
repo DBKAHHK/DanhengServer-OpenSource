@@ -25,11 +25,11 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9UcmVhc3VyZUR1bmdlb25SZWNvcmREYXRhLnByb3RvGh9UcmVhc3VyZUR1",
-            "bmdlb25SZWNvcmRUeXBlLnByb3RvIpEBChlUcmVhc3VyZUR1bmdlb25SZWNv",
-            "cmREYXRhEhQKDFRhcmdldEdyaWRJZBgIIAEoDRIoCgRUeXBlGA8gASgOMhou",
-            "VHJlYXN1cmVEdW5nZW9uUmVjb3JkVHlwZRIUCgxTb3VyY2VHcmlkSWQYCiAB",
-            "KA0SDgoGUGFyYW0yGAIgASgNEg4KBlBhcmFtMRgEIAEoDUIeqgIbRWdnTGlu",
-            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "bmdlb25SZWNvcmRUeXBlLnByb3RvIpUBChlUcmVhc3VyZUR1bmdlb25SZWNv",
+            "cmREYXRhEhYKDnRhcmdldF9ncmlkX2lkGAggASgNEigKBHR5cGUYDyABKA4y",
+            "Gi5UcmVhc3VyZUR1bmdlb25SZWNvcmRUeXBlEhYKDnNvdXJjZV9ncmlkX2lk",
+            "GAogASgNEg4KBnBhcmFtMhgCIAEoDRIOCgZwYXJhbTEYBCABKA1CHqoCG0Vn",
+            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TreasureDungeonRecordTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -89,7 +89,7 @@ namespace EggLink.DanhengServer.Proto {
       return new TreasureDungeonRecordData(this);
     }
 
-    /// <summary>Field number for the "TargetGridId" field.</summary>
+    /// <summary>Field number for the "target_grid_id" field.</summary>
     public const int TargetGridIdFieldNumber = 8;
     private uint targetGridId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -101,7 +101,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Type" field.</summary>
+    /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.TreasureDungeonRecordType type_ = global::EggLink.DanhengServer.Proto.TreasureDungeonRecordType.TreasureDungeonRecordNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -113,7 +113,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "SourceGridId" field.</summary>
+    /// <summary>Field number for the "source_grid_id" field.</summary>
     public const int SourceGridIdFieldNumber = 10;
     private uint sourceGridId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -125,7 +125,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Param2" field.</summary>
+    /// <summary>Field number for the "param2" field.</summary>
     public const int Param2FieldNumber = 2;
     private uint param2_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Param1" field.</summary>
+    /// <summary>Field number for the "param1" field.</summary>
     public const int Param1FieldNumber = 4;
     private uint param1_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

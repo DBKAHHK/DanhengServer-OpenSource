@@ -25,16 +25,16 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhHZXRBdmF0YXJEYXRhU2NSc3AucHJvdG8aDEF2YXRhci5wcm90bxobR3Jv",
-            "d3RoVGFydGdldEZ1bmNUeXBlLnByb3RvIrEBChJHZXRBdmF0YXJEYXRhU2NS",
+            "d3RoVGFydGdldEZ1bmNUeXBlLnByb3RvIqwBChJHZXRBdmF0YXJEYXRhU2NS",
             "c3ASKwoLUE5LQ0ZFQUxBTUkYByADKA4yFi5Hcm93dGhUYXJ0Z2V0RnVuY1R5",
             "cGUSHAoLYXZhdGFyX2xpc3QYBSADKAsyBy5BdmF0YXISDwoHcmV0Y29kZRgD",
-            "IAEoDRIRCglza2luX2xpc3QYCSADKA0SGAoQdGFyZ2V0X2F2YXRhcl9pZBgI",
-            "IAEoDRISCgppc19nZXRfYWxsGAQgASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
-            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "IAEoDRIRCglza2luX2xpc3QYCSADKA0SEwoLSlBOTFBPUE1LRUoYCCABKA0S",
+            "EgoKaXNfZ2V0X2FsbBgEIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.GrowthTartgetFuncTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetAvatarDataScRsp), global::EggLink.DanhengServer.Proto.GetAvatarDataScRsp.Parser, new[]{ "PNKCFEALAMI", "AvatarList", "Retcode", "SkinList", "TargetAvatarId", "IsGetAll" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetAvatarDataScRsp), global::EggLink.DanhengServer.Proto.GetAvatarDataScRsp.Parser, new[]{ "PNKCFEALAMI", "AvatarList", "Retcode", "SkinList", "JPNLPOPMKEJ", "IsGetAll" }, null, null, null, null)
           }));
     }
     #endregion
@@ -80,7 +80,7 @@ namespace EggLink.DanhengServer.Proto {
       avatarList_ = other.avatarList_.Clone();
       retcode_ = other.retcode_;
       skinList_ = other.skinList_.Clone();
-      targetAvatarId_ = other.targetAvatarId_;
+      jPNLPOPMKEJ_ = other.jPNLPOPMKEJ_;
       isGetAll_ = other.isGetAll_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -136,15 +136,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return skinList_; }
     }
 
-    /// <summary>Field number for the "target_avatar_id" field.</summary>
-    public const int TargetAvatarIdFieldNumber = 8;
-    private uint targetAvatarId_;
+    /// <summary>Field number for the "JPNLPOPMKEJ" field.</summary>
+    public const int JPNLPOPMKEJFieldNumber = 8;
+    private uint jPNLPOPMKEJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TargetAvatarId {
-      get { return targetAvatarId_; }
+    public uint JPNLPOPMKEJ {
+      get { return jPNLPOPMKEJ_; }
       set {
-        targetAvatarId_ = value;
+        jPNLPOPMKEJ_ = value;
       }
     }
 
@@ -179,7 +179,7 @@ namespace EggLink.DanhengServer.Proto {
       if(!avatarList_.Equals(other.avatarList_)) return false;
       if (Retcode != other.Retcode) return false;
       if(!skinList_.Equals(other.skinList_)) return false;
-      if (TargetAvatarId != other.TargetAvatarId) return false;
+      if (JPNLPOPMKEJ != other.JPNLPOPMKEJ) return false;
       if (IsGetAll != other.IsGetAll) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -192,7 +192,7 @@ namespace EggLink.DanhengServer.Proto {
       hash ^= avatarList_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       hash ^= skinList_.GetHashCode();
-      if (TargetAvatarId != 0) hash ^= TargetAvatarId.GetHashCode();
+      if (JPNLPOPMKEJ != 0) hash ^= JPNLPOPMKEJ.GetHashCode();
       if (IsGetAll != false) hash ^= IsGetAll.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -222,9 +222,9 @@ namespace EggLink.DanhengServer.Proto {
       }
       avatarList_.WriteTo(output, _repeated_avatarList_codec);
       pNKCFEALAMI_.WriteTo(output, _repeated_pNKCFEALAMI_codec);
-      if (TargetAvatarId != 0) {
+      if (JPNLPOPMKEJ != 0) {
         output.WriteRawTag(64);
-        output.WriteUInt32(TargetAvatarId);
+        output.WriteUInt32(JPNLPOPMKEJ);
       }
       skinList_.WriteTo(output, _repeated_skinList_codec);
       if (_unknownFields != null) {
@@ -247,9 +247,9 @@ namespace EggLink.DanhengServer.Proto {
       }
       avatarList_.WriteTo(ref output, _repeated_avatarList_codec);
       pNKCFEALAMI_.WriteTo(ref output, _repeated_pNKCFEALAMI_codec);
-      if (TargetAvatarId != 0) {
+      if (JPNLPOPMKEJ != 0) {
         output.WriteRawTag(64);
-        output.WriteUInt32(TargetAvatarId);
+        output.WriteUInt32(JPNLPOPMKEJ);
       }
       skinList_.WriteTo(ref output, _repeated_skinList_codec);
       if (_unknownFields != null) {
@@ -268,8 +268,8 @@ namespace EggLink.DanhengServer.Proto {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       size += skinList_.CalculateSize(_repeated_skinList_codec);
-      if (TargetAvatarId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TargetAvatarId);
+      if (JPNLPOPMKEJ != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JPNLPOPMKEJ);
       }
       if (IsGetAll != false) {
         size += 1 + 1;
@@ -292,8 +292,8 @@ namespace EggLink.DanhengServer.Proto {
         Retcode = other.Retcode;
       }
       skinList_.Add(other.skinList_);
-      if (other.TargetAvatarId != 0) {
-        TargetAvatarId = other.TargetAvatarId;
+      if (other.JPNLPOPMKEJ != 0) {
+        JPNLPOPMKEJ = other.JPNLPOPMKEJ;
       }
       if (other.IsGetAll != false) {
         IsGetAll = other.IsGetAll;
@@ -331,7 +331,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 64: {
-            TargetAvatarId = input.ReadUInt32();
+            JPNLPOPMKEJ = input.ReadUInt32();
             break;
           }
           case 74:
@@ -372,7 +372,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 64: {
-            TargetAvatarId = input.ReadUInt32();
+            JPNLPOPMKEJ = input.ReadUInt32();
             break;
           }
           case 74:

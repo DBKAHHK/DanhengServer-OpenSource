@@ -26,14 +26,14 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch1EaXNwbGF5QXZhdGFyRGV0YWlsSW5mby5wcm90bxoVQXZhdGFyU2tpbGxU",
             "cmVlLnByb3RvGhZEaXNwbGF5UmVsaWNJbmZvLnByb3RvGhpEaXNwbGF5RXF1",
-            "aXBtZW50SW5mby5wcm90byKFAgoXRGlzcGxheUF2YXRhckRldGFpbEluZm8S",
-            "FQoNRHJlc3NlZFNraW5JZBgKIAEoDRILCgNFeHAYDiABKA0SEQoJUHJvbW90",
-            "aW9uGAwgASgNEiQKCVJlbGljTGlzdBgIIAMoCzIRLkRpc3BsYXlSZWxpY0lu",
-            "Zm8SDAoEUmFuaxgPIAEoDRINCgVMZXZlbBgBIAEoDRIoCglFcXVpcG1lbnQY",
-            "BiABKAsyFS5EaXNwbGF5RXF1aXBtZW50SW5mbxInCg1Ta2lsbHRyZWVMaXN0",
-            "GAsgAygLMhAuQXZhdGFyU2tpbGxUcmVlEhAKCEF2YXRhcklkGAUgASgNEgsK",
-            "A1BvcxgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "aXBtZW50SW5mby5wcm90byKKAgoXRGlzcGxheUF2YXRhckRldGFpbEluZm8S",
+            "FwoPZHJlc3NlZF9za2luX2lkGAogASgNEgsKA2V4cBgOIAEoDRIRCglwcm9t",
+            "b3Rpb24YDCABKA0SJQoKcmVsaWNfbGlzdBgIIAMoCzIRLkRpc3BsYXlSZWxp",
+            "Y0luZm8SDAoEcmFuaxgPIAEoDRINCgVsZXZlbBgBIAEoDRIoCgllcXVpcG1l",
+            "bnQYBiABKAsyFS5EaXNwbGF5RXF1aXBtZW50SW5mbxIoCg5za2lsbHRyZWVf",
+            "bGlzdBgLIAMoCzIQLkF2YXRhclNraWxsVHJlZRIRCglhdmF0YXJfaWQYBSAB",
+            "KA0SCwoDcG9zGAkgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
+            "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayRelicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayEquipmentInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
       return new DisplayAvatarDetailInfo(this);
     }
 
-    /// <summary>Field number for the "DressedSkinId" field.</summary>
+    /// <summary>Field number for the "dressed_skin_id" field.</summary>
     public const int DressedSkinIdFieldNumber = 10;
     private uint dressedSkinId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Exp" field.</summary>
+    /// <summary>Field number for the "exp" field.</summary>
     public const int ExpFieldNumber = 14;
     private uint exp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Promotion" field.</summary>
+    /// <summary>Field number for the "promotion" field.</summary>
     public const int PromotionFieldNumber = 12;
     private uint promotion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -134,7 +134,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "RelicList" field.</summary>
+    /// <summary>Field number for the "relic_list" field.</summary>
     public const int RelicListFieldNumber = 8;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DisplayRelicInfo> _repeated_relicList_codec
         = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.DisplayRelicInfo.Parser);
@@ -145,7 +145,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return relicList_; }
     }
 
-    /// <summary>Field number for the "Rank" field.</summary>
+    /// <summary>Field number for the "rank" field.</summary>
     public const int RankFieldNumber = 15;
     private uint rank_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Level" field.</summary>
+    /// <summary>Field number for the "level" field.</summary>
     public const int LevelFieldNumber = 1;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -169,7 +169,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Equipment" field.</summary>
+    /// <summary>Field number for the "equipment" field.</summary>
     public const int EquipmentFieldNumber = 6;
     private global::EggLink.DanhengServer.Proto.DisplayEquipmentInfo equipment_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -181,7 +181,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "SkilltreeList" field.</summary>
+    /// <summary>Field number for the "skilltree_list" field.</summary>
     public const int SkilltreeListFieldNumber = 11;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.AvatarSkillTree> _repeated_skilltreeList_codec
         = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.AvatarSkillTree.Parser);
@@ -192,7 +192,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return skilltreeList_; }
     }
 
-    /// <summary>Field number for the "AvatarId" field.</summary>
+    /// <summary>Field number for the "avatar_id" field.</summary>
     public const int AvatarIdFieldNumber = 5;
     private uint avatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -204,7 +204,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Pos" field.</summary>
+    /// <summary>Field number for the "pos" field.</summary>
     public const int PosFieldNumber = 9;
     private uint pos_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

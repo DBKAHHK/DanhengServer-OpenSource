@@ -25,13 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9Xb2xmQnJvR2FtZVVzZUJ1bGxldENzUmVxLnByb3RvGgxWZWN0b3IucHJv",
-            "dG8iWAoZV29sZkJyb0dhbWVVc2VCdWxsZXRDc1JlcRIcCgtNSUJDRklNTUlL",
-            "RxgCIAEoCzIHLlZlY3RvchIdChVhc3Npc3RfZW50aXR5X2lkX2xpc3QYBSAD",
-            "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "dG8iYAoZV29sZkJyb0dhbWVVc2VCdWxsZXRDc1JlcRIcCgtNSUJDRklNTUlL",
+            "RxgCIAEoCzIHLlZlY3RvchIlCh1hc3Npc3RfbW9uc3Rlcl9lbnRpdHlfaWRf",
+            "bGlzdBgFIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.VectorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.WolfBroGameUseBulletCsReq), global::EggLink.DanhengServer.Proto.WolfBroGameUseBulletCsReq.Parser, new[]{ "MIBCFIMMIKG", "AssistEntityIdList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.WolfBroGameUseBulletCsReq), global::EggLink.DanhengServer.Proto.WolfBroGameUseBulletCsReq.Parser, new[]{ "MIBCFIMMIKG", "AssistMonsterEntityIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WolfBroGameUseBulletCsReq(WolfBroGameUseBulletCsReq other) : this() {
       mIBCFIMMIKG_ = other.mIBCFIMMIKG_ != null ? other.mIBCFIMMIKG_.Clone() : null;
-      assistEntityIdList_ = other.assistEntityIdList_.Clone();
+      assistMonsterEntityIdList_ = other.assistMonsterEntityIdList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -96,15 +97,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "assist_entity_id_list" field.</summary>
-    public const int AssistEntityIdListFieldNumber = 5;
-    private static readonly pb::FieldCodec<uint> _repeated_assistEntityIdList_codec
+    /// <summary>Field number for the "assist_monster_entity_id_list" field.</summary>
+    public const int AssistMonsterEntityIdListFieldNumber = 5;
+    private static readonly pb::FieldCodec<uint> _repeated_assistMonsterEntityIdList_codec
         = pb::FieldCodec.ForUInt32(42);
-    private readonly pbc::RepeatedField<uint> assistEntityIdList_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> assistMonsterEntityIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> AssistEntityIdList {
-      get { return assistEntityIdList_; }
+    public pbc::RepeatedField<uint> AssistMonsterEntityIdList {
+      get { return assistMonsterEntityIdList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(MIBCFIMMIKG, other.MIBCFIMMIKG)) return false;
-      if(!assistEntityIdList_.Equals(other.assistEntityIdList_)) return false;
+      if(!assistMonsterEntityIdList_.Equals(other.assistMonsterEntityIdList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (mIBCFIMMIKG_ != null) hash ^= MIBCFIMMIKG.GetHashCode();
-      hash ^= assistEntityIdList_.GetHashCode();
+      hash ^= assistMonsterEntityIdList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -155,7 +156,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(18);
         output.WriteMessage(MIBCFIMMIKG);
       }
-      assistEntityIdList_.WriteTo(output, _repeated_assistEntityIdList_codec);
+      assistMonsterEntityIdList_.WriteTo(output, _repeated_assistMonsterEntityIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -170,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(18);
         output.WriteMessage(MIBCFIMMIKG);
       }
-      assistEntityIdList_.WriteTo(ref output, _repeated_assistEntityIdList_codec);
+      assistMonsterEntityIdList_.WriteTo(ref output, _repeated_assistMonsterEntityIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -184,7 +185,7 @@ namespace EggLink.DanhengServer.Proto {
       if (mIBCFIMMIKG_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MIBCFIMMIKG);
       }
-      size += assistEntityIdList_.CalculateSize(_repeated_assistEntityIdList_codec);
+      size += assistMonsterEntityIdList_.CalculateSize(_repeated_assistMonsterEntityIdList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -203,7 +204,7 @@ namespace EggLink.DanhengServer.Proto {
         }
         MIBCFIMMIKG.MergeFrom(other.MIBCFIMMIKG);
       }
-      assistEntityIdList_.Add(other.assistEntityIdList_);
+      assistMonsterEntityIdList_.Add(other.assistMonsterEntityIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -228,7 +229,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 42:
           case 40: {
-            assistEntityIdList_.AddEntriesFrom(input, _repeated_assistEntityIdList_codec);
+            assistMonsterEntityIdList_.AddEntriesFrom(input, _repeated_assistMonsterEntityIdList_codec);
             break;
           }
         }
@@ -255,7 +256,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 42:
           case 40: {
-            assistEntityIdList_.AddEntriesFrom(ref input, _repeated_assistEntityIdList_codec);
+            assistMonsterEntityIdList_.AddEntriesFrom(ref input, _repeated_assistMonsterEntityIdList_codec);
             break;
           }
         }

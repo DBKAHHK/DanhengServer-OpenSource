@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static RaidCollectionEnterNextRaidScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiZSYWlkQ29sbGVjdGlvbkVudGVyTmV4dFJhaWRTY1JzcC5wcm90bxoRRk5M",
-            "R1BMTkNQQ0wucHJvdG8iUAogUmFpZENvbGxlY3Rpb25FbnRlck5leHRSYWlk",
-            "U2NSc3ASDwoHcmV0Y29kZRgNIAEoDRIbCgVzY2VuZRgGIAEoCzIMLkZOTEdQ",
-            "TE5DUENMQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
-            "Mw=="));
+            "CiZSYWlkQ29sbGVjdGlvbkVudGVyTmV4dFJhaWRTY1JzcC5wcm90bxoUUmFp",
+            "ZFBsYXllckRhdGEucHJvdG8iUwogUmFpZENvbGxlY3Rpb25FbnRlck5leHRS",
+            "YWlkU2NSc3ASDwoHcmV0Y29kZRgNIAEoDRIeCgVzY2VuZRgGIAEoCzIPLlJh",
+            "aWRQbGF5ZXJEYXRhQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FNLGPLNCPCLReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RaidPlayerDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RaidCollectionEnterNextRaidScRsp), global::EggLink.DanhengServer.Proto.RaidCollectionEnterNextRaidScRsp.Parser, new[]{ "Retcode", "Scene" }, null, null, null, null)
           }));
@@ -99,10 +99,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "scene" field.</summary>
     public const int SceneFieldNumber = 6;
-    private global::EggLink.DanhengServer.Proto.FNLGPLNCPCL scene_;
+    private global::EggLink.DanhengServer.Proto.RaidPlayerData scene_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.FNLGPLNCPCL Scene {
+    public global::EggLink.DanhengServer.Proto.RaidPlayerData Scene {
       get { return scene_; }
       set {
         scene_ = value;
@@ -212,7 +212,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.scene_ != null) {
         if (scene_ == null) {
-          Scene = new global::EggLink.DanhengServer.Proto.FNLGPLNCPCL();
+          Scene = new global::EggLink.DanhengServer.Proto.RaidPlayerData();
         }
         Scene.MergeFrom(other.Scene);
       }
@@ -233,7 +233,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 50: {
             if (scene_ == null) {
-              Scene = new global::EggLink.DanhengServer.Proto.FNLGPLNCPCL();
+              Scene = new global::EggLink.DanhengServer.Proto.RaidPlayerData();
             }
             input.ReadMessage(Scene);
             break;
@@ -259,7 +259,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 50: {
             if (scene_ == null) {
-              Scene = new global::EggLink.DanhengServer.Proto.FNLGPLNCPCL();
+              Scene = new global::EggLink.DanhengServer.Proto.RaidPlayerData();
             }
             input.ReadMessage(Scene);
             break;

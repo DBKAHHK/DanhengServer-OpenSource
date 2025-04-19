@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     public const int ELIADKDAECOFieldNumber = 13;
     private uint eLIADKDAECO_;
     /// <summary>
-    /// repeated GOAMMAGCIJJ JNDKOOEJCFC = 8;
+    ///repeated GOAMMAGCIJJ GOAMMAGCIJJ = 8;
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

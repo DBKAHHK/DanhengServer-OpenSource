@@ -25,11 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1UYWtlTWFpbEF0dGFjaG1lbnRTY1JzcC5wcm90bxoOSXRlbUxpc3QucHJv",
-            "dG8aHkNsaWVudE1haWxBdHRhY2htZW50SXRlbS5wcm90byKSAQoXVGFrZU1h",
-            "aWxBdHRhY2htZW50U2NSc3ASHQoKQXR0YWNobWVudBgMIAEoCzIJLkl0ZW1M",
-            "aXN0EhYKDlN1Y2NNYWlsSWRMaXN0GAkgAygNEi8KDEZhaWxNYWlsTGlzdBgB",
-            "IAMoCzIZLkNsaWVudE1haWxBdHRhY2htZW50SXRlbRIPCgdSZXRjb2RlGAYg",
-            "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "dG8aHkNsaWVudE1haWxBdHRhY2htZW50SXRlbS5wcm90byKXAQoXVGFrZU1h",
+            "aWxBdHRhY2htZW50U2NSc3ASHQoKYXR0YWNobWVudBgMIAEoCzIJLkl0ZW1M",
+            "aXN0EhkKEXN1Y2NfbWFpbF9pZF9saXN0GAkgAygNEjEKDmZhaWxfbWFpbF9s",
+            "aXN0GAEgAygLMhkuQ2xpZW50TWFpbEF0dGFjaG1lbnRJdGVtEg8KB3JldGNv",
+            "ZGUYBiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.ClientMailAttachmentItemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -88,7 +89,7 @@ namespace EggLink.DanhengServer.Proto {
       return new TakeMailAttachmentScRsp(this);
     }
 
-    /// <summary>Field number for the "Attachment" field.</summary>
+    /// <summary>Field number for the "attachment" field.</summary>
     public const int AttachmentFieldNumber = 12;
     private global::EggLink.DanhengServer.Proto.ItemList attachment_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -100,7 +101,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "SuccMailIdList" field.</summary>
+    /// <summary>Field number for the "succ_mail_id_list" field.</summary>
     public const int SuccMailIdListFieldNumber = 9;
     private static readonly pb::FieldCodec<uint> _repeated_succMailIdList_codec
         = pb::FieldCodec.ForUInt32(74);
@@ -111,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return succMailIdList_; }
     }
 
-    /// <summary>Field number for the "FailMailList" field.</summary>
+    /// <summary>Field number for the "fail_mail_list" field.</summary>
     public const int FailMailListFieldNumber = 1;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ClientMailAttachmentItem> _repeated_failMailList_codec
         = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.ClientMailAttachmentItem.Parser);
@@ -122,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return failMailList_; }
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 6;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

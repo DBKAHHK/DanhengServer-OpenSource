@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static RelicFilterPlanSettingsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1SZWxpY0ZpbHRlclBsYW5TZXR0aW5ncy5wcm90byLQAgoXUmVsaWNGaWx0",
-            "ZXJQbGFuU2V0dGluZ3MSFAoMUmFyaXR5Qml0c2V0GAEgASgNEhQKDFJlbGlj",
-            "U2V0TGlzdBgCIAMoDRIcChRCb2R5TWFpblByb3BlcnR5TGlzdBgDIAMoDRIc",
-            "ChRGb290TWFpblByb3BlcnR5TGlzdBgEIAMoDRIeChZTcGhlcmVNYWluUHJv",
-            "cGVydHlMaXN0GAUgAygNEhwKFFJvcGVNYWluUHJvcGVydHlMaXN0GAYgAygN",
-            "EiIKGklzSW5jbHVkZUZpbHRlclN1YlByb3BlcnR5GAcgASgIEhYKDlN1YlBy",
-            "b3BlcnR5TnVtGAggASgNEhcKD1N1YlByb3BlcnR5TGlzdBgJIAMoDRIcChRI",
-            "ZWFkTWFpblByb3BlcnR5TGlzdBgKIAMoDRIcChRIYW5kTWFpblByb3BlcnR5",
-            "TGlzdBgLIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "Ch1SZWxpY0ZpbHRlclBsYW5TZXR0aW5ncy5wcm90byLtAgoXUmVsaWNGaWx0",
+            "ZXJQbGFuU2V0dGluZ3MSFQoNcmFyaXR5X2JpdHNldBgBIAEoDRIWCg5yZWxp",
+            "Y19zZXRfbGlzdBgCIAMoDRIfChdib2R5X21haW5fcHJvcGVydHlfbGlzdBgD",
+            "IAMoDRIfChdmb290X21haW5fcHJvcGVydHlfbGlzdBgEIAMoDRIhChlzcGhl",
+            "cmVfbWFpbl9wcm9wZXJ0eV9saXN0GAUgAygNEh8KF3JvcGVfbWFpbl9wcm9w",
+            "ZXJ0eV9saXN0GAYgAygNEiYKHmlzX2luY2x1ZGVfZmlsdGVyX3N1Yl9wcm9w",
+            "ZXJ0eRgHIAEoCBIYChBzdWJfcHJvcGVydHlfbnVtGAggASgNEhkKEXN1Yl9w",
+            "cm9wZXJ0eV9saXN0GAkgAygNEh8KF2hlYWRfbWFpbl9wcm9wZXJ0eV9saXN0",
+            "GAogAygNEh8KF2hhbmRfbWFpbl9wcm9wZXJ0eV9saXN0GAsgAygNQh6qAhtF",
+            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
       return new RelicFilterPlanSettings(this);
     }
 
-    /// <summary>Field number for the "RarityBitset" field.</summary>
+    /// <summary>Field number for the "rarity_bitset" field.</summary>
     public const int RarityBitsetFieldNumber = 1;
     private uint rarityBitset_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "RelicSetList" field.</summary>
+    /// <summary>Field number for the "relic_set_list" field.</summary>
     public const int RelicSetListFieldNumber = 2;
     private static readonly pb::FieldCodec<uint> _repeated_relicSetList_codec
         = pb::FieldCodec.ForUInt32(18);
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return relicSetList_; }
     }
 
-    /// <summary>Field number for the "BodyMainPropertyList" field.</summary>
+    /// <summary>Field number for the "body_main_property_list" field.</summary>
     public const int BodyMainPropertyListFieldNumber = 3;
     private static readonly pb::FieldCodec<uint> _repeated_bodyMainPropertyList_codec
         = pb::FieldCodec.ForUInt32(26);
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return bodyMainPropertyList_; }
     }
 
-    /// <summary>Field number for the "FootMainPropertyList" field.</summary>
+    /// <summary>Field number for the "foot_main_property_list" field.</summary>
     public const int FootMainPropertyListFieldNumber = 4;
     private static readonly pb::FieldCodec<uint> _repeated_footMainPropertyList_codec
         = pb::FieldCodec.ForUInt32(34);
@@ -144,7 +144,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return footMainPropertyList_; }
     }
 
-    /// <summary>Field number for the "SphereMainPropertyList" field.</summary>
+    /// <summary>Field number for the "sphere_main_property_list" field.</summary>
     public const int SphereMainPropertyListFieldNumber = 5;
     private static readonly pb::FieldCodec<uint> _repeated_sphereMainPropertyList_codec
         = pb::FieldCodec.ForUInt32(42);
@@ -155,7 +155,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return sphereMainPropertyList_; }
     }
 
-    /// <summary>Field number for the "RopeMainPropertyList" field.</summary>
+    /// <summary>Field number for the "rope_main_property_list" field.</summary>
     public const int RopeMainPropertyListFieldNumber = 6;
     private static readonly pb::FieldCodec<uint> _repeated_ropeMainPropertyList_codec
         = pb::FieldCodec.ForUInt32(50);
@@ -166,7 +166,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return ropeMainPropertyList_; }
     }
 
-    /// <summary>Field number for the "IsIncludeFilterSubProperty" field.</summary>
+    /// <summary>Field number for the "is_include_filter_sub_property" field.</summary>
     public const int IsIncludeFilterSubPropertyFieldNumber = 7;
     private bool isIncludeFilterSubProperty_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -178,7 +178,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "SubPropertyNum" field.</summary>
+    /// <summary>Field number for the "sub_property_num" field.</summary>
     public const int SubPropertyNumFieldNumber = 8;
     private uint subPropertyNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -190,7 +190,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "SubPropertyList" field.</summary>
+    /// <summary>Field number for the "sub_property_list" field.</summary>
     public const int SubPropertyListFieldNumber = 9;
     private static readonly pb::FieldCodec<uint> _repeated_subPropertyList_codec
         = pb::FieldCodec.ForUInt32(74);
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return subPropertyList_; }
     }
 
-    /// <summary>Field number for the "HeadMainPropertyList" field.</summary>
+    /// <summary>Field number for the "head_main_property_list" field.</summary>
     public const int HeadMainPropertyListFieldNumber = 10;
     private static readonly pb::FieldCodec<uint> _repeated_headMainPropertyList_codec
         = pb::FieldCodec.ForUInt32(82);
@@ -212,7 +212,7 @@ namespace EggLink.DanhengServer.Proto {
       get { return headMainPropertyList_; }
     }
 
-    /// <summary>Field number for the "HandMainPropertyList" field.</summary>
+    /// <summary>Field number for the "hand_main_property_list" field.</summary>
     public const int HandMainPropertyListFieldNumber = 11;
     private static readonly pb::FieldCodec<uint> _repeated_handMainPropertyList_codec
         = pb::FieldCodec.ForUInt32(90);

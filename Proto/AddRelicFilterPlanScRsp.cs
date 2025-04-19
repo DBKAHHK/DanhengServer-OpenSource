@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1BZGRSZWxpY0ZpbHRlclBsYW5TY1JzcC5wcm90bxoVUmVsaWNGaWx0ZXJQ",
-            "bGFuLnByb3RvIkoKF0FkZFJlbGljRmlsdGVyUGxhblNjUnNwEg8KB1JldGNv",
-            "ZGUYDyABKA0SHgoEUGxhbhgNIAEoCzIQLlJlbGljRmlsdGVyUGxhbkIeqgIb",
+            "bGFuLnByb3RvIkoKF0FkZFJlbGljRmlsdGVyUGxhblNjUnNwEg8KB3JldGNv",
+            "ZGUYDyABKA0SHgoEcGxhbhgNIAEoCzIQLlJlbGljRmlsdGVyUGxhbkIeqgIb",
             "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RelicFilterPlanReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
       return new AddRelicFilterPlanScRsp(this);
     }
 
-    /// <summary>Field number for the "Retcode" field.</summary>
+    /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 15;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "Plan" field.</summary>
+    /// <summary>Field number for the "plan" field.</summary>
     public const int PlanFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.RelicFilterPlan plan_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
