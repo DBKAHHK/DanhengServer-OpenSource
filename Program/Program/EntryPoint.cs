@@ -11,6 +11,7 @@ using EggLink.DanhengServer.GameServer.Server;
 using EggLink.DanhengServer.GameServer.Server.Packet;
 using EggLink.DanhengServer.Internationalization;
 using EggLink.DanhengServer.Kcp;
+using EggLink.DanhengServer.Program.Generator;
 using EggLink.DanhengServer.Program.Handbook;
 using EggLink.DanhengServer.Util;
 using EggLink.DanhengServer.WebServer;
@@ -167,6 +168,13 @@ public class EntryPoint
             Logger.Error(
                 I18NManager.Translate("Server.ServerInfo.FailedToLoadItem", I18NManager.Translate("Word.GameData")), e);
             Console.ReadLine();
+            return;
+        }
+
+        // check option
+        if (true || args.Contains("-generate-tourn"))
+        {
+            TournRoomGenerator.GenerateFile("RogueTournRoom.json");
             return;
         }
 

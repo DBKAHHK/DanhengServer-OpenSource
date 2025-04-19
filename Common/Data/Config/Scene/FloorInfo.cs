@@ -2,6 +2,7 @@
 using EggLink.DanhengServer.Enums.Scene;
 using EggLink.DanhengServer.Util;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace EggLink.DanhengServer.Data.Config.Scene;
 
@@ -13,6 +14,7 @@ public class FloorInfo
     public string NavmapConfigPath { get; set; } = "";
     public List<FloorGroupInfo> GroupInstanceList { get; set; } = [];
     public List<FloorDimensionInfo> DimensionList { get; set; } = [];
+    [JsonProperty(ItemConverterType = typeof(StringEnumConverter))] public List<LevelFeatureTypeEnum> LevelFeatureModules { get; set; } = [];
 
     [JsonConverter(typeof(ConcurrentBagConverter<int>))]
     public ConcurrentBag<int> MapSections = [];
