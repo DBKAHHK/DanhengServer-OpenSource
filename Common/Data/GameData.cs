@@ -1,4 +1,5 @@
 ﻿using System.Collections.Concurrent;
+using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Data.Config.AdventureAbility;
 using EggLink.DanhengServer.Data.Config.Scene;
 using EggLink.DanhengServer.Data.Custom;
@@ -39,6 +40,7 @@ public static class GameData
     #region Avatar
 
     public static Dictionary<int, AvatarConfigExcel> AvatarConfigData { get; private set; } = [];
+    public static Dictionary<int, AdventureAbilityConfigListInfo> AdventureAbilityConfigListData { get; private set; } = [];
     public static Dictionary<int, AvatarPromotionConfigExcel> AvatarPromotionConfigData { get; private set; } = [];
     public static Dictionary<int, AvatarExpItemConfigExcel> AvatarExpItemConfigData { get; private set; } = [];
     public static Dictionary<int, AvatarSkillTreeConfigExcel> AvatarSkillTreeConfigData { get; private set; } = [];

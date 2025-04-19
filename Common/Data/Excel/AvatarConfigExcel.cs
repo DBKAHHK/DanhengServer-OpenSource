@@ -32,13 +32,6 @@ public class AvatarConfigExcel : ExcelResource
 
     [JsonIgnore] public int RankUpItemId { get; set; }
 
-    [JsonIgnore] public string NameKey { get; set; } = "";
-
-    [JsonIgnore] public AbilityInfo? MazeSkill { get; set; }
-
-    [JsonIgnore] public AbilityInfo? MazeAtk { get; set; }
-    [JsonIgnore] public Dictionary<string, AbilityInfo> MazeAbility { get; set; } = [];
-
     public override int GetId()
     {
         return AvatarID;
@@ -48,10 +41,6 @@ public class AvatarConfigExcel : ExcelResource
     {
         if (!GameData.AvatarConfigData.ContainsKey(AvatarID)) GameData.AvatarConfigData.Add(AvatarID, this);
         RankUpItemId = AvatarID + 10000;
-
-        var regex = new Regex(@"(?<=Avatar_)(.*?)(?=_Config)");
-        var match = regex.Match(JsonPath ?? "");
-        if (match.Success) NameKey = match.Value;
         JsonPath = null;
     }
 }

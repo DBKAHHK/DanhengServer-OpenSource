@@ -416,9 +416,44 @@ public class ResourceManager
                 using var reader = file.OpenRead();
                 using StreamReader reader2 = new(reader);
                 var text = reader2.ReadToEnd().Replace("$type", "Type");
-                var skillAbilityInfo = JsonConvert.DeserializeObject<SkillAbilityInfo>(text);
-                skillAbilityInfo?.Loaded(avatar);
-                count += skillAbilityInfo == null ? 0 : 1;
+                var obj = JObject.Parse(text);
+
+                var info = AdventureAbilityConfigListInfo.LoadFromJsonObject(obj);
+
+                GameData.AdventureAbilityConfigListData.TryAdd(avatar.AvatarID, info);
+                count++;
+            }
+            catch (Exception ex)
+            {
+                ResourceCache.IsComplete = false;
+                Logger.Error(
+                    I18NManager.Translate("Server.ServerInfo.FailedToReadItem", adventurePath,
+                        I18NManager.Translate("Word.Error")), ex);
+            }
+        });
+
+        var res2 = Parallel.ForEach(GameData.NpcMonsterDataData.Values, adventure =>
+        {
+            var adventurePath = adventure.ConfigEntityPath.Replace("_Entity.json", "_Ability.json").Replace("_Config.json", "_Ability.json")
+                .Replace("ConfigEntity", "ConfigAdventureAbility");
+
+            var path = ConfigManager.Config.Path.ResourcePath + "/" + adventurePath;
+            var file = new FileInfo(path);
+            if (!file.Exists)
+            {
+                return;
+            }
+            try
+            {
+                using var reader = file.OpenRead();
+                using StreamReader reader2 = new(reader);
+                var text = reader2.ReadToEnd().Replace("$type", "Type");
+                var obj = JObject.Parse(text);
+
+                var info = AdventureAbilityConfigListInfo.LoadFromJsonObject(obj);
+
+                GameData.AdventureAbilityConfigListData.TryAdd(adventure.ID, info);
+                count++;
             }
             catch (Exception ex)
             {
@@ -430,9 +465,9 @@ public class ResourceManager
         });
 
         // wait it done
-        while (!res.IsCompleted) Thread.Sleep(10);
+        while (!res.IsCompleted || !res2.IsCompleted) Thread.Sleep(10);
 
-        if (count < GameData.AdventurePlayerData.Count)
+        if (count < GameData.AdventurePlayerData.Count + GameData.NpcMonsterDataData.Count)
             Logger.Warn(I18NManager.Translate("Server.ServerInfo.ConfigMissing",
                 I18NManager.Translate("Word.MazeSkillInfo"),
                 $"{ConfigManager.Config.Path.ResourcePath}/Config/Level/AdventureAbility",

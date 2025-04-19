@@ -54,6 +54,7 @@ public class PlayerInstance(PlayerData data)
     public LineupManager? LineupManager { get; private set; }
     public InventoryManager? InventoryManager { get; private set; }
     public BattleManager? BattleManager { get; private set; }
+    public SceneSkillManager? SceneSkillManager { get; private set; }
     public BattleInstance? BattleInstance { get; set; }
 
     #endregion
@@ -65,7 +66,6 @@ public class PlayerInstance(PlayerData data)
     public OfferingManager? OfferingManager { get; private set; }
 
     #endregion
-
 
     #region Quest & Mission Managers
 
@@ -166,6 +166,7 @@ public class PlayerInstance(PlayerData data)
         LineupManager = new LineupManager(this);
         InventoryManager = new InventoryManager(this);
         BattleManager = new BattleManager(this);
+        SceneSkillManager = new SceneSkillManager(this);
         MissionManager = new MissionManager(this);
         GachaManager = new GachaManager(this);
         MessageManager = new MessageManager(this);

@@ -20,6 +20,7 @@ public class PropStateExecute : TaskConfigInfo
         {
             Type = obj[nameof(Type)]!.ToObject<string>()!
         };
+
         if (obj.ContainsKey(nameof(TargetType)))
         {
             var targetType = obj[nameof(TargetType)] as JObject;

@@ -1,7 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Inventory;
-using EggLink.DanhengServer.GameServer.Game.Battle.Skill;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Game.RogueMagic;
 using EggLink.DanhengServer.GameServer.Game.Scene;
@@ -17,21 +16,21 @@ namespace EggLink.DanhengServer.GameServer.Game.Battle;
 
 public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
 {
-    public StageConfigExcel? NextBattleStageConfig { get; set; } = null;
-    public async ValueTask StartBattle(SceneCastSkillCsReq req, MazeSkill skill, List<uint> hitTargetEntityIdList)
+    public StageConfigExcel? NextBattleStageConfig { get; set; }
+
+    public async ValueTask<BattleInstance?> StartBattle(IGameEntity attackEntity, List<IGameEntity> targetEntityList, bool isSkill)
     {
-        if (Player.BattleInstance != null) return;
+        if (Player.BattleInstance != null) return Player.BattleInstance;
         var targetList = new List<EntityMonster>();
         var avatarList = new List<AvatarSceneInfo>();
         var propList = new List<EntityProp>();
-        Player.SceneInstance!.AvatarInfo.TryGetValue((int)req.AttackedByEntityId, out var castAvatar);
+        Player.SceneInstance!.AvatarInfo.TryGetValue(attackEntity.EntityID, out var castAvatar);
 
-        if (Player.SceneInstance!.AvatarInfo.ContainsKey((int)req.AttackedByEntityId))
+        if (castAvatar != null)
         {
-            foreach (var entity in hitTargetEntityIdList)
+            foreach (var entity in targetEntityList)
             {
-                Player.SceneInstance!.Entities.TryGetValue((int)entity, out var entityInstance);
-                switch (entityInstance)
+                switch (entity)
                 {
                     case EntityMonster monster:
                         targetList.Add(monster);
@@ -41,35 +40,24 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
                         break;
                 }
             }
-
-            foreach (var info in req.AssistMonsterEntityInfo)
-            foreach (var entity in info.EntityIdList)
-            {
-                Player.SceneInstance!.Entities.TryGetValue((int)entity, out var entityInstance);
-                if (entityInstance is not EntityMonster monster) continue;
-                if (targetList.Contains(monster)) continue; // avoid adding the same monster twice
-                targetList.Add(monster);
-            }
         }
         else
         {
             var isAmbushed =
-                hitTargetEntityIdList.Any(entity => Player.SceneInstance!.AvatarInfo.ContainsKey((int)entity));
+                targetEntityList.Any(entity => Player.SceneInstance!.AvatarInfo.ContainsKey(entity.EntityID));
 
             if (!isAmbushed)
             {
-                await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, []));
-                return;
+                return null;
             }
 
-            var monsterEntity = Player.SceneInstance!.Entities[(int)req.AttackedByEntityId];
+            var monsterEntity = Player.SceneInstance!.Entities[attackEntity.EntityID];
             if (monsterEntity is EntityMonster monster) targetList.Add(monster);
         }
 
         if (targetList.Count == 0 && propList.Count == 0)
         {
-            await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, []));
-            return;
+            return null;
         }
 
         foreach (var prop in propList)
@@ -94,49 +82,20 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
 
         if (targetList.Count > 0)
         {
-            // Skill handle
-            if (!skill.TriggerBattle)
-            {
-                // Skill is not supposed to trigger a battle
-                List<HitMonsterInstance> hitMonsterInstances = [];
-                hitMonsterInstances.AddRange(targetList.Select(entityMonster =>
-                    new HitMonsterInstance(entityMonster.EntityID, MonsterBattleType.NoBattle)));
-
-                skill.OnHitTarget(Player.SceneInstance!.AvatarInfo[(int)req.AttackedByEntityId], targetList);
-                await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, hitMonsterInstances));
-                return;
-            }
-
-            if (castAvatar != null)
-            {
-                skill.OnAttack(Player.SceneInstance!.AvatarInfo[(int)req.AttackedByEntityId], targetList);
-                skill.OnCast(castAvatar, Player);
-            }
-
             var triggerBattle = targetList.Any(target => target.IsAlive);
 
             if (!triggerBattle)
             {
-                List<HitMonsterInstance> hitMonsterInstances = [];
-                hitMonsterInstances.AddRange(targetList.Select(entityMonster =>
-                    new HitMonsterInstance(entityMonster.EntityID, MonsterBattleType.DirectDieSimulateBattle)));
-
-                await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, hitMonsterInstances));
-                return;
+                return null;
             }
 
             var inst = Player.RogueManager!.GetRogueInstance();
             if (inst is RogueMagicInstance { CurLevel.CurRoom.AdventureInstance: not null } magic)
             {
-                List<HitMonsterInstance> hitMonsterInstances = [];
-                hitMonsterInstances.AddRange(targetList.Select(entityMonster =>
-                    new HitMonsterInstance(entityMonster.EntityID, MonsterBattleType.DirectDieSkipBattle)));
-
                 await magic.HitMonsterInAdventure(targetList);
 
                 foreach (var entityMonster in targetList) await entityMonster.Kill();
-                await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, hitMonsterInstances));
-                return;
+                return null;
             }
 
             BattleInstance battleInstance =
@@ -169,7 +128,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
                 if (avatarExcel != null)
                 {
                     mazeBuff = new MazeBuff((int)avatarExcel.DamageType, 1, index);
-                    mazeBuff.DynamicValues.Add("SkillIndex", skill.IsMazeSkill ? 2 : 1);
+                    mazeBuff.DynamicValues.Add("SkillIndex", isSkill ? 2 : 1);
                 }
             }
             else
@@ -181,7 +140,9 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
             }
 
             if (mazeBuff != null && mazeBuff.BuffID != 0) // avoid adding a buff with ID 0
+            {
                 battleInstance.Buffs.Add(mazeBuff);
+            }
 
             battleInstance.AvatarInfo = avatarList;
 
@@ -192,23 +153,14 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
 
             Player.BattleInstance = battleInstance;
 
-            // Send battle start packet
-            List<HitMonsterInstance> hitMonsterInstance = [];
-            hitMonsterInstance.AddRange(targetList.Where(x => x.IsAlive).Select(entityMonster =>
-                new HitMonsterInstance(entityMonster.EntityID, MonsterBattleType.TriggerBattle)));
-            hitMonsterInstance.AddRange(targetList.Where(x => !x.IsAlive).Select(entityMonster =>
-                new HitMonsterInstance(entityMonster.EntityID, MonsterBattleType.DirectDieSkipBattle)));
-
             InvokeOnPlayerEnterBattle(Player, battleInstance);
 
-            await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, battleInstance,
-                hitMonsterInstance));
             Player.SceneInstance?.ClearSummonUnit();
+
+            return battleInstance;
         }
-        else
-        {
-            await Player.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, []));
-        }
+
+        return null;
     }
 
     public async ValueTask StartStage(int eventId)

@@ -2,18 +2,18 @@
 
 namespace EggLink.DanhengServer.Data.Config.Task;
 
-public class RefreshMazeBuffTime : TaskConfigInfo
+public class AddAdventureModifier : TaskConfigInfo
 {
     public TargetEvaluator TargetType { get; set; } = new();
-    public int ID { get; set; }
-    public DynamicFloat LifeTime { get; set; } = new();
+    public string ModifierName { get; set; } = "";
 
     public new static TaskConfigInfo LoadFromJsonObject(JObject obj)
     {
-        var info = new RefreshMazeBuffTime
+        var info = new AddAdventureModifier
         {
             Type = obj[nameof(Type)]!.ToObject<string>()!
         };
+
         if (obj.TryGetValue(nameof(TargetType), out var value))
         {
             var targetType = value as JObject;
@@ -24,9 +24,7 @@ public class RefreshMazeBuffTime : TaskConfigInfo
             info.TargetType = (targetType!.ToObject(classType!) as TargetEvaluator)!;
         }
 
-        if (obj.TryGetValue(nameof(ID), out value)) info.ID = value.ToObject<int>()!;
-
-        if (obj.TryGetValue(nameof(LifeTime), out value)) info.LifeTime = value.ToObject<DynamicFloat>()!;
+        if (obj.TryGetValue(nameof(ModifierName), out value)) info.ModifierName = value.ToObject<string>()!;
 
         return info;
     }

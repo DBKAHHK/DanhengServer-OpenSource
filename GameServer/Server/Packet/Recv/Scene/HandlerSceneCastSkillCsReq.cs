@@ -1,7 +1,4 @@
-﻿using EggLink.DanhengServer.Data;
-using EggLink.DanhengServer.Data.Config;
-using EggLink.DanhengServer.GameServer.Game.Battle.Skill;
-using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
 
@@ -15,71 +12,8 @@ public class HandlerSceneCastSkillCsReq : Handler
         var req = SceneCastSkillCsReq.Parser.ParseFrom(data);
 
         var player = connection.Player!;
-        MazeSkill mazeSkill = new([], req);
+        var res = await player.SceneSkillManager!.OnCast(req);
 
-        // Get casting avatar
-        connection.Player!.SceneInstance!.AvatarInfo.TryGetValue((int)req.AttackedByEntityId, out var caster);
-
-        if (caster != null)
-        {
-            if (req.MazeAbilityStr != "")
-            {
-                // overwrite
-                AbilityInfo? ability = null;
-                caster.AvatarInfo.Excel?.MazeAbility.TryGetValue(req.MazeAbilityStr, out ability);
-                if (ability != null)
-                {
-                    mazeSkill = MazeSkillManager.GetSkill(caster.AvatarInfo.GetAvatarId(), ability, req);
-                    mazeSkill.OnCast(caster, player);
-                }
-            }
-            else
-            {
-                // Check if normal attack or technique was used
-                if (req.SkillIndex > 0)
-                {
-                    // Cast skill effects
-                    var excel = caster.AvatarInfo.PathId > 0
-                        ? GameData.AvatarConfigData[caster.AvatarInfo.PathId]
-                        : caster.AvatarInfo.Excel;
-                    if (excel != null && excel.MazeSkill != null)
-                    {
-                        mazeSkill = MazeSkillManager.GetSkill(caster.AvatarInfo.GetAvatarId(), (int)req.SkillIndex,
-                            req);
-                        mazeSkill.OnCast(caster, player);
-                    }
-                }
-                else
-                {
-                    mazeSkill = MazeSkillManager.GetSkill(caster.AvatarInfo.GetAvatarId(), 0, req);
-                }
-            }
-        }
-
-        if (req.AssistMonsterEntityIdList.Count > 0)
-        {
-            if (caster != null && caster.AvatarInfo.AvatarId == 1218 && req.SkillIndex == 1)
-            {
-                // Avoid Jiqoqiu's E skill
-                await connection.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, []));
-            }
-            else
-            {
-                var hitTargetEntityIdList = new List<uint>();
-                if (req.AssistMonsterEntityIdList.Count > 0)
-                    foreach (var id in req.AssistMonsterEntityIdList)
-                        hitTargetEntityIdList.Add(id);
-                else
-                    foreach (var id in req.HitTargetEntityIdList)
-                        hitTargetEntityIdList.Add(id);
-                // Start battle
-                await connection.Player!.BattleManager!.StartBattle(req, mazeSkill, [.. hitTargetEntityIdList]);
-            }
-        }
-        else
-        {
-            // We had no targets for some reason
-            await connection.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, []));
-        }
+        await connection.SendPacket(new PacketSceneCastSkillScRsp(res.RetCode, req.CastEntityId, res.Instance, res.TriggerBattleInfos ?? []));
     }
 }

@@ -2,7 +2,7 @@
 
 namespace EggLink.DanhengServer.Data.Excel;
 
-[ResourceEntity("MazeBuff.json")]
+[ResourceEntity("MazeBuff.json,AvatarMazeBuff.json", isMultifile:true)]
 public class MazeBuffExcel : ExcelResource
 {
     public int ID { get; set; }
@@ -16,7 +16,7 @@ public class MazeBuffExcel : ExcelResource
 
     public override void Loaded()
     {
-        GameData.MazeBuffData.Add(GetId(), this);
+        GameData.MazeBuffData.TryAdd(GetId(), this);
     }
 
     public BattleBuff ToProto()

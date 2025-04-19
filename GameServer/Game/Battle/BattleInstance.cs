@@ -3,6 +3,7 @@ using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Inventory;
+using EggLink.DanhengServer.Enums.Avatar;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Game.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
@@ -242,6 +243,14 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
                     null) // if avatar is in lineup
                     await avatar.ApplyBuff(this);
         }).Wait();
+
+        foreach (var buff in Buffs.Clone())
+        {
+            if (Enum.IsDefined(typeof(DamageTypeEnum), buff.BuffID))
+            {
+                Buffs.RemoveAll(x => x.BuffID == buff.BuffID && x.DynamicValues.Count == 0);
+            }
+        }
 
         foreach (var eventInstance in BattleEvents.Values) proto.BattleEvent.Add(eventInstance.ToProto());
 

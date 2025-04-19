@@ -12,6 +12,7 @@ using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Game.Rogue.Scene;
 using EggLink.DanhengServer.GameServer.Game.RogueMagic.Scene;
 using EggLink.DanhengServer.GameServer.Game.RogueTourn.Scene;
+using EggLink.DanhengServer.GameServer.Game.Scene.Component;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
@@ -290,6 +291,16 @@ public class SceneInstance
         LeaderEntityId = info.AvatarInfo.EntityId;
         if (sendPacket && !notSendPacket)
             await Player.SendPacket(new PacketSceneGroupRefreshScNotify(Player, addAvatar, removeAvatar));
+
+        foreach (var avatar in removeAvatar)
+        {
+            Entities.Remove(avatar.EntityID);
+        }
+
+        foreach (var avatar in addAvatar)
+        {
+            Entities.Add(avatar.EntityID, avatar);
+        }
     }
 
     public void SyncGroupInfo()
@@ -418,7 +429,7 @@ public class SceneInstance
             // enter
             var config = trigger.OnTriggerEnter;
 
-            Player.TaskManager!.AvatarLevelTask.TriggerTasks(config, targetEnter, SummonUnit);
+            Player.TaskManager!.SummonUnitLevelTask.TriggerTasks(config, targetEnter, SummonUnit);
         }
 
         if (targetExit.Count <= 0) return Retcode.RetSucc;
@@ -426,7 +437,7 @@ public class SceneInstance
             // enter
             var config = trigger.OnTriggerExit;
 
-            Player.TaskManager!.AvatarLevelTask.TriggerTasks(config, targetExit, SummonUnit);
+            Player.TaskManager!.SummonUnitLevelTask.TriggerTasks(config, targetExit, SummonUnit);
         }
 
 

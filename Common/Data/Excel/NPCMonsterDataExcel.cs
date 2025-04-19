@@ -9,6 +9,8 @@ public class NPCMonsterDataExcel : ExcelResource
 {
     public int ID { get; set; }
     public HashName NPCName { get; set; } = new();
+    public string JsonPath { get; set; } = "";
+    public string ConfigEntityPath { get; set; } = "";
 
     [JsonConverter(typeof(StringEnumConverter))]
     public MonsterRankEnum Rank { get; set; }

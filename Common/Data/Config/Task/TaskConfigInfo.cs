@@ -58,6 +58,34 @@ public class TaskConfigInfo
             return res;
         }
 
+        if (typeStr == "AdventureFireProjectile")
+        {
+            var res = AdventureFireProjectile.LoadFromJsonObject(json);
+            res.Type = type;
+            return res;
+        }
+
+        if (typeStr == "AdventureTriggerAttack")
+        {
+            var res = AdventureTriggerAttack.LoadFromJsonObject(json);
+            res.Type = type;
+            return res;
+        }
+
+        if (typeStr == "AddAdventureModifier")
+        {
+            var res = AddAdventureModifier.LoadFromJsonObject(json);
+            res.Type = type;
+            return res;
+        }
+
+        if (typeStr == "RemoveAdventureModifier")
+        {
+            var res = RemoveAdventureModifier.LoadFromJsonObject(json);
+            res.Type = type;
+            return res;
+        }
+
         if (typeClass != null)
         {
             var res = (TaskConfigInfo)json.ToObject(typeClass)!;

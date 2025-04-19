@@ -6,7 +6,7 @@ using EggLink.DanhengServer.Proto;
 
 namespace EggLink.DanhengServer.GameServer.Game.Task.AvatarTask;
 
-public class AvatarLevelTask
+public class SummonUnitLevelTask
 {
     #region Task Condition
 
