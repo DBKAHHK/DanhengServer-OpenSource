@@ -51,6 +51,7 @@ public static class GameData
 
     public static Dictionary<int, AdventurePlayerExcel> AdventurePlayerData { get; private set; } = [];
     public static Dictionary<int, SummonUnitDataExcel> SummonUnitDataData { get; private set; } = [];
+    public static Dictionary<int, DecideAvatarOrderExcel> DecideAvatarOrderData { get; private set; } = [];
 
     #endregion
 
@@ -112,6 +113,8 @@ public static class GameData
     public static Dictionary<int, PlayerLevelConfigExcel> PlayerLevelConfigData { get; private set; } = [];
     public static Dictionary<int, BackGroundMusicExcel> BackGroundMusicData { get; private set; } = [];
     public static Dictionary<int, ChatBubbleConfigExcel> ChatBubbleConfigData { get; private set; } = [];
+    public static Dictionary<string, RechargeConfigExcel> RechargeConfigData { get; private set; } = [];
+    public static Dictionary<int, RechargeGiftConfigExcel> RechargeGiftConfigData { get; private set; } = [];
 
     #endregion
 

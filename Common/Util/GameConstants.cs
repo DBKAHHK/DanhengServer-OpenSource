@@ -3,6 +3,7 @@
 public static class GameConstants
 {
     public const string GAME_VERSION = "3.2.0";
+    public const int GameVersionInt = 3200;
     public const int MAX_STAMINA = 300;
     public const int MAX_STAMINA_RESERVE = 2400;
     public const int STAMINA_RECOVERY_TIME = 360; // 6 minutes

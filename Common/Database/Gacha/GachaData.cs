@@ -11,6 +11,7 @@ public class GachaData : BaseDatabaseDataHelper
     public bool LastWeaponGachaFailed { get; set; } = false;
     public int LastGachaFailedCount { get; set; } = 0;
     public int LastGachaPurpleFailedCount { get; set; } = 0;
+    [SugarColumn(IsJson = true)] public List<int> GachaDecideOrder { get; set; } = [];
 }
 
 public class GachaInfo

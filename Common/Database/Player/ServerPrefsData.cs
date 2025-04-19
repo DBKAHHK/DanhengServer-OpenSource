@@ -9,7 +9,7 @@ public class ServerPrefsData : BaseDatabaseDataHelper
 {
     [SugarColumn(IsJson = true)] public Dictionary<int, ServerPrefsInfo> ServerPrefsDict { get; set; } = [];
 
-    public double Version { get; set; } = 2.4;
+    public double Version { get; set; } = 3.2;
 
     public void SetData(int prefsId, string b64Data)
     {
