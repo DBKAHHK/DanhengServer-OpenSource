@@ -192,6 +192,11 @@ public class PlayerInstance(PlayerData data)
         ServerPrefsData = InitializeDatabase<ServerPrefsData>();
         BattleCollegeData = InitializeDatabase<BattleCollegeData>();
 
+        if ((int)(ServerPrefsData.Version * 1000) != GameConstants.GameVersionInt)
+        {
+            ServerPrefsData.ServerPrefsDict.Clear();
+            ServerPrefsData.Version = GameConstants.GameVersionInt / 1000d;
+        }
 
         Data.LastActiveTime = Extensions.GetUnixSec();
 
