@@ -57,12 +57,12 @@ public class StoryLineManager : BasePlayerManager
         await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
         if (entryId > 0)
         {
-            await Player.EnterMissionScene(entryId, anchorGroupId, anchorId, true);
+            await Player.EnterSceneByEntranceId(entryId, anchorGroupId, anchorId, true);
         }
         else
         {
             if (lineInfo == null)
-                await Player.EnterMissionScene(storyExcel.InitEntranceID, storyExcel.InitGroupID,
+                await Player.EnterSceneByEntranceId(storyExcel.InitEntranceID, storyExcel.InitGroupID,
                     storyExcel.InitAnchorID,
                     true);
             else
@@ -219,7 +219,7 @@ public class StoryLineManager : BasePlayerManager
         if (tp)
         {
             if (entryId > 0)
-                await Player.EnterMissionScene(entryId, anchorGroupId, anchorId, true);
+                await Player.EnterSceneByEntranceId(entryId, anchorGroupId, anchorId, true);
             else
                 await Player.LoadScene(StoryLineData.OldPlaneId, StoryLineData.OldFloorId, StoryLineData.OldEntryId,
                     StoryLineData.OldPos, StoryLineData.OldRot, true);

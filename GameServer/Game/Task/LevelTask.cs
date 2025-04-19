@@ -96,13 +96,13 @@ public class LevelTask(PlayerInstance player)
     public async ValueTask EnterMap(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
     {
         if (act is EnterMap enterMap)
-            await Player.EnterMissionScene(enterMap.EntranceID, enterMap.GroupID, enterMap.AnchorID, true);
+            await Player.EnterSceneByEntranceId(enterMap.EntranceID, enterMap.GroupID, enterMap.AnchorID, true);
     }
 
     public async ValueTask EnterMapByCondition(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
     {
         if (act is EnterMapByCondition enterMapByCondition)
-            await Player.EnterMissionScene(enterMapByCondition.EntranceID.GetValue(), 0, 0, true);
+            await Player.EnterSceneByEntranceId(enterMapByCondition.EntranceID.GetValue(), 0, 0, true);
     }
 
     public async ValueTask TriggerPerformance(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)

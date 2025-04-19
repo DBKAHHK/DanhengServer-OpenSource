@@ -122,7 +122,7 @@ public class RogueTournInstance : BaseRogueInstance
         EventManager?.OnNextRoom();
         foreach (var miracle in RogueMiracles.Values) miracle.OnEnterNextRoom();
 
-        await Player.EnterMissionScene(entrance, group, anchor, false);
+        await Player.EnterSceneByEntranceId(entrance, group, anchor, false);
 
         // check if era flipper
         if (Player.SceneInstance!.FloorInfo!.LevelFeatureModules.Contains(LevelFeatureTypeEnum.EraFlipper))
@@ -151,7 +151,7 @@ public class RogueTournInstance : BaseRogueInstance
 
         await Player.SendPacket(new PacketSyncLineupNotify(currentLineup));
 
-        await Player.EnterMissionScene(1034102, 0, 0, false);
+        await Player.EnterSceneByEntranceId(1034102, 0, 0, false);
 
         Player.RogueTournManager!.RogueTournInstance = null;
     }

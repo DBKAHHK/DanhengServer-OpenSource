@@ -172,7 +172,7 @@ public class EntryPoint
         }
 
         // check option
-        if (true || args.Contains("-generate-tourn"))
+        if (args.Contains("-generate-tourn"))
         {
             TournRoomGenerator.GenerateFile("RogueTournRoom.json");
             return;

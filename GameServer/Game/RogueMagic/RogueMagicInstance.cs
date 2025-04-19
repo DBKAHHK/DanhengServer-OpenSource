@@ -176,7 +176,7 @@ public class RogueMagicInstance : BaseRogueInstance
         EventManager?.OnNextRoom();
         foreach (var miracle in RogueMiracles.Values) miracle.OnEnterNextRoom();
 
-        await Player.EnterMissionScene(entrance, group, anchor, false);
+        await Player.EnterSceneByEntranceId(entrance, group, anchor, false);
 
         // sync
         await Player.SendPacket(new PacketRogueMagicLevelInfoUpdateScNotify(this, [CurLevel], [
@@ -193,7 +193,7 @@ public class RogueMagicInstance : BaseRogueInstance
 
         await Player.SendPacket(new PacketSyncLineupNotify(currentLineup));
 
-        await Player.EnterMissionScene(801120102, 0, 0, false);
+        await Player.EnterSceneByEntranceId(801120102, 0, 0, false);
 
         Player.RogueMagicManager!.RogueMagicInstance = null;
     }

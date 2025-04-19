@@ -11,6 +11,6 @@ public class MissionHandlerMoveToAnchor : MissionFinishActionHandler
         var entryId = Params[0];
         var anchorGroup = Params[1];
         var anchorId = Params[2];
-        await Player.EnterMissionScene(entryId, anchorGroup, anchorId, true);
+        await Player.EnterSceneByEntranceId(entryId, anchorGroup, anchorId, true);
     }
 }

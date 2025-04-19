@@ -729,7 +729,7 @@ public class PlayerInstance(PlayerData data)
                beforeStoryLineId != storyLineId; // return true if entryId changed or story line changed
     }
 
-    public async ValueTask EnterMissionScene(int entranceId, int anchorGroupId, int anchorId, bool sendPacket)
+    public async ValueTask EnterSceneByEntranceId(int entranceId, int anchorGroupId, int anchorId, bool sendPacket)
     {
         GameData.MapEntranceData.TryGetValue(entranceId, out var entrance);
         if (entrance == null) return;
