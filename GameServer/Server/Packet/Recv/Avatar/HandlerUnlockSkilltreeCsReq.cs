@@ -32,7 +32,7 @@ public class HandlerUnlockSkilltreeCsReq : Handler
             await connection.Player!.InventoryManager!.RemoveItem((int)cost.PileItem.ItemId,
                 (int)cost.PileItem.ItemNum);
 
-        avatar.GetCurAvatarInfo().SkillTree[(int)req.PointId] = (int)req.Level;
+        avatar.GetSkillTree()[(int)req.PointId] = (int)req.Level;
 
         await connection.SendPacket(new PacketPlayerSyncScNotify(avatar));
 

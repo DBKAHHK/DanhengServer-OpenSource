@@ -1,7 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
-using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Inventory;
-using EggLink.DanhengServer.Database.TrainParty;
+using EggLink.DanhengServer.Enums.Avatar;
 using EggLink.DanhengServer.Enums.Item;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.PlayerSync;
 using EggLink.DanhengServer.Internationalization;
@@ -34,9 +33,8 @@ public class CommandGiveall : ICommand
         var avatarList = GameData.AvatarConfigData.Values;
         foreach (var avatar in avatarList)
         {
-            // Hacky way to prevent giving random avatars
-            if (avatar.AvatarID > 2000 && avatar.AvatarID != 8001) continue;
-
+            if (avatar.AvatarID > 2000 && avatar.AvatarID != 8001)
+                continue; // Hacky way to prevent giving random avatars
             if (player.AvatarManager!.GetAvatar(avatar.AvatarID) == null)
             {
                 GameData.MultiplePathAvatarConfigData.TryGetValue(avatar.AvatarID, out var multiPathAvatar);
@@ -46,7 +44,7 @@ public class CommandGiveall : ICommand
                 player.AvatarManager!.GetAvatar(avatar.AvatarID)!.Level = Math.Max(Math.Min(level, 80), 0);
                 player.AvatarManager!.GetAvatar(avatar.AvatarID)!.Promotion =
                     GameData.GetMinPromotionForLevel(Math.Max(Math.Min(level, 80), 0));
-                player.AvatarManager!.GetAvatar(avatar.AvatarID)!.GetCurAvatarInfo().Rank =
+                player.AvatarManager!.GetAvatar(avatar.AvatarID)!.GetCurPathInfo().Rank =
                     Math.Max(Math.Min(rank, 6), 0);
             }
             else
@@ -54,7 +52,7 @@ public class CommandGiveall : ICommand
                 player.AvatarManager!.GetAvatar(avatar.AvatarID)!.Level = Math.Max(Math.Min(level, 80), 0);
                 player.AvatarManager!.GetAvatar(avatar.AvatarID)!.Promotion =
                     GameData.GetMinPromotionForLevel(Math.Max(Math.Min(level, 80), 0));
-                player.AvatarManager!.GetAvatar(avatar.AvatarID)!.GetCurAvatarInfo().Rank =
+                player.AvatarManager!.GetAvatar(avatar.AvatarID)!.GetCurPathInfo().Rank =
                     Math.Max(Math.Min(rank, 6), 0);
             }
         }
@@ -306,23 +304,27 @@ public class CommandGiveall : ICommand
 
         foreach (var multiPathAvatar in GameData.MultiplePathAvatarConfigData.Values)
         {
-            var avatarData = player.AvatarManager!.GetAvatar(multiPathAvatar.BaseAvatarID);
-            if (avatarData == null) continue;
-            if (avatarData.PathInfo.ContainsKey(multiPathAvatar.AvatarID)) continue;
+            if (player.AvatarManager!.GetAvatar(multiPathAvatar.BaseAvatarID) == null)
+            {
+                await player.InventoryManager!.AddItem(multiPathAvatar.BaseAvatarID, 1, false, sync: false);
+                player.AvatarManager!.GetAvatar(multiPathAvatar.BaseAvatarID)!.Level = Math.Max(Math.Min(1, 80), 0);
+                player.AvatarManager!.GetAvatar(multiPathAvatar.BaseAvatarID)!.Promotion =
+                    GameData.GetMinPromotionForLevel(Math.Max(Math.Min(1, 80), 0));
+                player.AvatarManager!.GetAvatar(multiPathAvatar.BaseAvatarID)!.GetCurPathInfo().Rank =
+                    Math.Max(Math.Min(0, 6), 0);
+            }
 
-            var avatarExcel = GameData.AvatarConfigData.Values
-                .FirstOrDefault(x => x.AvatarID == multiPathAvatar.AvatarID)!;
-            var pathInfo = new MultiPathData();
-            foreach (var skillTree in avatarExcel.DefaultSkillTree)
-                pathInfo.SkillTree.Add(skillTree.PointID, 1);
-            avatarData.PathInfo.Add(multiPathAvatar.AvatarID, pathInfo);
-
-            await player.SendPacket(new PacketPlayerSyncScNotify(avatarData));
+            var avatarData = player.AvatarManager!.GetAvatar(multiPathAvatar.BaseAvatarID)!;
+            if (avatarData.PathInfoes.ContainsKey(multiPathAvatar.AvatarID)) continue;
+            if (multiPathAvatar.BaseAvatarID > 8000 && multiPathAvatar.AvatarID % 2 != 1) continue;
+            await player.ChangeAvatarPathType(multiPathAvatar.BaseAvatarID,
+                (MultiPathAvatarTypeEnum)multiPathAvatar.AvatarID);
         }
 
         await player.SendPacket(new PacketPlayerSyncScNotify(player.AvatarManager!.AvatarData.Avatars));
 
         await arg.SendMsg(I18NManager.Translate("Game.Command.GiveAll.GiveAllItems",
-            I18NManager.Translate("Word.Avatar"), "1"));
+            I18NManager.Translate("Word.Avatar"),
+            "1"));
     }
 }

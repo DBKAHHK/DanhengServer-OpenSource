@@ -12,6 +12,7 @@ public class PlayerData : BaseDatabaseDataHelper
     public string? Name { get; set; } = "";
     public string? Signature { get; set; } = "";
     public int Birthday { get; set; } = 0;
+    public int CurBasicType { get; set; } = 8001;
     public int HeadIcon { get; set; } = 208001;
     public int PhoneTheme { get; set; } = 221000;
     public int ChatBubble { get; set; } = 220000;
@@ -19,9 +20,8 @@ public class PlayerData : BaseDatabaseDataHelper
     public int PhoneCase { get; set; } = 254000;
     public int CurrentBgm { get; set; } = 210007;
     public int CurrentPamSkin { get; set; } = 252000;
-    public int Pet { get; set; } = 0;
     public bool IsGenderSet { get; set; } = false;
-    public Gender CurrentGender { get; set; }
+    public Gender CurrentGender { get; set; } = Gender.Man;
     public int Level { get; set; } = 1;
     public int Exp { get; set; } = 0;
     public int WorldLevel { get; set; } = 0;
@@ -30,15 +30,12 @@ public class PlayerData : BaseDatabaseDataHelper
     public int Mcoin { get; set; } = 0; // Crystals
     public int TalentPoints { get; set; } = 0; // Rogue talent points
 
+    public int Pet { get; set; } = 0;
     [SugarColumn(IsNullable = true)] public int CurMusicLevel { get; set; }
 
     public int Stamina { get; set; } = 300;
     public double StaminaReserve { get; set; } = 0;
     public long NextStaminaRecover { get; set; } = 0;
-    public long MonthCard { get; set; } = 0;
-
-    [SugarColumn(IsJson = true)] public List<int> AssistAvatars { get; set; } = [];
-    [SugarColumn(IsJson = true)] public List<int> DisplayAvatars { get; set; } = [];
 
     [SugarColumn(IsNullable = true, IsJson = true)]
     public Position? Pos { get; set; }
@@ -58,7 +55,7 @@ public class PlayerData : BaseDatabaseDataHelper
 
     public static PlayerData? GetPlayerByUid(long uid)
     {
-        var result = DatabaseHelper.Instance!.GetInstance<PlayerData>((int)uid);
+        var result = DatabaseHelper.Instance?.GetInstance<PlayerData>((int)uid);
         return result;
     }
 
@@ -79,6 +76,17 @@ public class PlayerData : BaseDatabaseDataHelper
 
     public PlayerSimpleInfo ToSimpleProto(FriendOnlineStatus status)
     {
+        if (!GameData.ChatBubbleConfigData.ContainsKey(ChatBubble)) // to avoid npe
+            ChatBubble = 220000;
+
+        var instance = DatabaseHelper.Instance!.GetInstance<AvatarData>(Uid)!;
+
+        foreach (var avatar in instance.Avatars)
+        {
+            avatar.PlayerData = this;
+            avatar.Excel = GameData.AvatarConfigData[avatar.AvatarId];
+        }
+
         var info = new PlayerSimpleInfo
         {
             Nickname = Name,
@@ -94,12 +102,11 @@ public class PlayerData : BaseDatabaseDataHelper
         };
 
         var pos = 0;
-        var avatarData = DatabaseHelper.Instance!.GetInstance<AvatarData>(Uid)!;
-        foreach (var avatar in AssistAvatars.Select(
-            assist => avatarData.Avatars.Find(x => x.BaseAvatarId == assist)!))
+        foreach (var avatar in instance.AssistAvatars.Select(
+                     assist => instance.Avatars.Find(x => x.AvatarId == assist)!))
             info.AssistSimpleInfoList.Add(new AssistSimpleInfo
             {
-                AvatarId = (uint)avatar.BaseAvatarId,
+                AvatarId = (uint)avatar.AvatarId,
                 Level = (uint)avatar.Level,
                 Pos = (uint)pos++
             });
@@ -124,17 +131,23 @@ public class PlayerData : BaseDatabaseDataHelper
         };
 
         var avatarInfo = DatabaseHelper.Instance!.GetInstance<AvatarData>(Uid);
+
         if (avatarInfo == null) return info;
+        foreach (var avatar in avatarInfo.Avatars)
+        {
+            avatar.PlayerData = this;
+            avatar.Excel = GameData.AvatarConfigData[avatar.AvatarId];
+        }
 
         var pos = 0;
-        foreach (var avatar in AssistAvatars.Select(assist =>
-                     avatarInfo.Avatars.Find(x => x.BaseAvatarId == assist)!))
-            info.AssistAvatarList.Add(avatar.ToDetailProto(Uid, pos++));
+        foreach (var avatar in avatarInfo.AssistAvatars.Select(assist =>
+                     avatarInfo.Avatars.Find(x => x.AvatarId == assist)!))
+            info.AssistAvatarList.Add(avatar.ToDetailProto(pos++));
 
         pos = 0;
-        foreach (var avatar in DisplayAvatars.Select(display =>
-                     avatarInfo.Avatars.Find(x => x.BaseAvatarId == display)!))
-            info.DisplayAvatarList.Add(avatar.ToDetailProto(Uid, pos++));
+        foreach (var avatar in avatarInfo.DisplayAvatars.Select(display =>
+                     avatarInfo.Avatars.Find(x => x.AvatarId == display)!))
+            info.DisplayAvatarList.Add(avatar.ToDetailProto(pos++));
 
         return info;
     }

@@ -17,10 +17,18 @@ public class PacketGetBasicInfoScRsp : BasePacket
             PlayerSettingInfo = new PlayerSettingInfo(),
             Gender = (uint)player.Data.CurrentGender
         };
+
         if (ConfigManager.Config.ServerOption.EnableMission)
+        {
+            if (player.AvatarManager!.GetHero()!.PathInfoes.Count > 0) player.Data.IsGenderSet = true;
+            proto.Gender = (uint)player.Data.CurrentGender;
             proto.IsGenderSet = player.Data.IsGenderSet;
+        }
         else
+        {
+            proto.Gender = (uint)player.Data.CurrentGender;
             proto.IsGenderSet = true;
+        }
 
         SetData(proto);
     }

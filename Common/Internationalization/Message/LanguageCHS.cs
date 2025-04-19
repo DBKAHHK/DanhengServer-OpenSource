@@ -112,7 +112,7 @@ public class CommandTextCHS
 {
     public NoticeTextCHS Notice { get; } = new();
 
-    public GenderTextCHS Gender { get; } = new();
+    public HeroTextCHS Hero { get; } = new();
     public AvatarTextCHS Avatar { get; } = new();
     public GiveTextCHS Give { get; } = new();
     public GiveAllTextCHS GiveAll { get; } = new();
@@ -201,18 +201,18 @@ public class NoticeTextCHS
 }
 
 /// <summary>
-///     path: Game.Command.Gender
+///     path: Game.Command.Hero
 /// </summary>
-public class GenderTextCHS
+public class HeroTextCHS
 {
     public string Desc =>
         "切换主角的性别/形态\n当切换性别时，genderId为1代表男性，2代表女性\n当切换形态时，8001代表毁灭命途，8003代表存护命途，8005代表同谐命途。\n注意，切换性别时会清空所有可选命途以及行迹，为不可逆操作！";
 
-    public string Usage => "用法：/Gender gender [genderId]\n\n用法：/Gender type [typeId]";
+    public string Usage => "用法：/hero gender [genderId]\n\n用法：/hero type [typeId]";
     public string GenderNotSpecified => "性别不存在!";
-    public string GenderTypeNotSpecified => "主角类型不存在!";
+    public string HeroTypeNotSpecified => "主角类型不存在!";
     public string GenderChanged => "性别已更改!";
-    public string GenderTypeChanged => "主角类型已更改!";
+    public string HeroTypeChanged => "主角类型已更改!";
 }
 
 /// <summary>

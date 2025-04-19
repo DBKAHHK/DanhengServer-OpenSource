@@ -11,7 +11,7 @@ public class HandlerSetDisplayAvatarCsReq : Handler
     {
         var req = SetDisplayAvatarCsReq.Parser.ParseFrom(data);
         var player = connection.Player!;
-        var avatars = player.Data.DisplayAvatars;
+        var avatars = player.AvatarManager!.AvatarData!.DisplayAvatars;
         avatars.Clear();
         foreach (var id in req.DisplayAvatarList)
         {

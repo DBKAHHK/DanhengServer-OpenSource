@@ -20,7 +20,7 @@ public class PacketGetPlayerBoardDataScRsp : BasePacket
         };
 
         var pos = 0;
-        player.Data.DisplayAvatars.ForEach(avatar =>
+        player.AvatarManager?.AvatarData!.DisplayAvatars.ForEach(avatar =>
         {
             proto.DisplayAvatarVec.DisplayAvatarList.Add(new DisplayAvatarData
             {
@@ -28,6 +28,7 @@ public class PacketGetPlayerBoardDataScRsp : BasePacket
                 Pos = (uint)pos++
             });
         });
+        player.AvatarManager?.AvatarData!.AssistAvatars.ForEach(x => proto.AssistAvatarIdList.Add((uint)x));
 
         SetData(proto);
     }

@@ -33,7 +33,7 @@ public class PacketPlayerSyncScNotify : BasePacket
         };
         proto.AvatarSync.AvatarList.Add(avatar.ToProto());
 
-        if (GameData.MultiplePathAvatarConfigData.ContainsKey(avatar.BaseAvatarId))
+        if (GameData.MultiplePathAvatarConfigData.ContainsKey(avatar.AvatarId))
             proto.MultiPathAvatarInfoList.Add(avatar.ToAvatarPathProto());
 
         SetData(proto);
@@ -49,7 +49,7 @@ public class PacketPlayerSyncScNotify : BasePacket
         foreach (var avatar in avatars)
         {
             proto.AvatarSync.AvatarList.Add(avatar.ToProto());
-            if (GameData.MultiplePathAvatarConfigData.ContainsKey(avatar.BaseAvatarId))
+            if (GameData.MultiplePathAvatarConfigData.ContainsKey(avatar.AvatarId))
                 proto.MultiPathAvatarInfoList.Add(avatar.ToAvatarPathProto());
         }
 
@@ -63,7 +63,7 @@ public class PacketPlayerSyncScNotify : BasePacket
         proto.AvatarSync = new AvatarSync();
         proto.AvatarSync.AvatarList.Add(avatar.ToProto());
 
-        if (GameData.MultiplePathAvatarConfigData.ContainsKey(avatar.BaseAvatarId))
+        if (GameData.MultiplePathAvatarConfigData.ContainsKey(avatar.AvatarId))
             proto.MultiPathAvatarInfoList.Add(avatar.ToAvatarPathProto());
 
         SetData(proto);

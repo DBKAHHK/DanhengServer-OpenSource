@@ -14,7 +14,7 @@ public class PacketGetLineupAvatarDataScRsp : BasePacket
         {
             var data = new LineupAvatarData
             {
-                Id = (uint)avatar.BaseAvatarId,
+                Id = (uint)avatar.AvatarId,
                 Hp = (uint)avatar.CurrentHp,
                 AvatarType = AvatarType.AvatarFormalType
             };

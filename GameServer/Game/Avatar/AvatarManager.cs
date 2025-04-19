@@ -11,56 +11,78 @@ using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Game.Avatar;
 
-public class AvatarManager(PlayerInstance player) : BasePlayerManager(player)
+public class AvatarManager : BasePlayerManager
 {
-    public AvatarData AvatarData { get; } = DatabaseHelper.Instance!.GetInstanceOrCreateNew<AvatarData>(player.Uid);
+    public AvatarManager(PlayerInstance player) : base(player)
+    {
+        AvatarData = DatabaseHelper.Instance!.GetInstanceOrCreateNew<AvatarData>(player.Uid);
+        foreach (var avatar in AvatarData.Avatars)
+        {
+            avatar.PlayerData = player.Data;
+            avatar.Excel = GameData.AvatarConfigData[avatar.AvatarId];
+        }
+    }
+
+    public AvatarData AvatarData { get; }
 
     public async ValueTask<AvatarConfigExcel?> AddAvatar(int avatarId, bool sync = true, bool notify = true,
         bool isGacha = false)
     {
-        if (avatarId > 8000 && avatarId % 2 != (int)Player.Data.CurrentGender % 2) return null;
         GameData.AvatarConfigData.TryGetValue(avatarId, out var avatarExcel);
         if (avatarExcel == null) return null;
 
         GameData.MultiplePathAvatarConfigData.TryGetValue(avatarId, out var multiPathAvatar);
-        var baseAvatarId = multiPathAvatar?.BaseAvatarID ?? avatarId;
-        var avatarData = GetAvatar(baseAvatarId);
-
-        var pathInfo = new MultiPathData();
-        foreach (var skillTree in avatarExcel.DefaultSkillTree)
-            pathInfo.SkillTree.Add(skillTree.PointID, 1);
-
-        // Check if base avatar exist
-        if (avatarData != null)
+        if (multiPathAvatar != null && multiPathAvatar.BaseAvatarID != avatarId)
         {
-            if (multiPathAvatar == null) return null;
-            if (avatarData.PathInfo.TryAdd(avatarId, pathInfo))
-                return avatarExcel;
+            // Is path
+            foreach (var avatarData in AvatarData.Avatars)
+                if (avatarData.AvatarId == multiPathAvatar.BaseAvatarID)
+                {
+                    // Add path for the character
+                    avatarData.PathInfoes.Add(avatarId, new PathInfo(avatarId));
+                    break;
+                }
+
             return null;
         }
 
-        var avatar = new AvatarInfo(baseAvatarId, avatarId)
+        var avatar = new AvatarInfo(avatarExcel)
         {
+            AvatarId = avatarId >= 8001 ? 8001 : avatarId,
             Level = 1,
             Timestamp = Extensions.GetUnixSec(),
             CurrentHp = 10000,
             CurrentSp = 0
         };
-        avatar.PathInfo[avatarId] = pathInfo; // Add curAvatarId's pathinfo
+
+        if (avatarId >= 8001)
+        {
+            if (GetHero() != null) return null; // Only one hero
+            avatar.PathId = avatarId;
+        }
+
+        avatar.PlayerData = Player.Data;
         AvatarData.Avatars.Add(avatar);
 
-        if (sync) await Player.SendPacket(new PacketPlayerSyncScNotify(avatar));
-        if (notify) await Player.SendPacket(new PacketAddAvatarScNotify(avatar.BaseAvatarId, isGacha));
+        if (sync)
+            await Player.SendPacket(new PacketPlayerSyncScNotify(avatar));
+
+        if (notify) await Player.SendPacket(new PacketAddAvatarScNotify(avatar.GetBaseAvatarId(), isGacha));
 
         return avatarExcel;
     }
 
     public AvatarInfo? GetAvatar(int avatarId)
     {
-        if (GameData.MultiplePathAvatarConfigData.TryGetValue(avatarId, out var pathConfig))
-            avatarId = pathConfig.BaseAvatarID;
+        if (avatarId > 8000) avatarId = 8001;
+        if (GameData.MultiplePathAvatarConfigData.ContainsKey(avatarId))
+            avatarId = GameData.MultiplePathAvatarConfigData[avatarId].BaseAvatarID;
+        return AvatarData.Avatars.Find(avatar => avatar.AvatarId == avatarId);
+    }
 
-        return AvatarData.Avatars.Find(avatar => avatar.BaseAvatarId == avatarId);
+    public AvatarInfo? GetHero()
+    {
+        return AvatarData.Avatars.Find(avatar => avatar.AvatarId == 8001);
     }
 
     public async ValueTask ReforgeRelic(int uniqueId)

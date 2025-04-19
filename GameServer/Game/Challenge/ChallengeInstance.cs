@@ -177,23 +177,23 @@ public class ChallengeInstance
             {
                 var avatar = Player.AvatarManager?.GetAvatar(lineupAvatar.BaseAvatarId);
                 if (avatar == null) continue;
-                proto.BossInfo.FirstLineup.Add((uint)avatar.CurAvatarId);
-                var equip = Player.InventoryManager?.GetItem(0, avatar.GetCurAvatarInfo().EquipId,
+                proto.BossInfo.FirstLineup.Add((uint)avatar.GetAvatarId());
+                var equip = Player.InventoryManager?.GetItem(0, avatar.GetCurPathInfo().EquipId,
                     ItemMainTypeEnum.Equipment);
                 if (equip != null)
-                    proto.BossInfo.ChallengeAvatarEquipmentMap.Add((uint)avatar.CurAvatarId,
+                    proto.BossInfo.ChallengeAvatarEquipmentMap.Add((uint)avatar.GetAvatarId(),
                         equip.ToChallengeEquipmentProto());
 
                 var relicProto = new ChallengeBossAvatarRelicInfo();
 
-                foreach (var relicUniqueId in avatar.GetCurAvatarInfo().Relic)
+                foreach (var relicUniqueId in avatar.GetCurPathInfo().Relic)
                 {
                     var relic = Player.InventoryManager?.GetItem(0, relicUniqueId.Value, ItemMainTypeEnum.Relic);
                     if (relic == null) continue;
                     relicProto.AvatarRelicSlotMap.Add((uint)relicUniqueId.Key, relic.ToChallengeRelicProto());
                 }
 
-                proto.BossInfo.ChallengeAvatarRelicMap.Add((uint)avatar.CurAvatarId, relicProto);
+                proto.BossInfo.ChallengeAvatarRelicMap.Add((uint)avatar.GetAvatarId(), relicProto);
             }
 
             foreach (var lineupAvatar in Player.LineupManager?.GetExtraLineup(ExtraLineupType.LineupChallenge2)
@@ -201,23 +201,23 @@ public class ChallengeInstance
             {
                 var avatar = Player.AvatarManager?.GetAvatar(lineupAvatar.BaseAvatarId);
                 if (avatar == null) continue;
-                proto.BossInfo.SecondLineup.Add((uint)avatar.CurAvatarId);
-                var equip = Player.InventoryManager?.GetItem(0, avatar.GetCurAvatarInfo().EquipId,
+                proto.BossInfo.SecondLineup.Add((uint)avatar.GetAvatarId());
+                var equip = Player.InventoryManager?.GetItem(0, avatar.GetCurPathInfo().EquipId,
                     ItemMainTypeEnum.Equipment);
                 if (equip != null)
-                    proto.BossInfo.ChallengeAvatarEquipmentMap.Add((uint)avatar.CurAvatarId,
+                    proto.BossInfo.ChallengeAvatarEquipmentMap.Add((uint)avatar.GetAvatarId(),
                         equip.ToChallengeEquipmentProto());
 
                 var relicProto = new ChallengeBossAvatarRelicInfo();
 
-                foreach (var relicUniqueId in avatar.GetCurAvatarInfo().Relic)
+                foreach (var relicUniqueId in avatar.GetCurPathInfo().Relic)
                 {
                     var relic = Player.InventoryManager?.GetItem(0, relicUniqueId.Value, ItemMainTypeEnum.Relic);
                     if (relic == null) continue;
                     relicProto.AvatarRelicSlotMap.Add((uint)relicUniqueId.Key, relic.ToChallengeRelicProto());
                 }
 
-                proto.BossInfo.ChallengeAvatarRelicMap.Add((uint)avatar.CurAvatarId, relicProto);
+                proto.BossInfo.ChallengeAvatarRelicMap.Add((uint)avatar.GetAvatarId(), relicProto);
             }
         }
 

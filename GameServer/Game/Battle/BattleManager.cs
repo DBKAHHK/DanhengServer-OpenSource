@@ -157,15 +157,15 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
             avatarList.AddRange(Player.LineupManager!.GetCurLineup()!.BaseAvatars!
                 .Select(item =>
                     Player.SceneInstance!.AvatarInfo.Values.FirstOrDefault(x =>
-                        x.AvatarInfo.BaseAvatarId == item.BaseAvatarId))
+                        x.AvatarInfo.AvatarId == item.BaseAvatarId))
                 .OfType<AvatarSceneInfo>());
 
             MazeBuff? mazeBuff = null;
             if (castAvatar != null)
             {
                 var index = battleInstance.Lineup.BaseAvatars!.FindIndex(x =>
-                    x.BaseAvatarId == castAvatar.AvatarInfo.BaseAvatarId);
-                GameData.AvatarConfigData.TryGetValue(castAvatar.AvatarInfo.CurAvatarId, out var avatarExcel);
+                    x.BaseAvatarId == castAvatar.AvatarInfo.AvatarId);
+                GameData.AvatarConfigData.TryGetValue(castAvatar.AvatarInfo.GetAvatarId(), out var avatarExcel);
                 if (avatarExcel != null)
                 {
                     mazeBuff = new MazeBuff((int)avatarExcel.DamageType, 1, index);
@@ -243,7 +243,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
         };
 
         var avatarList = Player.LineupManager!.GetCurLineup()!.BaseAvatars!.Select(item =>
-                Player.SceneInstance!.AvatarInfo.Values.FirstOrDefault(x => x.AvatarInfo.BaseAvatarId == item.BaseAvatarId))
+                Player.SceneInstance!.AvatarInfo.Values.FirstOrDefault(x => x.AvatarInfo.AvatarId == item.BaseAvatarId))
             .OfType<AvatarSceneInfo>().ToList();
 
         battleInstance.AvatarInfo = avatarList;
@@ -312,7 +312,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
         }
 
         var avatarList = Player.LineupManager!.GetCurLineup()!.BaseAvatars!.Select(item =>
-                Player.SceneInstance!.AvatarInfo.Values.FirstOrDefault(x => x.AvatarInfo.BaseAvatarId == item.BaseAvatarId))
+                Player.SceneInstance!.AvatarInfo.Values.FirstOrDefault(x => x.AvatarInfo.AvatarId == item.BaseAvatarId))
             .OfType<AvatarSceneInfo>().ToList();
 
         battleInstance.AvatarInfo = avatarList;

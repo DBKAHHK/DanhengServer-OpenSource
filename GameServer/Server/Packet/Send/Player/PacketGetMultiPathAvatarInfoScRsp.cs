@@ -12,17 +12,22 @@ public class PacketGetMultiPathAvatarInfoScRsp : BasePacket
         var proto = new GetMultiPathAvatarInfoScRsp();
 
         foreach (var multiPathAvatar in GameData.MultiplePathAvatarConfigData.Values)
-        {
-            if (multiPathAvatar.AvatarID != multiPathAvatar.BaseAvatarID) continue;
-
-            var avatar = player.AvatarManager!.GetAvatar(multiPathAvatar.BaseAvatarID);
-            if (avatar == null) continue;
-
-            if (avatar.BaseAvatarId == 8001)
-                proto.BasicTypeIdList.Add((uint)avatar.CurAvatarId);
-            proto.CurAvatarPath.Add((uint)avatar.BaseAvatarId, (MultiPathAvatarType)avatar.CurAvatarId);
-            proto.MultiPathAvatarInfoList.Add(avatar.ToAvatarPathProto());
-        }
+            if (!proto.CurAvatarPath.ContainsKey((uint)multiPathAvatar.BaseAvatarID))
+            {
+                var avatar = player.AvatarManager!.GetAvatar(multiPathAvatar.BaseAvatarID);
+                if (avatar != null)
+                {
+                    if (avatar.AvatarId == 8001) // only add main character
+                        proto.BasicTypeIdList.Add((uint)avatar.PathId);
+                    var pathId = avatar.PathId > 0 ? avatar.PathId : avatar.AvatarId;
+                    if (pathId == 8001)
+                        if (player.Data.CurrentGender != Gender.Man)
+                            pathId++;
+                    proto.CurAvatarPath.Add((uint)avatar.AvatarId, (MultiPathAvatarType)pathId);
+                    if (avatar.AvatarId == multiPathAvatar.BaseAvatarID)
+                        proto.MultiPathAvatarInfoList.Add(avatar.ToAvatarPathProto());
+                }
+            }
 
         SetData(proto);
     }

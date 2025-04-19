@@ -25,10 +25,11 @@ public class HandlerSceneCastSkillCsReq : Handler
             if (req.MazeAbilityStr != "")
             {
                 // overwrite
-                caster.AvatarInfo.GetCurAvatarConfig().MazeAbility.TryGetValue(req.MazeAbilityStr, out AbilityInfo? ability);
+                AbilityInfo? ability = null;
+                caster.AvatarInfo.Excel?.MazeAbility.TryGetValue(req.MazeAbilityStr, out ability);
                 if (ability != null)
                 {
-                    mazeSkill = MazeSkillManager.GetSkill(caster.AvatarInfo.CurAvatarId, ability, req);
+                    mazeSkill = MazeSkillManager.GetSkill(caster.AvatarInfo.GetAvatarId(), ability, req);
                     mazeSkill.OnCast(caster, player);
                 }
             }
@@ -38,26 +39,26 @@ public class HandlerSceneCastSkillCsReq : Handler
                 if (req.SkillIndex > 0)
                 {
                     // Cast skill effects
-                    var excel = caster.AvatarInfo.CurAvatarId > 0
-                        ? GameData.AvatarConfigData[caster.AvatarInfo.CurAvatarId]
-                        : caster.AvatarInfo.GetCurAvatarConfig();
+                    var excel = caster.AvatarInfo.PathId > 0
+                        ? GameData.AvatarConfigData[caster.AvatarInfo.PathId]
+                        : caster.AvatarInfo.Excel;
                     if (excel != null && excel.MazeSkill != null)
                     {
-                        mazeSkill = MazeSkillManager.GetSkill(caster.AvatarInfo.CurAvatarId, (int)req.SkillIndex,
+                        mazeSkill = MazeSkillManager.GetSkill(caster.AvatarInfo.GetAvatarId(), (int)req.SkillIndex,
                             req);
                         mazeSkill.OnCast(caster, player);
                     }
                 }
                 else
                 {
-                    mazeSkill = MazeSkillManager.GetSkill(caster.AvatarInfo.CurAvatarId, 0, req);
+                    mazeSkill = MazeSkillManager.GetSkill(caster.AvatarInfo.GetAvatarId(), 0, req);
                 }
             }
         }
 
         if (req.AssistEntityIdList.Count > 0)
         {
-            if (caster != null && caster.AvatarInfo.BaseAvatarId == 1218 && req.SkillIndex == 1)
+            if (caster != null && caster.AvatarInfo.AvatarId == 1218 && req.SkillIndex == 1)
             {
                 // Avoid Jiqoqiu's E skill
                 await connection.SendPacket(new PacketSceneCastSkillScRsp(req.CastEntityId, []));

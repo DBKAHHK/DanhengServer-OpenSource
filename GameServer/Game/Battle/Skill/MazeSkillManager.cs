@@ -6,9 +6,9 @@ namespace EggLink.DanhengServer.GameServer.Game.Battle.Skill;
 
 public static class MazeSkillManager
 {
-    public static MazeSkill GetSkill(int avatarId, int skillIndex, SceneCastSkillCsReq req)
+    public static MazeSkill GetSkill(int baseAvatarId, int skillIndex, SceneCastSkillCsReq req)
     {
-        GameData.AvatarConfigData.TryGetValue(avatarId, out var avatarConfig);
+        GameData.AvatarConfigData.TryGetValue(baseAvatarId, out var avatarConfig);
         MazeSkill mazeSkill = new([], req);
         if (avatarConfig == null) return mazeSkill;
 
@@ -21,9 +21,9 @@ public static class MazeSkillManager
         return mazeSkill;
     }
 
-    public static MazeSkill GetSkill(int avatarId, AbilityInfo ability, SceneCastSkillCsReq req)
+    public static MazeSkill GetSkill(int baseAvatarId, AbilityInfo ability, SceneCastSkillCsReq req)
     {
-        GameData.AvatarConfigData.TryGetValue(avatarId, out var avatarConfig);
+        GameData.AvatarConfigData.TryGetValue(baseAvatarId, out var avatarConfig);
         MazeSkill mazeSkill = new([], req);
         if (avatarConfig == null) return mazeSkill;
 

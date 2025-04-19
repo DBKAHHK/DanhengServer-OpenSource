@@ -10,7 +10,7 @@ public class PacketMarkAvatarScRsp : BasePacket
     {
         var proto = new MarkAvatarScRsp
         {
-            AvatarId = (uint)avatar.BaseAvatarId,
+            AvatarId = (uint)avatar.AvatarId,
             IsMarked = avatar.IsMarked
         };
 

@@ -17,11 +17,8 @@ public class AvatarSkillTreeConfigExcel : ExcelResource
     public override void AfterAllDone()
     {
         GameData.AvatarConfigData.TryGetValue(AvatarID, out var excel);
-        if (excel != null)
-        {
-            excel.SkillTree.Add(this);
-            if (DefaultUnlock) excel.DefaultSkillTree.Add(this);
-        }
+        if (excel != null && DefaultUnlock) excel.DefaultSkillTree.Add(this);
+        if (excel != null) excel.SkillTree.Add(this);
         GameData.AvatarSkillTreeConfigData.Add(GetId(), this);
     }
 }
