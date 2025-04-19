@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static RogueTournFormulaInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtSb2d1ZVRvdXJuRm9ybXVsYUluZm8ucHJvdG8aEU1MUEtOTExBT0lGLnBy",
-            "b3RvGhFGb3JtdWxhSW5mby5wcm90bxoWRm9ybXVsYVR5cGVWYWx1ZS5wcm90",
+            "ChtSb2d1ZVRvdXJuRm9ybXVsYUluZm8ucHJvdG8aFkZvcm11bGFUeXBlVmFs",
+            "dWUucHJvdG8aEU1MUEtOTExBT0lGLnByb3RvGhFGb3JtdWxhSW5mby5wcm90",
             "byKSAQoVUm9ndWVUb3VybkZvcm11bGFJbmZvEiEKC0lMQktNTkFKR01PGA4g",
             "AygLMgwuTUxQS05MTEFPSUYSJwoRZ2FtZV9mb3JtdWxhX2luZm8YCSADKAsy",
             "DC5Gb3JtdWxhSW5mbxItChJmb3JtdWxhX3R5cGVfdmFsdWUYASABKAsyES5G",
             "b3JtdWxhVHlwZVZhbHVlQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
             "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MLPKNLLAOIFReflection.Descriptor, global::EggLink.DanhengServer.Proto.FormulaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.FormulaTypeValueReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FormulaTypeValueReflection.Descriptor, global::EggLink.DanhengServer.Proto.MLPKNLLAOIFReflection.Descriptor, global::EggLink.DanhengServer.Proto.FormulaInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo), global::EggLink.DanhengServer.Proto.RogueTournFormulaInfo.Parser, new[]{ "ILBKMNAJGMO", "GameFormulaInfo", "FormulaTypeValue" }, null, null, null, null)
           }));

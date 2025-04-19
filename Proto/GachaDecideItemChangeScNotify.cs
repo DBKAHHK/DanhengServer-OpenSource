@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static GachaDecideItemChangeScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNHYWNoYURlY2lkZUl0ZW1DaGFuZ2VTY05vdGlmeS5wcm90bxoRTE9QREpB",
-            "SEZQSE4ucHJvdG8iZAodR2FjaGFEZWNpZGVJdGVtQ2hhbmdlU2NOb3RpZnkS",
-            "IQoLR0RQT0VFSk5NSE4YByABKAsyDC5MT1BESkFIRlBIThIgChhmYXJtX3N0",
-            "YWdlX2dhY2hhX2lkX2xpc3QYDiADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
-            "cnZlci5Qcm90b2IGcHJvdG8z"));
+            "CiNHYWNoYURlY2lkZUl0ZW1DaGFuZ2VTY05vdGlmeS5wcm90bxoURGVjaWRl",
+            "SXRlbUluZm8ucHJvdG8ibAodR2FjaGFEZWNpZGVJdGVtQ2hhbmdlU2NOb3Rp",
+            "ZnkSKQoQZGVjaWRlX2l0ZW1faW5mbxgHIAEoCzIPLkRlY2lkZUl0ZW1JbmZv",
+            "EiAKGGZhcm1fc3RhZ2VfZ2FjaGFfaWRfbGlzdBgOIAMoDUIeqgIbRWdnTGlu",
+            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LOPDJAHFPHNReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DecideItemInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GachaDecideItemChangeScNotify), global::EggLink.DanhengServer.Proto.GachaDecideItemChangeScNotify.Parser, new[]{ "GDPOEEJNMHN", "FarmStageGachaIdList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GachaDecideItemChangeScNotify), global::EggLink.DanhengServer.Proto.GachaDecideItemChangeScNotify.Parser, new[]{ "DecideItemInfo", "FarmStageGachaIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GachaDecideItemChangeScNotify(GachaDecideItemChangeScNotify other) : this() {
-      gDPOEEJNMHN_ = other.gDPOEEJNMHN_ != null ? other.gDPOEEJNMHN_.Clone() : null;
+      decideItemInfo_ = other.decideItemInfo_ != null ? other.decideItemInfo_.Clone() : null;
       farmStageGachaIdList_ = other.farmStageGachaIdList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -85,15 +85,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GachaDecideItemChangeScNotify(this);
     }
 
-    /// <summary>Field number for the "GDPOEEJNMHN" field.</summary>
-    public const int GDPOEEJNMHNFieldNumber = 7;
-    private global::EggLink.DanhengServer.Proto.LOPDJAHFPHN gDPOEEJNMHN_;
+    /// <summary>Field number for the "decide_item_info" field.</summary>
+    public const int DecideItemInfoFieldNumber = 7;
+    private global::EggLink.DanhengServer.Proto.DecideItemInfo decideItemInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.LOPDJAHFPHN GDPOEEJNMHN {
-      get { return gDPOEEJNMHN_; }
+    public global::EggLink.DanhengServer.Proto.DecideItemInfo DecideItemInfo {
+      get { return decideItemInfo_; }
       set {
-        gDPOEEJNMHN_ = value;
+        decideItemInfo_ = value;
       }
     }
 
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(GDPOEEJNMHN, other.GDPOEEJNMHN)) return false;
+      if (!object.Equals(DecideItemInfo, other.DecideItemInfo)) return false;
       if(!farmStageGachaIdList_.Equals(other.farmStageGachaIdList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -132,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (gDPOEEJNMHN_ != null) hash ^= GDPOEEJNMHN.GetHashCode();
+      if (decideItemInfo_ != null) hash ^= DecideItemInfo.GetHashCode();
       hash ^= farmStageGachaIdList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -152,9 +152,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (gDPOEEJNMHN_ != null) {
+      if (decideItemInfo_ != null) {
         output.WriteRawTag(58);
-        output.WriteMessage(GDPOEEJNMHN);
+        output.WriteMessage(DecideItemInfo);
       }
       farmStageGachaIdList_.WriteTo(output, _repeated_farmStageGachaIdList_codec);
       if (_unknownFields != null) {
@@ -167,9 +167,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (gDPOEEJNMHN_ != null) {
+      if (decideItemInfo_ != null) {
         output.WriteRawTag(58);
-        output.WriteMessage(GDPOEEJNMHN);
+        output.WriteMessage(DecideItemInfo);
       }
       farmStageGachaIdList_.WriteTo(ref output, _repeated_farmStageGachaIdList_codec);
       if (_unknownFields != null) {
@@ -182,8 +182,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (gDPOEEJNMHN_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GDPOEEJNMHN);
+      if (decideItemInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DecideItemInfo);
       }
       size += farmStageGachaIdList_.CalculateSize(_repeated_farmStageGachaIdList_codec);
       if (_unknownFields != null) {
@@ -198,11 +198,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.gDPOEEJNMHN_ != null) {
-        if (gDPOEEJNMHN_ == null) {
-          GDPOEEJNMHN = new global::EggLink.DanhengServer.Proto.LOPDJAHFPHN();
+      if (other.decideItemInfo_ != null) {
+        if (decideItemInfo_ == null) {
+          DecideItemInfo = new global::EggLink.DanhengServer.Proto.DecideItemInfo();
         }
-        GDPOEEJNMHN.MergeFrom(other.GDPOEEJNMHN);
+        DecideItemInfo.MergeFrom(other.DecideItemInfo);
       }
       farmStageGachaIdList_.Add(other.farmStageGachaIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -221,10 +221,10 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 58: {
-            if (gDPOEEJNMHN_ == null) {
-              GDPOEEJNMHN = new global::EggLink.DanhengServer.Proto.LOPDJAHFPHN();
+            if (decideItemInfo_ == null) {
+              DecideItemInfo = new global::EggLink.DanhengServer.Proto.DecideItemInfo();
             }
-            input.ReadMessage(GDPOEEJNMHN);
+            input.ReadMessage(DecideItemInfo);
             break;
           }
           case 114:
@@ -248,10 +248,10 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 58: {
-            if (gDPOEEJNMHN_ == null) {
-              GDPOEEJNMHN = new global::EggLink.DanhengServer.Proto.LOPDJAHFPHN();
+            if (decideItemInfo_ == null) {
+              DecideItemInfo = new global::EggLink.DanhengServer.Proto.DecideItemInfo();
             }
-            input.ReadMessage(GDPOEEJNMHN);
+            input.ReadMessage(DecideItemInfo);
             break;
           }
           case 114:

@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static EvolveBuildLevelInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpFdm9sdmVCdWlsZExldmVsSW5mby5wcm90bxoXRXZvbHZlQnVpbGRBdmF0",
-            "YXIucHJvdG8aG0V2b2x2ZUJ1aWxkQmF0dGxlSW5mby5wcm90bxoSQmF0dGxl",
-            "VGFyZ2V0LnByb3RvItgBChRFdm9sdmVCdWlsZExldmVsSW5mbxIWCg5wZXJp",
+            "ChpFdm9sdmVCdWlsZExldmVsSW5mby5wcm90bxobRXZvbHZlQnVpbGRCYXR0",
+            "bGVJbmZvLnByb3RvGhJCYXR0bGVUYXJnZXQucHJvdG8aF0V2b2x2ZUJ1aWxk",
+            "QXZhdGFyLnByb3RvItgBChRFdm9sdmVCdWlsZExldmVsSW5mbxIWCg5wZXJp",
             "b2RfaWRfbGlzdBgBIAMoDRInCgthdmF0YXJfbGlzdBgCIAMoCzISLkV2b2x2",
             "ZUJ1aWxkQXZhdGFyEhQKDGN1cl9nYW1lX2V4cBgHIAEoDRIpChJiYXR0bGVf",
             "dGFyZ2V0X2xpc3QYDSADKAsyDS5CYXR0bGVUYXJnZXQSEQoJcm91bmRfY250",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "bGVJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EvolveBuildAvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.EvolveBuildBattleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleTargetReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EvolveBuildBattleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleTargetReflection.Descriptor, global::EggLink.DanhengServer.Proto.EvolveBuildAvatarReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EvolveBuildLevelInfo), global::EggLink.DanhengServer.Proto.EvolveBuildLevelInfo.Parser, new[]{ "PeriodIdList", "AvatarList", "CurGameExp", "BattleTargetList", "RoundCnt", "BattleInfo" }, null, null, null, null)
           }));
