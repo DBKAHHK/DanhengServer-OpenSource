@@ -15,5 +15,9 @@ public class HandlerSceneCastSkillCsReq : Handler
         var res = await player.SceneSkillManager!.OnCast(req);
 
         await connection.SendPacket(new PacketSceneCastSkillScRsp(res.RetCode, req.CastEntityId, res.Instance, res.TriggerBattleInfos ?? []));
+        if (res.Instance != null)
+        {
+            await player.SceneInstance!.ClearSummonUnit();
+        }
     }
 }

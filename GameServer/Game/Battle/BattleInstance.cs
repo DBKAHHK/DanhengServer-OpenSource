@@ -277,14 +277,6 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
             }
         }
 
-        foreach (var buff in Buffs.Clone())
-            if (buff.BuffID == 122003) // Fei Xiao Maze Buff
-                Buffs.Add(new MazeBuff(122002, buff.BuffLevel, 0)
-                {
-                    WaveFlag = buff.WaveFlag,
-                    OwnerAvatarId = buff.OwnerAvatarId
-                });
-
         proto.BuffList.AddRange(Buffs.Select(buff => buff.ToProto(this)));
         return proto;
     }

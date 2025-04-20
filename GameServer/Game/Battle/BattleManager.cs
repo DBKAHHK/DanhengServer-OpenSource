@@ -155,8 +155,6 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
 
             InvokeOnPlayerEnterBattle(Player, battleInstance);
 
-            Player.SceneInstance?.ClearSummonUnit();
-
             return battleInstance;
         }
 

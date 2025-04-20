@@ -1,9 +1,13 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Data.Config.Task;
+using EggLink.DanhengServer.Enums.RogueMagic;
+using EggLink.DanhengServer.Enums.Scene;
 using EggLink.DanhengServer.GameServer.Game.Battle;
 using EggLink.DanhengServer.GameServer.Game.Player;
+using EggLink.DanhengServer.GameServer.Game.RogueMagic;
 using EggLink.DanhengServer.GameServer.Game.Scene;
+using EggLink.DanhengServer.GameServer.Game.Scene.Component;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
@@ -89,7 +93,7 @@ public class AbilityLevelTask(PlayerInstance player)
             var method = GetType().GetMethod(methodName);
             if (method != null)
             {
-                var resp = method.Invoke(this, [predicateTaskList.Predicate, param.CasterEntity, param.TargetEntities]);
+                var resp = method.Invoke(this, [param with { Act = predicateTaskList.Predicate }]);
                 if (resp is true)
                 {
                     foreach (var task in predicateTaskList.SuccessTaskList)
@@ -214,14 +218,6 @@ public class AbilityLevelTask(PlayerInstance player)
                     {
                         await entity.AddBuff(new SceneBuff(addMazeBuff.ID, 1, (param.CasterEntity as AvatarSceneInfo)?.AvatarInfo.GetAvatarId() ?? 0,
                             addMazeBuff.LifeTime.FixedValue.Value < -1 ? 20 : -1));
-
-                        await AddAdventureModifier(param with
-                        {
-                            Act = new AddAdventureModifier
-                            {
-                                ModifierName = GameData.MazeBuffData[addMazeBuff.ID * 10 + 1].ModifierName
-                            }
-                        });
                     }
                 }
             }
@@ -304,12 +300,12 @@ public class AbilityLevelTask(PlayerInstance player)
     {
         if (param.Act is AddAdventureModifier addAdventureModifier)
         {
-            param.AdventureAbility.GlobalModifiers.TryGetValue(addAdventureModifier.ModifierName, out var modifier);
+            GameData.AdventureModifierData.TryGetValue(addAdventureModifier.ModifierName, out var modifier);
             if (modifier == null) return new AbilityLevelResult();
 
-            foreach (var task in modifier.OnCreate)
+            if (param.CasterEntity is IGameModifier mod)
             {
-                await TriggerTask(param with { Act = task });
+                await mod.AddModifier(addAdventureModifier.ModifierName);
             }
         }
 
@@ -320,16 +316,45 @@ public class AbilityLevelTask(PlayerInstance player)
     {
         if (param.Act is RemoveAdventureModifier removeAdventureModifier)
         {
-            param.AdventureAbility.GlobalModifiers.TryGetValue(removeAdventureModifier.ModifierName, out var modifier);
+            GameData.AdventureModifierData.TryGetValue(removeAdventureModifier.ModifierName, out var modifier);
             if (modifier == null) return new AbilityLevelResult();
 
-            foreach (var task in modifier.OnDestroy)
+            if (param.CasterEntity is IGameModifier mod)
             {
-                await TriggerTask(param with { Act = task });
+                await mod.RemoveModifier(removeAdventureModifier.ModifierName);
             }
         }
 
         return new AbilityLevelResult();
+    }
+
+    public async ValueTask AdventureSetAttackTargetMonsterDie(AbilityLevelParam param)
+    {
+        foreach (var targetEntity in param.TargetEntities)
+        {
+            if (targetEntity is not EntityMonster monster) continue;
+
+            if (monster.MonsterData.Rank < MonsterRankEnum.Elite)
+            {
+                await monster.Kill();
+
+                await monster.Scene.Player.LineupManager!.CostMp(1, param.Request.CastEntityId);
+                var instance = monster.Scene.Player.RogueManager!.GetRogueInstance();
+                switch (instance)
+                {
+                    case null:
+                        continue;
+                    case RogueMagicInstance magic:
+                        await magic.RollMagicUnit(1, 1, [RogueMagicUnitCategoryEnum.Common]);
+                        break;
+                    default:
+                        await instance.RollBuff(1);
+                        break;
+                }
+
+                await instance.GainMoney(Random.Shared.Next(20, 60));
+            }
+        }
     }
 
     #endregion
@@ -362,6 +387,58 @@ public class AbilityLevelTask(PlayerInstance player)
         }
 
         return [];
+    }
+
+    #endregion
+
+    #region Predicate
+
+    public bool ByAllowInstantKill(AbilityLevelParam param)
+    {
+        foreach (var targetEntity in param.TargetEntities)
+        {
+            if (targetEntity is EntityMonster monster)
+            {
+                if (monster.MonsterData.Rank < MonsterRankEnum.Elite)
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    public bool ByIsContainAdventureModifier(AbilityLevelParam param)
+    {
+        if (param.Act is ByIsContainAdventureModifier byIsContain)
+        {
+            // get target
+            var result = false;
+            var methodName = byIsContain.TargetType.Type.Replace("RPG.GameCore.", "");
+            var method = GetType().GetMethod(methodName);
+            if (method != null)
+            {
+                var resp = method.Invoke(this,
+                    [byIsContain.TargetType, param.CasterEntity, param.TargetEntities]);
+
+                if (resp is List<IGameEntity> target)
+                {
+                    foreach (var entity in target)
+                    {
+                        if (entity is not IGameModifier modifier) continue;
+                        if (modifier.Modifiers.Contains(byIsContain.ModifierName))
+                        {
+                            result = true;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            return result;
+        }
+        return false;
     }
 
     #endregion

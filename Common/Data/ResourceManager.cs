@@ -53,6 +53,15 @@ public class ResourceManager
         LoadRogueMagicRoomData();
 
         Task.WaitAll(t1, t2, t3, t4, t5, t6, t7, t8);
+
+        // copy modifiers
+        foreach (var value in GameData.AdventureAbilityConfigListData.Values)
+        {
+            foreach (var adventureModifierConfig in value.GlobalModifiers ?? [])
+            {
+                GameData.AdventureModifierData.Add(adventureModifierConfig.Key, adventureModifierConfig.Value);
+            }
+        }
     }
 
     public static void LoadExcel()

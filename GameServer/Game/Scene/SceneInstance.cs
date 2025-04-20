@@ -1,5 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Config.Scene;
+using EggLink.DanhengServer.Data.Config.Task;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Enums.Scene;
@@ -14,6 +15,7 @@ using EggLink.DanhengServer.GameServer.Game.RogueMagic.Scene;
 using EggLink.DanhengServer.GameServer.Game.RogueTourn.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Component;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
+using EggLink.DanhengServer.GameServer.Game.Task.AvatarTask;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
@@ -481,7 +483,7 @@ public class SceneInstance
     #endregion
 }
 
-public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, PlayerInstance player) : IGameEntity
+public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, PlayerInstance player) : IGameEntity, IGameModifier
 {
     public AvatarInfo AvatarInfo = avatarInfo;
     public AvatarType AvatarType = avatarType;
@@ -498,6 +500,8 @@ public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, Playe
 
     public async ValueTask AddBuff(SceneBuff buff)
     {
+        if (!GameData.MazeBuffData.TryGetValue(buff.BuffId * 10 + buff.BuffLevel, out var buffExcel)) return;
+
         var oldBuff = BuffList.Find(x => x.BuffId == buff.BuffId);
         if (oldBuff != null)
         {
@@ -512,12 +516,14 @@ public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, Playe
                 oldBuff.Duration = buff.Duration;
 
                 await player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, oldBuff));
+                await AddModifier(buffExcel.ModifierName);
                 return;
             }
         }
 
         BuffList.Add(buff);
         await player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, buff));
+        await AddModifier(buffExcel.ModifierName);
     }
 
     public async ValueTask ApplyBuff(BattleInstance instance)
@@ -526,6 +532,13 @@ public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, Playe
         foreach (var buff in BuffList.Where(buff => !buff.IsExpired())) instance.Buffs.Add(new MazeBuff(buff));
 
         await player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, BuffList));
+
+        foreach (var sceneBuff in BuffList)
+        {
+            if (!GameData.MazeBuffData.TryGetValue(sceneBuff.BuffId * 10 + sceneBuff.BuffLevel, out var buffExcel)) continue;
+
+            await RemoveModifier(buffExcel.ModifierName);
+        }
 
         BuffList.Clear();
     }
@@ -537,10 +550,51 @@ public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, Playe
 
     public async ValueTask RemoveBuff(int buffId)
     {
+        if (!GameData.MazeBuffData.TryGetValue(buffId * 10 + 1, out var buffExcel)) return;
+
         var buff = BuffList.Find(x => x.BuffId == buffId);
         if (buff == null) return;
 
         BuffList.Remove(buff);
         await player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, [buff]));
+
+        await RemoveModifier(buffExcel.ModifierName);
+    }
+
+    public List<string> Modifiers { get; set; } = [];
+
+    public async ValueTask AddModifier(string modifierName)
+    {
+        if (Modifiers.Contains(modifierName)) return;
+
+        GameData.AdventureModifierData.TryGetValue(modifierName, out var modifier);
+        GameData.AdventureAbilityConfigListData.TryGetValue(AvatarInfo.GetAvatarId(), out var avatarAbility);
+        if (modifier == null || avatarAbility == null) return;
+
+        await player.TaskManager!.AbilityLevelTask.TriggerTasks(avatarAbility, modifier.OnCreate, this, [],
+            new SceneCastSkillCsReq
+            {
+                TargetMotion = new MotionInfo
+                {
+                    Pos = player.Data.Pos?.ToProto() ?? new Vector(),
+                    Rot = player.Data.Rot?.ToProto() ?? new Vector()
+                }
+            });
+
+        Modifiers.Add(modifierName);
+    }
+
+    public async ValueTask RemoveModifier(string modifierName)
+    {
+        if (!Modifiers.Contains(modifierName)) return;
+
+        GameData.AdventureModifierData.TryGetValue(modifierName, out var modifier);
+        GameData.AdventureAbilityConfigListData.TryGetValue(AvatarInfo.GetAvatarId(), out var avatarAbility);
+        if (modifier == null || avatarAbility == null) return;
+
+        await player.TaskManager!.AbilityLevelTask.TriggerTasks(avatarAbility, modifier.OnDestroy, this, [],
+            new SceneCastSkillCsReq());
+
+        Modifiers.Remove(modifierName); ;
     }
 }
