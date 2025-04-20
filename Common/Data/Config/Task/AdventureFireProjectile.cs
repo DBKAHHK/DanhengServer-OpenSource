@@ -1,11 +1,11 @@
 ﻿using Newtonsoft.Json.Linq;
-using System.CodeDom.Compiler;
 
 namespace EggLink.DanhengServer.Data.Config.Task;
 
 public class AdventureFireProjectile : TaskConfigInfo
 {
     public TargetEvaluator TargetType { get; set; } = new();
+
     //public ProjectileData Projectile { get; set; }
     public List<TaskConfigInfo> OnProjectileHit { get; set; } = [];
     public List<TaskConfigInfo> OnProjectileLifetimeFinish { get; set; } = [];
@@ -34,10 +34,12 @@ public class AdventureFireProjectile : TaskConfigInfo
             info.OnProjectileHit.Add(item);
 
         foreach (var item in
-                 obj[nameof(OnProjectileLifetimeFinish)]?.Select(x => TaskConfigInfo.LoadFromJsonObject((x as JObject)!)) ?? [])
+                 obj[nameof(OnProjectileLifetimeFinish)]
+                     ?.Select(x => TaskConfigInfo.LoadFromJsonObject((x as JObject)!)) ?? [])
             info.OnProjectileLifetimeFinish.Add(item);
 
-        if (obj.TryGetValue(nameof(WaitProjectileFinish), out value)) info.WaitProjectileFinish = value.ToObject<bool>();
+        if (obj.TryGetValue(nameof(WaitProjectileFinish), out value))
+            info.WaitProjectileFinish = value.ToObject<bool>();
 
         if (obj.TryGetValue(nameof(MutexName), out value)) info.MutexName = value.ToObject<string>()!;
 

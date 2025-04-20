@@ -26,11 +26,14 @@ public class TrainAreaInfo
             StepIdList = { StepList.Select(x => (uint)x) },
             VerifyStepIdList = { StepList.Select(x => (uint)x) },
             Progress = 100,
-            DynamicInfo = { DynamicInfo.Select(x => new AreaDynamicInfo
+            DynamicInfo =
             {
-                DiceSlotId = (uint)x.Key,
-                DiyDynamicId = (uint)x.Value
-            }) }
+                DynamicInfo.Select(x => new AreaDynamicInfo
+                {
+                    DiceSlotId = (uint)x.Key,
+                    DiyDynamicId = (uint)x.Value
+                })
+            }
         };
 
         foreach (var step in StepList)

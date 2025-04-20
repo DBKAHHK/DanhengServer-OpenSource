@@ -22,7 +22,9 @@ public class OfferingTypeData
 
     public OfferingInfo ToProto()
     {
-        var totalExp = CurExp + Enumerable.Range(1, Level).Select(level => GameData.OfferingLevelConfigData.GetValueOrDefault(OfferingId)?.GetValueOrDefault(level)).OfType<OfferingLevelConfigExcel>().Sum(config => config.ItemCost);
+        var totalExp = CurExp + Enumerable.Range(1, Level)
+            .Select(level => GameData.OfferingLevelConfigData.GetValueOrDefault(OfferingId)?.GetValueOrDefault(level))
+            .OfType<OfferingLevelConfigExcel>().Sum(config => config.ItemCost);
 
         return new OfferingInfo
         {

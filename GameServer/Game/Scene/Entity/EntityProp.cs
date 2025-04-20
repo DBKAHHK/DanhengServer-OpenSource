@@ -19,9 +19,9 @@ public class EntityProp(SceneInstance scene, MazePropExcel excel, GroupInfo grou
     public MazePropExcel Excel { get; set; } = excel;
     public PropInfo PropInfo { get; set; } = prop;
     public GroupInfo Group { get; set; } = group;
+    public ScenePropTimelineData? PropTimelineData { get; set; }
     public int EntityID { get; set; }
     public int GroupID { get; set; } = group.Id;
-    public ScenePropTimelineData? PropTimelineData { get; set; }
 
     public async ValueTask AddBuff(SceneBuff buff)
     {
@@ -42,12 +42,10 @@ public class EntityProp(SceneInstance scene, MazePropExcel excel, GroupInfo grou
         };
 
         if (PropTimelineData != null)
-        {
             prop.ExtraInfo = new PropExtraInfo
             {
                 TimelineInfo = PropTimelineData.ToProto()
             };
-        }
 
         return new SceneEntityInfo
         {

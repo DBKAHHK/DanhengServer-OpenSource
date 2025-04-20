@@ -10,7 +10,9 @@ public class HandlerQuickStartCocoonStageCsReq : Handler
     public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
         var req = QuickStartCocoonStageCsReq.Parser.ParseFrom(data);
-        var battle = await connection.Player!.BattleManager!.StartCocoonStage((int)req.CocoonId, (int)req.Wave, (int)req.WorldLevel);
+        var battle =
+            await connection.Player!.BattleManager!.StartCocoonStage((int)req.CocoonId, (int)req.Wave,
+                (int)req.WorldLevel);
         connection.Player.SceneInstance?.ClearSummonUnit();
 
         if (battle != null)

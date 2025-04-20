@@ -8,7 +8,8 @@ public class PacketHandleRogueCommonPendingActionScRsp : BasePacket
 {
     public PacketHandleRogueCommonPendingActionScRsp(int queuePosition, int queueLocation, bool selectBuff = false,
         bool selectMiracle = false, bool selectBonus = false, bool selectFormula = false,
-        bool reforgeBuff = false, bool selectMagicUnit = false, bool selectScepter = false, bool selectTitanBlessEnhance = false, bool selectTitanBlessType = false,
+        bool reforgeBuff = false, bool selectMagicUnit = false, bool selectScepter = false,
+        bool selectTitanBlessEnhance = false, bool selectTitanBlessType = false,
         RogueBuffSelectMenu? menu = null) : base(
         CmdIds.HandleRogueCommonPendingActionScRsp)
     {

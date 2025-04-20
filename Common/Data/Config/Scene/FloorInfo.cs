@@ -8,27 +8,30 @@ namespace EggLink.DanhengServer.Data.Config.Scene;
 
 public class FloorInfo
 {
-    public int FloorID { get; set; }
-    public int StartGroupIndex { get; set; }
-    public int StartAnchorID { get; set; }
-    public string NavmapConfigPath { get; set; } = "";
-    public List<FloorGroupInfo> GroupInstanceList { get; set; } = [];
-    public List<FloorDimensionInfo> DimensionList { get; set; } = [];
-    [JsonProperty(ItemConverterType = typeof(StringEnumConverter))] public List<LevelFeatureTypeEnum> LevelFeatureModules { get; set; } = [];
-
-    [JsonConverter(typeof(ConcurrentBagConverter<int>))]
-    public ConcurrentBag<int> MapSections = [];
-
     [JsonConverter(typeof(ConcurrentDictionaryConverter<int, PropInfo>))]
     public ConcurrentDictionary<int, PropInfo> CachedTeleports = [];
 
     [JsonConverter(typeof(ConcurrentDictionaryConverter<int, GroupInfo>))]
     public ConcurrentDictionary<int, GroupInfo> Groups = [];
 
+    [JsonIgnore] public bool Loaded;
+
+    [JsonConverter(typeof(ConcurrentBagConverter<int>))]
+    public ConcurrentBag<int> MapSections = [];
+
     [JsonConverter(typeof(ConcurrentBagConverter<PropInfo>))]
     public ConcurrentBag<PropInfo> UnlockedCheckpoints = [];
 
-    [JsonIgnore] public bool Loaded;
+    public int FloorID { get; set; }
+    public int StartGroupIndex { get; set; }
+    public int StartAnchorID { get; set; }
+    public string NavmapConfigPath { get; set; } = "";
+    public List<FloorGroupInfo> GroupInstanceList { get; set; } = [];
+    public List<FloorDimensionInfo> DimensionList { get; set; } = [];
+
+    [JsonProperty(ItemConverterType = typeof(StringEnumConverter))]
+    public List<LevelFeatureTypeEnum> LevelFeatureModules { get; set; } = [];
+
     [JsonIgnore] public int StartGroupID { get; set; }
     [JsonIgnore] public List<FloorSavedValueInfo> FloorSavedValue { get; set; } = [];
 
@@ -51,37 +54,35 @@ public class FloorInfo
 
         // Cache anchors
         foreach (var group in Groups.Values)
-        {
-            foreach (var prop in group.PropList)
-                // Check if prop can be teleported to
-                if (prop.AnchorID > 0)
+        foreach (var prop in group.PropList)
+            // Check if prop can be teleported to
+            if (prop.AnchorID > 0)
+            {
+                // Put inside cached teleport list to send to client when they request map info
+                CachedTeleports.TryAdd(prop.MappingInfoID, prop);
+                UnlockedCheckpoints.Add(prop);
+
+                // Force prop to be in the unlocked state
+                prop.State = PropStateEnum.CheckPointEnable;
+            }
+            else if (!string.IsNullOrEmpty(prop.InitLevelGraph))
+            {
+                var json = prop.InitLevelGraph;
+
+                // Hacky way to setup prop triggers
+                if (json.Contains("Maze_GroupProp_OpenTreasure_WhenMonsterDie"))
                 {
-                    // Put inside cached teleport list to send to client when they request map info
-                    CachedTeleports.TryAdd(prop.MappingInfoID, prop);
-                    UnlockedCheckpoints.Add(prop);
-
-                    // Force prop to be in the unlocked state
-                    prop.State = PropStateEnum.CheckPointEnable;
+                    //prop.Trigger = new TriggerOpenTreasureWhenMonsterDie(group.Id);
                 }
-                else if (!string.IsNullOrEmpty(prop.InitLevelGraph))
+                else if (json.Contains("Common_Console"))
                 {
-                    var json = prop.InitLevelGraph;
-
-                    // Hacky way to setup prop triggers
-                    if (json.Contains("Maze_GroupProp_OpenTreasure_WhenMonsterDie"))
-                    {
-                        //prop.Trigger = new TriggerOpenTreasureWhenMonsterDie(group.Id);
-                    }
-                    else if (json.Contains("Common_Console"))
-                    {
-                        prop.CommonConsole = true;
-                    }
-
-                    // Clear for garbage collection
-                    prop.ValueSource = null;
-                    prop.InitLevelGraph = null;
+                    prop.CommonConsole = true;
                 }
-        }
+
+                // Clear for garbage collection
+                prop.ValueSource = null;
+                prop.InitLevelGraph = null;
+            }
 
         Loaded = true;
     }
@@ -113,14 +114,12 @@ public class FloorDimensionInfo
     public void OnLoad(FloorInfo floor)
     {
         foreach (var data in SavedValues)
-        {
             floor.FloorSavedValue.Add(new FloorSavedValueInfo
             {
                 ID = data.ID,
                 Name = data.Name,
                 DefaultValue = data.MaxValue
             });
-        }
 
         foreach (var index in GroupIndexList) GroupIDList.Add(floor.GroupInstanceList[index].ID);
     }

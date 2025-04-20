@@ -1,5 +1,4 @@
-﻿using EggLink.DanhengServer.Data;
-using EggLink.DanhengServer.GameServer.Game.Player;
+﻿using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
 

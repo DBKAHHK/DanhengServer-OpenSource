@@ -1,5 +1,4 @@
 ﻿using System.Text;
-using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Game.Mission;
 using EggLink.DanhengServer.Internationalization;
@@ -59,8 +58,8 @@ public class CommandMission : ICommand
             return;
         }
 
-        MissionManager mission = arg.Target!.Player!.MissionManager!;
-        List<SubMissionInfo> runningMissions = mission.GetRunningSubMissionList();
+        var mission = arg.Target!.Player!.MissionManager!;
+        var runningMissions = mission.GetRunningSubMissionList();
         if (runningMissions.Count == 0)
         {
             await arg.SendMsg(I18NManager.Translate("Game.Command.Mission.NoRunningMissions"));
@@ -81,7 +80,7 @@ public class CommandMission : ICommand
 
             value.Add(m.ID);
         }
-        
+
         if ((arg.BasicArgs.Count == 1 && arg.BasicArgs[0] == "-all") || mission.Data.TrackingMainMissionId == 0)
         {
             //Show all the missions
@@ -94,10 +93,12 @@ public class CommandMission : ICommand
             runningMissionMap[mission.Data.TrackingMainMissionId] = missionMap[mission.Data.TrackingMainMissionId];
             await ShowMissionList(mission, runningMissionMap, arg);
         }
+
         await Task.CompletedTask;
     }
 
-    public async ValueTask ShowMissionList(MissionManager mission, Dictionary<int, List<int>> missionMap, CommandArg arg)
+    public async ValueTask ShowMissionList(MissionManager mission, Dictionary<int, List<int>> missionMap,
+        CommandArg arg)
     {
         var possibleStuckIds = new List<int>();
         var morePossibleStuckIds = new List<int>();

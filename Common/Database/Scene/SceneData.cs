@@ -41,7 +41,7 @@ public class ScenePropData
 public class ScenePropTimelineData
 {
     public bool BoolValue { get; set; }
-    public string ByteValue { get; set; } = "";  // Base64
+    public string ByteValue { get; set; } = ""; // Base64
 
     public PropTimelineInfo ToProto()
     {

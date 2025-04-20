@@ -13,7 +13,8 @@ public class HandlerGetOfferingInfoCsReq : Handler
         var req = GetOfferingInfoCsReq.Parser.ParseFrom(data);
 
         List<OfferingTypeData> dataList = [];
-        dataList.AddRange(req.OfferingIdList.Select(id => connection.Player!.OfferingManager!.GetOfferingData((int)id)).OfType<OfferingTypeData>());
+        dataList.AddRange(req.OfferingIdList.Select(id => connection.Player!.OfferingManager!.GetOfferingData((int)id))
+            .OfType<OfferingTypeData>());
 
         await connection.SendPacket(new PacketGetOfferingInfoScRsp(dataList));
     }

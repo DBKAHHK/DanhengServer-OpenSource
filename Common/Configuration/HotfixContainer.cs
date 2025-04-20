@@ -8,6 +8,7 @@ public class HotfixContainer
 {
     [JsonConverter(typeof(StringEnumConverter))]
     public BaseRegionEnum Region { get; set; } = BaseRegionEnum.None;
+
     public Dictionary<string, DownloadUrlConfig> HotfixData { get; set; } = [];
 }
 

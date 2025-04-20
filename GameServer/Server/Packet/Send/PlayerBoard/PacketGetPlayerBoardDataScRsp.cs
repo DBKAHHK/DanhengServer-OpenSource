@@ -14,7 +14,8 @@ public class PacketGetPlayerBoardDataScRsp : BasePacket
             CurrentHeadIconId = (uint)player.Data.HeadIcon,
             PersonalCardId = (uint)player.Data.PersonalCard,
             UnlockedPersonalCardList = { player.PlayerUnlockData!.PersonalCards.Select(x => (uint)x) },
-            UnlockedHeadIconList = { player.PlayerUnlockData!.HeadIcons.Select(x => new HeadIconData { Id = (uint)x }) },
+            UnlockedHeadIconList =
+                { player.PlayerUnlockData!.HeadIcons.Select(x => new HeadIconData { Id = (uint)x }) },
             AssistAvatarIdList = { player.AvatarManager!.AvatarData.AssistAvatars.Select(x => (uint)x) },
             DisplayAvatarVec = new DisplayAvatarVec()
         };

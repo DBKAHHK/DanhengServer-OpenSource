@@ -1,7 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Config.Scene;
 using EggLink.DanhengServer.Data.Excel;
-using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Game.Battle;
@@ -9,7 +8,6 @@ using EggLink.DanhengServer.GameServer.Game.Scene.Component;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
-using System.Numerics;
 
 namespace EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 
@@ -106,6 +104,36 @@ public class EntityMonster(
         return proto;
     }
 
+    public List<string> Modifiers { get; set; } = [];
+
+    public async ValueTask AddModifier(string modifierName)
+    {
+        if (Modifiers.Contains(modifierName)) return;
+
+        GameData.AdventureModifierData.TryGetValue(modifierName, out var modifier);
+        GameData.AdventureAbilityConfigListData.TryGetValue(MonsterData.ID, out var ability);
+        if (modifier == null || ability == null) return;
+
+        await Scene.Player.TaskManager!.AbilityLevelTask.TriggerTasks(ability, modifier.OnCreate, this, [],
+            new SceneCastSkillCsReq());
+
+        Modifiers.Add(modifierName);
+    }
+
+    public async ValueTask RemoveModifier(string modifierName)
+    {
+        if (!Modifiers.Contains(modifierName)) return;
+
+        GameData.AdventureModifierData.TryGetValue(modifierName, out var modifier);
+        GameData.AdventureAbilityConfigListData.TryGetValue(MonsterData.ID, out var ability);
+        if (modifier == null || ability == null) return;
+
+        await Scene.Player.TaskManager!.AbilityLevelTask.TriggerTasks(ability, modifier.OnDestroy, this, [],
+            new SceneCastSkillCsReq());
+
+        Modifiers.Remove(modifierName);
+    }
+
     public async ValueTask RemoveBuff(int buffId)
     {
         if (!GameData.MazeBuffData.TryGetValue(buffId * 10 + 1, out var buffExcel)) return;
@@ -139,34 +167,5 @@ public class EntityMonster(
         await Scene.Player.MissionManager!.HandleFinishType(MissionFinishTypeEnum.KillMonster, this);
         await Scene.RemoveEntity(this);
         return dropItems;
-    }
-
-    public List<string> Modifiers { get; set; } = [];
-    public async ValueTask AddModifier(string modifierName)
-    {
-        if (Modifiers.Contains(modifierName)) return;
-
-        GameData.AdventureModifierData.TryGetValue(modifierName, out var modifier);
-        GameData.AdventureAbilityConfigListData.TryGetValue(MonsterData.ID, out var ability);
-        if (modifier == null || ability == null) return;
-
-        await Scene.Player.TaskManager!.AbilityLevelTask.TriggerTasks(ability, modifier.OnCreate, this, [],
-            new SceneCastSkillCsReq());
-
-        Modifiers.Add(modifierName);
-    }
-
-    public async ValueTask RemoveModifier(string modifierName)
-    {
-        if (!Modifiers.Contains(modifierName)) return;
-
-        GameData.AdventureModifierData.TryGetValue(modifierName, out var modifier);
-        GameData.AdventureAbilityConfigListData.TryGetValue(MonsterData.ID, out var ability);
-        if (modifier == null || ability == null) return;
-
-        await Scene.Player.TaskManager!.AbilityLevelTask.TriggerTasks(ability, modifier.OnDestroy, this, [],
-            new SceneCastSkillCsReq());
-
-        Modifiers.Remove(modifierName);
     }
 }

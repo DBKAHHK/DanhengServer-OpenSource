@@ -56,12 +56,8 @@ public class ResourceManager
 
         // copy modifiers
         foreach (var value in GameData.AdventureAbilityConfigListData.Values)
-        {
-            foreach (var adventureModifierConfig in value.GlobalModifiers ?? [])
-            {
-                GameData.AdventureModifierData.Add(adventureModifierConfig.Key, adventureModifierConfig.Value);
-            }
-        }
+        foreach (var adventureModifierConfig in value.GlobalModifiers ?? [])
+            GameData.AdventureModifierData.Add(adventureModifierConfig.Key, adventureModifierConfig.Value);
     }
 
     public static void LoadExcel()
@@ -208,7 +204,6 @@ public class ResourceManager
                 // Load navmap infos
                 FileInfo navmapFile = new(ConfigManager.Config.Path.ResourcePath + "/" + info.NavmapConfigPath);
                 if (navmapFile.Exists)
-                {
                     try
                     {
                         using var navmapReader = navmapFile.OpenRead();
@@ -217,8 +212,8 @@ public class ResourceManager
                         var navmap = JsonConvert.DeserializeObject<MapInfo>(navmapText);
                         if (navmap != null)
                             foreach (var area in navmap.AreaList)
-                                foreach (var section in area.MinimapVolume.Sections)
-                                    info.MapSections.Add(section.ID);
+                            foreach (var section in area.MinimapVolume.Sections)
+                                info.MapSections.Add(section.ID);
                     }
                     catch (Exception ex)
                     {
@@ -227,7 +222,6 @@ public class ResourceManager
                             I18NManager.Translate("Server.ServerInfo.FailedToReadItem", navmapFile.Name,
                                 I18NManager.Translate("Word.Error")), ex);
                     }
-                }
 
                 // Load group infos sequentially to maintain order
                 foreach (var groupInfo in info.GroupInstanceList)
@@ -443,15 +437,13 @@ public class ResourceManager
 
         var res2 = Parallel.ForEach(GameData.NpcMonsterDataData.Values, adventure =>
         {
-            var adventurePath = adventure.ConfigEntityPath.Replace("_Entity.json", "_Ability.json").Replace("_Config.json", "_Ability.json")
+            var adventurePath = adventure.ConfigEntityPath.Replace("_Entity.json", "_Ability.json")
+                .Replace("_Config.json", "_Ability.json")
                 .Replace("ConfigEntity", "ConfigAdventureAbility");
 
             var path = ConfigManager.Config.Path.ResourcePath + "/" + adventurePath;
             var file = new FileInfo(path);
-            if (!file.Exists)
-            {
-                return;
-            }
+            if (!file.Exists) return;
             try
             {
                 using var reader = file.OpenRead();

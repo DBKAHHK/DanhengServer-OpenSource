@@ -40,6 +40,22 @@ public class ItemData
 
     public int EquipAvatar { get; set; }
 
+    public int CalcTotalExpGained()
+    {
+        if (Level <= 0) return Exp;
+        GameData.RelicConfigData.TryGetValue(ItemId, out var costExcel);
+        if (costExcel == null) return 0;
+        var exp = 0;
+        for (var i = 0; i < Level; i++)
+        {
+            GameData.RelicExpTypeData.TryGetValue(costExcel.ExpType * 100 + i, out var typeExcel);
+            if (typeExcel != null)
+                exp += typeExcel.Exp;
+        }
+
+        return exp + Exp;
+    }
+
     #region Action
 
     public void AddRandomRelicMainAffix()
@@ -141,29 +157,13 @@ public class ItemData
 
         AddRandomRelicSubAffix(initSubAffixesCount);
     }
-    
+
     public int LuckyRelicSubAffixCount()
     {
         return Random.Shared.Next(100) < 20 ? 1 : 0;
     }
 
     #endregion
-
-    public int CalcTotalExpGained()
-    {
-        if (Level <= 0) return Exp;
-        GameData.RelicConfigData.TryGetValue(ItemId, out var costExcel);
-        if (costExcel == null) return 0;
-        var exp = 0;
-        for (var i = 0; i < Level; i++)
-        {
-            GameData.RelicExpTypeData.TryGetValue(costExcel.ExpType * 100 + i, out var typeExcel);
-            if (typeExcel != null)
-                exp += typeExcel.Exp;
-        }
-
-        return exp + Exp;
-    }
 
     #region Serialization
 
@@ -320,10 +320,6 @@ public class ItemData
 
 public class ItemSubAffix
 {
-    public int Id { get; set; }
-    public int Count { get; set; }
-    public int Step { get; set; }
-
     public ItemSubAffix()
     {
     }
@@ -334,6 +330,10 @@ public class ItemSubAffix
         Count = count;
         Step = Extensions.RandomInt(0, excel.StepNum * count + 1);
     }
+
+    public int Id { get; set; }
+    public int Count { get; set; }
+    public int Step { get; set; }
 
     public void IncreaseStep(int stepNum)
     {

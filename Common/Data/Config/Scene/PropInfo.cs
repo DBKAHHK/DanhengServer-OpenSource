@@ -52,17 +52,18 @@ public class PropInfo : PositionInfo
                     list = [];
                     info.PropTriggerCustomString.Add(value.ToString(), list);
                 }
+
                 list.Add(ID);
             }
             else if (key.ToString().Contains("Door") ||
-                key.ToString().Contains("Bridge") ||
-                key.ToString().Contains("UnlockTarget") ||
-                key.ToString().Contains("Rootcontamination") ||
-                key.ToString().Contains("Portal"))
+                     key.ToString().Contains("Bridge") ||
+                     key.ToString().Contains("UnlockTarget") ||
+                     key.ToString().Contains("Rootcontamination") ||
+                     key.ToString().Contains("Portal"))
             {
                 var parts = value.ToString().Split(',');
-                if (parts.Length >= 2 && 
-                    int.TryParse(parts[0], out var keyId) && 
+                if (parts.Length >= 2 &&
+                    int.TryParse(parts[0], out var keyId) &&
                     int.TryParse(parts[1], out var valueId))
                 {
                     if (!UnlockDoorID.ContainsKey(keyId))
@@ -73,8 +74,8 @@ public class PropInfo : PositionInfo
             else if (key.ToString().Contains("Controller"))
             {
                 var parts = value.ToString().Split(',');
-                if (parts.Length >= 2 && 
-                    int.TryParse(parts[0], out var keyId) && 
+                if (parts.Length >= 2 &&
+                    int.TryParse(parts[0], out var keyId) &&
                     int.TryParse(parts[1], out var valueId))
                 {
                     if (!UnlockControllerID.ContainsKey(keyId))

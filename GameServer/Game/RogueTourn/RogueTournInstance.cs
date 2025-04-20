@@ -46,7 +46,7 @@ public class RogueTournInstance : BaseRogueInstance
         EventManager = new RogueEventManager(player, this);
 
         BaseRerollCount = 0;
-        var t1 = RollTitanBless(1,true);
+        var t1 = RollTitanBless(1, true);
         t1.AsTask().Wait();
 
         var t = RollFormula(1, [RogueFormulaCategoryEnum.Epic]);
@@ -126,9 +126,7 @@ public class RogueTournInstance : BaseRogueInstance
 
         // check if era flipper
         if (Player.SceneInstance!.FloorInfo!.LevelFeatureModules.Contains(LevelFeatureTypeEnum.EraFlipper))
-        {
             await Player.SendPacket(new PacketEraFlipperDataChangeScNotify(Player.SceneInstance!.FloorId));
-        }
 
         // sync
         await Player.SendPacket(new PacketRogueTournLevelInfoUpdateScNotify(this, [CurLevel]));
@@ -137,9 +135,8 @@ public class RogueTournInstance : BaseRogueInstance
         await Player.SendPacket(new PacketRogueTournTitanUpdateTitanBlessProgressScNotify(this));
 
         if (TitanProgress >= 4)
-        {
-            await RollTitanBless(1, RogueTitanBlessInstance.EnhanceBlessList.Count / 3 >= RogueTitanBlessInstance.BlessTypeExcel.Count);
-        }
+            await RollTitanBless(1,
+                RogueTitanBlessInstance.EnhanceBlessList.Count / 3 >= RogueTitanBlessInstance.BlessTypeExcel.Count);
     }
 
 
@@ -168,7 +165,7 @@ public class RogueTournInstance : BaseRogueInstance
         for (var i = 0; i < amount; i++)
         {
             var menu = new RogueTitanBlessSelectMenu(this);
-            menu.RollTitanBless(typeSelect:selectType);
+            menu.RollTitanBless(typeSelect: selectType);
             var action = menu.GetActionInstance();
             RogueActions.Add(action.QueuePosition, action);
         }
@@ -187,7 +184,6 @@ public class RogueTournInstance : BaseRogueInstance
         {
             var bless = action.RogueTitanBlessSelectMenu.Blesses.Find(x => x.TitanBlessID == blessId);
             if (bless != null) // check if bless is in the list
-            {
                 if (!RogueTitanBlessInstance.BlessTypeExcel.Exists(x =>
                         x.TitanBlessID == blessId)) // check if bless already exists
                 {
@@ -206,12 +202,12 @@ public class RogueTournInstance : BaseRogueInstance
                     await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode,
                         bless.ToResultProto(RogueCommonActionResultSourceType.Select)));
                 }
-            }
 
             RogueActions.Remove(action.QueuePosition);
             if (action.RogueTitanBlessSelectMenu.TypeSelect)
                 await Player.SendPacket(
-                    new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, location, selectTitanBlessType: true));
+                    new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, location,
+                        selectTitanBlessType: true));
             else
                 await Player.SendPacket(
                     new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, location,

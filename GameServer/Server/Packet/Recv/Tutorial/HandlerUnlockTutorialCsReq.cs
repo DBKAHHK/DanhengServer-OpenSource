@@ -11,7 +11,7 @@ public class HandlerUnlockTutorialCsReq : Handler
     {
         var req = UnlockTutorialCsReq.Parser.ParseFrom(data);
         var player = connection.Player!;
-        if (!player.TutorialData!.Tutorials.TryGetValue((int)req.TutorialId, out var _))
+        if (!player.TutorialData!.Tutorials.TryGetValue((int)req.TutorialId, out _))
             player.TutorialData!.Tutorials.Add((int)req.TutorialId, TutorialStatus.TutorialUnlock);
 
         await connection.SendPacket(new PacketUnlockTutorialScRsp(req.TutorialId));

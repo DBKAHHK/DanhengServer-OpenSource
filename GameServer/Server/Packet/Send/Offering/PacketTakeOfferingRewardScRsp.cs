@@ -6,11 +6,12 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Offering;
 
 public class PacketTakeOfferingRewardScRsp : BasePacket
 {
-    public PacketTakeOfferingRewardScRsp(Retcode ret, OfferingTypeData? data, List<ItemData> reward) : base(CmdIds.TakeOfferingRewardScRsp)
+    public PacketTakeOfferingRewardScRsp(Retcode ret, OfferingTypeData? data, List<ItemData> reward) : base(
+        CmdIds.TakeOfferingRewardScRsp)
     {
         var proto = new TakeOfferingRewardScRsp
         {
-            Retcode = (uint)ret,
+            Retcode = (uint)ret
         };
 
         if (data != null)

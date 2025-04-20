@@ -131,14 +131,12 @@ public class BannerConfig
         }
 
         if (GachaType == GachaTypeEnum.AvatarUp)
-        {
             info.DecideItemInfo = new DecideItemInfo
             {
                 DecideItemOrder = { decideOrder.Select(x => (uint)x) },
                 CHDOIBFEHLP = 1,
                 JIGONEALCPC = { 11 }
             };
-        }
 
         if (GachaId == 1001)
         {

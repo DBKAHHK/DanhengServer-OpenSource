@@ -416,7 +416,8 @@ public class ChessRogueInstance : BaseRogueInstance
             CurCell = cell;
             cell.CellStatus = ChessRogueBoardCellStatus.Finish;
 
-            await Player.EnterSceneByEntranceId(cell.GetEntryId(), cell.RoomConfig!.AnchorGroup, cell.RoomConfig!.AnchorId,
+            await Player.EnterSceneByEntranceId(cell.GetEntryId(), cell.RoomConfig!.AnchorGroup,
+                cell.RoomConfig!.AnchorId,
                 false);
 
             HistoryCell.Add(cell);

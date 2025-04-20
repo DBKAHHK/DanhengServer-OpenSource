@@ -1,8 +1,8 @@
-﻿using EggLink.DanhengServer.Data.Config;
+﻿using System.Text;
+using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Game.Player;
-using System.Text;
 
 namespace EggLink.DanhengServer.GameServer.Game.Mission.FinishType.Handler;
 
@@ -16,7 +16,7 @@ public class MissionHandlerTimeLineSetState : MissionFinishTypeHandler
         var propId = info.ParamInt2;
         var value = info.ParamStr1;
 
-        var data = player.GetScenePropTimelineData(floorId, groupId, propId);  // get data
+        var data = player.GetScenePropTimelineData(floorId, groupId, propId); // get data
 
         if (data == null) return;
         // compare
@@ -25,14 +25,15 @@ public class MissionHandlerTimeLineSetState : MissionFinishTypeHandler
         await player.MissionManager!.FinishSubMission(info.ID);
     }
 
-    public override async ValueTask HandleQuestFinishType(PlayerInstance player, QuestDataExcel quest, FinishWayExcel excel, object? arg)
+    public override async ValueTask HandleQuestFinishType(PlayerInstance player, QuestDataExcel quest,
+        FinishWayExcel excel, object? arg)
     {
         var floorId = excel.MazeFloorID;
         var groupId = excel.ParamInt1;
         var propId = excel.ParamInt2;
         var value = excel.ParamStr1;
 
-        var data = player.GetScenePropTimelineData(floorId, groupId, propId);  // get data
+        var data = player.GetScenePropTimelineData(floorId, groupId, propId); // get data
 
         if (data == null) return;
         // compare

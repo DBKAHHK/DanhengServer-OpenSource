@@ -11,7 +11,7 @@ public class HandlerChangeEraFlipperDataCsReq : Handler
     {
         var req = ChangeEraFlipperDataCsReq.Parser.ParseFrom(data);
 
-        int floorId = connection.Player!.SceneInstance!.FloorId;
+        var floorId = connection.Player!.SceneInstance!.FloorId;
         await connection.SendPacket(new PacketChangeEraFlipperDataScRsp(req));
         await connection.SendPacket(new PacketEraFlipperDataChangeScNotify(req, floorId));
     }

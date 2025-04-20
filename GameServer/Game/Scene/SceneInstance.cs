@@ -1,6 +1,5 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Config.Scene;
-using EggLink.DanhengServer.Data.Config.Task;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Enums.Scene;
@@ -15,7 +14,6 @@ using EggLink.DanhengServer.GameServer.Game.RogueMagic.Scene;
 using EggLink.DanhengServer.GameServer.Game.RogueTourn.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Component;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
-using EggLink.DanhengServer.GameServer.Game.Task.AvatarTask;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
@@ -127,7 +125,7 @@ public class SceneInstance
                 sceneInfo.FloorSavedData[value.Name] = value.DefaultValue;
 
         foreach (var value in floorData ?? [])
-                sceneInfo.FloorSavedData[value.Key] = value.Value;
+            sceneInfo.FloorSavedData[value.Key] = value.Value;
 
         // mission
         Player.MissionManager!.OnLoadScene(sceneInfo);
@@ -294,15 +292,9 @@ public class SceneInstance
         if (sendPacket && !notSendPacket)
             await Player.SendPacket(new PacketSceneGroupRefreshScNotify(Player, addAvatar, removeAvatar));
 
-        foreach (var avatar in removeAvatar)
-        {
-            Entities.Remove(avatar.EntityID);
-        }
+        foreach (var avatar in removeAvatar) Entities.Remove(avatar.EntityID);
 
-        foreach (var avatar in addAvatar)
-        {
-            Entities.Add(avatar.EntityID, avatar);
-        }
+        foreach (var avatar in addAvatar) Entities.Add(avatar.EntityID, avatar);
     }
 
     public void SyncGroupInfo()
@@ -483,7 +475,8 @@ public class SceneInstance
     #endregion
 }
 
-public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, PlayerInstance player) : IGameEntity, IGameModifier
+public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, PlayerInstance player)
+    : IGameEntity, IGameModifier
 {
     public AvatarInfo AvatarInfo = avatarInfo;
     public AvatarType AvatarType = avatarType;
@@ -535,7 +528,8 @@ public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, Playe
 
         foreach (var sceneBuff in BuffList)
         {
-            if (!GameData.MazeBuffData.TryGetValue(sceneBuff.BuffId * 10 + sceneBuff.BuffLevel, out var buffExcel)) continue;
+            if (!GameData.MazeBuffData.TryGetValue(sceneBuff.BuffId * 10 + sceneBuff.BuffLevel, out var buffExcel))
+                continue;
 
             await RemoveModifier(buffExcel.ModifierName);
         }
@@ -546,19 +540,6 @@ public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, Playe
     public SceneEntityInfo ToProto()
     {
         return AvatarInfo.ToSceneEntityInfo(AvatarType);
-    }
-
-    public async ValueTask RemoveBuff(int buffId)
-    {
-        if (!GameData.MazeBuffData.TryGetValue(buffId * 10 + 1, out var buffExcel)) return;
-
-        var buff = BuffList.Find(x => x.BuffId == buffId);
-        if (buff == null) return;
-
-        BuffList.Remove(buff);
-        await player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, [buff]));
-
-        await RemoveModifier(buffExcel.ModifierName);
     }
 
     public List<string> Modifiers { get; set; } = [];
@@ -595,6 +576,20 @@ public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, Playe
         await player.TaskManager!.AbilityLevelTask.TriggerTasks(avatarAbility, modifier.OnDestroy, this, [],
             new SceneCastSkillCsReq());
 
-        Modifiers.Remove(modifierName); ;
+        Modifiers.Remove(modifierName);
+        ;
+    }
+
+    public async ValueTask RemoveBuff(int buffId)
+    {
+        if (!GameData.MazeBuffData.TryGetValue(buffId * 10 + 1, out var buffExcel)) return;
+
+        var buff = BuffList.Find(x => x.BuffId == buffId);
+        if (buff == null) return;
+
+        BuffList.Remove(buff);
+        await player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, [buff]));
+
+        await RemoveModifier(buffExcel.ModifierName);
     }
 }

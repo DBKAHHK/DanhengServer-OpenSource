@@ -245,12 +245,8 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
         }).Wait();
 
         foreach (var buff in Buffs.Clone())
-        {
             if (Enum.IsDefined(typeof(DamageTypeEnum), buff.BuffID))
-            {
                 Buffs.RemoveAll(x => x.BuffID == buff.BuffID && x.DynamicValues.Count == 0);
-            }
-        }
 
         foreach (var eventInstance in BattleEvents.Values) proto.BattleEvent.Add(eventInstance.ToProto());
 

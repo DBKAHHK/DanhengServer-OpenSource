@@ -6,7 +6,7 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Recommend;
 public class PacketGetBigDataRecommendScRsp : BasePacket
 {
     public PacketGetBigDataRecommendScRsp(uint avatarId, BigDataRecommendType type)
-    : base(CmdIds.GetBigDataRecommendScRsp)
+        : base(CmdIds.GetBigDataRecommendScRsp)
     {
         var proto = new GetBigDataRecommendScRsp
         {

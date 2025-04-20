@@ -12,28 +12,24 @@ public class SceneSkillManager(PlayerInstance player) : BasePlayerManager(player
     public async ValueTask<SkillResultData> OnCast(SceneCastSkillCsReq req)
     {
         // get entities
-        List<IGameEntity> targetEntities = [];  // enemy
-        IGameEntity? attackEntity;  // caster
+        List<IGameEntity> targetEntities = []; // enemy
+        IGameEntity? attackEntity; // caster
         List<int> addEntityIds = [];
         foreach (var id in req.AssistMonsterEntityIdList)
-        {
             if (Player.SceneInstance!.Entities.TryGetValue((int)id, out var v))
             {
                 targetEntities.Add(v);
                 addEntityIds.Add((int)id);
             }
-        }
 
         foreach (var info in req.AssistMonsterEntityInfo)
+        foreach (var id in info.EntityIdList)
         {
-            foreach (var id in info.EntityIdList)
+            if (addEntityIds.Contains((int)id)) continue;
+            if (Player.SceneInstance!.Entities.TryGetValue((int)id, out var v))
             {
-                if (addEntityIds.Contains((int)id)) continue;
-                if (Player.SceneInstance!.Entities.TryGetValue((int)id, out var v))
-                {
-                    targetEntities.Add(v);
-                    addEntityIds.Add((int)id);
-                }
+                targetEntities.Add(v);
+                addEntityIds.Add((int)id);
             }
         }
 
@@ -44,7 +40,8 @@ public class SceneSkillManager(PlayerInstance player) : BasePlayerManager(player
         if (abilities == null || abilities.AbilityList.Count < 1)
             return new SkillResultData(Retcode.RetMazeNoAbility);
 
-        var abilityName = !string.IsNullOrEmpty(req.MazeAbilityStr) ? req.MazeAbilityStr: req.SkillIndex == 0 ? "NormalAtk01" : "MazeSkill";
+        var abilityName = !string.IsNullOrEmpty(req.MazeAbilityStr) ? req.MazeAbilityStr :
+            req.SkillIndex == 0 ? "NormalAtk01" : "MazeSkill";
         var targetAbility = abilities.AbilityList.Find(x => x.Name.Contains(abilityName));
         if (targetAbility == null)
         {
@@ -54,7 +51,8 @@ public class SceneSkillManager(PlayerInstance player) : BasePlayerManager(player
         }
 
         // execute ability
-        var res = await Player.TaskManager!.AbilityLevelTask.TriggerTasks(abilities, targetAbility.OnStart, attackEntity, targetEntities, req);
+        var res = await Player.TaskManager!.AbilityLevelTask.TriggerTasks(abilities, targetAbility.OnStart,
+            attackEntity, targetEntities, req);
 
         return new SkillResultData(Retcode.RetSucc, res.Instance, res.BattleInfos);
     }
@@ -62,17 +60,16 @@ public class SceneSkillManager(PlayerInstance player) : BasePlayerManager(player
     private AdventureAbilityConfigListInfo? GetAbilityConfig(IGameEntity entity)
     {
         if (entity is EntityMonster monster)
-        {
             return GameData.AdventureAbilityConfigListData.GetValueOrDefault(monster.MonsterData.ID);
-        }
-        
+
         if (entity is AvatarSceneInfo avatar)
-        {
             return GameData.AdventureAbilityConfigListData.GetValueOrDefault(avatar.AvatarInfo.GetAvatarId());
-        }
 
         return null;
     }
 }
 
-public record SkillResultData(Retcode RetCode, BattleInstance? Instance = null, List<HitMonsterInstance>? TriggerBattleInfos = null);
+public record SkillResultData(
+    Retcode RetCode,
+    BattleInstance? Instance = null,
+    List<HitMonsterInstance>? TriggerBattleInfos = null);

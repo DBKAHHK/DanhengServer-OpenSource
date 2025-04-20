@@ -121,7 +121,7 @@ public class DanhengListener
         var convId = Connections.GetNextAvailableIndex();
         var convo = Multiplex?.CreateConversation(convId, rcv.RemoteEndPoint, ConvOpt);
         if (convo == null) return;
-        var con = (DanhengConnection)Activator.CreateInstance(BaseConnection, [convo, rcv.RemoteEndPoint])!;
+        var con = (DanhengConnection)Activator.CreateInstance(BaseConnection, convo, rcv.RemoteEndPoint)!;
         RegisterConnection(con);
         await SendHandshakeResponse(con, enet);
     }

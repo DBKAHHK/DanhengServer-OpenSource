@@ -504,7 +504,6 @@ public class PlayerInstance(PlayerData data)
                     case PropStateEnum.Closed:
                     {
                         foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupID))
-                        {
                             if (p.Excel.PropType == PropTypeEnum.PROP_TREASURE_CHEST)
                             {
                                 await p.SetState(PropStateEnum.ChestClosed);
@@ -517,7 +516,6 @@ public class PlayerInstance(PlayerData data)
                             {
                                 await p.SetState(PropStateEnum.Open);
                             }
-                        }
 
                         break;
                     }
@@ -526,9 +524,7 @@ public class PlayerInstance(PlayerData data)
                         foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupID).Where(p =>
                                      p.Excel.PropType is not PropTypeEnum.PROP_TREASURE_CHEST &&
                                      p.Excel.PropType != prop.Excel.PropType))
-                        {
                             await p.SetState(PropStateEnum.Open);
-                        }
 
                         break;
                     }
@@ -572,15 +568,11 @@ public class PlayerInstance(PlayerData data)
                         .Where(p => p.PropInfo.Name.Contains("Piece")).All(p => p.State == PropStateEnum.Closed);
 
                     if (pieceDone)
-                    {
                         // set JigsawSir to open
                         foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupID)
                                      .Where(p => p.PropInfo.Name.Contains("JigsawSir") &&
                                                  p.State != PropStateEnum.Closed))
-                        {
                             await p.SetState(PropStateEnum.TriggerEnable);
-                        }
-                    }
                 }
 
                 break;

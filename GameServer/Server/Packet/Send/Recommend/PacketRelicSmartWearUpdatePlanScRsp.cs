@@ -6,7 +6,7 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Recommend;
 public class PacketRelicSmartWearUpdatePlanScRsp : BasePacket
 {
     public PacketRelicSmartWearUpdatePlanScRsp(RelicSmartWearPlan relicPlan)
-    : base(CmdIds.RelicSmartWearUpdatePlanScRsp)
+        : base(CmdIds.RelicSmartWearUpdatePlanScRsp)
     {
         var proto = new RelicSmartWearUpdatePlanScRsp
         {

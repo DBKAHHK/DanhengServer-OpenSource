@@ -2,8 +2,8 @@ namespace EggLink.DanhengServer.Kcp;
 
 public class CmdIds
 {
-	// None
-	public const int None = 0;
+    // None
+    public const int None = 0;
 
     // Packets
     public const int AcceptActivityExpeditionCsReq = 2530;

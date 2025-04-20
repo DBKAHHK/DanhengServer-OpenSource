@@ -72,7 +72,7 @@ public class MappingInfoExcel : ExcelResource
                     if (relicExcel == null) break;
 
 
-                    if (!relicDrop.TryGetValue(baseRarity, out var _))
+                    if (!relicDrop.TryGetValue(baseRarity, out _))
                     {
                         var value = new List<int>();
                         relicDrop[baseRarity] = value;
@@ -240,15 +240,11 @@ public class MappingInfoExcel : ExcelResource
     private void AddRelicToMap(MappingInfoItem relic, int rarity, Dictionary<int, List<MappingInfoItem>> relicsMap)
     {
         if (relicsMap.TryGetValue(rarity, out var value))
-        {
             value.Add(relic);
-        }
         else
-        {
             relicsMap.Add(rarity, [relic]);
-        }
     }
-    
+
     private int GetRelicCountByWorldLevel(int rarity)
     {
         return WorldLevel switch
@@ -304,7 +300,7 @@ public class MappingInfoExcel : ExcelResource
             _ => 0
         };
     }
-    
+
     private int LuckyRelicDropped()
     {
         return Random.Shared.Next(100) < 25 ? 1 : 0;

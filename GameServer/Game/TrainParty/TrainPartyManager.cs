@@ -39,7 +39,7 @@ public class TrainPartyManager(PlayerInstance player) : BasePlayerManager(player
             EEBNAAPBKCN = 30,
             CurFund = (uint)Data.Fund,
             AreaList = { Data.Areas.Values.Select(x => x.ToProto()) },
-            DynamicIdList = { GameData.TrainPartyDynamicConfigData.Select(x => (uint)x.Key) },
+            DynamicIdList = { GameData.TrainPartyDynamicConfigData.Select(x => (uint)x.Key) }
         };
 
         return proto;

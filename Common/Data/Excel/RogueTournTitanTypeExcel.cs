@@ -9,6 +9,7 @@ public class RogueTournTitanTypeExcel : ExcelResource
 {
     [JsonConverter(typeof(StringEnumConverter))]
     public RogueTitanTypeEnum RogueTitanType { get; set; }
+
     [JsonConverter(typeof(StringEnumConverter))]
     public RogueTitanCategoryEnum RogueTitanCategory { get; set; }
 

@@ -217,7 +217,8 @@ public class SceneEntityLoader(SceneInstance scene)
 
         Scene.Groups.Remove(group.Id);
 
-        if (refreshed) await Scene.Player.SendPacket(new PacketSceneGroupRefreshScNotify(Scene.Player, removeEntity: removeList));
+        if (refreshed)
+            await Scene.Player.SendPacket(new PacketSceneGroupRefreshScNotify(Scene.Player, removeEntity: removeList));
     }
 
     public virtual async ValueTask<EntityNpc?> LoadNpc(NpcInfo info, GroupInfo group, bool sendPacket = false)

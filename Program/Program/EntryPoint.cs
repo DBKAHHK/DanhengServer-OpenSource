@@ -134,7 +134,8 @@ public class EntryPoint
             if (File.Exists(ResourceCache.CachePath))
                 if (ConfigManager.Config.ServerOption.UseCache)
                 {
-                    Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadingItem", I18NManager.Translate("Word.Cache")));
+                    Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadingItem",
+                        I18NManager.Translate("Word.Cache")));
                     isCache = ResourceCache.LoadCache();
 
                     // Clear all game data if cache loading fails
@@ -152,13 +153,15 @@ public class EntryPoint
 
             if (!isCache)
             {
-                Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadingItem", I18NManager.Translate("Word.GameData")));
+                Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadingItem",
+                    I18NManager.Translate("Word.GameData")));
                 ResourceManager.LoadGameData();
 
                 // Async process cache saving
                 if (ConfigManager.Config.ServerOption.UseCache && ResourceCache.IsComplete)
                 {
-                    Logger.Warn(I18NManager.Translate("Server.ServerInfo.WaitingItem", I18NManager.Translate("Word.Cache")));
+                    Logger.Warn(I18NManager.Translate("Server.ServerInfo.WaitingItem",
+                        I18NManager.Translate("Word.Cache")));
                     _ = ResourceCache.SaveCache();
                 }
             }

@@ -7,7 +7,7 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Player;
 [Opcode(CmdIds.ReserveStaminaExchangeCsReq)]
 public class HandlerReserveStaminaExchangeCsReq : Handler
 {
-    public async override Task OnHandle(Connection connection, byte[] header, byte[] data)
+    public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
         var req = ReserveStaminaExchangeCsReq.Parser.ParseFrom(data);
         var player = connection.Player;

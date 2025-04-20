@@ -16,7 +16,6 @@ public class HandlerUpdateMarkChestCsReq : Handler
         List<SceneMarkedChestData> markedChestData = [];
 
         foreach (var markChestInfo in req.MarkChestInfoList)
-        {
             markedChestData.Add(new SceneMarkedChestData
             {
                 ConfigId = (int)markChestInfo.ConfigId,
@@ -24,15 +23,13 @@ public class HandlerUpdateMarkChestCsReq : Handler
                 GroupId = (int)markChestInfo.GroupId,
                 PlaneId = (int)markChestInfo.PlaneId
             });
-        }
 
-        foreach (var chestData in (player.SceneData!.MarkedChestData.GetValueOrDefault((int)req.FuncId) ?? []).Where(chestData => markedChestData.All(x =>
-                     !(x.ConfigId == chestData.ConfigId && x.FloorId == chestData.FloorId &&
-                       x.GroupId == chestData.GroupId))))
-        {
+        foreach (var chestData in (player.SceneData!.MarkedChestData.GetValueOrDefault((int)req.FuncId) ?? []).Where(
+                     chestData => markedChestData.All(x =>
+                         !(x.ConfigId == chestData.ConfigId && x.FloorId == chestData.FloorId &&
+                           x.GroupId == chestData.GroupId))))
             // Add the existing marked chest data if it is not in the new marked chest data
             markedChestData.Add(chestData);
-        }
 
         player.SceneData!.MarkedChestData[(int)req.FuncId] = markedChestData;
 

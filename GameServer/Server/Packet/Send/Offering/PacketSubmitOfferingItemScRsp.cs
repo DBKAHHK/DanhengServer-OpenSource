@@ -13,10 +13,7 @@ public class PacketSubmitOfferingItemScRsp : BasePacket
             Retcode = (uint)ret
         };
 
-        if (data != null)
-        {
-            proto.OfferingInfo = data.ToProto();
-        }
+        if (data != null) proto.OfferingInfo = data.ToProto();
 
         SetData(proto);
     }

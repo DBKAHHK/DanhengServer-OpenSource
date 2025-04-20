@@ -7,10 +7,10 @@ namespace EggLink.DanhengServer.Util;
 public static class ConfigManager
 {
     public static readonly Logger Logger = new("ConfigManager");
-    public static ConfigContainer Config { get; private set; } = new();
     private static readonly string ConfigFilePath = "Config.json";
-    public static HotfixContainer Hotfix { get; private set; } = new();
     private static readonly string HotfixFilePath = Config.Path.ConfigPath + "/Hotfix.json";
+    public static ConfigContainer Config { get; private set; } = new();
+    public static HotfixContainer Hotfix { get; private set; } = new();
 
     public static void LoadConfig()
     {
@@ -23,7 +23,7 @@ public static class ConfigManager
         var file = new FileInfo(ConfigFilePath);
         if (!file.Exists)
         {
-            Config = new()
+            Config = new ConfigContainer
             {
                 MuipServer =
                 {
@@ -60,7 +60,7 @@ public static class ConfigManager
         foreach (var pre in prefix)
             if (GameConstants.GAME_VERSION[^1] == '5')
                 for (var i = 1; i < 6; i++)
-                    verList.Add(pre + GameConstants.GAME_VERSION + i.ToString());
+                    verList.Add(pre + GameConstants.GAME_VERSION + i);
             else
                 verList.Add(pre + GameConstants.GAME_VERSION);
 
@@ -79,8 +79,8 @@ public static class ConfigManager
         }
 
         foreach (var version in verList)
-            if (!Hotfix.HotfixData.TryGetValue(version, out var _))
-                Hotfix.HotfixData[version] = new();
+            if (!Hotfix.HotfixData.TryGetValue(version, out _))
+                Hotfix.HotfixData[version] = new DownloadUrlConfig();
 
         Logger.Info(I18NManager.Translate("Server.ServerInfo.CurrentVersion", GameConstants.GAME_VERSION));
 

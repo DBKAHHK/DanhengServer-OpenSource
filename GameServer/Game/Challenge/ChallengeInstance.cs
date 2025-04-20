@@ -296,7 +296,8 @@ public class ChallengeInstance
                 if (monsters == 0) await AdvanceStage(req);
 
                 // Calculate rounds left
-                if (!(IsStory() && IsBoss())) RoundsLeft = (int)Math.Min(Math.Max(RoundsLeft - req.Stt.RoundCnt, 1), RoundsLeft);
+                if (!(IsStory() && IsBoss()))
+                    RoundsLeft = (int)Math.Min(Math.Max(RoundsLeft - req.Stt.RoundCnt, 1), RoundsLeft);
 
                 // Set saved technique points (This will be restored if the player resets the challenge)
                 SavedMp = Player.LineupManager!.GetCurLineup()!.Mp;

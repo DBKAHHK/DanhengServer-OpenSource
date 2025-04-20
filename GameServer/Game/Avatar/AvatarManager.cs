@@ -100,6 +100,7 @@ public class AvatarManager : BasePlayerManager
             subAffix.Count = 1;
             subAffix.Step = 0;
         }
+
         relic.IncreaseRandomRelicSubAffix(levelUpCnt);
         relic.ReforgeSubAffixes = relic.SubAffixes;
         relic.SubAffixes = subAffixesClone;
@@ -133,9 +134,10 @@ public class AvatarManager : BasePlayerManager
                 AvatarId = (uint)avatarId,
                 UniqueId = (uint)plan.Key,
                 OutsideRelicList = { plan.Value.OutsideRelic.Select(x => (uint)x) },
-                InsideRelicList = { plan.Value.InsideRelic.Select(x => (uint)x) },
+                InsideRelicList = { plan.Value.InsideRelic.Select(x => (uint)x) }
             });
         }
+
         return planList;
     }
 
@@ -166,6 +168,6 @@ public class AvatarManager : BasePlayerManager
 
     public void DeleteRelicPlan(int uniqueId)
     {
-        Player.InventoryManager!.Data.RelicPlans[uniqueId] = new();
+        Player.InventoryManager!.Data.RelicPlans[uniqueId] = new RelicPlanData();
     }
 }

@@ -1,12 +1,12 @@
-using Newtonsoft.Json;
+using System.IO.Compression;
+using System.IO.MemoryMappedFiles;
 using System.Reflection;
 using System.Text;
-using EggLink.DanhengServer.Util;
 using EggLink.DanhengServer.Data.Config.Scene;
-using Newtonsoft.Json.Serialization;
 using EggLink.DanhengServer.Internationalization;
-using System.IO.MemoryMappedFiles;
-using System.IO.Compression;
+using EggLink.DanhengServer.Util;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace EggLink.DanhengServer.Data;
 
@@ -33,6 +33,7 @@ public static class CompressionHelper
             {
                 compressor.Write(data, 0, data.Length);
             }
+
             return output.ToArray();
         }
         catch
@@ -88,10 +89,6 @@ public class IgnoreJsonIgnoreContractResolver : DefaultContractResolver
 
 public class ResourceCache
 {
-    public static Logger Logger { get; } = new("ResourceCache");
-    public static string CachePath { get; } = ConfigManager.Config.Path.ConfigPath + "/Resource.cache";
-    public static bool IsComplete { get; set; } = true; // Custom in errors to ignore some error
-
     public static readonly JsonSerializerSettings Serializer = new()
     {
         ContractResolver = new IgnoreJsonIgnoreContractResolver(),
@@ -102,6 +99,10 @@ public class ResourceCache
             new ConcurrentDictionaryConverter<string, FloorInfo>()
         }
     };
+
+    public static Logger Logger { get; } = new("ResourceCache");
+    public static string CachePath { get; } = ConfigManager.Config.Path.ConfigPath + "/Resource.cache";
+    public static bool IsComplete { get; set; } = true; // Custom in errors to ignore some error
 
     public static Task SaveCache()
     {
@@ -123,7 +124,7 @@ public class ResourceCache
             };
 
             File.WriteAllText(CachePath, JsonConvert.SerializeObject(cacheData));
-            Logger.Info(I18NManager.Translate("Server.ServerInfo.GeneratedItem", 
+            Logger.Info(I18NManager.Translate("Server.ServerInfo.GeneratedItem",
                 I18NManager.Translate("Word.Cache")));
         });
     }
@@ -139,17 +140,18 @@ public class ResourceCache
 
         Parallel.ForEach(
             typeof(GameData).GetProperties(BindingFlags.Public | BindingFlags.Static),
-            prop => {
+            prop =>
+            {
                 if (cacheData.GameDataValues.TryGetValue(prop.Name, out var valueBytes))
                     prop.SetValue(null, JsonConvert.DeserializeObject(
-                        Encoding.UTF8.GetString(
-                            CompressionHelper.Decompress(valueBytes)), prop.PropertyType, Serializer
+                            Encoding.UTF8.GetString(
+                                CompressionHelper.Decompress(valueBytes)), prop.PropertyType, Serializer
                         )
                     );
             }
         );
 
-        Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItem", 
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItem",
             I18NManager.Translate("Word.Cache")));
 
         return true;
@@ -165,8 +167,10 @@ public class ResourceCache
             var emptyValue = propType.IsGenericType && propType.GetGenericTypeDefinition() == typeof(Dictionary<,>)
                 ? Activator.CreateInstance(propType)
                 : propType.IsGenericType && propType.GetGenericTypeDefinition() == typeof(List<>)
-                    ? Activator.CreateInstance(propType) : propType.IsClass
-                        ? Activator.CreateInstance(propType) : null;
+                    ? Activator.CreateInstance(propType)
+                    : propType.IsClass
+                        ? Activator.CreateInstance(propType)
+                        : null;
 
             prop.SetValue(null, emptyValue);
         }

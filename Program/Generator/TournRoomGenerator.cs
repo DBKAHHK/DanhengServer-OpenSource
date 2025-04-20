@@ -4,7 +4,6 @@ using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Enums.TournRogue;
 using EggLink.DanhengServer.Util;
 using Newtonsoft.Json;
-using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace EggLink.DanhengServer.Program.Generator;
 
@@ -12,6 +11,7 @@ public static class TournRoomGenerator
 {
     public static List<int> AllowedFloorIdList { get; set; } = [80601001, 80602001, 80603001, 80604001];
     public static List<RogueTournRoomConfig> SavedRoomInstanceList { get; set; } = [];
+
     public static void GenerateFile(string path)
     {
         // get floor info
@@ -24,17 +24,16 @@ public static class TournRoomGenerator
             Dictionary<RogueTournRoomTypeEnum, List<int>> contentGroupId = [];
 
             var info = GameData.FloorInfoData.Values.First(x => x.FloorID == floorId);
-            foreach (var groupInfo in info.GroupInstanceList.Where(x => !x.IsDelete && x.Name.Contains("RogueModule_Tournament") && !x.Name.Contains("Tpl_")))
+            foreach (var groupInfo in info.GroupInstanceList.Where(x =>
+                         !x.IsDelete && x.Name.Contains("RogueModule_Tournament") && !x.Name.Contains("Tpl_")))
             {
                 if (groupInfo.Name.Contains("_Area"))
                 {
                     if (areaGroupId > 0 && baseModuleId > 0 && contentGroupId.Count > 0)
-                    {
                         foreach (var group in contentGroupId)
-                        {
-                            FlushRoom(GameData.MapEntranceData.First(x => x.Value.FloorID == floorId).Key, areaGroupId, baseModuleId, group.Value, group.Key);
-                        }
-                    }
+                            FlushRoom(GameData.MapEntranceData.First(x => x.Value.FloorID == floorId).Key, areaGroupId,
+                                baseModuleId, group.Value, group.Key);
+
                     contentGroupId.Clear();
 
                     areaGroupId = groupInfo.ID;
@@ -44,12 +43,10 @@ public static class TournRoomGenerator
                 if (groupInfo.Name.Contains("_Base"))
                 {
                     if (areaGroupId > 0 && baseModuleId > 0 && contentGroupId.Count > 0)
-                    {
                         foreach (var group in contentGroupId)
-                        {
-                            FlushRoom(GameData.MapEntranceData.First(x => x.Value.FloorID == floorId).Key, areaGroupId, baseModuleId, group.Value, group.Key);
-                        }
-                    }
+                            FlushRoom(GameData.MapEntranceData.First(x => x.Value.FloorID == floorId).Key, areaGroupId,
+                                baseModuleId, group.Value, group.Key);
+
                     contentGroupId.Clear();
 
                     baseModuleId = groupInfo.ID;
@@ -102,22 +99,24 @@ public static class TournRoomGenerator
         }
 
         // save
-        File.AppendAllText(path, JsonConvert.SerializeObject(SavedRoomInstanceList, Formatting.Indented), Encoding.UTF8);
+        File.AppendAllText(path, JsonConvert.SerializeObject(SavedRoomInstanceList, Formatting.Indented),
+            Encoding.UTF8);
 
         // log
         Logger.GetByClassName().Info($"Generated in {path} Successfully!");
     }
 
-    public static void FlushRoom(int entranceId, int areaGroupId, int baseGroupId, List<int> contentGroupIds, RogueTournRoomTypeEnum type)
+    public static void FlushRoom(int entranceId, int areaGroupId, int baseGroupId, List<int> contentGroupIds,
+        RogueTournRoomTypeEnum type)
     {
         SavedRoomInstanceList.Add(new RogueTournRoomConfig
         {
             AnchorGroup = baseGroupId,
             AnchorId = 1,
-            DefaultLoadBasicGroup = { areaGroupId, baseGroupId},
+            DefaultLoadBasicGroup = { areaGroupId, baseGroupId },
             DefaultLoadGroup = contentGroupIds,
             EntranceId = entranceId,
-            RoomType = type,
+            RoomType = type
         });
     }
 }

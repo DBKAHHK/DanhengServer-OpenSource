@@ -11,7 +11,7 @@ public class PacketDiscardRelicScRsp : BasePacket
 
         if (success) proto.IsDiscard = isDiscard;
         else proto.Retcode = (uint)Retcode.RetFail;
-        
+
         SetData(proto);
     }
 }

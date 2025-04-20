@@ -13,8 +13,6 @@ namespace EggLink.DanhengServer.GameServer.Game.Gacha;
 
 public class GachaManager : BasePlayerManager
 {
-    public GachaData GachaData { get; }
-
     public GachaManager(PlayerInstance player) : base(player)
     {
         GachaData = DatabaseHelper.Instance!.GetInstanceOrCreateNew<GachaData>(player.Uid);
@@ -29,13 +27,16 @@ public class GachaManager : BasePlayerManager
         }
     }
 
+    public GachaData GachaData { get; }
+
     public List<int> GetPurpleAvatars()
     {
         var purpleAvatars = new List<int>();
         foreach (var avatar in GameData.AvatarConfigData.Values)
             if (avatar.Rarity == RarityEnum.CombatPowerAvatarRarityType4 &&
                 !(GameData.MultiplePathAvatarConfigData.ContainsKey(avatar.AvatarID) &&
-                  GameData.MultiplePathAvatarConfigData[avatar.AvatarID].BaseAvatarID != avatar.AvatarID) && avatar.MaxRank > 0)
+                  GameData.MultiplePathAvatarConfigData[avatar.AvatarID].BaseAvatarID != avatar.AvatarID) &&
+                avatar.MaxRank > 0)
                 purpleAvatars.Add(avatar.AvatarID);
         return purpleAvatars;
     }
@@ -298,7 +299,8 @@ public class GachaManager : BasePlayerManager
         {
             GachaRandom = (uint)Random.Shared.Next(1000, 1999)
         };
-        foreach (var banner in GameData.BannersConfig.Banners) proto.GachaInfoList.Add(banner.ToInfo(GachaData.GachaDecideOrder, GetGoldAvatars()));
+        foreach (var banner in GameData.BannersConfig.Banners)
+            proto.GachaInfoList.Add(banner.ToInfo(GachaData.GachaDecideOrder, GetGoldAvatars()));
 
         return proto;
     }

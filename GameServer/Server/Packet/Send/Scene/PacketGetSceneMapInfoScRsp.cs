@@ -89,7 +89,9 @@ public class PacketGetSceneMapInfoScRsp : BasePacket
                 foreach (var section in sections ?? []) mazeMap.LightenSectionList.Add((uint)section);
             }
             else
+            {
                 mazeMap.LightenSectionList.AddRange(floorInfo.MapSections.Select(x => (uint)x));
+            }
 
             rsp.SceneMapInfo.Add(mazeMap);
         }

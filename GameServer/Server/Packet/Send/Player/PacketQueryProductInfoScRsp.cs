@@ -11,13 +11,16 @@ public class PacketQueryProductInfoScRsp : BasePacket
         var proto = new QueryProductInfoScRsp
         {
             //PEKJLBINDGG = (ulong)Extensions.GetUnixSec() + 8640000, // 100 day
-            ProductList = { GameData.RechargeConfigData.Values.Where(x => x.GiftType != 1).Select(x => new Product
+            ProductList =
             {
-                EndTime = uint.MaxValue,
-                GiftType = (ProductGiftType)x.GiftType,
-                PriceTier = x.TierID,
-                ProductId = x.ProductID
-            }) }
+                GameData.RechargeConfigData.Values.Where(x => x.GiftType != 1).Select(x => new Product
+                {
+                    EndTime = uint.MaxValue,
+                    GiftType = (ProductGiftType)x.GiftType,
+                    PriceTier = x.TierID,
+                    ProductId = x.ProductID
+                })
+            }
         };
 
         SetData(proto);

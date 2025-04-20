@@ -14,7 +14,6 @@ using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 using Google.Protobuf.Collections;
-using Microsoft.Net.Http.Headers;
 
 namespace EggLink.DanhengServer.GameServer.Game.Inventory;
 
@@ -91,6 +90,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
                             value = [];
                             Player.PlayerUnlockData.Skins[avatarId] = value;
                         }
+
                         value.Add(itemId);
                         await Player.SendPacket(new PacketUnlockAvatarSkinScNotify(itemId));
                         break;
@@ -484,7 +484,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
 
             // Generate relics
             var relicDrops = mapping.GenerateRelicDrops();
-            
+
             // Let AddItem notify relics count exceeding limit 
             items.AddRange(Data.RelicItems.Count + relicDrops.Count - 1 > GameConstants.INVENTORY_MAX_RELIC
                 ? relicDrops[..(GameConstants.INVENTORY_MAX_RELIC - Data.RelicItems.Count + 1)]
@@ -535,7 +535,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
 
         var initSubCnt = new Random().Next(3, 5);
         relic.AddRandomRelicSubAffix(initSubCnt - subAffixes.Count);
-        if (initSubCnt == 3 && level / 3 > 0) relic.AddRandomRelicSubAffix(1); // Random add init subAffixes
+        if (initSubCnt == 3 && level / 3 > 0) relic.AddRandomRelicSubAffix(); // Random add init subAffixes
 
         var remainUpCnt = level / 3 - (4 - initSubCnt) - subAffixes.Sum(x => x.Item2);
         relic.IncreaseRandomRelicSubAffix(remainUpCnt); // Level up
@@ -582,7 +582,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         var relicId = (int)req.ComposeRelicId;
         GameData.RelicConfigData.TryGetValue(relicId, out var itemConfig);
         GameData.RelicSubAffixData.TryGetValue(itemConfig!.SubAffixGroup, out var subAffixConfig);
-        
+
         // Add relic
         var mainAffix = (int)req.MainAffixId;
         var itemData = new ItemData
@@ -596,7 +596,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         };
         if (mainAffix == 0) itemData.AddRandomRelicMainAffix();
         itemData.AddRandomRelicSubAffix(3 - itemData.SubAffixes.Count + itemData.LuckyRelicSubAffixCount());
-        await AddItem(itemData, notify: false);
+        await AddItem(itemData, false);
 
         return itemData;
     }
@@ -1276,9 +1276,11 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
     }
 
     #endregion
-    
+
     #region Mark
-    public async ValueTask<bool> LockItems(RepeatedField<uint> ids, bool isLocked, ItemMainTypeEnum itemType = ItemMainTypeEnum.Unknown)
+
+    public async ValueTask<bool> LockItems(RepeatedField<uint> ids, bool isLocked,
+        ItemMainTypeEnum itemType = ItemMainTypeEnum.Unknown)
     {
         List<ItemData> targetItems;
         switch (itemType)
@@ -1300,6 +1302,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
             default:
                 return false;
         }
+
         if (targetItems.Count == 0) return false;
         var idPool = ids.ToList().ConvertAll(x => (int)x).ToFrozenSet();
         var items = new List<ItemData>();
@@ -1315,7 +1318,8 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         return true;
     }
 
-    public async ValueTask<bool> DiscardItems(RepeatedField<uint> ids, bool discarded, ItemMainTypeEnum itemType = ItemMainTypeEnum.Unknown)
+    public async ValueTask<bool> DiscardItems(RepeatedField<uint> ids, bool discarded,
+        ItemMainTypeEnum itemType = ItemMainTypeEnum.Unknown)
     {
         List<ItemData> targetItems;
         switch (itemType)
@@ -1337,6 +1341,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
             default:
                 return false;
         }
+
         if (targetItems.Count == 0) return false;
         var idPool = ids.ToList().ConvertAll(x => (int)x).ToFrozenSet();
         var items = new List<ItemData>();
@@ -1346,10 +1351,11 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
             x.Discarded = discarded;
             items.Add(x);
         }
-        
+
         if (items.Count <= 0) return false;
         await Player.SendPacket(new PacketPlayerSyncScNotify(items));
         return true;
     }
+
     #endregion
 }

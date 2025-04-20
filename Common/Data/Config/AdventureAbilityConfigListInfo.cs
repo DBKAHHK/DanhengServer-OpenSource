@@ -11,7 +11,7 @@ public class AdventureAbilityConfigListInfo
     public static AdventureAbilityConfigListInfo LoadFromJsonObject(JObject obj)
     {
         AdventureAbilityConfigListInfo info = new();
-        
+
         if (obj.ContainsKey(nameof(AbilityList)))
             info.AbilityList = obj[nameof(AbilityList)]
                 ?.Select(x => AdventureAbilityConfigInfo.LoadFromJsonObject((x as JObject)!)).ToList() ?? [];

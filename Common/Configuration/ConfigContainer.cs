@@ -85,12 +85,12 @@ public class ServerOption
     public bool AutoCreateUser { get; set; } = true;
     public bool SavePersonalDebugFile { get; set; } = false;
     public int FarmingDropRate { get; set; } = 1;
+    public bool UseCache { get; set; } = true;
 
     public int ValidFarmingDropRate()
     {
         return Math.Max(Math.Min(FarmingDropRate, 999), 1);
     }
-    public bool UseCache { get; set; } = true;
 }
 
 public class ServerAnnounce

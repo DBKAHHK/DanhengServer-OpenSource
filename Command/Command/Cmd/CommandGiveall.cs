@@ -258,7 +258,7 @@ public class CommandGiveall : ICommand
         player.TrainPartyManager!.Data.Areas.Clear();
 
         foreach (var excel in GameData.TrainPartyAreaConfigData.Where(excel =>
-            !player.TrainPartyManager!.Data.Areas.ContainsKey(excel.Key)))
+                     !player.TrainPartyManager!.Data.Areas.ContainsKey(excel.Key)))
             player.TrainPartyManager!.Data.Areas[excel.Key] = new TrainAreaInfo
             {
                 AreaId = excel.Key,
@@ -266,24 +266,22 @@ public class CommandGiveall : ICommand
             };
 
         foreach (var area in player.TrainPartyManager!.Data.Areas)
-            foreach (var step in GameData.TrainPartyStepConfigData.Values.Where(stepExcel =>
-                GameData.TrainPartyAreaGoalConfigData.FirstOrDefault(x =>
-                x.Value.AreaID == area.Value.AreaId).Value.StepGroupList.Contains(stepExcel.GroupID)))
-                area.Value.StepList.Add(step.ID);
+        foreach (var step in GameData.TrainPartyStepConfigData.Values.Where(stepExcel =>
+                     GameData.TrainPartyAreaGoalConfigData.FirstOrDefault(x =>
+                         x.Value.AreaID == area.Value.AreaId).Value.StepGroupList.Contains(stepExcel.GroupID)))
+            area.Value.StepList.Add(step.ID);
 
         foreach (var floorInfo in GameData.FloorInfoData.Values)
         {
             var savedData = new Dictionary<string, int>();
 
             foreach (var floorSavedValue in floorInfo.FloorSavedValue)
-            {
                 if (floorSavedValue.Name.StartsWith("Build_") || floorSavedValue.Name == "Onboarded")
                     savedData[floorSavedValue.Name] = 1;
                 else if (floorSavedValue.Name.StartsWith("Progress_"))
                     savedData[floorSavedValue.Name] = 100;
                 else if (floorSavedValue.Name.StartsWith("Connection_") || floorSavedValue.Name.StartsWith("Utility_"))
                     savedData[floorSavedValue.Name] = 0;
-            }
 
             if (savedData.Count > 0)
                 player.SceneData!.FloorSavedData[floorInfo.FloorID] = savedData;

@@ -12,19 +12,15 @@ public class RogueTitanBlessInstance
     public void OnBattleStart(BattleInstance inst)
     {
         foreach (var bless in BlessTypeExcel)
-        {
             inst.Buffs.Add(new MazeBuff(bless.MazeBuffID, 1, -1)
             {
                 WaveFlag = -1
             });
-        }
 
         foreach (var bless in EnhanceBlessList)
-        {
             inst.Buffs.Add(new MazeBuff(bless.MazeBuffID, 1, -1)
             {
                 WaveFlag = -1
             });
-        }
     }
 }

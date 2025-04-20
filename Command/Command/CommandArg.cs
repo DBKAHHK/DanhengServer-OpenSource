@@ -15,7 +15,7 @@ public class CommandArg
         {
             if (string.IsNullOrEmpty(arg)) continue;
             var character = arg[0];
-            if (!int.TryParse(character.ToString(), out var _) && character != '-')
+            if (!int.TryParse(character.ToString(), out _) && character != '-')
             {
                 try
                 {

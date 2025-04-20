@@ -15,7 +15,7 @@ public class PacketTrainPartyBuildDiyScRsp : BasePacket
             }
             : new TrainPartyBuildDiyScRsp
             {
-                AreaId = (uint)area.AreaId,
+                AreaId = (uint)area.AreaId
             };
 
         SetData(proto);

@@ -18,32 +18,46 @@ public class AbilityLevelTask(PlayerInstance player)
 {
     public PlayerInstance Player { get; set; } = player;
 
+    #region Selector
+
+    public List<IGameEntity> TargetAlias(TargetEvaluator selector, IGameEntity casterEntity,
+        List<IGameEntity> targetEntities)
+    {
+        if (selector is TargetAlias target)
+        {
+            if (target.Alias == "AllEnemy") return targetEntities;
+
+            if (target.Alias == "Caster") return [casterEntity];
+
+            if (target.Alias == "AbilityTargetEntity") return targetEntities;
+
+            if (target.Alias == "ParamEntity") return targetEntities;
+        }
+
+        return [];
+    }
+
+    #endregion
+
     #region Manage
 
-    public async ValueTask<AbilityLevelResult> TriggerTasks(AdventureAbilityConfigListInfo abilities, List<TaskConfigInfo> tasks, IGameEntity casterEntity, List<IGameEntity> targetEntities, SceneCastSkillCsReq req)
+    public async ValueTask<AbilityLevelResult> TriggerTasks(AdventureAbilityConfigListInfo abilities,
+        List<TaskConfigInfo> tasks, IGameEntity casterEntity, List<IGameEntity> targetEntities, SceneCastSkillCsReq req)
     {
         BattleInstance? instance = null;
         List<HitMonsterInstance> battleInfos = [];
         foreach (var task in tasks)
-        {
             try
             {
                 var res = await TriggerTask(new AbilityLevelParam(abilities, task, casterEntity, targetEntities, req));
-                if (res.BattleInfos != null)
-                {
-                    battleInfos.AddRange(res.BattleInfos);
-                }
+                if (res.BattleInfos != null) battleInfos.AddRange(res.BattleInfos);
 
-                if (res.Instance != null)
-                {
-                    instance = res.Instance;
-                }
+                if (res.Instance != null) instance = res.Instance;
             }
             catch (Exception e)
             {
                 Logger.GetByClassName().Error("An error occured, ", e);
             }
-        }
 
         return new AbilityLevelResult(instance, battleInfos);
     }
@@ -58,15 +72,9 @@ public class AbilityLevelTask(PlayerInstance player)
             if (method != null)
             {
                 var res = method.Invoke(this, [param]);
-                if (res is AbilityLevelResult result)
-                {
-                    return result;
-                }
+                if (res is AbilityLevelResult result) return result;
 
-                if (res is ValueTask<AbilityLevelResult> valueTask)
-                {
-                    return await valueTask;
-                }
+                if (res is ValueTask<AbilityLevelResult> valueTask) return await valueTask;
             }
         }
         catch
@@ -95,55 +103,34 @@ public class AbilityLevelTask(PlayerInstance player)
             {
                 var resp = method.Invoke(this, [param with { Act = predicateTaskList.Predicate }]);
                 if (resp is true)
-                {
                     foreach (var task in predicateTaskList.SuccessTaskList)
                     {
                         var result = await TriggerTask(param with { Act = task });
-                        if (result.BattleInfos != null)
-                        {
-                            battleInfos.AddRange(result.BattleInfos);
-                        }
+                        if (result.BattleInfos != null) battleInfos.AddRange(result.BattleInfos);
 
-                        if (result.Instance != null)
-                        {
-                            instance = result.Instance;
-                        }
+                        if (result.Instance != null) instance = result.Instance;
                     }
-                }
                 else
-                {
                     foreach (var task in predicateTaskList.FailedTaskList)
                     {
                         var result = await TriggerTask(param with { Act = task });
-                        if (result.BattleInfos != null)
-                        {
-                            battleInfos.AddRange(result.BattleInfos);
-                        }
+                        if (result.BattleInfos != null) battleInfos.AddRange(result.BattleInfos);
 
-                        if (result.Instance != null)
-                        {
-                            instance = result.Instance;
-                        }
+                        if (result.Instance != null) instance = result.Instance;
                     }
-                }
             }
             else
             {
                 foreach (var task in predicateTaskList.FailedTaskList)
                 {
                     var result = await TriggerTask(param with { Act = task });
-                    if (result.BattleInfos != null)
-                    {
-                        battleInfos.AddRange(result.BattleInfos);
-                    }
+                    if (result.BattleInfos != null) battleInfos.AddRange(result.BattleInfos);
 
-                    if (result.Instance != null)
-                    {
-                        instance = result.Instance;
-                    }
+                    if (result.Instance != null) instance = result.Instance;
                 }
             }
         }
+
         return new AbilityLevelResult(instance, battleInfos);
     }
 
@@ -158,16 +145,14 @@ public class AbilityLevelTask(PlayerInstance player)
             var method = GetType().GetMethod(methodName);
             if (method != null)
             {
-                var resp = method.Invoke(this, [adventureTriggerAttack.AttackTargetType, param.CasterEntity, param.TargetEntities]);
+                var resp = method.Invoke(this,
+                    [adventureTriggerAttack.AttackTargetType, param.CasterEntity, param.TargetEntities]);
                 if (resp is List<IGameEntity> target)
                 {
                     foreach (var task in adventureTriggerAttack.OnAttack)
                     {
                         var result = await TriggerTask(param with { Act = task });
-                        if (result.BattleInfos != null)
-                        {
-                            battleInfos.AddRange(result.BattleInfos);
-                        }
+                        if (result.BattleInfos != null) battleInfos.AddRange(result.BattleInfos);
                     }
 
                     if (target.Count > 0 && adventureTriggerAttack.TriggerBattle)
@@ -175,10 +160,7 @@ public class AbilityLevelTask(PlayerInstance player)
                         foreach (var task in adventureTriggerAttack.OnBattle)
                         {
                             var result = await TriggerTask(param with { Act = task });
-                            if (result.BattleInfos != null)
-                            {
-                                battleInfos.AddRange(result.BattleInfos);
-                            }
+                            if (result.BattleInfos != null) battleInfos.AddRange(result.BattleInfos);
                         }
 
                         foreach (var entity in param.TargetEntities)
@@ -190,7 +172,8 @@ public class AbilityLevelTask(PlayerInstance player)
                             battleInfos.Add(new HitMonsterInstance(entity.EntityID, type));
                         }
 
-                        instance = await Player.BattleManager!.StartBattle(param.CasterEntity, param.TargetEntities, param.Request.SkillIndex == 1);
+                        instance = await Player.BattleManager!.StartBattle(param.CasterEntity, param.TargetEntities,
+                            param.Request.SkillIndex == 1);
                     }
                 }
             }
@@ -213,13 +196,10 @@ public class AbilityLevelTask(PlayerInstance player)
                 var resp = method.Invoke(this,
                     [addMazeBuff.TargetType, param.CasterEntity, param.TargetEntities]);
                 if (resp is List<IGameEntity> target)
-                {
                     foreach (var entity in target)
-                    {
-                        await entity.AddBuff(new SceneBuff(addMazeBuff.ID, 1, (param.CasterEntity as AvatarSceneInfo)?.AvatarInfo.GetAvatarId() ?? 0,
+                        await entity.AddBuff(new SceneBuff(addMazeBuff.ID, 1,
+                            (param.CasterEntity as AvatarSceneInfo)?.AvatarInfo.GetAvatarId() ?? 0,
                             addMazeBuff.LifeTime.FixedValue.Value < -1 ? 20 : -1));
-                    }
-                }
             }
         }
 
@@ -236,10 +216,7 @@ public class AbilityLevelTask(PlayerInstance player)
             foreach (var task in adventureFireProjectile.OnProjectileHit)
             {
                 var result = await TriggerTask(param with { Act = task });
-                if (result.BattleInfos != null)
-                {
-                    battleInfos.AddRange(result.BattleInfos);
-                }
+                if (result.BattleInfos != null) battleInfos.AddRange(result.BattleInfos);
 
                 if (result.Instance != null)
                     instance = result.Instance;
@@ -248,10 +225,7 @@ public class AbilityLevelTask(PlayerInstance player)
             foreach (var task in adventureFireProjectile.OnProjectileLifetimeFinish)
             {
                 var result = await TriggerTask(param with { Act = task });
-                if (result.BattleInfos != null)
-                {
-                    battleInfos.AddRange(result.BattleInfos);
-                }
+                if (result.BattleInfos != null) battleInfos.AddRange(result.BattleInfos);
 
                 if (result.Instance != null)
                     instance = result.Instance;
@@ -288,10 +262,7 @@ public class AbilityLevelTask(PlayerInstance player)
 
     public async ValueTask<AbilityLevelResult> DestroySummonUnit(AbilityLevelParam param)
     {
-        if (param.Act is CreateSummonUnit createSummonUnit)
-        {
-            await Player.SceneInstance!.ClearSummonUnit(); // TODO
-        }
+        if (param.Act is CreateSummonUnit createSummonUnit) await Player.SceneInstance!.ClearSummonUnit(); // TODO
 
         return new AbilityLevelResult();
     }
@@ -303,10 +274,7 @@ public class AbilityLevelTask(PlayerInstance player)
             GameData.AdventureModifierData.TryGetValue(addAdventureModifier.ModifierName, out var modifier);
             if (modifier == null) return new AbilityLevelResult();
 
-            if (param.CasterEntity is IGameModifier mod)
-            {
-                await mod.AddModifier(addAdventureModifier.ModifierName);
-            }
+            if (param.CasterEntity is IGameModifier mod) await mod.AddModifier(addAdventureModifier.ModifierName);
         }
 
         return new AbilityLevelResult();
@@ -319,10 +287,7 @@ public class AbilityLevelTask(PlayerInstance player)
             GameData.AdventureModifierData.TryGetValue(removeAdventureModifier.ModifierName, out var modifier);
             if (modifier == null) return new AbilityLevelResult();
 
-            if (param.CasterEntity is IGameModifier mod)
-            {
-                await mod.RemoveModifier(removeAdventureModifier.ModifierName);
-            }
+            if (param.CasterEntity is IGameModifier mod) await mod.RemoveModifier(removeAdventureModifier.ModifierName);
         }
 
         return new AbilityLevelResult();
@@ -359,52 +324,14 @@ public class AbilityLevelTask(PlayerInstance player)
 
     #endregion
 
-    #region Selector
-
-    public List<IGameEntity> TargetAlias(TargetEvaluator selector, IGameEntity casterEntity, List<IGameEntity> targetEntities)
-    {
-        if (selector is TargetAlias target)
-        {
-            if (target.Alias == "AllEnemy")
-            {
-                return targetEntities;
-            }
-
-            if (target.Alias == "Caster")
-            {
-                return [casterEntity];
-            }
-
-            if (target.Alias == "AbilityTargetEntity")
-            {
-                return targetEntities;
-            }
-
-            if (target.Alias == "ParamEntity")
-            {
-                return targetEntities;
-            }
-        }
-
-        return [];
-    }
-
-    #endregion
-
     #region Predicate
 
     public bool ByAllowInstantKill(AbilityLevelParam param)
     {
         foreach (var targetEntity in param.TargetEntities)
-        {
             if (targetEntity is EntityMonster monster)
-            {
                 if (monster.MonsterData.Rank < MonsterRankEnum.Elite)
-                {
                     return true;
-                }
-            }
-        }
 
         return false;
     }
@@ -423,7 +350,6 @@ public class AbilityLevelTask(PlayerInstance player)
                     [byIsContain.TargetType, param.CasterEntity, param.TargetEntities]);
 
                 if (resp is List<IGameEntity> target)
-                {
                     foreach (var entity in target)
                     {
                         if (entity is not IGameModifier modifier) continue;
@@ -433,11 +359,11 @@ public class AbilityLevelTask(PlayerInstance player)
                             break;
                         }
                     }
-                }
             }
 
             return result;
         }
+
         return false;
     }
 
@@ -446,4 +372,9 @@ public class AbilityLevelTask(PlayerInstance player)
 
 public record AbilityLevelResult(BattleInstance? Instance = null, List<HitMonsterInstance>? BattleInfos = null);
 
-public record AbilityLevelParam(AdventureAbilityConfigListInfo AdventureAbility, TaskConfigInfo Act, IGameEntity CasterEntity, List<IGameEntity> TargetEntities, SceneCastSkillCsReq Request);
+public record AbilityLevelParam(
+    AdventureAbilityConfigListInfo AdventureAbility,
+    TaskConfigInfo Act,
+    IGameEntity CasterEntity,
+    List<IGameEntity> TargetEntities,
+    SceneCastSkillCsReq Request);

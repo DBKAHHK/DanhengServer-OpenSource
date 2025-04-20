@@ -3,7 +3,6 @@ using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Game.Mission.FinishType.Handler;
 
@@ -12,8 +11,8 @@ public class MissionHandlerMatchThreeFinishLevel : MissionFinishTypeHandler
 {
     public override async ValueTask HandleMissionFinishType(PlayerInstance player, SubMissionInfo info, object? arg)
     {
-        if(arg is MatchThreeLevelEndCsReq req)
-            if(req.LevelId == info.ParamInt1)
+        if (arg is MatchThreeLevelEndCsReq req)
+            if (req.LevelId == info.ParamInt1)
                 await player.MissionManager!.FinishSubMission(info.ID);
     }
 

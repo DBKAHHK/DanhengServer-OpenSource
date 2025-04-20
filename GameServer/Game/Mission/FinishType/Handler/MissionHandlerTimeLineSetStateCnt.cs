@@ -14,7 +14,8 @@ public class MissionHandlerTimeLineSetStateCnt : MissionFinishTypeHandler
         await ValueTask.CompletedTask;
     }
 
-    public override async ValueTask HandleQuestFinishType(PlayerInstance player, QuestDataExcel quest, FinishWayExcel excel, object? arg)
+    public override async ValueTask HandleQuestFinishType(PlayerInstance player, QuestDataExcel quest,
+        FinishWayExcel excel, object? arg)
     {
         // TODO
         await ValueTask.CompletedTask;

@@ -8,7 +8,8 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 
 public class PacketSceneGroupRefreshScNotify : BasePacket
 {
-    public PacketSceneGroupRefreshScNotify(PlayerInstance player, List<IGameEntity>? addEntity = null, List<IGameEntity>? removeEntity = null)
+    public PacketSceneGroupRefreshScNotify(PlayerInstance player, List<IGameEntity>? addEntity = null,
+        List<IGameEntity>? removeEntity = null)
         : base(CmdIds.SceneGroupRefreshScNotify)
     {
         var proto = new SceneGroupRefreshScNotify
@@ -59,7 +60,8 @@ public class PacketSceneGroupRefreshScNotify : BasePacket
         SetData(proto);
     }
 
-    public PacketSceneGroupRefreshScNotify(PlayerInstance player, IGameEntity? addEntity = null, IGameEntity? removeEntity = null) :
+    public PacketSceneGroupRefreshScNotify(PlayerInstance player, IGameEntity? addEntity = null,
+        IGameEntity? removeEntity = null) :
         this(player, addEntity == null ? [] : [addEntity], removeEntity == null ? [] : [removeEntity])
     {
     }

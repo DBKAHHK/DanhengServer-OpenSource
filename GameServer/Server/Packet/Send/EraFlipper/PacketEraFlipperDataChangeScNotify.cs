@@ -2,9 +2,11 @@
 using EggLink.DanhengServer.Proto;
 
 namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.EraFlipper;
+
 public class PacketEraFlipperDataChangeScNotify : BasePacket
 {
-    public PacketEraFlipperDataChangeScNotify(ChangeEraFlipperDataCsReq req, int floorId) : base(CmdIds.EraFlipperDataChangeScNotify)
+    public PacketEraFlipperDataChangeScNotify(ChangeEraFlipperDataCsReq req, int floorId) : base(
+        CmdIds.EraFlipperDataChangeScNotify)
     {
         var proto = new EraFlipperDataChangeScNotify
         {

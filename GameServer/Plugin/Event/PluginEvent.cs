@@ -106,10 +106,6 @@ public static class PluginEvent
 
     #endregion
 
-    #region Common
-
-    #endregion
-
     #region Event
 
     public static event OnPlayerHeartBeatHandler? OnPlayerHeartBeat;

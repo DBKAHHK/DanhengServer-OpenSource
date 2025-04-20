@@ -18,7 +18,8 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
 {
     public StageConfigExcel? NextBattleStageConfig { get; set; }
 
-    public async ValueTask<BattleInstance?> StartBattle(IGameEntity attackEntity, List<IGameEntity> targetEntityList, bool isSkill)
+    public async ValueTask<BattleInstance?> StartBattle(IGameEntity attackEntity, List<IGameEntity> targetEntityList,
+        bool isSkill)
     {
         if (Player.BattleInstance != null) return Player.BattleInstance;
         var targetList = new List<EntityMonster>();
@@ -29,7 +30,6 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
         if (castAvatar != null)
         {
             foreach (var entity in targetEntityList)
-            {
                 switch (entity)
                 {
                     case EntityMonster monster:
@@ -39,26 +39,19 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
                         propList.Add(prop);
                         break;
                 }
-            }
         }
         else
         {
             var isAmbushed =
                 targetEntityList.Any(entity => Player.SceneInstance!.AvatarInfo.ContainsKey(entity.EntityID));
 
-            if (!isAmbushed)
-            {
-                return null;
-            }
+            if (!isAmbushed) return null;
 
             var monsterEntity = Player.SceneInstance!.Entities[attackEntity.EntityID];
             if (monsterEntity is EntityMonster monster) targetList.Add(monster);
         }
 
-        if (targetList.Count == 0 && propList.Count == 0)
-        {
-            return null;
-        }
+        if (targetList.Count == 0 && propList.Count == 0) return null;
 
         foreach (var prop in propList)
         {
@@ -84,10 +77,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
         {
             var triggerBattle = targetList.Any(target => target.IsAlive);
 
-            if (!triggerBattle)
-            {
-                return null;
-            }
+            if (!triggerBattle) return null;
 
             var inst = Player.RogueManager!.GetRogueInstance();
             if (inst is RogueMagicInstance { CurLevel.CurRoom.AdventureInstance: not null } magic)
@@ -106,10 +96,11 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
 
             if (NextBattleStageConfig != null)
             {
-                battleInstance = new BattleInstance(Player, Player.LineupManager!.GetCurLineup()!, [NextBattleStageConfig])
-                {
-                    WorldLevel = Player.Data.WorldLevel,
-                };
+                battleInstance =
+                    new BattleInstance(Player, Player.LineupManager!.GetCurLineup()!, [NextBattleStageConfig])
+                    {
+                        WorldLevel = Player.Data.WorldLevel
+                    };
                 NextBattleStageConfig = null;
             }
 
@@ -140,9 +131,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
             }
 
             if (mazeBuff != null && mazeBuff.BuffID != 0) // avoid adding a buff with ID 0
-            {
                 battleInstance.Buffs.Add(mazeBuff);
-            }
 
             battleInstance.AvatarInfo = avatarList;
 
@@ -216,18 +205,12 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
         if (Player.BattleInstance != null) return null;
 
         GameData.CocoonConfigData.TryGetValue(cocoonId * 100 + worldLevel, out var config);
-        if (config == null)
-        {
-            return null;
-        }
+        if (config == null) return null;
 
         wave = Math.Min(Math.Max(wave, 1), config.MaxWave);
 
         var cost = config.StaminaCost * wave;
-        if (Player.Data.Stamina < cost)
-        {
-            return null;
-        }
+        if (Player.Data.Stamina < cost) return null;
 
         List<StageConfigExcel> stageConfigExcels = [];
         for (var i = 0; i < wave; i++)
@@ -239,10 +222,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
             stageConfigExcels.Add(stageConfig);
         }
 
-        if (stageConfigExcels.Count == 0)
-        {
-            return null;
-        }
+        if (stageConfigExcels.Count == 0) return null;
 
         BattleInstance battleInstance = new(Player, Player.LineupManager!.GetCurLineup()!, stageConfigExcels)
         {
@@ -256,7 +236,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
         {
             battleInstance = new BattleInstance(Player, Player.LineupManager!.GetCurLineup()!, [NextBattleStageConfig])
             {
-                WorldLevel = Player.Data.WorldLevel,
+                WorldLevel = Player.Data.WorldLevel
             };
             NextBattleStageConfig = null;
         }

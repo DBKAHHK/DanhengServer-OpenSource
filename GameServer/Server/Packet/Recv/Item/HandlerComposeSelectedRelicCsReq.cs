@@ -14,9 +14,11 @@ public class HandlerComposeSelectedRelicCsReq : Handler
         var player = connection.Player!;
         if (player.InventoryManager!.Data.RelicItems.Count >= GameConstants.INVENTORY_MAX_RELIC)
         {
-            await connection.SendPacket(new PacketComposeSelectedRelicScRsp(req.ComposeId, Retcode.RetRelicExceedLimit));
+            await connection.SendPacket(
+                new PacketComposeSelectedRelicScRsp(req.ComposeId, Retcode.RetRelicExceedLimit));
             return;
         }
+
         var item = await player.InventoryManager.ComposeRelic(req);
         if (item == null)
         {

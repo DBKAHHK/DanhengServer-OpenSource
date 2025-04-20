@@ -33,7 +33,8 @@ public class PacketSceneCastSkillScRsp : BasePacket
         SetData(proto);
     }
 
-    public PacketSceneCastSkillScRsp(Retcode retCode, uint castEntityId, BattleInstance? battle, List<HitMonsterInstance> hitMonsters) :
+    public PacketSceneCastSkillScRsp(Retcode retCode, uint castEntityId, BattleInstance? battle,
+        List<HitMonsterInstance> hitMonsters) :
         base(CmdIds.SceneCastSkillScRsp)
     {
         var proto = new SceneCastSkillScRsp

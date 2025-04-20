@@ -174,6 +174,7 @@ public class ServerInfoTextEN
 
     public string MissionEnabled =>
         "Mission system enabled. This feature is still in development and may not work as expected. Please report any bugs to the developers.";
+
     public string CacheLoadSkip => "Skipped cache loading.";
 
     public string ConfigMissing => "{0} is missing. Please check your resource folder: {1}, {2} may not be available.";

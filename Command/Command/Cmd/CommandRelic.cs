@@ -52,12 +52,13 @@ public class CommandRelic : ICommand
                 await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.InvalidArguments"));
                 return;
             }
+
             subAffixes.Add((subId, subLevel));
         }
 
         for (var i = 0; i < amount; i++)
         {
-            (var ret, var _) = await player.InventoryManager!.HandleRelic(
+            var (ret, _) = await player.InventoryManager!.HandleRelic(
                 int.Parse(arg.BasicArgs[0]), ++player.InventoryManager!.Data.NextUniqueId,
                 level, mainAffixId, subAffixes);
 
