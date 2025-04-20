@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static RogueMapRotateInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhSb2d1ZU1hcFJvdGF0ZUluZm8ucHJvdG8aEUNoYXJnZXJJbmZvLnByb3Rv",
+            "ChhSb2d1ZU1hcFJvdGF0ZUluZm8ucHJvdG8aEVJvdGF0ZXJEYXRhLnByb3Rv",
             "GhdSb3RhdGVyRW5lcmd5SW5mby5wcm90bxoRSUNJTUFLQkFKR0IucHJvdG8a",
-            "EVJvdGF0ZXJEYXRhLnByb3RvIvIBChJSb2d1ZU1hcFJvdGF0ZUluZm8SJwoR",
+            "EUNoYXJnZXJJbmZvLnByb3RvIvIBChJSb2d1ZU1hcFJvdGF0ZUluZm8SJwoR",
             "cm90YXRlcl9kYXRhX2xpc3QYAyADKAsyDC5Sb3RhdGVyRGF0YRITCgtORkxC",
             "T05ESkFJRRgHIAEoDRIRCglpc19yb3RhdGUYBSABKAgSJwoLZW5lcmd5X2lu",
             "Zm8YDSABKAsyEi5Sb3RhdGVyRW5lcmd5SW5mbxIiCgxjaGFyZ2VyX2luZm8Y",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "QUtCQUpHQhIdChVlcmFfZmxpcHBlcl9yZWdpb25faWQYDyABKAVCHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ICIMAKBAJGBReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ICIMAKBAJGBReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMapRotateInfo), global::EggLink.DanhengServer.Proto.RogueMapRotateInfo.Parser, new[]{ "RotaterDataList", "NFLBONDJAIE", "IsRotate", "EnergyInfo", "ChargerInfo", "RogueMap", "EraFlipperRegionId" }, null, null, null, null)
           }));
