@@ -15,6 +15,7 @@ public class AvatarConfigExcel : ExcelResource
     [JsonIgnore] public List<AvatarSkillTreeConfigExcel> SkillTree = [];
 
     public int AvatarID { get; set; } = 0;
+    public int AdventurePlayerID { get; set; }
     public HashName AvatarName { get; set; } = new();
     public int ExpGroup { get; set; } = 0;
     public int MaxPromotion { get; set; } = 0;
