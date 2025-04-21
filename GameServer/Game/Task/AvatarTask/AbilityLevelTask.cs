@@ -25,13 +25,12 @@ public class AbilityLevelTask(PlayerInstance player)
     {
         if (selector is TargetAlias target)
         {
-            if (target.Alias == "AllEnemy") return targetEntities;
-
-            if (target.Alias == "Caster") return [casterEntity];
-
-            if (target.Alias == "AbilityTargetEntity") return targetEntities;
-
-            if (target.Alias == "ParamEntity") return targetEntities;
+            return target.Alias switch
+            {
+                "Caster" or "ModifierOwnerEntity" => [casterEntity],
+                "ParamEntity" or "AllEnemy" or "AbilityTargetEntity" => targetEntities,
+                _ => targetEntities,
+            };
         }
 
         return [];
@@ -121,7 +120,7 @@ public class AbilityLevelTask(PlayerInstance player)
             }
             else
             {
-                foreach (var task in predicateTaskList.FailedTaskList)
+                foreach (var task in predicateTaskList.SuccessTaskList)
                 {
                     var result = await TriggerTask(param with { Act = task });
                     if (result.BattleInfos != null) battleInfos.AddRange(result.BattleInfos);
@@ -365,6 +364,11 @@ public class AbilityLevelTask(PlayerInstance player)
         }
 
         return false;
+    }
+
+    public bool AdventureByInMotionState(AbilityLevelParam param)
+    {
+        return true;
     }
 
     #endregion
