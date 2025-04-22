@@ -234,6 +234,35 @@ public class AbilityLevelTask(PlayerInstance player)
         return new AbilityLevelResult(instance, battleInfos);
     }
 
+    public async ValueTask<AbilityLevelResult> NewAdventureFireProjectile(AbilityLevelParam param)
+    {
+        BattleInstance? instance = null;
+        List<HitMonsterInstance> battleInfos = [];
+
+        if (param.Act is AdventureFireProjectile adventureFireProjectile)
+        {
+            foreach (var task in adventureFireProjectile.OnProjectileHit)
+            {
+                var result = await TriggerTask(param with { Act = task });
+                if (result.BattleInfos != null) battleInfos.AddRange(result.BattleInfos);
+
+                if (result.Instance != null)
+                    instance = result.Instance;
+            }
+
+            foreach (var task in adventureFireProjectile.OnProjectileLifetimeFinish)
+            {
+                var result = await TriggerTask(param with { Act = task });
+                if (result.BattleInfos != null) battleInfos.AddRange(result.BattleInfos);
+
+                if (result.Instance != null)
+                    instance = result.Instance;
+            }
+        }
+
+        return new AbilityLevelResult(instance, battleInfos);
+    }
+
     public async ValueTask<AbilityLevelResult> CreateSummonUnit(AbilityLevelParam param)
     {
         if (param.Act is CreateSummonUnit createSummonUnit)

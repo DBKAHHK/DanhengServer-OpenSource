@@ -65,6 +65,13 @@ public class TaskConfigInfo
             return res;
         }
 
+        if (typeStr == "NewAdventureFireProjectile")
+        {
+            var res = AdventureFireProjectile.LoadFromJsonObject(json);
+            res.Type = type;
+            return res;
+        }
+
         if (typeStr == "AdventureTriggerAttack")
         {
             var res = AdventureTriggerAttack.LoadFromJsonObject(json);
