@@ -423,7 +423,7 @@ public class ResourceManager
 
                 var info = AdventureAbilityConfigListInfo.LoadFromJsonObject(obj);
 
-                GameData.AdventureAbilityConfigListData.TryAdd(avatar.AvatarID, info);
+                GameData.AdventureAbilityConfigListData.TryAdd(adventure.ID, info);
                 count++;
             }
             catch (Exception ex)

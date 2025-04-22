@@ -1,18 +1,19 @@
 ﻿namespace EggLink.DanhengServer.Data.Excel;
 
-[ResourceEntity("AdventurePlayer.json")]
+[ResourceEntity("AdventurePlayer.json,ActivityAdventurePlayer.json", true)]
 public class AdventurePlayerExcel : ExcelResource
 {
-    public int AvatarID { get; set; } = 0;
+    public int ID { get; set; }
+    public int AvatarID { get; set; }
     public string PlayerJsonPath { get; set; } = "";
 
     public override int GetId()
     {
-        return AvatarID;
+        return ID;
     }
 
     public override void Loaded()
     {
-        GameData.AdventurePlayerData[AvatarID] = this;
+        GameData.AdventurePlayerData[ID] = this;
     }
 }
