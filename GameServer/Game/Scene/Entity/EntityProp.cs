@@ -21,6 +21,7 @@ public class EntityProp(SceneInstance scene, MazePropExcel excel, GroupInfo grou
     public GroupInfo Group { get; set; } = group;
     public ScenePropTimelineData? PropTimelineData { get; set; }
     public int EntityID { get; set; }
+    public List<SceneBuff> BuffList { get; set; } = [];
     public int GroupID { get; set; } = group.Id;
 
     public async ValueTask AddBuff(SceneBuff buff)

@@ -76,9 +76,9 @@ public class AbilityLevelTask(PlayerInstance player)
                 if (res is ValueTask<AbilityLevelResult> valueTask) return await valueTask;
             }
         }
-        catch
+        catch (Exception e)
         {
-            // ignored
+            Logger.GetByClassName().Error("An error occured, ", e);
         }
 
         return new AbilityLevelResult();
@@ -101,7 +101,13 @@ public class AbilityLevelTask(PlayerInstance player)
             if (method != null)
             {
                 var resp = method.Invoke(this, [param with { Act = predicateTaskList.Predicate }]);
-                if (resp is true)
+                if (resp is not bool res)
+                {
+                    return new AbilityLevelResult(instance, battleInfos);
+                }
+
+                res = predicateTaskList.Predicate.Inverse ? !res : res;
+                if (res)
                     foreach (var task in predicateTaskList.SuccessTaskList)
                     {
                         var result = await TriggerTask(param with { Act = task });
@@ -194,11 +200,22 @@ public class AbilityLevelTask(PlayerInstance player)
             {
                 var resp = method.Invoke(this,
                     [addMazeBuff.TargetType, param.CasterEntity, param.TargetEntities]);
-                if (resp is List<IGameEntity> target)
-                    foreach (var entity in target)
-                        await entity.AddBuff(new SceneBuff(addMazeBuff.ID, 1,
-                            (param.CasterEntity as AvatarSceneInfo)?.AvatarInfo.GetAvatarId() ?? 0,
-                            addMazeBuff.LifeTime.FixedValue.Value < -1 ? 20 : -1));
+
+                Dictionary<string, float> dynamic = [];
+                foreach (var dynamicValue in addMazeBuff.DynamicValues)
+                {
+                    dynamic.Add(dynamicValue.Key, dynamicValue.Value.GetValue());
+                }
+
+                if (resp is not List<IGameEntity> target) return new AbilityLevelResult(instance, battleInfos);
+
+                foreach (var entity in target)
+                    await entity.AddBuff(new SceneBuff(addMazeBuff.ID, 1,
+                        (param.CasterEntity as AvatarSceneInfo)?.AvatarInfo.GetBaseAvatarId() ?? 0,
+                        addMazeBuff.LifeTime.FixedValue.Value < -1 ? 20 : -1)
+                    {
+                        DynamicValues = dynamic
+                    });
             }
         }
 
@@ -398,6 +415,49 @@ public class AbilityLevelTask(PlayerInstance player)
     public bool AdventureByInMotionState(AbilityLevelParam param)
     {
         return true;
+    }
+
+    public bool AdventureByPlayerCurrentSkillType(AbilityLevelParam param)
+    {
+        if (param.Act is AdventureByPlayerCurrentSkillType byPlayerCurrentSkillType)
+        {
+            return param.Request.SkillIndex == (uint)byPlayerCurrentSkillType.SkillType;
+        }
+
+        return false;
+    }
+
+    public bool ByCompareCarryMazebuff(AbilityLevelParam param)
+    {
+        if (param.Act is ByCompareCarryMazebuff byCompareCarryMazebuff)
+        {
+            return param.CasterEntity.BuffList.Any(x => x.BuffId == byCompareCarryMazebuff.BuffID);
+        }
+
+        return false;
+    }
+
+    public bool ByAnd(AbilityLevelParam param)
+    {
+        if (param.Act is ByAnd byAnd)
+        {
+            foreach (var task in byAnd.PredicateList)
+            {
+                var methodName = task.Type.Replace("RPG.GameCore.", "");
+                var method = GetType().GetMethod(methodName);
+                if (method != null)
+                {
+                    var resp = method.Invoke(this, [param with { Act = task }]);
+                    if (resp is not bool res) return false;
+                    res = task.Inverse ? !res : res;
+                    if (!res) return false;
+                }
+            }
+
+            return true;
+        }
+
+        return false;
     }
 
     #endregion

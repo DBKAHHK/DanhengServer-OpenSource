@@ -14,6 +14,7 @@ public class EntityNpc(SceneInstance scene, GroupInfo group, NpcInfo npcInfo) : 
     public int InstId { get; set; } = npcInfo.ID;
     public int EntityID { get; set; }
     public int GroupID { get; set; } = group.Id;
+    public List<SceneBuff> BuffList { get; set; } = [];
 
     public async ValueTask AddBuff(SceneBuff buff)
     {

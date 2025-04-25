@@ -1,6 +1,7 @@
 ﻿using System.Collections.Concurrent;
 using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Data.Config.AdventureAbility;
+using EggLink.DanhengServer.Data.Config.Character;
 using EggLink.DanhengServer.Data.Config.Scene;
 using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Data.Excel;
@@ -57,6 +58,7 @@ public static class GameData
     public static Dictionary<int, AdventurePlayerExcel> AdventurePlayerData { get; private set; } = [];
     public static Dictionary<int, SummonUnitDataExcel> SummonUnitDataData { get; private set; } = [];
     public static Dictionary<int, DecideAvatarOrderExcel> DecideAvatarOrderData { get; private set; } = [];
+    public static Dictionary<int, CharacterConfigInfo> CharacterConfigInfoData { get; private set; } = [];
 
     #endregion
 

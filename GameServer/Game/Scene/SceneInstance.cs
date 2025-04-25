@@ -2,6 +2,7 @@
 using EggLink.DanhengServer.Data.Config.Scene;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Avatar;
+using EggLink.DanhengServer.Enums.Avatar;
 using EggLink.DanhengServer.Enums.Scene;
 using EggLink.DanhengServer.GameServer.Game.Activity.Loaders;
 using EggLink.DanhengServer.GameServer.Game.Battle;
@@ -302,6 +303,26 @@ public class SceneInstance
         EntityLoader?.SyncEntity();
     }
 
+    public async ValueTask OnUseSkill(SceneCastSkillCsReq req)
+    {
+        foreach (var entity in Entities.Values.OfType<AvatarSceneInfo>())
+        {
+            if (!GameData.AvatarConfigData.TryGetValue(entity.AvatarInfo.GetAvatarId(), out var excel)) continue;
+            GameData.AdventureAbilityConfigListData.TryGetValue(excel.AdventurePlayerID, out var avatarAbility);
+            if (avatarAbility == null) continue;
+            foreach (var modifier in entity.Modifiers.ToArray())
+            {
+                // get modifier info
+                if (!GameData.AdventureModifierData.TryGetValue(modifier, out var config)) continue;
+                if (config.OnAfterLocalPlayerUseSkill.Count > 0)
+                {
+                    await Player.TaskManager!.AbilityLevelTask.TriggerTasks(avatarAbility,
+                        config.OnAfterLocalPlayerUseSkill, entity, [], req);
+                }
+            }
+        }
+    }
+
     #endregion
 
     #region Entity Management
@@ -475,13 +496,37 @@ public class SceneInstance
     #endregion
 }
 
-public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, PlayerInstance player)
-    : IGameEntity, IGameModifier
+public class AvatarSceneInfo : IGameEntity, IGameModifier
 {
-    public AvatarInfo AvatarInfo = avatarInfo;
-    public AvatarType AvatarType = avatarType;
+    public AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, PlayerInstance player)
+    {
+        AvatarInfo = avatarInfo;
+        AvatarType = avatarType;
+        Player = player;
 
-    public List<SceneBuff> BuffList = [];
+        // initialize enter ability
+        if (!GameData.AvatarConfigData.TryGetValue(avatarInfo.GetAvatarId(), out var excel)) return;
+        var configInfo = GameData.CharacterConfigInfoData.GetValueOrDefault(excel.AdventurePlayerID);
+        GameData.AdventureAbilityConfigListData.TryGetValue(excel.AdventurePlayerID, out var avatarAbility);
+        if (configInfo == null || avatarAbility == null) return;
+
+        foreach (var info in configInfo.SkillList.Where(x => x.UseType == SkillUseTypeEnum.Passive))
+        {
+            // cast ability
+            var abilityStr = info.EntryAbility;
+            // get ability
+            var ability = avatarAbility.AbilityList.FirstOrDefault(x => x.Name == abilityStr);
+            if (ability == null) continue;
+            _ = Player.TaskManager!.AbilityLevelTask.TriggerTasks(avatarAbility, ability.OnStart, this, [],
+                new SceneCastSkillCsReq());
+        }
+    }
+
+    public AvatarInfo AvatarInfo;
+    public AvatarType AvatarType;
+    public PlayerInstance Player;
+
+    public List<SceneBuff> BuffList { get; set; } = [];
 
     public int EntityID
     {
@@ -508,14 +553,14 @@ public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, Playe
                 oldBuff.CreatedTime = Extensions.GetUnixMs();
                 oldBuff.Duration = buff.Duration;
 
-                await player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, oldBuff));
+                await Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, oldBuff));
                 await AddModifier(buffExcel.ModifierName);
                 return;
             }
         }
 
         BuffList.Add(buff);
-        await player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, buff));
+        await Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, buff));
         await AddModifier(buffExcel.ModifierName);
     }
 
@@ -524,7 +569,7 @@ public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, Playe
         if (BuffList.Count == 0) return;
         foreach (var buff in BuffList.Where(buff => !buff.IsExpired())) instance.Buffs.Add(new MazeBuff(buff));
 
-        await player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, BuffList));
+        await Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, BuffList));
 
         foreach (var sceneBuff in BuffList)
         {
@@ -552,13 +597,13 @@ public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, Playe
         GameData.AdventureAbilityConfigListData.TryGetValue(AvatarInfo.GetAvatarId(), out var avatarAbility);
         if (modifier == null || avatarAbility == null) return;
 
-        await player.TaskManager!.AbilityLevelTask.TriggerTasks(avatarAbility, modifier.OnCreate, this, [],
+        await Player.TaskManager!.AbilityLevelTask.TriggerTasks(avatarAbility, modifier.OnCreate, this, [],
             new SceneCastSkillCsReq
             {
                 TargetMotion = new MotionInfo
                 {
-                    Pos = player.Data.Pos?.ToProto() ?? new Vector(),
-                    Rot = player.Data.Rot?.ToProto() ?? new Vector()
+                    Pos = Player.Data.Pos?.ToProto() ?? new Vector(),
+                    Rot = Player.Data.Rot?.ToProto() ?? new Vector()
                 }
             });
 
@@ -573,7 +618,7 @@ public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, Playe
         GameData.AdventureAbilityConfigListData.TryGetValue(AvatarInfo.GetAvatarId(), out var avatarAbility);
         if (modifier == null || avatarAbility == null) return;
 
-        await player.TaskManager!.AbilityLevelTask.TriggerTasks(avatarAbility, modifier.OnDestroy, this, [],
+        await Player.TaskManager!.AbilityLevelTask.TriggerTasks(avatarAbility, modifier.OnDestroy, this, [],
             new SceneCastSkillCsReq());
 
         Modifiers.Remove(modifierName);
@@ -588,7 +633,7 @@ public class AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, Playe
         if (buff == null) return;
 
         BuffList.Remove(buff);
-        await player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, [buff]));
+        await Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, [buff]));
 
         await RemoveModifier(buffExcel.ModifierName);
     }

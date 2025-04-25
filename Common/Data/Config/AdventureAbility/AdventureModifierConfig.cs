@@ -123,6 +123,11 @@ public class AdventureModifierConfig
                 ?.Select(x => TaskConfigInfo.LoadFromJsonObject((x as JObject)!))
                 .ToList() ?? [];
 
+        if (obj.ContainsKey(nameof(OnAfterLocalPlayerUseSkill)))
+            info.OnAfterLocalPlayerUseSkill = obj[nameof(OnAfterLocalPlayerUseSkill)]
+                ?.Select(x => TaskConfigInfo.LoadFromJsonObject((x as JObject)!))
+                .ToList() ?? [];
+
         // TODO: others
 
         return info;

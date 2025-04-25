@@ -15,7 +15,13 @@ public class PredicateConfigInfo : TaskConfigInfo
         var typeStr = info.Type.Replace("RPG.GameCore.", "");
         var className = "EggLink.DanhengServer.Data.Config.Task." + typeStr;
 
-        if (typeStr == "ByIsContainAdventureModifier") return ByIsContainAdventureModifier.LoadFromJsonObject(obj);
+        switch (typeStr)
+        {
+            case "ByIsContainAdventureModifier":
+                return ByIsContainAdventureModifier.LoadFromJsonObject(obj);
+            case "ByAnd":
+                return ByAnd.LoadFromJsonObject(obj);
+        }
 
         var typeClass = System.Type.GetType(className);
         if (typeClass != null)

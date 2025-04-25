@@ -8,7 +8,7 @@ public static class ConfigManager
 {
     public static readonly Logger Logger = new("ConfigManager");
     private static readonly string ConfigFilePath = "Config.json";
-    private static readonly string HotfixFilePath = Config.Path.ConfigPath + "/Hotfix.json";
+    private static string HotfixFilePath => Config.Path.ConfigPath + "/Hotfix.json";
     public static ConfigContainer Config { get; private set; } = new();
     public static HotfixContainer Hotfix { get; private set; } = new();
 

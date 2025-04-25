@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Data.Config.AdventureAbility;
+using EggLink.DanhengServer.Data.Config.Character;
 using EggLink.DanhengServer.Data.Config.Rogue;
 using EggLink.DanhengServer.Data.Config.Scene;
 using EggLink.DanhengServer.Data.Config.SummonUnit;
@@ -37,6 +38,7 @@ public class ResourceManager
         var t6 = Task.Run(LoadDialogueInfo);
         var t7 = Task.Run(LoadRogueChestMapInfo);
         var t8 = Task.Run(LoadAdventureModifier);
+        var t9 = Task.Run(LoadLocalPlayer);
         GameData.ActivityConfig = LoadCustomFile<ActivityConfig>("Activity", "ActivityConfig") ?? new ActivityConfig();
         GameData.BannersConfig = LoadCustomFile<BannersConfig>("Banner", "Banners") ?? new BannersConfig();
         GameData.VideoKeysConfig =
@@ -52,7 +54,7 @@ public class ResourceManager
         LoadChessRogueDiceSurfaceEffectData();
         LoadRogueMagicRoomData();
 
-        Task.WaitAll(t1, t2, t3, t4, t5, t6, t7, t8);
+        Task.WaitAll(t1, t2, t3, t4, t5, t6, t7, t8, t9);
 
         // copy modifiers
         foreach (var value in GameData.AdventureAbilityConfigListData.Values)
@@ -408,7 +410,6 @@ public class ResourceManager
         var count = 0;
         var res = Parallel.ForEach(GameData.AdventurePlayerData.Values, adventure =>
         {
-            var avatar = GameData.AvatarConfigData[adventure.AvatarID];
             var adventurePath = adventure.PlayerJsonPath.Replace("_Config.json", "_Ability.json")
                 .Replace("ConfigCharacter", "ConfigAdventureAbility");
             var path = ConfigManager.Config.Path.ResourcePath + "/" + adventurePath;
@@ -790,6 +791,50 @@ public class ResourceManager
 
         Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItems", count.ToString(),
             I18NManager.Translate("Word.AdventureModifierInfo")));
+    }
+
+    public static void LoadLocalPlayer()
+    {
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadingItem",
+            I18NManager.Translate("Word.LocalPlayerCharacter")));
+        var count = 0;
+        var res = Parallel.ForEach(GameData.AdventurePlayerData.Values, excel =>
+        {
+            var path = ConfigManager.Config.Path.ResourcePath + "/" + excel.PlayerJsonPath;
+            var file = new FileInfo(path);
+            if (!file.Exists) return;
+            try
+            {
+                using var reader = file.OpenRead();
+                using StreamReader reader2 = new(reader);
+                var text = reader2.ReadToEnd().Replace("$type", "Type");
+
+                var info = JsonConvert.DeserializeObject<CharacterConfigInfo>(text);
+                if (info == null) return;
+
+                GameData.CharacterConfigInfoData.Add(excel.ID, info);
+                count++;
+            }
+            catch (Exception ex)
+            {
+                ResourceCache.IsComplete = false;
+                Logger.Error(
+                    I18NManager.Translate("Server.ServerInfo.FailedToReadItem", excel.PlayerJsonPath,
+                        I18NManager.Translate("Word.Error")), ex);
+            }
+        });
+
+        // wait it done
+        while (!res.IsCompleted) Thread.Sleep(10);
+
+        if (count < GameData.SummonUnitDataData.Count)
+            Logger.Warn(I18NManager.Translate("Server.ServerInfo.ConfigMissing",
+                I18NManager.Translate("Word.LocalPlayerCharacterInfo"),
+                $"{ConfigManager.Config.Path.ResourcePath}/Config/ConfigCharacter",
+                I18NManager.Translate("Word.LocalPlayerCharacter")));
+
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItems", count.ToString(),
+            I18NManager.Translate("Word.LocalPlayerCharacterInfo")));
     }
 
     public static void LoadChessRogueRoomData()

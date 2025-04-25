@@ -18,6 +18,7 @@ public class EntitySummonUnit : IGameEntity
     public List<UnitCustomTriggerConfigInfo> TriggerList { get; set; } = [];
     public int EntityID { get; set; }
     public int GroupID { get; set; } = 0;
+    public List<SceneBuff> BuffList { get; set; } = [];
 
     public async ValueTask AddBuff(SceneBuff buff)
     {
